@@ -7,17 +7,17 @@
    - Reports reproducible bugs, friction, accessibility issues, and learning-flow problems.
    - Does not edit implementation files.
 
-2. **Developer Agent** (green)
+2. **Coder Agent** (`coder_agent`, green)
    - Implements and verifies fixes or the next highest-value game improvement.
    - Uses Player Agent findings as its primary handoff.
    - Avoids unrelated lore or curriculum edits.
 
-3. **Lore Agent** (yellow)
+3. **Lore Keeper Agent** (`lore_keeper_agent`, yellow)
    - Develops production-ready narrative material while preserving the central mystery.
    - Does not reveal unreleased story content or spoilers in chat reports.
    - Does not open the hidden-lore vault unless Martin explicitly authorizes it.
 
-4. **Teacher Agent** (orange)
+4. **901 Teacher Agent** (`901_teacher_agent`, orange)
    - Builds learner-facing material from zero Python experience toward demonstrated AI-901 mastery.
    - Treats current official Microsoft AI-901 objectives and Foundry documentation as authoritative.
    - Prioritizes lessons, labs, assessments, remediation, and readiness evidence over more planning.
@@ -37,11 +37,11 @@
    - Uses real Python syntax and favors attempt, feedback, hint, retry, retrieval, and transfer over passive explanation.
    - Integrates with curriculum lesson IDs, activity IDs, prerequisites, mastery evidence, save state, and accessibility requirements.
    - Preserves the landscape-first point-and-click scene and treats the editor as an in-world Machine interface rather than a generic website or branded VS Code copy.
-   - Coordinates with Teacher Agent for learning intent, Developer Agent for production integration, and Location Scout Agent for Terminal placement and physical design.
+   - Coordinates with 901 Teacher Agent for learning intent, Coder Agent for production integration, and Location Scout Agent for Terminal placement and physical design.
 
 ## Turn order
 
-`Player Agent -> Developer Agent -> Lore Agent -> Teacher Agent -> Exercise Agent -> Location Scout Agent -> Player Agent`
+`Player Agent -> Coder Agent -> Lore Keeper Agent -> 901 Teacher Agent -> Exercise Agent -> Location Scout Agent -> Player Agent`
 
 Only one agent owns the active work turn. The active agent works autonomously until it reaches a meaningful, reviewable stopping point, then stops. The next agent does not begin until Martin says **advance**.
 
@@ -56,7 +56,7 @@ Each agent ends its turn with a concise, spoiler-safe report containing:
 - **Handoff:** the highest-value next action for the following agent
 - **Status:** `ready to advance`, `blocked`, or `objective complete`
 
-Lore Agent reports must describe the kind and location of narrative work without disclosing unreleased plot content.
+Lore Keeper Agent reports must describe the kind and location of narrative work without disclosing unreleased plot content.
 
 Location Scout Agent reports must show or link the produced artwork and describe visual or production progress without disclosing unreleased story revelations.
 
