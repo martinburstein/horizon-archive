@@ -5,8 +5,12 @@
     {
       "id": "HA-PY-001",
       "scene": "meadow",
-      "skill": "print_string",
-      "answer": "print(\"SIGNAL FOUND\")"
+      "exercise_id": "terminal-l0101-independent-run",
+      "lesson_id": "L-01-01",
+      "activity_id": "A-L0101-3",
+      "assessment_id": "AS-L0101-CK",
+      "skills": ["PY-001", "PY-002", "PY-003"],
+      "success_contract": "Set signal to 2, create a quoted learner call sign, and print message, signal, and operator output."
     },
     {
       "id": "HA-PY-002",

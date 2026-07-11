@@ -30,9 +30,18 @@
    - Records generation prompts, scene purpose, navigation links, interaction zones, palette, lighting, scale, and continuity notes for every selected image.
    - Does not open the hidden-lore vault or expose unreleased plot information.
 
+6. **Exercise Agent**
+   - Turns curriculum skills into playable, code-first learning encounters.
+   - Represents exercises in the world as **Terminals**: small physical nodes of the Machine emerging from the ground.
+   - Opens an original dark editor interface inspired by professional code tools, with file tabs, line numbers, syntax-aware code entry, task instructions, Run controls, output, hints, and mastery feedback.
+   - Uses real Python syntax and favors attempt, feedback, hint, retry, retrieval, and transfer over passive explanation.
+   - Integrates with curriculum lesson IDs, activity IDs, prerequisites, mastery evidence, save state, and accessibility requirements.
+   - Preserves the landscape-first point-and-click scene and treats the editor as an in-world Machine interface rather than a generic website or branded VS Code copy.
+   - Coordinates with Teacher Agent for learning intent, Developer Agent for production integration, and Location Scout Agent for Terminal placement and physical design.
+
 ## Turn order
 
-`Player Agent -> Developer Agent -> Lore Agent -> Teacher Agent -> Location Scout Agent -> Player Agent`
+`Player Agent -> Developer Agent -> Lore Agent -> Teacher Agent -> Exercise Agent -> Location Scout Agent -> Player Agent`
 
 Only one agent owns the active work turn. The active agent works autonomously until it reaches a meaningful, reviewable stopping point, then stops. The next agent does not begin until Martin says **advance**.
 
@@ -50,6 +59,8 @@ Each agent ends its turn with a concise, spoiler-safe report containing:
 Lore Agent reports must describe the kind and location of narrative work without disclosing unreleased plot content.
 
 Location Scout Agent reports must show or link the produced artwork and describe visual or production progress without disclosing unreleased story revelations.
+
+Exercise Agent reports must identify the skill practiced, runnable exercise path, mastery evidence captured, accessibility checks, and integration handoff without revealing story spoilers.
 
 ## Operating rules
 

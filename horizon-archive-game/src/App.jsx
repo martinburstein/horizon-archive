@@ -4,6 +4,12 @@ import ruinsImage from "../../Concept Art/Alien Ruins.png";
 import automatonImage from "../../Concept Art/Fallen Automoton.png";
 import cityImage from "../../Concept Art/Underground City.png";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
+import {
+  evaluateTerminalCode,
+  sanitizeExerciseEvidence,
+  terminalExercise,
+  updateExerciseEvidence,
+} from "./terminalExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -60,7 +66,10 @@ function loadSave() {
     // Only a contiguous, known completion prefix is trusted. This prevents a
     // stale or edited save from skipping required questions or unlocking the
     // ending early.
-    return getResumeState(saved.completed, saved.pendingSceneId);
+    return {
+      ...getResumeState(saved.completed, saved.pendingSceneId),
+      exerciseEvidence: sanitizeExerciseEvidence(saved.exerciseEvidence),
+    };
   } catch {
     // A malformed local save should never prevent a new expedition.
   }
@@ -77,7 +86,11 @@ export function App() {
   const [code, setCode] = useState("");
   const [feedback, setFeedback] = useState("");
   const [showHint, setShowHint] = useState(false);
+  const [terminalHintLevel, setTerminalHintLevel] = useState(0);
   const [pendingAdvance, setPendingAdvance] = useState(false);
+  const [terminalOpen, setTerminalOpen] = useState(false);
+  const [terminalResult, setTerminalResult] = useState(null);
+  const [exerciseEvidence, setExerciseEvidence] = useState(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
@@ -88,9 +101,10 @@ export function App() {
         sceneIndex,
         completed,
         pendingSceneId: mode === "playing" && pendingAdvance ? scene.id : null,
+        exerciseEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -102,6 +116,10 @@ export function App() {
     setFeedback("");
     setCode("");
     setPendingAdvance(false);
+    setTerminalOpen(false);
+    setTerminalResult(null);
+    setTerminalHintLevel(0);
+    setExerciseEvidence(null);
     setMode("playing");
   }
 
@@ -114,6 +132,10 @@ export function App() {
       ? scenes[saved.sceneIndex].success
       : "The flight recorder restores your last confirmed position.");
     setPendingAdvance(Boolean(saved.pendingSceneId));
+    setExerciseEvidence(saved.exerciseEvidence);
+    setTerminalOpen(false);
+    setTerminalResult(null);
+    setTerminalHintLevel(0);
     setMode(saved.finished ? "ending" : "playing");
   }
 
@@ -126,11 +148,44 @@ export function App() {
       setDialogue("Nothing here has a mouth. Something still seems to hear you.");
       return;
     }
+    if (scene.id === "meadow") {
+      setDialogue("Terminal link established. Complete the file, run it, and confirm the result.");
+      setTerminalOpen(true);
+      setTerminalResult(null);
+      setCode(terminalExercise.starterCode);
+      setShowHint(false);
+      setTerminalHintLevel(0);
+      return;
+    }
     setDialogue(scene.question);
     setQuestionOpen(true);
     setFeedback("");
     setShowHint(false);
     setCode("");
+  }
+
+  function runTerminal(event) {
+    event.preventDefault();
+    const result = evaluateTerminalCode(code);
+    setExerciseEvidence((previous) => updateExerciseEvidence(previous, { incrementAttempt: true }));
+    setTerminalResult(result);
+  }
+
+  function revealTerminalHint() {
+    setShowHint(true);
+    setTerminalHintLevel((level) => Math.min(terminalExercise.hints.length, level + 1));
+    setExerciseEvidence((previous) => updateExerciseEvidence(previous, { hintUsed: true }));
+  }
+
+  function acknowledgeTerminalCompletion() {
+    if (!terminalResult?.passed) return;
+    setExerciseEvidence((previous) => updateExerciseEvidence(previous, { completed: true }));
+    const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
+    setCompleted(nextCompleted);
+    setDialogue(scene.success);
+    setTerminalOpen(false);
+    setTerminalResult(null);
+    setPendingAdvance(true);
   }
 
   function runCode(event) {
@@ -214,6 +269,65 @@ export function App() {
         >
           <span>{verb} {scene.hotspotLabel}</span>
         </button>
+        {terminalOpen && (
+          <section className="terminal-workbench" aria-labelledby="terminal-title" data-terminal-exercise={terminalExercise.exerciseId}>
+            <header className="terminal-titlebar">
+              <div>
+                <span className="machine-mark" aria-hidden="true">◇</span>
+                <strong id="terminal-title">MACHINE TERMINAL // {terminalExercise.title}</strong>
+              </div>
+              <button type="button" onClick={() => setTerminalOpen(false)} aria-label="Close Terminal">Close</button>
+            </header>
+            <div className="terminal-tabbar" role="tablist" aria-label="Open files">
+              <button type="button" role="tab" aria-selected="true">{terminalExercise.filename}</button>
+              <span>Lesson {terminalExercise.lessonId}</span>
+            </div>
+            <form className="editor-layout" onSubmit={runTerminal}>
+              <aside className="task-pane" aria-labelledby="terminal-task-heading">
+                <p className="pane-label">ACTIVE TASK</p>
+                <h2 id="terminal-task-heading">Complete the first signal</h2>
+                <p>{terminalExercise.task}</p>
+                <dl>
+                  <div><dt>Activity</dt><dd>{terminalExercise.activityId}</dd></div>
+                  <div><dt>Skills</dt><dd>{terminalExercise.skillIds.join(" · ")}</dd></div>
+                </dl>
+                <button className="hint-action" type="button" onClick={revealTerminalHint} disabled={terminalHintLevel === terminalExercise.hints.length}>
+                  {terminalHintLevel ? "Reveal next hint" : "Reveal progressive hint"}
+                </button>
+                {showHint && <p className="editor-hint">{terminalExercise.hints[Math.max(0, terminalHintLevel - 1)]}</p>}
+              </aside>
+              <div className="editor-stack">
+                <div className="code-editor">
+                  <div className="line-numbers" aria-hidden="true">
+                    {code.split("\n").map((_, index) => <span key={index}>{index + 1}</span>)}
+                  </div>
+                  <textarea
+                    id="terminal-code"
+                    aria-label={`Python code editor for ${terminalExercise.filename}`}
+                    value={code}
+                    onChange={(event) => { setCode(event.target.value); setTerminalResult(null); }}
+                    autoCapitalize="off"
+                    autoCorrect="off"
+                    spellCheck="false"
+                  />
+                </div>
+                <section className="terminal-console" aria-labelledby="console-heading">
+                  <div className="console-heading-row">
+                    <strong id="console-heading">OUTPUT</strong>
+                    <button className="run-action" type="submit">Run Python</button>
+                  </div>
+                  <div className={terminalResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">
+                    {terminalResult ? terminalResult.feedback : "Ready. Run the file when your edits are complete."}
+                  </div>
+                  {terminalResult?.output && <pre>{terminalResult.output}</pre>}
+                  {terminalResult?.passed && (
+                    <button className="confirm-action" type="button" onClick={acknowledgeTerminalCompletion}>Acknowledge completion</button>
+                  )}
+                </section>
+              </div>
+            </form>
+          </section>
+        )}
       </section>
 
       <section className="command-panel" aria-label="Adventure controls and dialogue">

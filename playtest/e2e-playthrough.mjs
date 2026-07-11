@@ -34,10 +34,26 @@ try {
     await page.getByRole("button", { name: "Run", exact: true }).click();
   };
 
-  await openQuestion();
-  await answer('print("SIGNAL  FOUND")');
-  await page.getByText("Syntax or value mismatch", { exact: false }).waitFor();
-  await answer(" print ( 'SIGNAL FOUND' ) ");
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await page.locator("button.hotspot").click();
+  await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
+  await page.getByRole("button", { name: "Run Python", exact: true }).click();
+  await page.getByText("wrong value", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Reveal progressive hint", exact: true }).click();
+  await page.locator("#terminal-code").fill(`message = "Horizon Archive online."
+signal = 2
+learner = "PILOT"
+
+print(message)
+print("Python signal:", signal)
+print("Operator:", learner)`);
+  await page.getByRole("button", { name: "Run Python", exact: true }).click();
+  await page.getByText("Operator: PILOT", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Acknowledge completion", exact: true }).click();
+  const evidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).exerciseEvidence, { key: saveKey });
+  if (evidence?.lessonId !== "L-01-01" || evidence?.activityId !== "A-L0101-3" || evidence?.attempts !== 2 || !evidence?.hintUsed || !evidence?.completed) {
+    throw new Error(`Terminal mastery evidence incomplete: ${JSON.stringify(evidence)}`);
+  }
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
@@ -65,6 +81,8 @@ try {
     title: true,
     forgedSaveBlocked: true,
     wrongAnswerRecovery: true,
+    terminalExercise: true,
+    masteryEvidence: true,
     persistence: true,
     questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003"],
     credits: true,

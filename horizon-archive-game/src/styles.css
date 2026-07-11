@@ -15,9 +15,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 button { color: inherit; }
-button:focus-visible, input:focus-visible { outline: 2px solid #d8c286; outline-offset: 3px; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #f0c96a; outline-offset: 3px; }
 button:disabled { cursor: not-allowed; opacity: 0.45; }
 
 .game-shell {
@@ -123,6 +123,54 @@ h1 {
 }
 .hotspot:hover span, .hotspot:focus-visible span { opacity: 1; }
 
+.terminal-workbench {
+  position: absolute;
+  inset: 5.5rem clamp(18px, 4vw, 64px) 18px;
+  z-index: 3;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  min-width: 0;
+  color: #d8dee9;
+  background: #11141a;
+  border: 1px solid #59616d;
+  box-shadow: 0 18px 70px #000, 0 0 0 4px rgba(13, 15, 20, 0.86);
+  font-family: "Courier New", monospace;
+}
+.terminal-titlebar, .terminal-tabbar, .console-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.terminal-titlebar { min-height: 38px; padding: 0 10px 0 14px; color: #b9c2cf; background: #20242c; font-size: 0.7rem; letter-spacing: 0.08em; }
+.terminal-titlebar button, .terminal-tabbar button { padding: 7px 11px; color: #c5ccd6; background: transparent; border: 1px solid transparent; cursor: pointer; }
+.terminal-titlebar button:hover { background: #303641; border-color: #59616d; }
+.machine-mark { margin-right: 9px; color: #c7a9ec; }
+.terminal-tabbar { min-height: 34px; padding-right: 14px; color: #838c99; background: #181b21; border-bottom: 1px solid #303640; font-size: 0.68rem; }
+.terminal-tabbar button { align-self: stretch; color: #edf1f7; background: #11141a; border-top: 2px solid #b58bd8; border-right: 1px solid #303640; }
+.editor-layout { display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr); min-height: 0; }
+.task-pane { min-width: 0; padding: 18px; overflow: auto; background: #171a20; border-right: 1px solid #303640; }
+.task-pane h2 { margin: 5px 0 12px; color: #f0f2f5; font: 1.05rem/1.2 Georgia, "Times New Roman", serif; }
+.task-pane p { color: #b5beca; font-size: 0.74rem; line-height: 1.5; }
+.pane-label { margin: 0; color: #9e76be !important; font-size: 0.62rem !important; letter-spacing: 0.14em; }
+.task-pane dl { margin: 18px 0; font-size: 0.63rem; }
+.task-pane dl div { display: grid; grid-template-columns: 62px 1fr; gap: 8px; margin: 7px 0; }
+.task-pane dt { color: #7e8895; }
+.task-pane dd { margin: 0; color: #c2cad5; }
+.hint-action, .run-action, .confirm-action { padding: 8px 11px; color: #f1e9d4; background: #373043; border: 1px solid #79658c; cursor: pointer; font-size: 0.68rem; }
+.hint-action:hover, .run-action:hover, .confirm-action:hover { background: #4a3d59; }
+.editor-hint { padding: 10px; color: #d7c7a7 !important; background: #25221d; border-left: 3px solid #b89554; }
+.editor-stack { display: grid; grid-template-rows: minmax(0, 1fr) minmax(130px, 0.58fr); min-width: 0; min-height: 0; }
+.code-editor { display: grid; grid-template-columns: 44px minmax(0, 1fr); min-height: 0; overflow: hidden; background: #101319; }
+.line-numbers { padding: 13px 9px; color: #65707e; background: #0d1015; border-right: 1px solid #242a32; font-size: 0.78rem; line-height: 1.55; text-align: right; user-select: none; }
+.line-numbers span { display: block; }
+.code-editor textarea { width: 100%; height: 100%; min-height: 150px; padding: 13px 15px; resize: none; color: #d7e5c9; background: transparent; border: 0; line-height: 1.55; tab-size: 4; }
+.terminal-console { min-width: 0; padding: 10px 14px 12px; overflow: auto; background: #0b0d11; border-top: 1px solid #303640; font-size: 0.7rem; }
+.console-heading-row strong { color: #929ba8; font-size: 0.64rem; letter-spacing: 0.12em; }
+.console-feedback { margin: 8px 0; color: #7e8895; }
+.console-feedback.active { color: #e1c889; }
+.terminal-console pre { margin: 8px 0; color: #b9dfae; white-space: pre-wrap; }
+.confirm-action { float: right; margin-top: 2px; background: #294435; border-color: #58826a; }
+
 .command-panel {
   position: relative;
   display: grid;
@@ -206,6 +254,10 @@ h1 {
   .verb { text-align: center; }
   .inventory { grid-template-columns: auto 1fr 1fr; align-items: center; border-left: 0; border-top: 1px solid #35313b; padding: 8px 0 0; }
   .inventory button { padding: 7px; }
+  .terminal-workbench { inset: 4.8rem 8px 8px; overflow: auto; }
+  .editor-layout { grid-template-columns: 1fr; }
+  .task-pane { max-height: 180px; border-right: 0; border-bottom: 1px solid #303640; }
+  .editor-stack { min-height: 380px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
