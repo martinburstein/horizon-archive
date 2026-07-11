@@ -10,7 +10,7 @@ Andromeda survey corridor
 │       └── GM-01 Glass Meadow [reference plate / playable]
 ├── World B — Archive Basin World [active]
 │   └── Drowned Archive Basin
-│       └── AB-01 Drowned Archive [reference plate / playable]
+│       └── AB-01 Drowned Archive [selected Terminal direction / playable]
 ├── World C — Witness World [active]
 │   └── Witness Complex
 │       └── WC-01 Witness Corridor [reference plate / playable]
@@ -34,11 +34,11 @@ This line records player-facing progression only. It does not assert that the lo
 | Priority | Need | Why |
 |---|---|---|
 | 1 | Arrival threshold | Establishes the pilot, human scale, entry direction, and first act of exploration. Completed by GM-00. |
-| 2 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
-| 3 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
-| 4 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
+| 2 | Ruins Terminal identity | Separates the exercise node from the monumental archive and tightens the interaction target. Completed by AB-01. |
+| 3 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
+| 4 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
+| 5 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
 
 ## Expansion rule
 
 Add a world only when it has a distinct learning purpose, traversal identity, and visual climate. Do not create planets merely to increase the count.
-

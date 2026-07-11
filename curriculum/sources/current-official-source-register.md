@@ -27,6 +27,15 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - `OFFICIAL-CONTENT-UNDERSTANDING`: [Azure Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
   - Authority for current multimodal information-extraction capabilities and terminology.
 
+## Official workload sources
+
+- `OFFICIAL-AZURE-LANGUAGE`: [Azure Language in Foundry Tools overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview)
+  - Authority for text-analysis capabilities including entity recognition, key phrase extraction, sentiment analysis, and summarization.
+- `OFFICIAL-AZURE-SPEECH`: [Azure Speech in Foundry Tools overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview)
+  - Authority for speech-to-text, text-to-speech, and related speech capabilities.
+- `OFFICIAL-AZURE-VISION`: [Azure Vision in Foundry Tools overview](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)
+  - Authority for visual-input analysis terminology. The page currently flags Image Analysis 4.0 as deprecated, so implementation lessons must verify the recommended current route rather than copying legacy APIs.
+
 ## Provenance rules
 
 - A statement labeled **Official fact** must trace to an official Microsoft source above or another explicitly cited Microsoft Learn page.
@@ -34,4 +43,3 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - A statement labeled **Coaching policy** is an internal readiness rule, such as an 85% lesson gate or a two-exam streak. It is not an exam rule.
 - UI labels, SDK versions, endpoints, authentication steps, product availability, and exam weights are volatile. Verify them again within seven days of a live lab or exam booking.
 - AI-900 material can reinforce overlapping fundamentals but cannot override this AI-901 guide.
-

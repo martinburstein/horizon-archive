@@ -83,16 +83,17 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-AGENTS",
+            "OFFICIAL-AZURE-LANGUAGE",
+            "OFFICIAL-AZURE-SPEECH",
+            "OFFICIAL-AZURE-VISION",
+            "OFFICIAL-CONTENT-UNDERSTANDING"
           ],
           "activity_ids": ["A-L0201-1", "A-L0201-2"],
           "assessment_ids": ["AS-L0201-QC", "AS-L0201-MATCH"],
-          "mastery_gate": "can match scenarios to major AI workload families"
+          "mastery_gate": "score at least 10 of 12 and pass all critical workload and Terminal-state contrasts"
         },
         {
           "lesson_id": "L-02-02",

@@ -120,6 +120,25 @@ Validation:
 Next step: Complete current build session
 Notes: The session finished with explicit source-gap documentation and shorter-than-requested elapsed time noted.
 
+## Log entry: 2026-07-11T18:20:05-04:00
+
+Stage: Reference concept lesson implementation
+Action: Built complete source-grounded `L-02-01` package for AI workload matching, including the spoiler-safe Terminal source/output/evidence retrieval bridge, deterministic exercise data, validation script, progressive remediation, and spaced review.
+Files touched:
+- curriculum/lessons/L-02-01/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- official AI-901 guide and all four priority Foundry/Azure sources checked: pass
+- official Language, Speech, and Vision workload sources checked: pass
+- lesson/activity/assessment schema contracts: pass
+- exercise JSON and deterministic self-test: pass
+Next step: Exercise Agent should implement `EX-L0201-WORKLOAD-SORT` with the documented session and evidence contracts.
+Notes: Terminal persistence behavior is explicitly labeled bridge instruction, not Microsoft product behavior. No gameplay code changed.
+
 ## Log entry: 2026-05-29T20:45:00-04:00
 
 Stage: Follow-up planning layer expansion

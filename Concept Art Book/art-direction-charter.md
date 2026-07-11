@@ -50,6 +50,14 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 - Environmental evidence may deepen ambiguity but may not resolve disappearance, consciousness, continuity, or purpose.
 - No text, UI, watermark, logo, combat staging, or generic neon sci-fi in clean plates.
 
+## Terminal family grammar
+
+- A Terminal is a small physical node emerging from or rooted into the ground; it is not a conventional monitor, laptop, kiosk, or floating icon.
+- The family resemblance is a faceted translucent crown folded around a small central core. Crown scale, fin count, material weathering, and base construction adapt to each region.
+- One localized light pool or reflection may isolate a Terminal, but glow must not replace silhouette readability.
+- The Terminal and the location's monumental landmark must remain separate visual roles: the node is the interaction target; the landmark carries environmental scale.
+- Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.
+
 ## Delivery specification
 
 - Master aspect ratio: 16:9.
@@ -57,4 +65,3 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 - Clean world plate only; no baked UI.
 - Lower-center walkable space should survive the game's dialogue-panel crop and responsive scaling.
 - Every selected plate requires a scene sheet and provenance entry.
-

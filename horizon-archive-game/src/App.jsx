@@ -10,6 +10,18 @@ import {
   terminalExercise,
   updateExerciseEvidence,
 } from "./terminalExercise.js";
+import {
+  advanceWorkloadSession,
+  createWorkloadSession,
+  evaluateWorkloadSelection,
+  getWorkloadItems,
+  getWorkloadOutcome,
+  revealWorkloadHint,
+  sanitizeWorkloadEvidence,
+  updateWorkloadEvidence,
+  workloadChoices,
+  workloadSortExercise,
+} from "./workloadSortExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -58,6 +70,25 @@ const scenes = [
   },
 ];
 
+function TerminalShell({ exerciseId, title, filename, lessonId, onClose, children }) {
+  return (
+    <section className="terminal-workbench" aria-labelledby="terminal-title" data-terminal-exercise={exerciseId}>
+      <header className="terminal-titlebar">
+        <div>
+          <span className="machine-mark" aria-hidden="true">◇</span>
+          <strong id="terminal-title">MACHINE TERMINAL // {title}</strong>
+        </div>
+        <button type="button" onClick={onClose} aria-label="Close Terminal">Close</button>
+      </header>
+      <div className="terminal-tabbar" role="tablist" aria-label="Open files">
+        <button type="button" role="tab" aria-selected="true">{filename}</button>
+        <span>Lesson {lessonId}</span>
+      </div>
+      {children}
+    </section>
+  );
+}
+
 function loadSave() {
   try {
     const saved = JSON.parse(localStorage.getItem(SAVE_KEY) || "null");
@@ -69,6 +100,7 @@ function loadSave() {
     return {
       ...getResumeState(saved.completed, saved.pendingSceneId),
       exerciseEvidence: sanitizeExerciseEvidence(saved.exerciseEvidence),
+      workloadEvidence: sanitizeWorkloadEvidence(saved.workloadEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -89,8 +121,11 @@ export function App() {
   const [terminalHintLevel, setTerminalHintLevel] = useState(0);
   const [pendingAdvance, setPendingAdvance] = useState(false);
   const [terminalOpen, setTerminalOpen] = useState(false);
+  const [terminalSessionStarted, setTerminalSessionStarted] = useState(false);
   const [terminalResult, setTerminalResult] = useState(null);
   const [exerciseEvidence, setExerciseEvidence] = useState(null);
+  const [workloadSession, setWorkloadSession] = useState(null);
+  const [workloadEvidence, setWorkloadEvidence] = useState(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
@@ -102,9 +137,10 @@ export function App() {
         completed,
         pendingSceneId: mode === "playing" && pendingAdvance ? scene.id : null,
         exerciseEvidence,
+        workloadEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -115,11 +151,15 @@ export function App() {
     setQuestionOpen(false);
     setFeedback("");
     setCode("");
+    setShowHint(false);
     setPendingAdvance(false);
     setTerminalOpen(false);
+    setTerminalSessionStarted(false);
     setTerminalResult(null);
     setTerminalHintLevel(0);
     setExerciseEvidence(null);
+    setWorkloadSession(null);
+    setWorkloadEvidence(null);
     setMode("playing");
   }
 
@@ -133,9 +173,14 @@ export function App() {
       : "The flight recorder restores your last confirmed position.");
     setPendingAdvance(Boolean(saved.pendingSceneId));
     setExerciseEvidence(saved.exerciseEvidence);
+    setWorkloadEvidence(saved.workloadEvidence);
+    setWorkloadSession(null);
     setTerminalOpen(false);
+    setTerminalSessionStarted(false);
     setTerminalResult(null);
     setTerminalHintLevel(0);
+    setShowHint(false);
+    setCode("");
     setMode(saved.finished ? "ending" : "playing");
   }
 
@@ -151,10 +196,20 @@ export function App() {
     if (scene.id === "meadow") {
       setDialogue("Terminal link established. Complete the file, run it, and confirm the result.");
       setTerminalOpen(true);
-      setTerminalResult(null);
-      setCode(terminalExercise.starterCode);
-      setShowHint(false);
-      setTerminalHintLevel(0);
+      if (!terminalSessionStarted) {
+        setTerminalSessionStarted(true);
+        setTerminalResult(null);
+        setCode(terminalExercise.starterCode);
+        setShowHint(false);
+        setTerminalHintLevel(0);
+      }
+      return;
+    }
+    if (scene.id === "ruins") {
+      setDialogue("Workload Sort linked. Classify each signal, remediate misses, and confirm mastery.");
+      setQuestionOpen(false);
+      setTerminalOpen(true);
+      if (!workloadSession) setWorkloadSession(createWorkloadSession());
       return;
     }
     setDialogue(scene.question);
@@ -184,7 +239,64 @@ export function App() {
     setCompleted(nextCompleted);
     setDialogue(scene.success);
     setTerminalOpen(false);
+    setTerminalSessionStarted(false);
     setTerminalResult(null);
+    setTerminalHintLevel(0);
+    setShowHint(false);
+    setCode("");
+    setPendingAdvance(true);
+  }
+
+  function checkWorkloadCard(event) {
+    event.preventDefault();
+    const result = evaluateWorkloadSelection(workloadSession);
+    setWorkloadSession(result.session);
+    if (!result.submitted) return;
+    setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, {
+      incrementAttempt: true,
+      hintLevel: result.session.hintLevel,
+      itemId: result.finalized ? result.item.id : null,
+      correct: result.finalized ? result.correct : undefined,
+      misconceptionTags: result.finalized && !result.correct ? result.item.tags : [],
+    }));
+  }
+
+  function showWorkloadHint() {
+    const next = revealWorkloadHint(workloadSession);
+    setWorkloadSession(next);
+    setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, { hintLevel: next.hintLevel }));
+  }
+
+  function advanceWorkloadCard() {
+    const next = advanceWorkloadSession(workloadSession);
+    setWorkloadSession(next);
+    if (next.phase === "form_complete") {
+      const outcome = getWorkloadOutcome(next);
+      setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, {
+        misconceptionTags: outcome.criticalMisses,
+        masteryStatus: outcome.passed ? "in_progress" : "remediation_required",
+      }));
+    }
+  }
+
+  function beginFreshWorkloadRetry() {
+    setWorkloadSession(createWorkloadSession("retry"));
+    setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, { masteryStatus: "in_progress" }));
+  }
+
+  function setWorkloadConfidence(confidence) {
+    setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, { confidence }));
+  }
+
+  function acknowledgeWorkloadCompletion() {
+    const outcome = getWorkloadOutcome(workloadSession);
+    if (!outcome.passed || !workloadEvidence?.confidence) return;
+    setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, { masteryStatus: "mastered" }));
+    const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
+    setCompleted(nextCompleted);
+    setDialogue(scene.success);
+    setTerminalOpen(false);
+    setWorkloadSession(null);
     setPendingAdvance(true);
   }
 
@@ -205,6 +317,13 @@ export function App() {
 
   function continueJourney() {
     setPendingAdvance(false);
+    setTerminalOpen(false);
+    setTerminalSessionStarted(false);
+    setTerminalResult(null);
+    setTerminalHintLevel(0);
+    setShowHint(false);
+    setCode("");
+    setWorkloadSession(null);
     if (completed.length === scenes.length) {
       setMode("ending");
       return;
@@ -269,19 +388,14 @@ export function App() {
         >
           <span>{verb} {scene.hotspotLabel}</span>
         </button>
-        {terminalOpen && (
-          <section className="terminal-workbench" aria-labelledby="terminal-title" data-terminal-exercise={terminalExercise.exerciseId}>
-            <header className="terminal-titlebar">
-              <div>
-                <span className="machine-mark" aria-hidden="true">◇</span>
-                <strong id="terminal-title">MACHINE TERMINAL // {terminalExercise.title}</strong>
-              </div>
-              <button type="button" onClick={() => setTerminalOpen(false)} aria-label="Close Terminal">Close</button>
-            </header>
-            <div className="terminal-tabbar" role="tablist" aria-label="Open files">
-              <button type="button" role="tab" aria-selected="true">{terminalExercise.filename}</button>
-              <span>Lesson {terminalExercise.lessonId}</span>
-            </div>
+        {terminalOpen && scene.id === "meadow" && (
+          <TerminalShell
+            exerciseId={terminalExercise.exerciseId}
+            title={terminalExercise.title}
+            filename={terminalExercise.filename}
+            lessonId={terminalExercise.lessonId}
+            onClose={() => setTerminalOpen(false)}
+          >
             <form className="editor-layout" onSubmit={runTerminal}>
               <aside className="task-pane" aria-labelledby="terminal-task-heading">
                 <p className="pane-label">ACTIVE TASK</p>
@@ -326,7 +440,101 @@ export function App() {
                 </section>
               </div>
             </form>
-          </section>
+          </TerminalShell>
+        )}
+        {terminalOpen && scene.id === "ruins" && workloadSession && (
+          <TerminalShell
+            exerciseId={workloadSortExercise.exercise_id}
+            title={workloadSortExercise.title}
+            filename={workloadSession.form === "retry" ? "workload_sort_retry.json" : "workload_sort.json"}
+            lessonId={workloadSortExercise.lesson_id}
+            onClose={() => setTerminalOpen(false)}
+          >
+            <form className="editor-layout workload-layout" onSubmit={checkWorkloadCard}>
+              <aside className="task-pane" aria-labelledby="workload-task-heading">
+                <p className="pane-label">ACTIVE CHECKPOINT</p>
+                <h2 id="workload-task-heading">Workload Sort</h2>
+                <p>Match each scenario to its primary workload or Terminal state. A passing form requires 10/12 with every critical contrast recovered.</p>
+                <dl>
+                  <div><dt>Activity</dt><dd>{workloadSortExercise.activity_id}</dd></div>
+                  <div><dt>Form</dt><dd>{workloadSession.form}</dd></div>
+                  <div><dt>Progress</dt><dd>{Math.min(workloadSession.index + 1, 12)} / 12</dd></div>
+                </dl>
+                {workloadSession.itemAttempt > 0 && workloadSession.phase === "answering" && (
+                  <button className="hint-action" type="button" onClick={showWorkloadHint} disabled={workloadSession.hintLevel >= 2}>
+                    Reveal contrast hint
+                  </button>
+                )}
+              </aside>
+              <div className="editor-stack workload-stack">
+                {workloadSession.phase !== "form_complete" ? (
+                  <fieldset className="workload-editor">
+                    <legend>
+                      <span>{getWorkloadItems(workloadSession.form)[workloadSession.index].id}</span>
+                      {getWorkloadItems(workloadSession.form)[workloadSession.index].prompt}
+                    </legend>
+                    <div className="workload-choices">
+                      {workloadChoices.map(([key, label]) => (
+                        <label key={key} className={workloadSession.selected === key ? "choice-card selected" : "choice-card"}>
+                          <input
+                            type="radio"
+                            name="workload-choice"
+                            value={key}
+                            checked={workloadSession.selected === key}
+                            disabled={workloadSession.phase === "item_complete"}
+                            onChange={(event) => setWorkloadSession({ ...workloadSession, selected: event.target.value })}
+                          />
+                          <code>{key}</code>
+                          <span>{label}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+                ) : (
+                  <section className="workload-summary" aria-labelledby="workload-result-heading">
+                    <p className="pane-label">FORM RESULT</p>
+                    <h2 id="workload-result-heading">{getWorkloadOutcome(workloadSession).score} / 12</h2>
+                    <p>{getWorkloadOutcome(workloadSession).passed
+                      ? "Mastery gate met. Record confidence, then confirm the checkpoint."
+                      : "Mastery gate not met. Load the deterministic fresh form after reviewing the flagged contrasts."}</p>
+                    {getWorkloadOutcome(workloadSession).criticalMisses.length > 0 && (
+                      <p>Review: {getWorkloadOutcome(workloadSession).criticalMisses.join(" · ")}</p>
+                    )}
+                    {getWorkloadOutcome(workloadSession).passed ? (
+                      <fieldset className="confidence-group">
+                        <legend>Confidence after this check</legend>
+                        {[["low", "Low"], ["medium", "Medium"], ["high", "High"]].map(([value, label]) => (
+                          <label key={value}>
+                            <input type="radio" name="confidence" checked={workloadEvidence?.confidence === value} onChange={() => setWorkloadConfidence(value)} />
+                            {label}
+                          </label>
+                        ))}
+                      </fieldset>
+                    ) : (
+                      <button className="confirm-action" type="button" onClick={beginFreshWorkloadRetry}>Load fresh retry form</button>
+                    )}
+                  </section>
+                )}
+                <section className="terminal-console" aria-labelledby="workload-output-heading">
+                  <div className="console-heading-row">
+                    <strong id="workload-output-heading">OUTPUT / REMEDIATION</strong>
+                    {workloadSession.phase === "answering" && <button className="run-action" type="submit">Check card</button>}
+                    {workloadSession.phase === "item_complete" && (
+                      <button className="run-action" type="button" onClick={advanceWorkloadCard}>
+                        {workloadSession.index === 11 ? "View result" : "Next card"}
+                      </button>
+                    )}
+                  </div>
+                  <div className="console-feedback active" role="status" aria-live="polite">{workloadSession.feedback}</div>
+                  {workloadSession.phase === "form_complete" && getWorkloadOutcome(workloadSession).passed && (
+                    <button className="confirm-action" type="button" disabled={!workloadEvidence?.confidence} onClick={acknowledgeWorkloadCompletion}>
+                      Acknowledge mastery
+                    </button>
+                  )}
+                </section>
+              </div>
+            </form>
+          </TerminalShell>
         )}
       </section>
 

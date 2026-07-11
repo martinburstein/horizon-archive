@@ -1,0 +1,33 @@
+[
+  {
+    "activity_id": "A-L0201-1",
+    "lesson_id": "L-02-01",
+    "activity_type": "compare_choice",
+    "purpose": "Build a six-family workload map by comparing each scenario's primary input, action, and output.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 15,
+    "input_contract": "Learner reads the six workload cards and predicts a category before revealing each explanation.",
+    "output_contract": "Learner correctly explains at least four contrasts, including generative versus agentic and vision versus information extraction.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0201-2",
+    "lesson_id": "L-02-01",
+    "activity_type": "checkpoint",
+    "purpose": "Retrieve workload distinctions and the source-output-evidence mental model in an Exercise Agent-ready Machine Terminal.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 20,
+    "input_contract": "Learner completes exercise.json closed-note; the runtime may preserve the current draft across close/reopen but starts a fresh draft after a scene transition.",
+    "output_contract": "Deterministic validator records item correctness, misconception tags, attempts, hint level, confidence, and mastery status without storing free-form learner code or response text.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review",
+    "notes": "Exercise Agent handoff: use exercise_id EX-L0201-WORKLOAD-SORT and preserve the privacy-limited evidence contract."
+  }
+]

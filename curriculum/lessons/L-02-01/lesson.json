@@ -1,0 +1,35 @@
+{
+  "lesson_id": "L-02-01",
+  "lesson_title": "AI workloads and Azure AI vocabulary",
+  "lesson_type": "concept_lesson",
+  "chapter_id": "chapter-02",
+  "module_id": "ch2-m1",
+  "launch_tier": "launch_critical",
+  "source_mode": "source_grounded",
+  "supports_objectives": ["AI901-D1-O4"],
+  "supports_python_skills": [],
+  "prerequisite_lesson_ids": ["L-01-03"],
+  "source_ids": [
+    "OFFICIAL-AI901-STUDY-GUIDE",
+    "OFFICIAL-FOUNDRY-HUB",
+    "OFFICIAL-FOUNDRY-AGENTS",
+    "OFFICIAL-AZURE-LANGUAGE",
+    "OFFICIAL-AZURE-SPEECH",
+    "OFFICIAL-AZURE-VISION",
+    "OFFICIAL-CONTENT-UNDERSTANDING"
+  ],
+  "activity_ids": ["A-L0201-1", "A-L0201-2"],
+  "assessment_ids": ["AS-L0201-QC", "AS-L0201-MATCH"],
+  "learner_starting_state": "Can run and debug a small Python file but has not yet organized AI scenarios into workload families.",
+  "learner_ending_state": "Can distinguish six AI workload families, choose the best primary workload for a short scenario, and explain the Terminal's source-output-evidence state model.",
+  "mastery_gate": "Score at least 10 of 12 on the closed-note workload check, with no generative-versus-agentic, vision-versus-information-extraction, or source-output-evidence critical miss.",
+  "estimated_minutes": 45,
+  "difficulty_band": "beginner",
+  "provenance_policy": {
+    "citation_expectation": "AI-901 scope and Microsoft capability claims trace to the current official source register; the Terminal state model is explicitly course-authored bridge instruction.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Do not infer a specific Azure product from a workload label alone; reverify volatile product availability and terminology before live implementation."
+  },
+  "status": "review",
+  "notes": "Reference concept-lesson package with deterministic scenario and Terminal-state validation."
+}

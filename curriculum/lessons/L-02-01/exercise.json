@@ -1,0 +1,58 @@
+{
+  "exercise_id": "EX-L0201-WORKLOAD-SORT",
+  "lesson_id": "L-02-01",
+  "activity_id": "A-L0201-2",
+  "objective_ids": ["AI901-D1-O4"],
+  "skill_ids": ["AI901-D1-O4-WORKLOAD-MATCH", "TERM-STATE-001"],
+  "title": "Workload Sort",
+  "workload_keys": {
+    "g": "generative_ai",
+    "a": "agentic_ai",
+    "t": "text_analysis",
+    "s": "speech",
+    "v": "computer_vision_and_image_generation",
+    "i": "information_extraction",
+    "src": "editable_source",
+    "out": "runtime_output",
+    "ev": "saved_mastery_evidence",
+    "session": "temporary_working_session"
+  },
+  "items": [
+    {"id": "W01", "prompt": "Draft a concise reply from a supplied customer email.", "answer": "g", "hint": "The primary output is newly composed text.", "tags": ["generative-is-agentic"], "critical": true},
+    {"id": "W02", "prompt": "Inspect a request, query inventory with a tool, choose an allowed substitute, and place the order.", "answer": "a", "hint": "The system must pursue a goal through decisions and actions.", "tags": ["generative-is-agentic"], "critical": true},
+    {"id": "W03", "prompt": "Return positive, neutral, or negative for each written review.", "answer": "t", "hint": "The system analyzes meaning already present in text.", "tags": ["text-analysis-fit"], "critical": false},
+    {"id": "W04", "prompt": "Create live text captions from a speaker's microphone.", "answer": "s", "hint": "The primary conversion begins with spoken audio.", "tags": ["speech-fit"], "critical": false},
+    {"id": "W05", "prompt": "Describe the objects and dominant colors visible in a photograph.", "answer": "v", "hint": "The requested output interprets visual features rather than a fixed business schema.", "tags": ["vision-is-extraction"], "critical": true},
+    {"id": "W06", "prompt": "Return invoice_number, vendor, invoice_date, and total from an invoice image.", "answer": "i", "hint": "The requested output is a defined set of structured fields.", "tags": ["vision-is-extraction"], "critical": true},
+    {"id": "W07", "prompt": "Generate a new poster image from a written creative brief.", "answer": "v", "hint": "The AI-901 workload wording includes image-generation capabilities with vision.", "tags": ["image-generation-fit"], "critical": false},
+    {"id": "W08", "prompt": "Condense a long written incident report into five sentences.", "answer": "t", "hint": "Summarization is a text analysis technique in the AI-901 objective list.", "tags": ["text-analysis-fit"], "critical": false},
+    {"id": "T01", "prompt": "The code or instructions currently changeable in the editor.", "answer": "src", "hint": "This is the authored material, not the result of running it.", "tags": ["source-is-output"], "critical": true},
+    {"id": "T02", "prompt": "The latest result produced after selecting Run.", "answer": "out", "hint": "A run produces this layer; editing happens elsewhere.", "tags": ["source-is-output"], "critical": true},
+    {"id": "T03", "prompt": "Lesson ID, item correctness, attempts, hint level, confidence, tags, and completion — without free-form answer text.", "answer": "ev", "hint": "This limited record can persist without retaining the learner's authored response.", "tags": ["working-state-is-mastery-evidence"], "critical": true},
+    {"id": "T04", "prompt": "The state that can restore after close/reopen but deliberately ends at a scene transition.", "answer": "session", "hint": "It supports resuming active work but is separate from durable mastery evidence.", "tags": ["working-state-is-mastery-evidence"], "critical": true}
+  ],
+  "retry_items": [
+    {"id": "R-W01", "prompt": "Compose three new names and descriptions for a product from a written brief.", "answer": "g", "hint": "The requested result is newly created content.", "tags": ["generative-is-agentic"], "critical": true},
+    {"id": "R-W02", "prompt": "Review a travel request, check policy with a tool, reserve an allowed option, and send confirmation.", "answer": "a", "hint": "The system must choose and take multiple goal-directed actions.", "tags": ["generative-is-agentic"], "critical": true},
+    {"id": "R-W03", "prompt": "Identify organizations and locations mentioned in a written news report.", "answer": "t", "hint": "Entity detection analyzes meaning already contained in text.", "tags": ["text-analysis-fit"], "critical": false},
+    {"id": "R-W04", "prompt": "Read an on-screen article aloud in a natural-sounding voice.", "answer": "s", "hint": "The primary conversion turns text into synthesized speech.", "tags": ["speech-fit"], "critical": false},
+    {"id": "R-W05", "prompt": "Determine whether a photo contains a bicycle and describe its visible color.", "answer": "v", "hint": "The desired result interprets visual features rather than filling a fixed record.", "tags": ["vision-is-extraction"], "critical": true},
+    {"id": "R-W06", "prompt": "Return applicant_name, document_type, expiration_date, and identifier from an identity document image.", "answer": "i", "hint": "The requested result is a named structured record extracted from content.", "tags": ["vision-is-extraction"], "critical": true},
+    {"id": "R-W07", "prompt": "Create a new landscape illustration from a text prompt.", "answer": "v", "hint": "AI-901 groups image-generation capability with the vision workload area.", "tags": ["image-generation-fit"], "critical": false},
+    {"id": "R-W08", "prompt": "Return the key phrases from a written support ticket.", "answer": "t", "hint": "Key phrase extraction is a text analysis technique.", "tags": ["text-analysis-fit"], "critical": false},
+    {"id": "R-T01", "prompt": "A line in the editor that the learner can change before running.", "answer": "src", "hint": "This belongs to the editable authored layer.", "tags": ["source-is-output"], "critical": true},
+    {"id": "R-T02", "prompt": "The error message displayed by the most recent Run action.", "answer": "out", "hint": "A run produced it; it is not the source being edited.", "tags": ["source-is-output"], "critical": true},
+    {"id": "R-T03", "prompt": "A durable record that says an item was correct after two attempts with one hint, without retaining the answer text.", "answer": "ev", "hint": "This is privacy-limited progress information.", "tags": ["working-state-is-mastery-evidence"], "critical": true},
+    {"id": "R-T04", "prompt": "The resumable draft and latest output that are cleared when the player moves to another scene.", "answer": "session", "hint": "This temporary layer is separate from durable progress evidence.", "tags": ["working-state-is-mastery-evidence"], "critical": true}
+  ],
+  "mastery": {"minimum_correct": 10, "total": 12, "critical_items_must_pass": true},
+  "evidence_contract": {
+    "store": ["lesson_id", "activity_id", "exercise_id", "item_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["free_form_source", "free_form_response_text"]
+  },
+  "session_contract": {
+    "close_reopen": "restore_active_draft",
+    "scene_transition": "start_clean_draft",
+    "mastery_evidence": "persist_separately"
+  }
+}

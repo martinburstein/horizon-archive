@@ -30,6 +30,7 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built runnable reference package `L-01-01`
 - [x] Built runnable offline-first reference package `L-05-03`
 - [x] Added retrieval, spaced review, error remediation, timed practice, and readiness-gate policy
-- [x] Validated lesson manifests and executed both learner scripts
-- [ ] Build source-grounded reference packages `L-02-01` and `L-05-07`
+- [x] Validated all three reference manifests and executed their learner scripts or deterministic exercise checks
+- [x] Built source-grounded reference package `L-02-01`
+- [ ] Build source-grounded reference package `L-05-07`
 - [ ] Expand original question banks and full timed simulations

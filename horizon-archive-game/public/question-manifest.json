@@ -13,10 +13,13 @@
       "success_contract": "Set signal to 2, create a quoted learner call sign, and print message, signal, and operator output."
     },
     {
-      "id": "HA-PY-002",
+      "id": "HA-AI901-001",
       "scene": "ruins",
-      "skill": "string_variable",
-      "answer": "pilot_name = \"MARTIN\""
+      "exercise_id": "EX-L0201-WORKLOAD-SORT",
+      "lesson_id": "L-02-01",
+      "activity_id": "A-L0201-2",
+      "skills": ["AI901-D1-O4-WORKLOAD-MATCH", "TERM-STATE-001"],
+      "success_contract": "Score at least 10/12 and recover every critical workload and Terminal-state contrast."
     },
     {
       "id": "HA-PY-003",

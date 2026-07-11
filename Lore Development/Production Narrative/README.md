@@ -18,6 +18,7 @@ This folder turns the visible lore bible, concept art, playable prologue, and cu
 - `reveal-pacing-matrix.md`: evidence, interpretation, ambiguity, and hard withholding by chapter.
 - `environmental-storytelling-cues.md`: reusable visual and interactive cues derived from the four concept-art environments.
 - `dialogue-interaction-scaffolds.md`: voice rules and modular interaction templates.
+- `terminal-interaction-voice-continuity.md`: production copy and state language for first contact, held sessions, reconnection, attempts, hints, success, acknowledgement, and scene transfer.
 - `code-to-discovery-integration.md`: rules and exercise patterns that make real Python produce story discoveries.
 
 ## Production rule

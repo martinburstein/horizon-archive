@@ -10,12 +10,13 @@ Decide what must be true before full lesson generation begins.
 
 The project is ready for lesson-system implementation planning and limited prototype drafting, but not for broad full lesson generation across all chapters.
 
-As of 2026-07-11, two end-to-end reference packages exist:
+As of 2026-07-11, three end-to-end reference packages exist:
 
 - `curriculum/lessons/L-01-01` — bridge lesson with runnable Python, activities, assessments, retrieval, remediation, and spaced review
 - `curriculum/lessons/L-05-03` — official-source-grounded Foundry SDK mental model with a runnable offline simulation and optional-live guardrails
+- `curriculum/lessons/L-02-01` — source-grounded concept lesson with deterministic workload matching and a privacy-limited Terminal state retrieval bridge
 
-Both lesson manifests pass the dependency-free schema contract check. Both learner scripts run successfully. `L-02-01` and `L-05-07` remain to complete the four-pattern reference gate.
+All three lesson manifests pass the dependency-free schema contract check. All three learner scripts or deterministic exercise checks run successfully. `L-05-07` remains to complete the four-pattern reference gate.
 
 ## Ready now
 
