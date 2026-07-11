@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-05-29T20:26:59Z",
+  "overall_status": "partial",
+  "domains": [
+    {
+      "domain_id": "AI901-D1",
+      "title": "Identify AI concepts and capabilities",
+      "weight": "40-45%",
+      "objectives_total": 8,
+      "objectives_mapped_to_sources": 8,
+      "objectives_mapped_to_chapters": 8,
+      "coverage_status": "complete",
+      "missing_objectives": []
+    },
+    {
+      "domain_id": "AI901-D2",
+      "title": "Implement AI solutions by using Microsoft Foundry",
+      "weight": "55-60%",
+      "objectives_total": 7,
+      "objectives_mapped_to_sources": 7,
+      "objectives_mapped_to_chapters": 7,
+      "coverage_status": "complete",
+      "missing_objectives": []
+    }
+  ],
+  "notes": [
+    "Implementation domain intentionally receives heavier chapter weight.",
+    "Official Foundry documentation hub sources were not locally captured and are listed as missing expected references."
+  ]
+}

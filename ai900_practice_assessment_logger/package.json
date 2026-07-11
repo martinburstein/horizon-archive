@@ -1,0 +1,13 @@
+{
+  "name": "ai900-practice-assessment-logger",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/ai900_practice_logger.mjs",
+    "build-cards": "node scripts/build_review_cards.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

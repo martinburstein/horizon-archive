@@ -1,0 +1,13 @@
+{
+  "game_name": "The Horizon Archive",
+  "entrypoint": "",
+  "launch_command": "",
+  "build_id": "",
+  "build_provenance": "",
+  "test_environment": "",
+  "healthcheck_url": "",
+  "clean_save_command": "",
+  "title_marker": "",
+  "credits_marker": "",
+  "question_manifest": ""
+}

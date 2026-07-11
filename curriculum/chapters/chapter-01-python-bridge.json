@@ -1,0 +1,104 @@
+{
+  "chapter_id": "chapter-01",
+  "status": "draft",
+  "title": "Python Bridge - First Code and Programming Confidence",
+  "source_role": "invented_bridge",
+  "purpose": "Build confidence from zero Python experience into first runnable code and a debugging mindset.",
+  "learner_starting_state": "No programming experience.",
+  "learner_ending_state": "Can run tiny Python scripts, inspect output, and survive beginner mistakes.",
+  "ai901_objectives_supported": [],
+  "python_skills_introduced": [
+    "PY-001",
+    "PY-002",
+    "PY-003",
+    "PY-004",
+    "PY-005",
+    "PY-006",
+    "PY-007"
+  ],
+  "python_skills_reinforced": [],
+  "azure_foundry_concepts_introduced": [],
+  "knowledge_repository_sources": [
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-03-anal-ai-resp-diff-pr-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-05-debu-ai-gene-code-us-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l01-guid-prac-intr-py-fund-s-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l04-guided-pract-pr-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l04-prac-use-ai-code-gen-too-pdf"
+  ],
+  "suggested_module_sequence": [
+    {
+      "module_id": "ch1-m1",
+      "module_title": "Meet Python and the terminal",
+      "module_purpose": "Create first successful run and reduce beginner fear.",
+      "skills": [
+        "PY-001",
+        "PY-002",
+        "PY-003"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf"
+      ],
+      "assessment_type": "coding"
+    },
+    {
+      "module_id": "ch1-m2",
+      "module_title": "Strings, variables, and tiny scripts",
+      "module_purpose": "Build readable first programs.",
+      "skills": [
+        "PY-004",
+        "PY-005",
+        "PY-006"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf"
+      ],
+      "assessment_type": "coding"
+    },
+    {
+      "module_id": "ch1-m3",
+      "module_title": "Errors, indentation, and debugging mindset",
+      "module_purpose": "Normalize mistakes early.",
+      "skills": [
+        "PY-007"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf"
+      ],
+      "assessment_type": "coding"
+    }
+  ],
+  "assessment_strategy": "Coding checks only at skeleton level; no full lesson or exercise generation yet.",
+  "do_not_generate_yet": [
+    "full lesson prose",
+    "full exercise banks",
+    "flashcards",
+    "quizzes",
+    "final app UI",
+    "narrative lesson scenes"
+  ]
+}

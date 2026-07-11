@@ -1,0 +1,12 @@
+[
+  {
+    "alt": "Diagram of an agent with a model, instructions, and tools.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/agent.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Diagram of a multi-agent system.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/multiple-agents.png",
+    "path": "assets/image_002.png"
+  }
+]

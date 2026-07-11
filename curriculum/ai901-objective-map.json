@@ -1,0 +1,519 @@
+{
+  "generated_at": "2026-05-29T20:26:59Z",
+  "exam": "AI-901: Microsoft Azure AI Fundamentals",
+  "authority": "AI-901 study guide",
+  "status": "draft",
+  "domains": [
+    {
+      "domain_id": "AI901-D1",
+      "title": "Identify AI concepts and capabilities",
+      "weight": "40-45%",
+      "priority": "high",
+      "objectives": [
+        {
+          "objective_id": "AI901-D1-O1",
+          "title": "Describe principles of responsible AI",
+          "subskills": [
+            "fairness",
+            "reliability and safety",
+            "privacy and security",
+            "inclusiveness",
+            "transparency",
+            "accountability"
+          ],
+          "required_knowledge": [
+            "fairness",
+            "reliability and safety",
+            "privacy and security",
+            "inclusiveness",
+            "transparency",
+            "accountability"
+          ],
+          "python_prerequisites": [
+            "Prompt awareness",
+            "Scenario reasoning"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-02"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O2",
+          "title": "Identify AI model components and generative AI fundamentals",
+          "subskills": [
+            "describe how generative AI models work",
+            "explain LLM and multimodal basics"
+          ],
+          "required_knowledge": [
+            "describe how generative AI models work",
+            "explain LLM and multimodal basics"
+          ],
+          "python_prerequisites": [
+            "Strings",
+            "Plain-language reasoning"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-02"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O3",
+          "title": "Choose an appropriate AI model, deployment option, and configuration",
+          "subskills": [
+            "match capability to model choice",
+            "recognize deployment options and parameters"
+          ],
+          "required_knowledge": [
+            "match capability to model choice",
+            "recognize deployment options and parameters"
+          ],
+          "python_prerequisites": [
+            "JSON basics"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-02",
+            "chapter-05"
+          ],
+          "mastery_check_type": "scenario",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O4",
+          "title": "Identify AI workloads and scenario fit",
+          "subskills": [
+            "generative and agentic AI",
+            "text analysis",
+            "speech",
+            "computer vision",
+            "information extraction"
+          ],
+          "required_knowledge": [
+            "generative and agentic AI",
+            "text analysis",
+            "speech",
+            "computer vision",
+            "information extraction"
+          ],
+          "python_prerequisites": [
+            "Problem decomposition"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-"
+          ],
+          "proposed_chapters": [
+            "chapter-02",
+            "chapter-04"
+          ],
+          "mastery_check_type": "scenario",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O5",
+          "title": "Describe text analysis techniques",
+          "subskills": [
+            "keyword extraction",
+            "entity detection",
+            "sentiment analysis",
+            "summarization"
+          ],
+          "required_knowledge": [
+            "keyword extraction",
+            "entity detection",
+            "sentiment analysis",
+            "summarization"
+          ],
+          "python_prerequisites": [
+            "Lists",
+            "Dictionaries"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O6",
+          "title": "Identify speech capabilities",
+          "subskills": [
+            "speech recognition",
+            "speech synthesis"
+          ],
+          "required_knowledge": [
+            "speech recognition",
+            "speech synthesis"
+          ],
+          "python_prerequisites": [
+            "Input/output"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O7",
+          "title": "Identify computer vision and image-generation capabilities",
+          "subskills": [
+            "vision-enabled models",
+            "image generation",
+            "video generation"
+          ],
+          "required_knowledge": [
+            "vision-enabled models",
+            "image generation",
+            "video generation"
+          ],
+          "python_prerequisites": [
+            "Files"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D1-O8",
+          "title": "Identify information extraction techniques",
+          "subskills": [
+            "extract from text, images, audio, and video"
+          ],
+          "required_knowledge": [
+            "extract from text, images, audio, and video"
+          ],
+          "python_prerequisites": [
+            "Files",
+            "JSON"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04",
+            "chapter-05"
+          ],
+          "mastery_check_type": "conceptual",
+          "coverage_status": "mapped",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "domain_id": "AI901-D2",
+      "title": "Implement AI solutions by using Microsoft Foundry",
+      "weight": "55-60%",
+      "priority": "very_high",
+      "objectives": [
+        {
+          "objective_id": "AI901-D2-O1",
+          "title": "Create effective system and user prompts",
+          "subskills": [
+            "system prompts",
+            "user prompts",
+            "clarity and grounding"
+          ],
+          "required_knowledge": [
+            "system prompts",
+            "user prompts",
+            "clarity and grounding"
+          ],
+          "python_prerequisites": [
+            "Strings",
+            "Functions"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-05"
+          ],
+          "mastery_check_type": "coding",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O2",
+          "title": "Deploy and interact with a model in the Foundry portal",
+          "subskills": [
+            "portal concepts",
+            "deployment flow",
+            "playground interaction"
+          ],
+          "required_knowledge": [
+            "portal concepts",
+            "deployment flow",
+            "playground interaction"
+          ],
+          "python_prerequisites": [
+            "Terminal basics",
+            "Environment variables"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-05"
+          ],
+          "mastery_check_type": "portal",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O3",
+          "title": "Create a lightweight chat client by using the Foundry SDK",
+          "subskills": [
+            "client initialization",
+            "endpoint and deployment usage",
+            "response handling"
+          ],
+          "required_knowledge": [
+            "client initialization",
+            "endpoint and deployment usage",
+            "response handling"
+          ],
+          "python_prerequisites": [
+            "Run a Python file",
+            "Packages and imports",
+            "Environment variables",
+            "JSON",
+            "HTTP/API basics"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-05"
+          ],
+          "mastery_check_type": "coding",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O4",
+          "title": "Create and test a single-agent solution in the Foundry portal and client app",
+          "subskills": [
+            "single-agent setup",
+            "agent testing",
+            "agent client concepts"
+          ],
+          "required_knowledge": [
+            "single-agent setup",
+            "agent testing",
+            "agent client concepts"
+          ],
+          "python_prerequisites": [
+            "Functions",
+            "Dictionaries",
+            "JSON"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-05"
+          ],
+          "mastery_check_type": "portal",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O5",
+          "title": "Build text and speech solutions by using Foundry",
+          "subskills": [
+            "text analysis app",
+            "spoken prompt response",
+            "Azure Speech in Foundry Tools"
+          ],
+          "required_knowledge": [
+            "text analysis app",
+            "spoken prompt response",
+            "Azure Speech in Foundry Tools"
+          ],
+          "python_prerequisites": [
+            "Files",
+            "JSON",
+            "HTTP/API basics"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04",
+            "chapter-05"
+          ],
+          "mastery_check_type": "mixed",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O6",
+          "title": "Build computer vision and image-generation solutions by using Foundry",
+          "subskills": [
+            "interpret visual input",
+            "generate images",
+            "build lightweight vision app"
+          ],
+          "required_knowledge": [
+            "interpret visual input",
+            "generate images",
+            "build lightweight vision app"
+          ],
+          "python_prerequisites": [
+            "Files",
+            "JSON",
+            "HTTP/API basics"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-04",
+            "chapter-05"
+          ],
+          "mastery_check_type": "mixed",
+          "coverage_status": "mapped",
+          "notes": ""
+        },
+        {
+          "objective_id": "AI901-D2-O7",
+          "title": "Build information extraction solutions with Content Understanding",
+          "subskills": [
+            "documents and forms",
+            "images",
+            "audio and video",
+            "lightweight extraction app"
+          ],
+          "required_knowledge": [
+            "documents and forms",
+            "images",
+            "audio and video",
+            "lightweight extraction app"
+          ],
+          "python_prerequisites": [
+            "Files",
+            "JSON",
+            "Structured outputs"
+          ],
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai-900-study-guide-markdown-source-md"
+          ],
+          "proposed_chapters": [
+            "chapter-05"
+          ],
+          "mastery_check_type": "mixed",
+          "coverage_status": "mapped",
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}

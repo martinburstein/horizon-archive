@@ -1,0 +1,466 @@
+{
+  "generated_at": "2026-05-29T20:26:59Z",
+  "status": "draft",
+  "progression": [
+    {
+      "skill_id": "PY-001",
+      "skill_name": "Run a Python file",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01"
+      ],
+      "reinforced": [],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-016",
+        "PY-017",
+        "PY-018"
+      ],
+      "unlocks": [
+        "PY-002",
+        "PY-003"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-002",
+      "skill_name": "Use the terminal for simple commands",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-001"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-003",
+      "skill_name": "Use print() for visible output",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-03"
+      ],
+      "reinforced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-001"
+      ],
+      "unlocks": [
+        "PY-004",
+        "PY-006"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-004",
+      "skill_name": "Work with strings",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-03"
+      ],
+      "reinforced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-003"
+      ],
+      "unlocks": [
+        "PY-009",
+        "PY-016"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-005",
+      "skill_name": "Use numbers and booleans",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-03"
+      ],
+      "reinforced": [
+        "chapter-03"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-003"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D1-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-006",
+      "skill_name": "Create and update variables",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-03"
+      ],
+      "reinforced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-003"
+      ],
+      "unlocks": [
+        "PY-010",
+        "PY-012"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-007",
+      "skill_name": "Read tracebacks and fix simple errors",
+      "introduced": "chapter-01",
+      "practiced": [
+        "chapter-01",
+        "chapter-03"
+      ],
+      "reinforced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-03",
+      "depends_on": [
+        "PY-003"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O5"
+      ]
+    },
+    {
+      "skill_id": "PY-008",
+      "skill_name": "Use lists",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-004",
+        "PY-006"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-009",
+      "skill_name": "Use dictionaries",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-004",
+        "PY-006"
+      ],
+      "unlocks": [
+        "PY-016",
+        "PY-020"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-010",
+      "skill_name": "Write conditionals",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-004",
+        "PY-006"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-011",
+      "skill_name": "Write loops",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-004",
+        "PY-006"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O5",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-012",
+      "skill_name": "Write small functions",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-004",
+        "PY-006"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-013",
+      "skill_name": "Import packages and modules",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [
+        "PY-019"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O5"
+      ]
+    },
+    {
+      "skill_id": "PY-014",
+      "skill_name": "Install packages and understand environments",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-015",
+      "skill_name": "Read and write files",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-04"
+      ],
+      "reinforced": [
+        "chapter-04",
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O6",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-016",
+      "skill_name": "Work with JSON data",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [
+        "PY-019"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ]
+    },
+    {
+      "skill_id": "PY-017",
+      "skill_name": "Understand environment variables and secrets",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [
+        "PY-019"
+      ],
+      "related_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-018",
+      "skill_name": "Understand HTTP request/response basics",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-019",
+      "skill_name": "Understand APIs, SDKs, and endpoints",
+      "introduced": "chapter-04",
+      "practiced": [
+        "chapter-04",
+        "chapter-05"
+      ],
+      "reinforced": [
+        "chapter-05"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-016",
+        "PY-017",
+        "PY-018"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ]
+    },
+    {
+      "skill_id": "PY-020",
+      "skill_name": "Handle structured inputs and outputs",
+      "introduced": "chapter-03",
+      "practiced": [
+        "chapter-03",
+        "chapter-04"
+      ],
+      "reinforced": [
+        "chapter-04",
+        "chapter-05",
+        "chapter-06"
+      ],
+      "mastery_expected_by": "chapter-05",
+      "depends_on": [
+        "PY-009",
+        "PY-012"
+      ],
+      "unlocks": [],
+      "related_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "alt": "Screenshot of a computing history site applying content filters to mitigate risk of harmful content generation.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/computing-history-content-safety.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Diagram representing fairness.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/fairness.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Diagram representing reliability and safety.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/reliability-safety.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Diagram representing privacy and security.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/privacy-security.png",
+    "path": "assets/image_004.png"
+  },
+  {
+    "alt": "Diagram representing inclusiveness.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/inclusiveness.png",
+    "path": "assets/image_005.png"
+  },
+  {
+    "alt": "Diagram representing transparency.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/transparency.png",
+    "path": "assets/image_006.png"
+  },
+  {
+    "alt": "Diagram representing accountability.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/accountability.png",
+    "path": "assets/image_007.png"
+  }
+]

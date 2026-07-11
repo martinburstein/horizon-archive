@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.get-started-ai-fundamentals.speech",
+  "title": "Speech",
+  "duration_minutes": 3,
+  "last_modified": "2026-04-24T17:12:00+00:00",
+  "number": 4,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/4-speech/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/4-speech/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 3,
+  "asset_failures": [],
+  "markdown_path": "04_4-speech.md",
+  "raw_html_path": "04_4-speech.html"
+}

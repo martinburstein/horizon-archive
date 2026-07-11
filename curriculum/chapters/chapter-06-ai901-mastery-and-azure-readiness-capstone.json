@@ -1,0 +1,171 @@
+{
+  "chapter_id": "chapter-06",
+  "status": "draft",
+  "title": "AI-901 Mastery, Capstone, and Azure Readiness",
+  "source_role": "exam_review",
+  "purpose": "Consolidate Python readiness and AI-901 coverage into review, remediation, and a capstone-ready plan.",
+  "learner_starting_state": "Has seen all curriculum skeleton concepts but may still have weak spots.",
+  "learner_ending_state": "Can self-assess against AI-901 objectives and complete a lightweight readiness capstone.",
+  "ai901_objectives_supported": [
+    "AI901-D1-O1",
+    "AI901-D1-O2",
+    "AI901-D1-O3",
+    "AI901-D1-O4",
+    "AI901-D1-O5",
+    "AI901-D1-O6",
+    "AI901-D1-O7",
+    "AI901-D1-O8",
+    "AI901-D2-O1",
+    "AI901-D2-O2",
+    "AI901-D2-O3",
+    "AI901-D2-O4",
+    "AI901-D2-O5",
+    "AI901-D2-O6",
+    "AI901-D2-O7"
+  ],
+  "python_skills_introduced": [],
+  "python_skills_reinforced": [
+    "PY-007",
+    "PY-016",
+    "PY-017",
+    "PY-019",
+    "PY-020"
+  ],
+  "azure_foundry_concepts_introduced": [
+    "objective review",
+    "capstone framing",
+    "exam readiness"
+  ],
+  "knowledge_repository_sources": [
+    "ai-901-homepage-markdown-ai-901-homepage-md",
+    "ai-901-homepage-markdown-source-md",
+    "ai-901-study-guide-markdown-ai-901-study-guide-md",
+    "ai-901-study-guide-markdown-source-md",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+    "ai-900-homepage-markdown-ai-900-homepage-md",
+    "ai-900-homepage-markdown-source-md",
+    "ai-900-study-guide-markdown-ai-900-study-guide-md",
+    "ai-900-study-guide-markdown-source-md",
+    "ai900-practice-assessment-placeholder",
+    "ai-900-practice-assessment-markdown-source-record-md"
+  ],
+  "suggested_module_sequence": [
+    {
+      "module_id": "ch6-m1",
+      "module_title": "Objective-by-objective review",
+      "module_purpose": "Consolidate the AI-901 blueprint into a final readiness map.",
+      "skills": [
+        "PY-019",
+        "PY-020"
+      ],
+      "source_ids": [
+        "ai-901-homepage-markdown-ai-901-homepage-md",
+        "ai-901-homepage-markdown-source-md",
+        "ai-901-study-guide-markdown-ai-901-study-guide-md",
+        "ai-901-study-guide-markdown-source-md",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "ai-900-homepage-markdown-ai-900-homepage-md",
+        "ai-900-homepage-markdown-source-md",
+        "ai-900-study-guide-markdown-ai-900-study-guide-md"
+      ],
+      "assessment_type": "conceptual"
+    },
+    {
+      "module_id": "ch6-m2",
+      "module_title": "Weak-area remediation and capstone framing",
+      "module_purpose": "Tie Python readiness to Azure AI workflows without generating full lessons.",
+      "skills": [
+        "PY-007",
+        "PY-016",
+        "PY-017"
+      ],
+      "source_ids": [
+        "ai-901-homepage-markdown-ai-901-homepage-md",
+        "ai-901-homepage-markdown-source-md",
+        "ai-901-study-guide-markdown-ai-901-study-guide-md",
+        "ai-901-study-guide-markdown-source-md",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "ai-900-homepage-markdown-ai-900-homepage-md",
+        "ai-900-homepage-markdown-source-md",
+        "ai-900-study-guide-markdown-ai-900-study-guide-md"
+      ],
+      "assessment_type": "mixed"
+    },
+    {
+      "module_id": "ch6-m3",
+      "module_title": "Exam strategy and Azure readiness checklist",
+      "module_purpose": "Prepare the learner for next-step practice and later lesson generation.",
+      "skills": [
+        "PY-019"
+      ],
+      "source_ids": [
+        "ai-901-homepage-markdown-ai-901-homepage-md",
+        "ai-901-homepage-markdown-source-md",
+        "ai-901-study-guide-markdown-ai-901-study-guide-md",
+        "ai-901-study-guide-markdown-source-md",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "ai-900-homepage-markdown-ai-900-homepage-md",
+        "ai-900-homepage-markdown-source-md",
+        "ai-900-study-guide-markdown-ai-900-study-guide-md"
+      ],
+      "assessment_type": "scenario"
+    }
+  ],
+  "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+  "do_not_generate_yet": [
+    "full lesson prose",
+    "full exercise banks",
+    "flashcards",
+    "quizzes",
+    "final app UI",
+    "narrative lesson scenes"
+  ]
+}

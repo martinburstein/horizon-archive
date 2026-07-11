@@ -1,0 +1,20 @@
+{
+  "title": "Introduction to natural language processing concepts",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-language/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [],
+  "local_markdown_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/01_1-introduction.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/02_2-how-it-works.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/03_3-statistical-techniques.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/04_4-semantic-models.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/05_4b-exercise.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/06_5-knowledge-check.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/07_6-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 7,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 3."
+}

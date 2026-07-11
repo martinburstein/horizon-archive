@@ -1,0 +1,1130 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-single    moduleunit show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Field extraction and mapping - Training | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Understand how extracted text is semantically mapped to data fields." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/4-form-extraction" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Field extraction and mapping - Training" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/4-form-extraction" />
+			<meta property="og:description" content="Understand how extracted text is semantically mapped to data fields." />
+			<meta name="platform_id" content="72e2e1e7-496b-6eb2-8fb6-48b03f7abf7d" /> 
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Learn" />
+
+			<meta name="page_type" content="learn" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="uid" content="learn.wwl.introduction-information-extraction.form-extraction" />
+	
+		<meta name="schema" content="ModuleUnit" />
+	
+		<meta name="page_kind" content="unit" />
+	
+		<meta name="azure_sandbox" content="false" />
+	
+		<meta name="sandbox" content="false" />
+	
+		<meta name="breadcrumb_path" content="/learn/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="clicktale" content="true" />
+	
+		<meta name="adobe-target" content="true" />
+	
+		<meta name="prefetch-feature-rollout" content="true" />
+	
+		<meta name="localization_scopes" content="ja-jp" />
+	
+		<meta name="localization_scopes" content="ko-kr" />
+	
+		<meta name="localization_scopes" content="zh-cn" />
+	
+		<meta name="localization_scopes" content="zh-tw" />
+	
+		<meta name="ms.date" content="2025-11-18T00:00:00Z" />
+	
+		<meta name="author" content="wwlpublish" />
+	
+		<meta name="ms.author" content="gmalc" />
+	
+		<meta name="ms.topic" content="unit" />
+	
+		<meta name="ms.custom" content="N/A" />
+	
+		<meta name="zone_pivot_groups" content="video-or-text" />
+	
+		<meta name="document_id" content="f31fe771-8eac-6ec9-57e9-2b6ec1000f85" />
+	
+		<meta name="document_version_independent_id" content="16112222-14f8-dbf4-19c9-eb89f4b6476a" />
+	
+		<meta name="updated_at" content="2025-11-19T00:21:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/learn-pr/blob/live/learn-pr/wwl-data-ai/introduction-information-extraction/4-form-extraction.yml" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/learn-pr/blob/dafe0539aa4ba84529e6f107f25864177fdc019c/learn-pr/wwl-data-ai/introduction-information-extraction/4-form-extraction.yml" />
+	
+		<meta name="git_commit_id" content="dafe0539aa4ba84529e6f107f25864177fdc019c" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="Docs.learn-pr" />
+	
+		<meta name="unit_completion_type" content="view" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="ROBOTS" content="noindex" />
+	
+		<meta name="asset_id" content="modules/introduction-information-extraction/4-form-extraction" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="learn-pr/wwl-data-ai/introduction-information-extraction/4-form-extraction.yml" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/learn/blob/main/learn-pr/wwl-data-ai/introduction-information-extraction/4-form-extraction.yml" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/4-form-extraction?accept=text/markdown" />
+	 
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03433.7881-f368a308/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "ModuleUnit",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false,
+    "contributors": [
+      {
+        "name": "GraemeMalcolm",
+        "url": "https://github.com/GraemeMalcolm"
+      }
+    ],
+    "mathjax": {}
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			
+				<script src="/static/assets/0.4.03433.7881-f368a308/scripts/en-us/index-learner-experience.js"></script>
+			
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main background-color-body-dark"
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div data-main-column>
+				<!-- Article header -->
+				<div class="background-color-body">
+		<div id="article-header" class="background-color-body-medium border-bottom display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between uhf-container">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					  
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	 
+					  
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	</div>
+				<!-- Unit navigation menu -->
+				
+		<div class="background-color-body-medium border-bottom position-sticky" style="z-index: 1020; inset-block-start: -1px;">
+			<div class="modular-content-container padding-block-xxs">
+				<nav
+					class="display-flex justify-content-center position-relative"
+					aria-label="pagination"
+					data-bi-name="module-nav"
+				>
+					<ul id="unit-nav-dropdown">
+						<li class="dropdown has-centered-menu has-caret" data-bi-name="unit-menu">
+							<button
+								type="button"
+								aria-controls="module-menu"
+								aria-expanded="false"
+								class="button button-clear button-sm dropdown-trigger"
+								data-bi-name="dropdown-trigger"
+								title="Module menu"
+							>
+								<span id="unit-place"></span>
+								<span aria-hidden="true" class="icon">
+									<span class="docon docon-chevron-down-light expanded-indicator"></span>
+								</span>
+							</button>
+							<div
+								class="dropdown-menu width-300 width-450-desktop background-color-body"
+								id="module-menu"
+							></div>
+						</li>
+					</ul>
+					<div id="completion-nav" class="is-hidden font-weight-semibold">
+						Achievements
+					</div>
+					
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	
+				</nav>
+			</div>
+		</div>
+	
+				<!-- Main content area -->
+				<div class="content margin-top-md"><div class="modular-content-container has-body-background box">
+	<div id="unit-inner-section" class="section is-uniform position-relative">
+		<h1 id="module-unit-title" class="margin-right-xxl-desktop">Field extraction and mapping</h1>
+		<div data-progress-uid="learn.wwl.introduction-information-extraction.form-extraction" class="xp-tag position-absolute top-0 right-0 margin-top-xs margin-top-sm-tablet margin-top-lg-desktop margin-top-xs-interactive margin-right-sm margin-right-lg-tablet margin-right-sm-interactive">
+			<div class="xp-tag-hexagon">
+				<span class="xp-tag-icon is-shown-complete docon docon-check">
+					<span class="visually-hidden">Completed</span>
+				</span>
+				<span class="xp-tag-xp"></span>
+			</div>
+		</div>
+		<ul id="module-unit-metadata" class="metadata page-metadata">
+			<li id="module-unit-total-time">3 minutes</li>
+		</ul>
+		<div id="module-unit-module-assessment-message-container" aria-hidden="true" hidden=""></div>
+        <div id="module-unit-notification-container" hidden=""></div>
+		<div id="module-unit-content">
+				<div class="zone has-pivot" data-pivot="video">
+<div class="embeddedvideo"><iframe src="https://learn-video.azurefd.net/vod/player?id=0985adbb-8a99-4993-92db-d14a5430a9f6" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
+<div class="TIP">
+<p>Tip</p>
+<p>See the <strong>Text and images</strong> tab for more details!</p>
+</div>
+</div>
+<div class="zone has-pivot" data-pivot="text">
+<p>Field extraction is the process of taking text output from OCR and mapping individual text values it to specific, labeled data fields that correspond to meaningful business information. While OCR tells you <em>what</em> text exists in a document, field extraction tells you <em>what that text means</em> and <em>where it belongs</em> in your business systems.</p>
+<h2 id="the-field-extraction-pipeline">The field extraction pipeline</h2>
+<p>Field extraction follows a systematic pipeline that transforms OCR output into structured data.</p>
+<p><img src="../../wwl-data-ai/introduction-information-extraction/media/field-extraction.png" alt="Diagram of the field extraction pipeline." data-linktype="relative-path"></p>
+<p>The stages in the field extraction process are:</p>
+<ol>
+<li>OCR output ingestion.</li>
+<li>Field detection and candidate identification.</li>
+<li>Field mapping and association.</li>
+<li>Data normalization and standardization.</li>
+<li>Integration with business processes and systems.</li>
+</ol>
+<p>Let's explore these stages in more detail.</p>
+<h3 id="stage-1-ocr-output-ingestion">Stage 1: OCR output ingestion</h3>
+<p>The process begins with the structured output from the OCR pipeline, which can include:</p>
+<ul>
+<li><strong>Raw text content</strong>: The actual characters and words extracted from the document</li>
+<li><strong>Positional metadata</strong>: Bounding box coordinates, page locations, and reading order information</li>
+<li><strong>Confidence scores</strong>: OCR engine confidence levels for each text element</li>
+<li><strong>Layout information</strong>: Document structure, line breaks, paragraph boundaries</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Unlike simple text processing, field extraction heavily relies on <em>where</em> text appears in the document, not just what it says. The position of "12345" might help determine whether it's an invoice number, customer ID, or phone number.</p>
+</div>
+<h3 id="stage-2-field-detection-and-candidate-identification">Stage 2: Field detection and candidate identification</h3>
+<p>This stage identifies potential field value in the OCR output. There are multiple approaches that can be used, independently or in combination, to determine the likely fields in the OCR results.</p>
+<h4 id="template-based-detection">Template-based detection</h4>
+<p>Templates for field detection rely on rule-based pattern matching. Field identification can be accomplished using techniques such as:</p>
+<ul>
+<li>Predefined document layouts with known field positions and anchor keywords.</li>
+<li>Searches for label-value pairs like "Invoice Number:", "Date:", "Total:".</li>
+<li>Regular expressions and string matching algorithms.</li>
+</ul>
+<p><strong>Advantages</strong> of a template-based approach include high accuracy for known document types, fast processing, and explainable results.</p>
+<p><strong>Limitations</strong> of the approach include the requirement for manual template creation, and complexity caused by layout variations or field naming inconsistencies.</p>
+<h4 id="machine-learning-based-detection">Machine learning-based detection</h4>
+<p>Instead of hard-coded logic to extract fields based on known names and locations, you can use a corpus of example documents to train a machine learning model that extracts the fields based on learned relationships. <em>Transformer</em>-based models in particular are good at applying contextual cues to identify patterns, and so are often the basis of a field detection solution.</p>
+<p>Training approaches for field detection machine learning models include:</p>
+<ul>
+<li><strong>Supervised learning</strong>: Trained on labeled datasets with known field locations.</li>
+<li><strong>Self-supervised learning</strong>: Pre-trained on large document corpora to understand layout patterns.</li>
+<li><strong>Multi-modal learning</strong>: Combines text, visual, and positional features.</li>
+<li><strong>Advanced model architectures</strong>, such as:
+<ul>
+<li><strong>Graph Neural Networks (GNNs)</strong> that model spatial relationships between text elements as graph connections.</li>
+<li><strong>Attention mechanisms</strong> that focus on relevant document regions when predicting field values.</li>
+<li><strong>Sequence-to-sequence models</strong> that transform unstructured text sequences into structured field assignments.</li>
+</ul>
+</li>
+</ul>
+<h4 id="generative-ai-for-schema-based-extraction">Generative AI for schema-based extraction</h4>
+<p>Recent advances in large language models (LLMs) have led to the emergence of generative AI-based field detection techniques, which enable more efficient and effective field detection through:</p>
+<ul>
+<li><strong>Prompt-based extraction</strong> in which you provide the LLM with document text and a schema definition, and it matches the text to the fields in the schema.</li>
+<li><strong>Few-shot learning</strong> in which you can train models with minimal examples to extract custom fields.</li>
+<li><strong>Chain-of-thought reasoning</strong> that guides models through step-by-step field identification logic.</li>
+</ul>
+<h3 id="stage-3-field-mapping-and-association">Stage 3: Field mapping and association</h3>
+<p>After candidate values are identified, they must be mapped to specific schema fields:</p>
+<h4 id="key-value-pairing-techniques">Key-value pairing techniques</h4>
+<p>In many cases, data fields in a document or form are discrete values that can be mapped to keys - for example, the vendor name, date, and total amount in a receipt or invoice. Common techniques used for key-value pairing include:</p>
+<ul>
+<li><p><strong>Proximity analysis</strong>:</p>
+<ul>
+<li><strong>Spatial clustering</strong>: Group nearby text elements using distance algorithms.</li>
+<li><strong>Reading order analysis</strong>: Follow natural text flow to associate labels with values.</li>
+<li><strong>Geometric relationships</strong>: Use alignment, indentation, and positioning patterns.</li>
+</ul>
+</li>
+<li><p><strong>Linguistic pattern recognition</strong>:</p>
+<ul>
+<li><strong>Named entity recognition (NER)</strong>: Identify specific entity types (dates, amounts, names).</li>
+<li><strong>Part-of-speech tagging</strong>: Understand grammatical relationships between labels and values.</li>
+<li><strong>Dependency parsing</strong>: Analyze syntactic relationships in text.</li>
+</ul>
+</li>
+</ul>
+<h4 id="table-and-structured-content-processing">Table and structured content processing</h4>
+<p>Some documents include more complex structures of text, such as tables. For example, a receipt or invoice might include a table of line items with columns for the item name, price, and the quantity purchased.</p>
+<p>The presence of a table can be determined using several techniques, including:</p>
+<ul>
+<li>Specialized convolutional neural network (CNN) architectures for table structure recognition.</li>
+<li>Object detection approaches adapted for table cell identification.</li>
+<li>Graph-based parsing approaches that model table structure as graph relationships between cells.</li>
+</ul>
+<p>To map the values in the cells in a table to fields, the field extraction solution might employ one or more of the following techniques:</p>
+<ul>
+<li><strong>Row-column association</strong> to map table cells to specific field schemas.</li>
+<li><strong>Header detection</strong> to identify column headers to understand field meanings.</li>
+<li><strong>Hierarchical processing</strong> to handle nested table structures and sub-totals.</li>
+</ul>
+<h4 id="confidence-scoring-and-validation">Confidence scoring and validation</h4>
+<p>Field extraction accuracy depends on many factors, and the algorithms and models used to implement the solution are subject to potential misidentification or value interpretation errors. To account for this, various techniques are employed to evaluate the accuracy of the predicted field values; including:</p>
+<ul>
+<li><strong>OCR confidence</strong>: Inheriting confidence scores from the underlying text recognition.</li>
+<li><strong>Pattern matching confidence</strong>: Scoring based on how well extraction matches expected patterns.</li>
+<li><strong>Context validation</strong>: Verifying that field values make sense in document context.</li>
+<li><strong>Cross-field validation</strong>: Checking relationships between extracted fields (for example, verifying that line item subtotals sum to the overall invoice total).</li>
+</ul>
+<h3 id="stage-4-data-normalization-and-standardization">Stage 4: Data normalization and standardization</h3>
+<p>Raw extracted values are generally transformed into consistent formats (for example to ensure that all extracted dates are expressed in the same date format) and checked for validity.</p>
+<h4 id="format-standardization">Format standardization</h4>
+<p>Examples of format standardization that can be implemented include:</p>
+<ul>
+<li><p><strong>Date normalization</strong>:</p>
+<ul>
+<li><strong>Format detection</strong>: Identify various date formats (MM/DD/YYYY, DD-MM-YYYY, etc.).</li>
+<li><strong>Parsing algorithms</strong>: Convert to standardized ISO formats.</li>
+<li><strong>Ambiguity resolution</strong>: Handle cases where date format is unclear.</li>
+</ul>
+</li>
+<li><p><strong>Currency and numeric processing</strong>:</p>
+<ul>
+<li><strong>Symbol recognition</strong>: Handle different currency symbols and thousand separators.</li>
+<li><strong>Decimal normalization</strong>: Standardize decimal point representation across locales.</li>
+<li><strong>Unit conversion</strong>: Convert between different measurement units as needed.</li>
+</ul>
+</li>
+<li><p><strong>Text standardization</strong>:</p>
+<ul>
+<li><strong>Case normalization</strong>: Apply consistent capitalization rules.</li>
+<li><strong>Encoding standardization</strong>: Handle different character encodings and special characters.</li>
+<li><strong>Abbreviation expansion</strong>: Convert common abbreviations to full forms.</li>
+</ul>
+</li>
+</ul>
+<h4 id="data-validation-and-quality-assurance">Data Validation and Quality Assurance</h4>
+<p>As well as formatting the extracted fields, the standardization process enables further validation of the values that have been extracted through techniques like:</p>
+<ul>
+<li><p><strong>Rule-based validation</strong>:</p>
+<ul>
+<li><strong>Format checking</strong>: Verify extracted values match expected patterns (phone numbers, email addresses).</li>
+<li><strong>Range validation</strong>: Ensure numeric values fall within reasonable bounds.</li>
+<li><strong>Required field checking</strong>: Confirm all mandatory fields are present.</li>
+</ul>
+</li>
+<li><p><strong>Statistical validation</strong>:</p>
+<ul>
+<li><strong>Outlier detection</strong>: Identify unusually high or low values that might indicate extraction errors.</li>
+<li><strong>Distribution analysis</strong>: Compare extracted values against historical patterns.</li>
+<li><strong>Cross-document validation</strong>: Check consistency across related documents.</li>
+</ul>
+</li>
+</ul>
+<h3 id="stage-5-integration-with-business-processes-and-systems">Stage 5: Integration with business processes and systems</h3>
+<p>The final stage of the process usually involves integrating the extracted field values into a business process or system:</p>
+<h4 id="schema-mapping">Schema mapping</h4>
+<p>The extracted fields might need to be further transformed or reformatted so they align with application schemas used for data ingestion into downstream systems. For example:</p>
+<ul>
+<li><strong>Database schemas</strong>: Map extracted fields to specific database columns and tables.</li>
+<li><strong>API payloads</strong>: Format data for REST API consumption by downstream systems.</li>
+<li><strong>Message queues</strong>: Prepare structured messages for asynchronous processing.</li>
+</ul>
+<p>The schema-mapping process might involve transformations such as:</p>
+<ul>
+<li><strong>Field renaming</strong>: Map extracted field names to target system conventions.</li>
+<li><strong>Data type conversion</strong>: Ensure values match expected data types in target systems.</li>
+<li><strong>Conditional logic</strong>: Apply business rules for field transformation and derivation.</li>
+</ul>
+<h4 id="quality-metrics-and-reporting">Quality metrics and reporting</h4>
+<p>Another common task after the extraction process has finished is to evaluate and report on the quality of the extracted data. The report can include information such as:</p>
+<ul>
+<li><strong>Field-level confidence scores</strong>: Individual confidence ratings for each extracted field.</li>
+<li><strong>Document-level quality assessment</strong>: Overall extraction success metrics.</li>
+<li><strong>Error categorization</strong>: Classify extraction failures by type and cause.</li>
+</ul>
+</div>
+
+		</div>
+		<div id="next-section" class="modular-content-container" hidden="">
+		</div>
+	</div>
+</div>
+</div>
+				<!-- Feedback area -->
+				
+				<div class="modular-content-container margin-block-xs">
+					<section
+						class="feedback-section section is-full-height is-uniform padding-block-none position-relative"
+					>
+						<div id="ms--unit-support-message" class="font-weight-semibold display-none"></div>
+						<div id="ms--unit-user-feedback">
+							
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print "
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+						</div>
+					</section>
+				</div>
+		  
+				<!-- Interactive footer area -->
+				
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="interactive-container"
+			class="interactive-container is-visible-interactive height-full background-color-body-dark display-none display-block-tablet"
+		></div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer is-hidden-interactive" data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

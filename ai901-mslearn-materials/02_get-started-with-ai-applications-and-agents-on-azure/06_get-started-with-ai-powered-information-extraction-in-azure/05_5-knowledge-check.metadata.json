@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.get-started-information-extraction.knowledge-check",
+  "title": "Module assessment",
+  "duration_minutes": 3,
+  "last_modified": "2026-05-15T23:11:00+00:00",
+  "number": 5,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/5-knowledge-check/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/5-knowledge-check/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 0,
+  "asset_failures": [],
+  "markdown_path": "05_5-knowledge-check.md",
+  "raw_html_path": "05_5-knowledge-check.html"
+}

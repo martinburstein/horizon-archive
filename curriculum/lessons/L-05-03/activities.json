@@ -1,0 +1,48 @@
+[
+  {
+    "activity_id": "A-L0503-1",
+    "lesson_id": "L-05-03",
+    "activity_type": "guided_code",
+    "purpose": "Trace endpoint, model, request, and response through a safe offline simulation.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 15,
+    "input_contract": "Learner has completed Python data and API prerequisites.",
+    "output_contract": "Simulation produces documented output and each value is classified.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0503-2",
+    "lesson_id": "L-05-03",
+    "activity_type": "debug",
+    "purpose": "Distinguish endpoint, model selection, and request-payload failures.",
+    "interaction_mode": "interactive",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 15,
+    "input_contract": "Learner makes one controlled fault at a time.",
+    "output_contract": "Learner repairs three faults and names the failed boundary.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0503-3",
+    "lesson_id": "L-05-03",
+    "activity_type": "self_explanation",
+    "purpose": "Explain the current official Foundry Python client shape and credential boundary.",
+    "interaction_mode": "interactive",
+    "source_dependency": "source_required",
+    "estimated_minutes": 15,
+    "input_contract": "Learner reads the cited current official pattern.",
+    "output_contract": "Learner explains imports, endpoint, credential, client creation, request, and output without notes.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  }
+]
+

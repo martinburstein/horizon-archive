@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.get-started-ai-fundamentals.exercise",
+  "title": "Exercise - Explore AI workloads",
+  "duration_minutes": 15,
+  "last_modified": "2026-04-24T17:12:00+00:00",
+  "number": 8,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/7b-exercise/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/7b-exercise/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 2,
+  "asset_failures": [],
+  "markdown_path": "08_7b-exercise.md",
+  "raw_html_path": "08_7b-exercise.html"
+}

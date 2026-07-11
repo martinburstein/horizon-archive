@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.introduction-ai-speech",
+  "title": "Introduction to AI speech concepts",
+  "summary": "Imagine AI apps and agents that you can talk to. Explore the concepts behind AI speech, including speech recognition and synthesis.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/",
+  "duration_minutes": 28,
+  "last_modified": "2026-03-18T23:10:00+00:00",
+  "number": 4,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.introduction-ai-speech.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.speech-solutions",
+      "title": "Speech-enabled solutions",
+      "duration_minutes": 2,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/2-speech-solutions/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.speech-recognition",
+      "title": "Speech recognition",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/3-speech-recognition/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.speech-synthesis",
+      "title": "Speech synthesis",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/4-speech-synthesis/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.exercise-speech",
+      "title": "Exercise - Explore AI speech",
+      "duration_minutes": 15,
+      "last_modified": "2026-02-28T00:28:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/5-exercise-speech/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/6-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.introduction-ai-speech.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-28T17:08:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/7-summary/"
+    }
+  ]
+}

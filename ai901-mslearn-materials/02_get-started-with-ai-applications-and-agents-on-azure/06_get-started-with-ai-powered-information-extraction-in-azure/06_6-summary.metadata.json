@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.get-started-information-extraction.summary",
+  "title": "Summary",
+  "duration_minutes": 1,
+  "last_modified": "2026-05-15T23:11:00+00:00",
+  "number": 6,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/6-summary/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/6-summary/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 0,
+  "asset_failures": [],
+  "markdown_path": "06_6-summary.md",
+  "raw_html_path": "06_6-summary.html"
+}

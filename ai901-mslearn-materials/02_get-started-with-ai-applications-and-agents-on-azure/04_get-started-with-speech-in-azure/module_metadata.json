@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.get-started-with-speech-in-azure",
+  "title": "Get started with speech in Azure",
+  "summary": "Learn how to use Azure Speech in Foundry Tools to recognize and synthesize speech.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/",
+  "duration_minutes": 47,
+  "last_modified": "2026-03-17T07:10:00+00:00",
+  "number": 4,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.speech-recognition",
+      "title": "Speech recognition",
+      "duration_minutes": 8,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/2-speech-recognition/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.speech-synthesis",
+      "title": "Speech synthesis",
+      "duration_minutes": 5,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/3-speech-synthesis/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.voice-live",
+      "title": "Creating a speech-capable agent",
+      "duration_minutes": 4,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/4-voice-live/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.exercise",
+      "title": "Exercise - Get started with speech in Microsoft Foundry",
+      "duration_minutes": 25,
+      "last_modified": "2026-02-27T00:16:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/5-exercise/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2026-02-18T07:40:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/6-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/7-summary/"
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "generated_at": "2026-05-29T20:26:59Z",
+  "status": "draft",
+  "north_star_exam": "AI-901",
+  "supporting_exam": "AI-900",
+  "emphasis_guidance": {
+    "python_bridge_and_programming_readiness": "20-25%",
+    "ai_concepts_and_responsible_ai": "20-25%",
+    "azure_ai_services_and_workloads": "20-25%",
+    "foundry_implementation_sdks_endpoints_agents_content_understanding": "30-40%",
+    "ai901_review_and_capstone": "10-15%"
+  },
+  "chapters": [
+    {
+      "chapter_id": "chapter-01",
+      "status": "draft",
+      "title": "Python Bridge - First Code and Programming Confidence",
+      "source_role": "invented_bridge",
+      "purpose": "Build confidence from zero Python experience into first runnable code and a debugging mindset.",
+      "learner_starting_state": "No programming experience.",
+      "learner_ending_state": "Can run tiny Python scripts, inspect output, and survive beginner mistakes.",
+      "ai901_objectives_supported": [],
+      "python_skills_introduced": [
+        "PY-001",
+        "PY-002",
+        "PY-003",
+        "PY-004",
+        "PY-005",
+        "PY-006",
+        "PY-007"
+      ],
+      "python_skills_reinforced": [],
+      "azure_foundry_concepts_introduced": [],
+      "knowledge_repository_sources": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-03-anal-ai-resp-diff-pr-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-05-debu-ai-gene-code-us-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l01-guid-prac-intr-py-fund-s-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l04-guided-pract-pr-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l04-prac-use-ai-code-gen-too-pdf"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch1-m1",
+          "module_title": "Meet Python and the terminal",
+          "module_purpose": "Create first successful run and reduce beginner fear.",
+          "skills": [
+            "PY-001",
+            "PY-002",
+            "PY-003"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf"
+          ],
+          "assessment_type": "coding"
+        },
+        {
+          "module_id": "ch1-m2",
+          "module_title": "Strings, variables, and tiny scripts",
+          "module_purpose": "Build readable first programs.",
+          "skills": [
+            "PY-004",
+            "PY-005",
+            "PY-006"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf"
+          ],
+          "assessment_type": "coding"
+        },
+        {
+          "module_id": "ch1-m3",
+          "module_title": "Errors, indentation, and debugging mindset",
+          "module_purpose": "Normalize mistakes early.",
+          "skills": [
+            "PY-007"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf"
+          ],
+          "assessment_type": "coding"
+        }
+      ],
+      "assessment_strategy": "Coding checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    },
+    {
+      "chapter_id": "chapter-02",
+      "status": "draft",
+      "title": "AI Foundations and Responsible AI",
+      "source_role": "mixed",
+      "purpose": "Ground learners in AI-901 concept-domain language before service and Foundry implementation work.",
+      "learner_starting_state": "Can write tiny scripts but lacks AI vocabulary.",
+      "learner_ending_state": "Can explain core AI workloads, responsible AI, and model-selection basics in beginner terms.",
+      "ai901_objectives_supported": [
+        "AI901-D1-O1",
+        "AI901-D1-O2",
+        "AI901-D1-O3",
+        "AI901-D1-O4"
+      ],
+      "python_skills_introduced": [],
+      "python_skills_reinforced": [
+        "PY-003",
+        "PY-004"
+      ],
+      "azure_foundry_concepts_introduced": [
+        "responsible AI",
+        "AI workloads",
+        "generative AI basics",
+        "model selection concepts",
+        "Azure AI vocabulary"
+      ],
+      "knowledge_repository_sources": [
+        "ai-901-homepage-markdown-ai-901-homepage-md",
+        "ai-901-homepage-markdown-source-md",
+        "ai-901-study-guide-markdown-ai-901-study-guide-md",
+        "ai-901-study-guide-markdown-source-md",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch2-m1",
+          "module_title": "AI workloads and vocabulary",
+          "module_purpose": "Map the AI landscape in exam language.",
+          "skills": [],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-"
+          ],
+          "assessment_type": "conceptual"
+        },
+        {
+          "module_id": "ch2-m2",
+          "module_title": "Responsible AI and trustworthy systems",
+          "module_purpose": "Anchor ethical reasoning before implementation.",
+          "skills": [],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-"
+          ],
+          "assessment_type": "scenario"
+        },
+        {
+          "module_id": "ch2-m3",
+          "module_title": "Generative AI, models, and deployment choices",
+          "module_purpose": "Prepare for later Foundry implementation concepts.",
+          "skills": [
+            "PY-004"
+          ],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-"
+          ],
+          "assessment_type": "mixed"
+        }
+      ],
+      "assessment_strategy": "Conceptual checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    },
+    {
+      "chapter_id": "chapter-03",
+      "status": "draft",
+      "title": "Python Data, Logic, and Structured Inputs",
+      "source_role": "invented_bridge",
+      "purpose": "Introduce the Python structures needed before SDK, endpoint, and multimodal workflows make sense.",
+      "learner_starting_state": "Can run basic scripts and print values.",
+      "learner_ending_state": "Can work with JSON-shaped Python data and small reusable program structure.",
+      "ai901_objectives_supported": [],
+      "python_skills_introduced": [
+        "PY-008",
+        "PY-009",
+        "PY-010",
+        "PY-011",
+        "PY-012",
+        "PY-013",
+        "PY-014",
+        "PY-015",
+        "PY-016",
+        "PY-017",
+        "PY-018",
+        "PY-020"
+      ],
+      "python_skills_reinforced": [
+        "PY-003",
+        "PY-004",
+        "PY-006",
+        "PY-007"
+      ],
+      "azure_foundry_concepts_introduced": [
+        "JSON",
+        "structured inputs",
+        "API mental model"
+      ],
+      "knowledge_repository_sources": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-03-anal-ai-resp-diff-pr-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-05-debu-ai-gene-code-us-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l01-guid-prac-intr-py-fund-s-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l04-guided-pract-pr-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l04-prac-use-ai-code-gen-too-pdf"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch3-m1",
+          "module_title": "Lists, dictionaries, and structured data",
+          "module_purpose": "Translate Python objects into JSON-ready thinking.",
+          "skills": [
+            "PY-008",
+            "PY-009",
+            "PY-016",
+            "PY-020"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+          ],
+          "assessment_type": "coding"
+        },
+        {
+          "module_id": "ch3-m2",
+          "module_title": "Logic, loops, and small functions",
+          "module_purpose": "Support repeated prompt and result-handling workflows.",
+          "skills": [
+            "PY-010",
+            "PY-011",
+            "PY-012"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+          ],
+          "assessment_type": "coding"
+        },
+        {
+          "module_id": "ch3-m3",
+          "module_title": "Imports, files, secrets, and API mental models",
+          "module_purpose": "Remove hidden prerequisites before Foundry work.",
+          "skills": [
+            "PY-013",
+            "PY-014",
+            "PY-015",
+            "PY-017",
+            "PY-018"
+          ],
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+          ],
+          "assessment_type": "mixed"
+        }
+      ],
+      "assessment_strategy": "Coding checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    },
+    {
+      "chapter_id": "chapter-04",
+      "status": "draft",
+      "title": "Azure AI Services - Text, Speech, Vision, and Information Extraction",
+      "source_role": "source_adapted",
+      "purpose": "Connect AI workloads to concrete Azure AI service categories and scenario selection.",
+      "learner_starting_state": "Has beginner Python data literacy and basic API vocabulary.",
+      "learner_ending_state": "Can explain when to use text, speech, vision, image generation, and information extraction workloads.",
+      "ai901_objectives_supported": [
+        "AI901-D1-O4",
+        "AI901-D1-O5",
+        "AI901-D1-O6",
+        "AI901-D1-O7",
+        "AI901-D1-O8",
+        "AI901-D2-O5",
+        "AI901-D2-O6"
+      ],
+      "python_skills_introduced": [],
+      "python_skills_reinforced": [
+        "PY-015",
+        "PY-016",
+        "PY-018",
+        "PY-020"
+      ],
+      "azure_foundry_concepts_introduced": [
+        "text analysis",
+        "speech",
+        "computer vision",
+        "image generation",
+        "information extraction",
+        "service/workload selection"
+      ],
+      "knowledge_repository_sources": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch4-m1",
+          "module_title": "Text and speech workloads",
+          "module_purpose": "Match scenarios to language and speech services.",
+          "skills": [
+            "PY-015",
+            "PY-016"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+          ],
+          "assessment_type": "scenario"
+        },
+        {
+          "module_id": "ch4-m2",
+          "module_title": "Vision and image-generation workloads",
+          "module_purpose": "Connect multimodal and visual capabilities to exam scenarios.",
+          "skills": [
+            "PY-015",
+            "PY-016"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+          ],
+          "assessment_type": "scenario"
+        },
+        {
+          "module_id": "ch4-m3",
+          "module_title": "Information extraction workloads",
+          "module_purpose": "Bridge from general AI workloads into Content Understanding.",
+          "skills": [
+            "PY-016",
+            "PY-020"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+          ],
+          "assessment_type": "mixed"
+        }
+      ],
+      "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    },
+    {
+      "chapter_id": "chapter-05",
+      "status": "draft",
+      "title": "Microsoft Foundry - Endpoints, SDKs, Agents, and Content Understanding",
+      "source_role": "mixed",
+      "purpose": "Carry the heavier AI-901 implementation domain with safe beginner scaffolding around Foundry workflows.",
+      "learner_starting_state": "Understands Python structures and Azure AI workload categories.",
+      "learner_ending_state": "Can reason through Foundry portal flows, endpoints, SDK patterns, prompting, agents, and Content Understanding workflows.",
+      "ai901_objectives_supported": [
+        "AI901-D2-O1",
+        "AI901-D2-O2",
+        "AI901-D2-O3",
+        "AI901-D2-O4",
+        "AI901-D2-O5",
+        "AI901-D2-O6",
+        "AI901-D2-O7"
+      ],
+      "python_skills_introduced": [],
+      "python_skills_reinforced": [
+        "PY-013",
+        "PY-014",
+        "PY-015",
+        "PY-016",
+        "PY-017",
+        "PY-018",
+        "PY-019",
+        "PY-020"
+      ],
+      "azure_foundry_concepts_introduced": [
+        "Foundry portal",
+        "deployments",
+        "endpoints",
+        "SDKs",
+        "agents",
+        "Content Understanding",
+        "beginner-safe secrets"
+      ],
+      "knowledge_repository_sources": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch5-m1",
+          "module_title": "Foundry portal, models, and deployments",
+          "module_purpose": "Ground the implementation-heavy exam domain in portal concepts.",
+          "skills": [
+            "PY-017",
+            "PY-019"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+          ],
+          "assessment_type": "portal"
+        },
+        {
+          "module_id": "ch5-m2",
+          "module_title": "Endpoints, SDKs, and lightweight client apps",
+          "module_purpose": "Move from conceptual to practical request and response workflows.",
+          "skills": [
+            "PY-013",
+            "PY-014",
+            "PY-016",
+            "PY-017",
+            "PY-018",
+            "PY-019"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+          ],
+          "assessment_type": "coding"
+        },
+        {
+          "module_id": "ch5-m3",
+          "module_title": "Prompts, agents, and Content Understanding",
+          "module_purpose": "Cover the distinct Foundry workflows that dominate implementation readiness.",
+          "skills": [
+            "PY-015",
+            "PY-016",
+            "PY-020"
+          ],
+          "source_ids": [
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+          ],
+          "assessment_type": "mixed"
+        }
+      ],
+      "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    },
+    {
+      "chapter_id": "chapter-06",
+      "status": "draft",
+      "title": "AI-901 Mastery, Capstone, and Azure Readiness",
+      "source_role": "exam_review",
+      "purpose": "Consolidate Python readiness and AI-901 coverage into review, remediation, and a capstone-ready plan.",
+      "learner_starting_state": "Has seen all curriculum skeleton concepts but may still have weak spots.",
+      "learner_ending_state": "Can self-assess against AI-901 objectives and complete a lightweight readiness capstone.",
+      "ai901_objectives_supported": [
+        "AI901-D1-O1",
+        "AI901-D1-O2",
+        "AI901-D1-O3",
+        "AI901-D1-O4",
+        "AI901-D1-O5",
+        "AI901-D1-O6",
+        "AI901-D1-O7",
+        "AI901-D1-O8",
+        "AI901-D2-O1",
+        "AI901-D2-O2",
+        "AI901-D2-O3",
+        "AI901-D2-O4",
+        "AI901-D2-O5",
+        "AI901-D2-O6",
+        "AI901-D2-O7"
+      ],
+      "python_skills_introduced": [],
+      "python_skills_reinforced": [
+        "PY-007",
+        "PY-016",
+        "PY-017",
+        "PY-019",
+        "PY-020"
+      ],
+      "azure_foundry_concepts_introduced": [
+        "objective review",
+        "capstone framing",
+        "exam readiness"
+      ],
+      "knowledge_repository_sources": [
+        "ai-901-homepage-markdown-ai-901-homepage-md",
+        "ai-901-homepage-markdown-source-md",
+        "ai-901-study-guide-markdown-ai-901-study-guide-md",
+        "ai-901-study-guide-markdown-source-md",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "ai-900-homepage-markdown-ai-900-homepage-md",
+        "ai-900-homepage-markdown-source-md",
+        "ai-900-study-guide-markdown-ai-900-study-guide-md",
+        "ai-900-study-guide-markdown-source-md",
+        "ai900-practice-assessment-placeholder",
+        "ai-900-practice-assessment-markdown-source-record-md"
+      ],
+      "suggested_module_sequence": [
+        {
+          "module_id": "ch6-m1",
+          "module_title": "Objective-by-objective review",
+          "module_purpose": "Consolidate the AI-901 blueprint into a final readiness map.",
+          "skills": [
+            "PY-019",
+            "PY-020"
+          ],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "ai-900-homepage-markdown-ai-900-homepage-md",
+            "ai-900-homepage-markdown-source-md",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md"
+          ],
+          "assessment_type": "conceptual"
+        },
+        {
+          "module_id": "ch6-m2",
+          "module_title": "Weak-area remediation and capstone framing",
+          "module_purpose": "Tie Python readiness to Azure AI workflows without generating full lessons.",
+          "skills": [
+            "PY-007",
+            "PY-016",
+            "PY-017"
+          ],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "ai-900-homepage-markdown-ai-900-homepage-md",
+            "ai-900-homepage-markdown-source-md",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md"
+          ],
+          "assessment_type": "mixed"
+        },
+        {
+          "module_id": "ch6-m3",
+          "module_title": "Exam strategy and Azure readiness checklist",
+          "module_purpose": "Prepare the learner for next-step practice and later lesson generation.",
+          "skills": [
+            "PY-019"
+          ],
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-homepage-markdown-source-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-study-guide-markdown-source-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-08-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-09-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-10-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-03-introduction-to-natural-languag",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "ai-900-homepage-markdown-ai-900-homepage-md",
+            "ai-900-homepage-markdown-source-md",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md"
+          ],
+          "assessment_type": "scenario"
+        }
+      ],
+      "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+      "do_not_generate_yet": [
+        "full lesson prose",
+        "full exercise banks",
+        "flashcards",
+        "quizzes",
+        "final app UI",
+        "narrative lesson scenes"
+      ]
+    }
+  ]
+}

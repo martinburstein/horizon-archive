@@ -1,0 +1,18 @@
+{
+  "title": "AI-900 study guide",
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900",
+  "source_type": "study-guide",
+  "exam": "ai-900",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "ai-900/study-guide/raw/source.html",
+    "ai-900/study-guide/raw/AI-900 Study Guide.pdf"
+  ],
+  "local_markdown_files": [
+    "ai-900/study-guide/markdown/source.md",
+    "ai-900/study-guide/markdown/AI-900 Study Guide.md"
+  ],
+  "module_count": null,
+  "unit_count": null,
+  "notes": "Official Microsoft Learn study guide with local PDF snapshot."
+}

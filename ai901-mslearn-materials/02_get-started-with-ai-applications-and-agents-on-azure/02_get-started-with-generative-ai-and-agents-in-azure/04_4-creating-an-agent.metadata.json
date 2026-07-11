@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.get-started-with-generative-ai-and-agents.creating-an-agent",
+  "title": "Creating an agent",
+  "duration_minutes": 4,
+  "last_modified": "2026-03-24T23:09:00+00:00",
+  "number": 4,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 3,
+  "asset_failures": [],
+  "markdown_path": "04_4-creating-an-agent.md",
+  "raw_html_path": "04_4-creating-an-agent.html"
+}

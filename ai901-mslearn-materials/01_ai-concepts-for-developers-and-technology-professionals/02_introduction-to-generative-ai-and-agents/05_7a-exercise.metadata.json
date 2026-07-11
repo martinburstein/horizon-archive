@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.fundamentals-generative-ai.exercise-ai-agent",
+  "title": "Exercise - Explore generative AI",
+  "duration_minutes": 15,
+  "last_modified": "2026-02-28T00:28:00+00:00",
+  "number": 5,
+  "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/7a-exercise/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/7a-exercise/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "05_7a-exercise.md",
+  "raw_html_path": "05_7a-exercise.html"
+}

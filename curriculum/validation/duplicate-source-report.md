@@ -1,0 +1,432 @@
+# Duplicate Source Report
+
+This report flags possible duplicates by URL, title, filename, and content hash. It does not delete anything automatically.
+
+## Same URL
+
+- `https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-900/`
+  - `MANIFEST.json`
+  - `ai-900/homepage/markdown/AI-900 Homepage.md`
+  - `ai-900/homepage/markdown/source.md`
+  - `ai-900/homepage/metadata.json`
+  - `ai-900/homepage/raw/source.html`
+- `https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-900/practice/assessment?assessment-type=practice&assessmentId=26`
+  - `ai-900/practice-assessment`
+  - `ai-900/practice-assessment/markdown/source_record.md`
+  - `ai-900/practice-assessment/metadata.json`
+- `https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900`
+  - `ai-900/study-guide/markdown/AI-900 Study Guide.md`
+  - `ai-900/study-guide/markdown/source.md`
+  - `ai-900/study-guide/metadata.json`
+  - `ai-900/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai900_study_guide.html`
+- `https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/`
+  - `ai-901/homepage/markdown/AI-901 Homepage.md`
+  - `ai-901/homepage/markdown/source.md`
+  - `ai-901/homepage/metadata.json`
+  - `ai-901/homepage/raw/source.html`
+  - `shared-assets/source-html/ai901_homepage.html`
+- `https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901`
+  - `ai-901/study-guide/markdown/AI-901 Study Guide.md`
+  - `ai-901/study-guide/markdown/source.md`
+  - `ai-901/study-guide/metadata.json`
+  - `ai-901/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai901_study_guide.html`
+- `https://learn.microsoft.com/en-us/training/paths/ai-concepts/`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/markdown/source.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/raw/source.html`
+  - `shared-assets/source-html/ai-concepts-for-developers-and-technology-professionals-path-home.html`
+- `https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/anton-icon.png`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/assets_manifest.json`
+- `https://learn.microsoft.com/en-us/training/paths/get-started-ai-apps-agents/`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/metadata.json`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/markdown/source.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/raw/source.html`
+  - `shared-assets/source-html/get-started-with-ai-applications-and-agents-on-azure-path-home.html`
+
+## Same title
+
+- `MANIFEST`
+  - `MANIFEST.csv`
+  - `MANIFEST.json`
+- `metadata`
+  - `ai-900/homepage/metadata.json`
+  - `ai-900/practice-assessment/metadata.json`
+  - `ai-900/study-guide/metadata.json`
+  - `ai-901/homepage/metadata.json`
+  - `ai-901/study-guide/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/metadata.json`
+  - ... 9 more
+- `Study guide for Exam AI-900: Microsoft Azure AI Fundamentals | Microsoft Learn`
+  - `ai-900/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai900_study_guide.html`
+- `Exam AI-901: Microsoft Azure AI Fundamentals (beta) - Certifications | Microsoft Learn`
+  - `ai-901/homepage/raw/source.html`
+  - `shared-assets/source-html/ai901_homepage.html`
+- `Study guide for Exam AI-901: Microsoft Azure AI Fundamentals | Microsoft Learn`
+  - `ai-901/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai901_study_guide.html`
+- `Module assessment`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/09_8-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/06_8-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/06_5-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/08_6-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/06_7-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/05_5-knowledge-check.md`
+- `Summary`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/10_9-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/07_9-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/07_6-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/07_7-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/09_7-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/07_8-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/08_8-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/07_8-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/07_7-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/07_7-summary.md`
+  - ... 2 more
+- `assets_manifest`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/2-generative-ai/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/3-computer-vision/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/4-speech/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/5-natural-language-processing/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/6-extract-insights/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7b-exercise/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/8-knowledge-check/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/assets_manifest.json`
+  - ... 49 more
+- `Module assessment - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/raw/09_8-knowledge-check.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/06_8-knowledge-check.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/raw/06_5-knowledge-check.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/08_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/raw/05_5-knowledge-check.html`
+- `Summary - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/raw/10_9-summary.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/07_9-summary.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/raw/07_6-summary.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/07_7-summary.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/09_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/raw/08_8-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/07_8-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/07_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/07_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/07_7-summary.html`
+  - ... 1 more
+- `Introduction`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/01_1-introduction.md`
+  - ... 1 more
+- `Introduction - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/raw/01_1-introduction.html`
+- `Speech recognition`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/03_3-speech-recognition.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/02_2-speech-recognition.md`
+- `Speech synthesis`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/04_4-speech-synthesis.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/03_3-speech-synthesis.md`
+- `Speech recognition - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/03_3-speech-recognition.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/02_2-speech-recognition.html`
+- `Speech synthesis - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/04_4-speech-synthesis.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/03_3-speech-synthesis.html`
+- `AI concepts for developers and technology professionals - Training | Microsoft Learn`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/raw/source.html`
+  - `shared-assets/source-html/ai-concepts-for-developers-and-technology-professionals-path-home.html`
+- `Knowledge check`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/07_7-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/06_7-knowledge-check.md`
+- `Knowledge check - Training | Microsoft Learn`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/raw/07_7-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/06_7-knowledge-check.html`
+- `Get started with AI applications and agents on Azure - Training | Microsoft Learn`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/raw/source.html`
+  - `shared-assets/source-html/get-started-with-ai-applications-and-agents-on-azure-path-home.html`
+- `HousePrices`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.02_Pand_or_Idio_Pan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.03_Load_Inde_Rein/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.05_Memo_Opti_in_Pyt/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.09_Data_Binn_Stan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.10_Describing_Data/HousePrices.csv`
+  - ... 4 more
+- `housing_data`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/housing_data.csv`
+- `ADANIPORTS`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Data/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.13_Matp_for_3D_Viz/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.17_Plot_3D_Grap_for/ADANIPORTS.csv`
+- `pivot`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.02_Basi_Stat_with_P/pivot.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.03_Basi_Stat_with_P/pivot.csv`
+- `NSMES1988`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_1/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_2/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_3/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_4/NSMES1988.csv`
+- `L01_Course_Intro`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Instr_Slides_NB_Upd/L01_Course_Intro/L01_Course_Intro.pdf`
+  - `simplilearn-materials/C6_DL_Learn_Spec/C6_DL_Learn_Spec/Instr_Slides_NB/L01_C_Intro/L01_Course_Intro.pdf`
+- `Lab_Guide`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Lab_Guide/Lab_Guide.pdf`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Lab_Guide/Lab_Guide.pdf`
+  - `simplilearn-materials/C6_DL_Learn_Spec/C6_DL_Learn_Spec/Lab_Guide/Lab_Guide.pdf`
+- `movies`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Data/L07_Reco_Systems/movies.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Incr_Cap/Cap_Session_8/movies.csv`
+- `ratings`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Data/L07_Reco_Systems/ratings.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Incr_Cap/Cap_Session_8/ratings.csv`
+
+## Same filename
+
+- `source.md`
+  - `ai-900/homepage/markdown/source.md`
+  - `ai-900/study-guide/markdown/source.md`
+  - `ai-901/homepage/markdown/source.md`
+  - `ai-901/study-guide/markdown/source.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/markdown/source.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/markdown/source.md`
+- `metadata.json`
+  - `ai-900/homepage/metadata.json`
+  - `ai-900/practice-assessment/metadata.json`
+  - `ai-900/study-guide/metadata.json`
+  - `ai-901/homepage/metadata.json`
+  - `ai-901/study-guide/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/metadata.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/metadata.json`
+  - ... 9 more
+- `source.html`
+  - `ai-900/homepage/raw/source.html`
+  - `ai-900/study-guide/raw/source.html`
+  - `ai-901/homepage/raw/source.html`
+  - `ai-901/study-guide/raw/source.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/raw/source.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/raw/source.html`
+- `01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/01_1-introduction.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/01_1-introduction.md`
+  - ... 2 more
+- `assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/2-generative-ai/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/3-computer-vision/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/4-speech/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/5-natural-language-processing/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/6-extract-insights/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7b-exercise/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/8-knowledge-check/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/assets_manifest.json`
+  - ... 49 more
+- `01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/03_introduction-to-natural-language-processing-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/01_1-introduction.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/01_1-introduction.html`
+  - ... 1 more
+- `06_6-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/06_6-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/06_6-knowledge-check.md`
+- `07_7-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/07_7-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/07_7-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/07_7-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/07_7-summary.md`
+- `06_6-knowledge-check.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/06_6-knowledge-check.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/06_6-knowledge-check.html`
+- `07_7-summary.html`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/07_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/07_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/07_7-summary.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/07_7-summary.html`
+- `02_2-overview.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/02_2-overview.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/02_2-overview.md`
+- `06_7-knowledge-check.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/06_7-knowledge-check.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/06_7-knowledge-check.md`
+- `07_8-summary.md`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/06_introduction-to-ai-powered-information-extraction-concepts/07_8-summary.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/07_8-summary.md`
+- `05_5-exercise.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/05_5-exercise.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/05_5-exercise.md`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/05_5-exercise.md`
+- `05_5-exercise.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/05_5-exercise.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/05_5-exercise.html`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/05_5-exercise.html`
+- `HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.02_Pand_or_Idio_Pan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.03_Load_Inde_Rein/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.05_Memo_Opti_in_Pyt/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.09_Data_Binn_Stan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.10_Describing_Data/HousePrices.csv`
+  - ... 4 more
+- `housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/housing_data.csv`
+- `ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Data/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.13_Matp_for_3D_Viz/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.17_Plot_3D_Grap_for/ADANIPORTS.csv`
+- `pivot.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.02_Basi_Stat_with_P/pivot.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.03_Basi_Stat_with_P/pivot.csv`
+- `NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_1/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_2/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_3/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_4/NSMES1988.csv`
+- `L01_Course_Intro.pdf`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Instr_Slides_NB_Upd/L01_Course_Intro/L01_Course_Intro.pdf`
+  - `simplilearn-materials/C6_DL_Learn_Spec/C6_DL_Learn_Spec/Instr_Slides_NB/L01_C_Intro/L01_Course_Intro.pdf`
+- `Lab_Guide.pdf`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Lab_Guide/Lab_Guide.pdf`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Lab_Guide/Lab_Guide.pdf`
+  - `simplilearn-materials/C6_DL_Learn_Spec/C6_DL_Learn_Spec/Lab_Guide/Lab_Guide.pdf`
+- `movies.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Data/L07_Reco_Systems/movies.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Incr_Cap/Cap_Session_8/movies.csv`
+- `ratings.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Data/L07_Reco_Systems/ratings.csv`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Incr_Cap/Cap_Session_8/ratings.csv`
+
+## Same content hash
+
+- `ffb6d09f5fed47abd3b04c6655e6c721`
+  - `ai-900/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai900_study_guide.html`
+- `2c609249efba54af3f63533e86e12251`
+  - `ai-901/homepage/raw/source.html`
+  - `shared-assets/source-html/ai901_homepage.html`
+- `754f6a3d1c18a298de84c1f823500723`
+  - `ai-901/study-guide/raw/source.html`
+  - `shared-assets/source-html/ai901_study_guide.html`
+- `a1aae057e4ccb4d56a716c69c8a3a957`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/assets_manifest.json`
+- `d751713988987e9331980363e24189ce`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/8-knowledge-check/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/8-knowledge-check/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/9-summary/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/1-introduction/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/2-speech-solutions/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/4-speech-synthesis/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/6-knowledge-check/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/7-summary/assets_manifest.json`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/1-introduction/assets_manifest.json`
+  - ... 16 more
+- `278912a95c4d697437a69bce5fcb7d67`
+  - `microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/raw/source.html`
+  - `shared-assets/source-html/ai-concepts-for-developers-and-technology-professionals-path-home.html`
+- `c60d69419a157124459ef60adc327837`
+  - `microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/raw/source.html`
+  - `shared-assets/source-html/get-started-with-ai-applications-and-agents-on-azure-path-home.html`
+- `9cb2bcd4e66b982c4e6664e6eea1ab41`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.02_Pand_or_Idio_Pan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.03_Load_Inde_Rein/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.05_Memo_Opti_in_Pyt/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.09_Data_Binn_Stan/HousePrices.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L11_Data_Wrangling/11.10_Describing_Data/HousePrices.csv`
+  - ... 4 more
+- `30725cceeb092a61e4a6247322bb6344`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L04_Work_Pandas/Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Assi_Prac_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L09_Data_Wrangling/Assisted_Pract_Data/housing_data.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L10_Feat_Eng/Data/housing_data.csv`
+- `4678cfadc65d79f3b068fbb81b84c6da`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L05_Data_Viz/Data/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.13_Matp_for_3D_Viz/ADANIPORTS.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L12_Data_Viz/12.17_Plot_3D_Grap_for/ADANIPORTS.csv`
+- `be90675050e52779ed572ae712559259`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.02_Basi_Stat_with_P/pivot.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Data/L13_End_to_End_Stat_Ap/13.03_Basi_Stat_with_P/pivot.csv`
+- `4421d98fb089d28c2c1d07add8aec124`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_1/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_2/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_3/NSMES1988.csv`
+  - `simplilearn-materials/C4_Appl_Data_Sci_Py/C4_Appl_Data_Sci_Py/Incr_Cap/Cap_4/NSMES1988.csv`
+- `d54bd9bfcb26da16ce3c3dc83b08765a`
+  - `simplilearn-materials/C5_ML_Learn_Using_Py/C5_ML_Learn_Using_Py/Lab_Guide/Lab_Guide.pdf`
+  - `simplilearn-materials/C6_DL_Learn_Spec/C6_DL_Learn_Spec/Lab_Guide/Lab_Guide.pdf`

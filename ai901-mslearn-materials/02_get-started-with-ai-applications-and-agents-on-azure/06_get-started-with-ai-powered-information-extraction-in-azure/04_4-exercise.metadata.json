@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.get-started-information-extraction.exercise",
+  "title": "Exercise - Get started with information extraction in Microsoft Foundry",
+  "duration_minutes": 25,
+  "last_modified": "2026-05-19T23:10:00+00:00",
+  "number": 4,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/4-exercise/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/4-exercise/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "04_4-exercise.md",
+  "raw_html_path": "04_4-exercise.html"
+}

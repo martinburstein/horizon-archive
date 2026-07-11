@@ -1,0 +1,18 @@
+{
+  "title": "AI-900 exam homepage",
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-900/",
+  "source_type": "exam-homepage",
+  "exam": "ai-900",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "ai-900/homepage/raw/source.html",
+    "ai-900/homepage/raw/AI-900 Homepage.pdf"
+  ],
+  "local_markdown_files": [
+    "ai-900/homepage/markdown/source.md",
+    "ai-900/homepage/markdown/AI-900 Homepage.md"
+  ],
+  "module_count": null,
+  "unit_count": null,
+  "notes": "Official Microsoft Learn exam homepage with local PDF snapshot."
+}

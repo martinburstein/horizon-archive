@@ -1,0 +1,17 @@
+[
+  {
+    "alt": "Screenshot of Foundry's model catalog with the new UI.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-generative-ai-and-agents/media/model-catalog-1.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of Foundry's model entries with gpt-4.1 as an example.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-generative-ai-and-agents/media/gpt-4-model-details.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of Foundry's model leaderboard and side-by-side comparisons.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-generative-ai-and-agents/media/model-leaderboard.png",
+    "path": "assets/image_003.png"
+  }
+]

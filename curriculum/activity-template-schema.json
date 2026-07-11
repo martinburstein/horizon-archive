@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Activity Template",
+  "type": "object",
+  "required": [
+    "activity_id",
+    "lesson_id",
+    "activity_type",
+    "purpose",
+    "interaction_mode",
+    "source_dependency",
+    "status"
+  ],
+  "properties": {
+    "activity_id": {"type": "string"},
+    "lesson_id": {"type": "string"},
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "read",
+        "reflect",
+        "guided_code",
+        "portal_step",
+        "compare_choice",
+        "debug",
+        "self_explanation",
+        "note_capture",
+        "review_flag",
+        "checkpoint"
+      ]
+    },
+    "purpose": {"type": "string"},
+    "interaction_mode": {
+      "type": "string",
+      "enum": ["passive", "guided", "interactive", "adaptive"]
+    },
+    "source_dependency": {
+      "type": "string",
+      "enum": ["source_required", "bridge_allowed", "learner_state_driven"]
+    },
+    "estimated_minutes": {"type": "integer", "minimum": 1},
+    "input_contract": {"type": "string"},
+    "output_contract": {"type": "string"},
+    "captures_note": {"type": "boolean"},
+    "captures_confidence": {"type": "boolean"},
+    "captures_needs_review": {"type": "boolean"},
+    "status": {
+      "type": "string",
+      "enum": ["planned", "draft", "review", "approved", "blocked"]
+    },
+    "notes": {"type": "string"}
+  }
+}

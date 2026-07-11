@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.introduction-information-extraction",
+  "title": "Introduction to AI-powered information extraction concepts",
+  "summary": "Introduction to AI-powered information extraction concepts",
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/",
+  "duration_minutes": 28,
+  "last_modified": "2026-03-18T23:10:00+00:00",
+  "number": 6,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.introduction-information-extraction.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.overview",
+      "title": "Overview of information extraction",
+      "duration_minutes": 2,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/2-overview/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.vision-extraction",
+      "title": "Optical character recognition (OCR)",
+      "duration_minutes": 3,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.form-extraction",
+      "title": "Field extraction and mapping",
+      "duration_minutes": 3,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/4-form-extraction/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.exercise",
+      "title": "Exercise - Explore AI information extraction",
+      "duration_minutes": 15,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/6b-exercise/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/7-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.introduction-information-extraction.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2025-11-19T00:21:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/8-summary/"
+    }
+  ]
+}

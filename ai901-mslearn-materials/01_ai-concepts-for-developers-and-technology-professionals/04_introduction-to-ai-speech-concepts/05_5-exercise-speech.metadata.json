@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.introduction-ai-speech.exercise-speech",
+  "title": "Exercise - Explore AI speech",
+  "duration_minutes": 15,
+  "last_modified": "2026-02-28T00:28:00+00:00",
+  "number": 5,
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/5-exercise-speech/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/5-exercise-speech/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "05_5-exercise-speech.md",
+  "raw_html_path": "05_5-exercise-speech.html"
+}

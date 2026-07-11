@@ -1,0 +1,8 @@
+{
+  "manifest_id": "qa-contract-fixture-v1",
+  "questions": [
+    {
+      "id": "FIXTURE-Q1"
+    }
+  ]
+}

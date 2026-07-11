@@ -1,0 +1,29 @@
+{
+  "title": "Introduction to AI speech concepts",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/01_1-introduction.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/02_2-speech-solutions.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/03_3-speech-recognition.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/04_4-speech-synthesis.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/05_5-exercise-speech.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/06_6-knowledge-check.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/07_7-summary.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/assets/7-summary/assets_manifest.json"
+  ],
+  "local_markdown_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/01_1-introduction.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/02_2-speech-solutions.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/03_3-speech-recognition.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/04_4-speech-synthesis.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/05_5-exercise-speech.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/06_6-knowledge-check.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/07_7-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 7,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 4."
+}

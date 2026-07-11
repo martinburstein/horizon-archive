@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://horizon-archive.local/schemas/run-report.schema.json",
+  "title": "Horizon Archive playthrough run report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "started_at",
+    "build_id",
+    "build_provenance",
+    "test_environment",
+    "launch_command",
+    "clean_save_procedure",
+    "clean_save_result",
+    "clean_save",
+    "result",
+    "last_checkpoint",
+    "questions_required",
+    "questions_answered",
+    "wrong_answer_recovery_tested",
+    "wrong_answer_test",
+    "persistence_tested",
+    "persistence_passed",
+    "premature_ending_gate_tested",
+    "premature_ending_gate_passed",
+    "title_reached",
+    "credits_reached",
+    "question_manifest_id",
+    "question_manifest_sha256",
+    "transcript",
+    "open_blocking_bug_ids"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "supersedes_run_id": { "type": ["string", "null"] },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": ["string", "null"], "format": "date-time" },
+    "build_id": { "type": "string", "minLength": 1 },
+    "build_provenance": { "type": "string", "minLength": 1 },
+    "test_environment": { "type": "string", "minLength": 1 },
+    "launch_command": { "type": "string", "minLength": 1 },
+    "clean_save_procedure": { "type": "string", "minLength": 1 },
+    "clean_save_result": { "type": "string", "minLength": 1 },
+    "clean_save": { "type": "boolean" },
+    "result": { "enum": ["passed", "failed", "blocked", "in_progress"] },
+    "last_checkpoint": { "type": "string", "minLength": 1 },
+    "questions_required": { "type": "integer", "minimum": 0 },
+    "questions_answered": { "type": "integer", "minimum": 0 },
+    "question_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question_id", "correct", "attempts"],
+        "properties": {
+          "question_id": { "type": "string", "minLength": 1 },
+          "correct": { "type": "boolean" },
+          "attempts": { "type": "integer", "minimum": 1 },
+          "checkpoint": { "type": "string" }
+        }
+      }
+    },
+    "wrong_answer_recovery_tested": { "type": "boolean" },
+    "wrong_answer_test": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["question_id", "input", "feedback_observed", "recovery_action", "recovery_passed"],
+      "properties": {
+        "question_id": { "type": "string", "minLength": 1 },
+        "input": { "type": "string", "minLength": 1 },
+        "feedback_observed": { "type": "string", "minLength": 1 },
+        "recovery_action": { "type": "string", "minLength": 1 },
+        "recovery_passed": { "type": "boolean" }
+      }
+    },
+    "persistence_tested": { "type": "boolean" },
+    "persistence_passed": { "type": "boolean" },
+    "premature_ending_gate_tested": { "type": "boolean" },
+    "premature_ending_gate_passed": { "type": "boolean" },
+    "title_reached": { "type": "boolean" },
+    "credits_reached": { "type": "boolean" },
+    "credits_marker_observed": { "type": ["string", "null"] },
+    "question_manifest_id": { "type": "string", "minLength": 1 },
+    "question_manifest_sha256": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" },
+    "transcript": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sequence", "event_type", "checkpoint", "action", "visible_output"],
+        "properties": {
+          "sequence": { "type": "integer", "minimum": 1 },
+          "event_type": { "enum": ["title", "navigation", "question", "credits", "other"] },
+          "checkpoint": { "type": "string", "minLength": 1 },
+          "question_id": { "type": ["string", "null"] },
+          "action": { "type": "string", "minLength": 1 },
+          "input": { "type": ["string", "null"] },
+          "visible_output": { "type": "string", "minLength": 1 },
+          "evidence_path": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "open_blocking_bug_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "result": { "const": "passed" } }, "required": ["result"] },
+      "then": {
+        "properties": {
+          "finished_at": { "type": "string", "format": "date-time" },
+          "clean_save": { "const": true },
+          "title_reached": { "const": true },
+          "credits_reached": { "const": true },
+          "wrong_answer_recovery_tested": { "const": true },
+          "wrong_answer_test": { "type": "object", "properties": { "recovery_passed": { "const": true } } },
+          "persistence_tested": { "const": true },
+          "persistence_passed": { "const": true },
+          "premature_ending_gate_tested": { "const": true },
+          "premature_ending_gate_passed": { "const": true },
+          "questions_required": { "type": "integer", "minimum": 1 },
+          "questions_answered": { "type": "integer", "minimum": 1 },
+          "question_results": { "minItems": 1 },
+          "transcript": { "minItems": 3 },
+          "credits_marker_observed": { "type": "string", "minLength": 1 },
+          "open_blocking_bug_ids": { "maxItems": 0 }
+        }
+      }
+    }
+  ]
+}

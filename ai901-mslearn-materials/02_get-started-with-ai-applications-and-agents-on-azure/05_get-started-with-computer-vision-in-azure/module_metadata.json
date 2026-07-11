@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.get-started-with-computer-vision-in-azure",
+  "title": "Get started with computer vision in Azure",
+  "summary": "Vision-enabled models in Foundry enable developers to create intelligent solutions that analysis images, and generate images and video.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/",
+  "duration_minutes": 50,
+  "last_modified": "2026-03-24T23:09:00+00:00",
+  "number": 5,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.vision-enabled-models",
+      "title": "Multimodal models for image analysis",
+      "duration_minutes": 7,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/2-vision-enabled-models/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.image-generation",
+      "title": "Image generation models",
+      "duration_minutes": 4,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/3-image-generation/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.video-generation",
+      "title": "Video generation models",
+      "duration_minutes": 3,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/4-video-generation/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.exercise",
+      "title": "Exercise - Get started with computer vision in Microsoft Foundry",
+      "duration_minutes": 30,
+      "last_modified": "2026-02-23T18:35:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/5-exercise/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 4,
+      "last_modified": "2026-02-23T18:35:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/6-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/7-summary/"
+    }
+  ]
+}

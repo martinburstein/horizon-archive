@@ -1,0 +1,27 @@
+[
+  {
+    "alt": "Screenshot of elements within Foundry including icons for models, tools, agents, tools, and knowledge.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-ai-in-azure/media/foundry-elements.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of Foundry main page.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-ai-in-azure/media/new-portal-1.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of Foundry Docs page with the agent helper open.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-ai-in-azure/media/foundry-docs-page.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of a selected model.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-ai-in-azure/media/example-selected-model.png",
+    "path": "assets/image_004.png"
+  },
+  {
+    "alt": "Screenshot of the model in the Foundry playground.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-with-ai-in-azure/media/example-model-playground.png",
+    "path": "assets/image_005.png"
+  }
+]

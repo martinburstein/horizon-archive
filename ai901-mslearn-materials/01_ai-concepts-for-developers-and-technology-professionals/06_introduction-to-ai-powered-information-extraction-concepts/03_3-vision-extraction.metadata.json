@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.introduction-information-extraction.vision-extraction",
+  "title": "Optical character recognition (OCR)",
+  "duration_minutes": 3,
+  "last_modified": "2025-11-19T00:21:00+00:00",
+  "number": 3,
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "03_3-vision-extraction.md",
+  "raw_html_path": "03_3-vision-extraction.html"
+}

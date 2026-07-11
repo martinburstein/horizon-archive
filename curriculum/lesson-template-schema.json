@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Lesson Template",
+  "type": "object",
+  "required": [
+    "lesson_id",
+    "lesson_title",
+    "lesson_type",
+    "chapter_id",
+    "module_id",
+    "launch_tier",
+    "source_mode",
+    "supports_objectives",
+    "supports_python_skills",
+    "prerequisite_lesson_ids",
+    "source_ids",
+    "activity_ids",
+    "assessment_ids",
+    "learner_starting_state",
+    "learner_ending_state",
+    "provenance_policy",
+    "status"
+  ],
+  "properties": {
+    "lesson_id": {"type": "string"},
+    "lesson_title": {"type": "string"},
+    "lesson_type": {"type": "string"},
+    "chapter_id": {"type": "string"},
+    "module_id": {"type": "string"},
+    "launch_tier": {
+      "type": "string",
+      "enum": ["launch_critical", "launch_valuable", "later_enhancement", "stretch"]
+    },
+    "source_mode": {"type": "string"},
+    "supports_objectives": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "supports_python_skills": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "prerequisite_lesson_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "activity_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "assessment_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "learner_starting_state": {"type": "string"},
+    "learner_ending_state": {"type": "string"},
+    "mastery_gate": {"type": "string"},
+    "estimated_minutes": {"type": "integer", "minimum": 5},
+    "difficulty_band": {
+      "type": "string",
+      "enum": ["absolute_beginner", "beginner", "beginner_plus", "intermediate"]
+    },
+    "provenance_policy": {
+      "type": "object",
+      "required": ["citation_expectation", "bridge_label_required", "unsupported_claim_behavior"],
+      "properties": {
+        "citation_expectation": {"type": "string"},
+        "bridge_label_required": {"type": "boolean"},
+        "unsupported_claim_behavior": {"type": "string"}
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "draft", "review", "approved", "blocked"]
+    },
+    "notes": {"type": "string"}
+  }
+}

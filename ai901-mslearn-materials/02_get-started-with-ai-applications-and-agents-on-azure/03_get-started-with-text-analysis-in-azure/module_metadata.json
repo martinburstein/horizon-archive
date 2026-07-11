@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.get-started-with-text-analysis-in-azure",
+  "title": "Get started with text analysis in Azure",
+  "summary": "Get started with text analysis in Azure",
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/",
+  "duration_minutes": 45,
+  "last_modified": "2026-04-13T07:10:00+00:00",
+  "number": 3,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.azure-language",
+      "title": "Understand text analysis in Foundry",
+      "duration_minutes": 8,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/2-azure-language/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.language-sdk",
+      "title": "Create a client application that analyzes text",
+      "duration_minutes": 9,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/3-language-sdk/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.language-mcp",
+      "title": "Use Azure Language with an agent",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-14T07:11:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/4-language-mcp/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.exercise",
+      "title": "Exercise - Get started with text analysis in Microsoft Foundry",
+      "duration_minutes": 20,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/5-exercise/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/6-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/7-summary/"
+    }
+  ]
+}

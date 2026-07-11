@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.introduction-language.exercise",
+  "title": "Exercise - Explore text analytics",
+  "duration_minutes": 15,
+  "last_modified": "2025-12-17T00:16:00+00:00",
+  "number": 5,
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-language/4b-exercise/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-language/4b-exercise/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "05_4b-exercise.md",
+  "raw_html_path": "05_4b-exercise.html"
+}

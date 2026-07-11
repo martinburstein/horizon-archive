@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.introduction-computer-vision.knowledge-check",
+  "title": "Module assessment",
+  "duration_minutes": 3,
+  "last_modified": "2025-10-27T17:23:00+00:00",
+  "number": 8,
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/6-knowledge-check/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/6-knowledge-check/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 0,
+  "asset_failures": [],
+  "markdown_path": "08_6-knowledge-check.md",
+  "raw_html_path": "08_6-knowledge-check.html"
+}

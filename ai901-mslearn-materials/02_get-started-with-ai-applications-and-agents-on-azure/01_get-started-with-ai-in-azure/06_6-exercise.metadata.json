@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.get-started-with-ai-in-azure.exercise",
+  "title": "Exercise - Get started with Microsoft Foundry",
+  "duration_minutes": 30,
+  "last_modified": "2026-02-27T00:16:00+00:00",
+  "number": 6,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/6-exercise/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/6-exercise/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 1,
+  "asset_failures": [],
+  "markdown_path": "06_6-exercise.md",
+  "raw_html_path": "06_6-exercise.html"
+}

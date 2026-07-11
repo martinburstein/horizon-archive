@@ -1,0 +1,84 @@
+{
+  "uid": "learn.wwl.introduction-computer-vision",
+  "title": "Introduction to computer vision concepts",
+  "summary": "Introduction to computer vision concepts",
+  "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/",
+  "duration_minutes": 34,
+  "last_modified": "2026-03-18T23:10:00+00:00",
+  "number": 5,
+  "unit_count": 9,
+  "units": [
+    {
+      "uid": "learn.wwl.introduction-computer-vision.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.overview",
+      "title": "Computer vision tasks and techniques",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/2-overview/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.understand-image-processing",
+      "title": "Images and image processing",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/3-understand-image-processing/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.computer-vision-models",
+      "title": "Convolutional neural networks",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/4-computer-vision-models/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.modern-vision-models",
+      "title": "Vision transformers and multimodal models",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/5-modern-vision-models/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.generate-images",
+      "title": "Image generation",
+      "duration_minutes": 2,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/5a-generate-images/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.exercise",
+      "title": "Exercise - Explore computer vision",
+      "duration_minutes": 15,
+      "last_modified": "2026-02-28T00:28:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/5b-exercise/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 8,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/6-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.introduction-computer-vision.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-27T17:23:00+00:00",
+      "number": 9,
+      "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/7-summary/"
+    }
+  ]
+}

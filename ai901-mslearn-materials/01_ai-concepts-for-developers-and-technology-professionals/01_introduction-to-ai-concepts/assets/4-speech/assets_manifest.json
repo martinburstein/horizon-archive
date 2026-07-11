@@ -1,0 +1,17 @@
+[
+  {
+    "alt": "Screenshot of a computing history site performing speech recognition.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/computing-history-speech.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Diagram of a user's spoken input being converted to text.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/speech-recognition.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Diagram of text being converted to audible speech.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-ai-fundamentals/media/speech-synthesis.png",
+    "path": "assets/image_003.png"
+  }
+]

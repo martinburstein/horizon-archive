@@ -1,0 +1,43 @@
+{
+  "run_id": "run-YYYYMMDD-001",
+  "supersedes_run_id": null,
+  "started_at": "2026-07-11T00:00:00Z",
+  "finished_at": null,
+  "build_id": "UNBUILT",
+  "build_provenance": "No game repository or artifact exists.",
+  "test_environment": "Windows PowerShell workspace preflight",
+  "launch_command": "UNAVAILABLE",
+  "clean_save_procedure": "UNAVAILABLE",
+  "clean_save_result": "Not run because no game exists.",
+  "clean_save": true,
+  "result": "blocked",
+  "last_checkpoint": "preflight",
+  "questions_required": 0,
+  "questions_answered": 0,
+  "question_results": [],
+  "wrong_answer_recovery_tested": false,
+  "wrong_answer_test": null,
+  "persistence_tested": false,
+  "persistence_passed": false,
+  "premature_ending_gate_tested": false,
+  "premature_ending_gate_passed": false,
+  "title_reached": false,
+  "credits_reached": false,
+  "credits_marker_observed": null,
+  "question_manifest_id": "UNAVAILABLE",
+  "question_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "transcript": [
+    {
+      "sequence": 1,
+      "event_type": "other",
+      "checkpoint": "preflight",
+      "question_id": null,
+      "action": "Run playtest/preflight.ps1",
+      "input": null,
+      "visible_output": "PLAYTEST BLOCKED: missing playtest.config.json",
+      "evidence_path": "playtest/templates/bug-report.json"
+    }
+  ],
+  "open_blocking_bug_ids": ["HA-0001"],
+  "notes": "No Horizon Archive game entry point exists yet."
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Get started with generative AI and agents in Azure",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/05_6-exercise.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/raw/07_8-summary.html"
+  ],
+  "local_markdown_files": [
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/01_1-introduction.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/02_2-generative-ai-models.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/03_3-using-generative-ai-models.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/04_4-creating-an-agent.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/05_6-exercise.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/06_7-knowledge-check.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/07_8-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 7,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 2."
+}

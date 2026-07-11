@@ -1,0 +1,1117 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-single    moduleunit show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Optical character recognition (OCR) - Training | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Understand how OCR enables the extraction of text from images." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Optical character recognition (OCR) - Training" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction" />
+			<meta property="og:description" content="Understand how OCR enables the extraction of text from images." />
+			<meta name="platform_id" content="d51181be-e294-e495-7c56-68ab2225d0c9" /> 
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Learn" />
+
+			<meta name="page_type" content="learn" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="uid" content="learn.wwl.introduction-information-extraction.vision-extraction" />
+	
+		<meta name="schema" content="ModuleUnit" />
+	
+		<meta name="page_kind" content="unit" />
+	
+		<meta name="azure_sandbox" content="false" />
+	
+		<meta name="sandbox" content="false" />
+	
+		<meta name="breadcrumb_path" content="/learn/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="clicktale" content="true" />
+	
+		<meta name="adobe-target" content="true" />
+	
+		<meta name="prefetch-feature-rollout" content="true" />
+	
+		<meta name="localization_scopes" content="ja-jp" />
+	
+		<meta name="localization_scopes" content="ko-kr" />
+	
+		<meta name="localization_scopes" content="zh-cn" />
+	
+		<meta name="localization_scopes" content="zh-tw" />
+	
+		<meta name="ms.date" content="2025-11-18T00:00:00Z" />
+	
+		<meta name="author" content="wwlpublish" />
+	
+		<meta name="ms.author" content="gmalc" />
+	
+		<meta name="ms.topic" content="unit" />
+	
+		<meta name="ms.custom" content="N/A" />
+	
+		<meta name="zone_pivot_groups" content="video-or-text" />
+	
+		<meta name="document_id" content="efa47c25-4ef5-a98e-e62d-f35ebe5acf7e" />
+	
+		<meta name="document_version_independent_id" content="00e91fea-88b7-66f5-d8c9-af3fa5f0fb2b" />
+	
+		<meta name="updated_at" content="2025-11-19T00:21:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/learn-pr/blob/live/learn-pr/wwl-data-ai/introduction-information-extraction/3-vision-extraction.yml" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/learn-pr/blob/dafe0539aa4ba84529e6f107f25864177fdc019c/learn-pr/wwl-data-ai/introduction-information-extraction/3-vision-extraction.yml" />
+	
+		<meta name="git_commit_id" content="dafe0539aa4ba84529e6f107f25864177fdc019c" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="Docs.learn-pr" />
+	
+		<meta name="unit_completion_type" content="view" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="ROBOTS" content="noindex" />
+	
+		<meta name="asset_id" content="modules/introduction-information-extraction/3-vision-extraction" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="learn-pr/wwl-data-ai/introduction-information-extraction/3-vision-extraction.yml" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/learn/blob/main/learn-pr/wwl-data-ai/introduction-information-extraction/3-vision-extraction.yml" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/3-vision-extraction?accept=text/markdown" />
+	 
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03433.7881-f368a308/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "ModuleUnit",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false,
+    "contributors": [
+      {
+        "name": "GraemeMalcolm",
+        "url": "https://github.com/GraemeMalcolm"
+      }
+    ],
+    "mathjax": {}
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			
+				<script src="/static/assets/0.4.03433.7881-f368a308/scripts/en-us/index-learner-experience.js"></script>
+			
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main background-color-body-dark"
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div data-main-column>
+				<!-- Article header -->
+				<div class="background-color-body">
+		<div id="article-header" class="background-color-body-medium border-bottom display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between uhf-container">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					  
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	 
+					  
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	</div>
+				<!-- Unit navigation menu -->
+				
+		<div class="background-color-body-medium border-bottom position-sticky" style="z-index: 1020; inset-block-start: -1px;">
+			<div class="modular-content-container padding-block-xxs">
+				<nav
+					class="display-flex justify-content-center position-relative"
+					aria-label="pagination"
+					data-bi-name="module-nav"
+				>
+					<ul id="unit-nav-dropdown">
+						<li class="dropdown has-centered-menu has-caret" data-bi-name="unit-menu">
+							<button
+								type="button"
+								aria-controls="module-menu"
+								aria-expanded="false"
+								class="button button-clear button-sm dropdown-trigger"
+								data-bi-name="dropdown-trigger"
+								title="Module menu"
+							>
+								<span id="unit-place"></span>
+								<span aria-hidden="true" class="icon">
+									<span class="docon docon-chevron-down-light expanded-indicator"></span>
+								</span>
+							</button>
+							<div
+								class="dropdown-menu width-300 width-450-desktop background-color-body"
+								id="module-menu"
+							></div>
+						</li>
+					</ul>
+					<div id="completion-nav" class="is-hidden font-weight-semibold">
+						Achievements
+					</div>
+					
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn position-absolute right-0 margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	
+				</nav>
+			</div>
+		</div>
+	
+				<!-- Main content area -->
+				<div class="content margin-top-md"><div class="modular-content-container has-body-background box">
+	<div id="unit-inner-section" class="section is-uniform position-relative">
+		<h1 id="module-unit-title" class="margin-right-xxl-desktop">Optical character recognition (OCR)</h1>
+		<div data-progress-uid="learn.wwl.introduction-information-extraction.vision-extraction" class="xp-tag position-absolute top-0 right-0 margin-top-xs margin-top-sm-tablet margin-top-lg-desktop margin-top-xs-interactive margin-right-sm margin-right-lg-tablet margin-right-sm-interactive">
+			<div class="xp-tag-hexagon">
+				<span class="xp-tag-icon is-shown-complete docon docon-check">
+					<span class="visually-hidden">Completed</span>
+				</span>
+				<span class="xp-tag-xp"></span>
+			</div>
+		</div>
+		<ul id="module-unit-metadata" class="metadata page-metadata">
+			<li id="module-unit-total-time">3 minutes</li>
+		</ul>
+		<div id="module-unit-module-assessment-message-container" aria-hidden="true" hidden=""></div>
+        <div id="module-unit-notification-container" hidden=""></div>
+		<div id="module-unit-content">
+				<div class="zone has-pivot" data-pivot="video">
+<div class="embeddedvideo"><iframe src="https://learn-video.azurefd.net/vod/player?id=1279520b-dd4e-4109-a41b-7fa561e6bbb1" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
+<div class="TIP">
+<p>Tip</p>
+<p>See the <strong>Text and images</strong> tab for more details!</p>
+</div>
+</div>
+<div class="zone has-pivot" data-pivot="text">
+<p>Optical Character Recognition (OCR) is a technology that automatically converts visual text in images - whether from scanned documents, photographs, or digital files—into editable, searchable text data. Rather than manually transcribing information, OCR enables automated data extraction from:</p>
+<ul>
+<li>Scanned invoices and receipts</li>
+<li>Digital photographs of documents</li>
+<li>PDF files containing images of text</li>
+<li>Screenshots and captured content</li>
+<li>Forms and handwritten notes</li>
+</ul>
+<h2 id="the-ocr-pipeline-a-step-by-step-process">The OCR pipeline: A step-by-step process</h2>
+<p>The OCR pipeline consists of five essential stages that work together to transform visual information into text data.</p>
+<p><img src="../../wwl-data-ai/introduction-information-extraction/media/optical-character-recognition.png" alt="Diagram of the OCR pipeline." data-linktype="relative-path"></p>
+<p>The stages in the OCR process are:</p>
+<ol>
+<li>Image acquisition and input.</li>
+<li>Preprocessing and image enhancement.</li>
+<li>Text region detection.</li>
+<li>Character recognition and classification.</li>
+<li>Output generation and post-processing.</li>
+</ol>
+<p>Let's examine each stage in more depth.</p>
+<h3 id="stage-1-image-acquisition-and-input">Stage 1: Image acquisition and input</h3>
+<p>The pipeline begins when an image containing text enters the system. This could be:</p>
+<ul>
+<li>A photograph taken with a smartphone camera.</li>
+<li>A scanned document from a flatbed or document scanner.</li>
+<li>A frame extracted from a video stream.</li>
+<li>A PDF page rendered as an image.</li>
+</ul>
+<div class="TIP">
+<p>Tip</p>
+<p>Image quality at this stage significantly impacts the final accuracy of text extraction.</p>
+</div>
+<h3 id="stage-2-preprocessing-and-image-enhancement">Stage 2: Preprocessing and image enhancement</h3>
+<p>Before text detection begins, the following techniques are used to optimize the image for better recognition accuracy:</p>
+<ul>
+<li><p><strong>Noise reduction</strong> removes visual artifacts, dust spots, and scanning imperfections that could interfere with text detection. The specific techniques used to perform noise reduction include:</p>
+<ul>
+<li><strong>Filtering and image processing algorithms</strong>: Gaussian filters, median filters, and morphological operations.</li>
+<li><strong>Machine learning models</strong>: Denoising autoencoders and convolutional neural networks (CNNs) trained specifically for document image cleanup.</li>
+</ul>
+</li>
+<li><p><strong>Contrast adjustment</strong> enhances the difference between text and background to make characters more distinct. Again, there are multiple possible approaches:</p>
+<ul>
+<li><strong>Classical methods</strong>: Histogram equalization, adaptive thresholding, and gamma correction.</li>
+<li><strong>Machine learning</strong>: Deep learning models that learn optimal enhancement parameters for different document types.</li>
+</ul>
+</li>
+<li><p><strong>Skew correction</strong> detects and corrects document rotation, ensuring text lines are properly aligned horizontally. Techniques for skew correction include:</p>
+<ul>
+<li><strong>Mathematical techniques</strong>: Hough transform for line detection, projection profiles, and connected component analysis.</li>
+<li><strong>Neural network models</strong>: Regression CNNs that predict rotation angles directly from image features.</li>
+</ul>
+</li>
+<li><p><strong>Resolution optimization</strong> adjusts image resolution to the optimal level for character recognition algorithms. You can optimize image resolution with:</p>
+<ul>
+<li><strong>Interpolation methods</strong>: Bicubic, bilinear, and Lanczos resampling algorithms.</li>
+<li><strong>Super-resolution models</strong>: Generative adversarial networks (GANs) and residual networks that intelligently upscale low-resolution text images.</li>
+</ul>
+</li>
+</ul>
+<h3 id="stage-3-text-region-detection">Stage 3: Text region detection</h3>
+<p>The system analyzes the preprocessed image to identify areas that contain text by using the following techniques:</p>
+<ul>
+<li><p><strong>Layout analysis</strong> distinguishes between text regions, images, graphics, and white space areas. Techniques for layout analysis include:</p>
+<ul>
+<li><strong>Traditional approaches</strong>: Connected component analysis, run-length encoding, and projection-based segmentation.</li>
+<li><strong>Deep learning models</strong>: Semantic segmentation networks like U-Net, Mask R-CNN, and specialized document layout analysis models (for example, LayoutLM, or PubLayNet-trained models).</li>
+</ul>
+</li>
+<li><p><strong>Text block identification</strong> groups individual characters into words, lines, and paragraphs based on spatial relationships. Common approaches include:</p>
+<ul>
+<li><strong>Classical methods</strong>: Distance-based clustering, white space analysis, and morphological operations</li>
+<li><strong>Neural networks</strong>: Graph neural networks and transformer models that understand spatial document structure</li>
+</ul>
+</li>
+<li><p><strong>Reading order determination</strong> establishes the sequence in which text should be read (left-to-right, top-to-bottom for English). The correct order can be determined by:</p>
+<ul>
+<li><strong>Rule-based systems</strong>: Geometric algorithms using bounding box coordinates and spatial heuristics.</li>
+<li><strong>Machine learning models</strong>: Sequence prediction models and graph-based approaches that learn reading patterns from training data.</li>
+</ul>
+</li>
+<li><p><strong>Region classification</strong> identifies different types of text regions (headers, body text, captions, tables).</p>
+<ul>
+<li><strong>Feature-based classifiers</strong>: Support vector machines (SVMs) using handcrafted features like font size, position, and formatting</li>
+<li><strong>Deep learning models</strong>: Convolutional neural networks and vision transformers trained on labeled document datasets</li>
+</ul>
+</li>
+</ul>
+<h3 id="stage-4-character-recognition-and-classification">Stage 4: Character recognition and classification</h3>
+<p>This is the core of the OCR process where individual characters are identified:</p>
+<ul>
+<li><p><strong>Feature extraction</strong>: Analyzes the shape, size, and distinctive characteristics of each character or symbol.</p>
+<ul>
+<li><strong>Traditional methods</strong>: Statistical features like moments, Fourier descriptors, and structural features (loops, endpoints, intersections)</li>
+<li><strong>Deep learning approaches</strong>: Convolutional neural networks that automatically learn discriminative features from raw pixel data</li>
+</ul>
+</li>
+<li><p><strong>Pattern matching</strong>: Compares extracted features against trained models that recognize different fonts, sizes, and writing styles.</p>
+<ul>
+<li><strong>Template matching</strong>: Direct comparison with stored character templates using correlation techniques</li>
+<li><strong>Statistical classifiers</strong>: Hidden Markov Models (HMMs), Support Vector Machines, and k-nearest neighbors using feature vectors</li>
+<li><strong>Neural networks</strong>: Multi-layer perceptrons, CNNs, and specialized architectures like LeNet for digit recognition</li>
+<li><strong>Advanced deep learning</strong>: Residual networks (ResNet), DenseNet, and EfficientNet architectures for robust character classification</li>
+</ul>
+</li>
+<li><p><strong>Context analysis</strong>: Uses surrounding characters and words to improve recognition accuracy through dictionary lookups and language models.</p>
+<ul>
+<li><strong>N-gram models</strong>: Statistical language models that predict character sequences based on probability distributions.</li>
+<li><strong>Dictionary-based correction</strong>: Lexicon lookup with edit distance algorithms (such as <em>Levenshtein distance</em>) for spelling correction.</li>
+<li><strong>Neural language models</strong>: LSTM and transformer-based models (like BERT variants) that understand contextual relationships.</li>
+<li><strong>Attention mechanisms</strong>: Transformer models that focus on relevant parts of the input when making character predictions.</li>
+</ul>
+</li>
+<li><p><strong>Confidence scoring</strong>: Assigns probability scores to each recognized character based on how certain the system is about its identification.</p>
+<ul>
+<li><strong>Bayesian approaches</strong>: Probabilistic models that quantify uncertainty in character predictions.</li>
+<li><strong>Softmax outputs</strong>: Neural network final layer activations converted to probability distributions.</li>
+<li><strong>Ensemble methods</strong>: Combining predictions from multiple models to improve confidence estimates.</li>
+</ul>
+</li>
+</ul>
+<h3 id="stage-5-output-generation-and-post-processing">Stage 5: Output generation and post-processing</h3>
+<p>The final stage converts recognition results into usable text data:</p>
+<ul>
+<li><p><strong>Text compilation</strong>: Assembles individual character recognitions into complete words and sentences.</p>
+<ul>
+<li><strong>Rule-based assembly</strong>: Deterministic algorithms that combine character predictions using spatial proximity and confidence thresholds.</li>
+<li><strong>Sequence models</strong>: Recurrent neural networks (RNNs) and Long Short-Term Memory (LSTM) networks that model text as sequential data.</li>
+<li><strong>Attention-based models</strong>: Transformer architectures that can handle variable-length sequences and complex text layouts.</li>
+</ul>
+</li>
+<li><p><strong>Format preservation</strong>: Maintains document structure including paragraphs, line breaks, and spacing.</p>
+<ul>
+<li><strong>Geometric algorithms</strong>: Rule-based systems using bounding box coordinates and white space analysis.</li>
+<li><strong>Layout understanding models</strong>: Graph neural networks and document AI models that learn structural relationships.</li>
+<li><strong>Multi-modal transformers</strong>: Models like LayoutLM that combine text and layout information for structure preservation.</li>
+</ul>
+</li>
+<li><p><strong>Coordinate mapping</strong>: Records the exact position of each text element within the original image.</p>
+<ul>
+<li><strong>Coordinate transformation</strong>: Mathematical mapping between image pixels and document coordinates.</li>
+<li><strong>Spatial indexing</strong>: Data structures like R-trees and quad-trees for efficient spatial queries.</li>
+<li><strong>Regression models</strong>: Neural networks trained to predict precise text positioning coordinates.</li>
+</ul>
+</li>
+<li><p><strong>Quality validation</strong>: Applies spelling and grammar checks to identify potential recognition errors.</p>
+<ul>
+<li><strong>Dictionary-based validation</strong>: Lookup against comprehensive word lists and specialized domain vocabularies.</li>
+<li><strong>Statistical language models</strong>: N-gram models and probabilistic parsers for grammar and context validation.</li>
+<li><strong>Neural language models</strong>: Pre-trained models like GPT or BERT fine-tuned for OCR error detection and correction.</li>
+<li><strong>Ensemble validation</strong>: Combining multiple validation approaches to improve error detection accuracy.</li>
+</ul>
+</li>
+</ul>
+</div>
+
+		</div>
+		<div id="next-section" class="modular-content-container" hidden="">
+		</div>
+	</div>
+</div>
+</div>
+				<!-- Feedback area -->
+				
+				<div class="modular-content-container margin-block-xs">
+					<section
+						class="feedback-section section is-full-height is-uniform padding-block-none position-relative"
+					>
+						<div id="ms--unit-support-message" class="font-weight-semibold display-none"></div>
+						<div id="ms--unit-user-feedback">
+							
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print "
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+						</div>
+					</section>
+				</div>
+		  
+				<!-- Interactive footer area -->
+				
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="interactive-container"
+			class="interactive-container is-visible-interactive height-full background-color-body-dark display-none display-block-tablet"
+		></div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer is-hidden-interactive" data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

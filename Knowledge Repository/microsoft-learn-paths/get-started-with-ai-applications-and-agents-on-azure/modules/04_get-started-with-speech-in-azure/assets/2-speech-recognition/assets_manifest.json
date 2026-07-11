@@ -1,0 +1,22 @@
+[
+  {
+    "alt": "Screenshot of speech-to-text in the Foundry playground.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/speech-to-text-playground.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of Visual Studio Code with an audio file open.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/audio-file-in-vs-code.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of speech-to-text python code in Visual Studio Code.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/speech-to-text-python.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of Visual Studio Code with the terminal open and the results of speech-to-text.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/language-client-1.png",
+    "path": "assets/image_004.png"
+  }
+]

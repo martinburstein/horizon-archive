@@ -1,0 +1,22 @@
+{
+  "bug_id": "HA-0001",
+  "run_id": "run-YYYYMMDD-001",
+  "reported_at": "2026-07-11T00:00:00Z",
+  "build_id": "UNBUILT",
+  "severity": "blocking",
+  "checkpoint": "preflight",
+  "question_id": null,
+  "summary": "Horizon Archive game entry point is absent",
+  "steps_to_reproduce": [
+    "Run playtest/preflight.ps1 without a configured game entry point"
+  ],
+  "expected": "A configured game build can launch to its title screen.",
+  "actual": "Preflight blocks because no game implementation is present.",
+  "evidence_paths": [
+    "NEXT_MODEL_HANDOFF_INSTRUCTIONS.md",
+    "PROJECT_STATUS_SNAPSHOT.md"
+  ],
+  "reproducible": true,
+  "status": "open",
+  "debugger_resolution": null
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "chapter_id",
+    "title",
+    "source_role",
+    "purpose",
+    "learner_starting_state",
+    "learner_ending_state",
+    "knowledge_repository_sources",
+    "suggested_module_sequence"
+  ],
+  "properties": {
+    "knowledge_repository_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "suggested_module_sequence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "module_id",
+          "module_title",
+          "module_purpose",
+          "skills",
+          "source_ids",
+          "assessment_type"
+        ]
+      }
+    }
+  }
+}

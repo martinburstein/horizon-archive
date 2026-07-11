@@ -1,0 +1,31 @@
+[
+  {
+    "assessment_id": "AS-L0503-CODE",
+    "lesson_id": "L-05-03",
+    "assessment_type": "debug_code",
+    "supports_objectives": ["AI901-D2-O3"],
+    "supports_python_skills": ["PY-013", "PY-016", "PY-017", "PY-018", "PY-019"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Closed-note; critical misconceptions override raw score; remediate then retry with fresh mock values.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  },
+  {
+    "assessment_id": "AS-L0503-REFLECT",
+    "lesson_id": "L-05-03",
+    "assessment_type": "reflection",
+    "supports_objectives": ["AI901-D2-O3"],
+    "supports_python_skills": ["PY-017", "PY-019"],
+    "mastery_signal": "guided_use",
+    "attempt_policy": "Explain why simulation cannot establish live access and how credentials should be protected.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]
+

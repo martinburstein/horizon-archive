@@ -1,0 +1,106 @@
+{
+  "chapter_id": "chapter-04",
+  "status": "draft",
+  "title": "Azure AI Services - Text, Speech, Vision, and Information Extraction",
+  "source_role": "source_adapted",
+  "purpose": "Connect AI workloads to concrete Azure AI service categories and scenario selection.",
+  "learner_starting_state": "Has beginner Python data literacy and basic API vocabulary.",
+  "learner_ending_state": "Can explain when to use text, speech, vision, image generation, and information extraction workloads.",
+  "ai901_objectives_supported": [
+    "AI901-D1-O4",
+    "AI901-D1-O5",
+    "AI901-D1-O6",
+    "AI901-D1-O7",
+    "AI901-D1-O8",
+    "AI901-D2-O5",
+    "AI901-D2-O6"
+  ],
+  "python_skills_introduced": [],
+  "python_skills_reinforced": [
+    "PY-015",
+    "PY-016",
+    "PY-018",
+    "PY-020"
+  ],
+  "azure_foundry_concepts_introduced": [
+    "text analysis",
+    "speech",
+    "computer vision",
+    "image generation",
+    "information extraction",
+    "service/workload selection"
+  ],
+  "knowledge_repository_sources": [
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+  ],
+  "suggested_module_sequence": [
+    {
+      "module_id": "ch4-m1",
+      "module_title": "Text and speech workloads",
+      "module_purpose": "Match scenarios to language and speech services.",
+      "skills": [
+        "PY-015",
+        "PY-016"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+      ],
+      "assessment_type": "scenario"
+    },
+    {
+      "module_id": "ch4-m2",
+      "module_title": "Vision and image-generation workloads",
+      "module_purpose": "Connect multimodal and visual capabilities to exam scenarios.",
+      "skills": [
+        "PY-015",
+        "PY-016"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+      ],
+      "assessment_type": "scenario"
+    },
+    {
+      "module_id": "ch4-m3",
+      "module_title": "Information extraction workloads",
+      "module_purpose": "Bridge from general AI workloads into Content Understanding.",
+      "skills": [
+        "PY-016",
+        "PY-020"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-05-introduction-to-computer-vision",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+      ],
+      "assessment_type": "mixed"
+    }
+  ],
+  "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+  "do_not_generate_yet": [
+    "full lesson prose",
+    "full exercise banks",
+    "flashcards",
+    "quizzes",
+    "final app UI",
+    "narrative lesson scenes"
+  ]
+}

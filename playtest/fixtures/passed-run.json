@@ -1,0 +1,76 @@
+{
+  "run_id": "contract-fixture-pass",
+  "supersedes_run_id": null,
+  "started_at": "2026-07-11T00:00:00Z",
+  "finished_at": "2026-07-11T00:05:00Z",
+  "build_id": "fixture-build",
+  "build_provenance": "Synthetic QA contract fixture; not a game build.",
+  "test_environment": "Windows PowerShell",
+  "launch_command": "synthetic-fixture",
+  "clean_save_procedure": "Synthetic reset",
+  "clean_save_result": "Synthetic reset passed",
+  "clean_save": true,
+  "result": "passed",
+  "last_checkpoint": "credits",
+  "questions_required": 1,
+  "questions_answered": 1,
+  "question_results": [
+    {
+      "question_id": "FIXTURE-Q1",
+      "correct": true,
+      "attempts": 2,
+      "checkpoint": "fixture-question"
+    }
+  ],
+  "wrong_answer_recovery_tested": true,
+  "wrong_answer_test": {
+    "question_id": "FIXTURE-Q1",
+    "input": "synthetic wrong answer",
+    "feedback_observed": "Synthetic retry prompt",
+    "recovery_action": "Submit synthetic correct answer",
+    "recovery_passed": true
+  },
+  "persistence_tested": true,
+  "persistence_passed": true,
+  "premature_ending_gate_tested": true,
+  "premature_ending_gate_passed": true,
+  "title_reached": true,
+  "credits_reached": true,
+  "credits_marker_observed": "SYNTHETIC CREDITS",
+  "question_manifest_id": "qa-contract-fixture-v1",
+  "question_manifest_sha256": "d43b8a5dc69cd3c822029eb89aa0d552bd0d6c45d9cda9370d9be69dfb5ce033",
+  "transcript": [
+    {
+      "sequence": 1,
+      "event_type": "title",
+      "checkpoint": "title",
+      "question_id": null,
+      "action": "Synthetic launch",
+      "input": null,
+      "visible_output": "Synthetic title",
+      "evidence_path": null
+    },
+    {
+      "sequence": 2,
+      "event_type": "question",
+      "checkpoint": "fixture-question",
+      "question_id": "FIXTURE-Q1",
+      "action": "Synthetic answer",
+      "input": "synthetic correct answer",
+      "visible_output": "Synthetic correct feedback",
+      "evidence_path": null
+    },
+    {
+      "sequence": 3,
+      "event_type": "credits",
+      "checkpoint": "credits",
+      "question_id": null,
+      "action": "Synthetic continue",
+      "input": null,
+      "visible_output": "SYNTHETIC CREDITS",
+      "evidence_path": null
+    }
+  ],
+  "open_blocking_bug_ids": [],
+  "notes": "Exercises validator pass behavior only; not evidence of a playable game."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "alt": "Screenshot of the Foundry playground with a deployed model and a dialog box to save as an agent.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/save-agent.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of the dialog box used to configure the connection between the agent and Azure Language in Foundry Tools.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/connect-tool.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of the Azure Language in Foundry Tools connected to an agent in the Foundry portal.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/language-agent-example.png",
+    "path": "assets/image_003.png"
+  }
+]

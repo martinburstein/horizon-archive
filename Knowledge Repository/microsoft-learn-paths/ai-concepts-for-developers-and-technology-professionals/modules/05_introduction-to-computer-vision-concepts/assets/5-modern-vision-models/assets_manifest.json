@@ -1,0 +1,27 @@
+[
+  {
+    "alt": "Diagram of token vectors in a 3D space.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/introduction-computer-vision/media/language-encoder.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Diagram of a photo with patches assigned to vectors.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/introduction-computer-vision/media/vision-transformer.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Diagram of vision embeddings.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/introduction-computer-vision/media/vision-encoder.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Diagram of a multi-modal model that combines language and vision embeddings.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/introduction-computer-vision/media/multi-modal-model.png",
+    "path": "assets/image_004.png"
+  },
+  {
+    "alt": "Photograph of a person in a park with a hat and a backpack.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/introduction-computer-vision/media/image-description.png",
+    "path": "assets/image_005.png"
+  }
+]

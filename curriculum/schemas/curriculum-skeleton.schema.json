@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "status",
+    "chapters"
+  ],
+  "properties": {
+    "chapters": {
+      "type": "array",
+      "items": {
+        "$ref": "chapter-outline.schema.json"
+      }
+    }
+  }
+}

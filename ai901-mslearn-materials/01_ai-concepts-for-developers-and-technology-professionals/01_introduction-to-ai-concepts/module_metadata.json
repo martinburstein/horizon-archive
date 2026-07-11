@@ -1,0 +1,92 @@
+{
+  "uid": "learn.wwl.get-started-ai-fundamentals",
+  "title": "Introduction to AI concepts",
+  "summary": "Curious about artificial intelligence? Want to understand what the buzz is about? This module introduces you to the world of AI.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/",
+  "duration_minutes": 40,
+  "last_modified": "2026-04-24T17:12:00+00:00",
+  "number": 1,
+  "unit_count": 10,
+  "units": [
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.introduction-ai",
+      "title": "Introduction to AI",
+      "duration_minutes": 2,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.generative-ai",
+      "title": "Generative AI and agents",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/2-generative-ai/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.natural-language-processing",
+      "title": "Text and natural language",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/5-natural-language-processing/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.speech",
+      "title": "Speech",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/4-speech/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.computer-vision",
+      "title": "Computer vision",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/3-computer-vision/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.extract-insights",
+      "title": "Information extraction",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/6-extract-insights/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.responsible-ai",
+      "title": "Responsible AI",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/7-responsible-ai/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.exercise",
+      "title": "Exercise - Explore AI workloads",
+      "duration_minutes": 15,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 8,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/7b-exercise/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 9,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/8-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.get-started-ai-fundamentals.summary",
+      "title": "Summary",
+      "duration_minutes": 2,
+      "last_modified": "2026-04-24T17:12:00+00:00",
+      "number": 10,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/9-summary/"
+    }
+  ]
+}

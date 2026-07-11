@@ -1,0 +1,22 @@
+[
+  {
+    "alt": "Screenshot of the new Foundry portal playground showing key phrase extraction.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/foundry-playground-key-phrases.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of the Foundry portal AI services tab.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/foundry-ai-services.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of the chat playground's language detection capability.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/language-detection.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of the Language playground's PII detection capability.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-text-analysis-azure/media/pii-redaction.png",
+    "path": "assets/image_004.png"
+  }
+]

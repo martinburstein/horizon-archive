@@ -1,0 +1,30 @@
+{
+  "title": "Introduction to generative AI and agents",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/01_1-introduction.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/02_3-language-models.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/03_6-writing-prompts.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/04_7-agents.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/05_7a-exercise.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/06_8-knowledge-check.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/07_9-summary.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/7-agents/image_001.png",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/7-agents/image_002.png"
+  ],
+  "local_markdown_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/01_1-introduction.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/02_3-language-models.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/03_6-writing-prompts.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/04_7-agents.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/05_7a-exercise.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/06_8-knowledge-check.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/07_9-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 7,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 2."
+}

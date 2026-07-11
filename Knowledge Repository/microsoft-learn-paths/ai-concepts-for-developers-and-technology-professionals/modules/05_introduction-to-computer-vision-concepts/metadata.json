@@ -1,0 +1,33 @@
+{
+  "title": "Introduction to computer vision concepts",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/01_1-introduction.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/02_2-overview.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/06_5a-generate-images.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/07_5b-exercise.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/08_6-knowledge-check.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/09_7-summary.html",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_001.png",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_002.png",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_003.png",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_004.png"
+  ],
+  "local_markdown_files": [
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/01_1-introduction.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/02_2-overview.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/03_3-understand-image-processing.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/04_4-computer-vision-models.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/05_5-modern-vision-models.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/06_5a-generate-images.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/07_5b-exercise.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/08_6-knowledge-check.md",
+    "microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/09_7-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 9,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 5."
+}

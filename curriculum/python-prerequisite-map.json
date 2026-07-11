@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-05-29T20:26:59Z",
+  "status": "draft",
+  "learner_starting_state": "zero Python experience",
+  "target_readiness": "beginner-ready Azure AI / Microsoft Foundry programming",
+  "prerequisites": [
+    {
+      "skill_id": "PY-001",
+      "skill_name": "Run a Python file",
+      "category": "environment",
+      "why_it_matters_for_azure": "Python is the minimum entry point for any Foundry SDK sample or lightweight client app.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-002",
+      "skill_name": "Use the terminal for simple commands",
+      "category": "environment",
+      "why_it_matters_for_azure": "Learners need a terminal to install packages, run scripts, and inspect output before Azure tooling feels approachable.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-003",
+      "skill_name": "Use print() for visible output",
+      "category": "syntax",
+      "why_it_matters_for_azure": "Printing values is the fastest way to verify prompt payloads, responses, and intermediate JSON fields.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-004",
+      "skill_name": "Work with strings",
+      "category": "data",
+      "why_it_matters_for_azure": "Prompts, endpoints, deployment names, file paths, and JSON keys are all string-heavy in Azure AI work.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-005",
+      "skill_name": "Use numbers and booleans",
+      "category": "data",
+      "why_it_matters_for_azure": "Configuration values, flags, and control flow all depend on simple numeric and boolean reasoning.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-03"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D1-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-006",
+      "skill_name": "Create and update variables",
+      "category": "data",
+      "why_it_matters_for_azure": "SDK clients, prompts, keys, and response objects all need named variables to stay understandable.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-007",
+      "skill_name": "Read tracebacks and fix simple errors",
+      "category": "debugging",
+      "why_it_matters_for_azure": "Beginners must survive syntax and runtime errors before they can work through SDK setup or API responses.",
+      "introduced_in_chapter": "chapter-01",
+      "reinforced_in_chapters": [
+        "chapter-03",
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O5"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-008",
+      "skill_name": "Use lists",
+      "category": "data",
+      "why_it_matters_for_azure": "Batch prompts, message histories, and grouped results are list-shaped in AI client applications.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-009",
+      "skill_name": "Use dictionaries",
+      "category": "data",
+      "why_it_matters_for_azure": "JSON objects map directly to Python dictionaries, which is essential for request and response payloads.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-010",
+      "skill_name": "Write conditionals",
+      "category": "control_flow",
+      "why_it_matters_for_azure": "Branching is needed to handle success, failure, missing keys, and simple workflow decisions.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-011",
+      "skill_name": "Write loops",
+      "category": "control_flow",
+      "why_it_matters_for_azure": "Loops are useful for traversing extracted items, repeated prompts, and collections of analysis results.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O5",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-012",
+      "skill_name": "Write small functions",
+      "category": "structure",
+      "why_it_matters_for_azure": "Functions create reusable units for prompt calls, parsing steps, and simple client app structure.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-013",
+      "skill_name": "Import packages and modules",
+      "category": "structure",
+      "why_it_matters_for_azure": "Foundry SDK usage starts with imports, and learners need the mental model before SDK examples feel readable.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O5"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-014",
+      "skill_name": "Install packages and understand environments",
+      "category": "azure_readiness",
+      "why_it_matters_for_azure": "SDK setup depends on package installation and a beginner-safe model of project environments.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-015",
+      "skill_name": "Read and write files",
+      "category": "files",
+      "why_it_matters_for_azure": "Image, audio, document, and output handling all depend on local file basics before Content Understanding work.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-04",
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O6",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-016",
+      "skill_name": "Work with JSON data",
+      "category": "files",
+      "why_it_matters_for_azure": "Azure and Foundry requests and responses are structured as JSON, so learners need to inspect and shape nested data.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O3",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-017",
+      "skill_name": "Understand environment variables and secrets",
+      "category": "azure_readiness",
+      "why_it_matters_for_azure": "API keys and endpoints should be introduced safely before any client app or endpoint workflow.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05",
+        "chapter-06"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-018",
+      "skill_name": "Understand HTTP request/response basics",
+      "category": "apis",
+      "why_it_matters_for_azure": "Endpoints and SDK abstractions make more sense when learners know what a request, response, header, and payload are.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "recognize",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-019",
+      "skill_name": "Understand APIs, SDKs, and endpoints",
+      "category": "apis",
+      "why_it_matters_for_azure": "This bridges generic programming into the Foundry implementation domain without requiring backend depth.",
+      "introduced_in_chapter": "chapter-04",
+      "reinforced_in_chapters": [
+        "chapter-05"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O2",
+        "AI901-D2-O3"
+      ],
+      "mastery_level_required": "use_with_guidance",
+      "notes": ""
+    },
+    {
+      "skill_id": "PY-020",
+      "skill_name": "Handle structured inputs and outputs",
+      "category": "azure_readiness",
+      "why_it_matters_for_azure": "Prompts, extraction results, and multimodal app workflows all require learners to move comfortably through structured data.",
+      "introduced_in_chapter": "chapter-03",
+      "reinforced_in_chapters": [
+        "chapter-04",
+        "chapter-05",
+        "chapter-06"
+      ],
+      "supports_ai901_objectives": [
+        "AI901-D2-O1",
+        "AI901-D2-O7"
+      ],
+      "mastery_level_required": "use_independently",
+      "notes": ""
+    }
+  ]
+}

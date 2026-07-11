@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.fundamentals-generative-ai.summary",
+  "title": "Summary",
+  "duration_minutes": 1,
+  "last_modified": "2025-10-06T17:09:00+00:00",
+  "number": 7,
+  "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/9-summary/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/9-summary/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 0,
+  "asset_failures": [],
+  "markdown_path": "07_9-summary.md",
+  "raw_html_path": "07_9-summary.html"
+}

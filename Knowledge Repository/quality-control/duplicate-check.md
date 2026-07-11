@@ -1,0 +1,173 @@
+# Duplicate Check
+
+## Duplicate source URLs
+
+- None detected.
+
+## Exact duplicate file hashes
+
+- Hash c033b2c6ed71f92270017c941e1fed552b10003b3dc70acc10bab756bfe246b3
+  - ai-900/homepage/raw/AI-900 Homepage.pdf
+  - shared-assets/source-pdfs/AI-900 Homepage.pdf
+- Hash 0d0c88b3c46135be4a367b457609f3215c6b6ec6750e42bc65e577556dc88dac
+  - ai-900/homepage/raw/source.html
+  - shared-assets/source-html/ai900_homepage.html
+- Hash 239d7e6f9cae2792bbc6c16d8c8150f7aaff72708fd91f58a478341f186fae18
+  - ai-900/study-guide/raw/AI-900 Study Guide.pdf
+  - shared-assets/source-pdfs/AI-900 Study Guide.pdf
+- Hash f9c7d33c5f13f9f08b06af65b41610d7cb37b8f10849b8e9a733722014d26329
+  - ai-900/study-guide/raw/source.html
+  - shared-assets/source-html/ai900_study_guide.html
+- Hash 9e0e71837c9863bb5503dda28a47e06c784e4d70ad1a1aa9b3fe1c23e206ba3a
+  - ai-901/homepage/raw/AI-901 Homepage.pdf
+  - shared-assets/source-pdfs/AI-901 Homepage.pdf
+- Hash e057ed64a3e4e80a169d3da1804745ee63ec60634dc6398f1d2f2f1112d9de1e
+  - ai-901/homepage/raw/source.html
+  - shared-assets/source-html/ai901_homepage.html
+- Hash c1734cac61f03b886523d9d932152c06d4b776b4781616a4e4886c89a02894f0
+  - ai-901/study-guide/raw/AI-901 Study Guide.pdf
+  - shared-assets/source-pdfs/AI-901 Study Guide.pdf
+- Hash 8421288bb0acd41c0e04c7aa6157ddd22a3a0cacd5b257313e2003151b3c53d2
+  - ai-901/study-guide/raw/source.html
+  - shared-assets/source-html/ai901_study_guide.html
+- Hash 0d66ef43256ea95553c89b825b6047afeaf30448d1f83c0b7e0a3ca692f28f67
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/image_001.png
+- Hash 70ba869fcdc6309145acaf988814cea0b0fab1fd6365845f8c00516410c33182
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7b-exercise/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/6-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/assets/5-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/5-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/assets/5-exercise/image_001.png
+- Hash 8e2f2b3ab5a4fa74e35b467ba49ad0097fedebce3029ffaf82de85a1c0f057b9
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/path-home/raw/source.html
+  - shared-assets/source-html/ai-concepts-for-developers-and-technology-professionals-path-home.html
+- Hash 15d173a1722956460d1b1b29e60fc09203065128201e39ffb717131d5a12d75b
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/path-home/raw/source.html
+  - shared-assets/source-html/get-started-with-ai-applications-and-agents-on-azure-path-home.html
+
+## Duplicate filenames
+
+Standardized filenames like source.html, source.md, metadata.json, and source.pdf are intentionally repeated and excluded from concern.
+
+- AI-900 Homepage.pdf
+  - ai-900/homepage/raw/AI-900 Homepage.pdf
+  - shared-assets/source-pdfs/AI-900 Homepage.pdf
+- AI-900 Study Guide.pdf
+  - ai-900/study-guide/raw/AI-900 Study Guide.pdf
+  - shared-assets/source-pdfs/AI-900 Study Guide.pdf
+- AI-901 Homepage.pdf
+  - ai-901/homepage/raw/AI-901 Homepage.pdf
+  - shared-assets/source-pdfs/AI-901 Homepage.pdf
+- AI-901 Study Guide.pdf
+  - ai-901/study-guide/raw/AI-901 Study Guide.pdf
+  - shared-assets/source-pdfs/AI-901 Study Guide.pdf
+- 01_1-introduction.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/01_1-introduction.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/01_1-introduction.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/01_1-introduction.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/01_1-introduction.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/01_1-introduction.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/02_get-started-with-generative-ai-and-agents-in-azure/01_1-introduction.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/01_1-introduction.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/01_1-introduction.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/01_1-introduction.md
+- 06_6-knowledge-check.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/06_6-knowledge-check.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/06_6-knowledge-check.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/06_6-knowledge-check.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/06_6-knowledge-check.md
+- 07_7-summary.md
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/07_7-summary.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/07_7-summary.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/07_7-summary.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/07_7-summary.md
+- 01_1-introduction.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/raw/01_1-introduction.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/raw/01_1-introduction.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/01_1-introduction.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/raw/01_1-introduction.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/raw/01_1-introduction.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/01_1-introduction.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/01_1-introduction.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/01_1-introduction.html
+- image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/1-introduction/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/2-generative-ai/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/3-computer-vision/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/4-speech/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/6-extract-insights/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7b-exercise/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/9-summary/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/7-agents/image_001.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/2-what-is-azure/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/3-develop-ai-apps/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/4-microsoft-foundry/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/5-endpoints/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/6-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/assets/4-language-mcp/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/assets/5-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/2-speech-recognition/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/3-speech-synthesis/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/4-voice-live/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/5-exercise/image_001.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/assets/5-exercise/image_001.png
+- image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/2-generative-ai/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/3-computer-vision/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/4-speech/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/6-extract-insights/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7b-exercise/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/02_introduction-to-generative-ai-and-agents/assets/7-agents/image_002.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/2-what-is-azure/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/3-develop-ai-apps/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/4-microsoft-foundry/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/assets/4-language-mcp/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/2-speech-recognition/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/3-speech-synthesis/image_002.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/4-voice-live/image_002.png
+- image_003.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/2-generative-ai/image_003.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/4-speech/image_003.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/image_003.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/2-what-is-azure/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/3-develop-ai-apps/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/4-microsoft-foundry/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/assets/4-language-mcp/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/2-speech-recognition/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/3-speech-synthesis/image_003.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/4-voice-live/image_003.png
+- image_004.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/image_004.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/05_introduction-to-computer-vision-concepts/assets/2-overview/image_004.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/3-develop-ai-apps/image_004.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/4-microsoft-foundry/image_004.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/2-speech-recognition/image_004.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/3-speech-synthesis/image_004.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/assets/4-voice-live/image_004.png
+- image_005.png
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/01_introduction-to-ai-concepts/assets/7-responsible-ai/image_005.png
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/01_get-started-with-ai-in-azure/assets/4-microsoft-foundry/image_005.png
+- 06_6-knowledge-check.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/06_6-knowledge-check.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/06_6-knowledge-check.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/06_6-knowledge-check.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/06_6-knowledge-check.html
+- 07_7-summary.html
+  - microsoft-learn-paths/ai-concepts-for-developers-and-technology-professionals/modules/04_introduction-to-ai-speech-concepts/raw/07_7-summary.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/07_7-summary.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/07_7-summary.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/07_7-summary.html
+- 05_5-exercise.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/05_5-exercise.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/05_5-exercise.md
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/05_5-exercise.md
+- 05_5-exercise.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/03_get-started-with-text-analysis-in-azure/raw/05_5-exercise.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/04_get-started-with-speech-in-azure/raw/05_5-exercise.html
+  - microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/05_5-exercise.html

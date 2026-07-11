@@ -1,0 +1,491 @@
+{
+  "generated_at": "2026-05-29T20:45:00Z",
+  "status": "draft",
+  "north_star_exam": "AI-901",
+  "lesson_granularity_decision": {
+    "launch_unit": "lesson",
+    "target_lessons_per_module": "2-4",
+    "target_activities_per_lesson": "2-5",
+    "rationale": "Lesson is the smallest unit that can carry provenance, tutoring context, progress state, and objective mastery checks without fragmenting the experience into too many micro-screens."
+  },
+  "chapters": [
+    {
+      "chapter_id": "chapter-01",
+      "title": "Python Bridge - First Code and Programming Confidence",
+      "lessons": [
+        {
+          "lesson_id": "L-01-01",
+          "lesson_title": "Run your first Python file",
+          "lesson_type": "bridge_lesson",
+          "module_id": "ch1-m1",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-001", "PY-002", "PY-003"],
+          "prerequisite_lesson_ids": [],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf"
+          ],
+          "activity_ids": ["A-L0101-1", "A-L0101-2", "A-L0101-3"],
+          "assessment_ids": ["AS-L0101-QC", "AS-L0101-CK"],
+          "mastery_gate": "can run a file and explain what program output means"
+        },
+        {
+          "lesson_id": "L-01-02",
+          "lesson_title": "Strings, variables, and visible output",
+          "lesson_type": "bridge_lesson",
+          "module_id": "ch1-m2",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-004", "PY-005", "PY-006"],
+          "prerequisite_lesson_ids": ["L-01-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf"
+          ],
+          "activity_ids": ["A-L0102-1", "A-L0102-2", "A-L0102-3"],
+          "assessment_ids": ["AS-L0102-QC"],
+          "mastery_gate": "can modify variables and predict printed results"
+        },
+        {
+          "lesson_id": "L-01-03",
+          "lesson_title": "Errors, indentation, and debugging mindset",
+          "lesson_type": "confidence_rebuilding_lesson",
+          "module_id": "ch1-m3",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-007"],
+          "prerequisite_lesson_ids": ["L-01-02"],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf"
+          ],
+          "activity_ids": ["A-L0103-1", "A-L0103-2"],
+          "assessment_ids": ["AS-L0103-DBG"],
+          "mastery_gate": "can read a simple traceback and attempt a fix"
+        }
+      ]
+    },
+    {
+      "chapter_id": "chapter-02",
+      "title": "AI Foundations and Responsible AI",
+      "lessons": [
+        {
+          "lesson_id": "L-02-01",
+          "lesson_title": "AI workloads and Azure AI vocabulary",
+          "lesson_type": "concept_lesson",
+          "module_id": "ch2-m1",
+          "supports_objectives": ["AI901-D1-O4"],
+          "supports_python_skills": [],
+          "prerequisite_lesson_ids": ["L-01-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-03-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-04-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-05-",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-"
+          ],
+          "activity_ids": ["A-L0201-1", "A-L0201-2"],
+          "assessment_ids": ["AS-L0201-QC", "AS-L0201-MATCH"],
+          "mastery_gate": "can match scenarios to major AI workload families"
+        },
+        {
+          "lesson_id": "L-02-02",
+          "lesson_title": "Responsible AI in practice",
+          "lesson_type": "scenario_lesson",
+          "module_id": "ch2-m2",
+          "supports_objectives": ["AI901-D1-O1"],
+          "supports_python_skills": [],
+          "prerequisite_lesson_ids": ["L-02-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-"
+          ],
+          "activity_ids": ["A-L0202-1", "A-L0202-2"],
+          "assessment_ids": ["AS-L0202-SCEN"],
+          "mastery_gate": "can explain responsible AI principles in a concrete product scenario"
+        },
+        {
+          "lesson_id": "L-02-03",
+          "lesson_title": "Generative AI, models, and deployment choices",
+          "lesson_type": "source_grounded_explainer_lesson",
+          "module_id": "ch2-m3",
+          "supports_objectives": ["AI901-D1-O2", "AI901-D1-O3"],
+          "supports_python_skills": ["PY-004"],
+          "prerequisite_lesson_ids": ["L-02-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-"
+          ],
+          "activity_ids": ["A-L0203-1", "A-L0203-2", "A-L0203-3"],
+          "assessment_ids": ["AS-L0203-COMPARE"],
+          "mastery_gate": "can describe model choice, deployment, and configuration tradeoffs at a beginner-safe level"
+        }
+      ]
+    },
+    {
+      "chapter_id": "chapter-03",
+      "title": "Python Data, Logic, and Structured Inputs",
+      "lessons": [
+        {
+          "lesson_id": "L-03-01",
+          "lesson_title": "Lists, dictionaries, and JSON-shaped thinking",
+          "lesson_type": "bridge_lesson",
+          "module_id": "ch3-m1",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-008", "PY-009", "PY-016", "PY-020"],
+          "prerequisite_lesson_ids": ["L-01-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf"
+          ],
+          "activity_ids": ["A-L0301-1", "A-L0301-2", "A-L0301-3"],
+          "assessment_ids": ["AS-L0301-QC", "AS-L0301-STRUCT"],
+          "mastery_gate": "can read and edit simple nested JSON-like data"
+        },
+        {
+          "lesson_id": "L-03-02",
+          "lesson_title": "Conditionals, loops, and small functions",
+          "lesson_type": "coding_micro_lab",
+          "module_id": "ch3-m2",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-010", "PY-011", "PY-012"],
+          "prerequisite_lesson_ids": ["L-03-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf"
+          ],
+          "activity_ids": ["A-L0302-1", "A-L0302-2"],
+          "assessment_ids": ["AS-L0302-CODE"],
+          "mastery_gate": "can write a tiny reusable function and loop over results"
+        },
+        {
+          "lesson_id": "L-03-03",
+          "lesson_title": "Imports, files, packages, secrets, and APIs",
+          "lesson_type": "walkthrough_lesson",
+          "module_id": "ch3-m3",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-013", "PY-014", "PY-015", "PY-017", "PY-018"],
+          "prerequisite_lesson_ids": ["L-03-02"],
+          "launch_tier": "launch_critical",
+          "source_mode": "invented_bridge_with_supporting_reference",
+          "source_ids": [
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
+            "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf"
+          ],
+          "activity_ids": ["A-L0303-1", "A-L0303-2", "A-L0303-3"],
+          "assessment_ids": ["AS-L0303-READY"],
+          "mastery_gate": "can explain how a simple script, package import, file path, secret, and HTTP request fit together"
+        }
+      ]
+    },
+    {
+      "chapter_id": "chapter-04",
+      "title": "Azure AI Services - Text, Speech, Vision, and Information Extraction",
+      "lessons": [
+        {
+          "lesson_id": "L-04-01",
+          "lesson_title": "Text analysis workloads",
+          "lesson_type": "concept_lesson",
+          "module_id": "ch4-m1",
+          "supports_objectives": ["AI901-D1-O5", "AI901-D2-O5"],
+          "supports_python_skills": ["PY-016"],
+          "prerequisite_lesson_ids": ["L-03-03", "L-02-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-"
+          ],
+          "activity_ids": ["A-L0401-1", "A-L0401-2"],
+          "assessment_ids": ["AS-L0401-QC", "AS-L0401-SCEN"],
+          "mastery_gate": "can select text analysis capabilities for common scenarios"
+        },
+        {
+          "lesson_id": "L-04-02",
+          "lesson_title": "Speech workloads",
+          "lesson_type": "concept_lesson",
+          "module_id": "ch4-m1",
+          "supports_objectives": ["AI901-D1-O6", "AI901-D2-O5"],
+          "supports_python_skills": ["PY-015"],
+          "prerequisite_lesson_ids": ["L-03-03", "L-02-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+          ],
+          "activity_ids": ["A-L0402-1", "A-L0402-2"],
+          "assessment_ids": ["AS-L0402-QC"],
+          "mastery_gate": "can distinguish speech recognition, synthesis, and speech-capable agent scenarios"
+        },
+        {
+          "lesson_id": "L-04-03",
+          "lesson_title": "Vision and image generation workloads",
+          "lesson_type": "concept_lesson",
+          "module_id": "ch4-m2",
+          "supports_objectives": ["AI901-D1-O7", "AI901-D2-O6"],
+          "supports_python_skills": ["PY-015"],
+          "prerequisite_lesson_ids": ["L-03-03", "L-02-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i"
+          ],
+          "activity_ids": ["A-L0403-1", "A-L0403-2"],
+          "assessment_ids": ["AS-L0403-COMPARE"],
+          "mastery_gate": "can match image analysis, image generation, and video generation to scenario needs"
+        },
+        {
+          "lesson_id": "L-04-04",
+          "lesson_title": "Information extraction workloads",
+          "lesson_type": "source_grounded_explainer_lesson",
+          "module_id": "ch4-m3",
+          "supports_objectives": ["AI901-D1-O8"],
+          "supports_python_skills": ["PY-016", "PY-020"],
+          "prerequisite_lesson_ids": ["L-04-01", "L-04-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+          ],
+          "activity_ids": ["A-L0404-1", "A-L0404-2"],
+          "assessment_ids": ["AS-L0404-SCEN"],
+          "mastery_gate": "can describe extraction from documents, images, and audio/video without overclaiming unsupported local source details"
+        }
+      ]
+    },
+    {
+      "chapter_id": "chapter-05",
+      "title": "Microsoft Foundry - Endpoints, SDKs, Agents, and Content Understanding",
+      "lessons": [
+        {
+          "lesson_id": "L-05-01",
+          "lesson_title": "Foundry portal orientation",
+          "lesson_type": "portal_navigation_lab",
+          "module_id": "ch5-m1",
+          "supports_objectives": ["AI901-D2-O2"],
+          "supports_python_skills": ["PY-017", "PY-019"],
+          "prerequisite_lesson_ids": ["L-02-03", "L-03-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+          ],
+          "activity_ids": ["A-L0501-1", "A-L0501-2", "A-L0501-3"],
+          "assessment_ids": ["AS-L0501-ORDER"],
+          "mastery_gate": "can describe the learner-safe flow from portal workspace to model deployment and interaction"
+        },
+        {
+          "lesson_id": "L-05-02",
+          "lesson_title": "Prompts: system, user, and grounding",
+          "lesson_type": "walkthrough_lesson",
+          "module_id": "ch5-m3",
+          "supports_objectives": ["AI901-D2-O1"],
+          "supports_python_skills": ["PY-004", "PY-012"],
+          "prerequisite_lesson_ids": ["L-02-03", "L-03-02"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a"
+          ],
+          "activity_ids": ["A-L0502-1", "A-L0502-2"],
+          "assessment_ids": ["AS-L0502-PROMPT"],
+          "mastery_gate": "can distinguish system instructions from user prompts and improve a weak prompt"
+        },
+        {
+          "lesson_id": "L-05-03",
+          "lesson_title": "Endpoints, SDKs, and lightweight client flow",
+          "lesson_type": "coding_micro_lab",
+          "module_id": "ch5-m2",
+          "supports_objectives": ["AI901-D2-O3"],
+          "supports_python_skills": ["PY-013", "PY-014", "PY-016", "PY-017", "PY-018", "PY-019"],
+          "prerequisite_lesson_ids": ["L-03-03", "L-05-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded",
+          "source_ids": [
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-FOUNDRY-HUB"
+          ],
+          "activity_ids": ["A-L0503-1", "A-L0503-2", "A-L0503-3"],
+          "assessment_ids": ["AS-L0503-CODE", "AS-L0503-REFLECT"],
+          "mastery_gate": "can explain the parts of a minimal client app and trace a request-response flow"
+        },
+        {
+          "lesson_id": "L-05-04",
+          "lesson_title": "Single-agent solutions",
+          "lesson_type": "portal_navigation_lab",
+          "module_id": "ch5-m3",
+          "supports_objectives": ["AI901-D2-O4"],
+          "supports_python_skills": ["PY-009", "PY-012", "PY-016"],
+          "prerequisite_lesson_ids": ["L-05-02", "L-05-03"],
+          "launch_tier": "launch_valuable",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and"
+          ],
+          "activity_ids": ["A-L0504-1", "A-L0504-2"],
+          "assessment_ids": ["AS-L0504-ORDER"],
+          "mastery_gate": "can explain what an agent adds beyond a plain prompt flow"
+        },
+        {
+          "lesson_id": "L-05-05",
+          "lesson_title": "Build text and speech solution patterns in Foundry",
+          "lesson_type": "compare_and_choose_scenario_lesson",
+          "module_id": "ch5-m2",
+          "supports_objectives": ["AI901-D2-O5"],
+          "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
+          "prerequisite_lesson_ids": ["L-04-01", "L-04-02", "L-05-03"],
+          "launch_tier": "launch_valuable",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+          ],
+          "activity_ids": ["A-L0505-1", "A-L0505-2"],
+          "assessment_ids": ["AS-L0505-SCEN"],
+          "mastery_gate": "can choose an appropriate Foundry pattern for language or speech scenarios"
+        },
+        {
+          "lesson_id": "L-05-06",
+          "lesson_title": "Build vision and image-generation solution patterns in Foundry",
+          "lesson_type": "compare_and_choose_scenario_lesson",
+          "module_id": "ch5-m3",
+          "supports_objectives": ["AI901-D2-O6"],
+          "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
+          "prerequisite_lesson_ids": ["L-04-03", "L-05-03"],
+          "launch_tier": "launch_valuable",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i"
+          ],
+          "activity_ids": ["A-L0506-1", "A-L0506-2"],
+          "assessment_ids": ["AS-L0506-SCEN"],
+          "mastery_gate": "can compare vision-enabled and generative visual solution patterns"
+        },
+        {
+          "lesson_id": "L-05-07",
+          "lesson_title": "Content Understanding and information extraction app flow",
+          "lesson_type": "source_grounded_explainer_lesson",
+          "module_id": "ch5-m3",
+          "supports_objectives": ["AI901-D2-O7"],
+          "supports_python_skills": ["PY-015", "PY-016", "PY-020"],
+          "prerequisite_lesson_ids": ["L-04-04", "L-05-03"],
+          "launch_tier": "launch_critical",
+          "source_mode": "source_grounded_with_gap_warning",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+          ],
+          "activity_ids": ["A-L0507-1", "A-L0507-2", "A-L0507-3"],
+          "assessment_ids": ["AS-L0507-SCEN", "AS-L0507-STRUCT"],
+          "mastery_gate": "can explain the document/image/audio-video extraction workflow without pretending missing official Foundry docs are already captured"
+        }
+      ]
+    },
+    {
+      "chapter_id": "chapter-06",
+      "title": "AI-901 Mastery, Capstone, and Azure Readiness",
+      "lessons": [
+        {
+          "lesson_id": "L-06-01",
+          "lesson_title": "Objective-by-objective mastery review",
+          "lesson_type": "exam_objective_review_lesson",
+          "module_id": "ch6-m1",
+          "supports_objectives": [
+            "AI901-D1-O1",
+            "AI901-D1-O2",
+            "AI901-D1-O3",
+            "AI901-D1-O4",
+            "AI901-D1-O5",
+            "AI901-D1-O6",
+            "AI901-D1-O7",
+            "AI901-D1-O8",
+            "AI901-D2-O1",
+            "AI901-D2-O2",
+            "AI901-D2-O3",
+            "AI901-D2-O4",
+            "AI901-D2-O5",
+            "AI901-D2-O6",
+            "AI901-D2-O7"
+          ],
+          "supports_python_skills": ["PY-019", "PY-020"],
+          "prerequisite_lesson_ids": ["L-05-07"],
+          "launch_tier": "launch_critical",
+          "source_mode": "blended_source_review",
+          "source_ids": [
+            "ai-901-homepage-markdown-ai-901-homepage-md",
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-900-study-guide-markdown-ai-900-study-guide-md",
+            "ai900-practice-assessment-placeholder"
+          ],
+          "activity_ids": ["A-L0601-1", "A-L0601-2"],
+          "assessment_ids": ["AS-L0601-OBJ"],
+          "mastery_gate": "has a visible status for every AI-901 objective"
+        },
+        {
+          "lesson_id": "L-06-02",
+          "lesson_title": "Weak-area remediation planner",
+          "lesson_type": "recovery_lesson_after_repeated_failure",
+          "module_id": "ch6-m2",
+          "supports_objectives": [],
+          "supports_python_skills": ["PY-007", "PY-016", "PY-017"],
+          "prerequisite_lesson_ids": ["L-06-01"],
+          "launch_tier": "launch_critical",
+          "source_mode": "generated_from_learner_state_with_source_links",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai900-practice-assessment-placeholder"
+          ],
+          "activity_ids": ["A-L0602-1", "A-L0602-2"],
+          "assessment_ids": ["AS-L0602-PLAN"],
+          "mastery_gate": "has a source-backed remediation route for each weak objective"
+        },
+        {
+          "lesson_id": "L-06-03",
+          "lesson_title": "Capstone and exam readiness checkpoint",
+          "lesson_type": "capstone_prep_lesson",
+          "module_id": "ch6-m3",
+          "supports_objectives": ["AI901-D2-O3", "AI901-D2-O5", "AI901-D2-O7"],
+          "supports_python_skills": ["PY-017", "PY-019", "PY-020"],
+          "prerequisite_lesson_ids": ["L-06-02"],
+          "launch_tier": "launch_valuable",
+          "source_mode": "blended_source_review",
+          "source_ids": [
+            "ai-901-study-guide-markdown-ai-901-study-guide-md",
+            "ai-901-homepage-markdown-ai-901-homepage-md"
+          ],
+          "activity_ids": ["A-L0603-1", "A-L0603-2"],
+          "assessment_ids": ["AS-L0603-READY"],
+          "mastery_gate": "receives a readiness score and next-step recommendation"
+        }
+      ]
+    }
+  ]
+}

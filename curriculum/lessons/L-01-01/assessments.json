@@ -1,0 +1,31 @@
+[
+  {
+    "assessment_id": "AS-L0101-QC",
+    "lesson_id": "L-01-01",
+    "assessment_type": "quick_check",
+    "supports_objectives": [],
+    "supports_python_skills": ["PY-001", "PY-002", "PY-003"],
+    "mastery_signal": "recognition",
+    "attempt_policy": "Closed-note first attempt; targeted remediation; new-value retry.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  },
+  {
+    "assessment_id": "AS-L0101-CK",
+    "lesson_id": "L-01-01",
+    "assessment_type": "readiness_gate",
+    "supports_objectives": [],
+    "supports_python_skills": ["PY-001", "PY-002", "PY-003"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Must run an independently modified file; retry only after error classification.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]
+

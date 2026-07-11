@@ -1,0 +1,20 @@
+{
+  "uid": "learn.wwl.fundamentals-generative-ai.language-models",
+  "title": "Large language models (LLMs)",
+  "duration_minutes": 5,
+  "last_modified": "2025-10-06T17:09:00+00:00",
+  "number": 2,
+  "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/3-language-models/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/3-language-models/",
+  "capture": {
+    "playwright_used": false,
+    "text_and_images_selected": true,
+    "playwright_error": null,
+    "fallback_http_fetch": false,
+    "content_source": "http_prefetch"
+  },
+  "asset_count": 2,
+  "asset_failures": [],
+  "markdown_path": "02_3-language-models.md",
+  "raw_html_path": "02_3-language-models.html"
+}

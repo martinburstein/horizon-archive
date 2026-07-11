@@ -1,0 +1,17 @@
+[
+  {
+    "alt": "Screenshot of the new Foundry portal with audio analyzed with Azure Content Understanding.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-information-extraction/media/audio-extraction-playground.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of the new Foundry portal where audio is analyzed and JSON is returned.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-information-extraction/media/audio-json-result.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Photograph of a person in a conference room on a call with three remote attendees.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-information-extraction/media/conference-call.jpg",
+    "path": "assets/image_003.jpg"
+  }
+]

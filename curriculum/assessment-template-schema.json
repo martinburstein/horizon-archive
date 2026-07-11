@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum Assessment Template",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "lesson_id",
+    "assessment_type",
+    "supports_objectives",
+    "mastery_signal",
+    "result_states",
+    "status"
+  ],
+  "properties": {
+    "assessment_id": {"type": "string"},
+    "lesson_id": {"type": "string"},
+    "assessment_type": {
+      "type": "string",
+      "enum": [
+        "quick_check",
+        "concept_compare",
+        "scenario_choice",
+        "workflow_ordering",
+        "debug_code",
+        "structured_output_check",
+        "reflection",
+        "readiness_gate"
+      ]
+    },
+    "supports_objectives": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "supports_python_skills": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "mastery_signal": {
+      "type": "string",
+      "enum": ["awareness", "recognition", "guided_use", "independent_use", "review_only"]
+    },
+    "attempt_policy": {"type": "string"},
+    "result_states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"]
+      }
+    },
+    "records_confidence": {"type": "boolean"},
+    "records_misconception_tags": {"type": "boolean"},
+    "records_review_flag": {"type": "boolean"},
+    "status": {
+      "type": "string",
+      "enum": ["planned", "draft", "review", "approved", "blocked"]
+    },
+    "notes": {"type": "string"}
+  }
+}

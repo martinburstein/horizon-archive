@@ -1,0 +1,22 @@
+[
+  {
+    "alt": "Screenshot of text-to-speech in the Foundry playground.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/text-to-speech-playground.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of text file in Visual Studio code.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/text-file-in-vs-code.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of text-to-speech Python code.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/text-to-speech-python.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of results of text to speech python script.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/text-to-speech-result.png",
+    "path": "assets/image_004.png"
+  }
+]

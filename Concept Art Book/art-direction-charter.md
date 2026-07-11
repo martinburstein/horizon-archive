@@ -1,0 +1,60 @@
+# Art-Direction Charter
+
+## North star
+
+Every plate should feel like a lost, hand-painted 1990s point-and-click adventure background: theatrical enough to remember, legible enough to navigate, and restrained enough that the environment carries the mystery.
+
+## Source-of-truth references
+
+The four existing plates are the visual authority. Each was visually inspected at its native `1672 x 941` landscape size.
+
+| Reference | What it establishes |
+|---|---|
+| [Alien Meadow](../Concept%20Art/Alien%20Meadow.png) | Violet/peach sky, faceted crystalline ecology, monumental centered landmark, readable foreground approach. |
+| [Alien Ruins](../Concept%20Art/Alien%20Ruins.png) | Indirect cosmic scale, water reflections, dark masonry silhouettes, ceremonial symmetry. |
+| [Fallen Automoton](../Concept%20Art/Fallen%20Automoton.png) | Intimate corridor scale, oblique path, readable character-object silhouette, violet practical light. |
+| [Underground City](../Concept%20Art/Underground%20City.png) | Vast layered depth, warm/cool contrast, small human scale cues, infrastructure over voids. |
+
+The historical references contain a bottom dialogue panel. New **environment plates** should contain only the 16:9 world view; UI is composed separately by the game. This keeps clean masters reusable while preserving the landscape-first game presentation.
+
+## Visual grammar
+
+- **Composition:** one memorable landmark or silhouette, one dominant route, and two or three secondary interaction reads.
+- **Camera:** side-on three-quarter adventure camera with slightly exaggerated perspective; never tactical isometric.
+- **Planes:** foreground framing, uncluttered walkable middle ground, atmospheric background.
+- **Hotspots:** readable through silhouette, value contrast, and light—not outlines or labels.
+- **Texture:** hand-painted facets, restrained dithering, angular low-poly massing, visible weather and age.
+- **Palette:** indigo, slate, charcoal, muted violet; use peach, amber, crystal white, or volcanic orange as scarce focal accents.
+- **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
+- **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, figure, or known-size craft.
+- **Mood:** serious, beautiful, quiet, melancholic, curious. Never grimdark, combat-led, corporate, or glossy.
+
+## Point-and-click readability gate
+
+A plate passes only when a reviewer can identify, without annotation:
+
+1. where the player enters;
+2. where the player can leave;
+3. the safe walkable plane;
+4. the primary interaction silhouette;
+5. the intended visual focal point.
+
+At thumbnail size, the route and primary hotspot must still read. No crucial hotspot may depend only on hue.
+
+## Continuity rules
+
+- Builder sites feel patiently made and carefully integrated with their environment, even in abandonment.
+- Human equipment is compact, practical, weathered, and visibly recent beside ancient spaces.
+- Crystalline flora repeats as a subtle regional motif, not as an identical landmark in every scene.
+- Local interfaces are varied exposed surfaces; do not establish a single definitive form for the Machine.
+- Environmental evidence may deepen ambiguity but may not resolve disappearance, consciousness, continuity, or purpose.
+- No text, UI, watermark, logo, combat staging, or generic neon sci-fi in clean plates.
+
+## Delivery specification
+
+- Master aspect ratio: 16:9.
+- Current continuity resolution: `1672 x 941` PNG.
+- Clean world plate only; no baked UI.
+- Lower-center walkable space should survive the game's dialogue-panel crop and responsive scaling.
+- Every selected plate requires a scene sheet and provenance entry.
+

@@ -1,0 +1,131 @@
+{
+  "chapter_id": "chapter-03",
+  "status": "draft",
+  "title": "Python Data, Logic, and Structured Inputs",
+  "source_role": "invented_bridge",
+  "purpose": "Introduce the Python structures needed before SDK, endpoint, and multimodal workflows make sense.",
+  "learner_starting_state": "Can run basic scripts and print values.",
+  "learner_ending_state": "Can work with JSON-shaped Python data and small reusable program structure.",
+  "ai901_objectives_supported": [],
+  "python_skills_introduced": [
+    "PY-008",
+    "PY-009",
+    "PY-010",
+    "PY-011",
+    "PY-012",
+    "PY-013",
+    "PY-014",
+    "PY-015",
+    "PY-016",
+    "PY-017",
+    "PY-018",
+    "PY-020"
+  ],
+  "python_skills_reinforced": [
+    "PY-003",
+    "PY-004",
+    "PY-006",
+    "PY-007"
+  ],
+  "azure_foundry_concepts_introduced": [
+    "JSON",
+    "structured inputs",
+    "API mental model"
+  ],
+  "knowledge_repository_sources": [
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-03-anal-ai-resp-diff-pr-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-05-debu-ai-gene-code-us-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l01-guid-prac-intr-py-fund-s-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-guided-pract-l04-guided-pract-pr-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l04-prac-use-ai-code-gen-too-pdf"
+  ],
+  "suggested_module_sequence": [
+    {
+      "module_id": "ch3-m1",
+      "module_title": "Lists, dictionaries, and structured data",
+      "module_purpose": "Translate Python objects into JSON-ready thinking.",
+      "skills": [
+        "PY-008",
+        "PY-009",
+        "PY-016",
+        "PY-020"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+      ],
+      "assessment_type": "coding"
+    },
+    {
+      "module_id": "ch3-m2",
+      "module_title": "Logic, loops, and small functions",
+      "module_purpose": "Support repeated prompt and result-handling workflows.",
+      "skills": [
+        "PY-010",
+        "PY-011",
+        "PY-012"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+      ],
+      "assessment_type": "coding"
+    },
+    {
+      "module_id": "ch3-m3",
+      "module_title": "Imports, files, secrets, and API mental models",
+      "module_purpose": "Remove hidden prerequisites before Foundry work.",
+      "skills": [
+        "PY-013",
+        "PY-014",
+        "PY-015",
+        "PY-017",
+        "PY-018"
+      ],
+      "source_ids": [
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-01-inst-sett-up-vs-code-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-02-inst-jupy-nb-usin-an-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-03-sett-up-goog-cola-nb-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-06-comp-numb-usin-py-op-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf",
+        "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-02-cust-copi-sett-in-vs-pdf"
+      ],
+      "assessment_type": "mixed"
+    }
+  ],
+  "assessment_strategy": "Coding checks only at skeleton level; no full lesson or exercise generation yet.",
+  "do_not_generate_yet": [
+    "full lesson prose",
+    "full exercise banks",
+    "flashcards",
+    "quizzes",
+    "final app UI",
+    "narrative lesson scenes"
+  ]
+}

@@ -1,0 +1,37 @@
+# JavaScript dependencies and generated builds
+node_modules/
+.npm-cache/
+dist/
+coverage/
+
+# Test and browser artifacts
+test-results/
+playwright-report/
+blob-report/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local runtime output
+*.log
+*.tmp
+*.temp
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+

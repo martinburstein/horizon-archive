@@ -1,0 +1,19 @@
+{
+  "title": "Get started with AI-powered information extraction in Azure",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [],
+  "local_markdown_files": [
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/01_1-introduction.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/02_2-documents.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/03_3-audio-video.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/04_4-exercise.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/05_5-knowledge-check.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/06_get-started-with-ai-powered-information-extraction-in-azure/06_6-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 6,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 6."
+}

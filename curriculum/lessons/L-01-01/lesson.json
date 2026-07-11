@@ -1,0 +1,31 @@
+{
+  "lesson_id": "L-01-01",
+  "lesson_title": "Run your first Python file",
+  "lesson_type": "bridge_lesson",
+  "chapter_id": "chapter-01",
+  "module_id": "ch1-m1",
+  "launch_tier": "launch_critical",
+  "source_mode": "invented_bridge_with_supporting_reference",
+  "supports_objectives": [],
+  "supports_python_skills": ["PY-001", "PY-002", "PY-003"],
+  "prerequisite_lesson_ids": [],
+  "source_ids": [
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-04-writ-runn-py-prog-pdf"
+  ],
+  "activity_ids": ["A-L0101-1", "A-L0101-2", "A-L0101-3"],
+  "assessment_ids": ["AS-L0101-QC", "AS-L0101-CK"],
+  "learner_starting_state": "Has never written or run Python and may not know what a terminal, file extension, or program output is.",
+  "learner_ending_state": "Can create a .py file, run it from PowerShell, identify output, and make a small edit without step-by-step copying.",
+  "mastery_gate": "Complete the independent run with exact expected output and answer at least 4 of 5 retrieval checks, including all safety-critical file/command distinctions.",
+  "estimated_minutes": 35,
+  "difficulty_band": "absolute_beginner",
+  "provenance_policy": {
+    "citation_expectation": "Python bridge explanations are course-authored; supporting non-exam references are named in source_ids.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Do not convert bridge advice into an AI-901 or Microsoft product claim."
+  },
+  "status": "review",
+  "notes": "Reference package. Learner-facing lesson, runnable starter, retrieval check, and remediation are colocated."
+}
+

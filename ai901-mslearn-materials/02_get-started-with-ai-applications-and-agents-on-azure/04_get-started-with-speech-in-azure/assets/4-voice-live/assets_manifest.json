@@ -1,0 +1,22 @@
+[
+  {
+    "alt": "Screenshot of voice live in the Foundry playground.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/voice-live-playground.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of a voice-enabled agent.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/voice-live-agent.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of voice live in the Foundry playground sample code.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/voice-live-playground-code.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of the result of the VoiceLive Python script.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-speech-azure/media/voice-live-result.png",
+    "path": "assets/image_004.png"
+  }
+]

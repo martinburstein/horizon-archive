@@ -1,0 +1,22 @@
+[
+  {
+    "alt": "Diagram of a system and user prompt.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/system-prompt.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Diagram of a conversation with multiple prompts and completions.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/conversation-history.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Diagram of a retrieval augmented generation being used to provide context in a prompt.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/retrieval-augmented-generation.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Diagram of a clear and specific prompt with context, examples, and a request for structure.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/writing-prompts.png",
+    "path": "assets/image_004.png"
+  }
+]

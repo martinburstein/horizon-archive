@@ -1,0 +1,157 @@
+{
+  "chapter_id": "chapter-05",
+  "status": "draft",
+  "title": "Microsoft Foundry - Endpoints, SDKs, Agents, and Content Understanding",
+  "source_role": "mixed",
+  "purpose": "Carry the heavier AI-901 implementation domain with safe beginner scaffolding around Foundry workflows.",
+  "learner_starting_state": "Understands Python structures and Azure AI workload categories.",
+  "learner_ending_state": "Can reason through Foundry portal flows, endpoints, SDK patterns, prompting, agents, and Content Understanding workflows.",
+  "ai901_objectives_supported": [
+    "AI901-D2-O1",
+    "AI901-D2-O2",
+    "AI901-D2-O3",
+    "AI901-D2-O4",
+    "AI901-D2-O5",
+    "AI901-D2-O6",
+    "AI901-D2-O7"
+  ],
+  "python_skills_introduced": [],
+  "python_skills_reinforced": [
+    "PY-013",
+    "PY-014",
+    "PY-015",
+    "PY-016",
+    "PY-017",
+    "PY-018",
+    "PY-019",
+    "PY-020"
+  ],
+  "azure_foundry_concepts_introduced": [
+    "Foundry portal",
+    "deployments",
+    "endpoints",
+    "SDKs",
+    "agents",
+    "Content Understanding",
+    "beginner-safe secrets"
+  ],
+  "knowledge_repository_sources": [
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+    "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+    "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+  ],
+  "suggested_module_sequence": [
+    {
+      "module_id": "ch5-m1",
+      "module_title": "Foundry portal, models, and deployments",
+      "module_purpose": "Ground the implementation-heavy exam domain in portal concepts.",
+      "skills": [
+        "PY-017",
+        "PY-019"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+      ],
+      "assessment_type": "portal"
+    },
+    {
+      "module_id": "ch5-m2",
+      "module_title": "Endpoints, SDKs, and lightweight client apps",
+      "module_purpose": "Move from conceptual to practical request and response workflows.",
+      "skills": [
+        "PY-013",
+        "PY-014",
+        "PY-016",
+        "PY-017",
+        "PY-018",
+        "PY-019"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+      ],
+      "assessment_type": "coding"
+    },
+    {
+      "module_id": "ch5-m3",
+      "module_title": "Prompts, agents, and Content Understanding",
+      "module_purpose": "Cover the distinct Foundry workflows that dominate implementation readiness.",
+      "skills": [
+        "PY-015",
+        "PY-016",
+        "PY-020"
+      ],
+      "source_ids": [
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-02-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-06-",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-04-introduction-to-ai-speech-conce",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
+        "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-01-1-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-02-2-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-03-3-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-05-5-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-06-6-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-07-7-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-08-8-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform",
+        "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+      ],
+      "assessment_type": "mixed"
+    }
+  ],
+  "assessment_strategy": "Mixed checks only at skeleton level; no full lesson or exercise generation yet.",
+  "do_not_generate_yet": [
+    "full lesson prose",
+    "full exercise banks",
+    "flashcards",
+    "quizzes",
+    "final app UI",
+    "narrative lesson scenes"
+  ]
+}

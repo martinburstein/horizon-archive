@@ -1,0 +1,48 @@
+[
+  {
+    "activity_id": "A-L0101-1",
+    "lesson_id": "L-01-01",
+    "activity_type": "guided_code",
+    "purpose": "Verify Python and establish the file-command-output mental model.",
+    "interaction_mode": "guided",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 8,
+    "input_contract": "Learner has PowerShell and this lesson folder.",
+    "output_contract": "Learner records a Python 3 version or the exact setup error.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0101-2",
+    "lesson_id": "L-01-01",
+    "activity_type": "guided_code",
+    "purpose": "Predict and run a known-good two-line Python program.",
+    "interaction_mode": "interactive",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 10,
+    "input_contract": "Learner predicts output before execution.",
+    "output_contract": "Program output matches the two documented lines.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0101-3",
+    "lesson_id": "L-01-01",
+    "activity_type": "checkpoint",
+    "purpose": "Demonstrate an independent edit-save-run cycle.",
+    "interaction_mode": "interactive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 12,
+    "input_contract": "Learner adds a name variable and third output line without a finished solution.",
+    "output_contract": "Saved program runs without error and prints three sensible lines.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  }
+]
+

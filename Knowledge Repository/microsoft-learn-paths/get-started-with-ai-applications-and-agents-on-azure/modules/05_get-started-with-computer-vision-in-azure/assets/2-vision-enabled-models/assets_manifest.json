@@ -1,0 +1,27 @@
+[
+  {
+    "alt": "Screenshot of Foundry Playground with a gpt-4.1 mini model deployed and the user uploading an image of an animal.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-vision-azure/media/playground-upload-image.png",
+    "path": "assets/image_001.png"
+  },
+  {
+    "alt": "Screenshot of Foundry Playground with a prompt asking the model to describe what is in an image and a response with a description.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-vision-azure/media/image-analysis-result-playground.png",
+    "path": "assets/image_002.png"
+  },
+  {
+    "alt": "Screenshot of the image used for image analysis.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-vision-azure/media/image-example-vs-code.png",
+    "path": "assets/image_003.png"
+  },
+  {
+    "alt": "Screenshot of Visual Studio Code with a python file containing application code for image analysis.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-vision-azure/media/vision-analysis-python.png",
+    "path": "assets/image_004.png"
+  },
+  {
+    "alt": "Screenshot of Visual Studio Code with the result of the image analysis.",
+    "source_url": "https://learn.microsoft.com/en-us/training/wwl-data-ai/get-started-vision-azure/media/image-analysis-result-vs-code.png",
+    "path": "assets/image_005.png"
+  }
+]

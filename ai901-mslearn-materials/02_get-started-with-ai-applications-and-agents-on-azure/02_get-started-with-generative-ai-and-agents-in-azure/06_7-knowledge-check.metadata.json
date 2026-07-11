@@ -1,0 +1,18 @@
+{
+  "uid": "learn.wwl.get-started-with-generative-ai-and-agents.knowledge-check",
+  "title": "Knowledge check",
+  "duration_minutes": 5,
+  "last_modified": "2026-02-04T00:08:00+00:00",
+  "number": 6,
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/7-knowledge-check/",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/7-knowledge-check/",
+  "capture": {
+    "playwright_used": true,
+    "text_and_images_selected": false,
+    "playwright_error": null
+  },
+  "asset_count": 0,
+  "asset_failures": [],
+  "markdown_path": "06_7-knowledge-check.md",
+  "raw_html_path": "06_7-knowledge-check.html"
+}

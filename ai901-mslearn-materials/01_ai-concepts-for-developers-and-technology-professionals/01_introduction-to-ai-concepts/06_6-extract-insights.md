@@ -1,0 +1,42 @@
+---
+title: Information extraction
+source_url: https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/6-extract-insights/
+learning_path: AI concepts for developers and technology professionals
+module: Introduction to AI concepts
+unit_number: 6
+unit_type: lesson
+duration_minutes: 3
+captured_at_utc: '2026-05-29T15:44:01Z'
+source: Microsoft Learn
+usage_note: Personal study archive. Preserve Microsoft attribution. Do not redistribute.
+---
+
+
+# Information extraction
+
+Source: https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/6-extract-insights/
+
+## Extracted content
+
+AI is commonly used to automate *information extraction* solutions that find information and unlock insights in unstructured data sources, such as scanned documents and forms, images, and audio or video recordings.
+
+For example, we could extend the computer vision capabilities of the computing history application to extract serial numbers and other text from images of computer components and use the information to identify the source computer.
+
+![Screenshot of a computing history site extracting text from an image.](assets/image_001.png)
+
+## How does information extraction work?
+
+The basis for most document analysis solutions is a computer vision technology called *optical character recognition* (OCR), which can identify the location of text in an image. OCR is often combined with an analytical model that can *interpret* individual values in the document, and so extract specific fields. For example, to match text extracted from a receipt to fields in an expense claim submission.
+
+![Diagram of information being extracted from a receipt.](assets/image_002.png)
+
+While most data extraction models have historically focused on extracting fields from text-based forms, more advanced models that can extract information from audio recording, images, and videos are becoming more readily available.
+
+## Data and insight extraction scenarios
+
+Common uses of AI to extract data and insights include:
+
+- Automated processing of forms and other documents in a business process - for example, processing an expense claim.
+- Large-scale digitization of data from paper forms. For example, scanning and archiving census records.
+- Indexing documents for search.
+- Identifying key points and follow-up actions from meeting transcripts or recordings.

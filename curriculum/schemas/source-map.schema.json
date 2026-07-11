@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "repository_root",
+    "status",
+    "sources"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "repository_root": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "title",
+          "local_path",
+          "source_type",
+          "exam_role",
+          "file_format"
+        ]
+      }
+    }
+  }
+}

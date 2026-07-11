@@ -1,0 +1,51 @@
+{
+  "run_id": "run-20260711-001",
+  "supersedes_run_id": null,
+  "started_at": "2026-07-11T21:19:50Z",
+  "finished_at": "2026-07-11T21:20:05Z",
+  "build_id": "horizon-prologue-v1",
+  "build_provenance": "Production bundle dist/assets/index-BhBcsMWB.js SHA-256 241d195f008b9b50d282a90e9817fa0b956c14edbb12ba8b65e50b9d753ca542",
+  "test_environment": "Playwright Chromium, headless, 1600x900, http://127.0.0.1:5174/",
+  "launch_command": "node playtest/e2e-playthrough.mjs",
+  "clean_save_procedure": "Clear localStorage, reload, and select New expedition.",
+  "clean_save_result": "Save key removed; title displayed without Resume signal before the clean run.",
+  "clean_save": true,
+  "result": "passed",
+  "last_checkpoint": "credits",
+  "questions_required": 3,
+  "questions_answered": 3,
+  "question_results": [
+    { "question_id": "HA-PY-001", "correct": true, "attempts": 2, "checkpoint": "meadow" },
+    { "question_id": "HA-PY-002", "correct": true, "attempts": 1, "checkpoint": "ruins" },
+    { "question_id": "HA-PY-003", "correct": true, "attempts": 1, "checkpoint": "automaton" }
+  ],
+  "wrong_answer_recovery_tested": true,
+  "wrong_answer_test": {
+    "question_id": "HA-PY-001",
+    "input": "print(\"SIGNAL  FOUND\")",
+    "feedback_observed": "The interface dims. Syntax or value mismatch—try again.",
+    "recovery_action": "Submit print ( 'SIGNAL FOUND' )",
+    "recovery_passed": true
+  },
+  "persistence_tested": true,
+  "persistence_passed": true,
+  "premature_ending_gate_tested": true,
+  "premature_ending_gate_passed": true,
+  "title_reached": true,
+  "credits_reached": true,
+  "credits_marker_observed": "CREDITS_REACHED",
+  "question_manifest_id": "horizon-prologue-v1",
+  "question_manifest_sha256": "0ed2af5c702699c3da98fc27cd6f2b8f9b839044b3aff54adccef985d85d59a9",
+  "transcript": [
+    { "sequence": 1, "event_type": "title", "checkpoint": "title", "question_id": null, "action": "Clear save and reload", "input": null, "visible_output": "TITLE_SCREEN and New expedition", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 2, "event_type": "navigation", "checkpoint": "meadow", "question_id": null, "action": "Select New expedition, USE, then Petal terminal", "input": null, "visible_output": "Python entry opened", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 3, "event_type": "question", "checkpoint": "meadow", "question_id": "HA-PY-001", "action": "Submit wrong answer", "input": "print(\"SIGNAL  FOUND\")", "visible_output": "Syntax or value mismatch—try again", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 4, "event_type": "question", "checkpoint": "meadow", "question_id": "HA-PY-001", "action": "Submit corrected answer", "input": "print ( 'SIGNAL FOUND' )", "visible_output": "Program accepted; ruins loaded", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 5, "event_type": "navigation", "checkpoint": "ruins", "question_id": null, "action": "Reload and select Resume signal", "input": null, "visible_output": "Ruins restored, proving Q1 persistence", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 6, "event_type": "question", "checkpoint": "ruins", "question_id": "HA-PY-002", "action": "Open terminal and submit", "input": "pilot_name=\"MARTIN\"", "visible_output": "Program accepted; automaton loaded", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 7, "event_type": "question", "checkpoint": "automaton", "question_id": "HA-PY-003", "action": "Open terminal and submit", "input": "archive_open = True", "visible_output": "Program accepted", "evidence_path": "playtest/e2e-playthrough.mjs" },
+    { "sequence": 8, "event_type": "credits", "checkpoint": "credits", "question_id": null, "action": "Wait for ending transition", "input": null, "visible_output": "CREDITS_REACHED and Prologue complete", "evidence_path": "playtest/e2e-playthrough.mjs" }
+  ],
+  "open_blocking_bug_ids": [],
+  "notes": "Premature ending gate was separately tested by injecting an out-of-order automaton-only save; resume returned to meadow and did not show credits."
+}

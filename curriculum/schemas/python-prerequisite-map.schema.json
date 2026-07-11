@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "learner_starting_state",
+    "target_readiness",
+    "prerequisites"
+  ],
+  "properties": {
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "skill_name",
+          "category",
+          "why_it_matters_for_azure",
+          "introduced_in_chapter",
+          "mastery_level_required"
+        ]
+      }
+    }
+  }
+}

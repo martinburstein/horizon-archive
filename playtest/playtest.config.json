@@ -1,0 +1,13 @@
+{
+  "game_name": "The Horizon Archive: The Patient Signal",
+  "entrypoint": "../horizon-archive-game/src/main.jsx",
+  "launch_command": "npm run dev -- --host 127.0.0.1 --port 5174",
+  "build_id": "horizon-prologue-v1",
+  "build_provenance": "Local source build from horizon-archive-game",
+  "test_environment": "Desktop browser, 1600x900 reference viewport",
+  "healthcheck_url": "http://127.0.0.1:5174/",
+  "clean_save_command": "Clear localStorage key horizon-archive-prologue-v1",
+  "title_marker": "TITLE_SCREEN",
+  "credits_marker": "CREDITS_REACHED",
+  "question_manifest": "../horizon-archive-game/public/question-manifest.json"
+}

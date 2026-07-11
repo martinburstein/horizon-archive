@@ -1,0 +1,420 @@
+{
+  "uid": "learn.wwl.get-started-ai-apps-agents",
+  "title": "Get started with AI applications and agents on Azure",
+  "summary": "Learn how to get started with AI workloads and solutions in Microsoft Foundry.",
+  "url": "https://learn.microsoft.com/en-us/training/paths/get-started-ai-apps-agents/",
+  "duration_minutes": 299,
+  "last_modified": "2026-02-28T00:28:00+00:00",
+  "number": 2,
+  "module_count": 6,
+  "modules": [
+    {
+      "uid": "learn.wwl.get-started-with-ai-in-azure",
+      "title": "Get started with AI in Azure",
+      "summary": "This module introduces Azure and its capabilities for building AI solutions. Explore the key features and benefits of using Microsoft Foundry for AI development.",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/",
+      "duration_minutes": 56,
+      "last_modified": "2026-05-07T17:55:00+00:00",
+      "number": 1,
+      "unit_count": 8,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.introduction",
+          "title": "Introduction",
+          "duration_minutes": 3,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.what-is-azure",
+          "title": "Understand Azure",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/2-what-is-azure/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.develop-ai-apps",
+          "title": "Developing AI apps on Azure",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/3-develop-ai-apps/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.microsoft-foundry",
+          "title": "Microsoft Foundry for AI",
+          "duration_minutes": 5,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/4-microsoft-foundry/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.endpoints",
+          "title": "Using Microsoft Foundry endpoints",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/5-endpoints/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.exercise",
+          "title": "Exercise - Get started with Microsoft Foundry",
+          "duration_minutes": 30,
+          "last_modified": "2026-02-27T00:16:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/6-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.knowledge-check",
+          "title": "Knowledge check",
+          "duration_minutes": 4,
+          "last_modified": "2026-02-11T18:09:00+00:00",
+          "number": 7,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/7-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-ai-in-azure.summary",
+          "title": "Summary",
+          "duration_minutes": 2,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 8,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-ai-in-azure/8-summary/"
+        }
+      ]
+    },
+    {
+      "uid": "learn.wwl.get-started-with-generative-ai-and-agents",
+      "title": "Get started with generative AI and agents in Azure",
+      "summary": "Learn how to use generative AI models and agents with Microsoft Foundry.",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/",
+      "duration_minutes": 58,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 2,
+      "unit_count": 7,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.introduction",
+          "title": "Introduction",
+          "duration_minutes": 2,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.generative-ai-models",
+          "title": "Generative AI models",
+          "duration_minutes": 6,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.using-generative-ai-models",
+          "title": "Using a generative AI model",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.creating-an-agent",
+          "title": "Creating an agent",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.exercise",
+          "title": "Exercise - Get started with generative AI and agents in Microsoft Foundry",
+          "duration_minutes": 35,
+          "last_modified": "2026-02-27T00:16:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/6-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.knowledge-check",
+          "title": "Knowledge check",
+          "duration_minutes": 5,
+          "last_modified": "2026-02-04T00:08:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/7-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-generative-ai-and-agents.summary",
+          "title": "Summary",
+          "duration_minutes": 2,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 7,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-generative-ai-and-agents/8-summary/"
+        }
+      ]
+    },
+    {
+      "uid": "learn.wwl.get-started-with-text-analysis-in-azure",
+      "title": "Get started with text analysis in Azure",
+      "summary": "Get started with text analysis in Azure",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/",
+      "duration_minutes": 45,
+      "last_modified": "2026-04-13T07:10:00+00:00",
+      "number": 3,
+      "unit_count": 7,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.introduction",
+          "title": "Introduction",
+          "duration_minutes": 1,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.azure-language",
+          "title": "Understand text analysis in Foundry",
+          "duration_minutes": 8,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/2-azure-language/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.language-sdk",
+          "title": "Create a client application that analyzes text",
+          "duration_minutes": 9,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/3-language-sdk/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.language-mcp",
+          "title": "Use Azure Language with an agent",
+          "duration_minutes": 3,
+          "last_modified": "2026-04-14T07:11:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/4-language-mcp/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.exercise",
+          "title": "Exercise - Get started with text analysis in Microsoft Foundry",
+          "duration_minutes": 20,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/5-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.knowledge-check",
+          "title": "Module assessment",
+          "duration_minutes": 3,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/6-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-text-analysis-in-azure.summary",
+          "title": "Summary",
+          "duration_minutes": 1,
+          "last_modified": "2026-04-13T07:10:00+00:00",
+          "number": 7,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/7-summary/"
+        }
+      ]
+    },
+    {
+      "uid": "learn.wwl.get-started-with-speech-in-azure",
+      "title": "Get started with speech in Azure",
+      "summary": "Learn how to use Azure Speech in Foundry Tools to recognize and synthesize speech.",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/",
+      "duration_minutes": 47,
+      "last_modified": "2026-03-17T07:10:00+00:00",
+      "number": 4,
+      "unit_count": 7,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.introduction",
+          "title": "Introduction",
+          "duration_minutes": 1,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.speech-recognition",
+          "title": "Speech recognition",
+          "duration_minutes": 8,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/2-speech-recognition/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.speech-synthesis",
+          "title": "Speech synthesis",
+          "duration_minutes": 5,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/3-speech-synthesis/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.voice-live",
+          "title": "Creating a speech-capable agent",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/4-voice-live/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.exercise",
+          "title": "Exercise - Get started with speech in Microsoft Foundry",
+          "duration_minutes": 25,
+          "last_modified": "2026-02-27T00:16:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/5-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.knowledge-check",
+          "title": "Module assessment",
+          "duration_minutes": 3,
+          "last_modified": "2026-02-18T07:40:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/6-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-speech-in-azure.summary",
+          "title": "Summary",
+          "duration_minutes": 1,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 7,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-speech-azure/7-summary/"
+        }
+      ]
+    },
+    {
+      "uid": "learn.wwl.get-started-with-computer-vision-in-azure",
+      "title": "Get started with computer vision in Azure",
+      "summary": "Vision-enabled models in Foundry enable developers to create intelligent solutions that analysis images, and generate images and video.",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/",
+      "duration_minutes": 50,
+      "last_modified": "2026-03-24T23:09:00+00:00",
+      "number": 5,
+      "unit_count": 7,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.introduction",
+          "title": "Introduction",
+          "duration_minutes": 1,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.vision-enabled-models",
+          "title": "Multimodal models for image analysis",
+          "duration_minutes": 7,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/2-vision-enabled-models/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.image-generation",
+          "title": "Image generation models",
+          "duration_minutes": 4,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/3-image-generation/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.video-generation",
+          "title": "Video generation models",
+          "duration_minutes": 3,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/4-video-generation/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.exercise",
+          "title": "Exercise - Get started with computer vision in Microsoft Foundry",
+          "duration_minutes": 30,
+          "last_modified": "2026-02-23T18:35:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/5-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.knowledge-check",
+          "title": "Module assessment",
+          "duration_minutes": 4,
+          "last_modified": "2026-02-23T18:35:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/6-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-with-computer-vision-in-azure.summary",
+          "title": "Summary",
+          "duration_minutes": 1,
+          "last_modified": "2026-03-24T23:09:00+00:00",
+          "number": 7,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/7-summary/"
+        }
+      ]
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction",
+      "title": "Get started with AI-powered information extraction in Azure",
+      "summary": "Learn how to use Azure Content Understanding in Foundry Tools to extract information from content.",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/",
+      "duration_minutes": 43,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 6,
+      "unit_count": 6,
+      "units": [
+        {
+          "uid": "learn.wwl.get-started-information-extraction.introduction",
+          "title": "Introduction",
+          "duration_minutes": 2,
+          "last_modified": "2026-05-15T23:11:00+00:00",
+          "number": 1,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/1-introduction/"
+        },
+        {
+          "uid": "learn.wwl.get-started-information-extraction.documents",
+          "title": "Extract information from documents",
+          "duration_minutes": 8,
+          "last_modified": "2026-05-15T23:11:00+00:00",
+          "number": 2,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/2-documents/"
+        },
+        {
+          "uid": "learn.wwl.get-started-information-extraction.audio-video",
+          "title": "Extract information from audio and video",
+          "duration_minutes": 4,
+          "last_modified": "2026-05-15T23:11:00+00:00",
+          "number": 3,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/3-audio-video/"
+        },
+        {
+          "uid": "learn.wwl.get-started-information-extraction.exercise",
+          "title": "Exercise - Get started with information extraction in Microsoft Foundry",
+          "duration_minutes": 25,
+          "last_modified": "2026-05-19T23:10:00+00:00",
+          "number": 4,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/4-exercise/"
+        },
+        {
+          "uid": "learn.wwl.get-started-information-extraction.knowledge-check",
+          "title": "Module assessment",
+          "duration_minutes": 3,
+          "last_modified": "2026-05-15T23:11:00+00:00",
+          "number": 5,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/5-knowledge-check/"
+        },
+        {
+          "uid": "learn.wwl.get-started-information-extraction.summary",
+          "title": "Summary",
+          "duration_minutes": 1,
+          "last_modified": "2026-05-15T23:11:00+00:00",
+          "number": 6,
+          "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/6-summary/"
+        }
+      ]
+    }
+  ]
+}

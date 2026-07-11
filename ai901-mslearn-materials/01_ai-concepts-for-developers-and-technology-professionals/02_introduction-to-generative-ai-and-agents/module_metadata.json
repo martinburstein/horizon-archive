@@ -1,0 +1,68 @@
+{
+  "uid": "learn.wwl.fundamentals-generative-ai",
+  "title": "Introduction to generative AI and agents",
+  "summary": "Ever wondered how AI can create content, answer questions, and assist with tasks? This module introduces you to the world of generative AI and agents.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/",
+  "duration_minutes": 37,
+  "last_modified": "2026-05-07T17:55:00+00:00",
+  "number": 2,
+  "unit_count": 7,
+  "units": [
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.introduction",
+      "title": "Introduction",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.language-models",
+      "title": "Large language models (LLMs)",
+      "duration_minutes": 5,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/3-language-models/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.writing-prompts",
+      "title": "Prompts",
+      "duration_minutes": 5,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/6-writing-prompts/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.agents",
+      "title": "AI agents",
+      "duration_minutes": 5,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/7-agents/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.exercise-ai-agent",
+      "title": "Exercise - Explore generative AI",
+      "duration_minutes": 15,
+      "last_modified": "2026-02-28T00:28:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/7a-exercise/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 5,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/8-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.fundamentals-generative-ai.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2025-10-06T17:09:00+00:00",
+      "number": 7,
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/9-summary/"
+    }
+  ]
+}

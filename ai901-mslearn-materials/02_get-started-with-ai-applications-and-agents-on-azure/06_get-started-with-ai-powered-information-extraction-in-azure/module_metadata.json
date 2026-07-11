@@ -1,0 +1,60 @@
+{
+  "uid": "learn.wwl.get-started-information-extraction",
+  "title": "Get started with AI-powered information extraction in Azure",
+  "summary": "Learn how to use Azure Content Understanding in Foundry Tools to extract information from content.",
+  "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/",
+  "duration_minutes": 43,
+  "last_modified": "2026-05-15T23:11:00+00:00",
+  "number": 6,
+  "unit_count": 6,
+  "units": [
+    {
+      "uid": "learn.wwl.get-started-information-extraction.introduction",
+      "title": "Introduction",
+      "duration_minutes": 2,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 1,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/1-introduction/"
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction.documents",
+      "title": "Extract information from documents",
+      "duration_minutes": 8,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 2,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/2-documents/"
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction.audio-video",
+      "title": "Extract information from audio and video",
+      "duration_minutes": 4,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 3,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/3-audio-video/"
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction.exercise",
+      "title": "Exercise - Get started with information extraction in Microsoft Foundry",
+      "duration_minutes": 25,
+      "last_modified": "2026-05-19T23:10:00+00:00",
+      "number": 4,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/4-exercise/"
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction.knowledge-check",
+      "title": "Module assessment",
+      "duration_minutes": 3,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 5,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/5-knowledge-check/"
+    },
+    {
+      "uid": "learn.wwl.get-started-information-extraction.summary",
+      "title": "Summary",
+      "duration_minutes": 1,
+      "last_modified": "2026-05-15T23:11:00+00:00",
+      "number": 6,
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/6-summary/"
+    }
+  ]
+}

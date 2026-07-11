@@ -1,0 +1,28 @@
+{
+  "title": "Get started with computer vision in Azure",
+  "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-vision-azure/",
+  "source_type": "learning-module",
+  "exam": "ai-901",
+  "captured_at": "2026-05-29T18:53:57Z",
+  "local_raw_files": [
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/01_1-introduction.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/03_3-image-generation.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/04_4-video-generation.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/05_5-exercise.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/06_6-knowledge-check.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/raw/07_7-summary.html",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/assets/5-exercise/image_001.png"
+  ],
+  "local_markdown_files": [
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/01_1-introduction.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/02_2-vision-enabled-models.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/03_3-image-generation.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/04_4-video-generation.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/05_5-exercise.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/06_6-knowledge-check.md",
+    "microsoft-learn-paths/get-started-with-ai-applications-and-agents-on-azure/modules/05_get-started-with-computer-vision-in-azure/07_7-summary.md"
+  ],
+  "module_count": null,
+  "unit_count": 7,
+  "notes": "Copied from local AI-901 Microsoft Learn capture. Module number 5."
+}

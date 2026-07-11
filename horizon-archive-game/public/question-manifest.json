@@ -1,0 +1,24 @@
+{
+  "manifest_id": "horizon-prologue-v1",
+  "title": "The Patient Signal",
+  "questions": [
+    {
+      "id": "HA-PY-001",
+      "scene": "meadow",
+      "skill": "print_string",
+      "answer": "print(\"SIGNAL FOUND\")"
+    },
+    {
+      "id": "HA-PY-002",
+      "scene": "ruins",
+      "skill": "string_variable",
+      "answer": "pilot_name = \"MARTIN\""
+    },
+    {
+      "id": "HA-PY-003",
+      "scene": "automaton",
+      "skill": "boolean_variable",
+      "answer": "archive_open = True"
+    }
+  ]
+}
