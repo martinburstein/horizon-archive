@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-06-01 Offline Objective Ledger mandatory Terminal gate
+
+- **Outcome:** Completed the partial `EX-L0601-OBJECTIVE-LEDGER` runtime and mounted it after Visual Patterns as the final mandatory ruins gate. Primary and fresh transfer each require 30/30 across all 15 current objective IDs exactly once, followed by a four-part closed-note domain-mastery explanation. No L-06-02/L-06-03 work was added.
+- **Ledger/readiness:** Every objective initializes as `not_yet_assessed`, a miss becomes `remediate`, and a fully correct objective-plus-evidence response becomes `ready` with its prerequisite lesson pointer. Strict mastery requires all 15 ready pointers, both forms, and the closed note. Confidence is recorded for tutoring but cannot create readiness or mastery; concept/capability evidence remains separate from implementation evidence.
+- **Safety/privacy/ownership:** Every phase persistently states that scenarios are course-authored, are not Microsoft exam questions, guarantee no score, call no service, and authorize no Azure or external/destructive action. Evidence allowlists only objective IDs, correctness, statuses, lesson pointers, attempts, hints, confidence, tags, form, and mastery—never exam text, credentials, endpoints, service data, notes, choices, or free text. Pilot owns selections/prose, System scores, and the 901 Teacher owns objective-specific remediation and completion.
+- **Files changed:** Completed the Objective Ledger evaluator/tests; updated `App.jsx`, public manifest, full E2E, three Objective Ledger QA captures, and this log.
+- **Validation:** L-06-01 validator self-test passes; primary and transfer references each pass 30/30 with 15/15 objectives; 135/135 unit tests pass; production build passes; repository-root full title-to-credits E2E passes with zero runtime errors, strict remediation, close/reopen, privacy, direct/reload focus, canonical/narrow captures, and all Objective Ledger flags. The game-directory E2E invocation was not repeated after the coordinating agent requested no additional long checks.
+- **Next recommended item:** Player Agent should independently challenge confidence-as-mastery, domain-average masking, concept/implementation substitution, stale or missing evidence pointers, keyboard order, and narrow ledger readability.
+- **Unresolved risks:** This course-authored offline ledger is not an exam-item claim or result guarantee and proves no live service, API, identity, permission, or Azure readiness. Current objective wording and product details still require official Microsoft reverification before a final readiness decision.
+
 ## 2026-07-12 — Visual Patterns continuity closure
 
 - **Outcome:** Closed only the L-05-06 continuity contract. The existing gate already preserved strict primary 12/12, fresh transfer 12/12, a four-part Pilot-owned closed note, Teacher-owned completion, sanitizer/privacy, canonical/narrow presentation, captures, and dedicated direct/reload Continue focus. No L-06-01/L-06-02 work was added.
