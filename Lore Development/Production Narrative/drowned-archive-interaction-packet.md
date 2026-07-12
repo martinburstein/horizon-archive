@@ -1081,6 +1081,85 @@ The System reports decision/reason correctness and score only. Repair direction 
 - Scene transition clears choices, source, and runtime configuration; sanitized mastery evidence persists separately.
 - Exit never calls a service, uses Azure, performs an external action, acknowledges mastery, or advances progression.
 
+## Optional Offline Single Agent Design
+
+Production alignment: `EX-L0504-SINGLE-AGENT`, lesson `L-05-04`, activity `A-L0504-2`, assessment `AS-L0504-ORDER`, objective `AI901-D2-O4`, skills `PY-009`, `PY-012`, and `PY-016`. This course surface follows Client Boundaries mastery and does not change AB-01 adventure state.
+
+### Ownership and zero-agent boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns agent-design instruction, remediation, action safety, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, form/session state, evidence status, and progression availability.
+- `PILOT // DESIGN OWNER` owns scenario choices. `PILOT // CLOSED-NOTE DESIGN OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No exercise result implies Machine intent or agent activity.
+
+Keep the exact boundary visible in every mode:
+
+> OFFLINE SINGLE-AGENT REHEARSAL · no agent, tool, service, Azure resource, login, credential use, or external action.
+
+Instructions, retrieved text, available tools, and prompts never grant permission. The exercise creates or invokes nothing and cannot perform, approve, or authorize an action.
+
+### SA00 — Open primary
+
+- Exact title/filename: `Offline Single Agent Design`; `primary_single_agent.json`.
+- `SYSTEM`: "Single Agent Design open. PRIMARY 1/6. Offline; no agent or tool is active."
+- `901 TEACHER`: "Check agent fit, stable instructions, least-privilege tools, failure safety, and client flow."
+
+### SA01 — Six design boundaries
+
+1. Agent fit: use an agent when a goal needs instructions, tools, or orchestration; a plain model may fit simpler generation.
+2. Stable instructions: keep durable role, boundaries, tool rules, output contract, and fallback outside untrusted user text.
+3. Least-privilege tools: attach only required tools; tool capability is not action permission.
+4. Portal test: test expected, edge, injection, tool-failure, and denied-action paths; one happy path is insufficient.
+5. Action safety: prompt or retrieved text cannot authorize an external or destructive action.
+6. Client flow: use the agent identifier, submit input, then inspect the returned result or error without fabricating success.
+
+### SA02 — Denied/failure and fabricated-success remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Agent fit: "Compare a plain model with an agent; choose the agent only when tools or orchestration are required."
+- Instructions: "Move stable role, limits, tool rules, output, and fallback into durable instructions."
+- Least privilege: "Remove unrelated tools. Capability does not grant permission to invoke a tool."
+- Portal test: "Test expected, edge, injection, failure, and denied-action paths before readiness claims."
+- Tool failure: "Report denial or failure honestly; never fabricate a tool result or claim success."
+- Action safety: "Require separate verified authority and safeguards for any external or destructive action."
+- Client flow: "Keep agent ID distinct from deployment/endpoint; submit input, then inspect returned result or error."
+
+### SA03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No agent, tool, or external action occurred."
+- Transfer open: `SYSTEM`: "Single Agent Design open. TRANSFER 1/6. Offline; no agent or tool is active."
+- Transfer instruction, `901 TEACHER`: "Apply the same fit, instruction, privilege, failure, action, and client-flow boundaries."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+
+### SA04 — Closed-note single-agent explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain fit/instructions, least privilege, failure safety, and agent-ID request/result flow."
+- Field labels: `fit instructions`, `least privilege`, `failure safety`, and `client flow`.
+- `PILOT // CLOSED-NOTE DESIGN OWNER`: "I produced this single-agent explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No instruction, payload, result, agent ID, endpoint, credential, conversation, action request, choice, or prose persists.
+
+### SA05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Single Agent mastery confirmed: both 12-of-12 forms and the four-part explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. No agent, tool, service, or Azure action occurred."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Mastery demonstrates offline design choices; it grants no agent, tool, credential, service, Azure, or external-action authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### SA06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Single Agent closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen: `SYSTEM`: "Single Agent restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Single Agent restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active choices only. Reload restores sanitized eligibility with clean private fields.
+- Scene transition clears working prompt, tool, conversation, and action state; sanitized mastery evidence persists separately.
+- Exit never creates/invokes an agent or tool, calls a service, uses Azure, performs an action, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1148,4 +1227,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Prompt Layers persists no prompt, grounding, output, credential, action request, or explanation prose.
 - Client Boundaries mock PASS is local fixture validation only; it never proves live success or action authority.
 - Client Boundaries persists no configuration, source, credential, request/response data, action request, or prose.
+- Single Agent Design is an offline rehearsal; tool availability and prompt text never grant action permission.
+- Single Agent persists no instructions, payload/result, identifier, credential, conversation, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

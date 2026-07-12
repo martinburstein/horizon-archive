@@ -153,3 +153,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, mock phase, six scenarios per form, six boundaries, four explanation dimensions, `L-05-03` IDs, mock validator, evidence sanitizer, session/reload/transition behavior, offline/authority boundary, and Continue gate. Reviewed copy for ownership, compactness, fabricated-success risk, privacy, authority, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should ensure mock PASS persists only as a boolean, separate Teacher remediation from neutral System results, and verify Continue focus after mastery.
 - **Unresolved risks:** The mock-run handler should be checked during Coder validation to ensure it records the intended boolean rather than an unresolved symbol. Teacher completion dialogue may also appear beneath the generic Pilot footer.
+
+## 2026-07-12 — Offline Single Agent continuity
+
+- **Outcome:** Added the bounded interaction contract for playable `EX-L0504-SINGLE-AGENT`: agent fit, stable instructions, least-privilege tools, portal testing, denied/failure paths, action safety, client request/result flow, fabricated-success remediation, primary/transfer, four-part closed-note explanation, mastery, restoration, privacy, and Continue handoff.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked live title, filenames, statuses, six scenarios per form, all six boundaries, denied/fabricated-success probes, four explanation dimensions, `L-05-04` IDs, evidence sanitizer, session/reload/transition behavior, zero-agent/action boundary, and Continue gate. Reviewed copy for ownership, compactness, privacy, authority, and mystery safety.
+- **Next recommended item:** Coder/Exercise Agent should preserve explicit Teacher remediation, neutral System scoring, denial/failure honesty, and Continue focus after mastery.
+- **Unresolved risks:** Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.
