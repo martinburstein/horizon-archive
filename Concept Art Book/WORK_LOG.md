@@ -111,3 +111,11 @@
 - **Validation:** native/2x dimensions and byte-exact enlargement pass; the local semantic motif crop is byte-identical across all four tiles; all phase pairs remain distinct in grayscale through rail count, rhythm, shutter, or corner-lock geometry; links pass; world/footer separation remains intact.
 - **Next recommended item:** Accessibility Sentinel should identify all four phases at native grayscale without touching the semantic rings; Coder can crop tiles at x offsets 0, 64, 128, and 192 and must retain live phase labels.
 - **Unresolved risks:** surrounding geometry supplements but cannot replace text. Runtime must announce phase and preserve focus/state semantics independently of the physical motif.
+
+## 2026-07-12 — Structured Packets physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible physical motif with three nested but structurally distinct square sockets connected by one continuous stepped data-path groove.
+- **Files changed:** added `production-pixel/AB-01/structured-packets/` native motif, integer renderer, specification, exact 2x, grayscale, and component-isolation QA; linked it from the AB-01 package. No gameplay, location, interface, or lore changed.
+- **Validation:** native RGBA is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; outer/middle/inner/groove isolation masks remain pairwise distinct in grayscale; the groove is one connected path; painted bounds fit the existing 68 x 76 hotspot and AB-01 anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should distinguish all three sockets and trace the groove at native grayscale; Coder must retain live packet/field labels and must not infer serialization semantics from the physical motif alone.
+- **Unresolved risks:** nested sockets communicate structure but do not define a schema, direction, or validation rule. Live teaching content remains the semantic source.
