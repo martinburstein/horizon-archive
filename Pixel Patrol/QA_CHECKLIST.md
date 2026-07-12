@@ -152,6 +152,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Client flow reads agent identifier -> submit input -> real result or honest error.
 - [ ] Single-Agent captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
 - [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
+- [ ] Objective Ledger warning, domain equivalent, 15-row ledger, and form occupy four explicit ordered rows without overlap.
+- [ ] Exactly 15 objective rows expose READY, REMEDIATE, or NOT YET ASSESSED and an evidence pointer or explicit absence.
+- [ ] Eight concept/capability objectives remain distinct from seven implementation objectives.
+- [ ] Confidence and domain averages never render as mastery; Teacher remediation names the current objective.
+- [ ] Objective Ledger captures remain byte-distinct across canonical, narrow, and host context; ledger and form remain traversable.
+- [ ] Direct/restored strict mastery moves focus to Continue with Pilot/System/Teacher separation intact.
 - [ ] Visual Pattern offline/no-action warning and six-boundary equivalent remain persistent, ordered, and non-overlapping.
 - [ ] Analysis, multimodal prompting, generation, request validation, result/provenance, and authority boundaries remain distinct.
 - [ ] Operation status/result shapes remain honest; fabricated success or media receives Teacher remediation separate from System score.

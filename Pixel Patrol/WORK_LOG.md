@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Objective Ledger final visual gate
+
+- **Completed:** audited complete Objective Ledger primary, transfer, closed-note, and mastered flow. Corrected one essential layout defect: the four-child ledger workspace inherited a two-row grid and hid the domain equivalent. Added explicit warning/domain/ledger/form rows, contained ledger scrolling, and canonical/narrow explanation columns. The 15-objective status/evidence density, concept-versus-implementation split, objective remediation, confidence-not-mastery, Pilot/System/Teacher ownership, focus, Continue handoff, and square-pixel chrome are now coherent.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, this log, and regenerated Objective Ledger captures.
+- **Validation:** all 135 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Post-fix capture inspection confirms the domain equivalent is visible and ordered at canonical and closed-note presentation; E2E confirms 15 exact objectives, all three statuses, evidence pointers, both 30/30 forms, objective-specific remediation, confidence safeguards, privacy, direct/reload Continue focus, and credits.
+- **Next recommended item:** Location Scout should render fifteen square ledger cells split eight/seven across two labeled banks, with evidence pointers as short routed traces and READY/REMEDIATE/UNASSESSED distinguished by shape and label rather than color alone.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 viewport by design. Separately, the build remains above the 500 kB advisory threshold; no capture or interaction defect was observed.
+
 ## 2026-07-12 — Offline Visual Patterns final visual gate
 
 - **Completed:** audited complete Visual Patterns primary, transfer, closed-note, and mastered flow. Persistent offline/no-action warning and six-boundary visual equivalent already occupy correct fixed rows above one contained form. Analysis/multimodal/generation/request/result/provenance/publication-deletion hierarchy, honest operation status, Pilot/System/Teacher ownership, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.

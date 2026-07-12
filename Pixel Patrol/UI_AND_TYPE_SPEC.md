@@ -216,3 +216,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Existing pixels map to analysis, image plus question to multimodal response, and written brief to newly generated labeled media. Validate bytes, type, request, and deployed capability before processing.
 - Inspect honest operation status and operation-specific result shape without fabricated success/media. Preserve source/model/prompt/time and generated-content provenance. Publication and deletion require separate explicit authority.
 - Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Objective Ledger hierarchy
+
+- Preserve reading order: Machine/file/status -> course-authored/not-exam/no-guarantee warning -> Domain 1 concept/capability versus Domain 2 implementation equivalent -> System 15-objective ledger -> Pilot evidence choice/prose -> neutral System validator -> objective-specific Teacher remediation.
+- Each objective displays READY, REMEDIATE, or NOT YET ASSESSED plus its own lesson evidence pointer or explicit absence. Domain averages and confidence never equal objective readiness or mastery.
+- The ledger is a contained scroller above the contained form; neither may cover the warning or domain equivalent. Continue receives focus after direct or restored strict mastery.

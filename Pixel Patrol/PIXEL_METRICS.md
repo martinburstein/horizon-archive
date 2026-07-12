@@ -142,3 +142,9 @@ At 1x capture:
 - Visual Patterns uses three fixed rows: persistent offline/no-action warning, six-boundary visual text equivalent, then one contained form. Dense text wraps inside its row without collision or reordering.
 - Canonical order is analysis/multimodal/generation -> request validation -> honest operation/result -> provenance -> simulation limits -> separate publication/deletion authority. Narrow preserves all boundaries by vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
+
+## Offline Objective Ledger viewport contract
+
+- Objective Ledger uses four explicit rows: course-authored/not-exam/no-guarantee warning, domain/status equivalent, contained 15-objective ledger, then contained scenario or closed-note form. All four remain ordered and independently traversable.
+- At 640 x 480 the domain equivalent and at least one ledger row remain visible with the validator region. At 320 x 240 the complete warning leads; domain, ledger, and form remain reachable by vertical traversal.
+- Closed note uses four domain/safeguard fields in one canonical row and one narrow column. Outer Machine/file/status chrome remains fixed.
