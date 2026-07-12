@@ -195,3 +195,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Endpoint locates the project, credential supplies identity, deployment name selects the model, project client yields a compatible inference client, request input is sent and response output is read, and mock PASS proves local flow only.
 - Fabricated success and destructive-action claims are remediation states, never positive status. Simulation or prompt text cannot establish live access or authorize deployment, creation, purchase, email, deletion, or mutation.
 - Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Single-Agent Solutions hierarchy
+
+- Preserve reading order: Machine/file/status -> no-agent/tool/action warning -> six-boundary equivalent -> Pilot design decision/prose -> neutral System validator -> Teacher fit/privilege/failure remediation.
+- Choose a plain model flow when orchestration is unnecessary; otherwise keep stable instructions authoritative and attach only least-privilege tools. Tool capability is not action permission.
+- Test expected, edge, injection, denied, timed-out, and failed paths. Denied or failed work stays denied or failed; fabricated success is always a remediation state. Client flow uses agent identifier, submitted input, then a real result or honest error.
+- Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

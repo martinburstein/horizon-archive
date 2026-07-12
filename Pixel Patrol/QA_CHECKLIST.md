@@ -146,6 +146,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Fabricated success and destructive-action claims receive Teacher remediation separate from neutral System scores.
 - [ ] Client Boundary captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
 - [ ] Direct/restored mastery moves focus to Continue with square-pixel chrome unchanged.
+- [ ] Single-Agent no-agent/tool/action warning and six-boundary equivalent remain persistent, ordered, and non-overlapping.
+- [ ] Fit, instructions, least privilege, tests, verified action authority, and client flow remain six distinct boundary reads.
+- [ ] Timed-out/denied/failed tools cannot display fabricated success; Teacher honesty remediation remains separate from System score.
+- [ ] Client flow reads agent identifier -> submit input -> real result or honest error.
+- [ ] Single-Agent captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
+- [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.

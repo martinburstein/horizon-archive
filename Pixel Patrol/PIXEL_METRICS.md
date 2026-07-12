@@ -124,3 +124,9 @@ At 1x capture:
 - Client Boundaries uses three fixed workspace rows: offline/mock/no-authority warning, six-boundary equivalent with current mock-PASS meaning, then one contained phase/form region. Rows may wrap but cannot overlap or reorder.
 - Canonical order is endpoint -> credential -> deployment -> project/inference client -> request/response -> simulation/no-action proof. At 320 x 240 the complete warning leads and the remaining boundaries stay reachable by vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
+
+## Offline Single-Agent Solutions viewport contract
+
+- Single-Agent uses three fixed workspace rows: persistent no-agent/tool/action warning, persistent six-boundary equivalent, then one contained form. Rows wrap but cannot overlap or reorder at canonical or narrow size.
+- Canonical order is fit -> stable instructions -> least-privilege tools -> expected/edge/injection/denied/failure tests -> verified action authority -> agent-ID submit/read honest result or error. Narrow retains the same order by vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
