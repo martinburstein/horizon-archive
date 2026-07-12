@@ -24,6 +24,7 @@
 - **Prompt Layers motif:** [six linked layers, rejected injection spur, and locked external authority](prompt-layers/README.md)
 - **Client Boundaries motif:** [six linked stations, local-only mock loop, rejected success, and locked action](client-boundaries/README.md)
 - **Single-Agent motif:** [six stations, keyed tool shutters, incomplete denial, rejected success, and locked action](single-agent/README.md)
+- **Text/Speech Patterns motif:** [six linked stations, reversible cancellation, and locked safety exits](text-speech-patterns/README.md)
 
 ## Originality gate
 

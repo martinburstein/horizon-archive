@@ -215,3 +215,11 @@
 - **Validation:** native/2x/grayscale dimensions and exact scaling pass; six grayscale stations differ; rail reaches all stations; denial gap, rejection, external lock, 61 x 59 target fit, and links pass.
 - **Next recommended item:** accessibility review at native grayscale with mandatory live permission, denial/timeout, test, correlation, and authorization labels.
 - **Unresolved risks:** geometry cannot communicate instruction content, permission identity, test evidence, errors, or authority. Live teaching content remains authoritative.
+
+## 2026-07-12 - Text/Speech Patterns motif
+
+- **Completed:** delivered one native six-station AB-01 text/speech rail with physical direction cues, reversible broken-loop cancellation, and separately locked disclosure/action exits.
+- **Files changed:** added `production-pixel/AB-01/text-speech-patterns/` native, renderer, spec, exact 2x, grayscale, and isolation QA; linked the package. No scene, gameplay, speech content, or lore changed.
+- **Validation:** native `64 x 64`, byte-exact 2x, grayscale, six pairwise-distinct isolation tiles, connected station rail, direction/cancellation geometry, dual locks, target fit, and links pass.
+- **Next recommended item:** native-grayscale accessibility review with mandatory transcript, direction, result/error, cancellation, disclosure, and authorization labels.
+- **Unresolved risks:** physical geometry cannot carry speech content, consent, language, errors, disclosure scope, or authority identity. Live accessible UI remains authoritative.
