@@ -25,7 +25,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-01-03` — complete confidence-rebuilding package for traceback location, NameError repair, indentation repair, and dead-end-free experimentation
 - `curriculum/lessons/L-02-02` — complete source-grounded scenario package for six responsible AI principles, concrete mitigations, accountable ownership, and fresh-form transfer
 - `curriculum/lessons/L-02-03` — complete source-grounded model mechanics, selection, deployment, and configuration decision package with fresh-form transfer
-- Next package should be selected from the dependency-safe approved sequence.
+- `curriculum/lessons/L-03-01` — complete two-form Python bridge for lists, dictionaries, nested access, JSON parsing/serialization, and structured-output validation
 
 ## Ready now
 

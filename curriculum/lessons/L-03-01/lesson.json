@@ -1,0 +1,23 @@
+{
+  "lesson_id":"L-03-01",
+  "lesson_title":"Lists, dictionaries, and JSON-shaped thinking",
+  "lesson_type":"bridge_lesson",
+  "chapter_id":"chapter-03",
+  "module_id":"ch3-m1",
+  "launch_tier":"launch_critical",
+  "source_mode":"invented_bridge_with_supporting_reference",
+  "supports_objectives":[],
+  "supports_python_skills":["PY-008","PY-009","PY-016","PY-020"],
+  "prerequisite_lesson_ids":["L-01-03"],
+  "source_ids":["OFFICIAL-AI901-STUDY-GUIDE","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf"],
+  "activity_ids":["A-L0301-1","A-L0301-2","A-L0301-3"],
+  "assessment_ids":["AS-L0301-QC","AS-L0301-STRUCT"],
+  "learner_starting_state":"Can run, edit, and debug a small Python file but has not yet manipulated nested structured data.",
+  "learner_ending_state":"Can distinguish lists from dictionaries, navigate nested values, append a record, update a nested field, and parse and serialize JSON.",
+  "mastery_gate":"Pass primary and fresh-transfer programs at 8 of 8 each, predict four nested accesses, and explain the list-dictionary-JSON relationship without notes.",
+  "estimated_minutes":60,
+  "difficulty_band":"beginner",
+  "provenance_policy":{"citation_expectation":"The AI-901 Python prerequisite traces to the official study guide; all examples, packets, gates, and Terminal framing are course-authored bridge instruction.","bridge_label_required":true,"unsupported_claim_behavior":"Do not present Python dictionary syntax as identical to JSON text; verify runtime/library versions before live integration."},
+  "status":"review",
+  "notes":"Offline two-form structured-data bridge with deterministic and anti-hardcoding validation."
+}

@@ -1,0 +1,10 @@
+{
+  "exercise_id":"EX-L0301-STRUCTURED-PACKETS","lesson_id":"L-03-01","activity_id":"A-L0301-3","assessment_ids":["AS-L0301-QC","AS-L0301-STRUCT"],"objective_ids":[],"skill_ids":["PY-008","PY-009","PY-016","PY-020"],
+  "forms":["primary","transfer"],"mastery":{"minimum_checks_per_form":8,"total_checks_per_form":8,"prediction_items":4,"closed_note_explanation_required":true},
+  "remediation_sequence":["name_current_container_type","trace_one_bracket_at_a_time","separate_python_object_from_json_text","rerun_failed_check","retry_transfer"],
+  "misconception_tags":["list-key-confusion","dictionary-index-confusion","json-is-python-object","append-replaces-list","nested-update-wrong-level","hardcoded-output"],
+  "evidence_contract":{"store":["lesson_id","exercise_id","form","check_correctness","attempt_count","hint_level","confidence","misconception_tags","mastery_status"],"do_not_store":["learner_source","raw_json_packet","runtime_output"]},
+  "session_contract":{"close_reopen":"restore_active_source","scene_transition":"clear_working_source","mastery_evidence":"persist_separately"},
+  "ui_contract":{"target_viewport":"640x480","panes":["instructions","editor","output","checks"],"must_not_rely_on_color_alone":true},
+  "accessibility_contract":{"keyboard_order":["instructions","editor","run","output","checks","hint","reset","exit"],"persistent_labels":true,"error_line_and_text":true,"status_live_region":true,"time_limit":false,"reduced_motion":true}
+}

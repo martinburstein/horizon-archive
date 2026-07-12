@@ -154,12 +154,13 @@
           "launch_tier": "launch_critical",
           "source_mode": "invented_bridge_with_supporting_reference",
           "source_ids": [
+            "OFFICIAL-AI901-STUDY-GUIDE",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf"
           ],
           "activity_ids": ["A-L0301-1", "A-L0301-2", "A-L0301-3"],
           "assessment_ids": ["AS-L0301-QC", "AS-L0301-STRUCT"],
-          "mastery_gate": "can read and edit simple nested JSON-like data"
+          "mastery_gate": "pass primary and fresh-transfer structured-data programs at 8 of 8, predict four nested accesses, and explain list versus dictionary versus JSON without notes"
         },
         {
           "lesson_id": "L-03-02",
