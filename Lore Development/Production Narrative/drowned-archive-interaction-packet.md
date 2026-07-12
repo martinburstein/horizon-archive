@@ -309,6 +309,66 @@ If only one compact post-exit line is available, use: "Primary form complete. Tr
 - Substitute the exact uppercase live label; do not use “stage,” “ritual,” “judgment,” or an invented in-world name.
 - Full reload preserves sanitized evidence and mode eligibility, not choices or explanation text.
 
+## Optional Model, Deployment, and Configuration Choices practice
+
+Production alignment: `EX-L0203-MODEL-DEPLOYMENT-CHOICES`, lesson `L-02-03`, objectives `AI901-D1-O2` and `AI901-D1-O3`. This optional course surface does not change AB-01 adventure progression or the Tidal Lens.
+
+### Live labels and three-ring meaning
+
+The exact Terminal title is `Model, Deployment, and Configuration Choices`. The five live labels are `MODEL`, `DEPLOYMENT`, `REQUEST CONFIGURATION`, `Decision`, and `Reason`; physical geometry never substitutes for them.
+
+| Physical element | Human course meaning | Owner |
+|---|---|---|
+| Continuous outer model octagon | Model capability and supported-input/output boundary | `901 TEACHER // SOURCE-GROUNDED COURSE` |
+| Bracketed middle deployment ring | Named callable deployment and its capacity/processing configuration | `901 TEACHER // SOURCE-GROUNDED COURSE` |
+| Dashed inner request ring | Supported per-request configuration | `901 TEACHER // SOURCE-GROUNDED COURSE` |
+| Split center: Decision / Reason | The learner's selected answer and requirement-grounded justification | `PILOT // DECISION OWNER` |
+
+The three rings are a human-authored nesting aid. They do not indicate Machine attention, deliberation, approval, confidence, judgment, preference, or understanding. `SCENE // SENSOR RECORD` may identify visible ring geometry only; the Tidal Lens remains unchanged.
+
+### Speaker and state ownership
+
+- `SYSTEM // EXPEDITION STATE` owns the title, active form, progress, close/reopen/reload state, and recorded mastery status.
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns model mechanics, selection criteria, deployment/configuration distinctions, remediation, the closed-note instruction, and the volatile-information boundary.
+- `EXPEDITION LINK // LOCAL TOOLING` owns deterministic decision/reason validation and score presentation.
+- `PILOT // DECISION OWNER` marks learner authorship. It never presents Microsoft guidance, validates an answer, names a current product fact, or interprets the rings.
+
+### MDC00 — Primary mode
+
+- `SYSTEM // EXPEDITION STATE`: "Primary active. PRIMARY 1/8."
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Choose both the decision and the reason grounded in the stated requirement."
+- Primary completion: `SYSTEM`: "PRIMARY 16/16 recorded. Transfer and a closed-note explanation remain."
+
+### MDC01 — Fresh transfer mode
+
+- `SYSTEM // EXPEDITION STATE`: "Fresh Transfer active. TRANSFER 1/8."
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Apply the same model, deployment, and request distinction to the fresh scenarios."
+- Transfer completion opens the closed-note gate; it does not display full mastery.
+
+### MDC02 — Closed-note gate and mastery
+
+- Exact live status: `CLOSED-NOTE GATE`.
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Explain the data-zone decision and reason without notes."
+- `SYSTEM // EXPEDITION STATE`, after the learner-owned explanation, ownership confirmation, and confidence capture: "Model and deployment readiness confirmed: both 16-of-16 course-authored forms and the closed-note decision explanation are complete."
+- Recorded status is `mastered`; this is internal course readiness, not a Microsoft exam score or guarantee.
+- Optional `PILOT // DECISION OWNER` reflection after mastery: "I can separate the model, its deployment, and the request—and give the requirement behind my choice."
+
+### MDC03 — Volatile-information boundary
+
+Keep this Teacher-owned line visible in primary, transfer, closed-note, and mastered review states:
+
+> Course-authored practice—not a Microsoft exam question. Live availability, regions, quota, prices, parameter support, and preview status must be reverified.
+
+Do not place current model names, versions, SKUs, regional availability, quota, prices, preview status, or universal parameter support in Scene, Pilot, local-surface, or physical-ring copy. Those details require current official-source verification and are not durable story facts.
+
+### MDC04 — Compact close, reopen, and reload
+
+- Close/Exit: `SYSTEM`: "Model choices closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] draft remains in this session."
+- Reopen: `SYSTEM`: "Model choices restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Model choices restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Substitute the exact uppercase state label. Reload preserves sanitized evidence and mode eligibility, never selected answers, free-form explanation text, or ownership-confirmation state.
+- Exit never submits, scores, changes the rings, changes the route, or changes the Tidal Lens.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -356,4 +416,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Responsible AI principles and comparisons remain Teacher-owned; story and local-surface voices never impersonate Microsoft.
 - Responsible AI primary completion leaves the completed Terminal, route geometry, and Tidal Lens unchanged.
 - Primary, transfer, and explanation patterns indicate human course mode only; no pattern implies Machine intent.
+- Model/deployment rings remain human-authored teaching structure; all five live labels stay textual and no ring implies Machine intent.
+- Model/deployment volatile product facts remain Teacher-owned and require current official-source revalidation.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

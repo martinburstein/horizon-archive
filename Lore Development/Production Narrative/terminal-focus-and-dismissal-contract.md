@@ -126,6 +126,19 @@ Use a more specific line only when it adds state clarity.
 - Reopen restores the current mode and session draft; reload restores mode eligibility with clean private fields.
 - Physical primary/transfer/explanation frame patterns are display state only, never Machine judgment or intent.
 
+### Model, Deployment, and Configuration Choices
+
+- Exact title: `Model, Deployment, and Configuration Choices`.
+- Exact textual labels remain visible: `MODEL`, `DEPLOYMENT`, `REQUEST CONFIGURATION`, `Decision`, and `Reason`.
+- System-owned state labels are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; live progress/status copy uses `PRIMARY n/8`, `PRIMARY 16/16`, `TRANSFER n/8`, and `CLOSED-NOTE GATE`.
+- The three physical rings mean model, deployment, and request configuration only. They never indicate Machine attention, preference, judgment, or understanding.
+- Visible dismissal label: `Exit` with accessible name `Exit Model Choices`.
+- Close line: "Model choices closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] draft remains in this session."
+- Reopen restores the current form, item, answers, result, and hints within the same session.
+- Reload restores sanitized evidence and the eligible mode with clean answer and explanation fields; it does not restore ownership confirmation.
+- The course boundary remains Teacher-owned and visible: "Course-authored practice—not a Microsoft exam question. Live availability, regions, quota, prices, parameter support, and preview status must be reverified."
+- Dismissal does not submit an answer, change a physical ring, change route access, or produce a Tidal Lens response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
