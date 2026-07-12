@@ -115,6 +115,16 @@ When a later Terminal is visible before its prerequisite:
 - Unlocking changes visible geometry but does not imply waking consciousness.
 - Wrong actions never reset completed work or consume a finite resource.
 
+## Focus-managed Terminal shell
+
+- The title-first focus announcement belongs to `SYSTEM // EXPEDITION STATE`, not a local surface.
+- Close and Escape are equivalent safe dismissals and preserve the current in-memory session.
+- Dismissal never means submission, acknowledgement, transfer, or mastery.
+- Returning focus to the opening control is an accessibility behavior, not an in-world response.
+- After mastery changes the available controls, prefer the new meaningful action over a disabled or stale trigger.
+
+Shared copy and the five-workspace matrix live in `terminal-focus-and-dismissal-contract.md`.
+
 ## Success-message scaffold
 
 Every code success gets three compact layers:

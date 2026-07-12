@@ -48,6 +48,8 @@ Use these terms consistently across writing and implementation.
 
 Avoid `memory restored`, `welcome back`, `I was waiting`, `you are recognized`, and `test passed` in early encounters. These collapse procedural persistence into personhood or judgment.
 
+Focus management is also expedition application state. Opening focus, contained Tab order, inert background controls, Escape dismissal, and valid-trigger restoration must not be written as attention or control by the Machine. Use `terminal-focus-and-dismissal-contract.md` for shared copy and post-mastery focus recommendations.
+
 ## Reusable interaction state map
 
 ### T00 — Approach, before first contact
@@ -203,5 +205,7 @@ The Glass Meadow now owns the dependency-safe `L-01-01 → L-01-02` sequence. Af
 - Acknowledgement separates output review from evidence transfer.
 - The learner's code is not described as archived or uploaded.
 - Scene transfer confirms only an observable coordination event.
+- Close/Escape is distinct from validation, acknowledgement, transfer, and mastery.
+- Focus movement and restoration are not narrated as Machine agency.
 - Every interpretation remains labeled as pilot inference.
 - No line answers the nature of the Machine, the Builders' disappearance, or the continuity mechanism.

@@ -1,0 +1,190 @@
+# Terminal Focus and Dismissal Contract
+
+Status: production-ready, surface-canon only.
+
+This contract defines player-facing ownership and compact copy for the shared focus-managed Terminal shell. It supports First Signal, Route Marker training, optional Calibration Debugger, Workload Sort, and the Evidence Packet without turning keyboard focus, modal isolation, or focus restoration into behavior by the Machine.
+
+## Implementation alignment
+
+Current shared behavior in `horizon-archive-game/src/App.jsx`:
+
+- each Terminal is a named modal dialog;
+- initial focus moves to the Terminal title;
+- background command controls are inert and world hotspots are disabled while the workspace is open;
+- `Tab` and `Shift+Tab` remain inside the active Terminal;
+- `Escape` and the visible Close/Exit control dismiss the same workspace;
+- ordinary dismissal preserves the existing in-memory exercise session;
+- focus returns to the exact opening trigger when that trigger still exists and is enabled;
+- mastery acknowledgement is a separate action from dismissal;
+- after mastery changes or disables the trigger, focus restoration may be skipped rather than targeting an invalid control.
+
+These are human interface and expedition-state behaviors. They are not evidence that a Terminal captures attention, freezes the world, releases the player, remembers a visitor, or sends focus back.
+
+## Speaker ownership
+
+| Event | Owner | Correct framing | Avoid |
+|---|---|---|---|
+| Dialog opens | `SYSTEM // EXPEDITION STATE` | Active workspace and title identified | “The Terminal draws you in” |
+| Task instructions | `EXPEDITION LINK // LOCAL TOOLING` | Human-authored next action | “The Machine tests you” |
+| Background becomes inert | No in-world line required | One workspace is active in the application | “Time stops outside” |
+| Tab containment | No story line | Keyboard navigation remains in the dialog | “The Terminal will not let you leave” |
+| Close or Escape | `SYSTEM // EXPEDITION STATE` | Workspace dismissed; session held if applicable | “The Terminal releases you” |
+| Focus returns | No story line; optional accessibility status | Opening control restored | “The node calls you back” |
+| Validation | `EXPEDITION LINK // LOCAL TOOLING` | Code/data contract checked | “The Terminal approves” |
+| Mastery acknowledgement | Expedition link, then separately attributed scene/local response | Evidence recorded; physical state may change afterward | “Closing completes the lesson” |
+
+## Compact dialog-entry contract
+
+On open, screen-reader and keyboard focus land on the title. The visible dialogue strip behind the modal should already contain the concise reason for opening; it must not introduce a second task.
+
+Recommended open sequence:
+
+1. Adventure dialogue before launch: one sentence naming the bounded task.
+2. Modal title receives focus: `MACHINE TERMINAL // [TITLE]`.
+3. Tab strip identifies file, optional persistent status, and lesson.
+4. Task pane gives the first learner action.
+
+No additional lore line should fire merely because focus moved.
+
+## Dismissal is not completion
+
+Closing with the button or `Escape` means only:
+
+- hide the active workspace;
+- retain the current in-memory session according to its exercise contract;
+- return to exploration at the opening control when that control remains usable.
+
+It must never:
+
+- mark mastery;
+- transfer evidence;
+- change a physical node from locked, awake, or completed;
+- consume an attempt;
+- clear an error or hint;
+- close the adventure route;
+- create unique dialogue or lore available only through Escape.
+
+Recommended universal system line after ordinary dismissal:
+
+> Workspace closed. Local session held.
+
+Use a more specific line only when it adds state clarity.
+
+## Glass Meadow trigger and copy matrix
+
+### Petal / First Signal
+
+- Opening trigger: Petal hotspot.
+- Open dialogue: `EXPEDITION LINK // LOCAL TOOLING`: “First Signal active. Edit, run, then review the output.”
+- Initial title: `MACHINE TERMINAL // First Signal`.
+- Close/Escape line: `SYSTEM // EXPEDITION STATE`: “First Signal closed. Code, result, and hints remain in this session.”
+- Focus destination after ordinary dismissal: Petal hotspot.
+- Reopen line: “First Signal restored at the last edit.”
+- After acknowledgement: do not restore focus to the now-completed Petal trigger as if another action were required. The next meaningful control is the awake Route Marker.
+
+### Route Marker Survey Label
+
+- Opening trigger: Route Marker hotspot.
+- Locked-state click never opens a modal; it names First Signal as the prerequisite.
+- Open dialogue: “Route training active. Predict, validate, then retrieve.”
+- Initial title: `MACHINE TERMINAL // Route Marker Survey Label`.
+- Close/Escape line: “Route session closed. Source, predictions, results, and hints remain.”
+- Focus destination after ordinary dismissal: Route Marker hotspot.
+- Reopen line: “Route session restored at the current form and phase.”
+- After mastery acknowledgement: do not treat close as the event that creates directional geometry. Acknowledgement records mastery first; the scene response follows as a separately owned event.
+
+### Expedition Calibration Copy
+
+- Opening trigger: `Start Calibration` or `Resume Calibration` in the dialogue actions.
+- Persistent title status: `ROUTE OPEN · [FORM]`.
+- Open dialogue: “Calibration copy active. The physical route remains open.”
+- Visible dismissal label: `Exit` with accessible name `Exit Calibration`.
+- Escape/Exit line: “Calibration exited. The route stays open; repair progress remains in this session.”
+- Focus destination after ordinary exit: the same Start/Resume control when it remains present.
+- Exit never counts as failure, never closes Continue, and never changes physical route geometry.
+- After mastery acknowledgement: route state remains complete; mastery adds only the privacy-limited calibration record.
+
+## Other shared Terminals
+
+### Workload Sort
+
+- Open dialogue: “Workload Sort active. Classify the primary job.”
+- Close/Escape line: “Workload Sort closed. Current card and remediation state remain.”
+- Focus returns to the grounded Workload Sort Terminal hotspot.
+- Dismissal does not submit the selected card.
+
+### Evidence Packet
+
+- Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
+- Close/Escape line: “Evidence workspace closed. Working JSON, notes, source tab, result, and hints remain.”
+- Focus returns to the grounded Evidence Terminal hotspot.
+- Dismissal does not transfer the packet or trigger an automaton response.
+
+## Focus restoration after state change
+
+Exact trigger restoration is correct only if the opening trigger remains connected and enabled.
+
+When acknowledgement changes progression:
+
+- First Signal completion: prefer the newly awake Route Marker as the next focus target or announce its availability, rather than returning to a completed Petal.
+- Route mastery: prefer `Continue` or `Start Calibration`; neither choice should be automatic.
+- Calibration mastery: prefer `Continue` because the optional lesson no longer needs a resume action.
+- Workload Sort mastery: prefer the scene's Continue action after the success recap.
+- Evidence mastery: prefer `Descend to the city` after the final acknowledgement recap.
+
+If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
+
+## Reload and resume distinction
+
+Focus restoration applies to dismissal inside the current application session. It does not imply restoration after a full reload.
+
+On reload/resume:
+
+- working sessions start clean according to each exercise contract;
+- sanitized mastery evidence may persist;
+- focus begins in the restored screen's normal document order;
+- the system may announce restored progression, but no Terminal claims to remember the abandoned cursor position.
+
+Recommended system copy:
+
+> Expedition state restored. Working sessions begin clean.
+
+Pending acknowledgements use their scene-specific recap and next action rather than reopening the previous modal.
+
+## Keyboard-help copy
+
+If keyboard help is displayed, keep it explicitly non-diegetic and concise:
+
+> Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.
+
+Do not require the learner to discover Escape. The visible Close or Exit button remains mandatory. Keyboard technique is never part of Python or AI-901 mastery evidence.
+
+## Pixel-UI constraints
+
+- Fit help and dismissal state inside the final `640 × 480` square-logical-pixel interface.
+- Prefer one compact status line; do not add a persistent modern modal tutorial overlay.
+- Keep focus rings, title, close control, and status readable without covering the active task.
+- At narrow host sizes, Terminal scrolling may reveal later controls, but the focused title and visible Close/Exit must remain understandable on entry.
+- Copy must remain useful without animation, color, or sound.
+
+## Lore and learning safety gates
+
+- Modal focus is human UI state, never Machine attention.
+- Inert background controls do not mean the world stops.
+- Focus containment does not mean captivity or refusal.
+- Close and Escape are identical safe dismissals.
+- Dismissal does not equal acknowledgement, submission, transfer, failure, or mastery.
+- In-memory persistence is attributed to expedition application state.
+- Focus restoration creates no new canon and unlocks no unique story line.
+- Keyboard dexterity is not graded as Python or AI-901 knowledge.
+- Central mysteries remain untouched.
+
+## 901 Teacher handoff
+
+Review learner-facing `L-01-03` instructions so the focus-managed shell supports debugging without becoming part of the assessment:
+
+- add the one-line keyboard help above to orientation, not scoring;
+- state that Escape/Exit preserves the current calibration session and the physical route remains open;
+- keep `PY-007` mastery limited to traceback reading, diagnosis, repair, rerun, and explanation;
+- ensure no assessment item asks what Tab, Escape, modal, focus, or inert means.
+

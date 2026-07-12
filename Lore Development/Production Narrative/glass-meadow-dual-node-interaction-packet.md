@@ -37,6 +37,8 @@ Pixel-UI budget:
 - Button label: verb phrase under 24 characters.
 - Never combine two speakers in one dialogue box.
 
+The shared modal, keyboard, dismissal, focus-return, and post-mastery navigation authority is `terminal-focus-and-dismissal-contract.md`. In particular, closing First Signal must return to the Petal without unlocking the Route Marker; only acknowledgement changes node state.
+
 ## Ownership and state model
 
 | State | Petal Terminal | Route Marker | Forward action |
@@ -414,4 +416,3 @@ This preserves `L-01-01 → L-01-02 → L-01-03` order, normalizes beginner erro
 - No node waits, refuses, listens, understands, accepts a learner, or speaks for the whole Machine.
 - Copy fits the final `640 × 480` 4:3 pixel UI contract; the `320 × 180` meadow remains a provisional scene module.
 - No line reveals the Machine, Builder disappearance, continuity mechanism, or hidden plot.
-
