@@ -322,12 +322,14 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-PROMPT-PARAMETERS",
+            "OFFICIAL-FOUNDRY-SYSTEM-MESSAGES"
           ],
           "activity_ids": ["A-L0502-1", "A-L0502-2"],
           "assessment_ids": ["AS-L0502-PROMPT"],
-          "mastery_gate": "can distinguish system instructions from user prompts and improve a weak prompt"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across six prompt-design decisions, including injection and destructive-action safeguards, then explain one improved prompt without notes"
         },
         {
           "lesson_id": "L-05-03",

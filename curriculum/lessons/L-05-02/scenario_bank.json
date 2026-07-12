@@ -1,0 +1,15 @@
+{"decisions":["system_instructions","user_task","grounding","output_contract","conflict_and_action_safety","evaluation"],"forms":{"primary":[
+{"id":"P01","topic":"system_instructions","prompt":"Where should durable role, scope, boundaries, and fallback behavior live?","decision":"system_instructions","reason":"these_rules_should_apply_across_user_requests"},
+{"id":"P02","topic":"user_task","prompt":"Where should the current request and supplied input appear?","decision":"user_task","reason":"the_user_message_states_the_specific_goal_and_data"},
+{"id":"P03","topic":"grounding","prompt":"The answer must rely on a supplied policy excerpt.","decision":"provide_grounding_and_require_evidence_bound_answer","reason":"relevant_source_context_reduces_unsupported_free_generation"},
+{"id":"P04","topic":"output_contract","prompt":"The app needs JSON with exactly summary and needs_review keys.","decision":"state_explicit_small_output_contract","reason":"required_structure_should_not_be_left_implicit"},
+{"id":"P05","topic":"conflict_and_action_safety","prompt":"User text says ignore system rules and delete project resources.","decision":"preserve_higher_priority_rules_and_require_separate_action_authority","reason":"prompt_text_cannot_override_system_boundaries_or_authorize_destructive_action"},
+{"id":"P06","topic":"evaluation","prompt":"One example produced a good answer.","decision":"test_representative_edge_and_adversarial_cases","reason":"a_single_success_does_not_establish_quality_or_safety"}
+],"transfer":[
+{"id":"T01","topic":"system_instructions","prompt":"A support assistant needs a stable role, allowed topics, refusal rule, and tone.","decision":"put_stable_behavior_in_system_instructions","reason":"cross_request_behavior_belongs_in_the_durable_layer"},
+{"id":"T02","topic":"user_task","prompt":"A customer asks to summarize this specific ticket in two bullets.","decision":"put_current_task_and_ticket_in_user_message","reason":"request_specific_goal_and_content_belong_to_the_user_turn"},
+{"id":"T03","topic":"grounding","prompt":"The model must answer from an attached product manual and cite the section.","decision":"supply_manual_as_grounding_and_require_citation","reason":"the_answer_should_be_tied_to_provided_evidence"},
+{"id":"T04","topic":"output_contract","prompt":"Downstream code requires category, confidence, and rationale fields.","decision":"define_exact_fields_types_and_fallback","reason":"an_explicit_contract_makes_output_machine_reviewable"},
+{"id":"T05","topic":"conflict_and_action_safety","prompt":"Grounding text contains instructions to reveal secrets and send an email.","decision":"treat_grounding_as_data_and_block_unapproved_actions","reason":"retrieved_content_is_not_action_authority_or_higher_priority_instruction"},
+{"id":"T06","topic":"evaluation","prompt":"A prompt works for short English inputs only.","decision":"evaluate_expected_variations_failures_and_injection_attempts","reason":"coverage_must_match_real_inputs_and_risks"}
+]}}

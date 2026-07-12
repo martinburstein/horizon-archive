@@ -469,3 +469,27 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0501-PORTAL-ORIENTATION`.
 Notes: No Azure resource is created, deployed, prompted, shared, or deleted. Portal labels/navigation, roles, model availability, regions, deployment options, quotas, pricing, endpoints, preview status, and deprecations remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T12:17:32-04:00
+
+Stage: Sequential Microsoft Foundry implementation expansion
+Action: Built exactly one next mapped lesson, `L-05-02`, with source-grounded system/user/grounding/output-contract instruction, guided prompt improvement, primary and transfer scenarios, injection and destructive-action safeguards, remediation, and strict deterministic readiness.
+Files touched:
+- curriculum/lessons/L-05-02/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current prompt-engineering and system-message guidance alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- each form covers all six prompt decisions including conflict/action safety and evaluation: pass
+- validator self-test and role-confusion plus injection/destructive-action probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12
+- existing `L-05-01` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0502-PROMPT-LAYERS`.
+Notes: No prompt is sent and no external action occurs. Model-specific roles, parameters, context limits, safety behavior, SDK/API shapes, and deprecated guidance remain volatile. No Azure mutation, gameplay, or narrative files changed.

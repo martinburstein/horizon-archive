@@ -38,6 +38,8 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Authority for current standard/provisioned categories, processing scope, capacity, and preview labels.
 - `OFFICIAL-FOUNDRY-PROMPT-PARAMETERS`: [Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering)
   - Supporting authority for probabilistic completion behavior and temperature/top-p tradeoffs; model-specific support must be reverified.
+- `OFFICIAL-FOUNDRY-SYSTEM-MESSAGES`: [System message design](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/advanced-prompt-engineering)
+  - Authority for system-message role, scope, boundaries, output contracts, fallback behavior, safety constraints, and test/iterate guidance. Model-specific behavior remains volatile.
 - `OFFICIAL-CONTENT-UNDERSTANDING`: [Azure Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
   - Authority for current multimodal information-extraction capabilities and terminology. The current page describes document, image, video, and audio inputs, user-defined output formats, analyzer field schemas, and structured JSON.
 - `OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER`: [Content Understanding analyzer reference](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/analyzer-reference)
