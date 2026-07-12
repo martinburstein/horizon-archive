@@ -115,6 +115,15 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Focus uses the project 2 px gold square outline. After strict mastery closes the Terminal, focus moves to Continue in the lower dialogue strip; Resume must not retain focus.
 - Structured Packets reuse the indigo, amber, violet, and pale-code ramp already established by earlier Terminals. Brackets, one-pixel seams, two-pixel ownership rails, and hard-edged panels supply period character without proprietary imitation.
 
+## Control Flow execution path
+
+- Preserve the execution read as `parameter -> loop -> condition/append -> return`. Primary and unseen transfer display the trace before editable source; closed note compresses it into parameter input, loop and condition, and return placement fields.
+- Equality belongs visibly with the condition/append step. `>=` is a boundary cue, not background syntax, and Teacher remediation must name the one-iteration boundary when missed.
+- Primary/transfer hierarchy is Machine/file/score -> course-authored boundary -> phase and `PILOT // FUNCTION OWNER` -> execution trace -> source -> neutral System score/checks -> labeled Teacher boundary remediation.
+- Closed-note hierarchy is `PILOT // CLOSED-NOTE EXPLANATION OWNER` -> execution-path heading/prose -> three associated fields -> System score -> Teacher execution-path remediation -> ownership/confidence/mastery.
+- Reuse Structured Packets' fixed outer Terminal, contained work-region traversal, 0.68rem/1.4 code, three-column canonical explanation, one-column narrow explanation, and 2 px gold focus language. This continuity signals a more advanced program, not a different operating system.
+- Direct mastery and sanitized mastered-save resume both move focus to Continue. Resume Control Flow must not retain focus after the final gate closes.
+
 ## Responsible AI primary-form containment
 
 - The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.

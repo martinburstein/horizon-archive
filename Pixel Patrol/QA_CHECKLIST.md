@@ -87,6 +87,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Source textarea and all three explanation inputs retain visible 2 px focus outlines at scroll boundaries.
 - [ ] Failed fields expose associated Teacher remediation; correct fields expose neutral System confirmation.
 - [ ] Strict mastery closes the Terminal and moves focus to Continue, not Resume.
+- [ ] Control Flow presents parameter -> loop -> condition/append -> return in that order.
+- [ ] The `>=` equality boundary remains legible in task, source, checks, or Teacher remediation.
+- [ ] Primary/transfer source and closed-note three-field views retain System/Teacher/Pilot separation.
+- [ ] Control Flow primary, transfer-remediation, and closed-note captures exist and are byte-distinct.
+- [ ] The closed-note parameter, loop/condition, and return fields have associated remediation and visible focus.
+- [ ] Direct mastery and mastered-save resume both place focus on Continue.
 
 ## No-dead-end sweep
 

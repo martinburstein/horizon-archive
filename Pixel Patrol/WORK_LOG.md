@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Control Flow final visual gate
+
+- **Completed:** audited complete Control Flow primary, unseen transfer, closed-note, and mastered states after ownership/focus fixes. The 640 x 480 primary, 320 x 240 transfer-remediation, and canonical closed-note captures preserve the parameter -> loop -> condition/append -> return read, equality boundary, readable code, three associated explanation fields, neutral System scoring, separate Teacher boundary remediation, Pilot ownership, fixed chrome, contained work traversal, focus, and Continue handoff. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 59 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms both 8/8 forms, three-part explanation, strict mastery, System/Teacher/Pilot ownership, direct and reload Continue focus, privacy, and credits. Static hashes and dimensions confirm byte-distinct `640 x 480` primary, `320 x 240` transfer-remediation, and `1600 x 900` host closed-note captures; source checks confirm the parameter -> loop -> condition/append -> return order and explicit equality boundary.
+- **Next recommended item:** Location Scout should render the control-flow motif as one inlet, a repeating segmented channel, one fork with an equality notch, and one outlet beyond the loop.
+- **Unresolved risks:** native text-area scrolling remains platform-dependent; retain it until an accessible original bitmap editor preserves selection, caret, and scroll position.
+
 ## 2026-07-12 — Structured Packets final visual gate
 
 - **Completed:** audited the complete Structured Packets primary, transfer, closed-note, and mastered flow after ownership/focus fixes. The 640 x 480 primary capture, 320 x 240 transfer-remediation capture, and canonical closed-note capture preserve a coherent square-pixel family: fixed Machine/file/status chrome, phase-first narrow hierarchy, readable code, three-field Pilot explanation, neutral System scoring, separately framed Teacher remediation, field associations, and Continue focus after mastery. No CSS correction was warranted.

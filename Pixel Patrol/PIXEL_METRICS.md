@@ -24,6 +24,8 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | L-02-03 retained QA stages | 3 byte-distinct captures: primary, transfer remediation, closed note | Production QA metric |
 | Structured Packets frames | primary 640 x 480; transfer 320 x 240; closed note 1600 x 900 containing 640 x 480 logical frame | Production QA metric |
 | Structured Packets closed-note fields | 3: container path, nested access, JSON round trip | Implemented Horizon metric |
+| Control Flow execution motif | 4 ordered reads: parameter, loop, condition/append, return | Implemented Horizon metric |
+| Control Flow closed-note fields | 3: parameter input, loop and condition, return placement | Implemented Horizon metric |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 
