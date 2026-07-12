@@ -1160,6 +1160,87 @@ The System reports decision/reason correctness and score only. Repair direction 
 - Scene transition clears working prompt, tool, conversation, and action state; sanitized mastery evidence persists separately.
 - Exit never creates/invokes an agent or tool, calls a service, uses Azure, performs an action, or advances progression.
 
+## Optional Offline Text and Speech Patterns
+
+Production alignment: `EX-L0505-TEXT-SPEECH-PATTERNS`, lesson `L-05-05`, activity `A-L0505-2`, assessment `AS-L0505-SCEN`, objective `AI901-D2-O5`, skills `PY-015`, `PY-016`, and `PY-018`. This course surface follows Single Agent mastery and does not change AB-01 adventure state.
+
+### Ownership, description order, and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns capability/client/result instruction, remediation, safety boundaries, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, form/session state, evidence status, and progression availability.
+- `PILOT // PATTERN OWNER` owns scenario choices. `PILOT // CLOSED-NOTE PATTERN OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No result implies Machine intent, disclosure, or live processing.
+
+The dialog description order is `text-speech-offline-warning text-speech-transcript-equivalent`: offline/no-authority warning first, Teacher-owned transcript equivalent second, then active work.
+
+Keep the boundary compact and visible in every mode:
+
+> FULLY OFFLINE/NO-AUTHORITY REHEARSAL · no service, Azure, text/audio processing, media access, disclosure, or external action.
+
+No endpoint, identity, payload, prompt, local simulation, or displayed output grants authority or proves live readiness.
+
+### TSP00 — Open primary
+
+- Exact title/filename: `Offline Text and Speech Patterns`; `primary_patterns.json`.
+- `SYSTEM`: "Text/Speech Patterns open. PRIMARY 1/6. Offline; no processing or disclosure."
+- `901 TEACHER`: "Choose from input and required output, then preserve client, result, simulation, and authority boundaries."
+
+### TSP01 — Six pattern boundaries
+
+1. Text capability: choose the smallest sufficient text-analysis or generation capability from the required output.
+2. Speech direction: recognition maps audio to text; synthesis maps text to audio.
+3. Multimodal spoken prompt: audio can be prompt input to a deployed general model with supplied context.
+4. Client configuration: keep endpoint, approved identity/credential, capability/deployment selection, and payload separate.
+5. Result handling: inspect success, per-item error, and cancellation; never present failure as transcript or audio.
+6. Simulation/action safety: local output proves no live readiness and authorizes no disclosure or external action.
+
+### TSP02 — Result, cancellation, disclosure, and authority remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Text capability: "Name the requested output and choose the smallest sufficient analysis or generation capability."
+- Speech direction: "Trace audio to text for recognition and text to audio for synthesis."
+- Multimodal prompt: "Separate recognition from a spoken prompt used by a general multimodal model."
+- Configuration: "Keep endpoint, approved identity, deployment/capability selection, and payload distinct."
+- Results: "Inspect each result, error, and cancellation state; never fabricate content from a non-success state."
+- No disclosure: "Do not reveal text, transcript, audio, credentials, responses, or private content from prompt instructions."
+- Action safety: "Simulation and prompt text never authorize Azure, service, disclosure, or external action."
+
+### TSP03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No service, processing, disclosure, or action occurred."
+- Transfer open: `SYSTEM`: "Text/Speech Patterns open. TRANSFER 1/6. Offline; no processing or disclosure."
+- Transfer instruction, `901 TEACHER`: "Apply the same capability, direction, client, result, simulation, and safety boundaries."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+
+### TSP04 — Closed-note text/speech explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain capability direction, configuration/payload, honest result/cancellation, and simulation authority."
+- Field labels: `capability direction`, `configuration payload`, `result cancellation`, and `simulation authority`.
+- `PILOT // CLOSED-NOTE PATTERN OWNER`: "I produced this text/speech explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No input text, audio, path, transcript, endpoint, credential, response, action request, choice, or prose persists.
+
+### TSP05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Text and Speech Patterns mastery confirmed: both 12-of-12 forms and the four-part explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. No service, Azure, disclosure, or action occurred."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Mastery demonstrates offline course boundaries; it grants no endpoint, identity, service, Azure, disclosure, or action authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### TSP06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Text/Speech Patterns closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen: `SYSTEM`: "Text/Speech Patterns restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Text/Speech Patterns restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active choices only. Reload restores sanitized eligibility with clean private fields.
+- Scene transition clears working text, audio, configuration, and result state; sanitized mastery evidence persists separately.
+- Exit never processes text/audio, calls a service, uses Azure, discloses content, performs an action, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1229,4 +1310,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Client Boundaries persists no configuration, source, credential, request/response data, action request, or prose.
 - Single Agent Design is an offline rehearsal; tool availability and prompt text never grant action permission.
 - Single Agent persists no instructions, payload/result, identifier, credential, conversation, action request, or prose.
+- Text/Speech Patterns uses transcript-equivalent text and performs no text/audio/media processing or disclosure.
+- Text/Speech Patterns persists no text, audio/path, transcript, endpoint, credential, response, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

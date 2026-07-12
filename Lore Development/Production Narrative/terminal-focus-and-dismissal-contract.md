@@ -272,6 +272,20 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never invokes an agent/tool, calls a service, uses Azure, performs an action, grants authority, or implies a Machine response.
 
+### Offline Text and Speech Patterns
+
+- Exact title and dismissal name: `Offline Text and Speech Patterns`; `Exit Text and Speech Patterns`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario cards use `n/6`.
+- Description order is `text-speech-offline-warning text-speech-transcript-equivalent`, then active work.
+- Text/speech capability, direction, client/result boundaries, remediation, action safety, and completion remain `901 TEACHER` copy.
+- Scenario choices are `PILOT // PATTERN OWNER`; explanation prose is `PILOT // CLOSED-NOTE PATTERN OWNER`.
+- The visible boundary states no service, Azure, text/audio processing, media access, disclosure, or external action.
+- Exit line: "Text/Speech Patterns closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen restores active choices only. Reload restores sanitized eligibility with clean text/audio/configuration/result fields.
+- Persistent evidence excludes text, audio/path, transcript, endpoint, credential, service response, action request, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never processes media, calls a service, uses Azure, discloses content, performs an action, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -300,6 +314,7 @@ When acknowledgement changes progression:
 - Prompt Layers mastery: prefer `Continue` after the System announces availability.
 - Client Boundaries mastery: prefer `Continue` after the System announces availability.
 - Single Agent mastery: prefer `Continue` after the System announces availability.
+- Text/Speech Patterns mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 
