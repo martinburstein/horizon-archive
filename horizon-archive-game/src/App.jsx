@@ -159,6 +159,21 @@ import {
   speechWorkloadExercise,
   updateSpeechEvidence,
 } from "./speechWorkloadExercise.js";
+import {
+  evaluateVisualExplanation,
+  evaluateVisualScenario,
+  getVisualExplanationFeedback,
+  getVisualFeedback,
+  getVisualOptions,
+  sanitizeVisualEvidence,
+  updateVisualEvidence,
+  visualDialogDescribedBy,
+  visualDimensions,
+  visualExplanationDimensions,
+  visualPrimaryScenarios,
+  visualTransferScenarios,
+  visualWorkloadExercise,
+} from "./visualWorkloadExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -341,6 +356,7 @@ function loadSave() {
       clientBridgeEvidence: sanitizeClientBridgeEvidence(saved.clientBridgeEvidence),
       textAnalysisEvidence: sanitizeTextAnalysisEvidence(saved.textAnalysisEvidence),
       speechEvidence: sanitizeSpeechEvidence(saved.speechEvidence),
+      visualEvidence: sanitizeVisualEvidence(saved.visualEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -389,6 +405,8 @@ export function App() {
   const [textAnalysisEvidence, setTextAnalysisEvidence] = useState(null);
   const [speechSession, setSpeechSession] = useState(null);
   const [speechEvidence, setSpeechEvidence] = useState(null);
+  const [visualSession, setVisualSession] = useState(null);
+  const [visualEvidence, setVisualEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -396,6 +414,7 @@ export function App() {
   const focusContinueAfterClientRef = useRef(false);
   const focusContinueAfterTextRef = useRef(false);
   const focusContinueAfterSpeechRef = useRef(false);
+  const focusContinueAfterVisualRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -456,9 +475,10 @@ export function App() {
         clientBridgeEvidence,
         textAnalysisEvidence,
         speechEvidence,
+        visualEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -489,6 +509,12 @@ export function App() {
     focusContinueAfterSpeechRef.current = false;
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, speechEvidence?.masteryStatus]);
+
+  useLayoutEffect(() => {
+    if (!focusContinueAfterVisualRef.current || terminalOpen || !pendingAdvance || visualEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterVisualRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, visualEvidence?.masteryStatus]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -530,6 +556,8 @@ export function App() {
     setTextAnalysisEvidence(null);
     setSpeechSession(null);
     setSpeechEvidence(null);
+    setVisualSession(null);
+    setVisualEvidence(null);
     setMode("playing");
   }
 
@@ -565,6 +593,9 @@ export function App() {
     if (saved.speechEvidence?.masteryStatus === "mastered") focusContinueAfterSpeechRef.current = true;
     setSpeechEvidence(saved.speechEvidence);
     setSpeechSession(null);
+    if (saved.visualEvidence?.masteryStatus === "mastered") focusContinueAfterVisualRef.current = true;
+    setVisualEvidence(saved.visualEvidence);
+    setVisualSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1219,6 +1250,14 @@ export function App() {
   function acknowledgeSpeechPrimary() { if (!speechSession?.complete || !speechEvidence?.confidence) return; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkSpeechExplanation(event) { event.preventDefault(); const result = evaluateSpeechExplanation(speechSession.explanationResponse); setSpeechSession({ ...speechSession, explanationResult: result }); setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgeSpeechMastery() { if (!speechSession?.explanationResult?.passed || !speechSession.ownershipConfirmed || !speechEvidence?.confidence) return; focusContinueAfterSpeechRef.current = true; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+  function openVisualWorkloads() { setTerminalOpen(true); setRuinsTerminalKind("visual-workloads"); if (!visualSession) { const form = visualEvidence?.masteryStatus === "primary_complete" ? "transfer" : visualEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setVisualSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { existing_or_new: "", input_modalities: "", required_output: "", media_handling: "" }, explanationResult: null, ownershipConfirmed: false }); } }
+  function exitVisualWorkloads() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads practice closed safely. No media state exists; choices remain session-only.", "system"); }
+  function checkVisual(event) { event.preventDefault(); const scenarios = visualSession.form === "transfer" ? visualTransferScenarios : visualPrimaryScenarios; const scenario = scenarios[visualSession.index]; const result = evaluateVisualScenario(scenario.id, visualSession.response, visualSession.form); const hintLevel = result.passed ? visualSession.hintLevel : Math.max(1, visualSession.hintLevel); setVisualSession({ ...visualSession, result, hintLevel }); setVisualEvidence((previous) => updateVisualEvidence(previous, { form: visualSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: visualSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealVisualHint() { const hintLevel = Math.min(3, visualSession.hintLevel + 1); setVisualSession({ ...visualSession, hintLevel }); setVisualEvidence((previous) => updateVisualEvidence(previous, { hintLevel })); }
+  function advanceVisual() { if (!visualSession.result?.passed) return; const scenarios = visualSession.form === "transfer" ? visualTransferScenarios : visualPrimaryScenarios; if (visualSession.index === scenarios.length - 1) { if (visualSession.form === "transfer") { setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setVisualSession({ ...visualSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setVisualSession({ ...visualSession, complete: true }); return; } setVisualSession({ ...visualSession, index: visualSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
+  function acknowledgeVisualPrimary() { if (!visualSession?.complete || !visualEvidence?.confidence) return; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
+  function checkVisualExplanation(event) { event.preventDefault(); const result = evaluateVisualExplanation(visualSession.explanationResponse); setVisualSession({ ...visualSession, explanationResult: result }); setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgeVisualMastery() { if (!visualSession?.explanationResult?.passed || !visualSession.ownershipConfirmed || !visualEvidence?.confidence) return; focusContinueAfterVisualRef.current = true; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2076,6 +2115,20 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "visual-workloads" && visualSession && (
+          <TerminalShell exerciseId={visualWorkloadExercise.exercise_id} title="Offline Visual Workloads" filename={visualSession.phase === "explanation" ? "closed_note.md" : `${visualSession.form}_visual.json`} lessonId={visualWorkloadExercise.lesson_id} statusText={visualSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${visualSession.form.toUpperCase()} ${visualSession.index + 1}/6`} closeLabel="Exit Visual Workloads" describedBy={visualDialogDescribedBy} restoreFocusTo={terminalTriggerRef.current} onClose={exitVisualWorkloads}>
+            <section className="model-choice-workspace visual-workspace">
+              <p id="visual-offline-warning" className="model-choice-boundary" role="note">FULLY OFFLINE · no media processing, upload, generation, or service call. No image, video, media path, prompt, output, or free text is persisted. Reverify SDKs, endpoints, authentication, supported formats, regions, quotas, pricing, and previews.</p>
+              <p id="visual-text-equivalent" className="speech-transcript">Text-equivalent visual flow: existing pixels → image analysis; visual plus text → multimodal prompting; written brief → new image or time-based video; validate path/type before request; branch analysis JSON from generated media.</p>
+              <p id="visual-deprecation-warning" className="model-choice-boundary" role="note"><strong>DEPRECATION WARNING:</strong> Image Analysis 4.0 is deprecated. Treat it as exam context, not a recommendation for new production architecture; verify current Microsoft guidance.</p>
+              {visualSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkVisualExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE VISUAL-FLOW OWNER</p><h2>Explain workload choice and output handling</h2></header><div className="model-choice-fields visual-explanation">{visualExplanationDimensions.map((dimension) => { const fieldResult = visualSession.explanationResult?.correctness[dimension]; const id = `visual-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension.replaceAll("_", " ")}</span><input aria-label={`Closed-note visual ${dimension}`} aria-invalid={visualSession.explanationResult ? !fieldResult : undefined} aria-describedby={visualSession.explanationResult ? id : undefined} autoComplete="off" value={visualSession.explanationResponse[dimension]} onChange={(event) => setVisualSession({ ...visualSession, explanationResponse: { ...visualSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{visualSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild ${dimension.replaceAll("_", " ")} from the text-equivalent flow.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={visualExplanationDimensions.some((key) => !visualSession.explanationResponse[key])}>Check visual explanation</button></div><div className={visualSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{getVisualExplanationFeedback(visualSession.explanationResult).systemScore}</div>{getVisualExplanationFeedback(visualSession.explanationResult).teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // WORKLOAD AND MEDIA-HANDLING REMEDIATION</strong><span>{getVisualExplanationFeedback(visualSession.explanationResult).teacherRemediation}</span></p>}{visualSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={visualSession.ownershipConfirmed} onChange={(event) => setVisualSession({ ...visualSession, ownershipConfirmed: event.target.checked })} />I produced this visual workload explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="visual-confidence" checked={visualEvidence?.confidence === value} onChange={() => setVisualEvidence((previous) => updateVisualEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!visualSession.ownershipConfirmed || !visualEvidence?.confidence} onClick={acknowledgeVisualMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : visualSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>12 / 12 dimensions</h2><p>Image analysis, multimodal visual prompting, image generation, video generation, validation, and output branching pass. Fresh transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="visual-primary-confidence" checked={visualEvidence?.confidence === value} onChange={() => setVisualEvidence((previous) => updateVisualEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!visualEvidence?.confidence} onClick={acknowledgeVisualPrimary}>Acknowledge primary form</button></section>
+              ) : (() => { const scenarios = visualSession.form === "transfer" ? visualTransferScenarios : visualPrimaryScenarios; const scenario = scenarios[visualSession.index]; const options = getVisualOptions(scenario.id, visualSession.form); const feedback = getVisualFeedback(scenario, visualSession.result, visualSession.hintLevel); return <form className="model-choice-form" onSubmit={checkVisual}><header><p className="pane-label">{visualSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // VISUAL-FLOW OWNER · {scenario.id}</p><p className="model-choice-layer-labels">ANALYZE · MULTIMODAL PROMPT · GENERATE IMAGE · GENERATE VIDEO · VALIDATE · BRANCH</p><h2>{scenario.prompt}</h2><p className="speech-transcript">Text-equivalent scenario: {scenario.prompt}</p></header><div className="model-choice-fields">{visualDimensions.map((dimension) => { const fieldResult = visualSession.result?.correctness[dimension]; const id = `visual-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><select aria-label={`Visual ${dimension}`} aria-invalid={visualSession.result ? !fieldResult : undefined} aria-describedby={visualSession.result ? id : undefined} value={visualSession.response[dimension]} onChange={(event) => setVisualSession({ ...visualSession, response: { ...visualSession.response, [dimension]: event.target.value }, result: null })}><option value="">Choose one</option>{options[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}</select>{visualSession.result && <small id={id}>{fieldResult ? "SYSTEM // Correct." : `901 TEACHER // Review the ${dimension} from existing/new media, modalities, and required output.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit" disabled={visualDimensions.some((key) => !visualSession.response[key])}>Check visual choice</button></div><div className={visualSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{feedback.systemScore}</div>{feedback.teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // VISUAL-FLOW REMEDIATION</strong><span>{feedback.teacherRemediation}</span></p>}{visualSession.result && !visualSession.result.passed && <button className="hint-action" type="button" disabled={visualSession.hintLevel >= 3} onClick={revealVisualHint}>Reveal next visual-flow contrast</button>}{visualSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceVisual}>{visualSession.index === 5 ? (visualSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}</section></form>; })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2241,7 +2294,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && textAnalysisEvidence?.masteryStatus === "mastered" && speechEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openSpeechWorkloads(); }}>{speechSession ? "Resume Speech Workloads" : speechEvidence?.masteryStatus === "primary_complete" ? "Start Speech Transfer" : speechEvidence?.masteryStatus === "transfer_complete" ? "Open Speech Closed-Note Gate" : "Start Speech Workloads"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || speechEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && speechEvidence?.masteryStatus === "mastered" && visualEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openVisualWorkloads(); }}>{visualSession ? "Resume Visual Workloads" : visualEvidence?.masteryStatus === "primary_complete" ? "Start Visual Transfer" : visualEvidence?.masteryStatus === "transfer_complete" ? "Open Visual Closed-Note Gate" : "Start Visual Workloads"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || visualEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

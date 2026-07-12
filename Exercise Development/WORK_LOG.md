@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0403 Offline Visual Workloads complete gate
+
+- **Outcome:** Added mandatory `EX-L0403-VISUAL-WORKLOADS` after Speech. Packaged primary and fresh transfer each require 12/12, followed by a four-part closed-note workload/output explanation and learner ownership confirmation.
+- **Coverage:** Image analysis, multimodal visual prompting, image generation, video generation, media path/type validation, and analysis-JSON versus generated-media handling. Every phase carries text equivalents plus an explicit `Image Analysis 4.0 is deprecated` warning.
+- **Safety/privacy:** Fully offline; no media processing, uploads, service calls, image/video bytes, paths, prompts, outputs, or free text are persisted. Sanitized evidence is allowlisted and forged mastery is downgraded.
+- **Ownership/accessibility:** Pilot owns choices/explanation, System owns neutral scoring, and 901 Teacher owns remediation/completion. Associated field feedback, close/reopen, reload, privacy, canonical/narrow layouts, distinct captures, and direct/reload focus handoff are covered.
+- **Files changed:** Added the visual exercise model and unit tests; updated App, styles, question manifest, full E2E, three visual QA captures, and this log.
+- **Validation:** Curriculum self-test passes; packaged primary and transfer pass 12/12; 84/84 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors and all Visual Workloads gates/privacy/focus checks.
+- **Next recommended item:** Player Agent should independently audit keyboard order, warning announcement order, narrow-screen readability, forged-save resistance, and each workload misconception before any later lesson is added.
+- **Unresolved risks:** This intentionally contains no live media/service integration. Current service/API/deprecation details still require official Microsoft reverification before a live lab.
+
 ## 2026-07-12 — Speech dialog description association P1
 
 - **Outcome:** Applied the Player P1 only. The Speech Workloads dialog now has the exact ordered `aria-describedby="speech-offline-warning speech-transcript-equivalent"` association in primary, transfer, and closed-note phases. Both referenced elements remain persistent siblings of phase content, so their IDs do not disappear during phase transitions.

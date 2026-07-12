@@ -118,6 +118,16 @@
       "assessment_ids": ["AS-L0402-QC", "AS-L0402-SCEN"],
       "skills": ["AI901-D1-O6", "AI901-D2-O5", "PY-015"],
       "success_contract": "Pass both offline forms at 12/12 across recognition, synthesis, spoken multimodal prompts, file direction, and cancellation, then explain the flow without notes."
+    },
+    {
+      "id": "HA-AI901-VISUAL-WORKLOADS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0403-VISUAL-WORKLOADS",
+      "lesson_id": "L-04-03",
+      "activity_id": "A-L0403-2",
+      "assessment_ids": ["AS-L0403-COMPARE"],
+      "skills": ["AI901-D1-O7", "AI901-D2-O6", "PY-015"],
+      "success_contract": "Pass both offline forms at 12/12 across image analysis, multimodal visual prompting, image generation, video generation, media validation, and output handling, then explain the workload flow without notes."
     }
   ]
 }

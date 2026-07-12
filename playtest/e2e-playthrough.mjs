@@ -23,6 +23,8 @@ const referenceTextPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "cu
 const referenceTextTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-01/reference_transfer_answers.json"), "utf8"));
 const referenceSpeechPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-02/reference_primary_answers.json"), "utf8"));
 const referenceSpeechTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-02/reference_transfer_answers.json"), "utf8"));
+const referenceVisualPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-03/reference_primary_answers.json"), "utf8"));
+const referenceVisualTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-03/reference_transfer_answers.json"), "utf8"));
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -945,16 +947,55 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
   await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
-  const speechContinue = page.getByRole("button", { name: "Continue", exact: true }); await speechContinue.waitFor(); if (!await speechContinue.evaluate((el) => el === document.activeElement)) throw new Error("Speech mastery did not focus Continue");
+  const speechContinue = page.getByRole("button", { name: "Start Visual Workloads", exact: true }); await speechContinue.waitFor(); if (!await speechContinue.evaluate((el) => el === document.activeElement)) throw new Error("Speech mastery did not focus Visual Workloads");
   const speechMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).speechEvidence, { key: saveKey });
   if (speechMastery?.masteryStatus !== "mastered" || speechMastery?.attemptCount !== 16) throw new Error(`Speech mastery incomplete: ${JSON.stringify(speechMastery)}`);
   if (["audioBytes", "audioPath", "transcriptText", "spokenPrompt", "serviceResponseBody", "runtimeOutput", "freeFormExplanation", "response", "choices"].some((key) => key in speechMastery)) throw new Error("Speech mastery retained private content");
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
-  const restoredSpeechContinue = page.getByRole("button", { name: "Continue", exact: true });
+  const restoredSpeechContinue = page.getByRole("button", { name: "Start Visual Workloads", exact: true });
   await restoredSpeechContinue.waitFor();
-  if (!await restoredSpeechContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Speech mastery reload did not restore focus to Continue");
-  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  if (!await restoredSpeechContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Speech mastery reload did not restore focus to Visual Workloads");
+
+  await restoredSpeechContinue.click();
+  await page.locator('[data-terminal-exercise="EX-L0403-VISUAL-WORKLOADS"]').waitFor();
+  for (const selector of ["#visual-offline-warning", "#visual-text-equivalent", "#visual-deprecation-warning"]) await page.locator(selector).waitFor();
+  await page.getByText("Image Analysis 4.0 is deprecated", { exact: false }).waitFor();
+  await assertVisualDialogAssociation(page, "primary");
+  await page.getByLabel("Visual decision", { exact: true }).selectOption("image_generation");
+  await page.getByLabel("Visual reason", { exact: true }).selectOption("existing_pixels_are_replaced_by_a_new_visual");
+  await page.getByRole("button", { name: "Check visual choice", exact: true }).click();
+  await page.getByText("901 TEACHER // VISUAL-FLOW REMEDIATION", { exact: true }).waitFor();
+  for (const dimension of ["decision", "reason"]) { const field = page.getByLabel(`Visual ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `visual-${dimension}-feedback`) throw new Error(`Visual ${dimension} remediation was not associated`); }
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("visual-workloads-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next visual-flow contrast", exact: true }).click();
+  for (const id of Object.keys(referenceVisualPrimary)) { const answer = referenceVisualPrimary[id]; await page.getByLabel("Visual decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Visual reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check visual choice", exact: true }).click(); await page.getByText("CHOICE PASS", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "P06" ? "View primary result" : "Next scenario", exact: true }).click(); }
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); await page.getByRole("button", { name: "Start Visual Transfer", exact: true }).click();
+  await assertVisualDialogAssociation(page, "transfer");
+  await page.getByLabel("Visual decision", { exact: true }).selectOption("image_generation"); await page.getByLabel("Visual reason", { exact: true }).selectOption("existing_pixels_are_replaced_by_a_new_visual"); await page.getByRole("button", { name: "Check visual choice", exact: true }).click();
+  await page.setViewportSize({ width: 320, height: 240 }); await page.screenshot({ path: qaPath("visual-workloads-transfer-remediation-qa.png"), fullPage: true }); await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Exit Visual Workloads", exact: true }).click(); await page.getByRole("button", { name: "Resume Visual Workloads", exact: true }).click();
+  if (await page.getByLabel("Visual reason", { exact: true }).inputValue() !== "existing_pixels_are_replaced_by_a_new_visual") throw new Error("Visual transfer reset after close/reopen");
+  const visualDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }); if (visualDraft.includes("existing_pixels_are_replaced") || visualDraft.includes("equipment photo")) throw new Error("Visual choices or scenario text leaked into storage");
+  for (const id of Object.keys(referenceVisualTransfer)) { const answer = referenceVisualTransfer[id]; await page.getByLabel("Visual decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Visual reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check visual choice", exact: true }).click(); await page.getByText("CHOICE PASS", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "T06" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click(); }
+  await assertVisualDialogAssociation(page, "closed-note");
+  for (const dimension of ["existing_or_new", "input_modalities", "required_output", "media_handling"]) await page.getByLabel(`Closed-note visual ${dimension}`, { exact: true }).fill("wrong");
+  await page.getByRole("button", { name: "Check visual explanation", exact: true }).click(); await page.getByText("901 TEACHER // WORKLOAD AND MEDIA-HANDLING REMEDIATION", { exact: true }).waitFor();
+  await page.screenshot({ path: qaPath("visual-workloads-closed-note-qa.png"), fullPage: true }); assertDistinctCaptures(["visual-workloads-primary-qa.png", "visual-workloads-transfer-remediation-qa.png", "visual-workloads-closed-note-qa.png"]);
+  const visualExplanation = { existing_or_new: "analysis interprets existing media generation creates new media", input_modalities: "multimodal visual prompt combines visual and text inputs", required_output: "image generation returns still media video generation returns time based media", media_handling: "validate path type then parse analysis JSON or handle generated media" };
+  for (const [dimension, value] of Object.entries(visualExplanation)) await page.getByLabel(`Closed-note visual ${dimension}`, { exact: true }).fill(value);
+  await page.getByRole("button", { name: "Exit Visual Workloads", exact: true }).click(); await page.getByRole("button", { name: "Resume Visual Workloads", exact: true }).click();
+  if (await page.getByLabel("Closed-note visual media_handling", { exact: true }).inputValue() !== visualExplanation.media_handling) throw new Error("Visual explanation reset after close/reopen");
+  const visualExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }); if (visualExplanationDraft.includes("validate path type") || visualExplanationDraft.includes("multimodal visual prompt")) throw new Error("Visual explanation leaked into storage");
+  await page.getByRole("button", { name: "Check visual explanation", exact: true }).click(); await page.getByText("EXPLANATION PASS", { exact: false }).waitFor(); await page.getByRole("checkbox", { name: "I produced this visual workload explanation myself without notes.", exact: true }).check(); await page.getByRole("radio", { name: "high", exact: true }).check(); await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const visualContinue = page.getByRole("button", { name: "Continue", exact: true }); await visualContinue.waitFor(); if (!await visualContinue.evaluate((element) => element === document.activeElement)) throw new Error("Visual mastery did not focus Continue");
+  const visualMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).visualEvidence, { key: saveKey }); if (visualMastery?.masteryStatus !== "mastered" || visualMastery?.attemptCount !== 16) throw new Error(`Visual mastery incomplete: ${JSON.stringify(visualMastery)}`); if (["mediaBytes", "mediaPath", "generationPrompt", "analysisResultBody", "runtimeOutput", "freeText", "response", "choices"].some((key) => key in visualMastery)) throw new Error("Visual mastery retained private content");
+  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); const restoredVisualContinue = page.getByRole("button", { name: "Continue", exact: true }); await restoredVisualContinue.waitFor(); if (!await restoredVisualContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Visual mastery reload did not restore focus to Continue");
+  await restoredVisualContinue.click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
 
@@ -1110,6 +1151,14 @@ print("Operator:", learner)`);
     speechWorkloadsTransfer: true,
     speechWorkloadsClosedNote: true,
     speechWorkloadsStrictMastery: true,
+    visualWorkloadsPrimary: true,
+    visualWorkloadsTransfer: true,
+    visualWorkloadsClosedNote: true,
+    visualWorkloadsStrictMastery: true,
+    visualWorkloadsDeprecationWarningAllModes: true,
+    visualWorkloadsSessionPrivacy: true,
+    visualWorkloadsContinueFocus: true,
+    visualWorkloadsReloadFocus: true,
     textAnalysisTerminologyBridgeAllModes: true,
     textAnalysisOwnership: true,
     textAnalysisContinueFocus: true,
@@ -1140,7 +1189,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS"],
     credits: true,
   }));
 } finally {
@@ -1255,6 +1304,13 @@ async function assertSpeechDialogAssociation(page, phase) {
     return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   });
   if (duplicateIds.length) throw new Error(`Speech ${phase} rendered duplicate IDs: ${duplicateIds.join(", ")}`);
+}
+
+async function assertVisualDialogAssociation(page, phase) {
+  const dialog = page.locator('[data-terminal-exercise="EX-L0403-VISUAL-WORKLOADS"]');
+  const describedBy = await dialog.getAttribute("aria-describedby");
+  if (describedBy !== "visual-offline-warning visual-text-equivalent visual-deprecation-warning") throw new Error(`Visual ${phase} dialog description order incorrect: ${describedBy}`);
+  for (const id of describedBy.split(" ")) if (await page.locator(`#${id}`).count() !== 1) throw new Error(`Visual ${phase} description ID is missing or duplicated: ${id}`);
 }
 
 function routePrimaryReference() {
