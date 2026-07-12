@@ -207,3 +207,11 @@
 - **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; six distinct grayscale stations; one rail reaches all six; credential is empty/keyed; mock loop remains enclosed; fabricated success rejection and external action lock pass; 61 x 59 bounds fit target; links pass.
 - **Next recommended item:** Accessibility Sentinel should verify all six boundaries and local/live distinctions at native grayscale. Coder may integrate only with live identifiers, correlation, evidence-source labels, and authorization feedback.
 - **Unresolved risks:** geometry cannot convey endpoint values, deployment names, secret state, compatibility versions, payload meaning, correlation evidence, or authorization identity. Live teaching content remains authoritative.
+
+## 2026-07-12 - Single-Agent physical motif
+
+- **Completed:** authored one native `64 x 64` six-station single-agent rail with keyed least-privilege shutters, incomplete denial/timeout branch, rejected fabricated success, and locked external action.
+- **Files changed:** added `production-pixel/AB-01/single-agent/` native, renderer, spec, exact 2x, grayscale, and isolation QA; linked the package. No gameplay, scene, interface, action, or lore changed.
+- **Validation:** native/2x/grayscale dimensions and exact scaling pass; six grayscale stations differ; rail reaches all stations; denial gap, rejection, external lock, 61 x 59 target fit, and links pass.
+- **Next recommended item:** accessibility review at native grayscale with mandatory live permission, denial/timeout, test, correlation, and authorization labels.
+- **Unresolved risks:** geometry cannot communicate instruction content, permission identity, test evidence, errors, or authority. Live teaching content remains authoritative.

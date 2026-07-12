@@ -23,6 +23,7 @@
 - **Portal Orientation motif:** [eight checkpoints, catalog/deployment distinction, empty credential, and cleanup lock](portal-orientation/README.md)
 - **Prompt Layers motif:** [six linked layers, rejected injection spur, and locked external authority](prompt-layers/README.md)
 - **Client Boundaries motif:** [six linked stations, local-only mock loop, rejected success, and locked action](client-boundaries/README.md)
+- **Single-Agent motif:** [six stations, keyed tool shutters, incomplete denial, rejected success, and locked action](single-agent/README.md)
 
 ## Originality gate
 
