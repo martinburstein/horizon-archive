@@ -1,0 +1,10 @@
+{
+  "exercise_id":"EX-L0401-TEXT-ANALYSIS","lesson_id":"L-04-01","activity_id":"A-L0401-2","assessment_ids":["AS-L0401-QC","AS-L0401-SCEN"],"objective_ids":["AI901-D1-O5","AI901-D2-O5"],"skill_ids":["PY-016"],"forms":["primary","transfer"],"dimensions":["decision","reason"],
+  "mastery":{"minimum_correct_per_form":12,"total_per_form":12,"capabilities_required_per_form":["key_phrase_extraction","named_entity_recognition","sentiment_analysis","summarization"],"client_flow_items_required_per_form":2,"closed_note_explanation_required":true},
+  "remediation_sequence":["name_requested_output","contrast_nearest_capability","state_document_id_role","check_result_or_error_branch","retry_fresh_form"],
+  "misconception_tags":["keywords-are-entities","sentiment-is-summary","summary-is-key-phrases","topic-determines-capability","drops-document-id","ignores-per-document-errors"],
+  "evidence_contract":{"store":["lesson_id","exercise_id","form","dimension_correctness","attempt_count","hint_level","confidence","misconception_tags","mastery_status"],"do_not_store":["free_form_reasoning","document_text","service_result_body","runtime_output"]},
+  "session_contract":{"close_reopen":"restore_active_choices","scene_transition":"clear_working_choices","mastery_evidence":"persist_separately"},
+  "ui_contract":{"target_viewport":"640x480","presentation":"one_scenario_card_at_a_time","must_not_rely_on_color_alone":true},
+  "accessibility_contract":{"keyboard_order":["scenario","decision","reason","check","hint","next","exit"],"persistent_labels":true,"field_associated_feedback":true,"status_live_region":true,"time_limit":false,"reduced_motion":true}
+}

@@ -1,0 +1,17 @@
+{
+  "capabilities":["key_phrase_extraction","named_entity_recognition","sentiment_analysis","summarization"],
+  "forms":{"primary":[
+    {"id":"P01","topic":"key_phrase_extraction","prompt":"Return the important phrases that represent the main concepts in each support note.","decision":"key_phrase_extraction","reason":"output_is_salient_phrases_not_people_places_or_opinion"},
+    {"id":"P02","topic":"named_entity_recognition","prompt":"Find people, organizations, and locations mentioned in an incident report.","decision":"named_entity_recognition","reason":"output_is_named_entities_and_categories"},
+    {"id":"P03","topic":"sentiment_analysis","prompt":"Label each review positive, neutral, or negative and identify opinion signals.","decision":"sentiment_analysis","reason":"output_is_sentiment_or_opinion_not_a_condensed_text"},
+    {"id":"P04","topic":"summarization","prompt":"Produce a short version of a long case note while preserving its main meaning.","decision":"summarization","reason":"output_is_condensed_natural_language"},
+    {"id":"P05","topic":"client_flow","prompt":"A batch sends three documents. How should outputs remain attributable?","decision":"assign_and_preserve_document_ids","reason":"results_and_errors_must_map_back_to_each_input"},
+    {"id":"P06","topic":"client_flow","prompt":"One document fails while two succeed.","decision":"handle_results_and_errors_per_document","reason":"a_batch_can_contain_successes_and_errors_together"}
+  ],"transfer":[
+    {"id":"T01","topic":"key_phrase_extraction","prompt":"Extract compact topic phrases from maintenance comments for a tag cloud.","decision":"key_phrase_extraction","reason":"requested_output_is_representative_phrases"},
+    {"id":"T02","topic":"named_entity_recognition","prompt":"Identify product names and organizations in news text.","decision":"named_entity_recognition","reason":"requested_output_is_named_things_with_types"},
+    {"id":"T03","topic":"sentiment_analysis","prompt":"Detect whether customer feedback expresses approval, neutrality, or dissatisfaction.","decision":"sentiment_analysis","reason":"requested_output_is_attitude_polarity"},
+    {"id":"T04","topic":"summarization","prompt":"Turn a lengthy meeting transcript into a concise recap.","decision":"summarization","reason":"requested_output_is_a_shorter_coherent_version"},
+    {"id":"T05","topic":"client_flow","prompt":"Before submitting mixed documents, what field supports reliable correlation?","decision":"give_each_document_a_stable_id","reason":"the_id_connects_input_to_result_or_error"},
+    {"id":"T06","topic":"client_flow","prompt":"After a service call returns structured JSON, what is the safe processing pattern?","decision":"iterate_by_document_and_branch_on_error","reason":"do_not_assume_every_document_succeeded"}
+  ]}}

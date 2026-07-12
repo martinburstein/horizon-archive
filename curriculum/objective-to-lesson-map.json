@@ -219,12 +219,13 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-AZURE-LANGUAGE"
           ],
           "activity_ids": ["A-L0401-1", "A-L0401-2"],
           "assessment_ids": ["AS-L0401-QC", "AS-L0401-SCEN"],
-          "mastery_gate": "can select text analysis capabilities for common scenarios"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms, demonstrate all four required text techniques twice, pass both client-flow items, and explain one choice without notes"
         },
         {
           "lesson_id": "L-04-02",

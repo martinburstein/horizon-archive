@@ -353,3 +353,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0303-CLIENT-BRIDGE`.
 Notes: No live network call occurs and no credential is stored or printed. Package versions, SDK choices, endpoints, identity flows, roles, API versions, and runtime requirements remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T09:11:37-04:00
+
+Stage: Sequential AI-901 workload expansion
+Action: Built exactly one next mapped lesson, `L-04-01`, with source-grounded text-analysis instruction, guided contrasts, primary and transfer scenarios, document-ID/result/error flow, remediation, and strict deterministic readiness.
+Files touched:
+- curriculum/lessons/L-04-01/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Azure Language capability alignment and keyword/key-phrase terminology bridge: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- scenario forms each cover four required techniques plus two client-flow items: pass
+- validator self-test and misconception probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12
+- existing `L-03-03` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0401-TEXT-ANALYSIS`.
+Notes: Scenarios and gates are course-authored; no live service call occurs. SDK packages, operation names, endpoints, authentication, supported languages, limits, regions, pricing, and preview status remain volatile. No gameplay or narrative files changed.
