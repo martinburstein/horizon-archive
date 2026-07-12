@@ -38,8 +38,8 @@ Visual constants:
 Interactive cues:
 
 - The grounded three-fin node is the only verified exercise interface; its localized violet reflection and causeway placement distinguish it from the central landmark.
-- The suspended archive remains a silent observation object. No seam, screen, lens, or bounded access response is confirmed in the prologue.
-- Terminal completion may align the three fin lights and illuminate a seam along the causeway; the suspended structure must remain visually unchanged.
+- The Tidal Lens remains a silent observation object. Its name is a provisional human survey label, not a confirmed function or Builder term.
+- Terminal completion may align the three fin lights and illuminate route geometry along the causeway; the Tidal Lens must remain visually unchanged.
 
 - Reflections preserve a missing architectural element not visible above the water; vision analysis can flag it without explaining it.
 - Inscriptions continue below the waterline and become legible only through image preprocessing or alternate angles.
@@ -50,7 +50,7 @@ Interactive cues:
 
 Use for: provenance, multimodal evidence, vision, information extraction, chronology, generated reconstruction ethics.
 
-Avoid: a single inscription that explains the civilization; treating the black-hole-like sky as an unambiguous cause; making the suspended landmark speak, grade the player, accept identity, or animate in response to the grounded Terminal.
+Avoid: a single inscription that explains the civilization; treating the black-hole-like sky as an unambiguous cause; treating “Tidal Lens” as a confirmed function; or making the landmark speak, grade the player, accept identity, or animate in response to the grounded Terminal.
 
 ## Witness Corridor / Fallen Automaton
 

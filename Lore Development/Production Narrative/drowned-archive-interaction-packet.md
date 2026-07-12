@@ -2,7 +2,24 @@
 
 Status: production-ready, surface-canon only.
 
-Scene contract: `AB-01` is a flooded basin with two deliberately different objects. The grounded three-fin **Workload Sort Terminal** is a bounded local interface. The monumental **suspended archive** is a silent environmental landmark. Completing the exercise may change the Terminal, its reflection, and the onward route; it must not make the landmark speak, rotate, approve, awaken, or explain itself.
+Scene contract: `AB-01` is a flooded basin with two deliberately different objects. The grounded three-fin **Workload Sort Terminal** is a bounded local interface. The monumental **Tidal Lens** is a silent suspended landmark. Completing the exercise may change the Terminal, its reflection, and the onward route; it must not make the landmark speak, rotate, approve, awaken, or explain itself.
+
+## Naming and canonical-frame contract
+
+- `Drowned Archive`: provisional human survey name for the location.
+- `Tidal Lens`: provisional human survey name for the suspended landmark; not a translated Builder label and not a claim about function.
+- `Workload Sort Terminal`: human curriculum/interface name for the grounded exercise node.
+- Player-facing AB-01 copy uses **Tidal Lens**, not “suspended archive.” Technical evidence descriptions may still say “suspended landmark” when defining an image region.
+- At both `640 × 480` and `320 × 240`, the world state is `available` before open, `active` while the Workload Sort dialog is open, and `complete` only after mastery acknowledgement. The Tidal Lens remains visually unchanged across all three states.
+
+### Canonical visible copy
+
+- `available` / `SCENE // SENSOR RECORD`: "A grounded Terminal stands by the causeway. The Tidal Lens remains silent."
+- `active` / `EXPEDITION LINK // LOCAL TOOLING`: "Workload Sort active. Classify the primary job."
+- `complete` / `EXPEDITION LINK // LOCAL TOOLING`: "Mastery evidence recorded."
+- `complete` / `SCENE // SENSOR RECORD`: "Terminal fins align; route geometry appears. The Tidal Lens remains unchanged."
+
+These lines fit the `640 × 480` and `320 × 240` lower dialogue bands. If a temporary implementation can show only one completion line, use the `SCENE` line and do not label it as Pilot speech.
 
 ## Production alignment
 
@@ -21,7 +38,7 @@ The workload categories are supplied by the human expedition curriculum. Their s
 | Object | What the player can support | Allowed response | Forbidden implication |
 |---|---|---|---|
 | Grounded Terminal | A local node emits light, opens the human workbench, retains a local session, and changes state after transfer | Fin light, reflection, status language, route cue | That it is the whole Machine, a person, or a native AI-workload tutor |
-| Suspended archive | A large geometric structure remains above the island without a readable access surface | Observation, comparison, authored silence | That it asked for identity, graded the lesson, watched the player, or approved the result |
+| Tidal Lens | A large geometric structure remains above the island without a readable access surface | Observation, comparison, authored silence | That it asked for identity, graded the lesson, watched the player, or approved the result |
 | Basin / causeway | Reflections and route lighting can connect local events spatially | Water light, paving seams, distant echo | That every environmental change is deliberate communication |
 
 The player should leave knowing more about the **difference between an operable surface and an observed unknown**, not more about the landmark's purpose.
@@ -74,9 +91,9 @@ Physical response:
 
 Do not use a generic “something hears you” response here. The scene's authored restraint is the contrast.
 
-## Silent-landmark observation grammar
+## Tidal Lens observation grammar
 
-The suspended archive is not the Terminal hotspot. If landmark observation is exposed later, use a broad scene-look action, an optional secondary observation target, or arrival/revisit narration. Never redirect `USE` to the learning exercise.
+The Tidal Lens is not the Terminal hotspot. If landmark observation is exposed later, use a broad scene-look action, an optional secondary observation target, or arrival/revisit narration. Never redirect `USE` to the learning exercise.
 
 ### `LOOK AT` landmark
 
@@ -116,7 +133,7 @@ This line prevents the player from assigning the Terminal's response to the land
 
 - `EXPEDITION LINK`: "Local classification session active. Classify the primary job, not every capability involved."
 - `LOCAL SURFACE`: "BOUNDED RECORD OPEN. RELATIONS UNASSIGNED."
-- `SCENE`: "Each fin takes a different steady brightness. The suspended archive's distant glow remains unchanged."
+- `SCENE`: "Each fin takes a different steady brightness. The Tidal Lens remains unchanged."
 
 ### DA01 — Close before completion
 
@@ -181,7 +198,7 @@ Do not add lore per card. Twelve responses would turn classification into a grin
 
 - `EXPEDITION LINK`: "Mastery evidence transferred. Free-form responses were not retained."
 - `LOCAL SURFACE`: "RELATIONS RECORDED. INTERPRETATION UNBOUND."
-- `SCENE`: "The three fins align their light across the paving. A violet seam appears along the causeway toward the central steps. The suspended archive remains unchanged."
+- `SCENE`: "The three fins align. Route geometry appears along the causeway. The Tidal Lens remains unchanged."
 - Evidence payload (`OBSERVED`): after a bounded classification record was transferred, the grounded node and onward-route lighting changed state.
 - Counterpressure (`UNKNOWN`): whether the response reflects old protocol, adaptive translation, local automation, or another process.
 
@@ -198,8 +215,9 @@ These existing lines should be retired in a later Coder pass. This documentation
 
 | Current line | Problem | Production replacement |
 |---|---|---|
+| "A grounded three-fin Terminal waits beside the causeway. The suspended archive above it remains silent." | Uses stale landmark terminology and gives the Terminal an intentional verb | "A grounded Terminal stands by the causeway. The Tidal Lens remains silent." |
 | "The bloom answers in your own alphabet. It did not translate the signal. It was already listening for you." | Claims no translation and implies prior personal attention | "The bloom repeats the expedition output in visible light. That confirms a compatible surface—not who or what, if anything, received it." |
-| "Identity accepted. The structure rotates once, like an eye deciding not to close." | Assigns the exercise to the wrong object, implies identity handling, and personifies the landmark | "The three-fin node records the bounded classification. A violet seam appears along the causeway; the suspended structure remains silent." |
+| "Identity accepted. The structure rotates once, like an eye deciding not to close." | Assigns the exercise to the wrong object, implies identity handling, and personifies the landmark | "Terminal fins align; route geometry appears. The Tidal Lens remains unchanged." |
 | "The path changes behind you. The next interface is already awake." | Implies intentional anticipation and a responsive state not yet observed | "The causeway narrows ahead. A second local surface is visible in the corridor." |
 
 The first replacement also corrects the earlier continuity packet's flagged over-personification. The expedition output may be repeated or mediated; early prose must not declare that translation was unnecessary.
@@ -215,7 +233,7 @@ The encounter teaches the player to classify bounded tasks while the scene refus
 
 ## 901 Teacher handoff for `L-05-07`
 
-Build the final reference lesson around a return to the Drowned Archive with a **multimodal evidence packet** containing three source types: a still image of the suspended landmark, a short basin-audio segment, and Terminal/environment telemetry. The learner should:
+Build the final reference lesson around a return to the Drowned Archive with a **multimodal evidence packet** containing three source types: a still image of the Tidal Lens region, a short basin-audio segment, and Terminal/environment telemetry. The learner should:
 
 1. define a small extraction schema with `source_id`, `modality`, requested fields, and uncertainty;
 2. distinguish general visual description from information extraction into named structured fields;
@@ -229,7 +247,7 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 ## Validation gates
 
 - The grounded node owns all exercise access and response language.
-- The suspended archive never speaks, grades, rotates, awakens, or receives a human identity.
+- The Tidal Lens never speaks, grades, rotates, awakens, or receives a human identity.
 - Workload labels remain human curriculum categories.
 - Close/reopen retains the active form; transition clears working state but not mastery evidence.
 - Hints and remediation do not change story access or unlock unique canon.
