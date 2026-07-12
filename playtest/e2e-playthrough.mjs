@@ -6,6 +6,7 @@ import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_out
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
 import referenceModelChoicePrimary from "../curriculum/lessons/L-02-03/reference_primary_answers.json" with { type: "json" };
+import referenceModelChoiceTransfer from "../curriculum/lessons/L-02-03/reference_transfer_answers.json" with { type: "json" };
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -484,7 +485,7 @@ print("Operator:", learner)`);
   }
   await page.getByRole("button", { name: "Reveal next comparison step", exact: true }).click();
   await page.getByText("Compare the two options", { exact: false }).waitFor();
-  await page.screenshot({ path: "playtest/model-choice-primary-remediation-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("model-choice-primary-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
   const systemSpeaker = page.locator('.speaker[data-dialogue-owner="system"]');
   await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
@@ -511,6 +512,65 @@ print("Operator:", learner)`);
   if (modelChoiceEvidence?.exerciseId !== "EX-L0203-MODEL-DEPLOYMENT-CHOICES" || modelChoiceEvidence?.attemptCount !== 9 || modelChoiceEvidence?.hintLevel !== 2 || modelChoiceEvidence?.confidence !== "medium" || modelChoiceEvidence?.masteryStatus !== "primary_complete") throw new Error(`Model choice primary evidence incomplete: ${JSON.stringify(modelChoiceEvidence)}`);
   if (Object.keys(modelChoiceEvidence.itemCorrectness || {}).length !== 8 || Object.values(modelChoiceEvidence.itemCorrectness).some((dimensions) => Object.keys(dimensions).length !== 2 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Model choice strict primary gate incomplete");
   if (["response", "choices", "freeFormExplanation", "promptText", "runtimeOutput"].some((key) => key in modelChoiceEvidence)) throw new Error("Model choice primary evidence retained private response content");
+
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.locator('main[data-scene="ruins"]').waitFor();
+  await page.getByRole("button", { name: "Start Model Choice Transfer", exact: true }).click();
+  await page.getByText("FRESH TRANSFER", { exact: false }).waitFor();
+  await page.getByText("PILOT // DECISION OWNER", { exact: true }).waitFor();
+  await page.getByText("SYSTEM // STRICT 16-POINT VALIDATOR", { exact: true }).waitFor();
+  await page.getByLabel("Model choice decision", { exact: true }).selectOption("deterministic_fact_lookup");
+  await page.getByLabel("Model choice reason", { exact: true }).selectOption("repeating_a_prompt_guarantees_identical_output");
+  await page.getByRole("button", { name: "Check decision and reason", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  for (const dimension of ["decision", "reason"]) {
+    const field = page.getByLabel(`Model choice ${dimension}`, { exact: true });
+    const feedbackId = `model-choice-${dimension}-feedback`;
+    if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== feedbackId) throw new Error(`Model choice transfer ${dimension} remediation was not field-associated`);
+  }
+  await page.screenshot({ path: qaPath("model-choice-transfer-remediation-qa.png"), fullPage: true });
+  await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
+  if (await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "repeating_a_prompt_guarantees_identical_output") throw new Error("Model choice transfer session reset after close/reopen");
+  for (const scenarioId of Object.keys(referenceModelChoiceTransfer)) {
+    const answer = referenceModelChoiceTransfer[scenarioId];
+    await page.getByLabel("Model choice decision", { exact: true }).selectOption(answer.decision);
+    await page.getByLabel("Model choice reason", { exact: true }).selectOption(answer.reason);
+    await page.getByRole("button", { name: "Check decision and reason", exact: true }).click();
+    await page.getByText("Choice confirmed", { exact: false }).waitFor();
+    await page.getByRole("button", { name: scenarioId === "T08" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click();
+  }
+  await page.getByRole("heading", { name: "Explain the data-zone decision without notes", exact: true }).waitFor();
+  await page.getByText("901 TEACHER // CLOSED-NOTE READINESS GATE", { exact: true }).waitFor();
+  await page.getByLabel("Closed-note model choice decision", { exact: true }).fill("global deployment");
+  await page.getByLabel("Closed-note model choice reason", { exact: true }).fill("global limits processing to the named data zone");
+  await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("model-choice-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["model-choice-primary-qa.png", "model-choice-transfer-remediation-qa.png", "model-choice-closed-note-qa.png"]);
+  for (const dimension of ["decision", "reason"]) {
+    const field = page.getByLabel(`Closed-note model choice ${dimension}`, { exact: true });
+    const feedbackId = `model-choice-explanation-${dimension}-feedback`;
+    if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== feedbackId) throw new Error(`Model choice closed-note ${dimension} remediation was not field-associated`);
+  }
+  await page.getByLabel("Closed-note model choice decision", { exact: true }).fill("data zone deployment");
+  await page.getByLabel("Closed-note model choice reason", { exact: true }).fill("data zone limits processing to the specified zone");
+  await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
+  if (await page.getByLabel("Closed-note model choice reason", { exact: true }).inputValue() !== "data zone limits processing to the specified zone") throw new Error("Model choice closed-note response reset after close/reopen");
+  const modelChoiceExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (modelChoiceExplanationDraft.includes("data zone deployment") || modelChoiceExplanationDraft.includes("data zone limits processing")) throw new Error("Model choice closed-note text leaked into localStorage");
+  await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
+  await page.getByText("Complete decision and reason confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this decision and reason myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
+  const modelChoiceMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).modelChoiceEvidence, { key: saveKey });
+  if (modelChoiceMastery?.masteryStatus !== "mastered" || modelChoiceMastery?.form !== "explanation" || modelChoiceMastery?.attemptCount !== 20) throw new Error(`Model choice strict mastery evidence incomplete: ${JSON.stringify(modelChoiceMastery)}`);
+  if (Object.keys(modelChoiceMastery.itemCorrectness || {}).length !== 17 || Object.values(modelChoiceMastery.itemCorrectness).some((dimensions) => Object.keys(dimensions).length !== 2 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Model choice primary, transfer, and closed-note gate incomplete");
+  if (["response", "choices", "freeFormExplanation", "promptText", "runtimeOutput"].some((key) => key in modelChoiceMastery)) throw new Error("Model choice mastery retained private response content");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -642,6 +702,10 @@ print("Operator:", learner)`);
     responsibleAIClosedNoteExplanation: true,
     responsibleAIStrictMastery: true,
     modelChoicePrimary: true,
+    modelChoiceTransfer: true,
+    modelChoiceClosedNoteExplanation: true,
+    modelChoiceStrictMastery: true,
+    modelChoiceDistinctCaptures: true,
     modelChoiceFourFamilies: true,
     modelChoiceSessionPrivacy: true,
     dialogueOwnershipMode: true,

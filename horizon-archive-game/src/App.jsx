@@ -78,12 +78,14 @@ import {
   updateResponsibleAIEvidence,
 } from "./responsibleAIExercise.js";
 import {
+  evaluateModelChoiceExplanation,
   evaluateModelChoiceScenario,
   getModelChoiceOptions,
   modelChoiceDimensions,
   modelChoiceExercise,
   modelChoicePrimaryScenarios,
   modelChoiceRemediation,
+  modelChoiceTransferScenarios,
   sanitizeModelChoiceEvidence,
   updateModelChoiceEvidence,
 } from "./modelChoiceExercise.js";
@@ -875,7 +877,10 @@ export function App() {
   function openModelChoiceExercise() {
     setTerminalOpen(true);
     setRuinsTerminalKind("model-choice");
-    if (!modelChoiceSession) setModelChoiceSession({ index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false });
+    if (!modelChoiceSession) {
+      const form = modelChoiceEvidence?.masteryStatus === "primary_complete" ? "transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" || modelChoiceEvidence?.form === "explanation" ? "explanation" : "primary";
+      setModelChoiceSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { decision: "", reason: "" }, explanationResult: null, ownershipConfirmed: false });
+    }
   }
 
   function exitModelChoiceExercise() {
@@ -886,13 +891,14 @@ export function App() {
 
   function checkModelChoice(event) {
     event.preventDefault();
-    const scenario = modelChoicePrimaryScenarios[modelChoiceSession.index];
-    const result = evaluateModelChoiceScenario(scenario.id, modelChoiceSession.response);
+    const scenarios = modelChoiceSession.form === "transfer" ? modelChoiceTransferScenarios : modelChoicePrimaryScenarios;
+    const scenario = scenarios[modelChoiceSession.index];
+    const result = evaluateModelChoiceScenario(scenario.id, modelChoiceSession.response, modelChoiceSession.form);
     const hintLevel = result.passed ? modelChoiceSession.hintLevel : Math.max(1, modelChoiceSession.hintLevel);
     setModelChoiceSession({ ...modelChoiceSession, result, hintLevel });
     setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, {
-      scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel,
-      misconceptionTags: result.misconceptionTags, masteryStatus: result.passed ? "in_progress" : "remediation_required",
+      form: modelChoiceSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel,
+      misconceptionTags: result.misconceptionTags, masteryStatus: modelChoiceSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required",
     }));
   }
 
@@ -904,8 +910,12 @@ export function App() {
 
   function nextModelChoiceScenario() {
     if (!modelChoiceSession.result?.passed) return;
-    if (modelChoiceSession.index === modelChoicePrimaryScenarios.length - 1) {
-      setModelChoiceSession({ ...modelChoiceSession, complete: true });
+    const scenarios = modelChoiceSession.form === "transfer" ? modelChoiceTransferScenarios : modelChoicePrimaryScenarios;
+    if (modelChoiceSession.index === scenarios.length - 1) {
+      if (modelChoiceSession.form === "transfer") {
+        setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true }));
+        setModelChoiceSession({ ...modelChoiceSession, form: "explanation", phase: "explanation", complete: false, result: null, hintLevel: 0 });
+      } else setModelChoiceSession({ ...modelChoiceSession, complete: true });
       return;
     }
     setModelChoiceSession({ ...modelChoiceSession, index: modelChoiceSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 });
@@ -913,11 +923,31 @@ export function App() {
 
   function acknowledgeModelChoicePrimary() {
     if (!modelChoiceSession?.complete || !modelChoiceEvidence?.confidence) return;
-    setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { masteryStatus: "primary_complete", clearMisconceptionTags: true }));
+    setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true }));
     setModelChoiceSession(null);
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setDialogue("Model and deployment primary form complete at 16 of 16. Transfer and closed-note explanation remain; this course-authored practice is not a Microsoft exam question.", "teacher");
+  }
+
+  function checkModelChoiceExplanation(event) {
+    event.preventDefault();
+    const result = evaluateModelChoiceExplanation(modelChoiceSession.explanationResponse);
+    const hintLevel = result.passed ? modelChoiceSession.hintLevel : Math.max(1, modelChoiceSession.hintLevel);
+    setModelChoiceSession({ ...modelChoiceSession, explanationResult: result, hintLevel });
+    setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, {
+      form: "explanation", scenarioId: "closed_note_explanation", correctness: result.correctness,
+      incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: "transfer_complete",
+    }));
+  }
+
+  function acknowledgeModelChoiceMastery() {
+    if (!modelChoiceSession?.explanationResult?.passed || !modelChoiceSession.ownershipConfirmed || !modelChoiceEvidence?.confidence) return;
+    setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
+    setModelChoiceSession(null);
+    setTerminalOpen(false);
+    setRuinsTerminalKind(null);
+    setDialogue("Model and deployment readiness confirmed: both 16-of-16 course-authored forms and the closed-note decision explanation are complete.", "teacher");
   }
 
   function validateEvidenceOutput(event) {
@@ -1585,23 +1615,25 @@ export function App() {
           <TerminalShell
             exerciseId={modelChoiceExercise.exercise_id}
             title="Model, Deployment, and Configuration Choices"
-            filename="primary_choices.json"
+            filename={modelChoiceSession.phase === "explanation" ? "closed_note.md" : `${modelChoiceSession.form}_choices.json`}
             lessonId={modelChoiceExercise.lesson_id}
-            statusText={modelChoiceSession.complete ? "PRIMARY 16/16" : `PRIMARY ${modelChoiceSession.index + 1}/8`}
+            statusText={modelChoiceSession.phase === "explanation" ? "CLOSED-NOTE GATE" : modelChoiceSession.complete ? "PRIMARY 16/16" : `${modelChoiceSession.form.toUpperCase()} ${modelChoiceSession.index + 1}/8`}
             closeLabel="Exit Model Choices"
             restoreFocusTo={terminalTriggerRef.current}
             onClose={exitModelChoiceExercise}
           >
             <section className="model-choice-workspace">
               <p className="model-choice-boundary">Course-authored practice — not a Microsoft exam question. Live availability, regions, quota, prices, parameter support, and preview status must be reverified.</p>
-              {!modelChoiceSession.complete ? (() => {
-                const scenario = modelChoicePrimaryScenarios[modelChoiceSession.index];
-                const options = getModelChoiceOptions(scenario.id);
+              {!modelChoiceSession.complete && modelChoiceSession.phase !== "explanation" ? (() => {
+                const scenarios = modelChoiceSession.form === "transfer" ? modelChoiceTransferScenarios : modelChoicePrimaryScenarios;
+                const scenario = scenarios[modelChoiceSession.index];
+                const options = getModelChoiceOptions(scenario.id, modelChoiceSession.form);
                 return (
                   <form className="model-choice-form" onSubmit={checkModelChoice}>
                     <header>
-                      <p className="pane-label">PRIMARY · {scenario.topic.replaceAll("_", " ")} · {scenario.id} · {modelChoiceSession.index + 1}/8</p>
+                      <p className="pane-label">{modelChoiceSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · {scenario.topic.replaceAll("_", " ")} · {scenario.id} · {modelChoiceSession.index + 1}/8</p>
                       <p className="model-choice-layer-labels">MODEL · DEPLOYMENT · REQUEST CONFIGURATION</p>
+                      <p className="model-choice-owner">PILOT // DECISION OWNER</p>
                       <h2>{scenario.prompt}</h2>
                     </header>
                     <div className="model-choice-fields">
@@ -1627,16 +1659,44 @@ export function App() {
                       })}
                     </div>
                     <section className="terminal-console model-choice-output" aria-labelledby="model-choice-output-heading">
-                      <div className="console-heading-row"><strong id="model-choice-output-heading">STRICT 16-POINT VALIDATOR</strong><button className="run-action" type="submit" disabled={modelChoiceDimensions.some((dimension) => !modelChoiceSession.response[dimension])}>Check decision and reason</button></div>
+                      <div className="console-heading-row"><strong id="model-choice-output-heading">SYSTEM // STRICT 16-POINT VALIDATOR</strong><button className="run-action" type="submit" disabled={modelChoiceDimensions.some((dimension) => !modelChoiceSession.response[dimension])}>Check decision and reason</button></div>
                       <div className={modelChoiceSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{modelChoiceSession.result ? `${modelChoiceSession.result.score}/2 · ${modelChoiceSession.result.passed ? "Choice confirmed." : modelChoiceRemediation(scenario, modelChoiceSession.result, modelChoiceSession.hintLevel)}` : "Choose both the decision and the reason grounded in the stated requirement."}</div>
                       {modelChoiceSession.result && !modelChoiceSession.result.passed && <button className="hint-action" type="button" disabled={modelChoiceSession.hintLevel >= 3} onClick={revealModelChoiceHint}>Reveal next comparison step</button>}
-                      {modelChoiceSession.result?.passed && <button className="confirm-action" type="button" onClick={nextModelChoiceScenario}>{modelChoiceSession.index === 7 ? "View primary result" : "Next scenario"}</button>}
+                      {modelChoiceSession.result?.passed && <button className="confirm-action" type="button" onClick={nextModelChoiceScenario}>{modelChoiceSession.index === 7 ? (modelChoiceSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}
                     </section>
                   </form>
                 );
-              })() : (
+              })() : modelChoiceSession.phase === "explanation" ? (
+                <form className="model-choice-form model-choice-explanation" onSubmit={checkModelChoiceExplanation}>
+                  <header>
+                    <p className="pane-label">901 TEACHER // CLOSED-NOTE READINESS GATE</p>
+                    <h2>Explain the data-zone decision without notes</h2>
+                    <p>Processing may occur across the named US data zone but not outside it. Recall the decision and reason. No answer choices are shown, and your words remain session-only.</p>
+                  </header>
+                  <div className="model-choice-fields">
+                    {modelChoiceDimensions.map((dimension) => {
+                      const fieldResult = modelChoiceSession.explanationResult?.correctness[dimension];
+                      const feedbackId = `model-choice-explanation-${dimension}-feedback`;
+                      return <label key={dimension}>
+                        <span>{dimension === "decision" ? "Closed-note decision" : "Closed-note reason"}</span>
+                        <input aria-label={`Closed-note model choice ${dimension}`} aria-describedby={modelChoiceSession.explanationResult ? feedbackId : undefined} aria-invalid={modelChoiceSession.explanationResult ? !fieldResult : undefined} autoComplete="off" value={modelChoiceSession.explanationResponse[dimension]} onChange={(event) => setModelChoiceSession({ ...modelChoiceSession, explanationResponse: { ...modelChoiceSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />
+                        {modelChoiceSession.explanationResult && <small id={feedbackId}>{fieldResult ? "Recalled correctly." : `Reconstruct the ${dimension} from the processing boundary.`}</small>}
+                      </label>;
+                    })}
+                  </div>
+                  <section className="terminal-console model-choice-output" aria-labelledby="model-choice-explanation-output-heading">
+                    <div className="console-heading-row"><strong id="model-choice-explanation-output-heading">SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={modelChoiceDimensions.some((dimension) => !modelChoiceSession.explanationResponse[dimension])}>Check my explanation</button></div>
+                    <div className={modelChoiceSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{modelChoiceSession.explanationResult ? `${modelChoiceSession.explanationResult.score}/2 · ${modelChoiceSession.explanationResult.passed ? "Complete decision and reason confirmed." : "Rebuild both parts from the requirement; the deployment boundary is the deciding constraint."}` : "No notes or answer choices are shown. Recall both dimensions."}</div>
+                    {modelChoiceSession.explanationResult?.passed && <>
+                      <label className="ownership-confirmation"><input type="checkbox" checked={modelChoiceSession.ownershipConfirmed} onChange={(event) => setModelChoiceSession({ ...modelChoiceSession, ownershipConfirmed: event.target.checked })} />I produced this decision and reason myself without notes.</label>
+                      <fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="model-choice-mastery-confidence" checked={modelChoiceEvidence?.confidence === value} onChange={() => setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset>
+                      <button className="confirm-action" type="button" disabled={!modelChoiceSession.ownershipConfirmed || !modelChoiceEvidence?.confidence} onClick={acknowledgeModelChoiceMastery}>Acknowledge strict mastery</button>
+                    </>}
+                  </section>
+                </form>
+              ) : (
                 <section className="workload-summary model-choice-summary" aria-labelledby="model-choice-summary-heading">
-                  <p className="pane-label">PRIMARY FORM COMPLETE</p>
+                  <p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p>
                   <h2 id="model-choice-summary-heading">16 / 16 dimensions</h2>
                   <p>Mechanics, model choice, deployment choice, and configuration are covered. Transfer and a closed-note explanation remain before full lesson mastery.</p>
                   <fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="model-choice-confidence" checked={modelChoiceEvidence?.confidence === value} onChange={() => setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset>
@@ -1793,8 +1853,8 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "primary_complete" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : "Start Model Choices"}</button>
+                  {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
+                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Resume Closed-Note Gate" : "Start Model Choices"}</button>
                   )}
                   {pendingAdvance && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
