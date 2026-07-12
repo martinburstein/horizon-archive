@@ -6,7 +6,7 @@
     "supports_objectives": ["AI901-D2-O3"],
     "supports_python_skills": ["PY-013", "PY-016", "PY-017", "PY-018", "PY-019"],
     "mastery_signal": "independent_use",
-    "attempt_policy": "Closed-note; critical misconceptions override raw score; remediate then retry with fresh mock values.",
+    "attempt_policy": "Run the mock, pass primary 12/12, remediate every boundary miss, then pass fresh transfer 12/12.",
     "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
     "records_confidence": true,
     "records_misconception_tags": true,
@@ -28,4 +28,3 @@
     "status": "review"
   }
 ]
-

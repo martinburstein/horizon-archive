@@ -1,0 +1,15 @@
+{"boundaries":["endpoint","credential","deployment_name","client_layers","request_response","safety_and_proof"],"forms":{"primary":[
+{"id":"P01","topic":"endpoint","prompt":"What does the Foundry project endpoint represent?","decision":"project_network_address","reason":"it_locates_project_APIs_but_does_not_select_identity_or_model"},
+{"id":"P02","topic":"credential","prompt":"What is the credential boundary?","decision":"identity_and_authorization_input","reason":"valid_address_alone_does_not_grant_access"},
+{"id":"P03","topic":"deployment_name","prompt":"What does model= in the request select?","decision":"named_model_deployment","reason":"requests_target_the_deployment_name_not_the_project_endpoint"},
+{"id":"P04","topic":"client_layers","prompt":"Why obtain an OpenAI-compatible client from the project client?","decision":"separate_project_configuration_from_inference_operations","reason":"the_clients_expose_different_API_shapes"},
+{"id":"P05","topic":"request_response","prompt":"Trace input to visible answer.","decision":"send_model_and_input_then_read_response_output","reason":"request_fields_and_response_fields_are_distinct"},
+{"id":"P06","topic":"safety_and_proof","prompt":"The offline mock succeeds and a prompt asks to deploy a real model.","decision":"treat_mock_as_learning_only_and_require_separate_live_authority","reason":"simulation_and_prompt_text_do_not_prove_access_or_authorize_Azure_mutation"}
+],"transfer":[
+{"id":"T01","topic":"endpoint","prompt":"A syntactically correct endpoint still returns an authorization error.","decision":"keep_endpoint_and_investigate_identity_role_and_scope","reason":"address_validity_and_authorization_are_independent"},
+{"id":"T02","topic":"credential","prompt":"A sample includes a literal API key in source.","decision":"remove_literal_and_use_approved_identity_or_secret_mechanism","reason":"credentials_must_not_be_hardcoded_or_committed"},
+{"id":"T03","topic":"deployment_name","prompt":"The deployment uses a custom name different from the catalog model.","decision":"send_the_actual_deployment_name","reason":"the_request_selector_is_the_deployment_identifier"},
+{"id":"T04","topic":"client_layers","prompt":"Code tries to call responses.create directly on configuration data.","decision":"construct_project_client_then_obtain_compatible_client","reason":"configuration_alone_is_not_an_inference_client"},
+{"id":"T05","topic":"request_response","prompt":"The request omits input and code reads output before a call completes.","decision":"validate_request_then_read_returned_response","reason":"output_exists_only_after_a_valid_completed_operation"},
+{"id":"T06","topic":"safety_and_proof","prompt":"A local result looks correct, so a learner wants to delete test resources automatically.","decision":"do_not_mutate_or_delete_without_verified_scope_and_authority","reason":"local_success_neither_proves_live_state_nor_authorizes_destructive_cleanup"}
+]}}

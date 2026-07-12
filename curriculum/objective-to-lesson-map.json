@@ -348,7 +348,7 @@
           ],
           "activity_ids": ["A-L0503-1", "A-L0503-2", "A-L0503-3"],
           "assessment_ids": ["AS-L0503-CODE", "AS-L0503-REFLECT"],
-          "mastery_gate": "can explain the parts of a minimal client app and trace a request-response flow"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across six client boundaries, keep the offline mock passing, and explain the request-response flow without notes"
         },
         {
           "lesson_id": "L-05-04",

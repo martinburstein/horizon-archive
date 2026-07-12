@@ -14,7 +14,7 @@
   "assessment_ids": ["AS-L0503-CODE", "AS-L0503-REFLECT"],
   "learner_starting_state": "Can run Python, use variables and dictionaries, read environment variables, and explain request versus response.",
   "learner_ending_state": "Can trace a Foundry client call, distinguish project endpoint from model/deployment name, run the offline simulation, and identify the credential boundary in a current official client pattern.",
-  "mastery_gate": "Earn at least 8 of 10 points with no endpoint/deployment or secret-handling critical miss, then explain the request-response flow without notes.",
+  "mastery_gate": "Score 12 of 12 on primary and fresh-transfer forms across six client boundaries, run the offline mock successfully, and explain the request-response flow without notes.",
   "estimated_minutes": 55,
   "difficulty_band": "beginner_plus",
   "provenance_policy": {
@@ -23,6 +23,5 @@
     "unsupported_claim_behavior": "Treat UI, package versions, model names, and authentication details as volatile and reverify before live use."
   },
   "status": "review",
-  "notes": "Offline simulation is required. Live Azure extension is optional and must follow current official documentation."
+  "notes": "Offline simulation is required. This lesson authorizes no live Azure or external action."
 }
-

@@ -104,3 +104,24 @@ Score with `check.md`.
 - In three days: repair a mock endpoint/payload fault without notes.
 - In seven days: explain the official client pattern line by line and reverify the official documentation date/details.
 
+## Deterministic primary and transfer gate
+
+After the mock succeeds, complete `primary_answers.json` closed-note:
+
+```powershell
+python validate_client_boundaries.py --form primary --check primary_answers.json
+```
+
+For each miss, name the failed boundary: endpoint, credential, deployment name, client layer, request/response, or simulation/action safety. Then complete transfer:
+
+```powershell
+python validate_client_boundaries.py --form transfer --check transfer_answers.json
+```
+
+Readiness now requires the offline mock plus 12/12 on both forms and a closed-note explanation. The former 8/10 check remains retrieval practice but does not independently open the gate.
+
+## Privacy, accessibility, session, volatility, and action safety
+
+The exercise stores no endpoint, deployment name, credential, request input, response output, learner source, or external-action request. Controls are labeled, keyboard accessible, untimed, and not color-only. Working source and runtime configuration clear on scene transition. SDK packages/versions, endpoint forms, client methods, authentication, roles, model names, API behavior, and deprecated guidance are volatile and must be reverified before live use.
+
+No prompt, local mock, or assessment response authorizes a service call, deployment, resource creation, credential use, or deletion. Any live or destructive action requires separate verified scope and authority.

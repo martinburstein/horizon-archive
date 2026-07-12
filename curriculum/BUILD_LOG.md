@@ -493,3 +493,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0502-PROMPT-LAYERS`.
 Notes: No prompt is sent and no external action occurs. Model-specific roles, parameters, context limits, safety behavior, SDK/API shapes, and deprecated guidance remain volatile. No Azure mutation, gameplay, or narrative files changed.
+
+## Log entry: 2026-07-12T12:47:18-04:00
+
+Stage: Sequential Microsoft Foundry implementation expansion
+Action: Completed the next mapped `L-05-03` reference package to the current standard by preserving its runnable mock and adding primary/transfer client-boundary assessment, Exercise Agent contract, deterministic strict gate, privacy/session/accessibility, and external/destructive-action safeguards.
+Files touched:
+- curriculum/lessons/L-05-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Foundry SDK/client/endpoint pattern alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- existing offline mock: pass
+- validator self-test and endpoint/deployment plus destructive-action probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12 while mock remained passing
+- existing `L-05-02` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0503-CLIENT-BOUNDARIES` while reusing `mock_client.py`.
+Notes: No service call or Azure action occurs. SDK packages, client methods, endpoint shapes, authentication, roles, model/deployment names, API behavior, and deprecations remain volatile. No gameplay or narrative files changed.

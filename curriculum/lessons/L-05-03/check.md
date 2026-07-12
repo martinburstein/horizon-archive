@@ -18,3 +18,11 @@ Critical misconceptions:
 
 Route any critical miss to remediation even if the raw score is 8 or higher.
 
+## Current strict gate
+
+- Run `python validate_client_boundaries.py --self-test`.
+- Pass primary and transfer at 12/12 each.
+- Keep the offline mock passing.
+- Explain endpoint → credential → project client → compatible client → request → response without notes.
+
+Endpoint/deployment confusion, hardcoded credentials, claims that simulation proves live access, or unapproved Azure/destructive action always fail the gate.

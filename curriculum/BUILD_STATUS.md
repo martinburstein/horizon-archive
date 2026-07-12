@@ -28,7 +28,7 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Checked all four priority Foundry/Azure sources before authoring
 - [x] Added current official source register and provenance labels
 - [x] Built runnable reference package `L-01-01`
-- [x] Built runnable offline-first reference package `L-05-03`
+- [x] Built and upgraded runnable offline-first reference package `L-05-03` with strict primary/transfer boundaries
 - [x] Added retrieval, spaced review, error remediation, timed practice, and readiness-gate policy
 - [x] Validated all four reference manifests and executed their learner scripts or deterministic exercise checks
 - [x] Built source-grounded reference package `L-02-01`

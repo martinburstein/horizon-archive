@@ -34,6 +34,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-04-04` — complete source-grounded extraction scenario package covering documents/forms, images, audio, video, analyzer schemas, null preservation, and evidence-aware review
 - `curriculum/lessons/L-05-01` — complete source-grounded portal rehearsal covering access, project scope, model/deployment, readiness, interaction, connection details, and safe cleanup
 - `curriculum/lessons/L-05-02` — complete source-grounded prompt package covering system/user roles, grounding, output contracts, instruction conflict, action boundaries, and evaluation
+- `curriculum/lessons/L-05-03` — upgraded offline SDK client package with runnable mock, primary/transfer client-boundary validation, and no-live-action safeguards
 
 ## Ready now
 
