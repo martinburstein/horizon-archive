@@ -445,3 +445,27 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0404-EXTRACTION-WORKLOADS`.
 Notes: No source media or live service call occurs. Analyzer schemas, field types, formats, languages, SDK/REST operations, API versions, limits, regions, pricing, and preview/deprecation status remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T11:41:01-04:00
+
+Stage: Sequential Microsoft Foundry implementation expansion
+Action: Built exactly one next mapped lesson, `L-05-01`, as an offline portal orientation covering access, project scope, capability-fit model choice, named deployment, provisioning readiness, bounded interaction, connection details, and safe cleanup.
+Files touched:
+- curriculum/lessons/L-05-01/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Foundry resource/project/model-deployment quickstart alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- each form covers all eight portal checkpoints including access and cleanup safeguards: pass
+- validator self-test and catalog-versus-deployment plus destructive-cleanup probes: pass
+- primary reference 16/16; transfer reference 16/16; blank form correctly rejected at 0/16
+- existing `L-04-04` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0501-PORTAL-ORIENTATION`.
+Notes: No Azure resource is created, deployed, prompted, shared, or deleted. Portal labels/navigation, roles, model availability, regions, deployment options, quotas, pricing, endpoints, preview status, and deprecations remain volatile. No gameplay or narrative files changed.

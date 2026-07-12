@@ -1,0 +1,3 @@
+[
+{"assessment_id":"AS-L0501-ORDER","lesson_id":"L-05-01","assessment_type":"workflow_ordering","supports_objectives":["AI901-D2-O2"],"supports_python_skills":["PY-017","PY-019"],"mastery_signal":"independent_use","attempt_policy":"Score primary 16/16, remediate every workflow miss, then score fresh troubleshooting transfer 16/16 and explain the end-to-end flow without notes.","result_states":["correct","partially_correct","incorrect","not_attempted","needs_review"],"records_confidence":true,"records_misconception_tags":true,"records_review_flag":true,"status":"review"}
+]

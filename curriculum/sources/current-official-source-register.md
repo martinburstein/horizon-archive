@@ -22,6 +22,8 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - For current Python examples in the new Foundry portal, the page lists `azure-ai-projects>=2.0.0`.
   - The current Python client pattern uses `AIProjectClient`, `DefaultAzureCredential`, and an OpenAI-compatible client obtained from the project client.
   - Microsoft recommends Microsoft Entra ID authentication in its samples. Do not hardcode credentials.
+- `OFFICIAL-FOUNDRY-RESOURCE-QUICKSTART`: [Set up Microsoft Foundry resources](https://learn.microsoft.com/en-us/azure/foundry/tutorials/quickstart-create-foundry-resources)
+  - Current portal authority for project creation, model deployment, provisioning verification, project endpoint, deployment name, access, and scoped cleanup. Portal labels and example models are volatile.
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
   - Authority for agent concepts and current service behavior.
 - `OFFICIAL-FOUNDRY-RESPONSIBLE-AI`: [Responsible use of AI overview](https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview)

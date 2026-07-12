@@ -300,15 +300,16 @@
           "supports_python_skills": ["PY-017", "PY-019"],
           "prerequisite_lesson_ids": ["L-02-03", "L-03-03"],
           "launch_tier": "launch_critical",
-          "source_mode": "source_grounded_with_gap_warning",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-path-home-markdown-source-md"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-RESOURCE-QUICKSTART",
+            "OFFICIAL-FOUNDRY-SDK"
           ],
           "activity_ids": ["A-L0501-1", "A-L0501-2", "A-L0501-3"],
           "assessment_ids": ["AS-L0501-ORDER"],
-          "mastery_gate": "can describe the learner-safe flow from portal workspace to model deployment and interaction"
+          "mastery_gate": "score 16 of 16 on primary and fresh-transfer forms across eight portal workflow checkpoints, including access and cleanup safeguards, then explain the flow without notes"
         },
         {
           "lesson_id": "L-05-02",

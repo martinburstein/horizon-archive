@@ -44,4 +44,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded speech workload package `L-04-02`
 - [x] Built source-grounded vision and visual-generation package `L-04-03`
 - [x] Built source-grounded multimodal information-extraction package `L-04-04`
+- [x] Built source-grounded Foundry portal orientation package `L-05-01`
 - [ ] Expand original question banks and full timed simulations

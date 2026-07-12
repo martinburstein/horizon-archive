@@ -32,6 +32,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-04-02` — complete source-grounded speech scenario package covering recognition, synthesis, multimodal spoken prompts, audio-file direction, and cancellation handling
 - `curriculum/lessons/L-04-03` — complete source-grounded visual scenario package covering image analysis, multimodal visual prompts, image/video generation, media validation, and output-shape handling
 - `curriculum/lessons/L-04-04` — complete source-grounded extraction scenario package covering documents/forms, images, audio, video, analyzer schemas, null preservation, and evidence-aware review
+- `curriculum/lessons/L-05-01` — complete source-grounded portal rehearsal covering access, project scope, model/deployment, readiness, interaction, connection details, and safe cleanup
 
 ## Ready now
 
