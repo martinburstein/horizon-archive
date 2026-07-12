@@ -114,6 +114,22 @@ export function structuredPacketRemediation(result, level) {
   return `${failed}: keep the Python object separate from JSON text, fix only this operation, then rerun.`;
 }
 
+export function getStructuredPacketFeedback(result, level) {
+  if (!result) return { systemScore: "Awaiting a structure-preserving run.", teacherRemediation: null };
+  return {
+    systemScore: `${result.score}/8 · ${result.passed ? "FORM PASS · all eight checks confirmed." : "FORM NOT YET COMPLETE."}`,
+    teacherRemediation: result.passed ? null : structuredPacketRemediation(result, level),
+  };
+}
+
+export function getStructuredExplanationFeedback(result) {
+  if (!result) return { systemScore: "Awaiting the learner's three-part explanation.", teacherRemediation: null };
+  return {
+    systemScore: `${result.score}/3 · ${result.passed ? "EXPLANATION PASS · all three dimensions confirmed." : "EXPLANATION NOT YET COMPLETE."}`,
+    teacherRemediation: result.passed ? null : "Trace dictionary keys, list indexes, and the serialization boundary separately.",
+  };
+}
+
 function complete(checkCorrectness, form) {
   return structuredPacketChecks.every((check) => checkCorrectness[form]?.[check] === true);
 }

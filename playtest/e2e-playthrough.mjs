@@ -590,7 +590,9 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Run packet", exact: true }).click();
   await page.getByRole("status").getByText("3/8", { exact: false }).waitFor();
   await page.getByText("REVIEW · appends record", { exact: true }).waitFor();
-  if (await page.locator("#structured-source").getAttribute("aria-invalid") !== "true" || await page.locator("#structured-source").getAttribute("aria-describedby") !== "structured-status structured-check-list") throw new Error("Structured source remediation was not associated with status and per-check results");
+  if (await page.locator("#structured-source").getAttribute("aria-invalid") !== "true" || await page.locator("#structured-source").getAttribute("aria-describedby") !== "structured-status structured-check-list structured-python-remediation") throw new Error("Structured source remediation was not associated with System score, checks, and Teacher remediation");
+  await page.getByText("901 TEACHER // PYTHON REMEDIATION", { exact: true }).waitFor();
+  if ((await page.locator("#structured-status").textContent()).includes("container type")) throw new Error("Teacher Python remediation leaked into neutral System scoring");
   await page.setViewportSize({ width: 640, height: 480 });
   await page.screenshot({ path: qaPath("structured-packets-primary-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 1600, height: 900 });
@@ -622,12 +624,13 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Run packet", exact: true }).click();
   await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
-  await page.getByText("901 TEACHER // CLOSED-NOTE DATA-PATH GATE", { exact: true }).waitFor();
+  await page.getByText("PILOT // CLOSED-NOTE EXPLANATION OWNER", { exact: true }).waitFor();
   await page.getByLabel("Closed-note Container path", { exact: true }).fill("list dictionary");
   await page.getByLabel("Closed-note Nested access", { exact: true }).fill("wrong");
   await page.getByLabel("Closed-note JSON round trip", { exact: true }).fill("json is a python object");
   await page.getByRole("button", { name: "Check data path", exact: true }).click();
   await page.getByRole("status").getByText("0/3", { exact: false }).waitFor();
+  await page.getByText("901 TEACHER // EXPLANATION REMEDIATION", { exact: true }).waitFor();
   await page.screenshot({ path: qaPath("structured-packets-closed-note-qa.png"), fullPage: true });
   assertDistinctCaptures(["structured-packets-primary-qa.png", "structured-packets-transfer-remediation-qa.png", "structured-packets-closed-note-qa.png"]);
   for (const [dimension, label] of [["container_path", "Container path"], ["nested_access", "Nested access"], ["json_round_trip", "JSON round trip"]]) {
@@ -643,10 +646,14 @@ print("Operator:", learner)`);
   const structuredExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (structuredExplanationDraft.includes("packet readings 1 values 0") || structuredExplanationDraft.includes("json text loads")) throw new Error("Structured explanation leaked into localStorage");
   await page.getByRole("button", { name: "Check data path", exact: true }).click();
-  await page.getByText("Complete data path confirmed", { exact: false }).waitFor();
+  await page.getByText("EXPLANATION PASS", { exact: false }).waitFor();
   await page.getByRole("checkbox", { name: "I produced this data-path explanation myself without notes.", exact: true }).check();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
+  const structuredContinue = page.getByRole("button", { name: "Continue", exact: true });
+  await structuredContinue.waitFor();
+  if (!await structuredContinue.evaluate((element) => element === document.activeElement)) throw new Error("Structured Packet mastery did not move focus to Continue");
   const structuredMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).structuredPacketEvidence, { key: saveKey });
   if (structuredMastery?.masteryStatus !== "mastered" || structuredMastery?.form !== "explanation" || structuredMastery?.attemptCount !== 6) throw new Error(`Structured Packet mastery incomplete: ${JSON.stringify(structuredMastery)}`);
   if (["learnerSource", "source", "rawJsonPacket", "runtimeOutput", "freeFormExplanation"].some((key) => key in structuredMastery)) throw new Error("Structured Packet mastery retained private content");
@@ -789,6 +796,8 @@ print("Operator:", learner)`);
     structuredPacketsTransfer: true,
     structuredPacketsClosedNote: true,
     structuredPacketsStrictMastery: true,
+    structuredPacketsOwnership: true,
+    structuredPacketsContinueFocus: true,
     modelChoiceFourFamilies: true,
     modelChoiceSessionPrivacy: true,
     dialogueOwnershipMode: true,
@@ -806,7 +815,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-AI901-002"],
     credits: true,
   }));
 } finally {

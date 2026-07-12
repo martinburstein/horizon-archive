@@ -1,5 +1,17 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0301 ownership and mastery-focus closure
+
+- **Outcome:** Closed the four concrete Structured Packets handoff defects without starting L-03-02 or L-03-03 gameplay. Neutral `SYSTEM` regions now report only deterministic scores and pass/not-complete state; course-authored Python and explanation guidance appears in separately labeled `901 TEACHER` remediation regions.
+- **Learner ownership:** The closed-note header and instructional prose now identify `PILOT // CLOSED-NOTE EXPLANATION OWNER`. Learner prose remains session-only, while each failed field receives an explicitly Teacher-owned reconstruction cue and each correct dimension receives a neutral System confirmation.
+- **Completion/focus:** Primary and strict-mastery footer messages remain explicitly Teacher-owned. After strict mastery acknowledgement closes the Terminal and reveals Continue, a one-shot layout focus handoff moves keyboard focus directly to the Continue button instead of the removed Terminal trigger or a generic fallback.
+- **Preserved contracts:** Primary 8/8, transfer 8/8, three-part closed-note mastery, confidence and learner ownership confirmation, evidence sanitization/privacy, close/reopen and reload behavior, canonical/narrow presentation, unlimited recovery, and three pairwise-distinct QA captures remain intact.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/structuredPacketExercise.js`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/structuredPacketExercise.test.js`, `playtest/e2e-playthrough.mjs`, refreshed transfer/closed-note captures, and this log.
+- **Validation:** 53/53 unit tests pass; production build passes; L-03-01 self-test and both primary/transfer references pass all 8 checks; full title-to-credits E2E passes with zero runtime errors and verifies ownership separation, field associations, strict mastery, Continue focus, privacy, and distinct captures; `git diff --check` passes.
+- **Manifest/E2E register:** The existing `HA-PY-STRUCTURED-PACKETS` mastery contract required no semantic change; the E2E result register now includes it and explicit ownership/focus flags.
+- **Next action:** Player Agent should independently verify screen-reader announcement order for System score → Teacher remediation and keyboard focus after mastery. Exercise work should not proceed into L-03-02/L-03-03 before that audit.
+- **Risks:** The Teacher remediation region adds vertical content after failures; it remains inside the existing scrollable Terminal console, but narrow-screen reading order should receive an independent accessibility pass.
+
 ## 2026-07-12 — L-03-01 Structured Packets complete Terminal gate
 
 - **Outcome:** Added `EX-L0301-STRUCTURED-PACKETS` as the mandatory next ruins Terminal gate after L-02-03 mastery. The complete learner flow requires packaged primary 8/8, fresh transfer 8/8, and a three-part closed-note data-path explanation before `mastered`; the journey cannot advance until this gate passes. No L-03-02 gameplay was started.

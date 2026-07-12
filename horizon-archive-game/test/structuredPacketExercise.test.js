@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { evaluateStructuredPacketExplanation, evaluateStructuredPacketSource, sanitizeStructuredPacketEvidence, structuredPacketChecks, updateStructuredPacketEvidence } from "../src/structuredPacketExercise.js";
+import { evaluateStructuredPacketExplanation, evaluateStructuredPacketSource, getStructuredExplanationFeedback, getStructuredPacketFeedback, sanitizeStructuredPacketEvidence, structuredPacketChecks, updateStructuredPacketEvidence } from "../src/structuredPacketExercise.js";
 
 const primaryReference = readFileSync(new URL("../../curriculum/lessons/L-03-01/reference_primary.py", import.meta.url), "utf8");
 const transferReference = readFileSync(new URL("../../curriculum/lessons/L-03-01/reference_transfer.py", import.meta.url), "utf8");
@@ -21,9 +21,24 @@ test("nested operations and hardcoding fail independently", () => {
   assert.equal(hardcoded.checks.derived_output_no_bypass, false);
 });
 
+test("neutral System scoring is separated from Teacher-owned Python remediation", () => {
+  const result = evaluateStructuredPacketSource(primaryReference.replace('packet["observations"].append({"kind": "image", "values": ["arch", "blue"]})', ""), "primary");
+  const feedback = getStructuredPacketFeedback(result, 2);
+  assert.equal(feedback.systemScore, "7/8 · FORM NOT YET COMPLETE.");
+  assert.doesNotMatch(feedback.systemScore, /append|dictionary|bracket/i);
+  assert.match(feedback.teacherRemediation, /appends_record|bracket/i);
+});
+
 test("closed-note data path requires all three dimensions", () => {
   const result = evaluateStructuredPacketExplanation({ container_path: "dictionary list dictionary list value", nested_access: "packet readings 1 values 0", json_round_trip: "wrong" });
   assert.deepEqual(result.correctness, { container_path: true, nested_access: true, json_round_trip: false });
+});
+
+test("closed-note System score stays neutral while Teacher remediation remains separate", () => {
+  const result = evaluateStructuredPacketExplanation({ container_path: "wrong", nested_access: "wrong", json_round_trip: "wrong" });
+  const feedback = getStructuredExplanationFeedback(result);
+  assert.equal(feedback.systemScore, "0/3 · EXPLANATION NOT YET COMPLETE.");
+  assert.match(feedback.teacherRemediation, /dictionary keys, list indexes/i);
 });
 
 test("mastery requires both forms and explanation and stores no source or prose", () => {

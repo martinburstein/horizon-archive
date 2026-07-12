@@ -93,11 +93,12 @@ import {
 import {
   evaluateStructuredPacketExplanation,
   evaluateStructuredPacketSource,
+  getStructuredExplanationFeedback,
+  getStructuredPacketFeedback,
   sanitizeStructuredPacketEvidence,
   structuredPacketChecks,
   structuredPacketExercise,
   structuredPacketExplanationDimensions,
-  structuredPacketRemediation,
   structuredPacketStarters,
   updateStructuredPacketEvidence,
 } from "./structuredPacketExercise.js";
@@ -320,6 +321,8 @@ export function App() {
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
+  const continueButtonRef = useRef(null);
+  const focusContinueAfterStructuredRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -379,6 +382,12 @@ export function App() {
       }));
     }
   }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence]);
+
+  useLayoutEffect(() => {
+    if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterStructuredRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, structuredPacketEvidence?.masteryStatus]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -1027,6 +1036,7 @@ export function App() {
 
   function acknowledgeStructuredMastery() {
     if (!structuredPacketSession?.explanationResult?.passed || !structuredPacketSession.ownershipConfirmed || !structuredPacketEvidence?.confidence) return;
+    focusContinueAfterStructuredRef.current = true;
     setStructuredPacketEvidence((previous) => updateStructuredPacketEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
     setStructuredPacketSession(null);
     setTerminalOpen(false);
@@ -1805,18 +1815,19 @@ export function App() {
               <p className="model-choice-boundary">Course-authored bridge practice — not a live Foundry payload. Future service fields, SDK objects, endpoints, and API versions must be reverified.</p>
               {structuredPacketSession.phase === "explanation" ? (
                 <form className="structured-packet-explanation" onSubmit={checkStructuredExplanation}>
-                  <header><p className="pane-label">901 TEACHER // CLOSED-NOTE DATA-PATH GATE</p><h2>Explain the transfer data path without notes</h2><p>Recall the container sequence, the exact nested access, and the JSON text-to-object-to-text round trip. Your words remain session-only.</p></header>
+                  <header><p className="pane-label">PILOT // CLOSED-NOTE EXPLANATION OWNER</p><h2>Explain the transfer data path without notes</h2><p>In your own words, recall the container sequence, the exact nested access, and the JSON text-to-object-to-text round trip. Your words remain session-only.</p></header>
                   <div className="structured-explanation-fields">
                     {structuredPacketExplanationDimensions.map((dimension) => {
                       const fieldResult = structuredPacketSession.explanationResult?.correctness[dimension];
                       const feedbackId = `structured-explanation-${dimension}-feedback`;
                       const labels = { container_path: "Container path", nested_access: "Nested access", json_round_trip: "JSON round trip" };
-                      return <label key={dimension}><span>{labels[dimension]}</span><input aria-label={`Closed-note ${labels[dimension]}`} aria-invalid={structuredPacketSession.explanationResult ? !fieldResult : undefined} aria-describedby={structuredPacketSession.explanationResult ? feedbackId : undefined} autoComplete="off" value={structuredPacketSession.explanationResponse[dimension]} onChange={(event) => setStructuredPacketSession({ ...structuredPacketSession, explanationResponse: { ...structuredPacketSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{structuredPacketSession.explanationResult && <small id={feedbackId}>{fieldResult ? "Data path recalled." : `Rebuild the ${labels[dimension].toLowerCase()} one boundary at a time.`}</small>}</label>;
+                      return <label key={dimension}><span>{labels[dimension]}</span><input aria-label={`Closed-note ${labels[dimension]}`} aria-invalid={structuredPacketSession.explanationResult ? !fieldResult : undefined} aria-describedby={structuredPacketSession.explanationResult ? feedbackId : undefined} autoComplete="off" value={structuredPacketSession.explanationResponse[dimension]} onChange={(event) => setStructuredPacketSession({ ...structuredPacketSession, explanationResponse: { ...structuredPacketSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{structuredPacketSession.explanationResult && <small id={feedbackId}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild the ${labels[dimension].toLowerCase()} one boundary at a time.`}</small>}</label>;
                     })}
                   </div>
                   <section className="terminal-console structured-packet-output" aria-labelledby="structured-explanation-output-heading">
                     <div className="console-heading-row"><strong id="structured-explanation-output-heading">SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={structuredPacketExplanationDimensions.some((dimension) => !structuredPacketSession.explanationResponse[dimension])}>Check data path</button></div>
-                    <div className={structuredPacketSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{structuredPacketSession.explanationResult ? `${structuredPacketSession.explanationResult.score}/3 · ${structuredPacketSession.explanationResult.passed ? "Complete data path confirmed." : "Trace dictionary keys, list indexes, and the serialization boundary separately."}` : "No source or answer choices are shown."}</div>
+                    <div className={structuredPacketSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{getStructuredExplanationFeedback(structuredPacketSession.explanationResult).systemScore}</div>
+                    {getStructuredExplanationFeedback(structuredPacketSession.explanationResult).teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // EXPLANATION REMEDIATION</strong><span>{getStructuredExplanationFeedback(structuredPacketSession.explanationResult).teacherRemediation}</span></p>}
                     {structuredPacketSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={structuredPacketSession.ownershipConfirmed} onChange={(event) => setStructuredPacketSession({ ...structuredPacketSession, ownershipConfirmed: event.target.checked })} />I produced this data-path explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="structured-mastery-confidence" checked={structuredPacketEvidence?.confidence === value} onChange={() => setStructuredPacketEvidence((previous) => updateStructuredPacketEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!structuredPacketSession.ownershipConfirmed || !structuredPacketEvidence?.confidence} onClick={acknowledgeStructuredMastery}>Acknowledge strict mastery</button></>}
                   </section>
                 </form>
@@ -1825,7 +1836,7 @@ export function App() {
               ) : (
                 <form className="structured-packet-form" onSubmit={runStructuredPacket}>
                   <aside className="task-pane"><p className="pane-label">{structuredPacketSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // SOURCE OWNER</p><h2>Trace nested structure</h2><p><strong>Dictionary</strong>: string key. <strong>List</strong>: numeric index. <strong>JSON</strong>: text until <code>json.loads</code>; <code>json.dumps</code> returns text.</p><ol className="data-path-trace"><li>packet → dictionary</li><li>collection key → list</li><li>numeric index → dictionary</li><li>values key → list/value</li></ol><p>Edit the TODOs. Preserve the supplied packet and derive every printed value.</p></aside>
-                  <div className="structured-editor-stack"><label htmlFor="structured-source">EDITABLE PYTHON · session-only</label><textarea id="structured-source" aria-label="Structured Packet Python source" aria-invalid={structuredPacketSession.result ? !structuredPacketSession.result.passed : undefined} aria-describedby={structuredPacketSession.result ? "structured-status structured-check-list" : undefined} value={structuredPacketSession.source} onChange={(event) => setStructuredPacketSession({ ...structuredPacketSession, source: event.target.value, result: null })} autoCapitalize="off" autoCorrect="off" spellCheck="false" /><section className="terminal-console structured-packet-output" aria-labelledby="structured-output-heading"><div className="console-heading-row"><strong id="structured-output-heading">SYSTEM // STRICT 8-CHECK VALIDATOR</strong><button className="run-action" type="submit">Run packet</button></div><div id="structured-status" className={structuredPacketSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{structuredPacketSession.result ? `${structuredPacketSession.result.score}/8 · ${structuredPacketSession.result.passed ? "FORM PASS · structure and derived output confirmed." : structuredPacketRemediation(structuredPacketSession.result, structuredPacketSession.hintLevel)}` : "Awaiting a structure-preserving run."}</div>{structuredPacketSession.result && <ul id="structured-check-list" className="structured-checks" aria-label="Structured Packet checks">{structuredPacketChecks.map((check) => <li key={check} data-check-passed={structuredPacketSession.result.checks[check]}>{structuredPacketSession.result.checks[check] ? "PASS" : "REVIEW"} · {check.replaceAll("_", " ")}</li>)}</ul>}{structuredPacketSession.result && !structuredPacketSession.result.passed && <button className="hint-action" type="button" disabled={structuredPacketSession.hintLevel >= 3} onClick={revealStructuredPacketHint}>Reveal next data-path step</button>}{structuredPacketSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceStructuredPacket}>{structuredPacketSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result"}</button>}</section></div>
+                  <div className="structured-editor-stack"><label htmlFor="structured-source">EDITABLE PYTHON · session-only</label><textarea id="structured-source" aria-label="Structured Packet Python source" aria-invalid={structuredPacketSession.result ? !structuredPacketSession.result.passed : undefined} aria-describedby={structuredPacketSession.result ? structuredPacketSession.result.passed ? "structured-status structured-check-list" : "structured-status structured-check-list structured-python-remediation" : undefined} value={structuredPacketSession.source} onChange={(event) => setStructuredPacketSession({ ...structuredPacketSession, source: event.target.value, result: null })} autoCapitalize="off" autoCorrect="off" spellCheck="false" /><section className="terminal-console structured-packet-output" aria-labelledby="structured-output-heading"><div className="console-heading-row"><strong id="structured-output-heading">SYSTEM // STRICT 8-CHECK VALIDATOR</strong><button className="run-action" type="submit">Run packet</button></div><div id="structured-status" className={structuredPacketSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{getStructuredPacketFeedback(structuredPacketSession.result, structuredPacketSession.hintLevel).systemScore}</div>{getStructuredPacketFeedback(structuredPacketSession.result, structuredPacketSession.hintLevel).teacherRemediation && <p id="structured-python-remediation" className="teacher-remediation"><strong>901 TEACHER // PYTHON REMEDIATION</strong><span>{getStructuredPacketFeedback(structuredPacketSession.result, structuredPacketSession.hintLevel).teacherRemediation}</span></p>}{structuredPacketSession.result && <ul id="structured-check-list" className="structured-checks" aria-label="Structured Packet checks">{structuredPacketChecks.map((check) => <li key={check} data-check-passed={structuredPacketSession.result.checks[check]}>{structuredPacketSession.result.checks[check] ? "PASS" : "REVIEW"} · {check.replaceAll("_", " ")}</li>)}</ul>}{structuredPacketSession.result && !structuredPacketSession.result.passed && <button className="hint-action" type="button" disabled={structuredPacketSession.hintLevel >= 3} onClick={revealStructuredPacketHint}>Reveal next data-path step</button>}{structuredPacketSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceStructuredPacket}>{structuredPacketSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result"}</button>}</section></div>
                 </form>
               )}
             </section>
@@ -1985,7 +1996,7 @@ export function App() {
                     <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openStructuredPackets(); }}>{structuredPacketSession ? "Resume Structured Packets" : structuredPacketEvidence?.masteryStatus === "primary_complete" ? "Start Structured Transfer" : structuredPacketEvidence?.masteryStatus === "transfer_complete" ? "Open Structured Closed-Note Gate" : "Start Structured Packets"}</button>
                   )}
                   {pendingAdvance && (scene.id !== "ruins" || structuredPacketEvidence?.masteryStatus === "mastered") && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>
                   )}

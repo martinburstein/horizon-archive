@@ -342,6 +342,8 @@ h1 {
 .structured-explanation-fields label { display: grid; gap: 5px; padding: 7px; color: #aeb7c3; background: #151920; border: 1px solid #39424d; font-size: 0.62rem; }
 .structured-explanation-fields input { width: 100%; min-width: 0; padding: 7px; color: #e0e5eb; background: #0d1015; border: 1px solid #4a5360; font: inherit; }
 .structured-explanation-fields small { color: #d6c28b; font-size: 0.56rem; }
+.teacher-remediation { display: grid; gap: 3px; margin: 6px 0; padding: 6px 8px; color: #d6c28b; background: #1b1812; border-left: 2px solid #b89554; font-size: 0.58rem; line-height: 1.3; }
+.teacher-remediation strong { color: #e4cc92; font-size: 0.55rem; letter-spacing: 0.06em; }
 
 .command-panel {
   position: relative;
