@@ -57,3 +57,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked `EX-L0202-RESPONSIBLE-AI`, `L-02-02`, `A-L0202-2`, `AI901-D1-O1`, the six-scenario 24/24 primary gate, four response dimensions, remediation order, optional traversal, `primary_complete` evidence status, session/privacy contracts, live Tidal Lens terminology, and shared Terminal focus/dismissal behavior. Confirmed no story or local-surface line impersonates Microsoft or changes AB-01 state in response to a principle answer.
 - **Next recommended item:** Exercise Agent should use these ownership labels when implementing the transfer form and closed-note explanation, preserving `primary_complete` until the full two-form gate is actually satisfied.
 - **Unresolved risks:** The runtime post-primary dialogue is correctly bounded but currently appears under the generic Pilot label; a future speaker-channel implementation should render it as Teacher/course or System text.
+
+## 2026-07-12 — Responsible AI three-mode continuity
+
+- **Outcome:** Aligned the primary, transfer, and closed-note explanation physical frame patterns with the exact live Terminal titles and `PRIMARY`, `TRANSFER`, and `EXPLANATION` status labels. Defined System ownership for mode/progress, Teacher ownership for sourced instruction, Scene ownership for neutral pattern observation, and a narrow non-instructional Pilot boundary.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked live titles, status strings, filenames, primary/transfer scenario flow, explanation gate, physical `FRAME_MODES.md`, evidence modes and mastery statuses, session/privacy behavior, Tidal Lens continuity, and compact close/reopen/reload copy. Confirmed no physical pattern implies Machine intent, approval, or judgment.
+- **Next recommended item:** Coder/Exercise Agent should expose the exact System-owned mode label wherever the physical frame pattern is selected and keep post-gate instructional copy out of the generic Pilot channel.
+- **Unresolved risks:** The runtime dialogue footer still uses a generic Pilot label for some Teacher/System completion messages; physical mode assets are specified but were not changed in this lore-only pass.

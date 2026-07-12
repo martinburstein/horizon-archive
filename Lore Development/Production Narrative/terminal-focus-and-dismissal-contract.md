@@ -113,7 +113,7 @@ Use a more specific line only when it adds state clarity.
 - Focus returns to the grounded Workload Sort Terminal hotspot.
 - Dismissal does not submit the selected card.
 
-### Responsible AI primary practice
+### Responsible AI practice
 
 - Opening trigger: `Start Responsible AI` or `Resume Responsible AI` after Workload Sort mastery.
 - Open dialogue is Teacher-owned: "Responsible AI primary practice: four fields per scenario."
@@ -122,6 +122,9 @@ Use a more specific line only when it adds state clarity.
 - Reopen line: "Primary practice restored at the current scenario."
 - Continue remains available because this slice is optional for traversal.
 - Primary acknowledgement records `primary_complete`; it does not mark full `L-02-02` mastery or change AB-01 world state.
+- Exact mode labels are System-owned: `PRIMARY`, `TRANSFER`, and `EXPLANATION`.
+- Reopen restores the current mode and session draft; reload restores mode eligibility with clean private fields.
+- Physical primary/transfer/explanation frame patterns are display state only, never Machine judgment or intent.
 
 ### Evidence Packet
 

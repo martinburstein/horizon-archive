@@ -209,9 +209,24 @@ Do not add lore per card. Twelve responses would turn classification into a grin
 - Exit narration: "The local workbench clears beyond the basin. Mastery evidence remains in the flight recorder; the working form does not follow."
 - Next-scene arrival: "The causeway narrows into fitted stone. Ahead, one fallen lens catches the same violet line."
 
-## Optional Responsible AI primary practice
+## Optional Responsible AI practice
 
-Production alignment: `EX-L0202-RESPONSIBLE-AI`, lesson `L-02-02`, activity `A-L0202-2`, objective `AI901-D1-O1`. This optional primary form becomes available after Workload Sort mastery. It does not replace the full two-form lesson gate and does not change AB-01 world state.
+Production alignment: `EX-L0202-RESPONSIBLE-AI`, lesson `L-02-02`, activity `A-L0202-2`, objective `AI901-D1-O1`. The optional practice becomes available after Workload Sort mastery and does not change AB-01 adventure progression.
+
+### Three physical frame modes
+
+The outer frame patterns in `Concept Art Book/production-pixel/AB-01/responsible-ai/FRAME_MODES.md` are human course-state indicators. They do not show Machine intent, attention, approval, judgment, or understanding. The Terminal body and four response indicators remain the same in all modes.
+
+| Physical mode | Exact live title | Exact live status | Owner |
+|---|---|---|---|
+| Primary: one continuous left rail | `Responsible AI — Primary Practice` | `PRIMARY n/6`; completion `PRIMARY 24/24` | `SYSTEM // EXPEDITION STATE` |
+| Transfer: paired stepped rails | `Responsible AI — Fresh Transfer` | `TRANSFER n/6` | `SYSTEM // EXPEDITION STATE` |
+| Explanation: closed outer frame | `Responsible AI — Closed-note Explanation` | `EXPLANATION 0/1` | `SYSTEM // EXPEDITION STATE` |
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns the learning directions inside each mode.
+- `SYSTEM // EXPEDITION STATE` owns mode names, progress, open/close/reopen/reload, and mastery status.
+- `SCENE // SENSOR RECORD` may describe the outer pattern changing, but only as a display-state observation.
+- `PILOT // FLIGHT RECORDER` may reflect on the learner's method after a gate; Pilot never names the active mode, teaches a Microsoft principle, validates a field, or interprets the physical pattern.
 
 ### Ownership boundary
 
@@ -272,6 +287,28 @@ If only one compact post-exit line is available, use: "Primary form complete. Tr
 - `primary_complete` may persist, but never displays as `mastered`.
 - No Machine or Tidal Lens memory claim.
 
+### RAI07 — Transfer mode
+
+- `SYSTEM // EXPEDITION STATE`: "Fresh Transfer active. TRANSFER 1/6."
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Apply the same four-part method to the fresh scenarios."
+- `SCENE // SENSOR RECORD`: "Paired stepped rails replace the primary rail. The Tidal Lens remains unchanged."
+- Transfer completion moves directly to explanation mode; it does not display full mastery.
+
+### RAI08 — Explanation mode
+
+- `SYSTEM // EXPEDITION STATE`: "Closed-note Explanation active. EXPLANATION 0/1."
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Write principle, stakeholder, testable mitigation, and accountable owner without notes."
+- `SCENE // SENSOR RECORD`: "A closed outer frame replaces the paired rails. The four indicators remain unchanged."
+- `PILOT // FLIGHT RECORDER`, optional after strict mastery: "I can name the harm, the people affected, the test, and who must answer for it."
+
+### RAI09 — Compact close, reopen, and reload
+
+- Close/Exit: `SYSTEM`: "Practice closed. Current [PRIMARY|TRANSFER|EXPLANATION] draft remains in this session."
+- Reopen: `SYSTEM`: "Practice restored: [PRIMARY|TRANSFER|EXPLANATION]."
+- Reload: `SYSTEM`: "Practice restored with clean private fields: [PRIMARY|TRANSFER|EXPLANATION]."
+- Substitute the exact uppercase live label; do not use “stage,” “ritual,” “judgment,” or an invented in-world name.
+- Full reload preserves sanitized evidence and mode eligibility, not choices or explanation text.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -318,4 +355,5 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Every Machine-adjacent line states condition or relation, never motive.
 - Responsible AI principles and comparisons remain Teacher-owned; story and local-surface voices never impersonate Microsoft.
 - Responsible AI primary completion leaves the completed Terminal, route geometry, and Tidal Lens unchanged.
+- Primary, transfer, and explanation patterns indicate human course mode only; no pattern implies Machine intent.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
