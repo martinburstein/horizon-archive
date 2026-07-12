@@ -1,0 +1,17 @@
+{
+  "exercise_id": "EX-L0202-RESPONSIBLE-AI",
+  "lesson_id": "L-02-02",
+  "activity_id": "A-L0202-2",
+  "assessment_id": "AS-L0202-SCEN",
+  "objective_ids": ["AI901-D1-O1"],
+  "skill_ids": ["AI901-D1-O1-SCENARIO-REASONING"],
+  "forms": ["primary", "transfer"],
+  "dimensions": ["principle", "stakeholder", "mitigation", "owner"],
+  "mastery": {"minimum_correct_per_form": 24, "total_per_form": 24, "all_principles_required_per_form": true, "closed_note_explanation_required": true},
+  "remediation_sequence": ["name_the_affected_stakeholder", "compare_neighboring_principles", "choose_a_testable_mitigation", "name_a_human_or_organizational_owner", "retry_on_fresh_form"],
+  "misconception_tags": ["fairness-means-identical-outcomes", "reliability-is-one-successful-test", "privacy-is-only-secrecy", "accessibility-is-polish", "disclosure-alone-solves-harm", "platform-is-accountable-owner"],
+  "ui_contract": {"target_viewport": "640x480", "presentation": "one_scenario_card_at_a_time", "persistent": ["field_labels", "form_progress", "mastery_status"], "must_not_rely_on_color_alone": true},
+  "accessibility_contract": {"keyboard_order": ["scenario", "principle", "stakeholder", "mitigation", "owner", "check", "hint", "next", "exit"], "persistent_labels": true, "field_associated_feedback": true, "status_live_region": true, "time_limit": false, "reduced_motion": true},
+  "evidence_contract": {"store": ["lesson_id", "exercise_id", "form", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"], "do_not_store": ["free_form_reasoning", "scenario_notes", "runtime_display"]},
+  "session_contract": {"close_reopen": "restore_form_choices_and_hints", "reload": "start_clean_form_keep_mastery_evidence", "scene_transition": "clear_working_choices_and_reasoning", "mastery_evidence": "persist_separately"}
+}

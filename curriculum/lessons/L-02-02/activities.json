@@ -1,0 +1,32 @@
+[
+  {
+    "activity_id": "A-L0202-1",
+    "lesson_id": "L-02-02",
+    "activity_type": "compare_choice",
+    "purpose": "Learn the six principles and resolve fairness-versus-inclusiveness and transparency-versus-accountability contrasts.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 18,
+    "input_contract": "Learner predicts the primary principle, stakeholder, mitigation, and owner before revealing the worked example.",
+    "output_contract": "Learner can state why a tempting neighboring principle is secondary in each contrast.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0202-2",
+    "lesson_id": "L-02-02",
+    "activity_type": "checkpoint",
+    "purpose": "Apply responsible AI principles to primary and unseen transfer scenarios.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 27,
+    "input_contract": "Learner completes both forms using the four-part response without notes on the first attempt.",
+    "output_contract": "Validator records dimension correctness and mastery evidence without retaining free-form reasoning.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  }
+]

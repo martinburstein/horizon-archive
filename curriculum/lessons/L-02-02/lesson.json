@@ -1,0 +1,27 @@
+{
+  "lesson_id": "L-02-02",
+  "lesson_title": "Responsible AI in practice",
+  "lesson_type": "scenario_lesson",
+  "chapter_id": "chapter-02",
+  "module_id": "ch2-m2",
+  "launch_tier": "launch_critical",
+  "source_mode": "source_grounded",
+  "supports_objectives": ["AI901-D1-O1"],
+  "supports_python_skills": [],
+  "prerequisite_lesson_ids": ["L-02-01"],
+  "source_ids": ["OFFICIAL-AI901-STUDY-GUIDE", "OFFICIAL-FOUNDRY-HUB", "OFFICIAL-FOUNDRY-RESPONSIBLE-AI", "OFFICIAL-RESPONSIBLE-AI-TRAINING"],
+  "activity_ids": ["A-L0202-1", "A-L0202-2"],
+  "assessment_ids": ["AS-L0202-SCEN"],
+  "learner_starting_state": "Can distinguish major AI workload families but may know responsible AI only as vocabulary.",
+  "learner_ending_state": "Can identify the primary responsible AI principle in a scenario and connect it to an affected stakeholder, concrete mitigation, and accountable human owner.",
+  "mastery_gate": "Score 24 of 24 on both primary and fresh-transfer forms, demonstrate every principle twice, and explain one closed-note response using principle, stakeholder, mitigation, and owner.",
+  "estimated_minutes": 55,
+  "difficulty_band": "beginner",
+  "provenance_policy": {
+    "citation_expectation": "Principle names and the Discover-Protect-Govern lifecycle trace to current official Microsoft sources; scenarios, distractors, and gates are course-authored.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Treat multiple-principle interpretations as possible; select the closest primary harm and do not present course scenarios as Microsoft exam questions."
+  },
+  "status": "review",
+  "notes": "Compact scenario package with two deterministic forms and strict four-dimension readiness gate."
+}

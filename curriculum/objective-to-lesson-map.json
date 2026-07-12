@@ -106,12 +106,14 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-01-introduction-to-ai-concepts-07-"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-RESPONSIBLE-AI",
+            "OFFICIAL-RESPONSIBLE-AI-TRAINING"
           ],
           "activity_ids": ["A-L0202-1", "A-L0202-2"],
           "assessment_ids": ["AS-L0202-SCEN"],
-          "mastery_gate": "can explain responsible AI principles in a concrete product scenario"
+          "mastery_gate": "score 24 of 24 on both primary and fresh-transfer forms, demonstrate every principle twice, and explain one complete response without notes"
         },
         {
           "lesson_id": "L-02-03",

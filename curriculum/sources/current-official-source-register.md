@@ -24,6 +24,10 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Microsoft recommends Microsoft Entra ID authentication in its samples. Do not hardcode credentials.
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
   - Authority for agent concepts and current service behavior.
+- `OFFICIAL-FOUNDRY-RESPONSIBLE-AI`: [Responsible use of AI overview](https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview)
+  - Authority for the current Discover, Protect, and Govern responsible AI lifecycle in Microsoft Foundry.
+- `OFFICIAL-RESPONSIBLE-AI-TRAINING`: [Apply responsible AI principles](https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/)
+  - Official instruction covering fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.
 - `OFFICIAL-CONTENT-UNDERSTANDING`: [Azure Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
   - Authority for current multimodal information-extraction capabilities and terminology. The current page describes document, image, video, and audio inputs, user-defined output formats, analyzer field schemas, and structured JSON.
 - `OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER`: [Content Understanding analyzer reference](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/analyzer-reference)

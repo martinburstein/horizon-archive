@@ -23,7 +23,8 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 
 - `curriculum/lessons/L-01-02` — complete bridge package for strings, numbers/booleans, assignment, reassignment, prediction, and visible variable-backed output
 - `curriculum/lessons/L-01-03` — complete confidence-rebuilding package for traceback location, NameError repair, indentation repair, and dead-end-free experimentation
-- `L-02-01` is already complete; next unimplemented dependency-safe package: `L-02-02`
+- `curriculum/lessons/L-02-02` — complete source-grounded scenario package for six responsible AI principles, concrete mitigations, accountable ownership, and fresh-form transfer
+- Next unimplemented dependency-safe package: `L-02-03`
 
 ## Ready now
 

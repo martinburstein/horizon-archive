@@ -1,0 +1,16 @@
+[
+  {
+    "assessment_id": "AS-L0202-SCEN",
+    "lesson_id": "L-02-02",
+    "assessment_type": "scenario_choice",
+    "supports_objectives": ["AI901-D1-O1"],
+    "supports_python_skills": [],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Complete primary form closed-note; remediate every missed dimension; then score 24 of 24 on a fresh transfer form. Explain one complete response without notes.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]
