@@ -1,0 +1,49 @@
+[
+  {
+    "activity_id": "A-L0507-1",
+    "lesson_id": "L-05-07",
+    "activity_type": "compare_choice",
+    "purpose": "Distinguish broad visual description from schema-driven multimodal information extraction.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 12,
+    "input_contract": "Learner reviews the official Content Understanding flow and compares two requests over the same evidence packet.",
+    "output_contract": "Learner identifies the structured-field request as information extraction and explains why a broad image description is a different task.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0507-2",
+    "lesson_id": "L-05-07",
+    "activity_type": "guided_code",
+    "purpose": "Use Python file and JSON skills to build a provenance-bearing extraction result from image, audio, and telemetry evidence.",
+    "interaction_mode": "interactive",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 30,
+    "input_contract": "Learner inspects evidence/source_manifest.json, telemetry.json, basin_audio.wav, the cited still image, and starter_extraction.py.",
+    "output_contract": "working_output.json contains the exact requested schema, evidence-supported values, explicit null for unsupported meaning, uncertainty notes, and valid source IDs.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review",
+    "notes": "Practices PY-015, PY-016, and PY-020 through a deterministic offline simulation."
+  },
+  {
+    "activity_id": "A-L0507-3",
+    "lesson_id": "L-05-07",
+    "activity_type": "checkpoint",
+    "purpose": "Validate structured output, remediate provenance or null errors, and transfer the method to a fresh business scenario.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 18,
+    "input_contract": "Learner runs validate_extraction.py against working_output.json and responds to stable error codes.",
+    "output_contract": "Validator returns 12/12 with no critical tags; learner then specifies fields, source modalities, and null behavior for a fresh inspection scenario.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review",
+    "notes": "Exercise Agent handoff activity; deterministic acceptance contract is in exercise.json."
+  }
+]

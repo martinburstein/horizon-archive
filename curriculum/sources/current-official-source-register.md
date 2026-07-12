@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-11
+Verified: 2026-07-12
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 
@@ -25,7 +25,11 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
   - Authority for agent concepts and current service behavior.
 - `OFFICIAL-CONTENT-UNDERSTANDING`: [Azure Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
-  - Authority for current multimodal information-extraction capabilities and terminology.
+  - Authority for current multimodal information-extraction capabilities and terminology. The current page describes document, image, video, and audio inputs, user-defined output formats, analyzer field schemas, and structured JSON.
+- `OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER`: [Content Understanding analyzer reference](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/analyzer-reference)
+  - Authority for current analyzer configuration and `fieldSchema` concepts. Exact payloads and supported field behavior are volatile.
+- `OFFICIAL-CONTENT-UNDERSTANDING-QUICKSTART`: [Content Understanding REST API and SDK quickstart](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/quickstart/use-rest-api)
+  - Current implementation entry point for multimodal analysis. The page currently uses the GA `2025-11-01` API and current SDK examples; reverify before live use.
 
 ## Official workload sources
 

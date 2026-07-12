@@ -1,0 +1,28 @@
+{
+  "packet_id": "DA-PACKET-01",
+  "simulation_mode": "offline_course_asset",
+  "fields": {
+    "structure_count": {
+      "value": 1,
+      "source_ids": ["DA-IMG-01"],
+      "uncertainty": "low within the defined still-image region; temporal behavior is not supported"
+    },
+    "access_surface_detected": {
+      "value": false,
+      "source_ids": ["DA-IMG-01", "DA-TEL-01"],
+      "uncertainty": "no bounded access surface detected in the supplied view and survey window"
+    },
+    "audible_response_detected": {
+      "value": false,
+      "source_ids": ["DA-AUD-01", "DA-TEL-01"],
+      "uncertainty": "no response event rose above the course-defined threshold during the three-second window"
+    },
+    "response_meaning": {
+      "value": null,
+      "source_ids": ["DA-IMG-01", "DA-AUD-01", "DA-TEL-01"],
+      "uncertainty": "unsupported: the packet contains no detected landmark response whose meaning can be interpreted"
+    }
+  },
+  "modalities_reviewed": ["audio", "image", "telemetry"],
+  "unsupported_value_policy": "null"
+}

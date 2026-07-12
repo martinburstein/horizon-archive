@@ -1,0 +1,13 @@
+{
+  "source_id": "DA-TEL-01",
+  "packet_id": "DA-PACKET-01",
+  "window_seconds": 3.0,
+  "region_of_interest": "suspended_landmark",
+  "measurements": {
+    "bounded_access_surfaces_detected": 0,
+    "audible_response_events_above_threshold": 0,
+    "ambient_audio_present": true
+  },
+  "threshold_note": "Course-authored fixed threshold for deterministic practice; not an Azure configuration.",
+  "interpretation_limit": "Zero detected events does not establish cause, state, intent, or awareness."
+}

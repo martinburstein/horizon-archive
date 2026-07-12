@@ -6,17 +6,18 @@ Decide what must be true before full lesson generation begins.
 
 ## Current verdict
 
-`reference_generation_in_progress`
+`reference_pattern_gate_complete_review_pending`
 
-The project is ready for lesson-system implementation planning and limited prototype drafting, but not for broad full lesson generation across all chapters.
+The four required reference patterns are implemented and ready for review. Broad generation should begin only after the patterns are approved and source-gap scope is explicitly frozen.
 
-As of 2026-07-11, three end-to-end reference packages exist:
+As of 2026-07-12, four end-to-end reference packages exist:
 
 - `curriculum/lessons/L-01-01` — bridge lesson with runnable Python, activities, assessments, retrieval, remediation, and spaced review
 - `curriculum/lessons/L-05-03` — official-source-grounded Foundry SDK mental model with a runnable offline simulation and optional-live guardrails
 - `curriculum/lessons/L-02-01` — source-grounded concept lesson with deterministic workload matching and a privacy-limited Terminal state retrieval bridge
+- `curriculum/lessons/L-05-07` — source-grounded multimodal information-extraction lesson with real local image/audio/telemetry assets, null preservation, provenance, and deterministic validation
 
-All three lesson manifests pass the dependency-free schema contract check. All three learner scripts or deterministic exercise checks run successfully. `L-05-07` remains to complete the four-pattern reference gate.
+All four lesson manifests pass the dependency-free schema contract check. All four learner scripts or deterministic exercise checks run successfully. The four-pattern reference gate is complete; all packages remain at `review` status until learner and owner approval.
 
 ## Ready now
 
@@ -29,14 +30,12 @@ All three lesson manifests pass the dependency-free schema contract check. All t
 - tutor behavior model now exists
 - backlog and data model planning now exist
 
-## Still required before full lesson generation
+## Still required before broad lesson generation
 
-- source-level lesson authoring templates for actual lesson JSON instances
-- a citation object contract wired into lesson generation
-- final decision on lesson file format for authored lessons
-- remediation of missing official Foundry source captures or explicit scope freeze
-- at least one end-to-end example lesson package approved as the reference pattern
-- assessment authoring rules refined beyond schema shape
+- owner/learner review of the four reference packages
+- explicit source-gap scope freeze or capture of remaining official sources
+- approval of the package file convention demonstrated by the four references
+- assessment authoring rules refined from the validated reference patterns
 
 ## Recommended pre-generation gates
 
@@ -68,13 +67,4 @@ All three lesson manifests pass the dependency-free schema contract check. All t
 
 ## Practical next move
 
-Do not jump into all lessons at once.
-
-Build one reference lesson package from each of these first:
-
-- `L-01-01`
-- `L-02-01`
-- `L-05-03`
-- `L-05-07`
-
-If those four patterns hold up, broader lesson generation becomes much safer.
+Review `L-01-01`, `L-02-01`, `L-05-03`, and `L-05-07` as a set. Approve or revise the shared provenance, mastery, remediation, privacy, and package conventions before expanding objective-by-objective.

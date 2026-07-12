@@ -68,3 +68,50 @@ Avoid: giant flower, duplicate meadow landmark, terminal shaped like a laptop or
 ### Selection review
 
 Passed: original composition; 16:9 clean plate; grounded three-fin node reads as a Terminal-family variant; approach, onward route, landmark separation, and tight interaction silhouette are clear; no text or spoiler content. No iteration was required for this tranche.
+
+## HA-LS-003
+
+- **Date:** 2026-07-12
+- **Use case:** `stylized-concept` followed by `precise-object-edit`
+- **Purpose:** dedicated physical Evidence Terminal direction for the playable Witness Corridor final scene
+- **Selected file:** [images/witness-corridor-evidence-terminal-v1.png](images/witness-corridor-evidence-terminal-v1.png)
+- **Generator:** OpenAI built-in image generation
+- **Method:** reference-guided new generation followed by one targeted placement edit for narrow-crop safety
+- **Reference inputs:** [Fallen Automoton](../Concept%20Art/Fallen%20Automoton.png), [Drowned Archive Terminal](images/drowned-archive-workload-terminal-v1.png), [Alien Meadow](../Concept%20Art/Alien%20Meadow.png), [Underground City](../Concept%20Art/Underground%20City.png)
+- **Initial candidate source:** `C:\Users\marti\.codex\generated_images\019f5327-e8ec-73c3-a8cc-e64462b8987b\exec-e4ae28dd-1903-4249-bb8f-b96f75dba09d.png`
+- **Selected source output:** `C:\Users\marti\.codex\generated_images\019f5327-e8ec-73c3-a8cc-e64462b8987b\exec-3c2e9b4d-b913-4205-8a62-df851cc55cfc.png`
+- **Workspace copy:** `Concept Art Book/images/witness-corridor-evidence-terminal-v1.png`
+- **Dimensions:** `1672 x 941`
+
+### Base generation prompt
+
+```text
+Use case: stylized-concept
+Asset type: Horizon Archive clean landscape environment plate and production target for the final playable Witness Corridor scene
+Primary request: Create an original wide view of the ancient Witness Corridor preserving a large fallen humanoid automaton as the narrative focal object on the right, while adding a clearly separate grounded Evidence Terminal on the left edge of the walkable path. The automaton remains slumped against the right wall, weathered and inert-looking, with one restrained violet lens. The Evidence Terminal is a compact waist-high Machine node rooted into cracked floor slabs at x 35-45% and y 47-78% of the frame, at least a full body-width away from the automaton silhouette. It has a low dark stone-and-oxidized-metal base, three short folded translucent crystal fins around a dim core to maintain the established Terminal family, and a shallow angled black-glass inspection surface built into its upper front. Directly below the inspection surface are exactly three small non-text modality indicators in a horizontal row: one faceted pale-violet lens, one cool-blue concentric ripple aperture, and one muted amber pulse prism. They should read as three distinct registered channels without letters, numerals, icons, labels, or projected graphics. A narrow pool of light grounds the node and separates it from the corridor floor.
+Input images: Image 1 is the Fallen Automoton environment reference and primary continuity source: retain the intimate dark masonry corridor, oblique path into violet mist, slumped automaton on the right, faceted painterly texture, quiet melancholy, and strong narrative silhouette, but create an original clean 16:9 composition without its bottom dialogue panel. Image 2 is the selected Drowned Archive Terminal reference: borrow the grounded base, three-fin crystal crown, localized violet light, and separation between node and landmark, but redesign the node for an interior evidence-inspection role. Image 3 is the meadow Terminal-family reference for the folded faceted crown around a core. Image 4 is broader scale and warm/cool lighting continuity. Do not copy any composition exactly.
+Scene/backdrop: ancient angular stone corridor with inset wall blocks, narrow damp path receding from lower-left toward upper-left violet mist, sparse pale crystalline plants in cracks, ruined but carefully built architecture
+Style/medium: original hand-painted 1990s point-and-click adventure background with restrained PS1-era faceting and dithered texture; theatrical painterly staging, readable silhouettes, slightly exaggerated perspective, production-polished but not photorealistic
+Composition/framing: exact 16:9 landscape; side-on three-quarter adventure camera; automaton occupies right third and remains largest narrative silhouette; Evidence Terminal occupies left-center beside but not blocking the path; clear negative space between Terminal and automaton; traversable floor enters bottom-left, passes behind Terminal, and continues into upper-left corridor; centered narrow mobile crop from approximately x 30-70% must retain the complete Terminal, part of the path, and enough of the automaton's head and shoulder to preserve context; no characters other than the inert fallen automaton
+Interaction and crop: Terminal crown, inspection surface, three indicators, and base form one tight clickable silhouette around x 34-46%, y 45-82%; automaton remains a separate optional observation silhouette around x 57-88%, y 18-76%; do not overlap their light pools or silhouettes; all Terminal essentials must remain readable at thumbnail size and in a narrow centered crop
+Lighting/mood: deep charcoal and muted violet corridor ambience, soft violet mist from upper-left, restrained cool rim on the automaton, small controlled violet/blue/amber indicator accents on the Terminal, no horror, no combat
+Color palette: blue-black stone, weathered umber metal, charcoal shadow, muted lavender, cool slate blue, tiny restrained amber accent, pale crystal white
+Materials/textures: chipped carved masonry, oxidized articulated metal, damp faceted paving, dark non-reflective inspection glass, translucent crystal fins, thin mist
+Constraints: automaton is the narrative focal object while the Evidence Terminal is the unmistakable exercise interaction; exactly three modality indicators; inspection surface is visible but blank and dark; Terminal is physically rooted in the ground; node belongs to established Terminal family yet is distinct from the automaton; path remains traversable; preserve surface-safe mystery; original design; clean environment plate only; no UI, no dialogue box, no HUD, no projected interface, no captions, no labels, no letters, no numerals, no readable glyphs, no logo, no watermark
+Avoid: placing Terminal inside or on the automaton, conventional laptop or kiosk, large computer monitor, floating node, more or fewer than three indicators, bright neon cyberpunk, magical altar, horror gore, active combat pose, weapons, extra robots, human characters, cluttered path, photorealism, fisheye, isometric view, interface overlays
+```
+
+### Targeted placement edit prompt
+
+```text
+Use case: precise-object-edit
+Asset type: Horizon Archive clean landscape environment plate for desktop and narrow responsive gameplay
+Primary request: Edit only the placement of the grounded Evidence Terminal in the just-generated Witness Corridor image. Move the entire Terminal node horizontally to the right so its complete silhouette—including all three crystal fins, blank angled inspection surface, exactly three colored modality indicators, base, and local light pool—fits within x 37-47% of the 16:9 frame. Place it just left of center beside the same walkable path. It must be fully visible inside a centered narrow crop spanning approximately x 30-70% while remaining clearly separate from the automaton.
+Invariants: keep the fallen automaton exactly as the dominant narrative focal object on the right; keep its pose, size, lens, lighting, and wall relationship unchanged. Keep the corridor architecture, receding upper-left path, crystalline plants, palette, faceted painterly 1990s point-and-click style, camera, aspect ratio, and all background details unchanged. Preserve the Terminal's established design exactly: three folded crystal fins, dim central crystal, blank dark inspection surface, and exactly three small circular modality indicators colored restrained violet, cool blue, and muted amber. Preserve its scale and grounded construction. Repaint the old Terminal location seamlessly as wet cracked corridor paving and continue the path naturally.
+Composition constraints: maintain clear negative space between Terminal and automaton; do not block the traversable route; no overlap between their silhouettes or light pools; automaton remains larger and more visually important; complete Terminal must read at thumbnail size and centered narrow crop.
+Avoid: changing or adding characters, changing automaton anatomy, changing Terminal design, adding or removing indicators, duplicate Terminal, leftover glow at old position, text, letters, numerals, glyphs, UI, dialogue box, HUD, watermark, logo, projected graphics, photorealism, cyberpunk neon, combat.
+```
+
+### Selection review
+
+The initial candidate passed anatomy, tone, and silhouette separation but placed the node too far left for a 320px centered crop. The selected edit moved it into the responsive safe band. Passed: original composition; exact three indicators; blank inspection surface; grounded Terminal-family node; automaton narrative dominance; open path; desktop and narrow crop survival; no text or spoiler content.

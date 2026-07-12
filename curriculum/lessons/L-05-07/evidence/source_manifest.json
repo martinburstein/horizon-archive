@@ -1,0 +1,31 @@
+{
+  "packet_id": "DA-PACKET-01",
+  "title": "Drowned Archive bounded evidence packet",
+  "simulation_mode": "offline_course_asset",
+  "sources": [
+    {
+      "source_id": "DA-IMG-01",
+      "modality": "image",
+      "workspace_path": "Concept Art Book/images/drowned-archive-workload-terminal-v1.png",
+      "origin": "project concept-art plate",
+      "scope": "Still image; inspect the suspended landmark region, not the grounded Terminal.",
+      "limitations": "A single image cannot establish sound, motive, awareness, or temporal behavior."
+    },
+    {
+      "source_id": "DA-AUD-01",
+      "modality": "audio",
+      "workspace_path": "curriculum/lessons/L-05-07/evidence/basin_audio.wav",
+      "origin": "deterministic course-generated bridge asset",
+      "scope": "Three-second mono ambience segment representing the bounded survey window.",
+      "limitations": "Synthetic ambience is not a real-world recording or Azure service output."
+    },
+    {
+      "source_id": "DA-TEL-01",
+      "modality": "telemetry",
+      "workspace_path": "curriculum/lessons/L-05-07/evidence/telemetry.json",
+      "origin": "course-authored bridge telemetry",
+      "scope": "Landmark-region access and audio-event counts for the same bounded window.",
+      "limitations": "No detection supports only the measured condition, not an explanation for it."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 Started: 2026-05-29T16:26:59-04:00
 Minimum intended work duration: 60 minutes
-Current status: reference lesson generation in progress
+Current status: four-pattern reference gate complete; review and scope approval pending
 
 ## Required artifacts
 
@@ -18,11 +18,11 @@ Current status: reference lesson generation in progress
 - [x] validation reports
 - [x] final build summary
 
-## Current blocker
+## Remaining broad-generation gate
 
-Local source gaps remain; see curriculum/validation/missing-materials-report.md and curriculum/validation/final-build-summary.md.
+Local source gaps remain; see curriculum/validation/missing-materials-report.md and curriculum/validation/final-build-summary.md. They do not block the completed four-pattern reference set, but they require capture or an explicit scope freeze before broad generation.
 
-## 2026-07-11 curriculum tranche
+## 2026-07-11 to 2026-07-12 curriculum tranche
 
 - [x] Reverified the April 15, 2026 AI-901 blueprint against the official live study guide
 - [x] Checked all four priority Foundry/Azure sources before authoring
@@ -32,5 +32,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added retrieval, spaced review, error remediation, timed practice, and readiness-gate policy
 - [x] Validated all three reference manifests and executed their learner scripts or deterministic exercise checks
 - [x] Built source-grounded reference package `L-02-01`
-- [ ] Build source-grounded reference package `L-05-07`
+- [x] Built source-grounded offline-first reference package `L-05-07`
 - [ ] Expand original question banks and full timed simulations

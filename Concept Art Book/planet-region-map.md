@@ -13,7 +13,7 @@ Andromeda survey corridor
 │       └── AB-01 Drowned Archive [selected Terminal direction / playable]
 ├── World C — Witness World [active]
 │   └── Witness Complex
-│       └── WC-01 Witness Corridor [reference plate / playable]
+│       └── WC-01 Witness Corridor [selected Evidence Terminal direction / playable]
 ├── World D — Subsurface City World [active]
 │   └── Volcanic Habitation Vault
 │       └── SC-01 City Overlook [reference plate / playable reveal]
@@ -35,9 +35,10 @@ This line records player-facing progression only. It does not assert that the lo
 |---|---|---|
 | 1 | Arrival threshold | Establishes the pilot, human scale, entry direction, and first act of exploration. Completed by GM-00. |
 | 2 | Ruins Terminal identity | Separates the exercise node from the monumental archive and tightens the interaction target. Completed by AB-01. |
-| 3 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
-| 4 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
-| 5 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
+| 3 | Final-scene Evidence Terminal | Separates the multimodal exercise node from the automaton while preserving the automaton's narrative focus. Completed by WC-01. |
+| 4 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
+| 5 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
+| 6 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
 
 ## Expansion rule
 

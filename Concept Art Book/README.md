@@ -21,6 +21,10 @@ Production notes: [GM-00 — Glass Meadow Landing Shelf](scenes/GM-00-glass-mead
 
 Production notes: [AB-01 — Drowned Archive Workload Terminal](scenes/AB-01-drowned-archive-workload-terminal.md).
 
+[![Witness Corridor Evidence Terminal](images/witness-corridor-evidence-terminal-v1.png)](images/witness-corridor-evidence-terminal-v1.png)
+
+Production notes: [WC-01 — Witness Corridor Evidence Terminal](scenes/WC-01-witness-corridor-evidence-terminal.md).
+
 ## Spoiler boundary
 
 All names in this book are pilot-facing survey labels or neutral production IDs. A scene may pose a question through environment and scale, but it may not answer the central mystery. The hidden-lore vault is outside this book's source set.

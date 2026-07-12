@@ -162,3 +162,23 @@ Validation:
 - new JSON artifacts parse successfully: pass
 Next step: Prototype one reference lesson package per core lesson type before broad lesson generation.
 Notes: This pass intentionally stayed at architecture and systems depth rather than generating polished lessons.
+
+## Log entry: 2026-07-12T01:05:06-04:00
+
+Stage: Final reference-pattern implementation
+Action: Built complete source-grounded `L-05-07` package for schema-driven multimodal information extraction using a spoiler-safe Drowned Archive evidence packet, explicit null preservation, field provenance, Python file/JSON practice, and deterministic offline validation.
+Files touched:
+- curriculum/lessons/L-05-07/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- live AI-901 guide and all four priority Foundry/Azure sources checked: pass
+- current Content Understanding overview, analyzer reference, REST/SDK quickstart, and Azure Vision retirement warning checked: pass
+- lesson/activity/assessment schema contracts: pass
+- three-modality evidence packet and deterministic validator positive/negative fixtures: pass
+- all four reference package scripts/checks: pass
+Next step: Exercise Agent should implement `EX-L0507-EVIDENCE-PACKET` from the deterministic activity contract.
+Notes: The WAV and telemetry are generated bridge assets. Null preservation is course-authored evidence discipline, not a claim that the live service always returns null. No gameplay code changed.

@@ -34,16 +34,20 @@ Visual constants:
 
 Interactive cues:
 
+- The grounded three-fin node is the only verified exercise interface; its localized violet reflection and causeway placement distinguish it from the central landmark.
+- The suspended archive remains a silent observation object. No seam, screen, lens, or bounded access response is confirmed in the prologue.
+- Terminal completion may align the three fin lights and illuminate a seam along the causeway; the suspended structure must remain visually unchanged.
+
 - Reflections preserve a missing architectural element not visible above the water; vision analysis can flag it without explaining it.
 - Inscriptions continue below the waterline and become legible only through image preprocessing or alternate angles.
-- The suspended geometry rotates to expose faces corresponding to evidence categories, not cardinal directions.
+- The grounded node's three fins can mark unopened, active, and transferred local states; these are interface conditions, not evidence categories or landmark behavior.
 - Pillars contain deliberate blank bands with tool marks around them, suggesting preserved omission.
 - A star-field comparison yields two valid timestamps depending on which physical reference frame is assumed.
 - A generated reconstruction can restore the plaza visually but must remain overlaid, toggleable, and labeled as hypothesis.
 
 Use for: provenance, multimodal evidence, vision, information extraction, chronology, generated reconstruction ethics.
 
-Avoid: a single inscription that explains the civilization; treating the black-hole-like sky as an unambiguous cause.
+Avoid: a single inscription that explains the civilization; treating the black-hole-like sky as an unambiguous cause; making the suspended landmark speak, grade the player, accept identity, or animate in response to the grounded Terminal.
 
 ## Witness Corridor / Fallen Automaton
 

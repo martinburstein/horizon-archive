@@ -57,6 +57,22 @@ Example scaffold:
 - USE after success: "[Observable state change]. [Evidence fragment]."
 - TALK TO after success: "[Short responsive line or preserved silence]."
 
+## Operable surface versus silent landmark
+
+When a scene contains both a small Terminal and a monumental structure, keep their interaction grammar separate:
+
+- The Terminal may expose `LOOK AT`, `USE`, and `TALK TO`; only `USE` opens the human mediation layer.
+- The landmark receives observation language, not Terminal status language.
+- A Terminal response cannot be narrated as the landmark's response without direct evidence.
+- Authored silence should name measured channels—no access surface, no separable audio, no observed movement—rather than declaring an object dormant, dead, or unwilling.
+- Completion may alter the local node and navigation route while the landmark remains unchanged.
+
+Contrast pattern:
+
+> The small surface gives the player an operation. The large object gives the player an unknown.
+
+This prevents visual scale from becoming accidental narrative authority and allows awe without turning every ruin into a speaking character.
+
 ## Success-message scaffold
 
 Every code success gets three compact layers:

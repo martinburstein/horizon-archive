@@ -1,0 +1,67 @@
+{
+  "exercise_id": "EX-L0507-EVIDENCE-PACKET",
+  "lesson_id": "L-05-07",
+  "activity_id": "A-L0507-3",
+  "objective_ids": ["AI901-D2-O7"],
+  "skill_ids": ["PY-015", "PY-016", "PY-020", "AI901-D2-O7-SCHEMA-EXTRACT"],
+  "title": "Drowned Archive Evidence Packet",
+  "task": "Produce schema-conforming multimodal extraction JSON with source provenance and null preservation.",
+  "mastery": {
+    "required_points": 12,
+    "total_points": 12,
+    "critical_checks_must_pass": true
+  },
+  "critical_error_codes": [
+    "E_FIELD_SET",
+    "E_STRUCTURE_VALUE",
+    "E_STRUCTURE_SOURCES",
+    "E_ACCESS_FALSE",
+    "E_ACCESS_SOURCES",
+    "E_AUDIO_FALSE",
+    "E_AUDIO_SOURCES",
+    "E_RESPONSE_NULL",
+    "E_RESPONSE_SOURCES",
+    "E_MODALITIES"
+  ],
+  "remediation_routes": {
+    "E_FIELD_SET": "Compare open-ended description with fixed-schema extraction.",
+    "E_STRUCTURE_VALUE": "Count only the monumental suspended landmark in the defined image region.",
+    "E_ACCESS_FALSE": "Use false for a directly tested condition with zero detections.",
+    "E_AUDIO_FALSE": "Trace the audio measurement and its bounded threshold.",
+    "E_RESPONSE_NULL": "Use null when the evidence cannot support a requested meaning.",
+    "E_STRUCTURE_SOURCES": "Attach the image source that directly supports the visual count.",
+    "E_ACCESS_SOURCES": "Trace access detection to image plus landmark telemetry.",
+    "E_AUDIO_SOURCES": "Trace audible detection to audio plus event telemetry.",
+    "E_RESPONSE_SOURCES": "Keep all reviewed sources attached to the unsupported interpretation boundary.",
+    "E_MODALITIES": "Confirm that image, audio, and telemetry were all reviewed."
+  },
+  "session_contract": {
+    "close_reopen": "restore_active_working_output",
+    "scene_transition": "clear_working_output",
+    "mastery_evidence": "persist_separately"
+  },
+  "evidence_contract": {
+    "store": [
+      "lesson_id",
+      "activity_id",
+      "exercise_id",
+      "check_results",
+      "attempt_count",
+      "hint_level",
+      "confidence",
+      "misconception_tags",
+      "mastery_status"
+    ],
+    "do_not_store": [
+      "learner_working_output_json",
+      "learner_free_form_notes",
+      "learner_source_code"
+    ]
+  },
+  "acceptance_commands": [
+    "python generate_audio.py",
+    "python inspect_packet.py",
+    "python validate_extraction.py --self-test",
+    "python validate_extraction.py --check reference_output.json"
+  ]
+}

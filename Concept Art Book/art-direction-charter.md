@@ -57,6 +57,8 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 - One localized light pool or reflection may isolate a Terminal, but glow must not replace silhouette readability.
 - The Terminal and the location's monumental landmark must remain separate visual roles: the node is the interaction target; the landmark carries environmental scale.
 - Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.
+- Multimodal Evidence Terminals use one blank inspection surface and exactly three restrained, non-text channel indicators. Indicator color and shape may distinguish channels, but they must not become readable writing, familiar app icons, or a projected UI.
+- When a scene contains a narrative object and a Terminal, give them separate silhouettes, light pools, and hit areas. The narrative object remains compositionally dominant; the Terminal remains operationally discoverable.
 
 ## Delivery specification
 

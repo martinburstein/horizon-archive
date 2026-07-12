@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import meadowImage from "../../Concept Art/Alien Meadow.png";
-import ruinsImage from "../../Concept Art/Alien Ruins.png";
+import ruinsImage from "../../Concept Art Book/images/drowned-archive-workload-terminal-v1.png";
 import automatonImage from "../../Concept Art/Fallen Automoton.png";
 import cityImage from "../../Concept Art/Underground City.png";
+import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   evaluateTerminalCode,
@@ -22,6 +23,16 @@ import {
   workloadChoices,
   workloadSortExercise,
 } from "./workloadSortExercise.js";
+import {
+  evidenceManifest,
+  evidencePacketExercise,
+  evidenceRemediation,
+  evidenceStarter,
+  evidenceTelemetry,
+  evaluateEvidencePacket,
+  sanitizeEvidencePacketMastery,
+  updateEvidencePacketMastery,
+} from "./evidencePacketExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -45,9 +56,13 @@ const scenes = [
     chapter: "II",
     location: "The Drowned Archive",
     image: ruinsImage,
-    hotspotLabel: "Suspended archive",
-    hotspot: { left: "38%", top: "21%", width: "24%", height: "38%" },
-    prompt: "The archive rejects nameless visitors. Store your call sign before requesting entry.",
+    imageAlt: "Flooded alien ruins with a grounded crystal Machine Terminal beside a causeway and a suspended archive landmark",
+    hotspotLabel: "grounded Workload Sort Terminal",
+    hotspot: {
+      left: "60.5%", top: "55%", width: "11%", height: "44%",
+      narrow: { left: "44%", top: "47%", width: "29%", height: "36%" },
+    },
+    prompt: "A grounded three-fin Terminal waits beside the causeway. The suspended archive above it remains silent.",
     question: "Create a variable named pilot_name containing the text MARTIN.",
     answer: 'pilot_name = "MARTIN"',
     validate: (value) => validateAnswer("ruins", value),
@@ -59,9 +74,9 @@ const scenes = [
     chapter: "III",
     location: "The Witness Corridor",
     image: automatonImage,
-    hotspotLabel: "Fallen automaton",
+    hotspotLabel: "automaton evidence Terminal",
     hotspot: { left: "54%", top: "17%", width: "34%", height: "53%" },
-    prompt: "The automaton carries one surviving status bit. Give it a Boolean value so it can speak.",
+    prompt: "The automaton carries a sealed evidence workspace. Its validator waits for a provenance-complete packet.",
     question: "Set archive_open to the Boolean value true in Python.",
     answer: "archive_open = True",
     validate: (value) => validateAnswer("automaton", value),
@@ -101,6 +116,7 @@ function loadSave() {
       ...getResumeState(saved.completed, saved.pendingSceneId),
       exerciseEvidence: sanitizeExerciseEvidence(saved.exerciseEvidence),
       workloadEvidence: sanitizeWorkloadEvidence(saved.workloadEvidence),
+      evidencePacketMastery: sanitizeEvidencePacketMastery(saved.evidencePacketMastery),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -126,8 +142,20 @@ export function App() {
   const [exerciseEvidence, setExerciseEvidence] = useState(null);
   const [workloadSession, setWorkloadSession] = useState(null);
   const [workloadEvidence, setWorkloadEvidence] = useState(null);
+  const [evidenceSession, setEvidenceSession] = useState(null);
+  const [evidencePacketMastery, setEvidencePacketMastery] = useState(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
+  const hotspotStyle = {
+    "--hotspot-left": scene.hotspot.left,
+    "--hotspot-top": scene.hotspot.top,
+    "--hotspot-width": scene.hotspot.width,
+    "--hotspot-height": scene.hotspot.height,
+    "--hotspot-narrow-left": scene.hotspot.narrow?.left ?? scene.hotspot.left,
+    "--hotspot-narrow-top": scene.hotspot.narrow?.top ?? scene.hotspot.top,
+    "--hotspot-narrow-width": scene.hotspot.narrow?.width ?? scene.hotspot.width,
+    "--hotspot-narrow-height": scene.hotspot.narrow?.height ?? scene.hotspot.height,
+  };
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
@@ -138,9 +166,10 @@ export function App() {
         pendingSceneId: mode === "playing" && pendingAdvance ? scene.id : null,
         exerciseEvidence,
         workloadEvidence,
+        evidencePacketMastery,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -160,6 +189,8 @@ export function App() {
     setExerciseEvidence(null);
     setWorkloadSession(null);
     setWorkloadEvidence(null);
+    setEvidenceSession(null);
+    setEvidencePacketMastery(null);
     setMode("playing");
   }
 
@@ -175,6 +206,8 @@ export function App() {
     setExerciseEvidence(saved.exerciseEvidence);
     setWorkloadEvidence(saved.workloadEvidence);
     setWorkloadSession(null);
+    setEvidencePacketMastery(saved.evidencePacketMastery);
+    setEvidenceSession(null);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
     setTerminalResult(null);
@@ -210,6 +243,21 @@ export function App() {
       setQuestionOpen(false);
       setTerminalOpen(true);
       if (!workloadSession) setWorkloadSession(createWorkloadSession());
+      return;
+    }
+    if (scene.id === "automaton") {
+      setDialogue("Evidence workspace linked. Inspect the registered packet, repair the JSON, and validate all twelve boundaries.");
+      setQuestionOpen(false);
+      setTerminalOpen(true);
+      if (!evidenceSession) {
+        setEvidenceSession({
+          workingOutput: evidenceStarter,
+          notes: "",
+          activeSource: "manifest",
+          result: null,
+          hintLevel: 0,
+        });
+      }
       return;
     }
     setDialogue(scene.question);
@@ -300,6 +348,41 @@ export function App() {
     setPendingAdvance(true);
   }
 
+  function validateEvidenceOutput(event) {
+    event.preventDefault();
+    const result = evaluateEvidencePacket(evidenceSession.workingOutput);
+    const hintLevel = result.passed ? evidenceSession.hintLevel : Math.max(1, evidenceSession.hintLevel);
+    setEvidenceSession({ ...evidenceSession, result, hintLevel });
+    setEvidencePacketMastery((previous) => updateEvidencePacketMastery(previous, {
+      incrementAttempt: true,
+      checkResults: result.checks,
+      hintLevel,
+      misconceptionTags: result.misconceptionTags,
+      masteryStatus: result.passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function revealEvidenceRemediation() {
+    const hintLevel = Math.min(3, evidenceSession.hintLevel + 1);
+    setEvidenceSession({ ...evidenceSession, hintLevel });
+    setEvidencePacketMastery((previous) => updateEvidencePacketMastery(previous, { hintLevel }));
+  }
+
+  function setEvidenceConfidence(confidence) {
+    setEvidencePacketMastery((previous) => updateEvidencePacketMastery(previous, { confidence }));
+  }
+
+  function acknowledgeEvidenceMastery() {
+    if (!evidenceSession?.result?.passed || !evidencePacketMastery?.confidence) return;
+    setEvidencePacketMastery((previous) => updateEvidencePacketMastery(previous, { masteryStatus: "mastered" }));
+    const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
+    setCompleted(nextCompleted);
+    setDialogue(scene.success);
+    setTerminalOpen(false);
+    setEvidenceSession(null);
+    setPendingAdvance(true);
+  }
+
   function runCode(event) {
     event.preventDefault();
     if (!scene.validate(code)) {
@@ -324,6 +407,7 @@ export function App() {
     setShowHint(false);
     setCode("");
     setWorkloadSession(null);
+    setEvidenceSession(null);
     if (completed.length === scenes.length) {
       setMode("ending");
       return;
@@ -373,7 +457,7 @@ export function App() {
   return (
     <main className="game-shell adventure-screen" data-scene={scene.id}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
-        <img className="scene-art" src={scene.image} alt={`Alien archaeological site: ${scene.location}`} />
+        <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
         <div className="scene-status">
           <span>CHAPTER {scene.chapter}</span>
           <strong>{scene.location}</strong>
@@ -381,7 +465,7 @@ export function App() {
         </div>
         <button
           className="hotspot"
-          style={scene.hotspot}
+          style={hotspotStyle}
           onClick={useHotspot}
           disabled={pendingAdvance}
           aria-label={`${verb.toLowerCase()} ${scene.hotspotLabel}`}
@@ -530,6 +614,116 @@ export function App() {
                     <button className="confirm-action" type="button" disabled={!workloadEvidence?.confidence} onClick={acknowledgeWorkloadCompletion}>
                       Acknowledge mastery
                     </button>
+                  )}
+                </section>
+              </div>
+            </form>
+          </TerminalShell>
+        )}
+        {terminalOpen && scene.id === "automaton" && evidenceSession && (
+          <TerminalShell
+            exerciseId={evidencePacketExercise.exercise_id}
+            title={evidencePacketExercise.title}
+            filename="working_output.json"
+            lessonId={evidencePacketExercise.lesson_id}
+            onClose={() => setTerminalOpen(false)}
+          >
+            <form className="editor-layout evidence-layout" onSubmit={validateEvidenceOutput}>
+              <aside className="task-pane" aria-labelledby="evidence-task-heading">
+                <p className="pane-label">MULTIMODAL CHECKPOINT</p>
+                <h2 id="evidence-task-heading">Evidence Packet</h2>
+                <p>Fill the exact schema from registered sources. Preserve measured false values and keep unsupported response meaning null.</p>
+                <dl>
+                  <div><dt>Activity</dt><dd>{evidencePacketExercise.activity_id}</dd></div>
+                  <div><dt>Skills</dt><dd>AI901-D2-O7 · PY-015 · PY-016 · PY-020</dd></div>
+                  <div><dt>Gate</dt><dd>12 / 12 + critical checks</dd></div>
+                </dl>
+                <details className="evidence-notes">
+                  <summary>Session-only scratch notes</summary>
+                  <label htmlFor="evidence-notes">Notes are cleared at scene transition and never saved.</label>
+                  <textarea
+                    id="evidence-notes"
+                    value={evidenceSession.notes}
+                    onChange={(event) => setEvidenceSession({ ...evidenceSession, notes: event.target.value })}
+                  />
+                </details>
+              </aside>
+              <div className="editor-stack evidence-stack">
+                <div className="evidence-main">
+                  <section className="evidence-browser" aria-labelledby="evidence-browser-heading">
+                    <div className="evidence-tabs" role="tablist" aria-label="Registered evidence sources">
+                      {[["manifest", "Manifest"], ["image", "Image"], ["audio", "Audio"], ["telemetry", "Telemetry"]].map(([value, label]) => (
+                        <button
+                          key={value}
+                          type="button"
+                          role="tab"
+                          aria-selected={evidenceSession.activeSource === value}
+                          onClick={() => setEvidenceSession({ ...evidenceSession, activeSource: value })}
+                        >{label}</button>
+                      ))}
+                    </div>
+                    <h3 id="evidence-browser-heading">READ-ONLY EVIDENCE</h3>
+                    {evidenceSession.activeSource === "manifest" && <pre>{JSON.stringify(evidenceManifest, null, 2)}</pre>}
+                    {evidenceSession.activeSource === "telemetry" && <pre>{JSON.stringify(evidenceTelemetry, null, 2)}</pre>}
+                    {evidenceSession.activeSource === "image" && (
+                      <figure>
+                        <img src={ruinsImage} alt="Registered still image DA-IMG-01 showing the suspended landmark and grounded Terminal" />
+                        <figcaption>DA-IMG-01 · inspect the suspended landmark region, not the grounded Terminal.</figcaption>
+                      </figure>
+                    )}
+                    {evidenceSession.activeSource === "audio" && (
+                      <div className="audio-evidence">
+                        <p>DA-AUD-01 · deterministic three-second mono ambience · 16,000 Hz</p>
+                        <audio controls src={evidenceAudio}>Your browser does not support the evidence audio control.</audio>
+                      </div>
+                    )}
+                  </section>
+                  <section className="evidence-editor" aria-labelledby="working-output-heading">
+                    <h3 id="working-output-heading">EDITABLE · working_output.json</h3>
+                    <textarea
+                      id="evidence-json-editor"
+                      aria-label="Editable working output JSON"
+                      value={evidenceSession.workingOutput}
+                      onChange={(event) => setEvidenceSession({ ...evidenceSession, workingOutput: event.target.value, result: null })}
+                      autoCapitalize="off"
+                      autoCorrect="off"
+                      spellCheck="false"
+                    />
+                  </section>
+                </div>
+                <section className="terminal-console evidence-console" aria-labelledby="evidence-output-heading">
+                  <div className="console-heading-row">
+                    <strong id="evidence-output-heading">VALIDATOR OUTPUT</strong>
+                    <button className="run-action" type="submit">Validate packet</button>
+                  </div>
+                  <div className={evidenceSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">
+                    {evidenceSession.result
+                      ? `${evidenceSession.result.score}/12 · ${evidenceSession.result.feedback}`
+                      : "Ready. Inspect the evidence, edit the schema, then run all twelve deterministic checks."}
+                  </div>
+                  {evidenceSession.result && !evidenceSession.result.passed && (
+                    <div className="evidence-remediation">
+                      <p>{evidenceRemediation(evidenceSession.result, evidenceSession.hintLevel)}</p>
+                      <button className="hint-action" type="button" disabled={evidenceSession.hintLevel >= 3} onClick={revealEvidenceRemediation}>
+                        {evidenceSession.hintLevel < 2 ? "Reveal provenance trace" : "Reveal worked boundary"}
+                      </button>
+                    </div>
+                  )}
+                  {evidenceSession.result?.passed && (
+                    <div className="evidence-mastery-row">
+                      <fieldset className="confidence-group">
+                        <legend>Confidence after validation</legend>
+                        {["low", "medium", "high"].map((value) => (
+                          <label key={value}>
+                            <input type="radio" name="evidence-confidence" checked={evidencePacketMastery?.confidence === value} onChange={() => setEvidenceConfidence(value)} />
+                            {value[0].toUpperCase() + value.slice(1)}
+                          </label>
+                        ))}
+                      </fieldset>
+                      <button className="confirm-action" type="button" disabled={!evidencePacketMastery?.confidence} onClick={acknowledgeEvidenceMastery}>
+                        Acknowledge evidence mastery
+                      </button>
+                    </div>
                   )}
                 </section>
               </div>

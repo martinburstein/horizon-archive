@@ -1,0 +1,30 @@
+[
+  {
+    "assessment_id": "AS-L0507-SCEN",
+    "lesson_id": "L-05-07",
+    "assessment_type": "scenario_choice",
+    "supports_objectives": ["AI901-D2-O7"],
+    "supports_python_skills": ["PY-020"],
+    "mastery_signal": "recognition",
+    "attempt_policy": "Closed-note contrast first; if missed, identify input, requested output shape, and whether a fixed schema is required before retrying with a new scenario.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  },
+  {
+    "assessment_id": "AS-L0507-STRUCT",
+    "lesson_id": "L-05-07",
+    "assessment_type": "structured_output_check",
+    "supports_objectives": ["AI901-D2-O7"],
+    "supports_python_skills": ["PY-015", "PY-016", "PY-020"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "All 12 deterministic checks required. Any invented-value, missing-provenance, false-versus-null, or output-shape critical miss requires targeted remediation and regeneration of the output.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]

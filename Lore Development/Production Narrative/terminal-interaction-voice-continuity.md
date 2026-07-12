@@ -112,7 +112,7 @@ Assistance is recorded for remediation and mastery evidence only. It must never 
 ### T10 — Acknowledgement and evidence transfer
 
 - Expedition link: "Record transferred. The working file has not been retained in expedition evidence."
-- Physical response: "The lowest petal turns toward the distant ruins. A line of light crosses the meadow and stops at the water."
+- Physical response: "The lowest petal turns toward the distant basin. A line of light crosses the meadow and stops at the water."
 - Evidence payload (`OBSERVED`): The local surface changed state after the mediation layer transferred a valid visible-output record with a source designation.
 - Reframing line / Pilot: "The bloom didn't give me an answer. It gave my next question a direction."
 
@@ -120,7 +120,7 @@ Assistance is recorded for remediation and mastery evidence only. It must never 
 
 - Continue action: `Follow the signal`
 - Scene-exit narration: "The workbench clears when you leave the node's range. The accepted record remains in the flight recorder; the unfinished session does not follow."
-- Next-scene arrival: "Across the water, the suspended archive is already rotating. The meadow's signal reached it before you did."
+- Next-scene arrival: "Across the water, a grounded three-fin node carries the same violet line. The suspended structure above the island remains silent."
 
 This confirms coordination only at the observable level. It does not establish a conscious sender, a chosen recipient, or real-time intent.
 
@@ -148,6 +148,14 @@ This is the preferred coherent copy set for `terminal-l0101-independent-run`, le
 | `FS-16` | Acknowledge | Physical response | "The node repeats the output as measured light. One petal turns toward the flooded ruins." | `OBSERVED` |
 | `FS-17` | Acknowledge | Pilot | "It accepted a visible signal and a name. That is evidence of a protocol, not proof of an audience." | `HUMAN_INFERENCE` |
 | `FS-18` | Continue | Scene narration | "A line of light crosses the meadow and stops at the water." | `OBSERVED` |
+
+### Prologue personhood correction
+
+Do not ship the earlier draft line, "It did not translate the signal. It was already listening for you." It claims both an unsupported translation mechanism and prior personal attention. Preferred replacement:
+
+> The bloom repeats the expedition output in visible light. That confirms a compatible surface—not who or what, if anything, received it.
+
+The physical response is `OBSERVED`; “compatible surface” is an expedition classification; any audience remains `UNKNOWN`.
 
 ## Repeat-attempt rhythm
 

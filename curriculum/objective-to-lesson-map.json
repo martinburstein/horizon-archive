@@ -391,22 +391,25 @@
         },
         {
           "lesson_id": "L-05-07",
-          "lesson_title": "Content Understanding and information extraction app flow",
+          "lesson_title": "Content Understanding and multimodal information extraction",
           "lesson_type": "source_grounded_explainer_lesson",
           "module_id": "ch5-m3",
           "supports_objectives": ["AI901-D2-O7"],
           "supports_python_skills": ["PY-015", "PY-016", "PY-020"],
           "prerequisite_lesson_ids": ["L-04-04", "L-05-03"],
           "launch_tier": "launch_critical",
-          "source_mode": "source_grounded_with_gap_warning",
+          "source_mode": "source_grounded_with_simulated_offline_lab",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-CONTENT-UNDERSTANDING",
+            "OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER",
+            "OFFICIAL-CONTENT-UNDERSTANDING-QUICKSTART",
+            "OFFICIAL-AZURE-VISION"
           ],
           "activity_ids": ["A-L0507-1", "A-L0507-2", "A-L0507-3"],
           "assessment_ids": ["AS-L0507-SCEN", "AS-L0507-STRUCT"],
-          "mastery_gate": "can explain the document/image/audio-video extraction workflow without pretending missing official Foundry docs are already captured"
+          "mastery_gate": "score 12 of 12 with no invented-value, missing-provenance, false-versus-null, or vision-versus-extraction critical miss"
         }
       ]
     },

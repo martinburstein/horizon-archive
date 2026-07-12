@@ -1,4 +1,5 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
+import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -89,6 +90,25 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await assertRuinsTerminalAlignment(page, "desktop");
+  await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
+  await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-desktop-qa.png" });
+  await activateRuinsTerminal(page, "pointer");
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await activateRuinsTerminal(page, "keyboard");
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+
+  await page.setViewportSize({ width: 320, height: 900 });
+  await assertRuinsTerminalAlignment(page, "320px narrow");
+  await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
+  await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-narrow-qa.png" });
+  await activateRuinsTerminal(page, "pointer");
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await activateRuinsTerminal(page, "keyboard");
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await page.setViewportSize({ width: 1600, height: 900 });
+
   await openQuestion();
   await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').waitFor();
   await page.locator('input[name="workload-choice"][value="s"]').check();
@@ -142,7 +162,61 @@ print("Operator:", learner)`);
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
   await openQuestion();
-  await answer("archive_open = True");
+  await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor();
+  await page.getByRole("button", { name: "Validate packet", exact: true }).click();
+  await page.getByRole("status").getByText("E_STRUCTURE_VALUE", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Reveal provenance trace", exact: true }).click();
+  await page.getByText("Provenance trace", { exact: false }).waitFor();
+  const nearMissEvidence = structuredClone(referenceEvidenceOutput);
+  nearMissEvidence.fields.response_meaning.value = false;
+  const evidenceDraft = `${JSON.stringify(nearMissEvidence, null, 2)}\n `;
+  await page.locator("#evidence-json-editor").fill(evidenceDraft);
+  await page.getByText("Session-only scratch notes", { exact: true }).click();
+  await page.locator("#evidence-notes").fill("EVIDENCE_SESSION_ONLY_NOTE");
+  await page.getByRole("tab", { name: "Telemetry", exact: true }).click();
+  await page.getByText('"source_id": "DA-TEL-01"', { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor({ state: "detached" });
+  await page.locator("button.hotspot").click();
+  await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor();
+  if (await page.locator("#evidence-json-editor").inputValue() !== evidenceDraft) throw new Error("Evidence JSON draft reset after close/reopen");
+  await page.getByText("Session-only scratch notes", { exact: true }).click();
+  if (await page.locator("#evidence-notes").inputValue() !== "EVIDENCE_SESSION_ONLY_NOTE") throw new Error("Evidence scratch notes reset after close/reopen");
+  if (await page.getByRole("tab", { name: "Telemetry", exact: true }).getAttribute("aria-selected") !== "true") throw new Error("Evidence source tab reset after close/reopen");
+  const evidenceDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (!evidenceDraftSave || JSON.parse(evidenceDraftSave).evidencePacketMastery?.attemptCount !== 1) throw new Error("Evidence packet attempt metadata missing");
+  if (evidenceDraftSave.includes("EVIDENCE_SESSION_ONLY_NOTE") || evidenceDraftSave.includes("working_output") || evidenceDraftSave.includes("response_meaning")) {
+    throw new Error("Evidence packet working state leaked into localStorage");
+  }
+  await page.getByRole("tab", { name: "Audio", exact: true }).click();
+  const audioSource = await page.locator("audio").getAttribute("src");
+  if (!audioSource?.includes("basin_audio")) throw new Error(`Registered evidence audio missing: ${audioSource}`);
+  await page.getByRole("tab", { name: "Image", exact: true }).click();
+  await page.getByAltText("Registered still image DA-IMG-01 showing the suspended landmark and grounded Terminal", { exact: true }).waitFor();
+  await page.getByRole("tab", { name: "Manifest", exact: true }).click();
+  await page.getByRole("button", { name: "Validate packet", exact: true }).click();
+  await page.getByRole("status").getByText("E_RESPONSE_NULL", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Reveal worked boundary", exact: true }).click();
+  await page.getByText("false means a bounded check measured no detection", { exact: false }).waitFor();
+  await page.screenshot({ path: "playtest/evidence-packet-terminal-desktop-qa.png", fullPage: true });
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.screenshot({ path: "playtest/evidence-packet-terminal-narrow-qa.png", fullPage: true });
+  await page.locator("#evidence-json-editor").scrollIntoViewIfNeeded();
+  if (!await page.locator("#evidence-json-editor").isVisible()) throw new Error("Evidence editor is unreachable at narrow viewport");
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.locator("#evidence-json-editor").fill(JSON.stringify(referenceEvidenceOutput, null, 2));
+  await page.getByRole("button", { name: "Validate packet", exact: true }).click();
+  await page.getByText("12/12", { exact: false }).waitFor();
+  await page.getByRole("radio", { name: "High", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge evidence mastery", exact: true }).click();
+  const evidencePacketMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).evidencePacketMastery, { key: saveKey });
+  if (evidencePacketMastery?.exerciseId !== "EX-L0507-EVIDENCE-PACKET" || evidencePacketMastery?.attemptCount !== 3 || evidencePacketMastery?.hintLevel !== 3 || evidencePacketMastery?.confidence !== "high" || evidencePacketMastery?.masteryStatus !== "mastered") {
+    throw new Error(`Evidence packet mastery incomplete: ${JSON.stringify(evidencePacketMastery)}`);
+  }
+  if (Object.keys(evidencePacketMastery.checkResults || {}).length !== 12 || Object.values(evidencePacketMastery.checkResults).some((passed) => passed !== true)) {
+    throw new Error("Evidence packet did not persist twelve passing booleans");
+  }
+  if ("workingOutput" in evidencePacketMastery || "notes" in evidencePacketMastery || "source" in evidencePacketMastery) throw new Error("Working evidence persisted in mastery record");
   await page.getByText("Continuity confirmed. Witness incomplete.", { exact: false }).waitFor();
 
   await page.reload();
@@ -162,14 +236,24 @@ print("Operator:", learner)`);
     terminalCloseReopen: true,
     terminalSessionPrivacy: true,
     workloadSortExercise: true,
+    ruinsTerminalAsset: true,
+    ruinsHotspotDesktop: true,
+    ruinsHotspotNarrow: true,
+    ruinsHotspotKeyboard: true,
     workloadCloseReopen: true,
     workloadFreshRetry: true,
     workloadCriticalOverride: true,
     workloadSceneReset: true,
+    evidencePacketExercise: true,
+    evidencePacketProvenance: true,
+    evidencePacketFalseVsNull: true,
+    evidencePacketCloseReopen: true,
+    evidencePacketPrivacy: true,
+    evidencePacketNarrow: true,
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-AI901-001", "HA-PY-003"],
+    questions: ["HA-PY-001", "HA-AI901-001", "HA-AI901-002"],
     credits: true,
   }));
 } finally {
@@ -178,4 +262,71 @@ print("Operator:", learner)`);
 
 function terminalSessionMarker() {
   return "# SESSION_ONLY_SENTINEL";
+}
+
+async function activateRuinsTerminal(page, method) {
+  const hotspot = page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true });
+  if (method === "keyboard") {
+    await hotspot.focus();
+    await hotspot.press("Enter");
+  } else {
+    await hotspot.click();
+  }
+  await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').waitFor();
+}
+
+async function assertRuinsTerminalAlignment(page, viewportLabel) {
+  const metrics = await page.evaluate(() => {
+    const frame = document.querySelector(".scene-frame");
+    const image = document.querySelector(".scene-art");
+    const hotspot = document.querySelector("button.hotspot");
+    if (!frame || !image || !hotspot) return null;
+
+    const frameRect = frame.getBoundingClientRect();
+    const hotspotRect = hotspot.getBoundingClientRect();
+    const computed = getComputedStyle(image);
+    const [xToken = "50%", yToken = "50%"] = computed.objectPosition.split(/\s+/);
+    const asFraction = (token) => token.endsWith("%") ? Number.parseFloat(token) / 100 : 0.5;
+    const scale = Math.max(frameRect.width / image.naturalWidth, frameRect.height / image.naturalHeight);
+    const renderedWidth = image.naturalWidth * scale;
+    const renderedHeight = image.naturalHeight * scale;
+    const imageLeft = frameRect.left + (frameRect.width - renderedWidth) * asFraction(xToken);
+    const imageTop = frameRect.top + (frameRect.height - renderedHeight) * asFraction(yToken);
+
+    // Source bounds come from the selected AB-01 scene sheet, not viewport percentages.
+    const expected = {
+      left: Math.max(frameRect.left, imageLeft + image.naturalWidth * 0.60 * scale),
+      top: Math.max(frameRect.top, imageTop + image.naturalHeight * 0.47 * scale),
+      right: Math.min(frameRect.right, imageLeft + image.naturalWidth * 0.73 * scale),
+      bottom: Math.min(frameRect.bottom, imageTop + image.naturalHeight * 0.82 * scale),
+    };
+    const overlapWidth = Math.max(0, Math.min(hotspotRect.right, expected.right) - Math.max(hotspotRect.left, expected.left));
+    const overlapHeight = Math.max(0, Math.min(hotspotRect.bottom, expected.bottom) - Math.max(hotspotRect.top, expected.top));
+    const hotspotArea = hotspotRect.width * hotspotRect.height;
+    const centerX = hotspotRect.left + hotspotRect.width / 2;
+    const centerY = hotspotRect.top + hotspotRect.height / 2;
+
+    return {
+      alt: image.getAttribute("alt"),
+      src: image.currentSrc,
+      naturalWidth: image.naturalWidth,
+      naturalHeight: image.naturalHeight,
+      objectPosition: computed.objectPosition,
+      hotspotWidth: hotspotRect.width,
+      hotspotHeight: hotspotRect.height,
+      overlapRatio: hotspotArea ? (overlapWidth * overlapHeight) / hotspotArea : 0,
+      centerInside: centerX >= expected.left && centerX <= expected.right && centerY >= expected.top && centerY <= expected.bottom,
+    };
+  });
+
+  if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
+  if (!metrics.src.includes("drowned-archive-workload-terminal-v1")) throw new Error(`Wrong ruins asset at ${viewportLabel}: ${metrics.src}`);
+  if (!/grounded crystal Machine Terminal/i.test(metrics.alt) || !/suspended archive landmark/i.test(metrics.alt)) {
+    throw new Error(`Ruins alt text does not distinguish Terminal and landmark: ${metrics.alt}`);
+  }
+  if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected ruins asset dimensions: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
+  if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
+  if (!metrics.centerInside || metrics.overlapRatio < 0.65) {
+    throw new Error(`Ruins hotspot misses source-mapped node at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  }
 }

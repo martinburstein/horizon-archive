@@ -1,0 +1,34 @@
+{
+  "lesson_id": "L-05-07",
+  "lesson_title": "Content Understanding and multimodal information extraction",
+  "lesson_type": "source_grounded_explainer_lesson",
+  "chapter_id": "chapter-05",
+  "module_id": "ch5-m3",
+  "launch_tier": "launch_critical",
+  "source_mode": "source_grounded_with_simulated_offline_lab",
+  "supports_objectives": ["AI901-D2-O7"],
+  "supports_python_skills": ["PY-015", "PY-016", "PY-020"],
+  "prerequisite_lesson_ids": ["L-04-04", "L-05-03"],
+  "source_ids": [
+    "OFFICIAL-AI901-STUDY-GUIDE",
+    "OFFICIAL-FOUNDRY-HUB",
+    "OFFICIAL-CONTENT-UNDERSTANDING",
+    "OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER",
+    "OFFICIAL-CONTENT-UNDERSTANDING-QUICKSTART",
+    "OFFICIAL-AZURE-VISION"
+  ],
+  "activity_ids": ["A-L0507-1", "A-L0507-2", "A-L0507-3"],
+  "assessment_ids": ["AS-L0507-SCEN", "AS-L0507-STRUCT"],
+  "learner_starting_state": "Can read files and JSON, trace a Foundry client flow, and distinguish broad vision from information extraction at the scenario level.",
+  "learner_ending_state": "Can inspect image, audio, and telemetry sources; define requested structured fields; preserve unsupported values as null; attach source provenance; and validate a deterministic extraction packet without claiming that the offline lab called Azure.",
+  "mastery_gate": "Earn 12 of 12 deterministic checks with no invented-value, missing-provenance, false-versus-null, or vision-versus-extraction critical miss, then explain the analyzer flow and one transfer scenario without notes.",
+  "estimated_minutes": 70,
+  "difficulty_band": "beginner_plus",
+  "provenance_policy": {
+    "citation_expectation": "Current Content Understanding architecture and schema claims cite official Microsoft sources; evidence assets, null policy, expected values, and validator behavior are labeled course-authored simulation.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Do not infer live service behavior from the offline validator, do not invent values for unsupported fields, and reverify API versions, packages, portal labels, modality limits, confidence, and grounding before live use."
+  },
+  "status": "review",
+  "notes": "Final four-pattern reference package. Offline lab uses no Azure subscription, endpoint, credential, or service call."
+}

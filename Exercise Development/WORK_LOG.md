@@ -1,5 +1,27 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Multimodal Evidence Packet Terminal
+
+- **Outcome:** Replaced the final scene's compact Boolean prompt with the reusable Machine Terminal running `EX-L0507-EVIDENCE-PACKET` / `A-L0507-3`. The workspace exposes the real registered image, playable WAV, manifest, and telemetry beside an editable `working_output.json`, then mirrors the curriculum validator's exact 12-check contract before allowing the existing final narrative acknowledgement and credits gate.
+- **Skills practiced:** `AI901-D2-O7`, `PY-015`, `PY-016`, and `PY-020`: schema-driven multimodal extraction, JSON structure, local file/evidence inspection, registered provenance, and deterministic validation.
+- **Learning loop:** The starter packet fails with stable error codes. Remediation progresses from a named-boundary cue to a provenance trace and then a worked false-versus-null contrast. Mastery requires 12/12, all critical checks, and confidence capture.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/src/evidencePacketExercise.js`, `horizon-archive-game/test/evidencePacketExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, and `playtest/e2e-playthrough.mjs`.
+- **Validation:** Eighteen unit tests pass, including the registered reference packet and critical negative fixtures. The production build and complete title-to-credits browser journey pass. The curriculum validator self-test/reference commands pass. Desktop and 375px evidence-workspace captures are in `playtest/evidence-packet-terminal-*-qa.png`.
+- **Accessibility:** Evidence sources are native tabs, JSON and notes have programmatic labels, audio uses native controls, remediation is announced in a live status region, every action is keyboard reachable with visible focus, and the narrow layout exposes the task first while keeping evidence/editor regions reachable through the Terminal scroll area.
+- **Mastery evidence:** Persists only allowlisted exercise/lesson/activity/objective/skill identifiers, twelve boolean check results, attempt count, maximum hint level, confidence, misconception tags, and mastery status. Working JSON, scratch notes, evidence-tab state, validator prose, and learner source never enter `localStorage`.
+- **Session behavior:** Close/reopen restores the working JSON, notes, active evidence source, validation output, and hint position in memory. Reload/resume, new expedition, completion, and scene transition clear that working session while sanitized mastery survives.
+- **Next action:** Location Scout Agent should design a dedicated final-scene evidence Terminal node with a readable inspection surface, three modality indicators, and a tighter 44px-safe hotspot distinct from the automaton's body silhouette.
+- **Risks:** The current automaton hotspot remains landmark-sized because no dedicated final-scene node plate exists yet. The browser validator intentionally mirrors the offline course contract and does not represent a live Content Understanding service call.
+
+## 2026-07-12 — Coder pass: physical Workload Sort Terminal integration
+
+- **Outcome:** Replaced the ruins reference plate and landmark-sized hotspot with the selected Drowned Archive clean plate and a tight target on its grounded three-fin Machine Terminal. The suspended archive is now non-interactive environmental storytelling.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `playtest/e2e-playthrough.mjs`, AB-01 concept-art records, and desktop/narrow QA captures.
+- **Validation:** Thirteen unit tests and the production build pass. Full Playwright progression exercises source-aware hotspot alignment, 44-pixel target size, pointer and Enter-key activation at desktop and `320px`, alt text, Workload Sort remediation/mastery/session privacy, title-to-credits, and console/page-error monitoring.
+- **Accessibility:** The hotspot's accessible name identifies a grounded Workload Sort Terminal; the scene alternative text distinguishes it from the suspended landmark. Native-button keyboard behavior is regression tested at both supported layout modes.
+- **Next action:** Lore Keeper Agent can add a spoiler-safe observation or reconnection response unique to the grounded node while keeping the suspended landmark silent.
+- **Risks:** On narrow screens, the crop prioritizes the complete grounded node and shows only part of the suspended landmark. The full landscape remains available on desktop.
+
 ## 2026-07-11 — Workload Sort Machine Terminal
 
 - **Outcome:** Integrated `L-02-01` activity `A-L0201-2` as the ruins Machine Terminal using the reusable editor shell. `EX-L0201-WORKLOAD-SORT` now presents the curriculum's deterministic 12-card primary form, enforces the 10/12 gate and critical-contrast override, and loads the separate deterministic retry form after remediation.

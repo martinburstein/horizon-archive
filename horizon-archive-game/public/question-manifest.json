@@ -22,10 +22,13 @@
       "success_contract": "Score at least 10/12 and recover every critical workload and Terminal-state contrast."
     },
     {
-      "id": "HA-PY-003",
+      "id": "HA-AI901-002",
       "scene": "automaton",
-      "skill": "boolean_variable",
-      "answer": "archive_open = True"
+      "exercise_id": "EX-L0507-EVIDENCE-PACKET",
+      "lesson_id": "L-05-07",
+      "activity_id": "A-L0507-3",
+      "skills": ["AI901-D2-O7", "PY-015", "PY-016", "PY-020"],
+      "success_contract": "Pass all 12 deterministic schema, provenance, false-versus-null, modality, and uncertainty checks."
     }
   ]
 }

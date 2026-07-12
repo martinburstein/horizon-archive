@@ -5,7 +5,7 @@
 - **Scene ID:** AB-01
 - **Player-facing survey name:** Drowned Archive
 - **World / region:** World B / Drowned Archive Basin
-- **Production status:** Selected concept target; not integrated
+- **Production status:** Integrated as the playable prologue ruins plate
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
 - **Purpose:** Give the playable L-02-01 Workload Sort exercise a distinct, grounded physical Terminal while preserving the suspended archive as the environmental landmark.
@@ -26,12 +26,13 @@
 | Suspended archive | x 41–60%, y 8–40% | monumental dark geometric frame above the island | distant landmark and optional observation, not the exercise trigger |
 | Central steps | x 42–61%, y 39–55% | raised continuation of the causeway | onward-route cue after completion |
 
-## Hotspot implementation target
+## Hotspot implementation record
 
-- Begin visual QA with CSS percentage bounds `left: 59%`, `top: 47%`, `width: 15%`, `height: 36%` against the full clean plate.
-- Tighten to the visible base-and-crown silhouette if the browser's rendered crop differs; do not include the causeway or suspended archive in the Terminal target.
+- Desktop scene crop: `object-position: center 20%`; hotspot `left: 60.5%`, `top: 55%`, `width: 11%`, `height: 44%`.
+- At widths up to `760px`: `object-position: 70% top`; hotspot `left: 44%`, `top: 47%`, `width: 29%`, `height: 36%`.
+- These viewport bounds map back to the full-plate source zone (`x 60–73%`, `y 47–82%`) under `object-fit: cover`; they are intentionally different rather than copied raw from the plate.
 - Maintain a minimum interactive target of 44 by 44 CSS pixels at supported viewport sizes. The focus indicator should follow a simple rectangular hit area without painting a permanent outline over the art.
-- The existing broad central ruins hotspot (`left: 38%`, `top: 21%`, `width: 24%`, `height: 38%`) targets the suspended landmark and should not be reused for this physical node.
+- The former broad central ruins hotspot has been removed. The suspended landmark remains environmental and non-interactive.
 
 ## Visual specification
 
@@ -56,5 +57,4 @@
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation
 - **Native dimensions:** `1672 x 941` PNG
 - **Selection notes:** selected first result; grounded node, causeway approach, landmark separation, and three-fin family resemblance all read without annotation.
-- **Validation:** clean plate contains no UI, text, watermark, characters, weapons, or plot revelation; all required navigation and interaction reads are present.
-
+- **Validation:** clean plate contains no UI, text, watermark, characters, weapons, or plot revelation; all required navigation and interaction reads are present. Browser QA verifies source-mapped target overlap, 44-pixel minimum size, pointer and keyboard activation at `1600×900` and `320×900`, descriptive alt text, and a complete title-to-credits run without console errors.

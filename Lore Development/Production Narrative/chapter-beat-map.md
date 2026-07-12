@@ -17,7 +17,7 @@ The emotional progression is:
 
 ## Chapter 1 — The Patient Signal
 
-Curriculum alignment: L-01-01 through L-01-03; run a file, terminal basics, `print()`, strings, variables, numbers, Booleans, and beginner debugging.
+Curriculum alignment: L-01-01 through L-01-03, plus the embedded L-02-01 workload checkpoint; run a file, terminal basics, `print()`, strings, variables, numbers, Booleans, beginner debugging, workload matching, and Terminal-state distinctions.
 
 Primary environments: Glass Meadow, Drowned Archive, Witness Corridor, first view of the City Beneath.
 
@@ -27,7 +27,7 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 
 1. Arrival in apparent paradise. The survey craft reports no population, recent traffic, distress beacon, or obvious catastrophe. The meadow's ecology is healthy enough to make the word "ruin" feel premature.
 2. The crystal bloom responds to visible output. The important event is not translation; it is that the interface accepts a human-readable declaration without any visible negotiation.
-3. The suspended archive requests a name. Storing the pilot's call sign creates the first reciprocal act: the player is no longer only labeling evidence; the site labels the player.
+3. At the Drowned Archive, a grounded three-fin Terminal opens a human-authored Workload Sort while the monumental suspended structure remains silent. The player learns to classify bounded jobs and, by contrast, to leave the landmark uncategorized when evidence is insufficient.
 4. The fallen automaton exposes a surviving Boolean state. Its fragmentary line distinguishes continuity from completeness without explaining either term.
 5. A deliberate beginner error produces useful behavior. The interface marks the location of the mistake and remains patient. Failure becomes evidence that the local surface is teaching a protocol, not merely testing one.
 6. The city wakes below. The prologue closes when the pilot is recorded as a continuation, a word whose meaning remains unstable.
@@ -36,6 +36,7 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 
 - Builder sites can be beautiful, functional, and empty at once.
 - Local interfaces accept simple Python-like operations through the human translation layer.
+- A verified local Terminal and a monumental nearby structure are not automatically the same object or speaker.
 - The system distinguishes an open archive from a complete witness.
 - The player's arrival changes at least one record.
 
