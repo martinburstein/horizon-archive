@@ -70,7 +70,7 @@ print("Python signal:", signal)`;
   await page.getByText("wrong value", { exact: false }).waitFor();
   await page.keyboard.press("Escape");
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor({ state: "detached" });
-  if (!await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').count()) throw new Error("Escape did not restore focus to Petal trigger");
+  await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').waitFor();
   await page.locator('button.hotspot[data-primary-hotspot="true"]').press("Enter");
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
   if (await page.locator("#terminal-code").inputValue() !== sessionCode) throw new Error("Terminal code was reset after close/reopen");
@@ -168,6 +168,10 @@ print("Operator:", learner)`);
   await page.getByRole("heading", { name: "Primary 8/8 · Transfer 8/8 · Retrieval 4/4", exact: true }).waitFor();
   await page.getByRole("radio", { name: "Medium", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
+  await page.getByRole("button", { name: "Start Calibration", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Start Calibration", exact: true }).evaluate((element) => {
+    if (document.activeElement !== element) throw new Error("Route completion did not move focus to the next meaningful action");
+  });
   await assertPixelMeadow(page, "route complete", "completed", "completed");
   await capturePixelMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
   const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
@@ -499,7 +503,7 @@ async function verifyMeadowPixelHotspots(page, viewportLabel) {
   await firstSignal.waitFor();
   await page.keyboard.press("Escape");
   await firstSignal.waitFor({ state: "detached" });
-  if (!await petal.evaluate((element) => element === document.activeElement)) throw new Error(`Enter-opened Terminal did not restore exact trigger at ${viewportLabel}`);
+  await page.waitForFunction((element) => document.activeElement === element, await petal.elementHandle());
 }
 
 async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLabel) {

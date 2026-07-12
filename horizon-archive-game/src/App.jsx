@@ -139,7 +139,10 @@ function TerminalShell({ exerciseId, title, filename, lessonId, statusText, clos
     return () => {
       const trigger = triggerRef.current;
       requestAnimationFrame(() => {
-        if (trigger?.isConnected && !trigger.hasAttribute("disabled")) trigger.focus({ preventScroll: true });
+        const target = trigger?.isConnected && !trigger.hasAttribute("disabled")
+          ? trigger
+          : document.querySelector('[data-terminal-focus-fallback]:not([disabled])');
+        target?.focus({ preventScroll: true });
       });
     };
   }, []);
@@ -1396,10 +1399,10 @@ export function App() {
                 <span className="speaker">PILOT // FLIGHT RECORDER</span>
                 <div className="dialogue-actions">
                   {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
-                    <button className="continue-action calibration-launch" onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
+                    <button className="continue-action calibration-launch" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
                   )}
                   {pendingAdvance && (
-                    <button className="continue-action" onClick={continueJourney}>
+                    <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>
                   )}
