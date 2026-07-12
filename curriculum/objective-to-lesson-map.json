@@ -511,14 +511,19 @@
           "supports_python_skills": ["PY-017", "PY-019", "PY-020"],
           "prerequisite_lesson_ids": ["L-06-02"],
           "launch_tier": "launch_valuable",
-          "source_mode": "blended_source_review",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "ai-901-homepage-markdown-ai-901-homepage-md"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-AZURE-LANGUAGE",
+            "OFFICIAL-AZURE-SPEECH",
+            "OFFICIAL-CONTENT-UNDERSTANDING",
+            "OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER"
           ],
           "activity_ids": ["A-L0603-1", "A-L0603-2"],
           "assessment_ids": ["AS-L0603-READY"],
-          "mastery_gate": "receives a readiness score and next-step recommendation"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer capstone forms, pass all implementation and readiness/safety boundaries, and meet prerequisite evidence gates; issue a recommendation, never an exam guarantee"
         }
       ]
     }

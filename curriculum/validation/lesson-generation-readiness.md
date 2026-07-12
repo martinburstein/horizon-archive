@@ -40,6 +40,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-05-06` — complete source-grounded offline visual solution package covering analysis, multimodal prompting, generation, media/request validation, provenance, and action safety
 - `curriculum/lessons/L-06-01` — complete source-grounded objective ledger and two-form mastery review covering all 15 current AI-901 objectives without confidence-based bypass
 - `curriculum/lessons/L-06-02` — complete learner-state remediation planner with evidence-gap diagnosis, official-source routing, fresh transfer, and exam-claim/action safeguards
+- `curriculum/lessons/L-06-03` — complete offline capstone and readiness checkpoint integrating client, text/speech, and Content Understanding evidence with prerequisite and exam-claim safeguards
 
 ## Ready now
 

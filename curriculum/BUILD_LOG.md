@@ -633,3 +633,25 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0602-REMEDIATION-PLANNER` as an accessible weak-objective queue and route editor.
 Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. The planner does not guarantee an exam result. Exam objectives/weights and Foundry portal, SDK/API, model, tool, price, preview, and deprecation details remain volatile.
+
+## Log entry: 2026-07-12T18:22:26-04:00
+
+Stage: Sequential AI-901 mastery expansion
+Action: Completed exactly one first-unfinished mapped package, `L-06-03`, as an offline capstone and evidence-based readiness checkpoint integrating Foundry client flow, text/speech patterns, and Content Understanding with prerequisite, exam-claim, and action safeguards.
+Files touched:
+- curriculum/lessons/L-06-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and required priority Foundry/Azure AI sources checked first: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objectives, Python skills, official sources, map alignment, local link, and privacy/session/accessibility/readiness/action safeguards: pass
+- each form covers all six capstone/readiness boundaries: pass
+- validator self-test, open-remediation-gap probe, and exam-guarantee/live-action probe: pass
+- primary reference 12/12; transfer reference 12/12; blank primary and transfer correctly rejected at 0/12 with exit 1
+- existing `L-06-02` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0603-OFFLINE-CAPSTONE` as an accessible capstone trace plus prerequisite/readiness gate panel.
+Notes: No data/media processing, service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. The output is a next-practice recommendation, never an exam guarantee. Exam scope and Foundry SDK/API/analyzer/model/capability details remain volatile.
