@@ -399,3 +399,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0402-SPEECH-WORKLOADS`.
 Notes: No audio capture/playback or live service call occurs. SDKs, API shapes, endpoints, authentication, languages, voices, formats, regions, quotas, pricing, and preview status remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T10:36:32-04:00
+
+Stage: Sequential AI-901 workload expansion
+Action: Built exactly one next mapped lesson, `L-04-03`, with source-grounded visual workload instruction, guided contrasts, primary and transfer scenarios, media validation, output-shape safeguards, remediation, and strict deterministic readiness.
+Files touched:
+- curriculum/lessons/L-04-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Azure Vision direction and Image Analysis 4.0 deprecation note: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- each form covers four visual workload patterns plus two client safeguards: pass
+- validator self-test and analysis/generation plus output-shape failure probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12
+- existing `L-04-02` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0403-VISUAL-WORKLOADS`.
+Notes: No media or live service call occurs. Current models, SDKs, operations, endpoints, authentication, formats, regions, quotas, pricing, deprecations, and preview status remain volatile. No gameplay or narrative files changed.

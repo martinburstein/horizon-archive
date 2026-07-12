@@ -257,12 +257,13 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-AZURE-VISION"
           ],
           "activity_ids": ["A-L0403-1", "A-L0403-2"],
           "assessment_ids": ["AS-L0403-COMPARE"],
-          "mastery_gate": "can match image analysis, image generation, and video generation to scenario needs"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across image analysis, multimodal visual prompts, image generation, video generation, and media handling, then explain one choice without notes"
         },
         {
           "lesson_id": "L-04-04",

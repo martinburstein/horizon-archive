@@ -1,0 +1,15 @@
+{"workloads":["image_analysis","multimodal_visual_prompt","image_generation","video_generation"],"forms":{"primary":[
+{"id":"P01","topic":"image_analysis","prompt":"Describe objects and dominant colors already visible in a supplied photograph.","decision":"image_analysis","reason":"existing_pixels_are_interpreted_into_descriptive_results"},
+{"id":"P02","topic":"multimodal_visual_prompt","prompt":"Ask a deployed multimodal model to compare a chart image with a written question.","decision":"multimodal_visual_prompt","reason":"visual_and_text_inputs_drive_a_general_model_response"},
+{"id":"P03","topic":"image_generation","prompt":"Create a new poster image from a written creative brief.","decision":"image_generation","reason":"the_requested_output_is_a_new_still_visual"},
+{"id":"P04","topic":"video_generation","prompt":"Create a new short motion clip from a scene description.","decision":"video_generation","reason":"the_requested_output_is_new_time_based_visual_media"},
+{"id":"P05","topic":"client_flow","prompt":"A lightweight app accepts a local visual file before a request.","decision":"validate_path_type_and_supported_media_format","reason":"the_app_must_send_the_intended_supported_input"},
+{"id":"P06","topic":"client_flow","prompt":"The app can analyze an image or generate one.","decision":"branch_json_analysis_from_generated_media_output","reason":"structured_analysis_and_media_artifacts_require_different_handling"}
+],"transfer":[
+{"id":"T01","topic":"image_analysis","prompt":"Identify visible defects and read descriptive features from an existing equipment photo.","decision":"image_analysis","reason":"the_task_interprets_existing_visual_content"},
+{"id":"T02","topic":"multimodal_visual_prompt","prompt":"Give a deployed model a diagram plus text and ask for an explanation.","decision":"multimodal_visual_prompt","reason":"the_response_depends_on_combined_visual_and_text_context"},
+{"id":"T03","topic":"image_generation","prompt":"Produce a new concept illustration from a prompt.","decision":"image_generation","reason":"the_goal_is_a_new_single_visual_artifact"},
+{"id":"T04","topic":"video_generation","prompt":"Produce a new animated sequence from a storyboard description.","decision":"video_generation","reason":"the_goal_is_generated_visual_content_over_time"},
+{"id":"T05","topic":"client_flow","prompt":"An uploaded file extension and declared media type disagree.","decision":"reject_or_correct_media_metadata_before_request","reason":"incorrect_media_type_can_route_or_parse_input_wrongly"},
+{"id":"T06","topic":"client_flow","prompt":"A response contains structured labels for one operation and a media reference for another.","decision":"parse_output_according_to_selected_operation","reason":"analysis_records_and_generated_media_are_not_interchangeable"}
+]}}

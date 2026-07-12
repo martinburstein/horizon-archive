@@ -30,6 +30,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-03-03` — complete offline client bridge for imports, package/environment reasoning, files, secrets, HTTP-shaped requests, hidden-config transfer, and redaction validation
 - `curriculum/lessons/L-04-01` — complete source-grounded text-analysis scenario package covering four required techniques plus document-ID and per-document error flow
 - `curriculum/lessons/L-04-02` — complete source-grounded speech scenario package covering recognition, synthesis, multimodal spoken prompts, audio-file direction, and cancellation handling
+- `curriculum/lessons/L-04-03` — complete source-grounded visual scenario package covering image analysis, multimodal visual prompts, image/video generation, media validation, and output-shape handling
 
 ## Ready now
 

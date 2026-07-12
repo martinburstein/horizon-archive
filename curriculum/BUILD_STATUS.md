@@ -42,4 +42,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built imports, files, packages, secrets, and API client-bridge package `L-03-03`
 - [x] Built source-grounded text-analysis workload package `L-04-01`
 - [x] Built source-grounded speech workload package `L-04-02`
+- [x] Built source-grounded vision and visual-generation package `L-04-03`
 - [ ] Expand original question banks and full timed simulations
