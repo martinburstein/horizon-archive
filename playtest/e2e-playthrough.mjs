@@ -667,7 +667,9 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Run function", exact: true }).click();
   await page.getByText("REVIEW · uses for loop", { exact: true }).waitFor();
   const controlEditor = page.locator("#control-flow-source");
-  if (await controlEditor.getAttribute("aria-invalid") !== "true" || await controlEditor.getAttribute("aria-describedby") !== "control-flow-status control-flow-check-list") throw new Error("Control-flow remediation was not field-associated");
+  if (await controlEditor.getAttribute("aria-invalid") !== "true" || await controlEditor.getAttribute("aria-describedby") !== "control-flow-status control-flow-check-list control-flow-remediation") throw new Error("Control-flow remediation was not associated with System results, checks, and Teacher guidance");
+  await page.getByText("901 TEACHER // PYTHON AND BOUNDARY REMEDIATION", { exact: true }).waitFor();
+  if ((await page.locator("#control-flow-status").textContent()).includes("TEACHER")) throw new Error("Teacher boundary remediation leaked into neutral System scoring");
   await page.setViewportSize({ width: 640, height: 480 });
   await page.screenshot({ path: qaPath("control-flow-primary-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 1600, height: 900 });
@@ -697,11 +699,13 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Run function", exact: true }).click();
   await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
+  await page.getByText("PILOT // CLOSED-NOTE EXPLANATION OWNER", { exact: true }).waitFor();
   await page.getByLabel("Closed-note Parameter input", { exact: true }).fill("wrong");
   await page.getByLabel("Closed-note Loop and condition", { exact: true }).fill("wrong");
   await page.getByLabel("Closed-note Return placement", { exact: true }).fill("wrong");
   await page.getByRole("button", { name: "Check control flow", exact: true }).click();
   await page.getByRole("status").getByText("0/3", { exact: false }).waitFor();
+  await page.getByText("901 TEACHER // EXECUTION-PATH REMEDIATION", { exact: true }).waitFor();
   await page.screenshot({ path: qaPath("control-flow-closed-note-qa.png"), fullPage: true });
   assertDistinctCaptures(["control-flow-primary-qa.png", "control-flow-transfer-remediation-qa.png", "control-flow-closed-note-qa.png"]);
   for (const [dimension, label] of [["parameter", "Parameter input"], ["loop_condition", "Loop and condition"], ["return", "Return placement"]]) { const field = page.getByLabel(`Closed-note ${label}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `control-explanation-${dimension}-feedback`) throw new Error(`Control-flow ${dimension} remediation was not field-associated`); }
@@ -714,16 +718,22 @@ print("Operator:", learner)`);
   const controlExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (controlExplanationDraft.includes("loop each item") || controlExplanationDraft.includes("parameters receive")) throw new Error("Control-flow explanation leaked into localStorage");
   await page.getByRole("button", { name: "Check control flow", exact: true }).click();
-  await page.getByText("Complete control-flow explanation confirmed", { exact: false }).waitFor();
+  await page.getByText("EXPLANATION PASS", { exact: false }).waitFor();
   await page.getByRole("checkbox", { name: "I produced this control-flow explanation myself without notes.", exact: true }).check();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
   const controlContinue = page.getByRole("button", { name: "Continue", exact: true });
   await controlContinue.waitFor();
   if (!await controlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Control-flow mastery did not move focus to Continue");
   const controlMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).controlFlowEvidence, { key: saveKey });
   if (controlMastery?.masteryStatus !== "mastered" || controlMastery?.attemptCount !== 6) throw new Error(`Control-flow mastery incomplete: ${JSON.stringify(controlMastery)}`);
   if (["learnerSource", "source", "inputRecords", "runtimeOutput", "freeFormExplanation"].some((key) => key in controlMastery)) throw new Error("Control-flow mastery retained private content");
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  const restoredControlContinue = page.getByRole("button", { name: "Continue", exact: true });
+  await restoredControlContinue.waitFor();
+  if (!await restoredControlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized mastered reload did not restore focus to Continue");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -867,6 +877,9 @@ print("Operator:", learner)`);
     controlFlowTransfer: true,
     controlFlowClosedNote: true,
     controlFlowStrictMastery: true,
+    controlFlowOwnership: true,
+    controlFlowContinueFocus: true,
+    controlFlowReloadFocus: true,
     structuredPacketsOwnership: true,
     structuredPacketsContinueFocus: true,
     modelChoiceFourFamilies: true,
@@ -886,7 +899,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-AI901-002"],
     credits: true,
   }));
 } finally {

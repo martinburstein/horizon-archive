@@ -1,5 +1,17 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0302 Control Flow ownership and focus closure
+
+- **Outcome:** Closed the Control Flow ownership and continuity handoff without starting L-03-03 or L-04-01 gameplay. `SYSTEM` result regions now contain only deterministic 8-check or 3-dimension scores and pass/not-complete state. Python, boundary, and execution-path guidance renders in separate explicitly labeled `901 TEACHER` remediation regions.
+- **Learner ownership:** The closed-note execution-path heading and prose remain explicitly `PILOT // CLOSED-NOTE EXPLANATION OWNER`; learner text remains session-only. Per-field misses stay Teacher-owned, while confirmed dimensions remain neutral System feedback.
+- **Completion/focus:** Primary and strict-mastery completion messages remain explicitly Teacher-owned. A dedicated Control Flow focus flag moves focus to Continue after mastery acknowledgement and again after a sanitized mastered-save reload when Continue is the next meaningful action.
+- **Preserved contracts:** Primary 8/8, transfer 8/8, three-part closed-note explanation, evidence sanitization/privacy, close/reopen and reload behavior, canonical/narrow presentation, unlimited recovery, and three pairwise-distinct Control Flow captures remain unchanged.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/controlFlowExercise.js`, `horizon-archive-game/test/controlFlowExercise.test.js`, `playtest/e2e-playthrough.mjs`, refreshed Control Flow captures, and this log.
+- **Validation:** 59/59 unit tests pass; production build passes; L-03-02 validator self-test and both primary/transfer references pass all 8 checks; full title-to-credits E2E passes with zero runtime errors and verifies ownership separation, field associations, strict mastery, post-acknowledgement focus, mastered-reload focus, privacy, and distinct captures; `git diff --check` passes.
+- **Manifest/E2E register:** Existing `HA-PY-CONTROL-FLOW` mastery contract remains correct; the E2E result register now includes it plus ownership and both Continue-focus assertions.
+- **Next action:** Player Agent should independently test screen-reader ordering for System score → Teacher remediation and focus behavior after direct mastery and resume. Exercise work should not enter L-03-03/L-04-01 before that audit.
+- **Risks:** Teacher remediation adds vertical content inside the established scrollable console; narrow-screen reading order remains the main accessibility review item.
+
 ## 2026-07-12 — L-03-02 Control Flow complete Terminal gate
 
 - **Outcome:** Added `EX-L0302-CONTROL-FLOW` as the mandatory next ruins Terminal after Structured Packets. Mastery requires packaged primary 8/8, unseen transfer 8/8, and a three-part closed-note parameter → loop/condition/append → return explanation; progression remains blocked until completion. No L-03-03 gameplay was started.

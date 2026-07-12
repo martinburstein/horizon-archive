@@ -79,6 +79,22 @@ export function controlFlowRemediation(result, level) {
   return `${failed}: keep append inside the loop and return once after all items; then retry unseen input.`;
 }
 
+export function getControlFlowFeedback(result, level) {
+  if (!result) return { systemScore: "Awaiting a reusable function.", teacherRemediation: null };
+  return {
+    systemScore: `${result.score}/8 · ${result.passed ? "FORM PASS · all eight checks confirmed." : "FORM NOT YET COMPLETE."}`,
+    teacherRemediation: result.passed ? null : controlFlowRemediation(result, level),
+  };
+}
+
+export function getControlFlowExplanationFeedback(result) {
+  if (!result) return { systemScore: "Awaiting the learner's three-part execution path.", teacherRemediation: null };
+  return {
+    systemScore: `${result.score}/3 · ${result.passed ? "EXPLANATION PASS · all three dimensions confirmed." : "EXPLANATION NOT YET COMPLETE."}`,
+    teacherRemediation: result.passed ? null : "Trace parameters, one boundary iteration, the selected append branch, then the return after the loop.",
+  };
+}
+
 function formComplete(correctness, form) { return controlFlowChecks.every((check) => correctness[form]?.[check] === true); }
 export function sanitizeControlFlowEvidence(value) {
   if (!value || typeof value !== "object" || value.exerciseId !== exerciseAsset.exercise_id) return null;
