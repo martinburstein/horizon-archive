@@ -100,6 +100,13 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] System score, Teacher remediation, and Pilot source/prose remain visually and programmatically separate.
 - [ ] Client Bridge primary, transfer-remediation, and closed-note captures exist and are byte-distinct.
 - [ ] Direct mastery and restored mastery place focus on Continue.
+- [ ] Text Analysis terminology bridge persists unchanged in primary, transfer, and closed-note phases.
+- [ ] Keyword extraction and key phrase extraction are visibly connected, not presented as competing capabilities.
+- [ ] Key phrases, entities, sentiment, and summary remain distinct workload reads.
+- [ ] Stable document ID precedes per-document success/error branching in explanation and remediation.
+- [ ] Four closed-note fields are associated, focused, and ordered at canonical and narrow sizes.
+- [ ] System score, Teacher capability/correlation remediation, and Pilot prose remain separate.
+- [ ] Three Text Analysis captures exist and are byte-distinct; direct/restored mastery focuses Continue.
 
 ## No-dead-end sweep
 

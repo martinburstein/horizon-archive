@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Text Analysis final visual gate
+
+- **Completed:** audited the complete Text Analysis primary, transfer, closed-note, and mastered flow after terminology/ownership/focus fixes. The persistent offline keyword-extraction <-> key-phrase bridge remains prominent and complete; key phrases/entities/sentiment/summary hierarchy, stable document-ID correlation, mixed success/error branching, decision/reason cards, four explanation fields, System scores, Teacher remediation, Pilot ownership, contained scrolling, focus, and Continue handoff are coherent at 640 x 480 and 320 x 240. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 71 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms both 12/12 forms, four-part explanation, strict mastery, terminology persistence in every mode, System/Teacher/Pilot ownership, direct and reload Continue focus, privacy, and credits. Static hashes and dimensions confirm byte-distinct `640 x 480` primary, `320 x 240` transfer-remediation, and `1600 x 900` host closed-note captures; source checks confirm the terminology bridge, four workload labels, document ID, mixed result flow, and Teacher remediation.
+- **Next recommended item:** Location Scout should show four analysis apertures feeding a fifth correlation rail stamped with stable square document markers and a split success/error return.
+- **Unresolved risks:** the terminology warning consumes several narrow lines by design; shorten only if every safety and source-boundary claim remains explicit.
+
 ## 2026-07-12 — Offline Client Bridge final visual gate
 
 - **Completed:** audited the complete Offline Client Bridge primary, transfer, retrieval, closed-note, and mastered flow after warning/ownership/focus fixes. The persistent amber offline/no-credential/reverification strip is prominent without eclipsing work; module -> file -> secret -> request -> response remains ordered; code, five fields, neutral System scores, Teacher missing-secret/redaction/layer remediation, Pilot ownership, fixed chrome, work traversal, focus, and Continue handoff are coherent at 640 x 480 and 320 x 240. No CSS correction was warranted.

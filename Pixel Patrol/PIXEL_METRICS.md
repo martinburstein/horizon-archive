@@ -28,6 +28,8 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Control Flow closed-note fields | 3: parameter input, loop and condition, return placement | Implemented Horizon metric |
 | Client Bridge chain | 5 ordered layers: module, file, secret, request, response | Implemented Horizon metric |
 | Client Bridge warning | 1 persistent semantic strip in every phase | Safety-critical Horizon metric |
+| Text Analysis workload family | 4 primary reads: key phrases, entities, sentiment, summary | Implemented Horizon metric |
+| Text Analysis closed-note fields | 4: requested output, capability, document ID, mixed result | Implemented Horizon metric |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 

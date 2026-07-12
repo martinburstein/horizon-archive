@@ -133,6 +133,14 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Secret failures must distinguish missing injection from unsafe exposure. Never echo the submitted secret, authorization value, or config body in feedback, saved evidence, or visual captures.
 - Reuse the fixed Terminal frame, contained work traversal, 0.68rem code, 2 px gold focus, amber Teacher rail, and indigo/violet phase chrome. After strict mastery and mastered-save resume, focus moves to Continue.
 
+## Offline Text Analysis terminology and batch flow
+
+- Keep the persistent amber bridge above every phase: course-authored offline practice; no service call/document text; AI-901 `keyword extraction` maps to Azure `key phrase extraction`; volatile SDK/operation/endpoint/authentication/language/limit/region/pricing/preview facts require reverification.
+- Primary workload hierarchy is key phrases, named entities, sentiment/opinion, and summary. Document flow is the cross-cutting fifth rail: requested output chooses capability; stable document ID correlates each input; each result branches success or error.
+- Primary/transfer show one of six cards with Pilot workload ownership, decision/reason fields, neutral System 12-dimension score, and separate Teacher capability/correlation remediation.
+- Closed note uses four associated fields—requested output, capability, document ID, mixed result—in one row at 640 and one column at 320. Pilot owns prose, System owns totals, Teacher owns reconstruction.
+- The warning may wrap at 320 but must remain complete and precede phase content. Keep one contained form scroller, internal 2 px focus, fixed title/status, and Continue focus after direct or restored mastery.
+
 ## Responsible AI primary-form containment
 
 - The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.
