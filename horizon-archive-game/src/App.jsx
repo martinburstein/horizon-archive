@@ -204,7 +204,7 @@ import {
   sanitizePortalEvidence,
   updatePortalEvidence,
 } from "./portalOrientationExercise.js";
-import { evaluatePromptExplanation,evaluatePromptScenario,getPromptOptions,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptRemediation,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
+import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -456,6 +456,7 @@ export function App() {
   const focusContinueAfterVisualRef = useRef(false);
   const focusContinueAfterExtractionRef = useRef(false);
   const focusContinueAfterPortalRef = useRef(false);
+  const focusContinueAfterPromptRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -572,6 +573,12 @@ export function App() {
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, portalEvidence?.masteryStatus]);
 
+  useLayoutEffect(() => {
+    if (!focusContinueAfterPromptRef.current || terminalOpen || !pendingAdvance || promptEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterPromptRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, promptEvidence?.masteryStatus]);
+
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
     setSceneIndex(0);
@@ -663,7 +670,7 @@ export function App() {
     if (saved.portalEvidence?.masteryStatus === "mastered") focusContinueAfterPortalRef.current = true;
     setPortalEvidence(saved.portalEvidence);
     setPortalSession(null);
-    setPromptEvidence(saved.promptEvidence);setPromptSession(null);
+    if(saved.promptEvidence?.masteryStatus==="mastered")focusContinueAfterPromptRef.current=true;setPromptEvidence(saved.promptEvidence);setPromptSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1352,7 +1359,7 @@ export function App() {
   function advancePrompt(){if(!promptSession.result?.passed)return;const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary;if(promptSession.index===ss.length-1){if(promptSession.form==="transfer"){setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setPromptSession({...promptSession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setPromptSession({...promptSession,complete:true});return;}setPromptSession({...promptSession,index:promptSession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
   function acknowledgePromptPrimary(){if(!promptSession?.complete||!promptEvidence?.confidence)return;setPromptEvidence(p=>updatePromptEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkPromptExplanation(event){event.preventDefault();const result=evaluatePromptExplanation(promptSession.explanationResponse);setPromptSession({...promptSession,explanationResult:result});setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
-  function acknowledgePromptMastery(){if(!promptSession?.explanationResult?.passed||!promptSession.ownershipConfirmed||!promptEvidence?.confidence)return;focusContinueAfterPortalRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers mastery confirmed: both 12-of-12 forms and no-authority explanation are complete.","teacher");}
+  function acknowledgePromptMastery(){if(!promptSession?.explanationResult?.passed||!promptSession.ownershipConfirmed||!promptEvidence?.confidence)return;focusContinueAfterPromptRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers mastery confirmed: both 12-of-12 forms and no-authority explanation are complete.","teacher");}
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2248,7 +2255,294 @@ export function App() {
             </section>
           </TerminalShell>
         )}
-        {terminalOpen&&scene.id==="ruins"&&ruinsTerminalKind==="prompt-layers"&&promptSession&&<TerminalShell exerciseId={promptLayerExercise.exercise_id} title="Offline Prompt Layers" filename={promptSession.phase==="explanation"?"closed_note.md":`${promptSession.form}_prompts.json`} lessonId={promptLayerExercise.lesson_id} statusText={promptSession.phase==="explanation"?"CLOSED-NOTE GATE":`${promptSession.form.toUpperCase()} ${promptSession.index+1}/6`} closeLabel="Exit Prompt Layers" restoreFocusTo={terminalTriggerRef.current} onClose={exitPromptLayers}><section className="model-choice-workspace"><p className="model-choice-boundary">OFFLINE · TEXT IS NOT AUTHORITY. No prompt can authorize login, deploy, delete, email, purchase, credential use, service calls, or external action.</p>{promptSession.phase==="explanation"?<form className="model-choice-form" onSubmit={checkPromptExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE PROMPT OWNER</p><h2>Explain layers, grounding/output, authority, and evaluation</h2></header><div className="model-choice-fields prompt-explanation">{promptExplanationDimensions.map(d=>{const ok=promptSession.explanationResult?.correctness[d],id=`prompt-explanation-${d}-feedback`;return <label key={d}><span>{d.replaceAll("_"," ")}</span><input aria-label={`Closed-note prompt ${d}`} aria-invalid={promptSession.explanationResult?!ok:undefined} aria-describedby={promptSession.explanationResult?id:undefined} value={promptSession.explanationResponse[d]} onChange={e=>setPromptSession({...promptSession,explanationResponse:{...promptSession.explanationResponse,[d]:e.target.value},explanationResult:null,ownershipConfirmed:false})}/>{promptSession.explanationResult&&<small id={id}>{ok?"SYSTEM // Confirmed.":"901 TEACHER // Rebuild this boundary; text never grants action authority."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit">Check prompt explanation</button></div><div role="status" aria-live="polite">{promptSession.explanationResult?`${promptSession.explanationResult.score}/4 · ${promptSession.explanationResult.passed?"Complete no-authority explanation confirmed.":"901 TEACHER // Separate layers, evidence, authority, and adversarial evaluation."}`:"No prompt, grounding, output, credential, or action request is shown."}</div>{promptSession.explanationResult?.passed&&<><label className="ownership-confirmation"><input type="checkbox" checked={promptSession.ownershipConfirmed} onChange={e=>setPromptSession({...promptSession,ownershipConfirmed:e.target.checked})}/>I produced this prompt-layer explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="prompt-confidence" checked={promptEvidence?.confidence===v} onChange={()=>setPromptEvidence(p=>updatePromptEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgePromptMastery}>Acknowledge strict mastery</button></>}</section></form>:promptSession.complete?<section className="workload-summary"><h2>12 / 12 dimensions</h2><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="prompt-primary-confidence" checked={promptEvidence?.confidence===v} onChange={()=>setPromptEvidence(p=>updatePromptEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgePromptPrimary}>Acknowledge primary form</button></section>:(()=>{const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary,s=ss[promptSession.index],opts=getPromptOptions(s.id,promptSession.form);return <form className="model-choice-form" onSubmit={checkPrompt}><header><p className="pane-label">{promptSession.form.toUpperCase()} · PILOT // PROMPT-LAYER OWNER · {s.id}</p><h2>{s.prompt}</h2></header><div className="model-choice-fields">{promptDimensions.map(d=>{const ok=promptSession.result?.correctness[d],id=`prompt-${d}-feedback`;return <label key={d}><span>{d}</span><select aria-label={`Prompt ${d}`} aria-invalid={promptSession.result?!ok:undefined} aria-describedby={promptSession.result?id:undefined} value={promptSession.response[d]} onChange={e=>setPromptSession({...promptSession,response:{...promptSession.response,[d]:e.target.value},result:null})}><option value="">Choose one</option>{opts[d].map(v=><option key={v} value={v}>{formatChoice(v)}</option>)}</select>{promptSession.result&&<small id={id}>{ok?"SYSTEM // Correct.":"901 TEACHER // Identify the layer and separate text from authority."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit">Check prompt layer</button></div><div role="status" aria-live="polite">{promptSession.result?`${promptSession.result.score}/2 · ${promptSession.result.passed?"Choice confirmed.":promptRemediation(s,promptSession.result,promptSession.hintLevel)}`:"Choose the layer, boundary, and safe evaluation response."}</div>{promptSession.result&&!promptSession.result.passed&&<button className="hint-action" type="button" onClick={revealPromptHint}>Reveal next prompt boundary</button>}{promptSession.result?.passed&&<button className="confirm-action" type="button" onClick={advancePrompt}>{promptSession.index===5?(promptSession.form==="transfer"?"Begin closed-note explanation":"View primary result"):"Next scenario"}</button>}</section></form>})()}</section></TerminalShell>}
+          {terminalOpen &&
+            scene.id === "ruins" &&
+            ruinsTerminalKind === "prompt-layers" &&
+            promptSession && (
+              <TerminalShell
+                exerciseId={promptLayerExercise.exercise_id}
+                title="Offline Prompt Layers"
+                filename={
+                  promptSession.phase === "explanation"
+                    ? "closed_note.md"
+                    : `${promptSession.form}_prompts.json`
+                }
+                lessonId={promptLayerExercise.lesson_id}
+                statusText={
+                  promptSession.phase === "explanation"
+                    ? "CLOSED-NOTE GATE"
+                    : `${promptSession.form.toUpperCase()} ${promptSession.index + 1}/6`
+                }
+                closeLabel="Exit Prompt Layers"
+                describedBy={promptDialogDescribedBy}
+                restoreFocusTo={terminalTriggerRef.current}
+                onClose={exitPromptLayers}
+              >
+                <section className="model-choice-workspace prompt-workspace">
+                  <p id="prompt-offline-warning" className="model-choice-boundary" role="note">
+                    FULLY OFFLINE · no service call or external action. TEXT IS NOT AUTHORITY: no prompt can authorize login, deploy, delete, email, purchase, credential use, mutation, or any destructive action. No prompt, grounding, output, credential, action request, response, or free text is persisted.
+                  </p>
+                  <p id="prompt-layer-equivalent" className="speech-transcript">
+                    Six-layer text equivalent: durable system instructions → current user task/input → grounding data requiring evidence checks → explicit output contract → instruction-conflict and no-action-authority boundary → representative, edge, failure, and adversarial-injection evaluation.
+                  </p>
+                  {promptSession.phase === "explanation" ? (
+                    <form
+                      className="model-choice-form"
+                      onSubmit={checkPromptExplanation}
+                    >
+                      <header>
+                        <p className="pane-label">
+                          PILOT // CLOSED-NOTE PROMPT OWNER
+                        </p>
+                        <h2>
+                          Explain layers, grounding/output, authority, and
+                          evaluation
+                        </h2>
+                        <p>Your injection, authority, and evaluation explanation remains Pilot-owned and session-only.</p>
+                      </header>
+                      <div className="model-choice-fields prompt-explanation">
+                        {promptExplanationDimensions.map((d) => {
+                          const ok =
+                              promptSession.explanationResult?.correctness[d],
+                            id = `prompt-explanation-${d}-feedback`;
+                          return (
+                            <label key={d}>
+                              <span>{d.replaceAll("_", " ")}</span>
+                              <input
+                                aria-label={`Closed-note prompt ${d}`}
+                                aria-invalid={
+                                  promptSession.explanationResult
+                                    ? !ok
+                                    : undefined
+                                }
+                                aria-describedby={
+                                  promptSession.explanationResult
+                                    ? id
+                                    : undefined
+                                }
+                                value={promptSession.explanationResponse[d]}
+                                onChange={(e) =>
+                                  setPromptSession({
+                                    ...promptSession,
+                                    explanationResponse: {
+                                      ...promptSession.explanationResponse,
+                                      [d]: e.target.value,
+                                    },
+                                    explanationResult: null,
+                                    ownershipConfirmed: false,
+                                  })
+                                }
+                              />
+                              {promptSession.explanationResult && (
+                                <small id={id}>
+                                  {ok
+                                    ? "SYSTEM // Confirmed."
+                                    : "901 TEACHER // Rebuild this boundary; text never grants action authority."}
+                                </small>
+                              )}
+                            </label>
+                          );
+                        })}
+                      </div>
+                      <section className="terminal-console model-choice-output">
+                        <div className="console-heading-row">
+                          <strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong>
+                          <button className="run-action" type="submit">
+                            Check prompt explanation
+                          </button>
+                        </div>
+                        <div role="status" aria-live="polite">
+                          {getPromptExplanationFeedback(promptSession.explanationResult).systemScore}
+                        </div>
+                        {getPromptExplanationFeedback(promptSession.explanationResult).teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // INJECTION, AUTHORITY, AND EVALUATION REMEDIATION</strong><span>{getPromptExplanationFeedback(promptSession.explanationResult).teacherRemediation}</span></p>}
+                        {promptSession.explanationResult?.passed && (
+                          <>
+                            <label className="ownership-confirmation">
+                              <input
+                                type="checkbox"
+                                checked={promptSession.ownershipConfirmed}
+                                onChange={(e) =>
+                                  setPromptSession({
+                                    ...promptSession,
+                                    ownershipConfirmed: e.target.checked,
+                                  })
+                                }
+                              />
+                              I produced this prompt-layer explanation myself
+                              without notes.
+                            </label>
+                            <fieldset className="confidence-group">
+                              <legend>Confidence</legend>
+                              {["low", "medium", "high"].map((v) => (
+                                <label key={v}>
+                                  <input
+                                    type="radio"
+                                    name="prompt-confidence"
+                                    checked={promptEvidence?.confidence === v}
+                                    onChange={() =>
+                                      setPromptEvidence((p) =>
+                                        updatePromptEvidence(p, {
+                                          confidence: v,
+                                        }),
+                                      )
+                                    }
+                                  />
+                                  {v}
+                                </label>
+                              ))}
+                            </fieldset>
+                            <button
+                              className="confirm-action"
+                              type="button"
+                              onClick={acknowledgePromptMastery}
+                            >
+                              Acknowledge strict mastery
+                            </button>
+                          </>
+                        )}
+                      </section>
+                    </form>
+                  ) : promptSession.complete ? (
+                    <section className="workload-summary">
+                      <p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p>
+                      <h2>12 / 12 dimensions</h2>
+                      <p>All six prompt decisions pass. Fresh transfer and closed-note explanation remain.</p>
+                      <fieldset className="confidence-group">
+                        <legend>Confidence</legend>
+                        {["low", "medium", "high"].map((v) => (
+                          <label key={v}>
+                            <input
+                              type="radio"
+                              name="prompt-primary-confidence"
+                              checked={promptEvidence?.confidence === v}
+                              onChange={() =>
+                                setPromptEvidence((p) =>
+                                  updatePromptEvidence(p, { confidence: v }),
+                                )
+                              }
+                            />
+                            {v}
+                          </label>
+                        ))}
+                      </fieldset>
+                      <button
+                        className="confirm-action"
+                        type="button"
+                        onClick={acknowledgePromptPrimary}
+                      >
+                        Acknowledge primary form
+                      </button>
+                    </section>
+                  ) : (
+                    (() => {
+                      const ss =
+                          promptSession.form === "transfer"
+                            ? promptTransfer
+                            : promptPrimary,
+                        s = ss[promptSession.index],
+                        opts = getPromptOptions(s.id, promptSession.form),
+                        promptFeedback = getPromptFeedback(s, promptSession.result, promptSession.hintLevel);
+                      return (
+                        <form
+                          className="model-choice-form"
+                          onSubmit={checkPrompt}
+                        >
+                          <header>
+                            <p className="pane-label">
+                              {promptSession.form.toUpperCase()} · PILOT //
+                              PROMPT-LAYER OWNER · {s.id}
+                            </p>
+                            <h2>{s.prompt}</h2>
+                          </header>
+                          <div className="model-choice-fields">
+                            {promptDimensions.map((d) => {
+                              const ok = promptSession.result?.correctness[d],
+                                id = `prompt-${d}-feedback`;
+                              return (
+                                <label key={d}>
+                                  <span>{d}</span>
+                                  <select
+                                    aria-label={`Prompt ${d}`}
+                                    aria-invalid={
+                                      promptSession.result ? !ok : undefined
+                                    }
+                                    aria-describedby={
+                                      promptSession.result ? id : undefined
+                                    }
+                                    value={promptSession.response[d]}
+                                    onChange={(e) =>
+                                      setPromptSession({
+                                        ...promptSession,
+                                        response: {
+                                          ...promptSession.response,
+                                          [d]: e.target.value,
+                                        },
+                                        result: null,
+                                      })
+                                    }
+                                  >
+                                    <option value="">Choose one</option>
+                                    {opts[d].map((v) => (
+                                      <option key={v} value={v}>
+                                        {formatChoice(v)}
+                                      </option>
+                                    ))}
+                                  </select>
+                                  {promptSession.result && (
+                                    <small id={id}>
+                                      {ok
+                                        ? "SYSTEM // Correct."
+                                        : "901 TEACHER // Identify the layer and separate text from authority."}
+                                    </small>
+                                  )}
+                                </label>
+                              );
+                            })}
+                          </div>
+                          <section className="terminal-console model-choice-output">
+                            <div className="console-heading-row">
+                              <strong>
+                                SYSTEM // STRICT 12-DIMENSION VALIDATOR
+                              </strong>
+                              <button className="run-action" type="submit">
+                                Check prompt layer
+                              </button>
+                            </div>
+                            <div role="status" aria-live="polite">
+                              {promptFeedback.systemScore}
+                            </div>
+                            {promptFeedback.teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // PROMPT-LAYER AND AUTHORITY REMEDIATION</strong><span>{promptFeedback.teacherRemediation}</span></p>}
+                            {promptSession.result &&
+                              !promptSession.result.passed && (
+                                <button
+                                  className="hint-action"
+                                  type="button"
+                                  onClick={revealPromptHint}
+                                >
+                                  Reveal next prompt boundary
+                                </button>
+                              )}
+                            {promptSession.result?.passed && (
+                              <button
+                                className="confirm-action"
+                                type="button"
+                                onClick={advancePrompt}
+                              >
+                                {promptSession.index === 5
+                                  ? promptSession.form === "transfer"
+                                    ? "Begin closed-note explanation"
+                                    : "View primary result"
+                                  : "Next scenario"}
+                              </button>
+                            )}
+                          </section>
+                        </form>
+                      );
+                    })()
+                  )}
+                </section>
+              </TerminalShell>
+            )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}

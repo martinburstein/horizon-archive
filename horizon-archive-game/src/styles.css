@@ -548,6 +548,7 @@ h1 {
 .portal-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .portal-explanation { grid-template-columns: 1fr; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0502-PROMPT-LAYERS"] { overflow: hidden; }
+.prompt-workspace { grid-template-rows: auto auto minmax(0, 1fr); }
 .prompt-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .prompt-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }

@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Prompt Layers continuity closure
+
+- **Outcome:** Closed only the L-05-02 continuity contract. Primary, transfer, and closed-note System regions now contain neutral deterministic scores/status, while prompt-layer, injection, authority, and adversarial-evaluation coaching appears in separate explicitly labeled 901 Teacher remediation.
+- **Persistent safety/text:** Every phase carries an accessible fully offline/no-service/no-external-action warning. It states that prompt text has no authority to log in, deploy, delete, email, purchase, use credentials, mutate systems, or take destructive action, and that no prompt/grounding/output/request/response/free text is persisted. A persistent six-layer text equivalent covers system, user, grounding, output contract, conflict/action authority, and representative/adversarial evaluation.
+- **Ownership/focus:** Closed-note injection/authority/evaluation prose remains Pilot-owned and session-only; primary and mastery completions remain Teacher-owned. A dedicated Prompt focus flag targets Continue after direct mastery and sanitized mastered-save reload.
+- **Preserved contracts:** Both strict 12/12 forms, four-part closed note, destructive-action safeguards, sanitizer/privacy, canonical/narrow presentation, field associations, and three pairwise-distinct captures remain intact. No L-05-03/L-05-04 gameplay was added.
+- **Files changed:** `promptLayerExercise.js`, its focused unit test, `App.jsx`, `styles.css`, full E2E, refreshed Prompt captures, and this log.
+- **Validation:** L-05-02 self-test passes; packaged primary and transfer pass 12/12; 103/103 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors and verifies all-phase messaging, real transfer remediation, ownership separation, privacy, distinct captures, and direct/restored Continue focus; diff check passes.
+- **Next recommended item:** Player Agent should independently audit keyboard and screen-reader order, destructive-action/injection reversals, six-layer readability, and narrow presentation before later gameplay begins.
+- **Unresolved risks:** Automated DOM/focus checks do not replace a manual screen-reader pass. No live service or external action is performed by design.
+
 ## 2026-07-12 — L-05-02 Offline/no-authority Prompt Layers gate
 
 - **Outcome:** Added `EX-L0502-PROMPT-LAYERS` as the mandatory rehearsal after Portal Orientation. Mastery requires primary 12/12, fresh transfer 12/12, and a four-part closed-note explanation. No L-05-03 gameplay was implemented.
