@@ -1,6 +1,7 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
+import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -353,7 +354,7 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Start Responsible AI", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').waitFor();
   await page.getByText("Course-authored practice scenario", { exact: false }).waitFor();
-  await page.getByText("not a Microsoft exam question", { exact: false }).waitFor();
+  await page.locator(".responsible-ai-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
   await page.getByLabel("Responsible AI principle", { exact: true }).selectOption("transparency");
   await page.getByLabel("Responsible AI stakeholder", { exact: true }).selectOption("hiring_vendor");
   await page.getByLabel("Responsible AI mitigation", { exact: true }).selectOption("publish_ai_disclosure_only");
@@ -389,13 +390,65 @@ print("Operator:", learner)`);
     await page.getByRole("button", { name: scenarioId === "P06" ? "View primary result" : "Next scenario", exact: true }).click();
   }
   await page.getByRole("heading", { name: "24 / 24 dimensions", exact: true }).waitFor();
-  await page.getByText("primary course-authored form only", { exact: false }).waitFor();
+  await page.getByText("Primary course-authored form complete", { exact: false }).waitFor();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
   const responsibleAIEvidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
   if (responsibleAIEvidence?.exerciseId !== "EX-L0202-RESPONSIBLE-AI" || responsibleAIEvidence?.attemptCount !== 7 || responsibleAIEvidence?.hintLevel !== 2 || responsibleAIEvidence?.masteryStatus !== "primary_complete") throw new Error(`Responsible AI primary evidence incomplete: ${JSON.stringify(responsibleAIEvidence)}`);
   if (Object.keys(responsibleAIEvidence.dimensionCorrectness || {}).length !== 6 || Object.values(responsibleAIEvidence.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI strict primary gate incomplete");
   if (["response", "choices", "reasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIEvidence)) throw new Error("Responsible AI private session data persisted");
+
+  await page.getByRole("button", { name: "Start Responsible AI Transfer", exact: true }).click();
+  await page.locator(".pane-label", { hasText: "FRESH TRANSFER" }).waitFor();
+  await page.locator(".responsible-ai-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
+  await page.getByLabel("Responsible AI principle", { exact: true }).selectOption("transparency");
+  await page.getByLabel("Responsible AI stakeholder", { exact: true }).selectOption("camera_manufacturer");
+  await page.getByLabel("Responsible AI mitigation", { exact: true }).selectOption("add_security_banner");
+  await page.getByLabel("Responsible AI owner", { exact: true }).selectOption("model_itself");
+  await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
+  await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  const primaryPreservedDuringTransfer = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
+  if (primaryPreservedDuringTransfer?.masteryStatus !== "primary_complete") throw new Error("Transfer remediation erased the completed primary gate");
+  for (const scenarioId of Object.keys(referenceResponsibleAITransfer)) {
+    const answer = referenceResponsibleAITransfer[scenarioId];
+    await page.getByLabel("Responsible AI principle", { exact: true }).selectOption(answer.principle);
+    await page.getByLabel("Responsible AI stakeholder", { exact: true }).selectOption(answer.stakeholder);
+    await page.getByLabel("Responsible AI mitigation", { exact: true }).selectOption(answer.mitigation);
+    await page.getByLabel("Responsible AI owner", { exact: true }).selectOption(answer.owner);
+    await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
+    await page.getByText("Scenario confirmed", { exact: false }).waitFor();
+    await page.getByRole("button", { name: scenarioId === "T06" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click();
+  }
+  await page.getByRole("heading", { name: "Explain T06 without notes", exact: true }).waitFor();
+  await page.getByText("SPEAKER: PILOT", { exact: false }).waitFor();
+  await page.getByText("never saved", { exact: false }).waitFor();
+  await page.getByLabel("Closed-note principle", { exact: true }).fill("transparency");
+  await page.getByLabel("Closed-note stakeholder", { exact: true }).fill("people affected by moderation decisions");
+  await page.getByLabel("Closed-note mitigation", { exact: true }).fill("assign appeals owner audit and remedy");
+  await page.getByLabel("Closed-note owner", { exact: true }).fill("moderation model");
+  await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
+  await page.getByRole("status").getByText("2/4", { exact: false }).waitFor();
+  for (const dimension of ["principle", "owner"]) {
+    const field = page.getByLabel(`Closed-note ${dimension}`, { exact: true });
+    const feedbackId = `rai-explanation-${dimension}-feedback`;
+    if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== feedbackId) throw new Error(`Closed-note ${dimension} remediation was not field-associated`);
+  }
+  await page.getByLabel("Closed-note principle", { exact: true }).fill("accountability");
+  await page.getByLabel("Closed-note owner", { exact: true }).fill("trust and safety lead");
+  await page.getByRole("button", { name: "Exit Practice", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Responsible AI", exact: true }).click();
+  if (await page.getByLabel("Closed-note owner", { exact: true }).inputValue() !== "trust and safety lead") throw new Error("Closed-note explanation reset after close/reopen");
+  const raiExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (raiExplanationDraft.includes("trust and safety lead") || raiExplanationDraft.includes("people affected by moderation decisions")) throw new Error("Closed-note explanation text leaked into localStorage");
+  await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
+  await page.getByText("Complete explanation confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const responsibleAIMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
+  if (responsibleAIMastery?.masteryStatus !== "mastered" || responsibleAIMastery?.form !== "explanation" || responsibleAIMastery?.attemptCount !== 16) throw new Error(`Responsible AI strict mastery evidence incomplete: ${JSON.stringify(responsibleAIMastery)}`);
+  if (Object.keys(responsibleAIMastery.dimensionCorrectness || {}).length !== 13 || Object.values(responsibleAIMastery.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI two-form plus explanation gate incomplete");
+  if (["response", "choices", "reasoning", "explanation", "freeFormReasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIMastery)) throw new Error("Responsible AI mastery evidence retained private response content");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -523,6 +576,9 @@ print("Operator:", learner)`);
     responsibleAIStrictRemediation: true,
     responsibleAISessionPrivacy: true,
     responsibleAINotExamClaim: true,
+    responsibleAITransfer: true,
+    responsibleAIClosedNoteExplanation: true,
+    responsibleAIStrictMastery: true,
     evidencePacketExercise: true,
     witnessTerminalAsset: true,
     witnessTwoObjectSemantics: true,
@@ -537,7 +593,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-PRIMARY", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-002"],
     credits: true,
   }));
 } finally {

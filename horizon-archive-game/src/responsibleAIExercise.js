@@ -4,6 +4,7 @@ import answerKey from "../../curriculum/lessons/L-02-02/answer_key.json" with { 
 
 export const responsibleAIExercise = exerciseAsset;
 export const responsibleAIPrimaryScenarios = scenarioBank.forms.primary;
+export const responsibleAITransferScenarios = scenarioBank.forms.transfer;
 export const responsibleAIPrinciples = scenarioBank.principles;
 export const responsibleAIDimensions = exerciseAsset.dimensions;
 
@@ -12,12 +13,35 @@ const scenarioTags = {
   P01: "fairness-means-identical-outcomes", P02: "reliability-is-one-successful-test",
   P03: "privacy-is-only-secrecy", P04: "accessibility-is-polish",
   P05: "disclosure-alone-solves-harm", P06: "platform-is-accountable-owner",
+  T01: "fairness-means-identical-outcomes", T02: "reliability-is-one-successful-test",
+  T03: "privacy-is-only-secrecy", T04: "accessibility-is-polish",
+  T05: "disclosure-alone-solves-harm", T06: "platform-is-accountable-owner",
 };
 
-export function evaluateResponsibleAIScenario(scenarioId, response) {
-  const expected = answerKey.forms.primary[scenarioId];
+export function evaluateResponsibleAIScenario(scenarioId, response, form = scenarioId?.startsWith("T") ? "transfer" : "primary") {
+  const expected = answerKey.forms[form]?.[scenarioId];
   if (!expected) return null;
   const correctness = Object.fromEntries(responsibleAIDimensions.map((dimension) => [dimension, response[dimension] === expected[dimension]]));
+  return {
+    scenarioId,
+    correctness,
+    score: Object.values(correctness).filter(Boolean).length,
+    passed: Object.values(correctness).every(Boolean),
+    misconceptionTags: Object.values(correctness).every(Boolean) ? [] : [scenarioTags[scenarioId]],
+  };
+}
+
+function normalizeExplanation(value) {
+  return String(value || "").toLowerCase().replaceAll("_", " ").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+export function evaluateResponsibleAIExplanation(scenarioId, response) {
+  const expected = answerKey.forms.transfer[scenarioId];
+  if (!expected) return null;
+  const correctness = Object.fromEntries(responsibleAIDimensions.map((dimension) => [
+    dimension,
+    normalizeExplanation(response[dimension]) === normalizeExplanation(expected[dimension]),
+  ]));
   return {
     scenarioId,
     correctness,
@@ -37,7 +61,7 @@ export function responsibleAIRemediation(result, level) {
 export function sanitizeResponsibleAIEvidence(value) {
   if (!value || typeof value !== "object" || value.exerciseId !== exerciseAsset.exercise_id) return null;
   const dimensionCorrectness = {};
-  for (const scenario of responsibleAIPrimaryScenarios) {
+  for (const scenario of [...responsibleAIPrimaryScenarios, ...responsibleAITransferScenarios, { id: "closed_note_explanation" }]) {
     if (!value.dimensionCorrectness?.[scenario.id]) continue;
     dimensionCorrectness[scenario.id] = Object.fromEntries(responsibleAIDimensions
       .filter((dimension) => typeof value.dimensionCorrectness[scenario.id][dimension] === "boolean")
@@ -50,13 +74,13 @@ export function sanitizeResponsibleAIEvidence(value) {
     assessmentId: exerciseAsset.assessment_id,
     objectiveIds: [...exerciseAsset.objective_ids],
     skillIds: [...exerciseAsset.skill_ids],
-    form: "primary",
+    form: ["primary", "transfer", "explanation"].includes(value.form) ? value.form : "primary",
     dimensionCorrectness,
     attemptCount: Math.min(99, Math.max(0, Number.isInteger(value.attemptCount) ? value.attemptCount : 0)),
     hintLevel: Math.min(3, Math.max(0, Number.isInteger(value.hintLevel) ? value.hintLevel : 0)),
     confidence: ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null,
     misconceptionTags: Array.isArray(value.misconceptionTags) ? [...new Set(value.misconceptionTags.filter((tag) => validTags.has(tag)))] : [],
-    masteryStatus: ["in_progress", "remediation_required", "primary_complete"].includes(value.masteryStatus) ? value.masteryStatus : "in_progress",
+    masteryStatus: ["in_progress", "remediation_required", "primary_complete", "transfer_complete", "mastered"].includes(value.masteryStatus) ? value.masteryStatus : "in_progress",
   };
 }
 
@@ -69,6 +93,7 @@ export function updateResponsibleAIEvidence(previous, changes = {}) {
     attemptCount: safe.attemptCount + (changes.incrementAttempt ? 1 : 0),
     hintLevel: Math.max(safe.hintLevel, changes.hintLevel || 0),
     confidence: changes.confidence || safe.confidence,
+    form: changes.form || safe.form,
     misconceptionTags: changes.clearMisconceptionTags ? [] : [...safe.misconceptionTags, ...(changes.misconceptionTags || [])],
     masteryStatus: changes.masteryStatus || safe.masteryStatus,
   });

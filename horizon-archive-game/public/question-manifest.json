@@ -41,14 +41,14 @@
       "success_contract": "Score at least 10/12 and recover every critical workload and Terminal-state contrast."
     },
     {
-      "id": "HA-AI901-RAI-PRIMARY",
+      "id": "HA-AI901-RAI-MASTERY",
       "scene": "ruins",
       "exercise_id": "EX-L0202-RESPONSIBLE-AI",
       "lesson_id": "L-02-02",
       "activity_id": "A-L0202-2",
       "assessment_id": "AS-L0202-SCEN",
       "skills": ["AI901-D1-O1-SCENARIO-REASONING"],
-      "success_contract": "Complete the course-authored primary form at 24/24 across principle, stakeholder, mitigation, and owner; transfer remains deferred."
+      "success_contract": "Complete both course-authored forms at 24/24 across principle, stakeholder, mitigation, and owner, then independently produce one complete closed-note explanation."
     },
     {
       "id": "HA-AI901-002",

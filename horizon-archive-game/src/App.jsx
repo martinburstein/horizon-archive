@@ -66,12 +66,14 @@ import {
   updateCalibrationMastery,
 } from "./calibrationExercise.js";
 import {
+  evaluateResponsibleAIExplanation,
   evaluateResponsibleAIScenario,
   responsibleAIDimensions,
   responsibleAIExercise,
   responsibleAIPrimaryScenarios,
   responsibleAIPrinciples,
   responsibleAIRemediation,
+  responsibleAITransferScenarios,
   sanitizeResponsibleAIEvidence,
   updateResponsibleAIEvidence,
 } from "./responsibleAIExercise.js";
@@ -760,25 +762,28 @@ export function App() {
     setTerminalOpen(true);
     setRuinsTerminalKind("responsible-ai");
     if (!responsibleAISession) {
-      setResponsibleAISession({ index: 0, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false });
+      const form = responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" || responsibleAIEvidence?.masteryStatus === "primary_complete" ? "transfer" : "primary";
+      const phase = responsibleAIEvidence?.form === "explanation" ? "explanation" : "scenarios";
+      setResponsibleAISession({ form, phase, index: 0, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { principle: "", stakeholder: "", mitigation: "", owner: "" }, explanationResult: null, ownershipConfirmed: false });
     }
   }
 
   function exitResponsibleAI() {
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Responsible AI practice closed safely. Continue or resume the primary form when ready.");
+    setDialogue("Responsible AI practice closed safely. Continue or resume from the same session when ready.");
   }
 
   function checkResponsibleAI(event) {
     event.preventDefault();
-    const scenario = responsibleAIPrimaryScenarios[responsibleAISession.index];
-    const result = evaluateResponsibleAIScenario(scenario.id, responsibleAISession.response);
+    const scenarios = responsibleAISession.form === "transfer" ? responsibleAITransferScenarios : responsibleAIPrimaryScenarios;
+    const scenario = scenarios[responsibleAISession.index];
+    const result = evaluateResponsibleAIScenario(scenario.id, responsibleAISession.response, responsibleAISession.form);
     const hintLevel = result.passed ? responsibleAISession.hintLevel : Math.max(1, responsibleAISession.hintLevel);
     setResponsibleAISession({ ...responsibleAISession, result, hintLevel });
     setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, {
       scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel,
-      misconceptionTags: result.misconceptionTags, masteryStatus: result.passed ? "in_progress" : "remediation_required",
+      form: responsibleAISession.form, misconceptionTags: result.misconceptionTags, masteryStatus: responsibleAISession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required",
     }));
   }
 
@@ -790,11 +795,17 @@ export function App() {
 
   function nextResponsibleAIScenario() {
     if (!responsibleAISession.result?.passed) return;
-    if (responsibleAISession.index === responsibleAIPrimaryScenarios.length - 1) {
-      setResponsibleAISession({ ...responsibleAISession, complete: true });
+    const scenarios = responsibleAISession.form === "transfer" ? responsibleAITransferScenarios : responsibleAIPrimaryScenarios;
+    if (responsibleAISession.index === scenarios.length - 1) {
+      if (responsibleAISession.form === "transfer") {
+        setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true }));
+        setResponsibleAISession({ ...responsibleAISession, phase: "explanation", complete: false, result: null, hintLevel: 0 });
+      } else {
+        setResponsibleAISession({ ...responsibleAISession, complete: true });
+      }
       return;
     }
-    setResponsibleAISession({ index: responsibleAISession.index + 1, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false });
+    setResponsibleAISession({ ...responsibleAISession, index: responsibleAISession.index + 1, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false });
   }
 
   function setResponsibleAIConfidence(confidence) {
@@ -803,11 +814,32 @@ export function App() {
 
   function acknowledgeResponsibleAIPrimary() {
     if (!responsibleAISession?.complete || !responsibleAIEvidence?.confidence) return;
-    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { masteryStatus: "primary_complete", clearMisconceptionTags: true }));
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true }));
     setResponsibleAISession(null);
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Primary responsible AI practice complete. Transfer form remains a future lesson slice; this was course-authored practice, not a Microsoft exam question.");
+    setDialogue("Primary responsible AI practice complete. The fresh transfer form is ready when you are; this remains course-authored practice, not a Microsoft exam question.");
+  }
+
+  function checkResponsibleAIExplanation(event) {
+    event.preventDefault();
+    const result = evaluateResponsibleAIExplanation("T06", responsibleAISession.explanationResponse);
+    const hintLevel = result.passed ? responsibleAISession.hintLevel : Math.max(1, responsibleAISession.hintLevel);
+    setResponsibleAISession({ ...responsibleAISession, explanationResult: result, hintLevel });
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, {
+      form: "explanation", scenarioId: "closed_note_explanation", correctness: result.correctness,
+      incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags,
+      masteryStatus: "transfer_complete",
+    }));
+  }
+
+  function acknowledgeResponsibleAIMastery() {
+    if (!responsibleAISession?.explanationResult?.passed || !responsibleAISession.ownershipConfirmed || !responsibleAIEvidence?.confidence) return;
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
+    setResponsibleAISession(null);
+    setTerminalOpen(false);
+    setRuinsTerminalKind(null);
+    setDialogue("Responsible AI readiness confirmed: both course-authored forms and the closed-note explanation are complete. These were not Microsoft exam questions.");
   }
 
   function validateEvidenceOutput(event) {
@@ -1364,18 +1396,19 @@ export function App() {
         {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "responsible-ai" && responsibleAISession && (
           <TerminalShell
             exerciseId={responsibleAIExercise.exercise_id}
-            title="Responsible AI — Primary Practice"
-            filename="primary_scenarios.json"
+            title={`Responsible AI — ${responsibleAISession.phase === "explanation" ? "Closed-note Explanation" : responsibleAISession.form === "transfer" ? "Fresh Transfer" : "Primary Practice"}`}
+            filename={responsibleAISession.phase === "explanation" ? "closed_note_response.txt" : `${responsibleAISession.form}_scenarios.json`}
             lessonId={responsibleAIExercise.lesson_id}
-            statusText={responsibleAISession.complete ? "PRIMARY 24/24" : `PRIMARY ${responsibleAISession.index + 1}/6`}
+            statusText={responsibleAISession.phase === "explanation" ? "EXPLANATION 0/1" : responsibleAISession.complete ? "PRIMARY 24/24" : `${responsibleAISession.form.toUpperCase()} ${responsibleAISession.index + 1}/6`}
             closeLabel="Exit Practice"
             restoreFocusTo={terminalTriggerRef.current}
             onClose={exitResponsibleAI}
           >
             <section className="responsible-ai-workspace">
               <p className="responsible-ai-boundary">Course-authored practice scenario — not a Microsoft exam question. Real systems can implicate multiple principles; choose the closest primary harm.</p>
-              {!responsibleAISession.complete ? (() => {
-                const scenario = responsibleAIPrimaryScenarios[responsibleAISession.index];
+              {responsibleAISession.phase === "scenarios" && !responsibleAISession.complete ? (() => {
+                const scenarios = responsibleAISession.form === "transfer" ? responsibleAITransferScenarios : responsibleAIPrimaryScenarios;
+                const scenario = scenarios[responsibleAISession.index];
                 const choices = {
                   principle: responsibleAIPrinciples,
                   stakeholder: scenario.stakeholder_choices,
@@ -1385,7 +1418,7 @@ export function App() {
                 return (
                   <form className="responsible-ai-form" onSubmit={checkResponsibleAI}>
                     <header>
-                      <p className="pane-label">PRIMARY RETRIEVAL · {scenario.id} · {responsibleAISession.index + 1}/6</p>
+                      <p className="pane-label">{responsibleAISession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY RETRIEVAL"} · {scenario.id} · {responsibleAISession.index + 1}/6</p>
                       <h2>{scenario.prompt}</h2>
                     </header>
                     <div className="responsible-ai-fields">
@@ -1414,15 +1447,53 @@ export function App() {
                       <div className="console-heading-row"><strong id="rai-output-heading">STRICT VALIDATOR</strong><button className="run-action" type="submit" disabled={responsibleAIDimensions.some((dimension) => !responsibleAISession.response[dimension])}>Check four-part response</button></div>
                       <div className={responsibleAISession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{responsibleAISession.result ? `${responsibleAISession.result.score}/4 · ${responsibleAISession.result.passed ? "Scenario confirmed." : responsibleAIRemediation(responsibleAISession.result, responsibleAISession.hintLevel)}` : "Respond with principle, stakeholder, concrete mitigation, and accountable human owner."}</div>
                       {responsibleAISession.result && !responsibleAISession.result.passed && <button className="hint-action" type="button" disabled={responsibleAISession.hintLevel >= 3} onClick={revealResponsibleAIHint}>Reveal next remediation step</button>}
-                      {responsibleAISession.result?.passed && <button className="confirm-action" type="button" onClick={nextResponsibleAIScenario}>{responsibleAISession.index === 5 ? "View primary result" : "Next scenario"}</button>}
+                      {responsibleAISession.result?.passed && <button className="confirm-action" type="button" onClick={nextResponsibleAIScenario}>{responsibleAISession.index === 5 ? (responsibleAISession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}
                     </section>
                   </form>
                 );
-              })() : (
+              })() : responsibleAISession.phase === "explanation" ? (
+                <form className="responsible-ai-form" onSubmit={checkResponsibleAIExplanation}>
+                  <header>
+                    <p className="pane-label">STRICT READINESS GATE · SPEAKER: PILOT</p>
+                    <h2>Explain T06 without notes</h2>
+                    <p>People cannot appeal automated moderation decisions because no human team owns appeals. Type the exact four-part response from memory. Your words stay in this session and are never saved.</p>
+                  </header>
+                  <div className="responsible-ai-fields">
+                    {responsibleAIDimensions.map((dimension) => {
+                      const fieldResult = responsibleAISession.explanationResult?.correctness[dimension];
+                      const feedbackId = `rai-explanation-${dimension}-feedback`;
+                      return (
+                        <label key={dimension}>
+                          <span>{dimension === "owner" ? "Accountable human owner" : dimension}</span>
+                          <input
+                            aria-label={`Closed-note ${dimension}`}
+                            aria-describedby={responsibleAISession.explanationResult ? feedbackId : undefined}
+                            aria-invalid={responsibleAISession.explanationResult ? !fieldResult : undefined}
+                            autoComplete="off"
+                            value={responsibleAISession.explanationResponse[dimension]}
+                            onChange={(event) => setResponsibleAISession({ ...responsibleAISession, explanationResponse: { ...responsibleAISession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })}
+                          />
+                          {responsibleAISession.explanationResult && <small id={feedbackId}>{fieldResult ? "Recalled correctly." : `Reconstruct the ${dimension} from the harm and four-part response.`}</small>}
+                        </label>
+                      );
+                    })}
+                  </div>
+                  <section className="terminal-console responsible-ai-output" aria-labelledby="rai-explanation-output-heading">
+                    <div className="console-heading-row"><strong id="rai-explanation-output-heading">CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={responsibleAIDimensions.some((dimension) => !responsibleAISession.explanationResponse[dimension])}>Check my explanation</button></div>
+                    <div className={responsibleAISession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{responsibleAISession.explanationResult ? `${responsibleAISession.explanationResult.score}/4 · ${responsibleAISession.explanationResult.passed ? "Complete explanation confirmed." : responsibleAIRemediation(responsibleAISession.explanationResult, responsibleAISession.hintLevel)}` : "No notes or answer choices are shown. Recall all four dimensions."}</div>
+                    {responsibleAISession.explanationResult && !responsibleAISession.explanationResult.passed && <button className="hint-action" type="button" disabled={responsibleAISession.hintLevel >= 3} onClick={revealResponsibleAIHint}>Reveal next remediation step</button>}
+                    {responsibleAISession.explanationResult?.passed && <>
+                      <label className="ownership-confirmation"><input type="checkbox" checked={responsibleAISession.ownershipConfirmed} onChange={(event) => setResponsibleAISession({ ...responsibleAISession, ownershipConfirmed: event.target.checked })} />I produced this explanation myself without notes.</label>
+                      <fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="rai-mastery-confidence" checked={responsibleAIEvidence?.confidence === value} onChange={() => setResponsibleAIConfidence(value)} />{value}</label>)}</fieldset>
+                      <button className="confirm-action" type="button" disabled={!responsibleAISession.ownershipConfirmed || !responsibleAIEvidence?.confidence} onClick={acknowledgeResponsibleAIMastery}>Acknowledge strict mastery</button>
+                    </>}
+                  </section>
+                </form>
+              ) : (
                 <section className="workload-summary responsible-ai-summary" aria-labelledby="rai-summary-heading">
                   <p className="pane-label">PRIMARY SLICE COMPLETE</p>
                   <h2 id="rai-summary-heading">24 / 24 dimensions</h2>
-                  <p>This completes the primary course-authored form only. The unseen transfer form and closed-note explanation remain for the next implementation slice.</p>
+                  <p>Primary course-authored form complete. A fresh transfer form and closed-note explanation are still required for mastery.</p>
                   <fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="rai-confidence" checked={responsibleAIEvidence?.confidence === value} onChange={() => setResponsibleAIConfidence(value)} />{value}</label>)}</fieldset>
                   <button className="confirm-action" type="button" disabled={!responsibleAIEvidence?.confidence} onClick={acknowledgeResponsibleAIPrimary}>Acknowledge primary form</button>
                 </section>
@@ -1574,8 +1645,8 @@ export function App() {
                   {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
                     <button className="continue-action calibration-launch" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "primary_complete" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : "Start Responsible AI"}</button>
+                  {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
+                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
                   )}
                   {pendingAdvance && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>

@@ -1,5 +1,17 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Responsible AI strict mastery tranche
+
+- **Outcome:** Completed the promised `EX-L0202-RESPONSIBLE-AI` readiness path without beginning L-02-03. After preserving the existing primary 24/24 evidence, the learner can launch a fresh six-scenario `T01–T06` transfer form and must earn 24/24 across principle, affected stakeholder, testable mitigation, and accountable human/organizational owner.
+- **Closed-note gate:** Transfer completion now leads to a no-choice, four-field explanation for `T06`. Each independently typed dimension is validated and remediated separately. The learner must explicitly confirm that they produced the explanation without notes before strict mastery can be acknowledged.
+- **Mastery evidence:** `mastered` requires primary 24/24, transfer 24/24, closed-note 4/4, confidence, and learner ownership confirmation. Persistent evidence contains only allowlisted identifiers, form, per-dimension correctness booleans, attempts, maximum hint level, confidence, misconception tags, and status. Explanation wording, selections, prompts, notes, and runtime display remain session-only.
+- **Accessibility/session:** Transfer and explanation retain the shared dialog, focus containment/restoration, safe Exit/Escape, close/reopen continuity, no time or attempt limit, persistent labels, field-associated invalid states/remediation, and live validator output. Reload keeps evidence but starts the current form or explanation with a clean private draft.
+- **Source boundary:** The persistent interface continues to identify every scenario as course-authored practice and not a Microsoft exam question. The implementation uses the L-02-02 scenario bank and answer key; no L-02-03 gameplay was started.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/src/responsibleAIExercise.js`, `horizon-archive-game/test/responsibleAIExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, `playtest/e2e-playthrough.mjs`, and this log.
+- **Validation:** 39/39 unit tests pass; production build passes; curriculum validator self-test passes; official package reference primary and transfer files each score 24/24; full title-to-credits Playwright regression passes with zero runtime errors and verifies both forms, explanation remediation, speaker ownership, session restoration, focus contract, privacy allowlist, strict mastery, and non-exam labeling.
+- **Next action:** Pixel Patrol Agent should evaluate only the existing Responsible AI Terminal density and field legibility at the canonical frame; Exercise Agent should not begin L-02-03 until its next assigned turn.
+- **Risks:** The strict explanation validator accepts normalized exact answer phrases rather than open-ended paraphrases. This makes the gate deterministic and private, but future tutor-supported semantic evaluation could accept more valid learner phrasing without weakening the four-part requirement.
+
 ## 2026-07-12 — Coder pass: explicit verb selection semantics
 
 - **Outcome:** LOOK AT, USE, and TALK TO now expose `aria-pressed`; exactly one verb is selected at all times. Replaced the two approved stale AB-01 lines with the compact Tidal Lens prompt and completion copy from the production interaction packet.
