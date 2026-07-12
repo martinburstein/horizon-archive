@@ -106,3 +106,9 @@ At 1x capture:
 - Extraction uses three fixed workspace rows: persistent offline/privacy warning, persistent text-equivalent schema/evidence flow, then one contained scrolling form. No row may overlap or reorder at 640 x 480 or 320 x 240.
 - The complete narrow warning may occupy the initial viewport; document/form, image, audio, video, schema/null/evidence content remains reachable through one vertical traversal without horizontal clipping.
 - Primary and transfer retain decision then reason. Closed note uses four schema-integrity fields in one canonical row and one narrow column while outer Machine/file/status chrome stays fixed.
+
+## Offline Portal Orientation viewport contract
+
+- Portal Orientation uses three fixed workspace rows: persistent offline/no-authority warning, persistent eight-checkpoint equivalent, then one contained scrolling form. Warning and workflow may wrap but never overlap or reorder.
+- At 640 x 480 the checkpoint strip reads access -> project -> model -> deployment -> readiness -> interaction -> connection -> cleanup. At 320 x 240 the complete warning receives the initial viewport and the same workflow remains available by vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four safeguard fields in one canonical row and one narrow column; outer Machine/file/status chrome remains fixed.

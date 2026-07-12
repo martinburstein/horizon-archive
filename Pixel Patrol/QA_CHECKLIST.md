@@ -128,6 +128,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Extraction Pilot inputs, neutral System scores, and Teacher schema/null/evidence remediation remain separate.
 - [ ] Extraction primary, transfer-remediation, and closed-note captures are byte-distinct across canonical, narrow, and host context.
 - [ ] Extraction direct/restored mastery moves focus to Continue; single-form traversal preserves all narrow content.
+- [ ] Portal no-login/no-mutation/no-prompt-authority warning and eight-checkpoint equivalent remain persistent, ordered, and non-overlapping.
+- [ ] Access, project, model, deployment, readiness, interaction, connection, and cleanup remain eight distinct checkpoints.
+- [ ] Catalog/model selection differs from named deployment; endpoint/deployment configuration differs from credentials.
+- [ ] Cleanup remains exact-scope, cost-aware, owner-confirmed, and gated by the ownership checkbox without granting authority.
+- [ ] Portal Pilot inputs, neutral System scores, and Teacher portal/scope/cleanup remediation remain separate.
+- [ ] Portal captures remain byte-distinct across canonical, narrow, and host context; direct/restored mastery focuses Continue.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.

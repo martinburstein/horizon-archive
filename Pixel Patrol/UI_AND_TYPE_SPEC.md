@@ -174,3 +174,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Keep document/form, image, audio, and video as four distinct input modalities. Named field schema and types are defined before analysis; missing evidence stays null/missing rather than becoming an invented value.
 - Provenance and confidence lead to human review. A visual description, transcript, caption, or summary does not replace requested structured fields.
 - Keep warning and text-equivalent rows outside the single form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Portal Orientation hierarchy
+
+- Preserve reading order: Machine/file/status -> no-login/no-mutation/no-prompt-authority warning -> eight-checkpoint workflow -> Pilot decision/prose -> neutral System validator -> Teacher portal/scope/cleanup remediation.
+- Model catalog selection and named deployment are separate checkpoints. Connection details separate endpoint and deployment configuration from credentials; portal visibility does not prove permission or readiness.
+- Cleanup is exact-scope, cost-aware, and owner-confirmed. The ownership checkbox appears only after the closed-note safeguards pass and never implies authority to delete resources.
+- Keep both persistent rows outside one form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

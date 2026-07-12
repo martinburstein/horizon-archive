@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Portal Orientation final visual gate
+
+- **Completed:** audited complete Portal Orientation primary, troubleshooting transfer, closed-note, and mastered flow. Persistent no-login/no-mutation/no-prompt-authority warning and eight-checkpoint strip already occupy correct fixed rows above one contained form. Deployment-versus-catalog, connection-details-versus-credentials, exact-scope cleanup, owner checkbox, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 97 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms all-phase authority warning, both 16/16 forms, four-part safeguard explanation, owner confirmation, privacy, direct/reload Continue focus, distinct captures, and credits.
+- **Next recommended item:** Location Scout should render eight square checkpoints on one route, with model catalog and deployment as visibly separate stations, connection as a split configuration/credential gate, and cleanup as an owner-keyed terminal lock.
+- **Unresolved risks:** the complete authority warning dominates the initial 320 x 240 work viewport by design. The production build also reports a non-blocking bundle-size warning above 500 kB; it does not affect this bounded visual gate.
+
 ## 2026-07-12 — Offline Information Extraction final visual gate
 
 - **Completed:** audited complete Information Extraction primary, transfer, closed-note, and mastered flow. The persistent offline/privacy warning and text-equivalent strip already occupy correct fixed rows above one contained form; four modalities, schema-first/null/evidence/invented-value hierarchy, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
