@@ -143,3 +143,11 @@
 - **Validation:** exact native/2x dimensions and nearest-neighbor bytes; all station/trace isolation pairs distinct in grayscale; request/response distinct; all amber station/trace pixels form one connected component; keyed tooth belongs to that component; at least 60/81 secret-interior pixels remain empty; direction teeth read right/right/down/left/left; 55 x 57 painted bounds fit the 68 x 76 hotspot; world/footer separation and links pass.
 - **Next recommended item:** Accessibility Sentinel should verify the repaired empty keyed socket and full trace in native grayscale. Coder may now integrate the asset only with persistent live labels and strict secret-value privacy.
 - **Unresolved risks:** the motif remains a physical mnemonic rather than an explanation of files, environment secrets, request options, or response schemas. Live teaching content is mandatory.
+
+## 2026-07-12 — Text Analysis physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible motif with four structurally distinct analysis apertures feeding a continuous document-correlation rail and split closed-success/open-error returns.
+- **Files changed:** added `production-pixel/AB-01/text-analysis/` native motif, renderer, specification, exact 2x, grayscale, and aperture/rail/return isolation QA; linked it from the AB-01 package. No gameplay, scene, interface, or lore changed.
+- **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; all aperture/rail/return isolation masks remain pairwise distinct in grayscale; channel pixels form one connected rail network; closed success socket and open stepped error fracture differ by geometry/value; painted bounds fit the 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should identify all four apertures and distinguish the two returns at native grayscale; Coder must retain live capability and outcome labels plus textual correlation feedback.
+- **Unresolved risks:** physical geometry cannot explain model output, confidence, evidence, or errors. Live teaching content remains authoritative.

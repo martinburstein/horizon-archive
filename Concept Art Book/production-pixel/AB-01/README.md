@@ -17,6 +17,7 @@
 - **Structured Packets motif:** [three nested sockets and continuous groove](structured-packets/README.md)
 - **Control Flow motif:** [inlet, repeated loop, equality fork, append path, and outlet](control-flow/README.md)
 - **Offline Client Bridge motif:** [five stations, empty keyed secret socket, and one-way trace](offline-client/README.md)
+- **Text Analysis motif:** [four analysis apertures, correlation rail, and split returns](text-analysis/README.md)
 
 ## Originality gate
 
