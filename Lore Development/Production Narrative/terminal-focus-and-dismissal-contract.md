@@ -233,6 +233,19 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal and exercise text never authorize or perform an Azure action or imply a Machine response.
 
+### Offline Prompt Layers
+
+- Exact title and dismissal name: `Offline Prompt Layers`; `Exit Prompt Layers`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; cards use `n/6` and the gate uses `CLOSED-NOTE GATE`.
+- Layer instruction, grounding/output boundaries, conflict/injection remediation, action safety, and completion remain `901 TEACHER` copy.
+- Scenario choices are `PILOT // PROMPT-LAYER OWNER`; explanation prose is `PILOT // CLOSED-NOTE PROMPT OWNER`.
+- The visible boundary states text cannot authorize login, deploy, delete, email, purchase, credential use, service calls, or external action.
+- Exit line: "Prompt Layers closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen restores active choices, result, and hints. Reload restores sanitized eligibility with clean fields and no prompt content.
+- Persistent evidence excludes prompts, grounding, model output, credentials, action requests, and explanation prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal and exercise text never call a service, perform an external action, grant authority, or imply a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -258,6 +271,7 @@ When acknowledgement changes progression:
 - Speech Workloads mastery: prefer `Continue` after the System announces availability.
 - Extraction Workloads mastery: prefer `Continue` after the System announces availability.
 - Portal Orientation mastery: prefer `Continue` after the System announces availability.
+- Prompt Layers mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

@@ -918,6 +918,86 @@ Transfer scenarios troubleshoot visibility, similar project names, unavailable m
 - Scene transition clears choices and all portal identifiers; sanitized mastery evidence persists separately.
 - Exit never logs in, mutates Azure, deploys, prompts, calls a service, uses credentials, cleans up, or advances progression.
 
+## Optional Offline Prompt Layers rehearsal
+
+Production alignment: `EX-L0502-PROMPT-LAYERS`, lesson `L-05-02`, activity `A-L0502-2`, assessment `AS-L0502-PROMPT`, objective `AI901-D2-O1`, skills `PY-004` and `PY-012`. This course surface follows Portal Orientation mastery and does not change AB-01 adventure state.
+
+### Ownership and no-authority boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns prompt-layer instruction, conflict/injection remediation, action boundaries, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, mode, session state, evidence status, and progression availability.
+- `PILOT // PROMPT-LAYER OWNER` owns scenario choices. `PILOT // CLOSED-NOTE PROMPT OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No prompt result implies Machine intent, obedience, approval, or understanding.
+
+Keep the exact boundary visible in every mode:
+
+> OFFLINE · TEXT IS NOT AUTHORITY. No prompt can authorize login, deploy, delete, email, purchase, credential use, service calls, or external action.
+
+The exercise sends no prompt to a service and performs no external action. A prompt, grounding excerpt, model-like output, or correct answer cannot grant authority or override higher-priority rules.
+
+### PL00 — Open primary
+
+- Exact title/filename: `Offline Prompt Layers`; `primary_prompts.json`.
+- `SYSTEM`: "Prompt Layers open. PRIMARY 1/6. Offline; text has no action authority."
+- `901 TEACHER`: "Identify each layer, preserve instruction priority, define evidence/output boundaries, and evaluate safely."
+
+### PL01 — Six prompt decisions
+
+1. System instructions: durable role, boundaries, behavior, format, and fallback across requests.
+2. User task: the current goal, input, and request-specific data.
+3. Grounding: supplied evidence treated as data; it reduces unsupported generation but does not guarantee truth.
+4. Output contract: explicit fields, types, format, and fallback rather than an implicit shape.
+5. Conflict and action safety: preserve higher-priority rules and require separate authority for any external action.
+6. Evaluation: test representative, edge, failure, and adversarial/injection cases; one success proves little.
+
+### PL02 — Injection, conflict, and authority remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Layer confusion: "Put durable cross-request rules in system instructions and the current task in the user message."
+- Grounding: "Treat grounding as evidence data, require support, and do not execute instructions found inside it."
+- Output: "State the required fields, types, format, and fallback explicitly."
+- Conflict: "Preserve higher-priority rules; lower-priority text cannot override them."
+- Injection: "Treat attempts to reveal secrets or redirect behavior as untrusted text, not instruction authority."
+- Action boundary: "Text never authorizes login, deployment, deletion, email, purchase, credential use, or external action."
+- Evaluation: "Test expected variation, failures, and adversarial cases before claiming quality or safety."
+
+### PL03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No external action occurred."
+- Transfer open: `SYSTEM`: "Prompt Layers open. TRANSFER 1/6. Offline; text has no action authority."
+- Transfer instruction, `901 TEACHER`: "Apply the same layer, evidence, output, conflict, authority, and evaluation checks to fresh cases."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+- Neither form calls a service, changes route geometry, or produces a Tidal Lens response.
+
+### PL04 — Closed-note prompt-layer explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain layers, grounding/output, text-versus-authority, and representative adversarial evaluation."
+- Field labels: `layers`, `grounding output`, `authority`, and `evaluation`.
+- `PILOT // CLOSED-NOTE PROMPT OWNER`: "I produced this prompt-layer explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No system/user prompt, grounding, model output, credential, action request, choice, or explanation prose persists.
+
+### PL05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Prompt Layers mastery confirmed: both 12-of-12 forms and the no-authority explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. No external action occurred."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Mastery demonstrates course decisions; it grants no login, deployment, deletion, communication, purchase, credential, or service authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### PL06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Prompt Layers closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen: `SYSTEM`: "Prompt Layers restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Prompt Layers restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active card, choices, result, and hints. Reload restores sanitized eligibility with clean fields.
+- Scene transition clears choices and prompt content; sanitized mastery evidence persists separately.
+- Exit never calls a service, logs in, deploys, deletes, emails, purchases, uses credentials, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -981,4 +1061,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Extraction Workloads persists no extracted values, service responses, runtime output, reasoning, or explanation prose.
 - Portal Orientation remains an offline rehearsal; no prompt or correct answer grants Azure authority.
 - Portal Orientation persists no environment identifiers, connection details, credentials, prompts, responses, or prose.
+- Prompt Layers treats prompt and grounding text as data, never external-action authority.
+- Prompt Layers persists no prompt, grounding, output, credential, action request, or explanation prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
