@@ -204,6 +204,7 @@ import {
   sanitizePortalEvidence,
   updatePortalEvidence,
 } from "./portalOrientationExercise.js";
+import { evaluatePromptExplanation,evaluatePromptScenario,getPromptOptions,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptRemediation,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -389,6 +390,7 @@ function loadSave() {
       visualEvidence: sanitizeVisualEvidence(saved.visualEvidence),
       extractionEvidence: sanitizeExtractionEvidence(saved.extractionEvidence),
       portalEvidence: sanitizePortalEvidence(saved.portalEvidence),
+      promptEvidence: sanitizePromptEvidence(saved.promptEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -443,6 +445,7 @@ export function App() {
   const [extractionEvidence, setExtractionEvidence] = useState(null);
   const [portalSession, setPortalSession] = useState(null);
   const [portalEvidence, setPortalEvidence] = useState(null);
+  const [promptSession,setPromptSession]=useState(null); const [promptEvidence,setPromptEvidence]=useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -516,9 +519,10 @@ export function App() {
         visualEvidence,
         extractionEvidence,
         portalEvidence,
+        promptEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -614,6 +618,7 @@ export function App() {
     setExtractionEvidence(null);
     setPortalSession(null);
     setPortalEvidence(null);
+    setPromptSession(null);setPromptEvidence(null);
     setMode("playing");
   }
 
@@ -658,6 +663,7 @@ export function App() {
     if (saved.portalEvidence?.masteryStatus === "mastered") focusContinueAfterPortalRef.current = true;
     setPortalEvidence(saved.portalEvidence);
     setPortalSession(null);
+    setPromptEvidence(saved.promptEvidence);setPromptSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1338,6 +1344,15 @@ export function App() {
   function acknowledgePortalPrimary() { if (!portalSession?.complete || !portalEvidence?.confidence) return; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation primary form complete at 16 of 16. Fresh troubleshooting transfer and closed-note explanation remain.", "teacher"); }
   function checkPortalExplanation(event) { event.preventDefault(); const result = evaluatePortalExplanation(portalSession.explanationResponse); setPortalSession({ ...portalSession, explanationResult: result }); setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgePortalMastery() { if (!portalSession?.explanationResult?.passed || !portalSession.ownershipConfirmed || !portalEvidence?.confidence) return; focusContinueAfterPortalRef.current = true; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation mastery confirmed: both 16-of-16 forms, closed-note safeguards, and owner-confirmed cleanup are complete.", "teacher"); }
+
+  function openPromptLayers(){setTerminalOpen(true);setRuinsTerminalKind("prompt-layers");if(!promptSession){const form=promptEvidence?.masteryStatus==="primary_complete"?"transfer":promptEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setPromptSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{layers:"",grounding_output:"",authority:"",evaluation:""},explanationResult:null,ownershipConfirmed:false});}}
+  function exitPromptLayers(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers rehearsal closed safely. Text remains data, never action authority.","system");}
+  function checkPrompt(event){event.preventDefault();const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary,s=ss[promptSession.index],result=evaluatePromptScenario(s.id,promptSession.response,promptSession.form),hintLevel=result.passed?promptSession.hintLevel:Math.max(1,promptSession.hintLevel);setPromptSession({...promptSession,result,hintLevel});setPromptEvidence(p=>updatePromptEvidence(p,{form:promptSession.form,scenarioId:s.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:promptSession.form==="transfer"?"primary_complete":result.passed?"in_progress":"remediation_required"}));}
+  function revealPromptHint(){const hintLevel=Math.min(3,promptSession.hintLevel+1);setPromptSession({...promptSession,hintLevel});setPromptEvidence(p=>updatePromptEvidence(p,{hintLevel}));}
+  function advancePrompt(){if(!promptSession.result?.passed)return;const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary;if(promptSession.index===ss.length-1){if(promptSession.form==="transfer"){setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setPromptSession({...promptSession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setPromptSession({...promptSession,complete:true});return;}setPromptSession({...promptSession,index:promptSession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
+  function acknowledgePromptPrimary(){if(!promptSession?.complete||!promptEvidence?.confidence)return;setPromptEvidence(p=>updatePromptEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
+  function checkPromptExplanation(event){event.preventDefault();const result=evaluatePromptExplanation(promptSession.explanationResponse);setPromptSession({...promptSession,explanationResult:result});setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
+  function acknowledgePromptMastery(){if(!promptSession?.explanationResult?.passed||!promptSession.ownershipConfirmed||!promptEvidence?.confidence)return;focusContinueAfterPortalRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers mastery confirmed: both 12-of-12 forms and no-authority explanation are complete.","teacher");}
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2233,6 +2248,7 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen&&scene.id==="ruins"&&ruinsTerminalKind==="prompt-layers"&&promptSession&&<TerminalShell exerciseId={promptLayerExercise.exercise_id} title="Offline Prompt Layers" filename={promptSession.phase==="explanation"?"closed_note.md":`${promptSession.form}_prompts.json`} lessonId={promptLayerExercise.lesson_id} statusText={promptSession.phase==="explanation"?"CLOSED-NOTE GATE":`${promptSession.form.toUpperCase()} ${promptSession.index+1}/6`} closeLabel="Exit Prompt Layers" restoreFocusTo={terminalTriggerRef.current} onClose={exitPromptLayers}><section className="model-choice-workspace"><p className="model-choice-boundary">OFFLINE · TEXT IS NOT AUTHORITY. No prompt can authorize login, deploy, delete, email, purchase, credential use, service calls, or external action.</p>{promptSession.phase==="explanation"?<form className="model-choice-form" onSubmit={checkPromptExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE PROMPT OWNER</p><h2>Explain layers, grounding/output, authority, and evaluation</h2></header><div className="model-choice-fields prompt-explanation">{promptExplanationDimensions.map(d=>{const ok=promptSession.explanationResult?.correctness[d],id=`prompt-explanation-${d}-feedback`;return <label key={d}><span>{d.replaceAll("_"," ")}</span><input aria-label={`Closed-note prompt ${d}`} aria-invalid={promptSession.explanationResult?!ok:undefined} aria-describedby={promptSession.explanationResult?id:undefined} value={promptSession.explanationResponse[d]} onChange={e=>setPromptSession({...promptSession,explanationResponse:{...promptSession.explanationResponse,[d]:e.target.value},explanationResult:null,ownershipConfirmed:false})}/>{promptSession.explanationResult&&<small id={id}>{ok?"SYSTEM // Confirmed.":"901 TEACHER // Rebuild this boundary; text never grants action authority."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit">Check prompt explanation</button></div><div role="status" aria-live="polite">{promptSession.explanationResult?`${promptSession.explanationResult.score}/4 · ${promptSession.explanationResult.passed?"Complete no-authority explanation confirmed.":"901 TEACHER // Separate layers, evidence, authority, and adversarial evaluation."}`:"No prompt, grounding, output, credential, or action request is shown."}</div>{promptSession.explanationResult?.passed&&<><label className="ownership-confirmation"><input type="checkbox" checked={promptSession.ownershipConfirmed} onChange={e=>setPromptSession({...promptSession,ownershipConfirmed:e.target.checked})}/>I produced this prompt-layer explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="prompt-confidence" checked={promptEvidence?.confidence===v} onChange={()=>setPromptEvidence(p=>updatePromptEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgePromptMastery}>Acknowledge strict mastery</button></>}</section></form>:promptSession.complete?<section className="workload-summary"><h2>12 / 12 dimensions</h2><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="prompt-primary-confidence" checked={promptEvidence?.confidence===v} onChange={()=>setPromptEvidence(p=>updatePromptEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgePromptPrimary}>Acknowledge primary form</button></section>:(()=>{const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary,s=ss[promptSession.index],opts=getPromptOptions(s.id,promptSession.form);return <form className="model-choice-form" onSubmit={checkPrompt}><header><p className="pane-label">{promptSession.form.toUpperCase()} · PILOT // PROMPT-LAYER OWNER · {s.id}</p><h2>{s.prompt}</h2></header><div className="model-choice-fields">{promptDimensions.map(d=>{const ok=promptSession.result?.correctness[d],id=`prompt-${d}-feedback`;return <label key={d}><span>{d}</span><select aria-label={`Prompt ${d}`} aria-invalid={promptSession.result?!ok:undefined} aria-describedby={promptSession.result?id:undefined} value={promptSession.response[d]} onChange={e=>setPromptSession({...promptSession,response:{...promptSession.response,[d]:e.target.value},result:null})}><option value="">Choose one</option>{opts[d].map(v=><option key={v} value={v}>{formatChoice(v)}</option>)}</select>{promptSession.result&&<small id={id}>{ok?"SYSTEM // Correct.":"901 TEACHER // Identify the layer and separate text from authority."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit">Check prompt layer</button></div><div role="status" aria-live="polite">{promptSession.result?`${promptSession.result.score}/2 · ${promptSession.result.passed?"Choice confirmed.":promptRemediation(s,promptSession.result,promptSession.hintLevel)}`:"Choose the layer, boundary, and safe evaluation response."}</div>{promptSession.result&&!promptSession.result.passed&&<button className="hint-action" type="button" onClick={revealPromptHint}>Reveal next prompt boundary</button>}{promptSession.result?.passed&&<button className="confirm-action" type="button" onClick={advancePrompt}>{promptSession.index===5?(promptSession.form==="transfer"?"Begin closed-note explanation":"View primary result"):"Next scenario"}</button>}</section></form>})()}</section></TerminalShell>}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2407,7 +2423,8 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && extractionEvidence?.masteryStatus === "mastered" && portalEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openPortalOrientation(); }}>{portalSession ? "Resume Portal Orientation" : portalEvidence?.masteryStatus === "primary_complete" ? "Start Portal Troubleshooting Transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "Open Portal Closed-Note Gate" : "Start Portal Orientation"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || portalEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance&&scene.id==="ruins"&&portalEvidence?.masteryStatus==="mastered"&&promptEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openPromptLayers();}}>{promptSession?"Resume Prompt Layers":promptEvidence?.masteryStatus==="primary_complete"?"Start Prompt Transfer":promptEvidence?.masteryStatus==="transfer_complete"?"Open Prompt Closed-Note Gate":"Start Prompt Layers"}</button>}
+                  {pendingAdvance && (scene.id !== "ruins" || promptEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-05-02 Offline/no-authority Prompt Layers gate
+
+- **Outcome:** Added `EX-L0502-PROMPT-LAYERS` as the mandatory rehearsal after Portal Orientation. Mastery requires primary 12/12, fresh transfer 12/12, and a four-part closed-note explanation. No L-05-03 gameplay was implemented.
+- **Learning/safety:** Covers durable system instructions, current user task/input, grounding as data, explicit output contracts, conflict/prompt-injection handling, text-versus-action authority, and representative/edge/adversarial evaluation. A persistent warning states that prompt text cannot authorize login, deployment, deletion, email, purchase, credential use, service calls, or external actions.
+- **Privacy/ownership:** Evidence stores only allowlisted IDs, per-dimension booleans, attempts, hints, confidence, tags, form, and mastery. System/user prompts, grounding, model output, credentials, action requests, selections, and free text never persist. Pilot owns choices/explanation, System scores, and the 901 Teacher owns remediation/readiness.
+- **Validation:** Packaged validator self-test and both 12/12 references pass. All 101 unit tests and production build pass. Full title-to-credits E2E passes the complete prompt-layer progression and zero runtime errors; primary, transfer, and closed-note captures are path-resolved and distinct.
+- **Next recommended item:** Player Agent should challenge user/system role confusion, grounding injection, implicit formats, destructive-action language, one-example evaluation, privacy, and canonical/narrow presentation before L-05-03.
+- **Unresolved risks:** This remains offline course-authored rehearsal; live model/service behavior is deliberately excluded.
+
 ## 2026-07-12 — EX-L0501 Portal Orientation runtime integration complete
 
 - **Outcome:** Mounted `EX-L0501-PORTAL-ORIENTATION` as the mandatory Terminal after Information Extraction. Mastery requires packaged primary 16/16, fresh troubleshooting transfer 16/16, and a four-part closed-note scope/deployment/connection/cleanup explanation across all eight checkpoints.

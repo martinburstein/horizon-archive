@@ -148,6 +148,16 @@
       "assessment_ids": ["AS-L0501-ORDER"],
       "skills": ["AI901-D2-O2", "PY-017", "PY-019"],
       "success_contract": "Pass primary and fresh troubleshooting transfer at 16/16 across all eight portal checkpoints, then independently explain scope, deployment, connection, and owner-confirmed cleanup safeguards."
+    },
+    {
+      "id": "HA-AI901-PROMPT-LAYERS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0502-PROMPT-LAYERS",
+      "lesson_id": "L-05-02",
+      "activity_id": "A-L0502-2",
+      "assessment_id": "AS-L0502-PROMPT",
+      "skills": ["AI901-D2-O1", "PY-004", "PY-012"],
+      "success_contract": "Pass both offline forms at 12/12 and explain prompt layers, grounding/output, text-versus-authority safety, and representative/adversarial evaluation."
     }
   ]
 }
