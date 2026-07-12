@@ -529,8 +529,12 @@ h1 {
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0302-CONTROL-FLOW"] { overflow: hidden; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"] { overflow: hidden; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0401-TEXT-ANALYSIS"] { overflow: hidden; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0402-SPEECH-WORKLOADS"] { overflow: hidden; }
 .text-analysis-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .text-analysis-explanation { grid-template-columns: 1fr; }
+.speech-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.canonical-game-frame[data-canonical-layout="narrow"] .speech-explanation { grid-template-columns: 1fr; }
+.speech-transcript { margin: 5px 0; padding: 5px 7px; color: #bfc8d2; background: #111820; border-left: 2px solid #768699; font-size: 0.6rem; line-height: 1.35; }
 .bridge-retrieval { overflow: auto; }
 .bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
 .bridge-retrieval label { display: block; margin: 4px 0; }

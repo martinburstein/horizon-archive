@@ -108,6 +108,16 @@
       "assessment_ids": ["AS-L0401-QC", "AS-L0401-SCEN"],
       "skills": ["AI901-D1-O5", "AI901-D2-O5", "PY-016"],
       "success_contract": "Pass both offline forms at 12/12 across four text capabilities and document result/error flow, then independently explain workload choice and safe correlation."
+    },
+    {
+      "id": "HA-AI901-SPEECH-WORKLOADS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0402-SPEECH-WORKLOADS",
+      "lesson_id": "L-04-02",
+      "activity_id": "A-L0402-2",
+      "assessment_ids": ["AS-L0402-QC", "AS-L0402-SCEN"],
+      "skills": ["AI901-D1-O6", "AI901-D2-O5", "PY-015"],
+      "success_contract": "Pass both offline forms at 12/12 across recognition, synthesis, spoken multimodal prompts, file direction, and cancellation, then explain the flow without notes."
     }
   ]
 }

@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-04-02 Offline Speech Workloads complete Terminal gate
+
+- **Outcome:** Added `EX-L0402-SPEECH-WORKLOADS` as the mandatory offline Terminal after Text Analysis. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note direction/workload/file/result explanation. No L-04-03 gameplay was implemented.
+- **Learning/accessibility:** Both forms cover recognition audio→text, synthesis text→audio, spoken prompts to a deployed multimodal model, recognition input files, synthesis output files, and result/cancellation handling—three workload patterns plus three client safeguards per form. Every audio concept is rendered as labeled transcript-equivalent text; there is no capture, playback generation, audio-file dependency, or service call.
+- **Safety/privacy:** Evidence stores only allowlisted IDs, dimension booleans, attempts, maximum hint, confidence, tags, form, and mastery. Audio bytes/paths, transcripts, spoken prompts, service bodies, runtime output, selections, and free-form explanations never enter storage. SDK/API/endpoint/authentication/language/voice/format/region/quota/price/preview details remain visibly volatile.
+- **Ownership/contracts:** Pilot owns choices and closed-note explanation, System owns scoring, and the 901 Teacher owns remediation/readiness. Decision/reason and four explanation fields expose independent associated remediation. Focus, close/reopen, reload, privacy, reduced motion, canonical 640×480, authored 320×240, and post-mastery focus remain covered.
+- **Files/validation:** Added speech exercise model and tests; updated App, styles, manifest, E2E, this log, and three path-resolved captures. Curriculum self-test and both 12/12 references pass. All 75 unit tests and production build pass. Full journey passes both forms, cancellation/file-direction remediation, transcript-equivalent text, explanation, close/reopen, reload, privacy, distinct captures, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge recognition/synthesis reversals, spoken multimodal confusion, file-direction mistakes, ignored cancellation, forged evidence, keyboard-only traversal, and canonical/narrow presentation before L-04-03.
+- **Unresolved risks:** Live speech service and multimodal deployment details are deliberately excluded and require current official verification before any live lab.
+
 ## 2026-07-12 — EX-L0401 Text Analysis continuity closure
 
 - **Outcome:** Closed the Text Analysis ownership, terminology, and focus handoff without starting L-04-02 or L-04-03 gameplay. Primary, transfer, and closed-note `SYSTEM` result lines now contain only deterministic totals and pass/not-complete state; capability/correlation and document-flow coaching renders in separate explicitly labeled `901 TEACHER` remediation regions.

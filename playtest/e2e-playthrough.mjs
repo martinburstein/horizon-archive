@@ -21,6 +21,8 @@ const referenceClientPrimary = readFileSync(resolve(repositoryRoot, "curriculum/
 const referenceClientTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-03/reference_transfer.py"), "utf8");
 const referenceTextPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-01/reference_primary_answers.json"), "utf8"));
 const referenceTextTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-01/reference_transfer_answers.json"), "utf8"));
+const referenceSpeechPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-02/reference_primary_answers.json"), "utf8"));
+const referenceSpeechTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-02/reference_transfer_answers.json"), "utf8"));
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -874,12 +876,65 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
   await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
-  const textContinue = page.getByRole("button", { name: "Continue", exact: true });
+  const textContinue = page.getByRole("button", { name: "Start Speech Workloads", exact: true });
   await textContinue.waitFor();
-  if (!await textContinue.evaluate((element) => element === document.activeElement)) throw new Error("Text Analysis mastery did not move focus to Continue");
+  if (!await textContinue.evaluate((element) => element === document.activeElement)) throw new Error("Text Analysis mastery did not move focus to Speech Workloads");
   const textMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).textAnalysisEvidence, { key: saveKey });
   if (textMastery?.masteryStatus !== "mastered" || textMastery?.attemptCount !== 16) throw new Error(`Text-analysis mastery incomplete: ${JSON.stringify(textMastery)}`);
   if (["documentText", "freeFormReasoning", "serviceResultBody", "runtimeOutput", "response", "choices"].some((key) => key in textMastery)) throw new Error("Text-analysis mastery retained private content");
+  await page.getByRole("button", { name: "Start Speech Workloads", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0402-SPEECH-WORKLOADS"]').waitFor();
+  await page.getByText("FULLY OFFLINE", { exact: false }).waitFor();
+  await page.getByText("Transcript-equivalent scenario text", { exact: false }).waitFor();
+  await page.getByLabel("Speech decision", { exact: true }).selectOption("speech_synthesis");
+  await page.getByLabel("Speech reason", { exact: true }).selectOption("spoken_audio_is_generated_from_text");
+  await page.getByRole("button", { name: "Check speech choice", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  for (const dimension of ["decision", "reason"]) { const field = page.getByLabel(`Speech ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `speech-${dimension}-feedback`) throw new Error(`Speech ${dimension} remediation was not associated`); }
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("speech-workloads-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next speech-flow contrast", exact: true }).click();
+  for (const id of Object.keys(referenceSpeechPrimary)) { const a = referenceSpeechPrimary[id]; await page.getByLabel("Speech decision", { exact: true }).selectOption(a.decision); await page.getByLabel("Speech reason", { exact: true }).selectOption(a.reason); await page.getByRole("button", { name: "Check speech choice", exact: true }).click(); await page.getByText("Choice confirmed", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "P06" ? "View primary result" : "Next scenario", exact: true }).click(); }
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.getByRole("button", { name: "Start Speech Transfer", exact: true }).click();
+  await page.getByLabel("Speech decision", { exact: true }).selectOption("speech_synthesis");
+  await page.getByLabel("Speech reason", { exact: true }).selectOption("spoken_audio_is_generated_from_text");
+  await page.getByRole("button", { name: "Check speech choice", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  await page.setViewportSize({ width: 320, height: 240 });
+  await page.screenshot({ path: qaPath("speech-workloads-transfer-remediation-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Exit Speech Workloads", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Speech Workloads", exact: true }).click();
+  if (await page.getByLabel("Speech reason", { exact: true }).inputValue() !== "spoken_audio_is_generated_from_text") throw new Error("Speech transfer reset after close/reopen");
+  const speechDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (speechDraft.includes("spoken_audio_is_generated_from_text") || speechDraft.includes("recorded interview")) throw new Error("Speech choices or transcript-equivalent prompt leaked into storage");
+  for (const id of Object.keys(referenceSpeechTransfer)) { const a = referenceSpeechTransfer[id]; await page.getByLabel("Speech decision", { exact: true }).selectOption(a.decision); await page.getByLabel("Speech reason", { exact: true }).selectOption(a.reason); await page.getByRole("button", { name: "Check speech choice", exact: true }).click(); await page.getByText("Choice confirmed", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "T06" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click(); }
+  for (const d of ["direction", "workload", "file_binding", "result_branch"]) await page.getByLabel(`Closed-note speech ${d}`, { exact: true }).fill("wrong");
+  await page.getByRole("button", { name: "Check speech explanation", exact: true }).click();
+  await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("speech-workloads-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["speech-workloads-primary-qa.png", "speech-workloads-transfer-remediation-qa.png", "speech-workloads-closed-note-qa.png"]);
+  for (const d of ["direction", "workload", "file_binding", "result_branch"]) { const field = page.getByLabel(`Closed-note speech ${d}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `speech-explanation-${d}-feedback`) throw new Error(`Speech explanation ${d} remediation was not associated`); }
+  const speechExplanation = { direction: "spoken audio to text is recognition text to audio is synthesis", workload: "spoken general model question is multimodal prompt flow", file_binding: "recognition reads input file synthesis writes output file", result_branch: "inspect result reason handle success or cancellation" };
+  for (const [d, value] of Object.entries(speechExplanation)) await page.getByLabel(`Closed-note speech ${d}`, { exact: true }).fill(value);
+  await page.getByRole("button", { name: "Exit Speech Workloads", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Speech Workloads", exact: true }).click();
+  if (await page.getByLabel("Closed-note speech file_binding", { exact: true }).inputValue() !== speechExplanation.file_binding) throw new Error("Speech explanation reset after close/reopen");
+  const speechExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (speechExplanationDraft.includes("recognition reads input file") || speechExplanationDraft.includes("spoken general model question")) throw new Error("Speech explanation leaked into storage");
+  await page.getByRole("button", { name: "Check speech explanation", exact: true }).click();
+  await page.getByText("Complete speech-flow explanation confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this speech-flow explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const speechMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).speechEvidence, { key: saveKey });
+  if (speechMastery?.masteryStatus !== "mastered" || speechMastery?.attemptCount !== 16) throw new Error(`Speech mastery incomplete: ${JSON.stringify(speechMastery)}`);
+  if (["audioBytes", "audioPath", "transcriptText", "spokenPrompt", "serviceResponseBody", "runtimeOutput", "freeFormExplanation", "response", "choices"].some((key) => key in speechMastery)) throw new Error("Speech mastery retained private content");
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   const restoredTextContinue = page.getByRole("button", { name: "Continue", exact: true });
@@ -1037,6 +1092,10 @@ print("Operator:", learner)`);
     textAnalysisTransfer: true,
     textAnalysisClosedNote: true,
     textAnalysisStrictMastery: true,
+    speechWorkloadsPrimary: true,
+    speechWorkloadsTransfer: true,
+    speechWorkloadsClosedNote: true,
+    speechWorkloadsStrictMastery: true,
     textAnalysisTerminologyBridgeAllModes: true,
     textAnalysisOwnership: true,
     textAnalysisContinueFocus: true,

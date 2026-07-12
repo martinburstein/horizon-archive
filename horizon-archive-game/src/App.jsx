@@ -144,6 +144,19 @@ import {
   textAnalysisTransferScenarios,
   updateTextAnalysisEvidence,
 } from "./textAnalysisExercise.js";
+import {
+  evaluateSpeechExplanation,
+  evaluateSpeechScenario,
+  getSpeechOptions,
+  sanitizeSpeechEvidence,
+  speechDimensions,
+  speechExplanationDimensions,
+  speechPrimaryScenarios,
+  speechRemediation,
+  speechTransferScenarios,
+  speechWorkloadExercise,
+  updateSpeechEvidence,
+} from "./speechWorkloadExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -325,6 +338,7 @@ function loadSave() {
       controlFlowEvidence: sanitizeControlFlowEvidence(saved.controlFlowEvidence),
       clientBridgeEvidence: sanitizeClientBridgeEvidence(saved.clientBridgeEvidence),
       textAnalysisEvidence: sanitizeTextAnalysisEvidence(saved.textAnalysisEvidence),
+      speechEvidence: sanitizeSpeechEvidence(saved.speechEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -371,6 +385,8 @@ export function App() {
   const [clientBridgeEvidence, setClientBridgeEvidence] = useState(null);
   const [textAnalysisSession, setTextAnalysisSession] = useState(null);
   const [textAnalysisEvidence, setTextAnalysisEvidence] = useState(null);
+  const [speechSession, setSpeechSession] = useState(null);
+  const [speechEvidence, setSpeechEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -436,9 +452,10 @@ export function App() {
         controlFlowEvidence,
         clientBridgeEvidence,
         textAnalysisEvidence,
+        speechEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -502,6 +519,8 @@ export function App() {
     setClientBridgeEvidence(null);
     setTextAnalysisSession(null);
     setTextAnalysisEvidence(null);
+    setSpeechSession(null);
+    setSpeechEvidence(null);
     setMode("playing");
   }
 
@@ -534,6 +553,8 @@ export function App() {
     if (saved.textAnalysisEvidence?.masteryStatus === "mastered") focusContinueAfterTextRef.current = true;
     setTextAnalysisEvidence(saved.textAnalysisEvidence);
     setTextAnalysisSession(null);
+    setSpeechEvidence(saved.speechEvidence);
+    setSpeechSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1179,6 +1200,15 @@ export function App() {
   function acknowledgeTextAnalysisPrimary() { if (!textAnalysisSession?.complete || !textAnalysisEvidence?.confidence) return; setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setTextAnalysisSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis primary form complete at 12 of 12. Fresh transfer and closed-note workload choice remain.", "teacher"); }
   function checkTextAnalysisExplanation(event) { event.preventDefault(); const result = evaluateTextAnalysisExplanation(textAnalysisSession.explanationResponse); setTextAnalysisSession({ ...textAnalysisSession, explanationResult: result }); setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgeTextAnalysisMastery() { if (!textAnalysisSession?.explanationResult?.passed || !textAnalysisSession.ownershipConfirmed || !textAnalysisEvidence?.confidence) return; focusContinueAfterTextRef.current = true; setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setTextAnalysisSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis mastery confirmed: both 12-of-12 forms and closed-note workload explanation are complete.", "teacher"); }
+
+  function openSpeechWorkloads() { setTerminalOpen(true); setRuinsTerminalKind("speech-workloads"); if (!speechSession) { const form = speechEvidence?.masteryStatus === "primary_complete" ? "transfer" : speechEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setSpeechSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { direction: "", workload: "", file_binding: "", result_branch: "" }, explanationResult: null, ownershipConfirmed: false }); } }
+  function exitSpeechWorkloads() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads practice closed safely. No audio state exists; choices remain session-only.", "system"); }
+  function checkSpeech(event) { event.preventDefault(); const scenarios = speechSession.form === "transfer" ? speechTransferScenarios : speechPrimaryScenarios; const scenario = scenarios[speechSession.index]; const result = evaluateSpeechScenario(scenario.id, speechSession.response, speechSession.form); const hintLevel = result.passed ? speechSession.hintLevel : Math.max(1, speechSession.hintLevel); setSpeechSession({ ...speechSession, result, hintLevel }); setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: speechSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: speechSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealSpeechHint() { const hintLevel = Math.min(3, speechSession.hintLevel + 1); setSpeechSession({ ...speechSession, hintLevel }); setSpeechEvidence((previous) => updateSpeechEvidence(previous, { hintLevel })); }
+  function advanceSpeech() { if (!speechSession.result?.passed) return; const scenarios = speechSession.form === "transfer" ? speechTransferScenarios : speechPrimaryScenarios; if (speechSession.index === scenarios.length - 1) { if (speechSession.form === "transfer") { setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setSpeechSession({ ...speechSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setSpeechSession({ ...speechSession, complete: true }); return; } setSpeechSession({ ...speechSession, index: speechSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
+  function acknowledgeSpeechPrimary() { if (!speechSession?.complete || !speechEvidence?.confidence) return; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
+  function checkSpeechExplanation(event) { event.preventDefault(); const result = evaluateSpeechExplanation(speechSession.explanationResponse); setSpeechSession({ ...speechSession, explanationResult: result }); setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgeSpeechMastery() { if (!speechSession?.explanationResult?.passed || !speechSession.ownershipConfirmed || !speechEvidence?.confidence) return; focusContinueAfterClientRef.current = true; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2025,6 +2055,17 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "speech-workloads" && speechSession && (
+          <TerminalShell exerciseId={speechWorkloadExercise.exercise_id} title="Offline Speech Workloads" filename={speechSession.phase === "explanation" ? "closed_note.md" : `${speechSession.form}_speech.json`} lessonId={speechWorkloadExercise.lesson_id} statusText={speechSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${speechSession.form.toUpperCase()} ${speechSession.index + 1}/6`} closeLabel="Exit Speech Workloads" restoreFocusTo={terminalTriggerRef.current} onClose={exitSpeechWorkloads}>
+            <section className="model-choice-workspace speech-workspace"><p className="model-choice-boundary">FULLY OFFLINE · no microphone, capture, playback generation, audio file, or service call. Reverify SDKs, endpoints, authentication, languages, voices, formats, regions, quotas, pricing, and previews.</p>
+              {speechSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkSpeechExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE SPEECH-FLOW OWNER</p><h2>Explain direction, workload, file binding, and result branch</h2><p className="speech-transcript">Transcript-equivalent text: spoken audio becomes text through recognition; written text becomes audio through synthesis; a spoken general-model question uses multimodal prompt flow.</p></header><div className="model-choice-fields speech-explanation">{speechExplanationDimensions.map((dimension) => { const fieldResult = speechSession.explanationResult?.correctness[dimension]; const id = `speech-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension.replaceAll("_", " ")}</span><input aria-label={`Closed-note speech ${dimension}`} aria-invalid={speechSession.explanationResult ? !fieldResult : undefined} aria-describedby={speechSession.explanationResult ? id : undefined} autoComplete="off" value={speechSession.explanationResponse[dimension]} onChange={(event) => setSpeechSession({ ...speechSession, explanationResponse: { ...speechSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{speechSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild ${dimension.replaceAll("_", " ")} from the text-equivalent flow.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={speechExplanationDimensions.some((key) => !speechSession.explanationResponse[key])}>Check speech explanation</button></div><div className={speechSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{speechSession.explanationResult ? `${speechSession.explanationResult.score}/4 · ${speechSession.explanationResult.passed ? "Complete speech-flow explanation confirmed." : "901 TEACHER // Trace direction, model/service choice, file source/destination, and cancellation."}` : "No audio, path, transcript, prompt, service response, or answer choice is shown."}</div>{speechSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={speechSession.ownershipConfirmed} onChange={(event) => setSpeechSession({ ...speechSession, ownershipConfirmed: event.target.checked })} />I produced this speech-flow explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="speech-confidence" checked={speechEvidence?.confidence === value} onChange={() => setSpeechEvidence((previous) => updateSpeechEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!speechSession.ownershipConfirmed || !speechEvidence?.confidence} onClick={acknowledgeSpeechMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : speechSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>12 / 12 dimensions</h2><p>Recognition, synthesis, spoken multimodal prompts, input/output files, and cancellation handling pass. Fresh transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="speech-primary-confidence" checked={speechEvidence?.confidence === value} onChange={() => setSpeechEvidence((previous) => updateSpeechEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!speechEvidence?.confidence} onClick={acknowledgeSpeechPrimary}>Acknowledge primary form</button></section>
+              ) : (() => { const scenarios = speechSession.form === "transfer" ? speechTransferScenarios : speechPrimaryScenarios; const scenario = scenarios[speechSession.index]; const options = getSpeechOptions(scenario.id, speechSession.form); return <form className="model-choice-form" onSubmit={checkSpeech}><header><p className="pane-label">{speechSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // SPEECH-FLOW OWNER · {scenario.id}</p><p className="model-choice-layer-labels">AUDIO → TEXT · TEXT → AUDIO · SPOKEN MULTIMODAL PROMPT · RESULT/CANCELLATION</p><h2>{scenario.prompt}</h2><p className="speech-transcript">Transcript-equivalent scenario text: {scenario.prompt}</p></header><div className="model-choice-fields">{speechDimensions.map((dimension) => { const fieldResult = speechSession.result?.correctness[dimension]; const id = `speech-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><select aria-label={`Speech ${dimension}`} aria-invalid={speechSession.result ? !fieldResult : undefined} aria-describedby={speechSession.result ? id : undefined} value={speechSession.response[dimension]} onChange={(event) => setSpeechSession({ ...speechSession, response: { ...speechSession.response, [dimension]: event.target.value }, result: null })}><option value="">Choose one</option>{options[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}</select>{speechSession.result && <small id={id}>{fieldResult ? "SYSTEM // Correct." : `901 TEACHER // Review the ${dimension} from direction, file binding, and result reason.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit" disabled={speechDimensions.some((key) => !speechSession.response[key])}>Check speech choice</button></div><div className={speechSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{speechSession.result ? `${speechSession.result.score}/2 · ${speechSession.result.passed ? "Choice confirmed." : speechRemediation(scenario, speechSession.result, speechSession.hintLevel)}` : "Choose capability first, then source/destination and success/cancellation handling."}</div>{speechSession.result && !speechSession.result.passed && <button className="hint-action" type="button" disabled={speechSession.hintLevel >= 3} onClick={revealSpeechHint}>Reveal next speech-flow contrast</button>}{speechSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceSpeech}>{speechSession.index === 5 ? (speechSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}</section></form>; })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2187,7 +2228,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && clientBridgeEvidence?.masteryStatus === "mastered" && textAnalysisEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openTextAnalysis(); }}>{textAnalysisSession ? "Resume Text Analysis" : textAnalysisEvidence?.masteryStatus === "primary_complete" ? "Start Text Analysis Transfer" : textAnalysisEvidence?.masteryStatus === "transfer_complete" ? "Open Text Analysis Closed-Note Gate" : "Start Text Analysis"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || textAnalysisEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && textAnalysisEvidence?.masteryStatus === "mastered" && speechEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openSpeechWorkloads(); }}>{speechSession ? "Resume Speech Workloads" : speechEvidence?.masteryStatus === "primary_complete" ? "Start Speech Transfer" : speechEvidence?.masteryStatus === "transfer_complete" ? "Open Speech Closed-Note Gate" : "Start Speech Workloads"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || speechEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>
