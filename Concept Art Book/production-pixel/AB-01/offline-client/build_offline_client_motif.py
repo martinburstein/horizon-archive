@@ -45,8 +45,9 @@ def trace(d):
         d.line(pts, fill=P["amber0"], width=3)
         d.line(pts, fill=P["amber2"], width=1)
     # One-way teeth follow the snake's right, down, then left cadence.
-    for x, y in ((21, 18), (38, 18), (48, 30)):
+    for x, y in ((21, 18), (38, 18)):
         d.polygon([(x - 1, y - 2), (x + 2, y), (x - 1, y + 2)], fill=P["amber1"])
+    d.polygon([(46, 29), (48, 32), (50, 29)], fill=P["amber1"])
     for x, y in ((38, 42), (18, 42)):
         d.polygon([(x + 1, y - 2), (x - 2, y), (x + 1, y + 2)], fill=P["amber1"])
     # Outlet beyond the response station: open split cap.
@@ -72,6 +73,7 @@ def secret_station(d):
     d.rectangle((44, 15, 52, 23), fill=P["void"])
     d.rectangle((52, 17, 54, 21), fill=P["body"])
     d.rectangle((50, 18, 52, 20), fill=P["amber1"])
+    d.line([(51, 18), (51, 14)], fill=P["amber1"], width=1)
 
 
 def request_station(d):

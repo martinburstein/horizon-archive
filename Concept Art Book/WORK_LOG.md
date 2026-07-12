@@ -135,3 +135,11 @@
 - **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; station and trace isolation masks remain distinguishable in grayscale; station outlines plus trace form one connected network; repeated teeth preserve direction; secret interior remains empty and the keyed notch is asymmetric; painted bounds fit the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should identify all five stations, direction changes, and the empty keyed secret in native grayscale; Coder must provide persistent live labels and never serialize or display secret values.
 - **Unresolved risks:** physical geometry cannot define filesystem paths, environment-variable semantics, request options, or response schemas. Live teaching content remains authoritative.
+
+## 2026-07-12 — Offline Client Bridge approval repair
+
+- **Completed:** repaired the unapproved keyed-secret socket with a one-pixel stem to the station boundary, corrected the vertical direction tooth to point downward, and reran every approval gate without creating a new motif.
+- **Files changed:** updated the existing offline-client renderer, native/QA outputs, specification, and added a reusable approval validator. No gameplay, scene, interface, secret data, or lore changed.
+- **Validation:** exact native/2x dimensions and nearest-neighbor bytes; all station/trace isolation pairs distinct in grayscale; request/response distinct; all amber station/trace pixels form one connected component; keyed tooth belongs to that component; at least 60/81 secret-interior pixels remain empty; direction teeth read right/right/down/left/left; 55 x 57 painted bounds fit the 68 x 76 hotspot; world/footer separation and links pass.
+- **Next recommended item:** Accessibility Sentinel should verify the repaired empty keyed socket and full trace in native grayscale. Coder may now integrate the asset only with persistent live labels and strict secret-value privacy.
+- **Unresolved risks:** the motif remains a physical mnemonic rather than an explanation of files, environment secrets, request options, or response schemas. Live teaching content is mandatory.
