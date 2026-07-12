@@ -274,15 +274,16 @@
           "supports_python_skills": ["PY-016", "PY-020"],
           "prerequisite_lesson_ids": ["L-04-01", "L-04-03"],
           "launch_tier": "launch_critical",
-          "source_mode": "source_grounded_with_gap_warning",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-06-introduction-to-ai-powered-info",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-06-get-started-with-ai-powered-inform"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-CONTENT-UNDERSTANDING",
+            "OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER"
           ],
           "activity_ids": ["A-L0404-1", "A-L0404-2"],
           "assessment_ids": ["AS-L0404-SCEN"],
-          "mastery_gate": "can describe extraction from documents, images, and audio/video without overclaiming unsupported local source details"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across four extraction modalities plus schema and missing-value safeguards, then explain one choice without notes"
         }
       ]
     },

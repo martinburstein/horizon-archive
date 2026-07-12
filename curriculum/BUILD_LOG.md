@@ -422,3 +422,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0403-VISUAL-WORKLOADS`.
 Notes: No media or live service call occurs. Current models, SDKs, operations, endpoints, authentication, formats, regions, quotas, pricing, deprecations, and preview status remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T11:13:46-04:00
+
+Stage: Sequential AI-901 workload expansion
+Action: Built exactly one next mapped lesson, `L-04-04`, with source-grounded multimodal extraction instruction, guided contrasts, primary and transfer scenarios, analyzer-schema and missing-value safeguards, remediation, and strict deterministic readiness.
+Files touched:
+- curriculum/lessons/L-04-04/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Content Understanding overview and analyzer reference alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- each form covers four extraction modalities plus schema and missing-value integrity items: pass
+- validator self-test and vision-versus-extraction plus invented-value failure probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12
+- existing `L-04-03` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0404-EXTRACTION-WORKLOADS`.
+Notes: No source media or live service call occurs. Analyzer schemas, field types, formats, languages, SDK/REST operations, API versions, limits, regions, pricing, and preview/deprecation status remain volatile. No gameplay or narrative files changed.

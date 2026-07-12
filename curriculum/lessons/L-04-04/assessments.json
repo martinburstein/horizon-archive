@@ -1,0 +1,3 @@
+[
+{"assessment_id":"AS-L0404-SCEN","lesson_id":"L-04-04","assessment_type":"scenario_choice","supports_objectives":["AI901-D1-O8"],"supports_python_skills":["PY-016","PY-020"],"mastery_signal":"independent_use","attempt_policy":"Score primary 12/12, remediate every modality or integrity miss, then score fresh transfer 12/12 and explain one choice without notes.","result_states":["correct","partially_correct","incorrect","not_attempted","needs_review"],"records_confidence":true,"records_misconception_tags":true,"records_review_flag":true,"status":"review"}
+]
