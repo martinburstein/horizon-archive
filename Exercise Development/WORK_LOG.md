@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Visual Patterns continuity closure
+
+- **Outcome:** Closed only the L-05-06 continuity contract. The existing gate already preserved strict primary 12/12, fresh transfer 12/12, a four-part Pilot-owned closed note, Teacher-owned completion, sanitizer/privacy, canonical/narrow presentation, captures, and dedicated direct/reload Continue focus. No L-06-01/L-06-02 work was added.
+- **Persistent safety/text:** Primary, transfer, and closed-note retain the associated fully offline/no-service/no-Azure/no-media/no-publication/no-deletion/no-action warning. The persistent equivalent is now explicitly a six-boundary visual text equivalent covering analysis, multimodal input, generation, request validation, honest operation/result handling, provenance, and action authority.
+- **Honesty and ownership:** The equivalent requires operation-specific result inspection without fabricated success or media, preserves source/model/prompt/time and generated-content provenance, and states that publication and deletion each require separate explicit authority. Neutral System scores remain separate from explicit 901 Teacher remediation for operation, provenance, publication, deletion, and action boundaries.
+- **Files changed:** `visualPatternExercise.js`, its focused tests, `App.jsx`, full E2E, refreshed Visual Patterns captures, and this log.
+- **Validation:** L-05-06 validator self-test passes; packaged primary and transfer references each pass 12/12; 129/129 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors and verifies the persistent warning/equivalent in every phase plus direct/reload Continue focus; diff check passes.
+- **Next recommended item:** Player Agent should independently challenge analysis/generation reversals, false operation success, mismatched result shapes, missing provenance, publication/deletion prompts, keyboard order, and narrow reading order.
+- **Unresolved risks:** This offline simulation proves no live service, media compatibility, operation status, result schema, provenance, permission, publication readiness, or deletion authority; those require current official Microsoft reverification and separate explicit authorization.
+
 ## 2026-07-12 — L-05-06 Offline Visual Patterns mandatory Terminal gate
 
 - **Outcome:** Mounted `EX-L0506-VISUAL-PATTERNS` after Text/Speech Patterns as a mandatory gate. Primary and fresh transfer each require 12/12, followed by a four-part closed-note explanation. No L-06-01 work was added.
