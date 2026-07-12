@@ -127,3 +127,11 @@
 - **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; all groove pixels form one connected component; inlet/repeat/fork/append/outlet isolation masks remain distinguishable in grayscale; fork's equal notches and outlet's open cap differ by geometry; painted bounds fit the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should trace inlet → loop → fork → append/outlet in native grayscale and confirm fork/outlet are not confused; Coder must retain live condition, branch, append, and outlet labels.
 - **Unresolved risks:** the motif communicates control-flow topology, not Python syntax or actual execution direction. Live instruction and validator feedback remain mandatory.
+
+## 2026-07-12 — Offline Client Bridge physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible motif with five distinct square stations—module, file, empty keyed secret, request, response—joined by a one-way snake trace and open outlet cap.
+- **Files changed:** added `production-pixel/AB-01/offline-client/` native motif, renderer, specification, exact 2x, grayscale, and station/trace isolation QA; linked it from the AB-01 package. No gameplay, scene, interface, secret, or lore changed.
+- **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; station and trace isolation masks remain distinguishable in grayscale; station outlines plus trace form one connected network; repeated teeth preserve direction; secret interior remains empty and the keyed notch is asymmetric; painted bounds fit the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should identify all five stations, direction changes, and the empty keyed secret in native grayscale; Coder must provide persistent live labels and never serialize or display secret values.
+- **Unresolved risks:** physical geometry cannot define filesystem paths, environment-variable semantics, request options, or response schemas. Live teaching content remains authoritative.
