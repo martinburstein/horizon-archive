@@ -26,6 +26,8 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Structured Packets closed-note fields | 3: container path, nested access, JSON round trip | Implemented Horizon metric |
 | Control Flow execution motif | 4 ordered reads: parameter, loop, condition/append, return | Implemented Horizon metric |
 | Control Flow closed-note fields | 3: parameter input, loop and condition, return placement | Implemented Horizon metric |
+| Client Bridge chain | 5 ordered layers: module, file, secret, request, response | Implemented Horizon metric |
+| Client Bridge warning | 1 persistent semantic strip in every phase | Safety-critical Horizon metric |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 

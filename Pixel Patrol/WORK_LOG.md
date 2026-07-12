@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Client Bridge final visual gate
+
+- **Completed:** audited the complete Offline Client Bridge primary, transfer, retrieval, closed-note, and mastered flow after warning/ownership/focus fixes. The persistent amber offline/no-credential/reverification strip is prominent without eclipsing work; module -> file -> secret -> request -> response remains ordered; code, five fields, neutral System scores, Teacher missing-secret/redaction/layer remediation, Pilot ownership, fixed chrome, work traversal, focus, and Continue handoff are coherent at 640 x 480 and 320 x 240. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 65 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms both 10/10 forms, retrieval 4/4, five-layer explanation, strict mastery, warning persistence in every mode, System/Teacher/Pilot ownership, direct and reload Continue focus, privacy/redaction, and credits. Static hashes and dimensions confirm byte-distinct `640 x 480` primary, `320 x 240` transfer-remediation, and `1600 x 900` host closed-note captures; source checks confirm the five-layer order and credential warning/remediation language.
+- **Next recommended item:** Location Scout should render the bridge as five square stations linked by a one-way recessed trace, with the secret station shown as an empty keyed socket rather than a glowing payload.
+- **Unresolved risks:** native code and form controls remain platform-dependent; preserve them until accessible bitmap replacements retain selection, focus, redaction, and scroll cues.
+
 ## 2026-07-12 — Control Flow final visual gate
 
 - **Completed:** audited complete Control Flow primary, unseen transfer, closed-note, and mastered states after ownership/focus fixes. The 640 x 480 primary, 320 x 240 transfer-remediation, and canonical closed-note captures preserve the parameter -> loop -> condition/append -> return read, equality boundary, readable code, three associated explanation fields, neutral System scoring, separate Teacher boundary remediation, Pilot ownership, fixed chrome, contained work traversal, focus, and Continue handoff. No CSS correction was warranted.

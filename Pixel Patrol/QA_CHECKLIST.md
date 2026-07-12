@@ -93,6 +93,13 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Control Flow primary, transfer-remediation, and closed-note captures exist and are byte-distinct.
 - [ ] The closed-note parameter, loop/condition, and return fields have associated remediation and visible focus.
 - [ ] Direct mastery and mastered-save resume both place focus on Continue.
+- [ ] Client Bridge warning remains visible and complete in code, retrieval, and explanation phases at both logical sizes.
+- [ ] Module -> file -> secret -> request -> response order matches visual, DOM, and keyboard order.
+- [ ] Five closed-note fields use one row at 640 x 480 and one ordered column at 320 x 240.
+- [ ] Missing-secret and redaction failures expose Teacher guidance without reproducing a secret or authorization value.
+- [ ] System score, Teacher remediation, and Pilot source/prose remain visually and programmatically separate.
+- [ ] Client Bridge primary, transfer-remediation, and closed-note captures exist and are byte-distinct.
+- [ ] Direct mastery and restored mastery place focus on Continue.
 
 ## No-dead-end sweep
 

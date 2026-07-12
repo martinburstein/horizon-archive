@@ -124,6 +124,15 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Reuse Structured Packets' fixed outer Terminal, contained work-region traversal, 0.68rem/1.4 code, three-column canonical explanation, one-column narrow explanation, and 2 px gold focus language. This continuity signals a more advanced program, not a different operating system.
 - Direct mastery and sanitized mastered-save resume both move focus to Continue. Resume Control Flow must not retain focus after the final gate closes.
 
+## Offline Client Bridge safety hierarchy
+
+- `OFFLINE SIMULATION ONLY` is a persistent amber semantic strip immediately below file/status chrome in primary, transfer, retrieval, and closed-note phases. It must state no service contact, no accepted real credential, never paste credentials, and which volatile facts require reverification.
+- The warning may wrap at 320 x 240 but cannot collapse, scroll independently, or disappear behind phase controls. Its amber value signals a safety boundary; red remains reserved for a detected secret exposure or blocked unsafe action.
+- Preserve the ordered bridge read `module -> file -> secret -> request -> response`. Primary/transfer express it as the Pilot-owned task trace and safe Python; closed note presents five associated fields in one row at 640 and one column at 320.
+- System owns deterministic 10-check, retrieval, and five-layer scores. Teacher owns offline, credential, missing-secret, redaction, retrieval, and layer reconstruction remediation. Pilot owns editable source and closed-note prose.
+- Secret failures must distinguish missing injection from unsafe exposure. Never echo the submitted secret, authorization value, or config body in feedback, saved evidence, or visual captures.
+- Reuse the fixed Terminal frame, contained work traversal, 0.68rem code, 2 px gold focus, amber Teacher rail, and indigo/violet phase chrome. After strict mastery and mastered-save resume, focus moves to Continue.
+
 ## Responsible AI primary-form containment
 
 - The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.
