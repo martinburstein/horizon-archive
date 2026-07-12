@@ -358,6 +358,13 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
   await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
   await page.getByText("Review principle", { exact: false }).waitFor();
+  for (const dimension of ["principle", "stakeholder", "mitigation", "owner"]) {
+    const field = page.getByLabel(`Responsible AI ${dimension}`, { exact: true });
+    const feedbackId = `rai-${dimension}-feedback`;
+    if (await field.getAttribute("aria-invalid") !== "true") throw new Error(`Responsible AI ${dimension} did not expose invalid state`);
+    if (await field.getAttribute("aria-describedby") !== feedbackId) throw new Error(`Responsible AI ${dimension} was not associated with its remediation`);
+    await page.locator(`#${feedbackId}`).waitFor();
+  }
   await page.getByRole("button", { name: "Reveal next remediation step", exact: true }).click();
   await page.getByText("Compare the nearest principles", { exact: false }).waitFor();
   await page.screenshot({ path: "playtest/responsible-ai-primary-qa.png", fullPage: true });

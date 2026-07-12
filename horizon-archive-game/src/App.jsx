@@ -1396,6 +1396,7 @@ export function App() {
                             <select
                               aria-label={`Responsible AI ${dimension}`}
                               aria-describedby={responsibleAISession.result ? feedbackId : undefined}
+                              aria-invalid={responsibleAISession.result ? !fieldResult : undefined}
                               value={responsibleAISession.response[dimension]}
                               onChange={(event) => setResponsibleAISession({ ...responsibleAISession, response: { ...responsibleAISession.response, [dimension]: event.target.value }, result: null })}
                             >
