@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-12 — Production pixel-art direction
+
+- **Completed:** replaced the earlier concept-as-authority assumption with a two-tier pipeline: high-resolution concept plates provide inspiration for mood, palette, scale, composition, and interaction intent; final game assets must be intentionally rebuilt on a low-resolution square-logical-pixel grid.
+- **Files changed:** `horizon-archive-game/AGENTS.md`, `AGENT_WORKFLOW.md`, and `Concept Art Book/art-direction-charter.md`.
+- **Validation:** confirmed the durable instructions now require nearest-neighbor presentation, crisp one-logical-pixel edges, intentional pixel clusters and dithering, unified pixel treatment across world/UI/Terminal chrome, and a prohibition on shipping direct smooth downscales or generic pixelation filters.
+- **Next recommended item:** before the next scene-art integration, Coder Agent and Location Scout Agent should define and validate the production logical resolution plus supported integer-scale viewport strategy.
+- **Unresolved risks:** the existing gameplay and concept plates remain high-resolution painterly assets. They are now classified as exploration references and must be translated through the new production pixel pipeline rather than treated as finished art.
+
 ## 2026-07-12 — Coder integration: Witness Corridor two-object scene
 
 - **Completed:** integrated the selected WC-01 clean plate and split the former combined target into a grounded Evidence Terminal and separate fallen automaton. Only the Terminal launches the exercise; the automaton retains narrative LOOK/TALK/USE responses.

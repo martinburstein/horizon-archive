@@ -2,11 +2,11 @@
 
 ## North star
 
-Every plate should feel like a lost, hand-painted 1990s point-and-click adventure background: theatrical enough to remember, legible enough to navigate, and restrained enough that the environment carries the mystery.
+The final game should feel like a lost turn-of-the-millennium point-and-click adventure running on a Windows 98/ME/2000-era PC: theatrical enough to remember, legible enough to navigate, and visibly constructed from square logical pixels.
 
-## Source-of-truth references
+## Inspiration references
 
-The four existing plates are the visual authority. Each was visually inspected at its native `1672 x 941` landscape size.
+The four existing plates establish mood, palette, scale, landmark language, and interaction intent. They are inspiration, not literal layouts or production-ready game art. Each was visually inspected at its native `1672 x 941` landscape size.
 
 | Reference | What it establishes |
 |---|---|
@@ -15,7 +15,17 @@ The four existing plates are the visual authority. Each was visually inspected a
 | [Fallen Automoton](../Concept%20Art/Fallen%20Automoton.png) | Intimate corridor scale, oblique path, readable character-object silhouette, violet practical light. |
 | [Underground City](../Concept%20Art/Underground%20City.png) | Vast layered depth, warm/cool contrast, small human scale cues, infrastructure over voids. |
 
-The historical references contain a bottom dialogue panel. New **environment plates** should contain only the 16:9 world view; UI is composed separately by the game. This keeps clean masters reusable while preserving the landscape-first game presentation.
+The historical references contain a bottom dialogue panel. New **exploration plates** should contain only the 16:9 world view; UI is composed separately by the game. This keeps concept masters reusable while preserving the landscape-first game presentation. A selected exploration plate must be re-authored into a production pixel plate instead of being copied or smoothly downscaled.
+
+## Production pixel contract
+
+- Square logical pixels are mandatory. No rectangular-pixel simulation, subpixel detail, or resolution-independent smoothing.
+- Build final scene art, UI frames, icons, focus states, and Terminal workspaces on an explicit low-resolution logical grid.
+- Present production pixels with nearest-neighbor scaling and integer scaling wherever the viewport permits. When an exact integer multiple is unavailable, preserve square pixel blocks through letterboxing or a purpose-built alternate logical-size asset rather than blur or uneven filtering.
+- Use deliberate pixel clusters, stepped diagonals, limited-value ramps, selective dithering, and crisp one-logical-pixel edges. Avoid painterly microtexture that collapses into noise.
+- Do not apply a generic mosaic or pixelation filter to a finished concept image and call it production art. Reinterpret silhouettes, planes, lighting, and landmarks intentionally at the logical resolution.
+- Typography and editor chrome must share the same pixel density and edge treatment as the world. Avoid modern vector icons, anti-aliased hairlines, soft shadows, glassmorphism, and high-DPI gradients.
+- High-resolution generated images remain exploration artifacts. Every scene sheet must distinguish `exploration plate` from `production pixel plate` and record the intended logical resolution and scaling behavior before implementation.
 
 ## Visual grammar
 
@@ -23,7 +33,7 @@ The historical references contain a bottom dialogue panel. New **environment pla
 - **Camera:** side-on three-quarter adventure camera with slightly exaggerated perspective; never tactical isometric.
 - **Planes:** foreground framing, uncluttered walkable middle ground, atmospheric background.
 - **Hotspots:** readable through silhouette, value contrast, and light—not outlines or labels.
-- **Texture:** hand-painted facets, restrained dithering, angular low-poly massing, visible weather and age.
+- **Texture:** intentional pixel clusters, restrained dithering, angular low-poly massing, readable weather and age at the logical resolution.
 - **Palette:** indigo, slate, charcoal, muted violet; use peach, amber, crystal white, or volcanic orange as scarce focal accents.
 - **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
 - **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, figure, or known-size craft.
@@ -63,8 +73,9 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 
 ## Delivery specification
 
-- Master aspect ratio: 16:9.
-- Current continuity resolution: `1672 x 941` PNG.
+- Exploration aspect ratio: 16:9.
+- Current exploration continuity resolution: `1672 x 941` PNG; these files are not production game art.
+- Production deliverables require a separately defined low-resolution square-pixel master plus its supported integer-scale presentation sizes.
 - Clean world plate only; no baked UI.
 - Lower-center walkable space should survive the game's dialogue-panel crop and responsive scaling.
 - Every selected plate requires a scene sheet and provenance entry.

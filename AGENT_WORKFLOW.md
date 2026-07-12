@@ -25,8 +25,9 @@
 5. **Location Scout Agent**
    - Maps the planets, regions, and playable scenes the player will visit.
    - Builds and maintains a spoiler-safe concept-art book with actual project-local raster artwork.
-   - Uses the four existing `Concept Art/` images as the visual source of truth.
-   - Targets original 1990s hand-painted point-and-click adventure composition: readable hotspots, theatrical perspective, strong silhouettes, landscape-first framing, and environmental storytelling.
+   - Uses the four existing `Concept Art/` images and generated plates as inspiration for mood, composition, palette, scale, and interaction intent—not as literal production layouts to copy.
+   - Targets original turn-of-the-millennium point-and-click composition with readable hotspots, theatrical perspective, strong silhouettes, landscape-first framing, and environmental storytelling.
+   - Separates high-resolution exploration plates from final production pixel plates. Production recommendations must specify how the concept is rebuilt on a low-resolution square-logical-pixel grid with nearest-neighbor presentation.
    - Records generation prompts, scene purpose, navigation links, interaction zones, palette, lighting, scale, and continuity notes for every selected image.
    - Does not open the hidden-lore vault or expose unreleased plot information.
 
@@ -37,6 +38,7 @@
    - Uses real Python syntax and favors attempt, feedback, hint, retry, retrieval, and transfer over passive explanation.
    - Integrates with curriculum lesson IDs, activity IDs, prerequisites, mastery evidence, save state, and accessibility requirements.
    - Preserves the landscape-first point-and-click scene and treats the editor as an in-world Machine interface rather than a generic website or branded VS Code copy.
+   - Keeps Terminal UI, typography, borders, icons, and interaction states inside the same square-logical-pixel system as the world art; avoids smooth modern editor chrome.
    - Coordinates with 901 Teacher Agent for learning intent, Coder Agent for production integration, and Location Scout Agent for Terminal placement and physical design.
 
 ## Turn order
