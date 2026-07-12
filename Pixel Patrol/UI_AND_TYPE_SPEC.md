@@ -167,3 +167,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Keep four workload families distinct: analysis interprets existing pixels; multimodal prompting combines visual and text input; image generation creates still media; video generation creates time-based media.
 - Media path/type validation precedes the request. Analysis returns structured analysis JSON; generation returns media. Teacher remediation must distinguish these outputs rather than grouping them as generic results.
 - The warning rows are persistent and separate from the single form scroller. Retain square one-pixel seams, two-pixel focus/ownership rails, native accessible controls, and Continue focus after direct or restored mastery.
+
+## Offline Information Extraction hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/privacy warning -> text-equivalent flow -> Pilot schema choice/prose -> neutral System validator -> Teacher modality/schema/null/evidence remediation.
+- Keep document/form, image, audio, and video as four distinct input modalities. Named field schema and types are defined before analysis; missing evidence stays null/missing rather than becoming an invented value.
+- Provenance and confidence lead to human review. A visual description, transcript, caption, or summary does not replace requested structured fields.
+- Keep warning and text-equivalent rows outside the single form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

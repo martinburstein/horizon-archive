@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Information Extraction final visual gate
+
+- **Completed:** audited complete Information Extraction primary, transfer, closed-note, and mastered flow. The persistent offline/privacy warning and text-equivalent strip already occupy correct fixed rows above one contained form; four modalities, schema-first/null/evidence/invented-value hierarchy, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 91 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms all-phase warning/text association, both 12/12 forms, four-part explanation, invented-value rejection, ownership separation, privacy, direct/reload Continue focus, distinct captures, and credits.
+- **Next recommended item:** Location Scout should depict four modality inlets feeding a named-field schema gate, with an explicit empty null socket and a provenance trail to human review; invented values should have no physical route.
+- **Unresolved risks:** the complete safety/privacy warning consumes most of the first 320 x 240 work viewport by design; retain the single traversal rather than hiding or abbreviating its boundaries.
+
 ## 2026-07-12 — Offline Visual Workloads final visual gate
 
 - **Completed:** audited complete Visual Workloads primary, transfer, closed-note, and mastered flow. Offline, text-equivalent, and deprecation strips already occupy four correct workspace rows above one contained form; four workload families, path/type validation, analysis-JSON versus generated-media output, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.

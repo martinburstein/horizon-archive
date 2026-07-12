@@ -122,6 +122,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Visual Pilot inputs, neutral System scores, and Teacher workload/media remediation remain separate.
 - [ ] Visual primary, transfer-remediation, and closed-note captures are byte-distinct across canonical, narrow, and host-context presentation.
 - [ ] Visual direct/restored mastery moves focus to Continue; the single form traversal preserves all content at 320 x 240.
+- [ ] Extraction offline/privacy warning and text-equivalent flow remain persistent, ordered, and non-overlapping in every phase.
+- [ ] Document/form, image, audio, and video remain four distinct modality reads before schema selection.
+- [ ] Schema and types precede analysis; missing/null, provenance/confidence, human review, and invented-value rejection remain explicit.
+- [ ] Extraction Pilot inputs, neutral System scores, and Teacher schema/null/evidence remediation remain separate.
+- [ ] Extraction primary, transfer-remediation, and closed-note captures are byte-distinct across canonical, narrow, and host context.
+- [ ] Extraction direct/restored mastery moves focus to Continue; single-form traversal preserves all narrow content.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.

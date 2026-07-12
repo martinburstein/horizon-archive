@@ -100,3 +100,9 @@ At 1x capture:
 - Visual uses four fixed workspace rows: offline/no-media warning, text-equivalent flow, deprecation warning, then one contained scrolling form. None may overlap or reorder at 640 x 480 or 320 x 240.
 - The initial narrow viewport prioritizes the complete safety boundary. All four workload choices, media path/type validation, output branching, remediation, and actions remain available through vertical traversal without horizontal clipping.
 - Primary and transfer use decision then reason; closed note uses four columns at canonical width and one ordered column at narrow width. Outer Machine/file/status chrome remains fixed.
+
+## Offline Information Extraction viewport contract
+
+- Extraction uses three fixed workspace rows: persistent offline/privacy warning, persistent text-equivalent schema/evidence flow, then one contained scrolling form. No row may overlap or reorder at 640 x 480 or 320 x 240.
+- The complete narrow warning may occupy the initial viewport; document/form, image, audio, video, schema/null/evidence content remains reachable through one vertical traversal without horizontal clipping.
+- Primary and transfer retain decision then reason. Closed note uses four schema-integrity fields in one canonical row and one narrow column while outer Machine/file/status chrome stays fixed.
