@@ -114,6 +114,20 @@ import {
   sanitizeControlFlowEvidence,
   updateControlFlowEvidence,
 } from "./controlFlowExercise.js";
+import {
+  clientBridgeChecks,
+  clientBridgeExercise,
+  clientBridgeExplanationDimensions,
+  clientBridgeRemediation,
+  clientBridgeRetrieval,
+  clientBridgeStarters,
+  evaluateClientBridgeExplanation,
+  evaluateClientBridgeRetrieval,
+  evaluateClientBridgeSource,
+  getClientBridgeRetrievalOptions,
+  sanitizeClientBridgeEvidence,
+  updateClientBridgeEvidence,
+} from "./clientBridgeExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -293,6 +307,7 @@ function loadSave() {
       modelChoiceEvidence: sanitizeModelChoiceEvidence(saved.modelChoiceEvidence),
       structuredPacketEvidence: sanitizeStructuredPacketEvidence(saved.structuredPacketEvidence),
       controlFlowEvidence: sanitizeControlFlowEvidence(saved.controlFlowEvidence),
+      clientBridgeEvidence: sanitizeClientBridgeEvidence(saved.clientBridgeEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -335,6 +350,8 @@ export function App() {
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
   const [controlFlowEvidence, setControlFlowEvidence] = useState(null);
+  const [clientBridgeSession, setClientBridgeSession] = useState(null);
+  const [clientBridgeEvidence, setClientBridgeEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -396,9 +413,10 @@ export function App() {
         modelChoiceEvidence,
         structuredPacketEvidence,
         controlFlowEvidence,
+        clientBridgeEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -446,6 +464,8 @@ export function App() {
     setStructuredPacketEvidence(null);
     setControlFlowSession(null);
     setControlFlowEvidence(null);
+    setClientBridgeSession(null);
+    setClientBridgeEvidence(null);
     setMode("playing");
   }
 
@@ -472,6 +492,8 @@ export function App() {
     if (saved.controlFlowEvidence?.masteryStatus === "mastered") focusContinueAfterControlRef.current = true;
     setControlFlowEvidence(saved.controlFlowEvidence);
     setControlFlowSession(null);
+    setClientBridgeEvidence(saved.clientBridgeEvidence);
+    setClientBridgeSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1094,6 +1116,20 @@ export function App() {
   function acknowledgeControlFlowPrimary() { if (!controlFlowSession?.complete || !controlFlowEvidence?.confidence) return; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow primary form complete at 8 of 8. Unseen transfer and closed-note flow remain.", "teacher"); }
   function checkControlFlowExplanation(event) { event.preventDefault(); const result = evaluateControlFlowExplanation(controlFlowSession.explanationResponse); setControlFlowSession({ ...controlFlowSession, explanationResult: result }); setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgeControlFlowMastery() { if (!controlFlowSession?.explanationResult?.passed || !controlFlowSession.ownershipConfirmed || !controlFlowEvidence?.confidence) return; focusContinueAfterControlRef.current = true; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow mastery confirmed: primary, unseen transfer, and closed-note flow are complete.", "teacher"); }
+
+  function openClientBridge() {
+    setTerminalOpen(true); setRuinsTerminalKind("client-bridge");
+    if (!clientBridgeSession) { const form = clientBridgeEvidence?.masteryStatus === "primary_complete" ? "transfer" : clientBridgeEvidence?.masteryStatus === "transfer_complete" ? "retrieval" : clientBridgeEvidence?.masteryStatus === "retrieval_complete" ? "explanation" : "primary"; setClientBridgeSession({ form, phase: ["retrieval", "explanation"].includes(form) ? form : "code", source: ["primary", "transfer"].includes(form) ? clientBridgeStarters[form] : "", result: null, hintLevel: 0, complete: false, retrievalAnswers: {}, retrievalResult: null, explanationResponse: { module: "", file: "", secret: "", request: "", response: "" }, explanationResult: null, ownershipConfirmed: false }); }
+  }
+  function exitClientBridge() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge practice closed safely. Source, config, and simulated environment remain session-only.", "system"); }
+  function runClientBridge(event) { event.preventDefault(); const result = evaluateClientBridgeSource(clientBridgeSession.source, clientBridgeSession.form); const hintLevel = result.passed ? clientBridgeSession.hintLevel : Math.max(1, clientBridgeSession.hintLevel); setClientBridgeSession({ ...clientBridgeSession, result, hintLevel }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: clientBridgeSession.form, correctness: result.checks, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: clientBridgeSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealClientBridgeHint() { const hintLevel = Math.min(3, clientBridgeSession.hintLevel + 1); setClientBridgeSession({ ...clientBridgeSession, hintLevel }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { hintLevel })); }
+  function advanceClientBridge() { if (!clientBridgeSession.result?.passed) return; if (clientBridgeSession.form === "transfer") { setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "retrieval", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setClientBridgeSession({ ...clientBridgeSession, form: "retrieval", phase: "retrieval", source: "", result: null, hintLevel: 0 }); } else setClientBridgeSession({ ...clientBridgeSession, complete: true }); }
+  function acknowledgeClientBridgePrimary() { if (!clientBridgeSession?.complete || !clientBridgeEvidence?.confidence) return; setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setClientBridgeSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge primary form complete at 10 of 10. Fresh transfer, retrieval, and closed-note layers remain.", "teacher"); }
+  function checkClientBridgeRetrieval(event) { event.preventDefault(); const result = evaluateClientBridgeRetrieval(clientBridgeSession.retrievalAnswers); setClientBridgeSession({ ...clientBridgeSession, retrievalResult: result }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "retrieval", correctness: result.correctness, incrementAttempt: true, masteryStatus: result.passed ? "retrieval_complete" : "transfer_complete" })); }
+  function advanceClientBridgeExplanation() { if (!clientBridgeSession.retrievalResult?.passed) return; setClientBridgeSession({ ...clientBridgeSession, form: "explanation", phase: "explanation", retrievalResult: null }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "retrieval_complete" })); }
+  function checkClientBridgeExplanation(event) { event.preventDefault(); const result = evaluateClientBridgeExplanation(clientBridgeSession.explanationResponse); setClientBridgeSession({ ...clientBridgeSession, explanationResult: result }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "retrieval_complete" })); }
+  function acknowledgeClientBridgeMastery() { if (!clientBridgeSession?.explanationResult?.passed || !clientBridgeSession.ownershipConfirmed || !clientBridgeEvidence?.confidence) return; focusContinueAfterControlRef.current = true; setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setClientBridgeSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge mastery confirmed: both offline forms, retrieval, and closed-note layers are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -1914,6 +1950,21 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "client-bridge" && clientBridgeSession && (
+          <TerminalShell exerciseId={clientBridgeExercise.exercise_id} title="Offline Client Bridge" filename={clientBridgeSession.phase === "code" ? `client_${clientBridgeSession.form}.py` : `${clientBridgeSession.phase}.md`} lessonId={clientBridgeExercise.lesson_id} statusText={clientBridgeSession.phase === "code" ? `${clientBridgeSession.form.toUpperCase()} ${clientBridgeSession.result?.score ?? 0}/10` : clientBridgeSession.phase.toUpperCase()} closeLabel="Exit Client Bridge" restoreFocusTo={terminalTriggerRef.current} onClose={exitClientBridge}>
+            <section className="structured-packet-workspace client-bridge-workspace"><p className="model-choice-boundary">OFFLINE SIMULATION ONLY · example.invalid is never contacted. Never paste credentials. Package versions, identity, endpoints, roles, schemas, and runtimes must be reverified.</p>
+              {clientBridgeSession.phase === "explanation" ? (
+                <form className="structured-packet-explanation" onSubmit={checkClientBridgeExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE EXPLANATION OWNER</p><h2>Explain module → file → secret → request → response</h2><p>No source, config, secret, or answer choices are shown. Your words remain session-only.</p></header><div className="structured-explanation-fields client-bridge-explanation">{clientBridgeExplanationDimensions.map((dimension) => { const fieldResult = clientBridgeSession.explanationResult?.correctness[dimension]; const id = `bridge-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><input aria-label={`Closed-note bridge ${dimension}`} aria-invalid={clientBridgeSession.explanationResult ? !fieldResult : undefined} aria-describedby={clientBridgeSession.explanationResult ? id : undefined} autoComplete="off" value={clientBridgeSession.explanationResponse[dimension]} onChange={(event) => setClientBridgeSession({ ...clientBridgeSession, explanationResponse: { ...clientBridgeSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{clientBridgeSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Layer confirmed." : `901 TEACHER // Rebuild the ${dimension} boundary without exposing data.`}</small>}</label>; })}</div><section className="terminal-console structured-packet-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={clientBridgeExplanationDimensions.some((key) => !clientBridgeSession.explanationResponse[key])}>Check bridge explanation</button></div><div className={clientBridgeSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{clientBridgeSession.explanationResult ? `${clientBridgeSession.explanationResult.score}/5 · ${clientBridgeSession.explanationResult.passed ? "Complete offline bridge confirmed." : "901 TEACHER // Keep imported code, parsed file, injected secret, request plan, and later response separate."}` : "Awaiting five closed-note layers."}</div>{clientBridgeSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={clientBridgeSession.ownershipConfirmed} onChange={(event) => setClientBridgeSession({ ...clientBridgeSession, ownershipConfirmed: event.target.checked })} />I produced this bridge explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after all gates</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="bridge-confidence" checked={clientBridgeEvidence?.confidence === value} onChange={() => setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!clientBridgeSession.ownershipConfirmed || !clientBridgeEvidence?.confidence} onClick={acknowledgeClientBridgeMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : clientBridgeSession.phase === "retrieval" ? (
+                <form className="structured-packet-explanation bridge-retrieval" onSubmit={checkClientBridgeRetrieval}><header><p className="pane-label">901 TEACHER // RETRIEVAL 4/4</p><h2>Separate imports, installation, secrets, and HTTP parts</h2></header>{clientBridgeRetrieval.map((item) => <fieldset key={item.id}><legend>{item.id} · {item.prompt}</legend>{getClientBridgeRetrievalOptions(item.id).map((option) => <label key={option}><input type="radio" name={`bridge-${item.id}`} checked={clientBridgeSession.retrievalAnswers[item.id] === option} onChange={() => setClientBridgeSession({ ...clientBridgeSession, retrievalAnswers: { ...clientBridgeSession.retrievalAnswers, [item.id]: option }, retrievalResult: null })} />{formatChoice(option)}</label>)}{clientBridgeSession.retrievalResult && <small>{clientBridgeSession.retrievalResult.correctness[item.id] ? "SYSTEM // Correct." : "901 TEACHER // Revisit this layer distinction."}</small>}</fieldset>)}<section className="terminal-console structured-packet-output"><div className="console-heading-row"><strong>SYSTEM // RETRIEVAL VALIDATOR</strong><button className="run-action" type="submit" disabled={clientBridgeRetrieval.some((item) => !clientBridgeSession.retrievalAnswers[item.id])}>Check retrieval</button></div><div className={clientBridgeSession.retrievalResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{clientBridgeSession.retrievalResult ? `${clientBridgeSession.retrievalResult.score}/4 · ${clientBridgeSession.retrievalResult.passed ? "RETRIEVAL PASS" : "901 TEACHER // Correct every layer before advancing."}` : "All four distinctions are required."}</div>{clientBridgeSession.retrievalResult?.passed && <button className="confirm-action" type="button" onClick={advanceClientBridgeExplanation}>Begin closed-note explanation</button>}</section></form>
+              ) : clientBridgeSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>10 / 10 checks</h2><p>Imports, file/config, injected secret, missing-secret rejection, offline request, hidden reuse, and redaction pass.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="bridge-primary-confidence" checked={clientBridgeEvidence?.confidence === value} onChange={() => setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!clientBridgeEvidence?.confidence} onClick={acknowledgeClientBridgePrimary}>Acknowledge primary form</button></section>
+              ) : (
+                <form className="structured-packet-form" onSubmit={runClientBridge}><aside className="task-pane"><p className="pane-label">{clientBridgeSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // OFFLINE SOURCE OWNER</p><h2>Trace five safe layers</h2><ol className="data-path-trace"><li>Import module from active environment.</li><li>Read passed file path; parse JSON text.</li><li>Look up named environment secret; reject missing.</li><li>Build method/URL/headers/body dictionary.</li><li>Response status/body would arrive later.</li></ol><p>Never send, print authorization, hardcode config, or paste a secret.</p></aside><div className="structured-editor-stack"><label htmlFor="client-bridge-source">EDITABLE PYTHON · no execution/network · session-only</label><textarea id="client-bridge-source" aria-label="Client Bridge Python source" aria-invalid={clientBridgeSession.result ? !clientBridgeSession.result.passed : undefined} aria-describedby={clientBridgeSession.result ? "bridge-status bridge-check-list" : undefined} value={clientBridgeSession.source} onChange={(event) => setClientBridgeSession({ ...clientBridgeSession, source: event.target.value, result: null })} autoCapitalize="off" autoCorrect="off" spellCheck="false" /><section className="terminal-console structured-packet-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 10-CHECK OFFLINE VALIDATOR</strong><button className="run-action" type="submit">Validate bridge</button></div><div id="bridge-status" className={clientBridgeSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{clientBridgeSession.result ? `${clientBridgeSession.result.score}/10 · ${clientBridgeSession.result.passed ? "FORM PASS · hidden config, missing secret, offline, redacted." : `901 TEACHER // ${clientBridgeRemediation(clientBridgeSession.result, clientBridgeSession.hintLevel)}`}` : "Static validation only; no code or network is executed."}</div>{clientBridgeSession.result && <ul id="bridge-check-list" className="structured-checks" aria-label="Client Bridge checks">{clientBridgeChecks.map((check) => <li key={check} data-check-passed={clientBridgeSession.result.checks[check]}>{clientBridgeSession.result.checks[check] ? "PASS" : "REVIEW"} · {check.replaceAll("_", " ")}</li>)}</ul>}{clientBridgeSession.result && !clientBridgeSession.result.passed && <button className="hint-action" type="button" disabled={clientBridgeSession.hintLevel >= 3} onClick={revealClientBridgeHint}>Reveal next safe layer</button>}{clientBridgeSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceClientBridge}>{clientBridgeSession.form === "transfer" ? "Begin retrieval" : "View primary result"}</button>}</section></div></form>
+              )}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2070,7 +2121,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && structuredPacketEvidence?.masteryStatus === "mastered" && controlFlowEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openControlFlow(); }}>{controlFlowSession ? "Resume Control Flow" : controlFlowEvidence?.masteryStatus === "primary_complete" ? "Start Control Flow Transfer" : controlFlowEvidence?.masteryStatus === "transfer_complete" ? "Open Control Flow Closed-Note Gate" : "Start Control Flow"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || controlFlowEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && controlFlowEvidence?.masteryStatus === "mastered" && clientBridgeEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openClientBridge(); }}>{clientBridgeSession ? "Resume Client Bridge" : clientBridgeEvidence?.masteryStatus === "primary_complete" ? "Start Client Bridge Transfer" : clientBridgeEvidence?.masteryStatus === "transfer_complete" ? "Open Client Bridge Retrieval" : clientBridgeEvidence?.masteryStatus === "retrieval_complete" ? "Open Client Bridge Closed-Note Gate" : "Start Client Bridge"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || clientBridgeEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

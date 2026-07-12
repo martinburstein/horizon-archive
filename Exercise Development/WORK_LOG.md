@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-03-03 Offline Client Bridge complete Terminal gate
+
+- **Outcome:** Added `EX-L0303-CLIENT-BRIDGE` as the mandatory Terminal after Control Flow. Mastery requires packaged primary 10/10, fresh transfer 10/10, retrieval 4/4, and a five-layer closed-note module → file → secret → request → response explanation. Progression remains blocked until completion; no L-04-01 gameplay was implemented.
+- **Safety/learning contract:** The gate distinguishes modules, installed packages, active environments, file paths versus contents, JSON parsing, injected environment secrets, missing-secret rejection, request components, and later response components. Its evaluator is static and offline: it rejects networking imports/calls, hardcoded config paths, missing validation, unsafe authorization output, and bypasses while requiring hidden-config reuse and safe-summary redaction. It never executes source or contacts `example.invalid`.
+- **Files changed:** App and Terminal styling, new `clientBridgeExercise.js` and tests, question manifest, full E2E journey, this log, and three path-resolved QA captures.
+- **Ownership/accessibility:** Pilot owns session-only source and explanation, System owns neutral check scores, and the 901 Teacher owns remediation/readiness. Source failure is associated with status and named checks; five explanation fields have independent invalid states and feedback. Shared modal focus, close/reopen, Escape, reload, canonical 640×480, authored 320×240, reduced motion, and post-mastery focus remain covered.
+- **Privacy:** Persistence contains only allowlisted identifiers, primary/transfer/retrieval/explanation booleans, attempts, maximum hint level, confidence, tags, form, and mastery state. Learner code, config bodies, secret names/values, authorization headers, runtime output, retrieval selections, and free-form explanations never enter storage.
+- **Validation:** Curriculum self-test passes; primary and transfer references pass 10/10; retrieval reference passes 4/4. All 63 unit tests and production build pass. Full browser coverage passes both forms, retrieval remediation, five-layer explanation, close/reopen, reload, privacy, focus, canonical/narrow captures, pairwise-distinct capture assertions, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge networking imports, hardcoded config, missing-secret paths, authorization printing, forged evidence, reloads at every phase, keyboard-only operation, and canonical/narrow presentation before L-04-01 work.
+- **Unresolved risks:** The browser validator intentionally recognizes the packaged beginner-safe syntax instead of executing Python. All future live package, identity, endpoint, role, schema, and runtime details remain volatile and require current official verification.
+
 ## 2026-07-12 — EX-L0302 Control Flow ownership and focus closure
 
 - **Outcome:** Closed the Control Flow ownership and continuity handoff without starting L-03-03 or L-04-01 gameplay. `SYSTEM` result regions now contain only deterministic 8-check or 3-dimension scores and pass/not-complete state. Python, boundary, and execution-path guidance renders in separate explicitly labeled `901 TEACHER` remediation regions.

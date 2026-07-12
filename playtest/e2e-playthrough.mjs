@@ -17,6 +17,8 @@ const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curricu
 const referenceStructuredTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_transfer.py"), "utf8");
 const referenceControlPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_primary.py"), "utf8");
 const referenceControlTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_transfer.py"), "utf8");
+const referenceClientPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-03/reference_primary.py"), "utf8");
+const referenceClientTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-03/reference_transfer.py"), "utf8");
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -723,12 +725,77 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
   await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
-  const controlContinue = page.getByRole("button", { name: "Continue", exact: true });
+  const controlContinue = page.getByRole("button", { name: "Start Client Bridge", exact: true });
   await controlContinue.waitFor();
-  if (!await controlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Control-flow mastery did not move focus to Continue");
+  if (!await controlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Control-flow mastery did not move focus to Client Bridge");
   const controlMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).controlFlowEvidence, { key: saveKey });
   if (controlMastery?.masteryStatus !== "mastered" || controlMastery?.attemptCount !== 6) throw new Error(`Control-flow mastery incomplete: ${JSON.stringify(controlMastery)}`);
   if (["learnerSource", "source", "inputRecords", "runtimeOutput", "freeFormExplanation"].some((key) => key in controlMastery)) throw new Error("Control-flow mastery retained private content");
+  await page.getByRole("button", { name: "Start Client Bridge", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"]').waitFor();
+  await page.getByText("OFFLINE SIMULATION ONLY", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
+  await page.getByText("REVIEW · file json flow", { exact: true }).waitFor();
+  const bridgeEditor = page.locator("#client-bridge-source");
+  if (await bridgeEditor.getAttribute("aria-invalid") !== "true" || await bridgeEditor.getAttribute("aria-describedby") !== "bridge-status bridge-check-list") throw new Error("Client Bridge remediation was not field-associated");
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("client-bridge-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next safe layer", exact: true }).click();
+  await bridgeEditor.fill(referenceClientPrimary);
+  await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
+  await page.getByRole("status").getByText("10/10", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "View primary result", exact: true }).click();
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.getByRole("button", { name: "Start Client Bridge Transfer", exact: true }).click();
+  await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
+  await page.getByText("REVIEW · hidden config reuse", { exact: true }).waitFor();
+  await page.setViewportSize({ width: 320, height: 240 });
+  await page.screenshot({ path: qaPath("client-bridge-transfer-remediation-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.locator("#client-bridge-source").fill(`${referenceClientTransfer}\n# BRIDGE_SESSION_ONLY`);
+  await page.getByRole("button", { name: "Exit Client Bridge", exact: true }).click();
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Client Bridge", exact: true }).click();
+  if (!(await page.locator("#client-bridge-source").inputValue()).includes("BRIDGE_SESSION_ONLY")) throw new Error("Client Bridge transfer reset after close/reopen");
+  const bridgeDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (bridgeDraft.includes("BRIDGE_SESSION_ONLY") || bridgeDraft.includes("RIDGE_API_TOKEN") || bridgeDraft.includes("assemble_call")) throw new Error("Client Bridge source/config leaked into localStorage");
+  await page.locator("#client-bridge-source").fill(referenceClientTransfer);
+  await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
+  await page.getByRole("status").getByText("10/10", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Begin retrieval", exact: true }).click();
+  const bridgeFields = page.locator(".bridge-retrieval fieldset");
+  for (let index = 0; index < 4; index += 1) await bridgeFields.nth(index).locator('input[type="radio"]').nth(1).check();
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  for (let index = 0; index < 4; index += 1) await bridgeFields.nth(index).locator('input[type="radio"]').first().check();
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByRole("status").getByText("4/4", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
+  for (const dimension of ["module", "file", "secret", "request", "response"]) await page.getByLabel(`Closed-note bridge ${dimension}`, { exact: true }).fill("wrong");
+  await page.getByRole("button", { name: "Check bridge explanation", exact: true }).click();
+  await page.getByRole("status").getByText("0/5", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("client-bridge-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["client-bridge-primary-qa.png", "client-bridge-transfer-remediation-qa.png", "client-bridge-closed-note-qa.png"]);
+  for (const dimension of ["module", "file", "secret", "request", "response"]) { const field = page.getByLabel(`Closed-note bridge ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `bridge-explanation-${dimension}-feedback`) throw new Error(`Client Bridge ${dimension} remediation was not field-associated`); }
+  const bridgeExplanation = { module: "import module from active environment", file: "read file text then parse json config", secret: "lookup named environment secret reject missing", request: "build offline method url headers body request", response: "response arrives later with status and body" };
+  for (const [dimension, value] of Object.entries(bridgeExplanation)) await page.getByLabel(`Closed-note bridge ${dimension}`, { exact: true }).fill(value);
+  await page.getByRole("button", { name: "Exit Client Bridge", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Client Bridge", exact: true }).click();
+  if (await page.getByLabel("Closed-note bridge secret", { exact: true }).inputValue() !== bridgeExplanation.secret) throw new Error("Client Bridge explanation reset after close/reopen");
+  const bridgeExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (bridgeExplanationDraft.includes("lookup named environment secret") || bridgeExplanationDraft.includes("response arrives later")) throw new Error("Client Bridge explanation leaked into localStorage");
+  await page.getByRole("button", { name: "Check bridge explanation", exact: true }).click();
+  await page.getByText("Complete offline bridge confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this bridge explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const clientMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).clientBridgeEvidence, { key: saveKey });
+  if (clientMastery?.masteryStatus !== "mastered" || clientMastery?.attemptCount !== 8) throw new Error(`Client Bridge mastery incomplete: ${JSON.stringify(clientMastery)}`);
+  if (["learnerSource", "source", "configBody", "secretName", "secretValue", "authorizationHeader", "runtimeOutput", "freeFormExplanation"].some((key) => key in clientMastery)) throw new Error("Client Bridge mastery retained private content");
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   const restoredControlContinue = page.getByRole("button", { name: "Continue", exact: true });
@@ -877,6 +944,11 @@ print("Operator:", learner)`);
     controlFlowTransfer: true,
     controlFlowClosedNote: true,
     controlFlowStrictMastery: true,
+    clientBridgePrimary: true,
+    clientBridgeTransfer: true,
+    clientBridgeRetrieval: true,
+    clientBridgeClosedNote: true,
+    clientBridgeStrictMastery: true,
     controlFlowOwnership: true,
     controlFlowContinueFocus: true,
     controlFlowReloadFocus: true,

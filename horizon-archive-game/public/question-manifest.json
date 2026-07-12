@@ -88,6 +88,16 @@
       "assessment_id": "AS-L0302-CODE",
       "skills": ["PY-010", "PY-011", "PY-012"],
       "success_contract": "Pass primary and unseen-transfer forms at 8/8 with boundary and unseen-input probes, then independently explain parameter, loop, condition, append, and return flow."
+    },
+    {
+      "id": "HA-PY-CLIENT-BRIDGE",
+      "scene": "ruins",
+      "exercise_id": "EX-L0303-CLIENT-BRIDGE",
+      "lesson_id": "L-03-03",
+      "activity_id": "A-L0303-3",
+      "assessment_id": "AS-L0303-READY",
+      "skills": ["PY-013", "PY-014", "PY-015", "PY-017", "PY-018"],
+      "success_contract": "Pass both offline forms at 10/10, retrieval at 4/4, and independently explain module, file, environment secret, request, and later response boundaries."
     }
   ]
 }

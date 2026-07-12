@@ -332,7 +332,7 @@ h1 {
 .data-path-trace { margin: 8px 0; padding-left: 20px; color: #c5ced7; font-size: 0.66rem; line-height: 1.45; }
 .structured-editor-stack { display: grid; grid-template-rows: auto minmax(130px, 1fr) auto; min-height: 0; padding: 8px; gap: 5px; }
 .structured-editor-stack > label { color: #93a0af; font-size: 0.6rem; }
-#structured-source, #control-flow-source { width: 100%; min-height: 0; resize: none; padding: 9px; color: #d9efcf; background: #090c11; border: 1px solid #39424d; font: 0.68rem/1.4 "Courier New", monospace; tab-size: 4; }
+#structured-source, #control-flow-source, #client-bridge-source { width: 100%; min-height: 0; resize: none; padding: 9px; color: #d9efcf; background: #090c11; border: 1px solid #39424d; font: 0.68rem/1.4 "Courier New", monospace; tab-size: 4; }
 .structured-packet-output { max-height: 185px; overflow: auto; }
 .structured-checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; margin: 6px 0; padding: 0; list-style: none; color: #aeb7c3; font-size: 0.55rem; }
 .structured-checks [data-check-passed="false"] { color: #e3bd83; }
@@ -527,6 +527,12 @@ h1 {
 .canonical-game-frame .model-choice-fields { margin: 10px 0; overflow: visible; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0301-STRUCTURED-PACKETS"] { overflow: hidden; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0302-CONTROL-FLOW"] { overflow: hidden; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"] { overflow: hidden; }
+.bridge-retrieval { overflow: auto; }
+.bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
+.bridge-retrieval label { display: block; margin: 4px 0; }
+.client-bridge-explanation { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.canonical-game-frame[data-canonical-layout="narrow"] .client-bridge-explanation { grid-template-columns: 1fr; }
 .canonical-game-frame .structured-packet-form,
 .canonical-game-frame .structured-packet-explanation { min-height: 0; overflow: auto; }
 
