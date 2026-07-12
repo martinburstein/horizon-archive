@@ -158,6 +158,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Confidence and domain averages never render as mastery; Teacher remediation names the current objective.
 - [ ] Objective Ledger captures remain byte-distinct across canonical, narrow, and host context; ledger and form remain traversable.
 - [ ] Direct/restored strict mastery moves focus to Continue with Pilot/System/Teacher separation intact.
+- [ ] Planner warning, eleven-field equivalent, 12-route queue, and form occupy four explicit ordered rows without overlap.
+- [ ] Twelve route records expose objective, failed dimension, lesson/source, and reassessment status.
+- [ ] Retrieval -> guided repair -> fresh transfer -> independent reassessment -> stop/escalate remains ordered.
+- [ ] Confidence, repeated answers, planner completion, and guarantees never render as mastery.
+- [ ] Planner captures remain byte-distinct across canonical, narrow, and host context; queue and form remain traversable.
+- [ ] Direct/restored strict mastery moves focus to Continue with Pilot/System/Teacher separation intact.
 - [ ] Visual Pattern offline/no-action warning and six-boundary equivalent remain persistent, ordered, and non-overlapping.
 - [ ] Analysis, multimodal prompting, generation, request validation, result/provenance, and authority boundaries remain distinct.
 - [ ] Operation status/result shapes remain honest; fabricated success or media receives Teacher remediation separate from System score.

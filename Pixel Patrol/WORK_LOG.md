@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Remediation Planner final visual gate
+
+- **Completed:** audited complete Remediation Planner primary, transfer, closed-note, and mastered flow. Corrected one essential layout defect: its four-child workspace inherited a two-row grid and hid the eleven-field route equivalent. Added explicit warning/equivalent/queue/form rows, contained queue scrolling, and canonical/narrow explanation columns. The six planning boundaries, 12 route records, stop/escalate, evidence reassessment, confidence-not-mastery, ownership, focus, Continue handoff, and square-pixel chrome are now coherent.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, this log, and regenerated Planner captures.
+- **Validation:** all 142 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Post-fix inspection confirms the route equivalent is visible and ordered at canonical and closed-note presentation; E2E confirms both 12/12 forms, 12 sanitized routes, stop/escalate, confidence/guarantee rejection, privacy, direct/reload Continue focus, and credits.
+- **Next recommended item:** Location Scout should render twelve route records as a compact switching ledger, with eleven ordered fields encoded as a left-to-right trace and stop/escalate as a visibly terminal branch.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 viewport by design. Separately, the build remains above the 500 kB advisory threshold; no capture or interaction defect was observed.
+
 ## 2026-07-12 — Offline Objective Ledger final visual gate
 
 - **Completed:** audited complete Objective Ledger primary, transfer, closed-note, and mastered flow. Corrected one essential layout defect: the four-child ledger workspace inherited a two-row grid and hid the domain equivalent. Added explicit warning/domain/ledger/form rows, contained ledger scrolling, and canonical/narrow explanation columns. The 15-objective status/evidence density, concept-versus-implementation split, objective remediation, confidence-not-mastery, Pilot/System/Teacher ownership, focus, Continue handoff, and square-pixel chrome are now coherent.

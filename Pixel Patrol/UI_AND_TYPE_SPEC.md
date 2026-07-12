@@ -222,3 +222,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Preserve reading order: Machine/file/status -> course-authored/not-exam/no-guarantee warning -> Domain 1 concept/capability versus Domain 2 implementation equivalent -> System 15-objective ledger -> Pilot evidence choice/prose -> neutral System validator -> objective-specific Teacher remediation.
 - Each objective displays READY, REMEDIATE, or NOT YET ASSESSED plus its own lesson evidence pointer or explicit absence. Domain averages and confidence never equal objective readiness or mastery.
 - The ledger is a contained scroller above the contained form; neither may cover the warning or domain equivalent. Continue receives focus after direct or restored strict mastery.
+
+## Offline Remediation Planner hierarchy
+
+- Preserve reading order: Machine/file/status -> course-authored/not-exam/no-guarantee warning -> eleven-field route equivalent -> System 12-route queue -> Pilot route/prose -> neutral System validator -> gap-specific Teacher reconstruction/escalation.
+- Route order is objective, failed dimension, evidence pointer, measured priority, prerequisite lesson, current official source, retrieval, guided practice, fresh transfer, independent reassessment, then stop/escalate.
+- Confidence, repeated answers, domain averages, planner completion, and guarantees never create mastery. The queue and form are contained scrollers and cannot cover persistent boundaries.

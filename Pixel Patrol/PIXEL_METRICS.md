@@ -148,3 +148,9 @@ At 1x capture:
 - Objective Ledger uses four explicit rows: course-authored/not-exam/no-guarantee warning, domain/status equivalent, contained 15-objective ledger, then contained scenario or closed-note form. All four remain ordered and independently traversable.
 - At 640 x 480 the domain equivalent and at least one ledger row remain visible with the validator region. At 320 x 240 the complete warning leads; domain, ledger, and form remain reachable by vertical traversal.
 - Closed note uses four domain/safeguard fields in one canonical row and one narrow column. Outer Machine/file/status chrome remains fixed.
+
+## Offline Remediation Planner viewport contract
+
+- Planner uses four explicit rows: course-authored/not-exam/no-guarantee warning, eleven-field route equivalent, contained 12-route queue, then contained scenario or closed-note form. All remain ordered and independently traversable.
+- At 640 x 480 the complete route equivalent, route count, and validator remain visible. At 320 x 240 the complete warning leads; route equivalent, queue, and form remain reachable vertically.
+- Closed note uses four route/safeguard fields in one canonical row and one narrow column. Outer Machine/file/status chrome remains fixed.

@@ -571,6 +571,10 @@ h1 {
 .objective-ledger-panel { min-height: 0; overflow: auto; }
 .objective-ledger-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .objective-ledger-explanation { grid-template-columns: 1fr; }
+.remediation-planner-workspace { grid-template-rows: auto auto minmax(72px, 0.65fr) minmax(0, 1.35fr); overflow: auto; }
+.remediation-route-queue { min-height: 0; overflow: auto; }
+.remediation-planner-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.canonical-game-frame[data-canonical-layout="narrow"] .remediation-planner-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }
 .bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
 .bridge-retrieval label { display: block; margin: 4px 0; }
