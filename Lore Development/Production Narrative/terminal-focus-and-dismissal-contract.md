@@ -246,6 +246,19 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal and exercise text never call a service, perform an external action, grant authority, or imply a Machine response.
 
+### Offline Mock Client Boundaries
+
+- Exact title and dismissal name: `Offline Mock Client Boundaries`; `Exit Client Boundaries`.
+- System-owned modes are `MOCK`, `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario cards use `n/6`.
+- Endpoint/credential/deployment/client/request-response teaching, simulation limits, remediation, and completion remain `901 TEACHER` copy.
+- Mock is `PILOT // LOCAL MOCK OWNER`; choices are `PILOT // CLIENT-BOUNDARY OWNER`; prose is `PILOT // CLOSED-NOTE BOUNDARY OWNER`.
+- The visible boundary states no Foundry, Azure, service, login, credential use, mutation, deletion, or external action.
+- Exit line: "Client Boundaries closed. Current [MOCK|PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen restores active choices and mock source. Reload restores sanitized eligibility with clean configuration and response fields.
+- Persistent evidence excludes configuration, source, endpoint, deployment, credential, request/response data, action requests, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal and mock text never call a service, perform an Azure/external action, grant authority, or imply a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -272,6 +285,7 @@ When acknowledgement changes progression:
 - Extraction Workloads mastery: prefer `Continue` after the System announces availability.
 - Portal Orientation mastery: prefer `Continue` after the System announces availability.
 - Prompt Layers mastery: prefer `Continue` after the System announces availability.
+- Client Boundaries mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

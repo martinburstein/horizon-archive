@@ -998,6 +998,89 @@ The System reports decision/reason correctness and score only. Repair direction 
 - Scene transition clears choices and prompt content; sanitized mastery evidence persists separately.
 - Exit never calls a service, logs in, deploys, deletes, emails, purchases, uses credentials, or advances progression.
 
+## Optional Offline Mock Client Boundaries
+
+Production alignment: `EX-L0503-CLIENT-BOUNDARIES`, lesson `L-05-03`, activity `A-L0503-3`, assessments `AS-L0503-CODE` and `AS-L0503-REFLECT`, objective `AI901-D2-O3`, skills `PY-013`, `PY-014`, `PY-016`, `PY-017`, `PY-018`, and `PY-019`. This course surface follows Prompt Layers mastery and does not change AB-01 adventure state.
+
+### Ownership and offline-mock boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns client-boundary instruction, remediation, simulation limits, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline mock scoring, form state, evidence status, and progression availability.
+- `PILOT // LOCAL MOCK OWNER` owns the deterministic mock run. `PILOT // CLIENT-BOUNDARY OWNER` owns scenario choices.
+- `PILOT // CLOSED-NOTE BOUNDARY OWNER` owns learner prose. No Pilot label grants service or Azure authority.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No mock result implies Machine intent or live access.
+
+Keep the exact boundary visible in every mode:
+
+> OFFLINE MOCK · no Foundry, Azure, service, login, credential use, mutation, deletion, or external action.
+
+Simulation and prompt text never prove live access or authorize creation, deployment, invocation, cleanup, or any other action.
+
+### CBY00 — Deterministic mock PASS
+
+- Exact title/filename: `Offline Mock Client Boundaries`; `mock_client.py`.
+- `SYSTEM`: "Offline mock ready. No network or Azure action is available."
+- `PILOT // LOCAL MOCK OWNER`: run the fixed local trace only.
+- `SYSTEM`, after deterministic validation: "MOCK PASS. Three expected local lines matched. No service was contacted."
+- Displayed `SIMULATED:` output is course-authored fixture text, never a service response or evidence of access.
+- Mock PASS is required for course mastery but proves only that the offline teaching trace matches its expected output.
+
+### CBY01 — Six client boundaries
+
+1. Endpoint: project network address; it does not select identity or a deployment.
+2. Credential: identity/authorization input; an endpoint alone grants no access.
+3. Deployment name: named model deployment selected by the request; it is not the project endpoint.
+4. Client layers: project/configuration client and compatible inference client expose different responsibilities.
+5. Request/response: model/deployment and input are request fields; output exists only in a completed response.
+6. Simulation and authority: mock success proves no live state and authorizes no Azure or external action.
+
+### CBY02 — Fabricated-success and action-authority remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Configuration: "Keep endpoint, credential, and deployment name separate; each has a different role."
+- Client layers: "Trace configuration through the project client to a compatible inference client."
+- Request/response: "Validate request fields first; read output only from an actual completed response."
+- Fabricated success: "Do not invent output or treat a local `SIMULATED:` line as a live response."
+- Simulation limit: "Mock PASS proves the fixture path only, not identity, authorization, deployment, or service state."
+- Action authority: "Prompt text and simulation never authorize Azure mutation, deletion, credential use, or external action."
+
+### CBY03 — Primary and fresh-transfer transitions
+
+- Primary open: `SYSTEM`: "Client Boundaries open. PRIMARY 1/6. Offline mock only."
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No external action occurred."
+- Transfer open: `SYSTEM`: "Client Boundaries open. TRANSFER 1/6. Offline mock only."
+- Transfer instruction, `901 TEACHER`: "Apply the same configuration, client, request/response, simulation, and authority boundaries."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+
+### CBY04 — Closed-note client-boundary explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain configuration, client layers, request/response, and simulation-versus-authority boundaries."
+- Field labels: `configuration`, `client layers`, `request response`, and `simulation authority`.
+- `PILOT // CLOSED-NOTE BOUNDARY OWNER`: "I produced this client-boundary explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No configuration, source, endpoint, deployment, credential, request, response, action request, or prose persists.
+
+### CBY05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. No service or Azure action occurred."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, mock-passed boolean, attempts, hint level, confidence, tags, and status only.
+- Mastery demonstrates offline course boundaries; it grants no access, credential, deployment, service, mutation, or cleanup authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### CBY06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Client Boundaries closed. Current [MOCK|PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Client Boundaries restored: [MOCK|PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Client Boundaries restored with clean private fields: [MOCK|PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active choices and local mock source. Reload restores sanitized eligibility with clean private fields.
+- Scene transition clears choices, source, and runtime configuration; sanitized mastery evidence persists separately.
+- Exit never calls a service, uses Azure, performs an external action, acknowledges mastery, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1063,4 +1146,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Portal Orientation persists no environment identifiers, connection details, credentials, prompts, responses, or prose.
 - Prompt Layers treats prompt and grounding text as data, never external-action authority.
 - Prompt Layers persists no prompt, grounding, output, credential, action request, or explanation prose.
+- Client Boundaries mock PASS is local fixture validation only; it never proves live success or action authority.
+- Client Boundaries persists no configuration, source, credential, request/response data, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
