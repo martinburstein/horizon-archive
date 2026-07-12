@@ -15,6 +15,8 @@ const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaPath = (path) => resolve(repositoryRoot, "playtest", path.replace(/^playtest[\\/]/, ""));
 const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_primary.py"), "utf8");
 const referenceStructuredTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_transfer.py"), "utf8");
+const referenceControlPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_primary.py"), "utf8");
+const referenceControlTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_transfer.py"), "utf8");
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -651,12 +653,77 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
   await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
-  const structuredContinue = page.getByRole("button", { name: "Continue", exact: true });
+  const structuredContinue = page.getByRole("button", { name: "Start Control Flow", exact: true });
   await structuredContinue.waitFor();
-  if (!await structuredContinue.evaluate((element) => element === document.activeElement)) throw new Error("Structured Packet mastery did not move focus to Continue");
+  if (!await structuredContinue.evaluate((element) => element === document.activeElement)) throw new Error("Structured Packet mastery did not move focus to the next mandatory gate");
   const structuredMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).structuredPacketEvidence, { key: saveKey });
   if (structuredMastery?.masteryStatus !== "mastered" || structuredMastery?.form !== "explanation" || structuredMastery?.attemptCount !== 6) throw new Error(`Structured Packet mastery incomplete: ${JSON.stringify(structuredMastery)}`);
   if (["learnerSource", "source", "rawJsonPacket", "runtimeOutput", "freeFormExplanation"].some((key) => key in structuredMastery)) throw new Error("Structured Packet mastery retained private content");
+
+  await page.getByRole("button", { name: "Start Control Flow", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0302-CONTROL-FLOW"]').waitFor();
+  await page.getByText("PILOT // FUNCTION OWNER", { exact: false }).waitFor();
+  await page.getByText("SYSTEM // STRICT 8-CHECK VALIDATOR", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Run function", exact: true }).click();
+  await page.getByText("REVIEW · uses for loop", { exact: true }).waitFor();
+  const controlEditor = page.locator("#control-flow-source");
+  if (await controlEditor.getAttribute("aria-invalid") !== "true" || await controlEditor.getAttribute("aria-describedby") !== "control-flow-status control-flow-check-list") throw new Error("Control-flow remediation was not field-associated");
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("control-flow-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next iteration step", exact: true }).click();
+  await controlEditor.fill(referenceControlPrimary);
+  await page.getByRole("button", { name: "Run function", exact: true }).click();
+  await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "View primary result", exact: true }).click();
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.getByRole("button", { name: "Start Control Flow Transfer", exact: true }).click();
+  await page.getByRole("button", { name: "Run function", exact: true }).click();
+  await page.getByText("REVIEW · boundary behavior", { exact: true }).waitFor();
+  await page.setViewportSize({ width: 320, height: 240 });
+  await page.screenshot({ path: qaPath("control-flow-transfer-remediation-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.locator("#control-flow-source").fill(`${referenceControlTransfer}\n# CONTROL_SESSION_ONLY`);
+  await page.getByRole("button", { name: "Exit Control Flow", exact: true }).click();
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Control Flow", exact: true }).click();
+  if (!(await page.locator("#control-flow-source").inputValue()).includes("CONTROL_SESSION_ONLY")) throw new Error("Control-flow transfer reset after close/reopen");
+  const controlDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (controlDraft.includes("CONTROL_SESSION_ONLY") || controlDraft.includes("def route_items")) throw new Error("Control-flow source leaked into localStorage");
+  await page.locator("#control-flow-source").fill(referenceControlTransfer);
+  await page.getByRole("button", { name: "Run function", exact: true }).click();
+  await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
+  await page.getByLabel("Closed-note Parameter input", { exact: true }).fill("wrong");
+  await page.getByLabel("Closed-note Loop and condition", { exact: true }).fill("wrong");
+  await page.getByLabel("Closed-note Return placement", { exact: true }).fill("wrong");
+  await page.getByRole("button", { name: "Check control flow", exact: true }).click();
+  await page.getByRole("status").getByText("0/3", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("control-flow-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["control-flow-primary-qa.png", "control-flow-transfer-remediation-qa.png", "control-flow-closed-note-qa.png"]);
+  for (const [dimension, label] of [["parameter", "Parameter input"], ["loop_condition", "Loop and condition"], ["return", "Return placement"]]) { const field = page.getByLabel(`Closed-note ${label}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `control-explanation-${dimension}-feedback`) throw new Error(`Control-flow ${dimension} remediation was not field-associated`); }
+  await page.getByLabel("Closed-note Parameter input", { exact: true }).fill("parameters receive caller inputs");
+  await page.getByLabel("Closed-note Loop and condition", { exact: true }).fill("loop each item condition selects one append branch");
+  await page.getByLabel("Closed-note Return placement", { exact: true }).fill("return completed accumulator after loop");
+  await page.getByRole("button", { name: "Exit Control Flow", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Control Flow", exact: true }).click();
+  if (await page.getByLabel("Closed-note Loop and condition", { exact: true }).inputValue() !== "loop each item condition selects one append branch") throw new Error("Control-flow explanation reset after close/reopen");
+  const controlExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (controlExplanationDraft.includes("loop each item") || controlExplanationDraft.includes("parameters receive")) throw new Error("Control-flow explanation leaked into localStorage");
+  await page.getByRole("button", { name: "Check control flow", exact: true }).click();
+  await page.getByText("Complete control-flow explanation confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this control-flow explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const controlContinue = page.getByRole("button", { name: "Continue", exact: true });
+  await controlContinue.waitFor();
+  if (!await controlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Control-flow mastery did not move focus to Continue");
+  const controlMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).controlFlowEvidence, { key: saveKey });
+  if (controlMastery?.masteryStatus !== "mastered" || controlMastery?.attemptCount !== 6) throw new Error(`Control-flow mastery incomplete: ${JSON.stringify(controlMastery)}`);
+  if (["learnerSource", "source", "inputRecords", "runtimeOutput", "freeFormExplanation"].some((key) => key in controlMastery)) throw new Error("Control-flow mastery retained private content");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -796,6 +863,10 @@ print("Operator:", learner)`);
     structuredPacketsTransfer: true,
     structuredPacketsClosedNote: true,
     structuredPacketsStrictMastery: true,
+    controlFlowPrimary: true,
+    controlFlowTransfer: true,
+    controlFlowClosedNote: true,
+    controlFlowStrictMastery: true,
     structuredPacketsOwnership: true,
     structuredPacketsContinueFocus: true,
     modelChoiceFourFamilies: true,

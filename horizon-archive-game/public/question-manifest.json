@@ -78,6 +78,16 @@
       "assessment_ids": ["AS-L0301-QC", "AS-L0301-STRUCT"],
       "skills": ["PY-008", "PY-009", "PY-016", "PY-020"],
       "success_contract": "Pass primary and fresh-transfer structure forms at 8/8 without hardcoded output, then independently explain the nested data path and JSON round trip."
+    },
+    {
+      "id": "HA-PY-CONTROL-FLOW",
+      "scene": "ruins",
+      "exercise_id": "EX-L0302-CONTROL-FLOW",
+      "lesson_id": "L-03-02",
+      "activity_id": "A-L0302-2",
+      "assessment_id": "AS-L0302-CODE",
+      "skills": ["PY-010", "PY-011", "PY-012"],
+      "success_contract": "Pass primary and unseen-transfer forms at 8/8 with boundary and unseen-input probes, then independently explain parameter, loop, condition, append, and return flow."
     }
   ]
 }

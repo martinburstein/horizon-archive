@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-03-02 Control Flow complete Terminal gate
+
+- **Outcome:** Added `EX-L0302-CONTROL-FLOW` as the mandatory next ruins Terminal after Structured Packets. Mastery requires packaged primary 8/8, unseen transfer 8/8, and a three-part closed-note parameter → loop/condition/append → return explanation; progression remains blocked until completion. No L-03-03 gameplay was started.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, new `horizon-archive-game/src/controlFlowExercise.js`, new `horizon-archive-game/test/controlFlowExercise.test.js`, question manifest, E2E journey, this log, and three path-resolved QA captures.
+- **Learning/validation contract:** Beginner guidance traces parameters, one iteration, the inclusive `>=` boundary, mutually exclusive branches, append inside the loop, and return after all items. The deterministic evaluator requires the real function signature, `for`, `if/else`, accumulator/return, boundary behavior, reusable unseen-input behavior without mutation, and derived output; hardcoded literal output and unsafe source patterns fail.
+- **Ownership/accessibility:** Pilot owns editable function source and closed-note explanation, System owns neutral scoring, and the 901 Teacher owns remediation/readiness. Source failure is associated with live status and named check results; each closed-note field has independent invalid state and associated feedback. Shared focus containment/restoration, close/reopen, Escape, unlimited attempts, reduced motion, canonical 640×480, and authored 320×240 behavior remain intact; mastery moves focus to the next mandatory gate or Continue.
+- **Session/privacy:** Close/reopen restores working transfer source and closed-note drafts in memory. Reload clears private working state and reopens the correct packaged phase from sanitized evidence. Persistence contains only allowlisted IDs, form check booleans, attempts, hint level, confidence, tags, and mastery state—never learner code, input records, runtime output, or explanation text.
+- **Validation:** Curriculum self-test and both reference forms pass 8/8, including boundary, unseen reuse, mutation, and anti-bypass probes. All 57 unit tests and production build pass. Full browser coverage passes primary, transfer, explanation, field remediation, close/reopen, reload, privacy, focus, distinct captures, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge off-by-one comparisons, return-inside-loop, input mutation, forged evidence, keyboard-only operation, phase reloads, and canonical/narrow presentation before L-03-03 begins.
+- **Unresolved risks:** The browser evaluator deliberately accepts a narrow beginner-safe syntax mirroring packaged references instead of executing arbitrary Python. Future Foundry SDK/runtime facts remain volatile and require official verification.
+
 ## 2026-07-12 — EX-L0301 ownership and mastery-focus closure
 
 - **Outcome:** Closed the four concrete Structured Packets handoff defects without starting L-03-02 or L-03-03 gameplay. Neutral `SYSTEM` regions now report only deterministic scores and pass/not-complete state; course-authored Python and explanation guidance appears in separately labeled `901 TEACHER` remediation regions.

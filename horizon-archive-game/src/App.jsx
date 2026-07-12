@@ -102,6 +102,17 @@ import {
   structuredPacketStarters,
   updateStructuredPacketEvidence,
 } from "./structuredPacketExercise.js";
+import {
+  controlFlowChecks,
+  controlFlowExercise,
+  controlFlowExplanationDimensions,
+  controlFlowRemediation,
+  controlFlowStarters,
+  evaluateControlFlowExplanation,
+  evaluateControlFlowSource,
+  sanitizeControlFlowEvidence,
+  updateControlFlowEvidence,
+} from "./controlFlowExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -280,6 +291,7 @@ function loadSave() {
       responsibleAIEvidence: sanitizeResponsibleAIEvidence(saved.responsibleAIEvidence),
       modelChoiceEvidence: sanitizeModelChoiceEvidence(saved.modelChoiceEvidence),
       structuredPacketEvidence: sanitizeStructuredPacketEvidence(saved.structuredPacketEvidence),
+      controlFlowEvidence: sanitizeControlFlowEvidence(saved.controlFlowEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -320,6 +332,8 @@ export function App() {
   const [modelChoiceEvidence, setModelChoiceEvidence] = useState(null);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
+  const [controlFlowSession, setControlFlowSession] = useState(null);
+  const [controlFlowEvidence, setControlFlowEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -379,9 +393,10 @@ export function App() {
         responsibleAIEvidence,
         modelChoiceEvidence,
         structuredPacketEvidence,
+        controlFlowEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -421,6 +436,8 @@ export function App() {
     setModelChoiceEvidence(null);
     setStructuredPacketSession(null);
     setStructuredPacketEvidence(null);
+    setControlFlowSession(null);
+    setControlFlowEvidence(null);
     setMode("playing");
   }
 
@@ -444,6 +461,8 @@ export function App() {
     setCalibrationMastery(saved.calibrationMastery);
     setCalibrationSession(null);
     setStructuredPacketSession(null);
+    setControlFlowEvidence(saved.controlFlowEvidence);
+    setControlFlowSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1043,6 +1062,29 @@ export function App() {
     setRuinsTerminalKind(null);
     setDialogue("Structured Packet mastery confirmed: both 8-of-8 forms and the closed-note data path are complete.", "teacher");
   }
+
+  function openControlFlow() {
+    setTerminalOpen(true); setRuinsTerminalKind("control-flow");
+    if (!controlFlowSession) {
+      const form = controlFlowEvidence?.masteryStatus === "primary_complete" ? "transfer" : controlFlowEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary";
+      setControlFlowSession({ form, phase: form === "explanation" ? "explanation" : "code", source: form === "explanation" ? "" : controlFlowStarters[form], result: null, hintLevel: 0, complete: false, explanationResponse: { parameter: "", loop_condition: "", return: "" }, explanationResult: null, ownershipConfirmed: false });
+    }
+  }
+  function exitControlFlow() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow practice closed safely. The active function remains session-only.", "system"); }
+  function runControlFlow(event) {
+    event.preventDefault(); const result = evaluateControlFlowSource(controlFlowSession.source, controlFlowSession.form); const hintLevel = result.passed ? controlFlowSession.hintLevel : Math.max(1, controlFlowSession.hintLevel);
+    setControlFlowSession({ ...controlFlowSession, result, hintLevel });
+    setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: controlFlowSession.form, correctness: result.checks, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: controlFlowSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" }));
+  }
+  function revealControlFlowHint() { const hintLevel = Math.min(3, controlFlowSession.hintLevel + 1); setControlFlowSession({ ...controlFlowSession, hintLevel }); setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { hintLevel })); }
+  function advanceControlFlow() {
+    if (!controlFlowSession.result?.passed) return;
+    if (controlFlowSession.form === "transfer") { setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setControlFlowSession({ ...controlFlowSession, form: "explanation", phase: "explanation", source: "", result: null, hintLevel: 0 }); }
+    else setControlFlowSession({ ...controlFlowSession, complete: true });
+  }
+  function acknowledgeControlFlowPrimary() { if (!controlFlowSession?.complete || !controlFlowEvidence?.confidence) return; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow primary form complete at 8 of 8. Unseen transfer and closed-note flow remain.", "teacher"); }
+  function checkControlFlowExplanation(event) { event.preventDefault(); const result = evaluateControlFlowExplanation(controlFlowSession.explanationResponse); setControlFlowSession({ ...controlFlowSession, explanationResult: result }); setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgeControlFlowMastery() { if (!controlFlowSession?.explanationResult?.passed || !controlFlowSession.ownershipConfirmed || !controlFlowEvidence?.confidence) return; focusContinueAfterStructuredRef.current = true; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow mastery confirmed: primary, unseen transfer, and closed-note flow are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -1842,6 +1884,27 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "control-flow" && controlFlowSession && (
+          <TerminalShell exerciseId={controlFlowExercise.exercise_id} title="Control Flow" filename={controlFlowSession.phase === "explanation" ? "closed_note.md" : `control_flow_${controlFlowSession.form}.py`} lessonId={controlFlowExercise.lesson_id} statusText={controlFlowSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${controlFlowSession.form.toUpperCase()} ${controlFlowSession.result?.score ?? 0}/8`} closeLabel="Exit Control Flow" restoreFocusTo={terminalTriggerRef.current} onClose={exitControlFlow}>
+            <section className="structured-packet-workspace control-flow-workspace">
+              <p className="model-choice-boundary">Course-authored Python practice — not a live Foundry schema or Microsoft exam question. Future SDK, endpoint, and runtime requirements must be reverified.</p>
+              {controlFlowSession.phase === "explanation" ? (
+                <form className="structured-packet-explanation" onSubmit={checkControlFlowExplanation}>
+                  <header><p className="pane-label">PILOT // CLOSED-NOTE EXPLANATION OWNER</p><h2>Explain parameter → loop → condition → return</h2><p>Recall how caller inputs become parameters, how each loop iteration selects one append branch including equality, and why return follows the loop. Your words stay session-only.</p></header>
+                  <div className="structured-explanation-fields">{controlFlowExplanationDimensions.map((dimension) => { const fieldResult = controlFlowSession.explanationResult?.correctness[dimension]; const id = `control-explanation-${dimension}-feedback`; const labels = { parameter: "Parameter input", loop_condition: "Loop and condition", return: "Return placement" }; return <label key={dimension}><span>{labels[dimension]}</span><input aria-label={`Closed-note ${labels[dimension]}`} aria-invalid={controlFlowSession.explanationResult ? !fieldResult : undefined} aria-describedby={controlFlowSession.explanationResult ? id : undefined} autoComplete="off" value={controlFlowSession.explanationResponse[dimension]} onChange={(event) => setControlFlowSession({ ...controlFlowSession, explanationResponse: { ...controlFlowSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{controlFlowSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild ${labels[dimension].toLowerCase()} from one iteration.`}</small>}</label>; })}</div>
+                  <section className="terminal-console structured-packet-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={controlFlowExplanationDimensions.some((key) => !controlFlowSession.explanationResponse[key])}>Check control flow</button></div><div className={controlFlowSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{controlFlowSession.explanationResult ? `${controlFlowSession.explanationResult.score}/3 · ${controlFlowSession.explanationResult.passed ? "Complete control-flow explanation confirmed." : "901 TEACHER // Trace parameters, one boundary iteration, append, then return."}` : "No source or answer choices are shown."}</div>{controlFlowSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={controlFlowSession.ownershipConfirmed} onChange={(event) => setControlFlowSession({ ...controlFlowSession, ownershipConfirmed: event.target.checked })} />I produced this control-flow explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="control-mastery-confidence" checked={controlFlowEvidence?.confidence === value} onChange={() => setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!controlFlowSession.ownershipConfirmed || !controlFlowEvidence?.confidence} onClick={acknowledgeControlFlowMastery}>Acknowledge strict mastery</button></>}</section>
+                </form>
+              ) : controlFlowSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>8 / 8 checks</h2><p>Function signature, loop, if/else, boundary, unseen reuse, no mutation, return, and derived output pass.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="control-primary-confidence" checked={controlFlowEvidence?.confidence === value} onChange={() => setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!controlFlowEvidence?.confidence} onClick={acknowledgeControlFlowPrimary}>Acknowledge primary form</button></section>
+              ) : (
+                <form className="structured-packet-form" onSubmit={runControlFlow}>
+                  <aside className="task-pane"><p className="pane-label">{controlFlowSession.form === "transfer" ? "UNSEEN TRANSFER" : "PRIMARY"} · PILOT // FUNCTION OWNER</p><h2>Trace one iteration</h2><ol className="data-path-trace"><li>Parameters receive caller inputs.</li><li>Loop visits every item.</li><li><code>&gt;=</code> includes the boundary.</li><li>Exactly one branch appends.</li><li>Return the new list after the loop.</li></ol><p>Do not mutate input or print a sample answer. The same function must pass unseen inputs.</p></aside>
+                  <div className="structured-editor-stack"><label htmlFor="control-flow-source">EDITABLE PYTHON · session-only</label><textarea id="control-flow-source" aria-label="Control Flow Python source" aria-invalid={controlFlowSession.result ? !controlFlowSession.result.passed : undefined} aria-describedby={controlFlowSession.result ? "control-flow-status control-flow-check-list" : undefined} value={controlFlowSession.source} onChange={(event) => setControlFlowSession({ ...controlFlowSession, source: event.target.value, result: null })} autoCapitalize="off" autoCorrect="off" spellCheck="false" /><section className="terminal-console structured-packet-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 8-CHECK VALIDATOR</strong><button className="run-action" type="submit">Run function</button></div><div id="control-flow-status" className={controlFlowSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{controlFlowSession.result ? `${controlFlowSession.result.score}/8 · ${controlFlowSession.result.passed ? "FORM PASS · unseen reuse and boundary confirmed." : `901 TEACHER // ${controlFlowRemediation(controlFlowSession.result, controlFlowSession.hintLevel)}`}` : "Awaiting a reusable function."}</div>{controlFlowSession.result && <ul id="control-flow-check-list" className="structured-checks" aria-label="Control Flow checks">{controlFlowChecks.map((check) => <li key={check} data-check-passed={controlFlowSession.result.checks[check]}>{controlFlowSession.result.checks[check] ? "PASS" : "REVIEW"} · {check.replaceAll("_", " ")}</li>)}</ul>}{controlFlowSession.result && !controlFlowSession.result.passed && <button className="hint-action" type="button" disabled={controlFlowSession.hintLevel >= 3} onClick={revealControlFlowHint}>Reveal next iteration step</button>}{controlFlowSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceControlFlow}>{controlFlowSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result"}</button>}</section></div>
+                </form>
+              )}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -1995,7 +2058,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && modelChoiceEvidence?.masteryStatus === "mastered" && structuredPacketEvidence?.masteryStatus !== "mastered" && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openStructuredPackets(); }}>{structuredPacketSession ? "Resume Structured Packets" : structuredPacketEvidence?.masteryStatus === "primary_complete" ? "Start Structured Transfer" : structuredPacketEvidence?.masteryStatus === "transfer_complete" ? "Open Structured Closed-Note Gate" : "Start Structured Packets"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || structuredPacketEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && structuredPacketEvidence?.masteryStatus === "mastered" && controlFlowEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openControlFlow(); }}>{controlFlowSession ? "Resume Control Flow" : controlFlowEvidence?.masteryStatus === "primary_complete" ? "Start Control Flow Transfer" : controlFlowEvidence?.masteryStatus === "transfer_complete" ? "Open Control Flow Closed-Note Gate" : "Start Control Flow"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || controlFlowEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>
