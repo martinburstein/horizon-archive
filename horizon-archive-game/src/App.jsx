@@ -223,6 +223,14 @@ function getHotspotStyle(hotspot) {
   };
 }
 
+function getDialogueSpeaker(dialogue) {
+  if (dialogue.startsWith("Responsible AI practice closed safely")) return "SYSTEM // EXPEDITION STATE";
+  if (dialogue.startsWith("Primary responsible AI practice complete") || dialogue.startsWith("Responsible AI readiness confirmed")) {
+    return "901 TEACHER // SOURCE-GROUNDED COURSE";
+  }
+  return "PILOT // FLIGHT RECORDER";
+}
+
 function formatChoice(value) {
   return value.replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
@@ -1640,7 +1648,7 @@ export function App() {
             <div className="dialogue-copy">
               <p>{dialogue}</p>
               <div className="dialogue-footer">
-                <span className="speaker">PILOT // FLIGHT RECORDER</span>
+                <span className="speaker">{getDialogueSpeaker(dialogue)}</span>
                 <div className="dialogue-actions">
                   {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
                     <button className="continue-action calibration-launch" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>

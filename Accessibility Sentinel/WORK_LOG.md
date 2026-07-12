@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-12 — Round 7 Responsible AI mastery and ownership gate
+
+- **Outcome:** audited active-verb semantics, the complete primary/transfer/closed-note flow, field errors, focus outlines, shared dialog focus, one-scroll-owner behavior, and three 1x grayscale frame modes. Corrected Responsible AI message ownership so System and 901 Teacher state/course messages are no longer labeled Pilot.
+- **Files:** `horizon-archive-game/src/App.jsx`, `playtest/e2e-playthrough.mjs`, `Accessibility Sentinel/round-07/REPORT.md`, and this log.
+- **Validation:** 39/39 unit tests, production build, and complete E2E passed with zero runtime errors. Native grayscale mode boundaries differ by 300 and 519 pixels.
+- **Findings:** in-app Browser unavailability still blocks accepted zoom, forced-colors, and screen-reader announcement-order verification. Transfer and closed-note lack dedicated retained visual-regression paths.
+- **Handoff:** preserve voice ownership and add separate transfer/explanation captures before the next visual gate.
+- **Status:** `ready to advance`
+
 ## 2026-07-12 — Round 6 unified frame and Responsible AI gate
 
 - **Outcome:** audited canonical/narrow/non-multiple scaling, the Responsible AI primary Terminal, shared dialog focus, one-scroll-owner layout, four field labels/remediation links, and the 64 x 64 physical progression. Added one bounded fix: incorrect Responsible AI selects now expose `aria-invalid="true"` alongside their existing unique remediation association.
