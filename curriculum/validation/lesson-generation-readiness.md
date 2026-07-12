@@ -29,6 +29,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-03-02` — complete two-form coding lab for functions, loops, conditionals, boundary behavior, unseen-input reuse, and anti-bypass validation
 - `curriculum/lessons/L-03-03` — complete offline client bridge for imports, package/environment reasoning, files, secrets, HTTP-shaped requests, hidden-config transfer, and redaction validation
 - `curriculum/lessons/L-04-01` — complete source-grounded text-analysis scenario package covering four required techniques plus document-ID and per-document error flow
+- `curriculum/lessons/L-04-02` — complete source-grounded speech scenario package covering recognition, synthesis, multimodal spoken prompts, audio-file direction, and cancellation handling
 
 ## Ready now
 

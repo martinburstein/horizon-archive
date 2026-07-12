@@ -1,0 +1,15 @@
+{"workloads":["speech_recognition","speech_synthesis","multimodal_spoken_prompt"],"forms":{"primary":[
+{"id":"P01","topic":"speech_recognition","prompt":"Create live text captions from a speaker's microphone.","decision":"speech_recognition","reason":"input_is_spoken_audio_and_output_is_text"},
+{"id":"P02","topic":"speech_synthesis","prompt":"Read a written accessibility notice aloud as generated audio.","decision":"speech_synthesis","reason":"input_is_text_and_output_is_spoken_audio"},
+{"id":"P03","topic":"multimodal_spoken_prompt","prompt":"A deployed multimodal model receives a spoken question and generates an AI response.","decision":"multimodal_spoken_prompt","reason":"audio_is_prompt_input_to_a_general_model_interaction"},
+{"id":"P04","topic":"client_flow","prompt":"Transcribe a prerecorded WAV file in a lightweight Speech app.","decision":"configure_audio_file_as_input","reason":"recognition_reads_audio_from_the_supplied_file_path"},
+{"id":"P05","topic":"client_flow","prompt":"Save synthesized speech for later playback.","decision":"configure_audio_file_as_output","reason":"synthesis_writes_generated_audio_without_overwriting_the_text_input"},
+{"id":"P06","topic":"client_flow","prompt":"A Speech operation returns cancellation instead of recognized/synthesized content.","decision":"branch_on_result_reason_and_handle_cancellation","reason":"not_every_operation_produces_successful_content"}
+],"transfer":[
+{"id":"T01","topic":"speech_recognition","prompt":"Convert a recorded interview into a text transcript.","decision":"speech_recognition","reason":"audio_is_converted_to_written_text"},
+{"id":"T02","topic":"speech_synthesis","prompt":"Generate spoken navigation instructions from written directions.","decision":"speech_synthesis","reason":"written_text_is_converted_to_audio"},
+{"id":"T03","topic":"multimodal_spoken_prompt","prompt":"Ask a deployed multimodal model a spoken question about an attached image.","decision":"multimodal_spoken_prompt","reason":"the_model_combines_audio_prompt_and_other_modal_context"},
+{"id":"T04","topic":"client_flow","prompt":"A recognizer should use a saved audio clip rather than the default microphone.","decision":"bind_recognizer_to_input_file","reason":"explicit_audio_input_prevents_using_the_wrong_source"},
+{"id":"T05","topic":"client_flow","prompt":"A synthesizer must create a playable file rather than use the default speaker.","decision":"bind_synthesizer_to_output_file","reason":"explicit_audio_output_persists_generated_speech"},
+{"id":"T06","topic":"client_flow","prompt":"The operation completes with a non-success result reason.","decision":"inspect_reason_and_cancellation_details","reason":"error_handling_must_not_treat_cancellation_as_content"}
+]}}

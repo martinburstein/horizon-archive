@@ -238,12 +238,13 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-AZURE-SPEECH"
           ],
           "activity_ids": ["A-L0402-1", "A-L0402-2"],
           "assessment_ids": ["AS-L0402-QC"],
-          "mastery_gate": "can distinguish speech recognition, synthesis, and speech-capable agent scenarios"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across recognition, synthesis, multimodal spoken prompts, audio-file direction, and cancellation handling, then explain one choice without notes"
         },
         {
           "lesson_id": "L-04-03",

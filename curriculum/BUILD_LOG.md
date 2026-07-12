@@ -376,3 +376,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0401-TEXT-ANALYSIS`.
 Notes: Scenarios and gates are course-authored; no live service call occurs. SDK packages, operation names, endpoints, authentication, supported languages, limits, regions, pricing, and preview status remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T09:50:55-04:00
+
+Stage: Sequential AI-901 workload expansion
+Action: Built exactly one next mapped lesson, `L-04-02`, with source-grounded speech instruction, guided direction contrasts, primary and transfer scenarios, audio-file input/output handling, cancellation safeguards, remediation, and strict deterministic readiness.
+Files touched:
+- curriculum/lessons/L-04-02/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Azure Speech capability alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, and local link: pass
+- each form covers recognition, synthesis, multimodal spoken prompts, and three client-flow items: pass
+- validator self-test and recognition/synthesis plus cancellation failure probes: pass
+- primary reference 12/12; transfer reference 12/12; blank form correctly rejected at 0/12
+- existing `L-04-01` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0402-SPEECH-WORKLOADS`.
+Notes: No audio capture/playback or live service call occurs. SDKs, API shapes, endpoints, authentication, languages, voices, formats, regions, quotas, pricing, and preview status remain volatile. No gameplay or narrative files changed.
