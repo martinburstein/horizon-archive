@@ -1274,6 +1274,11 @@ print("Operator:", learner)`);
     textSpeechPatternsClosedNote: true,
     textSpeechPatternsStrictMastery: true,
     textSpeechPatternsTranscriptEquivalent: true,
+    textSpeechPatternsResultCancellationHonesty: true,
+    textSpeechPatternsDisclosureAuthorityHonesty: true,
+    textSpeechPatternsOwnershipSeparation: true,
+    textSpeechPatternsContinueFocus: true,
+    textSpeechPatternsReloadFocus: true,
     promptLayersWarningAndSixLayerEquivalentAllModes: true,
     promptLayersOwnershipSeparation: true,
     promptLayersContinueFocus: true,
@@ -1316,7 +1321,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS", "HA-AI901-PORTAL-ORIENTATION", "HA-AI901-PROMPT-LAYERS", "HA-AI901-CLIENT-BOUNDARIES", "HA-AI901-SINGLE-AGENT"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS", "HA-AI901-PORTAL-ORIENTATION", "HA-AI901-PROMPT-LAYERS", "HA-AI901-CLIENT-BOUNDARIES", "HA-AI901-SINGLE-AGENT", "HA-AI901-TEXT-SPEECH-PATTERNS"],
     credits: true,
   }));
 } finally {
@@ -1489,8 +1494,11 @@ async function assertTextSpeechPatternContinuity(page, phase) {
   if (await dialog.getAttribute("aria-describedby") !== "text-speech-offline-warning text-speech-transcript-equivalent") throw new Error(`Text/Speech ${phase} warning/equivalent association missing`);
   await page.locator("#text-speech-offline-warning").getByText("no service, Azure, text processing, audio/media access", { exact: false }).waitFor();
   await page.locator("#text-speech-offline-warning").getByText("never authorize action", { exact: false }).waitFor();
+  await page.locator("#text-speech-transcript-equivalent").getByText("Six-boundary transcript equivalent", { exact: false }).waitFor();
   await page.locator("#text-speech-transcript-equivalent").getByText("audio → recognition → text", { exact: false }).waitFor();
   await page.locator("#text-speech-transcript-equivalent").getByText("text → synthesis → audio", { exact: false }).waitFor();
+  await page.locator("#text-speech-transcript-equivalent").getByText("per-item error, and cancellation without fabricating content", { exact: false }).waitFor();
+  await page.locator("#text-speech-transcript-equivalent").getByText("no live readiness, disclosure authority, or action authority", { exact: false }).waitFor();
 }
 
 function routePrimaryReference() {

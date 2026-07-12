@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Text/Speech Patterns continuity closure
+
+- **Outcome:** Closed only the L-05-05 continuity contract. The runtime already had neutral System scoring, separate 901 Teacher remediation/completion, Pilot-owned session-only closed-note prose, strict forms, sanitizer/privacy, and dedicated direct/reload focus. Added focused proof for closed-note System/Teacher separation and tightened the persistent boundary language.
+- **Persistent safety/text:** Primary, transfer, and closed-note retain the fully offline/no-service/no-Azure/no-text-processing/no-audio-media/no-upload/no-disclosure/no-external-action warning plus a now-explicit six-boundary transcript equivalent.
+- **Honesty:** The persistent equivalent now requires honest success, per-item error, and cancellation branching without fabricated content, and states that local simulation grants neither live readiness, disclosure authority, nor action authority. Existing strict scenarios reject cancellation-as-content and unauthorized disclosure/action.
+- **Preserved contracts:** Primary 12/12, fresh transfer 12/12, four-part closed note, sanitizer/privacy, close/reopen, canonical/narrow presentation, field associations, three distinct captures, and direct/sanitized-reload Continue focus remain intact. No L-05-06/L-06-01 gameplay was added.
+- **Files changed:** `textSpeechPatternExercise.js`, its focused tests, `App.jsx`, full E2E, refreshed Text/Speech captures, and this log.
+- **Validation:** L-05-05 self-test passes; primary and transfer references each pass 12/12; 122/122 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors; diff check passes.
+- **Next recommended item:** Player Agent should independently challenge recognition/synthesis reversals, cancellation-as-content, per-item errors, unauthorized disclosure/action, keyboard order, transcript announcement, and narrow reading order.
+- **Unresolved risks:** This is an offline rehearsal with no service call, text processing, audio access, recognition, synthesis, upload, disclosure, or external action.
+
 ## 2026-07-12 — L-05-05 Offline Text and Speech Patterns mandatory Terminal gate
 
 - **Outcome:** Mounted `EX-L0505-TEXT-SPEECH-PATTERNS` after Single Agent as a mandatory gate. Primary and fresh transfer each require 12/12, followed by a four-part closed-note explanation. No L-05-06 work was added.
