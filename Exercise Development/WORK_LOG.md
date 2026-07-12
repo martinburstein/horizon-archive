@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-05-04 Offline Single Agent mandatory Terminal gate
+
+- **Outcome:** Mounted `EX-L0504-SINGLE-AGENT` after Client Boundaries as a mandatory gate. Learners must pass the packaged primary and fresh transfer forms at 12/12, then complete a four-part closed-note explanation before the ruins can advance. No L-05-05 work was added.
+- **Learning/safety:** Covers choosing a plain model flow versus one agent, stable instructions, least-privilege tools, representative/edge/injection/failure/denied-action tests, non-fabricated tool failure, and agent-identifier submit/read/error client flow. Every phase states that the rehearsal is offline and grants no agent, tool, service, Azure, credential, or external-action authority.
+- **Privacy/ownership:** Persistent evidence is allowlisted to IDs, correctness booleans, attempts, hints, confidence, tags, form, and mastery. Instructions, prompts, tool payloads/results, agent IDs, endpoints, credentials, conversation text, action requests, learner choices, and free text remain session-only. Pilot owns choices and closed-note prose, System owns deterministic scoring, and the 901 Teacher owns remediation/readiness.
+- **Files changed:** Added the Single Agent runtime evaluator and focused tests; updated `App.jsx`, `styles.css`, the public question manifest, full E2E, three L-05-04 QA captures, and this work log.
+- **Validation:** L-05-04 self-test passes; packaged primary and transfer references each pass 12/12. All 112 unit tests and the production build pass. Full title-to-credits E2E passes from both repository-root and game-directory working directories with zero runtime errors, strict remediation, close/reopen, reload, privacy, focus handoff, canonical/narrow captures, and pairwise-distinct capture checks.
+- **Next recommended item:** Player Agent should independently challenge agent-overuse, retrieved-text instruction replacement, overbroad tools, happy-path-only testing, fabricated tool success, prompt-as-permission, agent-ID/deployment confusion, keyboard order, and narrow readability.
+- **Unresolved risks:** This is deliberately an offline design rehearsal and proves no current live API, Portal label, service capability, permission, or Azure behavior. Any live implementation requires current official Microsoft reverification and separate explicit authority.
+
 ## 2026-07-12 — Client Boundaries continuity and mock evidence closure
 
 - **Mock evidence finding/fix:** `mockPassed` was defined, so the suspected issue was not an undefined runtime symbol. The real weakness was that App evidence imported a static `true` rather than deriving PASS from the current deterministic mock result. Added an exact three-check mock evaluator; runtime evidence now stores `mockResult.passed`. Regressions prove malformed/stale mock output returns false, explicit undefined cannot preserve stale PASS, App references the current result boolean, and working mock results never persist.

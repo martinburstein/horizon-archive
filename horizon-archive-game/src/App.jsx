@@ -206,6 +206,7 @@ import {
 } from "./portalOrientationExercise.js";
 import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 import { clientBoundaryDialogDescribedBy,clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryMockOutput,clientBoundaryPrimary,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryMock,evaluateClientBoundaryScenario,getClientBoundaryExplanationFeedback,getClientBoundaryFeedback,getClientBoundaryOptions,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
+import { evaluateSingleAgentExplanation,evaluateSingleAgentScenario,getSingleAgentOptions,sanitizeSingleAgentEvidence,singleAgentDimensions,singleAgentExercise,singleAgentExplanationDimensions,singleAgentPrimary,singleAgentRemediation,singleAgentTransfer,updateSingleAgentEvidence } from "./singleAgentExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -393,6 +394,7 @@ function loadSave() {
       portalEvidence: sanitizePortalEvidence(saved.portalEvidence),
       promptEvidence: sanitizePromptEvidence(saved.promptEvidence),
       clientBoundaryEvidence: sanitizeClientBoundaryEvidence(saved.clientBoundaryEvidence),
+      singleAgentEvidence: sanitizeSingleAgentEvidence(saved.singleAgentEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -449,6 +451,7 @@ export function App() {
   const [portalEvidence, setPortalEvidence] = useState(null);
   const [promptSession,setPromptSession]=useState(null); const [promptEvidence,setPromptEvidence]=useState(null);
   const [clientBoundarySession,setClientBoundarySession]=useState(null);const [clientBoundaryEvidence,setClientBoundaryEvidence]=useState(null);
+  const [singleAgentSession,setSingleAgentSession]=useState(null);const [singleAgentEvidence,setSingleAgentEvidence]=useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -461,6 +464,7 @@ export function App() {
   const focusContinueAfterPortalRef = useRef(false);
   const focusContinueAfterPromptRef = useRef(false);
   const focusContinueAfterClientBoundaryRef = useRef(false);
+  const focusContinueAfterSingleAgentRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -526,9 +530,10 @@ export function App() {
         portalEvidence,
         promptEvidence,
         clientBoundaryEvidence,
+        singleAgentEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence,singleAgentEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -590,6 +595,12 @@ export function App() {
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, clientBoundaryEvidence?.masteryStatus]);
 
+  useLayoutEffect(() => {
+    if (!focusContinueAfterSingleAgentRef.current || terminalOpen || !pendingAdvance || singleAgentEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterSingleAgentRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, singleAgentEvidence?.masteryStatus]);
+
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
     setSceneIndex(0);
@@ -638,6 +649,7 @@ export function App() {
     setPortalEvidence(null);
     setPromptSession(null);setPromptEvidence(null);
     setClientBoundarySession(null);setClientBoundaryEvidence(null);
+    setSingleAgentSession(null);setSingleAgentEvidence(null);
     setMode("playing");
   }
 
@@ -684,6 +696,7 @@ export function App() {
     setPortalSession(null);
     if(saved.promptEvidence?.masteryStatus==="mastered")focusContinueAfterPromptRef.current=true;setPromptEvidence(saved.promptEvidence);setPromptSession(null);
     if(saved.clientBoundaryEvidence?.masteryStatus==="mastered")focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(saved.clientBoundaryEvidence);setClientBoundarySession(null);
+    if(saved.singleAgentEvidence?.masteryStatus==="mastered")focusContinueAfterSingleAgentRef.current=true;setSingleAgentEvidence(saved.singleAgentEvidence);setSingleAgentSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1383,6 +1396,15 @@ export function App() {
   function acknowledgeClientBoundaryPrimary(){if(!clientBoundarySession?.complete||!clientBoundaryEvidence?.confidence)return;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkClientBoundaryExplanation(event){event.preventDefault();const result=evaluateClientBoundaryExplanation(clientBoundarySession.explanationResponse);setClientBoundarySession({...clientBoundarySession,explanationResult:result});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
   function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
+
+  function openSingleAgent(){setTerminalOpen(true);setRuinsTerminalKind("single-agent");if(!singleAgentSession){const form=singleAgentEvidence?.masteryStatus==="primary_complete"?"transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setSingleAgentSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{fit_instructions:"",least_privilege:"",failure_safety:"",client_flow:""},explanationResult:null,ownershipConfirmed:false});}}
+  function exitSingleAgent(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent rehearsal closed safely. No agent, tool, service, Azure resource, or external action was created or invoked.","system");}
+  function checkSingleAgent(event){event.preventDefault();const scenarios=singleAgentSession.form==="transfer"?singleAgentTransfer:singleAgentPrimary,scenario=scenarios[singleAgentSession.index],result=evaluateSingleAgentScenario(scenario.id,singleAgentSession.response,singleAgentSession.form),hintLevel=result.passed?singleAgentSession.hintLevel:Math.max(1,singleAgentSession.hintLevel);setSingleAgentSession({...singleAgentSession,result,hintLevel});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:singleAgentSession.form,scenarioId:scenario.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:singleAgentSession.form==="transfer"?"primary_complete":result.passed?"in_progress":"remediation_required"}));}
+  function revealSingleAgentHint(){const hintLevel=Math.min(3,singleAgentSession.hintLevel+1);setSingleAgentSession({...singleAgentSession,hintLevel});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{hintLevel}));}
+  function advanceSingleAgent(){if(!singleAgentSession.result?.passed)return;const scenarios=singleAgentSession.form==="transfer"?singleAgentTransfer:singleAgentPrimary;if(singleAgentSession.index===scenarios.length-1){if(singleAgentSession.form==="transfer"){setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setSingleAgentSession({...singleAgentSession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setSingleAgentSession({...singleAgentSession,complete:true});return;}setSingleAgentSession({...singleAgentSession,index:singleAgentSession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
+  function acknowledgeSingleAgentPrimary(){if(!singleAgentSession?.complete||!singleAgentEvidence?.confidence)return;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
+  function checkSingleAgentExplanation(event){event.preventDefault();const result=evaluateSingleAgentExplanation(singleAgentSession.explanationResponse);setSingleAgentSession({...singleAgentSession,explanationResult:result});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
+  function acknowledgeSingleAgentMastery(){if(!singleAgentSession?.explanationResult?.passed||!singleAgentSession.ownershipConfirmed||!singleAgentEvidence?.confidence)return;focusContinueAfterSingleAgentRef.current=true;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent mastery confirmed: both 12-of-12 forms and the closed-note fit, privilege, failure-safety, and client-flow explanation are complete.","teacher");}
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2880,6 +2902,41 @@ export function App() {
                 </section>
               </TerminalShell>
             )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "single-agent" && singleAgentSession && (
+          <TerminalShell
+            exerciseId={singleAgentExercise.exercise_id}
+            title="Offline Single Agent Design"
+            filename={singleAgentSession.phase === "explanation" ? "closed_note.md" : `${singleAgentSession.form}_single_agent.json`}
+            lessonId={singleAgentExercise.lesson_id}
+            statusText={singleAgentSession.phase.toUpperCase()}
+            closeLabel="Exit Single Agent"
+            describedBy="single-agent-offline-warning"
+            restoreFocusTo={terminalTriggerRef.current}
+            onClose={exitSingleAgent}
+          >
+            <section className="model-choice-workspace single-agent-workspace">
+              <p id="single-agent-offline-warning" className="model-choice-boundary" role="note">
+                OFFLINE SINGLE-AGENT REHEARSAL · no agent, tool, service, Azure, or external action. Instructions, retrieved text, tool capability, and prompt text never authorize action. No prompt, tool payload, result, identifier, endpoint, credential, conversation text, action request, choice, response, or free text is persisted.
+              </p>
+              {singleAgentSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkSingleAgentExplanation}>
+                  <header><p className="pane-label">PILOT // CLOSED-NOTE DESIGN OWNER</p><h2>Explain agent fit, instructions, least privilege, failure safety, and client flow</h2><p>Your explanation is session-only. SYSTEM scores it; the 901 TEACHER owns remediation and readiness.</p></header>
+                  <div className="model-choice-fields single-agent-explanation">
+                    {singleAgentExplanationDimensions.map((dimension) => { const correct=singleAgentSession.explanationResult?.correctness[dimension],id=`single-agent-explanation-${dimension}-feedback`;return <label key={dimension}><span>{dimension.replaceAll("_"," ")}</span><input aria-label={`Closed-note single agent ${dimension}`} aria-invalid={singleAgentSession.explanationResult?!correct:undefined} aria-describedby={singleAgentSession.explanationResult?id:undefined} value={singleAgentSession.explanationResponse[dimension]} onChange={(event)=>setSingleAgentSession({...singleAgentSession,explanationResponse:{...singleAgentSession.explanationResponse,[dimension]:event.target.value},explanationResult:null,ownershipConfirmed:false})}/>{singleAgentSession.explanationResult&&<small id={id}>{correct?"SYSTEM // Confirmed.":"901 TEACHER // Rebuild this boundary precisely without granting action authority."}</small>}</label>;})}
+                  </div>
+                  <section className="terminal-console model-choice-output">
+                    <div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit">Check single-agent explanation</button></div>
+                    <div role="status" aria-live="polite">{singleAgentSession.explanationResult?`${singleAgentSession.explanationResult.score}/4 · ${singleAgentSession.explanationResult.passed?"PASS":"REMEDIATE"}`:"Ready for four independent boundaries."}</div>
+                    {singleAgentSession.explanationResult&&!singleAgentSession.explanationResult.passed&&<p className="teacher-remediation"><strong>901 TEACHER // SINGLE-AGENT REMEDIATION</strong><span>Separate agent fit and stable instructions from least-privilege tools, denied/failure paths, and the agent-identifier submit/read flow.</span></p>}
+                    {singleAgentSession.explanationResult?.passed&&<><label className="ownership-confirmation"><input type="checkbox" checked={singleAgentSession.ownershipConfirmed} onChange={(event)=>setSingleAgentSession({...singleAgentSession,ownershipConfirmed:event.target.checked})}/>I produced this single-agent explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(value=><label key={value}><input type="radio" name="single-agent-confidence" checked={singleAgentEvidence?.confidence===value} onChange={()=>setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{confidence:value}))}/>{value}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgeSingleAgentMastery}>Acknowledge strict mastery</button></>}
+                  </section>
+                </form>
+              ) : singleAgentSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>12 / 12 dimensions</h2><p>All six design boundaries pass. Fresh transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(value=><label key={value}><input type="radio" name="single-agent-primary-confidence" checked={singleAgentEvidence?.confidence===value} onChange={()=>setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{confidence:value}))}/>{value}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgeSingleAgentPrimary}>Acknowledge primary form</button></section>
+              ) : (()=>{const scenarios=singleAgentSession.form==="transfer"?singleAgentTransfer:singleAgentPrimary,scenario=scenarios[singleAgentSession.index],options=getSingleAgentOptions(scenario.id,singleAgentSession.form);return <form className="model-choice-form" onSubmit={checkSingleAgent}><header><p className="pane-label">{singleAgentSession.form.toUpperCase()} · PILOT // DESIGN OWNER · {scenario.id}</p><h2>{scenario.prompt}</h2></header><div className="model-choice-fields">{singleAgentDimensions.map((dimension)=>{const correct=singleAgentSession.result?.correctness[dimension],id=`single-agent-${dimension}-feedback`;return <label key={dimension}><span>{dimension}</span><select aria-label={`Single agent ${dimension}`} aria-invalid={singleAgentSession.result?!correct:undefined} aria-describedby={singleAgentSession.result?id:undefined} value={singleAgentSession.response[dimension]} onChange={(event)=>setSingleAgentSession({...singleAgentSession,response:{...singleAgentSession.response,[dimension]:event.target.value},result:null})}><option value="">Choose one</option>{options[dimension].map(value=><option key={value} value={value}>{formatChoice(value)}</option>)}</select>{singleAgentSession.result&&<small id={id}>{correct?"SYSTEM // Correct.":"901 TEACHER // Reconsider this agent-design boundary."}</small>}</label>;})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit">Check single agent</button></div><div role="status" aria-live="polite">{singleAgentSession.result?`${singleAgentSession.result.score}/2 · ${singleAgentSession.result.passed?"PASS":"REMEDIATE"}`:"Ready. Each of six scenarios has two required dimensions."}</div>{singleAgentSession.result&&!singleAgentSession.result.passed&&<><p className="teacher-remediation"><strong>901 TEACHER // SINGLE-AGENT REMEDIATION</strong><span>{singleAgentRemediation(scenario,singleAgentSession.response,singleAgentSession.hintLevel)}</span></p><button className="hint-action" type="button" onClick={revealSingleAgentHint}>Reveal next design boundary</button></>}{singleAgentSession.result?.passed&&<button className="confirm-action" type="button" onClick={advanceSingleAgent}>{singleAgentSession.index===5?(singleAgentSession.form==="transfer"?"Begin closed-note explanation":"View primary result"):"Next scenario"}</button>}</section></form>;})()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -3056,7 +3113,8 @@ export function App() {
                   )}
                   {pendingAdvance&&scene.id==="ruins"&&portalEvidence?.masteryStatus==="mastered"&&promptEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openPromptLayers();}}>{promptSession?"Resume Prompt Layers":promptEvidence?.masteryStatus==="primary_complete"?"Start Prompt Transfer":promptEvidence?.masteryStatus==="transfer_complete"?"Open Prompt Closed-Note Gate":"Start Prompt Layers"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&promptEvidence?.masteryStatus==="mastered"&&clientBoundaryEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openClientBoundaries();}}>{clientBoundarySession?"Resume Client Boundaries":clientBoundaryEvidence?.masteryStatus==="primary_complete"?"Start Client Boundary Transfer":clientBoundaryEvidence?.masteryStatus==="transfer_complete"?"Open Client Boundary Closed-Note Gate":"Start Client Boundaries"}</button>}
-                  {pendingAdvance && (scene.id !== "ruins" || clientBoundaryEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance&&scene.id==="ruins"&&clientBoundaryEvidence?.masteryStatus==="mastered"&&singleAgentEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSingleAgent();}}>{singleAgentSession?"Resume Single Agent":singleAgentEvidence?.masteryStatus==="primary_complete"?"Start Single Agent Transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"Open Single Agent Closed-Note Gate":"Start Single Agent"}</button>}
+                  {pendingAdvance && (scene.id !== "ruins" || singleAgentEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

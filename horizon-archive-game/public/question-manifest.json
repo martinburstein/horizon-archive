@@ -168,6 +168,17 @@
       "assessment_ids": ["AS-L0503-CODE", "AS-L0503-REFLECT"],
       "skills": ["AI901-D2-O3", "PY-013", "PY-014", "PY-016", "PY-017", "PY-018", "PY-019"],
       "success_contract": "Pass deterministic mock, both offline forms at 12/12, and explain configuration, client layers, request/response, and simulation authority."
+    },
+    {
+      "id": "HA-AI901-SINGLE-AGENT",
+      "scene": "ruins",
+      "exercise_id": "EX-L0504-SINGLE-AGENT",
+      "lesson_id": "L-05-04",
+      "activity_id": "A-L0504-2",
+      "assessment_ids": ["AS-L0504-ORDER"],
+      "objective_ids": ["AI901-D2-O4"],
+      "skills": ["PY-009", "PY-012", "PY-016"],
+      "success_contract": "Pass primary and fresh transfer at 12/12, then explain agent fit and stable instructions, least-privilege tools, failure and denied-action safety without fabricated success, and the agent-identifier submit/read client flow."
     }
   ]
 }

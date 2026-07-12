@@ -555,6 +555,10 @@ h1 {
 .client-boundary-workspace { grid-template-rows: auto auto minmax(0, 1fr); }
 .client-boundary-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .client-boundary-explanation { grid-template-columns: 1fr; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0504-SINGLE-AGENT"] { overflow: hidden; }
+.single-agent-workspace { grid-template-rows: auto minmax(0, 1fr); }
+.single-agent-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.canonical-game-frame[data-canonical-layout="narrow"] .single-agent-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }
 .bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
 .bridge-retrieval label { display: block; margin: 4px 0; }
