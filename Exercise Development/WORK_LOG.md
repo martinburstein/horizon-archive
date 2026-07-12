@@ -1,5 +1,13 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Coder pass: explicit verb selection semantics
+
+- **Outcome:** LOOK AT, USE, and TALK TO now expose `aria-pressed`; exactly one verb is selected at all times. Replaced the two approved stale AB-01 lines with the compact Tidal Lens prompt and completion copy from the production interaction packet.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, new `src/verbSelection.js` and unit test, `playtest/e2e-playthrough.mjs`, and this log.
+- **Validation:** 36/36 unit tests, production build, and full six-exercise E2E pass with zero runtime errors. Browser coverage verifies click, Enter, and Space selection; one-and-only-one pressed state; and LOOK/TALK/USE hotspot dispatch in canonical `640×480` and narrow `320×240` AB-01 layouts.
+- **Next action:** Lore Keeper Agent can proceed using the now-live Tidal Lens terminology; Accessibility Sentinel should confirm announcement quality for the pressed-state verb group.
+- **Risks:** The verbs remain a group of toggle buttons rather than a native single-select radio group; `aria-pressed` matches the exact Player handoff and current interaction model.
+
 ## 2026-07-12 — Responsible AI primary-form vertical slice
 
 - **Outcome:** Added a bounded, functional `EX-L0202-RESPONSIBLE-AI` primary form after Workload Sort mastery in the ruins. The learner completes six one-at-a-time course-authored scenarios using the required four-part response: principle, affected stakeholder, concrete testable mitigation, and accountable human or organizational owner.

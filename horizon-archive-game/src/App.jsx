@@ -14,6 +14,7 @@ import { PixelMeadow } from "./PixelMeadow.jsx";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
+import { ADVENTURE_VERBS, getVerbPressedState } from "./verbSelection.js";
 import {
   evaluateTerminalCode,
   sanitizeExerciseEvidence,
@@ -107,12 +108,12 @@ const scenes = [
       left: "24.375%", top: "56.94%", width: "10.625%", height: "21.11%",
       narrow: { left: "20%", top: "54%", width: "24%", height: "43%" },
     },
-    prompt: "A grounded three-fin Terminal waits beside the causeway. The suspended archive above it remains silent.",
+    prompt: "A grounded Terminal stands by the causeway. The Tidal Lens remains silent.",
     question: "Create a variable named pilot_name containing the text MARTIN.",
     answer: 'pilot_name = "MARTIN"',
     validate: (value) => validateAnswer("ruins", value),
     hint: "Use a variable name, an equals sign, then quoted text.",
-    success: "Identity accepted. The structure rotates once, like an eye deciding not to close.",
+    success: "Terminal fins align; route geometry appears. The Tidal Lens remains unchanged.",
   },
   {
     id: "automaton",
@@ -282,6 +283,7 @@ export function App() {
   const terminalTriggerRef = useRef(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
+  const verbPressedState = getVerbPressedState(verb);
   const sceneHotspots = [{
     id: scene.primaryHotspotId ?? "primary",
     label: scene.hotspotLabel,
@@ -1543,8 +1545,8 @@ export function App() {
 
       <section className="command-panel" aria-label="Adventure controls and dialogue" inert={terminalOpen ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
-          {["LOOK AT", "USE", "TALK TO"].map((item) => (
-            <button key={item} className={verb === item ? "verb active" : "verb"} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
+          {ADVENTURE_VERBS.map((item) => (
+            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
           ))}
         </nav>
 

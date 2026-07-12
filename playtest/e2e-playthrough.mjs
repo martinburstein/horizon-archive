@@ -273,6 +273,9 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
+  await assertVerbSelectionAndDispatch(page, 640, 480, "canonical");
+  await assertVerbSelectionAndDispatch(page, 320, 240, "narrow");
+  await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "USE", exact: true }).click();
   for (const [width, height, label] of [[640, 480, "640x480"], [1280, 960, "1280x960"], [320, 240, "320x240"], [1600, 900, "1600x900"]]) {
     await page.setViewportSize({ width, height });
@@ -509,6 +512,8 @@ print("Operator:", learner)`);
     ruinsHotspotKeyboard: true,
     ab01CanonicalFrame: true,
     ab01AuthoredNarrowFrame: true,
+    verbPressedState: true,
+    verbKeyboardDispatch: true,
     workloadCloseReopen: true,
     workloadFreshRetry: true,
     workloadCriticalOverride: true,
@@ -653,6 +658,39 @@ async function activateRuinsTerminal(page, method) {
     await hotspot.click();
   }
   await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').waitFor();
+}
+
+async function assertVerbSelectionAndDispatch(page, width, height, expectedLayout) {
+  await page.setViewportSize({ width, height });
+  await page.waitForFunction((layout) => document.querySelector(".canonical-game-frame")?.dataset.canonicalLayout === layout, expectedLayout);
+  const verbs = page.locator(".verb-grid .verb");
+  if (await verbs.count() !== 3) throw new Error(`Expected three verbs at ${width}x${height}`);
+  const assertOnePressed = async (name) => {
+    const pressed = await verbs.evaluateAll((buttons) => buttons.filter((button) => button.getAttribute("aria-pressed") === "true").map((button) => button.textContent.trim()));
+    if (pressed.length !== 1 || pressed[0] !== name) throw new Error(`Verb pressed state invalid at ${width}x${height}: ${JSON.stringify(pressed)}`);
+  };
+
+  await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
+  await assertOnePressed("LOOK AT");
+  await page.getByRole("button", { name: "look at grounded Workload Sort Terminal", exact: true }).click();
+  await page.getByText("A grounded Terminal stands by the causeway. The Tidal Lens remains silent.", { exact: true }).waitFor();
+
+  const talk = page.getByRole("button", { name: "TALK TO", exact: true });
+  await talk.focus();
+  await talk.press("Enter");
+  await assertOnePressed("TALK TO");
+  await page.getByRole("button", { name: "talk to grounded Workload Sort Terminal", exact: true }).click();
+  await page.getByText("Nothing here has a mouth. Something still seems to hear you.", { exact: true }).waitFor();
+
+  const use = page.getByRole("button", { name: "USE", exact: true });
+  await use.focus();
+  await use.press("Space");
+  await assertOnePressed("USE");
+  await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).click();
+  const terminal = page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]');
+  await terminal.waitFor();
+  await page.keyboard.press("Escape");
+  await terminal.waitFor({ state: "detached" });
 }
 
 async function assertRuinsTerminalAlignment(page, viewportLabel) {
