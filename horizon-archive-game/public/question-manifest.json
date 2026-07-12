@@ -212,6 +212,16 @@
       "objective_ids": ["AI901-D1-O1", "AI901-D1-O2", "AI901-D1-O3", "AI901-D1-O4", "AI901-D1-O5", "AI901-D1-O6", "AI901-D1-O7", "AI901-D1-O8", "AI901-D2-O1", "AI901-D2-O2", "AI901-D2-O3", "AI901-D2-O4", "AI901-D2-O5", "AI901-D2-O6", "AI901-D2-O7"],
       "skills": ["PY-019", "PY-020"],
       "success_contract": "Pass all 15 objectives exactly once on primary and fresh transfer at 30/30, maintain objective-specific ready/remediate/not-yet-assessed evidence, and complete closed-note concept and implementation domain mastery without treating confidence as mastery or course evidence as an exam guarantee."
+    },
+    {
+      "id": "HA-AI901-REMEDIATION-PLANNER",
+      "scene": "ruins",
+      "exercise_id": "EX-L0602-REMEDIATION-PLANNER",
+      "lesson_id": "L-06-02",
+      "activity_id": "A-L0602-2",
+      "assessment_ids": ["AS-L0602-PLAN"],
+      "skills": ["PY-007", "PY-016", "PY-017"],
+      "success_contract": "Pass primary and fresh transfer at 12/12, complete source-routed remediation records, and explain failed-dimension priority, prerequisite lesson and official source routing, retrieval/guided/fresh-transfer practice, reassessment, and stop/escalate safeguards without confidence, exam-guarantee, or live-action bypass."
     }
   ]
 }
