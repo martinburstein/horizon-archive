@@ -199,3 +199,11 @@
 - **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; six pairwise-distinct grayscale layers; one accepted spine reaches all six; injection hard gap and external action lock pass; 59 x 59 bounds fit the 68 x 76 target; local links pass.
 - **Next recommended item:** Accessibility Sentinel should identify all layers and both authority boundaries at native grayscale. Coder may integrate only with persistent source/authority labels and textual rejection/evaluation outcomes.
 - **Unresolved risks:** geometry cannot convey instruction text, source quality, precedence details, contract semantics, authorization identity, or evaluation evidence. Live teaching content remains authoritative.
+
+## 2026-07-12 - Client Boundaries physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01 client-boundary rail with six distinct stations for endpoint, empty keyed credential, named deployment, compatible client layer, request, and response. Mock evidence is a sealed local loop; fabricated live success fractures before response; external action stops at an owner lock.
+- **Files changed:** added `production-pixel/AB-01/client-boundaries/` native motif, renderer, specification, exact 2x, grayscale, six-station isolation QA, and validator; linked it from the AB-01 package. No gameplay, scene, interface, credential data, external action, or lore changed.
+- **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; six distinct grayscale stations; one rail reaches all six; credential is empty/keyed; mock loop remains enclosed; fabricated success rejection and external action lock pass; 61 x 59 bounds fit target; links pass.
+- **Next recommended item:** Accessibility Sentinel should verify all six boundaries and local/live distinctions at native grayscale. Coder may integrate only with live identifiers, correlation, evidence-source labels, and authorization feedback.
+- **Unresolved risks:** geometry cannot convey endpoint values, deployment names, secret state, compatibility versions, payload meaning, correlation evidence, or authorization identity. Live teaching content remains authoritative.
