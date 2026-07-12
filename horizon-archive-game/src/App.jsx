@@ -189,6 +189,21 @@ import {
   sanitizeExtractionEvidence,
   updateExtractionEvidence,
 } from "./extractionWorkloadExercise.js";
+import {
+  evaluatePortalExplanation,
+  evaluatePortalScenario,
+  getPortalExplanationFeedback,
+  getPortalFeedback,
+  getPortalOptions,
+  portalDialogDescribedBy,
+  portalDimensions,
+  portalExercise,
+  portalExplanationDimensions,
+  portalPrimary,
+  portalTransfer,
+  sanitizePortalEvidence,
+  updatePortalEvidence,
+} from "./portalOrientationExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -373,6 +388,7 @@ function loadSave() {
       speechEvidence: sanitizeSpeechEvidence(saved.speechEvidence),
       visualEvidence: sanitizeVisualEvidence(saved.visualEvidence),
       extractionEvidence: sanitizeExtractionEvidence(saved.extractionEvidence),
+      portalEvidence: sanitizePortalEvidence(saved.portalEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -425,6 +441,8 @@ export function App() {
   const [visualEvidence, setVisualEvidence] = useState(null);
   const [extractionSession, setExtractionSession] = useState(null);
   const [extractionEvidence, setExtractionEvidence] = useState(null);
+  const [portalSession, setPortalSession] = useState(null);
+  const [portalEvidence, setPortalEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -434,6 +452,7 @@ export function App() {
   const focusContinueAfterSpeechRef = useRef(false);
   const focusContinueAfterVisualRef = useRef(false);
   const focusContinueAfterExtractionRef = useRef(false);
+  const focusContinueAfterPortalRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -496,9 +515,10 @@ export function App() {
         speechEvidence,
         visualEvidence,
         extractionEvidence,
+        portalEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -541,6 +561,12 @@ export function App() {
     focusContinueAfterExtractionRef.current = false;
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, extractionEvidence?.masteryStatus]);
+
+  useLayoutEffect(() => {
+    if (!focusContinueAfterPortalRef.current || terminalOpen || !pendingAdvance || portalEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterPortalRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, portalEvidence?.masteryStatus]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -586,6 +612,8 @@ export function App() {
     setVisualEvidence(null);
     setExtractionSession(null);
     setExtractionEvidence(null);
+    setPortalSession(null);
+    setPortalEvidence(null);
     setMode("playing");
   }
 
@@ -627,6 +655,9 @@ export function App() {
     if (saved.extractionEvidence?.masteryStatus === "mastered") focusContinueAfterExtractionRef.current = true;
     setExtractionEvidence(saved.extractionEvidence);
     setExtractionSession(null);
+    if (saved.portalEvidence?.masteryStatus === "mastered") focusContinueAfterPortalRef.current = true;
+    setPortalEvidence(saved.portalEvidence);
+    setPortalSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1298,6 +1329,15 @@ export function App() {
   function acknowledgeExtractionPrimary() { if (!extractionSession?.complete || !extractionEvidence?.confidence) return; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkExtractionExplanation(event) { event.preventDefault(); const result = evaluateExtractionExplanation(extractionSession.explanationResponse); setExtractionSession({ ...extractionSession, explanationResult: result }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterExtractionRef.current = true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+
+  function openPortalOrientation() { setTerminalOpen(true); setRuinsTerminalKind("portal-orientation"); if (!portalSession) { const form = portalEvidence?.masteryStatus === "primary_complete" ? "transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setPortalSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { scope: "", deployment: "", connection: "", cleanup: "" }, explanationResult: null, ownershipConfirmed: false }); } }
+  function exitPortalOrientation() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation rehearsal closed safely. No login, Azure mutation, identifier, credential, prompt, or response was retained.", "system"); }
+  function checkPortal(event) { event.preventDefault(); const scenarios = portalSession.form === "transfer" ? portalTransfer : portalPrimary; const scenario = scenarios[portalSession.index]; const result = evaluatePortalScenario(scenario.id, portalSession.response, portalSession.form); const hintLevel = result.passed ? portalSession.hintLevel : Math.max(1, portalSession.hintLevel); setPortalSession({ ...portalSession, result, hintLevel }); setPortalEvidence((previous) => updatePortalEvidence(previous, { form: portalSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: portalSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealPortalHint() { const hintLevel = Math.min(3, portalSession.hintLevel + 1); setPortalSession({ ...portalSession, hintLevel }); setPortalEvidence((previous) => updatePortalEvidence(previous, { hintLevel })); }
+  function advancePortal() { if (!portalSession.result?.passed) return; const scenarios = portalSession.form === "transfer" ? portalTransfer : portalPrimary; if (portalSession.index === scenarios.length - 1) { if (portalSession.form === "transfer") { setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setPortalSession({ ...portalSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setPortalSession({ ...portalSession, complete: true }); return; } setPortalSession({ ...portalSession, index: portalSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
+  function acknowledgePortalPrimary() { if (!portalSession?.complete || !portalEvidence?.confidence) return; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation primary form complete at 16 of 16. Fresh troubleshooting transfer and closed-note explanation remain.", "teacher"); }
+  function checkPortalExplanation(event) { event.preventDefault(); const result = evaluatePortalExplanation(portalSession.explanationResponse); setPortalSession({ ...portalSession, explanationResult: result }); setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgePortalMastery() { if (!portalSession?.explanationResult?.passed || !portalSession.ownershipConfirmed || !portalEvidence?.confidence) return; focusContinueAfterPortalRef.current = true; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation mastery confirmed: both 16-of-16 forms, closed-note safeguards, and owner-confirmed cleanup are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2180,6 +2220,19 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "portal-orientation" && portalSession && (
+          <TerminalShell exerciseId={portalExercise.exercise_id} title="Offline Portal Orientation" filename={portalSession.phase === "explanation" ? "closed_note.md" : `${portalSession.form}_portal.json`} lessonId={portalExercise.lesson_id} statusText={portalSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${portalSession.form.toUpperCase()} ${portalSession.index + 1}/8`} closeLabel="Exit Portal Orientation" describedBy={portalDialogDescribedBy} restoreFocusTo={terminalTriggerRef.current} onClose={exitPortalOrientation}>
+            <section className="model-choice-workspace portal-workspace">
+              <p id="portal-offline-warning" className="model-choice-boundary" role="note">FULLY OFFLINE REHEARSAL · no login, Azure mutation, resource creation, deployment, interaction, or cleanup occurs. No prompt has authority to sign in, change Azure, or delete resources. No environment identifier, credential, prompt, response, or free text is persisted.</p>
+              <p id="portal-checkpoint-equivalent" className="speech-transcript">Eight-checkpoint text equivalent: access → project → capability-fit model → named deployment → ready state → bounded smoke test → endpoint/deployment configuration separated from credentials → exact-scope, cost-aware, owner-confirmed cleanup.</p>
+              {portalSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkPortalExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE PORTAL WORKFLOW OWNER</p><h2>Explain scope, deployment, connection, and cleanup safeguards</h2><p>Your explanation remains session-only. It cannot authorize login, mutation, or cleanup.</p></header><div className="model-choice-fields portal-explanation">{portalExplanationDimensions.map((dimension) => { const fieldResult = portalSession.explanationResult?.correctness[dimension]; const id = `portal-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><input aria-label={`Closed-note portal ${dimension}`} aria-invalid={portalSession.explanationResult ? !fieldResult : undefined} aria-describedby={portalSession.explanationResult ? id : undefined} autoComplete="off" value={portalSession.explanationResponse[dimension]} onChange={(event) => setPortalSession({ ...portalSession, explanationResponse: { ...portalSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{portalSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Safeguard confirmed." : `901 TEACHER // Rebuild ${dimension} with exact scope and authority boundaries.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={portalExplanationDimensions.some((key) => !portalSession.explanationResponse[key])}>Check portal explanation</button></div><div className={portalSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{getPortalExplanationFeedback(portalSession.explanationResult).systemScore}</div>{getPortalExplanationFeedback(portalSession.explanationResult).teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // SCOPE AND CLEANUP REMEDIATION</strong><span>{getPortalExplanationFeedback(portalSession.explanationResult).teacherRemediation}</span></p>}{portalSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={portalSession.ownershipConfirmed} onChange={(event) => setPortalSession({ ...portalSession, ownershipConfirmed: event.target.checked })} />I produced this explanation myself and confirm cleanup requires the owner to verify exact scope before any destructive action.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="portal-confidence" checked={portalEvidence?.confidence === value} onChange={() => setPortalEvidence((previous) => updatePortalEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!portalSession.ownershipConfirmed || !portalEvidence?.confidence} onClick={acknowledgePortalMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : portalSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>16 / 16 dimensions</h2><p>All eight checkpoints pass. Fresh troubleshooting transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="portal-primary-confidence" checked={portalEvidence?.confidence === value} onChange={() => setPortalEvidence((previous) => updatePortalEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!portalEvidence?.confidence} onClick={acknowledgePortalPrimary}>Acknowledge primary form</button></section>
+              ) : (() => { const scenarios = portalSession.form === "transfer" ? portalTransfer : portalPrimary; const scenario = scenarios[portalSession.index]; const options = getPortalOptions(scenario.id, portalSession.form); const feedback = getPortalFeedback(scenario, portalSession.result, portalSession.hintLevel); return <form className="model-choice-form" onSubmit={checkPortal}><header><p className="pane-label">{portalSession.form === "transfer" ? "FRESH TROUBLESHOOTING TRANSFER" : "PRIMARY"} · PILOT // PORTAL WORKFLOW OWNER · {scenario.id}</p><p className="model-choice-layer-labels">ACCESS · PROJECT · MODEL · DEPLOYMENT · READINESS · INTERACTION · CONNECTION · CLEANUP</p><h2>{scenario.prompt}</h2></header><div className="model-choice-fields">{portalDimensions.map((dimension) => { const fieldResult = portalSession.result?.correctness[dimension]; const id = `portal-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><select aria-label={`Portal ${dimension}`} aria-invalid={portalSession.result ? !fieldResult : undefined} aria-describedby={portalSession.result ? id : undefined} value={portalSession.response[dimension]} onChange={(event) => setPortalSession({ ...portalSession, response: { ...portalSession.response, [dimension]: event.target.value }, result: null })}><option value="">Choose one</option>{options[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}</select>{portalSession.result && <small id={id}>{fieldResult ? "SYSTEM // Correct." : `901 TEACHER // Review ${dimension} against current scope, readiness, and authority.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 16-DIMENSION VALIDATOR</strong><button className="run-action" type="submit" disabled={portalDimensions.some((key) => !portalSession.response[key])}>Check portal choice</button></div><div className={portalSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{feedback.systemScore}</div>{feedback.teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // PORTAL WORKFLOW REMEDIATION</strong><span>{feedback.teacherRemediation}</span></p>}{portalSession.result && !portalSession.result.passed && <button className="hint-action" type="button" disabled={portalSession.hintLevel >= 3} onClick={revealPortalHint}>Reveal next portal checkpoint</button>}{portalSession.result?.passed && <button className="confirm-action" type="button" onClick={advancePortal}>{portalSession.index === 7 ? (portalSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next checkpoint"}</button>}</section></form>; })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2351,7 +2404,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && visualEvidence?.masteryStatus === "mastered" && extractionEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openExtractionWorkloads(); }}>{extractionSession ? "Resume Extraction Workloads" : extractionEvidence?.masteryStatus === "primary_complete" ? "Start Extraction Transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "Open Extraction Closed-Note Gate" : "Start Extraction Workloads"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || extractionEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && extractionEvidence?.masteryStatus === "mastered" && portalEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openPortalOrientation(); }}>{portalSession ? "Resume Portal Orientation" : portalEvidence?.masteryStatus === "primary_complete" ? "Start Portal Troubleshooting Transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "Open Portal Closed-Note Gate" : "Start Portal Orientation"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || portalEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

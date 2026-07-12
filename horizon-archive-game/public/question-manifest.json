@@ -138,6 +138,16 @@
       "assessment_id": "AS-L0404-SCEN",
       "skills": ["AI901-D1-O8", "PY-016", "PY-020"],
       "success_contract": "Pass both offline forms at 12/12 across four extraction modalities and schema/evidence integrity, then independently explain modality, schema, missing values, and review evidence."
+    },
+    {
+      "id": "HA-AI901-PORTAL-ORIENTATION",
+      "scene": "ruins",
+      "exercise_id": "EX-L0501-PORTAL-ORIENTATION",
+      "lesson_id": "L-05-01",
+      "activity_id": "A-L0501-3",
+      "assessment_ids": ["AS-L0501-ORDER"],
+      "skills": ["AI901-D2-O2", "PY-017", "PY-019"],
+      "success_contract": "Pass primary and fresh troubleshooting transfer at 16/16 across all eight portal checkpoints, then independently explain scope, deployment, connection, and owner-confirmed cleanup safeguards."
     }
   ]
 }

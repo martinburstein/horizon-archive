@@ -27,6 +27,8 @@ const referenceVisualPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "
 const referenceVisualTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-03/reference_transfer_answers.json"), "utf8"));
 const referenceExtractionPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-04/reference_primary_answers.json"), "utf8"));
 const referenceExtractionTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-04/reference_transfer_answers.json"), "utf8"));
+const referencePortalPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-01/reference_primary_answers.json"), "utf8"));
+const referencePortalTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-01/reference_transfer_answers.json"), "utf8"));
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -1015,10 +1017,29 @@ print("Operator:", learner)`);
   const extractionExplanation = { modality: "choose document image audio or video source", schema: "define field names types and descriptions before analysis", missing_value: "preserve null or missing never invent value", evidence_review: "retain provenance and confidence for human review" };
   for (const [d, value] of Object.entries(extractionExplanation)) await page.getByLabel(`Closed-note extraction ${d}`, { exact: true }).fill(value); await page.getByRole("button", { name: "Exit Extraction Workloads", exact: true }).click(); await page.getByRole("button", { name: "Resume Extraction Workloads", exact: true }).click(); if (await page.getByLabel("Closed-note extraction missing_value", { exact: true }).inputValue() !== extractionExplanation.missing_value) throw new Error("Extraction explanation reset after close/reopen");
   const extractionExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }); if (extractionExplanationDraft.includes("preserve null or missing") || extractionExplanationDraft.includes("retain provenance")) throw new Error("Extraction explanation leaked into storage"); await page.getByRole("button", { name: "Check extraction explanation", exact: true }).click(); await page.getByText("EXPLANATION PASS", { exact: false }).waitFor(); await page.getByRole("checkbox", { name: "I produced this extraction explanation myself without notes.", exact: true }).check(); await page.getByRole("radio", { name: "high", exact: true }).check(); await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
-  const extractionContinue = page.getByRole("button", { name: "Continue", exact: true }); await extractionContinue.waitFor(); if (!await extractionContinue.evaluate((element) => element === document.activeElement)) throw new Error("Extraction mastery did not focus Continue");
+  const extractionContinue = page.getByRole("button", { name: "Start Portal Orientation", exact: true }); await extractionContinue.waitFor(); if (!await extractionContinue.evaluate((element) => element === document.activeElement)) throw new Error("Extraction mastery did not focus Portal Orientation");
   const extractionMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).extractionEvidence, { key: saveKey }); if (extractionMastery?.masteryStatus !== "mastered" || extractionMastery?.attemptCount !== 16) throw new Error(`Extraction mastery incomplete: ${JSON.stringify(extractionMastery)}`); if (["sourceMedia", "sourcePath", "extractedFieldValues", "serviceResponseBody", "runtimeOutput", "freeFormReasoning", "response", "choices"].some((key) => key in extractionMastery)) throw new Error("Extraction mastery retained private content");
-  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); const restoredExtractionContinue = page.getByRole("button", { name: "Continue", exact: true }); await restoredExtractionContinue.waitFor(); if (!await restoredExtractionContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Extraction mastery reload did not restore focus to Continue");
+  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); const restoredExtractionContinue = page.getByRole("button", { name: "Start Portal Orientation", exact: true }); await restoredExtractionContinue.waitFor(); if (!await restoredExtractionContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Extraction mastery reload did not restore focus to Portal Orientation");
   await restoredExtractionContinue.click();
+  await page.locator('[data-terminal-exercise="EX-L0501-PORTAL-ORIENTATION"]').waitFor(); await assertPortalContinuity(page, "primary");
+  await page.getByLabel("Portal decision", { exact: true }).selectOption("proceed_without_scope_check"); await page.getByLabel("Portal reason", { exact: true }).selectOption("portal_visibility_proves_correct_permissions"); await page.getByRole("button", { name: "Check portal choice", exact: true }).click(); await page.getByText("901 TEACHER // PORTAL WORKFLOW REMEDIATION", { exact: true }).waitFor();
+  for (const dimension of ["decision", "reason"]) { const field = page.getByLabel(`Portal ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `portal-${dimension}-feedback`) throw new Error(`Portal ${dimension} remediation was not associated`); }
+  await page.setViewportSize({ width: 640, height: 480 }); await page.screenshot({ path: qaPath("portal-orientation-primary-qa.png"), fullPage: true }); await page.setViewportSize({ width: 1600, height: 900 }); await page.getByRole("button", { name: "Reveal next portal checkpoint", exact: true }).click();
+  for (const id of Object.keys(referencePortalPrimary)) { const answer = referencePortalPrimary[id]; await page.getByLabel("Portal decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Portal reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check portal choice", exact: true }).click(); await page.getByText("CHOICE PASS", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "P08" ? "View primary result" : "Next checkpoint", exact: true }).click(); }
+  await page.getByRole("radio", { name: "medium", exact: true }).check(); await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); await page.getByRole("button", { name: "Start Portal Troubleshooting Transfer", exact: true }).click(); await assertPortalContinuity(page, "transfer");
+  await page.getByLabel("Portal decision", { exact: true }).selectOption("proceed_without_scope_check"); await page.getByLabel("Portal reason", { exact: true }).selectOption("portal_visibility_proves_correct_permissions"); await page.getByRole("button", { name: "Check portal choice", exact: true }).click();
+  await page.setViewportSize({ width: 320, height: 240 }); await page.screenshot({ path: qaPath("portal-orientation-transfer-remediation-qa.png"), fullPage: true }); await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Exit Portal Orientation", exact: true }).click(); await page.getByRole("button", { name: "Resume Portal Orientation", exact: true }).click(); if (await page.getByLabel("Portal reason", { exact: true }).inputValue() !== "portal_visibility_proves_correct_permissions") throw new Error("Portal transfer reset after close/reopen");
+  const portalDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }); if (portalDraft.includes("portal_visibility_proves_correct_permissions") || portalDraft.includes("expected project after sign-in")) throw new Error("Portal choices or prompts leaked into storage");
+  for (const id of Object.keys(referencePortalTransfer)) { const answer = referencePortalTransfer[id]; await page.getByLabel("Portal decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Portal reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check portal choice", exact: true }).click(); await page.getByText("CHOICE PASS", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "T08" ? "Begin closed-note explanation" : "Next checkpoint", exact: true }).click(); }
+  await assertPortalContinuity(page, "closed-note"); for (const dimension of ["scope", "deployment", "connection", "cleanup"]) await page.getByLabel(`Closed-note portal ${dimension}`, { exact: true }).fill("wrong"); await page.getByRole("button", { name: "Check portal explanation", exact: true }).click(); await page.getByText("901 TEACHER // SCOPE AND CLEANUP REMEDIATION", { exact: true }).waitFor(); await page.screenshot({ path: qaPath("portal-orientation-closed-note-qa.png"), fullPage: true }); assertDistinctCaptures(["portal-orientation-primary-qa.png", "portal-orientation-transfer-remediation-qa.png", "portal-orientation-closed-note-qa.png"]);
+  const portalExplanation = { scope: "verify tenant subscription role project and parent scope", deployment: "choose capability fit model named deployment and wait for ready", connection: "endpoint and deployment name are configuration credential is secret", cleanup: "owner confirm exact scope before any cleanup" };
+  for (const [dimension, value] of Object.entries(portalExplanation)) await page.getByLabel(`Closed-note portal ${dimension}`, { exact: true }).fill(value); await page.getByRole("button", { name: "Exit Portal Orientation", exact: true }).click(); await page.getByRole("button", { name: "Resume Portal Orientation", exact: true }).click(); if (await page.getByLabel("Closed-note portal cleanup", { exact: true }).inputValue() !== portalExplanation.cleanup) throw new Error("Portal explanation reset after close/reopen");
+  const portalExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }); if (portalExplanationDraft.includes("owner confirm exact scope") || portalExplanationDraft.includes("capability fit model")) throw new Error("Portal explanation leaked into storage"); await page.getByRole("button", { name: "Check portal explanation", exact: true }).click(); await page.getByText("EXPLANATION PASS", { exact: false }).waitFor(); await page.getByRole("checkbox", { name: /confirm cleanup requires the owner/i }).check(); await page.getByRole("radio", { name: "high", exact: true }).check(); await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const portalContinue = page.getByRole("button", { name: "Continue", exact: true }); await portalContinue.waitFor(); if (!await portalContinue.evaluate((element) => element === document.activeElement)) throw new Error("Portal mastery did not focus Continue");
+  const portalMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).portalEvidence, { key: saveKey }); if (portalMastery?.masteryStatus !== "mastered" || portalMastery?.attemptCount !== 20) throw new Error(`Portal mastery incomplete: ${JSON.stringify(portalMastery)}`); if (["tenantId", "subscriptionId", "resourceGroup", "projectName", "endpoint", "deploymentName", "credential", "promptText", "modelResponse", "freeText", "response", "choices"].some((key) => key in portalMastery)) throw new Error("Portal mastery retained private content");
+  await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); const restoredPortalContinue = page.getByRole("button", { name: "Continue", exact: true }); await restoredPortalContinue.waitFor(); if (!await restoredPortalContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Portal mastery reload did not restore focus to Continue"); await restoredPortalContinue.click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
 
@@ -1186,6 +1207,14 @@ print("Operator:", learner)`);
     extractionOwnershipSeparation: true,
     extractionContinueFocus: true,
     extractionReloadFocus: true,
+    portalOrientationPrimary: true,
+    portalOrientationTroubleshootingTransfer: true,
+    portalOrientationClosedNote: true,
+    portalOrientationStrictMastery: true,
+    portalOrientationOfflineAuthorityWarningAllModes: true,
+    portalOrientationPrivacy: true,
+    portalOrientationContinueFocus: true,
+    portalOrientationReloadFocus: true,
     visualWorkloadsDeprecationWarningAllModes: true,
     visualWorkloadsSessionPrivacy: true,
     visualWorkloadsContinueFocus: true,
@@ -1220,7 +1249,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS", "HA-AI901-PORTAL-ORIENTATION"],
     credits: true,
   }));
 } finally {
@@ -1350,6 +1379,15 @@ async function assertExtractionContinuity(page, phase) {
   if (describedBy !== "extraction-offline-warning extraction-text-equivalent") throw new Error(`Extraction ${phase} description order incorrect: ${describedBy}`);
   await page.locator("#extraction-offline-warning").getByText("No source media, path, extracted value, service response, or free text is persisted", { exact: false }).waitFor();
   await page.locator("#extraction-text-equivalent").getByText("preserve missing/null rather than inventing a value", { exact: false }).waitFor();
+}
+
+async function assertPortalContinuity(page, phase) {
+  const dialog = page.locator('[data-terminal-exercise="EX-L0501-PORTAL-ORIENTATION"]');
+  const describedBy = await dialog.getAttribute("aria-describedby");
+  if (describedBy !== "portal-offline-warning portal-checkpoint-equivalent") throw new Error(`Portal ${phase} description order incorrect: ${describedBy}`);
+  await page.locator("#portal-offline-warning").getByText("no login, Azure mutation", { exact: false }).waitFor();
+  await page.locator("#portal-offline-warning").getByText("No prompt has authority", { exact: false }).waitFor();
+  await page.locator("#portal-checkpoint-equivalent").getByText("Eight-checkpoint text equivalent", { exact: false }).waitFor();
 }
 
 function routePrimaryReference() {

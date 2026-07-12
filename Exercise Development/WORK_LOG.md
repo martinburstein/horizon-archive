@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0501 Portal Orientation runtime integration complete
+
+- **Outcome:** Mounted `EX-L0501-PORTAL-ORIENTATION` as the mandatory Terminal after Information Extraction. Mastery requires packaged primary 16/16, fresh troubleshooting transfer 16/16, and a four-part closed-note scope/deployment/connection/cleanup explanation across all eight checkpoints.
+- **Safety/authority:** Every phase carries an accessible offline warning: no login, Azure mutation, creation, deployment, interaction, or cleanup occurs; prompts have no authority to sign in, mutate Azure, or delete resources. Cleanup is exact-scope, cost-aware, and owner-confirmed.
+- **Privacy/ownership:** Evidence persists no tenant/subscription/resource/project/deployment/endpoint identifiers, credentials, prompts, responses, choices, or free text. System owns neutral scoring, 901 Teacher owns remediation/completion, and Pilot owns session-only closed-note prose and cleanup confirmation.
+- **Continuity:** Added close/reopen, sanitizer/privacy, direct and sanitized-reload focus, canonical 640×480, narrow 320×240, field-associated remediation, and three pairwise-distinct QA captures. No L-05-02/L-05-03 gameplay was implemented.
+- **Files changed:** Portal model/tests, `App.jsx`, `styles.css`, manifest, full E2E, three Portal QA captures, and this log.
+- **Validation:** L-05-01 validator self-test passes; packaged primary and transfer pass 16/16; 97/97 unit tests pass; production build passes; full title-to-credits E2E passes from repository root and game-directory working directories with zero runtime errors; manifest parse and diff check pass.
+- **Next recommended item:** Player Agent should independently test keyboard-only traversal, warning announcement order, all eight misconception reversals, owner-scoped cleanup, forged evidence, and narrow reading order before any later lesson begins.
+- **Unresolved risks:** This is intentionally an offline rehearsal and does not prove current Portal navigation, regional availability, permissions, pricing, or live deployment behavior; those require official Microsoft reverification and explicit user authority.
+
 ## 2026-07-12 — Information Extraction continuity closure
 
 - **Outcome:** Closed only the L-04-04 continuity contract. Primary, transfer, and closed-note System regions now contain neutral deterministic scores/status; modality/schema/null/evidence coaching is rendered separately as explicitly labeled 901 Teacher remediation.
