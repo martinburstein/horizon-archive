@@ -95,3 +95,11 @@
 - **Validation:** exact native/2x dimensions; byte-exact nearest-neighbor enlargement; all three central Terminal bodies are pixel-identical; grayscale tiles have distinct outer bounding patterns; existing `64 x 64` overlay, AB-01 anchor, 68 x 76 hotspot, `640 x 360` world boundary, and quiet-footer separation remain intact.
 - **Next recommended item:** Accessibility Sentinel should name the three modes without color at 1x grayscale and confirm the outer frame never obscures the four internal groups; Coder can crop tiles at x offsets 0, 64, and 128.
 - **Unresolved risks:** physical frame geometry supplements but cannot replace live mode labels. The runtime must announce Primary, Transfer, or Explanation textually.
+
+## 2026-07-12 — Model / Deployment Choices physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible physical motif with three concentric but structurally distinct layers—continuous model octagon, bracketed deployment ring, dashed request-configuration ring—around a split decision/reason core.
+- **Files changed:** added `production-pixel/AB-01/model-deployment/` native motif, integer renderer, specification, grayscale/isolation evidence, and 2x QA; linked it from the AB-01 package. No gameplay, location, interface, or lore changed.
+- **Validation:** native RGBA is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; combined silhouette and all three isolated ring masks remain distinct in grayscale; central core has two physically separate halves; painted bounds fit the existing 68 x 76 hotspot and AB-01 anchor; no text, smoothing, reference pixels, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should identify outer/middle/inner layers and both core halves at native grayscale; Coder should retain live labels for Model, Deployment, Request configuration, Decision, and Reason.
+- **Unresolved risks:** concentric geometry communicates hierarchy but not product-specific terminology. The physical motif must never be the learner's only source for field meaning.

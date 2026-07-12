@@ -13,6 +13,7 @@
 - **States:** [1x strip](qa/terminal-state-strip-1x.png) · [2x strip](qa/terminal-state-strip-2x.png)
 - **Canonical framing:** [measured 640×480 available/complete study](CANONICAL_FRAME.md)
 - **Responsible AI motif:** [four-group physical Terminal package](responsible-ai/README.md)
+- **Model/deployment motif:** [three rings and two-part decision/reason core](model-deployment/README.md)
 
 ## Originality gate
 
