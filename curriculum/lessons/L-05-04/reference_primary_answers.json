@@ -1,0 +1,8 @@
+{
+  "P01":{"decision":"single_agent","reason":"the_goal_requires_instructions_and_tool_mediated_steps"},
+  "P02":{"decision":"agent_instructions","reason":"stable_behavior_rules_belong_in_the_agent_configuration"},
+  "P03":{"decision":"attach_inventory_read_tool_only","reason":"least_privilege_limits_capability_to_the_required_task"},
+  "P04":{"decision":"configure_model_instructions_and_tools_then_test_expected_edge_and_denied_paths","reason":"representative_and_failure_tests_expose_boundary_errors"},
+  "P05":{"decision":"pause_and_require_verified_scope_authority_and_confirmation","reason":"tool_access_and_prompt_text_do_not_authorize_destructive_action"},
+  "P06":{"decision":"identify_agent_submit_input_and_read_run_result_or_error","reason":"agent_identity_and_execution_result_are_distinct_from_model_deployment_and_endpoint"}
+}

@@ -516,3 +516,28 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0503-CLIENT-BOUNDARIES` while reusing `mock_client.py`.
 Notes: No service call or Azure action occurs. SDK packages, client methods, endpoint shapes, authentication, roles, model/deployment names, API behavior, and deprecations remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T13:23:00-04:00
+
+Stage: Sequential Microsoft Foundry implementation expansion
+Action: Completed exactly one next mapped package, `L-05-04`, as an offline source-grounded single-agent lesson with guided instruction, retrieval, primary/transfer assessment, remediation, Exercise Agent contract, strict readiness gate, and explicit action safeguards.
+Files touched:
+- curriculum/lessons/L-05-04/*
+- curriculum/ai901-objective-map.json
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Agent Service concepts and prompt-agent portal workflow alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objective/skill coverage, official sources, map alignment, local link, and privacy/session/accessibility/action safeguards: pass
+- each form covers all six single-agent boundaries: pass
+- validator self-test, tool-permission failure probe, and false-tool-success failure probe: pass
+- primary reference 12/12; transfer reference 12/12; blank primary and transfer correctly rejected at 0/12
+- existing `L-05-03` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0504-SINGLE-AGENT` as the offline portal worksheet and deterministic two-form gate.
+Notes: No agent/service call, Azure mutation, gameplay, lore, or external action occurred. Portal labels, Agent Service APIs/SDKs, identity terms, tool availability, run/session concepts, models, pricing, previews, and deprecations remain volatile.

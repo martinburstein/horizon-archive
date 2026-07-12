@@ -1,0 +1,16 @@
+[
+  {
+    "assessment_id": "AS-L0504-ORDER",
+    "lesson_id": "L-05-04",
+    "assessment_type": "workflow_ordering",
+    "supports_objectives": ["AI901-D2-O4"],
+    "supports_python_skills": ["PY-009", "PY-012", "PY-016"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Pass primary 12/12, remediate each missed boundary, then pass a fresh transfer form 12/12 and explain the workflow closed-note.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]

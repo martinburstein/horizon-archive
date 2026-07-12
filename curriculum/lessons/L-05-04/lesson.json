@@ -1,0 +1,27 @@
+{
+  "lesson_id": "L-05-04",
+  "lesson_title": "Single-agent solutions",
+  "lesson_type": "portal_navigation_lab",
+  "chapter_id": "chapter-05",
+  "module_id": "ch5-m3",
+  "launch_tier": "launch_valuable",
+  "source_mode": "source_grounded",
+  "supports_objectives": ["AI901-D2-O4"],
+  "supports_python_skills": ["PY-009", "PY-012", "PY-016"],
+  "prerequisite_lesson_ids": ["L-05-02", "L-05-03"],
+  "source_ids": ["OFFICIAL-AI901-STUDY-GUIDE", "OFFICIAL-FOUNDRY-HUB", "OFFICIAL-FOUNDRY-AGENTS", "OFFICIAL-FOUNDRY-PROMPT-AGENT-QUICKSTART"],
+  "activity_ids": ["A-L0504-1", "A-L0504-2"],
+  "assessment_ids": ["AS-L0504-ORDER"],
+  "learner_starting_state": "Can distinguish system, user, and grounding input and trace a lightweight Foundry client flow.",
+  "learner_ending_state": "Can decide when one agent is appropriate, define its instructions and least-privilege tools, test it safely in the portal, and trace a lightweight client interaction.",
+  "mastery_gate": "Score 12 of 12 on both primary and fresh-transfer forms across all six single-agent boundaries, then explain the workflow and external-action safeguard without notes.",
+  "estimated_minutes": 50,
+  "difficulty_band": "beginner_plus",
+  "provenance_policy": {
+    "citation_expectation": "Current agent concepts and portal workflow cite official Microsoft Foundry and AI-901 sources.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Reverify portal labels, APIs, SDKs, tool availability, identity terms, models, pricing, previews, and deprecations before live use."
+  },
+  "status": "review",
+  "notes": "Offline design and assessment only; no service call, Azure mutation, or external action is authorized."
+}

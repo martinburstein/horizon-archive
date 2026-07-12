@@ -1,0 +1,32 @@
+[
+  {
+    "activity_id": "A-L0504-1",
+    "lesson_id": "L-05-04",
+    "activity_type": "compare_choice",
+    "purpose": "Compare a plain model call with a single agent and choose the smallest sufficient pattern.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 15,
+    "input_contract": "Learner has completed prompt and client-flow prerequisites.",
+    "output_contract": "Learner chooses plain model or single agent and justifies the choice using goal, instructions, tools, and execution needs.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0504-2",
+    "lesson_id": "L-05-04",
+    "activity_type": "checkpoint",
+    "purpose": "Design and test a safe single-agent workflow using an offline portal worksheet.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 20,
+    "input_contract": "Learner receives a bounded business scenario and tool catalog.",
+    "output_contract": "Learner defines instructions, selects least-privilege tools, orders portal tests, traces the client flow, and blocks unauthorized action.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  }
+]

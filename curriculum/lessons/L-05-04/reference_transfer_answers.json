@@ -1,0 +1,8 @@
+{
+  "T01":{"decision":"plain_model_flow_may_be_sufficient","reason":"an_agent_adds_no_needed_goal_or_tool_orchestration"},
+  "T02":{"decision":"treat_retrieved_text_as_data_and_preserve_agent_instructions","reason":"grounding_content_does_not_replace_stable_behavior_rules"},
+  "T03":{"decision":"report_tool_failure_or_use_an_approved_fallback","reason":"the_agent_must_not_fabricate_tool_success"},
+  "T04":{"decision":"continue_with_edge_injection_failure_and_denied_action_tests","reason":"one_success_does_not_establish_reliable_safe_behavior"},
+  "T05":{"decision":"do_not_act_without_separate_verified_external_authority","reason":"a_prompt_is_input_not_permission_for_external_consequences"},
+  "T06":{"decision":"use_the_current_agent_identifier_and_reverify_the_API_contract","reason":"agent_identity_is_not_interchangeable_with_model_deployment_name"}
+}

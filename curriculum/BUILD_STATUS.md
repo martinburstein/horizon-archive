@@ -46,4 +46,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded multimodal information-extraction package `L-04-04`
 - [x] Built source-grounded Foundry portal orientation package `L-05-01`
 - [x] Built source-grounded system/user/grounding prompt package `L-05-02`
+- [x] Built source-grounded offline single-agent solution package `L-05-04`
 - [ ] Expand original question banks and full timed simulations

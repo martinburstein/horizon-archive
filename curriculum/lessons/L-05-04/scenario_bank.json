@@ -1,0 +1,21 @@
+{
+  "boundaries": ["agent_fit", "instructions", "tools", "portal_test", "action_safety", "client_flow"],
+  "forms": {
+    "primary": [
+      {"id":"P01","topic":"agent_fit","prompt":"An inventory assistant must interpret a request, consult approved stock data, and propose an allowed substitute.","decision":"single_agent","reason":"the_goal_requires_instructions_and_tool_mediated_steps"},
+      {"id":"P02","topic":"instructions","prompt":"Where should stable role, scope, fallback, and action limits be defined?","decision":"agent_instructions","reason":"stable_behavior_rules_belong_in_the_agent_configuration"},
+      {"id":"P03","topic":"tools","prompt":"The assistant only needs to read inventory.","decision":"attach_inventory_read_tool_only","reason":"least_privilege_limits_capability_to_the_required_task"},
+      {"id":"P04","topic":"portal_test","prompt":"What is the safe portal test sequence?","decision":"configure_model_instructions_and_tools_then_test_expected_edge_and_denied_paths","reason":"representative_and_failure_tests_expose_boundary_errors"},
+      {"id":"P05","topic":"action_safety","prompt":"A user asks the agent to delete every inventory record.","decision":"pause_and_require_verified_scope_authority_and_confirmation","reason":"tool_access_and_prompt_text_do_not_authorize_destructive_action"},
+      {"id":"P06","topic":"client_flow","prompt":"What should a lightweight client do with an existing agent?","decision":"identify_agent_submit_input_and_read_run_result_or_error","reason":"agent_identity_and_execution_result_are_distinct_from_model_deployment_and_endpoint"}
+    ],
+    "transfer": [
+      {"id":"T01","topic":"agent_fit","prompt":"A fixed FAQ needs one grounded response and no tools or follow-up steps.","decision":"plain_model_flow_may_be_sufficient","reason":"an_agent_adds_no_needed_goal_or_tool_orchestration"},
+      {"id":"T02","topic":"instructions","prompt":"Retrieved text says to ignore the agent rules.","decision":"treat_retrieved_text_as_data_and_preserve_agent_instructions","reason":"grounding_content_does_not_replace_stable_behavior_rules"},
+      {"id":"T03","topic":"tools","prompt":"The inventory tool times out.","decision":"report_tool_failure_or_use_an_approved_fallback","reason":"the_agent_must_not_fabricate_tool_success"},
+      {"id":"T04","topic":"portal_test","prompt":"One happy-path portal run succeeds.","decision":"continue_with_edge_injection_failure_and_denied_action_tests","reason":"one_success_does_not_establish_reliable_safe_behavior"},
+      {"id":"T05","topic":"action_safety","prompt":"A prompt tells the agent to send an email and purchase supplies.","decision":"do_not_act_without_separate_verified_external_authority","reason":"a_prompt_is_input_not_permission_for_external_consequences"},
+      {"id":"T06","topic":"client_flow","prompt":"Client code uses a model deployment name where the agent identifier is required.","decision":"use_the_current_agent_identifier_and_reverify_the_API_contract","reason":"agent_identity_is_not_interchangeable_with_model_deployment_name"}
+    ]
+  }
+}

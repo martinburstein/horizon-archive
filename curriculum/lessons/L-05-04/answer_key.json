@@ -1,0 +1,13 @@
+{
+  "scoring": "One point each for exact decision and reason; six scenarios produce 12 points per form.",
+  "mastery": "Both forms must score 12/12 and every boundary must pass.",
+  "remediation": {
+    "agent_fit": "Ask whether the task truly needs goal-directed steps, tools, or managed agent behavior.",
+    "instructions": "Separate stable role and limits from user input and retrieved data.",
+    "tools": "Select only required capabilities and handle tool failure explicitly.",
+    "portal_test": "Test expected, edge, injection, failure, and denied-action cases.",
+    "action_safety": "Tool availability is capability, never authorization.",
+    "client_flow": "Separate agent identifier, model deployment, endpoint, request, and result."
+  },
+  "warning": "These are course-authored scenarios, not Microsoft exam questions."
+}

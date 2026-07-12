@@ -26,6 +26,8 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Current portal authority for project creation, model deployment, provisioning verification, project endpoint, deployment name, access, and scoped cleanup. Portal labels and example models are volatile.
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
   - Authority for agent concepts and current service behavior.
+- `OFFICIAL-FOUNDRY-PROMPT-AGENT-QUICKSTART`: [Create a prompt agent](https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-prompt-agent)
+  - Current portal workflow authority for configuring a model, instructions, tools, and testing a prompt agent. Portal labels and API details are volatile.
 - `OFFICIAL-FOUNDRY-RESPONSIBLE-AI`: [Responsible use of AI overview](https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview)
   - Authority for the current Discover, Protect, and Govern responsible AI lifecycle in Microsoft Foundry.
 - `OFFICIAL-RESPONSIBLE-AI-TRAINING`: [Apply responsible AI principles](https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/)

@@ -1,0 +1,41 @@
+{
+  "exercise_id": "EX-L0504-SINGLE-AGENT",
+  "lesson_id": "L-05-04",
+  "activity_id": "A-L0504-2",
+  "assessment_ids": ["AS-L0504-ORDER"],
+  "objective_ids": ["AI901-D2-O4"],
+  "skill_ids": ["PY-009", "PY-012", "PY-016"],
+  "forms": ["primary", "transfer"],
+  "dimensions": ["decision", "reason"],
+  "mastery": {
+    "minimum_correct_per_form": 12,
+    "total_per_form": 12,
+    "boundaries_required_per_form": ["agent_fit", "instructions", "tools", "portal_test", "action_safety", "client_flow"],
+    "closed_note_explanation_required": true,
+    "external_or_destructive_action_safeguard_required": true
+  },
+  "remediation_sequence": ["name_failed_boundary", "compare_plain_model_and_agent", "rewrite_stable_instructions", "reduce_tools_to_least_privilege", "test_expected_edge_and_denied_paths", "trace_client_request_and_result", "retry_transfer"],
+  "misconception_tags": ["agent-always-required", "prompt-equals-tool", "tool-equals-permission", "one-happy-path-proves-ready", "tool-failure-equals-success", "agent-id-is-model-deployment", "prompt-authorizes-action"],
+  "evidence_contract": {
+    "store": ["lesson_id", "exercise_id", "form", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["agent_instructions", "tool_payload", "tool_result", "agent_id", "endpoint", "credential", "conversation_text", "external_action_request"]
+  },
+  "session_contract": {
+    "close_reopen": "restore_active_choices_only",
+    "scene_transition": "clear_working_prompt_tool_and_action_state",
+    "mastery_evidence": "persist_separately"
+  },
+  "ui_contract": {
+    "target_viewport": "640x480",
+    "panes": ["instructions", "scenario", "choices", "checks"],
+    "must_not_rely_on_color_alone": true
+  },
+  "accessibility_contract": {
+    "keyboard_order": ["instructions", "scenario", "choices", "check", "feedback", "hint", "reset", "exit"],
+    "persistent_labels": true,
+    "error_text_and_location": true,
+    "status_live_region": true,
+    "time_limit": false,
+    "reduced_motion": true
+  }
+}

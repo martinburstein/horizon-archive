@@ -397,19 +397,17 @@
             "JSON"
           ],
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "ai-901-study-guide-markdown-source-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-02-get-started-with-generative-ai-and",
-            "ai-900-study-guide-markdown-ai-900-study-guide-md",
-            "ai-900-study-guide-markdown-source-md"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-AGENTS",
+            "OFFICIAL-FOUNDRY-PROMPT-AGENT-QUICKSTART"
           ],
           "proposed_chapters": [
             "chapter-05"
           ],
           "mastery_check_type": "portal",
           "coverage_status": "mapped",
-          "notes": ""
+          "notes": "Current portal, Agent Service API/SDK, tool, model, and identity details must be reverified before live use."
         },
         {
           "objective_id": "AI901-D2-O5",
