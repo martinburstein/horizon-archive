@@ -1,5 +1,18 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0303 Client Bridge continuity closure
+
+- **Outcome:** Closed the Client Bridge ownership, warning, and focus handoff without starting L-04-01 or L-04-02 gameplay. `SYSTEM` score lines for code, retrieval, and closed-note modes now contain only deterministic totals and pass/not-complete state; all safe-layer, credential, retrieval, and five-layer coaching renders in separate explicitly labeled `901 TEACHER` remediation regions.
+- **Safety boundary:** A semantic persistent note now appears outside the phase switch in primary, transfer, retrieval, and closed-note modes: `OFFLINE SIMULATION ONLY`, no real service is contacted, no real credential is accepted, and credentials must never be pasted. Existing no-network evaluation, secret redaction, and volatile-runtime warnings remain intact.
+- **Ownership:** Closed-note module → file → secret → request → response prose remains explicitly Pilot-owned and session-only. Primary and strict-mastery completion messages remain explicitly Teacher-owned; confirmed fields remain neutral System feedback.
+- **Focus:** A dedicated Client Bridge focus flag moves focus to Continue after strict mastery acknowledgement and after sanitized mastered-save reload when Continue is the next meaningful action, rather than relying on the earlier Control Flow flag.
+- **Preserved contracts:** Primary and transfer 10/10, retrieval 4/4, five-layer closed-note mastery, evidence sanitization/privacy, redaction/no-networking, close/reopen and reload behavior, canonical/narrow layout, and three pairwise-distinct captures remain intact.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/clientBridgeExercise.js`, `horizon-archive-game/test/clientBridgeExercise.test.js`, `playtest/e2e-playthrough.mjs`, refreshed Client Bridge captures, and this log.
+- **Validation:** 65/65 unit tests pass; production build passes; L-03-03 self-test, primary 10/10, transfer 10/10, and retrieval 4/4 references pass; full title-to-credits E2E passes with zero runtime errors and verifies warning persistence in all modes, ownership separation, field associations, direct/reload Continue focus, privacy, and distinct captures; `git diff --check` passes.
+- **Manifest/E2E register:** Existing `HA-PY-CLIENT-BRIDGE` contract remains correct; the E2E register now includes it plus warning, ownership, and focus flags.
+- **Next action:** Player Agent should independently test warning announcement, screen-reader order from System score to Teacher remediation, credential redaction, and Continue focus after direct and restored mastery. Do not enter L-04-01/L-04-02 before that audit.
+- **Risks:** The longer persistent warning and Teacher remediation consume additional vertical space in the canonical/narrow Terminal; both remain inside established scrollable regions and need independent narrow-screen reading-order review.
+
 ## 2026-07-12 — L-03-03 Offline Client Bridge complete Terminal gate
 
 - **Outcome:** Added `EX-L0303-CLIENT-BRIDGE` as the mandatory Terminal after Control Flow. Mastery requires packaged primary 10/10, fresh transfer 10/10, retrieval 4/4, and a five-layer closed-note module → file → secret → request → response explanation. Progression remains blocked until completion; no L-04-01 gameplay was implemented.

@@ -737,7 +737,9 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
   await page.getByText("REVIEW · file json flow", { exact: true }).waitFor();
   const bridgeEditor = page.locator("#client-bridge-source");
-  if (await bridgeEditor.getAttribute("aria-invalid") !== "true" || await bridgeEditor.getAttribute("aria-describedby") !== "bridge-status bridge-check-list") throw new Error("Client Bridge remediation was not field-associated");
+  if (await bridgeEditor.getAttribute("aria-invalid") !== "true" || await bridgeEditor.getAttribute("aria-describedby") !== "bridge-status bridge-check-list bridge-remediation") throw new Error("Client Bridge remediation was not associated with System results, checks, and Teacher guidance");
+  await page.getByText("901 TEACHER // OFFLINE AND CREDENTIAL REMEDIATION", { exact: true }).waitFor();
+  if ((await page.locator("#bridge-status").textContent()).includes("TEACHER")) throw new Error("Teacher Client Bridge remediation leaked into neutral System scoring");
   await page.setViewportSize({ width: 640, height: 480 });
   await page.screenshot({ path: qaPath("client-bridge-primary-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 1600, height: 900 });
@@ -751,6 +753,8 @@ print("Operator:", learner)`);
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.getByRole("button", { name: "Start Client Bridge Transfer", exact: true }).click();
+  await page.locator("#client-bridge-offline-warning").getByText("no real service is contacted", { exact: false }).waitFor();
+  await page.locator("#client-bridge-offline-warning").getByText("No real credential is accepted", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
   await page.getByText("REVIEW · hidden config reuse", { exact: true }).waitFor();
   await page.setViewportSize({ width: 320, height: 240 });
@@ -767,17 +771,22 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
   await page.getByRole("status").getByText("10/10", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Begin retrieval", exact: true }).click();
+  await page.locator("#client-bridge-offline-warning").waitFor();
   const bridgeFields = page.locator(".bridge-retrieval fieldset");
   for (let index = 0; index < 4; index += 1) await bridgeFields.nth(index).locator('input[type="radio"]').nth(1).check();
   await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
   await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  await page.getByText("901 TEACHER // RETRIEVAL REMEDIATION", { exact: true }).waitFor();
   for (let index = 0; index < 4; index += 1) await bridgeFields.nth(index).locator('input[type="radio"]').first().check();
   await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
   await page.getByRole("status").getByText("4/4", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
+  await page.locator("#client-bridge-offline-warning").waitFor();
+  await page.getByText("PILOT // CLOSED-NOTE EXPLANATION OWNER", { exact: true }).waitFor();
   for (const dimension of ["module", "file", "secret", "request", "response"]) await page.getByLabel(`Closed-note bridge ${dimension}`, { exact: true }).fill("wrong");
   await page.getByRole("button", { name: "Check bridge explanation", exact: true }).click();
   await page.getByRole("status").getByText("0/5", { exact: false }).waitFor();
+  await page.getByText("901 TEACHER // FIVE-LAYER REMEDIATION", { exact: true }).waitFor();
   await page.screenshot({ path: qaPath("client-bridge-closed-note-qa.png"), fullPage: true });
   assertDistinctCaptures(["client-bridge-primary-qa.png", "client-bridge-transfer-remediation-qa.png", "client-bridge-closed-note-qa.png"]);
   for (const dimension of ["module", "file", "secret", "request", "response"]) { const field = page.getByLabel(`Closed-note bridge ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `bridge-explanation-${dimension}-feedback`) throw new Error(`Client Bridge ${dimension} remediation was not field-associated`); }
@@ -789,18 +798,22 @@ print("Operator:", learner)`);
   const bridgeExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (bridgeExplanationDraft.includes("lookup named environment secret") || bridgeExplanationDraft.includes("response arrives later")) throw new Error("Client Bridge explanation leaked into localStorage");
   await page.getByRole("button", { name: "Check bridge explanation", exact: true }).click();
-  await page.getByText("Complete offline bridge confirmed", { exact: false }).waitFor();
+  await page.getByText("EXPLANATION PASS", { exact: false }).waitFor();
   await page.getByRole("checkbox", { name: "I produced this bridge explanation myself without notes.", exact: true }).check();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
+  const clientContinue = page.getByRole("button", { name: "Continue", exact: true });
+  await clientContinue.waitFor();
+  if (!await clientContinue.evaluate((element) => element === document.activeElement)) throw new Error("Client Bridge mastery did not move focus to Continue");
   const clientMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).clientBridgeEvidence, { key: saveKey });
   if (clientMastery?.masteryStatus !== "mastered" || clientMastery?.attemptCount !== 8) throw new Error(`Client Bridge mastery incomplete: ${JSON.stringify(clientMastery)}`);
   if (["learnerSource", "source", "configBody", "secretName", "secretValue", "authorizationHeader", "runtimeOutput", "freeFormExplanation"].some((key) => key in clientMastery)) throw new Error("Client Bridge mastery retained private content");
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
-  const restoredControlContinue = page.getByRole("button", { name: "Continue", exact: true });
-  await restoredControlContinue.waitFor();
-  if (!await restoredControlContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized mastered reload did not restore focus to Continue");
+  const restoredClientContinue = page.getByRole("button", { name: "Continue", exact: true });
+  await restoredClientContinue.waitFor();
+  if (!await restoredClientContinue.evaluate((element) => element === document.activeElement)) throw new Error("Sanitized Client Bridge mastery reload did not restore focus to Continue");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -949,6 +962,10 @@ print("Operator:", learner)`);
     clientBridgeRetrieval: true,
     clientBridgeClosedNote: true,
     clientBridgeStrictMastery: true,
+    clientBridgeOfflineWarningAllModes: true,
+    clientBridgeOwnership: true,
+    clientBridgeContinueFocus: true,
+    clientBridgeReloadFocus: true,
     controlFlowOwnership: true,
     controlFlowContinueFocus: true,
     controlFlowReloadFocus: true,
@@ -971,7 +988,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-002"],
     credits: true,
   }));
 } finally {

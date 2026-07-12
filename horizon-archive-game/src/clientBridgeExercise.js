@@ -69,6 +69,18 @@ export function evaluateClientBridgeExplanation(response) {
   const correctness = Object.fromEntries(clientBridgeExplanationDimensions.map((key) => [key, normalize(response[key]) === expected[key]])); return { correctness, score: Object.values(correctness).filter(Boolean).length, passed: Object.values(correctness).every(Boolean) };
 }
 export function clientBridgeRemediation(result, level) { const failed = result.failedChecks?.[0] || "bridge"; if (level <= 1) return `${failed}: identify the failed layer—module, file, secret, request, response, or safe output.`; if (level === 2) return `${failed}: trace the path to parsed config and keep the secret-variable name separate from its injected value.`; return `${failed}: label method, URL, headers, body, later response, and retry the hidden configuration without networking.`; }
+export function getClientBridgeFeedback(result, level) {
+  if (!result) return { systemScore: "Static validation only; no code or network is executed.", teacherRemediation: null };
+  return { systemScore: `${result.score}/10 · ${result.passed ? "FORM PASS · all ten offline checks confirmed." : "FORM NOT YET COMPLETE."}`, teacherRemediation: result.passed ? null : clientBridgeRemediation(result, level) };
+}
+export function getClientBridgeRetrievalFeedback(result) {
+  if (!result) return { systemScore: "Awaiting all four retrieval distinctions.", teacherRemediation: null };
+  return { systemScore: `${result.score}/4 · ${result.passed ? "RETRIEVAL PASS" : "RETRIEVAL NOT YET COMPLETE."}`, teacherRemediation: result.passed ? null : "Correct every module, installation, secret, and request/response distinction before advancing." };
+}
+export function getClientBridgeExplanationFeedback(result) {
+  if (!result) return { systemScore: "Awaiting the learner's five-layer explanation.", teacherRemediation: null };
+  return { systemScore: `${result.score}/5 · ${result.passed ? "EXPLANATION PASS · all five layers confirmed." : "EXPLANATION NOT YET COMPLETE."}`, teacherRemediation: result.passed ? null : "Keep imported code, parsed file, injected secret, offline request plan, and later response separate." };
+}
 function complete(c, form) { return clientBridgeChecks.every((key) => c[form]?.[key] === true); }
 export function sanitizeClientBridgeEvidence(value) {
   if (!value || typeof value !== "object" || value.exerciseId !== exerciseAsset.exercise_id) return null; const checkCorrectness = {};
