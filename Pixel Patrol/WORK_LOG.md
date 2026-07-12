@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Responsible AI native-frame audit
+
+- **Completed:** audited the Responsible AI primary form in the native 640 x 480 frame. The existing 624 x 344 Terminal attempted to keep its header, four-field grid, and 105 px validator simultaneously visible, collapsing the field grid to approximately 18 px in the selected QA capture. Replaced that squeeze layout inside CanonicalGameFrame with one contained form scroller; field cards now retain natural label/select/feedback height and the validator remains after the fourth field in the same reading flow. The exercise-specific outer Terminal overflow is hidden so focus scrolls the form rather than pushing title/status chrome out of view. The 320 x 240 alternate keeps its single-column form inside the same scroll contract.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log.
+- **Validation:** all 35 unit tests, production build, and full title-to-credits browser regression pass with zero runtime errors. Static checks lock the 8 px/4 px Terminal insets, canonical 624 x 344 and narrow 312 x 172 border boxes, exactly one responsible-form overflow owner, visible field-grid overflow, two-column canonical and one-column narrow grouping, and existing whole-pixel focus treatment. The refreshed native capture confirms title/status chrome remains fixed while two complete field cards, their associated remediation, validator score, and next action share the visible scrolled region; the first pair remains immediately above in the same form scroller.
+- **Next recommended item:** Location Scout should keep the Responsible AI node's four physical indicator groups vertically ordered and visually distinct so the world object foreshadows the form's principle -> stakeholder -> mitigation -> owner reading order without adding labels to the landscape.
+- **Unresolved risks:** the current capture uses Courier New and native browser selects rather than final original bitmap glyphs and controls. Preserve functional select and scrollbar affordances until equivalent accessible pixel-native replacements exist.
+
 ## 2026-07-12 — Calibration keyboard-help placement
 
 - **Completed:** resolved the Exercise Agent handoff by moving the exact ungraded keyboard-orientation sentence from between route status and task content into the persistent final row of the Calibration workspace. Locked native metrics are 102 characters, 612 px glyph run at 6 px advance, 632 px including insets, and a 19 px canonical footer. The 320 px alternate preserves the exact copy as three lines in a 43 px footer.

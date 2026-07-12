@@ -481,6 +481,9 @@ h1 {
 .canonical-game-frame .speaker,
 .canonical-game-frame .inventory-title { font-size: 5px; }
 .canonical-game-frame .terminal-workbench { inset: 8px; width: auto; height: auto; overflow: auto; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"] { overflow: hidden; }
+.canonical-game-frame .responsible-ai-form { display: block; min-height: 0; overflow: auto; }
+.canonical-game-frame .responsible-ai-fields { margin: 10px 0; overflow: visible; }
 
 .canonical-game-frame[data-canonical-layout="narrow"] .command-panel { grid-template-columns: 56px minmax(0, 1fr) 56px; gap: 2px; padding: 2px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .verb,

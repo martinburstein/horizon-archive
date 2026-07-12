@@ -61,6 +61,11 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] At 640 px it occupies one line with no clipping, ellipsis, or horizontal scroll; at 320 px it wraps to three complete lines.
 - [ ] The footer does not cover the last focusable pane control at any scroll position.
 - [ ] Focused Calibration tabs retain a visible 2 px internal outline, including when the selected tab is focused.
+- [ ] Responsible AI field cards show complete labels and selects; none collapse into border-only strips.
+- [ ] Responsible AI has one form scroller at both 640 x 480 and 320 x 240; the field grid does not create a nested scrollbar.
+- [ ] Tab order and scroll order both remain principle -> stakeholder -> mitigation -> owner -> validator -> remediation.
+- [ ] The focused select outline remains visible at the top and bottom scroll boundaries.
+- [ ] After Check, score, remediation, and the next available action are visible together in the validator region.
 
 ## No-dead-end sweep
 

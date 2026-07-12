@@ -91,3 +91,13 @@ Decision: place the exact sentence `Tab moves through this workspace. Shift+Tab 
 ## Safe failure contract
 
 Every failure response contains: what the Machine observed, one bounded cue, and one next available action. Required controls remain enabled. Hints do not reduce attempts or erase work. There are no dead ends, item-loss traps, surprise deaths, or irreversible ordinary experiments.
+
+## Responsible AI primary-form containment
+
+- The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.
+- Do not force prompt, four field cards, and validator into three simultaneously visible grid rows. The initial 640 x 480 QA capture compressed the field region to approximately 18 px, exposing only card borders and hiding the actual controls.
+- Treat the form as one vertically scrollable document: scenario header -> principle -> stakeholder -> mitigation -> accountable human owner -> validator -> remediation/action.
+- The four-field container itself must not scroll. Each card takes its natural height for label, select, and associated feedback. This prevents nested-scroll traps and keeps keyboard focus movement consistent with visual movement.
+- The validator follows the fourth field. Because the learner must reach its submit button to validate, resulting error/remediation text appears in the same visible region without an automatic viewport jump.
+- Scrollbars, borders, and focus outlines remain square and whole-pixel. Use the browser's functional scrollbar until an original accessible pixel scrollbar exists; never hide the only position cue.
+- At 640 x 480, retain the two-column field grouping. At 320 x 240, use one column and the same single form scroller. No field label, selected value, feedback association, or focus outline may be horizontally clipped.
