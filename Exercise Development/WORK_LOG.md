@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-04-04 Offline Extraction Workloads complete Terminal gate
+
+- **Outcome:** Added `EX-L0404-EXTRACTION-WORKLOADS` as the mandatory offline Terminal after Visual Workloads. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note modality → schema → missing-value → evidence-review explanation. No L-05-01 gameplay was implemented.
+- **Learning contract:** Both forms cover schema-driven extraction from documents/forms, images, audio, and video plus two integrity items: analyzer field names/types/descriptions before analysis and null/missing/provenance preservation. The gate explicitly contrasts visual description, transcript, caption, or summary with requested structured fields and rejects invented values.
+- **Offline/accessibility:** No source media, path, processing, analyzer, or service call exists. Every media scenario has a labeled text equivalent. Pilot owns choices/explanation, System owns scoring, and the 901 Teacher owns remediation/readiness; decision/reason and four explanation fields expose associated remediation.
+- **Privacy/contracts:** Persistence stores only allowlisted IDs, per-dimension booleans, attempts, maximum hint, confidence, tags, form, and mastery. Source media/paths, extracted values, service bodies, runtime output, selections, and free text never enter storage. Focus, close/reopen, reload, privacy, reduced motion, canonical 640×480, authored 320×240, and post-mastery focus remain covered.
+- **Files/validation:** Added extraction exercise model/tests; updated App, styles, manifest, E2E, this log, and three path-resolved captures. Curriculum self-test and both 12/12 references pass. All 88 unit tests and production build pass. Full E2E passes primary/transfer/explanation, strict remediation, close/reopen, reload, privacy, distinct captures, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge vision-description confusion, transcript/caption-only answers, schema-after-output, invented missing values, forged evidence, keyboard traversal, and canonical/narrow presentation before L-05-01.
+- **Unresolved risks:** Live Content Understanding analyzer schemas, field types, formats, languages, operations, versions, limits, regions, pricing, preview, and deprecation status remain deliberately excluded and require current official verification.
+
 ## 2026-07-12 — EX-L0403 Offline Visual Workloads complete gate
 
 - **Outcome:** Added mandatory `EX-L0403-VISUAL-WORKLOADS` after Speech. Packaged primary and fresh transfer each require 12/12, followed by a four-part closed-note workload/output explanation and learner ownership confirmation.

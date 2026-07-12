@@ -128,6 +128,16 @@
       "assessment_ids": ["AS-L0403-COMPARE"],
       "skills": ["AI901-D1-O7", "AI901-D2-O6", "PY-015"],
       "success_contract": "Pass both offline forms at 12/12 across image analysis, multimodal visual prompting, image generation, video generation, media validation, and output handling, then explain the workload flow without notes."
+    },
+    {
+      "id": "HA-AI901-EXTRACTION-WORKLOADS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0404-EXTRACTION-WORKLOADS",
+      "lesson_id": "L-04-04",
+      "activity_id": "A-L0404-2",
+      "assessment_id": "AS-L0404-SCEN",
+      "skills": ["AI901-D1-O8", "PY-016", "PY-020"],
+      "success_contract": "Pass both offline forms at 12/12 across four extraction modalities and schema/evidence integrity, then independently explain modality, schema, missing values, and review evidence."
     }
   ]
 }

@@ -174,6 +174,19 @@ import {
   visualTransferScenarios,
   visualWorkloadExercise,
 } from "./visualWorkloadExercise.js";
+import {
+  evaluateExtractionExplanation,
+  evaluateExtractionScenario,
+  extractionDimensions,
+  extractionExplanationDimensions,
+  extractionPrimaryScenarios,
+  extractionRemediation,
+  extractionTransferScenarios,
+  extractionWorkloadExercise,
+  getExtractionOptions,
+  sanitizeExtractionEvidence,
+  updateExtractionEvidence,
+} from "./extractionWorkloadExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -357,6 +370,7 @@ function loadSave() {
       textAnalysisEvidence: sanitizeTextAnalysisEvidence(saved.textAnalysisEvidence),
       speechEvidence: sanitizeSpeechEvidence(saved.speechEvidence),
       visualEvidence: sanitizeVisualEvidence(saved.visualEvidence),
+      extractionEvidence: sanitizeExtractionEvidence(saved.extractionEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -407,6 +421,8 @@ export function App() {
   const [speechEvidence, setSpeechEvidence] = useState(null);
   const [visualSession, setVisualSession] = useState(null);
   const [visualEvidence, setVisualEvidence] = useState(null);
+  const [extractionSession, setExtractionSession] = useState(null);
+  const [extractionEvidence, setExtractionEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -476,9 +492,10 @@ export function App() {
         textAnalysisEvidence,
         speechEvidence,
         visualEvidence,
+        extractionEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -558,6 +575,8 @@ export function App() {
     setSpeechEvidence(null);
     setVisualSession(null);
     setVisualEvidence(null);
+    setExtractionSession(null);
+    setExtractionEvidence(null);
     setMode("playing");
   }
 
@@ -596,6 +615,8 @@ export function App() {
     if (saved.visualEvidence?.masteryStatus === "mastered") focusContinueAfterVisualRef.current = true;
     setVisualEvidence(saved.visualEvidence);
     setVisualSession(null);
+    setExtractionEvidence(saved.extractionEvidence);
+    setExtractionSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1258,6 +1279,15 @@ export function App() {
   function acknowledgeVisualPrimary() { if (!visualSession?.complete || !visualEvidence?.confidence) return; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkVisualExplanation(event) { event.preventDefault(); const result = evaluateVisualExplanation(visualSession.explanationResponse); setVisualSession({ ...visualSession, explanationResult: result }); setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
   function acknowledgeVisualMastery() { if (!visualSession?.explanationResult?.passed || !visualSession.ownershipConfirmed || !visualEvidence?.confidence) return; focusContinueAfterVisualRef.current = true; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+
+  function openExtractionWorkloads() { setTerminalOpen(true); setRuinsTerminalKind("extraction-workloads"); if (!extractionSession) { const form = extractionEvidence?.masteryStatus === "primary_complete" ? "transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setExtractionSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { modality: "", schema: "", missing_value: "", evidence_review: "" }, explanationResult: null, ownershipConfirmed: false }); } }
+  function exitExtractionWorkloads() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads practice closed safely. No source media or extracted values are retained.", "system"); }
+  function checkExtraction(event) { event.preventDefault(); const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; const scenario = scenarios[extractionSession.index]; const result = evaluateExtractionScenario(scenario.id, extractionSession.response, extractionSession.form); const hintLevel = result.passed ? extractionSession.hintLevel : Math.max(1, extractionSession.hintLevel); setExtractionSession({ ...extractionSession, result, hintLevel }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: extractionSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: extractionSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealExtractionHint() { const hintLevel = Math.min(3, extractionSession.hintLevel + 1); setExtractionSession({ ...extractionSession, hintLevel }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { hintLevel })); }
+  function advanceExtraction() { if (!extractionSession.result?.passed) return; const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; if (extractionSession.index === scenarios.length - 1) { if (extractionSession.form === "transfer") { setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setExtractionSession({ ...extractionSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setExtractionSession({ ...extractionSession, complete: true }); return; } setExtractionSession({ ...extractionSession, index: extractionSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
+  function acknowledgeExtractionPrimary() { if (!extractionSession?.complete || !extractionEvidence?.confidence) return; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
+  function checkExtractionExplanation(event) { event.preventDefault(); const result = evaluateExtractionExplanation(extractionSession.explanationResponse); setExtractionSession({ ...extractionSession, explanationResult: result }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterVisualRef.current = true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2129,6 +2159,17 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "extraction-workloads" && extractionSession && (
+          <TerminalShell exerciseId={extractionWorkloadExercise.exercise_id} title="Offline Extraction Workloads" filename={extractionSession.phase === "explanation" ? "closed_note.md" : `${extractionSession.form}_extraction.json`} lessonId={extractionWorkloadExercise.lesson_id} statusText={extractionSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${extractionSession.form.toUpperCase()} ${extractionSession.index + 1}/6`} closeLabel="Exit Extraction Workloads" restoreFocusTo={terminalTriggerRef.current} onClose={exitExtractionWorkloads}>
+            <section className="model-choice-workspace extraction-workspace"><p className="model-choice-boundary">FULLY OFFLINE · no document, image, audio, video, media processing, analyzer, or service call. Reverify schemas, field types, formats, languages, SDK/REST operations, versions, limits, regions, pricing, previews, and deprecations.</p>
+              {extractionSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkExtractionExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE EXTRACTION OWNER</p><h2>Explain modality → schema → missing value → evidence review</h2><p className="speech-transcript">Text equivalent: choose document/form, image, audio, or video; define named fields before analysis; preserve missing/null; retain provenance and confidence for review.</p></header><div className="model-choice-fields extraction-explanation">{extractionExplanationDimensions.map((dimension) => { const fieldResult = extractionSession.explanationResult?.correctness[dimension]; const id = `extraction-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension.replaceAll("_", " ")}</span><input aria-label={`Closed-note extraction ${dimension}`} aria-invalid={extractionSession.explanationResult ? !fieldResult : undefined} aria-describedby={extractionSession.explanationResult ? id : undefined} autoComplete="off" value={extractionSession.explanationResponse[dimension]} onChange={(event) => setExtractionSession({ ...extractionSession, explanationResponse: { ...extractionSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{extractionSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild ${dimension.replaceAll("_", " ")} without inventing evidence.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={extractionExplanationDimensions.some((key) => !extractionSession.explanationResponse[key])}>Check extraction explanation</button></div><div className={extractionSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{extractionSession.explanationResult ? `${extractionSession.explanationResult.score}/4 · ${extractionSession.explanationResult.passed ? "Complete extraction explanation confirmed." : "901 TEACHER // Trace modality, declared schema, null/missing policy, and evidence review."}` : "No source media, path, extracted value, service response, or answer choice is shown."}</div>{extractionSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={extractionSession.ownershipConfirmed} onChange={(event) => setExtractionSession({ ...extractionSession, ownershipConfirmed: event.target.checked })} />I produced this extraction explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="extraction-confidence" checked={extractionEvidence?.confidence === value} onChange={() => setExtractionEvidence((previous) => updateExtractionEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!extractionSession.ownershipConfirmed || !extractionEvidence?.confidence} onClick={acknowledgeExtractionMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : extractionSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>12 / 12 dimensions</h2><p>Four modalities, schema-first reasoning, and missing/evidence integrity pass. Fresh transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="extraction-primary-confidence" checked={extractionEvidence?.confidence === value} onChange={() => setExtractionEvidence((previous) => updateExtractionEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!extractionEvidence?.confidence} onClick={acknowledgeExtractionPrimary}>Acknowledge primary form</button></section>
+              ) : (() => { const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; const scenario = scenarios[extractionSession.index]; const options = getExtractionOptions(scenario.id, extractionSession.form); return <form className="model-choice-form" onSubmit={checkExtraction}><header><p className="pane-label">{extractionSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // SCHEMA OWNER · {scenario.id}</p><p className="model-choice-layer-labels">DOCUMENT/FORM · IMAGE · AUDIO · VIDEO · FIELD SCHEMA · MISSING/EVIDENCE</p><h2>{scenario.prompt}</h2><p className="speech-transcript">Media-equivalent scenario text: {scenario.prompt}</p></header><div className="model-choice-fields">{extractionDimensions.map((dimension) => { const fieldResult = extractionSession.result?.correctness[dimension]; const id = `extraction-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><select aria-label={`Extraction ${dimension}`} aria-invalid={extractionSession.result ? !fieldResult : undefined} aria-describedby={extractionSession.result ? id : undefined} value={extractionSession.response[dimension]} onChange={(event) => setExtractionSession({ ...extractionSession, response: { ...extractionSession.response, [dimension]: event.target.value }, result: null })}><option value="">Choose one</option>{options[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}</select>{extractionSession.result && <small id={id}>{fieldResult ? "SYSTEM // Correct." : `901 TEACHER // Review ${dimension} from modality, requested fields, and evidence integrity.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit" disabled={extractionDimensions.some((key) => !extractionSession.response[key])}>Check extraction choice</button></div><div className={extractionSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{extractionSession.result ? `${extractionSession.result.score}/2 · ${extractionSession.result.passed ? "Choice confirmed." : extractionRemediation(scenario, extractionSession.result, extractionSession.hintLevel)}` : "Choose schema-driven extraction, then preserve missing/null and evidence for review."}</div>{extractionSession.result && !extractionSession.result.passed && <button className="hint-action" type="button" disabled={extractionSession.hintLevel >= 3} onClick={revealExtractionHint}>Reveal next extraction contrast</button>}{extractionSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceExtraction}>{extractionSession.index === 5 ? (extractionSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}</section></form>; })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2297,7 +2338,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && speechEvidence?.masteryStatus === "mastered" && visualEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openVisualWorkloads(); }}>{visualSession ? "Resume Visual Workloads" : visualEvidence?.masteryStatus === "primary_complete" ? "Start Visual Transfer" : visualEvidence?.masteryStatus === "transfer_complete" ? "Open Visual Closed-Note Gate" : "Start Visual Workloads"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || visualEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && visualEvidence?.masteryStatus === "mastered" && extractionEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openExtractionWorkloads(); }}>{extractionSession ? "Resume Extraction Workloads" : extractionEvidence?.masteryStatus === "primary_complete" ? "Start Extraction Transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "Open Extraction Closed-Note Gate" : "Start Extraction Workloads"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || extractionEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>
