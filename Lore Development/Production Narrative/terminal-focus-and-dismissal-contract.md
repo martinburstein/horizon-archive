@@ -151,6 +151,18 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal does not run code, score a form, acknowledge mastery, advance, or imply a Machine response.
 
+### Control Flow
+
+- Exact title and dismissal name: `Control Flow`; `Exit Control Flow`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; live status uses `PRIMARY n/8`, `TRANSFER n/8`, and `CLOSED-NOTE GATE`.
+- Python instruction, boundary remediation, execution-path reconstruction, and completion are `901 TEACHER // SOURCE-GROUNDED COURSE` copy.
+- Editable source is `PILOT // FUNCTION OWNER`; explanation prose is `PILOT // CLOSED-NOTE EXPLANATION OWNER`.
+- Exit line: "Control Flow closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen restores active source, result, and hints. Reload restores sanitized eligibility with clean source and explanation fields.
+- Persistent evidence excludes learner source, input records, runtime output, and explanation prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal does not run, validate, acknowledge mastery, advance, or imply a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -170,6 +182,7 @@ When acknowledgement changes progression:
 - Workload Sort mastery: prefer the scene's Continue action after the success recap.
 - Evidence mastery: prefer `Descend to the city` after the final acknowledgement recap.
 - Structured Packets mastery: prefer `Continue` after the System announces availability.
+- Control Flow mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

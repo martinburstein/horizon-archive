@@ -434,6 +434,73 @@ Hints change remediation evidence only. They never alter progression, physical g
 - Scene transition clears working source and explanation fields; sanitized mastery evidence persists separately.
 - Exit never runs code, validates, acknowledges mastery, advances progression, or changes any physical object.
 
+## Optional Control Flow practice
+
+Production alignment: `EX-L0302-CONTROL-FLOW`, lesson `L-03-02`, activity `A-L0302-2`, assessment `AS-L0302-CODE`, skills `PY-010`, `PY-011`, and `PY-012`. This course surface follows Structured Packets mastery and does not change AB-01 adventure state.
+
+### Ownership boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns Python instruction, boundary and execution-path remediation, and completion language.
+- `SYSTEM // EXPEDITION STATE` owns neutral mode, score, validation result, session state, evidence status, and progression availability.
+- `PILOT // FUNCTION OWNER` owns editable source. `PILOT // CLOSED-NOTE EXPLANATION OWNER` owns the learner's explanation prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. Control-flow results never imply Machine intent, attention, approval, judgment, or understanding.
+
+### CF00 — Open primary
+
+- Exact title/filename: `Control Flow`; `control_flow_primary.py`.
+- `SYSTEM`: "Control Flow open. PRIMARY 0/8."
+- `901 TEACHER`: "Use parameters, visit every item, select one branch, and return the completed list after the loop."
+- `PILOT // FUNCTION OWNER` indicates learner authorship; it does not teach or validate.
+
+### CF01 — Boundary and execution-path remediation
+
+The System may show the failed check and score. All repair direction remains Teacher-owned:
+
+- Parameter: "Trace one call and name the value received by each parameter."
+- Loop: "Trace one iteration, then confirm the loop visits every item."
+- Boundary: "Test equality explicitly: greater-than-or-equal includes the threshold."
+- Branch: "For each item, exactly one branch appends one result."
+- Return: "Keep append inside the loop and return once after all iterations."
+- Reuse: "Use parameters and derived output; do not mutate input or hardcode the sample."
+
+Hints affect remediation evidence only. They never alter route access, physical state, or story progression.
+
+### CF02 — Primary and unseen-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 8/8. Unseen transfer and a closed-note execution path remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE."
+- Transfer open: `SYSTEM`: "Control Flow open. TRANSFER 0/8."
+- Transfer instruction, `901 TEACHER`: "Apply the same parameter, loop, boundary, branch, and return sequence to unseen input."
+- Transfer completion: `SYSTEM`: "TRANSFER 8/8 recorded. CLOSED-NOTE GATE available."
+- Form completion changes no route geometry and produces no Tidal Lens response.
+
+### CF03 — Closed-note execution-path explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain parameter input, one loop-and-condition path, and return placement without notes."
+- Field labels: `Parameter input`, `Loop and condition`, and `Return placement`.
+- `PILOT // CLOSED-NOTE EXPLANATION OWNER`: "I produced this control-flow explanation myself without notes."
+- `SYSTEM` reports only `0/3` through `3/3` and dimension confirmation. Teacher owns all reconstruction prompts.
+- Explanation fields and ownership confirmation remain session-only.
+
+### CF04 — Mastery and progression handoff
+
+- `901 TEACHER`: "Control Flow mastery confirmed: primary, unseen transfer, and closed-note flow are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence contains identifiers, check booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Learner source, input records, runtime output, and explanation prose are never retained as mastery evidence.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### CF05 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Control Flow closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Control Flow restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Control Flow restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active source, result, and hints. Reload restores sanitized evidence and eligible mode with clean fields.
+- Scene transition clears working source and explanation fields; sanitized mastery evidence persists separately.
+- Exit never runs, validates, acknowledges mastery, advances progression, or changes any physical object.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -485,4 +552,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Model/deployment volatile product facts remain Teacher-owned and require current official-source revalidation.
 - Structured Packets Python/JSON instruction and remediation remain Teacher-owned; System copy reports state only.
 - Structured Packets source, raw JSON, runtime output, and explanation prose never enter persistent mastery evidence.
+- Control Flow Python instruction, remediation, and completion remain Teacher-owned; System copy reports state only.
+- Control Flow source, input records, runtime output, and explanation prose never enter persistent mastery evidence.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

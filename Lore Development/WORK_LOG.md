@@ -81,3 +81,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, trigger labels, status strings, eight checks, three explanation dimensions, `L-03-01` IDs, evidence sanitizer, same-session restoration, reload eligibility, scene-transition contract, and post-mastery Continue gating. Reviewed all added copy for speaker ownership, compactness, privacy, terminology, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should separate Teacher remediation from the System validator presentation, expose the closed-note explanation as Pilot-owned, and restore focus to Continue after mastery acknowledgement.
 - **Unresolved risks:** Runtime remediation currently appears inside a System-labeled validator, and Teacher/System completion lines may still appear beneath the generic dialogue footer. This lore-only pass did not change gameplay code.
+
+## 2026-07-12 — Control Flow continuity
+
+- **Outcome:** Added the bounded interaction contract for playable `EX-L0302-CONTROL-FLOW`: compact open, boundary remediation, primary/unseen-transfer transition, three-part closed-note execution path, strict mastery, safe session restoration, privacy, and Continue handoff. Python instruction, remediation, and completion remain Teacher-owned; state and validation remain neutral; learner prose remains Pilot-owned.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked the live title, filenames, trigger labels, status strings, eight checks, three explanation dimensions, `L-03-02` IDs, evidence sanitizer, same-session restoration, reload eligibility, scene-transition contract, and post-mastery Continue focus. Reviewed all added copy for speaker ownership, compactness, privacy, terminology, and mystery safety.
+- **Next recommended item:** Coder/Exercise Agent should preserve the explicit Teacher prefix on every remediation path, keep System results neutral, and verify Continue focus after mastery in keyboard and reload playtests.
+- **Unresolved risks:** Teacher completion dialogue may still appear beneath the generic Pilot footer outside the Terminal. This lore-only pass did not change gameplay code.
