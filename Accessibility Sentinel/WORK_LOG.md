@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-12 — Round 12 final release gate
+
+- **Outcome:** passed the complete Offline Client Bridge Terminal with documented AT risks after associating its persistent offline/no-credential warning with the named dialog. Held the physical motif candidate because its isolated keyed-secret socket is not reliably distinguishable at native grayscale.
+- **Files:** `horizon-archive-game/src/App.jsx`, `playtest/e2e-playthrough.mjs`, `Accessibility Sentinel/round-12/FINAL_RELEASE_REPORT.md`, and this log.
+- **Validation:** 65/65 tests, production build, L-03-03 self-test, and full E2E passed with zero runtime errors; three captures and motif isolation/grayscale evidence were inspected.
+- **Findings:** screen-reader/live-region, forced-colors, and zoom remain untested; motif integration requires native no-color recognition evidence and live semantic safeguards.
+- **Handoff:** revise and user-test the keyed-secret station against request/response isolation before Coder integration.
+- **Status:** `terminal release gate passed with documented risks; motif candidate held`
+
 ## 2026-07-12 — Round 11 final release gate
 
 - **Outcome:** completed the bounded accessibility gate for the full Control Flow Terminal and native flow motif. Ownership/announcement structure, narrow reading order, labels/errors, closed-note Pilot ownership, direct and reload Continue focus, sanitizer/privacy/forgery resistance, dialog/session/reload, scaling, distinct captures, and inlet-to-outlet grayscale trace pass. No implementation fix was warranted.

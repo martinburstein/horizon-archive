@@ -733,6 +733,7 @@ print("Operator:", learner)`);
   if (["learnerSource", "source", "inputRecords", "runtimeOutput", "freeFormExplanation"].some((key) => key in controlMastery)) throw new Error("Control-flow mastery retained private content");
   await page.getByRole("button", { name: "Start Client Bridge", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"]').waitFor();
+  if (await page.locator('[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"]').getAttribute("aria-describedby") !== "client-bridge-offline-warning") throw new Error("Offline/no-credential warning was not associated with the Client Bridge dialog announcement");
   await page.getByText("OFFLINE SIMULATION ONLY", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Validate bridge", exact: true }).click();
   await page.getByText("REVIEW · file json flow", { exact: true }).waitFor();
