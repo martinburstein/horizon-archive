@@ -175,3 +175,11 @@
 - **Validation:** exact native `256 x 64` and nearest-neighbor/isolation `512 x 128`; all six grayscale tile pairs distinct; signal components `[1, 1, 1, 2]`; recognition/synthesis/multimodal direction cues join their paths; cancellation retains two capped halves and hard gap; four 64 x 64 crops fit the 68 x 76 hotspot; world/footer separation and links pass.
 - **Next recommended item:** Accessibility Sentinel should verify native grayscale recognition, synthesis, multimodal, and cancellation plus transcript requirements. Coder may integrate with live labels and reversible cancellation.
 - **Unresolved risks:** physical geometry cannot carry speech content, consent, timing, language, or error semantics. Live labels, transcripts, and accessible controls remain mandatory.
+
+## 2026-07-12 — Information Extraction physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible motif with four modality apertures feeding a schema lattice, intentional empty-null socket, separate value and evidence/confidence paths, and a broken invented-value rejection spur.
+- **Files changed:** added `production-pixel/AB-01/information-extraction/` native motif, renderer, specification, exact 2x, grayscale, and ten-tile component-isolation QA; linked it from the AB-01 package. No gameplay, scene, interface, extracted data, or lore changed.
+- **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; modality/lattice/null/value/evidence/reject isolation pairs remain distinct in grayscale; modality feeders and accepted outputs form one connected lattice network while rejection retains an isolated fracture; null interior remains intentionally empty; evidence return differs from value channel; painted bounds fit the 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should identify modalities, empty null, value/evidence paths, and rejection at native grayscale; Coder must expose live labels/text equivalents and explain null versus false/zero.
+- **Unresolved risks:** physical geometry cannot define schema semantics, evidence quality, confidence meaning, or extraction errors. Live teaching content remains authoritative.
