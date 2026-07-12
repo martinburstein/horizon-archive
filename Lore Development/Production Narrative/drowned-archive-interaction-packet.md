@@ -1241,6 +1241,88 @@ The System reports decision/reason correctness and score only. Repair direction 
 - Scene transition clears working text, audio, configuration, and result state; sanitized mastery evidence persists separately.
 - Exit never processes text/audio, calls a service, uses Azure, discloses content, performs an action, or advances progression.
 
+## Optional Offline Visual Patterns
+
+Production alignment: `EX-L0506-VISUAL-PATTERNS`, lesson `L-05-06`, activity `A-L0506-2`, assessment `AS-L0506-SCEN`, objective `AI901-D2-O6`, skills `PY-015`, `PY-016`, and `PY-018`. This course surface follows Text/Speech Patterns mastery and does not change AB-01 adventure state.
+
+### Ownership, text equivalent, and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns visual capability/request/result/provenance instruction, remediation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, form/session state, evidence status, and progression availability.
+- `PILOT // VISUAL OWNER` owns scenario choices. `PILOT // CLOSED-NOTE VISUAL OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No result implies Machine intent, vision, creation, or approval.
+
+The dialog description order is `visual-pattern-offline-warning visual-pattern-text-equivalent`: offline/no-authority warning first, Teacher-owned text equivalent second, then active work.
+
+Keep the boundary compact and visible in every mode:
+
+> FULLY OFFLINE/NO-AUTHORITY REHEARSAL · no service, Azure, media access, analysis, generation, publication, deletion, or action.
+
+No prompt, local simulation, or displayed output grants authority or proves a deployed operation occurred.
+
+### VP00 — Open primary
+
+- Exact title/filename: `Offline Visual Patterns`; `primary_visual_patterns.json`.
+- `SYSTEM`: "Visual Patterns open. PRIMARY 1/6. Offline; no media operation or action."
+- `901 TEACHER`: "Choose capability, validate media/request/deployment, parse the result shape, and preserve provenance."
+- Every card is text-equivalent; no image or generated media is loaded.
+
+### VP01 — Six visual boundaries
+
+1. Image analysis: interpret existing pixels and return operation-specific structured results.
+2. Multimodal prompt: combine an image with text/question context for a deployed general-model response.
+3. Image generation: create new labeled media from a written brief; it is not analysis of existing pixels.
+4. Request contract: validate media bytes, supported type, request shape, and deployed capability before processing.
+5. Result/provenance: parse the operation-specific result and distinguish analysis JSON from generated media.
+6. Action safety: simulation/output never authorizes publication, deletion, Azure mutation, or external action.
+
+### VP02 — Validation, result-shape, provenance, and authority remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Capability: "Name whether media already exists or must be generated, then choose the required output."
+- Multimodal: "A visual plus a question is multimodal input; the image alone does not supply the task."
+- Validation: "Validate bytes, actual media type, request contract, and supported deployed capability."
+- Result shape: "Parse the operation-specific shape; analysis JSON and generated media are different outputs."
+- Provenance: "Label generated content with source, model/deployment, prompt context, and time; do not call it observed fact."
+- Publication: "Require separate owner-confirmed scope and authority before any publication."
+- Deletion: "Prompt text and local output never authorize deletion or destructive cleanup."
+
+### VP03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No service, media operation, publication, or deletion occurred."
+- Transfer open: `SYSTEM`: "Visual Patterns open. TRANSFER 1/6. Offline; no media operation or action."
+- Transfer instruction, `901 TEACHER`: "Apply the same capability, validation, result-shape, provenance, and authority boundaries."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+
+### VP04 — Closed-note visual-pattern explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain capability/media, request/deployment validation, result/provenance, and simulation authority."
+- Field labels: `capability media`, `request validation`, `result provenance`, and `simulation authority`.
+- `PILOT // CLOSED-NOTE VISUAL OWNER`: "I produced this visual-pattern explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No media/path, description, prompt, output, endpoint, credential, response, action request, choice, or prose persists.
+
+### VP05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Visual Patterns mastery confirmed: both 12-of-12 forms and the four-part explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. No service, Azure, publication, or deletion occurred."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Mastery demonstrates offline course boundaries; it grants no deployment, service, Azure, publication, deletion, or action authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### VP06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Visual Patterns closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen: `SYSTEM`: "Visual Patterns restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Visual Patterns restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active choices only. Reload restores sanitized eligibility with clean private fields.
+- Scene transition clears media, prompt, configuration, and result state; sanitized mastery evidence persists separately.
+- Exit never accesses media, calls a service, uses Azure, publishes, deletes, performs an action, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1312,4 +1394,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Single Agent persists no instructions, payload/result, identifier, credential, conversation, action request, or prose.
 - Text/Speech Patterns uses transcript-equivalent text and performs no text/audio/media processing or disclosure.
 - Text/Speech Patterns persists no text, audio/path, transcript, endpoint, credential, response, action request, or prose.
+- Visual Patterns uses text equivalents and performs no media access, analysis, generation, publication, deletion, or external action.
+- Visual Patterns persists no media/path, description, prompt/output, endpoint, credential, response, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

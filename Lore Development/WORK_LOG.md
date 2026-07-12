@@ -169,3 +169,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, description association, six scenarios per form, all six boundaries, strict cancellation/disclosure/action probes, four explanation dimensions, `L-05-05` IDs, evidence sanitizer, session/reload/transition behavior, zero-processing/action boundary, and Continue gate. Reviewed copy for ownership, compactness, privacy, authority, accessibility, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should preserve the warning/transcript-equivalent association, explicit Teacher remediation, neutral System scoring, and Continue focus after mastery.
 - **Unresolved risks:** Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.
+
+## 2026-07-12 — Offline Visual Patterns continuity
+
+- **Outcome:** Added the bounded interaction contract for playable `EX-L0506-VISUAL-PATTERNS`: image analysis, multimodal prompting, generation, media/request/deployment validation, operation-specific result shape, provenance, simulation, publication/deletion safeguards, primary/transfer, four-part closed-note explanation, mastery, restoration, privacy, and Continue handoff.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked live title, filenames, description association, six scenarios per form, all six boundaries, strict provenance/publication/deletion probes, four explanation dimensions, `L-05-06` IDs, evidence sanitizer, session/reload/transition behavior, zero-media/action boundary, and Continue gate. Reviewed copy for ownership, compactness, privacy, provenance, authority, accessibility, and mystery safety.
+- **Next recommended item:** Coder/Exercise Agent should preserve the warning/text-equivalent association, explicit Teacher remediation, neutral System scoring, and Continue focus after mastery.
+- **Unresolved risks:** Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.

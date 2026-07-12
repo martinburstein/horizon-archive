@@ -286,6 +286,20 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never processes media, calls a service, uses Azure, discloses content, performs an action, or implies a Machine response.
 
+### Offline Visual Patterns
+
+- Exact title and dismissal name: `Offline Visual Patterns`; `Exit Visual Patterns`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario cards use `n/6`.
+- Description order is `visual-pattern-offline-warning visual-pattern-text-equivalent`, then active work.
+- Capability, media/request/deployment validation, result shape, provenance, safeguards, remediation, and completion remain `901 TEACHER` copy.
+- Scenario choices are `PILOT // VISUAL OWNER`; explanation prose is `PILOT // CLOSED-NOTE VISUAL OWNER`.
+- The visible boundary states no service, Azure, media access, analysis, generation, publication, deletion, or external action.
+- Exit line: "Visual Patterns closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen restores active choices only. Reload restores sanitized eligibility with clean media/prompt/configuration/result fields.
+- Persistent evidence excludes media/path, descriptions, prompts/outputs, endpoint, credential, response, action request, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never accesses media, calls a service, uses Azure, publishes, deletes, performs an action, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -315,6 +329,7 @@ When acknowledgement changes progression:
 - Client Boundaries mastery: prefer `Continue` after the System announces availability.
 - Single Agent mastery: prefer `Continue` after the System announces availability.
 - Text/Speech Patterns mastery: prefer `Continue` after the System announces availability.
+- Visual Patterns mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 
