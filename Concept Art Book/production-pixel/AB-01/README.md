@@ -12,6 +12,7 @@
 - **Palette:** [32 swatches](qa/palette-swatches-32.png)
 - **States:** [1x strip](qa/terminal-state-strip-1x.png) · [2x strip](qa/terminal-state-strip-2x.png)
 - **Canonical framing:** [measured 640×480 available/complete study](CANONICAL_FRAME.md)
+- **Responsible AI motif:** [four-group physical Terminal package](responsible-ai/README.md)
 
 ## Originality gate
 

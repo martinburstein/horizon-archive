@@ -79,3 +79,11 @@
 - **Validation:** both native frames are exactly `640×480`; both 2× frames are byte-exact nearest-neighbor `1280×960`; world rows `0–359` are byte-identical to the selected production world; footer rows `461–479` are byte-identical across states and contain only the seam/fill colors; available uses 28 colors and complete uses 29.
 - **Next recommended item:** Accessibility Sentinel should verify the exact 102-character orientation sentence against this footer field at native width and the authored narrow layout; Player Agent should verify route completion never competes with footer/help readability after integration.
 - **Unresolved risks:** this is framing evidence, not live UI. Runtime focus order, exact text rendering, narrow three-line wrapping, letterboxing, and recovery behavior remain to be verified after Coder integration.
+
+## 2026-07-12 — Responsible AI physical Terminal motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible physical Terminal motif with four vertically ordered, non-text indicator groups for principle → stakeholder → mitigation → accountable owner; supplied a five-step geometry/value sequence and exact nearest-neighbor QA.
+- **Files changed:** added `production-pixel/AB-01/responsible-ai/` motif, renderer, specification, and QA; linked it from the AB-01 production package. No gameplay code or lore changed.
+- **Validation:** native RGBA asset is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; sequence strips are exact `320 x 64` and `640 x 128`; painted motif is 48 x 61; existing 68 x 76 hotspot remains ≥44 x 44 at 1x; four groups remain ordered and separated; each completed step changes geometry and value; no text, antialiasing, reference pixels, or footer overlap.
+- **Next recommended item:** Accessibility Sentinel should test the 1x sequence in grayscale and with low vision, ensuring the four group geometries remain distinguishable; Coder should use the existing AB-01 anchor/hotspot and keep live field labels available when the interface opens.
+- **Unresolved risks:** the physical motif communicates order, not the full semantic names. Accessible text labels and the exact beginner-facing field names remain mandatory in the live Terminal interface.
