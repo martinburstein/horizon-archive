@@ -58,6 +58,16 @@
       "activity_id": "A-L0507-3",
       "skills": ["AI901-D2-O7", "PY-015", "PY-016", "PY-020"],
       "success_contract": "Pass all 12 deterministic schema, provenance, false-versus-null, modality, and uncertainty checks."
+    },
+    {
+      "id": "HA-AI901-MODEL-PRIMARY",
+      "scene": "ruins",
+      "exercise_id": "EX-L0203-MODEL-DEPLOYMENT-CHOICES",
+      "lesson_id": "L-02-03",
+      "activity_id": "A-L0203-3",
+      "assessment_id": "AS-L0203-COMPARE",
+      "skills": ["AI901-D1-O2-MODEL-COMPONENTS", "AI901-D1-O3-DEPLOYMENT-CONFIG"],
+      "success_contract": "Complete the course-authored primary form at 16/16 across mechanics, model choice, deployment choice, and configuration; transfer remains deferred."
     }
   ]
 }

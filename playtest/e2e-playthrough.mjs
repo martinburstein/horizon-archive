@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
+import referenceModelChoicePrimary from "../curriculum/lessons/L-02-03/reference_primary_answers.json" with { type: "json" };
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -464,6 +465,48 @@ print("Operator:", learner)`);
   if (responsibleAIMastery?.masteryStatus !== "mastered" || responsibleAIMastery?.form !== "explanation" || responsibleAIMastery?.attemptCount !== 16) throw new Error(`Responsible AI strict mastery evidence incomplete: ${JSON.stringify(responsibleAIMastery)}`);
   if (Object.keys(responsibleAIMastery.dimensionCorrectness || {}).length !== 13 || Object.values(responsibleAIMastery.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI two-form plus explanation gate incomplete");
   if (["response", "choices", "reasoning", "explanation", "freeFormReasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIMastery)) throw new Error("Responsible AI mastery evidence retained private response content");
+
+  await page.getByRole("button", { name: "Start Model Choices", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0203-MODEL-DEPLOYMENT-CHOICES"]').waitFor();
+  await page.locator(".model-choice-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
+  await page.getByText("prices, parameter support, and preview status must be reverified", { exact: false }).waitFor();
+  await page.getByLabel("Model choice decision", { exact: true }).selectOption("retrieve_exact_fact_from_database");
+  await page.getByLabel("Model choice reason", { exact: true }).selectOption("generation_is_deterministic_when_a_prompt_repeats");
+  await page.getByRole("button", { name: "Check decision and reason", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  for (const dimension of ["decision", "reason"]) {
+    const field = page.getByLabel(`Model choice ${dimension}`, { exact: true });
+    const feedbackId = `model-choice-${dimension}-feedback`;
+    if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== feedbackId) throw new Error(`Model choice ${dimension} remediation was not field-associated`);
+  }
+  await page.getByRole("button", { name: "Reveal next comparison step", exact: true }).click();
+  await page.getByText("Compare the two options", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
+  const systemSpeaker = page.locator('.speaker[data-dialogue-owner="system"]');
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
+  if (await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "generation_is_deterministic_when_a_prompt_repeats") throw new Error("Model choice session reset after close/reopen");
+  const modelChoiceDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (!modelChoiceDraftSave || JSON.parse(modelChoiceDraftSave).modelChoiceEvidence?.attemptCount !== 1) throw new Error("Model choice attempt evidence missing");
+  if (modelChoiceDraftSave.includes("retrieve_exact_fact_from_database") || modelChoiceDraftSave.includes("generation_is_deterministic_when_a_prompt_repeats") || modelChoiceDraftSave.includes("language model producing")) throw new Error("Model choice working choices or prompt leaked into localStorage");
+  for (const scenarioId of Object.keys(referenceModelChoicePrimary)) {
+    const answer = referenceModelChoicePrimary[scenarioId];
+    await page.getByLabel("Model choice decision", { exact: true }).selectOption(answer.decision);
+    await page.getByLabel("Model choice reason", { exact: true }).selectOption(answer.reason);
+    await page.getByRole("button", { name: "Check decision and reason", exact: true }).click();
+    await page.getByText("Choice confirmed", { exact: false }).waitFor();
+    await page.getByRole("button", { name: scenarioId === "P08" ? "View primary result" : "Next scenario", exact: true }).click();
+  }
+  await page.getByRole("heading", { name: "16 / 16 dimensions", exact: true }).waitFor();
+  await page.getByText("Transfer and a closed-note explanation remain", { exact: false }).waitFor();
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  const teacherSpeaker = page.locator('.speaker[data-dialogue-owner="teacher"]');
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
+  const modelChoiceEvidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).modelChoiceEvidence, { key: saveKey });
+  if (modelChoiceEvidence?.exerciseId !== "EX-L0203-MODEL-DEPLOYMENT-CHOICES" || modelChoiceEvidence?.attemptCount !== 9 || modelChoiceEvidence?.hintLevel !== 2 || modelChoiceEvidence?.confidence !== "medium" || modelChoiceEvidence?.masteryStatus !== "primary_complete") throw new Error(`Model choice primary evidence incomplete: ${JSON.stringify(modelChoiceEvidence)}`);
+  if (Object.keys(modelChoiceEvidence.itemCorrectness || {}).length !== 8 || Object.values(modelChoiceEvidence.itemCorrectness).some((dimensions) => Object.keys(dimensions).length !== 2 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Model choice strict primary gate incomplete");
+  if (["response", "choices", "freeFormExplanation", "promptText", "runtimeOutput"].some((key) => key in modelChoiceEvidence)) throw new Error("Model choice primary evidence retained private response content");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -594,6 +637,10 @@ print("Operator:", learner)`);
     responsibleAITransfer: true,
     responsibleAIClosedNoteExplanation: true,
     responsibleAIStrictMastery: true,
+    modelChoicePrimary: true,
+    modelChoiceFourFamilies: true,
+    modelChoiceSessionPrivacy: true,
+    dialogueOwnershipMode: true,
     evidencePacketExercise: true,
     witnessTerminalAsset: true,
     witnessTwoObjectSemantics: true,
@@ -608,7 +655,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-PRIMARY", "HA-AI901-002"],
     credits: true,
   }));
 } finally {
