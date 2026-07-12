@@ -158,6 +158,16 @@
       "assessment_id": "AS-L0502-PROMPT",
       "skills": ["AI901-D2-O1", "PY-004", "PY-012"],
       "success_contract": "Pass both offline forms at 12/12 and explain prompt layers, grounding/output, text-versus-authority safety, and representative/adversarial evaluation."
+    },
+    {
+      "id": "HA-AI901-CLIENT-BOUNDARIES",
+      "scene": "ruins",
+      "exercise_id": "EX-L0503-CLIENT-BOUNDARIES",
+      "lesson_id": "L-05-03",
+      "activity_id": "A-L0503-3",
+      "assessment_ids": ["AS-L0503-CODE", "AS-L0503-REFLECT"],
+      "skills": ["AI901-D2-O3", "PY-013", "PY-014", "PY-016", "PY-017", "PY-018", "PY-019"],
+      "success_contract": "Pass deterministic mock, both offline forms at 12/12, and explain configuration, client layers, request/response, and simulation authority."
     }
   ]
 }

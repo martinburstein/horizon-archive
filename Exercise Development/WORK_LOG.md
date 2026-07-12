@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-05-03 Offline Mock Client Boundaries gate
+
+- **Outcome:** Added `EX-L0503-CLIENT-BOUNDARIES` as the mandatory gate after Prompt Layers. Mastery requires deterministic `mock_client.py` PASS, primary 12/12, fresh transfer 12/12, and a four-part closed-note explanation. No L-05-04 gameplay was implemented.
+- **Learning/safety:** Covers endpoint, credential, deployment name, project-client versus compatible inference-client layers, request versus response, and simulation/no-action proof boundaries. Endpoint/deployment confusion and fabricated live success fail. A persistent warning states that mock/prompt text cannot authorize Azure, service, credential, deployment, creation, deletion, or other external action.
+- **Privacy/ownership:** Evidence stores allowlisted IDs, mock boolean, dimension booleans, attempts, hints, confidence, tags, form, and mastery only. Configuration values, source, credentials, request/response content, action requests, selections, and free text never persist. Pilot owns mock/choices/explanation, System validates, and Teacher owns remediation/readiness.
+- **Validation:** Mock output matches the package; validator self-test passes; both forms pass 12/12 with MOCK PASS. All 106 unit tests and production build pass. Full E2E passes mock, forms, closed-note, close/reopen, reload, privacy, distinct captures, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge invalid endpoints, authorization failures, deployment selectors, wrong client layers, missing input, fabricated response success, destructive-action language, and canonical/narrow layout before L-05-04.
+- **Unresolved risks:** This remains a deterministic offline simulation and proves no live configuration, access, authorization, or service behavior.
+
 ## 2026-07-12 — Prompt Layers continuity closure
 
 - **Outcome:** Closed only the L-05-02 continuity contract. Primary, transfer, and closed-note System regions now contain neutral deterministic scores/status, while prompt-layer, injection, authority, and adversarial-evaluation coaching appears in separate explicitly labeled 901 Teacher remediation.
