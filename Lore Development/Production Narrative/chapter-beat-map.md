@@ -29,15 +29,17 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 
 1. Arrival in apparent paradise. The survey craft reports no population, recent traffic, distress beacon, or obvious catastrophe. The meadow's ecology is healthy enough to make the word "ruin" feel premature.
 2. The crystal bloom responds to visible output. The important event is not translation; it is that the interface accepts a human-readable declaration without any visible negotiation.
-3. At the Drowned Archive, a grounded three-fin Terminal opens a human-authored Workload Sort while the monumental suspended structure remains silent. The player learns to classify bounded jobs and, by contrast, to leave the landmark uncategorized when evidence is insufficient.
-4. In the Witness Corridor, a separate grounded Evidence Terminal validates a human-authored multimodal packet. After acknowledgement, the fallen automaton produces its own bounded response; the two events remain separately attributed.
-5. A deliberate beginner error produces useful human-tooling feedback while the local surface remains stable. Failure demonstrates a recoverable mediation layer; it does not prove that the Machine authored the lesson.
-6. City lighting begins a new sequence below. The prologue closes when the expedition arrival appears under a provisional translated field, `continuation`, whose meaning remains unstable.
+3. A visible Route Marker remains prerequisite-locked until First Signal acknowledgement. It then teaches variables, value types, reassignment, prediction, and retrieval before adding completed directional geometry to the meadow path.
+4. At the Drowned Archive, a grounded three-fin Terminal opens a human-authored Workload Sort while the monumental suspended structure remains silent. The player learns to classify bounded jobs and, by contrast, to leave the landmark uncategorized when evidence is insufficient.
+5. In the Witness Corridor, a separate grounded Evidence Terminal validates a human-authored multimodal packet. After acknowledgement, the fallen automaton produces its own bounded response; the two events remain separately attributed.
+6. A deliberate beginner error produces useful human-tooling feedback while the local surface remains stable. Failure demonstrates a recoverable mediation layer; it does not prove that the Machine authored the lesson.
+7. City lighting begins a new sequence below. The prologue closes when the expedition arrival appears under a provisional translated field, `continuation`, whose meaning remains unstable.
 
 ### Required discoveries
 
 - Builder sites can be beautiful, functional, and empty at once.
 - Local interfaces accept simple Python-like operations through the human translation layer.
+- One local surface can expose a prerequisite relationship without refusing, judging, or understanding the learner.
 - A verified local Terminal and a monumental nearby structure are not automatically the same object or speaker.
 - A responsive automaton and a nearby Evidence Terminal are not automatically the same interface or evidence owner.
 - The system distinguishes an open archive from a complete witness.

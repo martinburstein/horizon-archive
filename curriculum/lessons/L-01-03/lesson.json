@@ -1,0 +1,29 @@
+{
+  "lesson_id": "L-01-03",
+  "lesson_title": "Errors, indentation, and debugging mindset",
+  "lesson_type": "confidence_rebuilding_lesson",
+  "chapter_id": "chapter-01",
+  "module_id": "ch1-m3",
+  "launch_tier": "launch_critical",
+  "source_mode": "invented_bridge_with_supporting_reference",
+  "supports_objectives": [],
+  "supports_python_skills": ["PY-007"],
+  "prerequisite_lesson_ids": ["L-01-02"],
+  "source_ids": [
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf"
+  ],
+  "activity_ids": ["A-L0103-1", "A-L0103-2"],
+  "assessment_ids": ["AS-L0103-DBG"],
+  "learner_starting_state": "Has completed L-01-02, can edit variables and predict output, but may interpret a traceback as failure rather than location evidence.",
+  "learner_ending_state": "Can identify error type and file line in a short traceback, repair one misspelled variable and one indentation error, rerun both forms, and explain that code errors do not alter the completed physical route.",
+  "mastery_gate": "Diagnose both starter errors before repair, earn 8 of 8 on traceback and indentation forms, answer all four retrieval items, and resolve every critical debugging misconception.",
+  "estimated_minutes": 40,
+  "difficulty_band": "absolute_beginner",
+  "provenance_policy": {
+    "citation_expectation": "Python debugging instruction and calibration-copy framing are course-authored bridge material supported by the named local reference; no Microsoft product claim is made.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Do not blame a Machine object for errors in the human expedition copy, do not imply that mistakes affect route access, and do not represent this package as official Microsoft instruction."
+  },
+  "status": "review",
+  "notes": "Dependency-safe successor to L-01-02. Adventure traversal remains open independently of lesson mastery."
+}

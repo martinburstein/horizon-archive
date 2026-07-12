@@ -10,7 +10,9 @@ Terminals are small exposed surfaces of a much larger system. Their language mus
 - A Terminal can respond to input without understanding it as a person.
 - A Terminal can accept a record without approving its interpretation.
 
-The current playable implementation preserves the active meadow exercise when its workbench is closed and reopened during the same scene. It resets that working session at a new expedition, after acknowledged completion, and when the player advances to another scene. The lines below make those boundaries legible in the fiction.
+The current playable implementation preserves an active meadow exercise when its workbench is closed and reopened during the same application session. First Signal acknowledgement closes the Petal session and unlocks the separate Route Marker lesson. A full reload starts a clean working form while preserving sanitized mastery evidence; scene transition clears both working sessions. The lines below make those boundaries legible in the fiction.
+
+Final presentation targets a `640 × 480` square-logical-pixel, 4:3 canvas with the adventure scene above a compact dialogue/verb/inventory area. The current `320 × 180` meadow renderer is a provisional scene module inside that composition, not the overall game resolution. Terminal and dialogue copy should be short enough to avoid scrolling during ordinary interaction.
 
 ## Speaker channels
 
@@ -27,6 +29,8 @@ Use only one channel per line. Do not blend the pilot's inference into interface
 The dark editor belongs to the human expedition's mediation layer. Python is real, but the UI must not claim that Python is the Builders' native language. Preferred formulation: the expedition link translates valid local Python operations into a bounded request the exposed surface can answer.
 
 When more than one object is present, append the source object in script data or visible copy, for example `LOCAL SURFACE // PROVISIONAL TRANSLATION — AUTOMATON`. Never let an unattributed “it” cross from a Terminal action to a landmark or automaton response.
+
+When two Terminals share a scene, prerequisite state does not transfer exercise ownership. The Petal Terminal may complete and activate a Route Marker, but it does not validate the Route Marker exercise; the Route Marker may mark direction, but it does not reinterpret First Signal.
 
 ## Continuity vocabulary
 
@@ -115,21 +119,22 @@ Assistance is recorded for remediation and mastery evidence only. It must never 
 ### T10 — Acknowledgement and evidence transfer
 
 - Expedition link: "Record transferred. The working file has not been retained in expedition evidence."
-- Physical response: "The lowest petal turns toward the distant basin. A line of light crosses the meadow and stops at the water."
+- Physical response: "The Petal core settles. The visible Route Marker gains a pale core and one short groove."
 - Evidence payload (`OBSERVED`): The local surface changed state after the mediation layer transferred a valid visible-output record with a source designation.
-- Reframing line / Pilot: "The bloom didn't give me an answer. It gave my next question a direction."
+- Reframing line / Pilot: "The small node changed after the transfer. That supports a sequence, not an audience."
 
-### T11 — Transfer to the next scene
+### T11 — Transfer to the Route Marker lesson
 
-- Continue action: `Follow the signal`
-- Scene-exit narration: "The workbench clears when you leave the node's range. The accepted record remains in the flight recorder; the unfinished session does not follow."
-- Next-scene arrival: "Across the water, a grounded three-fin node carries the same violet line. The suspended structure above the island remains silent."
+- Petal workbench closes; no scene transition occurs.
+- Route Marker state changes from prerequisite-locked to awake.
+- Next action: `USE Route Marker`.
+- The meadow completes only after Route Marker mastery adds directional geometry to the path.
 
-This confirms coordination only at the observable level. It does not establish a conscious sender, a chosen recipient, or real-time intent.
+This confirms a local state sequence only at the observable level. It does not establish a conscious sender, a chosen recipient, or real-time intent.
 
 ## First Signal implementation copy deck
 
-This is the preferred coherent copy set for `terminal-l0101-independent-run`, lesson `L-01-01`, activity `A-L0101-3`, skills `PY-001`, `PY-002`, and `PY-003`.
+This technical copy set supports `terminal-l0101-independent-run`, lesson `L-01-01`, activity `A-L0101-3`, skills `PY-001`, `PY-002`, and `PY-003`. The current state-transition authority is `glass-meadow-dual-node-interaction-packet.md`.
 
 | Event ID | Trigger | Channel | Player-facing copy | Evidence tag |
 |---|---|---|---|---|
@@ -148,9 +153,9 @@ This is the preferred coherent copy set for `terminal-l0101-independent-run`, le
 | `FS-13` | Second hint | Expedition link | "Guidance 2 of 2: try `learner = \"PILOT\"`, then print the label `Operator:` with the `learner` variable." | Learning assist |
 | `FS-14` | Valid run | Expedition link | "Output verified. The file produced all three expected lines. Review them before transfer." | Learning result |
 | `FS-15` | Valid run | Local surface | "VISIBLE SIGNAL CONFIRMED. SOURCE DESIGNATION PRESENT." | `BUILDER_LABEL` |
-| `FS-16` | Acknowledge | Physical response | "The node repeats the output as measured light. One petal turns toward the flooded ruins." | `OBSERVED` |
-| `FS-17` | Acknowledge | Pilot | "It accepted a visible signal and a name. That is evidence of a protocol, not proof of an audience." | `HUMAN_INFERENCE` |
-| `FS-18` | Continue | Scene narration | "A line of light crosses the meadow and stops at the water." | `OBSERVED` |
+| `FS-16` | Acknowledge | Physical response | "The Petal core settles. The visible Route Marker gains an active core and short groove." | `OBSERVED` |
+| `FS-17` | Acknowledge | Pilot | "The small node changed after the transfer. That supports a sequence, not an audience." | `HUMAN_INFERENCE` |
+| `FS-18` | New owner | System | "First Signal complete. Use the awake Route Marker for the next lesson." | UI status |
 
 ### Prologue personhood correction
 
@@ -185,17 +190,9 @@ Later encounters may echo the same state grammar without repeating the meadow wo
 
 Vary physical response by environment—petal movement, reflected geometry, lens aperture, city illumination—while keeping the epistemic distinction stable.
 
-## 901 Teacher handoff: spoiler-safe teaching opportunity
+## Sequential teaching handoff
 
-Use the Terminal's session language to teach a compact beginner distinction among **source code**, **runtime output**, and **saved mastery evidence**:
-
-- Source code is the learner's editable working copy and is cleared at the scene boundary.
-- Runtime output is the immediate result of running the file and can be reviewed before acknowledgement.
-- Mastery evidence records lesson/activity IDs, attempts, hint use, and completion—not the learner's submitted code.
-
-Recommended retrieval prompt: "After closing and reopening the Terminal, which state should remain, and which event should clear it? Explain why preserving an unfinished working copy is different from saving a program as evidence."
-
-This reinforces `PY-001`–`PY-003`, prepares the learner for files and state later, and supports privacy-conscious evidence collection without making an AI-901 product claim.
+The Glass Meadow now owns the dependency-safe `L-01-01 → L-01-02` sequence. After Route Marker mastery, the next build is `L-01-03` for `PY-007`: diagnose a small traceback and indentation fault in a human expedition calibration copy while the completed physical route remains open. Full copy and safety constraints are in `glass-meadow-dual-node-interaction-packet.md`.
 
 ## Validation checklist
 

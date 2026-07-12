@@ -12,6 +12,17 @@ These are modular writing patterns, not a final dialogue script. They are design
 
 One line gets one owner. Split multi-source events into sequential lines. An unattributed pronoun must not carry agency from one hotspot to another.
 
+### Compact pixel-UI copy
+
+The final game targets a `640 × 480` 4:3 square-logical-pixel canvas with the scene above a compact dialogue/verb/inventory UI. The current `320 × 180` meadow is a provisional scene module, not the full display.
+
+- Prefer one observation or instruction per box.
+- Keep pilot and scene copy near 110 characters when practical.
+- Keep translated surface conditions near 52 characters.
+- Put validator detail in the Terminal panel, not the adventure dialogue strip.
+- Button labels should be short verb phrases and should not wrap.
+- Never require a scroll to understand the next useful action.
+
 ## Voice palette
 
 ### Pilot / flight recorder
@@ -92,6 +103,17 @@ When a responsive relic or automaton shares a scene with a Terminal:
 - A response timed after Terminal completion must be written as a second event with a second owner.
 - Correlated timing supports `CORRELATED`, not listening, approval, identity, or consciousness.
 - `USE` on the archaeological subject should report the absence of a bounded work surface or a human safety limit; never silently redirect to the Terminal.
+
+## Visible prerequisite-locked surface
+
+When a later Terminal is visible before its prerequisite:
+
+- `LOOK AT` describes the dark core and inactive geometry.
+- `USE` names the unmet prerequisite and the exact currently usable hotspot.
+- `TALK TO` may preserve a pilot reflection plus bounded non-detection.
+- The object stays selectable so experimentation teaches the sequence.
+- Unlocking changes visible geometry but does not imply waking consciousness.
+- Wrong actions never reset completed work or consume a finite resource.
 
 ## Success-message scaffold
 

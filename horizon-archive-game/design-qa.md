@@ -23,6 +23,9 @@ The first comparison exposed a duplicated textbox because the supplied raster al
 
 ## Interaction and accessibility checks
 
+- Glass Meadow is an original `320×180` code-assembled pixel scene, presented only at integer scales with no canvas smoothing. Desktop and 320px QA: `../playtest/glass-meadow-pixel-desktop-qa.png`, `../playtest/glass-meadow-pixel-narrow-qa.png`, and `../playtest/glass-meadow-pixel-completed-qa.png`.
+- Petal and Route Marker targets are stage-relative, non-overlapping, keyboard/pointer operable, and geometry-tested across locked, awake, and completed states. The compact Terminal leaves meaningful world art visible and preserves the dark dialogue panel.
+
 - Title screen, new game, verb selection, hotspots, inventory, hint toggle, incorrect-answer retry, correct-answer progression, local save, ending gate, and credits were exercised.
 - All interactive elements are native buttons or labeled inputs and are keyboard focusable.
 - Browser console errors checked: none.

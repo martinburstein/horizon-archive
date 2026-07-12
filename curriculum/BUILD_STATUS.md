@@ -34,5 +34,6 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded reference package `L-02-01`
 - [x] Built source-grounded offline-first reference package `L-05-07`
 - [x] Built sequential zero-Python package `L-01-02`
-- [ ] Build sequential confidence-rebuilding package `L-01-03`
+- [x] Built sequential confidence-rebuilding package `L-01-03`
+- [ ] Build next unimplemented sequential package `L-02-02` (`L-02-01` already complete)
 - [ ] Expand original question banks and full timed simulations

@@ -10,7 +10,7 @@ Andromeda survey corridor
 │       └── GM-01 Glass Meadow [selected dual-node direction / playable]
 ├── World B — Archive Basin World [active]
 │   └── Drowned Archive Basin
-│       └── AB-01 Drowned Archive [selected Terminal direction / playable]
+│       └── AB-01 Drowned Archive [production pixel package ready / smooth plate currently playable]
 ├── World C — Witness World [active]
 │   └── Witness Complex
 │       └── WC-01 Witness Corridor [selected Evidence Terminal direction / playable]

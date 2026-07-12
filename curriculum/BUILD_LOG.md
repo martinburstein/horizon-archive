@@ -203,3 +203,25 @@ Validation:
 - existing reference-package regression scripts: pass
 Next step: Exercise Agent should implement `EX-L0102-ROUTE-MARKER`; next Teacher package in sequence is `L-01-03`.
 Notes: This is generated bridge instruction, not official Microsoft product guidance. The route marker repeats human-authored output without implying understanding or renaming. No gameplay code changed.
+
+## Log entry: 2026-07-12T03:11:39-04:00
+
+Stage: Sequential zero-Python learner expansion
+Action: Built complete `L-01-03` confidence-rebuilding package for traceback reading, misspelled-variable repair, indentation repair, and controlled rerun using a human expedition calibration copy while preserving the completed adventure route.
+Files touched:
+- curriculum/lessons/L-01-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- live AI-901 guide and all four priority Foundry/Azure sources checked for downstream alignment: pass
+- lesson/activity/assessment schema contracts: pass
+- traceback and indentation references: 8/8 each
+- real starter errors match required NameError line 2 and IndentationError line 3 diagnoses: pass
+- hardcoded bypass, quoted boolean, and unrelated-edit negative fixtures: pass
+- route-open, privacy, reset, compact 640x480, and accessibility contracts: pass
+- existing curriculum package regression scripts: pass
+Next step: Exercise Agent should implement `EX-L0103-CALIBRATION-DEBUG`; next unimplemented Teacher package in sequence is `L-02-02`.
+Notes: Generated bridge instruction only. Errors belong to the human expedition copy; failures never affect the route or consume access. No gameplay code changed.

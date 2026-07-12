@@ -80,7 +80,32 @@ h1 {
 .title-note { margin: 28px 0 0; color: #8c8495; font-size: 0.68rem; }
 
 .adventure-screen { display: grid; grid-template-rows: minmax(0, 74vh) minmax(220px, 26vh); }
-.scene-frame { position: relative; min-height: 0; overflow: hidden; border-bottom: 5px solid #292630; }
+.scene-frame { position: relative; min-height: 0; overflow: hidden; border-bottom: 5px solid #292630; container-type: size; }
+
+.pixel-scene-host {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #080912;
+}
+.pixel-scene-stage { position: relative; flex: none; overflow: visible; }
+.pixel-scene-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.adventure-screen[data-scene="meadow"] .terminal-workbench {
+  inset: auto 18px 18px auto;
+  width: min(880px, 58vw);
+  height: min(460px, calc(100% - 100px));
+  border-width: 2px;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #05050a;
+}
 
 .scene-status {
   position: absolute;
@@ -256,6 +281,24 @@ h1 {
 .route-retrieval-list legend { padding: 0 5px; color: #cbd2dc; font-size: 0.66rem; line-height: 1.35; }
 .route-retrieval-list select { width: 100%; min-width: 0; margin-top: 7px; padding: 7px; color: #dce2ea; background: #171b22; border: 1px solid #4a5360; font-size: 0.66rem; }
 .route-retrieval-list p { margin: 7px 0 0; color: #d1bd87; font-size: 0.62rem; }
+.terminal-workbench[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"] { border: 2px solid #667080; box-shadow: 6px 6px 0 #05060a; }
+.calibration-workspace { display: grid; grid-template-rows: auto auto minmax(0, 1fr); min-height: 0; background: #101319; font-family: "Courier New", monospace; }
+.calibration-pane-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 2px solid #303844; }
+.calibration-pane-tabs button { padding: 7px 4px; color: #9da7b4; background: #171b22; border: 0; border-right: 1px solid #303844; text-transform: uppercase; font-size: 0.62rem; cursor: pointer; }
+.calibration-pane-tabs button[aria-current="page"], .calibration-pane-tabs button:hover { color: #f0e7cf; background: #292334; }
+.calibration-route-status { margin: 0; padding: 6px 10px; color: #d7c079; background: #090b0f; border-bottom: 1px solid #38414c; font-size: 0.62rem; letter-spacing: 0.08em; }
+.calibration-pane { min-height: 0; padding: 16px; overflow: auto; }
+.calibration-pane h2 { margin: 5px 0 10px; color: #edf0f4; font: 1.1rem/1.15 Georgia, "Times New Roman", serif; }
+.calibration-pane p { color: #b5bec9; font-size: 0.7rem; line-height: 1.45; }
+.calibration-pane pre { max-width: 100%; margin: 10px 0; padding: 12px; overflow: auto; color: #e1c98d; background: #090b0f; border: 1px solid #3c4652; font-size: 0.72rem; line-height: 1.5; white-space: pre-wrap; }
+.calibration-diagnosis-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
+.calibration-diagnosis-grid label, .calibration-retrieval label { display: grid; gap: 5px; color: #aab3bf; font-size: 0.66rem; }
+.calibration-diagnosis-grid select, .calibration-retrieval select { min-width: 0; padding: 7px; color: #e0e5eb; background: #171b22; border: 1px solid #4a5360; font-family: inherit; }
+.calibration-source-pane { display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; }
+.calibration-source-pane textarea { width: 100%; height: 100%; min-height: 120px; padding: 12px; resize: none; color: #d7e5c9; background: #090b0f; border: 1px solid #46515e; font-family: inherit; font-size: 0.76rem; line-height: 1.5; }
+.calibration-retrieval { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.calibration-retrieval > .pane-label, .calibration-retrieval > h2, .calibration-retrieval > p, .calibration-retrieval > button { grid-column: 1 / -1; }
+.calibration-launch { background: #263542; }
 
 .command-panel {
   position: relative;
@@ -292,6 +335,7 @@ h1 {
 }
 .dialogue-copy p { margin: 0 0 16px; color: #ddd5c6; font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.48; }
 .dialogue-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.dialogue-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .continue-action {
   padding: 8px 13px;
   color: #f0e2bd;
@@ -333,6 +377,9 @@ h1 {
 
 @media (max-width: 760px) {
   .adventure-screen { grid-template-rows: 55vh minmax(360px, 45vh); overflow: auto; }
+  .adventure-screen[data-scene="meadow"][data-terminal-open="false"] { grid-template-rows: 56.25vw minmax(360px, 1fr); }
+  .adventure-screen[data-scene="meadow"][data-terminal-open="true"] { grid-template-rows: 55vh minmax(360px, 45vh); }
+  .adventure-screen[data-scene="meadow"][data-terminal-open="true"] .pixel-scene-host { place-items: start center; }
   .adventure-screen[data-scene="ruins"] .scene-art { object-position: 70% top; }
   .adventure-screen[data-scene="automaton"] .scene-art { object-position: center top; }
   .hotspot {
@@ -353,6 +400,14 @@ h1 {
   .inventory { grid-template-columns: auto 1fr 1fr; align-items: center; border-left: 0; border-top: 1px solid #35313b; padding: 8px 0 0; }
   .inventory button { padding: 7px; }
   .terminal-workbench { inset: 4.8rem 8px 8px; overflow: auto; }
+  .adventure-screen[data-scene="meadow"] .terminal-workbench {
+    inset: calc(56.25vw + 6px) 8px 8px;
+    width: auto;
+    height: auto;
+    box-shadow: 4px 4px 0 #05050a;
+  }
+  .adventure-screen[data-scene="meadow"] .task-pane { max-height: 88px; padding: 10px 12px; }
+  .adventure-screen[data-scene="meadow"] .editor-stack { min-height: 260px; }
   .editor-layout { grid-template-columns: 1fr; }
   .task-pane { max-height: 180px; border-right: 0; border-bottom: 1px solid #303640; }
   .editor-stack { min-height: 380px; }
@@ -369,6 +424,8 @@ h1 {
   .route-stack { min-height: 520px; }
   .route-retrieval-stack { min-height: 650px; }
   .route-retrieval-list { grid-template-columns: 1fr; }
+  .calibration-diagnosis-grid, .calibration-retrieval { grid-template-columns: 1fr; }
+  .calibration-pane-tabs button { font-size: 0.55rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

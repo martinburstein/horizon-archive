@@ -1,0 +1,128 @@
+{
+  "exercise_id": "EX-L0103-CALIBRATION-DEBUG",
+  "lesson_id": "L-01-03",
+  "activity_id": "A-L0103-2",
+  "assessment_id": "AS-L0103-DBG",
+  "objective_ids": [],
+  "skill_ids": ["PY-007"],
+  "title": "Expedition Calibration Copy",
+  "forms": {
+    "traceback": {
+      "starter_file": "calibration_traceback.py",
+      "reference_file": "reference_traceback.py",
+      "diagnosis_required_before_edit": {
+        "error_type": "NameError",
+        "line_number": 2,
+        "named_token": "route_lable"
+      },
+      "expected_output": ["ROUTE VERIFIED"]
+    },
+    "indentation": {
+      "starter_file": "calibration_indentation.py",
+      "reference_file": "reference_indentation.py",
+      "diagnosis_required_before_edit": {
+        "error_type": "IndentationError",
+        "line_number": 3,
+        "named_token": "print"
+      },
+      "expected_output": ["CALIBRATION READY"],
+      "fresh_form": true
+    }
+  },
+  "mastery": {
+    "required_points_per_form": 8,
+    "total_points_per_form": 8,
+    "retrieval_required": 4,
+    "diagnoses_required_before_edit": 2,
+    "critical_checks_must_pass": true
+  },
+  "critical_error_codes": [
+    "E_PARSE",
+    "E_SAFE_SHAPE",
+    "E_STATEMENT_COUNT",
+    "E_VARIABLE_SET",
+    "E_VALUE",
+    "E_REPAIR_STRUCTURE",
+    "E_OUTPUT",
+    "E_REPAIR_BOUNDARY"
+  ],
+  "misconception_tags": [
+    "traceback-is-punishment",
+    "line-number-is-random",
+    "random-edits-are-debugging",
+    "indentation-is-decoration",
+    "code-error-closes-route"
+  ],
+  "route_safety_contract": {
+    "adventure_route_before_attempt": "open",
+    "adventure_route_after_failure": "open",
+    "adventure_route_after_exit": "open",
+    "adventure_route_after_mastery": "open",
+    "finite_attempt_resource": false,
+    "unique_lore_in_failure_branch": false,
+    "exit_calibration_always_available": true,
+    "mastery_can_resume_later": true
+  },
+  "remediation_routes": {
+    "E_PARSE": "Read the final error type and named line before changing source.",
+    "E_SAFE_SHAPE": "Keep only the supplied assignment, print, and—on the transfer form—if block.",
+    "E_STATEMENT_COUNT": "Undo unrelated edits and repair one boundary only.",
+    "E_VARIABLE_SET": "Compare the undefined name character by character with the earlier assignment.",
+    "E_VALUE": "Preserve the supplied literal value; this exercise repairs structure, not content.",
+    "E_REPAIR_STRUCTURE": "Trace the variable name or indent the line that belongs beneath the colon.",
+    "E_OUTPUT": "Rerun after one repair and compare the single expected output line.",
+    "E_REPAIR_BOUNDARY": "Do not bypass the target with hardcoded or unrelated replacement code."
+  },
+  "session_contract": {
+    "close_reopen_same_scene": "restore_source_diagnosis_results_and_hint_level",
+    "full_reload": "restore_clean_form_and_keep_mastery_evidence",
+    "scene_transition": "clear_working_source_traceback_and_scratch_state",
+    "mastery_evidence": "persist_separately"
+  },
+  "evidence_contract": {
+    "store": [
+      "lesson_id",
+      "activity_id",
+      "exercise_id",
+      "form_id",
+      "diagnosis_correctness",
+      "check_results",
+      "attempt_count",
+      "hint_level",
+      "confidence",
+      "misconception_tags",
+      "mastery_status"
+    ],
+    "do_not_store": [
+      "learner_source_code",
+      "traceback_text",
+      "runtime_output_text",
+      "learner_free_form_notes"
+    ]
+  },
+  "compact_ui_contract": {
+    "logical_canvas": [640, 480],
+    "square_logical_pixels": true,
+    "nearest_neighbor_presentation": true,
+    "single_active_pane": true,
+    "pane_order": ["task", "source", "output_traceback", "hint", "acknowledgement"],
+    "max_source_lines_without_scroll": 8,
+    "max_traceback_lines_without_scroll": 4,
+    "persistent_text_status": ["file_name", "form_name", "route_open"],
+    "smooth_modern_editor_chrome_forbidden": true
+  },
+  "accessibility_contract": {
+    "keyboard_order": ["task", "source", "run", "output_traceback", "hint", "acknowledgement", "exit"],
+    "status_announced": true,
+    "color_only_feedback_forbidden": true,
+    "time_limit_seconds": null,
+    "reduced_motion_preserves_state": true,
+    "traceback_selectable_text": true,
+    "error_message_persists_until_next_run": true
+  },
+  "acceptance_commands": [
+    "python validate_calibration.py --self-test",
+    "python validate_calibration.py --form traceback --check reference_traceback.py",
+    "python validate_calibration.py --form indentation --check reference_indentation.py"
+  ]
+}

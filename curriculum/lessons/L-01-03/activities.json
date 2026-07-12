@@ -1,0 +1,33 @@
+[
+  {
+    "activity_id": "A-L0103-1",
+    "lesson_id": "L-01-03",
+    "activity_type": "debug",
+    "purpose": "Read a short NameError traceback, identify its line, repair one misspelled variable, and rerun.",
+    "interaction_mode": "guided",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 15,
+    "input_contract": "Learner runs calibration_traceback.py, records NameError and line 2 before editing, then repairs the human expedition copy.",
+    "output_contract": "Traceback form earns 8/8 and prints ROUTE VERIFIED; the completed physical route remains available throughout.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0103-2",
+    "lesson_id": "L-01-03",
+    "activity_type": "checkpoint",
+    "purpose": "Transfer traceback-reading habits to a fresh indentation failure and repair the block structure.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 17,
+    "input_contract": "Learner runs calibration_indentation.py, records IndentationError and line 3 before editing, then indents the supplied print call inside the if block.",
+    "output_contract": "Indentation form earns 8/8, prints CALIBRATION READY, passes retrieval, and records no learner source or traceback text as durable mastery evidence.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review",
+    "notes": "Exercise Agent handoff activity; compact UI, route safety, privacy, reset, and accessibility contracts are in exercise.json."
+  }
+]

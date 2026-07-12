@@ -7,6 +7,7 @@
 - **World / region:** World B / Drowned Archive Basin
 - **Production status:** Integrated as the playable prologue ruins plate
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
+- **Production-pixel successor:** [AB-01 available 640×360](../production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../production-pixel/AB-01/README.md)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
 - **Purpose:** Give the playable L-02-01 Workload Sort exercise a distinct, grounded physical Terminal while preserving the suspended archive as the environmental landmark.
 
@@ -52,6 +53,11 @@
 - Neighboring visual link: [GM-01 Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
 
 ## Production record
+
+- **Next implementation asset:** `Concept Art Book/production-pixel/AB-01/ab01-available-640x360.png`
+- **State overlays:** `Concept Art Book/production-pixel/AB-01/states/terminal-*-64x64.png`
+- **Production logical hotspot:** `x=156, y=205, w=68, h=76`
+- **Pixel authorship:** original integer-coordinate renderer; no concept pixels sampled, traced, downscaled, or filtered.
 
 - **Final prompt:** [Prompt HA-LS-002](../prompt-provenance-log.md#ha-ls-002)
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation

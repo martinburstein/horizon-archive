@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-12 — Coder production-pixel vertical slice
+
+- **Completed:** translated GM-01 into a new hand-authored `320×180` integer-rectangle scene instead of shipping or filtering the exploration plate. Petal Terminal, three-fin Route Marker, survey craft, route, depth bands, and three redundant interaction states are built directly on the logical grid.
+- **Files changed:** new meadow renderer/component/tests and pixel contract; game/App/CSS/E2E integration; GM-01, design, exercise, and QA records.
+- **Validation:** 26 unit tests, production build, and the four-exercise title-to-credits E2E pass. Runtime checks cover no smoothing, integer scale/letterbox, state geometry, ≥44px targets, pointer/Enter access, scene-visible Terminal docking, save/privacy, and zero console errors.
+- **Next recommended item:** Lore Keeper Agent should use the implemented ownership contract: Petal owns First Signal; the Route Marker remains locked until Petal acknowledgement, then owns route training and shows completed directional geometry only after mastery.
+- **Unresolved risks:** ruins, corridor, city, and most Terminal chrome still use the earlier high-resolution presentation and need separate future pixel translations; this tranche intentionally converts only Glass Meadow.
+
 ## 2026-07-12 — Production pixel-art direction
 
 - **Completed:** replaced the earlier concept-as-authority assumption with a two-tier pipeline: high-resolution concept plates provide inspiration for mood, palette, scale, composition, and interaction intent; final game assets must be intentionally rebuilt on a low-resolution square-logical-pixel grid.
@@ -55,3 +63,11 @@
 - **Validation:** selected PNG is `1672 x 941`; exact three-fin marker, two distinct silhouettes, separate light pools, open path, current-state cues, desktop top-crop, centered 320–375px crop, source continuity, 44px-safe targets, clean-master rules, and spoiler safety pass; local Markdown links validated.
 - **Next recommended item:** Player Agent should test whether a first-time player distinguishes the route marker from ordinary meadow monoliths before hover, understands its locked state, and returns to it after completing First Signal at desktop and 320px widths.
 - **Unresolved risks:** the narrow framing intentionally omits the ship and trims the Petal Terminal's far-left decorative outer edge while preserving its core and actionable crown. Awake-state cues are documented but require a verified state variant or restrained runtime treatment.
+
+## 2026-07-12 — AB-01 production pixel tranche
+
+- **Completed:** authored an original Drowned Archive directly at `640 x 360`; delivered background, four state overlays/composites, native and exact nearest-neighbor 2x QA, palette swatches, state strip, geometry, originality record, and twelve-point handoff.
+- **Files changed:** new `production-pixel/AB-01/` package and renderer; updated book README, map, index, AB-01 sheet, provenance, and work log. No gameplay code changed.
+- **Validation:** 27 scene colors from a 32-color library; exact dimensions/modes; byte-exact nearest-neighbor 2x; square hard pixels; 45 x 57 painted Terminal; 68 x 76 hit box; route/safe zones; outline/cluster/dither limits; four geometry/value states; originality gate.
+- **Next recommended item:** Player Agent should inspect the 1x plate for landmark → Terminal → route readability. After Coder integration, verify default action, keyboard/pointer access, state progression, and recovery on the canonical 640 x 480 canvas.
+- **Unresolved risks:** runtime letterboxing, unified world/UI scaling, cursor/action cluster, save, and no-dead-end behavior require integration. The smooth AB-01 asset remains exploration-only.

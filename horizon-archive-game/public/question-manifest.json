@@ -22,6 +22,16 @@
       "success_contract": "Predict before Run, pass primary and transfer at 8/8, and answer all four retrieval distinctions."
     },
     {
+      "id": "HA-PY-003",
+      "scene": "meadow",
+      "exercise_id": "EX-L0103-CALIBRATION-DEBUG",
+      "lesson_id": "L-01-03",
+      "activity_id": "A-L0103-2",
+      "assessment_id": "AS-L0103-DBG",
+      "skills": ["PY-007"],
+      "success_contract": "Diagnose both errors before editing, pass both repairs at 8/8, answer retrieval 4/4, and keep ROUTE OPEN."
+    },
+    {
       "id": "HA-AI901-001",
       "scene": "ruins",
       "exercise_id": "EX-L0201-WORKLOAD-SORT",

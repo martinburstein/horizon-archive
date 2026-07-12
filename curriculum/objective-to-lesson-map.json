@@ -64,7 +64,7 @@
           ],
           "activity_ids": ["A-L0103-1", "A-L0103-2"],
           "assessment_ids": ["AS-L0103-DBG"],
-          "mastery_gate": "can read a simple traceback and attempt a fix"
+          "mastery_gate": "diagnose both starter errors before editing, pass traceback and indentation forms at 8 of 8, and pass all four retrieval items"
         }
       ]
     },

@@ -22,7 +22,8 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 ## Sequential learner expansion
 
 - `curriculum/lessons/L-01-02` — complete bridge package for strings, numbers/booleans, assignment, reassignment, prediction, and visible variable-backed output
-- next dependency-safe package: `L-01-03`
+- `curriculum/lessons/L-01-03` — complete confidence-rebuilding package for traceback location, NameError repair, indentation repair, and dead-end-free experimentation
+- `L-02-01` is already complete; next unimplemented dependency-safe package: `L-02-02`
 
 ## Ready now
 

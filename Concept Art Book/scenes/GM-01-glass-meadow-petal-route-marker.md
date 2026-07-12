@@ -5,7 +5,7 @@
 - **Scene ID:** GM-01
 - **Player-facing survey name:** Glass Meadow
 - **World / region:** World A / Twilight Highlands
-- **Production status:** Selected concept target; not integrated
+- **Production status:** Exploration reference translated into an original playable pixel scene
 - **Image:** [glass-meadow-petal-route-marker-v1.png](../images/glass-meadow-petal-route-marker-v1.png)
 - **Original environment reference:** [Alien Meadow.png](../../Concept%20Art/Alien%20Meadow.png)
 - **Arrival continuity:** [GM-00 Landing Shelf](GM-00-glass-meadow-landing-shelf.md)
@@ -50,6 +50,11 @@ Core value, groove value, and pool size provide redundant state cues so status d
 - **Must avoid:** generic monolith marker, merged hit areas, joined light pools, projected UI, text, combat, or any explanation of the larger system.
 
 ## Production record
+
+- **Production pixel master:** code-assembled `320 × 180` canvas in `horizon-archive-game/src/pixelMeadow.js`; the `1672 × 941` exploration plate is not imported by the game.
+- **Presentation:** whole-number nearest-neighbor scaling with centered letterboxing; `3×` at 1600×900 gameplay and `1×` at 320×900.
+- **Implemented logical targets:** Petal `x 36–59%, y 22–83%`; Route Marker `x 75–89%, y 48–84%`.
+- **State implementation:** locked cross/dark groove, awake core/ring/short groove, and completed stepped acknowledgement/directional groove alter silhouette geometry as well as value.
 
 - **Final prompt set:** [Prompt HA-LS-004](../prompt-provenance-log.md#ha-ls-004)
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation plus one targeted anatomy/crop edit

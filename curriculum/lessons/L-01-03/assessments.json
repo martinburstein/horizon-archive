@@ -1,0 +1,17 @@
+[
+  {
+    "assessment_id": "AS-L0103-DBG",
+    "lesson_id": "L-01-03",
+    "assessment_type": "debug_code",
+    "supports_objectives": [],
+    "supports_python_skills": ["PY-007"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Require diagnosis before edit, 8/8 on both deterministic forms, and four retrieval answers. Preserve route access and completed form progress after every miss; remediate only the named error boundary.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review",
+    "notes": "Critical misses: error-type confusion, line-location confusion, random-edit debugging, indentation-as-decoration, or belief that code failure closes the adventure route."
+  }
+]

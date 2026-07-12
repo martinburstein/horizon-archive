@@ -145,3 +145,14 @@ Edit only the small route-marker Terminal. Rebuild it with exactly three translu
 ### Selection review
 
 Passed after one targeted edit: exactly three marker fins; dark prerequisite state; distinct Petal and marker silhouettes; separate light pools; open path; desktop and 320–375px crop survival; ship/landmark/source continuity; no text or spoiler content.
+
+## HA-PP-001 — AB-01 production pixel authorship
+
+- **Date:** 2026-07-12
+- **Selected output:** [production-pixel/AB-01/ab01-available-640x360.png](production-pixel/AB-01/ab01-available-640x360.png)
+- **Mode:** deliberately authored code-native raster; built-in generation was not used because smooth generation would violate the exact-grid contract
+- **Source:** [build_ab01_pixel.py](production-pixel/AB-01/build_ab01_pixel.py)
+- **Exploration boundary:** mood, palette family, flooded scale, and interaction intent only; the renderer does not open the concept plate.
+- **Original design:** right-side split Tidal Lens, suspended lozenge, left-entry bent causeway, left-middle node, right stair exit.
+- **Raster method:** integer shapes and 1–2 px lines on native `640 x 360`; explicit 32-color library; no antialias, resize, trace, sample, or pixel filter.
+- **Rebuild:** `python "Concept Art Book/production-pixel/AB-01/build_ab01_pixel.py"`

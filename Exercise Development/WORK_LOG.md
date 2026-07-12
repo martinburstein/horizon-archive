@@ -1,5 +1,27 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Route-safe Calibration Debugger
+
+- **Outcome:** Added optional post-route `EX-L0103-CALIBRATION-DEBUG` / `A-L0103-2` / `AS-L0103-DBG` in the completed Glass Meadow. Route acknowledgement still opens traversal immediately; Start/Resume Calibration appears beside Continue, and Exit Calibration is always available without changing the completed physical route.
+- **Skill practiced:** `PY-007`: locate error type/file/line/token, diagnose before editing, repair one misspelled name, repair one indentation boundary, rerun deliberately, and treat tracebacks as evidence rather than punishment.
+- **Mastery flow:** Pre-edit diagnosis requires `NameError / line 2 / route_lable` and `IndentationError / line 3 / print`. Each repaired form requires 8/8, retrieval requires 4/4, confidence is captured, and resolved critical misconception tags are cleared at acknowledgement.
+- **Compact UI:** The calibration workspace shows one pane at a time with persistent file, form, and `ROUTE OPEN` text. Source fits within eight lines, tracebacks within four, borders and controls use crisp square-pixel treatment, and the layout remains usable at 320px through integer-pixel meadow presentation and Terminal scrolling.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/src/calibrationExercise.js`, `horizon-archive-game/test/calibrationExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, and `playtest/e2e-playthrough.mjs`.
+- **Validation:** Thirty unit tests pass. The curriculum self-test covers two valid forms, two real starter tracebacks, and three negative fixtures; both references pass 8/8. Production build and full title-to-credits Playwright regression pass with no runtime errors. Desktop and 320px calibration QA captures verify pane/status/exit presentation.
+- **Accessibility and safety:** Native controls follow task → source → Run → output → hint → acknowledgement → exit; traceback and output are selectable and announced; errors remain until the next Run; no timer or attempt limit exists; route state never depends on color or animation; Continue remains available after every exit.
+- **Mastery evidence:** Persists only allowlisted IDs, form, diagnosis correctness, form/retrieval check booleans, attempts, maximum hint level, confidence, misconception tags, and mastery status. Learner source, traceback, runtime output, notes, and selections remain in memory only and reset on reload/new expedition/scene transition.
+- **Next action:** Pixel Patrol should measure and specify compact Curse-era guidance for the four-pane tab strip, 1-pixel frame hierarchy, traceback/error emphasis, button clusters, monospace bitmap sizing, selected-tab silhouette, and `ROUTE OPEN` status placement at the canonical 640×480 canvas.
+- **Risks:** The current compact workspace is a functional pixel-system approximation. Font metrics and exact pane/button spacing need Pixel Patrol's measured benchmark before becoming the production aesthetic standard.
+
+## 2026-07-12 — Coder pass: Glass Meadow production pixels
+
+- **Outcome:** First Signal and Route Marker now inhabit an original `320×180` production-pixel scene with separate silhouettes and locked/awake/completed geometry. Terminal panels dock compactly so the scene stays visible while the editor remains scrollable and keyboard reachable.
+- **Files changed:** `src/PixelMeadow.jsx`, `src/pixelMeadow.js`, `test/pixelMeadow.test.js`, App/styles/E2E, production contract, GM-01/design/location records, and desktop/320/completed QA captures.
+- **Validation:** 26/26 tests, build, and complete E2E pass. All four exercises, dependency gates, retries, privacy allowlists, reload/resume, forged-save defense, final acknowledgement, credits, and runtime error monitoring remain intact.
+- **Accessibility:** Canvas has a two-object alternative description; both silhouettes retain native semantic buttons, visible focus, pointer and Enter activation, and ≥44px targets at desktop and 320px. State never relies on color alone.
+- **Next action:** Lore Keeper Agent should preserve interface ownership and write only surface-safe responses for Petal locked/awake/completed and Route Marker locked/awake/completed states.
+- **Risks:** Narrow Terminal workspaces use intentional vertical scrolling below a fully visible 320×180 scene; the editor remains reachable but cannot be shown in full simultaneously at 320px.
+
 ## 2026-07-12 — Dependency-safe Route Marker Terminal
 
 - **Outcome:** Added `EX-L0102-ROUTE-MARKER` / `A-L0102-3` as a separate meadow hotspot and Machine Terminal after `L-01-01`. Completing the first Python file now wakes the route marker instead of advancing directly; only route-marker mastery unlocks the ruins.

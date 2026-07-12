@@ -8,6 +8,8 @@ The final game should feel like a lost turn-of-the-millennium point-and-click ad
 
 The four existing plates establish mood, palette, scale, landmark language, and interaction intent. They are inspiration, not literal layouts or production-ready game art. Each was visually inspected at its native `1672 x 941` landscape size.
 
+The [LucasArts adventure-game lineage](https://en.wikipedia.org/wiki/LucasArts_adventure_games) is a broad production reference for readable point-and-click staging, scene-first interfaces, verb/context interaction, deliberate dithering and pixel craft, expressive silhouettes, and player-friendly experimentation without routine dead ends. It is not a license to reproduce any particular game's characters, scenes, jokes, compositions, icons, or interface.
+
 | Reference | What it establishes |
 |---|---|
 | [Alien Meadow](../Concept%20Art/Alien%20Meadow.png) | Violet/peach sky, faceted crystalline ecology, monumental centered landmark, readable foreground approach. |
@@ -19,6 +21,9 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 
 ## Production pixel contract
 
+- The canonical final game canvas is `640 × 480` square logical pixels (4:3), matching the upper end of the classic LucasArts pixel-adventure era selected by Martin.
+- Default layout budget: `640 × 360` scene viewport above a compact `640 × 120` command/dialogue/inventory band. A `320 × 180` authored scene module may be presented exactly `2×` inside the scene viewport.
+- Present the complete canvas only at integer multiples (`640 × 480`, `1280 × 960`, `1920 × 1440`, and so on) and letterbox when the host viewport falls between supported sizes.
 - Square logical pixels are mandatory. No rectangular-pixel simulation, subpixel detail, or resolution-independent smoothing.
 - Build final scene art, UI frames, icons, focus states, and Terminal workspaces on an explicit low-resolution logical grid.
 - Present production pixels with nearest-neighbor scaling and integer scaling wherever the viewport permits. When an exact integer multiple is unavailable, preserve square pixel blocks through letterboxing or a purpose-built alternate logical-size asset rather than blur or uneven filtering.
@@ -38,6 +43,9 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 - **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
 - **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, figure, or known-size craft.
 - **Mood:** serious, beautiful, quiet, melancholic, curious. Never grimdark, combat-led, corporate, or glossy.
+- **Interface occupancy:** keep the world dominant. The dark dialogue/command area should be compact, stable, and information-dense rather than a modern dashboard covering the scene.
+- **Interaction language:** readable verbs and contextual cursor/focus states should feel immediate and playful, with inventory and observation supporting exploration rather than busywork.
+- **Failure philosophy:** visual and interaction design must support recovery. A wrong action may produce characterful feedback, but it must not strand the player or conceal the next useful affordance.
 
 ## Point-and-click readability gate
 
@@ -75,7 +83,7 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 
 - Exploration aspect ratio: 16:9.
 - Current exploration continuity resolution: `1672 x 941` PNG; these files are not production game art.
-- Production deliverables require a separately defined low-resolution square-pixel master plus its supported integer-scale presentation sizes.
+- Production deliverables target the canonical `640 × 480` complete canvas and require a separately defined scene/UI logical master plus supported integer-scale presentation sizes.
 - Clean world plate only; no baked UI.
 - Lower-center walkable space should survive the game's dialogue-panel crop and responsive scaling.
 - Every selected plate requires a scene sheet and provenance entry.

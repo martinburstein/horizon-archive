@@ -13,16 +13,19 @@ Visual constants:
 
 Interactive cues:
 
+- The many-petaled Terminal owns First Signal. A separate three-fin Route Marker is visible from arrival but keeps a dark core and inactive groove until First Signal acknowledgement.
+- Petal acknowledgement gives the Route Marker an active core and short readiness groove; only route mastery extends that groove into stepped directional geometry.
+- Petal and Marker light pools, silhouettes, hit areas, exercise sessions, and dialogue ownership remain separate in every state.
 - Flowers orient toward the player only after the player looks away, leaving causality uncertain.
 - Nearby marker stones have different weathering but identical alignment, implying long maintenance.
 - A shallow water channel carries light pulses without visible cables.
-- The crystal petals open by fractions as valid syntax accumulates, so learning visibly changes the landscape.
+- The Petal core uses locked, active, and acknowledged geometry; partial syntax does not animate the world before validation.
 - Sensor values show that the meadow is neither wild nor conventionally cultivated.
-- A failed command causes no damage; one petal briefly displays the error location, establishing patient interfaces.
+- A failed command leaves both nodes stable while the human tooling identifies the smallest useful correction.
 
 Use for: first-run confidence, strings, variables, visible output, simple observations, classification hypotheses.
 
-Avoid: predatory plants, secret prison imagery, instant proof that the meadow is sentient.
+Avoid: predatory plants, secret prison imagery, instant proof that the meadow is sentient, hiding the locked Route Marker, making it available before Petal acknowledgement, or describing its prerequisite state as refusal or sleep.
 
 ## Drowned Archive / Alien Ruins
 

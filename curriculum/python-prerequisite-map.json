@@ -112,7 +112,7 @@
         "AI901-D2-O5"
       ],
       "mastery_level_required": "use_with_guidance",
-      "notes": ""
+      "notes": "Introduced in L-01-03 through a NameError traceback diagnosis, a misspelled-variable repair, and a fresh IndentationError repair with route-safe retry."
     },
     {
       "skill_id": "PY-008",

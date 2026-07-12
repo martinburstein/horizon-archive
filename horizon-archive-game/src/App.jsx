@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import meadowImage from "../../Concept Art/Alien Meadow.png";
 import ruinsImage from "../../Concept Art Book/images/drowned-archive-workload-terminal-v1.png";
 import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
 import cityImage from "../../Concept Art/Underground City.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
+import { PixelMeadow } from "./PixelMeadow.jsx";
+import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   evaluateTerminalCode,
@@ -45,6 +46,18 @@ import {
   sanitizeRouteMarkerMastery,
   updateRouteMarkerMastery,
 } from "./routeMarkerExercise.js";
+import {
+  calibrationExercise,
+  calibrationRemediation,
+  calibrationRetrieval,
+  calibrationStarters,
+  calibrationTracebacks,
+  evaluateCalibrationDiagnosis,
+  evaluateCalibrationRetrieval,
+  evaluateCalibrationSource,
+  sanitizeCalibrationMastery,
+  updateCalibrationMastery,
+} from "./calibrationExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -53,16 +66,12 @@ const scenes = [
     id: "meadow",
     chapter: "I",
     location: "Glass Meadow",
-    image: meadowImage,
     hotspotLabel: "Petal terminal",
-    hotspot: { left: "43%", top: "20%", width: "18%", height: "38%" },
+    hotspot: MEADOW_PIXEL_HOTSPOTS.primary,
     secondaryHotspots: [{
       id: "route-marker",
       label: "route-marker Terminal",
-      hotspot: {
-        left: "74%", top: "56%", width: "11%", height: "34%",
-        narrow: { left: "68%", top: "49%", width: "29%", height: "34%" },
-      },
+      hotspot: MEADOW_PIXEL_HOTSPOTS.routeMarker,
     }],
     prompt: "A dormant interface waits inside the crystal bloom. Wake it with one line of Python.",
     question: "Write the line that displays SIGNAL FOUND.",
@@ -119,7 +128,7 @@ const scenes = [
   },
 ];
 
-function TerminalShell({ exerciseId, title, filename, lessonId, onClose, children }) {
+function TerminalShell({ exerciseId, title, filename, lessonId, statusText, closeLabel = "Close Terminal", onClose, children }) {
   return (
     <section className="terminal-workbench" aria-labelledby="terminal-title" data-terminal-exercise={exerciseId}>
       <header className="terminal-titlebar">
@@ -127,11 +136,11 @@ function TerminalShell({ exerciseId, title, filename, lessonId, onClose, childre
           <span className="machine-mark" aria-hidden="true">◇</span>
           <strong id="terminal-title">MACHINE TERMINAL // {title}</strong>
         </div>
-        <button type="button" onClick={onClose} aria-label="Close Terminal">Close</button>
+        <button type="button" onClick={onClose} aria-label={closeLabel}>{closeLabel === "Exit Calibration" ? "Exit" : "Close"}</button>
       </header>
       <div className="terminal-tabbar" role="tablist" aria-label="Open files">
         <button type="button" role="tab" aria-selected="true">{filename}</button>
-        <span>Lesson {lessonId}</span>
+        <span>{statusText ? `${statusText} · ` : ""}Lesson {lessonId}</span>
       </div>
       {children}
     </section>
@@ -169,6 +178,7 @@ function loadSave() {
       workloadEvidence: sanitizeWorkloadEvidence(saved.workloadEvidence),
       evidencePacketMastery: sanitizeEvidencePacketMastery(saved.evidencePacketMastery),
       routeMarkerMastery,
+      calibrationMastery: sanitizeCalibrationMastery(saved.calibrationMastery),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -199,6 +209,8 @@ export function App() {
   const [meadowTerminalKind, setMeadowTerminalKind] = useState(null);
   const [routeSession, setRouteSession] = useState(null);
   const [routeMarkerMastery, setRouteMarkerMastery] = useState(null);
+  const [calibrationSession, setCalibrationSession] = useState(null);
+  const [calibrationMastery, setCalibrationMastery] = useState(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
   const sceneHotspots = [{
@@ -207,6 +219,26 @@ export function App() {
     hotspot: scene.hotspot,
     primary: true,
   }, ...(scene.secondaryHotspots ?? [])];
+  const meadowPetalState = exerciseEvidence?.completed
+    ? "completed"
+    : terminalOpen && meadowTerminalKind === "first" ? "awake" : "locked";
+  const meadowRouteState = routeMarkerMastery?.masteryStatus === "mastered"
+    ? "completed"
+    : exerciseEvidence?.completed ? "awake" : "locked";
+  const hotspotButtons = sceneHotspots.map((hotspot) => (
+    <button
+      key={hotspot.id}
+      className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
+      data-hotspot-id={hotspot.id}
+      data-primary-hotspot={hotspot.primary ? "true" : undefined}
+      style={getHotspotStyle(hotspot.hotspot)}
+      onClick={() => useHotspot(hotspot.id)}
+      disabled={pendingAdvance}
+      aria-label={`${verb.toLowerCase()} ${hotspot.label}`}
+    >
+      <span>{verb} {hotspot.label}</span>
+    </button>
+  ));
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
@@ -219,9 +251,10 @@ export function App() {
         workloadEvidence,
         evidencePacketMastery,
         routeMarkerMastery,
+        calibrationMastery,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -246,6 +279,8 @@ export function App() {
     setMeadowTerminalKind(null);
     setRouteSession(null);
     setRouteMarkerMastery(null);
+    setCalibrationSession(null);
+    setCalibrationMastery(null);
     setMode("playing");
   }
 
@@ -266,6 +301,8 @@ export function App() {
     setRouteMarkerMastery(saved.routeMarkerMastery);
     setRouteSession(null);
     setMeadowTerminalKind(null);
+    setCalibrationMastery(saved.calibrationMastery);
+    setCalibrationSession(null);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
     setTerminalResult(null);
@@ -490,6 +527,96 @@ export function App() {
     setPendingAdvance(true);
   }
 
+  function openCalibration() {
+    setTerminalOpen(true);
+    setMeadowTerminalKind("calibration");
+    if (!calibrationSession) {
+      setCalibrationSession({
+        form: "traceback", pane: "output", source: calibrationStarters.traceback,
+        diagnosis: { errorType: "", lineNumber: "", namedToken: "" }, diagnosisResults: null, diagnosisPassed: false,
+        result: null, output: [], hintLevel: 0, retrievalAnswers: {}, retrievalResults: null, notes: "",
+      });
+    }
+  }
+
+  function exitCalibration() {
+    setTerminalOpen(false);
+    setMeadowTerminalKind(null);
+    setDialogue("Calibration exited safely. ROUTE OPEN. Continue when ready or resume calibration here.");
+  }
+
+  function submitCalibrationDiagnosis(event) {
+    event.preventDefault();
+    const results = evaluateCalibrationDiagnosis(calibrationSession.diagnosis, calibrationSession.form);
+    const passed = Object.values(results).every(Boolean);
+    const tags = [];
+    if (!results.errorType) tags.push("traceback-is-punishment");
+    if (!results.lineNumber) tags.push("line-number-is-random");
+    if (!results.namedToken) tags.push(calibrationSession.form === "indentation" ? "indentation-is-decoration" : "random-edits-are-debugging");
+    setCalibrationSession({ ...calibrationSession, diagnosisResults: results, diagnosisPassed: passed, pane: passed ? "source" : "task" });
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, {
+      formId: calibrationSession.form, diagnosisCorrectness: results, misconceptionTags: tags,
+      masteryStatus: passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function runCalibration(event) {
+    event.preventDefault();
+    if (!calibrationSession.diagnosisPassed) return;
+    const result = evaluateCalibrationSource(calibrationSession.source, calibrationSession.form);
+    const hintLevel = result.passed ? calibrationSession.hintLevel : Math.max(1, calibrationSession.hintLevel);
+    setCalibrationSession({ ...calibrationSession, result, output: result.outputs, hintLevel, pane: "output" });
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, {
+      formId: calibrationSession.form, incrementAttempt: true, checkResults: result.checks, hintLevel,
+      misconceptionTags: result.misconceptionTags, masteryStatus: result.passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function revealCalibrationHint() {
+    const hintLevel = Math.min(3, calibrationSession.hintLevel + 1);
+    setCalibrationSession({ ...calibrationSession, hintLevel, pane: "hint" });
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, { hintLevel }));
+  }
+
+  function loadIndentationCalibration() {
+    if (!calibrationSession.result?.passed) return;
+    setCalibrationSession({
+      ...calibrationSession, form: "indentation", pane: "output", source: calibrationStarters.indentation,
+      diagnosis: { errorType: "", lineNumber: "", namedToken: "" }, diagnosisResults: null, diagnosisPassed: false,
+      result: null, output: [], hintLevel: 0,
+    });
+  }
+
+  function beginCalibrationRetrieval() {
+    if (!calibrationSession.result?.passed) return;
+    setCalibrationSession({ ...calibrationSession, pane: "retrieval", retrievalAnswers: {}, retrievalResults: null });
+  }
+
+  function submitCalibrationRetrieval(event) {
+    event.preventDefault();
+    const results = evaluateCalibrationRetrieval(calibrationSession.retrievalAnswers);
+    const passed = Object.values(results).every(Boolean);
+    const tags = calibrationRetrieval.filter(([id]) => !results[id]).map(([, , , , tag]) => tag);
+    setCalibrationSession({ ...calibrationSession, retrievalResults: results, pane: passed ? "acknowledgement" : "retrieval" });
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, {
+      formId: "retrieval", incrementAttempt: true, checkResults: results, misconceptionTags: tags,
+      masteryStatus: passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function setCalibrationConfidence(confidence) {
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, { confidence }));
+  }
+
+  function acknowledgeCalibrationMastery() {
+    if (!calibrationSession?.retrievalResults || !Object.values(calibrationSession.retrievalResults).every(Boolean) || !calibrationMastery?.confidence) return;
+    setCalibrationMastery((previous) => updateCalibrationMastery(previous, { masteryStatus: "mastered", clearMisconceptionTags: true }));
+    setCalibrationSession(null);
+    setTerminalOpen(false);
+    setMeadowTerminalKind(null);
+    setDialogue("Calibration complete. ROUTE OPEN. The repaired expedition copy is ready, and the marked path is unchanged.");
+  }
+
   function checkWorkloadCard(event) {
     event.preventDefault();
     const result = evaluateWorkloadSelection(workloadSession);
@@ -575,6 +702,7 @@ export function App() {
     setDialogue(scene.success);
     setTerminalOpen(false);
     setEvidenceSession(null);
+    setCalibrationSession(null);
     setRouteSession(null);
     setMeadowTerminalKind(null);
     setPendingAdvance(true);
@@ -605,6 +733,7 @@ export function App() {
     setCode("");
     setWorkloadSession(null);
     setEvidenceSession(null);
+    setCalibrationSession(null);
     if (completed.length === scenes.length) {
       setMode("ending");
       return;
@@ -617,7 +746,7 @@ export function App() {
   if (mode === "title") {
     return (
       <main className="game-shell title-screen" data-playtest-marker="TITLE_SCREEN">
-        <img className="title-art" src={meadowImage} alt="A crystal structure rising from an alien meadow at twilight" />
+        <PixelMeadow petalState="locked" routeState="locked" />
         <div className="title-shade" aria-hidden="true" />
         <section className="title-copy" aria-labelledby="game-title">
           <p className="eyebrow">A Horizon Archive expedition</p>
@@ -652,28 +781,21 @@ export function App() {
   }
 
   return (
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
-        <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
+        {scene.id === "meadow" ? (
+          <PixelMeadow petalState={meadowPetalState} routeState={meadowRouteState}>{hotspotButtons}</PixelMeadow>
+        ) : (
+          <>
+            <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
+            {hotspotButtons}
+          </>
+        )}
         <div className="scene-status">
           <span>CHAPTER {scene.chapter}</span>
           <strong>{scene.location}</strong>
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
-        {sceneHotspots.map((hotspot) => (
-          <button
-            key={hotspot.id}
-            className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
-            data-hotspot-id={hotspot.id}
-            data-primary-hotspot={hotspot.primary ? "true" : undefined}
-            style={getHotspotStyle(hotspot.hotspot)}
-            onClick={() => useHotspot(hotspot.id)}
-            disabled={pendingAdvance}
-            aria-label={`${verb.toLowerCase()} ${hotspot.label}`}
-          >
-            <span>{verb} {hotspot.label}</span>
-          </button>
-        ))}
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell
             exerciseId={terminalExercise.exerciseId}
@@ -887,6 +1009,107 @@ export function App() {
                 </div>
               </form>
             )}
+          </TerminalShell>
+        )}
+        {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "calibration" && calibrationSession && (
+          <TerminalShell
+            exerciseId={calibrationExercise.exercise_id}
+            title={calibrationExercise.title}
+            filename={calibrationExercise.forms[calibrationSession.form].starter_file}
+            lessonId={calibrationExercise.lesson_id}
+            statusText={`ROUTE OPEN · ${calibrationSession.form}`}
+            closeLabel="Exit Calibration"
+            onClose={exitCalibration}
+          >
+            <section className="calibration-workspace" aria-labelledby="calibration-pane-heading">
+              <nav className="calibration-pane-tabs" aria-label="Calibration panes">
+                {["task", "source", "output", "hint"].map((pane) => (
+                  <button key={pane} type="button" aria-current={calibrationSession.pane === pane ? "page" : undefined} onClick={() => setCalibrationSession({ ...calibrationSession, pane })}>
+                    {pane === "output" ? "Output / Traceback" : pane}
+                  </button>
+                ))}
+              </nav>
+              <p className="calibration-route-status">FILE {calibrationExercise.forms[calibrationSession.form].starter_file} · FORM {calibrationSession.form.toUpperCase()} · ROUTE OPEN</p>
+
+              {calibrationSession.pane === "task" && (
+                <form className="calibration-pane" onSubmit={submitCalibrationDiagnosis}>
+                  <p className="pane-label">PRE-EDIT DIAGNOSIS</p>
+                  <h2 id="calibration-pane-heading">Locate before editing</h2>
+                  <p>Record the error type, named source line, and suspect token before the source pane unlocks.</p>
+                  <div className="calibration-diagnosis-grid">
+                    <label>Error type<select aria-label="Calibration error type" value={calibrationSession.diagnosis.errorType} onChange={(event) => setCalibrationSession({ ...calibrationSession, diagnosis: { ...calibrationSession.diagnosis, errorType: event.target.value } })}><option value="">Choose</option><option>NameError</option><option>IndentationError</option><option>TypeError</option></select></label>
+                    <label>Line<select aria-label="Calibration line number" value={calibrationSession.diagnosis.lineNumber} onChange={(event) => setCalibrationSession({ ...calibrationSession, diagnosis: { ...calibrationSession.diagnosis, lineNumber: event.target.value } })}><option value="">Choose</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+                    <label>Named token<select aria-label="Calibration named token" value={calibrationSession.diagnosis.namedToken} onChange={(event) => setCalibrationSession({ ...calibrationSession, diagnosis: { ...calibrationSession.diagnosis, namedToken: event.target.value } })}><option value="">Choose</option><option value="route_lable">route_lable</option><option value="route_label">route_label</option><option value="print">print</option></select></label>
+                  </div>
+                  {calibrationSession.diagnosisResults && !calibrationSession.diagnosisPassed && <p role="status">Diagnosis incomplete. Recheck the final error line and the named source line. ROUTE OPEN.</p>}
+                  <button className="run-action" type="submit">Record diagnosis</button>
+                </form>
+              )}
+
+              {calibrationSession.pane === "source" && (
+                <form className="calibration-pane calibration-source-pane" onSubmit={runCalibration}>
+                  <p className="pane-label">SOURCE · MAX 8 LINES</p>
+                  <h2 id="calibration-pane-heading">Repair one boundary</h2>
+                  <textarea
+                    id="calibration-source"
+                    aria-label="Calibration Python source"
+                    value={calibrationSession.source}
+                    disabled={!calibrationSession.diagnosisPassed}
+                    onChange={(event) => setCalibrationSession({ ...calibrationSession, source: event.target.value, result: null, output: [] })}
+                    spellCheck="false"
+                  />
+                  {!calibrationSession.diagnosisPassed && <p>Source locked until the pre-edit diagnosis is correct.</p>}
+                  <button className="run-action" type="submit" disabled={!calibrationSession.diagnosisPassed}>Run repaired copy</button>
+                </form>
+              )}
+
+              {calibrationSession.pane === "output" && (
+                <section className="calibration-pane" aria-live="polite">
+                  <p className="pane-label">SELECTABLE OUTPUT · MAX 4 TRACEBACK LINES</p>
+                  <h2 id="calibration-pane-heading">{calibrationSession.result ? "Validator result" : "Traceback"}</h2>
+                  <pre>{calibrationSession.result
+                    ? `${calibrationSession.result.score}/8\n${calibrationSession.result.outputs.join("\n") || calibrationSession.result.failedCodes[0]}`
+                    : calibrationTracebacks[calibrationSession.form]}</pre>
+                  <p role="status">{calibrationSession.result
+                    ? `${calibrationSession.result.passed ? "FORM PASS" : "REPAIR AND RERUN"} · ROUTE OPEN`
+                    : "Read error type, file, line, and token. ROUTE OPEN."}</p>
+                  {!calibrationSession.result && <button className="run-action" type="button" onClick={() => setCalibrationSession({ ...calibrationSession, pane: "task" })}>Record pre-edit diagnosis</button>}
+                  {calibrationSession.result && !calibrationSession.result.passed && <button className="hint-action" type="button" onClick={revealCalibrationHint}>Open targeted hint</button>}
+                  {calibrationSession.result?.passed && <button className="confirm-action" type="button" onClick={calibrationSession.form === "traceback" ? loadIndentationCalibration : beginCalibrationRetrieval}>{calibrationSession.form === "traceback" ? "Load indentation form" : "Begin retrieval"}</button>}
+                </section>
+              )}
+
+              {calibrationSession.pane === "hint" && (
+                <section className="calibration-pane">
+                  <p className="pane-label">TARGETED REMEDIATION</p>
+                  <h2 id="calibration-pane-heading">One controlled repair</h2>
+                  <p>{calibrationRemediation(calibrationSession.result, calibrationSession.hintLevel)}</p>
+                  <button className="hint-action" type="button" disabled={calibrationSession.hintLevel >= 3} onClick={revealCalibrationHint}>Reveal next hint</button>
+                  <button className="run-action" type="button" onClick={() => setCalibrationSession({ ...calibrationSession, pane: "source" })}>Return to source</button>
+                </section>
+              )}
+
+              {calibrationSession.pane === "retrieval" && (
+                <form className="calibration-pane calibration-retrieval" onSubmit={submitCalibrationRetrieval}>
+                  <p className="pane-label">RETRIEVAL · 4 / 4 REQUIRED</p>
+                  <h2 id="calibration-pane-heading">Debugging and route safety</h2>
+                  {calibrationRetrieval.map(([id, prompt, options], index) => (
+                    <label key={id}>{index + 1}. {prompt}<select aria-label={`Calibration retrieval ${index + 1}`} value={calibrationSession.retrievalAnswers[id] || ""} onChange={(event) => setCalibrationSession({ ...calibrationSession, retrievalAnswers: { ...calibrationSession.retrievalAnswers, [id]: event.target.value }, retrievalResults: null })}><option value="">Choose</option>{options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+                  ))}
+                  {calibrationSession.retrievalResults && <p role="status">{Object.values(calibrationSession.retrievalResults).filter(Boolean).length}/4 · ROUTE OPEN</p>}
+                  <button className="run-action" type="submit" disabled={calibrationRetrieval.some(([id]) => !calibrationSession.retrievalAnswers[id])}>Check retrieval</button>
+                </form>
+              )}
+
+              {calibrationSession.pane === "acknowledgement" && (
+                <section className="calibration-pane">
+                  <p className="pane-label">MASTERY ACKNOWLEDGEMENT</p>
+                  <h2 id="calibration-pane-heading">The route stayed open; I repaired the human copy.</h2>
+                  <fieldset className="confidence-group"><legend>Confidence</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="calibration-confidence" checked={calibrationMastery?.confidence === value} onChange={() => setCalibrationConfidence(value)} />{value}</label>)}</fieldset>
+                  <button className="confirm-action" type="button" disabled={!calibrationMastery?.confidence} onClick={acknowledgeCalibrationMastery}>Acknowledge calibration mastery</button>
+                </section>
+              )}
+            </section>
           </TerminalShell>
         )}
         {terminalOpen && scene.id === "ruins" && workloadSession && (
@@ -1122,11 +1345,16 @@ export function App() {
               <p>{dialogue}</p>
               <div className="dialogue-footer">
                 <span className="speaker">PILOT // FLIGHT RECORDER</span>
-                {pendingAdvance && (
-                  <button className="continue-action" onClick={continueJourney}>
-                    {completed.length === scenes.length ? "Descend to the city" : "Continue"}
-                  </button>
-                )}
+                <div className="dialogue-actions">
+                  {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
+                    <button className="continue-action calibration-launch" onClick={openCalibration}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
+                  )}
+                  {pendingAdvance && (
+                    <button className="continue-action" onClick={continueJourney}>
+                      {completed.length === scenes.length ? "Descend to the city" : "Continue"}
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           )}

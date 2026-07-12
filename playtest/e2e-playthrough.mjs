@@ -31,6 +31,15 @@ try {
   await page.reload();
   await page.getByRole("button", { name: "New expedition" }).click();
 
+  await assertPixelMeadow(page, "desktop", "locked", "locked");
+  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-desktop-qa.png");
+  await verifyMeadowPixelHotspots(page, "desktop");
+  await page.setViewportSize({ width: 320, height: 900 });
+  await assertPixelMeadow(page, "320px narrow", "locked", "locked");
+  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-narrow-qa.png");
+  await verifyMeadowPixelHotspots(page, "320px narrow");
+  await page.setViewportSize({ width: 1600, height: 900 });
+
   const openQuestion = async () => {
     await page.getByRole("button", { name: "USE", exact: true }).click();
     await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
@@ -87,6 +96,7 @@ print("Operator:", learner)`);
     throw new Error(`Terminal mastery evidence incomplete: ${JSON.stringify(evidence)}`);
   }
   if (await page.getByRole("button", { name: "Continue", exact: true }).count()) throw new Error("L-01-01 skipped the required route marker");
+  await assertPixelMeadow(page, "Petal complete", "completed", "awake");
 
   await page.locator('button.hotspot[data-hotspot-id="route-marker"]').hover();
   await page.locator(".scene-frame").screenshot({ path: "playtest/route-marker-hotspot-desktop-qa.png" });
@@ -156,6 +166,8 @@ print("Operator:", learner)`);
   await page.getByRole("heading", { name: "Primary 8/8 · Transfer 8/8 · Retrieval 4/4", exact: true }).waitFor();
   await page.getByRole("radio", { name: "Medium", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
+  await assertPixelMeadow(page, "route complete", "completed", "completed");
+  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
   const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
   if (routeMastery?.exerciseId !== "EX-L0102-ROUTE-MARKER" || routeMastery?.attemptCount !== 6 || routeMastery?.hintLevel !== 2 || routeMastery?.confidence !== "medium" || routeMastery?.masteryStatus !== "mastered") {
     throw new Error(`Route marker mastery incomplete: ${JSON.stringify(routeMastery)}`);
@@ -163,6 +175,75 @@ print("Operator:", learner)`);
   if (routeMastery.predictionCorrectness?.primary?.some((value) => !value) || routeMastery.predictionCorrectness?.transfer?.some((value) => !value)) throw new Error("Final prediction correctness incomplete");
   if (Object.values(routeMastery.checkResults?.retrieval || {}).some((value) => !value)) throw new Error("Retrieval gate incomplete");
   if (["source", "prediction", "output", "notes", "answers"].some((key) => key in routeMastery)) throw new Error("Route working state persisted in mastery evidence");
+
+  await page.getByRole("button", { name: "Start Calibration", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor();
+  await page.getByText("ROUTE OPEN", { exact: false }).first().waitFor();
+  await page.getByText("NameError", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
+  await assertPixelMeadow(page, "calibration exit", "completed", "completed");
+  await page.getByRole("button", { name: "Continue", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByText("NameError", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
+  await page.getByLabel("Calibration error type", { exact: true }).selectOption("NameError");
+  await page.getByLabel("Calibration line number", { exact: true }).selectOption("2");
+  await page.getByLabel("Calibration named token", { exact: true }).selectOption("route_lable");
+  await page.getByRole("button", { name: "Record diagnosis", exact: true }).click();
+  await page.locator("#calibration-source").fill('route_label = "ROUTE VERIFIED"\nprint(route_lable)\n# CALIBRATION_SESSION_ONLY');
+  await page.getByRole("button", { name: "Run repaired copy", exact: true }).click();
+  await page.getByText("REPAIR AND RERUN", { exact: false }).waitFor();
+  await page.getByText("ROUTE OPEN", { exact: false }).first().waitFor();
+  await page.getByRole("button", { name: "Open targeted hint", exact: true }).click();
+  await page.getByText("Compare route_lable", { exact: false }).waitFor();
+  await page.screenshot({ path: "playtest/calibration-terminal-desktop-qa.png", fullPage: true });
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.screenshot({ path: "playtest/calibration-terminal-narrow-qa.png", fullPage: true });
+  await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
+  await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
+  const calibrationDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (!calibrationDraftSave || JSON.parse(calibrationDraftSave).calibrationMastery?.attemptCount !== 1) throw new Error("Calibration attempt evidence missing");
+  if (calibrationDraftSave.includes("CALIBRATION_SESSION_ONLY") || calibrationDraftSave.includes("NameError: name") || calibrationDraftSave.includes("REPAIR AND RERUN")) throw new Error("Calibration working state leaked into localStorage");
+  await page.setViewportSize({ width: 1600, height: 900 });
+
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.locator('main[data-scene="meadow"]').waitFor();
+  await assertPixelMeadow(page, "calibration reload", "completed", "completed");
+  await page.getByRole("button", { name: "Start Calibration", exact: true }).click();
+  await page.getByText("NameError", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
+  await page.getByLabel("Calibration error type", { exact: true }).selectOption("NameError");
+  await page.getByLabel("Calibration line number", { exact: true }).selectOption("2");
+  await page.getByLabel("Calibration named token", { exact: true }).selectOption("route_lable");
+  await page.getByRole("button", { name: "Record diagnosis", exact: true }).click();
+  if ((await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Calibration source survived reload");
+  await page.locator("#calibration-source").fill('route_label = "ROUTE VERIFIED"\nprint(route_label)');
+  await page.getByRole("button", { name: "Run repaired copy", exact: true }).click();
+  await page.getByText("FORM PASS", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Load indentation form", exact: true }).click();
+  await page.getByText("IndentationError", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
+  await page.getByLabel("Calibration error type", { exact: true }).selectOption("IndentationError");
+  await page.getByLabel("Calibration line number", { exact: true }).selectOption("3");
+  await page.getByLabel("Calibration named token", { exact: true }).selectOption("print");
+  await page.getByRole("button", { name: "Record diagnosis", exact: true }).click();
+  await page.locator("#calibration-source").fill('route_open = True\nif route_open:\n    print("CALIBRATION READY")');
+  await page.getByRole("button", { name: "Run repaired copy", exact: true }).click();
+  await page.getByRole("button", { name: "Begin retrieval", exact: true }).click();
+  await page.getByLabel("Calibration retrieval 1", { exact: true }).selectOption("first");
+  await page.getByLabel("Calibration retrieval 2", { exact: true }).selectOption("location");
+  await page.getByLabel("Calibration retrieval 3", { exact: true }).selectOption("test");
+  await page.getByLabel("Calibration retrieval 4", { exact: true }).selectOption("open");
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByText("3/4", { exact: false }).waitFor();
+  await page.getByLabel("Calibration retrieval 1", { exact: true }).selectOption("last");
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge calibration mastery", exact: true }).click();
+  const calibrationMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).calibrationMastery, { key: saveKey });
+  if (calibrationMastery?.exerciseId !== "EX-L0103-CALIBRATION-DEBUG" || calibrationMastery?.attemptCount !== 5 || calibrationMastery?.hintLevel !== 2 || calibrationMastery?.masteryStatus !== "mastered" || calibrationMastery?.misconceptionTags?.length) throw new Error(`Calibration mastery incomplete: ${JSON.stringify(calibrationMastery)}`);
+  await assertPixelMeadow(page, "calibration mastered", "completed", "completed");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
@@ -323,6 +404,11 @@ print("Operator:", learner)`);
     forgedSaveBlocked: true,
     wrongAnswerRecovery: true,
     terminalExercise: true,
+    meadowLogicalPixels: true,
+    meadowIntegerScale: true,
+    meadowStateCues: true,
+    meadowHotspotsDesktop: true,
+    meadowHotspotsNarrow: true,
     terminalCloseReopen: true,
     terminalSessionPrivacy: true,
     routeMarkerExercise: true,
@@ -334,6 +420,14 @@ print("Operator:", learner)`);
     routeMarkerReloadReset: true,
     routeMarkerPrivacy: true,
     routeMarkerNarrow: true,
+    calibrationExercise: true,
+    calibrationDiagnosis: true,
+    calibrationRouteOpen: true,
+    calibrationExitSafe: true,
+    calibrationCloseReopen: true,
+    calibrationReloadReset: true,
+    calibrationPrivacy: true,
+    calibrationNarrow: true,
     workloadSortExercise: true,
     ruinsTerminalAsset: true,
     ruinsHotspotDesktop: true,
@@ -357,11 +451,77 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-AI901-001", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-002"],
     credits: true,
   }));
 } finally {
   await browser.close();
+}
+
+async function capturePixelMeadow(page, path) {
+  await page.locator(".pixel-scene-canvas").evaluate(async () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  await page.locator(".scene-frame").screenshot({ path });
+}
+
+async function verifyMeadowPixelHotspots(page, viewportLabel) {
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  const route = page.getByRole("button", { name: "use route-marker Terminal", exact: true });
+  const petal = page.getByRole("button", { name: "use Petal terminal", exact: true });
+  const firstSignal = page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]');
+  const routeExercise = page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]');
+  await route.click();
+  await route.focus();
+  await route.press("Enter");
+  if (await routeExercise.count()) throw new Error(`Locked Route Marker launched at ${viewportLabel}`);
+  await petal.click();
+  await firstSignal.waitFor();
+  await assertSceneVisibleWithMeadowTerminal(page, viewportLabel);
+  if (await page.locator('.pixel-scene-stage[data-petal-state="awake"][data-route-state="locked"]').count() !== 1) throw new Error(`Awake Petal cue missing at ${viewportLabel}`);
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await petal.focus();
+  await petal.press("Enter");
+  await firstSignal.waitFor();
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+}
+
+async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {
+  const geometry = await page.evaluate(() => {
+    const frame = document.querySelector(".scene-frame").getBoundingClientRect();
+    const canvas = document.querySelector(".pixel-scene-canvas").getBoundingClientRect();
+    const terminal = document.querySelector(".terminal-workbench").getBoundingClientRect();
+    return { frameArea: frame.width * frame.height, terminalArea: terminal.width * terminal.height, canvasHeight: canvas.height, canvasBottom: canvas.bottom, terminalTop: terminal.top, narrow: innerWidth <= 760 };
+  });
+  if (geometry.canvasHeight < 180 || geometry.terminalArea / geometry.frameArea > 0.65) throw new Error(`Meadow scene obscured by Terminal at ${viewportLabel}`);
+  if (geometry.narrow && geometry.terminalTop < geometry.canvasBottom) throw new Error(`Narrow Terminal overlaps pixel scene at ${viewportLabel}`);
+}
+
+async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
+  await page.waitForFunction(({ petal, route }) => {
+    const stage = document.querySelector(".pixel-scene-stage");
+    return stage?.dataset.petalState === petal && stage?.dataset.routeState === route;
+  }, { petal: petalState, route: routeState });
+  const metrics = await page.evaluate(() => {
+    const canvas = document.querySelector(".pixel-scene-canvas");
+    const stage = document.querySelector(".pixel-scene-stage");
+    const petal = document.querySelector('[data-hotspot-id="primary"]');
+    const route = document.querySelector('[data-hotspot-id="route-marker"]');
+    const stageRect = stage.getBoundingClientRect();
+    const petalRect = petal.getBoundingClientRect();
+    const routeRect = route.getBoundingClientRect();
+    return {
+      canvasWidth: canvas.width, canvasHeight: canvas.height, imageRendering: getComputedStyle(canvas).imageRendering,
+      smoothing: canvas.getContext("2d").imageSmoothingEnabled, scale: Number(stage.dataset.pixelScale),
+      stageWidth: stageRect.width, stageHeight: stageRect.height, petalWidth: petalRect.width, petalHeight: petalRect.height,
+      routeWidth: routeRect.width, routeHeight: routeRect.height, separated: petalRect.right < routeRect.left,
+      contained: petalRect.left >= stageRect.left && routeRect.right <= stageRect.right && petalRect.top >= stageRect.top && routeRect.bottom <= stageRect.bottom,
+      alt: canvas.getAttribute("aria-label"),
+    };
+  });
+  if (metrics.canvasWidth !== 320 || metrics.canvasHeight !== 180) throw new Error(`Wrong meadow logical resolution at ${viewportLabel}`);
+  if (!Number.isInteger(metrics.scale) || metrics.scale < 1 || metrics.stageWidth !== 320 * metrics.scale || metrics.stageHeight !== 180 * metrics.scale) throw new Error(`Non-integer meadow scale at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!/(pixelated|crisp)/i.test(metrics.imageRendering) || metrics.smoothing) throw new Error(`Meadow smoothing enabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!/many-petaled First Signal Terminal/i.test(metrics.alt) || !/separate three-fin Route Marker/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
 }
 
 function terminalSessionMarker() {
