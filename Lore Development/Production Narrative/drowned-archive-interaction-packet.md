@@ -209,6 +209,69 @@ Do not add lore per card. Twelve responses would turn classification into a grin
 - Exit narration: "The local workbench clears beyond the basin. Mastery evidence remains in the flight recorder; the working form does not follow."
 - Next-scene arrival: "The causeway narrows into fitted stone. Ahead, one fallen lens catches the same violet line."
 
+## Optional Responsible AI primary practice
+
+Production alignment: `EX-L0202-RESPONSIBLE-AI`, lesson `L-02-02`, activity `A-L0202-2`, objective `AI901-D1-O1`. This optional primary form becomes available after Workload Sort mastery. It does not replace the full two-form lesson gate and does not change AB-01 world state.
+
+### Ownership boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: principle names, neighboring-principle distinctions, official-source boundary, and the instruction to choose the closest primary harm.
+- `EXPEDITION LINK // LOCAL TOOLING`: four-field validation, field-associated remediation, scenario progress, and confidence capture.
+- `SYSTEM // EXPEDITION STATE`: open, exit, reopen, privacy, and `primary_complete` status.
+- `SCENE // SENSOR RECORD`: may state that the completed Terminal and Tidal Lens remain unchanged; it never reacts to a principle answer.
+- `PILOT // FLIGHT RECORDER` and `LOCAL SURFACE`: do not teach, quote, endorse, or impersonate Microsoft Responsible AI guidance.
+
+The persistent boundary remains Teacher-owned:
+
+> Course-authored practice—not a Microsoft exam question. Several principles may apply; choose the closest primary harm.
+
+### RAI00 — Open primary practice
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Responsible AI primary practice: principle, stakeholder, testable mitigation, accountable owner."
+- `SYSTEM // EXPEDITION STATE`: "Primary form 1/6. Full lesson mastery is not available in this slice."
+- `SCENE // SENSOR RECORD`: "The completed route geometry and Tidal Lens remain unchanged."
+
+### RAI01 — Wrong-field remediation
+
+All field feedback is `EXPEDITION LINK // LOCAL TOOLING`:
+
+- Principle: "Review principle: identify the closest primary harm; neighboring principles may also apply."
+- Stakeholder: "Review stakeholder: name who experiences the consequence."
+- Mitigation: "Review mitigation: choose a concrete control that can be observed or tested."
+- Owner: "Review owner: choose a human or organizational role with authority to monitor and remedy."
+
+The progressive sequence remains Teacher-owned: stakeholder, neighboring principle, testable mitigation, accountable owner. No miss changes the world, closes the route, or creates a local-surface response.
+
+### RAI02 — Scenario confirmed
+
+- `EXPEDITION LINK // LOCAL TOOLING`: "Four-part response confirmed. Continue to the next course scenario."
+- No story or environmental line.
+
+### RAI03 — Exit before primary completion
+
+- `SYSTEM // EXPEDITION STATE`: "Primary practice closed. Current scenario, choices, result, and hints remain in this session."
+- Continue remains available; Exit is never failure.
+
+### RAI04 — Reopen in the same session
+
+- `SYSTEM // EXPEDITION STATE`: "Primary practice restored at the current scenario."
+- Do not replay Workload Sort completion or change AB-01 frame state.
+
+### RAI05 — Primary completion
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Primary form complete: 24/24. Transfer and closed-note explanation remain."
+- `SYSTEM // EXPEDITION STATE`: "Status recorded: `primary_complete`, not full lesson mastery."
+- `SCENE // SENSOR RECORD`: "The completed Terminal and Tidal Lens remain unchanged."
+
+If only one compact post-exit line is available, use: "Primary form complete. Transfer and closed-note explanation remain." Attribute it to the Teacher/course layer, not Pilot or local surface.
+
+### RAI06 — Reload or scene transition
+
+- Reload: clean primary working form; sanitized primary evidence persists.
+- Scene transition: session-only choices and reasoning clear.
+- `primary_complete` may persist, but never displays as `mastered`.
+- No Machine or Tidal Lens memory claim.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -253,4 +316,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Hints and remediation do not change story access or unlock unique canon.
 - Success changes the Terminal, reflection, and route—not the landmark.
 - Every Machine-adjacent line states condition or relation, never motive.
+- Responsible AI principles and comparisons remain Teacher-owned; story and local-surface voices never impersonate Microsoft.
+- Responsible AI primary completion leaves the completed Terminal, route geometry, and Tidal Lens unchanged.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

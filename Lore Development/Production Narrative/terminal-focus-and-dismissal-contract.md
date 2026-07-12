@@ -113,6 +113,16 @@ Use a more specific line only when it adds state clarity.
 - Focus returns to the grounded Workload Sort Terminal hotspot.
 - Dismissal does not submit the selected card.
 
+### Responsible AI primary practice
+
+- Opening trigger: `Start Responsible AI` or `Resume Responsible AI` after Workload Sort mastery.
+- Open dialogue is Teacher-owned: "Responsible AI primary practice: four fields per scenario."
+- Visible dismissal label: `Exit` with accessible name `Exit Practice`.
+- Exit/Escape line: "Primary practice closed. Current scenario, choices, result, and hints remain."
+- Reopen line: "Primary practice restored at the current scenario."
+- Continue remains available because this slice is optional for traversal.
+- Primary acknowledgement records `primary_complete`; it does not mark full `L-02-02` mastery or change AB-01 world state.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -177,6 +187,7 @@ Do not require the learner to discover Escape. The visible Close or Exit button 
 - In-memory persistence is attributed to expedition application state.
 - Focus restoration creates no new canon and unlocks no unique story line.
 - Keyboard dexterity is not graded as Python or AI-901 knowledge.
+- Microsoft principle instruction remains in the source-grounded Teacher layer, never local-surface or story dialogue.
 - Central mysteries remain untouched.
 
 ## 901 Teacher handoff
@@ -187,4 +198,3 @@ Review learner-facing `L-01-03` instructions so the focus-managed shell supports
 - state that Escape/Exit preserves the current calibration session and the physical route remains open;
 - keep `PY-007` mastery limited to traceback reading, diagnosis, repair, rerun, and explanation;
 - ensure no assessment item asks what Tab, Escape, modal, focus, or inert means.
-

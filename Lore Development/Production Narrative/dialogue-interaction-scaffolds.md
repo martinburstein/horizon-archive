@@ -9,8 +9,11 @@ These are modular writing patterns, not a final dialogue script. They are design
 - `LOCAL SURFACE // PROVISIONAL TRANSLATION`: short translated conditions attributed to one named object.
 - `SCENE // SENSOR RECORD`: physical light, movement, sound, thresholds, and bounded non-detection.
 - `SYSTEM // EXPEDITION STATE`: save, reload, resume, acknowledgement, and navigation state; never in-world dialogue.
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: sourced curriculum facts, official terminology, course-authored comparisons, and exam-boundary statements; never Builder or Machine speech.
 
 One line gets one owner. Split multi-source events into sequential lines. An unattributed pronoun must not carry agency from one hotspot to another.
+
+Microsoft principles, product terms, and exam boundaries may appear only in the Teacher/course layer or clearly human expedition tooling. Pilot, scene, Builder-interface, and local-surface voices must never sound as though Microsoft authored the fiction or the Machine is delivering Microsoft instruction.
 
 ### Compact pixel-UI copy
 
