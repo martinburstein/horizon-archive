@@ -68,6 +68,16 @@
       "assessment_id": "AS-L0203-COMPARE",
       "skills": ["AI901-D1-O2-MODEL-COMPONENTS", "AI901-D1-O3-DEPLOYMENT-CONFIG"],
       "success_contract": "Complete both course-authored forms at 16/16 across mechanics, model choice, deployment choice, and configuration, then independently produce one complete closed-note decision and reason."
+    },
+    {
+      "id": "HA-PY-STRUCTURED-PACKETS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0301-STRUCTURED-PACKETS",
+      "lesson_id": "L-03-01",
+      "activity_id": "A-L0301-3",
+      "assessment_ids": ["AS-L0301-QC", "AS-L0301-STRUCT"],
+      "skills": ["PY-008", "PY-009", "PY-016", "PY-020"],
+      "success_contract": "Pass primary and fresh-transfer structure forms at 8/8 without hardcoded output, then independently explain the nested data path and JSON round trip."
     }
   ]
 }

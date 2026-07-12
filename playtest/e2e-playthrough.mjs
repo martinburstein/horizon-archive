@@ -13,6 +13,8 @@ const saveKey = "horizon-archive-prologue-v1";
 const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaPath = (path) => resolve(repositoryRoot, "playtest", path.replace(/^playtest[\\/]/, ""));
+const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_primary.py"), "utf8");
+const referenceStructuredTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_transfer.py"), "utf8");
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -579,6 +581,75 @@ print("Operator:", learner)`);
   if (modelChoiceMastery?.masteryStatus !== "mastered" || modelChoiceMastery?.form !== "explanation" || modelChoiceMastery?.attemptCount !== 20) throw new Error(`Model choice strict mastery evidence incomplete: ${JSON.stringify(modelChoiceMastery)}`);
   if (Object.keys(modelChoiceMastery.itemCorrectness || {}).length !== 17 || Object.values(modelChoiceMastery.itemCorrectness).some((dimensions) => Object.keys(dimensions).length !== 2 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Model choice primary, transfer, and closed-note gate incomplete");
   if (["response", "choices", "freeFormExplanation", "promptText", "runtimeOutput"].some((key) => key in modelChoiceMastery)) throw new Error("Model choice mastery retained private response content");
+
+  await page.getByRole("button", { name: "Start Structured Packets", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0301-STRUCTURED-PACKETS"]').waitFor();
+  await page.getByText("PILOT // SOURCE OWNER", { exact: false }).waitFor();
+  await page.getByText("SYSTEM // STRICT 8-CHECK VALIDATOR", { exact: true }).waitFor();
+  await page.getByText("Course-authored bridge practice", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Run packet", exact: true }).click();
+  await page.getByRole("status").getByText("3/8", { exact: false }).waitFor();
+  await page.getByText("REVIEW · appends record", { exact: true }).waitFor();
+  if (await page.locator("#structured-source").getAttribute("aria-invalid") !== "true" || await page.locator("#structured-source").getAttribute("aria-describedby") !== "structured-status structured-check-list") throw new Error("Structured source remediation was not associated with status and per-check results");
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("structured-packets-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next data-path step", exact: true }).click();
+  await page.locator("#structured-source").fill(referenceStructuredPrimary);
+  await page.getByRole("button", { name: "Run packet", exact: true }).click();
+  await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "View primary result", exact: true }).click();
+  await page.getByRole("heading", { name: "8 / 8 checks", exact: true }).waitFor();
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.getByRole("button", { name: "Start Structured Transfer", exact: true }).click();
+  await page.getByRole("button", { name: "Run packet", exact: true }).click();
+  await page.getByText("REVIEW · second nested access", { exact: true }).waitFor();
+  await page.setViewportSize({ width: 320, height: 240 });
+  await page.screenshot({ path: qaPath("structured-packets-transfer-remediation-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.locator("#structured-source").fill(`${referenceStructuredTransfer}\n# STRUCTURED_SESSION_ONLY`);
+  await page.getByRole("button", { name: "Exit Structured Packets", exact: true }).click();
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Structured Packets", exact: true }).click();
+  if (!(await page.locator("#structured-source").inputValue()).includes("STRUCTURED_SESSION_ONLY")) throw new Error("Structured transfer source reset after close/reopen");
+  const structuredDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (structuredDraft.includes("STRUCTURED_SESSION_ONLY") || structuredDraft.includes("packet[\"readings\"]")) throw new Error("Structured source leaked into localStorage");
+  await page.locator("#structured-source").fill(referenceStructuredTransfer);
+  await page.getByRole("button", { name: "Run packet", exact: true }).click();
+  await page.getByRole("status").getByText("8/8", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Begin closed-note explanation", exact: true }).click();
+  await page.getByText("901 TEACHER // CLOSED-NOTE DATA-PATH GATE", { exact: true }).waitFor();
+  await page.getByLabel("Closed-note Container path", { exact: true }).fill("list dictionary");
+  await page.getByLabel("Closed-note Nested access", { exact: true }).fill("wrong");
+  await page.getByLabel("Closed-note JSON round trip", { exact: true }).fill("json is a python object");
+  await page.getByRole("button", { name: "Check data path", exact: true }).click();
+  await page.getByRole("status").getByText("0/3", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("structured-packets-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["structured-packets-primary-qa.png", "structured-packets-transfer-remediation-qa.png", "structured-packets-closed-note-qa.png"]);
+  for (const [dimension, label] of [["container_path", "Container path"], ["nested_access", "Nested access"], ["json_round_trip", "JSON round trip"]]) {
+    const field = page.getByLabel(`Closed-note ${label}`, { exact: true });
+    if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `structured-explanation-${dimension}-feedback`) throw new Error(`Structured ${dimension} remediation was not field-associated`);
+  }
+  await page.getByLabel("Closed-note Container path", { exact: true }).fill("dictionary list dictionary list value");
+  await page.getByLabel("Closed-note Nested access", { exact: true }).fill("packet readings 1 values 0");
+  await page.getByLabel("Closed-note JSON round trip", { exact: true }).fill("json text loads python object dumps json text");
+  await page.getByRole("button", { name: "Exit Structured Packets", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Structured Packets", exact: true }).click();
+  if (await page.getByLabel("Closed-note Nested access", { exact: true }).inputValue() !== "packet readings 1 values 0") throw new Error("Structured explanation reset after close/reopen");
+  const structuredExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (structuredExplanationDraft.includes("packet readings 1 values 0") || structuredExplanationDraft.includes("json text loads")) throw new Error("Structured explanation leaked into localStorage");
+  await page.getByRole("button", { name: "Check data path", exact: true }).click();
+  await page.getByText("Complete data path confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this data-path explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const structuredMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).structuredPacketEvidence, { key: saveKey });
+  if (structuredMastery?.masteryStatus !== "mastered" || structuredMastery?.form !== "explanation" || structuredMastery?.attemptCount !== 6) throw new Error(`Structured Packet mastery incomplete: ${JSON.stringify(structuredMastery)}`);
+  if (["learnerSource", "source", "rawJsonPacket", "runtimeOutput", "freeFormExplanation"].some((key) => key in structuredMastery)) throw new Error("Structured Packet mastery retained private content");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -714,6 +785,10 @@ print("Operator:", learner)`);
     modelChoiceClosedNoteExplanation: true,
     modelChoiceStrictMastery: true,
     modelChoiceDistinctCaptures: true,
+    structuredPacketsPrimary: true,
+    structuredPacketsTransfer: true,
+    structuredPacketsClosedNote: true,
+    structuredPacketsStrictMastery: true,
     modelChoiceFourFamilies: true,
     modelChoiceSessionPrivacy: true,
     dialogueOwnershipMode: true,
