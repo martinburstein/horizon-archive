@@ -64,6 +64,16 @@ import {
   sanitizeCalibrationMastery,
   updateCalibrationMastery,
 } from "./calibrationExercise.js";
+import {
+  evaluateResponsibleAIScenario,
+  responsibleAIDimensions,
+  responsibleAIExercise,
+  responsibleAIPrimaryScenarios,
+  responsibleAIPrinciples,
+  responsibleAIRemediation,
+  sanitizeResponsibleAIEvidence,
+  updateResponsibleAIEvidence,
+} from "./responsibleAIExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -210,6 +220,10 @@ function getHotspotStyle(hotspot) {
   };
 }
 
+function formatChoice(value) {
+  return value.replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
 function loadSave() {
   try {
     const saved = JSON.parse(localStorage.getItem(SAVE_KEY) || "null");
@@ -229,6 +243,7 @@ function loadSave() {
       evidencePacketMastery: sanitizeEvidencePacketMastery(saved.evidencePacketMastery),
       routeMarkerMastery,
       calibrationMastery: sanitizeCalibrationMastery(saved.calibrationMastery),
+      responsibleAIEvidence: sanitizeResponsibleAIEvidence(saved.responsibleAIEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -261,6 +276,9 @@ export function App() {
   const [routeMarkerMastery, setRouteMarkerMastery] = useState(null);
   const [calibrationSession, setCalibrationSession] = useState(null);
   const [calibrationMastery, setCalibrationMastery] = useState(null);
+  const [ruinsTerminalKind, setRuinsTerminalKind] = useState(null);
+  const [responsibleAISession, setResponsibleAISession] = useState(null);
+  const [responsibleAIEvidence, setResponsibleAIEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
@@ -309,9 +327,10 @@ export function App() {
         evidencePacketMastery,
         routeMarkerMastery,
         calibrationMastery,
+        responsibleAIEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -338,6 +357,9 @@ export function App() {
     setRouteMarkerMastery(null);
     setCalibrationSession(null);
     setCalibrationMastery(null);
+    setRuinsTerminalKind(null);
+    setResponsibleAISession(null);
+    setResponsibleAIEvidence(null);
     setMode("playing");
   }
 
@@ -360,6 +382,9 @@ export function App() {
     setMeadowTerminalKind(null);
     setCalibrationMastery(saved.calibrationMastery);
     setCalibrationSession(null);
+    setResponsibleAIEvidence(saved.responsibleAIEvidence);
+    setResponsibleAISession(null);
+    setRuinsTerminalKind(null);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
     setTerminalResult(null);
@@ -466,6 +491,7 @@ export function App() {
       setDialogue("Workload Sort linked. Classify each signal, remediate misses, and confirm mastery.");
       setQuestionOpen(false);
       setTerminalOpen(true);
+      setRuinsTerminalKind("workload");
       if (!workloadSession) setWorkloadSession(createWorkloadSession());
       return;
     }
@@ -723,8 +749,63 @@ export function App() {
     setCompleted(nextCompleted);
     setDialogue(scene.success);
     setTerminalOpen(false);
+    setRuinsTerminalKind(null);
     setWorkloadSession(null);
     setPendingAdvance(true);
+  }
+
+  function openResponsibleAI() {
+    setTerminalOpen(true);
+    setRuinsTerminalKind("responsible-ai");
+    if (!responsibleAISession) {
+      setResponsibleAISession({ index: 0, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false });
+    }
+  }
+
+  function exitResponsibleAI() {
+    setTerminalOpen(false);
+    setRuinsTerminalKind(null);
+    setDialogue("Responsible AI practice closed safely. Continue or resume the primary form when ready.");
+  }
+
+  function checkResponsibleAI(event) {
+    event.preventDefault();
+    const scenario = responsibleAIPrimaryScenarios[responsibleAISession.index];
+    const result = evaluateResponsibleAIScenario(scenario.id, responsibleAISession.response);
+    const hintLevel = result.passed ? responsibleAISession.hintLevel : Math.max(1, responsibleAISession.hintLevel);
+    setResponsibleAISession({ ...responsibleAISession, result, hintLevel });
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, {
+      scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel,
+      misconceptionTags: result.misconceptionTags, masteryStatus: result.passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function revealResponsibleAIHint() {
+    const hintLevel = Math.min(3, responsibleAISession.hintLevel + 1);
+    setResponsibleAISession({ ...responsibleAISession, hintLevel });
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { hintLevel }));
+  }
+
+  function nextResponsibleAIScenario() {
+    if (!responsibleAISession.result?.passed) return;
+    if (responsibleAISession.index === responsibleAIPrimaryScenarios.length - 1) {
+      setResponsibleAISession({ ...responsibleAISession, complete: true });
+      return;
+    }
+    setResponsibleAISession({ index: responsibleAISession.index + 1, response: { principle: "", stakeholder: "", mitigation: "", owner: "" }, result: null, hintLevel: 0, complete: false });
+  }
+
+  function setResponsibleAIConfidence(confidence) {
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { confidence }));
+  }
+
+  function acknowledgeResponsibleAIPrimary() {
+    if (!responsibleAISession?.complete || !responsibleAIEvidence?.confidence) return;
+    setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { masteryStatus: "primary_complete", clearMisconceptionTags: true }));
+    setResponsibleAISession(null);
+    setTerminalOpen(false);
+    setRuinsTerminalKind(null);
+    setDialogue("Primary responsible AI practice complete. Transfer form remains a future lesson slice; this was course-authored practice, not a Microsoft exam question.");
   }
 
   function validateEvidenceOutput(event) {
@@ -760,6 +841,8 @@ export function App() {
     setTerminalOpen(false);
     setEvidenceSession(null);
     setCalibrationSession(null);
+    setResponsibleAISession(null);
+    setRuinsTerminalKind(null);
     setRouteSession(null);
     setMeadowTerminalKind(null);
     setPendingAdvance(true);
@@ -1181,7 +1264,7 @@ export function App() {
             </section>
           </TerminalShell>
         )}
-        {terminalOpen && scene.id === "ruins" && workloadSession && (
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "workload" && workloadSession && (
           <TerminalShell
             exerciseId={workloadSortExercise.exercise_id}
             title={workloadSortExercise.title}
@@ -1274,6 +1357,74 @@ export function App() {
                 </section>
               </div>
             </form>
+          </TerminalShell>
+        )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "responsible-ai" && responsibleAISession && (
+          <TerminalShell
+            exerciseId={responsibleAIExercise.exercise_id}
+            title="Responsible AI — Primary Practice"
+            filename="primary_scenarios.json"
+            lessonId={responsibleAIExercise.lesson_id}
+            statusText={responsibleAISession.complete ? "PRIMARY 24/24" : `PRIMARY ${responsibleAISession.index + 1}/6`}
+            closeLabel="Exit Practice"
+            restoreFocusTo={terminalTriggerRef.current}
+            onClose={exitResponsibleAI}
+          >
+            <section className="responsible-ai-workspace">
+              <p className="responsible-ai-boundary">Course-authored practice scenario — not a Microsoft exam question. Real systems can implicate multiple principles; choose the closest primary harm.</p>
+              {!responsibleAISession.complete ? (() => {
+                const scenario = responsibleAIPrimaryScenarios[responsibleAISession.index];
+                const choices = {
+                  principle: responsibleAIPrinciples,
+                  stakeholder: scenario.stakeholder_choices,
+                  mitigation: scenario.mitigation_choices,
+                  owner: scenario.owner_choices,
+                };
+                return (
+                  <form className="responsible-ai-form" onSubmit={checkResponsibleAI}>
+                    <header>
+                      <p className="pane-label">PRIMARY RETRIEVAL · {scenario.id} · {responsibleAISession.index + 1}/6</p>
+                      <h2>{scenario.prompt}</h2>
+                    </header>
+                    <div className="responsible-ai-fields">
+                      {responsibleAIDimensions.map((dimension) => {
+                        const fieldResult = responsibleAISession.result?.correctness[dimension];
+                        const feedbackId = `rai-${dimension}-feedback`;
+                        return (
+                          <label key={dimension}>
+                            <span>{dimension === "owner" ? "Accountable human owner" : dimension}</span>
+                            <select
+                              aria-label={`Responsible AI ${dimension}`}
+                              aria-describedby={responsibleAISession.result ? feedbackId : undefined}
+                              value={responsibleAISession.response[dimension]}
+                              onChange={(event) => setResponsibleAISession({ ...responsibleAISession, response: { ...responsibleAISession.response, [dimension]: event.target.value }, result: null })}
+                            >
+                              <option value="">Choose one</option>
+                              {choices[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}
+                            </select>
+                            {responsibleAISession.result && <small id={feedbackId}>{fieldResult ? "Correct." : `Review ${dimension}: choose the closest harm, affected people, testable control, or accountable role.`}</small>}
+                          </label>
+                        );
+                      })}
+                    </div>
+                    <section className="terminal-console responsible-ai-output" aria-labelledby="rai-output-heading">
+                      <div className="console-heading-row"><strong id="rai-output-heading">STRICT VALIDATOR</strong><button className="run-action" type="submit" disabled={responsibleAIDimensions.some((dimension) => !responsibleAISession.response[dimension])}>Check four-part response</button></div>
+                      <div className={responsibleAISession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{responsibleAISession.result ? `${responsibleAISession.result.score}/4 · ${responsibleAISession.result.passed ? "Scenario confirmed." : responsibleAIRemediation(responsibleAISession.result, responsibleAISession.hintLevel)}` : "Respond with principle, stakeholder, concrete mitigation, and accountable human owner."}</div>
+                      {responsibleAISession.result && !responsibleAISession.result.passed && <button className="hint-action" type="button" disabled={responsibleAISession.hintLevel >= 3} onClick={revealResponsibleAIHint}>Reveal next remediation step</button>}
+                      {responsibleAISession.result?.passed && <button className="confirm-action" type="button" onClick={nextResponsibleAIScenario}>{responsibleAISession.index === 5 ? "View primary result" : "Next scenario"}</button>}
+                    </section>
+                  </form>
+                );
+              })() : (
+                <section className="workload-summary responsible-ai-summary" aria-labelledby="rai-summary-heading">
+                  <p className="pane-label">PRIMARY SLICE COMPLETE</p>
+                  <h2 id="rai-summary-heading">24 / 24 dimensions</h2>
+                  <p>This completes the primary course-authored form only. The unseen transfer form and closed-note explanation remain for the next implementation slice.</p>
+                  <fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="rai-confidence" checked={responsibleAIEvidence?.confidence === value} onChange={() => setResponsibleAIConfidence(value)} />{value}</label>)}</fieldset>
+                  <button className="confirm-action" type="button" disabled={!responsibleAIEvidence?.confidence} onClick={acknowledgeResponsibleAIPrimary}>Acknowledge primary form</button>
+                </section>
+              )}
+            </section>
           </TerminalShell>
         )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
@@ -1419,6 +1570,9 @@ export function App() {
                 <div className="dialogue-actions">
                   {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
                     <button className="continue-action calibration-launch" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
+                  )}
+                  {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "primary_complete" && (
+                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : "Start Responsible AI"}</button>
                   )}
                   {pendingAdvance && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>

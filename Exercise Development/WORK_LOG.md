@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Responsible AI primary-form vertical slice
+
+- **Outcome:** Added a bounded, functional `EX-L0202-RESPONSIBLE-AI` primary form after Workload Sort mastery in the ruins. The learner completes six one-at-a-time course-authored scenarios using the required four-part response: principle, affected stakeholder, concrete testable mitigation, and accountable human or organizational owner.
+- **Learning contract:** Each scenario validates all four dimensions independently and requires 4/4 before advancing. Misses receive field-associated feedback plus the package's stakeholder → neighboring-principle → testable-mitigation → accountable-owner remediation sequence. The persistent boundary states that these are course-authored practice scenarios, not Microsoft exam questions.
+- **Scope boundary:** This tranche completes the strict primary gate at 24/24 and records `primary_complete`, not full lesson mastery. The unseen transfer form and closed-note explanation remain the next Exercise Agent slice.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/src/responsibleAIExercise.js`, `horizon-archive-game/test/responsibleAIExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, `playtest/e2e-playthrough.mjs`, and `playtest/responsible-ai-primary-qa.png`.
+- **Validation:** 35/35 unit tests and the production build pass. The L-02-02 lesson validator self-test and reference primary 24/24 pass. Full title-to-credits E2E passes with strict four-dimension remediation, close/reopen restoration, privacy allowlisting, shared dialog/focus behavior, explicit non-exam labeling, and zero runtime errors.
+- **Privacy/session:** Only IDs, primary form, per-scenario dimension booleans, attempt count, maximum hint level, confidence, tags, and `primary_complete` persist. Choices, scenario display, notes, and reasoning remain session-only; Exit/reopen restores them while reload/scene transition clears them.
+- **Next action:** Implement the fresh transfer form using the six `T01–T06` scenarios, then require the package's closed-note four-part explanation before promoting `primary_complete` to full mastery.
+- **Risks:** The primary slice is intentionally optional for adventure traversal and must not be represented as completing the full two-form L-02-02 gate.
+
 ## 2026-07-12 — Coder pass: AB-01 canonical game frame
 
 - **Outcome:** Integrated AB-01 into a reusable `CanonicalGameFrame`: one `640×480` logical DOM frame with a `640×360` production-pixel world and `640×120` live interface. Whole-number scaling and centered letterboxing apply to the complete frame; constrained hosts select a separately authored `320×180` AB-01 world and `320×60` live interface inside a `320×240` alternate.

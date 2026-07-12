@@ -1,5 +1,6 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
+import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -345,6 +346,46 @@ print("Operator:", learner)`);
     throw new Error(`Workload mastery evidence incomplete: ${JSON.stringify(workloadEvidence)}`);
   }
   if ("selected" in workloadEvidence || "freeFormResponse" in workloadEvidence) throw new Error("Response text persisted in workload evidence");
+
+  await page.getByRole("button", { name: "Start Responsible AI", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').waitFor();
+  await page.getByText("Course-authored practice scenario", { exact: false }).waitFor();
+  await page.getByText("not a Microsoft exam question", { exact: false }).waitFor();
+  await page.getByLabel("Responsible AI principle", { exact: true }).selectOption("transparency");
+  await page.getByLabel("Responsible AI stakeholder", { exact: true }).selectOption("hiring_vendor");
+  await page.getByLabel("Responsible AI mitigation", { exact: true }).selectOption("publish_ai_disclosure_only");
+  await page.getByLabel("Responsible AI owner", { exact: true }).selectOption("model_itself");
+  await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
+  await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  await page.getByText("Review principle", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Reveal next remediation step", exact: true }).click();
+  await page.getByText("Compare the nearest principles", { exact: false }).waitFor();
+  await page.screenshot({ path: "playtest/responsible-ai-primary-qa.png", fullPage: true });
+  await page.getByRole("button", { name: "Exit Practice", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Responsible AI", exact: true }).click();
+  if (await page.getByLabel("Responsible AI mitigation", { exact: true }).inputValue() !== "publish_ai_disclosure_only") throw new Error("Responsible AI session choices reset after close/reopen");
+  const raiDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (!raiDraftSave || JSON.parse(raiDraftSave).responsibleAIEvidence?.attemptCount !== 1) throw new Error("Responsible AI attempt evidence missing");
+  if (raiDraftSave.includes("publish_ai_disclosure_only") || raiDraftSave.includes("hiring_vendor") || raiDraftSave.includes("resume screener")) throw new Error("Responsible AI working choices or display leaked into localStorage");
+
+  for (const scenarioId of Object.keys(referenceResponsibleAI)) {
+    const answer = referenceResponsibleAI[scenarioId];
+    await page.getByLabel("Responsible AI principle", { exact: true }).selectOption(answer.principle);
+    await page.getByLabel("Responsible AI stakeholder", { exact: true }).selectOption(answer.stakeholder);
+    await page.getByLabel("Responsible AI mitigation", { exact: true }).selectOption(answer.mitigation);
+    await page.getByLabel("Responsible AI owner", { exact: true }).selectOption(answer.owner);
+    await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
+    await page.getByText("Scenario confirmed", { exact: false }).waitFor();
+    await page.getByRole("button", { name: scenarioId === "P06" ? "View primary result" : "Next scenario", exact: true }).click();
+  }
+  await page.getByRole("heading", { name: "24 / 24 dimensions", exact: true }).waitFor();
+  await page.getByText("primary course-authored form only", { exact: false }).waitFor();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  const responsibleAIEvidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
+  if (responsibleAIEvidence?.exerciseId !== "EX-L0202-RESPONSIBLE-AI" || responsibleAIEvidence?.attemptCount !== 7 || responsibleAIEvidence?.hintLevel !== 2 || responsibleAIEvidence?.masteryStatus !== "primary_complete") throw new Error(`Responsible AI primary evidence incomplete: ${JSON.stringify(responsibleAIEvidence)}`);
+  if (Object.keys(responsibleAIEvidence.dimensionCorrectness || {}).length !== 6 || Object.values(responsibleAIEvidence.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI strict primary gate incomplete");
+  if (["response", "choices", "reasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIEvidence)) throw new Error("Responsible AI private session data persisted");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
@@ -465,6 +506,11 @@ print("Operator:", learner)`);
     workloadFreshRetry: true,
     workloadCriticalOverride: true,
     workloadSceneReset: true,
+    responsibleAIPrimary: true,
+    responsibleAIFourPart: true,
+    responsibleAIStrictRemediation: true,
+    responsibleAISessionPrivacy: true,
+    responsibleAINotExamClaim: true,
     evidencePacketExercise: true,
     witnessTerminalAsset: true,
     witnessTwoObjectSemantics: true,
@@ -479,7 +525,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-PRIMARY", "HA-AI901-002"],
     credits: true,
   }));
 } finally {
