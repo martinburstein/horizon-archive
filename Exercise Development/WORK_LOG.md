@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Information Extraction continuity closure
+
+- **Outcome:** Closed only the L-04-04 continuity contract. Primary, transfer, and closed-note System regions now contain neutral deterministic scores/status; modality/schema/null/evidence coaching is rendered separately as explicitly labeled 901 Teacher remediation.
+- **Persistent safety/text:** Every phase now carries an accessible offline warning covering no media, processing, upload, analyzer, or service call and explicitly states that source media, paths, extracted values, service responses, and free text are not persisted. A persistent text equivalent covers modality, schema, null/missing, provenance, confidence, and human review.
+- **Ownership/focus:** Closed-note schema/null/evidence prose remains Pilot-owned and session-only; completions remain Teacher-owned. A dedicated Extraction focus flag targets Continue after direct mastery and sanitized mastered-save reload.
+- **Preserved contracts:** Both strict 12/12 forms, four-part closed note, invented-value rejection, sanitizer/privacy, close/reopen, canonical/narrow layouts, and distinct captures remain intact. No L-05-01/L-05-02 gameplay was added.
+- **Files changed:** `horizon-archive-game/src/extractionWorkloadExercise.js`, its unit test, `App.jsx`, `styles.css`, `playtest/e2e-playthrough.mjs`, refreshed QA captures, and this log.
+- **Validation:** L-04-04 self-test passes; packaged primary and transfer pass 12/12; 91/91 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors and verifies all-phase messaging, ownership separation, privacy, distinct captures, and direct/restored Continue focus.
+- **Next recommended item:** Player Agent should independently audit announcement order, keyboard traversal, schema/null remediation, invented-value rejection, and narrow-screen reading order.
+- **Unresolved risks:** Automated DOM/focus checks do not substitute for a manual screen-reader pass. Live analyzer/service details remain intentionally excluded and require current official verification.
+
 ## 2026-07-12 — L-04-04 Offline Extraction Workloads complete Terminal gate
 
 - **Outcome:** Added `EX-L0404-EXTRACTION-WORKLOADS` as the mandatory offline Terminal after Visual Workloads. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note modality → schema → missing-value → evidence-review explanation. No L-05-01 gameplay was implemented.

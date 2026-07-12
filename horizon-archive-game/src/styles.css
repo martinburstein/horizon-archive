@@ -540,6 +540,7 @@ h1 {
 .visual-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .visual-explanation { grid-template-columns: 1fr; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0404-EXTRACTION-WORKLOADS"] { overflow: hidden; }
+.extraction-workspace { grid-template-rows: auto auto minmax(0, 1fr); }
 .extraction-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .extraction-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }
