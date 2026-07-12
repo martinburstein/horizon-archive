@@ -202,3 +202,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Choose a plain model flow when orchestration is unnecessary; otherwise keep stable instructions authoritative and attach only least-privilege tools. Tool capability is not action permission.
 - Test expected, edge, injection, denied, timed-out, and failed paths. Denied or failed work stays denied or failed; fabricated success is always a remediation state. Client flow uses agent identifier, submitted input, then a real result or honest error.
 - Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Text/Speech Patterns hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/no-readiness/no-disclosure/action warning -> six-boundary transcript equivalent -> Pilot pattern decision/prose -> neutral System validator -> Teacher direction/result/authority remediation.
+- Existing text maps to analysis; audio to recognition to text; text to synthesis to audio; spoken prompt plus supplied context maps to deployed multimodal response. Endpoint, approved identity, and payload remain separate client boundaries.
+- Inspect success, per-item error, and cancellation honestly without fabricated content. Local simulation proves neither live readiness nor disclosure/action authority.
+- Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

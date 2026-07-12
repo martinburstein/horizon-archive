@@ -130,3 +130,9 @@ At 1x capture:
 - Single-Agent uses three fixed workspace rows: persistent no-agent/tool/action warning, persistent six-boundary equivalent, then one contained form. Rows wrap but cannot overlap or reorder at canonical or narrow size.
 - Canonical order is fit -> stable instructions -> least-privilege tools -> expected/edge/injection/denied/failure tests -> verified action authority -> agent-ID submit/read honest result or error. Narrow retains the same order by vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
+
+## Offline Text/Speech Patterns viewport contract
+
+- Text/Speech uses three fixed rows: persistent offline/no-readiness/no-disclosure/action warning, six-boundary transcript equivalent, then one contained form. Rows wrap without overlap or reordering.
+- Canonical order is text analysis -> recognition -> synthesis -> multimodal prompt -> client configuration/payload -> honest result/error/cancellation plus simulation limits. Narrow preserves the full order through vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.

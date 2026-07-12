@@ -152,6 +152,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Client flow reads agent identifier -> submit input -> real result or honest error.
 - [ ] Single-Agent captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
 - [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
+- [ ] Text/Speech offline/no-readiness/no-disclosure/action warning and transcript equivalent remain persistent, ordered, and non-overlapping.
+- [ ] Text analysis, recognition, synthesis, multimodal prompt, client configuration/payload, and result/cancellation/simulation remain distinct.
+- [ ] Success, per-item error, and cancellation remain honest; fabricated content receives Teacher remediation separate from System score.
+- [ ] Endpoint, approved identity, and payload remain visually and semantically separate.
+- [ ] Text/Speech captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
+- [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.

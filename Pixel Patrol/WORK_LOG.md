@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Text/Speech Patterns final visual gate
+
+- **Completed:** audited complete Text/Speech Patterns primary, transfer, closed-note, and mastered flow. Persistent offline/no-live-readiness/no-disclosure/action warning and six-boundary transcript equivalent already occupy correct fixed rows above one contained form. Text/speech/multimodal/client/cancellation/simulation hierarchy, honest result/error handling, Pilot/System/Teacher ownership, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 122 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms all-phase warning/transcript association, both 12/12 forms, four-part explanation, result/cancellation/disclosure honesty, ownership separation, privacy, direct/reload Continue focus, distinct captures, and credits.
+- **Next recommended item:** Location Scout should render six signal routes with recognition and synthesis visibly opposing, multimodal input merging two channels, and honest success/error/cancellation returning through three distinct apertures.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 work viewport by design. Separately, the 580.71 kB bundle advisory remains non-blocking and produced no observed capture, interaction, or full-journey performance defect.
+
 ## 2026-07-12 — Offline Single-Agent Solutions final visual gate
 
 - **Completed:** audited complete Single-Agent primary, transfer, closed-note, and mastered flow. Persistent no-agent/tool/action warning and six-boundary equivalent already occupy correct fixed rows above one contained form. Fit/instructions/least-privilege/test/verified-authority/client-flow hierarchy, timed-out-tool fabricated-success rejection, Pilot/System/Teacher ownership, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
