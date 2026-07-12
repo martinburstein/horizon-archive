@@ -103,3 +103,11 @@
 - **Validation:** native RGBA is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; combined silhouette and all three isolated ring masks remain distinct in grayscale; central core has two physically separate halves; painted bounds fit the existing 68 x 76 hotspot and AB-01 anchor; no text, smoothing, reference pixels, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should identify outer/middle/inner layers and both core halves at native grayscale; Coder should retain live labels for Model, Deployment, Request configuration, Decision, and Reason.
 - **Unresolved risks:** concentric geometry communicates hierarchy but not product-specific terminology. The physical motif must never be the learner's only source for field meaning.
+
+## 2026-07-12 — Model / Deployment four-phase strip
+
+- **Completed:** extended the existing three-ring/two-part-core motif with one native four-tile strip for primary → transfer → closed-note → mastered. Only external framing changes; the semantic rings and core remain pixel-identical.
+- **Files changed:** extended the motif renderer; added `PHASES.md`, native `256 x 64` strip, and exact nearest-neighbor `512 x 128` QA. No scene, lore, anchor, hotspot, interface, ring, or core meaning changed.
+- **Validation:** native/2x dimensions and byte-exact enlargement pass; the local semantic motif crop is byte-identical across all four tiles; all phase pairs remain distinct in grayscale through rail count, rhythm, shutter, or corner-lock geometry; links pass; world/footer separation remains intact.
+- **Next recommended item:** Accessibility Sentinel should identify all four phases at native grayscale without touching the semantic rings; Coder can crop tiles at x offsets 0, 64, 128, and 192 and must retain live phase labels.
+- **Unresolved risks:** surrounding geometry supplements but cannot replace text. Runtime must announce phase and preserve focus/state semantics independently of the physical motif.

@@ -21,6 +21,7 @@ Color reinforces the layers but never defines them. Continuous mass, bracket cou
 - **2x nearest-neighbor QA:** [128 x 128](qa/model-deployment-rings-2x-128x128.png).
 - **Grayscale QA:** [64 x 64](qa/model-deployment-rings-grayscale-64x64.png).
 - **Ring-isolation QA:** [combined / model / deployment / request at 2x](qa/ring-isolation-2x-512x128.png).
+- **Exercise phases:** [primary → transfer → closed-note → mastered](PHASES.md).
 - **Renderer:** [build_model_deployment_motif.py](build_model_deployment_motif.py); integer geometry only and no reference asset inputs.
 - **AB-01 anchor:** `x=156, y=211` in the `640 x 360` world.
 - **Painted bounds:** `x=6–58, y=6–60`; 53 x 55 logical pixels.

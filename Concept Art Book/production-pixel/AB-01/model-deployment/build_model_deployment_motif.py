@@ -81,6 +81,44 @@ def motif(parts=("outer", "middle", "inner", "core")):
     return im
 
 
+def phased_motif(phase):
+    """Add phase framing outside the unchanged three-ring/two-core motif."""
+    tile = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+    d = ImageDraw.Draw(tile)
+    frame = P["edge"]
+    accent = P["violet0"]
+    if phase == "primary":
+        # One continuous rail: first form.
+        d.rectangle((1, 13, 3, 55), fill=frame)
+        d.rectangle((3, 13, 5, 16), fill=accent)
+        d.rectangle((3, 52, 5, 55), fill=accent)
+    elif phase == "transfer":
+        # Mirrored offset rails: equivalent reasoning on a fresh form.
+        for y in range(10, 57, 9):
+            d.rectangle((0, y, 3, min(y + 4, 57)), fill=frame)
+            d.rectangle((60, y + 4, 63, min(y + 8, 61)), fill=frame)
+        d.rectangle((3, 8, 5, 12), fill=accent)
+        d.rectangle((58, 56, 60, 60), fill=accent)
+    elif phase == "closed-note":
+        # A segmented shutter closes above the unchanged decision instrument.
+        d.rectangle((7, 0, 56, 2), fill=frame)
+        for x in (9, 21, 33, 45):
+            d.rectangle((x, 3, x + 6, 4), fill=accent)
+        d.rectangle((5, 2, 7, 8), fill=frame)
+        d.rectangle((56, 2, 58, 8), fill=frame)
+    elif phase == "mastered":
+        # Complete corner-locked frame: persistent bounded completion geometry.
+        d.line([(0, 11), (0, 0), (11, 0)], fill=frame, width=2)
+        d.line([(52, 0), (63, 0), (63, 11)], fill=frame, width=2)
+        d.line([(0, 52), (0, 63), (11, 63)], fill=frame, width=2)
+        d.line([(52, 63), (63, 63), (63, 52)], fill=frame, width=2)
+        for x, y in ((3, 3), (58, 3), (3, 58), (58, 58)):
+            d.rectangle((x, y, x + 2, y + 2), fill=accent)
+    base = motif()
+    tile.paste(base, (0, 0), base)
+    return tile
+
+
 def main():
     (ROOT / "qa").mkdir(parents=True, exist_ok=True)
     asset = motif()
@@ -100,6 +138,14 @@ def main():
     for i, tile in enumerate(variants):
         strip.paste(tile, (i * 64, 0), tile)
     strip.resize((512, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "ring-isolation-2x-512x128.png", optimize=False)
+
+    phases = ["primary", "transfer", "closed-note", "mastered"]
+    phase_strip = Image.new("RGB", (256, 64), P["void"])
+    for i, phase in enumerate(phases):
+        tile = phased_motif(phase)
+        phase_strip.paste(tile, (i * 64, 0), tile)
+    phase_strip.save(ROOT / "model-deployment-phases-1x-256x64.png", optimize=False)
+    phase_strip.resize((512, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "model-deployment-phases-2x-512x128.png", optimize=False)
 
 
 if __name__ == "__main__":
