@@ -50,9 +50,17 @@
    - Produces implementation-ready aesthetic rules, benchmark scenes, QA checklists, and do/don't comparisons without copying characters, scenes, dialogue, jokes, icons, compositions, or extracted game assets.
    - Hands its production specification to Location Scout Agent and Coder Agent so new world art and UI share one period-authentic square-pixel system.
 
+8. **Accessibility Sentinel Agent** (`accessibility_sentinel_agent`)
+   - Serves as the final specialist quality gate for each round and audits the combined game, learning, narrative, and visual tranche without implementing unrelated features.
+   - Tests keyboard-only operation, logical focus order, visible focus, screen-reader names and live regions, form/error association, zoom and reflow, reduced motion, contrast, grayscale and color-independent states, target size, subtitles/transcripts, audio alternatives, and recovery from every mistake.
+   - Audits the fixed `640 × 480` pixel canvas for readable bitmap type, non-blurry integer scaling, letterbox behavior, compact-dialogue cognitive load, and preservation of the world at desktop and constrained viewports.
+   - Reviews Terminal exercises for beginner comprehension, one-action-at-a-time clarity, traceback/error readability, safe exits, unlimited recovery, privacy boundaries, and whether mastery gates measure the intended skill instead of interface dexterity.
+   - Produces prioritized, reproducible findings with WCAG-informed reasoning and separates blockers from polish. It does not silently weaken mastery criteria to solve an interface problem.
+   - Hands the highest-value unresolved accessibility or cognitive-load issue to Player Agent and Coder Agent for the next round.
+
 ## Turn order
 
-`Player Agent -> Coder Agent -> Lore Keeper Agent -> 901 Teacher Agent -> Exercise Agent -> Pixel Patrol Agent -> Location Scout Agent -> Player Agent`
+`Player Agent -> Coder Agent -> Lore Keeper Agent -> 901 Teacher Agent -> Exercise Agent -> Pixel Patrol Agent -> Location Scout Agent -> Accessibility Sentinel Agent -> Player Agent`
 
 Only one agent owns the active work turn. The active agent works autonomously until it reaches a meaningful, reviewable stopping point, then stops. The next agent does not begin until Martin says **advance**.
 
@@ -74,6 +82,8 @@ Location Scout Agent reports must show or link the produced artwork and describe
 Exercise Agent reports must identify the skill practiced, runnable exercise path, mastery evidence captured, accessibility checks, and integration handoff without revealing story spoilers.
 
 Pixel Patrol Agent reports must identify footage/reference coverage, measurable aesthetic conclusions, implementation constraints, and remaining uncertainty without reproducing copyrighted frames or assets in the repository.
+
+Accessibility Sentinel Agent reports must list tested assistive modes and viewports, prioritized reproducible findings, affected learners, relevant accessibility principle, evidence, and the exact next-round handoff. It remains read-only unless explicitly assigned a narrow accessibility-documentation or test-fixture update.
 
 ## Operating rules
 
