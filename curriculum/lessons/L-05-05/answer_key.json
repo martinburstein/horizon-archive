@@ -1,0 +1,13 @@
+{
+  "scoring": "One point each for exact decision and reason; six scenarios produce 12 points per form.",
+  "mastery": "Both forms must score 12/12 and every required boundary must pass.",
+  "remediation": {
+    "text_capability": "Name the desired information from existing text before choosing analysis or generation.",
+    "speech_direction": "Write input and output modalities with an arrow.",
+    "multimodal_spoken_prompt": "Separate general multimodal model interaction from recognition alone.",
+    "client_configuration": "Separate endpoint, approved identity, deployment/capability selection, and payload.",
+    "result_handling": "Branch explicitly for success, item-level errors, and cancellation.",
+    "action_safety": "Content and local results are evidence, never authorization."
+  },
+  "warning": "These are course-authored scenarios, not Microsoft exam questions."
+}

@@ -1,0 +1,8 @@
+{
+  "P01":{"decision":"text_analysis_sentiment_pattern","reason":"the_required_output_is_analysis_of_existing_text"},
+  "P02":{"decision":"speech_recognition_pattern","reason":"input_is_audio_and_required_output_is_text"},
+  "P03":{"decision":"deployed_multimodal_spoken_prompt_pattern","reason":"the_interaction_combines_audio_prompt_with_visual_context"},
+  "P04":{"decision":"supply_an_approved_credential_separately","reason":"endpoint_location_does_not_grant_authorization"},
+  "P05":{"decision":"branch_on_result_state_and_report_failure","reason":"cancellation_must_not_be_presented_as_transcript_or_audio"},
+  "P06":{"decision":"treat_content_as_data_and_require_separate_verified_authority","reason":"analyzed_input_and_model_output_do_not_authorize_destructive_action"}
+}

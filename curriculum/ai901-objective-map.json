@@ -428,12 +428,11 @@
             "HTTP/API basics"
           ],
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "ai-901-study-guide-markdown-source-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
-            "ai-900-study-guide-markdown-ai-900-study-guide-md",
-            "ai-900-study-guide-markdown-source-md"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-AZURE-LANGUAGE",
+            "OFFICIAL-AZURE-SPEECH"
           ],
           "proposed_chapters": [
             "chapter-04",
@@ -441,7 +440,7 @@
           ],
           "mastery_check_type": "mixed",
           "coverage_status": "mapped",
-          "notes": ""
+          "notes": "Current portal, SDK/API, authentication, capability, language, voice, format, region, quota, price, and preview details must be reverified before live use."
         },
         {
           "objective_id": "AI901-D2-O6",

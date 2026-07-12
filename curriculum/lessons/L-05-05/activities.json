@@ -1,0 +1,32 @@
+[
+  {
+    "activity_id": "A-L0505-1",
+    "lesson_id": "L-05-05",
+    "activity_type": "compare_choice",
+    "purpose": "Choose a text-analysis, speech-recognition, speech-synthesis, or multimodal spoken-prompt pattern from the required input and output.",
+    "interaction_mode": "guided",
+    "source_dependency": "source_required",
+    "estimated_minutes": 15,
+    "input_contract": "Learner has completed text and speech workload prerequisites.",
+    "output_contract": "Learner selects the smallest sufficient capability and states the input-output direction.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0505-2",
+    "lesson_id": "L-05-05",
+    "activity_type": "checkpoint",
+    "purpose": "Trace an offline Foundry client pattern from approved configuration through validated result and safe fallback.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 20,
+    "input_contract": "Learner receives a bounded scenario, simulated configuration, and simulated result state.",
+    "output_contract": "Learner identifies capability, data flow, credential boundary, result branch, and prohibited external action.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  }
+]

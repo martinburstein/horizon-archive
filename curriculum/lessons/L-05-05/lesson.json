@@ -1,0 +1,27 @@
+{
+  "lesson_id": "L-05-05",
+  "lesson_title": "Build text and speech solution patterns in Foundry",
+  "lesson_type": "compare_and_choose_scenario_lesson",
+  "chapter_id": "chapter-05",
+  "module_id": "ch5-m2",
+  "launch_tier": "launch_valuable",
+  "source_mode": "source_grounded",
+  "supports_objectives": ["AI901-D2-O5"],
+  "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
+  "prerequisite_lesson_ids": ["L-04-01", "L-04-02", "L-05-03"],
+  "source_ids": ["OFFICIAL-AI901-STUDY-GUIDE", "OFFICIAL-FOUNDRY-HUB", "OFFICIAL-FOUNDRY-SDK", "OFFICIAL-AZURE-LANGUAGE", "OFFICIAL-AZURE-SPEECH"],
+  "activity_ids": ["A-L0505-1", "A-L0505-2"],
+  "assessment_ids": ["AS-L0505-SCEN"],
+  "learner_starting_state": "Can distinguish text-analysis and speech workloads and trace endpoint, credential, request, and response boundaries.",
+  "learner_ending_state": "Can choose and trace a safe Foundry text or speech solution pattern, including input/output direction, client configuration, result handling, and action boundaries.",
+  "mastery_gate": "Score 12 of 12 on primary and fresh-transfer forms across six text-and-speech solution boundaries, then explain one complete pattern and its action safeguard without notes.",
+  "estimated_minutes": 50,
+  "difficulty_band": "beginner_plus",
+  "provenance_policy": {
+    "citation_expectation": "AI-901 scope and current Foundry, Language, Speech, and SDK claims cite official Microsoft sources.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Reverify portal labels, SDK/API versions, endpoints, authentication, features, languages, voices, formats, regions, quotas, pricing, preview status, and deprecations before live use."
+  },
+  "status": "review",
+  "notes": "Offline solution-pattern lab only; no text/audio is sent, no service is called, and no Azure or external action is authorized."
+}

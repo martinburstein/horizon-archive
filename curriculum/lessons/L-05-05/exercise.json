@@ -1,0 +1,42 @@
+{
+  "exercise_id": "EX-L0505-TEXT-SPEECH-PATTERNS",
+  "lesson_id": "L-05-05",
+  "activity_id": "A-L0505-2",
+  "assessment_ids": ["AS-L0505-SCEN"],
+  "objective_ids": ["AI901-D2-O5"],
+  "skill_ids": ["PY-015", "PY-016", "PY-018"],
+  "forms": ["primary", "transfer"],
+  "dimensions": ["decision", "reason"],
+  "mastery": {
+    "minimum_correct_per_form": 12,
+    "total_per_form": 12,
+    "boundaries_required_per_form": ["text_capability", "speech_direction", "multimodal_spoken_prompt", "client_configuration", "result_handling", "action_safety"],
+    "closed_note_explanation_required": true,
+    "external_or_destructive_action_safeguard_required": true
+  },
+  "remediation_sequence": ["name_input_and_required_output", "choose_smallest_sufficient_capability", "separate_endpoint_identity_and_payload", "inspect_result_state", "state_simulation_limit", "retry_transfer"],
+  "misconception_tags": ["text-generation-is-text-analysis", "recognition-is-synthesis", "speech-service-is-any-multimodal-model", "endpoint-is-credential", "cancellation-is-content", "local-output-proves-live-readiness", "prompt-authorizes-action"],
+  "evidence_contract": {
+    "store": ["lesson_id", "exercise_id", "form", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["input_text", "audio_bytes", "audio_path", "transcript", "generated_audio", "endpoint", "credential", "service_response", "external_action_request"]
+  },
+  "session_contract": {
+    "close_reopen": "restore_active_choices_only",
+    "scene_transition": "clear_working_text_audio_configuration_and_result_state",
+    "mastery_evidence": "persist_separately"
+  },
+  "ui_contract": {
+    "target_viewport": "640x480",
+    "presentation": "one_scenario_card_at_a_time",
+    "must_not_rely_on_color_alone": true
+  },
+  "accessibility_contract": {
+    "keyboard_order": ["instructions", "scenario", "decision", "reason", "check", "feedback", "hint", "next", "exit"],
+    "persistent_labels": true,
+    "field_associated_feedback": true,
+    "transcript_equivalent_for_audio": true,
+    "status_live_region": true,
+    "time_limit": false,
+    "reduced_motion": true
+  }
+}

@@ -379,15 +379,17 @@
           "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
           "prerequisite_lesson_ids": ["L-04-01", "L-04-02", "L-05-03"],
           "launch_tier": "launch_valuable",
-          "source_mode": "source_grounded_with_gap_warning",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-03-get-started-with-text-analysis-in-",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-04-get-started-with-speech-in-azure-0"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-AZURE-LANGUAGE",
+            "OFFICIAL-AZURE-SPEECH"
           ],
           "activity_ids": ["A-L0505-1", "A-L0505-2"],
           "assessment_ids": ["AS-L0505-SCEN"],
-          "mastery_gate": "can choose an appropriate Foundry pattern for language or speech scenarios"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across six text-and-speech solution boundaries, then explain one complete pattern and its action safeguard without notes"
         },
         {
           "lesson_id": "L-05-06",

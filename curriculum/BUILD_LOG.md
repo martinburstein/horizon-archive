@@ -541,3 +541,27 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0504-SINGLE-AGENT` as the offline portal worksheet and deterministic two-form gate.
 Notes: No agent/service call, Azure mutation, gameplay, lore, or external action occurred. Portal labels, Agent Service APIs/SDKs, identity terms, tool availability, run/session concepts, models, pricing, previews, and deprecations remain volatile.
+
+## Log entry: 2026-07-12T14:06:59-04:00
+
+Stage: Sequential Microsoft Foundry implementation expansion
+Action: Completed exactly one next mapped package, `L-05-05`, as a source-grounded offline text-and-speech solution-pattern lesson with instruction, guided practice, retrieval, deterministic primary/transfer assessment, remediation, strict readiness gate, and Exercise Agent contract.
+Files touched:
+- curriculum/lessons/L-05-05/*
+- curriculum/ai901-objective-map.json
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current Foundry SDK, Azure Language, and Azure Speech official alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objectives, Python skills, official sources, map alignment, local link, and privacy/session/accessibility/action safeguards: pass
+- each form covers all six text-and-speech solution boundaries: pass
+- validator self-test, cancellation failure probe, and unauthorized-disclosure probe: pass
+- primary reference 12/12; transfer reference 12/12; blank primary and transfer correctly rejected at 0/12 with exit 1
+- existing `L-05-04` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0505-TEXT-SPEECH-PATTERNS` as an offline scenario terminal with deterministic two-form scoring.
+Notes: No service call, Azure mutation, credential use, audio capture/playback, external action, gameplay, or lore change occurred. Portal labels, SDK/API versions, endpoints, authentication, capabilities, languages, voices, formats, regions, quotas, prices, previews, and deprecations remain volatile.

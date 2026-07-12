@@ -1,0 +1,16 @@
+[
+  {
+    "assessment_id": "AS-L0505-SCEN",
+    "lesson_id": "L-05-05",
+    "assessment_type": "scenario_choice",
+    "supports_objectives": ["AI901-D2-O5"],
+    "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Pass primary 12/12, remediate each failed boundary, then pass a fresh transfer form 12/12 and explain one full solution pattern closed-note.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]
