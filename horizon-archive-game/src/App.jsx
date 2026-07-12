@@ -205,7 +205,7 @@ import {
   updatePortalEvidence,
 } from "./portalOrientationExercise.js";
 import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
-import { clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryPrimary,clientBoundaryRemediation,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryScenario,getClientBoundaryOptions,mockPassed,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
+import { clientBoundaryDialogDescribedBy,clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryMockOutput,clientBoundaryPrimary,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryMock,evaluateClientBoundaryScenario,getClientBoundaryExplanationFeedback,getClientBoundaryFeedback,getClientBoundaryOptions,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -460,6 +460,7 @@ export function App() {
   const focusContinueAfterExtractionRef = useRef(false);
   const focusContinueAfterPortalRef = useRef(false);
   const focusContinueAfterPromptRef = useRef(false);
+  const focusContinueAfterClientBoundaryRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -583,6 +584,12 @@ export function App() {
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, promptEvidence?.masteryStatus]);
 
+  useLayoutEffect(() => {
+    if (!focusContinueAfterClientBoundaryRef.current || terminalOpen || !pendingAdvance || clientBoundaryEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterClientBoundaryRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, clientBoundaryEvidence?.masteryStatus]);
+
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
     setSceneIndex(0);
@@ -676,7 +683,7 @@ export function App() {
     setPortalEvidence(saved.portalEvidence);
     setPortalSession(null);
     if(saved.promptEvidence?.masteryStatus==="mastered")focusContinueAfterPromptRef.current=true;setPromptEvidence(saved.promptEvidence);setPromptSession(null);
-    setClientBoundaryEvidence(saved.clientBoundaryEvidence);setClientBoundarySession(null);
+    if(saved.clientBoundaryEvidence?.masteryStatus==="mastered")focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(saved.clientBoundaryEvidence);setClientBoundarySession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1369,13 +1376,13 @@ export function App() {
 
   function openClientBoundaries(){setTerminalOpen(true);setRuinsTerminalKind("client-boundaries");if(!clientBoundarySession){const form=clientBoundaryEvidence?.masteryStatus==="primary_complete"?"transfer":clientBoundaryEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setClientBoundarySession({form,phase:clientBoundaryEvidence?.mockPassed?(form==="explanation"?"explanation":"scenarios"):"mock",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{configuration:"",client_layers:"",request_response:"",simulation_authority:""},explanationResult:null,ownershipConfirmed:false,mockResult:null});}}
   function exitClientBoundaries(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mock closed safely. No configuration, request, response, credential, or action survives.","system");}
-  function runClientBoundaryMock(){setClientBoundarySession({...clientBoundarySession,phase:"scenarios",mockResult:"PASS"});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{mockPassed:mockPassed}));}
+  function runClientBoundaryMock(){const mockResult=evaluateClientBoundaryMock(clientBoundaryMockOutput);setClientBoundarySession({...clientBoundarySession,phase:mockResult.passed?"scenarios":"mock",mockResult});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{mockPassed:mockResult.passed}));}
   function checkClientBoundary(event){event.preventDefault();const ss=clientBoundarySession.form==="transfer"?clientBoundaryTransfer:clientBoundaryPrimary,s=ss[clientBoundarySession.index],result=evaluateClientBoundaryScenario(s.id,clientBoundarySession.response,clientBoundarySession.form),hintLevel=result.passed?clientBoundarySession.hintLevel:Math.max(1,clientBoundarySession.hintLevel);setClientBoundarySession({...clientBoundarySession,result,hintLevel});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:clientBoundarySession.form,scenarioId:s.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:clientBoundarySession.form==="transfer"?"primary_complete":result.passed?"in_progress":"remediation_required"}));}
   function revealClientBoundaryHint(){const hintLevel=Math.min(3,clientBoundarySession.hintLevel+1);setClientBoundarySession({...clientBoundarySession,hintLevel});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{hintLevel}));}
   function advanceClientBoundary(){if(!clientBoundarySession.result?.passed)return;const ss=clientBoundarySession.form==="transfer"?clientBoundaryTransfer:clientBoundaryPrimary;if(clientBoundarySession.index===ss.length-1){if(clientBoundarySession.form==="transfer"){setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setClientBoundarySession({...clientBoundarySession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setClientBoundarySession({...clientBoundarySession,complete:true});return;}setClientBoundarySession({...clientBoundarySession,index:clientBoundarySession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
   function acknowledgeClientBoundaryPrimary(){if(!clientBoundarySession?.complete||!clientBoundaryEvidence?.confidence)return;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkClientBoundaryExplanation(event){event.preventDefault();const result=evaluateClientBoundaryExplanation(clientBoundarySession.explanationResponse);setClientBoundarySession({...clientBoundarySession,explanationResult:result});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
-  function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterPromptRef.current=true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
+  function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -2559,7 +2566,320 @@ export function App() {
                 </section>
               </TerminalShell>
             )}
-        {terminalOpen&&scene.id==="ruins"&&ruinsTerminalKind==="client-boundaries"&&clientBoundarySession&&<TerminalShell exerciseId={clientBoundaryExercise.exercise_id} title="Offline Mock Client Boundaries" filename={clientBoundarySession.phase==="mock"?"mock_client.py":clientBoundarySession.phase==="explanation"?"closed_note.md":`${clientBoundarySession.form}_boundaries.json`} lessonId={clientBoundaryExercise.lesson_id} statusText={clientBoundarySession.phase.toUpperCase()} closeLabel="Exit Client Boundaries" restoreFocusTo={terminalTriggerRef.current} onClose={exitClientBoundaries}><section className="model-choice-workspace"><p className="model-choice-boundary">OFFLINE MOCK · no Foundry/Azure/service/external action. Simulation and prompt text never prove live access or authorize deploy, create, credential use, or deletion.</p>{clientBoundarySession.phase==="mock"?<section className="workload-summary"><p className="pane-label">PILOT // LOCAL MOCK OWNER</p><h2>Trace deterministic mock_client.py</h2><pre>Endpoint valid: True{"\n"}Model selected: horizon-training-model{"\n"}Response: SIMULATED: Archive status received.</pre><button className="confirm-action" type="button" onClick={runClientBoundaryMock}>Run deterministic mock</button></section>:clientBoundarySession.phase==="explanation"?<form className="model-choice-form" onSubmit={checkClientBoundaryExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE BOUNDARY OWNER</p><h2>Explain configuration, clients, request/response, and simulation authority</h2></header><div className="model-choice-fields client-boundary-explanation">{clientBoundaryExplanationDimensions.map(d=>{const ok=clientBoundarySession.explanationResult?.correctness[d],id=`client-boundary-explanation-${d}-feedback`;return <label key={d}><span>{d.replaceAll("_"," ")}</span><input aria-label={`Closed-note client boundary ${d}`} aria-invalid={clientBoundarySession.explanationResult?!ok:undefined} aria-describedby={clientBoundarySession.explanationResult?id:undefined} value={clientBoundarySession.explanationResponse[d]} onChange={e=>setClientBoundarySession({...clientBoundarySession,explanationResponse:{...clientBoundarySession.explanationResponse,[d]:e.target.value},explanationResult:null,ownershipConfirmed:false})}/>{clientBoundarySession.explanationResult&&<small id={id}>{ok?"SYSTEM // Confirmed.":"901 TEACHER // Rebuild this boundary without fabricating success or authority."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit">Check client explanation</button></div><div role="status" aria-live="polite">{clientBoundarySession.explanationResult?`${clientBoundarySession.explanationResult.score}/4 · ${clientBoundarySession.explanationResult.passed?"Complete client-boundary explanation confirmed.":"901 TEACHER // Separate configuration, client layers, request/response, and simulation authority."}`:"No configuration, request, response, source, credential, or action request is shown."}</div>{clientBoundarySession.explanationResult?.passed&&<><label className="ownership-confirmation"><input type="checkbox" checked={clientBoundarySession.ownershipConfirmed} onChange={e=>setClientBoundarySession({...clientBoundarySession,ownershipConfirmed:e.target.checked})}/>I produced this client-boundary explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="client-boundary-confidence" checked={clientBoundaryEvidence?.confidence===v} onChange={()=>setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgeClientBoundaryMastery}>Acknowledge strict mastery</button></>}</section></form>:clientBoundarySession.complete?<section className="workload-summary"><h2>12 / 12 dimensions</h2><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(v=><label key={v}><input type="radio" name="client-boundary-primary-confidence" checked={clientBoundaryEvidence?.confidence===v} onChange={()=>setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{confidence:v}))}/>{v}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgeClientBoundaryPrimary}>Acknowledge primary form</button></section>:(()=>{const ss=clientBoundarySession.form==="transfer"?clientBoundaryTransfer:clientBoundaryPrimary,s=ss[clientBoundarySession.index],opts=getClientBoundaryOptions(s.id,clientBoundarySession.form);return <form className="model-choice-form" onSubmit={checkClientBoundary}><header><p className="pane-label">{clientBoundarySession.form.toUpperCase()} · PILOT // CLIENT-BOUNDARY OWNER · {s.id}</p><h2>{s.prompt}</h2></header><div className="model-choice-fields">{clientBoundaryDimensions.map(d=>{const ok=clientBoundarySession.result?.correctness[d],id=`client-boundary-${d}-feedback`;return <label key={d}><span>{d}</span><select aria-label={`Client boundary ${d}`} aria-invalid={clientBoundarySession.result?!ok:undefined} aria-describedby={clientBoundarySession.result?id:undefined} value={clientBoundarySession.response[d]} onChange={e=>setClientBoundarySession({...clientBoundarySession,response:{...clientBoundarySession.response,[d]:e.target.value},result:null})}><option value="">Choose one</option>{opts[d].map(v=><option key={v} value={v}>{formatChoice(v)}</option>)}</select>{clientBoundarySession.result&&<small id={id}>{ok?"SYSTEM // Correct.":"901 TEACHER // Name and trace the failed boundary."}</small>}</label>})}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit">Check client boundary</button></div><div role="status" aria-live="polite">{clientBoundarySession.result?`${clientBoundarySession.result.score}/2 · ${clientBoundarySession.result.passed?"Choice confirmed.":clientBoundaryRemediation(s,clientBoundarySession.result,clientBoundarySession.hintLevel)}`:"Keep endpoint, credential, deployment, client, request, response, and authority separate."}</div>{clientBoundarySession.result&&!clientBoundarySession.result.passed&&<button className="hint-action" type="button" onClick={revealClientBoundaryHint}>Reveal next boundary trace</button>}{clientBoundarySession.result?.passed&&<button className="confirm-action" type="button" onClick={advanceClientBoundary}>{clientBoundarySession.index===5?(clientBoundarySession.form==="transfer"?"Begin closed-note explanation":"View primary result"):"Next scenario"}</button>}</section></form>})()}</section></TerminalShell>}
+          {terminalOpen &&
+            scene.id === "ruins" &&
+            ruinsTerminalKind === "client-boundaries" &&
+            clientBoundarySession && (
+              <TerminalShell
+                exerciseId={clientBoundaryExercise.exercise_id}
+                title="Offline Mock Client Boundaries"
+                filename={
+                  clientBoundarySession.phase === "mock"
+                    ? "mock_client.py"
+                    : clientBoundarySession.phase === "explanation"
+                      ? "closed_note.md"
+                      : `${clientBoundarySession.form}_boundaries.json`
+                }
+                lessonId={clientBoundaryExercise.lesson_id}
+                statusText={clientBoundarySession.phase.toUpperCase()}
+                closeLabel="Exit Client Boundaries"
+                describedBy={clientBoundaryDialogDescribedBy}
+                restoreFocusTo={terminalTriggerRef.current}
+                onClose={exitClientBoundaries}
+              >
+                <section className="model-choice-workspace client-boundary-workspace">
+                  <p id="client-boundary-offline-warning" className="model-choice-boundary" role="note">
+                    FULLY OFFLINE MOCK · no Foundry, Azure, service call, login, credential use, mutation, or external action. Simulation and prompt text never prove live access or authorize deploy, create, email, purchase, deletion, or any destructive action. No endpoint, deployment name, credential, request, response, learner source, action request, or free text is persisted.
+                  </p>
+                  <p id="client-boundary-equivalent" className="speech-transcript">
+                    Six-boundary text equivalent: endpoint locates project → credential supplies identity → deployment name selects model → project client yields compatible inference client → request input is sent and response output is read → mock PASS proves local flow only, never live access or action authority.
+                  </p>
+                  {clientBoundarySession.phase === "mock" ? (
+                    <section className="workload-summary">
+                      <p className="pane-label">PILOT // LOCAL MOCK OWNER</p>
+                      <h2>Trace deterministic mock_client.py</h2>
+                      <pre>
+                        Endpoint valid: {String(clientBoundaryMockOutput.endpointValid)}{"\n"}Model selected: {clientBoundaryMockOutput.modelSelected}{"\n"}Response: {clientBoundaryMockOutput.response}
+                      </pre>
+                      <button
+                        className="confirm-action"
+                        type="button"
+                        onClick={runClientBoundaryMock}
+                      >
+                        Run deterministic mock
+                      </button>
+                    </section>
+                  ) : clientBoundarySession.phase === "explanation" ? (
+                    <form
+                      className="model-choice-form"
+                      onSubmit={checkClientBoundaryExplanation}
+                    >
+                      <header>
+                        <p className="pane-label">
+                          PILOT // CLOSED-NOTE BOUNDARY OWNER
+                        </p>
+                        <h2>
+                          Explain configuration, clients, request/response, and
+                          simulation authority
+                        </h2>
+                        <p>Your boundary and authority explanation remains Pilot-owned and session-only.</p>
+                      </header>
+                      <div className="model-choice-fields client-boundary-explanation">
+                        {clientBoundaryExplanationDimensions.map((d) => {
+                          const ok =
+                              clientBoundarySession.explanationResult
+                                ?.correctness[d],
+                            id = `client-boundary-explanation-${d}-feedback`;
+                          return (
+                            <label key={d}>
+                              <span>{d.replaceAll("_", " ")}</span>
+                              <input
+                                aria-label={`Closed-note client boundary ${d}`}
+                                aria-invalid={
+                                  clientBoundarySession.explanationResult
+                                    ? !ok
+                                    : undefined
+                                }
+                                aria-describedby={
+                                  clientBoundarySession.explanationResult
+                                    ? id
+                                    : undefined
+                                }
+                                value={
+                                  clientBoundarySession.explanationResponse[d]
+                                }
+                                onChange={(e) =>
+                                  setClientBoundarySession({
+                                    ...clientBoundarySession,
+                                    explanationResponse: {
+                                      ...clientBoundarySession.explanationResponse,
+                                      [d]: e.target.value,
+                                    },
+                                    explanationResult: null,
+                                    ownershipConfirmed: false,
+                                  })
+                                }
+                              />
+                              {clientBoundarySession.explanationResult && (
+                                <small id={id}>
+                                  {ok
+                                    ? "SYSTEM // Confirmed."
+                                    : "901 TEACHER // Rebuild this boundary without fabricating success or authority."}
+                                </small>
+                              )}
+                            </label>
+                          );
+                        })}
+                      </div>
+                      <section className="terminal-console model-choice-output">
+                        <div className="console-heading-row">
+                          <strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong>
+                          <button className="run-action" type="submit">
+                            Check client explanation
+                          </button>
+                        </div>
+                        <div role="status" aria-live="polite">{getClientBoundaryExplanationFeedback(clientBoundarySession.explanationResult).systemScore}</div>
+                        {getClientBoundaryExplanationFeedback(clientBoundarySession.explanationResult).teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // CLIENT LAYERS AND AUTHORITY REMEDIATION</strong><span>{getClientBoundaryExplanationFeedback(clientBoundarySession.explanationResult).teacherRemediation}</span></p>}
+                        {clientBoundarySession.explanationResult?.passed && (
+                          <>
+                            <label className="ownership-confirmation">
+                              <input
+                                type="checkbox"
+                                checked={
+                                  clientBoundarySession.ownershipConfirmed
+                                }
+                                onChange={(e) =>
+                                  setClientBoundarySession({
+                                    ...clientBoundarySession,
+                                    ownershipConfirmed: e.target.checked,
+                                  })
+                                }
+                              />
+                              I produced this client-boundary explanation myself
+                              without notes.
+                            </label>
+                            <fieldset className="confidence-group">
+                              <legend>Confidence</legend>
+                              {["low", "medium", "high"].map((v) => (
+                                <label key={v}>
+                                  <input
+                                    type="radio"
+                                    name="client-boundary-confidence"
+                                    checked={
+                                      clientBoundaryEvidence?.confidence === v
+                                    }
+                                    onChange={() =>
+                                      setClientBoundaryEvidence((p) =>
+                                        updateClientBoundaryEvidence(p, {
+                                          confidence: v,
+                                        }),
+                                      )
+                                    }
+                                  />
+                                  {v}
+                                </label>
+                              ))}
+                            </fieldset>
+                            <button
+                              className="confirm-action"
+                              type="button"
+                              onClick={acknowledgeClientBoundaryMastery}
+                            >
+                              Acknowledge strict mastery
+                            </button>
+                          </>
+                        )}
+                      </section>
+                    </form>
+                  ) : clientBoundarySession.complete ? (
+                    <section className="workload-summary">
+                      <p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p>
+                      <h2>12 / 12 dimensions</h2>
+                      <p>All six boundaries pass after the deterministic mock. Fresh transfer and closed-note explanation remain.</p>
+                      <fieldset className="confidence-group">
+                        <legend>Confidence</legend>
+                        {["low", "medium", "high"].map((v) => (
+                          <label key={v}>
+                            <input
+                              type="radio"
+                              name="client-boundary-primary-confidence"
+                              checked={clientBoundaryEvidence?.confidence === v}
+                              onChange={() =>
+                                setClientBoundaryEvidence((p) =>
+                                  updateClientBoundaryEvidence(p, {
+                                    confidence: v,
+                                  }),
+                                )
+                              }
+                            />
+                            {v}
+                          </label>
+                        ))}
+                      </fieldset>
+                      <button
+                        className="confirm-action"
+                        type="button"
+                        onClick={acknowledgeClientBoundaryPrimary}
+                      >
+                        Acknowledge primary form
+                      </button>
+                    </section>
+                  ) : (
+                    (() => {
+                      const ss =
+                          clientBoundarySession.form === "transfer"
+                            ? clientBoundaryTransfer
+                            : clientBoundaryPrimary,
+                        s = ss[clientBoundarySession.index],
+                        opts = getClientBoundaryOptions(
+                          s.id,
+                          clientBoundarySession.form,
+                        ),
+                        boundaryFeedback = getClientBoundaryFeedback(s, clientBoundarySession.result, clientBoundarySession.hintLevel);
+                      return (
+                        <form
+                          className="model-choice-form"
+                          onSubmit={checkClientBoundary}
+                        >
+                          <header>
+                            <p className="pane-label">
+                              {clientBoundarySession.form.toUpperCase()} · PILOT
+                              // CLIENT-BOUNDARY OWNER · {s.id}
+                            </p>
+                            <h2>{s.prompt}</h2>
+                          </header>
+                          <div className="model-choice-fields">
+                            {clientBoundaryDimensions.map((d) => {
+                              const ok =
+                                  clientBoundarySession.result?.correctness[d],
+                                id = `client-boundary-${d}-feedback`;
+                              return (
+                                <label key={d}>
+                                  <span>{d}</span>
+                                  <select
+                                    aria-label={`Client boundary ${d}`}
+                                    aria-invalid={
+                                      clientBoundarySession.result
+                                        ? !ok
+                                        : undefined
+                                    }
+                                    aria-describedby={
+                                      clientBoundarySession.result
+                                        ? id
+                                        : undefined
+                                    }
+                                    value={clientBoundarySession.response[d]}
+                                    onChange={(e) =>
+                                      setClientBoundarySession({
+                                        ...clientBoundarySession,
+                                        response: {
+                                          ...clientBoundarySession.response,
+                                          [d]: e.target.value,
+                                        },
+                                        result: null,
+                                      })
+                                    }
+                                  >
+                                    <option value="">Choose one</option>
+                                    {opts[d].map((v) => (
+                                      <option key={v} value={v}>
+                                        {formatChoice(v)}
+                                      </option>
+                                    ))}
+                                  </select>
+                                  {clientBoundarySession.result && (
+                                    <small id={id}>
+                                      {ok
+                                        ? "SYSTEM // Correct."
+                                        : "901 TEACHER // Name and trace the failed boundary."}
+                                    </small>
+                                  )}
+                                </label>
+                              );
+                            })}
+                          </div>
+                          <section className="terminal-console model-choice-output">
+                            <div className="console-heading-row">
+                              <strong>
+                                SYSTEM // STRICT 12-DIMENSION VALIDATOR
+                              </strong>
+                              <button className="run-action" type="submit">
+                                Check client boundary
+                              </button>
+                            </div>
+                            <div role="status" aria-live="polite">{boundaryFeedback.systemScore}</div>
+                            {boundaryFeedback.teacherRemediation && <p className="teacher-remediation"><strong>901 TEACHER // CLIENT-BOUNDARY REMEDIATION</strong><span>{boundaryFeedback.teacherRemediation}</span></p>}
+                            {clientBoundarySession.result &&
+                              !clientBoundarySession.result.passed && (
+                                <button
+                                  className="hint-action"
+                                  type="button"
+                                  onClick={revealClientBoundaryHint}
+                                >
+                                  Reveal next boundary trace
+                                </button>
+                              )}
+                            {clientBoundarySession.result?.passed && (
+                              <button
+                                className="confirm-action"
+                                type="button"
+                                onClick={advanceClientBoundary}
+                              >
+                                {clientBoundarySession.index === 5
+                                  ? clientBoundarySession.form === "transfer"
+                                    ? "Begin closed-note explanation"
+                                    : "View primary result"
+                                  : "Next scenario"}
+                              </button>
+                            )}
+                          </section>
+                        </form>
+                      );
+                    })()
+                  )}
+                </section>
+              </TerminalShell>
+            )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}

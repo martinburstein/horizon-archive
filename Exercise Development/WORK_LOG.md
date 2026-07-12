@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Client Boundaries continuity and mock evidence closure
+
+- **Mock evidence finding/fix:** `mockPassed` was defined, so the suspected issue was not an undefined runtime symbol. The real weakness was that App evidence imported a static `true` rather than deriving PASS from the current deterministic mock result. Added an exact three-check mock evaluator; runtime evidence now stores `mockResult.passed`. Regressions prove malformed/stale mock output returns false, explicit undefined cannot preserve stale PASS, App references the current result boolean, and working mock results never persist.
+- **Ownership/continuity:** Scenario and closed-note System regions now contain neutral deterministic scoring. Client-layer, request/response, simulation, and authority coaching renders separately as 901 Teacher remediation; primary/mastery completion remains Teacher-owned and closed-note prose remains Pilot-owned/session-only.
+- **Persistent safety/text:** Mock, primary, transfer, and closed-note retain an associated fully offline/no-service/no-action warning and six-boundary text equivalent. The warning denies prompt/simulation authority for live or destructive action and explicitly prohibits persistence of endpoint/deployment/credential/request/response/source/action/free-text data.
+- **Focus/contracts:** Added a dedicated Client Boundaries focus flag for direct mastery and sanitized reload. Preserved deterministic mock PASS, primary 12/12, fresh transfer 12/12, four-part closed note, destructive-action safeguards, strict sanitizer/privacy, canonical/narrow presentation, and three distinct captures. No L-05-04/L-05-05 gameplay was added.
+- **Files changed:** `clientBoundaryExercise.js`, its focused tests, `App.jsx`, `styles.css`, full E2E, refreshed Client Boundaries captures, and this log.
+- **Validation:** `mock_client.py` output passes; L-05-03 self-test passes; primary and transfer references each pass 12/12 plus MOCK PASS; 109/109 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors; diff check passes.
+- **Next recommended item:** Player Agent should independently challenge malformed/stale mock output, endpoint/deployment/credential reversals, destructive-action requests, keyboard order, and narrow reading order.
+- **Unresolved risks:** The deterministic mock proves only local training flow. It never proves live access or grants action authority; live details require official reverification and explicit authorization.
+
 ## 2026-07-12 — L-05-03 Offline Mock Client Boundaries gate
 
 - **Outcome:** Added `EX-L0503-CLIENT-BOUNDARIES` as the mandatory gate after Prompt Layers. Mastery requires deterministic `mock_client.py` PASS, primary 12/12, fresh transfer 12/12, and a four-part closed-note explanation. No L-05-04 gameplay was implemented.

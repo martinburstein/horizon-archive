@@ -552,6 +552,7 @@ h1 {
 .prompt-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .prompt-explanation { grid-template-columns: 1fr; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0503-CLIENT-BOUNDARIES"] { overflow: hidden; }
+.client-boundary-workspace { grid-template-rows: auto auto minmax(0, 1fr); }
 .client-boundary-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .client-boundary-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }
