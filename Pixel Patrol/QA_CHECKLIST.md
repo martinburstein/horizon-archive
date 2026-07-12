@@ -66,6 +66,9 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Tab order and scroll order both remain principle -> stakeholder -> mitigation -> owner -> validator -> remediation.
 - [ ] The focused select outline remains visible at the top and bottom scroll boundaries.
 - [ ] After Check, score, remediation, and the next available action are visible together in the validator region.
+- [ ] Transfer selects and closed-note inputs show the same 2 px internal focus frame at 640 x 480 and 320 x 240.
+- [ ] Transfer and explanation stages remain visibly distinct in title, filename/status, and pane label.
+- [ ] Closed-note typed values and field-associated remediation remain fully legible without horizontal scrolling.
 
 ## No-dead-end sweep
 

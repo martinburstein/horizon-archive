@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Responsible AI transfer and closed-note audit
+
+- **Completed:** audited the completed transfer and closed-note stages against the existing native-frame scroll contract. Both preserve one form scroller, natural-height four-field cards, title/file/status stage hierarchy, adjacent validator/remediation, and two-column canonical versus one-column narrow grouping. Added the one missing visual invariant: transfer selects and closed-note inputs now share a 2 px internal gold focus frame with -3 px offset, so keyboard focus remains square, high-contrast, and unclipped at both scroll boundaries.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log.
+- **Validation:** all 39 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Static checks confirm the shared 2 px/-3 px focus rule, one-scroll-owner contract, 640 x 480 two-column field grouping, and 320 x 240 one-column grouping. E2E confirms transfer 24/24, field-associated closed-note remediation, close/reopen continuity, ownership confirmation, strict mastery, privacy, and credits.
+- **Next recommended item:** Location Scout should keep the four-indicator physical grammar stable through primary, transfer, and explanation states, changing the surrounding frame geometry rather than inventing new indicator meanings per stage.
+- **Unresolved risks:** `playtest/responsible-ai-primary-qa.png` is the only Responsible AI QA output path and is overwritten by subsequent full runs; transfer and closed-note do not have distinct retained captures. This is noted for the coordinator but intentionally not broadened into a playtest-output cleanup during this one-CSS-rule tranche.
+
 ## 2026-07-12 — Responsible AI native-frame audit
 
 - **Completed:** audited the Responsible AI primary form in the native 640 x 480 frame. The existing 624 x 344 Terminal attempted to keep its header, four-field grid, and 105 px validator simultaneously visible, collapsing the field grid to approximately 18 px in the selected QA capture. Replaced that squeeze layout inside CanonicalGameFrame with one contained form scroller; field cards now retain natural label/select/feedback height and the validator remains after the fourth field in the same reading flow. The exercise-specific outer Terminal overflow is hidden so focus scrolls the form rather than pushing title/status chrome out of view. The 320 x 240 alternate keeps its single-column form inside the same scroll contract.

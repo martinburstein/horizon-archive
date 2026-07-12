@@ -308,6 +308,7 @@ h1 {
 .responsible-ai-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; min-height: 0; overflow: auto; }
 .responsible-ai-fields label { display: grid; align-content: start; gap: 5px; padding: 8px; color: #aeb7c3; background: #151920; border: 1px solid #39424d; font-size: 0.66rem; text-transform: capitalize; }
 .responsible-ai-fields select, .responsible-ai-fields input { width: 100%; min-width: 0; box-sizing: border-box; padding: 7px; color: #e0e5eb; background: #0d1015; border: 1px solid #4a5360; font: inherit; text-transform: none; }
+.responsible-ai-fields select:focus-visible, .responsible-ai-fields input:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 .responsible-ai-fields small { color: #d6c28b; font-size: 0.6rem; line-height: 1.3; text-transform: none; }
 .responsible-ai-output { min-height: 105px; }
 .responsible-ai-summary { min-height: 0; }

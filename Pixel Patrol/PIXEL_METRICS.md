@@ -17,6 +17,7 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Calibration help footer | 640 x 19; 102 characters at 6 px advance + 20 px inset = 632 px | Horizon adaptation |
 | Responsible AI Terminal inset | 8 px canonical; 4 px narrow | Implemented Horizon metric |
 | Responsible AI field card | natural content height; never compressed below label + select + feedback | Horizon adaptation |
+| Responsible AI field focus | 2 px internal outline, -3 px offset | Horizon adaptation |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 

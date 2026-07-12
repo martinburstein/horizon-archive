@@ -101,3 +101,5 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - The validator follows the fourth field. Because the learner must reach its submit button to validate, resulting error/remediation text appears in the same visible region without an automatic viewport jump.
 - Scrollbars, borders, and focus outlines remain square and whole-pixel. Use the browser's functional scrollbar until an original accessible pixel scrollbar exists; never hide the only position cue.
 - At 640 x 480, retain the two-column field grouping. At 320 x 240, use one column and the same single form scroller. No field label, selected value, feedback association, or focus outline may be horizontally clipped.
+- Transfer selects and closed-note text inputs share the same 2 px gold focus outline with a -3 px internal offset. The frame must remain visible at both scroll boundaries and does not depend on native platform glow or color fill alone.
+- Stage hierarchy remains title -> filename/form status -> non-exam boundary -> stage label and scenario -> four fields -> validator/remediation. `PRIMARY`, `TRANSFER`, and `EXPLANATION` must never be communicated only by filename.
