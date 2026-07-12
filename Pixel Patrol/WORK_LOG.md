@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Calibration keyboard-help placement
+
+- **Completed:** resolved the Exercise Agent handoff by moving the exact ungraded keyboard-orientation sentence from between route status and task content into the persistent final row of the Calibration workspace. Locked native metrics are 102 characters, 612 px glyph run at 6 px advance, 632 px including insets, and a 19 px canonical footer. The 320 px alternate preserves the exact copy as three lines in a 43 px footer.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this work log.
+- **Validation:** all 31 unit tests and the production build pass. Static grid-order review confirms tabs/status/pane/footer visual order while DOM orientation remains before pane controls; the footer uses whole-pixel dimensions, no ellipsis, and narrow-only wrapping. Calibration tabs now receive a non-clipping 2 px internal focus outline. The full browser regression was attempted twice but stopped before Calibration at the existing desktop Petal focus-restoration assertion; this stylesheet-only change does not affect that earlier path, so the blocked run is reported rather than misclassified as a footer failure.
+- **Next recommended item:** Location Scout should keep the physical Calibration node's status marks above its interaction surface, leaving the lowest 19 logical pixels of any open-interface framing visually quiet so footer text retains contrast.
+- **Unresolved risks:** the current prototype is still a responsive approximation rather than the final single 640 x 480 composed canvas. The final bitmap font must preserve a maximum 6 px advance for this exact line; a wider font requires a deliberately condensed original variant, not reduced readability or changed copy.
+
 ## 2026-07-12 — Foundation aesthetic tranche
 
 - **Completed:** researched official/store media, ScummVM technical documentation, a gallery covering the full location arc and UI modes, a listed complete longplay, a chapter walkthrough, and period control documentation. Research saturated at stable conclusions about 640 x 480 presentation, theatrical scene hierarchy, contextual action choice, inventory, animation cadence, subtitles, transitions, and cutscene boundaries.

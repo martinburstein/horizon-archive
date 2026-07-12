@@ -76,7 +76,18 @@ y 360-479  shared dialogue, output, and status band
 - Persists until scene transition and reappears on completed-save resume. It cannot overlap dialogue choices, error recovery, or inventory paging.
 - Locked state must never display the words faintly; absence avoids false affordance.
 
+## Calibration keyboard-orientation footer
+
+Decision: place the exact sentence `Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.` in a persistent footer below the active pane. Do not place it between the route-status strip and pane content.
+
+- The copy is exactly 102 characters. At the production 5 x 7 bitmap-style face with 6 px character advance, it occupies 612 px. Two 10 px horizontal insets make a 632 px row inside the 640 px border box; after two 2 px frame edges, 4 px of safety remains.
+- Footer height at canonical width is 19 px: 1 px top seam + 3 px top padding + 12 px line box + 3 px bottom padding. It is the final row of the Terminal workspace and does not overlay pane controls.
+- The route strip remains directly beneath the tabs. The active task begins immediately after it, preserving `tab -> file/form/ROUTE OPEN -> task` as the visual hierarchy.
+- The footer remains earlier than pane controls in DOM reading order so a screen-reader user receives orientation before interaction. CSS grid placement moves it visually without changing that order.
+- At 320 px narrow presentation the sentence remains exact and wraps naturally to three 12 px lines inside the available 296 px text width. The reserved footer becomes 43 px high; no ellipsis, clipping, abbreviation, or horizontal scrolling is allowed.
+- Footer fill is one value lighter than the deepest route strip and one value darker than pane content. It uses a 1 px top seam only; this reads as period status chrome without imitating a proprietary interface.
+- Calibration tab focus uses a 2 px gold internal outline with `-3px` offset so it remains visible and cannot be clipped by the tab strip. Selected-tab silhouette and focus outline must both remain visible when they coincide.
+
 ## Safe failure contract
 
 Every failure response contains: what the Machine observed, one bounded cue, and one next available action. Required controls remain enabled. Hints do not reduce attempts or erase work. There are no dead ends, item-loss traps, surprise deaths, or irreversible ordinary experiments.
-

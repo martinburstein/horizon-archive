@@ -57,6 +57,10 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Full browser stack traces are not dumped on beginners.
 - [ ] Close/reopen, reload, completion, and privacy behavior match exercise contracts.
 - [ ] Completion waits for explicit acknowledgement.
+- [ ] The exact 102-character keyboard-orientation sentence is the final workspace row, not between route status and task.
+- [ ] At 640 px it occupies one line with no clipping, ellipsis, or horizontal scroll; at 320 px it wraps to three complete lines.
+- [ ] The footer does not cover the last focusable pane control at any scroll position.
+- [ ] Focused Calibration tabs retain a visible 2 px internal outline, including when the selected tab is focused.
 
 ## No-dead-end sweep
 
@@ -65,4 +69,3 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Hints and retries remain available after failure and restore.
 - [ ] Keyboard-only and pointer-only runs can reach the same safe ending.
 - [ ] Save forgery cannot unlock route, completion, or credits.
-

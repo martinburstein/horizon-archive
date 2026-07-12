@@ -14,6 +14,7 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Emphasis border | 2 px, never fractional | Horizon adaptation |
 | Minimum visual control | 18 x 18 | Horizon adaptation |
 | Minimum pointer target | 22 x 22 logical at 2x, yielding 44 x 44 CSS | Accessibility adaptation |
+| Calibration help footer | 640 x 19; 102 characters at 6 px advance + 20 px inset = 632 px | Horizon adaptation |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 
@@ -70,3 +71,4 @@ At 1x capture:
 - No border thinner than 1 px or thicker than 2 px without structural purpose.
 - No text glyph feature thinner than 1 px.
 - Every status color has a shape, label, or motion partner.
+- Calibration help is one untruncated line at 640 px and three complete lines in the 320 px alternate layout.

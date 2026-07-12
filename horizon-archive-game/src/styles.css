@@ -282,13 +282,14 @@ h1 {
 .route-retrieval-list select { width: 100%; min-width: 0; margin-top: 7px; padding: 7px; color: #dce2ea; background: #171b22; border: 1px solid #4a5360; font-size: 0.66rem; }
 .route-retrieval-list p { margin: 7px 0 0; color: #d1bd87; font-size: 0.62rem; }
 .terminal-workbench[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"] { border: 2px solid #667080; box-shadow: 6px 6px 0 #05060a; }
-.calibration-workspace { display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); min-height: 0; background: #101319; font-family: "Courier New", monospace; }
+.calibration-workspace { display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; min-height: 0; background: #101319; font-family: "Courier New", monospace; }
 .calibration-pane-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 2px solid #303844; }
 .calibration-pane-tabs button { padding: 7px 4px; color: #9da7b4; background: #171b22; border: 0; border-right: 1px solid #303844; text-transform: uppercase; font-size: 0.62rem; cursor: pointer; }
 .calibration-pane-tabs button[aria-current="page"], .calibration-pane-tabs button:hover { color: #f0e7cf; background: #292334; }
+.calibration-pane-tabs button:focus-visible { position: relative; z-index: 1; outline: 2px solid #f0c96a; outline-offset: -3px; }
 .calibration-route-status { margin: 0; padding: 6px 10px; color: #d7c079; background: #090b0f; border-bottom: 1px solid #38414c; font-size: 0.62rem; letter-spacing: 0.08em; }
-.calibration-keyboard-help { margin: 0; padding: 5px 10px; color: #aeb7c2; background: #151920; border-bottom: 1px solid #303844; font-size: 0.6rem; line-height: 1.35; }
-.calibration-pane { min-height: 0; padding: 16px; overflow: auto; }
+.calibration-keyboard-help { position: sticky; bottom: 0; z-index: 2; grid-row: 4; margin: 0; padding: 3px 10px; color: #aeb7c2; background: #151920; border-top: 1px solid #303844; font-size: 10px; line-height: 12px; white-space: nowrap; }
+.calibration-pane { grid-row: 3; min-height: 0; padding: 16px; overflow: auto; }
 .calibration-pane h2 { margin: 5px 0 10px; color: #edf0f4; font: 1.1rem/1.15 Georgia, "Times New Roman", serif; }
 .calibration-pane p { color: #b5bec9; font-size: 0.7rem; line-height: 1.45; }
 .calibration-pane pre { max-width: 100%; margin: 10px 0; padding: 12px; overflow: auto; color: #e1c98d; background: #090b0f; border: 1px solid #3c4652; font-size: 0.72rem; line-height: 1.5; white-space: pre-wrap; }
@@ -427,6 +428,7 @@ h1 {
   .route-retrieval-list { grid-template-columns: 1fr; }
   .calibration-diagnosis-grid, .calibration-retrieval { grid-template-columns: 1fr; }
   .calibration-pane-tabs button { font-size: 0.55rem; }
+  .calibration-keyboard-help { white-space: normal; }
 }
 
 @media (prefers-reduced-motion: reduce) {
