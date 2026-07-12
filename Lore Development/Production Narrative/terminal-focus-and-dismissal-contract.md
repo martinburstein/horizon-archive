@@ -219,6 +219,20 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never validates, processes media, calls a service, acknowledges mastery, advances, or implies a Machine response.
 
+### Planned Offline Foundry Portal Rehearsal
+
+- Runtime integration is incomplete; this section defines target focus, dismissal, privacy, and ownership behavior.
+- Target title and dismissal name: `Offline Foundry Portal Rehearsal`; `Exit Portal Rehearsal`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; cards use `n/8` and the gate uses `CLOSED-NOTE GATE`.
+- Portal workflow, troubleshooting, connection boundaries, cleanup safeguards, and completion remain `901 TEACHER` copy.
+- Scenario choices are `PILOT // REHEARSAL OWNER`; explanation prose is `PILOT // CLOSED-NOTE PORTAL-FLOW OWNER`.
+- The visible boundary states zero Azure login, mutation, deployment, prompt submission, service call, credential use, or cleanup.
+- Exit line: "Portal rehearsal closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen restores active choices, result, and hints. Reload restores sanitized eligibility with clean fields and no identifiers.
+- Persistent evidence excludes tenant, subscription, resource group, project, endpoint, deployment, credential, prompt, response, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal and exercise text never authorize or perform an Azure action or imply a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -243,6 +257,7 @@ When acknowledgement changes progression:
 - Text Analysis mastery: prefer `Continue` after the System announces availability.
 - Speech Workloads mastery: prefer `Continue` after the System announces availability.
 - Extraction Workloads mastery: prefer `Continue` after the System announces availability.
+- Portal Orientation mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

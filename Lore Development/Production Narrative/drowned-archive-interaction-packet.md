@@ -833,6 +833,91 @@ The System reports field correctness and score only. Repair direction remains Te
 - Scene transition clears working choices and source state; sanitized mastery evidence persists separately.
 - Exit never validates, processes media, calls a service, acknowledges mastery, advances, or changes a physical object.
 
+## Planned Offline Foundry Portal Rehearsal
+
+Production alignment: `EX-L0501-PORTAL-ORIENTATION`, lesson `L-05-01`, activity `A-L0501-3`, assessment `AS-L0501-ORDER`, objective `AI901-D2-O2`, skills `PY-017` and `PY-019`. The deterministic exercise module exists, but playable Terminal integration is incomplete. These are target production labels and ownership rules, not claims about a finished runtime.
+
+### Ownership and zero-mutation boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns portal workflow instruction, troubleshooting, safety remediation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, mode, session state, evidence status, and progression availability.
+- `PILOT // REHEARSAL OWNER` owns scenario choices. `PILOT // CLOSED-NOTE PORTAL-FLOW OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No rehearsal result implies Machine intent or Azure activity.
+
+Keep this boundary visible in every future mode:
+
+> OFFLINE REHEARSAL ONLY · no Azure login, mutation, deployment, prompt submission, service call, credential use, or cleanup.
+
+No prompt, scenario, pasted text, or correct answer grants authority to create, modify, share, deploy, invoke, or delete anything. Any future live action requires separate current authorization, verified scope, safeguards, and explicit confirmation.
+
+### PO00 — Open primary
+
+- Target title/filename: `Offline Foundry Portal Rehearsal`; `primary_portal.json`.
+- `SYSTEM`: "Portal rehearsal open. PRIMARY 1/8. Zero Azure actions."
+- `901 TEACHER`: "Trace access, project, model, deployment, readiness, interaction, connection details, and cleanup."
+- Current portal labels, roles, availability, regions, quotas, pricing, previews, endpoints, and cleanup behavior require revalidation.
+
+### PO01 — Eight checkpoints
+
+1. Access: verify account, tenant, subscription, and role before any action.
+2. Project: select the intended Foundry project and confirm its parent scope.
+3. Model: choose by required capability and constraints; catalog visibility does not guarantee deployability.
+4. Deployment: create or reuse a named deployment in a live lab only; the catalog entry is not the deployment.
+5. Readiness: confirm provisioning succeeded before interaction.
+6. Interaction: treat one bounded prompt as a smoke test, never proof of production readiness.
+7. Connection details: keep project endpoint, deployment name, and credential conceptually separate.
+8. Cleanup: require exact scope, cost awareness, and owner confirmation before any live deletion.
+
+The rehearsal performs none of these actions. It validates decisions and reasons only.
+
+### PO02 — Primary and troubleshooting-transfer remediation
+
+The System reports decision/reason correctness and score only. Repair direction remains Teacher-owned:
+
+- Access/scope: "Verify tenant, subscription, role, project, and parent scope before changes."
+- Model/deployment: "A catalog model is a selectable offering; requests target the actual named deployment."
+- Readiness: "Wait for successful provisioning before a live smoke test."
+- Connection: "The project endpoint locates the project; the deployment name selects the deployment; credentials authorize."
+- Interaction: "One plausible response is a smoke test, not proof of quality, safety, or reliability."
+- Cleanup: "Stop unless the exact scope and owner are confirmed; shared resource-group deletion can remove unrelated work."
+
+Transfer scenarios troubleshoot visibility, similar project names, unavailable model scope, deployment naming, provisioning, prompt overclaim, credential handling, and shared cleanup scope.
+
+### PO03 — Primary and transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary rehearsal complete: 16/16. Troubleshooting transfer and closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. Zero Azure actions."
+- Transfer open: `SYSTEM`: "Portal rehearsal open. TRANSFER 1/8. Zero Azure actions."
+- Transfer instruction, `901 TEACHER`: "Apply the same scope, artifact, state, connection, and cleanup checks to troubleshooting cases."
+- Transfer completion: `SYSTEM`: "TRANSFER 16/16 recorded. CLOSED-NOTE GATE available."
+
+### PO04 — Closed-note portal-flow explanation
+
+- Target filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain scope, model-to-deployment readiness, connection boundaries, and owner-confirmed cleanup."
+- Field labels: `scope`, `deployment`, `connection`, and `cleanup`.
+- `PILOT // CLOSED-NOTE PORTAL-FLOW OWNER`: "I produced this portal-flow explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No tenant, subscription, resource group, project, endpoint, deployment, credential, prompt, response, or prose persists.
+
+### PO05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Portal Orientation mastery confirmed: both 16-of-16 rehearsals and the closed-note explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. Zero Azure actions."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Mastery certifies course rehearsal only. It does not establish live access, permissions, deployment, service readiness, or cleanup authority.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### PO06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Portal rehearsal closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] choices remain in this session."
+- Reopen: `SYSTEM`: "Portal rehearsal restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Portal rehearsal restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active card, choices, result, and hints. Reload restores sanitized eligibility with clean fields.
+- Scene transition clears choices and all portal identifiers; sanitized mastery evidence persists separately.
+- Exit never logs in, mutates Azure, deploys, prompts, calls a service, uses credentials, cleans up, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -894,4 +979,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Speech Workloads persists no audio, voice, transcript, path, prompt, response body, runtime output, or explanation prose.
 - Extraction Workloads uses media-equivalent text and never opens, processes, uploads, or persists source media or paths.
 - Extraction Workloads persists no extracted values, service responses, runtime output, reasoning, or explanation prose.
+- Portal Orientation remains an offline rehearsal; no prompt or correct answer grants Azure authority.
+- Portal Orientation persists no environment identifiers, connection details, credentials, prompts, responses, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
