@@ -225,3 +225,19 @@ Validation:
 - existing curriculum package regression scripts: pass
 Next step: Exercise Agent should implement `EX-L0103-CALIBRATION-DEBUG`; next unimplemented Teacher package in sequence is `L-02-02`.
 Notes: Generated bridge instruction only. Errors belong to the human expedition copy; failures never affect the route or consume access. No gameplay code changed.
+
+## Log entry: 2026-07-12T04:38:49-04:00
+
+Stage: Learner-facing accessibility orientation refinement
+Action: Added concise ungraded keyboard orientation and safe-dismissal language to `L-01-03`, then encoded the same boundary in the Exercise Agent contract without altering `PY-007` mastery.
+Files touched:
+- curriculum/lessons/L-01-03/README.md
+- curriculum/lessons/L-01-03/exercise.json
+- curriculum/BUILD_LOG.md
+Validation:
+- live AI-901 guide and all four priority Foundry/Azure sources checked: pass
+- keyboard orientation explicitly excludes Tab, Shift+Tab, Escape, focus, modal, and inert concepts from mastery: pass
+- Escape and visible Exit preserve the current calibration session and route-open state: pass
+- `PY-007` validator, diagnosis, repair, rerun, explanation, privacy, and route-safety contracts unchanged: pass
+Next step: Exercise Agent should render the orientation as concise non-diegetic help in `EX-L0103-CALIBRATION-DEBUG` without adding graded keyboard items.
+Notes: This is an accessibility and usability refinement only. No AI-901 mastery gate, gameplay code, or narrative canon changed.

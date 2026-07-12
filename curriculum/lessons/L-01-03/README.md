@@ -10,6 +10,12 @@ Read one small traceback, repair one misspelled variable, then repair one indent
 
 The files belong to the human expedition calibration layer. A code error never damages a Terminal, changes the world, consumes a resource, or closes the already-marked route. You can leave and return without creating a dead end.
 
+## Keyboard orientation — ungraded
+
+> Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.
+
+The visible `Exit Calibration` control performs the same safe dismissal. Keyboard technique helps you operate the workspace, but it is not part of `PY-007`, the retrieval score, or mastery. Escape/Exit preserves the current calibration session, and the physical route remains open.
+
 ## A traceback is location evidence
 
 When Python cannot finish, it reports where it stopped and what kind of error occurred. For this lesson, read from the bottom upward:
@@ -126,6 +132,8 @@ Advance in the curriculum when all are true:
 - no critical misconception remains;
 - learner can say: “The route stayed open; I repaired the human copy.”
 
+Tab, Shift+Tab, Escape, focus, modal behavior, and the meaning of `inert` are orientation topics only. They are never scored.
+
 Adventure traversal does not depend on passing this gate. Lesson mastery can be resumed safely.
 
 ## Spaced review
@@ -133,4 +141,3 @@ Adventure traversal does not depend on passing this gate. Lesson mastery can be 
 - Tomorrow: label error type, file, and line in a new three-line traceback.
 - In three days: repair one misspelled name and one indentation fault without a worked example.
 - In seven days: explain locate → classify → repair one thing → rerun, then apply it to a later structured-data exercise.
-

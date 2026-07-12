@@ -34,7 +34,15 @@
     "total_points_per_form": 8,
     "retrieval_required": 4,
     "diagnoses_required_before_edit": 2,
-    "critical_checks_must_pass": true
+    "critical_checks_must_pass": true,
+    "explicitly_ungraded": ["Tab", "Shift+Tab", "Escape", "focus", "modal", "inert"]
+  },
+  "ungraded_keyboard_orientation": {
+    "copy": "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.",
+    "visible_exit_required": true,
+    "escape_and_exit_preserve_session": true,
+    "route_remains_open": true,
+    "included_in_mastery_evidence": false
   },
   "critical_error_codes": [
     "E_PARSE",
