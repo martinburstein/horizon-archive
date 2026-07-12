@@ -50,4 +50,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded offline text-and-speech solution-pattern package `L-05-05`
 - [x] Built source-grounded offline visual solution-pattern package `L-05-06`
 - [x] Built source-grounded objective-by-objective mastery package `L-06-01`
+- [x] Built source-routed weak-area remediation planner package `L-06-02`
 - [ ] Expand original question banks and full timed simulations

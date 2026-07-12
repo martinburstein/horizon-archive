@@ -611,3 +611,25 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0601-OBJECTIVE-LEDGER` as an accessible objective ledger plus one-scenario-at-a-time terminal.
 Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Objective names/weights, portal labels, SDK/APIs, models, tools, regions, prices, previews, and deprecations remain volatile; review scenarios are course-authored and do not guarantee an exam result.
+
+## Log entry: 2026-07-12T17:27:48-04:00
+
+Stage: Sequential AI-901 mastery expansion
+Action: Completed exactly one first-unfinished mapped package, `L-06-02`, as an offline weak-area remediation planner with evidence-gap diagnosis, official-source routing, retrieval/guided/fresh-transfer practice, evidence-based reassessment, strict readiness gate, and Exercise Agent contract.
+Files touched:
+- curriculum/lessons/L-06-02/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 study guide and all required priority Foundry sources checked first: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objectives, Python skills, official sources, map alignment, local link, route contract, and privacy/session/accessibility/action safeguards: pass
+- each form covers all six remediation-planning boundaries: pass
+- validator self-test, exam-guarantee probe, and simulated-live-action probe: pass
+- primary reference 12/12; transfer reference 12/12; blank primary and transfer correctly rejected at 0/12 with exit 1
+- existing `L-06-01` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0602-REMEDIATION-PLANNER` as an accessible weak-objective queue and route editor.
+Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. The planner does not guarantee an exam result. Exam objectives/weights and Foundry portal, SDK/API, model, tool, price, preview, and deprecation details remain volatile.

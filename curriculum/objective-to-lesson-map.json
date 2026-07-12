@@ -490,14 +490,17 @@
           "supports_python_skills": ["PY-007", "PY-016", "PY-017"],
           "prerequisite_lesson_ids": ["L-06-01"],
           "launch_tier": "launch_critical",
-          "source_mode": "generated_from_learner_state_with_source_links",
+          "source_mode": "learner_state_routed_to_official_sources",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "ai900-practice-assessment-placeholder"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-FOUNDRY-AGENTS",
+            "OFFICIAL-CONTENT-UNDERSTANDING"
           ],
           "activity_ids": ["A-L0602-1", "A-L0602-2"],
           "assessment_ids": ["AS-L0602-PLAN"],
-          "mastery_gate": "has a source-backed remediation route for each weak objective"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer planning forms across six remediation boundaries and produce a source-backed route for every weak objective without confidence or exam-claim bypass"
         },
         {
           "lesson_id": "L-06-03",

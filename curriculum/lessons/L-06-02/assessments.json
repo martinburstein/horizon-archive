@@ -1,0 +1,3 @@
+[
+{"assessment_id":"AS-L0602-PLAN","lesson_id":"L-06-02","assessment_type":"readiness_gate","supports_objectives":[],"supports_python_skills":["PY-007","PY-016","PY-017"],"mastery_signal":"independent_use","attempt_policy":"Pass primary 12/12, repair each planning-boundary miss, then pass fresh transfer 12/12 and verify every weak objective has a complete source-backed route.","result_states":["correct","partially_correct","incorrect","not_attempted","needs_review"],"records_confidence":true,"records_misconception_tags":true,"records_review_flag":true,"status":"review"}
+]
