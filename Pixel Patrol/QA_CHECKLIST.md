@@ -110,6 +110,13 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 
 ## No-dead-end sweep
 
+- [ ] Speech warning remains complete in primary, transfer, and closed-note modes and explicitly states the offline/no-audio boundaries.
+- [ ] Speech transcript-equivalent direction occupies its own row and never overlaps scenario or explanation content.
+- [ ] Recognition audio -> text, synthesis text -> audio, spoken multimodal prompt flow, file direction, and result/cancellation are distinct in reading and remediation order.
+- [ ] Speech Pilot inputs, neutral System scores, and Teacher direction/cancellation remediation remain separate.
+- [ ] Speech primary, transfer-remediation, and closed-note captures are byte-distinct at canonical, narrow, and host-context presentation; scrolling preserves all content.
+- [ ] Speech direct/restored mastery moves focus to Continue, with square-pixel chrome and focus language unchanged.
+
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.
 - [ ] Hints and retries remain available after failure and restore.

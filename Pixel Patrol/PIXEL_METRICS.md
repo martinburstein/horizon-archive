@@ -88,3 +88,9 @@ At 1x capture:
 - Every status color has a shape, label, or motion partner.
 - Calibration help is one untruncated line at 640 px and three complete lines in the 320 px alternate layout.
 - Responsible AI uses one contained vertical form scroller. Its header, four complete field cards, validator, remediation, and next action remain in one reading order; no nested field-grid scrollbar is permitted.
+
+## Offline Speech Workloads viewport contract
+
+- Speech uses three fixed workspace rows: persistent offline/no-listening warning, persistent transcript-equivalent direction strip, then one contained scrolling form. The transcript strip must never share or overlap the scenario or closed-note header row.
+- At 640 x 480, recognition `audio -> text`, synthesis `text -> audio`, spoken multimodal prompt flow, and result/cancellation remain readable in that order. At 320 x 240 the same information remains available by vertical traversal; no safety or direction text is removed.
+- The outer Terminal and its title/file/status chrome remain fixed. Primary and transfer use two ordered decision/reason cards at canonical width and one ordered column at narrow width; closed note uses four columns at canonical width and one at narrow width.

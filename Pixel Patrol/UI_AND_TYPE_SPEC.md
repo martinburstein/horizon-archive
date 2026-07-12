@@ -152,3 +152,11 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - At 640 x 480, retain the two-column field grouping. At 320 x 240, use one column and the same single form scroller. No field label, selected value, feedback association, or focus outline may be horizontally clipped.
 - Transfer selects and closed-note text inputs share the same 2 px gold focus outline with a -3 px internal offset. The frame must remain visible at both scroll boundaries and does not depend on native platform glow or color fill alone.
 - Stage hierarchy remains title -> filename/form status -> non-exam boundary -> stage label and scenario -> four fields -> validator/remediation. `PRIMARY`, `TRANSFER`, and `EXPLANATION` must never be communicated only by filename.
+
+## Offline Speech Workloads hierarchy
+
+- Preserve the reading order: Machine/file/status -> offline no-listening/no-recording warning -> transcript-equivalent direction strip -> Pilot-owned scenario or prose -> neutral System validator -> Teacher direction/cancellation remediation.
+- Recognition reads audio input and returns text; synthesis reads text and produces audio output; spoken questions for a deployed general model remain a separate multimodal prompt flow. Input/output direction is communicated in words as well as arrows.
+- Cancellation is a result branch, not a workload. System reports deterministic dimension totals; Teacher owns direction, file-binding, cancellation, and reconstruction guidance; Pilot owns choices and closed-note prose.
+- The warning and transcript strip are separate fixed-height grid rows above the single form scroller. At 320 x 240 their complete text may consume the initial viewport; keyboard focus and scrolling reveal the ordered work without clipping or overlap.
+- Maintain square one-pixel seams, two-pixel ownership rails and focus outlines, the existing indigo/amber/violet ramp, and native accessible controls. Direct and restored mastery move focus to Continue.

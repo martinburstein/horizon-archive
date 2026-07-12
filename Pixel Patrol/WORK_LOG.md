@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Speech Workloads final visual gate
+
+- **Completed:** audited the complete Speech Workloads primary, transfer, closed-note, and mastered flow. Corrected one essential overlap by giving the persistent transcript-equivalent strip its own workspace grid row. Warning, transcript direction, recognition/synthesis/spoken-multimodal hierarchy, input/output file direction, result/cancellation remediation, Pilot/System/Teacher ownership, contained scroll, focus, Continue handoff, and square-pixel chrome are now coherent at 640 x 480 and 320 x 240.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, this log, and regenerated Speech QA captures.
+- **Validation:** all 77 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Post-fix visual inspection confirms no warning/transcript/form overlap. Captures are byte-distinct: primary `640 x 480`, transfer-remediation `320 x 240`, and closed-note host context `1600 x 900`; `git diff --check` passes.
+- **Next recommended item:** Location Scout should express the three speech directions as separate square conduits—audio-to-text intake, text-to-audio output, and a spoken multimodal branch—with cancellation shown as a gated return state rather than a fourth conduit.
+- **Unresolved risks:** the complete safety warning intentionally consumes most of the initial 320 x 240 work viewport; content remains reachable through the single form traversal. Do not shorten it unless every privacy and volatility boundary remains explicit.
+
 ## 2026-07-12 — Offline Text Analysis final visual gate
 
 - **Completed:** audited the complete Text Analysis primary, transfer, closed-note, and mastered flow after terminology/ownership/focus fixes. The persistent offline keyword-extraction <-> key-phrase bridge remains prominent and complete; key phrases/entities/sentiment/summary hierarchy, stable document-ID correlation, mixed success/error branching, decision/reason cards, four explanation fields, System scores, Teacher remediation, Pilot ownership, contained scrolling, focus, and Continue handoff are coherent at 640 x 480 and 320 x 240. No CSS correction was warranted.
