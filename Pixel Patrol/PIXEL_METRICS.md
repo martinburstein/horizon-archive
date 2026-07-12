@@ -112,3 +112,9 @@ At 1x capture:
 - Portal Orientation uses three fixed workspace rows: persistent offline/no-authority warning, persistent eight-checkpoint equivalent, then one contained scrolling form. Warning and workflow may wrap but never overlap or reorder.
 - At 640 x 480 the checkpoint strip reads access -> project -> model -> deployment -> readiness -> interaction -> connection -> cleanup. At 320 x 240 the complete warning receives the initial viewport and the same workflow remains available by vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four safeguard fields in one canonical row and one narrow column; outer Machine/file/status chrome remains fixed.
+
+## Offline Prompt Layers viewport contract
+
+- Prompt Layers uses three fixed workspace rows: persistent offline/no-authority warning, persistent six-layer equivalent, then one contained scrolling form. Warning and layer strip may wrap but cannot overlap or reorder.
+- The canonical six-layer read is system -> user -> grounding -> output contract -> conflict/no-action authority -> representative/edge/failure/adversarial evaluation. At 320 x 240 the complete warning leads and all layers remain reachable by vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.

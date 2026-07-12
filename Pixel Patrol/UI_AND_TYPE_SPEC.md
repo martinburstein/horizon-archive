@@ -181,3 +181,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Model catalog selection and named deployment are separate checkpoints. Connection details separate endpoint and deployment configuration from credentials; portal visibility does not prove permission or readiness.
 - Cleanup is exact-scope, cost-aware, and owner-confirmed. The ownership checkbox appears only after the closed-note safeguards pass and never implies authority to delete resources.
 - Keep both persistent rows outside one form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Prompt Layers hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/no-authority warning -> six-layer equivalent -> Pilot prompt-layer decision/prose -> neutral System validator -> Teacher injection/authority/evaluation remediation.
+- System instructions are durable rules; user text supplies current task/input; grounding is untrusted data requiring evidence checks; output format is explicit. Conflicts and prompt injection cannot grant login, deployment, deletion, email, purchase, credential, mutation, or destructive-action authority.
+- Evaluation covers representative, edge, failure, and adversarial-injection cases. One successful example never replaces the evaluation layer.
+- Keep persistent rows outside one form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

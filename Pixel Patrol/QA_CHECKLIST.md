@@ -134,6 +134,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Cleanup remains exact-scope, cost-aware, owner-confirmed, and gated by the ownership checkbox without granting authority.
 - [ ] Portal Pilot inputs, neutral System scores, and Teacher portal/scope/cleanup remediation remain separate.
 - [ ] Portal captures remain byte-distinct across canonical, narrow, and host context; direct/restored mastery focuses Continue.
+- [ ] Prompt offline/no-authority warning and six-layer equivalent remain persistent, ordered, and non-overlapping in every phase.
+- [ ] System, user, grounding, output contract, conflict/no-action authority, and evaluation remain six distinct layers.
+- [ ] Injection/conflict text cannot imply action authority; evaluation retains representative, edge, failure, and adversarial cases.
+- [ ] Prompt Pilot inputs, neutral System scores, and Teacher injection/authority/evaluation remediation remain separate.
+- [ ] Prompt captures remain byte-distinct across canonical, narrow, and host context; one form traversal preserves narrow content.
+- [ ] Prompt direct/restored mastery moves focus to Continue with square-pixel chrome unchanged.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.
