@@ -97,3 +97,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, modes, 10 checks, four retrieval items, five explanation dimensions, `L-03-03` IDs, evidence sanitizer, session/reload/transition contracts, offline boundary, and post-mastery Continue gate. Reviewed copy for speaker ownership, compactness, credential safety, real-service ambiguity, privacy, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should keep Teacher remediation visually separate from neutral System scores, preserve the persistent offline banner in every mode, and verify Continue focus after mastery.
 - **Unresolved risks:** Some live remediation remains embedded inside a System console line, and Teacher completion dialogue may still appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.
+
+## 2026-07-12 — Offline Text Analysis continuity
+
+- **Outcome:** Added the bounded interaction contract for playable `EX-L0401-TEXT-ANALYSIS`: offline open, primary/transfer, four capability remediations, document-ID and mixed result/error flow, four-part closed-note explanation, mastery, safe restoration, privacy, and Continue handoff. Preserved the AI-901 keyword-extraction to key-phrase-extraction bridge.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked live title, filenames, statuses, six scenarios per form, four capabilities, two correlation/error items, four explanation dimensions, `L-04-01` IDs, evidence sanitizer, session/reload/transition behavior, offline boundary, and Continue gate. Reviewed copy for ownership, compactness, terminology, document privacy, service ambiguity, and mystery safety.
+- **Next recommended item:** Coder/Exercise Agent should keep Teacher remediation separate from neutral System results, preserve the offline banner and terminology bridge in every mode, and verify Continue focus after mastery.
+- **Unresolved risks:** Some live remediation is still composed inside the System console, and Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.

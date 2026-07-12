@@ -582,6 +582,83 @@ No production credential is requested, loaded, transmitted, printed, or stored b
 - Scene transition clears source and the simulated runtime environment; sanitized mastery evidence persists separately.
 - Exit never validates, calls a service, stores a credential, acknowledges mastery, advances, or changes a physical object.
 
+## Optional Offline Text Analysis practice
+
+Production alignment: `EX-L0401-TEXT-ANALYSIS`, lesson `L-04-01`, activity `A-L0401-2`, assessments `AS-L0401-QC` and `AS-L0401-SCEN`, objectives `AI901-D1-O5` and `AI901-D2-O5`, skill `PY-016`. This course surface follows Client Bridge mastery and does not change AB-01 adventure state.
+
+### Ownership and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns capability instruction, terminology bridging, remediation, flow explanation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline validation, scores, mode, session state, evidence status, and progression availability.
+- `PILOT // WORKLOAD OWNER` owns scenario choices. `PILOT // CLOSED-NOTE WORKLOAD OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No result implies Machine intent, interpretation, approval, or understanding.
+
+Keep the exact boundary visible in every mode:
+
+> COURSE-AUTHORED OFFLINE PRACTICE · no service call or document text.
+
+Scenarios describe requested outputs but contain no submitted document body and produce no service result. SDKs, operations, endpoints, authentication, languages, limits, regions, pricing, and preview status require current official-source revalidation.
+
+### TA00 — Open primary
+
+- Exact title/filename: `Offline Text Analysis`; `primary_workloads.json`.
+- `SYSTEM`: "Offline Text Analysis open. PRIMARY 1/6."
+- `901 TEACHER`: "Choose by requested output, then preserve document attribution and per-document error handling."
+- The AI-901 bridge is explicit: exam wording `keyword extraction` maps here to the service capability `key phrase extraction`.
+
+### TA01 — Four workload remediations
+
+The System reports field correctness and score only. Capability repair direction remains Teacher-owned:
+
+- Key phrases: "Choose key phrase extraction for important phrases or recurring concepts—not people or places."
+- Entities: "Choose named entity recognition for identified people, places, organizations, or named things."
+- Sentiment: "Choose sentiment analysis for expressed opinion or polarity—not a shortened document."
+- Summary: "Choose summarization for a shorter representation—not a list of important phrases."
+- General contrast: "Name the requested output, then compare the nearest capability; topic alone does not decide."
+
+### TA02 — Document-ID and result/error flow
+
+- `901 TEACHER`: "Give every input a stable document ID so each result or error maps back to the correct input."
+- `901 TEACHER`: "Iterate every returned document entry and branch between success and per-document error."
+- A batch may mix results and errors. One failure does not erase another document's valid result.
+- This is an offline flow model; no document is uploaded and no result/error payload is received.
+
+### TA03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE."
+- Transfer open: `SYSTEM`: "Offline Text Analysis open. TRANSFER 1/6."
+- Transfer instruction, `901 TEACHER`: "Apply the same output-to-capability and document-correlation method to fresh scenarios."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+- Neither form makes a service call, changes route geometry, or produces a Tidal Lens response.
+
+### TA04 — Closed-note choice and correlation explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain requested output, the keyword-to-key-phrase bridge, stable ID, and mixed result/error handling."
+- Field labels: `requested output`, `capability`, `document ID`, and `mixed result`.
+- `PILOT // CLOSED-NOTE WORKLOAD OWNER`: "I produced this workload explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No document text, service result, answer choice, or explanation prose persists beyond the working session.
+
+### TA05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Text Analysis mastery confirmed: both 12-of-12 forms and the closed-note explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Free-form reasoning, document text, service-result bodies, runtime output, and explanation prose are never retained.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### TA06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Text Analysis closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Text Analysis restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Text Analysis restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active card, choices, result, and hints. Reload restores sanitized eligibility with clean fields.
+- Scene transition clears working choices and explanation fields; sanitized mastery evidence persists separately.
+- Exit never validates, calls a service, stores document text, acknowledges mastery, advances, or changes a physical object.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -637,4 +714,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Control Flow source, input records, runtime output, and explanation prose never enter persistent mastery evidence.
 - Client Bridge remains an offline static exercise; no copy may imply a real service call or received response.
 - Client Bridge credentials, source, config, authorization data, runtime output, and explanation prose never persist.
+- Text Analysis preserves the AI-901 `keyword extraction` to `key phrase extraction` terminology bridge.
+- Text Analysis remains offline: no document/service implication and no document text, result body, or prose persistence.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
