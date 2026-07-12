@@ -163,6 +163,19 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal does not run, validate, acknowledge mastery, advance, or imply a Machine response.
 
+### Offline Client Bridge
+
+- Exact title and dismissal name: `Offline Client Bridge`; `Exit Client Bridge`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `RETRIEVAL`, `EXPLANATION`, and `MASTERED`; code scores use `n/10`.
+- Python/client instruction, missing-secret/redaction remediation, retrieval teaching, and completion remain `901 TEACHER` copy.
+- Editable source is `PILOT // OFFLINE SOURCE OWNER`; closed-note prose is `PILOT // CLOSED-NOTE EXPLANATION OWNER`.
+- The visible boundary states that validation is static, no code/network executes, and `example.invalid` is never contacted.
+- Exit line: "Client Bridge closed. Current [PRIMARY|TRANSFER|RETRIEVAL|EXPLANATION] work remains in this session."
+- Reopen restores same-session work. Reload restores sanitized eligibility with clean source, answers, and explanation fields.
+- Persistent evidence excludes source, config body, secret name/value, Authorization header, runtime output, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never validates, calls a service, stores credentials, acknowledges mastery, advances, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -183,6 +196,7 @@ When acknowledgement changes progression:
 - Evidence mastery: prefer `Descend to the city` after the final acknowledgement recap.
 - Structured Packets mastery: prefer `Continue` after the System announces availability.
 - Control Flow mastery: prefer `Continue` after the System announces availability.
+- Client Bridge mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

@@ -501,6 +501,87 @@ Hints affect remediation evidence only. They never alter route access, physical 
 - Scene transition clears working source and explanation fields; sanitized mastery evidence persists separately.
 - Exit never runs, validates, acknowledges mastery, advances progression, or changes any physical object.
 
+## Optional Offline Client Bridge practice
+
+Production alignment: `EX-L0303-CLIENT-BRIDGE`, lesson `L-03-03`, activity `A-L0303-3`, assessment `AS-L0303-READY`, skills `PY-013`, `PY-014`, `PY-015`, `PY-017`, and `PY-018`. This course surface follows Control Flow mastery and does not change AB-01 adventure state.
+
+### Ownership and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns Python instruction, safe-client distinctions, remediation, retrieval teaching, and completion language.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline validation, scores, mode, session state, evidence status, and progression availability.
+- `PILOT // OFFLINE SOURCE OWNER` owns editable source. `PILOT // CLOSED-NOTE EXPLANATION OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No bridge result implies Machine intent, contact, approval, or understanding.
+
+Keep this visible in every mode:
+
+> OFFLINE SIMULATION ONLY. No code or network is executed, and `example.invalid` is never contacted. Never paste credentials.
+
+The request is an HTTP-shaped dictionary, not a sent request. The response is a later conceptual layer, not received data. Package versions, identity, endpoints, roles, schemas, and runtimes require current official-source revalidation.
+
+### CB00 — Open primary
+
+- Exact title/filename: `Offline Client Bridge`; `client_primary.py`.
+- `SYSTEM`: "Offline Client Bridge open. PRIMARY 0/10. Static validation only."
+- `901 TEACHER`: "Separate module, config file, named secret lookup, offline request plan, and later response."
+- `PILOT // OFFLINE SOURCE OWNER` marks learner authorship; it does not claim a live client or service connection.
+
+### CB01 — Missing-secret and redaction remediation
+
+The System may show a failed check and score. Repair direction remains Teacher-owned:
+
+- Import: "Separate package installation from importing a module in the active environment."
+- File/config: "Use the passed path, read text, then parse JSON; do not hardcode a course filename."
+- Secret lookup: "Read the environment-variable name from config, then look up its injected value."
+- Missing secret: "Reject a missing value before building the offline request plan."
+- Redaction: "Never print or persist the secret or Authorization value; show only a redacted summary."
+- Request/response: "Label method, URL, headers, and body as a request plan; a response would arrive later."
+- Offline rule: "Remove network libraries and calls. Validate the request shape without sending it."
+
+No production credential is requested, loaded, transmitted, printed, or stored by this exercise.
+
+### CB02 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 10/10. Fresh transfer, retrieval, and closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE."
+- Transfer open: `SYSTEM`: "Offline Client Bridge open. TRANSFER 0/10. Static validation only."
+- Transfer instruction, `901 TEACHER`: "Reuse the safe offline pattern with the passed hidden configuration."
+- Transfer completion: `SYSTEM`: "TRANSFER 10/10 recorded. RETRIEVAL available."
+- Neither form makes a service call, changes route geometry, or produces a Tidal Lens response.
+
+### CB03 — Retrieval
+
+- Exact filename/status: `retrieval.md`; `RETRIEVAL`.
+- `901 TEACHER`: "Distinguish import from installation, named secret lookup, and request parts from response parts."
+- `SYSTEM`: "Retrieval requires 4/4."
+- Miss: `901 TEACHER`: "Revisit the missed layer distinction; no credential or live response is involved."
+- Pass: `SYSTEM`: "RETRIEVAL 4/4 recorded. EXPLANATION available."
+
+### CB04 — Closed-note offline request-response explanation
+
+- Exact filename/status: `explanation.md`; `EXPLANATION`.
+- `901 TEACHER`: "Explain module, file, secret lookup, offline request plan, and later response without notes."
+- `PILOT // CLOSED-NOTE EXPLANATION OWNER`: "I produced this bridge explanation myself without notes."
+- `SYSTEM` reports only `0/5` through `5/5` and layer confirmation. Teacher owns reconstruction prompts.
+- Source, config, secret fields, retrieval choices, explanation prose, and ownership confirmation remain session-only.
+
+### CB05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Client Bridge mastery confirmed: both offline forms, retrieval, and closed-note layers are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, check booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Learner source, config body, secret name/value, Authorization header, runtime output, and explanation prose are never retained.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### CB06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Client Bridge closed. Current [PRIMARY|TRANSFER|RETRIEVAL|EXPLANATION] work remains in this session."
+- Reopen: `SYSTEM`: "Client Bridge restored: [PRIMARY|TRANSFER|RETRIEVAL|EXPLANATION]."
+- Reload: `SYSTEM`: "Client Bridge restored with clean private fields: [PRIMARY|TRANSFER|RETRIEVAL|EXPLANATION|MASTERED]."
+- Same-session reopen restores active source, answers, result, and hints. Reload restores sanitized eligibility with clean fields.
+- Scene transition clears source and the simulated runtime environment; sanitized mastery evidence persists separately.
+- Exit never validates, calls a service, stores a credential, acknowledges mastery, advances, or changes a physical object.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -554,4 +635,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Structured Packets source, raw JSON, runtime output, and explanation prose never enter persistent mastery evidence.
 - Control Flow Python instruction, remediation, and completion remain Teacher-owned; System copy reports state only.
 - Control Flow source, input records, runtime output, and explanation prose never enter persistent mastery evidence.
+- Client Bridge remains an offline static exercise; no copy may imply a real service call or received response.
+- Client Bridge credentials, source, config, authorization data, runtime output, and explanation prose never persist.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
