@@ -167,3 +167,11 @@
 - **Validation:** exact `256 x 64` native and byte-exact `512 x 128` nearest-neighbor/isolation assets; grayscale strip exact; all six tile pairs distinct in grayscale; recognition/synthesis/multimodal each have one connected signal component; cancellation has exactly two; right/right/up direction tips physically join their channels; hard cancellation gap persists; four 64 x 64 crops fit the 68 x 76 hotspot/anchor; world/footer separation and links pass.
 - **Next recommended item:** Accessibility Sentinel should verify the four tiles at native grayscale and require transcript equivalents; Coder may integrate only with live workload labels and reversible cancellation.
 - **Unresolved risks:** physical geometry remains a mnemonic. Speech content, consent, language, timing, errors, and transcript semantics require live accessible UI.
+
+## 2026-07-12 — Speech Workloads topology approval repair
+
+- **Completed:** repaired only the multimodal topology by evaluating the upward direction branch before generic horizontal direction, eliminating the stray three-pixel top-edge component without changing tile design.
+- **Files changed:** updated the existing speech renderer, regenerated native/QA assets, marked the specification approved, and reran the existing validator. No new motif, runtime integration, audio, scene, or lore was introduced.
+- **Validation:** exact native `256 x 64` and nearest-neighbor/isolation `512 x 128`; all six grayscale tile pairs distinct; signal components `[1, 1, 1, 2]`; recognition/synthesis/multimodal direction cues join their paths; cancellation retains two capped halves and hard gap; four 64 x 64 crops fit the 68 x 76 hotspot; world/footer separation and links pass.
+- **Next recommended item:** Accessibility Sentinel should verify native grayscale recognition, synthesis, multimodal, and cancellation plus transcript requirements. Coder may integrate with live labels and reversible cancellation.
+- **Unresolved risks:** physical geometry cannot carry speech content, consent, timing, language, or error semantics. Live labels, transcripts, and accessible controls remain mandatory.

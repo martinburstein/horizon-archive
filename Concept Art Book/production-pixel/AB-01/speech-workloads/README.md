@@ -28,6 +28,8 @@ Inlet/outlet orientation, register position, straight/bent routes, cap geometry,
 
 The strip supplies physical world overlays only. No tile enters the lower interface band or quiet footer rows `461–479`.
 
+**Approval status:** approved after the upward multimodal direction cue was joined to its channel and the full acceptance validator passed with signal-component counts `[1, 1, 1, 2]`.
+
 ## Accessibility boundary
 
 Geometry supports recognition of direction and cancellation, but does not name a workload or replace transcripts. Runtime must provide live labels for Recognition, Synthesis, Spoken multimodal prompt, Response, and Cancel, plus text transcripts or equivalent alternatives for every speech input/output. Cancellation must remain reversible and clearly announced.

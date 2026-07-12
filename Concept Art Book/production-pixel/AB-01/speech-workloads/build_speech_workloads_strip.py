@@ -25,10 +25,10 @@ def channel(d, points, direction):
     d.line(points, fill=P["amber0"], width=5)
     d.line(points, fill=P["amber2"], width=1)
     x, y = direction
-    if x > 0:
-        d.polygon([(33, y - 2), (36, y), (33, y + 2)], fill=P["amber1"])
-    elif y < 0:
+    if y < 0:
         d.polygon([(x - 2, 37), (x, 34), (x + 2, 37)], fill=P["amber1"])
+    elif x > 0:
+        d.polygon([(33, y - 2), (36, y), (33, y + 2)], fill=P["amber1"])
 
 
 def voice_port(d, x, y, outward=False):
