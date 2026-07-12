@@ -1,4 +1,7 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
@@ -6,6 +9,8 @@ import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/refere
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
 const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
+const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const qaPath = (path) => resolve(repositoryRoot, "playtest", path.replace(/^playtest[\\/]/, ""));
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -103,7 +108,7 @@ print("Operator:", learner)`);
   await assertPixelMeadow(page, "Petal complete", "completed", "awake");
 
   await page.locator('button.hotspot[data-hotspot-id="route-marker"]').hover();
-  await page.locator(".scene-frame").screenshot({ path: "playtest/route-marker-hotspot-desktop-qa.png" });
+  await page.locator(".scene-frame").screenshot({ path: qaPath("route-marker-hotspot-desktop-qa.png") });
   await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
   await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').waitFor();
   const routeDraft = `# ROUTE_SESSION_ONLY_SENTINEL\n${routePrimaryReference().replace("channel_count = 3", 'channel_count = "3"')}`;
@@ -125,9 +130,9 @@ print("Operator:", learner)`);
   if (routeDraftSave.includes("ROUTE_SESSION_ONLY_SENTINEL") || routeDraftSave.includes("LOCAL SURFACE 3")) {
     throw new Error("Route working source, prediction, or output leaked into localStorage");
   }
-  await page.screenshot({ path: "playtest/route-marker-terminal-desktop-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("route-marker-terminal-desktop-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 320, height: 900 });
-  await page.screenshot({ path: "playtest/route-marker-terminal-narrow-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("route-marker-terminal-narrow-qa.png"), fullPage: true });
   await page.locator("#route-source-editor").scrollIntoViewIfNeeded();
   if (!await page.locator("#route-source-editor").isVisible()) throw new Error("Route source editor unreachable at 320px");
   await page.setViewportSize({ width: 1600, height: 900 });
@@ -207,9 +212,9 @@ print("Operator:", learner)`);
   await page.getByText("ROUTE OPEN", { exact: false }).first().waitFor();
   await page.getByRole("button", { name: "Open targeted hint", exact: true }).click();
   await page.getByText("Compare route_lable", { exact: false }).waitFor();
-  await page.screenshot({ path: "playtest/calibration-terminal-desktop-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("calibration-terminal-desktop-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 320, height: 900 });
-  await page.screenshot({ path: "playtest/calibration-terminal-narrow-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("calibration-terminal-narrow-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
   await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
@@ -281,11 +286,11 @@ print("Operator:", learner)`);
   for (const [width, height, label] of [[640, 480, "640x480"], [1280, 960, "1280x960"], [320, 240, "320x240"], [1600, 900, "1600x900"]]) {
     await page.setViewportSize({ width, height });
     await assertRuinsTerminalAlignment(page, label);
-    await page.screenshot({ path: `playtest/ab01-canonical-${label}.png` });
+    await page.screenshot({ path: qaPath(`ab01-canonical-${label}.png`) });
   }
   await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
-  await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-desktop-qa.png" });
+  await page.locator(".scene-frame").screenshot({ path: qaPath("drowned-archive-terminal-desktop-qa.png") });
   await activateRuinsTerminal(page, "pointer");
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
   await activateRuinsTerminal(page, "keyboard");
@@ -294,7 +299,7 @@ print("Operator:", learner)`);
   await page.setViewportSize({ width: 320, height: 240 });
   await assertRuinsTerminalAlignment(page, "320x240");
   await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
-  await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-narrow-qa.png" });
+  await page.locator(".scene-frame").screenshot({ path: qaPath("drowned-archive-terminal-narrow-qa.png") });
   await activateRuinsTerminal(page, "pointer");
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
   await activateRuinsTerminal(page, "keyboard");
@@ -371,7 +376,7 @@ print("Operator:", learner)`);
   }
   await page.getByRole("button", { name: "Reveal next remediation step", exact: true }).click();
   await page.getByText("Compare the nearest principles", { exact: false }).waitFor();
-  await page.screenshot({ path: "playtest/responsible-ai-primary-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("responsible-ai-primary-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Practice", exact: true }).click();
   await page.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
   await page.getByRole("button", { name: "Resume Responsible AI", exact: true }).click();
@@ -409,6 +414,7 @@ print("Operator:", learner)`);
   await page.getByLabel("Responsible AI owner", { exact: true }).selectOption("model_itself");
   await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
   await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("responsible-ai-transfer-remediation-qa.png"), fullPage: true });
   const primaryPreservedDuringTransfer = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
   if (primaryPreservedDuringTransfer?.masteryStatus !== "primary_complete") throw new Error("Transfer remediation erased the completed primary gate");
   for (const scenarioId of Object.keys(referenceResponsibleAITransfer)) {
@@ -430,6 +436,12 @@ print("Operator:", learner)`);
   await page.getByLabel("Closed-note owner", { exact: true }).fill("moderation model");
   await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
   await page.getByRole("status").getByText("2/4", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("responsible-ai-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures([
+    "responsible-ai-primary-qa.png",
+    "responsible-ai-transfer-remediation-qa.png",
+    "responsible-ai-closed-note-qa.png",
+  ]);
   for (const dimension of ["principle", "owner"]) {
     const field = page.getByLabel(`Closed-note ${dimension}`, { exact: true });
     const feedbackId = `rai-explanation-${dimension}-feedback`;
@@ -502,9 +514,9 @@ print("Operator:", learner)`);
   await page.getByRole("status").getByText("E_RESPONSE_NULL", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Reveal worked boundary", exact: true }).click();
   await page.getByText("false means a bounded check measured no detection", { exact: false }).waitFor();
-  await page.screenshot({ path: "playtest/evidence-packet-terminal-desktop-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("evidence-packet-terminal-desktop-qa.png"), fullPage: true });
   await page.setViewportSize({ width: 375, height: 900 });
-  await page.screenshot({ path: "playtest/evidence-packet-terminal-narrow-qa.png", fullPage: true });
+  await page.screenshot({ path: qaPath("evidence-packet-terminal-narrow-qa.png"), fullPage: true });
   await page.locator("#evidence-json-editor").scrollIntoViewIfNeeded();
   if (!await page.locator("#evidence-json-editor").isVisible()) throw new Error("Evidence editor is unreachable at narrow viewport");
   await page.setViewportSize({ width: 1600, height: 900 });
@@ -605,7 +617,7 @@ print("Operator:", learner)`);
 
 async function capturePixelMeadow(page, path) {
   await page.locator(".pixel-scene-canvas").evaluate(async () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-  await page.locator(".scene-frame").screenshot({ path });
+  await page.locator(".scene-frame").screenshot({ path: qaPath(path) });
 }
 
 async function verifyMeadowPixelHotspots(page, viewportLabel) {
@@ -686,6 +698,19 @@ async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
 
 function terminalSessionMarker() {
   return "# SESSION_ONLY_SENTINEL";
+}
+
+function assertDistinctCaptures(names) {
+  const captures = names.map((name) => {
+    const path = qaPath(name);
+    if (!existsSync(path)) throw new Error(`Expected QA capture missing: ${path}`);
+    return { name, bytes: readFileSync(path) };
+  });
+  for (let left = 0; left < captures.length; left += 1) {
+    for (let right = left + 1; right < captures.length; right += 1) {
+      if (captures[left].bytes.equals(captures[right].bytes)) throw new Error(`QA captures are duplicates: ${captures[left].name} and ${captures[right].name}`);
+    }
+  }
 }
 
 function routePrimaryReference() {
@@ -820,7 +845,7 @@ async function captureWitnessScene(page, path) {
     await image.decode();
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
   });
-  await page.locator(".scene-frame").screenshot({ path });
+  await page.locator(".scene-frame").screenshot({ path: qaPath(path) });
 }
 
 async function verifyWitnessInteractions(page, viewportLabel) {

@@ -1,5 +1,13 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Coder pass: cwd-independent QA provenance
+
+- **Outcome:** E2E capture paths now resolve from the script/repository location instead of the launching shell. Removed the duplicate tracked `horizon-archive-game/playtest/` tree while preserving canonical root `playtest/` artifacts. Added unique Responsible AI primary-remediation, transfer-remediation, and closed-note captures with existence and byte-difference assertions.
+- **Files changed:** `playtest/e2e-playthrough.mjs`, canonical root QA captures, removal of duplicate game-local captures, and this log.
+- **Validation:** 39/39 unit tests and production build pass. Full E2E passes from both repository root and `horizon-archive-game/`, producing the same root artifact paths with zero runtime errors. The three Responsible AI captures exist and are pairwise distinct.
+- **Next action:** Player Agent and Accessibility Sentinel should cite only root `playtest/` paths in future evidence reports.
+- **Risks:** Screenshot bytes can legitimately change with rendering or UI updates; the regression asserts provenance, existence, and state distinction rather than permanent hashes.
+
 ## 2026-07-12 — Responsible AI strict mastery tranche
 
 - **Outcome:** Completed the promised `EX-L0202-RESPONSIBLE-AI` readiness path without beginning L-02-03. After preserving the existing primary 24/24 evidence, the learner can launch a fresh six-scenario `T01–T06` transfer form and must earn 24/24 across principle, affected stakeholder, testable mitigation, and accountable human/organizational owner.
