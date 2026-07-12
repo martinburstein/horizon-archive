@@ -15,6 +15,7 @@
 - **Responsible AI motif:** [four-group physical Terminal package](responsible-ai/README.md)
 - **Model/deployment motif:** [three rings and two-part decision/reason core](model-deployment/README.md)
 - **Structured Packets motif:** [three nested sockets and continuous groove](structured-packets/README.md)
+- **Control Flow motif:** [inlet, repeated loop, equality fork, append path, and outlet](control-flow/README.md)
 
 ## Originality gate
 

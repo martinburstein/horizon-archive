@@ -119,3 +119,11 @@
 - **Validation:** native RGBA is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; outer/middle/inner/groove isolation masks remain pairwise distinct in grayscale; the groove is one connected path; painted bounds fit the existing 68 x 76 hotspot and AB-01 anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should distinguish all three sockets and trace the groove at native grayscale; Coder must retain live packet/field labels and must not infer serialization semantics from the physical motif alone.
 - **Unresolved risks:** nested sockets communicate structure but do not define a schema, direction, or validation rule. Live teaching content remains the semantic source.
+
+## 2026-07-12 — Control Flow physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01-compatible control-flow motif with a grounded inlet, continuous repeated loop, equality-notched fork, append/rejoin branch, and open-capped outlet beyond the loop.
+- **Files changed:** added `production-pixel/AB-01/control-flow/` native motif, renderer, specification, exact 2x, grayscale, and six-component isolation QA; linked it from the AB-01 package. No gameplay, scene, interface, or lore changed.
+- **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; all groove pixels form one connected component; inlet/repeat/fork/append/outlet isolation masks remain distinguishable in grayscale; fork's equal notches and outlet's open cap differ by geometry; painted bounds fit the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should trace inlet → loop → fork → append/outlet in native grayscale and confirm fork/outlet are not confused; Coder must retain live condition, branch, append, and outlet labels.
+- **Unresolved risks:** the motif communicates control-flow topology, not Python syntax or actual execution direction. Live instruction and validator feedback remain mandatory.
