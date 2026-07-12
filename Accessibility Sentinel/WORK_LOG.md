@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-12 — Round 11 final release gate
+
+- **Outcome:** completed the bounded accessibility gate for the full Control Flow Terminal and native flow motif. Ownership/announcement structure, narrow reading order, labels/errors, closed-note Pilot ownership, direct and reload Continue focus, sanitizer/privacy/forgery resistance, dialog/session/reload, scaling, distinct captures, and inlet-to-outlet grayscale trace pass. No implementation fix was warranted.
+- **Files:** `Accessibility Sentinel/round-11/FINAL_RELEASE_REPORT.md` and this log.
+- **Validation:** 59/59 unit tests, production build, L-03-02 validator self-test, and complete E2E passed with zero runtime errors. Three captures are dimensionally and byte-distinct; the motif is exact nearest-neighbor at 2x and its isolated fork/outlet differ materially in grayscale geometry.
+- **Findings:** release passes with documented risks for real screen-reader/live-region order, forced colors/high contrast, and browser zoom because the in-app Browser remains unavailable.
+- **Handoff:** perform explicit assistive-technology testing before making any accessibility-conformance claim.
+- **Status:** `release gate passed with documented risks`
+
 ## 2026-07-12 — Round 10 final release gate
 
 - **Outcome:** completed the bounded accessibility gate for the full Structured Packets Terminal and three-socket/continuous-groove motif. Ownership, reading order, labels/errors, closed-note learner ownership, Continue focus, dialog/session/privacy/reload, canonical/narrow scaling, three captures, and native grayscale structure pass. No implementation fix was warranted.
