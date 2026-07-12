@@ -1,5 +1,13 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0402 Speech Workloads continuity closure
+
+- **Outcome:** Separated neutral System results from 901 Teacher direction/file/cancellation remediation; closed-note prose remains Pilot-owned and completions Teacher-owned. No L-04-03/L-04-04 gameplay began.
+- **Safety/accessibility:** Every phase retains a semantic warning for offline/no listening/no recording/no service/no voice persistence and persistent transcript-equivalent text.
+- **Focus/contracts:** Dedicated Speech focus targets Continue after mastery and sanitized reload. Primary/transfer 12/12, four-part closed-note, sanitizer/privacy, canonical/narrow, and distinct captures remain intact.
+- **Validation:** 77/77 unit tests, build, L-04-02 self-test, both 12/12 references, full E2E with zero runtime errors, and diff check pass.
+- **Next action:** Player Agent should audit warning/transcript reading order and Continue focus before L-04-03/L-04-04.
+
 ## 2026-07-12 — L-04-02 Offline Speech Workloads complete Terminal gate
 
 - **Outcome:** Added `EX-L0402-SPEECH-WORKLOADS` as the mandatory offline Terminal after Text Analysis. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note direction/workload/file/result explanation. No L-04-03 gameplay was implemented.
