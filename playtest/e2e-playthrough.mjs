@@ -886,6 +886,7 @@ print("Operator:", learner)`);
   await page.locator('[data-terminal-exercise="EX-L0402-SPEECH-WORKLOADS"]').waitFor();
   await page.locator("#speech-offline-warning").waitFor();
   await page.locator("#speech-transcript-equivalent").waitFor();
+  await assertSpeechDialogAssociation(page, "primary");
   await page.getByText("FULLY OFFLINE", { exact: false }).waitFor();
   await page.getByText("Transcript-equivalent scenario text", { exact: false }).waitFor();
   await page.getByLabel("Speech decision", { exact: true }).selectOption("speech_synthesis");
@@ -906,6 +907,7 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Start Speech Transfer", exact: true }).click();
   await page.locator("#speech-offline-warning").waitFor();
   await page.locator("#speech-transcript-equivalent").waitFor();
+  await assertSpeechDialogAssociation(page, "transfer");
   await page.getByLabel("Speech decision", { exact: true }).selectOption("speech_synthesis");
   await page.getByLabel("Speech reason", { exact: true }).selectOption("spoken_audio_is_generated_from_text");
   await page.getByRole("button", { name: "Check speech choice", exact: true }).click();
@@ -921,6 +923,7 @@ print("Operator:", learner)`);
   for (const id of Object.keys(referenceSpeechTransfer)) { const a = referenceSpeechTransfer[id]; await page.getByLabel("Speech decision", { exact: true }).selectOption(a.decision); await page.getByLabel("Speech reason", { exact: true }).selectOption(a.reason); await page.getByRole("button", { name: "Check speech choice", exact: true }).click(); await page.getByText("CHOICE PASS", { exact: false }).waitFor(); await page.getByRole("button", { name: id === "T06" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click(); }
   await page.locator("#speech-offline-warning").waitFor();
   await page.locator("#speech-transcript-equivalent").waitFor();
+  await assertSpeechDialogAssociation(page, "closed-note");
   await page.getByText("PILOT // CLOSED-NOTE SPEECH-FLOW OWNER", { exact: true }).waitFor();
   for (const d of ["direction", "workload", "file_binding", "result_branch"]) await page.getByLabel(`Closed-note speech ${d}`, { exact: true }).fill("wrong");
   await page.getByRole("button", { name: "Check speech explanation", exact: true }).click();
@@ -1240,6 +1243,18 @@ function assertDistinctCaptures(names) {
       if (captures[left].bytes.equals(captures[right].bytes)) throw new Error(`QA captures are duplicates: ${captures[left].name} and ${captures[right].name}`);
     }
   }
+}
+
+async function assertSpeechDialogAssociation(page, phase) {
+  const dialog = page.locator('[data-terminal-exercise="EX-L0402-SPEECH-WORKLOADS"]');
+  const describedBy = await dialog.getAttribute("aria-describedby");
+  if (describedBy !== "speech-offline-warning speech-transcript-equivalent") throw new Error(`Speech ${phase} dialog description order incorrect: ${describedBy}`);
+  for (const id of describedBy.split(" ")) if (await page.locator(`#${id}`).count() !== 1) throw new Error(`Speech ${phase} description ID is missing or duplicated: ${id}`);
+  const duplicateIds = await page.evaluate(() => {
+    const ids = [...document.querySelectorAll("[id]")].map((element) => element.id);
+    return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
+  });
+  if (duplicateIds.length) throw new Error(`Speech ${phase} rendered duplicate IDs: ${duplicateIds.join(", ")}`);
 }
 
 function routePrimaryReference() {

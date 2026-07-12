@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Speech dialog description association P1
+
+- **Outcome:** Applied the Player P1 only. The Speech Workloads dialog now has the exact ordered `aria-describedby="speech-offline-warning speech-transcript-equivalent"` association in primary, transfer, and closed-note phases. Both referenced elements remain persistent siblings of phase content, so their IDs do not disappear during phase transitions.
+- **Regression coverage:** Exported the canonical ordered ID contract and added a unit assertion for exact order and uniqueness. Full E2E now verifies the exact dialog attribute in all three phases, requires exactly one instance of each referenced ID, and rejects any duplicate ID anywhere in the rendered document.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/speechWorkloadExercise.js`, its unit test, `playtest/e2e-playthrough.mjs`, and this log.
+- **Validation:** All 78 unit tests, production build, full title-to-credits E2E, L-04-02 validator self-test, and both 12/12 reference forms pass. Existing mastery, privacy, focus, layout, transcript-equivalent, and offline behavior remain green.
+- **Next recommended item:** Player Agent should re-audit the Speech dialog announcement with a screen reader in primary, transfer, and closed-note modes.
+- **Unresolved risks:** Automated DOM assertions prove association/order and uniqueness, but they do not substitute for one manual screen-reader announcement check.
+
 ## 2026-07-12 — EX-L0402 Speech Workloads continuity closure
 
 - **Outcome:** Separated neutral System results from 901 Teacher direction/file/cancellation remediation; closed-note prose remains Pilot-owned and completions Teacher-owned. No L-04-03/L-04-04 gameplay began.
