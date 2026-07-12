@@ -80,6 +80,7 @@ import {
 import {
   evaluateModelChoiceExplanation,
   evaluateModelChoiceScenario,
+  getModelChoiceEligibility,
   getModelChoiceOptions,
   modelChoiceDimensions,
   modelChoiceExercise,
@@ -878,15 +879,17 @@ export function App() {
     setTerminalOpen(true);
     setRuinsTerminalKind("model-choice");
     if (!modelChoiceSession) {
-      const form = modelChoiceEvidence?.masteryStatus === "primary_complete" ? "transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" || modelChoiceEvidence?.form === "explanation" ? "explanation" : "primary";
+      const { form } = getModelChoiceEligibility(modelChoiceEvidence);
       setModelChoiceSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { decision: "", reason: "" }, explanationResult: null, ownershipConfirmed: false });
     }
   }
 
   function exitModelChoiceExercise() {
+    const phase = modelChoiceSession?.phase === "explanation" ? "Closed-note gate" : modelChoiceSession?.form === "transfer" ? "Transfer form" : "Primary form";
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Model and deployment practice closed safely. Continue or resume the primary form when ready.", "system");
+    setModelChoiceSession(null);
+    setDialogue(`${phase} closed safely. Sanitized eligibility and evidence remain; private answers were cleared.`, "system");
   }
 
   function checkModelChoice(event) {
@@ -1854,7 +1857,7 @@ export function App() {
                     <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Resume Closed-Note Gate" : "Start Model Choices"}</button>
+                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
                   )}
                   {pendingAdvance && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>

@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-02-03 continuity and ownership closure
+
+- **Outcome:** Closed the three concrete L-02-03 continuity defects without starting L-03-01 or L-03-02 gameplay. Exit messages now name the active `Primary form`, `Transfer form`, or `Closed-note gate`; closing any phase clears its private decision/reason draft and reopens a clean phase from sanitized eligibility only.
+- **Eligibility/privacy:** `sanitizeModelChoiceEvidence` now derives `primary`, `transfer`, or `explanation` eligibility exclusively from complete correctness booleans. Forged `form`, `primary_complete`, `transfer_complete`, or partial `mastered` labels cannot advance the learner. Reopen and reload retain allowlisted IDs, booleans, attempts, hints, confidence, tags, and status, but never selections, prompt text, runtime output, or closed-note wording.
+- **Ownership:** Every mode-aware exit renders under explicit `SYSTEM // EXPEDITION STATE`; primary and strict-mastery completions render under explicit `901 TEACHER // SOURCE-GROUNDED COURSE`. Neither path can fall through the generic Pilot footer. In-Terminal Pilot/System/Teacher ownership labels remain distinct.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/modelChoiceExercise.js`, `horizon-archive-game/test/modelChoiceExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, `playtest/e2e-playthrough.mjs`, refreshed closed-note QA capture, and this log.
+- **Validation:** 47/47 unit tests pass; production build passes; L-02-03 self-test plus primary and transfer references pass at 16/16; full title-to-credits E2E passes with zero runtime errors; the three model-choice captures remain present and byte-distinct; `git diff --check` passes.
+- **Manifest:** Promoted `HA-AI901-MODEL-PRIMARY` to `HA-AI901-MODEL-MASTERY` with the actual two-form 16/16 plus closed-note decision/reason success contract.
+- **Next action:** Player Agent should independently retry close/reopen and reload at each L-02-03 phase and challenge forged phase labels. No additional Exercise scope remains before that audit.
+- **Risks:** Closing intentionally discards private working answers, so the mode-aware System message makes that consequence explicit before the learner reopens a clean eligible phase.
+
 ## 2026-07-12 — L-02-03 strict transfer and closed-note mastery
 
 - **Outcome:** Completed `EX-L0203-MODEL-DEPLOYMENT-CHOICES` with the packaged eight-scenario fresh-transfer form and a separate closed-note data-zone decision/reason explanation. Mastery now requires primary 16/16, transfer 16/16, both closed-note dimensions, learner ownership confirmation, and confidence; sanitized forged or partial evidence cannot claim `mastered`. No `L-03-01` gameplay was begun.

@@ -489,8 +489,10 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
   const systemSpeaker = page.locator('.speaker[data-dialogue-owner="system"]');
   await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
-  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
-  if (await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "generation_is_deterministic_when_a_prompt_repeats") throw new Error("Model choice session reset after close/reopen");
+  await page.getByText("Primary form closed safely", { exact: false }).waitFor();
+  await page.getByText("private answers were cleared", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Start Model Choices", exact: true }).click();
+  if (await page.getByLabel("Model choice decision", { exact: true }).inputValue() !== "" || await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "") throw new Error("Primary private answers survived close/reopen");
   const modelChoiceDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (!modelChoiceDraftSave || JSON.parse(modelChoiceDraftSave).modelChoiceEvidence?.attemptCount !== 1) throw new Error("Model choice attempt evidence missing");
   if (modelChoiceDraftSave.includes("retrieve_exact_fact_from_database") || modelChoiceDraftSave.includes("generation_is_deterministic_when_a_prompt_repeats") || modelChoiceDraftSave.includes("language model producing")) throw new Error("Model choice working choices or prompt leaked into localStorage");
@@ -531,8 +533,10 @@ print("Operator:", learner)`);
   }
   await page.screenshot({ path: qaPath("model-choice-transfer-remediation-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
-  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
-  if (await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "repeating_a_prompt_guarantees_identical_output") throw new Error("Model choice transfer session reset after close/reopen");
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByText("Transfer form closed safely", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Start Model Choice Transfer", exact: true }).click();
+  if (await page.getByLabel("Model choice decision", { exact: true }).inputValue() !== "" || await page.getByLabel("Model choice reason", { exact: true }).inputValue() !== "") throw new Error("Transfer private answers survived close/reopen");
   for (const scenarioId of Object.keys(referenceModelChoiceTransfer)) {
     const answer = referenceModelChoiceTransfer[scenarioId];
     await page.getByLabel("Model choice decision", { exact: true }).selectOption(answer.decision);
@@ -557,10 +561,14 @@ print("Operator:", learner)`);
   await page.getByLabel("Closed-note model choice decision", { exact: true }).fill("data zone deployment");
   await page.getByLabel("Closed-note model choice reason", { exact: true }).fill("data zone limits processing to the specified zone");
   await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
-  await page.getByRole("button", { name: "Resume Model Choices", exact: true }).click();
-  if (await page.getByLabel("Closed-note model choice reason", { exact: true }).inputValue() !== "data zone limits processing to the specified zone") throw new Error("Model choice closed-note response reset after close/reopen");
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByText("Closed-note gate closed safely", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Open Closed-Note Gate", exact: true }).click();
+  if (await page.getByLabel("Closed-note model choice decision", { exact: true }).inputValue() !== "" || await page.getByLabel("Closed-note model choice reason", { exact: true }).inputValue() !== "") throw new Error("Closed-note private answers survived close/reopen");
   const modelChoiceExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (modelChoiceExplanationDraft.includes("data zone deployment") || modelChoiceExplanationDraft.includes("data zone limits processing")) throw new Error("Model choice closed-note text leaked into localStorage");
+  await page.getByLabel("Closed-note model choice decision", { exact: true }).fill("data zone deployment");
+  await page.getByLabel("Closed-note model choice reason", { exact: true }).fill("data zone limits processing to the specified zone");
   await page.getByRole("button", { name: "Check my explanation", exact: true }).click();
   await page.getByText("Complete decision and reason confirmed", { exact: false }).waitFor();
   await page.getByRole("checkbox", { name: "I produced this decision and reason myself without notes.", exact: true }).check();
@@ -723,7 +731,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-PRIMARY", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-AI901-002"],
     credits: true,
   }));
 } finally {

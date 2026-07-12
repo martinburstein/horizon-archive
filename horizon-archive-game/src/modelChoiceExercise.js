@@ -100,9 +100,14 @@ export function sanitizeModelChoiceEvidence(value) {
   const strictTransfer = hasStrictForm(itemCorrectness, modelChoiceTransferScenarios);
   const strictExplanation = modelChoiceDimensions.every((dimension) => itemCorrectness.closed_note_explanation?.[dimension] === true);
   const requestedStatus = ["in_progress", "remediation_required", "primary_complete", "transfer_complete", "mastered"].includes(value.masteryStatus) ? value.masteryStatus : "in_progress";
-  const masteryStatus = requestedStatus === "mastered" && !(strictPrimary && strictTransfer && strictExplanation)
-    ? (strictTransfer ? "transfer_complete" : strictPrimary ? "primary_complete" : "in_progress")
-    : requestedStatus;
+  const masteryStatus = strictPrimary && strictTransfer && strictExplanation && requestedStatus === "mastered"
+    ? "mastered"
+    : strictTransfer
+      ? "transfer_complete"
+      : strictPrimary
+        ? "primary_complete"
+        : requestedStatus === "remediation_required" ? "remediation_required" : "in_progress";
+  const form = strictTransfer ? "explanation" : strictPrimary ? "transfer" : "primary";
   return {
     exerciseId: exerciseAsset.exercise_id,
     lessonId: exerciseAsset.lesson_id,
@@ -110,7 +115,7 @@ export function sanitizeModelChoiceEvidence(value) {
     assessmentId: exerciseAsset.assessment_id,
     objectiveIds: [...exerciseAsset.objective_ids],
     skillIds: [...exerciseAsset.skill_ids],
-    form: ["primary", "transfer", "explanation"].includes(value.form) ? value.form : "primary",
+    form,
     itemCorrectness,
     attemptCount: Math.min(99, Math.max(0, Number.isInteger(value.attemptCount) ? value.attemptCount : 0)),
     hintLevel: Math.min(3, Math.max(0, Number.isInteger(value.hintLevel) ? value.hintLevel : 0)),
@@ -118,6 +123,12 @@ export function sanitizeModelChoiceEvidence(value) {
     misconceptionTags: Array.isArray(value.misconceptionTags) ? [...new Set(value.misconceptionTags.filter((tag) => validTags.has(tag)))] : [],
     masteryStatus,
   };
+}
+
+export function getModelChoiceEligibility(value) {
+  const evidence = sanitizeModelChoiceEvidence(value);
+  if (!evidence) return { form: "primary", masteryStatus: "in_progress" };
+  return { form: evidence.form, masteryStatus: evidence.masteryStatus };
 }
 
 export function updateModelChoiceEvidence(previous, changes = {}) {

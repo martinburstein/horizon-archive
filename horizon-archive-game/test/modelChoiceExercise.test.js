@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import referencePrimary from "../../curriculum/lessons/L-02-03/reference_primary_answers.json" with { type: "json" };
 import referenceTransfer from "../../curriculum/lessons/L-02-03/reference_transfer_answers.json" with { type: "json" };
-import { evaluateModelChoiceExplanation, evaluateModelChoiceScenario, getModelChoiceOptions, modelChoicePrimaryScenarios, modelChoiceTransferScenarios, sanitizeModelChoiceEvidence, updateModelChoiceEvidence } from "../src/modelChoiceExercise.js";
+import { evaluateModelChoiceExplanation, evaluateModelChoiceScenario, getModelChoiceEligibility, getModelChoiceOptions, modelChoicePrimaryScenarios, modelChoiceTransferScenarios, sanitizeModelChoiceEvidence, updateModelChoiceEvidence } from "../src/modelChoiceExercise.js";
 
 test("primary form covers all four topic families at a strict 16 of 16", () => {
   assert.equal(modelChoicePrimaryScenarios.length, 8);
@@ -58,4 +58,18 @@ test("mastered evidence requires primary, transfer, and closed-note booleans", (
   const sanitized = sanitizeModelChoiceEvidence({ ...evidence, freeFormExplanation: "private", response: referenceTransfer.T04 });
   assert.equal("freeFormExplanation" in sanitized, false);
   assert.equal("response" in sanitized, false);
+});
+
+test("forged phase labels cannot advance sanitized eligibility", () => {
+  const forged = sanitizeModelChoiceEvidence({ exerciseId: "EX-L0203-MODEL-DEPLOYMENT-CHOICES", form: "explanation", masteryStatus: "transfer_complete", response: referenceTransfer.T04 });
+  assert.equal(forged.form, "primary");
+  assert.equal(forged.masteryStatus, "in_progress");
+  assert.deepEqual(getModelChoiceEligibility(forged), { form: "primary", masteryStatus: "in_progress" });
+});
+
+test("eligibility advances from correctness booleans rather than private answers", () => {
+  let evidence = updateModelChoiceEvidence(null, {});
+  for (const scenario of modelChoicePrimaryScenarios) evidence = updateModelChoiceEvidence(evidence, { scenarioId: scenario.id, correctness: { decision: true, reason: true } });
+  assert.deepEqual(getModelChoiceEligibility({ ...evidence, response: referencePrimary.P01, promptText: "private" }), { form: "transfer", masteryStatus: "primary_complete" });
+  assert.equal("response" in sanitizeModelChoiceEvidence({ ...evidence, response: referencePrimary.P01 }), false);
 });
