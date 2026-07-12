@@ -191,3 +191,11 @@
 - **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; eight distinct grayscale checkpoint tiles; connected rail reaches all eight frames; empty keyed credential and cleanup owner-lock pass; catalog/deployment separation passes; 59 x 59 bounds fit the 68 x 76 target; local links pass.
 - **Next recommended item:** Accessibility Sentinel should identify all eight stages at native grayscale and verify live labels for deployment identity, credential state, ownership, and cleanup consequences.
 - **Unresolved risks:** physical geometry cannot convey resource names, readiness evidence, connection values, ownership identity, or destructive consequences. Live teaching content remains authoritative.
+
+## 2026-07-12 - Prompt Layers physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01 prompt assembly with six linked and mechanically distinct layers for system, user, grounding, output contract, conflict/no-authority, and evaluation. Injection is a rejected side spur; action authority is a locked external socket behind a solid boundary.
+- **Files changed:** added `production-pixel/AB-01/prompt-layers/` native motif, renderer, specification, exact 2x, grayscale, six-layer isolation QA, and validator; linked it from the AB-01 package. No gameplay, scene, interface, prompt content, credentials, or lore changed.
+- **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; six pairwise-distinct grayscale layers; one accepted spine reaches all six; injection hard gap and external action lock pass; 59 x 59 bounds fit the 68 x 76 target; local links pass.
+- **Next recommended item:** Accessibility Sentinel should identify all layers and both authority boundaries at native grayscale. Coder may integrate only with persistent source/authority labels and textual rejection/evaluation outcomes.
+- **Unresolved risks:** geometry cannot convey instruction text, source quality, precedence details, contract semantics, authorization identity, or evaluation evidence. Live teaching content remains authoritative.

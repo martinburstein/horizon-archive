@@ -21,6 +21,7 @@
 - **Speech Workloads motif:** [recognition, synthesis, multimodal, and cancellation strip](speech-workloads/README.md)
 - **Information Extraction motif:** [four modalities, schema lattice, null, evidence/value, and rejection](information-extraction/README.md)
 - **Portal Orientation motif:** [eight checkpoints, catalog/deployment distinction, empty credential, and cleanup lock](portal-orientation/README.md)
+- **Prompt Layers motif:** [six linked layers, rejected injection spur, and locked external authority](prompt-layers/README.md)
 
 ## Originality gate
 
