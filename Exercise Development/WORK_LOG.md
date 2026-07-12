@@ -1,5 +1,18 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — EX-L0401 Text Analysis continuity closure
+
+- **Outcome:** Closed the Text Analysis ownership, terminology, and focus handoff without starting L-04-02 or L-04-03 gameplay. Primary, transfer, and closed-note `SYSTEM` result lines now contain only deterministic totals and pass/not-complete state; capability/correlation and document-flow coaching renders in separate explicitly labeled `901 TEACHER` remediation regions.
+- **Terminology/source bridge:** A semantic note outside the phase switch remains visible in every phase: course-authored offline practice, no service call or document text, and `AI-901 “keyword extraction” ↔ Azure “key phrase extraction.”` Existing volatile SDK/operation/endpoint/authentication/language/limit/region/pricing/preview warnings remain intact.
+- **Ownership:** Closed-note requested-output, capability, stable document-ID, and mixed result/error prose remains explicitly Pilot-owned and session-only. Per-field misses remain Teacher-owned, confirmations neutral System-owned, and primary/mastery completion messages explicitly Teacher-owned.
+- **Focus:** A dedicated Text Analysis focus flag moves focus to Continue after strict mastery acknowledgement and after sanitized mastered-save reload, replacing reliance on the earlier Client Bridge flag.
+- **Preserved contracts:** Primary 12/12, transfer 12/12, four-part closed-note mastery, no document text persistence/no service calls, evidence sanitization/privacy, close/reopen and reload behavior, canonical/narrow layout, and three pairwise-distinct captures remain intact.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/textAnalysisExercise.js`, `horizon-archive-game/test/textAnalysisExercise.test.js`, `playtest/e2e-playthrough.mjs`, refreshed Text Analysis captures, and this log.
+- **Validation:** 71/71 unit tests pass; production build passes; L-04-01 self-test and both primary/transfer references pass 12/12; full title-to-credits E2E passes with zero runtime errors and verifies terminology visibility in every phase, ownership separation, field associations, direct/reload Continue focus, privacy, and distinct captures; `git diff --check` passes.
+- **Manifest/E2E register:** Existing `HA-AI901-TEXT-ANALYSIS` contract remains correct; the E2E register now includes it plus terminology, ownership, and focus flags.
+- **Next action:** Player Agent should independently test terminology-note announcement, document-ID/error-flow remediation ordering, no-text persistence, and Continue focus after direct/restored mastery. Do not enter L-04-02/L-04-03 before that audit.
+- **Risks:** The longer terminology note and remediation add vertical content to the canonical/narrow Terminal and require an independent narrow-screen reading-order review.
+
 ## 2026-07-12 — L-04-01 Offline Text Analysis complete Terminal gate
 
 - **Outcome:** Added `EX-L0401-TEXT-ANALYSIS` as the mandatory offline Terminal after Client Bridge. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note workload-choice/correlation explanation. Progression remains blocked until completion; no L-04-02 gameplay was implemented.
