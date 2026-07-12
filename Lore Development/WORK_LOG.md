@@ -177,3 +177,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, description association, six scenarios per form, all six boundaries, strict provenance/publication/deletion probes, four explanation dimensions, `L-05-06` IDs, evidence sanitizer, session/reload/transition behavior, zero-media/action boundary, and Continue gate. Reviewed copy for ownership, compactness, privacy, provenance, authority, accessibility, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should preserve the warning/text-equivalent association, explicit Teacher remediation, neutral System scoring, and Continue focus after mastery.
 - **Unresolved risks:** Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.
+
+## 2026-07-12 — Planned Objective Ledger continuity
+
+- **Outcome:** Added the bounded target interaction contract for `EX-L0601-OBJECTIVE-LEDGER`: all 15 objectives, exact readiness states, concept-versus-implementation evidence, objective-specific remediation, confidence separation, primary/transfer, closed-note domain explanation, domain/overall mastery, restoration, privacy, and Continue handoff. It is explicitly course-authored, not exam content, and offers no result guarantee.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked 15 unique objectives per form, 30/30 gates, eight concept and seven implementation objectives, three status values, four explanation dimensions, `L-06-01` IDs, evidence sanitizer, session/transition contracts, confidence/mastery separation, course/exam boundary, action safety, and compact copy. Reviewed all added text for ownership, privacy, authority, and mystery safety.
+- **Next recommended item:** Coder/Exercise Agent should mount the Objective Ledger with text-visible statuses, objective-specific evidence pointers, separated Teacher/System channels, and Continue focus after mastery.
+- **Unresolved risks:** Runtime integration remains incomplete. The exercise module and tests exist, but no Objective Ledger Terminal is currently mounted in `App.jsx`.

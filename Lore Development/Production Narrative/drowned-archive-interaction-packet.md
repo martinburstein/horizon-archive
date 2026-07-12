@@ -1323,6 +1323,97 @@ The System reports decision/reason correctness and score only. Repair direction 
 - Scene transition clears media, prompt, configuration, and result state; sanitized mastery evidence persists separately.
 - Exit never accesses media, calls a service, uses Azure, publishes, deletes, performs an action, or advances progression.
 
+## Planned Offline AI-901 Objective Ledger
+
+Production alignment: `EX-L0601-OBJECTIVE-LEDGER`, lesson `L-06-01`, activity `A-L0601-2`, assessment `AS-L0601-OBJ`, skills `PY-019` and `PY-020`. The deterministic 15-objective module exists, but playable Terminal integration is incomplete. These are target production labels and ownership rules.
+
+- Concept domain: `AI901-D1-O1`, `AI901-D1-O2`, `AI901-D1-O3`, `AI901-D1-O4`, `AI901-D1-O5`, `AI901-D1-O6`, `AI901-D1-O7`, `AI901-D1-O8`.
+- Implementation domain: `AI901-D2-O1`, `AI901-D2-O2`, `AI901-D2-O3`, `AI901-D2-O4`, `AI901-D2-O5`, `AI901-D2-O6`, `AI901-D2-O7`.
+
+### Ownership and course boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns objective wording, evidence guidance, remediation, readiness interpretation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, ledger state, form/session state, and progression availability.
+- `PILOT // EVIDENCE LEDGER OWNER` owns objective choices and evidence pointers. `PILOT // CLOSED-NOTE DOMAIN OWNER` owns prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No ledger result implies Machine intent or exam prediction.
+
+Keep this boundary visible in every future mode:
+
+> COURSE-AUTHORED OFFLINE REVIEW · not Microsoft exam questions, not an exam guarantee, and no service or external action.
+
+No answer, evidence pointer, simulation, prompt, confidence rating, or mastery label authorizes login, credential use, service calls, Azure mutation, publication, disclosure, purchase, deletion, or other action.
+
+### OL00 — Open the 15-objective ledger
+
+- Target title/filename: `Offline AI-901 Objective Ledger`; `primary_objectives.json`.
+- `SYSTEM`: "Objective Ledger open. PRIMARY 1/15. Course-authored review; no exam guarantee."
+- `901 TEACHER`: "Match each current objective to objective-specific evidence; confidence never substitutes for evidence."
+- Domain 1 contains eight concept/capability objectives. Domain 2 contains seven Foundry implementation objectives.
+
+### OL01 — Exact ledger statuses
+
+- `ready`: primary and fresh-transfer evidence passes for that objective without notes.
+- `remediate`: an attempt missed the objective choice or evidence reason.
+- `not_yet_assessed`: no valid attempt exists.
+- Status text is always visible and never conveyed by color alone.
+- Confidence is recorded separately; low or high confidence cannot set, raise, or preserve mastery.
+- A domain average cannot hide one `remediate` or `not_yet_assessed` objective.
+
+### OL02 — Concept versus implementation evidence
+
+- Concept evidence may be an accurate explanation, workload/capability contrast, or scenario decision with a reason.
+- Implementation evidence may be a portal rehearsal, client trace, schema, result/error handling, or safe failure path.
+- `901 TEACHER`: "Use the evidence type required by this objective; one domain's evidence cannot prove the other domain."
+- A memorized label without its reason is not evidence. A simulation proves only the simulated boundary.
+
+### OL03 — Objective-specific remediation
+
+The System reports decision/reason correctness, objective status, and score only. Remediation remains Teacher-owned:
+
+- `901 TEACHER`: "Return to [MAPPED LESSON], produce [NAMED ARTIFACT OR EXPLANATION], then retry a fresh scenario."
+- Name the exact missed objective; never remediate only the domain average.
+- Preserve passing objectives while the missed objective remains `remediate`.
+- Use `not_yet_assessed` until valid evidence exists; do not infer readiness from confidence or nearby objectives.
+- Reverify current objective wording and volatile product details before the final readiness decision.
+
+### OL04 — Primary, transfer, and closed-note transitions
+
+- Primary completion, `901 TEACHER`: "Primary ledger complete: 30/30. Fresh transfer and a closed-note domain explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. All 15 objectives have primary evidence."
+- Transfer open: `SYSTEM`: "Objective Ledger open. TRANSFER 1/15. Course-authored review; no exam guarantee."
+- Transfer instruction, `901 TEACHER`: "Apply each objective to a fresh scenario and give objective-specific evidence."
+- Transfer completion: `SYSTEM`: "TRANSFER 30/30 recorded. CLOSED-NOTE GATE available."
+- Any miss leaves that objective `remediate`; neither domain nor overall mastery may display.
+
+### OL05 — Closed-note domain explanation and domain mastery
+
+- Target filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain both domains, evidence readiness, and course safeguards without notes."
+- Field labels: `concept domain`, `implementation domain`, `evidence readiness`, and `course safeguards`.
+- `PILOT // CLOSED-NOTE DOMAIN OWNER`: "I produced this domain explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- Concept-domain mastery requires all eight concept objectives ready on both forms plus its explanation.
+- Implementation-domain mastery requires all seven implementation objectives ready on both forms plus its explanation.
+- Overall mastery requires both domains; confidence, total average, or one domain cannot substitute.
+
+### OL06 — Mastery and progression handoff
+
+- `901 TEACHER`: "Objective Ledger mastery confirmed: all 15 objectives, both forms, and both domain explanations are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. This is course readiness, not an exam guarantee."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores IDs, booleans, status, lesson evidence pointers, attempts, hints, confidence, tags, and mastery status only.
+- No exam text, credential, endpoint, service payload/response, personal note, action request, choice, or prose persists.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### OL07 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Objective Ledger closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] ledger remains in this session."
+- Reopen: `SYSTEM`: "Objective Ledger restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Objective Ledger restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores objective statuses and lesson evidence pointers. Reload restores sanitized ledger eligibility.
+- Scene transition clears scenario answers and runtime configuration; sanitized ledger evidence persists separately.
+- Exit never calls a service, uses Azure, performs an external action, predicts an exam result, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1396,4 +1487,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Text/Speech Patterns persists no text, audio/path, transcript, endpoint, credential, response, action request, or prose.
 - Visual Patterns uses text equivalents and performs no media access, analysis, generation, publication, deletion, or external action.
 - Visual Patterns persists no media/path, description, prompt/output, endpoint, credential, response, action request, or prose.
+- Objective Ledger status is objective-specific evidence state; confidence and domain averages never substitute for mastery.
+- Objective Ledger persists no exam text, credential, endpoint, service data, personal notes, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

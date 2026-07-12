@@ -300,6 +300,20 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never accesses media, calls a service, uses Azure, publishes, deletes, performs an action, or implies a Machine response.
 
+### Planned Offline AI-901 Objective Ledger
+
+- Runtime integration is incomplete; this section defines target focus, dismissal, privacy, status, and ownership behavior.
+- Target title and dismissal name: `Offline AI-901 Objective Ledger`; `Exit Objective Ledger`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; cards use `n/15`.
+- Objective/evidence teaching, concept/implementation distinctions, remediation, readiness, and completion remain `901 TEACHER` copy.
+- Ledger choices/pointers are `PILOT // EVIDENCE LEDGER OWNER`; prose is `PILOT // CLOSED-NOTE DOMAIN OWNER`.
+- Status values are exactly `ready`, `remediate`, and `not_yet_assessed`; confidence never changes status or mastery.
+- Exit line: "Objective Ledger closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] ledger remains in this session."
+- Reopen restores statuses and evidence pointers. Reload restores sanitized eligibility with clean scenario/prose fields.
+- Persistent evidence excludes exam text, credentials, endpoint/service data, personal notes, action requests, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never calls a service, performs an action, predicts an exam result, grants authority, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -330,6 +344,7 @@ When acknowledgement changes progression:
 - Single Agent mastery: prefer `Continue` after the System announces availability.
 - Text/Speech Patterns mastery: prefer `Continue` after the System announces availability.
 - Visual Patterns mastery: prefer `Continue` after the System announces availability.
+- Objective Ledger mastery: prefer `Continue` after the System announces course readiness without an exam guarantee.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 
