@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-04-01 Offline Text Analysis complete Terminal gate
+
+- **Outcome:** Added `EX-L0401-TEXT-ANALYSIS` as the mandatory offline Terminal after Client Bridge. Mastery requires packaged primary 12/12, fresh transfer 12/12, and a four-part closed-note workload-choice/correlation explanation. Progression remains blocked until completion; no L-04-02 gameplay was implemented.
+- **Learning contract:** Six cards per form cover key phrase extraction (including the AI-901 “keyword extraction” wording bridge), named entity recognition/entity detection, sentiment analysis/opinion mining, summarization, stable document-ID correlation, and per-document success/error branching for mixed batches. Choices are driven by requested output rather than topic.
+- **Safety/source boundary:** Every prompt is course-authored offline practice, not a Microsoft exam item or service response. No service call or learner document text exists in the Terminal. SDKs, operations, endpoints, authentication, languages, limits, regions, pricing, and preview status remain visibly volatile and require revalidation.
+- **Ownership/accessibility:** Pilot owns choices and closed-note explanation, System owns scoring, and the 901 Teacher owns remediation/readiness. Decision/reason and four explanation dimensions expose independent invalid states and associated feedback. Focus containment/restoration, close/reopen, reload, privacy, reduced motion, canonical 640×480, authored 320×240, and post-mastery focus remain covered.
+- **Evidence/privacy:** Persistence contains only allowlisted IDs, per-dimension booleans for both forms and explanation, attempts, maximum hint level, confidence, misconception tags, form, and mastery state. Document text, free-form reasoning, service bodies, runtime output, selections, prompts, and closed-note wording never enter storage.
+- **Files/validation:** Added `textAnalysisExercise.js` and tests; updated App, styles, manifest, E2E journey, this log, and three path-resolved captures. Curriculum self-test and both 12/12 references pass. All 69 unit tests and production build pass. Full browser coverage passes remediation, both forms, explanation, close/reopen, reload, privacy, focus, distinct captures, title-to-credits, and zero runtime errors.
+- **Next recommended item:** Player Agent should challenge capability near-misses, dropped IDs, mixed-error assumptions, forged evidence, keyboard-only traversal, phase reloads, and canonical/narrow presentation before L-04-02 work.
+- **Unresolved risks:** The fixed-choice evaluator mirrors the packaged offline curriculum contract. Live service behavior and catalog details are deliberately excluded and must be verified against current official documentation.
+
 ## 2026-07-12 — EX-L0303 Client Bridge continuity closure
 
 - **Outcome:** Closed the Client Bridge ownership, warning, and focus handoff without starting L-04-01 or L-04-02 gameplay. `SYSTEM` score lines for code, retrieval, and closed-note modes now contain only deterministic totals and pass/not-complete state; all safe-layer, credential, retrieval, and five-layer coaching renders in separate explicitly labeled `901 TEACHER` remediation regions.

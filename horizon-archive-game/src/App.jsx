@@ -130,6 +130,19 @@ import {
   sanitizeClientBridgeEvidence,
   updateClientBridgeEvidence,
 } from "./clientBridgeExercise.js";
+import {
+  evaluateTextAnalysisExplanation,
+  evaluateTextAnalysisScenario,
+  getTextAnalysisOptions,
+  sanitizeTextAnalysisEvidence,
+  textAnalysisDimensions,
+  textAnalysisExercise,
+  textAnalysisExplanationDimensions,
+  textAnalysisPrimaryScenarios,
+  textAnalysisRemediation,
+  textAnalysisTransferScenarios,
+  updateTextAnalysisEvidence,
+} from "./textAnalysisExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -310,6 +323,7 @@ function loadSave() {
       structuredPacketEvidence: sanitizeStructuredPacketEvidence(saved.structuredPacketEvidence),
       controlFlowEvidence: sanitizeControlFlowEvidence(saved.controlFlowEvidence),
       clientBridgeEvidence: sanitizeClientBridgeEvidence(saved.clientBridgeEvidence),
+      textAnalysisEvidence: sanitizeTextAnalysisEvidence(saved.textAnalysisEvidence),
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -354,6 +368,8 @@ export function App() {
   const [controlFlowEvidence, setControlFlowEvidence] = useState(null);
   const [clientBridgeSession, setClientBridgeSession] = useState(null);
   const [clientBridgeEvidence, setClientBridgeEvidence] = useState(null);
+  const [textAnalysisSession, setTextAnalysisSession] = useState(null);
+  const [textAnalysisEvidence, setTextAnalysisEvidence] = useState(null);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -417,9 +433,10 @@ export function App() {
         structuredPacketEvidence,
         controlFlowEvidence,
         clientBridgeEvidence,
+        textAnalysisEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -475,6 +492,8 @@ export function App() {
     setControlFlowEvidence(null);
     setClientBridgeSession(null);
     setClientBridgeEvidence(null);
+    setTextAnalysisSession(null);
+    setTextAnalysisEvidence(null);
     setMode("playing");
   }
 
@@ -504,6 +523,8 @@ export function App() {
     if (saved.clientBridgeEvidence?.masteryStatus === "mastered") focusContinueAfterClientRef.current = true;
     setClientBridgeEvidence(saved.clientBridgeEvidence);
     setClientBridgeSession(null);
+    setTextAnalysisEvidence(saved.textAnalysisEvidence);
+    setTextAnalysisSession(null);
     setResponsibleAIEvidence(saved.responsibleAIEvidence);
     setResponsibleAISession(null);
     setModelChoiceEvidence(saved.modelChoiceEvidence);
@@ -1140,6 +1161,15 @@ export function App() {
   function advanceClientBridgeExplanation() { if (!clientBridgeSession.retrievalResult?.passed) return; setClientBridgeSession({ ...clientBridgeSession, form: "explanation", phase: "explanation", retrievalResult: null }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "retrieval_complete" })); }
   function checkClientBridgeExplanation(event) { event.preventDefault(); const result = evaluateClientBridgeExplanation(clientBridgeSession.explanationResponse); setClientBridgeSession({ ...clientBridgeSession, explanationResult: result }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "retrieval_complete" })); }
   function acknowledgeClientBridgeMastery() { if (!clientBridgeSession?.explanationResult?.passed || !clientBridgeSession.ownershipConfirmed || !clientBridgeEvidence?.confidence) return; focusContinueAfterClientRef.current = true; setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setClientBridgeSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge mastery confirmed: both offline forms, retrieval, and closed-note layers are complete.", "teacher"); }
+
+  function openTextAnalysis() { setTerminalOpen(true); setRuinsTerminalKind("text-analysis"); if (!textAnalysisSession) { const form = textAnalysisEvidence?.masteryStatus === "primary_complete" ? "transfer" : textAnalysisEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setTextAnalysisSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { requested_output: "", capability: "", document_id: "", mixed_result: "" }, explanationResult: null, ownershipConfirmed: false }); } }
+  function exitTextAnalysis() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis practice closed safely. Choices and explanation remain session-only.", "system"); }
+  function checkTextAnalysis(event) { event.preventDefault(); const scenarios = textAnalysisSession.form === "transfer" ? textAnalysisTransferScenarios : textAnalysisPrimaryScenarios; const scenario = scenarios[textAnalysisSession.index]; const result = evaluateTextAnalysisScenario(scenario.id, textAnalysisSession.response, textAnalysisSession.form); const hintLevel = result.passed ? textAnalysisSession.hintLevel : Math.max(1, textAnalysisSession.hintLevel); setTextAnalysisSession({ ...textAnalysisSession, result, hintLevel }); setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: textAnalysisSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: textAnalysisSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
+  function revealTextAnalysisHint() { const hintLevel = Math.min(3, textAnalysisSession.hintLevel + 1); setTextAnalysisSession({ ...textAnalysisSession, hintLevel }); setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { hintLevel })); }
+  function advanceTextAnalysis() { if (!textAnalysisSession.result?.passed) return; const scenarios = textAnalysisSession.form === "transfer" ? textAnalysisTransferScenarios : textAnalysisPrimaryScenarios; if (textAnalysisSession.index === scenarios.length - 1) { if (textAnalysisSession.form === "transfer") { setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setTextAnalysisSession({ ...textAnalysisSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setTextAnalysisSession({ ...textAnalysisSession, complete: true }); return; } setTextAnalysisSession({ ...textAnalysisSession, index: textAnalysisSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
+  function acknowledgeTextAnalysisPrimary() { if (!textAnalysisSession?.complete || !textAnalysisEvidence?.confidence) return; setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setTextAnalysisSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis primary form complete at 12 of 12. Fresh transfer and closed-note workload choice remain.", "teacher"); }
+  function checkTextAnalysisExplanation(event) { event.preventDefault(); const result = evaluateTextAnalysisExplanation(textAnalysisSession.explanationResponse); setTextAnalysisSession({ ...textAnalysisSession, explanationResult: result }); setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
+  function acknowledgeTextAnalysisMastery() { if (!textAnalysisSession?.explanationResult?.passed || !textAnalysisSession.ownershipConfirmed || !textAnalysisEvidence?.confidence) return; focusContinueAfterClientRef.current = true; setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setTextAnalysisSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis mastery confirmed: both 12-of-12 forms and closed-note workload explanation are complete.", "teacher"); }
 
   function validateEvidenceOutput(event) {
     event.preventDefault();
@@ -1975,6 +2005,17 @@ export function App() {
             </section>
           </TerminalShell>
         )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "text-analysis" && textAnalysisSession && (
+          <TerminalShell exerciseId={textAnalysisExercise.exercise_id} title="Offline Text Analysis" filename={textAnalysisSession.phase === "explanation" ? "closed_note.md" : `${textAnalysisSession.form}_workloads.json`} lessonId={textAnalysisExercise.lesson_id} statusText={textAnalysisSession.phase === "explanation" ? "CLOSED-NOTE GATE" : `${textAnalysisSession.form.toUpperCase()} ${textAnalysisSession.index + 1}/6`} closeLabel="Exit Text Analysis" restoreFocusTo={terminalTriggerRef.current} onClose={exitTextAnalysis}>
+            <section className="model-choice-workspace text-analysis-workspace"><p className="model-choice-boundary">COURSE-AUTHORED OFFLINE PRACTICE · no service call or document text. Reverify SDKs, operations, endpoints, authentication, languages, limits, regions, pricing, and preview status.</p>
+              {textAnalysisSession.phase === "explanation" ? (
+                <form className="model-choice-form" onSubmit={checkTextAnalysisExplanation}><header><p className="pane-label">PILOT // CLOSED-NOTE WORKLOAD OWNER</p><h2>Explain key phrase extraction and safe result correlation</h2><p>Bridge AI-901 “keyword extraction” wording to the service capability, then preserve document IDs and mixed success/error handling. Your words remain session-only.</p></header><div className="model-choice-fields text-analysis-explanation">{textAnalysisExplanationDimensions.map((dimension) => { const fieldResult = textAnalysisSession.explanationResult?.correctness[dimension]; const id = `text-explanation-${dimension}-feedback`; return <label key={dimension}><span>{dimension.replaceAll("_", " ")}</span><input aria-label={`Closed-note text analysis ${dimension}`} aria-invalid={textAnalysisSession.explanationResult ? !fieldResult : undefined} aria-describedby={textAnalysisSession.explanationResult ? id : undefined} autoComplete="off" value={textAnalysisSession.explanationResponse[dimension]} onChange={(event) => setTextAnalysisSession({ ...textAnalysisSession, explanationResponse: { ...textAnalysisSession.explanationResponse, [dimension]: event.target.value }, explanationResult: null, ownershipConfirmed: false })} />{textAnalysisSession.explanationResult && <small id={id}>{fieldResult ? "SYSTEM // Dimension confirmed." : `901 TEACHER // Rebuild ${dimension.replaceAll("_", " ")} from the requested output and batch flow.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit" disabled={textAnalysisExplanationDimensions.some((key) => !textAnalysisSession.explanationResponse[key])}>Check workload explanation</button></div><div className={textAnalysisSession.explanationResult ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{textAnalysisSession.explanationResult ? `${textAnalysisSession.explanationResult.score}/4 · ${textAnalysisSession.explanationResult.passed ? "Complete workload explanation confirmed." : "901 TEACHER // Name output, capability bridge, stable ID, and per-document error branch."}` : "No document text, service result, or answer choices are shown."}</div>{textAnalysisSession.explanationResult?.passed && <><label className="ownership-confirmation"><input type="checkbox" checked={textAnalysisSession.ownershipConfirmed} onChange={(event) => setTextAnalysisSession({ ...textAnalysisSession, ownershipConfirmed: event.target.checked })} />I produced this workload explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence after both forms</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="text-analysis-confidence" checked={textAnalysisEvidence?.confidence === value} onChange={() => setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!textAnalysisSession.ownershipConfirmed || !textAnalysisEvidence?.confidence} onClick={acknowledgeTextAnalysisMastery}>Acknowledge strict mastery</button></>}</section></form>
+              ) : textAnalysisSession.complete ? (
+                <section className="workload-summary"><p className="pane-label">901 TEACHER // PRIMARY FORM COMPLETE</p><h2>12 / 12 dimensions</h2><p>Four capabilities and both document-correlation/error-flow items pass. Fresh transfer and closed-note explanation remain.</p><fieldset className="confidence-group"><legend>Confidence after primary form</legend>{["low", "medium", "high"].map((value) => <label key={value}><input type="radio" name="text-primary-confidence" checked={textAnalysisEvidence?.confidence === value} onChange={() => setTextAnalysisEvidence((previous) => updateTextAnalysisEvidence(previous, { confidence: value }))} />{value}</label>)}</fieldset><button className="confirm-action" type="button" disabled={!textAnalysisEvidence?.confidence} onClick={acknowledgeTextAnalysisPrimary}>Acknowledge primary form</button></section>
+              ) : (() => { const scenarios = textAnalysisSession.form === "transfer" ? textAnalysisTransferScenarios : textAnalysisPrimaryScenarios; const scenario = scenarios[textAnalysisSession.index]; const options = getTextAnalysisOptions(scenario.id, textAnalysisSession.form); return <form className="model-choice-form" onSubmit={checkTextAnalysis}><header><p className="pane-label">{textAnalysisSession.form === "transfer" ? "FRESH TRANSFER" : "PRIMARY"} · PILOT // WORKLOAD OWNER · {scenario.id}</p><p className="model-choice-layer-labels">KEY PHRASES · ENTITIES · SENTIMENT · SUMMARY · DOCUMENT FLOW</p><h2>{scenario.prompt}</h2></header><div className="model-choice-fields">{textAnalysisDimensions.map((dimension) => { const fieldResult = textAnalysisSession.result?.correctness[dimension]; const id = `text-analysis-${dimension}-feedback`; return <label key={dimension}><span>{dimension}</span><select aria-label={`Text analysis ${dimension}`} aria-invalid={textAnalysisSession.result ? !fieldResult : undefined} aria-describedby={textAnalysisSession.result ? id : undefined} value={textAnalysisSession.response[dimension]} onChange={(event) => setTextAnalysisSession({ ...textAnalysisSession, response: { ...textAnalysisSession.response, [dimension]: event.target.value }, result: null })}><option value="">Choose one</option>{options[dimension].map((value) => <option key={value} value={value}>{formatChoice(value)}</option>)}</select>{textAnalysisSession.result && <small id={id}>{fieldResult ? "SYSTEM // Correct." : `901 TEACHER // Review the ${dimension} from the requested output and attribution requirement.`}</small>}</label>; })}</div><section className="terminal-console model-choice-output"><div className="console-heading-row"><strong>SYSTEM // STRICT 12-DIMENSION VALIDATOR</strong><button className="run-action" type="submit" disabled={textAnalysisDimensions.some((key) => !textAnalysisSession.response[key])}>Check workload choice</button></div><div className={textAnalysisSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">{textAnalysisSession.result ? `${textAnalysisSession.result.score}/2 · ${textAnalysisSession.result.passed ? "Choice confirmed." : textAnalysisRemediation(scenario, textAnalysisSession.result, textAnalysisSession.hintLevel)}` : "Choose by requested output, then protect document attribution and mixed-result handling."}</div>{textAnalysisSession.result && !textAnalysisSession.result.passed && <button className="hint-action" type="button" disabled={textAnalysisSession.hintLevel >= 3} onClick={revealTextAnalysisHint}>Reveal next workload contrast</button>}{textAnalysisSession.result?.passed && <button className="confirm-action" type="button" onClick={advanceTextAnalysis}>{textAnalysisSession.index === 5 ? (textAnalysisSession.form === "transfer" ? "Begin closed-note explanation" : "View primary result") : "Next scenario"}</button>}</section></form>; })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "automaton" && evidenceSession && (
           <TerminalShell
             exerciseId={evidencePacketExercise.exercise_id}
@@ -2134,7 +2175,10 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && controlFlowEvidence?.masteryStatus === "mastered" && clientBridgeEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openClientBridge(); }}>{clientBridgeSession ? "Resume Client Bridge" : clientBridgeEvidence?.masteryStatus === "primary_complete" ? "Start Client Bridge Transfer" : clientBridgeEvidence?.masteryStatus === "transfer_complete" ? "Open Client Bridge Retrieval" : clientBridgeEvidence?.masteryStatus === "retrieval_complete" ? "Open Client Bridge Closed-Note Gate" : "Start Client Bridge"}</button>
                   )}
-                  {pendingAdvance && (scene.id !== "ruins" || clientBridgeEvidence?.masteryStatus === "mastered") && (
+                  {pendingAdvance && scene.id === "ruins" && clientBridgeEvidence?.masteryStatus === "mastered" && textAnalysisEvidence?.masteryStatus !== "mastered" && (
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openTextAnalysis(); }}>{textAnalysisSession ? "Resume Text Analysis" : textAnalysisEvidence?.masteryStatus === "primary_complete" ? "Start Text Analysis Transfer" : textAnalysisEvidence?.masteryStatus === "transfer_complete" ? "Open Text Analysis Closed-Note Gate" : "Start Text Analysis"}</button>
+                  )}
+                  {pendingAdvance && (scene.id !== "ruins" || textAnalysisEvidence?.masteryStatus === "mastered") && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : "Continue"}
                     </button>

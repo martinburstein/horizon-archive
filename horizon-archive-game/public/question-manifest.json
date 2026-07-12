@@ -98,6 +98,16 @@
       "assessment_id": "AS-L0303-READY",
       "skills": ["PY-013", "PY-014", "PY-015", "PY-017", "PY-018"],
       "success_contract": "Pass both offline forms at 10/10, retrieval at 4/4, and independently explain module, file, environment secret, request, and later response boundaries."
+    },
+    {
+      "id": "HA-AI901-TEXT-ANALYSIS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0401-TEXT-ANALYSIS",
+      "lesson_id": "L-04-01",
+      "activity_id": "A-L0401-2",
+      "assessment_ids": ["AS-L0401-QC", "AS-L0401-SCEN"],
+      "skills": ["AI901-D1-O5", "AI901-D2-O5", "PY-016"],
+      "success_contract": "Pass both offline forms at 12/12 across four text capabilities and document result/error flow, then independently explain workload choice and safe correlation."
     }
   ]
 }

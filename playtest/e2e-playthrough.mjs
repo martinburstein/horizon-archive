@@ -19,6 +19,8 @@ const referenceControlPrimary = readFileSync(resolve(repositoryRoot, "curriculum
 const referenceControlTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_transfer.py"), "utf8");
 const referenceClientPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-03/reference_primary.py"), "utf8");
 const referenceClientTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-03/reference_transfer.py"), "utf8");
+const referenceTextPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-01/reference_primary_answers.json"), "utf8"));
+const referenceTextTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-04-01/reference_transfer_answers.json"), "utf8"));
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -804,12 +806,66 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
   await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
-  const clientContinue = page.getByRole("button", { name: "Continue", exact: true });
+  const clientContinue = page.getByRole("button", { name: "Start Text Analysis", exact: true });
   await clientContinue.waitFor();
-  if (!await clientContinue.evaluate((element) => element === document.activeElement)) throw new Error("Client Bridge mastery did not move focus to Continue");
+  if (!await clientContinue.evaluate((element) => element === document.activeElement)) throw new Error("Client Bridge mastery did not move focus to Text Analysis");
   const clientMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).clientBridgeEvidence, { key: saveKey });
   if (clientMastery?.masteryStatus !== "mastered" || clientMastery?.attemptCount !== 8) throw new Error(`Client Bridge mastery incomplete: ${JSON.stringify(clientMastery)}`);
   if (["learnerSource", "source", "configBody", "secretName", "secretValue", "authorizationHeader", "runtimeOutput", "freeFormExplanation"].some((key) => key in clientMastery)) throw new Error("Client Bridge mastery retained private content");
+  await page.getByRole("button", { name: "Start Text Analysis", exact: true }).click();
+  await page.locator('[data-terminal-exercise="EX-L0401-TEXT-ANALYSIS"]').waitFor();
+  await page.getByText("COURSE-AUTHORED OFFLINE PRACTICE", { exact: false }).waitFor();
+  await page.getByLabel("Text analysis decision", { exact: true }).selectOption("named_entity_recognition");
+  await page.getByLabel("Text analysis reason", { exact: true }).selectOption("topic_determines_capability");
+  await page.getByRole("button", { name: "Check workload choice", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  for (const dimension of ["decision", "reason"]) { const field = page.getByLabel(`Text analysis ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `text-analysis-${dimension}-feedback`) throw new Error(`Text-analysis ${dimension} remediation was not field-associated`); }
+  await page.setViewportSize({ width: 640, height: 480 });
+  await page.screenshot({ path: qaPath("text-analysis-primary-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Reveal next workload contrast", exact: true }).click();
+  for (const scenarioId of Object.keys(referenceTextPrimary)) { const answer = referenceTextPrimary[scenarioId]; await page.getByLabel("Text analysis decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Text analysis reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check workload choice", exact: true }).click(); await page.getByText("Choice confirmed", { exact: false }).waitFor(); await page.getByRole("button", { name: scenarioId === "P06" ? "View primary result" : "Next scenario", exact: true }).click(); }
+  await page.getByRole("heading", { name: "12 / 12 dimensions", exact: true }).waitFor();
+  await page.getByRole("radio", { name: "medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.getByRole("button", { name: "Start Text Analysis Transfer", exact: true }).click();
+  await page.getByLabel("Text analysis decision", { exact: true }).selectOption("named_entity_recognition");
+  await page.getByLabel("Text analysis reason", { exact: true }).selectOption("topic_determines_capability");
+  await page.getByRole("button", { name: "Check workload choice", exact: true }).click();
+  await page.getByRole("status").getByText("0/2", { exact: false }).waitFor();
+  await page.setViewportSize({ width: 320, height: 240 });
+  await page.screenshot({ path: qaPath("text-analysis-transfer-remediation-qa.png"), fullPage: true });
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "Exit Text Analysis", exact: true }).click();
+  await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume Text Analysis", exact: true }).click();
+  if (await page.getByLabel("Text analysis reason", { exact: true }).inputValue() !== "topic_determines_capability") throw new Error("Text-analysis transfer choices reset after close/reopen");
+  const textDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (textDraft.includes("topic_determines_capability") || textDraft.includes("maintenance comments")) throw new Error("Text-analysis choices or scenario text leaked into localStorage");
+  for (const scenarioId of Object.keys(referenceTextTransfer)) { const answer = referenceTextTransfer[scenarioId]; await page.getByLabel("Text analysis decision", { exact: true }).selectOption(answer.decision); await page.getByLabel("Text analysis reason", { exact: true }).selectOption(answer.reason); await page.getByRole("button", { name: "Check workload choice", exact: true }).click(); await page.getByText("Choice confirmed", { exact: false }).waitFor(); await page.getByRole("button", { name: scenarioId === "T06" ? "Begin closed-note explanation" : "Next scenario", exact: true }).click(); }
+  for (const dimension of ["requested_output", "capability", "document_id", "mixed_result"]) await page.getByLabel(`Closed-note text analysis ${dimension}`, { exact: true }).fill("wrong");
+  await page.getByRole("button", { name: "Check workload explanation", exact: true }).click();
+  await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  await page.screenshot({ path: qaPath("text-analysis-closed-note-qa.png"), fullPage: true });
+  assertDistinctCaptures(["text-analysis-primary-qa.png", "text-analysis-transfer-remediation-qa.png", "text-analysis-closed-note-qa.png"]);
+  for (const dimension of ["requested_output", "capability", "document_id", "mixed_result"]) { const field = page.getByLabel(`Closed-note text analysis ${dimension}`, { exact: true }); if (await field.getAttribute("aria-invalid") !== "true" || await field.getAttribute("aria-describedby") !== `text-explanation-${dimension}-feedback`) throw new Error(`Text-analysis explanation ${dimension} remediation was not associated`); }
+  const textExplanation = { requested_output: "important phrases representing main concepts", capability: "key phrase extraction keyword extraction bridge", document_id: "stable id correlates each input result or error", mixed_result: "iterate each document and branch success or error" };
+  for (const [dimension, value] of Object.entries(textExplanation)) await page.getByLabel(`Closed-note text analysis ${dimension}`, { exact: true }).fill(value);
+  await page.getByRole("button", { name: "Exit Text Analysis", exact: true }).click();
+  await page.getByRole("button", { name: "Resume Text Analysis", exact: true }).click();
+  if (await page.getByLabel("Closed-note text analysis document_id", { exact: true }).inputValue() !== textExplanation.document_id) throw new Error("Text-analysis explanation reset after close/reopen");
+  const textExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (textExplanationDraft.includes("stable id correlates") || textExplanationDraft.includes("important phrases representing")) throw new Error("Text-analysis explanation leaked into localStorage");
+  await page.getByRole("button", { name: "Check workload explanation", exact: true }).click();
+  await page.getByText("Complete workload explanation confirmed", { exact: false }).waitFor();
+  await page.getByRole("checkbox", { name: "I produced this workload explanation myself without notes.", exact: true }).check();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const textMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).textAnalysisEvidence, { key: saveKey });
+  if (textMastery?.masteryStatus !== "mastered" || textMastery?.attemptCount !== 16) throw new Error(`Text-analysis mastery incomplete: ${JSON.stringify(textMastery)}`);
+  if (["documentText", "freeFormReasoning", "serviceResultBody", "runtimeOutput", "response", "choices"].some((key) => key in textMastery)) throw new Error("Text-analysis mastery retained private content");
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   const restoredClientContinue = page.getByRole("button", { name: "Continue", exact: true });
@@ -963,6 +1019,10 @@ print("Operator:", learner)`);
     clientBridgeRetrieval: true,
     clientBridgeClosedNote: true,
     clientBridgeStrictMastery: true,
+    textAnalysisPrimary: true,
+    textAnalysisTransfer: true,
+    textAnalysisClosedNote: true,
+    textAnalysisStrictMastery: true,
     clientBridgeOfflineWarningAllModes: true,
     clientBridgeOwnership: true,
     clientBridgeContinueFocus: true,

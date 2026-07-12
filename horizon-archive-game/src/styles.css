@@ -321,7 +321,7 @@ h1 {
 .model-choice-layer-labels { margin: 4px 0; color: #d8c68f; font-size: 0.62rem; letter-spacing: 0.08em; }
 .model-choice-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-content: start; min-height: 0; overflow: auto; }
 .model-choice-fields label { display: grid; align-content: start; gap: 5px; padding: 8px; color: #aeb7c3; background: #151920; border: 1px solid #39424d; font-size: 0.66rem; }
-.model-choice-fields select { width: 100%; min-width: 0; padding: 7px; color: #e0e5eb; background: #0d1015; border: 1px solid #4a5360; font: inherit; }
+.model-choice-fields select, .model-choice-fields input { width: 100%; min-width: 0; padding: 7px; color: #e0e5eb; background: #0d1015; border: 1px solid #4a5360; font: inherit; }
 .model-choice-fields select:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 .model-choice-fields small { color: #d6c28b; font-size: 0.6rem; line-height: 1.3; }
 .model-choice-output { min-height: 105px; }
@@ -528,6 +528,9 @@ h1 {
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0301-STRUCTURED-PACKETS"] { overflow: hidden; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0302-CONTROL-FLOW"] { overflow: hidden; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0303-CLIENT-BRIDGE"] { overflow: hidden; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0401-TEXT-ANALYSIS"] { overflow: hidden; }
+.text-analysis-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.canonical-game-frame[data-canonical-layout="narrow"] .text-analysis-explanation { grid-template-columns: 1fr; }
 .bridge-retrieval { overflow: auto; }
 .bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
 .bridge-retrieval label { display: block; margin: 4px 0; }
