@@ -817,6 +817,7 @@ print("Operator:", learner)`);
   await page.getByText("COURSE-AUTHORED OFFLINE PRACTICE", { exact: false }).waitFor();
   const terminologyBridge = page.locator("#text-analysis-terminology-bridge");
   await terminologyBridge.waitFor();
+  if (await page.locator('[data-terminal-exercise="EX-L0401-TEXT-ANALYSIS"]').getAttribute("aria-describedby") !== "text-analysis-terminology-bridge") throw new Error("Text Analysis terminology bridge was not associated with the dialog announcement");
   const terminologyBridgeText = await terminologyBridge.textContent();
   if (!terminologyBridgeText.includes("AI-901") || !terminologyBridgeText.includes("keyword extraction") || !terminologyBridgeText.includes("Azure") || !terminologyBridgeText.includes("key phrase extraction")) throw new Error("Text Analysis terminology bridge was incomplete");
   await page.getByLabel("Text analysis decision", { exact: true }).selectOption("named_entity_recognition");
