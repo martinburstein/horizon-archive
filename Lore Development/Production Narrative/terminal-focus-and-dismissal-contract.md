@@ -139,6 +139,18 @@ Use a more specific line only when it adds state clarity.
 - The course boundary remains Teacher-owned and visible: "Course-authored practice—not a Microsoft exam question. Live availability, regions, quota, prices, parameter support, and preview status must be reverified."
 - Dismissal does not submit an answer, change a physical ring, change route access, or produce a Tidal Lens response.
 
+### Structured Packets
+
+- Exact title and dismissal name: `Structured Packets`; `Exit Structured Packets`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; live status uses `PRIMARY n/8`, `TRANSFER n/8`, and `CLOSED-NOTE GATE`.
+- Python, dictionary/list traversal, nested-access, and JSON instruction or remediation is always `901 TEACHER // SOURCE-GROUNDED COURSE` copy.
+- Editable source is `PILOT // SOURCE OWNER`; the closed-note response is `PILOT // EXPLANATION OWNER`. Neither Pilot label teaches or validates.
+- Exit line: "Structured Packets closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen restores active source, result, and hints inside the same session. Reload restores sanitized eligibility with clean source and explanation fields.
+- Persistent evidence excludes learner source, raw JSON, runtime output, and explanation prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal does not run code, score a form, acknowledge mastery, advance, or imply a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -157,6 +169,7 @@ When acknowledgement changes progression:
 - Calibration mastery: prefer `Continue` because the optional lesson no longer needs a resume action.
 - Workload Sort mastery: prefer the scene's Continue action after the success recap.
 - Evidence mastery: prefer `Descend to the city` after the final acknowledgement recap.
+- Structured Packets mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

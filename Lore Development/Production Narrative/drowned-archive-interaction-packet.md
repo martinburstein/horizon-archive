@@ -369,6 +369,71 @@ Do not place current model names, versions, SKUs, regional availability, quota, 
 - Substitute the exact uppercase state label. Reload preserves sanitized evidence and mode eligibility, never selected answers, free-form explanation text, or ownership-confirmation state.
 - Exit never submits, scores, changes the rings, changes the route, or changes the Tidal Lens.
 
+## Optional Structured Packets practice
+
+Production alignment: `EX-L0301-STRUCTURED-PACKETS`, lesson `L-03-01`, activity `A-L0301-3`, assessments `AS-L0301-QC` and `AS-L0301-STRUCT`, skills `PY-008`, `PY-009`, `PY-016`, and `PY-020`. This course surface follows Model/Deployment mastery and does not change AB-01 adventure state.
+
+### Ownership boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns every Python, list, dictionary, nested-access, and JSON instruction or remediation line.
+- `SYSTEM // EXPEDITION STATE` owns neutral form names, scores, session state, evidence status, and progression availability.
+- `EXPEDITION LINK // LOCAL TOOLING` runs the deterministic eight checks; it does not explain Python or interpret story evidence.
+- `PILOT // SOURCE OWNER` owns editable source. `PILOT // EXPLANATION OWNER` marks the learner's three-part closed-note response only.
+- `SCENE // SENSOR RECORD` may state that the Terminal, route, and Tidal Lens remain unchanged. No exercise state implies Machine intent, attention, judgment, or understanding.
+
+### SP00 — Open primary
+
+- Exact title: `Structured Packets`; filename `packet_primary.py`.
+- `SYSTEM // EXPEDITION STATE`: "Structured Packets open. PRIMARY 0/8."
+- `901 TEACHER // SOURCE-GROUNDED COURSE`: "Trace dictionary keys and list indexes, preserve the supplied packet, and derive each output."
+- `PILOT // SOURCE OWNER` remains a learner-authorship label, not a source of instruction.
+
+### SP01 — Field-associated remediation
+
+The System may show the failed check identifier and score. The compact remediation itself is Teacher-owned:
+
+- Container type: "Name the current container before choosing a bracket."
+- Dictionary/list boundary: "String keys open dictionaries; numeric indexes select list items."
+- Nested path: "Trace one bracket at a time from packet to the requested value."
+- JSON boundary: "Keep the Python object separate from JSON text; loads enters Python, dumps returns text."
+- Derived output: "Derive the value from the packet; do not replace the path with a literal."
+
+Hints change remediation evidence only. They never alter progression, physical geometry, or story access.
+
+### SP02 — Primary and transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 8/8. Fresh transfer and a closed-note data path remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE."
+- Transfer open: `SYSTEM`: "Structured Packets open. TRANSFER 0/8."
+- Transfer instruction, `901 TEACHER`: "Apply the same container and JSON boundaries to the fresh packet."
+- Transfer completion: `SYSTEM`: "TRANSFER 8/8 recorded. CLOSED-NOTE GATE available."
+- Neither form completion changes the route or produces a Tidal Lens response.
+
+### SP03 — Closed-note data-path explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain the container sequence, exact nested access, and JSON text-to-object-to-text round trip without notes."
+- `PILOT // EXPLANATION OWNER`: "I produced this data-path explanation myself without notes."
+- The System owns only the neutral `0/3` through `3/3` result. Teacher owns any reconstruction instruction.
+- Explanation fields and ownership confirmation remain session-only.
+
+### SP04 — Mastery and progression handoff
+
+- `901 TEACHER`: "Structured Packet mastery confirmed: both 8-of-8 forms and the closed-note data path are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available."
+- Continue becomes the preferred focus target after acknowledgement; progression is still a separate learner action.
+- Mastery persists only identifiers, check booleans, attempts, hint level, confidence, misconception tags, and status. It never retains learner source, raw JSON, runtime output, or explanation prose.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### SP05 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Structured Packets closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Structured Packets restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Structured Packets restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active source, result, and hints. Reload restores sanitized evidence and eligible mode with a clean starter or blank explanation.
+- Scene transition clears working source and explanation fields; sanitized mastery evidence persists separately.
+- Exit never runs code, validates, acknowledges mastery, advances progression, or changes any physical object.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -418,4 +483,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Primary, transfer, and explanation patterns indicate human course mode only; no pattern implies Machine intent.
 - Model/deployment rings remain human-authored teaching structure; all five live labels stay textual and no ring implies Machine intent.
 - Model/deployment volatile product facts remain Teacher-owned and require current official-source revalidation.
+- Structured Packets Python/JSON instruction and remediation remain Teacher-owned; System copy reports state only.
+- Structured Packets source, raw JSON, runtime output, and explanation prose never enter persistent mastery evidence.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
