@@ -113,3 +113,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked live title, filenames, statuses, six scenarios per form, three workload families, file-direction and cancellation items, four explanation dimensions, `L-04-02` IDs, evidence sanitizer, session/reload/transition behavior, offline boundary, transcript equivalence, and Continue gate. Reviewed copy for ownership, compactness, audio privacy, service ambiguity, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should keep Teacher remediation separate from neutral System results, preserve transcript-equivalent text and the offline banner in every mode, and verify Continue focus after mastery.
 - **Unresolved risks:** Some live remediation is still composed inside the System console, and Teacher completion dialogue may appear beneath the generic Pilot footer. This lore-only pass did not change gameplay code.
+
+## 2026-07-12 — Speech dialog announcement continuity
+
+- **Outcome:** Aligned the Speech dialog contract with the repaired accessible-description association. Entry order is now explicit: System-owned title, System-owned offline warning, Teacher-owned transcript equivalent, then active Pilot/Teacher/System work. Primary, transfer, closed-note, and mastery ownership remain distinct.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked `EX-L0402-SPEECH-WORKLOADS`, unique description IDs, exact `aria-describedby` order, title-first focus, live warning/transcript text, all four modes, evidence sanitizer, session restoration, no-listening/no-recording/no-service wording, and voice/transcript/path privacy.
+- **Next recommended item:** Accessibility Sentinel should verify the title, warning, transcript equivalent, and active-work sequence with a real screen reader at primary, transfer, and closed-note entry.
+- **Unresolved risks:** Automated structure confirms association and order but does not substitute for real assistive-technology announcement testing.

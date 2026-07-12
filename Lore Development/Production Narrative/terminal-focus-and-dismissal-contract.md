@@ -195,6 +195,10 @@ Use a more specific line only when it adds state clarity.
 - System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario status uses `n/6` and the gate uses `CLOSED-NOTE GATE`.
 - Recognition, synthesis, multimodal prompt, file direction, cancellation remediation, and completion remain `901 TEACHER` copy.
 - Scenario choices are `PILOT // SPEECH-FLOW OWNER`; explanation prose is `PILOT // CLOSED-NOTE SPEECH-FLOW OWNER`.
+- Entry announcement order is fixed: title → `speech-offline-warning` → `speech-transcript-equivalent` → active work.
+- The dialog association is exactly `aria-describedby="speech-offline-warning speech-transcript-equivalent"`; IDs are unique and ordered.
+- System owns the title/offline warning/state; Teacher owns the transcript equivalent, instruction, remediation, and completion.
+- Pilot owns primary/transfer choices and closed-note prose only. System owns neutral validation and mastery persistence state.
 - Every spoken scenario includes transcript-equivalent text; no listening, recording, audio generation, path access, or service call occurs.
 - Exit line: "Speech Workloads closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
 - Reopen restores active choices, result, and hints. Reload restores sanitized eligibility with clean fields and no audio state.

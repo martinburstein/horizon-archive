@@ -672,9 +672,24 @@ Production alignment: `EX-L0402-SPEECH-WORKLOADS`, lesson `L-04-02`, activity `A
 
 Keep the exact boundary visible in every mode:
 
-> FULLY OFFLINE · no microphone, capture, playback generation, audio file, or service call.
+> FULLY OFFLINE · no listening, no recording, no service call, and no voice persistence.
 
 Every spoken-input scenario is presented as transcript-equivalent text. The exercise does not listen, record, synthesize, play, read, or write audio. SDKs, endpoints, authentication, languages, voices, formats, regions, quotas, pricing, and preview status require current official-source revalidation.
+
+### Entry announcement and ownership order
+
+On every primary, transfer, or closed-note open, assistive technology receives this order once:
+
+1. `SYSTEM // EXPEDITION STATE`: dialog title `Offline Speech Workloads`.
+2. `SYSTEM // EXPEDITION STATE`: offline warning `speech-offline-warning`.
+3. `901 TEACHER // SOURCE-GROUNDED COURSE`: transcript equivalent `speech-transcript-equivalent`.
+4. Active work: Pilot-owned choices or prose, followed by Teacher instruction and neutral System validation.
+
+The dialog association is exactly `aria-describedby="speech-offline-warning speech-transcript-equivalent"`. Do not reverse, merge, duplicate, or append changing scenario text to this entry description.
+
+- Primary/transfer: `PILOT // SPEECH-FLOW OWNER` owns choices; Teacher owns direction instruction/remediation; System owns form and score.
+- Closed-note: `PILOT // CLOSED-NOTE SPEECH-FLOW OWNER` owns prose; Teacher owns reconstruction; System owns `CLOSED-NOTE GATE` and `0/4`–`4/4`.
+- Mastery: Teacher owns completion; System owns `MASTERED`, persistence limits, and Continue availability; Pilot adds no instructional claim.
 
 ### SW00 — Open primary
 
