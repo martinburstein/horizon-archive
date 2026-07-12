@@ -69,6 +69,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Transfer selects and closed-note inputs show the same 2 px internal focus frame at 640 x 480 and 320 x 240.
 - [ ] Transfer and explanation stages remain visibly distinct in title, filename/status, and pane label.
 - [ ] Closed-note typed values and field-associated remediation remain fully legible without horizontal scrolling.
+- [ ] Model/deployment primary displays exactly one of eight cards and a persistent `PRIMARY n/8` status.
+- [ ] Best decision precedes requirement-based reason in visual and keyboard order.
+- [ ] The two fields are equal columns at 640 x 480 and one ordered column at 320 x 240.
+- [ ] The Model Choices form is the only scroller; its field group and outer Terminal do not scroll independently.
+- [ ] Decision/reason focus frames, field feedback, score, comparison hint, and next action remain unclipped.
+- [ ] Dialogue ownership labels remain in the lower band and do not replace lesson/item status inside the Terminal.
 
 ## No-dead-end sweep
 

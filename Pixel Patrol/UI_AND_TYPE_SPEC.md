@@ -92,6 +92,16 @@ Decision: place the exact sentence `Tab moves through this workspace. Shift+Tab 
 
 Every failure response contains: what the Machine observed, one bounded cue, and one next available action. Required controls remain enabled. Hints do not reduce attempts or erase work. There are no dead ends, item-loss traps, surprise deaths, or irreversible ordinary experiments.
 
+## Model and deployment choice cards
+
+- The eight-card primary form is sequential: render exactly one scenario at a time and retain `PRIMARY n/8` in the Terminal status. Never compress all eight into a dashboard or checklist.
+- Each card contains a scenario header followed by the paired fields **Best decision** and **Requirement-based reason**. At 640 x 480 they form two equal columns; at 320 x 240 they become one column in decision-then-reason order.
+- The form is the only scroll owner. The outer Terminal frame stays fixed, and the two-field group uses visible overflow so it cannot create a nested scrollbar.
+- Decision and reason selects use the established 2 px gold internal focus frame with -3 px offset. Field feedback remains directly below its owning select and cannot be detached into a remote summary.
+- Validator order is score -> requirement/layer cue -> comparison hint -> next action. The hint must distinguish model, deployment, and request configuration rather than merely announcing an incorrect answer.
+- Stage hierarchy is title -> `primary_choices.json` and lesson/status -> course-authored/live-facts boundary -> topic/item count -> scenario -> decision/reason -> strict validator. Speaker ownership remains outside the modal in the lower dialogue band and must not compete with item status.
+- Native controls and scrollbars remain until accessible original bitmap equivalents exist. Square one- and two-pixel borders, stepped state changes, and the limited indigo/amber ramp provide period character without copying proprietary chrome.
+
 ## Responsible AI primary-form containment
 
 - The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.

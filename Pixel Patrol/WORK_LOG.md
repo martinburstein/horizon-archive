@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Model/deployment primary-form audit
+
+- **Completed:** audited `EX-L0203-MODEL-DEPLOYMENT-CHOICES` at the canonical 640 x 480 and authored 320 x 240 contracts. The correct density model is already implemented: one of eight scenario cards, two paired response fields, two columns at canonical width, one decision-then-reason column at narrow width, one contained form scroller, fixed outer Terminal chrome, field-associated remediation, progressive comparison hints, and explicit title/file/item/lesson hierarchy. No CSS change was warranted; locked the implementation as the production rule instead of adding ornamental churn.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 42 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Static checks confirm one-of-eight status, decision-before-reason hierarchy, canonical two-column and narrow one-column grouping, 2 px/-3 px focus frame, fixed outer Terminal, one form scroller, visible field overflow, strict validator, and comparison remediation. E2E confirms strict 16/16 evidence, all four topic families, close/reopen, privacy, explicit speaker ownership, source-boundary copy, and credits.
+- **Next recommended item:** Location Scout should represent model, deployment, and request configuration as three distinct physical rings around one two-part decision core, preserving the interface's layer distinction without adding literal UI text to the landscape.
+- **Unresolved risks:** there is no stage-specific Model Choices QA capture in `playtest/`; the E2E validates the flow but does not retain a visual artifact for this Terminal. This audit records the gap without expanding into QA-output refactoring.
+
 ## 2026-07-12 — Responsible AI transfer and closed-note audit
 
 - **Completed:** audited the completed transfer and closed-note stages against the existing native-frame scroll contract. Both preserve one form scroller, natural-height four-field cards, title/file/status stage hierarchy, adjacent validator/remediation, and two-column canonical versus one-column narrow grouping. Added the one missing visual invariant: transfer selects and closed-note inputs now share a 2 px internal gold focus frame with -3 px offset, so keyboard focus remains square, high-contrast, and unclipped at both scroll boundaries.
