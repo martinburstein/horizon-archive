@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Structured Packets final visual gate
+
+- **Completed:** audited the complete Structured Packets primary, transfer, closed-note, and mastered flow after ownership/focus fixes. The 640 x 480 primary capture, 320 x 240 transfer-remediation capture, and canonical closed-note capture preserve a coherent square-pixel family: fixed Machine/file/status chrome, phase-first narrow hierarchy, readable code, three-field Pilot explanation, neutral System scoring, separately framed Teacher remediation, field associations, and Continue focus after mastery. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 53 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms primary and transfer 8/8, closed-note three-part explanation, strict mastery, System/Teacher/Pilot separation, field associations, Continue focus, privacy, and distinct captures. Static hashes and dimensions confirm byte-distinct primary `640 x 480`, transfer `320 x 240`, and closed-note `1600 x 900` host captures; visual inspection confirms shared frame, palette, typography, focus, ownership rail, and validator grammar.
+- **Next recommended item:** Location Scout should express the packet motif as three nested square sockets linked by one continuous data-path groove, using alignment—not a new color—to show successful round trip.
+- **Unresolved risks:** native browser textarea/select/scrollbar rendering remains platform-dependent. Preserve it until an original accessible bitmap control replacement can retain selection, focus, and scroll-position cues.
+
 ## 2026-07-12 — L-02-03 final visual gate
 
 - **Completed:** performed the final canonical/narrow gate for the complete Model/Deployment Choices primary, transfer, closed-note, and mastered flow after continuity fixes. The phase hierarchy, one-card density, two-field grouping, one form scroller, internal focus frame, independent remediation, five persistent labels, layer motif, Pilot/System/901 Teacher ownership, and mode-aware exit copy are coherent at 640 x 480 and the authored 320 x 240 alternate. No CSS correction was warranted.

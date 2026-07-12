@@ -105,6 +105,16 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Exit copy must name `Primary form`, `Transfer form`, or `Closed-note gate` and render in the lower strip under `SYSTEM // EXPEDITION STATE`. Primary and strict-mastery completion copy renders under `901 TEACHER // SOURCE-GROUNDED COURSE`.
 - Motif continuity is phase-stable: indigo frame for Machine context, amber for volatile-source/boundary text, violet for phase/item labels, light text for learner-owned decisions, and amber validator feedback. Do not assign a new palette to transfer or closed-note stages.
 
+## Structured Packets ownership and density
+
+- Reading hierarchy is Machine title -> filename/form score -> course-authored/reverification boundary -> phase and Pilot ownership -> task/data-path trace -> editable Python -> System score/checks -> Teacher remediation/action.
+- `SYSTEM // STRICT 8-CHECK VALIDATOR` and the closed-note System validator report only deterministic scores and completion state. Course explanations belong in a separately framed amber `901 TEACHER // ... REMEDIATION` block.
+- Closed-note prose begins with `PILOT // CLOSED-NOTE EXPLANATION OWNER`, followed by exactly three associated fields: container path, nested access, and JSON round trip. Correct dimensions use neutral System confirmation; missed dimensions use explicit Teacher reconstruction cues.
+- Keep the outer Terminal fixed. The primary/transfer work region owns traversal through task, source, and output; the textarea retains its expected intrinsic code scroll, and the output region may scroll its check list without moving title/status chrome. At narrow width the stacked work region is the page-level content scroller.
+- Primary source remains readable at 640 x 480 with 0.68rem/1.4 monospace code. The 320 x 240 transfer view prioritizes title, form score, boundary, and phase before deeper content; no information is removed, and the work region scrolls below.
+- Focus uses the project 2 px gold square outline. After strict mastery closes the Terminal, focus moves to Continue in the lower dialogue strip; Resume must not retain focus.
+- Structured Packets reuse the indigo, amber, violet, and pale-code ramp already established by earlier Terminals. Brackets, one-pixel seams, two-pixel ownership rails, and hard-edged panels supply period character without proprietary imitation.
+
 ## Responsible AI primary-form containment
 
 - The canonical Terminal sits 8 px inside the 640 x 360 world viewport, producing a 624 x 344 border box. The authored 320 x 240 alternate uses a 4 px inset.

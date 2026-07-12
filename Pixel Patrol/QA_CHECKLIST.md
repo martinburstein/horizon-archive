@@ -80,6 +80,13 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Closing clears private draft controls while keeping sanitized eligibility; the visible message states that consequence.
 - [ ] Primary, transfer-remediation, and closed-note captures exist under distinct filenames and are byte-distinct.
 - [ ] Layer motif, border weights, focus frames, validator color, and typography remain consistent across all three captures.
+- [ ] Structured Packets primary, transfer-remediation, and closed-note captures exist and are byte-distinct.
+- [ ] System regions contain only score/pass state; Teacher remediation remains in its labeled amber two-pixel-rail block.
+- [ ] Pilot closed-note prose and the three fields appear before System validation in visual and DOM order.
+- [ ] Source, output/checks, and narrow stacked work remain contained without moving Terminal title/status chrome.
+- [ ] Source textarea and all three explanation inputs retain visible 2 px focus outlines at scroll boundaries.
+- [ ] Failed fields expose associated Teacher remediation; correct fields expose neutral System confirmation.
+- [ ] Strict mastery closes the Terminal and moves focus to Continue, not Resume.
 
 ## No-dead-end sweep
 
