@@ -400,14 +400,16 @@
           "supports_python_skills": ["PY-015", "PY-016", "PY-018"],
           "prerequisite_lesson_ids": ["L-04-03", "L-05-03"],
           "launch_tier": "launch_valuable",
-          "source_mode": "source_grounded_with_gap_warning",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-05-get-started-with-computer-vision-i"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-AZURE-VISION"
           ],
           "activity_ids": ["A-L0506-1", "A-L0506-2"],
           "assessment_ids": ["AS-L0506-SCEN"],
-          "mastery_gate": "can compare vision-enabled and generative visual solution patterns"
+          "mastery_gate": "score 12 of 12 on primary and fresh-transfer forms across six visual solution boundaries, then explain one complete flow and its action safeguard without notes"
         },
         {
           "lesson_id": "L-05-07",

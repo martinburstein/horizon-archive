@@ -48,4 +48,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded system/user/grounding prompt package `L-05-02`
 - [x] Built source-grounded offline single-agent solution package `L-05-04`
 - [x] Built source-grounded offline text-and-speech solution-pattern package `L-05-05`
+- [x] Built source-grounded offline visual solution-pattern package `L-05-06`
 - [ ] Expand original question banks and full timed simulations
