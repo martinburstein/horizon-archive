@@ -52,4 +52,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded objective-by-objective mastery package `L-06-01`
 - [x] Built source-routed weak-area remediation planner package `L-06-02`
 - [x] Built source-grounded offline capstone and readiness checkpoint package `L-06-03`
+- [x] Built cumulative all-objective confusion-pairs checkpoint `CUM-01`
 - [ ] Expand original question banks and full timed simulations

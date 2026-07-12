@@ -655,3 +655,25 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0603-OFFLINE-CAPSTONE` as an accessible capstone trace plus prerequisite/readiness gate panel.
 Notes: No data/media processing, service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. The output is a next-practice recommendation, never an exam guarantee. Exam scope and Foundry SDK/API/analyzer/model/capability details remain volatile.
+
+## Log entry: 2026-07-12T19:23:48-04:00
+
+Stage: Cumulative AI-901 readiness evidence
+Action: Confirmed all 23 mapped lessons are packaged, then completed exactly one bounded learner-facing tranche, `CUM-01`, as an offline cumulative confusion-pairs checkpoint with eight mixed scenarios per form and full 15-objective coverage.
+Files touched:
+- curriculum/readiness/CUM-01/*
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 study guide and required priority Foundry sources checked first: pass
+- all 23 mapped lesson directories present: pass
+- all curriculum JSON parsed; activity and assessment schema contracts: pass
+- IDs, all 15 objectives, official sources, links, remediation routes, privacy/session/accessibility, exam-claim, and action safeguards: pass
+- each primary and transfer form covers all 15 objectives through eight cross-lesson confusion pairs: pass
+- validator self-test, exam/action probe, and portal/client-boundary probe: pass
+- primary reference 16/16; transfer reference 16/16; blank primary and transfer correctly rejected at 0/16 with exit 1
+- existing `L-06-03` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-CUM01-CONFUSION-PAIRS` as an accessible one-card-at-a-time cumulative checkpoint with direct remediation links.
+Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Scenarios are course-authored, optional timing cannot affect mastery, and passing does not guarantee an exam result. Exam and product details remain volatile.
