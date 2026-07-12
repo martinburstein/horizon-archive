@@ -209,3 +209,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Existing text maps to analysis; audio to recognition to text; text to synthesis to audio; spoken prompt plus supplied context maps to deployed multimodal response. Endpoint, approved identity, and payload remain separate client boundaries.
 - Inspect success, per-item error, and cancellation honestly without fabricated content. Local simulation proves neither live readiness nor disclosure/action authority.
 - Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Visual Patterns hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/no-action warning -> six-boundary visual equivalent -> Pilot visual decision/prose -> neutral System validator -> Teacher operation/provenance/authority remediation.
+- Existing pixels map to analysis, image plus question to multimodal response, and written brief to newly generated labeled media. Validate bytes, type, request, and deployed capability before processing.
+- Inspect honest operation status and operation-specific result shape without fabricated success/media. Preserve source/model/prompt/time and generated-content provenance. Publication and deletion require separate explicit authority.
+- Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.

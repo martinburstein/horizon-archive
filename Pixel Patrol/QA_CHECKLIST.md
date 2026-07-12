@@ -152,6 +152,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Client flow reads agent identifier -> submit input -> real result or honest error.
 - [ ] Single-Agent captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
 - [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
+- [ ] Visual Pattern offline/no-action warning and six-boundary equivalent remain persistent, ordered, and non-overlapping.
+- [ ] Analysis, multimodal prompting, generation, request validation, result/provenance, and authority boundaries remain distinct.
+- [ ] Operation status/result shapes remain honest; fabricated success or media receives Teacher remediation separate from System score.
+- [ ] Source/model/prompt/time provenance remains explicit; publication and deletion require separate authority.
+- [ ] Visual Pattern captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
+- [ ] Direct/restored mastery moves focus to Continue with Pilot/System/Teacher separation and square-pixel chrome unchanged.
 - [ ] Text/Speech offline/no-readiness/no-disclosure/action warning and transcript equivalent remain persistent, ordered, and non-overlapping.
 - [ ] Text analysis, recognition, synthesis, multimodal prompt, client configuration/payload, and result/cancellation/simulation remain distinct.
 - [ ] Success, per-item error, and cancellation remain honest; fabricated content receives Teacher remediation separate from System score.

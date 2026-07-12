@@ -136,3 +136,9 @@ At 1x capture:
 - Text/Speech uses three fixed rows: persistent offline/no-readiness/no-disclosure/action warning, six-boundary transcript equivalent, then one contained form. Rows wrap without overlap or reordering.
 - Canonical order is text analysis -> recognition -> synthesis -> multimodal prompt -> client configuration/payload -> honest result/error/cancellation plus simulation limits. Narrow preserves the full order through vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
+
+## Offline Visual Patterns viewport contract
+
+- Visual Patterns uses three fixed rows: persistent offline/no-action warning, six-boundary visual text equivalent, then one contained form. Dense text wraps inside its row without collision or reordering.
+- Canonical order is analysis/multimodal/generation -> request validation -> honest operation/result -> provenance -> simulation limits -> separate publication/deletion authority. Narrow preserves all boundaries by vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four grouped explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
