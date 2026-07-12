@@ -151,3 +151,11 @@
 - **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; all aperture/rail/return isolation masks remain pairwise distinct in grayscale; channel pixels form one connected rail network; closed success socket and open stepped error fracture differ by geometry/value; painted bounds fit the 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should identify all four apertures and distinguish the two returns at native grayscale; Coder must retain live capability and outcome labels plus textual correlation feedback.
 - **Unresolved risks:** physical geometry cannot explain model output, confidence, evidence, or errors. Live teaching content remains authoritative.
+
+## 2026-07-12 — Speech Workloads physical strip
+
+- **Completed:** authored one native four-tile strip for recognition, synthesis, spoken multimodal prompting, and cancellation/break using distinct voice ports, text registers, model/response apertures, channel paths, and discontinuity geometry.
+- **Files changed:** added `production-pixel/AB-01/speech-workloads/` native strip, integer renderer, specification, exact 2x, and grayscale QA; linked it from the AB-01 package. No gameplay, scene, interface, audio, or lore changed.
+- **Validation:** native `256 x 64` and exact nearest-neighbor `512 x 128` pass; all six tile pairs remain distinct in grayscale; recognition, synthesis, and multimodal signal paths are individually connected and direction-marked; cancelled state has exactly two capped signal components separated by a hard gap; each 64 x 64 crop fits the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
+- **Next recommended item:** Accessibility Sentinel should distinguish all three workloads and cancellation at native grayscale and confirm transcript equivalents are mandatory; Coder must expose live labels and reversible cancellation.
+- **Unresolved risks:** the physical strip cannot convey speech content, language, timing, consent, or model behavior. Live labels, transcripts, and accessible controls remain authoritative.
