@@ -183,3 +183,11 @@
 - **Validation:** native RGBA and exact nearest-neighbor 2x dimensions pass; modality/lattice/null/value/evidence/reject isolation pairs remain distinct in grayscale; modality feeders and accepted outputs form one connected lattice network while rejection retains an isolated fracture; null interior remains intentionally empty; evidence return differs from value channel; painted bounds fit the 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should identify modalities, empty null, value/evidence paths, and rejection at native grayscale; Coder must expose live labels/text equivalents and explain null versus false/zero.
 - **Unresolved risks:** physical geometry cannot define schema semantics, evidence quality, confidence meaning, or extraction errors. Live teaching content remains authoritative.
+
+## 2026-07-12 - Portal Orientation physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01 orientation rail with eight sequential checkpoints for access, project, model, deployment, readiness, interaction, connection details, and cleanup. The catalog shelf is detached from the named deployment socket; credentials use an empty keyed slot; cleanup ends in an owner lock and terminal cap.
+- **Files changed:** added `production-pixel/AB-01/portal-orientation/` native motif, renderer, specification, exact 2x, grayscale, checkpoint-isolation QA, and validator; linked it from the AB-01 package. No gameplay, scene, interface, credential data, or lore changed.
+- **Validation:** native RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; eight distinct grayscale checkpoint tiles; connected rail reaches all eight frames; empty keyed credential and cleanup owner-lock pass; catalog/deployment separation passes; 59 x 59 bounds fit the 68 x 76 target; local links pass.
+- **Next recommended item:** Accessibility Sentinel should identify all eight stages at native grayscale and verify live labels for deployment identity, credential state, ownership, and cleanup consequences.
+- **Unresolved risks:** physical geometry cannot convey resource names, readiness evidence, connection values, ownership identity, or destructive consequences. Live teaching content remains authoritative.
