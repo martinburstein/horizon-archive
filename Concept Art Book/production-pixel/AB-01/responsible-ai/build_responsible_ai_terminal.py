@@ -70,6 +70,34 @@ def terminal(progress=0):
     return im
 
 
+def framed_mode(mode):
+    """Keep the four indicators unchanged; encode exercise mode outside the body."""
+    tile = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+    d = ImageDraw.Draw(tile)
+    if mode == "primary":
+        # One solid left rail: first bounded form.
+        d.rectangle((3, 13, 5, 54), fill=P["cyan0"])
+        d.rectangle((5, 13, 8, 15), fill=P["cyan1"])
+        d.rectangle((5, 52, 8, 54), fill=P["cyan1"])
+    elif mode == "transfer":
+        # Mirrored stepped rails: same reasoning transferred to a second form.
+        for y in range(12, 55, 8):
+            d.rectangle((2, y, 5, min(y + 4, 55)), fill=P["violet2"])
+            d.rectangle((58, y + 3, 61, min(y + 7, 55)), fill=P["violet2"])
+        d.rectangle((5, 11, 9, 13), fill=P["violet1"])
+        d.rectangle((54, 54, 58, 56), fill=P["violet1"])
+    elif mode == "explanation":
+        # Closed witness frame: evidence is gathered into one accountable explanation.
+        d.line([(2, 8), (8, 4), (55, 4), (61, 8)], fill=P["amber1"], width=2)
+        d.rectangle((2, 8, 4, 57), fill=P["amber0"])
+        d.rectangle((59, 8, 61, 57), fill=P["amber0"])
+        d.line([(2, 58), (61, 58)], fill=P["amber1"], width=2)
+        d.rectangle((27, 61, 36, 63), fill=P["amber2"])
+    node = terminal(0)
+    tile.paste(node, (0, 0), node)
+    return tile
+
+
 def main():
     (ROOT / "qa").mkdir(parents=True, exist_ok=True)
     available = terminal(0)
@@ -82,6 +110,14 @@ def main():
         strip.paste(tile, (stage * 64, 0), tile)
     strip.save(ROOT / "qa" / "responsible-ai-sequence-1x-320x64.png", optimize=False)
     strip.resize((640, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "responsible-ai-sequence-2x-640x128.png", optimize=False)
+
+    modes = ["primary", "transfer", "explanation"]
+    mode_strip = Image.new("RGB", (192, 64), P["void"])
+    for index, mode in enumerate(modes):
+        tile = framed_mode(mode)
+        mode_strip.paste(tile, (index * 64, 0), tile)
+    mode_strip.save(ROOT / "responsible-ai-frame-modes-1x-192x64.png", optimize=False)
+    mode_strip.resize((384, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "responsible-ai-frame-modes-2x-384x128.png", optimize=False)
 
 
 if __name__ == "__main__":

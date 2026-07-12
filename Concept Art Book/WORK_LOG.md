@@ -87,3 +87,11 @@
 - **Validation:** native RGBA asset is exactly `64 x 64`; 2x is byte-exact nearest-neighbor `128 x 128`; sequence strips are exact `320 x 64` and `640 x 128`; painted motif is 48 x 61; existing 68 x 76 hotspot remains ≥44 x 44 at 1x; four groups remain ordered and separated; each completed step changes geometry and value; no text, antialiasing, reference pixels, or footer overlap.
 - **Next recommended item:** Accessibility Sentinel should test the 1x sequence in grayscale and with low vision, ensuring the four group geometries remain distinguishable; Coder should use the existing AB-01 anchor/hotspot and keep live field labels available when the interface opens.
 - **Unresolved risks:** the physical motif communicates order, not the full semantic names. Accessible text labels and the exact beginner-facing field names remain mandatory in the live Terminal interface.
+
+## 2026-07-12 — Responsible AI frame-mode strip
+
+- **Completed:** extended the existing Responsible AI physical motif with one native three-tile strip for primary → transfer → explanation. The four internal indicator groups remain pixel-identical; only surrounding frame silhouette, mass count, and pattern change.
+- **Files changed:** extended the motif renderer; added `FRAME_MODES.md`, native `192 x 64` strip, and nearest-neighbor `384 x 128` QA. No gameplay, location, lore, indicator meaning, anchor, or hotspot changed.
+- **Validation:** exact native/2x dimensions; byte-exact nearest-neighbor enlargement; all three central Terminal bodies are pixel-identical; grayscale tiles have distinct outer bounding patterns; existing `64 x 64` overlay, AB-01 anchor, 68 x 76 hotspot, `640 x 360` world boundary, and quiet-footer separation remain intact.
+- **Next recommended item:** Accessibility Sentinel should name the three modes without color at 1x grayscale and confirm the outer frame never obscures the four internal groups; Coder can crop tiles at x offsets 0, 64, and 128.
+- **Unresolved risks:** physical frame geometry supplements but cannot replace live mode labels. The runtime must announce Primary, Transfer, or Explanation textually.

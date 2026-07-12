@@ -9,6 +9,7 @@ This original AB-01-compatible physical node represents the learner's required r
 - **Native motif:** [responsible-ai-terminal-available-64x64.png](responsible-ai-terminal-available-64x64.png), transparent `64 x 64` RGBA.
 - **Nearest-neighbor QA:** [128 x 128](qa/responsible-ai-terminal-available-2x-128x128.png).
 - **Progress sequence:** [1x](qa/responsible-ai-sequence-1x-320x64.png) · [2x](qa/responsible-ai-sequence-2x-640x128.png).
+- **Exercise frame modes:** [primary → transfer → explanation specification](FRAME_MODES.md).
 - **Renderer:** [build_responsible_ai_terminal.py](build_responsible_ai_terminal.py); integer shapes only, no reference assets loaded.
 - **AB-01 anchor:** `x=156, y=211` in the `640 x 360` world, reusing the existing Terminal quiet pocket.
 - **Painted bounds:** approximately `x=9–56, y=1–61` inside the overlay; 48 x 61 logical pixels.
