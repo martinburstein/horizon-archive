@@ -318,6 +318,7 @@ h1 {
 .model-choice-boundary { margin: 0; padding: 6px 10px; color: #d8c68f; background: #17140f; border-bottom: 1px solid #4b4435; font-size: 0.62rem; line-height: 1.35; }
 .model-choice-form { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; padding: 12px; gap: 10px; }
 .model-choice-form header h2 { margin: 4px 0 0; color: #edf0f4; font: 1rem/1.25 Georgia, "Times New Roman", serif; }
+.model-choice-layer-labels { margin: 4px 0; color: #d8c68f; font-size: 0.62rem; letter-spacing: 0.08em; }
 .model-choice-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-content: start; min-height: 0; overflow: auto; }
 .model-choice-fields label { display: grid; align-content: start; gap: 5px; padding: 8px; color: #aeb7c3; background: #151920; border: 1px solid #39424d; font-size: 0.66rem; }
 .model-choice-fields select { width: 100%; min-width: 0; padding: 7px; color: #e0e5eb; background: #0d1015; border: 1px solid #4a5360; font: inherit; }

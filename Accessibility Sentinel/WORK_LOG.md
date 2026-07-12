@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-12 — Round 8 Model/Deployment gate
+
+- **Outcome:** audited the Model/Deployment primary Terminal, strict 16/16 gate, field errors, focus/session/privacy, ownership, one-scroll-owner layout, canonical/narrow behavior, and three-ring grayscale motif. Added explicit live Model, Deployment, Request configuration, Decision, and Reason labels plus a dedicated primary-remediation capture.
+- **Files:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `playtest/e2e-playthrough.mjs`, `playtest/model-choice-primary-remediation-qa.png`, `Accessibility Sentinel/round-08/REPORT.md`, and this log.
+- **Validation:** 42/42 unit tests, production build, and full E2E passed with zero runtime errors. Native color/grayscale motif and fresh stage capture were inspected.
+- **Findings:** in-app Browser unavailability still blocks accepted screen-reader order, forced-colors, and zoom verification.
+- **Handoff:** preserve the five live labels and add separate transfer/explanation captures when those stages exist.
+- **Status:** `ready to advance`
+
 ## 2026-07-12 — Round 7 Responsible AI mastery and ownership gate
 
 - **Outcome:** audited active-verb semantics, the complete primary/transfer/closed-note flow, field errors, focus outlines, shared dialog focus, one-scroll-owner behavior, and three 1x grayscale frame modes. Corrected Responsible AI message ownership so System and 901 Teacher state/course messages are no longer labeled Pilot.

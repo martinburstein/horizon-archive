@@ -1601,6 +1601,7 @@ export function App() {
                   <form className="model-choice-form" onSubmit={checkModelChoice}>
                     <header>
                       <p className="pane-label">PRIMARY · {scenario.topic.replaceAll("_", " ")} · {scenario.id} · {modelChoiceSession.index + 1}/8</p>
+                      <p className="model-choice-layer-labels">MODEL · DEPLOYMENT · REQUEST CONFIGURATION</p>
                       <h2>{scenario.prompt}</h2>
                     </header>
                     <div className="model-choice-fields">
@@ -1609,7 +1610,7 @@ export function App() {
                         const feedbackId = `model-choice-${dimension}-feedback`;
                         return (
                           <label key={dimension}>
-                            <span>{dimension === "decision" ? "Best decision" : "Requirement-based reason"}</span>
+                            <span>{dimension === "decision" ? "Decision" : "Reason"}</span>
                             <select
                               aria-label={`Model choice ${dimension}`}
                               aria-describedby={modelChoiceSession.result ? feedbackId : undefined}

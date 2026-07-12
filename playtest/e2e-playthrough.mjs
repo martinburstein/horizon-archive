@@ -470,6 +470,9 @@ print("Operator:", learner)`);
   await page.locator('[data-terminal-exercise="EX-L0203-MODEL-DEPLOYMENT-CHOICES"]').waitFor();
   await page.locator(".model-choice-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
   await page.getByText("prices, parameter support, and preview status must be reverified", { exact: false }).waitFor();
+  await page.getByText("MODEL · DEPLOYMENT · REQUEST CONFIGURATION", { exact: true }).waitFor();
+  await page.getByText("Decision", { exact: true }).waitFor();
+  await page.getByText("Reason", { exact: true }).waitFor();
   await page.getByLabel("Model choice decision", { exact: true }).selectOption("retrieve_exact_fact_from_database");
   await page.getByLabel("Model choice reason", { exact: true }).selectOption("generation_is_deterministic_when_a_prompt_repeats");
   await page.getByRole("button", { name: "Check decision and reason", exact: true }).click();
@@ -481,6 +484,7 @@ print("Operator:", learner)`);
   }
   await page.getByRole("button", { name: "Reveal next comparison step", exact: true }).click();
   await page.getByText("Compare the two options", { exact: false }).waitFor();
+  await page.screenshot({ path: "playtest/model-choice-primary-remediation-qa.png", fullPage: true });
   await page.getByRole("button", { name: "Exit Model Choices", exact: true }).click();
   const systemSpeaker = page.locator('.speaker[data-dialogue-owner="system"]');
   await systemSpeaker.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
