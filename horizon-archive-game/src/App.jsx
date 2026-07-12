@@ -1,11 +1,17 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import ruinsImage from "../../Concept Art Book/images/drowned-archive-workload-terminal-v1.png";
+import ruinsAvailableImage from "../../Concept Art Book/production-pixel/AB-01/ab01-available-640x360.png";
+import ruinsActiveImage from "../../Concept Art Book/production-pixel/AB-01/ab01-active-640x360.png";
+import ruinsCompleteImage from "../../Concept Art Book/production-pixel/AB-01/ab01-complete-640x360.png";
+import ruinsAvailableNarrowImage from "../../Concept Art Book/production-pixel/AB-01/ab01-available-320x180.png";
+import ruinsActiveNarrowImage from "../../Concept Art Book/production-pixel/AB-01/ab01-active-320x180.png";
+import ruinsCompleteNarrowImage from "../../Concept Art Book/production-pixel/AB-01/ab01-complete-320x180.png";
 import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
 import cityImage from "../../Concept Art/Underground City.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import { PixelMeadow } from "./PixelMeadow.jsx";
+import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
@@ -85,12 +91,11 @@ const scenes = [
     id: "ruins",
     chapter: "II",
     location: "The Drowned Archive",
-    image: ruinsImage,
-    imageAlt: "Flooded alien ruins with a grounded crystal Machine Terminal beside a causeway and a suspended archive landmark",
+    imageAlt: "Pixel-built flooded basin with a grounded three-fin Workload Sort Terminal, bent causeway, Tidal Lens landmark, and right stair exit",
     hotspotLabel: "grounded Workload Sort Terminal",
     hotspot: {
-      left: "60.5%", top: "55%", width: "11%", height: "44%",
-      narrow: { left: "44%", top: "47%", width: "29%", height: "36%" },
+      left: "24.375%", top: "56.94%", width: "10.625%", height: "21.11%",
+      narrow: { left: "20%", top: "54%", width: "24%", height: "43%" },
     },
     prompt: "A grounded three-fin Terminal waits beside the causeway. The suspended archive above it remains silent.",
     question: "Create a variable named pilot_name containing the text MARTIN.",
@@ -271,6 +276,12 @@ export function App() {
   const meadowRouteState = routeMarkerMastery?.masteryStatus === "mastered"
     ? "completed"
     : exerciseEvidence?.completed ? "awake" : "locked";
+  const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
+  const ruinsImages = ruinsVisualState === "complete"
+    ? { canonical: ruinsCompleteImage, narrow: ruinsCompleteNarrowImage }
+    : ruinsVisualState === "active"
+      ? { canonical: ruinsActiveImage, narrow: ruinsActiveNarrowImage }
+      : { canonical: ruinsAvailableImage, narrow: ruinsAvailableNarrowImage };
   const hotspotButtons = sceneHotspots.map((hotspot) => (
     <button
       key={hotspot.id}
@@ -827,13 +838,21 @@ export function App() {
   }
 
   return (
+    <CanonicalGameFrame enabled={scene.id === "ruins"}>
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         {scene.id === "meadow" ? (
           <PixelMeadow petalState={meadowPetalState} routeState={meadowRouteState}>{hotspotButtons}</PixelMeadow>
         ) : (
           <>
-            <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
+            {scene.id === "ruins" ? (
+              <picture>
+                <source media="(max-width: 639px)" srcSet={ruinsImages.narrow} />
+                <img className="scene-art" src={ruinsImages.canonical} alt={scene.imageAlt} data-ab01-state={ruinsVisualState} />
+              </picture>
+            ) : (
+              <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
+            )}
             {hotspotButtons}
           </>
         )}
@@ -1305,7 +1324,7 @@ export function App() {
                     {evidenceSession.activeSource === "telemetry" && <pre>{JSON.stringify(evidenceTelemetry, null, 2)}</pre>}
                     {evidenceSession.activeSource === "image" && (
                       <figure>
-                        <img src={ruinsImage} alt="Registered still image DA-IMG-01 showing the suspended landmark and grounded Terminal" />
+                        <img src={ruinsAvailableImage} alt="Registered still image DA-IMG-01 showing the Tidal Lens landmark and grounded Terminal" />
                         <figcaption>DA-IMG-01 · inspect the suspended landmark region, not the grounded Terminal.</figcaption>
                       </figure>
                     )}
@@ -1419,5 +1438,6 @@ export function App() {
         </aside>
       </section>
     </main>
+    </CanonicalGameFrame>
   );
 }

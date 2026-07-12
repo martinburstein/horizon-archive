@@ -1,5 +1,13 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Coder pass: AB-01 canonical game frame
+
+- **Outcome:** Integrated AB-01 into a reusable `CanonicalGameFrame`: one `640×480` logical DOM frame with a `640×360` production-pixel world and `640×120` live interface. Whole-number scaling and centered letterboxing apply to the complete frame; constrained hosts select a separately authored `320×180` AB-01 world and `320×60` live interface inside a `320×240` alternate.
+- **Files changed:** canonical frame helper/component/test, App/CSS/E2E integration, AB-01 renderer and four authored narrow-state assets, runtime QA captures, and this log.
+- **Validation:** 32/32 unit tests and production build pass. Full five-exercise E2E passes with zero runtime errors. Focused checks cover `640×480`, `1280×960`, `320×240`, and `1600×900`: logical bands, integer scale, centering/letterbox, correct production asset and state, no smoothing, contained ≥44px hotspot, and live DOM buttons. TerminalShell focus behavior and all save/privacy/mastery gates remain intact.
+- **Next action:** Lore Keeper Agent may review AB-01 copy against the Tidal Lens terminology; broader scene migration remains deferred.
+- **Risks:** The 320×240 alternate keeps all controls live but necessarily uses very compact visible type. Accessibility Sentinel should judge minimum readable type and zoom behavior before this becomes the global narrow baseline.
+
 ## 2026-07-12 — Ungraded Calibration keyboard orientation
 
 - **Outcome:** `EX-L0103-CALIBRATION-DEBUG` now renders the exact Teacher-authored line: “Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.” The help remains visible on every Calibration pane beside persistent file/form/`ROUTE OPEN` status, while the shared TerminalShell retains the visible Exit Calibration control.

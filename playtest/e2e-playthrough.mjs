@@ -273,7 +273,12 @@ print("Operator:", learner)`);
   await page.locator('main[data-scene="ruins"]').waitFor();
 
   await page.getByRole("button", { name: "USE", exact: true }).click();
-  await assertRuinsTerminalAlignment(page, "desktop");
+  for (const [width, height, label] of [[640, 480, "640x480"], [1280, 960, "1280x960"], [320, 240, "320x240"], [1600, 900, "1600x900"]]) {
+    await page.setViewportSize({ width, height });
+    await assertRuinsTerminalAlignment(page, label);
+    await page.screenshot({ path: `playtest/ab01-canonical-${label}.png` });
+  }
+  await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
   await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-desktop-qa.png" });
   await activateRuinsTerminal(page, "pointer");
@@ -281,8 +286,8 @@ print("Operator:", learner)`);
   await activateRuinsTerminal(page, "keyboard");
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
 
-  await page.setViewportSize({ width: 320, height: 900 });
-  await assertRuinsTerminalAlignment(page, "320px narrow");
+  await page.setViewportSize({ width: 320, height: 240 });
+  await assertRuinsTerminalAlignment(page, "320x240");
   await page.getByRole("button", { name: "use grounded Workload Sort Terminal", exact: true }).hover();
   await page.locator(".scene-frame").screenshot({ path: "playtest/drowned-archive-terminal-narrow-qa.png" });
   await activateRuinsTerminal(page, "pointer");
@@ -384,7 +389,7 @@ print("Operator:", learner)`);
   const audioSource = await page.locator("audio").getAttribute("src");
   if (!audioSource?.includes("basin_audio")) throw new Error(`Registered evidence audio missing: ${audioSource}`);
   await page.getByRole("tab", { name: "Image", exact: true }).click();
-  await page.getByAltText("Registered still image DA-IMG-01 showing the suspended landmark and grounded Terminal", { exact: true }).waitFor();
+  await page.getByAltText("Registered still image DA-IMG-01 showing the Tidal Lens landmark and grounded Terminal", { exact: true }).waitFor();
   await page.getByRole("tab", { name: "Manifest", exact: true }).click();
   await page.getByRole("button", { name: "Validate packet", exact: true }).click();
   await page.getByRole("status").getByText("E_RESPONSE_NULL", { exact: false }).waitFor();
@@ -454,6 +459,8 @@ print("Operator:", learner)`);
     ruinsHotspotDesktop: true,
     ruinsHotspotNarrow: true,
     ruinsHotspotKeyboard: true,
+    ab01CanonicalFrame: true,
+    ab01AuthoredNarrowFrame: true,
     workloadCloseReopen: true,
     workloadFreshRetry: true,
     workloadCriticalOverride: true,
@@ -596,59 +603,59 @@ async function activateRuinsTerminal(page, method) {
 }
 
 async function assertRuinsTerminalAlignment(page, viewportLabel) {
+  const expected = viewportLabel === "320x240" ? { layout: "narrow", scale: "1" } : { layout: "canonical", scale: viewportLabel === "1280x960" ? "2" : "1" };
+  await page.waitForFunction(({ layout, scale }) => {
+    const frame = document.querySelector(".canonical-game-frame");
+    return frame?.dataset.canonicalLayout === layout && frame?.dataset.canonicalScale === scale;
+  }, expected);
+  await page.waitForFunction(() => document.querySelector(".scene-art")?.complete && document.querySelector(".scene-art")?.naturalWidth > 0);
   const metrics = await page.evaluate(() => {
-    const frame = document.querySelector(".scene-frame");
+    const gameFrame = document.querySelector(".canonical-game-frame");
+    const host = document.querySelector(".canonical-game-host");
+    const scene = document.querySelector(".scene-frame");
+    const command = document.querySelector(".command-panel");
     const image = document.querySelector(".scene-art");
     const hotspot = document.querySelector("button.hotspot");
-    if (!frame || !image || !hotspot) return null;
-
-    const frameRect = frame.getBoundingClientRect();
+    if (!gameFrame || !host || !scene || !command || !image || !hotspot) return null;
+    const hostRect = host.getBoundingClientRect();
+    const gameRect = gameFrame.getBoundingClientRect();
+    const sceneRect = scene.getBoundingClientRect();
+    const commandRect = command.getBoundingClientRect();
     const hotspotRect = hotspot.getBoundingClientRect();
-    const computed = getComputedStyle(image);
-    const [xToken = "50%", yToken = "50%"] = computed.objectPosition.split(/\s+/);
-    const asFraction = (token) => token.endsWith("%") ? Number.parseFloat(token) / 100 : 0.5;
-    const scale = Math.max(frameRect.width / image.naturalWidth, frameRect.height / image.naturalHeight);
-    const renderedWidth = image.naturalWidth * scale;
-    const renderedHeight = image.naturalHeight * scale;
-    const imageLeft = frameRect.left + (frameRect.width - renderedWidth) * asFraction(xToken);
-    const imageTop = frameRect.top + (frameRect.height - renderedHeight) * asFraction(yToken);
-
-    // Source bounds come from the selected AB-01 scene sheet, not viewport percentages.
-    const expected = {
-      left: Math.max(frameRect.left, imageLeft + image.naturalWidth * 0.60 * scale),
-      top: Math.max(frameRect.top, imageTop + image.naturalHeight * 0.47 * scale),
-      right: Math.min(frameRect.right, imageLeft + image.naturalWidth * 0.73 * scale),
-      bottom: Math.min(frameRect.bottom, imageTop + image.naturalHeight * 0.82 * scale),
-    };
-    const overlapWidth = Math.max(0, Math.min(hotspotRect.right, expected.right) - Math.max(hotspotRect.left, expected.left));
-    const overlapHeight = Math.max(0, Math.min(hotspotRect.bottom, expected.bottom) - Math.max(hotspotRect.top, expected.top));
-    const hotspotArea = hotspotRect.width * hotspotRect.height;
-    const centerX = hotspotRect.left + hotspotRect.width / 2;
-    const centerY = hotspotRect.top + hotspotRect.height / 2;
-
     return {
+      layout: gameFrame.dataset.canonicalLayout,
+      scale: Number(gameFrame.dataset.canonicalScale),
+      logicalWidth: gameFrame.offsetWidth,
+      logicalHeight: gameFrame.offsetHeight,
+      logicalWorldHeight: scene.offsetHeight,
+      logicalInterfaceHeight: command.offsetHeight,
+      renderedWidth: gameRect.width,
+      renderedHeight: gameRect.height,
+      centeredX: Math.abs(gameRect.left + gameRect.width / 2 - (hostRect.left + hostRect.width / 2)) < 0.5,
+      centeredY: Math.abs(gameRect.top + gameRect.height / 2 - (hostRect.top + hostRect.height / 2)) < 0.5,
       alt: image.getAttribute("alt"),
       src: image.currentSrc,
       naturalWidth: image.naturalWidth,
       naturalHeight: image.naturalHeight,
-      objectPosition: computed.objectPosition,
+      imageRendering: getComputedStyle(image).imageRendering,
       hotspotWidth: hotspotRect.width,
       hotspotHeight: hotspotRect.height,
-      overlapRatio: hotspotArea ? (overlapWidth * overlapHeight) / hotspotArea : 0,
-      centerInside: centerX >= expected.left && centerX <= expected.right && centerY >= expected.top && centerY <= expected.bottom,
+      hotspotContained: hotspotRect.left >= sceneRect.left && hotspotRect.right <= sceneRect.right && hotspotRect.top >= sceneRect.top && hotspotRect.bottom <= sceneRect.bottom,
+      liveButtons: command.querySelectorAll("button").length,
     };
   });
 
   if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
-  if (!metrics.src.includes("drowned-archive-workload-terminal-v1")) throw new Error(`Wrong ruins asset at ${viewportLabel}: ${metrics.src}`);
-  if (!/grounded crystal Machine Terminal/i.test(metrics.alt) || !/suspended archive landmark/i.test(metrics.alt)) {
-    throw new Error(`Ruins alt text does not distinguish Terminal and landmark: ${metrics.alt}`);
-  }
-  if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected ruins asset dimensions: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
+  const narrow = viewportLabel === "320x240";
+  if (!metrics.src.includes("ab01-available-")) throw new Error(`Wrong AB-01 production asset at ${viewportLabel}: ${metrics.src}`);
+  if (!/grounded three-fin Workload Sort Terminal/i.test(metrics.alt) || !/Tidal Lens landmark/i.test(metrics.alt)) throw new Error(`AB-01 alt text incomplete: ${metrics.alt}`);
+  if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.logicalWidth !== (narrow ? 320 : 640) || metrics.logicalHeight !== (narrow ? 240 : 480) || metrics.logicalWorldHeight !== (narrow ? 180 : 360) || metrics.logicalInterfaceHeight !== (narrow ? 60 : 120)) throw new Error(`Wrong logical bands at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!Number.isInteger(metrics.scale) || metrics.renderedWidth !== metrics.logicalWidth * metrics.scale || metrics.renderedHeight !== metrics.logicalHeight * metrics.scale || !metrics.centeredX || !metrics.centeredY) throw new Error(`Frame scale/letterbox failure at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.naturalWidth !== (narrow ? 320 : 640) || metrics.naturalHeight !== (narrow ? 180 : 360)) throw new Error(`Unexpected AB-01 asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
+  if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`AB-01 smoothing enabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
-  if (!metrics.centerInside || metrics.overlapRatio < 0.65) {
-    throw new Error(`Ruins hotspot misses source-mapped node at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  }
+  if (!metrics.hotspotContained || metrics.liveButtons < 5) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
 }
 
 async function captureWitnessScene(page, path) {

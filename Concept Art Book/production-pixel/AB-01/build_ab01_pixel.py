@@ -199,6 +199,38 @@ def composite(background, state):
     return out
 
 
+def narrow_world(state):
+    """Author the 320x180 alternate directly; no resize or sampling."""
+    im = Image.new("RGB", (320, 180), P["sky0"])
+    d = ImageDraw.Draw(im)
+    rect(d, (0, 0, 319, 35), "sky0")
+    rect(d, (0, 36, 319, 67), "sky1")
+    rect(d, (0, 68, 319, 88), "sky2")
+    rect(d, (0, 89, 319, 106), "haze")
+    poly(d, [(0, 76), (58, 69), (113, 98), (0, 109)], "peach0")
+    for x, y in [(17, 18), (43, 41), (86, 23), (132, 52), (178, 19), (232, 43), (289, 25)]:
+        rect(d, (x, y, x, y), "star")
+    poly(d, [(0, 106), (35, 84), (71, 105), (111, 78), (151, 108), (192, 85), (228, 107), (270, 80), (319, 104), (319, 122), (0, 122)], "ridge0")
+    rect(d, (0, 107, 319, 179), "water1")
+    for y in range(114, 178, 8):
+        for x in range((y // 2) % 13, 320, 29):
+            rect(d, (x, y, x + 4, y + 1), "water2")
+    # Re-authored compact Tidal Lens and exit.
+    poly(d, [(201, 112), (205, 53), (216, 32), (226, 25), (232, 29), (220, 43), (214, 62), (214, 112)], "stone1")
+    poly(d, [(271, 112), (268, 61), (260, 42), (245, 27), (252, 23), (269, 39), (279, 61), (286, 112)], "stone1")
+    poly(d, [(228, 105), (233, 59), (242, 47), (252, 60), (258, 105)], "violet0")
+    poly(d, [(235, 98), (239, 64), (243, 54), (250, 65), (253, 98)], "violet2")
+    for i in range(4):
+        rect(d, (278 + i * 3, 111 - i * 2, 315 - i * 3, 113 - i * 2), "stone3" if i % 2 else "stone2")
+    # Bent causeway and distinct quiet pocket.
+    poly(d, [(0, 143), (46, 135), (88, 126), (132, 123), (174, 116), (315, 102), (319, 120), (184, 132), (137, 141), (92, 147), (47, 160), (0, 171)], "stone1")
+    poly(d, [(0, 148), (48, 140), (91, 131), (135, 128), (178, 121), (316, 108), (319, 116), (181, 127), (136, 136), (94, 142), (48, 154), (0, 165)], "stone2")
+    # Reuse only the authored state overlay, at native 1x, in a new composition.
+    overlay = draw_terminal(state)
+    im.paste(overlay, (70, 103), overlay)
+    return im
+
+
 def canonical_frame(world, route_complete=False):
     """Compose the 640x360 world and original 640x120 lower framing at 1x."""
     frame = Image.new("RGB", (640, 480), P["void"])
@@ -245,6 +277,7 @@ def main():
         overlay = draw_terminal(state)
         overlay.save(ROOT / "states" / f"terminal-{state}-64x64.png", optimize=False)
         composite(background, state).save(ROOT / f"ab01-{state}-640x360.png", optimize=False)
+        narrow_world(state).save(ROOT / f"ab01-{state}-320x180.png", optimize=False)
 
     selected = composite(background, "available")
     selected.resize((1280, 720), Image.Resampling.NEAREST).save(ROOT / "qa" / "ab01-available-2x-1280x720.png", optimize=False)
