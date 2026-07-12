@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-05-05 Offline Text and Speech Patterns mandatory Terminal gate
+
+- **Outcome:** Mounted `EX-L0505-TEXT-SPEECH-PATTERNS` after Single Agent as a mandatory gate. Primary and fresh transfer each require 12/12, followed by a four-part closed-note explanation. No L-05-06 work was added.
+- **Coverage:** Text analysis capability selection; recognition audio-to-text versus synthesis text-to-audio; deployed multimodal spoken prompts; endpoint/approved-identity/payload separation; per-item result, error, and cancellation handling; simulation limits; and unauthorized disclosure/destructive-action safety.
+- **Offline/privacy/ownership:** No text, audio, media, service, Azure, disclosure, or external action occurs. Transcript equivalents persist in every phase. Evidence stores only allowlisted IDs, correctness booleans, attempts, hints, confidence, tags, form, and mastery—never text/audio, paths, transcripts, generated audio, endpoints, credentials, responses, action requests, selections, or free text. Pilot owns choices/prose, System scores, and the 901 Teacher owns remediation/readiness.
+- **Files changed:** Added the Text/Speech runtime evaluator and tests; updated `App.jsx`, styles, public manifest, full E2E, three L-05-05 QA captures, and this log.
+- **Validation:** Packaged validator self-test passes; primary and transfer references each pass 12/12; 121/121 unit tests pass; production build passes; full title-to-credits E2E passes from repository-root and game-directory working directories with zero runtime errors. The first game-directory run encountered a transient OneDrive PNG lock after L-05-05; one retry passed completely.
+- **Next recommended item:** Player Agent should challenge generation-versus-analysis, recognition/synthesis reversal, speech-service/multimodal confusion, endpoint-as-identity, cancellation-as-content, partial failure fabrication, disclosure prompts, keyboard order, and narrow transcript reading.
+- **Unresolved risks:** This offline simulation proves no live service configuration, API behavior, identity, permission, media capability, or deployment readiness; those require current official Microsoft reverification and separate authority.
+
 ## 2026-07-12 — Single-Agent continuity closure
 
 - **Outcome:** Closed only the L-05-04 continuity contract. Closed-note System scoring is neutral and deterministic; 901 Teacher owns fit/instruction/tool/failure/client-flow remediation and completion, while Pilot owns session-only closed-note prose. Existing scenario System PASS/REMEDIATE remains neutral with Teacher remediation separate.

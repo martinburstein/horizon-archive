@@ -179,6 +179,17 @@
       "objective_ids": ["AI901-D2-O4"],
       "skills": ["PY-009", "PY-012", "PY-016"],
       "success_contract": "Pass primary and fresh transfer at 12/12, then explain agent fit and stable instructions, least-privilege tools, failure and denied-action safety without fabricated success, and the agent-identifier submit/read client flow."
+    },
+    {
+      "id": "HA-AI901-TEXT-SPEECH-PATTERNS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0505-TEXT-SPEECH-PATTERNS",
+      "lesson_id": "L-05-05",
+      "activity_id": "A-L0505-2",
+      "assessment_ids": ["AS-L0505-SCEN"],
+      "objective_ids": ["AI901-D2-O5"],
+      "skills": ["PY-015", "PY-016", "PY-018"],
+      "success_contract": "Pass primary and fresh transfer at 12/12, then explain text/speech capability direction, endpoint/identity/payload separation, honest result/error/cancellation handling, and offline simulation/no-disclosure/no-action authority."
     }
   ]
 }
