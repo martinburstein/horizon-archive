@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Ungraded Calibration keyboard orientation
+
+- **Outcome:** `EX-L0103-CALIBRATION-DEBUG` now renders the exact Teacher-authored line: “Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.” The help remains visible on every Calibration pane beside persistent file/form/`ROUTE OPEN` status, while the shared TerminalShell retains the visible Exit Calibration control.
+- **Mastery boundary:** Keyboard concepts remain orientation only. The existing two diagnoses, two 8/8 code forms, and four debugging retrieval items are unchanged; no Tab, Shift+Tab, Escape, focus, modal, or inert item enters grading or persistent mastery evidence.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/calibrationExercise.test.js`, and `playtest/e2e-playthrough.mjs`.
+- **Validation:** 31/31 unit tests and the production build pass. The L-01-03 curriculum validator self-test passes. Full title-to-credits E2E passes with exact-copy visibility, visible Exit, Exit/reopen and Escape/reopen source preservation, four-item-only graded retrieval, focus containment, privacy, and zero runtime errors.
+- **Handoff:** Pixel Patrol should preserve this single-line help in its 640×480 density pass and measure whether it belongs directly below the route-status strip or in an equally persistent one-line footer without truncation.
+- **Risks:** At the narrowest supported viewport the exact sentence wraps, but remains fully visible and unchanged; production bitmap font metrics may require a two-line reserved band.
+
 ## 2026-07-12 — Coder pass: reusable Terminal focus contract
 
 - **Outcome:** All five exercise workspaces now inherit modal dialog semantics, title-first focus, inert background controls, contained Tab/Shift+Tab navigation, Escape-to-close, and exact trigger focus restoration from the shared `TerminalShell`. Escape preserves each existing in-memory exercise session.

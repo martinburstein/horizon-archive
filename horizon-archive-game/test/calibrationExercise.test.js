@@ -1,6 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { calibrationStarters, evaluateCalibrationDiagnosis, evaluateCalibrationRetrieval, evaluateCalibrationSource, sanitizeCalibrationMastery, updateCalibrationMastery } from "../src/calibrationExercise.js";
+import { calibrationExercise, calibrationStarters, evaluateCalibrationDiagnosis, evaluateCalibrationRetrieval, evaluateCalibrationSource, sanitizeCalibrationMastery, updateCalibrationMastery } from "../src/calibrationExercise.js";
+
+test("keyboard orientation is exact, visible-only guidance and explicitly ungraded", () => {
+  assert.equal(calibrationExercise.ungraded_keyboard_orientation.copy, "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.");
+  assert.equal(calibrationExercise.ungraded_keyboard_orientation.visible_exit_required, true);
+  assert.equal(calibrationExercise.ungraded_keyboard_orientation.included_in_mastery_evidence, false);
+  assert.deepEqual(calibrationExercise.mastery.explicitly_ungraded, ["Tab", "Shift+Tab", "Escape", "focus", "modal", "inert"]);
+});
 
 test("diagnoses must identify type line and token before repair", () => {
   assert.deepEqual(evaluateCalibrationDiagnosis({ errorType: "NameError", lineNumber: "2", namedToken: "route_lable" }, "traceback"), { errorType: true, lineNumber: true, namedToken: true });

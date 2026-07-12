@@ -1076,6 +1076,7 @@ export function App() {
                 ))}
               </nav>
               <p className="calibration-route-status">FILE {calibrationExercise.forms[calibrationSession.form].starter_file} · FORM {calibrationSession.form.toUpperCase()} · ROUTE OPEN</p>
+              <p className="calibration-keyboard-help" data-ungraded-orientation="true">{calibrationExercise.ungraded_keyboard_orientation.copy}</p>
 
               {calibrationSession.pane === "task" && (
                 <form className="calibration-pane" onSubmit={submitCalibrationDiagnosis}>

@@ -3,6 +3,7 @@ import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_out
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
+const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -179,12 +180,15 @@ print("Operator:", learner)`);
 
   await page.getByRole("button", { name: "Start Calibration", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor();
+  await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Exit Calibration", exact: true }).waitFor();
   await page.getByText("ROUTE OPEN", { exact: false }).first().waitFor();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertPixelMeadow(page, "calibration exit", "completed", "completed");
   await page.getByRole("button", { name: "Continue", exact: true }).waitFor();
   await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
   await page.getByLabel("Calibration error type", { exact: true }).selectOption("NameError");
@@ -202,6 +206,16 @@ print("Operator:", learner)`);
   await page.screenshot({ path: "playtest/calibration-terminal-narrow-qa.png", fullPage: true });
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
+  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
+  await page.getByRole("button", { name: "source", exact: true }).click();
+  if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Exit Calibration discarded in-progress source");
+  await page.keyboard.press("Escape");
+  await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor({ state: "detached" });
+  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
+  if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Escape discarded in-progress source");
+  await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   const calibrationDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (!calibrationDraftSave || JSON.parse(calibrationDraftSave).calibrationMastery?.attemptCount !== 1) throw new Error("Calibration attempt evidence missing");
   if (calibrationDraftSave.includes("CALIBRATION_SESSION_ONLY") || calibrationDraftSave.includes("NameError: name") || calibrationDraftSave.includes("REPAIR AND RERUN")) throw new Error("Calibration working state leaked into localStorage");
@@ -244,6 +258,8 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Acknowledge calibration mastery", exact: true }).click();
   const calibrationMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).calibrationMastery, { key: saveKey });
   if (calibrationMastery?.exerciseId !== "EX-L0103-CALIBRATION-DEBUG" || calibrationMastery?.attemptCount !== 5 || calibrationMastery?.hintLevel !== 2 || calibrationMastery?.masteryStatus !== "mastered" || calibrationMastery?.misconceptionTags?.length) throw new Error(`Calibration mastery incomplete: ${JSON.stringify(calibrationMastery)}`);
+  const calibrationRetrievalKeys = Object.keys(calibrationMastery.checkResults?.retrieval || {});
+  if (calibrationRetrievalKeys.length !== 4 || calibrationRetrievalKeys.some((key) => /tab|escape|focus|modal|inert/i.test(key))) throw new Error("Keyboard orientation leaked into graded retrieval");
   await assertPixelMeadow(page, "calibration mastered", "completed", "completed");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
