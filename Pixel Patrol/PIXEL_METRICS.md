@@ -94,3 +94,9 @@ At 1x capture:
 - Speech uses three fixed workspace rows: persistent offline/no-listening warning, persistent transcript-equivalent direction strip, then one contained scrolling form. The transcript strip must never share or overlap the scenario or closed-note header row.
 - At 640 x 480, recognition `audio -> text`, synthesis `text -> audio`, spoken multimodal prompt flow, and result/cancellation remain readable in that order. At 320 x 240 the same information remains available by vertical traversal; no safety or direction text is removed.
 - The outer Terminal and its title/file/status chrome remain fixed. Primary and transfer use two ordered decision/reason cards at canonical width and one ordered column at narrow width; closed note uses four columns at canonical width and one at narrow width.
+
+## Offline Visual Workloads viewport contract
+
+- Visual uses four fixed workspace rows: offline/no-media warning, text-equivalent flow, deprecation warning, then one contained scrolling form. None may overlap or reorder at 640 x 480 or 320 x 240.
+- The initial narrow viewport prioritizes the complete safety boundary. All four workload choices, media path/type validation, output branching, remediation, and actions remain available through vertical traversal without horizontal clipping.
+- Primary and transfer use decision then reason; closed note uses four columns at canonical width and one ordered column at narrow width. Outer Machine/file/status chrome remains fixed.

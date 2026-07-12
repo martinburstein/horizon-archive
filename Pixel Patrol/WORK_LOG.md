@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Visual Workloads final visual gate
+
+- **Completed:** audited complete Visual Workloads primary, transfer, closed-note, and mastered flow. Offline, text-equivalent, and deprecation strips already occupy four correct workspace rows above one contained form; four workload families, path/type validation, analysis-JSON versus generated-media output, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 84 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms warning order in all modes, both 12/12 forms, four-part explanation, strict mastery, privacy, direct/reload Continue focus, and credits. Three captures are byte-distinct at `640 x 480`, `320 x 240`, and `1600 x 900` host context.
+- **Next recommended item:** Location Scout should use four distinct square apertures for analysis, multimodal prompt, image generation, and video generation, feeding a path/type gate before splitting into structured-data and generated-media returns.
+- **Unresolved risks:** the complete offline and deprecation boundaries consume most of the initial 320 x 240 work viewport by design; retain the single vertical traversal rather than hiding or shortening authoritative warnings.
+
 ## 2026-07-12 — Offline Speech Workloads final visual gate
 
 - **Completed:** audited the complete Speech Workloads primary, transfer, closed-note, and mastered flow. Corrected one essential overlap by giving the persistent transcript-equivalent strip its own workspace grid row. Warning, transcript direction, recognition/synthesis/spoken-multimodal hierarchy, input/output file direction, result/cancellation remediation, Pilot/System/Teacher ownership, contained scroll, focus, Continue handoff, and square-pixel chrome are now coherent at 640 x 480 and 320 x 240.

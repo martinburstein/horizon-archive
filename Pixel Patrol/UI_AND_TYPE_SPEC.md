@@ -160,3 +160,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Cancellation is a result branch, not a workload. System reports deterministic dimension totals; Teacher owns direction, file-binding, cancellation, and reconstruction guidance; Pilot owns choices and closed-note prose.
 - The warning and transcript strip are separate fixed-height grid rows above the single form scroller. At 320 x 240 their complete text may consume the initial viewport; keyboard focus and scrolling reveal the ordered work without clipping or overlap.
 - Maintain square one-pixel seams, two-pixel ownership rails and focus outlines, the existing indigo/amber/violet ramp, and native accessible controls. Direct and restored mastery move focus to Continue.
+
+## Offline Visual Workloads hierarchy
+
+- Preserve the reading order: Machine/file/status -> offline no-media warning -> text-equivalent visual flow -> Image Analysis 4.0 deprecation warning -> Pilot workload choice/prose -> neutral System validator -> Teacher workload/media-handling remediation.
+- Keep four workload families distinct: analysis interprets existing pixels; multimodal prompting combines visual and text input; image generation creates still media; video generation creates time-based media.
+- Media path/type validation precedes the request. Analysis returns structured analysis JSON; generation returns media. Teacher remediation must distinguish these outputs rather than grouping them as generic results.
+- The warning rows are persistent and separate from the single form scroller. Retain square one-pixel seams, two-pixel focus/ownership rails, native accessible controls, and Continue focus after direct or restored mastery.

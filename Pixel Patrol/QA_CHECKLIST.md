@@ -116,6 +116,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Speech Pilot inputs, neutral System scores, and Teacher direction/cancellation remediation remain separate.
 - [ ] Speech primary, transfer-remediation, and closed-note captures are byte-distinct at canonical, narrow, and host-context presentation; scrolling preserves all content.
 - [ ] Speech direct/restored mastery moves focus to Continue, with square-pixel chrome and focus language unchanged.
+- [ ] Visual offline, text-equivalent, and deprecation warnings remain complete, ordered, and non-overlapping in every phase.
+- [ ] Analysis, multimodal prompting, image generation, and video generation remain four distinct workload reads.
+- [ ] Media path/type validation precedes request handling; analysis JSON and generated-media output remain visibly distinct.
+- [ ] Visual Pilot inputs, neutral System scores, and Teacher workload/media remediation remain separate.
+- [ ] Visual primary, transfer-remediation, and closed-note captures are byte-distinct across canonical, narrow, and host-context presentation.
+- [ ] Visual direct/restored mastery moves focus to Continue; the single form traversal preserves all content at 320 x 240.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.
