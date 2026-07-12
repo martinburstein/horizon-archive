@@ -67,9 +67,10 @@ print("Python signal:", signal)`;
   await page.locator("#terminal-code").fill(sessionCode);
   await page.getByRole("button", { name: "Run Python", exact: true }).click();
   await page.getByText("wrong value", { exact: false }).waitFor();
-  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await page.keyboard.press("Escape");
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor({ state: "detached" });
-  await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
+  if (!await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').count()) throw new Error("Escape did not restore focus to Petal trigger");
+  await page.locator('button.hotspot[data-primary-hotspot="true"]').press("Enter");
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
   if (await page.locator("#terminal-code").inputValue() !== sessionCode) throw new Error("Terminal code was reset after close/reopen");
   await page.getByText("wrong value", { exact: false }).waitFor();
@@ -477,11 +478,26 @@ async function verifyMeadowPixelHotspots(page, viewportLabel) {
   await firstSignal.waitFor();
   await assertSceneVisibleWithMeadowTerminal(page, viewportLabel);
   if (await page.locator('.pixel-scene-stage[data-petal-state="awake"][data-route-state="locked"]').count() !== 1) throw new Error(`Awake Petal cue missing at ${viewportLabel}`);
-  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
-  await petal.focus();
+  await assertTerminalKeyboardContract(page, firstSignal, petal, viewportLabel);
   await petal.press("Enter");
   await firstSignal.waitFor();
-  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await page.keyboard.press("Escape");
+  await firstSignal.waitFor({ state: "detached" });
+  if (!await petal.evaluate((element) => element === document.activeElement)) throw new Error(`Enter-opened Terminal did not restore exact trigger at ${viewportLabel}`);
+}
+
+async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLabel) {
+  if (await dialog.getAttribute("role") !== "dialog" || await dialog.getAttribute("aria-modal") !== "true") throw new Error(`Terminal dialog semantics missing at ${viewportLabel}`);
+  if (await page.locator("#terminal-title:focus").count() !== 1) throw new Error(`Terminal initial focus is not its title at ${viewportLabel}`);
+  if (!await page.locator(".command-panel").evaluate((element) => element.inert)) throw new Error(`Terminal background is not inert at ${viewportLabel}`);
+  if (!await trigger.isDisabled()) throw new Error(`Terminal trigger remained interactive behind dialog at ${viewportLabel}`);
+  await page.keyboard.press("Shift+Tab");
+  if (!await dialog.evaluate((element) => element.contains(document.activeElement))) throw new Error(`Shift+Tab escaped Terminal at ${viewportLabel}`);
+  await page.keyboard.press("Tab");
+  if (!await dialog.evaluate((element) => element.contains(document.activeElement))) throw new Error(`Tab escaped Terminal at ${viewportLabel}`);
+  await page.keyboard.press("Escape");
+  await dialog.waitFor({ state: "detached" });
+  await page.waitForFunction((element) => document.activeElement === element, await trigger.elementHandle());
 }
 
 async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {

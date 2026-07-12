@@ -1,5 +1,13 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Coder pass: reusable Terminal focus contract
+
+- **Outcome:** All five exercise workspaces now inherit modal dialog semantics, title-first focus, inert background controls, contained Tab/Shift+Tab navigation, Escape-to-close, and exact trigger focus restoration from the shared `TerminalShell`. Escape preserves each existing in-memory exercise session.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `playtest/e2e-playthrough.mjs`, and this work log.
+- **Validation:** 30/30 unit tests and production build pass. The complete five-exercise title-to-credits E2E passes with focused checks for dialog naming/modality, initial focus, inert background, forward/reverse containment, Escape, exact Petal-trigger restoration, Escape/reopen state preservation, and zero console/page errors.
+- **Next action:** Accessibility Sentinel Agent should audit the shared contract with a screen reader and browser zoom, especially native audio controls and very long Terminal forms.
+- **Risks:** Focus restoration intentionally skips a trigger that is removed or remains disabled after a mastery transition; ordinary Close/Escape paths restore exactly. Native media-control shadow-DOM traversal remains browser-owned.
+
 ## 2026-07-12 — Route-safe Calibration Debugger
 
 - **Outcome:** Added optional post-route `EX-L0103-CALIBRATION-DEBUG` / `A-L0103-2` / `AS-L0103-DBG` in the completed Glass Meadow. Route acknowledgement still opens traversal immediately; Start/Resume Calibration appears beside Continue, and Exit Calibration is always available without changing the completed physical route.

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import ruinsImage from "../../Concept Art Book/images/drowned-archive-workload-terminal-v1.png";
 import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
 import cityImage from "../../Concept Art/Underground City.png";
@@ -128,13 +128,55 @@ const scenes = [
   },
 ];
 
-function TerminalShell({ exerciseId, title, filename, lessonId, statusText, closeLabel = "Close Terminal", onClose, children }) {
+function TerminalShell({ exerciseId, title, filename, lessonId, statusText, closeLabel = "Close Terminal", restoreFocusTo, onClose, children }) {
+  const dialogRef = useRef(null);
+  const titleRef = useRef(null);
+  const triggerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    triggerRef.current = restoreFocusTo ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    titleRef.current?.focus({ preventScroll: true });
+    return () => {
+      const trigger = triggerRef.current;
+      requestAnimationFrame(() => {
+        if (trigger?.isConnected && !trigger.hasAttribute("disabled")) trigger.focus({ preventScroll: true });
+      });
+    };
+  }, []);
+
+  function handleDialogKeyDown(event) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      onClose();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = [...dialogRef.current.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, audio[controls], [tabindex]:not([tabindex="-1"])',
+    )].filter((element) => element.getClientRects().length > 0 && !element.closest("[inert]"));
+    if (!focusable.length) {
+      event.preventDefault();
+      titleRef.current?.focus();
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || !focusable.includes(document.activeElement))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
   return (
-    <section className="terminal-workbench" aria-labelledby="terminal-title" data-terminal-exercise={exerciseId}>
+    <section ref={dialogRef} className="terminal-workbench" role="dialog" aria-modal="true" aria-labelledby="terminal-title" data-terminal-exercise={exerciseId} onKeyDown={handleDialogKeyDown}>
       <header className="terminal-titlebar">
         <div>
           <span className="machine-mark" aria-hidden="true">◇</span>
-          <strong id="terminal-title">MACHINE TERMINAL // {title}</strong>
+          <strong ref={titleRef} id="terminal-title" tabIndex="-1">MACHINE TERMINAL // {title}</strong>
         </div>
         <button type="button" onClick={onClose} aria-label={closeLabel}>{closeLabel === "Exit Calibration" ? "Exit" : "Close"}</button>
       </header>
@@ -211,6 +253,7 @@ export function App() {
   const [routeMarkerMastery, setRouteMarkerMastery] = useState(null);
   const [calibrationSession, setCalibrationSession] = useState(null);
   const [calibrationMastery, setCalibrationMastery] = useState(null);
+  const terminalTriggerRef = useRef(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
   const sceneHotspots = [{
@@ -232,8 +275,8 @@ export function App() {
       data-hotspot-id={hotspot.id}
       data-primary-hotspot={hotspot.primary ? "true" : undefined}
       style={getHotspotStyle(hotspot.hotspot)}
-      onClick={() => useHotspot(hotspot.id)}
-      disabled={pendingAdvance}
+      onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
+      disabled={pendingAdvance || terminalOpen}
       aria-label={`${verb.toLowerCase()} ${hotspot.label}`}
     >
       <span>{verb} {hotspot.label}</span>
@@ -802,6 +845,7 @@ export function App() {
             title={terminalExercise.title}
             filename={terminalExercise.filename}
             lessonId={terminalExercise.lessonId}
+            restoreFocusTo={terminalTriggerRef.current}
             onClose={() => setTerminalOpen(false)}
           >
             <form className="editor-layout" onSubmit={runTerminal}>
@@ -856,6 +900,7 @@ export function App() {
             title={routeMarkerExercise.title}
             filename={routeSession.form === "transfer" ? "route_marker_transfer.py" : "route_marker_primary.py"}
             lessonId={routeMarkerExercise.lesson_id}
+            restoreFocusTo={terminalTriggerRef.current}
             onClose={() => setTerminalOpen(false)}
           >
             {routeSession.phase === "form" ? (
@@ -1017,6 +1062,7 @@ export function App() {
             title={calibrationExercise.title}
             filename={calibrationExercise.forms[calibrationSession.form].starter_file}
             lessonId={calibrationExercise.lesson_id}
+            restoreFocusTo={terminalTriggerRef.current}
             statusText={`ROUTE OPEN · ${calibrationSession.form}`}
             closeLabel="Exit Calibration"
             onClose={exitCalibration}
@@ -1118,6 +1164,7 @@ export function App() {
             title={workloadSortExercise.title}
             filename={workloadSession.form === "retry" ? "workload_sort_retry.json" : "workload_sort.json"}
             lessonId={workloadSortExercise.lesson_id}
+            restoreFocusTo={terminalTriggerRef.current}
             onClose={() => setTerminalOpen(false)}
           >
             <form className="editor-layout workload-layout" onSubmit={checkWorkloadCard}>
@@ -1212,6 +1259,7 @@ export function App() {
             title={evidencePacketExercise.title}
             filename="working_output.json"
             lessonId={evidencePacketExercise.lesson_id}
+            restoreFocusTo={terminalTriggerRef.current}
             onClose={() => setTerminalOpen(false)}
           >
             <form className="editor-layout evidence-layout" onSubmit={validateEvidenceOutput}>
@@ -1318,7 +1366,7 @@ export function App() {
         )}
       </section>
 
-      <section className="command-panel" aria-label="Adventure controls and dialogue">
+      <section className="command-panel" aria-label="Adventure controls and dialogue" inert={terminalOpen ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
           {["LOOK AT", "USE", "TALK TO"].map((item) => (
             <button key={item} className={verb === item ? "verb active" : "verb"} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
@@ -1347,7 +1395,7 @@ export function App() {
                 <span className="speaker">PILOT // FLIGHT RECORDER</span>
                 <div className="dialogue-actions">
                   {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
-                    <button className="continue-action calibration-launch" onClick={openCalibration}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
+                    <button className="continue-action calibration-launch" onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
                   )}
                   {pendingAdvance && (
                     <button className="continue-action" onClick={continueJourney}>
