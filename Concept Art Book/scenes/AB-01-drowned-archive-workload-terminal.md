@@ -8,6 +8,7 @@
 - **Production status:** Integrated as the playable prologue ruins plate
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
 - **Production-pixel successor:** [AB-01 available 640×360](../production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../production-pixel/AB-01/README.md)
+- **Canonical frame evidence:** [available/complete 640×480 study](../production-pixel/AB-01/CANONICAL_FRAME.md)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
 - **Purpose:** Give the playable L-02-01 Workload Sort exercise a distinct, grounded physical Terminal while preserving the suspended archive as the environmental landmark.
 

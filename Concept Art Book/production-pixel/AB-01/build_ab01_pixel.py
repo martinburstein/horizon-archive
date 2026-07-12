@@ -199,6 +199,41 @@ def composite(background, state):
     return out
 
 
+def canonical_frame(world, route_complete=False):
+    """Compose the 640x360 world and original 640x120 lower framing at 1x."""
+    frame = Image.new("RGB", (640, 480), P["void"])
+    frame.paste(world, (0, 0))
+    d = ImageDraw.Draw(frame)
+
+    # Period-authentic lower framing: hard integer bands, no soft effects.
+    rect(d, (0, 360, 639, 367), "stone0")       # seam / context strip
+    rect(d, (0, 368, 639, 407), "void")         # dialogue field
+    rect(d, (0, 408, 639, 447), "stone0")       # action / status field
+    rect(d, (0, 448, 639, 460), "ridge0")       # progress / recovery row
+    rect(d, (0, 461, 639, 461), "stone3")       # footer seam
+    rect(d, (0, 462, 639, 479), "stone1")       # quiet 19 px footer zone
+
+    # Original frame geometry; text remains a runtime responsibility.
+    line(d, [(8, 367), (631, 367)], "stone3", 1)
+    rect(d, (8, 374, 14, 399), "violet0")
+    rect(d, (18, 374, 401, 376), "stone2")
+    rect(d, (18, 382, 356, 384), "stone1")
+    rect(d, (18, 390, 295, 392), "stone1")
+    rect(d, (408, 368, 409, 447), "stone3")
+    for x, width in [(420, 58), (484, 70), (560, 62)]:
+        rect(d, (x, 416, x + width, 439), "stone1")
+        line(d, [(x, 416), (x + width, 416), (x + width, 439)], "stone4", 1)
+
+    # Completion is shape + value: three connected route blocks and end cap.
+    if route_complete:
+        rect(d, (520, 450, 548, 458), "amber0")
+        rect(d, (551, 450, 579, 458), "amber1")
+        rect(d, (582, 450, 610, 458), "amber2")
+        rect(d, (613, 448, 631, 460), "stone2")
+        line(d, [(616, 451), (626, 454), (616, 457), (616, 451)], "amber2", 1)
+    return frame
+
+
 def main():
     (ROOT / "states").mkdir(parents=True, exist_ok=True)
     (ROOT / "qa").mkdir(parents=True, exist_ok=True)
@@ -213,6 +248,13 @@ def main():
 
     selected = composite(background, "available")
     selected.resize((1280, 720), Image.Resampling.NEAREST).save(ROOT / "qa" / "ab01-available-2x-1280x720.png", optimize=False)
+
+    available_frame = canonical_frame(selected, route_complete=False)
+    complete_frame = canonical_frame(composite(background, "complete"), route_complete=True)
+    available_frame.save(ROOT / "qa" / "ab01-canonical-available-640x480.png", optimize=False)
+    complete_frame.save(ROOT / "qa" / "ab01-canonical-complete-640x480.png", optimize=False)
+    available_frame.resize((1280, 960), Image.Resampling.NEAREST).save(ROOT / "qa" / "ab01-canonical-available-2x-1280x960.png", optimize=False)
+    complete_frame.resize((1280, 960), Image.Resampling.NEAREST).save(ROOT / "qa" / "ab01-canonical-complete-2x-1280x960.png", optimize=False)
 
     swatches = Image.new("RGB", (256, 64), P["void"])
     sd = ImageDraw.Draw(swatches)

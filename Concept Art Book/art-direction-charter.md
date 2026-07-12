@@ -87,3 +87,4 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 - Clean world plate only; no baked UI.
 - Lower-center walkable space should survive the game's dialogue-panel crop and responsive scaling.
 - Every selected plate requires a scene sheet and provenance entry.
+- In any open-interface `640×480` framing, logical rows `461–479` are reserved for the persistent help footer. Keep the full 19-row zone flat and low-detail: one top seam, one fill, no dither, ornaments, state lights, route geometry, or baked text.

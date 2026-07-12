@@ -71,3 +71,11 @@
 - **Validation:** 27 scene colors from a 32-color library; exact dimensions/modes; byte-exact nearest-neighbor 2x; square hard pixels; 45 x 57 painted Terminal; 68 x 76 hit box; route/safe zones; outline/cluster/dither limits; four geometry/value states; originality gate.
 - **Next recommended item:** Player Agent should inspect the 1x plate for landmark → Terminal → route readability. After Coder integration, verify default action, keyboard/pointer access, state progression, and recovery on the canonical 640 x 480 canvas.
 - **Unresolved risks:** runtime letterboxing, unified world/UI scaling, cursor/action cluster, save, and no-dead-end behavior require integration. The smooth AB-01 asset remains exploration-only.
+
+## 2026-07-12 — AB-01 canonical route-frame tranche
+
+- **Completed:** composed the existing AB-01 available and complete world states into original native `640×480` framing studies, preserving the `640×360` world and adding a measured `640×120` lower band. Reserved logical rows `461–479` as a flat help-footer field and confined complete-route geometry to rows `448–460`.
+- **Files changed:** extended the AB-01 integer renderer; added `CANONICAL_FRAME.md`, native available/complete frames, and exact nearest-neighbor 2× QA renders; updated package, charter, scene sheet, and work log. No gameplay code changed and no new scene was added.
+- **Validation:** both native frames are exactly `640×480`; both 2× frames are byte-exact nearest-neighbor `1280×960`; world rows `0–359` are byte-identical to the selected production world; footer rows `461–479` are byte-identical across states and contain only the seam/fill colors; available uses 28 colors and complete uses 29.
+- **Next recommended item:** Accessibility Sentinel should verify the exact 102-character orientation sentence against this footer field at native width and the authored narrow layout; Player Agent should verify route completion never competes with footer/help readability after integration.
+- **Unresolved risks:** this is framing evidence, not live UI. Runtime focus order, exact text rendering, narrow three-line wrapping, letterboxing, and recovery behavior remain to be verified after Coder integration.

@@ -11,6 +11,7 @@
 - **Nearest-neighbor 2x:** [1280 x 720 QA](qa/ab01-available-2x-1280x720.png)
 - **Palette:** [32 swatches](qa/palette-swatches-32.png)
 - **States:** [1x strip](qa/terminal-state-strip-1x.png) · [2x strip](qa/terminal-state-strip-2x.png)
+- **Canonical framing:** [measured 640×480 available/complete study](CANONICAL_FRAME.md)
 
 ## Originality gate
 
@@ -67,3 +68,5 @@ Full `640 x 360` composites for all four states are included. Reduced motion use
 12. **Pass:** abstract traits retained; concrete layout/forms replaced.
 
 Runtime-only checklist items—complete `640 x 480` composition, letterboxing, cursor/actions, input recovery, saves, and no-dead-end behavior—remain for Coder and Player Agent after integration.
+
+The canonical framing study now validates the world/UI arithmetic and quiet-footer geometry as production evidence. Live controls, text, scaling, and behavior remain runtime checks.
