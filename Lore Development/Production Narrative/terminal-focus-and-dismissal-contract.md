@@ -206,6 +206,19 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never validates, listens, records, calls a service, acknowledges mastery, advances, or implies a Machine response.
 
+### Offline Extraction Workloads
+
+- Exact title and dismissal name: `Offline Extraction Workloads`; `Exit Extraction Workloads`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario status uses `n/6` and the gate uses `CLOSED-NOTE GATE`.
+- Modality, schema-first, null/missing, evidence/confidence, integrity remediation, and completion remain `901 TEACHER` copy.
+- Scenario choices are `PILOT // SCHEMA OWNER`; explanation prose is `PILOT // CLOSED-NOTE EXTRACTION OWNER`.
+- Every media scenario includes a text equivalent; no media/path access, processing, upload, analyzer, or service call occurs.
+- Exit line: "Extraction Workloads closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen restores active choices, result, and hints. Reload restores sanitized eligibility with clean fields and no source state.
+- Persistent evidence excludes source media/path, extracted values, service responses, runtime output, reasoning, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never validates, processes media, calls a service, acknowledges mastery, advances, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -229,6 +242,7 @@ When acknowledgement changes progression:
 - Client Bridge mastery: prefer `Continue` after the System announces availability.
 - Text Analysis mastery: prefer `Continue` after the System announces availability.
 - Speech Workloads mastery: prefer `Continue` after the System announces availability.
+- Extraction Workloads mastery: prefer `Continue` after the System announces availability.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

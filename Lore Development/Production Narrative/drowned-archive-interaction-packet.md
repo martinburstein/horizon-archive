@@ -754,6 +754,85 @@ These are offline direction choices. No path is opened and no result or cancella
 - Scene transition clears working choices and simulated audio state; sanitized mastery evidence persists separately.
 - Exit never validates, listens, records, calls a service, acknowledges mastery, advances, or changes a physical object.
 
+## Optional Offline Extraction Workloads practice
+
+Production alignment: `EX-L0404-EXTRACTION-WORKLOADS`, lesson `L-04-04`, activity `A-L0404-2`, assessment `AS-L0404-SCEN`, objective `AI901-D1-O8`, skills `PY-016` and `PY-020`. This course surface follows the preceding workload mastery and does not change AB-01 adventure state.
+
+### Ownership and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns modality/schema instruction, integrity remediation, evidence review, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline validation, scores, mode, session state, evidence status, and progression availability.
+- `PILOT // SCHEMA OWNER` owns scenario choices. `PILOT // CLOSED-NOTE EXTRACTION OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No result implies Machine intent, interpretation, approval, or understanding.
+
+Keep the exact boundary visible in every mode:
+
+> FULLY OFFLINE · no document, image, audio, video, media processing, analyzer, or service call.
+
+Every source is represented by media-equivalent scenario text. No source media or path is opened, processed, uploaded, or retained; no analyzer runs and no extracted value or service response is produced.
+
+### EW00 — Open primary
+
+- Exact title/filename: `Offline Extraction Workloads`; `primary_extraction.json`.
+- `SYSTEM`: "Offline Extraction Workloads open. PRIMARY 1/6."
+- `901 TEACHER`: "Choose the source modality, define the field schema first, and preserve missing values and evidence."
+- Each card repeats `Media-equivalent scenario text` so no document, image, audio, or video is required.
+
+### EW01 — Four extraction modalities
+
+- Document/form, `901 TEACHER`: "Use schema-driven extraction for named fields in documents or forms—not summarization."
+- Image, `901 TEACHER`: "Use schema-driven image extraction when named fields are required—not only a general description."
+- Audio, `901 TEACHER`: "Use audio extraction when the output is a structured record; transcription alone may be only one input."
+- Video, `901 TEACHER`: "Use video extraction for named fields across time; captions alone may not satisfy the schema."
+- Contrast, `901 TEACHER`: "Name the modality and required fields before choosing the workload."
+
+### EW02 — Schema-first and integrity remediation
+
+The System reports field correctness and score only. Repair direction remains Teacher-owned:
+
+- Schema first: "Define field names, types, and descriptions before analysis."
+- Analysis contrast: "A summary, caption, transcript, or general description is not automatically a field schema."
+- Missing value: "Preserve null or missing when evidence is absent; never invent a value to fill the schema."
+- Evidence: "Retain source provenance for each extracted field so a reviewer can inspect support."
+- Confidence: "Record confidence or uncertainty with the evidence; confidence is not proof."
+- Invented value: "Remove the unsupported value, preserve null, and identify what evidence would be needed."
+
+### EW03 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary form complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE."
+- Transfer open: `SYSTEM`: "Offline Extraction Workloads open. TRANSFER 1/6."
+- Transfer instruction, `901 TEACHER`: "Apply the same modality, schema-first, missing-value, and evidence method to fresh scenarios."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+- Neither form processes media, calls a service, changes route geometry, or produces a Tidal Lens response.
+
+### EW04 — Closed-note extraction explanation
+
+- Exact filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain modality, declared schema, null/missing policy, and evidence/confidence review without notes."
+- Field labels: `modality`, `schema`, `missing value`, and `evidence review`.
+- `PILOT // CLOSED-NOTE EXTRACTION OWNER`: "I produced this extraction explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- No media, path, extracted value, service response, answer choice, or explanation prose persists.
+
+### EW05 — Mastery and progression handoff
+
+- `901 TEACHER`: "Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores identifiers, dimension booleans, attempts, hint level, confidence, misconception tags, and status only.
+- Source media/path, extracted values, service responses, runtime output, free-form reasoning, and explanation prose are never retained.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### EW06 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Extraction Workloads closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Extraction Workloads restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Extraction Workloads restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores active card, choices, result, and hints. Reload restores sanitized eligibility with clean fields.
+- Scene transition clears working choices and source state; sanitized mastery evidence persists separately.
+- Exit never validates, processes media, calls a service, acknowledges mastery, advances, or changes a physical object.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -813,4 +892,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Text Analysis remains offline: no document/service implication and no document text, result body, or prose persistence.
 - Speech Workloads uses transcript-equivalent text and never listens, records, generates playback, opens a path, or calls a service.
 - Speech Workloads persists no audio, voice, transcript, path, prompt, response body, runtime output, or explanation prose.
+- Extraction Workloads uses media-equivalent text and never opens, processes, uploads, or persists source media or paths.
+- Extraction Workloads persists no extracted values, service responses, runtime output, reasoning, or explanation prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
