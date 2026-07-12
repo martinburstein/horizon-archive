@@ -309,3 +309,24 @@ Validation:
 - `git diff --check`: pass
 Next step: Exercise Agent can render `EX-L0301-STRUCTURED-PACKETS`.
 Notes: This lesson is course-authored Python bridge instruction. Future SDK objects, service payloads, endpoints, and API versions remain volatile and require revalidation. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T07:50:31-04:00
+
+Stage: Sequential Python bridge expansion
+Action: Built exactly one next mapped lesson, `L-03-02`, as a complete two-form coding lab for small functions, loops, if/else boundaries, accumulators, returns, and reusable behavior on unseen inputs.
+Files touched:
+- curriculum/lessons/L-03-02/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all four required priority Foundry sources checked first: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisite, skill coverage, source references, map alignment, and local link: pass
+- validator self-test, boundary probes, unseen-input reuse, input-preservation, and anti-bypass checks: pass
+- primary reference 8/8; transfer reference 8/8; incomplete starters correctly rejected at 2/8
+- existing `L-03-01` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0302-CONTROL-FLOW`.
+Notes: This is course-authored Python bridge instruction. Future Foundry SDK versions, service schemas, endpoints, and runtime requirements remain volatile. No gameplay or narrative files changed.

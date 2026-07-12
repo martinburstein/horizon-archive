@@ -38,4 +38,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded responsible-AI scenario package `L-02-02`
 - [x] Built source-grounded model/deployment decision package `L-02-03`
 - [x] Built structured-data Python bridge package `L-03-01`
+- [x] Built conditionals, loops, and reusable-functions package `L-03-02`
 - [ ] Expand original question banks and full timed simulations

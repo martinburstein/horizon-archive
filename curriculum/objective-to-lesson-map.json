@@ -173,12 +173,13 @@
           "launch_tier": "launch_critical",
           "source_mode": "invented_bridge_with_supporting_reference",
           "source_ids": [
+            "OFFICIAL-AI901-STUDY-GUIDE",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf"
           ],
           "activity_ids": ["A-L0302-1", "A-L0302-2"],
           "assessment_ids": ["AS-L0302-CODE"],
-          "mastery_gate": "can write a tiny reusable function and loop over results"
+          "mastery_gate": "pass primary and fresh-transfer reusable functions at 8 of 8, including boundary and unseen-input probes, then explain parameter-loop-condition-return flow without notes"
         },
         {
           "lesson_id": "L-03-03",

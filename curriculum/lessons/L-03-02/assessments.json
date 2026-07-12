@@ -1,0 +1,3 @@
+[
+  {"assessment_id":"AS-L0302-CODE","lesson_id":"L-03-02","assessment_type":"structured_output_check","supports_objectives":[],"supports_python_skills":["PY-010","PY-011","PY-012"],"mastery_signal":"independent_use","attempt_policy":"Pass primary 8/8, remediate any failed control-flow dimension, then pass unseen transfer 8/8 and explain parameter-loop-condition-return flow without notes.","result_states":["correct","partially_correct","incorrect","not_attempted","needs_review"],"records_confidence":true,"records_misconception_tags":true,"records_review_flag":true,"status":"review"}
+]

@@ -1,0 +1,11 @@
+{
+  "lesson_id":"L-03-02","lesson_title":"Conditionals, loops, and small functions","lesson_type":"coding_micro_lab","chapter_id":"chapter-03","module_id":"ch3-m2","launch_tier":"launch_critical","source_mode":"invented_bridge_with_supporting_reference","supports_objectives":[],"supports_python_skills":["PY-010","PY-011","PY-012"],"prerequisite_lesson_ids":["L-03-01"],
+  "source_ids":["OFFICIAL-AI901-STUDY-GUIDE","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l02-data-stru-cond-stmt-loop-pdf","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-04-crea-func-usin-gith-pdf"],
+  "activity_ids":["A-L0302-1","A-L0302-2"],"assessment_ids":["AS-L0302-CODE"],
+  "learner_starting_state":"Can parse and edit nested list/dictionary data but has not yet packaged repeated decisions into a reusable function.",
+  "learner_ending_state":"Can define a small function, loop over structured inputs, apply an if/else boundary rule, build results, and return reusable output.",
+  "mastery_gate":"Pass primary and fresh-transfer functions at 8 of 8 each, including unseen-input and boundary probes, then explain parameter-loop-condition-return flow without notes.",
+  "estimated_minutes":60,"difficulty_band":"beginner",
+  "provenance_policy":{"citation_expectation":"The AI-901 Python prerequisite traces to the official study guide; programs, packets, gates, and Terminal framing are course-authored bridge instruction.","bridge_label_required":true,"unsupported_claim_behavior":"Do not treat simulated records as live Foundry payloads; reverify future SDK types, service schemas, and runtime requirements."},
+  "status":"review","notes":"Offline two-form reusable-function lab with AST and unseen-input anti-bypass validation."
+}
