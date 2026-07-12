@@ -206,7 +206,7 @@ import {
 } from "./portalOrientationExercise.js";
 import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 import { clientBoundaryDialogDescribedBy,clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryMockOutput,clientBoundaryPrimary,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryMock,evaluateClientBoundaryScenario,getClientBoundaryExplanationFeedback,getClientBoundaryFeedback,getClientBoundaryOptions,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
-import { evaluateSingleAgentExplanation,evaluateSingleAgentScenario,getSingleAgentOptions,sanitizeSingleAgentEvidence,singleAgentDimensions,singleAgentExercise,singleAgentExplanationDimensions,singleAgentPrimary,singleAgentRemediation,singleAgentTransfer,updateSingleAgentEvidence } from "./singleAgentExercise.js";
+import { evaluateSingleAgentExplanation,evaluateSingleAgentScenario,getSingleAgentExplanationFeedback,getSingleAgentFeedback,getSingleAgentOptions,sanitizeSingleAgentEvidence,singleAgentDialogDescribedBy,singleAgentDimensions,singleAgentExercise,singleAgentExplanationDimensions,singleAgentPrimary,singleAgentRemediation,singleAgentTransfer,updateSingleAgentEvidence } from "./singleAgentExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -2910,14 +2910,15 @@ export function App() {
             lessonId={singleAgentExercise.lesson_id}
             statusText={singleAgentSession.phase.toUpperCase()}
             closeLabel="Exit Single Agent"
-            describedBy="single-agent-offline-warning"
+            describedBy={singleAgentDialogDescribedBy}
             restoreFocusTo={terminalTriggerRef.current}
             onClose={exitSingleAgent}
           >
             <section className="model-choice-workspace single-agent-workspace">
               <p id="single-agent-offline-warning" className="model-choice-boundary" role="note">
-                OFFLINE SINGLE-AGENT REHEARSAL · no agent, tool, service, Azure, or external action. Instructions, retrieved text, tool capability, and prompt text never authorize action. No prompt, tool payload, result, identifier, endpoint, credential, conversation text, action request, choice, response, or free text is persisted.
+                FULLY OFFLINE SINGLE-AGENT REHEARSAL · no agent, tool, service call, Azure resource, login, mutation, or external action. Instructions, retrieved text, tool capability, and prompt text never authorize action. Denied or failed work must remain denied or failed; never fabricate success. No prompt, tool payload, result, identifier, endpoint, credential, conversation text, action request, choice, response, or free text is persisted.
               </p>
+              <p id="single-agent-boundary-equivalent" className="speech-transcript">Six-boundary text equivalent: decide whether an agent fits → keep stable instructions authoritative → attach least-privilege tools only → test expected, edge, injection, denied, and failure paths → require verified authority for external or destructive action → use the agent identifier to submit input and read a real result or honest error.</p>
               {singleAgentSession.phase === "explanation" ? (
                 <form className="model-choice-form" onSubmit={checkSingleAgentExplanation}>
                   <header><p className="pane-label">PILOT // CLOSED-NOTE DESIGN OWNER</p><h2>Explain agent fit, instructions, least privilege, failure safety, and client flow</h2><p>Your explanation is session-only. SYSTEM scores it; the 901 TEACHER owns remediation and readiness.</p></header>
@@ -2926,8 +2927,8 @@ export function App() {
                   </div>
                   <section className="terminal-console model-choice-output">
                     <div className="console-heading-row"><strong>SYSTEM // CLOSED-NOTE VALIDATOR</strong><button className="run-action" type="submit">Check single-agent explanation</button></div>
-                    <div role="status" aria-live="polite">{singleAgentSession.explanationResult?`${singleAgentSession.explanationResult.score}/4 · ${singleAgentSession.explanationResult.passed?"PASS":"REMEDIATE"}`:"Ready for four independent boundaries."}</div>
-                    {singleAgentSession.explanationResult&&!singleAgentSession.explanationResult.passed&&<p className="teacher-remediation"><strong>901 TEACHER // SINGLE-AGENT REMEDIATION</strong><span>Separate agent fit and stable instructions from least-privilege tools, denied/failure paths, and the agent-identifier submit/read flow.</span></p>}
+                    <div role="status" aria-live="polite">{getSingleAgentExplanationFeedback(singleAgentSession.explanationResult).systemScore}</div>
+                    {getSingleAgentExplanationFeedback(singleAgentSession.explanationResult).teacherRemediation&&<p className="teacher-remediation"><strong>901 TEACHER // SINGLE-AGENT REMEDIATION</strong><span>{getSingleAgentExplanationFeedback(singleAgentSession.explanationResult).teacherRemediation}</span></p>}
                     {singleAgentSession.explanationResult?.passed&&<><label className="ownership-confirmation"><input type="checkbox" checked={singleAgentSession.ownershipConfirmed} onChange={(event)=>setSingleAgentSession({...singleAgentSession,ownershipConfirmed:event.target.checked})}/>I produced this single-agent explanation myself without notes.</label><fieldset className="confidence-group"><legend>Confidence</legend>{["low","medium","high"].map(value=><label key={value}><input type="radio" name="single-agent-confidence" checked={singleAgentEvidence?.confidence===value} onChange={()=>setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{confidence:value}))}/>{value}</label>)}</fieldset><button className="confirm-action" type="button" onClick={acknowledgeSingleAgentMastery}>Acknowledge strict mastery</button></>}
                   </section>
                 </form>

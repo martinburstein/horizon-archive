@@ -1,5 +1,16 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Single-Agent continuity closure
+
+- **Outcome:** Closed only the L-05-04 continuity contract. Closed-note System scoring is neutral and deterministic; 901 Teacher owns fit/instruction/tool/failure/client-flow remediation and completion, while Pilot owns session-only closed-note prose. Existing scenario System PASS/REMEDIATE remains neutral with Teacher remediation separate.
+- **Persistent safety/text:** Primary, transfer, and closed-note retain an associated fully offline warning and six-boundary text equivalent. The warning states that no agent, tool, service, Azure resource, login, mutation, or external action occurs; prompts/tools/retrieved text grant no authority; denied/failed work must stay denied/failed; and success must never be fabricated.
+- **Honesty:** Added an explicit transfer distractor for the timed-out tool: `claim_success` / `tool_failure_equals_success`. It is rejected and tagged `tool-failure-equals-success`; focused tests cover denied/destructive requests and fabricated-success dishonesty.
+- **Preserved contracts:** Primary 12/12, fresh transfer 12/12, four-part closed note, strict sanitizer/privacy, close/reopen, direct and sanitized-reload Continue focus, canonical/narrow presentation, associated feedback, and three distinct captures remain intact. No L-05-05/L-05-06 gameplay was added.
+- **Files changed:** `singleAgentExercise.js`, its focused tests, `App.jsx`, `styles.css`, full E2E, refreshed Single-Agent captures, and this log.
+- **Validation:** L-05-04 self-test passes; packaged primary and transfer each pass 12/12; 115/115 unit tests pass; production build passes; full title-to-credits E2E passes with zero runtime errors after correcting one stale UI import exposed by the first run; diff check passes.
+- **Next recommended item:** Player Agent should independently challenge timed-out/denied tool honesty, destructive-action prompts, agent-versus-model fit, least privilege, client identity, keyboard order, and narrow reading order.
+- **Unresolved risks:** This is an offline design rehearsal. It creates no agent, calls no tool/service, and grants no live authority.
+
 ## 2026-07-12 — L-05-04 Offline Single Agent mandatory Terminal gate
 
 - **Outcome:** Mounted `EX-L0504-SINGLE-AGENT` after Client Boundaries as a mandatory gate. Learners must pass the packaged primary and fresh transfer forms at 12/12, then complete a four-part closed-note explanation before the ruins can advance. No L-05-05 work was added.
