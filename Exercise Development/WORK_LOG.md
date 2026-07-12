@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-05-06 Offline Visual Patterns mandatory Terminal gate
+
+- **Outcome:** Mounted `EX-L0506-VISUAL-PATTERNS` after Text/Speech Patterns as a mandatory gate. Primary and fresh transfer each require 12/12, followed by a four-part closed-note explanation. No L-06-01 work was added.
+- **Coverage:** Image analysis of existing pixels, multimodal image-plus-text prompting, new image generation, media bytes/type/request/deployment validation, operation-specific result shapes, generated-content source/model/prompt/time provenance, simulation limits, and separate authority for publication or deletion. Unauthorized publication, destructive cleanup, and generated media presented as observed ground truth fail strictly.
+- **Offline/privacy/ownership:** No service, Azure, media access, upload, analysis, generation, publication, deletion, or external action occurs. A persistent text equivalent covers each visual flow. Evidence stores only allowlisted IDs, correctness booleans, attempts, hints, confidence, tags, form, and mastery—never media, paths, descriptions, prompts, outputs, endpoints, credentials, responses, action requests, selections, or free text. Pilot owns choices/prose, System scores, and the 901 Teacher owns remediation/readiness.
+- **Files changed:** Added the Visual Patterns runtime evaluator/tests; updated `App.jsx`, styles, public manifest, full E2E, three L-05-06 QA captures, and this log.
+- **Validation:** Packaged validator self-test passes; primary and transfer references each pass 12/12; 128/128 unit tests pass; production build passes; full title-to-credits E2E passes from repository-root and game-directory working directories with zero runtime errors; diff check passes.
+- **Next recommended item:** Player Agent should challenge analysis/generation reversals, missing multimodal text context, extension-only validation, unsupported deployment capability, analysis-JSON/media confusion, missing generated provenance, publication prompts, deletion suggestions, keyboard order, and narrow text-equivalent reading.
+- **Unresolved risks:** This offline simulation proves no live visual capability, media compatibility, deployment support, API shape, identity, permission, or publication readiness; those require current official Microsoft reverification and separate authority.
+
 ## 2026-07-12 — Text/Speech Patterns continuity closure
 
 - **Outcome:** Closed only the L-05-05 continuity contract. The runtime already had neutral System scoring, separate 901 Teacher remediation/completion, Pilot-owned session-only closed-note prose, strict forms, sanitizer/privacy, and dedicated direct/reload focus. Added focused proof for closed-note System/Teacher separation and tightened the persistent boundary language.

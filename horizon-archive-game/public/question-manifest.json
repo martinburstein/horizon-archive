@@ -190,6 +190,17 @@
       "objective_ids": ["AI901-D2-O5"],
       "skills": ["PY-015", "PY-016", "PY-018"],
       "success_contract": "Pass primary and fresh transfer at 12/12, then explain text/speech capability direction, endpoint/identity/payload separation, honest result/error/cancellation handling, and offline simulation/no-disclosure/no-action authority."
+    },
+    {
+      "id": "HA-AI901-VISUAL-PATTERNS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0506-VISUAL-PATTERNS",
+      "lesson_id": "L-05-06",
+      "activity_id": "A-L0506-2",
+      "assessment_ids": ["AS-L0506-SCEN"],
+      "objective_ids": ["AI901-D2-O6"],
+      "skills": ["PY-015", "PY-016", "PY-018"],
+      "success_contract": "Pass primary and fresh transfer at 12/12, then explain visual capability/media selection, request validation, operation-specific result shape and generated-content provenance, and offline simulation/no-publication/no-deletion authority."
     }
   ]
 }
