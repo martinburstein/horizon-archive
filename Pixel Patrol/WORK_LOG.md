@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Client Boundaries final visual gate
+
+- **Completed:** audited complete Client Boundaries mock, primary, transfer, closed-note, and mastered flow. Persistent offline/mock/no-authority warning and six-boundary/current-mock-PASS equivalent already occupy correct fixed rows above one contained phase region. Endpoint/credential/deployment/client/request-response/simulation hierarchy, fabricated-success/action remediation, Pilot/System/Teacher ownership, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 109 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms deterministic current mock PASS evidence, all-phase warning/boundary association, both 12/12 forms, four-part explanation, authority safeguards, ownership separation, privacy, direct/reload Continue focus, distinct captures, and credits.
+- **Next recommended item:** Location Scout should depict six square boundary sockets with mock PASS shown as a local loopback lamp, never connected to the live-route silhouette; fabricated success should terminate in a blocked return channel.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 work viewport by design. Separately, the 542.67 kB bundle advisory remains non-blocking and produced no observed capture, interaction, or full-journey performance defect.
+
 ## 2026-07-12 — Offline Prompt Layers final visual gate
 
 - **Completed:** audited complete Prompt Layers primary, transfer, closed-note, and mastered flow. Persistent offline/no-authority warning and six-layer equivalent already occupy correct fixed rows above one contained form. Injection/conflict/authority/evaluation hierarchy, Pilot/System/Teacher ownership, remediation, scrolling, focus, Continue handoff, and square-pixel chrome are coherent at canonical and narrow sizes. No CSS correction was warranted.

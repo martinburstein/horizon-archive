@@ -118,3 +118,9 @@ At 1x capture:
 - Prompt Layers uses three fixed workspace rows: persistent offline/no-authority warning, persistent six-layer equivalent, then one contained scrolling form. Warning and layer strip may wrap but cannot overlap or reorder.
 - The canonical six-layer read is system -> user -> grounding -> output contract -> conflict/no-action authority -> representative/edge/failure/adversarial evaluation. At 320 x 240 the complete warning leads and all layers remain reachable by vertical traversal.
 - Primary/transfer retain decision then reason. Closed note uses four explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.
+
+## Offline Client Boundaries viewport contract
+
+- Client Boundaries uses three fixed workspace rows: offline/mock/no-authority warning, six-boundary equivalent with current mock-PASS meaning, then one contained phase/form region. Rows may wrap but cannot overlap or reorder.
+- Canonical order is endpoint -> credential -> deployment -> project/inference client -> request/response -> simulation/no-action proof. At 320 x 240 the complete warning leads and the remaining boundaries stay reachable by vertical traversal.
+- Primary/transfer retain decision then reason. Closed note uses four explanation fields in one canonical row and one narrow column; outer Machine/file/status chrome stays fixed.

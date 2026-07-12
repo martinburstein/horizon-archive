@@ -140,6 +140,12 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Prompt Pilot inputs, neutral System scores, and Teacher injection/authority/evaluation remediation remain separate.
 - [ ] Prompt captures remain byte-distinct across canonical, narrow, and host context; one form traversal preserves narrow content.
 - [ ] Prompt direct/restored mastery moves focus to Continue with square-pixel chrome unchanged.
+- [ ] Client Boundary offline/mock/no-authority warning and six-boundary equivalent remain persistent, ordered, and non-overlapping.
+- [ ] Current mock PASS remains explicitly local-flow evidence and never implies live access or action authority.
+- [ ] Endpoint, credential, deployment, client layer, request/response, and simulation remain six distinct boundaries.
+- [ ] Fabricated success and destructive-action claims receive Teacher remediation separate from neutral System scores.
+- [ ] Client Boundary captures remain byte-distinct across canonical, narrow, and host context; one traversal preserves narrow content.
+- [ ] Direct/restored mastery moves focus to Continue with square-pixel chrome unchanged.
 
 - [ ] Every scene can recover after every ordinary verb on every hotspot.
 - [ ] No required item can be lost or consumed early.

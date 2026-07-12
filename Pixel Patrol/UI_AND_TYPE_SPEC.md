@@ -188,3 +188,10 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - System instructions are durable rules; user text supplies current task/input; grounding is untrusted data requiring evidence checks; output format is explicit. Conflicts and prompt injection cannot grant login, deployment, deletion, email, purchase, credential, mutation, or destructive-action authority.
 - Evaluation covers representative, edge, failure, and adversarial-injection cases. One successful example never replaces the evaluation layer.
 - Keep persistent rows outside one form scroller. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
+
+## Offline Client Boundaries hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/mock/no-authority warning -> six-boundary equivalent/current mock PASS meaning -> Pilot mock/decision/prose -> neutral System validator -> Teacher client-boundary/authority remediation.
+- Endpoint locates the project, credential supplies identity, deployment name selects the model, project client yields a compatible inference client, request input is sent and response output is read, and mock PASS proves local flow only.
+- Fabricated success and destructive-action claims are remediation states, never positive status. Simulation or prompt text cannot establish live access or authorize deployment, creation, purchase, email, deletion, or mutation.
+- Keep persistent rows outside one form traversal. Retain square seams, two-pixel focus/ownership rails, native controls, and Continue focus after direct or restored mastery.
