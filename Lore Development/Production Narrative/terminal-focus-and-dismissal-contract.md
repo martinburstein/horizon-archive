@@ -314,6 +314,20 @@ Use a more specific line only when it adds state clarity.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never calls a service, performs an action, predicts an exam result, grants authority, or implies a Machine response.
 
+### Planned Offline Remediation Planner
+
+- Runtime and game exercise integration are unimplemented; this section defines target focus, dismissal, privacy, and ownership.
+- Target title and dismissal name: `Offline Remediation Planner`; `Exit Remediation Planner`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; cards use `n/6`.
+- Gap diagnosis, priority, lesson/source routing, practice, reassessment, escalation, and completion remain `901 TEACHER` copy.
+- Route choices are `PILOT // REMEDIATION ROUTE OWNER`; prose is `PILOT // CLOSED-NOTE PLANNER OWNER`.
+- The visible boundary states course-authored/not-exam/no-guarantee/no-service/no-external-action.
+- Exit line: "Remediation Planner closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] routes remain in this session."
+- Reopen restores routes/statuses. Reload restores sanitized eligibility with clean scenario and prose fields.
+- Persistent evidence excludes exam text, notes, credentials, endpoint/payload/response data, action requests, and prose.
+- After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
+
 ### Evidence Packet
 
 - Open dialogue: “Evidence workspace active. Inspect sources, repair JSON, then validate.”
@@ -345,6 +359,7 @@ When acknowledgement changes progression:
 - Text/Speech Patterns mastery: prefer `Continue` after the System announces availability.
 - Visual Patterns mastery: prefer `Continue` after the System announces availability.
 - Objective Ledger mastery: prefer `Continue` after the System announces course readiness without an exam guarantee.
+- Remediation Planner mastery: prefer `Continue` after all weak routes close without an exam guarantee.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

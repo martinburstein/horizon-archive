@@ -185,3 +185,11 @@ This log records spoiler-safe production progress. It must not summarize unrelea
 - **Validation:** Cross-checked 15 unique objectives per form, 30/30 gates, eight concept and seven implementation objectives, three status values, four explanation dimensions, `L-06-01` IDs, evidence sanitizer, session/transition contracts, confidence/mastery separation, course/exam boundary, action safety, and compact copy. Reviewed all added text for ownership, privacy, authority, and mystery safety.
 - **Next recommended item:** Coder/Exercise Agent should mount the Objective Ledger with text-visible statuses, objective-specific evidence pointers, separated Teacher/System channels, and Continue focus after mastery.
 - **Unresolved risks:** Runtime integration remains incomplete. The exercise module and tests exist, but no Objective Ledger Terminal is currently mounted in `App.jsx`.
+
+## 2026-07-12 — Planned Remediation Planner continuity
+
+- **Outcome:** Added the bounded target interaction contract for `EX-L0602-REMEDIATION-PLANNER`: failed-dimension diagnosis, measured-gap priority, lesson/current-source routing, retrieval/guided/fresh-transfer practice, evidence-based reassessment, stop/escalate, confidence and exam-guarantee rejection, primary/transfer, closed-note explanation, mastery, restoration, privacy, and Continue handoff.
+- **Files changed:** `Production Narrative/drowned-archive-interaction-packet.md`, `Production Narrative/terminal-focus-and-dismissal-contract.md`, and this work log.
+- **Validation:** Cross-checked six boundaries per form, 12/12 gates, all eleven route fields, route completeness for every weak objective, `L-06-02` IDs, curriculum self-test, session/transition contracts, confidence/evidence separation, course/exam/action boundary, privacy, and compact copy. Reviewed all added text for ownership and mystery safety.
+- **Next recommended item:** Exercise Agent should build the missing runtime module; Coder should then mount a route editor with text-visible completion, separated Teacher/System channels, safe escalation, and Continue focus.
+- **Unresolved risks:** Runtime is unimplemented: no `remediationPlannerExercise.js`, dedicated game test, or mounted Terminal currently exists.

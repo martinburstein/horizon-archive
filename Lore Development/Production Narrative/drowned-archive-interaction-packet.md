@@ -1414,6 +1414,104 @@ The System reports decision/reason correctness, objective status, and score only
 - Scene transition clears scenario answers and runtime configuration; sanitized ledger evidence persists separately.
 - Exit never calls a service, uses Azure, performs an external action, predicts an exam result, or advances progression.
 
+## Planned Offline Remediation Planner
+
+Production alignment: `EX-L0602-REMEDIATION-PLANNER`, lesson `L-06-02`, activity `A-L0602-2`, assessment `AS-L0602-PLAN`, skills `PY-007`, `PY-016`, and `PY-017`. Runtime and game exercise integration are unimplemented. These are target production labels, session rules, and ownership boundaries.
+
+### Ownership and course boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns gap diagnosis, priority, official-source routing, practice design, escalation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, route/form state, evidence status, and progression availability.
+- `PILOT // REMEDIATION ROUTE OWNER` owns route choices. `PILOT // CLOSED-NOTE PLANNER OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may state unchanged physical conditions only. No plan result implies Machine intent or exam prediction.
+
+Keep this target boundary visible in every future mode:
+
+> COURSE-AUTHORED OFFLINE PLANNER · not exam questions, no exam guarantee, no service call, and no external action.
+
+No plan, prompt, simulation, confidence rating, or passing gate grants authority for credential use, Azure mutation, communication, purchase, publication, deletion, or any live/destructive action.
+
+### RP00 — Open primary
+
+- Target title/filename: `Offline Remediation Planner`; `primary_routes.json`.
+- `SYSTEM`: "Remediation Planner open. PRIMARY 1/6. Course-authored; no exam guarantee."
+- `901 TEACHER`: "Diagnose the failed dimension, route to its lesson and official source, then require fresh evidence."
+
+### RP01 — Complete route contract
+
+Every weak objective route contains all eleven fields:
+
+1. `objective_id`
+2. `failed_dimension`
+3. `evidence_pointer`
+4. `priority_reason`
+5. `mapped_lesson_id`
+6. `official_source_id`
+7. `retrieval_task`
+8. `guided_task`
+9. `fresh_transfer_task`
+10. `reassessment_rule`
+11. `stop_or_escalate_rule`
+
+Missing any field leaves the route incomplete. Personal notes and exam-item text are not route fields.
+
+### RP02 — Six planning boundaries
+
+- Evidence gap: identify the exact failed decision/reason, concept, workflow, code/client, result, or safety dimension.
+- Priority: use repeated measured gaps and current objective scope; preserve spaced review without studying everything equally.
+- Source route: link the exact objective to its mapped prerequisite lesson and controlling current official source.
+- Practice design: retrieve first, use guided repair second, then solve a fresh-transfer task without notes.
+- Reassessment: only independent fresh evidence can change `remediate` or `not_yet_assessed` to `ready`.
+- Claim/action safety: reject exam guarantees and require separate verified authority for any live or external action.
+
+### RP03 — Objective-specific remediation and stop/escalate
+
+The System reports decision/reason correctness, route completeness, and score only. Guidance remains Teacher-owned:
+
+- Failed dimension: "Name the exact failed dimension; confidence and a domain average are not evidence."
+- Priority: "Prioritize repeated measured gaps and current scope while retaining spaced review."
+- Lesson/source: "Return to the mapped lesson and current official source; old notes do not override current guidance."
+- Practice sequence: "Retrieve the rule, complete bounded guided practice, then solve a fresh equivalent case."
+- Reassessment: "Keep remediation open until independent fresh-transfer evidence passes."
+- Stop/escalate: "Stop if scope is unclear, fresh transfer repeatedly fails, or the proposed step needs live authority."
+- Escalation records the blocker and required human/source decision; it never invents certainty or performs the blocked action.
+
+### RP04 — Primary and fresh-transfer transitions
+
+- Primary completion, `901 TEACHER`: "Primary planner complete: 12/12. Fresh transfer and a closed-note explanation remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No service or external action occurred."
+- Transfer open: `SYSTEM`: "Remediation Planner open. TRANSFER 1/6. Course-authored; no exam guarantee."
+- Transfer instruction, `901 TEACHER`: "Apply the same gap, priority, source, practice, reassessment, and safety method to fresh cases."
+- Transfer completion: `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+- Mastery remains unavailable until every weak objective has all eleven route fields and a satisfied reassessment rule.
+
+### RP05 — Closed-note planner explanation
+
+- Target filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- `901 TEACHER`: "Explain gap/priority, lesson/source routing, retrieval-to-transfer, reassessment, and stop safeguards."
+- Target field labels: `gap priority`, `source route`, `practice reassessment`, and `stop safeguards`.
+- `PILOT // CLOSED-NOTE PLANNER OWNER`: "I produced this remediation-plan explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- Confidence is tutoring data only. It cannot close a route, mark readiness, or imply an exam result.
+
+### RP06 — Mastery and progression handoff
+
+- `901 TEACHER`: "Remediation Planner mastery confirmed: both forms, the closed-note explanation, and all weak routes are complete."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. This is not an exam guarantee."
+- Continue becomes the preferred focus target after acknowledgement; progression remains a separate learner action.
+- Persistent evidence stores objective/lesson/source IDs, failed dimension, practice type, reassessment status, attempts, hints, confidence, and tags only.
+- No exam text, personal notes, credential, endpoint, payload, service response, action request, choice, or prose persists.
+- `SCENE`: "The completed route and Tidal Lens remain unchanged."
+
+### RP07 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Remediation Planner closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] routes remain in this session."
+- Reopen: `SYSTEM`: "Remediation Planner restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Remediation Planner restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores routes and statuses. Reload restores sanitized route eligibility with clean scenario/prose fields.
+- Scene transition clears working scenarios and runtime state; sanitized route evidence persists separately.
+- Exit never calls a service, uses credentials/Azure, performs an action, guarantees an exam result, or advances progression.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1489,4 +1587,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Visual Patterns persists no media/path, description, prompt/output, endpoint, credential, response, action request, or prose.
 - Objective Ledger status is objective-specific evidence state; confidence and domain averages never substitute for mastery.
 - Objective Ledger persists no exam text, credential, endpoint, service data, personal notes, action request, or prose.
+- Remediation Planner routes exact measured gaps through mapped lessons, current official sources, and fresh evidence.
+- Remediation Planner persists no exam text, notes, credentials, endpoint/payload/response data, action request, or prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
