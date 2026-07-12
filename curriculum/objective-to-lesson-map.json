@@ -464,16 +464,22 @@
           "supports_python_skills": ["PY-019", "PY-020"],
           "prerequisite_lesson_ids": ["L-05-07"],
           "launch_tier": "launch_critical",
-          "source_mode": "blended_source_review",
+          "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-homepage-markdown-ai-901-homepage-md",
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "ai-900-study-guide-markdown-ai-900-study-guide-md",
-            "ai900-practice-assessment-placeholder"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-FOUNDRY-AGENTS",
+            "OFFICIAL-FOUNDRY-RESPONSIBLE-AI",
+            "OFFICIAL-GENAI-CONCEPTS",
+            "OFFICIAL-AZURE-LANGUAGE",
+            "OFFICIAL-AZURE-SPEECH",
+            "OFFICIAL-AZURE-VISION",
+            "OFFICIAL-CONTENT-UNDERSTANDING"
           ],
           "activity_ids": ["A-L0601-1", "A-L0601-2"],
           "assessment_ids": ["AS-L0601-OBJ"],
-          "mastery_gate": "has a visible status for every AI-901 objective"
+          "mastery_gate": "score 30 of 30 on primary and fresh-transfer forms, covering objective selection and evidence for all 15 AI-901 objectives, with no objective left unassessed and a closed-note domain explanation"
         },
         {
           "lesson_id": "L-06-02",

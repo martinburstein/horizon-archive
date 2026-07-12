@@ -589,3 +589,25 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0506-VISUAL-PATTERNS` as an offline scenario terminal with deterministic two-form scoring and text equivalents for all visuals.
 Notes: No service call, Azure mutation, credential use, media access/upload/generation/publication/deletion, external action, gameplay, or lore change occurred. Portal labels, models/capabilities, SDK/API versions, endpoints, authentication, media formats/limits, regions, quotas, prices, safety controls, previews, and deprecations remain volatile.
+
+## Log entry: 2026-07-12T16:31:19-04:00
+
+Stage: Sequential AI-901 mastery expansion
+Action: Skipped already-complete `L-05-07` and completed exactly one first-unfinished mapped package, `L-06-01`, as a source-grounded objective-by-objective mastery review with a 15-objective evidence ledger, guided practice, retrieval, deterministic primary/transfer assessment, remediation, strict readiness gate, and Exercise Agent contract.
+Files touched:
+- curriculum/lessons/L-06-01/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 study guide and all required priority Foundry sources checked first: pass
+- all 15 current mapped AI-901 objectives represented exactly once per form: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisites, objectives, Python skills, official sources, map alignment, local link, and privacy/session/accessibility/action safeguards: pass
+- validator self-test, confidence-bypass probe, and simulated-live-action probe: pass
+- primary reference 30/30; transfer reference 30/30; blank primary and transfer correctly rejected at 0/30 with exit 1
+- existing `L-05-06` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0601-OBJECTIVE-LEDGER` as an accessible objective ledger plus one-scenario-at-a-time terminal.
+Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Objective names/weights, portal labels, SDK/APIs, models, tools, regions, prices, previews, and deprecations remain volatile; review scenarios are course-authored and do not guarantee an exam result.

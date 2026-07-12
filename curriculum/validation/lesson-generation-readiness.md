@@ -38,6 +38,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-05-04` — complete source-grounded offline single-agent package covering agent fit, instructions, least-privilege tools, portal testing, action safety, and client flow
 - `curriculum/lessons/L-05-05` — complete source-grounded offline text-and-speech solution package covering capability selection, client configuration, result handling, and action safety
 - `curriculum/lessons/L-05-06` — complete source-grounded offline visual solution package covering analysis, multimodal prompting, generation, media/request validation, provenance, and action safety
+- `curriculum/lessons/L-06-01` — complete source-grounded objective ledger and two-form mastery review covering all 15 current AI-901 objectives without confidence-based bypass
 
 ## Ready now
 
