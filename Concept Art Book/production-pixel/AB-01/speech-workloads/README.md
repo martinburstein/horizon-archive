@@ -20,7 +20,9 @@ Inlet/outlet orientation, register position, straight/bent routes, cap geometry,
 - **Native strip:** [speech-workloads-1x-256x64.png](speech-workloads-1x-256x64.png).
 - **Exact nearest-neighbor 2x:** [512 x 128](qa/speech-workloads-2x-512x128.png).
 - **Grayscale QA:** [256 x 64](qa/speech-workloads-grayscale-256x64.png).
+- **Isolation QA:** [four independent workload tiles at exact 2x](qa/speech-workloads-isolation-2x-512x128.png).
 - **Renderer:** [build_speech_workloads_strip.py](build_speech_workloads_strip.py); integer geometry only and no reference inputs.
+- **Acceptance validator:** [validate_speech_workloads.py](validate_speech_workloads.py).
 - **AB-01 anchor:** crop one `64 x 64` tile and place at `x=156, y=211` in the `640 x 360` world.
 - **Hotspot:** retain `x=156, y=205, w=68, h=76`; ≥44 x 44 at native 1x.
 

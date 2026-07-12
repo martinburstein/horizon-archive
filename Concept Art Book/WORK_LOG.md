@@ -159,3 +159,11 @@
 - **Validation:** native `256 x 64` and exact nearest-neighbor `512 x 128` pass; all six tile pairs remain distinct in grayscale; recognition, synthesis, and multimodal signal paths are individually connected and direction-marked; cancelled state has exactly two capped signal components separated by a hard gap; each 64 x 64 crop fits the existing 68 x 76 hotspot/anchor; links pass; no text, smoothing, world-boundary crossing, or footer intrusion.
 - **Next recommended item:** Accessibility Sentinel should distinguish all three workloads and cancellation at native grayscale and confirm transcript equivalents are mandatory; Coder must expose live labels and reversible cancellation.
 - **Unresolved risks:** the physical strip cannot convey speech content, language, timing, consent, or model behavior. Live labels, transcripts, and accessible controls remain authoritative.
+
+## 2026-07-12 — Speech Workloads acceptance completion
+
+- **Completed:** rebuilt the existing strip with the corrected synthesis renderer, joined the multimodal upward direction cue to its channel, added explicit isolation evidence, and completed the acceptance suite without redesigning the four tiles.
+- **Files changed:** updated the existing renderer/spec/outputs; added isolation QA and reusable acceptance validator. No new motif, scene, audio, interface, or lore was introduced.
+- **Validation:** exact `256 x 64` native and byte-exact `512 x 128` nearest-neighbor/isolation assets; grayscale strip exact; all six tile pairs distinct in grayscale; recognition/synthesis/multimodal each have one connected signal component; cancellation has exactly two; right/right/up direction tips physically join their channels; hard cancellation gap persists; four 64 x 64 crops fit the 68 x 76 hotspot/anchor; world/footer separation and links pass.
+- **Next recommended item:** Accessibility Sentinel should verify the four tiles at native grayscale and require transcript equivalents; Coder may integrate only with live workload labels and reversible cancellation.
+- **Unresolved risks:** physical geometry remains a mnemonic. Speech content, consent, language, timing, errors, and transcript semantics require live accessible UI.

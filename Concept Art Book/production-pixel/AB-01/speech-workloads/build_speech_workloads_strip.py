@@ -28,7 +28,7 @@ def channel(d, points, direction):
     if x > 0:
         d.polygon([(33, y - 2), (36, y), (33, y + 2)], fill=P["amber1"])
     elif y < 0:
-        d.polygon([(x - 2, 31), (x, 28), (x + 2, 31)], fill=P["amber1"])
+        d.polygon([(x - 2, 37), (x, 34), (x + 2, 37)], fill=P["amber1"])
 
 
 def voice_port(d, x, y, outward=False):
@@ -99,6 +99,7 @@ def main():
         strip.paste(part, (i * 64, 0), part)
     strip.save(ROOT / "speech-workloads-1x-256x64.png", optimize=False)
     strip.resize((512, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "speech-workloads-2x-512x128.png", optimize=False)
+    strip.resize((512, 128), Image.Resampling.NEAREST).save(ROOT / "qa" / "speech-workloads-isolation-2x-512x128.png", optimize=False)
     ImageOps.grayscale(strip).save(ROOT / "qa" / "speech-workloads-grayscale-256x64.png", optimize=False)
 
 
