@@ -126,13 +126,16 @@
           "launch_tier": "launch_critical",
           "source_mode": "source_grounded",
           "source_ids": [
-            "ai-901-study-guide-markdown-ai-901-study-guide-md",
-            "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
-            "microsoft-learn-paths-get-started-with-ai-applications-and-agents-on-azure-modules-01-get-started-with-ai-in-azure-04-4-"
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-GENAI-CONCEPTS",
+            "OFFICIAL-FOUNDRY-MODEL-ENDPOINTS",
+            "OFFICIAL-FOUNDRY-DEPLOYMENT-TYPES",
+            "OFFICIAL-FOUNDRY-PROMPT-PARAMETERS"
           ],
           "activity_ids": ["A-L0203-1", "A-L0203-2", "A-L0203-3"],
           "assessment_ids": ["AS-L0203-COMPARE"],
-          "mastery_gate": "can describe model choice, deployment, and configuration tradeoffs at a beginner-safe level"
+          "mastery_gate": "score 16 of 16 on primary and fresh-transfer forms across model mechanics, selection, deployment, and configuration, then explain one decision without notes"
         }
       ]
     },

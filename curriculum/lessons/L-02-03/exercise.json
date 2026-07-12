@@ -1,0 +1,17 @@
+{
+  "exercise_id":"EX-L0203-MODEL-DEPLOYMENT-CHOICES",
+  "lesson_id":"L-02-03",
+  "activity_id":"A-L0203-3",
+  "assessment_id":"AS-L0203-COMPARE",
+  "objective_ids":["AI901-D1-O2","AI901-D1-O3"],
+  "skill_ids":["AI901-D1-O2-MODEL-COMPONENTS","AI901-D1-O3-DEPLOYMENT-CONFIG"],
+  "forms":["primary","transfer"],
+  "dimensions":["decision","reason"],
+  "mastery":{"minimum_correct_per_form":16,"total_per_form":16,"topic_families_required":["mechanics","model_choice","deployment","configuration"],"closed_note_explanation_required":true},
+  "remediation_sequence":["name_the_requirement","separate_model_from_deployment_and_request","compare_two_options","state_the_tradeoff","retry_fresh_form"],
+  "misconception_tags":["model-is-a-database","largest-model-always-best","deployment-name-is-model-name","global-means-single-region","provisioned-is-pay-per-token","temperature-guarantees-truth","max-output-tokens-is-context-window","tune-temperature-and-top-p-together"],
+  "evidence_contract":{"store":["lesson_id","exercise_id","form","item_correctness","attempt_count","hint_level","confidence","misconception_tags","mastery_status"],"do_not_store":["free_form_explanation","prompt_text","runtime_output"]},
+  "session_contract":{"close_reopen":"restore_active_choices","scene_transition":"clear_working_choices","mastery_evidence":"persist_separately"},
+  "ui_contract":{"target_viewport":"640x480","presentation":"one_decision_card_at_a_time","must_not_rely_on_color_alone":true},
+  "accessibility_contract":{"keyboard_order":["prompt","decision","reason","check","hint","next","exit"],"persistent_labels":true,"field_associated_feedback":true,"status_live_region":true,"time_limit":false,"reduced_motion":true}
+}

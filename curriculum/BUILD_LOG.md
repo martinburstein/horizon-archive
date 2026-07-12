@@ -264,3 +264,27 @@ Validation:
 - `git diff --check`: pass
 Next step: Exercise Agent can render `EX-L0202-RESPONSIBLE-AI`; next Teacher package in sequence is `L-02-03`.
 Notes: Scenarios, distractors, and 24/24 coaching gates are course-authored and not Microsoft exam questions. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T06:20:28-04:00
+
+Stage: Sequential source-grounded learner expansion
+Action: Built complete `L-02-03` model-mechanics, selection, deployment, and configuration lesson with guided instruction, two eight-scenario forms, decision-plus-reason scoring, targeted remediation, and strict transfer.
+Files touched:
+- curriculum/lessons/L-02-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all required priority Foundry sources checked first: pass
+- current official model endpoint, deployment type, generative concepts, and parameter sources registered: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisite, objective mapping, source IDs, and local source-register link: pass
+- scenario forms cover mechanics, model choice, deployment, and configuration: pass
+- validator self-test and negative probes: pass
+- primary reference 16/16; transfer reference 16/16; blank form correctly rejected at 0/16
+- existing `L-02-02` validator regression: pass
+- `git diff --check`: pass
+Next step: Exercise Agent can render `EX-L0203-MODEL-DEPLOYMENT-CHOICES`; Teacher Agent should await the next approved dependency-safe lesson.
+Notes: Instant access is explicitly labeled preview and all volatile model, SKU, region, quota, price, and parameter details require revalidation. No gameplay or narrative files changed.

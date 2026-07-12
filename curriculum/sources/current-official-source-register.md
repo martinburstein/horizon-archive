@@ -28,6 +28,14 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Authority for the current Discover, Protect, and Govern responsible AI lifecycle in Microsoft Foundry.
 - `OFFICIAL-RESPONSIBLE-AI-TRAINING`: [Apply responsible AI principles](https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/)
   - Official instruction covering fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.
+- `OFFICIAL-GENAI-CONCEPTS`: [Introduction to generative AI and agents](https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/)
+  - Beginner authority for core generative AI, large language model, prompt, and agent concepts.
+- `OFFICIAL-FOUNDRY-MODEL-ENDPOINTS`: [Endpoints for Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/endpoints)
+  - Authority for the model-versus-deployment distinction and deployment-name request behavior.
+- `OFFICIAL-FOUNDRY-DEPLOYMENT-TYPES`: [Deployment types for Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types)
+  - Authority for current standard/provisioned categories, processing scope, capacity, and preview labels.
+- `OFFICIAL-FOUNDRY-PROMPT-PARAMETERS`: [Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering)
+  - Supporting authority for probabilistic completion behavior and temperature/top-p tradeoffs; model-specific support must be reverified.
 - `OFFICIAL-CONTENT-UNDERSTANDING`: [Azure Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
   - Authority for current multimodal information-extraction capabilities and terminology. The current page describes document, image, video, and audio inputs, user-defined output formats, analyzer field schemas, and structured JSON.
 - `OFFICIAL-CONTENT-UNDERSTANDING-ANALYZER`: [Content Understanding analyzer reference](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/analyzer-reference)
