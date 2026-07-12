@@ -75,6 +75,11 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] The Model Choices form is the only scroller; its field group and outer Terminal do not scroll independently.
 - [ ] Decision/reason focus frames, field feedback, score, comparison hint, and next action remain unclipped.
 - [ ] Dialogue ownership labels remain in the lower band and do not replace lesson/item status inside the Terminal.
+- [ ] L-02-03 primary, transfer, closed-note, and mastered states expose the correct five-label hierarchy.
+- [ ] Phase-aware exits name the active phase and use the System lower-strip speaker; completion uses the 901 Teacher speaker.
+- [ ] Closing clears private draft controls while keeping sanitized eligibility; the visible message states that consequence.
+- [ ] Primary, transfer-remediation, and closed-note captures exist under distinct filenames and are byte-distinct.
+- [ ] Layer motif, border weights, focus frames, validator color, and typography remain consistent across all three captures.
 
 ## No-dead-end sweep
 

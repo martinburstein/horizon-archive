@@ -101,6 +101,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Validator order is score -> requirement/layer cue -> comparison hint -> next action. The hint must distinguish model, deployment, and request configuration rather than merely announcing an incorrect answer.
 - Stage hierarchy is title -> `primary_choices.json` and lesson/status -> course-authored/live-facts boundary -> topic/item count -> scenario -> decision/reason -> strict validator. Speaker ownership remains outside the modal in the lower dialogue band and must not compete with item status.
 - Native controls and scrollbars remain until accessible original bitmap equivalents exist. Square one- and two-pixel borders, stepped state changes, and the limited indigo/amber ramp provide period character without copying proprietary chrome.
+- Across the complete flow, preserve five ownership/context labels: course-authored/live-facts boundary; `MODEL · DEPLOYMENT · REQUEST CONFIGURATION`; `PILOT // DECISION OWNER`; `SYSTEM // ... VALIDATOR`; and `901 TEACHER // ... GATE/COMPLETE`. These labels form a semantic hierarchy, not decorative badges.
+- Exit copy must name `Primary form`, `Transfer form`, or `Closed-note gate` and render in the lower strip under `SYSTEM // EXPEDITION STATE`. Primary and strict-mastery completion copy renders under `901 TEACHER // SOURCE-GROUNDED COURSE`.
+- Motif continuity is phase-stable: indigo frame for Machine context, amber for volatile-source/boundary text, violet for phase/item labels, light text for learner-owned decisions, and amber validator feedback. Do not assign a new palette to transfer or closed-note stages.
 
 ## Responsible AI primary-form containment
 

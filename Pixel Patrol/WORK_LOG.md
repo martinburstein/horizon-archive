@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — L-02-03 final visual gate
+
+- **Completed:** performed the final canonical/narrow gate for the complete Model/Deployment Choices primary, transfer, closed-note, and mastered flow after continuity fixes. The phase hierarchy, one-card density, two-field grouping, one form scroller, internal focus frame, independent remediation, five persistent labels, layer motif, Pilot/System/901 Teacher ownership, and mode-aware exit copy are coherent at 640 x 480 and the authored 320 x 240 alternate. No CSS correction was warranted.
+- **Files changed:** `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. No gameplay code or CSS changed.
+- **Validation:** all 47 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. E2E confirms primary and transfer 16/16, closed-note decision/reason, strict mastery, three phase-aware exit messages, System/Teacher lower-strip ownership, privacy clearing, forged-phase rejection, and three distinct captures. Static hashes confirm `model-choice-primary-qa.png`, `model-choice-transfer-remediation-qa.png`, and `model-choice-closed-note-qa.png` exist above 40 KB and are byte-distinct; visual inspection confirms a shared frame, palette, type, focus, field, and validator grammar.
+- **Next recommended item:** Location Scout should carry the locked three-ring/two-part-core motif forward without adding new phase colors; indicate progression through ring alignment and center geometry only.
+- **Unresolved risks:** `model-choice-primary-remediation-qa.png` also remains from an earlier run beside the three current canonical capture names. It is not part of this gate and was deliberately not removed during the bounded audit.
+
 ## 2026-07-12 — Model/deployment primary-form audit
 
 - **Completed:** audited `EX-L0203-MODEL-DEPLOYMENT-CHOICES` at the canonical 640 x 480 and authored 320 x 240 contracts. The correct density model is already implemented: one of eight scenario cards, two paired response fields, two columns at canonical width, one decision-then-reason column at narrow width, one contained form scroller, fixed outer Terminal chrome, field-associated remediation, progressive comparison hints, and explicit title/file/item/lesson hierarchy. No CSS change was warranted; locked the implementation as the production rule instead of adding ornamental churn.

@@ -20,6 +20,8 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Responsible AI field focus | 2 px internal outline, -3 px offset | Horizon adaptation |
 | Model/deployment scenario density | 1 of 8 cards visible; 2 response fields per card | Implemented Horizon metric |
 | Model/deployment field grouping | 2 columns canonical; 1 column narrow | Horizon adaptation |
+| L-02-03 persistent role labels | 5: course boundary, layer motif, Pilot owner, System validator, 901 Teacher gate | Implemented Horizon metric |
+| L-02-03 retained QA stages | 3 byte-distinct captures: primary, transfer remediation, closed note | Production QA metric |
 
 Do not compose the final frame from a separately scaled 320 x 180 world and responsive HTML UI. Render the complete 640 x 480 logical surface, then scale that surface as one unit.
 
