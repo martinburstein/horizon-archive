@@ -1,0 +1,10 @@
+{
+  "exercise_id":"EX-L0303-CLIENT-BRIDGE","lesson_id":"L-03-03","activity_id":"A-L0303-3","assessment_id":"AS-L0303-READY","objective_ids":[],"skill_ids":["PY-013","PY-014","PY-015","PY-017","PY-018"],"forms":["primary","transfer"],
+  "mastery":{"minimum_checks_per_form":10,"total_checks_per_form":10,"retrieval_correct":4,"retrieval_total":4,"hidden_config_probe_required":true,"missing_secret_probe_required":true,"secret_redaction_required":true,"closed_note_explanation_required":true},
+  "remediation_sequence":["identify_failed_layer","separate_install_from_import","trace_path_to_parsed_config","trace_secret_name_not_secret_value","label_http_parts","retry_hidden_config"],
+  "misconception_tags":["install-equals-import","module-equals-package","path-is-file-content","secret-in-source","secret-in-output","request-is-response","body-is-header","hardcoded-config"],
+  "evidence_contract":{"store":["lesson_id","exercise_id","form","check_correctness","attempt_count","hint_level","confidence","misconception_tags","mastery_status"],"do_not_store":["learner_source","config_body","secret_name","secret_value","authorization_header","runtime_output"]},
+  "session_contract":{"close_reopen":"restore_active_source","scene_transition":"clear_source_and_runtime_environment","mastery_evidence":"persist_separately"},
+  "ui_contract":{"target_viewport":"640x480","panes":["instructions","editor","output","checks"],"must_not_rely_on_color_alone":true},
+  "accessibility_contract":{"keyboard_order":["instructions","editor","run","output","checks","hint","reset","exit"],"persistent_labels":true,"error_line_and_text":true,"status_live_region":true,"time_limit":false,"reduced_motion":true}
+}

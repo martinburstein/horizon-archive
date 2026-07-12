@@ -1,0 +1,6 @@
+[
+  {"id":"R01","prompt":"json, os, and pathlib ship with Python. What should you do before importing them?","answer":"import_standard_library_no_pip"},
+  {"id":"R02","prompt":"A project needs a third-party SDK that is not installed in the active environment.","answer":"install_package_into_active_environment_then_import"},
+  {"id":"R03","prompt":"Where should a credential value come from in this bridge?","answer":"environment_lookup_not_source_or_output"},
+  {"id":"R04","prompt":"Which set names the core HTTP request parts and keeps the response separate?","answer":"method_url_headers_body_then_status_and_response_body"}
+]

@@ -1,0 +1,3 @@
+[
+  {"assessment_id":"AS-L0303-READY","lesson_id":"L-03-03","assessment_type":"readiness_gate","supports_objectives":[],"supports_python_skills":["PY-013","PY-014","PY-015","PY-017","PY-018"],"mastery_signal":"independent_use","attempt_policy":"Score retrieval 4/4 and primary 10/10, remediate every failed layer, then pass unseen transfer 10/10 and explain the full flow without notes.","result_states":["correct","partially_correct","incorrect","not_attempted","needs_review"],"records_confidence":true,"records_misconception_tags":true,"records_review_flag":true,"status":"review"}
+]

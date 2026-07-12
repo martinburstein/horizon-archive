@@ -192,12 +192,15 @@
           "launch_tier": "launch_critical",
           "source_mode": "invented_bridge_with_supporting_reference",
           "source_ids": [
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-SDK",
+            "OFFICIAL-FOUNDRY-HUB",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf",
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf"
           ],
           "activity_ids": ["A-L0303-1", "A-L0303-2", "A-L0303-3"],
           "assessment_ids": ["AS-L0303-READY"],
-          "mastery_gate": "can explain how a simple script, package import, file path, secret, and HTTP request fit together"
+          "mastery_gate": "score retrieval 4 of 4 and both client-bridge forms 10 of 10, including hidden-config, missing-secret, offline, and redaction probes, then explain the full flow without notes"
         }
       ]
     },

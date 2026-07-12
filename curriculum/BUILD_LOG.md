@@ -330,3 +330,26 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-L0302-CONTROL-FLOW`.
 Notes: This is course-authored Python bridge instruction. Future Foundry SDK versions, service schemas, endpoints, and runtime requirements remain volatile. No gameplay or narrative files changed.
+
+## Log entry: 2026-07-12T08:32:50-04:00
+
+Stage: Sequential Python-to-Foundry bridge expansion
+Action: Built exactly one next mapped lesson, `L-03-03`, as a complete offline bridge connecting imports, packages/environments, JSON files, environment-backed secrets, HTTP request parts, response concepts, and safe redacted output.
+Files touched:
+- curriculum/lessons/L-03-03/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- current AI-901 guide and all four required priority Foundry sources checked first: pass
+- official SDK/package/authentication/endpoint alignment: pass
+- all curriculum JSON parsed; lesson/activity/assessment schema contracts: pass
+- IDs, prerequisite, skill coverage, source references, map alignment, and local link: pass
+- validator self-test, hidden-config reuse, missing-secret rejection, offline constraint, and credential-redaction probes: pass
+- primary reference 10/10; transfer reference 10/10; retrieval reference 4/4
+- unfinished starters correctly rejected at 4/10 each; blank retrieval correctly rejected at 0/4
+- existing `L-03-02` validator regression: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-L0303-CLIENT-BRIDGE`.
+Notes: No live network call occurs and no credential is stored or printed. Package versions, SDK choices, endpoints, identity flows, roles, API versions, and runtime requirements remain volatile. No gameplay or narrative files changed.

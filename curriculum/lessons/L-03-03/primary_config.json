@@ -1,0 +1,1 @@
+{"endpoint":"https://example.invalid/v1/analyze","secret_env":"ARCHIVE_API_TOKEN","body":{"text":"map the signal","limit":2}}

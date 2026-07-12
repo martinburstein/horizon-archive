@@ -1,0 +1,11 @@
+{
+  "lesson_id":"L-03-03","lesson_title":"Imports, files, packages, secrets, and APIs","lesson_type":"walkthrough_lesson","chapter_id":"chapter-03","module_id":"ch3-m3","launch_tier":"launch_critical","source_mode":"invented_bridge_with_supporting_reference","supports_objectives":[],"supports_python_skills":["PY-013","PY-014","PY-015","PY-017","PY-018"],"prerequisite_lesson_ids":["L-03-02"],
+  "source_ids":["OFFICIAL-AI901-STUDY-GUIDE","OFFICIAL-FOUNDRY-SDK","OFFICIAL-FOUNDRY-HUB","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l03-func-oops-file-err-hand-pdf","simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l04-prac-use-ai-code-g-demo-01-inst-gith-copi-in-vi-pdf"],
+  "activity_ids":["A-L0303-1","A-L0303-2","A-L0303-3"],"assessment_ids":["AS-L0303-READY"],
+  "learner_starting_state":"Can write a small reusable function over structured data but has not connected modules, files, environments, secrets, and HTTP request parts.",
+  "learner_ending_state":"Can import standard/local modules, explain package installation into the active environment, read JSON configuration, retrieve a secret without hardcoding it, and construct an HTTP-shaped request safely.",
+  "mastery_gate":"Pass primary and fresh-transfer client-bridge forms at 10 of 10, retrieval at 4 of 4, including hidden config, missing-secret, and secret-redaction probes, then explain module-file-secret-request-response flow without notes.",
+  "estimated_minutes":70,"difficulty_band":"beginner_plus",
+  "provenance_policy":{"citation_expectation":"Current Foundry package/authentication/endpoint examples trace to official Microsoft sources; offline request plans, domains, data, and gates are course-authored.","bridge_label_required":true,"unsupported_claim_behavior":"Reverify package names and versions, endpoints, authentication, API shapes, roles, and runtime requirements before live use."},
+  "status":"review","notes":"Offline two-form client bridge. It performs no network call and stores or prints no credential."
+}

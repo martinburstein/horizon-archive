@@ -1,0 +1,1 @@
+{"endpoint":"https://example.invalid/v1/extract","secret_env":"RIDGE_API_TOKEN","body":{"source":"ridge-note.txt","fields":["title","status"]}}
