@@ -18,12 +18,15 @@ Use only one channel per line. Do not blend the pilot's inference into interface
 
 | Channel | UI label | Job | Voice constraint |
 |---|---|---|---|
-| Physical response | `SCENE` or narration | Describe a visible or audible change | Concrete, sensory, no motive |
-| Human mediation layer | `EXPEDITION LINK` | Explain editor state and learning action | Clear, bounded, technically useful |
-| Translated surface response | `LOCAL SURFACE` | Return short procedural conditions | Paired distinctions; never a lore lecture |
+| Physical response | `SCENE // SENSOR RECORD` | Describe a visible or audible change | Concrete, sensory, no motive |
+| Human mediation layer | `EXPEDITION LINK // LOCAL TOOLING` | Explain editor state and learning action | Clear, bounded, technically useful |
+| Translated surface response | `LOCAL SURFACE // PROVISIONAL TRANSLATION` | Return short procedural conditions from an identified object | Paired distinctions; never a lore lecture |
 | Pilot reflection | `PILOT // FLIGHT RECORDER` | Admit interpretation or emotion | Fact first, interpretation second |
+| Save and navigation state | `SYSTEM // EXPEDITION STATE` | Explain close/reopen, reload, resume, acknowledgement, and route state | Never presented as in-world speech |
 
 The dark editor belongs to the human expedition's mediation layer. Python is real, but the UI must not claim that Python is the Builders' native language. Preferred formulation: the expedition link translates valid local Python operations into a bounded request the exposed surface can answer.
+
+When more than one object is present, append the source object in script data or visible copy, for example `LOCAL SURFACE // PROVISIONAL TRANSLATION — AUTOMATON`. Never let an unattributed “it” cross from a Terminal action to a landmark or automaton response.
 
 ## Continuity vocabulary
 

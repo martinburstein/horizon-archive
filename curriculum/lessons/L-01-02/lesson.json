@@ -1,0 +1,30 @@
+{
+  "lesson_id": "L-01-02",
+  "lesson_title": "Strings, variables, and visible output",
+  "lesson_type": "bridge_lesson",
+  "chapter_id": "chapter-01",
+  "module_id": "ch1-m2",
+  "launch_tier": "launch_critical",
+  "source_mode": "invented_bridge_with_supporting_reference",
+  "supports_objectives": [],
+  "supports_python_skills": ["PY-004", "PY-005", "PY-006"],
+  "prerequisite_lesson_ids": ["L-01-01"],
+  "source_ids": [
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-instr-slides-l01-intro-py-fund-setup-pdf",
+    "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf"
+  ],
+  "activity_ids": ["A-L0102-1", "A-L0102-2", "A-L0102-3"],
+  "assessment_ids": ["AS-L0102-QC", "AS-L0102-GATE"],
+  "learner_starting_state": "Has completed L-01-01 and can save and run a small Python file, but may still treat printed text and stored values as the same thing.",
+  "learner_ending_state": "Can create string and numeric variables, identify a boolean value, assign and reassign a variable, predict two printed lines, and explain why later output uses the latest assigned value.",
+  "mastery_gate": "Pass primary and transfer validators at 8 of 8 each, predict both transfer lines before running, and answer all four retrieval items including number-versus-string and assignment-versus-output distinctions.",
+  "estimated_minutes": 45,
+  "difficulty_band": "absolute_beginner",
+  "provenance_policy": {
+    "citation_expectation": "Python instruction and route-marker framing are course-authored bridge material supported by the named local references; no Microsoft product claim is made.",
+    "bridge_label_required": true,
+    "unsupported_claim_behavior": "Do not describe the route marker as understanding, naming, or storing the learner; do not represent this bridge lesson as official Microsoft instruction."
+  },
+  "status": "review",
+  "notes": "Sequential zero-Python package immediately after L-01-01. The route marker repeats only human-authored output."
+}

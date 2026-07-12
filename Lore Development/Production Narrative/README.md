@@ -20,6 +20,7 @@ This folder turns the visible lore bible, concept art, playable prologue, and cu
 - `dialogue-interaction-scaffolds.md`: voice rules and modular interaction templates.
 - `terminal-interaction-voice-continuity.md`: production copy and state language for first contact, held sessions, reconnection, attempts, hints, success, acknowledgement, and scene transfer.
 - `drowned-archive-interaction-packet.md`: complete ruins-scene interaction and remediation copy, with strict separation between the grounded Workload Sort Terminal and the silent suspended landmark.
+- `witness-corridor-interaction-packet.md`: complete two-object corridor interaction, evidence-session, reload/resume, acknowledgement, and credits copy contract for the automaton and grounded Evidence Terminal.
 - `code-to-discovery-integration.md`: rules and exercise patterns that make real Python produce story discoveries.
 
 ## Production rule

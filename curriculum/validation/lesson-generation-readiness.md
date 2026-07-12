@@ -6,9 +6,9 @@ Decide what must be true before full lesson generation begins.
 
 ## Current verdict
 
-`reference_pattern_gate_complete_review_pending`
+`reference_pattern_gate_complete_sequential_expansion_in_progress`
 
-The four required reference patterns are implemented and ready for review. Broad generation should begin only after the patterns are approved and source-gap scope is explicitly frozen.
+The four required reference patterns are implemented and ready for review. Controlled sequential learner-package expansion is now in progress; broad non-sequential generation still requires pattern approval and an explicit source-gap scope freeze.
 
 As of 2026-07-12, four end-to-end reference packages exist:
 
@@ -18,6 +18,11 @@ As of 2026-07-12, four end-to-end reference packages exist:
 - `curriculum/lessons/L-05-07` — source-grounded multimodal information-extraction lesson with real local image/audio/telemetry assets, null preservation, provenance, and deterministic validation
 
 All four lesson manifests pass the dependency-free schema contract check. All four learner scripts or deterministic exercise checks run successfully. The four-pattern reference gate is complete; all packages remain at `review` status until learner and owner approval.
+
+## Sequential learner expansion
+
+- `curriculum/lessons/L-01-02` — complete bridge package for strings, numbers/booleans, assignment, reassignment, prediction, and visible variable-backed output
+- next dependency-safe package: `L-01-03`
 
 ## Ready now
 

@@ -59,6 +59,10 @@ Visual constants:
 
 Interactive cues:
 
+- A grounded Evidence Terminal stands clear of the automaton with a blank inspection surface and three modality indicators; it alone opens the evidence workspace.
+- The automaton lens may shift by measured increments when the Terminal channel lights change, but the correlation does not establish attention.
+- Terminal acknowledgement and an automaton response must occur as sequential, separately attributed events; never animate the automaton as validator feedback.
+
 - The automaton has repair seams from multiple eras, but each repair preserves the same damage mark.
 - Its status fields separate `active`, `continuous`, `complete`, and `witnessed`; none is a substitute for another.
 - The corridor's niches are empty except for mounting wear, implying many absent peers without showing bodies.
@@ -68,7 +72,7 @@ Interactive cues:
 
 Use for: Booleans, debugging, speech, functions, identity fields, the difference between a record and a witness.
 
-Avoid: comic robot sidekick behavior, clean exposition dumps, declaring the automaton conscious or dead.
+Avoid: comic robot sidekick behavior, clean exposition dumps, declaring the automaton conscious or dead, attaching the Terminal to its body, letting it inspect learner evidence, or describing a measured pulse as listening.
 
 ## City Beneath / Underground City
 

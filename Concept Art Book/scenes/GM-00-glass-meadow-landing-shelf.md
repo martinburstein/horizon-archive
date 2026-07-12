@@ -39,7 +39,7 @@
 - Surface-canon boundary: the environment establishes arrival and observation only; it contains no answer about the Builders, continuity, disappearance, or the Machine.
 - Must preserve: two moons, angular mountain family, violet/peach atmosphere, small crystalline flora, human equipment distinct from ancient sites.
 - Must avoid: turning the beacon into a definitive Builder interface, enlarging the flowers into a duplicate of GM-01, adding combat or occupants, or hiding the route with atmosphere.
-- Neighboring-scene link: [GM-01 Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
+- Neighboring-scene links: [GM-01 selected dual-node plate](../images/glass-meadow-petal-route-marker-v1.png) and [original Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
 
 ## Production record
 
@@ -48,4 +48,3 @@
 - **Native dimensions:** `1672 x 941` PNG
 - **Selection notes:** selected first result; all four interaction silhouettes and the walkable route remain readable at reduced scale.
 - **Validation:** no UI, text, watermark, character, weapon, or plot revelation visible; all navigation requirements present.
-

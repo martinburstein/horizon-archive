@@ -2,6 +2,16 @@
 
 These are modular writing patterns, not a final dialogue script. They are designed for the bottom dialogue panel and short point-and-click exchanges.
 
+## Required speaker labels
+
+- `PILOT // FLIGHT RECORDER`: personal observation, emotion, and explicitly bounded inference.
+- `EXPEDITION LINK // LOCAL TOOLING`: human-authored instructions, validators, curriculum feedback, and source registration.
+- `LOCAL SURFACE // PROVISIONAL TRANSLATION`: short translated conditions attributed to one named object.
+- `SCENE // SENSOR RECORD`: physical light, movement, sound, thresholds, and bounded non-detection.
+- `SYSTEM // EXPEDITION STATE`: save, reload, resume, acknowledgement, and navigation state; never in-world dialogue.
+
+One line gets one owner. Split multi-source events into sequential lines. An unattributed pronoun must not carry agency from one hotspot to another.
+
 ## Voice palette
 
 ### Pilot / flight recorder
@@ -72,6 +82,16 @@ Contrast pattern:
 > The small surface gives the player an operation. The large object gives the player an unknown.
 
 This prevents visual scale from becoming accidental narrative authority and allows awe without turning every ruin into a speaking character.
+
+## Archaeological subject versus exercise surface
+
+When a responsive relic or automaton shares a scene with a Terminal:
+
+- The subject may be observed, addressed, and produce a bounded physical or translated response.
+- The Terminal alone owns editor state, source browsing, validation, hints, remediation, and mastery evidence.
+- A response timed after Terminal completion must be written as a second event with a second owner.
+- Correlated timing supports `CORRELATED`, not listening, approval, identity, or consciousness.
+- `USE` on the archaeological subject should report the absence of a bounded work surface or a human safety limit; never silently redirect to the Terminal.
 
 ## Success-message scaffold
 

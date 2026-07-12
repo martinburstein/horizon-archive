@@ -59,6 +59,7 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 - Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.
 - Multimodal Evidence Terminals use one blank inspection surface and exactly three restrained, non-text channel indicators. Indicator color and shape may distinguish channels, but they must not become readable writing, familiar app icons, or a projected UI.
 - When a scene contains a narrative object and a Terminal, give them separate silhouettes, light pools, and hit areas. The narrative object remains compositionally dominant; the Terminal remains operationally discoverable.
+- A dormant-but-linkable node keeps its core dark but may hold a soft internal edge shimmer and broad low-contrast ground light. A prerequisite-locked node keeps its core and status groove dark; only ambient rim and a tiny residual ground reflection preserve discoverability. An awake node lights its core and one route/status groove. State cues must not depend on color alone: core value, groove value, and light-pool size all change together.
 
 ## Delivery specification
 

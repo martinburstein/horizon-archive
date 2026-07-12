@@ -182,3 +182,24 @@ Validation:
 - all four reference package scripts/checks: pass
 Next step: Exercise Agent should implement `EX-L0507-EVIDENCE-PACKET` from the deterministic activity contract.
 Notes: The WAV and telemetry are generated bridge assets. Null preservation is course-authored evidence discipline, not a claim that the live service always returns null. No gameplay code changed.
+
+## Log entry: 2026-07-12T01:57:09-04:00
+
+Stage: Sequential zero-Python learner expansion
+Action: Built complete `L-01-02` bridge package for strings, numbers/booleans, variables, assignment, reassignment, prediction, and visible output using the spoiler-safe route-marker Terminal hook.
+Files touched:
+- curriculum/lessons/L-01-02/*
+- curriculum/objective-to-lesson-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- live AI-901 guide and all four priority Foundry/Azure sources checked for downstream alignment: pass
+- lesson/activity/assessment schema contracts: pass
+- primary and transfer references: 8/8 each
+- quoted-number, hardcoded-output, missing-reassignment, and unsafe-shape negative fixtures: pass
+- incomplete primary and transfer starters rejected: pass
+- existing reference-package regression scripts: pass
+Next step: Exercise Agent should implement `EX-L0102-ROUTE-MARKER`; next Teacher package in sequence is `L-01-03`.
+Notes: This is generated bridge instruction, not official Microsoft product guidance. The route marker repeats human-authored output without implying understanding or renaming. No gameplay code changed.

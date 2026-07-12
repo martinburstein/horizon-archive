@@ -18,7 +18,7 @@ The first comparison exposed a duplicated textbox because the supplied raster al
 - Fonts and typography: restrained serif narrative type and monospaced technical labels match the archaeological/terminal tone; hierarchy remains legible without competing with the artwork.
 - Spacing and layout rhythm: approximately 74% scene and 26% controls, matching the source's intended landscape/textbox balance. Verbs, dialogue, and inventory remain visually separate.
 - Colors and visual tokens: near-black violet panels, aged ivory text, and muted lavender accents derive from the supplied art.
-- Image quality and asset fidelity: the meadow, corridor, and city use supplied Concept Art PNGs; the ruins use the selected clean AB-01 production plate from the Concept Art Book. No inline SVG, CSS drawing, or generic placeholder is used.
+- Image quality and asset fidelity: the meadow and city use supplied Concept Art PNGs; the ruins and corridor use selected clean AB-01 and WC-01 production plates from the Concept Art Book. No inline SVG, CSS drawing, or generic placeholder is used.
 - Copy and content: surface-lore-safe mystery language, short verb labels, real Python syntax, and beginner-readable instructions.
 
 ## Interaction and accessibility checks
@@ -28,6 +28,7 @@ The first comparison exposed a duplicated textbox because the supplied raster al
 - Browser console errors checked: none.
 - Reduced-motion preference is respected.
 - The grounded ruins Terminal target is source-mapped through `object-fit: cover`, exceeds 44×44 CSS pixels, and supports pointer and Enter-key activation at 1600×900 and 320×900. Evidence: `../playtest/drowned-archive-terminal-desktop-qa.png` and `../playtest/drowned-archive-terminal-narrow-qa.png`.
+- WC-01 exposes separate, non-overlapping Evidence Terminal and automaton buttons. Only the Terminal launches the assessment; both have source-mapped desktop/320px targets, visible focus, pointer/Enter coverage, and distinct accessible semantics. Evidence: `../playtest/witness-corridor-hotspots-desktop-qa.png` and `../playtest/witness-corridor-hotspots-narrow-qa.png`.
 
 ## Findings
 

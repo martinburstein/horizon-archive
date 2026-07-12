@@ -17,6 +17,10 @@ This is the spoiler-safe visual production atlas for the places a player can vis
 
 Production notes: [GM-00 — Glass Meadow Landing Shelf](scenes/GM-00-glass-meadow-landing-shelf.md).
 
+[![Glass Meadow Petal and Route Marker](images/glass-meadow-petal-route-marker-v1.png)](images/glass-meadow-petal-route-marker-v1.png)
+
+Production notes: [GM-01 — Glass Meadow Petal and Route Marker](scenes/GM-01-glass-meadow-petal-route-marker.md).
+
 [![Drowned Archive Workload Terminal](images/drowned-archive-workload-terminal-v1.png)](images/drowned-archive-workload-terminal-v1.png)
 
 Production notes: [AB-01 — Drowned Archive Workload Terminal](scenes/AB-01-drowned-archive-workload-terminal.md).

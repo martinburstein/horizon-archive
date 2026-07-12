@@ -33,7 +33,7 @@ try {
 
   const openQuestion = async () => {
     await page.getByRole("button", { name: "USE", exact: true }).click();
-    await page.locator("button.hotspot").click();
+    await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   };
   const answer = async (value) => {
     await page.locator("#python-entry").fill(value);
@@ -41,7 +41,10 @@ try {
   };
 
   await page.getByRole("button", { name: "USE", exact: true }).click();
-  await page.locator("button.hotspot").click();
+  await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
+  await page.getByText("Complete the Petal Terminal first", { exact: false }).waitFor();
+  if (await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').count()) throw new Error("Route marker opened before L-01-01");
+  await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
   await page.getByRole("button", { name: "Run Python", exact: true }).click();
   await page.getByText("wrong value", { exact: false }).waitFor();
@@ -57,7 +60,7 @@ print("Python signal:", signal)`;
   await page.getByText("wrong value", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor({ state: "detached" });
-  await page.locator("button.hotspot").click();
+  await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
   if (await page.locator("#terminal-code").inputValue() !== sessionCode) throw new Error("Terminal code was reset after close/reopen");
   await page.getByText("wrong value", { exact: false }).waitFor();
@@ -83,6 +86,83 @@ print("Operator:", learner)`);
   if (evidence?.lessonId !== "L-01-01" || evidence?.activityId !== "A-L0101-3" || evidence?.attempts !== 3 || !evidence?.hintUsed || !evidence?.completed) {
     throw new Error(`Terminal mastery evidence incomplete: ${JSON.stringify(evidence)}`);
   }
+  if (await page.getByRole("button", { name: "Continue", exact: true }).count()) throw new Error("L-01-01 skipped the required route marker");
+
+  await page.locator('button.hotspot[data-hotspot-id="route-marker"]').hover();
+  await page.locator(".scene-frame").screenshot({ path: "playtest/route-marker-hotspot-desktop-qa.png" });
+  await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
+  await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').waitFor();
+  const routeDraft = `# ROUTE_SESSION_ONLY_SENTINEL\n${routePrimaryReference().replace("channel_count = 3", 'channel_count = "3"')}`;
+  await page.locator("#route-source-editor").fill(routeDraft);
+  await page.getByLabel("Predicted output line 1", { exact: true }).fill("DROWNED ARCHIVE");
+  await page.getByLabel("Predicted output line 2", { exact: true }).fill("LOCAL SURFACE 3");
+  await page.getByRole("button", { name: "Run route form", exact: true }).click();
+  await page.getByRole("status").getByText("E_CHANNEL_TYPE", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Reveal next trace", exact: true }).click();
+  await page.getByText("Assignment trace", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
+  await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').waitFor();
+  if (await page.locator("#route-source-editor").inputValue() !== routeDraft) throw new Error("Route source reset after same-scene close/reopen");
+  if (await page.getByLabel("Predicted output line 2", { exact: true }).inputValue() !== "LOCAL SURFACE 3") throw new Error("Route prediction reset after close/reopen");
+  await page.getByText("Assignment trace", { exact: false }).waitFor();
+  const routeDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (!routeDraftSave || JSON.parse(routeDraftSave).routeMarkerMastery?.attemptCount !== 1) throw new Error("Route attempt evidence missing");
+  if (routeDraftSave.includes("ROUTE_SESSION_ONLY_SENTINEL") || routeDraftSave.includes("LOCAL SURFACE 3")) {
+    throw new Error("Route working source, prediction, or output leaked into localStorage");
+  }
+  await page.screenshot({ path: "playtest/route-marker-terminal-desktop-qa.png", fullPage: true });
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.screenshot({ path: "playtest/route-marker-terminal-narrow-qa.png", fullPage: true });
+  await page.locator("#route-source-editor").scrollIntoViewIfNeeded();
+  if (!await page.locator("#route-source-editor").isVisible()) throw new Error("Route source editor unreachable at 320px");
+  await page.setViewportSize({ width: 1600, height: 900 });
+
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.locator('main[data-scene="meadow"]').waitFor();
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
+  await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').waitFor();
+  if (!await page.locator("#route-source-editor").inputValue().then((value) => value.includes('site_name = "TODO"') && !value.includes("ROUTE_SESSION_ONLY_SENTINEL"))) {
+    throw new Error("Full reload did not restore a clean route form");
+  }
+  if (await page.getByLabel("Predicted output line 1", { exact: true }).inputValue()) throw new Error("Prediction survived full reload");
+  const routeAfterReload = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
+  if (routeAfterReload?.attemptCount !== 1) throw new Error("Sanitized route evidence did not survive reload");
+
+  await page.locator("#route-source-editor").fill(routePrimaryReference());
+  await page.getByLabel("Predicted output line 1", { exact: true }).fill("DROWNED ARCHIVE");
+  await page.getByLabel("Predicted output line 2", { exact: true }).fill("LOCAL SURFACE 3");
+  await page.getByRole("button", { name: "Run route form", exact: true }).click();
+  await page.getByText("8/8", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Load fresh transfer form", exact: true }).click();
+  await page.locator("#route-source-editor").fill(routeTransferReference());
+  await page.getByLabel("Predicted output line 1", { exact: true }).fill("ROUTE VERIFIED");
+  await page.getByLabel("Predicted output line 2", { exact: true }).fill("ROUTE VERIFIED 3");
+  await page.getByRole("button", { name: "Run route form", exact: true }).click();
+  await page.getByText("prediction 1/2", { exact: false }).waitFor();
+  await page.getByLabel("Predicted output line 1", { exact: true }).fill("DROWNED ARCHIVE");
+  await page.getByRole("button", { name: "Run route form", exact: true }).click();
+  await page.getByRole("button", { name: "Begin retrieval gate", exact: true }).click();
+  await page.getByLabel("Retrieval answer 1", { exact: true }).selectOption("same");
+  await page.getByLabel("Retrieval answer 2", { exact: true }).selectOption("no");
+  await page.getByLabel("Retrieval answer 3", { exact: true }).selectOption("latest");
+  await page.getByLabel("Retrieval answer 4", { exact: true }).selectOption("reuse");
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByRole("status").getByText("3/4", { exact: false }).waitFor();
+  await page.getByLabel("Retrieval answer 1", { exact: true }).selectOption("number_string");
+  await page.getByRole("button", { name: "Check retrieval", exact: true }).click();
+  await page.getByRole("heading", { name: "Primary 8/8 · Transfer 8/8 · Retrieval 4/4", exact: true }).waitFor();
+  await page.getByRole("radio", { name: "Medium", exact: true }).check();
+  await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
+  const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
+  if (routeMastery?.exerciseId !== "EX-L0102-ROUTE-MARKER" || routeMastery?.attemptCount !== 6 || routeMastery?.hintLevel !== 2 || routeMastery?.confidence !== "medium" || routeMastery?.masteryStatus !== "mastered") {
+    throw new Error(`Route marker mastery incomplete: ${JSON.stringify(routeMastery)}`);
+  }
+  if (routeMastery.predictionCorrectness?.primary?.some((value) => !value) || routeMastery.predictionCorrectness?.transfer?.some((value) => !value)) throw new Error("Final prediction correctness incomplete");
+  if (Object.values(routeMastery.checkResults?.retrieval || {}).some((value) => !value)) throw new Error("Retrieval gate incomplete");
+  if (["source", "prediction", "output", "notes", "answers"].some((key) => key in routeMastery)) throw new Error("Route working state persisted in mastery evidence");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
@@ -119,7 +199,7 @@ print("Operator:", learner)`);
   await page.locator('input[name="workload-choice"][value="a"]').check();
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').waitFor({ state: "detached" });
-  await page.locator("button.hotspot").click();
+  await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').waitFor();
   if (!await page.locator('input[name="workload-choice"][value="a"]').isChecked()) throw new Error("Workload draft selection reset after close/reopen");
   await page.getByText("Level 2 contrast", { exact: false }).waitFor();
@@ -161,6 +241,16 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
+
+  await assertWitnessHotspotAlignment(page, "desktop");
+  await captureWitnessScene(page, "playtest/witness-corridor-hotspots-desktop-qa.png");
+  await verifyWitnessInteractions(page, "desktop");
+  await page.setViewportSize({ width: 320, height: 900 });
+  await assertWitnessHotspotAlignment(page, "320px narrow");
+  await captureWitnessScene(page, "playtest/witness-corridor-hotspots-narrow-qa.png");
+  await verifyWitnessInteractions(page, "320px narrow");
+  await page.setViewportSize({ width: 1600, height: 900 });
+
   await openQuestion();
   await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor();
   await page.getByRole("button", { name: "Validate packet", exact: true }).click();
@@ -177,7 +267,7 @@ print("Operator:", learner)`);
   await page.getByText('"source_id": "DA-TEL-01"', { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor({ state: "detached" });
-  await page.locator("button.hotspot").click();
+  await page.getByRole("button", { name: "use grounded Evidence Terminal", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]').waitFor();
   if (await page.locator("#evidence-json-editor").inputValue() !== evidenceDraft) throw new Error("Evidence JSON draft reset after close/reopen");
   await page.getByText("Session-only scratch notes", { exact: true }).click();
@@ -235,6 +325,15 @@ print("Operator:", learner)`);
     terminalExercise: true,
     terminalCloseReopen: true,
     terminalSessionPrivacy: true,
+    routeMarkerExercise: true,
+    routeMarkerDependency: true,
+    routeMarkerPrediction: true,
+    routeMarkerTransfer: true,
+    routeMarkerRetrieval: true,
+    routeMarkerCloseReopen: true,
+    routeMarkerReloadReset: true,
+    routeMarkerPrivacy: true,
+    routeMarkerNarrow: true,
     workloadSortExercise: true,
     ruinsTerminalAsset: true,
     ruinsHotspotDesktop: true,
@@ -245,6 +344,11 @@ print("Operator:", learner)`);
     workloadCriticalOverride: true,
     workloadSceneReset: true,
     evidencePacketExercise: true,
+    witnessTerminalAsset: true,
+    witnessTwoObjectSemantics: true,
+    witnessHotspotsDesktop: true,
+    witnessHotspotsNarrow: true,
+    witnessHotspotsKeyboard: true,
     evidencePacketProvenance: true,
     evidencePacketFalseVsNull: true,
     evidencePacketCloseReopen: true,
@@ -253,7 +357,7 @@ print("Operator:", learner)`);
     masteryEvidence: true,
     persistence: true,
     runtimeErrors: false,
-    questions: ["HA-PY-001", "HA-AI901-001", "HA-AI901-002"],
+    questions: ["HA-PY-001", "HA-PY-002", "HA-AI901-001", "HA-AI901-002"],
     credits: true,
   }));
 } finally {
@@ -262,6 +366,26 @@ print("Operator:", learner)`);
 
 function terminalSessionMarker() {
   return "# SESSION_ONLY_SENTINEL";
+}
+
+function routePrimaryReference() {
+  return `site_name = "DROWNED ARCHIVE"
+signal_label = "LOCAL SURFACE"
+channel_count = 3
+
+print(site_name)
+print(signal_label, channel_count)`;
+}
+
+function routeTransferReference() {
+  return `site_name = "DROWNED ARCHIVE"
+signal_label = "LOCAL SURFACE"
+channel_count = 3
+
+signal_label = "ROUTE VERIFIED"
+
+print(site_name)
+print(signal_label, channel_count)`;
 }
 
 async function activateRuinsTerminal(page, method) {
@@ -329,4 +453,122 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
   if (!metrics.centerInside || metrics.overlapRatio < 0.65) {
     throw new Error(`Ruins hotspot misses source-mapped node at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   }
+}
+
+async function captureWitnessScene(page, path) {
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  const terminal = page.getByRole("button", { name: "use grounded Evidence Terminal", exact: true });
+  const automaton = page.getByRole("button", { name: "use fallen automaton", exact: true });
+  await page.keyboard.press("Tab");
+  await terminal.focus();
+  if (!await terminal.evaluate((element) => element.matches(":focus-visible"))) throw new Error("Evidence Terminal lacks visible keyboard focus");
+  await automaton.hover();
+  await page.locator(".scene-art").evaluate(async (image) => {
+    await image.decode();
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  });
+  await page.locator(".scene-frame").screenshot({ path });
+}
+
+async function verifyWitnessInteractions(page, viewportLabel) {
+  const exercise = page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]');
+
+  await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
+  await page.getByRole("button", { name: "look at fallen automaton", exact: true }).click();
+  await page.getByText("The fallen automaton is separate from the Terminal.", { exact: false }).waitFor();
+  if (await exercise.count()) throw new Error(`Automaton LOOK launched Evidence Packet at ${viewportLabel}`);
+
+  await page.getByRole("button", { name: "TALK TO", exact: true }).click();
+  const talkAutomaton = page.getByRole("button", { name: "talk to fallen automaton", exact: true });
+  await talkAutomaton.focus();
+  await talkAutomaton.press("Enter");
+  await page.getByText("A damaged speaker returns one measured pulse.", { exact: false }).waitFor();
+  if (await exercise.count()) throw new Error(`Automaton TALK launched Evidence Packet at ${viewportLabel}`);
+
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  const useAutomaton = page.getByRole("button", { name: "use fallen automaton", exact: true });
+  await useAutomaton.click();
+  await page.getByText("Its locked joints reject the command.", { exact: false }).waitFor();
+  await useAutomaton.focus();
+  await useAutomaton.press("Enter");
+  if (await exercise.count()) throw new Error(`Automaton USE launched Evidence Packet at ${viewportLabel}`);
+
+  const terminal = page.getByRole("button", { name: "use grounded Evidence Terminal", exact: true });
+  await terminal.click();
+  await exercise.waitFor();
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await exercise.waitFor({ state: "detached" });
+  await terminal.focus();
+  await terminal.press("Enter");
+  await exercise.waitFor();
+  await page.getByRole("button", { name: "Close Terminal", exact: true }).click();
+  await exercise.waitFor({ state: "detached" });
+}
+
+async function assertWitnessHotspotAlignment(page, viewportLabel) {
+  await page.waitForFunction(() => {
+    const image = document.querySelector(".scene-art");
+    return image?.complete && image.naturalWidth > 0;
+  });
+  const metrics = await page.evaluate(() => {
+    const frame = document.querySelector(".scene-frame");
+    const image = document.querySelector(".scene-art");
+    const terminal = document.querySelector('[data-hotspot-id="evidence-terminal"]');
+    const automaton = document.querySelector('[data-hotspot-id="fallen-automaton"]');
+    if (!frame || !image || !terminal || !automaton) return null;
+
+    const frameRect = frame.getBoundingClientRect();
+    const computed = getComputedStyle(image);
+    const [xToken = "50%", yToken = "50%"] = computed.objectPosition.split(/\s+/);
+    const asFraction = (token) => token.endsWith("%") ? Number.parseFloat(token) / 100 : 0.5;
+    const scale = Math.max(frameRect.width / image.naturalWidth, frameRect.height / image.naturalHeight);
+    const renderedWidth = image.naturalWidth * scale;
+    const renderedHeight = image.naturalHeight * scale;
+    const imageLeft = frameRect.left + (frameRect.width - renderedWidth) * asFraction(xToken);
+    const imageTop = frameRect.top + (frameRect.height - renderedHeight) * asFraction(yToken);
+
+    const measure = (element, source) => {
+      const rect = element.getBoundingClientRect();
+      const expected = {
+        left: Math.max(frameRect.left, imageLeft + image.naturalWidth * source.left * scale),
+        top: Math.max(frameRect.top, imageTop + image.naturalHeight * source.top * scale),
+        right: Math.min(frameRect.right, imageLeft + image.naturalWidth * source.right * scale),
+        bottom: Math.min(frameRect.bottom, imageTop + image.naturalHeight * source.bottom * scale),
+      };
+      const overlapWidth = Math.max(0, Math.min(rect.right, expected.right) - Math.max(rect.left, expected.left));
+      const overlapHeight = Math.max(0, Math.min(rect.bottom, expected.bottom) - Math.max(rect.top, expected.top));
+      const area = rect.width * rect.height;
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      return {
+        left: rect.left,
+        right: rect.right,
+        width: rect.width,
+        height: rect.height,
+        overlapRatio: area ? (overlapWidth * overlapHeight) / area : 0,
+        centerInside: centerX >= expected.left && centerX <= expected.right && centerY >= expected.top && centerY <= expected.bottom,
+      };
+    };
+
+    return {
+      alt: image.getAttribute("alt"),
+      src: image.currentSrc,
+      naturalWidth: image.naturalWidth,
+      naturalHeight: image.naturalHeight,
+      terminal: measure(terminal, { left: 0.32, top: 0.45, right: 0.44, bottom: 0.76 }),
+      automaton: measure(automaton, { left: 0.49, top: 0.18, right: 0.88, bottom: 0.78 }),
+    };
+  });
+
+  if (!metrics) throw new Error(`Witness geometry unavailable at ${viewportLabel}`);
+  if (!metrics.src.includes("witness-corridor-evidence-terminal-v1")) throw new Error(`Wrong Witness asset at ${viewportLabel}: ${metrics.src}`);
+  if (!/grounded three-fin Evidence Terminal/i.test(metrics.alt) || !/separate fallen automaton/i.test(metrics.alt)) {
+    throw new Error(`Witness alt text does not distinguish both objects: ${metrics.alt}`);
+  }
+  if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected Witness asset dimensions: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
+  for (const [name, target] of [["Terminal", metrics.terminal], ["automaton", metrics.automaton]]) {
+    if (target.width < 44 || target.height < 44) throw new Error(`${name} target below 44px at ${viewportLabel}`);
+    if (!target.centerInside || target.overlapRatio < 0.65) throw new Error(`${name} target misses source-mapped object at ${viewportLabel}: ${JSON.stringify(target)}`);
+  }
+  if (metrics.terminal.right >= metrics.automaton.left) throw new Error(`Witness targets overlap at ${viewportLabel}`);
 }

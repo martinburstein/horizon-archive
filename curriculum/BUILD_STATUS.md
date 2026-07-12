@@ -2,7 +2,7 @@
 
 Started: 2026-05-29T16:26:59-04:00
 Minimum intended work duration: 60 minutes
-Current status: four-pattern reference gate complete; review and scope approval pending
+Current status: four-pattern reference gate complete; sequential launch-package expansion in progress
 
 ## Required artifacts
 
@@ -30,7 +30,9 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built runnable reference package `L-01-01`
 - [x] Built runnable offline-first reference package `L-05-03`
 - [x] Added retrieval, spaced review, error remediation, timed practice, and readiness-gate policy
-- [x] Validated all three reference manifests and executed their learner scripts or deterministic exercise checks
+- [x] Validated all four reference manifests and executed their learner scripts or deterministic exercise checks
 - [x] Built source-grounded reference package `L-02-01`
 - [x] Built source-grounded offline-first reference package `L-05-07`
+- [x] Built sequential zero-Python package `L-01-02`
+- [ ] Build sequential confidence-rebuilding package `L-01-03`
 - [ ] Expand original question banks and full timed simulations

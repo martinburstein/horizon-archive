@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import meadowImage from "../../Concept Art/Alien Meadow.png";
 import ruinsImage from "../../Concept Art Book/images/drowned-archive-workload-terminal-v1.png";
-import automatonImage from "../../Concept Art/Fallen Automoton.png";
+import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
 import cityImage from "../../Concept Art/Underground City.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
+import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
+import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   evaluateTerminalCode,
@@ -33,6 +35,16 @@ import {
   sanitizeEvidencePacketMastery,
   updateEvidencePacketMastery,
 } from "./evidencePacketExercise.js";
+import {
+  evaluateRoutePrediction,
+  evaluateRouteRetrieval,
+  evaluateRouteSource,
+  routeMarkerExercise,
+  routeRemediation,
+  routeRetrieval,
+  sanitizeRouteMarkerMastery,
+  updateRouteMarkerMastery,
+} from "./routeMarkerExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
@@ -44,12 +56,21 @@ const scenes = [
     image: meadowImage,
     hotspotLabel: "Petal terminal",
     hotspot: { left: "43%", top: "20%", width: "18%", height: "38%" },
+    secondaryHotspots: [{
+      id: "route-marker",
+      label: "route-marker Terminal",
+      hotspot: {
+        left: "74%", top: "56%", width: "11%", height: "34%",
+        narrow: { left: "68%", top: "49%", width: "29%", height: "34%" },
+      },
+    }],
     prompt: "A dormant interface waits inside the crystal bloom. Wake it with one line of Python.",
     question: "Write the line that displays SIGNAL FOUND.",
     answer: 'print("SIGNAL FOUND")',
     validate: (value) => validateAnswer("meadow", value),
     hint: "Python displays text with print(). Put the text inside quotation marks.",
     success: "The bloom answers in your own alphabet. It did not translate the signal. It was already listening for you.",
+    routeSuccess: "The route marker accepts both forms. A narrow path illuminates toward the next survey site.",
   },
   {
     id: "ruins",
@@ -74,9 +95,22 @@ const scenes = [
     chapter: "III",
     location: "The Witness Corridor",
     image: automatonImage,
-    hotspotLabel: "automaton evidence Terminal",
-    hotspot: { left: "54%", top: "17%", width: "34%", height: "53%" },
-    prompt: "The automaton carries a sealed evidence workspace. Its validator waits for a provenance-complete packet.",
+    imageAlt: "Shadowed alien corridor with a grounded three-fin Evidence Terminal on the left and a separate fallen automaton on the right",
+    primaryHotspotId: "evidence-terminal",
+    hotspotLabel: "grounded Evidence Terminal",
+    hotspot: {
+      left: "31.5%", top: "54%", width: "13%", height: "45%",
+      narrow: { left: "0%", top: "44%", width: "35%", height: "34%" },
+    },
+    secondaryHotspots: [{
+      id: "fallen-automaton",
+      label: "fallen automaton",
+      hotspot: {
+        left: "49%", top: "18%", width: "39%", height: "81%",
+        narrow: { left: "47%", top: "18%", width: "53%", height: "61%" },
+      },
+    }],
+    prompt: "The grounded Terminal presents a blank inspection surface and three quiet evidence channels.",
     question: "Set archive_open to the Boolean value true in Python.",
     answer: "archive_open = True",
     validate: (value) => validateAnswer("automaton", value),
@@ -104,6 +138,19 @@ function TerminalShell({ exerciseId, title, filename, lessonId, onClose, childre
   );
 }
 
+function getHotspotStyle(hotspot) {
+  return {
+    "--hotspot-left": hotspot.left,
+    "--hotspot-top": hotspot.top,
+    "--hotspot-width": hotspot.width,
+    "--hotspot-height": hotspot.height,
+    "--hotspot-narrow-left": hotspot.narrow?.left ?? hotspot.left,
+    "--hotspot-narrow-top": hotspot.narrow?.top ?? hotspot.top,
+    "--hotspot-narrow-width": hotspot.narrow?.width ?? hotspot.width,
+    "--hotspot-narrow-height": hotspot.narrow?.height ?? hotspot.height,
+  };
+}
+
 function loadSave() {
   try {
     const saved = JSON.parse(localStorage.getItem(SAVE_KEY) || "null");
@@ -112,11 +159,16 @@ function loadSave() {
     // Only a contiguous, known completion prefix is trusted. This prevents a
     // stale or edited save from skipping required questions or unlocking the
     // ending early.
+    const routeMarkerMastery = sanitizeRouteMarkerMastery(saved.routeMarkerMastery);
+    const completed = saved.completed[0] === "meadow" && routeMarkerMastery?.masteryStatus !== "mastered"
+      ? []
+      : saved.completed;
     return {
-      ...getResumeState(saved.completed, saved.pendingSceneId),
+      ...getResumeState(completed, saved.pendingSceneId),
       exerciseEvidence: sanitizeExerciseEvidence(saved.exerciseEvidence),
       workloadEvidence: sanitizeWorkloadEvidence(saved.workloadEvidence),
       evidencePacketMastery: sanitizeEvidencePacketMastery(saved.evidencePacketMastery),
+      routeMarkerMastery,
     };
   } catch {
     // A malformed local save should never prevent a new expedition.
@@ -144,18 +196,17 @@ export function App() {
   const [workloadEvidence, setWorkloadEvidence] = useState(null);
   const [evidenceSession, setEvidenceSession] = useState(null);
   const [evidencePacketMastery, setEvidencePacketMastery] = useState(null);
+  const [meadowTerminalKind, setMeadowTerminalKind] = useState(null);
+  const [routeSession, setRouteSession] = useState(null);
+  const [routeMarkerMastery, setRouteMarkerMastery] = useState(null);
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
-  const hotspotStyle = {
-    "--hotspot-left": scene.hotspot.left,
-    "--hotspot-top": scene.hotspot.top,
-    "--hotspot-width": scene.hotspot.width,
-    "--hotspot-height": scene.hotspot.height,
-    "--hotspot-narrow-left": scene.hotspot.narrow?.left ?? scene.hotspot.left,
-    "--hotspot-narrow-top": scene.hotspot.narrow?.top ?? scene.hotspot.top,
-    "--hotspot-narrow-width": scene.hotspot.narrow?.width ?? scene.hotspot.width,
-    "--hotspot-narrow-height": scene.hotspot.narrow?.height ?? scene.hotspot.height,
-  };
+  const sceneHotspots = [{
+    id: scene.primaryHotspotId ?? "primary",
+    label: scene.hotspotLabel,
+    hotspot: scene.hotspot,
+    primary: true,
+  }, ...(scene.secondaryHotspots ?? [])];
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
@@ -167,9 +218,10 @@ export function App() {
         exerciseEvidence,
         workloadEvidence,
         evidencePacketMastery,
+        routeMarkerMastery,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery]);
+  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery]);
 
   function beginNewGame() {
     localStorage.removeItem(SAVE_KEY);
@@ -191,6 +243,9 @@ export function App() {
     setWorkloadEvidence(null);
     setEvidenceSession(null);
     setEvidencePacketMastery(null);
+    setMeadowTerminalKind(null);
+    setRouteSession(null);
+    setRouteMarkerMastery(null);
     setMode("playing");
   }
 
@@ -208,6 +263,9 @@ export function App() {
     setWorkloadSession(null);
     setEvidencePacketMastery(saved.evidencePacketMastery);
     setEvidenceSession(null);
+    setRouteMarkerMastery(saved.routeMarkerMastery);
+    setRouteSession(null);
+    setMeadowTerminalKind(null);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
     setTerminalResult(null);
@@ -217,7 +275,74 @@ export function App() {
     setMode(saved.finished ? "ending" : "playing");
   }
 
-  function useHotspot() {
+  function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "automaton") {
+      if (hotspotId === "fallen-automaton") {
+        if (verb === "LOOK AT") {
+          setDialogue("The fallen automaton is separate from the Terminal. Its lens tracks the three evidence channels without moving its head.");
+        } else if (verb === "TALK TO") {
+          setDialogue("A damaged speaker returns one measured pulse. The automaton is listening, but the evidence channel is elsewhere.");
+        } else {
+          setDialogue("Its locked joints reject the command. The grounded Evidence Terminal is the active interface.");
+        }
+        return;
+      }
+      if (verb === "LOOK AT") {
+        setDialogue(scene.prompt);
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue("The Evidence Terminal has no voice. Its three channel lights wait for inspection.");
+        return;
+      }
+      setDialogue("Evidence workspace linked. Inspect the registered packet, repair the JSON, and validate all twelve boundaries.");
+      setQuestionOpen(false);
+      setTerminalOpen(true);
+      if (!evidenceSession) {
+        setEvidenceSession({
+          workingOutput: evidenceStarter,
+          notes: "",
+          activeSource: "manifest",
+          result: null,
+          hintLevel: 0,
+        });
+      }
+      return;
+    }
+    if (scene.id === "meadow" && hotspotId === "route-marker") {
+      if (verb === "LOOK AT") {
+        setDialogue(exerciseEvidence?.completed
+          ? "A separate route-marker Terminal has risen from the meadow. Its two-form survey is ready."
+          : "A low marker remains dark. The Petal Terminal must confirm the first signal before this node can wake.");
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue("The route marker has no voice. Its status groove is dark until the prerequisite signal is complete.");
+        return;
+      }
+      if (!exerciseEvidence?.completed) {
+        setDialogue("The route marker refuses the link. Complete the Petal Terminal first.");
+        return;
+      }
+      setDialogue("Route-marker workspace linked. Predict each run, validate both forms, then complete retrieval.");
+      setTerminalOpen(true);
+      setMeadowTerminalKind("route");
+      if (!routeSession) {
+        setRouteSession({
+          form: "primary",
+          source: routePrimaryStarter,
+          prediction: ["", ""],
+          result: null,
+          predictionResults: null,
+          formPassed: false,
+          phase: "form",
+          hintLevel: 0,
+          retrievalAnswers: {},
+          retrievalResults: null,
+        });
+      }
+      return;
+    }
     if (verb === "LOOK AT") {
       setDialogue(scene.prompt);
       return;
@@ -227,8 +352,13 @@ export function App() {
       return;
     }
     if (scene.id === "meadow") {
+      if (exerciseEvidence?.completed) {
+        setDialogue("The Petal Terminal is complete. The separate route-marker node now carries the active lesson.");
+        return;
+      }
       setDialogue("Terminal link established. Complete the file, run it, and confirm the result.");
       setTerminalOpen(true);
+      setMeadowTerminalKind("first");
       if (!terminalSessionStarted) {
         setTerminalSessionStarted(true);
         setTerminalResult(null);
@@ -243,21 +373,6 @@ export function App() {
       setQuestionOpen(false);
       setTerminalOpen(true);
       if (!workloadSession) setWorkloadSession(createWorkloadSession());
-      return;
-    }
-    if (scene.id === "automaton") {
-      setDialogue("Evidence workspace linked. Inspect the registered packet, repair the JSON, and validate all twelve boundaries.");
-      setQuestionOpen(false);
-      setTerminalOpen(true);
-      if (!evidenceSession) {
-        setEvidenceSession({
-          workingOutput: evidenceStarter,
-          notes: "",
-          activeSource: "manifest",
-          result: null,
-          hintLevel: 0,
-        });
-      }
       return;
     }
     setDialogue(scene.question);
@@ -283,8 +398,6 @@ export function App() {
   function acknowledgeTerminalCompletion() {
     if (!terminalResult?.passed) return;
     setExerciseEvidence((previous) => updateExerciseEvidence(previous, { completed: true }));
-    const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
-    setCompleted(nextCompleted);
     setDialogue(scene.success);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
@@ -292,6 +405,88 @@ export function App() {
     setTerminalHintLevel(0);
     setShowHint(false);
     setCode("");
+    setMeadowTerminalKind(null);
+  }
+
+  function runRouteForm(event) {
+    event.preventDefault();
+    if (routeSession.prediction.some((line) => !line.trim())) return;
+    const result = evaluateRouteSource(routeSession.source, routeSession.form);
+    const predictionResults = evaluateRoutePrediction(routeSession.prediction, routeSession.form);
+    const predictionPassed = predictionResults.every(Boolean);
+    const formPassed = result.passed && predictionPassed;
+    const hintLevel = formPassed ? routeSession.hintLevel : Math.max(1, routeSession.hintLevel);
+    const predictionTags = routeSession.form === "transfer" && !predictionPassed
+      ? ["reassignment-changes-everything", "earlier-value-survives-reassignment"]
+      : [];
+    setRouteSession({ ...routeSession, result, predictionResults, formPassed, hintLevel });
+    setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, {
+      formId: routeSession.form,
+      incrementAttempt: true,
+      predictionCorrectness: predictionResults,
+      checkResults: result.checks,
+      hintLevel,
+      misconceptionTags: [...result.misconceptionTags, ...predictionTags],
+      masteryStatus: formPassed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function revealRouteHint() {
+    const hintLevel = Math.min(3, routeSession.hintLevel + 1);
+    setRouteSession({ ...routeSession, hintLevel });
+    setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, { hintLevel }));
+  }
+
+  function loadRouteTransfer() {
+    if (!routeSession.formPassed || routeSession.form !== "primary") return;
+    setRouteSession({
+      ...routeSession,
+      form: "transfer",
+      source: routeTransferStarter,
+      prediction: ["", ""],
+      result: null,
+      predictionResults: null,
+      formPassed: false,
+      hintLevel: 0,
+    });
+  }
+
+  function beginRouteRetrieval() {
+    if (!routeSession.formPassed || routeSession.form !== "transfer") return;
+    setRouteSession({ ...routeSession, phase: "retrieval", retrievalAnswers: {}, retrievalResults: null, hintLevel: 0 });
+  }
+
+  function submitRouteRetrieval(event) {
+    event.preventDefault();
+    const results = evaluateRouteRetrieval(routeSession.retrievalAnswers);
+    const passed = Object.values(results).every(Boolean);
+    const missedTags = routeRetrieval.filter((item) => !results[item.id]).map((item) => item.tag);
+    const hintLevel = passed ? routeSession.hintLevel : Math.max(1, routeSession.hintLevel);
+    setRouteSession({ ...routeSession, retrievalResults: results, phase: passed ? "complete" : "retrieval", hintLevel });
+    setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, {
+      formId: "retrieval",
+      incrementAttempt: true,
+      checkResults: results,
+      hintLevel,
+      misconceptionTags: missedTags,
+      masteryStatus: passed ? "in_progress" : "remediation_required",
+    }));
+  }
+
+  function setRouteConfidence(confidence) {
+    setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, { confidence }));
+  }
+
+  function acknowledgeRouteMastery() {
+    const retrievalPassed = routeSession?.retrievalResults && Object.values(routeSession.retrievalResults).every(Boolean);
+    if (!retrievalPassed || !routeMarkerMastery?.confidence) return;
+    setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, { masteryStatus: "mastered" }));
+    const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
+    setCompleted(nextCompleted);
+    setDialogue(scene.routeSuccess);
+    setTerminalOpen(false);
+    setMeadowTerminalKind(null);
+    setRouteSession(null);
     setPendingAdvance(true);
   }
 
@@ -380,6 +575,8 @@ export function App() {
     setDialogue(scene.success);
     setTerminalOpen(false);
     setEvidenceSession(null);
+    setRouteSession(null);
+    setMeadowTerminalKind(null);
     setPendingAdvance(true);
   }
 
@@ -455,7 +652,7 @@ export function App() {
   }
 
   return (
-    <main className="game-shell adventure-screen" data-scene={scene.id}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
         <div className="scene-status">
@@ -463,16 +660,21 @@ export function App() {
           <strong>{scene.location}</strong>
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
-        <button
-          className="hotspot"
-          style={hotspotStyle}
-          onClick={useHotspot}
-          disabled={pendingAdvance}
-          aria-label={`${verb.toLowerCase()} ${scene.hotspotLabel}`}
-        >
-          <span>{verb} {scene.hotspotLabel}</span>
-        </button>
-        {terminalOpen && scene.id === "meadow" && (
+        {sceneHotspots.map((hotspot) => (
+          <button
+            key={hotspot.id}
+            className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
+            data-hotspot-id={hotspot.id}
+            data-primary-hotspot={hotspot.primary ? "true" : undefined}
+            style={getHotspotStyle(hotspot.hotspot)}
+            onClick={() => useHotspot(hotspot.id)}
+            disabled={pendingAdvance}
+            aria-label={`${verb.toLowerCase()} ${hotspot.label}`}
+          >
+            <span>{verb} {hotspot.label}</span>
+          </button>
+        ))}
+        {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell
             exerciseId={terminalExercise.exerciseId}
             title={terminalExercise.title}
@@ -524,6 +726,167 @@ export function App() {
                 </section>
               </div>
             </form>
+          </TerminalShell>
+        )}
+        {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "route" && routeSession && (
+          <TerminalShell
+            exerciseId={routeMarkerExercise.exercise_id}
+            title={routeMarkerExercise.title}
+            filename={routeSession.form === "transfer" ? "route_marker_transfer.py" : "route_marker_primary.py"}
+            lessonId={routeMarkerExercise.lesson_id}
+            onClose={() => setTerminalOpen(false)}
+          >
+            {routeSession.phase === "form" ? (
+              <form className="editor-layout route-layout" onSubmit={runRouteForm}>
+                <aside className="task-pane" aria-labelledby="route-task-heading">
+                  <p className="pane-label">ROUTE FORM // {routeSession.form}</p>
+                  <h2 id="route-task-heading">Predict, assign, run</h2>
+                  <p>{routeSession.form === "primary"
+                    ? "Complete three variables and predict both output lines before validating."
+                    : "Start fresh, then reassign only signal_label before the supplied print calls."}</p>
+                  <dl>
+                    <div><dt>Activity</dt><dd>{routeMarkerExercise.activity_id}</dd></div>
+                    <div><dt>Skills</dt><dd>{routeMarkerExercise.skill_ids.join(" · ")}</dd></div>
+                    <div><dt>Gate</dt><dd>Prediction + 8 / 8</dd></div>
+                  </dl>
+                  <fieldset className="route-prediction">
+                    <legend>Prediction required before Run</legend>
+                    {[0, 1].map((index) => (
+                      <label key={index}>
+                        Output line {index + 1}
+                        <input
+                          aria-label={`Predicted output line ${index + 1}`}
+                          value={routeSession.prediction[index]}
+                          onChange={(event) => {
+                            const prediction = [...routeSession.prediction];
+                            prediction[index] = event.target.value;
+                            setRouteSession({ ...routeSession, prediction, result: null, predictionResults: null, formPassed: false });
+                          }}
+                          autoComplete="off"
+                          spellCheck="false"
+                        />
+                      </label>
+                    ))}
+                  </fieldset>
+                </aside>
+                <div className="editor-stack route-stack">
+                  <div className="code-editor">
+                    <div className="line-numbers" aria-hidden="true">
+                      {routeSession.source.split("\n").map((_, index) => <span key={index}>{index + 1}</span>)}
+                    </div>
+                    <textarea
+                      id="route-source-editor"
+                      aria-label={`Python source editor for ${routeSession.form} route marker form`}
+                      value={routeSession.source}
+                      onChange={(event) => setRouteSession({ ...routeSession, source: event.target.value, result: null, formPassed: false })}
+                      autoCapitalize="off"
+                      autoCorrect="off"
+                      spellCheck="false"
+                    />
+                  </div>
+                  <section className="terminal-console" aria-labelledby="route-output-heading">
+                    <div className="console-heading-row">
+                      <strong id="route-output-heading">OUTPUT / VALIDATOR</strong>
+                      <button className="run-action" type="submit" disabled={routeSession.prediction.some((line) => !line.trim())}>Run route form</button>
+                    </div>
+                    <div className={routeSession.result ? "console-feedback active" : "console-feedback"} role="status" aria-live="polite">
+                      {routeSession.result
+                        ? `${routeSession.result.score}/8 · prediction ${routeSession.predictionResults.filter(Boolean).length}/2 · ${routeSession.formPassed ? "form passed" : routeSession.result.feedback}`
+                        : "Write both predicted lines before Run. Predictions, source, and output stay in this session only."}
+                    </div>
+                    {routeSession.result?.outputs.length > 0 && <pre>{routeSession.result.outputs.join("\n")}</pre>}
+                    {routeSession.result && !routeSession.formPassed && (
+                      <div className="evidence-remediation">
+                        <p>{routeSession.result.passed
+                          ? "Prediction trace — compare each prediction with the latest value available at its print call."
+                          : routeRemediation(routeSession.result, routeSession.hintLevel)}</p>
+                        <button className="hint-action" type="button" disabled={routeSession.hintLevel >= 3} onClick={revealRouteHint}>
+                          Reveal next trace
+                        </button>
+                      </div>
+                    )}
+                    {routeSession.formPassed && (
+                      <button className="confirm-action" type="button" onClick={routeSession.form === "primary" ? loadRouteTransfer : beginRouteRetrieval}>
+                        {routeSession.form === "primary" ? "Load fresh transfer form" : "Begin retrieval gate"}
+                      </button>
+                    )}
+                  </section>
+                </div>
+              </form>
+            ) : (
+              <form className="editor-layout route-layout" onSubmit={submitRouteRetrieval}>
+                <aside className="task-pane" aria-labelledby="route-retrieval-heading">
+                  <p className="pane-label">CLOSED-SOURCE RETRIEVAL</p>
+                  <h2 id="route-retrieval-heading">Four distinctions</h2>
+                  <p>The source file is closed. Answer all four checks before route acknowledgement.</p>
+                  <dl>
+                    <div><dt>Primary</dt><dd>8 / 8</dd></div>
+                    <div><dt>Transfer</dt><dd>8 / 8</dd></div>
+                    <div><dt>Retrieval</dt><dd>{routeSession.retrievalResults ? Object.values(routeSession.retrievalResults).filter(Boolean).length : 0} / 4</dd></div>
+                  </dl>
+                </aside>
+                <div className="editor-stack route-retrieval-stack">
+                  {routeSession.phase === "retrieval" ? (
+                    <div className="route-retrieval-list">
+                      {routeRetrieval.map((item, index) => (
+                        <fieldset key={item.id}>
+                          <legend>{index + 1}. {item.prompt}</legend>
+                          <select
+                            aria-label={`Retrieval answer ${index + 1}`}
+                            value={routeSession.retrievalAnswers[item.id] || ""}
+                            onChange={(event) => setRouteSession({
+                              ...routeSession,
+                              retrievalAnswers: { ...routeSession.retrievalAnswers, [item.id]: event.target.value },
+                              retrievalResults: null,
+                            })}
+                          >
+                            <option value="">Choose one</option>
+                            {item.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                          </select>
+                          {routeSession.retrievalResults?.[item.id] === false && (
+                            <p>Contrast: {item.options.find(([value]) => value === item.answer)?.[1]} Retry from memory.</p>
+                          )}
+                        </fieldset>
+                      ))}
+                    </div>
+                  ) : (
+                    <section className="workload-summary" aria-labelledby="route-complete-heading">
+                      <p className="pane-label">ROUTE MASTERY</p>
+                      <h2 id="route-complete-heading">Primary 8/8 · Transfer 8/8 · Retrieval 4/4</h2>
+                      <fieldset className="confidence-group">
+                        <legend>Confidence after this checkpoint</legend>
+                        {[["low", "Low"], ["medium", "Medium"], ["high", "High"]].map(([value, label]) => (
+                          <label key={value}>
+                            <input type="radio" name="route-confidence" checked={routeMarkerMastery?.confidence === value} onChange={() => setRouteConfidence(value)} />
+                            {label}
+                          </label>
+                        ))}
+                      </fieldset>
+                    </section>
+                  )}
+                  <section className="terminal-console" aria-labelledby="route-retrieval-output-heading">
+                    <div className="console-heading-row">
+                      <strong id="route-retrieval-output-heading">RETRIEVAL STATUS</strong>
+                      {routeSession.phase === "retrieval" && (
+                        <button className="run-action" type="submit" disabled={routeRetrieval.some((item) => !routeSession.retrievalAnswers[item.id])}>Check retrieval</button>
+                      )}
+                    </div>
+                    <div className="console-feedback active" role="status" aria-live="polite">
+                      {routeSession.phase === "complete"
+                        ? "All four distinctions confirmed. Record confidence to acknowledge the route."
+                        : routeSession.retrievalResults
+                          ? `${Object.values(routeSession.retrievalResults).filter(Boolean).length}/4 · Retry each marked distinction.`
+                          : "Select one answer for each distinction. Choices are not persisted."}
+                    </div>
+                    {routeSession.phase === "complete" && (
+                      <button className="confirm-action" type="button" disabled={!routeMarkerMastery?.confidence} onClick={acknowledgeRouteMastery}>
+                        Acknowledge route mastery
+                      </button>
+                    )}
+                  </section>
+                </div>
+              </form>
+            )}
           </TerminalShell>
         )}
         {terminalOpen && scene.id === "ruins" && workloadSession && (

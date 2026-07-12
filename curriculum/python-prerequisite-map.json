@@ -64,7 +64,7 @@
         "AI901-D2-O3"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "Introduced in L-01-02 through quoted survey labels and variable-backed print output."
     },
     {
       "skill_id": "PY-005",
@@ -79,7 +79,7 @@
         "AI901-D1-O3"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "Introduced in L-01-02 by contrasting numeric channel_count with quoted strings and identifying True/False as booleans."
     },
     {
       "skill_id": "PY-006",
@@ -95,7 +95,7 @@
         "AI901-D2-O3"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "Introduced in L-01-02 through assignment, reassignment, prediction, and later variable use."
     },
     {
       "skill_id": "PY-007",

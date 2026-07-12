@@ -1,5 +1,27 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Dependency-safe Route Marker Terminal
+
+- **Outcome:** Added `EX-L0102-ROUTE-MARKER` / `A-L0102-3` as a separate meadow hotspot and Machine Terminal after `L-01-01`. Completing the first Python file now wakes the route marker instead of advancing directly; only route-marker mastery unlocks the ruins.
+- **Skills practiced:** `PY-004`, `PY-005`, and `PY-006`: string/number/Boolean distinctions, assignment versus output, variable-based printing, reassignment, latest-value tracing, prediction, and transfer.
+- **Mastery flow:** Prediction is required before every Run. The primary and fresh transfer forms each require 8/8 under a safe non-executing JS analyzer that mirrors the curriculum AST contract. The transfer requires only `signal_label` to gain a second assignment. Four fixed-choice retrieval distinctions must then pass 4/4 before confidence and acknowledgement.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/src/routeMarkerExercise.js`, `horizon-archive-game/test/routeMarkerExercise.test.js`, `horizon-archive-game/public/question-manifest.json`, and `playtest/e2e-playthrough.mjs`.
+- **Validation:** Twenty-two unit tests pass, including valid primary/transfer references, quoted-number, hardcoded-output, missing-reassignment, unsafe-shape, prediction, retrieval, and privacy fixtures. The production build, curriculum self-test/reference commands, and full title-to-credits Playwright journey pass. QA captures cover the awakened hotspot plus desktop and 320px Terminal layouts.
+- **Accessibility:** The route marker is a separate native hotspot with a visible ready state. Source, prediction, Run, status, remediation, retrieval, confidence, and acknowledgement follow keyboard order; errors use stable codes and text; output remains selectable; narrow layouts keep task context first and the editor reachable through Terminal scrolling; no motion communicates state.
+- **Mastery evidence:** Persists only allowlisted IDs, current form ID, prediction correctness booleans, primary/transfer/retrieval check booleans, attempts, maximum hint level, confidence, misconception tags, and mastery status. Source, prediction text, runtime output, retrieval selections, notes, and free-form input never enter persistent storage.
+- **Session behavior:** Same-scene close/reopen restores source, prediction, validator output, and hints. Full reload/resume starts a clean primary form while retaining sanitized evidence. New expedition, route completion, and scene transition clear the working session.
+- **Next action:** Location Scout Agent should place a small three-fin route-marker node in the right foreground of the Glass Meadow, clearly separated from the central Petal Terminal, with a readable dormant/awake state and a tight 44px-safe hotspot at desktop and narrow crops.
+- **Risks:** The current route-marker interaction region is mapped onto the existing meadow plate without dedicated physical geometry. The next art pass must establish the node silhouette at that location or revise the hotspot coordinates together with the selected plate.
+
+## 2026-07-12 — Coder pass: Evidence Terminal and automaton separation
+
+- **Outcome:** Integrated the WC-01 production plate with two independent hotspots. Only the grounded Evidence Terminal opens `EX-L0507-EVIDENCE-PACKET`; the fallen automaton supplies useful observation, conversation, and redirect responses without becoming an exercise target.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `playtest/e2e-playthrough.mjs`, WC-01/design records, and desktop/320px scene captures.
+- **Validation:** Eighteen unit tests, production build, and full title-to-credits E2E pass. Coverage verifies source-aware alignment, minimum size, target separation, distinct accessible names, two-object alt text, visible focus, pointer/Enter behavior, automaton non-launch, assessment mastery, session privacy, reload/resume, save safety, and zero runtime errors.
+- **Accessibility:** Both objects are native buttons with verb-specific accessible names. Terminal and automaton focus regions remain visible and non-overlapping at `1600×900` and `320×900`; the narrow Terminal label remains inside the viewport.
+- **Next action:** Lore Keeper Agent should treat the automaton as a responsive narrative witness and the grounded Terminal as the sole evidence-workspace interface.
+- **Risks:** The mirrored browser validator remains an offline course contract rather than a live Content Understanding service call; this integration does not change that boundary.
+
 ## 2026-07-12 — Multimodal Evidence Packet Terminal
 
 - **Outcome:** Replaced the final scene's compact Boolean prompt with the reusable Machine Terminal running `EX-L0507-EVIDENCE-PACKET` / `A-L0507-3`. The workspace exposes the real registered image, playable WAV, manifest, and telemetry beside an editable `working_output.json`, then mirrors the curriculum validator's exact 12-check contract before allowing the existing final narrative acknowledgement and credits gate.

@@ -1,0 +1,30 @@
+[
+  {
+    "assessment_id": "AS-L0102-QC",
+    "lesson_id": "L-01-02",
+    "assessment_type": "quick_check",
+    "supports_objectives": [],
+    "supports_python_skills": ["PY-004", "PY-005", "PY-006"],
+    "mastery_signal": "recognition",
+    "attempt_policy": "Closed-note first attempt; route each miss to one stable misconception tag; retry with reordered examples.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  },
+  {
+    "assessment_id": "AS-L0102-GATE",
+    "lesson_id": "L-01-02",
+    "assessment_type": "readiness_gate",
+    "supports_objectives": [],
+    "supports_python_skills": ["PY-004", "PY-005", "PY-006"],
+    "mastery_signal": "independent_use",
+    "attempt_policy": "Require 8/8 on primary and transfer code forms plus a pre-run prediction; any quoted-number, hardcoded-output, or reassignment misconception blocks mastery until remediated.",
+    "result_states": ["correct", "partially_correct", "incorrect", "not_attempted", "needs_review"],
+    "records_confidence": true,
+    "records_misconception_tags": true,
+    "records_review_flag": true,
+    "status": "review"
+  }
+]

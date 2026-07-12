@@ -1,0 +1,48 @@
+[
+  {
+    "activity_id": "A-L0102-1",
+    "lesson_id": "L-01-02",
+    "activity_type": "compare_choice",
+    "purpose": "Distinguish string, number, and boolean values from variable names and printed output.",
+    "interaction_mode": "guided",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 8,
+    "input_contract": "Learner can run Python and reviews five beginner-safe value examples.",
+    "output_contract": "Learner correctly labels variable name, string, number, boolean, assignment, and output in at least four comparisons.",
+    "captures_note": true,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0102-2",
+    "lesson_id": "L-01-02",
+    "activity_type": "guided_code",
+    "purpose": "Create three survey-label variables and produce two predictable output lines.",
+    "interaction_mode": "interactive",
+    "source_dependency": "bridge_allowed",
+    "estimated_minutes": 15,
+    "input_contract": "Learner edits route_marker_primary.py, predicts both lines, saves, and validates the file.",
+    "output_contract": "Primary form earns 8/8 and prints DROWNED ARCHIVE followed by LOCAL SURFACE 3 using variables rather than hardcoded output.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review"
+  },
+  {
+    "activity_id": "A-L0102-3",
+    "lesson_id": "L-01-02",
+    "activity_type": "checkpoint",
+    "purpose": "Transfer the variable model by reassigning one label and predicting which later output changes.",
+    "interaction_mode": "adaptive",
+    "source_dependency": "learner_state_driven",
+    "estimated_minutes": 15,
+    "input_contract": "Learner edits route_marker_transfer.py, records a two-line prediction before Run, then validates the fresh form.",
+    "output_contract": "Transfer form earns 8/8, shows the first line unchanged and the second line updated by reassignment, and records no learner code as mastery evidence.",
+    "captures_note": false,
+    "captures_confidence": true,
+    "captures_needs_review": true,
+    "status": "review",
+    "notes": "Exercise Agent handoff activity; exact runtime, privacy, reset, hint, and accessibility contracts are in exercise.json."
+  }
+]

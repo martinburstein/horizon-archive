@@ -5,7 +5,7 @@
 - **Scene ID:** WC-01
 - **Player-facing survey name:** Witness Corridor
 - **World / region:** World C / Witness Complex
-- **Production status:** Selected concept target; not integrated
+- **Production status:** Integrated as the playable final-scene plate
 - **Image:** [witness-corridor-evidence-terminal-v1.png](../images/witness-corridor-evidence-terminal-v1.png)
 - **Original environment reference:** [Fallen Automoton.png](../../Concept%20Art/Fallen%20Automoton.png)
 - **Purpose:** Give the final Evidence Packet exercise a dedicated grounded Terminal while keeping the fallen automaton as the scene's narrative focal object.
@@ -40,6 +40,13 @@
 - Keep at least 3% source-width visual separation between the Terminal's right edge and the automaton's left silhouette. Do not combine targets.
 - Desktop crop retains the crown, inspection surface, indicators, and nearly all of the base; the 320px centered crop begins near source x 31.8%, retaining the complete essential Terminal silhouette and the automaton's head/shoulder context while trimming only peripheral light spill.
 
+### Implemented crop and targets
+
+- Desktop uses `object-position: center 15%`. Terminal bounds are `31.5%, 54%, 13%, 45%`; automaton bounds are `49%, 18%, 39%, 81%`.
+- Up to `760px`, the crop uses `center top`. Terminal bounds are `0%, 44%, 35%, 34%`; automaton bounds are `47%, 18%, 53%, 61%`.
+- Both viewport targets map to their documented source zones under `object-fit: cover`, exceed 44 by 44 CSS pixels at 320px, remain separated, and use independent native buttons.
+- The Terminal hover/focus label is narrow-edge anchored so its visible text remains within the 320px scene frame.
+
 ## Visual specification
 
 - **Palette:** blue-black masonry, charcoal shadow, weathered umber metal, muted lavender, cool slate blue, tiny amber accent, pale crystal white.
@@ -62,4 +69,4 @@
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation plus one targeted placement edit
 - **Native dimensions:** `1672 x 941` PNG
 - **Selection notes:** the first candidate established the correct anatomy but failed the narrow-crop gate; the selected edit moved the node into the centered safe band without changing its design or the automaton.
-- **Validation:** clean plate contains no UI, text, watermark, extra characters, weapons, or plot revelation; three indicators, inspection surface, separate silhouettes, route, and responsive crop requirements are present.
+- **Validation:** clean plate contains no UI, text, watermark, extra characters, weapons, or plot revelation; three indicators, inspection surface, separate silhouettes, route, and responsive crop requirements are present. Browser QA verifies source-mapped geometry, pointer and Enter-key activation, visible focus, two-object alt text, non-launching automaton interactions, and full mastery-to-credits progression at `1600×900` and `320×900`.

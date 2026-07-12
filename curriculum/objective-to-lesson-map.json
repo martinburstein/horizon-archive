@@ -46,8 +46,8 @@
             "simplilearn-materials-c3-py-for-ai-c3-py-for-ai-demos-l01-intr-py-fund-setu-demo-05-stor-user-info-usin-pdf"
           ],
           "activity_ids": ["A-L0102-1", "A-L0102-2", "A-L0102-3"],
-          "assessment_ids": ["AS-L0102-QC"],
-          "mastery_gate": "can modify variables and predict printed results"
+          "assessment_ids": ["AS-L0102-QC", "AS-L0102-GATE"],
+          "mastery_gate": "pass primary and transfer code forms at 8 of 8, predict both transfer lines, and pass all four retrieval items"
         },
         {
           "lesson_id": "L-01-03",

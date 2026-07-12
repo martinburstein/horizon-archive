@@ -31,6 +31,7 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
 .title-art, .credits-art, .scene-art { width: 100%; height: 100%; object-fit: cover; display: block; }
 .scene-art { object-position: center top; }
 .adventure-screen[data-scene="ruins"] .scene-art { object-position: center 20%; }
+.adventure-screen[data-scene="automaton"] .scene-art { object-position: center 15%; }
 .title-screen, .credits-screen { display: grid; place-items: center; }
 .title-art, .credits-art, .title-shade { position: absolute; inset: 0; }
 .title-art, .credits-art { height: 135%; object-position: center top; filter: brightness(0.62) saturate(0.82); }
@@ -127,6 +128,11 @@ h1 {
   opacity: 0;
 }
 .hotspot:hover span, .hotspot:focus-visible span { opacity: 1; }
+.adventure-screen[data-route-marker-ready="true"] .hotspot[data-hotspot-id="route-marker"] {
+  border-color: rgba(198, 169, 111, 0.62);
+  background: rgba(129, 94, 54, 0.12);
+}
+.adventure-screen[data-route-marker-ready="true"] .hotspot[data-hotspot-id="route-marker"] span { opacity: 0.82; }
 
 .terminal-workbench {
   position: absolute;
@@ -239,6 +245,17 @@ h1 {
 .evidence-remediation p { margin: 4px 0; color: #d7c7a7; font-size: 0.68rem; }
 .evidence-mastery-row { display: flex; justify-content: space-between; align-items: end; gap: 12px; }
 .evidence-mastery-row .confidence-group { margin-top: 4px; padding: 7px 10px; }
+.route-prediction { display: grid; gap: 8px; margin: 14px 0 0; padding: 10px; border: 1px solid #3a424d; }
+.route-prediction legend { padding: 0 5px; color: #c8b27e; font-size: 0.64rem; }
+.route-prediction label { display: grid; gap: 4px; color: #929ca8; font-size: 0.62rem; }
+.route-prediction input { width: 100%; min-width: 0; padding: 7px 8px; color: #d9e5cf; background: #0d1015; border: 1px solid #38414c; font-family: "Courier New", monospace; }
+.route-stack { grid-template-rows: minmax(0, 1fr) minmax(155px, 0.55fr); }
+.route-retrieval-stack { grid-template-rows: minmax(0, 1fr) minmax(125px, 0.4fr); }
+.route-retrieval-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; min-width: 0; padding: 14px; overflow: auto; background: #101319; }
+.route-retrieval-list fieldset { min-width: 0; padding: 9px; border: 1px solid #38414c; }
+.route-retrieval-list legend { padding: 0 5px; color: #cbd2dc; font-size: 0.66rem; line-height: 1.35; }
+.route-retrieval-list select { width: 100%; min-width: 0; margin-top: 7px; padding: 7px; color: #dce2ea; background: #171b22; border: 1px solid #4a5360; font-size: 0.66rem; }
+.route-retrieval-list p { margin: 7px 0 0; color: #d1bd87; font-size: 0.62rem; }
 
 .command-panel {
   position: relative;
@@ -317,11 +334,16 @@ h1 {
 @media (max-width: 760px) {
   .adventure-screen { grid-template-rows: 55vh minmax(360px, 45vh); overflow: auto; }
   .adventure-screen[data-scene="ruins"] .scene-art { object-position: 70% top; }
+  .adventure-screen[data-scene="automaton"] .scene-art { object-position: center top; }
   .hotspot {
     left: var(--hotspot-narrow-left);
     top: var(--hotspot-narrow-top);
     width: var(--hotspot-narrow-width);
     height: var(--hotspot-narrow-height);
+  }
+  .adventure-screen[data-scene="automaton"] [data-hotspot-id="evidence-terminal"] span {
+    left: 0;
+    transform: none;
   }
   .scene-status { grid-template-columns: 1fr auto; }
   .scene-status strong { grid-column: 1 / -1; grid-row: 2; }
@@ -342,6 +364,11 @@ h1 {
   .evidence-main { grid-template-columns: 1fr; grid-template-rows: minmax(230px, 0.8fr) minmax(320px, 1fr); }
   .evidence-browser { border-right: 0; border-bottom: 1px solid #303640; }
   .evidence-mastery-row { align-items: stretch; flex-direction: column; }
+  .route-layout { display: block; }
+  .route-layout .task-pane { max-height: none; }
+  .route-stack { min-height: 520px; }
+  .route-retrieval-stack { min-height: 650px; }
+  .route-retrieval-list { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

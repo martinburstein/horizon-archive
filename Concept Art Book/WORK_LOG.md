@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-12 — Coder integration: Witness Corridor two-object scene
+
+- **Completed:** integrated the selected WC-01 clean plate and split the former combined target into a grounded Evidence Terminal and separate fallen automaton. Only the Terminal launches the exercise; the automaton retains narrative LOOK/TALK/USE responses.
+- **Files changed:** game scene/rendering/styles, E2E harness, WC-01 scene sheet, design/exercise/location logs, and desktop/320px QA captures.
+- **Validation:** both source-mapped targets exceed 44px, remain non-overlapping, expose distinct semantics, show keyboard focus, and pass pointer/Enter activation at both viewports. Full assessment, privacy, save, reload, final acknowledgement, credits, and console checks pass.
+- **Next recommended item:** Lore Keeper Agent should preserve the contract that the automaton observes and responds while the grounded Terminal alone owns evidence inspection.
+- **Unresolved risks:** narrow framing trims the automaton's far-right body edge while retaining its face, torso, and narrative identity; this is the intended interaction-safe crop.
+
 ## 2026-07-12 — Coder integration: Drowned Archive Terminal
 
 - **Completed:** integrated the selected AB-01 clean plate into the playable ruins scene; moved interaction from the suspended landmark to the grounded three-fin Workload Sort Terminal; tuned separate desktop and narrow crop/target geometry from the source-zone specification.
@@ -31,3 +39,11 @@
 - **Validation:** selected PNG is `1672 x 941`; confirmed exact three indicators, blank inspection surface, separate Terminal/automaton silhouettes and light pools, open traversable route, 44px-safe pointer target, desktop top-crop survival, centered 320–375px narrow-crop survival, source continuity, clean-master rules, and spoiler safety; validated all local Markdown links.
 - **Next recommended item:** Player Agent should verify that players discover and activate the Evidence Terminal without clicking the automaton, while the automaton remains the first narrative focal read, at both 1600x900 and 320x900.
 - **Unresolved risks:** concept coordinates are source-image estimates. Integration must capture fresh desktop and narrow screenshots before locking final hotspot percentages; the current broad automaton hotspot must be split rather than merely relabeled.
+
+## 2026-07-12 — Glass Meadow dual-node tranche
+
+- **Completed:** inspected current meadow implementation and route-marker QA; created a clean selected Glass Meadow master combining ship continuity, the First Signal Petal Terminal, and a separate prerequisite-gated three-fin route marker; corrected marker anatomy and vertical crop placement; documented dormant/awake state cues and responsive hotspot targets.
+- **Files changed:** added `images/glass-meadow-petal-route-marker-v1.png` and `scenes/GM-01-glass-meadow-petal-route-marker.md`; updated README, charter, map, index, GM-00 continuity link, and provenance log. No gameplay code changed.
+- **Validation:** selected PNG is `1672 x 941`; exact three-fin marker, two distinct silhouettes, separate light pools, open path, current-state cues, desktop top-crop, centered 320–375px crop, source continuity, 44px-safe targets, clean-master rules, and spoiler safety pass; local Markdown links validated.
+- **Next recommended item:** Player Agent should test whether a first-time player distinguishes the route marker from ordinary meadow monoliths before hover, understands its locked state, and returns to it after completing First Signal at desktop and 320px widths.
+- **Unresolved risks:** the narrow framing intentionally omits the ship and trims the Petal Terminal's far-left decorative outer edge while preserving its core and actionable crown. Awake-state cues are documented but require a verified state variant or restrained runtime treatment.

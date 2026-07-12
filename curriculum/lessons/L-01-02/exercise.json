@@ -1,0 +1,94 @@
+{
+  "exercise_id": "EX-L0102-ROUTE-MARKER",
+  "lesson_id": "L-01-02",
+  "activity_id": "A-L0102-3",
+  "objective_ids": [],
+  "skill_ids": ["PY-004", "PY-005", "PY-006"],
+  "title": "Route Marker Survey Label",
+  "forms": {
+    "primary": {
+      "source_file": "route_marker_primary.py",
+      "prediction": ["DROWNED ARCHIVE", "LOCAL SURFACE 3"],
+      "required_before_run": true
+    },
+    "transfer": {
+      "source_file": "route_marker_transfer.py",
+      "prediction": ["DROWNED ARCHIVE", "ROUTE VERIFIED 3"],
+      "required_before_run": true,
+      "fresh_form": true
+    }
+  },
+  "mastery": {
+    "required_points_per_form": 8,
+    "total_points_per_form": 8,
+    "retrieval_required": 4,
+    "critical_checks_must_pass": true
+  },
+  "critical_error_codes": [
+    "E_SAFE_SHAPE",
+    "E_VARIABLE_SET",
+    "E_SITE_VALUE",
+    "E_LABEL_HISTORY",
+    "E_CHANNEL_TYPE",
+    "E_PRINT_VARIABLES",
+    "E_OUTPUT_1",
+    "E_OUTPUT_2"
+  ],
+  "misconception_tags": [
+    "quoted-number-is-number",
+    "assignment-prints-output",
+    "hardcoded-output-is-variable-use",
+    "reassignment-changes-everything",
+    "earlier-value-survives-reassignment"
+  ],
+  "remediation_routes": {
+    "E_SAFE_SHAPE": "Keep only simple literal assignments and the two supplied print calls.",
+    "E_VARIABLE_SET": "Use exactly site_name, signal_label, and channel_count.",
+    "E_SITE_VALUE": "Store DROWNED ARCHIVE as quoted text in site_name.",
+    "E_LABEL_HISTORY": "Primary stores LOCAL SURFACE once; transfer then reassigns signal_label to ROUTE VERIFIED.",
+    "E_CHANNEL_TYPE": "Store channel_count as the number 3 without quotation marks.",
+    "E_PRINT_VARIABLES": "Pass variable names to print; do not hardcode the expected answer.",
+    "E_OUTPUT_1": "Trace site_name at the first print call.",
+    "E_OUTPUT_2": "Trace the latest signal_label and numeric channel_count at the second print call."
+  },
+  "session_contract": {
+    "close_reopen_same_scene": "restore_source_prediction_and_hint_level",
+    "full_reload": "restore_clean_form_and_keep_mastery_evidence",
+    "scene_transition": "clear_working_source_prediction_and_output",
+    "mastery_evidence": "persist_separately"
+  },
+  "evidence_contract": {
+    "store": [
+      "lesson_id",
+      "activity_id",
+      "exercise_id",
+      "form_id",
+      "prediction_correctness",
+      "check_results",
+      "attempt_count",
+      "hint_level",
+      "confidence",
+      "misconception_tags",
+      "mastery_status"
+    ],
+    "do_not_store": [
+      "learner_source_code",
+      "learner_prediction_text",
+      "runtime_output_text",
+      "learner_free_form_notes"
+    ]
+  },
+  "accessibility_contract": {
+    "keyboard_order": ["task", "source", "prediction", "run", "output", "hints", "acknowledgement"],
+    "status_announced": true,
+    "color_only_feedback_forbidden": true,
+    "time_limit_seconds": null,
+    "reduced_motion_preserves_state": true,
+    "output_selectable_text": true
+  },
+  "acceptance_commands": [
+    "python validate_route_marker.py --self-test",
+    "python validate_route_marker.py --form primary --check reference_primary.py",
+    "python validate_route_marker.py --form transfer --check reference_transfer.py"
+  ]
+}

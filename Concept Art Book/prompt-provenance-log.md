@@ -115,3 +115,33 @@ Avoid: changing or adding characters, changing automaton anatomy, changing Termi
 ### Selection review
 
 The initial candidate passed anatomy, tone, and silhouette separation but placed the node too far left for a 320px centered crop. The selected edit moved it into the responsive safe band. Passed: original composition; exact three indicators; blank inspection surface; grounded Terminal-family node; automaton narrative dominance; open path; desktop and narrow crop survival; no text or spoiler content.
+
+## HA-LS-004
+
+- **Date:** 2026-07-12
+- **Use case:** `stylized-concept` followed by `precise-object-edit`
+- **Purpose:** Glass Meadow clean master with separate First Signal and route-marker nodes
+- **Selected file:** [images/glass-meadow-petal-route-marker-v1.png](images/glass-meadow-petal-route-marker-v1.png)
+- **Generator:** OpenAI built-in image generation
+- **Method:** reference-guided generation followed by a targeted three-fin/crop correction
+- **Reference inputs:** [Alien Meadow](../Concept%20Art/Alien%20Meadow.png), [GM-00 Landing Shelf](images/glass-meadow-landing-shelf-v1.png), [Drowned Archive Terminal](images/drowned-archive-workload-terminal-v1.png), [Witness Corridor Terminal](images/witness-corridor-evidence-terminal-v1.png)
+- **Initial candidate source:** `C:\Users\marti\.codex\generated_images\019f5327-e8ec-73c3-a8cc-e64462b8987b\exec-40e6bbc7-6e30-4ef0-94d3-c3b9c135a6c9.png`
+- **Selected source output:** `C:\Users\marti\.codex\generated_images\019f5327-e8ec-73c3-a8cc-e64462b8987b\exec-095cf8c8-bdcc-4199-a0f9-6fca2c633d12.png`
+- **Workspace copy:** `Concept Art Book/images/glass-meadow-petal-route-marker-v1.png`
+- **Dimensions:** `1672 x 941`
+
+### Final base generation prompt
+
+```text
+Create an original clean 16:9 Glass Meadow production master in the established hand-painted 1990s point-and-click / restrained PS1-faceted style. Combine the weathered human survey craft and open ramp at far left with the monumental many-petaled First Signal Terminal near center-left and a separate waist-high three-fin route-marker Terminal at source x 61-69%, y 48-72%. Preserve the violet/peach twilight, two moons, crystalline ecology, angular mountains, reflective water, and S-shaped traversable path. Both nodes share faceted fins folded around a core but differ clearly in scale, base, silhouette, and purpose. Depict the current prerequisite state: Petal core dark with soft pale green-white readiness shimmer; route-marker core and one shallow status groove dark, with restrained violet edge rim and a tiny separate base reflection. Keep both essential silhouettes inside the centered source x 31-70% narrow-crop band and above source y 72% for desktop. Keep their light pools separate. No characters, UI, dialogue box, HUD, text, labels, letters, numerals, glyphs, projected graphics, logo, watermark, combat, photorealism, or generic monolith marker.
+```
+
+### Final targeted edit prompt
+
+```text
+Edit only the small route-marker Terminal. Rebuild it with exactly three translucent crystal fins total—left, shorter center, right—around one small dark core; remove all extra blades. Move the complete node slightly upward/deeper beside the same path so its essential silhouette fits source x 60-69%, y 42-69%, with crown, dark core, one dark status groove, base, and separate reflected patch above source y 70%. Keep it prerequisite-locked with restrained ambient rim, not active glow. Preserve the Petal Terminal, ship, route, moons, landscape, lighting, palette, 16:9 framing, and all other details exactly. Repaint the old lower position as meadow paving and flora. No duplicate marker, text, UI, characters, or other changes.
+```
+
+### Selection review
+
+Passed after one targeted edit: exactly three marker fins; dark prerequisite state; distinct Petal and marker silhouettes; separate light pools; open path; desktop and 320–375px crop survival; ship/landmark/source continuity; no text or spoiler content.

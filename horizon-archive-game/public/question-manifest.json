@@ -13,6 +13,15 @@
       "success_contract": "Set signal to 2, create a quoted learner call sign, and print message, signal, and operator output."
     },
     {
+      "id": "HA-PY-002",
+      "scene": "meadow",
+      "exercise_id": "EX-L0102-ROUTE-MARKER",
+      "lesson_id": "L-01-02",
+      "activity_id": "A-L0102-3",
+      "skills": ["PY-004", "PY-005", "PY-006"],
+      "success_contract": "Predict before Run, pass primary and transfer at 8/8, and answer all four retrieval distinctions."
+    },
+    {
       "id": "HA-AI901-001",
       "scene": "ruins",
       "exercise_id": "EX-L0201-WORKLOAD-SORT",
