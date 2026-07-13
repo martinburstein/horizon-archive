@@ -7,7 +7,7 @@
 - **World / region:** World A / Twilight Highlands
 - **Production status:** Historical exploration plate; first-person/no-ship replacement required
 - **Image:** [glass-meadow-landing-shelf-v1.png](../images/glass-meadow-landing-shelf-v1.png)
-- **Purpose:** Establish a quiet first-person threshold into the Builder garden/masterwork using environmental scale, approach, and stewardship evidence without showing the protagonist, companions, or ship.
+- **Purpose:** Establish a quiet first-person threshold into the Builder Glass Garden material farm, introducing feedstock preparation and service logistics without showing the protagonist, companions, or ship.
 
 ## Navigation
 
@@ -20,9 +20,9 @@
 
 | Zone | Approximate screen area | Read | Intended interaction |
 |---|---|---|---|
-| Former survey-craft area | left 0–32%, middle/lower | must become layered threshold paving, retired route fabric, and environmental scale cues | first-person entry and garden stewardship evidence |
+| Feedstock terrace | left 0–32%, middle/lower | stepped extraction face, sorted silicate-bearing substrate, settling pockets, and repaired retaining courses | first-person entry, raw-material stage, and garden stewardship evidence |
 | Survey beacon | left-center 32–39%, middle | isolated geometric head on a narrow tripod | first optional inspect/use target |
-| Reflective basin | right 69–94%, lower-middle | violet reflection and pale crystalline edge flora | environmental observation and regional continuity |
+| Slurry headworks | right 69–94%, lower-middle | managed water/mineral basin with distribution comb, settling steps, and transport-side reject rack | environmental observation and visible feedstock-to-growth handoff |
 | Meadow pass | right 88–100%, middle | path converges on warm horizon notch | scene exit to GM-01 |
 
 ## Visual specification
@@ -31,16 +31,16 @@
 - **Lighting:** cool blue-hour ambient light and warm horizon rim; any local light must follow a visible channel, emitter, or reflective surface.
 - **Atmosphere:** thin valley mist and sparse airborne pollen, kept behind the walkable route.
 - **Scale cues:** waist-high beacon, hand-scale service sockets, rail or curb heights, small cultivated growth, and path width.
-- **Materials:** multi-era basalt paving, repaired drainage edges, mineral grass in controlled beds, shallow managed water, and crystalline petals only where substrate and water infrastructure support them.
+- **Materials:** multi-era basalt paving, repaired drainage edges, sorted fictional silicate feedstock, mineral-slurry channels, shallow managed water, frame metal/ceramic, organic ground cover, and rejected glass stock.
 - **Focal hierarchy:** warm pass and layered path first; stewardship threshold and basin second; beacon third.
 
 ## Continuity constraints
 
 - Surface-canon boundary: the environment establishes arrival and observation only; it contains no answer about the Builders, continuity, disappearance, or the Machine.
 - Must preserve: two moons, angular mountain family, violet/peach atmosphere, an open route, and small cultivated growth tied to visible substrate/water systems.
-- Must add: at least three stewardship phases, maintenance-as-ornament, an abandoned earlier alignment, and a clear relationship to the neighboring Builder garden/masterwork.
+- Must add: at least three stewardship phases, maintenance-as-ornament, an abandoned earlier alignment, silicate feedstock sorting, mineral-slurry/water control, reject/repair storage, harvesting/transport sockets, and a clear handoff to the neighboring growth beds.
 - Must exclude: protagonist, companions, and ship in direct, reflected, shadowed, portrait, distant, or cropped form.
-- Must avoid: enchanted-garden fantasy, arbitrary crystals, decorative glow, turning the beacon into a definitive Builder interface, enlarging the flowers into a duplicate of GM-01, combat, or hiding the route with atmosphere.
+- Must avoid: enchanted-garden fantasy, arbitrary crystals, unsupported claims of real-world scientific feasibility, decorative glow, glass with no process connection, turning the beacon into a definitive Builder interface, combat, or hiding the route with atmosphere.
 - Neighboring-scene links: [historical GM-01 dual-node plate](../images/glass-meadow-petal-route-marker-v1.png) and [original Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
 
 ## Production record

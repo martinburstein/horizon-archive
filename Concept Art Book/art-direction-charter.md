@@ -33,6 +33,23 @@ Horizon Archive interprets beauty through the Builders' collective eye. A great 
 
 Reject generic enchanted-garden fantasy, arbitrary crystals, magical altars, decorative glow, purposeless ruins, and beauty without legible civic, ecological, structural, or ritual purpose.
 
+### Glass Garden production doctrine
+
+The Glass Garden is a fictional Builder material farm supplying purpose-grown glassware for Python-running Terminals. It is not a representation of real glass science and must not be described as scientifically feasible silicate extraction, crystal growth, or annealing.
+
+1. Silicate-bearing feedstock is visibly separated from the local substrate at worked extraction faces or sorting beds.
+2. Mineral slurry and water move through built channels, settling steps, valves, basins, or distribution combs.
+3. Growth collars or seed forms establish the intended cross-section and component family.
+4. Glass rises vertically from the prepared ground like inverted icicles. This direction is a canonical silhouette rule.
+5. Shade vanes, thermal channels, heat-exchange ribs, gauges, or compression braces communicate fictional stress/temperature control.
+6. Adjustable frames, ties, guides, and pruning-like supports train curves, fins, petals, panes, sleeves, and light guides.
+7. Non-text bands, notches, collar positions, or inspection tabs mark maturity and quality without becoming glyphs or UI.
+8. Cut stations, padded cradles, annealing galleries, rails, sleds, and lifting sockets connect mature growth to harvesting and transport.
+9. Test fractures, rejected pieces, sorted salvage, repair glass, and visibly re-fused components make quality control and maintenance legible.
+10. Terminal-component beds differ intentionally: Petal crown segments, three-fin marker elements, inspection panes/lenses, conduit sleeves, status-light guides, collars, and replacement stock are recognizable typologies rather than arbitrary shapes.
+
+Across GM-00 and GM-01, show the complete chain. A single scene must show at least six stages, upward growth, three component typologies, and a connected reject/repair flow. No random fantasy crystals.
+
 ## Production pixel contract
 
 - The canonical final game canvas is `640 × 480` square logical pixels (4:3), matching the upper end of the classic LucasArts pixel-adventure era selected by Martin.
@@ -79,7 +96,7 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 
 - Builder sites show collective authorship, at least three longitudinal construction/stewardship phases, and patient integration with their environment, even in abandonment.
 - Human equipment is compact, practical, weathered, and visibly recent beside ancient spaces.
-- Crystalline flora appears only as part of a legible engineered ecology; its form and placement must reveal a relationship to water, substrate, light, climate, structure, pollination, or signal flow.
+- Glass growth appears only inside a legible fictional cultivation system; its form and placement must reveal feedstock, slurry/water, growth control, component training, harvest, Terminal use, or reject/repair relationships. Organic plant life remains visually distinct from cultivated glass.
 - Regional continuity comes from movement-level construction schools and maintenance practices, not repeated fantasy ornaments.
 - Local interfaces are varied exposed surfaces; do not establish a single definitive form for the Machine.
 - Environmental evidence may deepen ambiguity but may not resolve disappearance, consciousness, continuity, or purpose.
@@ -88,7 +105,7 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 ## Terminal family grammar
 
 - A Terminal is a small physical node emerging from or rooted into the ground; it is not a conventional monitor, laptop, kiosk, or floating icon.
-- The family resemblance is a faceted translucent crown folded around a small central core. Crown scale, fin count, material weathering, and base construction adapt to each region and must show functional construction logic rather than arbitrary crystal decoration.
+- The family resemblance is purpose-grown Builder glassware assembled around a small central core. Petal segments, fins, panes/lenses, sleeves, light guides, collars, and repair stock share traceable cultivation and assembly logic; scale, count, weathering, and base construction adapt to each region without becoming arbitrary crystal decoration.
 - One localized light pool or reflection may isolate a Terminal only when a visible emitter, conduit, reflection path, or material response explains it. Glow must not replace silhouette readability or act as fantasy ornament.
 - The Terminal and the location's monumental landmark must remain separate visual roles: the node is the interaction target; the landmark carries environmental scale.
 - Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.

@@ -6,26 +6,31 @@ Reusable cues based on the four concept-art environments. Each cue should be rea
 
 Visual constants:
 
-- Lush flowering field, distant mountains, multiple moons, monumental crystal bloom.
-- Fine orbital rings or traces around the central form.
-- Small dark markers that contrast with the living landscape.
-- Beauty first; archaeology second.
+- Distant mountains, multiple moons, organic ground cover, and prepared cultivation terraces filled with glass growing upward like inverted icicles.
+- Mineral-slurry/water channels, growth collars, shape-training frames, thermal/stress controls, maturity marks, and harvesting/transport infrastructure connect the beds.
+- Petal segments, three-fin elements, panes/lenses, sleeves, light guides, collars, and repair stock read as distinct purpose-grown Terminal-component families.
+- Beauty comes from centuries of collective material farming, quality control, maintenance, and revision; it is engineered agriculture, not magic.
+- This fictional Builder process is surface canon, not a claim about scientifically feasible real-world glass growth or silicate processing.
 
 Interactive cues:
 
 - The many-petaled Terminal owns First Signal. A separate three-fin Route Marker is visible from arrival but keeps a dark core and inactive groove until First Signal acknowledgement.
 - Petal acknowledgement gives the Route Marker an active core and short readiness groove; only route mastery extends that groove into stepped directional geometry.
 - Petal and Marker light pools, silhouettes, hit areas, exercise sessions, and dialogue ownership remain separate in every state.
-- Flowers orient toward the player only after the player looks away, leaving causality uncertain.
-- Nearby marker stones have different weathering but identical alignment, implying long maintenance.
-- A shallow water channel carries light pulses without visible cables.
+- At least three bed/frame/repair vocabularies reveal different Builder cultivation movements and centuries of accumulated stewardship.
+- Feedstock terraces and settling pockets supply mineral-slurry/water channels that visibly branch into specific growth beds.
+- Collars and seed forms establish cross-section; all cultivated glass rises bottom-to-top, never as random crystal scatter.
+- Shade vanes, heat-exchange ribs, braces, and inspection points communicate fictional stress/temperature control without claiming real scientific accuracy.
+- Training frames guide multiple component typologies; non-text bands, notches, tabs, or collar positions show maturity and quality without color alone.
+- Cut stations, padded cradles, annealing galleries, rail/sled routes, and lifting sockets connect mature growth to Terminal assembly and repair stock.
+- Test fractures, off-spec racks, sorted salvage, and re-fused seams make rejected and repair glass part of the civic maintenance system.
 - The Petal core uses locked, active, and acknowledged geometry; partial syntax does not animate the world before validation.
-- Sensor values show that the meadow is neither wild nor conventionally cultivated.
+- Sensor values show that the meadow is a fictional material farm rather than wild ecology; they do not assert a real-world glassmaking mechanism.
 - A failed command leaves both nodes stable while the human tooling identifies the smallest useful correction.
 
 Use for: first-run confidence, strings, variables, visible output, simple observations, classification hypotheses.
 
-Avoid: predatory plants, secret prison imagery, instant proof that the meadow is sentient, hiding the locked Route Marker, making it available before Petal acknowledgement, or describing its prerequisite state as refusal or sleep.
+Avoid: random fantasy crystals, enchanted-garden behavior, unexplained glow, downward stalactite silhouettes, unsupported real-world scientific claims, predatory plants, secret prison imagery, instant proof that the meadow is sentient, hiding the locked Route Marker, making it available before Petal acknowledgement, or describing its prerequisite state as refusal or sleep.
 
 ## Drowned Archive / Alien Ruins
 

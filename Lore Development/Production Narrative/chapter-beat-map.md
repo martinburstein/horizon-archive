@@ -27,8 +27,8 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 
 ### Beat sequence
 
-1. Arrival in apparent paradise. The survey craft reports no population, recent traffic, distress beacon, or obvious catastrophe. The meadow's ecology is healthy enough to make the word "ruin" feel premature.
-2. The crystal bloom responds to visible output. The important event is not translation; it is that the interface accepts a human-readable declaration without any visible negotiation.
+1. Arrival at what first resembles a glass garden. No population, recent traffic, distress beacon, or obvious catastrophe appears, yet feedstock terraces, slurry/water channels, upward-growing glass beds, training frames, harvesting/annealing routes, and repair stock show that this was a centuries-maintained material farm rather than wild or magical ecology. The fictional process is not presented as real-world glass science.
+2. A Petal Terminal assembled from purpose-grown glass components responds to visible output. The important event is not translation; it is that the Python-running interface accepts a human-readable declaration without any visible negotiation.
 3. A visible Route Marker remains prerequisite-locked until First Signal acknowledgement. It then teaches variables, value types, reassignment, prediction, and retrieval before adding completed directional geometry to the meadow path.
 4. At the Drowned Archive, a grounded three-fin Terminal opens a human-authored Workload Sort while the monumental Tidal Lens remains silent. The player learns to classify bounded jobs and, by contrast, to treat the landmark's survey name as provisional when evidence is insufficient.
 5. In the Witness Corridor, a separate grounded Evidence Terminal validates a human-authored multimodal packet. After acknowledgement, the fallen automaton produces its own bounded response; the two events remain separately attributed.
@@ -38,6 +38,7 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 ### Required discoveries
 
 - Builder sites can be beautiful, functional, and empty at once.
+- Glass Garden beauty comes from collective fictional engineering: silicate feedstock, controlled upward growth, trained Terminal-component typologies, harvest, annealing, transport, rejection, repair, and centuries of visible revision.
 - Local interfaces accept simple Python-like operations through the human translation layer.
 - One local surface can expose a prerequisite relationship without refusing, judging, or understanding the learner.
 - A verified local Terminal and a monumental nearby structure are not automatically the same object or speaker.

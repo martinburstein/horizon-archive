@@ -28,6 +28,17 @@ Beauty is seen through the Builders' eye. The most beautiful places are collecti
 
 Reject generic enchanted gardens, arbitrary crystal fields, magical-looking altars, decorative bloom, purposeless ruins, and beauty that carries no visible civic, ecological, structural, or ritual function.
 
+## Glass Garden material-cultivation canon
+
+The Glass Garden is a fictional Builder agricultural and industrial system. It farms silicate-bearing raw material into purpose-shaped glass components used by the Python-running Terminals. This is project worldbuilding, not a claim that real glass can be grown this way or a scientifically accurate description of real silicate extraction, crystallization, annealing, or manufacturing.
+
+- Glass grows vertically upward from prepared beds like inverted icicles rising out of the ground. Downward-hanging stalactite language, random geodes, and scattered fantasy crystal spikes are incorrect.
+- Beds must expose a readable fictional process chain: silicate feedstock extraction; mineral-slurry and water delivery; growth collar or seed-form placement; upward crystallization; stress and temperature control; shape-training; maturity marking; harvesting; annealing; and transport.
+- Cultivation produces intentional component families rather than generic crystal variety: Petal crown segments, three-fin marker elements, inspection panes or lenses, conduit sleeves, status-light guides, collars, and repair stock for Terminals.
+- Off-spec and damaged growth belongs to the system. Rejected pieces, test fractures, sorted salvage, re-fused repairs, replacement stock, and altered training frames show quality control and centuries of accumulated practice.
+- Different Builder movements leave recognizable cultivation schools in bed geometry, collar construction, training-frame rhythm, control infrastructure, maturity marks, repair technique, and preferred component typologies.
+- Any light in cultivated glass must come from a visible environmental source, Terminal state, conduit, reflective channel, heat-control element, or material response. Luminosity without process or function is fantasy decoration.
+
 ## Hard production gates
 
 All gates must pass. Accessibility and hotspot requirements are constraints on the painting, not permission to reduce it to a diagram.
@@ -73,6 +84,14 @@ All gates must pass. Accessibility and hotspot requirements are constraints on t
 - Every unusual material, crystal, cultivated organism, water feature, and light source must have a visible functional relationship to the site.
 - A beautiful scene with no legible purpose, revision history, maintenance logic, or collective authorship fails as generic fantasy.
 
+For Glass Garden scenes specifically, the following are additional hard requirements:
+
+- Glass rises from prepared ground beds in the inverted-icicle direction and never appears as random decorative crystal scatter.
+- At least six of the ten cultivation stages must be visible in one scene; the GM-00/GM-01 pair must show the complete chain across both scenes.
+- Feedstock, slurry/water, collars/seeds, thermal/stress control, training frames, maturity marks, harvesting/annealing/transport, and reject/repair flows must connect spatially rather than read as unrelated props.
+- At least three Terminal-component typologies must be distinguishable by trained cross-section, collar, frame, size, or storage destination.
+- A reviewer must be able to infer fictional material production before reading explanatory text. If the scene reads first as a magical crystal garden, it fails.
+
 ### 7. First-person staging gate
 
 - The camera height, approach line, foreground occlusion, and focal hierarchy must make the player feel physically present without displaying the player.
@@ -102,8 +121,9 @@ Every production-scene review must include:
 4. a hotspot/route overlay kept outside the shipped art;
 5. a short material-ramp and environmental-storytelling inventory;
 6. a Builder-authorship sheet naming the collective work, visible purpose, three construction phases, maintenance features, engineered-ecology relationships, and regional design school;
-7. an originality statement naming the abstract references used and the concrete exclusions checked;
-8. first-person exclusion confirmation for protagonist, companions, and ship.
+7. for Glass Garden scenes, a process overlay identifying all ten fictional cultivation stages, visible component typologies, reject/repair flow, and the upward growth direction;
+8. an originality statement naming the abstract references used and the concrete exclusions checked;
+9. first-person exclusion confirmation for protagonist, companions, and ship.
 
 ## Decision vocabulary
 

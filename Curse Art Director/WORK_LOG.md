@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-12 — Glass Garden fictional material-cultivation canon
+
+- **Outcome:** established the Glass Garden as fictional Builder engineered agriculture: glass grows upward from prepared beds like inverted icicles and is trained into purpose-shaped glassware for Python-running Terminals. Added hard visual gates for feedstock extraction, slurry/water delivery, collars/seeds, upward crystallization, stress/temperature control, shape training, maturity marks, harvest/anneal/transport, reject/repair flows, and component typologies.
+- **Files:** `Curse Art Director/CHARTER.md`, `Curse Art Director/WORK_LOG.md`, `horizon-archive-game/AGENTS.md`, `Concept Art Book/art-direction-charter.md`, `Concept Art Book/scene-index.md`, `Concept Art Book/planet-region-map.md`, `Concept Art Book/prompt-provenance-log.md`, `Concept Art Book/scenes/GM-00-glass-meadow-landing-shelf.md`, `Concept Art Book/scenes/GM-01-glass-meadow-petal-route-marker.md`, `Lore Development/Production Narrative/environmental-storytelling-cues.md`, and `Lore Development/Production Narrative/chapter-beat-map.md`.
+- **Validation:** reread applicable instructions and current art/surface-canon documents; confirmed the doctrine is explicitly fictional and makes no real-world feasibility claim; checked all changed Markdown links; ran `git diff --check`; preserved unrelated user files.
+- **Finding:** existing Glass Meadow plates and the current blockout do not show the canonical upward growth direction or the connected cultivation/harvest/repair chain. They remain historical/blockout evidence only.
+- **Handoff:** Location Scout should split the replacement pair into a GM-00 feedstock/headworks threshold and GM-01 upward-growth/component farm, showing the full ten-stage chain, at least three component typologies, three stewardship eras, and no party or ship.
+- **Status:** ready to advance.
+
 ## 2026-07-12 — Builder aesthetic doctrine
 
 - **Outcome:** reframed Horizon Archive beauty through the Builders' collective eye. Production environments must now show visible multi-generational authorship, at least three longitudinal construction/stewardship phases, functional or civic/ritual purpose, maintenance as ornament, accumulated revision, engineered ecology, and movement-level visual schools. Generic enchanted-garden fantasy, arbitrary crystals, decorative glow, and beauty without visible purpose are explicit rejection conditions.

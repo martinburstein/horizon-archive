@@ -1,5 +1,14 @@
 # Prompt and Provenance Log
 
+## Superseding Glass Garden production brief
+
+- **Date:** 2026-07-12
+- **Source:** direct durable user art direction; no image generated in this tranche
+- **Scope:** GM-00 and GM-01 replacement concepts and production pixel plates
+- **Authority:** [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md), [Concept Art direction](art-direction-charter.md), [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md), and [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md)
+
+Treat the Glass Garden as a fictional Builder material-cultivation complex, not real-world science or magic. Glass grows vertically upward from prepared ground beds like inverted icicles. The paired scenes must make the full process readable: silicate feedstock extraction; mineral-slurry/water delivery; growth collars or seed forms; upward crystallization; fictional stress/temperature control; shape-training frames; maturity markings; harvesting, annealing, and transport; reject/repair glass; and multiple purpose-grown component typologies for the Python-running Terminals. Preserve first-person framing, no protagonist/companions/ship, centuries of collective authorship, movement-level visual schools, and central-mystery safety. Reject random fantasy crystals and unexplained decorative glow.
+
 ## HA-LS-001
 
 > **Historical exploration prompt — superseded for production.** This prompt predates the first-person/no-ship lock and Builder aesthetic doctrine. Its survey-craft, crystal-garden, and decorative-light instructions are retained only as provenance and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and the current [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md).
