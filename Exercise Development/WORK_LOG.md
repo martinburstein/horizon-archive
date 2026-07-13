@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Round 26 Capstone independent freshness evidence fix
+
+- **Work completed:** Separated Capstone freshness from Remediation Planner route closure. The prerequisite gate now requires six independently passing Planner transfer records plus exact packaged lesson/source route verification. It exposes a bounded `L0602-PACKAGED-SOURCES-V1` revision and 6/6 count; route mastery/count remains a separate prerequisite.
+- **Truth/privacy:** Missing transfer evidence, mismatched lesson/source routing, absent proof, or stale/forged revisions produce `freshEvidenceCurrent: false` and cannot support Capstone mastery or next-practice readiness. Direct open and reload re-derive the gate from sanitized Ledger/Planner evidence. The visible panel separately reports objective rows, route closure, transfer count, source revision, and explicitly states that route closure cannot create freshness. Only fixed IDs/counts/revision persist—no timestamps, learner prose, exam text, credentials, endpoints, payloads, responses, or action requests.
+- **Files changed:** `horizon-archive-game/src/capstoneReadinessExercise.js`, `horizon-archive-game/test/capstoneReadinessExercise.test.js`, `horizon-archive-game/src/App.jsx`, and this log. No QA binaries were regenerated or modified.
+- **Validation:** Added focused tests for route-closed-but-missing-transfer evidence, source verification, stale/forged revision downgrade, strict mastery proof, privacy, and direct-open/reload/visible-state wiring. Focused Capstone tests pass 7/7; full unit suite passes 150/150; production build and `git diff --check` pass.
+- **Next recommended item:** Player Agent should challenge a route-closed save missing one transfer record, a mismatched official-source route, an old Capstone save without the current revision, direct open versus reload display, and screen-reader announcement of the three distinct prerequisite states.
+- **Unresolved risks:** The bounded freshness definition is revision-based rather than time-based, avoiding sensitive timestamps and false temporal precision. Updating packaged official-source content must intentionally advance the revision constant and invalidate older freshness proof.
+
 ## 2026-07-12 — L-06-03 Offline Capstone Readiness mandatory Terminal gate
 
 - **Outcome:** Implemented `EX-L0603-OFFLINE-CAPSTONE` after Remediation Planner as the next mandatory ruins gate. Primary and fresh transfer each require 12/12 across client flow, text/speech direction, Content Understanding, prerequisite evidence, cautious recommendation, and claim/action safety, followed by a four-part Pilot-owned closed-note defense. No SIM-01/CUM-01 runtime work was added.
