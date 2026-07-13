@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — SIM-01 mixed simulation visual integration gate
+
+- **Completed:** audited the post-Capstone transition and complete SIM-01 one-card flow. Corrected one essential layout defect by assigning explicit warning/equivalent/timer-control/timer-status/form rows. Canonical 640 x 480, authored 320 x 240, scaled desktop, timed/untimed equivalence, text containment, state/focus cues, grayscale-readable labels, and square-pixel chrome now hold together in the original late-1990s adventure language without copied protected art.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `playtest/e2e-playthrough.mjs`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. Added reproducible untimed canonical, timed narrow, and untimed scaled-host E2E checkpoints; generated binaries were removed before handoff.
+- **Validation:** all 155 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. Three captures were visually inspected and byte-distinct before removal. E2E confirms 24/24, 5/7 domain mix, all objectives, timed/untimed equality, privacy, direct/reload Continue focus, and credits; `git diff --check` passes.
+- **Next recommended item:** retain the five-row contract for later simulations; timer state must remain diagnostic text rather than urgency color, countdown pressure, or mastery input.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 viewport by design. The build remains above the 500 kB advisory threshold, with no observed visual or interaction defect.
+
 ## 2026-07-12 — Offline Capstone Readiness visual integration gate
 
 - **Completed:** audited the new L-06-03 Capstone Readiness primary, transfer, closed-note, and completion path. Corrected one essential containment defect by giving warning, trace, prerequisite gate, and form explicit rows and a contained prerequisite scroller. Canonical 640 x 480, authored 320 x 240, scaled desktop, text containment, prerequisite state cues, hierarchy, focus, accessibility, and square-pixel chrome now hold together without copying protected art.

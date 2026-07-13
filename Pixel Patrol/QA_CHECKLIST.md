@@ -163,6 +163,11 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Client, text/speech direction, schema/null/provenance, and prerequisite flow remain legible and ordered.
 - [ ] Canonical, narrow, and scaled-host Capstone captures are reproducible and byte-distinct; generated binaries are not retained after review.
 - [ ] Capstone direct/restored completion moves focus to Continue with Pilot/System/Teacher separation intact.
+- [ ] SIM-01 warning, equivalent, timer control, timer status, and one-card form occupy five explicit ordered rows without overlap.
+- [ ] Timed and untimed modes expose identical item/scoring/remediation/mastery structure; timer state is labeled and not color-only.
+- [ ] One of twelve cards is active, with item/domain/objective tags, decision/reason, System score, and Teacher remediation in order.
+- [ ] Canonical, timed-narrow, and scaled-host captures are reproducible and byte-distinct; generated binaries are removed after review.
+- [ ] SIM-01 direct/restored completion focuses Continue; focus and status cues remain legible in grayscale.
 - [ ] Planner warning, eleven-field equivalent, 12-route queue, and form occupy four explicit ordered rows without overlap.
 - [ ] Twelve route records expose objective, failed dimension, lesson/source, and reassessment status.
 - [ ] Retrieval -> guided repair -> fresh transfer -> independent reassessment -> stop/escalate remains ordered.

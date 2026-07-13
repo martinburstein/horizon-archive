@@ -234,3 +234,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Preserve reading order: Machine/file/status -> offline/not-exam/no-guarantee warning -> client/workload/schema trace -> neutral System prerequisite gate -> Pilot choice or defense -> System score -> Teacher remediation/recommendation.
 - Prerequisite states communicate 15/15 objective evidence, closed remediation routes, and current fresh evidence with text and shape, never color alone. Confidence cannot alter readiness.
 - The prerequisite gate and form are contained regions and cannot cover persistent safety or trace content. Direct and restored completion focus Continue.
+
+## SIM-01 mixed simulation hierarchy
+
+- Preserve reading order: Machine/file/item status -> offline/not-exam warning -> 12-item/5+7/all-objective equivalent -> optional timer checkbox -> explicit timed/untimed status -> Pilot one-card item -> System score -> Teacher objective remediation.
+- Timer state uses checkbox state and text, never color alone. Untimed is visibly equivalent for mastery; elapsed time cannot change correctness, remediation, or completion.
+- One card remains the only active task. Native selects, square focus outlines, status labels, and Teacher remediation must remain legible in grayscale and keyboard order.

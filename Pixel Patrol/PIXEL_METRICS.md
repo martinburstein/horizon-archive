@@ -160,3 +160,9 @@ At 1x capture:
 - Capstone uses four explicit rows: offline/not-exam/no-guarantee warning, trace equivalent, contained prerequisite gate, then contained scenario or closed-note form.
 - At 640 x 480 the complete trace and prerequisite state remain visible before form traversal. At 320 x 240 the complete warning leads and all later regions remain reachable vertically.
 - Preserve whole-pixel seams, fixed Machine/file/status chrome, native accessible controls, and integer-scaled 4:3 presentation.
+
+## SIM-01 mixed simulation viewport contract
+
+- SIM-01 uses five explicit rows: offline/not-exam warning, mixed-block equivalent, optional timer control, timer/untimed status, then one contained item card/form.
+- At 640 x 480 all five rows establish the hierarchy before deeper form traversal. At 320 x 240 the complete warning leads and the remaining rows stay reachable vertically.
+- Timed and untimed modes share identical layout, scoring, remediation, and mastery grammar; only the labeled timer status changes.
