@@ -2,7 +2,10 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  advanceOpeningProgress,
   createOpeningProgress,
+  evaluateOpeningActivation,
+  isRepeatedOpeningKey,
   LOCAL_SAVE_SLOT_ID,
   normalizeCharacterName,
   sanitizeOpeningProgress,
@@ -60,6 +63,43 @@ test("legacy gameplay saves migrate without losing established progress", () => 
   });
 });
 
+test("one pointer or keyboard activation burst advances exactly one persisted opening state", () => {
+  let progress = createOpeningProgress("prologue", "Ada Lovelace", 0);
+  let lastAcceptedAt = Number.NEGATIVE_INFINITY;
+  const activate = (event) => {
+    const activation = evaluateOpeningActivation(event, lastAcceptedAt);
+    lastAcceptedAt = activation.lastAcceptedAt;
+    progress = advanceOpeningProgress(progress, activation.accepted);
+  };
+  const resume = () => sanitizeOpeningProgress(progress);
+
+  activate({ detail: 1, timeStamp: 1000 });
+  activate({ detail: 2, timeStamp: 1060 });
+  assert.equal(resume().step, "prologue");
+  assert.equal(resume().prologueBeat, 1);
+
+  activate({ detail: 0, repeat: false, timeStamp: 1600 });
+  activate({ detail: 0, repeat: true, timeStamp: 1630 });
+  assert.equal(resume().step, "prologue");
+  assert.equal(resume().prologueBeat, 2);
+
+  activate({ detail: 1, timeStamp: 2200 });
+  activate({ detail: 1, timeStamp: 2260 });
+  assert.equal(resume().step, "chapter-reveal");
+  assert.equal(resume().prologueBeat, 2);
+
+  activate({ detail: 0, repeat: false, timeStamp: 2700 });
+  assert.equal(resume().step, "playing");
+});
+
+test("held Enter and Space are suppressed without blocking single keyboard activation", () => {
+  assert.equal(isRepeatedOpeningKey({ key: "Enter", repeat: true }), true);
+  assert.equal(isRepeatedOpeningKey({ key: " ", repeat: true }), true);
+  assert.equal(isRepeatedOpeningKey({ key: "Spacebar", repeat: true }), true);
+  assert.equal(isRepeatedOpeningKey({ key: "Enter", repeat: false }), false);
+  assert.equal(isRepeatedOpeningKey({ key: "ArrowRight", repeat: true }), false);
+});
+
 test("App wires the complete resumable opening and exact selected meadow art", () => {
   const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
@@ -84,4 +124,7 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.equal(source.match(/<img className="title-art" src=\{glassMeadowImage\}/g)?.length ?? 0, 0);
   assert.equal(source.match(/<img className="title-art chapter-reveal-art" src=\{glassMeadowImage\}/g)?.length, 1);
   assert.match(styles, /\.canonical-game-frame \.scene-art\.glass-meadow-art \{[^}]*object-fit: cover;[^}]*image-rendering: pixelated;[^}]*image-rendering: crisp-edges;/s);
+  assert.doesNotMatch(source, /openingTransitionRef/);
+  assert.match(source, /evaluateOpeningActivation\(event, openingActivationAtRef\.current\)/);
+  assert.equal(source.match(/onKeyDown=\{preventRepeatedOpeningKey\}/g)?.length, 2);
 });

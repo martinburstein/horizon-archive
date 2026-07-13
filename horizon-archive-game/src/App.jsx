@@ -15,7 +15,10 @@ import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
+  advanceOpeningProgress,
   createOpeningProgress,
+  evaluateOpeningActivation,
+  isRepeatedOpeningKey,
   PROLOGUE_BEAT_COUNT,
   sanitizeOpeningProgress,
   validateCharacterName,
@@ -506,7 +509,7 @@ export function App() {
   const [capstoneReadinessSession,setCapstoneReadinessSession]=useState(null);const [capstoneReadinessEvidence,setCapstoneReadinessEvidence]=useState(null);
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
   const openingHeadingRef = useRef(null);
-  const openingTransitionRef = useRef(false);
+  const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const meadowPrimaryHotspotRef = useRef(null);
   const meadowEntryFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -608,7 +611,6 @@ export function App() {
 
   useLayoutEffect(() => {
     if (!["create-save", "character-name", "prologue", "chapter-reveal"].includes(mode)) return;
-    openingTransitionRef.current = false;
     openingHeadingRef.current?.focus({ preventScroll: true });
   }, [mode, prologueBeat]);
 
@@ -790,17 +792,30 @@ export function App() {
     setMode("prologue");
   }
 
-  function advanceTemporaryPrologue() {
-    if (openingTransitionRef.current) return;
-    openingTransitionRef.current = true;
-    if (prologueBeat < PROLOGUE_BEAT_COUNT - 1) {
-      setPrologueBeat((current) => current + 1);
-      return;
-    }
-    setMode("chapter-reveal");
+  function acceptOpeningActivation(event) {
+    const result = evaluateOpeningActivation(event, openingActivationAtRef.current);
+    openingActivationAtRef.current = result.lastAcceptedAt;
+    return result.accepted;
   }
 
-  function enterChapterOne() {
+  function preventRepeatedOpeningKey(event) {
+    if (!isRepeatedOpeningKey(event)) return;
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function advanceTemporaryPrologue(event) {
+    const accepted = acceptOpeningActivation(event);
+    const next = advanceOpeningProgress({ step: "prologue", characterName, prologueBeat }, accepted);
+    if (!accepted) return;
+    setPrologueBeat(next.prologueBeat);
+    if (next.step === "chapter-reveal") setMode("chapter-reveal");
+  }
+
+  function enterChapterOne(event) {
+    const accepted = acceptOpeningActivation(event);
+    const next = advanceOpeningProgress({ step: "chapter-reveal", characterName, prologueBeat }, accepted);
+    if (!accepted || next.step !== "playing") return;
     meadowEntryFocusPendingRef.current = true;
     setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
     setMode("playing");
@@ -1802,7 +1817,7 @@ export function App() {
           <h1 ref={openingHeadingRef} id="prologue-heading" tabIndex="-1">{beat.heading}</h1>
           <p>{beat.body}</p>
           <p className="prologue-recorder">FLIGHT RECORDER // {characterName}</p>
-          <button className="primary-action" type="button" onClick={advanceTemporaryPrologue}>
+          <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={advanceTemporaryPrologue}>
             {prologueBeat === PROLOGUE_BEAT_COUNT - 1 ? "Reach Chapter I" : "Continue temporary prologue"}
           </button>
         </section>
@@ -1822,7 +1837,7 @@ export function App() {
           <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
           <p className="prologue-recorder">PILOT // FLIGHT RECORDER — {characterName}</p>
           <p>I'm down. The horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.</p>
-          <button className="primary-action" type="button" onClick={enterChapterOne}>Enter the meadow</button>
+          <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>
       </CanonicalGameFrame>
