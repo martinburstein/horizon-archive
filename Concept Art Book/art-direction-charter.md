@@ -63,6 +63,14 @@ The Glass Garden is a fictional Builder material farm supplying purpose-grown gl
 
 Across GM-00 and GM-01, show the complete chain. A single scene must show at least six stages, upward growth, three component typologies, and a connected reject/repair flow. No random fantasy crystals.
 
+#### Selected Glass Garden visual synthesis
+
+- Combine an absolutely flat, infinite horizon and credible mineral floor with realistic glass material behavior; the result must be an original Horizon Archive scene, not a copy of any selection image.
+- Silica magma fictionally escapes through pores or fine fissures in the floor, enters flush interlocking cutter/growth mats, and rises as glass tubes. Make root, feed, and tube continuity readable without excavations or raised infrastructure.
+- The alien mats preserve, thermally/stress train, shape, maturity-mark, cut, and release the crop while remaining flush with the floor. Their order follows branching, phase, radial, or interlocking state logic rather than human rows or a Cartesian grid.
+- Render glass through variable wall thickness, transparency/translucency, refraction, internal reflection, edge highlights, subtle inclusions/bubbles or strain, and believable floor contact. Reject crystal shorthand, plastic opacity, neon piping, and magical glow.
+- Keep the substrate semi-plausible through matte mineral variation, pores, hairline seams, embedded traces, and restrained heat/moisture evidence. The material treatment may be convincing; the cultivation mechanism remains explicitly fictional.
+
 #### Glass Garden absolute-flatness lock
 
 - Ground is perfectly flat at immense field scale; the terrain horizon is ruler-straight from edge to edge.

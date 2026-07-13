@@ -1,5 +1,14 @@
 # Prompt and Provenance Log
 
+## Selected Glass Garden floor, mat, and glass synthesis
+
+- **Date:** 2026-07-12
+- **Source:** direct user selection combining qualities from the most recent option 2 and option 3; no image generated in this tranche
+- **Scope:** GM-00 and GM-01 replacement concepts and production pixel plates
+- **Authority:** [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md), [Concept Art direction](art-direction-charter.md), [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md), and [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md)
+
+Create an original first-person Glass Garden scene with no protagonist, companion, or ship. Combine option 2's perfectly flat infinite horizon and semi-plausible mineral floor with option 3's realistic glass material behavior; do not copy either image's composition or forms. Fictional silica magma escapes through pores or fine fissures in the flat floor into interlocking alien cutter/growth mats that remain flush with the substrate. The mats preserve young growth, regulate heat and stress, train tube geometry, mark maturity, and cut or release the harvest in an orderly non-Cartesian field system. Glass tubes must show variable wall thickness, transparency/translucency, refraction, internal reflection, edge highlights, subtle inclusions/bubbles or strain, and believable floor contact. Reject hills, raised infrastructure, upright cutters, human crop rows or grids, generic crystals, plastic, neon tubing, magical glow, and any implication that the fictional cultivation process is real science.
+
 ## Glass Garden absolute-flatness correction
 
 - **Date:** 2026-07-12

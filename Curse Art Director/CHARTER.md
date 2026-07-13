@@ -55,6 +55,17 @@ The Glass Garden is a fictional Builder agricultural and industrial system. It f
 - Different Builder movements leave recognizable cultivation schools in field topology, collar construction, conformal-guide rhythm, embedded controls, maturity marks, repair technique, and preferred component typologies.
 - Any light in cultivated glass must come from a visible environmental source, Terminal state, conduit, reflective channel, heat-control element, or material response. Luminosity without process or function is fantasy decoration.
 
+### Selected Glass Garden visual synthesis
+
+The selected direction combines the perfectly flat, infinite horizon and semi-plausible floor of the most recent option 2 with the realistic glass material behavior of the most recent option 3. Those options are evidence for qualities only: create an original Horizon Archive composition, forms, palette, and crop system rather than copying either image.
+
+- The floor is a credible continuous mineral substrate: matte and finely varied, with pores, hairline seams, embedded process traces, and restrained thermal or moisture evidence. It never becomes terrain relief.
+- Fictional silica magma escapes through floor pores or hairline fissures into flush alien cutter/growth mats and rises as hollow or partially hollow glass tubes. The emergence point, tube root, and managed growth relationship must be visible.
+- Interlocking cutter/growth mats lie flush with the floor. They preserve young growth, regulate heat and stress, train tube geometry, register maturity, and cut or release finished pieces. No upright cutter, gantry, rack, human control station, or skyline machinery is permitted.
+- Order comes from repeated mat anatomy, alien branching/phase relationships, and synchronized process-state waves, not human crop rows, parcels, roads, or Cartesian grids.
+- Glass must read materially as glass: variable wall thickness, transparent and translucent passages, refraction, internal reflection, sharp edge highlights, subtle inclusions/bubbles or strain, believable contact shadows, and selective surface wear. Reject generic crystal faceting, opaque plastic, neon tubes, and unsupported magical glow.
+- Material appearance may be physically convincing, but the silica-magma cultivation cycle remains fictional Builder worldbuilding rather than a real manufacturing or geological claim.
+
 ### Absolute-flatness lock
 
 - The Glass Garden ground plane is completely flat at gigantic agricultural scale. The terrain horizon is ruler-straight and unbroken from edge to edge.

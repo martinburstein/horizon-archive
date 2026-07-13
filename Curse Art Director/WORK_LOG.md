@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-12 — Selected Glass Garden floor, mat, and glass synthesis
+
+- **Outcome:** recorded the selected combination of option 2's perfectly flat infinite horizon and semi-plausible floor with option 3's realistic glass material. Canon now shows fictional silica magma escaping through the floor into flush alien cutter/growth mats that preserve, train, maturity-mark, cut, and harvest upward-growing tubes in an orderly non-Cartesian field.
+- **Files:** `Curse Art Director/CHARTER.md`, `Curse Art Director/WORK_LOG.md`, `horizon-archive-game/AGENTS.md`, `Concept Art Book/art-direction-charter.md`, `Concept Art Book/prompt-provenance-log.md`, `Concept Art Book/scenes/GM-00-glass-meadow-landing-shelf.md`, and `Concept Art Book/scenes/GM-01-glass-meadow-petal-route-marker.md`.
+- **Material gate:** glass must use variable wall thickness, transparency/translucency, refraction, internal reflection, edge highlights, inclusions/strain, and believable contact rather than crystal, plastic, neon, or magical-glow shorthand. The convincing material treatment does not turn the fictional cultivation process into a scientific claim.
+- **Continuity:** preserved first-person framing, no protagonist/companions/ship, absolute flatness, glass as the only vertical landform, alien functional logic, original-art requirements, and central-mystery safety.
+- **Validation:** checked authority consistency, Markdown links, and whitespace; no runtime assets, generated images, commits, or pushes.
+- **Status:** ready for an original replacement concept and production pixel plate.
+
 ## 2026-07-12 — Glass Garden absolute-flatness correction
 
 - **Outcome:** locked Glass Garden to a perfectly flat, gigantic agricultural plane with a ruler-straight horizon and cultivated glass continuing unfathomably to every edge. Cultivated glass is now the only allowed vertical landform; depth is limited to atmosphere, occlusion, maturity/component-shape variation, cluster compression, and process-state waves.
@@ -44,3 +53,11 @@
 - **Finding:** the current Glass Meadow is a `320 x 180` code-assembled integer-rectangle blockout with broad flat bands, simplified materials, and an in-frame survey craft. It is `BLOCKOUT ONLY` under this charter and must not be represented as production-rich final scenery.
 - **Handoff:** Location Scout should author a new original first-person Glass Meadow production plate at `640 x 360`, excluding the party and ship, then submit the required 1x, integer-scale, grayscale, thumbnail, hotspot, material, storytelling, and originality evidence for review before Coder integration.
 - **Status:** ready to advance.
+## 2026-07-13 — Opening Glass Meadow relay review
+
+- **Outcome:** issued **REVISE**; the demo is visually usable and rich, and the first-person, no-ship, flat-horizon, realistic-glass, growth-mat, and originality gates pass.
+- **Files:** added [`reviews/2026-07-13-opening-glass-meadow.md`](reviews/2026-07-13-opening-glass-meadow.md) and updated this log.
+- **Validation:** checked the assigned raster and opening-flow implementation; validated review links and ran targeted `git diff --check`.
+- **Finding:** title/save/name reuse spends the Chapter I art reveal early; the smooth `1672 × 941` raster is a composition target, not native `640 × 360` square-pixel production art.
+- **Handoff:** use solid dark title/save/name/prologue surfaces; reveal art first at Chapter I; use Location Scout rectangles First Terminal `x294 y191 w120 h136` and Route `x493 y192 w138 h167`.
+- **Status:** revise before advance.
