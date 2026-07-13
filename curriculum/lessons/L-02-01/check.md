@@ -33,3 +33,5 @@ Critical misconception tags:
 - `working-state-is-mastery-evidence`
 
 Store only item correctness, attempts, hint level, confidence, tags, and mastery state. Do not persist the learner's free-form source or response text.
+
+For the reload and scene-round-trip distinction, use [Saved Evidence Is Prior Progress](saved-evidence-resume-guide.md). Reconstructed finalized correctness remains prior assessed progress; it is not a new attempt, retained private response, mastery acknowledgement, exam credit, readiness guarantee, or external authority.

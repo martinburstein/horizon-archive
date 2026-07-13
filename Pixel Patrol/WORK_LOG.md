@@ -1,5 +1,17 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 - Workload Sort resume-strip visual-system gate
+
+- **Outcome / verdict:** PASS after one bounded narrow-type correction. The privacy-safe resume notice reads as an inline Terminal status rail, not a badge, toast, modal, or world overlay. W02, multi-card W05, retry R-W04, and restored 12/12 result states retain the same strip and hierarchy without changing exercise, evidence, scene, return, or story behavior.
+- **Reference coverage and measurements:** reviewed the current Workload Sort runtime, reconstruction tests, integration tests, Terminal grid, and canonical CSS at `640 x 480` and `320 x 240`. The strip now uses whole logical pixels in both layouts: `4px` top margin, `3px 4px` padding, `2px` left rail, and `8px/10px` type. Narrow type was corrected from `7px/8px` to the required `8px/10px`. Square `border-radius: 0`, no shadow, normal white-space, and `overflow-wrap: anywhere` are explicit.
+- **Containment / hierarchy findings:** the notice remains conditional and inside the scrolling task pane, before the activity/form/progress definition list. The prompt and choice controls remain in the separate workload editor, while output/remediation remains in its dedicated console row; the strip has no absolute or sticky positioning and cannot cover either region. Amber-on-brown status treatment is subordinate to the purple checkpoint label and pale prompt text and introduces no modern chrome or protected visual motif.
+- **Scene / return preservation:** the completed-Meadow return patch still clears only transient Workload Sort session state, preserves allowlisted evidence, and reconstructs the first incomplete card or unacknowledged result on reopening. No scene raster, hotspot, route marker, departure action, narrative artifact, or protected motif changed.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/workloadResumeIntegration.test.js`, and this log. The integration test now locks the 8 px narrow floor, square/shadowless chrome, and contained wrapping.
+- **Validation:** 26/26 focused Workload Sort resume, exercise, return, and canonical-frame tests pass; production build passes; `git diff --check` passes apart from existing line-ending warnings. Static state review covers W02 `1/12`, multi-card `4/12`, retry `3/12`, and completed-result `12/12` reconstruction.
+- **Unresolved risk:** exact browser-rendered wrapping, scrollbar appearance, and focus clearance at native sizes remain unverified because the sanctioned in-app browser was unavailable. The source geometry and regression contracts pass, but this is not a claimed live capture review.
+- **Handoff:** Location Scout should leave resume/status language entirely inside the Terminal interface and preserve the unchanged scene plate. Do not paint progress labels, resume icons, notification plaques, badges, or copied adventure-game motifs into the world art.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Chapter II safe-return visual-system gate
 
 - **Outcome / verdict:** PASS after one bounded edge-containment correction. The reserved lower-left ridge remains a secondary world hotspot, while `Return: Glass Meadow` stays a plainly named lower-band navigation action. No transition art, overlay scene, protected motif, or story content was added.

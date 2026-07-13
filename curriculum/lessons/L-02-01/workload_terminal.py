@@ -29,10 +29,23 @@ def validate_asset(exercise: dict) -> None:
         all_ids.extend(item["id"] for item in items)
     assert len(set(all_ids)) == len(all_ids)
     assert exercise["mastery"]["minimum_correct"] == 10
-    assert set(exercise["evidence_contract"]["do_not_store"]) == {
+    assert {
         "free_form_source",
+        "selected_choice",
         "free_form_response_text",
-    }
+        "scenario_prompt_copy",
+        "transient_feedback",
+        "working_index",
+        "per_card_attempt_state",
+        "open_hint_state",
+        "session_object",
+    }.issubset(set(exercise["evidence_contract"]["do_not_store"]))
+    assert exercise["session_contract"]["reload_or_scene_round_trip"] == (
+        "clear_working_session_and_reconstruct_from_sanitized_contiguous_finalized_evidence"
+    )
+    assert exercise["session_contract"]["completed_form"] == (
+        "restore_result_gate_without_acknowledging_mastery"
+    )
 
 
 def run(exercise: dict, form: str) -> int:

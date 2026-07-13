@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Workload Sort saved-resume accessibility gate
+
+- **Outcome:** `PASS` for interaction accessibility. Live Chrome verified W01 wrong/retry, close/reopen state, corrected finalization, W02 advance, full reload through Resume signal, first-incomplete W02 reconstruction, exact prior-progress/clean-controls note, title focus, zero checked radios, bounded scrolling, no page-level horizontal overflow, and target/type floors at `640 x 480` and exact `320 x 240`. Environment art remains separately `BLOCKOUT ONLY`; that production-art finding is not an interaction blocker.
+- **Files:** added `Accessibility Sentinel/opening-demo/WORKLOAD_SORT_RESUME_REVIEW.md` and updated this log only. Runtime, tests, curriculum, art, lore, save data, and browser state were not changed.
+- **Validation:** focused resume/Workload Sort/scene return/transition tests passed `30/30`; the saved-evidence guide validator self-test passed; live narrow measurements recorded an `8 px / 10 px` wrapped note, `248 x 42` choice labels, `57.6 x 28` Close, and `89.3 x 30` Check card with clean controls and deterministic title focus. `git diff --check` passed with line-ending advisories only.
+- **Next:** preserve the semantic note/order, native groups/radios, polite text feedback, clean reload controls, contiguous-prefix reconstruction, no-attempt/no-mastery boundary, strict `10/12` plus no-critical-miss gate, 24 px command-target floor, 8 px compact-type floor, and reduced-motion-safe direct transitions.
+- **Risk:** W05, retry-form, and completed-unacknowledged variants are focused-test-confirmed rather than separately live-replayed. Human NVDA/equivalent speech, forced colors, 200% zoom, physical keyboard, and switch-control remain unobserved; this is not a conformance claim.
+- **Status:** `PASS - saved-resume interaction gate cleared; environment art remains BLOCKOUT ONLY`
+
 ## 2026-07-13 - Chapter II safe-return accessibility re-review
 
 - **Outcome:** `PASS`; the live-evidence blocker is closed. Exact `320 x 240` and `640 x 480` measurements prove the ridge target/label, 24 px / 8 px lower return action, inset focus, scene/page containment, pointer and USE activation, restored completed marker, Chapter I/II statuses, deterministic focus, re-departure routing, and both reload sides. The corrected returned-side resume now restores Chapter I status with departure focus.

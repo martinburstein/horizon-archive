@@ -50,6 +50,14 @@
 - Maintain a minimum interactive target of 44 by 44 CSS pixels at supported viewport sizes. The focus indicator should follow a simple rectangular hit area without painting a permanent outline over the art.
 - The former broad central ruins hotspot has been removed. The suspended landmark remains environmental and non-interactive.
 
+## Workload Sort resume boundary
+
+- Restored assessment language belongs only inside the open Terminal interface. The conditional status rail reads `RESUME // PRIOR ASSESSED PROGRESS: n/12 finalized · WORKING CONTROLS: reset clean` inside the scrolling task pane, between the checkpoint explanation and the live Activity/Form/Progress fields.
+- The world plate, scene status, environmental description, image alternative, hotspot label, ridge focus treatment, and lower-band return action carry no restored item number, score, partial-progress state, or notification copy. Do not add a progress plaque, badge, toast, icon, numeral, arrow, sign, path, glow, or resume marker to the scene.
+- Physical Terminal states remain coarse scene states rather than assessment counters: `available` when the incomplete scene has no Terminal open, `active` while an AB-01 Terminal is open, and `complete` only after the scene completion gate. Reopening at W02, W05, retry R-W04, or an unacknowledged 12/12 result uses the same generic `active` world geometry; the plate never encodes those restored values.
+- Returning to the completed Meadow clears transient Workload Sort controls but preserves allowlisted assessed evidence. Returning again to AB-01 restores the unchanged available/complete scene relationship; only reopening the Terminal reconstructs and displays the resume rail. The lower-left ridge and its canonical/narrow geometry never change for resume.
+- All physical state art remains confined to the existing Terminal contact footprint. Preserve the first-person plate and keep the protagonist, companions, ship, reflections, shadows, and body fragments out of frame.
+
 ## Visual specification
 
 - **Terminal silhouette:** water-worn coupling intersects ridge, water, and a separate field element; three asymmetric purpose-grown elements fold around a core with no human-facing front or scale.

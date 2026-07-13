@@ -41,6 +41,67 @@ export function createWorkloadSession(form = "primary") {
   };
 }
 
+function takeContiguousCorrectness(items, source) {
+  const itemCorrectness = {};
+  for (const item of items) {
+    if (typeof source[item.id] !== "boolean") break;
+    itemCorrectness[item.id] = source[item.id];
+  }
+  return itemCorrectness;
+}
+
+function getEvidenceForm(itemCorrectness) {
+  return exerciseAsset.retry_items.some((item) => item.id in itemCorrectness) ? "retry" : "primary";
+}
+
+function getEvidenceCriticalMisses(items, itemCorrectness) {
+  return [...new Set(items.flatMap((item) => (
+    item.critical && itemCorrectness[item.id] === false ? item.tags : []
+  )))];
+}
+
+function buildWorkloadResumeNotice(finalizedCount, total) {
+  return `RESUME // PRIOR ASSESSED PROGRESS: ${finalizedCount}/${total} finalized · WORKING CONTROLS: reset clean`;
+}
+
+export function reconstructWorkloadSession(value) {
+  const evidence = sanitizeWorkloadEvidence(value);
+  if (!evidence) return createWorkloadSession();
+  const form = getEvidenceForm(evidence.itemCorrectness);
+  const items = getWorkloadItems(form);
+  const results = Object.fromEntries(items
+    .filter((item) => typeof evidence.itemCorrectness[item.id] === "boolean")
+    .map((item) => [item.id, evidence.itemCorrectness[item.id]]));
+  const criticalMisses = getEvidenceCriticalMisses(items, results);
+  const firstIncompleteIndex = items.findIndex((item) => !(item.id in results));
+  const base = createWorkloadSession(form);
+  const resumeNotice = buildWorkloadResumeNotice(Object.keys(results).length, items.length);
+
+  if (firstIncompleteIndex < 0) {
+    const completed = {
+      ...base,
+      index: items.length - 1,
+      results,
+      criticalMisses,
+      resumeNotice,
+      phase: "form_complete",
+      feedback: "Saved form complete. Review the result and confirm or remediate it.",
+    };
+    return completed;
+  }
+
+  return {
+    ...base,
+    index: firstIncompleteIndex,
+    results,
+    criticalMisses,
+    resumeNotice,
+    feedback: firstIncompleteIndex === 0
+      ? base.feedback
+      : "Saved evidence restored. Continue with the first incomplete card.",
+  };
+}
+
 export function evaluateWorkloadSelection(session) {
   const items = getWorkloadItems(session.form);
   const item = items[session.index];
@@ -143,12 +204,39 @@ export function getWorkloadOutcome(session) {
 
 export function sanitizeWorkloadEvidence(value) {
   if (!value || typeof value !== "object" || value.exerciseId !== exerciseAsset.exercise_id) return null;
-  const itemCorrectness = {};
+  const allowlistedCorrectness = {};
   if (value.itemCorrectness && typeof value.itemCorrectness === "object") {
     for (const [itemId, correct] of Object.entries(value.itemCorrectness)) {
-      if (validItemIds.has(itemId) && typeof correct === "boolean") itemCorrectness[itemId] = correct;
+      if (validItemIds.has(itemId) && typeof correct === "boolean") allowlistedCorrectness[itemId] = correct;
     }
   }
+  const primaryCorrectness = takeContiguousCorrectness(exerciseAsset.items, allowlistedCorrectness);
+  const primaryComplete = Object.keys(primaryCorrectness).length === exerciseAsset.items.length;
+  const retryCorrectness = primaryComplete
+    ? takeContiguousCorrectness(exerciseAsset.retry_items, allowlistedCorrectness)
+    : {};
+  const itemCorrectness = { ...primaryCorrectness, ...retryCorrectness };
+  const activeForm = getEvidenceForm(itemCorrectness);
+  const activeItems = getWorkloadItems(activeForm);
+  const activeResults = Object.fromEntries(activeItems
+    .filter((item) => typeof itemCorrectness[item.id] === "boolean")
+    .map((item) => [item.id, itemCorrectness[item.id]]));
+  const activeCriticalMisses = getEvidenceCriticalMisses(activeItems, activeResults);
+  const activeComplete = Object.keys(activeResults).length === activeItems.length;
+  const activeScore = Object.values(activeResults).filter((correct) => correct === true).length;
+  const confidence = ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null;
+  const canMaster = activeComplete
+    && activeScore >= exerciseAsset.mastery.minimum_correct
+    && activeCriticalMisses.length === 0
+    && Boolean(confidence);
+  const requestedMasteryStatus = ["in_progress", "remediation_required", "mastered"].includes(value.masteryStatus)
+    ? value.masteryStatus
+    : "in_progress";
+  const masteryStatus = requestedMasteryStatus === "mastered" && !canMaster
+    ? activeComplete && (activeScore < exerciseAsset.mastery.minimum_correct || activeCriticalMisses.length > 0)
+      ? "remediation_required"
+      : "in_progress"
+    : requestedMasteryStatus;
   return {
     exerciseId: exerciseAsset.exercise_id,
     lessonId: exerciseAsset.lesson_id,
@@ -157,13 +245,11 @@ export function sanitizeWorkloadEvidence(value) {
     itemCorrectness,
     attemptCount: Math.min(99, Math.max(0, Number.isInteger(value.attemptCount) ? value.attemptCount : 0)),
     hintLevel: Math.min(3, Math.max(0, Number.isInteger(value.hintLevel) ? value.hintLevel : 0)),
-    confidence: ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null,
+    confidence,
     misconceptionTags: Array.isArray(value.misconceptionTags)
-      ? [...new Set(value.misconceptionTags.filter((tag) => validTags.has(tag)))]
-      : [],
-    masteryStatus: ["in_progress", "remediation_required", "mastered"].includes(value.masteryStatus)
-      ? value.masteryStatus
-      : "in_progress",
+      ? [...new Set([...value.misconceptionTags.filter((tag) => validTags.has(tag)), ...activeCriticalMisses])]
+      : activeCriticalMisses,
+    masteryStatus,
   };
 }
 
@@ -173,7 +259,7 @@ export function updateWorkloadEvidence(previous, changes = {}) {
   if (changes.itemId && validItemIds.has(changes.itemId) && typeof changes.correct === "boolean") {
     itemCorrectness[changes.itemId] = changes.correct;
   }
-  return {
+  return sanitizeWorkloadEvidence({
     ...safe,
     itemCorrectness,
     attemptCount: changes.incrementAttempt ? Math.min(99, safe.attemptCount + 1) : safe.attemptCount,
@@ -186,5 +272,5 @@ export function updateWorkloadEvidence(previous, changes = {}) {
     masteryStatus: ["in_progress", "remediation_required", "mastered"].includes(changes.masteryStatus)
       ? changes.masteryStatus
       : safe.masteryStatus,
-  };
+  });
 }

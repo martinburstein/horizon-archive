@@ -64,6 +64,8 @@ Check your reasoning in `check.md`, not merely the labels.
 
 The active draft may survive closing and reopening the same Terminal because the exercise session can restore its local working state. A scene transition deliberately ends that working session and starts a clean draft so stale work cannot leak into a different encounter. Mastery evidence survives because it is saved separately from the temporary working session.
 
+After a reload, resume, or scene round trip, read [Saved Evidence Is Prior Progress](saved-evidence-resume-guide.md). It explains why finalized results can be reconstructed with clean private controls without creating a new attempt, retaining your response, awarding exam credit, or acknowledging mastery.
+
 Before looking back, answer:
 
 1. Which layer can you edit?
@@ -92,6 +94,8 @@ After remediation, use the fresh form instead of memorizing the first sequence:
 ```powershell
 python workload_terminal.py --form retry
 ```
+
+The playable Terminal may also reconstruct a finalized prefix after reload. Reconstruction never replaces the fresh retry required by a failed result or critical contrast miss.
 
 ## Mastery gate and remediation
 

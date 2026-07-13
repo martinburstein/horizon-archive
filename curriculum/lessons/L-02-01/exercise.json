@@ -48,11 +48,14 @@
   "mastery": {"minimum_correct": 10, "total": 12, "critical_items_must_pass": true},
   "evidence_contract": {
     "store": ["lesson_id", "activity_id", "exercise_id", "item_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
-    "do_not_store": ["free_form_source", "free_form_response_text"]
+    "do_not_store": ["free_form_source", "selected_choice", "free_form_response_text", "scenario_prompt_copy", "transient_feedback", "cursor_or_focus_position", "working_index", "per_card_attempt_state", "open_hint_state", "session_object"]
   },
   "session_contract": {
-    "close_reopen": "restore_active_draft",
-    "scene_transition": "start_clean_draft",
+    "close_reopen": "restore_active_draft_in_memory_without_submitting",
+    "reload_or_scene_round_trip": "clear_working_session_and_reconstruct_from_sanitized_contiguous_finalized_evidence",
+    "unfinalized_item": "open_first_incomplete_card_with_blank_choice_and_clean_per_card_controls",
+    "finalized_prefix": "derive_prior_results_score_and_critical_override_without_new_attempt",
+    "completed_form": "restore_result_gate_without_acknowledging_mastery",
     "mastery_evidence": "persist_separately"
   }
 }

@@ -151,6 +151,34 @@ This line prevents the player from assigning the Terminal's response to the land
 
 Do not replay the entry beat. Do not call this memory, recognition, or welcome.
 
+### DA02R — Reload or scene round-trip from allowlisted evidence
+
+This path is not DA02. The prior working session has ended. The human expedition layer creates a clean Workload Sort session from sanitized local evidence; the Terminal does not remember a learner, an abandoned control, or private working content.
+
+Use the existing runtime status exactly:
+
+- If no finalized contiguous item precedes the first incomplete card: `Choose the best primary workload or Terminal state, then check the card.`
+- If one or more contiguous items are finalized: `Saved evidence restored. Continue with the first incomplete card.`
+- If the active form is fully finalized but not acknowledged: `Saved form complete. Review the result and confirm or remediate it.`
+
+Owner: `SYSTEM // EXPEDITION STATE`. Do not give these lines to `LOCAL SURFACE`, `SCENE`, or the Tidal Lens. No physical light, route, landmark, or lore state changes when the local workbench is reconstructed.
+
+Durable evidence may contain only the allowlisted exercise, lesson, activity, and skill identifiers; contiguous finalized item correctness; bounded total attempt and hint telemetry; allowlisted misconception tags; confidence; and mastery status. The active form, first incomplete index, score, and critical-contrast override are derived again from that evidence. Retry-form evidence is eligible only after the complete primary prefix.
+
+The saved record does not contain the selected choice, private/free-form response, scenario prompt copy, transient feedback, cursor or focus position, working index, per-card attempt counter, open hint, or session object. Course-authored scenario text may be loaded again from the packaged exercise asset; that is not restoration of learner content.
+
+Therefore:
+
+- an unfinalized miss reopens the same first-incomplete card with no choice selected, no replayed miss wording, and clean per-card controls;
+- a finalized card advances reconstruction to the first incomplete card;
+- a fully finalized form reconstructs the result gate without acknowledging mastery;
+- a finalized critical miss remains part of the derived override;
+- gaps, future-card entries, premature retry entries, private fields, and forged mastery cannot advance the session.
+
+The existing `10/12` threshold, every-critical-contrast requirement, confidence step, fresh retry path, and explicit `Acknowledge mastery` action remain unchanged. Reconstructed evidence is progress, not a new assessment attempt, a Machine judgment, or proof that the physical node retained personal information.
+
+Close/reopen inside the same application session still follows DA01–DA02 and may preserve exact private working state in memory. Full reload, resume, return to the completed Meadow, and re-departure follow DA02R after the live session is cleared. Navigation never erases or awards Workload Sort evidence.
+
 ### DA03 — No choice selected
 
 - `EXPEDITION LINK`: "No fixed key selected. Choose one primary workload or Terminal state before checking the card."

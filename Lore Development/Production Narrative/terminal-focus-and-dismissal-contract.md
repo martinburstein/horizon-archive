@@ -112,6 +112,12 @@ Use a more specific line only when it adds state clarity.
 - Close/Escape line: “Workload Sort closed. Current card and remediation state remain.”
 - Focus returns to the grounded Workload Sort Terminal hotspot.
 - Dismissal does not submit the selected card.
+- Close/reopen within the same application session preserves the exact in-memory card, choice, attempts, hint, feedback, result, and form.
+- Reload or a scene round-trip clears that working session, then reconstructs only from sanitized allowlisted evidence. The reconstructed session has blank private controls and derives its form, finalized result prefix, first incomplete card, score, and critical override without persisting a working index or session object.
+- Exact reconstructed-progress status: “Saved evidence restored. Continue with the first incomplete card.” Exact completed-form status: “Saved form complete. Review the result and confirm or remediate it.” With no finalized prefix, retain the existing initial instruction.
+- Persistent evidence excludes selected choices, private/free-form responses, prompt copies, transient feedback, cursor/focus position, working index, per-card attempt state, open hints, and the session object. Packaged course prompts may be loaded anew; they are not learner data.
+- Reconstruction never acknowledges mastery. `10/12`, every critical contrast recovered, confidence, fresh retry when required, and explicit acknowledgement remain mandatory.
+- System owns all restore/reconstruction status. No Local Surface, Scene, landmark, or Machine voice claims memory, recognition, attention, approval, or personal retention.
 
 ### Responsible AI practice
 

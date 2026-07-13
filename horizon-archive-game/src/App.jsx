@@ -47,6 +47,7 @@ import {
   evaluateWorkloadSelection,
   getWorkloadItems,
   getWorkloadOutcome,
+  reconstructWorkloadSession,
   revealWorkloadHint,
   sanitizeWorkloadEvidence,
   updateWorkloadEvidence,
@@ -1088,7 +1089,7 @@ export function App() {
       setQuestionOpen(false);
       setTerminalOpen(true);
       setRuinsTerminalKind("workload");
-      if (!workloadSession) setWorkloadSession(createWorkloadSession());
+      if (!workloadSession) setWorkloadSession(reconstructWorkloadSession(workloadEvidence));
       return;
     }
     setDialogue(scene.question);
@@ -2391,6 +2392,9 @@ export function App() {
                 <p className="pane-label">ACTIVE CHECKPOINT</p>
                 <h2 id="workload-task-heading">Workload Sort</h2>
                 <p>Match each scenario to its primary workload or Terminal state. A passing form requires 10/12 with every critical contrast recovered.</p>
+                {workloadSession.resumeNotice && (
+                  <p className="workload-resume-note" role="note">{workloadSession.resumeNotice}</p>
+                )}
                 <dl>
                   <div><dt>Activity</dt><dd>{workloadSortExercise.activity_id}</dd></div>
                   <div><dt>Form</dt><dd>{workloadSession.form}</dd></div>

@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Workload Sort resume-strip gate
+
+- **Outcome:** issued `BLOCKOUT ONLY` for the Chapter II environment while passing the bounded resume-strip sub-gate. The strip is correctly confined to the Terminal task pane, reads as a square-pixel status rail rather than a toast/badge/world sign, and leaves scene, return, originality, and viewpoint contracts unchanged. The native AB-01 plate itself remains coarse procedural interaction art and is still explicitly documented as requiring alien-function art replacement.
+- **Files:** created [the Workload Sort resume-strip review](reviews/2026-07-13-workload-sort-resume-strip.md) and updated this work log; no runtime code or raster asset changed.
+- **Validation:** inspected the native active/background AB-01 plates, integer-coordinate renderer, scene sheet, resume runtime/CSS, Pixel Patrol and Location Scout handoffs, and current return contract. Focused resume, Workload Sort, and safe-return tests pass `25/25`. Confirmed no toast/chrome, world overlay, glow, painted progress, protected motif, fantasy drift, protagonist/ship, or return-route alteration.
+- **Finding:** the active contact reads as a local Machine response and the resume rail needs no correction. Production richness fails on the unchanged scenery: broad flat polygons/bands and sparse procedural clusters do not supply the material ramps, hand-shaped contour rhythm, revision history, maintenance evidence, or nested alien-system storytelling required by the charter.
+- **Handoff:** preserve all interaction geometry and UI work, but re-author AB-01's `640 x 360` world and matching local state overlays as materially rich original production art before requesting `PASS`. Accessibility may still audit the current blockout behavior, but it must not be treated as final visual certification.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Chapter II safe-return gate
 
 - **Outcome:** issued `PASS`; the existing rich destination plate and lower-left ridge remain visually dominant and untouched, while the return name stays in the compact period lower interface and the world hotspot remains transparent except for contained transient focus/hover feedback.

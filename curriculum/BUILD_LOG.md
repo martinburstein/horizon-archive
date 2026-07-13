@@ -788,3 +788,26 @@ Validation performed:
 Next recommended item: Exercise Agent should use this state boundary when presenting any return/reopen status: announce navigation restoration separately from exercise feedback, show that temporary working data follows the exercise session contract, and never increment mastery evidence merely because a scene reappears.
 Unresolved risks: Real screen-reader announcement order and live both-side reload remain Player/Accessibility checks. The completed Chapter II scene text may still be misread as a fresh response unless runtime ownership and status wording continue to label it as retained state.
 Notes: The strict calibration gate remains 8/8 + 8/8 + 4/4 with both diagnoses before editing and no unresolved critical misconception. No hidden lore, game, art, QA binary, service, Azure, credential, external action, commit, or push change.
+
+## Log entry: 2026-07-13T14:07:48-04:00
+
+Stage: Workload Sort reconstructed-evidence boundary
+Work completed: Added a finished learner-facing `L-02-01` guide that explains reconstructed finalized evidence as prior assessed progress, not a new attempt or retained private response. It preserves all three exact System resume messages; distinguishes in-memory close/reopen from clean reload/scene-round-trip reconstruction; documents contiguous finalized-prefix, first-incomplete-card, completed-result, critical-override, and privacy behavior; and preserves the strict 10/12, no-critical-miss, remediation, fresh-retry, confidence, and explicit acknowledgement sequence. Expanded the structured exercise session/privacy contract to match implementation without changing any assessment prompt or answer.
+Files changed:
+- curriculum/lessons/L-02-01/saved-evidence-resume-guide.md
+- curriculum/lessons/L-02-01/validate_saved_evidence_resume.py
+- curriculum/lessons/L-02-01/README.md
+- curriculum/lessons/L-02-01/check.md
+- curriculum/lessons/L-02-01/exercise.json
+- curriculum/lessons/L-02-01/workload_terminal.py
+- curriculum/BUILD_LOG.md
+Validation performed:
+- read the source-priority skill, root instructions, relay workflow, latest curriculum/game/Lore handoffs, Workload Sort reconstruction/save/open handlers, focused tests, lesson, exercise, assessments, mastery key, and Lore continuity contracts
+- checked the four priority official Microsoft documentation pages first; no new volatile product or exam-objective claim was added, and reconstruction remains explicitly course-authored behavior
+- saved-evidence guide self-test and direct cross-layer check passed, including negative probes for new-attempt wording and a weakened 10/12 gate; all three exact runtime System messages matched
+- `workload_terminal.py --self-test` passed after expanding its privacy/session assertions
+- focused Workload Sort, scene-return, and scene-transition tests passed 25/25
+- all curriculum JSON parsed; local `L-02-01` links passed; `git diff --check` passed with line-ending notices only
+Next recommended item: Exercise Agent should expose the resume guide's compact distinction beside reconstructed progress: prior finalized results may reappear, but the current choice and remediation controls start clean, and the result gate still requires remediation/retry or confidence plus `Acknowledge mastery`.
+Unresolved risks: Live Player/Accessibility checks should confirm that the three resume states are announced clearly, blank controls are perceivable after an unfinalized miss, and a reconstructed complete form does not sound newly scored. Total attempt/hint telemetry persists while per-card state resets, so runtime copy must not claim that every attempt detail was restored or discarded.
+Notes: No prompt, answer, official objective mapping, hidden lore, game code, art, QA binary, service, Azure, credential, external action, commit, or push change. Reconstructed course evidence grants no exam credit, readiness guarantee, AI-901 result guarantee, or external authority.
