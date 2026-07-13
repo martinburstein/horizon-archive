@@ -1,5 +1,14 @@
 # Player Agent Work Log
 
+## 2026-07-13 — Opening relay retry: duplicate-activation audit
+
+- **Work completed:** Ran one short fresh-origin local opening pass from title through Slot 01 creation, character naming, temporary prologue, Chapter I reveal, Glass Meadow entry, Terminal identification, `USE`, and first-Terminal open. Also verified one prologue refresh/resume and blank-name recovery. Estimated normal-player duration is **35–45 seconds**; browser-automation wall time was excluded because capture/tool latency dominated it.
+- **Severity-ranked findings:** **P0: none. P1:** double-clicking `Continue temporary prologue` on beat 1 advanced directly to beat 3, skipping beat 2. The intended lock is reset by the `[mode, prologueBeat]` layout effect after the first click, early enough for the second click in the same double-click gesture. **P2: none confirmed** in this bounded pass. The remaining flow reached and opened the first Terminal without a blocker or spoiler leak.
+- **Files changed:** Updated this Player Agent work log only. No game, test, art, lore, curriculum, capture, or save asset was retained.
+- **Validation:** Inspected `App.jsx`, `openingFlow.js`, `test/openingFlow.test.js`, and the opening E2E helper. Current focused/unit assertions use single sequential clicks and do not exercise double-click or key-repeat activation. Temporary screenshots/server logs were inspected and removed; the unrelated untracked PDF was preserved.
+- **Coder handoff:** Make prologue advancement idempotent across one physical activation burst: do not clear `openingTransitionRef` merely because `prologueBeat` rendered. Add focused browser coverage proving double-click and repeated Enter/Space from beat 1 land only on beat 2, from beat 2 only on beat 3, and from beat 3 only on Chapter I; also assert the persisted/resumed beat matches the single intended advance.
+- **Unresolved risks:** The 45-second target is an estimate, not human stopwatch evidence. Real screen-reader announcement timing and switch-control key-repeat remain unverified.
+
 ## 2026-07-13 — Restarted relay: first-45-seconds opening-flow audit
 
 - **Outcome:** The current demo does **not** implement the requested opening sequence. `New expedition` immediately clears the single browser save and enters the playable `CHAPTER I · Glass Meadow` scene. There is no create-save-file screen, character-name step, temporary filler prologue state, or separate Chapter 1 reveal. The only implemented pieces are the title screen, immediate Glass Meadow arrival, and clickable Terminal hotspots.
