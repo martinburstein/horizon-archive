@@ -1,4 +1,6 @@
-# Derelict Signal-Mineral Terminal Study
+# Derelict Signal-Mineral Terminal Study (Historical V1)
+
+> Superseded for new production by the [Builder Machine signal-coupler study](../signal-coupler/README.md). This package remains as provenance and comparison evidence; its red pseudo-writing and standalone mineral housing must not return.
 
 This package translates the frame-grounded [Terminal GIF inspiration](../../../References/terminal-gif-inspiration/README.md) into an original Horizon Archive sprite study. It is a candidate replacement direction for the current symmetric console blockout, not yet a runtime replacement.
 

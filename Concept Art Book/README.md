@@ -13,7 +13,8 @@ This is the spoiler-safe visual production atlas for the places a player can vis
 - [Curse Art Director production-richness gate](../Curse%20Art%20Director/CHARTER.md)
 - [Selected production pixel art](production-pixel/README.md)
 - [Frame-grounded derelict Terminal reference](References/terminal-gif-inspiration/README.md)
-- [Derelict signal-mineral Terminal sprite study](production-pixel/AB-01/signal-mineral/README.md)
+- [Builder Machine signal-coupler Terminal sprite study](production-pixel/AB-01/signal-coupler/README.md)
+- [Historical signal-mineral Terminal prototype](production-pixel/AB-01/signal-mineral/README.md)
 
 ## Selected plates
 

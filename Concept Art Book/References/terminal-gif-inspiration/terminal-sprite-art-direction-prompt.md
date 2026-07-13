@@ -1,4 +1,6 @@
-# Derelict Signal-Mineral Terminal Sprite Prompt
+# Derelict Signal-Mineral Terminal Sprite Prompt (Historical V1)
+
+> Superseded for new production by the [Builder Machine signal-coupler prompt](terminal-sprite-art-direction-prompt-v2.md). Retain this first pass as provenance; do not reuse its red warning field, pseudo-glyph language, rock-mounted membrane, or standalone-prop silhouette.
 
 This is the durable prompt authority for the Terminal study derived from Martin's frame analysis. The gameplay capture supplies only the emotional contradiction and motion evidence. Do not reproduce its oval body, circular display, exact glyphs, color arrangement, vegetation, HUD, or game composition.
 

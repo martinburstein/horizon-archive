@@ -218,3 +218,25 @@ Passed after one targeted edit: exactly three marker fins; dark prerequisite sta
 ### Selection review
 
 The study preserves the requested contradiction—geological strata surrounding a persistent warning surface—without retaining the external reference's oval body, circular display, exact marks, vegetation, or composition. The selected silhouette is an asymmetric cleaved and half-buried block with an off-center clipped-rectangle membrane, a sealed older scar, restrained repair light, and no human controls. The six logical frames are `64 x 64`; all pixels outside the detected membrane/light-leak box are byte-stable across the loop. This is a production candidate, not a runtime replacement, until Pixel Patrol and Curse Art Director approve its readability and richness in AB-01.
+
+> **Historical exploration only.** HA-PP-003 supersedes this candidate for production. V1's red pseudo-writing, rock-mounted membrane, and self-contained silhouette are specifically rejected by the current direction.
+
+## HA-PP-003 — Builder Machine signal-coupler Terminal study
+
+- **Date:** 2026-07-13
+- **Use case:** `stylized-concept`, two targeted edits, deterministic sprite reduction, and GIF assembly
+- **Purpose:** move the Terminal two conceptual steps away from the external inspiration by replacing warning-red pseudo-writing with cold scientific topology and making the contact visibly continuous with a larger buried Machine
+- **Generator:** OpenAI built-in image generation
+- **Method:** generated a new coupler from internal Horizon Archive references, extended its lateral and ground connections in one edit, removed the unwanted tube branching from the front tongue in a second edit, removed chroma locally, then froze all pixels outside the diagnostic membrane during a reproducible Pillow build
+- **Reference inputs:** the historical Horizon Archive V1 sheet for animation-sheet consistency only, plus the native AB-01 state strip and world plate for logical density, palette, and distributed-Machine context; no external gameplay frame was supplied to this generation
+- **Initial source output:** `C:\Users\marti\.codex\generated_images\019f5319-3f39-7bf2-b3a9-4a9a9582fb3b\exec-87299076-d933-48fd-a5e3-6bd5d0f4eb72.png`
+- **Connection edit:** `C:\Users\marti\.codex\generated_images\019f5319-3f39-7bf2-b3a9-4a9a9582fb3b\exec-acf7a31e-dce0-47c4-b153-53dd6ca82bed.png`
+- **Selected clean-tongue edit:** `C:\Users\marti\.codex\generated_images\019f5319-3f39-7bf2-b3a9-4a9a9582fb3b\exec-99d0ec68-e9a0-4399-8b40-96c75c275437.png`
+- **Workspace selected source:** [production-pixel/AB-01/signal-coupler/terminal-signal-coupler-connected-no-tongue-tube-sheet.png](production-pixel/AB-01/signal-coupler/terminal-signal-coupler-connected-no-tongue-tube-sheet.png)
+- **Workspace logical loop:** [production-pixel/AB-01/signal-coupler/terminal-signal-coupler-loop-64x64.gif](production-pixel/AB-01/signal-coupler/terminal-signal-coupler-loop-64x64.gif)
+- **Durable prompt:** [References/terminal-gif-inspiration/terminal-sprite-art-direction-prompt-v2.md](References/terminal-gif-inspiration/terminal-sprite-art-direction-prompt-v2.md)
+- **Rebuild:** `python "Concept Art Book/production-pixel/AB-01/signal-coupler/build_signal_coupler_terminal.py"`
+
+### Selection review
+
+The V2 body is a broad low coupling organ rather than a rock-mounted screen. A clean laminated tongue continues through the lower crop, sleeved phase bundles continue through both side crops, and a separate vertical conduit enters the substrate beside the body. The cold cyan membrane cycles through seed, scan, topology, phase, interference, and amber fault states without words or a repeated glyph alphabet. Red, the four-block warning arrangement, the original tall mineral silhouette, loose-ended wires, and the tube formerly branching from the tongue are absent. The six logical frames are `64 x 64`; all body and connection pixels outside the membrane are byte-stable.
