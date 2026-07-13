@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Opening and Glass Meadow final art gate
+
+- **Outcome:** issued a `REVISE` gate for final production while confirming the first 45 seconds are visually usable as a demo. The corrected opening now holds title/save/name/prologue on dark surfaces and reserves the Meadow image for the Chapter I reveal.
+- **Files:** updated [the opening Glass Meadow review](reviews/2026-07-13-opening-glass-meadow.md) and this work log; no runtime, raster, curriculum, or lore files changed.
+- **Validation:** directly inspected `Glass Meadow Example.png`; checked current title, Chapter reveal, Meadow, hotspot, Terminal, and relevant style contracts; confirmed first-person/no-ship, flat horizon, realistic glass, alien growth-mat, interface hierarchy, and protected-source exclusions; all 11 targeted opening/Meadow tests passed; review links and `git diff --check` passed.
+- **Finding:** the smooth `1672 × 941` raster remains a composition target rather than native `640 × 360` square-pixel production art, and both mapped Terminals need stronger crop-integrated silhouettes before labels appear.
+- **Handoff:** keep the corrected dark opening sequence; re-author one original `640 × 360` Meadow plate with the First Terminal at `x294 y191 w120 h136` and Route Terminal at `x493 y192 w138 h167`, then verify native-1x findability and exact mouse/keyboard/touch alignment without moving the mapped zones.
+- **Status:** ready to advance.
+
 ## 2026-07-12 — Selected Glass Garden floor, mat, and glass synthesis
 
 - **Outcome:** recorded the selected combination of option 2's perfectly flat infinite horizon and semi-plausible floor with option 3's realistic glass material. Canon now shows fictional silica magma escaping through the floor into flush alien cutter/growth mats that preserve, train, maturity-mark, cut, and harvest upward-growing tubes in an orderly non-Cartesian field.

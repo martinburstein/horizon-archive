@@ -2,27 +2,23 @@
 
 **Verdict: REVISE**
 
-## Gate review
+## Outcome
 
-The demo is visually usable and rich. `Glass Meadow Example.png` passes the first-person, no-ship, flat-horizon, realistic-glass, growth-mat, and originality gates. The clear extruded forms, repeated apertures, and dark engineered substrate communicate a cultivated silica landscape without falling back on a generic crystal field.
+The first 45 seconds are visually usable and substantially richer than the former blockout. The selected Meadow establishes a memorable first-person field with a ruler-straight horizon, convincing transparent glass, and an interlocking alien growth-mat floor. No protagonist or ship appears. The current imagery is original Horizon Archive material; the Curse-era reference is being used for richness, staging, and readability rather than copied characters, props, interface assets, or composition.
 
-The smooth selected `1672 × 941` raster is the composition target, not native `640 × 360` square-pixel production art. Production translation still needs to preserve its material clarity, silhouette hierarchy, and broad horizon after the canonical crop/resample.
+## Gates
 
-## Reveal correction
+- **Reveal timing — pass:** title, save, name, and prologue now remain solid-dark surfaces. The Meadow first appears at the [Chapter I reveal](../../horizon-archive-game/src/App.jsx#L1829), then becomes the playable [scene plate](../../horizon-archive-game/src/App.jsx#L1865). This preserves the first reveal.
+- **Richness and viewpoint — pass for demo:** glass thickness, refraction, highlights, dense crop variation, flat infinity, and floor circuitry create a strong visual premise without protagonist/ship framing.
+- **Interface hierarchy — pass with one guardrail:** Chapter copy leads into landscape, scene status and bottom adventure controls remain subordinate, and the Terminal dialog becomes the clear task layer. Keep the opening objective compact and outside both mapped Terminal silhouettes.
+- **Production treatment — revise:** `Glass Meadow Example.png` is a smooth `1672 × 941` composition target loaded directly into the scene. CSS `image-rendering` cannot turn it into authored native pixels. Final art still requires an original `640 × 360` square-logical-pixel translation with deliberate clusters, stepped contours, grouped value ramps, and selective dithering.
+- **First-read Terminal findability — revise:** the mapped targets currently sit over glass forms that resemble many neighboring crop tubes. Hover/focus labels make the demo operable, but the final plate must give each Terminal a distinct crop-integrated silhouette and state cue before the label appears.
 
-The opening flow spends the Chapter I reveal early: the same meadow art is already visible on the [title screen](../../horizon-archive-game/src/App.jsx#L1713), [save-file screen](../../horizon-archive-game/src/App.jsx#L1734), and [character-name screen](../../horizon-archive-game/src/App.jsx#L1759) before it is formally introduced by the [Chapter I reveal](../../horizon-archive-game/src/App.jsx#L1811).
+## Coordinator handoff
 
-Use solid dark title, save, name, and prologue surfaces. The first art reveal must occur at **Chapter I — Glass Meadow**.
+1. Keep the current solid-dark title, save, name, and prologue surfaces; first show Meadow art only at **Chapter I — Glass Meadow**.
+2. Re-author the selected raster as an original `640 × 360` production plate while preserving the flat horizon, realistic glass, flush growth mats, first-person/no-ship view, and protected-source exclusions.
+3. Build the First Terminal into `x294 y191 w120 h136` and the Route Terminal into `x493 y192 w138 h167`; retain the current `MEADOW_PIXEL_HOTSPOTS.primary` and `.routeMarker` mappings instead of inferring new bounds from the smooth raster.
+4. At native 1x, verify both targets read without labels, remain distinct in grayscale, do not collide with the opening objective, and align exactly under mouse, keyboard focus, and touch cues. Preserve the Terminal dialog's current dominant hierarchy.
 
-## Interaction handoff
-
-Hotspots must use the Location Scout rectangles in the canonical `640 × 360` scene coordinate space:
-
-- First Terminal: `x294 y191 w120 h136`
-- Route: `x493 y192 w138 h167`
-
-Do not infer new hotspot bounds from the smooth source raster.
-
-## Status
-
-**REVISE** — scene direction passes; reveal timing, production-format translation, and Location Scout hotspot integration remain required.
+The demo may remain playable with the selected raster while this translation is produced, but it is not final production art.
