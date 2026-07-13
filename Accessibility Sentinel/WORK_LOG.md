@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Post-fix opening accessibility relay
+
+- **Outcome:** passed the post-fix opening through the first-Terminal orientation without implementation edits. Confirmed single-step pointer/keyboard/switch-like activation handling, heading and Meadow/Terminal focus handoffs, conditional save-warning association, compact logical-pixel floors, 44 px orientation choices, and one coherent disclaimer/state-boundary sequence.
+- **Files:** `Accessibility Sentinel/opening-demo/REPORT.md` and this log only.
+- **Validation:** focused opening/Terminal tests passed 12/12, full tests passed 169/169, and the production build passed. Static review covered activation timing, persisted progression, focus lifecycle, warning description, compact CSS, orientation order/live feedback, privacy boundaries, and reload/restore behavior.
+- **Next:** preserve the verified contracts and run one human NVDA + physical switch/repeat + Windows forced-colors + 320 x 240/200%-zoom observation before making an accessibility-conformance claim.
+- **Risk:** those human checks remain unobserved; browser QA is coordinator-owned. Build retains the existing 697.37 kB chunk-size warning.
+- **Status:** `PASS - ready to advance`
+
 ## 2026-07-13 — Restarted relay opening-demo gate
 
 - **Outcome:** audited the frozen opening through first-Terminal orientation without implementation edits. Confirmed strong native semantics, resumable/privacy-safe opening state, Unicode-aware name validation, recoverable orientation, reduced-motion handling, and 44 px orientation targets; documented one P1 focus-transition defect and two P2 comprehension/readability issues.

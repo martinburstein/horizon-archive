@@ -1,55 +1,46 @@
 # Opening demo accessibility audit
 
-## Scope and verdict
+## Post-fix scope and verdict
 
-Source-and-test gate for title → save creation → character naming → three prologue beats → Chapter I reveal → first Glass Meadow → first Terminal orientation.
+Source-and-test gate for title -> save creation -> character naming -> three prologue beats -> Chapter I reveal -> first Glass Meadow -> first Terminal orientation.
 
-**REVISE before calling the opening accessibility-ready.** The flow is keyboard-operable and strongly structured, but the Chapter I → Meadow transition loses programmatic focus and the authored 320 × 240 text is below a reliably readable size. No implementation files were changed.
+**PASS for the post-fix opening relay.** No current P0-P2 source or automated-test defect was confirmed. The opening now resists pointer, keyboard, and switch-like activation bursts; moves focus through each state boundary; associates the conditional save-replacement warning with its destructive action; and keeps the compact orientation sequence ordered, recoverable, and usable. No implementation change was warranted in this pass.
 
-## Confirmed strengths
+## Confirmed behavior
 
-1. Opening headings receive programmatic focus on save, naming, each prologue beat, and chapter reveal. Buttons follow a logical DOM order and all opening actions use native controls.
-2. Character-name help and errors are associated through `aria-describedby`; invalid input exposes `aria-invalid` and a live alert. NFKC normalization, trimming, allowlisting, a 2–24 character bound, forged-slot rejection, and private-field stripping are unit-tested.
-3. Save replacement is stated before the destructive Create Slot action. Cancel and Back provide safe recovery.
-4. Decorative title/prologue imagery is hidden; Meadow has a concise first-person alternative; the objective and primary hotspot do not depend on color alone.
-5. First-Terminal orientation focuses its heading on entry and each step, uses named native buttons, a polite status region, unlimited retry, real Python examples, explicit save/session/mastery privacy boundaries, safe close/reopen, reload clearing, and ≥44 px orientation choices.
-6. Reduced-motion CSS disables smooth scrolling. Canonical framing uses crisp square-pixel rendering and authored 640 × 480 / 320 × 240 layouts.
+1. `evaluateOpeningActivation()` rejects multi-clicks, held Enter/Space repeats, and accepted activations within the 400 ms burst window. `advanceOpeningProgress()` advances only one persisted prologue/chapter state for one accepted activation. Regression tests cover pointer and keyboard bursts.
+2. Setup, every prologue beat, and Chapter I focus their visible heading. Entering the Meadow sets a one-shot pending flag and focuses the primary Terminal hotspot after the playing state mounts. Opening the Terminal focuses its orientation heading; every orientation step refocuses that heading; close restores the physical trigger; completion focuses the editor.
+3. The conditional save-replacement warning has a stable ID and is included in the Create Slot control's accessible description only when a resumable slot will be replaced.
+4. The compact opening uses 8 logical px for secondary copy and at least 9 logical px for body/actions where agreed. The Meadow's primary hotspot label remains 8 logical px, and the first-Terminal orientation uses rem-based labels with two-column choices that retain a 44 px minimum height. The narrow Terminal inset remains four logical pixels without clipping the dialog.
+5. First-Terminal orientation DOM order is context heading/copy -> current action/example -> named choice group -> polite feedback. The privacy/save disclaimer appears only once at the relevant run-control step, and storage boundaries appear once at the dedicated boundary step. Tests guard source order, occurrence counts, session-only orientation state, reload clearing, and trigger restoration.
+6. Character-name help/errors remain programmatically associated; invalid input exposes `aria-invalid` and a live alert. Native controls, visible focus treatment, reduced-motion support, non-color wording, and crisp square-pixel rendering remain intact.
 
-## Prioritized findings
+## Resolved findings from the initial audit
 
-### P1 — Focus is lost when Chapter I enters the Meadow
+- **Resolved P1 - Chapter I to Meadow focus:** the primary Meadow Terminal hotspot now receives focus after the chapter action unmounts.
+- **Resolved P2 - compact opening readability:** the relevant opening copy/action floor was raised from the earlier 5-8 logical px range to the agreed 8-10 logical px range. Native-scale and 200% zoom observation remains a human check, not an automated conformance claim.
+- **Resolved P2 - save-warning relationship:** Create Slot conditionally uses `aria-describedby="save-replacement-warning"`.
+- **Resolved burst-skip risk:** accepted opening activations are debounced and held Enter/Space events are suppressed without blocking a deliberate single activation.
 
-- **Reproduce:** keyboard through the opening; activate **Enter the meadow**; inspect `document.activeElement`.
-- **Expected:** focus moves to the Meadow objective, scene heading/status, or primary Terminal hotspot.
-- **Actual/source evidence:** the focused chapter button unmounts. The opening focus effect only covers `create-save`, `character-name`, `prologue`, and `chapter-reveal`; `enterChapterOne()` only sets dialogue and `mode="playing"`. The E2E checks orientation entry/restoration but not Meadow entry focus.
-- **Affected learners/principle:** screen-reader and keyboard users; logical focus order and understandable context change (WCAG 2.4.3 / 3.2.2-informed).
-- **Exact handoff:** Coder should focus a stable, visible Meadow target after `enterChapterOne`, preferably the primary Terminal hotspot, then add an E2E active-element assertion.
+## Human-only checks before an accessibility-conformance claim
 
-### P2 — Authored narrow text is too small for dependable reading
-
-- **Reproduce:** host at 320 × 240 and inspect title/opening/prologue copy and controls.
-- **Evidence:** narrow CSS uses 5–8 px text, including 5 px title-note and 6–7 px help, warning, labels, body copy, and buttons. The opening card scrolls, but the fixed host does not establish 200% zoom/reflow readability.
-- **Affected learners/principle:** low-vision, dyslexic, and cognitively fatigued users; readable text and resize/reflow (WCAG 1.4.4 / 1.4.10-informed).
-- **Exact handoff:** Pixel Patrol/Coder should set an opening minimum of 8 logical px for secondary copy and 9–10 px for actions/body, then verify at 320 × 240 and 200% zoom without clipped controls.
-
-### P2 — Save replacement warning lacks an explicit control association
-
-- **Reproduce:** resume-capable title → New expedition → tab directly to **Create Slot 01** with a screen reader.
-- **Evidence:** warning is visible and precedes the button, but has no ID/`aria-describedby` association and is not part of the button's accessible description.
-- **Affected learners/principle:** screen-reader users; destructive-action comprehension and relationship semantics (WCAG 1.3.1 / 3.3.2-informed).
-- **Exact handoff:** give the warning a stable ID and describe **Create Slot 01** with it only when replacement will occur; add a source/E2E assertion.
-
-### P2 verification gap — forced colors and human AT remain unobserved
-
-- Source provides native controls, outlines, borders, labels, and non-color wording, but no `@media (forced-colors: active)` treatment exists. A human NVDA/forced-colors/200%-zoom pass remains required before a conformance claim.
+- Run one NVDA keyboard pass to confirm the perceived cadence and order of heading changes, the save warning, Terminal disclaimer, state boundaries, and polite feedback.
+- Exercise a physical switch/repeat-key setup to confirm device timing matches the modeled repeat and 400 ms burst cases.
+- Inspect Windows forced-colors/high-contrast focus indicators and borders.
+- Inspect 320 x 240 native presentation and 200% browser zoom for perceived text readability, scroll reachability, and control clipping.
 
 ## Validation
 
-- `npm test`: 166/166 passed
-- `npm run build`: passed; existing 696.61 kB chunk-size warning remains
-- Static review: opening sanitizer/tests, App focus/save/orientation paths, canonical 640 × 480 and 320 × 240 CSS, reduced motion, labels/live regions/privacy, target sizes, and E2E opening assertions
-- Browser QA: intentionally not run; coordinator-owned
+- `node --test test/openingFlow.test.js test/terminalExercise.test.js`: 12/12 passed
+- `npm test`: 169/169 passed
+- `npm run build`: passed; existing 697.37 kB chunk-size warning remains
+- Static review: activation gate, state progression, heading/Meadow/Terminal focus lifecycle, warning association, compact CSS, orientation reading order, live feedback, privacy boundaries, persistence, and target size
+- Browser and human AT QA: not run; coordinator-owned
+
+## Handoff
+
+Preserve the activation gate, one-shot Meadow focus flag, conditional warning description, orientation DOM order, single disclaimer/boundary occurrences, and 44 px choice targets. The opening may advance to the next relay step; schedule the listed human checks before making a formal accessibility-conformance claim.
 
 ## Status
 
-`ready to advance — P1 focus handoff and P2 narrow/readout issues documented`
+`PASS - ready to advance with human-only verification risks documented`
