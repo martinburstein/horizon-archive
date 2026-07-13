@@ -1514,7 +1514,7 @@ The System reports decision/reason correctness, route completeness, and score on
 
 ## Planned Offline Capstone Readiness Checkpoint
 
-Production alignment: `EX-L0603-OFFLINE-CAPSTONE`, lesson `L-06-03`, activity `A-L0603-2`, assessment `AS-L0603-READY`, objectives `AI901-D2-O3`, `AI901-D2-O5`, and `AI901-D2-O7`, and skills `PY-017`, `PY-019`, and `PY-020`. Runtime and game exercise integration are unimplemented. This section defines target production copy, prerequisite behavior, ownership, and restoration.
+Production alignment: `EX-L0603-OFFLINE-CAPSTONE`, lesson `L-06-03`, activity `A-L0603-2`, assessment `AS-L0603-READY`, objectives `AI901-D2-O3`, `AI901-D2-O5`, and `AI901-D2-O7`, and skills `PY-017`, `PY-019`, and `PY-020`. Runtime and game exercise integration are implemented; this section remains the normative copy, prerequisite, ownership, and restoration contract.
 
 ### Ownership and visible boundary
 
@@ -1614,6 +1614,53 @@ Confidence is tutoring data only. It cannot change a recommendation, close a rou
 - Use associated field feedback and a polite status live region. Provide text equivalents for all media scenarios, no timer, and reduced-motion behavior.
 - If the trace and gate cannot fit together, preserve the labeled gate and use Terminal scrolling; do not hide prerequisites behind a tab or hover state.
 
+## Post-Capstone Corridor Handoff
+
+This handoff connects strict Capstone mastery to the next survey scene without treating course readiness as story-world approval. It follows the [mastery and narrative access rules](code-to-discovery-integration.md#mastery-and-narrative-access) and the [focus restoration contract](terminal-focus-and-dismissal-contract.md#focus-restoration-after-state-change).
+
+### Ownership and precondition
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns the Capstone mastery and next-practice recommendation already shown before Terminal dismissal.
+- `SYSTEM // EXPEDITION STATE` owns the sanitized checkpoint, available progression action, and session clearing.
+- `PILOT // EXPEDITION CONTROL` owns activation of the next-scene action.
+- `SCENE // SENSOR RECORD` owns only visible route and object conditions. No transition line assigns attention, memory, approval, judgment, invitation, or intent to the Machine.
+- The handoff becomes available only when Capstone evidence is `MASTERED`, readiness is `ready_for_next_practice_checkpoint`, and the separately derived fresh-evidence gate is current.
+
+### CH00 — Mastery closure
+
+Keep the closure sequence short enough for the `640 × 480` dialogue deck:
+
+1. `901 TEACHER`: "Offline Capstone mastery confirmed. The evidence supports the next practice checkpoint only."
+2. `SYSTEM`: "Checkpoint recorded. Continue is available. No exam result, service call, or external action occurred."
+3. Preferred focus moves to the visible `Continue` button after the learner acknowledges mastery.
+
+Do not repeat the full Capstone warning, prerequisite panel, or score in the scene dialogue. Those remain available in sanitized evidence and the completed Terminal state.
+
+### CH01 — Learner-controlled transition
+
+- Visible button: `Continue`.
+- Accessible name: `Continue to the next survey site`.
+- Activation clears Capstone working content, configuration, scenario, and prose state; sanitized mastery evidence persists separately.
+- Activation changes only local game state. It does not call a service, send content, use credentials, mutate Azure, or perform an external/destructive action.
+- The transition is a separate Pilot action. Mastery acknowledgement must not auto-advance the scene.
+
+### CH02 — Surface-safe departure and arrival
+
+- Departure, `SCENE // SENSOR RECORD`: "The causeway narrows ahead. A grounded inspection surface is visible in the corridor."
+- Arrival uses the next scene's existing grounded observation: "The grounded Terminal presents a blank inspection surface and three quiet evidence channels."
+- Do not use `awake`, `waiting`, `listening`, `accepts`, `recognizes`, `invites`, or `records your arrival` in this handoff.
+- The Capstone result changes progression availability only. It does not change the landmark, prove a response, or unlock unique canon.
+- Hint use and retries never alter the departure, arrival, or core story access.
+
+### CH03 — Focus, announcement, reload, and reduced motion
+
+- After `Continue`, focus enters the next scene in normal document order; do not restore focus to the removed Capstone trigger.
+- Announce the new scene heading before its object description. The scene line is not a live assessment result.
+- On reload before transition, restore the sanitized mastered checkpoint and focus `Continue`; do not reopen learner prose or the completed form.
+- On reload after transition, restore the destination scene with clean working exercise state and persistent mastery evidence.
+- The handoff must remain understandable without animation, sound, or color. Reduced motion uses a direct scene replacement with the same text sequence.
+- At narrow hosts, keep the scene heading, compact observation, and `Continue` action readable without horizontal scrolling.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1623,7 +1670,7 @@ These existing lines should be retired in a later Coder pass. This documentation
 | "A grounded three-fin Terminal waits beside the causeway. The suspended archive above it remains silent." | Uses stale landmark terminology and gives the Terminal an intentional verb | "A grounded Terminal stands by the causeway. The Tidal Lens remains silent." |
 | "The bloom answers in your own alphabet. It did not translate the signal. It was already listening for you." | Claims no translation and implies prior personal attention | "The bloom repeats the expedition output in visible light. That confirms a compatible surface—not who or what, if anything, received it." |
 | "Identity accepted. The structure rotates once, like an eye deciding not to close." | Assigns the exercise to the wrong object, implies identity handling, and personifies the landmark | "Terminal fins align; route geometry appears. The Tidal Lens remains unchanged." |
-| "The path changes behind you. The next interface is already awake." | Implies intentional anticipation and a responsive state not yet observed | "The causeway narrows ahead. A second local surface is visible in the corridor." |
+| "The path changes behind you. The next interface is already awake." | Implies intentional anticipation and a responsive state not yet observed | "The causeway narrows ahead. A grounded inspection surface is visible in the corridor." |
 
 The first replacement also corrects the earlier continuity packet's flagged over-personification. The expedition output may be repeated or mediated; early prose must not declare that translation was unnecessary.
 
@@ -1693,4 +1740,5 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Remediation Planner persists no exam text, notes, credentials, endpoint/payload/response data, action request, or prose.
 - Capstone readiness requires both 12/12 forms, a closed-note defense, all 15 ledger rows ready, and all remediation routes closed with fresh evidence.
 - Capstone scenarios process no source or media, call no service, authorize no action, and persist no private working content or learner prose.
+- Post-Capstone progression remains a separate Pilot action; its scene copy reports visible conditions without Machine approval, attention, or intent.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

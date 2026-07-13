@@ -330,7 +330,7 @@ Use a more specific line only when it adds state clarity.
 
 ### Planned Offline Capstone Readiness
 
-- Runtime and game exercise integration are unimplemented; this section defines target focus, dismissal, privacy, and ownership.
+- Runtime and game exercise integration are implemented; this section remains the normative focus, dismissal, privacy, and ownership contract.
 - Target title and dismissal name: `Offline Capstone Readiness`; `Exit Capstone`.
 - System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario cards use `n/6`.
 - The persistent prerequisite panel shows all 15 objective rows, remediation-route closure, and fresh-evidence status using text, not color alone.
@@ -342,6 +342,17 @@ Use a more specific line only when it adds state clarity.
 - Persistent evidence excludes source content, audio, transcript, credential, endpoint, payload/response, exam-item text, action requests, and prose.
 - After strict mastery acknowledgement, focus prefers `Continue`; recommendation, acknowledgement, and progression remain separate actions.
 - Dismissal never processes media, calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
+
+### Post-Capstone progression handoff
+
+- Strict mastery dismissal focuses the visible `Continue` action; its accessible name is `Continue to the next survey site`.
+- Teacher mastery, System checkpoint, and Pilot progression remain three separately owned states/actions.
+- Activating `Continue` clears working Capstone state, preserves sanitized mastery, and enters the next scene in normal focus order.
+- Reload before transition restores the mastered checkpoint and `Continue`, not learner prose or a completed form.
+- Reload after transition restores the destination scene with clean working state and persistent mastery evidence.
+- Departure copy is one compact Scene-owned observation; it never says a Machine surface waits, wakes, listens, accepts, recognizes, invites, or remembers.
+- Progression is local game state only: no source/media processing, service call, credential use, Azure mutation, or external/destructive action.
+- Reduced motion uses direct scene replacement; heading and object description remain available as text without sound, animation, or color.
 
 ### Evidence Packet
 
