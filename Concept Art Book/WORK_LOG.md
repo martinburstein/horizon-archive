@@ -223,3 +223,11 @@
 - **Validation:** native `64 x 64`, byte-exact 2x, grayscale, six pairwise-distinct isolation tiles, connected station rail, direction/cancellation geometry, dual locks, target fit, and links pass.
 - **Next recommended item:** native-grayscale accessibility review with mandatory transcript, direction, result/error, cancellation, disclosure, and authorization labels.
 - **Unresolved risks:** physical geometry cannot carry speech content, consent, language, errors, disclosure scope, or authority identity. Live accessible UI remains authoritative.
+
+## 2026-07-12 - Offline Capstone Readiness physical motif
+
+- **Completed:** authored one native `64 x 64` AB-01 implementation mnemonic for L-06-03. Three distinct client, text/speech, and extraction inputs feed a closed prerequisite evidence lattice, then split into closed-ready, returning-remediation, and open-insufficient outcomes. The asset adds no location, story event, exam guarantee, service call, or external authority.
+- **Files changed:** added `production-pixel/AB-01/capstone-readiness/` native motif, integer renderer, implementation specification, exact 2x, native grayscale, seven-component isolation QA, and reusable validator; linked it from the AB-01 package. No game code, playtest binary, scene, interface, curriculum, or lore changed.
+- **Validation:** native transparent RGBA `64 x 64`; byte-exact nearest-neighbor `128 x 128`; seven pairwise-distinct grayscale components; all three inputs reach the evidence gate; all three outcome paths connect; readiness outcomes differ through closed socket, return loop, and open socket geometry; prerequisite lock passes; 61 x 59 painted bounds fit the 68 x 76 AB-01 target; grayscale silhouette, links, surface-canon, spoiler, and no-guarantee checks pass.
+- **Next recommended item:** Accessibility Sentinel should identify all three implementation inputs and readiness outcomes at native grayscale. Coder may integrate only with persistent labels, keyboard status, prerequisite evidence details, remediation routing, and explicit no-guarantee/no-action copy.
+- **Unresolved risks:** physical geometry cannot convey objective evidence, prerequisite completeness, remediation destination, source currency, recommendation rationale, or authorization identity. Live learner-facing text remains authoritative.

@@ -25,6 +25,7 @@
 - **Client Boundaries motif:** [six linked stations, local-only mock loop, rejected success, and locked action](client-boundaries/README.md)
 - **Single-Agent motif:** [six stations, keyed tool shutters, incomplete denial, rejected success, and locked action](single-agent/README.md)
 - **Text/Speech Patterns motif:** [six linked stations, reversible cancellation, and locked safety exits](text-speech-patterns/README.md)
+- **Offline Capstone Readiness motif:** [three implementation inputs, prerequisite evidence gate, and three readiness outcomes](capstone-readiness/README.md)
 
 ## Originality gate
 
