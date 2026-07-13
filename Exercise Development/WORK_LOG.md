@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Final playable-demo wording and route freeze
+
+- **Outcome:** Applied the finalized spoiler-safe Capstone → SIM-01 → corridor handoff and froze the playable demo at the existing title-to-credits endpoint. Capstone acknowledgement still requires a separate learner action, but its focused `Continue` now has the explicit accessible name `Continue to mixed simulation` and opens SIM-01 in the same scene. After mixed-block acknowledgement, the separately focused `Continue to the next survey site` performs actual scene progression.
+- **Completion semantics:** Replaced player-visible `SIM-01 mastery` claims with `MIXED SIMULATION BLOCK COMPLETE` and the exact bounded statement, “Mixed simulation block complete: 24/24. This supports continued practice, not an exam result.” Internal `mastered` remains only a sanitized demo progression key. Timer/untimed copy now refers to block completion, not cumulative mastery.
+- **Spoiler-safe transition:** Replaced the anticipatory/personifying departure line with the Scene-owned observation, “The causeway narrows ahead. A grounded inspection surface is visible in the corridor.” Focus, reload derivation, privacy, optional timing equivalence, reduced-motion-compatible direct replacement, and the established 640×480 scroll owner remain unchanged.
+- **Files changed:** `App.jsx`, focused SIM-01 tests, public manifest, full E2E route assertions, and this log. E2E no longer refreshes Capstone/SIM-01 QA captures. All incidental QA binary changes from final validation were reverted.
+- **Validation:** 159/159 unit tests pass; production build passes; L-06-03 self-test and both 12/12 references pass; SIM-01 self-test and 24/24 reference pass; full repository-root title-to-credits E2E passes in 84.7 seconds with zero runtime errors, credits reached, explicit launch/departure focus, reload, privacy, and all registered gates; manifest JSON and diff check pass.
+- **Demo freeze/deferred:** Player-visible runtime scope is frozen through SIM-01. SIM-02, CUM-01 runtime integration, cumulative transfer-retention claims, new exercises, new narrative branches, and stronger Machine implications are explicitly deferred until after the demo. During the freeze, accept only defects affecting ownership, accessibility, privacy, broken progression, contradictory evidence, or spoiler/mystery leakage.
+- **Unresolved risks:** Real screen-reader announcement order, forced-colors behavior, browser zoom, and a second working-directory E2E invocation remain useful post-freeze checks. None blocked the validated title-to-credits demo route.
+
 ## 2026-07-12 — Final demo-readiness SIM-01 resume fix
 
 - **Work completed:** SIM-01 now resumes at the first item whose sanitized decision/reason evidence is not both true. Exit clears the working session, so close/reopen and full reload use the same derivation. If all twelve items are complete but mastery is not acknowledged, the strict 24/24 result screen is restored instead of replaying item one.

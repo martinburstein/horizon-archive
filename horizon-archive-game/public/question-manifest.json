@@ -240,7 +240,7 @@
       "exercise_id": "EX-SIM01-MIXED",
       "lesson_id": "SIM-01",
       "objective_ids": ["AI901-D1-O1", "AI901-D1-O2", "AI901-D1-O3", "AI901-D1-O4", "AI901-D1-O5", "AI901-D1-O6", "AI901-D1-O7", "AI901-D1-O8", "AI901-D2-O1", "AI901-D2-O2", "AI901-D2-O3", "AI901-D2-O4", "AI901-D2-O5", "AI901-D2-O6", "AI901-D2-O7"],
-      "success_contract": "Pass all twelve course-authored mixed scenarios at strict 24/24 across all fifteen objectives. Optional diagnostic timing and fully equivalent untimed mode cannot affect mastery or imply an exam guarantee or action authority."
+      "success_contract": "Complete all twelve course-authored mixed scenarios at strict 24/24 across all fifteen objectives. Optional diagnostic timing and fully equivalent untimed mode cannot affect block completion or imply cumulative mastery, an exam guarantee, or action authority."
     }
   ]
 }
