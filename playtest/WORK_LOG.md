@@ -1,0 +1,11 @@
+# Player Agent Work Log
+
+## 2026-07-12 — Round 25 Remediation Planner learner-state audit
+
+- **Work completed:** Performed a bounded read-only audit of the complete mandatory progression through `EX-L0602-REMEDIATION-PLANNER`, concentrating on whether the planner actually routes the learner's measured Objective Ledger gaps.
+- **Finding:** The mandatory transition is internally contradictory. Objective Ledger mastery requires all 15 objectives to be `ready` with valid evidence pointers before Remediation Planner unlocks. `openRemediationPlanner()` then ignores `objectiveLedgerEvidence` and presents twelve fixed scenario-bank routes. Persistent planner routes are canned blueprints keyed by `P01`–`P06`/`T01`–`T06`, not the learner's objective IDs or failed dimensions. The UI nevertheless calls them “weak routes” and completion dialogue claims “all weak routes are complete.” This does not satisfy the exercise contract requiring a complete route for every weak objective and prevents genuine state-routed remediation.
+- **Files changed:** Added this Player Agent work log only; no gameplay, curriculum, art, capture, or test files changed.
+- **Validation performed:** Read root and game `AGENTS.md`; inspected Exercise Agent and current progression logs, L-06-01/L-06-02 contracts, planner scenario bank, evaluator, runtime wiring, focused unit tests, and full E2E assertions. Ran the complete game unit suite: **142/142 passed**. Confirmed the existing E2E validates canned route completion but not Objective Ledger → Planner data flow.
+- **Next recommended item:** Coder Agent should make Remediation Planner learner-state-routed: preserve or derive weak/not-yet-assessed Objective Ledger records before the all-ready gate clears them, build the planner queue and sanitized routes from those records, and add tests proving exact objective/dimension/pointer transfer. If the ledger is genuinely all-ready, present spaced-review or readiness-maintenance semantics instead of claiming weak routes exist.
+- **Unresolved risks:** Changing the transition semantics affects strict mastery, save sanitization, reload recovery, progression gating, and the definition of whether L-06-02 is remediation-only or universally mandatory. The product decision should remain offline/no-authority and must not persist learner prose or exam content.
+
