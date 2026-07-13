@@ -26,6 +26,7 @@
 - **Single-Agent motif:** [six stations, keyed tool shutters, incomplete denial, rejected success, and locked action](single-agent/README.md)
 - **Text/Speech Patterns motif:** [six linked stations, reversible cancellation, and locked safety exits](text-speech-patterns/README.md)
 - **Offline Capstone Readiness motif:** [three implementation inputs, prerequisite evidence gate, and three readiness outcomes](capstone-readiness/README.md)
+- **SIM-01 Mixed Simulation motif:** [five/seven item banks, detached timer, remediation return, and retention/action locks](mixed-simulation/README.md)
 
 ## Originality gate
 
