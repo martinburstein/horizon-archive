@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "demo": "npm run build && vite preview --host 127.0.0.1 --port 4173 --open",
     "preview": "vite preview",
     "test": "node --test"
   },
