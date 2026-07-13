@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 — Restarted relay opening-demo gate
+
+- **Outcome:** audited the frozen opening through first-Terminal orientation without implementation edits. Confirmed strong native semantics, resumable/privacy-safe opening state, Unicode-aware name validation, recoverable orientation, reduced-motion handling, and 44 px orientation targets; documented one P1 focus-transition defect and two P2 comprehension/readability issues.
+- **Files:** `Accessibility Sentinel/opening-demo/REPORT.md` and this log only.
+- **Validation:** 166/166 unit tests and production build passed; relevant opening, canonical-frame, orientation, CSS, privacy, and E2E source contracts were checked.
+- **Next:** Coder should focus the primary Meadow hotspot after Chapter I entry and add an active-element regression; then address warning association and 320 × 240 minimum text sizes.
+- **Risk:** browser QA is coordinator-owned; human NVDA, forced-colors, and 200% zoom remain unobserved. Build retains the existing 696.61 kB chunk warning.
+- **Status:** `ready to advance`
+
 ## 2026-07-12 — Frozen playable-demo final accessibility gate
 
 - **Outcome:** issued a formal PASS/freeze for the complete playable demo through SIM-01. Keyboard/focus, direct launch, sanitized mid-block resume derivation, close/reopen/reload, timer equivalence, semantic names/errors, ownership, privacy, persistent no-guarantee/no-authority copy, constrained/reduced-motion presentation, and the native no-color SIM-01 motif satisfy the established release contracts. No runtime fix was warranted.
