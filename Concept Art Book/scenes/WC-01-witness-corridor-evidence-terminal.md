@@ -5,31 +5,40 @@
 - **Scene ID:** WC-01
 - **Player-facing survey name:** Witness Corridor
 - **World / region:** World C / Witness Complex
-- **Production status:** Integrated as the playable final-scene plate
+- **Production status:** Interaction-integrated; alien-function art replacement required
 - **Image:** [witness-corridor-evidence-terminal-v1.png](../images/witness-corridor-evidence-terminal-v1.png)
 - **Original environment reference:** [Fallen Automoton.png](../../Concept%20Art/Fallen%20Automoton.png)
-- **Purpose:** Give the final Evidence Packet exercise a dedicated grounded Terminal while keeping the fallen automaton as the scene's narrative focal object.
+- **Purpose:** Give the Evidence Packet a distinct local contact while reframing the “corridor” as part of a nonhuman occupation involving articulated systems, channel correlation, maintenance, and environmental exchange without confirming one interpretation.
+
+## Alien functionality and first-contact brief
+
+- **Landscape system:** mounting fields, damp channels, atmospheric exchange, distributed contact apertures, articulated machine, empty couplings, and distant route must show input, transformation, handoff, byproduct/failure, and repair relationships.
+- **Nested scales:** local contact apertures and repair seams; chamber-wide mounting/channel network; complex-scale atmosphere, continuity, or material exchange.
+- **Nonhuman affordances:** no hallway, front-facing inspection desk, waist-high kiosk, human door cadence, bilateral control row, or eye-level screen. Couplings address several heights, depths, orientations, and sensory channels.
+- **Discoverable clues:** repeat aperture triads across contact and wall fields; contrast occupied/empty/damaged mounts; show one channel state propagate separately through local contact, articulated machine, and distant chamber element.
+- **Plausible first readings:** repair, calibration, record correlation, material transfer, or continuity handling remain compatible. “Witness Corridor” and “automaton” are provisional human survey terms, not confirmed Builder occupation or object class.
+- **First contact:** the player occupies an incidental clear volume; no human path, retrofit, wear, sign, rail, furniture, body, companion, or ship appears.
 
 ## Navigation
 
-- **Entry:** broad damp floor from the lower-left edge.
+- **Entry:** an incidental stable gap in the mounting/channel field reaches the lower-left edge.
 - **Onward route:** path passes behind the Terminal and recedes into violet mist at upper-left.
 - **Walkable plane:** lower-left and center paving remain open; the Terminal occupies a small apron beside, not inside, the route.
-- **Camera:** intimate side-on three-quarter corridor view with slightly exaggerated depth.
+- **Camera:** intimate first-person three-quarter chamber view with exaggerated depth; the space must not read as a hallway built around human bodies.
 
 ## Interaction zones
 
 | Zone | Approximate source area | Read | Intended interaction |
 |---|---|---|---|
-| Evidence Terminal | essential silhouette x 32–44%, y 45–76%; light spill begins near x 31% | grounded three-fin crown, blank inspection surface, three channel lights, dark base | primary `LOOK AT` / `USE` target opening the Evidence Packet workspace |
-| Fallen automaton | x 49–88%, y 18–78% | large seated articulated silhouette with a restrained violet lens | narrative observation / conversation target; never part of Terminal hit area |
+| Evidence contact | essential silhouette x 32–44%, y 45–76%; state spill begins near x 31% | distributed three-aperture coupling with no front, screen, row, or human operating position | primary `LOOK AT` / `USE` target opening the Evidence Packet through expedition translation layer |
+| Fallen automaton | x 49–88%, y 18–78% | collapsed multi-axis articulated system with a restrained violet lens; “automaton” is a provisional survey analogy | narrative observation / conversation target; never part of contact hit area |
 | Corridor route | x 0–49%, y 43–100% | damp paving narrowing toward upper-left mist | scene entry and depth cue |
 
-## Terminal anatomy
+## Contact anatomy
 
 - Three short translucent fins fold around a dim core, preserving the established Terminal-family crown.
-- A shallow blank black-glass inspection surface angles toward the player.
-- Exactly three non-text modality indicators sit below it: restrained violet faceted lens, cool-blue ripple aperture, muted amber pulse prism.
+- A non-reflective phase surface is one side of a multi-oriented coupling, not an inspection screen angled toward the player.
+- Exactly three non-text channel apertures occupy different depths/orientations: restrained violet faceted lens, cool-blue ripple aperture, and muted amber pulse prism. Their repeated relationships elsewhere teach the triad without a human control row.
 - The base is water-worn stone and oxidized metal rooted through floor slabs. It is not attached to the automaton.
 
 ## Hotspot and crop implementation target
@@ -50,17 +59,17 @@
 ## Visual specification
 
 - **Palette:** blue-black masonry, charcoal shadow, weathered umber metal, muted lavender, cool slate blue, tiny amber accent, pale crystal white.
-- **Lighting:** violet mist from upper-left, restrained cool rim on the automaton, compact violet/blue/amber node accents, narrow violet ground reflection.
+- **Lighting:** violet atmospheric exchange from upper-left, restrained cool response on the articulated system, and three compact channel states whose reflected paths visibly connect to damp routing or repeated apertures rather than decorative ground glow.
 - **Atmosphere:** thin corridor mist behind the subjects, never crossing either silhouette.
-- **Scale cues:** floor slabs, waist-high node proportions, seated automaton anatomy, wall-block courses.
+- **Scale cues:** mounting-cell families, repair seam periods, channel spans, articulated-machine joints, and chamber courses; no Builder feature uses human waist, seat, stair, door, or hand scale as its default.
 - **Focal hierarchy:** automaton first at scenic scan; Terminal first at interaction scan; receding corridor third.
 - **Traversability:** the path remains broad on the Terminal's left and visually continues behind it.
 
 ## Continuity constraints
 
 - Surface-canon boundary: the node is a local evidence-inspection interface only; its three indicators do not define the larger system or answer the central mystery.
-- Must preserve: slumped automaton on the right, violet-lens accent, angular intimate masonry, oblique damp route, crystalline crack flora, quiet painterly melancholy.
-- Must avoid: attaching the Terminal to the automaton, merging their hit areas, conventional laptop/kiosk form, readable symbols, projected UI, active combat, or additional figures.
+- Must preserve: collapsed articulated system on the right, violet-lens accent, intimate mounting-field enclosure, oblique damp channel gap, process-linked cultivated glass or mineral deposits, and quiet painterly melancholy.
+- Must avoid: human hallway, door, stairs, rail, furniture, waist-high kiosk, front-facing inspection screen, bilateral indicator row, attaching the contact to the automaton, merging hit areas, readable symbols, projected UI, definitive human occupation labels, random surrealism, active combat, human retrofit, or additional figures.
 - Terminal-family links: [GM-01 meadow reference](../../Concept%20Art/Alien%20Meadow.png) and [AB-01 grounded ruins node](../images/drowned-archive-workload-terminal-v1.png).
 
 ## Production record
@@ -69,4 +78,4 @@
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation plus one targeted placement edit
 - **Native dimensions:** `1672 x 941` PNG
 - **Selection notes:** the first candidate established the correct anatomy but failed the narrow-crop gate; the selected edit moved the node into the centered safe band without changing its design or the automaton.
-- **Validation:** clean plate contains no UI, text, watermark, extra characters, weapons, or plot revelation; three indicators, inspection surface, separate silhouettes, route, and responsive crop requirements are present. Browser QA verifies source-mapped geometry, pointer and Enter-key activation, visible focus, two-object alt text, non-launching automaton interactions, and full mastery-to-credits progression at `1600×900` and `320×900`.
+- **Historical/technical validation:** clean plate and browser integration pass target separation, keyboard, responsive, alt-text, and mastery-to-credits checks. The current art predates the alien-function gate and is not production-approved until it shows three operating scales, nonhuman affordances, repeated/state/cause-effect clues, visible environmental process, two plausible readings, and no human ergonomic defaults.

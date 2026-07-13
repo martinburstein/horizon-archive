@@ -16,8 +16,8 @@
 | Zone | Approximate source area | Read | Intended interaction |
 |---|---|---|---|
 | Cultivation service terrace | x 0–23%, y 40–63% | feedstock handoff, channel junction, repair-glass rack, and transport sockets replacing the historical ship area | material-flow continuity and no party ship in gameplay frame |
-| Petal / First Signal Terminal | essential target x 32–57%, y 5–52%; base to y 55% | monumental many-petaled crown around dark oval core | primary First Signal interaction |
-| Three-fin route marker | x 59–65%, y 49–69% | exactly three fins, dark core, grounded compact base | secondary prerequisite-gated route exercise |
+| Petal / First Signal contact | essential target x 32–57%, y 5–52%; coupling extends to y 55% | monumental purpose-grown array with no human-facing front; repeated bed grammar reveals the contact locus | primary First Signal interaction through expedition translation layer |
+| Three-fin route contact | x 59–65%, y 49–69% | exactly three trained elements, dark core, and distributed coupling repeated elsewhere in the process | secondary prerequisite-gated route exercise through expedition translation layer |
 | Walkable route | x 18–69%, y 49–100% | layered S-path from left foreground, between nodes, toward right distance | traversable plane and onward cue |
 
 ## Builder garden/masterwork doctrine
@@ -50,6 +50,15 @@ Glass Meadow is not a naturally enchanted crystal garden. It is a civic-scale fi
 
 GM-01 must show at least six stages in one readable composition and, together with GM-00, the complete ten-stage chain. At least three Terminal-component typologies must read at 1x without labels.
 
+### Alien functionality and first-contact brief
+
+- **Landscape system:** feedstock and slurry enter the beds; collars and training fields transform material; mature components leave through annealing/transport; reject glass and recovered heat/material re-enter earlier stages; bed activity visibly modifies local water, temperature, ground chemistry, and organic cover.
+- **Nested scales:** collar/component growth; district cultivation and quality routing; highland-scale resource and microclimate transformation.
+- **Nonhuman affordances:** growth controls are spatially distributed, multi-height, variably oriented, and coupled across beds. Petal and Route Marker have no front, screen, seat, hand control, or human-height operating position.
+- **Discoverable clues:** repeat a collar/frame grammar across component families; contrast growing/mature/rejected geometry; show one state change propagating through slurry, thermal vanes, a bed, and a downstream sorting route.
+- **Plausible first readings:** material cultivation, terrain stabilization, atmospheric/light regulation, and distributed computation remain compatible with the visible evidence. “Glass farmer” is not a confirmed Builder occupation title.
+- **First contact:** the Python workspace is an expedition translation layer reached through the local node, not a human-facing interface built into the artifact. No prior human modification or presence appears.
+
 ## Responsive crop and hotspot plan
 
 - **Desktop Petal initial bounds:** `left: 31%`, `top: 5%`, `width: 27%`, `height: 54%`.
@@ -74,16 +83,16 @@ Core value, groove value, and pool size provide redundant state cues so status d
 
 - **Palette:** indigo, slate blue, basalt charcoal, lavender, pale crystal white, restrained celadon readiness shimmer, peach-gold horizon, and tiny amber route-wear accents.
 - **Lighting:** blue-hour ambient and warm left horizon; restrained Petal and marker reflections must be visibly explained by built conduits, wet channels, or reflective material and must not read as decorative magic.
-- **Scale:** environmental steps, worn approach path, hand-scale collars and maturity tabs, waist-high training frames, monumental Petal crown, compact route marker, component cradles, and transport rails.
-- **Family resemblance:** both nodes use engineered translucent facets folded around dark cores, with collars, fastenings, service seams, and substrate connections explaining their construction. Petal is a monumental garden coordinator; the exactly three-fin marker is grounded, compact, repairable civic infrastructure.
+- **Scale:** varied collar apertures, maturity tabs, multi-height training fields, monumental Petal array, smaller route contact, component cradles, and distributed transport couplings; no human ergonomic unit governs the system.
+- **Family resemblance:** both nodes use purpose-grown translucent elements coupled to dark cores, with collars, distributed fastenings, service seams, and substrate/field connections explaining their construction. Neither has a human-facing front. Petal participates across the cultivation district; the exactly three-element route contact couples into a smaller repeated process branch.
 - **Must preserve:** two moons, angular mountain family, upward-growing inverted-icicle glass tied to visible cultivation systems, distinct organic ground cover, open S-path, serious painterly quiet, and clear first-person approach.
 - **Must exclude:** protagonist, companions, and ship in any visible, reflected, shadowed, portrait, distant, or cropped form.
-- **Must avoid:** generic enchanted garden, downward stalactites, random or arbitrary crystal scatter, decorative glow, unsupported real-world scientific claims, growth with no collar/feed/control/harvest relationship, beauty without visible purpose, single-era perfection, generic monolith marker, merged hit areas, projected UI, text, combat, or any explanation of the larger mystery.
+- **Must avoid:** human-facing consoles, screens, stairs, rails, doors, operating aprons, ergonomic heights, generic enchanted garden, downward stalactites, random or arbitrary crystal scatter, decorative glow, unsupported real-world scientific claims, growth with no collar/feed/control/harvest relationship, beauty without visible purpose, single-era perfection, definitive human occupation labels, random surrealism, merged hit areas, projected UI, text, combat, or any explanation of the larger mystery.
 
 ## Production record
 
 - **Current blockout:** code-assembled `320 × 180` canvas in `horizon-archive-game/src/pixelMeadow.js`; the `1672 × 941` exploration plate is not imported by the game. This implementation is `BLOCKOUT ONLY` under the Curse Art Director charter and is not the production pixel master.
-- **Required production replacement:** original `640 x 360` first-person Builder Glass Garden/masterwork with fine native pixels, complete material ramps, theatrical depth, at least three visible stewardship phases, six or more cultivation stages, upward inverted-icicle growth, three or more Terminal-component typologies, reject/repair flow, maintenance ornament, and no party or ship.
+- **Required production replacement:** original `640 x 360` first-person Builder Glass Garden/masterwork with fine native pixels, complete material ramps, theatrical depth, at least three stewardship phases, six or more cultivation stages, upward inverted-icicle growth, three or more component typologies, reject/repair flow, three nonhuman affordances, repeated/state/cause-effect teaching, two plausible operating readings, three nested scales, no human retrofit, and no party or ship.
 - **Presentation:** whole-number nearest-neighbor scaling with centered letterboxing; `3×` at 1600×900 gameplay and `1×` at 320×900.
 - **Implemented logical targets:** Petal `x 36–59%, y 22–83%`; Route Marker `x 75–89%, y 48–84%`.
 - **State implementation:** locked cross/dark groove, awake core/ring/short groove, and completed stepped acknowledgement/directional groove alter silhouette geometry as well as value.

@@ -2,6 +2,8 @@
 
 This document maps real learning actions to narrative consequences. Python remains valid Python; Azure and Foundry lessons remain source-grounded in curriculum content. Lore supplies motive, data, and visible response.
 
+Every fictional task also follows the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). A safe exercise may reveal one input, transformation, output, or stewardship relation. It must not convert a provisional Pilot occupation into native Builder purpose or imply that human software is technological parity.
+
 ## Core contract
 
 Each exercise has five fields:
@@ -18,12 +20,12 @@ If an exercise cannot provide both a world response and an evidence payload, it 
 
 | Skill | Fictional operation | Discovery consequence | Guardrail |
 |---|---|---|---|
-| Run a file / `print()` | Send a visible handshake to a dormant surface | The interface answers in a human-readable channel | Do not imply Python is the native Builder language |
+| Run a file / `print()` | Send one visible bounded request through the Pilot's mediation layer | The local surface repeats a measurable result | Do not imply Python is native Builder language or the surface was designed for a human |
 | Strings | Label a signal, inscription, or hypothesis | The archive distinguishes the player's label from its own term | Player-authored names must not become Builder canon |
 | Variables | Preserve call sign, reading, or working interpretation | The site can refer back to a value the player supplied | Make provenance visible |
 | Numbers | Record interval, count, confidence, coordinate, or frequency | A pattern becomes measurable rather than merely uncanny | Avoid arbitrary combination-lock math |
 | Booleans | Represent a narrow detected/not-detected state | Paired Builder states reveal distinctions | Never reduce consciousness or life to one Boolean |
-| Tracebacks | Repair a malformed request | The interface's patience becomes evidence about its design | No narrative punishment for mistakes |
+| Tracebacks | Repair a malformed request | Stable retry behavior demonstrates repeatable mediation | No narrative punishment for mistakes or claim of Machine patience |
 | Lists | Gather fragments or repeated signals | Scope expands from one artifact to a collection | Preserve order only when evidence supports it |
 | Dictionaries | Model a record with value plus provenance | Identity and evidence categories become separable | Do not create a canonical `soul` key |
 | Conditionals | Route evidence by explicit criteria | Different records receive different handling | Show the cost of a weak criterion safely |
@@ -54,11 +56,11 @@ Frame model choice around task fit, modality, cost/latency constraints, and eval
 
 ### Endpoints and SDKs
 
-The human expedition software is the client; Builder surfaces are fictional data sources behind a translation/mediation layer. Keep actual SDK concepts and examples faithful to the curriculum's official sources. Never present fictional Builder protocol as Microsoft product behavior.
+The Pilot's local software is the client; Builder surfaces are fictional data sources behind a translation/mediation layer. Keep actual SDK concepts and examples faithful to the curriculum's official sources. Never present fictional Builder protocol as Microsoft product behavior.
 
 ### Agents
 
-An expedition agent may search approved sources, compare records, call bounded tools, and draft a report. It may not autonomously activate unknown infrastructure, infer private attributes, delete contradictory evidence, or declare the central mystery solved. The player reviews the trace and authorizes any consequential next step.
+The Pilot's local agent may search approved sources, compare records, call bounded tools, and draft a report. It may not autonomously activate unknown infrastructure, infer private attributes, delete contradictory evidence, or declare the central mystery solved. The Pilot reviews the trace and authorizes any consequential next step.
 
 ### Content Understanding
 
@@ -69,7 +71,7 @@ Use mixed Builder artifacts as the fictional corpus: slabs, diagrams, field reco
 ### Blueprint A: first visible output
 
 - Learning goal: PY-001 through PY-003.
-- Fictional task: wake a surface with a diagnostic phrase.
+- Fictional task: test one exposed input relation with a diagnostic phrase.
 - World response: one physical component activates and returns the exact output.
 - Evidence payload: the surface was monitoring an input channel before activation.
 - Ambiguity: no claim about who monitored it or why the phrase was accepted.

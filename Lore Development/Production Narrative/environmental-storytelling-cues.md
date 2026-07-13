@@ -2,7 +2,20 @@
 
 Reusable cues based on the four concept-art environments. Each cue should be readable without exposition and capable of supporting at least one interaction or lesson.
 
-## Glass Meadow / Alien Meadow
+## Project-wide alien functionality contract
+
+- Each place is a working Builder landscape-machine-ecology with a resource-extraction or terraforming process and an associated occupation inferred from repeated actions and handoffs, never confirmed through a familiar human job title.
+- The player is the first known human to encounter each instance. Builder artifacts were not designed for human eyes, bodies, ergonomics, symbols, or work rhythms; any Python workspace is an expedition translation layer.
+- Every strange form needs evidence of function through material/energy routing, repetition, contrasting state, synchronized change, wear, repair, maintenance, or ecological consequence. Random surrealism is not mystery.
+- Preserve at least two plausible functional interpretations and three operating scales—local contact, site process, landscape/terraforming system—while keeping the current hotspot, incidental safe route, and recoverable interaction readable.
+- Builder capability exceeds human civilization as of 2026 through precision, resilience, distributed coordination, graceful failure, self-maintenance, and centuries of collective revision. Do not express advancement as generic holograms, neon, smoothness, or human devices with alien ornament.
+- No human retrofit, prior human wear, human-scaled stair/door/rail, console, camp, protagonist, companion, or ship appears in gameplay world plates.
+
+Apply the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md) to every cue. A landscape is an alien working system with stable relations, not backdrop. Show inputs, transformations, outputs, and stewardship before allowing the Pilot a provisional occupational gloss.
+
+## Glass Meadow / Glass Garden
+
+Provisional functional reading: fictional silicate cultivation and material stewardship. `Glass Meadow` is the Pilot's first visual label; `Glass Garden` is the later occupational gloss earned from repeated process evidence. Neither is a Builder term.
 
 Visual constants:
 
@@ -34,9 +47,11 @@ Avoid: random fantasy crystals, enchanted-garden behavior, unexplained glow, dow
 
 ## Drowned Archive / Alien Ruins
 
+Provisional functional reading: evidence reservoir or chronology stewardship, with computation, environmental indexing, and preservation retained as alternatives. This does not identify the Tidal Lens.
+
 Visual constants:
 
-- Shallow reflective water, broken inscribed pillars, central suspended polyhedron, impossible or distorted sky.
+- Shallow reflective water, broken inscribed pillars, central suspended polyhedron, and a sky whose geometry resists the Pilot's first spatial model.
 - Monumental scale with low, traversable ruins around the player.
 - Purple-blue twilight and reflections that duplicate geometry imperfectly.
 
@@ -52,12 +67,15 @@ Interactive cues:
 - Pillars contain deliberate blank bands with tool marks around them, suggesting preserved omission.
 - A star-field comparison yields two valid timestamps depending on which physical reference frame is assumed.
 - A generated reconstruction can restore the plaza visually but must remain overlaid, toggleable, and labeled as hypothesis.
+- Basin inflow, phase surfaces, suspended/submerged counterparts, local contact triplets, byproduct routes, and maintenance discontinuities should support resource separation, environmental regulation, correlation, and preservation as simultaneous first-contact hypotheses.
 
 Use for: provenance, multimodal evidence, vision, information extraction, chronology, generated reconstruction ethics.
 
 Avoid: a single inscription that explains the civilization; treating the black-hole-like sky as an unambiguous cause; treating “Tidal Lens” as a confirmed function; or making the landmark speak, grade the player, accept identity, or animate in response to the grounded Terminal.
 
 ## Witness Corridor / Fallen Automaton
+
+Provisional functional reading: inspection or continuity stewardship, with transit, maintenance, and evidence custody retained as alternatives. The corridor, automaton, and grounded Terminal remain separate evidence sources.
 
 Visual constants:
 
@@ -77,6 +95,7 @@ Interactive cues:
 - Audio recovery reveals that pauses are part of the record rather than missing data.
 - It responds differently to `LOOK AT`, `USE`, and `TALK TO`, allowing warmth and character without becoming a lore oracle.
 - On revisit, it can repeat the player's earlier words with provenance attached, demonstrating memory as record without proving selfhood.
+- Mount fields, damp channels, empty couplings, contact apertures, repair layers, and distant exchange behavior should support repair, calibration, correlation, transfer, and continuity handling as simultaneous hypotheses; “corridor,” “witness,” and “automaton” remain provisional survey analogies.
 
 Use for: Booleans, debugging, speech, functions, identity fields, the difference between a record and a witness.
 
@@ -84,11 +103,13 @@ Avoid: comic robot sidekick behavior, clean exposition dumps, declaring the auto
 
 ## City Beneath / Underground City
 
+Provisional functional reading: coupled civic stewardship across heat, transit, maintenance, and record boundaries. Planetary regulation, computation, and preservation remain viable overlapping occupations.
+
 Visual constants:
 
 - Immense volcanic cavern, bridges over glowing chasms, domed districts, steam, active lighting, layered depth.
 - A city that works despite the absence of its people.
-- Human observers should be visually small.
+- The Pilot should be visually small.
 
 Interactive cues:
 
@@ -99,6 +120,7 @@ Interactive cues:
 - Some doors remain open to environmental systems but closed to identity-bearing records, separating utility from consent.
 - A memorial district occupies premium stable ground, while inhabited-looking spaces sit nearer changing geothermal features, hinting that permanence was not their only value.
 - A city map can be represented as nested dictionaries and lists; missing districts remain explicit nulls rather than being deleted.
+- Geothermal intake, atmospheric exchange, material circulation, light propagation, maintenance units, civic boundaries, and waste/return routes must form one alien occupation at three scales while leaving its ultimate purpose unresolved.
 
 Use for: structured data, APIs/endpoints, distributed systems, responsible access, capstone revisits.
 
@@ -114,3 +136,5 @@ Avoid: making the city a factory for the obvious final answer; filling the scene
 - Repeated scale shift: intimate object, architectural echo, planetary instance, network relationship.
 
 These motifs should accumulate recognition without becoming a cipher that yields a single sentence.
+
+Across every environment, repeat at least one input/transformation/output relation and one stewardship trace before naming an occupation. Scale echoes may imply shared rigor, but never prove shared purpose, a conscious coordinator, or the native Builder category.

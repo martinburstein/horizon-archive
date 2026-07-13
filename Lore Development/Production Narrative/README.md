@@ -14,6 +14,7 @@ This folder turns the visible lore bible, concept art, playable prologue, and cu
 
 ## Files
 
+- `builder-landscape-function-and-reveal-contract.md`: project-wide surface-canon rules for alien functionality, provisional occupations, first-contact framing, evidence-led reveals, and strict separation of observation, Pilot inference, Teacher explanation, and hidden canon.
 - `chapter-beat-map.md`: six-chapter narrative spine aligned to the curriculum.
 - `reveal-pacing-matrix.md`: evidence, interpretation, ambiguity, and hard withholding by chapter.
 - `environmental-storytelling-cues.md`: reusable visual and interactive cues derived from the four concept-art environments.
@@ -28,3 +29,5 @@ This folder turns the visible lore bible, concept art, playable prologue, and cu
 ## Production rule
 
 Every successful learning interaction should change the player's relationship to a place, object, or question. A correct answer must do more than open a door. It should expose evidence, revise an assumption, awaken a witness, connect distant observations, or make an earlier detail newly significant.
+
+Every Builder landscape must also read as rigorous alien functionality rather than scenery. Use the landscape-function contract before assigning environmental purpose, occupation language, or a reveal beat. Human-readable Terminals are mediation layers, not evidence of human-oriented design or prior human contact.

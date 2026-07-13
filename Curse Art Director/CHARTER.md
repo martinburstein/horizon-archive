@@ -28,6 +28,22 @@ Beauty is seen through the Builders' eye. The most beautiful places are collecti
 
 Reject generic enchanted gardens, arbitrary crystal fields, magical-looking altars, decorative bloom, purposeless ruins, and beauty that carries no visible civic, ecological, structural, or ritual function.
 
+## Alien functionality and first-contact doctrine
+
+Every Builder environment is a working system and an occupation made physical: landscape, machine, and ecology are inseparable. Builders extract resources and terraform through processes foreign to humans, and their artifacts were never designed for human eyes, bodies, senses, work rhythms, or ergonomic expectations. The player is the first known human to encounter each instance.
+
+Builder civilization is more advanced in every relevant respect than human civilization as of 2026. Show that advantage through capability, precision, resilience, scale coordination, graceful failure, self-maintenance, and century-spanning revision—not through generic holograms, sleekness, neon, or familiar devices with alien decoration.
+
+- **Landscape as system:** each vista must expose inputs, transformation, distribution, outputs, byproducts, failure states, and maintenance at environmental scale. Terrain, weather, organisms, structures, and artifacts participate in the same operation.
+- **Occupation made physical:** infer an associated practice from repeated stations, state cycles, material flows, maintenance patterns, and handoffs. Use provisional process descriptions in production notes; do not reduce it to a familiar human job title.
+- **Nonhuman affordances:** reject chairs, desks, keyboards, hand-sized buttons, eye-level screens, human stair cadence, bilateral hand controls, standard doors, safety rails, or console layouts unless they are explicitly human expedition overlays. Builder interfaces may operate across unusual height, depth, orientation, rhythm, field, or distributed spatial relationships.
+- **Function without labels:** players discover function through repetition, adjacency, routed material, state contrast, synchronized changes, wear, repair, and visible consequences. Builder writing, labels, arrows, familiar icons, and human-facing diagrams cannot carry the primary explanation.
+- **Readable incomprehensibility:** the route, current hotspot, and safe recovery remain legible, but the artifact's full operation does not. Gameplay clarity comes from silhouette, value, recurrence, and feedback—not anthropomorphic design.
+- **Layered operation:** every environment supports at least two plausible functional readings at first contact and at least three nested operating scales: local artifact, site process, and landscape/terraforming system. Later evidence may narrow hypotheses without collapsing the central mystery.
+- **Resource and terraforming evidence:** show matter, energy, atmosphere, water, heat, growth, or terrain being routed and transformed, but do not completely decode the mechanism or name an unsupported end purpose.
+- **No random surrealism:** every strange form needs system evidence: an input/output relation, repeated counterpart, state behavior, material path, maintenance access, wear pattern, or ecological consequence. Unmotivated weirdness fails just as surely as familiar human design.
+- **First-contact integrity:** no human adaptation, prior human wear, human-scale retrofit, handrail, sign, path, camp, ship, or body appears in the Builder vista. The player's usable route is an incidental safe surface or expedition interpretation, not proof it was built for humans.
+
 ## Glass Garden material-cultivation canon
 
 The Glass Garden is a fictional Builder agricultural and industrial system. It farms silicate-bearing raw material into purpose-shaped glass components used by the Python-running Terminals. This is project worldbuilding, not a claim that real glass can be grown this way or a scientifically accurate description of real silicate extraction, crystallization, annealing, or manufacturing.
@@ -92,20 +108,30 @@ For Glass Garden scenes specifically, the following are additional hard requirem
 - At least three Terminal-component typologies must be distinguishable by trained cross-section, collar, frame, size, or storage destination.
 - A reviewer must be able to infer fictional material production before reading explanatory text. If the scene reads first as a magical crystal garden, it fails.
 
-### 7. First-person staging gate
+### 7. Alien functionality and first-contact gate
+
+- Provide a system-evidence map identifying visible input, transformation, distribution, output/byproduct, failure state, and maintenance evidence.
+- Show three nested operating scales and at least two plausible first-contact interpretations supported by the same visible evidence.
+- Include at least three clearly nonhuman affordances and no unexplained familiar human ergonomic defaults.
+- Use at least one repeated form, one contrasting state, and one visible cause/effect change to make the current interaction learnable without labels.
+- Show a resource-extraction or terraforming relationship without fully decoding its mechanism or ultimate purpose.
+- State the provisional occupation signature as observed actions and handoffs, not a human job title.
+- Reject any strange form lacking system evidence and any Builder capability that reads as equal or inferior to ordinary human 2026 infrastructure without a story-critical, surface-safe reason.
+
+### 8. First-person staging gate
 
 - The camera height, approach line, foreground occlusion, and focal hierarchy must make the player feel physically present without displaying the player.
 - Keep the likely interaction approach and exits understandable from the viewpoint. Do not reserve empty space for an on-screen avatar.
 - No party member or ship may carry the composition, explain scale, indicate an exit, or supply visual interest.
 
-### 8. Hotspot readability gate
+### 9. Hotspot readability gate
 
 - At 1x and thumbnail scale, a reviewer must identify the safe route, exit, primary hotspot, and focal landmark without labels.
 - Required props use a distinct silhouette, at least two-value separation from adjacent forms, and a quiet local pocket or edge contrast. State changes use geometry/value plus color.
 - Painted silhouettes and accessible hit targets may differ in size, but highlights must trace or bracket the object rather than become giant glows.
 - Hotspot clarity cannot be achieved by stripping away surrounding production detail; control detail with value, frequency, and negative space.
 
-### 9. Originality gate
+### 10. Originality gate
 
 - Reject any scene that reproduces a specific reference camera angle, horizon placement, building arrangement, character silhouette, prop, gag, icon, palette sequence, lighting pattern, or proprietary UI.
 - Reference notes may name abstract principles only: scene occupancy, line confidence, expressive perspective, material richness, value grouping, and interaction clarity.
@@ -122,8 +148,9 @@ Every production-scene review must include:
 5. a short material-ramp and environmental-storytelling inventory;
 6. a Builder-authorship sheet naming the collective work, visible purpose, three construction phases, maintenance features, engineered-ecology relationships, and regional design school;
 7. for Glass Garden scenes, a process overlay identifying all ten fictional cultivation stages, visible component typologies, reject/repair flow, and the upward growth direction;
-8. an originality statement naming the abstract references used and the concrete exclusions checked;
-9. first-person exclusion confirmation for protagonist, companions, and ship.
+8. an alien-function map identifying system inputs/transforms/outputs, three operating scales, repeated/state/cause-effect clues, nonhuman affordances, two plausible interpretations, and the inferred occupation signature;
+9. an originality statement naming the abstract references used and the concrete exclusions checked;
+10. first-person and first-contact exclusion confirmation for protagonist, companions, ship, human retrofit, and prior human traces.
 
 ## Decision vocabulary
 

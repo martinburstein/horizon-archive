@@ -6,9 +6,13 @@ Internal production outline. Surface-canon only. The chapter names are working t
 
 The player begins by treating the expedition as an archaeological survey and the Machine as abandoned infrastructure. Across six chapters, each recovered interface works correctly but resists a stable category. The pilot's initial envy of Builder longevity becomes less simple as evidence shows a civilization that treated continuity, embodiment, witness, risk, and true death with distinctions humans do not possess. The arc ends with operational access to a larger network, not an answer to the mystery.
 
+Each environment is the first known human encounter with a still-legible Builder occupation made physical across artifact, site, and terraforming scales. The artifacts were never designed for human eyes or ergonomics; expedition tooling supplies the human-readable Python layer. Repeated states and consequences reveal enough function to play while at least two larger interpretations remain plausible.
+
+Every primary environment follows the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). Each is an alien working system with an occupation embedded in matter, energy, computation, transformation, transport, preservation, or stewardship. The Builders exceed 2026 humanity in every relevant comparison shown. Their forms resist human senses and ergonomics because they were never designed for a human user, yet their operations remain rigorous and repeatable. The Pilot is the first known human at each instance; occupation names are singular first-person translations inferred from evidence, never omniscient exposition or Builder canon.
+
 The emotional progression is:
 
-1. Curiosity: something has been waiting.
+1. Curiosity: something still functions.
 2. Envy: the Builders appear to have solved the human problem of not having enough time.
 3. Intimacy: their records behave less like history than remembered relationship.
 4. Unease: the same evidence supports incompatible explanations.
@@ -23,23 +27,23 @@ Prototype sequencing note: the current playable prologue demonstrates advanced `
 
 Primary environments: Glass Meadow, Drowned Archive, Witness Corridor, first view of the City Beneath.
 
-Player-facing dramatic question: Why did a dead world prepare interfaces that a human beginner can operate?
+Player-facing dramatic question: Why can my tooling mediate surfaces that were never designed for me?
 
 ### Beat sequence
 
 1. Arrival at what first resembles a glass garden. No population, recent traffic, distress beacon, or obvious catastrophe appears, yet feedstock terraces, slurry/water channels, upward-growing glass beds, training frames, harvesting/annealing routes, and repair stock show that this was a centuries-maintained material farm rather than wild or magical ecology. The fictional process is not presented as real-world glass science.
-2. A Petal Terminal assembled from purpose-grown glass components responds to visible output. The important event is not translation; it is that the Python-running interface accepts a human-readable declaration without any visible negotiation.
+2. A Petal Terminal assembled from purpose-grown glass components responds to visible output. The Pilot's Python-running mediation layer can exchange one bounded declaration with it; that does not make Python native Builder technology or the surface human-oriented.
 3. A visible Route Marker remains prerequisite-locked until First Signal acknowledgement. It then teaches variables, value types, reassignment, prediction, and retrieval before adding completed directional geometry to the meadow path.
 4. At the Drowned Archive, a grounded three-fin Terminal opens a human-authored Workload Sort while the monumental Tidal Lens remains silent. The player learns to classify bounded jobs and, by contrast, to treat the landmark's survey name as provisional when evidence is insufficient.
 5. In the Witness Corridor, a separate grounded Evidence Terminal validates a human-authored multimodal packet. After acknowledgement, the fallen automaton produces its own bounded response; the two events remain separately attributed.
 6. A deliberate beginner error produces useful human-tooling feedback while the local surface remains stable. Failure demonstrates a recoverable mediation layer; it does not prove that the Machine authored the lesson.
-7. City lighting begins a new sequence below. The prologue closes when the expedition arrival appears under a provisional translated field, `continuation`, whose meaning remains unstable.
+7. City lighting begins a new sequence below. The prologue closes when the Pilot's arrival appears under a provisional translated field, `continuation`, whose meaning remains unstable.
 
 ### Required discoveries
 
 - Builder sites can be beautiful, functional, and empty at once.
 - Glass Garden beauty comes from collective fictional engineering: silicate feedstock, controlled upward growth, trained Terminal-component typologies, harvest, annealing, transport, rejection, repair, and centuries of visible revision.
-- Local interfaces accept simple Python-like operations through the human translation layer.
+- The Pilot's human-authored layer mediates simple Python operations into bounded local exchanges.
 - One local surface can expose a prerequisite relationship without refusing, judging, or understanding the learner.
 - A verified local Terminal and a monumental nearby structure are not automatically the same object or speaker.
 - A responsive automaton and a nearby Evidence Terminal are not automatically the same interface or evidence owner.
@@ -48,7 +52,7 @@ Player-facing dramatic question: Why did a dead world prepare interfaces that a 
 
 ### Must remain unresolved
 
-- Who or what anticipated the player.
+- Whether anyone anticipated a human encounter at all.
 - Whether the Machine is translating, adapting, remembering, or merely following old protocol.
 - What "continuation" identifies.
 
@@ -129,7 +133,7 @@ The returned payload contains a route beyond the city and a timestamp that canno
 
 Curriculum alignment: L-04-01 through L-04-04; text, speech, vision, image generation, and information extraction workloads.
 
-Primary environments: the Alien Ruins under a distorted sky, orbital survey feeds, and recovered multimodal records.
+Primary environments: the Alien Ruins under a distorted sky, the Pilot's remote survey captures, and recovered multimodal records.
 
 Player-facing dramatic question: How much of a vanished civilization can be recovered from media that disagree?
 
@@ -164,27 +168,27 @@ A distant world answers a query that the player believed had remained local.
 
 Curriculum alignment: L-05-01 through L-05-07; Foundry portal mental model, prompts and grounding, deployments, endpoints, SDKs, agents, workload solution patterns, and Content Understanding.
 
-Primary environments: a human-built operations layer aboard the survey craft, linked Builder sites, and remote planetary interfaces.
+Primary environments: the Pilot's portable human-built operations layer, linked Builder sites, and remote planetary interfaces.
 
 Player-facing dramatic question: What changes when the pilot stops opening records and starts coordinating systems that can act?
 
 ### Beat sequence
 
-1. The pilot creates a human workspace for the expedition. Builder surfaces become data sources, not authorities, and every source retains provenance.
+1. The Pilot creates a personal human workspace. Builder surfaces become data sources, not authorities, and every source retains provenance.
 2. Model deployment choices determine latency, capability, and what evidence can be processed. Narrative consequences are framed as coverage and uncertainty, never as a "correct" commercial product choice.
-3. System instructions require the expedition assistant to separate observation, Builder label, human inference, and generated hypothesis.
+3. System instructions require the Pilot's local assistant to separate observation, Builder label, Pilot inference, and generated hypothesis.
 4. The endpoint/SDK flow sends a grounded request and returns a structured response. A remote surface recognizes the request format, suggesting prior compatibility without proving prior human contact.
 5. A single-agent workflow gathers evidence from several sites, but the agent is prohibited from taking irreversible action or collapsing contradictory claims.
 6. Text and speech analysis recover a recurring civic phrase whose translations differ by context. The best human rendering remains provisional.
 7. Vision comparison shows that several "abandoned" sites are changing slowly in coordinated ways.
-8. Content Understanding extracts a common schema from document-like slabs, murals, audio, and environmental telemetry. The schema contains a field the human team did not define.
+8. Content Understanding extracts a common schema from document-like slabs, murals, audio, and environmental telemetry. The schema contains a field the Pilot did not define.
 9. The pilot must inspect the agent's trace and reject a fluent conclusion that outruns the evidence. Mastery and character growth coincide: the player now resists the answer they most want.
 
 ### Required discoveries
 
 - Builder sites form a distributed, coordinated network.
 - Some surfaces respond to modern orchestration patterns through an unknown compatibility layer.
-- The system exposes categories not authored by the human expedition.
+- The system exposes categories not authored by the Pilot.
 - Good tools amplify both discovery and the duty to preserve uncertainty.
 
 ### Must remain unresolved
@@ -219,7 +223,7 @@ Player-facing dramatic question: Is understanding a prerequisite for responsible
 - The player can now connect local evidence without erasing provenance or ambiguity.
 - The Builder network recognizes structured uncertainty as usable input.
 - Earlier discoveries gain new relationships, but no central unknown is solved.
-- The next arc requires distributed tools because the investigation has exceeded one ship and one world.
+- The next arc requires distributed tools because the investigation has exceeded one Pilot's local tools and one world.
 
 ### Must remain unresolved
 

@@ -1,5 +1,14 @@
 # Prompt and Provenance Log
 
+## Project-wide alien-function supersession
+
+- **Date:** 2026-07-12
+- **Source:** direct durable user direction; no image generated in this tranche
+- **Scope:** all current and future environment concepts, pixel plates, and scene briefs
+- **Authority:** [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md), [Concept Art direction](art-direction-charter.md), [scene index](scene-index.md), and [planet/region map](planet-region-map.md)
+
+Every Builder environment is a working landscape-machine-ecology and an occupation made physical. Builder resource extraction and terraforming are rigorous but foreign to humans; artifacts were not designed for human eyes or ergonomics and exceed human 2026 capabilities through precision, resilience, distributed coordination, graceful failure, self-maintenance, and century-scale revision. The player is the first known human at each instance. Production replacements must show inputs, transforms, distribution, outputs/byproducts, failure, maintenance, three operating scales, nonhuman affordances, repeated/state/cause-effect clues, resource/terraforming evidence, and at least two plausible readings. Occupations remain inferred from actions and handoffs rather than human-named. Routes/hotspots stay playable through composition and feedback, not familiar controls. Random surrealism and unexplained strange forms are prohibited.
+
 ## Superseding Glass Garden production brief
 
 - **Date:** 2026-07-12
@@ -47,6 +56,8 @@ Passed: original composition; 16:9; clean plate; route readable; entry and exit 
 
 ## HA-LS-002
 
+> **Historical exploration prompt — superseded for production.** This prompt uses a human-readable causeway, stairs, chest-high/front-oriented node, and conventional scene separation that predate the alien-function/first-contact gate. Retain only as provenance and interaction evidence; replacement authority is the [AB-01 sheet](scenes/AB-01-drowned-archive-workload-terminal.md).
+
 - **Date:** 2026-07-11
 - **Use case:** `stylized-concept`
 - **Purpose:** physical Workload Sort Terminal direction for the playable Drowned Archive ruins scene
@@ -81,6 +92,8 @@ Avoid: giant flower, duplicate meadow landmark, terminal shaped like a laptop or
 Passed: original composition; 16:9 clean plate; grounded three-fin node reads as a Terminal-family variant; approach, onward route, landmark separation, and tight interaction silhouette are clear; no text or spoiler content. No iteration was required for this tranche.
 
 ## HA-LS-003
+
+> **Historical exploration prompt — superseded for production.** This prompt uses corridor, waist-high kiosk, angled inspection screen, horizontal indicator-row, and human-scale path assumptions that predate the alien-function/first-contact gate. Retain only as provenance and interaction evidence; replacement authority is the [WC-01 sheet](scenes/WC-01-witness-corridor-evidence-terminal.md).
 
 - **Date:** 2026-07-12
 - **Use case:** `stylized-concept` followed by `precise-object-edit`

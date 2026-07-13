@@ -13,7 +13,25 @@ These are modular writing patterns, not a final dialogue script. They are design
 
 One line gets one owner. Split multi-source events into sequential lines. An unattributed pronoun must not carry agency from one hotspot to another.
 
-Microsoft principles, product terms, and exam boundaries may appear only in the Teacher/course layer or clearly human expedition tooling. Pilot, scene, Builder-interface, and local-surface voices must never sound as though Microsoft authored the fiction or the Machine is delivering Microsoft instruction.
+Microsoft principles, product terms, and exam boundaries may appear only in the Teacher/course layer or the Pilot's clearly human-authored tooling. Pilot, scene, Builder-interface, and local-surface voices must never sound as though Microsoft authored the fiction or the Machine is delivering Microsoft instruction.
+
+## First-person functional reveal rules
+
+These rules implement the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md).
+
+- The Pilot is the first known human at each instance. Pilot lines use `I`, `me`, and `my`, never `we`, `our`, a party, crew, ship, or prior survey.
+- Begin with observed matter, movement, interval, input, or output. Do not begin with a profession or purpose.
+- An occupation appears only as `PILOT_INFERENCE` after repeated evidence and a stewardship trace. Phrase it as “I am calling this…” or “My closest word is…”.
+- Keep at least one alternative occupation alive. A human gloss such as grower, steward, archivist, or regulator is not a Builder term.
+- Teacher copy explains the human exercise only. It never confirms Builder purpose, intent, or hidden canon.
+- A human-readable workbench is the Pilot's mediation layer. It does not make the native object a screen, keyboard, classroom, or device built for human senses.
+- Alien form has rigorous logic. Avoid `random`, `magical`, `enchanted`, `nonsensical`, `decorative`, and `impossible` when the intended meaning is merely `not yet understood`.
+
+Functional inference pattern:
+
+> `SCENE // SENSOR RECORD`: [observed input]. [repeated transformation]. [measured output or repair trace].
+>
+> `PILOT // FLIGHT RECORDER`: "I am calling it [occupation] for now. [Alternative] still fits the same evidence."
 
 ### Compact pixel-UI copy
 
@@ -40,7 +58,7 @@ Do: "The lights are still keeping an appointment. I don't know with whom."
 
 Avoid: "Obviously the Machine is alive and waiting for me."
 
-### Expedition assistant
+### Pilot's local assistant
 
 - Clear, bounded, and useful.
 - Separates evidence from inference in natural language.

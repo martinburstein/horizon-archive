@@ -4,6 +4,10 @@ Status: production-ready, surface-canon only.
 
 Scene contract: `AB-01` is a flooded basin with two deliberately different objects. The grounded three-fin **Workload Sort Terminal** is a bounded local interface. The monumental **Tidal Lens** is a silent suspended landmark. Completing the exercise may change the Terminal, its reflection, and the onward route; it must not make the landmark speak, rotate, approve, awaken, or explain itself.
 
+## Landscape function boundary
+
+Apply the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). The basin's water-mediated inscriptions, preserved omissions, reflection differences, chronology conflicts, and localized access surfaces support provisional Pilot glosses such as evidence reservoir or chronology steward. Computation, environmental indexing, preservation, and coupled functions remain viable. None of this identifies the Tidal Lens, establishes a Builder occupation, or means the human Workload Sort categories are native to the site.
+
 ## Naming and canonical-frame contract
 
 - `Drowned Archive`: provisional human survey name for the location.
@@ -31,7 +35,7 @@ These lines fit the `640 × 480` and `320 × 240` lower dialogue bands. If a tem
 - Skills: `AI901-D1-O4-WORKLOAD-MATCH`, `TERM-STATE-001`
 - Visual target: grounded three-fin node at the causeway apron; suspended geometric frame above the central island.
 
-The workload categories are supplied by the human expedition curriculum. Their successful use does not prove that the Builders used the same categories. The Terminal accepts a bounded classification record through the mediation layer; the exact compatibility remains `UNKNOWN`.
+The workload categories are supplied by the Pilot's human-authored curriculum. Their successful use does not prove that the Builders used the same categories. The Terminal accepts a bounded classification record through the mediation layer; the exact compatibility remains `UNKNOWN`.
 
 ## Object-separation rule
 

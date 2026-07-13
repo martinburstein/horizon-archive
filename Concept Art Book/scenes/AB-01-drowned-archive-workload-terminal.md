@@ -5,28 +5,37 @@
 - **Scene ID:** AB-01
 - **Player-facing survey name:** Drowned Archive
 - **World / region:** World B / Drowned Archive Basin
-- **Production status:** Integrated as the playable prologue ruins plate
+- **Production status:** Interaction-integrated; alien-function art replacement required
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
 - **Production-pixel successor:** [AB-01 available 640×360](../production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../production-pixel/AB-01/README.md)
 - **Canonical frame evidence:** [available/complete 640×480 study](../production-pixel/AB-01/CANONICAL_FRAME.md)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
-- **Purpose:** Give the playable L-02-01 Workload Sort exercise a distinct, grounded physical Terminal while preserving the suspended archive as the environmental landmark.
+- **Purpose:** Give L-02-01 a distinct local contact point while reframing the flooded basin as an active, nonhuman landscape process whose resource/terraforming occupation can be inferred but not fully decoded.
+
+## Alien functionality and first-contact brief
+
+- **Landscape system:** basin inflow, reflective phase surfaces, leaning field elements, suspended structure, segmented ridges, local contact, mist, and outflow must behave as one system with visible inputs, transformations, outputs/byproducts, failure states, and maintenance.
+- **Nested scales:** local three-element contact; basin routing/phase separation; horizon or atmosphere-scale coupling.
+- **Nonhuman affordances:** the contact has no front or human operating height; the segmented ridge is not a walkway by design; suspended and submerged elements couple across distances and orientations unavailable to a human body.
+- **Discoverable clues:** repeat element triplets in basin and contact; contrast aligned/misaligned fluid or reflection states; show one contact change propagate through a channel, field element, and distant atmospheric or suspended response without using labels.
+- **Plausible first readings:** resource fractionation, hydrologic/atmospheric terraforming, astronomical correlation, or preservation all fit the evidence. “Archive” remains a provisional human survey name, not a decoded occupation.
+- **First contact:** the player uses an incidental stable ridge; no human path, stair, rail, console, retrofit, wear, body, companion, or ship appears.
 
 ## Navigation
 
-- **Entry:** broad causeway from the lower-left edge.
-- **Exit / onward route:** causeway continues behind the Terminal toward the center steps.
-- **Walkable plane:** dry, dark paving forms an uninterrupted lower-left to upper-center route; a widened right-hand apron provides approach space around the node.
-- **Camera:** wide side-on three-quarter adventure view with a low causeway foreground and high cosmic horizon.
+- **Entry:** a stable segmented ridge reaches the lower-left edge incidentally.
+- **Exit / onward route:** the same phase boundary continues behind the contact toward raised process shelves.
+- **Walkable plane:** dry portions of the ridge form a readable safe route, but irregular cadence, nonhuman scale, and distributed coupling prevent it from reading as a constructed human causeway or operating apron.
+- **Camera:** first-person wide three-quarter survey view with a low stable phase ridge and high cosmic horizon; Builder operating relationships must not align to human eye height.
 
 ## Interaction zones
 
 | Zone | Approximate screen area | Read | Intended interaction |
 |---|---|---|---|
-| Workload Sort Terminal | x 60–73%, y 47–82% | isolated three-fin crystal crown on a grounded black base with violet reflection | primary `LOOK AT` / `USE` target opening L-02-01 |
-| Causeway | x 0–65%, y 49–100% | continuous dry paving narrowing toward the steps | entry and inferred player approach |
+| Workload Sort contact | x 60–73%, y 47–82% | asymmetric three-element local coupling with no screen, front, or human operating position | primary `LOOK AT` / `USE` target opening L-02-01 through expedition translation layer |
+| Stable phase ridge | x 0–65%, y 49–100% | continuous dry system boundary narrowing toward process shelves | incidental entry and inferred player approach |
 | Suspended archive | x 41–60%, y 8–40% | monumental dark geometric frame above the island | distant landmark and optional observation, not the exercise trigger |
-| Central steps | x 42–61%, y 39–55% | raised continuation of the causeway | onward-route cue after completion |
+| Raised process shelves | x 42–61%, y 39–55% | nonuniform stacked phase interfaces continuing the ridge | onward-route cue after completion, not human stairs |
 
 ## Hotspot implementation record
 
@@ -38,19 +47,19 @@
 
 ## Visual specification
 
-- **Terminal silhouette:** chest-high water-worn stalk and base; three short asymmetric translucent fins fold around a small central core.
-- **Family relationship:** the meadow's many-petaled crown becomes a compact three-fin crown; faceting and central-core grammar carry across, while scale, base, and weathering distinguish the archive variant.
+- **Terminal silhouette:** water-worn coupling intersects ridge, water, and a separate field element; three asymmetric purpose-grown elements fold around a core with no human-facing front or scale.
+- **Family relationship:** three purpose-grown elements and a central coupling recur from the Glass Garden, but their basin relationships, distributed orientation, scale, and weathering prevent the contact from reading as a portable human device.
 - **Palette:** blue-black basalt, charcoal masonry, indigo sky, muted violet water, sparse lavender crystal light, restrained peach-silver horizon accents.
-- **Lighting:** cool cosmic ambient light, faint wet-stone rim, single localized violet pool and reflection at the node.
+- **Lighting:** cool cosmic ambient light and wet-surface response; any local violet state must visibly route through fluid, field element, or suspended/submerged counterpart rather than form an isolated decorative pool.
 - **Atmosphere:** fine basin mist kept below the landmark and away from the Terminal silhouette.
-- **Scale cues:** causeway slab width, stair risers, chest-high base proportions, and contrast with the suspended structure.
-- **Focal hierarchy:** causeway route and Terminal first at gameplay scan; suspended archive first at scenic scan; steps third.
+- **Scale cues:** repeated phase-cell sizes, submerged/suspended correspondences, ridge segments, and atmosphere-scale response; avoid human slab, riser, or body proportions as Builder units.
+- **Focal hierarchy:** stable ridge and local contact first at gameplay scan; suspended structure and basin-wide process first at scenic scan; raised process shelves third.
 
 ## Continuity constraints
 
 - Surface-canon boundary: this is a local interface and exercise access point only; its form does not define the larger system or explain the site.
-- Must preserve: reflective flooded basin, leaning dark monoliths, monumental suspended archive, cosmic indigo/peach atmosphere, faceted painterly surfaces.
-- Must avoid: conventional screens or keyboards, readable glyphs, floating Terminal, giant flower scale, duplicated meadow landmark, magic-altar framing, combat, characters, or multiple competing bright nodes.
+- Must preserve: reflective flooded basin, repeated leaning field elements, monumental suspended structure, cosmic indigo/peach atmosphere, and faceted painterly surfaces—while tying every major form to fluid, phase, atmospheric, state, or maintenance evidence.
+- Must avoid: human causeway/stairs/rails/apron, front-facing or chest-high console, conventional screens or keyboards, readable glyphs, definitive “archive” occupation, functionless surreal monoliths, unexplained floating forms, magic-altar framing, combat, characters, human retrofit, or multiple competing bright nodes.
 - Neighboring visual link: [GM-01 Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
 
 ## Production record
@@ -63,5 +72,5 @@
 - **Final prompt:** [Prompt HA-LS-002](../prompt-provenance-log.md#ha-ls-002)
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation
 - **Native dimensions:** `1672 x 941` PNG
-- **Selection notes:** selected first result; grounded node, causeway approach, landmark separation, and three-fin family resemblance all read without annotation.
-- **Validation:** clean plate contains no UI, text, watermark, characters, weapons, or plot revelation; all required navigation and interaction reads are present. Browser QA verifies source-mapped target overlap, 44-pixel minimum size, pointer and keyboard activation at `1600×900` and `320×900`, descriptive alt text, and a complete title-to-credits run without console errors.
+- **Historical selection notes:** the original grounded node, causeway approach, landmark separation, and three-fin family resemblance read without annotation, but the human-route and console-scale assumptions are superseded.
+- **Historical/technical validation:** clean plate and browser integration pass navigation, target, keyboard, responsive, and title-to-credits checks. The current art predates the alien-function gate and is not production-approved until it shows three operating scales, nonhuman affordances, repeated/state/cause-effect clues, resource/terraforming evidence, two plausible readings, and no human ergonomic defaults.

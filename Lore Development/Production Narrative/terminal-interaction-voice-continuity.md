@@ -10,6 +10,8 @@ Terminals are small exposed surfaces of a much larger system. Their language mus
 - A Terminal can respond to input without understanding it as a person.
 - A Terminal can accept a record without approving its interpretation.
 
+Terminals also follow the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). Their native physical logic is not a human workstation. The dark editor, labels, focus behavior, and course feedback belong to the Pilot's accessible mediation layer; successful exchange proves only bounded compatibility.
+
 The current playable implementation preserves an active meadow exercise when its workbench is closed and reopened during the same application session. First Signal acknowledgement closes the Petal session and unlocks the separate Route Marker lesson. A full reload starts a clean working form while preserving sanitized mastery evidence; scene transition clears both working sessions. The lines below make those boundaries legible in the fiction.
 
 Final presentation targets a `640 × 480` square-logical-pixel, 4:3 canvas with the adventure scene above a compact dialogue/verb/inventory area. The current `320 × 180` meadow renderer is a provisional scene module inside that composition, not the overall game resolution. Terminal and dialogue copy should be short enough to avoid scrolling during ordinary interaction.
@@ -26,7 +28,7 @@ Use only one channel per line. Do not blend the pilot's inference into interface
 | Pilot reflection | `PILOT // FLIGHT RECORDER` | Admit interpretation or emotion | Fact first, interpretation second |
 | Save and navigation state | `SYSTEM // EXPEDITION STATE` | Explain close/reopen, reload, resume, acknowledgement, and route state | Never presented as in-world speech |
 
-The dark editor belongs to the human expedition's mediation layer. Python is real, but the UI must not claim that Python is the Builders' native language. Preferred formulation: the expedition link translates valid local Python operations into a bounded request the exposed surface can answer.
+The dark editor belongs to the Pilot's human-authored mediation layer. Python is real, but the UI must not claim that Python is the Builders' native language. Preferred formulation: the local link translates valid Python operations into a bounded request the exposed surface can answer.
 
 When more than one object is present, append the source object in script data or visible copy, for example `LOCAL SURFACE // PROVISIONAL TRANSLATION — AUTOMATON`. Never let an unattributed “it” cross from a Terminal action to a landmark or automaton response.
 
@@ -140,7 +142,7 @@ This technical copy set supports `terminal-l0101-independent-run`, lesson `L-01-
 
 | Event ID | Trigger | Channel | Player-facing copy | Evidence tag |
 |---|---|---|---|---|
-| `FS-01` | `LOOK AT` meadow node | Pilot | "The crystal opens around a field node. Our editor can reach it; nothing says it was built for us." | `OBSERVED` + `HUMAN_INFERENCE` |
+| `FS-01` | `LOOK AT` meadow node | Pilot | "The crystal opens around a field node. My editor can reach it; nothing says it was built for me." | `OBSERVED` + `PILOT_INFERENCE` |
 | `FS-02` | First `USE` | Expedition link | "Local session active. Complete the file, run it, and review the output before transfer." | UI status |
 | `FS-03` | Workbench opens first time | Local surface | "INPUT SURFACE OPEN. SOURCE UNNAMED." | `BUILDER_LABEL` |
 | `FS-04` | Close unfinished | Expedition link | "Workbench closed. Local session held." | UI status |
@@ -163,7 +165,7 @@ This technical copy set supports `terminal-l0101-independent-run`, lesson `L-01-
 
 Do not ship the earlier draft line, "It did not translate the signal. It was already listening for you." It claims both an unsupported translation mechanism and prior personal attention. Preferred replacement:
 
-> The bloom repeats the expedition output in visible light. That confirms a compatible surface—not who or what, if anything, received it.
+> The bloom repeats my tooling's output in visible light. That confirms a compatible surface—not who or what, if anything, received it.
 
 The physical response is `OBSERVED`; “compatible surface” is an expedition classification; any audience remains `UNKNOWN`.
 

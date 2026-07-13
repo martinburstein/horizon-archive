@@ -33,6 +33,19 @@ Horizon Archive interprets beauty through the Builders' collective eye. A great 
 
 Reject generic enchanted-garden fantasy, arbitrary crystals, magical altars, decorative glow, purposeless ruins, and beauty without legible civic, ecological, structural, or ritual purpose.
 
+### Alien functionality doctrine
+
+Every environment is a Builder occupation made physical across artifact, site, and landscape scales. Resource extraction and terraforming processes may be almost incomprehensible at first contact, but they are rigorous, repeated, stateful, and maintained. The player is the first known human to encounter each instance; nothing was built to be seen, operated, or traversed by a human.
+
+- Map visible inputs, transformation, distribution, outputs/byproducts, failure states, and maintenance into terrain, weather, ecology, architecture, and artifacts.
+- Infer occupation through actions and handoffs—sorting, phase-changing, routing, cultivating, correlating, exchanging, stabilizing, repairing—without assigning a familiar human profession as confirmed Builder identity.
+- Avoid human ergonomic defaults: eye-level displays, front-facing consoles, chairs, desks, keyboards, hand controls, human stairs, doors, corridors, rails, or bilateral symmetry. Any human-readable Python workspace belongs to the expedition translation layer, not the physical artifact.
+- Make local interaction discoverable through repeated shapes, contrasting states, synchronized changes, routed materials, wear, repair, and cause/effect. Never depend on Builder labels, arrows, writing, or familiar icons.
+- Preserve at least two plausible functional readings and three nested operating scales. Show resource or terraforming activity without fully decoding its mechanism or final purpose.
+- Builders exceed human 2026 capability through precision, resilience, distributed coordination, graceful failure, self-maintenance, and century-scale revision—not generic neon or smooth sci-fi styling.
+- Every strange form requires visible system evidence. Random surrealism, arbitrary asymmetry, and decorative biomechanical clutter fail the same gate as familiar human machinery.
+- Keep routes and hotspots playable through composition and state feedback. A usable surface may be incidental; it must not imply that Builders constructed a human walkway or interface.
+
 ### Glass Garden production doctrine
 
 The Glass Garden is a fictional Builder material farm supplying purpose-grown glassware for Python-running Terminals. It is not a representation of real glass science and must not be described as scientifically feasible silicate extraction, crystal growth, or annealing.
@@ -73,12 +86,13 @@ Across GM-00 and GM-01, show the complete chain. A single scene must show at lea
 - **Texture:** intentional pixel clusters, restrained dithering, angular low-poly massing, readable weather and age at the logical resolution.
 - **Palette:** indigo, slate, charcoal, muted violet; use peach, amber, crystal white, or volcanic orange as scarce focal accents.
 - **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
-- **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, seat, tool, or other known-size environmental construction.
+- **Scale:** establish relative size through repeated component families, material flow cross-sections, maintenance variation, ecology, and nested system relationships. Do not use human ramps, rails, doors, seats, tools, or body proportions as Builder design units.
 - **Mood:** serious, beautiful, quiet, melancholic, curious. Beauty must arise from collective purpose and care. Never generic fantasy, grimdark, combat-led, corporate, or glossy.
 - **Interface occupancy:** keep the world dominant. The dark dialogue/command area should be compact, stable, and information-dense rather than a modern dashboard covering the scene.
 - **Interaction language:** readable verbs and contextual cursor/focus states should feel immediate and playful, with inventory and observation supporting exploration rather than busywork.
 - **Failure philosophy:** visual and interaction design must support recovery. A wrong action may produce characterful feedback, but it must not strand the player or conceal the next useful affordance.
 - **Viewpoint:** gameplay plates are first-person views of the environment. Never paint the protagonist, companions, or their ship in frame, including bodies, hands, silhouettes, shadows, reflections, portraits, or cropped edges.
+- **First contact:** no human retrofit, prior human wear, camp, sign, safety rail, ergonomic adaptation, or human-shaped route appears. Each Builder instance is being encountered by a human for the first known time.
 
 ## Point-and-click readability gate
 
@@ -95,7 +109,9 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 ## Continuity rules
 
 - Builder sites show collective authorship, at least three longitudinal construction/stewardship phases, and patient integration with their environment, even in abandonment.
-- Human equipment is compact, practical, weathered, and visibly recent beside ancient spaces.
+- Human expedition equipment is excluded from gameplay world plates. Production notes may contrast human and Builder assumptions, but no human retrofit or prior human trace appears in the vista.
+- Builder environments remain visibly active systems whose terrain, ecology, artifacts, material/energy flows, maintenance, and failure states imply an occupation without naming a human-equivalent job.
+- Builder artifacts use nonhuman affordances and distributed operating relationships; physical surfaces never resemble a human-facing console merely to explain the interaction.
 - Glass growth appears only inside a legible fictional cultivation system; its form and placement must reveal feedstock, slurry/water, growth control, component training, harvest, Terminal use, or reject/repair relationships. Organic plant life remains visually distinct from cultivated glass.
 - Regional continuity comes from movement-level construction schools and maintenance practices, not repeated fantasy ornaments.
 - Local interfaces are varied exposed surfaces; do not establish a single definitive form for the Machine.
@@ -104,12 +120,12 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 
 ## Terminal family grammar
 
-- A Terminal is a small physical node emerging from or rooted into the ground; it is not a conventional monitor, laptop, kiosk, or floating icon.
+- A Terminal is a local contact point in a larger distributed landscape system; it may emerge from, span, or couple to terrain, fluid, atmosphere, or other infrastructure. It is not a conventional monitor, laptop, kiosk, human-height console, or floating icon.
 - The family resemblance is purpose-grown Builder glassware assembled around a small central core. Petal segments, fins, panes/lenses, sleeves, light guides, collars, and repair stock share traceable cultivation and assembly logic; scale, count, weathering, and base construction adapt to each region without becoming arbitrary crystal decoration.
 - One localized light pool or reflection may isolate a Terminal only when a visible emitter, conduit, reflection path, or material response explains it. Glow must not replace silhouette readability or act as fantasy ornament.
 - The Terminal and the location's monumental landmark must remain separate visual roles: the node is the interaction target; the landmark carries environmental scale.
-- Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.
-- Multimodal Evidence Terminals use one blank inspection surface and exactly three restrained, non-text channel indicators. Indicator color and shape may distinguish channels, but they must not become readable writing, familiar app icons, or a projected UI.
+- Use value pockets and repeated state relationships to reveal the contact point. A visually stable incidental approach surface may support the player, but no human-scaled apron, platform, or front-facing operating position should imply Builder accommodation.
+- Multimodal Evidence contacts expose exactly three restrained, non-text channel apertures at different depths, orientations, or coupled locations. Repeated relationships and state changes distinguish channels; they must not become a human-facing inspection screen, horizontal control row, readable writing, familiar app icons, or projected UI.
 - When a scene contains a narrative object and a Terminal, give them separate silhouettes, light pools, and hit areas. The narrative object remains compositionally dominant; the Terminal remains operationally discoverable.
 - A dormant-but-linkable node keeps its core dark but may hold a soft internal edge shimmer and broad low-contrast ground light. A prerequisite-locked node keeps its core and status groove dark; only ambient rim and a tiny residual ground reflection preserve discoverability. An awake node lights its core and one route/status groove. State cues must not depend on color alone: core value, groove value, and light-pool size all change together.
 

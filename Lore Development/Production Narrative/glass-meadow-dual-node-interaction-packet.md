@@ -4,6 +4,10 @@ Status: production-ready, surface-canon only.
 
 Scene contract: `GM-01` contains two separate learning surfaces with a strict sequence. The many-petaled **Petal Terminal** owns First Signal (`L-01-01`). The compact three-fin **Route Marker** is visible but prerequisite-locked until the player acknowledges First Signal; it then enters an awake route-training state for `L-01-02` and gains completed directional geometry only after route mastery. Neither node speaks for the whole Machine.
 
+## Landscape function boundary
+
+Apply the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). `Glass Meadow` is the Pilot's first visual label; `Glass Garden` is the later provisional occupation earned from feedstock, controlled upward growth, trained component families, harvesting, annealing, rejection, salvage, and repair. This remains fictional silicate agriculture, not real glass science or a confirmed Builder category. The two Terminals reveal bounded relations inside that larger material-stewardship process; their human workbenches do not make the landscape human-oriented.
+
 ## Production and curriculum alignment
 
 - Scene sheet: `Concept Art Book/scenes/GM-01-glass-meadow-petal-route-marker.md`
@@ -401,7 +405,7 @@ Recommended activity:
 
 Narrative line:
 
-> The route is stable. The error is in our copy. Good—mistakes we can locate are mistakes we can repair.
+> The route is stable. The error is in my copy. Good—mistakes I can locate are mistakes I can repair.
 
 This preserves `L-01-01 → L-01-02 → L-01-03` order, normalizes beginner errors, and avoids making failure a threat to exploration.
 

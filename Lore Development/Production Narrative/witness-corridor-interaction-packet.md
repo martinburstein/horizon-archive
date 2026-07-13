@@ -4,6 +4,10 @@ Status: production-ready, surface-canon only.
 
 Scene contract: `WC-01` contains two separate interactive objects. The fallen automaton is an archaeological subject that may produce bounded physical and translated responses. The grounded three-fin **Evidence Terminal** alone owns source inspection, editable working state, validation, hints, mastery evidence, and exercise acknowledgement. Neither object's behavior proves consciousness, identity, motive, or a relationship to the whole Machine.
 
+## Landscape function boundary
+
+Apply the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md). Modality channels, repair seams, status distinctions, measured response, and empty mounting wear support provisional Pilot readings such as inspection or continuity stewardship. Transit, maintenance, evidence custody, and another relational process remain live alternatives. Corridor, automaton, and grounded Terminal are separate evidence sources; none provides omniscient purpose.
+
 ## Production alignment
 
 - Scene sheet: `Concept Art Book/scenes/WC-01-witness-corridor-evidence-terminal.md`
@@ -17,7 +21,7 @@ Scene contract: `WC-01` contains two separate interactive objects. The fallen au
 - Skills: `PY-015`, `PY-016`, `PY-020`, `AI901-D2-O7-SCHEMA-EXTRACT`
 - Mastery gate: 12 of 12 deterministic checks, all critical boundaries, then recorded confidence.
 
-The Evidence Packet is a human-authored offline course asset. The Evidence Terminal exposes a bounded local surface through the expedition link; it does not turn the exercise into a native Builder curriculum or a live Azure service call.
+The Evidence Packet is a human-authored offline course asset. The Evidence Terminal exposes a bounded local surface through the Pilot's mediation link; it does not turn the exercise into a native Builder curriculum or a live Azure service call.
 
 ## Speaker ownership labels
 
@@ -123,7 +127,7 @@ This preserves the established surface-safe phrase while making its source and l
 
 `PILOT // FLIGHT RECORDER`:
 
-> Three indicators: image, audio, telemetry. The inspection glass stays blank until our workbench supplies a registered packet.
+> Three indicators: image, audio, telemetry. The inspection glass stays blank until my workbench supplies a registered packet.
 
 ### `TALK TO`
 
@@ -296,4 +300,3 @@ Mastery question: change one variable, predict both output lines before running,
 - Wrong answers and hints contain no unique canon.
 - Credits preserve “continuation” as a provisional label, not a final answer.
 - No line explains the Machine, Builder disappearance, or continuity mechanism.
-

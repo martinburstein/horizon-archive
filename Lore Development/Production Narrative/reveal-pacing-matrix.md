@@ -2,6 +2,19 @@
 
 Use this matrix to keep discovery cumulative without collapsing the mystery. A revelation is production-safe only when it adds evidence and at least one viable interpretation remains open.
 
+## Functional landscape reveal lane
+
+Landscape function follows the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md): alien encounter, repeated relation, stewardship trace, bounded Terminal exercise, provisional Pilot occupation, then scale echo. Do not reveal a native purpose through exposition.
+
+| Reveal stage | Player-facing evidence | Allowed Pilot inference | Required withholding |
+|---|---|---|---|
+| First encounter | two sensory facts and no obvious human affordance | “I cannot yet tell what operation this shape supports.” | occupation, native category, operator, motive |
+| Repetition | the same input/transformation/output relation appears twice | a testable functional family | confirmed profession or Builder term |
+| Stewardship | repair, rejection, threshold, reroute, conservation, or recovery | the process is rigorous and maintained | ultimate purpose or consciousness |
+| Safe exercise | human tooling reproduces one bounded relation | compatibility at that boundary | native software, full translation, prior human design |
+| Occupation gloss | multiple evidence types support a human analogy | one first-person provisional occupation plus an alternative | single final category |
+| Scale echo | the relation recurs across object, architecture, landscape, or planet | coordinated or inherited logic as alternatives | conscious network, invitation, or master plan |
+
 | Chapter | Confirmed player-facing evidence | Tempting human interpretation | Required counterpressure | Hard withholding |
 |---|---|---|---|---|
 | 1 | Empty sites function; simple inputs are accepted; the pilot is added to a record | The Machine expected this exact human | It may be adaptive translation, old protocol, coincidence, or a property of the human interface layer | No author, motive, or consciousness claim |
@@ -29,7 +42,7 @@ Every major lore statement should have one of these production tags:
 - `OBSERVED`: directly sensed or present in a primary artifact.
 - `BUILDER_LABEL`: translated term whose human wording is provisional.
 - `CORRELATED`: pattern across multiple observations.
-- `HUMAN_INFERENCE`: plausible interpretation from the pilot or expedition system.
+- `PILOT_INFERENCE`: plausible first-person interpretation from the protagonist. Legacy `HUMAN_INFERENCE` tags map to this singular lane.
 - `GENERATED_HYPOTHESIS`: reconstruction made to test a possibility.
 - `UNKNOWN`: an intentionally preserved gap.
 
@@ -46,3 +59,6 @@ Pause a scene rewrite if it does any of the following:
 - Makes a generated reconstruction the only visual version of an event.
 - Turns the pilot into a uniquely chosen savior before the story has earned that scale.
 - Explains the disappearance through a catastrophe solely to create conventional stakes.
+- Calls an unexplained form random, magical, decorative, or purposeless instead of preserving its unperceived logic.
+- Confirms a provisional occupation as a Builder term or lets Teacher copy explain a landscape's hidden function.
+- Implies a party, crew, shipboard witness, prior human visitor, or human-oriented native ergonomics.

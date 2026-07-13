@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-12 — Project-wide alien functionality and first-contact gate
+
+- **Outcome:** made alien functionality a hard requirement for every environment. Each scene must now express a working landscape-machine-ecology and inferred occupation through visible input/transform/output, failure/maintenance, three nested scales, nonhuman affordances, repeated/state/cause-effect clues, resource or terraforming evidence, and at least two plausible readings. Builder artifacts exceed human 2026 capability and were never designed for human eyes or ergonomics; the player is the first known human at each instance.
+- **Files:** `Curse Art Director/CHARTER.md`, `Curse Art Director/WORK_LOG.md`, `horizon-archive-game/AGENTS.md`, `Concept Art Book/art-direction-charter.md`, `Concept Art Book/scene-index.md`, `Concept Art Book/planet-region-map.md`, `Concept Art Book/prompt-provenance-log.md`, all four current scene sheets under `Concept Art Book/scenes/`, `Lore Development/Production Narrative/environmental-storytelling-cues.md`, and `Lore Development/Production Narrative/chapter-beat-map.md`.
+- **Validation:** reread applicable instructions and current art/surface-canon documents; checked changed Markdown links and `git diff --check`; confirmed first-person/no-party/no-ship, collective Builder schools, Glass Garden cultivation canon, Python translation-layer ownership, and mystery boundaries remain explicit; preserved unrelated user files.
+- **Finding:** all existing environment plates predate this gate. Their gameplay integration remains useful, but GM-00, GM-01, AB-01, WC-01, and SC-01 require alien-function re-briefing or replacement before art approval; familiar path, stair, corridor, console, and human-scale assumptions are no longer production authority.
+- **Handoff:** Location Scout should replace the Glass Garden pair first, then re-brief Basin, Witness, and City scenes with system-evidence maps and nonhuman affordance studies before generating or integrating further art.
+- **Status:** ready to advance.
+
 ## 2026-07-12 — Glass Garden fictional material-cultivation canon
 
 - **Outcome:** established the Glass Garden as fictional Builder engineered agriculture: glass grows upward from prepared beds like inverted icicles and is trained into purpose-shaped glassware for Python-running Terminals. Added hard visual gates for feedstock extraction, slurry/water delivery, collars/seeds, upward crystallization, stress/temperature control, shape training, maturity marks, harvest/anneal/transport, reject/repair flows, and component typologies.
