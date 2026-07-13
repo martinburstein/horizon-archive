@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-13 — Tightened first-Terminal orientation at 640×480
+
+- **Outcome:** Aligned all four runtime cards with the tightened `L-01-01` source while keeping the four checks, unlimited retry, safe close/reopen, focus handoff, pre-editor gate, and strict independent-run validator unchanged. The first card now carries the full early course-authored Python/not-Microsoft/no-guarantee/no-prior-experience boundary; later cards no longer repeat it.
+- **Reading-density pass:** Replaced the split two-pane reading path with one compact header/action flow, removed the repeated recovery diagram and repeated session footer, reduced the fourth card to the single assignment change, and added canonical-frame overrides so 640×480 uses two side-by-side 44px answer targets instead of inheriting the narrow stacked layout. The three storage rows now state the actual local-save, open/reopen session, clear-on-reload/resume/completion/transition, Machine-memory, and allowlisted-evidence boundaries.
+- **Files changed:** `horizon-archive-game/src/terminalExercise.js`, `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/terminalExercise.test.js`, and this log.
+- **Validation:** 169/169 unit tests pass; the Vite production build passes with only the existing large-chunk advisory. Focused tests verify the tightened beginner/exam/guarantee wording, exact four-card order, real Python example, retry behavior, runtime-only-after-open gate, storage/session/evidence copy, single disclaimer rendering, removal of repeated blocks, 640×480 canonical layout overrides, and unchanged editor/focus gate.
+- **Handoff:** Pixel Patrol Agent should inspect the compact first-Terminal cards in the canonical frame and preserve the single reading path, 44px answer targets, and square-pixel hierarchy.
+- **Risks:** The in-app browser surface was unavailable, so rendered 640×480 scroll fit and screen-reader announcement order still need later browser QA. The preceding arrival sequence and its approximately 45-second find/open gate were not changed.
+
 ## 2026-07-13 — First-Terminal beginner orientation
 
 - **Outcome:** Added a required four-step orientation immediately after the player opens the first Glass Meadow Terminal and before the Python editor becomes editable. One native-button answer is handled at a time across Run control, recoverable errors, storage/privacy boundaries, and output prediction; wrong answers have unlimited retries and the existing independent-run validator remains unchanged.

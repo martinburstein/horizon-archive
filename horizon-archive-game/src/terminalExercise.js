@@ -21,21 +21,18 @@ print("Python signal:", signal)
 
 export const firstTerminalOrientation = {
   title: "Before Your First Terminal",
-  disclaimer: "This is course-authored practice, not a Microsoft exam question. Completing it does not guarantee an AI-901 result.",
+  disclaimer: "This is course-authored Python practice, not a Microsoft exam question. You are not expected to know Python yet, and completing this orientation does not guarantee an AI-901 result.",
   exampleCode: `message = "Terminal found."
 signal = 1
 print(message)
 print("Python signal:", signal)`,
-  changedCode: `message = "Terminal found."
-signal = 2
-print(message)
-print("Python signal:", signal)`,
+  signalChange: "signal = 1  →  signal = 2",
   steps: [
     {
       id: "run-control",
       heading: "Run one real Python file",
-      body: "The first two lines save values in variables. The last two lines display output.",
-      prompt: "Which control runs the Python file?",
+      body: "The first two lines save values in variables. The last two display output. Select Run to execute the file.",
+      prompt: "Which control runs the file?",
       options: [
         { id: "run", label: "Run" },
         { id: "close", label: "Close" },
@@ -45,9 +42,9 @@ print("Python signal:", signal)`,
     },
     {
       id: "safe-retry",
-      heading: "A mistake cannot cost the lesson",
-      body: "A readable error names what to inspect. Hints and retries remain available, and code mistakes cannot damage the world.",
-      prompt: "If Python reports an error, is the lesson lost?",
+      heading: "Inspect, hint, and retry",
+      body: "If Python reports an error, the lesson is not lost. Inspect the named line, use a hint if needed, edit the file, and select Run again. A code mistake cannot damage the world or consume the lesson.",
+      prompt: "Does an error end the lesson?",
       options: [
         { id: "retry", label: "No — inspect, hint, and retry" },
         { id: "lost", label: "Yes — the lesson is lost" },
@@ -58,7 +55,7 @@ print("Python signal:", signal)`,
     {
       id: "storage-boundaries",
       heading: "Keep three kinds of information separate",
-      body: "Slot 01 and your display name are local save data. Code and output are temporary session work. Mastery evidence is a small allowlisted record.",
+      body: "Local save, working session, and allowlisted mastery evidence remain separate.",
       prompt: "Does your display name become Python code or mastery evidence?",
       options: [
         { id: "separate", label: "No — it stays separate" },
@@ -70,8 +67,8 @@ print("Python signal:", signal)`,
     {
       id: "output-prediction",
       heading: "Predict one changed output",
-      body: "Changing signal from 1 to 2 changes the value printed on the second output line.",
-      prompt: "After saving signal = 2 and selecting Run, what should the second line show?",
+      body: "After changing signal from 1 to 2, saving, and selecting Run, the second output line changes.",
+      prompt: "What should the second line show?",
       options: [
         { id: "signal-2", label: "Python signal: 2" },
         { id: "signal-1", label: "Python signal: 1" },

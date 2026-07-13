@@ -1907,43 +1907,38 @@ export function App() {
           >
             {!terminalOrientationComplete ? (
               <section className="first-terminal-orientation" aria-labelledby="first-terminal-orientation-heading">
-                <aside className="orientation-context">
+                <header className="orientation-context">
                   <p className="pane-label">ORIENTATION // STEP {terminalOrientationStep + 1} OF {firstTerminalOrientation.steps.length}</p>
                   <h2 id="first-terminal-orientation-heading" ref={terminalOrientationHeadingRef} tabIndex="-1">
                     {activeTerminalOrientationStep.heading}
                   </h2>
                   <p id="first-terminal-orientation-context">{activeTerminalOrientationStep.body}</p>
-                  <p className="orientation-disclaimer">{firstTerminalOrientation.disclaimer}</p>
-                </aside>
+                  {activeTerminalOrientationStep.id === "run-control" && (
+                    <p className="orientation-disclaimer">{firstTerminalOrientation.disclaimer}</p>
+                  )}
+                </header>
                 <div className="orientation-action">
                   {activeTerminalOrientationStep.id === "run-control" && (
                     <pre aria-label="Real Python orientation example"><code>{firstTerminalOrientation.exampleCode}</code></pre>
-                  )}
-                  {activeTerminalOrientationStep.id === "safe-retry" && (
-                    <div className="orientation-recovery" aria-label="Recoverable Python error sequence">
-                      <span>1 · Inspect the named line</span>
-                      <span>2 · Use a hint if needed</span>
-                      <span>3 · Edit and Run again</span>
-                    </div>
                   )}
                   {activeTerminalOrientationStep.id === "storage-boundaries" && (
                     <dl className="orientation-boundaries" aria-label="Terminal information boundaries">
                       <div>
                         <dt>LOCAL SAVE</dt>
-                        <dd>Slot 01 · {characterName}. Browser-local expedition data only; never Python code, a credential, or mastery evidence.</dd>
+                        <dd>Slot 01 · {characterName}. Browser-local expedition data; the name labels the Pilot's recorder. It is not Python code, a credential, Machine memory, or mastery evidence.</dd>
                       </div>
                       <div>
                         <dt>WORKING SESSION</dt>
-                        <dd>Current code, hint position, and output. Temporary and kept only for this open/reopen session.</dd>
+                        <dd>Current code, hint position, and output are temporary. Close/reopen can restore them; reload, resume, completion, or scene transition clears them.</dd>
                       </div>
                       <div>
                         <dt>ALLOWLISTED MASTERY EVIDENCE</dt>
-                        <dd>Exercise, lesson, activity, assessment, and skill IDs; attempt count; hint use; completion. No name, source, output, credentials, or private notes.</dd>
+                        <dd>Only stable IDs and bounded check data such as attempts, hint use, and completion. No display name, source code, output, credentials, or private notes.</dd>
                       </div>
                     </dl>
                   )}
                   {activeTerminalOrientationStep.id === "output-prediction" && (
-                    <pre aria-label="Real Python example with signal changed to two"><code>{firstTerminalOrientation.changedCode}</code></pre>
+                    <pre className="orientation-change" aria-label="Signal assignment changes from one to two"><code>{firstTerminalOrientation.signalChange}</code></pre>
                   )}
                   <h3>{activeTerminalOrientationStep.prompt}</h3>
                   <div className="orientation-choices" role="group" aria-label={activeTerminalOrientationStep.prompt} aria-describedby="first-terminal-orientation-context first-terminal-orientation-feedback">
@@ -1954,9 +1949,8 @@ export function App() {
                     ))}
                   </div>
                   <p id="first-terminal-orientation-feedback" className={terminalOrientationFeedback ? "orientation-feedback active" : "orientation-feedback"} role="status" aria-live="polite">
-                    {terminalOrientationFeedback || "Choose one answer. A wrong answer can always be retried."}
+                    {terminalOrientationFeedback || "Choose one. Retry stays available."}
                   </p>
-                  <p className="orientation-session-note">You may close the Terminal safely. Reopening returns to this step; a reload clears temporary session work.</p>
                 </div>
               </section>
             ) : (

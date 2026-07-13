@@ -332,27 +332,25 @@ h1 {
 .machine-mark { margin-right: 9px; color: #c7a9ec; }
 .terminal-tabbar { min-height: 34px; padding-right: 14px; color: #838c99; background: #181b21; border-bottom: 1px solid #303640; font-size: 0.68rem; }
 .terminal-tabbar button { align-self: stretch; color: #edf1f7; background: #11141a; border-top: 2px solid #b58bd8; border-right: 1px solid #303640; }
-.first-terminal-orientation { display: grid; grid-template-columns: minmax(220px, 0.82fr) minmax(0, 2.18fr); min-height: 0; overflow: hidden; background: #101319; }
-.orientation-context { min-width: 0; padding: 18px; overflow: auto; background: #171a20; border-right: 1px solid #303640; }
-.orientation-context h2 { margin: 5px 0 12px; color: #f0f2f5; font: 1.05rem/1.2 Georgia, "Times New Roman", serif; }
+.first-terminal-orientation { display: grid; grid-template-rows: auto minmax(0, 1fr); min-height: 0; overflow: hidden; background: #101319; }
+.orientation-context { min-width: 0; padding: 10px 14px; background: #171a20; border-bottom: 1px solid #303640; }
+.orientation-context h2 { margin: 3px 0 5px; color: #f0f2f5; font: 1rem/1.15 Georgia, "Times New Roman", serif; }
 .orientation-context h2:focus { outline: 2px solid #f0c96a; outline-offset: 4px; }
-.orientation-context p { color: #b5beca; font-size: 0.74rem; line-height: 1.5; }
-.orientation-disclaimer { padding: 9px; color: #e0cfaa !important; background: #25221d; border-left: 3px solid #b89554; }
-.orientation-action { min-width: 0; padding: 20px; overflow: auto; }
-.orientation-action pre { margin: 0 0 18px; padding: 14px 16px; overflow: auto; color: #d7e5c9; background: #0b0d11; border: 1px solid #303640; font: 0.78rem/1.55 "Courier New", monospace; }
-.orientation-action h3 { margin: 0 0 13px; color: #e3e8ef; font: 0.84rem/1.45 "Courier New", monospace; }
-.orientation-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.orientation-context p { margin: 0; color: #b5beca; font-size: 0.7rem; line-height: 1.35; }
+.orientation-disclaimer { margin-top: 6px !important; padding: 6px 8px; color: #e0cfaa !important; background: #25221d; border-left: 3px solid #b89554; }
+.orientation-action { min-width: 0; padding: 10px 14px; overflow: auto; }
+.orientation-action pre { margin: 0 0 10px; padding: 9px 12px; overflow: auto; color: #d7e5c9; background: #0b0d11; border: 1px solid #303640; font: 0.74rem/1.4 "Courier New", monospace; }
+.orientation-action .orientation-change { display: inline-block; min-width: min(100%, 260px); }
+.orientation-action h3 { margin: 0 0 8px; color: #e3e8ef; font: 0.8rem/1.35 "Courier New", monospace; }
+.orientation-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
 .orientation-choices button { min-height: 44px; padding: 9px 12px; color: #f1e9d4; background: #2e2938; border: 1px solid #79658c; cursor: pointer; font: 0.7rem/1.35 "Courier New", monospace; text-align: left; }
 .orientation-choices button:hover { background: #4a3d59; }
-.orientation-feedback { min-height: 1.3em; margin: 13px 0 0; color: #7e8895; font-size: 0.7rem; }
+.orientation-feedback { min-height: 1.3em; margin: 8px 0 0; color: #7e8895; font-size: 0.68rem; }
 .orientation-feedback.active { color: #e1c889; }
-.orientation-session-note { margin: 14px 0 0; color: #93a0af; font-size: 0.65rem; line-height: 1.45; }
-.orientation-recovery { display: grid; gap: 7px; margin: 0 0 18px; }
-.orientation-recovery span { padding: 9px 11px; color: #c2cad5; background: #151920; border-left: 3px solid #5f7c70; font-size: 0.7rem; }
-.orientation-boundaries { display: grid; gap: 8px; margin: 0 0 18px; }
-.orientation-boundaries div { padding: 9px 11px; background: #151920; border-left: 3px solid #59616d; }
-.orientation-boundaries dt { margin-bottom: 4px; color: #c7a9ec; font-size: 0.62rem; letter-spacing: 0.08em; }
-.orientation-boundaries dd { margin: 0; color: #b5beca; font-size: 0.67rem; line-height: 1.45; }
+.orientation-boundaries { display: grid; gap: 5px; margin: 0 0 9px; }
+.orientation-boundaries div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px; padding: 6px 8px; background: #151920; border-left: 3px solid #59616d; }
+.orientation-boundaries dt { color: #c7a9ec; font-size: 0.6rem; letter-spacing: 0.06em; }
+.orientation-boundaries dd { margin: 0; color: #b5beca; font-size: 0.64rem; line-height: 1.3; }
 .editor-layout { display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr); min-height: 0; }
 .task-pane { min-width: 0; padding: 18px; overflow: auto; background: #171a20; border-right: 1px solid #303640; }
 .task-pane h2 { margin: 5px 0 12px; color: #f0f2f5; font: 1.05rem/1.2 Georgia, "Times New Roman", serif; }
@@ -625,8 +623,9 @@ h1 {
   .adventure-screen[data-scene="meadow"] .editor-stack { min-height: 260px; }
   .first-terminal-orientation { display: block; overflow: visible; }
   .orientation-context { border-right: 0; border-bottom: 1px solid #303640; }
-  .orientation-action { min-height: 320px; }
+  .orientation-action { min-height: 280px; }
   .orientation-choices { grid-template-columns: 1fr; }
+  .orientation-boundaries div { grid-template-columns: 1fr; gap: 3px; }
   .editor-layout { grid-template-columns: 1fr; }
   .task-pane { max-height: 180px; border-right: 0; border-bottom: 1px solid #303640; }
   .editor-stack { min-height: 380px; }
@@ -694,6 +693,10 @@ h1 {
 .canonical-game-frame .inventory-title { font-size: 7px; }
 .canonical-game-frame .terminal-workbench { inset: 8px; width: auto; height: auto; overflow: auto; }
 .canonical-game-frame .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 8px; width: auto; height: auto; }
+.canonical-game-frame .first-terminal-orientation { display: grid; overflow: hidden; }
+.canonical-game-frame .orientation-action { min-height: 0; }
+.canonical-game-frame .orientation-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.canonical-game-frame .orientation-boundaries div { grid-template-columns: 150px minmax(0, 1fr); gap: 8px; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"] { overflow: hidden; }
 .canonical-game-frame .responsible-ai-form { display: block; min-height: 0; overflow: auto; }
 .canonical-game-frame .responsible-ai-fields { margin: 10px 0; overflow: visible; }

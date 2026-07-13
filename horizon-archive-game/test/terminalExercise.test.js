@@ -51,14 +51,18 @@ test("first-Terminal orientation is bounded course practice using real Python", 
     "storage-boundaries",
     "output-prediction",
   ]);
-  assert.match(firstTerminalOrientation.disclaimer, /course-authored practice/i);
+  assert.match(firstTerminalOrientation.disclaimer, /course-authored Python practice/i);
+  assert.match(firstTerminalOrientation.disclaimer, /not expected to know Python yet/i);
   assert.match(firstTerminalOrientation.disclaimer, /not a Microsoft exam question/i);
+  assert.match(firstTerminalOrientation.disclaimer, /does not guarantee an AI-901 result/i);
   assert.match(firstTerminalOrientation.exampleCode, /^message = "Terminal found\."$/m);
   assert.match(firstTerminalOrientation.exampleCode, /^signal = 1$/m);
   assert.match(firstTerminalOrientation.exampleCode, /^print\("Python signal:", signal\)$/m);
-  assert.match(firstTerminalOrientation.changedCode, /^signal = 2$/m);
-  assert.match(firstTerminalOrientation.steps[2].body, /Slot 01.*display name.*local save data/i);
-  assert.match(firstTerminalOrientation.steps[2].body, /Mastery evidence.*allowlisted/i);
+  assert.equal(firstTerminalOrientation.signalChange, "signal = 1  →  signal = 2");
+  assert.equal(firstTerminalOrientation.steps[1].heading, "Inspect, hint, and retry");
+  assert.match(firstTerminalOrientation.steps[1].body, /cannot damage the world or consume the lesson/i);
+  assert.match(firstTerminalOrientation.steps[2].body, /Local save.*working session.*allowlisted mastery evidence/i);
+  assert.match(firstTerminalOrientation.steps[3].body, /saving.*selecting Run.*second output line/i);
 });
 
 test("each orientation check allows unlimited retry but advances only on its correct answer", () => {
@@ -76,11 +80,18 @@ test("each orientation check allows unlimited retry but advances only on its cor
 
 test("App gates the editable first signal behind the session-only orientation and restores focus safely", () => {
   const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
   const orientationGate = source.indexOf("{!terminalOrientationComplete ? (");
   const editableForm = source.indexOf('<form className="editor-layout" onSubmit={runTerminal}>', orientationGate);
   assert.ok(orientationGate >= 0 && editableForm > orientationGate);
+  assert.match(source, /terminalOpen && scene\.id === "meadow" && meadowTerminalKind === "first"/);
   assert.match(source, /onClose=\{exitFirstTerminal\}/);
   assert.match(source, /Reopen it to continue from the same orientation or code step/);
   assert.match(source, /ref=\{firstTerminalEditorRef\}/);
-  assert.match(source, /No name, source, output, credentials, or private notes/);
+  assert.match(source, /reload, resume, completion, or scene transition clears them/);
+  assert.match(source, /No display name, source code, output, credentials, or private notes/);
+  assert.equal(source.match(/\{firstTerminalOrientation\.disclaimer\}/g)?.length, 1);
+  assert.doesNotMatch(source, /orientation-session-note|orientation-recovery/);
+  assert.match(styles, /\.canonical-game-frame \.first-terminal-orientation \{ display: grid; overflow: hidden; \}/);
+  assert.match(styles, /\.canonical-game-frame \.orientation-choices \{ grid-template-columns: repeat\(2/);
 });
