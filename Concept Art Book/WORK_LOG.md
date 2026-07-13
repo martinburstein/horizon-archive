@@ -1,5 +1,14 @@
 # Location Scout Work Log
 
+## 2026-07-13 — Frame-grounded derelict signal-mineral Terminal study
+
+- **Completed:** extracted all **320** frames from Martin's `3840 x 2160`, `30 fps`, `10.67 s` gameplay reference; built a complete frame/time manifest, one all-frame index, ten readable 32-frame sheets, sanitized metadata, and explicit transcript/OCR limits. Analyzed the object's mineral/manufacture contradiction, repeating warning cycle, environmental abandonment, and quiet persistence without translating its marks or copying its design. Added the resulting durable Terminal doctrine and prompt to the art-direction system.
+- **Sprite result:** generated an original non-oval, asymmetric, half-buried signal-mineral Terminal sheet; removed the chroma background; reduced six states to a `64 x 64` square-logical-pixel candidate; froze all body pixels outside the warning membrane; and assembled logical plus 4x QA GIFs. The loop moves through ember, warning field, abstract marks, displaced marks, interference, and static with a low-hum cadence.
+- **Files changed:** new `References/terminal-gif-inspiration/` extraction/reference package; new `production-pixel/AB-01/signal-mineral/` prompt output, build script, logical frames, sheet, GIF, and QA package; updated `.gitignore`, Concept Art Book README, art-direction charter, provenance log, and this work log. The full-resolution frames, audio derivative, contact sheets, and source MOV remain local and excluded from Git; sanitized metadata, analysis, prompt, and original Horizon Archive derivative assets are suitable for the repository.
+- **Validation:** verified exactly **320** full-resolution frames from `frame_0001.jpg` through `frame_0320.jpg`; contact sheets cover frames 1–320 without gaps; source SHA-256 recorded; location/device metadata omitted from the derivative record; build produced six `64 x 64` frames and reported `body_pixels_stable_outside_screen: true`; 4x nearest-neighbor sheet visually inspected. No speech transcript or glyph translation is claimed.
+- **Next recommended item:** Pixel Patrol and Curse Art Director should judge the candidate at native `64 x 64` inside AB-01. If it passes, Coder Agent can replace only the current Terminal overlay and animate the membrane without changing the hotspot, scene plate, assessment UI, or return route.
+- **Unresolved risks:** the generated reduction remains exploration-derived rather than fully hand-authored; the membrane box includes the intended routed light leak, and final reviewers may ask for a tighter manual pixel pass before runtime promotion.
+
 ## 2026-07-12 — Coder production-pixel vertical slice
 
 - **Completed:** translated GM-01 into a new hand-authored `320×180` integer-rectangle scene instead of shipping or filtering the exploration plate. Petal Terminal, three-fin Route Marker, survey craft, route, depth bands, and three redundant interaction states are built directly on the logical grid.

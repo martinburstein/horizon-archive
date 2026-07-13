@@ -200,3 +200,21 @@ Passed after one targeted edit: exactly three marker fins; dark prerequisite sta
 - **Original design:** right-side split Tidal Lens, suspended lozenge, left-entry bent causeway, left-middle node, right stair exit.
 - **Raster method:** integer shapes and 1–2 px lines on native `640 x 360`; explicit 32-color library; no antialias, resize, trace, sample, or pixel filter.
 - **Rebuild:** `python "Concept Art Book/production-pixel/AB-01/build_ab01_pixel.py"`
+
+## HA-PP-002 — Derelict signal-mineral Terminal study
+
+- **Date:** 2026-07-13
+- **Use case:** `stylized-concept` followed by deterministic sprite-sheet reduction and GIF assembly
+- **Purpose:** replace the symmetric console assumption with an original non-oval mineral/contact ambiguity and a persistent non-text warning loop
+- **Generator:** OpenAI built-in image generation
+- **Method:** reference-guided new generation on a flat chroma-key background, local chroma removal, then a reproducible Pillow build that freezes all pixels outside the warning membrane
+- **Reference inputs:** local source frames `0001`, `0009`, `0025`, and `0031` from the [Terminal GIF reference](References/terminal-gif-inspiration/README.md), plus the existing AB-01 state strip for palette/logical-density context only
+- **Source output:** `C:\Users\marti\.codex\generated_images\019f5319-3f39-7bf2-b3a9-4a9a9582fb3b\exec-c6af36ca-f088-49c1-bd16-8c81b5f61439.png`
+- **Workspace exploration copy:** [production-pixel/AB-01/signal-mineral/terminal-signal-mineral-exploration-sheet.png](production-pixel/AB-01/signal-mineral/terminal-signal-mineral-exploration-sheet.png)
+- **Workspace logical loop:** [production-pixel/AB-01/signal-mineral/terminal-signal-loop-64x64.gif](production-pixel/AB-01/signal-mineral/terminal-signal-loop-64x64.gif)
+- **Durable prompt:** [References/terminal-gif-inspiration/terminal-sprite-art-direction-prompt.md](References/terminal-gif-inspiration/terminal-sprite-art-direction-prompt.md)
+- **Rebuild:** `python "Concept Art Book/production-pixel/AB-01/signal-mineral/build_signal_mineral_terminal.py"`
+
+### Selection review
+
+The study preserves the requested contradiction—geological strata surrounding a persistent warning surface—without retaining the external reference's oval body, circular display, exact marks, vegetation, or composition. The selected silhouette is an asymmetric cleaved and half-buried block with an off-center clipped-rectangle membrane, a sealed older scar, restrained repair light, and no human controls. The six logical frames are `64 x 64`; all pixels outside the detected membrane/light-leak box are byte-stable across the loop. This is a production candidate, not a runtime replacement, until Pixel Patrol and Curse Art Director approve its readability and richness in AB-01.

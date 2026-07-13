@@ -35,3 +35,8 @@ venv/
 Thumbs.db
 Desktop.ini
 
+# Large local visual references and deterministic extraction products
+/Terminal GIF Inspiration.mov
+/Concept Art Book/References/terminal-gif-inspiration/extracted/frames/full-resolution/
+/Concept Art Book/References/terminal-gif-inspiration/extracted/audio/
+/Concept Art Book/References/terminal-gif-inspiration/extracted/contact-sheets/

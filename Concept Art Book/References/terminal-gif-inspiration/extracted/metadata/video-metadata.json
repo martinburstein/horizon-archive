@@ -1,0 +1,13 @@
+{
+  "source_filename": "Terminal GIF Inspiration.mov",
+  "source_sha256": "B9E5090451732914FB7F61599D6156C2D91646968CE953FD55D02EE435A9D11C",
+  "video_codec": "h264",
+  "width": 3840,
+  "height": 2160,
+  "pixel_format": "yuv420p",
+  "frame_rate": 30,
+  "frame_count": 320,
+  "duration_seconds": 10.6666666667,
+  "audio_extraction": "first AAC stream decoded to local mono 16 kHz PCM WAV",
+  "privacy_note": "Device and location metadata from the source container are intentionally excluded from this derivative record."
+}
