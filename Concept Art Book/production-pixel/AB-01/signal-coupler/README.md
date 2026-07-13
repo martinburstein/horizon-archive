@@ -13,10 +13,11 @@ This package is the current second-generation direction for the derelict Termina
 - Logical sheet: `terminal-signal-coupler-sheet-192x128.png`
 - Logical loop: `terminal-signal-coupler-loop-64x64.gif`
 - Exact nearest-neighbor QA: `qa/terminal-signal-coupler-sheet-4x.png` and `qa/terminal-signal-coupler-loop-4x.gif`
+- Exact animated-area proof: `qa/terminal-signal-coupler-screen-mask-4x.png`
 
 ## Animation contract
 
-Six frames cycle through a cyan seed, spectral scan, node topology, displaced phase contours, interference, and an amber fault tick. The build freezes every pixel outside the diagnostic membrane, including the tongue and all network connections. Timings are `620, 170, 260, 240, 150, 500 ms`.
+Six frames cycle through a cyan seed, spectral scan, node topology, displaced phase contours, interference, and an amber fault tick. The screen interior is one fixed eight-point logical-pixel polygon with `164` included pixels. The build takes the entire body from frame one for all six outputs and permits source-frame variation only inside that polygon. The bezel, tongue, cables, glass fins, collars, stones, lighting, shadows, alpha silhouette, and all other pixels are byte-identical. Timings are `620, 170, 260, 240, 150, 500 ms`.
 
 ## Rebuild
 
@@ -24,7 +25,7 @@ Six frames cycle through a cyan seed, spectral scan, node topology, displaced ph
 python build_signal_coupler_terminal.py
 ```
 
-The script requires Pillow. It crops the six generated cells, normalizes each object into a `64 x 64` logical frame with nearest-neighbor sampling, detects the cold diagnostic membrane, freezes the Machine body and all connections outside that box, writes the sheet/GIF/QA artifacts, and fails if any exterior pixel changes.
+The script requires Pillow. It crops the six generated cells, normalizes each object into a `64 x 64` logical frame with nearest-neighbor sampling, composites only the fixed membrane polygon over the first frame, writes the sheet/GIF/QA artifacts, and calculates a SHA-256 body hash with the membrane blanked. GIF frames share one explicit palette so unchanged colors cannot be requantized between states. The build fails unless all six body hashes collapse to exactly one value, every changed PNG pixel is inside the membrane, all six screen hashes are distinct, and both the logical and 4x GIFs decode with zero changed pixels outside the mask.
 
 ## Design lock
 

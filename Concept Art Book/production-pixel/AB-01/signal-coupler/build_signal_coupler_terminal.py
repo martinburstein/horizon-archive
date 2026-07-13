@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw, ImageSequence
 
 
 ROOT = Path(__file__).resolve().parent
@@ -13,6 +14,16 @@ QA_DIR = ROOT / "qa"
 LOGICAL_SIZE = 64
 GRID = (3, 2)
 FRAME_DURATIONS_MS = [620, 170, 260, 240, 150, 500]
+SCREEN_INTERIOR_POLYGON = [
+    (17, 33),
+    (34, 33),
+    (36, 35),
+    (36, 38),
+    (34, 40),
+    (17, 40),
+    (15, 38),
+    (15, 35),
+]
 
 
 def alpha_bbox(image: Image.Image) -> tuple[int, int, int, int]:
@@ -51,43 +62,12 @@ def normalized_cells(sheet: Image.Image) -> list[Image.Image]:
     return cells
 
 
-def cold_pixel_mask(image: Image.Image) -> Image.Image:
-    mask = Image.new("L", image.size, 0)
-    mask_pixels = mask.load()
-    pixels = image.load()
-    for y in range(image.height):
-        for x in range(image.width):
-            red, green, blue, alpha = pixels[x, y]
-            if (
-                alpha >= 64
-                and green >= 82
-                and blue >= 105
-                and green >= red * 1.25
-                and blue >= red * 1.32
-            ):
-                mask_pixels[x, y] = 255
-    return mask
-
-
-def animation_mask(cells: list[Image.Image]) -> tuple[Image.Image, tuple[int, int, int, int]]:
-    cold_union = Image.new("L", (LOGICAL_SIZE, LOGICAL_SIZE), 0)
-    for cell in cells:
-        cold_union = ImageChops.lighter(cold_union, cold_pixel_mask(cell))
-
-    central = Image.new("L", cold_union.size, 0)
-    central.paste(cold_union.crop((16, 30, 46, 52)), (16, 30))
-    screen_box = central.getbbox()
+def animation_mask() -> tuple[Image.Image, tuple[int, int, int, int]]:
+    screen_mask = Image.new("L", (LOGICAL_SIZE, LOGICAL_SIZE), 0)
+    ImageDraw.Draw(screen_mask).polygon(SCREEN_INTERIOR_POLYGON, fill=255)
+    screen_box = screen_mask.getbbox()
     if screen_box is None:
-        raise ValueError("Could not locate the cold diagnostic membrane")
-    screen_box = (
-        max(0, screen_box[0] - 2),
-        max(0, screen_box[1] - 2),
-        min(LOGICAL_SIZE, screen_box[2] + 2),
-        min(LOGICAL_SIZE, screen_box[3] + 2),
-    )
-
-    screen_mask = Image.new("L", cold_union.size, 0)
-    screen_mask.paste(255, screen_box)
+        raise ValueError("Diagnostic membrane mask is empty")
     return screen_mask, screen_box
 
 
@@ -96,15 +76,101 @@ def stable_animation(cells: list[Image.Image], mask: Image.Image) -> list[Image.
     return [Image.composite(cell, base, mask) for cell in cells]
 
 
+def changed_pixel_mask(first: Image.Image, other: Image.Image) -> Image.Image:
+    difference = ImageChops.difference(first, other)
+    channels = difference.split()
+    combined = ImageChops.lighter(channels[0], channels[1])
+    combined = ImageChops.lighter(combined, channels[2])
+    return ImageChops.lighter(combined, channels[3])
+
+
+def body_hash(frame: Image.Image, screen_mask: Image.Image) -> str:
+    body = frame.copy()
+    body.paste((0, 0, 0, 0), (0, 0), screen_mask)
+    return hashlib.sha256(body.tobytes()).hexdigest()
+
+
+def validate_decoded_gif(path: Path, screen_mask: Image.Image, scale: int) -> None:
+    gif = Image.open(path)
+    decoded_frames = [frame.convert("RGBA") for frame in ImageSequence.Iterator(gif)]
+    if len(decoded_frames) != len(FRAME_DURATIONS_MS):
+        raise ValueError(f"{path.name} decoded to {len(decoded_frames)} frames")
+
+    scaled_mask = screen_mask.resize(
+        (LOGICAL_SIZE * scale, LOGICAL_SIZE * scale),
+        Image.Resampling.NEAREST,
+    )
+    outside_mask = ImageChops.invert(scaled_mask)
+    outside_differences = [
+        ImageChops.multiply(changed_pixel_mask(decoded_frames[0], frame), outside_mask).getbbox()
+        for frame in decoded_frames[1:]
+    ]
+    if any(box is not None for box in outside_differences):
+        raise ValueError(f"{path.name} changes decoded pixels outside the diagnostic membrane")
+
+
 def save_gif(frames: list[Image.Image], path: Path, scale: int = 1) -> None:
     rendered = [
         frame.resize((LOGICAL_SIZE * scale, LOGICAL_SIZE * scale), Image.Resampling.NEAREST)
         for frame in frames
     ]
-    rendered[0].save(
+
+    width, height = rendered[0].size
+    atlas = Image.new("RGB", (width * len(rendered), height), (0, 0, 0))
+    for index, frame in enumerate(rendered):
+        opaque = Image.new("RGB", frame.size, (0, 0, 0))
+        opaque.paste(frame.convert("RGB"), (0, 0), frame.getchannel("A"))
+        atlas.paste(opaque, (index * width, 0))
+
+    palette_source = atlas.quantize(
+        colors=255,
+        method=Image.Quantize.MEDIANCUT,
+        dither=Image.Dither.NONE,
+    )
+    palette_values = palette_source.getpalette()[: 255 * 3]
+    palette_colors = [
+        tuple(palette_values[index : index + 3])
+        for index in range(0, len(palette_values), 3)
+    ]
+    shared_palette = [0, 0, 0] + palette_values
+    color_cache: dict[tuple[int, int, int], int] = {}
+
+    def opaque_palette_index(color: tuple[int, int, int]) -> int:
+        cached = color_cache.get(color)
+        if cached is not None:
+            return cached
+        red, green, blue = color
+        nearest = min(
+            range(len(palette_colors)),
+            key=lambda index: (
+                (red - palette_colors[index][0]) ** 2
+                + (green - palette_colors[index][1]) ** 2
+                + (blue - palette_colors[index][2]) ** 2
+            ),
+        )
+        shifted = nearest + 1
+        color_cache[color] = shifted
+        return shifted
+
+    indexed_frames: list[Image.Image] = []
+    for frame in rendered:
+        rgb = frame.convert("RGB")
+        alpha = frame.getchannel("A")
+        indexed_pixels = bytearray()
+        for color, alpha_value in zip(
+            rgb.get_flattened_data(),
+            alpha.get_flattened_data(),
+            strict=True,
+        ):
+            indexed_pixels.append(0 if alpha_value < 128 else opaque_palette_index(color))
+        stable = Image.frombytes("P", frame.size, bytes(indexed_pixels))
+        stable.putpalette(shared_palette)
+        indexed_frames.append(stable)
+
+    indexed_frames[0].save(
         path,
         save_all=True,
-        append_images=rendered[1:],
+        append_images=indexed_frames[1:],
         duration=FRAME_DURATIONS_MS,
         loop=0,
         disposal=2,
@@ -128,7 +194,7 @@ def main() -> None:
 
     source = Image.open(SOURCE).convert("RGBA")
     cells = normalized_cells(source)
-    mask, screen_box = animation_mask(cells)
+    mask, screen_box = animation_mask()
     frames = stable_animation(cells, mask)
 
     for index, frame in enumerate(frames, start=1):
@@ -139,15 +205,32 @@ def main() -> None:
     save_sheet(frames, QA_DIR / "terminal-signal-coupler-sheet-4x.png", scale=4)
     save_gif(frames, ROOT / "terminal-signal-coupler-loop-64x64.gif")
     save_gif(frames, QA_DIR / "terminal-signal-coupler-loop-4x.gif", scale=4)
+    mask.resize((LOGICAL_SIZE * 4, LOGICAL_SIZE * 4), Image.Resampling.NEAREST).save(
+        QA_DIR / "terminal-signal-coupler-screen-mask-4x.png"
+    )
 
     outside_mask = ImageChops.invert(mask)
-    outside_differences = []
-    for frame in frames[1:]:
-        difference = ImageChops.difference(frames[0], frame)
-        difference.putalpha(ImageChops.multiply(difference.getchannel("A"), outside_mask))
-        outside_differences.append(difference.getbbox())
+    outside_differences = [
+        ImageChops.multiply(changed_pixel_mask(frames[0], frame), outside_mask).getbbox()
+        for frame in frames[1:]
+    ]
     if any(box is not None for box in outside_differences):
         raise ValueError("Animation changed pixels outside the diagnostic membrane")
+
+    body_hashes = [body_hash(frame, mask) for frame in frames]
+    if len(set(body_hashes)) != 1:
+        raise ValueError("The six animation frames do not share one byte-identical body")
+
+    screen_hashes = []
+    for frame in frames:
+        screen = Image.new("RGBA", frame.size, (0, 0, 0, 0))
+        screen.paste(frame, (0, 0), mask)
+        screen_hashes.append(hashlib.sha256(screen.tobytes()).hexdigest())
+    if len(set(screen_hashes)) != len(frames):
+        raise ValueError("Each of the six screen states must be distinct")
+
+    validate_decoded_gif(ROOT / "terminal-signal-coupler-loop-64x64.gif", mask, scale=1)
+    validate_decoded_gif(QA_DIR / "terminal-signal-coupler-loop-4x.gif", mask, scale=4)
 
     print(
         json.dumps(
@@ -156,9 +239,15 @@ def main() -> None:
                 "logical_frame_dimensions": [LOGICAL_SIZE, LOGICAL_SIZE],
                 "frame_count": len(frames),
                 "screen_box": screen_box,
+                "screen_polygon": SCREEN_INTERIOR_POLYGON,
                 "animated_mask_pixels": mask.histogram()[255],
                 "durations_ms": FRAME_DURATIONS_MS,
-                "machine_body_and_connections_stable_outside_membrane": True,
+                "unique_body_hashes": len(set(body_hashes)),
+                "body_sha256": body_hashes[0],
+                "unique_screen_hashes": len(set(screen_hashes)),
+                "only_screen_pixels_change": True,
+                "decoded_logical_gif_body_locked": True,
+                "decoded_qa_gif_body_locked": True,
             },
             indent=2,
         )
