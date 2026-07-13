@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-13 — First-Terminal beginner orientation
+
+- **Outcome:** Added a required four-step orientation immediately after the player opens the first Glass Meadow Terminal and before the Python editor becomes editable. One native-button answer is handled at a time across Run control, recoverable errors, storage/privacy boundaries, and output prediction; wrong answers have unlimited retries and the existing independent-run validator remains unchanged.
+- **Course and data boundaries:** The orientation identifies itself as course-authored practice, not a Microsoft exam question or result guarantee. It visibly separates browser-local `Slot 01`/display name, temporary code/hint/output session state, and the allowlisted mastery record (stable IDs, attempts, hint use, and completion only). The curriculum's real `message`, `signal`, and `print` Python examples are used verbatim.
+- **Accessibility and recovery:** Step headings receive programmatic focus, all responses are native 44px-minimum buttons, feedback is a polite live status, the editor receives focus after the final check, Escape/Close returns focus to the originating hotspot, and reopening restores the same orientation or code step. Reload still clears temporary session work as disclosed.
+- **Files changed:** `horizon-archive-game/src/terminalExercise.js`, `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/terminalExercise.test.js`, `playtest/e2e-playthrough.mjs`, and this log.
+- **Validation:** 166/166 unit tests pass; the Vite production build passes with only the existing large-chunk advisory. Focused tests cover provenance, real Python examples, all four strict answers, unlimited retry, pre-editor gating, safe close/reopen wiring, focus handoff, and the persistence allowlist. The E2E route was updated for the orientation; browser execution is deferred because the current full route stops earlier at the existing Glass Meadow pixel-renderer assertion, before any Terminal interaction.
+- **Next action:** Pixel Patrol Agent should preserve the orientation's compact square-pixel controls and readable focus hierarchy while reviewing Terminal-era visual consistency; later browser QA should exercise desktop and narrow layouts once the upstream meadow-renderer route is aligned.
+- **Unresolved risks:** Real screen-reader announcement order, narrow viewport scroll/focus behavior, forced colors, and browser zoom remain browser-level checks. No new Microsoft product claim, story spoiler, grading shortcut, or persisted learner content was introduced.
+
 ## 2026-07-12 — Final playable-demo wording and route freeze
 
 - **Outcome:** Applied the finalized spoiler-safe Capstone → SIM-01 → corridor handoff and froze the playable demo at the existing title-to-credits endpoint. Capstone acknowledgement still requires a separate learner action, but its focused `Continue` now has the explicit accessible name `Continue to mixed simulation` and opens SIM-01 in the same scene. After mixed-block acknowledgement, the separately focused `Continue to the next survey site` performs actual scene progression.

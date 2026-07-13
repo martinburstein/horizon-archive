@@ -22,7 +22,9 @@ import {
 } from "./openingFlow.js";
 import { ADVENTURE_VERBS, getVerbPressedState } from "./verbSelection.js";
 import {
+  checkFirstTerminalOrientation,
   evaluateTerminalCode,
+  firstTerminalOrientation,
   sanitizeExerciseEvidence,
   terminalExercise,
   updateExerciseEvidence,
@@ -460,6 +462,8 @@ export function App() {
   const [pendingAdvance, setPendingAdvance] = useState(false);
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [terminalSessionStarted, setTerminalSessionStarted] = useState(false);
+  const [terminalOrientationStep, setTerminalOrientationStep] = useState(0);
+  const [terminalOrientationFeedback, setTerminalOrientationFeedback] = useState("");
   const [terminalResult, setTerminalResult] = useState(null);
   const [exerciseEvidence, setExerciseEvidence] = useState(null);
   const [workloadSession, setWorkloadSession] = useState(null);
@@ -504,6 +508,8 @@ export function App() {
   const openingHeadingRef = useRef(null);
   const openingTransitionRef = useRef(false);
   const terminalTriggerRef = useRef(null);
+  const terminalOrientationHeadingRef = useRef(null);
+  const firstTerminalEditorRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
   const focusContinueAfterControlRef = useRef(false);
@@ -529,6 +535,10 @@ export function App() {
   }
 
   const scene = scenes[Math.min(sceneIndex, scenes.length - 1)];
+  const terminalOrientationComplete = terminalOrientationStep >= firstTerminalOrientation.steps.length;
+  const activeTerminalOrientationStep = terminalOrientationComplete
+    ? null
+    : firstTerminalOrientation.steps[terminalOrientationStep];
   const verbPressedState = getVerbPressedState(verb);
   const sceneHotspots = [{
     id: scene.primaryHotspotId ?? "primary",
@@ -598,6 +608,15 @@ export function App() {
     openingTransitionRef.current = false;
     openingHeadingRef.current?.focus({ preventScroll: true });
   }, [mode, prologueBeat]);
+
+  useLayoutEffect(() => {
+    if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
+    if (terminalOrientationComplete) {
+      firstTerminalEditorRef.current?.focus({ preventScroll: true });
+      return;
+    }
+    terminalOrientationHeadingRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, scene.id, meadowTerminalKind, terminalOrientationStep, terminalOrientationComplete]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -701,6 +720,8 @@ export function App() {
     setPendingAdvance(false);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
+    setTerminalOrientationStep(0);
+    setTerminalOrientationFeedback("");
     setTerminalResult(null);
     setTerminalHintLevel(0);
     setExerciseEvidence(null);
@@ -837,6 +858,8 @@ export function App() {
     setRuinsTerminalKind(null);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
+    setTerminalOrientationStep(0);
+    setTerminalOrientationFeedback("");
     setTerminalResult(null);
     setTerminalHintLevel(0);
     setShowHint(false);
@@ -930,6 +953,8 @@ export function App() {
       setMeadowTerminalKind("first");
       if (!terminalSessionStarted) {
         setTerminalSessionStarted(true);
+        setTerminalOrientationStep(0);
+        setTerminalOrientationFeedback("");
         setTerminalResult(null);
         setCode(terminalExercise.starterCode);
         setShowHint(false);
@@ -959,6 +984,21 @@ export function App() {
     setTerminalResult(result);
   }
 
+  function answerFirstTerminalOrientation(optionId) {
+    const result = checkFirstTerminalOrientation(terminalOrientationStep, optionId);
+    if (!result.passed) {
+      setTerminalOrientationFeedback(result.feedback);
+      return;
+    }
+    setTerminalOrientationFeedback("");
+    setTerminalOrientationStep((step) => Math.min(firstTerminalOrientation.steps.length, step + 1));
+  }
+
+  function exitFirstTerminal() {
+    setTerminalOpen(false);
+    setDialogue("First Terminal closed safely. Reopen it to continue from the same orientation or code step.", "system");
+  }
+
   function revealTerminalHint() {
     setShowHint(true);
     setTerminalHintLevel((level) => Math.min(terminalExercise.hints.length, level + 1));
@@ -971,6 +1011,8 @@ export function App() {
     setDialogue(scene.success);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
+    setTerminalOrientationStep(0);
+    setTerminalOrientationFeedback("");
     setTerminalResult(null);
     setTerminalHintLevel(0);
     setShowHint(false);
@@ -1650,6 +1692,8 @@ export function App() {
     setPendingAdvance(false);
     setTerminalOpen(false);
     setTerminalSessionStarted(false);
+    setTerminalOrientationStep(0);
+    setTerminalOrientationFeedback("");
     setTerminalResult(null);
     setTerminalHintLevel(0);
     setShowHint(false);
@@ -1830,13 +1874,69 @@ export function App() {
             filename={terminalExercise.filename}
             lessonId={terminalExercise.lessonId}
             restoreFocusTo={terminalTriggerRef.current}
-            onClose={() => setTerminalOpen(false)}
+            onClose={exitFirstTerminal}
           >
+            {!terminalOrientationComplete ? (
+              <section className="first-terminal-orientation" aria-labelledby="first-terminal-orientation-heading">
+                <aside className="orientation-context">
+                  <p className="pane-label">ORIENTATION // STEP {terminalOrientationStep + 1} OF {firstTerminalOrientation.steps.length}</p>
+                  <h2 id="first-terminal-orientation-heading" ref={terminalOrientationHeadingRef} tabIndex="-1">
+                    {activeTerminalOrientationStep.heading}
+                  </h2>
+                  <p id="first-terminal-orientation-context">{activeTerminalOrientationStep.body}</p>
+                  <p className="orientation-disclaimer">{firstTerminalOrientation.disclaimer}</p>
+                </aside>
+                <div className="orientation-action">
+                  {activeTerminalOrientationStep.id === "run-control" && (
+                    <pre aria-label="Real Python orientation example"><code>{firstTerminalOrientation.exampleCode}</code></pre>
+                  )}
+                  {activeTerminalOrientationStep.id === "safe-retry" && (
+                    <div className="orientation-recovery" aria-label="Recoverable Python error sequence">
+                      <span>1 · Inspect the named line</span>
+                      <span>2 · Use a hint if needed</span>
+                      <span>3 · Edit and Run again</span>
+                    </div>
+                  )}
+                  {activeTerminalOrientationStep.id === "storage-boundaries" && (
+                    <dl className="orientation-boundaries" aria-label="Terminal information boundaries">
+                      <div>
+                        <dt>LOCAL SAVE</dt>
+                        <dd>Slot 01 · {characterName}. Browser-local expedition data only; never Python code, a credential, or mastery evidence.</dd>
+                      </div>
+                      <div>
+                        <dt>WORKING SESSION</dt>
+                        <dd>Current code, hint position, and output. Temporary and kept only for this open/reopen session.</dd>
+                      </div>
+                      <div>
+                        <dt>ALLOWLISTED MASTERY EVIDENCE</dt>
+                        <dd>Exercise, lesson, activity, assessment, and skill IDs; attempt count; hint use; completion. No name, source, output, credentials, or private notes.</dd>
+                      </div>
+                    </dl>
+                  )}
+                  {activeTerminalOrientationStep.id === "output-prediction" && (
+                    <pre aria-label="Real Python example with signal changed to two"><code>{firstTerminalOrientation.changedCode}</code></pre>
+                  )}
+                  <h3>{activeTerminalOrientationStep.prompt}</h3>
+                  <div className="orientation-choices" role="group" aria-label={activeTerminalOrientationStep.prompt} aria-describedby="first-terminal-orientation-context first-terminal-orientation-feedback">
+                    {activeTerminalOrientationStep.options.map((option) => (
+                      <button key={option.id} type="button" onClick={() => answerFirstTerminalOrientation(option.id)}>
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                  <p id="first-terminal-orientation-feedback" className={terminalOrientationFeedback ? "orientation-feedback active" : "orientation-feedback"} role="status" aria-live="polite">
+                    {terminalOrientationFeedback || "Choose one answer. A wrong answer can always be retried."}
+                  </p>
+                  <p className="orientation-session-note">You may close the Terminal safely. Reopening returns to this step; a reload clears temporary session work.</p>
+                </div>
+              </section>
+            ) : (
             <form className="editor-layout" onSubmit={runTerminal}>
               <aside className="task-pane" aria-labelledby="terminal-task-heading">
                 <p className="pane-label">ACTIVE TASK</p>
                 <h2 id="terminal-task-heading">Complete the first signal</h2>
                 <p>{terminalExercise.task}</p>
+                <p>This independent run keeps unlimited retries and the existing strict completion gate.</p>
                 <dl>
                   <div><dt>Activity</dt><dd>{terminalExercise.activityId}</dd></div>
                   <div><dt>Skills</dt><dd>{terminalExercise.skillIds.join(" · ")}</dd></div>
@@ -1852,6 +1952,7 @@ export function App() {
                     {code.split("\n").map((_, index) => <span key={index}>{index + 1}</span>)}
                   </div>
                   <textarea
+                    ref={firstTerminalEditorRef}
                     id="terminal-code"
                     aria-label={`Python code editor for ${terminalExercise.filename}`}
                     value={code}
@@ -1876,6 +1977,7 @@ export function App() {
                 </section>
               </div>
             </form>
+            )}
           </TerminalShell>
         )}
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "route" && routeSession && (

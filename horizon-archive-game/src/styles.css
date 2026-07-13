@@ -242,6 +242,27 @@ h1 {
 .machine-mark { margin-right: 9px; color: #c7a9ec; }
 .terminal-tabbar { min-height: 34px; padding-right: 14px; color: #838c99; background: #181b21; border-bottom: 1px solid #303640; font-size: 0.68rem; }
 .terminal-tabbar button { align-self: stretch; color: #edf1f7; background: #11141a; border-top: 2px solid #b58bd8; border-right: 1px solid #303640; }
+.first-terminal-orientation { display: grid; grid-template-columns: minmax(220px, 0.82fr) minmax(0, 2.18fr); min-height: 0; overflow: hidden; background: #101319; }
+.orientation-context { min-width: 0; padding: 18px; overflow: auto; background: #171a20; border-right: 1px solid #303640; }
+.orientation-context h2 { margin: 5px 0 12px; color: #f0f2f5; font: 1.05rem/1.2 Georgia, "Times New Roman", serif; }
+.orientation-context h2:focus { outline: 2px solid #f0c96a; outline-offset: 4px; }
+.orientation-context p { color: #b5beca; font-size: 0.74rem; line-height: 1.5; }
+.orientation-disclaimer { padding: 9px; color: #e0cfaa !important; background: #25221d; border-left: 3px solid #b89554; }
+.orientation-action { min-width: 0; padding: 20px; overflow: auto; }
+.orientation-action pre { margin: 0 0 18px; padding: 14px 16px; overflow: auto; color: #d7e5c9; background: #0b0d11; border: 1px solid #303640; font: 0.78rem/1.55 "Courier New", monospace; }
+.orientation-action h3 { margin: 0 0 13px; color: #e3e8ef; font: 0.84rem/1.45 "Courier New", monospace; }
+.orientation-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.orientation-choices button { min-height: 44px; padding: 9px 12px; color: #f1e9d4; background: #2e2938; border: 1px solid #79658c; cursor: pointer; font: 0.7rem/1.35 "Courier New", monospace; text-align: left; }
+.orientation-choices button:hover { background: #4a3d59; }
+.orientation-feedback { min-height: 1.3em; margin: 13px 0 0; color: #7e8895; font-size: 0.7rem; }
+.orientation-feedback.active { color: #e1c889; }
+.orientation-session-note { margin: 14px 0 0; color: #93a0af; font-size: 0.65rem; line-height: 1.45; }
+.orientation-recovery { display: grid; gap: 7px; margin: 0 0 18px; }
+.orientation-recovery span { padding: 9px 11px; color: #c2cad5; background: #151920; border-left: 3px solid #5f7c70; font-size: 0.7rem; }
+.orientation-boundaries { display: grid; gap: 8px; margin: 0 0 18px; }
+.orientation-boundaries div { padding: 9px 11px; background: #151920; border-left: 3px solid #59616d; }
+.orientation-boundaries dt { margin-bottom: 4px; color: #c7a9ec; font-size: 0.62rem; letter-spacing: 0.08em; }
+.orientation-boundaries dd { margin: 0; color: #b5beca; font-size: 0.67rem; line-height: 1.45; }
 .editor-layout { display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr); min-height: 0; }
 .task-pane { min-width: 0; padding: 18px; overflow: auto; background: #171a20; border-right: 1px solid #303640; }
 .task-pane h2 { margin: 5px 0 12px; color: #f0f2f5; font: 1.05rem/1.2 Georgia, "Times New Roman", serif; }
@@ -512,6 +533,10 @@ h1 {
   }
   .adventure-screen[data-scene="meadow"] .task-pane { max-height: 88px; padding: 10px 12px; }
   .adventure-screen[data-scene="meadow"] .editor-stack { min-height: 260px; }
+  .first-terminal-orientation { display: block; overflow: visible; }
+  .orientation-context { border-right: 0; border-bottom: 1px solid #303640; }
+  .orientation-action { min-height: 320px; }
+  .orientation-choices { grid-template-columns: 1fr; }
   .editor-layout { grid-template-columns: 1fr; }
   .task-pane { max-height: 180px; border-right: 0; border-bottom: 1px solid #303640; }
   .editor-stack { min-height: 380px; }

@@ -19,6 +19,79 @@ print("Python signal:", signal)
   ],
 };
 
+export const firstTerminalOrientation = {
+  title: "Before Your First Terminal",
+  disclaimer: "This is course-authored practice, not a Microsoft exam question. Completing it does not guarantee an AI-901 result.",
+  exampleCode: `message = "Terminal found."
+signal = 1
+print(message)
+print("Python signal:", signal)`,
+  changedCode: `message = "Terminal found."
+signal = 2
+print(message)
+print("Python signal:", signal)`,
+  steps: [
+    {
+      id: "run-control",
+      heading: "Run one real Python file",
+      body: "The first two lines save values in variables. The last two lines display output.",
+      prompt: "Which control runs the Python file?",
+      options: [
+        { id: "run", label: "Run" },
+        { id: "close", label: "Close" },
+      ],
+      correctOptionId: "run",
+      retryFeedback: "Try again. Choose the control that executes the file and shows its output.",
+    },
+    {
+      id: "safe-retry",
+      heading: "A mistake cannot cost the lesson",
+      body: "A readable error names what to inspect. Hints and retries remain available, and code mistakes cannot damage the world.",
+      prompt: "If Python reports an error, is the lesson lost?",
+      options: [
+        { id: "retry", label: "No — inspect, hint, and retry" },
+        { id: "lost", label: "Yes — the lesson is lost" },
+      ],
+      correctOptionId: "retry",
+      retryFeedback: "Try again. Terminal mistakes are recoverable and retries are unlimited.",
+    },
+    {
+      id: "storage-boundaries",
+      heading: "Keep three kinds of information separate",
+      body: "Slot 01 and your display name are local save data. Code and output are temporary session work. Mastery evidence is a small allowlisted record.",
+      prompt: "Does your display name become Python code or mastery evidence?",
+      options: [
+        { id: "separate", label: "No — it stays separate" },
+        { id: "combined", label: "Yes — it is copied into both" },
+      ],
+      correctOptionId: "separate",
+      retryFeedback: "Try again. The local display name is not copied into code or mastery evidence.",
+    },
+    {
+      id: "output-prediction",
+      heading: "Predict one changed output",
+      body: "Changing signal from 1 to 2 changes the value printed on the second output line.",
+      prompt: "After saving signal = 2 and selecting Run, what should the second line show?",
+      options: [
+        { id: "signal-2", label: "Python signal: 2" },
+        { id: "signal-1", label: "Python signal: 1" },
+      ],
+      correctOptionId: "signal-2",
+      retryFeedback: "Try again. Follow the value stored in signal to the final print instruction.",
+    },
+  ],
+};
+
+export function checkFirstTerminalOrientation(stepIndex, optionId) {
+  const step = firstTerminalOrientation.steps[stepIndex];
+  if (!step) return { passed: false, feedback: "That orientation step is not available." };
+  const passed = optionId === step.correctOptionId;
+  return {
+    passed,
+    feedback: passed ? "Correct. Continue to the next single step." : step.retryFeedback,
+  };
+}
+
 function findMatch(code, pattern) {
   return code.match(pattern);
 }

@@ -98,6 +98,29 @@ try {
   if (await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').count()) throw new Error("Route marker opened before L-01-01");
   await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
+  await page.locator('#first-terminal-orientation-heading:focus').waitFor();
+  await page.getByText("This is course-authored practice, not a Microsoft exam question", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Close", exact: true }).click();
+  await page.getByText("executes the file", { exact: false }).waitFor();
+  await page.keyboard.press("Escape");
+  await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor({ state: "detached" });
+  await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').waitFor();
+  await page.locator('button.hotspot[data-primary-hotspot="true"]').press("Enter");
+  await page.getByText("Run one real Python file", { exact: true }).waitFor();
+  await page.getByText("executes the file", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Run", exact: true }).click();
+  await page.getByRole("button", { name: "Yes — the lesson is lost", exact: true }).click();
+  await page.getByText("retries are unlimited", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "No — inspect, hint, and retry", exact: true }).click();
+  await page.getByText("Slot 01", { exact: false }).waitFor();
+  await page.getByText("ALLOWLISTED MASTERY EVIDENCE", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "No — it stays separate", exact: true }).click();
+  await page.getByRole("button", { name: "Python signal: 2", exact: true }).click();
+  await page.locator("#terminal-code:focus").waitFor();
+  const orientationSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  if (orientationSave?.includes("run-control") || orientationSave?.includes("output-prediction") || orientationSave?.includes("Terminal found.")) {
+    throw new Error("Session-only orientation answers or Python source leaked into localStorage");
+  }
   await page.getByRole("button", { name: "Run Python", exact: true }).click();
   await page.getByText("wrong value", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Reveal progressive hint", exact: true }).click();
