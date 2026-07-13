@@ -14,12 +14,85 @@ const palette = Object.freeze({
   ship: "#343b49", shipLight: "#78808a", amber: "#c88b4b", black: "#080a11",
 });
 
+const routeGlass = Object.freeze({
+  body: "rgba(42, 75, 82, 0.34)",
+  shoulder: "rgba(126, 161, 160, 0.42)",
+  edge: "rgba(220, 235, 220, 0.68)",
+  reflection: "rgba(247, 239, 211, 0.56)",
+  dark: "rgba(17, 28, 34, 0.48)",
+  awake: "rgba(211, 231, 214, 0.62)",
+  complete: "rgba(241, 224, 181, 0.72)",
+  signal: "rgba(141, 112, 170, 0.54)",
+  floorLight: "rgba(222, 159, 88, 0.62)",
+  matContact: "rgba(75, 49, 31, 0.72)",
+});
+
 function rect(plan, x, y, width, height, color, tag = "world") {
   plan.push({ x, y, width, height, color, tag });
 }
 
 function steppedColumn(plan, x, y, widths, color, tag) {
   widths.forEach((width, index) => rect(plan, x - Math.floor(width / 2), y + index * 3, width, 3, color, tag));
+}
+
+export function deriveMeadowRouteMarkerState(exerciseEvidence, routeMarkerMastery) {
+  if (exerciseEvidence?.completed !== true) return "locked";
+  if (routeMarkerMastery?.masteryStatus === "mastered") return "completed";
+  return "awake";
+}
+
+function addRouteGlassMaterial(plan, state) {
+  if (state === "locked") {
+    rect(plan, 249, 134, 4, 2, routeGlass.edge, "route-reflection-edge-left");
+    rect(plan, 260, 126, 4, 2, routeGlass.reflection, "route-reflection-center");
+    rect(plan, 272, 134, 5, 2, routeGlass.edge, "route-reflection-edge-right");
+  } else {
+    rect(plan, 252, 92, 1, 2, routeGlass.edge, "route-reflection-edge-left");
+    rect(plan, 250, 95, 2, 2, routeGlass.edge, "route-reflection-edge-left");
+    rect(plan, 263, 86, 2, 2, routeGlass.reflection, "route-reflection-center");
+    rect(plan, 261, 89, 2, 2, routeGlass.reflection, "route-reflection-center");
+    rect(plan, 275, 93, 1, 2, routeGlass.edge, "route-reflection-edge-right");
+    rect(plan, 273, 96, 2, 2, routeGlass.edge, "route-reflection-edge-right");
+  }
+
+  // The warm line is reflected field light; the darker line seats the glass flush in its grow mat.
+  rect(plan, 250, 144, 28, 2, routeGlass.floorLight, "route-warm-floor-pickup");
+  rect(plan, 247, 148, 34, 2, routeGlass.matContact, "route-flush-mat-contact");
+}
+
+export function buildRouteMarkerPixelPlan(routeState = "locked") {
+  const state = ["awake", "completed"].includes(routeState) ? routeState : "locked";
+  const plan = [];
+
+  if (state === "locked") {
+    // A low, folded plate: its profile stays visibly below both active states.
+    rect(plan, 247, 132, 34, 18, routeGlass.body, "route-locked-body");
+    rect(plan, 252, 125, 24, 7, routeGlass.shoulder, "route-locked-shoulder");
+    rect(plan, 259, 119, 10, 6, routeGlass.dark, "route-locked-plug");
+    rect(plan, 251, 138, 26, 4, routeGlass.signal, "route-locked-groove");
+    rect(plan, 262, 128, 4, 12, routeGlass.dark, "route-locked-notch");
+    addRouteGlassMaterial(plan, state);
+    return plan;
+  }
+
+  // Awake: the folded plate rises into the established three-fin marker.
+  rect(plan, 247, 123, 34, 27, routeGlass.body, "route-body");
+  steppedColumn(plan, 253, 91, [4, 8, 12, 10, 8], routeGlass.shoulder, "route-fin-left");
+  steppedColumn(plan, 264, 85, [4, 8, 12, 10, 8, 6], routeGlass.edge, "route-fin-center");
+  steppedColumn(plan, 275, 92, [4, 8, 12, 10, 8], routeGlass.shoulder, "route-fin-right");
+  rect(plan, 257, 115, 14, 10, routeGlass.dark, "route-core");
+  rect(plan, 258, 116, 12, 8, state === "completed" ? routeGlass.complete : routeGlass.awake, `route-${state}-core`);
+  rect(plan, 251, 136, state === "completed" ? 26 : 16, 4, routeGlass.signal, `route-${state}-groove`);
+
+  if (state === "completed") {
+    // The earned crown makes completion taller and more complex than awakening.
+    steppedColumn(plan, 264, 73, [4, 8, 12, 8], routeGlass.complete, "route-complete-crown");
+    rect(plan, 271, 132, 4, 4, routeGlass.complete, "route-complete-step-a");
+    rect(plan, 275, 128, 4, 4, routeGlass.complete, "route-complete-step-b");
+    rect(plan, 279, 124, 4, 4, routeGlass.complete, "route-complete-step-c");
+  }
+  addRouteGlassMaterial(plan, state);
+  return plan;
 }
 
 export function buildMeadowPixelPlan({ petalState = "locked", routeState = "locked" } = {}) {
@@ -79,23 +152,7 @@ export function buildMeadowPixelPlan({ petalState = "locked", routeState = "lock
     }
   }
 
-  // Separate three-fin Route Marker.
-  rect(plan, 247, 123, 34, 27, palette.crystalDark, "route-body");
-  steppedColumn(plan, 253, 91, [4,8,12,10,8], palette.crystal, "route-fin-left");
-  steppedColumn(plan, 264, 85, [4,8,12,10,8,6], palette.crystalLight, "route-fin-center");
-  steppedColumn(plan, 275, 92, [4,8,12,10,8], palette.crystal, "route-fin-right");
-  rect(plan, 257, 115, 14, 10, palette.black, "route-core");
-  if (routeState === "locked") {
-    rect(plan, 251, 136, 26, 4, palette.locked, "route-locked-groove");
-    rect(plan, 262, 116, 4, 8, palette.locked, "route-locked-notch");
-  } else {
-    rect(plan, 258, 116, 12, 8, routeState === "completed" ? palette.complete : palette.awake, `route-${routeState}-core`);
-    rect(plan, 251, 136, routeState === "completed" ? 26 : 16, 4, palette.violet, `route-${routeState}-groove`);
-    if (routeState === "completed") {
-      rect(plan, 271, 132, 4, 4, palette.complete, "route-complete-step-a");
-      rect(plan, 275, 128, 4, 4, palette.complete, "route-complete-step-b");
-    }
-  }
+  plan.push(...buildRouteMarkerPixelPlan(routeState));
   return plan;
 }
 
@@ -108,6 +165,15 @@ export function drawMeadowPixelScene(canvas, states) {
   const context = configurePixelContext(canvas.getContext("2d"));
   context.clearRect(0, 0, MEADOW_LOGICAL_SIZE.width, MEADOW_LOGICAL_SIZE.height);
   for (const command of buildMeadowPixelPlan(states)) {
+    context.fillStyle = command.color;
+    context.fillRect(command.x, command.y, command.width, command.height);
+  }
+}
+
+export function drawRouteMarkerPixelLayer(canvas, routeState) {
+  const context = configurePixelContext(canvas.getContext("2d"));
+  context.clearRect(0, 0, MEADOW_LOGICAL_SIZE.width, MEADOW_LOGICAL_SIZE.height);
+  for (const command of buildRouteMarkerPixelPlan(routeState)) {
     context.fillStyle = command.color;
     context.fillRect(command.x, command.y, command.width, command.height);
   }

@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Route-marker overlay final accessibility gate
+
+- **Outcome:** passed the completed Glass Meadow route-marker overlay after the material correction. Locked/awake/completed remain geometry-distinct and persistently labeled; exact sanitized evidence blocks early promotion; Player's desktop/narrow/reload measurements prove hotspot/label containment; and the translucent aria-hidden canvas sits below the focusable hotspot and Terminal controls.
+- **Files:** added `Accessibility Sentinel/opening-demo/ROUTE_MARKER_OVERLAY_REVIEW.md` and updated this log only; runtime code, tests, and assets were not changed.
+- **Validation:** accepted Player's full locked-to-completed live loop and exact bounds; reviewed App/component/renderer/CSS/save/test contracts; focused Meadow/route tests passed 16/16. Current Coder evidence records 176/176 full tests and a passing production build.
+- **Next:** preserve exact evidence gating, accessible/persistent state names, bounded labels, non-color silhouettes, z-index ordering, pointer transparency, and existing CRT/reduced-motion contracts.
+- **Risk:** temporary live captures were removed, so this is not a retained-screenshot visual or conformance claim. Human NVDA, switch control, forced colors, and 200% zoom remain unobserved.
+- **Status:** `PASS - route-marker overlay cleared`
+
 ## 2026-07-13 - First-Terminal orientation reflow gate
 
 - **Outcome:** passed the fixed first-Terminal orientation reflow without runtime edits. Canonical two-pane presentation keeps all prompts, both 53.54 px answer targets, and feedback visibly inside the action pane without learner scrolling; narrow presentation uses one-column 44 px answers, reachable vertical scrolling, and no horizontal overflow.

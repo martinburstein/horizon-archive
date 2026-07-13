@@ -2,13 +2,17 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   buildMeadowPixelPlan,
+  buildRouteMarkerPixelPlan,
   configurePixelContext,
+  deriveMeadowRouteMarkerState,
+  drawRouteMarkerPixelLayer,
   getIntegerPixelStage,
   MEADOW_LOGICAL_SIZE,
   MEADOW_PIXEL_HOTSPOTS,
 } from "../src/pixelMeadow.js";
 
 const percentage = (value) => Number.parseFloat(value) / 100;
+const alphaOf = (color) => Number(color.match(/^rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)$/)?.[1]);
 
 test("meadow production art is authored on a bounded 320x180 integer grid", () => {
   assert.deepEqual(MEADOW_LOGICAL_SIZE, { width: 320, height: 180 });
@@ -38,6 +42,83 @@ test("locked awake and completed states change silhouette geometry, not color al
   assert.ok(completed.some(({ tag }) => tag === "petal-complete-step-c"));
   assert.ok(completed.some(({ tag }) => tag === "route-complete-step-b"));
   assert.notDeepEqual(locked.map(({ x, y, width, height, tag }) => [x, y, width, height, tag]), completed.map(({ x, y, width, height, tag }) => [x, y, width, height, tag]));
+});
+
+test("route marker layer has bounded and visibly distinct locked awake and completed profiles", () => {
+  const states = Object.fromEntries(["locked", "awake", "completed"].map((state) => [state, buildRouteMarkerPixelPlan(state)]));
+  for (const plan of Object.values(states)) {
+    for (const command of plan) {
+      assert.ok(command.x >= 0 && command.y >= 0 && command.width > 0 && command.height > 0);
+      assert.ok(command.x + command.width <= MEADOW_LOGICAL_SIZE.width);
+      assert.ok(command.y + command.height <= MEADOW_LOGICAL_SIZE.height);
+    }
+  }
+  const top = (plan) => Math.min(...plan.map(({ y }) => y));
+  assert.ok(top(states.locked) > top(states.awake), "awakening must raise the marker silhouette");
+  assert.ok(top(states.completed) < top(states.awake), "completion must add an earned crown");
+  assert.ok(states.locked.every(({ tag }) => !tag.startsWith("route-fin-")));
+  assert.ok(states.awake.some(({ tag }) => tag === "route-fin-center"));
+  assert.ok(states.completed.some(({ tag }) => tag === "route-complete-crown"));
+  const bounds = (plan) => ({
+    left: Math.min(...plan.map(({ x }) => x)),
+    top: Math.min(...plan.map(({ y }) => y)),
+    right: Math.max(...plan.map(({ x, width }) => x + width)),
+    bottom: Math.max(...plan.map(({ y, height }) => y + height)),
+  });
+  assert.deepEqual(bounds(states.locked), { left: 247, top: 119, right: 281, bottom: 150 });
+  assert.deepEqual(bounds(states.awake), { left: 247, top: 85, right: 281, bottom: 150 });
+  assert.deepEqual(bounds(states.completed), { left: 247, top: 73, right: 283, bottom: 150 });
+});
+
+test("route marker material is translucent Builder glass with restrained reflections and mat contact", () => {
+  for (const state of ["locked", "awake", "completed"]) {
+    const plan = buildRouteMarkerPixelPlan(state);
+    assert.ok(plan.every(({ color }) => Number.isFinite(alphaOf(color)) && alphaOf(color) > 0 && alphaOf(color) < 1));
+    const body = plan.find(({ tag }) => tag === (state === "locked" ? "route-locked-body" : "route-body"));
+    assert.ok(alphaOf(body.color) <= 0.4, `${state} body must let the Meadow show through`);
+    assert.deepEqual([...new Set(plan
+      .filter(({ tag }) => tag.startsWith("route-reflection-"))
+      .map(({ tag }) => tag))], [
+      "route-reflection-edge-left",
+      "route-reflection-center",
+      "route-reflection-edge-right",
+    ]);
+    assert.deepEqual(plan.find(({ tag }) => tag === "route-warm-floor-pickup"), {
+      x: 250, y: 144, width: 28, height: 2,
+      color: "rgba(222, 159, 88, 0.62)", tag: "route-warm-floor-pickup",
+    });
+    assert.deepEqual(plan.find(({ tag }) => tag === "route-flush-mat-contact"), {
+      x: 247, y: 148, width: 34, height: 2,
+      color: "rgba(75, 49, 31, 0.72)", tag: "route-flush-mat-contact",
+    });
+  }
+});
+
+test("transparent route layer renderer clears once and preserves authored alpha colors", () => {
+  const fills = [];
+  const clears = [];
+  const context = {
+    imageSmoothingEnabled: true,
+    fillStyle: "",
+    clearRect: (...args) => clears.push(args),
+    fillRect(...args) { fills.push({ args, color: this.fillStyle }); },
+  };
+  drawRouteMarkerPixelLayer({ getContext: () => context }, "awake");
+  assert.deepEqual(clears, [[0, 0, 320, 180]]);
+  assert.equal(context.imageSmoothingEnabled, false);
+  assert.deepEqual(fills, buildRouteMarkerPixelPlan("awake").map(({ x, y, width, height, color }) => ({
+    args: [x, y, width, height], color,
+  })));
+  assert.ok(fills.every(({ color }) => alphaOf(color) < 1));
+});
+
+test("route marker world state follows only exact completion evidence", () => {
+  assert.equal(deriveMeadowRouteMarkerState(null, null), "locked");
+  assert.equal(deriveMeadowRouteMarkerState({ completed: false }, { masteryStatus: "in_progress" }), "locked");
+  assert.equal(deriveMeadowRouteMarkerState(null, { masteryStatus: "mastered" }), "locked");
+  assert.equal(deriveMeadowRouteMarkerState({ completed: true }, { masteryStatus: "in_progress" }), "awake");
+  assert.equal(deriveMeadowRouteMarkerState({ completed: true }, { masteryStatus: "remediation_required" }), "awake");
+  assert.equal(deriveMeadowRouteMarkerState({ completed: true }, { masteryStatus: "mastered" }), "completed");
 });
 
 test("integer stages letterbox and keep both meadow targets usable", () => {

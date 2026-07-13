@@ -1,5 +1,23 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Route-marker material re-review
+
+- **Outcome:** issued `PASS`; the prior opaque-sprite defect is closed without changing the approved folded/raised/crowned geometry, labels, hotspot, state logic, or scene composition.
+- **Files:** updated [the route-marker overlay review](reviews/2026-07-13-glass-meadow-route-marker-overlay.md) and this work log; no runtime code or raster asset changed in this review.
+- **Validation:** inspected the corrected RGBA renderer and existing desktop/narrow/reload evidence; confirmed translucent background-through body, exactly three restrained reflection/edge families, two-pixel warm floor pickup, two-pixel flush mat contact, no forbidden effects/CSS art/protected assets, and accepted passing focused `16/16`, full `176/176`, and build evidence; checked Markdown links and `git diff --check`.
+- **Finding:** no remaining visible material defect. The marker now reads as cultivated Builder glass while the rich Meadow painting remains dominant.
+- **Handoff:** accept the route-marker overlay and preserve its current material restraint, state silhouettes, label containment, and first-person/no-ship composition.
+- **Status:** ready to advance.
+
+## 2026-07-13 — Glass Meadow route-marker overlay gate
+
+- **Outcome:** issued `REVISE` with one bounded material-integration defect. Folded/raised/crowned silhouettes, state readability, originality, first-person/no-ship view, painting dominance, label containment, and scene obstruction gates pass.
+- **Files:** created [the route-marker overlay review](reviews/2026-07-13-glass-meadow-route-marker-overlay.md) and updated this work log; no runtime code or raster asset changed.
+- **Validation:** inspected `App.jsx`, `MeadowRouteMarker.jsx`, the route-marker pixel plan/renderer, relevant hotspot/overlay CSS, and Player's latest desktop/narrow/reload evidence; relied on Player's 14/14 passing route-marker tests; checked Markdown links and `git diff --check`.
+- **Finding:** the opaque flat `fillRect` palette reads as a low-fidelity sprite over the realistic painting rather than transparent cultivated Builder glass.
+- **Handoff:** preserve all geometry, state logic, labels, and bounds; re-author only the marker material as an original alpha-capable pixel layer with background-through transparency, internal reflection/edge clusters, warm floor pickup, and flush mat contact, then repeat the existing desktop/narrow/reload visual gate.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Final CRT Glass Meadow re-review
 
 - **Outcome:** issued `PASS` for the final CRT-centered presentation under the user's almost-full-screen priority. The approved Meadow remains dominant and rich; the bezel is cute and restrained; first-person/no-protagonist/no-ship and originality gates pass.

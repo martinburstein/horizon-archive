@@ -214,6 +214,17 @@ h1 {
 .adventure-screen { display: grid; grid-template-rows: minmax(0, 74vh) minmax(220px, 26vh); }
 .scene-frame { position: relative; min-height: 0; overflow: hidden; border-bottom: 5px solid #292630; container-type: size; }
 .glass-meadow-art { object-position: center center; }
+.meadow-route-marker-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
 
 .pixel-scene-host {
   position: absolute;
@@ -274,6 +285,7 @@ h1 {
 
 .hotspot {
   position: absolute;
+  z-index: 2;
   left: var(--hotspot-left);
   top: var(--hotspot-top);
   width: var(--hotspot-width);
@@ -302,11 +314,24 @@ h1 {
   opacity: 0;
 }
 .hotspot:hover span, .hotspot:focus-visible span { opacity: 1; }
-.adventure-screen[data-route-marker-ready="true"] .hotspot[data-hotspot-id="route-marker"] {
-  border-color: rgba(198, 169, 111, 0.62);
-  background: rgba(129, 94, 54, 0.12);
+.hotspot[data-hotspot-id="route-marker"] span {
+  left: 3px;
+  right: 3px;
+  bottom: 4px;
+  transform: none;
+  width: auto;
+  max-width: none;
+  padding: 4px 3px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  font-size: 7px;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  text-align: center;
+  opacity: 1;
 }
-.adventure-screen[data-route-marker-ready="true"] .hotspot[data-hotspot-id="route-marker"] span { opacity: 0.82; }
+.hotspot[data-hotspot-id="route-marker"][data-route-marker-state="locked"] span { border-style: dashed; }
+.hotspot[data-hotspot-id="route-marker"][data-route-marker-state="completed"] span { border-style: double; }
 
 .terminal-workbench {
   position: absolute;

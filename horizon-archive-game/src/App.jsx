@@ -12,7 +12,8 @@ import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_p
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import glassMeadowImage from "../../Glass Meadow Example.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
-import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
+import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
+import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   advanceOpeningProgress,
@@ -545,6 +546,7 @@ export function App() {
     ? null
     : firstTerminalOrientation.steps[terminalOrientationStep];
   const verbPressedState = getVerbPressedState(verb);
+  const meadowRouteMarkerState = deriveMeadowRouteMarkerState(exerciseEvidence, routeMarkerMastery);
   const sceneHotspots = [{
     id: scene.primaryHotspotId ?? "primary",
     label: scene.hotspotLabel,
@@ -557,21 +559,26 @@ export function App() {
     : ruinsVisualState === "active"
       ? { canonical: ruinsActiveImage, narrow: ruinsActiveNarrowImage }
       : { canonical: ruinsAvailableImage, narrow: ruinsAvailableNarrowImage };
-  const hotspotButtons = sceneHotspots.map((hotspot) => (
-    <button
-      key={hotspot.id}
-      ref={hotspot.primary && scene.id === "meadow" ? meadowPrimaryHotspotRef : undefined}
-      className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
-      data-hotspot-id={hotspot.id}
-      data-primary-hotspot={hotspot.primary ? "true" : undefined}
-      style={getHotspotStyle(hotspot.hotspot)}
-      onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
-      disabled={pendingAdvance || terminalOpen}
-      aria-label={`${verb.toLowerCase()} ${hotspot.label}`}
-    >
-      <span>{verb} {hotspot.label}</span>
-    </button>
-  ));
+  const hotspotButtons = sceneHotspots.map((hotspot) => {
+    const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
+    const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
+    return (
+      <button
+        key={hotspot.id}
+        ref={hotspot.primary && scene.id === "meadow" ? meadowPrimaryHotspotRef : undefined}
+        className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
+        data-hotspot-id={hotspot.id}
+        data-primary-hotspot={hotspot.primary ? "true" : undefined}
+        data-route-marker-state={isMeadowRouteMarker ? meadowRouteMarkerState : undefined}
+        style={getHotspotStyle(hotspot.hotspot)}
+        onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
+        disabled={pendingAdvance || terminalOpen}
+        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : ""}`}
+      >
+        <span>{verb} {hotspot.label}{routeMarkerLabel}</span>
+      </button>
+    );
+  });
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
@@ -1864,7 +1871,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         {scene.id === "meadow" ? (
           <>
@@ -1873,6 +1880,7 @@ export function App() {
               src={glassMeadowImage}
               alt="An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person"
             />
+            <MeadowRouteMarker state={meadowRouteMarkerState} />
             {hotspotButtons}
           </>
         ) : (
