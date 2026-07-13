@@ -316,7 +316,7 @@ Use a more specific line only when it adds state clarity.
 
 ### Planned Offline Remediation Planner
 
-- Runtime and game exercise integration are unimplemented; this section defines target focus, dismissal, privacy, and ownership.
+- Runtime and game exercise integration are implemented; this section remains the normative focus, dismissal, privacy, and ownership contract.
 - Target title and dismissal name: `Offline Remediation Planner`; `Exit Remediation Planner`.
 - System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; cards use `n/6`.
 - Gap diagnosis, priority, lesson/source routing, practice, reassessment, escalation, and completion remain `901 TEACHER` copy.
@@ -327,6 +327,21 @@ Use a more specific line only when it adds state clarity.
 - Persistent evidence excludes exam text, notes, credentials, endpoint/payload/response data, action requests, and prose.
 - After mastery acknowledgement, focus prefers `Continue`; acknowledgement and progression remain separate actions.
 - Dismissal never calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
+
+### Planned Offline Capstone Readiness
+
+- Runtime and game exercise integration are unimplemented; this section defines target focus, dismissal, privacy, and ownership.
+- Target title and dismissal name: `Offline Capstone Readiness`; `Exit Capstone`.
+- System-owned modes are `PRIMARY`, `TRANSFER`, `CLOSED-NOTE`, and `MASTERED`; scenario cards use `n/6`.
+- The persistent prerequisite panel shows all 15 objective rows, remediation-route closure, and fresh-evidence status using text, not color alone.
+- Implementation guidance, current-source routing, remediation, recommendation, and completion remain `901 TEACHER` copy.
+- Trace choices are `PILOT // CAPSTONE TRACE OWNER`; prose is `PILOT // CLOSED-NOTE CAPSTONE OWNER`.
+- The visible boundary states course-authored/not-exam/no-guarantee/no-source-or-media-processing/no-service/no-external-action.
+- Exit line: "Capstone closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen restores the offline design and gate status. Reload restores sanitized eligibility with clean content, configuration, scenario, and prose fields.
+- Persistent evidence excludes source content, audio, transcript, credential, endpoint, payload/response, exam-item text, action requests, and prose.
+- After strict mastery acknowledgement, focus prefers `Continue`; recommendation, acknowledgement, and progression remain separate actions.
+- Dismissal never processes media, calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
 
 ### Evidence Packet
 
@@ -360,6 +375,7 @@ When acknowledgement changes progression:
 - Visual Patterns mastery: prefer `Continue` after the System announces availability.
 - Objective Ledger mastery: prefer `Continue` after the System announces course readiness without an exam guarantee.
 - Remediation Planner mastery: prefer `Continue` after all weak routes close without an exam guarantee.
+- Capstone mastery: prefer `Continue` after strict prerequisite and closed-note gates, without treating readiness as an exam result.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 

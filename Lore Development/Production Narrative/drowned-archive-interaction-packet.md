@@ -1416,7 +1416,7 @@ The System reports decision/reason correctness, objective status, and score only
 
 ## Planned Offline Remediation Planner
 
-Production alignment: `EX-L0602-REMEDIATION-PLANNER`, lesson `L-06-02`, activity `A-L0602-2`, assessment `AS-L0602-PLAN`, skills `PY-007`, `PY-016`, and `PY-017`. Runtime and game exercise integration are unimplemented. These are target production labels, session rules, and ownership boundaries.
+Production alignment: `EX-L0602-REMEDIATION-PLANNER`, lesson `L-06-02`, activity `A-L0602-2`, assessment `AS-L0602-PLAN`, skills `PY-007`, `PY-016`, and `PY-017`. Runtime and game exercise integration are implemented; this contract remains the normative copy, session, and ownership boundary.
 
 ### Ownership and course boundary
 
@@ -1512,6 +1512,108 @@ The System reports decision/reason correctness, route completeness, and score on
 - Scene transition clears working scenarios and runtime state; sanitized route evidence persists separately.
 - Exit never calls a service, uses credentials/Azure, performs an action, guarantees an exam result, or advances progression.
 
+## Planned Offline Capstone Readiness Checkpoint
+
+Production alignment: `EX-L0603-OFFLINE-CAPSTONE`, lesson `L-06-03`, activity `A-L0603-2`, assessment `AS-L0603-READY`, objectives `AI901-D2-O3`, `AI901-D2-O5`, and `AI901-D2-O7`, and skills `PY-017`, `PY-019`, and `PY-020`. Runtime and game exercise integration are unimplemented. This section defines target production copy, prerequisite behavior, ownership, and restoration.
+
+### Ownership and visible boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns implementation instruction, current-source routing, remediation, cautious recommendation, and completion.
+- `SYSTEM // EXPEDITION STATE` owns neutral offline scoring, form state, sanitized prerequisite status, evidence state, and progression availability.
+- `PILOT // CAPSTONE TRACE OWNER` owns decisions. `PILOT // CLOSED-NOTE CAPSTONE OWNER` owns learner prose.
+- `SCENE // SENSOR RECORD` may report unchanged physical conditions only. A score or readiness state never implies Machine judgment, approval, recognition, or intent.
+
+Keep this boundary visible in every mode:
+
+> COURSE-AUTHORED OFFLINE CAPSTONE · not exam questions, no exam guarantee, no source or media processing, no service call, and no external action.
+
+No capstone result, confidence rating, prompt, simulation, or recommendation grants authority for credential use, Azure mutation, communication, disclosure, publication, purchase, deletion, or any live/destructive action.
+
+### CP00 — Open and prerequisite panel
+
+- Target title/filename: `Offline Capstone Readiness`; `primary_capstone.json`.
+- `SYSTEM`: "Capstone open. PRIMARY 1/6. Course-authored; no exam guarantee."
+- The first visible panel shows sanitized prerequisite status: `15/15 objective rows ready`, `remediation routes closed`, and `fresh evidence current`.
+- Missing prerequisite evidence remains explicit. It does not disappear behind a capstone score or confidence selection.
+- `901 TEACHER`: "Trace the offline design, preserve evidence boundaries, then issue only the supported recommendation."
+
+### CP01 — Six assessed boundaries
+
+Each form checks an exact decision and reason for all six boundaries:
+
+1. Client flow: separate endpoint/location, approved identity, deployment/capability, request, result, and errors.
+2. Text/speech pattern: map existing text, audio-to-text recognition, and text-to-audio synthesis by input and output.
+3. Content Understanding: define the schema, preserve unsupported values as null, and retain available evidence/provenance.
+4. Prerequisite evidence: never let a subset score hide an unassessed objective or an open fresh-transfer route.
+5. Readiness recommendation: use only the three allowed states and the evidence actually observed.
+6. Claim/action safety: reject exam guarantees and require separate verified scope, privacy review where applicable, authority, and confirmation for live action.
+
+The System reports decision/reason correctness and score only. It never supplies Microsoft product guidance or interprets readiness.
+
+### CP02 — Teacher remediation routes
+
+- Client flow: "Return to L-05-03; separate location, identity, deployment, request, result, and errors."
+- Text/speech: "Return to L-05-05; map the supplied input to the required output before choosing a pattern."
+- Content Understanding: "Return to L-05-07; preserve schema, null, evidence, and provenance without inventing values."
+- Prerequisites: "Do not let capstone performance hide an objective gap or an unresolved transfer route."
+- Recommendation: "Choose only the cautious state supported by observed independent evidence."
+- Safety: "Keep the design offline; a score cannot guarantee an exam result or authorize a live action."
+- Volatile objective, SDK/API, analyzer, model, capability, region, price, preview, and deprecation claims route back to the current official-source register before recommendation.
+
+### CP03 — Primary and fresh-transfer states
+
+- Primary completion, `901 TEACHER`: "Primary capstone complete: 12/12. Fresh transfer and closed-note defense remain."
+- `SYSTEM`: "Status recorded: PRIMARY COMPLETE. No source, media, service, or external action was used."
+- Transfer target filename: `transfer_capstone.json`.
+- Transfer open, `SYSTEM`: "Capstone open. TRANSFER 1/6. Course-authored; no exam guarantee."
+- Transfer completion, `SYSTEM`: "TRANSFER 12/12 recorded. CLOSED-NOTE GATE available."
+- A failed boundary routes to its mapped lesson, artifact repair, and fresh transfer. Scores are never averaged across a failed boundary.
+
+### CP04 — Closed-note capstone defense
+
+- Target filename/status: `closed_note.md`; `CLOSED-NOTE GATE`.
+- Target fields: `client flow`, `workload direction`, `schema and provenance`, and `prerequisite, readiness, and safety gate`.
+- `901 TEACHER`: "Defend the offline trace, null/provenance handling, prerequisite gate, and cautious recommendation."
+- `PILOT // CLOSED-NOTE CAPSTONE OWNER`: "I produced this capstone explanation myself without notes."
+- `SYSTEM` reports only `0/4` through `4/4` and dimension confirmation. Teacher owns reconstruction prompts.
+- Learner prose, source-like content, audio/transcript equivalents, and configuration values remain session-only.
+
+### CP05 — Readiness recommendation gate
+
+The recommendation is always one exact, text-visible state:
+
+- `ready_for_next_practice_checkpoint`: both forms are 12/12, the closed-note defense passes, all 15 ledger rows are ready, and all remediation routes are closed with fresh evidence.
+- `remediate_before_checkpoint`: a measured boundary or remediation route remains unresolved and has a mapped repair path.
+- `insufficient_evidence`: required assessment or prerequisite evidence is absent or incomplete.
+
+Confidence is tutoring data only. It cannot change a recommendation, close a route, satisfy a prerequisite, mark mastery, or predict an exam result.
+
+### CP06 — Mastery and progression handoff
+
+- `901 TEACHER`: "Offline Capstone mastery confirmed. The evidence supports the next practice checkpoint only."
+- `SYSTEM`: "Status recorded: MASTERED. Continue is available. This is not an exam result or guarantee."
+- Continue becomes the preferred focus target after acknowledgement; recommendation, acknowledgement, and progression remain separate learner-visible actions.
+- Persistent evidence stores IDs, form/dimension correctness, artifact checks, sanitized prerequisite gate, readiness state, attempts, hints, confidence, and misconception tags only.
+- No source content, audio bytes, transcript, credential, endpoint, payload, service response, exam-item text, external-action request, choice text, or learner prose persists.
+- `SCENE`: "The completed Terminal and surrounding structures remain unchanged."
+
+### CP07 — Exit, reopen, reload, and transition
+
+- Exit: `SYSTEM`: "Capstone closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
+- Reopen: `SYSTEM`: "Capstone restored: [PRIMARY|TRANSFER|CLOSED-NOTE]."
+- Reload: `SYSTEM`: "Capstone restored with clean private fields: [PRIMARY|TRANSFER|CLOSED-NOTE|MASTERED]."
+- Same-session reopen restores the offline design and gate status. Reload restores sanitized eligibility with clean content, configuration, scenario, and prose fields.
+- Scene transition clears working content, configuration, media equivalents, and scenario state; sanitized mastery evidence persists separately.
+- Exit never processes media, calls a service, uses credentials/Azure, performs an action, guarantees an exam result, or advances progression.
+
+### CP08 — 640 × 480 and accessibility contract
+
+- Use the curriculum-specified `capstone_trace_plus_gate_panel` presentation inside the square logical viewport.
+- Keep prerequisite state, active form, scenario `n/6`, decision/reason feedback, and the offline boundary available as text; never rely on color alone.
+- Keyboard order remains instructions, trace, client boundary, workload choice, schema/result, prerequisite gate, recommendation, check, feedback, next, and exit.
+- Use associated field feedback and a polite status live region. Provide text equivalents for all media scenarios, no timer, and reduced-motion behavior.
+- If the trace and gate cannot fit together, preserve the labeled gate and use Terminal scrolling; do not hide prerequisites behind a tab or hover state.
+
 ## Recommended replacement for current prologue copy
 
 These existing lines should be retired in a later Coder pass. This documentation change does not edit gameplay code.
@@ -1589,4 +1691,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Objective Ledger persists no exam text, credential, endpoint, service data, personal notes, action request, or prose.
 - Remediation Planner routes exact measured gaps through mapped lessons, current official sources, and fresh evidence.
 - Remediation Planner persists no exam text, notes, credentials, endpoint/payload/response data, action request, or prose.
+- Capstone readiness requires both 12/12 forms, a closed-note defense, all 15 ledger rows ready, and all remediation routes closed with fresh evidence.
+- Capstone scenarios process no source or media, call no service, authorize no action, and persist no private working content or learner prose.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.
