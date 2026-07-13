@@ -22,7 +22,7 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 ## Production pixel contract
 
 - The canonical final game canvas is `640 × 480` square logical pixels (4:3), matching the upper end of the classic LucasArts pixel-adventure era selected by Martin.
-- Default layout budget: `640 × 360` scene viewport above a compact `640 × 120` command/dialogue/inventory band. A `320 × 180` authored scene module may be presented exactly `2×` inside the scene viewport.
+- Default layout budget: `640 × 360` scene viewport above a compact `640 × 120` command/dialogue/inventory band. Author production world plates at `640 × 360`; `320 × 180` versions are blockouts or narrow-layout derivatives only, never enlarged final scenery.
 - Present the complete canvas only at integer multiples (`640 × 480`, `1280 × 960`, `1920 × 1440`, and so on) and letterbox when the host viewport falls between supported sizes.
 - Square logical pixels are mandatory. No rectangular-pixel simulation, subpixel detail, or resolution-independent smoothing.
 - Build final scene art, UI frames, icons, focus states, and Terminal workspaces on an explicit low-resolution logical grid.
@@ -31,6 +31,7 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 - Do not apply a generic mosaic or pixelation filter to a finished concept image and call it production art. Reinterpret silhouettes, planes, lighting, and landmarks intentionally at the logical resolution.
 - Typography and editor chrome must share the same pixel density and edge treatment as the world. Avoid modern vector icons, anti-aliased hairlines, soft shadows, glassmorphism, and high-DPI gradients.
 - High-resolution generated images remain exploration artifacts. Every scene sheet must distinguish `exploration plate` from `production pixel plate` and record the intended logical resolution and scaling behavior before implementation.
+- The final richness and originality approval authority is the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md). Programmatic rectangle/blockout scenery cannot be promoted to production solely because it is pixel-perfect or testable.
 
 ## Visual grammar
 
@@ -41,11 +42,12 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 - **Texture:** intentional pixel clusters, restrained dithering, angular low-poly massing, readable weather and age at the logical resolution.
 - **Palette:** indigo, slate, charcoal, muted violet; use peach, amber, crystal white, or volcanic orange as scarce focal accents.
 - **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
-- **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, figure, or known-size craft.
+- **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, seat, tool, or other known-size environmental construction.
 - **Mood:** serious, beautiful, quiet, melancholic, curious. Never grimdark, combat-led, corporate, or glossy.
 - **Interface occupancy:** keep the world dominant. The dark dialogue/command area should be compact, stable, and information-dense rather than a modern dashboard covering the scene.
 - **Interaction language:** readable verbs and contextual cursor/focus states should feel immediate and playful, with inventory and observation supporting exploration rather than busywork.
 - **Failure philosophy:** visual and interaction design must support recovery. A wrong action may produce characterful feedback, but it must not strand the player or conceal the next useful affordance.
+- **Viewpoint:** gameplay plates are first-person views of the environment. Never paint the protagonist, companions, or their ship in frame, including bodies, hands, silhouettes, shadows, reflections, portraits, or cropped edges.
 
 ## Point-and-click readability gate
 

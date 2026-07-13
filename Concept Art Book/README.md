@@ -10,6 +10,7 @@ This is the spoiler-safe visual production atlas for the places a player can vis
 - [Scene-sheet template](scene-sheet-template.md)
 - [Prompt and provenance log](prompt-provenance-log.md)
 - [Location Scout work log](WORK_LOG.md)
+- [Curse Art Director production-richness gate](../Curse%20Art%20Director/CHARTER.md)
 - [Selected production pixel art](production-pixel/README.md)
 
 ## Selected plates

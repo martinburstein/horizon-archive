@@ -50,7 +50,14 @@
    - Produces implementation-ready aesthetic rules, benchmark scenes, QA checklists, and do/don't comparisons without copying characters, scenes, dialogue, jokes, icons, compositions, or extracted game assets.
    - Hands its production specification to Location Scout Agent and Coder Agent so new world art and UI share one period-authentic square-pixel system.
 
-8. **Accessibility Sentinel Agent** (`accessibility_sentinel_agent`)
+8. **Curse Art Director Agent** (`curse_art_director_agent`)
+   - Serves as the persistent environment-art richness and originality gate after Location Scout production.
+   - Holds gameplay scenes to the hand-illustrated, theatrical, materially rich craft level of a premium 640 x 480-era adventure without copying any specific copyrighted scene, character, composition, prop, joke, icon, palette sequence, or proprietary UI.
+   - Enforces first-person world plates that never show the protagonist, companions, or their ship.
+   - Explicitly classifies coarse `320 x 180` rectangle/code blockouts as non-production evidence even when technical and accessibility checks pass.
+   - Uses the measurable gates and review evidence in [the Curse Art Director charter](Curse%20Art%20Director/CHARTER.md).
+
+9. **Accessibility Sentinel Agent** (`accessibility_sentinel_agent`)
    - Serves as the final specialist quality gate for each round and audits the combined game, learning, narrative, and visual tranche without implementing unrelated features.
    - Tests keyboard-only operation, logical focus order, visible focus, screen-reader names and live regions, form/error association, zoom and reflow, reduced motion, contrast, grayscale and color-independent states, target size, subtitles/transcripts, audio alternatives, and recovery from every mistake.
    - Audits the fixed `640 × 480` pixel canvas for readable bitmap type, non-blurry integer scaling, letterbox behavior, compact-dialogue cognitive load, and preservation of the world at desktop and constrained viewports.
@@ -60,7 +67,7 @@
 
 ## Turn order
 
-`Player Agent -> Coder Agent -> Lore Keeper Agent -> 901 Teacher Agent -> Exercise Agent -> Pixel Patrol Agent -> Location Scout Agent -> Accessibility Sentinel Agent -> Player Agent`
+`Player Agent -> Coder Agent -> Lore Keeper Agent -> 901 Teacher Agent -> Exercise Agent -> Pixel Patrol Agent -> Location Scout Agent -> Curse Art Director Agent -> Accessibility Sentinel Agent -> Player Agent`
 
 Only one agent owns the active work turn. The active agent works autonomously until it reaches a meaningful, reviewable stopping point, then stops. The next agent does not begin until Martin says **advance**.
 
@@ -82,6 +89,8 @@ Location Scout Agent reports must show or link the produced artwork and describe
 Exercise Agent reports must identify the skill practiced, runnable exercise path, mastery evidence captured, accessibility checks, and integration handoff without revealing story spoilers.
 
 Pixel Patrol Agent reports must identify footage/reference coverage, measurable aesthetic conclusions, implementation constraints, and remaining uncertainty without reproducing copyrighted frames or assets in the repository.
+
+Curse Art Director Agent reports must issue `PASS`, `REVISE`, `BLOCKOUT ONLY`, or `REJECT`; identify failed richness/originality/viewpoint gates; and link the review evidence without reproducing copyrighted reference frames in the repository.
 
 Accessibility Sentinel Agent reports must list tested assistive modes and viewports, prioritized reproducible findings, affected learners, relevant accessibility principle, evidence, and the exact next-round handoff. It remains read-only unless explicitly assigned a narrow accessibility-documentation or test-fixture update.
 
