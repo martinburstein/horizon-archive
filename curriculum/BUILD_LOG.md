@@ -677,3 +677,24 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-CUM01-CONFUSION-PAIRS` as an accessible one-card-at-a-time cumulative checkpoint with direct remediation links.
 Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Scenarios are course-authored, optional timing cannot affect mastery, and passing does not guarantee an exam result. Exam and product details remain volatile.
+
+## Log entry: 2026-07-12T20:27:53-04:00
+
+Stage: Mixed AI-901 simulation evidence
+Action: Completed one bounded learner-facing tranche, `SIM-01`, as a 12-item original offline simulation block with five concept/capability and seven Foundry implementation items, all 15 objectives covered, and remediation linked to existing lessons.
+Files touched:
+- curriculum/readiness/SIM-01/*
+- curriculum/BUILD_STATUS.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_LOG.md
+Validation:
+- applicable AGENTS.md, source-priority skill, latest logs, `L-06-03`, and `CUM-01` inspected: pass
+- current AI-901 guide and required priority Foundry sources checked first: pass
+- all curriculum JSON parsed; IDs, all-objective coverage, source mapping, links, readiness gates, privacy/session/accessibility, exam-claim, and action safeguards: pass
+- 5/7 domain mix and 15-objective union: pass
+- validator self-test, generated-provenance probe, and simulation/action probe: pass
+- reference 24/24; blank correctly rejected at 0/24 with exit 1
+- `CUM-01` and `L-06-03` validator regressions: pass
+- `git diff --check`: pass
+Handoff: Exercise Agent can render `EX-SIM01-MIXED` with an optional 25-minute diagnostic timer and fully equivalent untimed mode.
+Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Items are course-authored, timing cannot change mastery, and passing does not guarantee an exam result. Exam and product details remain volatile.
