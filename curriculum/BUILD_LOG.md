@@ -707,3 +707,12 @@ Files touched: `curriculum/readiness/SIM-02/*`, BUILD_STATUS, readiness record, 
 Validation: applicable instructions/logs/readiness chain inspected; official mappings checked; all curriculum JSON parsed; 5/7 mix, 15-objective union, source mapping, remediation links, strict gates, privacy/session/accessibility, exam-claim, and action safeguards passed; reference 24/24; blank rejected 0/24 exit 1; action and one-test-is-enough probes passed; `SIM-01`, `CUM-01`, and `L-06-03` regressions passed; `git diff --check` passed.
 Handoff: Exercise Agent can render `EX-SIM02-TRANSFER` with optional diagnostic timing and fully equivalent untimed mode.
 Notes: No service/Azure/credential/external action/gameplay/lore/QA-binary changes. Original practice only; no exam guarantee.
+
+## Log entry: 2026-07-12T22:20:00-04:00
+
+Stage: Demo curriculum freeze audit
+Action: Audited and froze the learner-facing curriculum through `SIM-01`; deferred `SIM-02` runtime integration until after the demo. No demo-blocking learner-facing defect was found, so no lesson or assessment content was changed.
+Files touched: demo freeze report, BUILD_STATUS, readiness record, and BUILD_LOG.
+Validation: applicable instructions and logs inspected; 23/23 frozen-scope validator self-tests passed; all curriculum JSON parsed; unique/package/prerequisite progression, official-source mapping, all-15-objective coverage, remediation routes, strict gates, accessibility/session/privacy, and no-guarantee/no-authority language passed; `git diff --check` passed.
+Freeze point: zero-Python progression through all mapped lessons, `L-06-03`, `CUM-01`, and `SIM-01`. `SIM-02` remains content-complete but is post-demo for runtime integration.
+Notes: No game/lore/QA binary, service, Azure, credential, external action, commit, or push.

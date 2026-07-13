@@ -45,6 +45,10 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/readiness/SIM-01` — complete 12-item mixed simulation block with current domain balance, all-objective coverage, optional-accessible timing, and strict remediation-backed mastery
 - `curriculum/readiness/SIM-02` — complete independent fresh-transfer simulation block with matched domain balance, all-objective coverage, and dual-simulation retention gate
 
+## Demo freeze
+
+The learner-facing demo scope is frozen through `SIM-01`; see `demo-curriculum-freeze-2026-07-12.md`. `SIM-02` runtime integration is deferred until after the demo. No demo-blocking curriculum defect was found.
+
 ## Ready now
 
 - chapter skeleton exists
