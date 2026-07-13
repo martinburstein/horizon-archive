@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Final demo-readiness SIM-01 resume fix
+
+- **Work completed:** SIM-01 now resumes at the first item whose sanitized decision/reason evidence is not both true. Exit clears the working session, so close/reopen and full reload use the same derivation. If all twelve items are complete but mastery is not acknowledged, the strict 24/24 result screen is restored instead of replaying item one.
+- **Truth/privacy/forgery:** Resume ignores saved or injected cursor/index fields, partial correctness, responses, choices, and prose. Only allowlisted completed-item booleans and optional elapsed seconds influence the restored session. Timed evidence with recorded elapsed seconds and untimed evidence restore the identical first-incomplete position; timing never changes correctness or mastery. Launch labels visibly report the restored item number or completed state, while Terminal status continues to show the active item.
+- **Files changed:** `horizon-archive-game/src/mixedSimulationExercise.js`, `horizon-archive-game/test/mixedSimulationExercise.test.js`, `horizon-archive-game/src/App.jsx`, and this log. No QA binaries were regenerated or modified.
+- **Validation:** Added focused tests for timed/untimed mid-block resume, forged cursor and private-response rejection, partial-item handling, all-complete/unacknowledged restoration, close/reopen clearing, reload derivation, and visible labels. Focused SIM-01 tests pass 8/8; full unit suite passes 158/158; production build and `git diff --check` pass.
+- **Next recommended item:** Demo operator should verify one untimed and one timed mid-block close/reopen plus reload, then acknowledge an all-complete restored result screen. A real screen-reader pass remains valuable for the restored item label and timer announcement.
+- **Unresolved risks:** Timing mode itself is inferred from a positive saved elapsed value; a timed session reloaded before its first elapsed second is indistinguishable from untimed evidence. This does not affect resume position or mastery, but persisting the toggle separately would require an explicit evidence-contract change.
+
 ## 2026-07-12 — SIM-01 Mixed Simulation mandatory Terminal gate
 
 - **Outcome:** Implemented learner-facing `EX-SIM01-MIXED` immediately after Capstone Readiness. The one-card-at-a-time block contains all twelve packaged course-authored scenarios, five concept/capability and seven implementation items, covers all fifteen objectives, and requires exact decision plus reason at strict 24/24 before progression. No SIM-02 runtime work was added.
