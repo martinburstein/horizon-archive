@@ -1,5 +1,14 @@
 # Player Agent Work Log
 
+## 2026-07-12 — Round 26 Capstone prerequisite-freshness audit
+
+- **Work completed:** Performed a bounded adversarial playtest of the newly integrated `EX-L0603-OFFLINE-CAPSTONE` and the repaired Objective Ledger → Remediation Planner → Capstone progression. Challenged the prerequisite panel, primary/transfer/closed-note path, privacy, reload recovery, Continue focus, canonical 640×480 and narrow captures, and complete title-to-credits progression.
+- **Finding:** The Capstone prerequisite panel makes an unsupported freshness claim. `deriveCapstonePrerequisiteGate()` assigns `freshEvidenceCurrent` directly from `routesClosed`; it has no separate recency, fresh-transfer, revision, or source-verification evidence. Therefore any mastered Planner with twelve route records displays `PASS · fresh evidence current` and satisfies the strict Capstone gate, even though only route completion was established. The focused unit test and full E2E reinforce this conflation by treating planner mastery/route count as sufficient freshness evidence.
+- **Files changed:** Updated this Player Agent work log only. No gameplay, curriculum, art, test, or QA-binary changes remain.
+- **Validation performed:** Read applicable `AGENTS.md` files and current Player, Exercise, and Accessibility logs; inspected Capstone curriculum contracts, evaluator, runtime wiring, sanitizer, tests, styles, and E2E journey. Ran **149/149 unit tests** and the complete title-to-credits E2E; all passed with zero runtime errors. The E2E produced expected temporary capture deltas, which were fully reverted, including removal of three new Capstone QA binaries.
+- **Next recommended item:** Coder Agent should make freshness an independently derived, sanitized prerequisite: record or derive a bounded fresh-transfer/source-verification marker distinct from planner mastery, downgrade missing/stale evidence, and test direct open, reload, forged saves, and visibly separate `routes closed` versus `fresh evidence current` states.
+- **Unresolved risks:** Current evidence schemas do not contain a timestamp or revision/source-version contract, so “fresh” needs a product definition that avoids sensitive timestamps or false claims. Automated DOM checks do not substitute for a real screen-reader pass of the warning, trace equivalent, and prerequisite panel at canonical and narrow layouts.
+
 ## 2026-07-12 — Round 25 Remediation Planner learner-state audit
 
 - **Work completed:** Performed a bounded read-only audit of the complete mandatory progression through `EX-L0602-REMEDIATION-PLANNER`, concentrating on whether the planner actually routes the learner's measured Objective Ledger gaps.
@@ -8,4 +17,3 @@
 - **Validation performed:** Read root and game `AGENTS.md`; inspected Exercise Agent and current progression logs, L-06-01/L-06-02 contracts, planner scenario bank, evaluator, runtime wiring, focused unit tests, and full E2E assertions. Ran the complete game unit suite: **142/142 passed**. Confirmed the existing E2E validates canned route completion but not Objective Ledger → Planner data flow.
 - **Next recommended item:** Coder Agent should make Remediation Planner learner-state-routed: preserve or derive weak/not-yet-assessed Objective Ledger records before the all-ready gate clears them, build the planner queue and sanitized routes from those records, and add tests proving exact objective/dimension/pointer transfer. If the ledger is genuinely all-ready, present spaced-review or readiness-maintenance semantics instead of claiming weak routes exist.
 - **Unresolved risks:** Changing the transition semantics affects strict mastery, save sanitization, reload recovery, progression gating, and the definition of whether L-06-02 is remediation-only or universally mandatory. The product decision should remain offline/no-authority and must not persist learner prose or exam content.
-
