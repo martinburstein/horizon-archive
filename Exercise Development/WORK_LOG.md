@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — SIM-01 Mixed Simulation mandatory Terminal gate
+
+- **Outcome:** Implemented learner-facing `EX-SIM01-MIXED` immediately after Capstone Readiness. The one-card-at-a-time block contains all twelve packaged course-authored scenarios, five concept/capability and seven implementation items, covers all fifteen objectives, and requires exact decision plus reason at strict 24/24 before progression. No SIM-02 runtime work was added.
+- **Timing/remediation:** Untimed mode is the default and explicitly fully equivalent for mastery. A learner may enable the optional 25-minute diagnostic timer, but elapsed time never changes correctness, remediation, or mastery. Every miss receives separate Teacher-owned objective tags and a mapped retrieve → guided repair → independent retry route; memorizing order is rejected as evidence.
+- **Safety/privacy/accessibility:** Persistent warning and text equivalent state course-authored/not-exam/no-guarantee/no-service/no-authority boundaries, 5/7 domain balance, all-objective coverage, two-dimension scoring, and untimed equivalence. Evidence stores only fixed IDs/tags, correctness, attempts, hints, confidence, optional elapsed seconds, and mastery—never item text, notes, content, credentials, endpoints, payloads/responses, action requests, choices, or prose. Direct/reload Continue focus and associated field/live-region feedback follow the established Terminal shell.
+- **Files changed:** Added `mixedSimulationExercise.js` and focused tests; updated `App.jsx`, public manifest, E2E route/registry, and this log. No QA binaries were generated or modified.
+- **Validation:** SIM-01 validator self-test passes and packaged reference scores 24/24; 155/155 unit tests pass; production build passes; E2E script syntax, manifest JSON, and diff check pass. Full screenshot-producing E2E was intentionally not run.
+- **Next recommended item:** Player Agent should challenge every wrong dimension independently, objective remediation links, timed/untimed equality, timer toggling, close/reopen elapsed state, reload privacy/focus, narrow scrolling, and no-authority copy.
+- **Unresolved risks:** This original offline simulation is not Microsoft exam content and cannot predict or guarantee an exam result. Exam/product volatility still requires official reverification, and SIM-02/CUM retention remains a later separate tranche.
+
 ## 2026-07-12 — Round 26 Capstone independent freshness evidence fix
 
 - **Work completed:** Separated Capstone freshness from Remediation Planner route closure. The prerequisite gate now requires six independently passing Planner transfer records plus exact packaged lesson/source route verification. It exposes a bounded `L0602-PACKAGED-SOURCES-V1` revision and 6/6 count; route mastery/count remains a separate prerequisite.
