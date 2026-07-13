@@ -62,6 +62,7 @@ test("legacy gameplay saves migrate without losing established progress", () => 
 
 test("App wires the complete resumable opening and exact selected meadow art", () => {
   const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
   assert.match(source, /Glass Meadow Example\.png/);
   assert.match(source, /data-playtest-marker="CREATE_SAVE_FILE"/);
   assert.match(source, /data-playtest-marker="CHARACTER_NAME_FORM"/);
@@ -72,4 +73,9 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /setMode\(saved\.finished \? "ending" : saved\.opening\.step\)/);
   assert.match(source, /className="scene-art glass-meadow-art"[\s\S]*src=\{glassMeadowImage\}/);
   assert.doesNotMatch(source, /<PixelMeadow/);
+  assert.equal(source.match(/<CanonicalGameFrame enabled>/g)?.length, 5);
+  assert.match(source, /<CanonicalGameFrame enabled=\{scene\.id === "meadow" \|\| scene\.id === "ruins"\}>/);
+  assert.match(styles, /\.prologue-field \{[^}]*background: #090b14;/s);
+  assert.doesNotMatch(styles, /repeating-linear-gradient/);
+  assert.match(styles, /\.canonical-game-frame \.scene-art\.glass-meadow-art \{[^}]*object-fit: cover;[^}]*image-rendering: pixelated;[^}]*image-rendering: crisp-edges;/s);
 });

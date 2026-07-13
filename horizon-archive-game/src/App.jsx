@@ -1712,6 +1712,7 @@ export function App() {
 
   if (mode === "title") {
     return (
+      <CanonicalGameFrame enabled>
       <main className="game-shell title-screen" data-playtest-marker="TITLE_SCREEN">
         <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
@@ -1726,11 +1727,13 @@ export function App() {
           <p className="title-note">A point-and-click Python mystery</p>
         </section>
       </main>
+      </CanonicalGameFrame>
     );
   }
 
   if (mode === "create-save") {
     return (
+      <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen" data-playtest-marker="CREATE_SAVE_FILE">
         <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
@@ -1749,11 +1752,13 @@ export function App() {
           </div>
         </section>
       </main>
+      </CanonicalGameFrame>
     );
   }
 
   if (mode === "character-name") {
     return (
+      <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen" data-playtest-marker="CHARACTER_NAME_FORM">
         <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
@@ -1779,12 +1784,14 @@ export function App() {
           </div>
         </form>
       </main>
+      </CanonicalGameFrame>
     );
   }
 
   if (mode === "prologue") {
     const beat = temporaryPrologueBeats[prologueBeat];
     return (
+      <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen prologue-screen" data-playtest-marker={`TEMPORARY_PROLOGUE_${prologueBeat + 1}`}>
         <div className="prologue-field" aria-hidden="true" />
         <section className="opening-card prologue-card" aria-labelledby="prologue-heading">
@@ -1797,11 +1804,13 @@ export function App() {
           </button>
         </section>
       </main>
+      </CanonicalGameFrame>
     );
   }
 
   if (mode === "chapter-reveal") {
     return (
+      <CanonicalGameFrame enabled>
       <main className="game-shell chapter-reveal-screen" data-playtest-marker="CHAPTER_ONE_REVEAL">
         <img className="title-art chapter-reveal-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
@@ -1812,6 +1821,7 @@ export function App() {
           <button className="primary-action" type="button" onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>
+      </CanonicalGameFrame>
     );
   }
 
@@ -1834,7 +1844,7 @@ export function App() {
   }
 
   return (
-    <CanonicalGameFrame enabled={scene.id === "ruins"}>
+    <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         {scene.id === "meadow" ? (

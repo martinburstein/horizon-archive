@@ -1,5 +1,14 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 — Opening and Glass Meadow canonical frame
+
+- **Completed:** moved title, save creation, character naming, all three temporary prologue beats, Chapter I reveal, and first Meadow gameplay into the same canonical frame. Replaced the prohibited repeating CSS prologue field with one solid period-authentic surface. The selected `Glass Meadow Example.png` remains the unchanged raster target and uses centered cover cropping with pixelated/crisp presentation; no procedural scene approximation was added.
+- **Reference coverage:** applied the locked Horizon canvas contract and the selected Glass Meadow composition only; no copyrighted frames, extracted assets, old `320 x 180` blockout, ship, or protagonist were introduced.
+- **Files changed:** `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/openingFlow.test.js`, and this log.
+- **Validation:** all 166 unit tests pass; production build passes; focused assertions lock five opening wrappers, Meadow canonical ownership, solid prologue treatment, selected-raster import, centered cover crop, and pixelated/crisp rendering. `git diff --check` is the final handoff gate.
+- **Measured constraints:** canonical presentation remains `640 x 480` with a `640 x 360` world plate and `640 x 120` interface; constrained hosts use the authored `320 x 240` frame. Opening cards are bounded to `496 x 448` canonical and `296 x 224` narrow with whole-pixel borders, shadows, type, and controls.
+- **Uncertainty / next:** no new visual capture or replacement art was produced in this bounded pass. Location Scout and Curse Art Director should review the unchanged selected raster’s production treatment; later screens remain outside this tranche.
+
 ## 2026-07-12 — Playable demo visual freeze
 
 - **Completed:** performed the final bounded visual QA pass across the frozen title-to-credits slice through SIM-01. Reviewed canonical 640 x 480, authored 320 x 240, and scaled-host first-run scene captures plus representative Terminal states; checked post-Capstone launch/departure labels, credits gating, text containment, one-card hierarchy, focus/state cues, grayscale readability, reduced motion, and square-pixel presentation. No demo-visible defect warranted destabilizing code, CSS, or art.
