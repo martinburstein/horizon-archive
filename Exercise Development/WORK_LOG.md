@@ -1,5 +1,14 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — Round 25 Remediation Planner learner-state routing fix
+
+- **Work completed:** Fixed the confirmed contradiction between Objective Ledger and Remediation Planner. Each fresh Planner open now derives a sanitized, session-only learner-state snapshot from actual Ledger statuses and evidence pointers. Non-ready or pointerless objectives become the measured remediation queue. When all 15 objectives are ready—the only state currently allowed through the mandatory gate—the UI explicitly presents readiness-maintenance drills and states that they are not weak-objective claims.
+- **Behavior/privacy:** Direct open and sanitized reload both re-derive the snapshot from persisted allowlisted Ledger evidence. Arbitrary notes and private fields cannot enter it. Existing Planner choices and prose remain session-only; no exam text, credentials, endpoints, payloads, responses, action requests, selections, or free text were added to persistence. Course/no-guarantee/no-service/no-action safeguards and Pilot/System/Teacher ownership remain unchanged.
+- **Files changed:** `horizon-archive-game/src/remediationPlannerExercise.js`, `horizon-archive-game/test/remediationPlannerExercise.test.js`, `horizon-archive-game/src/App.jsx`, `playtest/e2e-playthrough.mjs`, and this log. No QA binaries were regenerated or modified.
+- **Validation:** Added focused tests for exact weak-record transfer, missing-pointer handling, all-ready maintenance selection, and private-field exclusion. All 143 unit tests pass; production build passes; `git diff --check` passes. E2E expectations were updated for the maintenance labels but the screenshot-producing full journey was intentionally not run, avoiding incidental QA-binary regeneration.
+- **Next recommended item:** Player Agent should verify the all-ready queue language, close/reopen and reload derivation, screen-reader order for fifteen maintenance records, and a controlled non-ready fixture that shows only exact measured gaps.
+- **Unresolved risks:** The current mandatory progression still permits Planner only after Ledger mastery, so measured-remediation mode is defensive/future-facing while the reachable path is readiness maintenance. Changing that unlock rule would be a separate product decision affecting mastery and progression semantics.
+
 ## 2026-07-12 — L-06-02 Offline Remediation Planner mandatory Terminal gate
 
 - **Outcome:** Implemented `EX-L0602-REMEDIATION-PLANNER` and mounted it after Objective Ledger as the final mandatory ruins gate. Primary and fresh transfer each require 12/12 across six planning boundaries, twelve sanitized source-routed records must be complete, and a four-part Pilot-owned closed-note remediation plan must pass. No L-06-03/CUM-01 work was added.
