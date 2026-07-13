@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Offline Capstone Readiness visual integration gate
+
+- **Completed:** audited the new L-06-03 Capstone Readiness primary, transfer, closed-note, and completion path. Corrected one essential containment defect by giving warning, trace, prerequisite gate, and form explicit rows and a contained prerequisite scroller. Canonical 640 x 480, authored 320 x 240, scaled desktop, text containment, prerequisite state cues, hierarchy, focus, accessibility, and square-pixel chrome now hold together without copying protected art.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `playtest/e2e-playthrough.mjs`, `Pixel Patrol/PIXEL_METRICS.md`, `Pixel Patrol/UI_AND_TYPE_SPEC.md`, `Pixel Patrol/QA_CHECKLIST.md`, and this log. Added reproducible primary/narrow/closed-note E2E visual checkpoints; generated QA binaries were removed before handoff.
+- **Validation:** all 149 unit tests, production build, and full title-to-credits E2E pass with zero runtime errors. The three generated captures were visually inspected and byte-distinct before removal. E2E confirms prerequisite gate, both 12/12 forms, closed-note defense, privacy, direct/reload Continue focus, and credits; `git diff --check` passes.
+- **Next recommended item:** retain the four-row contract as later simulation/cumulative gates arrive; do not compress prerequisite evidence into a badge or color-only readiness state.
+- **Unresolved risks:** the complete warning dominates the first 320 x 240 viewport by design. The built JavaScript remains above the 500 kB advisory threshold, with no observed visual or interaction defect in this run.
+
 ## 2026-07-12 — Offline Remediation Planner final visual gate
 
 - **Completed:** audited complete Remediation Planner primary, transfer, closed-note, and mastered flow. Corrected one essential layout defect: its four-child workspace inherited a two-row grid and hid the eleven-field route equivalent. Added explicit warning/equivalent/queue/form rows, contained queue scrolling, and canonical/narrow explanation columns. The six planning boundaries, 12 route records, stop/escalate, evidence reassessment, confidence-not-mastery, ownership, focus, Continue handoff, and square-pixel chrome are now coherent.

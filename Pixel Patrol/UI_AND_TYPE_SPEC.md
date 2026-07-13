@@ -228,3 +228,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Preserve reading order: Machine/file/status -> course-authored/not-exam/no-guarantee warning -> eleven-field route equivalent -> System 12-route queue -> Pilot route/prose -> neutral System validator -> gap-specific Teacher reconstruction/escalation.
 - Route order is objective, failed dimension, evidence pointer, measured priority, prerequisite lesson, current official source, retrieval, guided practice, fresh transfer, independent reassessment, then stop/escalate.
 - Confidence, repeated answers, domain averages, planner completion, and guarantees never create mastery. The queue and form are contained scrollers and cannot cover persistent boundaries.
+
+## Offline Capstone Readiness hierarchy
+
+- Preserve reading order: Machine/file/status -> offline/not-exam/no-guarantee warning -> client/workload/schema trace -> neutral System prerequisite gate -> Pilot choice or defense -> System score -> Teacher remediation/recommendation.
+- Prerequisite states communicate 15/15 objective evidence, closed remediation routes, and current fresh evidence with text and shape, never color alone. Confidence cannot alter readiness.
+- The prerequisite gate and form are contained regions and cannot cover persistent safety or trace content. Direct and restored completion focus Continue.

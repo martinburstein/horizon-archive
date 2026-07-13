@@ -158,6 +158,11 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Confidence and domain averages never render as mastery; Teacher remediation names the current objective.
 - [ ] Objective Ledger captures remain byte-distinct across canonical, narrow, and host context; ledger and form remain traversable.
 - [ ] Direct/restored strict mastery moves focus to Continue with Pilot/System/Teacher separation intact.
+- [ ] Capstone warning, trace equivalent, prerequisite gate, and form occupy four explicit ordered rows without overlap.
+- [ ] Objective, remediation, and fresh-evidence prerequisites use explicit PASS/MISSING/OPEN/STALE labels rather than color alone.
+- [ ] Client, text/speech direction, schema/null/provenance, and prerequisite flow remain legible and ordered.
+- [ ] Canonical, narrow, and scaled-host Capstone captures are reproducible and byte-distinct; generated binaries are not retained after review.
+- [ ] Capstone direct/restored completion moves focus to Continue with Pilot/System/Teacher separation intact.
 - [ ] Planner warning, eleven-field equivalent, 12-route queue, and form occupy four explicit ordered rows without overlap.
 - [ ] Twelve route records expose objective, failed dimension, lesson/source, and reassessment status.
 - [ ] Retrieval -> guided repair -> fresh transfer -> independent reassessment -> stop/escalate remains ordered.

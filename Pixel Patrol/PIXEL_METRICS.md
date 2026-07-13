@@ -154,3 +154,9 @@ At 1x capture:
 - Planner uses four explicit rows: course-authored/not-exam/no-guarantee warning, eleven-field route equivalent, contained 12-route queue, then contained scenario or closed-note form. All remain ordered and independently traversable.
 - At 640 x 480 the complete route equivalent, route count, and validator remain visible. At 320 x 240 the complete warning leads; route equivalent, queue, and form remain reachable vertically.
 - Closed note uses four route/safeguard fields in one canonical row and one narrow column. Outer Machine/file/status chrome remains fixed.
+
+## Offline Capstone Readiness viewport contract
+
+- Capstone uses four explicit rows: offline/not-exam/no-guarantee warning, trace equivalent, contained prerequisite gate, then contained scenario or closed-note form.
+- At 640 x 480 the complete trace and prerequisite state remain visible before form traversal. At 320 x 240 the complete warning leads and all later regions remain reachable vertically.
+- Preserve whole-pixel seams, fixed Machine/file/status chrome, native accessible controls, and integer-scaled 4:3 presentation.
