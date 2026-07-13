@@ -30,6 +30,10 @@ The sequence QA advances one group at a time from top to bottom. Every step chan
 
 The motif replaces only the physical Terminal overlay within AB-01; it does not alter the Tidal Lens, causeway, route, exit, or lore. It occupies world rows below 360 and never enters interface framing. When its exercise opens, canonical rows `461–479` remain the flat quiet help-footer zone defined in [AB-01 canonical framing](../CANONICAL_FRAME.md).
 
+## Accessibility handoff
+
+Persistent live labels are mandatory for Principle, Stakeholder, Mitigation, Accountable Owner, current phase, completion state, and validation feedback. Keyboard and screen-reader order must follow the same top-to-bottom physical sequence. Every state changes shape and value rather than color alone, but the motif cannot be the sole carrier of ownership, risk, mitigation, or completion meaning. Runtime text remains authoritative, and reduced-motion presentation must use the delivered static frames.
+
 ## Originality and legibility
 
 The crown follows Horizon Archive's established three-fin Machine family. The stacked diamond, paired parties, intervention bridge, and anchored owner are new project geometry and do not reproduce reference-game assets or UI. At native 1x, the read order is crown → four stacked groups → grounded base; at 2x, every pixel is an exact 2 x 2 square.
