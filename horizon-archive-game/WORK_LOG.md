@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-13 — Coder handoff: first-Terminal orientation reflow
+
+- **Outcome:** Reflowed the four-step first-Terminal orientation at the canonical 640×480 CRT size into a compact two-pane body: explanation/disclaimer stays on the left, while example or storage-boundary evidence, prompt, two 44px answers, and live retry feedback stay together on the right. The action pane no longer uses internal scrolling in canonical layout. The longer storage-boundaries step receives a wider action pane and denser period-consistent boundary rows without changing any wording, answer semantics, recovery, focus, mastery, or later Terminal exercises.
+- **Narrow behavior:** Added an explicit logical-narrow override independent of host media-query width. At 320×240 or height-constrained narrow layout, orientation returns to a one-column flow inside the existing Terminal scroll container; answers remain 44px tall, boundary rows stack, and content remains recoverable instead of being clipped outside the CRT.
+- **Files changed:** `src/App.jsx`, `src/styles.css`, `test/terminalExercise.test.js`, and this `WORK_LOG.md`.
+- **Validation:** Focused Terminal tests passed **6/6**; complete game unit suite passed **169/169**; production build passed with the existing large-chunk advisory; `git diff --check` passed with line-ending notices only. Regression contracts identify the active `storage-boundaries` step and require canonical two-pane/no-action-scroll layout, compact boundary rows, 44px answers, and narrow one-column/scroll fallback. The in-app preview was started at a canonical viewport but its webview did not attach; it was closed without generating captures, and no unrelated browser backend was used.
+- **Findings:** Runtime and source contracts are complete, but live pixel bounds could not be remeasured in this agent turn because the approved preview surface was unavailable. Existing bundle-size and production-art risks are unchanged.
+- **Handoff:** Player Agent should repeat the canonical bounds measurement across all four steps, with special attention to `.orientation-action` on `storage-boundaries` (`scrollHeight <= clientHeight` and both answers plus feedback inside bounds), then confirm narrow Terminal scrolling reaches every control without horizontal escape. Accessibility Agent should retain the later real screen-reader and zoom/reflow check.
+- **Status:** Ready to advance.
+
 ## 2026-07-13 — Coder handoff: full-screen Glass Meadow CRT presentation
 
 - **Work completed:** Promoted the user-selected Glass Meadow painting to the visual center of the playable demo. The 640x480 authored game now scales fluidly to nearly the full available display instead of remaining stuck at 1x on common widescreen viewports. Added an original raster late-1990s charcoal CRT bezel with molded highlights, corner screws, two amber lamps, and two knobs. The bezel frames every opening/game state without covering the logical playfield. The Meadow alone uses smooth raster sampling so its realistic glass detail survives enlargement; native production pixel assets keep nearest-neighbor rendering.

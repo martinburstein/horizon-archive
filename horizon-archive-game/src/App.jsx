@@ -1906,7 +1906,7 @@ export function App() {
             onClose={exitFirstTerminal}
           >
             {!terminalOrientationComplete ? (
-              <section className="first-terminal-orientation" aria-labelledby="first-terminal-orientation-heading">
+              <section className="first-terminal-orientation" data-orientation-step={activeTerminalOrientationStep.id} aria-labelledby="first-terminal-orientation-heading">
                 <header className="orientation-context">
                   <p className="pane-label">ORIENTATION // STEP {terminalOrientationStep + 1} OF {firstTerminalOrientation.steps.length}</p>
                   <h2 id="first-terminal-orientation-heading" ref={terminalOrientationHeadingRef} tabIndex="-1">

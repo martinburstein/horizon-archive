@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - First-Terminal orientation reflow gate
+
+- **Outcome:** passed the fixed first-Terminal orientation reflow without runtime edits. Canonical two-pane presentation keeps all prompts, both 53.54 px answer targets, and feedback visibly inside the action pane without learner scrolling; narrow presentation uses one-column 44 px answers, reachable vertical scrolling, and no horizontal overflow.
+- **Files:** added `Accessibility Sentinel/opening-demo/FIRST_TERMINAL_REFLOW_REVIEW.md` and updated this log only; runtime code, tests, and assets were not changed.
+- **Validation:** accepted Player's fresh canonical/narrow geometry and wrong-answer recovery measurements; reviewed current App/CSS/tests and Coder/Player logs; focused Terminal/frame tests passed 7/7. Current Coder evidence records 169/169 full tests and a passing production build.
+- **Next:** preserve the two-pane grouping, visible feedback, 44 px targets, one-column narrow scroll path, and heading/trigger/editor focus lifecycle.
+- **Risk:** Player removed temporary screenshots, so this is not a screenshot-based visual or conformance claim. Human NVDA, switch control, forced colors, and 200% zoom remain unobserved.
+- **Status:** `PASS - orientation reflow cleared`
+
 ## 2026-07-13 - Glass Meadow CRT P2 re-review
 
 - **Outcome:** passed the corrected CRT presentation. The 640 x 480 host now uses the compact layout at 1.983x, the zero-width narrow bezel gives exact 320 x 240 playfield containment, and all five command-panel controls meet 24 px minimum height with 52-67 px widths at native narrow and 29.2 px height at 1280 x 720.

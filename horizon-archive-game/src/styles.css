@@ -717,9 +717,30 @@ h1 {
 .canonical-game-frame .terminal-workbench { inset: 8px; width: auto; height: auto; overflow: auto; }
 .canonical-game-frame .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 8px; width: auto; height: auto; }
 .canonical-game-frame .first-terminal-orientation { display: grid; overflow: hidden; }
-.canonical-game-frame .orientation-action { min-height: 0; }
-.canonical-game-frame .orientation-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.canonical-game-frame .orientation-boundaries div { grid-template-columns: 150px minmax(0, 1fr); gap: 8px; }
+.canonical-game-frame[data-canonical-layout="canonical"] .first-terminal-orientation {
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.48fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-context {
+  min-height: 0;
+  padding: 8px 10px;
+  overflow: hidden;
+  border-right: 1px solid #303640;
+  border-bottom: 0;
+}
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-context h2 { margin: 3px 0 5px; font-size: 13px; line-height: 1.15; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-context p { font-size: 10px; line-height: 1.25; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-disclaimer { margin-top: 5px !important; padding: 5px 6px; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-action { min-height: 0; padding: 8px 10px; overflow: hidden; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-action pre { margin-bottom: 6px; padding: 6px 8px; font-size: 10px; line-height: 1.25; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-action h3 { margin-bottom: 5px; font-size: 11px; line-height: 1.25; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-choices button { min-height: 44px; padding: 6px 8px; font-size: 10px; line-height: 1.2; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-feedback { min-height: 12px; margin-top: 5px; font-size: 9px; line-height: 1.2; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-boundaries { gap: 3px; margin-bottom: 5px; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-boundaries div { grid-template-columns: 104px minmax(0, 1fr); gap: 5px; padding: 4px 6px; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-boundaries dt { font-size: 9px; line-height: 1.2; }
+.canonical-game-frame[data-canonical-layout="canonical"] .orientation-boundaries dd { font-size: 9px; line-height: 1.2; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"] { overflow: hidden; }
 .canonical-game-frame .responsible-ai-form { display: block; min-height: 0; overflow: auto; }
 .canonical-game-frame .responsible-ai-fields { margin: 10px 0; overflow: visible; }
@@ -821,3 +842,8 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .scene-status strong { font-size: 8px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench,
 .canonical-game-frame[data-canonical-layout="narrow"] .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 4px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .first-terminal-orientation { display: block; overflow: visible; }
+.canonical-game-frame[data-canonical-layout="narrow"] .orientation-context { padding: 8px; overflow: visible; border-right: 0; border-bottom: 1px solid #303640; }
+.canonical-game-frame[data-canonical-layout="narrow"] .orientation-action { min-height: 280px; padding: 8px; overflow: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] .orientation-choices { grid-template-columns: 1fr; }
+.canonical-game-frame[data-canonical-layout="narrow"] .orientation-boundaries div { grid-template-columns: 1fr; gap: 3px; }
