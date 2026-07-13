@@ -109,6 +109,9 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /TEMPORARY_PROLOGUE_/);
   assert.match(source, /data-playtest-marker="CHAPTER_ONE_REVEAL"/);
   assert.match(source, /data-opening-objective="terminal-search">OBJECTIVE \/\/ FIND A TERMINAL/);
+  assert.match(source, /my instruments find no road or landing marker/);
+  assert.match(source, /I'm down\. Glass tubes rise from flush patterns in the floor\. Their states repeat, but not in rows\./);
+  assert.equal((source.match(/I'm down\./g) ?? []).length, 1);
   assert.match(source, /opening: createOpeningProgress\(/);
   assert.match(source, /setMode\(saved\.finished \? "ending" : saved\.opening\.step\)/);
   assert.match(source, /className="scene-art glass-meadow-art"[\s\S]*src=\{glassMeadowImage\}/);

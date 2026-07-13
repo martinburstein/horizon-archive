@@ -26,6 +26,7 @@
 - Confirmed the modal focuses its title, disables background hotspots, closes safely, and restores the scene interaction.
 - Confirmed the save-replacement warning is programmatically associated with the destructive create action.
 - Confirmed 320x240 has no page overflow and key narrow-interface text is 8px logical type (status metadata remains 6px; location and controls are 8px).
+- Confirmed the open Terminal stays inside the world band at native 640x480 (`x=8, y=8, 624x343`) and native 320x240 (`x=4, y=4, 312x171`), with zero page overflow and 44px answer targets.
 - Browser console warnings/errors: none.
 
 ## Comparison history
@@ -35,6 +36,7 @@
 - Earlier recorder punctuation rendered as mojibake; corrected to a valid em dash.
 - Earlier Meadow Terminal width escaped the canonical frame at wide browser sizes; constrained to the authored game frame.
 - Earlier narrow controls rendered at 4-6px; raised the player-critical controls and dialogue to 8px.
+- A later native 640x480 pass found the general mobile grid rule overriding canonical rows and pulling the Terminal above the frame; a higher-specificity canonical row contract now keeps both 640x480 and 320x240 layouts bounded.
 
 ## Remaining non-blocking art note
 

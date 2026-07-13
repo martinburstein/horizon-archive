@@ -241,7 +241,7 @@ const temporaryPrologueBeats = [
   {
     label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 3 OF 3",
     heading: "A ruler-straight horizon",
-    body: "Placeholder sequence: the horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.",
+    body: "Placeholder sequence: my instruments find no road or landing marker. Glass states repeat across a ruler-straight horizon without forming rows.",
   },
 ];
 
@@ -1836,7 +1836,7 @@ export function App() {
           <p className="eyebrow">Chapter I</p>
           <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
           <p className="prologue-recorder">PILOT // FLIGHT RECORDER — {characterName}</p>
-          <p>I'm down. The horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.</p>
+          <p>I'm down. Glass tubes rise from flush patterns in the floor. Their states repeat, but not in rows.</p>
           <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>

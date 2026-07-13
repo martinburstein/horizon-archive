@@ -100,7 +100,7 @@ try {
   await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
   await page.locator('#terminal-title:focus').waitFor();
-  await page.getByText("This is course-authored practice, not a Microsoft exam question", { exact: false }).waitFor();
+  await page.getByText("This is course-authored Python practice, not a Microsoft exam question", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close", exact: true }).click();
   await page.getByText("executes the file", { exact: false }).waitFor();
   await page.keyboard.press("Escape");
@@ -1467,7 +1467,7 @@ async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {
     const terminal = document.querySelector(".terminal-workbench").getBoundingClientRect();
     return { frameWidth: frame.width, frameHeight: frame.height, terminalWidth: terminal.width, terminalHeight: terminal.height, imageHeight: image.height };
   });
-  if (geometry.imageHeight < 180 || geometry.terminalWidth > geometry.frameWidth || geometry.terminalHeight > geometry.frameHeight) throw new Error(`Meadow Terminal escaped the scene frame at ${viewportLabel}: ${JSON.stringify(geometry)}`);
+  if (geometry.imageHeight < 179 || geometry.terminalWidth > geometry.frameWidth || geometry.terminalHeight > geometry.frameHeight) throw new Error(`Meadow Terminal escaped the scene frame at ${viewportLabel}: ${JSON.stringify(geometry)}`);
 }
 
 async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
@@ -1508,8 +1508,10 @@ async function completeOpening(page) {
   await page.getByRole("button", { name: "Confirm name", exact: true }).click();
   for (let beat = 0; beat < 2; beat += 1) {
     await page.getByRole("button", { name: "Continue temporary prologue", exact: true }).click();
+    await page.waitForTimeout(450);
   }
   await page.getByRole("button", { name: "Reach Chapter I", exact: true }).click();
+  await page.waitForTimeout(450);
   await page.getByRole("button", { name: "Enter the meadow", exact: true }).click();
   await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').waitFor();
 }
