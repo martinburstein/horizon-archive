@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-12 — Frozen playable-demo final accessibility gate
+
+- **Outcome:** issued a formal PASS/freeze for the complete playable demo through SIM-01. Keyboard/focus, direct launch, sanitized mid-block resume derivation, close/reopen/reload, timer equivalence, semantic names/errors, ownership, privacy, persistent no-guarantee/no-authority copy, constrained/reduced-motion presentation, and the native no-color SIM-01 motif satisfy the established release contracts. No runtime fix was warranted.
+- **Files:** `Accessibility Sentinel/final-demo/FINAL_RELEASE_REPORT.md` and this log only. Incidental E2E-regenerated QA PNG changes were reverted.
+- **Validation:** 159/159 unit tests, production build, all 14 SIM-01 mixed-motif acceptance checks, original-resolution isolation inspection, and the 96.6-second full title-to-credits E2E passed with credits reached, all registered gates true, and zero runtime errors.
+- **Findings:** no demo blocker. P2 risks remain for an observed NVDA announcement-order pass and Windows forced-colors/browser-zoom rendering; P3 remains for a timed session reloaded before its first persisted elapsed second, without effect on position, correctness, or completion.
+- **Handoff:** keep the runtime frozen and focus on demo packaging/launch reliability. Before any accessibility-conformance claim, perform one human NVDA keyboard pass plus Windows forced-colors and browser-zoom checks through Capstone and SIM-01.
+- **Status:** `release gate passed; playable demo frozen through SIM-01`
+
 ## 2026-07-12 — Round 13 final release gate
 
 - **Outcome:** passed the complete Text Analysis Terminal after associating its persistent terminology bridge with the dialog announcement. Approved the repaired Offline Client Bridge motif for integration with mandatory live labels/privacy safeguards.
