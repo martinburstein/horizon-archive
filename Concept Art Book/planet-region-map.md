@@ -6,8 +6,8 @@ This is a production map, not an astronomical claim. Names are spoiler-safe pilo
 Andromeda survey corridor
 ├── World A — Glass Meadow World [active]
 │   └── Twilight Highlands
-│       ├── GM-00 Landing Shelf [selected plate]
-│       └── GM-01 Glass Meadow [selected dual-node direction / playable]
+│       ├── GM-00 Landing Shelf [historical plate / first-person replacement required]
+│       └── GM-01 Glass Meadow [playable blockout / Builder garden-masterwork replacement required]
 ├── World B — Archive Basin World [active]
 │   └── Drowned Archive Basin
 │       └── AB-01 Drowned Archive [production pixel package ready / smooth plate currently playable]
@@ -33,10 +33,10 @@ This line records player-facing progression only. It does not assert that the lo
 
 | Priority | Need | Why |
 |---|---|---|
-| 1 | Arrival threshold | Establishes the pilot, human scale, entry direction, and first act of exploration. Completed by GM-00. |
+| 1 | Arrival threshold | Establishes environmental scale, entry direction, and the first act of exploration without showing the party or ship. GM-00 requires replacement. |
 | 2 | Ruins Terminal identity | Separates the exercise node from the monumental archive and tightens the interaction target. Completed by AB-01. |
 | 3 | Final-scene Evidence Terminal | Separates the multimodal exercise node from the automaton while preserving the automaton's narrative focus. Completed by WC-01. |
-| 4 | Meadow dual-node identity | Separates the First Signal Petal Terminal from its prerequisite-gated route marker. Completed by GM-01. |
+| 4 | Meadow dual-node identity | Separates the First Signal Petal Terminal from its prerequisite-gated route marker inside a visibly stewarded Builder masterwork. Interaction blockout exists; production replacement remains required. |
 | 5 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
 | 6 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
 | 7 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |

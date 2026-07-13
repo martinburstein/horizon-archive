@@ -2,6 +2,8 @@
 
 ## HA-LS-001
 
+> **Historical exploration prompt — superseded for production.** This prompt predates the first-person/no-ship lock and Builder aesthetic doctrine. Its survey-craft, crystal-garden, and decorative-light instructions are retained only as provenance and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and the current [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md).
+
 - **Date:** 2026-07-11
 - **Use case:** `stylized-concept`
 - **Purpose:** first clean environment plate; arrival threshold before the Glass Meadow
@@ -117,6 +119,8 @@ Avoid: changing or adding characters, changing automaton anatomy, changing Termi
 The initial candidate passed anatomy, tone, and silhouette separation but placed the node too far left for a 320px centered crop. The selected edit moved it into the responsive safe band. Passed: original composition; exact three indicators; blank inspection surface; grounded Terminal-family node; automaton narrative dominance; open path; desktop and narrow crop survival; no text or spoiler content.
 
 ## HA-LS-004
+
+> **Historical exploration prompt — superseded for production.** This prompt predates the first-person/no-ship lock and Builder aesthetic doctrine. Its ship, arbitrary crystalline-ecology, and glow-led instructions are retained only as provenance and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and the current [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md).
 
 - **Date:** 2026-07-12
 - **Use case:** `stylized-concept` followed by `precise-object-edit`

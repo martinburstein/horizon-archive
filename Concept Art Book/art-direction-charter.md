@@ -19,6 +19,20 @@ The [LucasArts adventure-game lineage](https://en.wikipedia.org/wiki/LucasArts_a
 
 The historical references contain a bottom dialogue panel. New **exploration plates** should contain only the 16:9 world view; UI is composed separately by the game. This keeps concept masters reusable while preserving the landscape-first game presentation. A selected exploration plate must be re-authored into a production pixel plate instead of being copied or smoothly downscaled.
 
+## Builder aesthetic doctrine
+
+Horizon Archive interprets beauty through the Builders' collective eye. A great environment should look like a civic, ecological, or ritual work developed by generations or a whole design movement over centuries. Its splendor comes from visible purpose, sustained care, and accumulated decisions.
+
+- Show multiple authorship through period joints, workshop variations, coordinated irregularity, and distinct repair vocabularies.
+- Expose at least three construction or stewardship phases: foundational fabric, later adaptation, and maintained or repaired present condition.
+- Let public function generate form. Water handling, cultivation, transit, observation, gathering, memory, calibration, shelter, or communal ritual should visibly organize the place even when its full meaning remains unresolved.
+- Treat maintenance as ornament: access seams, drainage courses, pruning frames, alignment marks, replaced plates, scaffold sockets, graft collars, and repaired joints become the visual rhythm.
+- Preserve accumulated revisions—reroutes, sealed openings, extensions, retired foundations, and negotiated joins—instead of applying generic age and damage.
+- Make ecology engineered and relational. Mineral growth, crystalline flora, basins, light, and atmosphere must visibly participate in water, soil, energy, climate, structure, pollination, or signal systems.
+- Give each region a movement-level visual school: a coherent civic philosophy expressed through structure, ecology, route, and repair, not merely a repeated motif or emblem.
+
+Reject generic enchanted-garden fantasy, arbitrary crystals, magical altars, decorative glow, purposeless ruins, and beauty without legible civic, ecological, structural, or ritual purpose.
+
 ## Production pixel contract
 
 - The canonical final game canvas is `640 × 480` square logical pixels (4:3), matching the upper end of the classic LucasArts pixel-adventure era selected by Martin.
@@ -43,7 +57,7 @@ The historical references contain a bottom dialogue panel. New **exploration pla
 - **Palette:** indigo, slate, charcoal, muted violet; use peach, amber, crystal white, or volcanic orange as scarce focal accents.
 - **Atmosphere:** fog, pollen, steam, heat haze, or dust should separate depth rather than conceal navigation.
 - **Scale:** pair monumental forms with a ramp, railing, doorway, beacon, seat, tool, or other known-size environmental construction.
-- **Mood:** serious, beautiful, quiet, melancholic, curious. Never grimdark, combat-led, corporate, or glossy.
+- **Mood:** serious, beautiful, quiet, melancholic, curious. Beauty must arise from collective purpose and care. Never generic fantasy, grimdark, combat-led, corporate, or glossy.
 - **Interface occupancy:** keep the world dominant. The dark dialogue/command area should be compact, stable, and information-dense rather than a modern dashboard covering the scene.
 - **Interaction language:** readable verbs and contextual cursor/focus states should feel immediate and playful, with inventory and observation supporting exploration rather than busywork.
 - **Failure philosophy:** visual and interaction design must support recovery. A wrong action may produce characterful feedback, but it must not strand the player or conceal the next useful affordance.
@@ -63,9 +77,10 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 
 ## Continuity rules
 
-- Builder sites feel patiently made and carefully integrated with their environment, even in abandonment.
+- Builder sites show collective authorship, at least three longitudinal construction/stewardship phases, and patient integration with their environment, even in abandonment.
 - Human equipment is compact, practical, weathered, and visibly recent beside ancient spaces.
-- Crystalline flora repeats as a subtle regional motif, not as an identical landmark in every scene.
+- Crystalline flora appears only as part of a legible engineered ecology; its form and placement must reveal a relationship to water, substrate, light, climate, structure, pollination, or signal flow.
+- Regional continuity comes from movement-level construction schools and maintenance practices, not repeated fantasy ornaments.
 - Local interfaces are varied exposed surfaces; do not establish a single definitive form for the Machine.
 - Environmental evidence may deepen ambiguity but may not resolve disappearance, consciousness, continuity, or purpose.
 - No text, UI, watermark, logo, combat staging, or generic neon sci-fi in clean plates.
@@ -73,8 +88,8 @@ At thumbnail size, the route and primary hotspot must still read. No crucial hot
 ## Terminal family grammar
 
 - A Terminal is a small physical node emerging from or rooted into the ground; it is not a conventional monitor, laptop, kiosk, or floating icon.
-- The family resemblance is a faceted translucent crown folded around a small central core. Crown scale, fin count, material weathering, and base construction adapt to each region.
-- One localized light pool or reflection may isolate a Terminal, but glow must not replace silhouette readability.
+- The family resemblance is a faceted translucent crown folded around a small central core. Crown scale, fin count, material weathering, and base construction adapt to each region and must show functional construction logic rather than arbitrary crystal decoration.
+- One localized light pool or reflection may isolate a Terminal only when a visible emitter, conduit, reflection path, or material response explains it. Glow must not replace silhouette readability or act as fantasy ornament.
 - The Terminal and the location's monumental landmark must remain separate visual roles: the node is the interaction target; the landmark carries environmental scale.
 - Leave clean negative space around the crown and dry or visually stable footing around the base so the player can infer approach.
 - Multimodal Evidence Terminals use one blank inspection surface and exactly three restrained, non-text channel indicators. Indicator color and shape may distinguish channels, but they must not become readable writing, familiar app icons, or a projected UI.

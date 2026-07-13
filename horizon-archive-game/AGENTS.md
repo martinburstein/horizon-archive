@@ -20,5 +20,6 @@ When implementing from a selected generated mock, treat it as design evidence fo
 - Preserve the landscape-first composition and dark bottom dialogue panel.
 - Gameplay world plates use a first-person viewpoint: paint only what the protagonist is looking at. Never show the protagonist, companions, or their ship in frame, including hands, bodies, silhouettes, shadows, reflections, portraits, or cropped edges.
 - The durable environment-richness approval gate is `../Curse Art Director/CHARTER.md`. Coarse rectangle/blockout scenery cannot pass merely because scaling, interaction, tests, or accessibility pass.
+- Builder beauty must show collective authorship across generations: visible construction phases, functional or civic purpose, maintenance as ornament, accumulated revision, engineered ecology, and movement-level design schools. Reject enchanted-garden fantasy, arbitrary crystals, decorative glow, and beauty without visible purpose.
 - Python shown to the learner must use real syntax.
 - Keep lore surface-safe and preserve the central mystery.
