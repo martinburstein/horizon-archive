@@ -227,18 +227,18 @@ const SAVE_KEY = "horizon-archive-prologue-v1";
 const temporaryPrologueBeats = [
   {
     label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 1 OF 3",
-    heading: "A patient signal",
-    body: "Placeholder sequence: the flight recorder wakes to a repeating signal beyond the mapped routes.",
+    heading: "A repeating pattern",
+    body: "Placeholder sequence: my recorder isolates a repeating pattern beyond every route I have mapped. Nothing in it names a sender.",
   },
   {
     label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 2 OF 3",
-    heading: "A route without a sender",
-    body: "Placeholder sequence: the Machine resolves one safe approach and withholds every answer you expected.",
+    heading: "A reversible approach",
+    body: "Placeholder sequence: my instruments hold one reversible approach. They cannot tell me what shaped it or why it remains open.",
   },
   {
     label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 3 OF 3",
-    heading: "First ground",
-    body: "Placeholder sequence: descent telemetry ends above a perfectly flat field of cultivated glass.",
+    heading: "A ruler-straight horizon",
+    body: "Placeholder sequence: the horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.",
   },
 ];
 
@@ -507,6 +507,8 @@ export function App() {
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
   const openingHeadingRef = useRef(null);
   const openingTransitionRef = useRef(false);
+  const meadowPrimaryHotspotRef = useRef(null);
+  const meadowEntryFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
   const terminalOrientationHeadingRef = useRef(null);
   const firstTerminalEditorRef = useRef(null);
@@ -555,6 +557,7 @@ export function App() {
   const hotspotButtons = sceneHotspots.map((hotspot) => (
     <button
       key={hotspot.id}
+      ref={hotspot.primary && scene.id === "meadow" ? meadowPrimaryHotspotRef : undefined}
       className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
       data-hotspot-id={hotspot.id}
       data-primary-hotspot={hotspot.primary ? "true" : undefined}
@@ -608,6 +611,12 @@ export function App() {
     openingTransitionRef.current = false;
     openingHeadingRef.current?.focus({ preventScroll: true });
   }, [mode, prologueBeat]);
+
+  useLayoutEffect(() => {
+    if (!meadowEntryFocusPendingRef.current || mode !== "playing" || scene.id !== "meadow") return;
+    meadowEntryFocusPendingRef.current = false;
+    meadowPrimaryHotspotRef.current?.focus({ preventScroll: true });
+  }, [mode, scene.id]);
 
   useLayoutEffect(() => {
     if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
@@ -712,7 +721,7 @@ export function App() {
     setSceneIndex(0);
     setCompleted([]);
     setVerb("LOOK AT");
-    setDialogue("Objective: Search the Glass Meadow for a Terminal.", "system");
+    setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
     setQuestionOpen(false);
     setFeedback("");
     setCode("");
@@ -792,7 +801,8 @@ export function App() {
   }
 
   function enterChapterOne() {
-    setDialogue("Objective: Search the Glass Meadow for a Terminal.", "system");
+    meadowEntryFocusPendingRef.current = true;
+    setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
     setMode("playing");
   }
 
@@ -1714,8 +1724,6 @@ export function App() {
     return (
       <CanonicalGameFrame enabled>
       <main className="game-shell title-screen" data-playtest-marker="TITLE_SCREEN">
-        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
-        <div className="title-shade" aria-hidden="true" />
         <section className="title-copy" aria-labelledby="game-title">
           <p className="eyebrow">A Horizon Archive expedition</p>
           <h1 id="game-title">THE HORIZON ARCHIVE</h1>
@@ -1735,8 +1743,6 @@ export function App() {
     return (
       <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen" data-playtest-marker="CREATE_SAVE_FILE">
-        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
-        <div className="title-shade" aria-hidden="true" />
         <section className="opening-card" aria-labelledby="create-save-heading">
           <p className="eyebrow">Expedition setup // step 1 of 2</p>
           <h1 ref={openingHeadingRef} id="create-save-heading" tabIndex="-1">Create save file</h1>
@@ -1745,9 +1751,9 @@ export function App() {
             <span>SLOT 01</span>
             <strong>{canResume ? "Existing expedition detected" : "Empty"}</strong>
           </div>
-          {canResume && <p className="opening-warning">Creating this file replaces the existing local expedition in Slot 01.</p>}
+          {canResume && <p id="save-replacement-warning" className="opening-warning">Creating this file replaces the existing local expedition in Slot 01.</p>}
           <div className="title-actions">
-            <button className="primary-action" type="button" onClick={createSaveFile}>Create Slot 01</button>
+            <button className="primary-action" type="button" aria-describedby={canResume ? "save-replacement-warning" : undefined} onClick={createSaveFile}>Create Slot 01</button>
             <button className="secondary-action" type="button" onClick={() => setMode("title")}>Cancel</button>
           </div>
         </section>
@@ -1760,8 +1766,6 @@ export function App() {
     return (
       <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen" data-playtest-marker="CHARACTER_NAME_FORM">
-        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
-        <div className="title-shade" aria-hidden="true" />
         <form className="opening-card opening-form" aria-labelledby="character-name-heading" onSubmit={submitCharacterName}>
           <p className="eyebrow">Expedition setup // step 2 of 2</p>
           <h1 ref={openingHeadingRef} id="character-name-heading" tabIndex="-1">Name your character</h1>
@@ -1793,12 +1797,11 @@ export function App() {
     return (
       <CanonicalGameFrame enabled>
       <main className="game-shell opening-screen prologue-screen" data-playtest-marker={`TEMPORARY_PROLOGUE_${prologueBeat + 1}`}>
-        <div className="prologue-field" aria-hidden="true" />
         <section className="opening-card prologue-card" aria-labelledby="prologue-heading">
           <p className="eyebrow filler-label">{beat.label}</p>
           <h1 ref={openingHeadingRef} id="prologue-heading" tabIndex="-1">{beat.heading}</h1>
           <p>{beat.body}</p>
-          <p className="prologue-recorder">FLIGHT RECORDER // {characterName.toUpperCase()}</p>
+          <p className="prologue-recorder">FLIGHT RECORDER // {characterName}</p>
           <button className="primary-action" type="button" onClick={advanceTemporaryPrologue}>
             {prologueBeat === PROLOGUE_BEAT_COUNT - 1 ? "Reach Chapter I" : "Continue temporary prologue"}
           </button>
@@ -1817,7 +1820,8 @@ export function App() {
         <section className="chapter-reveal-copy" aria-labelledby="chapter-reveal-heading">
           <p className="eyebrow">Chapter I</p>
           <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
-          <p>A working landscape. No visible welcome. One signal somewhere in the glass.</p>
+          <p className="prologue-recorder">PILOT // FLIGHT RECORDER — {characterName}</p>
+          <p>I'm down. The horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.</p>
           <button className="primary-action" type="button" onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>
@@ -1875,7 +1879,7 @@ export function App() {
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
         {scene.id === "meadow" && !exerciseEvidence?.completed && (
-          <p className="opening-objective" data-opening-objective="terminal-search">OBJECTIVE // SEARCH FOR A TERMINAL</p>
+          <p className="opening-objective" data-opening-objective="terminal-search">OBJECTIVE // FIND A TERMINAL</p>
         )}
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell

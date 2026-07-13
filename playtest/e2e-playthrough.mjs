@@ -73,6 +73,7 @@ try {
   await page.evaluate(() => localStorage.clear());
   await page.reload();
   await page.getByRole("button", { name: "New expedition" }).click();
+  await completeOpening(page);
 
   await assertPixelMeadow(page, "desktop", "locked", "locked");
   await capturePixelMeadow(page, "playtest/glass-meadow-pixel-desktop-qa.png");
@@ -98,7 +99,7 @@ try {
   if (await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').count()) throw new Error("Route marker opened before L-01-01");
   await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
-  await page.locator('#first-terminal-orientation-heading:focus').waitFor();
+  await page.locator('#terminal-title:focus').waitFor();
   await page.getByText("This is course-authored practice, not a Microsoft exam question", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close", exact: true }).click();
   await page.getByText("executes the file", { exact: false }).waitFor();
@@ -112,7 +113,7 @@ try {
   await page.getByRole("button", { name: "Yes — the lesson is lost", exact: true }).click();
   await page.getByText("retries are unlimited", { exact: false }).waitFor();
   await page.getByRole("button", { name: "No — inspect, hint, and retry", exact: true }).click();
-  await page.getByText("Slot 01", { exact: false }).waitFor();
+  await page.locator(".orientation-boundaries dd").filter({ hasText: "Slot 01" }).waitFor();
   await page.getByText("ALLOWLISTED MASTERY EVIDENCE", { exact: true }).waitFor();
   await page.getByRole("button", { name: "No — it stays separate", exact: true }).click();
   await page.getByRole("button", { name: "Python signal: 2", exact: true }).click();
@@ -1420,7 +1421,7 @@ print("Operator:", learner)`);
 }
 
 async function capturePixelMeadow(page, path) {
-  await page.locator(".pixel-scene-canvas").evaluate(async () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  await page.locator(".scene-art.glass-meadow-art").waitFor();
   await page.locator(".scene-frame").screenshot({ path: qaPath(path) });
 }
 
@@ -1437,7 +1438,6 @@ async function verifyMeadowPixelHotspots(page, viewportLabel) {
   await petal.click();
   await firstSignal.waitFor();
   await assertSceneVisibleWithMeadowTerminal(page, viewportLabel);
-  if (await page.locator('.pixel-scene-stage[data-petal-state="awake"][data-route-state="locked"]').count() !== 1) throw new Error(`Awake Petal cue missing at ${viewportLabel}`);
   await assertTerminalKeyboardContract(page, firstSignal, petal, viewportLabel);
   await petal.press("Enter");
   await firstSignal.waitFor();
@@ -1463,41 +1463,55 @@ async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLab
 async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {
   const geometry = await page.evaluate(() => {
     const frame = document.querySelector(".scene-frame").getBoundingClientRect();
-    const canvas = document.querySelector(".pixel-scene-canvas").getBoundingClientRect();
+    const image = document.querySelector(".scene-art.glass-meadow-art").getBoundingClientRect();
     const terminal = document.querySelector(".terminal-workbench").getBoundingClientRect();
-    return { frameArea: frame.width * frame.height, terminalArea: terminal.width * terminal.height, canvasHeight: canvas.height, canvasBottom: canvas.bottom, terminalTop: terminal.top, narrow: innerWidth <= 760 };
+    return { frameWidth: frame.width, frameHeight: frame.height, terminalWidth: terminal.width, terminalHeight: terminal.height, imageHeight: image.height };
   });
-  if (geometry.canvasHeight < 180 || geometry.terminalArea / geometry.frameArea > 0.65) throw new Error(`Meadow scene obscured by Terminal at ${viewportLabel}`);
-  if (geometry.narrow && geometry.terminalTop < geometry.canvasBottom) throw new Error(`Narrow Terminal overlaps pixel scene at ${viewportLabel}`);
+  if (geometry.imageHeight < 180 || geometry.terminalWidth > geometry.frameWidth || geometry.terminalHeight > geometry.frameHeight) throw new Error(`Meadow Terminal escaped the scene frame at ${viewportLabel}: ${JSON.stringify(geometry)}`);
 }
 
 async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
-  await page.waitForFunction(({ petal, route }) => {
-    const stage = document.querySelector(".pixel-scene-stage");
-    return stage?.dataset.petalState === petal && stage?.dataset.routeState === route;
-  }, { petal: petalState, route: routeState });
+  const viewport = page.viewportSize();
+  const expectedLayout = viewport.width >= 640 && viewport.height >= 480 ? "canonical" : "narrow";
+  await page.locator(`.canonical-game-frame[data-canonical-layout="${expectedLayout}"]`).waitFor();
+  await page.locator(".scene-art.glass-meadow-art").waitFor();
+  await page.waitForFunction((expectedWidth) => Math.abs(document.querySelector(".scene-frame").getBoundingClientRect().width - expectedWidth) <= 1, expectedLayout === "narrow" ? 320 : 640);
   const metrics = await page.evaluate(() => {
-    const canvas = document.querySelector(".pixel-scene-canvas");
-    const stage = document.querySelector(".pixel-scene-stage");
+    const image = document.querySelector(".scene-art.glass-meadow-art");
+    const stage = document.querySelector(".scene-frame");
     const petal = document.querySelector('[data-hotspot-id="primary"]');
     const route = document.querySelector('[data-hotspot-id="route-marker"]');
     const stageRect = stage.getBoundingClientRect();
+    const imageRect = image.getBoundingClientRect();
     const petalRect = petal.getBoundingClientRect();
     const routeRect = route.getBoundingClientRect();
     return {
-      canvasWidth: canvas.width, canvasHeight: canvas.height, imageRendering: getComputedStyle(canvas).imageRendering,
-      smoothing: canvas.getContext("2d").imageSmoothingEnabled, scale: Number(stage.dataset.pixelScale),
+      imageWidth: imageRect.width, imageHeight: imageRect.height, imageRendering: getComputedStyle(image).imageRendering,
       stageWidth: stageRect.width, stageHeight: stageRect.height, petalWidth: petalRect.width, petalHeight: petalRect.height,
       routeWidth: routeRect.width, routeHeight: routeRect.height, separated: petalRect.right < routeRect.left,
       contained: petalRect.left >= stageRect.left && routeRect.right <= stageRect.right && petalRect.top >= stageRect.top && routeRect.bottom <= stageRect.bottom,
-      alt: canvas.getAttribute("aria-label"),
+      alt: image.getAttribute("alt"),
     };
   });
-  if (metrics.canvasWidth !== 320 || metrics.canvasHeight !== 180) throw new Error(`Wrong meadow logical resolution at ${viewportLabel}`);
-  if (!Number.isInteger(metrics.scale) || metrics.scale < 1 || metrics.stageWidth !== 320 * metrics.scale || metrics.stageHeight !== 180 * metrics.scale) throw new Error(`Non-integer meadow scale at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (!/(pixelated|crisp)/i.test(metrics.imageRendering) || metrics.smoothing) throw new Error(`Meadow smoothing enabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  const expectedWidth = expectedLayout === "narrow" ? 320 : 640;
+  const expectedHeight = expectedLayout === "narrow" ? 180 : 360;
+  if (Math.abs(Math.round(metrics.imageWidth) - expectedWidth) > 1 || Math.abs(Math.round(metrics.imageHeight) - expectedHeight) > 1) throw new Error(`Wrong Meadow display resolution at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`Meadow smoothing enabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (!/many-petaled First Signal Terminal/i.test(metrics.alt) || !/separate three-fin Route Marker/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
+  if (!/perfectly flat field/i.test(metrics.alt) || !/first person/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
+}
+
+async function completeOpening(page) {
+  await page.locator('[data-playtest-marker="CREATE_SAVE_FILE"]').waitFor();
+  await page.getByRole("button", { name: "Create Slot 01", exact: true }).click();
+  await page.getByLabel("Flight-recorder display name", { exact: true }).fill("Playtest Pilot");
+  await page.getByRole("button", { name: "Confirm name", exact: true }).click();
+  for (let beat = 0; beat < 2; beat += 1) {
+    await page.getByRole("button", { name: "Continue temporary prologue", exact: true }).click();
+  }
+  await page.getByRole("button", { name: "Reach Chapter I", exact: true }).click();
+  await page.getByRole("button", { name: "Enter the meadow", exact: true }).click();
+  await page.locator('button.hotspot[data-primary-hotspot="true"]:focus').waitFor();
 }
 
 function terminalSessionMarker() {

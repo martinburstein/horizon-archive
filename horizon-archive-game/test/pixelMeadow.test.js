@@ -63,3 +63,12 @@ test("integer stages letterbox and keep both meadow targets usable", () => {
     assert.ok(petalBox.left + petalBox.width < routeBox.left);
   }
 });
+
+test("selected 640x360 meadow targets match the Location Scout map", () => {
+  assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.primary, {
+    left: "45.9375%", top: "53.0556%", width: "18.75%", height: "37.7778%",
+  });
+  assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.routeMarker, {
+    left: "77.0313%", top: "53.3333%", width: "21.5625%", height: "46.3889%",
+  });
+});

@@ -40,6 +40,7 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
 .adventure-screen[data-scene="ruins"] .scene-art { object-position: center 20%; }
 .adventure-screen[data-scene="automaton"] .scene-art { object-position: center 15%; }
 .title-screen, .credits-screen { display: grid; place-items: center; }
+.title-screen, .opening-screen, .prologue-screen { background: #070811; }
 .title-art, .credits-art, .title-shade { position: absolute; inset: 0; }
 .title-art, .credits-art { height: 135%; object-position: center top; filter: brightness(0.62) saturate(0.82); }
 .title-shade { background: rgba(5, 5, 13, 0.42); }
@@ -121,9 +122,8 @@ h1 {
 .opening-help { margin: 0; color: #8f8994; font: 0.7rem/1.4 "Courier New", monospace; }
 .opening-error { margin: 0; }
 .prologue-screen { background: #070811; }
-.prologue-field { position: absolute; inset: 0; background: #090b14; }
 .filler-label { color: #e0b66f; }
-.prologue-recorder { color: #a88cc0; font: 0.7rem/1.4 "Courier New", monospace; letter-spacing: 0.12em; }
+.prologue-recorder { color: #a88cc0; font: 0.7rem/1.4 "Courier New", monospace; letter-spacing: 0.12em; text-transform: uppercase; }
 .chapter-reveal-art { filter: brightness(0.45) saturate(0.75); }
 .chapter-reveal-copy { border-width: 2px 0; background: rgba(7, 8, 14, 0.88); }
 .chapter-reveal-copy .eyebrow { color: #e4c887; }
@@ -194,22 +194,22 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .title-copy h1 { font-size: 21px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-card h1,
 .canonical-game-frame[data-canonical-layout="narrow"] .chapter-reveal-copy h1 { font-size: 17px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .eyebrow { margin-bottom: 4px; font-size: 6px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .subtitle { margin: 5px 0 8px; font-size: 8px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .eyebrow { margin-bottom: 4px; font-size: 8px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .subtitle { margin: 5px 0 8px; font-size: 9px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .title-actions { gap: 4px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .primary-action,
-.canonical-game-frame[data-canonical-layout="narrow"] .secondary-action { min-width: 110px; padding: 4px 6px; font-size: 7px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .title-note { margin-top: 6px; font-size: 5px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .secondary-action { min-width: 110px; padding: 4px 6px; font-size: 9px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .title-note { margin-top: 6px; font-size: 8px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-card > p,
-.canonical-game-frame[data-canonical-layout="narrow"] .chapter-reveal-copy > p { margin: 4px 0; font-size: 7px; line-height: 1.25; }
-.canonical-game-frame[data-canonical-layout="narrow"] .save-slot-preview { gap: 4px; margin: 5px 0; padding: 5px; font-size: 6px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .chapter-reveal-copy > p { margin: 4px 0; font-size: 9px; line-height: 1.25; }
+.canonical-game-frame[data-canonical-layout="narrow"] .save-slot-preview { gap: 4px; margin: 5px 0; padding: 5px; font-size: 8px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-warning,
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-error,
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-help,
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-form label,
-.canonical-game-frame[data-canonical-layout="narrow"] .prologue-recorder { font-size: 6px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .prologue-recorder { font-size: 8px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .opening-form { gap: 3px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .opening-form input { padding: 4px 5px; font-size: 7px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .opening-form input { padding: 4px 5px; font-size: 9px; }
 
 .adventure-screen { display: grid; grid-template-rows: minmax(0, 74vh) minmax(220px, 26vh); }
 .scene-frame { position: relative; min-height: 0; overflow: hidden; border-bottom: 5px solid #292630; container-type: size; }
@@ -691,8 +691,9 @@ h1 {
 .canonical-game-frame .dialogue-box { padding: 6px 8px; border-width: 1px; box-shadow: none; }
 .canonical-game-frame .dialogue-copy p { margin-bottom: 5px; font-size: 9px; line-height: 1.25; }
 .canonical-game-frame .speaker,
-.canonical-game-frame .inventory-title { font-size: 5px; }
+.canonical-game-frame .inventory-title { font-size: 7px; }
 .canonical-game-frame .terminal-workbench { inset: 8px; width: auto; height: auto; overflow: auto; }
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 8px; width: auto; height: auto; }
 .canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"] { overflow: hidden; }
 .canonical-game-frame .responsible-ai-form { display: block; min-height: 0; overflow: auto; }
 .canonical-game-frame .responsible-ai-fields { margin: 10px 0; overflow: visible; }
@@ -762,9 +763,10 @@ h1 {
 
 .canonical-game-frame[data-canonical-layout="narrow"] .command-panel { grid-template-columns: 56px minmax(0, 1fr) 56px; gap: 2px; padding: 2px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .verb,
-.canonical-game-frame[data-canonical-layout="narrow"] .inventory button { padding: 1px 2px; font-size: 5px; letter-spacing: 0; }
+.canonical-game-frame[data-canonical-layout="narrow"] .inventory button { padding: 1px 2px; font-size: 8px; letter-spacing: 0; }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-box { padding: 2px 3px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy p { margin: 0 0 2px; font-size: 6px; line-height: 1.15; max-height: 28px; overflow: auto; }
-.canonical-game-frame[data-canonical-layout="narrow"] .scene-status { inset: 3px 3px auto; padding: 2px 3px; font-size: 4px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .scene-status strong { font-size: 5px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench { inset: 4px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy p { margin: 0 0 2px; font-size: 8px; line-height: 1.15; max-height: 38px; overflow: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] .scene-status { inset: 3px 3px auto; padding: 2px 3px; font-size: 6px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .scene-status strong { font-size: 8px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench,
+.canonical-game-frame[data-canonical-layout="narrow"] .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 4px; }

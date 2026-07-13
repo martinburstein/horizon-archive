@@ -1,50 +1,43 @@
-# Design QA — The Patient Signal
+# Opening Demo Design QA
 
-- Source visual truth path: `../Concept Art/Alien Meadow.png` (supported by the other three images in `../Concept Art/`)
-- Implementation screenshot path: `qa-gameplay.png`
-- Combined comparison evidence: `qa-comparison.png`
-- Viewport: 1600 × 900 desktop
-- State: Chapter I, Glass Meadow, clean new expedition
-- Browser-rendered evidence: captured from the running Vite prototype in the Codex in-app browser
+## Source truth
 
-## Full-view comparison
+- Selected scene art: `../Glass Meadow Example.png`
+- Combined comparison: `qa/glass-meadow-comparison.png`
+- Implementation captures: `qa/opening-chapter-reveal.png`, `qa/glass-meadow-demo.png`, `qa/glass-meadow-320x240.png`, `qa/first-terminal-orientation.png`
 
-The source and implementation use the same supplied meadow painting and preserve its landscape-first composition, violet twilight palette, centered crystal structure, low-poly texture, and dark lower dialogue region. The implementation intentionally replaces the blank painted textbox with a functional three-column LucasArts-style command panel.
+## Viewports and states
 
-The first comparison exposed a duplicated textbox because the supplied raster already included a blank panel. The image crop was changed to `object-position: center top`, removing the painted panel from gameplay while leaving the artwork itself unmodified. The post-fix screenshot is `qa-gameplay.png` and the side-by-side evidence is `qa-comparison.png`.
+- 1280x720 browser viewport, canonical 640x480 game frame: title through Chapter I reveal, first playable Meadow, focused first hotspot, and first Terminal orientation.
+- 320x240 browser viewport, authored narrow 320x240 game frame: first playable Meadow with the primary hotspot focused.
 
-## Required fidelity surfaces
+## Comparison evidence
 
-- Fonts and typography: restrained serif narrative type and monospaced technical labels match the archaeological/terminal tone; hierarchy remains legible without competing with the artwork.
-- Spacing and layout rhythm: approximately 74% scene and 26% controls, matching the source's intended landscape/textbox balance. Verbs, dialogue, and inventory remain visually separate.
-- Colors and visual tokens: near-black violet panels, aged ivory text, and muted lavender accents derive from the supplied art.
-- Image quality and asset fidelity: the meadow and city use supplied Concept Art PNGs; the ruins and corridor use selected clean AB-01 and WC-01 production plates from the Concept Art Book. No inline SVG, CSS drawing, or generic placeholder is used.
-- Copy and content: surface-lore-safe mystery language, short verb labels, real Python syntax, and beginner-readable instructions.
+- Full-view comparison: the implementation uses the selected Glass Meadow artwork itself, preserving its flat horizon, realistic glass density, bright sky, and first-person composition. The playable layer adds only the chapter/status bar, objective card, and hotspot focus treatment.
+- Focused-region comparison: the first Terminal crop remains visually identifiable under the focus rectangle; the mapped rectangle follows the central glass vessel without introducing a new painted object.
+- Terminal overlay: the VS Code-like orientation stays within the 640x360 world band at 624x343 logical pixels and preserves visible context around its edge.
 
 ## Interaction and accessibility checks
 
-- Glass Meadow is an original `320×180` code-assembled pixel scene, presented only at integer scales with no canvas smoothing. Desktop and 320px QA: `../playtest/glass-meadow-pixel-desktop-qa.png`, `../playtest/glass-meadow-pixel-narrow-qa.png`, and `../playtest/glass-meadow-pixel-completed-qa.png`.
-- Petal and Route Marker targets are stage-relative, non-overlapping, keyboard/pointer operable, and geometry-tested across locked, awake, and completed states. The compact Terminal leaves meaningful world art visible and preserves the dark dialogue panel.
-
-- Title screen, new game, verb selection, hotspots, inventory, hint toggle, incorrect-answer retry, correct-answer progression, local save, ending gate, and credits were exercised.
-- All interactive elements are native buttons or labeled inputs and are keyboard focusable.
-- Browser console errors checked: none.
-- Reduced-motion preference is respected.
-- The grounded ruins Terminal target is source-mapped through `object-fit: cover`, exceeds 44×44 CSS pixels, and supports pointer and Enter-key activation at 1600×900 and 320×900. Evidence: `../playtest/drowned-archive-terminal-desktop-qa.png` and `../playtest/drowned-archive-terminal-narrow-qa.png`.
-- WC-01 exposes separate, non-overlapping Evidence Terminal and automaton buttons. Only the Terminal launches the assessment; both have source-mapped desktop/320px targets, visible focus, pointer/Enter coverage, and distinct accessible semantics. Evidence: `../playtest/witness-corridor-hotspots-desktop-qa.png` and `../playtest/witness-corridor-hotspots-narrow-qa.png`.
-
-## Findings
-
-- No remaining P0, P1, or P2 fidelity issues after the duplicated-panel crop fix.
-
-## Focused region comparison
-
-The command panel was inspected in the full-resolution gameplay screenshot. Its typography, controls, and three-column grouping are readable at the target viewport; a separate crop was unnecessary after the full-view check clearly exposed the relevant detail.
+- Completed title -> create Slot 01 -> name character -> three temporary prologue beats -> Chapter I reveal -> enter Meadow.
+- Confirmed the Meadow artwork does not appear before the Chapter I reveal.
+- Confirmed the primary Meadow hotspot receives focus on entry and exposes an action-specific accessible label.
+- Confirmed LOOK AT reports the Terminal clue and USE opens the four-step beginner orientation.
+- Confirmed the modal focuses its title, disables background hotspots, closes safely, and restores the scene interaction.
+- Confirmed the save-replacement warning is programmatically associated with the destructive create action.
+- Confirmed 320x240 has no page overflow and key narrow-interface text is 8px logical type (status metadata remains 6px; location and controls are 8px).
+- Browser console warnings/errors: none.
 
 ## Comparison history
 
-1. P1 — duplicate lower dialogue panel visible because the source raster's blank frame remained in the scene crop.
-2. Fix — anchored scene imagery to the top and used only the live command panel below it.
-3. Post-fix evidence — `qa-gameplay.png` and `qa-comparison.png`; duplication is gone and scene/control proportions match the intended reference anatomy.
+- Earlier build exposed the Meadow art during setup and prologue; corrected so the scene first appears at the Chapter I reveal.
+- Earlier hotspot rectangles were inherited from the procedural meadow; replaced with Location Scout measurements against the selected image.
+- Earlier recorder punctuation rendered as mojibake; corrected to a valid em dash.
+- Earlier Meadow Terminal width escaped the canonical frame at wide browser sizes; constrained to the authored game frame.
+- Earlier narrow controls rendered at 4-6px; raised the player-critical controls and dialogue to 8px.
+
+## Remaining non-blocking art note
+
+The selected image is the approved concept-rich scene and is displayed with square-pixel scaling. It is not yet a hand-authored native 640x360 production painting; a later art pass can recreate its composition at native logical resolution without changing this opening flow.
 
 final result: passed
