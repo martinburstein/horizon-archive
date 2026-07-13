@@ -1,6 +1,6 @@
 # Opening 45-Second Surface Contract
 
-Status: production contract for the current title-to-Chapter-I opening. Surface-canon only. The three prologue cards remain explicitly provisional.
+Status: production contract for the current title-to-Chapter-I opening. Surface-canon only. The three prologue cards remain explicitly provisional. Apply the [Builder landscape function and reveal contract](builder-landscape-function-and-reveal-contract.md) without advancing beyond first-contact evidence.
 
 Implementation alignment: `horizon-archive-game/src/openingFlow.js` and the opening copy/state slice in `horizon-archive-game/src/App.jsx`.
 
@@ -43,9 +43,19 @@ Surface-safe temporary drafting pattern, still explicitly placeholder:
 
 1. `PILOT`: “My recorder isolates a repeating pattern beyond every route I have mapped. Nothing in it names a sender.”
 2. `PILOT`: “My instruments hold one reversible approach. They cannot tell me what shaped it or why it remains open.”
-3. `PILOT`: “The horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.”
+3. `PILOT`: “My instruments find no road or landing marker. Glass states repeat across a ruler-straight horizon without forming rows.”
 
 These lines are safe staging candidates, not approved final prose. Their purpose is to keep the filler sequence from accidentally establishing agency or hidden canon.
+
+### Three-beat reveal proof
+
+The temporary sequence must advance exactly one step per card:
+
+1. **Signal:** a repeatable pattern exists; sender and intent remain unknown.
+2. **Approach:** the Pilot's instruments support one reversible path; the Machine does not choose it.
+3. **Landscape logic:** stable nonhuman states cover a flat horizon without roads, landing affordances, or human agricultural rows; occupation remains unnamed.
+
+Do not repeat the Chapter I arrival sentence inside beat three. The placeholder ends at instrument evidence; the approved arrival line is the first embodied first-person observation.
 
 ## Chapter I reveal and arrival aftermath
 
@@ -58,9 +68,9 @@ These lines are safe staging candidates, not approved final prose. Their purpose
 
 Approved first-person arrival aftermath:
 
-> `PILOT // FLIGHT RECORDER — {DISPLAY_NAME}`: “I'm down. The horizon is ruler-straight. Glass tubes rise from flush patterns in the floor.”
+> `PILOT // FLIGHT RECORDER — {DISPLAY_NAME}`: “I'm down. Glass tubes rise from flush patterns in the floor. Their states repeat, but not in rows.”
 
-This is the first approved story fact after the provisional cards. It establishes arrival, flatness, and visible glass forms only. It does not show a ship, claim a crash, name an occupation, imply welcome, or explain the landscape's process.
+This is the first approved story fact after the provisional cards. It establishes arrival, visible glass forms, and repeatable non-row state logic only. It does not show a ship, claim a crash, name an occupation, imply welcome, or explain the landscape's process. The absence of rows is evidence of nonhuman organization, not evidence of disorder.
 
 After the learner activates `Enter the meadow`, focus enters Chapter I in normal document order and the objective becomes available as System state.
 
@@ -73,7 +83,18 @@ Approved compact objective pair:
 
 `Terminal` is a human working class for a bounded accessible node. The objective must not name the Petal hotspot, imply that the native landscape was built for human ergonomics, or claim the Machine summoned the Pilot. Exploration remains first-person and mistakes remain recoverable.
 
-The current `Search ... for a Terminal` dialogue and `SEARCH FOR A TERMINAL` banner are implementation-safe placeholders but should be unified to the approved `Find` pair during the next copy pass.
+The runtime now uses this approved `Find` pair. Preserve it during the next copy pass.
+
+## First-45-second reveal boundary
+
+The opening may establish only these surface facts:
+
+- the Pilot's recorder detects a repeatable pattern;
+- the Pilot chooses a reversible approach through personal instruments;
+- the Glass Meadow is flat, patterned, functional-looking, and not arranged for human movement or agriculture;
+- a bounded object classed by the Pilot as a `Terminal` can be searched for.
+
+The opening must withhold sender, motive, prior human contact, native occupation, native interface language, why a Terminal is compatible, whether the signal and landscape share an agent, and whether anything present noticed the Pilot. Later evidence may refine these unknowns; the opening cannot answer them through narration, alt text, headings, objective copy, or name interpolation.
 
 ## Accessibility and density
 
@@ -88,8 +109,8 @@ The current `Search ... for a Terminal` dialogue and `SEARCH FOR A TERMINAL` ban
 Before declaring the opening narrative-ready:
 
 1. keep all three filler cards visibly provisional;
-2. remove unsupported Machine agency from their staging copy;
-3. use the approved first-person arrival aftermath on the Chapter I reveal;
+2. preserve the safe signal and reversible-approach placeholders, then keep beat three at instrument-level nonhuman landscape logic;
+3. reserve the approved first-person arrival aftermath for the Chapter I reveal without repeating it in beat three;
 4. unify the objective to the approved `Find` pair;
 5. verify the chosen name appears only in the flight-recorder owner line;
 6. preserve local-save warning, focus order, and no-auto-advance behavior.
