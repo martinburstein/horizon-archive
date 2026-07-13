@@ -222,6 +222,17 @@
       "assessment_ids": ["AS-L0602-PLAN"],
       "skills": ["PY-007", "PY-016", "PY-017"],
       "success_contract": "Pass primary and fresh transfer at 12/12, complete source-routed remediation records, and explain failed-dimension priority, prerequisite lesson and official source routing, retrieval/guided/fresh-transfer practice, reassessment, and stop/escalate safeguards without confidence, exam-guarantee, or live-action bypass."
+    },
+    {
+      "id": "HA-AI901-CAPSTONE-READINESS",
+      "scene": "ruins",
+      "exercise_id": "EX-L0603-OFFLINE-CAPSTONE",
+      "lesson_id": "L-06-03",
+      "activity_id": "A-L0603-2",
+      "assessment_ids": ["AS-L0603-READY"],
+      "objective_ids": ["AI901-D2-O3", "AI901-D2-O5", "AI901-D2-O7"],
+      "skills": ["PY-017", "PY-019", "PY-020"],
+      "success_contract": "Pass primary and fresh transfer at 12/12, preserve all prerequisite evidence, and defend client flow, text/speech direction, schema/null/provenance, cautious next-practice readiness, and no-exam-guarantee/no-live-action safeguards closed-note."
     }
   ]
 }

@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-12 — L-06-03 Offline Capstone Readiness mandatory Terminal gate
+
+- **Outcome:** Implemented `EX-L0603-OFFLINE-CAPSTONE` after Remediation Planner as the next mandatory ruins gate. Primary and fresh transfer each require 12/12 across client flow, text/speech direction, Content Understanding, prerequisite evidence, cautious recommendation, and claim/action safety, followed by a four-part Pilot-owned closed-note defense. No SIM-01/CUM-01 runtime work was added.
+- **Prerequisite/readiness gate:** Runtime derives a sanitized gate from actual Objective Ledger and Remediation Planner evidence: all 15 rows ready with pointers, all twelve remediation routes closed, and fresh evidence current. Capstone scores and confidence cannot bypass it. Strict completion records only `ready_for_next_practice_checkpoint`, never exam readiness or a guarantee; unresolved or absent evidence remains `remediate_before_checkpoint` or `insufficient_evidence`.
+- **Safety/privacy/ownership:** Every phase persistently states course-authored/not-exam/no-guarantee/no-source-or-media-processing/no-service/no-action boundaries and supplies a text trace for client, speech-direction, schema/null/provenance, and prerequisite flow. Evidence excludes source content, audio/transcripts, credentials, endpoints, payloads/responses, exam text, action requests, choices, and prose. System owns neutral scores/state, Teacher owns implementation remediation/recommendation/completion, and Pilot owns choices/prose.
+- **Files changed:** Added `capstoneReadinessExercise.js` and focused tests; updated `App.jsx`, public manifest, E2E sequence/registry, and this log. No QA binaries were generated or modified.
+- **Validation:** L-06-03 validator self-test passes; primary and transfer references each pass 12/12; 149/149 unit tests pass; production build passes; E2E script syntax passes; diff check passes. Full screenshot-producing E2E was intentionally not run in this bounded tranche.
+- **Next recommended item:** Player Agent should challenge endpoint/deployment/identity confusion, recognition/synthesis reversal, missing-null fabrication, prerequisite bypass, confidence-as-readiness, disclosure/deletion prompts, close/reopen, reload focus, and narrow prerequisite-panel reading.
+- **Unresolved risks:** This offline course checkpoint supports only the next practice checkpoint. It proves no exam result, live service behavior, current SDK/API/analyzer details, identity, permission, or Azure readiness; volatile claims require official reverification.
+
 ## 2026-07-12 — Round 25 Remediation Planner learner-state routing fix
 
 - **Work completed:** Fixed the confirmed contradiction between Objective Ledger and Remediation Planner. Each fresh Planner open now derives a sanitized, session-only learner-state snapshot from actual Ledger statuses and evidence pointers. Non-ready or pointerless objectives become the measured remediation queue. When all 15 objectives are ready—the only state currently allowed through the mandatory gate—the UI explicitly presents readiness-maintenance drills and states that they are not weak-objective claims.
