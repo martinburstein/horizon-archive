@@ -725,6 +725,22 @@ Next recommended item: Exercise Agent should surface this compact orientation im
 Unresolved risks: Runtime copy must not imply that the Machine owns the browser save or character name. If the runtime restores or clears drafts differently from the stated temporary-session contract, Exercise Agent should align the learner-facing status text with actual behavior rather than weakening the privacy boundary.
 Notes: Course-authored beginner bridge only; not a Microsoft exam question and no AI-901 outcome guarantee. No game, art, lore, exercise, QA-binary, service, Azure, external-action, commit, or push change.
 
+## Log entry: 2026-07-13T02:01:47-04:00
+
+Stage: First-Terminal four-step beginner calibration
+Work completed: Tightened `L-01-01/first-terminal-orientation.md` to match the implemented four-step runtime exactly: run real Python, recover from errors, separate local save/session/mastery data, and predict changed output. Moved the course-authored/not-Microsoft/no-guarantee boundary above step one and removed the earlier five-action preamble so the zero-Python entry is quicker to scan.
+Files changed:
+- curriculum/lessons/L-01-01/first-terminal-orientation.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- read root/game AGENTS.md, current curriculum and Exercise Agent logs, current orientation/README, `terminalExercise.js`, `App.jsx` orientation rendering, and focused runtime tests
+- focused first-Terminal orientation, unlimited-retry, editor-gate, and focus-restoration tests passed (31 selected/eligible test-file results, 0 failures)
+- ran `first_signal.py`; expected output passed
+- verified exactly four numbered orientation steps, early course-practice disclaimer, valid Python syntax markers, all three information boundaries, local README link, and `git diff --check`
+Next recommended item: Exercise Agent should compare the on-screen four cards against this tightened source and reduce only redundant per-card copy if the 640×480 runtime still feels slow; preserve all four checks, unlimited retry, and early disclaimer.
+Unresolved risks: The runtime repeats the full disclaimer on every card. That is safe but may add reading load; any compression must keep “course-authored,” “not a Microsoft exam question,” and “no guarantee” available before editable code begins. Runtime session-clear wording must continue matching actual close/reopen versus reload/resume behavior.
+Notes: No new objective/product claim and no game, lore, art, QA-binary, service, Azure, authority, commit, or push change.
+
 ## Log entry: 2026-07-12T22:20:00-04:00
 
 Stage: Demo curriculum freeze audit
