@@ -1,5 +1,22 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Chapter II safe-return accessibility re-review
+
+- **Outcome:** `PASS`; the live-evidence blocker is closed. Exact `320 x 240` and `640 x 480` measurements prove the ridge target/label, 24 px / 8 px lower return action, inset focus, scene/page containment, pointer and USE activation, restored completed marker, Chapter I/II statuses, deterministic focus, re-departure routing, and both reload sides. The corrected returned-side resume now restores Chapter I status with departure focus.
+- **Files:** replaced `Accessibility Sentinel/opening-demo/CHAPTER_II_SAFE_RETURN_REVIEW.md` with the final PASS review and updated this log only. Runtime, tests, curriculum, art, lore, and save files were not changed.
+- **Validation:** accepted coordinator live evidence from the rebuilt approved preview; verified the corrected Meadow-resume announcement source; focused tests and production build pass. Mastery/evidence isolation, private-session clearing, non-color meaning, and reduced-motion contracts remain intact.
+- **Next:** preserve all current geometry, naming, focus, status, reload, state, and evidence contracts. Perform one physical keyboard and NVDA/equivalent pass plus forced-colors, 200% zoom, and switch-control observations before a conformance claim.
+- **Status:** `PASS - Chapter II safe-return gate cleared`
+
+## 2026-07-13 - Chapter II safe-return accessibility gate
+
+- **Outcome:** `BLOCKED FOR LIVE EVIDENCE`; no source-confirmed product defect. The reversible Chapter II -> completed Meadow -> Chapter II path passes mastery gating, native semantics/names, deterministic focus wiring, navigation-only evidence isolation, private-session clearing, non-color meaning, reduced-motion behavior, canonical/narrow geometry contracts, and safe forward recovery. Native ridge-label/focus clearance, real pointer/keyboard order, spoken Chapter I/II announcement order, and both-side reload remain uncertified because the in-app Browser has no attached backend.
+- **Files:** added `Accessibility Sentinel/opening-demo/CHAPTER_II_SAFE_RETURN_REVIEW.md` and updated this log only. Runtime, tests, curriculum, art, lore, and save files were not changed.
+- **Validation:** focused return/transition/save/marker tests passed 22/22; the L-01-03 safe-return guide self-test and direct check passed; source review confirmed canonical `112 x 108` / narrow `48 x 54` ridge targets, 24 px / 8 px lower return control, inset focus, strict mastered gating, frozen evidence-free patch, completed-marker restoration, and direct motionless transitions. Browser bootstrap/troubleshooting completed, but the backend list was empty.
+- **Next:** Player/coordinator should attach the approved browser and record native ridge label/outline bounds, action rectangles/type, traversal, pointer/keyboard activation, Chapter I/II spoken order, both reload sides, containment, and evidence preservation at `640 x 480` and exact `320 x 240`; then return to Sentinel for PASS/REVISE.
+- **Risk:** real NVDA/equivalent speech, forced colors, 200% zoom, and physical switch-control remain unobserved; this is not a conformance claim.
+- **Status:** `blocked - approved live browser evidence unavailable`
+
 ## 2026-07-13 - Completed-Meadow departure and arrival accessibility re-review
 
 - **Outcome:** `PASS`. The prior P1 is closed: live `320 x 240` evidence measures both departure choices at 153.2 x 24 px with 8 px type, a 2 px gap, contained focus outline, exact page containment, and a fully visible non-scrolling summary. Positive copy closes the optional/scored comprehension finding without weakening the strict calibration gate. Safe Exit, destination status/focus, and reload/resume pass.

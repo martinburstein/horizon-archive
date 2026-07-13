@@ -1,5 +1,16 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 — Chapter II safe-return visual-system gate
+
+- **Outcome / verdict:** PASS after one bounded edge-containment correction. The reserved lower-left ridge remains a secondary world hotspot, while `Return: Glass Meadow` stays a plainly named lower-band navigation action. No transition art, overlay scene, protected motif, or story content was added.
+- **Reference coverage and measurements:** reviewed the continuity map, safe-return guide, runtime, CSS, and focused return tests against `640 x 480` / `320 x 240`. The ridge retains canonical `x=0..112, y=252..359` and narrow `x=0..48, y=126..179` bounds, exceeding `44 x 44`. The return action retains the `24px` control floor and `8px/8px` type metric in both layouts; focus remains inset `3px` from the frame edge.
+- **Correction:** contained the ridge's focus/hover label with whole-pixel `3px` insets, `8px/8px` type, normal wrapping, and no centered max-content spill. Removed only the ridge hotspot's translucent fill so focus uses the existing border and contained label without laying a colored panel over the rich scene. Explicitly locked the lower-band action to square `border-radius: 0` and `box-shadow: none`.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/sceneReturn.test.js`, and this log. Runtime navigation, evidence, curriculum, lore, scene plates, and all other hotspots were preserved.
+- **Validation:** 13 focused safe-return, scene-transition, and canonical tests pass; production build and `git diff --check` pass. Static review confirms the action remains gated by completed Meadow mastery, is navigation-only, preserves evidence, returns to the crowned state, and never adds a fade, travel effect, smooth chrome, or world overlay.
+- **Findings / risk:** exact native label wrapping and focus-ring clearance remain unrendered because the embedded preview was unavailable. The contained label is visible only on hover/focus; the ridge otherwise leaves the destination plate untouched and subordinate to the primary Terminal.
+- **Handoff:** Location Scout should preserve the existing lower-left ridge silhouette and negative space. Do not paint an exit icon, arrow, sign, portal, path, glow, label, ship, protagonist, or copied adventure-game motif into the plate; the lower band owns the persistent return name.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Earned-route departure visual-system gate
 
 - **Outcome / verdict:** PASS after one bounded typography correction. The earned route summary stays inside the lower interface, preserving the full Meadow world plate and first-person scene dominance. Optional calibration and destination-aware departure remain two equal, plainly bordered choices with no copied asset or modern smooth chrome.

@@ -23,11 +23,13 @@ export function sanitizeCompleted(value) {
 export function getResumeState(value, pendingSceneId = null) {
   const completed = sanitizeCompleted(value);
   const pendingIndex = completed.length - 1;
-  const hasPendingAcknowledgement = pendingIndex >= 0 && pendingSceneId === sceneIds[pendingIndex];
+  const hasCompletedMeadowReturn = completed.includes("meadow") && pendingSceneId === "meadow";
+  const hasPendingAcknowledgement = hasCompletedMeadowReturn
+    || (pendingIndex >= 0 && pendingSceneId === sceneIds[pendingIndex]);
   return {
     completed,
     sceneIndex: hasPendingAcknowledgement
-      ? pendingIndex
+      ? hasCompletedMeadowReturn ? 0 : pendingIndex
       : Math.min(completed.length, sceneIds.length - 1),
     finished: !hasPendingAcknowledgement && completed.length === sceneIds.length,
     pendingSceneId: hasPendingAcknowledgement ? pendingSceneId : null,

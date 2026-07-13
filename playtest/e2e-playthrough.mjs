@@ -1740,6 +1740,11 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
     const sceneRect = scene.getBoundingClientRect();
     const commandRect = command.getBoundingClientRect();
     const hotspotRect = hotspot.getBoundingClientRect();
+    const renderedControls = Array.from(command.querySelectorAll("button"))
+      .map((button) => ({ button, rect: button.getBoundingClientRect() }))
+      .filter(({ rect }) => rect.width > 0 && rect.height > 0);
+    const returnAction = command.querySelector('[aria-label="Return to Chapter I, Glass Meadow"]');
+    const returnRect = returnAction?.getBoundingClientRect();
     return {
       layout: gameFrame.dataset.canonicalLayout,
       scale: Number(gameFrame.dataset.canonicalScale),
@@ -1759,9 +1764,11 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       hotspotWidth: hotspotRect.width,
       hotspotHeight: hotspotRect.height,
       hotspotContained: hotspotRect.left >= sceneRect.left && hotspotRect.right <= sceneRect.right && hotspotRect.top >= sceneRect.top && hotspotRect.bottom <= sceneRect.bottom,
-      liveButtons: command.querySelectorAll("button").length,
-      minControlWidth: Math.min(...Array.from(command.querySelectorAll("button"), (button) => button.getBoundingClientRect().width)),
-      minControlHeight: Math.min(...Array.from(command.querySelectorAll("button"), (button) => button.getBoundingClientRect().height)),
+      liveButtons: renderedControls.length,
+      minControlWidth: Math.min(...renderedControls.map(({ rect }) => rect.width)),
+      minControlHeight: Math.min(...renderedControls.map(({ rect }) => rect.height)),
+      returnWidth: returnRect?.width ?? 0,
+      returnHeight: returnRect?.height ?? 0,
     };
   });
 
@@ -1775,8 +1782,9 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
   if (metrics.naturalWidth !== (narrow ? 320 : 640) || metrics.naturalHeight !== (narrow ? 180 : 360)) throw new Error(`Unexpected AB-01 asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
   if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`AB-01 smoothing enabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
-  if (!metrics.hotspotContained || metrics.liveButtons < 5) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (!metrics.hotspotContained || metrics.liveButtons < (narrow ? 4 : 6)) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.minControlWidth < 24 || metrics.minControlHeight < 24) throw new Error(`Adventure control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.returnWidth < 24 || metrics.returnHeight < 24) throw new Error(`Safe-return control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
 }
 
 async function captureWitnessScene(page, path) {

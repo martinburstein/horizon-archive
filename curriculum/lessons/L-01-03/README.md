@@ -12,6 +12,8 @@ The files belong to the human expedition calibration layer. A code error never d
 
 At the departure choice, read [Optional Calibration or Depart](optional-calibration-handoff.md). It explains why the route stays open, what the strict optional-practice gate measures, and which working or mastery data survives exit, reload, and departure.
 
+When the completed route later offers backtracking, read [Return Is Navigation, Not a Score](safe-return-state-guide.md). The restored scene and exact return/departure controls change navigation only; they never count as a new attempt, mastery evidence, objective completion, exam progress, or readiness.
+
 ## Keyboard orientation — ungraded
 
 > Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.

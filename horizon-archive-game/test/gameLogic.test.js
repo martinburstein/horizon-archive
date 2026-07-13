@@ -41,8 +41,24 @@ test("an unacknowledged success resumes on its completed scene", () => {
   assert.equal(final.finished, false);
 });
 
-test("invalid pending acknowledgement metadata is discarded", () => {
+test("a completed Meadow return remains pending without erasing later completion", () => {
   const resumed = getResumeState(["meadow", "ruins"], "meadow");
-  assert.equal(resumed.sceneIndex, 2);
-  assert.equal(resumed.pendingSceneId, null);
+  assert.deepEqual(resumed, {
+    completed: ["meadow", "ruins"],
+    sceneIndex: 0,
+    finished: false,
+    pendingSceneId: "meadow",
+  });
+});
+
+test("completed Meadow backtracking is the only earlier pending scene restored", () => {
+  assert.deepEqual(getResumeState(["meadow", "ruins"], "meadow"), {
+    completed: ["meadow", "ruins"],
+    sceneIndex: 0,
+    finished: false,
+    pendingSceneId: "meadow",
+  });
+  const forged = getResumeState(["meadow", "ruins", "automaton"], "ruins");
+  assert.equal(forged.sceneIndex, 2);
+  assert.equal(forged.pendingSceneId, null);
 });

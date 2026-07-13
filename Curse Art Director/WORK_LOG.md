@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Chapter II safe-return gate
+
+- **Outcome:** issued `PASS`; the existing rich destination plate and lower-left ridge remain visually dominant and untouched, while the return name stays in the compact period lower interface and the world hotspot remains transparent except for contained transient focus/hover feedback.
+- **Files:** created [the Chapter II safe-return review](reviews/2026-07-13-chapter-ii-safe-return.md) and updated this work log; no runtime code or raster asset changed.
+- **Validation:** inspected the safe-return runtime/CSS diff, current destination and continuity sheets, Pixel Patrol and Location Scout handoffs, and the approved Meadow marker review. Focused return, transition, and marker tests pass `15/15`. Confirmed exact canonical/narrow ridge bounds, square `24px` lower-band control, transparent hotspot treatment, direct cut, no overlay/glow/arrow/icon/path/sign, no prohibited viewpoint content, no copied motif, no fantasy drift, and restoration of the approved crowned cultivated-glass marker. No fresh browser capture was available, so native transient-label clearance remains an explicit accessibility evidence item.
+- **Finding:** the tranche reads as reversible adventure navigation rather than new scenery or modern UI. The ridge remains an incidental Builder-system boundary, and the persistent return action does not cheapen or obscure either rich environment.
+- **Handoff:** Accessibility Sentinel should verify native focus-label clearance, pointer/keyboard order, announcement order, and exact `640 x 480` / `320 x 240` round-trip behavior. Preserve all current art-direction and first-person exclusions.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Completed Meadow departure gate
 
 - **Outcome:** issued `PASS`; the rich completed Meadow and crowned cultivated-glass marker remain the dominant visual event while the earned-route summary and two explicit choices stay subordinate inside the existing lower adventure band.

@@ -14,7 +14,14 @@ import glassMeadowImage from "../../Glass Meadow Example.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
-import { buildMeadowDeparturePresentation, buildSceneArrivalAnnouncement } from "./sceneTransition.js";
+import {
+  buildCompletedMeadowReturnPatch,
+  buildMeadowDeparturePresentation,
+  buildSceneArrivalAnnouncement,
+  canReturnToCompletedMeadow,
+  DROWNED_ARCHIVE_RETURN_HOTSPOT,
+  getForwardSceneIndex,
+} from "./sceneTransition.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   advanceOpeningProgress,
@@ -277,6 +284,11 @@ const scenes = [
       left: "24.375%", top: "56.94%", width: "10.625%", height: "21.11%",
       narrow: { left: "20%", top: "54%", width: "24%", height: "43%" },
     },
+    secondaryHotspots: [{
+      id: "meadow-return-ridge",
+      label: "Glass Meadow return ridge",
+      hotspot: DROWNED_ARCHIVE_RETURN_HOTSPOT,
+    }],
     prompt: "A grounded Terminal stands by the causeway. The Tidal Lens remains silent.",
     question: "Create a variable named pilot_name containing the text MARTIN.",
     answer: 'pilot_name = "MARTIN"',
@@ -875,7 +887,10 @@ export function App() {
         : "The flight recorder restores your last confirmed position.", "system");
     if (saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered") {
       resumeContinueFocusPendingRef.current = true;
-      setSceneAnnouncement("");
+      setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
+    } else if (saved.pendingSceneId) {
+      resumeContinueFocusPendingRef.current = true;
+      setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
     } else if (!saved.pendingSceneId && !saved.finished && saved.opening.step === "playing") {
       sceneArrivalFocusPendingRef.current = true;
       setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
@@ -941,6 +956,26 @@ export function App() {
     setMode(saved.finished ? "ending" : saved.opening.step);
   }
 
+  function returnToCompletedMeadow() {
+    const returnPatch = buildCompletedMeadowReturnPatch(completed, routeMarkerMastery);
+    if (!returnPatch) return;
+    const meadowScene = scenes[0];
+    const returnPresentation = buildMeadowDeparturePresentation(scenes[1].location, {
+      calibrationMastered: calibrationMastery?.masteryStatus === "mastered",
+    });
+    resumeContinueFocusPendingRef.current = true;
+    setPendingAdvance(returnPatch.pendingAdvance);
+    setTerminalOpen(returnPatch.terminalOpen);
+    setQuestionOpen(returnPatch.questionOpen);
+    setWorkloadSession(returnPatch.workloadSession);
+    setEvidenceSession(returnPatch.evidenceSession);
+    setCalibrationSession(returnPatch.calibrationSession);
+    setSceneIndex(returnPatch.sceneIndex);
+    setVerb(returnPatch.verb);
+    setDialogue(returnPresentation.summary, "system");
+    setSceneAnnouncement(buildSceneArrivalAnnouncement(meadowScene));
+  }
+
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
     if (scene.id === "automaton") {
       if (hotspotId === "fallen-automaton") {
@@ -973,6 +1008,18 @@ export function App() {
           hintLevel: 0,
         });
       }
+      return;
+    }
+    if (scene.id === "ruins" && hotspotId === "meadow-return-ridge") {
+      if (verb === "LOOK AT") {
+        setDialogue("The lower-left ridge aligns with the open route back to the Glass Meadow. Use Return: Glass Meadow below.", "system");
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue("The ridge is silent. The completed route remains available through Return: Glass Meadow.", "system");
+        return;
+      }
+      returnToCompletedMeadow();
       return;
     }
     if (scene.id === "meadow" && hotspotId === "route-marker") {
@@ -1780,12 +1827,19 @@ export function App() {
       setMode("ending");
       return;
     }
-    const nextScene = scenes[completed.length];
-    sceneArrivalFocusPendingRef.current = true;
+    const nextSceneIndex = getForwardSceneIndex(scene.id, completed.length);
+    const nextScene = scenes[nextSceneIndex];
+    const nextSceneAlreadyCompleted = completed.includes(nextScene.id);
+    if (nextSceneAlreadyCompleted) {
+      resumeContinueFocusPendingRef.current = true;
+      setPendingAdvance(true);
+    } else {
+      sceneArrivalFocusPendingRef.current = true;
+    }
     setSceneAnnouncement(buildSceneArrivalAnnouncement(nextScene));
-    setSceneIndex(completed.length);
+    setSceneIndex(nextSceneIndex);
     setVerb("LOOK AT");
-    setDialogue(nextScene.prompt, "system");
+    setDialogue(nextSceneAlreadyCompleted ? nextScene.success : nextScene.prompt, "system");
   }
 
   if (mode === "title") {
@@ -3604,13 +3658,13 @@ export function App() {
                     <button className="continue-action calibration-launch" data-terminal-focus-fallback aria-label={meadowDeparturePresentation.calibrationAriaLabel} aria-describedby="meadow-choice-summary" onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{meadowDeparturePresentation.calibrationLabel}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && modelChoiceEvidence?.masteryStatus === "mastered" && structuredPacketEvidence?.masteryStatus !== "mastered" && (
-                    <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openStructuredPackets(); }}>{structuredPacketSession ? "Resume Structured Packets" : structuredPacketEvidence?.masteryStatus === "primary_complete" ? "Start Structured Transfer" : structuredPacketEvidence?.masteryStatus === "transfer_complete" ? "Open Structured Closed-Note Gate" : "Start Structured Packets"}</button>
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openStructuredPackets(); }}>{structuredPacketSession ? "Resume Structured Packets" : structuredPacketEvidence?.masteryStatus === "primary_complete" ? "Start Structured Transfer" : structuredPacketEvidence?.masteryStatus === "transfer_complete" ? "Open Structured Closed-Note Gate" : "Start Structured Packets"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && structuredPacketEvidence?.masteryStatus === "mastered" && controlFlowEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openControlFlow(); }}>{controlFlowSession ? "Resume Control Flow" : controlFlowEvidence?.masteryStatus === "primary_complete" ? "Start Control Flow Transfer" : controlFlowEvidence?.masteryStatus === "transfer_complete" ? "Open Control Flow Closed-Note Gate" : "Start Control Flow"}</button>
@@ -3653,8 +3707,11 @@ export function App() {
           )}
         </div>
 
-        <aside className="inventory" aria-label="Inventory">
+        <aside className="inventory" data-chapter-return={scene.id === "ruins" && canReturnToCompletedMeadow(completed, routeMarkerMastery) ? "true" : undefined} aria-label="Inventory and scene navigation">
           <span className="inventory-title">INVENTORY</span>
+          {scene.id === "ruins" && canReturnToCompletedMeadow(completed, routeMarkerMastery) && (
+            <button className="chapter-return-action" data-terminal-focus-fallback aria-label="Return to Chapter I, Glass Meadow" onClick={returnToCompletedMeadow}>Return: Glass Meadow</button>
+          )}
           <button disabled={pendingAdvance} onClick={() => setDialogue("Your recorder preserves actions. It cannot preserve certainty.")}>Flight recorder</button>
           <button disabled={pendingAdvance} onClick={() => setDialogue("A sliver of Builder material. Warm only when you stop watching it.")}>Builder shard</button>
         </aside>

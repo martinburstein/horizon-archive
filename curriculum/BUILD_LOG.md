@@ -767,3 +767,24 @@ Files touched: demo freeze report, BUILD_STATUS, readiness record, and BUILD_LOG
 Validation: applicable instructions and logs inspected; 23/23 frozen-scope validator self-tests passed; all curriculum JSON parsed; unique/package/prerequisite progression, official-source mapping, all-15-objective coverage, remediation routes, strict gates, accessibility/session/privacy, and no-guarantee/no-authority language passed; `git diff --check` passed.
 Freeze point: zero-Python progression through all mapped lessons, `L-06-03`, `CUM-01`, and `SIM-01`. `SIM-02` remains content-complete but is post-demo for runtime integration.
 Notes: No game/lore/QA binary, service, Azure, credential, external action, commit, or push.
+
+## Log entry: 2026-07-13T13:04:00-04:00
+
+Stage: Safe-return navigation and mastery boundary
+Work completed: Added a finished learner-facing `L-01-03` guide for the reversible Chapter II return. It names the exact visible and accessible return/re-departure controls, distinguishes navigation, restored scene display, temporary Terminal sessions, and privacy-limited mastery evidence, and states that backtracking cannot create an attempt, score, pass, mastery status, objective completion, exam progress, readiness decision, or external authority. Added a deterministic guide validator and linked the guide from the lesson and optional-calibration handoff without changing any mastery gate.
+Files changed:
+- curriculum/lessons/L-01-03/safe-return-state-guide.md
+- curriculum/lessons/L-01-03/validate_safe_return_guide.py
+- curriculum/lessons/L-01-03/README.md
+- curriculum/lessons/L-01-03/optional-calibration-handoff.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- read the root instructions, source-priority skill, relay workflow, latest curriculum/game/Lore handoffs, current safe-return implementation, focused return/transition tests, and existing `L-01-03` session/evidence contracts
+- source check: no new Microsoft product or exam-objective claim was introduced; the guide is explicitly course-authored and preserves the current official-source boundary
+- safe-return guide self-test and direct check passed, including negative probes for a missing exact control and a missing strict-gate boundary
+- `validate_calibration.py --self-test` passed; traceback and indentation references each passed 8/8
+- focused scene-return, scene-transition, and game-logic tests passed 17/17
+- all curriculum JSON parsed; local `L-01-03` links passed; `git diff --check` passed with line-ending notices only
+Next recommended item: Exercise Agent should use this state boundary when presenting any return/reopen status: announce navigation restoration separately from exercise feedback, show that temporary working data follows the exercise session contract, and never increment mastery evidence merely because a scene reappears.
+Unresolved risks: Real screen-reader announcement order and live both-side reload remain Player/Accessibility checks. The completed Chapter II scene text may still be misread as a fresh response unless runtime ownership and status wording continue to label it as retained state.
+Notes: The strict calibration gate remains 8/8 + 8/8 + 4/4 with both diagnoses before editing and no unresolved critical misconception. No hidden lore, game, art, QA binary, service, Azure, credential, external action, commit, or push change.

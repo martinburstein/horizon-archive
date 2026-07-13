@@ -378,6 +378,34 @@ On reload at an already-entered, unfinished scene, the same bounded chapter/loca
 
 At canonical and narrow layouts, retain one compact System announcement and one compact Scene line. Do not merge System, Scene, and Pilot ownership into one dialogue box, and do not communicate arrival through motion, color, or sound alone.
 
+### GM25 — Reversible Chapter II return
+
+The Chapter II return is navigation through an already established human expedition route. It is not a new Builder response, reward, invitation, recall, or revelation.
+
+Availability is strictly derived from the preserved completed-Meadow prefix and mastered Route Marker evidence. It cannot appear before route mastery and cannot weaken, replace, or independently award that mastery.
+
+Authoritative Chapter II controls and ridge inspection copy:
+
+- Visible lower-interface action: `Return: Glass Meadow`.
+- Accessible name: `Return to Chapter I, Glass Meadow`.
+- `LOOK AT` the reserved lower-left ridge, `SYSTEM // EXPEDITION STATE`: `The lower-left ridge aligns with the open route back to the Glass Meadow. Use Return: Glass Meadow below.`
+- `TALK TO` the ridge, `SYSTEM // EXPEDITION STATE`: `The ridge is silent. The completed route remains available through Return: Glass Meadow.`
+
+The ridge is an observed continuity anchor, not a speaking or listening object. `silent` reports the lack of an audio response; it does not diagnose awareness. Both lines point to the named human navigation action and cause no physical or mastery-state change.
+
+Activating `Return: Glass Meadow` replaces the Chapter II scene directly with the completed Glass Meadow. Add no transition narration, interstitial, travel effect, new art state, route animation, Machine acknowledgement, or Pilot speculation. The restored state is:
+
+1. `SYSTEM // EXPEDITION STATE`, assistive announcement: `Chapter I, Glass Meadow.`
+2. The same applicable GM22 System summary, including the optional-calibration completion clause only when that evidence already exists.
+3. The completed/crowned Route Marker and its earned directional geometry remain visible.
+4. Focus moves to the existing `Depart: Drowned Archive` action; no Terminal opens automatically.
+
+Return preserves all sanitized exercise, route, calibration, Chapter II, and later evidence exactly as recorded. It closes only transient working surfaces already covered by the navigation boundary. It must not reset the Petal, darken the Route Marker, replay First Signal, re-award the crowned state, erase optional-calibration evidence, demote later mastery, or reinterpret a retained completion observation as a new Machine response.
+
+Reload while the returned Meadow is pending restores this same completed hold, System summary, and departure focus. Re-departure uses the unchanged `Depart: Drowned Archive` action and returns directly to Chapter II. If Chapter II was already complete, its retained completed observation and pending forward action may be restored; this is state recovery, not a second completion event.
+
+The return action stays in the lower interface at both canonical and narrow layouts. The reserved ridge remains a secondary discoverability target with no painted exit icon, label, or new structure. Direct scene replacement is the reduced-motion behavior; no substitute transition is required.
+
 ## Current gameplay copy reconciliation
 
 These production recommendations supersede stale runtime copy; no gameplay code is edited in this turn.

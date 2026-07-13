@@ -40,6 +40,10 @@
 
 ## Hotspot implementation record
 
+- Implemented Glass Meadow return ridge: canonical `left: 0%`, `top: 70%`, `width: 17.5%`, `height: 30%`, exactly `x=0, y=252, w=112, h=108` in the `640 x 360` world.
+- Authored narrow return ridge: `left: 0%`, `top: 70%`, `width: 15%`, `height: 30%`, exactly `x=0, y=126, w=48, h=54` in the `320 x 180` world.
+- The return ridge remains secondary negative space inside the existing lower-left phase ridge. It has no painted icon, arrow, sign, portal, path, glow, or persistent world label; hover/focus uses transparent containment, while the lower interface owns `Return: Glass Meadow`.
+- Return is gated by completed Meadow route mastery and restores the completed/crowned Meadow composition and departure focus without changing evidence. See the [round-trip continuity map](GM-01-to-AB-01-departure-continuity.md).
 - Desktop scene crop: `object-position: center 20%`; hotspot `left: 60.5%`, `top: 55%`, `width: 11%`, `height: 44%`.
 - Current authored `320 x 180` world derivative: hotspot `left: 20%`, `top: 54%`, `width: 24%`, `height: 43%`, approximately `x=64, y=97, w=77, h=77`.
 - These viewport bounds map back to the full-plate source zone (`x 60–73%`, `y 47–82%`) under `object-fit: cover`; they are intentionally different rather than copied raw from the plate.

@@ -38,3 +38,5 @@ Optional does not mean unscored. Calibration mastery still requires both diagnos
 4. What clears when you depart? **The temporary working session, not saved mastery evidence**.
 
 This is course-authored Python prerequisite practice. It is not a Microsoft exam question, does not call Microsoft Foundry or Azure, grants no authority for an external action, and does not guarantee an AI-901 result.
+
+If you revisit a completed scene later, read [Return Is Navigation, Not a Score](safe-return-state-guide.md). It explains the exact return and re-departure controls and why restored navigation never creates assessment evidence, objective completion, exam progress, or authority.

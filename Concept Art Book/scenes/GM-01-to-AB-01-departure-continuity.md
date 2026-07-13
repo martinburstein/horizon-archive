@@ -18,7 +18,7 @@ This is the implementation map for the completed Glass Meadow departure and Drow
 | Meadow departure direction | right edge, `x=632..639, y=228..359` | `x=316..319, y=114..179` | Completed groove and local low-growth state point right without arrow, path, label, or animated beam. This is continuity, not a hotspot. |
 | AB-01 visual entry ridge | `x=0..112, y=252..359` | `x=0..64, y=126..179` | Lower-left dry phase ridge receives the rightward departure. Irregular segments and water boundary imply incidental stability, not a human causeway. |
 | AB-01 primary arrival hotspot | `x=156, y=205, w=68, h=76` | current narrow `x=64, y=97, w=77, h=77` | Focus lands on the grounded Workload Sort contact after the chapter announcement. Landmark and return edge remain secondary. |
-| Reserved safe-return anchor | `x=0, y=252, w=112, h=108` | `x=0, y=126, w=48, h=54` | If backtracking is enabled, bind it to the same ridge and a lower-interface action. Paint no exit icon or new structure. |
+| Implemented safe-return anchor | `x=0, y=252, w=112, h=108` | `x=0, y=126, w=48, h=54` | The gated secondary hotspot uses existing lower-left ridge negative space; the persistent name and activation stay in the lower-interface action. Paint no exit icon or new structure. |
 
 Canonical AB arrival and return zones remain 44 pixels apart; narrow arrival and return zones remain 16 pixels apart. All actionable targets exceed `44 x 44` in their intended presentation.
 
@@ -29,7 +29,15 @@ Canonical AB arrival and return zones remain 44 pixels apart; narrow arrival and
 3. **Explicit departure:** only the lower-band `Depart: Drowned Archive` action changes location. Replace the world plate directly inside the existing canvas; add no fade layer, portal, travel animation, spinner, smooth panel, or CSS scenery.
 4. **Destination orientation:** AB-01 appears with its lower-left ridge as arrival side. Announce chapter/location, then focus the grounded Terminal at the canonical or narrow mapping above.
 5. **Reload safety:** reloading after departure restores AB-01 and primary-hotspot focus. It does not replay departure, reset route mastery, or demote the Meadow marker.
-6. **Backtracking safety:** when return is implemented, use the reserved ridge anchor and restore GM-01 with the marker completed. Focus the completed marker or departure action, never the locked first-contact state. Return cannot erase calibration evidence or close the route.
+6. **Backtracking safety:** the implemented return uses the ridge anchor and restores GM-01 with the marker completed. Focus moves to the earned route summary/departure action, never the locked first-contact state. Return cannot erase calibration evidence or close the route.
+
+## Runtime synchronization
+
+- The ridge hotspot is available only when Meadow belongs to the contiguous completion state and sanitized route-marker mastery is exactly `mastered`.
+- `LOOK AT` identifies the existing ridge relationship and directs the player to the persistent lower-band `Return: Glass Meadow` action. Hover/focus feedback is contained inside the hotspot with no translucent fill; no name is baked into the plate.
+- Activation clears only transient Terminal/question/calibration working sessions. It preserves route, calibration, workload, exercise, and later mastery evidence.
+- Return politely announces Chapter I, restores the completed/crowned marker composition, route summary, and deterministic departure focus. Re-departure always revisits Chapter II before later progression.
+- Reload on either side restores the active scene, earned completion prefix, evidence, and deterministic navigation focus without replaying a transition effect.
 
 ## Visual continuity
 
@@ -45,6 +53,6 @@ Canonical AB arrival and return zones remain 44 pixels apart; narrow arrival and
 - Keep the completed marker exposed to pointer and keyboard inspection until departure.
 - Departure, calibration, and later return are named interface actions with visible focus; the painting carries no baked interaction text.
 - Announce location change once, politely. Do not announce a travel effect that is not visible.
-- Test completion -> calibration -> safe exit -> departure -> AB focus -> reload. When backtracking is added, test AB return -> completed Meadow restoration -> reload both ways.
+- Test completion -> calibration -> safe exit -> departure -> AB focus -> ridge discovery -> lower-band return -> completed Meadow restoration -> reload both ways -> re-departure to AB.
 - At `320 x 240`, keep actions inside the interface width and use explicit narrow AB coordinates rather than mechanically halving the canonical target.
 - Direct scene replacement satisfies reduced motion; no substitute animation is required.
