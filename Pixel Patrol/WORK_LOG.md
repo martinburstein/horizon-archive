@@ -1,5 +1,14 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 — Compact first-Terminal static pixel gate
+
+- **Verdict:** PASS by static contract review; no runtime style correction warranted. The title-to-Meadow path retains the canonical `640 x 480` / narrow `320 x 240` whole-frame wrapper, selected rich Meadow raster, first-person composition, and no ship or protagonist. The compact orientation keeps one DOM/read order: context header -> action evidence -> prompt -> choices -> live feedback.
+- **Measured contracts:** the orientation owns two explicit rows (`auto` + `minmax(0, 1fr)`), clips its shell, and gives overflow to the single `.orientation-action` reading path. Both canonical and narrow presentations keep two bounded answer columns; every answer has `min-height: 44px`, while canonical/narrow Terminal insets remain `8px` / `4px`. Pixelated/crisp scene rendering and whole-number frame scaling remain unchanged.
+- **Files changed:** `horizon-archive-game/test/terminalExercise.test.js` and this log only. Added focused source assertions for DOM order, one contained action scroller, 44 px answer height, explicit orientation rows, and narrow inset.
+- **Validation:** 13 focused opening/canonical/first-Terminal tests pass; production build and `git diff --check` pass. Static source review confirms the four-step orientation, keyboard focus target, associated prompt/context/feedback, recoverable retry, and privacy boundary remain intact.
+- **Risk / uncertainty:** no sanctioned rendered evidence was available in this static-only retry, so actual glyph wrapping, scrollbar chrome, and focus visibility at exact native viewports remain a visual QA risk rather than a claimed pass.
+- **Exact Location Scout handoff:** preserve the unchanged Glass Meadow raster and first-person/no-ship/no-protagonist composition. Do not redesign the scene or add CSS art; review only whether the physical Petal Terminal target remains visually findable beneath the compact 44 px interaction grammar at `640 x 360` world scale.
+
 ## 2026-07-13 — Opening and Glass Meadow canonical frame
 
 - **Completed:** moved title, save creation, character naming, all three temporary prologue beats, Chapter I reveal, and first Meadow gameplay into the same canonical frame. Replaced the prohibited repeating CSS prologue field with one solid period-authentic surface. The selected `Glass Meadow Example.png` remains the unchanged raster target and uses centered cover cropping with pixelated/crisp presentation; no procedural scene approximation was added.
