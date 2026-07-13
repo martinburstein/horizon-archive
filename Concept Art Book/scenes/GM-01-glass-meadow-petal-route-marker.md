@@ -108,6 +108,28 @@ For implementation rectangles, use primary `x=294, y=191, w=120, h=136` and rout
 - **Continuity/canon:** preserve absolute flatness, edge-to-edge crop, non-Cartesian flush mats, upward growth, visible repair variation, three stewardship periods, surface-only first contact, and the unresolved central mystery.
 - **Production QA:** inspect the `640 x 360` rebuild at native 1x, exact nearest-neighbor 2x, grayscale, and 25% thumbnail. Require hotspot-to-painted-cue alignment within two logical pixels, straight horizon, non-overlap, edge-to-edge crop, and absence of text, paths, ship, protagonist, and spoilers.
 
+## 45-second opening findability lock
+
+**Decision:** retain the approved primary rectangle `x=294, y=191, w=120, h=136`. The mapping is correct for the unchanged selected raster and does not require coordinate, raster, CSS-art, or hotspot-test correction.
+
+### Why the first Terminal reads quickly
+
+- **Central placement:** the target centroid is `x=354, y=259`, only 34 logical pixels right of world center. It sits directly above the lower-center arrival field where the first-person view naturally settles.
+- **Complete silhouette:** unlike the lower-right tilted oval, the primary bulb, throat, rim, root, and radial collar are fully contained. The eye can close its outline without reconstructing a frame-cropped object.
+- **Three-scale shape stack:** broad pale rim, darker transparent bulb, and black/amber circular collar create a large-to-medium-to-small hierarchy that survives the dense crop.
+- **Value before hue:** the pale rim and internal reflection sit against transmitted black floor; the collar interrupts that dark mass with nested light/dark rings. Amber reinforces the root but is not the only cue.
+- **Useful screen share:** the `120 x 136` target occupies about `7.1%` of the `640 x 360` world. At a 25% composition thumbnail it remains approximately `30 x 34` pixels, large enough to preserve the rim/bulb/collar read.
+- **Secondary-node control:** the route candidate centroid is `x=562, y=275.5`, 208 logical pixels farther right. Its box reaches `y=359`, so the tilted oval reads as edge-cropped foreground framing. During the opening its core, groove, and local reflection remain dark and it receives no brighter cue than the primary.
+- **Clean separation:** the 79-pixel horizontal gap prevents hover/focus ambiguity. No part of the primary hit area depends on the route node or an invisible bridge between them.
+
+### Opening search contract
+
+1. **0-10 seconds:** the level horizon and lower-center dormant mat pocket establish where to inspect; no label, arrow, path, ship, protagonist, or animated beacon is introduced.
+2. **10-25 seconds:** the central complete bulb/collar silhouette and its radial mat interruption provide the strongest self-contained actionable shape. Repeated smaller collar notches support recognition without forming a trail.
+3. **25-45 seconds:** pointer or keyboard focus may add the game's standard non-art focus/cursor treatment and accessible name, but must not repaint the raster or introduce CSS scenery. The visual target remains understandable before this confirmation.
+
+Pass the opening only when a first-time player identifies or focuses the Terminal within 45 seconds at the native `640 x 360` world scale without being told a coordinate. Route-node selection before first acknowledgement is evidence of failed hierarchy even if both rectangles are technically correct. Preserve unlimited recovery and allow ordinary inspection of surrounding glass without penalty.
+
 ## Historical responsive crop and hotspot plan
 
 The following percentages document the superseded non-flat blockout only. They are not implementation guidance for the selected composition target.
