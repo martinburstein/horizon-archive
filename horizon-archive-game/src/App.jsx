@@ -10,10 +10,16 @@ import cityImage from "../../Concept Art/Underground City.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
-import { PixelMeadow } from "./PixelMeadow.jsx";
+import glassMeadowImage from "../../Glass Meadow Example.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
+import {
+  createOpeningProgress,
+  PROLOGUE_BEAT_COUNT,
+  sanitizeOpeningProgress,
+  validateCharacterName,
+} from "./openingFlow.js";
 import { ADVENTURE_VERBS, getVerbPressedState } from "./verbSelection.js";
 import {
   evaluateTerminalCode,
@@ -216,6 +222,24 @@ import { deriveMixedSimulationResume,evaluateMixedSimulationItem,getMixedSimulat
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
 
+const temporaryPrologueBeats = [
+  {
+    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 1 OF 3",
+    heading: "A patient signal",
+    body: "Placeholder sequence: the flight recorder wakes to a repeating signal beyond the mapped routes.",
+  },
+  {
+    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 2 OF 3",
+    heading: "A route without a sender",
+    body: "Placeholder sequence: the Machine resolves one safe approach and withholds every answer you expected.",
+  },
+  {
+    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 3 OF 3",
+    heading: "First ground",
+    body: "Placeholder sequence: descent telemetry ends above a perfectly flat field of cultivated glass.",
+  },
+];
+
 const scenes = [
   {
     id: "meadow",
@@ -373,6 +397,8 @@ function loadSave() {
   try {
     const saved = JSON.parse(localStorage.getItem(SAVE_KEY) || "null");
     if (!saved || !Array.isArray(saved.completed)) return null;
+    const opening = sanitizeOpeningProgress(saved.opening, { legacySave: !("opening" in saved) });
+    if (!opening) return null;
 
     // Only a contiguous, known completion prefix is trusted. This prevents a
     // stale or edited save from skipping required questions or unlocking the
@@ -383,6 +409,7 @@ function loadSave() {
       : saved.completed;
     return {
       ...getResumeState(completed, saved.pendingSceneId),
+      opening,
       exerciseEvidence: sanitizeExerciseEvidence(saved.exerciseEvidence),
       workloadEvidence: sanitizeWorkloadEvidence(saved.workloadEvidence),
       evidencePacketMastery: sanitizeEvidencePacketMastery(saved.evidencePacketMastery),
@@ -416,6 +443,10 @@ function loadSave() {
 
 export function App() {
   const [mode, setMode] = useState("title");
+  const [characterName, setCharacterName] = useState("");
+  const [characterNameDraft, setCharacterNameDraft] = useState("");
+  const [characterNameError, setCharacterNameError] = useState("");
+  const [prologueBeat, setPrologueBeat] = useState(0);
   const [sceneIndex, setSceneIndex] = useState(0);
   const [completed, setCompleted] = useState([]);
   const [verb, setVerb] = useState("LOOK AT");
@@ -470,6 +501,8 @@ export function App() {
   const [remediationPlannerSession,setRemediationPlannerSession]=useState(null);const [remediationPlannerEvidence,setRemediationPlannerEvidence]=useState(null);
   const [capstoneReadinessSession,setCapstoneReadinessSession]=useState(null);const [capstoneReadinessEvidence,setCapstoneReadinessEvidence]=useState(null);
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
+  const openingHeadingRef = useRef(null);
+  const openingTransitionRef = useRef(false);
   const terminalTriggerRef = useRef(null);
   const continueButtonRef = useRef(null);
   const focusContinueAfterStructuredRef = useRef(false);
@@ -503,12 +536,6 @@ export function App() {
     hotspot: scene.hotspot,
     primary: true,
   }, ...(scene.secondaryHotspots ?? [])];
-  const meadowPetalState = exerciseEvidence?.completed
-    ? "completed"
-    : terminalOpen && meadowTerminalKind === "first" ? "awake" : "locked";
-  const meadowRouteState = routeMarkerMastery?.masteryStatus === "mastered"
-    ? "completed"
-    : exerciseEvidence?.completed ? "awake" : "locked";
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = ruinsVisualState === "complete"
     ? { canonical: ruinsCompleteImage, narrow: ruinsCompleteNarrowImage }
@@ -532,8 +559,9 @@ export function App() {
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
-    if (mode === "playing" || mode === "ending") {
+    if (["character-name", "prologue", "chapter-reveal", "playing", "ending"].includes(mode)) {
       localStorage.setItem(SAVE_KEY, JSON.stringify({
+        opening: createOpeningProgress(mode === "ending" ? "playing" : mode, characterName, prologueBeat),
         sceneIndex,
         completed,
         pendingSceneId: mode === "playing" && pendingAdvance ? scene.id : null,
@@ -563,7 +591,13 @@ export function App() {
         mixedSimulationEvidence,
       }));
     }
-  }, [mode, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence,singleAgentEvidence,textSpeechPatternEvidence,visualPatternEvidence,objectiveLedgerEvidence,remediationPlannerEvidence,capstoneReadinessEvidence,mixedSimulationEvidence]);
+  }, [mode, characterName, prologueBeat, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence,singleAgentEvidence,textSpeechPatternEvidence,visualPatternEvidence,objectiveLedgerEvidence,remediationPlannerEvidence,capstoneReadinessEvidence,mixedSimulationEvidence]);
+
+  useLayoutEffect(() => {
+    if (!["create-save", "character-name", "prologue", "chapter-reveal"].includes(mode)) return;
+    openingTransitionRef.current = false;
+    openingHeadingRef.current?.focus({ preventScroll: true });
+  }, [mode, prologueBeat]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterStructuredRef.current || terminalOpen || structuredPacketEvidence?.masteryStatus !== "mastered") return;
@@ -647,11 +681,19 @@ export function App() {
   useEffect(()=>{if(!terminalOpen||ruinsTerminalKind!=="mixed-simulation"||!mixedSimulationSession?.timingEnabled||mixedSimulationSession.complete)return;const timer=setInterval(()=>setMixedSimulationSession(s=>s?{...s,elapsedSeconds:s.elapsedSeconds+1}:s),1000);return()=>clearInterval(timer);},[terminalOpen,ruinsTerminalKind,mixedSimulationSession?.timingEnabled,mixedSimulationSession?.complete]);
 
   function beginNewGame() {
+    setMode("create-save");
+  }
+
+  function createSaveFile() {
     localStorage.removeItem(SAVE_KEY);
+    setCharacterName("");
+    setCharacterNameDraft("");
+    setCharacterNameError("");
+    setPrologueBeat(0);
     setSceneIndex(0);
     setCompleted([]);
     setVerb("LOOK AT");
-    setDialogue("Your survey craft is silent behind you. The meadow is not.");
+    setDialogue("Objective: Search the Glass Meadow for a Terminal.", "system");
     setQuestionOpen(false);
     setFeedback("");
     setCode("");
@@ -701,12 +743,45 @@ export function App() {
     setRemediationPlannerSession(null);setRemediationPlannerEvidence(null);
     setCapstoneReadinessSession(null);setCapstoneReadinessEvidence(null);
     setMixedSimulationSession(null);setMixedSimulationEvidence(null);
+    setMode("character-name");
+  }
+
+  function submitCharacterName(event) {
+    event.preventDefault();
+    const result = validateCharacterName(characterNameDraft);
+    if (!result.valid) {
+      setCharacterNameError(result.error);
+      return;
+    }
+    setCharacterName(result.characterName);
+    setCharacterNameDraft(result.characterName);
+    setCharacterNameError("");
+    setPrologueBeat(0);
+    setMode("prologue");
+  }
+
+  function advanceTemporaryPrologue() {
+    if (openingTransitionRef.current) return;
+    openingTransitionRef.current = true;
+    if (prologueBeat < PROLOGUE_BEAT_COUNT - 1) {
+      setPrologueBeat((current) => current + 1);
+      return;
+    }
+    setMode("chapter-reveal");
+  }
+
+  function enterChapterOne() {
+    setDialogue("Objective: Search the Glass Meadow for a Terminal.", "system");
     setMode("playing");
   }
 
   function resumeGame() {
     const saved = loadSave();
     if (!saved) return beginNewGame();
+    setCharacterName(saved.opening.characterName);
+    setCharacterNameDraft(saved.opening.characterName);
+    setCharacterNameError("");
+    setPrologueBeat(saved.opening.prologueBeat);
     setSceneIndex(saved.sceneIndex);
     setCompleted(saved.completed);
     setDialogue(saved.pendingSceneId
@@ -766,7 +841,7 @@ export function App() {
     setTerminalHintLevel(0);
     setShowHint(false);
     setCode("");
-    setMode(saved.finished ? "ending" : "playing");
+    setMode(saved.finished ? "ending" : saved.opening.step);
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
@@ -1594,7 +1669,7 @@ export function App() {
   if (mode === "title") {
     return (
       <main className="game-shell title-screen" data-playtest-marker="TITLE_SCREEN">
-        <PixelMeadow petalState="locked" routeState="locked" />
+        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
         <section className="title-copy" aria-labelledby="game-title">
           <p className="eyebrow">A Horizon Archive expedition</p>
@@ -1605,6 +1680,92 @@ export function App() {
             {canResume && <button className="secondary-action" onClick={resumeGame}>Resume signal</button>}
           </div>
           <p className="title-note">A point-and-click Python mystery</p>
+        </section>
+      </main>
+    );
+  }
+
+  if (mode === "create-save") {
+    return (
+      <main className="game-shell opening-screen" data-playtest-marker="CREATE_SAVE_FILE">
+        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
+        <div className="title-shade" aria-hidden="true" />
+        <section className="opening-card" aria-labelledby="create-save-heading">
+          <p className="eyebrow">Expedition setup // step 1 of 2</p>
+          <h1 ref={openingHeadingRef} id="create-save-heading" tabIndex="-1">Create save file</h1>
+          <p>Your expedition uses one local browser save slot. Progress and your chosen character name stay on this device.</p>
+          <div className="save-slot-preview" aria-label="Local save slot">
+            <span>SLOT 01</span>
+            <strong>{canResume ? "Existing expedition detected" : "Empty"}</strong>
+          </div>
+          {canResume && <p className="opening-warning">Creating this file replaces the existing local expedition in Slot 01.</p>}
+          <div className="title-actions">
+            <button className="primary-action" type="button" onClick={createSaveFile}>Create Slot 01</button>
+            <button className="secondary-action" type="button" onClick={() => setMode("title")}>Cancel</button>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
+  if (mode === "character-name") {
+    return (
+      <main className="game-shell opening-screen" data-playtest-marker="CHARACTER_NAME_FORM">
+        <img className="title-art" src={glassMeadowImage} alt="" aria-hidden="true" />
+        <div className="title-shade" aria-hidden="true" />
+        <form className="opening-card opening-form" aria-labelledby="character-name-heading" onSubmit={submitCharacterName}>
+          <p className="eyebrow">Expedition setup // step 2 of 2</p>
+          <h1 ref={openingHeadingRef} id="character-name-heading" tabIndex="-1">Name your character</h1>
+          <label htmlFor="character-name">Flight-recorder display name</label>
+          <input
+            id="character-name"
+            name="character-name"
+            autoComplete="off"
+            maxLength="24"
+            value={characterNameDraft}
+            aria-describedby="character-name-help character-name-error"
+            aria-invalid={Boolean(characterNameError)}
+            onChange={(event) => { setCharacterNameDraft(event.target.value); setCharacterNameError(""); }}
+          />
+          <p id="character-name-help" className="opening-help">2–24 characters. This name is stored only in Slot 01.</p>
+          <p id="character-name-error" className="opening-error" role="alert">{characterNameError}</p>
+          <div className="title-actions">
+            <button className="primary-action" type="submit">Confirm name</button>
+            <button className="secondary-action" type="button" onClick={() => setMode("create-save")}>Back</button>
+          </div>
+        </form>
+      </main>
+    );
+  }
+
+  if (mode === "prologue") {
+    const beat = temporaryPrologueBeats[prologueBeat];
+    return (
+      <main className="game-shell opening-screen prologue-screen" data-playtest-marker={`TEMPORARY_PROLOGUE_${prologueBeat + 1}`}>
+        <div className="prologue-field" aria-hidden="true" />
+        <section className="opening-card prologue-card" aria-labelledby="prologue-heading">
+          <p className="eyebrow filler-label">{beat.label}</p>
+          <h1 ref={openingHeadingRef} id="prologue-heading" tabIndex="-1">{beat.heading}</h1>
+          <p>{beat.body}</p>
+          <p className="prologue-recorder">FLIGHT RECORDER // {characterName.toUpperCase()}</p>
+          <button className="primary-action" type="button" onClick={advanceTemporaryPrologue}>
+            {prologueBeat === PROLOGUE_BEAT_COUNT - 1 ? "Reach Chapter I" : "Continue temporary prologue"}
+          </button>
+        </section>
+      </main>
+    );
+  }
+
+  if (mode === "chapter-reveal") {
+    return (
+      <main className="game-shell chapter-reveal-screen" data-playtest-marker="CHAPTER_ONE_REVEAL">
+        <img className="title-art chapter-reveal-art" src={glassMeadowImage} alt="" aria-hidden="true" />
+        <div className="title-shade" aria-hidden="true" />
+        <section className="chapter-reveal-copy" aria-labelledby="chapter-reveal-heading">
+          <p className="eyebrow">Chapter I</p>
+          <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
+          <p>A working landscape. No visible welcome. One signal somewhere in the glass.</p>
+          <button className="primary-action" type="button" onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>
     );
@@ -1633,7 +1794,14 @@ export function App() {
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-ready={scene.id === "meadow" && exerciseEvidence?.completed ? "true" : undefined}>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         {scene.id === "meadow" ? (
-          <PixelMeadow petalState={meadowPetalState} routeState={meadowRouteState}>{hotspotButtons}</PixelMeadow>
+          <>
+            <img
+              className="scene-art glass-meadow-art"
+              src={glassMeadowImage}
+              alt="An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person"
+            />
+            {hotspotButtons}
+          </>
         ) : (
           <>
             {scene.id === "ruins" ? (
@@ -1652,6 +1820,9 @@ export function App() {
           <strong>{scene.location}</strong>
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
+        {scene.id === "meadow" && !exerciseEvidence?.completed && (
+          <p className="opening-objective" data-opening-objective="terminal-search">OBJECTIVE // SEARCH FOR A TERMINAL</p>
+        )}
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell
             exerciseId={terminalExercise.exerciseId}
