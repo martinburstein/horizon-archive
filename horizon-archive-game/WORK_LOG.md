@@ -1,5 +1,14 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-13 - CRT control proportion correction
+
+- **Outcome:** Corrected the faux-screen bezel's stretched lower controls without repainting or replacing the approved raster. The canonical nine-slice now maps the source control band at effectively equal horizontal and vertical scale, so the amber buttons and black rotary knobs retain their authored round proportions.
+- **Files changed:** `src/canonicalFrame.js`, `src/styles.css`, `test/canonicalFrame.test.js`, and this work log. Narrow mode remains bezel-free and unchanged.
+- **Validation:** The new regression compares the source bottom-edge horizontal scale with the rendered control-band vertical scale; the difference is below `0.001`. Full unit suite passed **203/203** and the production build passed with the existing chunk-size advisory. In-app visual QA passed at `1280x720` and `1600x900`: controls are round, the stage is centered and contained, and the title interaction remained functional. Exact `320x240` narrow mode remained bezel-free and exactly contained. Browser console warnings/errors: none. `../design-qa.md` records `final result: passed`.
+- **Findings:** The previous `175px` source slice was compressed into a `54px` border while its width expanded across the canonical playfield, producing visibly horizontal ellipses. The corrected `128px` source slice and `68px` logical band differ in axis scale by less than `0.001`.
+- **Handoff:** Accept the bezel proportion correction; no further control-band work is required unless a new bezel raster replaces the current source.
+- **Status:** Objective complete; ready to checkpoint.
+
 ## 2026-07-13 - Coordinator closure: reconstructed Workload Sort progress
 
 - **Outcome:** Closed the nine-agent Workload Sort recovery milestone. Reload and scene round trips now rebuild finalized primary or retry progress from sanitized evidence, resume at the first incomplete card, and preserve a completed-but-unacknowledged result without promoting mastery. Close/reopen continues to preserve the richer session-only remediation state.

@@ -724,7 +724,8 @@ h1 {
   border-style: solid;
   border-color: transparent;
   border-image-source: url("./assets/crt-bezel.png");
-  border-image-slice: 113 165 175 165;
+  /* Keep the source controls at an even X/Y scale so the round knobs stay round. */
+  border-image-slice: 113 165 128 165;
   border-image-repeat: stretch;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.76));
 }

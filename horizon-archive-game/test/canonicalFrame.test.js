@@ -9,9 +9,14 @@ test("canonical frame keeps authored logical layouts while the CRT stage fills t
     { width: desktop.width, height: desktop.height, worldHeight: desktop.worldHeight, interfaceHeight: desktop.interfaceHeight },
     { width: 640, height: 480, worldHeight: 360, interfaceHeight: 120 },
   );
-  assert.deepEqual({ stageWidth: desktop.stageWidth, stageHeight: desktop.stageHeight }, { stageWidth: 736, stageHeight: 572 });
-  assert.equal(desktop.scale, 1.531);
+  assert.deepEqual({ stageWidth: desktop.stageWidth, stageHeight: desktop.stageHeight }, { stageWidth: 736, stageHeight: 586 });
+  assert.equal(desktop.scale, 1.495);
   assert.ok(desktop.renderedStageHeight <= 900 && desktop.renderedStageHeight >= 870);
+
+  const sourceBottomEdgeWidth = 1536 - 165 - 165;
+  const horizontalControlScale = desktop.width / sourceBottomEdgeWidth;
+  const verticalControlScale = desktop.bezel.bottom / 128;
+  assert.ok(Math.abs(horizontalControlScale - verticalControlScale) < 0.001);
 
   const compactDesktop = getCanonicalGameFrame(640, 480);
   assert.equal(compactDesktop.layout, "narrow");

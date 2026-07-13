@@ -2,7 +2,7 @@ export const CANONICAL_FRAME = Object.freeze({ width: 640, height: 480, worldHei
 export const NARROW_FRAME = Object.freeze({ width: 320, height: 240, worldHeight: 180, interfaceHeight: 60 });
 
 const CRT_BEZELS = Object.freeze({
-  canonical: Object.freeze({ top: 38, right: 48, bottom: 54, left: 48, safeMargin: 12 }),
+  canonical: Object.freeze({ top: 38, right: 48, bottom: 68, left: 48, safeMargin: 12 }),
   narrow: Object.freeze({ top: 0, right: 0, bottom: 0, left: 0, safeMargin: 2 }),
 });
 
