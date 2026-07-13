@@ -2,6 +2,8 @@
 
 **Bridge instruction:** This lesson is course-authored prerequisite instruction. It teaches the Python fluency needed for later Foundry client labs; it is not an official Microsoft Learn lesson.
 
+Coming directly from the opening? Read [Before Your First Terminal](first-terminal-orientation.md) before selecting the Terminal's first task. It explains the edit-run-retry loop and keeps local expedition save data separate from temporary code and mastery evidence.
+
 ## Mission
 
 By the end, you will create a small program, run it, change it, and explain what happened. You do not need prior coding knowledge.
@@ -91,4 +93,3 @@ If not, use one remediation route, then retry with a new value. A first error is
 - Tomorrow: recreate a two-line program in a new file without looking.
 - In three days: explain file, command, interpreter, and output from memory.
 - In seven days: run a tiny script from a different folder and diagnose one deliberate filename error.
-

@@ -708,6 +708,23 @@ Validation: applicable instructions/logs/readiness chain inspected; official map
 Handoff: Exercise Agent can render `EX-SIM02-TRANSFER` with optional diagnostic timing and fully equivalent untimed mode.
 Notes: No service/Azure/credential/external action/gameplay/lore/QA-binary changes. Original practice only; no exam guarantee.
 
+## Log entry: 2026-07-13T00:30:04-04:00
+
+Stage: Opening-to-first-Terminal beginner handoff
+Work completed: Added a short learner-facing orientation inside `L-01-01` that explains the first Terminal's read-predict-run-edit-retry loop, previews valid Python syntax, reassures the learner that code errors are recoverable, and separates browser-local character/save data, temporary Terminal working state, and privacy-limited mastery evidence. Linked it from the lesson README without changing the existing lesson, activity, assessment, or exercise contracts.
+Files changed:
+- curriculum/lessons/L-01-01/first-terminal-orientation.md
+- curriculum/lessons/L-01-01/README.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- read root and game AGENTS.md, AGENT_WORKFLOW.md, latest curriculum log, all existing `L-01-01` learner artifacts, and the surface-safe 45-second opening contract
+- ran `first_signal.py`: expected two-line output passed
+- ran the orientation's Python example: valid syntax and expected output passed
+- verified L-01-01 activity/assessment ID alignment, local README links, required state-layer/no-guarantee language, and `git diff --check`
+Next recommended item: Exercise Agent should surface this compact orientation immediately after the first Terminal is opened, before the editable task, while preserving keyboard focus, safe exit, and the current strict lesson gate.
+Unresolved risks: Runtime copy must not imply that the Machine owns the browser save or character name. If the runtime restores or clears drafts differently from the stated temporary-session contract, Exercise Agent should align the learner-facing status text with actual behavior rather than weakening the privacy boundary.
+Notes: Course-authored beginner bridge only; not a Microsoft exam question and no AI-901 outcome guarantee. No game, art, lore, exercise, QA-binary, service, Azure, external-action, commit, or push change.
+
 ## Log entry: 2026-07-12T22:20:00-04:00
 
 Stage: Demo curriculum freeze audit
