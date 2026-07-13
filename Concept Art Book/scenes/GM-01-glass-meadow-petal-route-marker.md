@@ -10,6 +10,7 @@
 - **Historical image:** [glass-meadow-petal-route-marker-v1.png](../images/glass-meadow-petal-route-marker-v1.png)
 - **Original environment reference:** [Alien Meadow.png](../../Concept%20Art/Alien%20Meadow.png)
 - **Arrival continuity:** [GM-00 Glass Garden Margin](GM-00-glass-meadow-landing-shelf.md)
+- **Departure continuity:** [completed Meadow to Drowned Archive](GM-01-to-AB-01-departure-continuity.md)
 - **Purpose:** Reframe Glass Meadow as an unfathomably flat Builder material field whose upward-growing glass crop, process-state waves, First Signal contact, and route contact continue to every edge without terrain relief, skyline architecture, or human agricultural geometry.
 
 ## Navigation and interaction zones

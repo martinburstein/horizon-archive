@@ -741,6 +741,24 @@ Next recommended item: Exercise Agent should compare the on-screen four cards ag
 Unresolved risks: The runtime repeats the full disclaimer on every card. That is safe but may add reading load; any compression must keep “course-authored,” “not a Microsoft exam question,” and “no guarantee” available before editable code begins. Runtime session-clear wording must continue matching actual close/reopen versus reload/resume behavior.
 Notes: No new objective/product claim and no game, lore, art, QA-binary, service, Azure, authority, commit, or push change.
 
+## Log entry: 2026-07-13T11:52:15-04:00
+
+Stage: Optional calibration and destination handoff
+Work completed: Added a compact learner-facing `L-01-03` choice handoff for the newly destination-aware departure UI. It makes both actions valid, states that required route mastery is already complete, preserves the full 8/8 + 8/8 + 4/4 calibration gate if practice is chosen, and explains exit/reopen, reload/resume, departure clearing, and privacy-limited mastery evidence without making calibration control story access.
+Files changed:
+- curriculum/lessons/L-01-03/optional-calibration-handoff.md
+- curriculum/lessons/L-01-03/README.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- read AGENTS.md, AGENT_WORKFLOW.md, latest curriculum/game/Lore handoffs, `L-01-03` lesson/README/exercise/check, current AI-901 map, and official source register
+- source check: `L-01-03` remains course-authored Python prerequisite bridge material with no mapped AI-901 objective or new time-sensitive product claim; the recorded controlling exam source remains `OFFICIAL-AI901-STUDY-GUIDE` (https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901)
+- `validate_calibration.py --self-test` passed; traceback and indentation references each passed 8/8
+- focused calibration/departure/arrival/focus/resume runtime tests passed with 0 failures
+- verified local links, strict gate numbers, route-open states, session/evidence boundaries, no-live-Azure/no-authority/no-guarantee language, and `git diff --check`
+Next recommended item: Exercise Agent should expose this compact choice explanation beside or immediately before the optional-calibration launch, then preserve the locked `Depart: Drowned Archive` action, strict calibration gate, safe Exit, and destination focus behavior.
+Unresolved risks: Runtime currently communicates route-open status throughout calibration, but the two-choice screen may still need human/screen-reader testing to confirm that “optional practice” is understood without suggesting that calibration mastery is trivial. Departure must clear the working session exactly as documented while retaining sanitized mastery evidence.
+Notes: No hidden lore, game, art, QA binary, service, Azure, external action, commit, or push change.
+
 ## Log entry: 2026-07-12T22:20:00-04:00
 
 Stage: Demo curriculum freeze audit

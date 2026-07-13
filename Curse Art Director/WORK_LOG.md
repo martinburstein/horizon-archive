@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Completed Meadow departure gate
+
+- **Outcome:** issued `PASS`; the rich completed Meadow and crowned cultivated-glass marker remain the dominant visual event while the earned-route summary and two explicit choices stay subordinate inside the existing lower adventure band.
+- **Files:** created [the completed Meadow departure review](reviews/2026-07-13-completed-meadow-departure.md) and updated this work log; no runtime code or raster asset changed.
+- **Validation:** inspected the current departure markup/copy, direct-cut logic, canonical/narrow CSS, Player live measurements, Pixel Patrol gate, Location Scout continuity map, and the previously approved marker material review. Confirmed `640 x 360` world over `640 x 120` interface, authored `320 x 180` over `320 x 60`, contained narrow summary, equal square-edged choices, no world overlay/effect, no prohibited viewpoint content, no protected motif, and no fantasy or modern-panel drift. The in-app browser was unavailable for a fresh capture, so this verdict relies on current source contracts and immediately preceding live measurements.
+- **Finding:** the lower-band treatment reads as compact period adventure control, not a dashboard or success card. It supports the earned scene state without competing with the painting or cheapening the marker's convincing Builder function.
+- **Handoff:** preserve the completed marker, direct cut, lower-band-only summary/choices, first-person exclusions, and current original material treatment. Re-review only if world art, marker material, transition effects, or interface geometry changes.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Route-marker material re-review
 
 - **Outcome:** issued `PASS`; the prior opaque-sprite defect is closed without changing the approved folded/raised/crowned geometry, labels, hotspot, state logic, or scene composition.

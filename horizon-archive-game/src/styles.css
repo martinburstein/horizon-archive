@@ -7,6 +7,18 @@
 
 * { box-sizing: border-box; }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -572,6 +584,7 @@ h1 {
   box-shadow: inset 0 0 28px #06060b, 0 0 0 4px #17141d;
 }
 .dialogue-copy p { margin: 0 0 16px; color: #ddd5c6; font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.48; }
+#meadow-choice-summary { padding-left: 8px; border-left: 3px solid #b89554; }
 .dialogue-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .dialogue-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .continue-action {
@@ -737,6 +750,16 @@ h1 {
 .canonical-game-frame .inventory { padding-left: 4px; }
 .canonical-game-frame .dialogue-box { padding: 6px 8px; border-width: 1px; box-shadow: none; }
 .canonical-game-frame .dialogue-copy p { margin-bottom: 5px; font-size: 9px; line-height: 1.25; }
+.canonical-game-frame #meadow-choice-summary { padding-left: 4px; border-left-width: 2px; }
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .dialogue-actions .continue-action {
+  min-height: 24px;
+  padding: 4px 6px;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  box-shadow: none;
+}
 .canonical-game-frame .speaker,
 .canonical-game-frame .inventory-title { font-size: 7px; }
 .canonical-game-frame .terminal-workbench { inset: 8px; width: auto; height: auto; overflow: auto; }
@@ -863,6 +886,60 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .inventory button { min-width: 24px; min-height: 24px; padding: 1px 2px; font-size: 8px; letter-spacing: 0; overflow: hidden; }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-box { padding: 2px 3px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy p { margin: 0 0 2px; font-size: 8px; line-height: 1.15; max-height: 38px; overflow: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] #meadow-choice-summary { padding-left: 2px; border-left-width: 1px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-footer { gap: 2px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions { flex: 1; min-width: 0; flex-wrap: nowrap; gap: 2px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .verb-grid,
+.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .inventory { display: none; }
+.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .dialogue-box {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 0;
+  padding: 2px 5px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 24px;
+  gap: 2px;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice #meadow-choice-summary {
+  max-height: none;
+  margin: 0;
+  overflow: hidden;
+  font-size: 8px;
+  line-height: 8px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .dialogue-footer { min-width: 0; min-height: 0; }
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .speaker { display: none; }
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .dialogue-actions {
+  width: 100%;
+  height: 24px;
+  padding: 0;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions .continue-action {
+  flex: 1;
+  min-width: 0;
+  height: 24px;
+  min-height: 24px;
+  padding: 1px 3px;
+  font-size: 8px;
+  line-height: 8px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .continue-action:focus-visible {
+  outline-offset: -3px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-footer .speaker { max-width: 48px; font-size: 5px; line-height: 1; letter-spacing: 0; }
 .canonical-game-frame[data-canonical-layout="narrow"] .scene-status { inset: 3px 3px auto; padding: 2px 3px; font-size: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .scene-status strong { font-size: 8px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench,

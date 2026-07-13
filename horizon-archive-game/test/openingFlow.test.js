@@ -123,7 +123,7 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /id="save-replacement-warning"/);
   assert.match(source, /aria-describedby=\{canResume \? "save-replacement-warning" : undefined\}/);
   assert.match(source, /meadowEntryFocusPendingRef\.current = true;[\s\S]*setMode\("playing"\)/);
-  assert.match(source, /meadowPrimaryHotspotRef\.current\?\.focus/);
+  assert.match(source, /primaryHotspotRef\.current\?\.focus/);
   assert.equal(source.match(/<img className="title-art" src=\{glassMeadowImage\}/g)?.length ?? 0, 0);
   assert.equal(source.match(/<img className="title-art chapter-reveal-art" src=\{glassMeadowImage\}/g)?.length, 1);
   assert.match(styles, /\.canonical-game-frame \.scene-art\.glass-meadow-art \{[^}]*object-fit: cover;[^}]*image-rendering: pixelated;[^}]*image-rendering: crisp-edges;/s);

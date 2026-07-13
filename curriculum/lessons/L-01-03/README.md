@@ -10,6 +10,8 @@ Read one small traceback, repair one misspelled variable, then repair one indent
 
 The files belong to the human expedition calibration layer. A code error never damages a Terminal, changes the world, consumes a resource, or closes the already-marked route. You can leave and return without creating a dead end.
 
+At the departure choice, read [Optional Calibration or Depart](optional-calibration-handoff.md). It explains why the route stays open, what the strict optional-practice gate measures, and which working or mastery data survives exit, reload, and departure.
+
 ## Keyboard orientation — ungraded
 
 > Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.

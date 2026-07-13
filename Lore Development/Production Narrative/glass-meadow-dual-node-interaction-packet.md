@@ -157,7 +157,7 @@ Tone rule: point to the smallest useful correction. Never say “easy,” “obv
 - `SCENE // SENSOR RECORD`: "The Petal core settles. The Route Marker gains a pale core and one short groove."
 - `PILOT // FLIGHT RECORDER`: "The small node changed after the transfer. That supports a sequence, not an audience."
 
-First Signal acknowledgement does **not** complete the meadow or enable Continue. It changes ownership of the active lesson from Petal to Route Marker.
+First Signal acknowledgement does **not** complete the meadow or enable departure. It changes ownership of the active lesson from Petal to Route Marker.
 
 ## Petal Terminal — after First Signal acknowledgement
 
@@ -313,7 +313,7 @@ No form resets. No completed mark disappears. Hints affect telemetry, not story 
 - `SCENE // SENSOR RECORD`: "The groove extends into a stepped directional line along the path. All three fins hold completion marks."
 - `PILOT // FLIGHT RECORDER`: "A route is available. Availability is not an invitation."
 
-Only GM21 completes the meadow and exposes Continue.
+Only GM21 completes the meadow and exposes the departure choice.
 
 ## Route Marker — completed state
 
@@ -333,33 +333,50 @@ Owner: `SYSTEM // EXPEDITION STATE`.
 
 > "Useful, quiet, and still not an answer."
 
-Normally hotspots are disabled while Continue is pending. These lines support revisit or future implementation without creating a new branch.
+Normally hotspots are disabled while departure is pending. These lines support revisit or future implementation without creating a new branch.
 
 ## Reload after route acknowledgement
 
-### GM22 — Pending transition restore
+### GM22 — Pending transition restore and optional practice
 
-`SYSTEM // EXPEDITION STATE`:
+The current runtime presentation is authoritative for this relay:
 
-> Meadow completion restored. Both working sessions are closed; the marked route remains available.
+- `SYSTEM // EXPEDITION STATE`, required route complete: `ROUTE OPEN // Depart now, or choose scored calibration: diagnose first, then pass 8/8 + 8/8 + 4/4. Retry or Exit safely; the route stays open.`
+- `SYSTEM // EXPEDITION STATE`, optional calibration also complete: `ROUTE OPEN // Primary, transfer, retrieval, and optional calibration complete; crowned passage earned.`
+- Optional action: `Optional calibration`; accessible name: `Start optional calibration practice`.
+- If an optional calibration session is held in memory, the matching labels are `Resume optional calibration` and `Resume optional calibration practice`.
+- Departure action: `Depart: Drowned Archive`; accessible name: `Depart for Chapter II, The Drowned Archive`.
 
-`SCENE // SENSOR RECORD`:
+`crowned passage earned` is human expedition-state language for the completed learning gate. It does not mean the Route Marker judged, rewarded, selected, or invited the Pilot. `Drowned Archive` is the expedition's provisional survey name, not a decoded Builder destination label.
 
-> The Petal completion mark and Route Marker directional groove remain visible.
-
-Continue action: `Follow the marked route`.
-
-Current implementation risk: pending meadow resume uses the Petal `success` field instead of `routeSuccess`. Production behavior must restore GM22, not replay First Signal acknowledgement.
+Optional calibration never changes route availability, departure wording, arrival, core story access, or the physical response already earned by required route mastery. Completing it may add only its own clause to the System summary. Reload after route acknowledgement restores the applicable summary, keeps both working sessions closed, and moves focus to the established departure action. Do not replay First Signal acknowledgement or auto-depart.
 
 ## Transition to Drowned Archive
 
-### GM23 — Leave meadow
+### GM23 — Departure activation
 
-- `PILOT // FLIGHT RECORDER`: "The marker gives me a direction. The name at its end is still ours."
-- `SCENE // SENSOR RECORD`: "The stepped line follows the path toward the flooded basin."
-- Next-scene arrival: use the Drowned Archive entry from `drowned-archive-interaction-packet.md`.
+The established departure button and focus behavior are locked for this relay. Activating `Depart: Drowned Archive` may move directly to the next scene; no extra Machine reply, approval beat, travel choice, or auto-opened Terminal is required.
 
-Do not say the next interface is already awake. Availability must be observed in the next scene.
+If a visible departure beat is added in a later production pass, it may use only observed geometry:
+
+- `SCENE // SENSOR RECORD`: `The stepped line crosses the flat glass toward the flooded basin.`
+- Optional `PILOT // FLIGHT RECORDER`: `The marker gives me a direction. The name at its end is still ours.`
+
+These lines must not delay, rename, or replace the established control.
+
+### GM24 — Chapter II arrival
+
+Arrival separates orientation from observation:
+
+1. `SYSTEM // EXPEDITION STATE`, assistive announcement: `Chapter II, The Drowned Archive.`
+2. `SCENE // SENSOR RECORD`, visible dialogue: `A grounded Terminal stands by the causeway. The Tidal Lens remains silent.`
+3. Focus moves to the grounded Terminal hotspot without activating it.
+
+The chapter and location announcement is human expedition structure. The scene line reports only the grounded access surface and the absence of a measured response from the landmark. Neither line claims that the Terminal is awake, waiting, listening, aware of the arrival, or native-named. The Drowned Archive packet remains authoritative for all interaction after this entry beat.
+
+On reload at an already-entered, unfinished scene, the same bounded chapter/location announcement may repeat with the current scene prompt. It must not replay the meadow completion, manufacture a new arrival response, or open an exercise.
+
+At canonical and narrow layouts, retain one compact System announcement and one compact Scene line. Do not merge System, Scene, and Pilot ownership into one dialogue box, and do not communicate arrival through motion, color, or sound alone.
 
 ## Current gameplay copy reconciliation
 

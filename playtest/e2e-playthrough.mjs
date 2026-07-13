@@ -234,8 +234,8 @@ print("Operator:", learner)`);
   await page.getByRole("heading", { name: "Primary 8/8 · Transfer 8/8 · Retrieval 4/4", exact: true }).waitFor();
   await page.getByRole("radio", { name: "Medium", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
-  await page.getByRole("button", { name: "Start Calibration", exact: true }).waitFor();
-  await page.getByRole("button", { name: "Start Calibration", exact: true }).evaluate((element) => {
+  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).evaluate((element) => {
     if (document.activeElement !== element) throw new Error("Route completion did not move focus to the next meaningful action");
   });
   await assertPixelMeadow(page, "route complete", "completed", "completed");
@@ -248,7 +248,7 @@ print("Operator:", learner)`);
   if (Object.values(routeMastery.checkResults?.retrieval || {}).some((value) => !value)) throw new Error("Retrieval gate incomplete");
   if (["source", "prediction", "output", "notes", "answers"].some((key) => key in routeMastery)) throw new Error("Route working state persisted in mastery evidence");
 
-  await page.getByRole("button", { name: "Start Calibration", exact: true }).click();
+  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).waitFor();
@@ -256,8 +256,8 @@ print("Operator:", learner)`);
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertPixelMeadow(page, "calibration exit", "completed", "completed");
-  await page.getByRole("button", { name: "Continue", exact: true }).waitFor();
-  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
@@ -276,13 +276,13 @@ print("Operator:", learner)`);
   await page.screenshot({ path: qaPath("calibration-terminal-narrow-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
-  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByRole("button", { name: "source", exact: true }).click();
   if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Exit Calibration discarded in-progress source");
   await page.keyboard.press("Escape");
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor({ state: "detached" });
-  await page.getByRole("button", { name: "Resume Calibration", exact: true }).click();
+  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Escape discarded in-progress source");
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
@@ -295,7 +295,10 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="meadow"]').waitFor();
   await assertPixelMeadow(page, "calibration reload", "completed", "completed");
-  await page.getByRole("button", { name: "Start Calibration", exact: true }).click();
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).evaluate((element) => {
+    if (document.activeElement !== element) throw new Error("Completed Meadow resume did not focus the earned departure action");
+  });
+  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).click();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
   await page.getByLabel("Calibration error type", { exact: true }).selectOption("NameError");
@@ -331,7 +334,7 @@ print("Operator:", learner)`);
   const calibrationRetrievalKeys = Object.keys(calibrationMastery.checkResults?.retrieval || {});
   if (calibrationRetrievalKeys.length !== 4 || calibrationRetrievalKeys.some((key) => /tab|escape|focus|modal|inert/i.test(key))) throw new Error("Keyboard orientation leaked into graded retrieval");
   await assertPixelMeadow(page, "calibration mastered", "completed", "completed");
-  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
   await page.reload();
@@ -1427,7 +1430,7 @@ async function capturePixelMeadow(page, path) {
 
 async function verifyMeadowPixelHotspots(page, viewportLabel) {
   await page.getByRole("button", { name: "USE", exact: true }).click();
-  const route = page.getByRole("button", { name: "use route-marker Terminal", exact: true });
+  const route = page.getByRole("button", { name: "use route-marker Terminal, locked", exact: true });
   const petal = page.getByRole("button", { name: "use Petal terminal", exact: true });
   const firstSignal = page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]');
   const routeExercise = page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]');

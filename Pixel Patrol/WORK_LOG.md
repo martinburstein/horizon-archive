@@ -1,5 +1,15 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 — Earned-route departure visual-system gate
+
+- **Outcome / verdict:** PASS after one bounded typography correction. The earned route summary stays inside the lower interface, preserving the full Meadow world plate and first-person scene dominance. Optional calibration and destination-aware departure remain two equal, plainly bordered choices with no copied asset or modern smooth chrome.
+- **Reference coverage and measurements:** checked the locked `640 x 480` (`640 x 360` world + `640 x 120` interface) and authored `320 x 240` contracts against the current summary/action markup. The amber earned-state rail steps from `3px` base to `2px` canonical and `1px` narrow. Corrected the Meadow choice type from fractional `6px × 1.05 = 6.3px` to explicit whole-pixel metrics: `8px/10px` canonical and `7px/8px` narrow. Meadow choice chrome now explicitly locks `border-radius: 0` and `box-shadow: none`.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/sceneTransition.test.js`, and this log. Scene art, story, route logic, curriculum, save data, and other scene controls were not changed.
+- **Validation:** 12 focused scene-transition, canonical-frame, and opening tests pass; production build and `git diff --check` pass. Static review confirms centered square-logical frame scaling, one summary scroller at narrow width, no world overlay, non-color-only ROUTE OPEN text, solid amber 1–3 px hierarchy, equal two-choice layout, and integer Meadow button type metrics.
+- **Findings / risk:** exact rendered wrapping and focus-ring clearance at native `640 x 480` and `320 x 240` remain unverified because the embedded preview was unavailable. The narrow summary intentionally owns its contained text overflow rather than covering the scene or hiding either choice.
+- **Handoff:** Location Scout should preserve the completed marker and full Meadow composition; confirm the earned marker remains the dominant world-state change while the amber lower-band rail reads as secondary interface evidence. Do not add another overlay, glow, smooth panel, protagonist, ship, or protected visual motif.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Compact first-Terminal static pixel gate
 
 - **Verdict:** PASS by static contract review; no runtime style correction warranted. The title-to-Meadow path retains the canonical `640 x 480` / narrow `320 x 240` whole-frame wrapper, selected rich Meadow raster, first-person composition, and no ship or protagonist. The compact orientation keeps one DOM/read order: context header -> action evidence -> prompt -> choices -> live feedback.

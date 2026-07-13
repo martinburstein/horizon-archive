@@ -1,5 +1,15 @@
 # Exercise Agent Work Log
 
+## 2026-07-13 — Optional Calibration or Depart handoff
+
+- **Outcome:** Added a compact beginner-facing explanation to the completed-Meadow choice state for `EX-L0103-CALIBRATION-DEBUG` / `PY-007`. The existing dialogue line now says that calibration may be skipped but is neither easy nor unscored, requires diagnosis before editing plus `8/8 + 8/8 + 4/4`, permits retry without limit and safe Exit, and cannot close the earned route. Both `Optional calibration` and destination-aware `Depart` reference that explanation programmatically.
+- **Preserved contracts:** Departure still appears only after strict Route Marker mastery, remains available without calibration, keeps its established destination label/focus/arrival announcement, and clears only temporary calibration work. Calibration logic, two diagnosis gates, both eight-check forms, four retrieval checks, critical misconceptions, same-scene resume, privacy-limited evidence, and completed mastery evidence were not changed. The explanation reuses the existing CRT dialogue paragraph, so no extra panel or narrow action height was introduced.
+- **Files changed:** `horizon-archive-game/src/sceneTransition.js`, `horizon-archive-game/src/App.jsx`, `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/sceneTransition.test.js`, and this log.
+- **Validation:** Focused scene-transition/calibration/route tests pass 14/14; full game unit suite passes 181/181; production build passes with only the existing large-chunk advisory. The packaged L-01-03 validator self-test passes, and both traceback and indentation references pass 8/8. Focused assertions cover strict/not-easy/not-unscored wording, unlimited recovery, safe Exit, route safety, shared button description, destination-aware departure, focus/announcement wiring, and canonical/narrow square-border treatment.
+- **Mastery evidence:** Existing sanitizer remains the authority: fixed lesson/activity/exercise/form/skill IDs, diagnosis/check booleans, bounded attempts/hints, confidence, misconception tags, and mastery status only; no source, traceback, output, or notes.
+- **Handoff:** Pixel Patrol Agent should verify that the amber one-to-three-pixel summary rule and compact text remain legible inside the CRT at canonical and narrow sizes without obscuring the earned departure buttons.
+- **Risks:** Live screen-reader announcement order and physical 320×240 text scrolling remain later browser checks. No story reveal, Microsoft exam content, service call, Azure action, authority claim, or new save field was added.
+
 ## 2026-07-13 — Tightened first-Terminal orientation at 640×480
 
 - **Outcome:** Aligned all four runtime cards with the tightened `L-01-01` source while keeping the four checks, unlimited retry, safe close/reopen, focus handoff, pre-editor gate, and strict independent-run validator unchanged. The first card now carries the full early course-authored Python/not-Microsoft/no-guarantee/no-prior-experience boundary; later cards no longer repeat it.

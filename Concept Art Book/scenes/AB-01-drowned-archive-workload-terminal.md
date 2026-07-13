@@ -9,6 +9,7 @@
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
 - **Production-pixel successor:** [AB-01 available 640×360](../production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../production-pixel/AB-01/README.md)
 - **Canonical frame evidence:** [available/complete 640×480 study](../production-pixel/AB-01/CANONICAL_FRAME.md)
+- **Arrival continuity:** [completed Glass Meadow departure and safe-return map](GM-01-to-AB-01-departure-continuity.md)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
 - **Purpose:** Give L-02-01 a distinct local contact point while reframing the flooded basin as an active, nonhuman landscape process whose resource/terraforming occupation can be inferred but not fully decoded.
 
@@ -40,7 +41,7 @@
 ## Hotspot implementation record
 
 - Desktop scene crop: `object-position: center 20%`; hotspot `left: 60.5%`, `top: 55%`, `width: 11%`, `height: 44%`.
-- At widths up to `760px`: `object-position: 70% top`; hotspot `left: 44%`, `top: 47%`, `width: 29%`, `height: 36%`.
+- Current authored `320 x 180` world derivative: hotspot `left: 20%`, `top: 54%`, `width: 24%`, `height: 43%`, approximately `x=64, y=97, w=77, h=77`.
 - These viewport bounds map back to the full-plate source zone (`x 60–73%`, `y 47–82%`) under `object-fit: cover`; they are intentionally different rather than copied raw from the plate.
 - Maintain a minimum interactive target of 44 by 44 CSS pixels at supported viewport sizes. The focus indicator should follow a simple rectangular hit area without painting a permanent outline over the art.
 - The former broad central ruins hotspot has been removed. The suspended landmark remains environmental and non-interactive.
@@ -60,7 +61,7 @@
 - Surface-canon boundary: this is a local interface and exercise access point only; its form does not define the larger system or explain the site.
 - Must preserve: reflective flooded basin, repeated leaning field elements, monumental suspended structure, cosmic indigo/peach atmosphere, and faceted painterly surfaces—while tying every major form to fluid, phase, atmospheric, state, or maintenance evidence.
 - Must avoid: human causeway/stairs/rails/apron, front-facing or chest-high console, conventional screens or keyboards, readable glyphs, definitive “archive” occupation, functionless surreal monoliths, unexplained floating forms, magic-altar framing, combat, characters, human retrofit, or multiple competing bright nodes.
-- Neighboring visual link: [GM-01 Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
+- Neighboring visual link: [selected GM-01 Glass Meadow painting](../../Glass%20Meadow%20Example.png) and [departure continuity map](GM-01-to-AB-01-departure-continuity.md).
 
 ## Production record
 

@@ -1,5 +1,22 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Completed-Meadow departure and arrival accessibility re-review
+
+- **Outcome:** `PASS`. The prior P1 is closed: live `320 x 240` evidence measures both departure choices at 153.2 x 24 px with 8 px type, a 2 px gap, contained focus outline, exact page containment, and a fully visible non-scrolling summary. Positive copy closes the optional/scored comprehension finding without weakening the strict calibration gate. Safe Exit, destination status/focus, and reload/resume pass.
+- **Files:** replaced `Accessibility Sentinel/opening-demo/MEADOW_DEPARTURE_ARRIVAL_REVIEW.md` with the final re-review and updated this log only; no runtime, test, curriculum, art, lore, or save file changed.
+- **Validation:** accepted coordinator live evidence at exact `320 x 240` and `1280 x 720`; verified final CSS/copy/ARIA source; focused tests pass 20/20 and production build passes.
+- **Next:** preserve the target, type, outline, positive-copy, announcement, focus, and reload contracts. Perform NVDA/equivalent spoken-order, forced-colors, 200% zoom, and physical switch-control observations before a conformance claim.
+- **Status:** `PASS - departure and arrival gate cleared`
+
+## 2026-07-13 - Completed-Meadow departure and arrival accessibility gate
+
+- **Outcome:** issued `REVISE`. The two-choice handoff repairs the earlier ambiguous cut with native controls, shared descriptions, destination-aware naming, focus/reload restoration, a polite surface-safe arrival status, safe optional-calibration recovery, strong contrast, non-color wording, direct reduced-motion-safe replacement, and horizontal containment. One P1 blocker remains: the new controls have no minimum height and narrow labels fall to 7 logical px, below the established 24 px command-target and 8 px compact-type floors. P2 follow-ups cover the optional/scored double negative and observed screen-reader announcement order.
+- **Files:** added `Accessibility Sentinel/opening-demo/MEADOW_DEPARTURE_ARRIVAL_REVIEW.md` and updated this log only. Runtime, tests, curriculum, art, lore, and save files were not changed.
+- **Validation:** reviewed the complete dirty game diff and relay handoffs; accepted Player/Coder live desktop/narrow/reload evidence; focused scene-transition/opening/mixed-simulation tests passed 20/20; computed action text `10.38:1`, focus `8.44:1`, summary text `13.87:1`, and amber rail `7.19:1` contrasts. The in-app Browser was queried and reported no available backend, so fresh rendered-height, NVDA, forced-colors, and zoom evidence was unavailable.
+- **Next:** Coder should enforce at least 24 px rendered height at native 320 x 240 (and preserve 44 px where afforded), restore narrow action type to at least 8 logical px, and replace the double negative without weakening the strict optional-practice gate. Player should then record both action rectangles/outline bounds and observe announcement order before Sentinel re-review.
+- **Risk:** live-region order, Windows forced colors, 200% zoom, and physical switch-control remain unobserved; this is not a conformance claim.
+- **Status:** `REVISE - target-size/readability blocker`
+
 ## 2026-07-13 - Route-marker overlay final accessibility gate
 
 - **Outcome:** passed the completed Glass Meadow route-marker overlay after the material correction. Locked/awake/completed remain geometry-distinct and persistently labeled; exact sanitized evidence blocks early promotion; Player's desktop/narrow/reload measurements prove hotspot/label containment; and the translucent aria-hidden canvas sits below the focusable hotspot and Terminal controls.

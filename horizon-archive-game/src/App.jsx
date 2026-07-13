@@ -14,6 +14,7 @@ import glassMeadowImage from "../../Glass Meadow Example.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
+import { buildMeadowDeparturePresentation, buildSceneArrivalAnnouncement } from "./sceneTransition.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
 import {
   advanceOpeningProgress,
@@ -458,6 +459,7 @@ export function App() {
   const [verb, setVerb] = useState("LOOK AT");
   const [dialogue, setDialogueText] = useState("Select a verb, then choose something in the scene.");
   const [dialogueOwner, setDialogueOwner] = useState("system");
+  const [sceneAnnouncement, setSceneAnnouncement] = useState("");
   const [questionOpen, setQuestionOpen] = useState(false);
   const [code, setCode] = useState("");
   const [feedback, setFeedback] = useState("");
@@ -511,8 +513,10 @@ export function App() {
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
-  const meadowPrimaryHotspotRef = useRef(null);
+  const primaryHotspotRef = useRef(null);
   const meadowEntryFocusPendingRef = useRef(false);
+  const sceneArrivalFocusPendingRef = useRef(false);
+  const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
   const terminalOrientationHeadingRef = useRef(null);
   const firstTerminalEditorRef = useRef(null);
@@ -547,6 +551,15 @@ export function App() {
     : firstTerminalOrientation.steps[terminalOrientationStep];
   const verbPressedState = getVerbPressedState(verb);
   const meadowRouteMarkerState = deriveMeadowRouteMarkerState(exerciseEvidence, routeMarkerMastery);
+  const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
+  const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
+    calibrationStarted: Boolean(calibrationSession),
+    calibrationMastered: calibrationMastery?.masteryStatus === "mastered",
+  });
+  const showMeadowDepartureChoice = pendingAdvance
+    && scene.id === "meadow"
+    && routeMarkerMastery?.masteryStatus === "mastered"
+    && calibrationMastery?.masteryStatus !== "mastered";
   const sceneHotspots = [{
     id: scene.primaryHotspotId ?? "primary",
     label: scene.hotspotLabel,
@@ -565,7 +578,7 @@ export function App() {
     return (
       <button
         key={hotspot.id}
-        ref={hotspot.primary && scene.id === "meadow" ? meadowPrimaryHotspotRef : undefined}
+        ref={hotspot.primary ? primaryHotspotRef : undefined}
         className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
         data-hotspot-id={hotspot.id}
         data-primary-hotspot={hotspot.primary ? "true" : undefined}
@@ -624,8 +637,20 @@ export function App() {
   useLayoutEffect(() => {
     if (!meadowEntryFocusPendingRef.current || mode !== "playing" || scene.id !== "meadow") return;
     meadowEntryFocusPendingRef.current = false;
-    meadowPrimaryHotspotRef.current?.focus({ preventScroll: true });
+    primaryHotspotRef.current?.focus({ preventScroll: true });
   }, [mode, scene.id]);
+
+  useLayoutEffect(() => {
+    if (!sceneArrivalFocusPendingRef.current || mode !== "playing") return;
+    sceneArrivalFocusPendingRef.current = false;
+    primaryHotspotRef.current?.focus({ preventScroll: true });
+  }, [mode, scene.id]);
+
+  useLayoutEffect(() => {
+    if (!resumeContinueFocusPendingRef.current || mode !== "playing" || !pendingAdvance) return;
+    resumeContinueFocusPendingRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [mode, scene.id, pendingAdvance]);
 
   useLayoutEffect(() => {
     if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
@@ -731,6 +756,7 @@ export function App() {
     setCompleted([]);
     setVerb("LOOK AT");
     setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
+    setSceneAnnouncement("");
     setQuestionOpen(false);
     setFeedback("");
     setCode("");
@@ -825,21 +851,37 @@ export function App() {
     if (!accepted || next.step !== "playing") return;
     meadowEntryFocusPendingRef.current = true;
     setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
+    setSceneAnnouncement("");
     setMode("playing");
   }
 
   function resumeGame() {
     const saved = loadSave();
     if (!saved) return beginNewGame();
+    const resumedScene = scenes[saved.sceneIndex];
+    const resumedMeadowDeparture = buildMeadowDeparturePresentation(scenes[saved.sceneIndex + 1]?.location, {
+      calibrationMastered: saved.calibrationMastery?.masteryStatus === "mastered",
+    });
     setCharacterName(saved.opening.characterName);
     setCharacterNameDraft(saved.opening.characterName);
     setCharacterNameError("");
     setPrologueBeat(saved.opening.prologueBeat);
     setSceneIndex(saved.sceneIndex);
     setCompleted(saved.completed);
-    setDialogue(saved.pendingSceneId
-      ? scenes[saved.sceneIndex].success
-      : "The flight recorder restores your last confirmed position.");
+    setDialogue(saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered"
+      ? resumedMeadowDeparture.summary
+      : saved.pendingSceneId
+        ? resumedScene.success
+        : "The flight recorder restores your last confirmed position.", "system");
+    if (saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered") {
+      resumeContinueFocusPendingRef.current = true;
+      setSceneAnnouncement("");
+    } else if (!saved.pendingSceneId && !saved.finished && saved.opening.step === "playing") {
+      sceneArrivalFocusPendingRef.current = true;
+      setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
+    } else {
+      setSceneAnnouncement("");
+    }
     setPendingAdvance(Boolean(saved.pendingSceneId));
     setExerciseEvidence(saved.exerciseEvidence);
     setWorkloadEvidence(saved.workloadEvidence);
@@ -1127,7 +1169,7 @@ export function App() {
     setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, { masteryStatus: "mastered" }));
     const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
     setCompleted(nextCompleted);
-    setDialogue(scene.routeSuccess);
+    setDialogue(meadowDeparturePresentation.summary, "system");
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
     setRouteSession(null);
@@ -1149,7 +1191,7 @@ export function App() {
   function exitCalibration() {
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
-    setDialogue("Calibration exited safely. ROUTE OPEN. Continue when ready or resume calibration here.");
+    setDialogue(meadowDeparturePresentation.summary, "system");
   }
 
   function submitCalibrationDiagnosis(event) {
@@ -1221,7 +1263,7 @@ export function App() {
     setCalibrationSession(null);
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
-    setDialogue("Calibration complete. ROUTE OPEN. The repaired expedition copy is ready, and the marked path is unchanged.");
+    setDialogue(buildMeadowDeparturePresentation(meadowDestination, { calibrationMastered: true }).summary, "system");
   }
 
   function checkWorkloadCard(event) {
@@ -1734,12 +1776,16 @@ export function App() {
     setEvidenceSession(null);
     setCalibrationSession(null);
     if (completed.length === scenes.length) {
+      setSceneAnnouncement("");
       setMode("ending");
       return;
     }
+    const nextScene = scenes[completed.length];
+    sceneArrivalFocusPendingRef.current = true;
+    setSceneAnnouncement(buildSceneArrivalAnnouncement(nextScene));
     setSceneIndex(completed.length);
     setVerb("LOOK AT");
-    setDialogue(scene.id === "ruins" ? "The causeway narrows ahead. A grounded inspection surface is visible in the corridor." : "The route continues to the next survey site.");
+    setDialogue(nextScene.prompt, "system");
   }
 
   if (mode === "title") {
@@ -1872,6 +1918,7 @@ export function App() {
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined}>
+      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         {scene.id === "meadow" ? (
           <>
@@ -3525,7 +3572,7 @@ export function App() {
         )}
       </section>
 
-      <section className="command-panel" aria-label="Adventure controls and dialogue" inert={terminalOpen ? true : undefined}>
+      <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
           {ADVENTURE_VERBS.map((item) => (
             <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
@@ -3548,13 +3595,13 @@ export function App() {
               {showHint && <p className="hint">{scene.hint}</p>}
             </form>
           ) : (
-            <div className="dialogue-copy">
-              <p>{dialogue}</p>
+            <div className={showMeadowDepartureChoice ? "dialogue-copy meadow-departure-choice" : "dialogue-copy"}>
+              <p id={showMeadowDepartureChoice ? "meadow-choice-summary" : undefined}>{dialogue}</p>
               <div className="dialogue-footer">
                 <span className="speaker" data-dialogue-owner={dialogueOwner}>{getDialogueSpeaker(dialogueOwner)}</span>
                 <div className="dialogue-actions">
-                  {pendingAdvance && scene.id === "meadow" && routeMarkerMastery?.masteryStatus === "mastered" && calibrationMastery?.masteryStatus !== "mastered" && (
-                    <button className="continue-action calibration-launch" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{calibrationSession ? "Resume Calibration" : "Start Calibration"}</button>
+                  {showMeadowDepartureChoice && (
+                    <button className="continue-action calibration-launch" data-terminal-focus-fallback aria-label={meadowDeparturePresentation.calibrationAriaLabel} aria-describedby="meadow-choice-summary" onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{meadowDeparturePresentation.calibrationLabel}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
                     <button className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
@@ -3596,8 +3643,8 @@ export function App() {
                   {pendingAdvance&&scene.id==="ruins"&&remediationPlannerEvidence?.masteryStatus==="mastered"&&capstoneReadinessEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openCapstoneReadiness();}}>{capstoneReadinessSession?"Resume Capstone Readiness":capstoneReadinessEvidence?.masteryStatus==="primary_complete"?"Start Capstone Transfer":capstoneReadinessEvidence?.masteryStatus==="transfer_complete"?"Open Capstone Closed-Note Gate":"Start Capstone Readiness"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&capstoneReadinessEvidence?.masteryStatus==="mastered"&&mixedSimulationEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={!mixedSimulationSession&&!mixedSimulationEvidence?.attemptCount?"Continue to mixed simulation":undefined} onClick={e=>{terminalTriggerRef.current=e.currentTarget;openMixedSimulation();}}>{mixedSimulationSession?mixedSimulationSession.complete?"Resume Mixed Simulation · completed":`Resume Mixed Simulation · item ${mixedSimulationSession.index+1}/12`:mixedSimulationEvidence?.attemptCount?deriveMixedSimulationResume(mixedSimulationEvidence).complete?"Resume Mixed Simulation · completed":`Resume Mixed Simulation · item ${deriveMixedSimulationResume(mixedSimulationEvidence).index+1}/12`:"Continue"}</button>}
                   {pendingAdvance && (scene.id !== "ruins" || mixedSimulationEvidence?.masteryStatus === "mastered") && (
-                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={scene.id==="ruins"&&mixedSimulationEvidence?.masteryStatus==="mastered"?"Continue to the next survey site":undefined} onClick={continueJourney}>
-                      {completed.length === scenes.length ? "Descend to the city" : "Continue"}
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={scene.id === "meadow" ? meadowDeparturePresentation.departureAriaLabel : scene.id==="ruins"&&mixedSimulationEvidence?.masteryStatus==="mastered"?"Continue to the next survey site":undefined} aria-describedby={scene.id === "meadow" && calibrationMastery?.masteryStatus !== "mastered" ? "meadow-choice-summary" : undefined} onClick={continueJourney}>
+                      {completed.length === scenes.length ? "Descend to the city" : scene.id === "meadow" ? meadowDeparturePresentation.departureLabel : "Continue"}
                     </button>
                   )}
                 </div>
