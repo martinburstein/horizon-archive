@@ -240,3 +240,9 @@ Every failure response contains: what the Machine observed, one bounded cue, and
 - Preserve reading order: Machine/file/item status -> offline/not-exam warning -> 12-item/5+7/all-objective equivalent -> optional timer checkbox -> explicit timed/untimed status -> Pilot one-card item -> System score -> Teacher objective remediation.
 - Timer state uses checkbox state and text, never color alone. Untimed is visibly equivalent for mastery; elapsed time cannot change correctness, remediation, or completion.
 - One card remains the only active task. Native selects, square focus outlines, status labels, and Teacher remediation must remain legible in grayscale and keyboard order.
+
+## Playable demo visual freeze
+
+- The frozen demo route is title -> first-run scenes -> mandatory Terminals -> Capstone -> SIM-01 -> next survey site -> credits. Preserve current scene composition, square-pixel chrome, focus language, and spoiler-safe transition copy.
+- Accept only fixes for visible clipping, broken integer scaling, inaccessible focus/state cues, contradictory ownership, privacy/safety leakage, or blocked progression. Defer new art direction, ornament, future exercise visuals, and narrative expansion.
+- Canonical 640 x 480, authored 320 x 240, and integer-scaled/letterboxed host presentation remain the review set. Every state cue must survive grayscale through text, geometry, border, focus, or control state.

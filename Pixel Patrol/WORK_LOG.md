@@ -1,5 +1,13 @@
 # Pixel Patrol Work Log
 
+## 2026-07-12 — Playable demo visual freeze
+
+- **Completed:** performed the final bounded visual QA pass across the frozen title-to-credits slice through SIM-01. Reviewed canonical 640 x 480, authored 320 x 240, and scaled-host first-run scene captures plus representative Terminal states; checked post-Capstone launch/departure labels, credits gating, text containment, one-card hierarchy, focus/state cues, grayscale readability, reduced motion, and square-pixel presentation. No demo-visible defect warranted destabilizing code, CSS, or art.
+- **Files changed:** `Pixel Patrol/UI_AND_TYPE_SPEC.md` and this log only. No runtime, art, test, or QA-binary changes were made.
+- **Validation:** all 159 unit tests and production build pass. Focused visual inspection covered opening Drowned Archive and Glass Meadow canonical/narrow/scaled captures and a representative Terminal. Source checks confirm pixelated rendering, whole-number layout contracts, visible focus outlines, reduced-motion handling, explicit Capstone-to-SIM and SIM-to-survey accessible labels, credits marker gating, and title/credits containment. The immediately preceding frozen full E2E remains green at title-to-credits with zero runtime errors; `git diff --check` passes.
+- **Demo freeze:** accept only defects affecting ownership, accessibility, privacy, broken progression, contradictory evidence, text containment, square-pixel scaling, or spoiler/mystery leakage. Defer new art direction, future exercise visuals, new branches, and cosmetic churn.
+- **Unresolved risks:** real forced-colors/screen-reader/browser-zoom checks remain valuable after the demo. The 688.64 kB build advisory is non-blocking and produced no observed visual or interaction defect.
+
 ## 2026-07-12 — SIM-01 mixed simulation visual integration gate
 
 - **Completed:** audited the post-Capstone transition and complete SIM-01 one-card flow. Corrected one essential layout defect by assigning explicit warning/equivalent/timer-control/timer-status/form rows. Canonical 640 x 480, authored 320 x 240, scaled desktop, timed/untimed equivalence, text containment, state/focus cues, grayscale-readable labels, and square-pixel chrome now hold together in the original late-1990s adventure language without copied protected art.
