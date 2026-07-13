@@ -1,5 +1,14 @@
 # Player Agent Work Log
 
+## 2026-07-12 — Final demo-readiness SIM-01 resume audit
+
+- **Outcome:** Completed a prospective-player title-to-credits demo pass through the repaired Capstone prerequisite gate and newly integrated `EX-SIM01-MIXED`. The complete mandatory journey reaches credits with no runtime error, privacy leak, focus failure, or input blocker. One material save/resume weakness remains in SIM-01.
+- **Finding:** SIM-01 persists completed-item correctness, attempts, hints, confidence, and optional elapsed seconds, and its exit message promises that completed item evidence remains. However, `openMixedSimulation()` always reconstructs the session with `index: 0`, an empty response, and no result. Closing/reopening or reloading after passing item 1–11 therefore returns the player to item 1 and requires replay of already-completed items. Existing E2E checks reload only after full mastery, so the mid-block regression is untested. This materially weakens a twelve-item demo assessment and its optional diagnostic-timer story.
+- **Files changed:** Updated this Player Agent work log only. No gameplay, curriculum, test, art, or QA-binary changes remain.
+- **Validation:** Read applicable `AGENTS.md` files and current Player/Exercise logs; inspected Capstone freshness repair, SIM-01 evaluator, sanitizer, session wiring, timer, progression conditions, unit tests, and E2E. Ran **155/155 unit tests** and the complete title-to-credits E2E; all passed with zero runtime errors and credits reached. Reverted every regenerated tracked capture and removed all temporary Capstone/SIM-01 QA binaries.
+- **Next recommended item:** Coder Agent should resume SIM-01 at the first item whose decision/reason evidence is not both true, preserve the current completed screen when all twelve items are already complete but unacknowledged, and add close/reopen plus reload tests from a middle item for timed and untimed modes. The resume label should state the restored item number.
+- **Unresolved risks:** Decide whether elapsed diagnostic time represents wall-clock time or active Terminal time; the current implementation records only active elapsed seconds at checks/exit. Real screen-reader and forced-colors behavior remains unverified, though the automated dialog, label, feedback, focus, and narrow-layout contracts pass.
+
 ## 2026-07-12 — Round 26 Capstone prerequisite-freshness audit
 
 - **Work completed:** Performed a bounded adversarial playtest of the newly integrated `EX-L0603-OFFLINE-CAPSTONE` and the repaired Objective Ledger → Remediation Planner → Capstone progression. Challenged the prerequisite panel, primary/transfer/closed-note path, privacy, reload recovery, Continue focus, canonical 640×480 and narrow captures, and complete title-to-credits progression.
