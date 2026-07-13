@@ -1614,17 +1614,75 @@ Confidence is tutoring data only. It cannot change a recommendation, close a rou
 - Use associated field feedback and a polite status live region. Provide text equivalents for all media scenarios, no timer, and reduced-motion behavior.
 - If the trace and gate cannot fit together, preserve the labeled gate and use Terminal scrolling; do not hide prerequisites behind a tab or hover state.
 
-## Post-Capstone Corridor Handoff
+## Offline Mixed Simulation Demo Block
 
-This handoff connects strict Capstone mastery to the next survey scene without treating course readiness as story-world approval. It follows the [mastery and narrative access rules](code-to-discovery-integration.md#mastery-and-narrative-access) and the [focus restoration contract](terminal-focus-and-dismissal-contract.md#focus-restoration-after-state-change).
+Production alignment: `EX-SIM01-MIXED`, simulation `SIM-01`, 12 original course-authored items, 24 decision/reason dimensions, all 15 AI-901 objectives, and the packaged five-concept/seven-implementation mix. Runtime integration and sanitized resume are implemented. This contract limits the player-visible demo claim to completion of this block.
+
+### Ownership and offline boundary
+
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns objective-linked remediation, completion meaning, and the no-exam-guarantee statement.
+- `SYSTEM // EXPEDITION STATE` owns item score, completed-item evidence, optional elapsed time, resume position, and progression availability.
+- `PILOT // MIXED SIMULATION OWNER` owns decision/reason choices and whether diagnostic timing is enabled.
+- `SCENE // SENSOR RECORD` does not react to simulation score, speed, confidence, hint use, or completion.
+
+Keep this warning associated with the dialog title:
+
+> COURSE-AUTHORED OFFLINE PRACTICE · not Microsoft exam content and no exam guarantee. No service or external action occurs or is authorized.
+
+No simulation result, timer, confidence rating, prompt, or answer authorizes credentials, Azure change, communication, disclosure, publication, purchase, deletion, or any live/destructive action.
+
+### MS00 — Entry, progress, and timing
+
+- Target title/filename: `Offline AI-901 Mixed Simulation`; `sim_01_mixed.json`.
+- `SYSTEM`: "Mixed simulation open. ITEM [n]/12. Every item requires a decision and reason."
+- Persistent text states `five concept/capability`, `seven implementation`, `all fifteen objectives`, and `24/24 block gate` without relying on color.
+- The optional 25-minute diagnostic timer has no time limit and cannot change scoring, remediation, progression, or completion. Untimed mode is fully equivalent.
+- Changing timing never clears completed-item evidence or working choices in the active session.
+
+### MS01 — Feedback and remediation
+
+- `SYSTEM` reports only `[0|1|2]/2`, `ITEM PASS`, or `ITEM NOT YET COMPLETE`.
+- `901 TEACHER`: "Return to the tagged objective's mapped lesson, retrieve the rule, repair one guided case, then retry independently."
+- Do not display answer-order memorization as remediation or evidence.
+- A passed item records its two correctness booleans and objective tags. A miss remains recoverable and never changes story access.
+
+### MS02 — Demo completion semantics
+
+- Player-visible result heading: `MIXED SIMULATION BLOCK COMPLETE`.
+- `901 TEACHER`: "Mixed simulation block complete: 24/24. This supports continued practice, not an exam result."
+- `SYSTEM`: "Demo checkpoint recorded. Continue is available."
+- The runtime `mastered` value is a sanitized progression key for this title-to-credits demo, not a claim that the unimplemented `CUM-01` transfer-retention requirement has passed.
+- Do not use `SIM-01 mastery confirmed`, `exam ready`, `certification ready`, or a predicted score in player-visible demo copy.
+- Full curriculum mastery/readiness remains deferred until the separately specified cumulative transfer-retention gate exists and is independently passed.
+
+### MS03 — Close, resume, reload, and privacy
+
+- Exit: `SYSTEM`: "Mixed simulation closed. Reopen resumes at the first incomplete item; working choices are cleared."
+- Close/reopen and reload derive the first incomplete item from sanitized decision/reason evidence. If all 12 items pass but acknowledgement remains, restore the `24/24` result screen.
+- Resume labels state `item n/12` or `completed`; they never imply that private response text was restored.
+- Scene transition clears working choice, feedback, and runtime state. Sanitized completed-item evidence persists separately.
+- Persistent evidence contains IDs/tags, dimension correctness, attempts, maximum hint level, confidence, optional elapsed seconds, and internal progression status only.
+- No exam item text, private note, source/content, credential, endpoint, payload/response, action request, choice, or free text persists.
+
+### MS04 — 640 × 480 and accessibility
+
+- Keep warning/text equivalent, timer toggle/status, item `n/12`, two labeled selects, feedback, remediation, next, and exit in one Terminal scroll owner.
+- Dialog announcement order is title, offline warning, mixed-simulation text equivalent, then active item.
+- Decision and reason use associated field feedback and `aria-invalid`; System score uses a polite live region.
+- Keyboard order is instructions, timer toggle, scenario, decision, reason, flag if present, check, feedback, remediation, next, and exit.
+- Timing status remains text, not animation or color. Reduced motion and untimed mode preserve identical content and completion.
+
+## Capstone-to-Simulation-to-Corridor Demo Handoff
+
+This handoff connects strict Capstone mastery to the mandatory mixed simulation, then connects block completion to the next survey scene. Neither course state is story-world approval. It follows the [mastery and narrative access rules](code-to-discovery-integration.md#mastery-and-narrative-access) and the [focus restoration contract](terminal-focus-and-dismissal-contract.md#focus-restoration-after-state-change).
 
 ### Ownership and precondition
 
-- `901 TEACHER // SOURCE-GROUNDED COURSE` owns the Capstone mastery and next-practice recommendation already shown before Terminal dismissal.
+- `901 TEACHER // SOURCE-GROUNDED COURSE` owns Capstone mastery, the next-practice recommendation, and mixed-block completion meaning.
 - `SYSTEM // EXPEDITION STATE` owns the sanitized checkpoint, available progression action, and session clearing.
-- `PILOT // EXPEDITION CONTROL` owns activation of the next-scene action.
+- `PILOT // EXPEDITION CONTROL` owns activation of the simulation and the later next-scene action.
 - `SCENE // SENSOR RECORD` owns only visible route and object conditions. No transition line assigns attention, memory, approval, judgment, invitation, or intent to the Machine.
-- The handoff becomes available only when Capstone evidence is `MASTERED`, readiness is `ready_for_next_practice_checkpoint`, and the separately derived fresh-evidence gate is current.
+- Simulation launch requires Capstone `MASTERED`, `ready_for_next_practice_checkpoint`, and current fresh evidence. Scene progression then requires the mixed block's sanitized internal completion key.
 
 ### CH00 — Mastery closure
 
@@ -1632,34 +1690,49 @@ Keep the closure sequence short enough for the `640 × 480` dialogue deck:
 
 1. `901 TEACHER`: "Offline Capstone mastery confirmed. The evidence supports the next practice checkpoint only."
 2. `SYSTEM`: "Checkpoint recorded. Continue is available. No exam result, service call, or external action occurred."
-3. Preferred focus moves to the visible `Continue` button after the learner acknowledges mastery.
+3. Preferred focus moves to the visible `Continue` button after the learner acknowledges mastery; this button launches the simulation rather than changing scene.
 
 Do not repeat the full Capstone warning, prerequisite panel, or score in the scene dialogue. Those remain available in sanitized evidence and the completed Terminal state.
 
-### CH01 — Learner-controlled transition
+### CH01 — Learner-controlled simulation launch
 
 - Visible button: `Continue`.
-- Accessible name: `Continue to the next survey site`.
-- Activation clears Capstone working content, configuration, scenario, and prose state; sanitized mastery evidence persists separately.
+- Accessible name: `Continue to mixed simulation`.
+- Activation clears Capstone working content, configuration, scenario, and prose state; sanitized Capstone evidence persists separately.
+- Activation opens `SIM-01` in the same scene and focuses its dialog title. It does not auto-answer, start diagnostic timing, or advance the scene.
 - Activation changes only local game state. It does not call a service, send content, use credentials, mutate Azure, or perform an external/destructive action.
-- The transition is a separate Pilot action. Mastery acknowledgement must not auto-advance the scene.
+- Simulation launch is a separate Pilot action. Capstone acknowledgement must not auto-open it.
 
-### CH02 — Surface-safe departure and arrival
+### CH02 — Block completion, departure, and arrival
 
+- After the mixed block's `24/24` result is acknowledged, focus moves to a second visible `Continue` action named `Continue to the next survey site`.
 - Departure, `SCENE // SENSOR RECORD`: "The causeway narrows ahead. A grounded inspection surface is visible in the corridor."
 - Arrival uses the next scene's existing grounded observation: "The grounded Terminal presents a blank inspection surface and three quiet evidence channels."
 - Do not use `awake`, `waiting`, `listening`, `accepts`, `recognizes`, `invites`, or `records your arrival` in this handoff.
-- The Capstone result changes progression availability only. It does not change the landmark, prove a response, or unlock unique canon.
-- Hint use and retries never alter the departure, arrival, or core story access.
+- Capstone and simulation results change progression availability only. They do not change the landmark, prove a response, or unlock unique canon.
+- Hint use, timing choice, speed, confidence, and retries never alter departure, arrival, or core story access.
 
 ### CH03 — Focus, announcement, reload, and reduced motion
 
-- After `Continue`, focus enters the next scene in normal document order; do not restore focus to the removed Capstone trigger.
+- After Capstone `Continue`, focus enters the simulation dialog. After the later scene `Continue`, focus enters the next scene in normal document order.
 - Announce the new scene heading before its object description. The scene line is not a live assessment result.
-- On reload before transition, restore the sanitized mastered checkpoint and focus `Continue`; do not reopen learner prose or the completed form.
+- Reload after Capstone but before simulation restores the Capstone checkpoint and simulation-launch `Continue`.
+- Reload during simulation restores the first incomplete item, or its completed result screen, from sanitized evidence.
+- Reload after block acknowledgement but before scene transition restores the next-scene `Continue`.
 - On reload after transition, restore the destination scene with clean working exercise state and persistent mastery evidence.
 - The handoff must remain understandable without animation, sound, or color. Reduced motion uses a direct scene replacement with the same text sequence.
 - At narrow hosts, keep the scene heading, compact observation, and `Continue` action readable without horizontal scrolling.
+
+## Current Title-to-Credits Narrative Freeze
+
+The natural demo freeze point is the existing `Prologue complete` credits state after the current final evidence acknowledgement. Freeze the player-visible narrative path once the production replacement deck and mixed-block completion language are implemented and title-to-credits validation passes.
+
+During the freeze:
+
+- permit only defect fixes for ownership, accessibility, privacy, broken transitions, contradictory state, or spoiler/mystery leakage;
+- do not add branches, optional canon, new scene implications, new course gates, or stronger claims about Machine response;
+- preserve the same core story outcome regardless of hint use, timing, confidence, retries, or resume path;
+- keep future chapter, cumulative-retention, and unrevealed lore development in their dedicated artifacts, outside the demo copy deck.
 
 ## Recommended replacement for current prologue copy
 
@@ -1740,5 +1813,6 @@ Recommended assessment contrast: “Describe what is visible in this image” ve
 - Remediation Planner persists no exam text, notes, credentials, endpoint/payload/response data, action request, or prose.
 - Capstone readiness requires both 12/12 forms, a closed-note defense, all 15 ledger rows ready, and all remediation routes closed with fresh evidence.
 - Capstone scenarios process no source or media, call no service, authorize no action, and persist no private working content or learner prose.
-- Post-Capstone progression remains a separate Pilot action; its scene copy reports visible conditions without Machine approval, attention, or intent.
+- Mixed Simulation block completion requires 24/24 and all 15 objective tags; its demo copy does not claim full cumulative mastery, exam readiness, or authority.
+- Capstone-to-simulation and post-simulation progression remain separate Pilot actions; scene copy reports visible conditions without Machine approval, attention, or intent.
 - `L-05-07` bridge preserves absent fields and provenance without making product claims beyond the official source.

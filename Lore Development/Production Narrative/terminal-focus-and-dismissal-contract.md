@@ -340,16 +340,28 @@ Use a more specific line only when it adds state clarity.
 - Exit line: "Capstone closed. Current [PRIMARY|TRANSFER|CLOSED-NOTE] work remains in this session."
 - Reopen restores the offline design and gate status. Reload restores sanitized eligibility with clean content, configuration, scenario, and prose fields.
 - Persistent evidence excludes source content, audio, transcript, credential, endpoint, payload/response, exam-item text, action requests, and prose.
-- After strict mastery acknowledgement, focus prefers `Continue`; recommendation, acknowledgement, and progression remain separate actions.
+- After strict mastery acknowledgement, focus prefers `Continue to mixed simulation`; recommendation, acknowledgement, simulation launch, and later scene progression remain separate actions.
 - Dismissal never processes media, calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
 
-### Post-Capstone progression handoff
+### Offline Mixed Simulation
 
-- Strict mastery dismissal focuses the visible `Continue` action; its accessible name is `Continue to the next survey site`.
-- Teacher mastery, System checkpoint, and Pilot progression remain three separately owned states/actions.
-- Activating `Continue` clears working Capstone state, preserves sanitized mastery, and enters the next scene in normal focus order.
-- Reload before transition restores the mastered checkpoint and `Continue`, not learner prose or a completed form.
-- Reload after transition restores the destination scene with clean working state and persistent mastery evidence.
+- Target title and dismissal name: `Offline AI-901 Mixed Simulation`; `Exit Mixed Simulation`.
+- System-owned progress is `ITEM n/12` or `24/24 COMPLETE`; player-visible completion says `MIXED SIMULATION BLOCK COMPLETE`, not full readiness.
+- Objective remediation and block meaning remain `901 TEACHER`; decisions, reasons, and optional timing remain `PILOT // MIXED SIMULATION OWNER`.
+- Exit clears working choices and restores focus to its launch action. Reopen/reload derives the first incomplete item or completed result from sanitized evidence.
+- Persistent evidence excludes exam text, notes, content, credential, endpoint, payload/response, action requests, choices, and free text.
+- Timing is optional diagnostic data with no time limit; untimed completion is equivalent and timing never changes completion.
+- Internal `mastered` is a demo progression key only; player copy defers full cumulative-retention mastery until its separate gate exists.
+- After block acknowledgement, focus prefers the next-scene `Continue`; acknowledgement and progression remain separate actions.
+- Dismissal never calls a service, performs an action, guarantees an exam result, grants authority, or implies a Machine response.
+
+### Capstone-to-simulation-to-scene handoff
+
+- Capstone dismissal focuses `Continue to mixed simulation`; activation opens the simulation dialog and does not change scene.
+- Mixed-block completion focuses `Continue to the next survey site`; activation then enters the next scene in normal focus order.
+- Teacher course state, System checkpoint, and Pilot progression remain separately owned states/actions.
+- Each activation clears only its working session and preserves sanitized evidence; neither restores learner prose or choices.
+- Reload derives the correct Capstone checkpoint, simulation item/result, or post-block Continue state.
 - Departure copy is one compact Scene-owned observation; it never says a Machine surface waits, wakes, listens, accepts, recognizes, invites, or remembers.
 - Progression is local game state only: no source/media processing, service call, credential use, Azure mutation, or external/destructive action.
 - Reduced motion uses direct scene replacement; heading and object description remain available as text without sound, animation, or color.
@@ -386,7 +398,8 @@ When acknowledgement changes progression:
 - Visual Patterns mastery: prefer `Continue` after the System announces availability.
 - Objective Ledger mastery: prefer `Continue` after the System announces course readiness without an exam guarantee.
 - Remediation Planner mastery: prefer `Continue` after all weak routes close without an exam guarantee.
-- Capstone mastery: prefer `Continue` after strict prerequisite and closed-note gates, without treating readiness as an exam result.
+- Capstone mastery: prefer `Continue to mixed simulation` after strict prerequisite and closed-note gates.
+- Mixed Simulation block completion: prefer `Continue to the next survey site` without claiming cumulative mastery or an exam result.
 
 If implementation cannot safely assign the next focus target, leaving focus unset is preferable to focusing a disabled, hidden, or narratively stale control. The Accessibility Sentinel should treat missing next-action focus as a usability finding, not solve it by weakening mastery.
 
