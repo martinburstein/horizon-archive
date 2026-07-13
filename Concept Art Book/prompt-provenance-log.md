@@ -1,5 +1,14 @@
 # Prompt and Provenance Log
 
+## Glass Garden absolute-flatness correction
+
+- **Date:** 2026-07-12
+- **Source:** direct durable user precision correction; no image generated in this tranche
+- **Scope:** GM-00 and GM-01 replacement concepts and production pixel plates
+- **Authority:** [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md), [Concept Art direction](art-direction-charter.md), [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md), and [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md)
+
+The Glass Garden is a completely flat field at immense agricultural scale. Use a ruler-straight horizon and continue cultivated upward-growing glass to every edge. The glass crop is the only vertical landform. Depth may come only from atmosphere, occlusion, maturity/component-shape variation, cluster compression, and broad process-state waves. Feedstock, slurry/water, control, harvest, transport, and repair systems must be flush, shallow, subsurface, embedded, or glass-conformal. Reject hills, mountains, terraces, ridges, shelves, raised monuments, skyline architecture, valleys, bowls, basins, overlooks, cliffs, islands, berms, ramps, platforms, familiar crop rows, roads, paths, lanes, fences, ditches, and farm buildings. All earlier non-flat Glass Garden concepts are superseded.
+
 ## Project-wide alien-function supersession
 
 - **Date:** 2026-07-12
@@ -16,11 +25,11 @@ Every Builder environment is a working landscape-machine-ecology and an occupati
 - **Scope:** GM-00 and GM-01 replacement concepts and production pixel plates
 - **Authority:** [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md), [Concept Art direction](art-direction-charter.md), [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md), and [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md)
 
-Treat the Glass Garden as a fictional Builder material-cultivation complex, not real-world science or magic. Glass grows vertically upward from prepared ground beds like inverted icicles. The paired scenes must make the full process readable: silicate feedstock extraction; mineral-slurry/water delivery; growth collars or seed forms; upward crystallization; fictional stress/temperature control; shape-training frames; maturity markings; harvesting, annealing, and transport; reject/repair glass; and multiple purpose-grown component typologies for the Python-running Terminals. Preserve first-person framing, no protagonist/companions/ship, centuries of collective authorship, movement-level visual schools, and central-mystery safety. Reject random fantasy crystals and unexplained decorative glow.
+Treat the Glass Garden as a fictional Builder material-cultivation complex, not real-world science or magic. Glass grows vertically upward from flush prepared ground cells like inverted icicles across a perfectly flat, edge-to-edge field with a ruler-straight horizon. The paired scenes must make the full process readable through flush, subsurface, embedded, or glass-conformal evidence: silicate feedstock extraction; mineral-slurry/water delivery; growth collars or seed forms; upward crystallization; fictional stress/temperature control; shape training; maturity markings; harvesting, annealing, and transport; reject/repair glass; and multiple purpose-grown component typologies for the Python-running Terminals. Preserve first-person framing, no protagonist/companions/ship, centuries of collective authorship, movement-level visual schools, and central-mystery safety. Reject non-flat landforms, human field geometry, random fantasy crystals, and unexplained decorative glow.
 
 ## HA-LS-001
 
-> **Historical exploration prompt — superseded for production.** This prompt predates the first-person/no-ship lock and Builder aesthetic doctrine. Its survey-craft, crystal-garden, and decorative-light instructions are retained only as provenance and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and the current [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md).
+> **Historical non-flat exploration prompt — superseded for production.** This prompt predates the first-person/no-ship, Builder, alien-function, and absolute-flatness locks. Its landing shelf, mountains, basin, pass, S-path, survey craft, crystal-garden, and decorative-light instructions are provenance only and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and current [GM-00 sheet](scenes/GM-00-glass-meadow-landing-shelf.md).
 
 - **Date:** 2026-07-11
 - **Use case:** `stylized-concept`
@@ -142,7 +151,7 @@ The initial candidate passed anatomy, tone, and silhouette separation but placed
 
 ## HA-LS-004
 
-> **Historical exploration prompt — superseded for production.** This prompt predates the first-person/no-ship lock and Builder aesthetic doctrine. Its ship, arbitrary crystalline-ecology, and glow-led instructions are retained only as provenance and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and the current [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md).
+> **Historical non-flat exploration prompt — superseded for production.** This prompt predates the first-person/no-ship, Builder, alien-function, and absolute-flatness locks. Its mountains, uneven terrain, S-path, basin, raised-landmark composition, ship, arbitrary crystalline ecology, and glow-led instructions are provenance only and must not be reused. Any replacement must follow the [Curse Art Director charter](../Curse%20Art%20Director/CHARTER.md) and current [GM-01 sheet](scenes/GM-01-glass-meadow-petal-route-marker.md).
 
 - **Date:** 2026-07-12
 - **Use case:** `stylized-concept` followed by `precise-object-edit`

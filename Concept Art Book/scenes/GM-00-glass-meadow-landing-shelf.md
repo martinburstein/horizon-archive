@@ -1,55 +1,55 @@
-# GM-00 — Glass Meadow Landing Shelf
+# GM-00 — Glass Garden Margin
 
 ## Identity
 
 - **Scene ID:** GM-00
-- **Player-facing survey name:** Glass Meadow Landing Shelf
-- **World / region:** World A / Twilight Highlands
-- **Production status:** Historical exploration plate; first-person/no-ship replacement required
+- **Player-facing survey name:** Glass Garden Margin (`Landing Shelf` is a superseded historical label)
+- **World / region:** World A / Glass Plain
+- **Production status:** Historical non-flat exploration plate; absolute-flatness replacement required
 - **Image:** [glass-meadow-landing-shelf-v1.png](../images/glass-meadow-landing-shelf-v1.png)
-- **Purpose:** Establish a quiet first-person threshold into the Builder Glass Garden material farm, introducing feedstock preparation and service logistics without showing the protagonist, companions, or ship.
+- **Purpose:** Establish a first-person sampling point inside an unfathomably flat Builder Glass Garden, introducing flush/subsurface feedstock preparation without showing the protagonist, companions, ship, terrain relief, or skyline architecture.
 
 ## Alien functionality and first-contact brief
 
-- **Landscape system:** extraction and sorting feed slurry/water headworks; headworks distribute material toward growth beds; reject and repair glass returns separately. Terrain, water, residue, organic cover, and built fabric all show consequences of that cycle.
-- **Nested scales:** maturity/test fragments; bed-and-channel processing; highland-scale drainage, substrate removal, and microclimate regulation.
+- **Landscape system:** flush extraction membranes and subsurface sorting feed capillary slurry/water distribution; low conformal couplings hand material to growth collars; reject and repair glass returns through embedded routes. Flat substrate, moisture tone, residue, organic cover, and crop state show the cycle.
+- **Nested scales:** maturity/test fragments; collar-and-capillary processing; plain-scale substrate and microclimate regulation.
 - **Nonhuman affordances:** collars and flow gates operate at several heights and orientations; controls span separate structures; service voids do not match human reach, gait, sightline, or bilateral hand use.
-- **Discoverable clues:** repeated collar families, full/empty settling states, and a diversion changing downstream sediment make the handoff legible without labels.
+- **Discoverable clues:** repeated collar families, saturated/dry flush cells, and a broad state wave changing downstream glass maturity make the handoff legible without labels or rows.
 - **Plausible first readings:** resource separation, environmental buffering, and distributed fabrication all fit the first view. No single Builder occupation is confirmed.
-- **First contact:** any safe route is an incidental retaining surface interpreted by the expedition. No human path, retrofit, wear, sign, rail, camp, body, companion, or ship appears.
+- **First contact:** any safe traversal is a temporary dormant/low-growth process state interpreted by the expedition. No retaining edge, human path, retrofit, wear, sign, rail, camp, body, companion, or ship appears.
 
 ## Navigation
 
-- **Entry:** a worn approach entering at far left, with no visible protagonist, companion, or ship.
-- **Exit:** the sunlit pass at far right, following an incidental stable edge through the system toward GM-01.
-- **Walkable plane:** broad lower-middle basalt shelf; the route enters from the left, passes the beacon, bends around the basin, and narrows toward the pass.
-- **Camera:** first-person wide three-quarter survey view at a human standing eye height; Builder forms and operating heights must not align conveniently to that eye line.
+- **Entry:** the first-person view opens within a temporary low-growth state band at the lower edge; no road, shelf, ramp, human trace, or ship.
+- **Exit:** the same dormant state wave continues laterally into GM-01 without a pass, notch, gate, path, or landform.
+- **Traversable plane:** the entire terrain is perfectly flat. A readable low-growth band permits movement while remaining visibly temporary process state, not built circulation.
+- **Camera:** first-person wide survey view held level to a ruler-straight horizon; no tilt, overlook, elevated vantage, or terrain convergence may imply relief.
 
 ## Interaction zones
 
 | Zone | Approximate screen area | Read | Intended interaction |
 |---|---|---|---|
-| Feedstock terrace | left 0–32%, middle/lower | stepped extraction face, sorted silicate-bearing substrate, settling pockets, and repaired retaining courses | first-person entry, raw-material stage, and garden stewardship evidence |
-| Local contact node | left-center 32–39%, middle | asymmetric field-coupled element repeated in the distant headworks; no front, screen, or human operating height | first optional inspect/use target through the expedition translation layer |
-| Slurry headworks | right 69–94%, lower-middle | managed water/mineral basin with distribution comb, settling steps, and transport-side reject rack | environmental observation and visible feedstock-to-growth handoff |
-| Meadow pass | right 88–100%, middle | a stable process boundary converges on the warm horizon notch | expedition scene exit to GM-01, not a Builder doorway or path |
+| Flush feedstock field | left/lower foreground | planar extraction membranes, color/value sorting patches, embedded apertures, and substrate residue with no excavation face or terrace | raw-material stage and stewardship evidence |
+| Local contact locus | left-center/middle | glass elements recur at one process intersection; no separate raised node, front, screen, or human operating height | first optional inspect/use target through expedition translation layer |
+| Capillary distribution field | right/lower-middle | shallow or subsurface mineral/water traces inferred from moisture, collar state, and synchronized crop response; no basin or ditch | visible feedstock-to-growth handoff |
+| Dormant state band | crosses foreground laterally | temporary low-growth wave distinguished by state and occlusion, never edges, paving, or rows | expedition traversal and transition to GM-01 |
 
 ## Visual specification
 
-- **Palette:** indigo sky, slate-blue basalt, charcoal shadow, muted lavender flora, pale crystal white, restrained peach-gold and amber.
+- **Palette:** indigo sky, flat slate-charcoal substrate, muted lavender organic cover, pale cultivated glass, restrained peach-gold horizon haze, and state-specific process accents.
 - **Lighting:** cool blue-hour ambient light and warm horizon rim; any local light must follow a visible channel, emitter, or reflective surface.
-- **Atmosphere:** thin valley mist and sparse airborne pollen, kept behind the walkable route.
-- **Scale cues:** varied collar apertures, repeated component families, extraction courses, organic growth, and channel widths; do not use human waist, hand, stairs, rails, or doors as Builder design units.
-- **Materials:** multi-era basalt paving, repaired drainage edges, sorted fictional silicate feedstock, mineral-slurry channels, shallow managed water, frame metal/ceramic, organic ground cover, and rejected glass stock.
-- **Focal hierarchy:** warm pass and layered path first; stewardship threshold and basin second; beacon third.
+- **Atmosphere:** thin field haze compresses distant crop against the ruler-straight horizon; it creates depth without concealing process-state waves.
+- **Scale cues:** varied collar apertures, repeated component typologies, maturity distribution, occlusion, and cluster compression; no architecture or terrain relief supplies scale.
+- **Materials:** flat silicate-bearing substrate, flush extraction membranes, subsurface mineral-slurry/water traces, conformal control material, organic ground cover, upward-growing glass, and low rejected/repair stock contained below the crop silhouette.
+- **Focal hierarchy:** foreground component/state variation first; a process-state wave across the field second; the uninterrupted crop/horizon immensity third. No monument or pass.
 
 ## Continuity constraints
 
 - Surface-canon boundary: the environment establishes arrival and observation only; it contains no answer about the Builders, continuity, disappearance, or the Machine.
-- Must preserve: two moons, angular mountain family, violet/peach atmosphere, an open route, and small cultivated growth tied to visible substrate/water systems.
-- Must add: at least three stewardship phases, maintenance-as-ornament, an abandoned earlier alignment, silicate feedstock sorting, mineral-slurry/water control, reject/repair storage, harvesting/transport couplings, a clear handoff to neighboring growth beds, three nonhuman affordances, repeated/state/cause-effect clues, and two plausible process readings.
+- Must preserve: two moons above a ruler-straight horizon, violet/peach atmosphere, unfathomable crop extent, and upward cultivated glass tied to visible fictional process states.
+- Must add: flush/subsurface silicate extraction, mineral-slurry/water state evidence, reject/repair return, conformal harvest/transport couplings, three stewardship phases expressed without elevation, three nonhuman affordances, repeated/state/cause-effect clues, and two plausible process readings.
 - Must exclude: protagonist, companions, and ship in direct, reflected, shadowed, portrait, distant, or cropped form.
-- Must avoid: human stairs, doors, rails, platforms, tripods, front-facing controls, ergonomic console height, enchanted-garden fantasy, arbitrary crystals, unsupported real-world scientific claims, decorative glow, glass with no process connection, definitive occupation labels, random surrealism, combat, or hiding the incidental safe route with atmosphere.
+- Must avoid: hills, mountains, terraces, ridges, shelves, steps, monuments, skyline architecture, valleys, bowls, basins, overlooks, cliffs, islands, berms, ramps, platforms, human crop rows, roads, paths, lanes, fences, ditches, farm buildings, front-facing controls, enchanted-garden fantasy, arbitrary crystals, unsupported science claims, decorative glow, definitive occupation labels, random surrealism, or hiding the state-band traversal with atmosphere.
 - Neighboring-scene links: [historical GM-01 dual-node plate](../images/glass-meadow-petal-route-marker-v1.png) and [original Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
 
 ## Production record
@@ -58,4 +58,4 @@
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation
 - **Native dimensions:** `1672 x 941` PNG
 - **Selection notes:** selected first result; all four interaction silhouettes and the walkable route remain readable at reduced scale.
-- **Historical validation:** no UI, text, watermark, character, weapon, or plot revelation was visible and navigation requirements were present. Selection is superseded for production because the ship violates the viewpoint lock and the scene lacks the required Builder stewardship evidence.
+- **Historical validation:** the old plate remains provenance only. Its landing shelf, mountains, basin, pass, S-path, ship, and non-flat composition are explicitly superseded and automatically fail the absolute-flatness gate.

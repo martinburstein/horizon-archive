@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-12 — Glass Garden absolute-flatness correction
+
+- **Outcome:** locked Glass Garden to a perfectly flat, gigantic agricultural plane with a ruler-straight horizon and cultivated glass continuing unfathomably to every edge. Cultivated glass is now the only allowed vertical landform; depth is limited to atmosphere, occlusion, maturity/component-shape variation, cluster compression, and process-state waves.
+- **Files:** `Curse Art Director/CHARTER.md`, `Curse Art Director/WORK_LOG.md`, `horizon-archive-game/AGENTS.md`, `Concept Art Book/art-direction-charter.md`, `Concept Art Book/scene-index.md`, `Concept Art Book/planet-region-map.md`, `Concept Art Book/prompt-provenance-log.md`, `Concept Art Book/scenes/GM-00-glass-meadow-landing-shelf.md`, and `Concept Art Book/scenes/GM-01-glass-meadow-petal-route-marker.md`.
+- **Validation:** reread applicable instructions and current art documents; checked changed Markdown links and `git diff --check`; searched GM authority text for superseded mountains, terraces, ridges, basins, passes, shelves, and paths; preserved alien functionality, silicate cultivation, nonhuman topology, first-contact, first-person, no-party/no-ship, and mystery boundaries.
+- **Finding:** the historical GM-00 plate, historical GM-01 plate, and current playable blockout all use non-flat terrain or landform/route composition and automatically fail the revised production gate.
+- **Handoff:** Location Scout should compose GM-00 and GM-01 as neighboring observations within one immense Glass Plain, using flush/subsurface process evidence, crop-continuous contacts, a temporary low-growth traversal band, and state waves rather than terrain relief or human field geometry.
+- **Status:** ready to advance.
+
 ## 2026-07-12 — Project-wide alien functionality and first-contact gate
 
 - **Outcome:** made alien functionality a hard requirement for every environment. Each scene must now express a working landscape-machine-ecology and inferred occupation through visible input/transform/output, failure/maintenance, three nested scales, nonhuman affordances, repeated/state/cause-effect clues, resource or terraforming evidence, and at least two plausible readings. Builder artifacts exceed human 2026 capability and were never designed for human eyes or ergonomics; the player is the first known human at each instance.

@@ -10,7 +10,7 @@ This charter is the final environment-art approval gate after Location Scout pro
 
 - Gameplay environments are first-person views: paint only what the protagonist is looking at.
 - Never show the protagonist, any companion, or their ship in a gameplay environment—not as a body, hand, silhouette, shadow, reflection, portrait, cropped edge, distant shape, or compositional framing device.
-- Establish human scale with doors, rails, steps, tools, worn paths, seats, footprints, or architecture. Do not use the player party or ship as a scale prop.
+- Establish relative scale through repeated component typologies, maturity variation, occlusion, atmospheric compression, material-flow width, and nested system relationships. Do not use human doors, rails, steps, tools, paths, seats, bodies, party members, or ship as scale props.
 - UI may communicate the protagonist's observations, but the world plate must remain an unobstructed first-person environmental view.
 
 ## Builder aesthetic doctrine
@@ -46,14 +46,24 @@ Builder civilization is more advanced in every relevant respect than human civil
 
 ## Glass Garden material-cultivation canon
 
-The Glass Garden is a fictional Builder agricultural and industrial system. It farms silicate-bearing raw material into purpose-shaped glass components used by the Python-running Terminals. This is project worldbuilding, not a claim that real glass can be grown this way or a scientifically accurate description of real silicate extraction, crystallization, annealing, or manufacturing.
+The Glass Garden is a fictional Builder agricultural and industrial system. It farms silicate-bearing raw material in flush ground cells into purpose-shaped glass components used by the Python-running Terminals. This is project worldbuilding, not a claim that real glass can be grown this way or a scientifically accurate description of real silicate extraction, crystallization, annealing, or manufacturing.
 
-- Glass grows vertically upward from prepared beds like inverted icicles rising out of the ground. Downward-hanging stalactite language, random geodes, and scattered fantasy crystal spikes are incorrect.
-- Beds must expose a readable fictional process chain: silicate feedstock extraction; mineral-slurry and water delivery; growth collar or seed-form placement; upward crystallization; stress and temperature control; shape-training; maturity marking; harvesting; annealing; and transport.
+- Glass grows vertically upward from flush prepared ground cells like inverted icicles rising out of the ground. Downward-hanging stalactite language, random geodes, and scattered fantasy crystal spikes are incorrect.
+- The flat field must expose a readable fictional process chain: silicate feedstock extraction; mineral-slurry and water delivery; growth collar or seed-form placement; upward crystallization; stress and temperature control; shape-training; maturity marking; harvesting; annealing; and transport.
 - Cultivation produces intentional component families rather than generic crystal variety: Petal crown segments, three-fin marker elements, inspection panes or lenses, conduit sleeves, status-light guides, collars, and repair stock for Terminals.
-- Off-spec and damaged growth belongs to the system. Rejected pieces, test fractures, sorted salvage, re-fused repairs, replacement stock, and altered training frames show quality control and centuries of accumulated practice.
-- Different Builder movements leave recognizable cultivation schools in bed geometry, collar construction, training-frame rhythm, control infrastructure, maturity marks, repair technique, and preferred component typologies.
+- Off-spec and damaged growth belongs to the system. Rejected pieces, test fractures, sorted salvage, re-fused repairs, replacement stock, and altered conformal guides show quality control and centuries of accumulated practice.
+- Different Builder movements leave recognizable cultivation schools in field topology, collar construction, conformal-guide rhythm, embedded controls, maturity marks, repair technique, and preferred component typologies.
 - Any light in cultivated glass must come from a visible environmental source, Terminal state, conduit, reflective channel, heat-control element, or material response. Luminosity without process or function is fantasy decoration.
+
+### Absolute-flatness lock
+
+- The Glass Garden ground plane is completely flat at gigantic agricultural scale. The terrain horizon is ruler-straight and unbroken from edge to edge.
+- Glass crop continues unfathomably through foreground, middle distance, horizon, and every lateral edge. The cultivated glass itself is the only permitted vertical landform.
+- Reject hills, mountains, terraces, ridges, shelves, steps, raised monuments, skyline architecture, valleys, bowls, basins, overlooks, cliffs, islands, berms, ramps, and elevated platforms in any Glass Garden concept.
+- Feedstock extraction and process infrastructure must be flush, shallow, subsurface, embedded, or tightly conformal to cultivated glass. Nothing except the glass crop creates a vertical silhouette or punctures the horizon.
+- Depth comes only from atmospheric compression, foreground occlusion, diminishing glass density/cluster scale, growth maturity and component-shape variation, and broad waves of process-state moving across the field.
+- Do not use familiar crop rows, furrows, roads, lanes, paths, fences, hedges, irrigation ditches, farm buildings, silos, windbreaks, or Cartesian planting grids. Distribution follows alien branching, radial, interlocking, phase, or field relationships that remain functionally evidenced.
+- A safe traversal line may appear only as a temporary low-growth or dormant process-state band. It cannot read as a road, trail, terrace edge, or built human route.
 
 ## Hard production gates
 
@@ -107,6 +117,9 @@ For Glass Garden scenes specifically, the following are additional hard requirem
 - Feedstock, slurry/water, collars/seeds, thermal/stress control, training frames, maturity marks, harvesting/annealing/transport, and reject/repair flows must connect spatially rather than read as unrelated props.
 - At least three Terminal-component typologies must be distinguishable by trained cross-section, collar, frame, size, or storage destination.
 - A reviewer must be able to infer fictional material production before reading explanatory text. If the scene reads first as a magical crystal garden, it fails.
+- The terrain and horizon must pass a ruler-straight flatness check across the complete plate; any terrain elevation or non-glass skyline form is an automatic `REJECT`.
+- A grayscale depth audit must attribute every depth cue only to atmosphere, occlusion, growth maturity/shape, cluster-scale compression, or process-state waves.
+- A crop-pattern audit must confirm no familiar human rows, roads, lanes, fences, furrows, terraces, or farm architecture appear.
 
 ### 7. Alien functionality and first-contact gate
 
@@ -147,7 +160,7 @@ Every production-scene review must include:
 4. a hotspot/route overlay kept outside the shipped art;
 5. a short material-ramp and environmental-storytelling inventory;
 6. a Builder-authorship sheet naming the collective work, visible purpose, three construction phases, maintenance features, engineered-ecology relationships, and regional design school;
-7. for Glass Garden scenes, a process overlay identifying all ten fictional cultivation stages, visible component typologies, reject/repair flow, and the upward growth direction;
+7. for Glass Garden scenes, a process overlay identifying all ten fictional cultivation stages, visible component typologies, reject/repair flow, upward growth direction, ruler-straight horizon, flat ground plane, permitted depth cues, and nonhuman field topology;
 8. an alien-function map identifying system inputs/transforms/outputs, three operating scales, repeated/state/cause-effect clues, nonhuman affordances, two plausible interpretations, and the inferred occupation signature;
 9. an originality statement naming the abstract references used and the concrete exclusions checked;
 10. first-person and first-contact exclusion confirmation for protagonist, companions, ship, human retrofit, and prior human traces.

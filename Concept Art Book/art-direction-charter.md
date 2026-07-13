@@ -12,7 +12,7 @@ The [LucasArts adventure-game lineage](https://en.wikipedia.org/wiki/LucasArts_a
 
 | Reference | What it establishes |
 |---|---|
-| [Alien Meadow](../Concept%20Art/Alien%20Meadow.png) | Violet/peach sky, faceted crystalline ecology, monumental centered landmark, readable foreground approach. |
+| [Alien Meadow](../Concept%20Art/Alien%20Meadow.png) | Violet/peach atmosphere and cultivated-glass mood only. Its mountains, uneven ground, centered monument, basin, and route composition are superseded for Glass Garden production. |
 | [Alien Ruins](../Concept%20Art/Alien%20Ruins.png) | Indirect cosmic scale, water reflections, dark masonry silhouettes, ceremonial symmetry. |
 | [Fallen Automoton](../Concept%20Art/Fallen%20Automoton.png) | Intimate corridor scale, oblique path, readable character-object silhouette, violet practical light. |
 | [Underground City](../Concept%20Art/Underground%20City.png) | Vast layered depth, warm/cool contrast, small human scale cues, infrastructure over voids. |
@@ -50,18 +50,30 @@ Every environment is a Builder occupation made physical across artifact, site, a
 
 The Glass Garden is a fictional Builder material farm supplying purpose-grown glassware for Python-running Terminals. It is not a representation of real glass science and must not be described as scientifically feasible silicate extraction, crystal growth, or annealing.
 
-1. Silicate-bearing feedstock is visibly separated from the local substrate at worked extraction faces or sorting beds.
-2. Mineral slurry and water move through built channels, settling steps, valves, basins, or distribution combs.
+1. Silicate-bearing feedstock is visibly separated through flush membranes, planar sorting states, or subsurface apertures; no extraction face, pit, terrace, or residue mound breaks the plane.
+2. Mineral slurry and water move through capillary, subsurface, or embedded distribution inferred from moisture, collar response, and synchronized crop state; no ditch, channel bank, settling step, or basin.
 3. Growth collars or seed forms establish the intended cross-section and component family.
 4. Glass rises vertically from the prepared ground like inverted icicles. This direction is a canonical silhouette rule.
-5. Shade vanes, thermal channels, heat-exchange ribs, gauges, or compression braces communicate fictional stress/temperature control.
-6. Adjustable frames, ties, guides, and pruning-like supports train curves, fins, petals, panes, sleeves, and light guides.
+5. Embedded thermal fields, ground-flush exchange traces, and braces conforming to cultivated glass communicate fictional stress/temperature control without towers, vanes, or skyline infrastructure.
+6. Conformal guides and field relationships hug growing glass to train curves, fins, petals, panes, sleeves, and light guides without freestanding frames or crop rows.
 7. Non-text bands, notches, collar positions, or inspection tabs mark maturity and quality without becoming glyphs or UI.
-8. Cut stations, padded cradles, annealing galleries, rails, sleds, and lifting sockets connect mature growth to harvesting and transport.
-9. Test fractures, rejected pieces, sorted salvage, repair glass, and visibly re-fused components make quality control and maintenance legible.
-10. Terminal-component beds differ intentionally: Petal crown segments, three-fin marker elements, inspection panes/lenses, conduit sleeves, status-light guides, collars, and replacement stock are recognizable typologies rather than arbitrary shapes.
+8. Flush cut states, low conformal cradles, embedded annealing fields, and state handoffs connect mature growth to harvesting and transport without galleries, rails, roads, or buildings.
+9. Test fractures, low rejected pieces, planar salvage states, repair glass, and visibly re-fused components make quality control and maintenance legible without piles or racks rising above the crop.
+10. Interlocking non-row field regions differ intentionally: Petal crown segments, three-fin marker elements, inspection panes/lenses, conduit sleeves, status-light guides, collars, and replacement stock remain recognizable typologies rather than arbitrary shapes.
 
 Across GM-00 and GM-01, show the complete chain. A single scene must show at least six stages, upward growth, three component typologies, and a connected reject/repair flow. No random fantasy crystals.
+
+#### Glass Garden absolute-flatness lock
+
+- Ground is perfectly flat at immense field scale; the terrain horizon is ruler-straight from edge to edge.
+- Glass crop continues beyond every frame edge and to the horizon. Cultivated glass is the only vertical landform.
+- No hills, mountains, terraces, ridges, shelves, raised monuments, skyline architecture, valleys, bowls, basins, overlooks, cliffs, islands, berms, ramps, elevated platforms, or farm buildings.
+- Extraction and cultivation systems remain flush, shallow, subsurface, embedded, or conformal to the growing glass.
+- Depth is made only by atmospheric compression, occlusion, diminishing cluster scale/density, maturity and component-shape variation, and broad process-state waves.
+- No familiar crop rows, furrows, roads, paths, lanes, fences, hedges, irrigation ditches, or Cartesian planting grids. Use evidenced alien branching, radial, interlocking, phase, or field topologies.
+- Any traversal cue is a temporary low-growth/dormant process-state band, never a constructed road or path.
+
+Any non-flat Glass Garden concept is superseded and automatically fails production review.
 
 ## Production pixel contract
 
