@@ -54,4 +54,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built source-grounded offline capstone and readiness checkpoint package `L-06-03`
 - [x] Built cumulative all-objective confusion-pairs checkpoint `CUM-01`
 - [x] Built balanced mixed simulation block `SIM-01`
+- [x] Built fresh-transfer mixed simulation block `SIM-02`
 - [ ] Expand original question banks and full timed simulations

@@ -698,3 +698,12 @@ Validation:
 - `git diff --check`: pass
 Handoff: Exercise Agent can render `EX-SIM01-MIXED` with an optional 25-minute diagnostic timer and fully equivalent untimed mode.
 Notes: No service call, Azure mutation, credential use, external action, gameplay, or lore change occurred. Items are course-authored, timing cannot change mastery, and passing does not guarantee an exam result. Exam and product details remain volatile.
+
+## Log entry: 2026-07-12T21:31:49-04:00
+
+Stage: Fresh-transfer AI-901 simulation evidence
+Action: Completed one bounded learner-facing tranche, `SIM-02`, as a new 12-item transfer block with five concept/capability and seven Foundry implementation items, all 15 objectives covered, and retention gates for `SIM-01` and `CUM-01` transfer.
+Files touched: `curriculum/readiness/SIM-02/*`, BUILD_STATUS, readiness record, and BUILD_LOG.
+Validation: applicable instructions/logs/readiness chain inspected; official mappings checked; all curriculum JSON parsed; 5/7 mix, 15-objective union, source mapping, remediation links, strict gates, privacy/session/accessibility, exam-claim, and action safeguards passed; reference 24/24; blank rejected 0/24 exit 1; action and one-test-is-enough probes passed; `SIM-01`, `CUM-01`, and `L-06-03` regressions passed; `git diff --check` passed.
+Handoff: Exercise Agent can render `EX-SIM02-TRANSFER` with optional diagnostic timing and fully equivalent untimed mode.
+Notes: No service/Azure/credential/external action/gameplay/lore/QA-binary changes. Original practice only; no exam guarantee.

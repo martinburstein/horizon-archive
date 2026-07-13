@@ -43,6 +43,7 @@ All four lesson manifests pass the dependency-free schema contract check. All fo
 - `curriculum/lessons/L-06-03` — complete offline capstone and readiness checkpoint integrating client, text/speech, and Content Understanding evidence with prerequisite and exam-claim safeguards
 - `curriculum/readiness/CUM-01` — complete learner-facing cumulative confusion-pairs checkpoint with 15-objective coverage per form, deterministic remediation routes, and strict primary/transfer gates
 - `curriculum/readiness/SIM-01` — complete 12-item mixed simulation block with current domain balance, all-objective coverage, optional-accessible timing, and strict remediation-backed mastery
+- `curriculum/readiness/SIM-02` — complete independent fresh-transfer simulation block with matched domain balance, all-objective coverage, and dual-simulation retention gate
 
 ## Ready now
 
