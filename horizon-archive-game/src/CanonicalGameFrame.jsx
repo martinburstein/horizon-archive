@@ -19,12 +19,29 @@ export function CanonicalGameFrame({ enabled, children }) {
   return (
     <div className="canonical-game-host" ref={hostRef}>
       <div
-        className="canonical-game-frame"
-        data-canonical-layout={frame.layout}
-        data-canonical-scale={frame.scale}
-        style={{ width: frame.width, height: frame.height, "--world-height": `${frame.worldHeight}px`, "--interface-height": `${frame.interfaceHeight}px`, transform: `scale(${frame.scale})` }}
+        className="crt-stage-anchor"
+        style={{ width: frame.renderedStageWidth, height: frame.renderedStageHeight }}
       >
-        {children}
+        <div
+          className="crt-shell"
+          data-crt-layout={frame.layout}
+          style={{
+            borderTopWidth: frame.bezel.top,
+            borderRightWidth: frame.bezel.right,
+            borderBottomWidth: frame.bezel.bottom,
+            borderLeftWidth: frame.bezel.left,
+            zoom: frame.scale,
+          }}
+        >
+          <div
+            className="canonical-game-frame"
+            data-canonical-layout={frame.layout}
+            data-canonical-scale={frame.scale}
+            style={{ width: frame.width, height: frame.height, "--world-height": `${frame.worldHeight}px`, "--interface-height": `${frame.interfaceHeight}px` }}
+          >
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1879,7 +1879,7 @@ export function App() {
           <>
             {scene.id === "ruins" ? (
               <picture>
-                <source media="(max-width: 639px)" srcSet={ruinsImages.narrow} />
+                <source media="(max-width: 759px), (max-height: 595px)" srcSet={ruinsImages.narrow} />
                 <img className="scene-art" src={ruinsImages.canonical} alt={scene.imageAlt} data-ab01-state={ruinsVisualState} />
               </picture>
             ) : (

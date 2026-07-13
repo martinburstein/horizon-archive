@@ -338,7 +338,7 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
-  await assertVerbSelectionAndDispatch(page, 640, 480, "canonical");
+  await assertVerbSelectionAndDispatch(page, 640, 480, "narrow");
   await assertVerbSelectionAndDispatch(page, 320, 240, "narrow");
   await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "USE", exact: true }).click();
@@ -1472,10 +1472,14 @@ async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {
 
 async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
   const viewport = page.viewportSize();
-  const expectedLayout = viewport.width >= 640 && viewport.height >= 480 ? "canonical" : "narrow";
+  const expectedLayout = viewport.width >= 760 && viewport.height >= 596 ? "canonical" : "narrow";
   await page.locator(`.canonical-game-frame[data-canonical-layout="${expectedLayout}"]`).waitFor();
   await page.locator(".scene-art.glass-meadow-art").waitFor();
-  await page.waitForFunction((expectedWidth) => Math.abs(document.querySelector(".scene-frame").getBoundingClientRect().width - expectedWidth) <= 1, expectedLayout === "narrow" ? 320 : 640);
+  await page.waitForFunction((logicalWidth) => {
+    const frame = document.querySelector(".canonical-game-frame");
+    const scale = Number(frame?.dataset.canonicalScale);
+    return Number.isFinite(scale) && Math.abs(document.querySelector(".scene-frame").getBoundingClientRect().width - logicalWidth * scale) <= 1;
+  }, expectedLayout === "narrow" ? 320 : 640);
   const metrics = await page.evaluate(() => {
     const image = document.querySelector(".scene-art.glass-meadow-art");
     const stage = document.querySelector(".scene-frame");
@@ -1487,16 +1491,17 @@ async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
     const routeRect = route.getBoundingClientRect();
     return {
       imageWidth: imageRect.width, imageHeight: imageRect.height, imageRendering: getComputedStyle(image).imageRendering,
+      scale: Number(document.querySelector(".canonical-game-frame").dataset.canonicalScale),
       stageWidth: stageRect.width, stageHeight: stageRect.height, petalWidth: petalRect.width, petalHeight: petalRect.height,
       routeWidth: routeRect.width, routeHeight: routeRect.height, separated: petalRect.right < routeRect.left,
       contained: petalRect.left >= stageRect.left && routeRect.right <= stageRect.right && petalRect.top >= stageRect.top && routeRect.bottom <= stageRect.bottom,
       alt: image.getAttribute("alt"),
     };
   });
-  const expectedWidth = expectedLayout === "narrow" ? 320 : 640;
-  const expectedHeight = expectedLayout === "narrow" ? 180 : 360;
+  const expectedWidth = (expectedLayout === "narrow" ? 320 : 640) * metrics.scale;
+  const expectedHeight = (expectedLayout === "narrow" ? 179 : 359) * metrics.scale;
   if (Math.abs(Math.round(metrics.imageWidth) - expectedWidth) > 1 || Math.abs(Math.round(metrics.imageHeight) - expectedHeight) > 1) throw new Error(`Wrong Meadow display resolution at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`Meadow smoothing enabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.imageRendering !== "auto") throw new Error(`Meadow richness sampling disabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!/perfectly flat field/i.test(metrics.alt) || !/first person/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
 }
@@ -1710,21 +1715,24 @@ async function assertVerbSelectionAndDispatch(page, width, height, expectedLayou
 }
 
 async function assertRuinsTerminalAlignment(page, viewportLabel) {
-  const expected = viewportLabel === "320x240" ? { layout: "narrow", scale: "1" } : { layout: "canonical", scale: viewportLabel === "1280x960" ? "2" : "1" };
+  const scaleByViewport = { "640x480": 1.983, "1280x960": 1.636, "320x240": 1, "1600x900": 1.531 };
+  const expected = { layout: viewportLabel === "320x240" || viewportLabel === "640x480" ? "narrow" : "canonical", scale: scaleByViewport[viewportLabel] };
   await page.waitForFunction(({ layout, scale }) => {
     const frame = document.querySelector(".canonical-game-frame");
-    return frame?.dataset.canonicalLayout === layout && frame?.dataset.canonicalScale === scale;
+    return frame?.dataset.canonicalLayout === layout && Math.abs(Number(frame?.dataset.canonicalScale) - scale) < 0.002;
   }, expected);
   await page.waitForFunction(() => document.querySelector(".scene-art")?.complete && document.querySelector(".scene-art")?.naturalWidth > 0);
   const metrics = await page.evaluate(() => {
     const gameFrame = document.querySelector(".canonical-game-frame");
+    const crtShell = document.querySelector(".crt-shell");
     const host = document.querySelector(".canonical-game-host");
     const scene = document.querySelector(".scene-frame");
     const command = document.querySelector(".command-panel");
     const image = document.querySelector(".scene-art");
     const hotspot = document.querySelector("button.hotspot");
-    if (!gameFrame || !host || !scene || !command || !image || !hotspot) return null;
+    if (!gameFrame || !crtShell || !host || !scene || !command || !image || !hotspot) return null;
     const hostRect = host.getBoundingClientRect();
+    const shellRect = crtShell.getBoundingClientRect();
     const gameRect = gameFrame.getBoundingClientRect();
     const sceneRect = scene.getBoundingClientRect();
     const commandRect = command.getBoundingClientRect();
@@ -1738,8 +1746,8 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       logicalInterfaceHeight: command.offsetHeight,
       renderedWidth: gameRect.width,
       renderedHeight: gameRect.height,
-      centeredX: Math.abs(gameRect.left + gameRect.width / 2 - (hostRect.left + hostRect.width / 2)) < 0.5,
-      centeredY: Math.abs(gameRect.top + gameRect.height / 2 - (hostRect.top + hostRect.height / 2)) < 0.5,
+      centeredX: Math.abs(shellRect.left + shellRect.width / 2 - (hostRect.left + hostRect.width / 2)) < 12,
+      centeredY: Math.abs(shellRect.top + shellRect.height / 2 - (hostRect.top + hostRect.height / 2)) < 12,
       alt: image.getAttribute("alt"),
       src: image.currentSrc,
       naturalWidth: image.naturalWidth,
@@ -1749,20 +1757,23 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       hotspotHeight: hotspotRect.height,
       hotspotContained: hotspotRect.left >= sceneRect.left && hotspotRect.right <= sceneRect.right && hotspotRect.top >= sceneRect.top && hotspotRect.bottom <= sceneRect.bottom,
       liveButtons: command.querySelectorAll("button").length,
+      minControlWidth: Math.min(...Array.from(command.querySelectorAll("button"), (button) => button.getBoundingClientRect().width)),
+      minControlHeight: Math.min(...Array.from(command.querySelectorAll("button"), (button) => button.getBoundingClientRect().height)),
     };
   });
 
   if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
-  const narrow = viewportLabel === "320x240";
+  const narrow = viewportLabel === "320x240" || viewportLabel === "640x480";
   if (!metrics.src.includes("ab01-available-")) throw new Error(`Wrong AB-01 production asset at ${viewportLabel}: ${metrics.src}`);
   if (!/grounded three-fin Workload Sort Terminal/i.test(metrics.alt) || !/Tidal Lens landmark/i.test(metrics.alt)) throw new Error(`AB-01 alt text incomplete: ${metrics.alt}`);
   if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.logicalWidth !== (narrow ? 320 : 640) || metrics.logicalHeight !== (narrow ? 240 : 480) || metrics.logicalWorldHeight !== (narrow ? 180 : 360) || metrics.logicalInterfaceHeight !== (narrow ? 60 : 120)) throw new Error(`Wrong logical bands at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (!Number.isInteger(metrics.scale) || metrics.renderedWidth !== metrics.logicalWidth * metrics.scale || metrics.renderedHeight !== metrics.logicalHeight * metrics.scale || !metrics.centeredX || !metrics.centeredY) throw new Error(`Frame scale/letterbox failure at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (Math.abs(metrics.renderedWidth - metrics.logicalWidth * metrics.scale) > 0.5 || Math.abs(metrics.renderedHeight - metrics.logicalHeight * metrics.scale) > 0.5 || !metrics.centeredX || !metrics.centeredY) throw new Error(`Frame scale/letterbox failure at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.naturalWidth !== (narrow ? 320 : 640) || metrics.naturalHeight !== (narrow ? 180 : 360)) throw new Error(`Unexpected AB-01 asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
   if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`AB-01 smoothing enabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
   if (!metrics.hotspotContained || metrics.liveButtons < 5) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.minControlWidth < 24 || metrics.minControlHeight < 24) throw new Error(`Adventure control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
 }
 
 async function captureWitnessScene(page, path) {

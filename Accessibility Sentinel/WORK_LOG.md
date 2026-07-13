@@ -1,5 +1,23 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Glass Meadow CRT P2 re-review
+
+- **Outcome:** passed the corrected CRT presentation. The 640 x 480 host now uses the compact layout at 1.983x, the zero-width narrow bezel gives exact 320 x 240 playfield containment, and all five command-panel controls meet 24 px minimum height with 52-67 px widths at native narrow and 29.2 px height at 1280 x 720.
+- **Files:** updated `Accessibility Sentinel/opening-demo/CRT_PRESENTATION_REVIEW.md` and this log only; runtime code and raster assets were not changed.
+- **Validation:** inspected the current 1280 x 720 and 320 x 240 captures at original resolution; focused frame/Terminal tests passed 7/7. Current relay evidence records 169/169 unit tests, production build, and updated E2E min-control assertions passing through credits in 120 seconds.
+- **Next:** preserve the 760 x 596 compact threshold, zero narrow bezel, exact native containment, 24 px command minima, 44 px primary targets, and focus contracts.
+- **Risk:** human NVDA, physical switch-control, forced-colors, and 200% zoom remain unobserved before a conformance claim.
+- **Status:** `PASS - all three CRT P2 findings resolved`
+
+## 2026-07-13 - Glass Meadow CRT presentation review
+
+- **Outcome:** issued REVISE on the new centered, fluid CRT presentation. The bezel is non-interactive, stays outside the 1280 x 720 playfield, preserves keyboard/Terminal focus contracts, and leaves Meadow hotspots and Terminal choices at least 44 px. Three P2 issues remain: canonical content shrinks to 0.797x at 640 x 480, the centered 324 x 246 narrow stage starts playable content at y=-1 inside a 320 x 240 clipping host, and verb/inventory actions remain below the 24 px target benchmark.
+- **Files:** `Accessibility Sentinel/opening-demo/CRT_PRESENTATION_REVIEW.md` and this log only; runtime code, tests, QA rasters, and the unrelated PDF were not changed.
+- **Validation:** inspected both supplied captures at original resolution; focused frame/Terminal tests passed 7/7; full tests passed 169/169; production build passed with the existing 698.12 kB chunk advisory. Static geometry confirmed the 320 x 240 content range `(0, -1)..(320, 239)`.
+- **Next:** Coder should prevent sub-1x canonical shrink for decoration, contain the full narrow playfield while clipping only the bezel, raise required command-panel controls to at least 24 x 24 rendered CSS px, and extend E2E checks to game-vs-host containment plus every enabled command button.
+- **Risk:** human NVDA, physical switch-control, forced-colors, and 200% zoom checks remain unobserved.
+- **Status:** `REVISE - three P2 corrections required`
+
 ## 2026-07-13 - Post-fix opening accessibility relay
 
 - **Outcome:** passed the post-fix opening through the first-Terminal orientation without implementation edits. Confirmed single-step pointer/keyboard/switch-like activation handling, heading and Meadow/Terminal focus handoffs, conditional save-warning association, compact logical-pixel floors, 44 px orientation choices, and one coherent disclaimer/state-boundary sequence.

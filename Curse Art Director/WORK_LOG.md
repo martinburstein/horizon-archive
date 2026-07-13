@@ -1,5 +1,23 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Final CRT Glass Meadow re-review
+
+- **Outcome:** issued `PASS` for the final CRT-centered presentation under the user's almost-full-screen priority. The approved Meadow remains dominant and rich; the bezel is cute and restrained; first-person/no-protagonist/no-ship and originality gates pass.
+- **Files:** updated [the CRT Glass Meadow presentation review](reviews/2026-07-13-crt-glass-meadow-presentation.md) and this work log; no runtime code or raster asset changed.
+- **Validation:** inspected the fresh `1280 × 720` capture and comparison, then checked current frame/layout code and CSS for removal of compositor transform, browser-native layout zoom, no-bezel narrow mode, and `image-rendering: auto` on the Meadow; Markdown links and `git diff --check` passed.
+- **Finding:** minor presentation softness remains visible, but it does not defeat glass material, scene dominance, interface hierarchy, or the user's requested period framing. No concrete visible art defect blocks the demo.
+- **Handoff:** retain the current no-filter CRT treatment and re-review only if bezel scale, display effects, hotspot alignment, viewpoint exclusions, or the selected Meadow raster changes.
+- **Status:** ready to advance.
+
+## 2026-07-13 — CRT-centered Glass Meadow presentation gate
+
+- **Outcome:** issued `REVISE` on the CRT presentation while approving the original generic bezel direction, centered period staging, approved realistic Glass Meadow content, first-person/no-protagonist/no-ship view, and protected-source exclusions.
+- **Files:** created [the CRT Glass Meadow presentation review](reviews/2026-07-13-crt-glass-meadow-presentation.md) and updated this work log; no runtime code or raster asset changed.
+- **Validation:** directly compared the final `1280 × 720` capture against the source/presentation comparison; inspected the CRT bezel asset, canonical frame calculation, transform, Meadow image rendering, and interface CSS; checked Markdown links and `git diff --check`.
+- **Finding:** the current approximately `1.217×` shell transform fractionally scales the full `640 × 480` game, visibly softening realistic glass detail and one-pixel interface text. The frame design is sound, but square-logical-pixel presentation fails.
+- **Handoff:** at `1280 × 720`, render the complete `736 × 572` canonical CRT stage at integer `1×` and letterbox; update the frame test to assert that contract; preserve `image-rendering: auto` for the approved Meadow, add no CRT blur/filter stack, then recapture and verify glass/text clarity plus unchanged hotspot alignment.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Opening and Glass Meadow final art gate
 
 - **Outcome:** issued a `REVISE` gate for final production while confirming the first 45 seconds are visually usable as a demo. The corrected opening now holds title/save/name/prologue on dark surfaces and reserves the Meadow image for the Chapter I reveal.
