@@ -11,7 +11,7 @@
 
 ## Alien functionality and first-contact brief
 
-- **Landscape system:** flush extraction membranes and subsurface sorting feed capillary slurry/water distribution; low conformal couplings hand material to growth collars; reject and repair glass returns through embedded routes. Flat substrate, moisture tone, residue, organic cover, and crop state show the cycle.
+- **Landscape system:** fictional silica magma escapes through fine floor pores and hairline fissures into flush interlocking cutter/growth mats; the mats preserve and train young tubes while subsurface sorting and capillary water control regulate the handoff. Reject and repair glass returns through embedded routes. Flat substrate, thermal/moisture tone, residue, organic cover, and crop state show the cycle.
 - **Nested scales:** maturity/test fragments; collar-and-capillary processing; plain-scale substrate and microclimate regulation.
 - **Nonhuman affordances:** collars and flow gates operate at several heights and orientations; controls span separate structures; service voids do not match human reach, gait, sightline, or bilateral hand use.
 - **Discoverable clues:** repeated collar families, saturated/dry flush cells, and a broad state wave changing downstream glass maturity make the handoff legible without labels or rows.
@@ -40,7 +40,7 @@
 - **Lighting:** cool blue-hour ambient light and warm horizon rim; any local light must follow a visible channel, emitter, or reflective surface.
 - **Atmosphere:** thin field haze compresses distant crop against the ruler-straight horizon; it creates depth without concealing process-state waves.
 - **Scale cues:** varied collar apertures, repeated component typologies, maturity distribution, occlusion, and cluster compression; no architecture or terrain relief supplies scale.
-- **Materials:** flat silicate-bearing substrate, flush extraction membranes, subsurface mineral-slurry/water traces, conformal control material, organic ground cover, upward-growing glass, and low rejected/repair stock contained below the crop silhouette.
+- **Materials:** credible matte mineral substrate with pores, hairline seams, embedded thermal/moisture traces, and flush cutter/growth mats; upward-growing glass tubes use variable wall thickness, transparency/translucency, refraction, internal reflection, edge highlights, subtle inclusions/strain, and believable root contact. Low rejected/repair stock stays below the crop silhouette. Avoid crystal, plastic, or neon shorthand.
 - **Focal hierarchy:** foreground component/state variation first; a process-state wave across the field second; the uninterrupted crop/horizon immensity third. No monument or pass.
 
 ## Continuity constraints
@@ -51,6 +51,14 @@
 - Must exclude: protagonist, companions, and ship in direct, reflected, shadowed, portrait, distant, or cropped form.
 - Must avoid: hills, mountains, terraces, ridges, shelves, steps, monuments, skyline architecture, valleys, bowls, basins, overlooks, cliffs, islands, berms, ramps, platforms, human crop rows, roads, paths, lanes, fences, ditches, farm buildings, front-facing controls, enchanted-garden fantasy, arbitrary crystals, unsupported science claims, decorative glow, definitive occupation labels, random surrealism, or hiding the state-band traversal with atmosphere.
 - Neighboring-scene links: [historical GM-01 dual-node plate](../images/glass-meadow-petal-route-marker-v1.png) and [original Glass Meadow reference](../../Concept%20Art/Alien%20Meadow.png).
+
+## Approved GM-01 handoff
+
+- **Selected next-view target:** [Glass Meadow Example.png](../../Glass%20Meadow%20Example.png), native `1672 x 941`, is the approved first-person composition target for GM-01. It is reference evidence, not a shippable or downscalable production asset.
+- **Navigation continuity:** GM-00's lateral dormant-state wave enters GM-01 through the lower-center black/amber growth-mat floor. The handoff is a change in crop height, collar activity, and reflection density, never a path, road, shelf, ramp, label, or arrow.
+- **Primary continuity target:** the first discoverable Terminal uses GM-01 world bounds `x=294..414, y=191..327` (`left 45.9%`, `top 53.1%`, `width 18.8%`, `height 37.8%`). GM-00 should foreshadow it with one repeated bulb/collar relationship, not a second contact.
+- **Later route continuity target:** the later node uses GM-01 world bounds `x=493..631, y=192..359` (`left 77.0%`, `top 53.3%`, `width 21.6%`, `height 46.4%`). GM-00 must not present this relationship as available or imply a route before the first contact is acknowledged.
+- **Viewpoint and canon:** preserve a first-person view with no protagonist, companion, ship, human trace, label, path, or spoiler-bearing explanation.
 
 ## Production record
 

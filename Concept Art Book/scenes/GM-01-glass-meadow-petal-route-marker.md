@@ -5,8 +5,9 @@
 - **Scene ID:** GM-01
 - **Player-facing survey name:** Glass Meadow
 - **World / region:** World A / Glass Plain
-- **Production status:** Playable non-flat blockout; absolute-flatness `640 x 360` replacement required
-- **Image:** [glass-meadow-petal-route-marker-v1.png](../images/glass-meadow-petal-route-marker-v1.png)
+- **Production status:** Selected first-person composition target approved; original `640 x 360` rebuild mapped
+- **Selected composition target:** [Glass Meadow Example.png](../../Glass%20Meadow%20Example.png), native `1672 x 941`
+- **Historical image:** [glass-meadow-petal-route-marker-v1.png](../images/glass-meadow-petal-route-marker-v1.png)
 - **Original environment reference:** [Alien Meadow.png](../../Concept%20Art/Alien%20Meadow.png)
 - **Arrival continuity:** [GM-00 Glass Garden Margin](GM-00-glass-meadow-landing-shelf.md)
 - **Purpose:** Reframe Glass Meadow as an unfathomably flat Builder material field whose upward-growing glass crop, process-state waves, First Signal contact, and route contact continue to every edge without terrain relief, skyline architecture, or human agricultural geometry.
@@ -24,6 +25,14 @@
 
 Glass Meadow is not a naturally enchanted crystal garden. It is a civic-scale fictional Builder material farm whose glass grows upward from flush prepared ground cells like inverted icicles across a perfectly level field. Generations cultivate purpose-shaped glassware for the Python-running Terminals. This is project canon, not a claim about real-world glass science. The wider mystery remains unresolved, but feedstock, water, cultivation, component use, access, and maintenance must visibly depend on one another.
 
+### Selected material and process synthesis
+
+- Preserve the selected perfectly flat infinite horizon and semi-plausible floor: a continuous matte mineral substrate with fine pores, hairline fissures, embedded process seams, and restrained thermal/moisture variation, never relief.
+- Fictional silica magma escapes through those floor apertures into flush, interlocking alien cutter/growth mats and rises as purpose-grown tubes. Show at least one readable feed-to-root-to-tube relationship.
+- Mats preserve new growth, regulate heat and stress, train geometry, mark maturity, and cut or release harvests. They stay flush, have no human-facing front or controls, and create orderly alien phase/branching relationships rather than crop rows or grids.
+- Glass reads as realistic glass through variable wall thickness, transparent and translucent passages, refraction, internal reflection, sharp edge highlights, subtle bubbles/inclusions or strain, believable contact shadows, and selective surface wear. Do not render generic faceted crystals, opaque plastic, neon plumbing, or magical glow.
+- These visual material cues may be plausible; the silica-magma growth and harvest system remains fictional Builder technology.
+
 - **Collective work:** the feedstock system, growth field, Petal, dormant state band, subsurface water control, stress/temperature system, embedded annealing/transport, and repair stock form one maintained public work rather than unrelated scenic props.
 - **Longitudinal phases:** show older flush collar geometries and subsurface distribution signatures; a later Petal-era process graft; and newer repair glass, altered training relationships, and reactivated capillary states—all without elevation.
 - **Functional sublime:** the Petal array, flush collar states, capillary moisture signatures, conformal guides, and crop-state waves visibly exchange light, water, support, or signal. Its scale comes from coordinating the flat field, not standing above it as a monument.
@@ -37,14 +46,14 @@ Glass Meadow is not a naturally enchanted crystal garden. It is a civic-scale fi
 
 | Stage | Required visual evidence |
 |---|---|
-| Silicate feedstock extraction | flush extraction membranes, subsurface apertures, planar sorting states, and low residue signatures continuing from GM-00 |
+| Silicate feedstock extraction | fictional silica magma escapes through fine floor pores or fissures into flush cutter/growth mats; planar sorting states and low residue signatures continue from GM-00 |
 | Mineral slurry / water | capillary/subsurface delivery inferred through moisture, collar, and synchronized crop-state changes; no open ditch or basin |
-| Growth collars / seed forms | repeated but era-varied collars that define cross-section and anchor each bed |
+| Growth collars / seed forms | repeated but era-varied flush mats and collars preserve new growth, define tube cross-section, and anchor each bed |
 | Upward crystallization | glass rises from the ground like inverted icicles; all silhouettes reinforce bottom-to-top growth |
 | Stress / temperature control | embedded thermal fields and braces conform tightly to glass silhouettes; no separate towers, vanes, or skyline structures |
-| Shape training | conformal guides hug growing glass and distinguish petals, three-fin elements, panes/lenses, sleeves, and light-guide stock without forming rows |
+| Shape training | flush mats and conformal guides train tube wall and silhouette into petals, three-fin elements, panes/lenses, sleeves, and light-guide stock without forming rows |
 | Maturity marking | non-text bands, notches, collar positions, or inspection tabs distinguish growing, mature, and rejected pieces without color alone |
-| Harvest / anneal / transport | flush cut states, low conformal cradles, embedded annealing fields, and state handoffs move components without rails, roads, galleries, or buildings |
+| Harvest / anneal / transport | cutter edges within flush mats, low conformal cradles, embedded annealing fields, and state handoffs release and move components without rails, roads, galleries, or buildings |
 | Reject / repair glass | test fractures, low sorted salvage patterns, repair stock below mature-crop height, and re-fused seams show quality control and reuse |
 | Terminal typologies | interlocking non-row field regions grow Petal segments, marker fins, panes/lenses, sleeves, light guides, collars, and replacements without fences or separate racks |
 
@@ -68,7 +77,40 @@ GM-01 must show at least six stages in one readable composition and, together wi
 - **Plausible first readings:** material cultivation, terrain stabilization, atmospheric/light regulation, and distributed computation remain compatible with the visible evidence. “Glass farmer” is not a confirmed Builder occupation title.
 - **First contact:** the Python workspace is an expedition translation layer reached through the local node, not a human-facing interface built into the artifact. No prior human modification or presence appears.
 
-## Responsive crop and hotspot plan
+## Approved first playable composition map
+
+The selected target controls the ruler-straight horizon, perfectly flat field, dense transparent-glass crop, black/amber flush growth-mat floor, first-person camera, and broad foreground/midground/horizon compression. It must be re-authored as an original `640 x 360` square-logical-pixel plate; do not ship, trace, filter, or smoothly downscale the `1672 x 941` target.
+
+### Exact interaction zones
+
+| Interaction | Canonical `640 x 360` zone | Percent equivalent | Visible selected-image feature and production cue |
+|---|---:|---:|---|
+| First discoverable Terminal | `x=294..414, y=191..327` | `left 45.9%`, `top 53.1%`, `width 18.8%`, `height 37.8%` | Use the distinctive lower-middle bulb/collar cluster. Preserve its broad transparent bulb, dark transmitted floor, bright asymmetric rim, and nested amber radial mat rings; integrate three depth-offset non-text apertures into the collar relationship rather than adding a screen or pedestal. |
+| Later route node | `x=493..631, y=192..359` | `left 77.0%`, `top 53.3%`, `width 21.6%`, `height 46.4%` | Use the lower-right tilted oval/collar cluster. Re-author the tilted rim as an outer training guide around exactly three smaller open-edged fin/sleeve elements and one dark core; keep it lower-value and unavailable until the first contact is acknowledged. |
+
+For implementation rectangles, use primary `x=294, y=191, w=120, h=136` and route `x=493, y=192, w=138, h=167`. Both exceed `44 x 44`, stay within `x=0..639, y=0..359`, do not overlap, and remain wholly above the `640 x 120` interface band.
+
+### Search and navigation affordances
+
+- **Entry read:** open on the lower-center mat field with reduced crop height and calmer reflections. This is a temporary dormant process state, not a cleared path or human standing pad.
+- **Primary discovery:** repeat one asymmetric collar notch at two smaller nearby growths, then on the Terminal collar. Three interrupted amber inspection/thermal traces converge on different sides of the bulb's radial mat. Repetition and material consequence guide search; no trace becomes an arrow or continuous route.
+- **Grayscale pocket:** lower the immediate background crop by one value step behind the bulb while retaining a pale rim, dark interior transmission, and solid root contact. The Terminal must remain identifiable without amber color or hover treatment.
+- **Route foreshadowing:** echo short three-part fin relationships in ordinary crop, but assemble exactly three only inside the tilted route collar. Locked state keeps the core, groove, and local reflection dark; availability changes all three values and the fin separation, never hue alone.
+- **Onward read:** after route completion, reduce crop occlusion at the far-right edge as a lateral process-state wave. Do not add a road, lane, paving edge, label, sign, arrow, ship, protagonist, companion, body, reflection, or shadow.
+
+### Production continuity
+
+- **Navigation:** GM-00's dormant-state wave hands into the lower-center entry field; first contact owns the initial interaction; the later route node remains secondary and prerequisite-gated; onward movement exits laterally at the right edge only after its state change.
+- **Lighting:** preserve cool open-sky illumination, white/slate glass reflections, deep black transmitted ground, and scarce amber light explained by embedded mat activity. Avoid bloom, neon outlines, or unexplained magical glow.
+- **Palette:** use four-step blue-sky, black/slate floor, gray-white transparent-glass, and restrained brown-to-amber process ramps. Keep action readability in luminance and silhouette before color.
+- **Scale:** hold the horizon near logical `y=102`; compress distant growth to two-to-six-pixel clusters; allow edge crops to imply immense field extent. No human object, building, terrain relief, or ship supplies scale.
+- **Material:** retain variable glass wall thickness, refraction, internal reflection, sparse inclusions/strain, sharp stepped highlights, dark transmitted floor, and believable collar contact. Avoid crystal facets, opaque plastic, and high-frequency sparkle noise.
+- **Continuity/canon:** preserve absolute flatness, edge-to-edge crop, non-Cartesian flush mats, upward growth, visible repair variation, three stewardship periods, surface-only first contact, and the unresolved central mystery.
+- **Production QA:** inspect the `640 x 360` rebuild at native 1x, exact nearest-neighbor 2x, grayscale, and 25% thumbnail. Require hotspot-to-painted-cue alignment within two logical pixels, straight horizon, non-overlap, edge-to-edge crop, and absence of text, paths, ship, protagonist, and spoilers.
+
+## Historical responsive crop and hotspot plan
+
+The following percentages document the superseded non-flat blockout only. They are not implementation guidance for the selected composition target.
 
 - **Desktop Petal initial bounds:** `left: 31%`, `top: 5%`, `width: 27%`, `height: 54%`.
 - **Desktop route-marker initial bounds:** `left: 58.5%`, `top: 47%`, `width: 8%`, `height: 23%`.
