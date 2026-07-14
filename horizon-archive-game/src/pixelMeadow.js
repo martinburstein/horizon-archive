@@ -1,7 +1,7 @@
 export const MEADOW_LOGICAL_SIZE = Object.freeze({ width: 320, height: 180 });
 
 export const MEADOW_PIXEL_HOTSPOTS = Object.freeze({
-  primary: Object.freeze({ left: "45.9375%", top: "53.0556%", width: "18.75%", height: "37.7778%" }),
+  primary: Object.freeze({ left: "33.75%", top: "28.3333%", width: "32.5%", height: "68.3333%" }),
   routeMarker: Object.freeze({ left: "77.0313%", top: "53.3333%", width: "21.5625%", height: "46.3889%" }),
 });
 

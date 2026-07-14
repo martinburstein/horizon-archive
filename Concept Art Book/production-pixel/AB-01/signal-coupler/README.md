@@ -30,3 +30,13 @@ The script requires Pillow. It crops the six generated cells, normalizes each ob
 ## Design lock
 
 The broad front tongue is a clean laminated data bus that continues through the bottom crop. Nothing attaches to or branches from it. Paired sleeved channels continue through both side crops, while a separate vertical conduit enters the substrate beside the body. The display is a clipped instrument membrane, not writing and not a conventional monitor. No red warning palette, four-glyph arrangement, rock-with-a-screen silhouette, loose-ended wire, or tube branching from the tongue may return.
+
+## Playable production overlay
+
+`build_production_signal_coupler.py` rebuilds the approved source into the scene-native package under `production/`. The playable master is `640 x 360`, with a `320 x 320` source-derived coupler centered in the foreground and its approved paired side channels continued through both scene crops. It never enlarges or samples the `64 x 64` preview.
+
+The production build emits six lossless PNG frames, a shared-palette animated GIF, a reduced-motion still, a diagnostic membrane mask, and a machine-readable validation manifest. The build fails unless all six PNG bodies and all six decoded GIF bodies are byte-identical outside the membrane, every screen state is distinct, and no animation pixel escapes the fixed membrane.
+
+```powershell
+python build_production_signal_coupler.py
+```

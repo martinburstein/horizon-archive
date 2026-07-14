@@ -11,6 +11,8 @@ import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import glassMeadowImage from "../../Glass Meadow Example.png";
+import signalCouplerImage from "../../Concept Art Book/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-loop-640x360.gif";
+import signalCouplerStillImage from "../../Concept Art Book/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-available-640x360.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
@@ -1982,6 +1984,15 @@ export function App() {
               src={glassMeadowImage}
               alt="An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person"
             />
+            <picture className="signal-coupler-picture" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce)" srcSet={signalCouplerStillImage} />
+              <img
+                className="signal-coupler-overlay"
+                src={signalCouplerImage}
+                alt=""
+                data-production-frame="640x360"
+              />
+            </picture>
             <MeadowRouteMarker state={meadowRouteMarkerState} />
             {hotspotButtons}
           </>

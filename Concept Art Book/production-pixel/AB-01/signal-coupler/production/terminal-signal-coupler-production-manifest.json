@@ -1,0 +1,33 @@
+{
+  "source_dimensions": [
+    1254,
+    1254
+  ],
+  "production_dimensions": [
+    640,
+    360
+  ],
+  "object_source_box": [
+    160,
+    40,
+    320,
+    320
+  ],
+  "frame_count": 6,
+  "durations_ms": [
+    620,
+    170,
+    260,
+    240,
+    150,
+    500
+  ],
+  "animated_mask_pixels": 3596,
+  "unique_body_hashes": 1,
+  "body_sha256": "599ac85a6e6b8e2e0bd44a5bb0ac13aaf0a4c8df16ce79687ea03be20a2f19f2",
+  "decoded_gif_unique_body_hashes": 1,
+  "unique_screen_hashes": 6,
+  "only_screen_pixels_change": true,
+  "side_connections_reach_scene_edges": true,
+  "source_is_not_64px_preview": true
+}

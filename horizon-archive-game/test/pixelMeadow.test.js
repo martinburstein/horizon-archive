@@ -147,9 +147,38 @@ test("integer stages letterbox and keep both meadow targets usable", () => {
 
 test("selected 640x360 meadow targets match the Location Scout map", () => {
   assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.primary, {
-    left: "45.9375%", top: "53.0556%", width: "18.75%", height: "37.7778%",
+    left: "33.75%", top: "28.3333%", width: "32.5%", height: "68.3333%",
   });
   assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.routeMarker, {
     left: "77.0313%", top: "53.3333%", width: "21.5625%", height: "46.3889%",
   });
+});
+
+test("first Terminal hotspot tracks the production coupler at both canonical sizes", () => {
+  const primary = MEADOW_PIXEL_HOTSPOTS.primary;
+  const route = MEADOW_PIXEL_HOTSPOTS.routeMarker;
+  const boxAt = (width, height, hotspot) => ({
+    left: percentage(hotspot.left) * width,
+    top: percentage(hotspot.top) * height,
+    width: percentage(hotspot.width) * width,
+    height: percentage(hotspot.height) * height,
+  });
+  const canonical = boxAt(640, 360, primary);
+  const narrow = boxAt(320, 180, primary);
+  assert.deepEqual(canonical, {
+    left: 216,
+    top: 101.99988,
+    width: 208,
+    height: 245.99988,
+  });
+  assert.deepEqual(narrow, {
+    left: 108,
+    top: 50.99994,
+    width: 104,
+    height: 122.99994,
+  });
+  assert.ok(narrow.width >= 44 && narrow.height >= 44);
+  assert.equal(canonical.left, narrow.left * 2);
+  assert.equal(canonical.width, narrow.width * 2);
+  assert.ok(canonical.left + canonical.width < percentage(route.left) * 640);
 });
