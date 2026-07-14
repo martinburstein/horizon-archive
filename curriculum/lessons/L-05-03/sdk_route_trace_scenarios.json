@@ -1,0 +1,34 @@
+{
+  "verified_on": "2026-07-13",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "dimensions": ["route", "endpoint_family", "next_action"],
+  "choices": {
+    "route": ["foundry_sdk", "agent_framework", "openai_sdk", "anthropic_sdk", "foundry_tools_sdk", "reverify_before_live"],
+    "endpoint_family": ["foundry_project_endpoint", "openai_v1_endpoint", "anthropic_endpoint", "tool_specific_endpoint", "unverified_endpoint"],
+    "next_action": ["verify_identity_rbac_resource_scope", "stop_and_reverify_current_docs"]
+  },
+  "forms": {
+    "primary": [
+      {"id": "DP01", "boundary": "foundry_native", "prompt": "An offline design calls for listing project connections and running a Foundry-native evaluation. Trace the route, endpoint family, and required step before any later live use."},
+      {"id": "DP02", "boundary": "hosted_agent_code", "prompt": "A team is designing code-based multi-agent orchestration that can later be packaged as a hosted agent. Trace the current route and project boundary."},
+      {"id": "DP03", "boundary": "openai_compatibility", "prompt": "A direct-model application needs embeddings and maximum OpenAI compatibility. Trace the current route and endpoint family."},
+      {"id": "DP04", "boundary": "claude_models", "prompt": "An approved design requirement names an Anthropic Claude model deployed in Foundry. Trace the provider-specific route and endpoint family."},
+      {"id": "DP05", "boundary": "service_specific_tool", "prompt": "A lightweight application needs the prebuilt Speech service client, not a general model or agent client. Trace the service-specific route and endpoint family."},
+      {"id": "DP06", "boundary": "unverified_scope", "prompt": "A copied sample names a route and endpoint, but the resource type, identity, RBAC, version, and current availability are unknown. Trace the safe decision."}
+    ],
+    "transfer": [
+      {"id": "DT01", "boundary": "foundry_native", "prompt": "A client must read Foundry project properties and enable tracing before obtaining a compatible model client. Trace the route and endpoint family."},
+      {"id": "DT02", "boundary": "hosted_agent_code", "prompt": "Developers want custom code orchestration for a hosted agent while running the code in their own process during development. Trace the route and boundary."},
+      {"id": "DT03", "boundary": "openai_compatibility", "prompt": "A direct-model client needs Chat Completions and the broad OpenAI API surface rather than Foundry project operations. Trace the route and endpoint family."},
+      {"id": "DT04", "boundary": "claude_models", "prompt": "The selected deployed provider is Anthropic, and the application must use the Claude route documented for Foundry. Trace the route and endpoint family."},
+      {"id": "DT05", "boundary": "service_specific_tool", "prompt": "A text-analysis application needs the prebuilt Language client and no agent orchestration. Trace the route and endpoint family."},
+      {"id": "DT06", "boundary": "unverified_scope", "prompt": "The client family seems obvious, but the organization has not approved the resource, identity, role, scope, or current preview feature. Trace the safe decision before live use."}
+    ]
+  }
+}

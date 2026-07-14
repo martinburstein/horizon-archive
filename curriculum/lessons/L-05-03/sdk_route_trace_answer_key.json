@@ -1,0 +1,20 @@
+{
+  "forms": {
+    "primary": {
+      "DP01": {"route": "foundry_sdk", "endpoint_family": "foundry_project_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DP02": {"route": "agent_framework", "endpoint_family": "foundry_project_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DP03": {"route": "openai_sdk", "endpoint_family": "openai_v1_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DP04": {"route": "anthropic_sdk", "endpoint_family": "anthropic_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DP05": {"route": "foundry_tools_sdk", "endpoint_family": "tool_specific_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DP06": {"route": "reverify_before_live", "endpoint_family": "unverified_endpoint", "next_action": "stop_and_reverify_current_docs"}
+    },
+    "transfer": {
+      "DT01": {"route": "foundry_sdk", "endpoint_family": "foundry_project_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DT02": {"route": "agent_framework", "endpoint_family": "foundry_project_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DT03": {"route": "openai_sdk", "endpoint_family": "openai_v1_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DT04": {"route": "anthropic_sdk", "endpoint_family": "anthropic_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DT05": {"route": "foundry_tools_sdk", "endpoint_family": "tool_specific_endpoint", "next_action": "verify_identity_rbac_resource_scope"},
+      "DT06": {"route": "reverify_before_live", "endpoint_family": "unverified_endpoint", "next_action": "stop_and_reverify_current_docs"}
+    }
+  }
+}

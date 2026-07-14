@@ -124,6 +124,8 @@ Readiness now requires the offline mock plus 12/12 on both forms and a closed-no
 
 After the client-boundary gate, complete [the SDK route chooser](sdk-route-chooser.md). It adds primary and fresh-transfer practice for the current official distinction among Foundry SDK, Agent Framework, OpenAI SDK, Anthropic SDK, and service-specific Foundry Tools SDKs. This supplemental 16/16 + 16/16 drill does not replace the lesson gate and must be reverified before live use.
 
+If any route or reason is missed, complete [the SDK route decision trace](sdk-route-decision-trace.md). This remediation packet separates route, endpoint family, and next action across primary and fresh-transfer forms. Its strict 18/18 + 18/18 gate prevents a familiar SDK name or endpoint pattern from standing in for scenario fit or verified authority.
+
 ## Privacy, accessibility, session, volatility, and action safety
 
 The exercise stores no endpoint, deployment name, credential, request input, response output, learner source, or external-action request. Controls are labeled, keyboard accessible, untimed, and not color-only. Working source and runtime configuration clear on scene transition. SDK packages/versions, endpoint forms, client methods, authentication, roles, model names, API behavior, and deprecated guidance are volatile and must be reverified before live use.

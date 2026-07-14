@@ -20,6 +20,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - `OFFICIAL-FOUNDRY-SDK`: [Microsoft Foundry SDKs and Endpoints](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview)
   - The current page describes the Foundry SDK as a thin client over Foundry project APIs through one project endpoint.
   - Its current scenario chooser distinguishes Foundry SDK, Agent Framework, OpenAI SDK, Anthropic SDK, and service-specific Foundry Tools SDKs; these routes are related but not interchangeable.
+  - The current route table also distinguishes Foundry project, OpenAI v1, Anthropic, and tool-specific endpoint families. Foundry SDK and Agent Framework can share the Foundry project boundary without becoming interchangeable client routes.
   - A Foundry resource and an Azure OpenAI resource do not expose the same endpoint set.
   - For current Python examples in the new Foundry portal, the page lists `azure-ai-projects>=2.0.0`.
   - The current Python client pattern uses `AIProjectClient`, `DefaultAzureCredential`, and an OpenAI-compatible client obtained from the project client.

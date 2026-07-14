@@ -56,6 +56,7 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Built balanced mixed simulation block `SIM-01`
 - [x] Built fresh-transfer mixed simulation block `SIM-02`
 - [x] Added current official five-route SDK decision-and-transfer drill to `L-05-03`
+- [x] Added route/endpoint/action remediation and fresh-transfer trace to `L-05-03`
 - [x] Demo curriculum frozen and audited through `SIM-01`
 - [ ] Integrate `SIM-02` into runtime after the demo
 - [ ] Expand original question banks and full timed simulations

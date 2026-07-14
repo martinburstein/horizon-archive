@@ -843,3 +843,35 @@ Validation performed:
 Next recommended item: Exercise Agent can render the drill as one scenario at a time after the existing `L-05-03` client-boundary gate, with persistent route labels, route-plus-reason feedback, fresh transfer, and no endpoint/credential capture.
 Unresolved risks: SDK packages, versions, endpoints, roles, models, tool availability, preview labels, and resource behavior remain volatile and require re-verification before a live lab. The route drill is supplemental and must not be presented as official Microsoft exam content or proof of live access.
 Notes: No service call, Azure mutation, credential use, external action, game, lore, art, QA binary, commit, or push change.
+
+## Log entry: 2026-07-13T21:41:02-04:00
+
+Stage: SDK route remediation and fresh-transfer retrieval
+Work completed: Added a finished learner-facing decision-trace packet to `L-05-03` for learners who miss a route or reason in the playable SDK Route Chooser. The packet separates route, endpoint family, and next action across six primary and six fresh-transfer scenarios, adds a six-contrast error clinic and spaced retrieval schedule, and enforces strict 18/18 + 18/18 validation without collecting real configuration or implying live authority.
+Files changed:
+- curriculum/lessons/L-05-03/sdk-route-decision-trace.md
+- curriculum/lessons/L-05-03/sdk_route_trace_scenarios.json
+- curriculum/lessons/L-05-03/sdk_route_trace_answer_key.json
+- curriculum/lessons/L-05-03/sdk_route_trace_answers.json
+- curriculum/lessons/L-05-03/sdk_route_trace_transfer_answers.json
+- curriculum/lessons/L-05-03/sdk_route_trace_reference_answers.json
+- curriculum/lessons/L-05-03/sdk_route_trace_reference_transfer_answers.json
+- curriculum/lessons/L-05-03/validate_sdk_route_trace.py
+- curriculum/lessons/L-05-03/README.md
+- curriculum/sources/current-official-source-register.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/agents/overview
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview
+- New validator self-test passed, including blank, route-substitution, shared-endpoint, and unsafe-action probes.
+- Primary reference passed 18/18; fresh-transfer reference passed 18/18; both blank forms were correctly rejected at 0/18 with exit 1.
+- Existing SDK Route Chooser, `L-05-03` client-boundary, and `L-05-04` single-agent self-tests passed.
+- All 244 curriculum JSON files parsed.
+Next recommended item: Exercise Agent can render this packet only as targeted remediation after a route/reason miss, one scenario at a time, with three labeled decisions and a persistent conceptual route key. Keep selected answers session-only and keep membrane animation outside learner feedback.
+Unresolved risks: SDK packages, versions, endpoint forms, roles, models, preview labels, and availability remain volatile. The packet intentionally uses endpoint-family tokens rather than literal configuration, and it does not grant service access, exam credit, or authority for any external action.
+Notes: The named source-priority skill was unavailable, so the required official Microsoft sources were checked directly before authoring. No game, lore, art, exercise runtime, QA binary, service call, Azure mutation, credential use, external action, commit, or push change occurred.
