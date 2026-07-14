@@ -170,6 +170,16 @@
       "success_contract": "Pass deterministic mock, both offline forms at 12/12, and explain configuration, client layers, request/response, and simulation authority."
     },
     {
+      "id": "HA-AI901-SDK-ROUTE-CHOOSER",
+      "scene": "ruins",
+      "exercise_id": "EX-L0503-SDK-ROUTE-CHOOSER",
+      "lesson_id": "L-05-03",
+      "activity_id": "A-L0503-3",
+      "objective_ids": ["AI901-D2-O3"],
+      "skills": ["SDK-ROUTE-CHOICE", "SDK-ROUTE-REASON"],
+      "success_contract": "Pass all 16 route-plus-reason dimensions on the primary form and all 16 on a fresh transfer form; no live access or interface-speed evidence counts."
+    },
+    {
       "id": "HA-AI901-SINGLE-AGENT",
       "scene": "ruins",
       "exercise_id": "EX-L0504-SINGLE-AGENT",

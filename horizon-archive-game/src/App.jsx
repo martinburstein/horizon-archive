@@ -229,6 +229,7 @@ import {
 } from "./portalOrientationExercise.js";
 import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 import { clientBoundaryDialogDescribedBy,clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryMockOutput,clientBoundaryPrimary,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryMock,evaluateClientBoundaryScenario,getClientBoundaryExplanationFeedback,getClientBoundaryFeedback,getClientBoundaryOptions,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
+import { deriveSdkRouteResume,evaluateSdkRouteScenario,getSdkRouteFeedback,getSdkRouteOptions,sanitizeSdkRouteEvidence,sdkRouteChooserExercise,sdkRouteDialogDescribedBy,sdkRouteDimensions,sdkRouteLabels,sdkRoutePrimary,sdkRouteTransfer,updateSdkRouteEvidence } from "./sdkRouteChooserExercise.js";
 import { evaluateSingleAgentExplanation,evaluateSingleAgentScenario,getSingleAgentExplanationFeedback,getSingleAgentFeedback,getSingleAgentOptions,sanitizeSingleAgentEvidence,singleAgentDialogDescribedBy,singleAgentDimensions,singleAgentExercise,singleAgentExplanationDimensions,singleAgentPrimary,singleAgentRemediation,singleAgentTransfer,updateSingleAgentEvidence } from "./singleAgentExercise.js";
 import { evaluateTextSpeechPatternExplanation,evaluateTextSpeechPatternScenario,getTextSpeechPatternExplanationFeedback,getTextSpeechPatternFeedback,getTextSpeechPatternOptions,sanitizeTextSpeechPatternEvidence,textSpeechPatternDialogDescribedBy,textSpeechPatternDimensions,textSpeechPatternExercise,textSpeechPatternExplanationDimensions,textSpeechPatternPrimary,textSpeechPatternRemediation,textSpeechPatternTransfer,updateTextSpeechPatternEvidence } from "./textSpeechPatternExercise.js";
 import { evaluateVisualPatternExplanation,evaluateVisualPatternScenario,getVisualPatternExplanationFeedback,getVisualPatternFeedback,getVisualPatternOptions,sanitizeVisualPatternEvidence,updateVisualPatternEvidence,visualPatternDialogDescribedBy,visualPatternDimensions,visualPatternExercise,visualPatternExplanationDimensions,visualPatternPrimary,visualPatternRemediation,visualPatternTransfer } from "./visualPatternExercise.js";
@@ -449,6 +450,7 @@ function loadSave() {
       portalEvidence: sanitizePortalEvidence(saved.portalEvidence),
       promptEvidence: sanitizePromptEvidence(saved.promptEvidence),
       clientBoundaryEvidence: sanitizeClientBoundaryEvidence(saved.clientBoundaryEvidence),
+      sdkRouteEvidence: sanitizeSdkRouteEvidence(saved.sdkRouteEvidence),
       singleAgentEvidence: sanitizeSingleAgentEvidence(saved.singleAgentEvidence),
       textSpeechPatternEvidence: sanitizeTextSpeechPatternEvidence(saved.textSpeechPatternEvidence),
       visualPatternEvidence: sanitizeVisualPatternEvidence(saved.visualPatternEvidence),
@@ -519,6 +521,7 @@ export function App() {
   const [portalEvidence, setPortalEvidence] = useState(null);
   const [promptSession,setPromptSession]=useState(null); const [promptEvidence,setPromptEvidence]=useState(null);
   const [clientBoundarySession,setClientBoundarySession]=useState(null);const [clientBoundaryEvidence,setClientBoundaryEvidence]=useState(null);
+  const [sdkRouteSession,setSdkRouteSession]=useState(null);const [sdkRouteEvidence,setSdkRouteEvidence]=useState(null);
   const [singleAgentSession,setSingleAgentSession]=useState(null);const [singleAgentEvidence,setSingleAgentEvidence]=useState(null);
   const [textSpeechPatternSession,setTextSpeechPatternSession]=useState(null);const [textSpeechPatternEvidence,setTextSpeechPatternEvidence]=useState(null);
   const [visualPatternSession,setVisualPatternSession]=useState(null);const [visualPatternEvidence,setVisualPatternEvidence]=useState(null);
@@ -546,6 +549,7 @@ export function App() {
   const focusContinueAfterPortalRef = useRef(false);
   const focusContinueAfterPromptRef = useRef(false);
   const focusContinueAfterClientBoundaryRef = useRef(false);
+  const focusContinueAfterSdkRouteRef = useRef(false);
   const focusContinueAfterSingleAgentRef = useRef(false);
   const focusContinueAfterTextSpeechPatternRef = useRef(false);
   const focusContinueAfterVisualPatternRef = useRef(false);
@@ -633,6 +637,7 @@ export function App() {
         portalEvidence,
         promptEvidence,
         clientBoundaryEvidence,
+        sdkRouteEvidence,
         singleAgentEvidence,
         textSpeechPatternEvidence,
         visualPatternEvidence,
@@ -642,7 +647,7 @@ export function App() {
         mixedSimulationEvidence,
       }));
     }
-  }, [mode, characterName, prologueBeat, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence,singleAgentEvidence,textSpeechPatternEvidence,visualPatternEvidence,objectiveLedgerEvidence,remediationPlannerEvidence,capstoneReadinessEvidence,mixedSimulationEvidence]);
+  }, [mode, characterName, prologueBeat, sceneIndex, completed, pendingAdvance, scene.id, exerciseEvidence, workloadEvidence, evidencePacketMastery, routeMarkerMastery, calibrationMastery, responsibleAIEvidence, modelChoiceEvidence, structuredPacketEvidence, controlFlowEvidence, clientBridgeEvidence, textAnalysisEvidence, speechEvidence, visualEvidence, extractionEvidence, portalEvidence,promptEvidence,clientBoundaryEvidence,sdkRouteEvidence,singleAgentEvidence,textSpeechPatternEvidence,visualPatternEvidence,objectiveLedgerEvidence,remediationPlannerEvidence,capstoneReadinessEvidence,mixedSimulationEvidence]);
 
   useLayoutEffect(() => {
     if (!["create-save", "character-name", "prologue", "chapter-reveal"].includes(mode)) return;
@@ -735,6 +740,12 @@ export function App() {
     focusContinueAfterClientBoundaryRef.current = false;
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [terminalOpen, pendingAdvance, clientBoundaryEvidence?.masteryStatus]);
+
+  useLayoutEffect(() => {
+    if (!focusContinueAfterSdkRouteRef.current || terminalOpen || !pendingAdvance || sdkRouteEvidence?.masteryStatus !== "mastered") return;
+    focusContinueAfterSdkRouteRef.current = false;
+    continueButtonRef.current?.focus({ preventScroll: true });
+  }, [terminalOpen, pendingAdvance, sdkRouteEvidence?.masteryStatus]);
 
   useLayoutEffect(() => {
     if (!focusContinueAfterSingleAgentRef.current || terminalOpen || !pendingAdvance || singleAgentEvidence?.masteryStatus !== "mastered") return;
@@ -935,6 +946,7 @@ export function App() {
     setPortalSession(null);
     if(saved.promptEvidence?.masteryStatus==="mastered")focusContinueAfterPromptRef.current=true;setPromptEvidence(saved.promptEvidence);setPromptSession(null);
     if(saved.clientBoundaryEvidence?.masteryStatus==="mastered")focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(saved.clientBoundaryEvidence);setClientBoundarySession(null);
+    if(saved.sdkRouteEvidence?.masteryStatus==="mastered")focusContinueAfterSdkRouteRef.current=true;setSdkRouteEvidence(saved.sdkRouteEvidence);setSdkRouteSession(null);
     if(saved.singleAgentEvidence?.masteryStatus==="mastered")focusContinueAfterSingleAgentRef.current=true;setSingleAgentEvidence(saved.singleAgentEvidence);setSingleAgentSession(null);
     if(saved.textSpeechPatternEvidence?.masteryStatus==="mastered")focusContinueAfterTextSpeechPatternRef.current=true;setTextSpeechPatternEvidence(saved.textSpeechPatternEvidence);setTextSpeechPatternSession(null);
     if(saved.visualPatternEvidence?.masteryStatus==="mastered")focusContinueAfterVisualPatternRef.current=true;setVisualPatternEvidence(saved.visualPatternEvidence);setVisualPatternSession(null);
@@ -1694,6 +1706,16 @@ export function App() {
   function acknowledgeClientBoundaryPrimary(){if(!clientBoundarySession?.complete||!clientBoundaryEvidence?.confidence)return;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkClientBoundaryExplanation(event){event.preventDefault();const result=evaluateClientBoundaryExplanation(clientBoundarySession.explanationResponse);setClientBoundarySession({...clientBoundarySession,explanationResult:result});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
   function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
+
+  function openSdkRouteChooser(){
+    setTerminalOpen(true);setRuinsTerminalKind("sdk-route-chooser");
+    if(!sdkRouteSession){const resume=deriveSdkRouteResume(sdkRouteEvidence);setSdkRouteSession({form:resume.form,index:resume.index,response:{route:"",reason:""},result:null,hintLevel:0,complete:resume.complete});}
+  }
+  function exitSdkRouteChooser(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser closed safely. No endpoint, credential, resource, deployment, request, response, or external action was collected.","system");}
+  function checkSdkRoute(event){event.preventDefault();const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary,scenario=scenarios[sdkRouteSession.index],result=evaluateSdkRouteScenario(scenario.id,sdkRouteSession.response,sdkRouteSession.form),hintLevel=result.passed?sdkRouteSession.hintLevel:Math.max(1,sdkRouteSession.hintLevel);setSdkRouteSession({...sdkRouteSession,result,hintLevel});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:sdkRouteSession.form,scenarioId:scenario.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:result.passed?sdkRouteEvidence?.masteryStatus??"in_progress":"remediation_required"}));}
+  function revealSdkRouteHint(){const hintLevel=Math.min(3,sdkRouteSession.hintLevel+1);setSdkRouteSession({...sdkRouteSession,hintLevel});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{hintLevel}));}
+  function advanceSdkRoute(){if(!sdkRouteSession.result?.passed)return;const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary;if(sdkRouteSession.index===scenarios.length-1){setSdkRouteSession({...sdkRouteSession,complete:true,result:null});return;}setSdkRouteSession({...sdkRouteSession,index:sdkRouteSession.index+1,response:{route:"",reason:""},result:null,hintLevel:0});}
+  function acknowledgeSdkRouteForm(){if(!sdkRouteSession?.complete||!sdkRouteEvidence?.confidence)return;if(sdkRouteSession.form==="primary"){setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true,confidence:null}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser primary form complete at 16 of 16. A fresh transfer form remains.","teacher");return;}focusContinueAfterSdkRouteRef.current=true;setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"mastered",clearMisconceptionTags:true}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser mastery confirmed: route and reason passed on all 32 primary and fresh-transfer dimensions.","teacher");}
 
   function openSingleAgent(){setTerminalOpen(true);setRuinsTerminalKind("single-agent");if(!singleAgentSession){const form=singleAgentEvidence?.masteryStatus==="primary_complete"?"transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setSingleAgentSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{fit_instructions:"",least_privilege:"",failure_safety:"",client_flow:""},explanationResult:null,ownershipConfirmed:false});}}
   function exitSingleAgent(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent rehearsal closed safely. No agent, tool, service, Azure resource, or external action was created or invoked.","system");}
@@ -3430,6 +3452,78 @@ export function App() {
                 </section>
               </TerminalShell>
             )}
+        {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "sdk-route-chooser" && sdkRouteSession && (
+          <TerminalShell
+            exerciseId={sdkRouteChooserExercise.exerciseId}
+            title="SDK Route Chooser"
+            filename={`${sdkRouteSession.form}_sdk_routes.json`}
+            lessonId={sdkRouteChooserExercise.lessonId}
+            statusText={sdkRouteSession.complete ? "FORM COMPLETE" : `${sdkRouteSession.form.toUpperCase()} ${sdkRouteSession.index + 1}/8`}
+            closeLabel="Exit SDK Route Chooser"
+            describedBy={sdkRouteDialogDescribedBy}
+            restoreFocusTo={terminalTriggerRef.current}
+            onClose={exitSdkRouteChooser}
+          >
+            <section className="model-choice-workspace sdk-route-workspace">
+              <p id="sdk-route-offline-warning" className="model-choice-boundary" role="note">
+                COURSE-AUTHORED OFFLINE PRACTICE · No endpoint, credential, resource, deployment, request, or response is collected. A correct route does not prove access, grant authority, or authorize a live or destructive action. Reverify current Microsoft documentation before live use.
+              </p>
+              <section id="sdk-route-label-key" className="speech-transcript" aria-label="Persistent SDK route label key">
+                <strong>ROUTE KEY · remains visible for every scenario</strong>
+                <ul>
+                  {Object.entries(sdkRouteLabels).map(([token, label]) => <li key={token}><code>{token}</code> · {label}</li>)}
+                </ul>
+              </section>
+              {sdkRouteSession.complete ? (
+                <section className="workload-summary">
+                  <p className="pane-label">901 TEACHER // {sdkRouteSession.form.toUpperCase()} FORM COMPLETE</p>
+                  <h2>16 / 16 route-reason dimensions</h2>
+                  <p>{sdkRouteSession.form === "primary" ? "The fresh transfer form begins with blank working choices." : "Both forms now measure route reasoning independently of interface speed or dexterity."}</p>
+                  <fieldset className="confidence-group">
+                    <legend>Confidence</legend>
+                    {["low", "medium", "high"].map(value => <label key={value}><input type="radio" name="sdk-route-confidence" checked={sdkRouteEvidence?.confidence===value} onChange={()=>setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{confidence:value}))}/>{value}</label>)}
+                  </fieldset>
+                  <button className="confirm-action" type="button" disabled={!sdkRouteEvidence?.confidence} onClick={acknowledgeSdkRouteForm}>
+                    {sdkRouteSession.form === "primary" ? "Begin fresh transfer later" : "Acknowledge route mastery"}
+                  </button>
+                </section>
+              ) : (() => {
+                const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary;
+                const scenario=scenarios[sdkRouteSession.index];
+                const options=getSdkRouteOptions(sdkRouteSession.form);
+                const routeFeedback=getSdkRouteFeedback(scenario,sdkRouteSession.result,sdkRouteSession.hintLevel);
+                return <form className="model-choice-form" onSubmit={checkSdkRoute}>
+                  <header>
+                    <p className="pane-label">{sdkRouteSession.form.toUpperCase()} · ROUTE REASONING · {scenario.id}</p>
+                    <h2>{scenario.prompt}</h2>
+                    <p>Choose the narrowest current route, then the reason that justifies it. Both must pass.</p>
+                  </header>
+                  <div className="model-choice-fields">
+                    {sdkRouteDimensions.map(dimension=>{
+                      const ok=sdkRouteSession.result?.correctness[dimension];
+                      const feedbackId=`sdk-route-${scenario.id}-${dimension}-feedback`;
+                      return <label key={dimension}>
+                        <span>{dimension === "route" ? "SDK route" : "Reason for this route"}</span>
+                        <select aria-label={dimension === "route" ? "SDK route" : "Reason for SDK route"} aria-invalid={sdkRouteSession.result?!ok:undefined} aria-describedby={sdkRouteSession.result?feedbackId:undefined} value={sdkRouteSession.response[dimension]} onChange={event=>setSdkRouteSession({...sdkRouteSession,response:{...sdkRouteSession.response,[dimension]:event.target.value},result:null})}>
+                          <option value="">Choose one</option>
+                          {options[dimension].map(value=><option key={value} value={value}>{dimension === "route" ? sdkRouteLabels[value] : formatChoice(value)}</option>)}
+                        </select>
+                        {sdkRouteSession.result&&<small id={feedbackId}>{ok?"SYSTEM // Correct.":`901 TEACHER // ${dimension === "route" ? "Route does not fit this capability or safety boundary." : "Reason does not justify the selected route."}`}</small>}
+                      </label>;
+                    })}
+                  </div>
+                  <section className="terminal-console model-choice-output">
+                    <div className="console-heading-row"><strong>SYSTEM // STRICT ROUTE + REASON CHECK</strong><button className="run-action" type="submit">Check route and reason</button></div>
+                    <div role="status" aria-live="polite">{routeFeedback.systemScore}</div>
+                    {routeFeedback.teacherRemediation&&<p className="teacher-remediation"><strong>901 TEACHER // ROUTE REMEDIATION</strong><span>{routeFeedback.teacherRemediation}</span></p>}
+                    {sdkRouteSession.result&&!sdkRouteSession.result.passed&&<button className="hint-action" type="button" onClick={revealSdkRouteHint}>Reveal next reasoning cue</button>}
+                    {sdkRouteSession.result?.passed&&<button className="confirm-action" type="button" onClick={advanceSdkRoute}>{sdkRouteSession.index===7?"View form result":"Next scenario"}</button>}
+                  </section>
+                </form>;
+              })()}
+            </section>
+          </TerminalShell>
+        )}
         {terminalOpen && scene.id === "ruins" && ruinsTerminalKind === "single-agent" && singleAgentSession && (
           <TerminalShell
             exerciseId={singleAgentExercise.exercise_id}
@@ -3704,7 +3798,8 @@ export function App() {
                   )}
                   {pendingAdvance&&scene.id==="ruins"&&portalEvidence?.masteryStatus==="mastered"&&promptEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openPromptLayers();}}>{promptSession?"Resume Prompt Layers":promptEvidence?.masteryStatus==="primary_complete"?"Start Prompt Transfer":promptEvidence?.masteryStatus==="transfer_complete"?"Open Prompt Closed-Note Gate":"Start Prompt Layers"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&promptEvidence?.masteryStatus==="mastered"&&clientBoundaryEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openClientBoundaries();}}>{clientBoundarySession?"Resume Client Boundaries":clientBoundaryEvidence?.masteryStatus==="primary_complete"?"Start Client Boundary Transfer":clientBoundaryEvidence?.masteryStatus==="transfer_complete"?"Open Client Boundary Closed-Note Gate":"Start Client Boundaries"}</button>}
-                  {pendingAdvance&&scene.id==="ruins"&&clientBoundaryEvidence?.masteryStatus==="mastered"&&singleAgentEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSingleAgent();}}>{singleAgentSession?"Resume Single Agent":singleAgentEvidence?.masteryStatus==="primary_complete"?"Start Single Agent Transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"Open Single Agent Closed-Note Gate":"Start Single Agent"}</button>}
+                  {pendingAdvance&&scene.id==="ruins"&&clientBoundaryEvidence?.masteryStatus==="mastered"&&sdkRouteEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSdkRouteChooser();}}>{sdkRouteSession?"Resume SDK Route Chooser":sdkRouteEvidence?.masteryStatus==="primary_complete"?"Start SDK Route Transfer":"Start SDK Route Chooser"}</button>}
+                  {pendingAdvance&&scene.id==="ruins"&&sdkRouteEvidence?.masteryStatus==="mastered"&&singleAgentEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSingleAgent();}}>{singleAgentSession?"Resume Single Agent":singleAgentEvidence?.masteryStatus==="primary_complete"?"Start Single Agent Transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"Open Single Agent Closed-Note Gate":"Start Single Agent"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&singleAgentEvidence?.masteryStatus==="mastered"&&textSpeechPatternEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openTextSpeechPatterns();}}>{textSpeechPatternSession?"Resume Text and Speech Patterns":textSpeechPatternEvidence?.masteryStatus==="primary_complete"?"Start Text and Speech Transfer":textSpeechPatternEvidence?.masteryStatus==="transfer_complete"?"Open Text and Speech Closed-Note Gate":"Start Text and Speech Patterns"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&textSpeechPatternEvidence?.masteryStatus==="mastered"&&visualPatternEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openVisualPatterns();}}>{visualPatternSession?"Resume Visual Patterns":visualPatternEvidence?.masteryStatus==="primary_complete"?"Start Visual Pattern Transfer":visualPatternEvidence?.masteryStatus==="transfer_complete"?"Open Visual Pattern Closed-Note Gate":"Start Visual Patterns"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&visualPatternEvidence?.masteryStatus==="mastered"&&objectiveLedgerEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openObjectiveLedger();}}>{objectiveLedgerSession?"Resume Objective Ledger":objectiveLedgerEvidence?.masteryStatus==="primary_complete"?"Start Objective Ledger Transfer":objectiveLedgerEvidence?.masteryStatus==="transfer_complete"?"Open Objective Ledger Closed-Note Gate":"Start Objective Ledger"}</button>}
