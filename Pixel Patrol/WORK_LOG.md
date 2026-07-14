@@ -1,5 +1,16 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 - SIM-03 Final Confidence density and lower-band gate
+
+- **Outcome / verdict:** PASS after one bounded presentation correction. Final Confidence now owns one content scroller beneath fixed Terminal chrome, its bounded entry record has an explicit whole-pixel native-control contract, and the optional launch can coexist with required scene departure without narrow horizontal spill. Curriculum answers, prerequisite/mastery behavior, evidence semantics, and production art are unchanged.
+- **Canonical and narrow measurements:** the authored `640 x 480` gate uses three equal `minmax(0, 1fr)` columns, `4px` gutters, `4px` card inset, `8px/10px` labels and controls, and a `24px` native select/input floor. The authored `320 x 240` gate becomes one column with the same `4px` gutter and control floor. Final Confidence's lower-band action receives a `3:1` narrow flex share, may wrap normally, and keeps the paired Continue action at a 24px minimum with an inset focus ring.
+- **Visual-system findings:** square, shadowless cards and dark native controls preserve the late-1990s Terminal hierarchy. The long readiness option remains legible at the smaller integer type instead of forcing a wider grid. Gate state, optional timing, strict score, confidence, and remediation remain explicit text rather than modern badges, color-only signals, or animation.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/finalConfidenceExercise.test.js`, `Pixel Patrol/PIXEL_METRICS.md`, and this log. No runtime progression, curriculum artifact, coupler/scene raster, animation, lore, or user file changed.
+- **Validation:** 22/22 focused Final Confidence, mixed-simulation, canonical-frame, and scene-transition tests pass; the complete game suite passes `231/231`; production build passes with only the existing large-chunk advisory; `git diff --check` passes with line-ending notices only. Browser host checks report body scroll exactly `640 x 480` and `320 x 240`; the exact 320 host contains a `320 x 240` narrow frame with no page overflow. The 640 host safely chooses its existing bezel-aware narrow scale (`634.55 x 475.91`) with no page overflow.
+- **Remaining uncertainty:** the live browser check verified host/frame containment but did not capture the deep gated SIM-03 state. Native date-picker chrome, the longest resume label after partial progress, and complete Tab traversal should receive the planned Accessibility Sentinel deep-state pass at both authored layouts before any conformance claim.
+- **Handoff:** Location Scout can proceed without touching this interface. Accessibility Sentinel should live-check the one-scroll Terminal path, all eight native gate controls, the long readiness option, the optional/required lower-band pair, focus restoration, and narrow keyboard traversal.
+- **Status:** ready to advance.
+
 ## 2026-07-13 - SDK decision-trace canonical density gate
 
 - **Outcome / verdict:** PASS after one bounded presentation correction. The new targeted SDK decision trace now has its own period-authentic density contract instead of inheriting the roomier generic exercise cards. Learning logic, strict 3/3 remediation, accessibility semantics, persistent evidence, and production coupler art are unchanged.

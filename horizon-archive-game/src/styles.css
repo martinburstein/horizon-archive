@@ -1005,12 +1005,64 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .remediation-planner-explanation { grid-template-columns: 1fr; }
 .capstone-readiness-workspace { grid-template-rows: auto auto minmax(72px, 0.65fr) minmax(0, 1.35fr); overflow: auto; }
 .capstone-readiness-workspace > .task-pane { min-height: 0; overflow: auto; }
-.final-confidence-workspace { overflow: auto; }
-.final-confidence-gate .model-choice-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.optional-practice-action { border-color: #8b7851; color: #e8d39b; }
-
-@media (max-width: 700px) {
-  .final-confidence-gate .model-choice-fields { grid-template-columns: 1fr; }
+.canonical-game-frame .terminal-workbench[data-terminal-exercise="EX-SIM03-FINAL-CONFIDENCE"] { overflow: hidden; }
+.final-confidence-workspace {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+.final-confidence-gate .model-choice-fields {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin: 6px 0;
+}
+.final-confidence-gate .model-choice-fields label {
+  min-width: 0;
+  gap: 3px;
+  padding: 4px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 8px;
+  line-height: 10px;
+  overflow-wrap: anywhere;
+}
+.final-confidence-gate .model-choice-fields select,
+.final-confidence-gate .model-choice-fields input {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 24px;
+  padding: 3px 4px;
+  border-radius: 0;
+  box-shadow: none;
+  color-scheme: dark;
+  font-size: 8px;
+  line-height: 10px;
+}
+.optional-practice-action {
+  border-color: #8b7851;
+  color: #e8d39b;
+}
+.canonical-game-frame .dialogue-actions .continue-action {
+  min-height: 24px;
+  padding: 4px 6px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 8px;
+  line-height: 10px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .final-confidence-gate .model-choice-fields {
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 4px 0;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions .continue-action.optional-practice-action {
+  flex: 3;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions .continue-action:focus-visible {
+  outline-offset: -3px;
 }
 .mixed-simulation-workspace { grid-template-rows: auto auto auto auto minmax(0, 1fr); overflow: auto; }
 .bridge-retrieval { overflow: auto; }

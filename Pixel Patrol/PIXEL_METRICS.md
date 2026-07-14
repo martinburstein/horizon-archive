@@ -170,3 +170,10 @@ At 1x capture:
 - SIM-01 uses five explicit rows: offline/not-exam warning, mixed-block equivalent, optional timer control, timer/untimed status, then one contained item card/form.
 - At 640 x 480 all five rows establish the hierarchy before deeper form traversal. At 320 x 240 the complete warning leads and the remaining rows stay reachable vertically.
 - Timed and untimed modes share identical layout, scoring, remediation, and mastery grammar; only the labeled timer status changes.
+
+## SIM-03 Final Confidence viewport contract
+
+- The Terminal title and file/status bars stay fixed while Final Confidence owns one vertical content scroller. The offline boundary, entry/scenario equivalent, gate or timer rows, active form, validator, remediation, and next action remain in source order without a nested field-grid scrollbar.
+- At `640 x 480`, the eight bounded entry facts use three equal `minmax(0, 1fr)` columns with `4px` gutters. Labels and native controls use `8px/10px` type, square shadowless chrome, and a `24px` control floor; the long readiness-state option remains readable rather than forcing horizontal overflow.
+- At `320 x 240`, the entry facts become one column with the same `4px` gutter and `24px` control floor. The optional Final Confidence action and required scene Continue action share the lower band without horizontal overflow: the optional action may wrap and owns the larger flex share.
+- Scenario items preserve the same two-field decision/reason hierarchy as SIM-01. Timing, confidence, prerequisite state, and completion remain explicit text and never become color-only badges or alter strict evidence behavior.
