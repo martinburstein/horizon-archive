@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Signal-coupler and SDK Route Chooser accessibility gate
+
+- **Outcome:** `REVISE`. Screen-only coupler motion, the reduced-motion still, decorative/pointer-transparent rendering, exact frame containment, first-Terminal title focus, and strict SDK route-and-reason semantics pass. The production coupler now exceeds its old hotspot/focus geometry and still carries the retired `Petal terminal` name; the full SDK Route Key is also attached to initial dialog speech and lacks rendered deep-state evidence.
+- **Files:** added `Accessibility Sentinel/opening-demo/SIGNAL_COUPLER_SDK_ROUTE_REVIEW.md` and updated this log only. Runtime, art, tests, curriculum, lore, mastery rules, and user files were not changed.
+- **Validation:** live Chrome path through first-Terminal launch at exact `640 x 480` and `320 x 240`; `18/18` focused tests; `215/215` full unit tests; production build. The earlier first-Terminal title-focus failure did not reproduce. Full E2E advanced through calibration to Chapter II, then failed at a stale CRT scale assertion (`1.636/1.531` expected versus current `1.597/1.495`); regenerated tracked QA binaries were reverted.
+- **Next:** Coder should rename the runtime object to `field-linked Terminal`, align the primary hotspot/focus treatment with the central `320 x 320` authored body without colliding with the route marker, and keep the transient label off the membrane. Separately, remove the full Route Key from initial dialog description while retaining it as an independently named, keyboard-reachable reference region; repair the stale E2E scale table. Player should then capture both exact viewports and a longest-label/error Route Chooser state.
+- **Risk:** the new coupler's conduit integration remains under the separate Art Director `REVISE` gate. Human NVDA/equivalent speech, forced colors, 200% zoom, physical switch control, reduced-motion emulation, and the deep SDK Route Chooser state remain unobserved; this is not a conformance claim.
+- **Status:** `REVISE - focus/semantic alignment and deep-state evidence required`
+
 ## 2026-07-13 - Workload Sort saved-resume accessibility gate
 
 - **Outcome:** `PASS` for interaction accessibility. Live Chrome verified W01 wrong/retry, close/reopen state, corrected finalization, W02 advance, full reload through Resume signal, first-incomplete W02 reconstruction, exact prior-progress/clean-controls note, title focus, zero checked radios, bounded scrolling, no page-level horizontal overflow, and target/type floors at `640 x 480` and exact `320 x 240`. Environment art remains separately `BLOCKOUT ONLY`; that production-art finding is not an interaction blocker.
