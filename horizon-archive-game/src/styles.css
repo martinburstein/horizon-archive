@@ -1005,6 +1005,13 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .remediation-planner-explanation { grid-template-columns: 1fr; }
 .capstone-readiness-workspace { grid-template-rows: auto auto minmax(72px, 0.65fr) minmax(0, 1.35fr); overflow: auto; }
 .capstone-readiness-workspace > .task-pane { min-height: 0; overflow: auto; }
+.final-confidence-workspace { overflow: auto; }
+.final-confidence-gate .model-choice-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.optional-practice-action { border-color: #8b7851; color: #e8d39b; }
+
+@media (max-width: 700px) {
+  .final-confidence-gate .model-choice-fields { grid-template-columns: 1fr; }
+}
 .mixed-simulation-workspace { grid-template-rows: auto auto auto auto minmax(0, 1fr); overflow: auto; }
 .bridge-retrieval { overflow: auto; }
 .bridge-retrieval fieldset { margin: 6px 0; padding: 6px; color: #aeb7c3; border: 1px solid #39424d; font-size: 0.6rem; }
