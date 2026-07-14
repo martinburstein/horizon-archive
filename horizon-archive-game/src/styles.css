@@ -919,7 +919,51 @@ h1 {
 }
 .sdk-route-key li { min-width: 0; overflow-wrap: anywhere; }
 .sdk-route-key code { color: #9edce7; font: inherit; font-weight: 700; }
-.sdk-route-trace-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sdk-route-trace-form {
+  padding: 8px;
+}
+.sdk-route-trace-form header h2 {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.sdk-route-trace-form header p {
+  margin: 3px 0 0;
+  font-size: 8px;
+  line-height: 10px;
+}
+.sdk-route-trace-fields {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin: 6px 0;
+}
+.sdk-route-trace-fields label {
+  gap: 3px;
+  min-width: 0;
+  padding: 4px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 8px;
+  line-height: 10px;
+}
+.sdk-route-trace-fields select {
+  min-height: 24px;
+  padding: 3px 4px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 8px;
+  line-height: 10px;
+}
+.sdk-route-trace-fields small {
+  font-size: 8px;
+  line-height: 10px;
+}
+.sdk-route-trace-form .model-choice-output {
+  min-height: 72px;
+  padding: 6px 8px;
+  font-size: 8px;
+  line-height: 10px;
+}
 .canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-key {
   padding: 2px 3px;
   font-size: 8px;
@@ -929,7 +973,14 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2px 4px;
 }
-.canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-trace-fields { grid-template-columns: 1fr; }
+.canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-trace-form {
+  padding: 4px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-trace-fields {
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 4px 0;
+}
 .visual-workspace { grid-template-rows: auto auto auto minmax(0, 1fr); }
 .visual-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .visual-explanation { grid-template-columns: 1fr; }

@@ -64,3 +64,15 @@ test("runtime clinic requires trace pass, fresh retry, and keeps membrane animat
   const traceHandler = app.match(/function checkSdkRouteTrace[\s\S]*?function retrySdkRouteAfterTrace/)?.[0] ?? "";
   assert.doesNotMatch(traceHandler, /signalCoupler|membrane|Image/);
 });
+
+test("decision trace has a whole-pixel three-column canonical and one-column narrow contract", () => {
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+  assert.match(styles, /\.sdk-route-trace-form\s*\{[^}]*padding:\s*8px;/s);
+  assert.match(styles, /\.sdk-route-trace-form header h2\s*\{[^}]*font-size:\s*12px;[^}]*line-height:\s*14px;/s);
+  assert.match(styles, /\.sdk-route-trace-fields\s*\{[^}]*grid-template-columns:\s*repeat\(3, minmax\(0, 1fr\)\);[^}]*gap:\s*4px;[^}]*margin:\s*6px 0;/s);
+  assert.match(styles, /\.sdk-route-trace-fields label\s*\{[^}]*padding:\s*4px;[^}]*border-radius:\s*0;[^}]*box-shadow:\s*none;[^}]*font-size:\s*8px;[^}]*line-height:\s*10px;/s);
+  assert.match(styles, /\.sdk-route-trace-fields select\s*\{[^}]*min-height:\s*24px;[^}]*padding:\s*3px 4px;[^}]*border-radius:\s*0;[^}]*box-shadow:\s*none;[^}]*font-size:\s*8px;[^}]*line-height:\s*10px;/s);
+  assert.match(styles, /data-canonical-layout="narrow"[^}]*\.sdk-route-trace-form\s*\{[^}]*padding:\s*4px;/s);
+  assert.match(styles, /data-canonical-layout="narrow"[^}]*\.sdk-route-trace-fields\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*4px;[^}]*margin:\s*4px 0;/s);
+  assert.doesNotMatch(styles.match(/\.sdk-route-trace-form[\s\S]*?\.visual-workspace/)?.[0] ?? "", /(?:font-size|line-height|padding|gap|margin|min-height):\s*\d+\.\d+px/);
+});

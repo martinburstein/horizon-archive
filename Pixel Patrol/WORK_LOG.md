@@ -1,5 +1,16 @@
 # Pixel Patrol Work Log
 
+## 2026-07-13 - SDK decision-trace canonical density gate
+
+- **Outcome / verdict:** PASS after one bounded presentation correction. The new targeted SDK decision trace now has its own period-authentic density contract instead of inheriting the roomier generic exercise cards. Learning logic, strict 3/3 remediation, accessibility semantics, persistent evidence, and production coupler art are unchanged.
+- **Canonical and narrow measurements:** at the authored `640 x 480` frame the three decisions remain three equal `minmax(0, 1fr)` columns with a `4px` gutter, `4px` card inset, `8px/10px` card type, and `24px` minimum selects. At the authored `320 x 240` frame the same decisions become one column with a `4px` gap and `4px` form inset. The trace heading is `12px/14px`, supporting copy remains `8px/10px`, and the contained output owns a `72px` minimum with `6px 8px` inset. All new geometry uses whole logical pixels.
+- **Visual-system findings:** square, shadowless cards and selects preserve the Terminal's late-1990s editor language; numbered decision labels remain the primary scan path; cyan reference tokens, amber boundary/remediation copy, and pale working controls keep their existing hierarchy. The Route Key remains a separate keyboard-readable scroll owner above the trace form and does not become a fourth decision card.
+- **Files changed:** `horizon-archive-game/src/styles.css`, `horizon-archive-game/test/sdkRouteTraceExercise.test.js`, and this log. No runtime behavior, curriculum answer, scene raster, animation frame, lore artifact, or user file changed.
+- **Validation:** 16/16 focused SDK Route Chooser and decision-trace tests pass; the complete game suite passes at `223/223`; production build passes. The new regression test locks the three-column canonical grid, one-column narrow grid, integer type/spacing, square/shadowless controls, and 24 px select floor.
+- **Remaining uncertainty:** this pass verifies source and computed layout contracts rather than claiming a deep-state browser capture. Native select-option chrome, the longest localized option wrapping, and exact keyboard-focus clearance should be checked in the coordinator or Accessibility Sentinel live pass at both exact viewports.
+- **Handoff:** Location Scout can proceed with the coupler side-infrastructure redesign without touching this Terminal UI. Accessibility Sentinel should live-check the trace form's single scroll path, focus order, and longest option at `640 x 480` and `320 x 240`.
+- **Status:** ready to advance.
+
 ## 2026-07-13 - Signal-coupler richness and SDK Route Key density gate
 
 - **Outcome / verdict:** PASS for resolution preservation, screen-only animation, and Route Key density after two bounded production-contract corrections; REVISE remains on scene integration. The playable signal coupler now proves it is built directly from the selected `1254 x 1254` source sheet into a `320 x 320` scene object, never from the failed `64 x 64` preview. The SDK Route Chooser now owns three explicit rows and a contained route-reference pane instead of placing three children into a two-row grid.
