@@ -20,7 +20,7 @@ export const sdkRouteLabels = {
   foundry_tools_sdk: "Foundry Tools SDK — a specific prebuilt service",
   reverify_before_live: "Reverify before live use — resource, identity, or volatile detail",
 };
-export const sdkRouteDialogDescribedBy = "sdk-route-offline-warning sdk-route-label-key";
+export const sdkRouteDialogDescribedBy = "sdk-route-offline-warning";
 
 const allScenarios = [...sdkRoutePrimary, ...sdkRouteTransfer];
 const validIds = new Set(allScenarios.map((scenario) => scenario.id));

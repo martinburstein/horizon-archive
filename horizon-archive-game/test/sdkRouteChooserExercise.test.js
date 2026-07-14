@@ -47,7 +47,7 @@ test("all route labels and same-form reasons remain available on every scenario"
     assert.equal(options.reason.length, 8);
     assert.ok(options.route.includes("reverify_before_live"));
   }
-  assert.equal(sdkRouteDialogDescribedBy, "sdk-route-offline-warning sdk-route-label-key");
+  assert.equal(sdkRouteDialogDescribedBy, "sdk-route-offline-warning");
 });
 
 test("feedback reports route and reason separately and supports unlimited retry", () => {
@@ -119,6 +119,8 @@ test("mastery cannot be forged without all thirty-two reasoning dimensions", () 
 test("runtime source exposes persistent labels, safe exit, and no timer or credential fields", () => {
   const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   assert.match(source, /sdk-route-label-key/);
+  assert.match(source, /id="sdk-route-label-key"[\s\S]*?role="region"[\s\S]*?tabIndex="0"[\s\S]*?aria-labelledby="sdk-route-label-key-title"/);
+  assert.match(source, /id="sdk-route-label-key-title">ROUTE KEY/);
   assert.match(source, /Exit SDK Route Chooser/);
   assert.match(source, /No endpoint, credential, resource, deployment, request, or response is collected/);
   assert.doesNotMatch(source, /sdk-route-(?:timer|countdown)/);

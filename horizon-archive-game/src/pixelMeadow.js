@@ -1,7 +1,7 @@
 export const MEADOW_LOGICAL_SIZE = Object.freeze({ width: 320, height: 180 });
 
 export const MEADOW_PIXEL_HOTSPOTS = Object.freeze({
-  primary: Object.freeze({ left: "33.75%", top: "28.3333%", width: "32.5%", height: "68.3333%" }),
+  primary: Object.freeze({ left: "25%", top: "11.1111%", width: "50%", height: "88.8889%" }),
   routeMarker: Object.freeze({ left: "77.0313%", top: "53.3333%", width: "21.5625%", height: "46.3889%" }),
 });
 
@@ -129,7 +129,7 @@ export function buildMeadowPixelPlan({ petalState = "locked", routeState = "lock
     rect(plan, x + 2, y + 1, 2, 5, palette.crystalLight);
   }
 
-  // Petal Terminal: deliberately authored stepped clusters, never sampled from concept art.
+  // Field-linked Terminal: deliberately authored stepped clusters, never sampled from concept art.
   rect(plan, 139, 111, 42, 34, palette.crystalDark, "petal-body");
   rect(plan, 145, 118, 30, 22, palette.black, "petal-core");
   steppedColumn(plan, 132, 46, [5,9,13,17,21,17,13,9], palette.crystal, "petal-left");

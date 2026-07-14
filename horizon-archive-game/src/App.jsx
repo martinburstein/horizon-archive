@@ -263,19 +263,19 @@ const scenes = [
     id: "meadow",
     chapter: "I",
     location: "Glass Meadow",
-    hotspotLabel: "Petal terminal",
+    hotspotLabel: "field-linked Terminal",
     hotspot: MEADOW_PIXEL_HOTSPOTS.primary,
     secondaryHotspots: [{
       id: "route-marker",
       label: "route-marker Terminal",
       hotspot: MEADOW_PIXEL_HOTSPOTS.routeMarker,
     }],
-    prompt: "A dormant interface waits inside the crystal bloom. Wake it with one line of Python.",
+    prompt: "Cold glass fins rise from a dark housing. Paired channels continue under the field and beyond sight.",
     question: "Write the line that displays SIGNAL FOUND.",
     answer: 'print("SIGNAL FOUND")',
     validate: (value) => validateAnswer("meadow", value),
     hint: "Python displays text with print(). Put the text inside quotation marks.",
-    success: "The bloom answers in your own alphabet. It did not translate the signal. It was already listening for you.",
+    success: "Output verified. The membrane keeps its prior cycle; reception remains unknown.",
     routeSuccess: "The route marker accepts both forms. A narrow path illuminates toward the next survey site.",
   },
   {
@@ -1041,7 +1041,7 @@ export function App() {
       if (verb === "LOOK AT") {
         setDialogue(exerciseEvidence?.completed
           ? "A separate route-marker Terminal has risen from the meadow. Its two-form survey is ready."
-          : "A low marker remains dark. The Petal Terminal must confirm the first signal before this node can wake.");
+          : "A low marker remains dark. First Signal must be acknowledged at the field-linked Terminal.");
         return;
       }
       if (verb === "TALK TO") {
@@ -1049,7 +1049,7 @@ export function App() {
         return;
       }
       if (!exerciseEvidence?.completed) {
-        setDialogue("The route marker refuses the link. Complete the Petal Terminal first.");
+        setDialogue("Route lesson locked. Acknowledge First Signal at the field-linked Terminal.");
         return;
       }
       setDialogue("Route-marker workspace linked. Predict each run, validate both forms, then complete retrieval.");
@@ -1076,15 +1076,15 @@ export function App() {
       return;
     }
     if (verb === "TALK TO" && scene.id !== "automaton") {
-      setDialogue("Nothing here has a mouth. Something still seems to hear you.");
+      setDialogue(scene.id === "meadow" ? "First signal. Mine, not yours." : "Nothing here has a mouth. Something still seems to hear you.");
       return;
     }
     if (scene.id === "meadow") {
       if (exerciseEvidence?.completed) {
-        setDialogue("The Petal Terminal is complete. The separate route-marker node now carries the active lesson.");
+        setDialogue("First Signal is complete. The separate Route Marker now carries the active lesson.");
         return;
       }
-      setDialogue("Terminal link established. Complete the file, run it, and confirm the result.");
+      setDialogue("First Signal active. Edit the file, run it, then review the output.");
       setTerminalOpen(true);
       setMeadowTerminalKind("first");
       if (!terminalSessionStarted) {
@@ -3468,8 +3468,8 @@ export function App() {
               <p id="sdk-route-offline-warning" className="model-choice-boundary" role="note">
                 COURSE-AUTHORED OFFLINE PRACTICE · No endpoint, credential, resource, deployment, request, or response is collected. A correct route does not prove access, grant authority, or authorize a live or destructive action. Reverify current Microsoft documentation before live use.
               </p>
-              <section id="sdk-route-label-key" className="speech-transcript sdk-route-key" aria-label="Persistent SDK route label key">
-                <strong>ROUTE KEY · remains visible for every scenario</strong>
+              <section id="sdk-route-label-key" className="speech-transcript sdk-route-key" role="region" tabIndex="0" aria-labelledby="sdk-route-label-key-title">
+                <strong id="sdk-route-label-key-title">ROUTE KEY · remains visible for every scenario</strong>
                 <ul>
                   {Object.entries(sdkRouteLabels).map(([token, label]) => <li key={token}><code>{token}</code> · {label}</li>)}
                 </ul>

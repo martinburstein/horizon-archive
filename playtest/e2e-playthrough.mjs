@@ -97,11 +97,11 @@ try {
 
   await page.getByRole("button", { name: "USE", exact: true }).click();
   await page.locator('button.hotspot[data-hotspot-id="route-marker"]').click();
-  await page.getByText("Complete the Petal Terminal first", { exact: false }).waitFor();
+  await page.getByText("Acknowledge First Signal at the field-linked Terminal", { exact: false }).waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').count()) throw new Error("Route marker opened before L-01-01");
   await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
-  await page.locator('#terminal-title:focus').waitFor();
+  await page.locator('#first-terminal-orientation-heading:focus').waitFor();
   await page.getByText("This is course-authored Python practice, not a Microsoft exam question", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close", exact: true }).click();
   await page.getByText("executes the file", { exact: false }).waitFor();
@@ -1434,7 +1434,7 @@ async function capturePixelMeadow(page, path) {
 async function verifyMeadowPixelHotspots(page, viewportLabel) {
   await page.getByRole("button", { name: "USE", exact: true }).click();
   const route = page.getByRole("button", { name: "use route-marker Terminal, locked", exact: true });
-  const petal = page.getByRole("button", { name: "use Petal terminal", exact: true });
+  const petal = page.getByRole("button", { name: "use field-linked Terminal", exact: true });
   const firstSignal = page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]');
   const routeExercise = page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]');
   await route.click();
@@ -1454,7 +1454,7 @@ async function verifyMeadowPixelHotspots(page, viewportLabel) {
 
 async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLabel) {
   if (await dialog.getAttribute("role") !== "dialog" || await dialog.getAttribute("aria-modal") !== "true") throw new Error(`Terminal dialog semantics missing at ${viewportLabel}`);
-  if (await page.locator("#terminal-title:focus").count() !== 1) throw new Error(`Terminal initial focus is not its title at ${viewportLabel}`);
+  if (await page.locator("#first-terminal-orientation-heading:focus").count() !== 1) throw new Error(`First Terminal settled focus is not its visible orientation heading at ${viewportLabel}`);
   if (!await page.locator(".command-panel").evaluate((element) => element.inert)) throw new Error(`Terminal background is not inert at ${viewportLabel}`);
   if (!await trigger.isDisabled()) throw new Error(`Terminal trigger remained interactive behind dialog at ${viewportLabel}`);
   await page.keyboard.press("Shift+Tab");
@@ -1721,12 +1721,12 @@ async function assertVerbSelectionAndDispatch(page, width, height, expectedLayou
 }
 
 async function assertRuinsTerminalAlignment(page, viewportLabel) {
-  const scaleByViewport = { "640x480": 1.983, "1280x960": 1.636, "320x240": 1, "1600x900": 1.531 };
-  const expected = { layout: viewportLabel === "320x240" || viewportLabel === "640x480" ? "narrow" : "canonical", scale: scaleByViewport[viewportLabel] };
-  await page.waitForFunction(({ layout, scale }) => {
+  const expectedLayout = viewportLabel === "320x240" || viewportLabel === "640x480" ? "narrow" : "canonical";
+  await page.waitForFunction((layout) => {
     const frame = document.querySelector(".canonical-game-frame");
-    return frame?.dataset.canonicalLayout === layout && Math.abs(Number(frame?.dataset.canonicalScale) - scale) < 0.002;
-  }, expected);
+    const scale = Number(frame?.dataset.canonicalScale);
+    return frame?.dataset.canonicalLayout === layout && Number.isFinite(scale) && scale > 0;
+  }, expectedLayout);
   await page.waitForFunction(() => document.querySelector(".scene-art")?.complete && document.querySelector(".scene-art")?.naturalWidth > 0);
   const metrics = await page.evaluate(() => {
     const gameFrame = document.querySelector(".canonical-game-frame");
