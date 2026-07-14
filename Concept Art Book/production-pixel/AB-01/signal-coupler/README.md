@@ -35,7 +35,14 @@ The broad front tongue is a clean laminated data bus that continues through the 
 
 `build_production_signal_coupler.py` rebuilds the approved source into the scene-native package under `production/`. The playable master is `640 x 360`, with a `320 x 320` source-derived coupler centered in the foreground and its approved paired side channels continued through both scene crops. It never enlarges or samples the `64 x 64` preview.
 
-The production build emits six lossless PNG frames, a shared-palette animated GIF, a reduced-motion still, a diagnostic membrane mask, and a machine-readable validation manifest. The build fails unless all six PNG bodies and all six decoded GIF bodies are byte-identical outside the membrane, every screen state is distinct, and no animation pixel escapes the fixed membrane.
+The production build emits six lossless PNG frames, a shared-palette animated GIF, a reduced-motion still, a diagnostic membrane mask, native and `320 x 180` composition QA, and a machine-readable validation manifest. Both side bundles are now continuous authored phase conduits: an opaque load-bearing substrate runs from the hidden source collar through the scene crop while irregular repair sleeves sit on top without cutting periodic alpha gaps. The build scans an interior lane across every conduit column at both `640 x 360` and the exact nearest-neighbor `320 x 180` derivative and fails on any transparent break.
+
+Composition evidence remains separate from the transparent runtime overlay:
+
+- `production/qa/terminal-signal-coupler-meadow-composite-640x360.png`
+- `production/qa/terminal-signal-coupler-meadow-composite-320x180.png`
+
+The build also fails unless all six PNG bodies and all six decoded GIF bodies are byte-identical outside the membrane, every screen state is distinct, and no animation pixel escapes the fixed membrane. The clean tongue, side conduits, service sleeves, substrate conduit, debris, and crop therefore remain frozen while the membrane hums.
 
 ```powershell
 python build_production_signal_coupler.py

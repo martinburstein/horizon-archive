@@ -27,6 +27,16 @@ test("production coupler locks six bodies and animates only the membrane", async
   assert.equal(manifest.unique_screen_hashes, 6);
   assert.equal(manifest.only_screen_pixels_change, true);
   assert.equal(manifest.side_connections_reach_scene_edges, true);
+  assert.equal(manifest.side_connections_are_continuous, true);
+  assert.equal(manifest.transparent_break_count, 0);
+  assert.deepEqual(manifest.narrow_derivative_dimensions, [320, 180]);
+  assert.equal(manifest.narrow_derivative_resampling, "nearest-neighbor");
+  assert.deepEqual(manifest.connection_continuity_scanlines, {
+    left_640x360: { y: 202, x: [0, 210] },
+    right_640x360: { y: 224, x: [430, 639] },
+    left_320x180: { y: 101, x: [0, 105] },
+    right_320x180: { y: 112, x: [215, 319] },
+  });
   assert.equal(manifest.source_is_not_64px_preview, true);
   assert.equal(manifest.detail_retention_by_frame.length, 6);
   assert.ok(manifest.detail_retention_by_frame.every(({ source_subject_dimensions, normalized_subject_dimensions }) =>

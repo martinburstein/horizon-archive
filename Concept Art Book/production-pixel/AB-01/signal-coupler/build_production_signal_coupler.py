@@ -9,6 +9,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageSequence
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "terminal-signal-coupler-connected-no-tongue-tube-sheet-alpha.png"
+MEADOW_SOURCE = ROOT.parents[3] / "Glass Meadow Example.png"
 OUTPUT = ROOT / "production"
 FRAMES_DIR = OUTPUT / "frames"
 QA_DIR = OUTPUT / "qa"
@@ -95,28 +96,62 @@ def stable_objects(cells: list[Image.Image], mask: Image.Image) -> list[Image.Im
     return [Image.composite(cell, base, mask) for cell in cells]
 
 
-def extend_side_connections(scene: Image.Image, stable_object: Image.Image) -> None:
-    """Continue the approved side channels through both scene crops.
+def draw_side_connections(scene: Image.Image) -> None:
+    """Author continuous phase conduits from the coupler to both scene crops.
 
-    The extension reuses only the object's real cable pixels. It does not draw
-    replacement geometry, and it is baked into the invariant body layer.
+    The selected source already contains the collars and the first lengths of
+    both side bundles. This body layer continues their perspective beneath the
+    source object with uninterrupted substrate, then adds irregular service
+    sleeves on top. Unlike the earlier repeated-alpha method, the sleeves never
+    create transparent breaks in the load-bearing conduit.
     """
-    x_origin, y_origin = OBJECT_ORIGIN
-    segment_width = 48
-    cable_top = 145
-    cable_bottom = 215
-    left_segment = stable_object.crop((0, cable_top, segment_width, cable_bottom))
-    right_segment = stable_object.crop((OBJECT_SIZE - segment_width, cable_top, OBJECT_SIZE, cable_bottom))
+    draw = ImageDraw.Draw(scene)
 
-    x = x_origin - segment_width
-    while x > -segment_width:
-        scene.alpha_composite(left_segment, (x, y_origin + cable_top))
-        x -= segment_width
+    # Left bundle: a low four-lane bus travels beyond the left crop. Its final
+    # section runs beneath the source object so the generated collar hides the
+    # join instead of exposing a familiar loose cable end.
+    left_outer = [(0, 183), (159, 183), (210, 193), (210, 216), (158, 224), (0, 219)]
+    draw.polygon(left_outer, fill=(10, 15, 31, 255))
+    draw.line([(0, 184), (159, 184), (208, 194)], fill=(93, 111, 149, 255), width=3)
+    draw.line([(0, 218), (158, 222), (208, 215)], fill=(3, 5, 15, 255), width=4)
+    for offset, color, width in (
+        (0, (18, 97, 145, 255), 3),
+        (7, (61, 174, 214, 255), 2),
+        (14, (20, 82, 132, 255), 3),
+        (21, (103, 203, 228, 255), 2),
+    ):
+        draw.line([(0, 190 + offset), (157, 190 + offset), (207, 198 + offset // 2)], fill=color, width=width)
+    for x in (30, 83, 137):
+        draw.polygon(
+            [(x, 184), (x + 8, 184), (x + 11, 221), (x + 2, 221)],
+            fill=(35, 39, 60, 255),
+        )
+        draw.line([(x + 2, 186), (x + 5, 218)], fill=(119, 126, 154, 255), width=2)
 
-    x = x_origin + OBJECT_SIZE
-    while x < SCENE_SIZE[0]:
-        scene.alpha_composite(right_segment, (x, y_origin + cable_top))
-        x += segment_width
+    # Right bundle: perspective drops toward the lower-right crop. The varied
+    # sleeve spacing records maintenance phases without interrupting the bus.
+    right_outer = [(430, 204), (468, 207), (640, 222), (640, 253), (466, 239), (430, 235)]
+    draw.polygon(right_outer, fill=(9, 14, 29, 255))
+    draw.line([(431, 205), (468, 209), (640, 224)], fill=(94, 112, 150, 255), width=3)
+    draw.line([(431, 234), (466, 238), (640, 251)], fill=(3, 5, 14, 255), width=4)
+    for offset, color, width in (
+        (0, (21, 93, 143, 255), 3),
+        (7, (71, 187, 221, 255), 2),
+        (14, (18, 77, 126, 255), 3),
+        (21, (111, 209, 230, 255), 2),
+    ):
+        draw.line(
+            [(432, 211 + offset), (468, 213 + offset), (640, 228 + offset)],
+            fill=color,
+            width=width,
+        )
+    for x in (493, 556, 616):
+        rise = (x - 468) // 12
+        draw.polygon(
+            [(x, 209 + rise), (x + 9, 210 + rise), (x + 9, 243 + rise), (x, 242 + rise)],
+            fill=(34, 39, 61, 255),
+        )
+        draw.line([(x + 2, 211 + rise), (x + 2, 240 + rise)], fill=(121, 129, 156, 255), width=2)
 
 
 def scene_frames(objects: list[Image.Image]) -> tuple[list[Image.Image], Image.Image]:
@@ -126,7 +161,7 @@ def scene_frames(objects: list[Image.Image]) -> tuple[list[Image.Image], Image.I
     frames: list[Image.Image] = []
     for stable_object in objects:
         scene = Image.new("RGBA", SCENE_SIZE, (0, 0, 0, 0))
-        extend_side_connections(scene, objects[0])
+        draw_side_connections(scene)
         scene.alpha_composite(stable_object, OBJECT_ORIGIN)
         frames.append(scene)
     return frames, scene_mask
@@ -198,6 +233,24 @@ def save_gif(frames: list[Image.Image], path: Path) -> None:
     )
 
 
+def save_scene_qa(frame: Image.Image) -> None:
+    """Save composition evidence without merging the overlay into world art."""
+    meadow = Image.open(MEADOW_SOURCE).convert("RGBA")
+    scale = max(SCENE_SIZE[0] / meadow.width, SCENE_SIZE[1] / meadow.height)
+    resized = meadow.resize(
+        (round(meadow.width * scale), round(meadow.height * scale)),
+        Image.Resampling.LANCZOS,
+    )
+    left = (resized.width - SCENE_SIZE[0]) // 2
+    top = (resized.height - SCENE_SIZE[1]) // 2
+    background = resized.crop((left, top, left + SCENE_SIZE[0], top + SCENE_SIZE[1]))
+    background.alpha_composite(frame)
+    background.save(QA_DIR / "terminal-signal-coupler-meadow-composite-640x360.png")
+    background.resize((320, 180), Image.Resampling.NEAREST).save(
+        QA_DIR / "terminal-signal-coupler-meadow-composite-320x180.png"
+    )
+
+
 def validate(
     frames: list[Image.Image],
     scene_mask: Image.Image,
@@ -245,6 +298,22 @@ def validate(
             "Production coupler retains less than 70% of the selected source's linear subject detail"
         )
 
+    # These centerlines sit inside the authored load-bearing substrate rather
+    # than decorative highlights. Every logical column must remain opaque from
+    # the crop through the hidden join beneath the selected source object.
+    alpha = frames[0].getchannel("A")
+    left_continuity = all(alpha.getpixel((x, 202)) >= 128 for x in range(0, 211))
+    right_continuity = all(alpha.getpixel((x, 224)) >= 128 for x in range(430, SCENE_SIZE[0]))
+    if not left_continuity or not right_continuity:
+        raise ValueError("An authored side conduit contains a transparent break")
+
+    narrow = frames[0].resize((320, 180), Image.Resampling.NEAREST)
+    narrow_alpha = narrow.getchannel("A")
+    narrow_left_continuity = all(narrow_alpha.getpixel((x, 101)) >= 128 for x in range(0, 106))
+    narrow_right_continuity = all(narrow_alpha.getpixel((x, 112)) >= 128 for x in range(215, 320))
+    if not narrow_left_continuity or not narrow_right_continuity:
+        raise ValueError("The 320 x 180 derivative breaks conduit continuity")
+
     return {
         "source_dimensions": list(Image.open(SOURCE).size),
         "production_dimensions": list(SCENE_SIZE),
@@ -258,6 +327,16 @@ def validate(
         "unique_screen_hashes": 6,
         "only_screen_pixels_change": True,
         "side_connections_reach_scene_edges": True,
+        "side_connections_are_continuous": True,
+        "transparent_break_count": 0,
+        "connection_continuity_scanlines": {
+            "left_640x360": {"y": 202, "x": [0, 210]},
+            "right_640x360": {"y": 224, "x": [430, 639]},
+            "left_320x180": {"y": 101, "x": [0, 105]},
+            "right_320x180": {"y": 112, "x": [215, 319]},
+        },
+        "narrow_derivative_dimensions": [320, 180],
+        "narrow_derivative_resampling": "nearest-neighbor",
         "source_is_not_64px_preview": True,
         "detail_retention_by_frame": detail_metrics,
         "minimum_linear_detail_retention": minimum_linear_detail_retention,
@@ -276,6 +355,9 @@ def main() -> None:
     for index, frame in enumerate(frames, start=1):
         frame.save(FRAMES_DIR / f"terminal-coupler-{index:02d}-640x360.png")
     frames[2].save(OUTPUT / "terminal-signal-coupler-available-640x360.png")
+    narrow_still = frames[2].resize((320, 180), Image.Resampling.NEAREST)
+    narrow_still.save(QA_DIR / "terminal-signal-coupler-available-320x180.png")
+    save_scene_qa(frames[2])
     gif_path = OUTPUT / "terminal-signal-coupler-loop-640x360.gif"
     save_gif(frames, gif_path)
     scene_mask.save(QA_DIR / "terminal-signal-coupler-screen-mask-640x360.png")
