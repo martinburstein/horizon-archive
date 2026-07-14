@@ -14,7 +14,7 @@
 - The polite, atomic gate summary reports the number of failed prerequisites while the associated list provides the details. One-scenario scoring retains independent decision/reason invalid states, specific descriptions, neutral System scoring, Teacher remediation, and blank retry.
 - Invalid submission moves focus to the first failed prerequisite. A valid gate moves focus to the optional timer toggle; next-item, blank-retry, and final-summary transitions move focus to the new meaningful control or heading. The final acknowledgement is disabled until confidence is chosen.
 - Checkboxes and radios in this workspace now render at least `24 x 24 px`; native number/date/select controls retain their `24 px` floor and visible inset focus. Timing and confidence remain optional and separate from correctness.
-- The longest narrow action now owns a dedicated ref used by the post-SIM-01 focus handoff while ordinary Continue keeps its separate ref. At exact `320 x 240`, the resume action's prior rectangle was `x=56..244, y=235.56..259.56` and was clipped by the fixed host. The corrected compact lower-band treatment retains the status text for assistive technology, hides only its narrow visual duplicate, and contains the resume action at `x=6..231.5, y=211..235` with a `24 px` height.
+- Required scene progression retains the established `continueButtonRef` and post-SIM-01 focus priority. The adjacent optional SIM-03 launch/resume is reachable in DOM order without competing for automatic focus, and opening it still begins the dialog's deterministic focus lifecycle. At exact `320 x 240`, the resume action's prior rectangle was `x=56..244, y=235.56..259.56` and was clipped by the fixed host. The corrected compact lower-band treatment retains the status text for assistive technology, hides only its narrow visual duplicate, and contains the resume action at `x=6..231.5, y=211..235` with a `24 px` height.
 
 ## Live evidence
 
@@ -30,6 +30,7 @@
 - Complete game unit suite: `232/232` passed.
 - Production build passed with only the existing large-chunk advisory.
 - Fresh focused Playwright pass covered invalid and valid entry gates, native date/number/select/checkbox controls, error associations, focus transitions, one-scenario remediation, blank retry, exact `640 x 480` and `320 x 240` containment, the longest resume label, reduced motion, and runtime errors.
+- A coordinator full-E2E follow-up caught an initial optional-action focus-priority regression. The final source contract explicitly leaves the optional button unreferenced and focuses required scene progression through `continueButtonRef`; the focused regression protects this exact ordering.
 
 ## Remaining manual risk
 

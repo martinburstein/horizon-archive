@@ -29,8 +29,10 @@ test("SIM-03 exposes field-specific entry errors and deterministic keyboard tran
   assert.match(source,/finalConfidenceSummaryHeadingRef\.current\?\.focus/);
   assert.match(source,/disabled=\{!finalConfidenceEvidence\?\.confidence\}/);
   assert.match(source,/data-final-confidence-action=\{showFinalConfidenceAction \? "true" : undefined\}/);
-  assert.match(source,/showFinalConfidenceAction&&<button ref=\{finalConfidenceActionRef\}/);
-  assert.match(source,/finalConfidenceActionRef\.current\?\?continueButtonRef\.current/);
+  assert.match(source,/showFinalConfidenceAction&&<button className="continue-action optional-practice-action"/);
+  assert.doesNotMatch(source,/showFinalConfidenceAction&&<button ref=/);
+  assert.match(source,/focusContinueAfterMixedSimulationRef\.current=false;continueButtonRef\.current\?\.focus/);
+  assert.match(source,/mixedSimulationEvidence\?\.masteryStatus === "mastered"\) && \([\s\S]*?<button ref=\{continueButtonRef\}[\s\S]*?Continue to the next survey site/);
   assert.match(css,/\.final-confidence-workspace \.ownership-confirmation input,[\s\S]*?width: 24px;[\s\S]*?height: 24px;/);
   assert.match(css,/\.final-confidence-entry-errors \{[\s\S]*?font-size: 8px;[\s\S]*?line-height: 10px;/);
   assert.match(css,/data-final-confidence-action="true"\][\s\S]*?height: 24px;/);
