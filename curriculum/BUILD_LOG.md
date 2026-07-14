@@ -811,3 +811,35 @@ Validation performed:
 Next recommended item: Exercise Agent should expose the resume guide's compact distinction beside reconstructed progress: prior finalized results may reappear, but the current choice and remediation controls start clean, and the result gate still requires remediation/retry or confidence plus `Acknowledge mastery`.
 Unresolved risks: Live Player/Accessibility checks should confirm that the three resume states are announced clearly, blank controls are perceivable after an unfinalized miss, and a reconstructed complete form does not sound newly scored. Total attempt/hint telemetry persists while per-card state resets, so runtime copy must not claim that every attempt detail was restored or discarded.
 Notes: No prompt, answer, official objective mapping, hidden lore, game code, art, QA binary, service, Azure, credential, external action, commit, or push change. Reconstructed course evidence grants no exam credit, readiness guarantee, AI-901 result guarantee, or external authority.
+
+## Log entry: 2026-07-13T20:27:46-04:00
+
+Stage: Current Foundry SDK route-choice strengthening
+Work completed: Added a finished learner-facing primary/transfer drill to `L-05-03` that distinguishes the five current official SDK routes by scenario: Foundry SDK, Agent Framework, OpenAI SDK, Anthropic SDK, and service-specific Foundry Tools SDKs. The drill adds eight boundaries per form, strict decision-plus-reason scoring, retrieval/remediation guidance, and explicit resource, identity, privacy, volatility, and no-authority safeguards. Refreshed the official source register to the current verified date and route distinctions.
+Files changed:
+- curriculum/lessons/L-05-03/sdk-route-chooser.md
+- curriculum/lessons/L-05-03/sdk_route_scenarios.json
+- curriculum/lessons/L-05-03/sdk_route_answer_key.json
+- curriculum/lessons/L-05-03/sdk_route_answers.json
+- curriculum/lessons/L-05-03/sdk_route_transfer_answers.json
+- curriculum/lessons/L-05-03/sdk_route_reference_answers.json
+- curriculum/lessons/L-05-03/sdk_route_reference_transfer_answers.json
+- curriculum/lessons/L-05-03/validate_sdk_route_chooser.py
+- curriculum/lessons/L-05-03/README.md
+- curriculum/sources/current-official-source-register.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/foundry/agents/overview
+- Reverified on 2026-07-13: https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview
+- New validator self-test passed, including eight-boundary coverage, reference/blank checks, an OpenAI-route confusion probe, and an unverified-authority probe.
+- Primary reference passed 16/16; fresh-transfer reference passed 16/16.
+- Existing `L-05-03` client-boundary self-test and `L-05-04` single-agent regression passed.
+- All curriculum JSON parsed; `git diff --check` passed.
+Next recommended item: Exercise Agent can render the drill as one scenario at a time after the existing `L-05-03` client-boundary gate, with persistent route labels, route-plus-reason feedback, fresh transfer, and no endpoint/credential capture.
+Unresolved risks: SDK packages, versions, endpoints, roles, models, tool availability, preview labels, and resource behavior remain volatile and require re-verification before a live lab. The route drill is supplemental and must not be presented as official Microsoft exam content or proof of live access.
+Notes: No service call, Azure mutation, credential use, external action, game, lore, art, QA binary, commit, or push change.

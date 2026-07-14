@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-12
+Verified: 2026-07-13
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 
@@ -18,10 +18,12 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - `OFFICIAL-FOUNDRY-HUB`: [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/)
   - Current navigation authority for Foundry Models, Agent Service, Tools, SDKs, observability, and governance.
 - `OFFICIAL-FOUNDRY-SDK`: [Microsoft Foundry SDKs and Endpoints](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview)
-  - A Foundry resource provides a project endpoint for unified access.
+  - The current page describes the Foundry SDK as a thin client over Foundry project APIs through one project endpoint.
+  - Its current scenario chooser distinguishes Foundry SDK, Agent Framework, OpenAI SDK, Anthropic SDK, and service-specific Foundry Tools SDKs; these routes are related but not interchangeable.
+  - A Foundry resource and an Azure OpenAI resource do not expose the same endpoint set.
   - For current Python examples in the new Foundry portal, the page lists `azure-ai-projects>=2.0.0`.
   - The current Python client pattern uses `AIProjectClient`, `DefaultAzureCredential`, and an OpenAI-compatible client obtained from the project client.
-  - Microsoft recommends Microsoft Entra ID authentication in its samples. Do not hardcode credentials.
+  - The current samples use Microsoft Entra ID authentication with `DefaultAzureCredential`. Do not hardcode credentials.
 - `OFFICIAL-FOUNDRY-RESOURCE-QUICKSTART`: [Set up Microsoft Foundry resources](https://learn.microsoft.com/en-us/azure/foundry/tutorials/quickstart-create-foundry-resources)
   - Current portal authority for project creation, model deployment, provisioning verification, project endpoint, deployment name, access, and scoped cleanup. Portal labels and example models are volatile.
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)

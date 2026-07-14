@@ -1,0 +1,34 @@
+{
+  "verified_on": "2026-07-13",
+  "source_url": "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+  "routes": [
+    "foundry_sdk",
+    "agent_framework",
+    "openai_sdk",
+    "anthropic_sdk",
+    "foundry_tools_sdk",
+    "reverify_before_live"
+  ],
+  "forms": {
+    "primary": [
+      {"id":"P01","boundary":"foundry_native","prompt":"A Python app needs Foundry project properties, agents, evaluations, and Foundry-specific platform features. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P02","boundary":"hosted_agent_code","prompt":"A team is writing a hosted agent with custom orchestration and expects the code to use the Responses API while running in its own process during development. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P03","boundary":"openai_compatibility","prompt":"An app needs embeddings and prioritizes maximum OpenAI API compatibility and low latency. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P04","boundary":"claude_models","prompt":"An authorized project must call an Anthropic Claude model deployed in Foundry. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P05","boundary":"service_specific_tool","prompt":"A lightweight application needs the current prebuilt Speech service client rather than a general model or agent client. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P06","boundary":"resource_scope","prompt":"A learner has only an Azure OpenAI resource and assumes it exposes every Foundry project, agent, tool, and Anthropic endpoint. Choose the safest next decision.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P07","boundary":"identity_authority","prompt":"A sample uses DefaultAzureCredential, but the learner has not verified the approved identity, RBAC, resource, or scope. Choose the safest next decision.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"P08","boundary":"volatile_detail","prompt":"A six-month-old note names a package version and endpoint, while the live lab begins tomorrow. Choose the safest next decision.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]}
+    ],
+    "transfer": [
+      {"id":"T01","boundary":"foundry_native","prompt":"A client must list project connections and then use Foundry-native evaluation features through one project boundary. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T02","boundary":"hosted_agent_code","prompt":"A developer needs a code-based multi-agent system with custom orchestration that can later be packaged as a hosted agent. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T03","boundary":"openai_compatibility","prompt":"A direct-model app needs Chat Completions and the broad OpenAI API surface rather than Foundry-specific project operations. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T04","boundary":"claude_models","prompt":"A project requirement explicitly selects Claude and the team needs the provider-specific endpoint route described by Microsoft. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T05","boundary":"service_specific_tool","prompt":"An app uses a prebuilt Language client for text analysis and does not need agent orchestration. Choose the current route.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T06","boundary":"resource_scope","prompt":"A copied snippet targets a Foundry project endpoint, but the authorized resource type has not been confirmed. Choose the safest next decision.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T07","boundary":"identity_authority","prompt":"A correct SDK route is known, but no one has confirmed subscription access or a least-privilege role. Choose the safest next decision.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]},
+      {"id":"T08","boundary":"volatile_detail","prompt":"A practice answer depends on a current role name, preview label, and model availability. Choose the safest next decision before live use.","choices":["foundry_sdk","agent_framework","openai_sdk","anthropic_sdk","foundry_tools_sdk","reverify_before_live"]}
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "forms": {
+    "primary": {
+      "P01":{"route":"foundry_sdk","reason":"foundry_project_features"},
+      "P02":{"route":"agent_framework","reason":"hosted_or_multi_agent_code"},
+      "P03":{"route":"openai_sdk","reason":"openai_compatibility_or_embeddings"},
+      "P04":{"route":"anthropic_sdk","reason":"claude_model"},
+      "P05":{"route":"foundry_tools_sdk","reason":"service_specific_client"},
+      "P06":{"route":"reverify_before_live","reason":"resource_types_expose_different_endpoints"},
+      "P07":{"route":"reverify_before_live","reason":"identity_and_rbac_not_verified"},
+      "P08":{"route":"reverify_before_live","reason":"package_and_endpoint_details_are_volatile"}
+    },
+    "transfer": {
+      "T01":{"route":"foundry_sdk","reason":"foundry_project_features"},
+      "T02":{"route":"agent_framework","reason":"hosted_or_multi_agent_code"},
+      "T03":{"route":"openai_sdk","reason":"openai_compatibility_or_embeddings"},
+      "T04":{"route":"anthropic_sdk","reason":"claude_model"},
+      "T05":{"route":"foundry_tools_sdk","reason":"service_specific_client"},
+      "T06":{"route":"reverify_before_live","reason":"resource_types_expose_different_endpoints"},
+      "T07":{"route":"reverify_before_live","reason":"identity_and_rbac_not_verified"},
+      "T08":{"route":"reverify_before_live","reason":"package_and_endpoint_details_are_volatile"}
+    }
+  }
+}
