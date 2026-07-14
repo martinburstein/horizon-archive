@@ -3468,7 +3468,7 @@ export function App() {
               <p id="sdk-route-offline-warning" className="model-choice-boundary" role="note">
                 COURSE-AUTHORED OFFLINE PRACTICE · No endpoint, credential, resource, deployment, request, or response is collected. A correct route does not prove access, grant authority, or authorize a live or destructive action. Reverify current Microsoft documentation before live use.
               </p>
-              <section id="sdk-route-label-key" className="speech-transcript" aria-label="Persistent SDK route label key">
+              <section id="sdk-route-label-key" className="speech-transcript sdk-route-key" aria-label="Persistent SDK route label key">
                 <strong>ROUTE KEY · remains visible for every scenario</strong>
                 <ul>
                   {Object.entries(sdkRouteLabels).map(([token, label]) => <li key={token}><code>{token}</code> · {label}</li>)}

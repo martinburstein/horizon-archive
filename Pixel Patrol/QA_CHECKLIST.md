@@ -20,6 +20,10 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Cluster sizes, outline weights, palette ramps, and dither density meet the bible.
 - [ ] Concept art has been reinterpreted; no painterly plate or generic pixel filter ships.
 - [ ] Scene does not reproduce a reference composition, prop, icon, character, or palette sequence.
+- [ ] The production signal coupler is built directly from the selected 1254 px sheet into a 320 px scene object; no 64 px preview participates in the playable pipeline.
+- [ ] The coupler retains at least 70% of each selected source cell's linear subject detail and reports the measured minimum in its manifest.
+- [ ] All six coupler bodies decode identically outside the fixed membrane; only six distinct membrane states animate.
+- [ ] Coupler side channels form continuous authored routes to the scene edges; repeated crop segments with transparent gaps do not pass merely because an edge pixel is occupied.
 
 ## Character and motion
 
@@ -38,6 +42,7 @@ Run at native 640 x 480, 2x 1280 x 960, the 320 x 240 alternate layout, and a no
 - [ ] Inventory selection is reversible and remains labeled.
 - [ ] Invalid combinations consume nothing and provide recovery guidance.
 - [ ] All pointer targets are at least 44 x 44 CSS at tested layouts.
+- [ ] SDK Route Key uses three compact columns at 640 x 480 and two at 320 x 240, with 8 px / 10 px type and no spill into the scenario form.
 
 ## Dialogue and progress
 

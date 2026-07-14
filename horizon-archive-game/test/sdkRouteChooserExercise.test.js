@@ -123,3 +123,14 @@ test("runtime source exposes persistent labels, safe exit, and no timer or crede
   assert.match(source, /No endpoint, credential, resource, deployment, request, or response is collected/);
   assert.doesNotMatch(source, /sdk-route-(?:timer|countdown)/);
 });
+
+test("route key has an explicit contained density contract at both logical viewports", () => {
+  const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+  assert.match(source, /className="speech-transcript sdk-route-key"/);
+  assert.match(styles, /\.sdk-route-workspace\s*\{[^}]*grid-template-rows:\s*auto minmax\(42px, 0\.55fr\) minmax\(0, 1\.45fr\);[^}]*overflow:\s*hidden;/s);
+  assert.match(styles, /\.sdk-route-key\s*\{[^}]*overflow:\s*auto;[^}]*border-radius:\s*0;[^}]*box-shadow:\s*none;[^}]*font-size:\s*8px;[^}]*line-height:\s*10px;/s);
+  assert.match(styles, /\.sdk-route-key ul\s*\{[^}]*grid-template-columns:\s*repeat\(3, minmax\(0, 1fr\)\);[^}]*list-style:\s*none;/s);
+  assert.match(styles, /data-canonical-layout="narrow"[^}]*\.sdk-route-key ul\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\);/s);
+  assert.match(styles, /data-canonical-layout="narrow"[^}]*\.sdk-route-key\s*\{[^}]*font-size:\s*8px;[^}]*line-height:\s*10px;/s);
+});

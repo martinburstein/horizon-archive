@@ -22,6 +22,10 @@ All numbers are logical pixels unless explicitly labeled CSS pixels.
 | Model/deployment field grouping | 2 columns canonical; 1 column narrow | Horizon adaptation |
 | L-02-03 persistent role labels | 5: course boundary, layer motif, Pilot owner, System validator, 901 Teacher gate | Implemented Horizon metric |
 | L-02-03 retained QA stages | 3 byte-distinct captures: primary, transfer remediation, closed note | Production QA metric |
+| Signal-coupler production object | 320 x 320 inside a 640 x 360 transparent scene overlay | Implemented Horizon metric |
+| Signal-coupler source detail retention | >=70% linear subject detail per source-sheet cell; current minimum 71.26% | Production QA metric |
+| Signal-coupler animation | 6 frames; 1 invariant body hash; 6 distinct screen hashes; 3,596 screen-mask pixels only | Production QA metric |
+| SDK Route Key | 8 px / 10 px type; 3 columns canonical; 2 columns narrow; contained reference scroll | Implemented Horizon metric |
 | Structured Packets frames | primary 640 x 480; transfer 320 x 240; closed note 1600 x 900 containing 640 x 480 logical frame | Production QA metric |
 | Structured Packets closed-note fields | 3: container path, nested access, JSON round trip | Implemented Horizon metric |
 | Control Flow execution motif | 4 ordered reads: parameter, loop, condition/append, return | Implemented Horizon metric |

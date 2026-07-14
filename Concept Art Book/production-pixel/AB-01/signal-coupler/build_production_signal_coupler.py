@@ -41,7 +41,7 @@ def alpha_bbox(image: Image.Image) -> tuple[int, int, int, int]:
     return box
 
 
-def normalized_cells(sheet: Image.Image) -> list[Image.Image]:
+def normalized_cells(sheet: Image.Image) -> tuple[list[Image.Image], list[dict[str, object]]]:
     columns, rows = GRID
     if sheet.width % columns or sheet.height % rows:
         raise ValueError(f"Sheet dimensions {sheet.size} are not divisible by {columns}x{rows}")
@@ -49,6 +49,7 @@ def normalized_cells(sheet: Image.Image) -> list[Image.Image]:
     cell_width = sheet.width // columns
     cell_height = sheet.height // rows
     cells: list[Image.Image] = []
+    detail_metrics: list[dict[str, object]] = []
     for row in range(rows):
         for column in range(columns):
             cell = sheet.crop(
@@ -60,13 +61,26 @@ def normalized_cells(sheet: Image.Image) -> list[Image.Image]:
                 )
             )
             subject = cell.crop(alpha_bbox(cell))
+            source_subject_size = subject.size
             subject.thumbnail((310, 305), Image.Resampling.NEAREST)
+            normalized_subject_size = subject.size
+            linear_retention = min(
+                normalized_subject_size[0] / source_subject_size[0],
+                normalized_subject_size[1] / source_subject_size[1],
+            )
             canvas = Image.new("RGBA", (OBJECT_SIZE, OBJECT_SIZE), (0, 0, 0, 0))
             x = (OBJECT_SIZE - subject.width) // 2
             y = OBJECT_SIZE - subject.height
             canvas.alpha_composite(subject, (x, y))
             cells.append(canvas)
-    return cells
+            detail_metrics.append(
+                {
+                    "source_subject_dimensions": list(source_subject_size),
+                    "normalized_subject_dimensions": list(normalized_subject_size),
+                    "linear_detail_retention": round(linear_retention, 4),
+                }
+            )
+    return cells, detail_metrics
 
 
 def object_mask() -> Image.Image:
@@ -184,7 +198,12 @@ def save_gif(frames: list[Image.Image], path: Path) -> None:
     )
 
 
-def validate(frames: list[Image.Image], scene_mask: Image.Image, gif_path: Path) -> dict[str, object]:
+def validate(
+    frames: list[Image.Image],
+    scene_mask: Image.Image,
+    gif_path: Path,
+    detail_metrics: list[dict[str, object]],
+) -> dict[str, object]:
     outside_mask = ImageChops.invert(scene_mask)
     outside_differences = [
         ImageChops.multiply(changed_pixel_mask(frames[0], frame), outside_mask).getbbox()
@@ -218,6 +237,14 @@ def validate(frames: list[Image.Image], scene_mask: Image.Image, gif_path: Path)
     if len(set(screen_hashes)) != 6:
         raise ValueError("Each production screen state must be distinct")
 
+    minimum_linear_detail_retention = min(
+        float(metric["linear_detail_retention"]) for metric in detail_metrics
+    )
+    if minimum_linear_detail_retention < 0.70:
+        raise ValueError(
+            "Production coupler retains less than 70% of the selected source's linear subject detail"
+        )
+
     return {
         "source_dimensions": list(Image.open(SOURCE).size),
         "production_dimensions": list(SCENE_SIZE),
@@ -232,6 +259,9 @@ def validate(frames: list[Image.Image], scene_mask: Image.Image, gif_path: Path)
         "only_screen_pixels_change": True,
         "side_connections_reach_scene_edges": True,
         "source_is_not_64px_preview": True,
+        "detail_retention_by_frame": detail_metrics,
+        "minimum_linear_detail_retention": minimum_linear_detail_retention,
+        "minimum_linear_detail_retention_required": 0.70,
     }
 
 
@@ -239,7 +269,8 @@ def main() -> None:
     FRAMES_DIR.mkdir(parents=True, exist_ok=True)
     QA_DIR.mkdir(parents=True, exist_ok=True)
     sheet = Image.open(SOURCE).convert("RGBA")
-    objects = stable_objects(normalized_cells(sheet), object_mask())
+    cells, detail_metrics = normalized_cells(sheet)
+    objects = stable_objects(cells, object_mask())
     frames, scene_mask = scene_frames(objects)
 
     for index, frame in enumerate(frames, start=1):
@@ -249,7 +280,7 @@ def main() -> None:
     save_gif(frames, gif_path)
     scene_mask.save(QA_DIR / "terminal-signal-coupler-screen-mask-640x360.png")
 
-    manifest = validate(frames, scene_mask, gif_path)
+    manifest = validate(frames, scene_mask, gif_path, detail_metrics)
     (OUTPUT / "terminal-signal-coupler-production-manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n",
         encoding="utf-8",
