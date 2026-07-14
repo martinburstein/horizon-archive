@@ -81,9 +81,15 @@ Approved compact objective pair:
 - Dialogue: `SYSTEM // EXPEDITION STATE`: `Objective: Find a Terminal in the Glass Meadow.`
 - Persistent text: `OBJECTIVE // FIND A TERMINAL`
 
-`Terminal` is a human working class for a bounded accessible node. The objective must not name the Petal hotspot, imply that the native landscape was built for human ergonomics, or claim the Machine summoned the Pilot. Exploration remains first-person and mistakes remain recoverable.
+`Terminal` is a human working class for a bounded accessible node. The objective must not use the production-only `Signal Coupler` name, imply that the native landscape was built for human ergonomics, or claim the Machine summoned the Pilot. Exploration remains first-person and mistakes remain recoverable.
 
 The runtime now uses this approved `Find` pair. Preserve it during the next copy pass.
+
+### First Terminal production-art alignment
+
+The first target is now the interconnected production signal-coupler asset governed by `glass-meadow-signal-coupler-integration-contract.md`. `Signal Coupler` remains an internal production label. Before inspection the player sees only a Terminal candidate whose paired channels continue beneath the field and beyond the frame; neither the opening objective nor assistive label may confirm what those connections carry or where they end.
+
+Use `field-linked Terminal` as the hotspot/accessibility label. Its six-state membrane loop is ambient evidence: the body remains identical, only the screen changes, and the cycle must not be narrated as a greeting, warning, answer, recognition event, or completion response. The new anatomy may establish only one additional inference after inspection: this is probably an exposed part of a wider system rather than a standalone object.
 
 ## First-45-second reveal boundary
 

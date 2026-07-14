@@ -2,6 +2,8 @@
 
 Status: production-ready, surface-canon only.
 
+Production-art override: the playable first Terminal is now the interconnected fixed-body signal coupler. Apply `glass-meadow-signal-coupler-integration-contract.md` wherever this packet says `Petal Terminal`, describes a freestanding crystal-petal body, assigns translated writing to its membrane, or requires that body to brighten, pulse, settle, or display completion. The older `Petal` wording remains here as progression provenance until Coder and Location records complete the terminology migration; First Signal ownership, Route Marker gating, evidence, recovery, and transition behavior remain authoritative.
+
 Scene contract: `GM-01` contains two separate learning surfaces with a strict sequence. The many-petaled **Petal Terminal** owns First Signal (`L-01-01`). The compact three-fin **Route Marker** is visible but prerequisite-locked until the player acknowledges First Signal; it then enters an awake route-training state for `L-01-02` and gains completed directional geometry only after route mastery. Neither node speaks for the whole Machine.
 
 ## Landscape function boundary
