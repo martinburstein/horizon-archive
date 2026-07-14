@@ -75,9 +75,29 @@ test("sanitized evidence stores reasoning booleans but no choices, endpoints, cr
   });
   assert.equal(safe.masteryStatus, "in_progress");
   assert.deepEqual(safe.itemCorrectness.P01, { route: true, reason: false });
+  assert.deepEqual(safe.remediationCorrectness, {});
   for (const key of ["response", "endpoint", "credential", "deploymentName", "clickTime", "keySequence"]) {
     assert.equal(key in safe, false);
   }
+});
+
+test("targeted trace evidence stores only dimension booleans and attempts", () => {
+  const evidence = updateSdkRouteEvidence(null, {
+    remediationScenarioId: "DP03",
+    remediationCorrectness: { route: true, endpoint_family: false, next_action: true },
+    incrementRemediationAttempt: true,
+    response: { route: "openai_sdk" },
+    endpoint: "https://private.example",
+  });
+  assert.deepEqual(evidence.remediationCorrectness.DP03, {
+    route: true,
+    endpoint_family: false,
+    next_action: true,
+  });
+  assert.equal(evidence.remediationAttemptCount, 1);
+  assert.equal("response" in evidence, false);
+  assert.equal("endpoint" in evidence, false);
+  assert.equal(evidence.masteryStatus, "in_progress");
 });
 
 test("fresh transfer begins with blank working choices after strict primary evidence", () => {

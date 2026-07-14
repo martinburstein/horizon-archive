@@ -919,6 +919,7 @@ h1 {
 }
 .sdk-route-key li { min-width: 0; overflow-wrap: anywhere; }
 .sdk-route-key code { color: #9edce7; font: inherit; font-weight: 700; }
+.sdk-route-trace-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-key {
   padding: 2px 3px;
   font-size: 8px;
@@ -928,6 +929,7 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2px 4px;
 }
+.canonical-game-frame[data-canonical-layout="narrow"] .sdk-route-trace-fields { grid-template-columns: 1fr; }
 .visual-workspace { grid-template-rows: auto auto auto minmax(0, 1fr); }
 .visual-explanation { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .canonical-game-frame[data-canonical-layout="narrow"] .visual-explanation { grid-template-columns: 1fr; }

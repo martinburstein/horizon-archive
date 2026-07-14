@@ -1,5 +1,6 @@
 import bank from "../../curriculum/lessons/L-05-03/sdk_route_scenarios.json" with { type: "json" };
 import key from "../../curriculum/lessons/L-05-03/sdk_route_answer_key.json" with { type: "json" };
+import traceBank from "../../curriculum/lessons/L-05-03/sdk_route_trace_scenarios.json" with { type: "json" };
 
 export const sdkRouteChooserExercise = {
   exerciseId: "EX-L0503-SDK-ROUTE-CHOOSER",
@@ -24,12 +25,16 @@ export const sdkRouteDialogDescribedBy = "sdk-route-offline-warning";
 
 const allScenarios = [...sdkRoutePrimary, ...sdkRouteTransfer];
 const validIds = new Set(allScenarios.map((scenario) => scenario.id));
+const validTraceIds = new Set([...traceBank.forms.primary, ...traceBank.forms.transfer].map((scenario) => scenario.id));
 const validMisconceptions = new Set([
   "brand-familiarity-over-scenario-fit",
   "route-correct-reason-incorrect",
   "resource-endpoints-interchangeable",
   "identity-or-rbac-assumed",
   "volatile-detail-treated-as-stable",
+  "sdk-trace-route-miss",
+  "sdk-trace-endpoint_family-miss",
+  "sdk-trace-next_action-miss",
 ]);
 
 export function getSdkRouteOptions(form = "primary") {
@@ -93,6 +98,15 @@ export function sanitizeSdkRouteEvidence(value) {
   }
   const primaryComplete = formComplete(itemCorrectness, "primary");
   const transferComplete = formComplete(itemCorrectness, "transfer");
+  const remediationCorrectness = {};
+  for (const [id, dimensions] of Object.entries(value.remediationCorrectness ?? {})) {
+    if (!validTraceIds.has(id) || !dimensions || typeof dimensions !== "object") continue;
+    const safe = {};
+    for (const dimension of traceBank.dimensions) {
+      if (typeof dimensions[dimension] === "boolean") safe[dimension] = dimensions[dimension];
+    }
+    if (Object.keys(safe).length) remediationCorrectness[id] = safe;
+  }
   let masteryStatus = ["in_progress", "remediation_required", "primary_complete", "mastered"].includes(value.masteryStatus)
     ? value.masteryStatus
     : "in_progress";
@@ -108,7 +122,11 @@ export function sanitizeSdkRouteEvidence(value) {
     skillIds: [...sdkRouteChooserExercise.skillIds],
     form: value.form === "transfer" ? "transfer" : "primary",
     itemCorrectness,
+    remediationCorrectness,
     attemptCount: Number.isInteger(value.attemptCount) && value.attemptCount >= 0 ? value.attemptCount : 0,
+    remediationAttemptCount: Number.isInteger(value.remediationAttemptCount) && value.remediationAttemptCount >= 0
+      ? value.remediationAttemptCount
+      : 0,
     hintLevel: Number.isInteger(value.hintLevel) && value.hintLevel >= 0 ? Math.min(3, value.hintLevel) : 0,
     confidence: ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null,
     misconceptionTags: Array.isArray(value.misconceptionTags)
@@ -124,17 +142,27 @@ export function updateSdkRouteEvidence(previous, change = {}) {
     itemCorrectness: {},
   });
   const itemCorrectness = { ...base.itemCorrectness };
+  const remediationCorrectness = { ...base.remediationCorrectness };
   if (change.scenarioId && validIds.has(change.scenarioId) && change.correctness) {
     itemCorrectness[change.scenarioId] = Object.fromEntries(
       sdkRouteDimensions.filter((dimension) => typeof change.correctness[dimension] === "boolean")
         .map((dimension) => [dimension, change.correctness[dimension]]),
     );
   }
+  if (change.remediationScenarioId && validTraceIds.has(change.remediationScenarioId) && change.remediationCorrectness) {
+    remediationCorrectness[change.remediationScenarioId] = Object.fromEntries(
+      traceBank.dimensions
+        .filter((dimension) => typeof change.remediationCorrectness[dimension] === "boolean")
+        .map((dimension) => [dimension, change.remediationCorrectness[dimension]]),
+    );
+  }
   return sanitizeSdkRouteEvidence({
     ...base,
     ...change,
     itemCorrectness,
+    remediationCorrectness,
     attemptCount: base.attemptCount + (change.incrementAttempt ? 1 : 0),
+    remediationAttemptCount: base.remediationAttemptCount + (change.incrementRemediationAttempt ? 1 : 0),
     hintLevel: Math.max(base.hintLevel, change.hintLevel ?? 0),
     misconceptionTags: change.clearMisconceptionTags
       ? []

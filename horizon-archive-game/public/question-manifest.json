@@ -177,7 +177,7 @@
       "activity_id": "A-L0503-3",
       "objective_ids": ["AI901-D2-O3"],
       "skills": ["SDK-ROUTE-CHOICE", "SDK-ROUTE-REASON"],
-      "success_contract": "Pass all 16 route-plus-reason dimensions on the primary form and all 16 on a fresh transfer form; no live access or interface-speed evidence counts."
+      "success_contract": "Pass all 16 route-plus-reason dimensions on the primary form and all 16 on a fresh transfer form. After a miss, pass one matching 3/3 route, conceptual endpoint-family, and authority-safe next-action trace before a blank retry; no live access or interface-speed evidence counts."
     },
     {
       "id": "HA-AI901-SINGLE-AGENT",

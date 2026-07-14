@@ -230,6 +230,7 @@ import {
 import { evaluatePromptExplanation,evaluatePromptScenario,getPromptExplanationFeedback,getPromptFeedback,getPromptOptions,promptDialogDescribedBy,promptDimensions,promptExplanationDimensions,promptLayerExercise,promptPrimary,promptTransfer,sanitizePromptEvidence,updatePromptEvidence } from "./promptLayerExercise.js";
 import { clientBoundaryDialogDescribedBy,clientBoundaryDimensions,clientBoundaryExercise,clientBoundaryExplanationDimensions,clientBoundaryMockOutput,clientBoundaryPrimary,clientBoundaryTransfer,evaluateClientBoundaryExplanation,evaluateClientBoundaryMock,evaluateClientBoundaryScenario,getClientBoundaryExplanationFeedback,getClientBoundaryFeedback,getClientBoundaryOptions,sanitizeClientBoundaryEvidence,updateClientBoundaryEvidence } from "./clientBoundaryExercise.js";
 import { deriveSdkRouteResume,evaluateSdkRouteScenario,getSdkRouteFeedback,getSdkRouteOptions,sanitizeSdkRouteEvidence,sdkRouteChooserExercise,sdkRouteDialogDescribedBy,sdkRouteDimensions,sdkRouteLabels,sdkRoutePrimary,sdkRouteTransfer,updateSdkRouteEvidence } from "./sdkRouteChooserExercise.js";
+import { evaluateSdkRouteTrace,getSdkRouteTraceFeedback,getSdkRouteTraceOptions,getSdkRouteTraceScenario,sdkRouteTraceChoiceLabels,sdkRouteTraceDimensions,sdkRouteTraceLabels } from "./sdkRouteTraceExercise.js";
 import { evaluateSingleAgentExplanation,evaluateSingleAgentScenario,getSingleAgentExplanationFeedback,getSingleAgentFeedback,getSingleAgentOptions,sanitizeSingleAgentEvidence,singleAgentDialogDescribedBy,singleAgentDimensions,singleAgentExercise,singleAgentExplanationDimensions,singleAgentPrimary,singleAgentRemediation,singleAgentTransfer,updateSingleAgentEvidence } from "./singleAgentExercise.js";
 import { evaluateTextSpeechPatternExplanation,evaluateTextSpeechPatternScenario,getTextSpeechPatternExplanationFeedback,getTextSpeechPatternFeedback,getTextSpeechPatternOptions,sanitizeTextSpeechPatternEvidence,textSpeechPatternDialogDescribedBy,textSpeechPatternDimensions,textSpeechPatternExercise,textSpeechPatternExplanationDimensions,textSpeechPatternPrimary,textSpeechPatternRemediation,textSpeechPatternTransfer,updateTextSpeechPatternEvidence } from "./textSpeechPatternExercise.js";
 import { evaluateVisualPatternExplanation,evaluateVisualPatternScenario,getVisualPatternExplanationFeedback,getVisualPatternFeedback,getVisualPatternOptions,sanitizeVisualPatternEvidence,updateVisualPatternEvidence,visualPatternDialogDescribedBy,visualPatternDimensions,visualPatternExercise,visualPatternExplanationDimensions,visualPatternPrimary,visualPatternRemediation,visualPatternTransfer } from "./visualPatternExercise.js";
@@ -1709,12 +1710,15 @@ export function App() {
 
   function openSdkRouteChooser(){
     setTerminalOpen(true);setRuinsTerminalKind("sdk-route-chooser");
-    if(!sdkRouteSession){const resume=deriveSdkRouteResume(sdkRouteEvidence);setSdkRouteSession({form:resume.form,index:resume.index,response:{route:"",reason:""},result:null,hintLevel:0,complete:resume.complete});}
+    if(!sdkRouteSession){const resume=deriveSdkRouteResume(sdkRouteEvidence);setSdkRouteSession({form:resume.form,index:resume.index,response:{route:"",reason:""},result:null,hintLevel:0,complete:resume.complete,remediation:null});}
   }
   function exitSdkRouteChooser(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser closed safely. No endpoint, credential, resource, deployment, request, response, or external action was collected.","system");}
-  function checkSdkRoute(event){event.preventDefault();const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary,scenario=scenarios[sdkRouteSession.index],result=evaluateSdkRouteScenario(scenario.id,sdkRouteSession.response,sdkRouteSession.form),hintLevel=result.passed?sdkRouteSession.hintLevel:Math.max(1,sdkRouteSession.hintLevel);setSdkRouteSession({...sdkRouteSession,result,hintLevel});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:sdkRouteSession.form,scenarioId:scenario.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:result.passed?sdkRouteEvidence?.masteryStatus??"in_progress":"remediation_required"}));}
+  function checkSdkRoute(event){event.preventDefault();const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary,scenario=scenarios[sdkRouteSession.index],result=evaluateSdkRouteScenario(scenario.id,sdkRouteSession.response,sdkRouteSession.form),hintLevel=result.passed?sdkRouteSession.hintLevel:Math.max(1,sdkRouteSession.hintLevel);const traceScenario=result.passed?null:getSdkRouteTraceScenario(scenario,sdkRouteSession.form);setSdkRouteSession({...sdkRouteSession,result,hintLevel,remediation:traceScenario?{scenario:traceScenario,response:{route:"",endpoint_family:"",next_action:""},result:null,hintLevel:0}:null});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:sdkRouteSession.form,scenarioId:scenario.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:result.passed?sdkRouteEvidence?.masteryStatus??"in_progress":"remediation_required"}));}
   function revealSdkRouteHint(){const hintLevel=Math.min(3,sdkRouteSession.hintLevel+1);setSdkRouteSession({...sdkRouteSession,hintLevel});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{hintLevel}));}
-  function advanceSdkRoute(){if(!sdkRouteSession.result?.passed)return;const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary;if(sdkRouteSession.index===scenarios.length-1){setSdkRouteSession({...sdkRouteSession,complete:true,result:null});return;}setSdkRouteSession({...sdkRouteSession,index:sdkRouteSession.index+1,response:{route:"",reason:""},result:null,hintLevel:0});}
+  function checkSdkRouteTrace(event){event.preventDefault();const remediation=sdkRouteSession.remediation;if(!remediation)return;const result=evaluateSdkRouteTrace(remediation.scenario.id,remediation.response,sdkRouteSession.form);const hintLevel=result.passed?remediation.hintLevel:Math.max(1,remediation.hintLevel);setSdkRouteSession({...sdkRouteSession,remediation:{...remediation,result,hintLevel}});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{remediationScenarioId:remediation.scenario.id,remediationCorrectness:result.correctness,incrementRemediationAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:"remediation_required"}));}
+  function revealSdkRouteTraceHint(){const remediation=sdkRouteSession.remediation;if(!remediation)return;const hintLevel=Math.min(3,remediation.hintLevel+1);setSdkRouteSession({...sdkRouteSession,remediation:{...remediation,hintLevel}});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{hintLevel}));}
+  function retrySdkRouteAfterTrace(){if(!sdkRouteSession.remediation?.result?.passed)return;setSdkRouteSession({...sdkRouteSession,response:{route:"",reason:""},result:null,hintLevel:0,remediation:null});}
+  function advanceSdkRoute(){if(!sdkRouteSession.result?.passed)return;const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary;if(sdkRouteSession.index===scenarios.length-1){setSdkRouteSession({...sdkRouteSession,complete:true,result:null,remediation:null});return;}setSdkRouteSession({...sdkRouteSession,index:sdkRouteSession.index+1,response:{route:"",reason:""},result:null,hintLevel:0,remediation:null});}
   function acknowledgeSdkRouteForm(){if(!sdkRouteSession?.complete||!sdkRouteEvidence?.confidence)return;if(sdkRouteSession.form==="primary"){setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true,confidence:null}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser primary form complete at 16 of 16. A fresh transfer form remains.","teacher");return;}focusContinueAfterSdkRouteRef.current=true;setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"mastered",clearMisconceptionTags:true}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser mastery confirmed: route and reason passed on all 32 primary and fresh-transfer dimensions.","teacher");}
 
   function openSingleAgent(){setTerminalOpen(true);setRuinsTerminalKind("single-agent");if(!singleAgentSession){const form=singleAgentEvidence?.masteryStatus==="primary_complete"?"transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setSingleAgentSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{fit_instructions:"",least_privilege:"",failure_safety:"",client_flow:""},explanationResult:null,ownershipConfirmed:false});}}
@@ -3492,6 +3496,40 @@ export function App() {
                 const scenario=scenarios[sdkRouteSession.index];
                 const options=getSdkRouteOptions(sdkRouteSession.form);
                 const routeFeedback=getSdkRouteFeedback(scenario,sdkRouteSession.result,sdkRouteSession.hintLevel);
+                if(sdkRouteSession.remediation){
+                  const remediation=sdkRouteSession.remediation;
+                  const traceOptions=getSdkRouteTraceOptions();
+                  const traceFeedback=getSdkRouteTraceFeedback(remediation.result,remediation.hintLevel);
+                  return <form className="model-choice-form sdk-route-trace-form" onSubmit={checkSdkRouteTrace}>
+                    <header>
+                      <p className="pane-label">901 TEACHER // SDK DECISION TRACE · ONE SCENARIO · {remediation.scenario.id}</p>
+                      <h2>{remediation.scenario.prompt}</h2>
+                      <p>Trace three separate decisions. This is targeted {sdkRouteSession.form === "transfer" ? "fresh-transfer" : "primary"} remediation for the route/reason miss.</p>
+                      <p className="model-choice-boundary" role="note">OFFLINE ONLY · No URL, endpoint value, credential, resource name, deployment, request, response, or live action is entered or performed. A correct trace does not grant access or authority.</p>
+                    </header>
+                    <div className="model-choice-fields sdk-route-trace-fields">
+                      {sdkRouteTraceDimensions.map(dimension=>{
+                        const ok=remediation.result?.correctness[dimension];
+                        const feedbackId=`sdk-trace-${remediation.scenario.id}-${dimension}-feedback`;
+                        return <label key={dimension}>
+                          <span>{sdkRouteTraceLabels[dimension]}</span>
+                          <select aria-label={sdkRouteTraceLabels[dimension]} aria-invalid={remediation.result?!ok:undefined} aria-describedby={remediation.result?feedbackId:undefined} value={remediation.response[dimension]} onChange={event=>setSdkRouteSession({...sdkRouteSession,remediation:{...remediation,response:{...remediation.response,[dimension]:event.target.value},result:null}})}>
+                            <option value="">Choose one</option>
+                            {traceOptions[dimension].map(value=><option key={value} value={value}>{sdkRouteTraceChoiceLabels[value]}</option>)}
+                          </select>
+                          {remediation.result&&<small id={feedbackId}>{ok?"SYSTEM // Correct.":`901 TEACHER // Recheck ${sdkRouteTraceLabels[dimension].replace(/^\d+\. /, "").toLowerCase()}.`}</small>}
+                        </label>;
+                      })}
+                    </div>
+                    <section className="terminal-console model-choice-output">
+                      <div className="console-heading-row"><strong>SYSTEM // STRICT 3-DIMENSION TRACE</strong><button className="run-action" type="submit">Check three decisions</button></div>
+                      <div role="status" aria-live="polite">{traceFeedback.systemScore}</div>
+                      {traceFeedback.teacherRemediation&&<p className="teacher-remediation"><strong>901 TEACHER // TARGETED REMEDIATION</strong><span>{traceFeedback.teacherRemediation}</span></p>}
+                      {remediation.result&&!remediation.result.passed&&<button className="hint-action" type="button" onClick={revealSdkRouteTraceHint}>Reveal next trace cue</button>}
+                      {remediation.result?.passed&&<button className="confirm-action" type="button" onClick={retrySdkRouteAfterTrace}>Return to a fresh route retry</button>}
+                    </section>
+                  </form>;
+                }
                 return <form className="model-choice-form" onSubmit={checkSdkRoute}>
                   <header>
                     <p className="pane-label">{sdkRouteSession.form.toUpperCase()} · ROUTE REASONING · {scenario.id}</p>
