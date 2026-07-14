@@ -31,6 +31,7 @@
 - Production build passed with only the existing large-chunk advisory.
 - Fresh focused Playwright pass covered invalid and valid entry gates, native date/number/select/checkbox controls, error associations, focus transitions, one-scenario remediation, blank retry, exact `640 x 480` and `320 x 240` containment, the longest resume label, reduced motion, and runtime errors.
 - A coordinator full-E2E follow-up caught an initial optional-action focus-priority regression. The final source contract explicitly leaves the optional button unreferenced and focuses required scene progression through `continueButtonRef`; the focused regression protects this exact ordering.
+- A second coordinator replay exposed the shared Terminal cleanup's delayed fallback overriding that correct layout-effect focus. Terminal cleanup now exits when a connected non-body element already owns explicit transition focus; ordinary closes that leave focus on `body`, `null`, or a disconnected dialog node still restore the original trigger or established fallback.
 
 ## Remaining manual risk
 

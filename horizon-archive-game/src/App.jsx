@@ -36,6 +36,7 @@ import {
   validateCharacterName,
 } from "./openingFlow.js";
 import { ADVENTURE_VERBS, getVerbPressedState } from "./verbSelection.js";
+import { shouldRestoreTerminalFocus } from "./terminalFocus.js";
 import {
   checkFirstTerminalOrientation,
   evaluateTerminalCode,
@@ -362,6 +363,7 @@ function TerminalShell({ exerciseId, title, filename, lessonId, statusText, clos
     return () => {
       const trigger = triggerRef.current;
       requestAnimationFrame(() => {
+        if (!shouldRestoreTerminalFocus(document.activeElement, document.body)) return;
         const target = trigger?.isConnected && !trigger.hasAttribute("disabled")
           ? trigger
           : document.querySelector('[data-terminal-focus-fallback]:not([disabled])');
