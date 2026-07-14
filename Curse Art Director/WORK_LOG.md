@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Signal-coupler cultivated-route re-review
+
+- **Outcome:** issued a scoped `PASS` for the redesigned signal-coupler integration. The short source-collar transitions now dive into asymmetric low glass-ceramic seams with two crop occlusions, one flush growth-mat branch, and three visibly different stewardship repairs; the full-width human cable-tray grammar no longer dominates the Meadow. This does not waive the separate requirement to replace the concept-derived Meadow backing with deliberately authored native `640 x 360` pixel art before final environment freeze.
+- **Files:** added [the cultivated-route review](reviews/2026-07-13-signal-coupler-cultivated-route.md) and updated this work log; no raster, runtime, lore, curriculum, test, or hidden-lore file changed.
+- **Validation:** inspected the native `640 x 360` and exact nearest-neighbor `320 x 180` composites plus transparent still, manifest, builder, package notes, Location Scout log, and prior review. Rebuilt the deterministic production package and passed focused coupler tests `3/3`. Confirmed two edge-reaching routes and the mat branch have zero native/narrow alpha breaks; `0` parallel cyan tray runs; `0` regular clamps; `2` entry collars; `2` crop occlusions; `1` mat contact; `3` repair families; locked central-body SHA-256 unchanged; six fixed bodies; six distinct membrane states; `3,596` membrane-only animated pixels; clean tongue; first-person/no-ship framing; and `71.26%` minimum linear detail retention.
+- **Next recommended item:** Accessibility Sentinel should audit the live coupler and its unchanged hotspot at exact `640 x 480` and `320 x 240`, including focus/highlight fit, reduced-motion still, accessible naming, and lower-interface separation. Future native Meadow repainting should absorb the two deterministic glass occluders without changing this accepted route topology.
+- **Unresolved risks:** the two new glass occluders remain simpler than the concept-derived backing, and the immediate source collars still resemble bundled technical channels when viewed alone. Their brief `57–60 px` transition, varied downstream repairs, depth change, field occlusion, and flush substrate handoff keep those issues below the bounded integration rejection threshold. Full-scene pixel-authoring, grayscale, thumbnail, hotspot, and complete-frame evidence remain required before final environment freeze.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Signal-coupler production integration gate
 
 - **Outcome:** issued `REVISE`. The high-resolution rebuild closes the prior detail-loss problem and the central coupler meets richness, first-person, clean-laminate, screen-only animation, and original-core expectations. The added full-width side runs do not yet read as a Builder landscape system.
