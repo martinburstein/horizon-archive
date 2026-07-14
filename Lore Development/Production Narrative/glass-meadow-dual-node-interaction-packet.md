@@ -2,9 +2,9 @@
 
 Status: production-ready, surface-canon only.
 
-Production-art override: the playable first Terminal is now the interconnected fixed-body signal coupler. Apply `glass-meadow-signal-coupler-integration-contract.md` wherever this packet says `Petal Terminal`, describes a freestanding crystal-petal body, assigns translated writing to its membrane, or requires that body to brighten, pulse, settle, or display completion. The older `Petal` wording remains here as progression provenance until Coder and Location records complete the terminology migration; First Signal ownership, Route Marker gating, evidence, recovery, and transition behavior remain authoritative.
+Production-art authority: `glass-meadow-signal-coupler-integration-contract.md` owns the interconnected body, screen-only motion, inspection ladder, and bounded first-contact inferences. This packet owns the two-node progression sequence. Neither document permits translated membrane writing or a physical response from the field-linked Terminal.
 
-Scene contract: `GM-01` contains two separate learning surfaces with a strict sequence. The many-petaled **Petal Terminal** owns First Signal (`L-01-01`). The compact three-fin **Route Marker** is visible but prerequisite-locked until the player acknowledges First Signal; it then enters an awake route-training state for `L-01-02` and gains completed directional geometry only after route mastery. Neither node speaks for the whole Machine.
+Scene contract: `GM-01` contains two separate learning surfaces with a strict sequence. The interconnected **field-linked Terminal** owns First Signal (`L-01-01`). The compact three-fin **Route Marker** is visible but prerequisite-locked until the player acknowledges First Signal; it then enters an awake route-training state for `L-01-02` and gains completed directional geometry only after route mastery. Neither node speaks for the whole Machine.
 
 ## Landscape function boundary
 
@@ -14,12 +14,12 @@ Apply the [Builder landscape function and reveal contract](builder-landscape-fun
 
 - Scene sheet: `Concept Art Book/scenes/GM-01-glass-meadow-petal-route-marker.md`
 - Game scene ID: `meadow`
-- Petal hotspot ID: `primary`
+- Field-linked Terminal hotspot ID: `primary`
 - Route hotspot ID: `route-marker`
 - Pixel scene module: `horizon-archive-game/src/PixelMeadow.jsx`
 - Current provisional module grid: `320 × 180` square logical pixels
 - Final game canvas target: `640 × 480` square logical pixels, period-authentic 4:3, with the adventure scene above and compact dialogue/verb/inventory UI below
-- Petal exercise: `terminal-l0101-independent-run`; lesson `L-01-01`; activity `A-L0101-3`; skills `PY-001`, `PY-002`, `PY-003`
+- First Signal exercise: `terminal-l0101-independent-run`; lesson `L-01-01`; activity `A-L0101-3`; skills `PY-001`, `PY-002`, `PY-003`
 - Route exercise: `EX-L0102-ROUTE-MARKER`; lesson `L-01-02`; activity `A-L0102-3`; skills `PY-004`, `PY-005`, `PY-006`
 
 The `320 × 180` meadow renderer is a provisional scene module inside the final `640 × 480` composition, not the complete game resolution. Copy below is written for the compact bottom UI: one observation or instruction at a time, no scroll-dependent lore, and no paragraph longer than two short sentences.
@@ -30,7 +30,6 @@ Use the shared labels:
 
 - `PILOT // FLIGHT RECORDER`
 - `EXPEDITION LINK // LOCAL TOOLING`
-- `LOCAL SURFACE // PROVISIONAL TRANSLATION — PETAL`
 - `LOCAL SURFACE // PROVISIONAL TRANSLATION — ROUTE MARKER`
 - `SCENE // SENSOR RECORD`
 - `SYSTEM // EXPEDITION STATE`
@@ -43,17 +42,17 @@ Pixel-UI budget:
 - Button label: verb phrase under 24 characters.
 - Never combine two speakers in one dialogue box.
 
-The shared modal, keyboard, dismissal, focus-return, and post-mastery navigation authority is `terminal-focus-and-dismissal-contract.md`. In particular, closing First Signal must return to the Petal without unlocking the Route Marker; only acknowledgement changes node state.
+The shared modal, keyboard, dismissal, focus-return, and post-mastery navigation authority is `terminal-focus-and-dismissal-contract.md`. In particular, closing First Signal must return to the field-linked Terminal without unlocking the Route Marker; only acknowledgement changes node state.
 
 ## Ownership and state model
 
-| State | Petal Terminal | Route Marker | Forward action |
+| State | Field-linked Terminal | Route Marker | Forward action |
 |---|---|---|---|
-| `M0 — arrival` | available, visually locked until opened | visible, prerequisite-locked | Use Petal |
-| `M1 — First Signal active` | awake; session open or held | prerequisite-locked | Complete and acknowledge First Signal |
-| `M2 — route available` | completed geometry; no longer owns active lesson | awake core and short route groove | Use Route Marker |
-| `M3 — route active` | completed and stable | awake; session open or held | Pass primary, transfer, retrieval, confidence |
-| `M4 — meadow complete` | completed and stable | completed directional geometry | Follow marked route |
+| `M0 — arrival` | available; stable body and ambient membrane cycle | visible, prerequisite-locked | Use field-linked Terminal |
+| `M1 — First Signal active` | stable; workbench open or held | prerequisite-locked | Complete and acknowledge First Signal |
+| `M2 — route available` | unchanged; no longer owns active lesson | awake core and short route groove | Use Route Marker |
+| `M3 — route active` | unchanged | awake; session open or held | Pass primary, transfer, retrieval, confidence |
+| `M4 — meadow complete` | unchanged | completed directional geometry | Follow marked route |
 
 “Locked” means the human expedition has not met the prerequisite for opening that local lesson surface. It does not mean the Route Marker refuses, judges, sleeps, waits, or knows what the player has done.
 
@@ -63,33 +62,43 @@ The shared modal, keyboard, dismissal, focus-return, and post-mastery navigation
 
 `SCENE // SENSOR RECORD`:
 
-> A Petal Terminal rises beside the path. Farther right, a smaller three-fin marker remains dark.
+> Cold glass fins rise from a dark housing. Farther right, a smaller three-fin marker remains dark.
 
 `PILOT // FLIGHT RECORDER`:
 
-> Two nodes. The larger one exposes the only active link.
+> Two exposed parts. My recorder finds one active workbench.
 
 No arrival line may call the Route Marker ready or available.
 
-## Petal Terminal — before First Signal acknowledgement
+## Field-linked Terminal — before First Signal acknowledgement
 
 ### `LOOK AT`
 
 `PILOT // FLIGHT RECORDER`:
 
-> Crystal petals frame a dark core. The expedition link detects a bounded file exercise.
+> Cold glass fins rise from a dark housing. Paired channels continue under the field and beyond sight.
+
+Optional repeated inspection:
+
+> The membrane repeats. The housing, front laminate, channels, and ground contact do not move.
+
+Optional Pilot inference after the stable observation:
+
+> It doesn't end at the housing. One exposed part of something I can't see.
+
+The first two lines are sensory evidence. The third is explicitly Pilot-owned inference; it cannot identify a network, destination, contents, or native function.
 
 ### `TALK TO`
 
 `PILOT // FLIGHT RECORDER`:
 
-> "First signal. Mine, not yours."
+> I called it First Signal. The name belongs to my recorder, not this surface.
 
 `SCENE // SENSOR RECORD`:
 
-> No audio reply separates from wind and pollen.
+> Wind crosses the housing. The membrane continues its prior cycle.
 
-Replace the generic “something hears you” response. Non-detection is useful feedback and preserves mystery.
+Talking changes no world, exercise, evidence, or animation state.
 
 ### `USE` first open
 
@@ -97,32 +106,34 @@ Replace the generic “something hears you” response. Non-detection is useful 
 
 > First Signal active. Edit the file, run it, then review the output.
 
-`LOCAL SURFACE // PROVISIONAL TRANSLATION — PETAL`:
-
-> INPUT SURFACE OPEN. SOURCE UNNAMED.
-
 `SCENE // SENSOR RECORD`:
 
-> The Petal core brightens. The Route Marker stays dark.
+> Six abstract arrangements repeat on the membrane. The Route Marker stays dark.
 
-## Petal session, hints, and remediation
+`PILOT // FLIGHT RECORDER`:
+
+> My recorder assigns none of them a reading.
+
+The dark Python workspace belongs to human expedition tooling. It is not text visibly translated from the membrane.
+
+## First Signal session, hints, and remediation
 
 ### GM01 — Close unfinished
 
 - `SYSTEM // EXPEDITION STATE`: "First Signal held in this application session."
-- `SCENE // SENSOR RECORD`: "The workbench closes. The Petal edge light remains."
+- `SCENE // SENSOR RECORD`: "The workbench closes. The membrane cycle continues unchanged."
 
 ### GM02 — Reopen in the same application session
 
 - `SYSTEM // EXPEDITION STATE`: "First Signal restored. Code, result, and current hint level are unchanged."
-- `LOCAL SURFACE // PROVISIONAL TRANSLATION — PETAL`: "INPUT OPEN. TRANSFER INCOMPLETE."
+- `SCENE // SENSOR RECORD`: "The same six membrane arrangements continue."
 
 ### GM03 — Full reload before acknowledgement
 
 - `SYSTEM // EXPEDITION STATE`: "Application session restarted. First Signal opens from a clean working file."
 - `SYSTEM // EXPEDITION STATE`: "Attempt and hint-use evidence remain; learner code was not saved."
 
-Current implementation resets active code, result, and visible hint level on reload while preserving sanitized exercise evidence. Do not call this the Petal forgetting.
+Current implementation resets active code, result, and visible hint level on reload while preserving sanitized exercise evidence. Do not call this the Terminal forgetting.
 
 ### GM04 — Empty or missing assignment
 
@@ -150,22 +161,21 @@ Tone rule: point to the smallest useful correction. Never say “easy,” “obv
 ### GM08 — Valid run, before acknowledgement
 
 - `EXPEDITION LINK // LOCAL TOOLING`: "Output verified. Review all three lines, then acknowledge completion."
-- `SCENE // SENSOR RECORD`: "The Petal core repeats three measured pulses. The Route Marker remains dark."
+- `SCENE // SENSOR RECORD`: "The membrane keeps its prior cycle. The Route Marker remains dark."
 
 ### GM09 — First Signal acknowledgement
 
 - `EXPEDITION LINK // LOCAL TOOLING`: "First Signal mastery evidence recorded. Learner code was not retained."
-- `LOCAL SURFACE // PROVISIONAL TRANSLATION — PETAL`: "VISIBLE SIGNAL CONFIRMED."
-- `SCENE // SENSOR RECORD`: "The Petal core settles. The Route Marker gains a pale core and one short groove."
+- `SCENE // SENSOR RECORD`: "The field-linked Terminal remains unchanged. The Route Marker gains a pale core and one short groove."
 - `PILOT // FLIGHT RECORDER`: "The small node changed after the transfer. That supports a sequence, not an audience."
 
-First Signal acknowledgement does **not** complete the meadow or enable departure. It changes ownership of the active lesson from Petal to Route Marker.
+First Signal acknowledgement does **not** complete the meadow or enable departure. It changes ownership of the active lesson from the field-linked Terminal to the Route Marker.
 
-## Petal Terminal — after First Signal acknowledgement
+## Field-linked Terminal — after First Signal acknowledgement
 
 ### `LOOK AT`
 
-> The Petal core holds a stepped completion mark. Its workbench is closed.
+> The same six membrane arrangements repeat. The side channels remain beyond sight.
 
 Owner: `SCENE // SENSOR RECORD`.
 
@@ -179,7 +189,7 @@ Owner: `SCENE // SENSOR RECORD`.
 
 `PILOT // FLIGHT RECORDER`:
 
-> "One output confirmed. I won't turn that into a conversation."
+> One output verified. I won't turn that into a conversation.
 
 These actions always redirect without reopening or resetting either exercise.
 
@@ -205,13 +215,13 @@ These actions always redirect without reopening or resetting either exercise.
 
 `SYSTEM // EXPEDITION STATE`:
 
-> Route lesson locked. Complete and acknowledge First Signal at the Petal Terminal.
+> Route lesson locked. Complete and acknowledge First Signal at the field-linked Terminal.
 
 Wrong-action recovery: keep the Route Marker selectable, identify the prerequisite, and name the exact usable hotspot. Never say it “refuses the link.” No state is lost.
 
 ## Route Marker — awake state
 
-### GM10 — State change after Petal acknowledgement
+### GM10 — State change after First Signal acknowledgement
 
 `SCENE // SENSOR RECORD`:
 
@@ -402,32 +412,28 @@ Activating `Return: Glass Meadow` replaces the Chapter II scene directly with th
 3. The completed/crowned Route Marker and its earned directional geometry remain visible.
 4. Focus moves to the existing `Depart: Drowned Archive` action; no Terminal opens automatically.
 
-Return preserves all sanitized exercise, route, calibration, Chapter II, and later evidence exactly as recorded. It closes only transient working surfaces already covered by the navigation boundary. It must not reset the Petal, darken the Route Marker, replay First Signal, re-award the crowned state, erase optional-calibration evidence, demote later mastery, or reinterpret a retained completion observation as a new Machine response.
+Return preserves all sanitized exercise, route, calibration, Chapter II, and later evidence exactly as recorded. It closes only transient working surfaces already covered by the navigation boundary. It must not reset the field-linked Terminal, darken the Route Marker, replay First Signal, re-award the crowned state, erase optional-calibration evidence, demote later mastery, or reinterpret a retained completion observation as a new Machine response.
 
 Reload while the returned Meadow is pending restores this same completed hold, System summary, and departure focus. Re-departure uses the unchanged `Depart: Drowned Archive` action and returns directly to Chapter II. If Chapter II was already complete, its retained completed observation and pending forward action may be restored; this is state recovery, not a second completion event.
 
 The return action stays in the lower interface at both canonical and narrow layouts. The reserved ridge remains a secondary discoverability target with no painted exit icon, label, or new structure. Direct scene replacement is the reduced-motion behavior; no substitute transition is required.
 
-## Current gameplay copy reconciliation
+## Remaining runtime copy correction
 
-These production recommendations supersede stale runtime copy; no gameplay code is edited in this turn.
+The earlier migration has removed the retired freestanding-body and translated-membrane language from the live opening. One exact runtime correction remains; no gameplay code is edited in this turn.
 
-| Current copy | Issue | Compact replacement |
+| Current live copy | Issue | Production replacement |
 |---|---|---|
-| "A dormant interface waits inside the crystal bloom." | “Dormant” and “waits” imply unsupported state and anticipation | "A Petal Terminal exposes the only active link in the meadow." |
-| "The bloom answers in your own alphabet... already listening for you." | Claims no translation and prior attention | "The Petal repeats the verified output in visible light. Reception remains unknown." |
-| "Nothing here has a mouth. Something still seems to hear you." | Assigns hearing without a source | "No audio response is detected. The recorder preserves the question." |
-| "A separate route-marker Terminal has risen from the meadow." | The Marker was already visible in the finalized scene | "The visible Route Marker now carries an active core and short groove." |
-| "The route marker refuses the link." | Gives a prerequisite state intent | "Route lesson locked. Acknowledge First Signal at the Petal Terminal." |
-| "The route marker accepts both forms." | Personifies validation and omits retrieval | "Both forms and retrieval are complete. Directional geometry now marks the path." |
-| "The next interface is already awake." | Implies availability and anticipation before observation | "The marked path reaches the flooded basin." |
+| `First signal. Mine, not yours.` | Grammatically addresses the surface and leaves the human ownership correction implicit | `I called it First Signal. The name belongs to my recorder, not this surface.` |
+
+If repeated `LOOK AT` support is implemented later, advance only through the observation ladder above. Do not derive the step from membrane animation timing, learner results, save age, or hidden state. Repeated inspection may enrich description; it cannot award evidence or change progression.
 
 ## Wrong-action recovery matrix
 
 | Player action | Safe response | State change |
 |---|---|---|
-| Use Route Marker while locked | Name First Signal prerequisite and Petal hotspot | None |
-| Use Petal after completion | Point to awake Route Marker | None |
+| Use Route Marker while locked | Name First Signal prerequisite and field-linked Terminal hotspot | None |
+| Use field-linked Terminal after completion | Point to awake Route Marker | None |
 | Talk to either node | Pilot line plus bounded non-detection | None |
 | Close either active Terminal | Confirm session held | None |
 | Reload unfinished work | Explain clean working form and retained mastery evidence | Working session reset only |
@@ -458,9 +464,9 @@ This preserves `L-01-01 → L-01-02 → L-01-03` order, normalizes beginner erro
 
 ## Validation gates
 
-- Petal owns First Signal; Route Marker owns route training.
-- Route Marker is visible but unavailable before Petal acknowledgement.
-- Petal acknowledgement changes Route Marker from locked to awake; it does not complete the meadow.
+- The field-linked Terminal owns First Signal; the Route Marker owns route training.
+- The Route Marker is visible but unavailable before First Signal acknowledgement.
+- First Signal acknowledgement changes the Route Marker from locked to awake; it does not complete the meadow.
 - Route mastery changes awake geometry into completed directional geometry.
 - All LOOK/USE/TALK actions have compact, recoverable responses in locked, awake, and completed states.
 - Close/reopen and reload language matches current session/evidence contracts.
