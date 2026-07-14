@@ -1039,6 +1039,29 @@ h1 {
   font-size: 8px;
   line-height: 10px;
 }
+.final-confidence-workspace select:focus-visible,
+.final-confidence-workspace input:focus-visible {
+  outline: 2px solid #f0c96a;
+  outline-offset: -3px;
+}
+.final-confidence-workspace .ownership-confirmation input,
+.final-confidence-workspace .confidence-group input {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+.final-confidence-workspace .ownership-confirmation,
+.final-confidence-workspace .confidence-group label {
+  min-height: 24px;
+}
+.final-confidence-entry-errors {
+  margin: 5px 0;
+  padding-left: 18px;
+  color: #e8d39b;
+  font-size: 8px;
+  line-height: 10px;
+}
 .optional-practice-action {
   border-color: #8b7851;
   color: #e8d39b;
@@ -1117,6 +1140,27 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] #meadow-choice-summary { padding-left: 2px; border-left-width: 1px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-footer { gap: 2px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions { flex: 1; min-width: 0; flex-wrap: nowrap; gap: 2px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] {
+  position: relative;
+  height: 24px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] > p {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] .dialogue-footer,
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] .dialogue-actions {
+  width: 100%;
+  height: 24px;
+  min-height: 24px;
+}
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] .speaker { display: none; }
 .canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] {
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);

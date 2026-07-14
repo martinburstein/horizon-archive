@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Opening objective, cultivated coupler, and SIM-03 final gate
+
+- **Outcome:** `PASS after correction`. The lower-band objective preserves announcement and incomplete-save guidance without covering the field-linked Terminal. The cultivated route organs remain inside the decorative, pointer-transparent, reduced-motion-safe coupler picture while the full-body hotspot owns interaction semantics. SIM-03 now gives every failed prerequisite a specific `aria-invalid`/`aria-describedby` relationship, deterministic invalid/gate/item/retry/summary focus, atomic status, `24 px` native checks/radios, and a disabled acknowledgement until confidence exists. A fresh live check found and fixed the longest narrow resume action clipping below the `320 x 240` host.
+- **Files:** corrected `horizon-archive-game/src/App.jsx` and `src/styles.css`; strengthened `test/finalConfidenceExercise.test.js`; added `Accessibility Sentinel/opening-demo/SIM03_OBJECTIVE_FINAL_ACCESSIBILITY_REVIEW.md`; and updated this log. Curriculum gates, saved-evidence allowlists, story, and production art were not weakened or changed.
+- **Validation:** focused opening/SIM-03/coupler tests `18/18`; complete suite `232/232`; production build; and a fresh reduced-motion Playwright pass at exact `640 x 480` and `320 x 240` with zero runtime errors. The browser pass covered eight individually described invalid native controls, first-invalid and valid-gate focus, one-dimension item feedback, blank retry/focus, page/dialog/workspace containment, and the corrected `225.5 x 24 px` longest resume action at `x=6, y=211`.
+- **Next:** preserve the lower-band objective, decorative-picture/focusable-hotspot split, static reduced-motion source, SIM-03 privacy/mastery boundaries, one-scroll owner, field errors, focus handoffs, and compact resume treatment. Run human NVDA/equivalent, physical keyboard/switch-control, forced-colors, and 200% zoom observations before any conformance claim.
+- **Risk:** those platform and assistive-technology observations remain manual. The full coordinator title-to-credits E2E should still run after the nine-agent checkpoint; this bounded live pass exercised the new deep state directly.
+- **Status:** `PASS - bounded gate cleared; manual AT observations remain`
+
 ## 2026-07-13 - Field-linked Terminal and SDK decision-trace final gate
 
 - **Outcome:** `PASS` for the bounded interaction gate. The full coupler hotspot, `field-linked Terminal` naming, left-cleared label, independently keyboard-readable Route Key, targeted SDK trace, exact settled viewports, native-select containment, focus order, field-associated feedback, polite status, blank retry, strict mastery, privacy, and reduced-motion still contract all pass. No runtime, curriculum, story, mastery, or production-art correction was required.
