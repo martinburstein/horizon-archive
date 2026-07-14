@@ -1,5 +1,14 @@
 # Accessibility Sentinel Work Log
 
+## 2026-07-13 - Field-linked Terminal and SDK decision-trace final gate
+
+- **Outcome:** `PASS` for the bounded interaction gate. The full coupler hotspot, `field-linked Terminal` naming, left-cleared label, independently keyboard-readable Route Key, targeted SDK trace, exact settled viewports, native-select containment, focus order, field-associated feedback, polite status, blank retry, strict mastery, privacy, and reduced-motion still contract all pass. No runtime, curriculum, story, mastery, or production-art correction was required.
+- **Files:** added `Accessibility Sentinel/opening-demo/SIGNAL_COUPLER_SDK_TRACE_FINAL_REVIEW.md`; strengthened `playtest/e2e-playthrough.mjs`; and updated this log. E2E changes cover the new trace and repair only stale source/timing assumptions.
+- **Validation:** live first-contact checks at exact `640 x 480` and `320 x 240`; `29/29` focused tests; `223/223` complete unit suite; production build; and a `94.9`-second full title-to-credits E2E with zero runtime errors. The E2E proves Route Key focus, one-column exact-host reflow, no page/form/key horizontal overflow, `24 px` select floor, full option labels, independent error associations, `3/3` recovery, blank chooser retry, privacy-safe `17` chooser plus `2` remediation attempts, mastery, and reload focus.
+- **Next:** preserve the accepted coupler geometry, label placement, animation/reduced-motion split, Route Key independence, settled-layout waits, three-column canonical/one-column narrow source contract, field feedback, blank retry, and privacy boundary. Schedule a human NVDA/equivalent, physical switch, forced-colors, 200% zoom, and reduced-motion-emulation pass before a conformance claim.
+- **Risk:** those human assistive-technology and platform modes remain unobserved. The concept-derived Meadow backing remains under its separate future native-pixel replacement requirement; the coupler route integration itself has the Art Director's scoped `PASS`.
+- **Status:** `PASS - final combined interaction gate cleared; no bounded blocker`
+
 ## 2026-07-13 - Signal-coupler and SDK Route Chooser accessibility gate
 
 - **Outcome:** `REVISE`. Screen-only coupler motion, the reduced-motion still, decorative/pointer-transparent rendering, exact frame containment, first-Terminal title focus, and strict SDK route-and-reason semantics pass. The production coupler now exceeds its old hotspot/focus geometry and still carries the retired `Petal terminal` name; the full SDK Route Key is also attached to initial dialog speech and lacks rendered deep-state evidence.

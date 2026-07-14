@@ -35,6 +35,7 @@ const referenceBoundaryPrimary = JSON.parse(readFileSync(resolve(repositoryRoot,
 const referenceBoundaryTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-03/reference_transfer_answers.json"), "utf8"));
 const referenceSdkRoutePrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-03/sdk_route_reference_answers.json"), "utf8"));
 const referenceSdkRouteTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-03/sdk_route_reference_transfer_answers.json"), "utf8"));
+const referenceSdkTracePrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-03/sdk_route_trace_reference_answers.json"), "utf8"));
 const referenceSingleAgentPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-04/reference_primary_answers.json"), "utf8"));
 const referenceSingleAgentTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-04/reference_transfer_answers.json"), "utf8"));
 const referenceTextSpeechPrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-05-05/reference_primary_answers.json"), "utf8"));
@@ -237,9 +238,7 @@ print("Operator:", learner)`);
   await page.getByRole("radio", { name: "Medium", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
   await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).waitFor();
-  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).evaluate((element) => {
-    if (document.activeElement !== element) throw new Error("Route completion did not move focus to the next meaningful action");
-  });
+  await page.waitForFunction(() => document.activeElement?.getAttribute("aria-label") === "Start optional calibration practice");
   await assertPixelMeadow(page, "route complete", "completed", "completed");
   await capturePixelMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
   const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
@@ -1099,7 +1098,69 @@ print("Operator:", learner)`);
   await page.reload();await page.getByRole("button",{name:"Resume signal"}).click();await page.getByRole("button",{name:"Start Client Boundary Transfer",exact:true}).click();await assertClientBoundaryContinuity(page,"transfer");await page.getByLabel("Client boundary decision",{exact:true}).selectOption("named_model_deployment");await page.getByLabel("Client boundary reason",{exact:true}).selectOption("endpoint_selects_identity_and_model");await page.getByRole("button",{name:"Check client boundary",exact:true}).click();await page.setViewportSize({width:320,height:240});await page.screenshot({path:qaPath("client-boundaries-transfer-remediation-qa.png"),fullPage:true});await page.setViewportSize({width:1600,height:900});await page.getByRole("button",{name:"Exit Client Boundaries",exact:true}).click();await page.getByRole("button",{name:"Resume Client Boundaries",exact:true}).click();if(await page.getByLabel("Client boundary reason",{exact:true}).inputValue()!=="endpoint_selects_identity_and_model")throw new Error("Client boundary transfer reset");const cbd=await page.evaluate(({key})=>localStorage.getItem(key),{key:saveKey});if(cbd.includes("endpoint_selects_identity_and_model")||cbd.includes("authorization error"))throw new Error("Client boundary content persisted");
   for(const id of Object.keys(referenceBoundaryTransfer)){const a=referenceBoundaryTransfer[id];await page.getByLabel("Client boundary decision",{exact:true}).selectOption(a.decision);await page.getByLabel("Client boundary reason",{exact:true}).selectOption(a.reason);await page.getByRole("button",{name:"Check client boundary",exact:true}).click();await page.getByText("CHOICE PASS",{exact:false}).waitFor();await page.getByRole("button",{name:id==="T06"?"Begin closed-note explanation":"Next scenario",exact:true}).click();}await assertClientBoundaryContinuity(page,"closed-note");for(const d of["configuration","client_layers","request_response","simulation_authority"])await page.getByLabel(`Closed-note client boundary ${d}`,{exact:true}).fill("wrong");await page.getByRole("button",{name:"Check client explanation",exact:true}).click();await page.getByRole("status").getByText("0/4 · EXPLANATION NOT YET COMPLETE.",{exact:true}).waitFor();await page.getByText("901 TEACHER // CLIENT LAYERS AND AUTHORITY REMEDIATION",{exact:true}).waitFor();await page.screenshot({path:qaPath("client-boundaries-closed-note-qa.png"),fullPage:true});assertDistinctCaptures(["client-boundaries-primary-qa.png","client-boundaries-transfer-remediation-qa.png","client-boundaries-closed-note-qa.png"]);
   const cbe={configuration:"endpoint address credential identity deployment selects model",client_layers:"project client configuration then compatible inference client",request_response:"send model and input then read returned output",simulation_authority:"mock proves only local flow never authorizes live or destructive action"};for(const[d,v]of Object.entries(cbe))await page.getByLabel(`Closed-note client boundary ${d}`,{exact:true}).fill(v);await page.getByRole("button",{name:"Check client explanation",exact:true}).click();await page.getByText("EXPLANATION PASS",{exact:false}).waitFor();await page.getByRole("checkbox",{name:/produced this client-boundary explanation/i}).check();await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge strict mastery",exact:true}).click();const clientBoundaryContinue=page.getByRole("button",{name:"Start SDK Route Chooser",exact:true});await clientBoundaryContinue.waitFor();if(!await clientBoundaryContinue.evaluate(el=>el===document.activeElement))throw new Error("Client Boundaries mastery did not focus SDK Route Chooser");const cbm=await page.evaluate(({key})=>JSON.parse(localStorage.getItem(key)).clientBoundaryEvidence,{key:saveKey});if(cbm?.masteryStatus!=="mastered"||cbm?.mockPassed!==true)throw new Error(`Client boundary mastery incomplete ${JSON.stringify(cbm)}`);if(["endpoint","deploymentName","credential","requestInput","responseOutput","learnerSource","externalActionRequest","freeText"].some(k=>k in cbm))throw new Error("Client boundary private data persisted");
-  await clientBoundaryContinue.click();for(const[id,answer]of Object.entries(referenceSdkRoutePrimary)){await page.getByLabel("SDK route",{exact:true}).selectOption(answer.route);await page.getByLabel("Reason for SDK route",{exact:true}).selectOption(answer.reason);await page.getByRole("button",{name:"Check route and reason",exact:true}).click();await page.getByText("ROUTE + REASON PASS",{exact:false}).waitFor();await page.getByRole("button",{name:id==="P08"?"View form result":"Next scenario",exact:true}).click();}await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Begin fresh transfer later",exact:true}).click();await page.getByRole("button",{name:"Start SDK Route Transfer",exact:true}).click();for(const[id,answer]of Object.entries(referenceSdkRouteTransfer)){await page.getByLabel("SDK route",{exact:true}).selectOption(answer.route);await page.getByLabel("Reason for SDK route",{exact:true}).selectOption(answer.reason);await page.getByRole("button",{name:"Check route and reason",exact:true}).click();await page.getByText("ROUTE + REASON PASS",{exact:false}).waitFor();await page.getByRole("button",{name:id==="T08"?"View form result":"Next scenario",exact:true}).click();}await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge route mastery",exact:true}).click();const singleAgentAfterSdk=page.getByRole("button",{name:"Start Single Agent",exact:true});await singleAgentAfterSdk.waitFor();if(!await singleAgentAfterSdk.evaluate(el=>el===document.activeElement))throw new Error("SDK Route mastery did not focus Single Agent");const sdkEvidence=await page.evaluate(({key})=>JSON.parse(localStorage.getItem(key)).sdkRouteEvidence,{key:saveKey});if(sdkEvidence?.masteryStatus!=="mastered"||sdkEvidence?.attemptCount!==16)throw new Error(`SDK route mastery incomplete ${JSON.stringify(sdkEvidence)}`);if(["response","endpoint","credential","deploymentName","request","clickTime","keySequence"].some(key=>key in sdkEvidence))throw new Error("SDK route private or dexterity data persisted");
+  await clientBoundaryContinue.click();
+  const sdkRouteDialog = page.locator('[data-terminal-exercise="EX-L0503-SDK-ROUTE-CHOOSER"]');
+  if (await sdkRouteDialog.getAttribute("aria-describedby") !== "sdk-route-offline-warning") throw new Error("SDK Route Key was forced into the initial dialog description");
+  const sdkRouteKey = page.locator("#sdk-route-label-key");
+  await sdkRouteKey.waitFor();
+  if (await sdkRouteKey.getAttribute("role") !== "region" || await sdkRouteKey.getAttribute("tabindex") !== "0" || await sdkRouteKey.getAttribute("aria-labelledby") !== "sdk-route-label-key-title") throw new Error("SDK Route Key is not an independently named keyboard-readable region");
+  await page.getByLabel("SDK route", { exact: true }).selectOption("openai_sdk");
+  await page.getByLabel("Reason for SDK route", { exact: true }).selectOption("openai_compatibility_or_embeddings");
+  await page.getByRole("button", { name: "Check route and reason", exact: true }).click();
+  const sdkTraceForm = page.locator(".sdk-route-trace-form");
+  await sdkTraceForm.waitFor();
+  for (const [width, height, label] of [[640, 480, "640x480"], [320, 240, "320x240"]]) {
+    await page.setViewportSize({ width, height });
+    await page.waitForFunction(() => document.querySelector(".canonical-game-frame")?.dataset.canonicalLayout === "narrow");
+    await page.waitForFunction(({ width, height }) => {
+      const rect = document.querySelector(".canonical-game-frame")?.getBoundingClientRect();
+      return rect && rect.left >= -0.5 && rect.top >= -0.5 && rect.right <= width + 0.5 && rect.bottom <= height + 0.5;
+    }, { width, height });
+    const traceGeometry = await page.evaluate(() => {
+      const frame = document.querySelector(".canonical-game-frame");
+      const dialog = document.querySelector('[data-terminal-exercise="EX-L0503-SDK-ROUTE-CHOOSER"]');
+      const routeKey = document.querySelector("#sdk-route-label-key");
+      const form = document.querySelector(".sdk-route-trace-form");
+      const fields = [...document.querySelectorAll(".sdk-route-trace-fields select")];
+      const rect = (element) => { const value = element.getBoundingClientRect(); return { left: value.left, top: value.top, right: value.right, bottom: value.bottom, width: value.width, height: value.height }; };
+      return {
+        layout: frame?.dataset.canonicalLayout,
+        pageContained: document.documentElement.scrollWidth === innerWidth && document.documentElement.scrollHeight === innerHeight,
+        dialog: rect(dialog),
+        routeKey: { ...rect(routeKey), scrollWidth: routeKey.scrollWidth, clientWidth: routeKey.clientWidth },
+        form: { ...rect(form), scrollWidth: form.scrollWidth, clientWidth: form.clientWidth },
+        fields: fields.map(rect),
+        fullLabels: fields.map((field) => [...field.options].map((option) => option.textContent)),
+      };
+    });
+    if (!traceGeometry.pageContained || traceGeometry.dialog.left < 0 || traceGeometry.dialog.top < 0 || traceGeometry.dialog.right > width || traceGeometry.dialog.bottom > height) throw new Error(`SDK trace escaped ${label}: ${JSON.stringify(traceGeometry)}`);
+    if (traceGeometry.routeKey.scrollWidth > traceGeometry.routeKey.clientWidth || traceGeometry.form.scrollWidth > traceGeometry.form.clientWidth) throw new Error(`SDK trace has horizontal overflow at ${label}: ${JSON.stringify(traceGeometry)}`);
+    if (traceGeometry.layout !== "narrow" || traceGeometry.fields.length !== 3 || traceGeometry.fields.some((field) => field.height < 24 || field.width < 44)) throw new Error(`SDK trace target/reflow contract failed at ${label}: ${JSON.stringify(traceGeometry)}`);
+    if (!(traceGeometry.fields[0].top < traceGeometry.fields[1].top && traceGeometry.fields[1].top < traceGeometry.fields[2].top)) throw new Error(`SDK trace did not use one-column narrow order at ${label}`);
+    if (!traceGeometry.fullLabels.flat().includes("Verify approved identity, RBAC, resource, and scope")) throw new Error(`SDK trace lost its longest native-select label at ${label}`);
+  }
+  await sdkRouteKey.focus();
+  if (!await sdkRouteKey.evaluate((element) => element === document.activeElement)) throw new Error("SDK Route Key did not accept keyboard focus");
+  await page.keyboard.press("Tab");
+  if (!await page.getByLabel("1. Client route", { exact: true }).evaluate((element) => element === document.activeElement)) throw new Error("SDK trace focus order did not move from Route Key to the first decision");
+  const sdkTraceAnswer = referenceSdkTracePrimary.DP01;
+  await page.getByLabel("1. Client route", { exact: true }).selectOption(sdkTraceAnswer.route);
+  await page.getByLabel("2. Endpoint family (concept only)", { exact: true }).selectOption("openai_v1_endpoint");
+  await page.getByLabel("3. Next authority-safe action", { exact: true }).selectOption(sdkTraceAnswer.next_action);
+  await page.getByRole("button", { name: "Check three decisions", exact: true }).click();
+  await sdkTraceForm.getByRole("status").getByText("TARGETED TRACE NOT YET COMPLETE", { exact: false }).waitFor();
+  for (const [name, invalid] of [["1. Client route", "false"], ["2. Endpoint family (concept only)", "true"], ["3. Next authority-safe action", "false"]]) {
+    const field = page.getByLabel(name, { exact: true });
+    if (await field.getAttribute("aria-invalid") !== invalid) throw new Error(`SDK trace ${name} did not expose its independent error state`);
+    if (invalid === "true" && !await field.getAttribute("aria-describedby")) throw new Error(`SDK trace ${name} lacks associated remediation`);
+  }
+  await page.getByLabel("2. Endpoint family (concept only)", { exact: true }).selectOption(sdkTraceAnswer.endpoint_family);
+  await page.getByRole("button", { name: "Check three decisions", exact: true }).click();
+  await sdkTraceForm.getByRole("status").getByText("DECISION TRACE PASS", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Return to a fresh route retry", exact: true }).click();
+  if (await page.getByLabel("SDK route", { exact: true }).inputValue() || await page.getByLabel("Reason for SDK route", { exact: true }).inputValue()) throw new Error("SDK route retry retained working choices after remediation");
+  await page.setViewportSize({ width: 1600, height: 900 });
+  for(const[id,answer]of Object.entries(referenceSdkRoutePrimary)){await page.getByLabel("SDK route",{exact:true}).selectOption(answer.route);await page.getByLabel("Reason for SDK route",{exact:true}).selectOption(answer.reason);await page.getByRole("button",{name:"Check route and reason",exact:true}).click();await page.getByText("ROUTE + REASON PASS",{exact:false}).waitFor();await page.getByRole("button",{name:id==="P08"?"View form result":"Next scenario",exact:true}).click();}await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Begin fresh transfer later",exact:true}).click();await page.getByRole("button",{name:"Start SDK Route Transfer",exact:true}).click();for(const[id,answer]of Object.entries(referenceSdkRouteTransfer)){await page.getByLabel("SDK route",{exact:true}).selectOption(answer.route);await page.getByLabel("Reason for SDK route",{exact:true}).selectOption(answer.reason);await page.getByRole("button",{name:"Check route and reason",exact:true}).click();await page.getByText("ROUTE + REASON PASS",{exact:false}).waitFor();await page.getByRole("button",{name:id==="T08"?"View form result":"Next scenario",exact:true}).click();}await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge route mastery",exact:true}).click();const singleAgentAfterSdk=page.getByRole("button",{name:"Start Single Agent",exact:true});await singleAgentAfterSdk.waitFor();if(!await singleAgentAfterSdk.evaluate(el=>el===document.activeElement))throw new Error("SDK Route mastery did not focus Single Agent");const sdkEvidence=await page.evaluate(({key})=>JSON.parse(localStorage.getItem(key)).sdkRouteEvidence,{key:saveKey});if(sdkEvidence?.masteryStatus!=="mastered"||sdkEvidence?.attemptCount!==17||sdkEvidence?.remediationAttemptCount!==2)throw new Error(`SDK route mastery incomplete ${JSON.stringify(sdkEvidence)}`);if(["response","endpoint","credential","deploymentName","request","clickTime","keySequence"].some(key=>key in sdkEvidence))throw new Error("SDK route private or dexterity data persisted");
   await page.reload(); await page.getByRole("button", { name: "Resume signal" }).click(); const restoredClientBoundaryContinue = page.getByRole("button", { name: "Start Single Agent", exact: true }); await restoredClientBoundaryContinue.waitFor(); if(!await restoredClientBoundaryContinue.evaluate(el=>el===document.activeElement))throw new Error("Sanitized SDK route mastery reload did not restore focus to Single Agent"); await restoredClientBoundaryContinue.click();
   await page.locator('[data-terminal-exercise="EX-L0504-SINGLE-AGENT"]').waitFor();await assertSingleAgentContinuity(page,"primary");
   await page.getByLabel("Single agent decision",{exact:true}).selectOption("always_use_agent");await page.getByLabel("Single agent reason",{exact:true}).selectOption("every_prompt_requires_agent_orchestration");await page.getByRole("button",{name:"Check single agent",exact:true}).click();await page.getByRole("status").getByText("0/2 · REMEDIATE",{exact:true}).waitFor();for(const dimension of ["decision","reason"]){const field=page.getByLabel(`Single agent ${dimension}`,{exact:true});if(await field.getAttribute("aria-invalid")!=="true"||await field.getAttribute("aria-describedby")!==`single-agent-${dimension}-feedback`)throw new Error(`Single Agent ${dimension} remediation missing`);}await page.setViewportSize({width:640,height:480});await page.screenshot({path:qaPath("single-agent-primary-qa.png"),fullPage:true});await page.setViewportSize({width:1600,height:900});
@@ -1315,6 +1376,13 @@ print("Operator:", learner)`);
     clientBoundariesOwnershipSeparation: true,
     clientBoundariesContinueFocus: true,
     clientBoundariesReloadFocus: true,
+    sdkRoutePrimary: true,
+    sdkRouteTransfer: true,
+    sdkRouteDecisionTraceRemediation: true,
+    sdkRouteKeyKeyboardRegion: true,
+    sdkRouteExactViewportReflow: true,
+    sdkRouteStrictMastery: true,
+    sdkRoutePrivacy: true,
     singleAgentPrimary: true,
     singleAgentTransfer: true,
     singleAgentClosedNote: true,
@@ -1761,6 +1829,7 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       centeredY: Math.abs(shellRect.top + shellRect.height / 2 - (hostRect.top + hostRect.height / 2)) < 12,
       alt: image.getAttribute("alt"),
       src: image.currentSrc,
+      visualState: image.dataset.ab01State,
       naturalWidth: image.naturalWidth,
       naturalHeight: image.naturalHeight,
       imageRendering: getComputedStyle(image).imageRendering,
@@ -1777,7 +1846,7 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
 
   if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
   const narrow = viewportLabel === "320x240" || viewportLabel === "640x480";
-  if (!metrics.src.includes("ab01-available-")) throw new Error(`Wrong AB-01 production asset at ${viewportLabel}: ${metrics.src}`);
+  if (metrics.visualState !== "available" || (!metrics.src.includes("ab01-available-") && !metrics.src.startsWith("data:image/png;base64,"))) throw new Error(`Wrong AB-01 production asset at ${viewportLabel}: ${metrics.src}`);
   if (!/grounded three-fin Workload Sort Terminal/i.test(metrics.alt) || !/Tidal Lens landmark/i.test(metrics.alt)) throw new Error(`AB-01 alt text incomplete: ${metrics.alt}`);
   if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.logicalWidth !== (narrow ? 320 : 640) || metrics.logicalHeight !== (narrow ? 240 : 480) || metrics.logicalWorldHeight !== (narrow ? 180 : 360) || metrics.logicalInterfaceHeight !== (narrow ? 60 : 120)) throw new Error(`Wrong logical bands at ${viewportLabel}: ${JSON.stringify(metrics)}`);
