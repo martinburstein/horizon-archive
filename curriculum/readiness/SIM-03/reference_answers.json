@@ -1,0 +1,51 @@
+{
+  "Q01": {
+    "decision": "retain_workload_fit_and_add_inclusive_access_appeal_and_accountability",
+    "reason": "capability_fit_does_not_satisfy_inclusiveness_or_accountability"
+  },
+  "Q02": {
+    "decision": "retain_capability_fit_and_reselect_deployment_configuration",
+    "reason": "model_mechanics_and_operational_deployment_fit_are_separate_decisions"
+  },
+  "Q03": {
+    "decision": "use_text_entity_detection_for_comments_and_information_extraction_for_contracts",
+    "reason": "a_text_technique_and_multimodal_schema_bound_extraction_solve_different_outputs"
+  },
+  "Q04": {
+    "decision": "choose_speech_recognition",
+    "reason": "the_required_direction_is_existing_audio_to_text"
+  },
+  "Q05": {
+    "decision": "use_visual_interpretation_then_image_generation",
+    "reason": "analyzing_existing_pixels_and_generating_new_pixels_are_distinct_workloads"
+  },
+  "Q06": {
+    "decision": "preserve_system_output_contract_and_treat_the_user_request_as_task_content",
+    "reason": "the_user_prompt_does_not_override_stable_format_and_evidence_rules"
+  },
+  "Q07": {
+    "decision": "choose_the_OpenAI_SDK_and_v1_endpoint_family_then_reverify_resource_identity_and_RBAC",
+    "reason": "embeddings_and_OpenAI_compatibility_select_the_route_but_do_not_prove_authority_or_resource_readiness"
+  },
+  "Q08": {
+    "decision": "keep_read_only_scope_report_the_tool_failure_and_refuse_the_update",
+    "reason": "grounded_text_and_tool_access_neither_expand_permission_nor_establish_success"
+  },
+  "Q09": {
+    "decision": "use_multimodal_spoken_prompt_handling_for_the_question_and_speech_recognition_for_transcripts",
+    "reason": "conversational_audio_input_and_dedicated_audio_to_text_are_related_but_distinct_patterns"
+  },
+  "Q10": {
+    "decision": "reject_the_media_mismatch_and_require_truthful_visual_interpretation",
+    "reason": "request_validation_and_nonfabricated_evidence_are_both_required_before_using_output"
+  },
+  "Q11": {
+    "decision": "preserve_valid_records_the_item_error_and_null_with_evidence_status",
+    "reason": "partial_results_and_unsupported_fields_must_remain_distinguishable_without_fabrication"
+  },
+  "Q12": {
+    "decision": "keep_the_rehearsal_offline_exclude_private_payloads_and_require_separate_verified_scope_authority_and_confirmation",
+    "reason": "mastery_evidence_does_not_authorize_Azure_mutation_disclosure_or_publication"
+  }
+}
+

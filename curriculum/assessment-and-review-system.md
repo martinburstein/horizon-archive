@@ -43,7 +43,7 @@ Use original course-authored questions and official Microsoft practice resources
 4. **Mixed half exam:** after all first-pass lessons; no notes, one sitting.
 5. **Full simulation 1:** current blueprint proportions and varied item forms.
 6. **Full simulation 2:** new questions after remediation, not an immediate repeat.
-7. **Final confidence simulation:** only after the readiness gate is met.
+7. **[Final confidence simulation](readiness/SIM-03/README.md):** only after the readiness gate is met; entry evidence must also show the prior fresh simulations were separated by at least 48 hours and the controlling sources were reverified within seven days.
 
 Question counts and time boxes should be adjusted to the current official exam experience near the booking date. The curriculum must not invent a fixed live-exam count.
 
@@ -79,4 +79,3 @@ Meeting the gate means “ready to schedule with a strong evidence base,” not 
 - Text/speech/vision/extraction miss → capability boundary exercise, then a multimodal scenario.
 - Responsible AI miss → identify affected principle, harmed stakeholder, mitigation, and accountable owner in a new scenario.
 - Repeated miss after two remediation cycles → shrink the skill, teach prerequisites, and require verbal self-explanation before another scored attempt.
-

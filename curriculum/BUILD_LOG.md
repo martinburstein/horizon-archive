@@ -875,3 +875,24 @@ Validation performed:
 Next recommended item: Exercise Agent can render this packet only as targeted remediation after a route/reason miss, one scenario at a time, with three labeled decisions and a persistent conceptual route key. Keep selected answers session-only and keep membrane animation outside learner feedback.
 Unresolved risks: SDK packages, versions, endpoint forms, roles, models, preview labels, and availability remain volatile. The packet intentionally uses endpoint-family tokens rather than literal configuration, and it does not grant service access, exam credit, or authority for any external action.
 Notes: The named source-priority skill was unavailable, so the required official Microsoft sources were checked directly before authoring. No game, lore, art, exercise runtime, QA binary, service call, Azure mutation, credential use, external action, commit, or push change occurred.
+
+## Log entry: 2026-07-13T23:30:00-04:00
+
+Stage: Entry-gated final AI-901 confidence simulation
+Work completed: Built `SIM-03` as the finished learner-facing final confidence block named by the assessment system. It adds 12 new closed-note decision-plus-reason scenarios in the current 5 concept/capability and 7 Foundry implementation balance, covers all 15 objectives, and includes a new SDK-route transfer decision. A separate entry-evidence gate prevents one score, insufficient spacing, an open critical misconception, an unretested high-confidence miss, or stale official guidance from being mistaken for readiness. The outcome is a cautious scheduling recommendation, never an exam guarantee or external authority.
+Files changed:
+- curriculum/readiness/SIM-03/*
+- curriculum/assessment-and-review-system.md
+- curriculum/validation/lesson-generation-readiness.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- reverified on 2026-07-13 the current AI-901 study guide, Microsoft Foundry hub, Foundry SDKs and Endpoints overview, Foundry Agent Service overview, and Content Understanding overview before authoring
+- `SIM-03` self-test passed, including 5/7 domain balance, 15-objective union, remediation-route coverage, prerequisite existence, valid/blank entry evidence, reference/blank scoring, SDK-route confusion, unsafe-action, and stale-source probes
+- valid entry evidence plus reference answers passed at 24/24; blank answers and blank entry evidence were rejected
+- all curriculum JSON parsed successfully
+- `SIM-02`, `CUM-01`, `L-06-03`, and `L-05-03` route-trace regressions passed
+- `git diff --check` passed
+Next recommended item: Exercise Agent can render `EX-SIM03-FINAL-CONFIDENCE` only after the entry gate passes, one scenario at a time, with optional timing, confidence recorded separately from correctness, and targeted objective remediation after any miss.
+Unresolved risks: Runtime integration for `SIM-02` and `SIM-03` remains post-demo. The 48-hour field is privacy-limited learner evidence rather than a trusted external timestamp, so it supports coaching and does not certify identity, attendance, or exam readiness. SDK routes, endpoints, roles, portal labels, models, preview states, and exam scope remain volatile and must be reverified before final use.
+Notes: The named source-priority skill was unavailable, so required official Microsoft sources were checked directly. Original course-authored practice only. No live service call, Azure mutation, credential use, exam item reproduction, external action, game runtime, art, lore, QA binary, commit, or push occurred.

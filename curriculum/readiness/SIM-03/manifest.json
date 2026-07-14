@@ -1,0 +1,44 @@
+{
+  "simulation_id": "SIM-03",
+  "title": "AI-901 final confidence simulation",
+  "status": "review",
+  "source_mode": "source_grounded",
+  "source_ids": [
+    "OFFICIAL-AI901-STUDY-GUIDE",
+    "OFFICIAL-FOUNDRY-HUB",
+    "OFFICIAL-FOUNDRY-SDK",
+    "OFFICIAL-FOUNDRY-AGENTS",
+    "OFFICIAL-FOUNDRY-RESPONSIBLE-AI",
+    "OFFICIAL-AZURE-LANGUAGE",
+    "OFFICIAL-AZURE-SPEECH",
+    "OFFICIAL-AZURE-VISION",
+    "OFFICIAL-CONTENT-UNDERSTANDING"
+  ],
+  "objective_ids": [
+    "AI901-D1-O1",
+    "AI901-D1-O2",
+    "AI901-D1-O3",
+    "AI901-D1-O4",
+    "AI901-D1-O5",
+    "AI901-D1-O6",
+    "AI901-D1-O7",
+    "AI901-D1-O8",
+    "AI901-D2-O1",
+    "AI901-D2-O2",
+    "AI901-D2-O3",
+    "AI901-D2-O4",
+    "AI901-D2-O5",
+    "AI901-D2-O6",
+    "AI901-D2-O7"
+  ],
+  "item_count": 12,
+  "domain_mix": {
+    "AI901-D1": 5,
+    "AI901-D2": 7
+  },
+  "exercise_id": "EX-SIM03-FINAL-CONFIDENCE",
+  "entry_gate": "L-06-03 ready, CUM-01 transfer 16/16, SIM-01 and SIM-02 24/24, prior simulations separated by at least 48 hours, no open critical misconception, high-confidence misses retested, and controlling sources reverified within seven days.",
+  "mastery_gate": "Pass the entry gate and score 24/24 across all 15 objectives; confidence and optional timing never change mastery.",
+  "notes": "Original final fresh-transfer practice, not Microsoft exam content, an exam guarantee, or external authority."
+}
+
