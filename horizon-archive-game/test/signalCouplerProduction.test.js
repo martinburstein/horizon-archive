@@ -33,6 +33,12 @@ test("production coupler locks six bodies and animates only the membrane", async
   assert.deepEqual(manifest.object_source_box, [160, 40, 320, 320]);
   assert.equal(manifest.frame_count, 6);
   assert.equal(manifest.unique_body_hashes, 1);
+  assert.equal(manifest.central_coupler_body_unchanged, true);
+  assert.equal(
+    manifest.central_coupler_body_sha256,
+    "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc",
+  );
+  assert.equal(manifest.central_coupler_body_sha256, manifest.central_coupler_body_lock_sha256);
   assert.equal(manifest.decoded_gif_unique_body_hashes, 1);
   assert.equal(manifest.unique_screen_hashes, 6);
   assert.equal(manifest.only_screen_pixels_change, true);
@@ -41,11 +47,19 @@ test("production coupler locks six bodies and animates only the membrane", async
   assert.equal(manifest.transparent_break_count, 0);
   assert.deepEqual(manifest.narrow_derivative_dimensions, [320, 180]);
   assert.equal(manifest.narrow_derivative_resampling, "nearest-neighbor");
-  assert.deepEqual(manifest.connection_continuity_scanlines, {
-    left_640x360: { y: 202, x: [0, 210] },
-    right_640x360: { y: 224, x: [430, 639] },
-    left_320x180: { y: 101, x: [0, 105] },
-    right_320x180: { y: 112, x: [215, 319] },
+  assert.equal(manifest.connection_continuity_paths.native_breaks, 0);
+  assert.equal(manifest.connection_continuity_paths.narrow_breaks, 0);
+  assert.deepEqual(manifest.connection_continuity_paths.left_native.at(-1), [0, 268]);
+  assert.deepEqual(manifest.connection_continuity_paths.right_native.at(-1), [640, 248]);
+  assert.deepEqual(manifest.connection_continuity_paths.right_mat_branch_native.at(-1), [538, 281]);
+  assert.deepEqual(manifest.field_integration, {
+    route_grammar: "asymmetric partly buried glass-ceramic",
+    flush_entry_collars: 2,
+    crop_occlusions: 2,
+    flush_growth_mat_contacts: 1,
+    repair_joint_families: ["pearl knuckle", "violet stitch", "amber lattice"],
+    parallel_cyan_tray_runs: 0,
+    regular_repeated_clamps: 0,
   });
   assert.equal(manifest.source_is_not_64px_preview, true);
   assert.equal(manifest.detail_retention_by_frame.length, 6);

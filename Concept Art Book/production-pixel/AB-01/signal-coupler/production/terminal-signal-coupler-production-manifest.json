@@ -24,42 +24,122 @@
   ],
   "animated_mask_pixels": 3596,
   "unique_body_hashes": 1,
-  "body_sha256": "c36e1528412ce03dfaee4f97d2c2252adadd595236047eff0c4b23b71994893c",
+  "body_sha256": "e40c8c34e16f14e5b85842f9ba712a660cf3b6af994a6fee85bcc808b8904b28",
+  "central_coupler_body_sha256": "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc",
+  "central_coupler_body_lock_sha256": "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc",
+  "central_coupler_body_unchanged": true,
   "decoded_gif_unique_body_hashes": 1,
   "unique_screen_hashes": 6,
   "only_screen_pixels_change": true,
   "side_connections_reach_scene_edges": true,
   "side_connections_are_continuous": true,
   "transparent_break_count": 0,
-  "connection_continuity_scanlines": {
-    "left_640x360": {
-      "y": 202,
-      "x": [
+  "connection_continuity_paths": {
+    "left_native": [
+      [
+        211,
+        204
+      ],
+      [
+        188,
+        207
+      ],
+      [
+        166,
+        218
+      ],
+      [
+        151,
+        233
+      ],
+      [
+        126,
+        242
+      ],
+      [
+        96,
+        249
+      ],
+      [
+        65,
+        257
+      ],
+      [
+        32,
+        264
+      ],
+      [
         0,
-        210
+        268
       ]
-    },
-    "right_640x360": {
-      "y": 224,
-      "x": [
-        430,
-        639
+    ],
+    "right_native": [
+      [
+        429,
+        220
+      ],
+      [
+        456,
+        223
+      ],
+      [
+        477,
+        232
+      ],
+      [
+        486,
+        246
+      ],
+      [
+        516,
+        253
+      ],
+      [
+        545,
+        247
+      ],
+      [
+        574,
+        253
+      ],
+      [
+        606,
+        244
+      ],
+      [
+        640,
+        248
       ]
-    },
-    "left_320x180": {
-      "y": 101,
-      "x": [
-        0,
-        105
+    ],
+    "right_mat_branch_native": [
+      [
+        506,
+        251
+      ],
+      [
+        518,
+        266
+      ],
+      [
+        538,
+        281
       ]
-    },
-    "right_320x180": {
-      "y": 112,
-      "x": [
-        215,
-        319
-      ]
-    }
+    ],
+    "native_breaks": 0,
+    "narrow_breaks": 0
+  },
+  "field_integration": {
+    "route_grammar": "asymmetric partly buried glass-ceramic",
+    "flush_entry_collars": 2,
+    "crop_occlusions": 2,
+    "flush_growth_mat_contacts": 1,
+    "repair_joint_families": [
+      "pearl knuckle",
+      "violet stitch",
+      "amber lattice"
+    ],
+    "parallel_cyan_tray_runs": 0,
+    "regular_repeated_clamps": 0
   },
   "narrow_derivative_dimensions": [
     320,

@@ -19,6 +19,35 @@ SCENE_SIZE = (640, 360)
 OBJECT_ORIGIN = (160, 40)
 FRAME_DURATIONS_MS = [620, 170, 260, 240, 150, 500]
 
+# These are the load-bearing centerlines of the two frozen field routes. They
+# deliberately leave the familiar horizontal cable-tray grammar: the west
+# route dives into a flush cultivation seam, while the east route changes
+# depth, passes behind two glass growths, and branches into a mat contact.
+LEFT_ROUTE_CENTERLINE = [
+    (211, 204),
+    (188, 207),
+    (166, 218),
+    (151, 233),
+    (126, 242),
+    (96, 249),
+    (65, 257),
+    (32, 264),
+    (0, 268),
+]
+RIGHT_ROUTE_CENTERLINE = [
+    (429, 220),
+    (456, 223),
+    (477, 232),
+    (486, 246),
+    (516, 253),
+    (545, 247),
+    (574, 253),
+    (606, 244),
+    (640, 248),
+]
+RIGHT_MAT_BRANCH = [(506, 251), (518, 266), (538, 281)]
+LOCKED_CENTRAL_BODY_SHA256 = "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc"
+
 # This is the approved 64 px diagnostic membrane, expanded by an exact integer
 # factor. Nothing outside this polygon is permitted to animate.
 SCREEN_POLYGON_64 = [
@@ -96,62 +125,86 @@ def stable_objects(cells: list[Image.Image], mask: Image.Image) -> list[Image.Im
     return [Image.composite(cell, base, mask) for cell in cells]
 
 
-def draw_side_connections(scene: Image.Image) -> None:
-    """Author continuous phase conduits from the coupler to both scene crops.
+def draw_growth_occluder(draw: ImageDraw.ImageDraw, x: int, floor_y: int, height: int) -> None:
+    """Place a subdued cultivated-glass shoot in front of a buried route."""
+    draw.polygon(
+        [(x - 7, floor_y), (x - 5, floor_y - height + 9), (x, floor_y - height),
+         (x + 5, floor_y - height + 13), (x + 7, floor_y)],
+        fill=(116, 139, 164, 190),
+    )
+    draw.line(
+        [(x - 4, floor_y - 2), (x - 2, floor_y - height + 11), (x, floor_y - height + 4)],
+        fill=(200, 217, 229, 220),
+        width=2,
+    )
+    draw.line(
+        [(x + 3, floor_y - height + 14), (x + 5, floor_y - 2)],
+        fill=(45, 67, 92, 220),
+        width=2,
+    )
+    draw.line([(x - 8, floor_y), (x + 8, floor_y)], fill=(91, 68, 43, 220), width=2)
 
-    The selected source already contains the collars and the first lengths of
-    both side bundles. This body layer continues their perspective beneath the
-    source object with uninterrupted substrate, then adds irregular service
-    sleeves on top. Unlike the earlier repeated-alpha method, the sleeves never
-    create transparent breaks in the load-bearing conduit.
+
+def draw_side_connections(scene: Image.Image) -> None:
+    """Author two asymmetric glass-ceramic continuities into the cultivated field.
+
+    The selected source already owns the housing, collars, tongue, and screen.
+    This frozen underlay keeps those pixels untouched. Broad exposed bundles
+    quickly become low flush seams, visibly repaired by three unlike stewardship
+    systems and occluded by the crop instead of floating across it.
     """
     draw = ImageDraw.Draw(scene)
 
-    # Left bundle: a low four-lane bus travels beyond the left crop. Its final
-    # section runs beneath the source object so the generated collar hides the
-    # join instead of exposing a familiar loose cable end.
-    left_outer = [(0, 183), (159, 183), (210, 193), (210, 216), (158, 224), (0, 219)]
-    draw.polygon(left_outer, fill=(10, 15, 31, 255))
-    draw.line([(0, 184), (159, 184), (208, 194)], fill=(93, 111, 149, 255), width=3)
-    draw.line([(0, 218), (158, 222), (208, 215)], fill=(3, 5, 15, 255), width=4)
-    for offset, color, width in (
-        (0, (18, 97, 145, 255), 3),
-        (7, (61, 174, 214, 255), 2),
-        (14, (20, 82, 132, 255), 3),
-        (21, (103, 203, 228, 255), 2),
-    ):
-        draw.line([(0, 190 + offset), (157, 190 + offset), (207, 198 + offset // 2)], fill=color, width=width)
-    for x in (30, 83, 137):
-        draw.polygon(
-            [(x, 184), (x + 8, 184), (x + 11, 221), (x + 2, 221)],
-            fill=(35, 39, 60, 255),
-        )
-        draw.line([(x + 2, 186), (x + 5, 218)], fill=(119, 126, 154, 255), width=2)
+    # West: the body-side collar compresses into two offset, flush entry
+    # organs. Beyond them, only a shallow ceramic seam and two diagnostic
+    # windows reveal the buried continuation toward the crop.
+    draw.line(LEFT_ROUTE_CENTERLINE[:4], fill=(8, 13, 27, 255), width=21, joint="curve")
+    draw.line(LEFT_ROUTE_CENTERLINE[2:], fill=(20, 27, 43, 238), width=9, joint="curve")
+    draw.line(LEFT_ROUTE_CENTERLINE[3:], fill=(72, 82, 102, 220), width=2, joint="curve")
+    draw.polygon(
+        [(145, 220), (161, 218), (169, 226), (160, 239), (143, 237), (137, 229)],
+        fill=(31, 37, 55, 255),
+    )
+    draw.line([(143, 225), (158, 223), (164, 228), (157, 235), (144, 233)], fill=(148, 163, 184, 255), width=2)
+    draw.polygon(
+        [(118, 236), (132, 233), (140, 240), (132, 248), (116, 249), (109, 243)],
+        fill=(41, 46, 63, 245),
+    )
+    draw.line([(116, 240), (130, 237), (136, 241), (129, 245), (116, 246)], fill=(91, 111, 136, 255), width=2)
+    # Old pearl knuckle: an uneven sealed repair, not a repeated clamp.
+    draw.polygon([(84, 246), (96, 241), (108, 246), (103, 255), (90, 257), (80, 252)], fill=(88, 92, 113, 255))
+    draw.line([(84, 249), (96, 245), (103, 248), (99, 253), (89, 254)], fill=(170, 176, 194, 255), width=2)
+    # Two short trace windows disclose continuity without making a glowing rail.
+    draw.line([(56, 257), (70, 253)], fill=(38, 116, 145, 255), width=2)
+    draw.line([(8, 267), (27, 264)], fill=(55, 128, 150, 255), width=2)
+    draw.line([(0, 272), (35, 268), (66, 261), (97, 253)], fill=(91, 68, 43, 190), width=2)
 
-    # Right bundle: perspective drops toward the lower-right crop. The varied
-    # sleeve spacing records maintenance phases without interrupting the bus.
-    right_outer = [(430, 204), (468, 207), (640, 222), (640, 253), (466, 239), (430, 235)]
-    draw.polygon(right_outer, fill=(9, 14, 29, 255))
-    draw.line([(431, 205), (468, 209), (640, 224)], fill=(94, 112, 150, 255), width=3)
-    draw.line([(431, 234), (466, 238), (640, 251)], fill=(3, 5, 14, 255), width=4)
-    for offset, color, width in (
-        (0, (21, 93, 143, 255), 3),
-        (7, (71, 187, 221, 255), 2),
-        (14, (18, 77, 126, 255), 3),
-        (21, (111, 209, 230, 255), 2),
-    ):
-        draw.line(
-            [(432, 211 + offset), (468, 213 + offset), (640, 228 + offset)],
-            fill=color,
-            width=width,
-        )
-    for x in (493, 556, 616):
-        rise = (x - 468) // 12
-        draw.polygon(
-            [(x, 209 + rise), (x + 9, 210 + rise), (x + 9, 243 + rise), (x, 242 + rise)],
-            fill=(34, 39, 61, 255),
-        )
-        draw.line([(x + 2, 211 + rise), (x + 2, 240 + rise)], fill=(121, 129, 156, 255), width=2)
+    # East: a shallow depth-changing route leaves the collar, passes behind two
+    # cultivated shoots, and forks once into a flush growth-mat relationship.
+    draw.line(RIGHT_ROUTE_CENTERLINE[:4], fill=(8, 13, 28, 255), width=20, joint="curve")
+    draw.line(RIGHT_ROUTE_CENTERLINE[2:], fill=(23, 29, 45, 238), width=10, joint="curve")
+    draw.line(RIGHT_ROUTE_CENTERLINE[3:], fill=(76, 88, 106, 220), width=2, joint="curve")
+    draw.line(RIGHT_MAT_BRANCH, fill=(17, 23, 38, 245), width=8, joint="curve")
+    draw.line(RIGHT_MAT_BRANCH[1:], fill=(77, 91, 108, 230), width=2, joint="curve")
+
+    # Middle-period violet stitch and later amber lattice are intentionally
+    # different technologies and spacing from the west pearl repair.
+    draw.polygon([(501, 246), (511, 244), (521, 249), (518, 258), (505, 260), (497, 254)], fill=(54, 41, 67, 255))
+    draw.line([(501, 250), (510, 247), (517, 251), (514, 256), (505, 257)], fill=(120, 80, 126, 255), width=2)
+    draw.polygon([(594, 238), (607, 237), (616, 243), (612, 251), (598, 253), (589, 247)], fill=(54, 50, 53, 255))
+    draw.line([(595, 242), (605, 240), (612, 244), (608, 249), (598, 250)], fill=(151, 113, 59, 255), width=2)
+    draw.line([(626, 247), (640, 249)], fill=(42, 119, 145, 255), width=2)
+
+    # The branch terminates in a flat non-Cartesian mat contact: no pedestal,
+    # switch, label, or human-row alignment.
+    draw.polygon([(524, 278), (537, 273), (551, 279), (548, 287), (532, 290), (518, 285)], fill=(25, 31, 44, 245))
+    draw.line([(523, 282), (536, 277), (546, 281), (542, 286), (531, 287)], fill=(112, 127, 143, 255), width=2)
+    draw.line([(529, 290), (548, 287)], fill=(94, 68, 42, 210), width=2)
+
+    # Crop occlusion changes the route's depth twice and ties it to the same
+    # purpose-grown glass vocabulary as the Meadow rather than to cable trays.
+    draw_growth_occluder(draw, 543, 252, 39)
+    draw_growth_occluder(draw, 580, 253, 28)
 
 
 def scene_frames(objects: list[Image.Image]) -> tuple[list[Image.Image], Image.Image]:
@@ -179,6 +232,28 @@ def body_hash(frame: Image.Image, screen_mask: Image.Image) -> str:
     body = frame.copy()
     body.paste((0, 0, 0, 0), (0, 0), screen_mask)
     return hashlib.sha256(body.tobytes()).hexdigest()
+
+
+def route_mask(size: tuple[int, int]) -> Image.Image:
+    mask = Image.new("L", SCENE_SIZE, 0)
+    draw = ImageDraw.Draw(mask)
+    draw.line(LEFT_ROUTE_CENTERLINE, fill=255, width=1)
+    draw.line(RIGHT_ROUTE_CENTERLINE, fill=255, width=1)
+    draw.line(RIGHT_MAT_BRANCH, fill=255, width=1)
+    if size != SCENE_SIZE:
+        mask = mask.resize(size, Image.Resampling.NEAREST)
+    return mask
+
+
+def transparent_break_count(frame: Image.Image, mask: Image.Image) -> int:
+    alpha = frame.getchannel("A")
+    return sum(
+        1
+        for alpha_value, mask_value in zip(
+            alpha.get_flattened_data(), mask.get_flattened_data(), strict=True
+        )
+        if mask_value and alpha_value < 128
+    )
 
 
 def save_gif(frames: list[Image.Image], path: Path) -> None:
@@ -256,6 +331,7 @@ def validate(
     scene_mask: Image.Image,
     gif_path: Path,
     detail_metrics: list[dict[str, object]],
+    objects: list[Image.Image],
 ) -> dict[str, object]:
     outside_mask = ImageChops.invert(scene_mask)
     outside_differences = [
@@ -298,21 +374,19 @@ def validate(
             "Production coupler retains less than 70% of the selected source's linear subject detail"
         )
 
-    # These centerlines sit inside the authored load-bearing substrate rather
-    # than decorative highlights. Every logical column must remain opaque from
-    # the crop through the hidden join beneath the selected source object.
-    alpha = frames[0].getchannel("A")
-    left_continuity = all(alpha.getpixel((x, 202)) >= 128 for x in range(0, 211))
-    right_continuity = all(alpha.getpixel((x, 224)) >= 128 for x in range(430, SCENE_SIZE[0]))
-    if not left_continuity or not right_continuity:
-        raise ValueError("An authored side conduit contains a transparent break")
+    central_body_sha256 = body_hash(objects[0], object_mask())
+    if central_body_sha256 != LOCKED_CENTRAL_BODY_SHA256:
+        raise ValueError("The approved central coupler body changed during route authoring")
 
+    native_route_mask = route_mask(SCENE_SIZE)
+    native_breaks = transparent_break_count(frames[0], native_route_mask)
     narrow = frames[0].resize((320, 180), Image.Resampling.NEAREST)
-    narrow_alpha = narrow.getchannel("A")
-    narrow_left_continuity = all(narrow_alpha.getpixel((x, 101)) >= 128 for x in range(0, 106))
-    narrow_right_continuity = all(narrow_alpha.getpixel((x, 112)) >= 128 for x in range(215, 320))
-    if not narrow_left_continuity or not narrow_right_continuity:
-        raise ValueError("The 320 x 180 derivative breaks conduit continuity")
+    narrow_route_mask = route_mask((320, 180))
+    narrow_breaks = transparent_break_count(narrow, narrow_route_mask)
+    if native_breaks or narrow_breaks:
+        raise ValueError(
+            f"An authored field route contains transparent breaks: native={native_breaks}, narrow={narrow_breaks}"
+        )
 
     return {
         "source_dimensions": list(Image.open(SOURCE).size),
@@ -323,17 +397,30 @@ def validate(
         "animated_mask_pixels": scene_mask.histogram()[255],
         "unique_body_hashes": 1,
         "body_sha256": body_hashes[0],
+        "central_coupler_body_sha256": central_body_sha256,
+        "central_coupler_body_lock_sha256": LOCKED_CENTRAL_BODY_SHA256,
+        "central_coupler_body_unchanged": True,
         "decoded_gif_unique_body_hashes": 1,
         "unique_screen_hashes": 6,
         "only_screen_pixels_change": True,
         "side_connections_reach_scene_edges": True,
         "side_connections_are_continuous": True,
-        "transparent_break_count": 0,
-        "connection_continuity_scanlines": {
-            "left_640x360": {"y": 202, "x": [0, 210]},
-            "right_640x360": {"y": 224, "x": [430, 639]},
-            "left_320x180": {"y": 101, "x": [0, 105]},
-            "right_320x180": {"y": 112, "x": [215, 319]},
+        "transparent_break_count": native_breaks + narrow_breaks,
+        "connection_continuity_paths": {
+            "left_native": LEFT_ROUTE_CENTERLINE,
+            "right_native": RIGHT_ROUTE_CENTERLINE,
+            "right_mat_branch_native": RIGHT_MAT_BRANCH,
+            "native_breaks": native_breaks,
+            "narrow_breaks": narrow_breaks,
+        },
+        "field_integration": {
+            "route_grammar": "asymmetric partly buried glass-ceramic",
+            "flush_entry_collars": 2,
+            "crop_occlusions": 2,
+            "flush_growth_mat_contacts": 1,
+            "repair_joint_families": ["pearl knuckle", "violet stitch", "amber lattice"],
+            "parallel_cyan_tray_runs": 0,
+            "regular_repeated_clamps": 0,
         },
         "narrow_derivative_dimensions": [320, 180],
         "narrow_derivative_resampling": "nearest-neighbor",
@@ -362,7 +449,7 @@ def main() -> None:
     save_gif(frames, gif_path)
     scene_mask.save(QA_DIR / "terminal-signal-coupler-screen-mask-640x360.png")
 
-    manifest = validate(frames, scene_mask, gif_path, detail_metrics)
+    manifest = validate(frames, scene_mask, gif_path, detail_metrics, objects)
     (OUTPUT / "terminal-signal-coupler-production-manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n",
         encoding="utf-8",
