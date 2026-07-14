@@ -1,5 +1,14 @@
 # Curse Art Director Work Log
 
+## 2026-07-13 — Signal-coupler production integration gate
+
+- **Outcome:** issued `REVISE`. The high-resolution rebuild closes the prior detail-loss problem and the central coupler meets richness, first-person, clean-laminate, screen-only animation, and original-core expectations. The added full-width side runs do not yet read as a Builder landscape system.
+- **Files:** created [the signal-coupler production integration review](reviews/2026-07-13-signal-coupler-production-integration.md) and updated this work log; no runtime, raster, lore, curriculum, or test file changed.
+- **Validation:** inspected the native `640 x 360` and authored `320 x 180` Meadow composites at original resolution, the transparent production still, membrane mask, manifest, current prompt/package, narrative integration contract, and Pixel Patrol handoff. Confirmed source-scale detail retention, one fixed body, six screen states, screen-only animation, first-person/no-ship compliance, clean front laminate, and no copyrighted reference asset use.
+- **Finding:** four parallel cyan lines in black rails with evenly repeated upright clamps read as human cable tray, busbar, fence, or generic sci-fi trunking. Their uninterrupted crop-to-crop horizontal dominates the painting, weakens field depth, and supplies edge reach without a cultivated-field handoff, buried interval, process consequence, or three-scale Machine relationship.
+- **Handoff:** preserve the central production body and animation contract; re-author only the side continuities as asymmetric, partially buried glass-ceramic routes with crop occlusion, flush growth-mat contacts, varied era repairs, and no familiar clamps or Cartesian bundle grammar. Then rebuild the two composites and repeat the art-direction gate.
+- **Status:** ready to advance.
+
 ## 2026-07-13 — Workload Sort resume-strip gate
 
 - **Outcome:** issued `BLOCKOUT ONLY` for the Chapter II environment while passing the bounded resume-strip sub-gate. The strip is correctly confined to the Terminal task pane, reads as a square-pixel status rail rather than a toast/badge/world sign, and leaves scene, return, originality, and viewpoint contracts unchanged. The native AB-01 plate itself remains coarse procedural interaction art and is still explicitly documented as requiring alien-function art replacement.
