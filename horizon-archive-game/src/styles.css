@@ -293,23 +293,6 @@ h1 {
 }
 .scene-status strong { color: #f1e7d4; font-family: Georgia, "Times New Roman", serif; font-size: 1rem; letter-spacing: 0.08em; }
 .scene-status span:last-child { text-align: right; }
-.opening-objective {
-  position: absolute;
-  z-index: 2;
-  top: 72px;
-  left: 50%;
-  margin: 0;
-  padding: 8px 12px;
-  transform: translateX(-50%);
-  color: #f2e3bd;
-  background: rgba(8, 8, 14, 0.88);
-  border: 1px solid rgba(226, 200, 139, 0.72);
-  font: 0.7rem/1.2 "Courier New", monospace;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
 .hotspot {
   position: absolute;
   z-index: 2;

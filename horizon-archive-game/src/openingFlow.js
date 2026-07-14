@@ -2,6 +2,7 @@ export const OPENING_SAVE_VERSION = 1;
 export const LOCAL_SAVE_SLOT_ID = "expedition-01";
 export const PROLOGUE_BEAT_COUNT = 3;
 export const OPENING_ACTIVATION_BURST_MS = 400;
+export const OPENING_TERMINAL_OBJECTIVE = "Objective: Find a Terminal in the Glass Meadow.";
 
 const resumableSteps = new Set(["character-name", "prologue", "chapter-reveal", "playing"]);
 const namePattern = /^[\p{L}\p{N}][\p{L}\p{N} .'-]{0,22}[\p{L}\p{N}.']$/u;

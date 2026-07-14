@@ -30,6 +30,7 @@ import {
   createOpeningProgress,
   evaluateOpeningActivation,
   isRepeatedOpeningKey,
+  OPENING_TERMINAL_OBJECTIVE,
   PROLOGUE_BEAT_COUNT,
   sanitizeOpeningProgress,
   validateCharacterName,
@@ -782,7 +783,7 @@ export function App() {
     setSceneIndex(0);
     setCompleted([]);
     setVerb("LOOK AT");
-    setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
+    setDialogue(OPENING_TERMINAL_OBJECTIVE, "system");
     setSceneAnnouncement("");
     setQuestionOpen(false);
     setFeedback("");
@@ -877,7 +878,7 @@ export function App() {
     const next = advanceOpeningProgress({ step: "chapter-reveal", characterName, prologueBeat }, accepted);
     if (!accepted || next.step !== "playing") return;
     meadowEntryFocusPendingRef.current = true;
-    setDialogue("Objective: Find a Terminal in the Glass Meadow.", "system");
+    setDialogue(OPENING_TERMINAL_OBJECTIVE, "system");
     setSceneAnnouncement("");
     setMode("playing");
   }
@@ -899,6 +900,8 @@ export function App() {
       ? resumedMeadowDeparture.summary
       : saved.pendingSceneId
         ? resumedScene.success
+        : saved.sceneIndex === 0 && saved.exerciseEvidence?.completed !== true && saved.opening.step === "playing"
+          ? OPENING_TERMINAL_OBJECTIVE
         : "The flight recorder restores your last confirmed position.", "system");
     if (saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered") {
       resumeContinueFocusPendingRef.current = true;
@@ -2040,9 +2043,6 @@ export function App() {
           <strong>{scene.location}</strong>
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
-        {scene.id === "meadow" && !exerciseEvidence?.completed && (
-          <p className="opening-objective" data-opening-objective="terminal-search">OBJECTIVE // FIND A TERMINAL</p>
-        )}
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell
             exerciseId={terminalExercise.exerciseId}
@@ -3797,7 +3797,10 @@ export function App() {
             </form>
           ) : (
             <div className={showMeadowDepartureChoice ? "dialogue-copy meadow-departure-choice" : "dialogue-copy"}>
-              <p id={showMeadowDepartureChoice ? "meadow-choice-summary" : undefined}>{dialogue}</p>
+              <p
+                id={showMeadowDepartureChoice ? "meadow-choice-summary" : undefined}
+                data-opening-objective={scene.id === "meadow" && exerciseEvidence?.completed !== true && dialogue === OPENING_TERMINAL_OBJECTIVE ? "terminal-search" : undefined}
+              >{dialogue}</p>
               <div className="dialogue-footer">
                 <span className="speaker" data-dialogue-owner={dialogueOwner}>{getDialogueSpeaker(dialogueOwner)}</span>
                 <div className="dialogue-actions">

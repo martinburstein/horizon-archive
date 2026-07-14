@@ -8,9 +8,12 @@ import {
   isRepeatedOpeningKey,
   LOCAL_SAVE_SLOT_ID,
   normalizeCharacterName,
+  OPENING_TERMINAL_OBJECTIVE,
   sanitizeOpeningProgress,
   validateCharacterName,
 } from "../src/openingFlow.js";
+import { CANONICAL_FRAME, NARROW_FRAME } from "../src/canonicalFrame.js";
+import { MEADOW_PIXEL_HOTSPOTS } from "../src/pixelMeadow.js";
 
 test("character names normalize to a bounded, display-safe local value", () => {
   assert.equal(normalizeCharacterName("  Ada    Lovelace  "), "Ada Lovelace");
@@ -108,7 +111,11 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /data-playtest-marker="CHARACTER_NAME_FORM"/);
   assert.match(source, /TEMPORARY_PROLOGUE_/);
   assert.match(source, /data-playtest-marker="CHAPTER_ONE_REVEAL"/);
-  assert.match(source, /data-opening-objective="terminal-search">OBJECTIVE \/\/ FIND A TERMINAL/);
+  assert.match(source, /data-opening-objective=\{scene\.id === "meadow"[\s\S]*?dialogue === OPENING_TERMINAL_OBJECTIVE \? "terminal-search" : undefined\}/);
+  assert.doesNotMatch(source, /className="opening-objective"/);
+  assert.doesNotMatch(styles, /\.opening-objective\s*\{/);
+  assert.equal((source.match(/setDialogue\(OPENING_TERMINAL_OBJECTIVE, "system"\)/g) ?? []).length, 2);
+  assert.match(source, /saved\.sceneIndex === 0 && saved\.exerciseEvidence\?\.completed !== true && saved\.opening\.step === "playing"[\s\S]*?OPENING_TERMINAL_OBJECTIVE/);
   assert.match(source, /my instruments find no road or landing marker/);
   assert.match(source, /I'm down\. Glass tubes rise from flush patterns in the floor\. Their states repeat, but not in rows\./);
   assert.equal((source.match(/I'm down\./g) ?? []).length, 1);
@@ -130,4 +137,38 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.doesNotMatch(source, /openingTransitionRef/);
   assert.match(source, /evaluateOpeningActivation\(event, openingActivationAtRef\.current\)/);
   assert.equal(source.match(/onKeyDown=\{preventRepeatedOpeningKey\}/g)?.length, 2);
+});
+
+test("opening objective stays in the lower interface band and cannot cover the Terminal", () => {
+  const percentage = (value) => Number.parseFloat(value) / 100;
+  const intersects = (a, b) => (
+    a.left < b.left + b.width
+    && a.left + a.width > b.left
+    && a.top < b.top + b.height
+    && a.top + a.height > b.top
+  );
+
+  assert.equal(OPENING_TERMINAL_OBJECTIVE, "Objective: Find a Terminal in the Glass Meadow.");
+  for (const frame of [CANONICAL_FRAME, NARROW_FRAME]) {
+    const objectiveBand = {
+      left: 0,
+      top: frame.worldHeight,
+      width: frame.width,
+      height: frame.interfaceHeight,
+    };
+    const terminal = {
+      left: percentage(MEADOW_PIXEL_HOTSPOTS.primary.left) * frame.width,
+      top: percentage(MEADOW_PIXEL_HOTSPOTS.primary.top) * frame.worldHeight,
+      width: percentage(MEADOW_PIXEL_HOTSPOTS.primary.width) * frame.width,
+      height: percentage(MEADOW_PIXEL_HOTSPOTS.primary.height) * frame.worldHeight,
+    };
+
+    assert.ok(objectiveBand.left >= 0 && objectiveBand.top >= 0);
+    assert.ok(objectiveBand.left + objectiveBand.width <= frame.width);
+    assert.ok(objectiveBand.top + objectiveBand.height <= frame.height);
+    assert.ok(terminal.left >= 0 && terminal.top >= 0);
+    assert.ok(terminal.left + terminal.width <= frame.width);
+    assert.ok(terminal.top + terminal.height <= frame.worldHeight + 0.001);
+    assert.equal(intersects(objectiveBand, terminal), false);
+  }
 });
