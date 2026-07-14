@@ -57,9 +57,35 @@ test("production coupler locks six bodies and animates only the membrane", async
     flush_entry_collars: 2,
     crop_occlusions: 2,
     flush_growth_mat_contacts: 1,
+    authored_cultivation_organs: ["trained hollow extrusion", "annealing return loop"],
+    visible_extrusion_apertures: 2,
+    visible_material_process_cues: [
+      "open pressure throats",
+      "variable wall thickness",
+      "stress-training seams",
+      "trapped inclusions",
+      "underfloor feed windows",
+    ],
     repair_joint_families: ["pearl knuckle", "violet stitch", "amber lattice"],
     parallel_cyan_tray_runs: 0,
     regular_repeated_clamps: 0,
+    generic_spike_occluders: 0,
+    cultivation_organ_metrics: {
+      trained_hollow_extrusion: {
+        bounds: [518, 204, 565, 260],
+        opaque_pixels: 918,
+        material_color_count: 15,
+        flush_growth_aperture: true,
+        purpose_shaped_hollow_glass: true,
+      },
+      annealing_return_loop: {
+        bounds: [557, 220, 603, 261],
+        opaque_pixels: 685,
+        material_color_count: 14,
+        flush_growth_aperture: true,
+        purpose_shaped_hollow_glass: true,
+      },
+    },
   });
   assert.equal(manifest.source_is_not_64px_preview, true);
   assert.equal(manifest.detail_retention_by_frame.length, 6);

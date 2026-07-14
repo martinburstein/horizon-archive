@@ -35,7 +35,7 @@ The broad front tongue is a clean laminated data bus that continues through the 
 
 `build_production_signal_coupler.py` rebuilds the approved source into the scene-native package under `production/`. The playable master is `640 x 360`, with a `320 x 320` source-derived coupler centered in the foreground and its approved paired side channels continued through both scene crops. It never enlarges or samples the `64 x 64` preview.
 
-The production build emits six lossless PNG frames, a shared-palette animated GIF, a reduced-motion still, a diagnostic membrane mask, native and `320 x 180` composition QA, and a machine-readable validation manifest. The earlier symmetric cyan cable trays have been retired. The west collar now compresses through two offset flush entry organs into a shallow buried seam with only two short trace windows. The east route changes depth, passes behind two purpose-grown glass shoots, and branches once into a flush non-Cartesian growth-mat contact before continuing through the crop. Three deliberately unlike sealed repairs—a pearl knuckle, violet stitch, and amber lattice—record separate stewardship periods without repeating a clamp grammar.
+The production build emits six lossless PNG frames, a shared-palette animated GIF, a reduced-motion still, a diagnostic membrane mask, native and `320 x 180` composition QA, an exact 4x cultivation-organ isolation proof, and a machine-readable validation manifest. The earlier symmetric cyan cable trays have been retired. The west collar now compresses through two offset flush entry organs into a shallow buried seam with only two short trace windows. The east route changes depth, passes behind two authored cultivated organs, and branches once into a flush non-Cartesian growth-mat contact before continuing through the crop. A trained hollow extrusion and a low annealing return loop replace the former generic spikes; each has a skewed flush pressure throat, variable glass wall thickness, process marks, and a distinct component shape. Three deliberately unlike sealed repairs—a pearl knuckle, violet stitch, and amber lattice—record separate stewardship periods without repeating a clamp grammar.
 
 The build validates both asymmetric load-bearing centerlines plus the growth-mat branch at `640 x 360` and the exact nearest-neighbor `320 x 180` derivative, failing on any transparent break. It also locks the approved central coupler body to SHA-256 `dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc`, so route work cannot alter the housing, glass-fin crown, clean tongue, collar anatomy, or any frozen body pixel outside the membrane.
 
@@ -43,6 +43,9 @@ Composition evidence remains separate from the transparent runtime overlay:
 
 - `production/qa/terminal-signal-coupler-meadow-composite-640x360.png`
 - `production/qa/terminal-signal-coupler-meadow-composite-320x180.png`
+- `production/qa/terminal-signal-coupler-cultivation-organs-isolation-4x.png`
+
+The purpose and future native-Meadow fold-in contract for those two organs is recorded in `CULTIVATED_ROUTE_ELEMENTS.md`.
 
 The build also fails unless all six PNG bodies and all six decoded GIF bodies are byte-identical outside the membrane, every screen state is distinct, and no animation pixel escapes the fixed membrane. The clean tongue, side conduits, service sleeves, substrate conduit, debris, and crop therefore remain frozen while the membrane hums.
 

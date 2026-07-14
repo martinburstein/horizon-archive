@@ -24,7 +24,7 @@
   ],
   "animated_mask_pixels": 3596,
   "unique_body_hashes": 1,
-  "body_sha256": "e40c8c34e16f14e5b85842f9ba712a660cf3b6af994a6fee85bcc808b8904b28",
+  "body_sha256": "91d91b588f2876c8a960bc625a65bd2e32f1bc7e1d0178d5323c35a9ad94a4ec",
   "central_coupler_body_sha256": "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc",
   "central_coupler_body_lock_sha256": "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc",
   "central_coupler_body_unchanged": true,
@@ -133,13 +133,52 @@
     "flush_entry_collars": 2,
     "crop_occlusions": 2,
     "flush_growth_mat_contacts": 1,
+    "authored_cultivation_organs": [
+      "trained hollow extrusion",
+      "annealing return loop"
+    ],
+    "visible_extrusion_apertures": 2,
+    "visible_material_process_cues": [
+      "open pressure throats",
+      "variable wall thickness",
+      "stress-training seams",
+      "trapped inclusions",
+      "underfloor feed windows"
+    ],
     "repair_joint_families": [
       "pearl knuckle",
       "violet stitch",
       "amber lattice"
     ],
     "parallel_cyan_tray_runs": 0,
-    "regular_repeated_clamps": 0
+    "regular_repeated_clamps": 0,
+    "generic_spike_occluders": 0,
+    "cultivation_organ_metrics": {
+      "trained_hollow_extrusion": {
+        "bounds": [
+          518,
+          204,
+          565,
+          260
+        ],
+        "opaque_pixels": 918,
+        "material_color_count": 15,
+        "flush_growth_aperture": true,
+        "purpose_shaped_hollow_glass": true
+      },
+      "annealing_return_loop": {
+        "bounds": [
+          557,
+          220,
+          603,
+          261
+        ],
+        "opaque_pixels": 685,
+        "material_color_count": 14,
+        "flush_growth_aperture": true,
+        "purpose_shaped_hollow_glass": true
+      }
+    }
   },
   "narrow_derivative_dimensions": [
     320,

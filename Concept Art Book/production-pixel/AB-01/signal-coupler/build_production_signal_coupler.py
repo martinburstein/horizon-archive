@@ -47,6 +47,10 @@ RIGHT_ROUTE_CENTERLINE = [
 ]
 RIGHT_MAT_BRANCH = [(506, 251), (518, 266), (538, 281)]
 LOCKED_CENTRAL_BODY_SHA256 = "dde04a431a528f5853632670bf624bf1cb0c4f361cafe73a8974121f605d27cc"
+CULTIVATION_ORGAN_BOUNDS = {
+    "trained_hollow_extrusion": (518, 204, 565, 260),
+    "annealing_return_loop": (557, 220, 603, 261),
+}
 
 # This is the approved 64 px diagnostic membrane, expanded by an exact integer
 # factor. Nothing outside this polygon is permitted to animate.
@@ -125,24 +129,116 @@ def stable_objects(cells: list[Image.Image], mask: Image.Image) -> list[Image.Im
     return [Image.composite(cell, base, mask) for cell in cells]
 
 
-def draw_growth_occluder(draw: ImageDraw.ImageDraw, x: int, floor_y: int, height: int) -> None:
-    """Place a subdued cultivated-glass shoot in front of a buried route."""
+def draw_flush_growth_aperture(
+    draw: ImageDraw.ImageDraw,
+    x: int,
+    floor_y: int,
+    scale: int,
+    phase: str,
+) -> None:
+    """Author one floor-level extrusion aperture without a pedestal or row grid.
+
+    The skewed outer mat, nested pressure throat, and unequal capillary windows
+    make the contact read as cultivated infrastructure. It is intentionally
+    flush with the perfectly flat Meadow and has no human-facing controls.
+    """
+    outer = [
+        (x - scale - 5, floor_y - 3),
+        (x - 4, floor_y - 7),
+        (x + scale + 4, floor_y - 5),
+        (x + scale + 8, floor_y),
+        (x + 3, floor_y + 5),
+        (x - scale - 7, floor_y + 2),
+    ]
+    draw.polygon(outer, fill=(20, 27, 41, 238))
+    draw.line(outer + [outer[0]], fill=(83, 93, 108, 230), width=1)
+
+    # The amber-violet interior is silica feedstock visible through an open
+    # pressure throat, not a lamp or status button.
+    throat = [
+        (x - scale, floor_y - 3),
+        (x + 2, floor_y - 5),
+        (x + scale + 1, floor_y - 2),
+        (x + scale - 1, floor_y + 2),
+        (x - 2, floor_y + 3),
+        (x - scale - 2, floor_y),
+    ]
+    draw.polygon(throat, fill=(74, 54, 51, 245))
+    throat_note = (161, 111, 59, 255) if phase == "trained" else (111, 78, 124, 255)
+    draw.line(throat[:4], fill=throat_note, width=2)
+
+    # Unequal trace windows imply state relationships rather than Cartesian
+    # crop rows. They remain subordinate to the coupler membrane.
+    if phase == "trained":
+        draw.line([(x - scale - 12, floor_y + 1), (x - scale - 7, floor_y)], fill=(52, 111, 132, 220), width=2)
+        draw.line([(x + scale + 7, floor_y - 1), (x + scale + 14, floor_y - 4)], fill=(92, 68, 43, 220), width=2)
+    else:
+        draw.line([(x - scale - 11, floor_y - 3), (x - scale - 6, floor_y - 1)], fill=(92, 68, 43, 220), width=2)
+        draw.line([(x + scale + 7, floor_y), (x + scale + 11, floor_y + 3)], fill=(43, 105, 128, 220), width=2)
+
+
+def draw_trained_extrusion(draw: ImageDraw.ImageDraw, x: int, floor_y: int) -> None:
+    """Place a purpose-grown hollow conduit in front of the east route."""
+    draw_flush_growth_aperture(draw, x, floor_y, 9, "trained")
+
+    # A thick-walled, asymmetrically trained hollow tube. Its oblique open lip
+    # is a process shape produced by the mat; it is neither a fantasy crystal
+    # point nor a decorative spike.
+    shell = [
+        (x - 8, floor_y - 4),
+        (x - 7, floor_y - 26),
+        (x - 5, floor_y - 39),
+        (x - 2, floor_y - 43),
+        (x + 4, floor_y - 42),
+        (x + 7, floor_y - 36),
+        (x + 7, floor_y - 19),
+        (x + 10, floor_y - 5),
+    ]
+    draw.polygon(shell, fill=(82, 111, 139, 178))
+    draw.line(shell[:4], fill=(208, 224, 232, 245), width=2)
+    draw.line(shell[4:], fill=(37, 57, 80, 240), width=2)
+
+    # The open lumen and unequal lip expose wall thickness and prevent a solid
+    # icicle read. A small trapped inclusion makes the fictional material feel
+    # grown and stress-trained rather than machined from a perfect extrusion.
     draw.polygon(
-        [(x - 7, floor_y), (x - 5, floor_y - height + 9), (x, floor_y - height),
-         (x + 5, floor_y - height + 13), (x + 7, floor_y)],
-        fill=(116, 139, 164, 190),
+        [(x - 1, floor_y - 39), (x + 2, floor_y - 40), (x + 4, floor_y - 36),
+         (x + 3, floor_y - 21), (x, floor_y - 11), (x - 2, floor_y - 23)],
+        fill=(20, 35, 56, 205),
     )
-    draw.line(
-        [(x - 4, floor_y - 2), (x - 2, floor_y - height + 11), (x, floor_y - height + 4)],
-        fill=(200, 217, 229, 220),
-        width=2,
-    )
-    draw.line(
-        [(x + 3, floor_y - height + 14), (x + 5, floor_y - 2)],
-        fill=(45, 67, 92, 220),
-        width=2,
-    )
-    draw.line([(x - 8, floor_y), (x + 8, floor_y)], fill=(91, 68, 43, 220), width=2)
+    draw.line([(x - 2, floor_y - 42), (x + 3, floor_y - 41), (x + 6, floor_y - 37)], fill=(225, 232, 235, 245), width=1)
+    draw.line([(x - 4, floor_y - 31), (x + 5, floor_y - 28)], fill=(126, 91, 128, 245), width=2)
+    draw.line([(x - 5, floor_y - 30), (x - 6, floor_y - 24)], fill=(170, 177, 193, 235), width=1)
+    draw.point((x + 4, floor_y - 16), fill=(188, 130, 68, 255))
+    draw.point((x - 3, floor_y - 19), fill=(202, 218, 228, 255))
+
+
+def draw_annealing_loop(draw: ImageDraw.ImageDraw, x: int, floor_y: int) -> None:
+    """Place a low trained return loop from a different stewardship phase."""
+    draw_flush_growth_aperture(draw, x, floor_y, 8, "annealing")
+
+    # Two unequal walls rise from one pressure throat and are fused by a low
+    # return bridge. This is a harvested-component shape still in its training
+    # aperture, not a sign, archway, or repeated crop-row marker.
+    left_wall = [(x - 8, floor_y - 4), (x - 8, floor_y - 20), (x - 5, floor_y - 29), (x - 1, floor_y - 27), (x - 2, floor_y - 6)]
+    right_wall = [(x + 2, floor_y - 5), (x + 3, floor_y - 23), (x + 7, floor_y - 27), (x + 9, floor_y - 18), (x + 9, floor_y - 4)]
+    draw.polygon(left_wall, fill=(92, 119, 143, 180))
+    draw.polygon(right_wall, fill=(70, 100, 128, 190))
+    draw.line(left_wall[:3], fill=(201, 218, 229, 240), width=2)
+    draw.line(right_wall[1:4], fill=(46, 66, 88, 245), width=2)
+    draw.line([(x - 5, floor_y - 27), (x - 1, floor_y - 31), (x + 5, floor_y - 29), (x + 7, floor_y - 25)], fill=(128, 151, 171, 220), width=4)
+    draw.line([(x - 4, floor_y - 28), (x, floor_y - 29), (x + 5, floor_y - 27)], fill=(218, 229, 234, 245), width=1)
+
+    # A later amber anneal seam and a violet strain mote record two different
+    # interventions without copying the coupler's repair-joint silhouettes.
+    draw.line([(x - 7, floor_y - 13), (x - 2, floor_y - 15)], fill=(151, 109, 57, 255), width=2)
+    draw.point((x + 5, floor_y - 18), fill=(136, 92, 139, 255))
+
+
+def draw_cultivation_organs(draw: ImageDraw.ImageDraw) -> None:
+    """Draw two deliberately non-repeating organs over the buried route."""
+    draw_trained_extrusion(draw, 543, 252)
+    draw_annealing_loop(draw, 580, 253)
 
 
 def draw_side_connections(scene: Image.Image) -> None:
@@ -195,16 +291,21 @@ def draw_side_connections(scene: Image.Image) -> None:
     draw.line([(595, 242), (605, 240), (612, 244), (608, 249), (598, 250)], fill=(151, 113, 59, 255), width=2)
     draw.line([(626, 247), (640, 249)], fill=(42, 119, 145, 255), width=2)
 
-    # The branch terminates in a flat non-Cartesian mat contact: no pedestal,
-    # switch, label, or human-row alignment.
+    # The branch terminates in a flat non-Cartesian distribution contact: no
+    # pedestal, switch, label, or human-row alignment. Offset underfloor
+    # windows tie it to the trained extrusion without drawing a surface cable.
     draw.polygon([(524, 278), (537, 273), (551, 279), (548, 287), (532, 290), (518, 285)], fill=(25, 31, 44, 245))
     draw.line([(523, 282), (536, 277), (546, 281), (542, 286), (531, 287)], fill=(112, 127, 143, 255), width=2)
     draw.line([(529, 290), (548, 287)], fill=(94, 68, 42, 210), width=2)
+    draw.line([(540, 276), (545, 269)], fill=(41, 105, 128, 210), width=2)
+    draw.line([(546, 264), (545, 259)], fill=(91, 68, 43, 210), width=2)
 
-    # Crop occlusion changes the route's depth twice and ties it to the same
-    # purpose-grown glass vocabulary as the Meadow rather than to cable trays.
-    draw_growth_occluder(draw, 543, 252, 39)
-    draw_growth_occluder(draw, 580, 253, 28)
+    # Two unequal cultivated organs change the route's depth and tie it to the
+    # Meadow's material-processing occupation. One is a hollow trained
+    # extrusion; the other is a low annealing loop. Their apertures, wall
+    # thickness, stress marks, and stewardship scars are authored anatomy,
+    # replacing the former generic overlay spikes.
+    draw_cultivation_organs(draw)
 
 
 def scene_frames(objects: list[Image.Image]) -> tuple[list[Image.Image], Image.Image]:
@@ -326,6 +427,47 @@ def save_scene_qa(frame: Image.Image) -> None:
     )
 
 
+def cultivation_organ_layer() -> Image.Image:
+    layer = Image.new("RGBA", SCENE_SIZE, (0, 0, 0, 0))
+    draw_cultivation_organs(ImageDraw.Draw(layer))
+    return layer
+
+
+def cultivation_organ_metrics() -> dict[str, dict[str, object]]:
+    layer = cultivation_organ_layer()
+    metrics: dict[str, dict[str, object]] = {}
+    for name, bounds in CULTIVATION_ORGAN_BOUNDS.items():
+        crop = layer.crop(bounds)
+        opaque_pixels = sum(1 for value in crop.getchannel("A").get_flattened_data() if value >= 128)
+        material_colors = {
+            rgba[:3]
+            for rgba in crop.get_flattened_data()
+            if rgba[3] >= 128
+        }
+        if opaque_pixels < 200:
+            raise ValueError(f"Cultivation organ {name} lacks a reviewable authored silhouette")
+        if len(material_colors) < 8:
+            raise ValueError(f"Cultivation organ {name} lacks a convincing material ramp")
+        metrics[name] = {
+            "bounds": list(bounds),
+            "opaque_pixels": opaque_pixels,
+            "material_color_count": len(material_colors),
+            "flush_growth_aperture": True,
+            "purpose_shaped_hollow_glass": True,
+        }
+    return metrics
+
+
+def save_cultivation_qa() -> None:
+    layer = cultivation_organ_layer()
+    crop_bounds = (514, 200, 607, 265)
+    isolation = layer.crop(crop_bounds)
+    isolation.resize(
+        (isolation.width * 4, isolation.height * 4),
+        Image.Resampling.NEAREST,
+    ).save(QA_DIR / "terminal-signal-coupler-cultivation-organs-isolation-4x.png")
+
+
 def validate(
     frames: list[Image.Image],
     scene_mask: Image.Image,
@@ -388,6 +530,8 @@ def validate(
             f"An authored field route contains transparent breaks: native={native_breaks}, narrow={narrow_breaks}"
         )
 
+    organ_metrics = cultivation_organ_metrics()
+
     return {
         "source_dimensions": list(Image.open(SOURCE).size),
         "production_dimensions": list(SCENE_SIZE),
@@ -418,9 +562,20 @@ def validate(
             "flush_entry_collars": 2,
             "crop_occlusions": 2,
             "flush_growth_mat_contacts": 1,
+            "authored_cultivation_organs": ["trained hollow extrusion", "annealing return loop"],
+            "visible_extrusion_apertures": 2,
+            "visible_material_process_cues": [
+                "open pressure throats",
+                "variable wall thickness",
+                "stress-training seams",
+                "trapped inclusions",
+                "underfloor feed windows",
+            ],
             "repair_joint_families": ["pearl knuckle", "violet stitch", "amber lattice"],
             "parallel_cyan_tray_runs": 0,
             "regular_repeated_clamps": 0,
+            "generic_spike_occluders": 0,
+            "cultivation_organ_metrics": organ_metrics,
         },
         "narrow_derivative_dimensions": [320, 180],
         "narrow_derivative_resampling": "nearest-neighbor",
@@ -445,6 +600,7 @@ def main() -> None:
     narrow_still = frames[2].resize((320, 180), Image.Resampling.NEAREST)
     narrow_still.save(QA_DIR / "terminal-signal-coupler-available-320x180.png")
     save_scene_qa(frames[2])
+    save_cultivation_qa()
     gif_path = OUTPUT / "terminal-signal-coupler-loop-640x360.gif"
     save_gif(frames, gif_path)
     scene_mask.save(QA_DIR / "terminal-signal-coupler-screen-mask-640x360.png")
