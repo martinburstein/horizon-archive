@@ -72,15 +72,15 @@ Use a more specific line only when it adds state clarity.
 
 ## Glass Meadow trigger and copy matrix
 
-### Petal / First Signal
+### Field-linked Terminal / First Signal
 
-- Opening trigger: Petal hotspot.
+- Opening trigger: `field-linked Terminal` hotspot.
 - Open dialogue: `EXPEDITION LINK // LOCAL TOOLING`: “First Signal active. Edit, run, then review the output.”
 - Initial title: `MACHINE TERMINAL // First Signal`.
 - Close/Escape line: `SYSTEM // EXPEDITION STATE`: “First Signal closed. Code, result, and hints remain in this session.”
-- Focus destination after ordinary dismissal: Petal hotspot.
+- Focus destination after ordinary dismissal: `field-linked Terminal` hotspot.
 - Reopen line: “First Signal restored at the last edit.”
-- After acknowledgement: do not restore focus to the now-completed Petal trigger as if another action were required. The next meaningful control is the awake Route Marker.
+- After acknowledgement: do not restore focus to the completed field-linked Terminal as if another action were required. The next meaningful control is the awake Route Marker.
 
 ### Route Marker Survey Label
 
@@ -385,7 +385,7 @@ Exact trigger restoration is correct only if the opening trigger remains connect
 
 When acknowledgement changes progression:
 
-- First Signal completion: prefer the newly awake Route Marker as the next focus target or announce its availability, rather than returning to a completed Petal.
+- First Signal completion: prefer the newly awake Route Marker as the next focus target or announce its availability, rather than returning to the completed field-linked Terminal.
 - Route mastery: prefer `Continue` or `Start Calibration`; neither choice should be automatic.
 - Calibration mastery: prefer `Continue` because the optional lesson no longer needs a resume action.
 - Workload Sort mastery: prefer the scene's Continue action after the success recap.

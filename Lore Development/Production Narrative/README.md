@@ -23,7 +23,7 @@ This folder turns the visible lore bible, concept art, playable prologue, and cu
 - `drowned-archive-interaction-packet.md`: complete ruins-scene interaction and remediation copy, with strict separation between the grounded Workload Sort Terminal and the silent suspended landmark.
 - `witness-corridor-interaction-packet.md`: complete two-object corridor interaction, evidence-session, reload/resume, acknowledgement, and credits copy contract for the automaton and grounded Evidence Terminal.
 - `glass-meadow-dual-node-interaction-packet.md`: complete Petal-to-Route prerequisite, state, dialogue, remediation, reload, mastery, and transition contract for the finalized pixel meadow.
-- `glass-meadow-signal-coupler-integration-contract.md`: production overlay replacing the older freestanding Petal body language with the interconnected, fixed-body, screen-only signal coupler while preserving First Signal and Route Marker progression.
+- `glass-meadow-signal-coupler-integration-contract.md`: production overlay replacing the older freestanding Petal body language with the interconnected, fixed-body, screen-only signal coupler; includes the field-linked Terminal observation ladder and preserves First Signal and Route Marker progression.
 - `terminal-focus-and-dismissal-contract.md`: shared player-facing ownership, focus, safe dismissal, session, trigger restoration, and post-mastery navigation contract for every Terminal.
 - `code-to-discovery-integration.md`: rules and exercise patterns that make real Python produce story discoveries.
 

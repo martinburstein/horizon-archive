@@ -37,6 +37,20 @@ The player may not yet conclude what the channels carry, how far they travel, wh
 
 The front projection is not a tongue, ramp, path, tray, keyboard, or human approach surface in player-facing copy. Describe it only as a `front laminate` if inspection requires a noun. Nothing branches from it.
 
+## Observation ladder
+
+The field-linked Terminal earns attention by revising a visible category, not by delivering a message. Use this order when the scene supports repeated inspection:
+
+1. **Focus only — human label:** `field-linked Terminal`. The accessible name identifies the operable target without naming a native function.
+2. **First LOOK — directly visible continuity:** `Cold glass fins rise from a dark housing. Paired channels continue under the field and beyond sight.`
+3. **Repeat LOOK — stable construction:** `The membrane repeats. The housing, front laminate, channels, and ground contact do not move.`
+4. **Closer Pilot inference — bounded category revision:** `It doesn't end at the housing. One exposed part of something I can't see.`
+5. **Post-acknowledgement LOOK — unchanged local evidence:** `The same six membrane arrangements repeat. The side channels remain beyond sight.`
+
+Steps two, three, and five are sensory observations. Step four must remain Pilot-owned because `part` and `something` are human inferences from continuity beyond the crop. None of these lines may promote the connections to a network, identify what moves through them, equate the membrane with writing, or imply that the cycle has noticed an interaction.
+
+Do not vary this ladder by assigning emotional or conversational states such as `quiet`, `patient`, `attentive`, `reluctant`, `curious`, or `waiting`. Mood belongs to the scene as a whole; it is not evidence about the artifact.
+
 ## Animation and causality lock
 
 The six membrane states are ambient evidence, not conversation. They cycle before approach, while the First Signal workbench is open, after validation, after acknowledgement, on return to the completed meadow, and in reduced-motion form as one representative still.
@@ -70,7 +84,7 @@ Do not name the artifact before the player inspects or focuses it. The Chapter I
 
 Optional second inspection:
 
-> Not a console. One exposed part of something I can't see.
+> It doesn't end at the housing. One exposed part of something I can't see.
 
 The second line is Pilot inference, not Scene fact.
 
@@ -78,11 +92,11 @@ The second line is Pilot inference, not Scene fact.
 
 `PILOT // FLIGHT RECORDER`:
 
-> First signal. Mine, not yours.
+> I called it First Signal. The name belongs to my recorder, not this surface.
 
 `SCENE // SENSOR RECORD`:
 
-> No voice separates from the wind. The membrane continues its prior cycle.
+> Wind crosses the housing. The membrane continues its prior cycle.
 
 Talking changes no world, exercise, evidence, or animation state.
 
@@ -94,7 +108,11 @@ Talking changes no world, exercise, evidence, or animation state.
 
 `SCENE // SENSOR RECORD`:
 
-> Six abstract states repeat on the membrane. No text resolves.
+> Six abstract arrangements repeat on the membrane.
+
+`PILOT // FLIGHT RECORDER`:
+
+> My recorder assigns none of them a reading.
 
 Do not render a `LOCAL SURFACE // PROVISIONAL TRANSLATION` line for this screen. The visible topology has not been translated. The dark Python workspace is human expedition mediation reached through the contact, not an interface visibly written into the artifact.
 
@@ -126,7 +144,7 @@ Do not show a translated confirmation on the coupler membrane.
 
 `LOOK AT`, `SCENE // SENSOR RECORD`:
 
-> The same six-state membrane cycle continues. The side channels remain beyond sight.
+> The same six membrane arrangements repeat. The side channels remain beyond sight.
 
 `USE`, `SYSTEM // EXPEDITION STATE`:
 
@@ -142,11 +160,11 @@ These actions do not reopen First Signal, repaint the coupler, reset evidence, o
 
 The coupler restores in the same ambient screen cycle or reduced-motion still. This is visual continuity, not a fresh response. Retained completion belongs to expedition evidence; no new local-surface line is emitted.
 
-## Runtime reconciliation handoff
+## Runtime alignment record
 
-The following current strings conflict with the production asset and this surface contract:
+The Coder pass at `9803978` applied the production label, first LOOK line, success boundary, prerequisite copy, and completed-state ownership below. Keep this table as migration provenance; do not reintroduce the retired column.
 
-| Current runtime copy or label | Required replacement |
+| Retired runtime copy or label | Production replacement |
 |---|---|
 | hotspot `Petal terminal` | `field-linked Terminal` |
 | `A dormant interface waits inside the crystal bloom. Wake it with one line of Python.` | `Cold glass fins rise from a dark housing. Paired channels continue under the field and beyond sight.` |
@@ -155,6 +173,8 @@ The following current strings conflict with the production asset and this surfac
 | `The route marker refuses the link...` | `Route lesson locked. Acknowledge First Signal at the field-linked Terminal.` |
 | `The Petal Terminal is complete...` | `First Signal is complete. The separate Route Marker now carries the active lesson.` |
 | `Nothing here has a mouth. Something still seems to hear you.` | Use the two owner-separated `TALK TO` lines above. |
+
+One narrower follow-up remains after that alignment: the live Meadow TALK line is still `First signal. Mine, not yours.` Replace it with the recorder-owned sentence in this contract when Coder next touches interaction copy. This is a wording correction only; it must not change state, evidence, animation, focus, or progression.
 
 The runtime's animated image remains decorative to assistive technology because the hotspot supplies the operable name. If a nonvisual description of the artifact is exposed later, it must mention the visible interconnection and stable-body/screen-only cycle without claiming hidden function.
 
@@ -165,8 +185,9 @@ The runtime's animated image remains decorative to assistive technology because 
 - The clean front laminate never receives a tube or human-use explanation.
 - All six frames have an identical body; narrative progression never depends on a body animation that does not exist.
 - Only the screen changes, and its abstract topology is never treated as readable writing.
+- Repeated LOOK copy distinguishes visible stability from Pilot inference without assigning a native function.
+- TALK identifies `First Signal` as a Pilot/recorder name and never presumes an audience.
 - First Signal completion changes expedition evidence and Route Marker availability, not the coupler's ambient cycle.
 - Copy ownership remains distinct among Pilot, Scene, Expedition Link, and System.
 - LOOK, USE, TALK, close, reopen, reload, acknowledgement, completed inspection, and return remain recoverable and spoiler-safe.
 - No line confirms the Machine's nature, a Builder occupation, sender, audience, consciousness, disappearance, or prior human contact.
-
