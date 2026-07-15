@@ -116,6 +116,25 @@ This refinement adds no new canon and assigns no composition work. It defines th
 - **MAINTENANCE COUPLING:** "Condensate beads along serviced couplings. Low machines pass beneath the sealed interlock without touching it."
 - **DISTANT SCALE ECHO:** "Atmospheric haze separates the farther mass. Its relief, crossing laminate, and bordered interval repeat without exact cloning."
 
+### Custody Ledger runtime ownership copy
+
+This copy tranche closes the remaining Lore-owned A5 ambiguity around `SC-03-30`. It supplies compact ownership-safe language for the human expedition interface only; Curriculum and Gameplay retain sole authority over scoring, remediation order, and evidence validity.
+
+| Boundary | Owner | Runtime-ready copy | Lore protection |
+|---|---|---|---|
+| prerequisites incomplete | `SYSTEM // EXPEDITION STATE` | "Required practice evidence is incomplete. The district remains available; no local request has been sent." | Missing course evidence is not a city refusal or physical lock. |
+| scored tray available | `SYSTEM // EXPEDITION SESSION` | "Five exposed conditions logged. Add only the two expedition-owned fields." | The source layer remains evidence, not editable identity or permission. |
+| source field changed or mapping replaced | `SYSTEM // LOCAL CHECKS` | "Source evidence is locked. Add expedition fields without replacing it." | Failure belongs to the human validator and produces no world response. |
+| `identity` confused with `False` | `901 TEACHER // FEEDBACK` | "Identity is missing or unknown here; it is not a false identity." | The line teaches `None` versus `False` without identifying anyone. |
+| `access_requested` changed to `True` | `SYSTEM // LOCAL CHECKS` | "No request occurred. This comparison cannot claim access." | The interface cannot manufacture consent, contact, or authority. |
+| strict evidence complete; save review opens | `PILOT // FLIGHT RECORDER` | "This label is mine. It does not name their purpose or open what remains closed." | Human classification remains provisional and the identity interlock remains separate. |
+| cancel, close, or route return before save | `SYSTEM // EXPEDITION SESSION` | "Unsubmitted work cleared. The district and closed records are unchanged." | Session cleanup is not a city-state change. |
+| normal atomic save succeeds | `SYSTEM // EXPEDITION STATE` | "Bounded comparison saved. No access request or external action occurred; `continuation` is unchanged." | Only the expedition save changes. |
+| completed save restores | `SYSTEM // EXPEDITION STATE` | "Civic comparison restored. Working notes are cleared; closed records remain closed." | Restoration reports retained human evidence, never Machine memory or renewed response. |
+| Demo Tour preview | `SYSTEM // DEMO TOUR` | "Preview only — bounded comparison not saved." | Tour viewing creates no story, curriculum, or city evidence. |
+
+Copy rendering must preserve the owner prefix in text, not color alone. No pass, miss, hint, retry, animation, save, tour, or resume line may be voiced by the city, closed interlock, Builder surface, or Machine. A5 may shorten a line only if its owner, negative-authority clause, and observation-versus-inference boundary remain explicit.
+
 ### Mystery protections
 
 - Do not identify the layered masses as tombs, homes, courts, people, memories, civic offices, records by native definition, or Machine organs in Scene/System copy.
@@ -146,16 +165,16 @@ This refinement adds no new canon and assigns no composition work. It defines th
 
 ### Lore Builder sign-off
 
-- Status: `PASS — A1 PHOTOREALISTIC REFINEMENT COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
+- Status: `PASS — A1 RUNTIME OWNERSHIP COPY COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
 - Continuity: begins only from RP-001's completed expedition anchor and reversible route, preserves `continuation` and `city_state_delta=None`, and does not replay or mutate the threshold.
 - State transition: `RP-001 anchor complete -> cross already-lit route -> observe repeated provenance separation -> save bounded expedition comparison -> retain reversible return and mark next survey direction`, with zero city delta.
 - Spoiler safety: the beat exposes record structure rather than identity, motive, native category, or central answers.
 - Ownership: every physical fact is Scene-owned, every saved change is expedition-owned, and every civic/public/occupational reading remains Pilot-owned and provisional.
-- Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts.
+- Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts. The added Custody Ledger copy remains entirely inside the separate human interface and requires no world-plate change.
 
-### Exact Storyboarder handoff — photorealistic impact review
+### Exact Storyboarder handoff — runtime ownership impact review
 
-Review the existing RP-002 A2 boards and `SC-03` brief against the new A1 Photorealistic Surface-Evidence Contract without changing board order, interaction rectangles, entry/exit state, or world causality. Make fixed trace readable through continuous aged substrate; make later stewardship readable through compatible newer material and prepared joints; make the outlined gap unmistakably solid through continuous dust, condensate, light, heat stain, or grain; and make the closed interlock physically separate without a handle, screen, light well, or request affordance. Preserve the three stewardship eras, causally routed heat/condensation/maintenance evidence, meaningful rather than cloned scale repetition, identical entry/completion/return materials and lighting causes, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Keep all human labels and saved progress outside the world plate. Reject pseudo-writing, faces, humanoid or reflected figures, familiar tomb/office/museum cues, melted or floating geometry, incoherent reflections/shadows, generic neon, and atmosphere used to hide evidence. Do not add a person, identity claim, native label, successor claim type, consent event, access event, or new lore; return the updated A2 validation and the exact Curriculum Checker handoff on this same packet.
+Review the existing RP-002 A2 boards and `SC-03` brief against the added Custody Ledger Runtime Ownership Copy without changing board order, interaction rectangles, world plates, entry/exit state, or causality. Confirm every new line fits only inside the separate human `640 x 120` interface band and that owner prefixes, no-request language, provisional human labeling, closed-record status, and unchanged-world meaning remain legible at desktop, exact `640 x 480`, and narrow derivatives without relying on color. Preserve all previously locked physical-material evidence, three stewardship eras, registered effects, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Do not paint, project, reflect, or imply any added copy on Builder matter; do not turn feedback into a surface reaction. Return the A2 impact verdict and the exact Curriculum Checker handoff on this same packet.
 
 ## Storyboard Track — Storyboarder
 
