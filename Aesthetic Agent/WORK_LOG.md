@@ -2,7 +2,7 @@
 
 ## Mission
 
-Review the repaired playable demo as a complete live scene and produce implementation-ready visual findings for the shared Coder Agent. Protect Horizon Archive's first-person framing, `640 × 480` square-pixel presentation, visual richness, Builder-made functional strangeness, scene hierarchy, and asset consistency.
+Review the repaired playable demo as a complete live scene and produce implementation-ready visual findings for the shared Coder Agent. Protect Horizon Archive's first-person framing, responsive modern presentation, visual richness, Builder-made functional strangeness, scene hierarchy, and asset consistency. Exact `640 x 480` / `320 x 240` and square-pixel gates are retired historical constraints.
 
 The Aesthetic Agent reports but does not edit production code or assets. The Coder Agent owns implementation.
 

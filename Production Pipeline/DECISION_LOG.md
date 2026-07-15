@@ -1,5 +1,13 @@
 # Two-Team Decision Log
 
+## 2026-07-15 — Retire fixed legacy viewport gates
+
+- Retire exact `640 x 480`, `640 x 360`, and `320 x 240` presentation requirements as remnants of the abandoned pixel-art expedition.
+- Preserve old measurements only as historical evidence or temporary implementation coordinates; they no longer determine acceptance.
+- Replace exact-viewport and integer-scale gates with representative desktop/narrow responsive review, readable type, contained controls, accessible target sizes, preserved aspect ratio, and efficient use of available screen space.
+- Keep the CRT-inspired surround only as optional visual character. It must not force a small fixed canvas or large black margins.
+- Permit Coder to refactor the canonical-frame implementation and regression suite while preserving gameplay, focus, save/resume, privacy, mastery, Demo Tour, first-person composition, and photorealistic art.
+
 ## 2026-07-15 — Set a maximum-quality art ceiling
 
 - Establish `Visual Direction/PREMIUM_ART_STYLE_GUIDE.md` as the production-level companion to the active photorealistic charter.

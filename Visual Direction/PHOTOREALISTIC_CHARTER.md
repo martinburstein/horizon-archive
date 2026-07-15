@@ -43,6 +43,8 @@ The game remains a first-person point-and-click adventure. Classic LucasArts tit
 
 - World plates never contain baked UI or readable instructions.
 - Expedition dialogue, verbs, inventory, Python editing, assessment feedback, focus states, and accessibility text remain separate responsive interface layers.
+- Fixed `640 x 480` and `320 x 240` canvases are retired. Let the photographic world and interface use the available screen responsively; review representative desktop and narrow layouts based on readability and containment rather than exact legacy dimensions.
+- The CRT-inspired surround may remain as optional visual character, but it must not force a small fixed game canvas, integer scaling, square pixels, or large unused margins.
 - Interactions must be discoverable through composition, silhouette, contrast, localized motion, material routing, and state change—not outlines or floating icons alone.
 - Reduced-motion mode uses a still plate that preserves all gameplay meaning.
 
