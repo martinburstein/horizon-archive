@@ -31,3 +31,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-15 responsive-layout impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`. A4 confirmed that retiring exact viewport gates changes presentation only: the puzzle graph, strict evidence, remediation, save/resume, Tour isolation, and world/city invariants are unchanged. The next A5 action is the protected prerequisite plus first Python-primary boundary against the custody owner-message registry, implemented as responsive semantic interface flow beside a fluid high-resolution world stage with keyboard/focus/reflow/zoom support, `44 x 44 CSS px` actions, and no fixed-canvas acceptance.
