@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coordinator: integrated Meadow release validation
+
+- **Outcome:** `PASS — RP001-AESTH-005 RESOLVED.` The final live build presents one integrated photoreal Glass Meadow plate; the field Terminal, underground couplings, front laminate, and dormant route marker share the plate's perspective, dawn light, contact, and material response.
+- **Validation:** full game suite **254/254**, production build, RP-002 and L-01-02 curriculum self-tests, and the full end-to-end campaign through credits passed. The E2E harness now recognizes the coordinated photoreal Drowned Archive and Witness Corridor assets and uses keyboard activation for the narrow calibration source tab. All regenerated tracked QA binaries were reverted after validation.
+- **Responsive/live review:** desktop, exact `640 x 480`, and exact `320 x 240` passed. The integrated master loaded at `1672 x 941`; the canonical/narrow frame remained contained; both Meadow hotspots remained contained and above `44 px`; title/save/name/prologue/arrival remained playable. No protagonist, ship, legacy overlay, or runtime error appeared.
+- **Follow-on:** keep the static membrane state. A later art pass may add only a registered zero-drift screen crop; it may not restore the retired GIF, canvas, or whole-object overlay.
+
 ## 2026-07-15 — Coder W4: integrated photoreal Glass Meadow
 
 - **Mode:** `aesthetic-polish` for W4 only.

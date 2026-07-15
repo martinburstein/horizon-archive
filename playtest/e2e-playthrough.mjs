@@ -279,7 +279,9 @@ print("Operator:", learner)`);
   await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
   await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
-  await page.getByRole("button", { name: "source", exact: true }).click();
+  const calibrationSourceTab = page.getByRole("button", { name: "source", exact: true });
+  await calibrationSourceTab.focus();
+  await calibrationSourceTab.press("Enter");
   if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Exit Calibration discarded in-progress source");
   await page.keyboard.press("Escape");
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor({ state: "detached" });
@@ -1846,13 +1848,13 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
 
   if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
   const narrow = viewportLabel === "320x240" || viewportLabel === "640x480";
-  if (metrics.visualState !== "available" || (!metrics.src.includes("ab01-available-") && !metrics.src.startsWith("data:image/png;base64,"))) throw new Error(`Wrong AB-01 production asset at ${viewportLabel}: ${metrics.src}`);
-  if (!/grounded three-fin Workload Sort Terminal/i.test(metrics.alt) || !/Tidal Lens landmark/i.test(metrics.alt)) throw new Error(`AB-01 alt text incomplete: ${metrics.alt}`);
+  if (metrics.visualState !== "available" || (!metrics.src.includes("drowned-archive-master-") && !metrics.src.startsWith("data:image/png;base64,"))) throw new Error(`Wrong Drowned Archive production asset at ${viewportLabel}: ${metrics.src}`);
+  if (!/Photorealistic flooded Builder phase-processing basin/i.test(metrics.alt) || !/Tidal Lens/i.test(metrics.alt) || !/grounded local coupling/i.test(metrics.alt)) throw new Error(`Drowned Archive alt text incomplete: ${metrics.alt}`);
   if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.logicalWidth !== (narrow ? 320 : 640) || metrics.logicalHeight !== (narrow ? 240 : 480) || metrics.logicalWorldHeight !== (narrow ? 180 : 360) || metrics.logicalInterfaceHeight !== (narrow ? 60 : 120)) throw new Error(`Wrong logical bands at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (Math.abs(metrics.renderedWidth - metrics.logicalWidth * metrics.scale) > 0.5 || Math.abs(metrics.renderedHeight - metrics.logicalHeight * metrics.scale) > 0.5 || !metrics.centeredX || !metrics.centeredY) throw new Error(`Frame scale/letterbox failure at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.naturalWidth !== (narrow ? 320 : 640) || metrics.naturalHeight !== (narrow ? 180 : 360)) throw new Error(`Unexpected AB-01 asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
-  if (!/(pixelated|crisp)/i.test(metrics.imageRendering)) throw new Error(`AB-01 smoothing enabled at ${viewportLabel}`);
+  if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected Drowned Archive asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
+  if (metrics.imageRendering !== "auto") throw new Error(`Drowned Archive photoreal sampling disabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
   if (!metrics.hotspotContained || metrics.liveButtons < (narrow ? 4 : 6)) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.minControlWidth < 24 || metrics.minControlHeight < 24) throw new Error(`Adventure control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
@@ -1965,8 +1967,8 @@ async function assertWitnessHotspotAlignment(page, viewportLabel) {
   });
 
   if (!metrics) throw new Error(`Witness geometry unavailable at ${viewportLabel}`);
-  if (!metrics.src.includes("witness-corridor-evidence-terminal-v1")) throw new Error(`Wrong Witness asset at ${viewportLabel}: ${metrics.src}`);
-  if (!/grounded three-fin Evidence Terminal/i.test(metrics.alt) || !/separate fallen automaton/i.test(metrics.alt)) {
+  if (!metrics.src.includes("witness-corridor-master-")) throw new Error(`Wrong Witness asset at ${viewportLabel}: ${metrics.src}`);
+  if (!/Photorealistic Builder forensic passage/i.test(metrics.alt) || !/integrated evidence coupling on the left/i.test(metrics.alt) || !/collapsed maintenance assembly on the right/i.test(metrics.alt)) {
     throw new Error(`Witness alt text does not distinguish both objects: ${metrics.alt}`);
   }
   if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected Witness asset dimensions: ${metrics.naturalWidth}x${metrics.naturalHeight}`);

@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — PARTIAL` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coordinator validation | `RP001-AESTH-005` resolved in W4; integrated Glass Meadow live validation remains | Validate desktop, exact 640x480, and exact 320x240, then disposition the increment |
+| 1 | `RP-001` | `IN DEMO — COORDINATOR VALIDATED` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | User review / next Working cycle | No current functional or photoreal-migration blocker; optional registered membrane animation remains follow-on art | Keep the validated build playable, collect user review, and continue the next bounded Working refinement without reopening locked behavior |
 
 ## Current-demo quality lane
 
@@ -34,4 +34,4 @@ The required pass order is Player Agent, shared Coder Agent bug repair and reloa
 | 3 | `RP001-AESTH-002` — Historical pixel-consistency requirement | `Pixelated Draft/`; `demo-increments/DI-001-city-threshold.md` | `RETIRED BY VISUAL-DIRECTION DECISION` | Closed |
 | 4 | `RP001-AESTH-003` — Internal rough-plate banner dominated scene hierarchy | W4 exact live checks; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — FINAL DEMO RELOADED` | Closed unless reproduced |
 | 5 | `RP001-AESTH-004` — Historical City Threshold pixel-styled fallback plates | Coordinated photorealistic production family; active visual charter | `SUPERSEDED — PHOTOREALISTIC MASTERS INTEGRATED` | Closed unless reproduced |
-| 6 | `RP001-AESTH-005` — Detached pixel-era Glass Meadow Terminal and route-marker overlays | W1/W3 reports; integrated master provenance; `demo-increments/DI-001-city-threshold.md` | `RESOLVED IN W4 — COORDINATOR VALIDATION PENDING` | Coordinator |
+| 6 | `RP001-AESTH-005` — Detached pixel-era Glass Meadow Terminal and route-marker overlays | W1/W3 reports; integrated master provenance; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |

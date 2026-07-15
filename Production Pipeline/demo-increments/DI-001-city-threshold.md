@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 coordinator validation — integrated photoreal Meadow
+
+- **Disposition:** `RP001-AESTH-005 RESOLVED — COORDINATOR VALIDATED.` The rebuilt demo renders the registered integrated Meadow master with no legacy coupler GIF/still or route-marker canvas.
+- **Automated validation:** game suite **254/254**, production build, RP-002 mapping self-test, L-01-02 route-marker self-test, and the full end-to-end campaign through credits all passed. The E2E harness was updated to validate the coordinated photoreal Drowned Archive and Witness Corridor masters instead of retired pixel-era asset names; regenerated QA binaries were reverted after the run.
+- **Live validation:** fresh title -> save -> name -> three prologue beats -> Glass Meadow passed. At desktop the Terminal, couplers, tongue, and dormant two-fin marker read as one grounded photographed scene. At exact `640 x 480`, main measured approximately `634.55 x 475.91`; at exact `320 x 240`, main/body measured `320 x 240`. The primary and route hotspots remained contained and above `44 px`, the integrated source stayed `1672 x 941`, and no protagonist or ship appeared.
+- **Follow-on:** the static two-bar membrane is accepted for this tranche. A registered zero-drift screen-only loop may be produced later without restoring any whole-object overlay or changing gameplay state.
+
 ## 2026-07-15 W3 RP001-AESTH-005 implementation contract
 
 - **Disposition:** `P1 — ACCEPT FOR W4 / RELEASE BLOCKER.` Replace the oversized pixel coupler and pixel route marker with one new registered full-scene Glass Meadow master in which the Terminal, couplers, subterranean cable exits, contact shadows, and route marker are physically integrated into the photoreal plate. Transparent whole-object cutouts are not acceptable.
