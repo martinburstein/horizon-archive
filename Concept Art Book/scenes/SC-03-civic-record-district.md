@@ -66,6 +66,14 @@ Coordinates are interaction-layout rectangles, not art-production resolutions. H
 
 The comparison and save controls belong to the compact interface below the world. No interface, label, cursor, map line, icon, or text is painted or projected into Builder space.
 
+## Human interface ownership-copy fit
+
+- A2 impact verdict: `PASS`. The Custody Ledger runtime copy changes no plate, crop, camera, target rectangle, board order, state, material, lighting, registered effect, or city causality.
+- Desktop uses the existing `640 x 120` band below the `640 x 360` world. One active message at a time is grouped as visible text owner -> message -> related explanation/action, with a two-line message region and a `44 px` minimum action row.
+- The exact `320 x 240` derivative keeps the `320 x 180` world unobscured. Its interface starts below the world and may extend in scrollable document flow so owner, complete message, and `44 px` action remain readable; it may not overlay the plate, clip negative-authority clauses, shrink text, or turn feedback into a world cue.
+- Every owner prefix is literal text and every message remains understandable without color. Semantic wrapping preserves `no local request`, `cannot claim access`, Pilot-owned provisional labeling, closed-record status, preview no-credit meaning, and unchanged `continuation`.
+- Save, restore, failure, cancel, prerequisite, and Demo Tour messages use the human status region only. No copy is baked, projected, reflected, or implied on Builder matter, and no world light, seam, maintenance path, heat route, or animation responds to it.
+
 ## Concise asset brief
 
 - Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
