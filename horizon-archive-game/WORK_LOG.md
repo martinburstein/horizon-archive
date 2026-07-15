@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder A5 partial: Custody Ledger owner-message registry
+
+- **Mode:** `advance` for A5 only.
+- **Work completed:** added a non-routable RP-002 Custody Ledger state module with the ten locked runtime ownership messages, exact visible owner prefixes, the four immutable primary source fields, two blank expedition-owned sockets, the atomic RP-001 predecessor check, and cancellation/reset behavior. This tranche provides static construction seams only; it does not expose RP-002 in the normal campaign or staging UI.
+- **State firewall:** message selection and cancellation normalize to an explicit allowlist, strip forged fields, leave scoring and campaign commit disabled, preserve `continuation`, preserve `cityStateDelta:null`, and do not read or write campaign or Demo Tour evidence. The locked dictionary remains `condition="outlined_gap"`, `source="exposed_surface"`, `identity=null`, and `access_requested=false`.
+- **Files changed:** new `src/custodyLedgerExercise.js`, new `test/custodyLedgerExercise.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, and this work log. Existing Working-Team code and unrelated user files were preserved.
+- **Validation:** focused Custody Ledger suite passed **4/4**; production build passed with the existing large-chunk advisory (`index-BV5Ll_DG.js`, `index-DeRG5FMC.css`). No browser or live-demo check was run because this scaffold is intentionally non-routable.
+- **Readiness:** `REVISE — A5 PARTIAL`. The owner-message/static state seam is ready for later integration, but SC-03 boards, observation flow, prerequisite integration, PY/RAI validators, remediation, sanitized mastery persistence, atomic normal completion, save/resume, responsive UI, and approved production art remain unfinished.
+- **Exact W1/no-promotion boundary:** `DO NOT PROMOTE OR HAND TO W1. RP-002 remains IN DESIGN — A5 PARTIAL because this tranche has no playable route and cannot score, save, tour, or complete the packet. The next Advance Coder tranche must integrate the strict prerequisite and first scored-boundary state behind protected staging before any Player handoff.`
+
 ## 2026-07-15 — Gameplay Master A4: Custody Ledger ownership-copy impact review
 
 - **Work completed:** reviewed the new Custody Ledger owner-prefixed runtime copy and A2 layout verdict against the locked RP-002 interaction graph. The copy attaches only to existing prerequisite, validation, remediation, review, cancel, save, restore, and Demo Tour nodes in the separate human interface; it creates no new action, gate, score, evidence, permission, or city response.

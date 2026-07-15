@@ -614,6 +614,17 @@ The user-requested skip is a presentation aid, not a cheat-state version of mast
 - **Validation:** complete game suite `255/255`; production build passed with the existing chunk advisory; rebuilt preview is live at `http://127.0.0.1:4173/?staging=rp001` with bundles `index-DawaQpBK.js` / `index-DeRG5FMC.css`.
 - **Exact Coordinator handoff:** `Validate only TOUR-AESTH-001/002 and the final reload. Accept if every active Terminal has exactly one secondary skip action after the exercise and outside the file rail/answer groups, exact 320x240 keeps it visible at >=44px, the Tour footer exposes only First Signal — unfinished practice, and Resume still reconstructs the unchanged allowlisted boundary. Do not change art, gameplay, curriculum, storage schema, scene order, or evidence gates.`
 
+### Advance Coder A5 partial implementation — Custody Ledger owner-message registry
+
+- Readiness: `REVISE — A5 PARTIAL; OWNER-MESSAGE REGISTRY COMPLETE, NO PLAYABLE RP-002 ROUTE`.
+- Added a non-routable static state module for `SC-03-30` with exactly the ten locked A1/A4 Custody Ledger messages and their exact visible owners: `SYSTEM // EXPEDITION STATE`, `SYSTEM // EXPEDITION SESSION`, `SYSTEM // LOCAL CHECKS`, `901 TEACHER // FEEDBACK`, `PILOT // FLIGHT RECORDER`, and `SYSTEM // DEMO TOUR`.
+- Added the exact primary source-field contract (`condition="outlined_gap"`, `source="exposed_surface"`, `identity=null`, `access_requested=false`) plus blank `classification` and `owner` expedition sockets. The scaffold opens its prerequisite-check phase only from a fully sanitized, atomically committed RP-001 predecessor.
+- Message reading, feedback selection, and cancel/reset remain zero evidence. The state allowlist strips forged fields, keeps scoring and campaign commit disabled, preserves `continuation`, preserves `cityStateDelta:null`, and neither reads nor mutates campaign or Tour evidence.
+- Focused tests pass `4/4` for predecessor anti-forgery, exact locked fields, all ten owner/message records, forged-field stripping, zero-credit message/cancel behavior, blank working reset, and byte-stable external campaign/Tour evidence. Production build passes with the existing large-chunk advisory.
+- No RP-002 component, route, UI, browser state, local storage key, scoring validator, mastery evidence, or campaign completion field was added. Normal gameplay and the existing protected RP-001 route are unchanged.
+- Exact W1/no-promotion boundary: `DO NOT PROMOTE OR HAND TO W1. This is an internal A5 construction seam, not a playable increment. RP-002 remains IN DESIGN — A5 PARTIAL until protected SC-03 routing, observation gates, strict PY/RAI validators, remediation, sanitized persistence, atomic completion, deterministic resume, and responsive interface integration exist and pass their tests.`
+- Exact next Advance Coder handoff: `Continue A5 behind protected staging by integrating the prerequisite-check and first Python-primary boundary against the new owner-message registry. Preserve the ten exact messages, zero-evidence reading/dismissal, atomic RP-001 predecessor, immutable source fields, blank expedition sockets, disabled completion until all SOLIDIFIED gates pass, separate Tour state, invariant world, and no normal-campaign exposure.`
+
 ## Dependencies and open risks
 
 - RP-001 must retain both atomic expedition flags and its no-city-response contract at the handoff boundary.
