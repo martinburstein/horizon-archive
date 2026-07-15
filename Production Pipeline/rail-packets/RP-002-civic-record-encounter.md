@@ -158,23 +158,23 @@ Copy rendering must preserve the owner prefix in text, not color alone. No pass,
 
 - Arrival and completion cards: no more than two short sentences and `24` total words per card.
 - Required hotspot observation: no more than `22` words before optional expansion.
-- Pilot or System dialogue response: no more than two compact lines at the native `640 × 480` frame.
+- Pilot or System dialogue response: no more than two short sentences in one responsive message group; wrapping and vertical space may expand without changing meaning.
 - Persistent status: one ownership-prefixed sentence; put `continuation` on the status line only when its unchanged state matters.
-- Narrow derivative: preserve the observation/inference distinction in text; do not solve overflow by dropping speaker ownership or uncertainty language.
+- Responsive layouts: preserve the full owner prefix, observation/inference distinction, and complete negative-authority clause at representative desktop and narrow widths. Use natural wrapping, document flow, or scrolling rather than truncation, text shrinkage, or fixed line counts.
 - Exact A1 arrival, completion, return, and hotspot lines above pass their applicable word budgets; Storyboarder may shorten them but may not merge speakers or strengthen claims.
 
 ### Lore Builder sign-off
 
-- Status: `PASS — A1 RUNTIME OWNERSHIP COPY COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
+- Status: `PASS — A1 RESPONSIVE COPY IMPACT COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
 - Continuity: begins only from RP-001's completed expedition anchor and reversible route, preserves `continuation` and `city_state_delta=None`, and does not replay or mutate the threshold.
 - State transition: `RP-001 anchor complete -> cross already-lit route -> observe repeated provenance separation -> save bounded expedition comparison -> retain reversible return and mark next survey direction`, with zero city delta.
 - Spoiler safety: the beat exposes record structure rather than identity, motive, native category, or central answers.
 - Ownership: every physical fact is Scene-owned, every saved change is expedition-owned, and every civic/public/occupational reading remains Pilot-owned and provisional.
-- Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts. The added Custody Ledger copy remains entirely inside the separate human interface and requires no world-plate change.
+- Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts. The Custody Ledger copy remains entirely inside the separate responsive human interface and requires no world-plate change or legacy fixed canvas.
 
-### Exact Storyboarder handoff — runtime ownership impact review
+### Exact Storyboarder handoff — responsive ownership impact review
 
-Review the existing RP-002 A2 boards and `SC-03` brief against the added Custody Ledger Runtime Ownership Copy without changing board order, interaction rectangles, world plates, entry/exit state, or causality. Confirm every new line fits only inside the separate human `640 x 120` interface band and that owner prefixes, no-request language, provisional human labeling, closed-record status, and unchanged-world meaning remain legible at desktop, exact `640 x 480`, and narrow derivatives without relying on color. Preserve all previously locked physical-material evidence, three stewardship eras, registered effects, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Do not paint, project, reflect, or imply any added copy on Builder matter; do not turn feedback into a surface reaction. Return the A2 impact verdict and the exact Curriculum Checker handoff on this same packet.
+Review the existing RP-002 A2 boards and `SC-03` brief against the retired fixed-viewport decision without changing board order, world plates, entry/exit state, or causality. Replace the legacy fixed interface-band, exact-viewport, and fixed-line assumptions in A2 with one separate responsive human interface region that uses available screen space gracefully at representative desktop and narrow widths. Every ownership message may wrap or scroll as needed, but it must retain its full visible owner prefix, complete no-request/no-authority clause, provisional human label, closed-record status, and unchanged-world meaning without relying on color, motion, position, or sound. Preserve readable type, contained controls, accessible minimum targets, deterministic focus, and unobscured first-person world art; existing interaction coordinates may remain temporary implementation references but are not acceptance gates. Preserve all locked physical-material evidence, stewardship eras, registered effects, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Do not paint, project, reflect, or imply interface copy on Builder matter, and do not turn validation feedback into a surface reaction. Return the A2 responsive impact verdict and exact Curriculum Checker handoff on this same packet.
 
 ## Storyboard Track — Storyboarder
 
