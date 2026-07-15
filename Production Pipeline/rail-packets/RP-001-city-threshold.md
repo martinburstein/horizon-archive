@@ -254,7 +254,161 @@ All coordinates are world-viewport rectangles. Narrow targets are purpose-author
 
 ## Puzzle Track — Gameplay Master
 
-`PENDING A4`
+### Status and play contract
+
+- Status: `PASS — A4 COMPLETE; PUZZLE LOCKED FOR A5`
+- Puzzle name: `The Local Record`
+- Player motivation: turn careful observation into a bounded expedition record so the Pilot can mark a reversible route forward without asking the city to act.
+- Learning order: the unseen `PY-020` anchor-packet transfer probe completes first; the existing `CUM-01` primary -> mapped remediation -> blank fresh-transfer sequence completes second. Neither may be skipped, swapped, or satisfied by navigation.
+- Commit rule: entering `SC-02-30`, selecting the survey coordinate, opening the overlay, or passing only one learning gate changes no durable world or route state. The overlay atomically sets `cityThresholdAnchorRecorded=true` and `civicDistrictRouteAvailable=true` only after both gates and their closed-note explanations pass.
+
+### Interaction graph
+
+```text
+SC-02-00 ENTRY
+  -> observe already-running cycles
+  -> TRACE MAINTENANCE
+SC-02-10 BOUNDARY DETAIL
+  -> inspect stop seam + Pilot map division
+  -> COMPARE BOUNDARIES
+SC-02-20 ACCESS DETAIL
+  -> inspect environmental access + identity-record closure, in either order
+  -> ESTABLISH SURVEY POINT
+SC-02-30 EXPEDITION OVERLAY (no city delta)
+  -> select the bounded coordinate
+  -> RECORD LOCAL ANCHOR
+  -> PY-020 probe: edit -> run -> 10/10 -> structure explanation
+  -> CUM-01 primary
+       miss -> all tagged remediation -> fresh blank primary
+       16/16 -> blank fresh-transfer form
+  -> CUM-01 fresh transfer
+       miss -> all tagged remediation -> fresh blank transfer
+       16/16 + safety/claim explanation -> CONFIRM LOCAL RECORD
+  -> atomic expedition-only commit
+SC-02-40 ANCHORED OVERVIEW
+  -> ENTER CIVIC DISTRICT
+
+Any detail RETURN -> most advanced unchanged overview.
+Cancel from SC-02-30 -> SC-02-20 with no anchor and no route unlock.
+Reload after completion -> SC-02-50 with anchor and route restored and temporary inspections cleared.
+```
+
+### Required, optional, unavailable, and misleading actions
+
+**Required on first success**
+
+1. Observe the operating cycles, trace the maintenance forms, inspect both mismatched boundaries, and compare them.
+2. Inspect environmental access and identity-record closure as two separate observations; their inspection order is free.
+3. Select the already-bounded expedition coordinate and invoke `RECORD LOCAL ANCHOR`; this opens the human expedition learning overlay but does not yet record the anchor.
+4. Transform the supplied `anchor_packet` from its JSON string into nested Python data, preserve and extend it exactly, serialize it, pass the `10/10` validator, and complete the list/dictionary/JSON explanation.
+5. Complete the existing `CUM-01` primary at `16/16`, take mapped remediation for every missed decision/reason pair, then complete its blank fresh-transfer form at `16/16` and pass the safety/claim explanation.
+6. Confirm the local record, observe the unchanged city with the expedition route now enabled, and choose `ENTER CIVIC DISTRICT` when ready.
+
+**Optional and reversible**
+
+- Inspect the already-lit bridge preview, the sealed former exchange throat, patched bypass, stewardship phases, or any previously visited observation.
+- Open the objective, replay Pilot-owned observation text, request a hint, use reduced motion, or return from a detail board.
+- Cancel the anchor overlay and revisit the threshold. Optional inspection, hint use, confidence, elapsed time, and repeated navigation create no mastery or progression evidence.
+
+**Unavailable or deliberately non-actions**
+
+- `OPEN IDENTITY RECORDS`, `CONTACT CITY`, `REQUEST PERMISSION`, `ACTIVATE BRIDGE`, `CHANGE CONTINUATION`, and any live Azure, credential, portal, disclosure, publication, purchase, deletion, or external-action command are never enabled.
+- The closed record aperture, maintenance forms, heat channels, bridge lights, and provisional `continuation` field are inspectable evidence, not controls.
+- `ENTER CIVIC DISTRICT` is visible as a locked expedition route preview before completion; selecting it explains that a local record is incomplete and produces no movement or city response.
+
+**Misleading shortcuts and their feedback**
+
+- Treating the JSON string as an already-editable dictionary, replacing the packet, merging the access records, changing the wrong nesting level, changing `continuation`, setting a city delta, printing a literal, or hardcoding the expected output fails a named deterministic check.
+- A correct-looking final string without a verified round trip fails. A correct CUM decision paired with an incorrect reason fails that pair.
+- Feedback is owned by `SYSTEM // EXPEDITION STATE` or the course-authored Teacher overlay, never by a Builder surface or the city. Failure never animates, opens, darkens, locks, or otherwise changes the city.
+
+### Hotspots, verbs, and state ownership
+
+The A2 rectangles, minimum target sizes, board order, and focus order are unchanged.
+
+| Zone/control | Verb and availability | State owned or read |
+|---|---|---|
+| `00-CYCLES` | `OBSERVE OPERATING CYCLES`; required first observation | Reads immutable scene cycle phase; writes temporary expedition observation only |
+| `00-BOUNDARY` | `TRACE MAINTENANCE`; enabled after cycle observation | Reads maintenance path; advances board and writes temporary observation |
+| `00-ROUTE-PREVIEW` | `INSPECT LIT BRIDGE`; optional; route action remains locked | Reads scene and expedition route availability; no write |
+| `10-STOP-SEAM` | `INSPECT STOP SEAM`; required | Writes one temporary expedition observation |
+| `10-MAP-DIVISION` | `INSPECT MAP DIVISION`; required; reveals `COMPARE BOUNDARIES` after both details | Writes one temporary expedition observation; map is Pilot-owned |
+| `20-ENVIRONMENTAL` | `OBSERVE ENVIRONMENTAL ACCESS`; required, either order | Writes one temporary observation used to frame the probe |
+| `20-IDENTITY` | `OBSERVE CLOSED RECORD APERTURE`; required, either order | Writes one separate temporary observation; grants no access |
+| `20-ANCHOR-NEXT` | `ESTABLISH SURVEY POINT`; enabled only after both access observations | Advances to `SC-02-30`; does not set either durable flag |
+| `30-ANCHOR` | select coordinate, then `RECORD LOCAL ANCHOR` | Opens session-local expedition work and sets `anchorGateStage=python_pending`; no city write |
+| Expedition Python controls | `INSPECT PACKET`, edit, `RUN CHECKS`, `EXPLAIN STRUCTURE`, `CONTINUE` | Session-local learner work; durable store receives only bounded evidence fields after submission |
+| Expedition CUM controls | choose decision + reason, `SUBMIT`, remediation, fresh transfer, safety/claim explanation | Course-authored assessment state; no world-state ownership |
+| `DETAIL-RETURN` / cancel | `RETURN TO THRESHOLD` / `CANCEL` | Clears current presentation state and restores the most advanced unchanged overview |
+| `40/50-FORWARD` | `ENTER CIVIC DISTRICT`; enabled only after atomic commit | Reads `civicDistrictRouteAvailable`; exits toward the successor packet |
+
+Physical city geometry, access surfaces, maintenance routes, lighting, animation clocks, and `continuation` remain scene-owned and immutable throughout. Temporary observations, overlay stage, hint/attempt counts, bounded evidence, the anchor, and route availability are expedition-owned. Raw learner source, raw packet/answers, notes, credentials, endpoints, payloads, responses, source content, exam text, and action requests are never persisted.
+
+### PY-020 probe and deterministic feedback
+
+The overlay presents one fresh course-authored `anchor_packet` JSON string containing only the already-observed surface facts and expedition state. The player must use the supplied input rather than replace it. `RUN CHECKS` reports ten independently labeled dimensions:
+
+1. the supplied JSON string is parsed into nested Python data;
+2. the submitted result derives from `anchor_packet`, not a replacement literal or hardcoded result;
+3. the existing observation list and its order are preserved;
+4. one `environmental_access_open` record is appended;
+5. one separate `identity_record_closed` record is appended;
+6. both expedition booleans are set to `True` at their existing nested location;
+7. no field other than the two allowed booleans and two allowed appended records changes;
+8. `continuation` is preserved exactly;
+9. `city_state_delta` remains `None`; and
+10. serialization succeeds and parsing the serialized result reconstructs the exact validated structure.
+
+All ten must pass together. The subsequent three-part explanation must identify a list as the ordered observation collection, a dictionary as named nested state, and JSON as the string interchange form that requires parsing and serialization. A failed explanation retains the completed `10/10` run but cannot advance.
+
+### Hint ladder
+
+Hints are explicit expedition assistance, logged by count, available without a timer, and never count as evidence by themselves.
+
+1. **Orientation:** restate the current goal and focus the next required labeled control or uninspected hotspot; do not reveal an answer.
+2. **Concept:** distinguish JSON text from Python data, list append from dictionary update, or a capability/valid-output claim from authority to act.
+3. **Structure:** name the failed invariant and the relevant container or CUM objective tag; show the shape of the operation without supplying the finished output or decision/reason pair.
+4. **Recovery:** after submission, open the mapped existing remediation and then return a blank form. It may explain the misconception, but the player must produce fresh correct evidence.
+
+World hints use persistent text plus focus movement, never hue, animation timing, or a flashing city object. CUM hints never alter existing item content or reveal Microsoft exam material.
+
+### Failure, retry, and recovery
+
+- Parse/runtime errors, incomplete edits, and validator failures keep the player inside the expedition overlay with the submitted source available for immediate repair during that session. Each failed dimension receives associated text and live-region feedback.
+- A CUM miss records bounded per-dimension evidence, routes every tagged missed pair through existing `remediation_routes.json`, clears unsubmitted choices, and returns a new blank form at the same gate. Primary misses return to blank primary; transfer misses return to blank transfer.
+- There is unlimited retry and no required timer. A failed attempt cannot erase prologue completion, consume access, alter `continuation`, record the anchor, enable the route, or strand the player.
+- Cancel always returns to `SC-02-20`; re-entry starts at the first incomplete scored boundary. Completed Python evidence is not repeated merely because CUM remediation is needed.
+- If evidence is missing, stale, or `review_required`, threshold exploration and return remain available while the overlay routes to the existing prerequisite remediation. It cannot fabricate readiness.
+
+### Save and resume contract
+
+- Save checkpoints are deterministic at threshold entry, `python_pending`, `python_complete`, `cum_primary_pending`, `cum_transfer_pending`, and `anchor_complete`.
+- Before a scored boundary completes, raw working source and unsubmitted choices exist only in session memory. Reload clears them, regenerates an equivalent fresh course-authored probe or blank CUM form, and restores the first incomplete boundary.
+- After Python completion, persist only the allowed IDs, per-dimension correctness, skill/objective IDs, attempt/hint counts, confidence, misconception tags, and mastery status. Resume at CUM; do not persist or reconstruct learner source.
+- After any CUM submission, persist the bounded evidence and next gate/remediation stage, not raw decisions, reasons, notes, or item text. Resume on a blank form at that stage.
+- The final confirmation atomically records both expedition booleans and the completion checkpoint. Reload or later return enters `SC-02-50`, restores the anchor and enabled route, clears temporary inspections, preserves `continuation`, and does not replay arrival or restart animation clocks.
+- If a save is absent or invalid, fall back to the accepted credits boundary or the last valid bounded checkpoint; never infer completion from scene position, elapsed time, confidence, or a partially written record.
+
+### Pace and expected duration
+
+- World discovery and boundary comparison: `3–5 minutes`.
+- Fresh PY-020 probe and explanation: `5–9 minutes` without remediation.
+- CUM-01 primary plus blank transfer: `10–16 minutes` without remediation.
+- Expected practiced clear: `18–30 minutes`; each mapped remediation loop adds roughly `2–6 minutes`. There is no enforced time limit, score bonus, or penalty for slower play, hints, returning, or saving.
+
+### Gameplay locks and flexible implementation choices
+
+**Locked for A5:** exact interaction graph and PY-020 -> CUM-01 order; A2 hotspot rectangles and board order; separate access observations; all `10/10`, `16/16`, remediation, fresh-transfer, and explanation gates; atomic expedition-only commit; unavailable external actions; unlimited recovery; bounded persistence; zero physical city response; no progression from navigation, timing, confidence, or hints.
+
+**Flexible for A5:** expedition-overlay panel arrangement, code editor component, validator microcopy within A1/A3 budgets and ownership, non-city focus/confirmation sound, optional observation ordering on `SC-02-20`, and the visual treatment of expedition progress so long as persistent text, keyboard order, reduced-motion equivalence, live feedback, and native/narrow containment remain intact.
+
+### Gameplay Master sign-off
+
+- Status: `PASS — A4 COMPLETE; READY FOR CODER A5 IN advance MODE`
+- Skill-to-puzzle fit: the player transforms an unseen structured local record before resolving the existing cumulative confusion-pairs gate; neither task is relabeled as the other.
+- Recovery: every miss is repairable without lost story progress, consumed access, raw-data persistence, or city mutation.
+- Implementability: hotspot verbs, state owners, validator dimensions, commit boundary, checkpoints, and observable results are explicit; Coder must not invent puzzle rules.
+- Exact handoff: `Coder Agent operating mode: advance. Implement RP-001 A5 exactly from the locked A1–A4 packet: preserve the SC-02-00 -> 10 -> 20 -> 30 -> 40/50 board order and all A2 coordinates; run the unseen PY-020 anchor_packet probe at 10/10 plus its list/dictionary/JSON explanation before the existing CUM-01 16/16 primary -> mapped remediation -> blank 16/16 fresh-transfer gate and safety/claim explanation. Only after every gate passes may one atomic expedition-state commit set cityThresholdAnchorRecorded=true and civicDistrictRouteAvailable=true. Preserve continuation, city_state_delta=None, all city geometry/access/cycles/animation clocks, unlimited retry, bounded evidence-only persistence, deterministic resume, and zero city response. Do not add live Azure/external actions, new CUM content, navigation/timing/confidence/hint bypasses, exam guarantees, or rules not stated in RP-001.`
 
 ## Advance Construction Track — Coder
 
@@ -278,17 +432,31 @@ All coordinates are world-viewport rectangles. Narrow targets are purpose-author
 
 ## Player-observable acceptance criteria
 
-`PENDING — later Advance tracks`
+1. On entry, bridge lights, heat, vapor, and maintenance forms are already operating; none starts, stops, brightens, opens, or changes cadence when the player acts.
+2. The player cannot reach the anchor overlay until the maintenance/map mismatch and both distinct access observations have been inspected.
+3. Environmental access and identity-record closure remain separately labeled and visually distinct; inspecting either never opens the record aperture.
+4. The lit bridge is inspectable from entry, but `ENTER CIVIC DISTRICT` remains visibly unavailable with an expedition-owned reason until final confirmation.
+5. `RECORD LOCAL ANCHOR` opens an expedition overlay without placing a city marker, recording the anchor, or enabling the route.
+6. The PY-020 validator visibly reports ten labeled checks and advances only when all are correct; every listed shortcut produces associated corrective feedback.
+7. A failed Python attempt can be repaired and rerun immediately; cancel or reload produces no city change and resumes at the first incomplete scored boundary without persisting learner source.
+8. The list/dictionary/JSON explanation is required after `10/10`; passing checks alone does not open CUM-01.
+9. CUM-01 appears only after Python completion, retains its existing decision/reason content, requires primary `16/16`, routes every miss to mapped remediation, and then requires a blank fresh-transfer `16/16` plus the safety/claim explanation.
+10. Wrong decisions, wrong reasons, hints, confidence, elapsed time, repeated navigation, reload, and restored focus never record the anchor or enable the route.
+11. Every scored miss leaves prologue completion, access, `continuation`, bridge lighting, maintenance paths, and the ability to return/save/retry intact.
+12. Keyboard-only and reduced-motion play can reach every required observation, editor/check action, explanation, remediation, confirmation, return, and forward control with persistent text and non-color-only state.
+13. Only final successful confirmation adds the expedition anchor/status and enables `ENTER CIVIC DISTRICT`; a world-only comparison before and after shows identical city geometry and animation phase continuity.
+14. Reload after completion enters `SC-02-50`, restores the anchor and forward route, clears temporary inspections, preserves `continuation`, and does not replay arrival or any apparent activation.
+15. The completion language states that a local expedition record was made and no external request or irreversible action occurred; no text implies welcome, recognition, consent, identity acceptance, Builder speech, or exam readiness.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PENDING — coordinator gate record`
 - Storyboarder sign-off: `PASS — A2 COMPLETE`
 - Curriculum Checker sign-off: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
-- Gameplay Master sign-off: `PENDING`
+- Gameplay Master sign-off: `PASS — A4 COMPLETE; PUZZLE LOCKED FOR A5`
 - Coder smoke-test result: `PENDING`
-- Readiness: `PENDING`
-- Required revision: `PENDING`
+- Readiness: `PENDING — A5 construction and smoke test`
+- Required revision: `NONE FROM A4`
 
 ## Promotion record
 

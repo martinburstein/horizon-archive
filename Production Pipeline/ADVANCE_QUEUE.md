@@ -17,13 +17,13 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
-| 1 | `RP-001` | City Threshold | `IN DESIGN` | Gameplay Master Agent | A1, A2, and A3 passed; curriculum mapping `SOLIDIFIED`; full gate not reviewed | Accepted Witness Corridor -> City Beneath credits boundary | Perform A4 on `rail-packets/RP-001-city-threshold.md`; preserve the exact PY-020 -> CUM-01 evidence order and all locked causality/geometry |
+| 1 | `RP-001` | City Threshold | `IN DESIGN` | Coder Agent (`advance` mode) | A1–A4 passed; PY-020/CUM-01 mapping and puzzle `LOCKED`; full gate awaits A5 | Accepted Witness Corridor -> City Beneath credits boundary | Perform A5 from `rail-packets/RP-001-city-threshold.md`; implement the locked interaction graph, evidence gates, deterministic recovery/save contract, atomic expedition-only commit, and zero city response without inventing rules |
 
 ## Team positions
 
 - Ready packets: `0`
 - In-design packets: `1 — RP-001`
-- Team 1 railhead: `RP-001 — A3 complete; A4 pending`
+- Team 1 railhead: `RP-001 — A4 complete; A5 pending`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead: `1 in-design packet`
 - Whole-story rail status: `IN PROGRESS`
