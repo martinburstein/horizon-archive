@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2: read-only functional verification
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1 completed the fresh opening, First Signal, no-credit Tour allowlist, exact campaign restoration, and `640 x 480` / `320 x 240` containment without reproducing a gameplay, state, focus, or persistence defect.
+- **Scope decision:** no production code, art, test, save schema, or route was changed. `RP001-AESTH-005` is correctly separated from bug repair: the oversized pixel-era Terminal/coupler and route marker are visual-production defects for W3/W4, while their current hotspots and state behavior remain functional.
+- **Validation:** reviewed the W1 evidence, current Demo Increment, production build result, and the locked Terminal/Tour contracts. Existing behavior remains the reference for later visual replacement.
+- **Exact W3 handoff:** `Aesthetic Agent: formalize RP001-AESTH-005 against the active maximum-quality photorealistic charter. Specify a production-safe replacement for the Glass Meadow field-linked Terminal/coupler and route marker while preserving first-person framing, Builder functional logic, exact interactive geometry, screen-only animation, reduced-motion equivalence, focus, learning state, route lock, and Demo Tour recovery. Do not reopen gameplay or curriculum behavior.`
+
 ## 2026-07-15 — Coder A5 partial: Custody Ledger owner-message registry
 
 - **Mode:** `advance` for A5 only.
