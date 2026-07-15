@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W1 current photoreal-demo verdict
+
+- **Functional verdict:** `PASS.` A fresh title/save/name/prologue path reached Glass Meadow and opened First Signal at orientation step 1/4. The exact no-credit Demo Tour traversed Drowned Archive, Witness Corridor, and City Threshold; `RESUME CAMPAIGN` restored the open First Signal dialog at the exact unfinished step with `0/3 interfaces` and no visible campaign/mastery credit.
+- **Viewport verdict:** exact `640 x 480` contained the approximately `634.55 x 475.91` settled main frame with no overflow. Exact `320 x 240` contained main/body and all tested Tour actions; required targets were at least 44px high.
+- **Visual disposition:** `RP001-AESTH-005 — P1 — W3/ART PRODUCTION.` The oversized pixel-era/chroma-derived field-linked Terminal/coupler and the pixel-era route-marker overlay visibly conflict with the new photoreal Glass Meadow and active premium charter. This is not a functional W2 bug; hotspots, screen-only animation, focus, learning state, Tour, and resume remain usable and must be preserved during replacement.
+- **W2 handoff:** read-only/no repair. Preserve the passing behavior and hand the reloaded build to W3 Aesthetic Agent for precise overlay replacement findings. This supersedes the temporary browser-infrastructure block and retains the increment's existing `IN DEMO — PARTIAL` disposition pending visual production.
+
 ## Identity
 
 - Rail Packet: `RP-001 — City Threshold`
