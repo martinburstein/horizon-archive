@@ -1,5 +1,10 @@
 import { useMemo, useState } from "react";
-import cityImage from "../../Concept Art/Underground City.png";
+import cityAccessNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-access-320x180.png";
+import cityAccessNative from "../../Concept Art Book/production/city-threshold/city-threshold-access-640x360.png";
+import cityBoundaryNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-boundary-320x180.png";
+import cityBoundaryNative from "../../Concept Art Book/production/city-threshold/city-threshold-boundary-640x360.png";
+import cityOverviewNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-overview-320x180.png";
+import cityOverviewNative from "../../Concept Art Book/production/city-threshold/city-threshold-overview-640x360.png";
 import {
   CITY_THRESHOLD_SAVE_KEY,
   anchorExplanationDimensions,
@@ -71,6 +76,12 @@ const safetyOptions = {
   valid_output_boundary: ["valid_output_is_not_authority_to_act", "valid_output_authorizes_the_requested_action", "valid_output_proves_identity_acceptance"],
   exam_claim_boundary: ["internal_readiness_is_not_an_exam_guarantee", "internal_readiness_guarantees_exam_success", "confidence_can_override_a_miss"],
   external_action_boundary: ["external_action_needs_separate_scope_authority_and_privacy_review", "course_output_is_enough_authority", "local_validation_authorizes_disclosure"],
+};
+
+const cityPlates = {
+  overview: { native: cityOverviewNative, narrow: cityOverviewNarrow },
+  boundary: { native: cityBoundaryNative, narrow: cityBoundaryNarrow },
+  access: { native: cityAccessNative, narrow: cityAccessNarrow },
 };
 
 function SelectExplanation({ dimensions, options, values, onChange }) {
@@ -242,6 +253,7 @@ export function CityThresholdStaging({ onReturnToCredits }) {
   const showPython = save.python.masteryStatus !== "mastered";
   const canCommit = save.python.masteryStatus === "mastered" && save.cum01.masteryStatus === "mastered";
   const boardLayer = board === "SC-02-10" ? "boundary" : board === "SC-02-20" ? "access" : "overview";
+  const cityPlate = cityPlates[boardLayer];
   const visibleStatus = useMemo(() => `${board} // continuation unchanged // city_state_delta=None`, [board]);
 
   function cancelOverlay() {
@@ -282,8 +294,8 @@ export function CityThresholdStaging({ onReturnToCredits }) {
       <main className="game-shell city-threshold-screen" data-scene="city-threshold" data-board={board} data-city-layer={boardLayer} data-staging-only="RP-001">
         <p className="sr-only" role="status" aria-live="polite">{message}</p>
         <section className="city-world" aria-label="City Threshold Survey Anchor staged scene">
-          <img src={cityImage} alt="An immense empty underground civic landscape already operating above geothermal chasms" />
-          <div className="city-world-filter" aria-hidden="true" />
+          <img className="city-world-plate city-world-plate-native" src={cityPlate.native} alt="An immense empty underground civic landscape already operating above geothermal chasms" />
+          <img className="city-world-plate city-world-plate-narrow" src={cityPlate.narrow} alt="" aria-hidden="true" />
           <div className="city-cycle-layer" aria-hidden="true"><i /><i /><i /></div>
           {renderHotspots()}
         </section>

@@ -1244,7 +1244,6 @@ h1 {
 }
 
 .city-world > img,
-.city-world-filter,
 .city-cycle-layer {
   position: absolute;
   inset: 0;
@@ -1256,19 +1255,7 @@ h1 {
   object-fit: cover;
   image-rendering: pixelated;
 }
-
-.city-world-filter {
-  pointer-events: none;
-  background: linear-gradient(180deg, rgb(11 16 35 / 8%), rgb(12 6 21 / 34%));
-}
-
-.city-threshold-screen[data-city-layer="boundary"] .city-world-filter {
-  background: linear-gradient(90deg, rgb(11 16 35 / 20%) 0 52%, rgb(91 57 34 / 18%) 52% 100%);
-}
-
-.city-threshold-screen[data-city-layer="access"] .city-world-filter {
-  background: linear-gradient(90deg, rgb(32 71 88 / 20%) 0 40%, rgb(16 12 27 / 30%) 40% 60%, rgb(73 42 66 / 24%) 60% 100%);
-}
+.city-world-plate-narrow { display: none; }
 
 .city-cycle-layer {
   pointer-events: none;
@@ -1366,6 +1353,8 @@ h1 {
 
 .canonical-game-frame[data-canonical-layout="narrow"] .city-threshold-screen { width: 320px; height: 240px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world { width: 320px; height: 180px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-native { display: none; }
+.canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-narrow { display: block; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-hotspot {
     left: var(--city-narrow-left);
     top: var(--city-narrow-top);

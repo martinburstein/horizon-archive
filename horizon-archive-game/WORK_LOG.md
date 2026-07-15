@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coordinator support: City Threshold production plates integrated
+
+- **Outcome:** replaced RP-001's historical `Underground City.png` staging raster with three original production candidate views: overview for `SC-02-00/30/40/50`, maintenance boundary for `SC-02-10`, and separate environmental/record access for `SC-02-20`. The renderer selects dedicated `640 x 360` and `320 x 180` files from the settled canonical frame layout; no media-query geometry or hotspot moved.
+- **Preserved:** exact board order and A2 rectangles, first-person viewpoint, zero physical city response, runtime cycle overlay, interface band, learning gates, save/reload, atomic flags, unchanged continuation, and `cityStateDelta:null`.
+- **Validation:** added focused source assertions for all six production assets and removal of the old raster/filter path. Full game suite passes `246/246`; production build passes.
+- **Handoff:** `Player Agent W1: play the complete RP-001 staging route on the new three-view production package at exact 640x480 and 320x240. Verify every board uses the intended plate, targets remain usable, save/reload states remain deterministic, and no art swap causes a functional regression. Record pure visual judgments for Aesthetic W3.`
+
 ## 2026-07-15 — Coder W4 handoff: RP-001 staging-banner cleanup
 
 - **Mode:** `aesthetic-polish` for W4 only.

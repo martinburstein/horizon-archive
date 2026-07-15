@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-15 — City Threshold production-plate replacement package
+
+- **Completed:** authored an original three-view City Threshold environment package: overview, maintenance-boundary detail, and environmental/record-access detail. Every plate is first-person and world-only, excludes the protagonist, ship, humanoids, and visible occupants, and expresses the city as an already-operating geothermal exchange/distribution system with multiple stewardship eras.
+- **Files changed:** added source masters plus `640 x 360` and `320 x 180` runtime plates under `Concept Art Book/production/city-threshold/`, with durable provenance and final prompts in the package README. The live staging component now selects the correct overview/detail plate and a separate canonical/narrow asset; the historical figure-filled concept raster is no longer used by RP-001.
+- **Validation:** visually reviewed all three native plates and the overview narrow plate; confirmed exact dimensions, clean 16:9 world framing, distinct board compositions, empty-city identity, square-pixel clusters, functional heat/material routing, and no readable text or UI baked into the art. Game tests pass `246/246`; production build passes.
+- **Next recommended item:** Working Team should play the entire RP-001 route against these exact assets, then Aesthetic Agent should disposition `RP001-AESTH-001/002` from live `640 x 480` and `320 x 240` evidence. Animation remains a separate runtime layer and should be judged for alignment with all three views.
+- **Unresolved risks:** the `320 x 180` plates are exact nearest-neighbor derivatives rather than separately redrawn narrow compositions; their silhouettes appear readable in file review, but final acceptance belongs to the live Aesthetic pass. The plates are an original generated production candidate and retain source masters for later manual cluster cleanup.
+
 ## 2026-07-13 - Signal-coupler cultivated-organ authoring
 
 - **Completed:** replaced the two temporary generic spike occluders on the accepted east route with two deliberately unequal cultivated Meadow organs. The taller trained hollow extrusion now shows a skewed flush grow-mat aperture, open pressure throat, variable wall thickness, split trained lip, stress seam, and trapped inclusions. The lower annealing return loop grows two unequal walls from a second flush aperture and fuses them through a low bridge with a later repair seam. Offset underfloor feed windows visibly connect the route branch's distribution contact to the extrusion without adding a surface cable, human row, pedestal, label, or fantasy-crystal shorthand. Added a durable fold-in specification so both forms become native plate anatomy when the smooth backing is replaced.
