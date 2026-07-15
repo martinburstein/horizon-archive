@@ -106,7 +106,8 @@ test("held Enter and Space are suppressed without blocking single keyboard activ
 test("App wires the complete resumable opening and exact selected meadow art", () => {
   const source = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
-  assert.match(source, /2026-07-15-photorealistic-demo\/glass-meadow-master\.png/);
+  assert.match(source, /2026-07-15-glass-meadow-integrated-terminal\/glass-meadow-integrated-terminal-master-v1\.png/);
+  assert.doesNotMatch(source, /Pixelated Draft|signal-coupler|import \{ MeadowRouteMarker \}|<MeadowRouteMarker/);
   assert.doesNotMatch(source, /Glass Meadow Example\.png/);
   assert.match(source, /data-playtest-marker="CREATE_SAVE_FILE"/);
   assert.match(source, /data-playtest-marker="CHARACTER_NAME_FORM"/);

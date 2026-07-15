@@ -15,6 +15,14 @@
 - **Visual disposition:** `RP001-AESTH-005 — P1 — W3/ART PRODUCTION.` The oversized pixel-era/chroma-derived field-linked Terminal/coupler and the pixel-era route-marker overlay visibly conflict with the new photoreal Glass Meadow and active premium charter. This is not a functional W2 bug; hotspots, screen-only animation, focus, learning state, Tour, and resume remain usable and must be preserved during replacement.
 - **W2 handoff:** read-only/no repair. Preserve the passing behavior and hand the reloaded build to W3 Aesthetic Agent for precise overlay replacement findings. This supersedes the temporary browser-infrastructure block and retains the increment's existing `IN DEMO — PARTIAL` disposition pending visual production.
 
+## 2026-07-15 W4 integrated-Meadow disposition
+
+- **`RP001-AESTH-005`:** `RESOLVED IN W4 — COORDINATOR VALIDATION PENDING.` Glass Meadow now renders one approved `1672 x 941` registered photoreal production master with its compact Terminal/coupler and locked route marker physically integrated.
+- **Legacy removal:** no active Meadow import points into `Pixelated Draft`; the whole-object GIF/still, route-marker canvas/component, and overlay CSS were removed. The retained state seam contains only exact hotspots and `deriveMeadowRouteMarkerState` for labels and logic.
+- **Invariants:** primary hotspot remains `25%, 11.1111%, 50%, 88.8889%`; route hotspot remains `77.0313%, 53.3333%, 21.5625%, 46.3889%`. Accessible names, focus, First Signal evidence, save/resume, Demo Tour isolation/recovery, and campaign/city state are unchanged.
+- **Animation:** ship the static two-bar membrane state. A zero-drift registered screen-only loop is follow-on art and cannot reuse the retired whole-object GIF.
+- **Validation:** focused **27/27**, full suite **254/254**, and production build passed (`index-BeYlrQCv.js`, `index-nxb4OToG.css`). Increment remains `IN DEMO — PARTIAL` pending coordinator live validation.
+
 ## Identity
 
 - Rail Packet: `RP-001 — City Threshold`

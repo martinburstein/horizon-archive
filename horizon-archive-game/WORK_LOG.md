@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W4: integrated photoreal Glass Meadow
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Resolved `RP001-AESTH-005`:** switched every Glass Meadow use to the approved `1672 x 941` integrated production master. The Terminal/coupler and locked route marker are physically embedded in the registered photoreal plate rather than detached overlays.
+- **Retired active legacy rendering:** removed the Pixelated Draft coupler GIF/still imports and whole-object overlay, the route-marker canvas/component, and obsolete CSS. `pixelMeadow.js` remains only as a compatibility seam for exact hotspots and route-state derivation.
+- **Preserved:** primary hotspot `25%, 11.1111%, 50%, 88.8889%`; route hotspot `77.0313%, 53.3333%, 21.5625%, 46.3889%`; accessible names, focus/tab order, locked/awake/completed labels, First Signal evidence, `0/3`, save/resume, Demo Tour recovery, and first-person framing.
+- **Static-first disposition:** the representative two-bar membrane state ships in the integrated plate and is reduced-motion safe. A registered screen-only loop is deferred; the retired whole-object GIF must not return.
+- **Validation:** focused suite **27/27**; full game suite **254/254**; production build passed with the existing large-chunk advisory. Build assets: `index-BeYlrQCv.js`, `index-nxb4OToG.css`, `glass-meadow-integrated-terminal-master-v1-CsiDmSf1.png`.
+- **Exact Coordinator handoff:** `Validate RP001-AESTH-005 on the rebuilt demo. Confirm one integrated photoreal Meadow plate with no Pixelated Draft import, GIF/still overlay, or route-marker canvas; confirm exact hotspots, labels, focus, 0/3 lock, First Signal, save/resume, Tour recovery, aspect/crop, and first-person/no-human/no-ship framing at desktop, 640x480, and 320x240. Accept the static membrane now and leave a registered screen-only loop as follow-on art.`
+
 ## 2026-07-15 — Coder W2: read-only functional verification
 
 - **Mode:** `bug-repair` for W2 only.

@@ -1,17 +1,14 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/glass-meadow-master.png";
+import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-15-glass-meadow-integrated-terminal/glass-meadow-integrated-terminal-master-v1.png";
 import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
-import signalCouplerImage from "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-loop-640x360.gif";
-import signalCouplerStillImage from "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-available-640x360.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
-import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import {
   clearDemoTour,
   createDemoTourState,
@@ -2202,16 +2199,6 @@ export function App() {
               src={glassMeadowImage}
               alt="An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person"
             />
-            <picture className="signal-coupler-picture" aria-hidden="true">
-              <source media="(prefers-reduced-motion: reduce)" srcSet={signalCouplerStillImage} />
-              <img
-                className="signal-coupler-overlay"
-                src={signalCouplerImage}
-                alt=""
-                data-production-frame="640x360"
-              />
-            </picture>
-            <MeadowRouteMarker state={meadowRouteMarkerState} />
             {hotspotButtons}
           </>
         ) : (
