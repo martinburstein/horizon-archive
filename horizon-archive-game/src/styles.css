@@ -45,8 +45,7 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
   height: 100%;
   object-fit: cover;
   display: block;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 .scene-art { object-position: center top; }
 .adventure-screen[data-scene="ruins"] .scene-art { object-position: center 20%; }
@@ -155,8 +154,7 @@ h1 {
   height: var(--world-height);
   object-fit: cover;
   object-position: center;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 .canonical-game-frame .title-copy,
 .canonical-game-frame .opening-card,
@@ -191,8 +189,7 @@ h1 {
 .canonical-game-frame .scene-art.glass-meadow-art {
   object-fit: cover;
   object-position: center;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 .canonical-game-frame[data-canonical-layout="narrow"] .title-copy,
@@ -234,8 +231,7 @@ h1 {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 .signal-coupler-picture,
 .signal-coupler-overlay {
@@ -249,8 +245,7 @@ h1 {
 }
 .signal-coupler-overlay {
   object-fit: fill;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 .pixel-scene-host {
@@ -266,8 +261,7 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 .adventure-screen[data-scene="meadow"] .terminal-workbench {
   inset: auto 18px 18px auto;
@@ -763,7 +757,7 @@ h1 {
 .canonical-game-frame .adventure-screen[data-scene][data-terminal-open] { grid-template-rows: var(--world-height) var(--interface-height); overflow: hidden; }
 .canonical-game-frame .scene-frame { border-bottom-width: 1px; }
 .canonical-game-frame .scene-art,
-.canonical-game-frame picture { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
+.canonical-game-frame picture { display: block; width: 100%; height: 100%; image-rendering: auto; }
 .canonical-game-frame .scene-art { object-fit: fill; object-position: center; }
 .canonical-game-frame .scene-art.glass-meadow-art { image-rendering: auto; }
 .canonical-game-frame .scene-status { inset: 6px 6px auto; gap: 4px; padding: 3px 5px; font-size: 6px; }
@@ -1253,7 +1247,7 @@ h1 {
 
 .city-world > img {
   object-fit: cover;
-  image-rendering: pixelated;
+  image-rendering: auto;
 }
 .city-world-plate-narrow { display: none; }
 

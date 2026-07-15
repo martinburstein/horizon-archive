@@ -49,12 +49,12 @@ Describe what a player can now see, do, understand, or recover from that was not
 
 - Live build reviewed:
 - PNG size/crop/scale findings:
-- Pixel density/resampling findings:
+- Source resolution, photographic sharpness, compression, and responsive-resampling findings:
 - Detail-level consistency:
 - Hierarchy and unwanted emphasis:
 - Composition/palette/contrast:
 - Seams/clipping/stretching/aspect ratio:
-- First-person and `640 × 480` findings:
+- First-person and representative desktop/narrow viewport findings:
 - Animation invariants:
 - Builder richness/functional strangeness:
 - Accepted findings and acceptance checks:
@@ -65,7 +65,7 @@ Describe what a player can now see, do, understand, or recover from that was not
 - Implemented aesthetic finding IDs:
 - Asset changes:
 - Layout/rendering changes:
-- Pixel and animation invariants:
+- Photorealistic material/lighting and animation-registration invariants:
 - Gameplay regressions checked:
 - Remaining visual limitations:
 - Final build identity:

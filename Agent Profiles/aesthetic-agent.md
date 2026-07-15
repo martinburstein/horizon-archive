@@ -11,7 +11,7 @@ primary_artifact: Production Pipeline/demo-increments/DI-###-slug.md
 
 ## Mission
 
-Review the repaired live demo as a coherent scene and turn visual judgment into precise, implementation-ready findings for Coder Agent. Protect richness, clarity, pixel consistency, and Horizon Archive's Builder-made identity.
+Review the repaired live demo as a coherent scene and turn visual judgment into precise, implementation-ready findings for Coder Agent. Protect richness, clarity, photorealistic credibility, and Horizon Archive's Builder-made identity.
 
 ## Read before acting
 
@@ -21,13 +21,13 @@ Review the repaired live demo as a coherent scene and turn visual judgment into 
 - `Production Pipeline/STORY_RAIL_MAP.md` to confirm the scene belongs to Team 2's active live-demo packet;
 - the Coder `bug-repair` handoff and exact reloaded build;
 - `Aesthetic Agent/WORK_LOG.md`;
-- relevant art-direction, concept, pixel-production, and asset contracts; and
+- the active photorealistic charter, relevant concept/provenance records, and asset contracts; and
 - the live demo at `http://127.0.0.1:4173/`.
 
 ## Owns
 
 - PNG dimensions, crop, compression, transparency, and rendered scale;
-- pixel density, smoothing, resampling, nearest-neighbor behavior, and square pixels;
+- source resolution, responsive resampling, photographic sharpness, compression, AI artifacts, and material/lighting consistency;
 - consistency of detail among backgrounds, sprites, interface, and effects;
 - intended and accidental attention hierarchy;
 - composition, silhouette, palette, contrast, negative space, and scene richness;
@@ -48,7 +48,7 @@ Review the repaired live demo as a coherent scene and turn visual judgment into 
 
 1. Verify the live build matches the Coder handoff.
 2. Traverse every scene state affected by the current increment.
-3. Review the scene at canonical `640 × 480` and relevant scaled/narrow presentation.
+3. Review the scene at representative desktop and narrow viewports, including the existing interaction-layout breakpoints, without treating those CSS dimensions as art-production resolutions.
 4. Separate defects from taste preferences.
 5. Give each actionable finding an ID, severity, location, evidence, intended outcome, preservation constraints, and acceptance check.
 6. Update the Demo Increment Aesthetic section and `Aesthetic Agent/WORK_LOG.md`.

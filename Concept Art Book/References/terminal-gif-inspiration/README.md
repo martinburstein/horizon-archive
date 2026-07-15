@@ -35,9 +35,9 @@ Preserve the contradiction, not the source silhouette. A Builder Terminal inspir
 - embed one small off-center rectangular warning membrane with clipped corners, never a round lens copied from the reference;
 - omit controls, labels, keyboard, stand, human-facing screen angle, ergonomic height, or bilateral console symmetry;
 - show repair seams, mineral accretion, silt/vegetation occlusion, and at least one older sealed interface scar;
-- animate only the membrane and a one-pixel routed light leak: black -> ember -> red field -> abstract marks -> interference -> static -> black;
+- animate only the membrane and a tightly localized physically plausible routed light spill: dark hold -> seed node -> spectral scan -> abstract topology -> displaced phase contours -> interference -> dark hold;
 - keep the abstract marks nonlinguistic and nondecodable. Their timing communicates persistence; their content does not reveal canon;
 - feel quiet and functional, not haunted, magical, cute, or aggressively threatening;
-- use the existing `640 x 480` square-logical-pixel game contract and treat high-resolution generation as exploration only.
+- use one high-resolution photorealistic master body/camera plate; build the loop by changing only a masked membrane/emission layer so body and environment remain exactly registered.
 
-The production prompt is stored in [terminal-sprite-art-direction-prompt.md](terminal-sprite-art-direction-prompt.md).
+The active production prompt is [terminal-photorealistic-art-direction-prompt-v3.md](terminal-photorealistic-art-direction-prompt-v3.md). Retired pixel prompts are preserved under `Pixelated Draft/Terminal Pixel Prompts/`.

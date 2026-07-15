@@ -62,7 +62,7 @@ State the goal in player-observable language.
 - Interaction zones and negative space:
 - Required assets:
 - Concept/production evidence paths:
-- Native `640 × 360` plan:
+- High-resolution 16:9 world-plate plan and responsive interaction-layout mapping:
 - Narrow evidence plan:
 
 ## Curriculum Verification Track — Curriculum Checker

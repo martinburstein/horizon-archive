@@ -361,14 +361,14 @@ Style rules:
 - No verb bar
 - No busy HUD
 - The landscape is the main view
-- Bottom narration/dialogue textbox is present and blank in generated images
-- Low-poly forms
-- Dithered/pixelated textures
-- Angular geometry
+- World-image generation produces a clean plate with no baked textbox or UI; the game composes narration/dialogue separately
+- Premium cinematic photorealism and contemporary VFX-quality environmental detail
+- High-resolution physically credible materials, lighting, atmosphere, and scale
+- Alien geometry with rigorous functional logic rather than retro stylization
 - Atmospheric fog, dust, pollen, smoke, mist, or heat haze
 - Serious, beautiful, quiet, mysterious tone
 - Ancient alien archaeology
-- Not photorealistic
+- Photorealistic
 - Not generic sleek sci-fi
 - Not fantasy unless specifically requested
 - Not cartoonish

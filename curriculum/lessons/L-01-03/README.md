@@ -114,12 +114,12 @@ Misconception tags:
 - `indentation-is-decoration`
 - `code-error-closes-route`
 
-## Compact 640×480 accessibility contract
+## Compact-layout accessibility contract
 
 - Show one pane at a time: task, source, output/traceback, or hint. Do not force a three-column editor into 640×480.
 - Keep the current file and route-open status visible in text on every pane.
 - Show at most eight source lines and four traceback lines without scrolling; these exercises fit that budget.
-- Use square logical pixels, crisp one-pixel borders, nearest-neighbor presentation, and no smooth modern editor chrome.
+- Use a high-contrast scientific workspace with crisp readable type, restrained contemporary chrome, and no retro pixelation. Keep controls visually consistent with the expedition overlay rather than the photorealistic Builder world.
 - Error type, file, and line are selectable text and announced as a status update.
 - Keyboard order is task → source → Run → output → hint → acknowledgement.
 - No time limit, color-only state, forced animation, or disappearing error message.

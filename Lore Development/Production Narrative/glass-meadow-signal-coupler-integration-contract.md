@@ -6,7 +6,7 @@ Runtime alignment:
 
 - scene: `meadow`; hotspot ID: `primary`
 - exercise: `terminal-l0101-independent-run`; lesson: `L-01-01`
-- production art: `Concept Art Book/production-pixel/AB-01/signal-coupler/production/`
+- archived pixel-era fallback: `Pixelated Draft/production-pixel/AB-01/signal-coupler/production/`; replace with one high-resolution photorealistic master plus masked screen-only animation states
 - playable overlay: `640 x 360`, six frames, fixed body, screen-only animation
 
 ## Naming and evidence boundary

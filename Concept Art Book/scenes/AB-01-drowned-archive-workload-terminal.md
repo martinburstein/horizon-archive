@@ -7,8 +7,8 @@
 - **World / region:** World B / Drowned Archive Basin
 - **Production status:** Interaction-integrated; alien-function art replacement required
 - **Image:** [drowned-archive-workload-terminal-v1.png](../images/drowned-archive-workload-terminal-v1.png)
-- **Production-pixel successor:** [AB-01 available 640×360](../production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../production-pixel/AB-01/README.md)
-- **Canonical frame evidence:** [available/complete 640×480 study](../production-pixel/AB-01/CANONICAL_FRAME.md)
+- **Archived pixel-era fallback:** [AB-01 available](../../Pixelated%20Draft/production-pixel/AB-01/ab01-available-640x360.png) · [package and QA](../../Pixelated%20Draft/production-pixel/AB-01/README.md)
+- **Historical frame evidence:** [available/complete study](../../Pixelated%20Draft/production-pixel/AB-01/CANONICAL_FRAME.md)
 - **Arrival continuity:** [completed Glass Meadow departure and safe-return map](GM-01-to-AB-01-departure-continuity.md)
 - **Original environment reference:** [Alien Ruins.png](../../Concept%20Art/Alien%20Ruins.png)
 - **Purpose:** Give L-02-01 a distinct local contact point while reframing the flooded basin as an active, nonhuman landscape process whose resource/terraforming occupation can be inferred but not fully decoded.
@@ -77,10 +77,10 @@
 
 ## Production record
 
-- **Next implementation asset:** `Concept Art Book/production-pixel/AB-01/ab01-available-640x360.png`
-- **State overlays:** `Concept Art Book/production-pixel/AB-01/states/terminal-*-64x64.png`
-- **Production logical hotspot:** `x=156, y=205, w=68, h=76`
-- **Pixel authorship:** original integer-coordinate renderer; no concept pixels sampled, traced, downscaled, or filtered.
+- **Next implementation asset:** a high-resolution photorealistic 16:9 basin master with separate registered Terminal state layers and responsive derivatives.
+- **Archived state overlays:** `Pixelated Draft/production-pixel/AB-01/states/terminal-*-64x64.png` remain migration evidence only.
+- **Interaction hotspot:** preserve the existing responsive percentage mapping until live review proves a composition change is necessary.
+- **Visual target:** contemporary cinematic realism with physically credible water, geology, atmosphere, materials, reflections, scale, and alien process relationships; reject pixel-art texture and retro rendering.
 
 - **Final prompt:** [Prompt HA-LS-002](../prompt-provenance-log.md#ha-ls-002)
 - **Generator / mode:** OpenAI built-in image generation, reference-guided generation

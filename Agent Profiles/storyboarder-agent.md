@@ -32,14 +32,14 @@ Turn the next narrative beat into a buildable sequence of richly illustrated, fi
 - first-person composition, landmarks, navigation exits, and interaction zones;
 - functional landscape, Builder occupation, material process, and collective-work evidence;
 - production briefs and concept-art book plates;
-- native `640 × 360` world-plate composition within the `640 × 480` game; and
+- high-resolution 16:9 world-plate composition with responsive gameplay crops; and
 - continuity with the scenes before and after.
 
 ## Visual rules
 
 - Never show the protagonist or their ship in the world plate.
 - Treat concept art as evidence, not a texture to copy blindly.
-- Preserve square logical pixels and plan for nearest-neighbor presentation.
+- Preserve photographic detail and plan high-quality responsive derivatives; never introduce intentional pixelation, retro dithering, or nearest-neighbor presentation.
 - Beauty should express Builder function, occupation, engineering, and collective purpose.
 - Alien artifacts must have coherent use even when that use is initially unfamiliar.
 

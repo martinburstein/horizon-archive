@@ -169,12 +169,12 @@ All coordinates are world-viewport rectangles. Narrow targets are purpose-author
 
 ### Required native and narrow assets
 
-- Three native clean `640 x 360` world plates: overview base shared by `00/30/40/50`, bridge-boundary detail for `10`, and access-detail plate for `20`.
-- Three purpose-authored `320 x 180` narrow derivatives of those bases, with simplified pixel clusters and the exact narrow target map above.
-- Four separate transparent `640 x 360` animation layers, plus purpose-authored narrow equivalents: bridge-light sequence, vapor/condensation exchange, heat shimmer, and maintenance forms. A shared monotonic clock prevents anchor recording from looking like an activation.
+- Three clean photorealistic 16:9 world masters, normally at least `1920 x 1080`: overview base shared by `00/30/40/50`, bridge-boundary detail for `10`, and access-detail plate for `20`.
+- Responsive high-quality derivatives or crops of those bases preserve the exact narrow target map, material detail, and composition without intentional pixelation.
+- Four separate registered high-resolution animation layers: bridge-light sequence, vapor/condensation exchange, heat shimmer, and maintenance forms. A shared monotonic clock prevents anchor recording from looking like an activation.
 - Separate human expedition UI owns the map division, survey coordinate, saved-anchor message, unchanged `continuation` field, and enabled route. No anchor marker or label is painted into Builder space.
 - Expedition overlay assets are authored separately for the `640 x 360` and `320 x 180` world viewports; neither is baked into a world plate.
-- Final presentation remains square-pixel, nearest-neighbor, integer-scaled inside the `640 x 480` game; narrow derivatives are never enlarged as final scenery.
+- Final presentation follows the active photorealistic charter. Existing `640 x 480` and narrow values are interaction-layout coordinates only; art retains high-resolution photographic detail through quality resampling.
 - Historical `Concept Art/Underground City.png` supplies only layered depth and warm/cool scale evidence; its people, suits, rails, familiar platforms/domes, layout, and baked interface are excluded.
 
 ### Readability, accessibility, and continuity

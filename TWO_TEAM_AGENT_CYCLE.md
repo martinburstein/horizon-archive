@@ -76,12 +76,12 @@ It owns:
 - landmarks, navigation exits, interaction zones, and negative space;
 - Builder occupation, functional landscape, material, scale, and collective-work evidence;
 - concept-art book plates and production briefs;
-- native `640 × 360` composition targets and exact narrow evidence; and
+- high-resolution 16:9 composition targets and responsive desktop/narrow evidence; and
 - visual continuity with the locations before and after the new scene.
 
 It asks concrete forward questions: What comes after the Glass Meadow? What does the next planet look like? What is the first image the player sees there? Which visual change tells the player they made progress?
 
-It does not treat a smooth concept image as finished pixel production and never shows the protagonist or ship in the world plate.
+It does not treat a rough or artifact-heavy generated concept as finished production and never shows the protagonist or ship in the world plate.
 
 ### A3. Curriculum Checker Agent — Curriculum Verification Track
 
@@ -195,13 +195,13 @@ Reviews the reloaded demo as a whole scene, not as isolated files. It judges whe
 It checks:
 
 - PNG dimensions, crop, compression, transparency, and on-screen scale;
-- inconsistent pixel density, smoothing, resampling, or nearest-neighbor behavior;
+- inadequate source resolution, destructive resampling, compression artifacts, inconsistent photographic sharpness, or visible image-generation defects;
 - mismatched detail levels between backgrounds, sprites, interface, and effects;
 - elements that attract attention without gameplay or narrative purpose;
 - important elements that fail to attract enough attention;
 - composition, hierarchy, silhouette, palette, contrast, and negative space;
 - visible seams, clipping, overflow, stretching, and incorrect aspect ratios;
-- first-person framing, protagonist/ship exclusion, and the `640 × 480` square-pixel presentation contract;
+- first-person framing, protagonist/ship exclusion, and the high-resolution photorealistic presentation contract;
 - whether animation preserves invariant body geometry when only one region should change; and
 - whether the scene still carries the intended Builder-made functional strangeness and richness.
 
@@ -215,7 +215,7 @@ It owns:
 
 - asset sizing, cropping, rendering, and integration corrections;
 - CSS/layout and canvas presentation fixes;
-- nearest-neighbor and whole-pixel behavior;
+- high-quality responsive resampling, aspect-ratio preservation, and photographic detail retention;
 - animation invariants and stable sprite geometry;
 - visual hierarchy changes identified by the Aesthetic Agent;
 - regression checks for both gameplay and presentation;
@@ -545,11 +545,11 @@ All five agents work on one future Rail Packet. Begin with the nearest unfinishe
 Team 2 — Working Team:
 Player Agent -> Coder Agent (bug repair and reload) -> Aesthetic Agent -> the same Coder Agent (aesthetic implementation and final reload).
 
-The Player Agent completes every puzzle loaded in the oldest approved demo slice and produces exact bug reports. The shared Coder Agent repairs those bugs, validates them, and reloads the demo. The Aesthetic Agent then reviews the repaired scene in the live demo for asset scale, pixel consistency, hierarchy, visual distractions, framing, richness, and presentation defects. The same Coder Agent implements accepted aesthetic corrections, revalidates gameplay and visuals, and performs the final demo reload. Team 2 may spend multiple cycles on one packet and must not skip forward to match Team 1's railhead. Each Working phase must leave a visible player-facing improvement with a five-minute demonstration path. It may return invalid assumptions to the Advance Team but may not invent future canon or weaken mastery.
+The Player Agent completes every puzzle loaded in the oldest approved demo slice and produces exact bug reports. The shared Coder Agent repairs those bugs, validates them, and reloads the demo. The Aesthetic Agent then reviews the repaired scene in the live demo for source quality, photorealistic credibility, asset scale, material and lighting consistency, AI artifacts, hierarchy, visual distractions, framing, richness, and presentation defects. The same Coder Agent implements accepted aesthetic corrections, revalidates gameplay and visuals, and performs the final demo reload. Team 2 may spend multiple cycles on one packet and must not skip forward to match Team 1's railhead. Each Working phase must leave a visible player-facing improvement with a five-minute demonstration path. It may return invalid assumptions to the Advance Team but may not invent future canon or weaken mastery.
 
 Read all applicable AGENTS.md files, Agent Profiles/README.md, the selected agent's canonical profile in full, the two-team cycle, pipeline queues, active packet, previous Demo Increment, and role work logs before each step. Reuse the same coder_agent identity for A5, W2, and W4, selecting the required Coder mode each time. Only one specialist owns the shared worktree at a time. Each agent completes one bounded tranche, validates it, updates its work log and shared pipeline artifact, and returns a spoiler-safe handoff.
 
-The coordinator inspects, commits, and pushes a dedicated checkpoint after every role; preserves user work and untracked files; enforces hidden-lore, official-source, 640x480 square-pixel, first-person, originality, privacy, no-authority, recovery, and accessibility contracts; and uses an empty commit for read-only checkpoints when required.
+The coordinator inspects, commits, and pushes a dedicated checkpoint after every role; preserves user work and untracked files; enforces hidden-lore, official-source, high-resolution photorealistic, first-person, originality, privacy, no-authority, recovery, and accessibility contracts; and uses an empty commit for read-only checkpoints when required.
 
 After both teams, run independent curriculum, art, test, build, exact-viewport, and full E2E gates as appropriate. Update the playable demo at http://127.0.0.1:4173/, restore incidental QA files, verify HEAD equals origin/main, and report Advance Team progress, Working Team progress, the visible demo delta, Team 1's railhead, Team 2's live-demo position, the ordered packet lead, whole-story rail status, validation, and risks.
 ```

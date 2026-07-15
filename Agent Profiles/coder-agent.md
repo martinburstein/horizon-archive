@@ -39,7 +39,7 @@ If the mode is missing, infer it only from an unambiguous preceding handoff. Oth
 - Do not invent canon or weaken `SOLIDIFIED` curriculum mappings.
 - Keep failures recoverable and save/resume deterministic.
 - Keep evidence privacy-safe and offline/no-authority safe.
-- Preserve first-person framing, square pixels, and approved visual contracts.
+- Preserve first-person framing, high-resolution photorealistic presentation, and approved visual contracts. Archived pixel assets may remain as temporary migration fallbacks but are not approval targets.
 - Add regression coverage proportional to every behavior changed.
 
 ## Mode: `advance`

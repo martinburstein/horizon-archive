@@ -199,8 +199,9 @@ test("the accepted staging banner is absent from the shared renderer without rep
   assert.deepEqual(cityThresholdBoards, ["SC-02-00", "SC-02-10", "SC-02-20", "SC-02-30", "SC-02-40", "SC-02-50"]);
 });
 
-test("each City Threshold board uses authored native and narrow production plates", () => {
+test("each City Threshold board keeps its archived fallback plate wired during photorealistic migration", () => {
   assert.doesNotMatch(cityComponent, /Concept Art\/Underground City\.png|city-world-filter/);
+  assert.match(cityComponent, /Pixelated Draft\/city-threshold-pixel-staging/);
   for (const plate of ["overview", "boundary", "access"]) {
     assert.match(cityComponent, new RegExp(`city-threshold-${plate}-640x360\\.png`));
     assert.match(cityComponent, new RegExp(`city-threshold-${plate}-320x180\\.png`));

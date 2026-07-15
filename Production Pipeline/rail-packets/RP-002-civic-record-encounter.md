@@ -202,7 +202,7 @@ First successful traversal is locked to:
 
 ### Interaction zones and narrow evidence
 
-All coordinates are world-viewport rectangles. The `320 x 180` targets are purpose-authored, not smooth reductions. Every active target is at least `44 x 44`.
+All coordinates are interaction-layout rectangles, not art-production resolutions. The high-resolution plates map into both desktop and narrow layouts. Every active target is at least `44 x 44` in its authored coordinate space.
 
 | Board / zone | `640 x 360` | `320 x 180` | Read / action |
 |---|---|---|---|
@@ -224,13 +224,13 @@ The `SC-03-30` comparison and save controls belong to the existing compact `640 
 
 ### Asset brief
 
-- Three native clean `640 x 360` world plates: overview base shared by `00/30/40/50`, near exposed-layer detail for `10`, and scale-echo/closed-boundary detail for `20`.
-- Three purpose-authored `320 x 180` narrow derivatives matching the exact target map. Simplify trace groups and repair joints into deliberate clusters; never smooth-resample or enlarge narrow scenery as final art.
+- Three clean photorealistic 16:9 world masters, normally at least `1920 x 1080`: overview base shared by `00/30/40/50`, near exposed-layer detail for `10`, and scale-echo/closed-boundary detail for `20`.
+- Responsive high-quality derivatives or crops match the exact target map while preserving trace groups, repair joints, material response, and near/far evidence. Never introduce deliberate pixelation or retro filtering.
 - Three transparent animation families with native and purpose-authored narrow assets: heat-return shimmer/condensation, low maintenance-form traffic, and restrained coupling exchange. All use one monotonic scene clock across boards, save, reload, and return.
 - Reduced-motion stills must retain heat-flow topology, one maintenance form held beside (not at or entering) the closed seam, and the far repetition. Motion supplies atmosphere only.
 - Human comparison labels, status, focus, saved evidence, unchanged `continuation`, and next-survey marking use the separate existing interface system. No expedition map, cursor label, icon, border, screen, or text is baked into the world assets.
 - Historical `Concept Art/Underground City.png` supplies only cavern scale and restrained warm/cool depth. Its people, suits, rails, platforms, domes, buildings, streets, baked panel, and composition are prohibited.
-- Final assets use square logical pixels, deliberate clusters, stepped edges, limited value ramps, restrained dithering, nearest-neighbor integer presentation inside `640 x 480`, and letterboxing between supported sizes.
+- Final assets use cinematic photorealism, physically credible materials and lighting, stable registered viewpoints, artifact-free high-resolution detail, and quality responsive resampling. Existing canvas dimensions remain interaction-layout coordinates only.
 
 ### Readability, accessibility, and continuity
 

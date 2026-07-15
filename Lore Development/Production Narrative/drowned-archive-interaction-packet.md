@@ -247,7 +247,7 @@ Production alignment: `EX-L0202-RESPONSIBLE-AI`, lesson `L-02-02`, activity `A-L
 
 ### Three physical frame modes
 
-The outer frame patterns in `Concept Art Book/production-pixel/AB-01/responsible-ai/FRAME_MODES.md` are human course-state indicators. They do not show Machine intent, attention, approval, judgment, or understanding. The Terminal body and four response indicators remain the same in all modes.
+The archived outer-frame patterns in `Pixelated Draft/production-pixel/AB-01/responsible-ai/FRAME_MODES.md` are human course-state indicators. They do not show Machine intent, attention, approval, judgment, or understanding. Any photorealistic replacement must preserve this ownership boundary: the Terminal body and four response indicators remain the same in all modes.
 
 | Physical mode | Exact live title | Exact live status | Owner |
 |---|---|---|---|

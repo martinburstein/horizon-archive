@@ -51,7 +51,7 @@ Load your canonical profile from [profile path] and follow it as your identity c
 - Keep unrevealed story content out of chat.
 - Use official Microsoft source priority for AI-901 and Foundry work.
 - Preserve `SOLIDIFIED` mappings unless a documented reopen condition exists.
-- Preserve first-person framing, protagonist/ship exclusion, and the `640 × 480` square-pixel contract.
+- Preserve first-person framing, protagonist/ship exclusion, and the active high-resolution photorealistic charter. Legacy pixel contracts live only under `Pixelated Draft/`.
 - Keep the playable path recoverable, privacy-safe, offline-safe, and free of live Azure authority.
 - End at the profile's handoff boundary and report evidence, not vague completion claims.
 

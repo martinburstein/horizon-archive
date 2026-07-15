@@ -6,7 +6,7 @@ This is the implementation map for the completed Glass Meadow departure and Drow
 
 - **Meadow base:** preserve the approved first-person [Glass Meadow Example.png](../../Glass%20Meadow%20Example.png) unchanged as the dominant world painting.
 - **Meadow reward:** preserve the project-rendered completed three-fin marker over that painting. It is the only added world-state art.
-- **Destination base:** use the existing original [AB-01 production plate](../production-pixel/AB-01/ab01-available-640x360.png) and its existing Terminal state assets.
+- **Destination base:** the existing [AB-01 pixel-era plate](../../Pixelated%20Draft/production-pixel/AB-01/ab01-available-640x360.png) is an archived migration fallback. Replace it with the approved high-resolution photorealistic basin master while preserving the interaction/state contract.
 - **Frame:** `640 x 480` complete canvas, with world rows `0-359` and interface rows `360-479`. The authored narrow derivative is `320 x 240`, with world rows `0-179` and interface rows `180-239`.
 
 ## Exact world-state and navigation map

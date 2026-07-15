@@ -133,7 +133,7 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /primaryHotspotRef\.current\?\.focus/);
   assert.equal(source.match(/<img className="title-art" src=\{glassMeadowImage\}/g)?.length ?? 0, 0);
   assert.equal(source.match(/<img className="title-art chapter-reveal-art" src=\{glassMeadowImage\}/g)?.length, 1);
-  assert.match(styles, /\.canonical-game-frame \.scene-art\.glass-meadow-art \{[^}]*object-fit: cover;[^}]*image-rendering: pixelated;[^}]*image-rendering: crisp-edges;/s);
+  assert.match(styles, /\.canonical-game-frame \.scene-art\.glass-meadow-art \{[^}]*object-fit: cover;[^}]*image-rendering: auto;/s);
   assert.doesNotMatch(source, /openingTransitionRef/);
   assert.match(source, /evaluateOpeningActivation\(event, openingActivationAtRef\.current\)/);
   assert.equal(source.match(/onKeyDown=\{preventRepeatedOpeningKey\}/g)?.length, 2);

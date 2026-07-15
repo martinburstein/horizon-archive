@@ -1,0 +1,39 @@
+# Horizon Archive Concept Art Book
+
+This is the spoiler-safe visual production atlas for the places a player can visit. It translates surface canon into playable environment plates without defining the Builders' disappearance, the Machine, or any unreleased answer.
+
+## Start here
+
+- [Art-direction charter](art-direction-charter.md)
+- [Planet and region map](planet-region-map.md)
+- [Scene index](scene-index.md)
+- [Scene-sheet template](scene-sheet-template.md)
+- [Prompt and provenance log](prompt-provenance-log.md)
+- [Location Scout work log](WORK_LOG.md)
+- [Curse Art Director production-richness gate](../Curse%20Art%20Director/CHARTER.md)
+- [Selected production pixel art](production-pixel/README.md)
+- [Frame-grounded derelict Terminal reference](References/terminal-gif-inspiration/README.md)
+- [Builder Machine signal-coupler Terminal sprite study](production-pixel/AB-01/signal-coupler/README.md)
+- [Historical signal-mineral Terminal prototype](production-pixel/AB-01/signal-mineral/README.md)
+
+## Selected plates
+
+[![Glass Meadow Landing Shelf](images/glass-meadow-landing-shelf-v1.png)](images/glass-meadow-landing-shelf-v1.png)
+
+Production notes: [GM-00 — Glass Meadow Landing Shelf](scenes/GM-00-glass-meadow-landing-shelf.md).
+
+[![Glass Meadow Petal and Route Marker](images/glass-meadow-petal-route-marker-v1.png)](images/glass-meadow-petal-route-marker-v1.png)
+
+Production notes: [GM-01 — Glass Meadow Petal and Route Marker](scenes/GM-01-glass-meadow-petal-route-marker.md).
+
+[![Drowned Archive Workload Terminal](images/drowned-archive-workload-terminal-v1.png)](images/drowned-archive-workload-terminal-v1.png)
+
+Production notes: [AB-01 — Drowned Archive Workload Terminal](scenes/AB-01-drowned-archive-workload-terminal.md).
+
+[![Witness Corridor Evidence Terminal](images/witness-corridor-evidence-terminal-v1.png)](images/witness-corridor-evidence-terminal-v1.png)
+
+Production notes: [WC-01 — Witness Corridor Evidence Terminal](scenes/WC-01-witness-corridor-evidence-terminal.md).
+
+## Spoiler boundary
+
+All names in this book are pilot-facing survey labels or neutral production IDs. A scene may pose a question through environment and scale, but it may not answer the central mystery. The hidden-lore vault is outside this book's source set.

@@ -49,7 +49,7 @@ The first successful traversal is locked to `SC-02-00 -> SC-02-10 -> SC-02-20 ->
 
 ## Interaction zones
 
-Coordinates are world-viewport rectangles. Narrow targets are purpose-authored for `320 x 180`, not smooth resamples. Every active target is at least `44 x 44`.
+Coordinates are interaction-layout rectangles, not art-production resolutions. The renderer maps the high-resolution plate into the existing desktop and narrow layouts. Every active target is at least `44 x 44` in its authored interaction coordinate space.
 
 | Board / zone | `640 x 360` | `320 x 180` | Read / action |
 |---|---|---|---|
@@ -67,15 +67,15 @@ Coordinates are world-viewport rectangles. Narrow targets are purpose-authored f
 
 ## Required asset plan
 
-- Author clean square-logical-pixel world assets at native `640 x 360` inside the `640 x 480` game. UI and expedition overlays remain separate.
-- Required native world plates: one `640 x 360` overview base (`00/30/40/50`), one `640 x 360` bridge-boundary detail (`10`), and one `640 x 360` access-detail plate (`20`). Do not manufacture separate “activated” city art.
-- Required narrow world plates: three purpose-authored `320 x 180` derivatives matching the same boards and exact narrow targets; simplify clusters without smooth resampling.
+- Author clean photorealistic 16:9 world assets from high-resolution masters, normally at least `1920 x 1080`. UI and expedition overlays remain separate.
+- Required world plates: one high-resolution overview base (`00/30/40/50`), one bridge-boundary detail (`10`), and one access-detail plate (`20`). Do not manufacture separate “activated” city art.
+- Provide responsive high-quality derivatives or crops that preserve the exact desktop/narrow target maps, material detail, and causal readability. CSS layout sizes do not limit source quality.
 - Required animation layers: four transparent native layers and four purpose-authored narrow equivalents for the steady bridge-light sequence, vapor/condensation exchange, heat shimmer, and maintenance forms. Preserve a shared monotonic cycle clock across board changes and anchor recording.
 - Required expedition overlays: separate native and narrow map-division, anchor-coordinate, saved-state, unchanged-`continuation`, and route-enabled states; none may be baked into Builder space.
 - Maintenance loop: assemblies traverse an established route, stop at the physical seam, hold, and withdraw/re-route. They never orient toward the camera or react to the anchor.
 - Anchor/completion feedback exists only in the expedition interface through text, focus order, and an enabled route action. No marker is painted into Builder space.
-- The `320 x 180` narrow boards are never enlarged as final scenery.
-- Present only at integer scale with nearest-neighbor behavior, square pixels, and letterboxing between supported sizes.
+- Do not intentionally pixelate, palette-limit, dither, or nearest-neighbor scale any derivative.
+- Preserve aspect ratio, photographic sharpness, and stable landmark registration across responsive layouts.
 - Historical `Underground City.png` may inform immense layered depth and warm/cool contrast only. Its people, suits, rails, human platforms, familiar domes, baked UI, and layout are explicitly excluded.
 
 ## Accessibility and readability
@@ -99,5 +99,5 @@ Coordinates are world-viewport rectangles. Narrow targets are purpose-authored f
 - Framing passes only if no protagonist, ship, body part, shadow, reflection, portrait, or visible Builder occupant appears.
 - Continuity passes only if cycles are visibly mid-phase on entry and remain phase-continuous through completion/return.
 - Readability passes if a reviewer can distinguish the maintenance stop seam from the Pilot-map division and environmental access from identity-record access in color, grayscale, and reduced motion.
-- Feasibility passes with three `640 x 360` base plates, four restrained animation layers, separate UI overlays, and the exact native/narrow target map above.
+- Feasibility passes with three high-resolution 16:9 base plates, four restrained registered animation layers, separate UI overlays, and the exact desktop/narrow interaction map above.
 - Production status remains **Brief**. This A2 pass creates no final art.

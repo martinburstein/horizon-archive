@@ -80,7 +80,7 @@ GM-01 must show at least six stages in one readable composition and, together wi
 
 ## Approved first playable composition map
 
-The selected target controls the ruler-straight horizon, perfectly flat field, dense transparent-glass crop, black/amber flush growth-mat floor, first-person camera, and broad foreground/midground/horizon compression. It must be re-authored as an original `640 x 360` square-logical-pixel plate; do not ship, trace, filter, or smoothly downscale the `1672 x 941` target.
+The selected target controls the ruler-straight horizon, perfectly flat field, dense transparent-glass crop, black/amber flush growth-mat floor, first-person camera, and broad foreground/midground/horizon compression. Re-author it as an original high-resolution photorealistic 16:9 master; do not trace or copy the `1672 x 941` target.
 
 ### Exact interaction zones
 
@@ -103,11 +103,11 @@ For implementation rectangles, use primary `x=294, y=191, w=120, h=136` and rout
 
 - **Navigation:** GM-00's dormant-state wave hands into the lower-center entry field; first contact owns the initial interaction; the later route node remains secondary and prerequisite-gated; onward movement exits laterally at the right edge only after its state change.
 - **Lighting:** preserve cool open-sky illumination, white/slate glass reflections, deep black transmitted ground, and scarce amber light explained by embedded mat activity. Avoid bloom, neon outlines, or unexplained magical glow.
-- **Palette:** use four-step blue-sky, black/slate floor, gray-white transparent-glass, and restrained brown-to-amber process ramps. Keep action readability in luminance and silhouette before color.
-- **Scale:** hold the horizon near logical `y=102`; compress distant growth to two-to-six-pixel clusters; allow edge crops to imply immense field extent. No human object, building, terrain relief, or ship supplies scale.
-- **Material:** retain variable glass wall thickness, refraction, internal reflection, sparse inclusions/strain, sharp stepped highlights, dark transmitted floor, and believable collar contact. Avoid crystal facets, opaque plastic, and high-frequency sparkle noise.
+- **Palette:** use a natural blue-sky range, black/slate mineral floor, gray-white transparent glass, and restrained brown-to-amber process emissions. Keep action readability in luminance and silhouette before color.
+- **Scale:** keep the horizon near the same compositional height; use atmospheric compression, diminishing physical detail, crop density, and repeated component sizes to imply immense field extent. No human object, building, terrain relief, or ship supplies scale.
+- **Material:** retain variable glass wall thickness, refraction, internal reflection, caustics, sparse inclusions/strain, sharp physically plausible highlights, dark transmitted floor, condensation/dust, and believable collar contact. Avoid crystal shorthand, opaque plastic, generic neon, and artifact-like sparkle noise.
 - **Continuity/canon:** preserve absolute flatness, edge-to-edge crop, non-Cartesian flush mats, upward growth, visible repair variation, three stewardship periods, surface-only first contact, and the unresolved central mystery.
-- **Production QA:** inspect the `640 x 360` rebuild at native 1x, exact nearest-neighbor 2x, grayscale, and 25% thumbnail. Require hotspot-to-painted-cue alignment within two logical pixels, straight horizon, non-overlap, edge-to-edge crop, and absence of text, paths, ship, protagonist, and spoilers.
+- **Production QA:** inspect the high-resolution master at full size, representative desktop and narrow crops, grayscale, and thumbnail scale. Require accurate hotspot-to-painted-cue alignment, straight horizon, non-overlap, edge-to-edge crop, physically coherent glass/light, no AI artifacts or pseudo-text, and absence of paths, ship, protagonist, and spoilers.
 
 ## 45-second opening findability lock
 
@@ -165,9 +165,9 @@ Core value, groove value, and pool size provide redundant state cues so status d
 
 ## Production record
 
-- **Current blockout:** code-assembled `320 × 180` canvas in `horizon-archive-game/src/pixelMeadow.js`; the `1672 × 941` exploration plate is not imported by the game. This implementation is `BLOCKOUT ONLY` under the Curse Art Director charter and is not the production pixel master.
-- **Required production replacement:** original `640 x 360` first-person absolute-flatness Glass Garden with ruler-straight horizon, crop to every edge, only permitted depth cues, nonhuman field topology, six or more cultivation stages, upward inverted-icicle growth, three or more component typologies, state waves, reject/repair flow, three nonhuman affordances, two plausible readings, three nested scales, no human retrofit, and no party or ship.
-- **Presentation:** whole-number nearest-neighbor scaling with centered letterboxing; `3×` at 1600×900 gameplay and `1×` at 320×900.
+- **Current blockout:** the code-assembled scene in `horizon-archive-game/src/pixelMeadow.js` is an archived migration fallback. Its filename does not describe the active visual target.
+- **Required production replacement:** an original high-resolution photorealistic 16:9 first-person Glass Garden master with ruler-straight horizon, crop to every edge, only permitted depth cues, nonhuman field topology, six or more cultivation stages, upward inverted-icicle growth, three or more component typologies, state waves, reject/repair flow, three nonhuman affordances, two plausible readings, three nested scales, no human retrofit, and no party or ship.
+- **Presentation:** high-quality responsive photographic resampling and crops; no deliberate pixelation, retro dithering, nearest-neighbor scaling, or CRT degradation.
 - **Implemented logical targets:** Petal `x 36–59%, y 22–83%`; Route Marker `x 75–89%, y 48–84%`.
 - **State implementation:** locked cross/dark groove, awake core/ring/short groove, and completed stepped acknowledgement/directional groove alter silhouette geometry as well as value.
 

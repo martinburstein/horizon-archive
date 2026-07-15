@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coordinator visual-strategy migration
+
+- **Outcome:** retired all active pixel-rendering requirements and changed world-image sampling to photographic interpolation. Moved former pixel packages under `Pixelated Draft/` while preserving temporary import paths so the demo continues to compile during the art migration.
+- **Current visual status:** City Threshold and several earlier scenes still display archived pixel-era fallback assets. They are functional placeholders, not approved production visuals. `RP001-AESTH-004` tracks the required photorealistic replacement.
+- **Preserved:** gameplay, canonical interaction coordinates, hotspots, save/evidence, learning gates, first-person framing, no-city-response behavior, Terminal screen-only animation contract, and all accessibility semantics.
+- **Next:** integrate high-resolution photorealistic plates and responsive derivatives without changing the interaction graph.
+
 ## 2026-07-15 — Coordinator support: City Threshold production plates integrated
 
 - **Outcome:** replaced RP-001's historical `Underground City.png` staging raster with three original production candidate views: overview for `SC-02-00/30/40/50`, maintenance boundary for `SC-02-10`, and separate environmental/record access for `SC-02-20`. The renderer selects dedicated `640 x 360` and `320 x 180` files from the settled canonical frame layout; no media-query geometry or hotspot moved.

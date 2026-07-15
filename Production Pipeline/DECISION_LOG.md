@@ -1,5 +1,16 @@
 # Two-Team Decision Log
 
+## 2026-07-15 — Replace pixel-art direction with photorealism
+
+- Retire every square-pixel, nearest-neighbor, low-resolution, retro-dithering, Windows-2000-era, Pixel Patrol, and Curse-art-direction requirement.
+- Preserve the complete former direction under `Pixelated Draft/`; historical logs may still describe work completed under that strategy.
+- Make `Visual Direction/PHOTOREALISTIC_CHARTER.md` the active visual authority for every current and future draft.
+- Target premium cinematic photorealism, high-resolution 16:9 source masters, physically credible materials and lighting, artifact-free image generation, and high-quality responsive resampling.
+- Keep classic LucasArts influence only in gameplay structure: scene readability, point-and-click exploration, narrative charm, recoverable experimentation, and compact interaction UI.
+- Preserve first-person world plates, no protagonist/ship/human trace, Builder functional logic, central-mystery protection, and separate expedition overlays.
+- Existing pixel assets may remain temporarily wired into the demo only as explicitly archived migration fallbacks. Their presence is not visual acceptance.
+- Supersede `RP001-AESTH-002` as a pixel-consistency requirement. Open `RP001-AESTH-004` for replacement of archived pixel-styled fallback plates with approved photorealistic masters.
+
 Record only decisions that affect multiple roles, packets, or cycles. Specialist details remain in role work logs.
 
 ## 2026-07-15 — Adopt two-team pipeline

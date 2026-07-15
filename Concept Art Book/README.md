@@ -10,11 +10,11 @@ This is the spoiler-safe visual production atlas for the places a player can vis
 - [Scene-sheet template](scene-sheet-template.md)
 - [Prompt and provenance log](prompt-provenance-log.md)
 - [Location Scout work log](WORK_LOG.md)
-- [Curse Art Director production-richness gate](../Curse%20Art%20Director/CHARTER.md)
-- [Selected production pixel art](production-pixel/README.md)
+- [Active photorealistic visual authority](../Visual%20Direction/PHOTOREALISTIC_CHARTER.md)
+- [Retired pixel-direction archive](../Pixelated%20Draft/README.md)
 - [Frame-grounded derelict Terminal reference](References/terminal-gif-inspiration/README.md)
-- [Builder Machine signal-coupler Terminal sprite study](production-pixel/AB-01/signal-coupler/README.md)
-- [Historical signal-mineral Terminal prototype](production-pixel/AB-01/signal-mineral/README.md)
+- [Archived Builder Machine signal-coupler study](../Pixelated%20Draft/production-pixel/AB-01/signal-coupler/README.md)
+- [Archived signal-mineral Terminal prototype](../Pixelated%20Draft/production-pixel/AB-01/signal-mineral/README.md)
 
 ## Selected plates
 

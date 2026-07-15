@@ -1,4 +1,6 @@
-# City Threshold Production Plates
+# City Threshold Pixel-Styled Staging Plates — Archived
+
+Status: **RETIRED VISUAL DRAFT.** These images may remain wired into the demo temporarily so gameplay stays intact, but they do not satisfy the active photorealistic charter and must not be described as current production art.
 
 Generated on 2026-07-15 as the first production replacement for the historical `Underground City.png` staging raster.
 

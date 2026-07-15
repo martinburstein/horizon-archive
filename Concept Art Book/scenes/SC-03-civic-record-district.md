@@ -44,7 +44,7 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 
 ## Interaction map
 
-Coordinates are world-viewport rectangles. Narrow boards are purpose-authored at `320 x 180`; all targets are at least `44 x 44`.
+Coordinates are interaction-layout rectangles, not art-production resolutions. High-resolution plates map into both layouts; all targets are at least `44 x 44` in the authored coordinate space.
 
 | Zone | `640 x 360` | `320 x 180` |
 |---|---|---|
@@ -66,12 +66,12 @@ The comparison and save controls belong to the compact interface below the world
 
 ## Concise asset brief
 
-- Three clean native `640 x 360` world plates: overview (`00/30/40/50`), near layer detail (`10`), and scale-echo/closed-boundary detail (`20`).
-- Three purpose-authored `320 x 180` derivatives with simplified clusters and the exact narrow targets above; never smooth-resample or enlarge them as final scenery.
-- Three transparent animation families at both logical sizes: heat/condensation, maintenance traffic, and restrained coupling exchange. One monotonic clock runs through inspection, save, reload, and return.
+- Three clean photorealistic 16:9 world masters, normally at least `1920 x 1080`: overview (`00/30/40/50`), near layer detail (`10`), and scale-echo/closed-boundary detail (`20`).
+- Responsive high-quality derivatives or crops preserve the exact narrow targets, material credibility, and near/far evidence relationship without deliberate pixelation.
+- Three registered animation families: heat/condensation, maintenance traffic, and restrained coupling exchange. One monotonic clock runs through inspection, save, reload, and return.
 - Reduced-motion stills retain heat-flow topology, one maintenance form beside the closed seam, and the far repetition. Motion never carries required evidence.
 - World assets contain no human UI. Existing interface systems own labels, status, save feedback, unchanged `continuation`, and next-survey marking.
-- Production uses square logical pixels, deliberate clusters, limited value ramps, stepped edges, restrained dithering, nearest-neighbor integer presentation inside `640 x 480`, and letterboxing between supported sizes.
+- Production uses cinematic photorealism, physically credible materials and lighting, high-frequency detail with a physical cause, clean responsive resampling, and artifact-free presentation. The `640 x 480` and `320 x 240` values remain interaction-layout coordinates only.
 
 ## Readability and validation gate
 

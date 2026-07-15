@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-15 — Photorealistic strategy reset
+
+- **Decision:** retired the square-pixel/nearest-neighbor/turn-of-the-millennium rendering strategy. Classic LucasArts influence now applies only to point-and-click gameplay, scene readability, and recoverable experimentation.
+- **Archive:** moved the former Pixel Patrol, Curse Art Director, pixel production contract, production-pixel package, and City Threshold pixel-styled staging plates under `Pixelated Draft/`. Preserved pre-migration instruction snapshots and a consolidated retired-direction ledger.
+- **Active authority:** created `Visual Direction/PHOTOREALISTIC_CHARTER.md` and rewrote the active art charter around premium cinematic photorealism, high-resolution 16:9 masters, physically credible materials/lighting, artifact rejection, and responsive photographic resampling.
+- **Current drafts:** updated SC-02 and SC-03 to require high-resolution photorealistic masters. Existing archived assets may remain temporarily wired into the demo only as migration fallbacks.
+- **Next recommended item:** generate and select the three RP-001 photorealistic masters first, then replace the active fallback imports and review every board live before proceeding to RP-002 art.
+
 ## 2026-07-15 — City Threshold production-plate replacement package
 
 - **Completed:** authored an original three-view City Threshold environment package: overview, maintenance-boundary detail, and environmental/record-access detail. Every plate is first-person and world-only, excludes the protagonist, ship, humanoids, and visible occupants, and expresses the city as an already-operating geothermal exchange/distribution system with multiple stewardship eras.

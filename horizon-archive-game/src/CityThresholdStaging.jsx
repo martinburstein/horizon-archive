@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import cityAccessNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-access-320x180.png";
-import cityAccessNative from "../../Concept Art Book/production/city-threshold/city-threshold-access-640x360.png";
-import cityBoundaryNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-boundary-320x180.png";
-import cityBoundaryNative from "../../Concept Art Book/production/city-threshold/city-threshold-boundary-640x360.png";
-import cityOverviewNarrow from "../../Concept Art Book/production/city-threshold/city-threshold-overview-320x180.png";
-import cityOverviewNative from "../../Concept Art Book/production/city-threshold/city-threshold-overview-640x360.png";
+import cityAccessNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-access-320x180.png";
+import cityAccessNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-access-640x360.png";
+import cityBoundaryNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-boundary-320x180.png";
+import cityBoundaryNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-boundary-640x360.png";
+import cityOverviewNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-320x180.png";
+import cityOverviewNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-640x360.png";
 import {
   CITY_THRESHOLD_SAVE_KEY,
   anchorExplanationDimensions,

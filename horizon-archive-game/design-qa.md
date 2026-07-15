@@ -19,7 +19,7 @@
 - Focused-region comparison: the first Terminal crop remains visually identifiable under the focus rectangle; the mapped rectangle follows the central glass vessel without introducing a new painted object.
 - Terminal overlay: the VS Code-like orientation stays within the 640x360 world band at 624x343 logical pixels and preserves visible context around its edge.
 - CRT comparison: the selected image remains the dominant visual and preserves its horizon, crop, glass density, and realistic highlights. The original charcoal raster bezel adds a restrained molded surround, four corner screws, amber lamps, and two knobs without covering the playable frame.
-- Image-quality check: the selected Glass Meadow raster now uses smooth browser sampling inside the square 640x480 logical frame; other native production pixel assets retain nearest-neighbor rendering.
+- Historical image-quality check: superseded. All active world images now use photographic browser sampling; remaining pixel-era files are archived migration fallbacks pending replacement.
 
 ## Interaction and accessibility checks
 
@@ -35,7 +35,7 @@
 - Confirmed the CRT stage is uniformly scaled and centered at 1280x720, the full document has no overflow, and the default viewport override was cleared after responsive QA.
 - Confirmed native 320x240 retains the complete 320x240 logical gameplay frame at `1x` with exact `0,0` to `320,240` containment. The bezel is suppressed below the canonical presentation threshold so decoration never clips or shrinks playable content.
 - Confirmed all five adventure verb/inventory controls are at least `24px` in both dimensions: `29.2px` high at 1280x720 and exactly `24px` high at native 320x240. Narrow controls use one horizontal command row above the dialogue row.
-- Accessibility Sentinel final re-review: PASS. Curse Art Director final re-review: PASS against the approved dominant-Meadow, restrained-period-CRT, original first-person direction.
+- Historical reviews passed their former contracts. They do not constitute approval under the current photorealistic charter.
 
 ## Comparison history
 
@@ -50,6 +50,9 @@
 
 ## Remaining non-blocking art note
 
-The selected image is the approved concept-rich scene and is displayed inside a square-pixel logical frame with smooth raster sampling. It is not yet a hand-authored native 640x360 production painting; a later art pass can recreate its composition at native logical resolution without changing this opening flow.
+The selected image remains concept-rich staging evidence. The required replacement is a high-resolution photorealistic 16:9 master with responsive derivatives, physically credible glass/light, and no change to the opening interaction flow.
 
 final result: passed
+# Visual-strategy status — 2026-07-15
+
+The pixel/CRT image-quality conclusions below are historical evidence only. Active QA follows `../Visual Direction/PHOTOREALISTIC_CHARTER.md`: high-resolution source masters, photographic resampling, material/lighting credibility, AI-artifact rejection, first-person framing, and representative desktop/narrow viewport review. Existing pixel-era assets are migration fallbacks and cannot receive current visual approval.

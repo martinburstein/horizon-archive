@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const manifestUrl = new URL(
-  "../../Concept Art Book/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-production-manifest.json",
+  "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-production-manifest.json",
   import.meta.url,
 );
 const appUrl = new URL("../src/App.jsx", import.meta.url);

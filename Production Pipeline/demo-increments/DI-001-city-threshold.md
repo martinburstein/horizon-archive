@@ -122,3 +122,9 @@ The protected route now lets a player cross from accepted prologue credits into 
 - Checkpoint commits: Player `3145e44`; Coder bug repair `16b4b05`; Aesthetic `c0a3966`; Coder polish `28c5f60`; coordinator record follows this validation.
 - `HEAD == origin/main`: `YES` after coordinator record push and final synchronization check.
 - Playable server updated: `YES` — W4 production build final-reloaded at port `4173`; coordinator validation used isolated port `5174` and left `4173` untouched.
+# 2026-07-15 visual-direction supersession
+
+- The original W3 pixel-consistency finding `RP001-AESTH-002` is retired and preserved below as historical evidence only.
+- The pixel-styled replacement plates produced afterward are archived under `Pixelated Draft/city-threshold-pixel-staging/`. They remain temporary runtime fallbacks so gameplay is not broken.
+- Active blocker `RP001-AESTH-004 — P1` requires three high-resolution photorealistic 16:9 City Threshold masters, registered effects, responsive derivatives, physically credible materials/lighting, no image-generation artifacts or pseudo-writing, first-person/no-human framing, and unchanged interaction/state behavior.
+- `RP001-AESTH-001` is superseded because the original figure-filled raster was removed; no-human framing must be rechecked on the new photorealistic masters.
