@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — AESTHETIC REVIEW (W2 demo reloaded)`
+- Team 2 active packet: `RP-001 — AESTHETIC IMPLEMENTATION (W3 complete; W4 handoff issued)`
 - Team 1 railhead: `RP-002 — seeded; A1 pending`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 seeded`
 - Whole-story rail status: `IN PROGRESS`
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `AESTHETIC REVIEW — W2 DEMO RELOADED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `PROTECTED STAGING PASS` | W2 resolved `RP001-P1-001`; matching parent/child layout, full interface, route/return focus, reload `SC-02-50`, and zero world scroll pass at exact `640 × 480` and `320 × 240`; rough plate remains W3 concern |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `AESTHETIC IMPLEMENTATION — W3 COMPLETE` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `PROTECTED STAGING PASS` | W2 `RP001-P1-001` remains resolved. W3 accepts `RP001-AESTH-003` for banner removal in W4 and defers P1 release blockers `001/002` to the locked three-native/three-narrow/four-layer production-art package; no crop/filter/mask workaround |
 | 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `SEED — A1 pending` | `NOT READY` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | Preserve RP-001 anchor, route, continuation, null city delta, and no-response/consent boundary |
 
 ## Whole-story coverage gate

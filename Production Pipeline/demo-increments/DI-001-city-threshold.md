@@ -49,18 +49,21 @@ The protected route now lets a player cross from accepted prologue credits into 
 
 ## Aesthetic Agent review
 
-- Live build reviewed: Pending W2 repair/reload.
-- PNG size/crop/scale findings: Player finding `RP001-AESTH-001` reserved.
-- Pixel density/resampling findings: Pending.
-- Detail-level consistency: Pending.
-- Hierarchy and unwanted emphasis: Pending.
-- Composition/palette/contrast: Pending.
-- Seams/clipping/stretching/aspect ratio: Pending.
-- First-person and `640 × 480` findings: W2 frame containment is resolved. Rough plate contains visible suited figures and remains W3 review scope.
-- Animation invariants: Player observed unchanged city status through navigation, failure, confirmation, and reload; live reduced-motion emulation remains pending.
-- Builder richness/functional strangeness: Pending production-art review.
-- Accepted findings and acceptance checks: Pending.
-- Deferred or rejected findings with reason: Pending.
+- Live build reviewed: W2 handoff build `3145e44 + uncommitted W2 repair` (`index-CPJG972y.js` / `index-EJuHXqOV.css`) and its exact settled-browser measurements were verified from the Coder handoff. The live route was not reopened because W2 explicitly preserved the rough plate, the four exact playtest PNGs expose the unchanged art defects, and `RP001-P1-001` is not reopened.
+- PNG size/crop/scale findings: the four reviewed evidence files are exact `640 × 480` or `320 × 240` captures. Their world plate remains a single labeled A5 rough raster; RP-001's required three clean native `640 × 360` plates, three purpose-authored `320 × 180` derivatives, four transparent animation layers, and narrow layer equivalents remain unproduced/unintegrated Working art work.
+- Pixel density/resampling findings: `RP001-AESTH-002` records the smooth, high-frequency concept raster against crisp square-pixel interface geometry and its muddy/noisy narrow reduction. This cannot be repaired by CSS scaling or filtering.
+- Detail-level consistency: the rough raster's painterly microdetail and soft edges do not match the hard pixel clusters, one-pixel borders, type, focus marks, and status blocks around it.
+- Hierarchy and unwanted emphasis: `RP001-AESTH-003` records the large internal `A5 ROUGH PLATE // OVERVIEW // CITY CYCLES INVARIANT` banner as the first visual read and a distraction from world inspection and the lower expedition controls.
+- Composition/palette/contrast: the charcoal/amber/violet depth direction is usable evidence for later production, but the suited foreground silhouettes dominate the overlook and falsely make visible occupants the scene's strongest anchors.
+- Seams/clipping/stretching/aspect ratio: no new seam, stretching, or aspect-ratio finding is opened from the evidence. W2's exact parent/child containment repair remains accepted unless separately reproduced.
+- First-person and `640 × 480` findings: `RP001-AESTH-001` confirms a release-blocking first-person/no-visible-occupant violation. Multiple large suited figures occupy the foreground and midground in `rp001-sc02-40-640x480.png` and both `SC-02-50` captures; smaller figures also appear throughout `rp001-sc02-00-640x480.png`.
+- Animation invariants: Player/W2 evidence preserves unchanged city state and continuous geometry through navigation, confirmation, and reload. The required four authored animation layers and reduced-motion stills remain art-production/coordinator validation work.
+- Builder richness/functional strangeness: the rough plate conveys scale and heat, but familiar suited people, rails, platforms, and domes are specifically excluded reference traits and weaken the intended visibly operating yet unoccupied Builder-made stewardship network.
+- Accepted findings and acceptance checks:
+  - `RP001-AESTH-003 — P2 — ACCEPT FOR SAME-PASS W4.` Evidence: the internal rough-plate banner spans the top of `rp001-sc02-50-640x480.png` and remains prominent at `320 × 240`. Action: remove or hide that staging-only banner in every RP-001 scene state without moving world geometry, hotspots, or interface bands. Constraints: preserve all ownership/status copy, persistent no-city-response messaging, focus styling, exact parent/child containment, and route/return geometry. Acceptance: at exact `640 × 480` and `320 × 240`, no `A5 ROUGH PLATE`/internal invariant banner is visible in `SC-02-00/10/20/30/40/50`; required status and controls remain visible and unchanged.
+- Deferred or rejected findings with reason:
+  - `RP001-AESTH-001 — P1 — DEFER TO ART PRODUCTION; RELEASE BLOCKER.` Exact evidence: the foreground figure centered low in both `SC-02-40/50` views, two large figures at lower left/center, a lower-right figure, and many humanlike figures across spans contradict RP-001 lines 22–24, 82, 105, 178, 190, and 196. Action: replace the rough raster with the locked three-plate/four-layer production package; do not paint over, crop around, blur, or mask figures. Constraints: first-person overlook; no protagonist, ship, body part, reflection, portrait, human trace, or visible occupant; preserve exact hotspot rectangles, empty operational-city reading, invariant city geometry, and already-running cycles. Acceptance: world-only review of every base/detail/completed/return plate and every animation frame at native and narrow sizes finds zero prohibited figures/traces and retains no physical city delta.
+  - `RP001-AESTH-002 — P1 — DEFER TO ART PRODUCTION; RELEASE BLOCKER.` Exact evidence: the soft anti-aliased painterly plate and dense microdetail in all three `640 × 480` captures conflict with crisp pixel UI; in `rp001-sc02-50-320x240.png`, city detail collapses into fine speckle while interface borders/type retain hard pixel structure. Action: author the locked native pixel plates and purpose-authored simplified narrow derivatives; do not use automatic downsampling, smoothing, post filters, or an enlarged narrow plate as final scenery. Constraints: square pixels, nearest-neighbor presentation, separate UI/animation layers, exact target maps, Builder input→transformation→distribution→return chain, failure/reroute evidence, three stewardship phases, three scales, and the charcoal/amber/violet doctrine. Acceptance: native and narrow captures show deliberate integer pixel clusters with no smoothing/blur, readable silhouettes at `320 × 180`, consistent detail density against UI/effects, and no enlarged narrow scenery.
 
 ## Coder pass 2 — aesthetic implementation and final reload
 
@@ -77,14 +80,14 @@ The protected route now lets a player cross from accepted prologue credits into 
 
 - Loaded puzzle path: Complete in W1.
 - Player bug disposition: `RP001-P1-001 — RESOLVED IN W2; coordinator recheck pending`.
-- Aesthetic finding disposition: `RP001-AESTH-001 — RESERVED FOR W3`.
-- Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 PASS` for W2 layout/containment. Production art remains W3 scope.
+- Aesthetic finding disposition: `RP001-AESTH-001/002 — P1 DEFERRED TO ART PRODUCTION; RELEASE BLOCKERS`; `RP001-AESTH-003 — P2 ACCEPTED FOR W4`.
+- Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 PASS` for W2 layout/containment. W3 production-art invariants fail under `RP001-AESTH-001/002` pending the locked authored asset package.
 - Keyboard/focus: Forward and return controls remain fully visible when focused at both exact viewports; Enter activation works and focus cannot scroll the world internally.
 - Names/errors/live regions: Persistent ownership/status copy present; no runtime error observed.
 - Reduced motion/color independence: CSS contains a reduced-motion stop rule; live emulation still pending.
 - Target size/reflow: Narrow forward target is exactly `72 × 44`; canonical target is clipped by the frame defect.
 - Privacy/recovery: PY working source cleared on reload; bounded `10/10` evidence resumed; final reload restored `SC-02-50`.
-- Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, and W3 art review.
+- Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, W4 banner validation, and production-art review after the authored package exists.
 - Verdict: `REVISE`
 
 ## Validation
@@ -100,17 +103,17 @@ The protected route now lets a player cross from accepted prologue credits into 
 ## Known limitations
 
 - `RP001-P1-001` is resolved; coordinator release validation remains pending.
-- `RP001-AESTH-001` remains a known rough-staging art limitation.
+- `RP001-AESTH-001/002` remain P1 rough-staging production-art release blockers; `RP001-AESTH-003` awaits accepted W4 cleanup.
 - Real assistive-technology and forced-color checks remain manual.
 
 ## Packet disposition
 
 - Result: `IN DEMO — PARTIAL`
-- Reason: Functional learning/state path completes and resumes and the W1 frame blocker is resolved; production-art and Aesthetic review gates remain before acceptance.
-- Team 2 live-demo position after disposition: `RP-001 — AESTHETIC REVIEW`
+- Reason: Functional learning/state path completes and resumes and the W1 frame blocker is resolved; accepted W4 banner cleanup and the deferred production-art release blockers remain before acceptance.
+- Team 2 live-demo position after disposition: `RP-001 — AESTHETIC IMPLEMENTATION`
 - Ordered Advance lead after disposition: `1 packet — RP-002 seeded`
-- `STORY_RAIL_MAP.md` updated: `YES — W1 bug-repair state`
-- Follow-up packet or defect: `RP001-AESTH-001 — W3 review`
+- `STORY_RAIL_MAP.md` updated: `YES — W3 aesthetic-review state`
+- Follow-up packet or defect: `RP001-AESTH-003 — W4 same-pass cleanup`; `RP001-AESTH-001/002 — deferred production-art release blockers`
 
 ## Git and demo update
 
