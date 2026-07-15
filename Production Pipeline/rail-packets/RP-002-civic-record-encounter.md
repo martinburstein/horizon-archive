@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 COMPLETE; A5 PENDING`
+- Status: `IN DESIGN — A5 PARTIAL; PROTECTED DEMO TOUR FOUNDATION COMPLETE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -518,6 +518,17 @@ The user-requested skip is a presentation aid, not a cheat-state version of mast
 ### Exact Advance Coder handoff
 
 `Coder Agent — advance mode: implement one protected RP-002 first pass from the complete A1–A4 packet. Build SC-03-00/10/20/30/40/50 scaffolding, exact desktop/narrow hotspots, invariant overview/detail plate hooks and monotonic registered-effect clock, reversible City Threshold return, The Custody Ledger state machine, the SOLIDIFIED curriculum/readiness/RP-002 validator contracts, mapped remediation, strict sanitized evidence, atomic normal completion, and deterministic save/resume. Add the secondary TOUR: SKIP PRACTICE control beside every RP-002 scored action/prerequisite notice with the exact confirmation, separate sanitized tour store, persistent no-credit status, unchanged campaign/mastery/attempt/hint/city fields, RESUME CAMPAIGN restoration, and allowlisted shipped-preview navigation described above. A tour preview may reuse SC-03-40 visually but may never render the normal saved-comparison confirmation or unlock normal progression. Keep this future route protected behind staging; use asset hooks or clearly labeled non-approvable placeholders because final premium photorealistic masters are not yet delivered. Do not invent a successor scene, weaken PY-009 6/6 -> blank 6/6 + explanation or RP002-RAI-01 9/9 -> blank 9/9 + explanation, copy learner content into durable evidence, access identity material, add live calls, or alter any A1/A2 physical/canon/art lock. Add focused tests for strict anti-forgery, remediation/reset, cancellation/reload, atomic commit, separate-tour sanitization, campaign byte stability after skip, allowlisted tour navigation, keyboard/status labels, exact target containment, and zero world/city delta. Return A5 readiness as READY FOR WORKING, REVISE, or HOLD; do not perform Working passes.`
+
+### Advance Coder A5 partial implementation — protected Demo Tour foundation
+
+- Readiness: `REVISE — TOUR FOUNDATION COMPLETE; RP-002 SCENE AND CUSTODY LEDGER REMAIN`.
+- Implemented the reusable tour layer in the accepted app before building RP-002-specific scenery. Every existing Terminal now exposes the exact `TOUR: SKIP PRACTICE` label, and the inline scene test exposes the same secondary action immediately beside `Run`.
+- The exact confirmation, `ENTER DEMO TOUR`, `KEEP PRACTICING`, persistent `DEMO TOUR // PRACTICE SKIPPED // NO CAMPAIGN CREDIT` status, preview-only status, `NEXT TOUR SCENE`, and `RESUME CAMPAIGN` controls are implemented.
+- Tour state uses the separate `horizon-archive-demo-tour-v1` store. Its sanitizer accepts only `mode`, an allowlisted shipped `tourSceneId`, an allowlisted `resumeCampaignSceneId`, and one bounded unfinished-gate ID. Payloads containing mastery, correctness, attempts, hints, completion, unlocks, city state, identity, source, campaign, or evidence fields are rejected.
+- The shipped preview allowlist is exact and ordered: Glass Meadow, Drowned Archive, Witness Corridor, City Threshold. Navigation has no generic increment or successor synthesis. Reload restores only the sanitized tour cursor and no-credit badge; resume reloads the untouched normal campaign save.
+- Focused tests prove campaign-string byte stability while entering/clearing tour storage, anti-forgery behavior, allowlisted navigation, reload sanitation, exact labels, Escape cancellation, and keyboard focus containment source contracts.
+- The RP-002-specific `SC-03` boards, custody-tray validators, strict evidence chain, atomic normal completion, and premium photorealistic scene masters are not implemented in this tranche. No placeholder scene was accepted and no successor canon was invented.
+- Exact Player handoff: `Player Agent W1: use any currently shipped Terminal test and activate TOUR: SKIP PRACTICE. Verify the exact no-credit confirmation, cancel with Escape and KEEP PRACTICING without losing the unfinished gate, then enter and traverse only Glass Meadow -> Drowned Archive -> Witness Corridor -> City Threshold as offered. Reload on two tour scenes and confirm the no-credit badge persists. Select RESUME CAMPAIGN and verify the same unfinished Terminal/gate returns with normal campaign mastery, attempts, hints, completion, route, and city state unchanged. Record any focus, containment, scene-order, stale-store, or campaign-byte defect. Do not judge replacement photorealistic masters in this functional pass.`
 
 ## Dependencies and open risks
 

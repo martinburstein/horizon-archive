@@ -123,7 +123,8 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.match(source, /setMode\(saved\.finished \? "ending" : saved\.opening\.step\)/);
   assert.match(source, /className="scene-art glass-meadow-art"[\s\S]*src=\{glassMeadowImage\}/);
   assert.doesNotMatch(source, /<PixelMeadow/);
-  assert.equal(source.match(/<CanonicalGameFrame enabled>/g)?.length, 5);
+  assert.equal(source.match(/<CanonicalGameFrame enabled>/g)?.length, 6);
+  assert.match(source, /<DemoTourScreen state=\{demoTour\}/);
   assert.match(source, /<CanonicalGameFrame enabled=\{scene\.id === "meadow" \|\| scene\.id === "ruins"\}>/);
   assert.doesNotMatch(source, /className="prologue-field"/);
   assert.doesNotMatch(styles, /repeating-linear-gradient/);

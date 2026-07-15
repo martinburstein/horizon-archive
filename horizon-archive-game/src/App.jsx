@@ -5,6 +5,8 @@ import ruinsCompleteImage from "../../Pixelated Draft/production-pixel/AB-01/ab0
 import ruinsAvailableNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-available-320x180.png";
 import ruinsActiveNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-active-320x180.png";
 import ruinsCompleteNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-complete-320x180.png";
+import cityThresholdOverviewImage from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-640x360.png";
+import cityThresholdOverviewNarrowImage from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-320x180.png";
 import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
 import cityImage from "../../Concept Art/Underground City.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -15,7 +17,16 @@ import signalCouplerImage from "../../Pixelated Draft/production-pixel/AB-01/sig
 import signalCouplerStillImage from "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-available-640x360.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
+import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
+import {
+  clearDemoTour,
+  createDemoTourState,
+  getNextTourSceneId,
+  loadDemoTour,
+  moveDemoTour,
+  saveDemoTour,
+} from "./demoTour.js";
 import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import {
   buildCompletedMeadowReturnPatch,
@@ -353,6 +364,37 @@ const scenes = [
   },
 ];
 
+const demoTourCatalog = [
+  {
+    id: "meadow",
+    chapter: "I",
+    location: "Glass Meadow",
+    image: glassMeadowImage,
+    alt: "An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person",
+  },
+  {
+    id: "ruins",
+    chapter: "II",
+    location: "The Drowned Archive",
+    sources: { canonical: ruinsAvailableImage, narrow: ruinsAvailableNarrowImage },
+    alt: "The currently shipped first-person Drowned Archive scene preview",
+  },
+  {
+    id: "automaton",
+    chapter: "III",
+    location: "The Witness Corridor",
+    image: automatonImage,
+    alt: "The currently shipped first-person Witness Corridor scene preview",
+  },
+  {
+    id: "city-threshold",
+    chapter: "IV",
+    location: "The City Threshold",
+    sources: { canonical: cityThresholdOverviewImage, narrow: cityThresholdOverviewNarrowImage },
+    alt: "The currently shipped empty first-person City Threshold staging preview",
+  },
+];
+
 function TerminalShell({ exerciseId, title, filename, lessonId, statusText, closeLabel = "Close Terminal", describedBy, restoreFocusTo, onClose, children }) {
   const dialogRef = useRef(null);
   const titleRef = useRef(null);
@@ -409,9 +451,19 @@ function TerminalShell({ exerciseId, title, filename, lessonId, statusText, clos
         </div>
         <button type="button" onClick={onClose} aria-label={closeLabel}>{closeLabel === "Exit Calibration" ? "Exit" : "Close"}</button>
       </header>
-      <div className="terminal-tabbar" role="tablist" aria-label="Open files">
-        <button type="button" role="tab" aria-selected="true">{filename}</button>
+      <div className="terminal-tabbar">
+        <div className="terminal-open-files" role="tablist" aria-label="Open files">
+          <button type="button" role="tab" aria-selected="true">{filename}</button>
+        </div>
         <span>{statusText ? `${statusText} · ` : ""}Lesson {lessonId}</span>
+        <button
+          className="demo-tour-entry"
+          type="button"
+          aria-label="Skip practice and continue in Demo Tour without credit"
+          onClick={(event) => window.dispatchEvent(new CustomEvent("horizon:demo-tour-request", {
+            detail: { exerciseId, trigger: event.currentTarget },
+          }))}
+        >TOUR: SKIP PRACTICE</button>
       </div>
       {children}
     </section>
@@ -556,6 +608,8 @@ export function App() {
   const [capstoneReadinessSession,setCapstoneReadinessSession]=useState(null);const [capstoneReadinessEvidence,setCapstoneReadinessEvidence]=useState(null);
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
   const [finalConfidenceSession,setFinalConfidenceSession]=useState(null);const [finalConfidenceEvidence,setFinalConfidenceEvidence]=useState(null);
+  const [demoTour, setDemoTour] = useState(() => typeof window === "undefined" ? null : loadDemoTour(window.localStorage));
+  const [demoTourConfirmation, setDemoTourConfirmation] = useState(null);
   const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
@@ -589,6 +643,7 @@ export function App() {
   const finalConfidenceItemHeadingRef = useRef(null);
   const finalConfidenceFirstSelectRef = useRef(null);
   const finalConfidenceSummaryHeadingRef = useRef(null);
+  const demoTourTriggerRef = useRef(null);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -648,6 +703,54 @@ export function App() {
     );
   });
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
+
+  useEffect(() => {
+    function handleDemoTourRequest(event) {
+      demoTourTriggerRef.current = event.detail?.trigger ?? document.activeElement;
+      setDemoTourConfirmation({
+        tourSceneId: getNextTourSceneId(scene.id) ?? scene.id,
+        resumeCampaignSceneId: scene.id,
+        resumeBoundary: event.detail?.exerciseId ?? `${scene.id}-practice`,
+      });
+    }
+    window.addEventListener("horizon:demo-tour-request", handleDemoTourRequest);
+    return () => window.removeEventListener("horizon:demo-tour-request", handleDemoTourRequest);
+  }, [scene.id]);
+
+  function requestDemoTour(boundary, trigger) {
+    demoTourTriggerRef.current = trigger ?? document.activeElement;
+    setDemoTourConfirmation({
+      tourSceneId: getNextTourSceneId(scene.id) ?? scene.id,
+      resumeCampaignSceneId: scene.id,
+      resumeBoundary: boundary,
+    });
+  }
+
+  function cancelDemoTourConfirmation() {
+    setDemoTourConfirmation(null);
+    requestAnimationFrame(() => demoTourTriggerRef.current?.focus({ preventScroll: true }));
+  }
+
+  function enterDemoTour() {
+    const next = createDemoTourState(demoTourConfirmation);
+    saveDemoTour(localStorage, next);
+    setDemoTourConfirmation(null);
+    setDemoTour(next);
+  }
+
+  function advanceDemoTour(sceneId) {
+    setDemoTour((current) => {
+      const next = moveDemoTour(current, sceneId);
+      saveDemoTour(localStorage, next);
+      return next;
+    });
+  }
+
+  function resumeCampaignFromTour() {
+    clearDemoTour(localStorage);
+    setDemoTour(null);
+    resumeGame();
+  }
 
   useEffect(() => {
     if (["character-name", "prologue", "chapter-reveal", "playing", "ending"].includes(mode)) {
@@ -1920,6 +2023,14 @@ export function App() {
     setDialogue(nextSceneAlreadyCompleted ? nextScene.success : nextScene.prompt, "system");
   }
 
+  if (demoTour) {
+    return (
+      <CanonicalGameFrame enabled>
+        <DemoTourScreen state={demoTour} catalog={demoTourCatalog} onMove={advanceDemoTour} onResume={resumeCampaignFromTour} />
+      </CanonicalGameFrame>
+    );
+  }
+
   if (mode === "title") {
     return (
       <CanonicalGameFrame enabled>
@@ -2056,7 +2167,7 @@ export function App() {
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
-      <section className="scene-frame" aria-label={`${scene.location} scene`}>
+      <section className="scene-frame" aria-label={`${scene.location} scene`} inert={demoTourConfirmation ? true : undefined}>
         {scene.id === "meadow" ? (
           <>
             <img
@@ -3837,7 +3948,7 @@ export function App() {
         )}
       </section>
 
-      <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen ? true : undefined}>
+      <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
           {ADVENTURE_VERBS.map((item) => (
             <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
@@ -3852,6 +3963,7 @@ export function App() {
                 <span className="prompt-mark">&gt;&gt;&gt;</span>
                 <input id="python-entry" value={code} onChange={(event) => setCode(event.target.value)} autoComplete="off" spellCheck="false" autoFocus />
                 <button type="submit">Run</button>
+                <button className="demo-tour-entry" type="button" aria-label="Skip practice and continue in Demo Tour without credit" onClick={(event) => requestDemoTour(`${scene.id}-inline-practice`, event.currentTarget)}>TOUR: SKIP PRACTICE</button>
               </div>
               <div className="terminal-help">
                 <button type="button" onClick={() => setShowHint((value) => !value)}>{showHint ? "Hide hint" : "Need a hint?"}</button>
@@ -3932,6 +4044,7 @@ export function App() {
           <button disabled={pendingAdvance} onClick={() => setDialogue("A sliver of Builder material. Warm only when you stop watching it.")}>Builder shard</button>
         </aside>
       </section>
+      {demoTourConfirmation && <DemoTourConfirmation onConfirm={enterDemoTour} onCancel={cancelDemoTourConfirmation} />}
     </main>
     </CanonicalGameFrame>
   );

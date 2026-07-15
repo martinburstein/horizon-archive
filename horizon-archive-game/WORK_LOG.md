@@ -1,5 +1,16 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder A5 partial handoff: protected no-credit Demo Tour
+
+- **Mode:** `advance` for A5 only.
+- **Player-visible outcome:** Added `TOUR: SKIP PRACTICE` to every shipped Terminal and beside the inline scene `Run` control. It opens the exact no-credit confirmation, then previews only the allowlisted shipped scenes in order with a persistent no-credit badge, `NEXT TOUR SCENE`, and `RESUME CAMPAIGN`.
+- **State firewall:** The tour uses `horizon-archive-demo-tour-v1`, separate from the normal campaign save. Its sanitizer rejects mastery, correctness, attempt, hint, completion, unlock, city, identity, source, campaign, and evidence fields. Entry, navigation, reload, and resume do not mutate normal campaign bytes or synthesize mastery/unlocks. Reload restores only the tour cursor and badge; resume reloads the unchanged campaign at its unfinished gate.
+- **Accessibility:** Exact text communicates the mode without color or motion. Confirmation traps focus, Escape performs `KEEP PRACTICING`, cancel restores the trigger, and narrow controls retain 44px logical targets.
+- **Files changed:** `src/App.jsx`, `src/styles.css`, new `src/demoTour.js`, new `src/DemoTour.jsx`, new `test/demoTour.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, `../Production Pipeline/ADVANCE_QUEUE.md`, `../Production Pipeline/STORY_RAIL_MAP.md`, and this log.
+- **Validation:** Focused Demo Tour/opening suite passed **12/12**; complete game suite passed **251/251**; RP-002 curriculum self-test passed; production build passed with the existing large-chunk advisory; `git diff --check` passed with line-ending advisories only. Per A5 scope, no browser playtest or demo reload was performed.
+- **Readiness:** `REVISE`. The reusable tour foundation is complete; RP-002 `SC-03` scenery, Custody Ledger state machine, strict PY-009/RAI evidence chain, atomic normal completion, and premium photorealistic masters remain protected A5 work. No placeholder scene was accepted and no successor canon was invented.
+- **Exact Player handoff:** `Player Agent W1: use any currently shipped Terminal test and activate TOUR: SKIP PRACTICE. Verify the exact no-credit confirmation, cancel with Escape and KEEP PRACTICING without losing the unfinished gate, then enter and traverse only the offered shipped previews through City Threshold. Reload on two tour scenes and confirm the badge persists. Select RESUME CAMPAIGN and verify the same unfinished gate returns with normal mastery, attempts, hints, completion, routes, and city state unchanged. Record focus, containment, allowlist, stale-store, or campaign-byte defects; do not perform aesthetic acceptance.`
+
 ## 2026-07-15 — Coordinator visual-strategy migration
 
 - **Outcome:** retired all active pixel-rendering requirements and changed world-image sampling to photographic interpolation. Moved former pixel packages under `Pixelated Draft/` while preserving temporary import paths so the demo continues to compile during the art migration.
