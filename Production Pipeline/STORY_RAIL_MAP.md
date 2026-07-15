@@ -5,9 +5,9 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `NONE`
+- Team 2 active packet: `RP-001 — PLAYER REVIEW`
 - Team 1 railhead: `RP-002 — seeded; A1 pending`
-- Ordered Advance lead: `2 packets — RP-001 ready, RP-002 seeded`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 seeded`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `READY FOR WORKING — A5 passed` | `AWAITING COORDINATOR PROMOTION` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `PROTECTED STAGING PASS` | `?staging=rp001` post-credits entry; exact board/geometry and evidence-only save; atomic expedition-state delta only; zero city response; 242/242 unit + build pass |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `PLAYER REVIEW` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `PROTECTED STAGING PASS` | `?staging=rp001` post-credits entry; exact board/geometry and evidence-only save; atomic expedition-state delta only; zero city response; 242/242 unit + build pass |
 | 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `SEED — A1 pending` | `NOT READY` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | Preserve RP-001 anchor, route, continuation, null city delta, and no-response/consent boundary |
 
 ## Whole-story coverage gate

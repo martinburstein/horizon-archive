@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| — | None yet | — | — | — | First Rail Packet not yet gated | Promote the first `READY FOR WORKING` packet from the Advance Queue |
+| 1 | `RP-001` | `PLAYER REVIEW` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Player Agent | Production scene art remains rough staging evidence | Execute W1 from `rail-packets/RP-001-city-threshold.md` at `/?staging=rp001` |
 
 ## Current-demo quality lane
 

@@ -462,7 +462,7 @@ World hints use persistent text plus focus movement, never hue, animation timing
 
 ## Advance Handoff Gate
 
-- Lore Builder sign-off: `PENDING — coordinator gate record`
+- Lore Builder sign-off: `PASS — A1 COMPLETE`
 - Storyboarder sign-off: `PASS — A2 COMPLETE`
 - Curriculum Checker sign-off: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
 - Gameplay Master sign-off: `PASS — A4 COMPLETE; PUZZLE LOCKED FOR A5`
@@ -472,9 +472,9 @@ World hints use persistent text plus focus movement, never hue, animation timing
 
 ## Promotion record
 
-- Approved commit: `PENDING — coordinator owns Git`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `PENDING`
+- Approved commit: `7001340`
+- Promoted to Working Queue on: `2026-07-15`
+- Team 1 railhead after promotion: `RP-002 — Civic Record Encounter (SEED)`
 - Next contiguous packet seeded: `RP-002 — Civic Record Encounter (SEED)`
 - `STORY_RAIL_MAP.md` updated: `YES — A5 handoff state`
-- Coordinator: `PENDING`
+- Coordinator: `PASS — A1–A5 sign-offs, 7/7 focused tests, 242/242 full unit tests, production build, adjacency, protected staging, and queue/map consistency verified`
