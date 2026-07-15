@@ -3,6 +3,7 @@ import {
   DEMO_TOUR_CONFIRMATION,
   DEMO_TOUR_PREVIEW_STATUS,
   DEMO_TOUR_STATUS,
+  getDemoTourResumeLabel,
   getNextTourSceneId,
 } from "./demoTour.js";
 
@@ -75,7 +76,7 @@ export function DemoTourScreen({ state, catalog, onMove, onResume }) {
         <div>
           <p id="demo-tour-status-heading" className="demo-tour-badge" role="status" aria-live="polite">{DEMO_TOUR_STATUS}</p>
           <p>{DEMO_TOUR_PREVIEW_STATUS}</p>
-          <p className="demo-tour-resume-note">Campaign parked at: {state.resumeBoundary}</p>
+          <p className="demo-tour-resume-note">Campaign parked at: {getDemoTourResumeLabel(state)}.</p>
         </div>
         <div className="demo-tour-actions">
           {nextScene && <button className="primary-action" type="button" onClick={() => onMove(nextScene.id)}>NEXT TOUR SCENE</button>}

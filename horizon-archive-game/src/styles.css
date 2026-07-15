@@ -367,7 +367,7 @@ h1 {
   inset: 5.5rem clamp(18px, 4vw, 64px) 18px;
   z-index: 3;
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
   min-width: 0;
   color: #d8dee9;
   background: #11141a;
@@ -387,9 +387,20 @@ h1 {
 .terminal-tabbar { min-height: 34px; padding-right: 14px; color: #838c99; background: #181b21; border-bottom: 1px solid #303640; font-size: 0.68rem; }
 .terminal-tabbar button { align-self: stretch; color: #edf1f7; background: #11141a; border-top: 2px solid #b58bd8; border-right: 1px solid #303640; }
 .terminal-open-files { display: flex; align-self: stretch; }
-.terminal-tabbar .demo-tour-entry,
+.terminal-practice-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 36px;
+  padding: 3px 8px;
+  background: #151820;
+  border-top: 1px solid #303640;
+}
+.terminal-practice-actions .demo-tour-entry,
 .code-row .demo-tour-entry {
   margin-left: auto;
+  min-height: 30px;
+  padding: 5px 9px;
   border: 1px solid #8b7aa3;
   background: #201b2b;
   color: #f2e9ff;
@@ -1287,14 +1298,18 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench,
 .canonical-game-frame[data-canonical-layout="narrow"] .adventure-screen[data-scene="meadow"] .terminal-workbench { inset: 4px; }
 
-.canonical-game-frame .terminal-tabbar .demo-tour-entry { min-height: 24px; padding: 3px 7px; font-size: 7px; }
+.canonical-game-frame .terminal-practice-actions { min-height: 30px; padding: 0 4px; }
+.canonical-game-frame .terminal-practice-actions .demo-tour-entry { min-height: 24px; padding: 3px 7px; font-size: 7px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .terminal-tabbar {
-  min-height: 44px;
-  padding-right: 0;
-  flex-wrap: wrap;
+  min-height: 30px;
+  padding-right: 4px;
+  flex-wrap: nowrap;
 }
 .canonical-game-frame[data-canonical-layout="narrow"] .terminal-tabbar > span { padding: 2px 4px; font-size: 6px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .terminal-tabbar .demo-tour-entry { min-height: 44px; padding: 3px 5px; font-size: 6px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench { overflow: hidden; }
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-workbench > :nth-child(3) { min-height: 0; overflow: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-practice-actions { min-height: 44px; padding: 0 4px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-practice-actions .demo-tour-entry { min-height: 44px; padding: 3px 5px; font-size: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .code-row .demo-tour-entry { min-height: 44px; font-size: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-screen { grid-template-rows: minmax(0, 3fr) 102px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-scene-status { min-height: 24px; padding: 3px 5px; gap: 4px; font-size: 5px; }
@@ -1309,9 +1324,9 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-confirmation p { margin: 3px 0; font-size: 7px; line-height: 1.25; }
 .canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-confirmation-actions { flex-wrap: nowrap; gap: 4px; margin-top: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-confirmation-actions button { min-width: 0; min-height: 44px; padding: 3px 6px; font-size: 7px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .first-terminal-orientation { display: block; overflow: visible; }
+.canonical-game-frame[data-canonical-layout="narrow"] .first-terminal-orientation { display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: hidden; }
 .canonical-game-frame[data-canonical-layout="narrow"] .orientation-context { padding: 8px; overflow: visible; border-right: 0; border-bottom: 1px solid #303640; }
-.canonical-game-frame[data-canonical-layout="narrow"] .orientation-action { min-height: 280px; padding: 8px; overflow: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] .orientation-action { min-height: 0; padding: 8px; overflow: auto; }
 .canonical-game-frame[data-canonical-layout="narrow"] .orientation-choices { grid-template-columns: 1fr; }
 .canonical-game-frame[data-canonical-layout="narrow"] .orientation-boundaries div { grid-template-columns: 1fr; gap: 3px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .workload-resume-note {

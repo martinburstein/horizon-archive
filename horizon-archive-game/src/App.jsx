@@ -457,6 +457,9 @@ function TerminalShell({ exerciseId, title, filename, lessonId, statusText, clos
           <button type="button" role="tab" aria-selected="true">{filename}</button>
         </div>
         <span>{statusText ? `${statusText} · ` : ""}Lesson {lessonId}</span>
+      </div>
+      {children}
+      <div className="terminal-practice-actions" role="group" aria-label="Practice actions">
         <button
           className="demo-tour-entry"
           type="button"
@@ -466,7 +469,6 @@ function TerminalShell({ exerciseId, title, filename, lessonId, statusText, clos
           }))}
         >TOUR: SKIP PRACTICE</button>
       </div>
-      {children}
     </section>
   );
 }

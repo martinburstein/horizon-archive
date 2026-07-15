@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W4: Demo Tour exercise-action polish
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Resolved `TOUR-AESTH-001`:** every `TerminalShell` now renders exactly one `TOUR: SKIP PRACTICE` control in a dedicated practice-action row after the active exercise. The control is no longer part of the file-tab/header rail and remains structurally outside orientation and answer-choice groups. The inline scene test remains beside its existing `Run` action.
+- **Resolved `TOUR-AESTH-002`:** Demo Tour now renders `Campaign parked at: First Signal — unfinished practice.` The allowlisted stored `resumeBoundary="terminal-l0101-independent-run"`, resume derivation, storage schema, and campaign bytes are unchanged.
+- **Responsive/accessibility polish:** the new exercise-action row is a labeled `Practice actions` group, preserves the exact accessible name and secondary styling, reserves a scrollable exercise region, and keeps the skip target at least `44px` high in the `320 × 240` layout without placing it inside feedback or answer groups.
+- **Preserved contracts:** exact confirmation/no-credit/preview copy, cancel and Resume focus behavior, Drowned Archive -> Witness Corridor -> City Threshold order, art/crops, separate sanitized tour store, campaign byte stability, First Signal restoration, learning/city gates, and all mastery/attempt/hint/completion/route/city evidence.
+- **Files changed in W4:** `src/App.jsx`, `src/DemoTour.jsx`, `src/demoTour.js`, `src/styles.css`, `test/demoTour.test.js`, `test/terminalExercise.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, and this work log. Unrelated user files were preserved.
+- **Validation:** focused Tour/Terminal tests passed; complete game suite passed **255/255**; production build passed with the existing large-chunk advisory (`index-DawaQpBK.js`, `index-DeRG5FMC.css`). Live browser checks at exact `320 × 240` and `640 × 480` showed one visible skip control in the `Practice actions` group, outside the file tab and orientation choices; confirmation remained contained; the human parked-campaign label was visible with no internal slug; Resume reconstructed First Signal orientation step 1 with useful heading focus.
+- **Demo reload:** rebuilt production preview is live at `http://127.0.0.1:4173/?staging=rp001` on PID `79824`.
+- **Exact Coordinator handoff:** `Coordinator: validate TOUR-AESTH-001 and TOUR-AESTH-002 only. Confirm one secondary TOUR: SKIP PRACTICE control follows each active Terminal exercise outside the file rail and answer groups, remains fully visible and at least 44px high at exact 320x240, and preserves confirmation/focus. Confirm every Tour scene renders Campaign parked at: First Signal — unfinished practice. while the stored resumeBoundary and reconstructed First Signal gate remain unchanged. Preserve all art, protected copy, scene order, storage/campaign isolation, and learning/city gates.`
+
 ## 2026-07-15 — Coder W2: Demo Tour exact recovery repair
 
 - **Mode:** `bug-repair` for W2 only.

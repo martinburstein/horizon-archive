@@ -5,11 +5,13 @@ import {
   DEMO_TOUR_CONFIRMATION,
   DEMO_TOUR_STATUS,
   FIRST_SIGNAL_TOUR_RESUME,
+  FIRST_SIGNAL_TOUR_RESUME_LABEL,
   SHIPPED_DEMO_TOUR_SCENE_IDS,
   clearDemoTour,
   createDemoTourState,
   getNextTourSceneId,
   getDemoTourResumeTarget,
+  getDemoTourResumeLabel,
   loadDemoTour,
   moveDemoTour,
   sanitizeDemoTourState,
@@ -91,6 +93,38 @@ test("resume reconstructs the same First Signal gate from every later shipped to
   })), null);
 });
 
+test("tour renders a player-facing parked-campaign label without changing the stored boundary", () => {
+  const state = createDemoTourState({
+    tourSceneId: "ruins",
+    resumeCampaignSceneId: "meadow",
+    resumeBoundary: "terminal-l0101-independent-run",
+  });
+  assert.equal(state.resumeBoundary, "terminal-l0101-independent-run");
+  assert.equal(FIRST_SIGNAL_TOUR_RESUME_LABEL, "First Signal — unfinished practice");
+  assert.equal(getDemoTourResumeLabel(state), FIRST_SIGNAL_TOUR_RESUME_LABEL);
+  assert.equal(getDemoTourResumeLabel({ mode: "invalid" }), "Unfinished practice");
+});
+
+test("each Terminal places one skip control after the exercise and outside the file rail", () => {
+  const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
+  const shell = app.slice(app.indexOf("function TerminalShell"), app.indexOf("function getHotspotStyle"));
+  const tabRail = shell.slice(shell.indexOf('<div className="terminal-tabbar">'), shell.indexOf("{children}"));
+  const actionRow = shell.slice(shell.indexOf("{children}"), shell.indexOf("</section>"));
+  assert.doesNotMatch(tabRail, /demo-tour-entry|TOUR: SKIP PRACTICE/);
+  assert.match(actionRow, /\{children\}[\s\S]*className="terminal-practice-actions"[\s\S]*TOUR: SKIP PRACTICE/);
+  assert.equal((shell.match(/TOUR: SKIP PRACTICE/g) ?? []).length, 1);
+  assert.doesNotMatch(actionRow, /orientation-choices|model-choice-fields/);
+});
+
+test("the Terminal skip row stays visible and touch-sized in the 320x240 layout", () => {
+  const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+  assert.match(css, /grid-template-rows: auto auto minmax\(0, 1fr\) auto;/);
+  assert.match(css, /data-canonical-layout="narrow"\] \.terminal-workbench \{ overflow: hidden; \}/);
+  assert.match(css, /data-canonical-layout="narrow"\] \.terminal-practice-actions \{ min-height: 44px; padding: 0 4px; \}/);
+  assert.match(css, /data-canonical-layout="narrow"\] \.terminal-practice-actions \.demo-tour-entry \{ min-height: 44px;/);
+  assert.match(css, /data-canonical-layout="narrow"\] \.orientation-action \{ min-height: 0;[\s\S]{0,80}overflow: auto; \}/);
+});
+
 test("the app exposes the exact skip, confirmation, resume, and keyboard-safe controls", () => {
   const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   const view = readFileSync(new URL("../src/DemoTour.jsx", import.meta.url), "utf8");
@@ -100,6 +134,8 @@ test("the app exposes the exact skip, confirmation, resume, and keyboard-safe co
   assert.match(view, /KEEP PRACTICING/);
   assert.match(view, /RESUME CAMPAIGN/);
   assert.match(view, /NEXT TOUR SCENE/);
+  assert.match(view, /Campaign parked at: \{getDemoTourResumeLabel\(state\)\}\./);
+  assert.doesNotMatch(view, /state\.resumeBoundary/);
   assert.match(view, /event\.key === "Escape"/);
   assert.match(app, /inert=\{demoTourConfirmation \? true : undefined\}/);
   assert.match(app, /inert=\{terminalOpen \|\| demoTourConfirmation \? true : undefined\}/);

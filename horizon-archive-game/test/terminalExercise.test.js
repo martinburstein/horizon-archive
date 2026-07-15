@@ -105,7 +105,7 @@ test("App gates the editable first signal behind the session-only orientation an
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="canonical"\] \.orientation-choices button \{[^}]*min-height: 44px;/s);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="canonical"\] \.orientation-boundaries div \{[^}]*grid-template-columns: 104px minmax\(0, 1fr\);/s);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\][^}]*\.terminal-workbench[^}]*\{ inset: 4px; \}/s);
-  assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.first-terminal-orientation \{ display: block; overflow: visible; \}/);
-  assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.orientation-action \{[^}]*min-height: 280px;[^}]*overflow: auto;/s);
+  assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.first-terminal-orientation \{ display: grid; grid-template-rows: auto minmax\(0, 1fr\); overflow: hidden; \}/);
+  assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.orientation-action \{[^}]*min-height: 0;[^}]*overflow: auto;/s);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.orientation-choices \{ grid-template-columns: 1fr; \}/);
 });

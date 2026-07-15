@@ -13,6 +13,8 @@ export const FIRST_SIGNAL_TOUR_RESUME = Object.freeze({
   dialogue: "First Signal active. Edit the file, run it, then review the output.",
 });
 
+export const FIRST_SIGNAL_TOUR_RESUME_LABEL = "First Signal — unfinished practice";
+
 export const SHIPPED_DEMO_TOUR_SCENE_IDS = Object.freeze([
   "meadow",
   "ruins",
@@ -97,6 +99,16 @@ export function getDemoTourResumeTarget(state) {
   if (current.resumeCampaignSceneId !== FIRST_SIGNAL_TOUR_RESUME.sceneId) return null;
   if (current.resumeBoundary !== FIRST_SIGNAL_TOUR_RESUME.boundary) return null;
   return { ...FIRST_SIGNAL_TOUR_RESUME };
+}
+
+export function getDemoTourResumeLabel(state) {
+  const current = sanitizeDemoTourState(state);
+  if (!current) return "Unfinished practice";
+  if (
+    current.resumeCampaignSceneId === FIRST_SIGNAL_TOUR_RESUME.sceneId
+    && current.resumeBoundary === FIRST_SIGNAL_TOUR_RESUME.boundary
+  ) return FIRST_SIGNAL_TOUR_RESUME_LABEL;
+  return "Unfinished practice";
 }
 
 export function loadDemoTour(storage) {
