@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W1 responsive-presentation verdict
+
+- **Verdict:** `REVISE — VIEWPORT-P1-001.` Fixed `640 x 480` / `320 x 240` acceptance is retired, but the active `CanonicalGameFrame` still selects only those two logical canvases, centers them in a fixed viewport host, and scales them with `zoom` plus a fixed CRT bezel.
+- **Source/build evidence:** At modeled `1600 x 900`, the implementation renders a roughly `1100.32 x 876.07` CRT stage, leaving about `249.84px` unused on each side; the inner world is about `956.8px` wide, only `59.8%` of the display. All opening modes, Demo Tour, Meadow/Drowned play, and several downstream layouts remain coupled to the fixed-canvas attributes. The focused canonical/opening suite passed `8/8` and the production build passed, but those tests still assert the retired dimensions and therefore do not establish responsive acceptance.
+- **Functional disposition:** No gameplay repair, state change, or art replacement is requested. Preserve the prior fresh-route/Tour functional PASS, high-resolution plates, normalized hotspot meaning, focus, save/resume, mastery/privacy, and city invariants while refactoring presentation infrastructure.
+- **Browser boundary:** The Player subagent had no browser backend, so no live responsive visual pass is claimed. W2 must rebuild/reload and request root live review at representative desktop and narrow sizes before W3.
+- **Exact W2 handoff:** refactor or replace `CanonicalGameFrame` with a fluid viewport-filling 16:9 world stage and responsive lower interface; optional CRT styling may remain only if it does not cap the canvas or create large unused margins. Replace legacy fixed-dimension assertions with representative desktop, widescreen, portrait/narrow, 200% zoom, target-size, keyboard-focus, and overflow checks. Do not alter art, puzzle rules, evidence, or campaign state.
+
 ## 2026-07-15 coordinator validation — integrated photoreal Meadow
 
 - **Disposition:** `RP001-AESTH-005 RESOLVED — COORDINATOR VALIDATED.` The rebuilt demo renders the registered integrated Meadow master with no legacy coupler GIF/still or route-marker canvas.
