@@ -1292,19 +1292,6 @@ h1 {
   50% { opacity: 0.45; transform: translateX(4px); }
 }
 
-.city-staging-label {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  z-index: 3;
-  margin: 0;
-  padding: 4px 6px;
-  border: 1px solid #c8944a;
-  background: #090b13;
-  color: #f2d795;
-  font-size: 10px;
-}
-
 .city-hotspot {
   position: absolute;
   z-index: 4;
@@ -1386,7 +1373,6 @@ h1 {
     height: var(--city-narrow-height);
     font-size: 7px;
 }
-.canonical-game-frame[data-canonical-layout="narrow"] .city-staging-label { font-size: 7px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-cycle-layer i { transform: scale(0.5); transform-origin: left top; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-command-panel {
     width: 320px;

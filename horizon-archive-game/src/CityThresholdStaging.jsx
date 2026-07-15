@@ -285,7 +285,6 @@ export function CityThresholdStaging({ onReturnToCredits }) {
           <img src={cityImage} alt="An immense empty underground civic landscape already operating above geothermal chasms" />
           <div className="city-world-filter" aria-hidden="true" />
           <div className="city-cycle-layer" aria-hidden="true"><i /><i /><i /></div>
-          <p className="city-staging-label">A5 ROUGH PLATE // {boardLayer.toUpperCase()} // CITY CYCLES INVARIANT</p>
           {renderHotspots()}
         </section>
         <section className="city-command-panel" aria-label="City Threshold expedition controls" inert={overlayOpen ? true : undefined}>

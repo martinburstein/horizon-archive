@@ -6,7 +6,7 @@
 - Working cycle: 1
 - Status: `IN DEMO — PARTIAL`
 - Starting commit: `dc2d825`
-- Ending commit: `3145e44 + uncommitted W2 repair` (coordinator owns Git)
+- Ending commit: `c0a3966 + uncommitted W4 polish` (coordinator owns Git)
 - Playable URL: `http://127.0.0.1:4173/?staging=rp001`
 - Team 1 railhead at review: `RP-002 — seeded; A1 pending`
 - Team 2 live-demo position before increment: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
@@ -67,56 +67,57 @@ The protected route now lets a player cross from accepted prologue credits into 
 
 ## Coder pass 2 — aesthetic implementation and final reload
 
-- Implemented aesthetic finding IDs: Pending.
-- Asset changes: Pending.
-- Layout/rendering changes: Pending.
-- Pixel and animation invariants: Pending.
-- Gameplay regressions checked: Pending.
-- Remaining visual limitations: Pending.
-- Final build identity: Pending.
-- Final demo reload confirmed: Pending.
+- Implemented aesthetic finding IDs: `RP001-AESTH-003 — RESOLVED`.
+- Asset changes: None. The rough city raster and all production-art dependencies are unchanged.
+- Layout/rendering changes: Removed the shared, staging-only `A5 ROUGH PLATE // ... // CITY CYCLES INVARIANT` element and its unused canonical/narrow CSS. Because the element was absolutely positioned, its removal creates no reflow and changes no world, hotspot, overlay, focus, or interface rectangle.
+- Pixel and animation invariants: W2 parent/child layout and non-scrollable focus clipping remain intact; cycle layers, reduced-motion rule, world plate, filters, target variables, and animation clocks are untouched.
+- Gameplay regressions checked: Shared renderer contains no banner text or class for any `SC-02-00/10/20/30/40/50` state. Focused route/return containment, exact A2 rectangles, board order, evidence gates, atomic commit, privacy sanitizer, reload to `SC-02-50`, `continuation`, and `cityStateDelta:null` regressions pass.
+- Browser evidence: At settled exact `640 × 480` and `320 × 240`, banner text match is false and `.city-staging-label` count is zero. Required `SC-02-50 // continuation unchanged // city_state_delta=None` status remains. The exact narrow route remains `x=248,y=136,w=72,h=44`; world/interface bounds and W2 focus containment are unchanged; browser warnings/errors are zero.
+- Remaining visual limitations: `RP001-AESTH-001` and `RP001-AESTH-002` remain P1 production-art release blockers. No crop, filter, mask, blur, paint-over, scaling workaround, or acceptance claim was made.
+- Final build identity: base `c0a3966` plus uncommitted W4 polish; production assets `index-D7ii5z3y.js` and `index-C-koFvjn.css`.
+- Final demo reload confirmed: `YES — rebuilt and final-reloaded at http://127.0.0.1:4173/?staging=rp001`, port `4173` PID `90664`.
 
 ## Coordinator release gate
 
 - Loaded puzzle path: Complete in W1.
 - Player bug disposition: `RP001-P1-001 — RESOLVED IN W2; coordinator recheck pending`.
-- Aesthetic finding disposition: `RP001-AESTH-001/002 — P1 DEFERRED TO ART PRODUCTION; RELEASE BLOCKERS`; `RP001-AESTH-003 — P2 ACCEPTED FOR W4`.
+- Aesthetic finding disposition: `RP001-AESTH-001/002 — P1 DEFERRED TO ART PRODUCTION; RELEASE BLOCKERS`; `RP001-AESTH-003 — RESOLVED IN W4; coordinator recheck pending`.
 - Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 PASS` for W2 layout/containment. W3 production-art invariants fail under `RP001-AESTH-001/002` pending the locked authored asset package.
 - Keyboard/focus: Forward and return controls remain fully visible when focused at both exact viewports; Enter activation works and focus cannot scroll the world internally.
 - Names/errors/live regions: Persistent ownership/status copy present; no runtime error observed.
 - Reduced motion/color independence: CSS contains a reduced-motion stop rule; live emulation still pending.
-- Target size/reflow: Narrow forward target is exactly `72 × 44`; canonical target is clipped by the frame defect.
+- Target size/reflow: Narrow forward target remains exactly `72 × 44`; settled `640 × 480` route/return and interface remain contained under the resolved W2 frame contract.
 - Privacy/recovery: PY working source cleared on reload; bounded `10/10` evidence resumed; final reload restored `SC-02-50`.
-- Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, W4 banner validation, and production-art review after the authored package exists.
+- Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, and production-art review after the authored package exists.
 - Verdict: `REVISE`
 
 ## Validation
 
-- Focused tests: `node --test test/cityThresholdExercise.test.js test/canonicalFrame.test.js` — `10/10 PASS`.
-- Full game suite: W2 rerun `244/244 PASS`.
+- Focused tests: `node --test test/cityThresholdExercise.test.js test/canonicalFrame.test.js` — `11/11 PASS`.
+- Full game suite: W4 rerun `245/245 PASS`.
 - Curriculum validators: PY-020 visible failure `1/10`, repair `10/10`, CUM primary miss -> mapped `L-05-07` remediation -> blank primary `16/16` -> blank transfer `16/16` -> claim boundary pass.
-- Art builders/invariants: Not run in W1.
-- Production build: W2 build passed; preview rebuilt from base `3145e44` plus uncommitted repair, bundle `index-CPJG972y.js` / `index-EJuHXqOV.css`.
-- Browser/E2E: W2 live completed-save/reload containment and keyboard-focus checks passed at exact `640 × 480` and `320 × 240`; no full legacy title-to-credits E2E rerun was needed for the isolated CSS repair.
+- Art builders/invariants: Not applicable to W4 banner cleanup; no asset or animation layer changed. `RP001-AESTH-001/002` production-art invariants remain failing/deferred.
+- Production build: W4 build passed; preview rebuilt from base `c0a3966` plus uncommitted polish, bundle `index-D7ii5z3y.js` / `index-C-koFvjn.css`.
+- Browser/E2E: W4 live completed-save/reload banner-absence, status-preservation, containment, and keyboard-focus checks passed at exact `640 × 480` and `320 × 240`; no full legacy title-to-credits E2E rerun was needed for the isolated non-interactive element removal.
 - Runtime errors: None observed.
 
 ## Known limitations
 
 - `RP001-P1-001` is resolved; coordinator release validation remains pending.
-- `RP001-AESTH-001/002` remain P1 rough-staging production-art release blockers; `RP001-AESTH-003` awaits accepted W4 cleanup.
+- `RP001-AESTH-001/002` remain P1 rough-staging production-art release blockers; `RP001-AESTH-003` is resolved.
 - Real assistive-technology and forced-color checks remain manual.
 
 ## Packet disposition
 
 - Result: `IN DEMO — PARTIAL`
-- Reason: Functional learning/state path completes and resumes and the W1 frame blocker is resolved; accepted W4 banner cleanup and the deferred production-art release blockers remain before acceptance.
-- Team 2 live-demo position after disposition: `RP-001 — AESTHETIC IMPLEMENTATION`
+- Reason: Functional learning/state path completes and resumes, the W1 frame blocker is resolved, and accepted W4 banner cleanup passes; deferred production-art release blockers remain before acceptance.
+- Team 2 live-demo position after disposition: `RP-001 — FINAL VALIDATION / RELEASE BLOCKED`
 - Ordered Advance lead after disposition: `1 packet — RP-002 seeded`
-- `STORY_RAIL_MAP.md` updated: `YES — W3 aesthetic-review state`
-- Follow-up packet or defect: `RP001-AESTH-003 — W4 same-pass cleanup`; `RP001-AESTH-001/002 — deferred production-art release blockers`
+- `STORY_RAIL_MAP.md` updated: `YES — W4 final-reload state`
+- Follow-up packet or defect: `RP001-AESTH-001/002 — deferred production-art release blockers`; `RP001-AESTH-003 — resolved`
 
 ## Git and demo update
 
 - Checkpoint commits: None; coordinator owns Git.
 - `HEAD == origin/main`: Not asserted by Player Agent; tested `HEAD` is `dc2d825`.
-- Playable server updated: W2 production build rebuilt and reloaded at port `4173`.
+- Playable server updated: W4 production build rebuilt and final-reloaded at port `4173`.

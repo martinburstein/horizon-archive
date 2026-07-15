@@ -190,3 +190,11 @@ test("settled completed and reload controls plus focused route remain inside bot
     }
   }
 });
+
+test("the accepted staging banner is absent from the shared renderer without replacing required status copy", () => {
+  assert.doesNotMatch(cityComponent, /A5 ROUGH PLATE|CITY CYCLES INVARIANT|city-staging-label/);
+  assert.doesNotMatch(cityCss, /city-staging-label/);
+  assert.match(cityComponent, /SC-02-50 \/\/ continuation unchanged \/\/ city_state_delta=None|visibleStatus/);
+  assert.match(cityComponent, /RETURN TO PROLOGUE CREDITS/);
+  assert.deepEqual(cityThresholdBoards, ["SC-02-00", "SC-02-10", "SC-02-20", "SC-02-30", "SC-02-40", "SC-02-50"]);
+});

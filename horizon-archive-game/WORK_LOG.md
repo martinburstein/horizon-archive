@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W4 handoff: RP-001 staging-banner cleanup
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Resolved:** `RP001-AESTH-003`. Removed the shared staging-only `A5 ROUGH PLATE // ... // CITY CYCLES INVARIANT` banner and its unused canonical/narrow styling from every SC-02 state. The removed element was absolutely positioned; no geometry or interaction layout changed.
+- **Preserved contracts:** W2 parent/child containment and focus clipping, all A2 hotspot rectangles, world/interface bands, route/return geometry, ownership/status copy, cycle layers, reduced-motion rule, board order, gameplay, PY-020/CUM-01 evidence, save/reload checkpoints, atomic flags, `continuation`, `cityStateDelta:null`, and zero city response remain unchanged.
+- **Files changed:** `src/CityThresholdStaging.jsx`, `src/styles.css`, `test/cityThresholdExercise.test.js`, `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, `../Production Pipeline/STORY_RAIL_MAP.md`, and this work log.
+- **Validation:** Focused canonical/RP-001 suite passed **11/11**; full game suite passed **245/245**; production build passed with the existing large-chunk advisory. Final live checks at exact `640 × 480` and `320 × 240` report zero banner nodes/text, preserved `SC-02-50 // continuation unchanged // city_state_delta=None`, unchanged frame/world/interface and route/return rectangles, exact narrow route `248,136,72,44`, zero world scroll, and zero browser warnings/errors.
+- **Final reload:** Preview rebuilt and final-reloaded at `http://127.0.0.1:4173/?staging=rp001`; build is base `c0a3966` plus uncommitted W4 polish, bundles `index-D7ii5z3y.js` / `index-C-koFvjn.css`.
+- **Deferred blockers:** `RP001-AESTH-001` and `RP001-AESTH-002` remain P1 release blockers requiring the locked production-art package. No crop, filter, mask, blur, paint-over, scaling workaround, or acceptance claim was made.
+- **Handoff:** `Coordinator: validate only the W4 disposition and final reload. Accept RP001-AESTH-003 as resolved if the banner is absent in the shared renderer and exact 640×480/320×240 completed/reload states while W2 containment, focus, route/return geometry, ownership/status copy, gameplay, evidence, save, atomic flags, continuation, null city delta, and zero response remain intact. Keep DI-001 and RP-001 IN DEMO — PARTIAL / release-blocked: RP001-AESTH-001 and RP001-AESTH-002 still require the locked native/narrow production-art package, and no crop/filter/mask workaround is authorized. Do not mark RP-001 accepted.`
+- **Status:** W4 complete; final demo reloaded; coordinator validation pending with production-art blockers retained.
+
 ## 2026-07-15 — Coder W2 handoff: RP-001 settled frame containment
 
 - **Mode:** `bug-repair` for W2 only.
