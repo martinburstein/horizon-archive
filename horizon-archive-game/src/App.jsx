@@ -1,18 +1,11 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import ruinsAvailableImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-available-640x360.png";
-import ruinsActiveImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-active-640x360.png";
-import ruinsCompleteImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-complete-640x360.png";
-import ruinsAvailableNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-available-320x180.png";
-import ruinsActiveNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-active-320x180.png";
-import ruinsCompleteNarrowImage from "../../Pixelated Draft/production-pixel/AB-01/ab01-complete-320x180.png";
-import cityThresholdOverviewImage from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-640x360.png";
-import cityThresholdOverviewNarrowImage from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-320x180.png";
-import automatonImage from "../../Concept Art Book/images/witness-corridor-evidence-terminal-v1.png";
-import cityImage from "../../Concept Art/Underground City.png";
+import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/glass-meadow-master.png";
+import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png";
+import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
+import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
-import glassMeadowImage from "../../Glass Meadow Example.png";
 import signalCouplerImage from "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-loop-640x360.gif";
 import signalCouplerStillImage from "../../Pixelated Draft/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-available-640x360.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
@@ -318,7 +311,7 @@ const scenes = [
     id: "ruins",
     chapter: "II",
     location: "The Drowned Archive",
-    imageAlt: "Pixel-built flooded basin with a grounded three-fin Workload Sort Terminal, bent causeway, Tidal Lens landmark, and right stair exit",
+    imageAlt: "Photorealistic flooded Builder phase-processing basin with a grounded local coupling, suspended Tidal Lens, submerged machinery, and immense reflective water",
     hotspotLabel: "grounded Workload Sort Terminal",
     hotspot: {
       left: "24.375%", top: "56.94%", width: "10.625%", height: "21.11%",
@@ -341,7 +334,7 @@ const scenes = [
     chapter: "III",
     location: "The Witness Corridor",
     image: automatonImage,
-    imageAlt: "Shadowed alien corridor with a grounded three-fin Evidence Terminal on the left and a separate fallen automaton on the right",
+    imageAlt: "Photorealistic Builder forensic passage with an integrated evidence coupling on the left and a collapsed maintenance assembly on the right",
     primaryHotspotId: "evidence-terminal",
     hotspotLabel: "grounded Evidence Terminal",
     hotspot: {
@@ -377,7 +370,7 @@ const demoTourCatalog = [
     id: "ruins",
     chapter: "II",
     location: "The Drowned Archive",
-    sources: { canonical: ruinsAvailableImage, narrow: ruinsAvailableNarrowImage },
+    sources: { canonical: drownedArchiveImage, narrow: drownedArchiveImage },
     alt: "The currently shipped first-person Drowned Archive scene preview",
   },
   {
@@ -391,7 +384,7 @@ const demoTourCatalog = [
     id: "city-threshold",
     chapter: "IV",
     location: "The City Threshold",
-    sources: { canonical: cityThresholdOverviewImage, narrow: cityThresholdOverviewNarrowImage },
+    sources: { canonical: cityThresholdOverviewImage, narrow: cityThresholdOverviewImage },
     alt: "The currently shipped empty first-person City Threshold staging preview",
   },
 ];
@@ -682,11 +675,7 @@ export function App() {
     primary: true,
   }, ...(scene.secondaryHotspots ?? [])];
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
-  const ruinsImages = ruinsVisualState === "complete"
-    ? { canonical: ruinsCompleteImage, narrow: ruinsCompleteNarrowImage }
-    : ruinsVisualState === "active"
-      ? { canonical: ruinsActiveImage, narrow: ruinsActiveNarrowImage }
-      : { canonical: ruinsAvailableImage, narrow: ruinsAvailableNarrowImage };
+  const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
   const hotspotButtons = sceneHotspots.map((hotspot) => {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
@@ -2185,7 +2174,7 @@ export function App() {
   if (mode === "ending") {
     return (
       <main className="game-shell credits-screen" data-playtest-marker="CREDITS_REACHED">
-        <img className="credits-art" src={cityImage} alt="An immense underground city suspended over glowing volcanic chasms" />
+        <img className="credits-art" src={cityThresholdOverviewImage} alt="An immense Builder geothermal exchange landscape descending through a mineral chasm" />
         <section className="credits-copy">
           <p className="eyebrow">Archive access: partial</p>
           <h1>THE CITY BENEATH</h1>
@@ -3921,7 +3910,7 @@ export function App() {
                     {evidenceSession.activeSource === "telemetry" && <pre>{JSON.stringify(evidenceTelemetry, null, 2)}</pre>}
                     {evidenceSession.activeSource === "image" && (
                       <figure>
-                        <img src={ruinsAvailableImage} alt="Registered still image DA-IMG-01 showing the Tidal Lens landmark and grounded Terminal" />
+                        <img src={drownedArchiveImage} alt="Registered still image DA-IMG-01 showing the Tidal Lens landmark and grounded Terminal" />
                         <figcaption>DA-IMG-01 · inspect the suspended landmark region, not the grounded Terminal.</figcaption>
                       </figure>
                     )}

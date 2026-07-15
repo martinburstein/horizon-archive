@@ -145,6 +145,6 @@ test("the app exposes the exact skip, confirmation, resume, and keyboard-safe co
   assert.match(app, /setTerminalOpen\(true\);[\s\S]{0,220}setMeadowTerminalKind\(tourResumeTarget\.terminalKind\)/);
   assert.match(app, /setVerb\(tourResumeTarget\.verb\)/);
   assert.match(app, /suppressNextCampaignSaveRef\.current/);
-  assert.match(app, /city-threshold-overview-640x360\.png/);
-  assert.match(app, /id: "city-threshold",[\s\S]{0,240}sources: \{ canonical: cityThresholdOverviewImage, narrow: cityThresholdOverviewNarrowImage \}/);
+  assert.match(app, /2026-07-15-photorealistic-demo\/city-threshold-overview-master\.png/);
+  assert.match(app, /id: "city-threshold",[\s\S]{0,240}sources: \{ canonical: cityThresholdOverviewImage, narrow: cityThresholdOverviewImage \}/);
 });

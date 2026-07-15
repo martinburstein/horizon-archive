@@ -1,10 +1,7 @@
 import { useMemo, useState } from "react";
-import cityAccessNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-access-320x180.png";
-import cityAccessNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-access-640x360.png";
-import cityBoundaryNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-boundary-320x180.png";
-import cityBoundaryNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-boundary-640x360.png";
-import cityOverviewNarrow from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-320x180.png";
-import cityOverviewNative from "../../Pixelated Draft/city-threshold-pixel-staging/city-threshold-overview-640x360.png";
+import cityAccessImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png";
+import cityBoundaryImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-boundary-master.png";
+import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import {
   CITY_THRESHOLD_SAVE_KEY,
   anchorExplanationDimensions,
@@ -79,9 +76,9 @@ const safetyOptions = {
 };
 
 const cityPlates = {
-  overview: { native: cityOverviewNative, narrow: cityOverviewNarrow },
-  boundary: { native: cityBoundaryNative, narrow: cityBoundaryNarrow },
-  access: { native: cityAccessNative, narrow: cityAccessNarrow },
+  overview: { native: cityOverviewImage, narrow: cityOverviewImage },
+  boundary: { native: cityBoundaryImage, narrow: cityBoundaryImage },
+  access: { native: cityAccessImage, narrow: cityAccessImage },
 };
 
 function SelectExplanation({ dimensions, options, values, onChange }) {
