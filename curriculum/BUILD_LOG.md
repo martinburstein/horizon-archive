@@ -962,3 +962,20 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the ownership-copy/layout impact confirmation, preserving the locked puzzle graph and returning an unchanged or minimally clarified Advance Coder handoff.
 Unresolved risks: Runtime implementation must keep owner prefixes textually available without letting message visibility, focus, wrapping, animation, navigation, save/reload, or Tour dismissal generate evidence. Human validation feedback must never be styled or sequenced as a Builder/city response.
 Notes: `NO REOPEN — SOLIDIFIED`. No settled lesson, validator contract, source register, game runtime, art, lore, hidden material, live service, Azure resource, credential, external action, commit, or push was changed.
+
+## Log entry: 2026-07-15T22:42:00-04:00
+
+Stage: RP-002 responsive-layout impact review (A3)
+Work completed: Reviewed the user-directed retirement of exact `640 x 480` and `320 x 240` gates against the SOLIDIFIED RP-002 curriculum contract and the Storyboarder A2 responsive handoff. Recorded `NO REOPEN — SOLIDIFIED`: the change removes fixed viewport acceptance only and does not change PY-009, RP002-RAI-01, prerequisites, primary evidence, remediation, blank fresh transfer, mastery thresholds, sanitized persistence, privacy, authority, or accessibility meaning. Updated the exact Gameplay Master handoff to use representative wide, laptop, narrow, zoom/reflow, reduced-motion, forced-color, and keyboard evidence without treating any viewport or presentation behavior as mastery.
+Files changed:
+- Production Pipeline/rail-packets/RP-002-civic-record-encounter.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Read the root two-team authority, canonical Curriculum Checker profile, exact RP-002 A2 handoff, current curriculum track, machine-readable contract location, Story Rail Map, and latest curriculum work log.
+- Confirmed the removed dimensions were presentation gates only. The exact `PY-009` `6/6 -> remediation -> blank 6/6 + explanation` and `RP002-RAI-01` `9/9 -> per-dimension remediation -> blank 9/9 + explanation` sequences are unchanged.
+- Confirmed full `L-03-01`/`L-02-02` prerequisites, sanitized evidence, clearing of learner working content, deterministic first-incomplete resume, separate no-credit Tour state, privacy limits, no-authority language, field-associated feedback, live status, deterministic focus, keyboard operation, reduced-motion/forced-color equivalence, scroll-safe reflow, readable text, and `>=44 x 44 CSS px` controls retain the same meaning.
+- No volatile Microsoft product, Foundry, SDK, endpoint, or exam-objective claim changed; same-day official-source verification remains controlling and source research was not reopened.
+- RP-002 mapping validator self-test passed: contract, Python key updates, AI-901 forms, world locks, and failure probes validated. `git diff --check` passed for the two changed artifacts.
+Next recommended item: Gameplay Master performs only the responsive-layout impact confirmation, preserves the locked puzzle graph and learning gates, and replaces fixed-viewport review language in the exact Advance Coder handoff with representative responsive/accessibility evidence.
+Unresolved risks: Runtime implementation must not let responsive placement, wrapping, scrolling, crop, focus, Tour traversal, or viewport size create mastery or hide the complete owner and negative-authority language. Exact layout coverage belongs to representative responsive and accessibility review rather than two retired pixel-era dimensions.
+Notes: `NO REOPEN — SOLIDIFIED`. No settled lesson, validator contract, source register, game runtime, art, lore, hidden material, live service, Azure resource, credential, external action, commit, or push was changed.
