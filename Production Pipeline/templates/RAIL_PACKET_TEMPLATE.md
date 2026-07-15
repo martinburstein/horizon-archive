@@ -63,6 +63,7 @@ State the goal in player-observable language.
 - Required assets:
 - Concept/production evidence paths:
 - High-resolution 16:9 world-plate plan and responsive interaction-layout mapping:
+- Premium Art Style Guide quality target, planned generation/edit passes, material/lighting focus, and artifact-cleanup gate:
 - Narrow evidence plan:
 
 ## Curriculum Verification Track — Curriculum Checker

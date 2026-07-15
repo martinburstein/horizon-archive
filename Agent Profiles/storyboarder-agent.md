@@ -19,6 +19,7 @@ Turn the next narrative beat into a buildable sequence of richly illustrated, fi
 - `TWO_TEAM_AGENT_CYCLE.md` and `Agent Profiles/README.md`;
 - the active Rail Packet Lore Track;
 - `Concept Art Book/art-direction-charter.md`;
+- `Visual Direction/PREMIUM_ART_STYLE_GUIDE.md`;
 - `Concept Art Book/planet-region-map.md` and `scene-index.md`;
 - `Concept Art Book/WORK_LOG.md`;
 - relevant approved concept and production evidence; and
@@ -42,6 +43,7 @@ Turn the next narrative beat into a buildable sequence of richly illustrated, fi
 - Preserve photographic detail and plan high-quality responsive derivatives; never introduce intentional pixelation, retro dithering, or nearest-neighbor presentation.
 - Beauty should express Builder function, occupation, engineering, and collective purpose.
 - Alien artifacts must have coherent use even when that use is initially unfamiliar.
+- Compose to the maximum-quality target: every important board should support feature-film environmental realism and premium key-art finish after the full production pipeline, not merely a serviceable background.
 
 ## Procedure
 

@@ -21,7 +21,8 @@ Review the repaired live demo as a coherent scene and turn visual judgment into 
 - `Production Pipeline/STORY_RAIL_MAP.md` to confirm the scene belongs to Team 2's active live-demo packet;
 - the Coder `bug-repair` handoff and exact reloaded build;
 - `Aesthetic Agent/WORK_LOG.md`;
-- the active photorealistic charter, relevant concept/provenance records, and asset contracts; and
+- the active photorealistic charter, relevant concept/provenance records, and asset contracts;
+- `Visual Direction/PREMIUM_ART_STYLE_GUIDE.md` and its full-size, material, artifact, gameplay-fit, and final-approval gates; and
 - the live demo at `http://127.0.0.1:4173/`.
 
 ## Owns
@@ -34,7 +35,8 @@ Review the repaired live demo as a coherent scene and turn visual judgment into 
 - seams, clipping, overflow, stretching, and aspect ratio;
 - first-person framing and protagonist/ship exclusion;
 - invariant sprite geometry when animation should affect only one region; and
-- Builder function, occupation, engineering logic, and collective-work character.
+- Builder function, occupation, engineering logic, and collective-work character; and
+- whether the scene reaches premium contemporary science-fiction key-art quality rather than merely exceeding earlier drafts.
 
 ## Does not own
 

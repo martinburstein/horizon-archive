@@ -1,10 +1,10 @@
 # Horizon Archive Art-Direction Charter
 
-The authoritative visual standard is [Photorealistic Visual Direction](../Visual%20Direction/PHOTOREALISTIC_CHARTER.md). Pixel-art requirements were retired on 2026-07-15 and are preserved only in [Pixelated Draft](../Pixelated%20Draft/README.md).
+The authoritative visual standards are [Photorealistic Visual Direction](../Visual%20Direction/PHOTOREALISTIC_CHARTER.md) and the [Premium Art Style Guide](../Visual%20Direction/PREMIUM_ART_STYLE_GUIDE.md). Pixel-art requirements were retired on 2026-07-15 and are preserved only in [Pixelated Draft](../Pixelated%20Draft/README.md).
 
 ## North star
 
-Horizon Archive should look like a premium contemporary science-fiction production photographed inside real, ancient, functioning alien environments. The images should be convincing enough to invite forensic inspection: materials have mass, weather has depth, glass bends light, heat affects air, repairs reveal time, and immense systems continue beyond the frame.
+Horizon Archive should look like a premium contemporary science-fiction production photographed inside real, ancient, functioning alien environments. Every important playable view should aspire to feature-film environment credibility and flagship current-generation game key art. The images should invite forensic inspection: materials have mass, weather has depth, glass bends light, heat affects air, repairs reveal time, and immense systems continue beyond the frame.
 
 Classic LucasArts adventures remain a gameplay and staging reference only: memorable locations, readable interaction, compact dialogue, observational humor, and safe experimentation. They are not an art-style target.
 

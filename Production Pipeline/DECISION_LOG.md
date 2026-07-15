@@ -1,5 +1,14 @@
 # Two-Team Decision Log
 
+## 2026-07-15 — Set a maximum-quality art ceiling
+
+- Establish `Visual Direction/PREMIUM_ART_STYLE_GUIDE.md` as the production-level companion to the active photorealistic charter.
+- Judge important views against feature-film environmental VFX credibility and premium current-generation science-fiction game key art, not against earlier Horizon Archive drafts.
+- Treat every world plate as a principal visual product requiring deliberate composition, functional design, material development, lighting, artifact cleanup, gameplay-fit review, and final delivery passes.
+- Use the strongest available image-generation and editing capabilities with iteration proportional to scene importance. A first plausible generation is exploration, not final art.
+- Preserve restraint and visual hierarchy. “No holding back” means no artificial quality ceiling, not maximum object count, effects, saturation, or detail everywhere.
+- Require the Storyboarder, Aesthetic Agent, Coder, and Rail Packet workflow to carry this standard into both future rails and the playable demo.
+
 ## 2026-07-15 — Replace pixel-art direction with photorealism
 
 - Retire every square-pixel, nearest-neighbor, low-resolution, retro-dithering, Windows-2000-era, Pixel Patrol, and Curse-art-direction requirement.

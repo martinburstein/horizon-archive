@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-15 — Premium art quality ceiling
+
+- **Completed:** created the active premium production style guide and raised the visual target from general cinematic photorealism to feature-film environmental VFX credibility and flagship current-generation science-fiction game key art. Defined photographic composition, physically legible material families, Builder functional intelligence, region-specific quality bars, richness controls, and a mandatory eight-pass generation/editing pipeline.
+- **Files changed:** `Visual Direction/PREMIUM_ART_STYLE_GUIDE.md`, the photorealistic and concept-art charters, Storyboarder and Aesthetic Agent profiles, game visual instructions, Rail Packet template, and the two-team decision log.
+- **Validation:** checked the active documents for consistent high-resolution photorealistic language, explicit rejection of retro pixel production, first-person/no-protagonist framing, artifact cleanup, gameplay readability, and final-approval gates.
+- **Next recommended item:** apply the full pipeline to the three RP-001 live-demo plates, beginning with Glass Meadow as the hero benchmark; do not promote a result until it passes full-size artifact, material, functional-logic, crop, and live gameplay review.
+- **Unresolved risks:** the playable demo still uses archived pixel-era fallback plates. The guide is now production-ready, but visual migration remains incomplete until new masters are generated, selected, cleaned, integrated, and reviewed in the live build.
+
 ## 2026-07-15 — Photorealistic strategy reset
 
 - **Decision:** retired the square-pixel/nearest-neighbor/turn-of-the-millennium rendering strategy. Classic LucasArts influence now applies only to point-and-click gameplay, scene readability, and recoverable experimentation.

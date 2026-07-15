@@ -2,13 +2,13 @@
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
-Before substantial visual changes, read `../Visual Direction/PHOTOREALISTIC_CHARTER.md`. When Martin gives durable prototype-specific design feedback, record it here or in that charter.
+Before substantial visual changes, read `../Visual Direction/PHOTOREALISTIC_CHARTER.md` and `../Visual Direction/PREMIUM_ART_STYLE_GUIDE.md`. When Martin gives durable prototype-specific design feedback, record it here or in those authorities.
 
 ## Horizon Archive durable direction
 
 - Gameplay is a browser-based, first-person point-and-click adventure inspired by the player-friendly structure of classic LucasArts games: readable scenes, exploratory observation, recoverable mistakes, compact narrative controls, and no unwinnable experimentation.
 - The LucasArts reference is gameplay-only. Do not reproduce its rendering technology, pixel density, palettes, characters, scenes, compositions, jokes, icons, or proprietary interface.
-- Active visual direction is cinematic photorealism: high-resolution environment plates, physically credible materials, sophisticated lighting, atmospheric depth, fine surface detail, and premium contemporary image-generation quality.
+- Active visual direction is maximum-quality cinematic photorealism: feature-film environment credibility, flagship current-generation game key art, high-resolution plates, physically credible materials, sophisticated lighting, atmospheric depth, forensic surface detail, and disciplined multi-pass image-generation production.
 - Retired pixel rules and assets live under `../Pixelated Draft/`. They are historical evidence only and may not govern new art, reviews, or acceptance decisions.
 - Existing CSS dimensions such as `640 x 480`, `640 x 360`, or `320 x 240` are interaction-layout coordinates, not art-production resolutions. Do not use them to limit source-image quality or impose square-pixel styling.
 - New world art should use high-resolution 16:9 masters, normally at least `1920 x 1080` when the production tool permits. Provide responsive derivatives without deliberately pixelating, nearest-neighbor scaling, dithering, palette reduction, or stepped-edge simulation.

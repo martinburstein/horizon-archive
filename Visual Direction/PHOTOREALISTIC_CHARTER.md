@@ -3,9 +3,13 @@
 Status: **ACTIVE AUTHORITY**
 Effective: 2026-07-15
 
+Implementation and review details are governed by the [Premium Art Style Guide](PREMIUM_ART_STYLE_GUIDE.md). When the two documents differ in specificity, follow the stricter quality requirement while preserving gameplay, accessibility, canon, and safety.
+
 ## Goal
 
 Create the most convincing, richly detailed Horizon Archive imagery available through contemporary image generation: cinematic photorealism, physically credible materials and lighting, immense environmental scale, and alien technology that rewards close inspection.
+
+The quality target is deliberately maximal: feature-film environment credibility and flagship current-generation game key art in every important playable view. Do not stop at the first attractive generation. Use exploration, selection, focused edits, material/lighting development, artifact cleanup, responsive review, and live integration before approval.
 
 The game remains a first-person point-and-click adventure. Classic LucasArts titles inform interaction pacing, scene readability, recoverable experimentation, and narrative charm only. Their retro rendering is not an active visual target.
 
@@ -17,6 +21,8 @@ The game remains a first-person point-and-click adventure. Classic LucasArts tit
 - Resolve glass, metal, stone, vapor, water, dust, residue, heat distortion, corrosion, repairs, and interfaces as distinct materials with convincing microstructure.
 - Preserve crisp photographic detail through high-quality resampling. Do not add nearest-neighbor scaling, deliberate pixel blocks, palette limitation, stepped diagonals, retro dithering, CRT degradation, scanlines, or simulated 1990s rendering.
 - Reject AI artifacts: warped repeated geometry, impossible tangencies, melted junctions, illegible pseudo-text, duplicated components, inconsistent shadows, floating objects, incoherent reflections, and detail that has no physical cause.
+- Never lower the art bar merely because a scene is “only a background.” World plates are the central visual product.
+- “No holding back” does not mean indiscriminate clutter: preserve a strong visual thesis, calm regions, interaction hierarchy, and physical causality.
 
 ## Camera and composition
 
@@ -58,3 +64,5 @@ A current visual draft passes only when:
 6. image-generation artifacts and pseudo-writing are absent;
 7. high-resolution source and provenance are preserved; and
 8. the result is original and does not reproduce a copyrighted scene or composition.
+9. the draft has completed the multi-pass production sequence in the Premium Art Style Guide; and
+10. it would withstand comparison with premium contemporary science-fiction key art rather than only with prior project drafts.
