@@ -947,3 +947,18 @@ Validation performed:
 Next recommended item: Gameplay Master Agent performs A4 from the exact handoff in RP-002 without changing the solidified gates, full-prerequisite boundary, or any A1/A2 world/canon invariant.
 Unresolved risks: The in-game interaction and runtime integration do not exist until A4/A5. A4 must keep both forms bounded inside `SC-03-30`, keep photorealistic Scene evidence unscored, and prevent navigation, timing, confidence, hints, restored state, or any world response from creating mastery.
 Notes: The named source-priority skill was unavailable, so required official Microsoft sources were checked directly. The existing source register already carried the correct 2026-07-15 verification date and official responsible-AI entry, so no source-register edit was needed. Curriculum artifacts only; no runtime, puzzle implementation, art, hidden lore, service call, Azure mutation, credential use, external action, commit, or push change.
+
+## Log entry: 2026-07-15T22:18:00-04:00
+
+Stage: RP-002 Custody Ledger ownership-copy impact review (A3)
+Work completed: Reviewed the A1 runtime ownership copy and A2 interface-fit handoff against the SOLIDIFIED RP-002 machine-readable curriculum contract. Recorded `NO REOPEN — SOLIDIFIED`: visible owner prefixes and prerequisite, validation, feedback, save, restore, cancel, and Demo Tour messages remain presentation-only human-interface copy. They add no learner action, dictionary field, scored dimension, prerequisite, durable evidence, permission, authority, identity inference, city response, or external action. Preserved the exact PY-009 and RP002-RAI-01 primary/remediation/blank-transfer gates, full L-03-01/L-02-02 prerequisites, sanitized evidence, cleared working content, deterministic resume, and zero-credit Scene/Tour boundaries. Replaced the Gameplay Master handoff with the exact copy ownership/layout constraints.
+Files changed:
+- Production Pipeline/rail-packets/RP-002-civic-record-encounter.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Read the root workflow authority, agent registry/profile, current RP-002 packet and A2 handoff, local official-source-priority skill, official source register, RP-002 readiness contract, objective mapping, Python prerequisite/progression evidence, and latest curriculum work log.
+- Confirmed the source register and RP-002 contract were already verified on 2026-07-15 and that this copy/layout tranche introduces no new volatile Microsoft product, SDK, endpoint, exam-objective, or scoring claim; no web research was reopened.
+- RP-002 mapping validator self-test passed, including strict Python key-update and responsible-AI reference forms, blank/unsafe/bypass failure probes, official-source URL checks, solidified status, world locks, privacy/accessibility fields, and no-authority fields. The new copy/layout impact was checked directly against the packet because it does not alter the machine-readable contract.
+Next recommended item: Gameplay Master performs only the ownership-copy/layout impact confirmation, preserving the locked puzzle graph and returning an unchanged or minimally clarified Advance Coder handoff.
+Unresolved risks: Runtime implementation must keep owner prefixes textually available without letting message visibility, focus, wrapping, animation, navigation, save/reload, or Tour dismissal generate evidence. Human validation feedback must never be styled or sequenced as a Builder/city response.
+Notes: `NO REOPEN — SOLIDIFIED`. No settled lesson, validator contract, source register, game runtime, art, lore, hidden material, live service, Azure resource, credential, external action, commit, or push was changed.
