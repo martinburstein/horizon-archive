@@ -17,13 +17,13 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
-| 1 | `RP-001` | City Threshold | `IN DESIGN` | Storyboarder Agent | A1 passed; full gate not reviewed | Accepted Witness Corridor -> City Beneath credits boundary | Complete A2 from `rail-packets/RP-001-city-threshold.md` |
+| 1 | `RP-001` | City Threshold | `IN DESIGN` | Curriculum Checker Agent | A1 and A2 passed; full gate not reviewed | Accepted Witness Corridor -> City Beneath credits boundary | Perform A3 on `rail-packets/RP-001-city-threshold.md`; preserve locked visual causality |
 
 ## Team positions
 
 - Ready packets: `0`
 - In-design packets: `1 — RP-001`
-- Team 1 railhead: `RP-001 — A1 complete; A2 pending`
+- Team 1 railhead: `RP-001 — A2 complete; A3 pending`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead: `1 in-design packet`
 - Whole-story rail status: `IN PROGRESS`

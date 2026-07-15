@@ -7,6 +7,7 @@
 | AB-01 | Drowned Archive | World B / Drowned Archive Basin | Interaction-integrated / alien-function replacement required | Basin-scale resource or terraforming process with phase routing, suspended/submerged coupling, and local Workload Sort contact | [Historical production 640×360](production-pixel/AB-01/ab01-available-640x360.png) · [Package](production-pixel/AB-01/README.md) · [Sheet](scenes/AB-01-drowned-archive-workload-terminal.md) · [Exploration only](images/drowned-archive-workload-terminal-v1.png) |
 | WC-01 | Witness Corridor | World C / Witness Complex | Interaction-integrated / alien-function replacement required | Multi-scale articulated-system/channel occupation with separate Evidence contact and unresolved machine relationship | [Historical selected art](images/witness-corridor-evidence-terminal-v1.png) · [Sheet](scenes/WC-01-witness-corridor-evidence-terminal.md) · [Original reference](../Concept%20Art/Fallen%20Automoton.png) |
 | SC-01 | City Overlook | World D / Volcanic Habitation Vault | Reference / alien-function brief required | Geothermal, atmospheric, material, and civic distribution system whose occupation remains provisional | [Historical reference](../Concept%20Art/Underground%20City.png) |
+| SC-02 | City Threshold | World D / Volcanic Habitation Vault / City Beneath threshold | Brief — A2 storyboard locked; no final art | Pre-existing civic operation, maintenance-boundary mismatch, separate environmental and identity-record access, and an expedition-only survey anchor | [Sheet](scenes/SC-02-city-threshold-survey-anchor.md) · [Historical scale reference](../Concept%20Art/Underground%20City.png) |
 
 ## Status vocabulary
 
@@ -16,4 +17,4 @@
 - **Selected:** approved production direction with a complete scene sheet.
 - **Integrated:** implemented in the game and play-tested.
 
-Next coverage recommendation: replace the Glass Garden pair first, then re-brief AB-01, WC-01, and SC-01 against the alien-function/first-contact gate before any visual freeze or new transition plate.
+Next coverage recommendation: follow packet review order for SC-02; it remains a brief until A3–A5. Existing replacement priorities for the Glass Garden pair, AB-01, WC-01, and SC-01 remain unchanged.
