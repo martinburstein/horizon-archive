@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A3 COMPLETE; A4 PENDING`
+- Status: `IN DESIGN — A4 COMPLETE; A5 PENDING`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -360,9 +360,170 @@ Correct principle with wrong mitigation or owner is not mastery. The transfer fo
 - Reopen only if official objectives materially change, a validator or playtest proves mismatch/bypass, or Martin changes the learning goal.
 - Exact handoff: `Gameplay Master Agent: build RP-002 A4 around the SOLIDIFIED PY-009 two-key dictionary update and RP002-RAI-01 focused responsible-AI check, entirely inside the separate SC-03-30 human expedition interface after all locked observations. Require PY-009 6/6 primary -> mapped remediation -> blank 6/6 fresh transfer plus the None-versus-False/key-update explanation, then AI901-D1-O1 9/9 primary -> per-dimension remediation -> blank 9/9 fresh transfer plus the application-label-is-not-native-fact-or-authority explanation. Preserve cityThresholdAnchorRecorded=true, civicDistrictRouteAvailable=true, unchanged continuation, city_state_delta=None, reversible City Threshold return, cleared working notes after save, the closed identity-bearing layer, invariant photorealistic world geometry/materials/lighting/registered effects/animation, and no successor route. Material age, prepared joints, dust/condensate continuity, thermal behavior, photographic realism, grayscale recognition, looking, navigation, color, motion, timing, confidence, hints, save/reload, or city state never count as mastery. Do not add lists, loops, functions, JSON, APIs, live Azure/Foundry calls, identity inference, access, consent, Builder speech, city response, external action, exam guarantee, or a replacement for full L-02-02 mastery.`
 
+## Puzzle Track — Gameplay Master
+
+### Puzzle identity and sign-off
+
+- Status: `PASS — A4 COMPLETE; PUZZLE LOCKED FOR ADVANCE CODER`
+- Puzzle name: `The Custody Ledger`.
+- Play location: entirely inside the separate human expedition interface at `SC-03-30`, after the five required world observations have opened `OPEN LOCAL COMPARISON`.
+- Player motivation: preserve what the expedition actually saw without turning an outlined absence into an identity, permission, native label, or complete history.
+- Curriculum agreement: `PASS` — the interaction implements the SOLIDIFIED `PY-009` and `RP002-RAI-01` contracts exactly. No puzzle mechanic substitutes for or weakens either gate.
+- Expected first-pass time: `12–18 minutes` for the scored campaign route; `3–6 minutes` after prior mastery or on a clean repeat. The separate demo-tour bypass takes one confirmation and does not create completion evidence.
+
+### Adventure-game framing
+
+The interface presents a human-made **custody tray** containing four locked source fields and two empty expedition-owned sockets. The tray is a restrained visual metaphor inside the expedition overlay, not a Builder artifact, translation, native record, or diegetic screen. The player succeeds by adding only the two fields the expedition owns and then defending the same boundary in responsible-AI cases.
+
+- `LOCKED SOURCE FIELDS`: `condition`, `source`, `identity`, and `access_requested` remain visible, labeled, and immutable in the rendered tray.
+- `OPEN EXPEDITION SOCKETS`: `classification` and `owner` accept the two permitted Python key assignments.
+- `CUSTODY SEAL`: becomes an expedition-interface confirmation only after strict Python and responsible-AI evidence passes. It does not animate, illuminate, open, or modify the world.
+- `CLOSED IDENTITY INTERLOCK`: remains a world LOOK observation only. It is never an inventory item, input source, lock to pick, request target, or reward mechanism.
+- Delight beat: after a valid two-key update, the six tray fields align into a clean provenance stack while the outlined-gap field remains visibly unresolved. This is a human interface re-layout with text confirmation, not evidence and not a city response.
+
+### Entry gates and state ownership
+
+Normal campaign entry to the scored tray requires:
+
+1. `cityThresholdAnchorRecorded=true`;
+2. `civicDistrictRouteAvailable=true`;
+3. required `SC-03-00/10/20` observations complete;
+4. `L-03-01` PY-009 primary and transfer evidence still `8/8` with its closed-note structure explanation; and
+5. `L-02-02` primary and transfer evidence still `24/24` across all six principles.
+
+Missing or `review_required` prerequisite evidence opens a clearly labeled expedition-owned route to the existing lesson package and preserves district observation, City Threshold return, and all previous story progress. It does not mark a puzzle attempt. The demo-tour control remains available beside that prerequisite notice under the separate contract below.
+
+State ownership is locked as follows:
+
+| State family | Owner | May change in RP-002 | Must not change |
+|---|---|---|---|
+| World geometry, material, light, heat, maintenance, effects, closed seams | `SCENE // SENSOR RECORD` | Nothing | Every A1/A2 physical and animation invariant |
+| Working source, form choices, feedback, current hint, current stage | `SYSTEM // EXPEDITION SESSION` | Yes, session-only | Durable mastery or city state merely from display/navigation |
+| Per-dimension correctness, attempts, hint level, misconception tags, mastery status | `901 TEACHER // PRIVACY-LIMITED EVIDENCE` | Only after an actual scored submission | Learner source, free-form reasoning, raw dictionary, identity content, test/exam content |
+| Bounded comparison and next-survey marker | `SYSTEM // EXPEDITION CAMPAIGN SAVE` | Atomic normal-route commit after both strict gates | `continuation`, predecessor flags, city state, access, authority, successor unlock |
+| Tour cursor and tour badge | `SYSTEM // DEMO TOUR` | In a separate sanitized tour store only | Campaign completion, mastery evidence, attempts, hints, story unlocks, city state |
+
+### Locked normal-route interaction graph
+
+```text
+SC-03-20 required observations complete
+  -> OPEN LOCAL COMPARISON
+  -> SC-03-30 / prerequisite check
+      -> missing evidence: existing lesson route -> return to first incomplete boundary
+      -> prerequisites pass: PY primary tray
+          -> 6/6: clear working source -> blank PY transfer tray
+          -> miss: mapped PY repair -> restored input -> blank retry
+      -> PY transfer 6/6 -> closed-note key/None/False explanation
+          -> pass: Python reinforcement evidence complete
+          -> miss: focused explanation repair -> blank explanation retry
+      -> RAI primary, three cases / nine dimensions
+          -> 9/9: clear choices -> blank RAI transfer
+          -> miss: per-dimension repair -> blank primary retry
+      -> RAI transfer 9/9 -> closed-note label/fact/authority explanation
+          -> pass: focused responsible-AI evidence complete
+          -> miss: focused repair -> blank explanation retry
+      -> REVIEW BOUNDED COMPARISON
+          -> CANCEL: clear unsubmitted work -> unchanged SC-03-20/30
+          -> SAVE BOUNDED COMPARISON: atomic expedition-only commit -> SC-03-40
+```
+
+The sequence may show compact progress such as `PYTHON 1/2`, `RESPONSIBLE AI 1/2`, and `SAVE`, but never a percent, exam prediction, score inflation, or city-response meter.
+
+### Python stage contract
+
+1. **Primary tray:** render the exact A3 primary dictionary with immutable input fields. The editable source begins with that supplied mapping and two clearly marked unfinished update lines; it is not pre-solved.
+2. **Run six checks:** the existing deterministic validator reports each named check in text. A pass requires `6/6`; partial correctness never unlocks transfer.
+3. **Primary remediation:** name only failed checks. Hints escalate without filling the final answer:
+   - Hint 1: identify the two expedition-owned keys.
+   - Hint 2: contrast missing identity (`None`) with the explicit no-request state (`False`).
+   - Hint 3: show the shape `mapping["key"] = value` with neutral placeholder names, not either scored answer.
+   - Guided near case: update `review["status"]` and `review["owner"]` in a non-Builder example, then restore a blank scored form.
+4. **Fresh transfer tray:** clear all primary working source and render only the exact neutral A3 transfer starter. Require `6/6` again; primary output cannot be pasted forward by the application.
+5. **Closed-note explanation:** require all three selections: `a key names one field whose value can be updated without replacing the dictionary`; `None means the identity value is missing or unknown`; `False means an access request explicitly did not occur`. Feedback is field-associated and returns focus to the first failed selection.
+
+Reject dictionary replacement, hardcoded display output, mutated source fields, extra keys, inferred identity, `access_requested=True`, permission/consent/success/city-response fields, files, JSON, lists, loops, functions, imports, APIs, SDKs, credentials, network calls, or live service work. None of those rejections changes the world or campaign route.
+
+### Responsible-AI stage contract
+
+1. **Primary custody review:** present the exact three A3 primary cases one card at a time. Each card requires `principle`, testable `mitigation`, and human/organizational `owner`. Keep a local working answer until all three cards are submitted, then score all nine dimensions together.
+2. **Per-dimension remediation:** name the failed card and dimension, retrieve the relevant `L-02-02` definition, contrast the closest neighboring principle, require one testable safeguard and one attributable human/organizational owner, and solve one neutral guided near case. Then clear every scored choice and reopen a blank form.
+3. **Fresh transfer:** present the exact three A3 transfer cases with no copied choices or ordering cue. Require `9/9` together.
+4. **Closed-note boundary:** require all three selections: `the classification is a human application label`; `it does not establish Builder intent, identity, or a native fact`; `a valid local label does not authorize access, disclosure, or external action`.
+
+Principle alone is insufficient when mitigation or owner is wrong. A platform, model, city, Builder surface, or automated system cannot satisfy the accountable-owner dimension. This focused check reinforces transparency, privacy and security, and accountability but never replaces the existing six-principle `L-02-02` mastery.
+
+### Required, optional, unavailable, and misleading actions
+
+| Class | Actions |
+|---|---|
+| Required before normal save | Five locked world observations; PY primary `6/6`; blank PY transfer `6/6`; three-part Python explanation; RAI primary `9/9`; blank RAI transfer `9/9`; three-part label/fact/authority explanation; explicit save confirmation |
+| Optional | Inspect maintenance coupling; inspect distant echo early; request any hint; revisit completed evidence summary; cancel and return; use demo-tour bypass |
+| Always available | `RETURN TO CITY THRESHOLD`; safe close; keyboard help; reduced-motion equivalent; resume campaign |
+| Unavailable | Opening identity material; contacting a Builder system; requesting access; editing source evidence; changing `continuation`; producing a physical response; entering an undefined successor route through normal campaign state |
+| Misleading but recoverable | Replacing the dictionary; treating `None` as `False`; assigning accountability to the system/city; adding consent or success fields; treating a provisional label as native fact. Each yields precise human-interface feedback and a blank retry, never punishment or world change. |
+
+### Failure, hint, retry, and recovery
+
+- Every miss is local, explicit, and recoverable with unlimited retry. No life, inventory, route, observation, or prior mastery is consumed.
+- Failed dimensions remain named in privacy-limited evidence, but learner source and selected prose do not persist.
+- Hints increment `hint_level` only after deliberate activation. A hint is neither a miss nor mastery evidence; the final transfer remains blank and strictly scored.
+- Cancel or scene exit clears unsubmitted source, choices, current feedback, and free-form/working notes. Finalized dimension evidence remains separate and sanitized.
+- Re-entry resumes at the first incomplete scored boundary, not in a partially answered form. Completed strict boundaries need not be repeated unless their evidence is missing, invalid, or `review_required`.
+- The City Threshold return stays available during prerequisite routing, remediation, and completion review. Returning never restarts world clocks or changes the closed layer.
+
+### Save, resume, and atomic completion
+
+The normal campaign save may add only these RP-002 progression fields after both strict gates and the explicit confirmation:
+
+- `civicComparisonSaved=true`;
+- `nextSurveyDirectionMarked=true`; and
+- `rp002Checkpoint="comparison_complete"`.
+
+The sanitizer must derive those three values atomically from strict persisted evidence. A supplied or restored `true` value without both gates is downgraded to the first incomplete boundary. The commit preserves `cityThresholdAnchorRecorded=true`, `civicDistrictRouteAvailable=true`, `continuation` unchanged, and `cityStateDelta=null`; it clears all temporary working content. Reload maps a valid completed save to `SC-03-50`. No successor route or claim type is enabled by this packet.
+
+### Demo-tour skip contract — separate, visible, and non-credit
+
+The user-requested skip is a presentation aid, not a cheat-state version of mastery.
+
+- **Control:** place a secondary button immediately beside each scored `Run` or `Check` cluster and beside a missing-prerequisite notice. Exact visible label: `TOUR: SKIP PRACTICE`. Accessible name: `Skip practice and continue in Demo Tour without credit`.
+- **Confirmation:** activation opens one compact confirmation stating: `Demo Tour shows later shipped scenes. It records no attempts, scores, mastery, campaign completion, or city change. Resume Campaign returns to this unfinished gate.` Controls: `ENTER DEMO TOUR` and `KEEP PRACTICING`. Focus returns safely on cancel.
+- **Mode separation:** entering creates or updates a separate sanitized tour object such as `{ mode: "demo_tour", tourSceneId: "SC-03-40", resumeCampaignBoard: "SC-03-30", resumeBoundary: <first incomplete scored boundary> }`. It must live outside the campaign/mastery save and must reject mastery, correctness, attempt, hint, completion, unlock, city-state, identity, or source-content fields.
+- **Immediate state:** clear all unsubmitted source, answers, feedback, and notes; do not increment attempts or hint level; do not write dimension correctness; do not set any mastery status; do not set `civicComparisonSaved`, `nextSurveyDirectionMarked`, or `rp002Checkpoint="comparison_complete"`.
+- **Preview board:** the tour may reuse the unchanged `SC-03-40` overview presentation, but its persistent status must read `DEMO TOUR // PRACTICE SKIPPED // NO CAMPAIGN CREDIT`, and its comparison status must read `Preview only — bounded comparison not saved`. It must not show the normal completion confirmation.
+- **Later-scene navigation:** a distinct `NEXT TOUR SCENE` control may traverse only scene IDs explicitly registered in a shipped demo-tour catalog. It never consults or mutates normal campaign unlocks, never synthesizes mastery, and never turns a previewed scene into a completed predecessor. RP-002 itself defines no successor scene, so A5 may expose `RETURN TO TOUR MENU` until a later packet is explicitly registered.
+- **Resume:** `RESUME CAMPAIGN` restores the untouched campaign save at `SC-03-30` and the first incomplete scored boundary, with working content clear. Reload while touring may restore only the tour cursor and its no-credit badge; it may not enter a normal completed board.
+- **No indirect evidence:** tour visitation, navigation, elapsed time, looking, hotspots, confidence, animation, screenshots, or reaching a later scene cannot satisfy a prerequisite, score, mastery gate, readiness gate, campaign completion, objective ledger, or exam claim.
+- **Presentation safety:** the no-credit badge and resume control remain visible and textually announced at every tour scene. Do not rely on color, iconography, sound, or motion. Keyboard order places the skip after the primary test action and before ordinary close/return controls; confirmation uses focus containment and Escape as `KEEP PRACTICING`.
+
+### Player-observable acceptance checks
+
+1. A normal player cannot open the scored tray before the five required observations or the two prerequisite mastery records; they can always return safely.
+2. The primary Python form rejects one changed source field, dictionary replacement, an extra key, `identity=False`, or `access_requested=True`, and none changes the world.
+3. A valid primary `6/6` clears its working source and produces a genuinely blank transfer starter; only blank transfer `6/6` plus the three-part explanation completes Python evidence.
+4. Each RAI form scores all nine dimensions; a correct principle with a wrong mitigation or nonhuman owner routes to targeted repair and a blank retry.
+5. Transfer data, hints, elapsed time, confidence, scene observation, or restored UI state cannot forge either strict gate.
+6. Cancel/re-enter and reload restore the first incomplete boundary with no unsubmitted content. A strictly completed save restores `SC-03-50` with clear working notes.
+7. Normal completion changes only the three atomic expedition fields and preserves both predecessor flags, unchanged `continuation`, `cityStateDelta=null`, closed records, and identical world state/clock behavior.
+8. `TOUR: SKIP PRACTICE` is beside every scored action cluster, clearly warns of no credit, and reaches only the separate tour presentation.
+9. After tour entry, all campaign mastery/completion fields, attempt counts, hint levels, and city state are byte-for-byte unchanged; normal campaign progression remains locked.
+10. Reload in tour retains the visible no-credit status. `RESUME CAMPAIGN` returns to the exact unfinished gate, while `NEXT TOUR SCENE` can open only coordinator-registered shipped previews.
+11. Exact `640 x 480` and narrow layouts keep every required target at least `44 x 44`, all text/status visible, the world plate unmodified, and the skip/confirm/resume focus path operable by keyboard.
+12. Reduced motion, forced colors, and text-only status preserve every distinction: pass, remediation, preview, no credit, and normal saved completion.
+
+### Locked and flexible mechanics
+
+- **Locked:** entire puzzle remains in `SC-03-30`; exact Curriculum gates/order/scores; blank-transfer requirements; three-part explanations; strict campaign atomicity; separate tour store and mode; visible no-credit language; no attempts/evidence/completion from skip; invariant world and continuous clock; reversible return; no successor unlock; offline/no-authority/privacy/accessibility contracts.
+- **Flexible for A5:** exact custody-tray typography and non-diegetic ornament; whether scenarios use cards or one compact stepper; local names for sanitized internal state; progress-copy wording within ownership and copy budgets; tour-store persistence duration; implementation of the tour catalog. A5 may not rename the visible skip/resume labels or merge tour state into campaign/mastery state.
+
+### Exact Advance Coder handoff
+
+`Coder Agent — advance mode: implement one protected RP-002 first pass from the complete A1–A4 packet. Build SC-03-00/10/20/30/40/50 scaffolding, exact desktop/narrow hotspots, invariant overview/detail plate hooks and monotonic registered-effect clock, reversible City Threshold return, The Custody Ledger state machine, the SOLIDIFIED curriculum/readiness/RP-002 validator contracts, mapped remediation, strict sanitized evidence, atomic normal completion, and deterministic save/resume. Add the secondary TOUR: SKIP PRACTICE control beside every RP-002 scored action/prerequisite notice with the exact confirmation, separate sanitized tour store, persistent no-credit status, unchanged campaign/mastery/attempt/hint/city fields, RESUME CAMPAIGN restoration, and allowlisted shipped-preview navigation described above. A tour preview may reuse SC-03-40 visually but may never render the normal saved-comparison confirmation or unlock normal progression. Keep this future route protected behind staging; use asset hooks or clearly labeled non-approvable placeholders because final premium photorealistic masters are not yet delivered. Do not invent a successor scene, weaken PY-009 6/6 -> blank 6/6 + explanation or RP002-RAI-01 9/9 -> blank 9/9 + explanation, copy learner content into durable evidence, access identity material, add live calls, or alter any A1/A2 physical/canon/art lock. Add focused tests for strict anti-forgery, remediation/reset, cancellation/reload, atomic commit, separate-tour sanitization, campaign byte stability after skip, allowlisted tour navigation, keyboard/status labels, exact target containment, and zero world/city delta. Return A5 readiness as READY FOR WORKING, REVISE, or HOLD; do not perform Working passes.`
+
 ## Dependencies and open risks
 
 - RP-001 must retain both atomic expedition flags and its no-city-response contract at the handoff boundary.
 - RP-001 production art remains blocked; RP-002 boards must use the locked functional City Beneath direction, not copy prohibited human figures or smooth concept-art staging traits.
 - The Storyboarder must make the three evidence conditions readable without color alone and without turning abstract record masses into familiar human archives or tombs.
-- Curriculum and puzzle content remain unowned in A1. Later roles may choose a learning interaction only if it preserves the closed identity layer, bounded comparison, and zero external authority.
+- Final premium photorealistic RP-002 masters and registered effect layers are not yet delivered. A5 may wire approved asset contracts and explicit staging placeholders but may not claim visual acceptance.
+- The demo-tour catalog must be an explicit allowlist of shipped previews. A generic scene-index increment, campaign-flag mutation, or mastery-filled fixture would violate A4 and block readiness.
+- A5 must prove that a malicious or stale tour payload cannot inject mastery, completion, predecessor, successor, identity, or city-state fields into the normal RP-002 save.

@@ -6,7 +6,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO PARTIAL / RELEASE BLOCKED ON PRODUCTION ART`
-- Team 1 railhead: `RP-002 — A3 curriculum mapping solidified; A4 pending`
+- Team 1 railhead: `RP-002 — A4 puzzle and non-credit demo-tour contract locked; A5 pending`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO PARTIAL — PHOTOREALISTIC ART BLOCKED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL STAGING PASS` | Functional gates pass. Pixel-specific `RP001-AESTH-002` is retired and the earlier occupant raster is removed. `RP001-AESTH-004` now blocks release until the archived pixel-styled fallbacks are replaced by three approved high-resolution photorealistic masters and registered effects. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A3 COMPLETE; A4 PENDING` | `NOT READY` | `LORE LOCKED — PHYSICAL EVIDENCE REFINED` | `STORYBOARD LOCKED — PREMIUM PHOTO BUILD BRIEF` | `PY-009 SOLIDIFIED` | `RP002-RAI-01 SOLIDIFIED` | `PENDING` | `NOT STARTED` | A3 locks a 6/6 primary/remediation/blank 6/6 transfer dictionary update and focused D1-O1 9/9 primary/remediation/blank 9/9 transfer check in SC-03-30; all photorealistic/world evidence remains unscored and every A1/A2 state, material, lighting, registered-effect, privacy, and no-response invariant remains unchanged |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A4 COMPLETE; A5 PENDING` | `NOT READY` | `LORE LOCKED — PHYSICAL EVIDENCE REFINED` | `STORYBOARD LOCKED — PREMIUM PHOTO BUILD BRIEF` | `PY-009 SOLIDIFIED` | `RP002-RAI-01 SOLIDIFIED` | `A4 LOCKED — CUSTODY LEDGER + NON-CREDIT TOUR` | `NOT STARTED` | A4 encodes strict 6/6 -> blank 6/6 + explanation and 9/9 -> blank 9/9 + explanation gates, unlimited recovery, atomic expedition-only completion, and a separate allowlisted Demo Tour skip beside tests that records no attempts, mastery, campaign unlock, or city change; A1/A2 photorealistic and no-response locks remain invariant |
 
 ## Whole-story coverage gate
 
