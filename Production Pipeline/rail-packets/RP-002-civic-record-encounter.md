@@ -642,6 +642,16 @@ The user-requested skip is a presentation aid, not a cheat-state version of mast
 - Exact W1/no-promotion boundary: `DO NOT PROMOTE OR HAND TO W1. This is an internal A5 construction seam, not a playable increment. RP-002 remains IN DESIGN — A5 PARTIAL until protected SC-03 routing, observation gates, strict PY/RAI validators, remediation, sanitized persistence, atomic completion, deterministic resume, and responsive interface integration exist and pass their tests.`
 - Exact next Advance Coder handoff: `Continue A5 behind protected staging by integrating the prerequisite-check and first Python-primary boundary against the new owner-message registry. Preserve the ten exact messages, zero-evidence reading/dismissal, atomic RP-001 predecessor, immutable source fields, blank expedition sockets, disabled completion until all SOLIDIFIED gates pass, separate Tour state, invariant world, and no normal-campaign exposure.`
 
+### Advance Coder A5 partial implementation — prerequisite-to-PY-primary seam
+
+- Readiness: `REVISE — A5 PARTIAL; STRICT ENTRY SEAM COMPLETE, NO PLAYABLE RP-002 ROUTE`.
+- The non-routable Custody Ledger module now consumes the existing `L-03-01` and `L-02-02` records through their production sanitizers and independently requires every locked primary, transfer, and closed-note dimension before leaving `prerequisite_check`.
+- A strict pass opens only `python_primary`, attaches the existing `tray_available` owner message, restores the four immutable primary fields, clears both expedition sockets, and initializes the six locked PY-009 checks to false. Scoring becomes available for that boundary only; campaign commit remains disabled.
+- Forged mastery labels, foreign exercise IDs, missing or false dimensions, prefilled sockets, altered source fields, forged completion/commit fields, and forged phase labels fail closed. Raw prerequisite evidence, learner work, campaign data, and Tour data are not copied into the state.
+- Focused tests pass `7/7`; production build passes. No component, route, storage key, responsive layout, world plate, scoring submission, remediation, transfer, RAI form, save/resume, successor, or normal-campaign exposure was added.
+- Exact W1/no-promotion boundary: `DO NOT PROMOTE OR HAND TO W1. RP-002 remains IN DESIGN — A5 PARTIAL because the new boundary is an internal state seam with no playable route or submission evaluator.`
+- Exact next Advance Coder handoff: `Implement only the strict six-check PY-009 primary submission/result seam from the blank python_primary state, with immutable input, two-key-update proof, privacy-limited finalized booleans, mapped failure ownership, blank retry, zero campaign commit, no durable learner source, no UI/normal route, and invariant continuation/city state.`
+
 ## Dependencies and open risks
 
 - RP-001 must retain both atomic expedition flags and its no-city-response contract at the handoff boundary.

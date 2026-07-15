@@ -1,4 +1,15 @@
 import { CITY_THRESHOLD_CONTINUATION, sanitizeCityThresholdSave } from "./cityThresholdExercise.js";
+import {
+  sanitizeStructuredPacketEvidence,
+  structuredPacketChecks,
+  structuredPacketExplanationDimensions,
+} from "./structuredPacketExercise.js";
+import {
+  responsibleAIDimensions,
+  responsibleAIPrimaryScenarios,
+  responsibleAITransferScenarios,
+  sanitizeResponsibleAIEvidence,
+} from "./responsibleAIExercise.js";
 
 export const CUSTODY_LEDGER_PACKET_ID = "RP-002";
 export const CUSTODY_LEDGER_BOARD_ID = "SC-03-30";
@@ -63,6 +74,37 @@ export const custodyLedgerExpeditionFields = Object.freeze({
   owner: "",
 });
 
+export const custodyLedgerPythonChecks = Object.freeze([
+  "result_is_dictionary",
+  "exact_keys_only",
+  "condition_and_source_preserved",
+  "identity_remains_none",
+  "access_requested_remains_false",
+  "classification_and_owner_added_by_key_update",
+]);
+
+function blankPythonChecks() {
+  return Object.fromEntries(custodyLedgerPythonChecks.map((check) => [check, false]));
+}
+
+function hasStrictStructuredPrerequisite(value) {
+  const safe = sanitizeStructuredPacketEvidence(value);
+  return safe?.masteryStatus === "mastered"
+    && structuredPacketChecks.every((check) => safe.checkCorrectness.primary?.[check] === true)
+    && structuredPacketChecks.every((check) => safe.checkCorrectness.transfer?.[check] === true)
+    && structuredPacketExplanationDimensions.every((dimension) => safe.checkCorrectness.explanation?.[dimension] === true);
+}
+
+function hasStrictResponsibleAIPrerequisite(value) {
+  const safe = sanitizeResponsibleAIEvidence(value);
+  if (!safe || safe.masteryStatus !== "mastered") return false;
+  return [...responsibleAIPrimaryScenarios, ...responsibleAITransferScenarios]
+    .every((scenario) => responsibleAIDimensions
+      .every((dimension) => safe.dimensionCorrectness[scenario.id]?.[dimension] === true))
+    && responsibleAIDimensions
+      .every((dimension) => safe.dimensionCorrectness.closed_note_explanation?.[dimension] === true);
+}
+
 export function getCustodyLedgerOwnershipMessage(messageKey) {
   return custodyLedgerOwnershipMessages[messageKey] ?? custodyLedgerOwnershipMessages.prerequisites_incomplete;
 }
@@ -86,7 +128,12 @@ export function createCustodyLedgerScaffold(predecessorValue) {
 }
 
 function normalizeCustodyLedgerScaffold(state) {
-  const phase = state?.phase === "prerequisite_check" ? "prerequisite_check" : "predecessor_blocked";
+  const primaryReady = state?.phase === "python_primary"
+    && state?.prerequisiteStatus === "complete"
+    && state?.pythonForm === "primary";
+  const phase = primaryReady ? "python_primary"
+    : state?.phase === "prerequisite_check" ? "prerequisite_check"
+      : "predecessor_blocked";
   const activeMessageKey = Object.hasOwn(custodyLedgerOwnershipMessages, state?.activeMessageKey)
     ? state.activeMessageKey
     : "prerequisites_incomplete";
@@ -104,10 +151,45 @@ function normalizeCustodyLedgerScaffold(state) {
         ? state.expeditionFields.owner.slice(0, 40)
         : "",
     },
-    scoringEnabled: false,
+    scoringEnabled: primaryReady,
     campaignCommitEnabled: false,
     continuation: CITY_THRESHOLD_CONTINUATION,
     cityStateDelta: null,
+    ...(primaryReady ? {
+      prerequisiteStatus: "complete",
+      pythonForm: "primary",
+      pythonChecks: Object.fromEntries(custodyLedgerPythonChecks.map((check) => [
+        check,
+        state?.pythonChecks?.[check] === true,
+      ])),
+    } : {}),
+  };
+}
+
+export function advanceCustodyLedgerPrerequisite(state, prerequisiteEvidence) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "prerequisite_check") return createCustodyLedgerScaffold(null);
+  const prerequisitesPass = hasStrictStructuredPrerequisite(prerequisiteEvidence?.structuredPacketEvidence)
+    && hasStrictResponsibleAIPrerequisite(prerequisiteEvidence?.responsibleAIEvidence);
+  if (!prerequisitesPass) {
+    return {
+      ...current,
+      activeMessageKey: "prerequisites_incomplete",
+      scoringEnabled: false,
+      campaignCommitEnabled: false,
+    };
+  }
+  return {
+    ...current,
+    phase: "python_primary",
+    activeMessageKey: "tray_available",
+    sourceFields: { ...custodyLedgerSourceFields },
+    expeditionFields: { ...custodyLedgerExpeditionFields },
+    scoringEnabled: true,
+    campaignCommitEnabled: false,
+    prerequisiteStatus: "complete",
+    pythonForm: "primary",
+    pythonChecks: blankPythonChecks(),
   };
 }
 

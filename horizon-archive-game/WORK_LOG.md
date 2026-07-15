@@ -1,5 +1,16 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder A5 partial: Custody Ledger prerequisite-to-primary seam
+
+- **Mode:** `advance` for A5 only.
+- **Work completed:** extended the non-routable RP-002 Custody Ledger scaffold from `prerequisite_check` into the first `python_primary` boundary. Entry consumes only the sanitized existing `L-03-01` Structured Packet and `L-02-02` Responsible AI evidence records, independently verifies every locked primary, transfer, and closed-note dimension, then opens the primary tray with the exact source fields restored and both expedition-owned sockets blank.
+- **Anti-forgery/state boundary:** mastery labels alone, missing dimensions, foreign exercise IDs, a failed dimension, prefilled expedition values, mutated source fields, forged commit flags, and a forged `python_primary` phase cannot cross the transition. Raw prerequisite records are not copied into Custody Ledger state. The six PY-009 checks begin false; scoring is available only at the reached form, while campaign commit remains disabled.
+- **Preserved:** ten exact owner messages, immutable source fields, `continuation`, `cityStateDelta:null`, atomic RP-001 predecessor, zero world/city delta, no normal route or UI exposure, no Tour mutation, and no fixed-canvas/layout assumption.
+- **Files changed:** `src/custodyLedgerExercise.js`, `test/custodyLedgerExercise.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, and this log.
+- **Validation:** focused Custody Ledger suite passed **7/7**; production build passed with the existing large-chunk advisory (`index-BeYlrQCv.js`, `index-nxb4OToG.css`).
+- **Readiness:** `REVISE — A5 PARTIAL; NO W1 PROMOTION`. This seam still has no route or UI and cannot score a PY submission, remediate, transfer, explain, enter RAI, save, resume, or complete RP-002.
+- **Exact next Advance handoff:** `Continue protected A5 by implementing the strict six-check PY-009 primary evaluator and privacy-limited finalized result against this blank python_primary state. Preserve input identity, exact key-update detection, all owner messages, blank retry, zero campaign commit, no raw learner source in durable evidence, invariant world/city state, and no normal-route exposure. Do not hand to W1.`
+
 ## 2026-07-15 — Coordinator: integrated Meadow release validation
 
 - **Outcome:** `PASS — RP001-AESTH-005 RESOLVED.` The final live build presents one integrated photoreal Glass Meadow plate; the field Terminal, underground couplings, front laminate, and dormant route marker share the plate's perspective, dawn light, contact, and material response.

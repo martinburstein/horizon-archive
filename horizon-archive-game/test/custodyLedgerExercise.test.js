@@ -15,12 +15,25 @@ import {
   withSafetyExplanation,
 } from "../src/cityThresholdExercise.js";
 import {
+  advanceCustodyLedgerPrerequisite,
   clearCustodyLedgerWorkingState,
   createCustodyLedgerScaffold,
   custodyLedgerOwnershipMessages,
+  custodyLedgerSourceFields,
   getCustodyLedgerOwnershipMessage,
   setCustodyLedgerOwnershipMessage,
 } from "../src/custodyLedgerExercise.js";
+import {
+  structuredPacketChecks,
+  structuredPacketExercise,
+  structuredPacketExplanationDimensions,
+} from "../src/structuredPacketExercise.js";
+import {
+  responsibleAIDimensions,
+  responsibleAIExercise,
+  responsibleAIPrimaryScenarios,
+  responsibleAITransferScenarios,
+} from "../src/responsibleAIExercise.js";
 
 function completedPredecessor() {
   const answers = (form) => Object.fromEntries(cum01Forms[form].map((item) => [item.id, { decision: item.decision, reason: item.reason }]));
@@ -39,6 +52,31 @@ function completedPredecessor() {
     external_action_boundary: "external action needs separate scope authority and privacy review",
   }));
   return commitCityThresholdAnchor(save);
+}
+
+function completedPrerequisites() {
+  const checkCorrectness = {
+    primary: Object.fromEntries(structuredPacketChecks.map((check) => [check, true])),
+    transfer: Object.fromEntries(structuredPacketChecks.map((check) => [check, true])),
+    explanation: Object.fromEntries(structuredPacketExplanationDimensions.map((dimension) => [dimension, true])),
+  };
+  const dimensionCorrectness = Object.fromEntries([
+    ...responsibleAIPrimaryScenarios,
+    ...responsibleAITransferScenarios,
+    { id: "closed_note_explanation" },
+  ].map(({ id }) => [id, Object.fromEntries(responsibleAIDimensions.map((dimension) => [dimension, true]))]));
+  return {
+    structuredPacketEvidence: {
+      exerciseId: structuredPacketExercise.exercise_id,
+      checkCorrectness,
+      masteryStatus: "mastered",
+    },
+    responsibleAIEvidence: {
+      exerciseId: responsibleAIExercise.exercise_id,
+      dimensionCorrectness,
+      masteryStatus: "mastered",
+    },
+  };
 }
 
 test("Custody Ledger scaffold opens only after the exact atomic predecessor", () => {
@@ -72,6 +110,88 @@ test("locked source fields and blank expedition sockets cannot create evidence",
     "activeMessageKey", "boardId", "campaignCommitEnabled", "cityStateDelta", "continuation",
     "expeditionFields", "packetId", "phase", "scoringEnabled", "sourceFields",
   ]);
+});
+
+test("only strict sanitized prerequisites open the blank PY-009 primary boundary", () => {
+  const scaffold = createCustodyLedgerScaffold(completedPredecessor());
+  const primary = advanceCustodyLedgerPrerequisite({
+    ...scaffold,
+    sourceFields: { identity: "forged", access_requested: true },
+    expeditionFields: { classification: "prefilled", owner: "city" },
+    campaignCommitEnabled: true,
+  }, completedPrerequisites());
+  assert.equal(primary.phase, "python_primary");
+  assert.equal(primary.activeMessageKey, "tray_available");
+  assert.equal(primary.prerequisiteStatus, "complete");
+  assert.equal(primary.pythonForm, "primary");
+  assert.deepEqual(primary.sourceFields, {
+    condition: "outlined_gap", source: "exposed_surface", identity: null, access_requested: false,
+  });
+  assert.deepEqual(primary.expeditionFields, { classification: "", owner: "" });
+  assert.deepEqual(Object.values(primary.pythonChecks), [false, false, false, false, false, false]);
+  assert.equal(primary.scoringEnabled, true);
+  assert.equal(primary.campaignCommitEnabled, false);
+  assert.equal(primary.continuation, "continuation");
+  assert.equal(primary.cityStateDelta, null);
+  assert.equal(Object.hasOwn(primary, "structuredPacketEvidence"), false);
+  assert.equal(Object.hasOwn(primary, "responsibleAIEvidence"), false);
+});
+
+test("forged mastery labels, partial dimensions, and foreign exercises cannot cross prerequisites", () => {
+  const scaffold = createCustodyLedgerScaffold(completedPredecessor());
+  const strict = completedPrerequisites();
+  const probes = [
+    {},
+    {
+      structuredPacketEvidence: { exerciseId: structuredPacketExercise.exercise_id, masteryStatus: "mastered" },
+      responsibleAIEvidence: strict.responsibleAIEvidence,
+    },
+    {
+      structuredPacketEvidence: strict.structuredPacketEvidence,
+      responsibleAIEvidence: { exerciseId: responsibleAIExercise.exercise_id, masteryStatus: "mastered" },
+    },
+    {
+      structuredPacketEvidence: { ...strict.structuredPacketEvidence, exerciseId: "forged" },
+      responsibleAIEvidence: strict.responsibleAIEvidence,
+    },
+    {
+      structuredPacketEvidence: strict.structuredPacketEvidence,
+      responsibleAIEvidence: {
+        ...strict.responsibleAIEvidence,
+        dimensionCorrectness: {
+          ...strict.responsibleAIEvidence.dimensionCorrectness,
+          P01: { ...strict.responsibleAIEvidence.dimensionCorrectness.P01, owner: false },
+        },
+      },
+    },
+  ];
+  for (const probe of probes) {
+    const result = advanceCustodyLedgerPrerequisite(scaffold, probe);
+    assert.equal(result.phase, "prerequisite_check");
+    assert.equal(result.activeMessageKey, "prerequisites_incomplete");
+    assert.equal(result.scoringEnabled, false);
+    assert.equal(result.campaignCommitEnabled, false);
+    assert.deepEqual(result.expeditionFields, { classification: "", owner: "" });
+  }
+});
+
+test("a forged phase cannot bypass the prerequisite transition", () => {
+  const result = advanceCustodyLedgerPrerequisite({
+    packetId: "RP-002",
+    boardId: "SC-03-30",
+    phase: "python_primary",
+    prerequisiteStatus: "complete",
+    pythonForm: "primary",
+    scoringEnabled: true,
+    campaignCommitEnabled: true,
+    sourceFields: { ...custodyLedgerSourceFields, identity: "forged" },
+    expeditionFields: { classification: "unknown", owner: "city" },
+  }, completedPrerequisites());
+  assert.equal(result.phase, "predecessor_blocked");
+  assert.equal(result.scoringEnabled, false);
+  assert.equal(result.campaignCommitEnabled, false);
+  assert.equal(result.sourceFields.identity, null);
+  assert.deepEqual(result.expeditionFields, { classification: "", owner: "" });
 });
 
 test("every locked ownership node keeps a visible human-interface owner", () => {
