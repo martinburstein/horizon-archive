@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic impact review locked; no final art
+- **Production status:** Brief — A2 photorealistic and responsive-composition reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -25,12 +25,12 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 
 ## Composition and attention
 
-- **Camera:** first-person side-on three-quarter district view; moderate `28–32 mm` full-frame-equivalent overview lens, rectilinear structure, and low cavern horizon near layout `y=76`; no tactical isometric view or extreme wide-angle distortion. `10` uses a `45–55 mm` oblique raking detail; `20` uses `35–45 mm` with enough depth of field to hold the echo, coupling, and interlock together.
+- **Camera:** first-person side-on three-quarter district view; moderate `28–32 mm` full-frame-equivalent overview lens, rectilinear structure, and a low cavern horizon near the upper fifth of the 16:9 master; no tactical isometric view or extreme wide-angle distortion. `10` uses a `45–55 mm` oblique raking detail; `20` uses `35–45 mm` with enough depth of field to hold the echo, coupling, and interlock together.
 - **Adjacency:** the already-lit SC-02 bridge leaves its lower-right crop and enters this view as a lower-left structural tail at `x=0..126, y=286..359`. Direct cut and shared cycle phase preserve the sense of one route.
 - **Primary landmark:** asymmetric near layered mass at `x=206..454, y=76..304`, wrapped around—not facing away from—a heat return.
 - **Secondary systems:** heat-return/maintenance fan `x=28..198, y=148..326`; distant scale echo `x=474..622, y=96..258`; separate closed interlock `x=410..566, y=112..286` on the detail board.
 - **Attention order:** near three-condition intersection -> heat/maintenance process -> distant echo -> closed interlock -> reversible bridge tail. The future-survey edge is quiet and never becomes a glowing exit.
-- **Quiet space:** preserve desktop layout `x=232..408, y=304..359` and narrow layout `x=112..208, y=132..179` as low-contrast, low-frequency calm regions. Photographic microdetail may remain only when it does not create a false hotspot.
+- **Quiet space:** preserve a low-contrast, low-frequency calm region across the lower-center portion of every approved responsive crop. Photographic microdetail may remain only when it does not create a false hotspot or compete with the separate expedition interface.
 
 ## Visual evidence grammar
 
@@ -46,9 +46,9 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 
 ## Interaction map
 
-Coordinates are interaction-layout rectangles, not art-production resolutions. High-resolution plates map into both layouts; all targets are at least `44 x 44` in the authored coordinate space.
+The active contract is semantic and responsive: hotspots stay registered to their intended world silhouettes as the high-resolution 16:9 plate fills the available world stage. The two coordinate columns below are legacy scaffold references only, not required resolutions, crops, or acceptance viewports. Production acceptance requires each rendered target to remain at least `44 x 44 CSS px`, distinct, focus-visible, and correctly registered after crop, reflow, browser zoom, and text zoom.
 
-| Zone | `640 x 360` | `320 x 180` |
+| Zone | Legacy desktop reference only | Legacy narrow reference only |
 |---|---|---|
 | `00-ORIENTATION` | `32,150,170,142` | `8,62,88,68` |
 | `00-NEAR-MASS` | `218,118,226,184` | `104,44,116,90` |
@@ -64,13 +64,14 @@ Coordinates are interaction-layout rectangles, not art-production resolutions. H
 | `ALL-THRESHOLD-RETURN` | `0,300,112,60` | `0,136,56,44` |
 | `40/50-NEXT-SURVEY-LOOK` | `500,122,120,166` | `250,48,70,82` |
 
-The comparison and save controls belong to the compact interface below the world. No interface, label, cursor, map line, icon, or text is painted or projected into Builder space.
+The comparison and save controls belong to a separate responsive interface region. No interface, label, cursor, map line, icon, or text is painted or projected into Builder space. If a crop cannot retain a required landmark or route, show more of the master or use an approved art-directed crop; never stretch the plate or let the hotspot drift away from its silhouette.
 
 ## Human interface ownership-copy fit
 
 - A2 impact verdict: `PASS`. The Custody Ledger runtime copy changes no plate, crop, camera, target rectangle, board order, state, material, lighting, registered effect, or city causality.
-- Desktop uses the existing `640 x 120` band below the `640 x 360` world. One active message at a time is grouped as visible text owner -> message -> related explanation/action, with a two-line message region and a `44 px` minimum action row.
-- The exact `320 x 240` derivative keeps the `320 x 180` world unobscured. Its interface starts below the world and may extend in scrollable document flow so owner, complete message, and `44 px` action remain readable; it may not overlay the plate, clip negative-authority clauses, shrink text, or turn feedback into a world cue.
+- One active message at a time is grouped as visible text owner -> complete message -> related explanation/action. The group wraps by semantic clause rather than a fixed line count, every action remains at least `44 x 44 CSS px`, and the world remains the dominant visual region.
+- On wide displays the 16:9 world expands toward the full available content width; the interface uses only the space needed and may sit below or beside the world when separation and reading order remain unambiguous. On narrow displays and at increased text zoom, the unobscured world remains above the interface and the complete owner/message/action group continues in scrollable document flow.
+- No responsive state may clip negative-authority clauses, shrink readable type, cover the plate, distort the world aspect ratio, or turn feedback into a world cue. Focus movement may scroll the interface group into view but must not unexpectedly move or rescale the world.
 - Every owner prefix is literal text and every message remains understandable without color. Semantic wrapping preserves `no local request`, `cannot claim access`, Pilot-owned provisional labeling, closed-record status, preview no-credit meaning, and unchanged `continuation`.
 - Save, restore, failure, cancel, prerequisite, and Demo Tour messages use the human status region only. No copy is baked, projected, reflected, or implied on Builder matter, and no world light, seam, maintenance path, heat route, or animation responds to it.
 
@@ -78,10 +79,10 @@ The comparison and save controls belong to the compact interface below the world
 
 - Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
 - Complete all eight premium-production passes before approval: varied visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay-fit review, registered state/animation production, and provenance delivery.
-- Deliver high-quality desktop and narrow derivatives/crops that preserve every locked target and calm region. If resampling weakens a required read, create a separate high-resolution art-directed derivative from the same approved composition—never a pixelated, stretched, or detail-fabricated fallback.
+- Deliver only the high-quality responsive crops needed to preserve every semantic target, calm region, and material read across representative wide, laptop, and narrow layouts. If resampling or cropping weakens a required read, create a separate high-resolution art-directed crop from the same approved composition—never a pixelated, stretched, or detail-fabricated fallback.
 - Three registered high-resolution effect families with explicit masks/depth support: heat/condensation, nonhumanoid maintenance traffic with coherent contact shadows/reflections, and restrained coupling exchange/local spill. One monotonic clock runs through inspection, save, reload, and return.
 - Reduced-motion stills retain heat-flow topology, one maintenance form beside—not entering—the closed seam, and the meaningful far repetition. Motion never carries required evidence.
-- Review package: grayscale/thumbnail sheets, desktop/narrow gameplay crops, full-size trace/stewardship/gap/interlock crops, registered overview difference masks, and artifact checks for pseudo-writing, faces, clones, melted joints, floating fragments, and incoherent lighting/reflections.
+- Review package: grayscale/thumbnail sheets, representative wide/laptop/narrow gameplay captures, `200%` text-zoom evidence, full-size trace/stewardship/gap/interlock crops, registered overview difference masks, and artifact checks for pseudo-writing, faces, clones, melted joints, floating fragments, and incoherent lighting/reflections.
 - World assets contain no human UI. Existing interface systems own labels, status, save feedback, unchanged `continuation`, and next-survey marking. Preserve prompts, model/tool, source references, selection rationale, edits, masks, crops, dates, and approvals.
 
 ## Readability and validation gate
@@ -94,7 +95,7 @@ The comparison and save controls belong to the compact interface below the world
 
 ## Locked and flexible
 
-- **Locked:** direct SC-02 adjacency; board order; three base compositions; target rectangles; near/far three-condition relation; separate closed interlock; no world delta; no successor route; world/interface separation.
+- **Locked:** direct SC-02 adjacency; board order; three base compositions; semantic target ownership and attention order; near/far three-condition relation; separate closed interlock; no world delta; no successor route; responsive world/interface separation.
 - **Flexible:** exact mass contour within bounds, impression rhythm, compatible material families, repair joints, maintenance anatomy/count, effect timing, and restrained cinematic grade. City Beneath color continuity comes from motivated geothermal light, cavern bounce, and material response rather than a preset color recipe or generic neon.
 
 ## Photorealistic impact validation
@@ -102,5 +103,6 @@ The comparison and save controls belong to the compact interface below the world
 - `PASS`: A1 age evidence, relative chronology, retained solid absence, separate closed boundary, causal operation, three stewardship eras, meaningful scale variation, state invariance, and artifact safety now have buildable photographic requirements.
 - `PASS`: board order, interaction rectangles, entry/exit state, ownership, copy, canon, first-person framing, no-protagonist/no-ship rule, and zero-city-response causality are unchanged.
 - `PASS`: the premium production package can be built from three high-resolution masters, responsive derivatives, registered effects, reduced-motion stills, evidence crops, difference masks, and provenance without Storyboarder creating final raster art.
+- `PASS`: retired exact `640 x 480` and `320 x 240` review canvases, the fixed `640 x 120` interface band, and fixed message-line counts are removed from active acceptance. The high-resolution world fills available space, semantic hotspots stay registered, and complete owner-prefixed interface groups remain readable and accessible under representative wide, laptop, narrow, browser-zoom, and `200%` text-zoom conditions.
 
 Production status remains **Brief**. This impact review creates no raster or production art.
