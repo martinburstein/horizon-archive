@@ -16,7 +16,9 @@ Andromeda survey corridor
 │       └── WC-01 Witness Corridor [interaction-integrated / alien-function replacement required]
 ├── World D — Subsurface City World [active / provisional geothermal-atmospheric-material distribution process]
 │   └── Volcanic Habitation Vault
-│       └── SC-01 City Overlook [historical reference / alien-function brief required]
+│       ├── SC-01 City Overlook [historical reference / alien-function brief required]
+│       ├── SC-02 City Threshold [A2 brief / no final art]
+│       └── SC-03 Civic Record District [A2 brief / no final art]
 └── Future survey worlds [locked]
     ├── Ecological continuity world
     ├── Memorial-scale world
@@ -40,6 +42,8 @@ This line records player-facing progression only. It does not assert that the lo
 | 5 | Regional transition plate | Gives the existing locations a believable journey rhythm without adding exposition. |
 | 6 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
 | 7 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
+
+Within World D, `SC-02 -> SC-03` is a direct local route: the already-lit threshold bridge enters the civic-record district without a travel plate, activation, or newly defined world.
 
 ## Expansion rule
 

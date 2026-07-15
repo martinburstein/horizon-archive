@@ -8,6 +8,7 @@
 | WC-01 | Witness Corridor | World C / Witness Complex | Interaction-integrated / alien-function replacement required | Multi-scale articulated-system/channel occupation with separate Evidence contact and unresolved machine relationship | [Historical selected art](images/witness-corridor-evidence-terminal-v1.png) · [Sheet](scenes/WC-01-witness-corridor-evidence-terminal.md) · [Original reference](../Concept%20Art/Fallen%20Automoton.png) |
 | SC-01 | City Overlook | World D / Volcanic Habitation Vault | Reference / alien-function brief required | Geothermal, atmospheric, material, and civic distribution system whose occupation remains provisional | [Historical reference](../Concept%20Art/Underground%20City.png) |
 | SC-02 | City Threshold | World D / Volcanic Habitation Vault / City Beneath threshold | Brief — A2 storyboard locked; no final art | Pre-existing civic operation, maintenance-boundary mismatch, separate environmental and identity-record access, and an expedition-only survey anchor | [Sheet](scenes/SC-02-city-threshold-survey-anchor.md) · [Historical scale reference](../Concept%20Art/Underground%20City.png) |
+| SC-03 | Civic Record District | World D / Volcanic Habitation Vault / City Beneath civic district | Brief — A2 storyboard locked; no final art | Near/far separation of fixed trace, later stewardship, and outlined gap beside a separately closed identity-bearing interlock | [Sheet](scenes/SC-03-civic-record-district.md) · [Historical scale reference](../Concept%20Art/Underground%20City.png) |
 
 ## Status vocabulary
 
@@ -17,4 +18,4 @@
 - **Selected:** approved production direction with a complete scene sheet.
 - **Integrated:** implemented in the game and play-tested.
 
-Next coverage recommendation: follow packet review order for SC-02; it remains a brief until A3–A5. Existing replacement priorities for the Glass Garden pair, AB-01, WC-01, and SC-01 remain unchanged.
+Next coverage recommendation: Curriculum Checker should perform RP-002 A3 against the locked SC-03 boards. SC-02 and SC-03 remain briefs with no final art; existing replacement priorities remain unchanged.

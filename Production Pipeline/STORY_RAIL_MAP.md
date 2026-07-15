@@ -6,7 +6,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO PARTIAL / RELEASE BLOCKED ON PRODUCTION ART`
-- Team 1 railhead: `RP-002 — A1 complete; A2 pending`
+- Team 1 railhead: `RP-002 — A2 complete; A3 pending`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO PARTIAL — PRODUCTION ART BLOCKED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL STAGING PASS` | Coordinator gate passed CUM self-test, 251 JSON parse, 245/245 unit, build, and full title-to-credits E2E. W2 `RP001-P1-001` and W4 `RP001-AESTH-003` are resolved. P1 blockers `RP001-AESTH-001/002` still require the locked three-native/three-narrow/four-layer production-art package; no workaround or acceptance claim |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A1 COMPLETE; A2 PENDING` | `NOT READY` | `LORE LOCKED` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | Preserve RP-001 anchor, route, `continuation`, null city delta, and no-response/consent boundary; exposed provenance comparison stays separate from closed identity-bearing material |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A2 COMPLETE; A3 PENDING` | `NOT READY` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | SC-03 directly inherits the already-lit bridge and both RP-001 flags; near/far provenance separation, closed identity interlock, null city delta, invariant world states, and no-response/consent boundary are locked |
 
 ## Whole-story coverage gate
 
