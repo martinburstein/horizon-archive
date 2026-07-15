@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-15 — RP-002 premium photorealistic impact review
+
+- **Completed:** revalidated the existing six-state SC-03 sequence against the new A1 Photorealistic Surface-Evidence Contract and maximum-quality visual authority without changing board order, interaction rectangles, entry/exit state, or world causality. Added buildable lens, material-age, prepared-joint, same-plane gap, sealed-interlock, motivated-lighting, meaningful scale-variation, registered-state, responsive-crop, artifact-cleanup, and provenance requirements.
+- **Files changed:** updated `Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, `Production Pipeline/STORY_RAIL_MAP.md`, `Production Pipeline/ADVANCE_QUEUE.md`, `scenes/SC-03-civic-record-district.md`, `scene-index.md`, `planet-region-map.md`, and this log. No raster, runtime, curriculum, readiness package, lore decision, hidden-vault material, commit, or push was created or changed.
+- **Validation:** all thirteen desktop/narrow target pairs remain byte-for-byte text-identical to the prior A2 lock, fit their layout spaces, and meet `44 x 44`; board sequence and predecessor flags remain present; local links resolve; stale A2-pending route/queue markers are removed; no active RP-002 production instruction retains intentional pixelation, nearest-neighbor, retro dithering, fixed-palette, or native/narrow-base requirements. First-person, no-protagonist/no-ship/no-occupant/no-human-UI, grayscale, reduced-motion, state-invariance, copy, ownership, and no-response gates remain explicit.
+- **Next recommended item:** Curriculum Checker Agent should perform A3 in the separate expedition interface and treat physical material/lighting observations as Scene evidence only, never Python or AI-901 mastery evidence.
+- **Unresolved risks:** no SC-03 raster exists. Premium approval still requires the full eight-pass image pipeline, high-resolution artifact cleanup, responsive gameplay crops, registered effects, reduced-motion stills, grayscale/thumbnail review, and provenance before integration.
+
 ## 2026-07-15 — Premium art quality ceiling
 
 - **Completed:** created the active premium production style guide and raised the visual target from general cinematic photorealism to feature-film environmental VFX credibility and flagship current-generation science-fiction game key art. Defined photographic composition, physically legible material families, Builder functional intelligence, region-specific quality bars, richness controls, and a mandatory eight-pass generation/editing pipeline.

@@ -18,7 +18,7 @@ Andromeda survey corridor
 │   └── Volcanic Habitation Vault
 │       ├── SC-01 City Overlook [historical reference / alien-function brief required]
 │       ├── SC-02 City Threshold [A2 brief / no final art]
-│       └── SC-03 Civic Record District [A2 brief / no final art]
+│       └── SC-03 Civic Record District [A2 photorealistic impact brief / no final art]
 └── Future survey worlds [locked]
     ├── Ecological continuity world
     ├── Memorial-scale world

@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 storyboard locked; no final art
+- **Production status:** Brief — A2 photorealistic impact review locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -25,22 +25,24 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 
 ## Composition and attention
 
-- **Camera:** first-person side-on three-quarter district view; low cavern horizon near `y=76`; no tactical isometric view.
+- **Camera:** first-person side-on three-quarter district view; moderate `28–32 mm` full-frame-equivalent overview lens, rectilinear structure, and low cavern horizon near layout `y=76`; no tactical isometric view or extreme wide-angle distortion. `10` uses a `45–55 mm` oblique raking detail; `20` uses `35–45 mm` with enough depth of field to hold the echo, coupling, and interlock together.
 - **Adjacency:** the already-lit SC-02 bridge leaves its lower-right crop and enters this view as a lower-left structural tail at `x=0..126, y=286..359`. Direct cut and shared cycle phase preserve the sense of one route.
 - **Primary landmark:** asymmetric near layered mass at `x=206..454, y=76..304`, wrapped around—not facing away from—a heat return.
 - **Secondary systems:** heat-return/maintenance fan `x=28..198, y=148..326`; distant scale echo `x=474..622, y=96..258`; separate closed interlock `x=410..566, y=112..286` on the detail board.
 - **Attention order:** near three-condition intersection -> heat/maintenance process -> distant echo -> closed interlock -> reversible bridge tail. The future-survey edge is quiet and never becomes a glowing exit.
-- **Quiet space:** preserve native `x=232..408, y=304..359` and narrow `x=112..208, y=132..179` for focus clarity.
+- **Quiet space:** preserve desktop layout `x=232..408, y=304..359` and narrow layout `x=112..208, y=132..179` as low-contrast, low-frequency calm regions. Photographic microdetail may remain only when it does not create a false hotspot.
 
 ## Visual evidence grammar
 
-- Fixed trace: shallow broken-relief groups with irregular interval clusters and one continuous substrate edge; no lines of glyphs or readable writing.
-- Later stewardship: one continuous darker laminate crosses the old groups obliquely, steps around preserved edges, and shows a newer joint rhythm.
-- Outlined gap: a double border encloses an unfilled interval over solid, same-value substrate. It is not dark depth, a door, socket, missing portrait, or aperture.
-- Closed identity layer: nested sealed interlock without a light well, handle, human front, screen, or request path.
+- Fixed trace: shallow broken-relief groups belong to one continuous aged technical substrate. Mineral residue, abrasion, rounded edges, shallow fractures, and raking-light contact shadows establish age; no line resolves into glyphs or readable writing.
+- Later stewardship: one compatible but visibly newer laminate crosses the old groups obliquely. Prepared keyways, changed roughness, thermal-stain boundaries, contact shadow, and a newer joint rhythm prove relative chronology while the layer steps around preserved edges.
+- Outlined gap: a double border encloses an unfilled interval over the same solid substrate. Dust, condensate, grain, reflected light, and heat stain continue across the interior plane, preventing a read as dark depth, door, socket, missing portrait, or aperture.
+- Closed identity layer: nested sealed interlock shows compression, pore treatment, contact wear, and thermal isolation without a light well, handle, human front, screen, or request path.
 - Function: pre-existing trace/environment input -> separation and alignment with later repair -> exterior provenance distinctions retained at two architectural scales -> heat returned and couplings serviced without exposing the closed layer.
 - Stewardship phases: charcoal foundation laminates; pale trace substrate and later extensions; darker violet/amber repair fabric and currently serviced couplings.
 - Keep preservation, computation, environmental regulation, maintenance routing, and coupled functions plausible. `Civic record` and `public evidence custody` remain Pilot language.
+- Lighting: geothermal return is the dominant motivated warm source; cooler cavern bounce and restrained practical emission reveal form without generic teal-orange grading. Reflections, contact shadows, condensation, vapor, and heat distortion follow the visible route. Fog, bloom, darkness, shallow focus, and grading never hide required evidence.
+- Scale echo: the far mass belongs to the same causal family but varies proportion, wear, repair era, and coupling context. Exact clones, mirrored repetitions, or generated decorative motifs fail the scene.
 
 ## Interaction map
 
@@ -66,24 +68,31 @@ The comparison and save controls belong to the compact interface below the world
 
 ## Concise asset brief
 
-- Three clean photorealistic 16:9 world masters, normally at least `1920 x 1080`: overview (`00/30/40/50`), near layer detail (`10`), and scale-echo/closed-boundary detail (`20`).
-- Responsive high-quality derivatives or crops preserve the exact narrow targets, material credibility, and near/far evidence relationship without deliberate pixelation.
-- Three registered animation families: heat/condensation, maintenance traffic, and restrained coupling exchange. One monotonic clock runs through inspection, save, reload, and return.
-- Reduced-motion stills retain heat-flow topology, one maintenance form beside the closed seam, and the far repetition. Motion never carries required evidence.
-- World assets contain no human UI. Existing interface systems own labels, status, save feedback, unchanged `continuation`, and next-survey marking.
-- Production uses cinematic photorealism, physically credible materials and lighting, high-frequency detail with a physical cause, clean responsive resampling, and artifact-free presentation. The `640 x 480` and `320 x 240` values remain interaction-layout coordinates only.
+- Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
+- Complete all eight premium-production passes before approval: varied visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay-fit review, registered state/animation production, and provenance delivery.
+- Deliver high-quality desktop and narrow derivatives/crops that preserve every locked target and calm region. If resampling weakens a required read, create a separate high-resolution art-directed derivative from the same approved composition—never a pixelated, stretched, or detail-fabricated fallback.
+- Three registered high-resolution effect families with explicit masks/depth support: heat/condensation, nonhumanoid maintenance traffic with coherent contact shadows/reflections, and restrained coupling exchange/local spill. One monotonic clock runs through inspection, save, reload, and return.
+- Reduced-motion stills retain heat-flow topology, one maintenance form beside—not entering—the closed seam, and the meaningful far repetition. Motion never carries required evidence.
+- Review package: grayscale/thumbnail sheets, desktop/narrow gameplay crops, full-size trace/stewardship/gap/interlock crops, registered overview difference masks, and artifact checks for pseudo-writing, faces, clones, melted joints, floating fragments, and incoherent lighting/reflections.
+- World assets contain no human UI. Existing interface systems own labels, status, save feedback, unchanged `continuation`, and next-survey marking. Preserve prompts, model/tool, source references, selection rationale, edits, masks, crops, dates, and approvals.
 
 ## Readability and validation gate
 
 - Grayscale distinction: fixed trace = broken shallow relief; stewardship = continuous crossing laminate; gap = double border over solid substrate; identity layer = nested sealed interlock.
 - Focus order: orientation -> near mass -> fixed trace -> stewardship -> gap -> distant echo -> closed identity -> optional maintenance -> comparison/save -> return -> completed LOOK-only direction.
-- World-only blink/byte comparison must find identical overview geometry at entry, completion, and saved return; animation clocks remain phase-continuous.
+- Entry, completion, and saved return use the same approved overview master, crop, exposure, material state, lighting causes, and effect masks. Registered-frame difference review may show only permitted time-sampled operational layers; clocks remain phase-continuous.
 - Reject any protagonist, hand, body, shadow, reflection, portrait, ship, occupant, human trace, human UI, readable inscription, screen, doorway, tomb, archive shelves, success glow, opening seam, moved maintenance route, or changed heat/light.
 - Copy stays inside A1 budgets and speaker ownership. Visuals do not make `civic record`, `public`, identity, gap purpose, or occupational function native fact.
 
 ## Locked and flexible
 
 - **Locked:** direct SC-02 adjacency; board order; three base compositions; target rectangles; near/far three-condition relation; separate closed interlock; no world delta; no successor route; world/interface separation.
-- **Flexible:** exact mass contour within bounds, impression rhythm, repair joints, maintenance anatomy/count, layer timing, and palette values within indigo/charcoal/muted violet with scarce amber/peach accents.
+- **Flexible:** exact mass contour within bounds, impression rhythm, compatible material families, repair joints, maintenance anatomy/count, effect timing, and restrained cinematic grade. City Beneath color continuity comes from motivated geothermal light, cavern bounce, and material response rather than a preset color recipe or generic neon.
 
-Production status remains **Brief**. This A2 pass creates no raster or production art.
+## Photorealistic impact validation
+
+- `PASS`: A1 age evidence, relative chronology, retained solid absence, separate closed boundary, causal operation, three stewardship eras, meaningful scale variation, state invariance, and artifact safety now have buildable photographic requirements.
+- `PASS`: board order, interaction rectangles, entry/exit state, ownership, copy, canon, first-person framing, no-protagonist/no-ship rule, and zero-city-response causality are unchanged.
+- `PASS`: the premium production package can be built from three high-resolution masters, responsive derivatives, registered effects, reduced-motion stills, evidence crops, difference masks, and provenance without Storyboarder creating final raster art.
+
+Production status remains **Brief**. This impact review creates no raster or production art.

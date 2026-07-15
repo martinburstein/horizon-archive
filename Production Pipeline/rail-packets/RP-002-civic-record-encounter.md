@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 PHOTOREALISTIC REFINEMENT COMPLETE; A2 IMPACT REVIEW PENDING`
+- Status: `IN DESIGN — A2 PHOTOREALISTIC IMPACT REVIEW COMPLETE; A3 PENDING`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -161,7 +161,7 @@ Review the existing RP-002 A2 boards and `SC-03` brief against the new A1 Photor
 
 ### Location and visual purpose
 
-- Status: `PASS — A2 COMPLETE; READY FOR CURRICULUM CHECKER A3`
+- Status: `PASS — A2 PHOTOREALISTIC IMPACT REVIEW COMPLETE; READY FOR CURRICULUM CHECKER A3`
 - Scene: `SC-03 — Civic Record District`, directly beyond `SC-02-40/50` at the far end of the already-lit bridge.
 - Functional identity: repeated exterior separation of fixed trace, later stewardship material, and deliberately bordered absence around heat-return and maintenance couplings. `Public evidence custody / civic record stewardship` remains a Pilot inference; preservation, computation, environmental regulation, maintenance routing, and coupled functions remain visually viable.
 - First frame: a first-person direct cut to a fan of low layered masses whose useful faces turn toward heat returns rather than the arriving bridge. Heat flow and maintenance forms are already mid-cycle. The predecessor bridge tail enters the lower-left crop only as existing Builder infrastructure and the reversible return.
@@ -206,19 +206,22 @@ First successful traversal is locked to:
 
 ### Composition, attention hierarchy, and functional evidence
 
-- Overview camera: first-person side-on three-quarter view with a low cavern horizon near `y=76`. The predecessor bridge tail enters at `x=0..126, y=286..359`; it is an incidental structural rib, not a human road, rail, platform, or doorway.
+- Overview camera: first-person side-on three-quarter view with a moderate `28–32 mm` full-frame-equivalent lens and a low cavern horizon near layout `y=76`. Preserve rectilinear structure without extreme wide-angle stretching. The predecessor bridge tail enters at `x=0..126, y=286..359`; it is an incidental structural rib, not a human road, rail, platform, or doorway.
+- Detail cameras: `SC-03-10` uses a normal `45–55 mm` equivalent oblique/raking view so trace depth, prepared joints, and same-plane gap evidence remain inspectable; `SC-03-20` uses a `35–45 mm` equivalent view with enough depth of field to hold the distant echo, environmental coupling, and closed interlock legible together. These are viewpoint changes, not physical state changes.
 - Primary landmark: near layered mass at `x=206..454, y=76..304`. Its asymmetric laminar shell wraps a heat return, so its orientation is visibly functional rather than front-facing.
 - Secondary systems: heat-return fan and maintenance couplings at `x=28..198, y=148..326`; distant scale echo at `x=474..622, y=96..258`; closed identity interlock on a separate flank at `x=410..566, y=112..286` in the detail board.
 - Attention order: near three-condition intersection -> heat-return/maintenance process -> distant echo -> closed interlock -> reversible bridge tail. The prospective next-survey edge remains a quiet fifth read and never becomes a glowing exit.
-- Native quiet zones: keep `x=232..408, y=304..359` low-detail for comparison/advance focus and `x=0..126, y=286..359` legible as the reversible return. The narrow boards preserve equivalent quiet bands at `x=112..208, y=132..179` and `x=0..56, y=136..179`.
-- Fixed trace treatment: shallow physical impressions with irregular interval groups and a continuous substrate edge. They may repeat spacing logic but may not form lines of pseudo-writing, faces, biographies, icons, or readable categories.
-- Later stewardship treatment: a darker, continuous laminated repair band crosses the earlier impressions at an oblique angle, steps around intact trace edges, and uses a newer joint rhythm. It overlays rather than erases.
-- Outlined gap treatment: the trace border continues around an unfilled interval over the same solid substrate. It is not dark depth, a doorway, an aperture, a missing portrait, a lit socket, or a selectable void.
-- Closed identity treatment: nested interlocking seams with no light well, handle, front, request path, or human-scale opening. Maintenance forms pass environmental couplings beneath it without crossing its seam.
+- Layout quiet zones: keep desktop `x=232..408, y=304..359` low-contrast and low-frequency for comparison/advance focus and `x=0..126, y=286..359` legible as the reversible return. The narrow layout preserves equivalent calm regions at `x=112..208, y=132..179` and `x=0..56, y=136..179`. Photographic microdetail may exist there only when it does not create a false hotspot.
+- Fixed trace treatment: shallow impressions belong to one continuous aged technical substrate. Mineral residue, abrasion, rounded edges, shallow fracture propagation, and raking-light contact shadow establish age. Irregular interval groups may repeat spacing logic but may not form pseudo-writing, faces, biographies, icons, or readable categories.
+- Later stewardship treatment: a compatible but visibly newer laminate crosses the earlier impressions at an oblique angle. Prepared keyways, distinct roughness, contact shadow, thermal-stain boundaries, and a newer joint rhythm prove relative chronology; the layer steps around surviving impressions instead of cosmetically covering or erasing them.
+- Outlined gap treatment: the trace border continues around an unfilled interval over the same solid substrate. Dust, condensate, surface grain, reflected light, and heat staining continue across the interior plane, making it unmistakably solid rather than dark depth, a doorway, an aperture, a missing portrait, a lit socket, or a selectable void.
+- Closed identity treatment: nested interlocking seams show compression, sealing, contact wear, pore treatment, and thermal isolation with no light well, handle, front, request path, or human-scale opening. Maintenance forms pass environmental couplings beneath it without crossing its seam.
 - Three operating scales: individual surface impressions and repair joints; near house-scale layered mass and couplings; district-wide repetition around the heat-return fan.
 - Three stewardship phases: deep charcoal foundational laminates; pale fixed-trace substrate and later mass extensions with changed edge rhythm; darker violet/amber repair fabric plus currently serviced heat couplings.
 - Functional chain: pre-existing trace and environmental input -> physical separation/alignment with later repair material -> exterior provenance distinctions retained at multiple scales -> heat returned and couplings serviced without exposing the closed layer.
 - Alternatives retained: the same geometry can still support preservation, computation, environmental regulation, maintenance routing, or coupled functions. No visual makes `civic record` a native name or solves the outlined gap.
+- Lighting and atmosphere: geothermal return is the dominant motivated warm source; cooler cavern bounce and restrained practical emission reveal topology without generic teal-orange grading. Contact shadow, reflection, condensation, vapor, and heat distortion must agree with geometry and flow. Shadow detail stays open; bloom, fog, shallow focus, or darkness may not hide required evidence.
+- Scale echo: the far mass repeats the same causal family through altered proportions, repair era, wear, and coupling context. Exact cloned geometry or repeated generation artifacts fail the board even if the silhouette is attractive.
 
 ### Interaction zones and narrow evidence
 
@@ -244,18 +247,19 @@ The `SC-03-30` comparison and save controls belong to the existing compact `640 
 
 ### Asset brief
 
-- Three clean photorealistic 16:9 world masters, normally at least `1920 x 1080`: overview base shared by `00/30/40/50`, near exposed-layer detail for `10`, and scale-echo/closed-boundary detail for `20`.
-- Responsive high-quality derivatives or crops match the exact target map while preserving trace groups, repair joints, material response, and near/far evidence. Never introduce deliberate pixelation or retro filtering.
-- Three transparent animation families with native and purpose-authored narrow assets: heat-return shimmer/condensation, low maintenance-form traffic, and restrained coupling exchange. All use one monotonic scene clock across boards, save, reload, and return.
-- Reduced-motion stills must retain heat-flow topology, one maintenance form held beside (not at or entering) the closed seam, and the far repetition. Motion supplies atmosphere only.
+- Deliver three lossless photorealistic 16:9 world masters: registered overview for `00/30/40/50`, near-layer detail for `10`, and scale-echo/closed-boundary detail for `20`. Retain the largest clean sources; prefer `3840 x 2160` or larger when supported and accept no master below `1920 x 1080`.
+- Run all three views through the Premium Art Style Guide's eight passes: visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay fit, registered state/animation production, and final provenance delivery. A first attractive generation is not an approved asset.
+- Deliver high-quality desktop and narrow derivatives/crops that preserve the exact interaction rectangles and calm regions. If a simple photographic resample weakens a required read, author a separate high-resolution responsive derivative from the same approved composition rather than pixelating, stretching, or fabricating detail.
+- Build three registered high-resolution effect families with explicit masks/depth support: heat distortion/condensation, low maintenance traffic with coherent contact shadows/reflections, and restrained coupling exchange/local light spill. All use one monotonic scene clock across boards, save, reload, and return.
+- Deliver a reduced-motion still for each view that retains heat-flow topology, one maintenance form beside—not entering—the closed seam, and the meaningful far repetition. Motion supplies atmosphere only.
+- Supply a review package with grayscale and thumbnail contact sheets, desktop/narrow gameplay crops, full-size evidence crops for trace/stewardship/gap/interlock, registered overview difference masks, and an artifact checklist covering pseudo-writing, accidental faces, cloned geometry, melted joints, floating fragments, and incoherent light/reflection.
 - Human comparison labels, status, focus, saved evidence, unchanged `continuation`, and next-survey marking use the separate existing interface system. No expedition map, cursor label, icon, border, screen, or text is baked into the world assets.
-- Historical `Concept Art/Underground City.png` supplies only cavern scale and restrained warm/cool depth. Its people, suits, rails, platforms, domes, buildings, streets, baked panel, and composition are prohibited.
-- Final assets use cinematic photorealism, physically credible materials and lighting, stable registered viewpoints, artifact-free high-resolution detail, and quality responsive resampling. Existing canvas dimensions remain interaction-layout coordinates only.
+- Preserve prompt/model/tool, source references, selection rationale, edit history, masks, crops, dates, and approvals. `Concept Art/Underground City.png` may inform cavern scale and restrained warm/cool depth only; its people, suits, rails, platforms, domes, buildings, streets, baked panel, and composition are prohibited.
 
 ### Readability, accessibility, and continuity
 
 - Grayscale identities are structural: fixed trace = shallow broken-relief groups; stewardship = continuous dark crossing laminate; gap = double border around same-value solid substrate; closed identity = nested sealed interlock. Hue and motion are supplementary.
-- Entry, completion, and saved return must pass a world-only byte/blink comparison for identical overview geometry. Animation phase continuity, not a reset first frame, must survive save and return.
+- Entry, completion, and saved return must use the same approved overview master, crop, exposure, material state, lighting causes, and effect masks. A registered-frame difference review may show only the permitted time-sampled operational layers; animation phase continuity, not a reset first frame, must survive save and return.
 - Focus order: orientation -> near mass -> fixed trace -> later stewardship -> outlined gap -> distant echo -> closed identity -> optional maintenance -> comparison/save -> return. The next-survey LOOK target follows completion status and never acts as an exit.
 - Copy remains in the A1 speaker lanes and budgets. Visual labels never merge Scene observation with Pilot inference or elevate `civic record`, `public`, `identity`, or any occupational reading into native fact.
 - First-person framing excludes protagonist, hands, body, shadow, reflection, portrait, ship, visible occupant, human trace, and human UI from every world plate and animation frame.
@@ -265,15 +269,16 @@ The `SC-03-30` comparison and save controls belong to the existing compact `640 
 ### Storyboarder decisions and sign-off
 
 - **Locked:** scene ID and direct adjacency; exact board order; three-base-plate plan; first-person/no-human-world framing; three-condition near relation; far scale echo; separately closed identity interlock; no physical city delta; no successor route; exact native/narrow target rectangles; interface/world separation.
-- **Flexible:** exact mass contour within the locked bounds, impression group rhythm, maintenance-form anatomy/count, repair-joint shapes, heat/coupling timing, and palette values within indigo/charcoal/muted-violet with scarce amber/peach accents.
+- **Flexible:** exact mass contour within the locked bounds, impression group rhythm, compatible material families, maintenance-form anatomy/count, repair-joint shapes, heat/coupling timing, and restrained cinematic grade. City Beneath color continuity must arise from motivated geothermal light, cavern bounce, and material response rather than a preset color recipe or generic neon.
 - Framing validation: `PASS` — no protagonist, ship, occupant, portrait, human trace, or human UI belongs in world assets.
 - Continuity validation: `PASS` — starts only from both RP-001 flags, returns reversibly, preserves `continuation`, and keeps `city_state_delta=None`.
-- Production feasibility: `PASS` — three native bases, three narrow bases, three restrained layer families, separate interface states, exact minimum-size targets, and invariant completion art are sufficient for A5 scaffolding without production art.
+- Photorealistic impact validation: `PASS` — the A1 material-age, relative-chronology, retained-absence, closed-boundary, causal-operation, three-era, scale-variation, state-invariance, and artifact-safety requirements are now explicit in the boards without changing sequence, rectangles, copy, canon, or causality.
+- Production feasibility: `PASS` — three high-resolution masters, responsive art-directed derivatives, three registered effect families, reduced-motion stills, evidence crops, difference masks, and provenance are sufficient for later construction without final raster art in A2.
 - Next pass: Curriculum Checker Agent performs A3 on this same packet without changing the locked visual causality or treating observation as access, consent, identity, or city response.
 
 ### Exact Curriculum Checker handoff
 
-Perform A3 on `RP-002 — Civic Record Encounter` using the locked `SC-03-00 -> 10 -> 20 -> 30 -> 40` sequence and `SC-03-50` saved return. Select the smallest defensible Python skill and current AI-901 check that can operate entirely in the separate human expedition interface after the required near-trace, stewardship, outlined-gap, distant-echo, and closed-boundary observations. Preserve `cityThresholdAnchorRecorded=true`, `civicDistrictRouteAvailable=true`, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, cleared working notes after save, the closed identity-bearing layer, and invariant world geometry/animation. Do not count looking, navigation, color, timing, Builder motion, or city state as learning evidence; do not require access, identity inference, consent, service calls, external authority, a physical response, or a successor claim type. Keep `civic record` and `public evidence custody` Pilot-owned and provisional, and return an exact mastery/remediation/transfer contract that Gameplay Master can place in `SC-03-30` without changing any locked world plate or causality.
+Perform A3 on `RP-002 — Civic Record Encounter` using the locked `SC-03-00 -> 10 -> 20 -> 30 -> 40` sequence and `SC-03-50` saved return. Select the smallest defensible Python skill and current AI-901 check that can operate entirely in the separate human expedition interface after the required near-trace, stewardship, outlined-gap, distant-echo, and closed-boundary observations. Preserve `cityThresholdAnchorRecorded=true`, `civicDistrictRouteAvailable=true`, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, cleared working notes after save, the closed identity-bearing layer, and invariant world geometry/animation. Treat material age, prepared joints, dust/condensate continuity, thermal behavior, photographic realism, grayscale recognition, looking, navigation, color, timing, Builder motion, and city state as Scene evidence only—not scored Python or AI-901 evidence. Do not require access, identity inference, consent, service calls, external authority, a physical response, or a successor claim type. Keep `civic record` and `public evidence custody` Pilot-owned and provisional, and return an exact mastery/remediation/transfer contract that Gameplay Master can place in `SC-03-30` without changing any locked world plate, registered effect, material state, lighting cause, or causality.
 
 ## Dependencies and open risks
 
