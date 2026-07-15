@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 COMPLETE`
+- Status: `IN DESIGN — A1 PHOTOREALISTIC REFINEMENT COMPLETE; A2 IMPACT REVIEW PENDING`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -60,6 +60,21 @@ Determine what kinds of claim the exposed civic surface keeps separate, without 
 - `PROVISIONAL PILOT OCCUPATION`: public evidence custody or civic record stewardship. Viable alternatives include preservation, computation, maintenance routing, or several inseparable functions.
 - `HARD WITHHOLDING`: native Builder categories, represented identity, operator, intended audience, ultimate purpose, relationship to `continuation`, and any connection to consciousness.
 
+### Photorealistic surface-evidence contract
+
+This refinement adds no new canon and assigns no composition work. It defines the physically caused evidence that premium photorealistic production must preserve so the existing Lore Track remains readable without labels, symbols, or exposition.
+
+- `FIXED TRACE — AGE EVIDENCE`: the impressions belong to one continuous load-bearing substrate. Mineral residue, abrasion, edge rounding, and shallow fracture behavior may establish age, but the marks cannot align into writing, portraits, icons, or a biography.
+- `LATER STEWARDSHIP — RELATIVE CHRONOLOGY`: the crossing laminate must show a materially newer roughness, joint preparation, contact shadow, thermal stain boundary, or compatible keyed seam. It steps around surviving impressions rather than cosmetically covering or erasing them.
+- `OUTLINED GAP — RETAINED ABSENCE`: the bordered interval remains solid substrate, not a hole. Continuous dust, condensate, reflected light, heat staining, or surface grain must cross its interior so photorealism cannot turn it into a door, socket, missing image, or inviting void.
+- `CLOSED IDENTITY INTERLOCK — SEPARATE BOUNDARY`: compression, sealing, contact wear, and thermal isolation may prove that the interlock is physically distinct. It has no handle, eye-level face, light well, request affordance, readable label, or implied response channel.
+- `OPERATING DISTRICT — CAUSAL SUPPORT`: heat distortion, condensate, deposition, coupling wear, and maintenance contact must follow the existing environmental route. They establish continued operation, never attention, occupancy, optimization for the Pilot, or a reaction to inspection.
+- `THREE STEWARDSHIP ERAS`: inherited foundation material, a compatible later crossing layer, and currently serviced couplings must remain distinguishable through material behavior and junction logic. Age or repair shows endurance and advancement beyond 2026 humanity, not primitiveness or technical parity.
+- `SCALE ECHO`: the distant relation repeats the same causal family with meaningful physical variation. Exact cloned geometry, generation repetition, or decorative motif is not evidence and must be rejected.
+- `LIGHT AND ATMOSPHERE`: every highlight, emission, reflection, shadow, vapor plume, and heat shimmer requires a visible cause. Fog, darkness, bloom, shallow focus, or grading may not conceal the three-condition relation or manufacture mystery through unreadability.
+- `STATE INVARIANCE`: entry, completion, and return preserve the same materials, deposits, repair edges, closed seams, illumination causes, and maintenance routes. Only the separate expedition interface may report saved progress.
+- `ARTIFACT SAFETY`: pseudo-writing, accidental faces, humanoid silhouettes, reflected people, familiar gravestone/office/museum cues, melted joints, floating fragments, and incoherent shadows are both quality failures and lore violations.
+
 ### Pilot inferences
 
 - `SUPPORTED`: The exterior keeps at least three visually distinct evidence conditions from collapsing into one surface.
@@ -93,13 +108,13 @@ Determine what kinds of claim the exposed civic surface keeps separate, without 
 
 ### Optional hotspot copy
 
-- **DISTRICT ORIENTATION:** "The masses face heat returns, not my route. Their useful side may not be the side I can see."
-- **FIXED TRACE BAND:** "Shallow impressions repeat with exact spacing. Their edges predate the darker material crossing them."
-- **LATER STEWARDSHIP BAND:** "A later layer preserves the older impressions instead of filling them."
-- **OUTLINED GAP:** "The border continues around an empty interval. The absence is retained as part of the pattern."
-- **CLOSED IDENTITY APERTURE:** "The seam is intact and unlit. No visible control, request path, or human-scale opening faces me."
-- **MAINTENANCE COUPLING:** "Low machines exchange heat beneath the layered mass, then continue past its closed seam."
-- **DISTANT SCALE ECHO:** "A farther mass repeats the three-part separation at architectural scale. Shared rigor does not prove shared purpose."
+- **DISTRICT ORIENTATION:** "Condensation gathers on heat-facing shells, not along my route. Their useful side may be elsewhere."
+- **FIXED TRACE BAND:** "Mineral dust softens the impressions. Their chipped edges continue beneath the darker crossing layer."
+- **LATER STEWARDSHIP BAND:** "The darker laminate keys into older seams, stepping around intact impressions instead of burying them."
+- **OUTLINED GAP:** "The double border encloses solid substrate. Dust and heat staining continue across the empty interval."
+- **CLOSED IDENTITY APERTURE:** "Compression marks ring the sealed interlock. No handle, light well, request path, or human-scale opening faces me."
+- **MAINTENANCE COUPLING:** "Condensate beads along serviced couplings. Low machines pass beneath the sealed interlock without touching it."
+- **DISTANT SCALE ECHO:** "Atmospheric haze separates the farther mass. Its relief, crossing laminate, and bordered interval repeat without exact cloning."
 
 ### Mystery protections
 
@@ -131,11 +146,16 @@ Determine what kinds of claim the exposed civic surface keeps separate, without 
 
 ### Lore Builder sign-off
 
-- Status: `PASS — A1 COMPLETE; READY FOR STORYBOARDER A2`
+- Status: `PASS — A1 PHOTOREALISTIC REFINEMENT COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
 - Continuity: begins only from RP-001's completed expedition anchor and reversible route, preserves `continuation` and `city_state_delta=None`, and does not replay or mutate the threshold.
 - State transition: `RP-001 anchor complete -> cross already-lit route -> observe repeated provenance separation -> save bounded expedition comparison -> retain reversible return and mark next survey direction`, with zero city delta.
 - Spoiler safety: the beat exposes record structure rather than identity, motive, native category, or central answers.
 - Ownership: every physical fact is Scene-owned, every saved change is expedition-owned, and every civic/public/occupational reading remains Pilot-owned and provisional.
+- Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts.
+
+### Exact Storyboarder handoff — photorealistic impact review
+
+Review the existing RP-002 A2 boards and `SC-03` brief against the new A1 Photorealistic Surface-Evidence Contract without changing board order, interaction rectangles, entry/exit state, or world causality. Make fixed trace readable through continuous aged substrate; make later stewardship readable through compatible newer material and prepared joints; make the outlined gap unmistakably solid through continuous dust, condensate, light, heat stain, or grain; and make the closed interlock physically separate without a handle, screen, light well, or request affordance. Preserve the three stewardship eras, causally routed heat/condensation/maintenance evidence, meaningful rather than cloned scale repetition, identical entry/completion/return materials and lighting causes, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Keep all human labels and saved progress outside the world plate. Reject pseudo-writing, faces, humanoid or reflected figures, familiar tomb/office/museum cues, melted or floating geometry, incoherent reflections/shadows, generic neon, and atmosphere used to hide evidence. Do not add a person, identity claim, native label, successor claim type, consent event, access event, or new lore; return the updated A2 validation and the exact Curriculum Checker handoff on this same packet.
 
 ## Storyboard Track — Storyboarder
 

@@ -6,7 +6,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO PARTIAL / RELEASE BLOCKED ON PRODUCTION ART`
-- Team 1 railhead: `RP-002 — A2 complete; A3 pending`
+- Team 1 railhead: `RP-002 — A1 photorealistic refinement complete; A2 impact review pending`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO PARTIAL — PHOTOREALISTIC ART BLOCKED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL STAGING PASS` | Functional gates pass. Pixel-specific `RP001-AESTH-002` is retired and the earlier occupant raster is removed. `RP001-AESTH-004` now blocks release until the archived pixel-styled fallbacks are replaced by three approved high-resolution photorealistic masters and registered effects. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A2 COMPLETE; A3 PENDING` | `NOT READY` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | SC-03 directly inherits the already-lit bridge and both RP-001 flags; near/far provenance separation, closed identity interlock, null city delta, invariant world states, and no-response/consent boundary are locked |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A1 PHOTOREFINEMENT COMPLETE; A2 IMPACT REVIEW PENDING` | `NOT READY` | `LORE LOCKED — PHYSICAL EVIDENCE REFINED` | `A2 IMPACT REVIEW` | `PENDING` | `PENDING` | `PENDING` | `NOT STARTED` | Preserve both RP-001 flags, near/far provenance separation, closed identity interlock, null city delta, invariant world states, and no-response/consent boundary; photoreal materials must clarify causality without adding canon |
 
 ## Whole-story coverage gate
 
