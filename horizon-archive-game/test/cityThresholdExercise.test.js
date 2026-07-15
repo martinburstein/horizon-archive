@@ -1,11 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import {
   CITY_THRESHOLD_CONTINUATION,
   anchorPacketReference,
   anchorProbeChecks,
   cityThresholdBoards,
   cityThresholdHotspots,
+  getCityThresholdLayout,
+  projectCityThresholdRect,
   commitCityThresholdAnchor,
   createCityThresholdSave,
   cum01Forms,
@@ -20,6 +23,10 @@ import {
   withCum01Result,
   withSafetyExplanation,
 } from "../src/cityThresholdExercise.js";
+import { getCanonicalGameFrame } from "../src/canonicalFrame.js";
+
+const cityCss = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+const cityComponent = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
 
 const correctAnchorExplanation = {
   list_role: "ordered observation collection",
@@ -144,4 +151,42 @@ test("resume returns to entry, first incomplete scored boundary, or saved overvi
   const pending = sanitizeCityThresholdSave({ ...createCityThresholdSave(), checkpoint: "python_pending" });
   assert.equal(getCityThresholdResumeBoard(pending), "SC-02-30");
   assert.equal(getCityThresholdResumeBoard(commitCityThresholdAnchor(completeEvidence())), "SC-02-50");
+});
+
+test("RP-001 child layout derives from the settled canonical-frame layout instead of host media queries", () => {
+  assert.match(cityCss, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-threshold-screen \{ width: 320px; height: 240px; \}/);
+  assert.match(cityCss, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-world \{ width: 320px; height: 180px; \}/);
+  assert.doesNotMatch(cityCss, /@media \(max-width: 639px\), \(max-height: 479px\)/);
+  assert.match(cityCss, /\.city-threshold-screen \{[\s\S]*?overflow: clip;/);
+  assert.match(cityCss, /\.city-world \{[\s\S]*?overflow: clip;/);
+
+  for (const [hostWidth, hostHeight] of [[640, 480], [320, 240]]) {
+    const parent = getCanonicalGameFrame(hostWidth, hostHeight);
+    const child = getCityThresholdLayout(parent.layout);
+    assert.equal(parent.layout, "narrow");
+    assert.deepEqual(child, { width: parent.width, height: parent.height, worldHeight: parent.worldHeight, interfaceHeight: parent.interfaceHeight });
+  }
+});
+
+test("settled completed and reload controls plus focused route remain inside both exact viewports", () => {
+  assert.match(cityComponent, /return <CityHotspot rect=\{cityThresholdHotspots\[board\]\.forward\} label="ENTER CIVIC DISTRICT"/);
+  assert.match(cityComponent, /<button onClick=\{onReturnToCredits\}>RETURN TO PROLOGUE CREDITS<\/button>/);
+
+  for (const [hostWidth, hostHeight] of [[640, 480], [320, 240]]) {
+    const parent = getCanonicalGameFrame(hostWidth, hostHeight);
+    const child = getCityThresholdLayout(parent.layout);
+    const origin = {
+      x: (hostWidth - parent.renderedStageWidth) / 2 + parent.bezel.left * parent.scale,
+      y: (hostHeight - parent.renderedStageHeight) / 2 + parent.bezel.top * parent.scale,
+    };
+    const focusedForward = projectCityThresholdRect(cityThresholdHotspots["SC-02-50"].forward, parent.layout, parent.scale, origin);
+    const interfacePanel = projectCityThresholdRect({
+      canonical: [0, child.worldHeight, child.width, child.interfaceHeight],
+      narrow: [0, child.worldHeight, child.width, child.interfaceHeight],
+    }, parent.layout, parent.scale, origin);
+    for (const rect of [focusedForward, interfacePanel]) {
+      assert.ok(rect.x >= 0 && rect.y >= 0);
+      assert.ok(rect.right <= hostWidth && rect.bottom <= hostHeight);
+    }
+  }
 });

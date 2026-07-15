@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `BUG REPAIR` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent — `bug-repair` mode | `RP001-P1-001`: exact `640 × 480` narrow-parent/canonical-child mismatch clips the interface and focused forward route; production scene art remains rough staging evidence | Repair `RP001-P1-001`, add settled exact-viewport browser coverage, rebuild, and reload `/?staging=rp001` |
+| 1 | `RP-001` | `AESTHETIC REVIEW` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Aesthetic Agent | Functional blocker `RP001-P1-001` resolved and demo reloaded; `RP001-AESTH-001` rough plate remains | Review the repaired live route as one scene; do not reopen the resolved frame defect unless reproduced |
 
 ## Current-demo quality lane
 
@@ -29,4 +29,4 @@ The required pass order is Player Agent, shared Coder Agent bug repair and reloa
 
 | Priority | Finding | Evidence | Status | Next owner |
 |---:|---|---|---|---|
-| 1 | `RP001-P1-001` — City Threshold canonical frame clips required controls at exact `640 × 480` | `playtest/WORK_LOG.md`; `demo-increments/DI-001-city-threshold.md` | `BUG REPAIR` | Coder Agent — `bug-repair` mode |
+| 1 | `RP001-P1-001` — City Threshold canonical frame clipped required controls at exact `640 × 480` | `playtest/WORK_LOG.md`; `demo-increments/DI-001-city-threshold.md` | `DEMO RELOADED — RESOLVED` | Aesthetic Agent |

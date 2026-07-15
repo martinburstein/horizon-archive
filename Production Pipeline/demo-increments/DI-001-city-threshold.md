@@ -6,7 +6,7 @@
 - Working cycle: 1
 - Status: `IN DEMO — PARTIAL`
 - Starting commit: `dc2d825`
-- Ending commit: `dc2d825` (Player documentation/evidence changes remain uncommitted)
+- Ending commit: `3145e44 + uncommitted W2 repair` (coordinator owns Git)
 - Playable URL: `http://127.0.0.1:4173/?staging=rp001`
 - Team 1 railhead at review: `RP-002 — seeded; A1 pending`
 - Team 2 live-demo position before increment: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
@@ -14,7 +14,7 @@
 
 ## Player-visible delta
 
-The protected route now lets a player cross from accepted prologue credits into the City Threshold, compare the maintenance/map and environmental/record boundaries, complete the PY-020 local-record probe and CUM-01 gate, record an expedition-only anchor, reload into `SC-02-50`, and expose the reversible civic-district route without a physical city response. Exact `640 × 480` presentation is not release-ready because the lower interface and forward control are clipped.
+The protected route now lets a player cross from accepted prologue credits into the City Threshold, compare the maintenance/map and environmental/record boundaries, complete the PY-020 local-record probe and CUM-01 gate, record an expedition-only anchor, reload into `SC-02-50`, and expose the reversible civic-district route without a physical city response. W2 repaired the exact `640 × 480` parent/child layout mismatch; the entire world and interface plus focused forward/return controls now remain visible at both exact viewports.
 
 ## Five-minute demonstration path
 
@@ -36,15 +36,16 @@ The protected route now lets a player cross from accepted prologue credits into 
 
 ## Coder pass 1 — bug repair and reload
 
-- Repaired issue IDs: Pending `RP001-P1-001`.
-- Runtime behavior changed: Pending.
-- State/save changes: None requested.
-- Recovery behavior: Preserve the verified checkpoint behavior.
-- Files/systems: Expected narrow scope is canonical frame selection and RP-001 narrow-layout selectors only.
-- Regression coverage: Add rendered browser assertions for settled `640 × 480` and `320 × 240` containment and visible focus.
-- Remaining known bugs: `RP001-P1-001`.
-- Build identity: Pending.
-- Demo reload confirmed: Pending.
+- Repaired issue IDs: `RP001-P1-001 — RESOLVED`.
+- Runtime behavior changed: RP-001 no longer chooses canonical/narrow child sizing from host media queries. Its world, interface, hotspots, overlay, and typography now derive from the settled parent `.canonical-game-frame[data-canonical-layout]`. RP-001 clipping containers use non-scrollable clipping so keyboard focus cannot shift the authored world internally.
+- State/save changes: None. The completed staging save still restores `SC-02-50`, both atomic flags, unchanged `continuation`, and `cityStateDelta:null`.
+- Recovery behavior: The W1 checkpoint/reload contract is unchanged; reload through accepted credits restored `SC-02-50` and the enabled route.
+- Files/systems: `src/styles.css`, `src/cityThresholdExercise.js`, and `test/cityThresholdExercise.test.js` only, plus pipeline/work-log records.
+- Regression coverage: Added deterministic parent/child layout agreement, exact frame/world/interface projection, completed/reload forward and return containment, focus containment, and non-scrollable focus clipping at exact `640 × 480` and `320 × 240`.
+- Browser evidence: settled `640 × 480` uses matching narrow parent/child at scale `1.983`; child `x=2.72..637.27, y=2.05..477.95`, world bottom `358.98`, interface bottom `477.95`, focused route `x=494.48..637.25, y=271.72..358.97`, return `x=415.19..625.38, y=369.91..413.53`. Exact `320 × 240` remains `x=0..320, y=0..240`; focused route remains exactly `x=248, y=136, w=72, h=44`, return is `x=208..314, y=186..208`, and world scroll remains `0,0`.
+- Remaining known bugs: None from W1. `RP001-AESTH-001` remains reserved for W3 and was not changed.
+- Build identity: base `3145e44` plus uncommitted W2 repair; production assets `index-CPJG972y.js` and `index-EJuHXqOV.css`.
+- Demo reload confirmed: `YES — rebuilt preview listening at http://127.0.0.1:4173/?staging=rp001`; browser console warnings/errors: none.
 
 ## Aesthetic Agent review
 
@@ -55,7 +56,7 @@ The protected route now lets a player cross from accepted prologue credits into 
 - Hierarchy and unwanted emphasis: Pending.
 - Composition/palette/contrast: Pending.
 - Seams/clipping/stretching/aspect ratio: Pending.
-- First-person and `640 × 480` findings: Rough plate contains visible suited figures; canonical crop is owned by `RP001-P1-001` first.
+- First-person and `640 × 480` findings: W2 frame containment is resolved. Rough plate contains visible suited figures and remains W3 review scope.
 - Animation invariants: Player observed unchanged city status through navigation, failure, confirmation, and reload; live reduced-motion emulation remains pending.
 - Builder richness/functional strangeness: Pending production-art review.
 - Accepted findings and acceptance checks: Pending.
@@ -75,44 +76,44 @@ The protected route now lets a player cross from accepted prologue credits into 
 ## Coordinator release gate
 
 - Loaded puzzle path: Complete in W1.
-- Player bug disposition: `RP001-P1-001 — OPEN`.
+- Player bug disposition: `RP001-P1-001 — RESOLVED IN W2; coordinator recheck pending`.
 - Aesthetic finding disposition: `RP001-AESTH-001 — RESERVED FOR W3`.
-- Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 FAIL`.
-- Keyboard/focus: Required controls activate by Enter, but canonical focus is offscreen under `RP001-P1-001`.
+- Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 PASS` for W2 layout/containment. Production art remains W3 scope.
+- Keyboard/focus: Forward and return controls remain fully visible when focused at both exact viewports; Enter activation works and focus cannot scroll the world internally.
 - Names/errors/live regions: Persistent ownership/status copy present; no runtime error observed.
 - Reduced motion/color independence: CSS contains a reduced-motion stop rule; live emulation still pending.
 - Target size/reflow: Narrow forward target is exactly `72 × 44`; canonical target is clipped by the frame defect.
 - Privacy/recovery: PY working source cleared on reload; bounded `10/10` evidence resumed; final reload restored `SC-02-50`.
-- Manual checks remaining: W2 live repair verification, reduced-motion emulation, forced colors, screen reader, switch control, and W3 art review.
+- Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, and W3 art review.
 - Verdict: `REVISE`
 
 ## Validation
 
-- Focused tests: `node --test test/cityThresholdExercise.test.js` — `7/7 PASS`.
-- Full game suite: Not rerun in W1 strict scope; A5 handoff recorded `242/242 PASS`.
+- Focused tests: `node --test test/cityThresholdExercise.test.js test/canonicalFrame.test.js` — `10/10 PASS`.
+- Full game suite: W2 rerun `244/244 PASS`.
 - Curriculum validators: PY-020 visible failure `1/10`, repair `10/10`, CUM primary miss -> mapped `L-05-07` remediation -> blank primary `16/16` -> blank transfer `16/16` -> claim boundary pass.
 - Art builders/invariants: Not run in W1.
-- Production build: Preview rebuilt at `dc2d825` before W1; no production changes.
-- Browser/E2E: Natural RP-001 browser run completed; no full legacy E2E rerun in the strict W1 pass.
+- Production build: W2 build passed; preview rebuilt from base `3145e44` plus uncommitted repair, bundle `index-CPJG972y.js` / `index-EJuHXqOV.css`.
+- Browser/E2E: W2 live completed-save/reload containment and keyboard-focus checks passed at exact `640 × 480` and `320 × 240`; no full legacy title-to-credits E2E rerun was needed for the isolated CSS repair.
 - Runtime errors: None observed.
 
 ## Known limitations
 
-- `RP001-P1-001` blocks canonical exact-viewport acceptance.
+- `RP001-P1-001` is resolved; coordinator release validation remains pending.
 - `RP001-AESTH-001` remains a known rough-staging art limitation.
 - Real assistive-technology and forced-color checks remain manual.
 
 ## Packet disposition
 
 - Result: `IN DEMO — PARTIAL`
-- Reason: Functional learning/state path completes and resumes, but exact `640 × 480` presentation hides required controls.
-- Team 2 live-demo position after disposition: `RP-001 — BUG REPAIR`
+- Reason: Functional learning/state path completes and resumes and the W1 frame blocker is resolved; production-art and Aesthetic review gates remain before acceptance.
+- Team 2 live-demo position after disposition: `RP-001 — AESTHETIC REVIEW`
 - Ordered Advance lead after disposition: `1 packet — RP-002 seeded`
 - `STORY_RAIL_MAP.md` updated: `YES — W1 bug-repair state`
-- Follow-up packet or defect: `RP001-P1-001`
+- Follow-up packet or defect: `RP001-AESTH-001 — W3 review`
 
 ## Git and demo update
 
 - Checkpoint commits: None; coordinator owns Git.
 - `HEAD == origin/main`: Not asserted by Player Agent; tested `HEAD` is `dc2d825`.
-- Playable server updated: Rebuilt preview running at port `4173`.
+- Playable server updated: W2 production build rebuilt and reloaded at port `4173`.

@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2 handoff: RP-001 settled frame containment
+
+- **Mode:** `bug-repair` for W2 only.
+- **Resolved:** `RP001-P1-001`. RP-001 now derives all narrow child geometry from the settled canonical-frame layout attribute instead of an independent host media query. The frame selector itself and all accepted-demo layouts remain unchanged. Non-scrollable clipping also prevents keyboard focus from shifting the already-contained world at exact narrow size.
+- **Preserved contracts:** Exact A2 canonical/narrow rectangles, `SC-02-00 -> 10 -> 20 -> 30 -> 40/50`, PY-020/CUM-01 evidence, atomic expedition flags, `continuation`, `cityStateDelta:null`, checkpoint/reload behavior, reduced-motion rule, zero city response, and the known rough plate are unchanged.
+- **Files changed:** `src/styles.css`, `src/cityThresholdExercise.js`, `test/cityThresholdExercise.test.js`, `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, `../Production Pipeline/STORY_RAIL_MAP.md`, and this work log.
+- **Validation:** Focused canonical/RP-001 tests passed **10/10**; full game suite passed **244/244**; production build passed with the existing chunk advisory. Live completed-save/reload checks passed at exact `640 × 480` and `320 × 240`: parent/child layout agrees, page/frame containment is exact, world and lower interface are wholly visible, route and return focus remain in-view, the narrow route remains exactly `248,136,72,44`, world scroll remains `0,0`, and the browser reported no warnings/errors.
+- **Demo reload:** Rebuilt preview is live at `http://127.0.0.1:4173/?staging=rp001`; build is base `3145e44` plus uncommitted W2 repair, bundle `index-CPJG972y.js` / `index-EJuHXqOV.css`.
+- **Remaining:** `RP001-AESTH-001` rough-plate review and manual reduced-motion/forced-colors/screen-reader/switch-control checks remain W3/coordinator scope. No art, gameplay, curriculum, save, or evidence content changed.
+- **Handoff:** `Aesthetic Agent W3: review the rebuilt RP-001 route at http://127.0.0.1:4173/?staging=rp001 using build 3145e44 + uncommitted W2 repair (index-CPJG972y.js / index-EJuHXqOV.css). Start from the accepted prologue-complete save, reopen the completed staging checkpoint, and review the whole repaired scene at exact 640×480 and 320×240. Treat RP001-P1-001 as resolved unless reproduced: the settled parent/child layout agrees, the complete world/interface is contained, route and return focus are visible, and narrow focus does not scroll the world. Own RP001-AESTH-001 and assess the rough plate, crop/scale, pixel density, hierarchy, visual distractions, first-person violations, richness, seams, and reduced-motion presentation. Do not change gameplay, evidence, save, atomic flags, continuation, null city delta, or zero-city-response behavior.`
+- **Status:** W2 complete; demo reloaded; ready for Aesthetic Agent W3.
+
 ## 2026-07-15 — Coder A5 handoff: protected RP-001 City Threshold first pass
 
 - **Mode:** `advance` for A5 only.

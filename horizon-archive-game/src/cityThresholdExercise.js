@@ -5,6 +5,28 @@ export const CITY_THRESHOLD_SAVE_KEY = "horizon-archive-rp001-staging-v1";
 export const CITY_THRESHOLD_PACKET_ID = "RP-001";
 export const CITY_THRESHOLD_CONTINUATION = "continuation";
 
+export const cityThresholdLayouts = Object.freeze({
+  canonical: Object.freeze({ width: 640, height: 480, worldHeight: 360, interfaceHeight: 120 }),
+  narrow: Object.freeze({ width: 320, height: 240, worldHeight: 180, interfaceHeight: 60 }),
+});
+
+export function getCityThresholdLayout(canonicalLayout) {
+  return cityThresholdLayouts[canonicalLayout] ?? cityThresholdLayouts.narrow;
+}
+
+export function projectCityThresholdRect(rect, canonicalLayout, scale = 1, origin = { x: 0, y: 0 }) {
+  const source = canonicalLayout === "canonical" ? rect.canonical : rect.narrow;
+  const [x, y, width, height] = source;
+  return {
+    x: origin.x + x * scale,
+    y: origin.y + y * scale,
+    width: width * scale,
+    height: height * scale,
+    right: origin.x + (x + width) * scale,
+    bottom: origin.y + (y + height) * scale,
+  };
+}
+
 export const cityThresholdBoards = ["SC-02-00", "SC-02-10", "SC-02-20", "SC-02-30", "SC-02-40", "SC-02-50"];
 export const cityThresholdCheckpoints = [
   "threshold_entry",
