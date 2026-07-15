@@ -14,6 +14,7 @@ import glassMeadowImage from "../../Glass Meadow Example.png";
 import signalCouplerImage from "../../Concept Art Book/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-loop-640x360.gif";
 import signalCouplerStillImage from "../../Concept Art Book/production-pixel/AB-01/signal-coupler/production/terminal-signal-coupler-available-640x360.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import {
@@ -555,6 +556,7 @@ export function App() {
   const [capstoneReadinessSession,setCapstoneReadinessSession]=useState(null);const [capstoneReadinessEvidence,setCapstoneReadinessEvidence]=useState(null);
   const [mixedSimulationSession,setMixedSimulationSession]=useState(null);const [mixedSimulationEvidence,setMixedSimulationEvidence]=useState(null);
   const [finalConfidenceSession,setFinalConfidenceSession]=useState(null);const [finalConfidenceEvidence,setFinalConfidenceEvidence]=useState(null);
+  const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -2027,6 +2029,10 @@ export function App() {
     );
   }
 
+  if (mode === "city-threshold-staging") {
+    return <CityThresholdStaging onReturnToCredits={() => setMode("ending")} />;
+  }
+
   if (mode === "ending") {
     return (
       <main className="game-shell credits-screen" data-playtest-marker="CREDITS_REACHED">
@@ -2039,6 +2045,7 @@ export function App() {
           <div className="credit-rule" />
           <p className="credit-line">The Horizon Archive</p>
           <p className="credit-line muted">Prologue complete</p>
+          {cityThresholdStagingEnabled && <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Open RP-001 staging route</button>}
           <button className="primary-action" onClick={() => setMode("title")}>Return to title</button>
         </section>
       </main>

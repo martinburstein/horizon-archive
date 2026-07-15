@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN`
+- Status: `READY FOR WORKING`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / City Beneath threshold
 - Target demo horizon: First playable segment after the accepted `Prologue complete` credits boundary
 - Route order: 1
@@ -412,23 +412,35 @@ World hints use persistent text plus focus movement, never hue, animation timing
 
 ## Advance Construction Track — Coder
 
-`PENDING A5`
+- Status: `PASS — A5 COMPLETE; READY FOR WORKING`
+- Operating mode: `advance`.
+- Protected entry: the rough slice is reachable only from the accepted credits screen when the explicit `?staging=rp001` query flag is present. With the flag absent, the accepted title-to-credits route, save behavior, scene order, and credits presentation remain unchanged.
+- World scaffold: implemented the locked `SC-02-00 -> 10 -> 20 -> 30 -> 40/50` board machine, exact native/narrow A2 rectangles, reversible detail returns, cancel-to-access-detail behavior, separate access observations, locked route preview, and successor staging boundary. The existing city raster is labeled and used only as an A5 rough plate; three production plates and final animation assets remain Working art work, not accepted production art.
+- Learning scaffold: implemented an unseen course-authored `anchor_packet` probe with ten independent deterministic checks and a required list/dictionary/JSON explanation. Existing packaged CUM-01 primary/transfer scenario records and remediation mappings are imported directly; both decision/reason dimensions require `16/16`, transfer remains blank and fresh, and the safety/claim explanation is separate.
+- State and privacy: the staging save uses an isolated allowlisted RP-001 key so no A1–A4 or accepted-demo field can be overwritten. It persists only IDs, correctness dimensions, objective/skill IDs, bounded attempt/hint/confidence/misconception metadata, checkpoint, the two atomic flags, unchanged `continuation`, and `cityStateDelta:null`; source, working choices, raw answers, notes, credentials, endpoints, payloads, responses, and external-action requests are stripped or never written.
+- Commit and recovery: the sanitizer refuses split or forged flags. Only PY-020 `10/10` plus explanation and CUM-01 primary `16/16` plus mapped remediation as needed, fresh transfer `16/16`, and safety/claim explanation permit one atomic expedition-only confirmation. Reload restores `00`, the first incomplete scored boundary on `30`, or completed `50`; temporary observations and unsubmitted work clear. City geometry, access, cycles, and physical state receive no commit.
+- Validation: focused RP-001 tests passed `7/7`; the complete game unit suite passed `242/242`; production build passed with the existing large-chunk advisory. `git diff --check` passed with line-ending advisories only.
 
 ## Anticipated accessibility risks
 
-`PENDING — later Advance tracks`
+- Working must verify real keyboard traversal and focus restoration across the staging dialog, long CUM option labels, live-region announcement order, forced colors, 200% zoom, switch control, and NVDA/equivalent speech.
+- Deterministic contracts already provide persistent labels, non-color-only pass/repair text, `44 x 44` minimum world targets at both authored sizes, reduced-motion still behavior, unlimited retry, no timer, and session-cleared working controls.
 
 ## Dependencies
 
-`PENDING — later Advance tracks`
+- Accepted prologue credits boundary and its unchanged completion evidence.
+- Packaged `curriculum/readiness/CUM-01/scenario_bank.json` and `remediation_routes.json`; their SOLIDIFIED content is imported rather than copied or rewritten.
+- Existing city concept raster is staging blockout evidence only. Working production requires the A2 three-native-plate/four-animation-layer asset package and authored narrow derivatives.
+- The successor civic-record packet remains outside RP-001; `ENTER CIVIC DISTRICT` stops at an explicit staging boundary.
 
 ## Locked decisions
 
-`PENDING — packet-level synthesis after A2–A5`
+- All A1–A4 story, ownership, board-order, geometry, curriculum, evidence, recovery, privacy, authority, save, and zero-city-response decisions remain locked.
+- Staging may not be exposed on the ordinary accepted-demo route until Working Team release validation accepts the packet.
 
 ## Flexible implementation choices
 
-`PENDING — packet-level synthesis after A2–A5`
+- Working may replace the labeled rough plate and overlay styling, improve editor and CUM presentation density, and integrate existing remediation lesson surfaces, provided exact content, state order, evidence gates, target geometry, atomic commit, save allowlist, and zero city response remain unchanged.
 
 ## Player-observable acceptance criteria
 
@@ -454,15 +466,15 @@ World hints use persistent text plus focus movement, never hue, animation timing
 - Storyboarder sign-off: `PASS — A2 COMPLETE`
 - Curriculum Checker sign-off: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
 - Gameplay Master sign-off: `PASS — A4 COMPLETE; PUZZLE LOCKED FOR A5`
-- Coder smoke-test result: `PENDING`
-- Readiness: `PENDING — A5 construction and smoke test`
+- Coder smoke-test result: `PASS — 7/7 focused; 242/242 full unit; production build PASS`
+- Readiness: `READY FOR WORKING — protected staging route only`
 - Required revision: `NONE FROM A4`
 
 ## Promotion record
 
-- Approved commit: `PENDING`
+- Approved commit: `PENDING — coordinator owns Git`
 - Promoted to Working Queue on: `PENDING`
 - Team 1 railhead after promotion: `PENDING`
-- Next contiguous packet seeded: `PENDING`
-- `STORY_RAIL_MAP.md` updated: `PENDING`
+- Next contiguous packet seeded: `RP-002 — Civic Record Encounter (SEED)`
+- `STORY_RAIL_MAP.md` updated: `YES — A5 handoff state`
 - Coordinator: `PENDING`
