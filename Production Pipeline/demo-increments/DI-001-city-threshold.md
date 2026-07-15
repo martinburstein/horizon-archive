@@ -6,7 +6,7 @@
 - Working cycle: 1
 - Status: `IN DEMO — PARTIAL`
 - Starting commit: `dc2d825`
-- Ending commit: `c0a3966 + uncommitted W4 polish` (coordinator owns Git)
+- Ending implementation commit: `28c5f60`
 - Playable URL: `http://127.0.0.1:4173/?staging=rp001`
 - Team 1 railhead at review: `RP-002 — seeded; A1 pending`
 - Team 2 live-demo position before increment: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
@@ -74,14 +74,14 @@ The protected route now lets a player cross from accepted prologue credits into 
 - Gameplay regressions checked: Shared renderer contains no banner text or class for any `SC-02-00/10/20/30/40/50` state. Focused route/return containment, exact A2 rectangles, board order, evidence gates, atomic commit, privacy sanitizer, reload to `SC-02-50`, `continuation`, and `cityStateDelta:null` regressions pass.
 - Browser evidence: At settled exact `640 × 480` and `320 × 240`, banner text match is false and `.city-staging-label` count is zero. Required `SC-02-50 // continuation unchanged // city_state_delta=None` status remains. The exact narrow route remains `x=248,y=136,w=72,h=44`; world/interface bounds and W2 focus containment are unchanged; browser warnings/errors are zero.
 - Remaining visual limitations: `RP001-AESTH-001` and `RP001-AESTH-002` remain P1 production-art release blockers. No crop, filter, mask, blur, paint-over, scaling workaround, or acceptance claim was made.
-- Final build identity: base `c0a3966` plus uncommitted W4 polish; production assets `index-D7ii5z3y.js` and `index-C-koFvjn.css`.
+- Final build identity: `28c5f60`; production assets `index-D7ii5z3y.js` and `index-C-koFvjn.css`.
 - Final demo reload confirmed: `YES — rebuilt and final-reloaded at http://127.0.0.1:4173/?staging=rp001`, port `4173` PID `90664`.
 
 ## Coordinator release gate
 
 - Loaded puzzle path: Complete in W1.
-- Player bug disposition: `RP001-P1-001 — RESOLVED IN W2; coordinator recheck pending`.
-- Aesthetic finding disposition: `RP001-AESTH-001/002 — P1 DEFERRED TO ART PRODUCTION; RELEASE BLOCKERS`; `RP001-AESTH-003 — RESOLVED IN W4; coordinator recheck pending`.
+- Player bug disposition: `RP001-P1-001 — RESOLVED IN W2; coordinator recheck PASS`.
+- Aesthetic finding disposition: `RP001-AESTH-001/002 — P1 DEFERRED TO ART PRODUCTION; RELEASE BLOCKERS`; `RP001-AESTH-003 — RESOLVED IN W4; coordinator recheck PASS`.
 - Exact viewport and asset invariants: `320 × 240 PASS`; `640 × 480 PASS` for W2 layout/containment. W3 production-art invariants fail under `RP001-AESTH-001/002` pending the locked authored asset package.
 - Keyboard/focus: Forward and return controls remain fully visible when focused at both exact viewports; Enter activation works and focus cannot scroll the world internally.
 - Names/errors/live regions: Persistent ownership/status copy present; no runtime error observed.
@@ -89,21 +89,22 @@ The protected route now lets a player cross from accepted prologue credits into 
 - Target size/reflow: Narrow forward target remains exactly `72 × 44`; settled `640 × 480` route/return and interface remain contained under the resolved W2 frame contract.
 - Privacy/recovery: PY working source cleared on reload; bounded `10/10` evidence resumed; final reload restored `SC-02-50`.
 - Manual checks remaining: reduced-motion emulation, forced colors, screen reader, switch control, and production-art review after the authored package exists.
-- Verdict: `REVISE`
+- Verdict: `REVISE — functional staging accepted as partial; production art blocks packet acceptance`
 
 ## Validation
 
-- Focused tests: `node --test test/cityThresholdExercise.test.js test/canonicalFrame.test.js` — `11/11 PASS`.
-- Full game suite: W4 rerun `245/245 PASS`.
-- Curriculum validators: PY-020 visible failure `1/10`, repair `10/10`, CUM primary miss -> mapped `L-05-07` remediation -> blank primary `16/16` -> blank transfer `16/16` -> claim boundary pass.
+- Focused tests: `node --test test/cityThresholdExercise.test.js test/canonicalFrame.test.js` — `11/11 PASS` in W4.
+- Full game suite: coordinator rerun `245/245 PASS` at `28c5f60`.
+- Curriculum validators: coordinator CUM-01 self-test `PASS` with primary/transfer references `16/16`, blank forms rejected at `0/16`, all 15 objectives/routes/claim/boundary probes; PY-020 visible failure `1/10`, repair `10/10`, CUM primary miss -> mapped `L-05-07` remediation -> blank primary `16/16` -> blank transfer `16/16` -> claim boundary pass.
+- Curriculum JSON: `251/251` files parsed.
 - Art builders/invariants: Not applicable to W4 banner cleanup; no asset or animation layer changed. `RP001-AESTH-001/002` production-art invariants remain failing/deferred.
-- Production build: W4 build passed; preview rebuilt from base `c0a3966` plus uncommitted polish, bundle `index-D7ii5z3y.js` / `index-C-koFvjn.css`.
-- Browser/E2E: W4 live completed-save/reload banner-absence, status-preservation, containment, and keyboard-focus checks passed at exact `640 × 480` and `320 × 240`; no full legacy title-to-credits E2E rerun was needed for the isolated non-interactive element removal.
+- Production build: coordinator build `PASS` at `28c5f60`; bundle `index-D7ii5z3y.js` / `index-C-koFvjn.css`; existing large-chunk advisory remains non-blocking.
+- Browser/E2E: W4 live completed-save/reload banner-absence, status-preservation, containment, and keyboard-focus checks passed at exact `640 × 480` and `320 × 240`. Coordinator isolated full title-to-credits E2E at port `5174` passed every reported gate with `credits:true` and `runtimeErrors:false`; incidental legacy QA captures were restored and the isolated server was stopped.
 - Runtime errors: None observed.
 
 ## Known limitations
 
-- `RP001-P1-001` is resolved; coordinator release validation remains pending.
+- `RP001-P1-001` and `RP001-AESTH-003` are resolved and coordinator-verified.
 - `RP001-AESTH-001/002` remain P1 rough-staging production-art release blockers; `RP001-AESTH-003` is resolved.
 - Real assistive-technology and forced-color checks remain manual.
 
@@ -111,13 +112,13 @@ The protected route now lets a player cross from accepted prologue credits into 
 
 - Result: `IN DEMO — PARTIAL`
 - Reason: Functional learning/state path completes and resumes, the W1 frame blocker is resolved, and accepted W4 banner cleanup passes; deferred production-art release blockers remain before acceptance.
-- Team 2 live-demo position after disposition: `RP-001 — FINAL VALIDATION / RELEASE BLOCKED`
+- Team 2 live-demo position after disposition: `RP-001 — IN DEMO PARTIAL / RELEASE BLOCKED ON PRODUCTION ART`
 - Ordered Advance lead after disposition: `1 packet — RP-002 seeded`
-- `STORY_RAIL_MAP.md` updated: `YES — W4 final-reload state`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator partial-release disposition`
 - Follow-up packet or defect: `RP001-AESTH-001/002 — deferred production-art release blockers`; `RP001-AESTH-003 — resolved`
 
 ## Git and demo update
 
-- Checkpoint commits: None; coordinator owns Git.
-- `HEAD == origin/main`: Not asserted by Player Agent; tested `HEAD` is `dc2d825`.
-- Playable server updated: W4 production build rebuilt and final-reloaded at port `4173`.
+- Checkpoint commits: Player `3145e44`; Coder bug repair `16b4b05`; Aesthetic `c0a3966`; Coder polish `28c5f60`; coordinator record follows this validation.
+- `HEAD == origin/main`: `YES` after coordinator record push and final synchronization check.
+- Playable server updated: `YES` — W4 production build final-reloaded at port `4173`; coordinator validation used isolated port `5174` and left `4173` untouched.

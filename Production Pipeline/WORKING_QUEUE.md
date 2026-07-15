@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `FINAL VALIDATION` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coordinator | `RP001-AESTH-001` and `002` remain P1 production-art release blockers; W2 frame and W4 banner findings are resolved | Confirm W4 scope/evidence, retain `IN DEMO — PARTIAL`, and route the locked production-art package without crop/filter/mask workarounds |
+| 1 | `RP-001` | `IN DEMO — PARTIAL` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Art production, then Working Team | `RP001-AESTH-001` and `002` remain P1 production-art release blockers; all functional and accepted W4 findings pass | Author the locked three-native/three-narrow/four-layer production-art package, then rerun W3/W4 and coordinator release validation without crop/filter/mask workarounds |
 
 ## Current-demo quality lane
 
