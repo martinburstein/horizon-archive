@@ -1,5 +1,13 @@
 # Lore Keeper Work Log
 
+## 2026-07-15 — Two-team A1: RP-001 City Threshold Lore Track
+
+- **Work completed:** Established the accepted live boundary at completed Witness Corridor -> `THE CITY BENEATH / Prologue complete` credits, then created the nearest contiguous future segment as `RP-001 City Threshold`. Locked its surface-safe entry, motive, observation/inference ladder, ownership language, reversible survey-anchor state change, return state, copy budgets, mystery protections, and exact Storyboarder handoff. The city operates without visible occupants; operation never becomes evidence of welcome, recognition, consciousness, or attention.
+- **Files changed:** Added `../Production Pipeline/rail-packets/RP-001-city-threshold.md`; updated `../Production Pipeline/STORY_RAIL_MAP.md`, `../Production Pipeline/ADVANCE_QUEUE.md`, and this log.
+- **Validation performed:** Cross-checked the live three-scene array, completed-scene transition, ending state, current game log, Surface Lore spoiler protocol, first-person/no-ship direction, ownership separation, start/end adjacency, reload meaning, and new copy for unsupported agency or central-mystery disclosure. No hidden-lore source, runtime, curriculum, art, or Working Team artifact was changed.
+- **Next recommended item:** Storyboarder Agent should perform A2 on `RP-001`, defining the City Threshold board sequence, state deltas, functional landscape evidence, interaction zones, exits, and native `640 × 360` production plan.
+- **Unresolved risks:** The current credits line attributes `continuation` to an unspecified actor more strongly than RP-001 permits; A5 should enter the new slice through protected staging and use the packet's ownership language without expanding this A1 tranche into a credits rewrite. `Measures of a Life` remains the approved working title for Chapter 2 rather than a final player-facing title.
+
 This log records spoiler-safe production progress. It must not summarize unreleased plot material or draw from the hidden-lore vault.
 
 ## 2026-07-13 — First Signal source-of-truth consolidation

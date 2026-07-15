@@ -4,11 +4,11 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Position summary
 
-- Team 2 live-demo position: `TBD from latest accepted Demo Increment`
+- Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `NONE`
-- Team 1 railhead: `TBD`
-- Ordered Advance lead: `0 packets`
-- Whole-story rail status: `NOT STARTED | IN PROGRESS | END-TO-END OUTLINED`
+- Team 1 railhead: `RP-001 — Lore Track complete; A2 pending`
+- Ordered Advance lead: `1 in-design packet`
+- Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
 ## Route integrity rules
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `TBD — nearest segment beyond live demo` | `Current accepted demo boundary` | `SEED` | `NOT READY` | `DRAFT` | `DRAFT` | `DRAFT` | `DRAFT` | `DRAFT` | `NOT STARTED` | Establish exact current boundary |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `IN DESIGN — A1 complete` | `NOT READY` | `LORE LOCKED` | `A2 PENDING` | `A3 PENDING` | `A3 PENDING` | `A4 PENDING` | `A5 PENDING` | Preserve credits state; continue through protected post-credits staging |
 
 ## Whole-story coverage gate
 

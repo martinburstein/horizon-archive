@@ -17,15 +17,15 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
-| 1 | `TBD` | First two-team future slice | `SEED` | Lore Builder Agent | Not reviewed | Current demo boundary | Create `RP-001` during the first Advance Team phase |
+| 1 | `RP-001` | City Threshold | `IN DESIGN` | Storyboarder Agent | A1 passed; full gate not reviewed | Accepted Witness Corridor -> City Beneath credits boundary | Complete A2 from `rail-packets/RP-001-city-threshold.md` |
 
 ## Team positions
 
 - Ready packets: `0`
-- In-design packets: `1 seed`
-- Team 1 railhead: `TBD`
-- Team 2 live-demo position: `TBD from latest accepted Demo Increment`
-- Ordered Advance lead: `0 packets`
-- Whole-story rail status: `NOT STARTED`
+- In-design packets: `1 — RP-001`
+- Team 1 railhead: `RP-001 — A1 complete; A2 pending`
+- Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
+- Ordered Advance lead: `1 in-design packet`
+- Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
