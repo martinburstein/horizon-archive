@@ -4,6 +4,15 @@ export const DEMO_TOUR_CONFIRMATION = "Demo Tour shows later shipped scenes. It 
 export const DEMO_TOUR_STATUS = "DEMO TOUR // PRACTICE SKIPPED // NO CAMPAIGN CREDIT";
 export const DEMO_TOUR_PREVIEW_STATUS = "Preview only — bounded comparison not saved";
 
+export const FIRST_SIGNAL_TOUR_RESUME = Object.freeze({
+  sceneId: "meadow",
+  terminalKind: "first",
+  boundary: "terminal-l0101-independent-run",
+  orientationStep: 0,
+  verb: "USE",
+  dialogue: "First Signal active. Edit the file, run it, then review the output.",
+});
+
 export const SHIPPED_DEMO_TOUR_SCENE_IDS = Object.freeze([
   "meadow",
   "ruins",
@@ -80,6 +89,14 @@ export function moveDemoTour(state, requestedSceneId) {
   const current = sanitizeDemoTourState(state);
   if (!current || !isAllowlistedScene(requestedSceneId)) return current;
   return { ...current, tourSceneId: requestedSceneId };
+}
+
+export function getDemoTourResumeTarget(state) {
+  const current = sanitizeDemoTourState(state);
+  if (!current) return null;
+  if (current.resumeCampaignSceneId !== FIRST_SIGNAL_TOUR_RESUME.sceneId) return null;
+  if (current.resumeBoundary !== FIRST_SIGNAL_TOUR_RESUME.boundary) return null;
+  return { ...FIRST_SIGNAL_TOUR_RESUME };
 }
 
 export function loadDemoTour(storage) {

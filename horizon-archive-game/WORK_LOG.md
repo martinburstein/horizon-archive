@@ -1,5 +1,16 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2: Demo Tour exact recovery repair
+
+- **Mode:** `bug-repair` for W2 only.
+- **Resolved `TOUR-P1-002`:** `RESUME CAMPAIGN` now derives the allowlisted parked First Signal target from the separate tour record and reconstructs `MACHINE TERMINAL // First Signal` at orientation step 1. It clears working content, restores deterministic `USE` and System dialogue, and focuses the restored gate heading instead of returning to the Meadow with the Terminal closed. A tour restored after reload suppresses only the redundant first campaign serialization, preserving exact parked-save bytes without suppressing the next legitimate evidence write.
+- **Resolved `TOUR-P2-001`:** `KEEP PRACTICING` and Escape both schedule trigger focus for a post-unmount layout effect. The exact initiating `TOUR: SKIP PRACTICE` control is focused after dismissal for keyboard and pointer paths.
+- **Preserved contracts:** separate sanitized tour store, exact confirmation/no-credit copy, Drowned Archive -> Witness Corridor -> City Threshold allowlist, reload cursor, 44px narrow targets, art, `0/3 interfaces`, locked route marker, and all campaign mastery/attempt/hint/completion/route/city evidence.
+- **Files changed in W2:** `src/App.jsx`, `src/demoTour.js`, `test/demoTour.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, and this work log. Existing A5 Tour files and unrelated user files were preserved.
+- **Validation:** focused Tour/Terminal/opening suite passed **19/19**; complete game suite passed **252/252**; production build passed with existing large-chunk advisory (`index-BTpFDHc8.js`, `index-jmpC3Cbi.css`). Isolated live-browser checks passed exact focus restoration for both cancel routes and exact First Signal recovery from Drowned Archive, reloaded Witness Corridor, and reloaded City Threshold: orientation `run-control`, useful heading focus, `USE`, deterministic dialogue, `0/3`, and locked route.
+- **Demo reload:** production preview rebuilt and restarted at `http://127.0.0.1:4173/?staging=rp001` on PID `44228`; the existing demo tab was reloaded and verified against bundle `index-BTpFDHc8.js`.
+- **Exact Aesthetic handoff:** `Aesthetic Agent W3: review only the repaired Demo Tour and confirmation presentation in the rebuilt live demo. Treat TOUR-P1-002 and TOUR-P2-001 as resolved unless reproduced. Verify the skip control, compact confirmation, persistent no-credit band, scene title hierarchy, responsive image crop, and Resume/Next controls at desktop and exact 320x240. Preserve the exact copy, 44px narrow targets, shipped allowlist/order, first-person framing, all art assets, separate tour storage, restored First Signal orientation, campaign byte stability, and every learning/city gate. Record visual findings only; do not change production files.`
+
 ## 2026-07-15 — Coder A5 partial handoff: protected no-credit Demo Tour
 
 - **Mode:** `advance` for A5 only.

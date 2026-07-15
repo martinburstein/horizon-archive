@@ -22,6 +22,7 @@ import { MeadowRouteMarker } from "./MeadowRouteMarker.jsx";
 import {
   clearDemoTour,
   createDemoTourState,
+  getDemoTourResumeTarget,
   getNextTourSceneId,
   loadDemoTour,
   moveDemoTour,
@@ -644,6 +645,8 @@ export function App() {
   const finalConfidenceFirstSelectRef = useRef(null);
   const finalConfidenceSummaryHeadingRef = useRef(null);
   const demoTourTriggerRef = useRef(null);
+  const demoTourReturnFocusPendingRef = useRef(false);
+  const suppressNextCampaignSaveRef = useRef(false);
 
   function setDialogue(text, owner = "pilot") {
     setDialogueText(text);
@@ -727,8 +730,8 @@ export function App() {
   }
 
   function cancelDemoTourConfirmation() {
+    demoTourReturnFocusPendingRef.current = true;
     setDemoTourConfirmation(null);
-    requestAnimationFrame(() => demoTourTriggerRef.current?.focus({ preventScroll: true }));
   }
 
   function enterDemoTour() {
@@ -747,13 +750,25 @@ export function App() {
   }
 
   function resumeCampaignFromTour() {
+    const resumeTarget = getDemoTourResumeTarget(demoTour);
+    suppressNextCampaignSaveRef.current = mode === "title";
     clearDemoTour(localStorage);
     setDemoTour(null);
-    resumeGame();
+    resumeGame({ tourResumeTarget: resumeTarget });
   }
+
+  useLayoutEffect(() => {
+    if (demoTourConfirmation || !demoTourReturnFocusPendingRef.current) return;
+    demoTourReturnFocusPendingRef.current = false;
+    demoTourTriggerRef.current?.focus({ preventScroll: true });
+  }, [demoTourConfirmation]);
 
   useEffect(() => {
     if (["character-name", "prologue", "chapter-reveal", "playing", "ending"].includes(mode)) {
+      if (suppressNextCampaignSaveRef.current) {
+        suppressNextCampaignSaveRef.current = false;
+        return;
+      }
       localStorage.setItem(SAVE_KEY, JSON.stringify({
         opening: createOpeningProgress(mode === "ending" ? "playing" : mode, characterName, prologueBeat),
         sceneIndex,
@@ -1023,7 +1038,7 @@ export function App() {
     setMode("playing");
   }
 
-  function resumeGame() {
+  function resumeGame({ tourResumeTarget = null } = {}) {
     const saved = loadSave();
     if (!saved) return beginNewGame();
     const resumedScene = scenes[saved.sceneIndex];
@@ -1113,6 +1128,27 @@ export function App() {
     setTerminalHintLevel(0);
     setShowHint(false);
     setCode("");
+    if (tourResumeTarget?.boundary === terminalExercise.exerciseId) {
+      sceneArrivalFocusPendingRef.current = false;
+      resumeContinueFocusPendingRef.current = false;
+      setSceneIndex(0);
+      setPendingAdvance(false);
+      setQuestionOpen(false);
+      setVerb(tourResumeTarget.verb);
+      setDialogue(tourResumeTarget.dialogue, "system");
+      setSceneAnnouncement("");
+      setTerminalOpen(true);
+      setMeadowTerminalKind(tourResumeTarget.terminalKind);
+      setTerminalSessionStarted(true);
+      setTerminalOrientationStep(tourResumeTarget.orientationStep);
+      setTerminalOrientationFeedback("");
+      setTerminalResult(null);
+      setCode(terminalExercise.starterCode);
+      setShowHint(false);
+      setTerminalHintLevel(0);
+      setMode("playing");
+      return;
+    }
     setMode(saved.finished ? "ending" : saved.opening.step);
   }
 
