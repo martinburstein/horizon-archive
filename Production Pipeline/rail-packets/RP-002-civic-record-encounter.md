@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 PHOTOREALISTIC IMPACT REVIEW COMPLETE; A3 PENDING`
+- Status: `IN DESIGN — A3 COMPLETE; A4 PENDING`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -279,6 +279,86 @@ The `SC-03-30` comparison and save controls belong to the existing compact `640 
 ### Exact Curriculum Checker handoff
 
 Perform A3 on `RP-002 — Civic Record Encounter` using the locked `SC-03-00 -> 10 -> 20 -> 30 -> 40` sequence and `SC-03-50` saved return. Select the smallest defensible Python skill and current AI-901 check that can operate entirely in the separate human expedition interface after the required near-trace, stewardship, outlined-gap, distant-echo, and closed-boundary observations. Preserve `cityThresholdAnchorRecorded=true`, `civicDistrictRouteAvailable=true`, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, cleared working notes after save, the closed identity-bearing layer, and invariant world geometry/animation. Treat material age, prepared joints, dust/condensate continuity, thermal behavior, photographic realism, grayscale recognition, looking, navigation, color, timing, Builder motion, and city state as Scene evidence only—not scored Python or AI-901 evidence. Do not require access, identity inference, consent, service calls, external authority, a physical response, or a successor claim type. Keep `civic record` and `public evidence custody` Pilot-owned and provisional, and return an exact mastery/remediation/transfer contract that Gameplay Master can place in `SC-03-30` without changing any locked world plate, registered effect, material state, lighting cause, or causality.
+
+## Curriculum Verification Track — Curriculum Checker
+
+### Selection and status
+
+- Status: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
+- Python skill: `PY-009 — Use dictionaries`, as one small reinforcement after the existing `L-03-01` mastery gate. Do not expand this packet into lists, loops, functions, files, JSON serialization, APIs, SDKs, or live service work.
+- AI-901 check: `RP002-RAI-01`, a focused `AI901-D1-O1 — Describe principles of responsible AI` retrieval/transfer check for transparency, privacy and security, and accountability.
+- Scope boundary: this short packet check does not replace full `L-02-02` mastery across all six responsible AI principles and does not create a new exam-readiness claim.
+- Curriculum decision: a named dictionary is the smallest defensible implementation bridge for preserving source, missingness, and application ownership while changing only two human-expedition fields. The responsible-AI check tests whether the learner can keep a provisional label transparent, keep unneeded identity-bearing material closed, and assign responsibility to a human expedition owner.
+- Machine-readable contract and validator: [RP-002 curriculum readiness contract](../../curriculum/readiness/RP-002/contract.json) and `curriculum/readiness/RP-002/validate_mapping.py`.
+
+### Entry and exact learning order
+
+1. `SC-03-00`, `10`, and `20` remain unscored Scene evidence. Material age, prepared joints, dust/condensate continuity, thermal behavior, photographic realism, grayscale recognition, looking, navigation, focus, color, animation, and restored world state create no Python or AI-901 evidence.
+2. Scored entry at `SC-03-30` requires privacy-limited evidence that `L-03-01` remains mastered at primary and transfer `8/8` with its closed-note structure explanation and `L-02-02` remains mastered at primary and transfer `24/24` across all six principles.
+3. Missing or `review_required` prerequisite evidence routes to the existing lesson. It never blocks observing the district, returning to City Threshold, or preserving story progress.
+4. Complete the `PY-009` primary form at `6/6`, remediate every miss, then complete a blank fresh-transfer form at `6/6` and explain key/value update plus the difference between `None` and `False` without notes.
+5. Complete `RP002-RAI-01` primary at `9/9`, remediate every missed principle/mitigation/owner dimension, then complete a blank fresh-transfer form at `9/9` and explain why an application label is neither native fact nor authority.
+6. Only after both fresh-transfer gates and explanations pass may the separate expedition interface save the bounded comparison. Temporary working notes clear; sanitized mastery evidence persists separately. The city and closed layer do not respond.
+
+### Exact Python primary and fresh-transfer contract
+
+- Primary input dictionary: `condition="outlined_gap"`, `source="exposed_surface"`, `identity=None`, and `access_requested=False`.
+- Primary permitted updates only: add `classification="unknown"` and `owner="human_expedition"` by key assignment.
+- Fresh-transfer input is a neutral course-authored practice record, not a successor surface: `condition="unresolved_interval"`, `source="deidentified_sensor_log"`, `identity=None`, and `access_requested=False`.
+- Fresh-transfer permitted updates only: add `classification="unknown"` and `owner="human_reviewer"` by key assignment.
+- Each form has six deterministic checks: result is a dictionary; exact keys only; condition/source preserved; identity remains `None`; access request remains `False`; and both permitted values are added by key update without replacing the input.
+- Reject a replaced dictionary, literal/hardcoded display, altered identity or access state, extra permission/consent/city-response/success fields, reused primary output, or evidence inferred from navigation, timing, confidence, color, motion, or hints.
+
+### Exact AI-901 primary and fresh-transfer contract
+
+Each form has three course-authored scenarios and three scored dimensions per scenario: `principle`, `mitigation`, and accountable human/organizational `owner`.
+
+| Form case | Required principle | Required decision boundary |
+|---|---|---|
+| Primary — provisional human label over exposed evidence and an outlined gap | `transparency` | Show sources, unknowns, limits, and human ownership of the label |
+| Primary — closed identity-bearing layer unnecessary to the comparison | `privacy_and_security` | Keep it closed, minimize saved evidence, send no request, and name the expedition privacy owner |
+| Primary — interface proposes treating classification as native fact | `accountability` | Require human review, correction, audit, and a named expedition owner |
+| Transfer — de-identified sensor record with measurement, annotation, and unresolved interval | `transparency` | Preserve provenance, missingness, and limitations |
+| Transfer — private operator field unnecessary to a maintenance comparison | `privacy_and_security` | Do not open or retain unneeded private data |
+| Transfer — automated label with downstream effect but no review path | `accountability` | Assign human review, audit, and correction responsibility |
+
+Correct principle with wrong mitigation or owner is not mastery. The transfer form remains blank until primary remediation is complete and uses no Builder identity, successor claim, or native category.
+
+### Line-by-line mapping
+
+| Learner action | Skill/objective evidence | Direct implementation reason | Invalid shortcut |
+|---|---|---|---|
+| Read the four named input fields | `PY-009` | Lightweight AI apps use named fields to keep evidence conditions distinct | Treat display order, color, or a world hotspot as a dictionary key |
+| Add `classification` by key update | `PY-009` | Application-owned interpretation must be stored separately from observed source fields | Replace the input or call the label native fact |
+| Add a human `owner` by key update | `PY-009`, `AI901-D1-O1` | Accountability requires an attributable human/organizational owner, not the system | Name the Builder surface, model, platform, or city as owner |
+| Preserve `identity=None` | `PY-009`, `AI901-D1-O1` privacy/transparency | Missing identity is an explicit unknown and must not be reconstructed | Infer a person, motive, consent, or complete history |
+| Preserve `access_requested=False` | `PY-009`, `AI901-D1-O1` privacy/security | Valid local processing does not require or authorize private access | Open, request, transmit, or treat exposure as permission |
+| Choose principle, mitigation, and owner | `AI901-D1-O1` | Responsible-AI reasoning joins the named principle to an actionable safeguard and accountable owner | Correct label with unsafe reason, disclosure-only response, confidence, or timing |
+
+### Retrieval, remediation, mastery, and recovery
+
+- Retrieval support may show the `L-03-01` dictionary key/value rule and the `L-02-02` definitions for transparency, privacy and security, and accountability. Retrieval is not fresh evidence.
+- A Python miss routes: name the current key/value -> trace only the two permitted updates -> contrast `None` with `False` -> restore the input -> solve one guided near case -> retry blank transfer.
+- An AI-901 miss routes: retrieve the missed `L-02-02` principle -> contrast the neighboring principle -> name a testable mitigation -> name a human/organizational owner -> solve one guided near case -> retry blank transfer.
+- Unlimited retry is required. A miss cannot change the world, close the return, consume access, erase prior story progress, or create a different city state.
+- Mastery cannot be forged by scene completion, save/reload, elapsed time, optional timing, confidence, focus order, color, motion, hints, repeated identical answers, or restored finalized evidence.
+- Leaving the scene clears unsubmitted code, choices, and feedback. Resume may restore finalized per-dimension evidence and the first incomplete scored boundary only. Saving clears all temporary working notes.
+
+### Privacy, accessibility, provenance, and no authority
+
+- Persist only packet/mapping/form IDs, skill/objective IDs, per-dimension correctness, attempt and hint counts, confidence, misconception tags, and mastery status.
+- Do not persist learner source, the raw comparison dictionary, free-form reasoning, identity content, private notes, credentials, endpoints, payloads, responses, source content, exam item text, or external-action requests.
+- Keep all curriculum UI inside the separate human expedition band. Required keyboard order is instructions -> dictionary editor -> run -> Python checks -> scenario -> principle -> mitigation -> owner -> check -> feedback -> hint -> retry -> save/exit, with persistent labels, field-associated text feedback, live status, deterministic focus return, reduced-motion equivalence, no time limit, and no color/motion/audio-only evidence.
+- Label the forms as course-authored practice, not Microsoft exam items. Passing is an internal reinforcement signal, never exam credit, certification, identity proof, attendance proof, or an exam guarantee.
+- No live Azure/Foundry call, credential, resource, identity layer, Builder system, communication, disclosure, publication, purchase, deletion, permission, consent, or external action is requested or authorized.
+
+### Sources, locks, and sign-off
+
+- Reverified `2026-07-15` from official Microsoft sources only: [AI-901 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901), [responsible AI principles module](https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/), [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/), [Foundry SDKs and Endpoints](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview), [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview), and [Content Understanding overview](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview).
+- Current controlling guide still measures responsible-AI fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability; it still expects foundational Python syntax/programming techniques and uses the April 15, 2026 `40–45%` concepts / `55–60%` Foundry implementation blueprint.
+- A3 changes no A1 lore, ownership, inference, mystery, copy, or city-state contract and no A2 board, coordinate, asset, focus, clock, return, geometry, material, lighting, registered-effect, or interface/world-separation lock. `cityThresholdAnchorRecorded=true`, `civicDistrictRouteAvailable=true`, unchanged `continuation`, `city_state_delta=None`, closed identity-bearing material, and no successor route remain locked.
+- Reopen only if official objectives materially change, a validator or playtest proves mismatch/bypass, or Martin changes the learning goal.
+- Exact handoff: `Gameplay Master Agent: build RP-002 A4 around the SOLIDIFIED PY-009 two-key dictionary update and RP002-RAI-01 focused responsible-AI check, entirely inside the separate SC-03-30 human expedition interface after all locked observations. Require PY-009 6/6 primary -> mapped remediation -> blank 6/6 fresh transfer plus the None-versus-False/key-update explanation, then AI901-D1-O1 9/9 primary -> per-dimension remediation -> blank 9/9 fresh transfer plus the application-label-is-not-native-fact-or-authority explanation. Preserve cityThresholdAnchorRecorded=true, civicDistrictRouteAvailable=true, unchanged continuation, city_state_delta=None, reversible City Threshold return, cleared working notes after save, the closed identity-bearing layer, invariant photorealistic world geometry/materials/lighting/registered effects/animation, and no successor route. Material age, prepared joints, dust/condensate continuity, thermal behavior, photographic realism, grayscale recognition, looking, navigation, color, motion, timing, confidence, hints, save/reload, or city state never count as mastery. Do not add lists, loops, functions, JSON, APIs, live Azure/Foundry calls, identity inference, access, consent, Builder speech, city response, external action, exam guarantee, or a replacement for full L-02-02 mastery.`
 
 ## Dependencies and open risks
 

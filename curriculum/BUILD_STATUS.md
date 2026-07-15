@@ -70,3 +70,12 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Solidified `RP-001` mapping with strict Python `10/10`, CUM primary/transfer `16/16 + 16/16`, remediation, privacy, accessibility, no-authority, and no-exam-guarantee boundaries
 - [x] Preserved all locked A1/A2 causality, geometry, and city-state invariants
 - [ ] Gameplay Master completes A4 against the exact solidified contract
+
+## 2026-07-15 RP-002 curriculum verification
+
+- [x] Selected `PY-009` as the smallest bounded dictionary reinforcement after `L-03-01`
+- [x] Added focused `RP002-RAI-01` retrieval/transfer for `AI901-D1-O1` transparency, privacy and security, and accountability without replacing full `L-02-02` mastery
+- [x] Solidified strict Python `6/6 + remediation + blank 6/6 transfer` and AI-901 `9/9 + remediation + blank 9/9 transfer` gates with closed-note explanations
+- [x] Added a machine-readable contract, reference forms, official-source record, privacy/accessibility/no-authority boundaries, and an anti-bypass validator
+- [x] Preserved all A1/A2 canon, board, coordinate, photorealistic material/light/effect, interface/world, return, and null-city-delta invariants; every Scene observation remains unscored
+- [ ] Gameplay Master completes A4 against the exact solidified contract

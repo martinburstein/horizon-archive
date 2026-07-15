@@ -16,6 +16,26 @@
         "validator_or_playtest_proves_mismatch_or_bypass",
         "martin_changes_learning_goal"
       ]
+    },
+    {
+      "packet_id": "RP-002",
+      "status": "SOLIDIFIED",
+      "primary_objective_id": "AI901-D1-O1",
+      "focused_check_id": "RP002-RAI-01",
+      "focused_principles": [
+        "transparency",
+        "privacy_and_security",
+        "accountability"
+      ],
+      "full_objective_mastery_prerequisite": "L-02-02",
+      "python_skill_id": "PY-009",
+      "contract_path": "curriculum/readiness/RP-002/contract.json",
+      "notes": "Focused retrieval and fresh transfer only; does not replace full L-02-02 mastery across all six principles. Photorealistic Scene evidence is unscored.",
+      "reopen_conditions": [
+        "official_objectives_materially_change",
+        "validator_or_playtest_proves_mismatch_or_bypass",
+        "martin_changes_learning_goal"
+      ]
     }
   ],
   "domains": [

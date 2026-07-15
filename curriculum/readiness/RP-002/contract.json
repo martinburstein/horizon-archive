@@ -1,0 +1,256 @@
+{
+  "mapping_id": "RP002-A3-CIVIC-COMPARISON",
+  "packet_id": "RP-002",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-03-30",
+  "source_verified_on": "2026-07-15",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-01 PY-009 primary and transfer remain 8/8 with the closed-note structure explanation",
+    "ai901": "L-02-02 AI901-D1-O1 primary and transfer remain 24/24 across all six responsible AI principles",
+    "missing_evidence_route": [
+      "curriculum/lessons/L-03-01",
+      "curriculum/lessons/L-02-02"
+    ],
+    "story_navigation_never_blocked": true
+  },
+  "unscored_scene_evidence": [
+    "material_age",
+    "prepared_joints",
+    "dust_and_condensate_continuity",
+    "thermal_behavior",
+    "photographic_realism",
+    "grayscale_recognition",
+    "looking_and_navigation",
+    "color_and_motion",
+    "registered_world_effects",
+    "city_state"
+  ],
+  "python_contract": {
+    "skill_id": "PY-009",
+    "skill_name": "Use dictionaries",
+    "scope": "reinforcement_only",
+    "implementation_reason": "A lightweight AI application must preserve named evidence fields and update only intended application-owned keys without inventing missing values or authority.",
+    "forms": {
+      "primary": {
+        "input": {
+          "condition": "outlined_gap",
+          "source": "exposed_surface",
+          "identity": null,
+          "access_requested": false
+        },
+        "add": {
+          "classification": "unknown",
+          "owner": "human_expedition"
+        }
+      },
+      "transfer": {
+        "input": {
+          "condition": "unresolved_interval",
+          "source": "deidentified_sensor_log",
+          "identity": null,
+          "access_requested": false
+        },
+        "add": {
+          "classification": "unknown",
+          "owner": "human_reviewer"
+        }
+      }
+    },
+    "checks": [
+      "result_is_dictionary",
+      "exact_keys_only",
+      "condition_and_source_preserved",
+      "identity_remains_none",
+      "access_requested_remains_false",
+      "classification_and_owner_added_by_key_update"
+    ],
+    "gate": "6/6 primary, remediate every miss, then 6/6 blank fresh transfer plus a closed-note explanation of key/value update and why None differs from False",
+    "invalid_shortcuts": [
+      "replace_the_input_dictionary",
+      "hardcode_displayed_output",
+      "change_identity_or_access_requested",
+      "add_permission_consent_city_response_or_success_fields",
+      "reuse_completed_primary_as_transfer",
+      "count_navigation_timing_confidence_color_motion_or_hints"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP002-RAI-01",
+    "objective_id": "AI901-D1-O1",
+    "objective_title": "Describe principles of responsible AI",
+    "scope": "focused_retrieval_and_transfer_of_transparency_privacy_security_and_accountability; does_not_replace_full_L-02-02_mastery",
+    "dimensions": [
+      "principle",
+      "mitigation",
+      "owner"
+    ],
+    "forms": {
+      "primary": [
+        {
+          "id": "P01",
+          "prompt": "The expedition saves a provisional human label from exposed evidence with an outlined gap.",
+          "principle": "transparency",
+          "mitigation": "show_sources_unknowns_limits_and_human_label",
+          "owner": "expedition_evidence_lead"
+        },
+        {
+          "id": "P02",
+          "prompt": "An identity-bearing layer is closed and is not needed for the bounded comparison.",
+          "principle": "privacy_and_security",
+          "mitigation": "keep_closed_minimize_saved_evidence_and_send_no_request",
+          "owner": "expedition_privacy_lead"
+        },
+        {
+          "id": "P03",
+          "prompt": "The interface proposes treating its provisional classification as native fact.",
+          "principle": "accountability",
+          "mitigation": "require_human_review_correction_and_audit",
+          "owner": "expedition_survey_lead"
+        }
+      ],
+      "transfer": [
+        {
+          "id": "T01",
+          "prompt": "A de-identified sensor packet contains a measurement, a later annotation, and an unresolved interval.",
+          "principle": "transparency",
+          "mitigation": "preserve_provenance_missingness_and_limits",
+          "owner": "human_evidence_reviewer"
+        },
+        {
+          "id": "T02",
+          "prompt": "A private operator field is closed and unnecessary for the maintenance comparison.",
+          "principle": "privacy_and_security",
+          "mitigation": "do_not_open_or_retain_unneeded_private_data",
+          "owner": "human_privacy_reviewer"
+        },
+        {
+          "id": "T03",
+          "prompt": "An automated label could affect later decisions but has no named reviewer or correction path.",
+          "principle": "accountability",
+          "mitigation": "assign_review_audit_and_correction_responsibility",
+          "owner": "human_decision_owner"
+        }
+      ]
+    },
+    "gate": "9/9 primary, remediate every missed dimension, then 9/9 blank fresh transfer and explain why an application label is not authority or native fact",
+    "misconception_tags": [
+      "disclosure_without_limits_is_transparency",
+      "closed_data_is_permission_to_infer",
+      "system_or_platform_is_accountable_owner",
+      "valid_output_authorizes_action",
+      "missing_value_equals_false",
+      "provisional_label_is_native_fact"
+    ]
+  },
+  "remediation_contract": {
+    "python": [
+      "name_the_current_dictionary_key_and_value",
+      "trace_only_the_two_permitted_key_updates",
+      "contrast_none_with_false",
+      "restore_the_original_mapping",
+      "complete_one_guided_near_case",
+      "retry_blank_fresh_transfer"
+    ],
+    "ai901": [
+      "retrieve_the_missed_L-02-02_principle",
+      "contrast_the_neighboring_principle",
+      "name_a_testable_mitigation",
+      "name_a_human_or_organizational_owner",
+      "complete_one_guided_near_case",
+      "retry_blank_fresh_transfer"
+    ],
+    "unlimited_retry": true,
+    "miss_has_no_world_or_route_effect": true
+  },
+  "evidence_contract": {
+    "store": [
+      "packet_id",
+      "mapping_id",
+      "form",
+      "skill_or_objective_id",
+      "dimension_correctness",
+      "attempt_count",
+      "hint_level",
+      "confidence",
+      "misconception_tags",
+      "mastery_status"
+    ],
+    "do_not_store": [
+      "learner_source",
+      "raw_comparison_dictionary",
+      "free_form_reasoning",
+      "identity_content",
+      "private_notes",
+      "credentials",
+      "endpoints",
+      "payloads",
+      "responses",
+      "source_content",
+      "exam_item_text",
+      "external_action_requests"
+    ],
+    "scene_transition": "clear_unsubmitted_working_code_choices_and_feedback",
+    "after_save": "clear_all_temporary_working_notes_and_keep_sanitized_mastery_evidence_separate",
+    "resume": "restore_only_finalized_dimension_evidence_and_resume_at_the_first_incomplete_scored_boundary"
+  },
+  "accessibility_contract": {
+    "target_viewport": "640x480",
+    "interface_location": "separate_human_expedition_band",
+    "keyboard_order": [
+      "instructions",
+      "dictionary_editor",
+      "run",
+      "python_checks",
+      "scenario",
+      "principle",
+      "mitigation",
+      "owner",
+      "check",
+      "feedback",
+      "hint",
+      "retry",
+      "save_or_exit"
+    ],
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_or_audio": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_azure_or_foundry_call": true,
+    "no_credential_or_resource_access": true,
+    "no_builder_or_identity_access": true,
+    "no_permission_consent_or_external_action": true,
+    "no_city_response_or_physical_delta": true
+  },
+  "world_locks": [
+    "cityThresholdAnchorRecorded=true",
+    "civicDistrictRouteAvailable=true",
+    "continuation unchanged",
+    "city_state_delta=None",
+    "SC-03-00 -> 10 -> 20 -> 30 -> 40 and SC-03-50 saved return",
+    "closed identity-bearing layer",
+    "invariant photorealistic world geometry, materials, lighting, registered effects, and continuous animation clock",
+    "reversible City Threshold return",
+    "no successor route or claim type"
+  ],
+  "reopen_conditions": [
+    "official_objectives_materially_change",
+    "validator_or_playtest_proves_mismatch_or_bypass",
+    "martin_changes_learning_goal"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "T01": {
+    "principle": "transparency",
+    "mitigation": "preserve_provenance_missingness_and_limits",
+    "owner": "human_evidence_reviewer"
+  },
+  "T02": {
+    "principle": "privacy_and_security",
+    "mitigation": "do_not_open_or_retain_unneeded_private_data",
+    "owner": "human_privacy_reviewer"
+  },
+  "T03": {
+    "principle": "accountability",
+    "mitigation": "assign_review_audit_and_correction_responsibility",
+    "owner": "human_decision_owner"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "P01": {
+    "principle": "transparency",
+    "mitigation": "show_sources_unknowns_limits_and_human_label",
+    "owner": "expedition_evidence_lead"
+  },
+  "P02": {
+    "principle": "privacy_and_security",
+    "mitigation": "keep_closed_minimize_saved_evidence_and_send_no_request",
+    "owner": "expedition_privacy_lead"
+  },
+  "P03": {
+    "principle": "accountability",
+    "mitigation": "require_human_review_correction_and_audit",
+    "owner": "expedition_survey_lead"
+  }
+}

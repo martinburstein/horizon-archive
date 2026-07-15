@@ -205,7 +205,8 @@
       "related_ai901_objectives": [
         "AI901-D2-O3",
         "AI901-D2-O7"
-      ]
+      ],
+      "rail_packet_reinforcement": "RP-002 SC-03-30 two-key dictionary update; 6/6 primary, mapped remediation, blank 6/6 fresh transfer, and closed-note key/value plus None-versus-False explanation"
     },
     {
       "skill_id": "PY-010",

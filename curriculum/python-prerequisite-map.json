@@ -144,7 +144,7 @@
         "AI901-D2-O7"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "RP-002 reinforces PY-009 after L-03-01 with one two-key dictionary update: preserve source, None identity, and False access state while adding only an unknown classification and human owner. Primary and blank fresh transfer require 6/6 plus a closed-note key/value and None-versus-False explanation; photorealistic Scene evidence is unscored."
     },
     {
       "skill_id": "PY-010",

@@ -919,3 +919,31 @@ Validation performed:
 Next recommended item: Gameplay Master Agent performs A4 using the exact handoff in RP-001 without changing A1/A2 locks or inventing another cumulative checkpoint.
 Unresolved risks: The fresh RP-001 Python fixture and runtime integration do not exist until A4/A5; A4 must keep the 10 checks achievable in one bounded overlay and must not let story navigation, timing, confidence, or restored state create mastery.
 Notes: Curriculum mapping only. No game code, board, asset, service call, Azure mutation, credential use, external action, commit, or push change.
+
+## Log entry: 2026-07-15T15:08:25-04:00
+
+Stage: RP-002 Curriculum Verification Track (A3)
+Work completed: Audited the current photorealistic A1/A2 packet, exact Storyboarder handoff, ordered Python progression, mastery model, current AI-901 map, and source register. Solidified RP-002 around the smallest defensible `PY-009` two-key dictionary update plus `RP002-RAI-01`, a focused `AI901-D1-O1` transparency/privacy-security/accountability retrieval and fresh-transfer check. Added exact prerequisite, primary, remediation, fresh-transfer, recovery, evidence, privacy, accessibility, no-authority, unscored-Scene, and reopen contracts. The short check explicitly depends on and does not replace full `L-03-01` or `L-02-02` mastery.
+Files changed:
+- Production Pipeline/rail-packets/RP-002-civic-record-encounter.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- curriculum/readiness/RP-002/*
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Reverified on 2026-07-15 from official Microsoft sources only: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901
+- Reverified on 2026-07-15: https://learn.microsoft.com/en-us/training/modules/apply-responsible-ai-principles/
+- Reverified on 2026-07-15: https://learn.microsoft.com/en-us/azure/foundry/
+- Reverified on 2026-07-15: https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview
+- Reverified on 2026-07-15: https://learn.microsoft.com/en-us/azure/foundry/agents/overview
+- Reverified on 2026-07-15: https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview
+- RP-002 mapping self-test and reference-form gates passed, including Python replacement/hardcoding boundaries, AI-901 blank/wrong-principle/unsafe-mitigation probes, official-source URLs, A1/A2 locks, privacy, accessibility, and no-authority constraints.
+- Existing `L-03-01` structured-data and `L-02-02` responsible-AI validator self-tests and references passed.
+- All curriculum JSON parsed successfully; focused RP-002 packet/map/queue checks and `git diff --check` passed.
+Next recommended item: Gameplay Master Agent performs A4 from the exact handoff in RP-002 without changing the solidified gates, full-prerequisite boundary, or any A1/A2 world/canon invariant.
+Unresolved risks: The in-game interaction and runtime integration do not exist until A4/A5. A4 must keep both forms bounded inside `SC-03-30`, keep photorealistic Scene evidence unscored, and prevent navigation, timing, confidence, hints, restored state, or any world response from creating mastery.
+Notes: The named source-priority skill was unavailable, so required official Microsoft sources were checked directly. The existing source register already carried the correct 2026-07-15 verification date and official responsible-AI entry, so no source-register edit was needed. Curriculum artifacts only; no runtime, puzzle implementation, art, hidden lore, service call, Azure mutation, credential use, external action, commit, or push change.
