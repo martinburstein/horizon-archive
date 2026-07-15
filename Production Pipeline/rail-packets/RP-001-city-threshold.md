@@ -200,7 +200,57 @@ All coordinates are world-viewport rectangles. Narrow targets are purpose-author
 
 ## Curriculum Verification Track — Curriculum Checker
 
-`PENDING A3`
+### Selection and status
+
+- Status: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
+- Python skill: `PY-020 — Handle structured inputs and outputs`; `PY-008`, `PY-009`, and `PY-016` remain supporting prerequisites, not new instruction.
+- AI-901 knowledge check: reuse the existing unimplemented `CUM-01 — AI-901 cumulative confusion-pairs checkpoint`. Do not invent a replacement checkpoint.
+- Direct objective emphasis: `AI901-D2-O7 — Build information extraction solutions with Content Understanding`; `CUM-01` retains its validated decision-plus-reason coverage of all 15 current objectives.
+- Curriculum decision: the accepted credits state is the correct narrative boundary for the first packaged-but-unimplemented cumulative retention beat. Because `CUM-01` is a knowledge checkpoint rather than executable Python evidence, pair it with one small unseen `PY-020` anchor-packet transfer probe; do not relabel CUM choices as Python mastery.
+
+### Exact skill-to-puzzle evidence contract
+
+1. Observation and navigation through `SC-02-20` create no curriculum evidence.
+2. At `SC-02-30`, a separate human expedition overlay supplies a fresh, course-authored `anchor_packet` JSON string containing only already-observed surface facts and expedition state.
+3. The learner parses the packet, preserves its existing observation list, appends separate `environmental_access_open` and `identity_record_closed` records, sets only `expedition_state.anchor_recorded` and `expedition_state.civic_route_available` to `True`, preserves `continuation` unchanged, preserves `city_state_delta` as `None`, serializes the result, and verifies the JSON round trip.
+4. The Python probe requires `10/10` deterministic checks plus a closed-note explanation of list versus dictionary versus JSON. Reject replaced input, missing/distorted records, wrong nesting, changed `continuation`, non-null city delta, hardcoded output, or failed round trip.
+5. The learner then completes existing `CUM-01`: primary `16/16`; mapped remediation for every missed pair; blank fresh transfer `16/16`; all 15 objectives represented on each form; closed-note safety/claim explanation.
+6. Only the expedition overlay may record the anchor and enable `ENTER CIVIC DISTRICT`. The bridge, city cycles, access surfaces, maintenance routes, geometry, and animation clocks never change in response.
+
+### Line-by-line mapping
+
+| Learner action | Skill/evidence | Implementation reason | Invalid shortcut |
+|---|---|---|---|
+| Parse JSON into nested Python data | `PY-016` supporting `PY-020` | Lightweight Foundry and Content Understanding apps consume structured request/result data | Treat JSON text as an editable Python object |
+| Preserve the list and append two distinct access records | `PY-008`, `PY-009`, `PY-020` | Structured output must retain evidence and keep distinct fields distinct | Replace the packet, merge access types, or hardcode output |
+| Update only nested expedition booleans | `PY-009`, `PY-020` | Client code must update intended local state without implying service-side or physical mutation | Change city state, `continuation`, permissions, or identity records |
+| Preserve `None` for city delta and unchanged provisional translation | `PY-020`, `AI901-D2-O7` | Missing evidence must not be invented; valid output is not authority to act | Fabricated value, consent, welcome, recognition, or external action |
+| Serialize and round-trip the packet | `PY-016`, `PY-020` | Structured results must survive the application boundary | Printed literals or unreconstructable output |
+| Resolve CUM decision and reason pairs | All 15 objectives; P08/T08 emphasize `AI901-D2-O7` | Retention must distinguish capability, implementation evidence, valid output, and authority | Correct label/wrong reason, memorized repeat, confidence, timing, or navigation |
+
+### Entry, evidence, remediation, and recovery
+
+- Credits establish story adjacency only, not mastery, identity, attendance, or exam readiness.
+- Scored entry requires privacy-limited evidence that `L-03-01` is mastered and `L-06-03` is `ready_for_next_practice_checkpoint`. Missing, stale, or `review_required` evidence routes to existing remediation without blocking threshold observation, return, or save/resume.
+- Primary Python evidence is the fresh probe at `10/10` plus closed-note explanation. Replaying an old `L-03-01` form is retrieval support, not fresh transfer.
+- Primary AI-901 evidence is CUM primary `16/16`; every miss routes all tagged objectives through `remediation_routes.json`; fresh evidence is blank transfer `16/16` across all 15 objectives.
+- Mastery cannot be created by elapsed time, optional timing, confidence, focus order, anchor navigation, route restoration, scene completion, or repeated identical answers.
+- A miss never changes the city, consumes access, erases credits, or strands the player. Preserve completed probe evidence, clear unsubmitted working choices on transition, and resume at the first incomplete scored boundary.
+
+### Privacy, accessibility, provenance, and authority
+
+- Persist only IDs, per-dimension correctness, objective/skill IDs, attempt/hint counts, confidence, misconception tags, and mastery status. Do not persist learner source, raw packet/answers, private notes, credentials, endpoints, payloads, responses, source content, exam text, or action requests.
+- Use persistent labels, keyboard order, associated text feedback, a live region, reduced-motion equivalence, unlimited retry, no required timer, and no color-only state. Keep curriculum UI in the separate expedition overlay.
+- Label all material course-authored, not Microsoft exam questions. Passing is an internal readiness signal, never an exam guarantee.
+- No Azure call, credential, portal resource, Builder system, identity record, communication, disclosure, publication, purchase, or deletion is requested or authorized.
+
+### Locks, sources, and sign-off
+
+- A3 changes no A1 dialogue, ownership, inference, mystery protection, or state transition and no A2 board order, coordinate, hotspot, asset, focus order, return path, geometry, or animation invariant.
+- Curriculum feedback is human expedition/Teacher/System UI only, never Builder speech or city response.
+- Reverified `2026-07-15`: official AI-901 study guide and the four priority Microsoft Foundry/Azure pages. The April 15, 2026 objectives and `40–45%` concepts / `55–60%` Foundry implementation weights remain controlling; volatile SDK, endpoint, portal, model, tool, role, price, and preview details remain outside this offline gate.
+- Reopen only if official objectives materially change, a validator/playtest proves mismatch or bypass, or Martin changes the learning goal.
+- Exact handoff: `Gameplay Master Agent: build RP-001 A4 around the SOLIDIFIED PY-020 fresh anchor-packet probe followed by the existing CUM-01 16/16 primary -> mapped remediation -> blank 16/16 fresh-transfer gate. Preserve every A1/A2 causality and geometry lock; only expedition state may record the anchor or enable the route; no city response, navigation/timing/confidence bypass, exam guarantee, live Azure action, or new cumulative checkpoint is allowed.`
 
 ## Puzzle Track — Gameplay Master
 
@@ -234,7 +284,7 @@ All coordinates are world-viewport rectangles. Narrow targets are purpose-author
 
 - Lore Builder sign-off: `PENDING — coordinator gate record`
 - Storyboarder sign-off: `PASS — A2 COMPLETE`
-- Curriculum Checker sign-off: `PENDING`
+- Curriculum Checker sign-off: `PASS — A3 COMPLETE; MAPPING SOLIDIFIED`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
 - Readiness: `PENDING`

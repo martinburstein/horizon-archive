@@ -3,6 +3,21 @@
   "exam": "AI-901: Microsoft Azure AI Fundamentals",
   "authority": "AI-901 study guide",
   "status": "draft",
+  "rail_packet_mappings": [
+    {
+      "packet_id": "RP-001",
+      "status": "SOLIDIFIED",
+      "primary_objective_id": "AI901-D2-O7",
+      "cumulative_check_id": "CUM-01",
+      "cumulative_objective_coverage": "all_15_current_objectives",
+      "python_skill_id": "PY-020",
+      "reopen_conditions": [
+        "official_objectives_materially_change",
+        "validator_or_playtest_proves_mismatch_or_bypass",
+        "martin_changes_learning_goal"
+      ]
+    }
+  ],
   "domains": [
     {
       "domain_id": "AI901-D1",

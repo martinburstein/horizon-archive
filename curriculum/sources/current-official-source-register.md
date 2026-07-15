@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-13
+Verified: 2026-07-15
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 

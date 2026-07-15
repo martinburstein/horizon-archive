@@ -326,7 +326,7 @@
         "AI901-D2-O7"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "RP-001 reinforces this skill after L-03-01 and L-06-03 with one unseen expedition-owned anchor-packet parse, nested update, JSON serialization, and round-trip probe before CUM-01. It introduces no new prerequisite and cannot change physical city state."
     }
   ]
 }

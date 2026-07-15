@@ -6,7 +6,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `NONE`
-- Team 1 railhead: `RP-001 — A2 complete; A3 pending`
+- Team 1 railhead: `RP-001 — A3 complete; A4 pending`
 - Ordered Advance lead: `1 in-design packet`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `IN DESIGN — A2 complete` | `NOT READY` | `LORE LOCKED` | `STORYBOARD LOCKED` | `A3 PENDING` | `A3 PENDING` | `A4 PENDING` | `A5 PENDING` | Preserve credits state; continue through protected post-credits staging |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `IN DESIGN — A3 complete` | `NOT READY` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 PENDING` | `A5 PENDING` | Preserve credits state and A1/A2 geometry; fresh anchor packet -> CUM-01 primary/remediation/transfer; expedition-state delta only |
 
 ## Whole-story coverage gate
 

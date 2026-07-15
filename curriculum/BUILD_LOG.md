@@ -896,3 +896,26 @@ Validation performed:
 Next recommended item: Exercise Agent can render `EX-SIM03-FINAL-CONFIDENCE` only after the entry gate passes, one scenario at a time, with optional timing, confidence recorded separately from correctness, and targeted objective remediation after any miss.
 Unresolved risks: Runtime integration for `SIM-02` and `SIM-03` remains post-demo. The 48-hour field is privacy-limited learner evidence rather than a trusted external timestamp, so it supports coaching and does not certify identity, attendance, or exam readiness. SDK routes, endpoints, roles, portal labels, models, preview states, and exam scope remain volatile and must be reverified before final use.
 Notes: The named source-priority skill was unavailable, so required official Microsoft sources were checked directly. Original course-authored practice only. No live service call, Azure mutation, credential use, exam item reproduction, external action, game runtime, art, lore, QA binary, commit, or push occurred.
+
+## Log entry: 2026-07-15T12:21:26-04:00
+
+Stage: RP-001 Curriculum Verification Track (A3)
+Work completed: Audited the accepted credits boundary, current objective/skill/prerequisite maps, mastery model, source register, and the existing packaged-but-unimplemented CUM-01 gate. Solidified RP-001 around one bounded unseen PY-020 anchor-packet parse/update/round-trip probe followed by unchanged CUM-01 primary, mapped remediation, and blank fresh transfer. Recorded strict evidence, recovery, privacy, accessibility, no-authority, causality, geometry, and reopen conditions.
+Files changed:
+- Production Pipeline/rail-packets/RP-001-city-threshold.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/readiness/CUM-01/manifest.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Reverified the official AI-901 study guide and four priority Microsoft Foundry/Azure sources on 2026-07-15; current objective set and weights remain aligned.
+- CUM-01 validator self-test, primary reference 16/16, transfer reference 16/16, and blank-form rejection passed.
+- All curriculum JSON parsed; focused RP-001 mapping/queue checks and git diff checks passed.
+Next recommended item: Gameplay Master Agent performs A4 using the exact handoff in RP-001 without changing A1/A2 locks or inventing another cumulative checkpoint.
+Unresolved risks: The fresh RP-001 Python fixture and runtime integration do not exist until A4/A5; A4 must keep the 10 checks achievable in one bounded overlay and must not let story navigation, timing, confidence, or restored state create mastery.
+Notes: Curriculum mapping only. No game code, board, asset, service call, Azure mutation, credential use, external action, commit, or push change.

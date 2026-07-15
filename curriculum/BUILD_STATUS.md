@@ -62,3 +62,11 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [ ] Integrate `SIM-02` into runtime after the demo
 - [x] Complete three original blueprint-weighted simulation blocks, including a final confidence form
 - [ ] Expand the original question banks further as learner performance reveals recurring misconceptions
+
+## 2026-07-15 RP-001 curriculum verification
+
+- [x] Selected `PY-020` as the bounded fresh Python reinforcement after the accepted credits boundary
+- [x] Reused existing unimplemented `CUM-01` as the next cumulative retention/fresh-transfer gate
+- [x] Solidified `RP-001` mapping with strict Python `10/10`, CUM primary/transfer `16/16 + 16/16`, remediation, privacy, accessibility, no-authority, and no-exam-guarantee boundaries
+- [x] Preserved all locked A1/A2 causality, geometry, and city-state invariants
+- [ ] Gameplay Master completes A4 against the exact solidified contract
