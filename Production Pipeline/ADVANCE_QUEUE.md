@@ -20,17 +20,18 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
-| 4 | `RP-004` | Three-Current Reach | `GATE REVIEW — A5 HANDOFF` | Coordinator | All protected-design gates `PASS`; independent twelve-gate decision pending | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Independently verify the complete protected evidence bundle; promote behind RP-003 or record one genuine hold. |
+| 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
+| 5 | `RP-005` | Reserved contiguous shell | `SEED — RESERVED` | Lore Builder Agent (`A1`, next cycle) | No content assigned | Exact verified RP-004 end state only; no route, location, lesson, puzzle, art, or lore content exists yet | Seed one surface-safe contiguous slice in the next Advance cycle; do not skip or predefine later packets. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `1 — RP-004`
+- Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
-- Promoted packets awaiting Working acceptance: `2 — RP-002, then RP-003`
-- In-design packets: `0`
-- Team 1 railhead: `RP-004 — GATE REVIEW / A5 HANDOFF`
+- Promoted packets awaiting Working acceptance: `3 — RP-002, then RP-003, then RP-004`
+- In-design packets: `0`; one blank contiguous seed is reserved
+- Team 1 railhead: `RP-004 — PROMOTED`; `RP-005 — RESERVED SHELL / A1 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `3 ordered packets — RP-002 and RP-003 promoted; RP-004 in design`
+- Ordered Advance lead beyond Team 2 accepted baseline: `3 ordered packets — RP-002, RP-003, and RP-004 promoted; RP-005 reserved only`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.

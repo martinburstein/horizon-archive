@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED JOURNEY COMPLETE`
+- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
 - Target chapter/location: Chapter 3 opening expansion / first broad working landscape beyond the surveyed civic margin
 - Target demo horizon: third future slice after the accepted RP-001 boundary; directly after RP-003
 - Route order: 4
@@ -301,7 +301,7 @@ The Pilot wants a usable expedition correspondence without turning a beautiful u
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PASS — 2026-07-16 / ONE INTEGRATED FIVE-PHASE GRAPH LOCKED`
 - Coder smoke-test result: `PASS — 13/13 focused; 24/24 RP-003→RP-004 protected path after resume coverage; 431+ full suite; RP-004 validator/build/leakage/purity/patch PASS`
-- Readiness: `GATE REVIEW`
+- Readiness: `READY FOR WORKING — COORDINATOR VERIFIED`
 - Required revision: none in the protected design/build bundle; coordinator decision required. Final art, normal integration, browser persistence, Working evidence, release, and RP-005 remain unauthorized.
 
 ### Exact coordinator Gate Review handoff
@@ -326,9 +326,9 @@ The Pilot wants a usable expedition correspondence without turning a beautiful u
 
 ## Promotion record
 
-- Approved commit: `PENDING`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-004 IN DESIGN — A4 COMPLETE / A5 NEXT`
-- Next contiguous packet seeded: `NO — RP-005 remains reserved`
-- `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
-- Coordinator: `PENDING`
+- Approved commit: `13e3e0fc77537fa1f3eb9873960de6b57cda6e63` plus independent coordinator verification
+- Promoted to Working Queue on: `2026-07-16`
+- Team 1 railhead after promotion: `RP-004 PROMOTED; RP-005 RESERVED SHELL SEEDED`
+- Next contiguous packet seeded: `YES — blank RP-005 shell only; no content assigned`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator promotion`
+- Coordinator: `PASS — focused RP-003→RP-004 and RP-004 journey checks, full 432/432, RP-004 AST/runtime self-test, production build, accepted-bundle identity, App/main/dist leakage, storage/network/DOM purity, and patch integrity independently verified`
