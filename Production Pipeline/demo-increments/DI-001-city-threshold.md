@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W3 normal RP-002 P0 aesthetic review
+
+- **Disposition:** `AESTHETIC IMPLEMENTATION — RP002-AESTH-001 OPEN (P1).` The normal `SC-03-00` arrival/return remains functional, responsive, and safely bounded, but its explicit temporary art hook reuses the exact predecessor City Threshold overview and renders an internal continuity-hook badge. The first Civic Record District view therefore has no distinct location identity or arrival-scale functional read.
+- **Evidence:** current-run live capture of the exact registered raster at CSS `1920 x 1080` and `390 x 844`; source wiring/provenance inspection; `1672 x 941` 24-bit RGB source; SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D`; zero desktop/narrow horizontal overflow; `44px` narrow action; empty browser warning/error console; focused route/frame/city/photoreal tests **23/23 PASS**. Evidence lives under `Aesthetic Agent/evidence/2026-07-16-rp002-w3/`.
+- **Acceptance:** replace only the temporary P0 plate with a dedicated registered premium `SC-03-00` 16:9 master and remove the player-visible continuity badge. Preserve the exact P0 world brief, crop-safe predecessor bridge tail and later semantic regions, first-person/no-protagonist/no-ship exclusion, Builder functional/collective-work logic, responsive containment/reflow, complete ownership/copy, `>=44px` return, reversible entry/return/resume, zero credit/delta/authority, fail-closed saves, Tour isolation, and no later RP-002 or RP-003 exposure.
+- **Exact W4 handoff:** implement and validate only `RP002-AESTH-001`; do not repaint/filter the predecessor master as a substitute, change functional state, or expand beyond the first arrival.
+
 ## 2026-07-16 W2 normal RP-002 P0 integration/reload
 
 - **Disposition:** `DEMO RELOADED — RP002-P1-001 RESOLVED / W3 AESTHETIC REVIEW NEXT.` The completed, verified RP-001 boundary now owns one normal `FOLLOW RECORDED CIVIC ROUTE` action into RP-002 `SC-03-00`, one reversible return, and one bounded resume checkpoint.
