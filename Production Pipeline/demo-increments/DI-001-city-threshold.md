@@ -1,5 +1,16 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 accepted-boundary verification/reload after protected five-observation construction - `9f195b5` handoff
+
+- **Mode/verdict:** `Coder Agent - bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1's clean accepted-path report remained valid, and focused/full/build verification reproduced no defect. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**; complete game suite **308/308 PASS**; production build PASS with the existing non-blocking large-chunk advisory.
+- **Build/reload:** exact assets `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the rebuilt `/?staging=rp001` page and both assets returned HTTP `200` on port `4173` listener PID `17844`.
+- **Protected boundary:** accepted entrypoints and the rebuilt production JS contain no RP-002 route/import/presentation token. RP-002 remains `REVISE`, protected, non-routable, absent from accepted-campaign UI/browser storage/save/art/world state, and unavailable to Working.
+- **Preserved:** recoverable mistakes, bounded first-incomplete resume, responsive `>=44px` controls, keyboard focus, approved photoreal plates/localized focus, strict mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, first-person framing, stable static screen-only geometry, and zero accepted city/world/route delta.
+- **Evidence boundary:** W2 makes no new manual desktop/narrow, computed-geometry, zoom, forced-color, or assistive-technology claim. W3/coordinator retains that live gate; no speculative correction was authorized.
+- **Issue disposition:** no issue opened, repaired, or reopened. Closed functional and visual findings remain closed unless W3 reproduces exact evidence.
+- **Exact W3 handoff:** `Review the live index-DYIYoZtf.js / index-VPnRyv7C.css build from runtime checkpoint 483208b, W1 checkpoint 9f195b5, and this dedicated W2 checkpoint at representative desktop and narrow responsive layouts. Inspect the accepted opening, Glass Meadow, and RP-001 presentation for reproducible photographic-quality, crop/aspect, hierarchy, readability, scale, seam, emphasis, stable static screen-only geometry, framing, or protagonist/ship-exclusion issues. Preserve all functional, learning, recovery, save, privacy/offline/no-authority, Tour, world-state, and protected-route contracts; do not apply retired fixed-canvas or pixel-art rules.`
+
 ## 2026-07-16 W1 accepted-boundary regression after protected five-observation construction - `483208b`
 
 - **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 campaign and separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, non-routable, outside App/main and browser storage, and unavailable to Working after its internal five-observation state model was added.
