@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure — post-RAI-model clean release gate
+
+- **Disposition:** `PASS — ACCEPTED DEMO / NO NEW DEFECT.` W1 through W4 and coordinator live review reproduced no functional or aesthetic issue at the accepted boundary; no runtime or art change was required.
+- **Live review:** title presentation passed at default `1280x720` and narrow `390x844`. Document widths were `1265/1280` and `390/390`; narrow actions were `44px` high, with intact hierarchy, readable framing, stacked controls, and no horizontal escape. The temporary viewport override was reset and the title was left ready for play.
+- **Release validation:** game suite **285/285 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`); RP-002 curriculum self-test PASS; E2E syntax PASS; complete title-to-credits E2E PASS in **161.9 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Cycle boundary:** RP-001 remains accepted and live. RP-002's protected learning state model is complete through its exact conclusion but remains `REVISE`, non-routable, unsaved, unobserved, and absent from UI/art/world state; later integration seams remain Advance work.
+- **Result:** `COORDINATOR COMPLETE — PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.`
+
 ## 2026-07-16 W4 post-RAI-model accepted-boundary verification/final reload - `f8b115d` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding and the bounded W4 presentation gate reproduced none. Runtime, art, tests, saves, routes, curriculum, and tracked QA binaries remain unchanged.
