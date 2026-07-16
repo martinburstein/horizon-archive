@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; COORDINATOR RELEASE PASS COMPLETE`
-- Team 1 railhead: `RP-002 — A4 blank-to-first-near-dispatch graph locked; exact isolated A5 orchestration is next`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 protected learning, five-observation, atomic-save, responsive component, hotspot meaning/presentation/graph/geometry/dispatch, isolated route-state, and isolated route-to-blank-observation orchestration seams are complete, while browser storage integration, production art, normal exposure, and later packet work remain in design`
+- Team 1 railhead: `RP-002 — A5 isolated first-near dispatch complete; next smallest safe dependency lock is A1`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 protected learning, five-observation, atomic-save, responsive component, hotspot meaning/presentation/graph/geometry/dispatch, isolated route-state, route-to-blank-observation, and first-near-dispatch orchestration seams are complete, while browser storage integration, production art, normal exposure, and later packet work remain in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 

@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 - Coder A5: isolated first-near observation dispatch
+
+- **Mode:** `advance` / advance-construction only.
+- **Outcome:** Added pure `CustodyLedgerFirstNearDispatch.js` orchestration and focused tests. The protected seam composes the existing verified blank route-observation boundary, semantic hotspot authority, observation reducer, exact Scene statement, System `1 of 3` status, and zero-credit evidence return without copying their contracts.
+- **Behavior:** Any one of the three equal near actions may be the first deliberate observation. Seven activation modalities normalize to one fresh token, one exact ID, and one statement; duplicate, stale, forged, ambiguous, unavailable, wrong-owner/mode, Tour-derived, route/save-combined, or contaminated input fails closed. Resume reconstructs only zero-ID or one-ID sanitized boundaries without replay. Tour remains view-only and route return remains separate.
+- **Validation:** focused **12/12 PASS**; complete game suite **369/369 PASS**; production build PASS with unchanged accepted `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and only the existing chunk advisory. Module/test syntax, purity, storage/network/DOM absence, App/main isolation, accepted bundle invariance, and whitespace checks pass.
+- **Files changed:** `src/CustodyLedgerFirstNearDispatch.js`, `test/custodyLedgerFirstNearDispatch.test.js`, this work log, RP-002, Advance Queue, and Story Rail Map.
+- **Readiness:** `REVISE`. The module remains unimported, non-routable, absent from browser storage/UI/art/accepted bundles, and unavailable to Working.
+- **Exact W1 handoff:** `Player Agent: play only accepted RP-001 and its separate no-credit Demo Tour. Treat protected RP-002 first-near dispatch as intentionally absent. Report only exact accepted-path defects; otherwise leave a clean W1 checkpoint and hand bug-repair Coder verification/reload only.`
+
 ## 2026-07-16 - Coder W4: accepted-boundary aesthetic verification and final reload after protected route-to-observation construction
 
 - **Mode:** `aesthetic-polish` for W4 only.

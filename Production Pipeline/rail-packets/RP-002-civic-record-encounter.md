@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Latest protected implementation — isolated first-near dispatch (2026-07-16)
+
+- **Status:** `PASS — A5 ISOLATED FD-00/10/20/U/T COMPLETE; REVISE; NON-ROUTABLE`.
+- **Implementation:** `CustodyLedgerFirstNearDispatch.js` composes the existing blank route-observation, semantic hotspot, observation reducer, statement/status, evidence-return, and separate route-return authorities. Any one of the three equal first near actions may finalize exactly one matching canonical ID and Scene statement before System reports `1 of 3`.
+- **Recovery/evidence:** seven modalities normalize to one fresh one-hit token. Invalid, ambiguous, stale, forged, Tour-derived, combined, unavailable, or contaminated input fails closed at zero IDs. Resume reconstructs only sanitized zero-ID or one-ID boundaries without replay. Presentation/return/Tour remain zero credit; both SOLIDIFIED chains and the atomic save conjunction remain unchanged.
+- **Validation:** focused `12/12`; full `369/369`; production build PASS with unchanged accepted bundles. App/main import, React UI, browser storage, art, normal route exposure, accepted world/city/access/external change, successor, Demo reload, and Working promotion remain absent.
+- **Next:** A1 selects the next smallest dependency-adjacent ownership/meaning lock. RP-002 remains protected and unavailable to Working.
+
 ## Packet identity
 
 - Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING + OBSERVATION + ATOMIC PERSISTENCE/SAVE + RESPONSIVE INTERFACE + HOTSPOT GEOMETRY/DISPATCH + ISOLATED ROUTE-STATE + ROUTE-TO-BLANK-OBSERVATION ORCHESTRATION MODELS COMPLETE; REVISE; NON-ROUTABLE`

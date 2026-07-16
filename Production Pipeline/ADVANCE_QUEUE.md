@@ -18,14 +18,14 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Coder Agent (`A5 — advance-construction / isolated first-near-dispatch orchestration`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and A1/A2/A3/A4 blank-to-first-near-dispatch seams are complete; storage, art, normal exposure, and later work are absent | Exact blank SC-03-10 presents three equal near actions; one fresh exact action replaces it with only its model-owned matching Scene statement, System 1-of-3 status, and zero-credit evidence return while route return stays separate | Keep `REVISE`. A5 implements only the pure isolated FD-00/10/20/U/T orchestration seam and focused tests; do not change copy, curriculum, geometry, App/main, storage/art/route exposure, successor, Demo, or Working. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Lore Builder Agent (`A1 — next smallest safe dependency seam`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and isolated first-near-dispatch orchestration are complete; storage, art, normal exposure, and later work are absent | Pure FD-00/10/20/U/T orchestration now permits any one of three equal first actions to finalize exactly one model-owned ID/Scene statement and System 1-of-3 status, with fail-closed recovery, zero-credit evidence return, separate route return, and no cross-credit | Keep `REVISE`. A1 selects only the next smallest dependency-adjacent ownership/meaning lock; do not change App/main, browser storage, UI/art, normal route exposure, accepted bundles/world/city/access/external state, successor, Demo, or Working. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
 - In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, and route-to-blank-observation orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A4 blank-to-first-near-dispatch graph locked; exact isolated A5 orchestration is next`
+- Team 1 railhead: `RP-002 — A5 isolated first-near dispatch complete; next smallest safe dependency lock is A1`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
