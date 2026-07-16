@@ -1697,6 +1697,41 @@ h1 {
   min-height: 44px;
 }
 
+/* A full desktop adventure shell shares the viewport-height budget between the
+   registered 16:9 world and its complete command band. Narrow and text-zoom
+   layouts stay in natural document flow below this breakpoint. */
+@media (min-width: 1280px) and (min-height: 800px) {
+  .canonical-game-host { --desktop-shell-inset: 44px; }
+
+  .crt-stage-anchor {
+    width: min(100%, calc((100dvh - 220px - var(--desktop-shell-inset)) / 0.5625));
+    min-height: 0;
+  }
+
+  .crt-shell,
+  .canonical-game-frame { min-height: 0; }
+
+  .canonical-game-frame .adventure-screen {
+    width: 100%;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) 220px;
+    overflow: hidden;
+  }
+
+  .canonical-game-frame .scene-frame {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .canonical-game-frame .command-panel {
+    min-height: 220px;
+    max-height: 220px;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 480px) {
   body { min-width: 0; }
   .canonical-game-host { padding: 0; }

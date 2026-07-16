@@ -45,3 +45,22 @@ test("narrow and zoom-reflow presentation keeps required targets at least 44px",
   assert.match(styles, /data-canonical-layout="narrow"\] \.demo-tour-actions button,[\s\S]*?min-height: 44px;/);
   assert.match(styles, /@media \(max-width: 480px\)[\s\S]*?body \{ min-width: 0; \}/);
 });
+
+test("representative 1920x1080 desktop contains the complete accepted shell", () => {
+  assert.match(styles, /@media \(min-width: 1280px\) and \(min-height: 800px\) \{[\s\S]*?\.crt-stage-anchor \{[\s\S]*?width: min\(100%, calc\(\(100dvh - 220px - var\(--desktop-shell-inset\)\) \/ 0\.5625\)\);/);
+  assert.match(styles, /@media \(min-width: 1280px\) and \(min-height: 800px\) \{[\s\S]*?\.canonical-game-frame \.adventure-screen \{[\s\S]*?grid-template-rows: minmax\(0, 1fr\) 220px;[\s\S]*?overflow: hidden;/);
+  assert.match(styles, /@media \(min-width: 1280px\) and \(min-height: 800px\) \{[\s\S]*?\.canonical-game-frame \.scene-frame \{[\s\S]*?width: 100%;[\s\S]*?height: auto;[\s\S]*?aspect-ratio: 16 \/ 9;/);
+  assert.match(styles, /@media \(min-width: 1280px\) and \(min-height: 800px\) \{[\s\S]*?\.canonical-game-frame \.command-panel \{[\s\S]*?min-height: 220px;[\s\S]*?max-height: 220px;[\s\S]*?overflow: hidden;/);
+
+  const viewportWidth = 1920;
+  const viewportHeight = 1080;
+  const desktopShellInset = 44;
+  const interfaceHeight = 220;
+  const gameWidth = Math.min(
+    viewportWidth,
+    (viewportHeight - interfaceHeight - desktopShellInset) * 16 / 9,
+  );
+  const worldHeight = gameWidth * 9 / 16;
+  assert.ok(gameWidth >= viewportWidth * 0.75, "world remains visually dominant");
+  assert.ok(worldHeight + interfaceHeight + desktopShellInset <= viewportHeight);
+});

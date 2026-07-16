@@ -1560,25 +1560,38 @@ async function assertResponsiveMeadow(page, viewportLabel, petalState, routeStat
     const image = document.querySelector(".scene-art.glass-meadow-art");
     const stage = document.querySelector(".scene-frame");
     const frame = document.querySelector(".canonical-game-frame");
+    const command = document.querySelector(".command-panel");
     const petal = document.querySelector('[data-hotspot-id="primary"]');
     const route = document.querySelector('[data-hotspot-id="route-marker"]');
     const stageRect = stage.getBoundingClientRect();
     const imageRect = image.getBoundingClientRect();
     const frameRect = frame.getBoundingClientRect();
+    const commandRect = command.getBoundingClientRect();
     const petalRect = petal.getBoundingClientRect();
     const routeRect = route.getBoundingClientRect();
+    const requiredControls = Array.from(document.querySelectorAll(".verb, .inventory button"))
+      .map((control) => control.getBoundingClientRect())
+      .filter((rect) => rect.width > 0 && rect.height > 0);
     return {
       imageWidth: imageRect.width, imageHeight: imageRect.height, imageRendering: getComputedStyle(image).imageRendering,
       stageWidth: stageRect.width, stageHeight: stageRect.height, petalWidth: petalRect.width, petalHeight: petalRect.height,
       routeWidth: routeRect.width, routeHeight: routeRect.height, separated: petalRect.right < routeRect.left,
       contained: petalRect.left >= stageRect.left && routeRect.right <= stageRect.right && petalRect.top >= stageRect.top && routeRect.bottom <= stageRect.bottom,
       frameWidth: frameRect.width, viewportWidth: document.documentElement.clientWidth,
-      scrollWidth: document.documentElement.scrollWidth,
+      viewportHeight: document.documentElement.clientHeight,
+      scrollWidth: document.documentElement.scrollWidth, scrollHeight: document.documentElement.scrollHeight,
+      allRequiredInside: requiredControls.every((rect) => rect.left >= 0 && rect.right <= innerWidth && rect.top >= 0 && rect.bottom <= innerHeight),
+      targetsAtLeast44: requiredControls.every((rect) => rect.width >= 44 && rect.height >= 44),
+      worldAreaShare: (stageRect.width * stageRect.height) / ((stageRect.width * stageRect.height) + (commandRect.width * commandRect.height)),
       alt: image.getAttribute("alt"),
     };
   });
   if (Math.abs(metrics.stageWidth / metrics.stageHeight - 16 / 9) > 0.01 || Math.abs(metrics.imageWidth - metrics.stageWidth) > 1 || Math.abs(metrics.imageHeight - metrics.stageHeight) > 1) throw new Error(`Meadow world is not an undistorted fluid 16:9 stage at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.frameWidth < metrics.viewportWidth - 48 || metrics.scrollWidth > metrics.viewportWidth + 1) throw new Error(`Meadow frame failed available-width or horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.viewportWidth >= 1280 && metrics.viewportHeight >= 800) {
+    if (metrics.scrollHeight > metrics.viewportHeight + 1 || metrics.scrollWidth > metrics.viewportWidth + 1 || !metrics.allRequiredInside || !metrics.targetsAtLeast44 || metrics.worldAreaShare < 0.7) throw new Error(`Meadow frame failed desktop full-shell containment at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  } else if (metrics.frameWidth < metrics.viewportWidth - 48 || metrics.scrollWidth > metrics.viewportWidth + 1 || !metrics.targetsAtLeast44) {
+    throw new Error(`Meadow frame failed narrow horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  }
   if (metrics.imageRendering !== "auto") throw new Error(`Meadow richness sampling disabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!/perfectly flat field/i.test(metrics.alt) || !/first person/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
@@ -1833,7 +1846,10 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       worldRatio: sceneRect.width / sceneRect.height,
       commandFollowsWorld: commandRect.top >= sceneRect.bottom - 1,
       scrollWidth: document.documentElement.scrollWidth,
+      scrollHeight: document.documentElement.scrollHeight,
       viewportWidth: document.documentElement.clientWidth,
+      viewportHeight: document.documentElement.clientHeight,
+      allRequiredInside: renderedControls.every(({ rect }) => rect.left >= 0 && rect.right <= innerWidth && rect.top >= 0 && rect.bottom <= innerHeight),
       alt: image.getAttribute("alt"),
       src: image.currentSrc,
       visualState: image.dataset.ab01State,
@@ -1857,7 +1873,11 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
   if (!/Photorealistic flooded Builder phase-processing basin/i.test(metrics.alt) || !/Tidal Lens/i.test(metrics.alt) || !/grounded local coupling/i.test(metrics.alt)) throw new Error(`Drowned Archive alt text incomplete: ${metrics.alt}`);
   if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (Math.abs(metrics.worldRatio - 16 / 9) > 0.01 || !metrics.commandFollowsWorld) throw new Error(`Responsive world/interface bands failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.hostWidth - metrics.shellWidth > 40 || metrics.scrollWidth > metrics.viewportWidth + 1) throw new Error(`Frame failed available-width or horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.viewportWidth >= 1280 && metrics.viewportHeight >= 800) {
+    if (metrics.shellWidth < metrics.hostWidth * 0.65 || metrics.scrollWidth > metrics.viewportWidth + 1 || metrics.scrollHeight > metrics.viewportHeight + 1 || !metrics.allRequiredInside) throw new Error(`Frame failed desktop full-shell containment at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  } else if (metrics.hostWidth - metrics.shellWidth > 40 || metrics.scrollWidth > metrics.viewportWidth + 1) {
+    throw new Error(`Frame failed available-width or horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  }
   if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected Drowned Archive asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
   if (metrics.imageRendering !== "auto") throw new Error(`Drowned Archive photoreal sampling disabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
