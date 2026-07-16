@@ -1,5 +1,13 @@
 # Player Agent Work Log
 
+## 2026-07-15 — Coordinator closure: localized Glass Meadow focus
+
+- **Outcome:** `PASS — MEADOW-AESTH-FOCUS-001 RESOLVED.` The first focused Terminal keeps its full interaction target and automatic keyboard focus, while the visible cue is now localized to the compact label instead of drawing a roughly `615px` square over the hero image.
+- **Live evidence:** Resumed the accepted campaign at `1280x720`. The exact field-linked Terminal button remained active at `x=325.0625, y=92.3594, w=614.875, h=613.9844`; its full-area outline/tint was absent, the local label cue was unmistakable, and `overflowX` was false.
+- **Responsive and recovery evidence:** The full campaign run covered fresh entry, narrow hotspot containment, wrong-answer recovery, close/reopen, reload/resume, privacy, mastery, Tour isolation, RP-001, and credits. Route-marker and other-hotspot focus plus forced-color visibility remain independently regression-locked.
+- **Validation:** **274/274** game tests; production build PASS; RP-002 self-test PASS; full title-to-credits E2E PASS in **149.6s** with `runtimeErrors:false`; syntax PASS. QA PNGs restored and unrelated untracked user files preserved.
+- **Status:** `COORDINATOR COMPLETE — ACCEPTED BUILD LIVE ON 4173.`
+
 ## 2026-07-15 — W1 accepted-boundary regression playthrough
 
 - **Demo build tested:** `48ecc00` (`cycle(a5): complete protected python transfer seam`). The browser-control runtime exposed no attached browser, so this pass makes no fresh live-visual, stopwatch, or assistive-technology claim. Automated player-journey and focused test evidence are reported separately below.

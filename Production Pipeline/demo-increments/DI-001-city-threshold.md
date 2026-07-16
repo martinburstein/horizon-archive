@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 Coordinator closure — localized Meadow focus
+
+- **Disposition:** `PASS — MEADOW-AESTH-FOCUS-001 RESOLVED AND COORDINATOR VALIDATED.`
+- **Live desktop evidence:** On incomplete-save resume at `1280x720`, the field-linked Terminal remains the active semantic button with the exact `614.875 x 613.984px` hit rectangle, but the prior full-area amber perimeter and wash are absent. The compact upper-left Terminal label now carries a clear localized focus treatment; the photoreal Meadow remains unobstructed and the document reports no horizontal overflow.
+- **Responsive/accessibility evidence:** Focused regressions preserve the shared route-marker/other-hotspot cue and forced-colors system treatment. The complete browser expedition passed its desktop and narrow responsive gates, including hotspot containment, keyboard behavior, `>=44px` targets, available-width `16:9`, and no page escape. Fresh entry behavior is covered by the full campaign run; resumed entry was confirmed live.
+- **Coordinator validation:** game suite **274/274 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`); RP-002 official curriculum self-test PASS; full title-to-credits E2E PASS in **149.6 seconds** with `runtimeErrors:false`; E2E syntax PASS. Regenerated QA binaries were restored before checkpointing.
+- **Preserved:** art/crop, exact hotspot geometry and semantics, automatic focus, pointer/keyboard activation, route-marker and other-hotspot focus, opening, save/resume, mastery, privacy/no-authority, Tour isolation, RP-001 state, continuation/null city delta, and protected non-routable RP-002.
+
 ## 2026-07-15 W4 localized Meadow focus — `d251b1a`
 
 - **Disposition:** `MEADOW-AESTH-FOCUS-001 RESOLVED IN W4 — COORDINATOR LIVE VALIDATION PENDING.` The exact field-linked Terminal hit target, semantic button, automatic focus, accessible name, and pointer/keyboard activation remain unchanged; only the oversized visible focus treatment changed.
