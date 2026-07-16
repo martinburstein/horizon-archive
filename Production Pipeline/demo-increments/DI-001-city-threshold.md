@@ -1,5 +1,16 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload - `fa29dba` handoff
+
+- **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4's exact focused/full/build verification reproduced none. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Finding disposition:** no aesthetic ID was opened, changed, or reopened. Closed responsive, opening, Tour, Meadow-integration, localized-focus, and RP-001 findings remain closed. Optional registered membrane animation remains deferred follow-on art, not a defect in the accepted static presentation.
+- **Presentation preserved:** all four accepted lossless RGB `1672 x 941` masters retain aspect-preserving responsive crop, photographic detail, world dominance, first-person/no-protagonist/no-ship framing, integrated Meadow seams, localized focus, readable hierarchy, `>=44px` required targets, and stable static screen-only geometry.
+- **Functional boundary preserved:** gameplay/recovery, saves/mastery/privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, accepted world state, and protected RP-002 non-routability remain exact.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**; complete game suite **308/308 PASS**; production build PASS with the existing non-blocking large-chunk advisory; exact page/JS/CSS HTTP checks PASS.
+- **Build/reload:** final-reloaded port `4173` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the staging page and both assets returned HTTP `200` on listener PID `15876`.
+- **Evidence boundary:** W4 makes no fresh manual desktop/narrow screenshot, rendered-crop, computed-geometry, zoom, forced-color, or assistive-technology claim. The coordinator retains the representative live gate; no speculative production or art edit was made.
+- **Exact coordinator handoff:** `Review the final-reloaded accepted build at representative desktop and narrow responsive layouts, then run the complete coordinator tests, build, RP-002 curriculum validator, and full E2E. Confirm crop/aspect, first-person exclusion, localized focus, opening hierarchy, >=44px targets, no seams/stretch/clipping/horizontal escape, and every gameplay/learning/save/privacy/Tour/world contract. Keep RP-002 non-routable and restore incidental QA binaries before final disposition.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review after protected five-observation construction - `47a866c` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - NO NEW AESTHETIC FINDING.` The accepted opening, Glass Meadow, and RP-001 presentation contracts remain coherent; no closed visual finding was reopened and protected RP-002 remained outside the Working review.
