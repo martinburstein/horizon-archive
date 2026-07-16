@@ -294,6 +294,24 @@ export function createCityThresholdSave() {
   return sanitizeCityThresholdSave({ packetId: CITY_THRESHOLD_PACKET_ID, checkpoint: "threshold_entry" });
 }
 
+export function readVerifiedCityThresholdPredecessor(storage) {
+  try {
+    const safe = sanitizeCityThresholdSave(JSON.parse(storage?.getItem(CITY_THRESHOLD_SAVE_KEY) ?? "null"));
+    if (safe?.checkpoint !== "anchor_complete"
+      || safe.cityThresholdAnchorRecorded !== true
+      || safe.civicDistrictRouteAvailable !== true
+      || safe.continuation !== CITY_THRESHOLD_CONTINUATION
+      || safe.cityStateDelta !== null) return null;
+    return Object.freeze({
+      verificationStatus: "verified",
+      cityThresholdAnchorRecorded: true,
+      civicDistrictRouteAvailable: true,
+    });
+  } catch {
+    return null;
+  }
+}
+
 export function getCityThresholdResumeBoard(save) {
   const safe = sanitizeCityThresholdSave(save) ?? createCityThresholdSave();
   if (safe.checkpoint === "anchor_complete") return "SC-02-50";

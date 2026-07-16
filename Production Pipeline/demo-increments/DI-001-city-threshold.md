@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 normal RP-002 P0 integration/reload
+
+- **Disposition:** `DEMO RELOADED — RP002-P1-001 RESOLVED / W3 AESTHETIC REVIEW NEXT.` The completed, verified RP-001 boundary now owns one normal `FOLLOW RECORDED CIVIC ROUTE` action into RP-002 `SC-03-00`, one reversible return, and one bounded resume checkpoint.
+- **Scope:** this is a thin adapter over the approved protected route-state authority. It integrates no observation, learning, save-transaction, packet-completion, successor, authority, external action, world/city delta, or RP-003 content. Missing, stale, forged, private, partial, duplicate, and Tour-derived inputs fail closed.
+- **Presentation:** the accessible first-person P0 arrival uses the registered predecessor overview as a temporary continuity plate and exposes `data-production-art-hook="SC-03-00-overview-pending"`; dedicated P0 production art remains explicitly unfinished for W3/W4 disposition.
+- **Validation/reload:** focused **6/6**, full **419/419**, production build, and **136.9s** complete E2E passed with credits reached and no runtime errors. QA binaries were restored. Port `4173` serves `index-BDnfWkBc.js` / `index-ISooyZtC.css` and returned HTTP `200` after rebuild/restart.
+- **Exact W3 handoff:** inspect only the normal `SC-03-00` arrival and return on this build. Preserve every functional/state/accessibility invariant and report the smallest exact visual finding, especially the explicitly temporary continuity-plate hook; do not expand into the rest of RP-002 or RP-003.
+
 ## 2026-07-16 coordinator release — Vivobook full-shell containment
 
 - **Disposition:** `PASS — VIEWPORT-P1-002 RESOLVED / COORDINATOR VALIDATED.` The responsive shell fits the representative 16:9 laptop viewport without outer scrolling, distortion, fixed legacy framing, or hidden current controls.

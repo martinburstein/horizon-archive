@@ -7,7 +7,17 @@ import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
+import { readVerifiedCityThresholdPredecessor } from "./cityThresholdExercise.js";
+import {
+  clearCustodyLedgerNormalRoute,
+  createCustodyLedgerNormalRouteController,
+  createCustodyLedgerNormalRouteIntent,
+  custodyLedgerRouteActions,
+  readCustodyLedgerNormalRoute,
+  writeCustodyLedgerNormalRoute,
+} from "./CustodyLedgerNormalRoute.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -603,7 +613,12 @@ export function App() {
   const [finalConfidenceSession,setFinalConfidenceSession]=useState(null);const [finalConfidenceEvidence,setFinalConfidenceEvidence]=useState(null);
   const [demoTour, setDemoTour] = useState(() => typeof window === "undefined" ? null : loadDemoTour(window.localStorage));
   const [demoTourConfirmation, setDemoTourConfirmation] = useState(null);
+  const [custodyLedgerRouteSave, setCustodyLedgerRouteSave] = useState(null);
   const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
+  const verifiedCityThresholdPredecessor = typeof window === "undefined"
+    ? null
+    : readVerifiedCityThresholdPredecessor(window.localStorage);
+  const custodyLedgerRouteEventRef = useRef(0);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -1137,7 +1152,66 @@ export function App() {
       setMode("playing");
       return;
     }
+    const predecessor = typeof window === "undefined"
+      ? null
+      : readVerifiedCityThresholdPredecessor(window.localStorage);
+    const routeSave = predecessor && typeof window !== "undefined"
+      ? readCustodyLedgerNormalRoute(window.localStorage, predecessor)
+      : null;
+    if (routeSave?.checkpoint === "sc03_arrival") {
+      setCustodyLedgerRouteSave(routeSave);
+      setMode("rp002-arrival");
+      return;
+    }
     setMode(saved.finished ? "ending" : saved.opening.step);
+  }
+
+  function routeActivationKind(event) {
+    if (event?.detail === 0) return "keyboard_enter";
+    if (event?.nativeEvent?.pointerType === "touch") return "touch";
+    return "pointer";
+  }
+
+  function routeEventToken(prefix) {
+    custodyLedgerRouteEventRef.current += 1;
+    return `${prefix}-${Date.now()}-${custodyLedgerRouteEventRef.current}`;
+  }
+
+  function followRecordedCivicRoute(event) {
+    if (demoTour || typeof window === "undefined") return;
+    const predecessor = readVerifiedCityThresholdPredecessor(window.localStorage);
+    if (!predecessor) return;
+    const controller = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: readCustodyLedgerNormalRoute(window.localStorage, predecessor),
+    });
+    const result = controller.dispatch(createCustodyLedgerNormalRouteIntent(
+      custodyLedgerRouteActions.enter,
+      routeActivationKind(event),
+      routeEventToken("rp002-enter"),
+    ));
+    if (result.status !== "entered"
+      || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
+    setCustodyLedgerRouteSave(result.save);
+    setMode("rp002-arrival");
+  }
+
+  function returnToCityThresholdFromRp002(event) {
+    if (demoTour || typeof window === "undefined") return;
+    const predecessor = readVerifiedCityThresholdPredecessor(window.localStorage);
+    if (!predecessor) return;
+    const restoredSave = custodyLedgerRouteSave
+      ?? readCustodyLedgerNormalRoute(window.localStorage, predecessor);
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave });
+    const result = controller.dispatch(createCustodyLedgerNormalRouteIntent(
+      custodyLedgerRouteActions.returnAccepted,
+      routeActivationKind(event),
+      routeEventToken("rp002-return"),
+    ));
+    if (result.status !== "returned") return;
+    clearCustodyLedgerNormalRoute(window.localStorage);
+    setCustodyLedgerRouteSave(null);
+    setMode("city-threshold-staging");
   }
 
   function returnToCompletedMeadow() {
@@ -2164,8 +2238,24 @@ export function App() {
     );
   }
 
+  if (mode === "rp002-arrival") {
+    const routeSave = verifiedCityThresholdPredecessor && typeof window !== "undefined"
+      ? custodyLedgerRouteSave ?? readCustodyLedgerNormalRoute(window.localStorage, verifiedCityThresholdPredecessor)
+      : null;
+    const routeState = createCustodyLedgerNormalRouteController({
+      predecessor: verifiedCityThresholdPredecessor,
+      restoredSave: routeSave,
+    }).getState();
+    return <CivicRecordArrival routeState={routeState} onReturn={returnToCityThresholdFromRp002} />;
+  }
+
   if (mode === "city-threshold-staging") {
-    return <CityThresholdStaging onReturnToCredits={() => setMode("ending")} />;
+    return (
+      <CityThresholdStaging
+        onReturnToCredits={() => setMode("ending")}
+        onFollowCivicRoute={followRecordedCivicRoute}
+      />
+    );
   }
 
   if (mode === "ending") {
@@ -2180,7 +2270,12 @@ export function App() {
           <div className="credit-rule" />
           <p className="credit-line">The Horizon Archive</p>
           <p className="credit-line muted">Prologue complete</p>
-          {cityThresholdStagingEnabled && <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Open RP-001 staging route</button>}
+          {verifiedCityThresholdPredecessor && (
+            <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Continue at City Threshold</button>
+          )}
+          {cityThresholdStagingEnabled && !verifiedCityThresholdPredecessor && (
+            <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Open RP-001 staging route</button>
+          )}
           <button className="primary-action" onClick={() => setMode("title")}>Return to title</button>
         </section>
       </main>

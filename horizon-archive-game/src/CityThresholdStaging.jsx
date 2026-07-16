@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import cityAccessImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png";
 import cityBoundaryImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-boundary-master.png";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
@@ -27,6 +27,7 @@ import {
   withSafetyExplanation,
 } from "./cityThresholdExercise.js";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { custodyLedgerRouteActions, custodyLedgerRouteOwners } from "./CustodyLedgerNormalRoute.js";
 
 function formatToken(value) {
   return String(value ?? "").replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
@@ -228,13 +229,20 @@ function Cum01Checkpoint({ save, updateSave }) {
   );
 }
 
-export function CityThresholdStaging({ onReturnToCredits }) {
+export function CityThresholdStaging({ onReturnToCredits, onFollowCivicRoute }) {
   const [save, setSave] = useState(loadStagingSave);
   const [board, setBoard] = useState(() => getCityThresholdResumeBoard(loadStagingSave()));
   const [observations, setObservations] = useState({});
   const [anchorSelected, setAnchorSelected] = useState(false);
   const [overlayOpen, setOverlayOpen] = useState(() => loadStagingSave().checkpoint !== "threshold_entry" && loadStagingSave().checkpoint !== "anchor_complete");
   const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance movement are already mid-cycle. No occupant is visible.");
+  const routeActionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (board === "SC-02-50" && save.checkpoint === "anchor_complete") {
+      routeActionRef.current?.focus({ preventScroll: true });
+    }
+  }, [board, save.checkpoint]);
 
   function updateSave(next) {
     const safe = sanitizeCityThresholdSave(next) ?? createCityThresholdSave();
@@ -304,6 +312,18 @@ export function CityThresholdStaging({ onReturnToCredits }) {
           <div className="city-command-actions">
             {board === "SC-02-10" && <button disabled={!observations.stopSeam || !observations.mapDivision} onClick={() => { setBoard("SC-02-20"); setMessage("Utility access and identity-bearing record access remain distinct."); }}>COMPARE BOUNDARIES</button>}
             {board === "SC-02-30" && <button onClick={() => { setBoard("SC-02-20"); setAnchorSelected(false); setMessage("Anchor selection cancelled. No durable state changed."); }}>CANCEL</button>}
+            {board === "SC-02-50" && save.checkpoint === "anchor_complete" && onFollowCivicRoute && <>
+              <p id="civic-route-owner">{custodyLedgerRouteOwners.pilot}</p>
+              <button
+                ref={routeActionRef}
+                className="primary-action"
+                type="button"
+                aria-describedby="civic-route-owner"
+                onClick={onFollowCivicRoute}
+              >
+                {custodyLedgerRouteActions.enter}
+              </button>
+            </>}
             <button onClick={onReturnToCredits}>RETURN TO PROLOGUE CREDITS</button>
           </div>
         </section>

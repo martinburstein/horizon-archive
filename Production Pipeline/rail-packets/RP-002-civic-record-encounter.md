@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 normal-entry checkpoint — 2026-07-16
+
+- **Disposition:** `RP002-P1-001 RESOLVED / NORMAL P0 DEMO RELOADED / W3 NEXT`.
+- **Integrated boundary:** exact verified RP-001 `anchor_complete` evidence now enables one Pilot-owned `FOLLOW RECORDED CIVIC ROUTE` action into only `SC-03-00`. One allowlisted checkpoint resumes the arrival; one explicit return reconstructs and restores the completed City Threshold through the existing protected route authority.
+- **Hard stop:** this tranche grants zero observation, learning, exam credit, authority, external action, successor, world delta, or city delta. It does not integrate `SC-03-10+`, PY-009, RP002-RAI-01, atomic comparison save, completion, final art, or RP-003.
+- **Presentation gate:** the P0 component is responsive, first-person, heading-focused, System-owned, and has one 44px return. It uses the registered predecessor overview only as an explicit temporary continuity plate with `data-production-art-hook="SC-03-00-overview-pending"`; W3/W4 owns its visual disposition.
+- **Evidence:** focused normal-route **6/6**, full **419/419**, production build, and full E2E **PASS**; bounded resume/return and all seven modalities are covered; forged/private/partial/Tour/duplicate inputs fail closed; regenerated QA images were restored.
+
 ## Mandatory convergence audit — 2026-07-16
 
 - **Verdict:** `READY FOR WORKING — COORDINATOR GATE PASSED; NORMAL INTEGRATION NOW ASSIGNED TO TEAM 2`.
