@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 - Coder W2: accepted-boundary verification/reload after protected second-near dispatch
+
+- **Mode/verdict:** `bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1 checkpoint `f78b63d` reported no P0/P1/P2 accepted-path defect; W2 reproduced none and changed no runtime, test, art, save, route, curriculum, accepted-world, or QA-binary artifact.
+- **Validation:** focused **40/40 PASS**; full **382/382 PASS**; production build PASS with unchanged `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and only the existing chunk advisory; protected second-near App/main/bundle/storage leakage scans PASS; page/JS/CSS HTTP `200`.
+- **Reload/boundary:** port `4173` listener PID `90004` serves the exact accepted assets. Accepted photoreal/responsive/accessibility, recovery, bounded saves, mastery, privacy/offline/no-authority, Tour isolation, continuation, null city delta, zero accepted world/route change, and RP-002 second-near absence/non-routability remain exact.
+- **Files changed:** this log, DI-001, Working Queue, and Story Rail Map only. No issue was opened or repaired; QA binaries and unrelated user files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent: review the W2-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build on port 4173 at representative desktop and narrow layouts. Report only exact accepted-opening, Glass Meadow, or RP-001 source-quality, crop/aspect, hierarchy, scale, seam, readability, static-geometry, first-person, or protagonist/ship-exclusion findings. Preserve every gameplay, learning, recovery, save, privacy/offline/no-authority, Tour, world, responsive/accessibility, and protected-route invariant. RP-002's isolated second-near dispatcher remains intentionally absent and out of Working scope. Do not apply retired pixel-art or fixed-viewport gates.`
+
 ## 2026-07-16 — Coder A5: isolated second-near observation dispatch
 
 - **Mode:** `advance` / advance-construction only.
