@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 verification/reload after protected third-near completion - `b493f86` handoff
+
+- **Mode/verdict:** `bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1 opened no accepted-path defect and W2 reproduced none. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation/reload:** focused **40/40 PASS**; full **395/395 PASS**; production build and protected third-near leakage scans PASS. Port `4173` listener PID `9452` serves `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; page and both assets returned HTTP `200`.
+- **Boundary:** accepted photoreal/responsive/accessibility, recovery, mastery/save, privacy/offline/no-authority, Tour isolation, continuation, null city delta, zero accepted world/route change, and RP-002 third-near absence/non-routability remain exact.
+- **Exact W3 handoff:** `Review the W2-reloaded accepted build at representative desktop and narrow layouts for exact source-quality, crop/aspect, hierarchy, scale, seam, readability, stable-geometry, first-person, or protagonist/ship-exclusion findings. Preserve every functional, accessibility, curriculum, and protected-route invariant; RP-002 remains absent and out of Working scope.`
+
 ## 2026-07-16 W1 accepted-boundary regression after protected third-near completion - `01695c2`
 
 - **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` RP-001 remains the oldest accepted live-demo packet and the complete campaign plus separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, unimported, storage-free, non-routable, outside accepted UI/art/routes/bundles, and unavailable to Working; its isolated third-near completion was intentionally absent and was not treated as missing UI or a defect.

@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W1 CLEAN AFTER PROTECTED THIRD-NEAR COMPLETION; W2 VERIFICATION/RELOAD NEXT`
+- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W2 VERIFIED AND RELOADED AFTER PROTECTED THIRD-NEAR COMPLETION; W3 REVIEW NEXT`
 - Team 1 railhead: `RP-002 — A5 isolated third-near completion complete; A1 selects the next protected adjacency`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 protected learning, five-observation, atomic-save, responsive component, hotspot meaning/presentation/graph/geometry/dispatch, isolated route-state, route-to-blank-observation, and first-, second-, and third-near orchestration seams are complete, while comparison transition, browser storage integration, production art, normal exposure, successor, and later packet work remain in design`
 - Whole-story rail status: `IN PROGRESS`
@@ -30,6 +30,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Latest Working handoff
 
+- `2026-07-16 / b493f86 handoff`: W2 reproduced no accepted-path defect, made no runtime/art/test change, passed focused `40/40`, full `395/395`, production build, protected third-near leakage scans, and exact page/JS/CSS HTTP checks, then reloaded `index-DYIYoZtf.js` / `index-VPnRyv7C.css` on port `4173`. W3 owns accepted-scene aesthetic review; RP-002 remains intentionally absent and non-routable.
 - `2026-07-16 / 01695c2`: W1 completed the accepted RP-001 campaign and separate no-credit Tour after protected third-near completion construction. Focused `40/40`, full `395/395`, production build, and the `223.9s` full E2E passed with credits reached, every emitted gate true, and no runtime errors. P0/P1/P2 none; RP-002 remained intentionally absent and non-routable. W2 owns verification/reload only unless an exact accepted-path defect is reproduced.
 
 - `2026-07-16 / coordinator`: Independent release gates passed after the protected second-near dispatch tranche: full `382/382`, build, RP-002 validator, E2E syntax, `139.7s` full campaign E2E, and representative desktop/narrow live review all passed. The title remains open on port `4173`; A1 owns the next protected RP-002 adjacency.
