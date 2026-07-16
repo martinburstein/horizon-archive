@@ -77,7 +77,6 @@ Record:
 
 ## Immediate application to RP-002
 
-`RP-002` has exceeded the normal convergence budget. Existing protected work remains valid, but the next full Advance cycle must prioritize integration and Gate Review readiness over further one-transition-at-a-time expansion.
+`RP-002` exceeded the normal convergence budget. Existing protected work remains valid, and the mandatory convergence cycle is complete: A2 consolidated presentation, A3 preserved the SOLIDIFIED mappings, A4 locked one end-to-end graph, and A5 composed one pure P0–P3 protected journey smoke through real authorities.
 
-The current comparison transition may be completed because it was already selected and checkpointed. After that, the coordinator must inventory the packet against the scorecard, consolidate the shortest protected path, and either move it to `GATE REVIEW` or record a genuine `HOLD` reason.
-
+Current verdict: `GATE REVIEW — A5 HANDOFF`. The protected-code and post-integration validation deficits are zero; normal integration, final production assets, Working evidence, and release remain later-stage obligations. `RP-003` is seed-ready but reserved pending the coordinator gate. No additional RP-002 protected micro-seam is authorized unless the coordinator records a genuine hold or a later validation reproduces a regression.

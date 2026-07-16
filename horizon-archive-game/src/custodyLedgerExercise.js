@@ -193,6 +193,8 @@ export const custodyLedgerAtomicProgression = Object.freeze({
   rp002Checkpoint: "comparison_complete",
 });
 
+export const CUSTODY_LEDGER_SAVE_INTENT = "SAVE BOUNDED COMPARISON";
+
 export const custodyLedgerSaveOwnershipMessages = Object.freeze({
   save_eligibility: Object.freeze({
     owner: "SYSTEM // EXPEDITION SESSION",
@@ -2372,7 +2374,7 @@ export function prepareCustodyLedgerSave(state) {
       { group: "save_confirmation", target: "heading", contained: true },
     ),
     ownerMessage: custodyLedgerSaveOwnershipMessages.save_confirmation,
-    commitIntent: "SAVE BOUNDED COMPARISON",
+    commitIntent: CUSTODY_LEDGER_SAVE_INTENT,
   };
 }
 
@@ -2395,7 +2397,7 @@ export function cancelCustodyLedgerSave(state) {
 
 export function commitCustodyLedgerBoundedComparison(state, adapter, intent) {
   const current = sanitizeCustodyLedgerSaveState(state);
-  if (!current || current.phase !== "save_confirmation" || intent !== "SAVE BOUNDED COMPARISON") {
+  if (!current || current.phase !== "save_confirmation" || intent !== CUSTODY_LEDGER_SAVE_INTENT) {
     return current ?? state;
   }
   if (!custodyLedgerSaveDependenciesAreComplete(current.saveDependencies)) {
@@ -2438,7 +2440,7 @@ export function retryCustodyLedgerSave(state) {
       { group: "save_confirmation", target: "heading", contained: true },
     ),
     ownerMessage: custodyLedgerSaveOwnershipMessages.save_confirmation,
-    commitIntent: "SAVE BOUNDED COMPARISON",
+    commitIntent: CUSTODY_LEDGER_SAVE_INTENT,
   };
 }
 

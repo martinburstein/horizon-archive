@@ -10,6 +10,8 @@ Curriculum Checker's spoiler-safe supporting map: [CURRICULUM_SPINE.md](CURRICUL
 
 Gameplay Master's spoiler-safe supporting map: [GAMEPLAY_SYSTEMS_SPINE.md](GAMEPLAY_SYSTEMS_SPINE.md). It records verified current interaction systems and future gameplay-quality obligations only; reserved rows authorize no puzzle, item, verb, route, code, or successor content.
 
+Coder/Working/coordinator spoiler-safe supporting map: [PRODUCTION_READINESS_SPINE.md](PRODUCTION_READINESS_SPINE.md). It tracks protected-build, art, integration, Working, responsive-shell, and release obligations; reserved rows authorize no content.
+
 The planning target is **12 main Rail Packets**. This is a production constraint, not immutable canon. Packets may be merged, split, or reordered only through `DECISION_LOG.md`, with predecessor continuity and curriculum coverage repaired in the same change.
 
 ## Four-phase shape
@@ -28,8 +30,8 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 | Order | Packet | Surface-safe purpose | Status | Python lane | AI-901 lane | Target player time | Required predecessor | Next breadth action |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | Accepted opening boundary and current-demo foundation | `IN DEMO — ACCEPTED` | Foundation chain already shipped | Current accepted objective chain | Existing demo | Accepted opening state | Maintain; reopen only on reproduced evidence |
-| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `IN DESIGN — REVISE` | `PY-009 SOLIDIFIED`; A3 convergence audit passed | `RP002-RAI-01 SOLIDIFIED`; A3 convergence audit passed | `18–25 min` clean first play; `<5 min` protected smoke | `RP-001` accepted end state | A4 integrated graph passed; complete one A5 protected smoke integration, then decide Gate Review |
-| 3 | `RP-003` | Final foundation-phase slice | `SEED RESERVED` | Assign after `RP-002` gate | Assign after `RP-002` gate | `TBD` | `RP-002` specified end state | Seed immediately when `RP-002` reaches Gate Review |
+| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `GATE REVIEW — A5 HANDOFF` | `PY-009 SOLIDIFIED`; A3 convergence audit passed | `RP002-RAI-01 SOLIDIFIED`; A3 convergence audit passed | `18–25 min` clean first play; `<5 min` protected smoke passed | `RP-001` accepted end state | Coordinator verifies the checked Gate Review bundle; normal integration remains unauthorized |
+| 3 | `RP-003` | Final foundation-phase slice | `SEED READY / RESERVED` | Assign only after coordinator gate | Assign only after coordinator gate | `TBD` | `RP-002` specified end state | Seed after the RP-002 coordinator gate decision; do not invent content here |
 | 4 | `RP-004` | First expansion-phase slice | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-003` | Define only after contiguous predecessor exists |
 | 5 | `RP-005` | Expansion continuation | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-004` | Define only after contiguous predecessor exists |
 | 6 | `RP-006` | Expansion-phase closure | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-005` | Define only after contiguous predecessor exists |
@@ -55,5 +57,5 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 
 - Team 2 is accepted through `RP-001`.
 - Team 1 is one packet ahead on `RP-002`.
-- `RP-002` is **deep and design-converged but not implementation-converged**: A2 closed the Scene gate, A3 preserved both SOLIDIFIED mappings, and A4 closed the Puzzle gate with one end-to-end graph. A5 protected smoke integration, final production art, and promotion remain absent.
-- The next planning milestone is A5 protected smoke integration, followed by a Gate Review decision and then a surface-safe `RP-003` seed.
+- `RP-002` is **protected-design and protected-implementation converged**: A2 closed the Scene gate, A3 preserved both SOLIDIFIED mappings, A4 closed the Puzzle gate, and A5 passed one pure P0–P3 journey smoke through real evaluators, atomic save/restore, Tour isolation, and safe return. Final production assets, normal integration, Working evidence, and promotion remain later obligations.
+- Current verdict is `GATE REVIEW — A5 HANDOFF`. The coordinator now verifies the bundle and decides promotion or one genuine hold; `RP-003` is seed-ready but remains reserved in this pass.

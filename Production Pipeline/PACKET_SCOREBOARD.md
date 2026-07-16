@@ -17,26 +17,26 @@ Status vocabulary:
 | Packet | Story | Scene | Curriculum | Puzzle | Protected code | Save/recovery | Accessibility | Production art | Normal integration | Working evidence | Breadth verdict | Next action |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `RP-001` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `MAINTAIN` | Reopen only on reproduced evidence |
-| `RP-002` | `PASS` | `PASS — compact convergence locked` | `PASS — A3 convergence audit locked; spine active` | `PASS — A4 integrated graph locked; gameplay spine active` | `PARTIAL — journey-level smoke integration missing` | `PASS` contract / protected evidence | `PASS` contract / protected evidence | `PASS plan / assets deferred` | `N/A for Gate Review / missing for Working` | `N/A` | `CONVERGE + MERGE + TRIM` | A5 composes one protected end-to-end smoke path and validation bundle; then request Gate Review or name a genuine hold |
-| `RP-003` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SEED RESERVED` | Seed a surface-safe slice when `RP-002` reaches Gate Review |
+| `RP-002` | `PASS` | `PASS — compact convergence locked` | `PASS — A3 convergence audit locked; spine active` | `PASS — A4 integrated graph locked; gameplay spine active` | `PASS — protected P0–P3 journey smoke` | `PASS — atomic save/restore and deterministic recovery` | `PASS — protected metadata/evidence` | `PASS plan / assets deferred` | `N/A for Gate Review / missing for Working` | `N/A — not promoted` | `GATE REVIEW — A5 HANDOFF` | Coordinator verifies the direct evidence and decides promotion; normal integration remains unauthorized |
+| `RP-003` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SEED READY / RESERVED` | Seed a surface-safe slice only after the RP-002 coordinator gate decision |
 | `RP-004`–`RP-012` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SPINE RESERVED` | Preserve sequence; do not invent non-contiguous content |
 
 ## Gate Review checklist
 
 A packet may enter `GATE REVIEW` only when every applicable item has a direct artifact and validation reference:
 
-- [ ] Surface-safe slice premise, player goal, start state, and end state
-- [ ] Predecessor match and successor-facing exit contract
-- [ ] Storyboard sequence and production-quality visual brief
-- [ ] Python and AI-901 mappings with primary, remediation, retrieval, and transfer evidence
-- [ ] Complete puzzle graph with mistakes, hints, retry, recovery, and expected duration
-- [ ] Save/resume, privacy, offline/no-authority, and Tour boundaries
-- [ ] Keyboard, focus, names, errors, target size, reflow, motion, and non-color states
-- [ ] Protected end-to-end smoke path rather than disconnected modules only
-- [ ] Production-art plan and provenance gate
-- [ ] Known risks, flexible choices, and player-observable acceptance criteria
-- [ ] Focused tests, full relevant tests, validator, build, and leakage evidence
-- [ ] Breadth verdict and next packet seed decision
+- [x] Surface-safe slice premise, player goal, start state, and end state
+- [x] Predecessor match and successor-facing exit contract
+- [x] Storyboard sequence and production-quality visual brief
+- [x] Python and AI-901 mappings with primary, remediation, retrieval, and transfer evidence
+- [x] Complete puzzle graph with mistakes, hints, retry, recovery, and expected duration
+- [x] Save/resume, privacy, offline/no-authority, and Tour boundaries
+- [x] Keyboard, focus, names, errors, target size, reflow, motion, and non-color states
+- [x] Protected end-to-end smoke path rather than disconnected modules only
+- [x] Production-art plan and provenance gate
+- [x] Known risks, flexible choices, and player-observable acceptance criteria
+- [x] Focused tests, full relevant tests, validator, build, and leakage evidence
+- [x] Breadth verdict and next packet seed decision
 
 ## 2026-07-16 RP-002 convergence audit result
 
@@ -44,11 +44,12 @@ A packet may enter `GATE REVIEW` only when every applicable item has a direct ar
 - **A2 reduction complete:** the Scene/presentation gate is closed with four compact phases over the existing three production masters and one full-shell `1920 x 1080` containment contract; detailed micro-seams remain validation evidence, not separate slides.
 - **A3 curriculum reduction complete:** the four-phase presentation and `1920 x 1080` full-shell fit change presentation only; both SOLIDIFIED mappings, five independent observations, strict save conjunction, privacy, accessibility, Tour, offline/no-authority, and no-exam-guarantee contracts remain exact. [CURRICULUM_SPINE.md](CURRICULUM_SPINE.md) now reserves twelve-packet learning coverage without assigning future objectives or Python skills.
 - **A4 gameplay reduction complete:** one integrated graph now owns `ARRIVE -> SURVEY -> INTERPRET + SAVE -> VERIFY + RETURN`, including goal, actions, mistakes, answer-free hints, retry, recovery, resume/focus/accessibility, `1920 x 1080` no-outer-scroll containment, five-minute protected demonstration, duration, and acceptance. [GAMEPLAY_SYSTEMS_SPINE.md](GAMEPLAY_SYSTEMS_SPINE.md) reserves twelve-packet gameplay-quality obligations without assigning future content.
-- **A4 validation:** the RP-002 curriculum self-test and `141/141` focused existing route/observation/learning/save/restore/isolation tests pass; no production code changed. A5 still owns the journey-level smoke caller, full/build/leakage evidence, and readiness verdict.
-- **One implementation reduction remains:** A5 protected smoke integration plus its focused/full/validator/build/leakage evidence. No further curriculum, gameplay, or transition micro-seam counts as convergence progress.
+- **A4 validation:** the RP-002 curriculum self-test and `141/141` focused existing route/observation/learning/save/restore/isolation tests passed before integration.
+- **A5 implementation reduction complete:** one pure `CustodyLedgerProtectedJourney` caller now composes the real route, route-to-view, hotspot, first/second/third-near, far observation, strict learning, bounded review, atomic save, verified restore, Tour, and reversible return authorities. Its reference fixture traverses P0–P3 in milliseconds, all twelve near/far order combinations converge, and wrong explicit intents fail closed.
 - **Over-segmentation:** route-to-blank, first-near, second-near, third-near, and compare-transition artifacts are retained as traceable implementation history but are merged conceptually into one observation journey. No further one-transition-at-a-time contract counts as Advance progress.
 - **Deferred without weakening the packet:** optional orientation, maintenance inspection, early distant context, Pilot reflection, additional replay polish, per-state art variants beyond the approved production plan, successor hints, normal browser persistence, and accepted-route exposure.
-- **Gate Review target:** after A5 protected smoke integration, the coordinator checks the twelve checklist items and either marks `GATE REVIEW` or records a genuine named hold. `RP-003` may then be seeded surface-safely.
+- **A5 breadth checkpoint:** eighteen traceable A5 construction passes are recorded for RP-002 including this convergence integration; the packet exceeded the normal budget, then reduced the final protected-code and validation deficits to zero. Current verdict: `GATE REVIEW`. `RP-003` is seed-ready but remains reserved pending the coordinator decision.
+- **One-sentence next action:** coordinator verifies the twelve checked artifacts and either promotes RP-002 for normal integration/Working or records one genuine hold; no further protected micro-seam is authorized.
 
 ## Update rule
 

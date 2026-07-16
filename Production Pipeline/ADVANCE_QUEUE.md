@@ -18,16 +18,17 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — CONVERGENCE / REVISE` | Coder Agent (`A5 — advance-construction; protected smoke integration`) | Story, Scene, Curriculum, Puzzle, Save/Recovery, Accessibility, and production-art-plan gates pass at contract level; one protected end-to-end smoke integration and post-integration validation remain | A4 merged the approved route, five observations, two strict learning chains, bounded review/save, verified restore, and return into one `ARRIVE -> SURVEY -> INTERPRET + SAVE -> VERIFY + RETURN` graph. Historical micro-seams remain regression evidence, not new planning destinations. | Keep `REVISE`. A5 composes one protected journey caller/harness and smoke suite over existing authorities, validates the full bundle, and returns `GATE REVIEW` or one genuine `HOLD`; no normal integration, production art, Demo exposure, or Working promotion. |
+| 2 | `RP-002` | Civic Record Encounter | `GATE REVIEW — A5 HANDOFF` | Coordinator (`Gate Review`) | All twelve Gate Review checklist items have direct protected artifacts and validation evidence; normal integration and Working evidence remain later-stage obligations | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Verify the checked Gate Review bundle and either authorize normal integration/promotion or record one genuine hold; do not add another protected micro-seam. |
 
 ## Team positions
 
+- Gate Review packets awaiting coordinator decision: `1 — RP-002`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A4 integrated gameplay convergence complete; existing seams retained as validation history; A5 protected smoke integration remains before Gate Review decision)`
-- Team 1 railhead: `RP-002 — A4 integrated graph locked; A5 protected smoke integration next`
+- In-design packets: `0`
+- Team 1 railhead: `RP-002 — GATE REVIEW; RP-003 seed-ready but reserved pending coordinator decision`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 at Gate Review`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
@@ -57,6 +58,15 @@ Verdict: `CONVERGE + MERGE + TRIM`. The packet's surface story, two SOLIDIFIED l
 - **Presentation/accessibility:** representative `1920 x 1080` full shell has no outer vertical/horizontal scroll and keeps world plus current required group/actions visible; narrow and `200%` text zoom retain vertical reflow; labels/errors/focus/non-color/reduced-motion/seven modalities and `>=44px` controls remain mandatory.
 - **Validation performed:** RP-002 curriculum self-test passed; focused existing route, route-to-observation, hotspot, observation, first-/second-/third-near, learning, remediation, save, restore, return, accessibility, Tour, and isolation authorities passed `141/141`; gameplay-spine links, changed-file scope, and `git diff --check` passed. No production code changed in A4.
 - **Exact A5 handoff:** use the packet's `Exact Advance Coder A5 handoff — protected end-to-end smoke integration`; compose or consolidate existing authorities into one protected journey-level caller/harness, add no per-transition module, run the complete validation bundle, and return `GATE REVIEW` or one genuine named `HOLD`.
+
+## 2026-07-16 Advance Coder A5 protected-journey convergence result
+
+- **Verdict:** `GATE REVIEW — PROTECTED INTEGRATION AND VALIDATION GATES CLOSED`.
+- **Gate reduction:** the missing protected-code and post-integration validation gates are now closed. One pure `CustodyLedgerProtectedJourney` adapter composes existing authorities across P0–P3; no per-transition module, App/main import, browser persistence, normal route, production asset, accepted-bundle, Demo, successor, or Working change was added.
+- **Journey evidence:** the happy-path reference fixture uses the real route, route-to-view, hotspot, first/second/third-near, far observation, PY-009, RP002-RAI-01, bounded review, atomic save, verified restore, Tour, and safe-return authorities. All six near orders and both far orders converge; explicit comparison/save intents are mandatory; invalid fixtures fail closed; deterministic resume, privacy clearing, campaign/Tour byte stability, all-or-none restore, and zero authority/cross-credit remain exact.
+- **Breadth checkpoint:** eighteen traceable RP-002 A5 construction passes are recorded including this convergence pass. The packet exceeded the normal budget, then reduced its final missing Gate Review count from two to zero. `RP-003` is seed-ready but remains reserved.
+- **Supporting spine:** `PRODUCTION_READINESS_SPINE.md` now tracks protected build, art, normal integration, Working, release, and responsive-shell obligations for all twelve packets without inventing future content.
+- **Exact next action:** coordinator verifies the twelve checked artifacts and either authorizes normal integration/promotion or records one genuine hold; no further protected micro-seam is on the shortest path.
 
 ## 2026-07-16 compare-scale-to-blank-far-view Lore impact note
 

@@ -29,6 +29,7 @@ export const custodyLedgerObservationInterfaceCopy = Object.freeze({
 
 export const custodyLedgerObservationControls = Object.freeze({
   compareScale: Object.freeze({ label: "COMPARE SCALE", kind: "return" }),
+  openLocalComparison: Object.freeze({ label: "OPEN LOCAL COMPARISON", kind: "comparison" }),
 });
 
 export const custodyLedgerObservationInterfaceStyles = `
@@ -136,9 +137,9 @@ function controlFor(state) {
     return { label: "RETURN TO AVAILABLE EVIDENCE", kind: "return" };
   }
   if (state.activeGroup === "observation_revisit") return { label: "RETURN TO CURRENT EVIDENCE", kind: "return" };
-  if (state.activeGroup === "observation_complete") return { label: "OPEN LOCAL COMPARISON", kind: "comparison" };
+  if (state.activeGroup === "observation_complete") return custodyLedgerObservationControls.openLocalComparison;
   if (state.activeGroup !== "observation_statement") return null;
-  if (state.observationComplete) return { label: "OPEN LOCAL COMPARISON", kind: "comparison" };
+  if (state.observationComplete) return custodyLedgerObservationControls.openLocalComparison;
   if (state.progress.near === 3 && state.progress.far === 0) return custodyLedgerObservationControls.compareScale;
   return { label: "RETURN TO EVIDENCE", kind: "return" };
 }

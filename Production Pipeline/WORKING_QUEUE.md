@@ -21,6 +21,10 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 |---:|---|---|---|---|---|---|
 | 1 | `RP-001` | `IN DEMO — ACCEPTED / COORDINATOR PASS` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Working Team (`accepted maintenance`) | None: all nine passes and coordinator desktop/narrow, `395/395`, build, curriculum, syntax, and full E2E gates passed | Maintain accepted RP-001; Advance A1 selects the next smallest protected RP-002 adjacency |
 
+`RP-002` is at `GATE REVIEW — A5 HANDOFF`, not promoted. Its protected journey remains absent from App/main, browser storage, accepted bundles, normal routing, the live Demo, and this queue.
+
+**Exact next W1 verification:** play only the accepted RP-001 campaign and separate no-credit Tour. Verify Martin's live-demo full-viewport request at representative `1920 x 1080`: the complete live shell should fill the available screen gracefully, keep the dominant world plus every current required control visible without outer-page scroll or excessive dead framing, and preserve accessible narrow and text-zoom reflow. Report the earliest exact accepted-path defect only. Do not treat RP-002's protected presentation metadata as implemented UI or authorize its normal integration.
+
 ## Current-demo quality lane
 
 `VIEWPORT-P1-001` is `RESOLVED — COORDINATOR VALIDATED` as of 2026-07-15. Fixed logical canvases, integer scaling, and the residual ultrawide ceiling are retired; the live demo now uses an available-width 16:9 world, vertical interface reflow, no horizontal page escape, and 44px command/Terminal targets. Reopen only if reproduced.
