@@ -2007,3 +2007,105 @@ This A2 contract fixes only the future human presentation and accessibility mean
 ### Exact Gameplay Master handoff — protected route-integration graph impact only
 
 `Gameplay Master Agent: perform only one bounded A4 puzzle-graph impact confirmation for the A1/A2 protected route-integration contract under this A3 NO REOPEN — SOLIDIFIED verdict. Preserve the exact PY-009 6/6 primary -> mapped remediation -> genuinely blank 6/6 transfer -> separately scored three-part explanation chain; the exact RP002-RAI-01 9/9 primary -> mapped per-case/per-dimension remediation -> genuinely blank 9/9 transfer -> separately scored three-part explanation chain; and the independent five-observation plus atomic three-field save conjunction. Confirm that verified predecessor eligibility only makes the future Pilot entry action available and never supplies intent, learning, observation, or save evidence; only one explicit PILOT // FLIGHT RECORDER — FOLLOW RECORDED CIVIC ROUTE activation may request System-owned protected staging, and only one explicit PILOT // FLIGHT RECORDER — RETURN TO CITY THRESHOLD activation may request reversible System restoration. Keep SAVE BOUNDED COMPARISON a separate explicit intent that cannot navigate, and keep both route intents unable to save or cross-credit. Treat every presentation, focus, assistive discovery, verification, staging, recovery, restore, navigation, and Tour event as zero evidence. Lock one-active-group behavior, input parity, one-hit/fail-closed requests, deterministic safe-boundary reconstruction, privacy clearing, accepted/protected/Tour separation, unchanged campaign and continuation, cityStateDelta=null, invariant world/clocks, closed identity, no successor, offline/no-authority/no-exam-guarantee, and zero city/access/external action. Do not implement route mechanics, import App/main, add browser storage or art, expose a normal route, change the world, name a successor, reload the Demo, or promote to Working. Hand A5 only the smallest isolated protected route-state seam if the graph fits without changing any SOLIDIFIED evidence contract; otherwise return the exact conflict to A3.`
+
+## A4 protected route-integration graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 PROTECTED ROUTE GRAPH LOCKED; A5 ISOLATED ROUTE-STATE HANDOFF; REVISE / NON-ROUTABLE`.
+- **Bounded impact:** the A1 expedition-owned meaning, A2 presentation/accessibility contract, and A3 `NO REOPEN — SOLIDIFIED` verdict fit one isolated route-state reducer without changing either learning chain, the five observations, atomic save, accepted campaign, Tour, world, or canon.
+- **Expected protected-path time:** verified eligibility -> explicit entry -> local verification/staging -> `SC-03-00` takes approximately `10–20 seconds`; one explicit voluntary return and safe-boundary reconstruction takes approximately `5–10 seconds`. One fail-closed request plus recovery adds approximately `5–15 seconds`. Time is never stored, scored, or treated as evidence.
+
+### Locked route-state vocabulary and ownership
+
+| State | Active owner/group | Available explicit action | Meaning and state responsibility |
+|---|---|---|---|
+| `RT-00 accepted_boundary` | `SYSTEM // EXPEDITION STATE`, then `PILOT // FLIGHT RECORDER` | `FOLLOW RECORDED CIVIC ROUTE` only when both verified RP-001 predecessor facts exist | Accepted RP-001 remains the last verified campaign boundary. Eligibility exposes one human action but creates no intent, evidence, save, access, or city response. |
+| `RT-10 entry_verification` | `SYSTEM // EXPEDITION STATE` | none | Consumes one ephemeral entry intent, re-verifies both predecessor facts, clears private/transient route-session data, and prepares protected staging locally. |
+| `RT-20 protected_arrival` | `SYSTEM // EXPEDITION STATE` | zero-credit `CONTINUE PROTECTED SURVEY` | Identifies protected/non-accepted staging at the unchanged `SC-03-00` board and focuses the complete System heading before any observation action. |
+| `RT-30 protected_active` | existing protected SC-03 group plus one separate `PILOT // FLIGHT RECORDER` route group | `RETURN TO CITY THRESHOLD`; existing SC-03 actions remain separately owned | Maintains the protected session. Route controls cannot dispatch observation, learning, save, comparison, hotspot, or successor actions. |
+| `RT-40 return_reconstruction` | `SYSTEM // EXPEDITION STATE` | none | Consumes one ephemeral return intent, clears temporary protected-session/private state, and reconstructs the accepted RP-001 boundary without replay. |
+| `RT-50 accepted_restored` | `SYSTEM // EXPEDITION STATE` | zero-credit `CONTINUE AT CITY THRESHOLD` | Announces local restoration, then returns focus to the accepted boundary's deterministic next control. Predecessor and accepted campaign bytes remain unchanged. |
+| `RT-U unavailable_or_ambiguous` | `SYSTEM // EXPEDITION STATE` | zero-credit `RETURN TO VERIFIED BOUNDARY` | Records no navigation or evidence, clears the bad/transient request, and reconstructs the last verified accepted boundary. It never presents a city refusal. |
+| `RT-S sanitation_or_resume` | `SYSTEM // EXPEDITION STATE` | zero-credit `CONTINUE AT VERIFIED BOUNDARY` | Discards intent tokens, focus/input history, private work, and unverified route phase, then reconstructs the last verified accepted boundary. Protected staging may be reconstructed only from a valid in-memory protected-session marker in the isolated test model; no browser persistence is authorized. |
+| `RT-T demo_tour` | `SYSTEM // DEMO TOUR` | existing Tour continuation/resume controls only | Describes or previews the route without entry/return Pilot controls, predecessor verification, campaign staging, evidence, save, or campaign checkpoint. |
+
+Exactly one route transition owner/message/action group is active in the accessibility and keyboard order. An existing SC-03 observation, learning, or save group may remain the content group at `RT-30`, but the separate route group cannot merge labels, default actions, dispatchers, or confirmation with `SAVE BOUNDED COMPARISON` or any evidence-producing action.
+
+### Locked protected route graph
+
+```text
+accepted RP-001 campaign bytes + lastVerifiedBoundary=RP-001
+  -> sanitize predecessor facts
+      -> either fact missing/invalid/review_required: RT-U -> accepted RP-001
+      -> both facts verified: RT-00; entry action available, zero intent/evidence
+
+RT-00 / explicit Pilot FOLLOW RECORDED CIVIC ROUTE
+  -> one normalized semantic activation + one fresh ephemeral token + exact Pilot owner/intent -> RT-10
+  -> focus/hover/dwell/visibility/restore/reload/Escape/test mount/implicit default -> no request
+  -> stale/duplicate/forged/wrong-owner/wrong-mode/Tour/multi-hit/save intent -> RT-U
+
+RT-10 / System local verification
+  -> re-verify both predecessor facts, clear route-private/transient data
+  -> exact valid conjunction: construct isolated protected session -> RT-20 / SC-03-00
+  -> changed/missing/stale conjunction or interrupted transition: RT-U -> accepted RP-001
+
+RT-20 / protected arrival acknowledgement
+  -> zero-credit continue only -> RT-30
+  -> no observation, learning, comparison, atomic-save, route, or world evidence
+
+RT-30 / protected SC-03 session
+  -> existing protected observation/learning/save graphs remain independent
+  -> explicit Pilot RETURN TO CITY THRESHOLD + one fresh token -> RT-40
+  -> SAVE BOUNDED COMPARISON reaches only the existing atomic save graph and never RT-40
+  -> invalid/implicit/stale/duplicate/wrong-owner/Tour/multi-hit request -> RT-U
+
+RT-40 / System safe-boundary reconstruction
+  -> clear temporary route/private/input state; preserve accepted campaign and predecessor facts
+  -> RT-50 / accepted RP-001 restoration acknowledgement
+  -> interrupted/invalid reconstruction: RT-S -> accepted RP-001 without replay
+
+RT-50
+  -> zero-credit continue -> accepted RP-001 deterministic next control
+
+RT-T / Demo Tour
+  -> view-only description or shipped preview
+  -> no Pilot route intents, no campaign transition, no copy into RT-00..RT-50
+```
+
+### Input, one-hit, mistake, and recovery locks
+
+1. **Explicit semantic intents only:** pointer, touch, Enter, Space, switch, speech, and screen-reader button activation normalize to the same exact entry or return intent containing packet/mode/boundary/action/owner plus a fresh ephemeral token. Raw speech, pointer paths, coordinates, focus history, timing, and world data are never persisted or scored.
+2. **One-hit transition latch:** one token can request at most one transition. Synthetic click after keyboard activation, double activation, bubbling, repeated switch output, remount replay, and asynchronous duplicate completion cannot skip `RT-10`, double-mount staging, double-clear a session, or reach another state. A later deliberate action needs a new token.
+3. **Fail closed at the accepted boundary:** unknown action, wrong owner, wrong mode, missing/stale/review-required predecessor, forged protected marker, entry while already protected, return while accepted, combined save-and-route intent, Tour-derived request, or ambiguous/multi-hit request records nothing and reconstructs accepted RP-001. The response is expedition sanitation, never local rejection or revocation.
+4. **Save separation:** `SAVE BOUNDED COMPARISON` remains legal only inside its existing eligible Pilot save group. It never creates entry/return tokens or changes route phase. Either route intent can never write `civicComparisonSaved`, `nextSurveyDirectionMarked`, `rp002Checkpoint`, PY-009, RAI, or observation evidence.
+5. **Deterministic focus:** `RT-00` focuses the complete eligibility/route heading, then the entry action; `RT-10`, `RT-20`, `RT-40`, `RT-50`, `RT-U`, and `RT-S` focus the active System heading; `RT-30` focuses the protected staging heading before the first incomplete SC-03 action, while explicit return remains reachable in the separate route group. Recovery scrolls the complete group into view without using world motion as confirmation.
+6. **Sanitation and resume:** close, reload, Escape, remount, version mismatch, partial transition, or private contamination clears ephemeral tokens, route-request history, focus/input data, working source, selections, prose, feedback, credentials, endpoints, payloads, responses, and external-action requests. Without a valid isolated in-memory protected-session marker, resume targets accepted RP-001. With a valid marker, an isolated test may reconstruct `RT-20/RT-30`; this is not browser-storage authorization and supplies zero evidence.
+7. **No replay:** recovery/restoration never replays RP-001 arrival, SC-03 arrival, Scene acknowledgement, world effect, learning conclusion, observation statement, save success, or city response. All physical world/camera/crop/effect clocks remain unchanged.
+8. **Unlimited safe retry:** after `RT-U` or accepted reconstruction, the player may deliberately retry entry when both predecessor facts are valid. No attempt, hint, confidence, timer, inventory, mastery, observation, save, route resource, or world state is consumed.
+
+### Player-observable route acceptance checks
+
+1. With either predecessor fact missing, invalid, stale, or `review_required`, no entry action can stage RP-002; recovery returns to the unchanged accepted RP-001 boundary.
+2. Two valid predecessor facts make the full Pilot entry action available but do not navigate, score, observe, save, or create intent until explicit activation.
+3. Pointer, touch, Enter, Space, switch, speech, and screen-reader activation of `FOLLOW RECORDED CIVIC ROUTE` produce the same single entry request and System verification bytes.
+4. A valid entry follows exactly `RT-00 -> RT-10 -> RT-20 / SC-03-00 -> RT-30`; it never jumps directly from eligibility to an observation, lesson, save review, or successor.
+5. The accepted RP-001 world and campaign bytes remain unchanged through entry verification; protected arrival is textually marked as staging and produces no world/city/access/external response.
+6. Synthetic click, double activation, bubbled/repeated output, duplicate token, or asynchronous duplicate completion never stages twice or skips an acknowledgement.
+7. Wrong-owner, wrong-mode, implicit, forged, out-of-order, stale, Tour-derived, or combined save/route requests fail closed with zero navigation/evidence and deterministic accepted-boundary focus.
+8. `SAVE BOUNDED COMPARISON` cannot enter or return, and entry/return cannot write or alter the exact three-field atomic save transaction, either learning chain, or any observation ID.
+9. In protected staging, explicit `RETURN TO CITY THRESHOLD` follows exactly `RT-30 -> RT-40 -> RT-50 -> accepted RP-001`; it clears only temporary/private route-session state and preserves both predecessor facts and accepted campaign bytes.
+10. Reload, Escape, close, remount, invalid version, or interrupted transition reconstructs the last verified safe expedition boundary with private work clear and no arrival, Scene, conclusion, save, or world-event replay.
+11. Exactly one complete route transition group is active; pointer/touch/keyboard/switch/speech/screen-reader order, visible focus, full owner/provenance text, `>=44 x 44 CSS px` targets, narrow reflow, forced colors, and reduced motion preserve the same meaning without creating evidence.
+12. Demo Tour contains no Pilot entry/return control, cannot verify predecessors or construct campaign staging, and cannot copy route state, evidence, save, or checkpoint into campaign.
+13. Before and after every valid, failed, retried, restored, or Tour interaction, `continuation`, `cityStateDelta=null`, accepted world/camera/crop/effect clocks, closed identity material, successor state, authority/access state, and external-action state remain unchanged.
+
+### Gameplay Master route-graph sign-off
+
+- **Puzzle and learning contract:** route eligibility and navigation remain presentation/transition only: zero `PY-009`, zero `RP002-RAI-01`, zero observation, and zero save evidence. The exact two SOLIDIFIED chains, five-observation conjunction, and atomic save graph remain independent and unchanged.
+- **Recovery and save/resume:** invalid or interrupted requests cannot trap the player. One-hit semantic intent, deterministic accepted-boundary reconstruction, privacy sanitation, explicit voluntary return, unlimited retry, and separate Tour are locked. No browser persistence is authorized.
+- **Locked mechanics:** exact route state vocabulary and transitions above; both predecessor facts; explicit Pilot entry/return ownership; System verification/staging/reconstruction; one-active transition group; input parity; one-hit/fail-closed behavior; focus/reflow/accessibility; save-intent separation; accepted/protected/Tour isolation; invariant campaign/world/authority state; no successor.
+- **Flexible for A5:** pure-state module/file names, enum representation, ephemeral token implementation, isolated in-memory adapter shape, and internal sanitation helpers are flexible only if all acceptance checks and exact ownership/evidence boundaries remain unchanged.
+- **Scope:** no route code, App/main import, browser storage, production art, normal exposure, accepted bundle, world/city/access/external action, successor, Demo reload, or Working status changed in A4. RP-002 remains `REVISE`, protected, non-routable, and unavailable to Working.
+
+### Exact Advance Coder A5 handoff — isolated protected route-state seam only
+
+`Coder Agent operating mode: advance. Implement only one isolated pure RP-002 protected route-state module and focused tests for the A4 RT-00/10/20/30/40/50/U/S/T graph. Begin from a byte-stable accepted RP-001 fixture with both predecessor facts verified; make eligibility expose but never activate the exact PILOT // FLIGHT RECORDER — FOLLOW RECORDED CIVIC ROUTE action. Normalize equivalent pointer/touch/Enter/Space/switch/speech/screen-reader semantic activation into one fresh ephemeral token and one exact entry or return intent; consume each token at most once. On explicit entry, re-verify both predecessor facts, sanitize private/transient route data, and construct only an isolated in-memory protected session at SC-03-00 through the System verification and protected-arrival acknowledgement states. In protected staging, keep the existing observation, learning, hotspot, and SAVE BOUNDED COMPARISON graphs independent; implement only the separate explicit PILOT // FLIGHT RECORDER — RETURN TO CITY THRESHOLD route request and System safe-boundary reconstruction. Unknown, implicit, stale, duplicate, forged, wrong-owner, wrong-mode, out-of-order, multi-hit, Tour-derived, combined save/route, missing/review_required predecessor, partial-transition, and invalid-version requests must fail closed to the last verified accepted boundary with zero navigation/evidence and deterministic heading/next-control focus. Close, reload, Escape, remount, and sanitation clear tokens, input/focus history, route-private data, working source, selections, prose, feedback, credentials, endpoints, payloads, responses, and external-action requests; reconstruct a protected boundary only from a valid isolated in-memory test marker, never browser storage, and never replay arrival, Scene, learning, observation, save, or world events. Keep exactly one transition group active; preserve full textual owner/provenance, >=44 x 44 CSS px policy, non-color/reduced-motion meaning, and responsive focus intent as state metadata. Tour remains view-only with no Pilot route actions or campaign bridge. Assert byte-stable accepted campaign/Tour separation; both predecessor facts; unchanged continuation; cityStateDelta=null; invariant world/camera/crop/effect clocks; closed identity; no successor, authority, access, city, or external action; and zero PY-009, RP002-RAI-01, observation, comparison, or atomic-triplet writes from route states. Add focused tests covering the expected short path, all input modalities, one-hit suppression, each fail-closed mistake class, save/route separation, explicit return, deterministic recovery/resume/sanitation, private clearing, Tour isolation, and every player-observable acceptance check. Keep the module non-routable and unimported by App.jsx/main.jsx; add no browser/localStorage persistence, UI, production art, normal route, accepted bundle exposure, world change, successor, Demo reload, or Working promotion. Return REVISE because browser persistence integration, production art, normal exposure, promotion, and later packet work remain incomplete; do not perform Working passes.`
