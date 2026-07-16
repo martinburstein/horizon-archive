@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 LORE PASS COMPLETE`
+- Status: `IN DESIGN — A2 STORYBOARD PASS COMPLETE`
 - Target chapter/location: Chapter 3 opening expansion / first broad working landscape beyond the surveyed civic margin
 - Target demo horizon: third future slice after the accepted RP-001 boundary; directly after RP-003
 - Route order: 4
@@ -114,15 +114,29 @@ Determine which exposed sample form corresponds to which visible handling corrid
 
 ## Storyboard Track — Storyboarder
 
-- Status: `UNASSIGNED — A2 NEXT`
-- Narrative function to compose: make three physically distinct current/corridor relations and one apparent common return readable as enormous patient collective work without labels, pseudo-writing, human utilities, or success-state reaction.
-- Required state boards: entry/full-reach orientation, three inspectable relations, common-return observation, run-result interface state, completed local-save state, and reversible return; merge boards when one registered invariant world can preserve legibility and ownership.
-- Locked continuity: first-person view; no protagonist/ship/human traces; no RP-003 event replay; no RP-005 destination; invariant landscape geometry, live-current behavior, maintenance paths, and environmental clocks; a valid run changes only the separate suit interface.
-- Flexible visual areas: exact region topology, scale, material families, atmosphere, collective design school, current visualization, maintenance silhouettes, coupling placement, interaction zones, and plate count, provided every effect has a physical cause and the three relations remain distinct without relying on color or motion alone.
+- Status: `PASS — A2 INVARIANT-LANDSCAPE SEQUENCE AND PRODUCTION BRIEF LOCKED`
+- Canonical scene sheet: `Concept Art Book/scenes/SC-05-three-current-reach.md`.
+- Location identity: a broad exchange reach in the Volcanic Habitation Vault, directly beyond the RP-003 civic margin. It is a landscape-scale working system, not a room, corridor, utility plant, canal, road, factory floor, or human diagram enlarged into scenery.
+- Functional landscape: suspended matter crosses a graded porous mineral-ceramic field; cyclic pressure crosses tensioned ceramic-fiber spans; conducted heat crosses a jointed refractory substrate. All three remain materially separate through visible treatment, then enter one capped common return and continue beyond frame. Input, treatment, distribution, bypass, return, and maintenance remain physically traceable without assigning purpose.
+- Collective movement evidence: three older specialist material traditions retain distinct geometries and failure behavior; a later reach-wide compatibility movement introduced shared junction scales, service interfaces, and common-return architecture; maintained-present repair fabric crosses all three without erasing their differences. This does not identify an institution, profession, author, ideology, or intended operator.
+- Canonical boards: `SC-05-00 ARRIVE + ORIENT`, `SC-05-10 OBSERVE THREE RELATIONS`, `SC-05-20 TRACE COMMON RETURN`, `SC-05-30 RELATE + SAVE`, and `SC-05-40 VERIFY + RETURN`. One maximum-resolution panoramic master supplies the overview and registered evidence crops; only view crops and the separate expedition interface may change.
+- Composition: premium first-person `28–32 mm` panorama; three materially distinct relations sweep from separate foreground/middle-ground origins into a deep-center shared return; an embedded sanitized-sample coupling sits low foreground; the RP-003 material bearing remains readable at lower left; calm upper-vault and edge negative space preserve interaction hierarchy.
+- Interaction zones: `SUSPENDED-POROUS-RELATION`, `PRESSURE-TENSION-RELATION`, `HEAT-JOINTED-RELATION`, `APPARENT-COMMON-RETURN`, `SANITIZED-SAMPLE-COUPLING`, and `RETURN-TO-CALIBRATION-MARGIN` register semantically to approved geometry. The three observations are equal peers in any order; the common return is inspectable only after them and never becomes a route.
+- State invariance: arrival, observation, valid run, save, verified restore, and return preserve live-current geometry/phase, junctions, return, maintenance paths, coupling body, light/sound sources, and monotonic environmental clocks. No success, miss, save, or resume relights, reroutes, synchronizes, optimizes, or acknowledges the Pilot.
+- Asset plan: one lossless `SC-05-PANORAMA-MASTER`, preferably `6144 x 3456` or larger and never below `3840 x 2160`; five registered derivatives from that source; semantic masks; separate particle, pressure, heat, condensation, and maintenance layers; reduced-motion stills; invariant-state difference evidence; and full-resolution/grayscale/thumbnail/wide/laptop/narrow/zoom/forced-color/artifact review packages.
+- Provenance plan: final prompt, model/tool/mode, references, date, territory variants, selection rationale, edits, cleanup, dimensions, crops, masks, effects, derivative settings, and approvals must be recorded in `Concept Art Book/prompt-provenance-log.md`. Existing concepts are evidence only; no final raster is authorized by A2.
+- Responsive presentation: representative `1920 x 1080` contains the entire outer shell in `100dvh` without outer scroll, distortion, clipped ownership, or off-screen required actions while the panorama remains dominant. Narrow and `200%` text zoom reflow naturally in one vertical column without horizontal escape; every required control remains at least `44 x 44 CSS px`.
+- Artifact rejection: no protagonist/ship/human trace or ergonomics, readable world text, pseudo-writing, human utilities, three color-coded lanes, fantasy ornament, mushroom/coral/crystal/lava shorthand, screen/console/kiosk, face/eye, portal-like return, live-control coupling, success effect, copied composition, generic neon, cloned/melted geometry, impossible material response, hidden defects, or crop that loses required causality.
+
+### Storyboarder decisions and sign-off
+
+- Locked visual decisions: direct RP-003 adjacency; `SC-05` exchange-reach identity; one registered panoramic master; five compact phases; three structurally/non-color distinct relation zones; apparent common return; three-era compatibility movement; replica-only embedded coupling; first-person clean plate; invariant world and clocks; zero live read/control; reversible returns; no defined successor; responsive/accessibility, provenance, and cleanup gates.
+- Flexible visual decisions: exact topography, path contours, component anatomy, material proportions, vault depth, maintenance-form anatomy/count, atmosphere, effect timing, crop coordinates, lens within the readability range, and restrained grade, provided none assigns purpose, workload, native category, correctness, authority, Machine relation, or successor meaning.
+- Sign-off: `PASS — A2 COMPLETE; SCENE AND PRODUCTION-ART-PLAN GATES CLOSED; READY FOR CURRICULUM CHECKER A3`.
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 MAY SELECT ONLY AFTER A2`
+- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
 - Lore-provided learning opportunity: distinguish three exposed sample forms, relate each to visible handling without reading live infrastructure, and preserve unknown purpose as unknown.
 - No Python skill ID, AI-901 objective, case, answer, threshold, remediation path, workload category, or mastery evidence is authorized by A1.
 
@@ -181,35 +195,39 @@ Determine which exposed sample form corresponds to which visible handling corrid
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`.
-- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Story moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-landscape sequence and premium production-art plan`.
+- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
+- Did this cycle reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
 - Existing seams integrated or consolidated: RP-003's saved comparison, purpose-unknown discipline, executable-literacy rule, privacy clearing, reversible returns, and undefined onward bearing become one direct expansion premise.
 - Optional work trimmed or deferred: RP-005 destination, additional landscapes, secondary programs, identity-bearing matter, live stream operation, native categories, and Machine relationship.
 - New module or artifact integration consumer: later A5 may compose existing comparison/evidence/save authorities only after A2–A4; no new module is requested by A1.
 - Breadth verdict: `CONTINUE`
 - Next contiguous packet seed readiness: `RP-005 remains RESERVED until RP-004 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Storyboarder A2 composes the smallest registered scene sequence that makes the three physically distinct current/corridor relations and apparent common return causally legible while the live landscape remains invariant.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating the complete SC-05 presentation as zero mastery evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
-- Storyboarder sign-off: `PENDING A2`
+- Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PENDING A3`
 - Gameplay Master sign-off: `PENDING A4`
 - Coder smoke-test result: `PENDING A5`
 - Readiness: `REVISE`
-- Required revision: complete A2–A5 sequentially on this packet; do not define RP-005.
+- Required revision: complete A3–A5 sequentially on this packet; do not define RP-005.
 
 ### Exact Storyboarder A2 handoff
 
 `Storyboarder Agent — A2: work only on RP-004 Three-Current Reach. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, this packet, RP-003's exact end state, the active maximum-quality photorealistic charter, and your latest work log. Compose the smallest registered first-person scene sequence that makes suspended-matter, cyclic-pressure, and conducted-heat current/corridor relations plus one apparent common return causally legible as enormous patient collective work without labels, pseudo-writing, human utilities, or a success-state reaction. Preserve the direct RP-003 start, saved predecessor note, sealed-source unread state, unchanged continuation, null city delta, real-Python occupational-work meaning, sanitized-replica provenance, expedition/suit ownership, no password/live-control framing, no protagonist/ship/human traces, invariant landscape/current/maintenance/environment clocks, reversible returns, full-shell representative 1920 x 1080 containment, accessible narrow/text-zoom reflow, >=44px controls, and all mystery protections. Define entry/full-reach orientation, three inspectable relations, common-return observation, run-result interface, completed local-save, and return evidence; merge boards where one registered invariant world can serve multiple interface states. Specify functional landscape, collective design movement, physically causal materials/lighting/atmosphere, landmarks, interaction zones, negative space, production assets/provenance, responsive mapping, reduced-motion/non-color equivalents, and artifact-cleanup acceptance. Do not select curriculum, workload categories, puzzle answers, code, native categories, Machine relation, RP-005 content, or hidden lore. Update RP-004, LOCATION_VISUAL_SPINE.md, your work log, queue/map handoff state, validate continuity and presentation, and hand the unchanged lore boundary to Curriculum Checker A3.`
 
+### Exact Curriculum Checker A3 handoff
+
+`Curriculum Checker Agent — A3: work only on RP-004 Three-Current Reach. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, this packet, the exact A1 lore boundary, and the locked SC-05 scene sheet. Select and verify the nearest contiguous Python skill and current official AI-901 objective for relating three sanitized exposed sample replicas to three visibly distinct handling relations while preserving the apparent common return and purpose-unknown boundary. Treat every SC-05 world view, material/current animation, hotspot discovery, crop, display, owner text, focus, navigation, successful execution display, save presentation, restore, return, and accessibility behavior as zero mastery evidence. Preserve real Python as ordinary Builder occupational work rather than authentication or live control; Scene/Pilot/System/Builder-work ownership; exact RP-003 predecessor state; unchanged continuation; null city/external delta; replica-only provenance; privacy, offline/no-authority, no-exam-guarantee, reversible returns, no Machine definition, no RP-005 route, and all mystery protections. Define prerequisites, exact skill/objective IDs, current official sources, primary evidence, answer-free remediation, retrieval and genuinely fresh transfer, strict thresholds, misconception handling, privacy allowlist, save-eligibility conjunction, SOLIDIFIED/reopen status, and explicit workload-category boundaries if the official objective requires them. Do not alter SC-05 composition, infer a workload from scenery, create puzzle mechanics beyond the curriculum contract, write runtime code, generate art, define native categories or Machine relation, seed RP-005, or open hidden lore. Update RP-004, CURRICULUM_SPINE.md, queue/map/status records, and the Curriculum work log; validate under the project's Microsoft source-priority rules; then leave one exact Gameplay Master A4 handoff.`
+
 ## Promotion record
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-004 IN DESIGN — A1 COMPLETE`
+- Team 1 railhead after promotion: `RP-004 IN DESIGN — A2 COMPLETE`
 - Next contiguous packet seeded: `NO — RP-005 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`
