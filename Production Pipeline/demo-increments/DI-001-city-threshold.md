@@ -52,6 +52,13 @@
 - **Accessibility:** representative desktop, portrait, narrow, and zoom/reflow source checks replace retired exact-viewport gates. Required controls retain `44 x 44 CSS px`, content may scroll vertically, and horizontal page escape is clipped at the host.
 - **Validation:** focused **39/39**, full suite **259/259**, final CSS cleanup recheck **27/27**, build passed (`index-C_di6hBP.js`, `index-BV79dG2w.css`). Root live review is the next gate.
 
+## 2026-07-15 W4 ultrawide-stage disposition
+
+- **`VIEWPORT-P1-001`:** `RESOLVED IN W4 — COORDINATOR LIVE VALIDATION PENDING.` The final `1920px` stage ceiling was removed without adding another hard maximum. CRT shell and world now use the available host width minus small responsive padding.
+- **Invariant presentation:** world remains `16:9` with `object-fit:cover`; lower UI remains in vertical document flow; narrow controls remain at least `44px`; horizontal host escape remains clipped.
+- **Validation:** source/model coverage includes 1600, 1920, approximately 2558, and 3440px desktop widths, portrait/narrow, and representative 200% zoom. Focused **36/36**, full suite **259/259**, and build passed (`index-mIMwOeBZ.js`, `index-DES0pYLs.css`).
+- **Coordinator gate:** live-confirm no cap-created gutters, stretching, horizontal escape, clipped copy, or focus/modal regression. Gameplay, hotspots, saves, mastery, Tour, art, and city state remain locked.
+
 ## Identity
 
 - Rail Packet: `RP-001 — City Threshold`

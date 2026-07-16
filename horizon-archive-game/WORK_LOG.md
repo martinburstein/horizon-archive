@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W4: ultrawide fluid-stage completion
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Resolved `VIEWPORT-P1-001`:** removed the final `1920px` maximum from `.crt-stage-anchor`. The scalable CRT shell and 16:9 world now consume all available host width minus only the existing small responsive host/shell padding; no replacement hard maximum or logical canvas was introduced.
+- **Preserved:** `aspect-ratio:16/9`, `object-fit:cover`, vertical document flow, horizontal host clipping, narrow stacking, `>=44px` controls, art, normalized hotspots/names, focus/modals, copy, gameplay, mastery, saves, Demo Tour, and city state.
+- **Coverage:** responsive model/source assertions now cover `1600 x 900`, `1920 x 1080`, approximately `2558 x 1240`, `3440 x 1440`, representative 200% zoom/reflow, portrait, and narrow displays. They explicitly reject any anchor max-width or replacement cap.
+- **Files changed:** `src/styles.css`, `test/canonicalFrame.test.js`, `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, and this log.
+- **Validation:** focused responsive/opening/RP-001/Tour/Terminal suite passed **36/36**; full game suite passed **259/259**; production build passed with the existing large-chunk advisory. Build identity: `index-mIMwOeBZ.js`, `index-DES0pYLs.css`.
+- **Exact Coordinator handoff:** `Validate VIEWPORT-P1-001 on the rebuilt demo at the user's approximately 2558px-wide host plus a wider desktop, ordinary desktop, portrait/narrow, and 200% zoom. Confirm the CRT/world consumes available width without cap-created black gutters, world art remains undistorted 16:9 with object-fit cover, lower UI stays in vertical flow, no horizontal page escape occurs, and required controls/focus/modals/copy remain usable. Preserve gameplay, art, normalized hotspots, mastery, saves, Tour, and city state.`
+
 ## 2026-07-15 — Coder W2: fluid responsive stage repair
 
 - **Mode:** `bug-repair` for W2 only.
