@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — VIEWPORT-P1-002 REPAIRED/RELOADED IN W2; W3 RESPONSIVE AESTHETIC REVIEW NEXT`
+- Team 2 active packet: `RP-001 — VIEWPORT-P1-002 W3 CLEAN; W4 VERIFICATION/FINAL RELOAD NEXT`
 - Team 1 railhead: `RP-002 — GATE REVIEW / A5 protected journey integration passed`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 is protected-design and protected-implementation converged; normal integration, final production assets, Working evidence, and promotion remain later obligations`
 - Whole-story rail status: `IN PROGRESS`
@@ -30,6 +30,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Latest Working handoff
 
+- `2026-07-16 / b1d25bd W3 handoff`: `VIEWPORT-P1-002` is clean from available aesthetic evidence. W2's exact `1920 x 1080` live measurements preserve zero outer overflow, a dominant undistorted `1428.67 x 803.63` world, intentional centered breathing room, a complete readable `220px` command band, and visible `44px` current controls; exact `390 x 844` reflow remains contained. W3 passed focused `41/41`, exact HTTP checks, and unchanged original-size four-master/provenance inspection. The in-app browser was unavailable to W3, so W4/coordinator retains independent live confirmation. W4 owns verification/final reload only; RP-002 remains protected, absent, and non-routable.
 - `2026-07-16 / 709d9c5 W2 handoff`: `VIEWPORT-P1-002` is repaired in the live accepted shell. Exact CSS `1920 × 1080` now has document `1920 × 1080`, undistorted `1428.67 × 803.63` world, complete `220px` command band, every required current verb/inventory action inside the viewport at `44px`, and zero outer x/y overflow. Exact `390 × 844` remains narrow/reflowed with no page escape and `44px` controls. Focused `41/41`, full `402/402`, build, preflight, `75.2s` full E2E, RP-002 leakage, and exact HTTP gates pass; port `4173` serves `index-BwgGd-Qy.js` / `index-D-UKM1r6.css` (PID `52068`). W3 owns responsive aesthetic review only; RP-002 remains protected, absent, and non-routable.
 
 - `2026-07-16 / 0fa8628 W1`: Accepted RP-001 remains functionally completable and its separate Tour remains no-credit, but `VIEWPORT-P1-002` is reproducible on the first Glass Meadow screen at exact CSS `1920 × 1080`: document height `1317 > 1080`, scene bottom `1072.3125`, command-panel bottom `1292.3125`, and required verbs/inventory begin below the fold. P1 open. Exact CSS `390 × 844` reflow remained contained with `44px` controls; focused `40/40`, full `401/401`, build, and `145.3s` E2E passed, exposing a desktop full-shell coverage gap. W2 owns regression coverage, bug repair, and reload only; protected RP-002 remains unimported and non-routable.
