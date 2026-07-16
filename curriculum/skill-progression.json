@@ -229,7 +229,8 @@
       "related_ai901_objectives": [
         "AI901-D2-O3",
         "AI901-D2-O7"
-      ]
+      ],
+      "rail_packet_reinforcement": "RP-003 SC-04 equality conditional over two supplied exposed sequences; 8/8 primary, answer-free remediation, closed-note condition/branch/unavailable retrieval, and genuinely blank 8/8 transfer"
     },
     {
       "skill_id": "PY-011",

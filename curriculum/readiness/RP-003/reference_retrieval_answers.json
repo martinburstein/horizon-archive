@@ -1,0 +1,7 @@
+{
+  "R01": {
+    "input_boundary": "identify_supplied_modalities_and_sources",
+    "output_contract": "return_requested_fields_in_the_defined_schema",
+    "unsupported_rule": "ground_supported_values_and_leave_unsupported_values_null"
+  }
+}

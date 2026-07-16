@@ -1,0 +1,227 @@
+{
+  "mapping_id": "RP003-A3-CALIBRATION-MARGIN",
+  "packet_id": "RP-003",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-04",
+  "source_verified_on": "2026-07-16",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-02 PY-010 primary and fresh-transfer conditionals remain 8/8 with the closed-note condition/branch explanation",
+    "ai901": "L-05-07 AI901-D2-O7 remains 12/12 with provenance, null-versus-false, structured-output, and fresh-transfer evidence",
+    "missing_evidence_route": [
+      "curriculum/lessons/L-03-02",
+      "curriculum/lessons/L-05-07"
+    ],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": [
+    "world_visibility",
+    "correspondence_or_difference_composition",
+    "hotspot_discovery",
+    "crop_or_display",
+    "owner_text",
+    "motion_color_sound_or_timing",
+    "focus_navigation_or_return",
+    "successful_execution_display",
+    "save_or_restore_presentation",
+    "photographic_realism",
+    "city_state"
+  ],
+  "python_contract": {
+    "skill_id": "PY-010",
+    "skill_name": "Write conditionals",
+    "scope": "reinforcement_only",
+    "implementation_reason": "A lightweight information-extraction client must branch on supplied values so it can label correspondence and difference without treating an unavailable source as equal, different, false, or permission to infer.",
+    "learner_owned_action": "complete one equality condition and its corresponding/different branch labels",
+    "provided_unscored_scaffold": [
+      "two bounded lists",
+      "one for-loop over aligned indices",
+      "one result-list append",
+      "one sealed-source dictionary"
+    ],
+    "forms": {
+      "primary": {
+        "exposed_a": ["steady", "rise", "steady", "cool"],
+        "exposed_b": ["steady", "rise", "hold", "cool"],
+        "different_indices": [2]
+      },
+      "transfer": {
+        "exposed_a": ["north", "pulse", "settle", "settle"],
+        "exposed_b": ["north", "pulse", "settle", "drift"],
+        "different_indices": [3]
+      }
+    },
+    "sealed_source": {
+      "status": "unavailable",
+      "value": null
+    },
+    "checks": [
+      "result_is_list",
+      "one_record_per_exposed_index",
+      "exact_record_keys_and_index_order",
+      "corresponding_positions_correct",
+      "difference_positions_correct",
+      "conditional_compares_exposed_values_at_same_index",
+      "sealed_source_marked_unavailable_none",
+      "inputs_unchanged_and_no_forbidden_operations"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every miss, closed-note retrieval of condition/true-branch/false-branch/unavailable boundary, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_the_displayed_result",
+      "compare_or_request_the_sealed_source",
+      "label_unavailable_as_equal_different_false_or_empty",
+      "mutate_either_exposed_input",
+      "infer_correctness_purpose_identity_or_authority",
+      "reuse_completed_primary_as_transfer",
+      "count_execution_output_navigation_timing_confidence_color_motion_or_hints"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP003-IE-01",
+    "objective_id": "AI901-D2-O7",
+    "objective_title": "Implement AI solutions for information extraction by using Foundry",
+    "scope": "focused_retrieval_and_transfer_of_input_boundary_schema_aligned_output_provenance_and_unsupported_value_handling; does_not_replace_full_L-05-07_mastery_or_live_Content_Understanding_use",
+    "dimensions": [
+      "input_boundary",
+      "output_contract",
+      "unsupported_rule"
+    ],
+    "forms": {
+      "primary": [
+        {
+          "id": "P01",
+          "prompt": "A lightweight extraction app receives two supplied maintenance images; a referenced third source is unavailable.",
+          "input_boundary": "process_supplied_content_only",
+          "output_contract": "schema_aligned_structured_fields_with_provenance",
+          "unsupported_rule": "preserve_unavailable_field_as_null_do_not_infer"
+        }
+      ],
+      "retrieval": [
+        {
+          "id": "R01",
+          "prompt": "Without notes, state the source, output, and missing-evidence boundaries for a schema-driven extraction result.",
+          "input_boundary": "identify_supplied_modalities_and_sources",
+          "output_contract": "return_requested_fields_in_the_defined_schema",
+          "unsupported_rule": "ground_supported_values_and_leave_unsupported_values_null"
+        }
+      ],
+      "transfer": [
+        {
+          "id": "T01",
+          "prompt": "A new audio-and-video extraction packet includes video but the audio file never arrived.",
+          "input_boundary": "process_the_available_video_without_claiming_audio_analysis",
+          "output_contract": "return_schema_fields_with_source_provenance",
+          "unsupported_rule": "keep_audio_only_fields_null_until_audio_is_supplied"
+        }
+      ]
+    },
+    "gate": "3/3 primary, remediate each missed dimension, 3/3 delayed closed-note retrieval, then 3/3 genuinely blank fresh transfer and explain why unavailable input cannot support an extracted value",
+    "misconception_tags": [
+      "broad_description_equals_schema_driven_extraction",
+      "unavailable_input_equals_negative_result",
+      "missing_source_is_permission_to_infer",
+      "structured_output_needs_no_provenance",
+      "offline_simulation_proves_live_Foundry_configuration",
+      "valid_result_authorizes_external_action"
+    ]
+  },
+  "remediation_contract": {
+    "python": [
+      "trace_one_aligned_index",
+      "state_the_boolean_condition",
+      "name_only_the_taken_branch",
+      "contrast_different_with_unavailable",
+      "restore_blank_primary_or_transfer_form",
+      "retry_without_carried_result"
+    ],
+    "ai901": [
+      "identify_which_input_was_actually_supplied",
+      "contrast_broad_description_with_schema_driven_extraction",
+      "trace_one_supported_field_to_its_source",
+      "contrast_null_with_false",
+      "complete_one_neutral_guided_case",
+      "retry_the_blank_first_incomplete_form"
+    ],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true
+  },
+  "evidence_contract": {
+    "store": [
+      "packet_id",
+      "mapping_id",
+      "form",
+      "skill_or_objective_id",
+      "dimension_correctness",
+      "attempt_count",
+      "hint_level",
+      "confidence",
+      "misconception_tags",
+      "mastery_status"
+    ],
+    "do_not_store": [
+      "learner_source",
+      "raw_exposed_sequences",
+      "sealed_source_content",
+      "free_form_reasoning",
+      "private_notes",
+      "identity_content",
+      "credentials",
+      "endpoints",
+      "payloads",
+      "responses",
+      "source_content",
+      "exam_item_text",
+      "external_action_requests"
+    ],
+    "scene_transition": "clear_unsubmitted_code_choices_feedback_and_case_answers",
+    "save_eligibility": "require finalized strict PY-010, finalized strict RP003-IE-01, and separately finalized correspondence/difference/unavailable observations; no conjunct cross-credits another",
+    "after_save": "clear_all_temporary_work_and_keep_only_allowlisted_finalized_evidence_plus_the_expedition_owned_note",
+    "resume": "restore_only_finalized_dimension_evidence_and_resume_at_the_first_incomplete_scored_boundary"
+  },
+  "accessibility_contract": {
+    "representative_desktop": "complete 1920x1080 shell with dominant world and current required group visible without outer scroll",
+    "narrow_and_text_zoom": "natural vertical reflow without horizontal escape or clipped owner text",
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_or_audio": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_azure_or_foundry_call": true,
+    "no_credential_resource_or_sealed_source_access": true,
+    "no_permission_consent_authentication_or_external_action": true,
+    "no_city_response_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_save": true
+  },
+  "world_locks": [
+    "RP-002 verified completion required",
+    "continuation unchanged",
+    "city_state_delta=None",
+    "SC-04 invariant world geometry, materials, light causes, effect masks, routes, coupling body, sealed boundary, and monotonic environmental clock",
+    "two exposed sources only",
+    "sealed source remains unavailable and unread",
+    "reversible RP-002 and City Threshold returns",
+    "no RP-004 route or destination"
+  ],
+  "reopen_conditions": [
+    "official_objectives_materially_change",
+    "validator_or_playtest_proves_mismatch_or_bypass",
+    "martin_changes_learning_goal"
+  ]
+}

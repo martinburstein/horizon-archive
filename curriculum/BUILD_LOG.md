@@ -1,5 +1,36 @@
 # Build Log
 
+## Log entry: 2026-07-16T16:50:00-04:00
+
+Stage: RP-003 Calibration Margin contiguous curriculum verification (A3)
+Work completed: Closed exactly one RP-003 Curriculum gate and recorded `SOLIDIFIED`. Selected `PY-010` as conditional-only reinforcement over a supplied list/loop/index/append/dictionary scaffold and `RP003-IE-01` as focused current `AI901-D2-O7` information-extraction retrieval/transfer. Defined line-by-line implementation purpose, prerequisite routes, strict primary/remediation/retrieval/genuinely-blank-transfer evidence, misconception repair, separate observation and save-eligibility conjuncts, privacy allowlist, accessibility, offline/no-authority/no-exam-guarantee boundaries, and the three permitted reopen conditions. Added a machine-readable contract, primary/transfer Python references, three AI-901 evidence forms, and anti-bypass/failure probes. RP-001 and RP-002 mappings remain frozen and RP-004 remains reserved.
+Files changed:
+- Production Pipeline/rail-packets/RP-003-calibration-margin.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- curriculum/readiness/RP-003/contract.json
+- curriculum/readiness/RP-003/reference_primary.py
+- curriculum/readiness/RP-003/reference_transfer.py
+- curriculum/readiness/RP-003/reference_primary_answers.json
+- curriculum/readiness/RP-003/reference_retrieval_answers.json
+- curriculum/readiness/RP-003/reference_transfer_answers.json
+- curriculum/readiness/RP-003/validate_mapping.py
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Used the repository `foundry-azure-source-priority` skill and checked the current official Microsoft AI-901 study guide, Foundry hub, SDK/endpoints overview, Agent Service overview, and Content Understanding overview before authoring; no third-party source was used.
+- Reverified the April 15, 2026 skills-measured blueprint on the official guide, last updated July 13, 2026: Python remains an explicit candidate prerequisite; domain weights remain 40–45% concepts and 55–60% Foundry implementation; information-extraction implementation remains a current objective.
+- RP-003 mapping self-test passed; both Python references passed `8/8`; all AI-901 primary/retrieval/transfer references passed `3/3`; blank and hardcoded-result probes failed closed.
+- All curriculum JSON parsed. Focused packet/spine/queue/map checks confirmed one mapping only, exact predecessor, A3/A4 ownership, SOLIDIFIED status, prerequisite and strict evidence chains, zero presentation/Tour cross-credit, separate observations/save eligibility, privacy/accessibility/offline/no-authority/no-exam-guarantee, invariant SC-04, sealed-source unavailability, null city/external delta, reversible return, and no RP-004 content.
+Next recommended item: Gameplay Master A4 builds exactly one bounded RP-003 interaction graph using the packet's `Exact Gameplay Master A4 handoff`, without changing cases, answers, dimensions, thresholds, source claims, privacy, or authority boundaries.
+Unresolved risks: A4/A5 must keep the supplied loop scaffold unscored, prevent execution/display/navigation/save/Tour from manufacturing evidence, keep unavailable distinct from false/equal/different, clear private/transient work before blank retries and save, and prove deterministic resume/focus without any world, route, sealed-source, live-service, or external action.
+Notes: `SOLIDIFIED`. This is course-authored offline practice, not a Microsoft exam item, live Content Understanding call, resource configuration, exam guarantee, Builder authentication, or permission mechanism. No runtime code, production art, accepted Demo state, Azure resource, credential, external action, hidden lore, native category, RP-004 route, or user file changed.
+
 ## Log entry: 2026-05-29T16:26:59-04:00
 
 Stage: 0 - Initialize workspace

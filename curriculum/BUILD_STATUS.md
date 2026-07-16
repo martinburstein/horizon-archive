@@ -80,3 +80,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Preserved all A1/A2 canon, board, coordinate, photorealistic material/light/effect, interface/world, return, and null-city-delta invariants; every Scene observation remains unscored
 - [x] Reverified the July 13, 2026 official study-guide update and preserved the five canonical observations as independent non-mastery save-eligibility conjuncts with zero presentation/navigation/Tour credit
 - [ ] Gameplay Master completes A4 against the exact solidified contract
+
+## 2026-07-16 RP-003 curriculum verification
+
+- [x] Selected `PY-010` as the nearest contiguous conditional reinforcement after the RP-002 dictionary boundary
+- [x] Added focused `RP003-IE-01` retrieval/transfer for `AI901-D2-O7` supplied-input, structured-output/provenance, and unsupported-value boundaries without replacing full `L-05-07` mastery
+- [x] Solidified strict Python `8/8 primary + answer-free remediation + closed-note retrieval + blank 8/8 transfer`
+- [x] Solidified strict AI-901 `3/3 primary + per-dimension remediation + 3/3 delayed retrieval + blank 3/3 transfer + unsupported-input explanation`
+- [x] Added machine-readable contract, reference forms, current official-source verification, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and anti-bypass validation
+- [x] Preserved RP-001/RP-002 SOLIDIFIED mappings, SC-04 invariance, sealed-source unavailability, separate observation evidence, zero city/external delta, reversible return, and no RP-004 content
+- [ ] Gameplay Master completes A4 against the exact solidified RP-003 contract

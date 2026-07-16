@@ -1,0 +1,7 @@
+{
+  "T01": {
+    "input_boundary": "process_the_available_video_without_claiming_audio_analysis",
+    "output_contract": "return_schema_fields_with_source_provenance",
+    "unsupported_rule": "keep_audio_only_fields_null_until_audio_is_supplied"
+  }
+}

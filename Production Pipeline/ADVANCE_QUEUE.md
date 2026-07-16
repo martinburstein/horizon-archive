@@ -19,7 +19,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
-| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`) | Lore and Scene `PASS`; Curriculum/Puzzle/Code pending | Exact RP-002 completion plus locked `SC-04` invariant-world brief; unchanged `continuation`, zero city delta, reversible routes, no RP-004 destination | A3 selects and validates only the nearest contiguous Python/AI-901 mapping; presentation remains zero mastery evidence. |
+| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A3 COMPLETE` | Gameplay Master Agent (`A4`) | Lore, Scene, and Curriculum `PASS`; Puzzle/Code pending | Exact RP-002 completion; locked `SC-04`; SOLIDIFIED `PY-010` + `RP003-IE-01`; unchanged `continuation`, zero city delta, reversible routes, no RP-004 destination | A4 builds one bounded graph around the locked mapping; cases, answers, dimensions, thresholds, privacy, and authority boundaries remain fixed. |
 
 ## Team positions
 
@@ -27,12 +27,16 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-002`
 - In-design packets: `1 — RP-003`
-- Team 1 railhead: `RP-003 — IN DESIGN / A2 COMPLETE / A3 NEXT`
+- Team 1 railhead: `RP-003 — IN DESIGN / A3 COMPLETE / A4 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `2 ordered packets — RP-002 promoted to Working; RP-003 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 RP-003 Curriculum mapping result
+
+`RP-003` remains `IN DESIGN`, protected from the accepted Demo, and `REVISE`. A3 closed the Curriculum gate with `PY-010` conditional reinforcement and focused `RP003-IE-01 / AI901-D2-O7` information-extraction retrieval/transfer. The locked chain is `8/8 Python primary -> answer-free remediation -> closed-note retrieval -> genuinely blank 8/8 Python transfer`, independently followed by `3/3 AI-901 primary -> per-dimension remediation -> 3/3 delayed retrieval -> genuinely blank 3/3 transfer + unsupported-input explanation`. `L-03-02` and `L-05-07` remain prerequisite mastery homes. Observations, presentation, execution display, save/restore UI, accessibility delivery, and Tour are zero credit; both learning chains plus separate finalized observations may gate review/save without cross-credit. The package is course-authored, offline, privacy-allowlisted, no-authority, no-exam-guarantee, and produces zero city/external action. A4 owns one bounded puzzle graph only; RP-004 remains reserved.
 
 ## 2026-07-16 mandatory RP-002 convergence audit
 

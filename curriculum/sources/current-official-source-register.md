@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-15
+Verified: 2026-07-16
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 
@@ -12,6 +12,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Candidate prerequisites explicitly include Python syntax and programming techniques plus familiarity with Azure resources.
   - The guide says candidates should be familiar with REST APIs, SDKs, and CLIs.
   - A score of 700 or greater is required to pass. This curriculum uses higher internal gates; those gates are coaching policy, not Microsoft scoring policy.
+  - Reverified July 16, 2026: the page remains last updated July 13, 2026 and the April 15, 2026 objective set and domain weights are unchanged.
 
 ## Priority Foundry sources checked first
 

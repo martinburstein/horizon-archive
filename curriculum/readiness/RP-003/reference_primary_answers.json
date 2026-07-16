@@ -1,0 +1,7 @@
+{
+  "P01": {
+    "input_boundary": "process_supplied_content_only",
+    "output_contract": "schema_aligned_structured_fields_with_provenance",
+    "unsupported_rule": "preserve_unavailable_field_as_null_do_not_infer"
+  }
+}
