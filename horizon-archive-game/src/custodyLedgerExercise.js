@@ -62,6 +62,29 @@ export const custodyLedgerOwnershipMessages = Object.freeze({
   }),
 });
 
+export const custodyLedgerPythonOwnershipMessages = Object.freeze({
+  primary_result: Object.freeze({
+    owner: "SUIT // PROVISIONAL TRANSLATION",
+    text: "Execution renders the exposed three-condition record. Identity-bearing material remains closed.",
+  }),
+  fresh_practice: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Builder work image cleared. Fresh expedition practice loaded; no source fields or result were carried forward.",
+  }),
+  explanation_prompt: Object.freeze({
+    owner: "901 TEACHER // FEEDBACK",
+    text: "Explain the update, then distinguish missing identity from an access request that did not occur.",
+  }),
+  python_conclusion: Object.freeze({
+    owner: "PILOT // FLIGHT RECORDER",
+    text: "I updated my record without replacing its source. Unknown identity and no access request remain separate facts.",
+  }),
+  rai_primary: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Responsible AI primary initialized. No choices are selected and no comparison has been saved.",
+  }),
+});
+
 export const custodyLedgerSourceFields = Object.freeze({
   condition: "outlined_gap",
   source: "exposed_surface",
@@ -75,6 +98,7 @@ export const custodyLedgerExpeditionFields = Object.freeze({
 });
 
 export const CUSTODY_LEDGER_UNFINISHED_WORK_LABEL = "UNFINISHED WORK IMAGE";
+export const CUSTODY_LEDGER_FRESH_PRACTICE_LABEL = "FRESH PRACTICE IMAGE";
 
 export const custodyLedgerPrimaryStarterSource = `comparison = {
     "condition": "outlined_gap",
@@ -111,6 +135,17 @@ export const custodyLedgerTransferStarterSource = `comparison = {
 # comparison["owner"] =
 `;
 
+export const custodyLedgerTransferReferenceSource = `comparison = {
+    "condition": "unresolved_interval",
+    "source": "deidentified_sensor_log",
+    "identity": None,
+    "access_requested": False,
+}
+
+comparison["classification"] = "unknown"
+comparison["owner"] = "human_reviewer"
+`;
+
 export const custodyLedgerTransferSourceFields = Object.freeze({
   condition: "unresolved_interval",
   source: "deidentified_sensor_log",
@@ -138,6 +173,21 @@ export const custodyLedgerPythonChecks = Object.freeze([
   "classification_and_owner_added_by_key_update",
 ]);
 
+export const custodyLedgerExplanationDimensions = Object.freeze([
+  "named_key_update",
+  "none_means_missing_or_unknown_identity",
+  "false_means_access_request_did_not_occur",
+]);
+
+export const custodyLedgerExplanationAnswers = Object.freeze({
+  named_key_update: "a key names one field whose value can be updated without replacing the dictionary",
+  none_means_missing_or_unknown_identity: "None means the identity value is missing or unknown",
+  false_means_access_request_did_not_occur: "False means an access request explicitly did not occur",
+});
+
+export const custodyLedgerRAIPrimaryScenarioIds = Object.freeze(["P01", "P02", "P03"]);
+export const custodyLedgerRAIDimensions = Object.freeze(["principle", "mitigation", "owner"]);
+
 function blankPythonChecks() {
   return Object.fromEntries(custodyLedgerPythonChecks.map((check) => [check, false]));
 }
@@ -145,7 +195,7 @@ function blankPythonChecks() {
 function workImage(sourceFields = custodyLedgerSourceFields) {
   const transfer = sourceFields.condition === custodyLedgerTransferSourceFields.condition;
   return {
-    label: CUSTODY_LEDGER_UNFINISHED_WORK_LABEL,
+    label: transfer ? CUSTODY_LEDGER_FRESH_PRACTICE_LABEL : CUSTODY_LEDGER_UNFINISHED_WORK_LABEL,
     sourceFields: { ...sourceFields },
     expeditionFields: { ...custodyLedgerExpeditionFields },
     unfinishedUpdates: ["classification", "owner"],
@@ -184,6 +234,7 @@ function sanitizeAttemptCount(value) {
 
 function sanitizedPythonEvidence(value, form) {
   if (!value || value.form !== form || value.packetId !== CUSTODY_LEDGER_PACKET_ID) return null;
+  const completeStatus = form === "primary" ? "primary_complete" : "transfer_complete";
   return {
     packetId: CUSTODY_LEDGER_PACKET_ID,
     mappingId: "RP002-A3-CIVIC-COMPARISON",
@@ -201,17 +252,53 @@ function sanitizedPythonEvidence(value, form) {
     misconceptionTags: Array.isArray(value.misconceptionTags)
       ? value.misconceptionTags.filter((tag) => typeof tag === "string").slice(0, 8)
       : [],
-    masteryStatus: form === "primary" && value.masteryStatus === "primary_complete"
-      ? "primary_complete"
+    masteryStatus: value.masteryStatus === completeStatus
+      ? completeStatus
       : "in_progress",
   };
+}
+
+function sanitizedExplanationEvidence(value) {
+  if (!value || value.form !== "explanation" || value.packetId !== CUSTODY_LEDGER_PACKET_ID) return null;
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    mappingId: "RP002-A3-CIVIC-COMPARISON",
+    form: "explanation",
+    skillId: "PY-009",
+    dimensionCorrectness: Object.fromEntries(custodyLedgerExplanationDimensions.map((dimension) => [
+      dimension,
+      value?.dimensionCorrectness?.[dimension] === true,
+    ])),
+    attemptCount: sanitizeAttemptCount(value.attemptCount),
+    hintLevel: Number.isSafeInteger(value.hintLevel) && value.hintLevel >= 0
+      ? Math.min(value.hintLevel, 9)
+      : 0,
+    confidence: ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null,
+    misconceptionTags: Array.isArray(value.misconceptionTags)
+      ? value.misconceptionTags.filter((tag) => custodyLedgerExplanationDimensions.includes(tag)).slice(0, 3)
+      : [],
+    masteryStatus: value.masteryStatus === "explanation_complete" ? "explanation_complete" : "in_progress",
+  };
+}
+
+function evidenceIsComplete(value, form) {
+  const safe = sanitizedPythonEvidence(value, form);
+  const completeStatus = form === "primary" ? "primary_complete" : "transfer_complete";
+  return safe?.masteryStatus === completeStatus
+    && custodyLedgerPythonChecks.every((check) => safe.dimensionCorrectness[check] === true);
+}
+
+function explanationEvidenceIsComplete(value) {
+  const safe = sanitizedExplanationEvidence(value);
+  return safe?.masteryStatus === "explanation_complete"
+    && custodyLedgerExplanationDimensions.every((dimension) => safe.dimensionCorrectness[dimension] === true);
 }
 
 /**
  * Statically evaluates the bounded course-authored Python fragment. It never
  * executes learner code, performs I/O, or treats displayed output as evidence.
  */
-export function evaluateCustodyLedgerPrimarySource(source) {
+function evaluateCustodyLedgerPythonSource(source, expectedSourceFields, expectedOwner) {
   const lines = stripPythonComments(source);
   const checks = blankPythonChecks();
   const misconceptionTags = [];
@@ -256,8 +343,8 @@ export function evaluateCustodyLedgerPrimarySource(source) {
     && new Set(updates.map(({ key }) => key)).size === 2
     && updates.every(({ key }) => ["classification", "owner"].includes(key))
     && allowedLines;
-  checks.condition_and_source_preserved = mappingEntries.condition === "outlined_gap"
-    && mappingEntries.source === "exposed_surface"
+  checks.condition_and_source_preserved = mappingEntries.condition === expectedSourceFields.condition
+    && mappingEntries.source === expectedSourceFields.source
     && !updates.some((update) => update && ["condition", "source"].includes(update.key));
   checks.identity_remains_none = Object.hasOwn(mappingEntries, "identity")
     && mappingEntries.identity === null
@@ -268,7 +355,7 @@ export function evaluateCustodyLedgerPrimarySource(source) {
   checks.classification_and_owner_added_by_key_update = !hasForbiddenOperation
     && updates.length === 2
     && updates.some(({ key, value } = {}) => key === "classification" && value === "unknown")
-    && updates.some(({ key, value } = {}) => key === "owner" && value === "human_expedition")
+    && updates.some(({ key, value } = {}) => key === "owner" && value === expectedOwner)
     && rebindingLines.length === 1
     && allowedLines;
 
@@ -285,6 +372,32 @@ export function evaluateCustodyLedgerPrimarySource(source) {
     score,
     passed: score === custodyLedgerPythonChecks.length && !hasForbiddenOperation,
     misconceptionTags: [...new Set(misconceptionTags)],
+  };
+}
+
+
+export function evaluateCustodyLedgerPrimarySource(source) {
+  return evaluateCustodyLedgerPythonSource(source, custodyLedgerSourceFields, "human_expedition");
+}
+
+export function evaluateCustodyLedgerTransferSource(source) {
+  return evaluateCustodyLedgerPythonSource(source, custodyLedgerTransferSourceFields, "human_reviewer");
+}
+
+export function evaluateCustodyLedgerExplanation(selections) {
+  const dimensionCorrectness = Object.fromEntries(custodyLedgerExplanationDimensions.map((dimension) => [
+    dimension,
+    selections?.[dimension] === custodyLedgerExplanationAnswers[dimension],
+  ]));
+  const firstFailedDimension = custodyLedgerExplanationDimensions.find(
+    (dimension) => !dimensionCorrectness[dimension],
+  ) ?? null;
+  const score = custodyLedgerExplanationDimensions.filter((dimension) => dimensionCorrectness[dimension]).length;
+  return {
+    dimensionCorrectness,
+    firstFailedDimension,
+    score,
+    passed: score === custodyLedgerExplanationDimensions.length,
   };
 }
 
@@ -307,7 +420,14 @@ function hasStrictResponsibleAIPrerequisite(value) {
 }
 
 export function getCustodyLedgerOwnershipMessage(messageKey) {
-  return custodyLedgerOwnershipMessages[messageKey] ?? custodyLedgerOwnershipMessages.prerequisites_incomplete;
+  return custodyLedgerOwnershipMessages[messageKey]
+    ?? custodyLedgerPythonOwnershipMessages[messageKey]
+    ?? custodyLedgerOwnershipMessages.prerequisites_incomplete;
+}
+
+function hasCustodyLedgerOwnershipMessage(messageKey) {
+  return Object.hasOwn(custodyLedgerOwnershipMessages, messageKey)
+    || Object.hasOwn(custodyLedgerPythonOwnershipMessages, messageKey);
 }
 
 export function createCustodyLedgerScaffold(predecessorValue) {
@@ -332,15 +452,43 @@ function normalizeCustodyLedgerScaffold(state) {
   const primaryReady = state?.phase === "python_primary"
     && state?.prerequisiteStatus === "complete"
     && state?.pythonForm === "primary";
+  const primaryComplete = evidenceIsComplete(state?.pythonEvidence, "primary");
+  const resultReady = state?.phase === "python_primary_result"
+    && state?.prerequisiteStatus === "complete"
+    && state?.pythonForm === "primary_result"
+    && primaryComplete;
   const transferReady = state?.phase === "python_transfer"
     && state?.prerequisiteStatus === "complete"
     && state?.pythonForm === "transfer"
-    && state?.primaryStatus === "complete";
-  const phase = transferReady ? "python_transfer"
+    && primaryComplete;
+  const transferComplete = evidenceIsComplete(state?.pythonTransferEvidence, "transfer");
+  const explanationReady = state?.phase === "python_explanation"
+    && state?.prerequisiteStatus === "complete"
+    && state?.pythonForm === "explanation"
+    && primaryComplete
+    && transferComplete;
+  const explanationComplete = explanationEvidenceIsComplete(state?.pythonExplanationEvidence);
+  const conclusionReady = state?.phase === "python_complete"
+    && state?.prerequisiteStatus === "complete"
+    && state?.pythonForm === "complete"
+    && primaryComplete
+    && transferComplete
+    && explanationComplete;
+  const raiReady = state?.phase === "rai_primary"
+    && state?.prerequisiteStatus === "complete"
+    && state?.raiForm === "primary"
+    && primaryComplete
+    && transferComplete
+    && explanationComplete;
+  const phase = raiReady ? "rai_primary"
+    : conclusionReady ? "python_complete"
+      : explanationReady ? "python_explanation"
+        : transferReady ? "python_transfer"
+          : resultReady ? "python_primary_result"
     : primaryReady ? "python_primary"
     : state?.phase === "prerequisite_check" ? "prerequisite_check"
       : "predecessor_blocked";
-  const activeMessageKey = Object.hasOwn(custodyLedgerOwnershipMessages, state?.activeMessageKey)
+  const activeMessageKey = hasCustodyLedgerOwnershipMessage(state?.activeMessageKey)
     ? state.activeMessageKey
     : "prerequisites_incomplete";
   return {
@@ -348,37 +496,73 @@ function normalizeCustodyLedgerScaffold(state) {
     boardId: CUSTODY_LEDGER_BOARD_ID,
     phase,
     activeMessageKey,
-    sourceFields: { ...(transferReady ? custodyLedgerTransferSourceFields : custodyLedgerSourceFields) },
-    expeditionFields: {
-      classification: typeof state?.expeditionFields?.classification === "string"
-        ? state.expeditionFields.classification.slice(0, 40)
-        : "",
-      owner: typeof state?.expeditionFields?.owner === "string"
-        ? state.expeditionFields.owner.slice(0, 40)
-        : "",
-    },
-    scoringEnabled: primaryReady || transferReady,
+    ...((primaryReady || transferReady || phase === "prerequisite_check" || phase === "predecessor_blocked") ? {
+      sourceFields: { ...(transferReady ? custodyLedgerTransferSourceFields : custodyLedgerSourceFields) },
+      expeditionFields: {
+        classification: typeof state?.expeditionFields?.classification === "string"
+          ? state.expeditionFields.classification.slice(0, 40)
+          : "",
+        owner: typeof state?.expeditionFields?.owner === "string"
+          ? state.expeditionFields.owner.slice(0, 40)
+          : "",
+      },
+    } : {}),
+    scoringEnabled: primaryReady || transferReady || explanationReady,
     campaignCommitEnabled: false,
     continuation: CITY_THRESHOLD_CONTINUATION,
     cityStateDelta: null,
-    ...((primaryReady || transferReady) ? {
+    ...((primaryReady || resultReady || transferReady || explanationReady || conclusionReady || raiReady) ? {
       prerequisiteStatus: "complete",
-      pythonForm: transferReady ? "transfer" : "primary",
-      pythonChecks: Object.fromEntries(custodyLedgerPythonChecks.map((check) => [
-        check,
-        state?.pythonChecks?.[check] === true,
-      ])),
-      unfinishedWorkImage: workImage(transferReady ? custodyLedgerTransferSourceFields : custodyLedgerSourceFields),
+      ...(raiReady ? {} : {
+        pythonForm: conclusionReady ? "complete"
+          : explanationReady ? "explanation"
+            : transferReady ? "transfer"
+              : resultReady ? "primary_result"
+                : "primary",
+      }),
       ...(sanitizedPythonEvidence(state?.pythonEvidence, "primary") ? {
         pythonEvidence: sanitizedPythonEvidence(state.pythonEvidence, "primary"),
       } : {}),
-      ...(transferReady ? {
+      ...(sanitizedPythonEvidence(state?.pythonTransferEvidence, "transfer") ? {
+        pythonTransferEvidence: sanitizedPythonEvidence(state.pythonTransferEvidence, "transfer"),
+      } : {}),
+      ...(sanitizedExplanationEvidence(state?.pythonExplanationEvidence) ? {
+        pythonExplanationEvidence: sanitizedExplanationEvidence(state.pythonExplanationEvidence),
+      } : {}),
+      ...((primaryReady || transferReady) ? {
+        pythonChecks: Object.fromEntries(custodyLedgerPythonChecks.map((check) => [
+          check,
+          state?.pythonChecks?.[check] === true,
+        ])),
+        unfinishedWorkImage: workImage(transferReady ? custodyLedgerTransferSourceFields : custodyLedgerSourceFields),
+      } : {}),
+      ...(resultReady ? {
         primaryStatus: "complete",
         causalResult: {
           owner: custodyLedgerCausalResult.owner,
           text: custodyLedgerCausalResult.text,
           record: { ...custodyLedgerCausalResult.record },
         },
+      } : {}),
+      ...(transferReady || explanationReady || conclusionReady || raiReady ? { primaryStatus: "complete" } : {}),
+      ...(explanationReady ? {
+        transferStatus: "complete",
+        explanationSelections: Object.fromEntries(custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""])),
+        firstFailedDimension: custodyLedgerExplanationDimensions.includes(state?.firstFailedDimension)
+          ? state.firstFailedDimension
+          : null,
+      } : {}),
+      ...(conclusionReady || raiReady ? {
+        transferStatus: "complete",
+        pythonStatus: "complete",
+      } : {}),
+      ...(raiReady ? {
+        raiForm: "primary",
+        raiScoringImplemented: false,
+        raiChecks: Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
+          scenarioId,
+          Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, false])),
+        ])),
       } : {}),
     } : {}),
   };
@@ -451,19 +635,15 @@ export function submitCustodyLedgerPrimary(state, source) {
   return {
     packetId: CUSTODY_LEDGER_PACKET_ID,
     boardId: CUSTODY_LEDGER_BOARD_ID,
-    phase: "python_transfer",
-    activeMessageKey: "tray_available",
-    sourceFields: { ...custodyLedgerTransferSourceFields },
-    expeditionFields: { ...custodyLedgerExpeditionFields },
-    scoringEnabled: true,
+    phase: "python_primary_result",
+    activeMessageKey: "primary_result",
+    scoringEnabled: false,
     campaignCommitEnabled: false,
     continuation: CITY_THRESHOLD_CONTINUATION,
     cityStateDelta: null,
     prerequisiteStatus: "complete",
     primaryStatus: "complete",
-    pythonForm: "transfer",
-    pythonChecks: blankPythonChecks(),
-    unfinishedWorkImage: workImage(custodyLedgerTransferSourceFields),
+    pythonForm: "primary_result",
     pythonEvidence,
     causalResult: {
       owner: custodyLedgerCausalResult.owner,
@@ -486,9 +666,251 @@ export function retryCustodyLedgerPrimary(state) {
   };
 }
 
+function transferState(primaryEvidence, transferEvidence = null) {
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: "python_transfer",
+    activeMessageKey: "fresh_practice",
+    sourceFields: { ...custodyLedgerTransferSourceFields },
+    expeditionFields: { ...custodyLedgerExpeditionFields },
+    scoringEnabled: true,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    prerequisiteStatus: "complete",
+    primaryStatus: "complete",
+    pythonForm: "transfer",
+    pythonChecks: blankPythonChecks(),
+    unfinishedWorkImage: workImage(custodyLedgerTransferSourceFields),
+    pythonEvidence: sanitizedPythonEvidence(primaryEvidence, "primary"),
+    ...(sanitizedPythonEvidence(transferEvidence, "transfer") ? {
+      pythonTransferEvidence: sanitizedPythonEvidence(transferEvidence, "transfer"),
+    } : {}),
+  };
+}
+
+function explanationState(primaryEvidence, transferEvidence, explanationEvidence = null, firstFailedDimension = null) {
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: "python_explanation",
+    activeMessageKey: "explanation_prompt",
+    scoringEnabled: true,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    prerequisiteStatus: "complete",
+    primaryStatus: "complete",
+    transferStatus: "complete",
+    pythonForm: "explanation",
+    explanationSelections: Object.fromEntries(custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""])),
+    firstFailedDimension: custodyLedgerExplanationDimensions.includes(firstFailedDimension)
+      ? firstFailedDimension
+      : null,
+    pythonEvidence: sanitizedPythonEvidence(primaryEvidence, "primary"),
+    pythonTransferEvidence: sanitizedPythonEvidence(transferEvidence, "transfer"),
+    ...(sanitizedExplanationEvidence(explanationEvidence) ? {
+      pythonExplanationEvidence: sanitizedExplanationEvidence(explanationEvidence),
+    } : {}),
+  };
+}
+
+function raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence) {
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: "rai_primary",
+    activeMessageKey: "rai_primary",
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    prerequisiteStatus: "complete",
+    primaryStatus: "complete",
+    transferStatus: "complete",
+    pythonStatus: "complete",
+    raiForm: "primary",
+    raiScoringImplemented: false,
+    raiChecks: Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
+      scenarioId,
+      Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, false])),
+    ])),
+    pythonEvidence: sanitizedPythonEvidence(primaryEvidence, "primary"),
+    pythonTransferEvidence: sanitizedPythonEvidence(transferEvidence, "transfer"),
+    pythonExplanationEvidence: sanitizedExplanationEvidence(explanationEvidence),
+  };
+}
+
+export function dismissCustodyLedgerPrimaryResult(state) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_primary_result" || !evidenceIsComplete(current.pythonEvidence, "primary")) {
+    return createCustodyLedgerScaffold(null);
+  }
+  return transferState(current.pythonEvidence);
+}
+
+export function submitCustodyLedgerTransfer(state, source) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_transfer"
+    || !evidenceIsComplete(current.pythonEvidence, "primary")) {
+    return createCustodyLedgerScaffold(null);
+  }
+  const result = evaluateCustodyLedgerTransferSource(source);
+  const attemptCount = sanitizeAttemptCount(current.pythonTransferEvidence?.attemptCount) + 1;
+  const pythonTransferEvidence = {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    mappingId: "RP002-A3-CIVIC-COMPARISON",
+    form: "transfer",
+    skillId: "PY-009",
+    dimensionCorrectness: Object.fromEntries(custodyLedgerPythonChecks.map((check) => [check, result[check] === true])),
+    attemptCount,
+    hintLevel: 0,
+    confidence: null,
+    misconceptionTags: result.misconceptionTags,
+    masteryStatus: result.passed ? "transfer_complete" : "in_progress",
+  };
+  if (!result.passed) {
+    return {
+      ...transferState(current.pythonEvidence, pythonTransferEvidence),
+      activeMessageKey: checkMessageFor(result),
+      pythonChecks: Object.fromEntries(custodyLedgerPythonChecks.map((check) => [check, result[check] === true])),
+    };
+  }
+  return explanationState(current.pythonEvidence, pythonTransferEvidence);
+}
+
+export function retryCustodyLedgerTransfer(state) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_transfer") return current;
+  return transferState(current.pythonEvidence, current.pythonTransferEvidence);
+}
+
+export function submitCustodyLedgerExplanation(state, selections) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_explanation"
+    || !evidenceIsComplete(current.pythonEvidence, "primary")
+    || !evidenceIsComplete(current.pythonTransferEvidence, "transfer")) {
+    return createCustodyLedgerScaffold(null);
+  }
+  const result = evaluateCustodyLedgerExplanation(selections);
+  const attemptCount = sanitizeAttemptCount(current.pythonExplanationEvidence?.attemptCount) + 1;
+  const pythonExplanationEvidence = {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    mappingId: "RP002-A3-CIVIC-COMPARISON",
+    form: "explanation",
+    skillId: "PY-009",
+    dimensionCorrectness: { ...result.dimensionCorrectness },
+    attemptCount,
+    hintLevel: 0,
+    confidence: null,
+    misconceptionTags: custodyLedgerExplanationDimensions.filter(
+      (dimension) => result.dimensionCorrectness[dimension] !== true,
+    ),
+    masteryStatus: result.passed ? "explanation_complete" : "in_progress",
+  };
+  if (!result.passed) {
+    return explanationState(
+      current.pythonEvidence,
+      current.pythonTransferEvidence,
+      pythonExplanationEvidence,
+      result.firstFailedDimension,
+    );
+  }
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: "python_complete",
+    activeMessageKey: "python_conclusion",
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    prerequisiteStatus: "complete",
+    primaryStatus: "complete",
+    transferStatus: "complete",
+    pythonStatus: "complete",
+    pythonForm: "complete",
+    pythonEvidence: sanitizedPythonEvidence(current.pythonEvidence, "primary"),
+    pythonTransferEvidence: sanitizedPythonEvidence(current.pythonTransferEvidence, "transfer"),
+    pythonExplanationEvidence: sanitizedExplanationEvidence(pythonExplanationEvidence),
+  };
+}
+
+export function retryCustodyLedgerExplanation(state) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_explanation") return current;
+  return explanationState(
+    current.pythonEvidence,
+    current.pythonTransferEvidence,
+    current.pythonExplanationEvidence,
+    current.firstFailedDimension,
+  );
+}
+
+export function dismissCustodyLedgerPythonConclusion(state) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "python_complete"
+    || !explanationEvidenceIsComplete(current.pythonExplanationEvidence)) {
+    return createCustodyLedgerScaffold(null);
+  }
+  return raiPrimaryState(
+    current.pythonEvidence,
+    current.pythonTransferEvidence,
+    current.pythonExplanationEvidence,
+  );
+}
+
+/**
+ * Reconstructs only the first incomplete scored boundary. Result and Pilot
+ * presentation are intentionally not replayed, and no private working content
+ * survives close, cancel, reload, return, stale sanitation, or Tour resume.
+ */
+export function resumeCustodyLedgerPython(state) {
+  const primaryEvidence = sanitizedPythonEvidence(state?.pythonEvidence, "primary");
+  const transferEvidence = sanitizedPythonEvidence(state?.pythonTransferEvidence, "transfer");
+  const explanationEvidence = sanitizedExplanationEvidence(state?.pythonExplanationEvidence);
+  if (!evidenceIsComplete(primaryEvidence, "primary")) {
+    if (state?.prerequisiteStatus !== "complete") return createCustodyLedgerScaffold(null);
+    return {
+      ...blankPrimaryState(primaryEvidence),
+      activeMessageKey: "tray_available",
+    };
+  }
+  if (!evidenceIsComplete(transferEvidence, "transfer")) {
+    return transferState(primaryEvidence, transferEvidence);
+  }
+  if (!explanationEvidenceIsComplete(explanationEvidence)) {
+    return explanationState(primaryEvidence, transferEvidence, explanationEvidence);
+  }
+  return raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence);
+}
+
+function blankPrimaryState(primaryEvidence = null) {
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: "python_primary",
+    activeMessageKey: "tray_available",
+    sourceFields: { ...custodyLedgerSourceFields },
+    expeditionFields: { ...custodyLedgerExpeditionFields },
+    scoringEnabled: true,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    prerequisiteStatus: "complete",
+    pythonForm: "primary",
+    pythonChecks: blankPythonChecks(),
+    unfinishedWorkImage: workImage(),
+    ...(sanitizedPythonEvidence(primaryEvidence, "primary") ? {
+      pythonEvidence: sanitizedPythonEvidence(primaryEvidence, "primary"),
+    } : {}),
+  };
+}
+
 export function setCustodyLedgerOwnershipMessage(state, messageKey) {
   const current = normalizeCustodyLedgerScaffold(state);
-  const safeKey = Object.hasOwn(custodyLedgerOwnershipMessages, messageKey)
+  const safeKey = hasCustodyLedgerOwnershipMessage(messageKey)
     ? messageKey
     : current.activeMessageKey;
   return {
@@ -499,6 +921,13 @@ export function setCustodyLedgerOwnershipMessage(state, messageKey) {
 
 export function clearCustodyLedgerWorkingState(state) {
   const current = normalizeCustodyLedgerScaffold(state);
+  if (["python_primary", "python_primary_result", "python_transfer", "python_explanation", "python_complete", "rai_primary"]
+    .includes(current.phase)) {
+    return {
+      ...resumeCustodyLedgerPython(current),
+      activeMessageKey: "cancelled",
+    };
+  }
   return {
     ...current,
     activeMessageKey: "cancelled",

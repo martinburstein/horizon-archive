@@ -19,16 +19,28 @@ import {
   clearCustodyLedgerWorkingState,
   createCustodyLedgerScaffold,
   custodyLedgerCausalResult,
+  custodyLedgerExplanationAnswers,
+  custodyLedgerExplanationDimensions,
   custodyLedgerOwnershipMessages,
+  custodyLedgerPythonOwnershipMessages,
   custodyLedgerPrimaryReferenceSource,
   custodyLedgerPrimaryStarterSource,
   custodyLedgerSourceFields,
   custodyLedgerTransferSourceFields,
+  custodyLedgerTransferReferenceSource,
+  dismissCustodyLedgerPrimaryResult,
+  dismissCustodyLedgerPythonConclusion,
+  evaluateCustodyLedgerExplanation,
   evaluateCustodyLedgerPrimarySource,
+  evaluateCustodyLedgerTransferSource,
   getCustodyLedgerOwnershipMessage,
   retryCustodyLedgerPrimary,
+  retryCustodyLedgerTransfer,
+  resumeCustodyLedgerPython,
   setCustodyLedgerOwnershipMessage,
   submitCustodyLedgerPrimary,
+  submitCustodyLedgerExplanation,
+  submitCustodyLedgerTransfer,
 } from "../src/custodyLedgerExercise.js";
 import {
   structuredPacketChecks,
@@ -91,6 +103,18 @@ function blankPrimary() {
     createCustodyLedgerScaffold(completedPredecessor()),
     completedPrerequisites(),
   );
+}
+
+function completedPrimaryResult() {
+  return submitCustodyLedgerPrimary(blankPrimary(), custodyLedgerPrimaryReferenceSource);
+}
+
+function blankTransfer() {
+  return dismissCustodyLedgerPrimaryResult(completedPrimaryResult());
+}
+
+function blankExplanation() {
+  return submitCustodyLedgerTransfer(blankTransfer(), custodyLedgerTransferReferenceSource);
 }
 
 test("Custody Ledger scaffold opens only after the exact atomic predecessor", () => {
@@ -223,8 +247,19 @@ test("every locked ownership node keeps a visible human-interface owner", () => 
     assert.ok(message.text.length > 20, key);
     assert.doesNotMatch(message.owner, /SCENE|BUILDER|MACHINE|CITY/);
   }
+  assert.equal(Object.keys(custodyLedgerPythonOwnershipMessages).length, 5);
+  for (const [key, message] of Object.entries(custodyLedgerPythonOwnershipMessages)) {
+    assert.ok(message.owner.length > 10, key);
+    assert.ok(message.text.length > 20, key);
+    assert.doesNotMatch(message.owner, /SCENE|BUILDER|MACHINE|CITY/);
+  }
   assert.equal(getCustodyLedgerOwnershipMessage("tour").text, "Preview only — bounded comparison not saved.");
   assert.match(getCustodyLedgerOwnershipMessage("saved").text, /No access request or external action occurred/);
+  assert.match(getCustodyLedgerOwnershipMessage("fresh_practice").text, /no source fields or result were carried forward/);
+  assert.equal(
+    getCustodyLedgerOwnershipMessage("python_conclusion").text,
+    "I updated my record without replacing its source. Unknown identity and no access request remain separate facts.",
+  );
 });
 
 test("reading feedback or cancelling stays zero-credit and clears only working sockets", () => {
@@ -310,19 +345,19 @@ test("replacement dictionaries, locked-field changes, extra keys, and non-key up
   }
 });
 
-test("strict 6/6 creates only the causal suit record and a blank transfer boundary", () => {
+test("strict 6/6 stops at the read-only causal suit result before fresh practice", () => {
   const result = submitCustodyLedgerPrimary(blankPrimary(), `${custodyLedgerPrimaryReferenceSource}\n# private-attempt-marker-7391`);
-  assert.equal(result.phase, "python_transfer");
-  assert.equal(result.pythonForm, "transfer");
+  assert.equal(result.phase, "python_primary_result");
+  assert.equal(result.pythonForm, "primary_result");
   assert.equal(result.primaryStatus, "complete");
-  assert.deepEqual(result.sourceFields, custodyLedgerTransferSourceFields);
-  assert.deepEqual(result.expeditionFields, { classification: "", owner: "" });
-  assert.deepEqual(Object.values(result.pythonChecks), [false, false, false, false, false, false]);
   assert.deepEqual(result.causalResult, custodyLedgerCausalResult);
   assert.equal(result.causalResult.owner, "SUIT // PROVISIONAL TRANSLATION");
   assert.match(result.causalResult.text, /Identity-bearing material remains closed/);
-  assert.equal(result.unfinishedWorkImage.label, "UNFINISHED WORK IMAGE");
+  assert.equal(Object.hasOwn(result, "unfinishedWorkImage"), false);
+  assert.equal(Object.hasOwn(result, "sourceFields"), false);
+  assert.equal(Object.hasOwn(result, "expeditionFields"), false);
   assert.equal(result.pythonEvidence.masteryStatus, "primary_complete");
+  assert.equal(result.scoringEnabled, false);
   assert.equal(result.campaignCommitEnabled, false);
   assert.equal(result.cityStateDelta, null);
   assert.equal(result.continuation, "continuation");
@@ -332,8 +367,7 @@ test("strict 6/6 creates only the causal suit record and a blank transfer bounda
   for (const prohibited of ["campaign", "tourEvidence", "cityResponse", "successor", "route", "item", "accessGranted", "externalAction"]) {
     assert.equal(Object.hasOwn(result, prohibited), false, prohibited);
   }
-  assert.equal(result.sourceFields.identity, null);
-  assert.equal(result.sourceFields.access_requested, false);
+  assert.equal(Object.hasOwn(result, "raiChecks"), false);
 });
 
 test("miss feedback is human-owned, privacy-limited, blank, and supports unlimited recovery", () => {
@@ -354,7 +388,7 @@ test("miss feedback is human-owned, privacy-limited, blank, and supports unlimit
   const second = submitCustodyLedgerPrimary(retry, missSource);
   assert.equal(second.pythonEvidence.attemptCount, 2);
   const recovered = submitCustodyLedgerPrimary(retryCustodyLedgerPrimary(second), custodyLedgerPrimaryReferenceSource);
-  assert.equal(recovered.phase, "python_transfer");
+  assert.equal(recovered.phase, "python_primary_result");
   assert.equal(recovered.pythonEvidence.attemptCount, 3);
 });
 
@@ -368,4 +402,179 @@ test("submission leaves separate campaign and Tour bytes stable and exposes no n
   assert.equal(JSON.stringify(tour), tourBytes);
   assert.equal(Object.hasOwn(blankPrimary(), "route"), false);
   assert.equal(Object.hasOwn(blankPrimary(), "successor"), false);
+});
+
+test("zero-credit result dismissal clears the causal record into carry-free fresh practice", () => {
+  const result = completedPrimaryResult();
+  const transfer = dismissCustodyLedgerPrimaryResult({
+    ...result,
+    sourceFields: { ...custodyLedgerSourceFields },
+    expeditionFields: { classification: "unknown", owner: "human_expedition" },
+    learnerSource: "private-primary-source",
+  });
+  assert.equal(transfer.phase, "python_transfer");
+  assert.equal(transfer.activeMessageKey, "fresh_practice");
+  assert.equal(transfer.unfinishedWorkImage.label, "FRESH PRACTICE IMAGE");
+  assert.deepEqual(transfer.sourceFields, custodyLedgerTransferSourceFields);
+  assert.deepEqual(transfer.expeditionFields, { classification: "", owner: "" });
+  assert.deepEqual(Object.values(transfer.pythonChecks), [false, false, false, false, false, false]);
+  assert.equal(Object.hasOwn(transfer, "causalResult"), false);
+  assert.equal(Object.hasOwn(transfer, "learnerSource"), false);
+  assert.doesNotMatch(JSON.stringify(transfer), /private-primary-source|human_expedition/);
+  assert.equal(transfer.pythonEvidence.attemptCount, result.pythonEvidence.attemptCount);
+  assert.equal(transfer.pythonTransferEvidence, undefined);
+});
+
+test("fresh transfer requires exact six-check human-reviewer key updates without execution", () => {
+  const strict = evaluateCustodyLedgerTransferSource(custodyLedgerTransferReferenceSource);
+  assert.equal(strict.score, 6);
+  assert.equal(strict.passed, true);
+
+  const wrongOwner = custodyLedgerTransferReferenceSource.replace("human_reviewer", "human_expedition");
+  const printed = `${custodyLedgerTransferReferenceSource}\nprint(comparison)`;
+  for (const source of [wrongOwner, printed, custodyLedgerPrimaryReferenceSource]) {
+    const state = submitCustodyLedgerTransfer(blankTransfer(), source);
+    assert.equal(state.phase, "python_transfer");
+    assert.equal(state.campaignCommitEnabled, false);
+    assert.deepEqual(state.expeditionFields, { classification: "", owner: "" });
+    assert.notEqual(state.pythonTransferEvidence.masteryStatus, "transfer_complete");
+  }
+
+  const explanation = submitCustodyLedgerTransfer(blankTransfer(), custodyLedgerTransferReferenceSource);
+  assert.equal(explanation.phase, "python_explanation");
+  assert.equal(explanation.activeMessageKey, "explanation_prompt");
+  assert.equal(explanation.pythonTransferEvidence.masteryStatus, "transfer_complete");
+  assert.deepEqual(explanation.explanationSelections, Object.fromEntries(
+    custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+  assert.equal(Object.hasOwn(explanation, "unfinishedWorkImage"), false);
+  assert.equal(Object.hasOwn(explanation, "causalResult"), false);
+});
+
+test("transfer misses retain privacy-limited dimensions and retry with a blank fresh image", () => {
+  const source = custodyLedgerTransferReferenceSource.replace('"identity": None', '"identity": False');
+  const first = submitCustodyLedgerTransfer(blankTransfer(), `${source}\n# private-transfer-8821`);
+  assert.equal(first.activeMessageKey, "identity_unknown");
+  assert.equal(first.pythonTransferEvidence.attemptCount, 1);
+  assert.equal(first.pythonTransferEvidence.dimensionCorrectness.identity_remains_none, false);
+  assert.doesNotMatch(JSON.stringify(first), /private-transfer-8821/);
+  assert.deepEqual(Object.keys(first.pythonTransferEvidence).sort(), [
+    "attemptCount", "confidence", "dimensionCorrectness", "form", "hintLevel", "mappingId",
+    "masteryStatus", "misconceptionTags", "packetId", "skillId",
+  ]);
+  const retry = retryCustodyLedgerTransfer(first);
+  assert.equal(retry.unfinishedWorkImage.label, "FRESH PRACTICE IMAGE");
+  assert.deepEqual(retry.expeditionFields, { classification: "", owner: "" });
+  assert.deepEqual(Object.values(retry.pythonChecks), [false, false, false, false, false, false]);
+  const recovered = submitCustodyLedgerTransfer(retry, custodyLedgerTransferReferenceSource);
+  assert.equal(recovered.phase, "python_explanation");
+  assert.equal(recovered.pythonTransferEvidence.attemptCount, 2);
+});
+
+test("closed-note explanation scores three dimensions separately and blanks every retry", () => {
+  const partialAnswers = {
+    ...custodyLedgerExplanationAnswers,
+    none_means_missing_or_unknown_identity: "None means false",
+  };
+  const evaluated = evaluateCustodyLedgerExplanation(partialAnswers);
+  assert.equal(evaluated.score, 2);
+  assert.equal(evaluated.firstFailedDimension, "none_means_missing_or_unknown_identity");
+  assert.deepEqual(evaluated.dimensionCorrectness, {
+    named_key_update: true,
+    none_means_missing_or_unknown_identity: false,
+    false_means_access_request_did_not_occur: true,
+  });
+
+  const missed = submitCustodyLedgerExplanation(blankExplanation(), partialAnswers);
+  assert.equal(missed.phase, "python_explanation");
+  assert.equal(missed.firstFailedDimension, "none_means_missing_or_unknown_identity");
+  assert.deepEqual(missed.explanationSelections, Object.fromEntries(
+    custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+  assert.equal(missed.pythonExplanationEvidence.attemptCount, 1);
+  assert.doesNotMatch(JSON.stringify(missed), /None means false/);
+
+  const conclusion = submitCustodyLedgerExplanation(missed, custodyLedgerExplanationAnswers);
+  assert.equal(conclusion.phase, "python_complete");
+  assert.equal(conclusion.activeMessageKey, "python_conclusion");
+  assert.equal(conclusion.pythonExplanationEvidence.masteryStatus, "explanation_complete");
+  assert.equal(conclusion.pythonExplanationEvidence.attemptCount, 2);
+  assert.equal(conclusion.scoringEnabled, false);
+  assert.equal(conclusion.campaignCommitEnabled, false);
+  assert.equal(Object.hasOwn(conclusion, "raiChecks"), false);
+});
+
+test("Pilot dismissal initializes only a blank unscored responsible-AI primary", () => {
+  const conclusion = submitCustodyLedgerExplanation(blankExplanation(), custodyLedgerExplanationAnswers);
+  const rai = dismissCustodyLedgerPythonConclusion(conclusion);
+  assert.equal(rai.phase, "rai_primary");
+  assert.equal(rai.activeMessageKey, "rai_primary");
+  assert.equal(rai.raiForm, "primary");
+  assert.equal(rai.raiScoringImplemented, false);
+  assert.equal(rai.scoringEnabled, false);
+  assert.equal(rai.campaignCommitEnabled, false);
+  assert.deepEqual(Object.values(rai.raiChecks).flatMap((checks) => Object.values(checks)), Array(9).fill(false));
+  for (const prohibited of ["raiEvidence", "masteryStatus", "campaign", "route", "successor", "externalAction"]) {
+    assert.equal(Object.hasOwn(rai, prohibited), false, prohibited);
+  }
+});
+
+test("resume reconstructs the first incomplete scored boundary without replaying result or conclusion", () => {
+  const result = completedPrimaryResult();
+  const fromResult = resumeCustodyLedgerPython({
+    ...result,
+    learnerSource: "private",
+    causalResult: { forged: true },
+  });
+  assert.equal(fromResult.phase, "python_transfer");
+  assert.equal(fromResult.unfinishedWorkImage.label, "FRESH PRACTICE IMAGE");
+  assert.equal(Object.hasOwn(fromResult, "causalResult"), false);
+  assert.doesNotMatch(JSON.stringify(fromResult), /private|forged/);
+
+  const transferMiss = submitCustodyLedgerTransfer(blankTransfer(), "print(comparison)");
+  const fromTransferMiss = resumeCustodyLedgerPython({ ...transferMiss, expeditionFields: { owner: "private" } });
+  assert.equal(fromTransferMiss.phase, "python_transfer");
+  assert.deepEqual(fromTransferMiss.expeditionFields, { classification: "", owner: "" });
+
+  const explanationMiss = submitCustodyLedgerExplanation(blankExplanation(), {});
+  const fromExplanationMiss = resumeCustodyLedgerPython({
+    ...explanationMiss,
+    explanationSelections: { named_key_update: "private" },
+  });
+  assert.equal(fromExplanationMiss.phase, "python_explanation");
+  assert.deepEqual(fromExplanationMiss.explanationSelections, Object.fromEntries(
+    custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+  assert.equal(fromExplanationMiss.firstFailedDimension, null);
+
+  const conclusion = submitCustodyLedgerExplanation(blankExplanation(), custodyLedgerExplanationAnswers);
+  const fromConclusion = resumeCustodyLedgerPython(conclusion);
+  assert.equal(fromConclusion.phase, "rai_primary");
+  assert.equal(Object.hasOwn(fromConclusion, "pythonForm"), false);
+  assert.equal(fromConclusion.campaignCommitEnabled, false);
+});
+
+test("forged phases downgrade and all protected transitions preserve campaign, Tour, and world invariants", () => {
+  const campaign = { completed: ["meadow"], continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", noCredit: true, scene: "city" };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const forged = submitCustodyLedgerTransfer({
+    ...blankTransfer(),
+    pythonEvidence: { packetId: "forged", form: "primary", masteryStatus: "primary_complete" },
+    campaignCommitEnabled: true,
+  }, custodyLedgerTransferReferenceSource);
+  assert.equal(forged.phase, "predecessor_blocked");
+  assert.equal(forged.campaignCommitEnabled, false);
+
+  const states = [completedPrimaryResult(), blankTransfer(), blankExplanation()];
+  for (const state of states) {
+    assert.equal(state.continuation, "continuation");
+    assert.equal(state.cityStateDelta, null);
+    assert.equal(state.campaignCommitEnabled, false);
+    for (const prohibited of ["cityResponse", "successor", "route", "item", "accessGranted", "permission", "externalAction"])
+      assert.equal(Object.hasOwn(state, prohibited), false, prohibited);
+  }
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
 });

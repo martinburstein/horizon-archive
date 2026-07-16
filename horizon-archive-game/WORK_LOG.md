@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Advance Coder A5: protected PY-009 transfer/explanation seam
+
+- **Mode:** `advance-construction` for A5 only.
+- **Verdict:** `REVISE — A5 PARTIAL; NO W1 PROMOTION`. The non-routable Custody Ledger model now completes protected Python states `30-B -> 30-C -> 30-D -> 30-E` and initializes only a blank unscored responsible-AI primary.
+- **Work completed:** strict primary now stops at a read-only causal suit result. Zero-credit dismissal clears it into the exact carry-free `FRESH PRACTICE IMAGE`. A bounded non-executing transfer evaluator requires the exact six checks and `owner="human_reviewer"`. The three closed-note dimensions score separately, every miss returns a blank form with first-failed focus intent, and strict pass opens the exact Pilot conclusion.
+- **Privacy/recovery:** durable Python records retain only allowlisted correctness booleans, bounded attempt/hint/confidence metadata, and fixed misconception tags. Learner source, mappings, output, selections, prose, identity material, payloads, and responses are not stored. Resume restores the first incomplete scored boundary without replaying the causal result or Pilot conclusion; completed Python restores only blank RAI-primary checks.
+- **Preserved:** no UI or normal route; no responsible-AI score; no save, campaign commit, item, access, permission, city response, successor, or external action; unchanged `continuation`; `cityStateDelta:null`; invariant world; separate campaign/Tour bytes.
+- **Files changed:** `src/custodyLedgerExercise.js`, `test/custodyLedgerExercise.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, `../Production Pipeline/ADVANCE_QUEUE.md`, `../Production Pipeline/STORY_RAIL_MAP.md`, and this log.
+- **Validation:** focused Custody Ledger suite **20/20**; complete game suite **273/273**; RP-002 curriculum self-test passed; production build passed with the existing large-chunk advisory (`index-PhQiqaIn.js`, `index-BCmwLuJV.css`); source whitespace validation passed with line-ending advisories only.
+- **Exact W1/no-promotion boundary:** `DO NOT PROMOTE. RP-002 remains IN DESIGN — A5 PARTIAL and non-routable; responsible-AI scoring, persistence/save, observation routing, responsive UI, protected route, and production art remain incomplete.`
+- **Exact next Advance handoff:** `Implement only the protected blank RP002-RAI-01 primary 9/9 evaluator and mapped per-dimension remediation. Preserve the completed PY-009 chain, privacy allowlist, first-incomplete recovery, campaignCommitEnabled=false, separate campaign/Tour bytes, unchanged continuation, cityStateDelta=null, invariant world, closed identity, and no UI/save/route/successor/external action. Do not add RAI transfer or explanation in that tranche; return REVISE.`
+
 ## 2026-07-15 — Coder W4: contemporary responsive opening surfaces
 
 - **Mode:** `aesthetic-polish` for W4 only.
