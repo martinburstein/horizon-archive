@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W1 accepted-boundary regression after protected five-observation construction - `483208b`
+
+- **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 campaign and separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, non-routable, outside App/main and browser storage, and unavailable to Working after its internal five-observation state model was added.
+- **Journey evidence:** Full title -> save/name -> temporary prologue -> Glass Meadow -> current learning route -> City Threshold -> credits completed. The run covered forged-save rejection, a wrong answer and recovery, dependency mistakes, close/reopen, reload/resume, fresh retries, strict mastery, privacy, persistence, narrow interaction, and credits. Focused checks retained Tour isolation and RP-001 atomic save/sanitation/first-incomplete behavior.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**; complete game suite **308/308 PASS**; full accepted-campaign E2E **PASS in 199.9 seconds** with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Regenerated tracked QA PNGs were restored.
+- **Boundary preserved:** accepted first-person photoreal presentation, responsive `>=44px` controls, keyboard focus, recovery, bounded saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and protected RP-002 non-routability remain exact.
+- **Issue disposition:** no issue opened or reopened; W1 authorizes no runtime or art correction.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Verify and reload only unless the exact focused 38-check selection, full 308-test suite, production build, or coordinator/root live desktop/narrow review reproduces an accepted-path defect. Preserve all accepted recovery, save/resume, focus, responsive, photoreal, mastery, privacy/offline/no-authority, Tour-isolation, continuation, null-city-delta, and RP-002 non-routability contracts. Do not import, invoke, expose, stage, or promote protected RP-002.`
+
 ## 2026-07-16 Coordinator closure - protected atomic persistence release gate
 
 - **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` The two-team cycle completed and the accepted title-to-credits campaign remains stable. Protected RP-002 now includes the atomic persistence state model but remains `REVISE`, non-routable, and absent from browser storage, UI, routes, observation interactions, art, and world state.
