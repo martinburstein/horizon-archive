@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, responsive five-observation interface, protected hotspot pre-geometry, protected route-integration, route-to-observation handoff, blank-to-first-near-dispatch, one-ID-to-second-near-dispatch, and two-ID-to-third-near-completion presentation reviews locked; no final art
+- **Production status:** Brief — A2 compact four-phase presentation convergence and premium three-master plan locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -22,6 +22,32 @@
 | `SC-03-50` | Verified saved return | System restores the same completed overview without arrival/result/conclusion/success replay or restarted clocks; stale or partial data downgrades to the first incomplete protected boundary | Review saved comparison or return to City Threshold |
 
 Every transition preserves `continuation`, `city_state_delta=None`, `cityThresholdAnchorRecorded=true`, and `civicDistrictRouteAvailable=true`. Entry, completion, and return use invariant world geometry. Nothing opens, brightens, reroutes, or acknowledges completion.
+
+## Canonical compact presentation convergence
+
+The following presentation is canonical for Gate Review. Detailed route, dispatch, and copy-impact sections below remain traceable implementation history and validation constraints; they do not require a separate visual slide or accumulated transcript for each microstate.
+
+| Phase | Boards and master | Current screen responsibility | Exit |
+|---|---|---|---|
+| `P0 ARRIVE` | `00` / overview | Protected arrival, concise current context, explicit survey intent, separate safe return | Direct registered entry to `10` |
+| `P1 SURVEY` | `10 -> 20` / near then scale-echo | Three near facts in any order, explicit scale comparison, then two far facts in either order; one active acknowledgement or action group only | `OPEN LOCAL COMPARISON` after exactly five IDs |
+| `P2 INTERPRET + SAVE` | `30` / overview | Existing Python chain, existing responsible-AI chain, bounded review, contained save intent, and exact atomic transaction as mutually replacing current-step groups | Verified save to `40`; safe failure/cancel remains in `30` |
+| `P3 VERIFY + RETURN` | `40/50` / same overview | Completion, verified restore or deterministic downgrade, review, and reversible threshold return without replay or world change | Accepted RP-001 boundary; no successor |
+
+### Final group, focus, and recovery order
+
+- Exactly one group is exposed: complete owner heading -> complete current message/status -> current instructions, summary, case, or fields -> associated error/help -> primary action -> secondary retry/cancel/return. No previous group remains visible or accessible as a transcript or answer bank.
+- Normal replacement focuses the new heading. Scored misses announce the complete feedback and focus the first failed field. Sanitation/recovery focuses the System heading then the first incomplete control. Save confirmation contains focus until save, cancel, or Escape resolves; verified restore focuses its heading before review/return.
+- Invalid or incomplete input yields one complete System-owned recovery group, retains only allowlisted finalized evidence, clears private/transient work, and reconstructs the first incomplete boundary without city-refusal language or world reaction. Deterministic order is expedition navigation only.
+
+### Full `1920 x 1080` laptop containment
+
+- At default text size and browser zoom, the entire outer game shell fits inside `100dvh` without outer-page vertical or horizontal scrolling. A compact header/status rail leaves one remaining-height workspace.
+- The workspace uses a world-dominant two-column layout: current registered 16:9 art on the left and exactly one current human-interface group on the right. The current owner, complete message, current fields/case, associated error when present, and every required current action fit together without an internal-scroll dependency or off-screen action.
+- The world remains a substantial premium scene, never a thumbnail. It preserves aspect ratio through high-quality responsive fitting or an approved art-directed crop; no stretch, low-resolution upscale, pixelation, or target drift is allowed. Decorative CRT-inspired framing cannot consume the containment budget.
+- Optional orientation, maintenance inspection, early distant context, Pilot reflection, extra replay polish, and prior-group history remain absent from the current laptop screen. Existing lesson flows show one current case/boundary at a time.
+- Narrow layouts and `200%` text zoom reflow the world above one natural vertically scrollable column. Controls remain at least `44 x 44 CSS px`; complete owner/state/progress/error/action meaning is textual and non-color-dependent; forced colors retain focus/boundaries; reduced motion uses direct registered replacement; pointer, touch, Enter, Space, switch, speech, and screen reader remain equivalent.
+- The three existing master plans remain sufficient: overview for `00/30/40/50`, near detail for `10`, and scale echo/closed boundary for `20`. All are first-person maximum-quality photoreal world plates with no protagonist, ship, hands, body, shadow, reflection, human trace, baked UI, or readable inscription. Geometry and the monotonic environmental clock remain stable across every interface state.
 
 ### Protected route-to-observation presentation lane
 

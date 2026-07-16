@@ -17,7 +17,7 @@ Status vocabulary:
 | Packet | Story | Scene | Curriculum | Puzzle | Protected code | Save/recovery | Accessibility | Production art | Normal integration | Working evidence | Breadth verdict | Next action |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `RP-001` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `MAINTAIN` | Reopen only on reproduced evidence |
-| `RP-002` | `PASS` | `PARTIAL — converge` | `PASS` | `PARTIAL — converge` | `PARTIAL — integration missing` | `PASS` contract / protected evidence | `PASS` contract / protected evidence | `PASS plan / assets deferred` | `N/A for Gate Review / missing for Working` | `N/A` | `CONVERGE + MERGE + TRIM` | One A2–A5 cycle: compact presentation, preservation audit, end-to-end graph, protected smoke integration and validation; then decide Gate Review |
+| `RP-002` | `PASS` | `PASS — compact convergence locked` | `PASS` | `PARTIAL — converge` | `PARTIAL — integration missing` | `PASS` contract / protected evidence | `PASS` contract / protected evidence | `PASS plan / assets deferred` | `N/A for Gate Review / missing for Working` | `N/A` | `CONVERGE + MERGE + TRIM` | A3 preserves both mappings across the compact path; A4 locks one end-to-end graph; A5 performs protected smoke integration and validation; then decide Gate Review |
 | `RP-003` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SEED RESERVED` | Seed a surface-safe slice when `RP-002` reaches Gate Review |
 | `RP-004`–`RP-012` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SPINE RESERVED` | Preserve sequence; do not invent non-contiguous content |
 
@@ -41,10 +41,11 @@ A packet may enter `GATE REVIEW` only when every applicable item has a direct ar
 ## 2026-07-16 RP-002 convergence audit result
 
 - **Passed/currently sufficient:** surface premise/goal/start/end/predecessor; both SOLIDIFIED mappings; save/resume/privacy/offline/no-authority/Tour contracts; accessibility contract; production-art plan and provenance gate; known risks, flexible choices, and acceptance criteria.
-- **Three Gate Review reductions remain:** A2 compact scene/presentation convergence; A4 one end-to-end puzzle graph; A5 protected smoke integration plus its focused/full/validator/build/leakage evidence.
+- **A2 reduction complete:** the Scene/presentation gate is closed with four compact phases over the existing three production masters and one full-shell `1920 x 1080` containment contract; detailed micro-seams remain validation evidence, not separate slides.
+- **Two implementation reductions remain:** A4 one end-to-end puzzle graph; A5 protected smoke integration plus its focused/full/validator/build/leakage evidence. A3 is a required preservation audit and may not reopen the two SOLIDIFIED mappings without contradictory official-source evidence.
 - **Over-segmentation:** route-to-blank, first-near, second-near, third-near, and compare-transition artifacts are retained as traceable implementation history but are merged conceptually into one observation journey. No further one-transition-at-a-time contract counts as Advance progress.
 - **Deferred without weakening the packet:** optional orientation, maintenance inspection, early distant context, Pilot reflection, additional replay polish, per-state art variants beyond the approved production plan, successor hints, normal browser persistence, and accepted-route exposure.
-- **Gate Review target:** after one successful complete A2–A5 convergence cycle, coordinator checks the twelve checklist items and either marks `GATE REVIEW` or records a genuine named hold. `RP-003` may then be seeded surface-safely.
+- **Gate Review target:** after the remaining A3–A5 convergence sequence, coordinator checks the twelve checklist items and either marks `GATE REVIEW` or records a genuine named hold. `RP-003` may then be seeded surface-safely.
 
 ## Update rule
 

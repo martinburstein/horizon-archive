@@ -4,6 +4,8 @@
 
 This is the spoiler-safe breadth map for the first complete expedition. It prevents the Advance Team from perfecting one encounter indefinitely while later chapters remain undefined.
 
+Storyboarder's spoiler-safe supporting map: [LOCATION_VISUAL_SPINE.md](LOCATION_VISUAL_SPINE.md). It records production presentation coverage only; reserved rows authorize no future location, lore, route, or art.
+
 The planning target is **12 main Rail Packets**. This is a production constraint, not immutable canon. Packets may be merged, split, or reordered only through `DECISION_LOG.md`, with predecessor continuity and curriculum coverage repaired in the same change.
 
 ## Four-phase shape
@@ -22,7 +24,7 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 | Order | Packet | Surface-safe purpose | Status | Python lane | AI-901 lane | Target player time | Required predecessor | Next breadth action |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | Accepted opening boundary and current-demo foundation | `IN DEMO — ACCEPTED` | Foundation chain already shipped | Current accepted objective chain | Existing demo | Accepted opening state | Maintain; reopen only on reproduced evidence |
-| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `IN DESIGN — REVISE` | `PY-009` remains `SOLIDIFIED` | `RP002-RAI-01` remains `SOLIDIFIED` | Set at Gate Review | `RP-001` accepted end state | Run convergence audit; integrate existing protected seams before adding new micro-seams |
+| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `IN DESIGN — REVISE` | `PY-009` remains `SOLIDIFIED` | `RP002-RAI-01` remains `SOLIDIFIED` | Set at Gate Review | `RP-001` accepted end state | Preserve mappings across the A2 compact presentation, then complete one A4 graph and A5 protected smoke integration |
 | 3 | `RP-003` | Final foundation-phase slice | `SEED RESERVED` | Assign after `RP-002` gate | Assign after `RP-002` gate | `TBD` | `RP-002` specified end state | Seed immediately when `RP-002` reaches Gate Review |
 | 4 | `RP-004` | First expansion-phase slice | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-003` | Define only after contiguous predecessor exists |
 | 5 | `RP-005` | Expansion continuation | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-004` | Define only after contiguous predecessor exists |
@@ -49,5 +51,5 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 
 - Team 2 is accepted through `RP-001`.
 - Team 1 is one packet ahead on `RP-002`.
-- `RP-002` is **deep but not converged**: many protected contracts and isolated seams exist, while normal integration, production art, and promotion remain absent.
-- The next planning milestone is not another indefinitely small state transition. It is an `RP-002` convergence audit that identifies the shortest safe path to `GATE REVIEW`, followed by a surface-safe `RP-003` seed.
+- `RP-002` is **deep and presentation-converged but not implementation-converged**: A2 closed the Scene gate, while the A3 preservation audit, one A4 end-to-end graph, A5 protected smoke integration, production art, and promotion remain absent.
+- The next planning milestone is the remaining A3–A5 convergence sequence, followed by a Gate Review decision and then a surface-safe `RP-003` seed.

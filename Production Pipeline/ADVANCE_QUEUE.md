@@ -18,14 +18,14 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — CONVERGENCE / REVISE` | Storyboarder Agent (`A2 — convergence presentation`) | Mandatory audit records Story/Curriculum/Save/Accessibility/art-plan gates as passed or contract-complete; Scene, end-to-end Puzzle, protected integration, and post-integration validation remain | Existing micro-seams are sufficient but over-segmented. One compact path must connect blank `SC-03-20` -> both far facts -> existing learning -> bounded review/atomic save -> completion/restore/return. Optional presentation work is deferred. | Keep `REVISE`. A2–A5 run one convergence cycle that reduces the remaining Gate Review count; no new micro-seam or module-per-transition work. Normal App/main/storage/routes/art/Demo/Working exposure remains unauthorized. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — CONVERGENCE / REVISE` | Curriculum Checker Agent (`A3 — convergence preservation`) | Story, Scene, Curriculum, Save/Recovery, Accessibility, and production-art-plan gates are passed or contract-complete; one end-to-end Puzzle graph, protected integration, and post-integration validation remain | A2 consolidated the existing evidence into four presentation phases: arrive; survey; interpret + save; verify + return. The entire default game shell must fit one representative `1920 x 1080` viewport without outer-page scroll while narrow/text-zoom layouts reflow accessibly. | Keep `REVISE`. A3 performs one convergence-only preservation audit across both unchanged SOLIDIFIED chains and the independent five-observation/save contract, then hands the whole path to A4. No new cases, sources, micro-seams, code, art, normal integration, Demo exposure, or Working promotion. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (mandatory convergence audit complete; existing seams retained as history; one A2–A5 protected integration cycle remains before Gate Review decision)`
-- Team 1 railhead: `RP-002 — A1 convergence audit complete; A2 compact presentation convergence next`
+- In-design packets: `1 — RP-002 (A2 compact presentation convergence complete; existing seams retained as validation history; A3–A5 protected convergence remains before Gate Review decision)`
+- Team 1 railhead: `RP-002 — A2 compact presentation convergence complete; A3 mapping-preservation audit next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
@@ -35,6 +35,10 @@ When a packet becomes `READY FOR WORKING`, retain its ordered position, promote 
 ## 2026-07-16 mandatory RP-002 convergence audit
 
 Verdict: `CONVERGE + MERGE + TRIM`. The packet's surface story, two SOLIDIFIED learning chains, five-observation meaning, recovery, accessibility, save, privacy, Tour, no-authority, and production-art plan are sufficient. Route/observation micro-seams remain evidence but cease to be separate planning destinations. The shortest Gate Review path is one compact A2 presentation, one A3 preservation audit, one A4 end-to-end puzzle graph, and one A5 protected smoke integration from blank `SC-03-20` through both far observations, existing learning, review/save, completion/restore, and safe return. Optional orientation, maintenance, early context, reflection, extra replay polish, per-state art variants, successor hints, and normal persistence are deferred. Full 16:9 laptop presentation must fit world plus current required controls/status as one coherent screen without browser zoom, horizontal escape, clipped ownership, or an off-screen required action; accessibility reflow remains intact. No lore or mastery contract changes.
+
+## 2026-07-16 compact presentation convergence impact note
+
+`RP-002` remains protected, non-routable, unavailable to Working, and `REVISE`. A2 closed the Scene/presentation gate by consolidating the six registered boards into four player-facing phases over the existing three production masters: `ARRIVE`, `SURVEY`, `INTERPRET + SAVE`, and `VERIFY + RETURN`. The default `1920 x 1080` presentation keeps the full shell, dominant first-person world, current owner/status/action group, and all required actions inside one viewport without outer-page scroll; narrow and text-zoom layouts retain natural vertical reflow, visible focus, non-color meaning, reduced-motion equivalence, and controls at least `44 x 44 CSS px`. Existing micro-seams remain historical test evidence rather than separate slides. No story, observation, learning, save, route, authority, art, code, accepted-demo, or successor contract changed. A3 now performs only one convergence preservation audit across the complete four-phase path and both unchanged SOLIDIFIED mappings.
 
 ## 2026-07-16 compare-scale-to-blank-far-view Lore impact note
 
