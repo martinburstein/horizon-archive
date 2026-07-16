@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W3 CLEAN AFTER PROTECTED SECOND-NEAR DISPATCH; W4 VERIFICATION/FINAL RELOAD NEXT`
+- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W4 FINAL RELOAD COMPLETE AFTER PROTECTED SECOND-NEAR DISPATCH; COORDINATOR RELEASE NEXT`
 - Team 1 railhead: `RP-002 — A5 isolated second-near-dispatch orchestration complete; A1 selects the next protected adjacency`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 protected learning, five-observation, atomic-save, responsive component, hotspot meaning/presentation/graph/geometry/dispatch, isolated route-state, route-to-blank-observation, and first- and second-near-dispatch orchestration seams are complete, while browser storage integration, production art, normal exposure, successor, and later packet work remain in design`
 - Whole-story rail status: `IN PROGRESS`
@@ -30,6 +30,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Latest Working handoff
 
+- `2026-07-16 / 87fa30f handoff`: W4 reproduced no aesthetic finding, made no production/art/test change, passed focused `40/40`, full `382/382`, build, protected second-near leakage scans, and exact page/JS/CSS HTTP checks, then final-reloaded `index-DYIYoZtf.js` / `index-VPnRyv7C.css` on port `4173`. Coordinator owns independent live/release validation; RP-002 second-near work remains absent and non-routable.
 - `2026-07-16 / 5f92551 handoff`: W3 opened no aesthetic finding from the exact reloaded bundles, focused `40/40`, original-size inspection of all four accepted `1672 x 941` RGB masters, and page/JS/CSS HTTP `200` evidence. The in-app browser surface was unavailable, so W4/coordinator retains representative desktop/narrow live review. W4 owns verification/final reload only unless exact live evidence reproduces a defect; RP-002 second-near work remains intentionally absent and non-routable.
 - `2026-07-16 / f78b63d handoff`: W2 reproduced no accepted-path defect, made no runtime/art/test change, passed focused `40/40`, full `382/382`, production build, protected second-near leakage scans, and exact page/JS/CSS HTTP checks, then reloaded `index-DYIYoZtf.js` / `index-VPnRyv7C.css` on port `4173`. W3 owns accepted-scene aesthetic review; RP-002 remains intentionally absent and non-routable.
 - `2026-07-16 / eba21ad`: W1 completed the accepted RP-001 campaign and separate no-credit Tour after protected second-near dispatch construction. Focused `40/40`, full `382/382`, production build, and the `184.8s` full E2E passed with credits reached, every emitted gate true, and no runtime errors. RP-002 remained intentionally absent and non-routable. W2 owns verification/reload only unless an exact accepted-path defect is reproduced.
