@@ -142,6 +142,51 @@ export const custodyLedgerObservationIds = Object.freeze([
   "closed_boundary",
 ]);
 
+export const custodyLedgerObservationStages = Object.freeze({
+  near: Object.freeze(["fixed_trace", "later_stewardship", "outlined_gap"]),
+  far: Object.freeze(["distant_repetition", "closed_boundary"]),
+});
+
+export const custodyLedgerObservationStatements = Object.freeze({
+  fixed_trace: Object.freeze({
+    owner: "SCENE // SENSOR RECORD",
+    text: "Aged impressions continue through one substrate and beneath the darker crossing layer.",
+  }),
+  later_stewardship: Object.freeze({
+    owner: "SCENE // SENSOR RECORD",
+    text: "A later laminate crosses older seams and steps around surviving impressions instead of erasing them.",
+  }),
+  outlined_gap: Object.freeze({
+    owner: "SCENE // SENSOR RECORD",
+    text: "The border encloses solid substrate; dust and heat staining continue across the unmarked interval.",
+  }),
+  distant_repetition: Object.freeze({
+    owner: "SCENE // SENSOR RECORD",
+    text: "A farther mass repeats the three-condition relation at another scale without exact duplication.",
+  }),
+  closed_boundary: Object.freeze({
+    owner: "SCENE // SENSOR RECORD",
+    text: "The sealed interlock shows no crossing or request path; maintenance continues beneath it.",
+  }),
+});
+
+export const custodyLedgerObservationOwnershipMessages = Object.freeze({
+  entry: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Inspect each exposed condition deliberately. Visibility and orientation alone record no evidence.",
+  }),
+  unavailable: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "That comparison is not available from this evidence stage. Recorded observations remain unchanged.",
+  }),
+  tour: Object.freeze({
+    owner: "SYSTEM // DEMO TOUR",
+    text: "Preview only — district observations are not recorded.",
+  }),
+});
+
+export const CUSTODY_LEDGER_OBSERVATION_ACTION = "deliberate_campaign_inspection";
+
 export const custodyLedgerAtomicProgression = Object.freeze({
   civicComparisonSaved: true,
   nextSurveyDirectionMarked: true,
@@ -1922,6 +1967,166 @@ export function clearCustodyLedgerWorkingState(state) {
   };
 }
 
+const custodyLedgerObservationBoardIds = Object.freeze({
+  fixed_trace: "SC-03-10",
+  later_stewardship: "SC-03-10",
+  outlined_gap: "SC-03-10",
+  distant_repetition: "SC-03-20",
+  closed_boundary: "SC-03-20",
+});
+
+function custodyLedgerObservationRecordIsFinal(record, observationId) {
+  return record?.packetId === CUSTODY_LEDGER_PACKET_ID
+    && record?.observationId === observationId
+    && record?.boardId === custodyLedgerObservationBoardIds[observationId]
+    && record?.finalizationStatus === "finalized"
+    && record?.provenance === CUSTODY_LEDGER_OBSERVATION_ACTION;
+}
+
+function sanitizeCustodyLedgerObservationEvidence(value) {
+  if (!Array.isArray(value)) return [];
+  const records = custodyLedgerObservationIds.flatMap((observationId) => {
+    const matched = value.find((record) => custodyLedgerObservationRecordIsFinal(record, observationId));
+    return matched ? [{
+      packetId: CUSTODY_LEDGER_PACKET_ID,
+      observationId,
+      boardId: custodyLedgerObservationBoardIds[observationId],
+      finalizationStatus: "finalized",
+      provenance: CUSTODY_LEDGER_OBSERVATION_ACTION,
+    }] : [];
+  });
+  const nearComplete = custodyLedgerObservationStages.near.every((observationId) => (
+    records.some((record) => record.observationId === observationId)
+  ));
+  return nearComplete
+    ? records
+    : records.filter((record) => custodyLedgerObservationStages.near.includes(record.observationId));
+}
+
+function custodyLedgerObservationPhase(finalizedIds) {
+  const nearComplete = custodyLedgerObservationStages.near.every((observationId) => finalizedIds.includes(observationId));
+  if (!nearComplete) return "near_observations";
+  const farComplete = custodyLedgerObservationStages.far.every((observationId) => finalizedIds.includes(observationId));
+  return farComplete ? "observation_complete" : "far_observations";
+}
+
+function firstIncompleteCustodyLedgerObservation(finalizedIds) {
+  return custodyLedgerObservationIds.find((observationId) => !finalizedIds.includes(observationId))
+    ?? "open_local_comparison";
+}
+
+function custodyLedgerObservationFocus(phase, finalizedIds) {
+  const next = firstIncompleteCustodyLedgerObservation(finalizedIds);
+  return {
+    group: phase,
+    target: "heading",
+    then: next === "open_local_comparison" ? "open_local_comparison" : `observation:${next}`,
+  };
+}
+
+function custodyLedgerObservationBase(evidence) {
+  const observationEvidence = sanitizeCustodyLedgerObservationEvidence(evidence);
+  const finalizedObservationIds = observationEvidence.map((record) => record.observationId);
+  const phase = custodyLedgerObservationPhase(finalizedObservationIds);
+  const nearCount = custodyLedgerObservationStages.near.filter((id) => finalizedObservationIds.includes(id)).length;
+  const farCount = custodyLedgerObservationStages.far.filter((id) => finalizedObservationIds.includes(id)).length;
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: phase === "near_observations" ? "SC-03-10" : "SC-03-20",
+    phase,
+    activeGroup: phase,
+    ownerMessage: custodyLedgerObservationOwnershipMessages.entry,
+    observationEvidence,
+    finalizedObservationIds,
+    progress: Object.freeze({ near: nearCount, nearRequired: 3, far: farCount, farRequired: 2 }),
+    observationComplete: phase === "observation_complete",
+    nextBoundary: firstIncompleteCustodyLedgerObservation(finalizedObservationIds),
+    focusIntent: custodyLedgerObservationFocus(phase, finalizedObservationIds),
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+  };
+}
+
+export function createCustodyLedgerObservationState(options = {}) {
+  if (options.mode === "demo_tour") {
+    return {
+      packetId: CUSTODY_LEDGER_PACKET_ID,
+      phase: "tour_preview",
+      activeGroup: "tour_preview",
+      ownerMessage: custodyLedgerObservationOwnershipMessages.tour,
+      scoringEnabled: false,
+      campaignCommitEnabled: false,
+      continuation: CITY_THRESHOLD_CONTINUATION,
+      cityStateDelta: null,
+    };
+  }
+  return custodyLedgerObservationBase([]);
+}
+
+export function sanitizeCustodyLedgerObservationState(state) {
+  if (state?.phase === "tour_preview" || state?.mode === "demo_tour") {
+    return createCustodyLedgerObservationState({ mode: "demo_tour" });
+  }
+  return custodyLedgerObservationBase(state?.observationEvidence);
+}
+
+function custodyLedgerUnavailableObservationState(current) {
+  return {
+    ...custodyLedgerObservationBase(current.observationEvidence),
+    activeGroup: "observation_unavailable",
+    ownerMessage: custodyLedgerObservationOwnershipMessages.unavailable,
+    focusIntent: { group: "observation_unavailable", target: "heading" },
+    nextFocusIntent: custodyLedgerObservationFocus(current.phase, current.finalizedObservationIds),
+  };
+}
+
+export function recordCustodyLedgerObservation(state, request) {
+  if (state?.phase === "tour_preview" || state?.mode === "demo_tour") {
+    return createCustodyLedgerObservationState({ mode: "demo_tour" });
+  }
+  const current = sanitizeCustodyLedgerObservationState(state);
+  const observationId = request?.observationId;
+  const known = custodyLedgerObservationIds.includes(observationId);
+  const expectedBoard = known ? custodyLedgerObservationBoardIds[observationId] : null;
+  const deliberate = request?.actionType === CUSTODY_LEDGER_OBSERVATION_ACTION
+    && request?.boardId === expectedBoard
+    && request?.available !== false;
+  const alreadyFinalized = current.finalizedObservationIds.includes(observationId);
+  const inCurrentStage = (current.phase === "near_observations" && custodyLedgerObservationStages.near.includes(observationId))
+    || (current.phase === "far_observations" && custodyLedgerObservationStages.far.includes(observationId));
+  if (!known || !deliberate || (!alreadyFinalized && !inCurrentStage)) {
+    return custodyLedgerUnavailableObservationState(current);
+  }
+
+  const observationEvidence = alreadyFinalized ? current.observationEvidence : [
+    ...current.observationEvidence,
+    {
+      packetId: CUSTODY_LEDGER_PACKET_ID,
+      observationId,
+      boardId: expectedBoard,
+      finalizationStatus: "finalized",
+      provenance: CUSTODY_LEDGER_OBSERVATION_ACTION,
+    },
+  ];
+  const next = custodyLedgerObservationBase(observationEvidence);
+  return {
+    ...next,
+    activeGroup: alreadyFinalized ? "observation_revisit" : "observation_statement",
+    activeObservation: {
+      observationId,
+      ...custodyLedgerObservationStatements[observationId],
+      status: alreadyFinalized ? "already_recorded" : "finalized",
+    },
+    focusIntent: {
+      group: alreadyFinalized ? "observation_revisit" : "observation_statement",
+      target: "heading",
+    },
+    nextFocusIntent: custodyLedgerObservationFocus(next.phase, next.finalizedObservationIds),
+  };
+}
+
 const CUSTODY_LEDGER_SAVE_PHASES = Object.freeze([
   "save_eligibility",
   "bounded_review",
@@ -1960,9 +2165,15 @@ function sanitizeCustodyLedgerSaveDependencies(raiConclusionState, dependencies)
   const normalizedConclusion = raiConclusionState?.phase === "rai_complete"
     ? resumeCustodyLedgerRAI(raiConclusionState)
     : null;
+  const observationStateProvided = Object.hasOwn(dependencies ?? {}, "observationState");
+  const observationState = observationStateProvided
+    ? sanitizeCustodyLedgerObservationState(dependencies.observationState)
+    : null;
   return {
     predecessor,
-    observations: sanitizeCustodyLedgerObservationFixtures(dependencies?.observationFixtures),
+    observations: observationStateProvided
+      ? [...(observationState?.finalizedObservationIds ?? [])]
+      : sanitizeCustodyLedgerObservationFixtures(dependencies?.observationFixtures),
     prerequisites: {
       structuredPacketEvidence,
       responsibleAIEvidence,

@@ -25,12 +25,17 @@ import {
   commitCustodyLedgerBoundedComparison,
   createCustodyLedgerScaffold,
   createCustodyLedgerFinalizedObservationFixtures,
+  createCustodyLedgerObservationState,
   createCustodyLedgerPersistenceAdapter,
+  CUSTODY_LEDGER_OBSERVATION_ACTION,
   custodyLedgerAtomicProgression,
   custodyLedgerCausalResult,
   custodyLedgerExplanationAnswers,
   custodyLedgerExplanationDimensions,
   custodyLedgerOwnershipMessages,
+  custodyLedgerObservationIds,
+  custodyLedgerObservationOwnershipMessages,
+  custodyLedgerObservationStatements,
   custodyLedgerPythonOwnershipMessages,
   custodyLedgerPrimaryReferenceSource,
   custodyLedgerPrimaryStarterSource,
@@ -75,6 +80,8 @@ import {
   submitCustodyLedgerRAITransferScenario,
   submitCustodyLedgerTransfer,
   prepareCustodyLedgerSave,
+  recordCustodyLedgerObservation,
+  sanitizeCustodyLedgerObservationState,
 } from "../src/custodyLedgerExercise.js";
 import {
   structuredPacketChecks,
@@ -210,6 +217,35 @@ function completedSaveDependencies(overrides = {}) {
     observationFixtures: createCustodyLedgerFinalizedObservationFixtures(),
     ...overrides,
   };
+}
+
+function observationAction(observationId, overrides = {}) {
+  return {
+    actionType: CUSTODY_LEDGER_OBSERVATION_ACTION,
+    observationId,
+    boardId: ["fixed_trace", "later_stewardship", "outlined_gap"].includes(observationId)
+      ? "SC-03-10"
+      : "SC-03-20",
+    ...overrides,
+  };
+}
+
+function recordObservationOrder(order, initial = createCustodyLedgerObservationState()) {
+  return order.reduce((state, observationId) => (
+    recordCustodyLedgerObservation(state, observationAction(observationId))
+  ), initial);
+}
+
+function permutations(values) {
+  if (values.length <= 1) return [values];
+  return values.flatMap((value, index) => permutations([
+    ...values.slice(0, index),
+    ...values.slice(index + 1),
+  ]).map((rest) => [value, ...rest]));
+}
+
+function completedObservationState() {
+  return recordObservationOrder(custodyLedgerObservationIds);
 }
 
 test("Custody Ledger scaffold opens only after the exact atomic predecessor", () => {
@@ -1029,6 +1065,248 @@ test("forged phases downgrade and all protected transitions preserve campaign, T
   }
   assert.equal(JSON.stringify(campaign), campaignBytes);
   assert.equal(JSON.stringify(tour), tourBytes);
+});
+
+test("protected observation state begins blank at SC-03-10 with derived heading-first focus", () => {
+  const state = createCustodyLedgerObservationState();
+  assert.equal(state.phase, "near_observations");
+  assert.equal(state.boardId, "SC-03-10");
+  assert.deepEqual(state.finalizedObservationIds, []);
+  assert.deepEqual(state.observationEvidence, []);
+  assert.deepEqual(state.progress, { near: 0, nearRequired: 3, far: 0, farRequired: 2 });
+  assert.deepEqual(state.focusIntent, {
+    group: "near_observations",
+    target: "heading",
+    then: "observation:fixed_trace",
+  });
+  assert.equal(state.scoringEnabled, false);
+  assert.equal(state.campaignCommitEnabled, false);
+});
+
+test("all six near orders derive SC-03-20 only after three distinct matching actions", () => {
+  for (const order of permutations(["fixed_trace", "later_stewardship", "outlined_gap"])) {
+    let state = createCustodyLedgerObservationState();
+    for (const [index, observationId] of order.entries()) {
+      state = recordCustodyLedgerObservation(state, observationAction(observationId));
+      assert.equal(state.activeObservation.observationId, observationId);
+      assert.equal(state.finalizedObservationIds.length, index + 1);
+      assert.equal(state.phase, index < 2 ? "near_observations" : "far_observations");
+      assert.equal(state.boardId, index < 2 ? "SC-03-10" : "SC-03-20");
+    }
+    assert.deepEqual(state.finalizedObservationIds, ["fixed_trace", "later_stewardship", "outlined_gap"]);
+  }
+});
+
+test("both far orders complete only after the near conjunction and derive local comparison focus", () => {
+  for (const order of permutations(["distant_repetition", "closed_boundary"])) {
+    let state = recordObservationOrder(["outlined_gap", "fixed_trace", "later_stewardship"]);
+    state = recordCustodyLedgerObservation(state, observationAction(order[0]));
+    assert.equal(state.phase, "far_observations");
+    assert.equal(state.observationComplete, false);
+    state = recordCustodyLedgerObservation(state, observationAction(order[1]));
+    assert.equal(state.phase, "observation_complete");
+    assert.equal(state.observationComplete, true);
+    assert.equal(state.nextBoundary, "open_local_comparison");
+    assert.equal(state.nextFocusIntent.then, "open_local_comparison");
+    assert.deepEqual(state.finalizedObservationIds, custodyLedgerObservationIds);
+  }
+});
+
+test("one deliberate action finalizes one matching canonical ID and exact Scene statement", () => {
+  const state = recordCustodyLedgerObservation(
+    createCustodyLedgerObservationState(),
+    observationAction("outlined_gap"),
+  );
+  assert.deepEqual(state.finalizedObservationIds, ["outlined_gap"]);
+  assert.equal(state.activeGroup, "observation_statement");
+  assert.deepEqual(state.activeObservation, {
+    observationId: "outlined_gap",
+    ...custodyLedgerObservationStatements.outlined_gap,
+    status: "finalized",
+  });
+  assert.equal(state.activeObservation.owner, "SCENE // SENSOR RECORD");
+  for (const otherId of custodyLedgerObservationIds.filter((id) => id !== "outlined_gap"))
+    assert.equal(state.finalizedObservationIds.includes(otherId), false);
+});
+
+test("early far, unavailable, unknown, forged, and out-of-stage requests recover with zero credit", () => {
+  const initial = recordObservationOrder(["fixed_trace"]);
+  const cases = [
+    observationAction("distant_repetition"),
+    observationAction("later_stewardship", { available: false }),
+    observationAction("unknown_observation"),
+    observationAction("later_stewardship", { actionType: "presentation_hover" }),
+    observationAction("later_stewardship", { boardId: "SC-03-20" }),
+  ];
+  for (const request of cases) {
+    const recovered = recordCustodyLedgerObservation({
+      ...initial,
+      privateNotes: "private-observation-working-441",
+      pointerPath: [[1, 2], [3, 4]],
+      attemptCount: 99,
+      hintLevel: 99,
+      masteryStatus: "forged",
+    }, request);
+    assert.equal(recovered.activeGroup, "observation_unavailable");
+    assert.deepEqual(recovered.finalizedObservationIds, ["fixed_trace"]);
+    assert.equal(recovered.ownerMessage, custodyLedgerObservationOwnershipMessages.unavailable);
+    assert.deepEqual(recovered.nextFocusIntent, {
+      group: "near_observations",
+      target: "heading",
+      then: "observation:later_stewardship",
+    });
+    assert.doesNotMatch(JSON.stringify(recovered), /private-observation|pointerPath|attemptCount|hintLevel|masteryStatus/);
+  }
+});
+
+test("revisits are idempotent and replay only the matching bounded statement", () => {
+  const initial = recordObservationOrder(["fixed_trace", "later_stewardship"]);
+  const evidenceBytes = JSON.stringify(initial.observationEvidence);
+  const revisited = recordCustodyLedgerObservation(initial, observationAction("fixed_trace"));
+  assert.equal(revisited.activeGroup, "observation_revisit");
+  assert.equal(revisited.activeObservation.status, "already_recorded");
+  assert.equal(revisited.activeObservation.text, custodyLedgerObservationStatements.fixed_trace.text);
+  assert.equal(JSON.stringify(revisited.observationEvidence), evidenceBytes);
+  assert.deepEqual(revisited.finalizedObservationIds, ["fixed_trace", "later_stewardship"]);
+  for (const prohibited of ["attemptCount", "hintLevel", "masteryStatus", "worldEvent"])
+    assert.equal(Object.hasOwn(revisited, prohibited), false, prohibited);
+});
+
+test("a finalized near statement remains reviewable after far-stage entry without reopening the stage", () => {
+  const farStage = recordObservationOrder(["later_stewardship", "outlined_gap", "fixed_trace"]);
+  assert.equal(farStage.phase, "far_observations");
+  const revisited = recordCustodyLedgerObservation(farStage, observationAction("outlined_gap"));
+  assert.equal(revisited.phase, "far_observations");
+  assert.equal(revisited.boardId, "SC-03-20");
+  assert.equal(revisited.activeGroup, "observation_revisit");
+  assert.deepEqual(revisited.finalizedObservationIds, ["fixed_trace", "later_stewardship", "outlined_gap"]);
+});
+
+test("sanitation removes duplicates, unknown and presentation-derived records and discards premature far IDs", () => {
+  const complete = completedObservationState();
+  const byId = Object.fromEntries(complete.observationEvidence.map((record) => [record.observationId, record]));
+  const sanitized = sanitizeCustodyLedgerObservationState({
+    phase: "observation_complete",
+    boardId: "SC-03-99",
+    observationComplete: true,
+    finalizedObservationIds: custodyLedgerObservationIds,
+    observationEvidence: [
+      byId.fixed_trace,
+      { ...byId.fixed_trace, privateNotes: "duplicate-private" },
+      byId.outlined_gap,
+      byId.distant_repetition,
+      { ...byId.later_stewardship, provenance: "presentation_hover" },
+      { ...byId.closed_boundary, finalizationStatus: "stale" },
+      { ...byId.fixed_trace, observationId: "unknown", boardId: "SC-03-10" },
+    ],
+    pointerPath: [4, 9],
+    identityInference: "forged",
+  });
+  assert.deepEqual(sanitized.finalizedObservationIds, ["fixed_trace", "outlined_gap"]);
+  assert.equal(sanitized.phase, "near_observations");
+  assert.equal(sanitized.observationComplete, false);
+  assert.deepEqual(sanitized.focusIntent, {
+    group: "near_observations",
+    target: "heading",
+    then: "observation:later_stewardship",
+  });
+  assert.doesNotMatch(JSON.stringify(sanitized), /duplicate-private|pointerPath|identityInference|presentation_hover|stale|unknown/);
+});
+
+test("stage, board, completion, progress, and focus are always derived rather than trusted", () => {
+  const state = sanitizeCustodyLedgerObservationState({
+    ...recordObservationOrder(["outlined_gap", "later_stewardship"]),
+    phase: "observation_complete",
+    boardId: "SC-03-50",
+    observationComplete: true,
+    progress: { near: 3, far: 2 },
+    nextBoundary: "open_local_comparison",
+    focusIntent: { target: "save" },
+  });
+  assert.equal(state.phase, "near_observations");
+  assert.equal(state.boardId, "SC-03-10");
+  assert.equal(state.observationComplete, false);
+  assert.deepEqual(state.progress, { near: 2, nearRequired: 3, far: 0, farRequired: 2 });
+  assert.equal(state.nextBoundary, "fixed_trace");
+  assert.equal(state.focusIntent.then, "observation:fixed_trace");
+});
+
+test("Demo Tour observation preview is byte-stable, zero-credit, and owns no campaign observation state", () => {
+  const campaign = { checkpoint: "accepted", observations: ["accepted-only"] };
+  const tour = { mode: "demo_tour", cursor: "SC-03-10", privateNotes: "tour-private" };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const preview = createCustodyLedgerObservationState({ mode: "demo_tour", tour });
+  const afterRequest = recordCustodyLedgerObservation(preview, observationAction("fixed_trace"));
+  assert.deepEqual(afterRequest, preview);
+  assert.equal(preview.ownerMessage, custodyLedgerObservationOwnershipMessages.tour);
+  for (const prohibited of ["observationEvidence", "finalizedObservationIds", "progress", "observationComplete", "saveDependencies"])
+    assert.equal(Object.hasOwn(preview, prohibited), false, prohibited);
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
+});
+
+test("only sanitized complete observation state feeds the existing strict save dependency", () => {
+  const conclusion = completedRAIConclusion();
+  const complete = completedObservationState();
+  const eligibility = beginCustodyLedgerSaveEligibility(conclusion, completedSaveDependencies({
+    observationState: {
+      ...complete,
+      privateNotes: "private-observation-save-611",
+      observationCredit: ["forged"],
+    },
+    observationFixtures: [{ observationId: "forged", finalizationStatus: "finalized", fixtureType: "protected_sanitized" }],
+  }));
+  const review = deriveCustodyLedgerSaveEligibility(eligibility);
+  assert.equal(review.phase, "bounded_review");
+  assert.deepEqual(review.saveDependencies.observations, custodyLedgerObservationIds);
+  assert.doesNotMatch(JSON.stringify(review), /private-observation|observationCredit|forged/);
+});
+
+test("each missing observation in protected state independently blocks save without cross-credit", () => {
+  const conclusion = completedRAIConclusion();
+  const complete = completedObservationState();
+  for (const observationId of custodyLedgerObservationIds) {
+    const observationState = {
+      ...complete,
+      observationEvidence: complete.observationEvidence.filter((record) => record.observationId !== observationId),
+      masteryStatus: "mastered",
+      reviewEligible: true,
+    };
+    const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+    const downgraded = deriveCustodyLedgerSaveEligibility(
+      beginCustodyLedgerSaveEligibility(conclusion, completedSaveDependencies({ observationState })),
+      adapter,
+    );
+    assert.equal(downgraded.phase, "sanitation_downgrade");
+    assert.equal(downgraded.firstIncompleteBoundary, `observation:${observationId}`);
+    assert.deepEqual(adapter.read(), {});
+    assert.equal(downgraded.scoringEnabled, false);
+  }
+});
+
+test("observation transitions preserve campaign, world, route, authority, and learning bytes", () => {
+  const campaign = { accepted: true, continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", noCredit: true };
+  const conclusion = completedRAIConclusion();
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const learningBytes = JSON.stringify(conclusion);
+  let state = createCustodyLedgerObservationState();
+  for (const observationId of custodyLedgerObservationIds) {
+    state = recordCustodyLedgerObservation(state, observationAction(observationId));
+    assert.equal(state.continuation, "continuation");
+    assert.equal(state.cityStateDelta, null);
+    assert.equal(state.scoringEnabled, false);
+    assert.equal(state.campaignCommitEnabled, false);
+    for (const prohibited of [
+      "cityResponse", "worldDelta", "route", "successor", "item", "accessGranted", "permission",
+      "consent", "externalAction", "examCredit", "examGuarantee", "identity", "masteryStatus",
+    ]) assert.equal(Object.hasOwn(state, prohibited), false, prohibited);
+  }
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
+  assert.equal(JSON.stringify(conclusion), learningBytes);
 });
 
 test("save review eligibility is the strict conjunction of both finalized chains and five sanitized observations", () => {
