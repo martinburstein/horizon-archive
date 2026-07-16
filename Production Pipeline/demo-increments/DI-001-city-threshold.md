@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected hotspot dispatch
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` All nine role passes and the independent release gate completed. Protected RP-002 retains its isolated responsive observation and hotspot-dispatch work but remains `REVISE`, non-routable, and absent from App/main, browser storage, accepted routes, production art, world state, successors, and Working promotion.
+- **Live review:** title and Glass Meadow passed `1280 x 720` desktop and `390 x 844` narrow review with no horizontal escape, `48px` desktop title actions, `44px` narrow/Meadow controls, localized field-Terminal focus, and aspect-preserving display of the `1672 x 941` Meadow master. First-person/no-protagonist/no-ship framing, integrated geometry, stable static presentation, hierarchy, and reachable vertical flow remain intact. The viewport was reset and the playable title was left open.
+- **Release validation:** exact game suite **330/330 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **158.8 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Result:** `COORDINATOR COMPLETE - PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.` The next safe Advance seam is the already-queued RP-002 route-integration ownership/meaning lock; no Working promotion is authorized.
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload after protected hotspot dispatch - `218d29e` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
