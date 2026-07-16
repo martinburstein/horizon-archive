@@ -78,4 +78,5 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Solidified strict Python `6/6 + remediation + blank 6/6 transfer` and AI-901 `9/9 + remediation + blank 9/9 transfer` gates with closed-note explanations
 - [x] Added a machine-readable contract, reference forms, official-source record, privacy/accessibility/no-authority boundaries, and an anti-bypass validator
 - [x] Preserved all A1/A2 canon, board, coordinate, photorealistic material/light/effect, interface/world, return, and null-city-delta invariants; every Scene observation remains unscored
+- [x] Reverified the July 13, 2026 official study-guide update and preserved the five canonical observations as independent non-mastery save-eligibility conjuncts with zero presentation/navigation/Tour credit
 - [ ] Gameplay Master completes A4 against the exact solidified contract
