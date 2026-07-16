@@ -19,8 +19,14 @@ import {
   acknowledgeCustodyLedgerRAIFeedback,
   acknowledgeCustodyLedgerRAITransferFeedback,
   advanceCustodyLedgerPrerequisite,
+  beginCustodyLedgerSaveEligibility,
+  cancelCustodyLedgerSave,
   clearCustodyLedgerWorkingState,
+  commitCustodyLedgerBoundedComparison,
   createCustodyLedgerScaffold,
+  createCustodyLedgerFinalizedObservationFixtures,
+  createCustodyLedgerPersistenceAdapter,
+  custodyLedgerAtomicProgression,
   custodyLedgerCausalResult,
   custodyLedgerExplanationAnswers,
   custodyLedgerExplanationDimensions,
@@ -45,6 +51,7 @@ import {
   dismissCustodyLedgerPrimaryResult,
   dismissCustodyLedgerPythonConclusion,
   dismissCustodyLedgerRAIConclusion,
+  deriveCustodyLedgerSaveEligibility,
   evaluateCustodyLedgerExplanation,
   evaluateCustodyLedgerPrimarySource,
   evaluateCustodyLedgerRAIExplanation,
@@ -52,7 +59,10 @@ import {
   evaluateCustodyLedgerTransferSource,
   getCustodyLedgerOwnershipMessage,
   retryCustodyLedgerPrimary,
+  retryCustodyLedgerSave,
   retryCustodyLedgerTransfer,
+  restoreCustodyLedgerBoundedComparison,
+  returnSafelyFromCustodyLedgerSaveFailure,
   resumeCustodyLedgerRAI,
   resumeCustodyLedgerPython,
   setCustodyLedgerOwnershipMessage,
@@ -64,6 +74,7 @@ import {
   submitCustodyLedgerRAITransferGuidedPractice,
   submitCustodyLedgerRAITransferScenario,
   submitCustodyLedgerTransfer,
+  prepareCustodyLedgerSave,
 } from "../src/custodyLedgerExercise.js";
 import {
   structuredPacketChecks,
@@ -183,6 +194,22 @@ function submitRAITransferForm(state, overridesById = {}) {
     });
   }
   return current;
+}
+
+function completedRAIConclusion() {
+  return submitCustodyLedgerRAIExplanation(
+    submitRAITransferForm(submitRAIForm(blankRAIPrimary())),
+    custodyLedgerRAIExplanationAnswers,
+  );
+}
+
+function completedSaveDependencies(overrides = {}) {
+  return {
+    predecessorValue: completedPredecessor(),
+    prerequisiteEvidence: completedPrerequisites(),
+    observationFixtures: createCustodyLedgerFinalizedObservationFixtures(),
+    ...overrides,
+  };
 }
 
 test("Custody Ledger scaffold opens only after the exact atomic predecessor", () => {
@@ -999,6 +1026,251 @@ test("forged phases downgrade and all protected transitions preserve campaign, T
     assert.equal(state.campaignCommitEnabled, false);
     for (const prohibited of ["cityResponse", "successor", "route", "item", "accessGranted", "permission", "externalAction"])
       assert.equal(Object.hasOwn(state, prohibited), false, prohibited);
+  }
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
+});
+
+test("save review eligibility is the strict conjunction of both finalized chains and five sanitized observations", () => {
+  const conclusion = completedRAIConclusion();
+  const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+  const eligibility = beginCustodyLedgerSaveEligibility({
+    ...conclusion,
+    learnerSource: "private-eligibility-991",
+    observationCredit: ["forged"],
+    masteryStatus: "forged",
+  }, completedSaveDependencies());
+  assert.equal(eligibility.phase, "save_eligibility");
+  const review = deriveCustodyLedgerSaveEligibility(eligibility, adapter);
+  assert.equal(review.phase, "bounded_review");
+  assert.equal(review.ownerMessage.owner, "PILOT // FLIGHT RECORDER");
+  assert.deepEqual(review.saveDependencies.observations, [
+    "fixed_trace", "later_stewardship", "outlined_gap", "distant_repetition", "closed_boundary",
+  ]);
+  assert.doesNotMatch(JSON.stringify(review), /private-eligibility|forged/);
+  assert.deepEqual(adapter.read(), custodyLedgerAtomicProgression);
+});
+
+test("each missing or non-final observation conjunct sanitizes the complete triplet and targets exact route order", () => {
+  const conclusion = completedRAIConclusion();
+  const fixtures = createCustodyLedgerFinalizedObservationFixtures();
+  for (const [index, observationId] of fixtures.map((fixture) => fixture.observationId).entries()) {
+    const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+    const incomplete = fixtures.map((fixture, fixtureIndex) => fixtureIndex === index
+      ? { ...fixture, finalizationStatus: index % 2 ? "review_required" : "stale", privateNotes: "private-obs" }
+      : fixture);
+    const downgraded = deriveCustodyLedgerSaveEligibility(
+      beginCustodyLedgerSaveEligibility(conclusion, completedSaveDependencies({ observationFixtures: incomplete })),
+      adapter,
+    );
+    assert.equal(downgraded.phase, "sanitation_downgrade");
+    assert.equal(downgraded.firstIncompleteBoundary, `observation:${observationId}`);
+    assert.deepEqual(downgraded.nextFocusIntent, {
+      boundary: `observation:${observationId}`,
+      target: "first_required_control",
+    });
+    assert.deepEqual(adapter.read(), {});
+    assert.doesNotMatch(JSON.stringify(downgraded), /private-obs|review_required|stale/);
+  }
+});
+
+test("missing strict learning-chain dimensions cannot be replaced by forged phase or completion fields", () => {
+  const conclusion = completedRAIConclusion();
+  const cases = [
+    ["python:primary", { pythonEvidence: { ...conclusion.pythonEvidence, dimensionCorrectness: {} } }],
+    ["python:transfer", { pythonTransferEvidence: { ...conclusion.pythonTransferEvidence, dimensionCorrectness: {} } }],
+    ["python:explanation", { pythonExplanationEvidence: { ...conclusion.pythonExplanationEvidence, dimensionCorrectness: {} } }],
+    ["rai:primary", { raiEvidence: { ...conclusion.raiEvidence, dimensionCorrectness: {} } }],
+    ["rai:transfer", { raiTransferEvidence: { ...conclusion.raiTransferEvidence, dimensionCorrectness: {} } }],
+    ["rai:explanation", { raiExplanationEvidence: { ...conclusion.raiExplanationEvidence, dimensionCorrectness: {} } }],
+  ];
+  for (const [boundary, replacement] of cases) {
+    const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+    const state = beginCustodyLedgerSaveEligibility({
+      ...conclusion,
+      ...replacement,
+      phase: "rai_complete",
+      campaignCommitEnabled: true,
+      passed: true,
+    }, completedSaveDependencies());
+    const downgraded = deriveCustodyLedgerSaveEligibility(state, adapter);
+    assert.equal(downgraded.phase, "sanitation_downgrade");
+    assert.equal(downgraded.firstIncompleteBoundary, boundary);
+    assert.deepEqual(adapter.read(), {});
+  }
+});
+
+test("only the explicit Pilot intent can perform the exact all-or-none three-field transaction", () => {
+  const review = deriveCustodyLedgerSaveEligibility(
+    beginCustodyLedgerSaveEligibility(completedRAIConclusion(), completedSaveDependencies()),
+  );
+  const confirmation = prepareCustodyLedgerSave(review);
+  assert.equal(confirmation.phase, "save_confirmation");
+  assert.equal(confirmation.ownerMessage.owner, "PILOT // FLIGHT RECORDER");
+  assert.equal(confirmation.commitIntent, "SAVE BOUNDED COMPARISON");
+  const adapter = createCustodyLedgerPersistenceAdapter();
+  assert.equal(commitCustodyLedgerBoundedComparison(confirmation, adapter, "SAVE").phase, "save_confirmation");
+  assert.deepEqual(adapter.read(), {});
+  const saved = commitCustodyLedgerBoundedComparison(confirmation, adapter, "SAVE BOUNDED COMPARISON");
+  assert.equal(saved.phase, "comparison_complete");
+  assert.equal(saved.boardState, "SC-03-40");
+  assert.deepEqual(saved.progression, custodyLedgerAtomicProgression);
+  assert.deepEqual(adapter.read(), custodyLedgerAtomicProgression);
+  assert.deepEqual(Object.keys(adapter.read()).sort(), [
+    "civicComparisonSaved", "nextSurveyDirectionMarked", "rp002Checkpoint",
+  ]);
+});
+
+test("cancel and Escape-equivalent return write nothing and restore deterministic Prepare Save focus", () => {
+  const confirmation = prepareCustodyLedgerSave(deriveCustodyLedgerSaveEligibility(
+    beginCustodyLedgerSaveEligibility(completedRAIConclusion(), completedSaveDependencies()),
+  ));
+  const adapter = createCustodyLedgerPersistenceAdapter();
+  const returned = cancelCustodyLedgerSave({ ...confirmation, privateNotes: "private-cancel-72" }, adapter);
+  assert.equal(returned.phase, "bounded_review");
+  assert.deepEqual(returned.focusIntent, { group: "bounded_review", target: "prepare_save" });
+  assert.deepEqual(adapter.read(), {});
+  assert.doesNotMatch(JSON.stringify(returned), /private-cancel/);
+});
+
+test("deterministic local failure retains no partial triplet and supports unlimited retry or safe return", () => {
+  const confirmation = prepareCustodyLedgerSave(deriveCustodyLedgerSaveEligibility(
+    beginCustodyLedgerSaveEligibility(completedRAIConclusion(), completedSaveDependencies()),
+  ));
+  const adapter = createCustodyLedgerPersistenceAdapter({}, { failuresBeforeSuccess: 2 });
+  let failure = commitCustodyLedgerBoundedComparison(confirmation, adapter, "SAVE BOUNDED COMPARISON");
+  assert.equal(failure.phase, "recoverable_save_failure");
+  assert.deepEqual(failure.progression, {});
+  assert.deepEqual(adapter.read(), {});
+  assert.equal(returnSafelyFromCustodyLedgerSaveFailure(failure).phase, "bounded_review");
+  failure = commitCustodyLedgerBoundedComparison(
+    retryCustodyLedgerSave(failure),
+    adapter,
+    "SAVE BOUNDED COMPARISON",
+  );
+  assert.equal(failure.phase, "recoverable_save_failure");
+  const saved = commitCustodyLedgerBoundedComparison(
+    retryCustodyLedgerSave(failure),
+    adapter,
+    "SAVE BOUNDED COMPARISON",
+  );
+  assert.equal(saved.phase, "comparison_complete");
+  assert.deepEqual(adapter.read(), custodyLedgerAtomicProgression);
+});
+
+test("partial stored triplet and stale dependencies downgrade atomically with heading-first deterministic focus", () => {
+  const partial = createCustodyLedgerPersistenceAdapter({ civicComparisonSaved: true });
+  const partialRestore = restoreCustodyLedgerBoundedComparison(
+    partial,
+    completedRAIConclusion(),
+    completedSaveDependencies(),
+  );
+  assert.equal(partialRestore.phase, "sanitation_downgrade");
+  assert.deepEqual(partialRestore.progression, {});
+  assert.deepEqual(partial.read(), {});
+  assert.deepEqual(partialRestore.focusIntent, { group: "sanitation_downgrade", target: "heading" });
+
+  const stalePrerequisites = completedPrerequisites();
+  stalePrerequisites.structuredPacketEvidence.masteryStatus = "review_required";
+  const staleAdapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+  const staleRestore = restoreCustodyLedgerBoundedComparison(
+    staleAdapter,
+    completedRAIConclusion(),
+    completedSaveDependencies({ prerequisiteEvidence: stalePrerequisites }),
+  );
+  assert.equal(staleRestore.firstIncompleteBoundary, "prerequisite:L-03-01");
+  assert.deepEqual(staleAdapter.read(), {});
+});
+
+test("verified restore reconstructs only SC-03-50 and never replays conclusions, work, or world events", () => {
+  const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+  const restored = restoreCustodyLedgerBoundedComparison(
+    adapter,
+    { ...completedRAIConclusion(), privateReasoning: "private-restore-391" },
+    completedSaveDependencies(),
+  );
+  assert.equal(restored.phase, "verified_restore");
+  assert.equal(restored.boardState, "SC-03-50");
+  assert.deepEqual(restored.focusIntent, {
+    group: "verified_restore", target: "heading", then: "saved_controls",
+  });
+  for (const prohibited of [
+    "conclusion", "causalResult", "unfinishedWorkImage", "arrival", "observationEvent",
+    "successEffect", "worldEvent", "learnerSource", "identity", "route", "successor",
+  ]) assert.equal(Object.hasOwn(restored, prohibited), false, prohibited);
+  assert.doesNotMatch(JSON.stringify(restored), /private-restore/);
+});
+
+test("Tour preview is isolated from eligibility, commit, retry, restore, and every durable evidence field", () => {
+  const campaign = { checkpoint: "accepted", continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", cursor: "rp002", privateNotes: "tour-private" };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const adapter = createCustodyLedgerPersistenceAdapter(custodyLedgerAtomicProgression);
+  const preview = beginCustodyLedgerSaveEligibility(
+    completedRAIConclusion(),
+    completedSaveDependencies(),
+    { mode: "demo_tour", tour },
+  );
+  assert.deepEqual(preview, {
+    packetId: "RP-002",
+    phase: "tour_preview",
+    activeGroup: "tour_preview",
+    ownerMessage: custodyLedgerOwnershipMessages.tour,
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: "continuation",
+    cityStateDelta: null,
+  });
+  const restorePreview = restoreCustodyLedgerBoundedComparison(
+    adapter,
+    completedRAIConclusion(),
+    completedSaveDependencies(),
+    { mode: "demo_tour", tour },
+  );
+  assert.deepEqual(restorePreview, preview);
+  assert.deepEqual(adapter.read(), custodyLedgerAtomicProgression);
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
+  for (const prohibited of ["saveDependencies", "progression", "commitIntent", "retry", "mastery", "observations"])
+    assert.equal(Object.hasOwn(preview, prohibited), false, prohibited);
+});
+
+test("save graph is zero evidence and preserves campaign, Tour, world, route, and authority invariants byte-for-byte", () => {
+  const campaign = { accepted: true, continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", noCredit: true };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const conclusion = completedRAIConclusion();
+  const evidenceBytes = JSON.stringify([
+    conclusion.pythonEvidence,
+    conclusion.pythonTransferEvidence,
+    conclusion.pythonExplanationEvidence,
+    conclusion.raiEvidence,
+    conclusion.raiTransferEvidence,
+    conclusion.raiExplanationEvidence,
+  ]);
+  const adapter = createCustodyLedgerPersistenceAdapter();
+  const eligibility = beginCustodyLedgerSaveEligibility(conclusion, completedSaveDependencies());
+  const review = deriveCustodyLedgerSaveEligibility(eligibility, adapter);
+  const confirmation = prepareCustodyLedgerSave(review);
+  const saved = commitCustodyLedgerBoundedComparison(confirmation, adapter, "SAVE BOUNDED COMPARISON");
+  for (const state of [eligibility, review, confirmation, saved]) {
+    assert.equal(state.scoringEnabled, false);
+    assert.equal(state.continuation, "continuation");
+    assert.equal(state.cityStateDelta, null);
+    assert.equal(JSON.stringify([
+      state.saveDependencies.learning.pythonEvidence,
+      state.saveDependencies.learning.pythonTransferEvidence,
+      state.saveDependencies.learning.pythonExplanationEvidence,
+      state.saveDependencies.learning.raiEvidence,
+      state.saveDependencies.learning.raiTransferEvidence,
+      state.saveDependencies.learning.raiExplanationEvidence,
+    ]), evidenceBytes);
+    for (const prohibited of [
+      "cityResponse", "worldDelta", "route", "successor", "item", "accessGranted", "permission",
+      "consent", "externalAction", "examCredit", "examGuarantee", "identity",
+    ]) assert.equal(Object.hasOwn(state, prohibited), false, prohibited);
   }
   assert.equal(JSON.stringify(campaign), campaignBytes);
   assert.equal(JSON.stringify(tour), tourBytes);

@@ -375,3 +375,8 @@ The protected route now lets a player cross from accepted prologue credits into 
 - The pixel-styled replacement plates produced afterward are archived under `Pixelated Draft/city-threshold-pixel-staging/`. They remain temporary runtime fallbacks so gameplay is not broken.
 - Active blocker `RP001-AESTH-004 — P1` requires three high-resolution photorealistic 16:9 City Threshold masters, registered effects, responsive derivatives, physically credible materials/lighting, no image-generation artifacts or pseudo-writing, first-person/no-human framing, and unchanged interaction/state behavior.
 - `RP001-AESTH-001` is superseded because the original figure-filled raster was removed; no-human framing must be rechecked on the new photorealistic masters.
+
+## 2026-07-16 next-cycle W1 boundary after RP-002 protected save construction
+
+- **Working target:** `RP-001 — IN DEMO / ACCEPTED; COORDINATOR CLEAN PASS`. The new RP-002 persistence/save code is a non-routable protected model with no component, browser storage, UI, art, or campaign entry and is not a Working increment.
+- **Exact W1 handoff:** `Player Agent — W1: play only accepted RP-001 from its normal campaign baseline and separate no-credit Demo Tour. Verify clean completion and restore, recoverable mistakes, privacy/mastery invariants, keyboard focus, representative desktop/narrow responsive containment, first-person photoreal framing, and zero city/world/route regression. Do not invoke or promote protected RP-002, and do not treat its intentionally absent interface as a defect. Record a bounded clean-play checkpoint if no RP-001 regression is reproduced; otherwise report the earliest exact reproduction for Coder Agent bug-repair mode.`

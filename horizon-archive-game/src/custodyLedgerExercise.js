@@ -134,6 +134,43 @@ export const custodyLedgerExpeditionFields = Object.freeze({
 export const CUSTODY_LEDGER_UNFINISHED_WORK_LABEL = "UNFINISHED WORK IMAGE";
 export const CUSTODY_LEDGER_FRESH_PRACTICE_LABEL = "FRESH PRACTICE IMAGE";
 
+export const custodyLedgerObservationIds = Object.freeze([
+  "fixed_trace",
+  "later_stewardship",
+  "outlined_gap",
+  "distant_repetition",
+  "closed_boundary",
+]);
+
+export const custodyLedgerAtomicProgression = Object.freeze({
+  civicComparisonSaved: true,
+  nextSurveyDirectionMarked: true,
+  rp002Checkpoint: "comparison_complete",
+});
+
+export const custodyLedgerSaveOwnershipMessages = Object.freeze({
+  save_eligibility: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Finalized expedition evidence is being checked locally. No request has been sent.",
+  }),
+  bounded_review: Object.freeze({
+    owner: "PILOT // FLIGHT RECORDER",
+    text: "Review my bounded comparison and the next survey marker before saving them together.",
+  }),
+  save_confirmation: Object.freeze({
+    owner: "PILOT // FLIGHT RECORDER",
+    text: "Save only the bounded expedition comparison and survey marker. This grants no access or authority.",
+  }),
+  save_failure: Object.freeze({
+    owner: "SYSTEM // EXPEDITION STATE",
+    text: "Local save did not complete. No comparison, marker, or checkpoint was retained.",
+  }),
+  sanitation_downgrade: Object.freeze({
+    owner: "SYSTEM // EXPEDITION STATE",
+    text: "Saved comparison could not be verified. Private work and all comparison markers were cleared.",
+  }),
+});
+
 export const custodyLedgerPrimaryStarterSource = `comparison = {
     "condition": "outlined_gap",
     "source": "exposed_surface",
@@ -1882,5 +1919,353 @@ export function clearCustodyLedgerWorkingState(state) {
     ...current,
     activeMessageKey: "cancelled",
     expeditionFields: { ...custodyLedgerExpeditionFields },
+  };
+}
+
+const CUSTODY_LEDGER_SAVE_PHASES = Object.freeze([
+  "save_eligibility",
+  "bounded_review",
+  "save_confirmation",
+  "recoverable_save_failure",
+  "comparison_complete",
+  "verified_restore",
+  "sanitation_downgrade",
+]);
+
+function sanitizeCustodyLedgerObservationFixtures(value) {
+  if (!Array.isArray(value)) return [];
+  return custodyLedgerObservationIds.filter((observationId) => value.some((fixture) => (
+    fixture?.observationId === observationId
+      && fixture?.finalizationStatus === "finalized"
+      && fixture?.fixtureType === "protected_sanitized"
+  )));
+}
+
+export function createCustodyLedgerFinalizedObservationFixtures() {
+  return custodyLedgerObservationIds.map((observationId) => ({
+    observationId,
+    finalizationStatus: "finalized",
+    fixtureType: "protected_sanitized",
+  }));
+}
+
+function sanitizeCustodyLedgerSaveDependencies(raiConclusionState, dependencies) {
+  const predecessor = sanitizeCityThresholdSave(dependencies?.predecessorValue);
+  const structuredPacketEvidence = sanitizeStructuredPacketEvidence(
+    dependencies?.prerequisiteEvidence?.structuredPacketEvidence,
+  );
+  const responsibleAIEvidence = sanitizeResponsibleAIEvidence(
+    dependencies?.prerequisiteEvidence?.responsibleAIEvidence,
+  );
+  const normalizedConclusion = raiConclusionState?.phase === "rai_complete"
+    ? resumeCustodyLedgerRAI(raiConclusionState)
+    : null;
+  return {
+    predecessor,
+    observations: sanitizeCustodyLedgerObservationFixtures(dependencies?.observationFixtures),
+    prerequisites: {
+      structuredPacketEvidence,
+      responsibleAIEvidence,
+    },
+    learning: {
+      pythonEvidence: sanitizedPythonEvidence(normalizedConclusion?.pythonEvidence, "primary"),
+      pythonTransferEvidence: sanitizedPythonEvidence(normalizedConclusion?.pythonTransferEvidence, "transfer"),
+      pythonExplanationEvidence: sanitizedExplanationEvidence(normalizedConclusion?.pythonExplanationEvidence),
+      raiEvidence: sanitizedRAIEvidence(normalizedConclusion?.raiEvidence),
+      raiTransferEvidence: sanitizedRAITransferEvidence(normalizedConclusion?.raiTransferEvidence),
+      raiExplanationEvidence: sanitizedRAIExplanationEvidence(normalizedConclusion?.raiExplanationEvidence),
+    },
+  };
+}
+
+function custodyLedgerSaveDependenciesAreComplete(value) {
+  return value?.predecessor?.cityThresholdAnchorRecorded === true
+    && value?.predecessor?.civicDistrictRouteAvailable === true
+    && custodyLedgerObservationIds.every((observationId) => value?.observations?.includes(observationId))
+    && hasStrictStructuredPrerequisite(value?.prerequisites?.structuredPacketEvidence)
+    && hasStrictResponsibleAIPrerequisite(value?.prerequisites?.responsibleAIEvidence)
+    && evidenceIsComplete(value?.learning?.pythonEvidence, "primary")
+    && evidenceIsComplete(value?.learning?.pythonTransferEvidence, "transfer")
+    && explanationEvidenceIsComplete(value?.learning?.pythonExplanationEvidence)
+    && raiEvidenceIsComplete(value?.learning?.raiEvidence)
+    && raiTransferEvidenceIsComplete(value?.learning?.raiTransferEvidence)
+    && raiExplanationEvidenceIsComplete(value?.learning?.raiExplanationEvidence);
+}
+
+function firstIncompleteCustodyLedgerBoundary(value) {
+  if (value?.predecessor?.cityThresholdAnchorRecorded !== true) return "rp001_anchor";
+  if (value?.predecessor?.civicDistrictRouteAvailable !== true) return "rp001_civic_route";
+  for (const observationId of custodyLedgerObservationIds) {
+    if (!value?.observations?.includes(observationId)) return `observation:${observationId}`;
+  }
+  if (!hasStrictStructuredPrerequisite(value?.prerequisites?.structuredPacketEvidence)) return "prerequisite:L-03-01";
+  if (!hasStrictResponsibleAIPrerequisite(value?.prerequisites?.responsibleAIEvidence)) return "prerequisite:L-02-02";
+  if (!evidenceIsComplete(value?.learning?.pythonEvidence, "primary")) return "python:primary";
+  if (!evidenceIsComplete(value?.learning?.pythonTransferEvidence, "transfer")) return "python:transfer";
+  if (!explanationEvidenceIsComplete(value?.learning?.pythonExplanationEvidence)) return "python:explanation";
+  if (!raiEvidenceIsComplete(value?.learning?.raiEvidence)) return "rai:primary";
+  if (!raiTransferEvidenceIsComplete(value?.learning?.raiTransferEvidence)) return "rai:transfer";
+  if (!raiExplanationEvidenceIsComplete(value?.learning?.raiExplanationEvidence)) return "rai:explanation";
+  return "save:bounded_review";
+}
+
+function custodyLedgerSaveBase(phase, saveDependencies, focusIntent) {
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase,
+    activeGroup: phase,
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+    saveDependencies,
+    focusIntent,
+  };
+}
+
+function custodyLedgerCanonicalFocus(phase) {
+  if (phase === "bounded_review") return { group: phase, target: "heading" };
+  if (phase === "save_confirmation") return { group: phase, target: "heading", contained: true };
+  if (phase === "comparison_complete") return { group: phase, target: "saved_controls" };
+  if (phase === "verified_restore") return { group: phase, target: "heading", then: "saved_controls" };
+  return { group: phase, target: "heading" };
+}
+
+function sanitizeCustodyLedgerSaveState(state) {
+  if (!CUSTODY_LEDGER_SAVE_PHASES.includes(state?.phase)) return null;
+  const dependencies = sanitizeCustodyLedgerSaveDependencies({
+    phase: "rai_complete",
+    ...state?.saveDependencies?.learning,
+  }, {
+    predecessorValue: state?.saveDependencies?.predecessor,
+    prerequisiteEvidence: state?.saveDependencies?.prerequisites,
+    observationFixtures: (state?.saveDependencies?.observations ?? []).map((observationId) => ({
+      observationId,
+      finalizationStatus: "finalized",
+      fixtureType: "protected_sanitized",
+    })),
+  });
+  return custodyLedgerSaveBase(state.phase, dependencies, custodyLedgerCanonicalFocus(state.phase));
+}
+
+function clearCustodyLedgerAtomicTriplet(adapter) {
+  if (adapter && typeof adapter.clearAtomicTriplet === "function") adapter.clearAtomicTriplet();
+}
+
+function custodyLedgerSanitationDowngrade(saveDependencies, adapter) {
+  clearCustodyLedgerAtomicTriplet(adapter);
+  const firstIncompleteBoundary = firstIncompleteCustodyLedgerBoundary(saveDependencies);
+  return {
+    ...custodyLedgerSaveBase(
+      "sanitation_downgrade",
+      saveDependencies,
+      { group: "sanitation_downgrade", target: "heading" },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.sanitation_downgrade,
+    progression: {},
+    firstIncompleteBoundary,
+    nextFocusIntent: { boundary: firstIncompleteBoundary, target: "first_required_control" },
+  };
+}
+
+/**
+ * A protected deterministic adapter used only by the non-routable state model.
+ * It has no browser storage integration and can inject complete local failures
+ * without ever exposing a partial RP-002 triplet.
+ */
+export function createCustodyLedgerPersistenceAdapter(initialValue = {}, options = {}) {
+  let progression = Object.keys(custodyLedgerAtomicProgression).every(
+    (key) => initialValue?.[key] === custodyLedgerAtomicProgression[key],
+  ) ? { ...custodyLedgerAtomicProgression } : {};
+  let failuresRemaining = Number.isSafeInteger(options.failuresBeforeSuccess)
+    ? Math.max(0, Math.min(options.failuresBeforeSuccess, 9999))
+    : 0;
+  return Object.freeze({
+    read() {
+      return { ...progression };
+    },
+    commitAtomicTriplet(value) {
+      const exact = Object.keys(custodyLedgerAtomicProgression).length === Object.keys(value ?? {}).length
+        && Object.entries(custodyLedgerAtomicProgression).every(([key, expected]) => value?.[key] === expected);
+      if (!exact || failuresRemaining > 0) {
+        if (failuresRemaining > 0) failuresRemaining -= 1;
+        progression = {};
+        return { ok: false, value: {} };
+      }
+      progression = { ...custodyLedgerAtomicProgression };
+      return { ok: true, value: { ...progression } };
+    },
+    clearAtomicTriplet() {
+      progression = {};
+      return {};
+    },
+  });
+}
+
+export function beginCustodyLedgerSaveEligibility(raiConclusionState, dependencies, options = {}) {
+  if (options.mode === "demo_tour") {
+    return {
+      packetId: CUSTODY_LEDGER_PACKET_ID,
+      phase: "tour_preview",
+      activeGroup: "tour_preview",
+      ownerMessage: custodyLedgerOwnershipMessages.tour,
+      scoringEnabled: false,
+      campaignCommitEnabled: false,
+      continuation: CITY_THRESHOLD_CONTINUATION,
+      cityStateDelta: null,
+    };
+  }
+  const saveDependencies = sanitizeCustodyLedgerSaveDependencies(raiConclusionState, dependencies);
+  return {
+    ...custodyLedgerSaveBase(
+      "save_eligibility",
+      saveDependencies,
+      { group: "save_eligibility", target: "heading" },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.save_eligibility,
+  };
+}
+
+export function deriveCustodyLedgerSaveEligibility(state, adapter) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "save_eligibility") {
+    return custodyLedgerSanitationDowngrade(current?.saveDependencies ?? sanitizeCustodyLedgerSaveDependencies(null, null), adapter);
+  }
+  if (!custodyLedgerSaveDependenciesAreComplete(current.saveDependencies)) {
+    return custodyLedgerSanitationDowngrade(current.saveDependencies, adapter);
+  }
+  return {
+    ...custodyLedgerSaveBase(
+      "bounded_review",
+      current.saveDependencies,
+      { group: "bounded_review", target: "heading" },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.bounded_review,
+    boundedSummary: Object.freeze({
+      comparison: "Human expedition classification remains provisional.",
+      surveyMarker: "Next survey direction is an expedition marker, not city permission.",
+    }),
+  };
+}
+
+export function prepareCustodyLedgerSave(state) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "bounded_review" || !custodyLedgerSaveDependenciesAreComplete(current.saveDependencies)) {
+    return custodyLedgerSanitationDowngrade(current?.saveDependencies ?? sanitizeCustodyLedgerSaveDependencies(null, null));
+  }
+  return {
+    ...custodyLedgerSaveBase(
+      "save_confirmation",
+      current.saveDependencies,
+      { group: "save_confirmation", target: "heading", contained: true },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.save_confirmation,
+    commitIntent: "SAVE BOUNDED COMPARISON",
+  };
+}
+
+export function cancelCustodyLedgerSave(state) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "save_confirmation") return current ?? state;
+  return {
+    ...custodyLedgerSaveBase(
+      "bounded_review",
+      current.saveDependencies,
+      { group: "bounded_review", target: "prepare_save" },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.bounded_review,
+    boundedSummary: Object.freeze({
+      comparison: "Human expedition classification remains provisional.",
+      surveyMarker: "Next survey direction is an expedition marker, not city permission.",
+    }),
+  };
+}
+
+export function commitCustodyLedgerBoundedComparison(state, adapter, intent) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "save_confirmation" || intent !== "SAVE BOUNDED COMPARISON") {
+    return current ?? state;
+  }
+  if (!custodyLedgerSaveDependenciesAreComplete(current.saveDependencies)) {
+    return custodyLedgerSanitationDowngrade(current.saveDependencies, adapter);
+  }
+  const result = adapter?.commitAtomicTriplet?.({ ...custodyLedgerAtomicProgression });
+  if (result?.ok !== true
+    || !Object.entries(custodyLedgerAtomicProgression).every(([key, value]) => result?.value?.[key] === value)) {
+    clearCustodyLedgerAtomicTriplet(adapter);
+    return {
+      ...custodyLedgerSaveBase(
+        "recoverable_save_failure",
+        current.saveDependencies,
+        { group: "recoverable_save_failure", target: "heading" },
+      ),
+      ownerMessage: custodyLedgerSaveOwnershipMessages.save_failure,
+      progression: {},
+    };
+  }
+  return {
+    ...custodyLedgerSaveBase(
+      "comparison_complete",
+      current.saveDependencies,
+      { group: "comparison_complete", target: "saved_controls" },
+    ),
+    activeMessageKey: "saved",
+    ownerMessage: custodyLedgerOwnershipMessages.saved,
+    boardState: "SC-03-40",
+    progression: { ...custodyLedgerAtomicProgression },
+  };
+}
+
+export function retryCustodyLedgerSave(state) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "recoverable_save_failure") return current ?? state;
+  return {
+    ...custodyLedgerSaveBase(
+      "save_confirmation",
+      current.saveDependencies,
+      { group: "save_confirmation", target: "heading", contained: true },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.save_confirmation,
+    commitIntent: "SAVE BOUNDED COMPARISON",
+  };
+}
+
+export function returnSafelyFromCustodyLedgerSaveFailure(state) {
+  const current = sanitizeCustodyLedgerSaveState(state);
+  if (!current || current.phase !== "recoverable_save_failure") return current ?? state;
+  return {
+    ...custodyLedgerSaveBase(
+      "bounded_review",
+      current.saveDependencies,
+      { group: "bounded_review", target: "prepare_save" },
+    ),
+    ownerMessage: custodyLedgerSaveOwnershipMessages.bounded_review,
+    boundedSummary: Object.freeze({
+      comparison: "Human expedition classification remains provisional.",
+      surveyMarker: "Next survey direction is an expedition marker, not city permission.",
+    }),
+  };
+}
+
+export function restoreCustodyLedgerBoundedComparison(adapter, raiConclusionState, dependencies, options = {}) {
+  if (options.mode === "demo_tour") return beginCustodyLedgerSaveEligibility(null, null, { mode: "demo_tour" });
+  const saveDependencies = sanitizeCustodyLedgerSaveDependencies(raiConclusionState, dependencies);
+  const stored = adapter?.read?.() ?? {};
+  const exactTriplet = Object.keys(stored).length === Object.keys(custodyLedgerAtomicProgression).length
+    && Object.entries(custodyLedgerAtomicProgression).every(([key, value]) => stored[key] === value);
+  if (!exactTriplet || !custodyLedgerSaveDependenciesAreComplete(saveDependencies)) {
+    return custodyLedgerSanitationDowngrade(saveDependencies, adapter);
+  }
+  return {
+    ...custodyLedgerSaveBase(
+      "verified_restore",
+      saveDependencies,
+      { group: "verified_restore", target: "heading", then: "saved_controls" },
+    ),
+    activeMessageKey: "restored",
+    ownerMessage: custodyLedgerOwnershipMessages.restored,
+    boardState: "SC-03-50",
+    progression: { ...custodyLedgerAtomicProgression },
   };
 }
