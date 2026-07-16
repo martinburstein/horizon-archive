@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 final aesthetic verification/reload after protected third-near completion - `1cbb8e9` handoff
+
+- **Mode/verdict:** `aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no finding and W4 reproduced no exact residual. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation/reload:** focused **40/40 PASS**; full **395/395 PASS**; production build and protected third-near App/main/bundle/storage leakage scans PASS. Port `4173` listener PID `40320` serves `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; page and both assets returned HTTP `200`.
+- **Boundary:** all four accepted lossless RGB `1672 x 941` masters, available-width 16:9 presentation, aspect-preserving crop, photographic detail, world dominance, first-person/no-protagonist/no-ship framing, integrated Meadow seams/channels/contact, localized focus, readable hierarchy, `>=44px` targets, stable static screen-only geometry, gameplay/recovery, bounded first-incomplete saves, strict mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, accepted world state, zero accepted world/route change, and protected RP-002 third-near non-routability/absence remain exact.
+- **Finding disposition:** no aesthetic ID was opened, changed, implemented, or reopened. Live representative-layout confirmation remains an independent coordinator release gate rather than authorization for a speculative edit.
+- **Exact coordinator handoff:** `Validate the final-reloaded accepted build at representative desktop and narrow layouts for exact source quality, crop/aspect, hierarchy, scale, seam, readability, stable geometry, first-person framing, protagonist/ship exclusion, >=44px controls, clipping/stretch/horizontal escape, and console health. Run the independent release gates, restore incidental QA binaries, preserve every gameplay, learning, recovery, accessibility, save, privacy/offline/no-authority, Tour, world, and protected-route invariant, and keep RP-002 third-near work absent and non-routable.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review after protected third-near completion - `11e9df7` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - NO NEW AESTHETIC FINDING.` The accepted title/opening, Glass Meadow, and RP-001 staging remain coherent; closed visual findings stay closed, and protected RP-002 third-near work remained intentionally absent/out of scope.
