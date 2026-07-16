@@ -1,5 +1,15 @@
 # RP-002 — Civic Record Encounter
 
+## Latest protected implementation — isolated third-near completion (2026-07-16)
+
+- **Status:** `PASS — A5 ISOLATED TD-00/R/10/U/T COMPLETE; REVISE; NON-ROUTABLE`.
+- **Implementation:** `CustodyLedgerThirdNearCompletion.js` accepts only the exact sanitized two-ID boundary produced by the existing second-near dispatcher and evidence return, then composes the existing hotspot, observation, replay, sanitation, route-return, control, and focus authorities. `CustodyLedgerObservation.js` now exports its existing compare-scale control descriptor so this seam does not duplicate its label or rule.
+- **Valid path:** all six complete near orders and all seven supported modalities preserve both prior finalized records byte-stably, add only the sole Available action's matching third ID and Scene statement, derive System `3 of 3`, and expose dormant zero-credit `COMPARE SCALE`. Both Recorded actions replay idempotently.
+- **Hard stop/recovery:** the registered outer board remains `SC-03-10`; the completion snapshot exposes no far action, no comparison dispatch, and no view replacement. Duplicate, unsafe, ambiguous, stale, forged, combined, Tour-derived, partial, private, or contaminated input retains the exact two-ID boundary and recovers heading-first to the sole incomplete action. Exact two-ID and three-near/zero-far fixtures resume without replay.
+- **Evidence and isolation:** presentation, replay, recovery, resume, route return, and comparison appearance/focus remain zero observation and zero mastery credit. Both SOLIDIFIED chains, the five-observation/save conjunction, atomic transaction, accepted campaign/Tour bytes, world/clocks, privacy, offline/no-authority, closed identity, and no-successor contracts remain unchanged.
+- **Validation:** focused `13/13`; full `395/395`; RP-002 curriculum self-test PASS; production build PASS with unchanged accepted `index-DYIYoZtf.js` / `index-VPnRyv7C.css`. App/main import, React UI, browser storage, geometry/art, route exposure, accepted bundle/world/city/access/external change, comparison activation, `SC-03-20` view entry, far evidence, successor, Demo reload, and Working promotion remain absent.
+- **Next at this checkpoint:** A1 selects the next smallest dependency-adjacent protected seam. RP-002 remains `REVISE`, protected, non-routable, and unavailable to Working.
+
 ## Latest protected implementation — isolated second-near dispatch (2026-07-16)
 
 - **Status:** `PASS — A5 ISOLATED SD-00/R/10/20/U/T COMPLETE; REVISE; NON-ROUTABLE`.

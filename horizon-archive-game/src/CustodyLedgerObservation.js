@@ -27,6 +27,10 @@ export const custodyLedgerObservationInterfaceCopy = Object.freeze({
   sanitized: "Recorded observations checked. Continue from the first incomplete condition; no city response occurred.",
 });
 
+export const custodyLedgerObservationControls = Object.freeze({
+  compareScale: Object.freeze({ label: "COMPARE SCALE", kind: "return" }),
+});
+
 export const custodyLedgerObservationInterfaceStyles = `
 .custody-ledger-observation {
   box-sizing: border-box;
@@ -135,7 +139,7 @@ function controlFor(state) {
   if (state.activeGroup === "observation_complete") return { label: "OPEN LOCAL COMPARISON", kind: "comparison" };
   if (state.activeGroup !== "observation_statement") return null;
   if (state.observationComplete) return { label: "OPEN LOCAL COMPARISON", kind: "comparison" };
-  if (state.progress.near === 3 && state.progress.far === 0) return { label: "COMPARE SCALE", kind: "return" };
+  if (state.progress.near === 3 && state.progress.far === 0) return custodyLedgerObservationControls.compareScale;
   return { label: "RETURN TO EVIDENCE", kind: "return" };
 }
 
