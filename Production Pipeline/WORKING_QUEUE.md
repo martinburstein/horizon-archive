@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — COORDINATOR VALIDATED; W1 CLEAN` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent — W2 verification/reload | No functional defect reproduced on `8f62e11`; optional registered membrane animation remains follow-on art | Verify/build/reload only, then hand the unchanged live demo to W3 aesthetic review; do not enter protected RP-002 |
+| 1 | `RP-001` | `DEMO RELOADED — W2 CLEAN` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Aesthetic Agent — W3 review | No functional defect reproduced through the verified `index-DYIYoZtf.js` / `index-VPnRyv7C.css` build; optional registered membrane animation remains follow-on art | Review the unchanged live demo at representative desktop and narrow layouts; record only reproducible aesthetic findings and do not enter protected RP-002 |
 
 ## Current-demo quality lane
 

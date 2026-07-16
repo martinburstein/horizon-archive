@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 accepted-boundary verification/reload — `0f4c108`
+
+- **Mode/verdict:** `Coder Agent — bug-repair; PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1's clean report remained valid, so W2 made no speculative runtime or art change.
+- **Validation:** Focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**; complete game suite **280/280 PASS**; production build PASS with the existing large-chunk advisory.
+- **Build/reload:** exact assets `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the rebuilt `/?staging=rp001` page and both assets returned HTTP `200` on port `4173` listener PID `77344`.
+- **Preserved:** accepted opening and RP-001 behavior, responsive `>=44px` controls, approved photoreal art/focus, recoverable mistakes, save/resume, strict mastery, privacy/no-authority, Demo Tour isolation, unchanged `continuation`, `city_state_delta=None`, and protected RP-002 non-routability.
+- **Issue disposition:** no issue opened or resolved; closed functional and visual findings remain closed unless W3 reproduces an exact aesthetic defect.
+- **Exact W3 handoff:** `Review index-DYIYoZtf.js / index-VPnRyv7C.css at representative desktop and narrow responsive layouts. Inspect the accepted opening, Glass Meadow, and RP-001 presentation for reproducible photographic-quality, crop/aspect, hierarchy, readability, scale, seam, emphasis, framing, or protagonist/ship-exclusion issues. Preserve every locked functional, learning, save, privacy, no-authority, Tour, world-state, and protected-route contract; do not apply retired fixed-canvas or pixel-art rules.`
+
 ## 2026-07-16 W1 accepted-boundary campaign regression — `8f62e11`
 
 - **Verdict:** `PASS — NO REPRODUCIBLE FUNCTIONAL DEFECT.` The accepted RP-001 playable boundary remains complete; protected RP-002 was not routed, entered, or inferred as playable content.

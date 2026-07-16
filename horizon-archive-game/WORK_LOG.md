@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 — Coder W2: accepted-boundary verification and reload
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1 reported no P0, P1, or P2 defect, and this bounded verification reproduced none. No runtime, test, art, save, route, curriculum, or QA file changed.
+- **Verified contracts:** The accepted title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> Glass Meadow path remains covered together with invalid-name recovery, one-activation anti-skip, sanitized resume, responsive available-width framing, `>=44px` required targets, Demo Tour isolation, RP-001 board order, PY-020 `10/10`, both CUM-01 `16/16` forms, atomic commit, bounded evidence, first-incomplete resume, unchanged `continuation`, and `cityStateDelta:null`.
+- **Protected boundary:** RP-002 remains a protected model only. No normal campaign import, route, presentation, save, or Working promotion was added or exercised.
+- **Issue IDs resolved:** none opened or changed. Closed opening, responsive, Tour, Meadow, focus, and RP-001 findings remain closed unless W3 reproduces a visual issue.
+- **Validation:** focused accepted-boundary selection **38/38 PASS**; complete game suite **280/280 PASS**; production build PASS with the existing large-chunk advisory. Exact build identity: `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Demo reload:** port `4173` was restarted; `http://127.0.0.1:4173/?staging=rp001` and both exact assets returned HTTP `200` on listener PID `77344`.
+- **Files changed:** this log plus `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, and `../Production Pipeline/STORY_RAIL_MAP.md` only. Unrelated untracked user files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent: review the reloaded accepted demo on index-DYIYoZtf.js / index-VPnRyv7C.css at representative desktop and narrow responsive layouts. Start with title -> save/name -> prologue -> Chapter I -> Glass Meadow, then inspect the accepted RP-001 staging presentation where available. Review only reproducible scene-level issues: photoreal plate quality, responsive crop/aspect, scene dominance, CRT-shell restraint, typography/readability, control scale, seams, unwanted emphasis, first-person framing, and protagonist/ship exclusion. Preserve all functional behavior, >=44px targets, opening order/recovery/focus, approved integrated Meadow and City art, saves/mastery/privacy/no-authority, Tour isolation, continuation unchanged, cityStateDelta:null, and protected non-routable RP-002. Do not reopen retired fixed-canvas or pixel-art rules; record exact evidence for W4 or return a clean aesthetic verdict.`
+
 ## 2026-07-16 — Advance Coder A5: protected RAI primary/remediation seam
 
 - **Mode:** `advance` for A5 only.
