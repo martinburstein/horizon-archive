@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / W4 FINAL RELOADED; COORDINATOR GATE NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coordinator | No functional or aesthetic finding reproduced through W4; representative desktop/narrow live review remains the release gate | Run coordinator live responsive review, validators, build, and full E2E; preserve protected RP-002 non-routability |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / COORDINATOR PASS` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Working Team (`ACCEPTED`) | None reproduced: focused checks, full `308/308`, production build, RP-002 validator, full E2E, and live desktop/narrow title plus Glass Meadow gates passed | Keep accepted and closed unless a regression is reproduced; do not route protected RP-002 |
 
 ## Current-demo quality lane
 

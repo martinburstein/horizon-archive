@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected five-observation release gate
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` The two-team cycle completed and the accepted title-to-credits campaign remains stable. Protected RP-002 now includes its five-observation state model alongside the learning and atomic-save models, but remains `REVISE`, non-routable, and absent from component UI, hotspot geometry, browser storage, routes, production art, and world state.
+- **Live review:** title presentation passed at default `1280x720` and narrow `390x844` with no horizontal escape and `48px`/`44px` actions. Glass Meadow retained its `1672x941` source and aspect-preserving `object-fit:cover` rendering at both representative layouts; first-person framing, integrated seams, localized focus, stable static geometry, readable hierarchy, reachable controls, and protagonist/ship exclusion remained intact. Browser console errors/warnings: none. The default viewport and playable title were restored.
+- **Release validation:** game suite **308/308 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **163.3 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted photoreal presentation, recovery, strict mastery, bounded save/privacy/offline/no-authority contracts, Demo Tour isolation, unchanged `continuation`, `cityStateDelta:null`, zero city/world/route delta, and RP-002 non-routability remain exact.
+- **Result:** `COORDINATOR COMPLETE - PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.`
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload - `fa29dba` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4's exact focused/full/build verification reproduced none. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
