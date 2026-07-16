@@ -18,14 +18,14 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 — first-near-dispatch presentation impact`) | Protected Demo Tour, prerequisite, full PY-009 chain, full `RP002-RAI-01` chain, five-observation state model, atomic persistence/save model, responsive observation component, hotspot geometry/dispatch, isolated route state, and isolated route-to-blank-observation orchestration are complete; A1 has now locked the exact blank-to-first-near-dispatch meaning, but browser storage integration, production art, normal exposure, and later packet work are absent | Verified blank SC-03-10 may accept one fresh exact near action, finalize only its matching canonical ID, present only its matching Scene statement plus System 1-of-3 status, and retain separate evidence/route returns; every passive, invalid, ambiguous, Tour, learning, save, world, and authority path remains zero-credit | Keep `REVISE`. A2 performs only the exact first-near-dispatch presentation impact review; do not add geometry/code, compose components, expose a route, add storage/art/world change, name a successor, reload the Demo, or promote to Working. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Curriculum Checker Agent (`A3 — first-near-dispatch preservation`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and A1/A2 blank-to-first-near-dispatch meaning/presentation seams are complete; storage, art, normal exposure, and later work are absent | Exact blank SC-03-10 presents three equal near actions; one fresh exact action replaces it with only its matching Scene statement, System 1-of-3 status, and zero-credit evidence return while route return stays separate | Keep `REVISE`. A3 performs only mapping preservation; do not change curriculum, geometry/code, components, route exposure, storage/art/world state, successor, Demo, or Working. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
 - In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, and route-to-blank-observation orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A1 blank-to-first-near-dispatch meaning locked; exact A2 presentation impact review is next`
+- Team 1 railhead: `RP-002 — A2 blank-to-first-near-dispatch presentation locked; exact A3 preservation review is next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`

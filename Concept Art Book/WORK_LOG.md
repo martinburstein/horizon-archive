@@ -1,5 +1,13 @@
 # Location Scout Work Log
 
+## 2026-07-16 — RP-002 blank-to-first-near-dispatch presentation impact
+
+- **Completed:** boarded only the protected `SC-03-10` replacement from one exact blank System group with three equal near actions to one sole matching Scene statement, exact System `1 of 3` status, and zero-credit `RETURN TO EVIDENCE`. Acknowledgement focus is heading-first; threshold return remains a separate Pilot route group; the registered first-person world remains invariant.
+- **Files changed:** packet, Advance Queue, rail map, SC-03 sheet, scene index, and this log only.
+- **Validation:** confirmed equal action/label/ID/statement associations and all six orders; one action/one ID; exact copy; one-active-group order; focus/recovery; separate returns; modality parity; non-color/reduced-motion equivalence; responsive wrapping/scroll; `44 x 44 CSS px` controls; fail-closed ambiguity; Tour and zero-cross-credit boundaries; unchanged SOLIDIFIED chains, save, privacy, authority, world, and route invariants. No code, geometry, components, storage, art, route exposure, accepted bundle, successor, Demo, or Working change.
+- **Exact A3 handoff:** review only scored-evidence preservation. Treat blank display, visibility, reading, focus, hover, dwell, assistive discovery, reflow, scroll, motion, route return, acknowledgement, `RETURN TO EVIDENCE`, recovery, and Tour as zero observation and mastery evidence. Preserve both SOLIDIFIED chains, all six near orders, one-action/one-ID dispatch, separate returns, Tour, atomic save, privacy, offline/no-authority/no-exam-guarantee, invariant first-person world, and zero city/external action. If unchanged, record `NO REOPEN — SOLIDIFIED` and hand this presentation lock to Gameplay Master.
+- **Unresolved risks:** later implementation must prove one-hit dispatch, inactive-group removal, heading-first focus, scroll recovery, `44px` targets, return separation, Tour isolation, and world invariance without turning recovery order into story order.
+
 ## 2026-07-16 — RP-002 protected route-to-observation presentation impact
 
 - **Completed:** boarded only the protected human presentation from `RT-20 / SC-03-00` arrival acknowledgement through the blank `SC-03-10` observation boundary. System arrival and overview/context, one explicit Pilot near-detail intent, System viewpoint transition/recovery, and the blank Session group replace sequentially with complete textual ownership. Threshold return remains a separate Pilot route action; save remains unavailable. The approved overview and near-detail compositions remain registered and physically invariant.
