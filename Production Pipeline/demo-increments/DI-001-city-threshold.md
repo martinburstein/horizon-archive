@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W3 accepted-boundary aesthetic review — `7b1dd90`
+
+- **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE — NO NEW AESTHETIC FINDING.` The accepted title-to-Meadow and RP-001 presentation contracts remain coherent; no closed visual issue was reopened and protected RP-002 remained outside the Working review.
+- **Evidence:** inspected the active integrated Glass Meadow master and all three City Threshold masters at original size; checked current responsive source and focused presentation regressions; verified port `4173` serves `index-DYIYoZtf.js` / `index-VPnRyv7C.css`. The four accepted plates retain their registered `1672 x 941` 16:9 masters, photographic detail, aspect-preserving crop, first-person framing, protagonist/ship exclusion, and no detached Meadow overlay seam.
+- **Responsive/hierarchy:** available-width world presentation, responsive lower-interface flow, opening hierarchy, localized Meadow focus, in-context Tour skip placement, and `>=44px` controls remain regression-covered. Optional registered membrane animation remains follow-on art rather than a release defect.
+- **Evidence boundary:** no browser backend was attached to W3, so no new live desktop/narrow screenshot or computed-rectangle claim is made. W4/coordinator must perform the representative desktop and narrow live confirmation before final disposition; this limitation does not authorize speculative code or art work.
+- **Validation:** focused responsive/opening/Tour/Meadow/RP-001 selection **37/37 PASS**; exact production page, JS, and CSS HTTP checks PASS; original-size master inspection PASS.
+- **Exact W4 handoff:** `Coder Agent operating mode: aesthetic-polish. No issue is authorized for implementation. Perform verification/final-reload only unless root live review first reproduces an exact aesthetic defect. Preserve all approved photoreal masters and crops, opening/focus/target behavior, functional and learning contracts, saves/mastery/privacy/no-authority, Tour isolation, continuation unchanged, cityStateDelta:null, and protected RP-002 non-routability. Re-run focused checks/build, final-reload 4173, and report exact assets plus the live-review boundary.`
+
 ## 2026-07-16 W2 accepted-boundary verification/reload — `0f4c108`
 
 - **Mode/verdict:** `Coder Agent — bug-repair; PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1's clean report remained valid, so W2 made no speculative runtime or art change.
