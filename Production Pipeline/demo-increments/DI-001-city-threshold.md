@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 accepted-boundary verification/reload after protected responsive observation component - `9f916b3` handoff
+
+- **Mode/verdict:** `Coder Agent - bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1's clean accepted-path report remained valid, and focused/full/build verification reproduced no defect. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation:** current focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **317/317 PASS**; production build PASS with the existing non-blocking large-chunk advisory; exact page/JS/CSS HTTP checks PASS.
+- **Build/reload:** port `4173` listener PID `60404` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the rebuilt `/?staging=rp001` page and both assets returned HTTP `200`.
+- **Protected boundary:** App/main source, the accepted bundle, and browser-storage integration remain free of the protected RP-002 component/exercise/SC-03 checkpoint surface. RP-002 stays `REVISE`, non-routable, outside accepted UI/art/routes/save state, and unavailable to Working.
+- **Issue disposition:** no functional issue opened, changed, or reopened; no speculative repair or visual edit authorized.
+- **Exact W3 handoff:** `Aesthetic Agent: review the W2-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build at port 4173. Check the accepted opening through Glass Meadow and RP-001 staging at representative desktop and narrow responsive layouts where available. Preserve the four 1672 x 941 photoreal masters, aspect-preserving crop, first-person/no-protagonist/no-ship framing, integrated Meadow seams, localized focus, readable hierarchy, >=44px targets, stable static screen-only geometry, and no stretch, clipping, or horizontal escape. Protected RP-002 is intentionally absent and outside W3 scope. Open a finding only from exact evidence; otherwise authorize verification-only aesthetic-polish/final reload.`
+
 ## 2026-07-16 W1 accepted-boundary regression after protected responsive observation construction - `060916d`
 
 - **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 campaign and separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, non-routable, outside App/main and browser storage, and unavailable to Working after its isolated responsive observation component was added.

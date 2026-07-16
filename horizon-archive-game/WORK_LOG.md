@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 - Coder W2: accepted-boundary verification and reload after protected responsive observation component
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1 reported no P0, P1, or P2 accepted-path defect on runtime checkpoint `060916d` and documentation checkpoint `9f916b3`; this bounded verification reproduced none. No runtime, test, art, save, route, curriculum, or tracked QA binary changed.
+- **Verified contracts:** the accepted title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> Glass Meadow path remains covered together with invalid-name recovery, one-activation anti-skip, sanitized resume, responsive available-width framing, `>=44px` required targets, Demo Tour no-credit isolation, RP-001 board order, PY-020 `10/10`, both CUM-01 `16/16` forms, atomic anchor commit, bounded evidence, first-incomplete resume, unchanged `continuation`, and `cityStateDelta:null`.
+- **Protected boundary:** `src/App.jsx`, `src/main.jsx`, and the rebuilt production JS contain no protected Custody Ledger observation component, exercise, SC-03 board, or checkpoint token. Source scans found no RP-002 component import or browser-storage integration. RP-002 remains `REVISE`, protected, non-routable, and absent from accepted-campaign UI, browser storage, save state, art, world state, and Working promotion.
+- **Validation:** current focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **317/317 PASS**; production build PASS with unchanged accepted-demo identity `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and only the existing large-chunk advisory. Exact page, JS, and CSS HTTP checks passed.
+- **Demo reload:** port `4173` was rebuilt and restarted; listener PID `60404` serves `http://127.0.0.1:4173/?staging=rp001` and the exact JS/CSS assets with HTTP `200`.
+- **Issue IDs resolved:** none opened, changed, or reopened. Verification-only pass; no speculative repair or aesthetic edit was made.
+- **Files changed:** this log plus `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, and `../Production Pipeline/STORY_RAIL_MAP.md` only. Unrelated untracked user files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent: review the W2-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build at port 4173 from this checkpoint. Inspect the accepted title -> save/name -> prologue -> Chapter I -> Glass Meadow presentation and accepted RP-001 staging where practical at representative desktop and narrow responsive layouts. Preserve the four accepted 1672 x 941 photoreal masters, aspect-preserving responsive crop, photographic detail, first-person/no-protagonist/no-ship framing, integrated Meadow seams, localized Terminal focus, readable opening hierarchy, >=44px required targets, stable static screen-only geometry, and no stretch, clipping, or horizontal escape. Do not review or expose protected RP-002: its isolated responsive component is intentionally absent from App/main, browser storage, routes, production art, and the accepted bundle. Open a finding only with exact location, evidence, severity, intended outcome, preserved constraints, and a concrete acceptance check; otherwise record a clean pass for Coder aesthetic-polish verification/final reload.`
+
 ## 2026-07-16 - Advance Coder A5: protected responsive five-observation component
 
 - **Mode:** `advance` for A5 advance-construction only.
