@@ -19,7 +19,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
-| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A3 COMPLETE` | Gameplay Master Agent (`A4`) | Lore, Scene, and Curriculum `PASS`; Puzzle/Code pending | Exact RP-002 completion; locked `SC-04`; SOLIDIFIED `PY-010` + `RP003-IE-01`; unchanged `continuation`, zero city delta, reversible routes, no RP-004 destination | A4 builds one bounded graph around the locked mapping; cases, answers, dimensions, thresholds, privacy, and authority boundaries remain fixed. |
+| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A4 COMPLETE` | Coder Agent (`A5`, advance-construction mode) | Lore, Scene, Curriculum, and Puzzle `PASS`; protected Code pending | Exact RP-002 completion; locked `SC-04`; SOLIDIFIED `PY-010` + `RP003-IE-01`; locked `CM-00 -> CM-50` graph; unchanged `continuation`, zero city delta, reversible routes, no RP-004 destination | A5 builds one pure protected journey/harness through real evaluators and returns Gate Review or one genuine hold. |
 
 ## Team positions
 
@@ -27,12 +27,26 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-002`
 - In-design packets: `1 — RP-003`
-- Team 1 railhead: `RP-003 — IN DESIGN / A3 COMPLETE / A4 NEXT`
+- Team 1 railhead: `RP-003 — IN DESIGN / A4 COMPLETE / A5 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `2 ordered packets — RP-002 promoted to Working; RP-003 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 RP-003 Gameplay graph result
+
+`RP-003` remains `IN DESIGN`, protected from the accepted Demo, and `REVISE`. A4 closed exactly the Puzzle gate with one integrated `CM-00 ARRIVE + IDLE -> CM-10 SURVEY -> CM-20–23 PYTHON -> CM-30–34 EXTRACTION -> CM-40 REVIEW -> CM-41 SAVE -> CM-50 VERIFY + RETURN` graph. Three deliberate observations, strict `PY-010`, strict independent `RP003-IE-01`, and save eligibility remain separately owned and cannot cross-credit. The graph locks required/optional/unavailable actions; local answer-free remediation; unlimited blank retry; deterministic first-incomplete focus/resume; privacy sanitation; atomic save/verified restore; early and final reversible return; Tour isolation; responsive/accessibility behavior; and zero city/external response. Clean first play is `24–32 minutes`, mastered replay `14–18 minutes`, and the protected fixture target is `<5 minutes` through real evaluators. A5 owns one pure protected journey/harness only; App/main, browser persistence, normal route exposure, production art, accepted bundles, live Demo, Working passes, and RP-004 remain unauthorized.
+
+### Gameplay Master A4 work-log record — RP-003 integrated graph
+
+- **Work completed:** translated the SOLIDIFIED conditional and information-extraction mapping into one coherent future journey across the four approved SC-04 phases; closed the Puzzle gate without adding transition micro-seams.
+- **Puzzle and learning contract:** three observation facts, `PY-010 8/8 primary -> answer-free remediation -> closed-note condition/true/false/unavailable retrieval -> genuinely blank 8/8 transfer`, and independent `RP003-IE-01 3/3 primary -> per-dimension remediation -> delayed 3/3 retrieval -> genuinely blank 3/3 transfer + unsupported-input explanation` are exact. Their conjunction gates bounded review/save but never cross-credits.
+- **Expected play time:** `24–32 minutes` clean first play; `14–18 minutes` mastered replay; no time limit or timing credit; protected A5 reference-fixture smoke target `<5 minutes` with no skipped evaluator.
+- **Recovery and save:** wrong or contaminated input fails locally to the first incomplete verified boundary, clears transient/private work, preserves finalized evidence, and restores a blank unlimited retry. Save is allowlisted and all-or-none; verified restore replays no world or learning event. Pre-save observation context is re-observed after a reload rather than added to the settled learning-evidence allowlist.
+- **Responsive and accessibility:** representative `1920 x 1080` contains the dominant world plus the complete current owner/content/action group without outer scroll; narrow and `200%` text zoom reflow vertically without horizontal escape; `>=44px` controls, persistent labels, field-associated errors, live status, structural non-color meaning, reduced motion, semantic modality parity, and deterministic focus remain mandatory and zero credit.
+- **Validation scope:** the exact machine-readable mapping and source claims remain unchanged. A4 changed planning artifacts only and requests one A5 protected integration caller/harness rather than per-transition modules.
+- **Exact A5 handoff:** use `RP-003-calibration-margin.md` section `Exact Advance Coder A5 handoff`; implement one protected journey/harness through the real RP-003 evaluators, sanitation, atomic save, verified restore, Tour isolation, and safe return; keep accepted runtime/bundles and RP-004 unchanged; return Gate Review only if the protected evidence bundle passes.
 
 ## 2026-07-16 RP-003 Curriculum mapping result
 
