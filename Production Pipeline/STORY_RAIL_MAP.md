@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED`
-- Team 1 railhead: `RP-002 — A5 partial; protected Tour, prerequisites, and PY-009 primary seam complete`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 transfer seam next`
+- Team 1 railhead: `RP-002 — A5 partial; A1 transfer/explanation meaning locked for A2 impact review`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 transfer seam under bounded impact review`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | Functional gates, responsive presentation, and the coordinated photorealistic production family are validated. Historical pixel and occupant-raster blockers remain retired; optional registered motion is follow-on polish only. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + RUNTIME OWNERSHIP` | `STORYBOARD LOCKED — OCCUPATIONAL EVIDENCE WORK` | `PY-009 SOLIDIFIED` | `RP002-RAI-01 SOLIDIFIED` | `A4 LOCKED — EXECUTABLE WORK + NON-CREDIT TOUR` | `TOUR + PREREQUISITE + PY-009 PRIMARY COMPLETE; TRANSFER NEXT` | The protected app seam now includes sanitized Tour isolation, strict prerequisites, an unfinished occupational Python work image, static six-check evaluation, anti-forgery/privacy boundaries, unlimited recovery, and a causally related suit-rendered record. It remains non-routable; the blank transfer and explanation seams are the next safe construction tranche. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + DISTINCT HUMAN TRANSFER` | `A2 IMPACT REVIEW — TRANSFER ORIGIN/OWNERSHIP` | `PY-009 SOLIDIFIED` | `RP002-RAI-01 SOLIDIFIED` | `A4 LOCKED — EXECUTABLE WORK + NON-CREDIT TOUR` | `TOUR + PREREQUISITE + PY-009 PRIMARY COMPLETE; TRANSFER NEXT` | The primary is the sole unfinished Builder work image and yields the sole causal suit-rendered record. The protected blank transfer is expedition-authored fresh practice, with a Pilot/Teacher-owned explanation and no second city result. All strict gates, privacy boundaries, invariant world state, and non-routable status remain unchanged pending A2–A4 impact confirmation and A5 construction. |
 
 ## Whole-story coverage gate
 
