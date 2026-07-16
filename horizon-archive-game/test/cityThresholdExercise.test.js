@@ -153,41 +153,40 @@ test("resume returns to entry, first incomplete scored boundary, or saved overvi
   assert.equal(getCityThresholdResumeBoard(commitCityThresholdAnchor(completeEvidence())), "SC-02-50");
 });
 
-test("RP-001 child layout derives from the settled canonical-frame layout instead of host media queries", () => {
-  assert.match(cityCss, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-threshold-screen \{ width: 320px; height: 240px; \}/);
-  assert.match(cityCss, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-world \{ width: 320px; height: 180px; \}/);
+test("RP-001 world and command panel reflow within the fluid responsive frame", () => {
+  assert.match(cityCss, /\.canonical-game-frame \.city-threshold-screen \{[\s\S]*?width: 100%;[\s\S]*?height: auto;/);
+  assert.match(cityCss, /\.canonical-game-frame \.scene-frame,[\s\S]*?\.canonical-game-frame \.city-world \{[\s\S]*?aspect-ratio: 16 \/ 9;/);
+  assert.match(cityCss, /data-canonical-layout="narrow"\] \.city-command-panel \{[\s\S]*?grid-template-columns: 1fr;/);
   assert.doesNotMatch(cityCss, /@media \(max-width: 639px\), \(max-height: 479px\)/);
   assert.match(cityCss, /\.city-threshold-screen \{[\s\S]*?overflow: clip;/);
   assert.match(cityCss, /\.city-world \{[\s\S]*?overflow: clip;/);
 
-  for (const [hostWidth, hostHeight] of [[640, 480], [320, 240]]) {
+  for (const [hostWidth, hostHeight] of [[1600, 900], [1920, 1080], [360, 800]]) {
     const parent = getCanonicalGameFrame(hostWidth, hostHeight);
-    const child = getCityThresholdLayout(parent.layout);
-    assert.equal(parent.layout, "narrow");
-    assert.deepEqual(child, { width: parent.width, height: parent.height, worldHeight: parent.worldHeight, interfaceHeight: parent.interfaceHeight });
+    assert.equal(parent.width, hostWidth);
+    assert.equal(parent.worldHeight, hostWidth * 9 / 16);
   }
 });
 
-test("settled completed and reload controls plus focused route remain inside both exact viewports", () => {
+test("normalized route hotspots and lower controls remain bounded on representative layouts", () => {
   assert.match(cityComponent, /return <CityHotspot rect=\{cityThresholdHotspots\[board\]\.forward\} label="ENTER CIVIC DISTRICT"/);
   assert.match(cityComponent, /<button onClick=\{onReturnToCredits\}>RETURN TO PROLOGUE CREDITS<\/button>/);
 
-  for (const [hostWidth, hostHeight] of [[640, 480], [320, 240]]) {
+  for (const [hostWidth, hostHeight] of [[1600, 900], [1920, 1080], [360, 800]]) {
     const parent = getCanonicalGameFrame(hostWidth, hostHeight);
-    const child = getCityThresholdLayout(parent.layout);
-    const origin = {
-      x: (hostWidth - parent.renderedStageWidth) / 2 + parent.bezel.left * parent.scale,
-      y: (hostHeight - parent.renderedStageHeight) / 2 + parent.bezel.top * parent.scale,
+    const logical = getCityThresholdLayout(parent.layout);
+    const source = cityThresholdHotspots["SC-02-50"].forward[parent.layout];
+    const [x, y, width, height] = source;
+    const projected = {
+      left: x / logical.width * hostWidth,
+      top: y / logical.worldHeight * parent.worldHeight,
+      width: width / logical.width * hostWidth,
+      height: height / logical.worldHeight * parent.worldHeight,
     };
-    const focusedForward = projectCityThresholdRect(cityThresholdHotspots["SC-02-50"].forward, parent.layout, parent.scale, origin);
-    const interfacePanel = projectCityThresholdRect({
-      canonical: [0, child.worldHeight, child.width, child.interfaceHeight],
-      narrow: [0, child.worldHeight, child.width, child.interfaceHeight],
-    }, parent.layout, parent.scale, origin);
-    for (const rect of [focusedForward, interfacePanel]) {
-      assert.ok(rect.x >= 0 && rect.y >= 0);
-      assert.ok(rect.right <= hostWidth && rect.bottom <= hostHeight);
-    }
+    assert.ok(projected.left >= 0 && projected.top >= 0);
+    assert.ok(projected.left + projected.width <= hostWidth);
+    assert.ok(projected.top + projected.height <= parent.worldHeight);
+    assert.ok(parent.interfaceHeight >= 220);
   }
 });
 

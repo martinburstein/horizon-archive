@@ -12,7 +12,7 @@ import {
   sanitizeOpeningProgress,
   validateCharacterName,
 } from "../src/openingFlow.js";
-import { CANONICAL_FRAME, NARROW_FRAME } from "../src/canonicalFrame.js";
+import { getCanonicalGameFrame } from "../src/canonicalFrame.js";
 import { MEADOW_PIXEL_HOTSPOTS } from "../src/pixelMeadow.js";
 
 test("character names normalize to a bounded, display-safe local value", () => {
@@ -152,7 +152,7 @@ test("opening objective stays in the lower interface band and cannot cover the T
   );
 
   assert.equal(OPENING_TERMINAL_OBJECTIVE, "Objective: Find a Terminal in the Glass Meadow.");
-  for (const frame of [CANONICAL_FRAME, NARROW_FRAME]) {
+  for (const frame of [getCanonicalGameFrame(1600, 900), getCanonicalGameFrame(360, 800)]) {
     const objectiveBand = {
       left: 0,
       top: frame.worldHeight,
@@ -172,6 +172,6 @@ test("opening objective stays in the lower interface band and cannot cover the T
     assert.ok(terminal.left >= 0 && terminal.top >= 0);
     assert.ok(terminal.left + terminal.width <= frame.width);
     assert.ok(terminal.top + terminal.height <= frame.worldHeight + 0.001);
-    assert.equal(intersects(objectiveBand, terminal), false);
+    assert.ok(objectiveBand.top >= terminal.top + terminal.height - 0.001);
   }
 });

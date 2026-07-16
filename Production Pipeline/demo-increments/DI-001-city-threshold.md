@@ -38,6 +38,13 @@
 - **Animation:** ship the static two-bar membrane state. A zero-drift registered screen-only loop is follow-on art and cannot reuse the retired whole-object GIF.
 - **Validation:** focused **27/27**, full suite **254/254**, and production build passed (`index-BeYlrQCv.js`, `index-nxb4OToG.css`). Increment remains `IN DEMO — PARTIAL` pending coordinator live validation.
 
+## 2026-07-15 W2 fluid-stage disposition
+
+- **`VIEWPORT-P1-001`:** `RESOLVED IN W2 — ROOT LIVE REVIEW PENDING.` Fixed logical canvas selection, uniform zoom, fixed bezel dimensions, and centered-stage margins were removed. The game now uses a fluid responsive stage with a `16:9` world and reflowing lower interface.
+- **RP-001 presentation:** City Threshold world art fills the responsive width with normalized hotspot geometry; its command panel flows beneath and stacks on narrow layouts. No puzzle, evidence, save, continuation, city delta, or route rule changed.
+- **Accessibility:** representative desktop, portrait, narrow, and zoom/reflow source checks replace retired exact-viewport gates. Required controls retain `44 x 44 CSS px`, content may scroll vertically, and horizontal page escape is clipped at the host.
+- **Validation:** focused **39/39**, full suite **259/259**, final CSS cleanup recheck **27/27**, build passed (`index-C_di6hBP.js`, `index-BV79dG2w.css`). Root live review is the next gate.
+
 ## Identity
 
 - Rail Packet: `RP-001 — City Threshold`

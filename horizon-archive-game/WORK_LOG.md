@@ -1,5 +1,16 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2: fluid responsive stage repair
+
+- **Mode:** `bug-repair` for W2 only.
+- **Resolved `VIEWPORT-P1-001`:** replaced the fixed `640 x 480` / `320 x 240` logical-canvas selector, uniform zoom, fixed CRT bezel dimensions, and centered stage anchor with a fluid responsive frame. The optional CRT character is now a lightweight scalable border; it no longer caps the world or creates large side margins.
+- **Responsive presentation:** the world stage consumes available content width at `16:9` and remains the dominant visual region. The lower command, dialogue, Demo Tour, and RP-001 regions flow beneath it; narrow layouts stack controls and text in document flow. Representative frame calculations cover `1600 x 900`, `1920 x 1080`, portrait, and narrow displays without integer scaling.
+- **Preserved:** normalized Meadow and City Threshold hotspot percentages; first-person photoreal art/crops; labels, focus and modal behavior; save/resume; mastery/privacy; Demo Tour isolation/recovery; zero-city-response; and all learning gates. Required narrow controls now retain at least `44 x 44 CSS px`; the host clips horizontal escape while allowing vertical reflow and zoom.
+- **Files changed:** `src/canonicalFrame.js`, `src/CanonicalGameFrame.jsx`, `src/styles.css`, `test/canonicalFrame.test.js`, `test/openingFlow.test.js`, `test/cityThresholdExercise.test.js`, `test/terminalExercise.test.js`, `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, and this log.
+- **Validation:** focused responsive/opening/RP-001/Tour/Terminal suite passed **39/39**; full game suite passed **259/259**; final responsive CSS cleanup recheck passed **27/27**; production build passed with the existing large-chunk advisory. Build identity: `index-C_di6hBP.js`, `index-BV79dG2w.css`.
+- **Demo status:** production output is rebuilt for the existing port `4173` preview. Root live review remains required at representative desktop, narrow, and zoom/reflow sizes before aesthetic acceptance.
+- **Exact W3 handoff:** `Aesthetic Agent: review VIEWPORT-P1-001 only on the rebuilt fluid-stage demo. Confirm the world uses nearly all available width at desktop without fixed-canvas black margins, remains 16:9 and first-person, and keeps the lower command/Tour/RP-001 UI in readable document flow. At narrow and 200% zoom confirm no horizontal page escape, no clipped owner or negative-authority copy, >=44px required targets, usable focus/modals, and no stretched art. Treat gameplay, saves, mastery, Tour, hotspots, and city state as locked.`
+
 ## 2026-07-15 — Coder A5 partial: Custody Ledger prerequisite-to-primary seam
 
 - **Mode:** `advance` for A5 only.

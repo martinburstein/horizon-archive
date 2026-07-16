@@ -769,43 +769,48 @@ h1 {
 }
 
 .canonical-game-host {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  padding: clamp(0px, 0.75vw, 12px);
+  overflow-x: clip;
   background: #080910;
 }
 .crt-stage-anchor {
   position: relative;
-  flex: 0 0 auto;
+  width: min(100%, 1920px);
+  min-height: calc(100dvh - clamp(0px, 1.5vw, 24px));
+  margin-inline: auto;
 }
 .crt-shell {
-  position: absolute;
-  inset: 0 auto auto 0;
-  box-sizing: content-box;
-  border-style: solid;
-  border-color: transparent;
-  border-image-source: url("./assets/crt-bezel.png");
-  /* Keep the source controls at an even X/Y scale so the round knobs stay round. */
-  border-image-slice: 113 165 128 165;
-  border-image-repeat: stretch;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: inherit;
+  padding: clamp(3px, 0.55vw, 10px);
+  border: 1px solid #3a3a42;
+  border-radius: clamp(0px, 0.8vw, 14px);
+  background: #111219;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.76));
 }
 .canonical-game-frame {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  min-height: calc(100dvh - clamp(6px, 2.6vw, 44px));
+  overflow: visible;
   background: #090811;
   box-shadow: inset 0 0 0 1px rgba(217, 202, 170, 0.25);
 }
-.canonical-game-frame .game-shell { width: 100%; height: 100%; min-height: 0; }
-.canonical-game-frame .adventure-screen { grid-template-rows: var(--world-height) var(--interface-height); overflow: hidden; }
-.canonical-game-frame .adventure-screen[data-scene][data-terminal-open] { grid-template-rows: var(--world-height) var(--interface-height); overflow: hidden; }
+.canonical-game-frame .game-shell { width: 100%; height: auto; min-height: inherit; }
+.canonical-game-frame .adventure-screen,
+.canonical-game-frame .adventure-screen[data-scene][data-terminal-open] {
+  grid-template-rows: auto auto;
+  overflow: visible;
+}
 .canonical-game-frame .scene-frame { border-bottom-width: 1px; }
 .canonical-game-frame .scene-art,
 .canonical-game-frame picture { display: block; width: 100%; height: 100%; image-rendering: auto; }
-.canonical-game-frame .scene-art { object-fit: fill; object-position: center; }
+.canonical-game-frame .scene-art { object-fit: cover; object-position: center; }
 .canonical-game-frame .scene-art.glass-meadow-art { image-rendering: auto; }
 .canonical-game-frame .scene-status { inset: 6px 6px auto; gap: 4px; padding: 3px 5px; font-size: 6px; }
 .canonical-game-frame .scene-status strong { font-size: 8px; }
@@ -1295,8 +1300,8 @@ h1 {
 }
 .city-threshold-screen {
   position: relative;
-  width: 640px;
-  height: 480px;
+  width: 100%;
+  height: auto;
   overflow: clip;
   background: #090b13;
   color: #f2e7c4;
@@ -1305,8 +1310,9 @@ h1 {
 
 .city-world {
   position: relative;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   overflow: clip;
   background: #111526;
 }
@@ -1370,8 +1376,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 190px;
   gap: 8px;
-  width: 640px;
-  height: 120px;
+  width: 100%;
+  height: auto;
   padding: 9px 12px;
   border-top: 4px solid #9a6c3d;
   background: #090b13;
@@ -1419,8 +1425,8 @@ h1 {
   .city-cycle-layer i { animation: none; }
 }
 
-.canonical-game-frame[data-canonical-layout="narrow"] .city-threshold-screen { width: 320px; height: 240px; }
-.canonical-game-frame[data-canonical-layout="narrow"] .city-world { width: 320px; height: 180px; }
+.canonical-game-frame[data-canonical-layout="narrow"] .city-threshold-screen { width: 100%; height: auto; }
+.canonical-game-frame[data-canonical-layout="narrow"] .city-world { width: 100%; height: auto; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-native { display: none; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-narrow { display: block; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-hotspot {
@@ -1432,8 +1438,8 @@ h1 {
 }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-cycle-layer i { transform: scale(0.5); transform-origin: left top; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-command-panel {
-    width: 320px;
-    height: 60px;
+    width: 100%;
+    height: auto;
     grid-template-columns: 1fr 106px;
     padding: 4px 6px;
     border-top-width: 2px;
@@ -1451,3 +1457,164 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .city-learning-panel select { min-height: 24px; font-size: 7px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-check-list { columns: 2; font-size: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-overlay-cancel { margin: auto 8px 5px; min-height: 22px; font-size: 7px; }
+
+/* Fluid photographic presentation: legacy logical coordinates survive only as normalized hotspots. */
+.canonical-game-frame .scene-frame,
+.canonical-game-frame .demo-tour-world,
+.canonical-game-frame .city-world {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.canonical-game-frame .command-panel {
+  width: 100%;
+  height: auto;
+  min-height: 220px;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(280px, 2fr) minmax(180px, 0.7fr);
+  gap: clamp(8px, 1.2vw, 20px);
+  padding: clamp(12px, 1.5vw, 24px);
+}
+
+.canonical-game-frame .verb,
+.canonical-game-frame .inventory button,
+.canonical-game-frame .dialogue-actions button,
+.canonical-game-frame .demo-tour-actions button,
+.canonical-game-frame .demo-tour-confirmation-actions button,
+.canonical-game-frame .city-command-actions button,
+.canonical-game-frame .city-overlay button,
+.canonical-game-frame .city-overlay select {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.canonical-game-frame .demo-tour-screen {
+  display: grid;
+  grid-template-rows: auto auto;
+  min-height: inherit;
+  overflow: visible;
+}
+
+.canonical-game-frame .title-screen .title-art,
+.canonical-game-frame .opening-screen .title-art,
+.canonical-game-frame .chapter-reveal-screen .title-art {
+  height: 100%;
+}
+
+.canonical-game-frame .demo-tour-controls {
+  min-height: 180px;
+  padding: clamp(14px, 2vw, 28px);
+}
+
+.canonical-game-frame .city-threshold-screen {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+  height: auto;
+  min-height: inherit;
+  overflow: visible;
+}
+
+.canonical-game-frame .city-command-panel,
+.canonical-game-frame[data-canonical-layout="narrow"] .city-command-panel {
+  width: 100%;
+  height: auto;
+  min-height: 180px;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 28%);
+  gap: 12px;
+  padding: 14px 18px;
+  border-top-width: 3px;
+  font-size: clamp(0.75rem, 1.1vw, 1rem);
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .city-world {
+  width: 100%;
+  height: auto;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .command-panel {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  min-height: 0;
+  padding: 12px;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .verb-grid,
+.canonical-game-frame[data-canonical-layout="narrow"] .inventory,
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-box {
+  grid-column: 1;
+  grid-row: auto;
+  width: 100%;
+  height: auto;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .verb-grid {
+  grid-template-columns: repeat(3, minmax(88px, 1fr));
+  overflow-x: auto;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .inventory {
+  grid-template-columns: repeat(2, minmax(88px, 1fr));
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .verb,
+.canonical-game-frame[data-canonical-layout="narrow"] .inventory button,
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions .continue-action,
+.canonical-game-frame[data-canonical-layout="narrow"] .terminal-practice-actions .demo-tour-entry {
+  width: auto;
+  height: auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy p {
+  max-height: none;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-screen {
+  grid-template-rows: auto auto;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-controls {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  padding: 12px;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-actions {
+  flex-wrap: wrap;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-actions button,
+.canonical-game-frame[data-canonical-layout="narrow"] .demo-tour-confirmation-actions button {
+  min-height: 44px;
+  font-size: 0.75rem;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .city-command-panel {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.canonical-game-frame[data-canonical-layout="narrow"] .city-command-actions button,
+.canonical-game-frame[data-canonical-layout="narrow"] .city-overlay-cancel,
+.canonical-game-frame[data-canonical-layout="narrow"] .city-learning-panel select {
+  min-height: 44px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  body { min-width: 0; }
+  .canonical-game-host { padding: 0; }
+  .crt-shell { padding: 2px; border-radius: 0; }
+  .canonical-game-frame[data-canonical-layout="narrow"] .verb-grid,
+  .canonical-game-frame[data-canonical-layout="narrow"] .inventory { grid-template-columns: 1fr; overflow-x: visible; }
+}

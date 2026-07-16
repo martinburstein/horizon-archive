@@ -1,36 +1,34 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { getCanonicalGameFrame } from "../src/canonicalFrame.js";
 
-test("canonical frame keeps authored logical layouts while the CRT stage fills the display", () => {
-  const desktop = getCanonicalGameFrame(1600, 900);
-  assert.equal(desktop.layout, "canonical");
-  assert.deepEqual(
-    { width: desktop.width, height: desktop.height, worldHeight: desktop.worldHeight, interfaceHeight: desktop.interfaceHeight },
-    { width: 640, height: 480, worldHeight: 360, interfaceHeight: 120 },
-  );
-  assert.deepEqual({ stageWidth: desktop.stageWidth, stageHeight: desktop.stageHeight }, { stageWidth: 736, stageHeight: 586 });
-  assert.equal(desktop.scale, 1.495);
-  assert.ok(desktop.renderedStageHeight <= 900 && desktop.renderedStageHeight >= 870);
+const component = readFileSync(new URL("../src/CanonicalGameFrame.jsx", import.meta.url), "utf8");
+const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
-  const sourceBottomEdgeWidth = 1536 - 165 - 165;
-  const horizontalControlScale = desktop.width / sourceBottomEdgeWidth;
-  const verticalControlScale = desktop.bezel.bottom / 128;
-  assert.ok(Math.abs(horizontalControlScale - verticalControlScale) < 0.001);
+test("responsive frame uses available width with a 16:9 world and reflowing interface", () => {
+  for (const [width, height] of [[1600, 900], [1920, 1080], [768, 1024], [360, 800]]) {
+    const frame = getCanonicalGameFrame(width, height);
+    assert.equal(frame.width, width);
+    assert.equal(frame.worldHeight, width * 9 / 16);
+    assert.ok(frame.interfaceHeight >= 220);
+    assert.equal(frame.height, frame.worldHeight + frame.interfaceHeight);
+    assert.equal(frame.scale, 1);
+    assert.equal(frame.renderedStageWidth, width);
+    assert.equal(frame.layout, width <= 719 ? "narrow" : "canonical");
+  }
+});
 
-  const compactDesktop = getCanonicalGameFrame(640, 480);
-  assert.equal(compactDesktop.layout, "narrow");
-  assert.equal(compactDesktop.scale, 1.983);
-  assert.ok(compactDesktop.renderedStageWidth <= 640 && compactDesktop.renderedStageHeight <= 480);
+test("frame component no longer applies fixed dimensions, zoom, or integer canvas selection", () => {
+  assert.doesNotMatch(component, /style=\{\{ width: frame\.|zoom: frame\.scale|--world-height|--interface-height|data-canonical-scale/);
+  assert.match(styles, /\.canonical-game-frame \.scene-frame,[\s\S]*?aspect-ratio: 16 \/ 9;/);
+  assert.match(styles, /\.canonical-game-frame \.adventure-screen,[\s\S]*?grid-template-rows: auto auto;/);
+  assert.match(styles, /\.canonical-game-host \{[\s\S]*?overflow-x: clip;/);
+  assert.doesNotMatch(styles, /\.canonical-game-host \{[^}]*position: fixed;/s);
+});
 
-  const narrow = getCanonicalGameFrame(320, 240);
-  assert.equal(narrow.layout, "narrow");
-  assert.deepEqual(
-    { width: narrow.width, height: narrow.height, worldHeight: narrow.worldHeight, interfaceHeight: narrow.interfaceHeight },
-    { width: 320, height: 240, worldHeight: 180, interfaceHeight: 60 },
-  );
-  assert.deepEqual({ stageWidth: narrow.stageWidth, stageHeight: narrow.stageHeight }, { stageWidth: 320, stageHeight: 240 });
-  assert.equal(narrow.scale, 1);
-  assert.equal(narrow.renderedWidth, 320);
-  assert.equal(narrow.renderedHeight, 240);
+test("narrow and zoom-reflow presentation keeps required targets at least 44px", () => {
+  assert.match(styles, /data-canonical-layout="narrow"\] \.verb,[\s\S]*?min-width: 44px;[\s\S]*?min-height: 44px;/);
+  assert.match(styles, /data-canonical-layout="narrow"\] \.demo-tour-actions button,[\s\S]*?min-height: 44px;/);
+  assert.match(styles, /@media \(max-width: 480px\)[\s\S]*?body \{ min-width: 0; \}/);
 });

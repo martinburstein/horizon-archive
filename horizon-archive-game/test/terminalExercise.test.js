@@ -96,7 +96,7 @@ test("App gates the editable first signal behind the session-only orientation an
   assert.ok(source.indexOf('className="orientation-context"', orientationGate) < source.indexOf('className="orientation-action"', orientationGate));
   assert.ok(source.indexOf('className="orientation-action"', orientationGate) < source.indexOf('className="orientation-choices"', orientationGate));
   assert.match(styles, /\.canonical-game-frame \.first-terminal-orientation \{ display: grid; overflow: hidden; \}/);
-  assert.match(styles, /\.canonical-game-frame \.adventure-screen\[data-scene\]\[data-terminal-open\] \{ grid-template-rows: var\(--world-height\) var\(--interface-height\); overflow: hidden; \}/);
+  assert.match(styles, /\.canonical-game-frame \.adventure-screen,[\s\S]*?\.canonical-game-frame \.adventure-screen\[data-scene\]\[data-terminal-open\] \{[\s\S]*?grid-template-rows: auto auto;[\s\S]*?overflow: visible;/);
   assert.match(styles, /\.first-terminal-orientation \{[^}]*grid-template-rows: auto minmax\(0, 1fr\);[^}]*overflow: hidden;/s);
   assert.match(styles, /\.orientation-action \{[^}]*overflow: auto;/s);
   assert.match(styles, /\.orientation-choices button \{[^}]*min-height: 44px;/s);
