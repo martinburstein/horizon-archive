@@ -19,11 +19,11 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / COORDINATOR PASS` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Working Team (`accepted maintenance`) | None: all nine passes and coordinator desktop/narrow, `395/395`, build, curriculum, syntax, and full E2E gates passed | Maintain accepted RP-001; Advance A1 selects the next smallest protected RP-002 adjacency |
+| 1 | `RP-001` | `BUG REPAIR — VIEWPORT-P1-002` | Keep the complete accepted world, dialogue, verbs, inventory, and current required controls inside one representative `1920 × 1080` laptop viewport without outer-page scrolling | Coder Agent (`W2 — bug-repair`) | P1: first Glass Meadow screen has `1317px` document height in a `1080px` viewport; required command controls begin below the fold | Add exact regression coverage, contain the desktop shell, preserve narrow/200%-text reflow and all accepted invariants, rebuild/reload, and return computed evidence |
 
 `RP-002` is at `GATE REVIEW — A5 HANDOFF`, not promoted. Its protected journey remains absent from App/main, browser storage, accepted bundles, normal routing, the live Demo, and this queue.
 
-**Exact next W1 verification:** play only the accepted RP-001 campaign and separate no-credit Tour. Verify Martin's live-demo full-viewport request at representative `1920 x 1080`: the complete live shell should fill the available screen gracefully, keep the dominant world plus every current required control visible without outer-page scroll or excessive dead framing, and preserve accessible narrow and text-zoom reflow. Report the earliest exact accepted-path defect only. Do not treat RP-002's protected presentation metadata as implemented UI or authorize its normal integration.
+**W1 result / exact W2 boundary:** `VIEWPORT-P1-002` is open on accepted RP-001. Repair the representative desktop full-shell overflow without changing narrow/`200%` text reflow, gameplay, curriculum, saves, art meaning, world/route state, or protected RP-002. RP-002 remains Gate Review protected and unpromoted.
 
 ## Current-demo quality lane
 
@@ -43,3 +43,4 @@ The required pass order is Player Agent, shared Coder Agent bug repair and reloa
 | 6 | `RP001-AESTH-005` — Detached pixel-era Glass Meadow Terminal and route-marker overlays | W1/W3 reports; integrated master provenance; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
 | 7 | `OPENING-AESTH-001` — First-45-seconds opening remained a miniature legacy panel inside the fluid stage | W3 hierarchy review; coordinator live walkthrough; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
 | 8 | `MEADOW-AESTH-FOCUS-001` — Full primary-hit-area focus treatment dominates the first Glass Meadow plate | Root live `1280 x 720` before/after; W3/W4 evidence; responsive full E2E; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
+| 9 | `VIEWPORT-P1-002` — Representative `1920 × 1080` Glass Meadow shell pushes required command controls below the fold | W1 exact computed live evidence: document `1317 > 1080`; scene ends `1072.3125`; command panel ends `1292.3125`; `demo-increments/DI-001-city-threshold.md` | `P1 OPEN — BUG REPAIR` | Coder Agent W2 |
