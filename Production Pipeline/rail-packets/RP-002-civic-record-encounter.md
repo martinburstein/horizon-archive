@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING MODEL COMPLETE; A2 ATOMIC PERSISTENCE/SAVE PRESENTATION COMPLETE; REVISE; NON-ROUTABLE`
+- Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING MODEL COMPLETE; A4 ATOMIC PERSISTENCE/SAVE GRAPH CONFIRMED; REVISE; NON-ROUTABLE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -1264,3 +1264,87 @@ RAI-I / rai_complete / PILOT // FLIGHT RECORDER
 - **Invariant proof:** the separate no-credit Tour store, offline/no-live-service/no-authority/no-exam-guarantee clauses, both predecessor facts, SC-03 world/clock/route/material locks, closed identity-bearing material, unchanged `continuation`, null city delta, reversible return, no normal route, no successor, and zero city/external action remain exact.
 - **Validation:** RP-002 validator self-test passed; Python primary and transfer references passed `6/6`; responsible-AI primary and transfer references passed `9/9`; all curriculum JSON parsed; official-source, contract, packet, queue, map, eligibility, atomicity, sanitation, Tour, and invariant assertions passed; whitespace checks passed.
 - **Exact A4 handoff:** use `Exact Gameplay Master A4 handoff — atomic persistence/save eligibility and sanitation lock` in the Curriculum Track. Perform only the save-graph impact confirmation, return a persistence/save-only protected A5 handoff, keep later integration seams excluded, and return `REVISE` with no Working promotion.
+
+## A4 atomic persistence/save graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 ATOMIC PERSISTENCE/SAVE GRAPH LOCKED; SOLIDIFIED CHAINS AND NARROW A5 SCOPE REMAIN VALID`.
+- **Bounded impact:** the A1 meaning, A2 responsive presentation, and A3 eligibility/sanitation locks fit the existing Custody Ledger immediately after the exact zero-credit RAI Pilot conclusion. This confirmation adds no scored action, observation fact, case, expected answer, threshold, remediation rule, durable learning-evidence field, world response, route, reward, authority, or successor.
+- **Expected play time:** the complete normal-route puzzle remains `12–18 minutes`; eligible review, one deliberate confirmation, and local save status add approximately `1–3 minutes`. A recoverable local failure may add another `1–2 minutes`. Time is neither stored nor scored.
+
+### Locked atomic persistence/save subgraph
+
+```text
+RAI-I / rai_complete / PILOT // FLIGHT RECORDER
+  -> zero-credit acknowledgement: clear conclusion presentation -> SAVE-A
+
+SAVE-A / save_eligibility / SYSTEM // EXPEDITION SESSION
+  -> derive only from finalized PY-009 chain
+     AND finalized RP002-RAI-01 chain
+     AND five finalized observations
+  -> eligible: REVIEW BOUNDED COMPARISON -> SAVE-B
+  -> ineligible, missing, forged, stale, partial, or review_required:
+     SYSTEM sanitation -> clear private work and atomic triplet -> SAVE-G
+
+SAVE-B / bounded_review / PILOT // FLIGHT RECORDER
+  -> show only finalized bounded summary and existing survey-marker meaning
+  -> PREPARE SAVE: open focus-contained Pilot confirmation -> SAVE-C
+  -> safe close/return: write nothing; preserve first incomplete boundary
+
+SAVE-C / save_confirmation / PILOT // FLIGHT RECORDER
+  -> CANCEL or Escape: write nothing -> SAVE-B, focus PREPARE SAVE
+  -> SAVE BOUNDED COMPARISON: sole commit intent -> SAVE-D
+
+SAVE-D / local_atomic_commit / SYSTEM // EXPEDITION STATE
+  -> sanitize again, then write exactly and together:
+       civicComparisonSaved=true
+       nextSurveyDirectionMarked=true
+       rp002Checkpoint="comparison_complete"
+  -> success: clear private work -> SC-03-40
+  -> local failure: retain none of the triplet -> SAVE-E
+
+SAVE-E / recoverable_save_failure / SYSTEM // EXPEDITION STATE
+  -> RETRY SAVE: fresh focus-contained confirmation -> SAVE-C heading
+  -> RETURN SAFELY: unchanged bounded review -> SAVE-B / PREPARE SAVE
+
+reload or later return
+  -> verified complete triplet plus every eligibility dependency: SAVE-F / SC-03-50
+  -> otherwise: System sanitation clears/downgrades triplet -> SAVE-G
+
+SAVE-F / verified_restore / SYSTEM // EXPEDITION STATE
+  -> clear working content; focus restored-status heading, then saved controls
+  -> do not replay arrival, observations, work image, suit result,
+     either Pilot conclusion, confirmation, success status, or success effect
+
+SAVE-G / sanitation_downgrade / SYSTEM // EXPEDITION STATE
+  -> clear private work and all three progression fields together
+  -> focus downgrade heading, then first control at deterministic
+     first incomplete prerequisite, observation, PY, or RAI boundary
+```
+
+- **Eligibility is conjunctive and derived:** `SAVE-A` may become eligible only when the finalized `PY-009` primary `6/6` + mapped remediation as needed + genuinely blank transfer `6/6` + separately scored three-part explanation, the finalized `RP002-RAI-01` primary `9/9` + mapped remediation as needed + genuinely blank transfer `9/9` + separately scored three-part explanation, and all five finalized observation IDs (`fixed_trace`, `later_stewardship`, `outlined_gap`, `distant_repetition`, `closed_boundary`) are present and valid. For A5 state-model construction, those observations must enter only as pre-finalized sanitized fixtures; A5 may not implement or infer their interactions.
+- **One active human group:** `SAVE-A` through `SAVE-G` mutually replace one another. Inactive review, confirmation, status, failure, restore, and downgrade groups have no keyboard or accessibility presence. Reading, acknowledgement, summary display, focus, status announcements, retry presentation, restoration, and dismissal cannot auto-advance or synthesize evidence.
+- **Pilot and System ownership:** the Pilot owns the provisional bounded review and the explicit save intent. The expedition System alone owns eligibility derivation, sanitation, transaction status, recoverable failure, downgrade, and verified restore. The city, Builders, local surface, suit translation, Machine, closed interlock, world plate, and Tour own none of the save graph.
+- **Atomic transaction:** `SAVE BOUNDED COMPARISON` is the only commit intent. The local/offline transaction writes exactly the three approved progression fields together or none. Cancellation, stale input, failed sanitation, local write failure, partial triplet, forged completion, or missing dependency cannot retain a marker without the comparison, retain a completed checkpoint without eligibility, consume mastery, change attempts or hints, or advance a route.
+- **Local recoverability:** a write failure remains inside the human interface with the exact System-owned recoverable status. `RETRY SAVE` re-sanitizes and opens a fresh contained confirmation; `RETURN SAFELY` returns to the unchanged bounded review. Retry is unlimited, neither path repeats scored content, and both retain finalized allowlisted evidence without private work.
+- **Deterministic restoration and downgrade:** a verified atomic save reconstructs only `SC-03-50`, clear working state, and the saved expedition controls. Any missing, forged, stale, partial, or `review_required` dependency clears/downgrades all three progression fields together and returns to the first incomplete protected boundary in exact route order: both predecessor facts; the five finalized observations in locked interaction order; `L-03-01` prerequisite; `L-02-02` prerequisite; `PY-009` first incomplete scored boundary; then `RP002-RAI-01` first incomplete scored boundary. Focus lands on the complete System status heading and then the first required control; no discovery, conclusion, or world event replays.
+- **Privacy sanitation:** only the existing finalized identifiers, per-dimension booleans, bounded attempt/hint counts, confidence, fixed misconception tags, mastery state, finalized observation IDs, and the verified three-field progression triplet may survive. Learner source, raw dictionaries, choices, guided work, feedback, explanation prose, private notes, identity content, Builder/source content, credentials, endpoints, payloads, responses, and external-action requests clear before commit and on every failure/downgrade path.
+- **Demo Tour isolation:** Tour may show only `SYSTEM // DEMO TOUR — Preview only — bounded comparison not saved.` Its separate sanitized object has no `PREPARE SAVE`, commit, retry-save, success, or verified-restore path and cannot contain or copy the three progression fields, campaign evidence, mastery, observations, attempts, hints, route state, or a normal completed checkpoint.
+- **Zero-evidence presentation:** save review, summary, confirmation, commit intent, status, local failure, cancellation, sanitation, downgrade, verified restore, owner prefix, focus, wrapping, scrolling, layout, color, motion, sound, timing, confidence, acknowledgement, navigation, world display, and Tour traversal remain zero mastery evidence and zero observation evidence. Only already-finalized protected evidence may satisfy eligibility.
+- **State and authority invariants:** both RP-001 predecessor facts remain true; `continuation` remains unchanged; `cityStateDelta=null`; City Threshold return remains reversible; the first-person photoreal SC-03 world, closed identity material, registered geometry, materials, heat/light/maintenance paths, and monotonic clocks remain invariant. No item, access, permission, consent, city response, Builder testimony, identity inference, normal route, successor exposure, live service, credential, external action, exam credit, or exam guarantee is created.
+
+### Player-observable validation additions
+
+1. A completed RAI conclusion cannot expose review unless both strict finalized learning chains and all five finalized observations independently pass sanitation; review/status UI cannot manufacture a missing conjunct.
+2. `REVIEW BOUNDED COMPARISON` exposes only the finalized bounded summary. Reading, revisiting, focusing, or dismissing it changes no mastery, observation, attempt, hint, route, city, or progression field.
+3. Only the visible `SAVE BOUNDED COMPARISON` action inside the Pilot confirmation can request the commit. `CANCEL`, Escape, close, return, reload, Tour, or a forged action field writes none of the triplet and restores deterministic focus.
+4. A successful commit adds exactly the three approved fields together. Simulated local failure, stale input, or a supplied partial triplet leaves/downgrades all three together, preserves finalized evidence, clears private work, and offers unlimited safe retry or return.
+5. Verified restore reaches `SC-03-50` with the exact System status and deterministic heading-first focus without replaying arrival, observations, Builder work, suit result, Pilot conclusions, or a success effect. Invalid restore shows the System downgrade and focuses the first incomplete protected boundary.
+6. Entering, reloading, navigating, or leaving Demo Tour cannot expose a normal save action, create a completed restore, or change campaign, mastery, observation, attempt, hint, predecessor, route, world, city, or transaction bytes.
+
+- **Locked mechanics:** exact eligibility conjunction; zero-credit conclusion acknowledgement; mutually replacing System eligibility, Pilot review, Pilot confirmation, System success/failure, verified restore, and System downgrade groups; explicit sole commit intent; exact all-or-none three-field transaction; sanitation before commit and restore; private-work clearing; local unlimited recovery; deterministic first-incomplete reconstruction and focus; separate no-credit Tour; Python/RAI/observation separation; offline/no-authority/no-exam-guarantee; and every campaign/world/city/route invariant.
+- **Flexible implementation:** reducer/helper names, internal persistence adapter, and state labels may vary only if the protected model preserves the exact observable order, owner text, atomicity, sanitation, one-active-group replacement, focus destinations, recovery behavior, and zero-evidence boundaries. Failure injection may be a deterministic test seam; it may not become a player-facing authority or world event.
+- **Validation performed:** RP-002 curriculum self-test passed; packaged Python primary and transfer references passed `6/6`; packaged responsible-AI primary and transfer references passed `9/9`; source assertions confirmed the exact eligibility conjunction, all-or-none triplet, System/Pilot ownership, one-active-group recovery, deterministic restore/downgrade focus, Tour isolation, A5 exclusions, disabled normal route, invariant world/city/authority boundaries, and updated queue/map ownership; `git diff --check` passed.
+
+### Exact Advance Coder A5 handoff — protected atomic persistence/save model seam
+
+`Coder Agent — advance mode: implement only the protected atomic persistence/save state-model seam after the existing exact zero-credit RAI Pilot conclusion in the non-routable Custody Ledger model. Use pre-finalized sanitized observation fixtures only; do not implement observation interactions or derive observation credit from presentation. Preserve save-review eligibility as the strict conjunction of the finalized PY-009 6/6 primary -> mapped remediation as needed -> genuinely blank 6/6 transfer -> separately scored three-part explanation chain, the finalized RP002-RAI-01 9/9 primary -> mapped per-case/per-dimension remediation as needed -> genuinely blank 9/9 transfer -> separately scored three-part explanation chain, and finalized fixed_trace/later_stewardship/outlined_gap/distant_repetition/closed_boundary observations. Add one mutually replacing state-model sequence: zero-credit conclusion acknowledgement -> SYSTEM // EXPEDITION SESSION eligibility -> PILOT // FLIGHT RECORDER bounded review -> focus-contained Pilot save-intent confirmation -> SYSTEM // EXPEDITION STATE atomic success or recoverable local failure -> verified System restore, with deterministic System sanitation downgrade for missing, forged, stale, review_required, or partial dependencies. Keep SAVE BOUNDED COMPARISON as the sole commit intent. Sanitize immediately before commit and restore; write exactly civicComparisonSaved=true, nextSurveyDirectionMarked=true, and rp002Checkpoint="comparison_complete" all together or none; clear private work; on failure retain no partial field and permit unlimited RETRY SAVE or RETURN SAFELY. Derive deterministic first-incomplete reconstruction and focus intent; verified restore may reconstruct only SC-03-50 and clear working state, while downgrade clears all three progression fields and targets the first incomplete protected boundary without replaying arrival, observations, the Builder work image, suit result, either Pilot conclusion, or a success effect. Preserve the existing privacy allowlist, byte-stable separate campaign/Tour objects, Tour no-credit/no-commit isolation, both predecessor flags, unchanged continuation, cityStateDelta=null, reversible return, invariant world/clocks, closed identity, Python/RAI/observation separation, offline/no-live-service/no-authority/no-exam-guarantee, and zero city/external action. Review, confirmation, status, failure, sanitation, restore, focus, layout, confidence, world display, and Tour traversal remain zero mastery and observation evidence. Add focused state-model tests for eligibility anti-forgery, each missing conjunct, sole explicit intent, exact triplet atomicity, deterministic local failure injection, retry/return recovery, cancellation/Escape, private-work clearing, stale/partial/review_required downgrade, verified restore, first-incomplete focus intent, conclusion/world-event non-replay, Tour rejection, campaign/Tour byte stability, and zero world/city/route/authority delta. Do not add observation UI, responsive UI, protected or normal route exposure, storage integration beyond the protected model adapter, production art, world changes, successor exposure, or Working promotion. Return REVISE and do not perform Working passes.`
