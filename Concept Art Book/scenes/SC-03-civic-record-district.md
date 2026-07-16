@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, and five-observation presentation reviews locked; no final art
+- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, and responsive five-observation interface presentation reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -32,6 +32,15 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 - Complete owner, statement, progress, and status text carries meaning without color, icon, sound, motion, placement, or world feedback. Required semantic regions and actions remain focus-visible, registered, naturally wrapped, vertically scroll-recoverable, free of horizontal page escape, and at least `44 x 44 CSS px` across representative desktop and narrow layouts.
 - Only the matching deliberate campaign action can finalize an ID. Visibility, focus, hover, dwell, reading, dismissal, progress display, learning, save, restore, and Tour traversal remain zero observation and mastery evidence. Tour uses its separate preview/no-credit owner and cannot finalize, copy, restore, count, or unlock any campaign observation.
 - Confirmation remains entirely in the human interface. The world plate, crop, exposure, materials, seams, heat, light, maintenance, closed interlock, and monotonic clock never highlight, pulse, open, reroute, or change cadence.
+
+#### Responsive observation-interface grouping and reflow lock
+
+- The active board's registered first-person world remains the dominant, stationary upper region while one separate expedition group replaces beneath it. Interface wrapping, progress length, focus, or recovery may extend vertical document flow but may not crop, pan, zoom, cover, rescale, relight, blur, or shift the world.
+- Entry presents complete System owner -> exact entry copy -> currently available exact action names. A valid action replaces it with complete Scene owner -> exact matching Scene statement -> complete System progress owner and exact progress -> one exact zero-credit return/advance control. Replay, unavailable, sanitation/resume, and Tour use the same owner -> status -> control hierarchy. Inactive groups are absent from visual, keyboard, pointer, and accessibility order.
+- Focus enters the complete active-group heading. After acknowledgement it returns to the canonical first incomplete semantic region, `COMPARE SCALE`, or `OPEN LOCAL COMPARISON`; recovery exposes its full text before the return target. The world is never used as a success-focus destination.
+- Wide/laptop presentation keeps the world above a readable lower region and permits internal columns only when the owner and statement remain together and semantic order does not change. Narrow, browser-zoom, and `200%` text-zoom presentation uses one natural single column below the unchanged world, wraps all negative-authority text, scrolls vertically, and keeps every required control at least `44 x 44 CSS px` without horizontal escape.
+- Provenance, stage, count, replay/unavailable/no-credit meaning, and available action remain complete text. Forced colors retain group boundaries and visible focus. Reduced motion uses direct group replacement with the same registered world still/effect state; no pulse, animated count, camera drift, sound, or world cadence communicates required meaning.
+- Tour receives the same presentation quality but only its exact `SYSTEM // DEMO TOUR` preview group and `CONTINUE TOUR`; it never resembles campaign progress, a Scene acknowledgement, comparison availability, save, or restore.
 
 ## Composition and attention
 
