@@ -15,7 +15,9 @@ import {
   withSafetyExplanation,
 } from "../src/cityThresholdExercise.js";
 import {
+  acknowledgeCustodyLedgerRAIExplanationFeedback,
   acknowledgeCustodyLedgerRAIFeedback,
+  acknowledgeCustodyLedgerRAITransferFeedback,
   advanceCustodyLedgerPrerequisite,
   clearCustodyLedgerWorkingState,
   createCustodyLedgerScaffold,
@@ -27,17 +29,26 @@ import {
   custodyLedgerPrimaryReferenceSource,
   custodyLedgerPrimaryStarterSource,
   custodyLedgerRAIDimensions,
+  custodyLedgerRAIExplanationAnswers,
+  custodyLedgerRAIExplanationDimensions,
   custodyLedgerRAIGuidedCase,
   custodyLedgerRAIPrimaryScenarioIds,
   custodyLedgerRAIPrimaryScenarios,
   custodyLedgerRAIRemediationMap,
+  custodyLedgerRAITransferGuidedCase,
+  custodyLedgerRAITransferRemediationMap,
+  custodyLedgerRAITransferScenarioIds,
+  custodyLedgerRAITransferScenarios,
   custodyLedgerSourceFields,
   custodyLedgerTransferSourceFields,
   custodyLedgerTransferReferenceSource,
   dismissCustodyLedgerPrimaryResult,
   dismissCustodyLedgerPythonConclusion,
+  dismissCustodyLedgerRAIConclusion,
   evaluateCustodyLedgerExplanation,
   evaluateCustodyLedgerPrimarySource,
+  evaluateCustodyLedgerRAIExplanation,
+  evaluateCustodyLedgerRAITransfer,
   evaluateCustodyLedgerTransferSource,
   getCustodyLedgerOwnershipMessage,
   retryCustodyLedgerPrimary,
@@ -48,7 +59,10 @@ import {
   submitCustodyLedgerPrimary,
   submitCustodyLedgerExplanation,
   submitCustodyLedgerRAIGuidedPractice,
+  submitCustodyLedgerRAIExplanation,
   submitCustodyLedgerRAIPrimaryScenario,
+  submitCustodyLedgerRAITransferGuidedPractice,
+  submitCustodyLedgerRAITransferScenario,
   submitCustodyLedgerTransfer,
 } from "../src/custodyLedgerExercise.js";
 import {
@@ -149,6 +163,24 @@ function submitRAIForm(state, overridesById = {}) {
       scenarioId,
       raiAnswer(scenario, overridesById[scenarioId]),
     );
+  }
+  return current;
+}
+
+const raiTransferAnswers = Object.freeze({
+  T01: Object.freeze({ principle: "transparency", mitigation: "preserve_provenance_missingness_and_limits", owner: "human_evidence_reviewer" }),
+  T02: Object.freeze({ principle: "privacy_and_security", mitigation: "do_not_open_or_retain_unneeded_private_data", owner: "human_privacy_reviewer" }),
+  T03: Object.freeze({ principle: "accountability", mitigation: "assign_review_audit_and_correction_responsibility", owner: "human_decision_owner" }),
+});
+
+function submitRAITransferForm(state, overridesById = {}) {
+  let current = state;
+  for (let index = current.raiTransferScenarioIndex; index < custodyLedgerRAITransferScenarioIds.length; index += 1) {
+    const scenarioId = custodyLedgerRAITransferScenarioIds[index];
+    current = submitCustodyLedgerRAITransferScenario(current, scenarioId, {
+      ...raiTransferAnswers[scenarioId],
+      ...overridesById[scenarioId],
+    });
   }
   return current;
 }
@@ -283,7 +315,7 @@ test("every locked ownership node keeps a visible human-interface owner", () => 
     assert.ok(message.text.length > 20, key);
     assert.doesNotMatch(message.owner, /SCENE|BUILDER|MACHINE|CITY/);
   }
-  assert.equal(Object.keys(custodyLedgerPythonOwnershipMessages).length, 8);
+  assert.equal(Object.keys(custodyLedgerPythonOwnershipMessages).length, 13);
   for (const [key, message] of Object.entries(custodyLedgerPythonOwnershipMessages)) {
     assert.ok(message.owner.length > 10, key);
     assert.ok(message.text.length > 20, key);
@@ -641,7 +673,7 @@ test("Teacher feedback is replaced by neutral no-credit guidance and a blank fir
   assert.equal(Object.values(recovered.raiEvidence.dimensionCorrectness.P01).every(Boolean), true);
 });
 
-test("strict 9/9 after unlimited recovery initializes only a genuinely blank non-evaluating transfer", () => {
+test("strict 9/9 after unlimited recovery initializes only a genuinely blank transfer", () => {
   let state = submitRAIForm(blankRAIPrimary(), { P01: { owner: "model_itself" } });
   for (let attempt = 0; attempt < 3; attempt += 1) {
     state = submitCustodyLedgerRAIGuidedPractice(
@@ -657,11 +689,208 @@ test("strict 9/9 after unlimited recovery initializes only a genuinely blank non
   assert.equal(transfer.raiEvidence.masteryStatus, "primary_complete");
   assert.equal(Object.values(transfer.raiEvidence.dimensionCorrectness).flatMap(Object.values).every(Boolean), true);
   assert.equal(transfer.raiTransferInitialized, true);
-  assert.equal(transfer.raiTransferEvaluatorImplemented, false);
-  assert.equal(transfer.scoringEnabled, false);
-  assert.equal(Object.values(transfer.raiTransferResponses).flatMap(Object.values).every((value) => value === ""), true);
+  assert.equal(transfer.raiTransferEvaluatorImplemented, true);
+  assert.equal(transfer.scoringEnabled, true);
+  assert.deepEqual(transfer.raiTransferResponses, {});
+  assert.deepEqual(Object.values(transfer.raiTransferChecks).flatMap(Object.values), Array(9).fill(false));
   assert.equal(Object.hasOwn(transfer, "raiWorkingResponses"), false);
   assert.equal(Object.hasOwn(transfer, "masteryStatus"), false);
+});
+
+test("protected RAI transfer exposes only approved fresh cases and recomputes all nine dimensions", () => {
+  const transfer = submitRAIForm(blankRAIPrimary());
+  assert.deepEqual(custodyLedgerRAITransferScenarioIds, ["T01", "T02", "T03"]);
+  assert.deepEqual(custodyLedgerRAITransferScenarios.map(({ id }) => id), custodyLedgerRAITransferScenarioIds);
+  assert.match(custodyLedgerRAITransferScenarios[0].prompt, /de-identified sensor packet/);
+  assert.match(custodyLedgerRAITransferScenarios[1].prompt, /private operator field/);
+  assert.match(custodyLedgerRAITransferScenarios[2].prompt, /automated label/);
+  assert.deepEqual(transfer.raiTransferResponses, {});
+  assert.equal(Object.hasOwn(transfer, "raiWorkingResponses"), false);
+
+  const evaluated = evaluateCustodyLedgerRAITransfer({
+    ...raiTransferAnswers,
+    T03: { ...raiTransferAnswers.T03, owner: "platform_itself" },
+    score: 9,
+    passed: true,
+  });
+  assert.equal(evaluated.score, 8);
+  assert.equal(evaluated.passed, false);
+  assert.equal(evaluated.dimensionCorrectness.T03.owner, false);
+});
+
+test("transfer miss replaces the blank form with mapped Teacher feedback and neutral zero-credit practice", () => {
+  const transfer = submitRAIForm(blankRAIPrimary());
+  const pythonAndPrimaryBytes = JSON.stringify([
+    transfer.pythonEvidence,
+    transfer.pythonTransferEvidence,
+    transfer.pythonExplanationEvidence,
+    transfer.raiEvidence,
+  ]);
+  const missed = submitRAITransferForm(transfer, {
+    T01: { mitigation: "publish_limits_without_preserving_provenance", privateNotes: "private-771" },
+    T03: { owner: "platform_itself", score: 9, passed: true },
+  });
+  assert.equal(missed.phase, "rai_transfer_feedback");
+  assert.equal(missed.activeMessageKey, "rai_transfer_feedback");
+  assert.equal(missed.scoringEnabled, false);
+  assert.equal(missed.raiTransferEvidence.attemptCount, 1);
+  assert.equal(missed.raiTransferEvidence.dimensionCorrectness.T01.mitigation, false);
+  assert.equal(missed.raiTransferEvidence.dimensionCorrectness.T03.owner, false);
+  assert.deepEqual(missed.raiTransferFeedback.map(({ scenarioId, dimension, owner }) => ({ scenarioId, dimension, owner })), [
+    { scenarioId: "T01", dimension: "mitigation", owner: "901 TEACHER // FEEDBACK" },
+    { scenarioId: "T03", dimension: "owner", owner: "901 TEACHER // FEEDBACK" },
+  ]);
+  assert.equal(missed.raiTransferFeedback[0].text, custodyLedgerRAITransferRemediationMap.T01.mitigation);
+  assert.equal(Object.hasOwn(missed, "raiTransferResponses"), false);
+  assert.doesNotMatch(JSON.stringify(missed), /private-771|platform_itself|publish_limits/);
+
+  const guided = acknowledgeCustodyLedgerRAITransferFeedback(missed);
+  assert.equal(guided.phase, "rai_transfer_guided");
+  assert.equal(guided.activeMessageKey, "rai_transfer_guided");
+  assert.equal(guided.scoringEnabled, false);
+  assert.equal(guided.guidedPractice.id, custodyLedgerRAITransferGuidedCase.id);
+  assert.deepEqual(guided.guidedPractice.response, { principle: "", mitigation: "", owner: "" });
+  assert.equal(JSON.stringify([
+    guided.pythonEvidence,
+    guided.pythonTransferEvidence,
+    guided.pythonExplanationEvidence,
+    guided.raiEvidence,
+  ]), pythonAndPrimaryBytes);
+});
+
+test("neutral transfer practice restores a fully blank first-failed retry with unlimited recovery", () => {
+  let state = submitRAITransferForm(submitRAIForm(blankRAIPrimary()), {
+    T02: { owner: "city" },
+  });
+  state = acknowledgeCustodyLedgerRAITransferFeedback(state);
+  const rejected = submitCustodyLedgerRAITransferGuidedPractice(state, {
+    principle: "privacy_and_security",
+    mitigation: "review the evidence boundary",
+    owner: "the city",
+    privateReasoning: "private-998",
+  });
+  assert.equal(rejected.phase, "rai_transfer_guided");
+  assert.equal(rejected.guidedPractice.status, "incomplete");
+  assert.doesNotMatch(JSON.stringify(rejected), /private-998|the city/);
+
+  const retry = submitCustodyLedgerRAITransferGuidedPractice(state, {
+    principle: "privacy_and_security",
+    mitigation: "review the evidence boundary without opening private data",
+    owner: "course privacy review team",
+  });
+  assert.equal(retry.phase, "rai_transfer");
+  assert.equal(retry.raiTransferScenarioId, "T02");
+  assert.deepEqual(retry.focusIntent, { scenarioId: "T02", dimension: "owner" });
+  assert.deepEqual(retry.raiTransferResponses, {});
+  assert.equal(Object.hasOwn(retry, "guidedPractice"), false);
+
+  state = retry;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    state = submitRAITransferForm(state, { T02: { owner: "city" } });
+    state = submitCustodyLedgerRAITransferGuidedPractice(
+      acknowledgeCustodyLedgerRAITransferFeedback(state),
+      { principle: "accountability", mitigation: "assign a review and correction path", owner: "course review lead" },
+    );
+  }
+  const recovered = submitRAITransferForm(state);
+  assert.equal(recovered.phase, "rai_explanation");
+  assert.equal(recovered.raiTransferEvidence.attemptCount, 4);
+  assert.deepEqual(recovered.raiExplanationSelections, Object.fromEntries(
+    custodyLedgerRAIExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+});
+
+test("separate three-boundary explanation blanks misses and alone opens the exact Pilot conclusion", () => {
+  const explanation = submitRAITransferForm(submitRAIForm(blankRAIPrimary()));
+  assert.equal(explanation.phase, "rai_explanation");
+  assert.equal(explanation.activeMessageKey, "rai_explanation");
+  assert.equal(explanation.raiTransferEvidence.masteryStatus, "transfer_complete");
+  assert.deepEqual(explanation.raiExplanationSelections, Object.fromEntries(
+    custodyLedgerRAIExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+
+  const partial = {
+    ...custodyLedgerRAIExplanationAnswers,
+    not_builder_intent_identity_or_native_fact: "a native fact",
+    privateReasoning: "private-334",
+    passed: true,
+  };
+  const evaluated = evaluateCustodyLedgerRAIExplanation(partial);
+  assert.equal(evaluated.score, 2);
+  assert.equal(evaluated.firstFailedDimension, "not_builder_intent_identity_or_native_fact");
+  const feedback = submitCustodyLedgerRAIExplanation(explanation, partial);
+  assert.equal(feedback.phase, "rai_explanation_feedback");
+  assert.equal(feedback.activeMessageKey, "rai_explanation_feedback");
+  assert.equal(feedback.explanationFeedback.dimension, "not_builder_intent_identity_or_native_fact");
+  assert.equal(Object.hasOwn(feedback, "raiExplanationSelections"), false);
+  assert.doesNotMatch(JSON.stringify(feedback), /private-334|a native fact/);
+
+  const retry = acknowledgeCustodyLedgerRAIExplanationFeedback(feedback);
+  assert.equal(retry.phase, "rai_explanation");
+  assert.deepEqual(retry.raiExplanationSelections, Object.fromEntries(
+    custodyLedgerRAIExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+  assert.deepEqual(retry.focusIntent, {
+    group: "rai_explanation",
+    dimension: "not_builder_intent_identity_or_native_fact",
+  });
+  const conclusion = submitCustodyLedgerRAIExplanation(retry, custodyLedgerRAIExplanationAnswers);
+  assert.equal(conclusion.phase, "rai_complete");
+  assert.equal(conclusion.activeMessageKey, "rai_conclusion");
+  assert.deepEqual(conclusion.conclusion, {
+    owner: "PILOT // FLIGHT RECORDER",
+    text: "My application label is a human interpretation, not their fact or permission to act.",
+  });
+  assert.equal(conclusion.raiExplanationEvidence.attemptCount, 2);
+  assert.equal(conclusion.scoringEnabled, false);
+  assert.equal(conclusion.campaignCommitEnabled, false);
+  assert.deepEqual(dismissCustodyLedgerRAIConclusion(conclusion), conclusion);
+});
+
+test("RAI transfer and explanation resume clear private work and preserve every external invariant", () => {
+  const campaign = { cityThresholdAnchorRecorded: true, civicDistrictRouteAvailable: true, continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", cursor: "city", noCredit: true };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const transfer = submitRAIForm(blankRAIPrimary());
+  const transferMiss = submitRAITransferForm(transfer, { T03: { owner: "platform_itself" } });
+  const transferResume = resumeCustodyLedgerRAI({
+    ...transferMiss,
+    raiTransferResponses: { T03: { owner: "private-owner-441" } },
+    guidedPractice: { response: "private-guidance-221" },
+    freeFormReasoning: "private-reasoning-887",
+  });
+  assert.equal(transferResume.phase, "rai_transfer");
+  assert.equal(transferResume.raiTransferScenarioId, "T03");
+  assert.deepEqual(transferResume.raiTransferResponses, {});
+  assert.doesNotMatch(JSON.stringify(transferResume), /private-owner|private-guidance|private-reasoning/);
+
+  const explanation = submitRAITransferForm(transferResume);
+  const explanationMiss = submitCustodyLedgerRAIExplanation(explanation, {});
+  const explanationResume = resumeCustodyLedgerRAI({
+    ...explanationMiss,
+    raiExplanationSelections: { application_label_is_human_owned_and_provisional: "private-choice-773" },
+    prose: "private-prose-664",
+  });
+  assert.equal(explanationResume.phase, "rai_explanation");
+  assert.deepEqual(explanationResume.raiExplanationSelections, Object.fromEntries(
+    custodyLedgerRAIExplanationDimensions.map((dimension) => [dimension, ""]),
+  ));
+  assert.doesNotMatch(JSON.stringify(explanationResume), /private-choice|private-prose/);
+
+  const conclusion = submitCustodyLedgerRAIExplanation(explanationResume, custodyLedgerRAIExplanationAnswers);
+  const restoredConclusion = resumeCustodyLedgerRAI(conclusion);
+  assert.equal(restoredConclusion.phase, "rai_complete");
+  assert.equal(restoredConclusion.conclusion.text, "My application label is a human interpretation, not their fact or permission to act.");
+  for (const candidate of [transferResume, explanationResume, restoredConclusion]) {
+    assert.equal(candidate.campaignCommitEnabled, false);
+    assert.equal(candidate.continuation, "continuation");
+    assert.equal(candidate.cityStateDelta, null);
+    for (const prohibited of ["save", "cityResponse", "route", "successor", "item", "accessGranted", "permission", "externalAction", "identity"])
+      assert.equal(Object.hasOwn(candidate, prohibited), false, prohibited);
+  }
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
 });
 
 test("RAI anti-forgery recomputes nine booleans and strips private working content on resume", () => {
