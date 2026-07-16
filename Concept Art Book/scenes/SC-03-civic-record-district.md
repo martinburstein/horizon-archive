@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, responsive five-observation interface, protected hotspot pre-geometry, and protected route-integration presentation reviews locked; no final art
+- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, responsive five-observation interface, protected hotspot pre-geometry, protected route-integration, and route-to-observation handoff presentation reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -22,6 +22,17 @@
 | `SC-03-50` | Verified saved return | System restores the same completed overview without arrival/result/conclusion/success replay or restarted clocks; stale or partial data downgrades to the first incomplete protected boundary | Review saved comparison or return to City Threshold |
 
 Every transition preserves `continuation`, `city_state_delta=None`, `cityThresholdAnchorRecorded=true`, and `civicDistrictRouteAvailable=true`. Entry, completion, and return use invariant world geometry. Nothing opens, brightens, reroutes, or acknowledges completion.
+
+### Protected route-to-observation presentation lane
+
+- `RT-20 / SC-03-00` begins with one complete `SYSTEM // EXPEDITION STATE` protected-arrival acknowledgement and zero-credit `CONTINUE PROTECTED SURVEY`. Focus is System-heading-first; acknowledgement, view visibility, and the control record no observation and express no near-detail intent.
+- Acknowledgement replaces the arrival group with the exact protected-overview System line. Existing orientation facts may appear only as separately owned `SCENE // SENSOR RECORD` context; they are not any of the five required statements or IDs. The only content-forward action is the complete `PILOT // FLIGHT RECORDER — INSPECT NEAR EXPOSED LAYERS`, paired with the exact closer-expedition-viewpoint copy.
+- `PILOT // FLIGHT RECORDER — RETURN TO CITY THRESHOLD` remains a separately owned route action. It never shares a label, dispatcher, default, or confirmation with near-detail intent or `SAVE BOUNDED COMPARISON`, and it retains the already-locked safe-boundary reconstruction.
+- One valid explicit near-detail intent replaces the overview group with `SYSTEM // EXPEDITION STATE` transition status, then directly registers the already-approved `SC-03-10` composition. No intermediate pan, zoom, blur, crop, relight, pulse, sound, maintenance reaction, Scene statement, progress count, or world response communicates the change.
+- The resulting blank `SYSTEM // EXPEDITION SESSION` group states that near evidence is ready and nothing has been recorded, contains zero canonical IDs and zero private work, and exposes only the three existing exact near actions in stable order. Focus reaches the Session heading before the first incomplete action.
+- Implicit, duplicate, stale, forged, wrong-owner, wrong-mode, combined, out-of-order, interrupted, or Tour-derived input replaces no verified view. System recovery returns heading-first to the deterministic last-safe expedition boundary without city-refusal language. Tour remains `SYSTEM // DEMO TOUR`, descriptive, and unable to expose Pilot intents or campaign actions.
+- One current textual owner/message/action group, full accessible names, at least `44 x 44 CSS px` actions, pointer/touch/keyboard/switch/speech/screen-reader parity, natural narrow/zoom wrapping, vertical scroll recovery, forced-color focus, reduced-motion direct replacement, and non-color meaning are locked. Inactive groups leave visual, pointer, keyboard, and accessibility order.
+- The overview and near-detail world masters, art-directed crops, cameras, semantic regions, materials, heat/light/maintenance routes, hotspot associations, closed interlock, and monotonic clocks remain exact. Orientation, route acknowledgement, viewpoint replacement, return, responsive presentation, and Tour are zero observation and zero mastery evidence.
 
 ### Five-observation human-interface lane
 
@@ -141,6 +152,13 @@ The comparison and save controls belong to a separate responsive interface regio
 - `SYSTEM // DEMO TOUR` remains a separate no-credit presentation with no Pilot route controls, predecessor verification, campaign session, save path, or checkpoint. Normal campaign, protected staging, and Tour distinctions remain textual under forced colors and reduced motion.
 - Entry and return remain separate from `SAVE BOUNDED COMPARISON`; each action is at least `44 x 44 CSS px`, has a persistent full-text accessible name, and retains pointer/touch/keyboard/switch/speech/screen-reader parity. Narrow and zoomed layouts use a natural scroll-safe column without world-confirmation crop or motion.
 - Invalid, stale, implicit, duplicate, wrong-owner, out-of-order, or Tour-derived requests navigate nowhere and focus a complete local System recovery status at the last verified expedition boundary. No failure state reads as city refusal, access denial, lost Builder memory, or response.
+
+### Protected route-to-observation handoff overlay
+
+- Reuse the registered `SC-03-00` overview and `SC-03-10` near-layer compositions exactly. `CONTINUE PROTECTED SURVEY`, the closer-view Pilot intent, System transition/recovery, and the blank observation boundary live only in the separate expedition region and require no travel plate, camera animation, world highlight, or new raster.
+- Present arrival acknowledgement, protected overview/context, explicit Pilot intent, System transition, and blank Session group as sequential owner-distinct replacements. The blank group contains zero observation IDs and exposes only the three existing near deliberate-action controls after heading-first focus.
+- Keep threshold return as a separate Pilot-owned route action. It never merges with near-detail intent or save intent. Invalid/interrupted requests preserve the last verified view, clear private/transient presentation state, and recover through complete System text without implying city refusal.
+- Preserve full visible/accessibility names, input-modality parity, `44 x 44 CSS px` minimum actions, single-column narrow/zoom reflow, vertical scroll recovery, forced-color focus, reduced-motion direct replacement, and complete non-color ownership. Presentation and viewpoint replacement are zero evidence.
 
 - Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). The local coupling must visibly join trace intake, later stewardship routing, environmental return, and maintenance bypass without a human-facing display. Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
 - Complete all eight premium-production passes before approval: varied visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay-fit review, registered state/animation production, and provenance delivery.
