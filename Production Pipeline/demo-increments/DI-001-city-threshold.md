@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W1 opening-route evidence pass
+
+- **Verdict:** `PASS FROM FOCUSED TEST/BUILD EVIDENCE; ROOT LIVE CONFIRMATION REQUIRED.` At `17bcc9e`, the first-45-seconds contract remains complete and ordered: title, local Slot 01 creation, bounded character name, three temporary prologue beats, Chapter I reveal, and deliberate entry into Glass Meadow with a visible Terminal-search objective.
+- **Recovery and persistence:** Invalid names cannot advance; double-click and held-key bursts cannot skip prologue boundaries; create-save cancel, character-name back, sanitized opening-step resume, and malformed/legacy handling remain recoverable. Arrival focuses the field-linked Terminal hotspot without auto-opening it. The protected RP-002 executable seam remains non-routable and outside this pass.
+- **Responsive evidence:** Focused checks cover representative desktop, ultrawide, portrait, narrow, and zoom/reflow-effective widths using an available-width `16:9` world, vertical interface flow, and `>=44px` targets. No fixed legacy canvas or width cap was reopened.
+- **Validation boundary:** Browser attachment was unavailable to Player Agent, so no fresh screenshot, stopwatch timing, or visual/aesthetic verdict is claimed. The focused opening/responsive selection passed **47/47**, and the production build passed as `index-BzodCBvJ.js` / `index-C6Y6yjuH.css`. The prior coordinator E2E remains the current live journey evidence.
+- **W2 handoff:** Perform a read-only verification/reload unless root live desktop/narrow review reproduces a functional defect. Preserve opening order, recovery, focus, saves, privacy/no-authority, responsive presentation, and all learning gates; do not touch art or reopen retired viewport rules speculatively.
+
 ## 2026-07-15 coordinator closure — responsive presentation
 
 - **Disposition:** `VIEWPORT-P1-001 RESOLVED — COORDINATOR VALIDATED.` Fixed 640/320 canvases, integer scaling, fixed bezel sizing, and the residual 1920px ceiling are retired. The CRT remains only a scalable visual shell around an available-width, undistorted 16:9 world with the lower interface in normal vertical flow.
