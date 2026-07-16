@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import temporaryContinuityPlate from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
+import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { custodyLedgerRouteActions, custodyLedgerRouteOwners } from "./CustodyLedgerNormalRoute.js";
 
@@ -16,7 +16,7 @@ export function CivicRecordArrival({ routeState, onReturn }) {
         className="game-shell city-threshold-screen civic-record-arrival"
         data-scene="civic-record-district"
         data-board="SC-03-00"
-        data-production-art-hook="SC-03-00-overview-pending"
+        data-production-art="SC-03-00-civic-record-arrival-v1"
       >
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
           {routeState.message}
@@ -24,10 +24,9 @@ export function CivicRecordArrival({ routeState, onReturn }) {
         <section className="city-world civic-record-world" aria-label="Civic Record District arrival overview">
           <img
             className="city-world-plate-native"
-            src={temporaryContinuityPlate}
-            alt="A first-person civic route arrival using the registered predecessor continuity plate while the dedicated district master is prepared"
+            src={civicRecordArrivalMaster}
+            alt="An immense nonhuman civic landscape of layered mineral infrastructure and glowing geothermal return channels, viewed in first person"
           />
-          <div className="civic-record-art-status" aria-hidden="true">SC-03-00 // REGISTERED CONTINUITY HOOK</div>
         </section>
         <section className="city-command-panel" aria-labelledby="rp002-arrival-heading">
           <div>

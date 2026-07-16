@@ -132,7 +132,7 @@ test("bounded storage keeps only an exact arrival checkpoint and clears on retur
   assert.equal(storage.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY), null);
 });
 
-test("normal app surface exposes one predecessor-gated entry, reversible return, and temporary art hook", async () => {
+test("normal app surface exposes one predecessor-gated entry, reversible return, and dedicated registered arrival art", async () => {
   const [app, city, arrival, styles] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8"),
@@ -143,7 +143,10 @@ test("normal app surface exposes one predecessor-gated entry, reversible return,
   assert.match(app, /mode === "rp002-arrival"/);
   assert.match(city, /custodyLedgerRouteActions\.enter/);
   assert.match(arrival, /data-board="SC-03-00"/);
-  assert.match(arrival, /SC-03-00-overview-pending/);
+  assert.match(arrival, /2026-07-16-civic-record-district-arrival\/civic-record-district-arrival-master-v1\.png/);
+  assert.match(arrival, /data-production-art="SC-03-00-civic-record-arrival-v1"/);
+  assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
+  assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.returnAccepted/);
   assert.doesNotMatch(arrival, /RP-003|exam credit|learning task/i);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

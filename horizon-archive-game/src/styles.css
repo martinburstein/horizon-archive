@@ -1459,19 +1459,6 @@ h1 {
 .city-command-actions { display: grid; gap: 5px; align-content: start; }
 .city-command-actions button { min-height: 28px; }
 
-.civic-record-art-status {
-  position: absolute;
-  z-index: 3;
-  right: clamp(10px, 2vw, 24px);
-  bottom: clamp(10px, 2vw, 24px);
-  padding: 6px 9px;
-  border: 1px solid rgb(228 188 112 / 52%);
-  background: rgb(5 8 14 / 78%);
-  color: #f1d598;
-  font: 0.68rem/1.2 "Courier New", monospace;
-  letter-spacing: 0.08em;
-}
-
 .civic-record-arrival .city-command-panel h1 {
   margin: 3px 0 8px;
   font-size: clamp(1.35rem, 3vw, 2.4rem);

@@ -1,5 +1,14 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 dedicated-arrival-art checkpoint — 2026-07-16
+
+- **Disposition:** `RP002-AESTH-001 RESOLVED IN W4 / FINAL VALIDATION NEXT`.
+- **Bounded production change:** the normally reachable P0 / `SC-03-00` adapter now imports one dedicated registered Civic Record District arrival master and registers `SC-03-00-civic-record-arrival-v1`. The predecessor City Threshold import, pending production-art hook, and internal continuity badge are removed. No later packet component, observation, lesson, save transaction, completion, successor, or RP-003 route was integrated.
+- **Art authority:** the project-bound `1672 x 941` RGB source, exact built-in-generation prompt, SHA-256, selection rationale, source/runtime locations, responsive 16:9 state policy, and exclusions are recorded beside the master in `Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/PROVENANCE.md`.
+- **Invariant preservation:** exact verified RP-001 entry, reversible return, bounded allowlisted resume, deterministic heading focus, `>=44px` control, privacy/offline/no-authority, Tour no-credit isolation, and zero observation/learning/exam/world/city/external delta remain unchanged. The physical district stays static and does not respond to arrival.
+- **Evidence:** focused **23/23**, full **419/419**, production build, root/asset HTTP `200`, live built-asset/title review, and full E2E pass with `runtimeErrors:false`; incidental tracked QA binaries restored; final reload serves `index-BnvEvryd.js` / `index-BuFQ7Bya.css` on port `4173`.
+- **Exact coordinator handoff:** validate the normal P0 art and entry/return/resume only at representative desktop and narrow layouts, then promote or return one exact residual. Do not expose `SC-03-10+`, RP-002 learning/save/completion, a successor, or RP-003.
+
 ## Working W2 normal-entry checkpoint — 2026-07-16
 
 - **Disposition:** `RP002-P1-001 RESOLVED / NORMAL P0 DEMO RELOADED / W3 NEXT`.
