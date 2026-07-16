@@ -1,5 +1,47 @@
 # RP-002 — Civic Record Encounter
 
+## Mandatory convergence audit — 2026-07-16
+
+- **Verdict:** `CONVERGE + MERGE + TRIM — REVISE; ONE COMPLETE A2–A5 INTEGRATION CYCLE TO GATE REVIEW`.
+- **Reason:** RP-002 has exceeded the convergence budget. Its surface story, scene sequence, two SOLIDIFIED learning chains, five-observation meanings, recovery, accessibility, atomic save, privacy, Tour, and no-authority contracts are already sufficient. The remaining Gate Review deficit is not another lore or state micro-seam; it is a compact presentation/graph and one protected end-to-end smoke path over existing authorities.
+
+### Exact player-visible packet path
+
+`RP-001 accepted end -> protected civic arrival -> three near observations in any order -> explicit COMPARE SCALE -> blank SC-03-20 -> two far observations in either order -> OPEN LOCAL COMPARISON -> existing PY-009 primary/remediation/blank transfer/separate explanation -> existing RP002-RAI-01 primary/remediation/blank transfer/separate explanation -> bounded Pilot review -> explicit atomic local save -> SC-03-40 completion -> verified SC-03-50 restore -> reversible RETURN TO CITY THRESHOLD`.
+
+This path uses only already-approved surface-safe content. The coherent packet end state is exact: all five canonical observations and both strict learning chains are finalized; the local atomic triplet is verified; private and working content is cleared; the bounded human comparison is restored; closed records remain closed; `continuation` and the physical city remain unchanged; no successor is named or unlocked; and the player can return safely to the accepted boundary.
+
+### Gate inventory
+
+| Gate | Audit disposition | Direct authority / remaining action |
+|---|---|---|
+| Surface premise, motive, start, end, predecessor | `PASS` | Existing packet identity, contiguity, surface narrative, exact state deltas, and the coherent end state above. No further lore beat is required. |
+| Storyboard sequence and visual brief | `PARTIAL — CONVERGE` | Existing `SC-03-00/10/20/30/40/50` boards, registered first-person views, material contracts, asset brief, and provenance gates are sufficient; A2 must produce one compact final sequence and remove presentation duplication. |
+| Python and AI-901 evidence | `PASS — SOLIDIFIED / NO REOPEN` | `PY-009` and `RP002-RAI-01` already contain strict primary, mapped remediation, genuinely blank transfer, and separately scored explanation evidence. |
+| Complete puzzle graph | `PARTIAL — CONVERGE` | Every state, mistake, retry, recovery, save, and Tour rule exists; A4 must replace per-transition handoffs with one end-to-end graph from blank `SC-03-20` through restore/return. |
+| Save/resume, privacy, offline/no-authority, Tour | `PASS` | Existing protected models, allowlists, atomic triplet, sanitation, reversible return, and no-credit Tour contracts remain exact. |
+| Accessibility | `PASS CONTRACT / A2 CONSOLIDATION` | Names, ownership, focus, errors, `>=44 x 44 CSS px`, non-color meaning, reduced motion, zoom/reflow, and recovery already pass at contract level. |
+| Protected code path | `PARTIAL — MERGE/INTEGRATE` | Existing protected modules are individually tested but disconnected. A5 must compose or consolidate them into one protected staging/smoke path rather than add another module per narrative transition. |
+| Production-art plan and provenance gate | `PASS PLAN / ASSETS DEFERRED` | Existing three-master photoreal first-person brief, registered state rules, review package, and provenance requirements satisfy Gate Review planning. Final assets remain later production work. |
+| Normal integration and Working evidence | `N/A FOR GATE REVIEW` | Remain absent until the protected integrated path passes Gate Review; this audit authorizes no accepted App/main, storage, normal route, Demo, or Working exposure. |
+| Validation bundle | `MISSING AFTER INTEGRATION` | A5/coordinator must run the integrated focused smoke, relevant full tests, curriculum validator, production build, leakage/purity checks, and packet checklist. |
+
+### Merge and trim decisions
+
+1. **Canonical lore authorities remain:** Five-Observation Interaction and State-Meaning; Responsive Five-Observation Interface Ownership and Copy; Atomic Persistence/Save Meaning; executable-literacy and responsible-AI meaning contracts; mystery protections; state deltas; and this convergence audit.
+2. **Micro-seams become implementation history:** route-to-blank, first-near, second-near, third-near, and compare-transition sections remain as traceable validation history but are no longer independent planning destinations or reasons to add one module per transition.
+3. **One observation journey replaces five planning seams:** A2–A5 must treat `SC-03-10 -> SC-03-20 -> five observations -> OPEN LOCAL COMPARISON` as one protected observation sequence driven by existing model/hotspot/copy authorities.
+4. **Deferred optional work:** bespoke presentation for optional orientation, maintenance inspection, early distant context, optional Pilot reflection, additional replay polish, per-state world plates beyond the approved master plan, successor hints, and normal browser persistence. These may not block Gate Review.
+5. **No contract weakening:** trimming removes redundant presentation/implementation work only. Required observation meanings, both SOLIDIFIED chains, remediation, recovery, accessibility, privacy, Tour isolation, save atomicity, offline/no-authority/no-exam-guarantee, and mystery protections remain mandatory.
+
+### Full 16:9 laptop presentation constraint — no lore change
+
+At representative full 16:9 laptop presentation, the active authored world plus its required interaction/status controls must fit within the available viewport as one coherent game screen without browser zoom, horizontal page escape, clipped owner/copy, or an off-screen required action. The first-person photoreal world remains dominant. Narrow layouts, text zoom, and assistive configurations may reflow and scroll vertically under the existing accessibility contract. This is presentation and acceptance behavior only; it changes no board meaning, world geometry, camera canon, observation, learning, save, or story state.
+
+### Exact Storyboarder A2 convergence handoff
+
+`Storyboarder Agent: perform the RP-002 convergence pass, not another micro-seam. Consolidate the existing SC-03-00/10/20/30/40/50 boards and owner/message/action groups into one compact first-person presentation sequence matching the exact player-visible path in the mandatory convergence audit. Treat the route-to-blank, first-, second-, third-near, and compare-transition boards as implementation history feeding one observation journey, not separate new design projects. Begin the remaining path at the already-locked blank SC-03-20 group; show the two far observations in either order, OPEN LOCAL COMPARISON, the existing PY-009 and RP002-RAI-01 learning groups, bounded review, atomic save, completion, verified restore, and reversible return without inventing copy, evidence, canon, art, or a successor. Record one final owner/focus/control order, one-active-group rule, mistake/recovery presentation, and one compact board-to-board handoff table. Apply the full 16:9 laptop constraint: at representative full 16:9 laptop presentation, the world plus required current controls/status must fit as one coherent game screen without browser zoom, horizontal page escape, clipped owner/copy, or an off-screen required action; preserve world dominance and keep accessible narrow/text-zoom vertical reflow. Defer optional orientation, maintenance, early distant-context, Pilot-reflection, extra replay-polish, and per-state-art variants. Preserve both SOLIDIFIED chains, five independent observations, atomic save, privacy, Tour isolation, offline/no-authority/no-exam-guarantee, first-person protagonist/ship exclusion, invariant physical city/clocks, closed identity, unchanged continuation, no successor, and zero external action. Then hand A3 one convergence-only mapping audit, with no new cases, answers, sources, or micro-seams.`
+
 ## Latest protected implementation — isolated third-near completion (2026-07-16)
 
 - **Status:** `PASS — A5 ISOLATED TD-00/R/10/U/T COMPLETE; REVISE; NON-ROUTABLE`.
@@ -244,7 +286,7 @@ From each of the three possible exact one-ID fixtures, verify both remaining sec
 
 ## Packet identity
 
-- Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING + OBSERVATION + ATOMIC PERSISTENCE/SAVE + RESPONSIVE INTERFACE + HOTSPOT GEOMETRY/DISPATCH + ISOLATED ROUTE-STATE + ROUTE-TO-BLANK-OBSERVATION + FIRST/SECOND/THIRD-NEAR ORCHESTRATION MODELS COMPLETE; COMPARE-SCALE-TO-BLANK-FAR-VIEW OWNERSHIP/MEANING LOCKED; REVISE; NON-ROUTABLE`
+- Status: `IN DESIGN — MANDATORY CONVERGENCE AUDIT COMPLETE; CONVERGE + MERGE + TRIM; A2–A5 INTEGRATED PROTECTED PATH REQUIRED; REVISE; NON-ROUTABLE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2

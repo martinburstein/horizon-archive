@@ -43,6 +43,7 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 5. Optional remediation stays inside the packet that owns the misconception unless moving it improves recovery without creating a route gap.
 6. The spine records surface-safe purpose only. Restricted story content remains in approved artifacts.
 7. Reserved rows do not authorize lore, art, routes, or code. They reserve production capacity and sequence.
+8. Every future world/interaction presentation must fit the active world plus its current required controls/status into a representative full 16:9 laptop viewport as one coherent game screen without browser zoom, horizontal page escape, clipped ownership/copy, or an off-screen required action. Narrow, text-zoom, and assistive layouts retain accessible vertical reflow. This is a presentation constraint only and changes no lore, camera canon, world state, evidence, mastery, save, or route meaning.
 
 ## Current breadth verdict
 
@@ -50,4 +51,3 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 - Team 1 is one packet ahead on `RP-002`.
 - `RP-002` is **deep but not converged**: many protected contracts and isolated seams exist, while normal integration, production art, and promotion remain absent.
 - The next planning milestone is not another indefinitely small state transition. It is an `RP-002` convergence audit that identifies the shortest safe path to `GATE REVIEW`, followed by a surface-safe `RP-003` seed.
-

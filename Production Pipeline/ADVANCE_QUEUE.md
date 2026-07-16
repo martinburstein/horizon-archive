@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 — compare-scale transition presentation impact`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, isolated first-, second-, and third-near orchestration, and compare-scale transition ownership/meaning are complete; storage, art, normal exposure, far evidence, successor, and later work are absent | A1 now locks only explicit dormant `COMPARE SCALE` activation, System verification, registered `SC-03-20` replacement, and a blank far group retaining three near IDs with zero far IDs and two equal unfinished actions; no far action is dispatched | Keep `REVISE`. A2 performs only the compare-scale-to-blank-far-view presentation impact review; do not dispatch far evidence or add geometry, code, component/App/main, browser storage, production art, route exposure, accepted-state change, successor, Demo reload, or Working promotion. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — CONVERGENCE / REVISE` | Storyboarder Agent (`A2 — convergence presentation`) | Mandatory audit records Story/Curriculum/Save/Accessibility/art-plan gates as passed or contract-complete; Scene, end-to-end Puzzle, protected integration, and post-integration validation remain | Existing micro-seams are sufficient but over-segmented. One compact path must connect blank `SC-03-20` -> both far facts -> existing learning -> bounded review/atomic save -> completion/restore/return. Optional presentation work is deferred. | Keep `REVISE`. A2–A5 run one convergence cycle that reduces the remaining Gate Review count; no new micro-seam or module-per-transition work. Normal App/main/storage/routes/art/Demo/Working exposure remains unauthorized. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first-, second-, and third-near orchestration seams complete; compare-scale transition meaning is at A2; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A1 compare-scale-to-blank-far-view ownership/meaning locked; A2 presentation impact next`
+- In-design packets: `1 — RP-002 (mandatory convergence audit complete; existing seams retained as history; one A2–A5 protected integration cycle remains before Gate Review decision)`
+- Team 1 railhead: `RP-002 — A1 convergence audit complete; A2 compact presentation convergence next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 mandatory RP-002 convergence audit
+
+Verdict: `CONVERGE + MERGE + TRIM`. The packet's surface story, two SOLIDIFIED learning chains, five-observation meaning, recovery, accessibility, save, privacy, Tour, no-authority, and production-art plan are sufficient. Route/observation micro-seams remain evidence but cease to be separate planning destinations. The shortest Gate Review path is one compact A2 presentation, one A3 preservation audit, one A4 end-to-end puzzle graph, and one A5 protected smoke integration from blank `SC-03-20` through both far observations, existing learning, review/save, completion/restore, and safe return. Optional orientation, maintenance, early context, reflection, extra replay polish, per-state art variants, successor hints, and normal persistence are deferred. Full 16:9 laptop presentation must fit world plus current required controls/status as one coherent screen without browser zoom, horizontal escape, clipped ownership, or an off-screen required action; accessibility reflow remains intact. No lore or mastery contract changes.
 
 ## 2026-07-16 compare-scale-to-blank-far-view Lore impact note
 
