@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 accepted-boundary verification/reload after protected hotspot dispatch - `a05b227` handoff
+
+- **Mode/verdict:** `Coder Agent - bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1's clean accepted-path report remained valid, and focused/full/build verification reproduced no defect. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **330/330 PASS**; production build PASS with the existing non-blocking large-chunk advisory. App/main/frame source, rebuilt-JS, and storage-boundary scans found no protected RP-002/Custody Ledger hotspot entrypoint leakage.
+- **Build/reload:** port `4173` listener PID `9432` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the rebuilt `/?staging=rp001` page and both assets returned HTTP `200`.
+- **Boundary preserved:** accepted first-person photoreal presentation, responsive `>=44px` controls, keyboard focus, recovery, bounded saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and protected RP-002 non-routability remain exact.
+- **Issue disposition:** no issue opened, changed, or reopened; W2 authorizes no runtime or art correction.
+- **Exact W3 handoff:** `Aesthetic Agent: review only the W2-reloaded accepted index-DYIYoZtf.js / index-VPnRyv7C.css build on port 4173 at representative desktop and narrow responsive layouts. Preserve the four 1672 x 941 photoreal masters, aspect-preserving crop, first-person framing, integrated Meadow geometry, localized focus, >=44px targets, stable static screen-only geometry, gameplay/recovery, saves/mastery/privacy/offline/no-authority, Tour isolation, unchanged continuation, cityStateDelta:null, accepted world state, and protected RP-002 non-routability. Open a finding only from exact reproducible evidence; otherwise return a clean aesthetic verdict for W4 final reload.`
+
 ## 2026-07-16 W1 accepted-boundary regression after protected hotspot dispatch - `c013c03`
 
 - **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 campaign and separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, non-routable, outside App/main and browser storage, and unavailable to Working after its isolated hotspot geometry/dispatch module was added.
