@@ -793,6 +793,74 @@ Correct principle with wrong mitigation or owner is not mastery. The transfer fo
 
 `Gameplay Master Agent: perform only the A4 puzzle-graph impact confirmation caused by the Five-Observation Presentation Lock and this NO REOPEN — SOLIDIFIED verdict. Preserve the exact protected observation sequence: fixed_trace, later_stewardship, and outlined_gap in any order at SC-03-10, then distant_repetition and closed_boundary in either order at SC-03-20; each deliberate matching campaign action may finalize only one matching canonical ID, and revisits are idempotent. Keep unknown, duplicate, forged, stale, out-of-stage, presentation-derived, early-look, orientation, maintenance, arrival, visibility, focus, hover, dwell, reading, dismissal, progress, layout, motion, navigation, save, restore, and Tour state at zero observation and zero mastery credit. Preserve the SOLIDIFIED PY-009 chain exactly as 6/6 primary -> mapped remediation as needed -> genuinely blank 6/6 transfer -> separately scored three-part explanation, and preserve the SOLIDIFIED RP002-RAI-01 chain exactly as 9/9 primary -> mapped per-case/per-dimension remediation as needed -> genuinely blank 9/9 transfer -> separately scored three-part explanation. Save review remains eligible only from the strict independent conjunction of both finalized learning chains plus all five finalized canonical observations; no cross-credit or inference is permitted. Preserve privacy-limited finalized evidence, cleared private work, deterministic first-incomplete sanitation/focus, separate no-credit Tour, the exact all-or-none civicComparisonSaved=true / nextSurveyDirectionMarked=true / rp002Checkpoint="comparison_complete" transaction, offline/no-live-service/no-authority/no-exam-guarantee, both predecessor facts, unchanged continuation, cityStateDelta=null, reversible return, invariant first-person photoreal world/clocks, closed identity material, no normal route, no successor, and zero city/external action. Confirm that the one-action/one-ID two-stage observation graph fits the locked Custody Ledger and atomic-save graph without changing cases, answers, scores, thresholds, remediation, evidence fields, observation meanings, UI, storage, art, route, or canon. Return an exact protected A5 handoff for only the observation state-model seam; keep responsive observation UI, protected/normal route exposure, browser storage integration, production art, world changes, successor exposure, and Working promotion excluded, and return REVISE.`
 
+## A4 five-observation graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 FIVE-OBSERVATION GRAPH LOCKED; REVISE / NON-ROUTABLE`.
+- **Bounded impact:** the A1 meanings, A2 presentation lock, and A3 `NO REOPEN — SOLIDIFIED` evidence separation fit the existing protected Custody Ledger and atomic-save graph. This confirmation adds no observation meaning, learning action, case, answer, score, threshold, remediation step, UI, route, storage, art, world response, authority, reward, or successor.
+- **Expected play time:** the protected observation sequence is expected to occupy `2–4 minutes`, including one safe early attempt and one revisit. The full normal-route Custody Ledger estimate remains `12–18 minutes`; time is neither stored nor scored.
+
+### Locked protected observation subgraph
+
+```text
+OBS-0 / observation_entry / SYSTEM // EXPEDITION SESSION
+  -> campaign only; begin at SC-03-10 with an empty sanitized observation set
+  -> Tour receives its separate no-credit preview and cannot enter this graph
+
+OBS-N / near_observations / SCENE // SENSOR RECORD
+  -> deliberate INSPECT FIXED TRACE       finalizes only fixed_trace
+  -> deliberate INSPECT LATER STEWARDSHIP finalizes only later_stewardship
+  -> deliberate INSPECT OUTLINED GAP      finalizes only outlined_gap
+  -> the three actions may occur in any order
+  -> each statement acknowledgement returns to OBS-N with textual System progress
+  -> when all three are finalized, derive SC-03-20 and focus its heading
+  -> distant/closed request before that boundary -> OBS-U with zero credit
+
+OBS-U / early_or_unavailable / SYSTEM // EXPEDITION SESSION
+  -> report only that the requested comparison is not yet available
+  -> retain valid near observations; clear transient request data
+  -> change no attempt, hint, mastery, world, city, route, save, or authority state
+  -> RETURN TO NEAR EVIDENCE -> OBS-N at the canonical first incomplete control
+
+OBS-F / far_and_closed_observations / SCENE // SENSOR RECORD
+  -> deliberate COMPARE DISTANT REPETITION finalizes only distant_repetition
+  -> deliberate INSPECT CLOSED BOUNDARY    finalizes only closed_boundary
+  -> the two actions may occur in either order
+  -> a near revisit replays only its same statement and changes no state
+  -> when both are finalized, derive observation_complete and OPEN LOCAL COMPARISON
+
+OBS-R / revisit / matching prior SCENE // SENSOR RECORD
+  -> replay the exact bounded statement for the requested finalized ID
+  -> retain the same five-ID set, ordering stage, progress, confidence, and evidence
+  -> return to the current stage without a new event or physical confirmation
+```
+
+- **One deliberate action, one canonical ID:** the only credit-producing inputs are the five matching campaign inspection actions. One action cannot finalize a neighboring fact or an inferred claim. Arrival, visibility, early look, orientation, maintenance, owner text, reading, acknowledgement, focus, hover, dwell, progress, layout, motion, navigation, learning, review, save, restore, and Tour remain zero observation and mastery evidence.
+- **Two-stage ordering with within-stage freedom:** `fixed_trace`, `later_stewardship`, and `outlined_gap` are an unordered set inside `SC-03-10`. Only their complete conjunction derives `SC-03-20`; `distant_repetition` and `closed_boundary` are then an unordered set. Stage, board, completion, and progress fields are derived from sanitized canonical IDs and are never trusted as credit.
+- **Recoverable early and unavailable actions:** an early far/closed request, unknown action, or unavailable semantic region produces only a System-owned local status. It retains valid finalized IDs, clears transient input, supplies no attempt/hint penalty or evidence, and returns to the canonical first incomplete action. It cannot be voiced as city refusal, closed-boundary judgment, Builder response, access denial, or lesson failure.
+- **Idempotent revisit:** a finalized observation may replay its exact Scene statement for recall or accessibility. The action cannot duplicate an ID, alter stage, change confidence, consume a retry, add mastery, backfill another fact, restart a clock, or trigger a new physical event. Near facts remain reviewable after `SC-03-20` without reopening the near stage.
+- **Sanitation and deterministic resume:** sanitation accepts only canonical finalized IDs acquired by matching deliberate campaign actions. It removes unknown IDs and duplicates; rejects presentation-derived, forged, stale, and non-final state; and discards either far-stage ID if all three near IDs are not valid. Stage is then derived. Focus uses the stable recovery priority `fixed_trace -> later_stewardship -> outlined_gap -> distant_repetition -> closed_boundary`, which chooses only a resume target and does not impose completion order. A complete five-ID state focuses `OPEN LOCAL COMPARISON`. Heading precedes the first required control, transient statements and private work clear, and no arrival, observation, conclusion, score, save effect, or world event replays.
+- **Privacy-limited state:** durable observation evidence may retain only packet ID, canonical observation ID, matching board ID, finalized status, and campaign-deliberate-action provenance required to validate the protected sequence. Pointer paths, coordinates, dwell time, raw sensor data, free-form notes, inferred identity, Builder intent, presentation history, and private working content do not persist.
+- **Independent conjunction:** observation completion unlocks only the protected local-comparison boundary. It supplies no `PY-009` or `RP002-RAI-01` dimension. Save review remains the strict independent conjunction of all five sanitized observations plus both separately finalized SOLIDIFIED chains. Neither learning chain cross-credits the other, no learning result manufactures an observation, and no observation manufactures mastery.
+- **Tour and invariant state:** Demo Tour may show the approved statements but has no campaign observation set, completion, save eligibility, commit, restore, retry, or evidence path. Every action preserves both predecessor facts, unchanged `continuation`, `cityStateDelta=null`, the reversible return, closed identity material, first-person photoreal geometry/materials/lighting/effects, all world clocks, no successor, offline/no-live-service/no-authority/no-exam-guarantee, and zero city or external action.
+
+### Player-observable validation additions
+
+1. The three near observations can be completed in all six orders and derive `SC-03-20` only after the third distinct matching action.
+2. Either far/closed order completes the five-ID set; an early far/closed request changes no evidence and returns to the first incomplete near control.
+3. Repeating any completed inspection replays only its statement and leaves the canonical ID set byte-stable.
+4. Unknown, duplicate, forged, stale, out-of-stage, or presentation-derived values cannot survive sanitation or enable `OPEN LOCAL COMPARISON`.
+5. Resume derives the stage and canonical first-incomplete focus from sanitized IDs without replaying discovery or changing the world.
+6. All five observations alone, either learning chain alone, or any two of the three eligibility sets cannot expose save review; only the independent conjunction of all three finalized sets can do so.
+7. Tour previews leave campaign observations, mastery, atomic progression, world, city, and route state byte-stable.
+
+- **Locked mechanics:** exact two-stage sequence; freedom within each stage; one deliberate campaign action/one matching ID; exact Scene statement; System-owned progress and unavailable status; idempotent revisit; zero-penalty early recovery; canonical-ID sanitation; derived stage/completion; deterministic first-incomplete focus; privacy-limited observation evidence; independent conjunction with both SOLIDIFIED chains; separate no-credit Tour; exact atomic save contract; and every world/city/route/authority invariant.
+- **Flexible implementation:** reducer/helper names, immutable set representation, internal phase labels, focus-intent shape, and compact status wording may vary only if the protected model preserves the exact actions, statements, two-stage guards, sanitation, deterministic recovery priority, idempotence, evidence separation, ownership, and zero-delta behavior. No flexibility authorizes UI, browser storage, route exposure, art, or new canon.
+- **Validation performed:** RP-002 curriculum validator self-test passed; targeted symbolic graph assertions covered all six near orders, both far orders, one-action/one-ID behavior, early recovery, idempotent revisits, sanitation, deterministic focus, Tour isolation, strict three-way save eligibility, and invariant state; packet/queue/map scope assertions and whitespace checks passed.
+
+### Exact Advance Coder A5 handoff — protected observation-state model only
+
+`Coder Agent — advance-construction mode: implement only the protected five-observation state-model seam in the non-routable Custody Ledger module. Begin from campaign-only SC-03-10 with no finalized observation IDs. Support deliberate matching actions for fixed_trace, later_stewardship, and outlined_gap in any order; derive SC-03-20 only after all three are finalized; then support distant_repetition and closed_boundary in either order. Each valid deliberate campaign action may finalize only its matching canonical ID and expose only the locked SCENE // SENSOR RECORD statement. Make revisits idempotent and allow a finalized near statement to be replayed after SC-03-20 without reopening its stage. An early far/closed request, unknown ID, unavailable region, forged action, or out-of-stage request must produce a recoverable SYSTEM // EXPEDITION SESSION status, retain valid evidence, clear transient work, add no attempt/hint/mastery/observation credit, and target the deterministic first incomplete control. Sanitize to canonical IDs obtained through matching deliberate campaign actions; remove duplicates/unknown/presentation-derived/stale values; discard far IDs unless all three near IDs are valid; derive stage and completion rather than trusting submitted fields; and use recovery priority fixed_trace -> later_stewardship -> outlined_gap -> distant_repetition -> closed_boundary, with heading-first focus and OPEN LOCAL COMPARISON focus only after all five. Persist no pointer path, coordinates, dwell, raw sensor data, prose, identity inference, Builder intent, or private work. Feed only the resulting sanitized finalized observation evidence into the existing protected save-dependency seam; do not change the exact all-or-none civicComparisonSaved=true / nextSurveyDirectionMarked=true / rp002Checkpoint="comparison_complete" transaction. Preserve the finalized PY-009 6/6 primary -> mapped remediation -> blank 6/6 transfer -> separately scored explanation chain and finalized RP002-RAI-01 9/9 primary -> mapped remediation -> blank 9/9 transfer -> separately scored explanation chain byte-for-byte and independently; no observation/mastery cross-credit. Preserve separate Tour no-credit/no-state behavior, both predecessor facts, unchanged continuation, cityStateDelta=null, reversible return, invariant first-person photoreal world/clocks, closed identity, offline/no-live-service/no-authority/no-exam-guarantee, no city/external action, and no successor. Add focused state-model tests for all six near orders, both far orders, one-action/one-ID, early/unavailable recovery, unknown/forged/out-of-stage rejection, duplicate idempotence, exact statement ownership, sanitation and derived-stage anti-forgery, deterministic resume/focus, private-work clearing, near revisit after far-stage entry, all-five save-dependency integration, each missing observation, strict independent three-way eligibility, Tour/campaign byte stability, and zero world/city/route/authority delta. Do not implement responsive observation UI, component/hotspot geometry, browser or localStorage persistence, protected or normal route exposure, production art, world changes, successor exposure, or Working promotion. Return REVISE and do not perform Working passes.`
+
 ## Puzzle Track — Gameplay Master
 
 ### Puzzle identity and sign-off
