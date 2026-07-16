@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A3 CURRICULUM PASS COMPLETE`
+- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE`
 - Target chapter/location: Chapter 3 opening expansion / first broad working landscape beyond the surveyed civic margin
 - Target demo horizon: third future slice after the accepted RP-001 boundary; directly after RP-003
 - Route order: 4
@@ -12,7 +12,7 @@
 - Spoiler class: `surface-safe`
 - Working title: `Three-Current Reach` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase II — Expansion / slot 1 of 3
-- Target player time: `TBD by Gameplay Master`; A1 bounds the narrative beat to one arrival, three deliberate observations, one exposed executable correspondence, one local save, and reversible return
+- Target player time: `34–46 minutes` clean first play; `20–28 minutes` mastered replay; protected reference-fixture smoke target `<5 minutes` without injected evidence, landscape hints, or skipped evaluators
 - Complete Advance cycles spent on this packet: 0 before this A1 pass
 - Convergence-budget status: `ORIENTATION`
 
@@ -151,8 +151,73 @@ Determine which exposed sample form corresponds to which visible handling corrid
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `UNASSIGNED — A4 NEXT; MAY NOT CHANGE THE SOLIDIFIED A3 CONTRACT`
+- Status: `PASS — A4 COMPLETE; ONE INTEGRATED FIVE-PHASE GRAPH LOCKED; READY FOR ADVANCE CODER A5`
 - Lore-provided interaction boundary: deliberate observation precedes executable work; the program uses sanitized replicas only; any correspondence remains expedition-side; save records observed form/corridor/purpose-unknown meaning; mistakes remain local and recoverable; live control, external action, and world response are forbidden.
+
+### Player motivation and puzzle promise
+
+The Pilot wants a usable expedition correspondence without turning a beautiful unknown landscape into a human category chart. The physical reach supplies four observation facts. The unfinished Builder work image then offers a real-Python loop over sanitized replicas. Finally, a visually neutral expedition exercise asks the learner to distinguish six AI workloads by requested outcome and deciding signal. These are three separate kinds of evidence: scenery never answers the workload exercise, workload correctness never proves a landscape purpose, and neither can substitute for the loop.
+
+### Integrated five-phase graph
+
+| Phase | Player-visible goal and actions | Required completion | Recovery and evidence ownership |
+|---|---|---|---|
+| `TR-00 ARRIVE + ORIENT` | Scene-owned panorama with `ORIENT TO THREE CURRENT RELATIONS`, `RETURN TO CALIBRATION MARGIN`, and `RETURN TO CITY THRESHOLD` | explicit orientation enters `TR-10`; returns remain available and zero credit | exact verified RP-003 completion is required; invalid, Tour-derived, stale, or contaminated entry fails closed to the RP-003 boundary with transient work clear |
+| `TR-10 OBSERVE THREE RELATIONS` | one active group exposes equal-peer actions for the suspended-matter/porous, cyclic-pressure/tensioned, and conducted-heat/jointed relations; Recorded actions remain safely replayable | one fresh deliberate action finalizes only its matching physical observation; all three reveal `TRACE APPARENT COMMON RETURN` | six observation orders converge; view, crop, motion, sound, focus, replay, order, owner copy, and visual prominence give zero observation or mastery credit |
+| `TR-20 TRACE COMMON RETURN` | Scene-owned registered return crop with `RECORD APPARENT COMMON RETURN`, `PRESERVE PURPOSE AS UNKNOWN`, `REVIEW SANITIZED SAMPLE PROVENANCE`, and safe returns | one deliberate record must preserve `observed=true` and `purpose=None`; all four observations enable `REVIEW LOCAL WORK IMAGE` | the return is evidence, never a route or answer; guessing a purpose, workload, authority, or destination fails locally and returns focus to the purpose-unknown boundary |
+| `TR-30 RELATE + SAVE` | one System-owned sequence containing prerequisite check, loop practice, neutral workload practice, bounded review, and atomic local save; detailed boundaries below | strict `PY-011`, strict independent `RP004-WORKLOAD-01`, and four separate observations must all finalize before save; none cross-credits | misses remain inside the current learning boundary with answer-free feedback and unlimited blank retry; early save names and focuses the first incomplete conjunct; no live source, landscape, service, route, or external state changes |
+| `TR-40 VERIFY + RETURN` | restored expedition note plus replica provenance, purpose-unknown, and no-live-control statements; `RETURN TO CALIBRATION MARGIN`, `RETURN TO CITY THRESHOLD`, optional `RECORD OUTBOUND PHYSICAL CONTINUATION` | explicit Pilot return restores the chosen verified anchor without replaying arrival, observations, execution, learning success, or save | outbound continuation has no destination and cannot open RP-005; panorama, currents, corridors, return, maintenance, coupling, light/sound causes, and clocks remain invariant |
+
+### TR-30 learning and save boundaries
+
+1. **Prerequisite hold:** verify the existing `L-03-02` loop evidence and workload-lesson/objective-ledger prerequisites. Missing evidence routes to the named existing lesson while story navigation and both returns remain available. Confidence cannot satisfy the gate.
+2. **Python primary:** show only the supplied sanitized replica dictionaries, supplied form-to-corridor lookup, empty output list, and supplied common-return record shape. The learner owns one `for` loop over `samples` and one exact append per iteration. `RUN REPLICA CORRESPONDENCE`, `REQUEST LOOP HINT`, `CLEAR WORK`, and `RETURN TO REACH` remain available. Exact semantic evaluation must pass `8/8`; execution display alone grants zero credit.
+3. **Python remediation:** each failed check names only the violated loop relation. The learner traces one iteration, identifies iterable/current item/body/output count/purpose boundary, then receives the same genuinely blank form. Hardcoding, zero/multiple appends, wrong order, input mutation, live-source access, primary reuse, or purpose inference fails closed.
+4. **Python delayed retrieval:** after a zero-credit replica-result overlay, a closed-note trace separately requires iterable, current item, loop body, expected output count, and purpose-unknown boundary. Every required statement must pass; a miss returns to answer-free blank trace remediation.
+5. **Python fresh transfer:** a genuinely blank unseen three-replica form must pass exact `8/8`. The completed primary source, code, and answers are unavailable. Passing finalizes `PY-011` only.
+6. **Neutral workload primary:** replace the code group with an expedition-owned course panel that contains no SC-05 crop, current icon, corridor texture, color mapping, sound cue, animation, or Builder referent. Present one neutral scenario at a time with six persistent human-readable workload choices and a separate deciding-signal choice. All six cases must pass both dimensions simultaneously for exact `12/12`.
+7. **Workload remediation:** only the first missed case/dimension receives a neutral answer-free prompt: identify the requested outcome, name the deciding signal rather than modality, and contrast one confusion pair. One neutral guided case is zero credit; retry restores the first incomplete form blank. Landscape observations and Python output remain unavailable as hints.
+8. **Delayed workload retrieval:** after a zero-credit provenance review, present the four fixed confusion-pair cases without notes or prior answers. Exact workload plus deciding signal is required for each, totaling `8/8`.
+9. **Workload fresh transfer and explanations:** present all six genuinely blank unseen cases for exact `12/12`, then separately score both explanations: why modality alone does not determine workload, and why multi-step autonomy/tool selection distinguishes agentic work. A miss routes only the failed case, dimension, or explanation to blank remediation. Passing finalizes `RP004-WORKLOAD-01` only.
+10. **Bounded review and save:** show four observation records, finalized `PY-011`, and finalized `RP004-WORKLOAD-01` as three independently owned completion groups. `SAVE THREE-CURRENT CORRESPONDENCE` commits one allowlisted all-or-none local record plus the expedition-owned note, clears all temporary source/answers/feedback/reasoning, then enters `TR-40` only after verified restore.
+
+### Required, optional, misleading, and unavailable actions
+
+- **Required:** deliberately record all three physical relations in any order; record the apparent common return with purpose unknown; pass the complete loop primary/remediation-if-needed/delayed-retrieval/blank-transfer chain; pass the independent workload primary/remediation-if-needed/delayed-retrieval/blank-transfer and both explanation chain; review all independent conjuncts; atomically save; verify restore; and choose a reversible return.
+- **Optional:** replay Recorded observations; inspect maintenance continuity; review sanitized-replica provenance; request answer-free hints; clear unsubmitted work; record confidence without credit; revisit the zero-credit correspondence overlay; return early and re-enter from verified RP-003; or record an undefined outbound physical continuation after verification.
+- **Misleading but safely recoverable:** choosing a workload because a case mentions text, audio, video, or an image; treating creation as automatically agentic; treating a broad visual description as schema extraction; treating transcript analysis as speech recognition; hardcoding three correspondence records instead of looping; or assigning a purpose because all currents appear to rejoin. Each produces local expedition feedback, never a city refusal.
+- **Unavailable and never rendered as implied controls:** read or operate live currents; query the landscape or terminal; route, optimize, synchronize, or change a corridor; use scenery as a workload clue; assign a native category, correct corridor, purpose, authority, author, identity, or Machine relation; use credentials/endpoints/payloads; make a live Azure/Foundry call; authenticate; convert Tour state into campaign evidence; save before all conjuncts pass; or name/open an RP-005 route.
+
+### Answer-free hint and recovery ladder
+
+1. **Observation hint:** names only the unrecorded physical evidence class and its carrier/material description. It never assigns a workload, purpose, preferred corridor, or native category.
+2. **Loop hint:** asks what collection repeats, what one current item is, what must happen exactly once, how many outputs three inputs imply, and which field must remain unknown. It never supplies loop syntax, an append record, a corridor answer, or transfer code.
+3. **Workload hint:** asks what outcome is requested and what signal distinguishes the work. A later hint contrasts one confusion pair—generation versus autonomous multi-step tool use, modality versus task, broad interpretation versus fixed-schema extraction—without selecting the active answer.
+4. Wrong, unsafe, stale, duplicate, combined, private, live-source, Tour-derived, or contaminated input preserves finalized allowlisted evidence, clears transient work, and reconstructs the first incomplete owner group heading-first. It cannot erase prior valid mastery, finalize an observation, or affect the world.
+5. Retries are unlimited and untimed. Every scored retry is blank; hints increment only `hint_level`; confidence remains separately recorded and cannot alter correctness, progression, save, or readiness.
+
+### Save, resume, Tour, and presentation contract
+
+- Persist only the contract allowlist: packet/mapping/form/skill-or-objective IDs, dimension correctness, attempt count, hint level, confidence, misconception tags, and mastery status. Never persist learner source, raw case answers, feedback, free-form reasoning, private notes, identity content, credentials, endpoints, payloads, responses, source content, exam-item text, or external-action requests.
+- Finalized scored evidence resumes at the first incomplete scored boundary. Correct completed cases may show only `Recorded`; their raw answers do not reappear. Unsubmitted work clears on transition, retry, return, save, and restore.
+- Before atomic save, the four landscape observations remain current-session expedition context rather than new learning-evidence fields. If reload loses that transient context, resume reconstructs `TR-10` for quick re-observation while finalized scored evidence is preserved and not replayed.
+- Save is all-or-none. Partial, forged, stale, or unverifiable records fail closed to bounded review or the first incomplete scored boundary. Verified restore replays no world, observation, execution, learning-success, or route event.
+- Demo Tour uses isolated fixtures and cannot call campaign dispatchers, finalize observations or mastery, persist evidence, save, unlock returns/successor state, or alter landscape/external state.
+- Representative `1920 x 1080` contains the dominant panoramic world plus the complete current owner/message/content/action group without outer vertical or horizontal scroll. Narrow and `200%` text zoom reflow vertically without horizontal escape or clipped return controls. Required controls remain at least `44 x 44 CSS px`.
+- One active owner group, persistent labels, field-associated text errors, live status, structural/non-color meaning, reduced-motion equivalents, semantic keyboard/pointer/touch/assistive activation, and deterministic heading/first-invalid/next-required focus are mandatory and always zero mastery evidence.
+
+### Pacing and player-observable delight
+
+- Expected clean first play: `34–46 minutes`; mastered replay: `20–28 minutes`; no time limit or timing credit.
+- `TR-00`–`TR-20` should take `5–7 minutes`; loop primary/retrieval/transfer `9–12 minutes`; workload primary/retrieval/transfer/explanations `16–23 minutes`; review/save/verify/return `4–6 minutes`.
+- The reward is an expedition-side schematic that preserves the three replica records in source order and places a deliberate blank at purpose. It then folds away before the neutral workload cards appear, making the separation between Builder work, landscape observation, and human course taxonomy visible rather than merely stated.
+- No success effect occurs in the world. Only the suit overlay changes; currents, corridors, common return, maintenance, light/sound causes, and environmental clocks continue unchanged.
+- A5's protected reference fixture must traverse all real evaluators, the four-observation conjunction, sanitation, save, restore, Tour isolation, and safe return in `<5 minutes` with no injected evidence, hardcoded result, landscape-derived answer, skipped explanation, or bypassed remediation boundary.
+
+### Gameplay Master sign-off
+
+- `PASS — A4 COMPLETE; PUZZLE GATE CLOSED; PY-011 AND RP004-WORKLOAD-01 MAPPING AGREED WITHOUT REOPEN`.
+- The graph preserves the exact SOLIDIFIED forms, answers, checks, dimensions, thresholds, explanations, remediation, privacy allowlist, landscape-never-answer-key rule, and authority boundary. It adds no Microsoft claim, art, runtime code, native category, Machine meaning, or successor content.
 
 ## Advance Construction Track — Coder
 
@@ -173,7 +238,7 @@ Determine which exposed sample form corresponds to which visible handling corrid
 ## Dependencies
 
 - Required existing systems: exact RP-003 verified completion boundary; reversible route ownership; privacy sanitizer; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
-- New systems: none authorized by A1; later roles decide whether existing comparison, evidence, recovery, and save patterns can be composed.
+- New systems: A5 may compose one pure protected RP-004 journey model/harness around the locked five-phase graph and existing evaluator, evidence, sanitation, atomic-save, verified-restore, focus, Tour-isolation, and safe-return patterns. A4 authorizes no per-transition module family, App/main import, browser persistence, accepted-route exposure, live read, or normal integration.
 - Art dependencies: A2 defines one registered maximum-quality photorealistic first-person landscape plan plus responsive interaction mapping after reading the visual spine.
 - Curriculum dependencies: `PY-011` and `RP004-WORKLOAD-01 / AI901-D1-O4` are SOLIDIFIED in `curriculum/readiness/RP-004/`; A4 composes them without changing prerequisites, cases, answers, dimensions, thresholds, source claims, privacy, authority, or zero-credit presentation.
 - Decisions awaiting Martin: none for this surface-safe seed.
@@ -185,14 +250,16 @@ Determine which exposed sample form corresponds to which visible handling corrid
 - Builder executable literacy appears as one bounded unfinished real-Python work image over sanitized replicas; it is ordinary occupational work, not authentication or live control.
 - A valid run renders only expedition-side correspondence and causes zero live read, route, optimization, external action, or physical landscape delta.
 - Completion saves only expedition-owned form, visible handling, common-return, and purpose-unknown meaning; native category, purpose, identity, authority, Machine relation, and RP-005 destination remain unresolved.
+- The complete `TR-00` through `TR-40` graph, four separate observations, exact loop-only chain, independent six-workload chain, landscape-never-answer-key boundary, conjunctive review, atomic save, deterministic resume, Tour isolation, and zero landscape/external response are locked.
 
 ## Flexible implementation choices
 
 - Exact landscape topology, scale, material palette, atmosphere, collective-work evidence, maintenance form, current visualization, coupling design, and world-plate count.
 - Puzzle ordering, recovery presentation, hint wording, and review layout may vary within the SOLIDIFIED `PY-011` and `RP004-WORKLOAD-01` contract; skill, objective, cases, answers, dimensions, thresholds, and evidence boundaries may not.
-- Exact puzzle cases, correspondence representation, hints, remediation, evidence order, and save schema.
+- Exact puzzle cases, answers, dimensions, thresholds, explanations, remediation requirements, evidence allowlist, and save conjunction are locked. A5 may choose only non-observable pure state representation and test organization.
 - Whether entry, changed, completed, and return states reuse one registered invariant plate or require registered detail plates.
 - Exact expedition-facing names for each current and corridor, provided they use physical carrier/material evidence and never claim native purpose.
+- Internal protected-model naming and the visual arrangement of the neutral course cards remain flexible if they preserve case order neutrality, persistent human-readable labels, no landscape referent, deterministic focus, and the exact frozen evidence contract.
 
 ## Player-observable acceptance criteria
 
@@ -201,32 +268,42 @@ Determine which exposed sample form corresponds to which visible handling corrid
 3. A local save restores only the bounded form/corridor/common-return/purpose-unknown note, clears temporary work, and preserves reversible return without replaying entry or success.
 4. No copy, art, animation, interaction, or state identifies a native category, correct corridor, purpose, authority, author, Machine relation, RP-005 destination, or central mystery answer.
 5. The dominant landscape plus current required controls/status fits the representative full 16:9 laptop viewport; narrow/text-zoom reflow remains accessible and horizontally contained.
+6. All six physical-observation orders converge to the same four-fact review; replay, scenery, motion, crop, focus, presentation order, and the apparent common return never grant Python or workload credit.
+7. Loop evaluation rejects hardcoding, wrong iteration/append count, wrong order/lookup, input mutation, live-source access, and purpose inference; each miss produces answer-free per-check repair and a blank retry, while execution alone grants nothing.
+8. Workload primary passes only at `12/12`, delayed retrieval at `8/8`, and genuinely blank transfer at `12/12` plus both separate explanations; every miss remediates only its case/dimension or explanation, and the SC-05 landscape is absent as an answer source.
+9. Save remains unavailable until four observations, finalized strict `PY-011`, and finalized strict `RP004-WORKLOAD-01` independently pass; an early save request names and focuses the first incomplete boundary without changing evidence.
+10. Resume restores allowlisted finalized evidence only, clears private/transient content, and reconstructs the first incomplete scored boundary; verified save restores the expedition note without replaying entry, observation, execution, success, or route events.
+11. Tour traversal, hints, confidence, timing, display, focus, accessibility behavior, save/restore presentation, and returns remain zero credit and cannot write campaign evidence or define/unlock RP-005.
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-landscape sequence and premium production-art plan`; Curriculum `PASS — PY-011 and RP004-WORKLOAD-01 / AI901-D1-O4 SOLIDIFIED with strict machine-readable evidence`.
-- Packet gates remaining: Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Curriculum moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-landscape sequence and premium production-art plan`; Curriculum `PASS — PY-011 and RP004-WORKLOAD-01 / AI901-D1-O4 SOLIDIFIED with strict machine-readable evidence`; Puzzle `PASS — A4 one integrated TR-00–TR-40 graph with answer-free recovery, save/resume, Tour, pacing, accessibility, and landscape-never-answer-key acceptance locked`.
+- Packet gates remaining: Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
+- Did this cycle reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
 - Existing seams integrated or consolidated: RP-003's saved comparison, purpose-unknown discipline, executable-literacy rule, privacy clearing, reversible returns, and undefined onward bearing become one direct expansion premise.
 - Optional work trimmed or deferred: RP-005 destination, additional landscapes, secondary programs, identity-bearing matter, live stream operation, native categories, and Machine relationship.
 - New module or artifact integration consumer: later A5 may compose existing comparison/evidence/save authorities only after A2–A4; no new module is requested by A1.
-- Breadth verdict: `CONTINUE`
+- Breadth verdict: `CONTINUE — A5 PROTECTED CONSTRUCTION NEXT`
 - Next contiguous packet seed readiness: `RP-005 remains RESERVED until RP-004 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Gameplay Master A4 composes one bounded interaction graph around the frozen PY-011 and RP004-WORKLOAD-01 chains while keeping every SC-05 presentation signal at zero mastery credit.
+- Exact next action in one sentence: Advance Coder A5 implements one pure protected RP-004 journey/harness for the locked TR-00–TR-40 graph, proves real evaluators, landscape isolation, recovery/save boundaries, and requests Gate Review or names one genuine hold.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
 - Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
-- Gameplay Master sign-off: `PENDING A4`
+- Gameplay Master sign-off: `PASS — 2026-07-16 / ONE INTEGRATED FIVE-PHASE GRAPH LOCKED`
 - Coder smoke-test result: `PENDING A5`
 - Readiness: `REVISE`
-- Required revision: complete A4–A5 sequentially on this packet; do not define RP-005.
+- Required revision: complete A5 protected construction and validation on this packet; do not define RP-005.
 
 ### Exact Gameplay Master A4 handoff
 
 `Gameplay Master Agent — A4: work only on RP-004 Three-Current Reach. Read the canonical Gameplay Master profile, GAMEPLAY_SYSTEMS_SPINE.md, this packet, locked SC-05, and curriculum/readiness/RP-004/contract.json plus validator. Build exactly one bounded interaction graph from exact verified RP-003 completion through three deliberate relation observations, common-return/purpose-unknown observation, strict PY-011 loop reinforcement, independent strict RP004-WORKLOAD-01 / AI901-D1-O4 workload recognition, conjunctive review, allowlisted atomic save, verified restore, and reversible return. Preserve every A1/A2 world and ownership lock, invariant SC-05 panorama/current/maintenance/environment clocks, sanitized replica-only provenance, supplied unscored scaffold, landscape-never-answer-key rule, six neutral workload categories, strict 8/8 -> retrieval -> blank 8/8 Python and 12/12 -> 8/8 retrieval -> blank 12/12 AI chains, separate explanations, answer-free local remediation, unlimited blank retry, privacy clearing, deterministic first-incomplete focus/resume, responsive/accessibility contracts, Tour zero credit, offline/no-authority/no-exam-guarantee, unchanged continuation, null city/external delta, no live read/control, no native purpose or Machine meaning, no RP-005 route, and no cross-credit from observation, presentation, execution, navigation, save, confidence, timing, hints, accessibility, or Tour. Do not alter cases, answers, dimensions, thresholds, sources, PY/AI IDs, composition, production art, runtime code, accepted Demo, hidden lore, native categories, or successor content. Specify entry/success/failure/recovery/save/restore/return states, timing, verbs, deterministic feedback/focus, and exact A5 protected-construction handoff; update packet, GAMEPLAY_SYSTEMS_SPINE.md, queue/map, and Gameplay log, then validate the graph against the frozen contract.`
+
+### Exact Advance Coder A5 handoff
+
+`Coder Agent operating mode: advance-construction. Work only on RP-004 Three-Current Reach. Implement one pure protected journey-level model/harness for the locked TR-00 through TR-40 graph; compose existing evaluator, evidence, sanitation, atomic-save, verified-restore, focus, campaign/Tour-isolation, and safe-return patterns rather than adding a module per transition. Begin only from exact verified RP-003 completion. Prove all six orders for three deliberate relation observations, then the common-return/purpose-unknown observation; prerequisite hold without story-route lock; exact PY-011 8/8 primary, per-check answer-free blank remediation, delayed closed-note iterable/current-item/body/output-count/purpose-boundary trace, genuinely blank 8/8 transfer; independent RP004-WORKLOAD-01 12/12 primary, per-case/per-dimension blank remediation, delayed 8/8 confusion-pair retrieval, genuinely blank 12/12 transfer, and both separately scored explanations. The workload interface must use only the frozen neutral course cases and contain no SC-05 crop, current/corridor icon, material/color/sound/motion mapping, Builder referent, or landscape-derived hint. Prove conjunctive bounded review with zero cross-credit; all-or-none allowlisted save; verified restore; first-incomplete deterministic resume/focus; early return; optional undefined physical continuation; and safe return to RP-003 or City Threshold. Wrong, stale, duplicate, forged, combined, contaminated, hardcoded, wrong-count/order/lookup, live-source, modality-only, landscape-derived, Tour-derived, private, and partial-save inputs must fail closed without erasing finalized evidence or changing landscape/route/external state. Preserve exact SOLIDIFIED forms, answers, checks, dimensions, thresholds, explanations, evidence fields, no-exam-guarantee, offline/no-live-Azure/Foundry/landscape/terminal posture, sanitized replicas only, unchanged continuation, cityStateDelta=null, externalStateDelta=null, invariant SC-05 panorama/currents/common return/maintenance/coupling/light/sound/clocks, first-person photoreal presentation metadata, reversible returns, no Machine meaning, no RP-005 route, accepted RP-001/RP-002 state, protected RP-003 state, and Tour byte stability. Add focused tests and a <5-minute reference-fixture smoke through real evaluators; keep App.jsx/main.jsx, browser persistence, normal routes, accepted bundles, production art, and the live Demo unchanged. Update the packet, PRODUCTION_READINESS_SPINE.md, scoreboard, queue/map, and Coder log; return GATE REVIEW only if all protected gates pass, otherwise name one genuine HOLD. Do not perform Working passes or define RP-005.`
 
 ### Exact Storyboarder A2 handoff
 
@@ -240,7 +317,7 @@ Determine which exposed sample form corresponds to which visible handling corrid
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-004 IN DESIGN — A3 COMPLETE / A4 NEXT`
+- Team 1 railhead after promotion: `RP-004 IN DESIGN — A4 COMPLETE / A5 NEXT`
 - Next contiguous packet seeded: `NO — RP-005 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`
