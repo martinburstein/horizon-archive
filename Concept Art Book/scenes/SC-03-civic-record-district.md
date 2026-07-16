@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic and responsive-composition reviews locked; no final art
+- **Production status:** Brief — A2 photorealistic, responsive-composition, and executable-literacy reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -17,7 +17,7 @@
 | `SC-03-00` | Entry + idle | Heat return and maintenance are already mid-cycle across low heat-facing layered masses; predecessor bridge tail enters lower left | Near mass -> `10`; distant echo optional; threshold return available |
 | `SC-03-10` | Changed observation | Near fixed trace, later crossing repair fabric, and bordered absence are structurally distinct | Inspect all three in any order -> `COMPARE SCALE`; return to overview |
 | `SC-03-20` | Changed observation | Far mass repeats the relation; maintenance services environmental couplings and bypasses a separately closed interlock | Inspect far echo + closed interlock -> `OPEN LOCAL COMPARISON`; maintenance optional |
-| `SC-03-30` | Changed expedition state | Reuse overview and continuous clock; comparison/save controls remain in the separate human interface band | Save bounded comparison -> `40`; cancel to overview |
+| `SC-03-30` | Changed expedition state | Reuse overview and continuous clock; separate responsive suit UI shows incomplete Python before execution, then a provisionally translated related three-condition record after a valid run | Save bounded comparison -> `40`; cancel to overview |
 | `SC-03-40` | Completed | World is identical to entry; separate UI confirms save, clears working notes, and marks—but does not open—a next-survey direction | Return to City Threshold; neighboring surface remains LOOK-only |
 | `SC-03-50` | Saved return | Restore the same completed overview without arrival replay or restarted clocks | Review saved comparison or return to City Threshold |
 
@@ -38,6 +38,7 @@ Every transition preserves `continuation`, `city_state_delta=None`, `cityThresho
 - Later stewardship: one compatible but visibly newer laminate crosses the old groups obliquely. Prepared keyways, changed roughness, thermal-stain boundaries, contact shadow, and a newer joint rhythm prove relative chronology while the layer steps around preserved edges.
 - Outlined gap: a double border encloses an unfilled interval over the same solid substrate. Dust, condensate, grain, reflected light, and heat stain continue across the interior plane, preventing a read as dark depth, door, socket, missing portrait, or aperture.
 - Closed identity layer: nested sealed interlock shows compression, pore treatment, contact wear, and thermal isolation without a light well, handle, human front, screen, or request path.
+- Occupational local coupling: an embedded non-front-facing junction physically joins trace intake, later stewardship routing, environmental return, and a maintained bypass. It reads as evidence-stewardship infrastructure through continuous channels, layered ports, residue, repairs, and service access—not as a kiosk, lock, password panel, human workstation, monitor, or credential surface. Its world geometry and operating cadence remain identical before and after suit-side execution.
 - Function: pre-existing trace/environment input -> separation and alignment with later repair -> exterior provenance distinctions retained at two architectural scales -> heat returned and couplings serviced without exposing the closed layer.
 - Stewardship phases: charcoal foundation laminates; pale trace substrate and later extensions; darker violet/amber repair fabric and currently serviced couplings.
 - Keep preservation, computation, environmental regulation, maintenance routing, and coupled functions plausible. `Civic record` and `public evidence custody` remain Pilot language.
@@ -66,7 +67,7 @@ The active contract is semantic and responsive: hotspots stay registered to thei
 
 The comparison and save controls belong to a separate responsive interface region. No interface, label, cursor, map line, icon, or text is painted or projected into Builder space. If a crop cannot retain a required landmark or route, show more of the master or use an approved art-directed crop; never stretch the plate or let the hotspot drift away from its silhouette.
 
-## Human interface ownership-copy fit
+## Suit interface, executable literacy, and ownership-copy fit
 
 - A2 impact verdict: `PASS`. The Custody Ledger runtime copy changes no plate, crop, camera, target rectangle, board order, state, material, lighting, registered effect, or city causality.
 - One active message at a time is grouped as visible text owner -> complete message -> related explanation/action. The group wraps by semantic clause rather than a fixed line count, every action remains at least `44 x 44 CSS px`, and the world remains the dominant visual region.
@@ -74,10 +75,13 @@ The comparison and save controls belong to a separate responsive interface regio
 - No responsive state may clip negative-authority clauses, shrink readable type, cover the plate, distort the world aspect ratio, or turn feedback into a world cue. Focus movement may scroll the interface group into view but must not unexpectedly move or rescale the world.
 - Every owner prefix is literal text and every message remains understandable without color. Semantic wrapping preserves `no local request`, `cannot claim access`, Pilot-owned provisional labeling, closed-record status, preview no-credit meaning, and unchanged `continuation`.
 - Save, restore, failure, cancel, prerequisite, and Demo Tour messages use the human status region only. No copy is baked, projected, reflected, or implied on Builder matter, and no world light, seam, maintenance path, heat route, or animation responds to it.
+- Before execution, the interface explicitly presents the bounded incomplete Python work image and the permitted expedition-owned completion area. After valid execution, the same ownership lane presents `SUIT // PROVISIONAL TRANSLATION` followed by the causally related fixed-trace / later-stewardship / outlined-gap record and the complete statement that identity-bearing material remains closed.
+- The before/after change belongs solely to suit UI state. It does not change the master plate, crop, exposure, coupling, closed interlock, ambient phase, route, or world lighting; it is neither a password-success animation nor a Builder response.
+- `SUIT // PROVISIONAL TRANSLATION` is visible mediation ownership, not an identified Builder speaker. No interface or board explains an intended operator, why the fragment was unfinished, or why the executable notation corresponds exactly to Python.
 
 ## Concise asset brief
 
-- Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
+- Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). The local coupling must visibly join trace intake, later stewardship routing, environmental return, and maintenance bypass without a human-facing display. Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
 - Complete all eight premium-production passes before approval: varied visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay-fit review, registered state/animation production, and provenance delivery.
 - Deliver only the high-quality responsive crops needed to preserve every semantic target, calm region, and material read across representative wide, laptop, and narrow layouts. If resampling or cropping weakens a required read, create a separate high-resolution art-directed crop from the same approved composition—never a pixelated, stretched, or detail-fabricated fallback.
 - Three registered high-resolution effect families with explicit masks/depth support: heat/condensation, nonhumanoid maintenance traffic with coherent contact shadows/reflections, and restrained coupling exchange/local spill. One monotonic clock runs through inspection, save, reload, and return.
@@ -95,7 +99,7 @@ The comparison and save controls belong to a separate responsive interface regio
 
 ## Locked and flexible
 
-- **Locked:** direct SC-02 adjacency; board order; three base compositions; semantic target ownership and attention order; near/far three-condition relation; separate closed interlock; no world delta; no successor route; responsive world/interface separation.
+- **Locked:** direct SC-02 adjacency; board order; three base compositions; semantic target ownership and attention order; near/far three-condition relation; occupational local coupling; separate closed interlock; suit-only incomplete-Python then related-record states; visible provisional suit ownership with no Builder speaker; no world delta; no successor route; responsive world/interface separation.
 - **Flexible:** exact mass contour within bounds, impression rhythm, compatible material families, repair joints, maintenance anatomy/count, effect timing, and restrained cinematic grade. City Beneath color continuity comes from motivated geothermal light, cavern bounce, and material response rather than a preset color recipe or generic neon.
 
 ## Photorealistic impact validation
@@ -104,5 +108,6 @@ The comparison and save controls belong to a separate responsive interface regio
 - `PASS`: board order, interaction rectangles, entry/exit state, ownership, copy, canon, first-person framing, no-protagonist/no-ship rule, and zero-city-response causality are unchanged.
 - `PASS`: the premium production package can be built from three high-resolution masters, responsive derivatives, registered effects, reduced-motion stills, evidence crops, difference masks, and provenance without Storyboarder creating final raster art.
 - `PASS`: retired exact `640 x 480` and `320 x 240` review canvases, the fixed `640 x 120` interface band, and fixed message-line counts are removed from active acceptance. The high-resolution world fills available space, semantic hotspots stay registered, and complete owner-prefixed interface groups remain readable and accessible under representative wide, laptop, narrow, browser-zoom, and `200%` text-zoom conditions.
+- `PASS`: executable-literacy staging is buildable without another world plate: the coupling is visibly occupational and invariant, while the incomplete Python and valid-run record remain separate suit UI states. The translated result has visible suit ownership, no Builder speaker, no password or access-granted staging, no explanation for exact Python, and no physical city response.
 
 Production status remains **Brief**. This impact review creates no raster or production art.
