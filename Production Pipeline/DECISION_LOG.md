@@ -1,5 +1,16 @@
 # Two-Team Decision Log
 
+## 2026-07-15 — Establish Builder executable literacy and earned Terminal discovery
+
+- Builders use executable Python as ordinary precise literacy within work, civic practice, maintenance, and landscape operation; it is not a human password scheme pasted onto alien machinery.
+- The player writes and runs real Python. The suit renders speech-like Builder content as provisional English and mediates executable work for accessibility, but the project does not explain why the executable notation corresponds exactly to Python.
+- A Terminal is a local work coupling. Progress comes from understanding, completing, or debugging an unfinished program whose inputs and result belong to that coupling's visible occupation or landscape function.
+- Successful execution must produce a causally related discovery: a surface-safe record, item, route, bounded machine response, restored operation, or newly legible half-finished work. It may not award an unrelated key, accept a password, or open a generic door merely because code ran.
+- Reward language should use `execute`, `complete`, `repair`, `resume`, `render`, `reveal`, `compare`, `recover`, or `continue` when those verbs match the observed result. Avoid `password accepted`, `access granted`, `authentication`, `hack`, `crack`, `bypass`, `login`, or `permission earned` unless a later authorized packet establishes that literal function.
+- Execution alone does not prove welcome, consent, attention, consciousness, judgment, authorship of the English rendering, or authority over closed/private material. Every packet must state what changed physically, what the suit rendered, what the Pilot inferred, and what remains closed.
+- English prose, labels, and accessibility text stay in the suit/expedition layer unless a packet explicitly identifies a provisional translated surface statement. Python and English must never be baked into Builder world plates.
+- This decision supersedes earlier project language that framed Python only as a human-authored request translated into otherwise unrelated Builder operations. Existing packets keep their validated skills and state gates, but each must receive a bounded lore/gameplay impact review before new implementation claims final narrative fit.
+
 ## 2026-07-15 — Retire fixed legacy viewport gates
 
 - Retire exact `640 x 480`, `640 x 360`, and `320 x 240` presentation requirements as remnants of the abandoned pixel-art expedition.

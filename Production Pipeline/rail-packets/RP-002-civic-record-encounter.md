@@ -60,6 +60,20 @@ Determine what kinds of claim the exposed civic surface keeps separate, without 
 - `PROVISIONAL PILOT OCCUPATION`: public evidence custody or civic record stewardship. Viable alternatives include preservation, computation, maintenance routing, or several inseparable functions.
 - `HARD WITHHOLDING`: native Builder categories, represented identity, operator, intended audience, ultimate purpose, relationship to `continuation`, and any connection to consciousness.
 
+### Executable literacy and suit-translation contract
+
+RP-002 applies the project-wide surface canon that Builders use executable Python as ordinary precise literacy within their work. This does not change the packet's board order, skill mapping, strict gates, or zero-city-delta ending.
+
+- `BUILDER WORK`: the exposed comparison is part of ordinary district stewardship. Its executable relation keeps fixed trace, later repair, and bounded absence distinct; it is occupational work attached to the record landscape, not a lock, quiz, password, login, or security ceremony.
+- `UNFINISHED PROGRAM`: the local coupling exposes a bounded incomplete Builder work image in real Python. The suit overlays the expedition's safety, accessibility, and ownership constraints. Completing the missing relation demonstrates operational understanding; it does not authenticate the Pilot.
+- `WHY PYTHON REMAINS OPEN`: player-facing copy may state that the executable work is Python. It may not explain why the correspondence is exact, whether the Builders named it the same way, whether the suit translates it, or whether the similarity has another cause.
+- `SPEECH RENDERING`: speech-like Builder content, if encountered, appears as `SUIT // PROVISIONAL TRANSLATION` in English. English labels, field names, owner prefixes, Teacher feedback, and accessibility text are not evidence of literal Builder wording. RP-002 reveals no identified speaker or first-person Builder statement.
+- `TRANSLATION LIMIT`: a useful English or Python rendering proves bounded operational legibility only. It does not prove complete translation, intended audience, historical context, motive, consent, identity, attention, or native category.
+- `CAUSAL RESULT`: a valid run renders the already-exposed three-condition surface record in the suit layer. The result is the program's relevant output: fixed trace, later stewardship, and outlined gap remain distinct while identity-bearing material remains closed.
+- `NO PASSWORD REWARD`: success does not award a key, code, badge, arbitrary door, generic access level, or unrelated route. It does not open the closed interlock, change `continuation`, create a successor route, or cause a physical city response.
+- `OCCUPATIONAL CONTINUITY`: the unfinished state may be paused work, a preserved handoff, a damaged fragment, or another incomplete condition. RP-002 does not explain who left it unfinished, when, why, or whether any Builder expected another operator.
+- `REWARD VOCABULARY`: use `complete the fragment`, `run the comparison`, `render the exposed record`, `repair the relation`, `resume the work image`, or `review the result`. Do not use `enter password`, `access granted`, `authentication passed`, `hack`, `crack`, `bypass`, `login`, `permission earned`, or `the city accepted you`.
+
 ### Photorealistic surface-evidence contract
 
 This refinement adds no new canon and assigns no composition work. It defines the physically caused evidence that premium photorealistic production must preserve so the existing Lore Track remains readable without labels, symbols, or exposition.
@@ -123,17 +137,18 @@ This copy tranche closes the remaining Lore-owned A5 ambiguity around `SC-03-30`
 | Boundary | Owner | Runtime-ready copy | Lore protection |
 |---|---|---|---|
 | prerequisites incomplete | `SYSTEM // EXPEDITION STATE` | "Required practice evidence is incomplete. The district remains available; no local request has been sent." | Missing course evidence is not a city refusal or physical lock. |
-| scored tray available | `SYSTEM // EXPEDITION SESSION` | "Five exposed conditions logged. Add only the two expedition-owned fields." | The source layer remains evidence, not editable identity or permission. |
+| scored tray available | `SYSTEM // EXPEDITION SESSION` | "Unfinished comparison loaded. Complete only the two expedition-owned fields, then run it." | The program is occupational work, not a password or authentication challenge. |
 | source field changed or mapping replaced | `SYSTEM // LOCAL CHECKS` | "Source evidence is locked. Add expedition fields without replacing it." | Failure belongs to the human validator and produces no world response. |
 | `identity` confused with `False` | `901 TEACHER // FEEDBACK` | "Identity is missing or unknown here; it is not a false identity." | The line teaches `None` versus `False` without identifying anyone. |
 | `access_requested` changed to `True` | `SYSTEM // LOCAL CHECKS` | "No request occurred. This comparison cannot claim access." | The interface cannot manufacture consent, contact, or authority. |
+| valid executable run | `SUIT // PROVISIONAL TRANSLATION` | "Execution renders the exposed three-condition record. Identity-bearing material remains closed." | The relevant record result is not access, approval, or a physical city response. |
 | strict evidence complete; save review opens | `PILOT // FLIGHT RECORDER` | "This label is mine. It does not name their purpose or open what remains closed." | Human classification remains provisional and the identity interlock remains separate. |
 | cancel, close, or route return before save | `SYSTEM // EXPEDITION SESSION` | "Unsubmitted work cleared. The district and closed records are unchanged." | Session cleanup is not a city-state change. |
 | normal atomic save succeeds | `SYSTEM // EXPEDITION STATE` | "Bounded comparison saved. No access request or external action occurred; `continuation` is unchanged." | Only the expedition save changes. |
 | completed save restores | `SYSTEM // EXPEDITION STATE` | "Civic comparison restored. Working notes are cleared; closed records remain closed." | Restoration reports retained human evidence, never Machine memory or renewed response. |
 | Demo Tour preview | `SYSTEM // DEMO TOUR` | "Preview only — bounded comparison not saved." | Tour viewing creates no story, curriculum, or city evidence. |
 
-Copy rendering must preserve the owner prefix in text, not color alone. No pass, miss, hint, retry, animation, save, tour, or resume line may be voiced by the city, closed interlock, Builder surface, or Machine. A5 may shorten a line only if its owner, negative-authority clause, and observation-versus-inference boundary remain explicit.
+Copy rendering must preserve the owner prefix in text, not color alone. `SUIT // PROVISIONAL TRANSLATION` describes the mediation result, never an identified Builder speaker. No pass, miss, hint, retry, animation, save, tour, or resume line may be voiced by the city, closed interlock, Builder surface, or Machine. A5 may shorten a line only if its owner, negative-authority clause, occupational-work meaning, and observation-versus-inference boundary remain explicit.
 
 ### Mystery protections
 
@@ -165,16 +180,16 @@ Copy rendering must preserve the owner prefix in text, not color alone. No pass,
 
 ### Lore Builder sign-off
 
-- Status: `PASS — A1 RESPONSIVE COPY IMPACT COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
+- Status: `PASS — A1 EXECUTABLE-LITERACY IMPACT COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`
 - Continuity: begins only from RP-001's completed expedition anchor and reversible route, preserves `continuation` and `city_state_delta=None`, and does not replay or mutate the threshold.
 - State transition: `RP-001 anchor complete -> cross already-lit route -> observe repeated provenance separation -> save bounded expedition comparison -> retain reversible return and mark next survey direction`, with zero city delta.
-- Spoiler safety: the beat exposes record structure rather than identity, motive, native category, or central answers.
+- Spoiler safety: the beat exposes record structure and a bounded unfinished program rather than identity, motive, native category, intended operator, the reason Python corresponds exactly, or central answers.
 - Ownership: every physical fact is Scene-owned, every saved change is expedition-owned, and every civic/public/occupational reading remains Pilot-owned and provisional.
 - Visual-direction impact: premium photorealism must strengthen material causality and relative chronology without adding symbols, identity content, human affordances, response behavior, or new story facts. The Custody Ledger copy remains entirely inside the separate responsive human interface and requires no world-plate change or legacy fixed canvas.
 
-### Exact Storyboarder handoff — responsive ownership impact review
+### Exact Storyboarder handoff — executable-literacy impact review
 
-Review the existing RP-002 A2 boards and `SC-03` brief against the retired fixed-viewport decision without changing board order, world plates, entry/exit state, or causality. Replace the legacy fixed interface-band, exact-viewport, and fixed-line assumptions in A2 with one separate responsive human interface region that uses available screen space gracefully at representative desktop and narrow widths. Every ownership message may wrap or scroll as needed, but it must retain its full visible owner prefix, complete no-request/no-authority clause, provisional human label, closed-record status, and unchanged-world meaning without relying on color, motion, position, or sound. Preserve readable type, contained controls, accessible minimum targets, deterministic focus, and unobscured first-person world art; existing interaction coordinates may remain temporary implementation references but are not acceptance gates. Preserve all locked physical-material evidence, stewardship eras, registered effects, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, and zero city response. Do not paint, project, reflect, or imply interface copy on Builder matter, and do not turn validation feedback into a surface reaction. Return the A2 responsive impact verdict and exact Curriculum Checker handoff on this same packet.
+Review the existing RP-002 boards and SC-03 brief against the new Executable Literacy and Suit-Translation Contract without changing board order, world plates, entry/exit state, skill gates, or world causality. Make the local coupling read as part of the district's ongoing evidence-stewardship work, not as a kiosk, lock, password panel, human workstation, or arbitrary reward dispenser. In the separate responsive suit interface, show the existing incomplete Python work image before execution and the causally related exposed three-condition record after a valid run; keep English field labels, Python, owner prefixes, Teacher feedback, and accessibility text out of Builder matter. Add `SUIT // PROVISIONAL TRANSLATION` as visible text for the valid-run result without implying a Builder speaker. Preserve the full negative-authority clauses, closed identity interlock, all physical-material evidence, stewardship eras, registered effects, unchanged `continuation`, `city_state_delta=None`, reversible City Threshold return, no successor route, and zero physical city response. Do not introduce a password, key, login, access-granted state, success door, Builder voice, intended operator, or explanation for why the executable notation is exactly Python. Return the A2 impact verdict and exact Curriculum Checker handoff for a mapping-preservation review on this same packet.
 
 ## Storyboard Track — Storyboarder
 
