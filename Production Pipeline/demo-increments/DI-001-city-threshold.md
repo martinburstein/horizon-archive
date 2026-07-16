@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W2 accepted-boundary verification/reload — `9378ef8`
+
+- **Mode/verdict:** `bug-repair — PASS; NO FUNCTIONAL REPAIR REQUIRED.` W1 supplied no reproducible defect and W2 reproduced none. No production runtime, test, art, save, route, curriculum, or QA artifact changed.
+- **Accepted evidence:** focused **29/29 PASS** across the responsive frame, complete opening/recovery contract, game-save sanitation, RP-001 board order, strict PY-020/CUM-01 gates, atomic commit, first-incomplete resume, route containment, banner absence, and coordinated photoreal plates.
+- **Protected future seam:** source inspection confirms `App.jsx`, `main.jsx`, and `CanonicalGameFrame.jsx` contain no Custody Ledger import, RP-002 identifier, or route. Protected RP-002 remains non-routable and outside this Working pass.
+- **Build/reload identity:** production build PASS with the existing chunk advisory; exact assets `index-PhQiqaIn.js` / `index-BCmwLuJV.css`. Port `4173` was restarted; `http://127.0.0.1:4173/?staging=rp001` returned HTTP `200` with those assets on listener PID `33264`.
+- **Issue disposition:** no issue opened, repaired, or reopened. Campaign, mastery, privacy/no-authority, Demo Tour isolation, continuation, null city delta, approved photoreal art, and all accepted recovery/focus behavior remain unchanged.
+- **Exact W3 handoff:** `Aesthetic Agent: review the live W2 verification build 9378ef8 plus its documentation-only checkpoint (index-PhQiqaIn.js / index-BCmwLuJV.css). Traverse the accepted opening through first Glass Meadow and inspect the current RP-001 staging route at representative desktop and narrow layouts. Include the existing TOUR: SKIP PRACTICE action beside active practice controls in the hierarchy review while preserving its locked no-credit behavior. Review photoreal plate fidelity, crop/aspect, scene dominance, CRT restraint, text and control scale, seams, image artifacts, unwanted emphasis, first-person framing, and protagonist/ship exclusion. Preserve opening order/copy/recovery/focus, >=44px targets, skip confirmation/campaign isolation, saves/mastery/privacy/no-authority, RP-001 gates, unchanged continuation/null city delta, approved art, and non-routable RP-002. Record reproducible aesthetic findings only; do not change production files.`
+
 ## 2026-07-15 W1 accepted-boundary regression pass — `48ecc00`
 
 - **Verdict:** `PASS FROM AUTOMATED PLAYER-JOURNEY + FOCUSED RP-001 EVIDENCE; ROOT LIVE CONFIRMATION REQUIRED.` No P0, P1, or P2 functional defect was reproduced in the accepted demo. Protected RP-002 work remains non-routable and outside the Working play boundary.

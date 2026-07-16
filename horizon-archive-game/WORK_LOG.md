@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2: accepted-boundary verification and reload
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1 reported no P0, P1, or P2 defect, and the bounded W2 verification reproduced none. No runtime, test, art, save, route, curriculum, or QA file changed.
+- **Verified contracts:** the accepted title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> Glass Meadow journey remains covered together with invalid-name recovery, single-activation anti-skip, sanitized resume, responsive available-width framing, `>=44px` required targets, RP-001 board order, PY-020 `10/10`, both CUM-01 `16/16` forms, atomic commit, bounded evidence, first-incomplete resume, banner absence, and coordinated photoreal plates.
+- **Protected boundary:** `src/App.jsx`, `src/main.jsx`, and `src/CanonicalGameFrame.jsx` contain no `custodyLedgerExercise`, `CUSTODY_LEDGER`, or `RP-002` import/route reference. Protected RP-002 remains non-routable and cannot affect the accepted campaign.
+- **Issue IDs resolved:** none opened or changed. Closed responsive, Tour, opening, integrated-Meadow, and RP-001 functional findings remain closed unless reproduced.
+- **Validation:** focused accepted-boundary suite **29/29**; production build passed with the existing large-chunk advisory; production identity `index-PhQiqaIn.js` / `index-BCmwLuJV.css`.
+- **Demo reload:** preview process restarted at `http://127.0.0.1:4173/`; `/?staging=rp001` returned HTTP `200` and served the exact assets above on listener PID `33264`.
+- **Pipeline artifacts updated:** `../Production Pipeline/demo-increments/DI-001-city-threshold.md` and this log only. Untracked user PDF/training files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent operating on the W2 verification build 9378ef8 plus its documentation-only W2 checkpoint (index-PhQiqaIn.js / index-BCmwLuJV.css): review the live accepted title -> Slot 01 -> character name -> three temporary prologue beats -> Chapter I -> Glass Meadow presentation and the current RP-001 staging route at representative desktop and narrow layouts. Include the existing TOUR: SKIP PRACTICE action beside active practice controls in the hierarchy review, but treat its no-credit behavior as functionally locked. Inspect photoreal plate quality, responsive crop/aspect, scene dominance, CRT-shell restraint, typography/readability, control scale, seams, artifacts, unwanted emphasis, first-person framing, and protagonist/ship exclusion. Preserve all opening order/copy/recovery/focus, >=44px targets, skip confirmation and campaign isolation, saves/mastery/privacy/no-authority, RP-001 learning/state contracts, unchanged continuation/null city delta, approved art, and protected non-routable RP-002. Record only reproducible aesthetic findings for W4; do not change gameplay, curriculum, art, or retired fixed-viewport rules.`
+
 ## 2026-07-15 — Advance Coder A5: protected PY-009 transfer/explanation seam
 
 - **Mode:** `advance-construction` for A5 only.
