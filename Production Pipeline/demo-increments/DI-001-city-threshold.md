@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 — RP-002 blank-view clean final reload
+
+- **Disposition:** `PASS — NO W4 IMPLEMENTATION / COORDINATOR VALIDATION NEXT.` W3 authorized no visual change and W4 reproduced no exact defect from safely available evidence.
+- **Validation/reload:** focused **47/47**, full **435/435**, build, immutable civic-master hash, and root/JS/CSS/civic HTTP `200`. Final port `4173` assets are `index-CMtUqHDM.js`, `index-BuFQ7Bya.css`, and `civic-record-district-arrival-master-v1-BYTUil6H.png`.
+- **Live limitation:** the browser remained at the user's pre-RP-001 Glass Meadow boundary. W4 left storage untouched and makes no direct `SC-03-10` crop/focus/overflow claim; coordinator retains that proof. The current boundary console was clean.
+- **Exact coordinator handoff:** use an exact valid predecessor to verify only the normal staged transition and blank `SC-03-10` at representative desktop/narrow layouts, then run release gates. Preserve the accepted master, first-person framing, >=44px/focus/non-color/reduced-motion contracts, deterministic resume, fail-closed save, Tour isolation, zero cross-credit/delta, and no later-state exposure.
+
 ## 2026-07-16 W3 — RP-002 blank-view bounded review
 
 - **Disposition:** `NO AESTHETIC FINDING OPENED / W4 ROOT LIVE REVIEW NEXT.` The exact served blank boundary retains an explicit `SC-03-10-detail-pending` hook and reuses the accepted P0 master, but the available browser save remained before the verified predecessor. W3 does not authorize a visual change without fresh direct-path desktop+narrow evidence.
