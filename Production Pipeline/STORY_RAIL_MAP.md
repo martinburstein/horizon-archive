@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED`
-- Team 1 railhead: `RP-002 — A5 partial; protected PY-009 distinct-origin seam complete, responsible-AI primary next`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 responsible-AI seam ready for protected construction`
+- Team 1 railhead: `RP-002 — A5 partial; A1 responsible-AI ownership impact complete, A2 review next`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 responsible-AI seam in ordered A1–A5 impact review`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | Functional gates, responsive presentation, and the coordinated photorealistic production family are validated. Historical pixel and occupant-raster blockers remain retired; optional registered motion is follow-on polish only. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + DISTINCT HUMAN TRANSFER` | `STORYBOARD LOCKED — DISTINCT ORIGINS` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE` | `RP002-RAI-01 SOLIDIFIED — PROTECTED PRIMARY NEXT` | `A4 LOCKED — DISTINCT-ORIGIN RECOVERY GRAPH` | `TOUR + PREREQUISITE + PY-009 30-A THROUGH 30-E COMPLETE` | Protected A5 now enforces `30-B` causal result -> cleared `30-C` fresh transfer `6/6` -> `30-D` separately scored Teacher explanation -> `30-E` Pilot conclusion, then initializes only a blank unscored RAI primary. Blank retry, first-incomplete resume without result replay, save lock, privacy, Tour, authority, and invariant-world contracts remain exact; A5 may next build only the responsible-AI primary/remediation seam. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + HUMAN RAI OWNERSHIP` | `A2 RAI OWNERSHIP IMPACT REVIEW NEXT` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE` | `RP002-RAI-01 SOLIDIFIED — A1 MEANING LOCKED` | `A4 LOCKED — DISTINCT-ORIGIN RECOVERY GRAPH` | `TOUR + PREREQUISITE + PY-009 30-A THROUGH 30-E COMPLETE` | A1 now locks principle, mitigation, accountable role, and remediation feedback as human course/expedition decisions with no native meaning, identity inference, authority, external action, or city response. A2–A4 must preserve the exact `9/9` contract before A5 builds only the protected responsible-AI primary/remediation seam; save, route, successor, and world state remain disabled. |
 
 ## Whole-story coverage gate
 

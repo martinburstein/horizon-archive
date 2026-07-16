@@ -171,6 +171,41 @@ Runtime-ready ownership copy for this seam:
 
 The three lines above join the existing Custody Ledger ownership registry at their named graph boundaries. Merely reading, dismissing, restoring, or displaying them creates no mastery, story completion, access, authority, city state, or external action. A miss continues to use the existing human-owned mapped feedback and blank retry contracts.
 
+### Responsible-AI primary and remediation meaning contract
+
+The protected `RP002-RAI-01` primary and its remediation are course-authored expedition practice over the already-bounded comparison. They do not reveal a Builder principle, infer a native value system, interpret a city decision, or ask any local surface to act.
+
+1. **Principle decision:** selecting `transparency`, `privacy_and_security`, or `accountability` classifies what the human expedition application must do with its own evidence and labels. It does not name a Builder doctrine, Machine rule, native category, consent state, or judgment about the district.
+2. **Mitigation decision:** selecting a mitigation names a testable human safeguard—show the expedition's sources and limits, keep unnecessary identity material closed, minimize retained evidence, send no request, or require human review/correction/audit. The selection records intended human handling only; it does not execute a request, open a layer, disclose content, change a route, or alter the city.
+3. **Accountable-owner decision:** selecting an owner assigns review and correction responsibility to a human or organizational expedition role. The role label is course-authored application responsibility, not an inferred person's identity, a claim that another human is present, a Builder office, a city process, the model, the platform, or the Machine.
+4. **Three-part meaning:** a correct principle without its exact safeguard and accountable human/organizational role remains incomplete because responsible handling requires all three decisions together. This is a human learning contract, not a ritual, permission test, or native civic procedure.
+5. **Case boundary:** the provisional-label case governs how the expedition describes its own label; the closed-layer case governs expedition restraint; the native-fact proposal governs human review of an application claim. None authorizes inspection of identity material or establishes what the Builders intended.
+6. **Remediation boundary:** retrieval, neighboring-principle contrast, guided near case, hints, retry, and blank restoration remain entirely inside the expedition learning layer. They create no new surface observation, no second rendered record, no city refusal or approval, and no durable learner prose.
+
+Runtime-ready ownership copy for the protected primary/remediation seam:
+
+| Moment | Owner | Runtime-ready copy | Meaning lock |
+|---|---|---|---|
+| responsible-AI primary opens | `SYSTEM // EXPEDITION SESSION` | "Review three expedition-handling cases. Choose a principle, a testable safeguard, and an accountable human or organizational role." | The cases and decisions are human course work, not Builder doctrine or city process. |
+| principle dimension misses | `901 TEACHER // FEEDBACK` | "Principle mismatch. Recheck what the expedition must make visible, protect, or keep under human responsibility." | Feedback classifies human application practice and does not interpret native values. |
+| mitigation dimension misses | `901 TEACHER // FEEDBACK` | "Safeguard mismatch. Choose an expedition action that can be checked; naming a principle alone is not enough." | A proposed safeguard is not an executed request, disclosure, access, or world action. |
+| accountable-owner dimension misses | `901 TEACHER // FEEDBACK` | "Owner mismatch. Name the human or organizational role responsible for review and correction; the system cannot own accountability." | The role is accountable human application ownership, not identity inference or Machine agency. |
+| mapped remediation opens | `SYSTEM // EXPEDITION SESSION` | "Guided practice is expedition-authored. No source, identity layer, or city process is being opened." | Remediation is a private human learning state with zero city or external action. |
+
+These lines attach only to the existing `rai_primary` and mapped-remediation boundaries. They may not expose the expected answer before a scored attempt, count as evidence when read or dismissed, or replace field-associated feedback naming the failed case and dimension. Every retry remains blank and unlimited. Only privacy-limited correctness booleans, counts, confidence, and fixed misconception tags may persist; selected answers and feedback prose clear. The suit, local coupling, closed interlock, city, Builders, and Machine own none of this copy and provide no pass, miss, hint, or correction signal.
+
+### Lore Builder responsible-AI impact sign-off
+
+- Status: `PASS — A1 RESPONSIBLE-AI PRIMARY/REMEDIATION MEANING COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`.
+- Continuity: the completed PY-009 `30-A` through `30-E` chain still opens only a blank, unscored `rai_primary`; `continuation`, both RP-001 flags, `city_state_delta=None`, reversible return, and the no-successor boundary remain unchanged.
+- Ownership: principle, mitigation, and accountable-role decisions classify human expedition application practice. Miss, hint, guided-practice, and retry copy belongs only to `SYSTEM // EXPEDITION SESSION` or `901 TEACHER // FEEDBACK`.
+- Spoiler safety: no choice or feedback line states Builder doctrine, native meaning, consent, identity, attention, judgment, access, authority, or city response.
+- Curriculum boundary: this contract adds presentation meaning only. The SOLIDIFIED three-scenario `9/9 primary -> per-dimension remediation -> blank 9/9 transfer -> three-part explanation` chain, expected answers, evidence allowlist, and privacy rules are unchanged.
+
+### Exact Storyboarder handoff — responsible-AI decision/feedback meaning review
+
+Storyboarder Agent: perform one bounded A2 impact review of the new Responsible-AI Primary and Remediation Meaning Contract on RP-002. Preserve every existing world plate, board, camera, hotspot, route, animation clock, material lock, Python origin group, curriculum score, and zero-city-delta state. Inside the existing separate responsive human interface after `30-E`, make the `rai_primary` sequence visibly course-authored and expedition-owned: each active case asks for one principle, one testable safeguard, and one accountable human or organizational role; mapped misses replace the active group with `901 TEACHER // FEEDBACK`; guided practice and blank retry remain `SYSTEM // EXPEDITION SESSION`. Keep one owner/message/case/action group active at a time, retain field association and deterministic first-failed focus, and do not visually encode correctness or origin by color, placement, motion, or world reaction alone. Preserve the meaning that principle labels classify human application practice, mitigation choices propose human safeguards without executing them, and owner choices assign review/correction responsibility without identifying a person or implying additional human presence. Do not add Builder doctrine, Builder speech, native interpretation, city approval/refusal, access, consent, authority, identity inference, a second suit-rendered record, or any change to the coupling, closed interlock, light, heat, maintenance, route, save, or successor. Verify complete owner prefixes, semantic wrapping/reflow, live feedback, keyboard order, blank retry, scroll recovery, and at least `44 x 44 CSS px` required actions across representative desktop and narrow layouts. Then hand A3 an exact mapping-preservation review: the five ownership lines and clarified meanings must not change the SOLIDIFIED three-scenario `9/9 primary -> per-dimension remediation -> blank 9/9 transfer -> three-part explanation` contract, expected answers, evidence allowlist, privacy, no-credit Tour, offline/no-authority boundary, or zero-city-response state.
+
 ### Mystery protections
 
 - Do not identify the layered masses as tombs, homes, courts, people, memories, civic offices, records by native definition, or Machine organs in Scene/System copy.
