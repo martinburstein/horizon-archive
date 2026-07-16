@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / W1 CLEAN; BUG REPAIR VERIFICATION NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent (`bug-repair`) | None reproduced after protected route-state construction: preflight 26, focused `40/40`, full `345/345`, build, and full E2E in `103.3s` passed; fresh manual browser surface unavailable to W1 | Verification/reload only; preserve the accepted boundary and keep RP-002 protected and non-routable |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / W2 RELOADED; AESTHETIC REVIEW NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Aesthetic Agent (`scene-review`) | None reproduced after protected route-state construction: W1 preflight/E2E passed; W2 focused `40/40`, full `345/345`, build, leakage scans, and page/JS/CSS HTTP checks passed | Review only the reloaded accepted presentation; keep RP-002 protected and non-routable |
 
 ## Current-demo quality lane
 
