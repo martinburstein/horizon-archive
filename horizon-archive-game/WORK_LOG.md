@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W4: localized Meadow Terminal focus
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Resolved:** `MEADOW-AESTH-FOCUS-001`. The field-linked Terminal retains its exact large semantic button and automatic fresh/resume focus, but its full `50% x 88.8889%` hit area no longer draws an amber perimeter or translucent wash. Pointer hover and keyboard focus now emphasize only the existing compact Terminal label.
+- **Accessibility:** keyboard focus remains unmistakable through a high-contrast amber label outline with a dark separation ring. Forced-colors uses `Highlight`, `Canvas`, and `CanvasText` on that localized label. The shared `.hotspot:focus-visible` rule remains intact for the route marker and every other hotspot; no target, accessible name, focus ref, activation handler, or `>=44px` contract changed.
+- **Responsive/invariant behavior:** exact primary geometry remains `25%, 11.1111%, 50%, 88.8889%`; existing desktop/narrow label anchors remain unchanged; no art, crop, static membrane, copy, objective, opening, Tour, save, mastery, privacy/no-authority, RP-001, continuation, city delta, or protected RP-002 behavior changed.
+- **Files changed:** `src/styles.css`, `test/signalCouplerProduction.test.js`, `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, and this log.
+- **Validation:** focused responsive/opening/Tour/Meadow/RP-001 suite **38/38**; complete game suite **274/274**; production build passed with the existing chunk advisory. Build identity: `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Demo reload:** port `4173` restarted; `/?staging=rp001` returned HTTP `200` with the exact assets above on listener PID `35372`.
+- **Browser evidence boundary:** the in-app browser runtime exposed no available browser, so W4 claims no fresh live screenshot, computed rectangle, zoom, or forced-color capture. This is an evidence limitation, not a reproduced defect; the rebuilt server is ready for coordinator live validation.
+- **Exact coordinator handoff:** `Coordinator: validate MEADOW-AESTH-FOCUS-001 only on the rebuilt index-DYIYoZtf.js / index-VPnRyv7C.css at port 4173. At fresh Glass Meadow entry and incomplete-save resume, confirm document focus still lands on look at field-linked Terminal and keyboard/pointer activation still opens the same Terminal. At approximately 1280x720, 390x844, and representative 200% zoom, confirm the exact large hit geometry remains 25%,11.1111%,50%,88.8889% while no full-button border or tint appears; only the compact label carries a strong visible focus cue, remains contained, and creates no horizontal escape. In forced colors confirm the compact label uses an unmistakable system-color focus outline. Tab to the route marker and representative other-scene hotspots and confirm their existing full visible focus cue remains. Preserve all art/crop/static membrane, opening, Tour skip/no-credit behavior, saves/mastery/privacy/no-authority, RP-001 gates, continuation/null city delta, and non-routable RP-002. Revert incidental QA binaries and report PASS or only an exact reproduced residual.`
+
 ## 2026-07-15 — Coder W2: accepted-boundary verification and reload
 
 - **Mode:** `bug-repair` for W2 only.

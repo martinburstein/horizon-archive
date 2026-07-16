@@ -343,6 +343,25 @@ h1 {
   line-height: 8px;
   letter-spacing: 0;
 }
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:hover,
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible {
+  border-color: transparent;
+  background: transparent;
+}
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible {
+  outline: none;
+}
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:hover span {
+  border-color: #c6ad78;
+  box-shadow: 0 0 0 2px rgba(240, 201, 106, 0.34);
+}
+.canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible span {
+  opacity: 1;
+  border-color: #f0c96a;
+  outline: 2px solid #f0c96a;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(8, 9, 16, 0.86);
+}
 .hotspot[data-hotspot-id="route-marker"] span {
   left: 3px;
   right: 3px;
@@ -361,6 +380,18 @@ h1 {
 }
 .hotspot[data-hotspot-id="route-marker"][data-route-marker-state="locked"] span { border-style: dashed; }
 .hotspot[data-hotspot-id="route-marker"][data-route-marker-state="completed"] span { border-style: double; }
+
+@media (forced-colors: active) {
+  .canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible span {
+    color: CanvasText;
+    background: Canvas;
+    border-color: Highlight;
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+    box-shadow: none;
+    forced-color-adjust: auto;
+  }
+}
 
 .terminal-workbench {
   position: absolute;

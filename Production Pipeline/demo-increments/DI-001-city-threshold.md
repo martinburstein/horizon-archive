@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W4 localized Meadow focus — `d251b1a`
+
+- **Disposition:** `MEADOW-AESTH-FOCUS-001 RESOLVED IN W4 — COORDINATOR LIVE VALIDATION PENDING.` The exact field-linked Terminal hit target, semantic button, automatic focus, accessible name, and pointer/keyboard activation remain unchanged; only the oversized visible focus treatment changed.
+- **Visible delta:** primary Meadow hover/focus no longer paints the full `50% x 88.8889%` button border and translucent wash over the hero plate. The existing compact Terminal label now carries the high-contrast hover/focus cue, with a dark separation ring in ordinary color and system `Highlight`/`Canvas`/`CanvasText` treatment in forced colors.
+- **Preserved focus:** the shared hotspot focus rule remains unchanged for the route marker and every other hotspot. Exact primary geometry remains `25%, 11.1111%, 50%, 88.8889%`; desktop/narrow label anchors, `>=44px` targets, art/crop/static membrane, opening, Tour skip/no-credit isolation, saves/mastery/privacy/no-authority, RP-001, continuation/null city delta, and protected RP-002 remain unchanged.
+- **Validation/build:** focused **38/38 PASS**; full suite **274/274 PASS**; production build PASS with the existing chunk advisory. Exact assets: `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Reload:** port `4173` restarted; `http://127.0.0.1:4173/?staging=rp001` returned HTTP `200` with those assets on listener PID `35372`.
+- **Evidence boundary:** no browser backend was available to W4, so fresh/resume rectangles and forced-color screenshots remain the coordinator's live gate rather than an implementation claim.
+- **Exact coordinator handoff:** `Validate MEADOW-AESTH-FOCUS-001 only on index-DYIYoZtf.js / index-VPnRyv7C.css. On fresh Meadow entry and incomplete-save resume, confirm focus remains on look at field-linked Terminal and activation is unchanged. At 1280x720, 390x844, and 200% zoom, confirm exact 25%,11.1111%,50%,88.8889% hit geometry, no full-area perimeter/tint, a contained unmistakable compact-label cue, and no horizontal escape. Under forced colors confirm the local system-color outline remains visible. Confirm the route marker and representative other hotspots retain their visible focus cues. Preserve every art, state, save, learning, Tour, city, and protected-route contract; revert incidental QA binaries and report PASS or an exact residual.`
+
 ## 2026-07-15 W3 Meadow focus-hierarchy review - `0ee691d`
 
 - **Verdict:** `REVISE - MEADOW-AESTH-FOCUS-001 P2; ACCEPT FOR W4.` Opening, responsive framing, wired photoreal masters, static membrane stability, and Tour skip source hierarchy remain accepted from available evidence; one root-live focus treatment is reproducibly overemphasized.
