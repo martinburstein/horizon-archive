@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload after protected hotspot dispatch - `218d29e` handoff
+
+- **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Finding disposition:** no aesthetic ID was opened, changed, or reopened. Closed responsive, opening, Tour, Meadow-integration, localized-focus, and RP-001 findings remain closed. Optional registered membrane animation remains deferred follow-on art, not a defect in the accepted static state.
+- **Presentation preserved:** all four lossless RGB `1672 x 941` masters retain aspect-preserving responsive crop, photographic detail, world dominance, first-person/no-protagonist/no-ship framing, physically integrated Meadow seams/channels/contact, localized focus, readable hierarchy, `>=44px` required targets, and stable static screen-only geometry.
+- **Functional boundary preserved:** gameplay/recovery, saves/mastery/privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, accepted world state, and protected RP-002 non-routability remain exact.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **330/330 PASS**; production build PASS with the existing non-blocking large-chunk advisory; App/main/frame source, rebuilt-JS, and protected storage scans found no RP-002/Custody Ledger hotspot entrypoint leakage; exact page/JS/CSS HTTP checks PASS.
+- **Build/reload:** final-reloaded port `4173` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the staging page and both assets returned HTTP `200` on listener PID `3112`.
+- **Exact coordinator handoff:** `Coordinator: perform the retained representative desktop and narrow responsive live review on the final-reloaded build, then run coordinator tests/build, RP-002 curriculum validator, E2E syntax/full playthrough, restore incidental QA binaries, and record PASS or only an exact reproduced residual. Preserve all accepted presentation, gameplay/recovery, saves/mastery/privacy/offline/no-authority, Tour isolation, continuation, null city delta, accepted world state, and RP-002 non-routability.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review after protected hotspot dispatch - `778755a` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - NO NEW AESTHETIC FINDING.` The accepted opening, Glass Meadow, and RP-001 staging remain coherent; closed visual findings stay closed, and protected RP-002 remained intentionally absent/out of scope.
