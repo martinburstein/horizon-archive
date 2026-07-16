@@ -2,8 +2,9 @@
 
 ## Mandatory convergence audit — 2026-07-16
 
-- **Verdict:** `GATE REVIEW — A5 PROTECTED JOURNEY INTEGRATION PASSED; NORMAL INTEGRATION NOT AUTHORIZED`.
+- **Verdict:** `READY FOR WORKING — COORDINATOR GATE PASSED; NORMAL INTEGRATION NOW ASSIGNED TO TEAM 2`.
 - **Reason:** RP-002 exceeded the convergence budget. Its surface story, scene sequence, two SOLIDIFIED learning chains, five-observation meanings, recovery, accessibility, atomic save, privacy, Tour, and no-authority contracts were already sufficient. A2–A4 consolidated the compact presentation and graph; A5 closed the final protected end-to-end smoke and validation deficit over existing authorities. No additional lore or state micro-seam is required for Gate Review.
+- **Coordinator decision:** all twelve Gate Review checklist items have direct artifacts and passing evidence. Promotion authorizes the normal-integration and Working passes only; the protected journey remains absent from the accepted App/main route until Team 2 implements, tests, visually reviews, and releases it.
 
 ### Exact player-visible packet path
 

@@ -1,5 +1,15 @@
 # Two-Team Decision Log
 
+## 2026-07-16 — Fit the complete desktop game shell inside a 16:9 laptop viewport
+
+- Treat Martin's ASUS Vivobook Pro 15 request as a responsive full-viewport contract rather than a physical-inch CSS measurement.
+- Use `1920 x 1080` as the representative 16:9 desktop release viewport while keeping the implementation resolution-independent for other 16:9 panels.
+- At the representative desktop viewport, the dominant world, dialogue, all current required action controls, and inventory must remain visible inside one browser viewport with no outer horizontal or vertical page scrolling.
+- Avoid solving containment through destructive image distortion, illegible controls, excessive dead framing, or a return to fixed legacy canvases.
+- Preserve controls at least `44 CSS px`, first-person photoreal world dominance, aspect ratio, keyboard/focus behavior, and stable Terminal geometry.
+- Narrow layouts and effective 200% text zoom may reflow vertically; they must preserve containment, readability, focus order, and no horizontal page escape rather than forcing desktop no-scroll behavior.
+- Apply this contract to the accepted demo and carry it through the location/visual, gameplay, production-readiness, and future Rail Packet spines.
+
 ## 2026-07-16 — Adopt a 12-packet expedition spine and Advance convergence budget
 
 - Use 12 main Rail Packets as the planning target for the first complete expedition, grouped into foundation, expansion, synthesis, and capstone/resolution phases.

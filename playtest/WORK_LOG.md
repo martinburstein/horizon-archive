@@ -1,5 +1,13 @@
 # Player Agent Work Log
 
+## 2026-07-16 - Coordinator closure: Vivobook full-shell release and RP-002 promotion
+
+- **Outcome:** `PASS — VIEWPORT-P1-002 RESOLVED; UPDATED DEMO READY.` The complete accepted game shell now fits a representative 16:9 ASUS Vivobook viewport as one coherent screen, without turning physical inches into a fixed canvas. RP-002 also passed its independent Gate Review and is promoted to the Working queue; it remains absent from the live route until methodical implementation and acceptance.
+- **Live evidence:** exact CSS `1920 x 1080` measured document `1920 x 1080`, zero outer x/y overflow, an undistorted `1428.656 x 802.609` first-person world, complete `220px` command band, and all three verbs plus both inventory controls fully visible at `44px`. Exact `390 x 844` retained `390px` scroll width, no horizontal escape, five contained `44px` controls, and no browser warnings/errors. The temporary viewport override was reset and the title was left ready to play.
+- **Release validation:** automated release checks **PASS in 206.9s**: complete game suite **402/402**, production build (`index-BwgGd-Qy.js` / `index-D-UKM1r6.css`; existing chunk advisory only), RP-002 curriculum contract, E2E syntax, patch integrity, and full title-to-credits E2E with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental regenerated QA PNGs were restored.
+- **Next handoff:** Player Agent W1 begins the oldest adjacent `RP-002 READY` packet and reports the earliest exact normal-integration gap. Advance A1 may seed RP-003 contiguously. The accepted RP-001 baseline reopens only on reproduced evidence.
+- **Status:** `COORDINATOR COMPLETE — DEMO LIVE; RP-002 PROMOTED; RP-003 SEED AUTHORIZED.`
+
 ## 2026-07-16 - W1 full-shell viewport regression after RP-002 Gate Review handoff
 
 - **Demo build tested:** `0fa8628` (`Advance Coder: integrate RP-002 protected journey`) against accepted `RP-001` and the separate no-credit Demo Tour only. `RP-002` remains at `GATE REVIEW — A5 HANDOFF`, protected, unimported by App/main, browser-storage-free, non-routable, absent from accepted bundles/UI/art/world, and unavailable to Working. Its future presentation metadata was not treated as implemented UI or missing accepted content.

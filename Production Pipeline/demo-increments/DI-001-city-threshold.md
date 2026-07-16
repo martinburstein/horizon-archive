@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 coordinator release — Vivobook full-shell containment
+
+- **Disposition:** `PASS — VIEWPORT-P1-002 RESOLVED / COORDINATOR VALIDATED.` The responsive shell fits the representative 16:9 laptop viewport without outer scrolling, distortion, fixed legacy framing, or hidden current controls.
+- **Exact live review:** at `1920 x 1080`, document client/scroll dimensions are equal, the world is `1428.656 x 802.609`, the command band is complete at `220px`, all five required verb/inventory controls are visible at `44px`, and browser warnings/errors are empty. At `390 x 844`, document width remains `390px`, controls remain inside the viewport at `44px`, and no horizontal escape occurs.
+- **Release gates:** full **402/402**, production build, RP-002 validator, E2E syntax, patch integrity, and complete E2E **PASS in 206.9s** with credits reached, every gate true, and no runtime errors. Regenerated QA images were restored.
+- **Pipeline decision:** RP-001 remains accepted; RP-002 passed Gate Review and enters Working as `READY`. This increment closes unless a regression is reproduced.
+
 ## 2026-07-16 W4 final verification/reload after responsive aesthetic review - `fdd0997` handoff
 
 - **Verdict:** `PASS — VIEWPORT-P1-002 FINAL RELOAD COMPLETE; COORDINATOR VALIDATION NEXT.` W3 authorized no implementation and W4 reproduced no exact residual. No runtime, art, test, save, route, curriculum, accepted-world, or QA-binary artifact changed.

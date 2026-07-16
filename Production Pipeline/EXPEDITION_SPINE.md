@@ -30,8 +30,8 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 | Order | Packet | Surface-safe purpose | Status | Python lane | AI-901 lane | Target player time | Required predecessor | Next breadth action |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | Accepted opening boundary and current-demo foundation | `IN DEMO — ACCEPTED` | Foundation chain already shipped | Current accepted objective chain | Existing demo | Accepted opening state | Maintain; reopen only on reproduced evidence |
-| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `GATE REVIEW — A5 HANDOFF` | `PY-009 SOLIDIFIED`; A3 convergence audit passed | `RP002-RAI-01 SOLIDIFIED`; A3 convergence audit passed | `18–25 min` clean first play; `<5 min` protected smoke passed | `RP-001` accepted end state | Coordinator verifies the checked Gate Review bundle; normal integration remains unauthorized |
-| 3 | `RP-003` | Final foundation-phase slice | `SEED READY / RESERVED` | Assign only after coordinator gate | Assign only after coordinator gate | `TBD` | `RP-002` specified end state | Seed after the RP-002 coordinator gate decision; do not invent content here |
+| 2 | `RP-002` | First protected encounter beyond the accepted boundary | `PROMOTED TO WORKING` | `PY-009 SOLIDIFIED`; A3 convergence audit passed | `RP002-RAI-01 SOLIDIFIED`; A3 convergence audit passed | `18–25 min` clean first play; `<5 min` protected smoke passed | `RP-001` accepted end state | Team 2 implements normal integration, production assets, and Working evidence |
+| 3 | `RP-003` | Final foundation-phase slice | `SEED AUTHORIZED / RESERVED` | Assign only during its contiguous A3 pass | Assign only during its contiguous A3 pass | `TBD` | `RP-002` specified end state | Advance A1 may seed the smallest surface-safe contiguous slice; do not invent later content here |
 | 4 | `RP-004` | First expansion-phase slice | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-003` | Define only after contiguous predecessor exists |
 | 5 | `RP-005` | Expansion continuation | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-004` | Define only after contiguous predecessor exists |
 | 6 | `RP-006` | Expansion-phase closure | `RESERVED` | `TBD` | `TBD` | `TBD` | `RP-005` | Define only after contiguous predecessor exists |
@@ -57,5 +57,5 @@ Unknown future content stays explicitly unknown. Placeholder rows reserve sequen
 
 - Team 2 is accepted through `RP-001`.
 - Team 1 is one packet ahead on `RP-002`.
-- `RP-002` is **protected-design and protected-implementation converged**: A2 closed the Scene gate, A3 preserved both SOLIDIFIED mappings, A4 closed the Puzzle gate, and A5 passed one pure P0–P3 journey smoke through real evaluators, atomic save/restore, Tour isolation, and safe return. Final production assets, normal integration, Working evidence, and promotion remain later obligations.
-- Current verdict is `GATE REVIEW — A5 HANDOFF`. The coordinator now verifies the bundle and decides promotion or one genuine hold; `RP-003` is seed-ready but remains reserved in this pass.
+- `RP-002` is **protected-design and protected-implementation converged and promoted**: A2 closed the Scene gate, A3 preserved both SOLIDIFIED mappings, A4 closed the Puzzle gate, A5 passed one pure P0–P3 journey smoke through real evaluators, and the coordinator verified the complete Gate Review bundle. Final production assets, normal integration, and Working evidence are now Team 2 obligations.
+- Current verdict is `RP-002 PROMOTED TO WORKING`. `RP-003` is authorized for the next contiguous A1 seed while remaining otherwise reserved.

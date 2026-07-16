@@ -21,6 +21,13 @@ Also read these pipeline-control artifacts before selecting Advance work:
 - `Production Pipeline/ADVANCE_BREADTH_GATE.md`
 - `Production Pipeline/PACKET_SCOREBOARD.md`
 
+Read the applicable supporting spine for the selected role:
+
+- Storyboarder: `Production Pipeline/LOCATION_VISUAL_SPINE.md`
+- Curriculum Checker: `Production Pipeline/CURRICULUM_SPINE.md`
+- Gameplay Master: `Production Pipeline/GAMEPLAY_SYSTEMS_SPINE.md`
+- Coder and coordinator: `Production Pipeline/PRODUCTION_READINESS_SPINE.md`
+
 The 12-packet spine is the current breadth target. The Advance Team must obey the convergence budget: after three consecutive complete Advance cycles on one packet without Gate Review, run the convergence audit and prioritize integration, trimming, merging, or a documented hold over additional micro-seams.
 
 Before each pass, read the selected canonical profile in full. Use these stable identities:

@@ -19,11 +19,12 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `VIEWPORT-P1-002 W4 FINAL RELOAD; COORDINATOR NEXT` | Keep the complete accepted world, dialogue, verbs, inventory, and current required controls inside one representative `1920 × 1080` laptop viewport without outer-page scrolling | Coordinator (`independent release validation`) | None: W3 opened no finding; W4 passed focused `41/41`, full `402/402`, build, exact desktop/narrow/text-zoom computed checks, RP-002 leakage, HTTP assets, and final reload | Run independent release gates; preserve desktop laptop fit, accessible reflow, all accepted contracts, and protected RP-002 absence/non-routability |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / VIEWPORT-P1-002 COORDINATOR PASS` | Maintain the complete accepted responsive campaign | Closed unless reproduced | None | Preserve the accepted baseline while RP-002 advances |
+| 2 | `RP-002` | `READY` | Integrate the approved four-phase Civic Record Encounter without weakening its learning, save, Tour, art, or accessibility contracts | Player Agent (`W1`) | Final production assets and normal App/main integration are intentionally unbuilt | Play the oldest adjacent packet from its accepted predecessor; report the earliest exact integration gap before Coder construction |
 
-`RP-002` is at `GATE REVIEW — A5 HANDOFF`, not promoted. Its protected journey remains absent from App/main, browser storage, accepted bundles, normal routing, the live Demo, and this queue.
+`RP-002` passed coordinator Gate Review and is promoted. Its protected journey still remains absent from App/main, browser storage, accepted bundles, normal routing, and the live Demo until the Working Team implements and accepts it.
 
-**W4 result / exact coordinator boundary:** `VIEWPORT-P1-002` is final-reloaded on accepted RP-001 after a clean W3 and verification-only W4. Independently validate representative desktop world dominance, intentional breathing room, complete lower-band containment, narrow/`200%` text reflow, gameplay, curriculum, saves, art meaning, world/route state, and protected RP-002 absence. RP-002 remains Gate Review protected and unpromoted.
+**Coordinator result:** `VIEWPORT-P1-002` is `RESOLVED — COORDINATOR VALIDATED`. Exact `1920 x 1080` and `390 x 844` live review, full release validation, and the final reload passed. RP-002 is now the oldest adjacent `READY` packet.
 
 ## Current-demo quality lane
 
@@ -43,4 +44,4 @@ The required pass order is Player Agent, shared Coder Agent bug repair and reloa
 | 6 | `RP001-AESTH-005` — Detached pixel-era Glass Meadow Terminal and route-marker overlays | W1/W3 reports; integrated master provenance; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
 | 7 | `OPENING-AESTH-001` — First-45-seconds opening remained a miniature legacy panel inside the fluid stage | W3 hierarchy review; coordinator live walkthrough; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
 | 8 | `MEADOW-AESTH-FOCUS-001` — Full primary-hit-area focus treatment dominates the first Glass Meadow plate | Root live `1280 x 720` before/after; W3/W4 evidence; responsive full E2E; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
-| 9 | `VIEWPORT-P1-002` — Representative `1920 × 1080` Glass Meadow shell pushes required command controls below the fold | W1 exact failure; W2 repair; W3 clean review; W4 focused/full/build/live/leakage/HTTP evidence; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — W4 FINAL RELOAD / COORDINATOR VALIDATION PENDING` | Coordinator |
+| 9 | `VIEWPORT-P1-002` — Representative `1920 × 1080` Glass Meadow shell pushes required command controls below the fold | W1 exact failure; W2 repair; W3 clean review; W4 and coordinator full/live evidence; `demo-increments/DI-001-city-threshold.md` | `RESOLVED — COORDINATOR VALIDATED` | Closed unless reproduced |
