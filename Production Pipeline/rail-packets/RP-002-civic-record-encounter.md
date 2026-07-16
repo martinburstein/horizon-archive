@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING + OBSERVATION + ATOMIC PERSISTENCE/SAVE MODELS COMPLETE; REVISE; NON-ROUTABLE`
+- Status: `IN DESIGN — A5 PARTIAL; PROTECTED LEARNING + OBSERVATION + ATOMIC PERSISTENCE/SAVE + RESPONSIVE INTERFACE + HOTSPOT GEOMETRY/DISPATCH MODELS COMPLETE; REVISE; NON-ROUTABLE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -1917,4 +1917,18 @@ HS-T / demo_tour / SYSTEM // DEMO TOUR
 
 ### Current Advance handoff
 
-The next sequential pass is the geometry/dispatch-only protected A5 tranche under `Exact Advance Coder A5 handoff — protected hotspot geometry and dispatch only`. The W1 handoff above remains the unchanged Working boundary and does not supersede that Advance handoff.
+The geometry/dispatch-only protected A5 tranche is complete. The next contiguous safe Advance seam is an A1 ownership/meaning impact lock for protected route integration; it must not import or expose the route. The W1 handoff below remains the unchanged Working boundary.
+
+## A5 protected hotspot geometry and dispatch implementation — 2026-07-16
+
+- **Mode and verdict:** Coder Agent used `advance` mode. `REVISE — A5 PARTIAL; PROTECTED HOTSPOT GEOMETRY/DISPATCH COMPLETE; RP-002 REMAINS NON-ROUTABLE`.
+- **Stable registry and geometry:** `CustodyLedgerHotspots.js` defines the five locked semantic hotspot IDs and their exact action, canonical observation ID, `SC-03-10`/`SC-03-20` board, near/far stage, accessible label/description, protected normalized region, and `44 CSS px` persistent-control policy. Responsive pointer coordinates may map into protected normalized board space; coordinates, viewport data, crop, pointer paths, z-order, and animation state never enter evidence or snapshots.
+- **Exactly-one and one-hit dispatch:** pointer/touch geometry and Enter/Space/switch/speech/screen-reader semantic controls normalize to the same registry validation. Only one unique, current-board, current-stage, readable, safe association may reach the existing observation reducer. A per-mount ephemeral token latch suppresses synthetic click, double activation, bubbling, and repeated output. Zero candidates write nothing; overlap, duplicate, unknown, wrong-board, stale, forged, cropped-unsafe, occluded, or motion-associated input fails closed into the existing recoverable unavailable group.
+- **Recovery and isolation:** replay is idempotent; valid evidence stays byte-stable through failed input. Remount reconstructs from sanitized observation evidence only and discards geometry, crop, pointer, token, focus, private, duplicate, premature, and unknown history. Demo Tour is view-only and exposes no campaign controls, observation IDs, comparison intent, or save path. Both SOLIDIFIED learning chains remain independent, and hotspot completion cannot write the atomic save triplet.
+- **Acceptance proof:** focused Custody Ledger model/component/hotspot selection passes `76/76`; the full game suite passes `330/330`; all thirteen A4 player-observable checks are covered, including all six near and both far permutations, modality parity, one-hit suppression, zero/multi-candidate behavior, unsafe crop/occlusion/motion, deterministic recovery, replay, remount sanitation, Tour separation, cross-credit prohibition, save independence, and external invariant stability.
+- **Validation:** production build passes with unchanged accepted-demo identity `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and only the existing non-blocking large-chunk advisory. RP-002 curriculum self-test, module syntax, and whitespace checks pass.
+- **Isolation and remaining seams:** `App.jsx` and `main.jsx` do not import the hotspot module. No browser/localStorage persistence, protected or normal route, production art, world/city/route/camera/crop/effect-clock change, successor, Demo reload, or Working promotion was added. The next safe Advance seam is a bounded A1 route-integration meaning impact lock before any route code.
+
+### Exact W1 handoff — no RP-002 promotion after hotspot construction
+
+`Player Agent — W1: play only accepted RP-001 from the normal campaign baseline and its separate no-credit Demo Tour. Verify clean completion and restore, recoverable mistakes, privacy/mastery invariants, keyboard focus, representative desktop/narrow responsive containment, first-person photoreal framing, and zero city/world/route regression. RP-002 now also contains an isolated protected hotspot geometry/dispatch module, but it remains REVISE, non-routable, outside App/main, browser storage, production art, and the playable demo. Its absence from the accepted route is intentional and is not a Working defect. Do not import, invoke, stage, expose, or promote it. If RP-001 remains clean, record a bounded clean-play checkpoint and hand exact evidence to Coder Agent in bug-repair mode; otherwise report the earliest reproducible accepted-path defect without changing production files.`
