@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic, responsive-composition, and executable-literacy reviews locked; no final art
+- **Production status:** Brief — A2 photorealistic, responsive-composition, executable-literacy, and transfer-origin reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -17,7 +17,7 @@
 | `SC-03-00` | Entry + idle | Heat return and maintenance are already mid-cycle across low heat-facing layered masses; predecessor bridge tail enters lower left | Near mass -> `10`; distant echo optional; threshold return available |
 | `SC-03-10` | Changed observation | Near fixed trace, later crossing repair fabric, and bordered absence are structurally distinct | Inspect all three in any order -> `COMPARE SCALE`; return to overview |
 | `SC-03-20` | Changed observation | Far mass repeats the relation; maintenance services environmental couplings and bypasses a separately closed interlock | Inspect far echo + closed interlock -> `OPEN LOCAL COMPARISON`; maintenance optional |
-| `SC-03-30` | Changed expedition state | Reuse overview and continuous clock; separate responsive suit UI shows incomplete Python before execution, then a provisionally translated related three-condition record after a valid run | Save bounded comparison -> `40`; cancel to overview |
+| `SC-03-30` | Changed expedition state | Reuse overview and continuous clock; separate responsive suit UI sequences the sole unfinished Builder work image, causal suit result, fresh expedition practice, Teacher prompt, and Pilot-owned conclusion | Save bounded comparison -> `40`; cancel to overview |
 | `SC-03-40` | Completed | World is identical to entry; separate UI confirms save, clears working notes, and marks—but does not open—a next-survey direction | Return to City Threshold; neighboring surface remains LOOK-only |
 | `SC-03-50` | Saved return | Restore the same completed overview without arrival replay or restarted clocks | Review saved comparison or return to City Threshold |
 
@@ -78,6 +78,10 @@ The comparison and save controls belong to a separate responsive interface regio
 - Before execution, the interface explicitly presents the bounded incomplete Python work image and the permitted expedition-owned completion area. After valid execution, the same ownership lane presents `SUIT // PROVISIONAL TRANSLATION` followed by the causally related fixed-trace / later-stewardship / outlined-gap record and the complete statement that identity-bearing material remains closed.
 - The before/after change belongs solely to suit UI state. It does not change the master plate, crop, exposure, coupling, closed interlock, ambient phase, route, or world lighting; it is neither a password-success animation nor a Builder response.
 - `SUIT // PROVISIONAL TRANSLATION` is visible mediation ownership, not an identified Builder speaker. No interface or board explains an intended operator, why the fragment was unfinished, or why the executable notation corresponds exactly to Python.
+- Internal `SC-03-30` presentation is locked to five sequential groups in one interface lane: `30-A` `UNFINISHED WORK IMAGE`; `30-B` `SUIT // PROVISIONAL TRANSLATION`; `30-C` `SYSTEM // EXPEDITION SESSION` plus `FRESH PRACTICE IMAGE`; `30-D` `901 TEACHER // FEEDBACK`; and `30-E` `PILOT // FLIGHT RECORDER`. Only one group is active at a time, so the sequence cannot read as multiple Builder messages or a transcript.
+- `30-A` is the sole locally sourced unfinished work fragment. `30-B` is its read-only causal suit result. Both clear before `30-C` exposes the exact fresh transfer starter; no primary field, rendered result, answer, or visual provenance treatment carries into the human-authored practice.
+- `30-D` owns the application-semantics prompt; `30-E` owns the passed interpretation. Neither is suit translation or Builder philosophy. Explanation choices, feedback, and the Pilot statement live in the same human owner/message/action system and cause no second world effect.
+- Wide presentation may place the current owner/message beside its related editor or choices only when DOM order remains owner -> message -> controls. Narrow and zoomed presentation stacks the same group in one scroll-safe column. Every required action remains at least `44 x 44 CSS px`, origin is never color-only, and deterministic focus moves only to the newly active human group.
 
 ## Concise asset brief
 
@@ -99,7 +103,7 @@ The comparison and save controls belong to a separate responsive interface regio
 
 ## Locked and flexible
 
-- **Locked:** direct SC-02 adjacency; board order; three base compositions; semantic target ownership and attention order; near/far three-condition relation; occupational local coupling; separate closed interlock; suit-only incomplete-Python then related-record states; visible provisional suit ownership with no Builder speaker; no world delta; no successor route; responsive world/interface separation.
+- **Locked:** direct SC-02 adjacency; board order; three base compositions; semantic target ownership and attention order; near/far three-condition relation; occupational local coupling; separate closed interlock; suit-only five-group origin sequence from sole Builder work through Pilot-owned conclusion; one active owner group at a time; visible provisional suit, expedition System, Teacher, and Pilot ownership with no Builder speaker; no carried primary result into transfer; no world delta; no successor route; responsive world/interface separation.
 - **Flexible:** exact mass contour within bounds, impression rhythm, compatible material families, repair joints, maintenance anatomy/count, effect timing, and restrained cinematic grade. City Beneath color continuity comes from motivated geothermal light, cavern bounce, and material response rather than a preset color recipe or generic neon.
 
 ## Photorealistic impact validation
@@ -109,5 +113,6 @@ The comparison and save controls belong to a separate responsive interface regio
 - `PASS`: the premium production package can be built from three high-resolution masters, responsive derivatives, registered effects, reduced-motion stills, evidence crops, difference masks, and provenance without Storyboarder creating final raster art.
 - `PASS`: retired exact `640 x 480` and `320 x 240` review canvases, the fixed `640 x 120` interface band, and fixed message-line counts are removed from active acceptance. The high-resolution world fills available space, semantic hotspots stay registered, and complete owner-prefixed interface groups remain readable and accessible under representative wide, laptop, narrow, browser-zoom, and `200%` text-zoom conditions.
 - `PASS`: executable-literacy staging is buildable without another world plate: the coupling is visibly occupational and invariant, while the incomplete Python and valid-run record remain separate suit UI states. The translated result has visible suit ownership, no Builder speaker, no password or access-granted staging, no explanation for exact Python, and no physical city response.
+- `PASS`: transfer/explanation staging is buildable in the same responsive interface lane. The sole Builder work, causal suit result, fresh expedition-authored transfer, Teacher prompt, and Pilot statement are sequentially owner-separated; primary material clears before transfer; owner text, semantic wrapping, deterministic focus, `44 x 44 CSS px` actions, narrow reflow, and zero city/world response remain locked.
 
 Production status remains **Brief**. This impact review creates no raster or production art.
