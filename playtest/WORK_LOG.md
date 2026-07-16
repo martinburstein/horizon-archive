@@ -1,5 +1,14 @@
 # Player Agent Work Log
 
+## 2026-07-16 - Coordinator closure: protected route-state release gate
+
+- **Outcome:** `PASS - ACCEPTED DEMO REMAINS LIVE.` The complete two-team cycle closed without a player-facing functional or aesthetic regression. RP-002 now includes an isolated protected route-state model, while App/main integration, browser storage, accepted UI/art/routes, production-bundle exposure, world effects, successor exposure, and Working promotion remain intentionally excluded.
+- **Live responsive evidence:** The title and Glass Meadow passed at representative `1280 x 720` desktop and `390 x 844` narrow layouts with no horizontal escape. Title, command, inventory, and hotspot controls met the current `44px` minimum. Glass Meadow retained its `1672 x 941` source at approximately `1230 x 691` desktop and `385 x 216` narrow with `object-fit: cover`, first-person framing, localized Terminal focus, readable hierarchy, and reachable vertical flow. The temporary viewport override was reset and the playable title was left open.
+- **Release validation:** complete game suite **345/345 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`, existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; complete title-to-credits E2E PASS in **158.6 seconds** with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Regenerated tracked QA PNGs were restored.
+- **Boundary preserved:** accepted photoreal presentation, recovery, strict mastery, bounded save/privacy/offline/no-authority contracts, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and RP-002 non-routability remain exact.
+- **Next safe handoff:** `A1 selects the next smallest integration ownership/meaning impact lock for RP-002 without importing App/main, adding browser storage/UI/art, exposing a normal route, changing accepted bundles/world/city/access/external state, naming a successor, reloading the Demo, or promoting the packet to Working.`
+- **Status:** `COORDINATOR COMPLETE - CLEAN RELEASE PASS; PORT 4173 READY FOR PLAY.`
+
 ## 2026-07-16 - W1 accepted-boundary regression after protected route-state construction
 
 - **Demo build tested:** `732b46e` (`Advance Coder: implement protected route state`) against the accepted RP-001 campaign and its separate no-credit Demo Tour. RP-002 remained `REVISE`, protected, non-routable, unimported by App/main, absent from browser storage and the accepted production bundle, and intentionally unavailable to Working; its isolated route-state model was not invoked or treated as playable.

@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected route-state release gate
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` All nine role passes and the independent release gate completed. Protected RP-002 retains its isolated route-state work but remains `REVISE`, non-routable, and absent from App/main, browser storage, accepted UI/art/routes, the production bundle, world state, successors, and Working promotion.
+- **Live review:** title and Glass Meadow passed `1280 x 720` desktop and `390 x 844` narrow review with no horizontal escape and required controls at least `44px`. The `1672 x 941` Meadow master rendered at approximately `1230 x 691` desktop and `385 x 216` narrow with aspect-preserving `object-fit: cover`, first-person/no-protagonist/no-ship framing, localized Terminal focus, integrated static geometry, readable hierarchy, and reachable vertical flow. The viewport was reset and the playable title was left open.
+- **Release validation:** complete game suite **345/345 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **158.6 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted presentation, gameplay/recovery, bounded first-incomplete saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route change, and RP-002 non-routability remain exact.
+- **Next handoff:** `A1 selects the next smallest safe RP-002 integration ownership/meaning impact lock. Do not import App/main, add browser storage/UI/art, expose a normal route, change accepted bundles/world/city/access/external state, name a successor, reload the Demo, or promote to Working.`
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload after protected route-state construction - `ba2d8fd` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
