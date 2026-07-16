@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W1 accepted-boundary regression pass — `48ecc00`
+
+- **Verdict:** `PASS FROM AUTOMATED PLAYER-JOURNEY + FOCUSED RP-001 EVIDENCE; ROOT LIVE CONFIRMATION REQUIRED.` No P0, P1, or P2 functional defect was reproduced in the accepted demo. Protected RP-002 work remains non-routable and outside the Working play boundary.
+- **Accepted journey:** Full title-to-credits E2E completed with forged-save rejection, intentional wrong-answer recovery, dependency mistakes, retries, close/reopen, save/resume, narrow interaction, privacy, strict mastery, persistence, `credits:true`, and `runtimeErrors:false`.
+- **RP-001 evidence:** Focused checks passed the locked board order, PY-020 `10/10`, CUM-01 primary/transfer `16/16`, atomic expedition commit, bounded sanitizer, first-incomplete resume, responsive route containment, absence of the retired staging banner, and the coordinated photoreal production family. No legacy fixed-resolution acceptance rule was reopened.
+- **Evidence boundary:** The browser-control runtime reported no attached browser, so W1 claims no new live screenshot, visual-quality verdict, timing, or assistive-technology observation. This is an evidence limitation rather than a product defect.
+- **Validation:** focused **29/29 PASS**; production build PASS (`index-PhQiqaIn.js`, `index-BCmwLuJV.css`); full accepted-campaign E2E PASS in **236 seconds**, with every reported gate true and no runtime errors. Regenerated tracked QA PNGs were restored.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Perform verification/reload only unless root live review reproduces a functional defect. Preserve the accepted opening and RP-001 contracts, responsive >=44px controls, photoreal art, focus, recoverable mistakes, save/resume, strict mastery, privacy/no-authority, Demo Tour isolation, continuation unchanged, city_state_delta=None, and protected RP-002 non-routability. Re-run focused checks/build, reload 4173, and request root live confirmation of the title-to-Meadow and current RP-001 staging paths.`
+
 ## 2026-07-15 Coordinator closure — OPENING-AESTH-001
 
 - **Disposition:** `PASS — RESOLVED AND COORDINATOR VALIDATED.` The enlarged opening is live from title through Glass Meadow.
