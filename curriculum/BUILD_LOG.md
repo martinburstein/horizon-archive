@@ -1013,3 +1013,21 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the distinct-origin puzzle-graph impact confirmation using the exact handoff in RP-002, then returns the unchanged protected transfer/explanation seam to the Advance Coder.
 Unresolved risks: Runtime presentation must not carry primary source, result, answer, or visual provenance into transfer; display, compilation, execution, translation, focus, layout, world evidence, and Tour traversal must remain zero mastery. The transfer and both explanation prompts must retain human ownership and never become a second Builder message, city response, password, access state, or authority claim.
 Notes: `NO REOPEN — SOLIDIFIED`. No settled lesson, machine-readable contract, source register, runtime code, art, hidden lore, live service, Azure resource, credential, or external action was changed.
+
+## Log entry: 2026-07-16T04:40:00-04:00
+
+Stage: RP-002 responsible-AI ownership mapping-preservation review (A3)
+Work completed: Reviewed the A1 human-application meaning contract and A2 one-active-group case/feedback presentation against the SOLIDIFIED RP-002 machine-readable curriculum contract. Recorded `NO REOPEN — SOLIDIFIED`: the course-authored primary case, field-associated Teacher miss, System guided practice, and blank retry change ownership and presentation only. Preserved the exact three-scenario `9/9 primary -> per-dimension remediation -> blank 9/9 fresh transfer -> separately scored three-part explanation` sequence, full `L-02-02` prerequisite, expected answers, simultaneous scoring, blank recovery, privacy allowlist, separate Python evidence, no-credit Scene/Tour/presentation boundaries, offline/no-authority contract, and no exam guarantee. Replaced the Gameplay Master handoff with the exact responsible-AI ownership and graph constraints.
+Files changed:
+- Production Pipeline/rail-packets/RP-002-civic-record-encounter.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Read the workflow authority, registry and canonical Curriculum Checker profile, current packet and exact A2 handoff, Advance queue, Story Rail Map, checked-in official Microsoft source register, RP-002 contract/validator, objective and Python mappings, mastery model, build status, and latest curriculum log.
+- Confirmed A1/A2 introduced no new Microsoft product, Foundry, SDK, endpoint, exam objective, scoring, or implementation claim; the official source register verified on 2026-07-15 remains controlling and no third-party source was used.
+- RP-002 validator self-test passed; Python primary and transfer references passed `6/6`; responsible-AI primary and transfer references passed `9/9`.
+- All curriculum JSON parsed; focused packet/queue/map/contract consistency checks and `git diff --check` passed.
+Next recommended item: Gameplay Master performs only the responsible-AI ownership puzzle-graph confirmation, preserves the exact SOLIDIFIED chain and zero-credit presentation boundary, and returns the protected primary/remediation-only A5 handoff with `REVISE` and no Working promotion.
+Unresolved risks: Runtime construction must recompute all three dimensions for all three cases, map misses without exposing expected answers, clear working choices/prose, and prevent feedback, guided practice, Python output, restored state, layout, world evidence, or Tour traversal from generating responsible-AI credit. Human-owned Teacher/System feedback must never read as Builder doctrine, city response, Machine judgment, identity proof, access, consent, or authority.
+Notes: `NO REOPEN — SOLIDIFIED`. The named source-priority skill was unavailable, so checked-in official Microsoft source and objective artifacts were used. No settled lesson, machine-readable contract, source register, runtime code, art, hidden lore, live service, Azure resource, credential, external action, or exam claim was changed.
