@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 Coordinator closure — OPENING-AESTH-001
+
+- **Disposition:** `PASS — RESOLVED AND COORDINATOR VALIDATED.` The enlarged opening is live from title through Glass Meadow.
+- **Live evidence:** Walked `title -> create Slot 01 -> name Scout -> temporary prologue 1/2/3 -> Chapter I reveal -> Enter the meadow` at the representative `1280x720` app viewport. Title, save, name, prologue, and Chapter I use the intended large responsive hierarchy; Glass Meadow remains the accepted full-width photoreal first-person plate. The Meadow document measured `1265px` wide inside the `1280px` viewport with `overflowX:false`.
+- **Responsive evidence:** Source regressions and full E2E cover available-width desktop, narrow reflow, minimum `44px` controls, vertical reachability, keyboard focus, and zero horizontal escape. Retired fixed-resolution rules were not restored.
+- **Behavior evidence:** Name validation, anti-skip, save/resume, field-linked Terminal focus, Demo Tour isolation, mastery/privacy/no-authority contracts, and RP-002 non-routability remain intact.
+- **Coordinator validation:** game suite **266/266 PASS**; production build PASS (`index-PhQiqaIn.js`, `index-BCmwLuJV.css`); RP-002 mapping self-test PASS; full title-to-credits E2E PASS in **162 seconds** with `runtimeErrors:false`; E2E syntax PASS. Regenerated QA binaries were restored before checkpointing.
+
 ## 2026-07-15 W4 OPENING-AESTH-001 implementation
 
 - **Disposition:** `RESOLVED IN W4 — COORDINATOR LIVE VALIDATION PENDING.` The first 45 seconds no longer render inside fixed `496px` / `296px` cards, a `224px` cap, or `7–11px` essential-copy/action overrides.
