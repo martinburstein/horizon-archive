@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Gameplay Master Agent (`A4 — first-near-dispatch graph confirmation`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and A1/A2/A3 blank-to-first-near-dispatch meaning/presentation/preservation seams are complete; storage, art, normal exposure, and later work are absent | Exact blank SC-03-10 presents three equal near actions; one fresh exact action replaces it with only its matching Scene statement, System 1-of-3 status, and zero-credit evidence return while route return stays separate | Keep `REVISE`. A4 confirms only the first-dispatch graph and hands A5 the smallest isolated pure orchestration seam; do not change curriculum, geometry, App/main, storage/art/route exposure, successor, Demo, or Working. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Coder Agent (`A5 — advance-construction / isolated first-near-dispatch orchestration`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and A1/A2/A3/A4 blank-to-first-near-dispatch seams are complete; storage, art, normal exposure, and later work are absent | Exact blank SC-03-10 presents three equal near actions; one fresh exact action replaces it with only its model-owned matching Scene statement, System 1-of-3 status, and zero-credit evidence return while route return stays separate | Keep `REVISE`. A5 implements only the pure isolated FD-00/10/20/U/T orchestration seam and focused tests; do not change copy, curriculum, geometry, App/main, storage/art/route exposure, successor, Demo, or Working. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
 - In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, and route-to-blank-observation orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A3 blank-to-first-near-dispatch preservation passed NO REOPEN — SOLIDIFIED; exact A4 graph confirmation is next`
+- Team 1 railhead: `RP-002 — A4 blank-to-first-near-dispatch graph locked; exact isolated A5 orchestration is next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 blank-to-first-near-dispatch Gameplay impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`, `REVISE`, protected, non-routable, and unavailable to Working. A4 locked only the `FD-00/10/20/U/T` graph: an exact verified sanitized zero-ID `SC-03-10` blank group exposes three equal near actions; one fresh one-hit activation resolving through the existing hotspot authority may call the existing observation recorder once and replace the group with only its model-owned matching Scene statement, System `1 of 3` status, and zero-credit evidence return. All three first choices, all seven modalities, all six near orders, heading-first focus, deterministic first-incomplete recovery/resume, separate route return, fail-closed unsafe/ambiguous/Tour input, one-active-group behavior, privacy sanitation, responsive/accessibility state, and no-replay rules are exact. Both SOLIDIFIED chains, later observation stages, independent save conjunction, atomic transaction, accepted/Tour bytes, world/clocks, continuation, null city delta, closed identity, no successor, offline/no-authority/no-exam-guarantee, and zero city/access/external action remain unchanged. A5 now implements only one pure isolated first-near-dispatch orchestration module and focused tests; copy, geometry, App/main, browser storage, art, route exposure, accepted bundles, successor, Demo, and Working remain unauthorized.
 
 ## 2026-07-16 blank-to-first-near-dispatch Curriculum impact note
 
