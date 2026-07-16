@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 aesthetic verification/final reload — `0935ccb` handoff
+
+- **Mode/verdict:** `Coder Agent — aesthetic-polish; PASS — NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 supplied a clean evidence-based review and the repeated focused gate reproduced no exact defect, so runtime and art remain unchanged.
+- **Preserved surface:** all four accepted `1672 x 941` photoreal masters, aspect-preserving responsive crop, first-person/no-protagonist/no-ship framing, integrated Meadow Terminal, localized focus, contemporary opening hierarchy, and `>=44px` required targets remain intact. Optional registered membrane animation remains deferred follow-on art.
+- **Preserved contracts:** accepted campaign and RP-001 staging behavior, save/mastery/privacy/no-authority, Tour isolation, unchanged `continuation`, `cityStateDelta:null`, and protected RP-002 non-routability were not changed.
+- **Validation/reload:** focused responsive/opening/Tour/Meadow/RP-001 selection **37/37 PASS**; complete game suite **280/280 PASS**; production build PASS with the existing advisory; final preview serves `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and both exact assets at HTTP `200` on port `4173`.
+- **Evidence boundary:** W4 makes no new live viewport or computed-geometry claim. Representative desktop and narrow responsive inspection remains the coordinator release gate; no speculative visual correction is authorized absent a reproduced residual.
+- **Exact coordinator handoff:** `Review the final-reloaded accepted build at representative desktop and narrow responsive layouts, then run the complete coordinator tests, build, relevant curriculum validators, and full E2E. Confirm crop/aspect, first-person exclusion, localized focus, opening hierarchy, >=44px targets, no seams/stretch/clipping/horizontal escape, and all gameplay/learning/save/privacy/Tour/world contracts. Keep RP-002 non-routable and revert incidental QA binaries before final disposition.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review — `7b1dd90`
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE — NO NEW AESTHETIC FINDING.` The accepted title-to-Meadow and RP-001 presentation contracts remain coherent; no closed visual issue was reopened and protected RP-002 remained outside the Working review.

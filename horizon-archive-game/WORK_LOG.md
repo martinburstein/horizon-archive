@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 — Coder W4: accepted-boundary aesthetic verification and final reload
+
+- **Mode:** `aesthetic-polish` for W4 only.
+- **Verdict:** `PASS — NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding on checkpoint `0935ccb`; the focused presentation gate reproduced none. No runtime, art, test, save, route, curriculum, or QA file changed.
+- **Preserved presentation:** the accepted `1672 x 941` integrated Glass Meadow master and three City Threshold masters remain unchanged with aspect-preserving responsive crop, first-person framing, protagonist/ship exclusion, localized Meadow Terminal focus, contemporary opening hierarchy, and `>=44px` required targets. The optional registered membrane animation remains follow-on art, not a defect.
+- **Preserved behavior:** title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> Glass Meadow and RP-001 staging contracts remain unchanged. Saves, mastery, privacy/no-authority, Tour isolation, `continuation`, `cityStateDelta:null`, and protected RP-002 non-routability were not touched.
+- **Validation:** focused responsive/opening/Tour/Meadow/RP-001 presentation selection **37/37 PASS**; complete game suite **280/280 PASS**; production build PASS with the existing large-chunk advisory. Exact build identity remains `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Final demo reload:** port `4173` was restarted; `http://127.0.0.1:4173/?staging=rp001` and both exact assets returned HTTP `200` on listener PID `41572`.
+- **Evidence boundary:** this verification pass makes no new live viewport, computed-rectangle, zoom, or forced-color claim. Representative desktop and narrow responsive inspection remains the coordinator's final release gate; that limitation did not authorize a speculative visual edit.
+- **Files changed:** this log plus `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, and `../Production Pipeline/STORY_RAIL_MAP.md` only. Unrelated untracked user files remain untouched.
+- **Exact coordinator handoff:** `Coordinator: inspect the final-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build at port 4173 on one representative desktop and one narrow responsive layout. Confirm the accepted title -> save/name -> prologue -> Chapter I -> Glass Meadow presentation and, where practical, RP-001 staging: photoreal masters retain aspect-preserving crop and world dominance; first-person/no-protagonist/no-ship framing holds; localized Meadow Terminal focus remains clear without a full-hit-area wash; opening copy and actions remain readable; required targets remain >=44px; and no seam, stretch, clipping, or horizontal escape appears. Preserve saves/mastery/privacy/no-authority, Tour isolation, unchanged continuation, cityStateDelta:null, and protected RP-002 non-routability. Then run coordinator tests/build/curriculum/full-E2E gates, revert incidental QA binaries, and record PASS or only an exact reproduced residual.`
+
 ## 2026-07-16 — Coder W2: accepted-boundary verification and reload
 
 - **Mode:** `bug-repair` for W2 only.
