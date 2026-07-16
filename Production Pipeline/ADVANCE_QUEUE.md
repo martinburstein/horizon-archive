@@ -19,16 +19,17 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
+| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A1 COMPLETE` | Storyboarder Agent (`A2`) | Lore `PASS`; Scene/Curriculum/Puzzle/Code pending | Exact RP-002 completion: bounded comparison saved, working content cleared, unchanged `continuation`, zero city delta, reversible routes, neighboring survey direction marked only | A2 composes the smallest registered invariant-world scene sequence; RP-004 remains reserved. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-002`
-- In-design packets: `0`
-- Team 1 railhead: `RP-002 — PROMOTED; RP-003 seed authorized for the next A1 pass`
+- In-design packets: `1 — RP-003`
+- Team 1 railhead: `RP-003 — IN DESIGN / A1 COMPLETE / A2 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `1 packet — RP-002 promoted to Working; RP-003 is the next contiguous Advance seed`
+- Ordered Advance lead beyond Team 2 accepted baseline: `2 ordered packets — RP-002 promoted to Working; RP-003 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.

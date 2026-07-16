@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-002 — READY / W1 PLAYER REVIEW NEXT`
-- Team 1 railhead: `RP-002 — PROMOTED; RP-003 SEED AUTHORIZED`
-- Ordered Advance lead beyond Team 2 accepted baseline: `1 packet — RP-002 is promoted for methodical normal integration while Team 1 may seed RP-003 contiguously`
+- Team 1 railhead: `RP-003 — IN DESIGN / A1 COMPLETE / A2 NEXT`
+- Ordered Advance lead beyond Team 2 accepted baseline: `2 ordered packets — RP-002 promoted for methodical normal integration; RP-003 seeded contiguously`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -27,6 +27,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / VIEWPORT COORDINATOR PASS` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | The accepted campaign remains clean. Coordinator validation now includes full `402/402`, production build, RP-002 validator, E2E syntax, `206.9s` full E2E, exact `1920 x 1080` full-shell containment, exact `390 x 844` narrow containment, `44px` controls, and an empty live console. The playable title remains live on port `4173`. |
 | 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `READY / W1 NEXT` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `PASS — PURE PROTECTED P0–P3 JOURNEY SMOKE` | The coordinator verified all twelve Gate Review items. Promotion authorizes Team 2 to create final production assets and normal integration from the accepted predecessor; it does not expose the protected adapter directly or pre-accept any Working evidence. RP-003 is now the next contiguous Advance seed. |
+| 3 | `RP-003` | `Calibration Margin — City Beneath` | `RP-002 comparison saved -> adjacent survey direction marked` | `IN DESIGN — A1 COMPLETE / A2 NEXT` | `NOT READY` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `MISSING — A2 NEXT` | `UNASSIGNED — A3` | `UNASSIGNED — A3` | `UNASSIGNED — A4` | `MISSING — A5` | The smallest surface-safe successor is seeded: two exposed corresponding sequences, one visible bounded difference, one sealed source boundary, and one real-Python occupational comparison with zero physical city delta. RP-004 remains reserved. |
 
 ## Latest Working handoff
 

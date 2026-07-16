@@ -80,3 +80,7 @@ Record:
 `RP-002` exceeded the normal convergence budget. Existing protected work remains valid, and the mandatory convergence cycle is complete: A2 consolidated presentation, A3 preserved the SOLIDIFIED mappings, A4 locked one end-to-end graph, and A5 composed one pure P0–P3 protected journey smoke through real authorities.
 
 Current verdict: `GATE REVIEW — A5 HANDOFF`. The protected-code and post-integration validation deficits are zero; normal integration, final production assets, Working evidence, and release remain later-stage obligations. `RP-003` is seed-ready but reserved pending the coordinator gate. No additional RP-002 protected micro-seam is authorized unless the coordinator records a genuine hold or a later validation reproduces a regression.
+
+## Immediate application to RP-003
+
+The coordinator promoted RP-002 and authorized the contiguous seed. RP-003 begins its orientation cycle with one bounded surface path: arrive from the exact RP-002 end state, observe two exposed corresponding sequences plus one sealed source boundary, complete one real-Python occupational comparison using exposed inputs only, save an expedition-owned correspondence/difference/unavailable note, and leave the world physically unchanged. A1 closes only the Story gate. A2–A5 must work this same packet in order; RP-004 remains reserved until RP-003 reaches `GATE REVIEW` or `READY FOR WORKING`. Additional lore micro-seams are not authorized during this cycle.

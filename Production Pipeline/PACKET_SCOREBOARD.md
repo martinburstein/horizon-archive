@@ -18,7 +18,7 @@ Status vocabulary:
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `RP-001` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `MAINTAIN` | Reopen only on reproduced evidence |
 | `RP-002` | `PASS` | `PASS — compact convergence locked` | `PASS — A3 convergence audit locked; spine active` | `PASS — A4 integrated graph locked; gameplay spine active` | `PASS — protected P0–P3 journey smoke` | `PASS — atomic save/restore and deterministic recovery` | `PASS — protected metadata/evidence` | `PASS plan / final assets assigned to Working` | `READY — Working implementation required` | `READY — W1 not started` | `PROMOTED TO WORKING` | Player Agent begins the oldest adjacent packet; RP-003 may be seeded contiguously by Advance |
-| `RP-003` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SEED AUTHORIZED / RESERVED` | Advance A1 seeds the smallest surface-safe contiguous slice; later roles assign no content before their turn |
+| `RP-003` | `PASS — A1 surface contract` | `MISSING — A2 next` | `MISSING — A3` | `MISSING — A4` | `MISSING — A5` | `PARTIAL — lore locks only` | `PARTIAL — anticipated risks only` | `MISSING — A2 plan` | `MISSING` | `N/A` | `IN DESIGN — ORIENTATION` | A2 composes one registered invariant-world sequence; later roles assign only their own tracks |
 | `RP-004`–`RP-012` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SPINE RESERVED` | Preserve sequence; do not invent non-contiguous content |
 
 ## Gate Review checklist
