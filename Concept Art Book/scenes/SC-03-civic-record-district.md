@@ -6,7 +6,7 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, responsive five-observation interface, and protected hotspot pre-geometry presentation reviews locked; no final art
+- **Production status:** Brief — A2 photorealistic, responsive-composition, complete learning-flow, atomic persistence/save, responsive five-observation interface, protected hotspot pre-geometry, and protected route-integration presentation reviews locked; no final art
 - **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
@@ -132,6 +132,15 @@ The comparison and save controls belong to a separate responsive interface regio
 - Save eligibility, review, confirmation, status, failure, restore, downgrade, and Tour preview remain one active textual owner/message/summary-or-status/action group. A textual live region announces each complete System transaction state once. Wide presentation keeps the world dominant; narrow/zoomed presentation keeps it unobscured above one scroll-safe column; focus arrival scrolls the entire group into view; negative-authority clauses wrap without horizontal escape; required actions remain at least `44 x 44 CSS px`; and no ownership, atomicity, failure, restoration, or no-credit meaning depends on color, sound, icon, motion, placement, or world reaction.
 
 ## Concise asset brief
+
+### Protected route-integration presentation overlay
+
+- Reuse the accepted RP-001 boundary and registered `SC-03-00` plate exactly; route presentation adds no travel plate, path animation, city activation, highlight, relight, opening, camera move, or new production raster.
+- At the accepted boundary, one separate expedition group may expose only the complete `PILOT // FLIGHT RECORDER — FOLLOW RECORDED CIVIC ROUTE` action after System-owned eligibility framing. A valid action is followed by System-owned local verification/staging before protected `SC-03-00`; world presentation cannot acknowledge it.
+- Protected staging begins with a complete textual System mode/status heading before observation controls. It cannot resemble accepted campaign progress. Its only voluntary exit is `PILOT // FLIGHT RECORDER — RETURN TO CITY THRESHOLD`, followed by System-owned safe-boundary reconstruction and deterministic restoration focus.
+- `SYSTEM // DEMO TOUR` remains a separate no-credit presentation with no Pilot route controls, predecessor verification, campaign session, save path, or checkpoint. Normal campaign, protected staging, and Tour distinctions remain textual under forced colors and reduced motion.
+- Entry and return remain separate from `SAVE BOUNDED COMPARISON`; each action is at least `44 x 44 CSS px`, has a persistent full-text accessible name, and retains pointer/touch/keyboard/switch/speech/screen-reader parity. Narrow and zoomed layouts use a natural scroll-safe column without world-confirmation crop or motion.
+- Invalid, stale, implicit, duplicate, wrong-owner, out-of-order, or Tour-derived requests navigate nowhere and focus a complete local System recovery status at the last verified expedition boundary. No failure state reads as city refusal, access denial, lost Builder memory, or response.
 
 - Three lossless photorealistic 16:9 masters: registered overview (`00/30/40/50`), near-layer detail (`10`), and scale-echo/closed-boundary detail (`20`). The local coupling must visibly join trace intake, later stewardship routing, environmental return, and maintenance bypass without a human-facing display. Retain the largest clean sources; prefer `3840 x 2160` or larger when supported, with `1920 x 1080` as the minimum master.
 - Complete all eight premium-production passes before approval: varied visual territories, composition selection, functional development, material/lighting development, full-size artifact cleanup, gameplay-fit review, registered state/animation production, and provenance delivery.
