@@ -1158,7 +1158,7 @@ export function App() {
     const routeSave = predecessor && typeof window !== "undefined"
       ? readCustodyLedgerNormalRoute(window.localStorage, predecessor)
       : null;
-    if (routeSave?.checkpoint === "sc03_arrival") {
+    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank"].includes(routeSave?.checkpoint)) {
       setCustodyLedgerRouteSave(routeSave);
       setMode("rp002-arrival");
       return;
@@ -1196,7 +1196,7 @@ export function App() {
     setMode("rp002-arrival");
   }
 
-  function returnToCityThresholdFromRp002(event) {
+  function advanceCustodyLedgerNormalRoute(action, event) {
     if (demoTour || typeof window === "undefined") return;
     const predecessor = readVerifiedCityThresholdPredecessor(window.localStorage);
     if (!predecessor) return;
@@ -1204,14 +1204,19 @@ export function App() {
       ?? readCustodyLedgerNormalRoute(window.localStorage, predecessor);
     const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave });
     const result = controller.dispatch(createCustodyLedgerNormalRouteIntent(
-      custodyLedgerRouteActions.returnAccepted,
+      action,
       routeActivationKind(event),
-      routeEventToken("rp002-return"),
+      routeEventToken(action === custodyLedgerRouteActions.returnAccepted ? "rp002-return" : "rp002-advance"),
     ));
-    if (result.status !== "returned") return;
-    clearCustodyLedgerNormalRoute(window.localStorage);
-    setCustodyLedgerRouteSave(null);
-    setMode("city-threshold-staging");
+    if (result.status === "returned") {
+      clearCustodyLedgerNormalRoute(window.localStorage);
+      setCustodyLedgerRouteSave(null);
+      setMode("city-threshold-staging");
+      return;
+    }
+    if (result.status !== "advanced"
+      || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
+    setCustodyLedgerRouteSave(result.save);
   }
 
   function returnToCompletedMeadow() {
@@ -2246,7 +2251,7 @@ export function App() {
       predecessor: verifiedCityThresholdPredecessor,
       restoredSave: routeSave,
     }).getState();
-    return <CivicRecordArrival routeState={routeState} onReturn={returnToCityThresholdFromRp002} />;
+    return <CivicRecordArrival routeState={routeState} onAction={advanceCustodyLedgerNormalRoute} />;
   }
 
   if (mode === "city-threshold-staging") {

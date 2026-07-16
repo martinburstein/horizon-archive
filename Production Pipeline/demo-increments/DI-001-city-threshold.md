@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 — RP002-P1-002 blank-view handoff reload
+
+- **Disposition:** `PASS — FUNCTIONAL BLOCKER RESOLVED / W3 AESTHETIC REVIEW NEXT.` The normal route moves from accepted `SC-03-00` through exact zero-credit continuation and Pilot inspection into only blank sanitized `SC-03-10`; return stays separate and reversible.
+- **Persistence/isolation:** the minimal save allowlists arrival, protected overview, and blank-view first-incomplete checkpoints. Resume is deterministic; malformed/private/stale/forged/duplicate/combined/Tour input fails closed. No observation, Scene fact, credit, authority, successor, external action, or city/world delta is recorded.
+- **Validation/reload:** focused **51/51**, full **435/435**, build, preflight **26**, and full E2E **PASS in 130.7s** with credits reached and no runtime error. QA PNGs restored. Port `4173` returns HTTP `200` for `index-CMtUqHDM.js` / `index-BuFQ7Bya.css`.
+- **Exact W3 handoff:** review only staged hierarchy and blank `SC-03-10` continuity art at representative desktop and narrow layouts. Preserve accepted P0 art, first-person framing, responsive containment, >=44px controls, ownership, stable geometry, privacy/offline/no-authority/Tour isolation, zero cross-credit/delta, and no `SC-03-20+` or later-packet exposure.
+
 ## 2026-07-16 coordinator release — RP-002 normal P0 partial increment
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / NORMAL P0 ACCEPTED.` The exact predecessor-gated arrival, bounded resume, reversible return, and dedicated registered Civic Record District master form one accepted playable increment. `SC-03-10+`, scored learning, atomic packet completion, and RP-003 remain protected and absent.

@@ -2,16 +2,29 @@ import {
   CUSTODY_LEDGER_ROUTE_PACKET_ID,
   CUSTODY_LEDGER_ROUTE_VERSION,
   createCustodyLedgerRouteDispatcher,
-  createCustodyLedgerRouteState,
   custodyLedgerRouteActions,
+  custodyLedgerRouteActivationKinds,
   custodyLedgerRouteOwners,
   custodyLedgerRoutePhases,
 } from "./CustodyLedgerRouteState.js";
+import {
+  CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+  CUSTODY_LEDGER_ROUTE_OBSERVATION_VERSION,
+  createCustodyLedgerRouteObservationDispatcher,
+  createCustodyLedgerRouteObservationState,
+  custodyLedgerRouteObservationOwners,
+  custodyLedgerRouteObservationPhases,
+} from "./CustodyLedgerRouteObservationState.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
 
-const allowedCheckpoints = new Set(["city_threshold", "sc03_arrival"]);
+const allowedCheckpoints = new Set([
+  "city_threshold",
+  "sc03_arrival",
+  "sc03_survey_overview",
+  "sc03_near_blank",
+]);
 const privateKeys = new Set([
   "privateNotes", "workingSource", "selections", "prose", "feedback", "credentials",
   "endpoints", "payloads", "responses", "externalActionRequests", "sourceContent",
@@ -72,28 +85,51 @@ function saveFor(checkpoint) {
   });
 }
 
-function normalState(checkpoint, status = "ready") {
+function normalState(checkpoint, status = "ready", observationState = null) {
   const atArrival = checkpoint === "sc03_arrival";
+  const atOverview = checkpoint === "sc03_survey_overview";
+  const atBlank = checkpoint === "sc03_near_blank";
+  const message = atArrival
+    ? "Recorded civic route followed. District overview restored locally. No city response occurred."
+    : atOverview
+      ? "Protected survey overview ready. Orientation alone records no district evidence."
+      : atBlank
+        ? "Near evidence is ready for deliberate inspection. Nothing has been recorded yet."
+        : "The verified expedition record preserves one reversible civic route.";
+  const availableActions = atArrival
+    ? [custodyLedgerRouteActions.continueProtected, custodyLedgerRouteActions.returnAccepted]
+    : atOverview
+      ? [CUSTODY_LEDGER_NEAR_DETAIL_ACTION, custodyLedgerRouteActions.returnAccepted]
+      : atBlank
+        ? [custodyLedgerRouteActions.returnAccepted]
+        : [custodyLedgerRouteActions.enter];
   return Object.freeze({
     status,
     checkpoint,
-    boardId: atArrival ? "SC-03-00" : "SC-02-50",
-    owner: atArrival ? custodyLedgerRouteOwners.system : custodyLedgerRouteOwners.pilot,
-    message: atArrival
-      ? "Recorded civic route followed. District overview restored locally. No city response occurred."
-      : "The verified expedition record preserves one reversible civic route.",
+    boardId: atBlank ? "SC-03-10" : atArrival || atOverview ? "SC-03-00" : "SC-02-50",
+    owner: atBlank
+      ? custodyLedgerRouteObservationOwners.systemSession
+      : atArrival || atOverview
+        ? custodyLedgerRouteOwners.system
+        : custodyLedgerRouteOwners.pilot,
+    message,
     focusIntent: Object.freeze({
-      group: "route_transition",
-      target: atArrival ? "rp002-arrival-heading" : custodyLedgerRouteActions.enter,
+      group: atBlank ? "blank_observation" : "route_transition",
+      target: atArrival
+        ? custodyLedgerRouteActions.continueProtected
+        : atOverview
+          ? CUSTODY_LEDGER_NEAR_DETAIL_ACTION
+          : atBlank
+            ? "rp002-arrival-heading"
+            : custodyLedgerRouteActions.enter,
     }),
-    availableActions: Object.freeze([
-      atArrival ? custodyLedgerRouteActions.returnAccepted : custodyLedgerRouteActions.enter,
-    ]),
+    availableActions: Object.freeze(availableActions),
     continuation: "continuation",
     cityStateDelta: null,
     worldStateDelta: null,
     observationEvidence: Object.freeze([]),
     learningEvidence: Object.freeze([]),
+    ...(atBlank ? { observationState } : {}),
     successor: null,
     authorityGranted: false,
     externalActionEnabled: false,
@@ -121,12 +157,14 @@ function tourState() {
 }
 
 export function createCustodyLedgerNormalRouteIntent(action, activationKind, eventToken) {
+  const nearDetail = action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION;
+  const continueProtected = action === custodyLedgerRouteActions.continueProtected;
   return Object.freeze({
     packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
-    version: CUSTODY_LEDGER_ROUTE_VERSION,
-    mode: action === custodyLedgerRouteActions.returnAccepted ? "protected" : "campaign",
+    version: nearDetail ? CUSTODY_LEDGER_ROUTE_OBSERVATION_VERSION : CUSTODY_LEDGER_ROUTE_VERSION,
+    mode: action === custodyLedgerRouteActions.enter ? "campaign" : "protected",
     action,
-    owner: custodyLedgerRouteOwners.pilot,
+    owner: continueProtected ? custodyLedgerRouteOwners.system : custodyLedgerRouteOwners.pilot,
     activationKind,
     eventToken,
   });
@@ -154,9 +192,111 @@ export function clearCustodyLedgerNormalRoute(storage) {
   storage?.removeItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY);
 }
 
+function protectedRouteDispatcher(predecessor) {
+  const dispatcher = createCustodyLedgerRouteDispatcher({
+    predecessor,
+    continuation: "continuation",
+  });
+  const requested = dispatcher.dispatch({
+    packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
+    version: CUSTODY_LEDGER_ROUTE_VERSION,
+    mode: "campaign",
+    action: custodyLedgerRouteActions.enter,
+    owner: custodyLedgerRouteOwners.pilot,
+    activationKind: "screen_reader",
+    eventToken: "rp002-protected-reconstruction",
+  });
+  if (requested.status !== "requested"
+    || dispatcher.getState().phase !== custodyLedgerRoutePhases.entryVerification) return null;
+  dispatcher.advanceSystem({ predecessor });
+  if (dispatcher.getState().phase !== custodyLedgerRoutePhases.protectedArrival) return null;
+  dispatcher.acknowledge(custodyLedgerRouteActions.continueProtected);
+  return dispatcher.getState().phase === custodyLedgerRoutePhases.protectedActive
+    ? dispatcher
+    : null;
+}
+
+function continueIntentIsExact(request) {
+  return request?.packetId === CUSTODY_LEDGER_ROUTE_PACKET_ID
+    && request.version === CUSTODY_LEDGER_ROUTE_VERSION
+    && request.mode === "protected"
+    && request.action === custodyLedgerRouteActions.continueProtected
+    && request.owner === custodyLedgerRouteOwners.system
+    && custodyLedgerRouteActivationKinds.includes(request.activationKind)
+    && typeof request.eventToken === "string"
+    && request.eventToken.length >= 8
+    && request.implicit !== true
+    && request.stale !== true
+    && request.forged !== true
+    && request.multiHit !== true
+    && request.saveIntent !== true
+    && !Array.isArray(request.actions);
+}
+
+function blankObservationFromProtectedRoute(routeState, request) {
+  const dispatcher = createCustodyLedgerRouteObservationDispatcher(routeState);
+  const requested = dispatcher.dispatch(request);
+  if (requested.status !== "requested"
+    || dispatcher.getState().phase !== custodyLedgerRouteObservationPhases.systemTransition) return null;
+  const registered = dispatcher.registerView({
+    status: "registered",
+    sourceBoard: "SC-03-00",
+    targetBoard: "SC-03-10",
+    worldChanged: false,
+    replayRequested: false,
+  });
+  return registered.phase === custodyLedgerRouteObservationPhases.blankObservation
+    && registered.observationState?.observationEvidence?.length === 0
+    && registered.observationState?.finalizedObservationIds?.length === 0
+    && registered.observationState?.progress?.near === 0
+    && registered.observationState?.progress?.far === 0
+    && registered.observationState?.observationComplete === false
+    && registered.observationState?.campaignCommitEnabled === false
+      ? registered.observationState
+      : null;
+}
+
+function returnToAccepted(predecessor, request) {
+  const dispatcher = protectedRouteDispatcher(predecessor);
+  if (!dispatcher) return null;
+  const requested = dispatcher.dispatch(request);
+  if (requested.status !== "requested"
+    || dispatcher.getState().phase !== custodyLedgerRoutePhases.returnReconstruction) return null;
+  dispatcher.advanceSystem({ reconstructionValid: true });
+  if (dispatcher.getState().phase !== custodyLedgerRoutePhases.acceptedRestored) return null;
+  dispatcher.acknowledge(custodyLedgerRouteActions.continueAccepted, predecessor);
+  return dispatcher.getState().phase === custodyLedgerRoutePhases.accepted ? dispatcher.getState() : null;
+}
+
+function restoredStateFor(checkpoint, predecessor) {
+  if (checkpoint !== "sc03_near_blank") return normalState(checkpoint);
+  const route = protectedRouteDispatcher(predecessor)?.getState();
+  if (!route) return unavailableState();
+  const observation = createCustodyLedgerRouteObservationState(route);
+  const pending = createCustodyLedgerRouteObservationDispatcher(route);
+  const request = createCustodyLedgerNormalRouteIntent(
+    CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+    "screen_reader",
+    "rp002-deterministic-resume",
+  );
+  const requested = pending.dispatch(request);
+  if (observation.phase !== custodyLedgerRouteObservationPhases.protectedOverview
+    || requested.status !== "requested") return unavailableState();
+  const registered = pending.registerView({
+    status: "registered",
+    sourceBoard: "SC-03-00",
+    targetBoard: "SC-03-10",
+    worldChanged: false,
+    replayRequested: false,
+  });
+  return registered.phase === custodyLedgerRouteObservationPhases.blankObservation
+    ? normalState(checkpoint, "ready", registered.observationState)
+    : unavailableState();
+}
+
 /**
- * Thin normal integration over the existing protected route authority.
- * It owns only P0 entry/return and a bounded arrival checkpoint.
+ * Thin normal integration over the existing protected route and viewpoint authorities.
+ * It owns only reversible SC-03-00 staging and a blank SC-03-10 observation group.
  */
 export function createCustodyLedgerNormalRouteController(options = {}) {
   const predecessor = options.predecessor;
@@ -169,7 +309,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
       ? unavailableState()
       : options.restoredSave != null && !restored
         ? unavailableState()
-        : normalState(restored?.checkpoint ?? "city_threshold");
+        : restoredStateFor(restored?.checkpoint ?? "city_threshold", predecessor);
   const consumedTokens = new Set();
 
   return Object.freeze({
@@ -181,7 +321,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
         return Object.freeze({ status: "duplicate_suppressed", state });
       }
       if (typeof request?.eventToken === "string") consumedTokens.add(request.eventToken);
-      if (options.mode === "demo_tour" || state.status !== "ready") {
+      if (options.mode === "demo_tour" || state.status !== "ready" || containsPrivateContent(request)) {
         return Object.freeze({ status: "rejected", state });
       }
 
@@ -196,44 +336,43 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
           || dispatcher.getState().protectedBoard !== "SC-03-00") {
           return Object.freeze({ status: "rejected", state });
         }
-        state = normalState("sc03_arrival", "ready");
+        state = normalState("sc03_arrival");
         return Object.freeze({ status: "entered", state, save: saveFor("sc03_arrival") });
       }
 
       if (state.checkpoint === "sc03_arrival") {
-        const marker = {
-          packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
-          version: CUSTODY_LEDGER_ROUTE_VERSION,
-          mode: "protected_in_memory",
-          boardId: "SC-03-00",
-          verified: true,
-        };
-        const restoredRoute = createCustodyLedgerRouteState({
-          restoredState: { version: CUSTODY_LEDGER_ROUTE_VERSION, continuation: "continuation" },
-          protectedSessionMarker: marker,
-          predecessor,
-          continuation: "continuation",
-        });
-        const dispatcher = createCustodyLedgerRouteDispatcher({
-          restoredState: restoredRoute,
-          protectedSessionMarker: marker,
-          predecessor,
-          continuation: "continuation",
-        });
-        dispatcher.acknowledge(custodyLedgerRouteActions.continueProtected);
-        const requested = dispatcher.dispatch(request);
-        if (requested.status !== "requested" || dispatcher.getState().phase !== custodyLedgerRoutePhases.returnReconstruction) {
+        if (request?.action === custodyLedgerRouteActions.returnAccepted) {
+          if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
+          state = normalState("city_threshold");
+          return Object.freeze({ status: "returned", state, save: saveFor("city_threshold") });
+        }
+        if (!continueIntentIsExact(request)) return Object.freeze({ status: "rejected", state });
+        const route = protectedRouteDispatcher(predecessor)?.getState();
+        const observation = route ? createCustodyLedgerRouteObservationState(route) : null;
+        if (observation?.phase !== custodyLedgerRouteObservationPhases.protectedOverview
+          || observation.availableActions?.[0]?.action !== CUSTODY_LEDGER_NEAR_DETAIL_ACTION) {
           return Object.freeze({ status: "rejected", state });
         }
-        dispatcher.advanceSystem({ reconstructionValid: true });
-        if (dispatcher.getState().phase !== custodyLedgerRoutePhases.acceptedRestored) {
-          return Object.freeze({ status: "rejected", state });
+        state = normalState("sc03_survey_overview");
+        return Object.freeze({ status: "advanced", state, save: saveFor("sc03_survey_overview") });
+      }
+
+      if (state.checkpoint === "sc03_survey_overview") {
+        if (request?.action === custodyLedgerRouteActions.returnAccepted) {
+          if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
+          state = normalState("city_threshold");
+          return Object.freeze({ status: "returned", state, save: saveFor("city_threshold") });
         }
-        dispatcher.acknowledge(custodyLedgerRouteActions.continueAccepted, predecessor);
-        if (dispatcher.getState().phase !== custodyLedgerRoutePhases.accepted) {
-          return Object.freeze({ status: "rejected", state });
-        }
-        state = normalState("city_threshold", "ready");
+        const route = protectedRouteDispatcher(predecessor)?.getState();
+        const observationState = route ? blankObservationFromProtectedRoute(route, request) : null;
+        if (!observationState) return Object.freeze({ status: "rejected", state });
+        state = normalState("sc03_near_blank", "ready", observationState);
+        return Object.freeze({ status: "advanced", state, save: saveFor("sc03_near_blank") });
+      }
+
+      if (state.checkpoint === "sc03_near_blank" && request?.action === custodyLedgerRouteActions.returnAccepted) {
+        if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
+        state = normalState("city_threshold");
         return Object.freeze({ status: "returned", state, save: saveFor("city_threshold") });
       }
 
@@ -242,4 +381,8 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
   });
 }
 
-export { custodyLedgerRouteActions, custodyLedgerRouteOwners };
+export {
+  CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+  custodyLedgerRouteActions,
+  custodyLedgerRouteOwners,
+};

@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
   CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
+  CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
@@ -52,7 +53,7 @@ function memoryStorage(initial = {}) {
   };
 }
 
-test("normal RP-002 entry reaches only SC-03-00 across every accepted modality", () => {
+test("normal RP-002 entry reaches only SC-03-00 and exposes a reversible zero-credit continuation", () => {
   for (const activationKind of activationKinds) {
     const controller = createCustodyLedgerNormalRouteController({ predecessor });
     assert.deepEqual(controller.getState().availableActions, [custodyLedgerRouteActions.enter]);
@@ -61,6 +62,54 @@ test("normal RP-002 entry reaches only SC-03-00 across every accepted modality",
     assert.equal(result.state.checkpoint, "sc03_arrival");
     assert.equal(result.state.boardId, "SC-03-00");
     assert.equal(result.save.checkpoint, "sc03_arrival");
+    assert.deepEqual(result.state.availableActions, [
+      custodyLedgerRouteActions.continueProtected,
+      custodyLedgerRouteActions.returnAccepted,
+    ]);
+    assertNoDeltaOrCredit(result.state);
+  }
+});
+
+test("protected continuation exposes explicit Pilot inspection without recording evidence", () => {
+  const controller = createCustodyLedgerNormalRouteController({ predecessor });
+  controller.dispatch(intent(custodyLedgerRouteActions.enter, "pointer", "rp002-enter-overview"));
+  const result = controller.dispatch(intent(
+    custodyLedgerRouteActions.continueProtected,
+    "keyboard_enter",
+    "rp002-continue-overview",
+  ));
+  assert.equal(result.status, "advanced");
+  assert.equal(result.state.checkpoint, "sc03_survey_overview");
+  assert.equal(result.state.boardId, "SC-03-00");
+  assert.deepEqual(result.state.availableActions, [
+    CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+    custodyLedgerRouteActions.returnAccepted,
+  ]);
+  assert.equal(result.save.checkpoint, "sc03_survey_overview");
+  assertNoDeltaOrCredit(result.state);
+});
+
+test("explicit near-layer inspection enters only a blank sanitized SC-03-10 group across modalities", () => {
+  for (const activationKind of activationKinds) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor });
+    controller.dispatch(intent(custodyLedgerRouteActions.enter, "pointer", `rp002-enter-${activationKind}`));
+    controller.dispatch(intent(custodyLedgerRouteActions.continueProtected, "pointer", `rp002-continue-${activationKind}`));
+    const result = controller.dispatch(intent(
+      CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+      activationKind,
+      `rp002-near-${activationKind}`,
+    ));
+    assert.equal(result.status, "advanced");
+    assert.equal(result.state.checkpoint, "sc03_near_blank");
+    assert.equal(result.state.boardId, "SC-03-10");
+    assert.deepEqual(result.state.availableActions, [custodyLedgerRouteActions.returnAccepted]);
+    assert.deepEqual(result.state.observationState.observationEvidence, []);
+    assert.deepEqual(result.state.observationState.finalizedObservationIds, []);
+    assert.equal(result.state.observationState.progress.near, 0);
+    assert.equal(result.state.observationState.progress.far, 0);
+    assert.equal(result.state.observationState.observationComplete, false);
+    assert.equal(result.state.observationState.campaignCommitEnabled, false);
+    assert.equal(result.save.checkpoint, "sc03_near_blank");
     assertNoDeltaOrCredit(result.state);
   }
 });
@@ -81,6 +130,35 @@ test("arrival resumes exactly and returns through the protected route authority"
   assertNoDeltaOrCredit(returned.state);
 });
 
+test("overview and blank checkpoints resume deterministically and keep return separate", () => {
+  const controller = createCustodyLedgerNormalRouteController({ predecessor });
+  controller.dispatch(intent(custodyLedgerRouteActions.enter, "pointer", "rp002-entry-resume-chain"));
+  const overview = controller.dispatch(intent(
+    custodyLedgerRouteActions.continueProtected,
+    "pointer",
+    "rp002-overview-resume-chain",
+  ));
+  const resumedOverview = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: overview.save });
+  assert.equal(resumedOverview.getState().checkpoint, "sc03_survey_overview");
+  const blank = resumedOverview.dispatch(intent(
+    CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+    "screen_reader",
+    "rp002-blank-resume-chain",
+  ));
+  const resumedBlank = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: blank.save });
+  assert.equal(resumedBlank.getState().checkpoint, "sc03_near_blank");
+  assert.deepEqual(resumedBlank.getState().observationState.observationEvidence, []);
+  assertNoDeltaOrCredit(resumedBlank.getState());
+  const returned = resumedBlank.dispatch(intent(
+    custodyLedgerRouteActions.returnAccepted,
+    "switch",
+    "rp002-blank-return-chain",
+  ));
+  assert.equal(returned.status, "returned");
+  assert.equal(returned.state.checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(returned.state);
+});
+
 test("duplicate activation is one-hit and wrong or combined intents fail closed", () => {
   const duplicateController = createCustodyLedgerNormalRouteController({ predecessor });
   const repeated = intent(custodyLedgerRouteActions.enter, "pointer", "rp002-duplicate-event");
@@ -97,6 +175,23 @@ test("duplicate activation is one-hit and wrong or combined intents fail closed"
     assert.equal(controller.getState().checkpoint, "city_threshold");
     assertNoDeltaOrCredit(controller.getState());
   }
+
+  const overviewController = createCustodyLedgerNormalRouteController({ predecessor });
+  overviewController.dispatch(intent(custodyLedgerRouteActions.enter, "pointer", "rp002-fail-entry"));
+  overviewController.dispatch(intent(custodyLedgerRouteActions.continueProtected, "pointer", "rp002-fail-overview"));
+  for (const bad of [
+    { ...intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", "rp002-near-stale"), stale: true },
+    { ...intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", "rp002-near-forged"), forged: true },
+    { ...intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", "rp002-near-private"), privateNotes: "do not retain" },
+    { ...intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", "rp002-near-combined"), actions: [CUSTODY_LEDGER_NEAR_DETAIL_ACTION] },
+  ]) {
+    assert.equal(overviewController.dispatch(bad).status, "rejected");
+    assert.equal(overviewController.getState().checkpoint, "sc03_survey_overview");
+    assertNoDeltaOrCredit(overviewController.getState());
+  }
+  const repeatedNear = intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", "rp002-near-one-hit");
+  assert.equal(overviewController.dispatch(repeatedNear).status, "advanced");
+  assert.equal(overviewController.dispatch(repeatedNear).status, "duplicate_suppressed");
 });
 
 test("missing, forged, private, and Demo Tour route state remain unavailable", () => {
@@ -119,12 +214,17 @@ test("missing, forged, private, and Demo Tour route state remain unavailable", (
   assertNoDeltaOrCredit(tour.getState());
 });
 
-test("bounded storage keeps only an exact arrival checkpoint and clears on return", () => {
+test("bounded storage keeps only exact allowlisted first-incomplete checkpoints and clears on return", () => {
   const storage = memoryStorage();
   const arrival = createCustodyLedgerNormalRouteController({ predecessor })
     .dispatch(intent(custodyLedgerRouteActions.enter, "pointer", "rp002-storage-event")).save;
   assert.equal(writeCustodyLedgerNormalRoute(storage, arrival, predecessor), true);
   assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), arrival);
+  for (const checkpoint of ["sc03_survey_overview", "sc03_near_blank"]) {
+    const saved = { ...arrival, checkpoint };
+    assert.equal(writeCustodyLedgerNormalRoute(storage, saved, predecessor), true);
+    assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), saved);
+  }
   assert.equal(sanitizeCustodyLedgerNormalRouteSave({ ...arrival, sourceContent: "private" }, predecessor), null);
   storage.setItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY, JSON.stringify({ ...arrival, checkpoint: "RP-003" }));
   assert.equal(readCustodyLedgerNormalRoute(storage, predecessor), null);
@@ -132,7 +232,7 @@ test("bounded storage keeps only an exact arrival checkpoint and clears on retur
   assert.equal(storage.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY), null);
 });
 
-test("normal app surface exposes one predecessor-gated entry, reversible return, and dedicated registered arrival art", async () => {
+test("normal app surface exposes reversible staged actions and a registered blank-view art hook", async () => {
   const [app, city, arrival, styles] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8"),
@@ -142,12 +242,16 @@ test("normal app surface exposes one predecessor-gated entry, reversible return,
   assert.match(app, /readVerifiedCityThresholdPredecessor/);
   assert.match(app, /mode === "rp002-arrival"/);
   assert.match(city, /custodyLedgerRouteActions\.enter/);
-  assert.match(arrival, /data-board="SC-03-00"/);
+  assert.match(arrival, /data-board=\{routeState\.boardId\}/);
   assert.match(arrival, /2026-07-16-civic-record-district-arrival\/civic-record-district-arrival-master-v1\.png/);
-  assert.match(arrival, /data-production-art="SC-03-00-civic-record-arrival-v1"/);
+  assert.match(arrival, /SC-03-00-civic-record-arrival-v1/);
+  assert.match(arrival, /SC-03-10-registered-continuity-hook/);
+  assert.match(arrival, /SC-03-10-detail-pending/);
   assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
-  assert.match(arrival, /custodyLedgerRouteActions\.returnAccepted/);
-  assert.doesNotMatch(arrival, /RP-003|exam credit|learning task/i);
+  assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
+  assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
+  assert.match(app, /advanceCustodyLedgerNormalRoute/);
+  assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
 });

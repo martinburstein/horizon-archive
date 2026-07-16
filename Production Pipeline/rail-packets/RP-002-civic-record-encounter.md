@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 blank-SC-03-10 checkpoint — 2026-07-16
+
+- **Disposition:** `RP002-P1-002 RESOLVED / DEMO RELOADED / W3 NEXT`.
+- **Integrated boundary:** accepted `SC-03-00` exposes System-owned `CONTINUE PROTECTED SURVEY`; its verified overview exposes Pilot-owned `INSPECT NEAR EXPOSED LAYERS`; exact registration enters only blank sanitized `SC-03-10`. Return remains separate and reversible.
+- **State boundary:** exact allowlisted checkpoints persist only the first incomplete normal boundary. Resume reconstructs through existing protected authorities; no observation, Scene fact, credit, authority, successor, external action, or city/world delta exists. Unsafe or Tour-derived input fails closed.
+- **Evidence:** focused **51/51**, full **435/435**, build, preflight **26**, and complete **130.7s** E2E pass. Port `4173` serves `index-CMtUqHDM.js` / `index-BuFQ7Bya.css`; QA binaries restored.
+- **Hard stop/handoff:** W3 reviews only staged actions and temporary `SC-03-10-detail-pending` continuity art. No observation activation, `SC-03-20+`, learning/save/completion, RP-003, or RP-004 is authorized.
+
 ## Coordinator normal-P0 partial release — 2026-07-16
 
 - **Disposition:** `IN DEMO — PARTIAL / P0 COORDINATOR PASS`.

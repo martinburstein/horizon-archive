@@ -1,5 +1,15 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 - Coder W2: RP002-P1-002 blank SC-03-10 handoff repair
+
+- **Mode/verdict:** `bug-repair` / `PASS - RP002-P1-002 RESOLVED; DEMO RELOADED FOR W3`. Normal `SC-03-00` now presents `CONTINUE PROTECTED SURVEY`, then explicit Pilot `INSPECT NEAR EXPOSED LAYERS`, and enters only a blank sanitized `SC-03-10` group. `RETURN TO CITY THRESHOLD` stays separate and reversible.
+- **Bounded state/save:** the adapter composes the existing protected route/view authorities and persists only an exact allowlisted first-incomplete checkpoint. Resume deterministically reconstructs the blank group; no observation, Scene fact, learning/mastery/exam credit, authority, successor, external action, or city/world delta is stored or granted. Missing, forged, private, stale, duplicate, combined, Tour, and malformed input fail closed.
+- **Presentation:** staged System/Pilot actions, checkpoint heading focus, `>=44px` controls, and non-color ownership remain explicit. Blank `SC-03-10` registers a temporary `SC-03-10-detail-pending` continuity-art hook over the accepted first-person P0 master for W3 review; no new art acceptance is claimed.
+- **Files changed:** `src/App.jsx`, `src/CivicRecordArrival.jsx`, `src/CustodyLedgerNormalRoute.js`, `test/custodyLedgerNormalRoute.test.js`, RP-002 packet, DI-001, Working Queue, Story Rail Map, and this log. Incidental QA PNGs were restored; unrelated user files were preserved.
+- **Validation/reload:** focused **51/51**, full **435/435**, build, preflight **26**, and complete E2E **PASS in 130.7s** with `credits:true`, every gate true, and `runtimeErrors:false`. Port `4173` serves `index-CMtUqHDM.js` / `index-BuFQ7Bya.css` with root/JS/CSS HTTP `200`.
+- **Hard stop:** no observation action is active; `SC-03-20+`, PY-009, RP002-RAI-01, packet completion, RP-003, and RP-004 remain unexposed.
+- **Exact W3 handoff:** `Aesthetic Agent: review only the W2-reloaded normal SC-03-00 -> blank SC-03-10 boundary on port 4173. Use CONTINUE PROTECTED SURVEY and INSPECT NEAR EXPOSED LAYERS. Confirm staged hierarchy, ownership, heading-first transition, >=44px controls, responsive containment, readable zero-credit meaning, separate return, and the temporary SC-03-10 continuity-art hook. Open one exact visual finding or record clean disposition. Preserve accepted P0 art, first-person/no-protagonist/no-ship framing, Builder logic, stable geometry, bounded resume, privacy/offline/no-authority/Tour isolation, zero cross-credit/delta, and no SC-03-20+/later-packet exposure.`
+
 ## 2026-07-16 — Advance Coder A5: RP-004 protected TR-00–TR-40 journey
 
 - **Mode/verdict:** `advance` / advance-construction only; `GATE REVIEW — PROTECTED INTEGRATION AND VALIDATION GATES CLOSED`. This pass performed no W1, normal integration, browser persistence, production art, Demo reload, RP-005 definition, or micro-module-per-state work.
