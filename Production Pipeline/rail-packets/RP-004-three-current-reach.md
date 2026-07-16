@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE`
+- Status: `GATE REVIEW — A5 PROTECTED JOURNEY COMPLETE`
 - Target chapter/location: Chapter 3 opening expansion / first broad working landscape beyond the surveyed civic margin
 - Target demo horizon: third future slice after the accepted RP-001 boundary; directly after RP-003
 - Route order: 4
@@ -13,8 +13,8 @@
 - Working title: `Three-Current Reach` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase II — Expansion / slot 1 of 3
 - Target player time: `34–46 minutes` clean first play; `20–28 minutes` mastered replay; protected reference-fixture smoke target `<5 minutes` without injected evidence, landscape hints, or skipped evaluators
-- Complete Advance cycles spent on this packet: 0 before this A1 pass
-- Convergence-budget status: `ORIENTATION`
+- Complete Advance cycles spent on this packet: 1
+- Convergence-budget status: `ORIENTATION COMPLETE — GATE REVIEW WITHIN BUDGET`
 
 ## Locked premise
 
@@ -221,8 +221,15 @@ The Pilot wants a usable expedition correspondence without turning a beautiful u
 
 ## Advance Construction Track — Coder
 
-- Status: `UNASSIGNED — A5 MAY BUILD ONLY AFTER A2–A4 SIGN-OFF`
-- No feature flag, route, state scaffold, copy import, art hook, browser persistence, network request, live-sample read, or runtime implementation is authorized by A1.
+- Status: `PASS — A5 PURE PROTECTED TR-00–TR-40 JOURNEY; GATE REVIEW REQUESTED`
+- One protected `ThreeCurrentReachProtectedJourney` caller begins only from the exact sanitized RP-003 completion and traverses the locked five-phase graph without a per-state module family. All six three-relation orders converge before the separate common-return/purpose-unknown observation.
+- The protected JavaScript evaluator enforces the frozen eight-check `PY-011` primary and transfer forms without `eval`; a separate five-dimension retrieval gate remains strict. The existing RP-004 Python AST/runtime validator independently executes the same reference forms. The independent workload evaluator uses the frozen neutral `6 + 4 + 6` course cases, scores workload and deciding signal separately at `12/12`, `8/8`, and `12/12`, and requires both separate explanations.
+- The exported workload interface contains only course-owned prompts and persistent human-readable choices. It contains no `SC-05` crop, current/corridor symbol, Builder referent, material mapping, motion/sound/color cue, answer, or deciding signal; the landscape is structurally unavailable as a workload answer channel.
+- Misses expose only failed check/dimension IDs, include no answer, clear transient work, and return a blank first-invalid boundary. Pre-save resume retains only a contiguous allowlisted finalized prefix and deliberately reconstructs `TR-10` because physical observations remain transient; verified save restores without replay.
+- One all-or-none sanitizer commits only the four-fact expedition note and eight finalized allowlisted evidence records. Partial, forged, contaminated, purpose-inferred, private, stale, duplicate, hardcoded, wrong-order/count/lookup, live-source, landscape-derived, modality-only, Tour-derived, and unsafe route inputs fail closed without replacing verified state.
+- Exact RP-001 accepted campaign, RP-003 protected completion, and Tour fixtures remain byte-stable. `continuation` is unchanged; `cityStateDelta=null`; `externalStateDelta=null`; world response, live reads, external action, authority, exam credit, exam guarantee, and successor remain false or absent. Both returns are explicit and safe; the optional continuation remains destinationless and opens no route.
+- Responsive/accessibility metadata preserves first-person photoreal presentation, invariant world, representative desktop full-shell containment, narrow/`200%` text-zoom reflow, seven semantic modalities, persistent labels, field-associated errors, live status, non-color meaning, reduced-motion equivalence, deterministic focus, no time limit, and `>=44px` targets. This is protected metadata, not a normal integrated UI claim.
+- App/main, browser persistence, normal routes, production art, accepted bundles, the live Demo, Working passes, and RP-005 remain unchanged and unauthorized.
 
 ## Anticipated accessibility risks
 
@@ -278,14 +285,14 @@ The Pilot wants a usable expedition correspondence without turning a beautiful u
 ## Breadth and convergence record
 
 - Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-landscape sequence and premium production-art plan`; Curriculum `PASS — PY-011 and RP004-WORKLOAD-01 / AI901-D1-O4 SOLIDIFIED with strict machine-readable evidence`; Puzzle `PASS — A4 one integrated TR-00–TR-40 graph with answer-free recovery, save/resume, Tour, pacing, accessibility, and landscape-never-answer-key acceptance locked`.
-- Packet gates remaining: Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
+- Packet gates remaining: final Production art, Normal integration, Working evidence, and release remain later production obligations after coordinator promotion. Protected-design gates are complete.
+- Did this cycle reduce the remaining-gate count?: `YES — Protected code, Save/recovery, Accessibility metadata/evidence, and post-integration validation moved MISSING/PARTIAL -> PASS; protected-design missing-gate count is zero`.
 - Existing seams integrated or consolidated: RP-003's saved comparison, purpose-unknown discipline, executable-literacy rule, privacy clearing, reversible returns, and undefined onward bearing become one direct expansion premise.
 - Optional work trimmed or deferred: RP-005 destination, additional landscapes, secondary programs, identity-bearing matter, live stream operation, native categories, and Machine relationship.
-- New module or artifact integration consumer: later A5 may compose existing comparison/evidence/save authorities only after A2–A4; no new module is requested by A1.
-- Breadth verdict: `CONTINUE — A5 PROTECTED CONSTRUCTION NEXT`
+- New module or artifact integration consumer: one pure protected journey caller consumes the locked A1–A4 packet, exact RP-003 saved boundary, frozen RP-004 contract, and existing protected evaluator/save/isolation patterns; no per-transition modules were added.
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`
 - Next contiguous packet seed readiness: `RP-005 remains RESERVED until RP-004 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Advance Coder A5 implements one pure protected RP-004 journey/harness for the locked TR-00–TR-40 graph, proves real evaluators, landscape isolation, recovery/save boundaries, and requests Gate Review or names one genuine hold.
+- Exact next action in one sentence: coordinator independently verifies the twelve Gate Review items and either promotes RP-004 for ordered Working behind RP-003 or records one genuine hold; RP-005 remains reserved.
 
 ## Advance Handoff Gate
 
@@ -293,9 +300,13 @@ The Pilot wants a usable expedition correspondence without turning a beautiful u
 - Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PASS — 2026-07-16 / ONE INTEGRATED FIVE-PHASE GRAPH LOCKED`
-- Coder smoke-test result: `PENDING A5`
-- Readiness: `REVISE`
-- Required revision: complete A5 protected construction and validation on this packet; do not define RP-005.
+- Coder smoke-test result: `PASS — 13/13 focused; 24/24 RP-003→RP-004 protected path after resume coverage; 431+ full suite; RP-004 validator/build/leakage/purity/patch PASS`
+- Readiness: `GATE REVIEW`
+- Required revision: none in the protected design/build bundle; coordinator decision required. Final art, normal integration, browser persistence, Working evidence, release, and RP-005 remain unauthorized.
+
+### Exact coordinator Gate Review handoff
+
+`Coordinator: independently verify all twelve RP-004 Gate Review items against this packet, curriculum/readiness/RP-004/contract.json and validator, ThreeCurrentReachProtectedJourney.js, and its focused tests. Confirm exact sanitized RP-003 entry; all six three-relation orders plus the separate common-return/purpose-unknown observation; real eight-check PY-011 primary/transfer and five-dimension retrieval; strict independent 12/12 primary, 8/8 retrieval, blank 12/12 transfer, and two separately scored workload explanations; a neutral course interface with no SC-05/Builder/current/corridor/material/color/sound/motion answer channel; answer-free local blank recovery; contiguous finalized resume with transient re-observation; all-or-none allowlisted save; verified replay-free restore; Tour/campaign/predecessor byte stability; explicit RP-003/City Threshold returns; destinationless optional continuation; responsive/accessibility metadata; offline/no-authority/no-exam-guarantee/world-invariance locks; and App/main/dist/storage/network/DOM isolation. Re-run focused/protected/full tests, the RP-004 Python validator, production build, leakage/purity/patch checks, and verify the accepted bundle identity remains unchanged. If every gate passes, promote RP-004 for methodical Working behind RP-003 and seed only a blank contiguous RP-005 shell; otherwise record one genuine HOLD. Do not perform W1, normal integration, browser persistence, art production, Demo reload, or define RP-005 content during this gate.`
 
 ### Exact Gameplay Master A4 handoff
 
