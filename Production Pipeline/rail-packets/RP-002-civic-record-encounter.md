@@ -1,5 +1,14 @@
 # RP-002 — Civic Record Encounter
 
+## Latest protected implementation — isolated second-near dispatch (2026-07-16)
+
+- **Status:** `PASS — A5 ISOLATED SD-00/R/10/20/U/T COMPLETE; REVISE; NON-ROUTABLE`.
+- **Implementation:** `CustodyLedgerSecondNearDispatch.js` accepts only the exact sanitized one-ID boundary produced by the existing first-near dispatcher and evidence return, then composes the existing semantic hotspot, observation, replay, statement/status, evidence-return, route-return, sanitation, and focus authorities. It introduces no copied observation ID, action label, Scene statement, geometry, or progress rule.
+- **Valid path:** all six ordered first/second prefixes and all seven supported modalities preserve the first finalized record byte-stably, add only the selected Available action's matching second ID and Scene statement, derive System `2 of 3`, and return to exactly two Recorded controls plus one Available control. Recorded replay is idempotent and returns to the identical one-ID group.
+- **Recovery/evidence:** one-hit token suppression, unsafe/ambiguous/stale/forged/combined/Tour/partial/private input, exact one-ID and two-ID resume, heading-first recovery, separate route return, and Tour view-only isolation are covered. Presentation, replay, return, recovery, resume, and Tour remain zero observation and zero mastery credit; both SOLIDIFIED chains and the independent atomic save gate remain unchanged.
+- **Validation:** focused `13/13`; full `382/382`; RP-002 curriculum self-test PASS; production build PASS with unchanged accepted `index-DYIYoZtf.js` / `index-VPnRyv7C.css`. App/main import, React UI, browser storage, geometry/art, protected or normal route exposure, accepted bundle/world/city/access/external change, successor, Demo reload, and Working promotion remain absent.
+- **Next at this checkpoint:** A1 selects the next smallest dependency-adjacent protected seam. RP-002 remains `REVISE`, protected, non-routable, and unavailable to Working.
+
 ## Latest protected implementation — isolated first-near dispatch (2026-07-16)
 
 - **Status:** `PASS — A5 ISOLATED FD-00/10/20/U/T COMPLETE; REVISE; NON-ROUTABLE`.
