@@ -934,3 +934,60 @@ The user-requested skip is a presentation aid, not a cheat-state version of mast
 - **Validation:** focused Custody Ledger state-model coverage passes the exact sequence, strict anti-forgery, blank/carry-free origins, privacy allowlist, retries, first-failed focus intent, deterministic resume, and invariant boundaries. The full game suite, RP-002 curriculum validator, and production build are coordinator-recorded in the matching Coder log entry.
 - **Exact W1/no-promotion boundary:** `DO NOT PROMOTE OR HAND TO W1. RP-002 remains IN DESIGN — A5 PARTIAL and non-routable. The protected model has no responsible-AI evaluator, atomic persistence/save, SC-03 observation routing, responsive interface, protected playable route, or production scene art.`
 - **Exact next Advance Coder handoff:** `Coder Agent — advance mode: implement only the protected blank RP002-RAI-01 primary evaluator and mapped per-dimension remediation from the existing blank rai_primary boundary. Require all three course-authored scenarios and principle/mitigation/accountable-owner dimensions at strict 9/9, recompute results against the SOLIDIFIED contract, retain only privacy-limited finalized booleans/attempt/hint/tags, map every miss to its existing human-owned feedback, and restore the first incomplete scenario with blank working choices and unlimited recovery. Preserve the completed PY-009 evidence chain without replaying 30-B or 30-E; keep campaignCommitEnabled=false, continuation unchanged, cityStateDelta=null, campaign/Tour bytes separate, identity closed, world invariant, and all save/route/successor/access/permission/city/external action disabled. Do not implement the RAI transfer, RAI explanation, persistence/save, observation, UI, protected route, or art in the same tranche. Return REVISE and do not perform Working passes.`
+
+## A4 responsible-AI primary/remediation graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 RESPONSIBLE-AI OWNERSHIP GRAPH LOCKED; SOLIDIFIED CHAIN AND NARROW A5 SCOPE REMAIN VALID`.
+- **Bounded impact:** the A1/A2/A3 ownership clarification changes only which human-interface group is visible around the existing primary miss and repair loop. It adds no action, scenario, expected answer, scored dimension, threshold, transfer fixture, explanation choice, persistence field, world observation, route, reward, authority, or city response.
+- **Expected play time:** the complete normal-route Custody Ledger remains `12–18 minutes`; the protected responsible-AI primary plus one mapped recovery is expected to occupy `3–5 minutes`. Time is neither stored nor scored.
+
+### Locked post-30-E responsible-AI subgraph
+
+```text
+30-E / python_complete / PILOT // FLIGHT RECORDER
+  -> zero-credit dismissal: clear Python presentation -> RAI-P0
+
+RAI-P0 / rai_primary / SYSTEM // EXPEDITION SESSION
+  -> present one course-authored primary case at a time
+  -> keep local choices until all three cases are submitted
+  -> recompute all three dimensions for all three cases together
+  -> strict 9/9: clear all working choices/feedback -> blank RAI transfer boundary
+  -> any miss: clear all working choices -> RAI-MISS
+
+RAI-MISS / 901 TEACHER // FEEDBACK
+  -> identify failed case + failed principle/mitigation/owner dimensions only
+  -> retrieve relevant L-02-02 definition and neighboring-principle contrast
+  -> no answer, world response, mastery, or durable prose
+  -> ordinary zero-credit acknowledgement -> RAI-GUIDE
+
+RAI-GUIDE / SYSTEM // EXPEDITION SESSION
+  -> solve one neutral guided near case with a testable safeguard and
+     accountable human/organizational role
+  -> guided completion supplies no scored dimension or carried answer
+  -> clear guided work -> RAI-P0 blank at first incomplete/first-failed case
+```
+
+- **One active group:** `RAI-P0`, `RAI-MISS`, and `RAI-GUIDE` replace one another. A primary card, Teacher feedback, guided case, and retry form are never layered together, and no hidden prior selection or answer remains available to the next group.
+- **Strict scoring:** the primary retains exactly the three approved cases and scores `principle`, testable `mitigation`, and accountable human/organizational `owner` simultaneously. A correct principle cannot compensate for an unsafe safeguard or a platform/model/city/Builder surface named as owner. Only genuine `9/9` may initialize the later blank transfer boundary.
+- **Mapped remediation:** every miss is keyed by case and failed dimension. It retrieves the missed principle, contrasts its closest neighbor, requires a testable human safeguard, requires an attributable human/organizational role, and uses one neutral guided near case before reopening the scored boundary blank. Feedback and guided practice never reveal or persist the scored answer.
+- **Recovery and focus intent:** a miss clears all primary working selections and focuses the failed-group heading, then the first failed dimension. Teacher acknowledgement focuses the guided-case heading. Guided completion clears its working content and focuses the first control of the first incomplete/first-failed primary case. Retry is unlimited. Safe close, cancel, route return, reload, stale sanitation, and Tour resume discard selections and prose, then reconstruct only the first incomplete scored boundary from finalized allowlisted evidence.
+- **Evidence and ownership:** durable data is limited to finalized dimension booleans, attempt/hint counts, fixed misconception tags, identifiers, confidence, and mastery status permitted by the SOLIDIFIED contract. Case choices, guided answers, feedback prose, free-form reasoning, identity content, source content, and external-action requests clear. All case, feedback, and guided-practice copy is owned by the human course/Teacher/System interface and is never Builder doctrine, Machine judgment, city approval/refusal, consent, identity proof, access, permission, or authority.
+- **Zero-credit presentation:** owner prefixes, display, reading, case order, field association, feedback, guided practice, hints, focus, wrapping, scrolling, layout, crop, color, motion, sound, world observation, navigation, save/reload, timing, confidence, Python execution/result/explanation, and Tour traversal create no responsible-AI evidence.
+- **State lock:** the completed `30-A` through `30-E` Python chain remains finalized without replay or cross-credit. `campaignCommitEnabled=false`; the separate campaign and Tour bytes remain unchanged; both RP-001 predecessor flags remain valid; `continuation` is unchanged; `cityStateDelta=null`; identity material, the invariant photoreal world, reversible return, and the no-successor boundary remain exact. No save, item, route, access, permission, city response, external call, or normal-campaign exposure is authorized.
+
+### Player-observable validation additions
+
+1. After the Pilot conclusion, only one course-authored primary case group is visible; no Python result or answer appears beside it.
+2. A principle-only answer with a wrong safeguard or nonhuman owner fails only the mapped dimensions, clears every primary selection, and opens Teacher-owned repair without changing the world.
+3. Teacher feedback is replaced by one neutral guided case, whose completion is replaced by a blank retry at the first incomplete/first-failed case; none grants credit.
+4. Closing or reloading during primary, feedback, guided practice, or retry returns to a blank first-incomplete boundary with private working content clear and deterministic focus.
+5. Only strict simultaneous `9/9` can create the blank RAI-transfer boundary; presentation, Python completion, Tour state, hints, or restored UI cannot prefill or bypass it.
+6. Throughout this tranche, save and all campaign/world/route/city/external changes remain unavailable.
+
+- **Locked mechanics:** one active human-owned group; all three approved primary cases; simultaneous strict `9/9`; per-case/per-dimension repair; blank full-form retry; neutral guided near case; unlimited recovery; first-incomplete/first-failed reconstruction; privacy allowlist; Python/RAI separation; save lock; separate Tour; offline/no-authority/no-exam-guarantee clauses; and every world/city invariant.
+- **Flexible implementation:** reducer/helper names, internal phase labels, and the compact card/stepper presentation may vary if they preserve the observable sequence, one-active-group replacement, semantic field associations, deterministic focus intent, full sanitation, and exact evidence boundaries. No implementation choice may add an answer cue or durable working content.
+- **Validation performed:** RP-002 curriculum validator self-test passed; source assertions confirmed the strict `9/9` chain, one-active-group ownership sequence, narrow A5 exclusions, updated queue/map ownership, disabled campaign commit, and unchanged world/city boundary; `git diff --check` passed.
+
+### Exact Advance Coder A5 handoff — protected RAI primary/remediation seam
+
+`Coder Agent — advance mode: implement only the protected blank RP002-RAI-01 primary evaluator and mapped per-case/per-dimension remediation from the existing blank rai_primary boundary in the non-routable Custody Ledger model. Preserve the completed 30-A through 30-E Python evidence without replay or cross-credit. Present the exact three course-authored primary scenarios one at a time under SYSTEM // EXPEDITION SESSION, retain working choices only until the third submission, then recompute principle, testable mitigation, and accountable human-or-organizational owner for all three cases simultaneously against the SOLIDIFIED contract. Require genuine strict 9/9; a correct principle cannot compensate for a wrong safeguard or a platform/model/city/Builder surface named as owner. On any miss, persist only allowlisted finalized dimension booleans, bounded attempt/hint counts, and fixed misconception tags; clear every primary selection; replace the primary group with field-associated 901 TEACHER // FEEDBACK keyed only to failed case/dimension; then replace feedback with one SYSTEM // EXPEDITION SESSION neutral guided near case; after guided completion clear its work and restore the scored primary entirely blank at the first incomplete/first-failed case with deterministic focus and unlimited recovery. Feedback, guided practice, owner prefixes, reading, focus, layout, navigation, hints, timing, confidence, world observation, Python completion, and Tour use remain zero credit and cannot provide or carry a scored answer. Strict 9/9 may initialize only a genuinely blank RAI-transfer boundary; do not implement its evaluator, explanation, or scoring in this tranche. Safe close, cancel, reload, stale sanitation, City Threshold return, and Tour resume must clear choices, guided answers, prose, and private work and reconstruct only the first incomplete boundary from allowlisted finalized evidence. Keep campaignCommitEnabled=false; preserve separate byte-stable campaign/Tour state, both RP-001 predecessor flags, unchanged continuation, cityStateDelta=null, closed identity material, invariant world, reversible return, offline/no-authority/no-exam-guarantee boundaries, and no save/item/access/permission/city response/successor/external action. Do not add persistence/save, observation routing, responsive UI, protected playable route, normal-campaign exposure, or art. Add focused state-model tests for all three scenario/dimension mappings, simultaneous 9/9 anti-forgery, principle-only/nonhuman-owner misses, one-active-group replacement, mapped Teacher ownership, neutral guided no-credit behavior, blank full-form retry, first-incomplete/first-failed focus intent, unlimited recovery, sanitation/privacy allowlist, Python non-replay/no-cross-credit, blank transfer initialization only after 9/9, campaign/Tour byte stability, and zero world/city/external delta. Return REVISE and do not perform Working passes.`
