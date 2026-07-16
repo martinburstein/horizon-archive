@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W3 VIEWPORT-P1-001 fluid-stage review
+
+- **Verdict:** `REVISE — ONE RESIDUAL P1 WIDTH CAP.` The fixed logical canvases, integer zoom, and fixed bezel are retired successfully; 16:9 world art, flowing lower UI, narrow stacking, and 44px targets pass source/test review. However, `.crt-stage-anchor` still caps the complete stage at `1920px` and centers it.
+- **Evidence:** on the user's previously observed approximately `2558px` CSS-wide desktop, the cap leaves roughly `319px` of black gutter on each side. This remains the original viewport defect on wide desktop even though 1600/1920, narrow, portrait, and zoom/reflow contracts pass. Focused responsive/opening/RP-001/Terminal tests passed `27/27`; live browser attachment was unavailable to W3, so coordinator/W4 live evidence remains required.
+- **W4 contract:** remove the `1920px` ceiling and let the CRT shell/world use available host width minus minor responsive padding. Preserve undistorted `16:9`, `object-fit:cover`, photographic resampling, vertical document flow, narrow stacking, horizontal overflow clipping, and `>=44px` targets. Preserve all gameplay, art, hotspots/names, copy, focus, mastery, saves, Tour, and city behavior.
+- **Exact W4 handoff:** `Coder Agent operating mode: aesthetic-polish. Remove only the residual 1920px stage cap for VIEWPORT-P1-001; do not replace it with another hard maximum. Validate 1600x900, 1920x1080, approximately 2558x1240, wider desktop, portrait/narrow, and 200% zoom. The world must use host width without cap-created black gutters, remain undistorted 16:9 and visually dominant, while the lower UI reflows readably with usable focus/copy/44px targets and no horizontal escape. Preserve gameplay, mastery, saves, Tour, normalized hotspots, art, and city state. Run focused/full tests/build, reload 4173, and return live desktop/narrow/zoom evidence.`
+
 ## 2026-07-15 W1 responsive-presentation verdict
 
 - **Verdict:** `REVISE — VIEWPORT-P1-001.` Fixed `640 x 480` / `320 x 240` acceptance is retired, but the active `CanonicalGameFrame` still selects only those two logical canvases, centers them in a fixed viewport host, and scales them with `zoom` plus a fixed CRT bezel.
