@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W1 accepted-boundary regression — `cba6c04`
+
+- **Verdict:** `PASS — NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 boundary remains complete. Protected RP-002 was not routed, staged, entered, or inferred as playable content after its internal RAI state model reached the Pilot conclusion.
+- **Journey evidence:** The full accepted title -> save/name -> temporary prologue -> Glass Meadow -> current learning route -> credits campaign passed with forged-save rejection, wrong-answer and dependency recovery, close/reopen, reload/resume, fresh retry, narrow interaction, strict mastery, privacy, persistence, and credits. Focused checks separately preserved RP-001 board order, strict PY-020/CUM-01 gates, atomic anchor commit, bounded-save sanitation, first-incomplete resume, responsive containment, coordinated photoreal plates, and unchanged world state.
+- **Validation:** Focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**. Full accepted-campaign E2E **PASS in 160.2 seconds** with `credits:true`, all emitted gates passing, and `runtimeErrors:false`. Regenerated tracked QA PNGs were restored.
+- **Evidence boundary:** The in-app browser runtime exposed no attached browser surface, so W1 makes no new live desktop/narrow screenshot, computed-geometry, or assistive-technology claim. This is an evidence limitation, not a gameplay defect; W2/root live review retains that gate.
+- **Issue disposition:** no issue opened or reopened; no runtime or art correction is authorized in W1. Approved photoreal presentation and closed findings remain unchanged pending W3.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Perform verification/reload only unless focused, build, or root live review reproduces an accepted-path defect. Re-run the 38-check opening/Tour/game/frame/RP-001 selection, complete game suite, and production build; rebuild/reload port 4173 and report exact assets. Preserve recoverable mistakes, bounded first-incomplete resume, responsive >=44px controls, approved photoreal plates/localized focus, strict mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged continuation, cityStateDelta:null, and protected RP-002 non-routability. Obtain representative desktop/narrow live confirmation before W3; record the earliest exact defect before any repair and make no speculative change.`
+
 ## 2026-07-16 Coordinator closure — clean responsive/release gate
 
 - **Disposition:** `PASS — ACCEPTED DEMO / NO NEW DEFECT.` W3/W4's clean verdict was confirmed. No runtime, art, save, curriculum, or route change was required at the accepted boundary.
