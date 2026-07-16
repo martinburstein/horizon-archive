@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A5 PARTIAL; PROTECTED RAI PRIMARY/REMEDIATION COMPLETE; A2 RAI TRANSFER/EXPLANATION PRESENTATION COMPLETE`
+- Status: `IN DESIGN — A5 PARTIAL; PROTECTED RAI PRIMARY/REMEDIATION COMPLETE; A4 RAI TRANSFER/EXPLANATION GRAPH COMPLETE; REVISE; NON-ROUTABLE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -1091,3 +1091,67 @@ RAI-GUIDE / SYSTEM // EXPEDITION SESSION
 - **Invariant proof:** no SC-03 world board, plate, camera, crop, hotspot, route, clock, material, coupling, closed interlock, heat/light path, maintenance form, Python-origin group, score, evidence field, persistence/save behavior, campaign/Tour boundary, `continuation`, city delta, reversible return, successor, or normal exposure changed. Transfer/explanation presentation supplies zero mastery evidence and no Builder speech, suit translation, city judgment, identity inference, presence claim, consent, permission, authority, external action, or world response.
 - **Validation:** RP-002 curriculum self-test passed; packet/source assertions confirmed the current official AI-901 responsible-AI objective, three approved transfer cases, exact principle/mitigation/owner dimensions, Microsoft-source allowlist, offline/no-authority and null-world contracts; packet/scene/queue/map/index consistency and whitespace checks passed.
 - **Exact A3 handoff:** use the current `Exact Curriculum Checker handoff` in the Storyboard Track. Perform mapping preservation only; do not rewrite SOLIDIFIED cases, answers, scores, remediation, evidence, privacy, persistence, route, art, or world state.
+
+## A4 responsible-AI transfer/explanation graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 RESPONSIBLE-AI TRANSFER/EXPLANATION GRAPH LOCKED; SOLIDIFIED CHAIN AND NARROW A5 SCOPE REMAIN VALID`.
+- **Bounded impact:** the A1/A2/A3 System/Teacher/Pilot clarification fits the existing Custody Ledger after the protected strict RAI primary/remediation boundary. It adds no case, expected answer, scored dimension, threshold, evidence field, persistence/save behavior, observation, route, reward, authority, city response, or world change.
+- **Expected play time:** the complete normal-route puzzle remains `12–18 minutes`; the protected RAI transfer, one recoverable miss, and the three-boundary explanation are expected to occupy `4–6 minutes`. Time remains neither stored nor scored.
+
+### Locked post-primary transfer/explanation subgraph
+
+```text
+RAI-E / rai_transfer / SYSTEM // EXPEDITION SESSION
+  -> initialize only from finalized strict RAI primary 9/9
+  -> show T01-T03 one at a time with principle/mitigation/accountable-owner fields blank
+  -> retain local choices only until all three cases are submitted
+  -> recompute all nine dimensions simultaneously
+  -> strict 9/9: clear all transfer work/feedback -> RAI-X
+  -> any miss: clear all transfer choices -> RAI-F
+
+RAI-F / transfer_feedback / 901 TEACHER // FEEDBACK
+  -> identify failed case and failed dimensions only; provide no scored answer
+  -> zero-credit acknowledgement -> RAI-G
+
+RAI-G / transfer_neutral_practice / 901 TEACHER // FEEDBACK
+  -> solve one neutral guided near case across principle, testable safeguard,
+     and accountable human-or-organizational owner
+  -> practice supplies no scored dimension or carried answer
+  -> clear guided work -> RAI-E fully blank at first incomplete/first-failed case
+
+RAI-X / rai_explanation / 901 TEACHER // FEEDBACK
+  -> score separately: human application label / not native fact / no authority to act
+  -> any miss: identify first failed boundary, clear all selections/prose,
+     and restore the complete three-boundary explanation blank
+  -> strict three-part pass: retain only finalized booleans -> RAI-I
+
+RAI-I / rai_complete / PILOT // FLIGHT RECORDER
+  -> exact conclusion: "My application label is a human interpretation,
+     not their fact or permission to act."
+  -> conclusion/dismissal is zero credit and cannot enable save in this tranche
+```
+
+- **One active group:** `RAI-E`, `RAI-F`, `RAI-G`, `RAI-X`, and `RAI-I` replace one another. Transfer cases, Teacher feedback, neutral practice, explanation, and Pilot conclusion never accumulate as a transcript, answer bank, recovered-record stack, or conversation with the city. Hidden groups retain no keyboard or accessibility presence.
+- **Strict transfer scoring:** T01–T03 remain the three approved fresh course cases and each retains `principle`, testable `mitigation`, and accountable human/organizational `owner`. All nine dimensions are recomputed together. A correct principle cannot compensate for an unsafe safeguard or nonhuman owner; only genuine `9/9` may open the separate explanation.
+- **Mapped transfer recovery:** every miss is keyed only by case and failed dimensions. Teacher feedback is answer-free and field-associated; the neutral guided near case remains zero credit; all scored and guided choices clear before a fully blank retry at the first incomplete/first-failed case. Retry is unlimited, and no primary or Python source, result, choice, feedback, or answer is carried forward.
+- **Separately scored explanation:** the three dimensions remain exactly `the application label is human-owned and provisional`, `it is not Builder intent, identity, or native fact`, and `it grants no access, disclosure, request, or external-action authority`. Any miss clears all working selections or prose and restores the whole explanation blank with deterministic first-failed focus. Only a separate three-part pass opens the exact Pilot conclusion.
+- **Recovery and reconstruction:** safe close, cancel, reload, stale sanitation, City Threshold return, and Tour resume clear transfer choices, guided work, explanation selections/prose, feedback, and private notes. They reconstruct only the first incomplete scored boundary from allowlisted finalized evidence: blank transfer after primary, blank explanation after transfer, or the completed Pilot conclusion after the explanation. Presentation groups never forge a pass, and completed Python `30-A` through `30-E` is neither replayed nor cross-credited.
+- **Privacy and authority:** durable evidence remains limited to allowlisted IDs, finalized per-dimension booleans, bounded attempt/hint counts, confidence, fixed misconception tags, and mastery state. Learner selections, answer values, feedback text, prose, owner identity, source content, credentials, payloads, responses, and external-action requests clear. System/Teacher/Pilot copy is human course presentation, never Builder speech, suit translation, Machine judgment, city approval/refusal, identity/presence proof, consent, permission, access, or authority.
+- **State lock:** `campaignCommitEnabled=false`; no save or campaign commit is added. Campaign and Tour bytes remain separate and unchanged; both RP-001 predecessor flags remain valid; `continuation` is unchanged; `cityStateDelta=null`; the first-person photoreal world, closed identity material, reversible return, route, city, item, access, successor, and external-action state remain invariant.
+- **Zero-credit presentation:** owner prefixes, lesson-origin text, display, reading, case order, field association, feedback, neutral practice, hints, focus, wrapping, scrolling, layout, crop, color, motion, sound, world observation, navigation, restore, conclusion, dismissal, timing, confidence, Python evidence, and Tour traversal remain zero mastery evidence.
+
+### Player-observable validation additions
+
+1. Strict RAI primary `9/9` opens only T01–T03 with every transfer field blank and no primary or Python answer visible.
+2. A transfer miss replaces the form with mapped Teacher feedback, then one neutral zero-credit practice case, then a fully blank first-incomplete/first-failed retry; every step leaves campaign, Tour, world, city, and route state unchanged.
+3. Strict transfer `9/9` opens only the separately scored three-boundary explanation. A miss clears all explanation work and restores all three boundaries blank with first-failed focus and unlimited retry.
+4. Only the separate three-part explanation pass shows `PILOT // FLIGHT RECORDER — My application label is a human interpretation, not their fact or permission to act.` The line itself grants no score, save, permission, access, route, successor, world response, or external action.
+5. Close, cancel, reload, return, and Tour resume reconstruct the first incomplete scored boundary from sanitized finalized evidence without replaying Python, retaining private work, or forging completion.
+
+- **Locked mechanics:** one active group; approved T01–T03 cases; strict simultaneous transfer `9/9`; mapped Teacher feedback; neutral zero-credit practice; fully blank first-incomplete/first-failed retry; separately scored three-boundary explanation with blank retry; exact Pilot conclusion; unlimited recovery; privacy allowlist; deterministic reconstruction; Python/RAI separation; disabled save; separate Tour; offline/no-authority/no-exam-guarantee; and every campaign/world/city/route invariant.
+- **Flexible implementation:** reducer/helper names, internal phase labels, and compact card/stepper layout may vary only if the exact observable order, one-active-group replacement, semantic field association, deterministic focus intent, full sanitation, and zero-credit presentation boundaries remain intact.
+- **Validation performed:** RP-002 curriculum validator self-test passed; packaged RAI primary and transfer references passed `9/9`; source assertions confirmed T01–T03, all three transfer dimensions, mapped Teacher feedback, neutral practice, blank retries, separately scored application-label/native-fact/authority explanation, exact Pilot conclusion, disabled campaign commit, Python separation, A5 exclusions, and updated queue/map ownership; `git diff --check` passed.
+
+### Exact Advance Coder A5 handoff — protected RAI transfer/explanation seam
+
+`Coder Agent — advance mode: implement only the protected RP002-RAI-01 transfer and separately scored explanation seam from the existing genuinely blank rai_transfer boundary in the non-routable Custody Ledger model. Preserve the completed Python 30-A through 30-E evidence and protected RAI primary/remediation evidence without replay, prefill, or cross-credit. Present only approved T01-T03 under SYSTEM // EXPEDITION SESSION, one case at a time with principle, testable mitigation, and accountable human-or-organizational owner blank; retain choices locally only until the third case, then recompute all nine dimensions simultaneously against the SOLIDIFIED contract. Require genuine strict 9/9. On any miss, clear every transfer choice, persist only allowlisted finalized booleans/counts/tags, replace the form with answer-free field-associated 901 TEACHER // FEEDBACK keyed to failed case/dimensions, then one neutral zero-credit Teacher practice case; after practice clear its work and restore the entire scored transfer blank at the first incomplete/first-failed case with deterministic focus and unlimited recovery. Strict transfer 9/9 must clear transfer work and open a separate 901 TEACHER // FEEDBACK explanation with exactly three blank scored boundaries: the application label is human-owned/provisional; it is not Builder intent, identity, or native fact; it grants no access, disclosure, request, or external-action authority. On any explanation miss, identify only the first failed boundary, clear all selections/prose, and restore all three boundaries blank with first-failed focus and unlimited retry. Only a separate three-part pass may retain allowlisted finalized booleans and open the exact PILOT // FLIGHT RECORDER conclusion: My application label is a human interpretation, not their fact or permission to act. Conclusion display/dismissal is zero credit. Safe close, cancel, reload, stale sanitation, City Threshold return, and Tour resume must clear choices, guided work, prose, feedback, and private content, then reconstruct only the first incomplete scored boundary from sanitized evidence. Keep campaignCommitEnabled=false; preserve byte-stable separate campaign/Tour objects, both predecessor flags, unchanged continuation, cityStateDelta=null, invariant first-person photoreal world, closed identity material, reversible return, offline/no-authority/no-exam-guarantee boundaries, and no save/item/access/permission/city response/successor/external action. Do not add persistence/save, observation routing, responsive UI, protected route, normal-campaign exposure, art, world changes, successor exposure, or Working promotion. Add focused state-model coverage for T01-T03 and all nine mappings, strict simultaneous anti-forgery, nonhuman-owner/unsafe-mitigation misses, one-active-group replacement, mapped Teacher feedback, neutral-practice zero credit, blank full-transfer retry, separate three-boundary scoring and blank retry, exact Pilot conclusion, deterministic first-incomplete/first-failed reconstruction, privacy sanitation, Python non-replay/no-cross-credit, campaign/Tour byte stability, disabled save, and zero world/city/route/external delta. Return REVISE and do not perform Working passes.`
