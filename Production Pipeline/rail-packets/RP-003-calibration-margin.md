@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED JOURNEY PASS`
+- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / neighboring civic comparison surface inside the City Beneath
 - Target demo horizon: second future slice after the accepted RP-001 boundary; directly after RP-002
 - Route order: 3
@@ -325,8 +325,8 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 - Curriculum Checker sign-off: `PASS — 2026-07-16 / PY-010 + RP003-IE-01 SOLIDIFIED`
 - Gameplay Master sign-off: `PASS — 2026-07-16 / ONE BOUNDED RECOVERABLE GRAPH LOCKED`
 - Coder smoke-test result: `PASS — one pure CM-00–CM-50 reference journey through real evaluators, sanitation, atomic save, verified restore, Tour isolation, and reversible return; all six observation orders converge under five minutes`
-- Readiness: `GATE REVIEW — A5 HANDOFF`
-- Required revision: none in the protected packet. Coordinator must verify the complete gate bundle before promotion; final art, normal integration, browser persistence, Working evidence, and RP-004 remain unauthorized.
+- Readiness: `READY FOR WORKING — COORDINATOR VERIFIED`
+- Required revision: none in the protected packet. Final art, normal integration, browser persistence, and Working evidence remain later Team 2 obligations; promotion does not expose the protected adapter directly.
 
 ### Exact Storyboarder A2 handoff
 
@@ -352,7 +352,7 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `PENDING — current railhead is RP-003 GATE REVIEW / A5 HANDOFF`
+- Team 1 railhead after promotion: `RP-003 PROMOTED; RP-004 RESERVED SHELL SEEDED`
 - Next contiguous packet seeded: `NO — RP-004 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
-- Coordinator: `PENDING`
+- Coordinator: `PASS — full 413/413, RP-003 self-test, production build, protected leakage/purity, predecessor continuity, save/restore, Tour isolation, responsive metadata, and patch integrity independently verified`

@@ -21,8 +21,11 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 |---:|---|---|---|---|---|---|
 | 1 | `RP-001` | `IN DEMO — ACCEPTED / VIEWPORT-P1-002 COORDINATOR PASS` | Maintain the complete accepted responsive campaign | Closed unless reproduced | None | Preserve the accepted baseline while RP-002 advances |
 | 2 | `RP-002` | `READY` | Integrate the approved four-phase Civic Record Encounter without weakening its learning, save, Tour, art, or accessibility contracts | Player Agent (`W1`) | Final production assets and normal App/main integration are intentionally unbuilt | Play the oldest adjacent packet from its accepted predecessor; report the earliest exact integration gap before Coder construction |
+| 3 | `RP-003` | `READY — QUEUED BEHIND RP-002` | Later integrate the approved Calibration Margin packet without skipping the older adjacent packet | Player Agent after RP-002 acceptance | RP-002 must be accepted first; final production assets and normal integration are unbuilt | Hold ordered position; do not begin Working until RP-002 is accepted |
 
 `RP-002` passed coordinator Gate Review and is promoted. Its protected journey still remains absent from App/main, browser storage, accepted bundles, normal routing, and the live Demo until the Working Team implements and accepts it.
+
+`RP-003` also passed coordinator Gate Review but remains queued behind RP-002. Its protected journey likewise remains absent from the live Demo and grants no permission to skip Working order.
 
 **Coordinator result:** `VIEWPORT-P1-002` is `RESOLVED — COORDINATOR VALIDATED`. Exact `1920 x 1080` and `390 x 844` live review, full release validation, and the final reload passed. RP-002 is now the oldest adjacent `READY` packet.
 
