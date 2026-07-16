@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W1 accepted-boundary regression after protected hotspot dispatch - `c013c03`
+
+- **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` The accepted RP-001 campaign and separate no-credit Demo Tour remain complete. RP-002 stayed `REVISE`, protected, non-routable, outside App/main and browser storage, and unavailable to Working after its isolated hotspot geometry/dispatch module was added.
+- **Journey evidence:** Full title -> save/name -> temporary prologue -> Glass Meadow -> current learning route -> City Threshold -> credits completed through the public UI. The run covered forged-save rejection, wrong answers and recovery, dependency mistakes, close/reopen, reload/resume, fresh retries, strict mastery, privacy, persistence, keyboard dispatch, desktop/narrow interaction, and credits. Focused checks retained Tour isolation and RP-001 atomic-save, sanitation, first-incomplete, responsive, and photoreal contracts.
+- **Validation:** preflight PASS with 26 required questions; full accepted-campaign E2E **PASS in 163.6 seconds** with `credits:true`, every emitted gate true, and `runtimeErrors:false`; current focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **330/330 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only). Regenerated tracked QA PNGs were restored.
+- **Boundary preserved:** accepted first-person photoreal presentation, responsive `>=44px` controls, keyboard focus, recovery, bounded saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and protected RP-002 non-routability remain exact.
+- **Issue disposition:** no issue opened or reopened; W1 authorizes no runtime or art correction.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Verification/reload only unless the current focused 40-check selection, full 330-test suite, production build, or coordinator/root live desktop/narrow review reproduces an accepted-path defect. Preserve all accepted recovery, save/resume, focus, responsive, photoreal, mastery, privacy/offline/no-authority, Tour-isolation, continuation, null-city-delta, and RP-002 non-routability contracts. Do not import, invoke, expose, stage, or promote protected RP-002.`
+
 ## 2026-07-16 Coordinator closure - protected responsive observation component
 
 - **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` The two-team cycle completed and the accepted title-to-credits campaign remains stable. Protected RP-002 now includes its isolated responsive observation component but remains `REVISE`, non-routable, and absent from App/main, hotspot geometry, browser storage, routes, production art, world state, successors, and Working promotion.
