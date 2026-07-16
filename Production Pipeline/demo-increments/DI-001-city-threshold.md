@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 post-RAI-model accepted-boundary verification/final reload - `f8b115d` handoff
+
+- **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding and the bounded W4 presentation gate reproduced none. Runtime, art, tests, saves, routes, curriculum, and tracked QA binaries remain unchanged.
+- **Preserved presentation and behavior:** the four accepted `1672 x 941` photoreal masters, integrated Meadow seams, aspect-preserving available-width crop, first-person/no-protagonist/no-ship framing, localized focus, modern opening hierarchy, `>=44px` actions, and stable static screen-only geometry remain intact. Recovery, save/mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, `continuation`, `cityStateDelta:null`, and protected RP-002 non-routability are unchanged.
+- **Validation:** focused responsive/opening/Tour/Meadow/RP-001 selection **38/38 PASS**; complete game suite **285/285 PASS**; production build PASS with the existing large-chunk advisory. Exact production assets remain `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Final reload:** port `4173` restarted successfully; `/?staging=rp001`, exact JS, and exact CSS returned HTTP `200` on listener PID `34672`.
+- **Evidence boundary:** the required in-app browser connection and supported availability retry returned no browser surface. W4 makes no fresh desktop/narrow/zoom/computed-geometry claim and authorizes no speculative polish edit; representative desktop and narrow live confirmation remains the coordinator release gate.
+- **Finding disposition:** no aesthetic ID opened or changed. Closed responsive, opening, Tour, Meadow integration, localized-focus, and RP-001 findings remain closed; optional registered membrane animation remains deferred follow-on art.
+- **Exact coordinator handoff:** `Review the final-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build at port 4173 on representative desktop and narrow responsive layouts. Confirm title -> save/name -> prologue -> Chapter I -> Glass Meadow and practical RP-001 staging retain world-dominant aspect-preserving photoreal framing, integrated seams, static screen-only geometry, localized focus, readable hierarchy, >=44px actions, first-person/no-protagonist/no-ship framing, and no stretch, clipping, or horizontal escape. Preserve recovery, saves/mastery/privacy/offline/no-authority, Tour isolation, unchanged continuation, cityStateDelta:null, and non-routable RP-002. Run the coordinator curriculum/full-E2E/live gates, restore incidental QA binaries, then record the release verdict and synchronize main with origin.`
+
 ## 2026-07-16 W3 post-RAI-model accepted-boundary aesthetic review - `727eecd` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - NO NEW AESTHETIC FINDING.` The accepted opening, Glass Meadow, and RP-001 presentation contracts remain coherent; no closed visual finding was reopened and protected RP-002 remained outside the Working review.

@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / W3 CLEAN; AESTHETIC POLISH VERIFICATION NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent — W4 aesthetic-polish verification/final reload | No reproducible aesthetic defect from original-size masters, responsive source, focused `38/38`, or exact-asset HTTP checks; W3 browser surface unavailable, so live desktop/narrow gate remains | Verify without runtime/art change unless root live review reproduces an exact defect; build/final-reload `4173`, preserve all accepted contracts and non-routable RP-002, then hand the live gate to coordinator |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / W4 VERIFIED + FINAL RELOADED; COORDINATOR LIVE GATE NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coordinator — final live/release validation | W4 reproduced no defect; focused `38/38`, full `285/285`, build, final reload, and exact-asset HTTP checks pass. Browser surface unavailable to W4, so representative desktop/narrow confirmation remains | Inspect the final-reloaded build at desktop/narrow responsive layouts, run curriculum/full-E2E gates, restore incidental QA binaries, and record the release verdict without routing protected RP-002 |
 
 ## Current-demo quality lane
 
