@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / W2 RELOADED; W3 NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Aesthetic Agent (scene review) | None reproduced through W2: exact focused `38/38`, full `308/308`, production build, and exact page/JS/CSS HTTP checks passed | Review the reloaded accepted opening, Glass Meadow, and RP-001 presentation at representative desktop and narrow responsive layouts; preserve protected RP-002 non-routability |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / W3 CLEAN; W4 NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent (`aesthetic-polish`) | No aesthetic finding reproduced from exact build/assets, original-size four-master inspection, provenance/hash checks, and focused `38/38`; browser surface unavailable to W3 | Verify/final-reload only unless root live desktop/narrow review reproduces an exact defect; preserve protected RP-002 non-routability |
 
 ## Current-demo quality lane
 
