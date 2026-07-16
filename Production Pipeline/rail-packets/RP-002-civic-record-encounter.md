@@ -410,6 +410,96 @@ Curriculum Checker Agent: perform only the A3 mapping-preservation review caused
 
 `Gameplay Master Agent: perform only the bounded A4 puzzle-graph impact confirmation caused by the responsive five-observation ownership/copy and presentation contracts plus this NO REOPEN — SOLIDIFIED verdict. Preserve the five exact deliberate campaign actions and their one-to-one canonical IDs: INSPECT FIXED TRACE -> fixed_trace, INSPECT LATER STEWARDSHIP -> later_stewardship, INSPECT OUTLINED GAP -> outlined_gap, COMPARE DISTANT REPETITION -> distant_repetition, and INSPECT CLOSED BOUNDARY -> closed_boundary. Preserve the exact three-near-then-two-far stage order, within-stage permutations, idempotent revisits, first-incomplete sanitation, and one active semantic group with complete textual Scene/System/Tour provenance. Treat owner text, Scene statements, System entry/progress/recovery/sanitation copy, Tour copy, display, reading, focus, hover, dwell, return/advance controls, wrapping, scrolling, crop, layout, color, icon, motion, sound, stage availability, navigation, world display, learning completion, review, save, restore, and Tour traversal as zero observation and zero mastery evidence. Preserve the SOLIDIFIED PY-009 6/6 primary -> mapped remediation -> genuinely blank 6/6 transfer -> separately scored three-part explanation chain and the SOLIDIFIED RP002-RAI-01 9/9 primary -> mapped per-case/per-dimension remediation -> genuinely blank 9/9 transfer -> separately scored three-part explanation chain without cross-credit. Save review remains the strict conjunction of both finalized chains plus all five independently finalized deliberate observations; preserve the exact three-field atomic transaction, privacy clearing, separate no-credit Tour, offline/no-authority/no-exam-guarantee boundary, both predecessor facts, unchanged continuation, cityStateDelta=null, reversible return, invariant first-person world/clocks, closed identity material, no successor, and zero city/external action. Confirm that the responsive one-active-group interface can drive the existing protected observation model without changing cases, answers, thresholds, remediation, evidence fields, observation meanings, save semantics, copy, world state, route, art, or canon. Return an exact protected A5 handoff for only the responsive observation component/interface seam, with no hotspot geometry, App/main import, browser storage, protected/normal route exposure, production art, world change, successor exposure, or Working promotion; return REVISE.`
 
+### Gameplay Master responsive observation-interface graph confirmation
+
+- **Verdict:** `PASS — A4 RESPONSIVE OBSERVATION-INTERFACE GRAPH LOCKED; A5 COMPONENT-ONLY HANDOFF; REVISE`.
+- **Bounded impact:** A1's exact owners, copy, actions, and meanings plus A2's one-active-group hierarchy, stable-world reflow, association, focus, scroll, forced-color, reduced-motion, and `44 x 44 CSS px` contracts fit the existing protected observation state model without changing an observation record, learning gate, save rule, physical board, or route. A3's `NO REOPEN — SOLIDIFIED` verdict remains exact.
+- **Expected play time:** this five-observation interface adds approximately `3–5 minutes` for one careful clean pass, including reading all five bounded Scene statements. One unavailable request plus recovery or one idempotent revisit adds approximately `30–60 seconds`. The complete normal-route RP-002 puzzle remains `12–18 minutes`; time is neither stored nor scored.
+
+#### Locked responsive interface graph
+
+```text
+OBS-00 / near_entry / SYSTEM // EXPEDITION SESSION / SC-03-10
+  -> heading-first focus, then first unfinished near action
+  -> any unfinished matching near deliberate action -> OBS-10
+  -> finalized matching action -> OBS-11
+  -> far, unknown, forged, wrong-board, unavailable, passive,
+     presentation-derived, or out-of-stage request -> OBS-U
+
+OBS-10 / new_observation_acknowledgement / SCENE // SENSOR RECORD
+  -> exact matching Scene statement
+  -> exact SYSTEM // EXPEDITION STATE progress
+  -> near 1/3 or 2/3: RETURN TO EVIDENCE -> OBS-00
+  -> near 3/3: COMPARE SCALE -> OBS-20
+  -> far 1/2: RETURN TO EVIDENCE -> OBS-20
+  -> all 5/5: OPEN LOCAL COMPARISON -> protected comparison boundary
+
+OBS-11 / recorded_observation_revisit / SCENE // SENSOR RECORD
+  -> replay only the exact matching Scene statement
+  -> exact SYSTEM // EXPEDITION STATE already-recorded status
+  -> RETURN TO CURRENT EVIDENCE -> OBS-00 or OBS-20 from derived phase
+
+OBS-20 / far_and_closed_entry / SYSTEM // EXPEDITION SESSION / SC-03-20
+  -> heading-first focus, then first unfinished far/closed action
+  -> any unfinished matching far/closed deliberate action -> OBS-10
+  -> any finalized matching near/far action -> OBS-11
+  -> unknown, forged, wrong-board, unavailable, passive,
+     presentation-derived, or out-of-stage request -> OBS-U
+
+OBS-U / unavailable_recovery / SYSTEM // EXPEDITION SESSION
+  -> exact unavailable status; preserve all valid finalized evidence
+  -> RETURN TO AVAILABLE EVIDENCE -> derived OBS-00 or OBS-20
+
+OBS-S / sanitation_or_resume / SYSTEM // EXPEDITION STATE
+  -> sanitize canonical deliberate-action records only; clear private work
+  -> exact checked/resume status
+  -> RETURN TO AVAILABLE EVIDENCE -> deterministic first incomplete
+     OBS-00, OBS-20, or protected comparison boundary
+
+OBS-T / Demo Tour / SYSTEM // DEMO TOUR
+  -> exact preview-only status; no campaign observation collection
+  -> CONTINUE TOUR -> coordinator-owned allowlisted Tour continuation only
+```
+
+`OBS-00` and `OBS-20` expose unfinished actions in canonical stable order but accept all six near permutations and both far/closed permutations. Finalized actions may remain available only as explicitly recorded zero-credit revisits. In every acknowledgement, the complete Scene owner and statement precede System progress and the single return/advance control. `COMPARE SCALE`, `OPEN LOCAL COMPARISON`, every return control, and `CONTINUE TOUR` are presentation transitions only: none finalizes an ID, satisfies mastery, commits a save, changes a route, or creates a world event.
+
+#### Interaction, focus, recovery, and state ownership locks
+
+1. **One action, one fact:** only the matching `deliberate_campaign_inspection` request with the canonical observation ID and board can finalize one ID. No component event may synthesize two facts, infer a fact from progress, or translate a click position into evidence without that exact model request.
+2. **Stage derivation:** the component reads phase, board, progress, completion, next boundary, and focus intent only from the sanitized protected model. It never trusts presentation props, DOM history, responsive breakpoint, visual order, client-provided counts, or a purported completed state.
+3. **Near permutations:** `fixed_trace`, `later_stewardship`, and `outlined_gap` may be completed in any order. `COMPARE SCALE` appears only in the acknowledgement produced by the third valid near action and moves only to the derived far interface.
+4. **Far permutations:** `distant_repetition` and `closed_boundary` may be completed in either order. `OPEN LOCAL COMPARISON` appears only in the acknowledgement produced by the fifth valid action and emits only the protected local-comparison boundary intent.
+5. **Idempotence:** a finalized action returns `OBS-11`; the matching Scene statement may replay, but the evidence bytes, progress, learning bytes, attempts, hints, confidence, save eligibility, campaign/Tour state, world, and route remain byte-stable.
+6. **Unavailable recovery:** invalid or early input returns `OBS-U`, retains valid canonical evidence, clears transient/private content, announces the exact local System status, and returns to the sanitized first incomplete action. Unlimited recovery is available; the city never refuses or responds.
+7. **Sanitation/resume:** re-entry, remount, reload-fixture reconstruction, cancel, or stale input may restore only the sanitized canonical observation set. Any duplicate, unknown, stale, forged, wrong-board, premature far, presentation-derived, pointer, coordinate, dwell, raw-sensor, prose, identity, or private value clears. Focus visits the complete System status heading, then the deterministic first incomplete action or protected comparison boundary without replaying arrival or discovery.
+8. **Deterministic focus:** entry and sanitation are heading-first, then first incomplete; valid/revisit acknowledgement is Scene-heading-first; unavailable is System-heading-first; each zero-credit return/advance action lands on the derived next heading/control. Focus scrolling may reveal the group but may not move or animate the world. Inactive groups have no visual, pointer, keyboard, or accessibility presence.
+9. **Responsive stability:** group replacement, natural wrapping, document scroll, text zoom, narrow reflow, forced colors, and reduced motion preserve identical graph ownership and DOM order. All required actions remain at least `44 x 44 CSS px`; no breakpoint, hover, dwell, focus, animation, sound, crop, or layout event dispatches an observation request.
+10. **Tour isolation:** `OBS-T` is a separate sanitized presentation with no campaign IDs, progress counts, Scene acknowledgement, stage-advance action, local-comparison action, save dependency, mastery, attempt, hint, or restore surface. Tour entry, reload, continuation, and exit leave campaign and learning bytes unchanged.
+11. **Learning independence:** the entire observation graph is non-mastery evidence. `PY-009` and `RP002-RAI-01` remain separately scored, separately remediated, and separately restored. Observation completion cannot bypass, prefill, answer, or cross-credit either SOLIDIFIED chain; learning completion cannot synthesize an observation.
+12. **Atomic save conjunction:** all five sanitized deliberate observations form one independent conjunct beside both independently finalized SOLIDIFIED chains. `OPEN LOCAL COMPARISON` does not expose save review by itself. Only the existing derived conjunction may later expose the Pilot review and explicit save intent; the exact all-or-none three-field transaction remains unchanged.
+13. **World and authority invariants:** every interface transition preserves both predecessor facts, unchanged `continuation`, `cityStateDelta=null`, reversible return, the registered first-person world and clocks, closed identity material, no successor, privacy clearing, offline/no-live-service behavior, no exam guarantee, no access/permission/consent, and zero city or external action.
+
+#### Player-observable acceptance contract for A5
+
+1. A blank campaign observation component presents only the complete System entry group and the three exact near action names; no Scene statement, campaign count beyond the exact entry copy, far action, comparison action, save action, or Tour completion style is exposed.
+2. Each of the six near-action permutations produces exactly one matching Scene statement per deliberate action, exact `1 of 3`, `2 of 3`, then `3 of 3` System progress, and `COMPARE SCALE` only after the third; evidence contains the same three canonical IDs regardless of order.
+3. After `COMPARE SCALE`, both far/closed orders produce exact `1 of 2` then `5 of 5` progress and expose `OPEN LOCAL COMPARISON` only after the fifth valid action. Activating either stage control changes no evidence bytes.
+4. Repeating any finalized action replays only its matching statement plus the exact already-recorded status; progress, focus target after return, and every durable byte remain stable.
+5. An early far request and each unavailable/unknown/forged/wrong-board/passive/presentation-derived request present only the exact System recovery group, retain prior valid evidence, clear private/transient work, add no attempt/hint/mastery/observation credit, and return focus to the deterministic first incomplete action.
+6. Sanitizing duplicate, stale, premature-far, or private input presents the checked/resume group, retains only canonical valid deliberate records, clears rejected content, and reconstructs the first incomplete action without replaying a Scene acknowledgement or world event.
+7. Wide, laptop, narrow, increased-text-zoom, reduced-motion, and forced-color presentations retain one active group, complete textual owners/copy, semantic order, visible deterministic focus, vertical scroll recovery, no horizontal page escape, and required actions at least `44 x 44 CSS px`; the registered world remains stationary and unobscured.
+8. Display, reading, hover, dwell, focus, scrolling, wrapping, layout change, animation, sound, color, progress, return/advance activation, learning completion, review, save, restore, and Tour traversal finalize no observation and supply no mastery.
+9. Tour renders only the exact Demo Tour owner, preview text, and `CONTINUE TOUR`; campaign observation evidence, learning evidence, save dependencies, campaign bytes, world/city/route state, and normal focus reconstruction remain unchanged across Tour entry, remount, continuation, and exit.
+10. With five observations but either learning chain incomplete, protected local comparison may be acknowledged but save review remains unavailable. With both learning chains finalized but one observation missing, save review remains unavailable and sanitation targets that exact observation. Only all three independent finalized sets can satisfy the existing save eligibility conjunction.
+
+- **Locked mechanics:** exact A1 owners/copy/actions; A2 hierarchy/reflow/focus semantics; A3 evidence freeze; graph and control order above; three-near-then-two-far derivation with within-stage permutations; idempotence; unlimited recovery; canonical first-incomplete sanitation; one-active-group replacement; Scene-heading/System-heading focus destinations; zero-credit return/advance/Tour/presentation; independent learning and observation sets; strict atomic-save conjunction; privacy/Tour separation; and every world/authority invariant.
+- **Flexible implementation:** component and test filenames, internal view-state labels, semantic HTML elements, and styling hooks may vary only when the player-observable group order, exact copy, model-derived actions, focus destinations, responsive contracts, and state/evidence invariants remain exact. No flexible choice may create coordinates, hotspot geometry, route or storage coupling, new copy, or a second source of truth.
+- **Validation performed:** existing protected observation source and focused tests confirm blank `SC-03-10`, all six near permutations, both far permutations, one-action/one-ID finalization, exact Scene statements, early/unavailable recovery, idempotent cross-stage revisits, canonical sanitation, derived board/progress/completion/focus, separate Tour, campaign/world/route/learning byte stability, each independently missing observation, and the strict three-conjunct save dependency. RP-002 curriculum self-test confirms both unchanged SOLIDIFIED gates. Source assertions and graph review confirm every A1 copy/action and A2 focus/reflow rule has one graph owner and recovery destination.
+
+### Exact Advance Coder A5 handoff — protected responsive observation component seam
+
+`Coder Agent — advance mode: implement only one protected responsive observation component/interface seam over the existing non-routable Custody Ledger observation model. Render the exact A1 ownership copy, five Scene statements, five deliberate-action labels, progress/revisit/unavailable/sanitation/Tour statuses, and zero-credit return/advance labels through the A2 one-active-group responsive hierarchy and the A4 OBS-00/10/11/20/U/S/T graph. Drive phase, board, progress, completion, evidence, next boundary, and focus only from createCustodyLedgerObservationState, sanitizeCustodyLedgerObservationState, and recordCustodyLedgerObservation; dispatch an observation only through the exact matching CUSTODY_LEDGER_OBSERVATION_ACTION, canonical ID, and canonical board. Preserve all six near permutations, both far permutations, idempotent revisits, recoverable early/unknown/forged/wrong-board/unavailable/passive/presentation-derived input, canonical sanitation, private-work clearing, heading-first then first-incomplete focus, and exact Scene-heading acknowledgement focus. Keep one active group in semantic DOM order; inactive groups must be absent from visual/pointer/keyboard/accessibility order. Keep the registered world as an inert caller-provided region or non-rendered test seam: do not create, crop, move, overlay, or import any world plate. Use natural desktop/laptop/narrow/text-zoom reflow, vertical scroll recovery, non-color status, forced-color and reduced-motion equivalence, visible focus, and at least 44 x 44 CSS px required actions. Treat reading, display, focus, hover, dwell, scroll, layout, responsive change, return/advance activation, learning completion, review, save, restore, and Tour as zero observation and zero mastery evidence. OPEN LOCAL COMPARISON may emit only a protected local callback/intent after five valid observations; it must not expose save review, commit, route, storage, art, or world behavior. Preserve independent byte-stable PY-009 and RP002-RAI-01 chains; save review remains the existing strict conjunction of both finalized chains plus all five sanitized observations, and the exact atomic three-field transaction remains unchanged. Add focused component tests for exact owner/copy/control rendering, all permutations, valid request construction, no passive/presentation dispatch, one-active-group semantics, progress/control boundaries, revisits, every recovery class, sanitation/resume, deterministic focus/scroll intent, unmount/remount from sanitized state, Tour isolation, responsive/zoom containment, 44px targets, reduced motion/forced colors, no cross-credit, strict save conjunction, and zero campaign/world/city/route/authority delta. Do not add hotspot geometry, App/main import, browser/localStorage integration, protected or normal route exposure, production art, world change, successor exposure, Demo reload, or Working promotion. Update only protected component/test/model support files required by this seam, return REVISE, and hand W1 accepted RP-001 only.`
+
 ### Mystery protections
 
 - Do not identify the layered masses as tombs, homes, courts, people, memories, civic offices, records by native definition, or Machine organs in Scene/System copy.
