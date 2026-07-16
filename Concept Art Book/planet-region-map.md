@@ -18,7 +18,8 @@ Andromeda survey corridor
 │   └── Volcanic Habitation Vault
 │       ├── SC-01 City Overlook [historical reference / alien-function brief required]
 │       ├── SC-02 City Threshold [A2 brief / no final art]
-│       └── SC-03 Civic Record District [A2 photorealistic impact brief / no final art]
+│       ├── SC-03 Civic Record District [A2 compact photorealistic brief / no final art]
+│       └── SC-04 Calibration Margin [A2 invariant-world photorealistic brief / no final art]
 └── Future survey worlds [locked]
     ├── Ecological continuity world
     ├── Memorial-scale world
@@ -43,7 +44,7 @@ This line records player-facing progression only. It does not assert that the lo
 | 6 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
 | 7 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
 
-Within World D, `SC-02 -> SC-03` is a direct local route: the already-lit threshold bridge enters the civic-record district without a travel plate, activation, or newly defined world.
+Within World D, `SC-02 -> SC-03 -> SC-04` is a direct local route. The already-lit threshold bridge enters the civic-record district, then RP-002's marked adjacent survey direction reaches the working margin without a travel plate, activation, newly defined world, or physical city response.
 
 ## Expansion rule
 

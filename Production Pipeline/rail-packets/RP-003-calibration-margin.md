@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 LORE PASS COMPLETE`
+- Status: `IN DESIGN — A2 STORYBOARD PASS COMPLETE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / neighboring civic comparison surface inside the City Beneath
 - Target demo horizon: second future slice after the accepted RP-001 boundary; directly after RP-002
 - Route order: 3
@@ -110,15 +110,29 @@ Use the exposed evidence and one real Python comparison to distinguish correspon
 
 ## Storyboard Track — Storyboarder
 
-- Status: `UNASSIGNED — A2 NEXT`
-- Narrative function to compose: make two exposed corresponding sequences and one sealed boundary readable without labels, readable writing, human instruments, or a success-state world reaction.
-- Required state boards: entry, inspectable idle, run-result interface state, completed local-save state, and reversible return; boards may be merged when the invariant world is registered and the player-visible ownership change remains clear.
-- Locked continuity: first-person view; no protagonist/ship/human traces; invariant world geometry and environmental clocks; a valid run changes only the separate suit interface.
-- Flexible visual areas: region topology, material family, scale, atmospheric conditions, exact terminal/coupling placement, and interaction-zone geometry, provided physical causality and the three evidence conditions remain legible.
+- Status: `PASS — A2 INVARIANT-WORLD SEQUENCE AND PRODUCTION BRIEF LOCKED`
+- Canonical scene sheet: `Concept Art Book/scenes/SC-04-calibration-margin.md`.
+- Location identity: a civilization-scale working cross-section adjacent to the Civic Record District, not a room, corridor, archive aisle, shrine, factory floor, or terminal bay. Two exposed process bands traverse repeating interval chambers; a third route is known only by a fused structural boundary and a continuous bypass.
+- Functional landscape: subsurface geothermal/mineral input enters the interval bodies, compatible glass-ceramic adaptations condition or compare the flow, braided continuities distribute it beyond frame, cooled phases return below, and maintenance exchanges preserve service around the sealed route. Contact, site, and landscape scales plus foundation, adaptation, and maintained-present eras remain visible.
+- Canonical boards: `SC-04-00 ARRIVE + IDLE`, `SC-04-10 SURVEY`, `SC-04-20 COMPARE + SAVE`, and `SC-04-30 VERIFY + RETURN`. One registered world master serves all boards; only its approved crop and the separate expedition-interface group may change.
+- Visual evidence grammar: both exposed bands share one materially readable interval rhythm; one extra chamber belongs to only one band but receives no correctness/damage cue; the sealed boundary has no door, aperture, invitation, or access affordance; independent service continuities and a bypass prove only the boundary's existence.
+- Composition: premium first-person `35–40 mm` environmental view; paired bands form the middle-ground thesis; the difference sits near center; the sealed repair surface occupies right middle ground; a flush occupational coupling sits low center; unchanged RP-002 return continuity stays far left; calm vault atmosphere and lower-side negative space protect gameplay hierarchy.
+- Interaction zones: registered semantic regions own `EXPOSED-SEQUENCE-A`, `EXPOSED-SEQUENCE-B`, `BOUNDED-DIFFERENCE`, `SEALED-BOUNDARY`, `LOCAL-COUPLING`, and `RETURN-BEARING`. `A`, `B`, and `sealed boundary` are explicit expedition labels. The sealed boundary is evidence of unavailability, never a disabled or unavailable access control.
+- State invariance: entry, inspectable idle, run result, successful save, verified restore, and return reuse identical geometry, materials, light causes, effect masks, routes, coupling body, sealed boundary, and monotonic environmental clock. No valid run, miss, save, or restore relights, opens, reroutes, synchronizes, or awakens the city.
+- Asset plan: one lossless `SC-04-MASTER` at preferably `3840 x 2160` or larger and never below `1920 x 1080`; registered overview/exposed-evidence/sealed-coupling crops from that master; semantic masks; separate heat, circulation/condensation, and maintenance layers; reduced-motion stills; registered difference evidence; and full-resolution, grayscale, thumbnail, responsive, zoom, focus, and artifact-cleanup review sheets.
+- Provenance plan: final prompt, model/tool/mode, references, date, selection rationale, edits, cleanup, dimensions, crops, masks, effect layers, derivatives, and approvals must be recorded in `Concept Art Book/prompt-provenance-log.md`. Current concept art is evidence only and no final raster is authorized by A2.
+- Responsive presentation: representative `1920 x 1080` contains the complete outer shell in `100dvh` without outer scroll, distortion, clipped ownership, or off-screen required actions while the world remains dominant. Narrow and `200%` text-zoom layouts reflow naturally in one vertical column without horizontal escape; required controls remain at least `44 x 44 CSS px`.
+- Artifact rejection: no protagonist/ship/human trace, human ergonomics, readable world text, pseudo-writing, screen, kiosk, altar, face/eye, success glow, opening seam, copied composition, generic neon, magic-crystal shorthand, cloned/melted geometry, impossible material response, hidden defects, or crop that loses a required evidence class.
+
+### Storyboarder decisions and sign-off
+
+- Locked visual decisions: direct SC-03 adjacency; `SC-04` identity; one invariant registered world master; four compact phases; structural non-color evidence; occupational flush coupling; three operating scales and three stewardship eras; motivated City Beneath material/light continuity; zero physical response; reversible return; no defined successor; responsive/accessibility and provenance gates.
+- Flexible visual decisions: exact band contour, chamber anatomy, material proportions, vault depth, atmosphere, maintenance-form anatomy/count, effect timing, crop coordinates, and restrained grade, provided none implies correctness, native purpose, identity, authority, sealed contents, or city response.
+- Sign-off: `PASS — A2 COMPLETE; SCENE AND PRODUCTION-ART-PLAN GATES CLOSED; READY FOR CURRICULUM CHECKER A3`.
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 MAY SELECT ONLY AFTER A2`
+- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
 - Lore-provided learning opportunity: compare two bounded exposed sequences with real Python and represent unavailable evidence without inventing it.
 - No skill ID, AI-901 objective, case, answer, threshold, remediation path, or mastery evidence is authorized by A1.
 
@@ -177,35 +191,39 @@ Use the exposed evidence and one real Python comparison to distinguish correspon
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface premise, goal, predecessor match, end state, copy ladder, mystery and ownership locks`.
-- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Story moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS — A1 surface premise, goal, predecessor match, end state, copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-world sequence and premium production-art plan`.
+- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
+- Did this cycle reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
 - Existing seams integrated or consolidated: RP-002's next-survey posture, executable-literacy rule, evidence/inference ownership, privacy clearing, reversible return, and zero-city-delta contract are joined into one successor premise.
 - Optional work trimmed or deferred: RP-004 destination, later route meaning, additional programs, secondary lore rewards, identity-bearing material, and any native category.
 - New module or artifact integration consumer: later A5 may compose existing comparison/save authorities only after A2–A4; no new module is requested by A1.
 - Breadth verdict: `CONTINUE`
 - Next contiguous packet seed readiness: `RP-004 remains RESERVED until RP-003 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Storyboarder A2 composes the smallest buildable registered scene sequence that makes exposed correspondence, one difference, and sealed unavailability readable while the physical world stays invariant.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the contiguous Python/AI-901 mapping while treating the complete SC-04 presentation as zero mastery evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
-- Storyboarder sign-off: `PENDING A2`
+- Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PENDING A3`
 - Gameplay Master sign-off: `PENDING A4`
 - Coder smoke-test result: `PENDING A5`
 - Readiness: `REVISE`
-- Required revision: complete A2–A5 sequentially on this packet; do not define RP-004 yet.
+- Required revision: complete A3–A5 sequentially on this packet; do not define RP-004 yet.
 
 ### Exact Storyboarder A2 handoff
 
 `Storyboarder Agent — A2: work only on RP-003 Calibration Margin. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, this packet, RP-002's exact end state, the active maximum-quality photorealistic charter, and your latest work log. Compose the smallest registered first-person scene sequence that makes two exposed corresponding physical sequences, one bounded visible difference, and one materially sealed/unavailable channel legible without world labels, pseudo-writing, human instruments, or a success-state world reaction. Preserve the direct RP-002 start, unchanged continuation, zero city delta, real-Python occupational-work meaning, expedition/suit ownership, no password/authentication framing, no protagonist/ship/human traces, invariant world/environment clocks, reversible returns, full-shell representative 1920 x 1080 containment, accessible narrow/text-zoom reflow, >=44px controls, and all mystery protections. Define entry, inspectable idle, run-result interface, completed local-save, and return evidence; merge boards where one registered invariant world can serve multiple interface states. Specify functional landscape, collective-work logic, physically causal materials/lighting, landmarks, interaction zones, negative space, production assets/provenance, responsive mapping, and artifact-cleanup acceptance. Do not select curriculum, puzzle answers, code, native categories, RP-004 content, or hidden lore. Update RP-003, LOCATION_VISUAL_SPINE.md, your work log, queue/map handoff state, validate continuity and presentation, and hand the unchanged lore boundary to Curriculum Checker A3.`
 
+### Exact Curriculum Checker A3 handoff
+
+`Curriculum Checker Agent — A3: work only on RP-003 Calibration Margin. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, this packet, the exact A1 lore boundary, and the locked SC-04 scene sheet. Select and verify the nearest contiguous Python skill and current official AI-901 alignment for comparing only two exposed bounded sequences while representing the sealed source as unavailable rather than inferred. Treat SC-04 world visibility, correspondence/difference composition, hotspot discovery, crop, display, owner text, motion, focus, navigation, successful execution display, save presentation, restore, and return as zero mastery evidence. Preserve real Python as ordinary Builder occupational work rather than a password; Scene/Pilot/System/Builder-work ownership; direct RP-002 predecessor match; unchanged continuation; zero city/external delta; privacy, offline/no-authority, no-exam-guarantee, reversible return, no RP-004 route, and all mystery protections. Define prerequisites, exact skill/objective IDs, primary evidence, answer-free remediation, retrieval and fresh transfer, strict thresholds, misconception handling, source provenance/freshness, privacy allowlist, save eligibility boundaries, and SOLIDIFIED/reopen status. Do not alter SC-04 composition, create puzzle mechanics or answers beyond the curriculum contract, write runtime code, generate art, define native categories, seed RP-004, or open hidden lore. Update RP-003, CURRICULUM_SPINE.md, queue/map/status records, and the Curriculum work log; validate against the project's official Microsoft source-priority rules; then leave one exact Gameplay Master A4 handoff.`
+
 ## Promotion record
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-003 IN DESIGN — A1 COMPLETE`
+- Team 1 railhead after promotion: `RP-003 IN DESIGN — A2 COMPLETE`
 - Next contiguous packet seeded: `NO — RP-004 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`
