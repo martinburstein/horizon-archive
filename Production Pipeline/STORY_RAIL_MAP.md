@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W1 CLEAN PASS, W2 VERIFICATION/RELOAD NEXT`
+- Team 2 active packet: `RP-001 — IN DEMO / ACCEPTED; W2 CLEAN, DEMO RELOADED, W3 AESTHETIC REVIEW NEXT`
 - Team 1 railhead: `RP-002 — protected atomic persistence/save model complete after the protected learning model; later seams remain REVISE`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 protected learning and save state models complete, while observation interactions, responsive UI, protected route, storage integration, and art remain in design`
 - Whole-story rail status: `IN PROGRESS`
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / W1 CLEAN PASS` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | W1 on `483a0d4` reproduced no P0/P1/P2 accepted-path defect: focused `38/38`, complete suite `295/295`, and full title-to-credits E2E passed with all gates true and no runtime errors. W2 verification/reload is next. Protected RP-002 remains non-routable. |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / W2 CLEAN; DEMO RELOADED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | W2 on `2ae476c` reproduced no accepted-path defect: focused `38/38`, complete suite `295/295`, production build, reload, and exact HTTP asset checks pass. The in-app browser surface was unavailable after documented recovery, so W3/coordinator retains representative desktop/narrow live review. Protected RP-002 remains non-routable. |
 | 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL / REVISE` | `NOT READY / NON-ROUTABLE` | `LORE LOCKED — EXECUTABLE LITERACY + HUMAN RAI + ATOMIC SAVE OWNERSHIP` | `A2 ATOMIC PERSISTENCE/SAVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE; A3 SAVE ELIGIBILITY LOCKED` | `RP002-RAI-01 SOLIDIFIED + PROTECTED MODEL COMPLETE THROUGH PILOT CONCLUSION; A3 SAVE ELIGIBILITY LOCKED` | `A4 ATOMIC PERSISTENCE/SAVE GRAPH LOCKED` | `PROTECTED TOUR + PREREQUISITES + PY/RAI CHAINS + ATOMIC SAVE MODEL COMPLETE` | A5 now enforces strict conjunctive eligibility from both finalized learning chains plus five pre-finalized sanitized observation fixtures; Pilot review/sole intent; exact all-or-none three-field commit; deterministic failure, retry/return, restore, sanitation downgrade, focus, and Tour isolation. Observation UI/credit, responsive UI, browser storage, routing, art, world change, successor exposure, and Working promotion remain disabled. W1 stays on accepted RP-001. |
 
 ## Whole-story coverage gate
