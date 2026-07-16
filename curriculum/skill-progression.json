@@ -252,7 +252,8 @@
       "related_ai901_objectives": [
         "AI901-D2-O5",
         "AI901-D2-O7"
-      ]
+      ],
+      "rail_packet_reinforcement": "RP-004 SC-05 loop over three sanitized replica records; 8/8 primary, answer-free remediation, delayed closed-note loop trace, and genuinely blank 8/8 transfer while common-return purpose remains None"
     },
     {
       "skill_id": "PY-012",

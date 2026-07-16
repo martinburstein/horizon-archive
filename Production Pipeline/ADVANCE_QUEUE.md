@@ -20,15 +20,15 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
-| 4 | `RP-004` | Three-Current Reach | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`) | Lore and Scene `PASS`; Curriculum/Puzzle/Code pending | Exact RP-003 completion plus locked `SC-05` invariant panorama; unchanged `continuation`, null city delta, replica-only coupling, reversible returns, no RP-005 destination | A3 selects and validates only the nearest contiguous Python/AI-901 mapping; presentation remains zero mastery evidence. |
+| 4 | `RP-004` | Three-Current Reach | `IN DESIGN — A3 COMPLETE` | Gameplay Master Agent (`A4`) | Lore, Scene, and Curriculum `PASS`; Puzzle/Code pending | Exact RP-003 completion plus locked `SC-05`; SOLIDIFIED PY-011 and RP004-WORKLOAD-01; unchanged continuation, null city delta, reversible returns, no RP-005 destination | A4 composes one bounded graph; presentation remains zero mastery evidence and the landscape never an answer key. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `2 — RP-002, then RP-003`
-- In-design packets: `1 — RP-004 / A2 COMPLETE`
-- Team 1 railhead: `RP-004 — IN DESIGN / A2 COMPLETE / A3 NEXT`
+- In-design packets: `1 — RP-004 / A3 COMPLETE`
+- Team 1 railhead: `RP-004 — IN DESIGN / A3 COMPLETE / A4 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `3 ordered packets — RP-002 and RP-003 promoted; RP-004 in design`
 - Whole-story rail status: `IN PROGRESS`

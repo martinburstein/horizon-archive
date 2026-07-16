@@ -1,0 +1,8 @@
+{
+  "T01": {"workload": "generative_ai", "deciding_signal": "create_a_new_illustration_from_a_prompt"},
+  "T02": {"workload": "agentic_ai", "deciding_signal": "plan_then_call_approved_systems_across_multiple_steps"},
+  "T03": {"workload": "text_analysis", "deciding_signal": "detect_named_entities_in_written_content"},
+  "T04": {"workload": "speech", "deciding_signal": "synthesize_spoken_audio_from_text"},
+  "T05": {"workload": "computer_vision", "deciding_signal": "interpret_objects_and_spatial_relations_in_an_image"},
+  "T06": {"workload": "information_extraction", "deciding_signal": "return_named_fields_from_audio_and_video_in_a_defined_schema"}
+}

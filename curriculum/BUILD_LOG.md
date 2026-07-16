@@ -1,5 +1,35 @@
 # Build Log
 
+## Log entry: 2026-07-16T21:10:00-04:00
+
+Stage: RP-004 Three-Current Reach contiguous curriculum verification (A3)
+Work completed: Closed exactly one RP-004 Curriculum gate and recorded `SOLIDIFIED`. Selected `PY-011` as loop-only reinforcement over supplied sanitized replica dictionaries and `RP004-WORKLOAD-01` as focused current `AI901-D1-O4` six-workload recognition retrieval/transfer. Defined prerequisites, implementation purpose, strict primary/remediation/retrieval/genuinely-blank-transfer evidence, misconception repair, privacy allowlist, accessibility, offline/no-authority/no-exam-guarantee boundaries, zero-credit presentation, independent save conjunctions, and the three permitted reopen conditions. The SC-05 landscape is explicitly never an AI case or answer key. Added a machine-readable contract, two Python references, three AI-901 evidence forms, and anti-bypass/failure probes. RP-001 through RP-003 mappings remain frozen and RP-005 remains reserved.
+Files changed:
+- Production Pipeline/rail-packets/RP-004-three-current-reach.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- curriculum/readiness/RP-004/contract.json
+- curriculum/readiness/RP-004/reference_primary.py
+- curriculum/readiness/RP-004/reference_transfer.py
+- curriculum/readiness/RP-004/reference_primary_answers.json
+- curriculum/readiness/RP-004/reference_retrieval_answers.json
+- curriculum/readiness/RP-004/reference_transfer_answers.json
+- curriculum/readiness/RP-004/validate_mapping.py
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/BUILD_STATUS.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Used the repository `foundry-azure-source-priority` skill and checked the official Microsoft AI-901 study guide, Foundry hub, SDK/endpoints overview, Agent Service overview, and Content Understanding overview; no third-party source was used.
+- Reverified the April 15, 2026 blueprint on the official guide, last updated July 13, 2026: Python remains an explicit prerequisite, domain weights remain 40–45% concepts and 55–60% implementation, and the six named workload categories remain current.
+- RP-004 self-test, both 8/8 Python references, all 12/12 primary, 8/8 retrieval, and 12/12 transfer workload references, blank-answer rejection, wrong-workload rejection, hardcoded-output rejection, all curriculum JSON parsing, and focused packet/spine/queue/map continuity checks passed.
+Next recommended item: Gameplay Master A4 builds exactly one bounded RP-004 interaction graph using the packet's `Exact Gameplay Master A4 handoff`, without changing cases, answers, dimensions, thresholds, source claims, privacy, authority, or landscape-never-answer-key boundary.
+Unresolved risks: A4/A5 must keep the supplied list/dictionary scaffold unscored, prevent scenery or modality alone from revealing workload answers, keep observations and both learning chains independent, clear private/transient work before blank retries and save, and prove deterministic resume/focus without any live sample, world, route, service, credential, or external action.
+Notes: `SOLIDIFIED`. Course-authored offline practice only; not Microsoft exam items, an exam guarantee, Builder authentication, live Foundry use, native categories, Machine meaning, or permission. No runtime code, art, accepted Demo state, Azure resource, hidden lore, RP-005 route, or user file changed.
+
 ## Log entry: 2026-07-16T16:50:00-04:00
 
 Stage: RP-003 Calibration Margin contiguous curriculum verification (A3)

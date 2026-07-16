@@ -1,0 +1,8 @@
+{
+  "P01": {"workload": "generative_ai", "deciding_signal": "create_new_content_from_a_prompt"},
+  "P02": {"workload": "agentic_ai", "deciding_signal": "reason_across_steps_and_select_approved_tools"},
+  "P03": {"workload": "text_analysis", "deciding_signal": "derive_sentiment_and_key_phrases_from_text"},
+  "P04": {"workload": "speech", "deciding_signal": "recognize_spoken_language_as_text"},
+  "P05": {"workload": "computer_vision", "deciding_signal": "interpret_visible_defects_in_an_image"},
+  "P06": {"workload": "information_extraction", "deciding_signal": "return_named_invoice_fields_in_a_defined_schema"}
+}

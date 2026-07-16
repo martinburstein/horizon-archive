@@ -13,6 +13,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - The guide says candidates should be familiar with REST APIs, SDKs, and CLIs.
   - A score of 700 or greater is required to pass. This curriculum uses higher internal gates; those gates are coaching policy, not Microsoft scoring policy.
   - Reverified July 16, 2026: the page remains last updated July 13, 2026 and the April 15, 2026 objective set and domain weights are unchanged.
+  - Reverified for RP-004 A3 on July 16, 2026: `Identify AI workloads` still explicitly covers generative and agentic AI, text analysis, speech, computer vision, and information extraction. The packet uses separate course-authored cases and never infers a workload from story scenery.
 
 ## Priority Foundry sources checked first
 

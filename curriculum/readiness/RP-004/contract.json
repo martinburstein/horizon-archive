@@ -1,0 +1,155 @@
+{
+  "mapping_id": "RP004-A3-THREE-CURRENT-REACH",
+  "packet_id": "RP-004",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-05",
+  "source_verified_on": "2026-07-16",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-02 PY-011 primary and fresh-transfer loop evidence remains 8/8 with a closed-note loop trace",
+    "ai901": "L-06-01 objective ledger marks AI901-D1-O4 ready using evidence from L-04-01 through L-04-04 and L-05-04; missing evidence routes to the exact workload lesson rather than confidence",
+    "missing_evidence_route": [
+      "curriculum/lessons/L-03-02",
+      "curriculum/lessons/L-04-01",
+      "curriculum/lessons/L-04-02",
+      "curriculum/lessons/L-04-03",
+      "curriculum/lessons/L-04-04",
+      "curriculum/lessons/L-05-04",
+      "curriculum/lessons/L-06-01"
+    ],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": [
+    "world_visibility", "three_relation_composition", "common_return_visibility", "hotspot_discovery",
+    "crop_or_display", "owner_text", "motion_color_sound_or_timing", "focus_navigation_or_return",
+    "successful_execution_display", "save_or_restore_presentation", "photographic_realism",
+    "accessibility_behavior", "landscape_state"
+  ],
+  "python_contract": {
+    "skill_id": "PY-011",
+    "skill_name": "Write loops",
+    "scope": "reinforcement_only",
+    "implementation_reason": "A lightweight AI client often traverses a bounded collection of supplied results; this exercise requires one loop that emits exactly one correspondence record per sanitized sample while preserving source order and unknown purpose.",
+    "learner_owned_action": "write one for-loop over the supplied samples and append exactly one sample/corridor record per iteration",
+    "provided_unscored_scaffold": ["three sanitized replica dictionaries", "one form-to-corridor dictionary", "empty correspondence list", "common-return record shape"],
+    "forms": {
+      "primary": {
+        "samples": [
+          {"sample_id": "suspension_replica", "form": "particulate"},
+          {"sample_id": "pressure_replica", "form": "cyclic"},
+          {"sample_id": "heat_replica", "form": "thermal"}
+        ],
+        "corridor_for_form": {"particulate": "porous", "cyclic": "tensioned", "thermal": "jointed"}
+      },
+      "transfer": {
+        "samples": [
+          {"sample_id": "fiber_replica", "form": "filament"},
+          {"sample_id": "wave_replica", "form": "oscillating"},
+          {"sample_id": "gradient_replica", "form": "graded"}
+        ],
+        "corridor_for_form": {"filament": "meshed", "oscillating": "resonant", "graded": "layered"}
+      }
+    },
+    "common_return": {"observed": true, "purpose": null},
+    "checks": [
+      "result_is_list", "one_record_per_sample", "exact_record_keys_and_order", "every_sample_id_preserved_once",
+      "exact_form_to_corridor_lookup", "for_loop_iterates_samples_and_appends_once",
+      "common_return_observed_and_purpose_none", "inputs_unchanged_and_no_forbidden_operations"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note trace of iterable/current item/loop body/output count/purpose boundary, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_the_displayed_result", "iterate_a_live_source", "append_zero_or_multiple_records_per_sample",
+      "mutate_inputs", "infer_native_category_purpose_correctness_identity_or_authority",
+      "reuse_completed_primary_as_transfer", "count_execution_display_navigation_save_timing_confidence_color_motion_or_hints"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP004-WORKLOAD-01",
+    "objective_id": "AI901-D1-O4",
+    "objective_title": "Identify AI workloads",
+    "scope": "focused_workload_recognition_retrieval_and_transfer_across_generative_agentic_text_speech_vision_and_information_extraction; does_not_replace_full_source_lessons_or_L-06-01_mastery",
+    "dimensions": ["workload", "deciding_signal"],
+    "landscape_is_never_a_case_or_answer_key": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Create a new product tagline from a short brief.","workload":"generative_ai","deciding_signal":"create_new_content_from_a_prompt"},
+        {"id":"P02","prompt":"Plan a multi-step onboarding task and select only approved tools.","workload":"agentic_ai","deciding_signal":"reason_across_steps_and_select_approved_tools"},
+        {"id":"P03","prompt":"Find sentiment and key phrases in written reviews.","workload":"text_analysis","deciding_signal":"derive_sentiment_and_key_phrases_from_text"},
+        {"id":"P04","prompt":"Convert a recorded call into text.","workload":"speech","deciding_signal":"recognize_spoken_language_as_text"},
+        {"id":"P05","prompt":"Inspect a product image for visible defects.","workload":"computer_vision","deciding_signal":"interpret_visible_defects_in_an_image"},
+        {"id":"P06","prompt":"Return invoice number, date, and total as named fields.","workload":"information_extraction","deciding_signal":"return_named_invoice_fields_in_a_defined_schema"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Find sentiment in an already supplied transcript.","workload":"text_analysis","deciding_signal":"analyze_the_already_supplied_transcript_not_the_audio"},
+        {"id":"R02","prompt":"Describe visible storm damage in a photograph without a field schema.","workload":"computer_vision","deciding_signal":"describe_visual_damage_without_a_field_schema"},
+        {"id":"R03","prompt":"Populate fixed claim fields from a supplied photograph.","workload":"information_extraction","deciding_signal":"populate_fixed_fields_from_the_supplied_image"},
+        {"id":"R04","prompt":"Choose approved tools and actions to complete a multi-step travel change.","workload":"agentic_ai","deciding_signal":"choose_approved_tools_and_actions_across_multiple_steps"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"Create a new illustration from a written prompt.","workload":"generative_ai","deciding_signal":"create_a_new_illustration_from_a_prompt"},
+        {"id":"T02","prompt":"Plan a research task, gather approved documents, and call approved systems across several steps.","workload":"agentic_ai","deciding_signal":"plan_then_call_approved_systems_across_multiple_steps"},
+        {"id":"T03","prompt":"Detect named entities in written content.","workload":"text_analysis","deciding_signal":"detect_named_entities_in_written_content"},
+        {"id":"T04","prompt":"Turn written text into spoken audio.","workload":"speech","deciding_signal":"synthesize_spoken_audio_from_text"},
+        {"id":"T05","prompt":"Identify objects and spatial relations in an image.","workload":"computer_vision","deciding_signal":"interpret_objects_and_spatial_relations_in_an_image"},
+        {"id":"T06","prompt":"Return named event fields from supplied audio and video in a defined schema.","workload":"information_extraction","deciding_signal":"return_named_fields_from_audio_and_video_in_a_defined_schema"}
+      ]
+    },
+    "gate": "12/12 primary, per-case/per-dimension answer-free remediation, delayed closed-note 8/8 retrieval, then 12/12 genuinely blank fresh transfer plus separate explanations that modality alone does not determine workload and that autonomy/tool use distinguishes agentic work",
+    "misconception_tags": [
+      "input_modality_alone_determines_workload", "generation_equals_agentic_action", "broad_description_equals_schema_extraction",
+      "transcript_analysis_equals_speech_recognition", "image_input_always_means_computer_vision",
+      "offline_scenario_proves_live_service_configuration", "valid_answer_authorizes_external_action"
+    ]
+  },
+  "remediation_contract": {
+    "python": ["trace_one_iteration", "name_iterable_current_item_and_loop_body", "count_expected_outputs", "contrast_loop_output_with_hardcoded_output", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["identify_the_requested_outcome", "name_the_deciding_signal_not_only_the_modality", "contrast_one_confusion_pair", "complete_one_neutral_guided_case", "restore_the_blank_first_incomplete_form", "retry_without_carried_answer"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "raw_case_answers", "free_form_reasoning", "private_notes", "identity_content", "credentials", "endpoints", "payloads", "responses", "source_content", "exam_item_text", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_choices_feedback_and_case_answers",
+    "save_eligibility": "require finalized strict PY-011, finalized strict RP004-WORKLOAD-01, and separately finalized three relation plus common-return purpose-unknown observations; no conjunct cross-credits another",
+    "after_save": "clear_all_temporary_work_and_keep_only_allowlisted_finalized_evidence_plus_the_expedition_owned_note",
+    "resume": "restore_only_finalized_dimension_evidence_and_resume_at_the_first_incomplete_scored_boundary"
+  },
+  "accessibility_contract": {
+    "representative_desktop": "complete responsive 16:9 laptop shell with dominant world and current required group visible without outer scroll",
+    "narrow_and_text_zoom": "natural vertical reflow without horizontal escape or clipped owner text",
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_or_audio": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_azure_foundry_landscape_or_terminal_call": true,
+    "no_credential_resource_or_live_sample_access": true,
+    "no_permission_consent_authentication_or_external_action": true,
+    "no_landscape_response_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_save": true
+  },
+  "world_locks": [
+    "RP-003 verified completion required", "continuation unchanged", "city_state_delta=None", "external_state_delta=None",
+    "SC-05 invariant panorama, current relations, common return, maintenance, coupling body, light and sound causes, and monotonic environmental clocks",
+    "sanitized replica inputs only", "no native workload mapping or purpose inference", "reversible RP-003 and earlier returns", "no RP-005 route or destination"
+  ],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

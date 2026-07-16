@@ -1,0 +1,6 @@
+{
+  "R01": {"workload": "text_analysis", "deciding_signal": "analyze_the_already_supplied_transcript_not_the_audio"},
+  "R02": {"workload": "computer_vision", "deciding_signal": "describe_visual_damage_without_a_field_schema"},
+  "R03": {"workload": "information_extraction", "deciding_signal": "populate_fixed_fields_from_the_supplied_image"},
+  "R04": {"workload": "agentic_ai", "deciding_signal": "choose_approved_tools_and_actions_across_multiple_steps"}
+}
