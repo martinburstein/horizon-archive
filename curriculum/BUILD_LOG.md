@@ -979,3 +979,19 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the responsive-layout impact confirmation, preserves the locked puzzle graph and learning gates, and replaces fixed-viewport review language in the exact Advance Coder handoff with representative responsive/accessibility evidence.
 Unresolved risks: Runtime implementation must not let responsive placement, wrapping, scrolling, crop, focus, Tour traversal, or viewport size create mastery or hide the complete owner and negative-authority language. Exact layout coverage belongs to representative responsive and accessibility review rather than two retired pixel-era dimensions.
 Notes: `NO REOPEN — SOLIDIFIED`. No settled lesson, validator contract, source register, game runtime, art, lore, hidden material, live service, Azure resource, credential, external action, commit, or push was changed.
+
+## Log entry: 2026-07-15T20:58:07-04:00
+
+Stage: RP-002 executable-literacy mapping-preservation review (A3)
+Work completed: Audited the new Builder executable-literacy and suit-translation framing against the SOLIDIFIED RP-002 machine-readable curriculum contract. Recorded `NO REOPEN — SOLIDIFIED`: occupational coupling/world appearance, the incomplete real-Python work image, visible Python syntax, syntactic validity or successful execution by itself, the translated three-condition result, and responsive layout remain zero mastery evidence. Preserved strict `PY-009` and `RP002-RAI-01` prerequisites, primary/remediation/blank-transfer sequences, closed-note explanations, privacy/no-authority boundaries, sanitized evidence, separate no-credit Tour state, cleared working content, invariant world, and zero city/external action. Added the exact executable-literacy presentation lock for Gameplay Master without changing settled lesson or machine-readable mapping content.
+Files changed:
+- Production Pipeline/rail-packets/RP-002-civic-record-encounter.md
+- curriculum/BUILD_LOG.md
+Validation performed:
+- Read the root workflow authority, agent registry and canonical Curriculum Checker profile, RP-002 A1/A2 executable-literacy contract and exact Storyboarder handoff, current queues/rail map/decision log, official checked-in source register, AI-901 objective mapping, Python prerequisite/progression and mastery artifacts, RP-002 readiness contract/validator, and latest curriculum work log.
+- Confirmed the narrative reframing adds no learner action, scored field, prerequisite, threshold, remediation step, transfer fixture, durable evidence, permission, authority, identity inference, world response, or external action; no freeze-rule reopen condition occurred.
+- No volatile Microsoft product, Foundry, SDK, endpoint, exam-objective, or scoring claim changed. The existing same-day official-source verification remains controlling and no third-party source was used.
+- RP-002 validator self-test and focused packet/contract consistency checks passed; `git diff --check` passed.
+Next recommended item: Gameplay Master performs only the executable-literacy presentation-impact confirmation, preserving the locked graph and exact strict evidence chain, then hands an unchanged or minimally clarified protected seam to the Advance Coder.
+Unresolved risks: Runtime presentation must not award credit for syntax validity, a successful run alone, translated output, world/coupling appearance, or Tour traversal. The suit result must not leak responsible-AI answers, imply Builder speech, or turn local execution into authentication, permission, loot, access, or city acceptance.
+Notes: `NO REOPEN — SOLIDIFIED`. The named source-priority skill was unavailable, so checked-in official Microsoft source and objective artifacts were used. No lesson, validator contract, source register, runtime code, art, lore invention, hidden material, live service, Azure resource, credential, external action, commit, or push was changed.
