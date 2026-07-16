@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W1 accepted-boundary campaign regression — `8f62e11`
+
+- **Verdict:** `PASS — NO REPRODUCIBLE FUNCTIONAL DEFECT.` The accepted RP-001 playable boundary remains complete; protected RP-002 was not routed, entered, or inferred as playable content.
+- **Journey evidence:** The full title -> save/name -> temporary prologue -> Glass Meadow -> accepted learning route -> City Threshold -> credits expedition passed with forged-save rejection, wrong-answer and dependency recovery, close/reopen, reload/resume, fresh retry, narrow interaction, strict mastery, session privacy, persistence, and Demo Tour isolation.
+- **Validation:** Focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**. Full E2E **PASS in 162.8 seconds** with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Regenerated tracked QA PNGs were restored.
+- **Issue disposition:** P0/P1/P2 none reproduced; no runtime or art correction authorized in W1. Existing coordinator-validated aesthetic closures remain closed unless W3 reproduces a new visual issue.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Perform verification/reload only unless root live review reproduces a functional defect. Preserve the accepted opening, RP-001 gates, responsive >=44px controls, approved photoreal art/focus, recoverable mistakes, save/resume, strict mastery, privacy/no-authority, Demo Tour isolation, continuation unchanged, city_state_delta=None, and protected RP-002 non-routability. Re-run focused checks/build, reload 4173, and report exact build assets plus live-review boundary.`
+
 ## 2026-07-15 Coordinator closure — localized Meadow focus
 
 - **Disposition:** `PASS — MEADOW-AESTH-FOCUS-001 RESOLVED AND COORDINATOR VALIDATED.`

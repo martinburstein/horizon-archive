@@ -5,7 +5,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 ## Position summary
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED`
+- Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED; W1 CLEAN ON 8f62e11, W2 VERIFICATION NEXT`
 - Team 1 railhead: `RP-002 — A5 partial; protected RAI primary/remediation complete, blank transfer/explanation review next`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 responsible-AI primary/remediation protected; later seams remain in design`
 - Whole-story rail status: `IN PROGRESS`
@@ -25,7 +25,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | Functional gates, responsive presentation, and the coordinated photorealistic production family are validated. Historical pixel and occupant-raster blockers remain retired; optional registered motion is follow-on polish only. |
+| 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED; W1 CLEAN` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | The accepted boundary passed the 2026-07-16 W1 focused `38/38` selection and full campaign E2E with credits and no runtime errors. Functional gates, responsive presentation, and the coordinated photorealistic production family remain validated; W2 verification/reload is next and protected RP-002 remains non-routable. |
 | 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + HUMAN RAI OWNERSHIP` | `A2 RAI OWNERSHIP PRESENTATION LOCKED` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE` | `RP002-RAI-01 SOLIDIFIED + PROTECTED PRIMARY/REMEDIATION COMPLETE` | `A4 RAI ONE-ACTIVE-GROUP GRAPH LOCKED` | `TOUR + PREREQUISITE + PY-009 30-A THROUGH 30-E + RAI PRIMARY/REMEDIATION COMPLETE` | The protected model now enforces the exact three-case, three-dimension simultaneous `9/9` primary, mapped Teacher repair, neutral zero-credit guided practice, blank first-incomplete retry, unlimited recovery, and blank transfer initialization. RAI transfer evaluation, explanation, persistence/save, observation, UI, route, successor, art, world state, authority, and Working promotion remain disabled. |
 
 ## Whole-story coverage gate
