@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure — clean responsive/release gate
+
+- **Disposition:** `PASS — ACCEPTED DEMO / NO NEW DEFECT.` W3/W4's clean verdict was confirmed. No runtime, art, save, curriculum, or route change was required at the accepted boundary.
+- **Live review:** the title screen passed at default `1280x720` and narrow `390x844`; document widths were `1265/1280` and `390/390`, respectively, with intact hierarchy, stacked narrow actions, readable framing, and no horizontal escape. The existing local save was preserved: the replacement warning and Cancel path were checked without creating or overwriting a slot, and the viewport was reset afterward.
+- **Release validation:** game suite **280/280 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`); RP-002 curriculum self-test PASS; E2E syntax PASS; complete title-to-credits E2E PASS in **153.5 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Cycle boundary:** RP-001 remains the accepted live demo. RP-002 remains `REVISE`, protected, and non-routable after its primary/remediation-only construction; transfer evaluation, explanation, persistence/save, observation, UI, route, art, world effects, and Working promotion remain excluded.
+- **Result:** `COORDINATOR COMPLETE — PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.`
+
 ## 2026-07-16 W4 aesthetic verification/final reload — `0935ccb` handoff
 
 - **Mode/verdict:** `Coder Agent — aesthetic-polish; PASS — NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 supplied a clean evidence-based review and the repeated focused gate reproduced no exact defect, so runtime and art remain unchanged.
