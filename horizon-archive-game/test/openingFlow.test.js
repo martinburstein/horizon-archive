@@ -175,3 +175,22 @@ test("opening objective stays in the lower interface band and cannot cover the T
     assert.ok(objectiveBand.top >= terminal.top + terminal.height - 0.001);
   }
 });
+
+test("opening surfaces reject legacy islands and retain readable responsive targets", () => {
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+  const openingStart = styles.indexOf(".canonical-game-frame .title-screen,");
+  const openingEnd = styles.indexOf(".adventure-screen", openingStart);
+  const openingRules = styles.slice(openingStart, openingEnd);
+
+  assert.ok(openingStart >= 0 && openingEnd > openingStart);
+  assert.doesNotMatch(openingRules, /width:\s*(?:496|296)px|max-height:\s*224px/);
+  assert.doesNotMatch(openingRules, /font-size:\s*(?:7|8|9|10|11)px|padding:\s*4px\s+6px/);
+  assert.match(openingRules, /overflow-x:\s*hidden;[\s\S]*?overflow-y:\s*auto;/);
+  assert.match(openingRules, /width:\s*min\(90vw,\s*900px\);/);
+  assert.match(openingRules, /max-width:\s*68ch;/);
+  assert.match(openingRules, /font-size:\s*clamp\(1rem,/);
+  assert.match(openingRules, /\.primary-action,[\s\S]*?min-height:\s*48px;/);
+  assert.match(openingRules, /\.opening-form input \{[\s\S]*?min-height:\s*48px;[\s\S]*?font-size:\s*1rem;/);
+  assert.match(openingRules, /data-canonical-layout="narrow"\] \.title-copy,[\s\S]*?width:\s*100%;[\s\S]*?max-height:\s*none;/);
+  assert.match(openingRules, /data-canonical-layout="narrow"\] \.secondary-action \{[\s\S]*?flex:\s*1 1 180px;[\s\S]*?min-height:\s*44px;/);
+});

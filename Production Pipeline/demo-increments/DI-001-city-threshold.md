@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W4 OPENING-AESTH-001 implementation
+
+- **Disposition:** `RESOLVED IN W4 — COORDINATOR LIVE VALIDATION PENDING.` The first 45 seconds no longer render inside fixed `496px` / `296px` cards, a `224px` cap, or `7–11px` essential-copy/action overrides.
+- **Visible delta:** Existing title, Slot 01, name, three temporary prologue beats, and Chapter I content now occupies a responsive contemporary presentation region capped at `900px`, with cinematic fluid headings, a `68ch` prose measure, at least `16px` body/input copy, and `48px` desktop actions. Chapter I retains the approved Meadow photograph and crop.
+- **Narrow/zoom behavior:** Available-width cards, flexible action wrapping/stacking, `44px` minimum actions, stacked save metadata, uncapped vertical content, vertical scrolling, and horizontal clipping replace the legacy narrow island. No fixed canvas was reintroduced.
+- **Invariant behavior:** No JSX, copy, art, opening state, transition, recovery, focus, anti-skip, save, Terminal, gameplay, curriculum, mastery, privacy/no-authority, Tour, city, or route behavior changed. RP-002 remains protected and non-routable.
+- **Regression/validation:** focused frame/opening **11/11 PASS**; complete game suite **266/266 PASS**; production build PASS with the existing chunk advisory. Source regressions explicitly reject the retired opening values and require modern width, prose, typography, target, wrapping, and overflow contracts.
+- **Build/reload identity:** base `6f1759d` plus uncommitted W4 implementation; `index-PhQiqaIn.js` / `index-BCmwLuJV.css`; port `4173` returned HTTP `200` with those exact assets.
+- **Coordinator gate:** live-review title, save, name, all three beats, Chapter I, and first Meadow at approximately `1265x720`, `390x844`, and representative `200%` zoom. Accept only with a roughly `900px` desktop surface where appropriate, readable/cinematic hierarchy, `>=16px` body/input copy, `>=44px` actions, wrapped/stacked narrow controls, reachable vertical scroll, no horizontal escape, intact focus/state/recovery, unchanged art/crop, and non-routable RP-002.
+
 ## 2026-07-15 W3 opening-hierarchy review
 
 - **Verdict:** `REVISE - OPENING-AESTH-001 P1; ACCEPT FOR W4.` The modern fluid shell passes, but the first 45 seconds remain visibly miniaturized by surviving legacy opening rules.
