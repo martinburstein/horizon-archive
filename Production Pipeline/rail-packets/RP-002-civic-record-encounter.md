@@ -1794,6 +1794,112 @@ This Storyboard pass locks presentation meaning before any target geometry exist
 
 `Gameplay Master Agent: perform only one bounded A4 puzzle-graph confirmation of the protected observation-hotspot ownership and pre-geometry presentation locks. Preserve the exact five expedition actions, one-to-one canonical IDs and Scene statements, three-near-then-two-far stage gate, all six near and both far orders, idempotent revisits, one-active-group hierarchy, exact System entry/progress/recovery/sanitation/Tour copy, persistent label/focus/description association, equivalent pointer/touch/keyboard/switch/speech/screen-reader activation, non-color and reduced-motion behavior, and deterministic first-incomplete recovery. Only one exact deliberate available action may finalize one matching observation; any ambiguous, overlapping, cropped, occluded, moving, forged, unavailable, out-of-stage, passive, or multi-hit request must fail closed and finalize nothing. Visibility, labels, focus, hover, dwell, reflow, scrolling, motion, acknowledgement, learning, review, save, restore, return/advance controls, and Tour remain zero observation and zero mastery evidence. Preserve the unchanged independent PY-009 and RP002-RAI-01 chains and the exact save conjunction of both finalized chains plus all five finalized observations. Confirm only the graph and return an A5 handoff limited to protected hotspot geometry/dispatch integration; do not authorize App/main import, browser storage, protected/normal route exposure, art, world changes, successor exposure, Demo reload, or Working promotion. Keep RP-002 REVISE, protected, non-routable, and unavailable to Working.`
 
+## A4 protected observation-hotspot graph confirmation — 2026-07-16
+
+- **Verdict:** `PASS — A4 HOTSPOT GRAPH LOCKED; A5 GEOMETRY/DISPATCH-ONLY HANDOFF; REVISE / NON-ROUTABLE`.
+- **Bounded impact:** A1's expedition-control/Scene-evidence ownership map, A2's pre-geometry semantic associations, and A3's `NO REOPEN — SOLIDIFIED` evidence verdict fit the existing protected observation reducer and responsive component without changing copy, evidence, learning, save, board, route, world, or canon.
+- **Expected play time:** one careful five-hotspot pass remains approximately `3–5 minutes`, including all five bounded Scene statements. One fail-closed unavailable attempt plus recovery or one idempotent replay adds approximately `30–60 seconds`. The complete normal-route RP-002 estimate remains `12–18 minutes`; time is neither stored nor scored.
+
+### Locked semantic hotspot registry
+
+The semantic hotspot ID is a stable expedition-interface identifier. It is never derived from a coordinate, pixel, z-index, artwork filename, translated native mark, or DOM order. Geometry may resolve to one of these IDs only; it may not assign meaning.
+
+| Semantic hotspot ID | Exact action / canonical ID | Board ownership | Finalization stage | Enabled and disabled rule |
+|---|---|---|---|---|
+| `rp002.sc03_10.fixed_trace` | `INSPECT FIXED TRACE` / `fixed_trace` | `SC-03-10` near-detail evidence | `near_observations` | Enabled for one new fact only when campaign mode, the registered board is `SC-03-10`, the sanitized phase is near, and this is the unique resolved candidate. A finalized fact is replay-only. |
+| `rp002.sc03_10.later_stewardship` | `INSPECT LATER STEWARDSHIP` / `later_stewardship` | `SC-03-10` near-detail evidence | `near_observations` | Same rule; no ordering dependency exists among the three near peers. |
+| `rp002.sc03_10.outlined_gap` | `INSPECT OUTLINED GAP` / `outlined_gap` | `SC-03-10` near-detail evidence | `near_observations` | Same rule; the association remains the solid bordered interval, never an aperture edge. |
+| `rp002.sc03_20.distant_repetition` | `COMPARE DISTANT REPETITION` / `distant_repetition` | `SC-03-20` far/closed-detail evidence | `far_observations` | Enabled for one new fact only after all three sanitized near IDs exist, the registered board is `SC-03-20`, and resolution is unique. A finalized fact is replay-only. |
+| `rp002.sc03_20.closed_boundary` | `INSPECT CLOSED BOUNDARY` / `closed_boundary` | `SC-03-20` far/closed-detail evidence | `far_observations` | Same rule; the association includes only exposed interlock exterior plus the maintenance path beneath it and never an inferred interior or request surface. |
+
+Every registry entry also carries its existing exact visible label, accessible name, associated Scene description, exact Scene statement, canonical board, canonical ID, and stage. Missing, duplicated, mismatched, or unknown registry fields disable that entry. A disabled entry cannot fall through to a neighboring or topmost target. Finalized near observations remain available for idempotent replay only through their exact retained expedition action when their associated board/evidence is deliberately restored; replay never reopens the near stage or changes the far stage.
+
+### Locked protected hotspot/dispatch graph
+
+```text
+HS-00 / campaign_registry_entry / SC-03-10 / SYSTEM // EXPEDITION SESSION
+  -> rebuild semantic registry from the protected packet definition
+  -> sanitize observation evidence; expose three near peers in stable canonical order
+  -> passive visibility, labels, focus, hover, dwell, motion, and geometry registration write nothing
+
+HS-10 / near_dispatch_ready / phase=near_observations / board=SC-03-10
+  -> one normalized activation + exactly one enabled resolved semantic ID -> HS-11
+  -> zero candidates -> no evidence and no synthetic action
+  -> multiple, ambiguous, occluded, cropped-unsafe, moving, stale, mismatched, disabled,
+     forged, wrong-board, or out-of-stage candidate -> HS-U
+
+HS-11 / one_hit_acknowledgement / SCENE then SYSTEM
+  -> dispatch exactly one deliberate_campaign_inspection request
+  -> add at most its one matching canonical ID; suppress duplicate native/click dispatch
+  -> finalized ID -> exact idempotent replay, byte-stable evidence
+  -> return control -> first unfinished action on current registered board
+  -> third near fact -> COMPARE SCALE (zero credit) -> HS-20
+
+HS-20 / far_dispatch_ready / phase=far_observations / board=SC-03-20
+  -> one normalized activation + exactly one enabled resolved semantic ID -> HS-21
+  -> same zero/multi/ambiguous/disabled fail-closed rules as HS-10
+
+HS-21 / far_acknowledgement / SCENE then SYSTEM
+  -> add at most its one matching canonical ID or replay its exact finalized statement
+  -> first far fact -> return to the other first-incomplete far action
+  -> fifth fact -> OPEN LOCAL COMPARISON (zero credit; protected callback only)
+
+HS-U / unavailable_or_ambiguous / SYSTEM // EXPEDITION SESSION
+  -> finalize nothing; preserve canonical facts; clear transient input and candidate data
+  -> present the existing exact unavailable copy
+  -> heading-first focus, then deterministic first incomplete exact action
+
+HS-S / sanitation_or_remount / SYSTEM // EXPEDITION STATE
+  -> discard geometry, pointer, focus, crop, occlusion, event-token, and private history
+  -> retain only canonical finalized observation records allowed by the protected reducer
+  -> rebuild registry; present exact checked/resume copy; never replay a Scene/world event
+
+HS-T / demo_tour / SYSTEM // DEMO TOUR
+  -> view-only semantic labels and exact preview copy; no campaign resolver or dispatch path
+  -> CONTINUE TOUR only; no IDs, counts, mastery, save, route, or campaign state
+```
+
+### Dispatch, modality, and fail-closed rules
+
+1. **One semantic activation:** pointer click/tap, Enter, Space, switch activation, speech activation, and screen-reader button activation normalize to the same `activate_semantic_hotspot` intent containing only packet ID, registered board ID, semantic hotspot ID, activation kind, and an ephemeral event token. Coordinates, pointer paths, dwell, raw speech, focus history, and world data never enter observation evidence.
+2. **One-hit latch:** one ephemeral event token may dispatch at most once. Synthetic click following keyboard activation, double click/tap, pointer-up plus click duplication, repeated switch output, event bubbling, and React remount replay cannot create a second request. A later deliberate activation receives a new token and may produce only an idempotent replay if already finalized.
+3. **Exactly-one resolution:** coordinate geometry may return zero, one, or many candidate semantic IDs. Only one unique candidate that matches the current registered board, current sanitized stage, exact registry record, availability, and safe evidence visibility may dispatch. Multi-hit, tie, overlap, z-order conflict, mismatched board, or duplicate registration fails closed; the topmost painted layer never decides evidence.
+4. **Keyboard and assistive parity:** keyboard, switch, speech, and screen-reader activation target the same persistent exact action control and bypass coordinate hit testing, but not semantic validation. They must satisfy the same board, stage, availability, one-hit latch, and one-action/one-ID rules and must produce the same acknowledgement and evidence bytes as pointer activation.
+5. **Crop and occlusion fallback:** if the required Scene evidence remains recognizably present but world-hit geometry cannot resolve uniquely, the exact persistent expedition control may remain the sole semantic activation surface. If crop, occlusion, motion, or art damage prevents the approved evidence relationship from remaining recognizable, both the world-hit target and semantic fallback are disabled for finalization; the graph enters `HS-U`, keeps valid facts, and restores the safe registered board/crop or first incomplete action. It never silently rebinds to a nearby feature.
+6. **Motion is ignored:** geometry is registered to the approved static semantic region, not vapor, heat shimmer, maintenance forms, reflections, animated effects, or frame-dependent pixels. A moving effect crossing a target cannot enter, leave, enlarge, cover, prioritize, or activate a semantic candidate. Reduced-motion and no-motion modes resolve the same semantic ID or fail closed identically.
+7. **Focus and acknowledgement:** entry and recovery focus the active System heading before the canonical first incomplete action. Valid activation focuses the Scene acknowledgement heading before System progress and the zero-credit control. Return restores the first incomplete exact action; stage completion focuses `COMPARE SCALE`; five-fact completion focuses `OPEN LOCAL COMPARISON`. Focus movement, scrolling, and acknowledgement supply no evidence.
+8. **Sanitation and remount:** geometry registrations, crop state, event tokens, target rectangles/masks, z-order, pointer state, focus state, and active animation frames are ephemeral and never persisted. Remount sanitizes observation evidence first, rebuilds the registry from constants, and fails closed on unknown versions or missing associations. It cannot infer a fact from a previously active target or replay a world event.
+9. **Idempotence and recovery:** valid replay may show only the exact matching Scene statement and `Already recorded` status. Any invalid request preserves canonical evidence, clears transient/private input, changes no attempts, hints, confidence, mastery, save, route, or world state, and returns to deterministic first-incomplete focus with unlimited recovery.
+10. **Tour separation:** Tour may share noninteractive layout and descriptions, but its registry is view-only and cannot construct `deliberate_campaign_inspection`, call the campaign reducer, copy campaign IDs, or reach the local-comparison/save callbacks.
+
+### Player-observable hotspot acceptance checks
+
+1. Each of the three near actions can be completed first, second, or third; all six orders end at the same sanitized `3 of 3` evidence set and `COMPARE SCALE` boundary.
+2. Each far action can be completed first; both orders end at the same sanitized `5 of 5` set and protected `OPEN LOCAL COMPARISON` boundary.
+3. Pointer, touch, Enter, Space, switch, speech, and screen-reader activation of one exact action produce the same one canonical ID and exact acknowledgement bytes.
+4. A keyboard-generated click, double click/tap, bubbled event, or repeated event token never records twice, increments progress twice, or skips a stage.
+5. An overlap or equal-priority multi-hit produces the exact unavailable recovery group, records nothing, and never lets z-order choose a fact.
+6. If an art-directed crop or effect makes an association unsafe, the action either remains uniquely available through its exact persistent semantic control with the evidence still readable or fails closed and restores the safe board; it never binds to another feature.
+7. An early far action, wrong-board action, disabled action, unknown ID, forged mapping, stale registry version, or presentation-only event leaves all valid evidence byte-stable and focuses the deterministic first incomplete action after recovery.
+8. Replaying any finalized action yields its same Scene statement plus the exact already-recorded status and changes no evidence, mastery, confidence, save eligibility, route, or world state.
+9. Remount from canonical, duplicate, premature, unknown, and private-contaminated fixtures reconstructs only permitted finalized IDs, clears geometry/input history, presents sanitation status, and does not replay arrival or a Scene event.
+10. Demo Tour shows only its exact no-credit preview and continuation; pointer and assistive activation cannot create campaign observation IDs or a comparison/save intent.
+11. Completion of either SOLIDIFIED learning chain cannot enable, dispatch, infer, or backfill a hotspot fact; hotspot completion cannot score either learning chain.
+12. Save review remains unavailable until both strict learning chains and all five independently finalized observations exist; hotspot dispatch never writes the atomic save triplet itself.
+13. Before and after every successful, failed, replayed, remounted, and Tour interaction, both predecessor facts, `continuation`, `cityStateDelta=null`, the closed identity boundary, registered world/camera/crop/effect clocks, reversible return, successor state, and external-action state remain unchanged.
+
+### Gameplay Master hotspot-graph sign-off
+
+- **Puzzle and learning contract:** the hotspot layer supplies only the independent five-observation conjunct. It never supplies `PY-009` or `RP002-RAI-01` evidence, and those chains never supply a hotspot fact. A3's `NO REOPEN — SOLIDIFIED` verdict remains exact.
+- **Recovery and save/resume:** ambiguous or invalid input cannot trap the player or erase valid facts; deterministic first-incomplete focus, safe board/crop restoration, unlimited retry, idempotent replay, sanitation/remount, and separate Tour remain locked. Geometry and input history never persist; only canonical finalized observation records may reach the existing save dependency.
+- **Locked mechanics:** exact semantic IDs above; exact action/ID/board/stage map; exactly-one resolution and one-hit dispatch; pointer/touch/keyboard/switch/speech/screen-reader parity; crop/occlusion fail-closed fallback; textual acknowledgement; three-near-then-two-far stage gate; all within-stage permutations; idempotence; sanitation; Tour separation; invariant world/city/route/authority state.
+- **Flexible for A5:** normalized coordinate representation, region shape format, geometry data structure, event-token implementation, registry module naming, and visual focus styling are flexible only if the acceptance checks and all A1–A4 semantic/presentation locks remain exact. No production coordinate or art claim may exceed the evidence available in the approved protected boards.
+- **Scope:** no code, coordinate, rectangle, mask, polygon, z-order, component import, browser storage, route, art, world state, successor, Demo reload, or Working status changed in A4. RP-002 remains `REVISE`, protected, non-routable, and unavailable to Working.
+
+### Exact Advance Coder A5 handoff — protected hotspot geometry and dispatch only
+
+`Coder Agent operating mode: advance. Implement only an isolated protected RP-002 hotspot geometry/dispatch module around the existing CustodyLedgerObservation component and protected observation reducer. Encode the five stable semantic hotspot IDs and their exact action/canonical-ID/board/stage registry; implement exactly-one candidate resolution, one ephemeral event-token/one-hit dispatch, equivalent pointer/touch/Enter/Space/switch/speech/screen-reader semantic activation, deterministic enabled/disabled rules, crop/occlusion/motion fail-closed behavior with the persistent-control fallback only when its approved evidence remains readable, idempotent replay, heading-first/first-incomplete focus intent, sanitation/remount reconstruction, and view-only Tour separation. Cover all six near and both far permutations, double/synthetic/bubbled input, zero/multi/overlap candidates, wrong-board/out-of-stage/forged/stale/disabled requests, unsafe crop/occlusion, remount contamination, Tour isolation, learning cross-credit prohibition, save-conjunction independence, and byte-stable world/campaign invariants. Geometry/input history must remain ephemeral; only one deliberate matching campaign action may reach recordCustodyLedgerObservation and finalize at most one matching ID. Keep the implementation isolated and non-routable: do not import it into App.jsx or main.jsx, add browser/localStorage persistence, expose protected or normal routes, create/change art, change the world/city/route/crop/camera/effect clocks, write the atomic save triplet, name/expose a successor, reload the Demo, or promote to Working. Preserve all exact copy, the existing component/state model, both SOLIDIFIED chains, privacy sanitation, offline/no-authority/no-exam-guarantee, and return REVISE with focused tests plus full-suite/build validation.`
+
 ## A5 protected responsive observation component implementation — 2026-07-16
 
 - **Mode and verdict:** Coder Agent used `advance` mode. `REVISE — A5 PARTIAL; PROTECTED RESPONSIVE COMPONENT COMPLETE; RP-002 REMAINS NON-ROUTABLE`.
@@ -1811,4 +1917,4 @@ This Storyboard pass locks presentation meaning before any target geometry exist
 
 ### Current Advance handoff
 
-The next sequential pass is the bounded A2 pre-geometry review under `Exact Storyboarder handoff — observation-hotspot ownership impact before geometry`. The W1 handoff above remains the unchanged Working boundary and does not supersede that Advance handoff.
+The next sequential pass is the geometry/dispatch-only protected A5 tranche under `Exact Advance Coder A5 handoff — protected hotspot geometry and dispatch only`. The W1 handoff above remains the unchanged Working boundary and does not supersede that Advance handoff.
