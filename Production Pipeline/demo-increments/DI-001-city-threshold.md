@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected atomic persistence release gate
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` The two-team cycle completed and the accepted title-to-credits campaign remains stable. Protected RP-002 now includes the atomic persistence state model but remains `REVISE`, non-routable, and absent from browser storage, UI, routes, observation interactions, art, and world state.
+- **Live review:** the title passed at default `1280x720` and temporary narrow `390x844`; document widths were `1265/1280` and `390/390`, narrow actions were at least `44px` high, and no horizontal escape occurred. The browser was returned to its default viewport and playable title.
+- **Release validation:** game suite **295/295 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **163.6 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted photoreal presentation, integrated Meadow geometry, first-person framing, localized focus, responsive `>=44px` controls, recovery, mastery, bounded save/privacy/offline/no-authority contracts, Demo Tour isolation, unchanged `continuation`, `cityStateDelta:null`, and RP-002 non-routability remain exact.
+- **Result:** `COORDINATOR COMPLETE - PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.`
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload - `3a7473d` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
