@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 W2 opening verification/reload
+
+- **Mode/verdict:** `bug-repair — PASS; NO FUNCTIONAL REPAIR REQUIRED.` W1 supplied no reproducible defect, focused W2 verification found none, and no runtime, test, art, save, route, curriculum, or QA artifact changed.
+- **Opening evidence:** The title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> deliberate Glass Meadow entry sequence remains covered together with invalid-name recovery, single-activation anti-skip, sanitized exact-step resume, visible Terminal-search objective, and field-linked Terminal focus.
+- **Responsive/state evidence:** Available-width undistorted `16:9` world presentation, responsive lower-interface flow, and `>=44px` required controls remain covered. Campaign, mastery, privacy/no-authority, Demo Tour, saves, art, and city behavior were not touched.
+- **Protected future seam:** Source verification found no `custodyLedgerExercise`, `CUSTODY_LEDGER`, or `RP-002` import/route reference in `App.jsx`, `main.jsx`, or `CanonicalGameFrame.jsx`; protected Advance work remains non-routable.
+- **Validation/build identity:** focused frame/opening tests **10/10 PASS**; production build PASS with the existing chunk advisory; base `abd2b64` plus documentation-only W2; production assets `index-BzodCBvJ.js` / `index-C6Y6yjuH.css`.
+- **Demo reload:** port `4173` returned HTTP `200` and served the exact rebuilt assets. Root live desktop/narrow confirmation is pending before W3 disposition.
+- **Exact W3 handoff:** `Aesthetic Agent: review the W2 build abd2b64 + documentation-only verification (index-BzodCBvJ.js / index-C6Y6yjuH.css) from title through Slot 01, character naming, the three temporary prologue beats, Chapter I reveal, and the first Glass Meadow view at representative desktop and narrow layouts. Review hierarchy, responsive crop/aspect, CRT-shell restraint, readability, control sizing, photoreal continuity, artifacts, and unwanted emphasis only. Preserve opening order/copy/recovery/resume, field-linked Terminal focus and objective, available-width 16:9 presentation, >=44px targets, first-person/no protagonist/no ship, approved art, gameplay, saves, mastery/privacy/no-authority/Tour state, and non-routable RP-002. Record reproducible aesthetic findings for W4; do not change gameplay, curriculum, art, or retired fixed-canvas rules.`
+
 ## 2026-07-15 W1 opening-route evidence pass
 
 - **Verdict:** `PASS FROM FOCUSED TEST/BUILD EVIDENCE; ROOT LIVE CONFIRMATION REQUIRED.` At `17bcc9e`, the first-45-seconds contract remains complete and ordered: title, local Slot 01 creation, bounded character name, three temporary prologue beats, Chapter I reveal, and deliberate entry into Glass Meadow with a visible Terminal-search objective.

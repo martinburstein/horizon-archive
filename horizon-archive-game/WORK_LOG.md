@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-15 — Coder W2: first-45-seconds verification and reload
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1 reported no reproducible opening defect, and the focused verification reproduced none. No runtime, test, art, save, route, curriculum, or QA file was changed.
+- **Verified path/contracts:** The ordered title -> local Slot 01 -> bounded character name -> three temporary prologue beats -> Chapter I reveal -> deliberate Glass Meadow entry contract remains intact. Invalid-name recovery, one-activation anti-skip, exact sanitized resume boundaries, the visible Terminal-search objective, field-linked Terminal focus, available-width undistorted `16:9` world, responsive lower interface, and `>=44px` required targets remain covered.
+- **Protected boundary:** `src/App.jsx`, `src/main.jsx`, and `src/CanonicalGameFrame.jsx` contain no import or route reference for `custodyLedgerExercise`, `CUSTODY_LEDGER`, or `RP-002`. The new Advance-only Custody Ledger seam remains non-routable and cannot affect campaign, mastery, privacy/no-authority, Tour, city, or opening state.
+- **Validation:** Focused `canonicalFrame` plus `openingFlow` tests passed **10/10**. Production build passed with the existing large-chunk advisory. Port `4173` returned HTTP `200` and served the rebuilt production assets `index-BzodCBvJ.js` / `index-C6Y6yjuH.css` from base `abd2b64` plus this documentation-only W2 pass.
+- **Demo reload:** `YES — http://127.0.0.1:4173/` is serving the exact rebuilt bundle above. Root live desktop/narrow confirmation remains the next visual evidence gate.
+- **Issue IDs resolved:** None opened or changed; closed responsive, Tour, integrated-Meadow, and functional findings remain closed unless root reproduces them.
+- **Pipeline artifacts updated:** `Production Pipeline/demo-increments/DI-001-city-threshold.md` and this work log only. Untracked user PDF/training files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent operating on the W2 build abd2b64 + documentation-only verification (index-BzodCBvJ.js / index-C6Y6yjuH.css): review only the current first-45-seconds presentation from title through Slot 01, character naming, three temporary prologue beats, Chapter I reveal, and first Glass Meadow view at representative desktop and narrow layouts. Inspect hierarchy, responsive crop/aspect, CRT-shell restraint, readability, control sizing, photoreal scene continuity, and unwanted visual emphasis or artifacts. Preserve the exact opening order, copy, recovery, saved-step resume, field-linked Terminal focus, Terminal-search objective, available-width 16:9 world, >=44px targets, first-person/no protagonist/no ship framing, all approved art, campaign/mastery/privacy/no-authority/Tour state, and protected non-routable RP-002 boundary. Record only reproducible aesthetic findings for W4; do not reopen retired fixed-canvas gates or change gameplay/curriculum.`
+
 ## 2026-07-15 — Coder W4: ultrawide fluid-stage completion
 
 - **Mode:** `aesthetic-polish` for W4 only.
