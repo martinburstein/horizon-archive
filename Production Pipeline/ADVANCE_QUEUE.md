@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Coder Agent (`A5 protected state-model construction`) | Protected Demo Tour, prerequisite, full PY-009 chain, full `RP002-RAI-01` chain, and protected atomic persistence/save model complete; packet remains non-routable because observation interactions, responsive UI, protected route, storage integration, and art are absent | Starts only from RP-001 atomic expedition anchor and reversible civic route; SC-03 locks exact boards/targets, premium physical provenance evidence, closed identity-bearing material, zero city delta, both unchanged SOLIDIFIED learning chains plus five finalized observations as the sole review-eligibility conjunction, exact three-field local transaction, recoverable System failure / verified restore / deterministic downgrade with exact focus, one-active-group recovery, privacy sanitation, and Tour/campaign separation | Continue the highest-value unfinished protected A5 seam in a later Advance cycle without exposing RP-002. Keep `REVISE`; observation UI/credit, responsive UI, storage integration, protected/normal route exposure, art, world changes, successor exposure, and Working promotion remain excluded from this checkpoint. Working W1 stays on accepted RP-001. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 five-observation presentation impact review`) | Protected Demo Tour, prerequisite, full PY-009 chain, full `RP002-RAI-01` chain, and protected atomic persistence/save model complete; A1 has now locked the five-observation interaction meanings, but packet remains non-routable because observation state/UI, responsive UI, protected route, storage integration, and art are absent | Starts only from RP-001 atomic expedition anchor and reversible civic route; SC-03 locks exact boards/targets, premium physical provenance evidence, closed identity-bearing material, zero city delta, the deliberate five-observation order and ownership boundary, both unchanged SOLIDIFIED learning chains as separate evidence, exact three-field local transaction, recoverable System failure / verified restore / deterministic downgrade with exact focus, privacy sanitation, and Tour/campaign separation | A2 performs only the five-observation presentation impact review. Keep `REVISE`; no observation code/UI, responsive implementation, storage integration, protected/normal route exposure, art, world changes, successor exposure, or Working promotion is authorized. Working W1 stays on accepted RP-001. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A5 partial; protected learning and atomic persistence/save models complete)`
-- Team 1 railhead: `RP-002 — protected atomic persistence/save model complete; observation, responsive interface, protected route, storage integration, and art seams remain REVISE`
+- In-design packets: `1 — RP-002 (A5 partial; protected learning and atomic persistence/save models complete; A1 observation meaning locked)`
+- Team 1 railhead: `RP-002 — A1 five-observation interaction meaning locked after protected atomic persistence/save model; observation state/UI, responsive interface, protected route, storage integration, and art seams remain REVISE`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 five-observation Lore impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`, `REVISE`, protected, non-routable, and unavailable to Working. A1 locked the five save-eligibility observations as deliberate Scene-owned evidence inspections: three near conditions in any order, followed by distant repetition and the closed boundary in either order. Arrival, visibility, the early distant look, orientation, maintenance, focus, hover, dwell, motion, layout, learning, save, restore, and Tour remain zero observation credit. Each action may finalize only its matching canonical ID; revisits are idempotent; sanitation rejects forged, stale, duplicate, out-of-stage, and presentation-derived state; and every world/city/route clock remains invariant. A2 now performs only the presentation impact review. No observation code/UI, responsive implementation, route, storage, art, successor, or Working promotion is authorized.
 
 ## 2026-07-16 atomic persistence/save Storyboard impact note
 
