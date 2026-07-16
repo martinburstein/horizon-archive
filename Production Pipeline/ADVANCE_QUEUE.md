@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Lore Builder Agent (`A1 — next smallest safe dependency seam`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and isolated first-near-dispatch orchestration are complete; storage, art, normal exposure, and later work are absent | Pure FD-00/10/20/U/T orchestration now permits any one of three equal first actions to finalize exactly one model-owned ID/Scene statement and System 1-of-3 status, with fail-closed recovery, zero-credit evidence return, separate route return, and no cross-credit | Keep `REVISE`. A1 selects only the next smallest dependency-adjacent ownership/meaning lock; do not change App/main, browser storage, UI/art, normal route exposure, accepted bundles/world/city/access/external state, successor, Demo, or Working. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 — second-near-dispatch presentation impact`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, isolated first-near-dispatch orchestration, and second-near ownership/meaning are complete; storage, art, normal exposure, and later work are absent | A1 now locks only the verified one-ID return boundary and one fresh second unfinished near action: retain the first ID, add exactly one matching second ID/Scene statement and System 2-of-3 status, preserve both unfinished choices as peers, fail closed without losing the first fact, and stop before third-near completion | Keep `REVISE`. A2 performs only the second-near-dispatch presentation impact review; do not change geometry, code, component composition, App/main, browser storage, UI/art, normal route exposure, accepted bundles/world/city/access/external state, successor, Demo, or Working. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, and route-to-blank-observation orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A5 isolated first-near dispatch complete; next smallest safe dependency lock is A1`
+- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first-near-dispatch orchestration seams complete; second-near meaning is at A2; later integration remains REVISE)`
+- Team 1 railhead: `RP-002 — A1 second-near-dispatch ownership/meaning locked; A2 presentation impact next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 one-ID-to-second-near-dispatch Lore impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`, `REVISE`, protected, non-routable, and unavailable to Working. A1 locked only the zero-credit return from the first acknowledgement into a verified one-ID `SC-03-10` evidence group and one fresh deliberate activation of either unfinished equal near action. A valid second action retains the first canonical ID, adds exactly its matching second ID and Scene statement, reports System `2 of 3`, and returns to a verified two-ID group; replay, unsafe input, recovery, return, and presentation add nothing. Third-near completion, distant comparison, learning, save, route exposure, App/main, browser storage, component composition, art, accepted bundles/world/city/access/external state, successor, Demo, and Working remain excluded. A2 now performs only the second-dispatch presentation impact review.
 
 ## 2026-07-16 blank-to-first-near-dispatch Gameplay impact note
 
