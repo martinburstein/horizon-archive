@@ -821,6 +821,15 @@ The protected route now lets a player cross from accepted prologue credits into 
 - Active blocker `RP001-AESTH-004 — P1` requires three high-resolution photorealistic 16:9 City Threshold masters, registered effects, responsive derivatives, physically credible materials/lighting, no image-generation artifacts or pseudo-writing, first-person/no-human framing, and unchanged interaction/state behavior.
 - `RP001-AESTH-001` is superseded because the original figure-filled raster was removed; no-human framing must be rechecked on the new photorealistic masters.
 
+## 2026-07-16 W1 RP-002 adjacent normal-entry finding - `171ea6d`
+
+- **Disposition:** `BLOCKED - RP002-P1-001 OPEN / W2 BUG REPAIR NEXT.` The accepted RP-001 campaign remains stable, but promoted RP-002 cannot yet be entered through the normal player route.
+- **Live reproduction:** Resume the accepted save, use the field-linked Terminal after one recoverable wrong verb, enter the explicit no-credit Demo Tour, and advance to the shipped City Threshold predecessor. That boundary exposes only `RESUME CAMPAIGN`; normal campaign completion still terminates at credits. No action enters RP-002 `P0 ARRIVE / SC-03-00`.
+- **Expected/actual:** With both approved predecessor facts verified, an explicit campaign-owned civic-route action should enter the first RP-002 boundary and retain reversible return. Instead, App/main has no normal RP-002 route, UI, browser persistence, or render path. This blocks the adjacent packet without regressing accepted RP-001, so it is P1.
+- **Recovery/save evidence:** `TALK TO` on the first Terminal recovered normally; switching to `USE` opened practice. Tour entry granted no credit, `RESUME CAMPAIGN` returned to unfinished First Signal, and reload plus `Resume signal` reconstructed the first incomplete Glass Meadow boundary. Console warnings/errors were empty.
+- **Validation:** focused opening/Tour/City Threshold/protected-journey selection **8/8 PASS**; live build `index-BwgGd-Qy.js` / `index-D-UKM1r6.css`. No runtime, art, tests, curriculum, save fixture, or protected model changed.
+- **W2 acceptance:** expose the exact predecessor-gated normal route into P0 arrival, with one-hit activation, fail-closed forged/missing facts, Tour isolation, reversible return, bounded resume, zero arrival credit/world delta, accessible responsive controls, no RP-003 exposure, and a rebuilt live demo.
+
 ## 2026-07-16 next-cycle W1 boundary after RP-002 protected save construction
 
 - **Working target:** `RP-001 — IN DEMO / ACCEPTED; COORDINATOR CLEAN PASS`. The new RP-002 persistence/save code is a non-routable protected model with no component, browser storage, UI, art, or campaign entry and is not a Working increment.

@@ -4,6 +4,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Position summary
 
+- Current W1 position override: `RP-002 - BUG REPAIR / RP002-P1-001 NORMAL ENTRY ABSENT`. This supersedes the older ready-for-review wording retained below until W2 reloads the normal entry tranche.
+
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-002 — READY / W1 PLAYER REVIEW NEXT`
 - Team 1 railhead: `RP-003 — PROMOTED; RP-004 RESERVED SHELL SEEDED`
@@ -31,6 +33,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | 4 | `RP-004` | `RESERVED — surface-safe title pending A1` | `RP-003 specified end state` | `SEED / RESERVED SHELL` | `NOT READY` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | No story, location, learning, puzzle, art, code, route, or successor content assigned. |
 
 ## Latest Working handoff
+
+- `2026-07-16 / 171ea6d W1`: `RP002-P1-001` is the earliest exact blocker. A live black-box pass resumed the accepted campaign, recovered from a plausible wrong Terminal verb, entered the explicit no-credit Tour, and reached City Threshold; that predecessor exposes only `RESUME CAMPAIGN`, while normal campaign completion still ends at credits. Tour return and reload/Resume restored the first incomplete accepted boundary without credit or city change. Focused **8/8** passed and the console was clean. W2 owns only the predecessor-gated normal P0 arrival/return/resume tranche; do not expose RP-003.
 
 - `2026-07-16 / RP-003 coordinator gate`: independent full `413/413`, RP-003 curriculum self-test, production build, protected leakage/purity, predecessor continuity, atomic save/restore, Tour isolation, responsive metadata, and patch integrity passed. RP-003 is promoted but remains queued behind RP-002. RP-004 exists only as a reserved contiguous shell for the next A1 pass.
 
