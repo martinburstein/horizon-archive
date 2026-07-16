@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected second-near dispatch release gate
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` All nine role passes and the independent release gate completed. Protected RP-002 retains its isolated pure second-near dispatch work but remains `REVISE`, non-routable, and absent from App/main, browser storage, accepted UI/art/routes/bundles, world state, successors, and Working promotion.
+- **Live review:** title and Glass Meadow passed representative desktop and `390 x 844` narrow review with no horizontal page escape or browser console issues. Desktop title actions measured `48px`; Meadow controls remained at least `44px` high. The accepted `1672 x 941` master retained full source resolution, `object-fit: cover`, first-person framing, reachable hotspots, integrated static Terminal/route-marker geometry, and readable responsive reflow. The viewport was reset and the playable title was left open.
+- **Release validation:** complete game suite **382/382 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **139.7 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted presentation, gameplay/recovery, bounded first-incomplete saves, strict mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route change, and RP-002 non-routability remain exact.
+- **Next handoff:** `A1 selects the next smallest safe protected RP-002 adjacency. Do not import App/main, add UI/browser storage/art, expose a normal route, change accepted bundles/world/city/access/external state, name a successor, reload the Demo, or promote to Working.`
+
 ## 2026-07-16 W4 final aesthetic verification/reload after protected second-near dispatch - `87fa30f` handoff
 
 - **Mode/verdict:** `aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no finding and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
