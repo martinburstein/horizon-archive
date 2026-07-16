@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W2 accepted-boundary verification/reload after protected route-to-observation construction - `9c7ad62` handoff
+
+- **Mode/verdict:** `Coder Agent - bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1's clean accepted-path report remained valid, and focused/full/build verification reproduced no defect. Runtime, tests, art, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation:** exact focused opening/Tour/game/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **357/357 PASS**; production build PASS with the existing non-blocking large-chunk advisory. App/main/frame source, rebuilt page/JS/CSS, and accepted storage call sites contain no protected route-state, route-to-observation, RP-002, SC-03, or entrypoint leakage.
+- **Build/reload:** port `4173` listener PID `11860` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the rebuilt page and both assets returned HTTP `200`.
+- **Boundary preserved:** accepted first-person photoreal presentation, responsive `>=44px` controls, keyboard/focus and recovery contracts, bounded first-incomplete saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and protected RP-002 non-routability remain exact.
+- **Issue disposition:** no issue opened, changed, or reopened; W2 authorizes no runtime or art correction.
+- **Exact W3 handoff:** `Aesthetic Agent: review only the W2-reloaded accepted index-DYIYoZtf.js / index-VPnRyv7C.css build on port 4173 at representative desktop and narrow responsive layouts. Preserve the four 1672 x 941 photoreal masters, aspect-preserving crop, first-person framing, integrated Meadow geometry, localized focus, >=44px targets, stable static screen-only geometry, gameplay/recovery, bounded saves/mastery/privacy/offline/no-authority, Tour isolation, unchanged continuation, cityStateDelta:null, accepted world state, and protected RP-002 non-routability. The isolated route and route-to-observation modules are intentionally absent from App/main, storage, accepted UI/art/routes, and the rebuilt bundle. Open a finding only from exact reproducible evidence; otherwise return a clean aesthetic verdict for W4 final reload.`
+
 ## 2026-07-16 W1 accepted-boundary regression after protected route-to-observation construction - `0d6726d`
 
 - **Verdict:** `PASS - NO REPRODUCIBLE P0/P1/P2 ACCEPTED-PATH DEFECT.` `RP-001` remains the oldest accepted live-demo packet and the complete accepted campaign plus separate no-credit Demo Tour remain complete. `RP-002` stayed `REVISE`, protected, non-routable, outside App/main, browser storage, accepted bundle/UI/art/routes, and Working promotion; its isolated route-to-blank-observation seam was intentionally unavailable and was not treated as a defect.
