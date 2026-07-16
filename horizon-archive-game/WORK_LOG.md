@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 - Coder W2: accepted-boundary verification and reload after protected first-near dispatch
+
+- **Mode/verdict:** `bug-repair; PASS - NO FUNCTIONAL REPAIR REQUIRED.` W1 checkpoint `dcf026c` reported no accepted-path defect; W2 reproduced none and made no runtime, test, art, save, route, curriculum, accepted-world, or QA-binary change.
+- **Validation:** focused **40/40 PASS**; full **369/369 PASS**; production build PASS with unchanged `index-DYIYoZtf.js` / `index-VPnRyv7C.css` and only the existing chunk advisory; App/main, accepted JavaScript, and browser-storage leakage scans PASS; page/JS/CSS HTTP `200`.
+- **Reload:** port `4173` was rebuilt and restarted; listener PID `55600` serves the exact accepted assets. Recovery, bounded saves, mastery, privacy/offline/no-authority, responsive/focus, Tour isolation, continuation, null city delta, zero accepted world/route change, and protected RP-002 absence remain exact.
+- **Files changed:** this log, DI-001, Working Queue, and Story Rail Map only. No issue was opened or repaired.
+- **Exact W3 handoff:** `Aesthetic Agent: review the W2-reloaded index-DYIYoZtf.js / index-VPnRyv7C.css build on port 4173 at representative desktop and narrow layouts. Report only exact accepted-opening, Glass Meadow, or RP-001 source-quality, crop, hierarchy, scale, seam, readability, static-geometry, framing, or protagonist/ship-exclusion findings. Preserve every gameplay, learning, recovery, save, privacy/offline/no-authority, Tour, world, and protected-route invariant. RP-002 remains intentionally absent and out of scope. Do not apply retired pixel-art or fixed-viewport gates.`
+
 ## 2026-07-16 - Coder A5: isolated first-near observation dispatch
 
 - **Mode:** `advance` / advance-construction only.
