@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected responsive observation component
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` The two-team cycle completed and the accepted title-to-credits campaign remains stable. Protected RP-002 now includes its isolated responsive observation component but remains `REVISE`, non-routable, and absent from App/main, hotspot geometry, browser storage, routes, production art, world state, successors, and Working promotion.
+- **Live review:** title and Glass Meadow passed representative desktop and narrow responsive gates with no horizontal escape, `48px`/`44px` title actions, required Meadow controls at least `44px`, localized field-Terminal focus, clean console, and aspect-preserving display of the `1672 x 941` Meadow master. First-person/no-protagonist/no-ship framing, integrated geometry, stable static screen behavior, hierarchy, and reachable vertical flow remained intact. The temporary viewport override was reset and the playable title was left open.
+- **Release validation:** exact game suite **317/317 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **130.3 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted photoreal presentation, recovery, strict mastery, bounded save/privacy/offline/no-authority contracts, Demo Tour isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route delta, and RP-002 non-routability remain exact.
+- **Result:** `COORDINATOR COMPLETE - PORT 4173 SERVES THE CURRENT ACCEPTED BUILD.`
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload - `a435017` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
