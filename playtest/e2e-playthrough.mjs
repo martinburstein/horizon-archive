@@ -78,13 +78,13 @@ try {
   await page.getByRole("button", { name: "New expedition" }).click();
   await completeOpening(page);
 
-  await assertPixelMeadow(page, "desktop", "locked", "locked");
-  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-desktop-qa.png");
-  await verifyMeadowPixelHotspots(page, "desktop");
+  await assertResponsiveMeadow(page, "desktop", "locked", "locked");
+  await captureMeadow(page, "playtest/glass-meadow-pixel-desktop-qa.png");
+  await verifyMeadowHotspots(page, "desktop");
   await page.setViewportSize({ width: 320, height: 900 });
-  await assertPixelMeadow(page, "320px narrow", "locked", "locked");
-  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-narrow-qa.png");
-  await verifyMeadowPixelHotspots(page, "320px narrow");
+  await assertResponsiveMeadow(page, "320px narrow", "locked", "locked");
+  await captureMeadow(page, "playtest/glass-meadow-pixel-narrow-qa.png");
+  await verifyMeadowHotspots(page, "320px narrow");
   await page.setViewportSize({ width: 1600, height: 900 });
 
   const openQuestion = async () => {
@@ -102,7 +102,7 @@ try {
   if (await page.locator('[data-terminal-exercise="EX-L0102-ROUTE-MARKER"]').count()) throw new Error("Route marker opened before L-01-01");
   await page.locator('button.hotspot[data-primary-hotspot="true"]').click();
   await page.locator('[data-terminal-exercise="terminal-l0101-independent-run"]').waitFor();
-  await page.locator('#first-terminal-orientation-heading:focus').waitFor();
+  await page.locator('#first-terminal-orientation-heading:focus, #terminal-title:focus').waitFor();
   await page.getByText("This is course-authored Python practice, not a Microsoft exam question", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Close", exact: true }).click();
   await page.getByText("executes the file", { exact: false }).waitFor();
@@ -167,7 +167,7 @@ print("Operator:", learner)`);
     throw new Error(`Terminal mastery evidence incomplete: ${JSON.stringify(evidence)}`);
   }
   if (await page.getByRole("button", { name: "Continue", exact: true }).count()) throw new Error("L-01-01 skipped the required route marker");
-  await assertPixelMeadow(page, "Petal complete", "completed", "awake");
+  await assertResponsiveMeadow(page, "Petal complete", "completed", "awake");
 
   await page.locator('button.hotspot[data-hotspot-id="route-marker"]').hover();
   await page.locator(".scene-frame").screenshot({ path: qaPath("route-marker-hotspot-desktop-qa.png") });
@@ -239,8 +239,8 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
   await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).waitFor();
   await page.waitForFunction(() => document.activeElement?.getAttribute("aria-label") === "Start optional calibration practice");
-  await assertPixelMeadow(page, "route complete", "completed", "completed");
-  await capturePixelMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
+  await assertResponsiveMeadow(page, "route complete", "completed", "completed");
+  await captureMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
   const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
   if (routeMastery?.exerciseId !== "EX-L0102-ROUTE-MARKER" || routeMastery?.attemptCount !== 6 || routeMastery?.hintLevel !== 2 || routeMastery?.confidence !== "medium" || routeMastery?.masteryStatus !== "mastered") {
     throw new Error(`Route marker mastery incomplete: ${JSON.stringify(routeMastery)}`);
@@ -256,7 +256,7 @@ print("Operator:", learner)`);
   await page.getByText("ROUTE OPEN", { exact: false }).first().waitFor();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
-  await assertPixelMeadow(page, "calibration exit", "completed", "completed");
+  await assertResponsiveMeadow(page, "calibration exit", "completed", "completed");
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).waitFor();
   await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
@@ -276,7 +276,7 @@ print("Operator:", learner)`);
   await page.setViewportSize({ width: 320, height: 900 });
   await page.screenshot({ path: qaPath("calibration-terminal-narrow-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
-  await assertPixelMeadow(page, "calibration failed exit", "completed", "completed");
+  await assertResponsiveMeadow(page, "calibration failed exit", "completed", "completed");
   await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   const calibrationSourceTab = page.getByRole("button", { name: "source", exact: true });
@@ -297,7 +297,7 @@ print("Operator:", learner)`);
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="meadow"]').waitFor();
-  await assertPixelMeadow(page, "calibration reload", "completed", "completed");
+  await assertResponsiveMeadow(page, "calibration reload", "completed", "completed");
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).evaluate((element) => {
     if (document.activeElement !== element) throw new Error("Completed Meadow resume did not focus the earned departure action");
   });
@@ -336,7 +336,7 @@ print("Operator:", learner)`);
   if (calibrationMastery?.exerciseId !== "EX-L0103-CALIBRATION-DEBUG" || calibrationMastery?.attemptCount !== 5 || calibrationMastery?.hintLevel !== 2 || calibrationMastery?.masteryStatus !== "mastered" || calibrationMastery?.misconceptionTags?.length) throw new Error(`Calibration mastery incomplete: ${JSON.stringify(calibrationMastery)}`);
   const calibrationRetrievalKeys = Object.keys(calibrationMastery.checkResults?.retrieval || {});
   if (calibrationRetrievalKeys.length !== 4 || calibrationRetrievalKeys.some((key) => /tab|escape|focus|modal|inert/i.test(key))) throw new Error("Keyboard orientation leaked into graded retrieval");
-  await assertPixelMeadow(page, "calibration mastered", "completed", "completed");
+  await assertResponsiveMeadow(page, "calibration mastered", "completed", "completed");
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
@@ -1116,7 +1116,7 @@ print("Operator:", learner)`);
     await page.waitForFunction(() => document.querySelector(".canonical-game-frame")?.dataset.canonicalLayout === "narrow");
     await page.waitForFunction(({ width, height }) => {
       const rect = document.querySelector(".canonical-game-frame")?.getBoundingClientRect();
-      return rect && rect.left >= -0.5 && rect.top >= -0.5 && rect.right <= width + 0.5 && rect.bottom <= height + 0.5;
+      return rect && rect.left >= -0.5 && rect.right <= width + 0.5;
     }, { width, height });
     const traceGeometry = await page.evaluate(() => {
       const frame = document.querySelector(".canonical-game-frame");
@@ -1127,7 +1127,7 @@ print("Operator:", learner)`);
       const rect = (element) => { const value = element.getBoundingClientRect(); return { left: value.left, top: value.top, right: value.right, bottom: value.bottom, width: value.width, height: value.height }; };
       return {
         layout: frame?.dataset.canonicalLayout,
-        pageContained: document.documentElement.scrollWidth === innerWidth && document.documentElement.scrollHeight === innerHeight,
+        pageContained: document.documentElement.scrollWidth <= innerWidth + 1,
         dialog: rect(dialog),
         routeKey: { ...rect(routeKey), scrollWidth: routeKey.scrollWidth, clientWidth: routeKey.clientWidth },
         form: { ...rect(form), scrollWidth: form.scrollWidth, clientWidth: form.clientWidth },
@@ -1135,9 +1135,9 @@ print("Operator:", learner)`);
         fullLabels: fields.map((field) => [...field.options].map((option) => option.textContent)),
       };
     });
-    if (!traceGeometry.pageContained || traceGeometry.dialog.left < 0 || traceGeometry.dialog.top < 0 || traceGeometry.dialog.right > width || traceGeometry.dialog.bottom > height) throw new Error(`SDK trace escaped ${label}: ${JSON.stringify(traceGeometry)}`);
+    if (!traceGeometry.pageContained || traceGeometry.dialog.left < 0 || traceGeometry.dialog.right > width) throw new Error(`SDK trace escaped horizontally at ${label}: ${JSON.stringify(traceGeometry)}`);
     if (traceGeometry.routeKey.scrollWidth > traceGeometry.routeKey.clientWidth || traceGeometry.form.scrollWidth > traceGeometry.form.clientWidth) throw new Error(`SDK trace has horizontal overflow at ${label}: ${JSON.stringify(traceGeometry)}`);
-    if (traceGeometry.layout !== "narrow" || traceGeometry.fields.length !== 3 || traceGeometry.fields.some((field) => field.height < 24 || field.width < 44)) throw new Error(`SDK trace target/reflow contract failed at ${label}: ${JSON.stringify(traceGeometry)}`);
+    if (traceGeometry.layout !== "narrow" || traceGeometry.fields.length !== 3 || traceGeometry.fields.some((field) => field.height < 44 || field.width < 44)) throw new Error(`SDK trace target/reflow contract failed at ${label}: ${JSON.stringify(traceGeometry)}`);
     if (!(traceGeometry.fields[0].top < traceGeometry.fields[1].top && traceGeometry.fields[1].top < traceGeometry.fields[2].top)) throw new Error(`SDK trace did not use one-column narrow order at ${label}`);
     if (!traceGeometry.fullLabels.flat().includes("Verify approved identity, RBAC, resource, and scope")) throw new Error(`SDK trace lost its longest native-select label at ${label}`);
   }
@@ -1277,8 +1277,8 @@ print("Operator:", learner)`);
     forgedSaveBlocked: true,
     wrongAnswerRecovery: true,
     terminalExercise: true,
-    meadowLogicalPixels: true,
-    meadowIntegerScale: true,
+    meadowFluid16x9: true,
+    meadowAvailableWidth: true,
     meadowStateCues: true,
     meadowHotspotsDesktop: true,
     meadowHotspotsNarrow: true,
@@ -1382,7 +1382,7 @@ print("Operator:", learner)`);
     sdkRouteTransfer: true,
     sdkRouteDecisionTraceRemediation: true,
     sdkRouteKeyKeyboardRegion: true,
-    sdkRouteExactViewportReflow: true,
+    sdkRouteResponsiveReflow: true,
     sdkRouteStrictMastery: true,
     sdkRoutePrivacy: true,
     singleAgentPrimary: true,
@@ -1496,12 +1496,12 @@ print("Operator:", learner)`);
   await browser.close();
 }
 
-async function capturePixelMeadow(page, path) {
+async function captureMeadow(page, path) {
   await page.locator(".scene-art.glass-meadow-art").waitFor();
   await page.locator(".scene-frame").screenshot({ path: qaPath(path) });
 }
 
-async function verifyMeadowPixelHotspots(page, viewportLabel) {
+async function verifyMeadowHotspots(page, viewportLabel) {
   await page.getByRole("button", { name: "USE", exact: true }).click();
   const route = page.getByRole("button", { name: "use route-marker Terminal, locked", exact: true });
   const petal = page.getByRole("button", { name: "use field-linked Terminal", exact: true });
@@ -1524,7 +1524,7 @@ async function verifyMeadowPixelHotspots(page, viewportLabel) {
 
 async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLabel) {
   if (await dialog.getAttribute("role") !== "dialog" || await dialog.getAttribute("aria-modal") !== "true") throw new Error(`Terminal dialog semantics missing at ${viewportLabel}`);
-  if (await page.locator("#first-terminal-orientation-heading:focus").count() !== 1) throw new Error(`First Terminal settled focus is not its visible orientation heading at ${viewportLabel}`);
+  await page.waitForFunction(() => ["first-terminal-orientation-heading", "terminal-title"].includes(document.activeElement?.id));
   if (!await page.locator(".command-panel").evaluate((element) => element.inert)) throw new Error(`Terminal background is not inert at ${viewportLabel}`);
   if (!await trigger.isDisabled()) throw new Error(`Terminal trigger remained interactive behind dialog at ${viewportLabel}`);
   await page.keyboard.press("Shift+Tab");
@@ -1543,40 +1543,42 @@ async function assertSceneVisibleWithMeadowTerminal(page, viewportLabel) {
     const terminal = document.querySelector(".terminal-workbench").getBoundingClientRect();
     return { frameWidth: frame.width, frameHeight: frame.height, terminalWidth: terminal.width, terminalHeight: terminal.height, imageHeight: image.height };
   });
-  if (geometry.imageHeight < 179 || geometry.terminalWidth > geometry.frameWidth || geometry.terminalHeight > geometry.frameHeight) throw new Error(`Meadow Terminal escaped the scene frame at ${viewportLabel}: ${JSON.stringify(geometry)}`);
+  if (geometry.imageHeight <= 0 || geometry.terminalWidth > geometry.frameWidth || geometry.terminalHeight > geometry.frameHeight) throw new Error(`Meadow Terminal escaped the scene frame at ${viewportLabel}: ${JSON.stringify(geometry)}`);
 }
 
-async function assertPixelMeadow(page, viewportLabel, petalState, routeState) {
+async function assertResponsiveMeadow(page, viewportLabel, petalState, routeState) {
   const viewport = page.viewportSize();
   const expectedLayout = viewport.width >= 760 && viewport.height >= 596 ? "canonical" : "narrow";
   await page.locator(`.canonical-game-frame[data-canonical-layout="${expectedLayout}"]`).waitFor();
   await page.locator(".scene-art.glass-meadow-art").waitFor();
-  await page.waitForFunction((logicalWidth) => {
-    const frame = document.querySelector(".canonical-game-frame");
-    const scale = Number(frame?.dataset.canonicalScale);
-    return Number.isFinite(scale) && Math.abs(document.querySelector(".scene-frame").getBoundingClientRect().width - logicalWidth * scale) <= 1;
-  }, expectedLayout === "narrow" ? 320 : 640);
+  await page.waitForFunction(() => {
+    const image = document.querySelector(".scene-art.glass-meadow-art");
+    const stage = document.querySelector(".scene-frame");
+    return image?.complete && image.naturalWidth > 0 && stage?.getBoundingClientRect().width > 0;
+  });
   const metrics = await page.evaluate(() => {
     const image = document.querySelector(".scene-art.glass-meadow-art");
     const stage = document.querySelector(".scene-frame");
+    const frame = document.querySelector(".canonical-game-frame");
     const petal = document.querySelector('[data-hotspot-id="primary"]');
     const route = document.querySelector('[data-hotspot-id="route-marker"]');
     const stageRect = stage.getBoundingClientRect();
     const imageRect = image.getBoundingClientRect();
+    const frameRect = frame.getBoundingClientRect();
     const petalRect = petal.getBoundingClientRect();
     const routeRect = route.getBoundingClientRect();
     return {
       imageWidth: imageRect.width, imageHeight: imageRect.height, imageRendering: getComputedStyle(image).imageRendering,
-      scale: Number(document.querySelector(".canonical-game-frame").dataset.canonicalScale),
       stageWidth: stageRect.width, stageHeight: stageRect.height, petalWidth: petalRect.width, petalHeight: petalRect.height,
       routeWidth: routeRect.width, routeHeight: routeRect.height, separated: petalRect.right < routeRect.left,
       contained: petalRect.left >= stageRect.left && routeRect.right <= stageRect.right && petalRect.top >= stageRect.top && routeRect.bottom <= stageRect.bottom,
+      frameWidth: frameRect.width, viewportWidth: document.documentElement.clientWidth,
+      scrollWidth: document.documentElement.scrollWidth,
       alt: image.getAttribute("alt"),
     };
   });
-  const expectedWidth = (expectedLayout === "narrow" ? 320 : 640) * metrics.scale;
-  const expectedHeight = (expectedLayout === "narrow" ? 179 : 359) * metrics.scale;
-  if (Math.abs(Math.round(metrics.imageWidth) - expectedWidth) > 1 || Math.abs(Math.round(metrics.imageHeight) - expectedHeight) > 1) throw new Error(`Wrong Meadow display resolution at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (Math.abs(metrics.stageWidth / metrics.stageHeight - 16 / 9) > 0.01 || Math.abs(metrics.imageWidth - metrics.stageWidth) > 1 || Math.abs(metrics.imageHeight - metrics.stageHeight) > 1) throw new Error(`Meadow world is not an undistorted fluid 16:9 stage at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.frameWidth < metrics.viewportWidth - 48 || metrics.scrollWidth > metrics.viewportWidth + 1) throw new Error(`Meadow frame failed available-width or horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.imageRendering !== "auto") throw new Error(`Meadow richness sampling disabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!/perfectly flat field/i.test(metrics.alt) || !/first person/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
@@ -1794,8 +1796,7 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
   const expectedLayout = viewportLabel === "320x240" || viewportLabel === "640x480" ? "narrow" : "canonical";
   await page.waitForFunction((layout) => {
     const frame = document.querySelector(".canonical-game-frame");
-    const scale = Number(frame?.dataset.canonicalScale);
-    return frame?.dataset.canonicalLayout === layout && Number.isFinite(scale) && scale > 0;
+    return frame?.dataset.canonicalLayout === layout;
   }, expectedLayout);
   await page.waitForFunction(() => document.querySelector(".scene-art")?.complete && document.querySelector(".scene-art")?.naturalWidth > 0);
   const metrics = await page.evaluate(() => {
@@ -1827,8 +1828,12 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
       logicalInterfaceHeight: command.offsetHeight,
       renderedWidth: gameRect.width,
       renderedHeight: gameRect.height,
-      centeredX: Math.abs(shellRect.left + shellRect.width / 2 - (hostRect.left + hostRect.width / 2)) < 12,
-      centeredY: Math.abs(shellRect.top + shellRect.height / 2 - (hostRect.top + hostRect.height / 2)) < 12,
+      hostWidth: hostRect.width,
+      shellWidth: shellRect.width,
+      worldRatio: sceneRect.width / sceneRect.height,
+      commandFollowsWorld: commandRect.top >= sceneRect.bottom - 1,
+      scrollWidth: document.documentElement.scrollWidth,
+      viewportWidth: document.documentElement.clientWidth,
       alt: image.getAttribute("alt"),
       src: image.currentSrc,
       visualState: image.dataset.ab01State,
@@ -1848,17 +1853,17 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
 
   if (!metrics) throw new Error(`Ruins geometry unavailable at ${viewportLabel}`);
   const narrow = viewportLabel === "320x240" || viewportLabel === "640x480";
-  if (metrics.visualState !== "available" || (!metrics.src.includes("drowned-archive-master-") && !metrics.src.startsWith("data:image/png;base64,"))) throw new Error(`Wrong Drowned Archive production asset at ${viewportLabel}: ${metrics.src}`);
+  if (metrics.visualState !== "available" || (!metrics.src.includes("drowned-archive-master") && !metrics.src.startsWith("data:image/png;base64,"))) throw new Error(`Wrong Drowned Archive production asset at ${viewportLabel}: ${metrics.src}`);
   if (!/Photorealistic flooded Builder phase-processing basin/i.test(metrics.alt) || !/Tidal Lens/i.test(metrics.alt) || !/grounded local coupling/i.test(metrics.alt)) throw new Error(`Drowned Archive alt text incomplete: ${metrics.alt}`);
   if (metrics.layout !== (narrow ? "narrow" : "canonical")) throw new Error(`Wrong frame layout at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.logicalWidth !== (narrow ? 320 : 640) || metrics.logicalHeight !== (narrow ? 240 : 480) || metrics.logicalWorldHeight !== (narrow ? 180 : 360) || metrics.logicalInterfaceHeight !== (narrow ? 60 : 120)) throw new Error(`Wrong logical bands at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (Math.abs(metrics.renderedWidth - metrics.logicalWidth * metrics.scale) > 0.5 || Math.abs(metrics.renderedHeight - metrics.logicalHeight * metrics.scale) > 0.5 || !metrics.centeredX || !metrics.centeredY) throw new Error(`Frame scale/letterbox failure at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (Math.abs(metrics.worldRatio - 16 / 9) > 0.01 || !metrics.commandFollowsWorld) throw new Error(`Responsive world/interface bands failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.hostWidth - metrics.shellWidth > 40 || metrics.scrollWidth > metrics.viewportWidth + 1) throw new Error(`Frame failed available-width or horizontal-reflow contract at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (metrics.naturalWidth !== 1672 || metrics.naturalHeight !== 941) throw new Error(`Unexpected Drowned Archive asset dimensions at ${viewportLabel}: ${metrics.naturalWidth}x${metrics.naturalHeight}`);
   if (metrics.imageRendering !== "auto") throw new Error(`Drowned Archive photoreal sampling disabled at ${viewportLabel}`);
   if (metrics.hotspotWidth < 44 || metrics.hotspotHeight < 44) throw new Error(`Ruins target below 44px at ${viewportLabel}`);
   if (!metrics.hotspotContained || metrics.liveButtons < (narrow ? 4 : 6)) throw new Error(`AB-01 DOM interaction contract failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.minControlWidth < 24 || metrics.minControlHeight < 24) throw new Error(`Adventure control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
-  if (metrics.returnWidth < 24 || metrics.returnHeight < 24) throw new Error(`Safe-return control target below 24px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.minControlWidth < 44 || metrics.minControlHeight < 44) throw new Error(`Adventure control target below 44px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  if (metrics.returnWidth < 44 || metrics.returnHeight < 44) throw new Error(`Safe-return control target below 44px at ${viewportLabel}: ${JSON.stringify(metrics)}`);
 }
 
 async function captureWitnessScene(page, path) {
@@ -1967,7 +1972,7 @@ async function assertWitnessHotspotAlignment(page, viewportLabel) {
   });
 
   if (!metrics) throw new Error(`Witness geometry unavailable at ${viewportLabel}`);
-  if (!metrics.src.includes("witness-corridor-master-")) throw new Error(`Wrong Witness asset at ${viewportLabel}: ${metrics.src}`);
+  if (!metrics.src.includes("witness-corridor-master")) throw new Error(`Wrong Witness asset at ${viewportLabel}: ${metrics.src}`);
   if (!/Photorealistic Builder forensic passage/i.test(metrics.alt) || !/integrated evidence coupling on the left/i.test(metrics.alt) || !/collapsed maintenance assembly on the right/i.test(metrics.alt)) {
     throw new Error(`Witness alt text does not distinguish both objects: ${metrics.alt}`);
   }

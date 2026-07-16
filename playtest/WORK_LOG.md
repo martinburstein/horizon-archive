@@ -1,5 +1,14 @@
 # Player Agent Work Log
 
+## 2026-07-15 — Coordinator closure: fluid responsive presentation
+
+- **Outcome:** `PASS — VIEWPORT-P1-001 RESOLVED AND LIVE.` The playable demo no longer selects fixed `640 x 480` / `320 x 240` canvases, applies integer zoom, or caps the stage at `1920px`. The scalable shell and world use available width; the world remains undistorted `16:9`; commands and Terminals reflow vertically; horizontal page escape is blocked.
+- **Live evidence:** reloaded the production preview at `http://127.0.0.1:4173/`, resumed into Glass Meadow, and confirmed the integrated first-person photoreal scene fills the available browser width. At the representative live viewport, the world measured `1229.75 x 691.73` (`1.7778`) inside a `1265px` host with no horizontal overflow. The full opening/save/name/prologue/Meadow route also remained playable.
+- **Accessibility repair found by coordinator:** the modernized E2E gate exposed legacy `24px` Chapter II return and Terminal form controls. All command-panel buttons and Terminal buttons/inputs/selects/textareas now retain a `44px` minimum; the full responsive E2E subsequently passed through credits with no runtime errors.
+- **Validation:** game suite **259/259**; production build passed (`index-BzodCBvJ.js`, `index-C6Y6yjuH.css`); RP-002 self-test passed; full title-to-credits E2E passed in **149.3 seconds**; final E2E source syntax check passed. Regenerated QA binaries were restored before commit.
+- **Historical-report note:** `runs/run-20260711-001.json` predates the expanded question manifest and is not valid as a current run report. It remains historical evidence; the current full E2E is the release gate. A new schema-valid run report can be generated when the reporting pipeline is refreshed.
+- **Status:** `ACCEPTED — RESPONSIVE DEMO LIVE; NO FIXED-VIEWPORT RELEASE GATE.`
+
 ## 2026-07-15 — W1 retired fixed-canvas source/build audit
 
 - **Outcome:** `REVISE — VIEWPORT-P1-001; RESPONSIVE PRESENTATION, NOT GAMEPLAY.` The newly authoritative direction retires fixed `640 x 480`, `640 x 360`, and `320 x 240` presentation gates and requires the photoreal world to use available display space responsively. The current implementation still wraps the title, save creation, naming, all three prologue modes, Chapter I reveal, Demo Tour, Glass Meadow, and Drowned Archive in `CanonicalGameFrame`.

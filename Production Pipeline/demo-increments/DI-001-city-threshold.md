@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-15 coordinator closure — responsive presentation
+
+- **Disposition:** `VIEWPORT-P1-001 RESOLVED — COORDINATOR VALIDATED.` Fixed 640/320 canvases, integer scaling, fixed bezel sizing, and the residual 1920px ceiling are retired. The CRT remains only a scalable visual shell around an available-width, undistorted 16:9 world with the lower interface in normal vertical flow.
+- **Live evidence:** the rebuilt 4173 demo resumed into Glass Meadow at a representative `1265px` browser width. The visible world measured `1229.75 x 691.73` at `1.7778`, the frame used the available host width minus minor shell padding, and document horizontal overflow was false.
+- **Coordinator repair:** the responsive E2E uncovered `24px` Chapter II return and Terminal form controls. The command panel and Terminal workspace now enforce a `44px` minimum target without changing gameplay, art, hotspots, copy, focus trapping, mastery, saves, Tour, or city state.
+- **Validation:** **259/259** game tests; build `index-BzodCBvJ.js` / `index-C6Y6yjuH.css`; RP-002 self-test; full E2E through credits in **149.3s** with no runtime errors; syntax check passed. Incidental QA PNG changes were reverted.
+- **Residual note:** the 2026-07-11 archived run report no longer matches the expanded current question manifest. It is not used as the release gate; regenerate a modern run report when that reporting artifact is next advanced.
+
 ## 2026-07-15 W3 VIEWPORT-P1-001 fluid-stage review
 
 - **Verdict:** `REVISE — ONE RESIDUAL P1 WIDTH CAP.` The fixed logical canvases, integer zoom, and fixed bezel are retired successfully; 16:9 world art, flowing lower UI, narrow stacking, and 44px targets pass source/test review. However, `.crt-stage-anchor` still caps the complete stage at `1920px` and centers it.

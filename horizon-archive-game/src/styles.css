@@ -1478,6 +1478,7 @@ h1 {
 }
 
 .canonical-game-frame .verb,
+.canonical-game-frame .command-panel button,
 .canonical-game-frame .inventory button,
 .canonical-game-frame .dialogue-actions button,
 .canonical-game-frame .demo-tour-actions button,
@@ -1485,6 +1486,14 @@ h1 {
 .canonical-game-frame .city-command-actions button,
 .canonical-game-frame .city-overlay button,
 .canonical-game-frame .city-overlay select {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.canonical-game-frame .terminal-workbench button,
+.canonical-game-frame .terminal-workbench input,
+.canonical-game-frame .terminal-workbench select,
+.canonical-game-frame .terminal-workbench textarea {
   min-width: 44px;
   min-height: 44px;
 }
@@ -1609,6 +1618,12 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .city-learning-panel select {
   min-height: 44px;
   font-size: 0.75rem;
+}
+
+.canonical-game-frame .inventory .chapter-return-action,
+.canonical-game-frame[data-canonical-layout="narrow"] .inventory[data-chapter-return="true"] .chapter-return-action {
+  height: auto;
+  min-height: 44px;
 }
 
 @media (max-width: 480px) {

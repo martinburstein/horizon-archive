@@ -23,6 +23,8 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 ## Current-demo quality lane
 
+`VIEWPORT-P1-001` is `RESOLVED — COORDINATOR VALIDATED` as of 2026-07-15. Fixed logical canvases, integer scaling, and the residual ultrawide ceiling are retired; the live demo now uses an available-width 16:9 world, vertical interface reflow, no horizontal page escape, and 44px command/Terminal targets. Reopen only if reproduced.
+
 The Working Team may always select the highest-value reproducible current-demo defect when no packet is ready or when the defect blocks the next packet.
 
 The required pass order is Player Agent, shared Coder Agent bug repair and reload, Aesthetic Agent review, then the same Coder Agent's aesthetic implementation and final reload.

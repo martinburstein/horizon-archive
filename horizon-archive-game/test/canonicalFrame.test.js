@@ -39,6 +39,8 @@ test("frame component no longer applies fixed dimensions, zoom, or integer canva
 });
 
 test("narrow and zoom-reflow presentation keeps required targets at least 44px", () => {
+  assert.match(styles, /\.canonical-game-frame \.command-panel button,[\s\S]*?min-height: 44px;/);
+  assert.match(styles, /\.canonical-game-frame \.terminal-workbench button,[\s\S]*?min-height: 44px;/);
   assert.match(styles, /data-canonical-layout="narrow"\] \.verb,[\s\S]*?min-width: 44px;[\s\S]*?min-height: 44px;/);
   assert.match(styles, /data-canonical-layout="narrow"\] \.demo-tour-actions button,[\s\S]*?min-height: 44px;/);
   assert.match(styles, /@media \(max-width: 480px\)[\s\S]*?body \{ min-width: 0; \}/);
