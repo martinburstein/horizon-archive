@@ -1,5 +1,16 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload - `a435017` handoff
+
+- **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding, and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Finding disposition:** no aesthetic ID was opened, changed, or reopened. Closed responsive, opening, Tour, Meadow-integration, localized-focus, and RP-001 findings remain closed. Optional registered membrane animation remains deferred follow-on art, not a defect in the accepted static state.
+- **Presentation preserved:** the integrated Glass Meadow master and three City Threshold masters remain lossless RGB `1672 x 941` sources with aspect-preserving responsive crop, photographic detail, world dominance, first-person/no-protagonist/no-ship framing, physically registered Meadow seams/channels/contact, localized focus, readable hierarchy, `>=44px` required targets, and stable static screen-only geometry.
+- **Functional boundary preserved:** gameplay/recovery, saves/mastery/privacy/offline/no-authority, Demo Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, accepted world state, and protected RP-002 non-routability remain exact.
+- **Validation:** exact focused opening/Tour/frame/RP-001/photoreal selection **40/40 PASS**; complete game suite **317/317 PASS**; production build PASS with the existing non-blocking large-chunk advisory; App/main, rebuilt-JS, and storage scans found no RP-002 entrypoint leakage; exact page/JS/CSS HTTP checks PASS.
+- **Build/reload:** final-reloaded port `4173` serves exact bundles `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; the staging page and both assets returned HTTP `200` on listener PID `23232`.
+- **Evidence boundary:** W4 makes no fresh manual desktop/narrow screenshot, rendered-crop, viewport rectangle, zoom, forced-color, or assistive-technology claim. Coordinator retains the live representative-layout gate; no speculative production or art edit was made.
+- **Exact coordinator handoff:** `Validate only the final-reloaded accepted build at port 4173. Confirm the opening through Glass Meadow and RP-001 staging at representative desktop and narrow responsive layouts, preserving the four 1672 x 941 photoreal masters, aspect-preserving crop, first-person framing, integrated Meadow geometry, localized focus, >=44px targets, gameplay/recovery, saves/mastery/privacy/offline/no-authority, Tour isolation, unchanged continuation, cityStateDelta:null, accepted world state, and protected RP-002 non-routability. Then run curriculum, build, full-E2E, and live gates; restore incidental QA binaries; and record the coordinator release disposition.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review after protected responsive observation component — `1e59491` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE — NO NEW AESTHETIC FINDING.` The accepted opening, Glass Meadow, and RP-001 presentation remain coherent; closed visual findings stay closed, and protected RP-002 remained intentionally absent/out of scope.
