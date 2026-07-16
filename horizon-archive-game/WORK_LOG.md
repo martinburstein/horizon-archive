@@ -1,5 +1,18 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 — Coder W2: accepted-boundary verification and reload after protected RAI completion
+
+- **Mode:** `bug-repair` for W2 only.
+- **Verdict:** `PASS — NO FUNCTIONAL REPAIR REQUIRED.` W1 reported no P0, P1, or P2 accepted-path defect on `cba6c04`, and this bounded verification on checkpoint `b8de2d5` reproduced none. No runtime, test, art, save, route, curriculum, or tracked QA binary changed.
+- **Verified contracts:** The accepted title -> Slot 01 -> bounded name -> three temporary prologue beats -> Chapter I -> Glass Meadow path remains covered together with invalid-name recovery, one-activation anti-skip, sanitized resume, responsive available-width framing, `>=44px` required targets, Demo Tour no-credit isolation, RP-001 board order, PY-020 `10/10`, both CUM-01 `16/16` forms, atomic anchor commit, bounded evidence, first-incomplete resume, unchanged `continuation`, and `cityStateDelta:null`.
+- **Protected boundary:** `src/App.jsx`, `src/main.jsx`, `src/CanonicalGameFrame.jsx`, and the production JS contain no `RP-002`, `CUSTODY_LEDGER`, or `custodyLedgerExercise` route/import/presentation token. RP-002 remains a protected non-routable model with no accepted-campaign UI, save, or Working promotion.
+- **Issue IDs resolved:** none opened or changed. Closed opening, responsive, Tour, Meadow, focus, and RP-001 findings remain closed unless W3 reproduces an exact visual issue.
+- **Validation:** focused opening/Tour/game/frame/RP-001 selection **38/38 PASS**; complete game suite **285/285 PASS**; production build PASS with the existing large-chunk advisory. Exact build identity remains `index-DYIYoZtf.js` / `index-VPnRyv7C.css`.
+- **Demo reload:** port `4173` was restarted; `http://127.0.0.1:4173/?staging=rp001` and both exact assets returned HTTP `200` on listener PID `55444`.
+- **Live-review boundary:** the browser runtime exposed no available browser surface after its supported discovery/retry sequence, so W2 makes no new desktop/narrow screenshot, computed-geometry, zoom, or assistive-technology claim. This is an evidence limitation, not a reproduced defect; W3/coordinator retains representative desktop and narrow live confirmation.
+- **Files changed:** this log plus `../Production Pipeline/demo-increments/DI-001-city-threshold.md`, `../Production Pipeline/WORKING_QUEUE.md`, and `../Production Pipeline/STORY_RAIL_MAP.md` only. Unrelated untracked user files remain untouched.
+- **Exact W3 handoff:** `Aesthetic Agent: review the reloaded accepted demo from source/runtime checkpoint b8de2d5 plus its dedicated documentation-only W2 checkpoint, serving index-DYIYoZtf.js / index-VPnRyv7C.css on port 4173. Inspect the accepted title -> save/name -> prologue -> Chapter I -> Glass Meadow presentation and RP-001 staging return where practical at representative desktop and narrow responsive layouts. Review only reproducible photographic quality, crop/aspect, hierarchy, readability, scale, seam, emphasis, framing, or protagonist/ship-exclusion issues. Preserve every functional behavior, >=44px targets, recoverable mistakes, bounded first-incomplete resume, approved integrated Meadow and City plates/localized focus, strict mastery, privacy/offline/no-authority, Demo Tour no-credit isolation, continuation unchanged, cityStateDelta:null, and protected non-routable RP-002. Do not reopen retired fixed-canvas or pixel-art rules; record exact evidence for W4 or return a clean aesthetic verdict.`
+
 ## 2026-07-16 — Advance Coder A5: protected RAI transfer/explanation seam
 
 - **Mode:** `advance` for A5 only.
