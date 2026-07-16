@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 final aesthetic verification/reload after protected first-near dispatch - `65bd8c5` handoff
+
+- **Mode/verdict:** `aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no finding and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
+- **Validation/reload:** focused **40/40 PASS**; full **369/369 PASS**; production build and protected leakage scans PASS. Final port `4173` listener PID `81240` serves `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; page and both assets returned HTTP `200`.
+- **Boundary:** accepted photoreal presentation, recovery, bounded saves, mastery, privacy/offline/no-authority, responsive/focus, Tour isolation, continuation, null city delta, zero accepted world/route change, and protected RP-002 absence remain exact.
+- **Exact coordinator handoff:** `Perform independent desktop/narrow live review and release validation on the final-reloaded accepted build. Preserve every functional, curriculum, presentation, world, and protected-route invariant; report PASS or only an exact reproduced residual.`
+
 ## 2026-07-16 W3 accepted-boundary aesthetic review after protected first-near dispatch - `1d91cb6` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - NO NEW AESTHETIC FINDING.` The accepted title/opening, Glass Meadow, and RP-001 staging remain coherent; closed visual findings stay closed, and protected RP-002 remained intentionally absent/out of scope.
