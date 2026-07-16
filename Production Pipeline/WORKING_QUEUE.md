@@ -19,7 +19,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 
 | Priority | Packet | Status | Player-visible target | Working owner | Blocker | Next action |
 |---:|---|---|---|---|---|---|
-| 1 | `RP-001` | `IN DEMO — ACCEPTED / COORDINATOR PASS` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Working Team (`accepted maintenance`) | None: all nine passes and coordinator desktop/narrow, `369/369`, build, curriculum, syntax, and full E2E gates passed | Maintain accepted RP-001; Advance A1 selects the next smallest protected RP-002 dependency lock |
+| 1 | `RP-001` | `IN DEMO — ACCEPTED / W1 CLEAN; W2 NEXT` | Complete the protected City Threshold route from post-credits entry through saved return without any physical city response | Coder Agent (`W2 — bug-repair verification/reload`) | None: W1 passed focused `40/40`, full `382/382`, production build, and full E2E in `184.8s` with all gates true, credits reached, and no runtime errors | Verification/reload only unless W2 reproduces an exact accepted-path defect; preserve RP-001 and keep RP-002's isolated second-near dispatch absent and non-routable until formally promoted |
 
 ## Current-demo quality lane
 
