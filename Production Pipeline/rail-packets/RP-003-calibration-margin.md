@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE`
+- Status: `GATE REVIEW — A5 PROTECTED JOURNEY PASS`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / neighboring civic comparison surface inside the City Beneath
 - Target demo horizon: second future slice after the accepted RP-001 boundary; directly after RP-002
 - Route order: 3
@@ -13,8 +13,8 @@
 - Working title: `Calibration Margin` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase I — Arrival and foundations / slot 3 of 3
 - Target player time: `24–32 minutes` clean first play; `14–18 minutes` mastered replay; protected reference-fixture smoke target `<5 minutes` without injected evidence or skipped evaluators
-- Complete Advance cycles spent on this packet: 0 before this A1 pass
-- Convergence-budget status: `ORIENTATION`
+- Complete Advance cycles spent on this packet: `1 — orientation cycle completed through A5`
+- Convergence-budget status: `WITHIN BUDGET — GATE REVIEW REQUESTED`
 
 ## Locked premise
 
@@ -248,8 +248,13 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 
 ## Advance Construction Track — Coder
 
-- Status: `UNASSIGNED — A5 MAY BUILD ONLY AFTER A2–A4 SIGN-OFF`
-- No feature flag, route, state scaffold, copy import, art hook, browser persistence, or runtime implementation is authorized by A1.
+- Status: `PASS — A5 PURE PROTECTED CM-00–CM-50 JOURNEY COMPLETE; GATE REVIEW REQUESTED`
+- Protected implementation: `horizon-archive-game/src/CalibrationMarginProtectedJourney.js` is one pure, offline, non-routable journey-level caller/harness. It imports the SOLIDIFIED RP-003 contract and composes the locked observations, prerequisite hold, Python primary/retrieval/transfer, information-extraction primary/retrieval/transfer, unsupported-input explanation, conjunctive review, allowlisted atomic save, verified restore, early/final return, optional undefined bearing, Tour probe, first-incomplete focus, and responsive/accessibility metadata without a per-transition module family.
+- Real evaluator evidence: the protected JavaScript evaluator checks all eight contract dimensions against the exact primary and transfer Python fragments without `eval`; the independent Python curriculum validator parses and executes the same references through Python AST/runtime. The AI-901 evaluator scores the exact three dimensions independently on primary, delayed retrieval, and fresh transfer. Output-only, mutated-input, sealed-source, forbidden-operation, hard-coded, missing-dimension, and unsupported-value shortcuts fail closed.
+- Recovery and privacy: Python misses expose only failed check IDs, extraction misses expose only failed dimensions, remediation is answer-free, retries are blank, private/transient work is absent from recovery and save records, and prerequisite failure holds only the scored work while both story returns remain available. Save accepts exactly seven finalized allowlisted evidence records plus the expedition-owned correspondence/difference/unavailable note; partial, forged, contaminated, or unverifiable records are rejected atomically without replacing the last verified value.
+- Isolation: App/main, accepted routes, browser persistence, production art, live Demo, and accepted bundles do not import the protected model. It contains no browser, DOM, storage, or network authority. Campaign and Tour fixtures remain byte-stable; Tour cannot finalize observations/mastery, save, unlock a route, or define a successor. `continuation` remains unchanged, `cityStateDelta=null`, SC-04 world state remains invariant, the sealed source remains unread, and no authority, external action, exam credit, exam guarantee, or RP-004 destination is created.
+- Reference smoke: one repository fixture traverses `CM-00 -> CM-10 -> CM-20–23 -> CM-30–34 -> CM-40 -> CM-41 -> CM-50` through the real protected evaluators in milliseconds under the `<5 minute` target. All six observation orders converge to the same allowlisted save and verified return result.
+- A5 validation: focused RP-003 and protected predecessor suites `71/71`; RP-003 curriculum self-test PASS; complete game suite, production build, accepted-bundle leakage, purity, and patch-integrity evidence are recorded in the A5 work log and Gate Review handoff.
 
 ## Anticipated accessibility risks
 
@@ -304,14 +309,14 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 ## Breadth and convergence record
 
 - Packet gates passed: Story `PASS — A1 surface premise, goal, predecessor match, end state, copy ladder, mystery and ownership locks`; Scene `PASS — A2 invariant-world sequence and premium production-art plan`; Curriculum `PASS — PY-010 and RP003-IE-01 SOLIDIFIED with validated primary/remediation/retrieval/fresh-transfer contracts`; Puzzle `PASS — A4 one bounded CM-00–CM-50 graph with recovery, save/resume, Tour, pacing, accessibility, and observable acceptance locked`.
-- Packet gates remaining: Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
+- Packet gates remaining: final Production art, Normal integration, Working evidence, and coordinator promotion/release decisions. These are later-stage obligations, not missing protected-design gates.
+- Did this cycle reduce the remaining-gate count?: `YES — Protected code, protected Save/recovery, protected Accessibility metadata/evidence, and post-integration validation moved MISSING/PARTIAL -> PASS`.
 - Existing seams integrated or consolidated: RP-002's next-survey posture, executable-literacy rule, evidence/inference ownership, privacy clearing, reversible return, and zero-city-delta contract are joined into one successor premise.
 - Optional work trimmed or deferred: RP-004 destination, later route meaning, additional programs, secondary lore rewards, identity-bearing material, and any native category.
 - New module or artifact integration consumer: later A5 may compose existing comparison/save authorities only after A2–A4; no new module is requested by A1.
-- Breadth verdict: `CONTINUE — A5 PROTECTED CONSTRUCTION NEXT`
+- Breadth verdict: `GATE REVIEW — PROTECTED INTEGRATION AND VALIDATION GATES CLOSED`
 - Next contiguous packet seed readiness: `RP-004 remains RESERVED until RP-003 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Advance Coder A5 implements one pure protected RP-003 journey model/harness for the locked CM-00–CM-50 graph, proves the real evaluators and recovery/save boundaries, and requests Gate Review or names one genuine hold.
+- Exact next action in one sentence: coordinator independently verifies the protected evidence bundle and either promotes RP-003 for methodical Working integration or records one genuine hold; no additional RP-003 micro-seam or RP-004 content is authorized before that decision.
 
 ## Advance Handoff Gate
 
@@ -319,9 +324,9 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 - Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PASS — 2026-07-16 / PY-010 + RP003-IE-01 SOLIDIFIED`
 - Gameplay Master sign-off: `PASS — 2026-07-16 / ONE BOUNDED RECOVERABLE GRAPH LOCKED`
-- Coder smoke-test result: `PENDING A5`
-- Readiness: `REVISE`
-- Required revision: complete A5 protected construction and validation on this packet; do not define RP-004 yet.
+- Coder smoke-test result: `PASS — one pure CM-00–CM-50 reference journey through real evaluators, sanitation, atomic save, verified restore, Tour isolation, and reversible return; all six observation orders converge under five minutes`
+- Readiness: `GATE REVIEW — A5 HANDOFF`
+- Required revision: none in the protected packet. Coordinator must verify the complete gate bundle before promotion; final art, normal integration, browser persistence, Working evidence, and RP-004 remain unauthorized.
 
 ### Exact Storyboarder A2 handoff
 
@@ -339,11 +344,15 @@ The suit can preserve a useful expedition note only if the Pilot separates three
 
 `Coder Agent operating mode: advance-construction. Work only on RP-003 Calibration Margin. Implement one pure protected journey-level model/harness for the locked CM-00 through CM-50 graph; prefer composition of existing evaluator, sanitation, atomic-save, verified-restore, focus, campaign/Tour-isolation, and safe-return patterns over a module per transition. Begin only from the exact verified RP-002 completion boundary. Prove three separate deliberate observations in any order; prerequisite hold without story-route lock; exact PY-010 8/8 primary, answer-free blank remediation, separately scored closed-note condition/true/false/unavailable retrieval, genuinely blank 8/8 transfer; independent RP003-IE-01 3/3 primary, per-dimension blank remediation, delayed 3/3 retrieval, genuinely blank 3/3 transfer plus unsupported-input explanation; conjunctive bounded review with zero cross-credit; all-or-none allowlisted save; verified restore; first-incomplete deterministic resume/focus; early return; optional undefined bearing; and safe return to RP-002 or City Threshold. Wrong, stale, duplicate, forged, combined, contaminated, sealed-source, forbidden-operation, Tour-derived, and partial-save inputs must fail closed without erasing finalized evidence, storing private/transient content, or changing world/route/external state. Preserve the exact SOLIDIFIED cases, answers, checks, dimensions, thresholds, evidence fields, no-exam-guarantee, offline/no-live-Azure-or-Foundry posture, unread sealed source, unchanged continuation, cityStateDelta=null, invariant SC-04 world/clocks, first-person photoreal presentation metadata, reversible routes, no RP-004 destination, and accepted RP-001/RP-002/Tour byte stability. Add focused tests and a <5-minute reference-fixture smoke through the real evaluators; keep App.jsx/main.jsx, browser persistence, normal routes, accepted bundles, production art, and the live Demo unchanged. Update the packet, PRODUCTION_READINESS_SPINE.md, scoreboard, queue/map, and Coder log; return GATE REVIEW only if all protected gates pass, otherwise name one genuine HOLD. Do not perform Working passes.`
 
+### Exact coordinator Gate Review handoff
+
+`Coordinator: independently verify RP-003 Calibration Margin at the A5 checkpoint. Run the focused CalibrationMarginProtectedJourney and protected predecessor suites, the full game suite, the RP-003 curriculum self-test, production build, App/main/dist/storage/network/DOM leakage scans, and patch-integrity checks. Confirm the one pure caller starts only from exact verified RP-002 completion; traverses CM-00–CM-50 through the exact PY-010 and RP003-IE-01 authorities; preserves separate observation/Python/extraction evidence with no cross-credit; rejects unsafe, Tour-derived, sealed-source, forbidden-operation, private, partial, or forged inputs; atomically saves only the allowlisted note/evidence; restores deterministically; permits both reversible returns and only an undefined onward bearing; keeps continuation unchanged, cityStateDelta=null, SC-04 world/clocks invariant, sealed content unread, and RP-004 absent; and leaves accepted App/main, browser persistence, production art, routes, bundles, and live Demo unchanged. If all twelve Gate Review items pass, promote RP-003 to Working and seed only the contiguous RP-004 shell. Otherwise record one genuine HOLD. Do not perform W1 or normal integration in this gate.`
+
 ## Promotion record
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-003 IN DESIGN — A4 COMPLETE / A5 NEXT`
+- Team 1 railhead after promotion: `PENDING — current railhead is RP-003 GATE REVIEW / A5 HANDOFF`
 - Next contiguous packet seeded: `NO — RP-004 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`

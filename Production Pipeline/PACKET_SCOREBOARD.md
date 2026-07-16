@@ -18,7 +18,7 @@ Status vocabulary:
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `RP-001` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `ACCEPTED` | `MAINTAIN` | Reopen only on reproduced evidence |
 | `RP-002` | `PASS` | `PASS — compact convergence locked` | `PASS — A3 convergence audit locked; spine active` | `PASS — A4 integrated graph locked; gameplay spine active` | `PASS — protected P0–P3 journey smoke` | `PASS — atomic save/restore and deterministic recovery` | `PASS — protected metadata/evidence` | `PASS plan / final assets assigned to Working` | `READY — Working implementation required` | `READY — W1 not started` | `PROMOTED TO WORKING` | Player Agent begins the oldest adjacent packet; RP-003 may be seeded contiguously by Advance |
-| `RP-003` | `PASS — A1 surface contract` | `PASS — SC-04 invariant-world brief` | `MISSING — A3 next` | `MISSING — A4` | `MISSING — A5` | `PARTIAL — lore/presentation locks only` | `PARTIAL — design contract only` | `PASS plan / final assets later` | `MISSING` | `N/A` | `IN DESIGN — ORIENTATION` | A3 selects and verifies only the contiguous learning mapping; presentation remains zero mastery evidence |
+| `RP-003` | `PASS — A1 surface contract` | `PASS — SC-04 invariant-world brief` | `PASS — PY-010 + RP003-IE-01 SOLIDIFIED` | `PASS — CM-00–CM-50 graph locked` | `PASS — pure protected end-to-end journey` | `PASS — allowlisted atomic save, restore, focus, and recovery` | `PASS — protected metadata/evidence` | `PASS plan / final assets later` | `MISSING — coordinator promotion required` | `N/A — not promoted` | `GATE REVIEW — A5 HANDOFF` | Coordinator independently verifies all twelve gates and either promotes RP-003 or records one genuine hold; no RP-004 content yet |
 | `RP-004`–`RP-012` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | `N/A` | `SPINE RESERVED` | Preserve sequence; do not invent non-contiguous content |
 
 ## Gate Review checklist
@@ -50,6 +50,15 @@ A packet may enter `GATE REVIEW` only when every applicable item has a direct ar
 - **Deferred without weakening the packet:** optional orientation, maintenance inspection, early distant context, Pilot reflection, additional replay polish, per-state art variants beyond the approved production plan, successor hints, normal browser persistence, and accepted-route exposure.
 - **A5 breadth checkpoint:** eighteen traceable A5 construction passes are recorded for RP-002 including this convergence integration; the packet exceeded the normal budget, then reduced the final protected-code and validation deficits to zero. Current verdict: `GATE REVIEW`. `RP-003` is seed-ready but remains reserved pending the coordinator decision.
 - **One-sentence next action:** coordinator verifies the twelve checked artifacts and either promotes RP-002 for normal integration/Working or records one genuine hold; no further protected micro-seam is authorized.
+
+## 2026-07-16 RP-003 A5 breadth checkpoint
+
+- **Gate reduction:** protected Code, Save/recovery, Accessibility metadata/evidence, and post-integration validation moved from `MISSING/PARTIAL` to `PASS`; the protected-design missing-gate count is now zero.
+- **Integrated path:** one pure `CalibrationMarginProtectedJourney` caller traverses the exact verified RP-002 boundary through `CM-00–CM-50`, composing three independent observations, strict PY-010 primary/retrieval/fresh transfer, strict independent RP003-IE-01 primary/retrieval/fresh transfer plus unsupported-input explanation, bounded review, all-or-none allowlisted save, verified restore, Tour isolation, early/final returns, and an undefined bearing with no destination.
+- **Recovery/isolation:** unsafe, duplicate, stale, forged, combined, private, Tour-derived, sealed-source, forbidden-operation, and partial-save inputs fail closed. App/main, browser persistence, normal routes, production art, accepted bundles, live Demo, and RP-004 remain unchanged and unauthorized.
+- **Validation:** all six observation orders converge; the reference fixture completes in milliseconds; focused RP-003 plus protected predecessor suites passed `71/71`; the RP-003 Python AST/runtime curriculum self-test passed; full suite/build/leakage/patch evidence is recorded in the Coder log.
+- **Budget/verdict:** orientation cycle 1 reached `GATE REVIEW` without exceeding the convergence budget. No further RP-003 protected micro-seam is authorized before the coordinator decision.
+- **One-sentence next action:** coordinator independently verifies the twelve gates and either promotes RP-003 for methodical Working integration or records one genuine hold; RP-004 remains reserved.
 
 ## Update rule
 

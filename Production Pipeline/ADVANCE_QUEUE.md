@@ -19,20 +19,32 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
-| 3 | `RP-003` | Calibration Margin | `IN DESIGN — A4 COMPLETE` | Coder Agent (`A5`, advance-construction mode) | Lore, Scene, Curriculum, and Puzzle `PASS`; protected Code pending | Exact RP-002 completion; locked `SC-04`; SOLIDIFIED `PY-010` + `RP003-IE-01`; locked `CM-00 -> CM-50` graph; unchanged `continuation`, zero city delta, reversible routes, no RP-004 destination | A5 builds one pure protected journey/harness through real evaluators and returns Gate Review or one genuine hold. |
+| 3 | `RP-003` | Calibration Margin | `GATE REVIEW — A5 HANDOFF` | Coordinator | Lore, Scene, Curriculum, Puzzle, protected Code, Save/recovery, Accessibility metadata/evidence, and validation `PASS` | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, reversible returns, and no RP-004 destination | Independently verify all twelve gates; promote for Working only on PASS, otherwise record one genuine hold. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `0`
+- Gate Review packets awaiting coordinator decision: `1 — RP-003`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-002`
-- In-design packets: `1 — RP-003`
-- Team 1 railhead: `RP-003 — IN DESIGN / A4 COMPLETE / A5 NEXT`
+- In-design packets: `0`
+- Team 1 railhead: `RP-003 — GATE REVIEW / A5 HANDOFF`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `2 ordered packets — RP-002 promoted to Working; RP-003 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 RP-003 Advance Coder protected-journey result
+
+`RP-003` is `GATE REVIEW — A5 HANDOFF`, still protected from the accepted Demo. One pure `CalibrationMarginProtectedJourney` caller now traverses the locked `CM-00 -> CM-50` graph from exact verified RP-002 completion through the real eight-check Python and three-dimension information-extraction evaluators, answer-free blank recovery, conjunctive review, all-or-none allowlisted save, verified restore, deterministic focus, Tour isolation, both reversible returns, and an optional undefined bearing. All six observation orders converge in milliseconds. Unsafe, stale, duplicate, forged, combined, private, sealed-source, forbidden-operation, Tour-derived, and partial-save inputs fail closed. App/main, browser persistence, normal routes, production art, accepted bundles, live Demo, and RP-004 remain unchanged and unauthorized. Coordinator owns the independent twelve-gate decision; no W1 or additional protected micro-seam starts before that verdict.
+
+### Advance Coder A5 work-log record — RP-003 protected journey
+
+- **Work completed:** closed the protected Code, Save/recovery, Accessibility metadata/evidence, and post-integration validation gates with one journey-level adapter/harness rather than per-transition modules.
+- **Learning and recovery:** exact PY-010 8/8 primary/retrieval/fresh transfer and independent RP003-IE-01 3/3 primary/retrieval/fresh transfer plus unsupported-input explanation remain separately scored; misses expose only failed checks/dimensions and return blank answer-free retry boundaries.
+- **Save/return/Tour:** only seven allowlisted finalized evidence records plus the expedition note can commit; partial or forged records reject atomically; verified restore replays no event; early/final returns keep `continuation` and null city delta; Tour writes no observation, mastery, save, route, or successor state.
+- **Validation:** focused protected suites `71/71`; RP-003 curriculum self-test PASS; full suite/build/leakage/patch checks recorded in the Coder log; reference fixture under five minutes by a wide margin.
+- **Exact coordinator handoff:** use the packet's `Exact coordinator Gate Review handoff`; independently verify all twelve gates and either promote RP-003 for methodical Working integration or record one genuine hold. RP-004 remains reserved.
 
 ## 2026-07-16 RP-003 Gameplay graph result
 
