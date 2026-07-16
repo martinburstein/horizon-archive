@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 Coordinator closure - protected route-to-observation release gate
+
+- **Disposition:** `PASS - ACCEPTED DEMO / NO NEW DEFECT.` All nine role passes and the independent release gate completed. Protected RP-002 retains its isolated route-to-blank-observation orchestration but remains `REVISE`, non-routable, and absent from App/main, React UI, browser storage, accepted routes/art/bundles, world state, successors, and Working promotion.
+- **Live review:** title and Glass Meadow passed `1280 x 720` desktop and `390 x 844` narrow review with no horizontal escape and no browser console errors or warnings. Title actions measured `48px` desktop and `44px` narrow. The `1672 x 941` Meadow master rendered at approximately `1230 x 691` desktop and `385 x 216` narrow with aspect-preserving `object-fit: cover`; required controls remained at least `44px`, hotspots remained reachable, and first-person/no-protagonist/no-ship framing, integrated static Terminal/route-marker geometry, localized focus, hierarchy, and vertical flow remained intact. The viewport was reset and the playable title was left open.
+- **Release validation:** complete game suite **357/357 PASS**; production build PASS (`index-DYIYoZtf.js`, `index-VPnRyv7C.css`; existing non-blocking chunk advisory only); RP-002 curriculum self-test PASS; E2E syntax PASS; full title-to-credits E2E PASS in **159 seconds** with `credits:true`, all emitted gates true, and `runtimeErrors:false`. Incidental tracked QA captures were restored.
+- **Boundary preserved:** accepted presentation, gameplay/recovery, bounded first-incomplete saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, unchanged `continuation`, `cityStateDelta:null`, zero accepted city/world/route change, and RP-002 non-routability remain exact.
+- **Next handoff:** `A1 selects the next smallest safe RP-002 dependency-adjacent integration ownership/meaning impact lock. Do not import App/main, add React UI/browser storage/art, expose a normal route, change accepted bundles/world/city/access/external state, name a successor, reload the Demo, or promote to Working.`
+
 ## 2026-07-16 W4 accepted-boundary aesthetic verification/final reload after protected route-to-observation construction - `4d24589` handoff
 
 - **Mode/verdict:** `Coder Agent - aesthetic-polish; PASS - NO AESTHETIC IMPLEMENTATION REQUIRED.` W3 opened no reproducible finding and W4 reproduced none. Runtime, art, tests, saves, routes, curriculum, accepted world state, and tracked QA binaries remain unchanged.
