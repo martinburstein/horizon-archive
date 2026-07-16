@@ -15,6 +15,14 @@ Treat AI-901 objectives as the master learning goals. Use AI-900 material only a
 
 When running or resuming the Horizon Archive two-team cycle, treat `TWO_TEAM_AGENT_CYCLE.md` as the workflow authority and `Agent Profiles/README.md` as the agent registry.
 
+Also read these pipeline-control artifacts before selecting Advance work:
+
+- `Production Pipeline/EXPEDITION_SPINE.md`
+- `Production Pipeline/ADVANCE_BREADTH_GATE.md`
+- `Production Pipeline/PACKET_SCOREBOARD.md`
+
+The 12-packet spine is the current breadth target. The Advance Team must obey the convergence budget: after three consecutive complete Advance cycles on one packet without Gate Review, run the convergence audit and prioritize integration, trimming, merging, or a documented hold over additional micro-seams.
+
 Before each pass, read the selected canonical profile in full. Use these stable identities:
 
 - `lore_builder_agent`

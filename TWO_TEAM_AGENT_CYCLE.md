@@ -237,6 +237,9 @@ Canonical identities live under `Agent Profiles/`; shared queues, packets, and i
 | `Agent Profiles/README.md` | Stable agent registry, run order, and profile-loading protocol |
 | `Agent Profiles/*.md` | Canonical identity, boundaries, procedure, validation, and handoff for each unique agent |
 | `STORY_RAIL_MAP.md` | Ordered end-to-end route, packet adjacency, team positions, and distance between railhead and live demo |
+| `EXPEDITION_SPINE.md` | Spoiler-safe 12-packet breadth target, phase structure, reserved sequence, and coverage rules |
+| `ADVANCE_BREADTH_GATE.md` | Work-in-progress limit, convergence budget, anti-micro-seam rules, and Gate Review audit |
+| `PACKET_SCOREBOARD.md` | Compact packet readiness matrix and missing-gate count |
 | `ADVANCE_QUEUE.md` | Future slices being explored, designed, revised, or gated |
 | `WORKING_QUEUE.md` | Approved packets waiting for or undergoing demo implementation |
 | `DECISION_LOG.md` | Directional decisions that affect multiple packets or teams |
@@ -430,6 +433,14 @@ It must answer:
 13. What exact player-visible evidence proves completion?
 
 Packets use the template at `Production Pipeline/templates/RAIL_PACKET_TEMPLATE.md`.
+
+### Breadth and convergence requirement
+
+Before A1 selects work, read `EXPEDITION_SPINE.md`, `ADVANCE_BREADTH_GATE.md`, and `PACKET_SCOREBOARD.md`.
+
+After three consecutive complete Advance cycles on the same packet without reaching `GATE REVIEW`, the next A1 pass is a convergence audit. It must reduce missing gates through integration, trimming, merging, or an explicit hold. Further one-transition-at-a-time expansion is not authorized merely because another micro-seam can be specified.
+
+At every A5 handoff, update the packet's scoreboard row and record whether the tranche reduced its missing-gate count.
 
 ---
 

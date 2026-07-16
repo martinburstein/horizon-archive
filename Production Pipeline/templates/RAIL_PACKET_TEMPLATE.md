@@ -11,6 +11,10 @@
 - Advance cycle:
 - Spoiler class: `surface-safe | restricted artifact only`
 - Working title:
+- Expedition spine phase and slot:
+- Target player time:
+- Complete Advance cycles spent on this packet:
+- Convergence-budget status: `ORIENTATION | CONSTRUCTION | CONVERGENCE REQUIRED | GATE REVIEW`
 
 ## Locked premise
 
@@ -145,6 +149,18 @@ Entry -> Observe -> Attempt -> Feedback -> Repair/Retry -> Confirmation -> Exit
 1.
 2.
 3.
+
+## Breadth and convergence record
+
+- Scoreboard gates passed:
+- Scoreboard gates remaining:
+- Did this cycle reduce the remaining-gate count?:
+- Existing seams integrated or consolidated:
+- Optional work trimmed or deferred:
+- New module or artifact integration consumer:
+- Breadth verdict: `CONTINUE | CONVERGE | TRIM | MERGE | HOLD | GATE REVIEW`
+- Next contiguous packet seed readiness:
+- Exact next action in one sentence:
 
 ## Advance Handoff Gate
 

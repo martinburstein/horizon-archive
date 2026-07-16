@@ -1,5 +1,17 @@
 # Two-Team Decision Log
 
+## 2026-07-16 — Adopt a 12-packet expedition spine and Advance convergence budget
+
+- Use 12 main Rail Packets as the planning target for the first complete expedition, grouped into foundation, expansion, synthesis, and capstone/resolution phases.
+- Treat the count as a production constraint rather than immutable canon. Merges, splits, or reordering require a recorded decision and repaired sequence/curriculum dependencies.
+- Reserve future packet rows without inventing non-contiguous story content, locations, routes, or code.
+- Limit Team 1 to one active Rail Packet and require every Advance tranche to close a named gate, remove an unknown, integrate approved work, or reduce the remaining Gate Review checklist.
+- After three consecutive complete Advance cycles on one packet without Gate Review, require a convergence audit and a `CONVERGE`, `TRIM`, `MERGE`, `HOLD`, or `RE-SCOPE WITH MARTIN` decision.
+- Prefer integrating or consolidating existing protected seams over adding one module or contract per individual narrative transition.
+- Apply the rule immediately to `RP-002`: finish the already-selected comparison transition, then inventory the shortest protected end-to-end path and move toward Gate Review rather than continuing indefinite micro-seam expansion.
+- Track breadth in `EXPEDITION_SPINE.md`, convergence in `ADVANCE_BREADTH_GATE.md`, and readiness in `PACKET_SCOREBOARD.md`.
+- Use `scripts/validate-horizon-release.ps1` for repeatable automated release checks; full coordinator release still requires `-FullE2E` and a live representative desktop/narrow browser review.
+
 ## 2026-07-15 — Establish Builder executable literacy and earned Terminal discovery
 
 - Builders use executable Python as ordinary precise literacy within work, civic practice, maintenance, and landscape operation; it is not a human password scheme pasted onto alien machinery.
