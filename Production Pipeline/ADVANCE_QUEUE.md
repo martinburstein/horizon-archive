@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Lore Builder Agent (`A1 — next protected dependency seam`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and isolated first-, second-, and third-near orchestration are complete; storage, art, normal exposure, comparison transition, successor, and later work are absent | A5 passed `TD-00/R/10/U/T`: all six complete near orders and seven modalities retain both prior IDs, add only the sole matching third ID/Scene statement, derive `3 of 3`, and expose dormant zero-credit `COMPARE SCALE`; replay, failure, recovery, resume, presentation, comparison focus, and Tour remain zero credit | Keep `REVISE`. A1 selects the next smallest contiguous protected seam after dormant comparison availability; do not activate comparison, enter the registered SC-03-20 view, expose far evidence, or add component/App/main integration, storage, geometry/art, route exposure, accepted-state change, successor, Demo reload, or Working promotion without a new A1–A4 contract. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 — compare-scale transition presentation impact`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, isolated first-, second-, and third-near orchestration, and compare-scale transition ownership/meaning are complete; storage, art, normal exposure, far evidence, successor, and later work are absent | A1 now locks only explicit dormant `COMPARE SCALE` activation, System verification, registered `SC-03-20` replacement, and a blank far group retaining three near IDs with zero far IDs and two equal unfinished actions; no far action is dispatched | Keep `REVISE`. A2 performs only the compare-scale-to-blank-far-view presentation impact review; do not dispatch far evidence or add geometry, code, component/App/main, browser storage, production art, route exposure, accepted-state change, successor, Demo reload, or Working promotion. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first-, second-, and third-near orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A5 isolated third-near completion complete; A1 selects the next protected adjacency`
+- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first-, second-, and third-near orchestration seams complete; compare-scale transition meaning is at A2; later integration remains REVISE)`
+- Team 1 railhead: `RP-002 — A1 compare-scale-to-blank-far-view ownership/meaning locked; A2 presentation impact next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 compare-scale-to-blank-far-view Lore impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`, `REVISE`, protected, non-routable, and unavailable to Working. A1 locked only one fresh explicit dormant `COMPARE SCALE` intent from the exact three-near/zero-far boundary, System prerequisite verification, registered replacement into the approved `SC-03-20` composition, and initialization of a blank far group with the three near IDs retained, zero far IDs, and equal `COMPARE DISTANT REPETITION` / `INSPECT CLOSED BOUNDARY` actions. Transition, view, focus, visibility, recovery, return, and Tour remain zero evidence; neither far action is dispatched. Both SOLIDIFIED chains, observation/save/atomic contracts, privacy, accepted state, world clocks, route, closed identity, no-authority, and no-successor boundaries remain exact. A2 now performs only presentation impact.
 
 ## 2026-07-16 two-ID-to-third-near-completion Lore impact note
 
