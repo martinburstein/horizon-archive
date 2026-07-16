@@ -1,5 +1,17 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-16 — Advance Coder A5: protected RAI primary/remediation seam
+
+- **Mode:** `advance` for A5 only.
+- **Verdict:** `REVISE — A5 PARTIAL; NO W1 PROMOTION`. The non-routable Custody Ledger model now implements only the protected `RP002-RAI-01` primary and mapped repair loop; transfer evaluation, explanation, persistence/save, observation, UI, route, and art remain absent.
+- **Work completed:** Added the exact three course-authored primary cases with `principle`, testable `mitigation`, and accountable human-or-organizational `owner` dimensions. The model retains only bounded choice values until the third case, recomputes all nine dimensions together, rejects forged score/correctness fields, and requires genuine `9/9`. Strict pass clears all primary work and initializes only a blank, explicitly non-evaluating RAI-transfer boundary.
+- **Remediation/recovery:** Any miss clears every working selection and replaces the primary with field-associated `901 TEACHER // FEEDBACK` keyed by case and failed dimension. Acknowledgement replaces feedback with one neutral, unscored System-owned guided case. Valid guided completion clears its response and restores the primary blank at the first incomplete/first-failed case with deterministic focus intent. Retry is unlimited; correct finalized earlier cases may remain boolean evidence, while no answer choice or prose carries forward.
+- **Privacy/state isolation:** RAI evidence retains only fixed identifiers, nine finalized booleans, bounded attempt/hint metadata, allowlisted misconception tags, confidence, and primary status. Working choices, guided responses, feedback prose, free-form reasoning, source, identity content, and external-action requests are never durable. The completed Python `30-A` through `30-E` evidence is byte-stable and never replayed or cross-credited. `campaignCommitEnabled=false`, `continuation` is unchanged, `cityStateDelta=null`, campaign and Tour stores remain separate, identity stays closed, and no world/city/item/access/permission/successor/external state exists.
+- **Files changed:** `src/custodyLedgerExercise.js`, `test/custodyLedgerExercise.test.js`, `../Production Pipeline/rail-packets/RP-002-civic-record-encounter.md`, `../Production Pipeline/ADVANCE_QUEUE.md`, `../Production Pipeline/STORY_RAIL_MAP.md`, and this log.
+- **Validation:** focused Custody Ledger suite **26/26**; complete game suite **280/280**; RP-002 curriculum self-test passed; production build passed with the existing large-chunk advisory and unchanged accepted-demo identity `index-DYIYoZtf.js` / `index-VPnRyv7C.css`; source syntax and whitespace validation passed.
+- **Exact W1 handoff:** `Player Agent: do not enter or test RP-002. It remains REVISE, protected, and non-routable. Perform the Working pass only against the accepted RP-001 live-demo boundary, preserve all campaign/Tour/mastery/save/privacy/accessibility contracts, and report the earliest reproducible live defect or a clean accepted-path result. No protected RAI behavior is available in the demo.`
+- **Exact next Advance handoff:** `Next cycle begins with Lore Builder ownership review for the blank RP002-RAI-01 transfer and separately scored three-part explanation. Preserve the completed primary/remediation seam and every state/privacy/world boundary; do not add normal routing or Working promotion until later protected seams independently pass.`
+
 ## 2026-07-15 — Coder W4: localized Meadow Terminal focus
 
 - **Mode:** `aesthetic-polish` for W4 only.

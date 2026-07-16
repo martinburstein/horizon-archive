@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED`
-- Team 1 railhead: `RP-002 — A5 partial; A4 responsible-AI graph locked, protected A5 primary/remediation next`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 responsible-AI seam at protected A5 construction`
+- Team 1 railhead: `RP-002 — A5 partial; protected RAI primary/remediation complete, blank transfer/explanation review next`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 responsible-AI primary/remediation protected; later seams remain in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | Functional gates, responsive presentation, and the coordinated photorealistic production family are validated. Historical pixel and occupant-raster blockers remain retired; optional registered motion is follow-on polish only. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + HUMAN RAI OWNERSHIP` | `A2 RAI OWNERSHIP PRESENTATION LOCKED` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE` | `RP002-RAI-01 NO REOPEN — SOLIDIFIED` | `A4 RAI ONE-ACTIVE-GROUP GRAPH LOCKED` | `TOUR + PREREQUISITE + PY-009 30-A THROUGH 30-E COMPLETE` | A4 confirms the post-30-E course case, Teacher miss, System guided practice, and blank retry are mutually replacing human-interface groups over the unchanged strict `9/9 primary -> per-dimension remediation -> blank 9/9 transfer -> three-part explanation` chain. A5 may build only the protected RAI primary evaluator and mapped remediation. Save, transfer, explanation, observation, UI, route, successor, art, world state, authority, and Working promotion remain disabled. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + HUMAN RAI OWNERSHIP` | `A2 RAI OWNERSHIP PRESENTATION LOCKED` | `PY-009 SOLIDIFIED + PROTECTED MODEL COMPLETE` | `RP002-RAI-01 SOLIDIFIED + PROTECTED PRIMARY/REMEDIATION COMPLETE` | `A4 RAI ONE-ACTIVE-GROUP GRAPH LOCKED` | `TOUR + PREREQUISITE + PY-009 30-A THROUGH 30-E + RAI PRIMARY/REMEDIATION COMPLETE` | The protected model now enforces the exact three-case, three-dimension simultaneous `9/9` primary, mapped Teacher repair, neutral zero-credit guided practice, blank first-incomplete retry, unlimited recovery, and blank transfer initialization. RAI transfer evaluation, explanation, persistence/save, observation, UI, route, successor, art, world state, authority, and Working promotion remain disabled. |
 
 ## Whole-story coverage gate
 

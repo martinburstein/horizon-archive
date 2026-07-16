@@ -6,7 +6,9 @@ import {
 } from "./structuredPacketExercise.js";
 import {
   responsibleAIDimensions,
+  responsibleAIExercise,
   responsibleAIPrimaryScenarios,
+  responsibleAIPrinciples,
   responsibleAITransferScenarios,
   sanitizeResponsibleAIEvidence,
 } from "./responsibleAIExercise.js";
@@ -82,6 +84,18 @@ export const custodyLedgerPythonOwnershipMessages = Object.freeze({
   rai_primary: Object.freeze({
     owner: "SYSTEM // EXPEDITION SESSION",
     text: "Responsible AI primary initialized. No choices are selected and no comparison has been saved.",
+  }),
+  rai_feedback: Object.freeze({
+    owner: "901 TEACHER // FEEDBACK",
+    text: "Review is limited to the failed case and dimensions. No answer, authority, or world response is supplied.",
+  }),
+  rai_guided: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Neutral guided practice loaded. Its response is unscored and will not carry into the primary retry.",
+  }),
+  rai_transfer: Object.freeze({
+    owner: "SYSTEM // EXPEDITION SESSION",
+    text: "Primary 9/9 confirmed. A blank transfer boundary is initialized; its evaluator is not yet available.",
   }),
 });
 
@@ -187,6 +201,45 @@ export const custodyLedgerExplanationAnswers = Object.freeze({
 
 export const custodyLedgerRAIPrimaryScenarioIds = Object.freeze(["P01", "P02", "P03"]);
 export const custodyLedgerRAIDimensions = Object.freeze(["principle", "mitigation", "owner"]);
+export const custodyLedgerRAIPrimaryScenarios = Object.freeze(responsibleAIPrimaryScenarios
+  .filter((scenario) => custodyLedgerRAIPrimaryScenarioIds.includes(scenario.id))
+  .map((scenario) => Object.freeze({
+    id: scenario.id,
+    prompt: scenario.prompt,
+    principleChoices: [...responsibleAIPrinciples],
+    mitigationChoices: [...scenario.mitigation_choices],
+    ownerChoices: [...scenario.owner_choices],
+  })));
+
+const custodyLedgerRAIMisconceptionTags = Object.freeze({
+  P01: "fairness-means-identical-outcomes",
+  P02: "reliability-is-one-successful-test",
+  P03: "privacy-is-only-secrecy",
+});
+
+export const custodyLedgerRAIRemediationMap = Object.freeze({
+  P01: Object.freeze({
+    principle: "Review fairness as measured disparity in comparable outcomes; contrast it with inclusiveness as equivalent participation and access.",
+    mitigation: "Choose a human-run safeguard whose group outcome can be measured, compared, and corrected.",
+    owner: "Name a human or organizational role able to monitor the hiring system, receive appeals, and correct disparity.",
+  }),
+  P02: Object.freeze({
+    principle: "Review reliability and safety as tested behavior under expected and edge conditions; contrast it with transparency about system limits.",
+    mitigation: "Choose a testable safeguard that exercises missing-unit inputs and fails safely to qualified human review.",
+    owner: "Name a human or organizational role accountable for clinical product testing, escalation, and correction.",
+  }),
+  P03: Object.freeze({
+    principle: "Review privacy and security as authorized, minimized, isolated data handling; contrast it with transparency about how a system is used.",
+    mitigation: "Choose a testable safeguard for authorization, minimization, and cross-customer isolation.",
+    owner: "Name a human or organizational role accountable for service security, data handling, review, and remedy.",
+  }),
+});
+
+export const custodyLedgerRAIGuidedCase = Object.freeze({
+  id: "RP002-RAI-GUIDE-01",
+  prompt: "An expedition practice dashboard reports uneven outcomes and has no named reviewer. Choose a primary principle, a testable human-run safeguard, and an accountable human or organizational role.",
+  dimensions: [...custodyLedgerRAIDimensions],
+});
 
 function blankPythonChecks() {
   return Object.fromEntries(custodyLedgerPythonChecks.map((check) => [check, false]));
@@ -292,6 +345,82 @@ function explanationEvidenceIsComplete(value) {
   const safe = sanitizedExplanationEvidence(value);
   return safe?.masteryStatus === "explanation_complete"
     && custodyLedgerExplanationDimensions.every((dimension) => safe.dimensionCorrectness[dimension] === true);
+}
+
+function blankRAIChecks() {
+  return Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
+    scenarioId,
+    Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, false])),
+  ]));
+}
+
+function sanitizedRAIEvidence(value) {
+  if (!value || value.packetId !== CUSTODY_LEDGER_PACKET_ID || value.form !== "primary") return null;
+  const dimensionCorrectness = Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
+    scenarioId,
+    Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [
+      dimension,
+      value?.dimensionCorrectness?.[scenarioId]?.[dimension] === true,
+    ])),
+  ]));
+  const allCorrect = custodyLedgerRAIPrimaryScenarioIds.every((scenarioId) => custodyLedgerRAIDimensions
+    .every((dimension) => dimensionCorrectness[scenarioId][dimension] === true));
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    mappingId: "RP002-RAI-01",
+    exerciseId: responsibleAIExercise.exercise_id,
+    form: "primary",
+    dimensionCorrectness,
+    attemptCount: sanitizeAttemptCount(value.attemptCount),
+    hintLevel: Number.isSafeInteger(value.hintLevel) && value.hintLevel >= 0
+      ? Math.min(value.hintLevel, 9)
+      : 0,
+    confidence: ["low", "medium", "high"].includes(value.confidence) ? value.confidence : null,
+    misconceptionTags: Array.isArray(value.misconceptionTags)
+      ? [...new Set(value.misconceptionTags.filter((tag) => Object.values(custodyLedgerRAIMisconceptionTags).includes(tag)))].slice(0, 3)
+      : [],
+    masteryStatus: allCorrect && value.masteryStatus === "primary_complete"
+      ? "primary_complete"
+      : "remediation_required",
+  };
+}
+
+function raiEvidenceIsComplete(value) {
+  const safe = sanitizedRAIEvidence(value);
+  return safe?.masteryStatus === "primary_complete"
+    && custodyLedgerRAIPrimaryScenarioIds.every((scenarioId) => custodyLedgerRAIDimensions
+      .every((dimension) => safe.dimensionCorrectness[scenarioId][dimension] === true));
+}
+
+function firstFailedRAI(value) {
+  const safe = sanitizedRAIEvidence(value);
+  for (const scenarioId of custodyLedgerRAIPrimaryScenarioIds) {
+    for (const dimension of custodyLedgerRAIDimensions) {
+      if (safe?.dimensionCorrectness?.[scenarioId]?.[dimension] !== true) return { scenarioId, dimension };
+    }
+  }
+  return { scenarioId: custodyLedgerRAIPrimaryScenarioIds[0], dimension: custodyLedgerRAIDimensions[0] };
+}
+
+function sanitizeRAIResponse(scenarioId, response) {
+  const scenario = responsibleAIPrimaryScenarios.find((item) => item.id === scenarioId);
+  if (!scenario) return Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, ""]));
+  const allowed = {
+    principle: responsibleAIPrinciples,
+    mitigation: scenario.mitigation_choices,
+    owner: scenario.owner_choices,
+  };
+  return Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [
+    dimension,
+    allowed[dimension].includes(response?.[dimension]) ? response[dimension] : "",
+  ]));
+}
+
+function sanitizeRAIWorkingResponses(value, scenarioIndex) {
+  const limit = Number.isInteger(scenarioIndex) ? Math.max(0, Math.min(scenarioIndex, 2)) : 0;
+  return Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.slice(0, limit)
+    .filter((scenarioId) => Object.hasOwn(value ?? {}, scenarioId))
+    .map((scenarioId) => [scenarioId, sanitizeRAIResponse(scenarioId, value[scenarioId])]));
 }
 
 /**
@@ -468,20 +597,42 @@ function normalizeCustodyLedgerScaffold(state) {
     && primaryComplete
     && transferComplete;
   const explanationComplete = explanationEvidenceIsComplete(state?.pythonExplanationEvidence);
+  const raiPhase = ["rai_primary", "rai_feedback", "rai_guided", "rai_transfer"].includes(state?.phase);
+  if (raiPhase && primaryComplete && transferComplete && explanationComplete) {
+    const primaryEvidence = sanitizedPythonEvidence(state.pythonEvidence, "primary");
+    const transferEvidence = sanitizedPythonEvidence(state.pythonTransferEvidence, "transfer");
+    const explanationEvidence = sanitizedExplanationEvidence(state.pythonExplanationEvidence);
+    const raiEvidence = sanitizedRAIEvidence(state.raiEvidence);
+    if (state.phase === "rai_transfer" && raiEvidenceIsComplete(raiEvidence)) {
+      return raiTransferState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence);
+    }
+    if (state.phase === "rai_feedback" && raiEvidence && !raiEvidenceIsComplete(raiEvidence)) {
+      return raiFeedbackState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence);
+    }
+    if (state.phase === "rai_guided" && raiEvidence && !raiEvidenceIsComplete(raiEvidence)) {
+      return raiGuidedState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence);
+    }
+    const scenarioIndex = Number.isInteger(state.raiScenarioIndex)
+      ? Math.max(0, Math.min(state.raiScenarioIndex, 2))
+      : firstFailedRAI(raiEvidence).scenarioId === "P02" ? 1
+        : firstFailedRAI(raiEvidence).scenarioId === "P03" ? 2 : 0;
+    return raiPrimaryState(
+      primaryEvidence,
+      transferEvidence,
+      explanationEvidence,
+      raiEvidence,
+      scenarioIndex,
+      sanitizeRAIWorkingResponses(state.raiWorkingResponses, scenarioIndex),
+      state.focusIntent,
+    );
+  }
   const conclusionReady = state?.phase === "python_complete"
     && state?.prerequisiteStatus === "complete"
     && state?.pythonForm === "complete"
     && primaryComplete
     && transferComplete
     && explanationComplete;
-  const raiReady = state?.phase === "rai_primary"
-    && state?.prerequisiteStatus === "complete"
-    && state?.raiForm === "primary"
-    && primaryComplete
-    && transferComplete
-    && explanationComplete;
-  const phase = raiReady ? "rai_primary"
-    : conclusionReady ? "python_complete"
+  const phase = conclusionReady ? "python_complete"
       : explanationReady ? "python_explanation"
         : transferReady ? "python_transfer"
           : resultReady ? "python_primary_result"
@@ -511,9 +662,9 @@ function normalizeCustodyLedgerScaffold(state) {
     campaignCommitEnabled: false,
     continuation: CITY_THRESHOLD_CONTINUATION,
     cityStateDelta: null,
-    ...((primaryReady || resultReady || transferReady || explanationReady || conclusionReady || raiReady) ? {
+    ...((primaryReady || resultReady || transferReady || explanationReady || conclusionReady) ? {
       prerequisiteStatus: "complete",
-      ...(raiReady ? {} : {
+      ...({
         pythonForm: conclusionReady ? "complete"
           : explanationReady ? "explanation"
             : transferReady ? "transfer"
@@ -544,7 +695,7 @@ function normalizeCustodyLedgerScaffold(state) {
           record: { ...custodyLedgerCausalResult.record },
         },
       } : {}),
-      ...(transferReady || explanationReady || conclusionReady || raiReady ? { primaryStatus: "complete" } : {}),
+      ...(transferReady || explanationReady || conclusionReady ? { primaryStatus: "complete" } : {}),
       ...(explanationReady ? {
         transferStatus: "complete",
         explanationSelections: Object.fromEntries(custodyLedgerExplanationDimensions.map((dimension) => [dimension, ""])),
@@ -552,17 +703,9 @@ function normalizeCustodyLedgerScaffold(state) {
           ? state.firstFailedDimension
           : null,
       } : {}),
-      ...(conclusionReady || raiReady ? {
+      ...(conclusionReady ? {
         transferStatus: "complete",
         pythonStatus: "complete",
-      } : {}),
-      ...(raiReady ? {
-        raiForm: "primary",
-        raiScoringImplemented: false,
-        raiChecks: Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
-          scenarioId,
-          Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, false])),
-        ])),
       } : {}),
     } : {}),
   };
@@ -716,13 +859,10 @@ function explanationState(primaryEvidence, transferEvidence, explanationEvidence
   };
 }
 
-function raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence) {
+function raiBaseState(primaryEvidence, transferEvidence, explanationEvidence) {
   return {
     packetId: CUSTODY_LEDGER_PACKET_ID,
     boardId: CUSTODY_LEDGER_BOARD_ID,
-    phase: "rai_primary",
-    activeMessageKey: "rai_primary",
-    scoringEnabled: false,
     campaignCommitEnabled: false,
     continuation: CITY_THRESHOLD_CONTINUATION,
     cityStateDelta: null,
@@ -730,15 +870,104 @@ function raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence)
     primaryStatus: "complete",
     transferStatus: "complete",
     pythonStatus: "complete",
-    raiForm: "primary",
-    raiScoringImplemented: false,
-    raiChecks: Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
-      scenarioId,
-      Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, false])),
-    ])),
     pythonEvidence: sanitizedPythonEvidence(primaryEvidence, "primary"),
     pythonTransferEvidence: sanitizedPythonEvidence(transferEvidence, "transfer"),
     pythonExplanationEvidence: sanitizedExplanationEvidence(explanationEvidence),
+  };
+}
+
+function raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence = null, scenarioIndex = 0, workingResponses = {}, focusIntent = null) {
+  const safeEvidence = sanitizedRAIEvidence(raiEvidence);
+  const safeIndex = Number.isInteger(scenarioIndex) ? Math.max(0, Math.min(scenarioIndex, 2)) : 0;
+  const fallbackFocus = firstFailedRAI(safeEvidence);
+  const safeFocus = custodyLedgerRAIPrimaryScenarioIds.includes(focusIntent?.scenarioId)
+    && custodyLedgerRAIDimensions.includes(focusIntent?.dimension)
+    ? { scenarioId: focusIntent.scenarioId, dimension: focusIntent.dimension }
+    : { scenarioId: custodyLedgerRAIPrimaryScenarioIds[safeIndex] ?? fallbackFocus.scenarioId, dimension: fallbackFocus.dimension };
+  return {
+    ...raiBaseState(primaryEvidence, transferEvidence, explanationEvidence),
+    phase: "rai_primary",
+    activeMessageKey: "rai_primary",
+    scoringEnabled: true,
+    raiForm: "primary",
+    raiScoringImplemented: true,
+    raiScenarioIndex: safeIndex,
+    raiScenarioId: custodyLedgerRAIPrimaryScenarioIds[safeIndex],
+    raiWorkingResponses: sanitizeRAIWorkingResponses(workingResponses, safeIndex),
+    raiChecks: safeEvidence?.dimensionCorrectness ?? blankRAIChecks(),
+    focusIntent: safeFocus,
+    ...(safeEvidence ? { raiEvidence: safeEvidence } : {}),
+  };
+}
+
+function raiFeedbackState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence) {
+  const safeEvidence = sanitizedRAIEvidence(raiEvidence);
+  const failed = custodyLedgerRAIPrimaryScenarioIds.flatMap((scenarioId) => custodyLedgerRAIDimensions
+    .filter((dimension) => safeEvidence?.dimensionCorrectness?.[scenarioId]?.[dimension] !== true)
+    .map((dimension) => ({
+      scenarioId,
+      dimension,
+      owner: "901 TEACHER // FEEDBACK",
+      text: custodyLedgerRAIRemediationMap[scenarioId][dimension],
+    })));
+  const focusIntent = failed[0]
+    ? { scenarioId: failed[0].scenarioId, dimension: failed[0].dimension }
+    : firstFailedRAI(safeEvidence);
+  return {
+    ...raiBaseState(primaryEvidence, transferEvidence, explanationEvidence),
+    phase: "rai_feedback",
+    activeMessageKey: "rai_feedback",
+    scoringEnabled: false,
+    raiForm: "primary",
+    raiScoringImplemented: true,
+    raiEvidence: safeEvidence,
+    raiChecks: safeEvidence?.dimensionCorrectness ?? blankRAIChecks(),
+    raiFeedback: failed,
+    focusIntent,
+  };
+}
+
+function raiGuidedState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence, guidedStatus = "blank") {
+  const safeEvidence = sanitizedRAIEvidence(raiEvidence);
+  return {
+    ...raiBaseState(primaryEvidence, transferEvidence, explanationEvidence),
+    phase: "rai_guided",
+    activeMessageKey: "rai_guided",
+    scoringEnabled: false,
+    raiForm: "primary",
+    raiScoringImplemented: true,
+    raiEvidence: safeEvidence,
+    raiChecks: safeEvidence?.dimensionCorrectness ?? blankRAIChecks(),
+    guidedPractice: {
+      ...custodyLedgerRAIGuidedCase,
+      response: Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, ""])),
+      status: guidedStatus === "incomplete" ? "incomplete" : "blank",
+    },
+    focusIntent: { group: "guided_practice", dimension: "principle" },
+  };
+}
+
+function raiTransferState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence) {
+  const safeEvidence = sanitizedRAIEvidence(raiEvidence);
+  if (!raiEvidenceIsComplete(safeEvidence)) {
+    return raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence, safeEvidence);
+  }
+  return {
+    ...raiBaseState(primaryEvidence, transferEvidence, explanationEvidence),
+    phase: "rai_transfer",
+    activeMessageKey: "rai_transfer",
+    scoringEnabled: false,
+    raiForm: "transfer",
+    raiScoringImplemented: true,
+    raiTransferInitialized: true,
+    raiTransferEvaluatorImplemented: false,
+    raiChecks: safeEvidence.dimensionCorrectness,
+    raiEvidence: safeEvidence,
+    raiTransferResponses: Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((scenarioId) => [
+      scenarioId,
+      Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, ""])),
+    ])),
+    focusIntent: { group: "rai_transfer", scenarioId: custodyLedgerRAIPrimaryScenarioIds[0], dimension: custodyLedgerRAIDimensions[0] },
   };
 }
 
@@ -861,6 +1090,123 @@ export function dismissCustodyLedgerPythonConclusion(state) {
   );
 }
 
+export function submitCustodyLedgerRAIPrimaryScenario(state, scenarioId, response) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "rai_primary"
+    || current.raiForm !== "primary"
+    || current.raiScenarioId !== scenarioId) return current;
+  const safeResponse = sanitizeRAIResponse(scenarioId, response);
+  const raiWorkingResponses = {
+    ...current.raiWorkingResponses,
+    [scenarioId]: safeResponse,
+  };
+  if (current.raiScenarioIndex < custodyLedgerRAIPrimaryScenarioIds.length - 1) {
+    return raiPrimaryState(
+      current.pythonEvidence,
+      current.pythonTransferEvidence,
+      current.pythonExplanationEvidence,
+      current.raiEvidence,
+      current.raiScenarioIndex + 1,
+      raiWorkingResponses,
+    );
+  }
+  const dimensionCorrectness = Object.fromEntries(custodyLedgerRAIPrimaryScenarioIds.map((id) => {
+    const scenario = responsibleAIPrimaryScenarios.find((item) => item.id === id);
+    const submitted = raiWorkingResponses[id];
+    return [id, Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [
+      dimension,
+      submitted
+        ? submitted[dimension] === scenario?.[dimension]
+        : current.raiEvidence?.dimensionCorrectness?.[id]?.[dimension] === true,
+    ]))];
+  }));
+  const passed = custodyLedgerRAIPrimaryScenarioIds.every((id) => custodyLedgerRAIDimensions
+    .every((dimension) => dimensionCorrectness[id][dimension] === true));
+  const failedScenarioIds = custodyLedgerRAIPrimaryScenarioIds.filter((id) => custodyLedgerRAIDimensions
+    .some((dimension) => dimensionCorrectness[id][dimension] !== true));
+  const raiEvidence = sanitizedRAIEvidence({
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    form: "primary",
+    dimensionCorrectness,
+    attemptCount: sanitizeAttemptCount(current.raiEvidence?.attemptCount) + 1,
+    hintLevel: passed ? current.raiEvidence?.hintLevel : sanitizeAttemptCount(current.raiEvidence?.hintLevel) + 1,
+    confidence: null,
+    misconceptionTags: failedScenarioIds.map((id) => custodyLedgerRAIMisconceptionTags[id]),
+    masteryStatus: passed ? "primary_complete" : "remediation_required",
+  });
+  return passed
+    ? raiTransferState(current.pythonEvidence, current.pythonTransferEvidence, current.pythonExplanationEvidence, raiEvidence)
+    : raiFeedbackState(current.pythonEvidence, current.pythonTransferEvidence, current.pythonExplanationEvidence, raiEvidence);
+}
+
+export function acknowledgeCustodyLedgerRAIFeedback(state) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "rai_feedback" || !current.raiEvidence) return current;
+  return raiGuidedState(
+    current.pythonEvidence,
+    current.pythonTransferEvidence,
+    current.pythonExplanationEvidence,
+    current.raiEvidence,
+  );
+}
+
+export function submitCustodyLedgerRAIGuidedPractice(state, response) {
+  const current = normalizeCustodyLedgerScaffold(state);
+  if (current.phase !== "rai_guided" || !current.raiEvidence) return current;
+  const principleValid = responsibleAIPrinciples.includes(response?.principle);
+  const mitigationValid = typeof response?.mitigation === "string"
+    && response.mitigation.trim().length >= 8
+    && response.mitigation.trim().length <= 160;
+  const owner = typeof response?.owner === "string" ? response.owner.trim().slice(0, 120) : "";
+  const nonHumanOwner = /\b(model|platform|city|builder|machine|system|device|terminal|artifact|algorithm)\b/i.test(owner);
+  if (!principleValid || !mitigationValid || owner.length < 3 || nonHumanOwner) {
+    return raiGuidedState(
+      current.pythonEvidence,
+      current.pythonTransferEvidence,
+      current.pythonExplanationEvidence,
+      current.raiEvidence,
+      "incomplete",
+    );
+  }
+  const focusIntent = firstFailedRAI(current.raiEvidence);
+  const scenarioIndex = custodyLedgerRAIPrimaryScenarioIds.indexOf(focusIntent.scenarioId);
+  return raiPrimaryState(
+    current.pythonEvidence,
+    current.pythonTransferEvidence,
+    current.pythonExplanationEvidence,
+    current.raiEvidence,
+    scenarioIndex >= 0 ? scenarioIndex : 0,
+    {},
+    focusIntent,
+  );
+}
+
+export function resumeCustodyLedgerRAI(state) {
+  const primaryEvidence = sanitizedPythonEvidence(state?.pythonEvidence, "primary");
+  const transferEvidence = sanitizedPythonEvidence(state?.pythonTransferEvidence, "transfer");
+  const explanationEvidence = sanitizedExplanationEvidence(state?.pythonExplanationEvidence);
+  if (!evidenceIsComplete(primaryEvidence, "primary")
+    || !evidenceIsComplete(transferEvidence, "transfer")
+    || !explanationEvidenceIsComplete(explanationEvidence)) {
+    return resumeCustodyLedgerPython(state);
+  }
+  const raiEvidence = sanitizedRAIEvidence(state?.raiEvidence);
+  if (raiEvidenceIsComplete(raiEvidence)) {
+    return raiTransferState(primaryEvidence, transferEvidence, explanationEvidence, raiEvidence);
+  }
+  const focusIntent = firstFailedRAI(raiEvidence);
+  const scenarioIndex = custodyLedgerRAIPrimaryScenarioIds.indexOf(focusIntent.scenarioId);
+  return raiPrimaryState(
+    primaryEvidence,
+    transferEvidence,
+    explanationEvidence,
+    raiEvidence,
+    scenarioIndex >= 0 ? scenarioIndex : 0,
+    {},
+    focusIntent,
+  );
+}
+
 /**
  * Reconstructs only the first incomplete scored boundary. Result and Pilot
  * presentation are intentionally not replayed, and no private working content
@@ -882,6 +1228,9 @@ export function resumeCustodyLedgerPython(state) {
   }
   if (!explanationEvidenceIsComplete(explanationEvidence)) {
     return explanationState(primaryEvidence, transferEvidence, explanationEvidence);
+  }
+  if (state?.raiEvidence || ["rai_feedback", "rai_guided", "rai_transfer"].includes(state?.phase)) {
+    return resumeCustodyLedgerRAI(state);
   }
   return raiPrimaryState(primaryEvidence, transferEvidence, explanationEvidence);
 }
@@ -921,10 +1270,12 @@ export function setCustodyLedgerOwnershipMessage(state, messageKey) {
 
 export function clearCustodyLedgerWorkingState(state) {
   const current = normalizeCustodyLedgerScaffold(state);
-  if (["python_primary", "python_primary_result", "python_transfer", "python_explanation", "python_complete", "rai_primary"]
+  if (["python_primary", "python_primary_result", "python_transfer", "python_explanation", "python_complete", "rai_primary", "rai_feedback", "rai_guided", "rai_transfer"]
     .includes(current.phase)) {
     return {
-      ...resumeCustodyLedgerPython(current),
+      ...(["rai_primary", "rai_feedback", "rai_guided", "rai_transfer"].includes(current.phase)
+        ? resumeCustodyLedgerRAI(current)
+        : resumeCustodyLedgerPython(current)),
       activeMessageKey: "cancelled",
     };
   }

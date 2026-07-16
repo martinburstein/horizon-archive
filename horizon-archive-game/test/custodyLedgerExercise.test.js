@@ -15,6 +15,7 @@ import {
   withSafetyExplanation,
 } from "../src/cityThresholdExercise.js";
 import {
+  acknowledgeCustodyLedgerRAIFeedback,
   advanceCustodyLedgerPrerequisite,
   clearCustodyLedgerWorkingState,
   createCustodyLedgerScaffold,
@@ -25,6 +26,11 @@ import {
   custodyLedgerPythonOwnershipMessages,
   custodyLedgerPrimaryReferenceSource,
   custodyLedgerPrimaryStarterSource,
+  custodyLedgerRAIDimensions,
+  custodyLedgerRAIGuidedCase,
+  custodyLedgerRAIPrimaryScenarioIds,
+  custodyLedgerRAIPrimaryScenarios,
+  custodyLedgerRAIRemediationMap,
   custodyLedgerSourceFields,
   custodyLedgerTransferSourceFields,
   custodyLedgerTransferReferenceSource,
@@ -36,10 +42,13 @@ import {
   getCustodyLedgerOwnershipMessage,
   retryCustodyLedgerPrimary,
   retryCustodyLedgerTransfer,
+  resumeCustodyLedgerRAI,
   resumeCustodyLedgerPython,
   setCustodyLedgerOwnershipMessage,
   submitCustodyLedgerPrimary,
   submitCustodyLedgerExplanation,
+  submitCustodyLedgerRAIGuidedPractice,
+  submitCustodyLedgerRAIPrimaryScenario,
   submitCustodyLedgerTransfer,
 } from "../src/custodyLedgerExercise.js";
 import {
@@ -115,6 +124,33 @@ function blankTransfer() {
 
 function blankExplanation() {
   return submitCustodyLedgerTransfer(blankTransfer(), custodyLedgerTransferReferenceSource);
+}
+
+function blankRAIPrimary() {
+  return dismissCustodyLedgerPythonConclusion(
+    submitCustodyLedgerExplanation(blankExplanation(), custodyLedgerExplanationAnswers),
+  );
+}
+
+function raiAnswer(scenario, overrides = {}) {
+  return Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [
+    dimension,
+    overrides[dimension] ?? scenario[dimension],
+  ]));
+}
+
+function submitRAIForm(state, overridesById = {}) {
+  let current = state;
+  for (let index = current.raiScenarioIndex; index < custodyLedgerRAIPrimaryScenarioIds.length; index += 1) {
+    const scenarioId = custodyLedgerRAIPrimaryScenarioIds[index];
+    const scenario = responsibleAIPrimaryScenarios.find((item) => item.id === scenarioId);
+    current = submitCustodyLedgerRAIPrimaryScenario(
+      current,
+      scenarioId,
+      raiAnswer(scenario, overridesById[scenarioId]),
+    );
+  }
+  return current;
 }
 
 test("Custody Ledger scaffold opens only after the exact atomic predecessor", () => {
@@ -247,7 +283,7 @@ test("every locked ownership node keeps a visible human-interface owner", () => 
     assert.ok(message.text.length > 20, key);
     assert.doesNotMatch(message.owner, /SCENE|BUILDER|MACHINE|CITY/);
   }
-  assert.equal(Object.keys(custodyLedgerPythonOwnershipMessages).length, 5);
+  assert.equal(Object.keys(custodyLedgerPythonOwnershipMessages).length, 8);
   for (const [key, message] of Object.entries(custodyLedgerPythonOwnershipMessages)) {
     assert.ok(message.owner.length > 10, key);
     assert.ok(message.text.length > 20, key);
@@ -504,19 +540,179 @@ test("closed-note explanation scores three dimensions separately and blanks ever
   assert.equal(Object.hasOwn(conclusion, "raiChecks"), false);
 });
 
-test("Pilot dismissal initializes only a blank unscored responsible-AI primary", () => {
+test("Pilot dismissal initializes only a blank protected responsible-AI primary", () => {
   const conclusion = submitCustodyLedgerExplanation(blankExplanation(), custodyLedgerExplanationAnswers);
   const rai = dismissCustodyLedgerPythonConclusion(conclusion);
   assert.equal(rai.phase, "rai_primary");
   assert.equal(rai.activeMessageKey, "rai_primary");
   assert.equal(rai.raiForm, "primary");
-  assert.equal(rai.raiScoringImplemented, false);
-  assert.equal(rai.scoringEnabled, false);
+  assert.equal(rai.raiScoringImplemented, true);
+  assert.equal(rai.scoringEnabled, true);
   assert.equal(rai.campaignCommitEnabled, false);
   assert.deepEqual(Object.values(rai.raiChecks).flatMap((checks) => Object.values(checks)), Array(9).fill(false));
   for (const prohibited of ["raiEvidence", "masteryStatus", "campaign", "route", "successor", "externalAction"]) {
     assert.equal(Object.hasOwn(rai, prohibited), false, prohibited);
   }
+});
+
+test("protected RAI catalog exposes exactly three course cases and three approved dimensions", () => {
+  assert.deepEqual(custodyLedgerRAIPrimaryScenarioIds, ["P01", "P02", "P03"]);
+  assert.deepEqual(custodyLedgerRAIDimensions, ["principle", "mitigation", "owner"]);
+  assert.equal(custodyLedgerRAIPrimaryScenarios.length, 3);
+  for (const scenario of custodyLedgerRAIPrimaryScenarios) {
+    assert.deepEqual(Object.keys(scenario).sort(), ["id", "mitigationChoices", "ownerChoices", "principleChoices", "prompt"]);
+    assert.equal(scenario.principleChoices.length, 6);
+    assert.equal(scenario.mitigationChoices.length, 2);
+    assert.equal(scenario.ownerChoices.length, 2);
+  }
+  assert.deepEqual(custodyLedgerRAIGuidedCase.dimensions, custodyLedgerRAIDimensions);
+});
+
+test("all cases recompute together and principle-only or nonhuman-owner shortcuts open mapped Teacher repair", () => {
+  const primary = blankRAIPrimary();
+  const pythonBytes = JSON.stringify([
+    primary.pythonEvidence,
+    primary.pythonTransferEvidence,
+    primary.pythonExplanationEvidence,
+  ]);
+  const missed = submitRAIForm(primary, {
+    P01: { mitigation: "publish_ai_disclosure_only", owner: "model_itself" },
+  });
+  assert.equal(missed.phase, "rai_feedback");
+  assert.equal(missed.activeMessageKey, "rai_feedback");
+  assert.equal(missed.scoringEnabled, false);
+  assert.equal(missed.raiEvidence.attemptCount, 1);
+  assert.equal(missed.raiEvidence.masteryStatus, "remediation_required");
+  assert.equal(missed.raiEvidence.dimensionCorrectness.P01.principle, true);
+  assert.equal(missed.raiEvidence.dimensionCorrectness.P01.mitigation, false);
+  assert.equal(missed.raiEvidence.dimensionCorrectness.P01.owner, false);
+  assert.equal(missed.raiFeedback.length, 2);
+  assert.deepEqual(missed.raiFeedback.map(({ scenarioId, dimension, owner }) => ({ scenarioId, dimension, owner })), [
+    { scenarioId: "P01", dimension: "mitigation", owner: "901 TEACHER // FEEDBACK" },
+    { scenarioId: "P01", dimension: "owner", owner: "901 TEACHER // FEEDBACK" },
+  ]);
+  assert.equal(missed.raiFeedback[0].text, custodyLedgerRAIRemediationMap.P01.mitigation);
+  assert.equal(Object.hasOwn(missed, "raiWorkingResponses"), false);
+  assert.equal(JSON.stringify([
+    missed.pythonEvidence,
+    missed.pythonTransferEvidence,
+    missed.pythonExplanationEvidence,
+  ]), pythonBytes);
+  assert.equal(missed.campaignCommitEnabled, false);
+  assert.equal(missed.continuation, "continuation");
+  assert.equal(missed.cityStateDelta, null);
+});
+
+test("Teacher feedback is replaced by neutral no-credit guidance and a blank first-failed retry", () => {
+  const missed = submitRAIForm(blankRAIPrimary(), {
+    P02: { mitigation: "add_privacy_notice", owner: "model_itself" },
+  });
+  const guided = acknowledgeCustodyLedgerRAIFeedback(missed);
+  assert.equal(guided.phase, "rai_guided");
+  assert.equal(guided.activeMessageKey, "rai_guided");
+  assert.equal(Object.hasOwn(guided, "raiFeedback"), false);
+  assert.equal(guided.guidedPractice.status, "blank");
+  assert.deepEqual(guided.guidedPractice.response, { principle: "", mitigation: "", owner: "" });
+
+  const rejected = submitCustodyLedgerRAIGuidedPractice(guided, {
+    principle: "fairness",
+    mitigation: "measure a comparable outcome",
+    owner: "the platform itself",
+    privateReasoning: "do not retain 4472",
+  });
+  assert.equal(rejected.phase, "rai_guided");
+  assert.equal(rejected.guidedPractice.status, "incomplete");
+  assert.doesNotMatch(JSON.stringify(rejected), /4472|platform itself/);
+
+  const retry = submitCustodyLedgerRAIGuidedPractice(guided, {
+    principle: "fairness",
+    mitigation: "measure group outcomes and review the difference",
+    owner: "expedition training lead",
+  });
+  assert.equal(retry.phase, "rai_primary");
+  assert.equal(retry.raiScenarioId, "P02");
+  assert.deepEqual(retry.focusIntent, { scenarioId: "P02", dimension: "mitigation" });
+  assert.deepEqual(retry.raiWorkingResponses, {});
+  assert.equal(Object.hasOwn(retry, "guidedPractice"), false);
+  assert.equal(retry.raiEvidence.attemptCount, 1);
+  const recovered = submitRAIForm(retry);
+  assert.equal(recovered.phase, "rai_transfer");
+  assert.equal(recovered.raiEvidence.attemptCount, 2);
+  assert.equal(Object.values(recovered.raiEvidence.dimensionCorrectness.P01).every(Boolean), true);
+});
+
+test("strict 9/9 after unlimited recovery initializes only a genuinely blank non-evaluating transfer", () => {
+  let state = submitRAIForm(blankRAIPrimary(), { P01: { owner: "model_itself" } });
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    state = submitCustodyLedgerRAIGuidedPractice(
+      acknowledgeCustodyLedgerRAIFeedback(state),
+      { principle: "fairness", mitigation: "measure comparable group outcomes", owner: "course review team" },
+    );
+    if (attempt < 2) state = submitRAIForm(state, { P01: { owner: "model_itself" } });
+  }
+  const transfer = submitRAIForm(state);
+  assert.equal(transfer.phase, "rai_transfer");
+  assert.equal(transfer.activeMessageKey, "rai_transfer");
+  assert.equal(transfer.raiEvidence.attemptCount, 4);
+  assert.equal(transfer.raiEvidence.masteryStatus, "primary_complete");
+  assert.equal(Object.values(transfer.raiEvidence.dimensionCorrectness).flatMap(Object.values).every(Boolean), true);
+  assert.equal(transfer.raiTransferInitialized, true);
+  assert.equal(transfer.raiTransferEvaluatorImplemented, false);
+  assert.equal(transfer.scoringEnabled, false);
+  assert.equal(Object.values(transfer.raiTransferResponses).flatMap(Object.values).every((value) => value === ""), true);
+  assert.equal(Object.hasOwn(transfer, "raiWorkingResponses"), false);
+  assert.equal(Object.hasOwn(transfer, "masteryStatus"), false);
+});
+
+test("RAI anti-forgery recomputes nine booleans and strips private working content on resume", () => {
+  let state = blankRAIPrimary();
+  for (const scenarioId of custodyLedgerRAIPrimaryScenarioIds) {
+    const scenario = responsibleAIPrimaryScenarios.find((item) => item.id === scenarioId);
+    const response = raiAnswer(scenario, scenarioId === "P03" ? { owner: "city" } : {});
+    state = submitCustodyLedgerRAIPrimaryScenario(state, scenarioId, {
+      ...response,
+      passed: true,
+      score: 9,
+      dimensionCorrectness: Object.fromEntries(custodyLedgerRAIDimensions.map((dimension) => [dimension, true])),
+      privateNotes: "private-working-9813",
+    });
+  }
+  assert.equal(state.phase, "rai_feedback");
+  assert.equal(state.raiEvidence.dimensionCorrectness.P03.owner, false);
+  assert.doesNotMatch(JSON.stringify(state), /private-working-9813|\"score\":9|\"passed\":true/);
+
+  const resumed = resumeCustodyLedgerRAI({
+    ...state,
+    raiWorkingResponses: { P03: { owner: "private-owner-812" } },
+    guidedPractice: { response: "private-guidance-913" },
+    freeFormReasoning: "private-reasoning-115",
+  });
+  assert.equal(resumed.phase, "rai_primary");
+  assert.equal(resumed.raiScenarioId, "P03");
+  assert.deepEqual(resumed.raiWorkingResponses, {});
+  assert.doesNotMatch(JSON.stringify(resumed), /private-owner|private-guidance|private-reasoning/);
+});
+
+test("protected RAI transitions leave campaign, Tour, world, and Python evidence byte-stable", () => {
+  const campaign = { cityThresholdAnchorRecorded: true, civicDistrictRouteAvailable: true, continuation: "continuation", cityStateDelta: null };
+  const tour = { mode: "demo_tour", cursor: "city", noCredit: true };
+  const campaignBytes = JSON.stringify(campaign);
+  const tourBytes = JSON.stringify(tour);
+  const primary = blankRAIPrimary();
+  const pythonBytes = JSON.stringify([primary.pythonEvidence, primary.pythonTransferEvidence, primary.pythonExplanationEvidence]);
+  const states = [primary, submitRAIForm(primary, { P03: { owner: "customer" } })];
+  states.push(acknowledgeCustodyLedgerRAIFeedback(states[1]));
+  states.push(resumeCustodyLedgerRAI(states[2]));
+  for (const candidate of states) {
+    assert.equal(candidate.campaignCommitEnabled, false);
+    assert.equal(candidate.continuation, "continuation");
+    assert.equal(candidate.cityStateDelta, null);
+    assert.equal(JSON.stringify([candidate.pythonEvidence, candidate.pythonTransferEvidence, candidate.pythonExplanationEvidence]), pythonBytes);
+    for (const prohibited of ["save", "cityResponse", "route", "successor", "item", "accessGranted", "permission", "externalAction", "identity"])
+      assert.equal(Object.hasOwn(candidate, prohibited), false, prohibited);
+  }
+  assert.equal(JSON.stringify(campaign), campaignBytes);
+  assert.equal(JSON.stringify(tour), tourBytes);
 });
 
 test("resume reconstructs the first incomplete scored boundary without replaying result or conclusion", () => {
