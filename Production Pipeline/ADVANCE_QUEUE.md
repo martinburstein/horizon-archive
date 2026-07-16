@@ -18,19 +18,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | Priority | Packet | Working title | Status | Advance owner | Gate | Dependencies | Next action |
 |---:|---|---|---|---|---|---|---|
 | 1 | `RP-001` | City Threshold | `PROMOTED TO WORKING` | Player Agent (`W1`) | A1–A5 and coordinator gate passed at `7001340` | Accepted Witness Corridor -> City Beneath credits boundary | Working Team performs methodical W1–W4 passes without changing locked rail contracts |
-| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Lore Builder Agent (`A1 — next protected dependency seam`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, and isolated first- and second-near-dispatch orchestration are complete; storage, art, normal exposure, successor, and later work are absent | A5 passed `SD-00/R/10/20/U/T`: all six ordered prefixes and seven modalities retain the first ID byte-stably, add only the selected second ID/Scene statement, report `2 of 3`, and return to two Recorded plus one Available action; replay, failure, recovery, resume, return, presentation, and Tour remain zero credit | Keep `REVISE`. A1 selects the next smallest contiguous protected seam after the verified two-ID boundary; do not add App/main integration, browser storage, geometry/art, route exposure, accepted-state change, successor, Demo reload, or Working promotion without a new A1–A4 contract. |
+| 2 | `RP-002` | Civic Record Encounter | `IN DESIGN — A5 PARTIAL / REVISE` | Storyboarder Agent (`A2 — third-near-completion presentation impact`) | Protected learning, observation, atomic-save, responsive component, hotspot, route-state, route-to-blank orchestration, isolated first- and second-near-dispatch orchestration, and third-near-completion ownership/meaning are complete; storage, art, normal exposure, successor, and later work are absent | A1 now locks only the exact verified two-ID boundary, one fresh activation of the sole unfinished near fact, retained prior evidence, its matching third ID/Scene statement, System `3 of 3`, and zero-credit `COMPARE SCALE` availability; far-view transition remains excluded | Keep `REVISE`. A2 performs only the third-near-completion presentation impact review; do not activate `COMPARE SCALE`, enter `SC-03-20`, expose far actions, or add geometry, code, component/App/main, browser storage, art, route exposure, accepted-state change, successor, Demo reload, or Working promotion. |
 
 ## Team positions
 
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `1 — RP-001`
-- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first- and second-near-dispatch orchestration seams complete; later integration remains REVISE)`
-- Team 1 railhead: `RP-002 — A5 isolated second-near-dispatch orchestration complete; A1 selects the next protected adjacency`
+- In-design packets: `1 — RP-002 (A5 partial; protected learning, observation, atomic-save, responsive component, hotspot geometry/dispatch, isolated route-state, route-to-blank-observation, and first- and second-near-dispatch orchestration seams complete; third-near meaning is at A2; later integration remains REVISE)`
+- Team 1 railhead: `RP-002 — A1 third-near-completion ownership/meaning locked; A2 presentation impact next`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 two-ID-to-third-near-completion Lore impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`, `REVISE`, protected, non-routable, and unavailable to Working. A1 locked only zero-credit return into an exact verified two-ID `SC-03-10` group and one fresh activation of the sole unfinished near fact. A valid action retains both prior IDs, adds only its matching third ID and Scene statement, reports System `3 of 3`, and exposes zero-credit `COMPARE SCALE`; the control is not activated and no `SC-03-20` or far action appears. Replay, unsafe input, recovery, focus, progress, return, and Tour add nothing and cannot erase valid evidence. Both SOLIDIFIED chains, observation/save/atomic contracts, privacy, accepted state, world/clocks, route, closed identity, and no-authority/no-successor boundaries remain exact. A2 now performs only the third-near-completion presentation impact review.
 
 ## 2026-07-16 one-ID-to-second-near-dispatch Lore impact note
 
