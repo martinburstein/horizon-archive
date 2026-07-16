@@ -800,3 +800,60 @@ The user-requested skip is a presentation aid, not a cheat-state version of mast
 - Invariants: campaign commit remains false; `continuation` is unchanged; `cityStateDelta=null`; campaign and Tour bytes remain separate and stable; identity remains closed; no item, access, permission, success, city response, successor, route, responsible-AI credit, PY-009 mastery, or external action exists.
 - Validation: focused Custody Ledger tests `13/13`; complete game suite `265/265`; production build passed with the existing chunk-size advisory.
 - Exact next Advance Coder handoff: `Implement only the protected blank PY-009 transfer evaluator and closed-note explanation seam from the completed primary boundary. Require a fresh transfer mapping with exactly classification="unknown" and owner="human_reviewer" by key update, all six checks, mapped remediation, blank retry, and a separately scored explanation of key/value update and None-versus-False. Preserve the existing primary causal record, privacy allowlist, cleared source, invariant continuation/city/campaign/Tour state, no UI/normal route, no mastery until all locked gates complete, and no external action. Return REVISE because RP002-RAI-01, persistence/save, observation, responsive UI, protected routing, and art seams remain incomplete; do not perform Working passes.`
+
+## A4 distinct-origin transfer/explanation graph confirmation — 2026-07-15
+
+- **Verdict:** `PASS — A4 DISTINCT-ORIGIN GRAPH LOCKED; EXISTING SOLIDIFIED GATES AND A5 SCOPE REMAIN VALID`.
+- **Bounded impact:** the A1/A2 `30-A` through `30-E` origin sequence changes presentation ownership and recovery routing only. It adds no scored action, prerequisite, dimension, mastery threshold, save field, world observation, route, reward, authority, or city response. The ordinary dismissal that advances from a read-only result or conclusion is explicitly zero evidence.
+- **Expected play time:** the complete normal-route puzzle remains `12–18 minutes`; the protected Python transfer plus explanation tranche is expected to occupy `3–5 minutes`, including one recoverable miss. No timing value is stored or scored.
+
+### Locked Python subgraph inside `SC-03-30`
+
+```text
+30-A / python_primary / UNFINISHED WORK IMAGE
+  -> miss: human-owned mapped feedback -> blank primary retry -> 30-A
+  -> strict 6/6: clear learner source -> 30-B
+
+30-B / python_primary_result / SUIT // PROVISIONAL TRANSLATION
+  -> read-only causal record; no answer, mastery, or world delta
+  -> ordinary zero-credit dismissal: clear rendered result -> 30-C
+
+30-C / python_transfer / SYSTEM // EXPEDITION SESSION / FRESH PRACTICE IMAGE
+  -> miss: human-owned mapped feedback -> blank transfer retry -> 30-C
+  -> strict 6/6: clear learner source and result -> 30-D
+
+30-D / python_explanation / 901 TEACHER // FEEDBACK
+  -> miss: field-associated repair -> clear all three selections -> blank explanation retry -> 30-D
+  -> strict three-part pass: persist only finalized explanation dimensions -> 30-E
+
+30-E / python_complete / PILOT // FLIGHT RECORDER
+  -> ordinary zero-credit dismissal: open the existing blank RAI primary boundary
+```
+
+- **Origin separation:** only `30-A` is Builder occupational work. `30-B` is a read-only suit mediation of the causally related exposed record. `30-C` is a fresh expedition-authored practice image with the exact transfer mapping and no carried source, result, answer, field value, or visual provenance from `30-A/B`. `30-D` is course-authored semantics feedback. `30-E` is the Pilot's bounded conclusion. One origin group is active at a time.
+- **Scoring:** `30-B`, its dismissal, all owner prefixes, rendering, focus movement, reading, navigation, and `30-E` remain zero evidence. Python reinforcement completes only after strict primary `6/6`, strict blank transfer `6/6`, and a separately scored three-part explanation. No Python state can satisfy or prefill the later `RP002-RAI-01` gate.
+
+### Recovery, focus, persistence, and save lock
+
+- A primary or transfer miss names only failed checks through the existing human-owned feedback map, preserves only allowlisted finalized booleans/attempt/hint/tag metadata, restores the immutable starter with empty expedition sockets, and permits unlimited retry.
+- An explanation miss associates feedback with the failed dimensions, clears all three working selections, and returns focus to the first failed selection in the new blank form. Correct selections from the failed attempt are not carried forward.
+- Strict primary completion focuses the complete `SUIT // PROVISIONAL TRANSLATION` result heading/status. Its dismissal focuses the `FRESH PRACTICE IMAGE` heading and then the first editable update in ordinary keyboard order. Strict transfer focuses the Teacher explanation heading; an explanation pass focuses the Pilot conclusion. Dismissing that conclusion focuses the first RAI-primary control.
+- Safe close, scene cancel, City Threshold return, reload, stale-save sanitation, and `RESUME CAMPAIGN` clear learner source, result, explanation selections, feedback prose, and private notes. They reconstruct the first incomplete scored boundary: transfer after finalized primary, explanation after finalized transfer, RAI primary after finalized Python, or the earlier incomplete boundary when evidence is missing or invalid. `30-B` is not replayed on resume because it is discovery/presentation rather than a scored boundary.
+- Demo Tour records only the same first-incomplete boundary in its separate sanitized cursor. It may preview the unchanged no-credit board but cannot persist or synthesize a result, answer, attempt, hint, correctness dimension, mastery status, campaign commit, predecessor, successor, identity, access, or city field.
+- `campaignCommitEnabled` remains false throughout `30-A` through `30-E` and the later RAI stages. `REVIEW BOUNDED COMPARISON` and the atomic three-field expedition save remain unavailable until both complete SOLIDIFIED evidence chains pass. `continuation`, both predecessor flags, `cityStateDelta=null`, the invariant photoreal world, closed identity material, reversible return, no successor, and zero external action remain exact.
+
+### Player-observable validation additions
+
+1. A strict primary run shows the causal suit result before a fresh transfer and never shows that result beside, behind, or inside the transfer form.
+2. The transfer visibly begins blank under `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`, and neither source inspection nor restored state can reveal a carried primary answer.
+3. A transfer miss restores both expedition updates blank; an explanation miss restores all three choices blank; both allow unlimited retry and preserve the unchanged district.
+4. Closing or reloading at the result, transfer, explanation, or Pilot conclusion returns to the first incomplete scored boundary with private working content clear and deterministic focus.
+5. Python completion cannot enable save, award RAI credit, alter campaign/Tour bytes, change the city, reveal identity material, or open a successor.
+
+- **Locked mechanics:** origin order, one active group, strict checks, blank retries, privacy-limited finalized evidence, first-incomplete reconstruction, focus destinations, save lock, separate Tour, and all world/authority invariants.
+- **Flexible implementation:** internal helper names and reducer representation may vary if the observable `30-B -> 30-C -> 30-D -> 30-E` order and sanitation contracts remain exact. Result and conclusion dismissal may reuse the shared message acknowledgement control, but neither may auto-score, depend on timing, or carry content into the next form.
+- **Validation performed:** RP-002 curriculum self-test passed; packaged Python primary and transfer references passed `6/6`; packaged responsible-AI primary and transfer references passed `9/9`; source assertions confirmed all four locked subgraph states, disabled campaign commit, exact A5 handoff, and updated A5 ownership in queue/map; `git diff --check` passed.
+
+### Exact Advance Coder A5 handoff — protected transfer/explanation seam
+
+`Coder Agent — advance mode: implement only the protected PY-009 distinct-origin transfer and closed-note explanation seam from the completed primary boundary in the non-routable Custody Ledger model. Refine the current strict-primary pass into 30-B python_primary_result with the existing read-only SUIT // PROVISIONAL TRANSLATION causal record and cleared learner source; an ordinary zero-credit dismissal must clear that record and open 30-C under SYSTEM // EXPEDITION SESSION with the visible label FRESH PRACTICE IMAGE, the exact unresolved_interval/deidentified_sensor_log/None/False starter, and empty classification/owner updates. Add a bounded non-executing transfer evaluator requiring all six locked checks and exactly classification="unknown" plus owner="human_reviewer" by key assignment. On any miss, attach the existing human-owned mapped feedback, persist only allowlisted finalized dimensions/attempt/hint/tags, restore the immutable transfer starter with both updates blank, and preserve unlimited retry. On strict transfer 6/6, clear learner source and open 30-D under 901 TEACHER // FEEDBACK with all three explanation selections blank: named-key update without dictionary replacement; None means missing/unknown identity; False means no access request occurred. Score those three dimensions separately; on a miss clear all selections and focus the first failed dimension, and on a strict pass retain only allowlisted booleans and open 30-E with the exact PILOT // FLIGHT RECORDER conclusion. Dismissing 30-E may initialize only the existing blank RAI-primary boundary; do not implement or score RP002-RAI-01 in this tranche. Derive first-incomplete resume deterministically so result/transfer/explanation/Pilot close, cancel, reload, stale sanitation, return, and Tour resume clear all private work and restore transfer, explanation, or RAI primary from finalized evidence without replaying 30-B. Presentation, dismissal, syntax, compilation, execution, output, translation, focus, reading, layout, hints, Tour, and save/reload remain zero mastery evidence. Keep campaignCommitEnabled=false; preserve separate campaign/Tour bytes, both predecessor flags, unchanged continuation, cityStateDelta=null, invariant world, closed identity material, no item/access/permission/city response/successor/external action, no durable learner source or prose, and no UI/normal route. Add focused state-model tests for the exact 30-B -> 30-C -> 30-D -> 30-E order, one active origin, blank/carry-free transfer, six-check anti-forgery, blank retries, three-part separate scoring, first-failed focus intent, deterministic first-incomplete reconstruction, forged-phase/evidence downgrade, primary-result non-replay, privacy allowlist, campaign/Tour byte stability, no save/RAI credit, and zero world/city/external delta. Return REVISE because RP002-RAI-01, atomic persistence/save, observation routing, responsive UI, protected route, and production art remain incomplete; do not perform Working passes.`

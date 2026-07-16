@@ -6,8 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-001 — IN DEMO / COORDINATOR VALIDATED`
-- Team 1 railhead: `RP-002 — A5 partial; A3 distinct-origin mapping review complete for A4 impact confirmation`
-- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 transfer seam under bounded puzzle-graph review`
+- Team 1 railhead: `RP-002 — A5 partial; A4 distinct-origin graph locked for protected A5 transfer construction`
+- Ordered Advance lead beyond Team 2 active packet: `1 packet — RP-002 transfer/explanation seam ready for protected construction`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -26,7 +26,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — COORDINATOR VALIDATED` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | Functional gates, responsive presentation, and the coordinated photorealistic production family are validated. Historical pixel and occupant-raster blockers remain retired; optional registered motion is follow-on polish only. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + DISTINCT HUMAN TRANSFER` | `STORYBOARD LOCKED — DISTINCT ORIGINS` | `PY-009 SOLIDIFIED — NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — NO REOPEN` | `A4 IMPACT REVIEW — DISTINCT ORIGINS` | `TOUR + PREREQUISITE + PY-009 PRIMARY COMPLETE; TRANSFER NEXT` | A3 confirmed that sequential origin ownership changes presentation only: strict primary, remediation, blank transfer, separately scored explanations, privacy, Tour, and authority evidence remain exact. A4 now confirms the unchanged puzzle graph before A5 resumes the protected transfer/explanation construction. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `IN DESIGN — A5 PARTIAL` | `NOT READY` | `LORE LOCKED — EXECUTABLE LITERACY + DISTINCT HUMAN TRANSFER` | `STORYBOARD LOCKED — DISTINCT ORIGINS` | `PY-009 SOLIDIFIED — NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — NO REOPEN` | `A4 LOCKED — DISTINCT-ORIGIN RECOVERY GRAPH` | `TOUR + PREREQUISITE + PY-009 PRIMARY COMPLETE; TRANSFER NEXT` | A4 locked `30-B` causal result -> cleared `30-C` fresh transfer -> `30-D` Teacher explanation -> `30-E` Pilot conclusion as zero-credit presentation around the unchanged strict gates. Blank retry, first-incomplete resume, save lock, privacy, Tour, authority, and invariant-world contracts are exact; A5 may now build only the protected transfer/explanation seam. |
 
 ## Whole-story coverage gate
 
