@@ -35,3 +35,7 @@ When a packet becomes `READY FOR WORKING`, retain its ordered position, promote 
 ## 2026-07-15 responsive-layout impact note
 
 `RP-002` remains `IN DESIGN — A5 PARTIAL`. A4 confirmed that retiring exact viewport gates changes presentation only: the puzzle graph, strict evidence, remediation, save/resume, Tour isolation, and world/city invariants are unchanged. The next A5 action is the protected prerequisite plus first Python-primary boundary against the custody owner-message registry, implemented as responsive semantic interface flow beside a fluid high-resolution world stage with keyboard/focus/reflow/zoom support, `44 x 44 CSS px` actions, and no fixed-canvas acceptance.
+
+## 2026-07-15 executable-literacy A4 impact note
+
+`RP-002` remains `IN DESIGN — A5 PARTIAL`. A4 confirmed that The Custody Ledger now reads as unfinished Builder occupational work: repair real Python, run the bounded relation, and review its causally related suit-rendered record. It is not a password or arbitrary reward dispenser. Compilation, execution, output, and translation alone remain zero mastery evidence; all strict primary, blank-transfer, explanation, responsible-AI, save, privacy, no-authority, invariant-world, and no-successor gates remain locked. The next A5 tranche is only the protected six-check PY-009 primary submission/result seam from the already-implemented blank `python_primary` state.
