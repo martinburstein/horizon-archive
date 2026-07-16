@@ -1,5 +1,12 @@
 # Player Agent Work Log
 
+## 2026-07-16 - Coordinator closure: RP-002 normal P0 partial release
+
+- **Outcome:** `PASS — NORMAL P0 IN DEMO PARTIAL.` The new predecessor-gated Civic Record District arrival, bounded resume, reversible return, and dedicated production master passed the complete coordinator gate. No later RP-002 state or RP-003 content is public.
+- **Validation:** full **419/419**, production build, RP-002 and RP-003 curriculum self-tests, patch/E2E syntax, and full campaign E2E **PASS in 138.6s** with all gates true and no runtime errors. Exact `1920 x 1080` and reloaded `390 x 844` shell review retained zero overflow, clean console, and `44px` required controls. The original `1672 x 941` registered arrival master passed first-person, functional-read, source-quality, and exclusion review.
+- **Evidence boundary:** the coordinator's in-app save remained at early Glass Meadow, so no duplicate manual P0 traversal is claimed. The focused normal-route suite, full E2E, and W3/W4 live evidence directly cover entry, return, resume, sanitation, Tour isolation, responsive crop, and zero learning/credit/world/city/external delta.
+- **Next W1:** begin at accepted P0 and report the earliest exact missing or broken step toward `SC-03-10`; do not inspect or expose RP-003.
+
 ## 2026-07-16 - W1 RP-002 normal-entry black-box playtest
 
 - **Demo build tested:** repository `171ea6d` (`Advance Gate: promote RP-003 and reserve RP-004`), with the unchanged accepted assets `index-BwgGd-Qy.js` / `index-D-UKM1r6.css` served at `http://127.0.0.1:4173/`. RP-002 is the oldest adjacent `READY` packet. RP-003 remained queued and was not opened or invoked for Working implementation.

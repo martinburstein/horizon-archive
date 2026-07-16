@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 coordinator release — RP-002 normal P0 partial increment
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / NORMAL P0 ACCEPTED.` The exact predecessor-gated arrival, bounded resume, reversible return, and dedicated registered Civic Record District master form one accepted playable increment. `SC-03-10+`, scored learning, atomic packet completion, and RP-003 remain protected and absent.
+- **Coordinator validation:** automated release checks **PASS in 138.6s**: full game suite **419/419**, production build (`index-BnvEvryd.js` / `index-BuFQ7Bya.css`), RP-002 validator, RP-003 validator, E2E syntax, patch integrity, and complete title-to-credits E2E with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental QA PNG regeneration was restored.
+- **Visual/responsive review:** original-size inspection confirmed the project-bound `1672 x 941` RGB master is distinct, first-person, functionally legible, and free of protagonist, ship, readable Builder text, baked UI, fantasy ornament, and the predecessor badge/hook. Exact CSS `1920 x 1080` and reloaded `390 x 844` shell checks retained zero outer overflow, empty console, and `44px` required controls. Existing user save remained earlier in the campaign, so coordinator does not duplicate W3/W4's live P0 traversal claim; focused normal-route tests and the full E2E independently cover entry, resume, return, sanitation, Tour isolation, and zero credit/world/city/external delta.
+- **Next bounded handoff:** Player Agent W1 starts from accepted P0 and records only the earliest exact gap toward `SC-03-10`. RP-002 remains the active Working packet; RP-003 stays queued behind it.
+
 ## 2026-07-16 W4 dedicated RP-002 P0 arrival master and final reload
 
 - **Mode/disposition:** `aesthetic-polish; PASS — RP002-AESTH-001 RESOLVED IN W4 / FINAL VALIDATION NEXT.` The normal `SC-03-00` arrival now has one dedicated registered maximum-quality cinematic photorealistic first-person world plate. It no longer imports the predecessor City Threshold overview, exposes the pending production-art hook, or renders the internal continuity badge.

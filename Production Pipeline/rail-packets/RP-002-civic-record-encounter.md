@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator normal-P0 partial release — 2026-07-16
+
+- **Disposition:** `IN DEMO — PARTIAL / P0 COORDINATOR PASS`.
+- **Accepted boundary:** exact predecessor-gated `SC-03-00` arrival, bounded allowlisted resume, reversible return, dedicated registered first-person master, deterministic heading focus, System ownership, and one `>=44px` return action.
+- **Release evidence:** full **419/419**, production build, RP-002 and RP-003 curriculum self-tests, E2E syntax, patch integrity, and complete title-to-credits E2E **PASS in 138.6s** with every gate true and no runtime errors. Exact `1920 x 1080` and reloaded `390 x 844` shell review retained zero outer overflow, clean console, and `44px` required controls. Original-size inspection passed the registered `1672 x 941` master and all first-person, functional, quality, provenance, and exclusion gates.
+- **Hard stop:** `SC-03-10+`, observation evidence, PY-009, RP002-RAI-01, packet save/completion, successor exposure, and RP-003 remain protected and absent. Next W1 begins at accepted P0 and reports only the earliest gap toward `SC-03-10`.
+
 ## Working W4 dedicated-arrival-art checkpoint — 2026-07-16
 
 - **Disposition:** `RP002-AESTH-001 RESOLVED IN W4 / FINAL VALIDATION NEXT`.
