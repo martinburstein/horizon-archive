@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A5 PARTIAL; PROTECTED DEMO TOUR FOUNDATION COMPLETE`
+- Status: `IN DESIGN — A5 PARTIAL; PROTECTED RAI PRIMARY/REMEDIATION COMPLETE; A1 RAI TRANSFER/EXPLANATION MEANING COMPLETE`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / first civic-record district inside the City Beneath
 - Target demo horizon: First playable slice after the completed RP-001 City Threshold anchor
 - Route order: 2
@@ -194,7 +194,7 @@ Runtime-ready ownership copy for the protected primary/remediation seam:
 
 These lines attach only to the existing `rai_primary` and mapped-remediation boundaries. They may not expose the expected answer before a scored attempt, count as evidence when read or dismissed, or replace field-associated feedback naming the failed case and dimension. Every retry remains blank and unlimited. Only privacy-limited correctness booleans, counts, confidence, and fixed misconception tags may persist; selected answers and feedback prose clear. The suit, local coupling, closed interlock, city, Builders, and Machine own none of this copy and provide no pass, miss, hint, or correction signal.
 
-### Lore Builder responsible-AI impact sign-off
+### Prior Lore Builder responsible-AI primary/remediation impact sign-off (complete)
 
 - Status: `PASS — A1 RESPONSIBLE-AI PRIMARY/REMEDIATION MEANING COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`.
 - Continuity: the completed PY-009 `30-A` through `30-E` chain still opens only a blank, unscored `rai_primary`; `continuation`, both RP-001 flags, `city_state_delta=None`, reversible return, and the no-successor boundary remain unchanged.
@@ -202,9 +202,45 @@ These lines attach only to the existing `rai_primary` and mapped-remediation bou
 - Spoiler safety: no choice or feedback line states Builder doctrine, native meaning, consent, identity, attention, judgment, access, authority, or city response.
 - Curriculum boundary: this contract adds presentation meaning only. The SOLIDIFIED three-scenario `9/9 primary -> per-dimension remediation -> blank 9/9 transfer -> three-part explanation` chain, expected answers, evidence allowlist, and privacy rules are unchanged.
 
-### Exact Storyboarder handoff — responsible-AI decision/feedback meaning review
+### Prior Storyboarder handoff — responsible-AI decision/feedback meaning review (complete)
 
 Storyboarder Agent: perform one bounded A2 impact review of the new Responsible-AI Primary and Remediation Meaning Contract on RP-002. Preserve every existing world plate, board, camera, hotspot, route, animation clock, material lock, Python origin group, curriculum score, and zero-city-delta state. Inside the existing separate responsive human interface after `30-E`, make the `rai_primary` sequence visibly course-authored and expedition-owned: each active case asks for one principle, one testable safeguard, and one accountable human or organizational role; mapped misses replace the active group with `901 TEACHER // FEEDBACK`; guided practice and blank retry remain `SYSTEM // EXPEDITION SESSION`. Keep one owner/message/case/action group active at a time, retain field association and deterministic first-failed focus, and do not visually encode correctness or origin by color, placement, motion, or world reaction alone. Preserve the meaning that principle labels classify human application practice, mitigation choices propose human safeguards without executing them, and owner choices assign review/correction responsibility without identifying a person or implying additional human presence. Do not add Builder doctrine, Builder speech, native interpretation, city approval/refusal, access, consent, authority, identity inference, a second suit-rendered record, or any change to the coupling, closed interlock, light, heat, maintenance, route, save, or successor. Verify complete owner prefixes, semantic wrapping/reflow, live feedback, keyboard order, blank retry, scroll recovery, and at least `44 x 44 CSS px` required actions across representative desktop and narrow layouts. Then hand A3 an exact mapping-preservation review: the five ownership lines and clarified meanings must not change the SOLIDIFIED three-scenario `9/9 primary -> per-dimension remediation -> blank 9/9 transfer -> three-part explanation` contract, expected answers, evidence allowlist, privacy, no-credit Tour, offline/no-authority boundary, or zero-city-response state.
+
+### Responsible-AI transfer and explanation meaning contract
+
+The blank `RP002-RAI-01` transfer and the separately scored explanation remain human course work after the protected primary/remediation seam. They test whether the learner can apply responsible handling to fresh neutral cases and state the limits of an application label. They do not continue the Builder work image, translate the district, or create a second world result.
+
+1. **Fresh course transfer:** the three approved transfer cases are `SYSTEM // EXPEDITION SESSION` practice records. Their de-identified sensor packet, private operator field, and automated label are neutral human-authored case premises, not recovered civic records, Builder roles, identified people, neighboring surfaces, or evidence that another human is present.
+2. **Human application decisions:** `principle`, testable `mitigation`, and accountable human-or-organizational `owner` remain decisions about how a human application should handle evidence. Selecting them neither performs the safeguard nor requests, opens, retains, transmits, corrects, audits, or acts on any city or external system.
+3. **Fresh-evidence boundary:** strict transfer work must begin blank and carry no primary choice, Teacher answer, guided response, Python result, suit translation, world observation, or prior label. A correct primary record establishes eligibility only; it does not answer a transfer case or explanation dimension.
+4. **Teacher-owned assessment:** scoring, mapped misses, hints, and blank retry belong only to `901 TEACHER // FEEDBACK` and the expedition course validator. No Builder surface, city process, suit translation, Machine, model, platform, or selected owner role judges the learner or supplies a correction.
+5. **Three-part explanation:** the closed-note explanation separately tests that the application label is human-owned and provisional, is not a native Builder fact, and creates no authority to access, infer, disclose, request, or act. These are human evidence-handling boundaries, not claims about Builder culture, identity, consent, metaphysics, or the true nature of the district.
+6. **Role-label limit:** an accountable owner value names the human or organizational role responsible for review, audit, correction, or appeal. It is not a biography, presence claim, crew member, identity-bearing record, Builder office, or proof that the named role has already acted.
+7. **No completion response:** transfer pass, explanation pass, miss, feedback, retry, restore, and conclusion change only the separate human interface and privacy-limited finalized evidence. The invariant world, causal Python result, closed identity layer, route, city state, `continuation`, and successor boundary do not change.
+
+Runtime-ready ownership copy for this seam:
+
+| Moment | Owner | Runtime-ready copy | Meaning lock |
+|---|---|---|---|
+| blank transfer opens | `SYSTEM // EXPEDITION SESSION` | "Fresh course transfer loaded. These cases came from the expedition lesson, not the city." | The transfer is neutral human-authored practice and carries no primary or world answer. |
+| transfer dimension misses | `901 TEACHER // FEEDBACK` | "Transfer review is incomplete. Recheck the named case and dimensions; no city response occurred." | Assessment remains Teacher-owned, field-associated, and answer-free. |
+| explanation opens | `901 TEACHER // FEEDBACK` | "Explain three boundaries: human application label, native fact, and authority to act." | The prompt names the scored boundaries without turning them into Builder doctrine. |
+| explanation dimension misses | `901 TEACHER // FEEDBACK` | "Explanation incomplete. Recheck the named boundary, then retry from a blank form." | A miss supplies no answer, world interpretation, or durable prose. |
+| explanation passes | `PILOT // FLIGHT RECORDER` | "My application label is a human interpretation, not their fact or permission to act." | The singular Pilot owns the bounded conclusion; the city and Builders remain silent. |
+
+The owner prefix must remain visible in text. Only one transfer, feedback, explanation, or conclusion group may be presented at a time, but presentation order is not evidence. Reading, focus, layout, color, motion, world observation, Python completion, Tour use, dismissal, restore, or the Pilot conclusion cannot satisfy any scored dimension. Misses clear selected answers and explanation work before blank retry; durable evidence remains limited to the existing allowlisted finalized booleans, bounded counts, confidence, fixed tags, IDs, and mastery state. No learner selections, answer values, feedback prose, free-form explanation, owner identity, source content, or external-action request may persist.
+
+### Lore Builder responsible-AI transfer/explanation impact sign-off
+
+- Status: `PASS — A1 RESPONSIBLE-AI TRANSFER/EXPLANATION MEANING COMPLETE; READY FOR STORYBOARDER A2 IMPACT REVIEW`.
+- Continuity: the completed strict `9/9` primary initializes only a blank transfer boundary. The completed Python chain, both RP-001 predecessor flags, `continuation`, `city_state_delta=None`, reversible return, closed identity material, invariant photoreal world, and no-successor boundary remain unchanged.
+- Ownership: transfer cases are System-owned human course premises; all assessment and remediation is Teacher-owned; the passed conclusion is a singular Pilot inference. An accountable role label neither identifies a person nor implies a crew, presence, prior action, or authority.
+- Spoiler safety: the tranche adds no Builder case, doctrine, speaker, native category, identity, consent, attention, judgment, access, response, or explanation of the district, Machine, continuity, disappearance, or exact Python correspondence.
+- Curriculum boundary: this is a presentation-meaning clarification only. The SOLIDIFIED `9/9 primary -> mapped per-dimension remediation -> blank 9/9 transfer -> separately scored three-part application-label/native-fact/authority explanation` chain, approved cases and answers, strict scoring, blank recovery, privacy allowlist, and no-credit boundaries are unchanged.
+
+### Exact Storyboarder handoff — responsible-AI transfer/explanation ownership review
+
+Storyboarder Agent: perform one bounded A2 presentation impact review of the new Responsible-AI Transfer and Explanation Meaning Contract on RP-002. Preserve every SC-03 world plate, board, camera, hotspot, route, clock, material, causal Python result, completed Python evidence, and protected RAI primary/remediation state. In the separate responsive human interface after strict primary `9/9`, board one sequential owner/message/case/action lane: blank `SYSTEM // EXPEDITION SESSION` transfer using only the three approved course-authored transfer cases; field-associated `901 TEACHER // FEEDBACK` on a miss with blank retry; `901 TEACHER // FEEDBACK` three-boundary explanation prompt after strict transfer `9/9`; mapped explanation miss with blank retry; then the exact `PILOT // FLIGHT RECORDER` conclusion. Make the transfer's lesson origin explicit without implying the de-identified sensor packet, private operator field, automated label, or owner roles came from the city, a Builder, a neighboring surface, an identified person, or a crew. Keep `SUIT // PROVISIONAL TRANSLATION`, Builder work-image language, primary selections, Python results, and prior answers out of the transfer and explanation groups. Preserve the meanings that principle/mitigation/owner are human application decisions, owner labels are accountable roles rather than identities or presence claims, and the three explanation dimensions separate a human application label from native fact and authority to act. No pass, miss, focus, feedback, conclusion, or restore state may change the world, reopen identity material, perform a safeguard, create access/consent/permission, imply a city response, or count as evidence by presentation alone. Verify full textual owner prefixes, one active group, semantic field association, live status, deterministic first-incomplete/first-failed focus, blank retries, natural wrapping, scroll recovery, keyboard order, non-color meaning, and at least `44 x 44 CSS px` required actions at representative desktop and narrow layouts. Preserve strict privacy sanitation, separate no-credit Tour, offline/no-authority/no-exam-guarantee boundaries, `campaignCommitEnabled=false`, unchanged `continuation`, `city_state_delta=None`, reversible return, no save, no normal exposure, and no successor. Then hand A3 the unchanged SOLIDIFIED mapping for a presentation-only preservation review; do not add or rewrite cases, expected answers, scores, remediation, persistence, route, art, or world state.
 
 ### Mystery protections
 
@@ -1007,6 +1043,14 @@ RAI-GUIDE / SYSTEM // EXPEDITION SESSION
 
 `Player Agent: RP-002 is not promoted, routed, or available for play. Perform W1 only against the accepted RP-001 live-demo boundary. Preserve campaign/Tour separation, strict mastery, save/recovery, privacy/no-authority, responsive accessibility, continuation, and null city delta. Report the earliest reproducible accepted-path defect or a clean pass; do not infer a defect from the intentionally absent protected RAI route.`
 
-### Exact next Advance handoff — blank RAI transfer/explanation review
+### Prior next Advance handoff — blank RAI transfer/explanation review (completed by A1)
 
-`Next Advance cycle starts at Lore Builder ownership review for the blank RP002-RAI-01 transfer and separately scored three-part explanation. Preserve this completed primary/remediation state model, human-only decision ownership, distinct System/Teacher/Pilot labels, zero-credit feedback/guidance/presentation, strict privacy allowlist, completed Python evidence, invariant world/city/route, and no normal exposure. Do not implement later seams before their sequential A1–A4 reviews.`
+`Lore Builder completed the requested ownership review in this cycle. The exact current handoff is the A2 Storyboarder contract in the Lore Track above; later seams remain blocked until sequential A2–A4 review.`
+
+## Advance A1 responsible-AI transfer/explanation ownership review — 2026-07-16
+
+- **Verdict:** `PASS — A1 COMPLETE; READY FOR BOUNDED A2 PRESENTATION IMPACT REVIEW`.
+- **Bounded meaning lock:** the transfer is fresh System-owned course practice, assessment and mapped repair are Teacher-owned, and the passed conclusion is Pilot-owned. None is Builder material, suit translation, city process, Machine judgment, identity evidence, permission, authority, or world response.
+- **Invariant proof:** completed Python and RAI primary/remediation evidence, privacy allowlist, campaign/Tour separation, `campaignCommitEnabled=false`, both RP-001 predecessor facts, unchanged `continuation`, `cityStateDelta=null`, closed identity material, invariant world/route, reversible return, no save, no successor, and no normal exposure remain exact.
+- **Validation:** RP-002 curriculum self-test passed; packet/queue/map ownership and next-action searches passed; spoiler, continuity, ownership-language, state-transition, privacy, and no-authority reviews passed; `git diff --check` passed.
+- **Exact A2 handoff:** use `Exact Storyboarder handoff — responsible-AI transfer/explanation ownership review` in the Lore Track. Perform presentation impact only; do not alter the SOLIDIFIED `9/9 -> remediation -> blank 9/9 transfer -> separately scored three-part explanation` chain or implement later seams.
