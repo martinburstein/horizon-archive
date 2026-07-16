@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 final verification/reload after responsive aesthetic review - `fdd0997` handoff
+
+- **Verdict:** `PASS — VIEWPORT-P1-002 FINAL RELOAD COMPLETE; COORDINATOR VALIDATION NEXT.` W3 authorized no implementation and W4 reproduced no exact residual. No runtime, art, test, save, route, curriculum, accepted-world, or QA-binary artifact changed.
+- **Validation:** focused **41/41 PASS**; full **402/402 PASS**; production build PASS; RP-002 App/main/bundle/storage leakage PASS; page/JS/CSS HTTP `200`. Port `4173` PID `5112` serves `index-BwgGd-Qy.js` / `index-D-UKM1r6.css`; final normal-size title reload has no browser warning/error.
+- **Exact desktop evidence:** CSS viewport/document `1920 × 1080`, scroll/client dimensions equal on both axes; centered scene `1428.67 × 803.63` (`1.77778:1`); complete `220px` command band through `bottom 1046.63`; all three verbs and both inventory actions inside the viewport at `44px`; world share `78.5%` of world-plus-command area.
+- **Exact accessibility evidence:** CSS `390 × 844` stays narrow with document `390 × 844`, scene `384 × 216`, no horizontal escape, and all five current controls `360 × 44`. Effective `1279 × 620` representative text-zoom geometry retains natural vertical flow (`scrollHeight 952`), visible overflow, no horizontal escape, and `44px` controls; the desktop-height rule does not leak below its gate.
+- **Preserved:** intentional centered breathing room, undistorted maximum-quality photoreal plates/crops, first-person/no-protagonist/no-ship framing, stable integrated Terminal geometry, gameplay/recovery, bounded saves, strict mastery, privacy/offline/no-authority, Tour no-credit isolation, `continuation`, `cityStateDelta:null`, accepted world/route state, accessibility, and protected RP-002 absence/non-routability remain exact.
+- **Exact coordinator handoff:** `Independently validate the final served desktop/narrow/text-zoom layouts and release gates. Accept only if the full 1920×1080 shell remains no-scroll with a dominant undistorted world, intentional breathing room, complete 220px lower band, visible >=44px current controls, and no clipping/stretch/crop damage; 390×844 and effective 200%-text layouts must retain natural vertical reflow, no horizontal escape, readable hierarchy, and >=44px targets. Preserve every accepted functional, learning, save/privacy/offline/no-authority/Tour/world/route/art invariant and keep RP-002 protected, absent, and non-routable.`
+
 ## 2026-07-16 W3 responsive aesthetic review after desktop full-shell repair - `b1d25bd` handoff
 
 - **Verdict:** `CLEAN PASS FROM AVAILABLE EVIDENCE - VIEWPORT-P1-002 W3 CLEAN.` The accepted shell remains contained and visually balanced after W2's height-budget repair; no new aesthetic finding opened and RP-002 remained protected/out of scope.
