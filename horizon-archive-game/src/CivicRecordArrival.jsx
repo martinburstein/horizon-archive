@@ -9,15 +9,38 @@ import {
 
 export function CivicRecordArrival({ routeState, onAction }) {
   const headingRef = useRef(null);
-  const atBlankObservation = routeState.boardId === "SC-03-10";
-  const heading = atBlankObservation ? "Near Exposed Layers" : "Civic Record District";
-  const artRegistration = atBlankObservation
+  const atNearObservation = routeState.boardId === "SC-03-10";
+  const hasObservation = routeState.observationEvidence?.length === 1;
+  const heading = atNearObservation ? "Near Exposed Layers" : "Civic Record District";
+  const artRegistration = atNearObservation
     ? "SC-03-10-registered-continuity-hook"
     : "SC-03-00-civic-record-arrival-v1";
+  const routeActions = routeState.availableActions.filter((action) => action !== routeState.routeReturnAction);
+  const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
   useLayoutEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
   }, [routeState.checkpoint]);
+
+  function renderAction(action) {
+    const owner = action === custodyLedgerRouteActions.continueProtected
+      ? custodyLedgerRouteOwners.system
+      : custodyLedgerRouteOwners.pilot;
+    const primary = action === custodyLedgerRouteActions.continueProtected
+      || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
+      || (atNearObservation && action !== routeState.routeReturnAction);
+    return (
+      <button
+        className={primary ? "primary-action" : "secondary-action"}
+        type="button"
+        key={action}
+        aria-label={`${owner} — ${action}`}
+        onClick={(event) => onAction(action, event)}
+      >
+        {action}
+      </button>
+    );
+  }
 
   return (
     <CanonicalGameFrame enabled>
@@ -26,14 +49,15 @@ export function CivicRecordArrival({ routeState, onAction }) {
         data-scene="civic-record-district"
         data-board={routeState.boardId}
         data-production-art={artRegistration}
-        data-production-art-hook={atBlankObservation ? "SC-03-10-detail-pending" : undefined}
+        data-production-art-hook={atNearObservation ? "SC-03-10-detail-pending" : undefined}
+        data-observation-count={routeState.observationEvidence?.length ?? 0}
       >
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
-          {routeState.message}
+          {[routeState.sceneStatement?.text, routeState.statusMessage?.text, routeState.message].filter(Boolean).join(" ")}
         </p>
         <section
           className="city-world civic-record-world"
-          aria-label={atBlankObservation ? "Near exposed layers, blank observation view" : "Civic Record District arrival overview"}
+          aria-label={atNearObservation ? "Near exposed layers, bounded observation view" : "Civic Record District arrival overview"}
         >
           <img
             className="city-world-plate-native"
@@ -45,32 +69,35 @@ export function CivicRecordArrival({ routeState, onAction }) {
           <div>
             <p className="eyebrow">{routeState.owner ?? custodyLedgerRouteOwners.system}</p>
             <h1 ref={headingRef} id="rp002-arrival-heading" tabIndex="-1">{heading}</h1>
-            <p>{routeState.message}</p>
+            {routeState.sceneStatement ? (
+              <div className="civic-observation-statement" aria-label="Recorded Scene statement">
+                <p className="eyebrow">{routeState.sceneStatement.owner}</p>
+                <p>{routeState.sceneStatement.text}</p>
+              </div>
+            ) : <p>{routeState.message}</p>}
+            {routeState.statusMessage && (
+              <p className="civic-observation-status">
+                <span className="eyebrow">{routeState.statusMessage.owner}</span><br />
+                {routeState.statusMessage.text}
+              </p>
+            )}
             <p>
-              {atBlankObservation
-                ? "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
+              {atNearObservation
+                ? hasObservation
+                  ? "One bounded Scene fact is retained. It grants no learning evidence, mastery, exam credit, access, or city change."
+                  : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
             </p>
           </div>
-          <div className="city-command-actions" aria-label="Civic route actions">
-            {routeState.availableActions.map((action) => {
-              const owner = action === custodyLedgerRouteActions.continueProtected
-                ? custodyLedgerRouteOwners.system
-                : custodyLedgerRouteOwners.pilot;
-              const primary = action === custodyLedgerRouteActions.continueProtected
-                || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION;
-              return (
-                <button
-                  className={primary ? "primary-action" : "secondary-action"}
-                  type="button"
-                  key={action}
-                  aria-label={`${owner} — ${action}`}
-                  onClick={(event) => onAction(action, event)}
-                >
-                  {action}
-                </button>
-              );
-            })}
+          <div className="civic-action-groups">
+            <div className="city-command-actions" aria-label={atNearObservation ? "Near evidence actions" : "Civic route actions"}>
+              {routeActions.map(renderAction)}
+            </div>
+            {returnActions.length > 0 && (
+              <div className="city-command-actions civic-route-return-actions" aria-label="Separate route return">
+                {returnActions.map(renderAction)}
+              </div>
+            )}
           </div>
         </section>
       </main>

@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## Working W2 RP002-P1-003 first-near checkpoint — 2026-07-16
+
+- **Disposition:** `DEMO RELOADED — RP002-P1-003 RESOLVED / W3 NEXT`.
+- **Integrated boundary:** accepted blank `SC-03-10` exposes the three exact equal-peer first-near controls plus separate returns. One of seven supported modalities records only the matching canonical ID, exact Scene statement, and literal System `1 of 3` acknowledgement. The acknowledgement is transient; return, replay, and resume are deterministic and idempotent.
+- **Safety/evidence:** only one sanitized near record persists. Unsafe, duplicate, combined, ambiguous, stale, forged, private, Tour-derived, and second-observation input fails closed; zero learning/mastery/save/authority/access/exam/world/city/external/successor credit remains exact. No second observation or later content is live.
+- **Validation/reload:** focused **49/49**, full **452/452**, build, RP-002 validator, and complete **236.7s** E2E pass with no runtime errors. QA PNGs restored. Port `4173` serves `index-DumYcxh-.js` / `index-Dws9tyNW.css`; the civic asset remains `2,594,095` bytes with SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **W3:** review only the one-ID view's art/crop, Scene/System hierarchy, retained ID/replay-only control, separate returns, responsive containment, `>=44px` controls, focus, non-color/reduced-motion meaning, and first-person exclusion. Preserve all functional boundaries and stop before a second observation.
+
 ## 2026-07-16 coordinator release — RP-002 blank SC-03-10 increment
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED.` The normal route now reaches the staged zero-credit overview and blank sanitized near-layer group with separate return and deterministic bounded resume. No observation, Scene fact, learning/mastery/exam credit, city/world/external delta, successor, or later packet is exposed.

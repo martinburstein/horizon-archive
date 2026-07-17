@@ -614,6 +614,7 @@ export function App() {
   const [demoTour, setDemoTour] = useState(() => typeof window === "undefined" ? null : loadDemoTour(window.localStorage));
   const [demoTourConfirmation, setDemoTourConfirmation] = useState(null);
   const [custodyLedgerRouteSave, setCustodyLedgerRouteSave] = useState(null);
+  const [custodyLedgerRouteView, setCustodyLedgerRouteView] = useState(null);
   const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const verifiedCityThresholdPredecessor = typeof window === "undefined"
     ? null
@@ -1158,8 +1159,9 @@ export function App() {
     const routeSave = predecessor && typeof window !== "undefined"
       ? readCustodyLedgerNormalRoute(window.localStorage, predecessor)
       : null;
-    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank"].includes(routeSave?.checkpoint)) {
+    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank", "sc03_near_first"].includes(routeSave?.checkpoint)) {
       setCustodyLedgerRouteSave(routeSave);
+      setCustodyLedgerRouteView(null);
       setMode("rp002-arrival");
       return;
     }
@@ -1193,6 +1195,7 @@ export function App() {
     if (result.status !== "entered"
       || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
     setCustodyLedgerRouteSave(result.save);
+    setCustodyLedgerRouteView(result.state);
     setMode("rp002-arrival");
   }
 
@@ -1211,12 +1214,14 @@ export function App() {
     if (result.status === "returned") {
       clearCustodyLedgerNormalRoute(window.localStorage);
       setCustodyLedgerRouteSave(null);
+      setCustodyLedgerRouteView(null);
       setMode("city-threshold-staging");
       return;
     }
-    if (result.status !== "advanced"
+    if (!["advanced", "recorded", "replayed", "returned_to_evidence"].includes(result.status)
       || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
     setCustodyLedgerRouteSave(result.save);
+    setCustodyLedgerRouteView(result.state);
   }
 
   function returnToCompletedMeadow() {
@@ -2247,10 +2252,11 @@ export function App() {
     const routeSave = verifiedCityThresholdPredecessor && typeof window !== "undefined"
       ? custodyLedgerRouteSave ?? readCustodyLedgerNormalRoute(window.localStorage, verifiedCityThresholdPredecessor)
       : null;
-    const routeState = createCustodyLedgerNormalRouteController({
+    const restoredRouteState = createCustodyLedgerNormalRouteController({
       predecessor: verifiedCityThresholdPredecessor,
       restoredSave: routeSave,
     }).getState();
+    const routeState = custodyLedgerRouteView ?? restoredRouteState;
     return <CivicRecordArrival routeState={routeState} onAction={advanceCustodyLedgerNormalRoute} />;
   }
 

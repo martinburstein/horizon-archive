@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 first-near checkpoint — 2026-07-16
+
+- **Disposition:** `RP002-P1-003 RESOLVED / DEMO RELOADED / W3 NEXT`.
+- **Integrated boundary:** blank normal `SC-03-10` derives the three exact first-near controls from protected authorities. One deliberate action across seven modalities records exactly its matching canonical ID and shows the exact Scene statement plus System `Near evidence recorded: 1 of 3. The district remains unchanged.` Evidence return and route return remain separate.
+- **Persistence/recovery:** only one sanitized near record persists; resume does not replay acknowledgement; same-ID replay is idempotent; unsafe, duplicate, combined, ambiguous, stale, forged, private, Tour-derived, and second-observation input fails closed. Zero learning/mastery/save/authority/access/exam/world/city/external/successor credit remains exact.
+- **Evidence/handoff:** focused **49/49**, full **452/452**, production build, RP-002 validator, and complete **236.7s** E2E pass. W3 reviews only the one-ID presentation for art/crop, Scene/System hierarchy, retained ID/replay-only control, separate returns, responsive/accessibility behavior, and first-person exclusion. Do not expose a second observation, `SC-03-20+`, learning, RP-003, or later content.
+
 ## Coordinator blank-view partial release — 2026-07-16
 
 - **Disposition:** `IN DEMO — PARTIAL / BLANK SC-03-10 COORDINATOR PASS`.

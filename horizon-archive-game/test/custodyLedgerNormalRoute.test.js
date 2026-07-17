@@ -12,6 +12,15 @@ import {
   sanitizeCustodyLedgerNormalRouteSave,
   writeCustodyLedgerNormalRoute,
 } from "../src/CustodyLedgerNormalRoute.js";
+import {
+  custodyLedgerObservationActions,
+  custodyLedgerObservationControls,
+  custodyLedgerObservationInterfaceCopy,
+} from "../src/CustodyLedgerObservation.js";
+import {
+  custodyLedgerObservationStages,
+  custodyLedgerObservationStatements,
+} from "../src/custodyLedgerExercise.js";
 
 const predecessor = Object.freeze({
   verificationStatus: "verified",
@@ -33,15 +42,31 @@ function intent(action, activationKind = "pointer", token = `${action}-${activat
   return createCustodyLedgerNormalRouteIntent(action, activationKind, token);
 }
 
-function assertNoDeltaOrCredit(state) {
+const nearEntries = custodyLedgerObservationStages.near.map((observationId) => [
+  observationId,
+  custodyLedgerObservationActions[observationId],
+]);
+
+function assertNoDeltaOrCredit(state, observationCount = 0) {
   assert.equal(state.cityStateDelta, null);
   assert.equal(state.worldStateDelta, null);
-  assert.deepEqual(state.observationEvidence, []);
+  assert.equal(state.accessStateDelta, null);
+  assert.equal(state.observationEvidence.length, observationCount);
   assert.deepEqual(state.learningEvidence, []);
+  assert.deepEqual(state.masteryEvidence, []);
+  assert.equal(state.saveEligibility, false);
   assert.equal(state.successor, null);
   assert.equal(state.authorityGranted, false);
   assert.equal(state.externalActionEnabled, false);
   assert.equal(state.examCreditGranted, false);
+}
+
+function blankController() {
+  const controller = createCustodyLedgerNormalRouteController({ predecessor });
+  controller.dispatch(intent(custodyLedgerRouteActions.enter, "pointer", `rp002-entry-${Math.random()}`));
+  controller.dispatch(intent(custodyLedgerRouteActions.continueProtected, "pointer", `rp002-overview-${Math.random()}`));
+  controller.dispatch(intent(CUSTODY_LEDGER_NEAR_DETAIL_ACTION, "pointer", `rp002-blank-${Math.random()}`));
+  return controller;
 }
 
 function memoryStorage(initial = {}) {
@@ -102,7 +127,10 @@ test("explicit near-layer inspection enters only a blank sanitized SC-03-10 grou
     assert.equal(result.status, "advanced");
     assert.equal(result.state.checkpoint, "sc03_near_blank");
     assert.equal(result.state.boardId, "SC-03-10");
-    assert.deepEqual(result.state.availableActions, [custodyLedgerRouteActions.returnAccepted]);
+    assert.deepEqual(result.state.availableActions, [
+      ...nearEntries.map(([, label]) => label),
+      custodyLedgerRouteActions.returnAccepted,
+    ]);
     assert.deepEqual(result.state.observationState.observationEvidence, []);
     assert.deepEqual(result.state.observationState.finalizedObservationIds, []);
     assert.equal(result.state.observationState.progress.near, 0);
@@ -214,6 +242,147 @@ test("missing, forged, private, and Demo Tour route state remain unavailable", (
   assertNoDeltaOrCredit(tour.getState());
 });
 
+test("each exact first-near choice has seven-modality parity and records only its matching authority evidence", () => {
+  for (const [observationId, label] of nearEntries) {
+    for (const activationKind of activationKinds) {
+      const controller = blankController();
+      const result = controller.dispatch(intent(
+        label,
+        activationKind,
+        `rp002-first-${observationId}-${activationKind}`,
+      ));
+      assert.equal(result.status, "recorded", `${observationId}/${activationKind}`);
+      assert.equal(result.observationId, observationId);
+      assert.equal(result.state.checkpoint, "sc03_near_acknowledgement");
+      assert.deepEqual(result.state.observationEvidence.map((record) => record.observationId), [observationId]);
+      assert.deepEqual(result.state.sceneStatement, custodyLedgerObservationStatements[observationId]);
+      assert.deepEqual(result.state.statusMessage, {
+        owner: "SYSTEM // EXPEDITION STATE",
+        text: custodyLedgerObservationInterfaceCopy.partialNear(1),
+      });
+      assert.deepEqual(result.state.availableActions, [
+        custodyLedgerObservationControls.returnToEvidence.label,
+        custodyLedgerRouteActions.returnAccepted,
+      ]);
+      assert.equal(result.save.checkpoint, "sc03_near_first");
+      assert.equal(result.save.observationEvidence.observationId, observationId);
+      assertNoDeltaOrCredit(result.state, 1);
+    }
+  }
+});
+
+test("RETURN TO EVIDENCE, close/reload, replay, and separate route return preserve exactly one ID", () => {
+  const controller = blankController();
+  const recorded = controller.dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "keyboard_enter",
+    "rp002-first-return-chain",
+  ));
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: recorded.save });
+  assert.equal(resumed.getState().checkpoint, "sc03_near_first");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.deepEqual(resumed.getState().observationEvidence.map((record) => record.observationId), ["later_stewardship"]);
+  assert.deepEqual(resumed.getState().availableActions, [
+    custodyLedgerObservationActions.later_stewardship,
+    custodyLedgerRouteActions.returnAccepted,
+  ]);
+  assert.equal(resumed.getState().focusIntent.target, "rp002-arrival-heading");
+  assertNoDeltaOrCredit(resumed.getState(), 1);
+
+  const returnedToEvidence = resumed.dispatch(intent(
+    custodyLedgerObservationControls.returnToEvidence.label,
+    "screen_reader",
+    "rp002-return-to-evidence",
+  ));
+  assert.equal(returnedToEvidence.status, "returned_to_evidence");
+  assert.equal(returnedToEvidence.save.observationEvidence.observationId, "later_stewardship");
+  assertNoDeltaOrCredit(returnedToEvidence.state, 1);
+
+  const replay = resumed.dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "speech",
+    "rp002-replay-first",
+  ));
+  assert.equal(replay.status, "replayed");
+  assert.equal(replay.observationId, "later_stewardship");
+  assert.deepEqual(replay.state.observationEvidence.map((record) => record.observationId), ["later_stewardship"]);
+  assertNoDeltaOrCredit(replay.state, 1);
+
+  const returned = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: replay.save }).dispatch(intent(
+    custodyLedgerRouteActions.returnAccepted,
+    "switch",
+    "rp002-first-route-return",
+  ));
+  assert.equal(returned.status, "returned");
+  assert.equal(returned.state.checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(returned.state);
+});
+
+test("wrong, duplicate, combined, ambiguous, stale, forged, private, Tour, and second-observation input fail closed", () => {
+  const variants = [
+    { action: "UNKNOWN" },
+    { stale: true },
+    { forged: true },
+    { multiHit: true },
+    { tourDerived: true },
+    { actions: [custodyLedgerObservationActions.fixed_trace, custodyLedgerObservationActions.outlined_gap] },
+    { candidateSemanticIds: ["rp002.sc03_10.fixed_trace", "rp002.sc03_10.outlined_gap"] },
+    { privateNotes: "PRIVATE-NEAR" },
+  ];
+  for (const override of variants) {
+    const controller = blankController();
+    const clean = intent(custodyLedgerObservationActions.fixed_trace, "pointer", `rp002-unsafe-${JSON.stringify(override)}`.replace(/[^A-Za-z0-9._:-]/g, "_"));
+    const result = controller.dispatch({ ...clean, ...override });
+    assert.equal(result.status, "rejected");
+    assert.equal(controller.getState().checkpoint, "sc03_near_blank");
+    assertNoDeltaOrCredit(controller.getState());
+    assert.doesNotMatch(JSON.stringify(controller.getState()), /PRIVATE-NEAR/);
+  }
+
+  const controller = blankController();
+  const firstIntent = intent(custodyLedgerObservationActions.fixed_trace, "pointer", "rp002-one-hit-first");
+  const first = controller.dispatch(firstIntent);
+  assert.equal(first.status, "recorded");
+  const duplicate = controller.dispatch(firstIntent);
+  assert.equal(duplicate.status, "duplicate_suppressed");
+  assert.deepEqual(duplicate.state.observationEvidence.map((record) => record.observationId), ["fixed_trace"]);
+
+  const oneId = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
+  const second = oneId.dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "touch",
+    "rp002-second-forbidden",
+  ));
+  assert.equal(second.status, "rejected");
+  assert.equal(oneId.getState().checkpoint, "sc03_near_first");
+  assert.deepEqual(oneId.getState().observationEvidence.map((record) => record.observationId), ["fixed_trace"]);
+  assertNoDeltaOrCredit(oneId.getState(), 1);
+});
+
+test("one-ID save sanitation accepts only the allowlisted canonical record and legacy blank saves", () => {
+  const recorded = blankController().dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "pointer",
+    "rp002-save-outlined-gap",
+  ));
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, recorded.save, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), recorded.save);
+  const legacyBlank = Object.fromEntries(Object.entries({ ...recorded.save, checkpoint: "sc03_near_blank" })
+    .filter(([key]) => key !== "observationEvidence"));
+  assert.equal(sanitizeCustodyLedgerNormalRouteSave(legacyBlank, predecessor)?.observationEvidence, null);
+
+  const invalid = [
+    { ...recorded.save, observationEvidence: { ...recorded.save.observationEvidence, observationId: "forged" } },
+    { ...recorded.save, observationEvidence: null },
+    { ...recorded.save, observationEvidence: [recorded.save.observationEvidence, recorded.save.observationEvidence] },
+    { ...recorded.save, privateNotes: "PRIVATE" },
+    { ...recorded.save, checkpoint: "SC-03-20" },
+  ];
+  for (const value of invalid) assert.equal(sanitizeCustodyLedgerNormalRouteSave(value, predecessor), null);
+});
+
 test("bounded storage keeps only exact allowlisted first-incomplete checkpoints and clears on return", () => {
   const storage = memoryStorage();
   const arrival = createCustodyLedgerNormalRouteController({ predecessor })
@@ -233,10 +402,11 @@ test("bounded storage keeps only exact allowlisted first-incomplete checkpoints 
 });
 
 test("normal app surface exposes reversible staged actions and a registered blank-view art hook", async () => {
-  const [app, city, arrival, styles] = await Promise.all([
+  const [app, city, arrival, normalRoute, styles] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/CustodyLedgerNormalRoute.js", import.meta.url), "utf8"),
     readFile(new URL("../src/styles.css", import.meta.url), "utf8"),
   ]);
   assert.match(app, /readVerifiedCityThresholdPredecessor/);
@@ -251,7 +421,18 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
   assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
+  assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
+  assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);
+  assert.match(normalRoute, /custodyLedgerHotspotRegistry/);
+  assert.match(arrival, /data-observation-count/);
+  assert.match(arrival, /Recorded Scene statement/);
+  assert.match(arrival, /Separate route return/);
   assert.match(app, /advanceCustodyLedgerNormalRoute/);
+  assert.match(app, /custodyLedgerRouteView/);
+  assert.match(app, /"recorded", "replayed", "returned_to_evidence"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
+  assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
+  assert.match(styles, /\.civic-route-return-actions/);
+  assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-command-panel[\s\S]*grid-template-columns:\s*1fr/);
 });
