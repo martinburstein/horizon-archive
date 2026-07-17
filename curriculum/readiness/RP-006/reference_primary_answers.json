@@ -1,0 +1,6 @@
+{
+  "P01": {"capability": "speech_recognition", "deciding_signal": "convert_spoken_audio_into_text"},
+  "P02": {"capability": "speech_synthesis", "deciding_signal": "convert_text_into_spoken_audio"},
+  "P03": {"capability": "speech_recognition", "deciding_signal": "produce_a_transcript_from_a_recording"},
+  "P04": {"capability": "speech_synthesis", "deciding_signal": "read_a_written_response_aloud"}
+}

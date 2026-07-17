@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 STORYBOARD PASS COMPLETE`
+- Status: `IN DESIGN — A3 CURRICULUM PASS COMPLETE`
 - Target chapter/location: Chapter 3 expansion closure / exposed chronology landscape beyond Manyfold Return
 - Target demo horizon: fifth future slice after the accepted RP-001 boundary; directly after RP-005
 - Route order: 6
@@ -142,15 +142,24 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
-- A1 assigns no Python skill, AI-901 objective, workload/model category, learning case, answer, threshold, metric, source claim, or mastery evidence.
-- Every world view, physical order cue, animation, hotspot, copy line, save, return, and Tour traversal remains zero mastery evidence.
+- Status: `PASS — A3 MAPPING SOLIDIFIED; READY FOR GAMEPLAY MASTER A4`
+- Authority: `curriculum/readiness/RP-006/contract.json` plus validator and primary/retrieval/transfer references.
+- Python: `PY-013 Import packages and modules`, reinforcement after L-03-03. Learner imports `itertools` and uses one module-qualified `chain.from_iterable` call over supplied sanitized record groups. Gate: `8/8 primary -> answer-free remediation -> delayed import/helper/order/gap/cause trace -> blank 8/8 transfer`. Order, changed/persistent fields, unavailable record, and `cause=None` must remain exact; sorting, hardcoding, filling gaps, live access, or causation inference fails closed.
+- AI-901: `RP006-SPEECH-01 / AI901-D1-O6`, focused recognition-versus-synthesis retrieval/transfer after L-04-02 and L-06-01. Gate: `8/8 primary -> per-dimension remediation -> delayed 4/4 direction retrieval -> blank 8/8 transfer`, plus explanations that input/output direction selects capability and transcript order/content never proves cause.
+- Isolation: neutral course cases contain no SC-07 referent. World views, physical order, changed/persistent features, sealed interval, sound, motion, text, focus, navigation, execution display, save/restore, accessibility, and Tour are zero mastery evidence and never answer cues.
+- Evidence/save: four observations, strict PY-013, and strict RP006-SPEECH-01 are independent conjuncts with no cross-credit. Persist only allowlisted finalized IDs/results/attempt metadata; clear learner source, case answers, reasoning, feedback, and transient work.
+- Authority/safety: course-authored offline practice, no exam guarantee, live Azure/Foundry/Speech/world call, credentials, resource or sealed-interval access, replay, authentication, cause, permission, external action, or world delta.
+- `SOLIDIFIED`; reopen only on material official-objective change, validator/playtest mismatch or bypass, or Martin's changed learning goal.
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `UNASSIGNED — A4 AFTER A3`
+- Status: `UNASSIGNED — A4 NEXT; MAY NOT CHANGE SOLIDIFIED A3`
 - A1 assigns no puzzle graph, verb sequence, scoring logic, hint, retry behavior, reward, item, route unlock, or runtime state.
 - Any later graph must preserve sequence-not-causation, replica-only evidence, world invariance, reversible return, privacy, offline/no-authority, and no-credit Tour contracts.
+
+### Exact Gameplay Master A4 handoff
+
+`Gameplay Master Agent — A4: work only on RP-006 Interval Works. Read the canonical Gameplay Master profile, GAMEPLAY_SYSTEMS_SPINE.md, this packet, locked SC-07, and curriculum/readiness/RP-006/contract.json plus validator. Build exactly one bounded graph from verified RP-005 completion through four equal-peer observations, strict PY-013 import/sequence reinforcement, independent RP006-SPEECH-01 / AI901-D1-O6 recognition-versus-synthesis evidence, conjunctive review, allowlisted atomic save, verified restore, and reversible return. Preserve 8/8 -> delayed retrieval -> blank 8/8 Python and 8/8 -> 4/4 retrieval -> blank 8/8 AI chains; input/output-direction and no-causation explanations; neutral cases with no SC-07 referent; answer-free remediation; unlimited blank retry; privacy clearing; deterministic focus/resume; accessibility; offline/no-authority/no-exam-guarantee; invariant SC-07; unchanged continuation; null city/external delta; sanitized replicas; unavailable interval and cause=None; no sorting, replay, live read, absolute time, duration, authorship, native category, purpose, Machine meaning, or RP-007 route. Treat every SC-07 view/order/sound/display/navigation/save/Tour cue as zero evidence. Do not change IDs, cases, answers, dimensions, thresholds, sources, composition, art, runtime, accepted Demo, hidden lore, or successor content. Specify entry/success/failure/recovery/save/restore/return states and exact A5 protected handoff; update packet, GAMEPLAY_SYSTEMS_SPINE.md, queue/map, and Gameplay log, then validate against the frozen contract.`
 
 ## Rough Code Track — Coder
 
@@ -200,25 +209,25 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — A2 compact invariant-world sequence and premium production-art plan`.
-- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
+- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-013 and RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED`.
+- Packet gates remaining: Puzzle, Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
 - Did this pass reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
 - Existing seams integrated or consolidated: RP-005's saved bounded summary, no-live-read/rank/correct rule, ordinary Builder executable literacy, privacy clearing, reversible returns, and serviced destinationless continuation become one direct Phase II closure premise.
 - Optional work trimmed or deferred: absolute chronology, missing-interval content, causal explanation, native category, live replay, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
 - New module or artifact integration consumer: none at A2; A3 consumes the unchanged story/scene contract next.
 - Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`
 - Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-006 reaches the coordinator gate`.
-- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating the complete SC-07 presentation as zero mastery evidence.
+- Exact next action in one sentence: Gameplay Master A4 composes one bounded graph around frozen PY-013 and RP006-SPEECH-01 while SC-07 remains zero evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
 - Storyboarder sign-off: `PASS — 2026-07-16`
-- Curriculum Checker sign-off: `PENDING`
+- Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
 - Readiness: `NOT READY — A2 COMPLETE / A3 NEXT`
-- Required revision: `A3–A5 complete their owned gates sequentially; no successor is defined`.
+- Required revision: `A4–A5 complete their owned gates sequentially; no successor is defined`.
 
 ### Exact Storyboarder A2 handoff
 
@@ -232,7 +241,7 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-006 IN DESIGN — A2 COMPLETE`
+- Team 1 railhead after promotion: `RP-006 IN DESIGN — A3 COMPLETE / A4 NEXT`
 - Next contiguous packet seeded: `NO`
 - `STORY_RAIL_MAP.md` updated: `YES — A2 COMPLETE / A3 NEXT`
 - Coordinator: `PENDING`

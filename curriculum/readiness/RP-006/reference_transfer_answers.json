@@ -1,0 +1,6 @@
+{
+  "T01": {"capability": "speech_recognition", "deciding_signal": "turn_a_voicemail_recording_into_written_words"},
+  "T02": {"capability": "speech_synthesis", "deciding_signal": "generate_spoken_navigation_from_written_directions"},
+  "T03": {"capability": "speech_recognition", "deciding_signal": "capture_spoken_commands_as_text"},
+  "T04": {"capability": "speech_synthesis", "deciding_signal": "produce_an_audio_version_of_written_content"}
+}

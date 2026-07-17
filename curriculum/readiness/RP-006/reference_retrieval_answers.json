@@ -1,0 +1,4 @@
+{
+  "R01": {"capability": "speech_recognition", "deciding_signal": "audio_is_input_and_text_is_output"},
+  "R02": {"capability": "speech_synthesis", "deciding_signal": "text_is_input_and_audio_is_output"}
+}

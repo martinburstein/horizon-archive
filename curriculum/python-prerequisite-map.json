@@ -210,7 +210,7 @@
         "AI901-D2-O5"
       ],
       "mastery_level_required": "use_with_guidance",
-      "notes": ""
+      "notes": "RP-006 reinforces PY-013 after L-03-03 with an explicit itertools import and one module-qualified chain.from_iterable call over supplied sanitized record groups. Primary and genuinely blank transfer require 8/8, answer-free remediation, and delayed closed-note import/helper/order/gap/cause-boundary retrieval; SC-07 order and presentation are unscored, the missing interval stays unavailable, and cause stays None."
     },
     {
       "skill_id": "PY-014",

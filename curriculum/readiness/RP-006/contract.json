@@ -1,0 +1,85 @@
+{
+  "mapping_id": "RP006-A3-INTERVAL-WORKS",
+  "packet_id": "RP-006",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-07",
+  "source_verified_on": "2026-07-16",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-03 PY-013 import evidence remains complete after L-03-02 loops and functions; closed-note import/module-qualified-call trace required",
+    "ai901": "L-04-02 speech evidence and L-06-01 AI901-D1-O6 objective ledger row remain ready; confidence alone never satisfies entry",
+    "missing_evidence_route": ["curriculum/lessons/L-03-03", "curriculum/lessons/L-04-02", "curriculum/lessons/L-06-01"],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": ["world_visibility", "physical_order", "changed_or_persistent_feature", "closed_interval", "hotspot_discovery", "crop_or_display", "owner_text", "motion_color_sound_or_timing", "focus_navigation_return", "successful_execution_display", "save_restore_presentation", "accessibility_behavior", "world_state"],
+  "python_contract": {
+    "skill_id": "PY-013",
+    "skill_name": "Import packages and modules",
+    "scope": "reinforcement_only",
+    "implementation_reason": "Foundry and Azure AI client code begins with explicit imports; module-qualified helper use keeps provenance readable while sequencing supplied structured records without duplicating a loop.",
+    "learner_owned_action": "import itertools and use itertools.chain.from_iterable once to flatten supplied sanitized record groups in source order",
+    "provided_unscored_scaffold": ["four ordered record groups", "changed/persistent/available/cause fields", "one explicit unavailable interval record", "list wrapper"],
+    "forms": {
+      "primary": {"state_ids": ["r1", "r2", null, "r4"], "changed": [null, "vane", null, "film"], "persistent": ["continuity", "continuity", null, "continuity"]},
+      "transfer": {"state_ids": ["s1", "s2", null, "s4"], "changed": [null, "ridge", null, "coating"], "persistent": ["joint", "joint", null, "joint"]}
+    },
+    "checks": ["sequence_is_list", "exact_source_order", "exact_record_keys", "changed_and_persistent_preserved", "unavailable_interval_preserved", "cause_remains_none_for_every_record", "imports_itertools_and_calls_chain_once", "inputs_unchanged_and_no_forbidden_operations"],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note import/module/helper/input-output/gap/cause-boundary trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": ["hardcode_the_sequence", "sort_or_reverse_records", "fill_the_unavailable_interval", "infer_cause_duration_authorship_truth_or_purpose", "mutate_inputs", "read_live_or_external_source", "reuse_primary_as_transfer", "count_display_navigation_timing_confidence_visual_order_audio_or_Tour"]
+  },
+  "ai901_contract": {
+    "check_id": "RP006-SPEECH-01",
+    "objective_id": "AI901-D1-O6",
+    "objective_title": "Identify features and capabilities of speech recognition and speech synthesis",
+    "scope": "focused_recognition_versus_synthesis_retrieval_and_transfer; does_not_replace_L-04-02_or_L-06-01_mastery",
+    "dimensions": ["capability", "deciding_signal"],
+    "scene_and_sequence_are_never_cases_or_answer_cues": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Convert spoken audio into text.","capability":"speech_recognition","deciding_signal":"convert_spoken_audio_into_text"},
+        {"id":"P02","prompt":"Convert text into spoken audio.","capability":"speech_synthesis","deciding_signal":"convert_text_into_spoken_audio"},
+        {"id":"P03","prompt":"Produce a transcript from a recording.","capability":"speech_recognition","deciding_signal":"produce_a_transcript_from_a_recording"},
+        {"id":"P04","prompt":"Read a written response aloud.","capability":"speech_synthesis","deciding_signal":"read_a_written_response_aloud"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Audio enters and written words leave.","capability":"speech_recognition","deciding_signal":"audio_is_input_and_text_is_output"},
+        {"id":"R02","prompt":"Written words enter and audio leaves.","capability":"speech_synthesis","deciding_signal":"text_is_input_and_audio_is_output"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"Turn a voicemail recording into written words.","capability":"speech_recognition","deciding_signal":"turn_a_voicemail_recording_into_written_words"},
+        {"id":"T02","prompt":"Generate spoken navigation from written directions.","capability":"speech_synthesis","deciding_signal":"generate_spoken_navigation_from_written_directions"},
+        {"id":"T03","prompt":"Capture spoken commands as text.","capability":"speech_recognition","deciding_signal":"capture_spoken_commands_as_text"},
+        {"id":"T04","prompt":"Produce an audio version of written content.","capability":"speech_synthesis","deciding_signal":"produce_an_audio_version_of_written_content"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation, delayed closed-note 4/4 direction-pair retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that input-output direction selects capability and transcript order/content does not establish causation",
+    "misconception_tags": ["recognition_equals_synthesis", "audio_anywhere_means_recognition", "text_anywhere_means_synthesis", "content_or_sequence_selects_capability", "scene_sound_is_an_answer", "transcript_order_proves_cause", "offline_case_proves_live_configuration", "valid_answer_authorizes_action"]
+  },
+  "remediation_contract": {
+    "python": ["name_imported_module", "trace_module_qualified_helper", "preserve_source_order", "contrast_gap_with_empty_or_false", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["mark_input_modality", "mark_output_modality", "contrast_recognition_and_synthesis", "remove_content_and_scene_cues", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "credentials", "endpoints", "payloads", "responses", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_choices_feedback_and_case_answers",
+    "save_eligibility": "require finalized strict PY-013, finalized strict RP006-SPEECH-01, and separately finalized order changed persistent closed-unavailable and stewardship observations; no conjunct cross-credits another",
+    "after_save": "clear_temporary_work_and_keep_only_allowlisted_finalized_evidence_plus_expedition_note",
+    "resume": "restore_only_finalized_dimension_evidence_and_resume_at_first_incomplete_scored_boundary"
+  },
+  "accessibility_contract": {"minimum_target_css_px":44,"one_active_owner_message_content_action_group":true,"persistent_labels":true,"field_associated_text_feedback":true,"status_live_region":true,"must_not_rely_on_color_motion_audio_position_or_sequence":true,"time_limit":false,"reduced_motion_equivalent":true,"focus_returns_to_first_invalid_or_next_required_control":true},
+  "authority_contract": {"course_authored_not_microsoft_exam_items":true,"no_exam_guarantee":true,"offline_only":true,"no_live_azure_foundry_speech_terminal_or_world_call":true,"no_credential_resource_live_record_or_closed_interval_access":true,"no_permission_authentication_replay_causation_or_external_action":true,"no_world_city_or_physical_delta":true,"tour_is_zero_credit_and_cannot_save":true},
+  "world_locks": ["RP-005 verified completion required", "continuation unchanged", "city_state_delta=None", "external_state_delta=None", "SC-07 invariant panorama crosssection records features interval stewardship coupling and monotonic clocks", "sanitized replicas only", "no absolute time cause duration authorship category metric truth or purpose inference", "reversible RP-005 and earlier returns", "no RP-007 route or destination"],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

@@ -22,7 +22,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
-| 6 | `RP-006` | Interval Works | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`, next) | Story and Scene gates passed; production-art plan passed; all later gates remain open | Exact verified RP-005 end state -> serviced destinationless continuation -> exposed relative order/change/persistence/closed interval; every successor remains undefined | A3 selects and verifies only the contiguous Python/AI-901 mapping; SC-07 presentation remains zero mastery evidence. |
+| 6 | `RP-006` | Interval Works | `IN DESIGN — A3 COMPLETE` | Gameplay Master Agent (`A4`, next) | Story, Scene, and Curriculum gates passed; Puzzle/Code remain open | Exact RP-005 end state plus frozen PY-013 and RP006-SPEECH-01; invariant SC-07, null external delta, no RP-007 | A4 composes one bounded graph; SC-07 presentation/order/sound remain zero evidence. |
 
 ## Team positions
 
@@ -30,7 +30,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `3 — RP-002, then RP-003, then RP-004`
 - In-design packets: `1 — RP-006`
-- Team 1 railhead: `RP-006 — IN DESIGN / A2 COMPLETE / A3 NEXT`
+- Team 1 railhead: `RP-006 — IN DESIGN / A3 COMPLETE / A4 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `5 ordered packets — RP-002 through RP-005 promoted; RP-006 in design`
 - Whole-story rail status: `IN PROGRESS`

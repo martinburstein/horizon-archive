@@ -1,5 +1,15 @@
 # Build Log
 
+## Log entry: 2026-07-16T23:58:00-04:00
+
+Stage: RP-006 Interval Works contiguous curriculum verification (A3)
+Work completed: Closed one Curriculum gate as `SOLIDIFIED`: PY-013 explicit import/module-qualified sequencing over sanitized groups and independent RP006-SPEECH-01 / current AI901-D1-O6 recognition-versus-synthesis evidence. Locked strict primary/remediation/delayed-retrieval/blank-transfer gates, no-causation explanations, privacy/save/accessibility/offline/no-authority/no-exam-guarantee, zero-credit SC-07, and three reopen triggers. Earlier mappings remain frozen; RP-007 remains reserved.
+Sources: named source-priority skill unavailable; followed its policy directly. Accessed 2026-07-16: official AI-901 study guide, Foundry hub, SDK/endpoints overview, Agent Service overview, Content Understanding overview, and Azure Speech overview; no third-party source.
+Validation: RP-006 validator self-test; Python primary/transfer 8/8; AI primary 8/8, retrieval 4/4, transfer 8/8; blank/wrong-capability/hardcoded bypass probes; all curriculum JSON; focused packet/spine/queue/map/scoreboard/breadth/source checks; patch checks.
+Next: Gameplay Master A4 uses the exact packet handoff without changing the frozen mapping.
+Risks: keep SC-07 sound/order/content from cueing speech capability; preserve gap/cause None, independent conjuncts, privacy clearing, and zero world/external action.
+Notes: No runtime, art, Demo, live service, credential, hidden lore, native cause, RP-007, or user file changed.
+
 ## Log entry: 2026-07-16T22:42:00-04:00
 
 Stage: RP-005 Manyfold Return contiguous curriculum verification (A3)
