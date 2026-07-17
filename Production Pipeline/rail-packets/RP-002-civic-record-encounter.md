@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W3 — RP002-AESTH-006 owner/failure focus
+
+- **Verdict:** `RP002-AESTH-006 P1 OPEN — W4 AESTHETIC IMPLEMENTATION NEXT`.
+- **Accepted presentation:** the unchanged premium civic plate remains dominant; 30-A0, 30-A1F, and 30-A2 replace one another; locked, editable, and read-only states remain literal and programmatic; inputs/actions retain `44px` minima; help, forced-color/non-color meaning, narrow reflow, and separate returns remain intact.
+- **Residual:** phase replacement focuses the persistent district `h1`, not the active System work-image, Teacher feedback, or Suit-result heading. Feedback objects retain their exact failed `field`, but the rendered list omits that association. Initial outcome orientation and failed-field recovery are therefore not faithful to the locked owner-first hierarchy.
+- **W4 acceptance:** focus each active owner heading programmatically on entry/outcome, keep headings outside normal tab order, render each existing feedback field literally/programmatically, then retain controller-selected first-failed-field focus after blank retry. Change no art, puzzle data, answer-free feedback text, check, value, route, save, curriculum, world, authority, later state, RP-003+, or successor.
+- **Evidence:** focused primary/normal-route `50/50 PASS`; served W2 assets `index-BTIyCAP4.js` / `index-ghzUiZe9.css` returned HTTP `200`. User storage remained untouched and no gated live screenshot was fabricated.
+
 ## 2026-07-17 Working W2 — RP002-P1-011 repaired
 
 - **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`.

@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W3 — RP002-AESTH-006 primary focus association
+
+- **Disposition:** `P1 OPEN — W4 NEXT`. The W2 primary seam preserves its unchanged premium world, one-group replacement, literal locked/editable/read-only states, `44px` controls, responsive and forced-color structure, and separate safe returns.
+- **Finding:** entry, miss, and 6/6 replacement all fall back to the persistent district heading because the active System/Teacher/Suit headings have no focus refs; rendered Teacher items also omit their existing failed-field association. W4 owns only active-owner heading focus, exact feedback field association, and retained first-failed-field retry focus.
+- **Evidence:** focused primary/normal-route `50/50 PASS`; root and exact `index-BTIyCAP4.js` / `index-ghzUiZe9.css` returned HTTP `200`; immutable Civic Record master remains `1672 x 941` RGB at its registered hash. User storage was preserved, so no gated screenshot or traversal is claimed.
+
 ## 2026-07-17 Working W2 — editable PY-009 submission repaired
 
 - `RP002-P1-011` is resolved: two expedition-owned inputs and one semantic submit now compose the frozen six-check primary authority without copying answers into the UI.
