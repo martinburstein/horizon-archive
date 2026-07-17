@@ -1169,3 +1169,11 @@
 - **Recovery/safety:** Seven modalities normalize through a one-hit intent. Missing, forged, private, Tour-derived, repeated, passive, stale, or malformed entry fails closed. Five observation bytes, evidence/route returns, privacy clearing, offline/no-authority/no-exam-guarantee, invariant world, null deltas, and no successor remain exact.
 - **Validation:** focused `93/93`; full `565/565`; production build PASS. Port `4173` now serves `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
 - **Exact W3 handoff:** review only accepted blank local comparison plus the newly reachable blank Custody Ledger work image at representative desktop and narrow layouts. Check hierarchy, locked-versus-blank field legibility, action truthfulness, target sizing, reflow, focus, and first-person world continuity. Do not request submission/scoring or later content in this pass.
+
+# 2026-07-17 — Working Coder W4: RP002-P1-010 verification-only final reload
+
+- **Mode / verdict:** `aesthetic-polish`; `PASS — VERIFICATION ONLY / FINAL DEMO RELOADED / COORDINATOR NEXT`.
+- **Work completed:** Revalidated the W2 blank PY-009 entry after W3 returned a clean visual and assistive review. No exact residual was reproduced, so production code, styling, art, state, and storage were left unchanged. The accepted build was rebuilt and remains served on port `4173` as `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
+- **Validation:** focused Custody Ledger normal-route and exercise suites `93/93`; complete game suite `565/565`; production build and patch integrity PASS. The unchanged premium civic master, compact work-image group, literal locked/blank fields, separate reversible returns, 44px narrow targets, and one-column narrow reflow remain exact.
+- **Safety:** User storage was untouched and no gated screenshot was fabricated. Submission/result, transfer, explanation, responsible-AI work, review/save/completion, world/authority changes, and RP-003+ remain closed.
+- **Exact coordinator handoff:** Independently validate the accepted blank PY-009 entry, curriculum mappings, complete E2E, responsive title shell, served assets, immutable art, and clean synchronized branch; then accept only this bounded boundary or record one exact hold.

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 increment — RP002-P1-010 verification-only final reload
+
+- No production, art, gameplay, curriculum, state, or storage change was required after W3's clean review.
+- Focused `93/93`, full `565/565`, production build, and patch integrity pass.
+- Port `4173` serves final-reloaded `index-VcgXSqIg.js` / `index-BQLB1SP6.css`; user storage remains untouched.
+- Coordinator owns independent acceptance of only the blank PY-009 entry. Submission/result and all later boundaries remain closed.
+
 ## 2026-07-17 W3 increment — clean RP002-P1-010 review
 
 - No aesthetic/assistive defect reproduced in the blank work-image entry.
