@@ -23,18 +23,18 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
-| 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 is the next blank contiguous shell. |
-| 8 | `RP-008` | Reserved synthesis continuation | `RESERVED — BLANK SHELL` | Lore Builder Agent (`A1`, next cycle) | No content is authorized yet | Exact RP-007 verified end state only | Define the smallest contiguous surface contract; preserve every unresolved limit. |
+| 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
+| 8 | `RP-008` | Offset Reach | `IN DESIGN — A1 STORY PASS` | Storyboarder Agent (`A2`, next) | Story gate passed; all later gates remain open | Exact verified RP-007 end state -> destinationless infrastructure -> recurring local contact, comparable non-contact, cross-family comparable contact, and unavailable case; every successor remains undefined | A2 closes only the RP-008 Scene and production-art-plan gates. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `6 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007`
-- In-design packets: `0`
-- Team 1 railhead: `RP-007 — PROMOTED / RP-008 BLANK SHELL NEXT`
+- In-design packets: `1 — RP-008`
+- Team 1 railhead: `RP-008 — IN DESIGN / A1 STORY PASS / A2 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `6 ordered packets — RP-002 through RP-007 promoted`
+- Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-007 promoted; RP-008 in design`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.

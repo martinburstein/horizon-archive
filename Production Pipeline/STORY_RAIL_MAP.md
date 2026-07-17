@@ -1,6 +1,6 @@
 # Horizon Archive Story Rail Map
 
-Latest coordinator gate: `2026-07-17 / RP-007 PASS — PROMOTED TO WORKING`. Independent focused `13/13`, combined predecessor `63/63`, full `484/484`, RP-007 validator, build, byte-identical accepted assets, leakage, purity, temporary cleanup, and patch integrity passed. RP-008 remains a blank contiguous shell.
+Latest coordinator gate: `2026-07-17 / RP-007 PASS — PROMOTED TO WORKING`. Independent focused `13/13`, combined predecessor `63/63`, full `484/484`, RP-007 validator, build, byte-identical accepted assets, leakage, purity, temporary cleanup, and patch integrity passed. The authorized contiguous RP-008 shell is now `IN DESIGN — A1 STORY PASS / A2 NEXT`.
 
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
@@ -24,8 +24,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-002 — IN DEMO PARTIAL / THREE NEAR OBSERVATIONS ACCEPTED`
-- Team 1 railhead: `RP-007 — PROMOTED / RP-008 BLANK SHELL NEXT`
-- Ordered Advance lead beyond Team 2 accepted baseline: `6 ordered packets — RP-002 through RP-007 promoted`
+- Team 1 railhead: `RP-008 — IN DESIGN / A1 STORY PASS / A2 NEXT`
+- Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-007 promoted; RP-008 in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -50,7 +50,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | 5 | `RP-005` | `Manyfold Return — expansion continuation` | `RP-004 note saved -> outbound physical continuation observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-004` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-06 COMPACT TWO-MASTER BRIEF LOCKED` | `PY-012 SOLIDIFIED — 8/8 + FUNCTION TRACE + BLANK 8/8 TRANSFER` | `RP005-TEXT-01 / AI901-D1-O5 SOLIDIFIED — 8/8 + 6/6 + BLANK 8/8 + EXPLANATIONS` | `PASS — ONE INTEGRATED MF-00→MF-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused predecessor/journey checks, full `448/448`, RP-005 validator, build, bundle identity, leakage, purity, and patch integrity passed. Normal integration, production art, and live Demo exposure remain Team 2 work in strict order. |
 | 6 | `RP-006` | `Interval Works — expansion-phase closure` | `RP-005 summary saved -> serviced destinationless continuation observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-005` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-07 COMPACT TWO-MASTER BRIEF LOCKED` | `PY-013 SOLIDIFIED — PROTECTED 8/8 + EIGHT-DIMENSION TRACE + BLANK 8/8 PASS` | `RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED — PROTECTED 8/8 + 4/4 + BLANK 8/8 + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED IW-00→IW-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused `13/13`, combined predecessor `50/50`, full `465/465`, RP-006 validator, build, byte-identical accepted assets, leakage, purity, and patch integrity passed. Normal integration, production art, and live Demo exposure remain Team 2 work in strict order. |
 | 7 | `RP-007` | `Braided Verge — first synthesis-phase slice` | `RP-006 summary saved -> serviced destinationless continuation observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-006` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-08 COMPACT TWO-MASTER BRIEF LOCKED` | `PY-015 SOLIDIFIED — PROTECTED 8/8 + ROUND-TRIP TRACE + BLANK 8/8 PASS` | `RP007-VISION-GENERATION-01 / AI901-D1-O7 SOLIDIFIED — PROTECTED 8/8 + 4/4 + BLANK 8/8 + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED BV-00→BV-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused `13/13`, combined predecessor `63/63`, full `484/484`, RP-007 validator, build, byte-identical accepted assets, leakage, purity, temporary cleanup, and patch integrity passed. Normal integration, production art, and live Demo exposure remain Team 2 work in strict order. |
-| 8 | `RP-008` | `Reserved synthesis continuation` | `RP-007 specified end state` | `RESERVED — BLANK SHELL` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | A1 may define only the nearest contiguous surface contract next cycle. |
+| 8 | `RP-008` | `Offset Reach — synthesis continuation` | `RP-007 summary saved -> destinationless infrastructure observed` | `IN DESIGN — A1 STORY PASS` | `NOT READY` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `MISSING — A2 NEXT` | `MISSING` | `MISSING` | `MISSING` | `MISSING` | Retained local association, one recurring familiar contact, one comparable non-contact passage, one comparable cross-family contact, one unavailable case, and universal/exclusive/unity/cause limits are locked. No curriculum, remediation route, puzzle, code, art, native category, or successor is assigned. |
 
 ## Latest Working handoff
 
