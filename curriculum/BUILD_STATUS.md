@@ -150,3 +150,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added machine-readable contract, canonical forms, validator, current official-source provenance, actually-scored-tag-only remediation, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and hardcoded/secret-reader bypass probes
 - [x] Preserved RP-007/RP-008 bounded summaries, four separate edge evidence classes, unavailable evidence, identity/topology/continuity/transformation/unity/cause/purpose limits, independent six-observation evidence, invariant SC-10, reversible returns, and no RP-010
 - [ ] Gameplay Master completes A4 against the exact solidified RP-009 contract
+
+## 2026-07-17 RP-010 curriculum verification
+
+- [x] Selected `PY-018` as the nearest nonduplicate request/response reinforcement after the RP-009 environment/configuration boundary; retained `PY-014` as deferred and `PY-019` for later API/SDK/endpoint synthesis
+- [x] Added focused `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` project-client setup, compatible-client derivation, Responses API model/input submission, and returned-output processing evidence
+- [x] Solidified Python `8/8 primary + actually-failed-check-only answer-free remediation + delayed request/response trace + genuinely blank 8/8 transfer`
+- [x] Solidified AI `8/8 primary + per-case/per-dimension answer-free remediation + delayed 8/8 retrieval + genuinely blank 8/8 transfer + two boundary explanations`
+- [x] Added machine-readable contract, canonical forms, validator, current official-source provenance, scored-miss-only remediation, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and empty/wrong/remote bypass probes
+- [x] Preserved retained RP-007/RP-008/RP-009 summaries, seven independent observations, nine unsupported `None` limits, invariant SC-11, reversible returns, unchanged continuation, null world/city/external deltas, and no RP-011
+- [ ] Gameplay Master completes A4 against the exact solidified RP-010 contract

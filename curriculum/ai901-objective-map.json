@@ -433,7 +433,7 @@
           ],
           "mastery_check_type": "coding",
           "coverage_status": "mapped",
-          "notes": ""
+          "notes": "RP-010 SOLIDIFIED focused reinforcement: distinguish current Foundry project-client setup, OpenAI-compatible client derivation, Responses API model/input submission, and returned output-text processing using neutral course-authored cases. The package remains offline and conceptual: no live endpoint, credential, SDK call, model call, response, or external action is used. SC-11 presentation and Tour are never cases, answers, weakness signals, or remediation cues."
         },
         {
           "objective_id": "AI901-D2-O4",

@@ -1413,3 +1413,37 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-009, composing six equal-peer observations, retained RP-007/RP-008 summaries, and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, remediation selection, privacy, save, mystery, authority, or successor boundaries.
 Unresolved risks: A4/A5 must not let SC-10 imagery, near/far placement, signatures, unmatched/ambiguous appearance, unavailable margin, stewardship, motion, sound, labels, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation, either mastery chain, or remediation route. Configuration cannot become a secret; prompt quality cannot become truth or authority; correspondence cannot become identity/continuity; unmatched cannot become creation/destruction/transformation/separation; ambiguity cannot become branching/merging/copying/exchange; unavailable remains unavailable; and no world, route, external, exam, live-service, native-category, Machine, or RP-010 claim may emerge.
 Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native topology claim, hidden lore, route, external action, or successor content was created.
+
+## Log entry: 2026-07-17T05:25:00-04:00
+
+Stage: RP-010 request/response and Foundry client-flow curriculum verification (A3)
+Work completed: Closed the Curriculum gate with two independent SOLIDIFIED chains. Selected `PY-018` as the nearest nonduplicate capstone-opening reinforcement and defined one fully local request/response ownership exercise over supplied sanitized replicas: exact inputs, method, route label, content type, request provenance/scope, response status/content type, supported/counterevidential/ambiguous/unavailable classes, and nine unsupported `None` limits must remain separate; imports, HTTP clients, SDKs, network, endpoints, credentials, secrets, files, output, persistence, and external actions are forbidden. Selected current `AI901-D2-O3` and defined neutral course-authored project-client setup, compatible-client derivation, Responses API model/input submission, and returned-output processing cases. Locked strict primary, actually-scored-miss-only answer-free remediation, delayed trace/retrieval, genuinely blank transfer, separate client-flow and truth/authority explanations, privacy allowlist, conjunctive save, accessibility, offline/no-authority, no-exam-guarantee, SOLIDIFIED/reopen, and anti-bypass rules. Preserved the three retained bounded summaries, seven equal-peer observations, complete unsupported limits, separate unsynchronized districts, invariant SC-11 and clocks, reversible returns, unchanged continuation, null deltas, no final art, and no RP-011. Every SC-11 world/interface/motion/accessibility state, Python display/execution, save/return, and Tour event remains zero observation, mastery, answer, weakness, misconception, and remediation evidence.
+Files changed:
+- Production Pipeline/ADVANCE_BREADTH_GATE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/PACKET_SCOREBOARD.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/rail-packets/RP-010-counterfield.md
+- curriculum/BUILD_LOG.md
+- curriculum/BUILD_STATUS.md
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/readiness/RP-010/contract.json
+- curriculum/readiness/RP-010/reference_primary.py
+- curriculum/readiness/RP-010/reference_transfer.py
+- curriculum/readiness/RP-010/reference_primary_answers.json
+- curriculum/readiness/RP-010/reference_retrieval_answers.json
+- curriculum/readiness/RP-010/reference_transfer_answers.json
+- curriculum/readiness/RP-010/validate_mapping.py
+Validation performed:
+- Read applicable AGENTS instructions, the project source-priority skill, workflow authority, registry, full canonical Curriculum Checker profile, RP-010 Lore/Storyboard tracks and exact A3 handoff, SC-11, exact RP-009 completion/mapping, current curriculum maps/status/log/source register, queue/map, scoreboard, breadth controls, and required curriculum/expedition spines.
+- Checked only current official Microsoft sources on 2026-07-17: AI-901 study guide; Foundry hub; SDK/endpoints overview; Agent Service overview; and Content Understanding overview. The AI-901 objective set remains dated April 15, 2026 and the page remains updated July 13, 2026. No third-party source or exam item was used.
+- RP-010 validator self-test passed. Python primary and genuinely fresh transfer references passed `8/8 + 8/8`. AI-901 primary/retrieval/genuinely fresh transfer references passed `8/8 + 8/8 + 8/8`. Empty-answer, wrong-step, hardcoded-empty, and remote-import bypass probes failed closed.
+- All curriculum JSON parsed; focused packet/spine/queue/map/scoreboard/source/retained-summary/zero-evidence/remediation/save-conjunction/Tour/privacy/offline/no-authority/no-exam-guarantee/no-RP-011 assertions and whitespace checks passed.
+Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-010, composing seven equal-peer observations, three retained summaries, and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, remediation selection, privacy, save, mystery, authority, or successor boundaries.
+Unresolved risks: A4/A5 must not let SC-11 imagery, district scale, relation, order, clocks, labels, inferred weakness, confidence, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation, either mastery chain, or remediation route. Request and response ownership cannot collapse; correct client-flow shape cannot become output truth or live authority; supported evidence cannot erase counterevidence, ambiguity, or unavailability; and no world, route, external, exam, live-service, native-category, Machine, or RP-011 claim may emerge.
+Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native scope claim, hidden lore, route, external action, or successor content was created.

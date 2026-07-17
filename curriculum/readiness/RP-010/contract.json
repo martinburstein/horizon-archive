@@ -1,0 +1,157 @@
+{
+  "packet_id": "RP-010",
+  "mapping_id": "RP010-REQUEST-CLIENT-BOUNDARY-01",
+  "status": "SOLIDIFIED",
+  "source_verified_on": "2026-07-17",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "prerequisites": {
+    "python_mastery_homes": ["L-03-03", "L-05-03"],
+    "ai901_mastery_homes": ["L-05-03", "L-06-01"],
+    "retained_packet_evidence": ["RP-007 bounded relation summary", "RP-008 bounded offset summary", "RP-009 bounded edge ledger"]
+  },
+  "python_contract": {
+    "skill_id": "PY-018",
+    "skill_name": "Understand HTTP request/response basics",
+    "scope": "focused_offline_request_response_boundary_reinforcement; does_not_replace_L-03-03_or_L-05-03_mastery",
+    "implementation_reason": "A learner who later builds a Foundry client must keep request inputs separate from response status and output. This packet rehearses that boundary over supplied sanitized replicas without making a network call or introducing live authority.",
+    "learner_owned_action": "derive one bounded exchange summary from supplied request and response records, preserving method, route label, content type, request scope and record identifiers, response status and evidence classes, and every unsupported limit",
+    "provided_unscored_scaffold": ["sanitized request record", "sanitized response record", "record identifiers", "bounded evidence-class labels", "unsupported-limit keys"],
+    "checks": [
+      "local_python_only_no_import_or_remote_client",
+      "request_and_response_inputs_preserved_exactly",
+      "request_method_route_and_content_type_preserved",
+      "request_payload_provenance_and_scope_preserved",
+      "response_status_and_content_type_preserved",
+      "response_evidence_classes_remain_separate",
+      "unsupported_limits_remain_none",
+      "no_file_network_output_secret_credential_endpoint_or_external_operation"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every actually failed check, delayed closed-note request/response ownership and provenance trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_exchange_summary",
+      "swap_request_and_response_ownership",
+      "change_supplied_records",
+      "collapse_supported_counterevidence_ambiguity_or_unavailability",
+      "fill_identity_topology_continuity_transformation_unity_synchronization_chronology_cause_or_purpose",
+      "import_or_use_http_socket_sdk_or_remote_client",
+      "read_secret_credential_endpoint_file_network_or_external_input",
+      "print_or_persist_request_response_or_private_content",
+      "reuse_primary_as_transfer",
+      "count_SC11_presentation_execution_save_return_or_Tour"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP010-FOUNDRY-CLIENT-FLOW-01",
+    "objective_id": "AI901-D2-O3",
+    "objective_title": "Create a lightweight chat client application by using the Foundry SDK",
+    "scope": "focused_project_client_compatible_client_request_response_flow_retrieval_and_transfer; does_not_replace_L-05-03_or_L-06-01_mastery",
+    "dimensions": ["client_step", "deciding_signal"],
+    "scene_cases_and_inferred_weakness_are_never_cases_answers_or_remediation_signals": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","case":"Initialize the project client with the project endpoint and a credential provider.","client_step":"project_client_setup","deciding_signal":"project_endpoint_and_credential"},
+        {"id":"P02","case":"Derive the OpenAI-compatible client from the initialized project client.","client_step":"compatible_client_creation","deciding_signal":"derive_openai_compatible_client_from_project"},
+        {"id":"P03","case":"Call the Responses API through the compatible client with a model and current input.","client_step":"model_request_submission","deciding_signal":"responses_create_with_model_and_input"},
+        {"id":"P04","case":"Read output text from the response returned by that request.","client_step":"response_processing","deciding_signal":"read_output_text_from_returned_response"}
+      ],
+      "retrieval": [
+        {"id":"R01","case":"Submit the current model name and input with the compatible client's response-creation operation.","client_step":"model_request_submission","deciding_signal":"responses_create_with_model_and_input"},
+        {"id":"R02","case":"Create the project-scoped client from its endpoint and credential provider.","client_step":"project_client_setup","deciding_signal":"project_endpoint_and_credential"},
+        {"id":"R03","case":"Extract the returned output text for application handling.","client_step":"response_processing","deciding_signal":"read_output_text_from_returned_response"},
+        {"id":"R04","case":"Ask the project client for its OpenAI-compatible client.","client_step":"compatible_client_creation","deciding_signal":"derive_openai_compatible_client_from_project"}
+      ],
+      "transfer": [
+        {"id":"T01","case":"From a prepared project client, obtain the client surface used for OpenAI-style responses.","client_step":"compatible_client_creation","deciding_signal":"derive_openai_compatible_client_from_project"},
+        {"id":"T02","case":"Handle the output text carried by the newly returned response object.","client_step":"response_processing","deciding_signal":"read_output_text_from_returned_response"},
+        {"id":"T03","case":"Bind a fresh project endpoint and credential provider when creating the project client.","client_step":"project_client_setup","deciding_signal":"project_endpoint_and_credential"},
+        {"id":"T04","case":"Send a fresh model and input through response creation on the compatible client.","client_step":"model_request_submission","deciding_signal":"responses_create_with_model_and_input"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation selected only from actually scored misses, delayed closed-note 8/8 retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that project-client setup, compatible-client derivation, request submission, and response processing remain distinct, and that a valid client flow neither proves output truth nor authorizes a live or external action",
+    "misconception_tags": [
+      "endpoint_and_credential_are_model_input",
+      "project_client_is_returned_model_output",
+      "compatible_client_derivation_is_request_submission",
+      "model_and_input_are_project_setup",
+      "returned_output_is_request_configuration",
+      "request_equals_response",
+      "valid_client_shape_proves_output_truth",
+      "valid_client_shape_authorizes_external_action",
+      "scene_case_selects_client_step",
+      "save_or_success_display_proves_mastery"
+    ]
+  },
+  "remediation_contract": {
+    "python": ["label_request_owned_fields", "label_response_owned_fields", "trace_payload_provenance", "trace_status_and_body", "preserve_evidence_classes", "preserve_none_limits", "remove_import_network_output_and_persistence", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["identify_project_setup", "identify_compatible_client_derivation", "identify_request_submission", "identify_response_processing", "separate_setup_request_and_returned_output", "remove_scene_and_success_cues", "preserve_truth_and_authority_boundary", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true,
+    "remediation_is_selected_only_from_scored_python_checks_or_ai_misconception_tags": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "request_record", "response_record", "exchange_summary", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "credentials", "secrets", "endpoints", "headers", "payloads", "responses", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_request_response_records_feedback_case_answers_and_temporary_work",
+    "save_eligibility": "require finalized strict PY-018, finalized strict RP010-FOUNDRY-CLIENT-FLOW-01, retained verified RP-007/RP-008/RP-009 summaries, and separately finalized recurrent-adjacency incomplete-order cross-scale-correspondence unmatched-feature multi-candidate-relation unavailable-margin layered-stewardship observations; no conjunct cross-credits another",
+    "after_save": "clear temporary work and keep only allowlisted finalized evidence plus retained RP-007/RP-008/RP-009 summaries and the expedition-owned bounded scope register",
+    "resume": "restore only finalized dimension evidence and retained summaries/register, then resume at the first incomplete scored boundary"
+  },
+  "accessibility_contract": {
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_audio_position_scale_sequence_or_layout": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_Microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_Azure_Foundry_model_agent_terminal_world_http_or_sdk_call": true,
+    "no_real_secret_credential_endpoint_header_payload_response_resource_private_content_or_unavailable_margin_access": true,
+    "no_permission_authentication_correlation_synchronization_route_open_control_causation_or_external_action": true,
+    "no_world_city_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_save": true
+  },
+  "zero_credit_events": [
+    "district_material_scale_adjacency_layer_relation_unmatched_feature_ambiguous_feature_unavailable_margin",
+    "clock_crop_hotspot_owner_label_layout_focus_animation_reduced_motion_still",
+    "python_display_execution_result_save_display_restore_return_navigation_or_Tour",
+    "confidence_timing_acknowledgement_or_presentation"
+  ],
+  "world_locks": [
+    "RP-009 verified completion and saved edge ledger required",
+    "RP-007 RP-008 and RP-009 bounded summaries remain valid only within recorded scopes",
+    "seven equal non-answer-key observations remain independent",
+    "identity=None",
+    "topology=None",
+    "continuity=None",
+    "transformation=None",
+    "unity=None",
+    "synchronization=None",
+    "chronology=None",
+    "cause=None",
+    "purpose=None",
+    "authority=None",
+    "Machine_relation=None",
+    "sanitized replicas only",
+    "SC-11 invariant panorama detail and environmental clocks",
+    "reversible RP-009 and earlier returns",
+    "continuation unchanged",
+    "world city and external deltas null",
+    "no final art",
+    "no RP-011 route destination event or learning content"
+  ],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

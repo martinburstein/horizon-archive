@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 SCENE BRIEF PASS`
+- Status: `IN DESIGN — A3 CURRICULUM PASS`
 - Target chapter/location: Phase IV capstone opening / immense operating field beyond the Occluded Fold
 - Target demo horizon: ninth future slice after the accepted RP-001 boundary; directly after RP-009
 - Route order: 10
@@ -141,9 +141,19 @@ Determine which prior expedition claims remain defensible across several simulta
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `NOT STARTED — A3 AFTER A2`
-- No Python skill, AI-901 objective, case, answer, threshold, lesson, evidence chain, or remediation contract is selected by A1.
-- A3 must choose only the nearest nonduplicate current obligation under project source-priority rules and keep Builder Python ordinary occupational literacy rather than authentication.
+- Status: `PASS — PY-018 + RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 SOLIDIFIED`
+- Machine-readable readiness package: [curriculum/readiness/RP-010](../../curriculum/readiness/RP-010)
+- Source status: official Microsoft sources reverified `2026-07-17`. The current AI-901 study guide still requires Python familiarity, REST API/SDK/CLI familiarity, and creation of a lightweight chat client with the Foundry SDK. The priority Foundry hub, SDK/endpoints overview, Agent Service overview, and Content Understanding overview were checked first. The SDK overview remains the controlling implementation source for the assessed four-step client flow. No third-party source or exam item is used.
+- Python mapping: `PY-018 — Understand HTTP request/response basics`, a focused reinforcement after `L-03-03` and `L-05-03`, not a replacement primary home. Learner-owned work derives one bounded local exchange summary from supplied sanitized request and response records. It must preserve request method, expedition route label, content type, record identifiers, replica scope, response status, response content type, supported/counterevidential/ambiguous/unavailable classes, and `identity/topology/continuity/transformation/unity/synchronization/chronology/cause/purpose=None`. No import, HTTP client, SDK, network, endpoint, credential, secret, file, print/output, persistence, environment mutation, live input, or external action is permitted.
+- Python evidence: `8/8 primary -> answer-free remediation selected only from actually failed checks -> delayed closed-note request/response ownership, status/body, provenance, evidence-class, unavailable, and authority trace -> genuinely blank 8/8 fresh transfer`. The transfer uses different record IDs, route label, scope, status, evidence values, and unavailable margin. Primary material and result clear before transfer; transfer begins blank and is scored independently.
+- AI-901 mapping: `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3`, focused retrieval/transfer after `L-05-03` and `L-06-01`, not a replacement mastery home. Four neutral course-authored cases distinguish `project_client_setup`, `compatible_client_creation`, `model_request_submission`, and `response_processing` by two independently scored dimensions: `client_step` and `deciding_signal`.
+- AI-901 evidence: `8/8 primary -> per-case/per-dimension answer-free remediation selected only from actually scored misconception tags -> delayed closed-note 8/8 retrieval -> genuinely blank 8/8 fresh transfer -> separately scored explanation that setup, compatible-client derivation, model/input submission, and returned-output processing remain distinct -> separately scored explanation that valid client flow proves neither output truth nor authority for live/external action`.
+- Independence: Python and AI-901 chains use separate forms, scores, remediation, retrieval/trace, transfer, explanations, and finalized evidence. One cannot complete, repair, infer weakness in, or cross-credit the other. The seven observations and retained RP-007/RP-008/RP-009 summaries are also separate conjuncts. Only all finalized conjuncts may permit bounded review/save; conjunction never creates cross-credit.
+- Zero-credit boundary: every SC-11 district, material, scale, adjacency, layer, relation, unmatched or ambiguous feature, unavailable margin, clock, crop, hotspot, owner label, layout, focus state, animation, reduced-motion still, Python display, execution result, save/restore display, return, navigation, acknowledgement, confidence, timing, accessibility behavior, and Tour event is zero mastery evidence, zero answer, zero weakness/misconception inference, and zero remediation selector.
+- Privacy/save: store only packet/mapping/form/skill-or-objective IDs, dimension correctness, attempt count, hint level, confidence separately from correctness, misconception tags, and mastery status. Never store learner source, request/response records, exchange summaries, raw cases, free-form reasoning, private notes, identity content, credentials, secrets, endpoints, headers, payloads, responses, source content, exam items, or external-action requests. Clear unsubmitted work, request/response replicas, feedback, cases/answers, and temporary content at transitions; restore only finalized allowlisted evidence and retained summaries/register.
+- Delivery/authority: one active owner/message/content/action group; persistent labels; field-associated feedback; live status; deterministic focus; `>=44 x 44 CSS px` targets; keyboard/touch/switch/speech/screen-reader parity; non-color meaning; reduced-motion equivalence; responsive reflow; no time/speed credit. All forms remain offline, course-authored, no-authority, and no-exam-guarantee. No live Azure, Foundry, model, agent, Terminal, world, HTTP, SDK, endpoint, credential, resource, unavailable-margin, city, route, or external action occurs.
+- SOLIDIFIED freeze: reopen only if official objectives materially change, a validator/playtest proves a mismatch or bypass, or Martin changes the learning goal. RP-001–RP-009 remain frozen; no valid reopen trigger was found.
+- Curriculum Checker sign-off: `PASS — MAPPING SOLIDIFIED; READY FOR GAMEPLAY MASTER A4`.
 
 ## Puzzle Track — Gameplay Master
 
@@ -171,7 +181,7 @@ Determine which prior expedition claims remain defensible across several simulta
 - Required existing systems: exact verified RP-009 completion; retained RP-007/RP-008/RP-009 summaries; separate evidence-class and unknown-limit ownership; sanitation and temporary-work clearing; reversible returns; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
 - New systems: none selected by A1.
 - Art dependencies: `SC-11` has a registered two-master photorealistic production plan, responsive/accessibility contract, provenance record requirements, eight-pass production gate, and hard cleanup/rejection gate. Final art remains deferred and unauthorized.
-- Curriculum dependencies: A3 must select the nearest current nonduplicate Python and AI-901 obligations after A2; none are implied here.
+- Curriculum dependencies: exact SOLIDIFIED `PY-018` and `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` readiness package and validator; `L-03-03`, `L-05-03`, and `L-06-01` remain prerequisite mastery homes. A4 may compose these frozen chains but may not change cases, answers, dimensions, thresholds, remediation selection, privacy, accessibility, authority, or zero-credit boundaries.
 - Decisions awaiting Martin: none for this surface-safe capstone opening.
 
 ## Locked decisions
@@ -185,7 +195,7 @@ Determine which prior expedition claims remain defensible across several simulta
 ## Flexible implementation choices
 
 - Exact district count above the minimum, silhouettes, distances, material proportions, local process morphologies, foundation/socket shapes, repair anatomy, maintenance-form anatomy/count, vault conditions, atmosphere, restrained grade, effect timing, crop coordinates, and lenses within the readability ranges remain flexible under the SC-11 brief.
-- Curriculum, assessment, puzzle, save, code, route, and successor choices remain A3/A4/A5 or coordinator responsibilities and were not selected by A2.
+- Puzzle, save schema, code, route, and successor choices remain A4/A5 or coordinator responsibilities. Curriculum cases, answers, dimensions, thresholds, evidence, remediation selection, privacy, accessibility, offline/no-authority, no-exam-guarantee, and zero-credit boundaries are now locked by A3.
 - The panorama/detail relationship, four phases, seven equal peers, physical separation, nested scales, three stewardship strata, independent clocks, replica-only coupling, invariant world, responsive/accessibility/provenance/cleanup gates, and no-RP-011 boundary are locked.
 - Runtime labels may change if they remain expedition-owned, observable, compact, accessible, and uncertainty-preserving.
 
@@ -200,26 +210,26 @@ Determine which prior expedition claims remain defensible across several simulta
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-11 compact two-master brief`; Production art plan `PASS plan — final assets later`.
-- Scoreboard gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Normal integration, Working evidence, and Release.
+- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-11 compact two-master brief`; Curriculum `PASS — PY-018 + RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 SOLIDIFIED`; Production art plan `PASS plan — final assets later`.
+- Scoreboard gates remaining: Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Normal integration, Working evidence, and Release.
 - Did this pass reduce the remaining-gate count?: `YES — closed Scene and the production-art-plan gate with two registered invariant sources, four compact phases, seven equal-peer observations, and explicit responsive/accessibility/provenance/cleanup evidence`.
 - Existing seams integrated or consolidated: simultaneous association, incomplete order, cross-scale correspondence, ordinary mismatch, ambiguity, unavailability, stewardship, independent clocks, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline share one panorama/detail system rather than separate slides or district modules.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness decision, RP-011, native categories, internal topology, shared chronology, synchronized clocks, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
 - New module or artifact integration consumer: none authorized at A1.
-- Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`.
+- Breadth verdict: `CONTINUE — A4 GAMEPLAY MASTER`.
 - Next contiguous packet seed readiness: `NO — RP-011 remains reserved until RP-010 reaches Gate Review or promotion`.
-- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest nonduplicate Python and current AI-901 obligations while treating every SC-11 visual, spatial, interface, and motion state as zero mastery evidence.
+- Exact next action in one sentence: Gameplay Master A4 composes seven independent observations and the two frozen strict learning chains into one bounded recoverable graph without changing the mapping or allowing presentation, execution, save, return, accessibility, or Tour to manufacture evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
 - Storyboarder sign-off: `PASS — 2026-07-17`
-- Curriculum Checker sign-off: `PENDING`
+- Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
 - Readiness: `REVISE — A3–A5 REQUIRED`
-- Required revision: A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
+- Required revision: A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
 
-### Exact Curriculum Checker A3 handoff
+### Exact Gameplay Master A4 handoff
 
-`Curriculum Checker Agent — A3: work only on RP-010 Counterfield. Read the canonical Curriculum Checker profile, current official AI-901 objectives under the project's Microsoft source-priority rules, CURRICULUM_SPINE.md, the exact RP-009 completion, this packet, and SC-11. Select only the nearest nonduplicate Python obligation and one current AI-901 obligation that legitimately exercise scope, provenance, counterevidence, ambiguity, and unavailable evidence without merging the districts or retained summaries. Keep the two learning chains independent, strict, privacy-cleared, offline/no-authority, accessible, and supported by primary, answer-free remediation, delayed retrieval or trace, genuinely blank transfer, and separate explanations where required. Treat every SC-11 district, material, scale, adjacency, layer, relation, unmatched or ambiguous feature, unavailable margin, clock, crop, hotspot, owner label, layout, focus state, animation, reduced-motion still, Python display, execution, save display, and return as zero mastery evidence, answer, misconception, weakness inference, remediation selector, access, permission, or world response. Preserve the exact retained RP-007/RP-008/RP-009 summaries; seven equal non-answer-key observations; ordinary replica-only Builder Python; invariant panorama/detail masters; separate unsynchronized districts; complete unsupported identity/topology/continuity/transformation/unity/synchronization/chronology/cause/purpose/authority/Machine limits; reversible returns; unchanged continuation; null world deltas; no final art; and no RP-011. Do not design the puzzle, code, save schema, route, final art, successor, or readiness result. Update the packet, mapping artifacts, curriculum spine, validator/evidence, work log, and direct queue/map/status records, then hand the exact verified mapping to Gameplay Master A4.`
+`Gameplay Master Agent — A4: work only on RP-010 Counterfield. Read the canonical Gameplay Master profile, this packet, SC-11, the exact RP-009 end state, CURRICULUM_SPINE.md, and curriculum/readiness/RP-010/contract.json plus validator/reference forms. Build one bounded recoverable graph that begins only at verified RP-009 completion, retains the separate RP-007/RP-008/RP-009 summaries, records the seven equal non-answer-key observations independently, then composes the frozen strict PY-018 and RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 chains without cross-credit. Preserve exact 8/8 primary, actually-failed-check or actually-scored-tag-only answer-free remediation, delayed trace/retrieval, genuinely blank 8/8 transfer, and both independently scored client-flow explanations. Every district, material, scale, relation, unmatched/ambiguous feature, unavailable margin, clock, crop, hotspot, owner label, layout, focus, animation, reduced-motion still, Python display, execution result, save/restore display, return, navigation, acknowledgement, confidence, timing, accessibility event, and Tour event remains zero mastery, answer, weakness, misconception, and remediation evidence. Preserve replica-only ordinary Builder work, privacy clearing, allowlisted finalized evidence only, offline/no-authority/no-exam-guarantee, invariant panorama/detail/environmental clocks, unsupported identity/topology/continuity/transformation/unity/synchronization/chronology/cause/purpose/authority/Machine relation, reversible returns, unchanged continuation, null world/city/external deltas, no final art, and no RP-011. Define goal, order freedom, mistakes, answer-free hint/retry/recovery, bounded review, save/restore eligibility, deterministic resume/focus, accessibility behavior, expected time, and player-observable acceptance tests only. Do not change curriculum cases, answers, dimensions, thresholds, sources, evidence allowlist, or remediation routing; do not code, create art, expose a route, or define the successor. Hand one smallest pure protected-journey contract to Advance Coder A5.`

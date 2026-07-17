@@ -1,0 +1,6 @@
+{
+  "T01": {"client_step": "compatible_client_creation", "deciding_signal": "derive_openai_compatible_client_from_project"},
+  "T02": {"client_step": "response_processing", "deciding_signal": "read_output_text_from_returned_response"},
+  "T03": {"client_step": "project_client_setup", "deciding_signal": "project_endpoint_and_credential"},
+  "T04": {"client_step": "model_request_submission", "deciding_signal": "responses_create_with_model_and_input"}
+}
