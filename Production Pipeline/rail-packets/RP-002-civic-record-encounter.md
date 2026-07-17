@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W1 — RP002-P1-012 result dismissal blocker
+
+- **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`.
+- **Reproduction:** begin at exact accepted `sc03_python_primary_blank`, submit the canonical current-attempt `6/6`, read the complete focused `30-A2` Suit result, then seek the approved explicit dismissal. The normal UI renders no forward action; only evidence and route returns remain, and non-return route input is rejected as `python_primary_submission_not_integrated`.
+- **Expected boundary:** one seven-modality/one-hit `CLEAR RESULT AND OPEN FRESH PRACTICE` intent retains the complete result until activation, then atomically opens only the canonical carry-free blank System fresh-practice group. Durable storage remains the prior blank-primary checkpoint and all later states stay closed.
+- **Evidence:** accepted assets are `index-BCpGPspB.js` / `index-ghzUiZe9.css`; focused accepted and protected checks pass `113/113`; HTTP root/assets pass. The preserved gated save was not fabricated or inspected, and the protected A5 seam was not treated as a normal player route.
+- **W2 scope:** integrate only result dismissal to blank fresh entry through existing authorities; no transfer submission/scoring/feedback, explanation, RAI, review/save/completion, RP-003+, world/authority response, or successor.
+
 ## 2026-07-17 Advance Coder continuity maintenance — protected dismissal seam
 
 - **Verdict:** `REVISE — A5 PROTECTED SEAM ONLY; ACCEPTED W1 NEXT`.

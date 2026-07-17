@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — result dismissal blocker
+
+- **Disposition:** `P1 OPEN — RP002-P1-012 / W2 BUG REPAIR NEXT`.
+- **Player evidence:** the accepted `30-A2` Suit result is complete, read-only, and focused, but contains no dismissal control. Normal App has no result handler; route actions are only the separate evidence and City Threshold returns, and other requests fail as `python_primary_submission_not_integrated`.
+- **Validation:** safe title-only live review preserved user storage; accepted assets `index-BCpGPspB.js` / `index-ghzUiZe9.css` serve with HTTP `200`; focused accepted/protected checks pass `113/113`. No gated browser state was fabricated and the protected seam was not used as player evidence.
+- **W2 acceptance:** integrate existing authority for one explicit seven-modality/one-hit atomic replacement from complete result to canonical carry-free blank System fresh practice. Keep durable storage at the blank-primary checkpoint and stop before transfer submission/scoring/feedback or every later state.
+
 ## 2026-07-17 Advance A5 continuity handoff — protected dismissal seam
 
 - **Disposition:** `REVISE — PROTECTED SEAM ONLY / W1 ACCEPTED DEMO NEXT`. One pure unimported controller composes exact protected result evidence and canonical dismissal into only atomic blank fresh-practice entry.
