@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator: RP-002 transfer evaluation accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED`. The accepted RP-002 live boundary now extends from canonical blank fresh practice through explicit transfer submission, actual-failed-check feedback and blank retry, or bounded current-attempt `6/6` transfer evidence. Python explanation and every later boundary remain closed.
+- **Independent validation:** full game `598/598`; all `15/15` readiness validators; production build; complete title-to-credits E2E in `97.1s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`; root/current JS/CSS HTTP `200`; served transfer markers; patch integrity; and generated-capture cleanup pass.
+- **Live responsive review:** exact `1920 x 1080` and `390 x 844` title shells have zero overflow, contained frames, `48px` / `44px` actions, and empty warning/error logs. The preserved user campaign was not inspected or altered; gated acceptance relies on deterministic normal/protected state coverage and served-bundle evidence rather than a fabricated live save.
+- **Accepted boundary:** real six-check evaluator composition; seven modalities/one hit; locked neutral source; two private Pilot fields; actual-miss-only answer-free feedback; submitted-value clearing; genuinely blank retry; current-attempt `6/6` only; truthful phase-aware return groups; separate write-free returns; transient-only tokens/work/results; existing blank-primary durable checkpoint; invariant civic world; zero access/authority/effect; and no successor.
+- **Next Working handoff:** next W1 begins only after a future complete Advance cycle. The nearest live gap is the explicit transition from accepted transfer-evidence completion toward canonical blank Python explanation; do not open RAI, review/save/completion, RP-003+, world/authority response, or successor first.
+
 ## 2026-07-17 — Working Coder W4: RP002-AESTH-008 verification-only final reload
 
 - **Mode/verdict:** `aesthetic-polish` / `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. W3 opened no aesthetic finding, and W4 reproduced no presentation defect; no runtime, test, CSS, asset, art, curriculum, storage, or gameplay file changed.

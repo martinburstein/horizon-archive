@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest coordinator release: `2026-07-17 / RP002-P1-013 + RP002-AESTH-008 PASS — PY-009 TRANSFER EVIDENCE IN DEMO PARTIAL`. Independent full `598/598`, all `15/15` validators, production build, `97.1s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`. Normal integration and release now extend through transfer submit, feedback/blank retry, and bounded current-attempt `6/6`; Python explanation remains the next closed edge.
+
 Latest Working candidate: `2026-07-17 / RP002-AESTH-008 W4 VERIFIED — COORDINATOR NEXT`. Verification-only W4 leaves the W2 runtime unchanged and passes full `598/598`, RP-002 validator, build, HTTP/assets/hashes, clean final title reload, and patch integrity on `index-D0-watPG.js` / `index-ghzUiZe9.css`. Independent release validation remains.
 
 Latest Working candidate: `2026-07-17 / RP002-P1-013 W2 RESOLVED — W3 NEXT`. Protected transfer submission/evaluation is now normally integrated through blank, actual-miss feedback/retry, and bounded current-attempt `6/6` groups. Full `598/598`, focused `126/126`, RP-002 validator, build, HTTP/title reload, and clean logs pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`; W3 reviews presentation only before release.

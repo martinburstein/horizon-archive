@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator release — RP002-P1-013 / RP002-AESTH-008
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED`.
+- **Independent gates:** full `598/598`; all `15/15` readiness validators; production build; complete `97.1s` E2E with every emitted gate true, `credits:true`, and `runtimeErrors:false`; exact desktop/narrow safe review with zero overflow and clean logs; HTTP/served markers; patch integrity; and QA cleanup.
+- **Accepted edge:** `FT-00` submit -> `FT-20F` actual-miss feedback/blank retry or `FT-20C` current-attempt `6/6` transfer evidence, with transient-only work, separate returns, invariant world, zero authority/effect, and no successor.
+- **Next continuity:** A1 may lock only the explicit ownership/meaning transition from accepted transfer completion toward canonical blank Python explanation. RAI, review/save/completion, RP-003+, authority/world response, and successor remain closed.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-008 verified
 
 - **Verdict:** `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. Verification-only W4 changed no production artifact because W3 opened no finding and no defect reproduced.

@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 TRANSFER EVIDENCE — IN DEMO PARTIAL`. Independent full `598/598`, `15/15` validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. Team 2's accepted edge is bounded `FT-20C` transfer evidence; Team 1 remains complete at RP-012 with no RP-013/successor. The ordered Advance lead is ten packets (`RP-003`–`RP-012`).
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-008 W4 VERIFIED — COORDINATOR NEXT`. The final transfer submit/feedback/retry/bounded-complete candidate is rebuilt with no W3 defect or extra production change. Team 2 remains on RP-002 pending independent release; Team 1 remains complete at RP-012 with no successor.
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-008 W3 CLEAN — W4 VERIFICATION ONLY`. The bounded transfer blank/feedback/complete presentation has no open aesthetic finding. Team 2 remains on RP-002 for final rebuild/reload; Team 1 remains complete at RP-012 with no successor.

@@ -30,12 +30,12 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 ## Current durable state
 
-- Release candidate commit: `6692da6` — `Working Coder: polish RP-002 return group semantics`
+- Release candidate commit: `61a2ef1` — `Working Coder Polish: verify RP-002 transfer presentation`
 - Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
 - `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
-- Served assets: `index-CjiYW_Of.js` / `index-ghzUiZe9.css`
+- Served assets: `index-D0-watPG.js` / `index-ghzUiZe9.css`
 - Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
@@ -115,7 +115,7 @@ Team 1 is therefore in continuity-maintenance mode near Team 2's current edge. I
 
 ## Accepted playable boundary
 
-The coordinator now accepts the RP-002 PY-009 boundary through explicit provisional-result dismissal and canonical blank fresh-practice entry. The earlier primary submission/result acceptance remains part of this boundary.
+The coordinator now accepts the RP-002 PY-009 boundary through transfer submission/evaluation and bounded current-attempt transfer evidence. The earlier primary result, explicit dismissal, and canonical blank fresh-practice acceptance remain part of this boundary.
 
 Accepted player-visible behavior includes:
 
@@ -133,34 +133,39 @@ Accepted player-visible behavior includes:
 - canonical `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`;
 - exact `unresolved_interval`, `deidentified_sensor_log`, `None`, and `False` neutral source fields;
 - genuinely blank editable fresh `classification` and `owner` fields;
+- one explicit transfer `SUBMIT EXPEDITION FIELDS` action backed by the existing six-check evaluator;
+- answer-free transfer feedback for actually failed checks only, with submitted values cleared;
+- `RETRY BLANK` into genuinely blank fresh fields with deterministic focus;
+- a bounded `SYSTEM // EXPEDITION STATE` transfer-evidence acknowledgement only on current-attempt `6/6`;
+- transfer fields, tokens, feedback, and result remain transient; reload keeps the existing blank-primary durable checkpoint;
 - System owner-heading focus with blank fields first in ordinary Tab order;
-- phase-aware evidence-return group names for blank, feedback, result, and fresh states;
+- phase-aware evidence-return group names for blank, primary feedback/result, fresh transfer, transfer feedback, and transfer completion;
 - separate, write-free evidence and City Threshold returns;
 - no world response, access, authority, route reward, mastery by presentation, or successor.
 
 Independent release evidence at that boundary:
 
-- full game suite: `587/587`;
+- full game suite: `598/598`;
 - readiness validators: `15/15`;
 - production build: pass;
-- full title-to-credits E2E: pass in `102.8s` with every reported gate true, `credits:true`, and `runtimeErrors:false`;
+- full title-to-credits E2E: pass in `97.1s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
 - live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors.
 
 ## Completed cycle status
 
-The previously interrupted cycle was completed sequentially and every checkpoint was pushed:
+The immediate automation cycle was completed sequentially and every checkpoint was pushed:
 
-1. Lore Builder A1 — `0b61d06`.
-2. Storyboarder A2 — `dd21ee0`.
-3. Curriculum Checker A3 — `0fd4f87`.
-4. Gameplay Master A4 — `3315ba3`.
-5. Advance Coder A5 — `b0ca9b5`.
-6. Player W1 — `9cb9b75`.
-7. Bug-Repair Coder W2 — `fc3011b`.
-8. Aesthetic W3 — `7a016de`.
-9. Aesthetic-Polish Coder W4 — `6692da6`.
+1. Lore Builder A1 — `b1fbdfe`.
+2. Storyboarder A2 — `90bbc37`.
+3. Curriculum Checker A3 — `c919f95`.
+4. Gameplay Master A4 — `e8b8dd7`.
+5. Advance Coder A5 — `b47a78e`.
+6. Player W1 — `f933e1d`.
+7. Bug-Repair Coder W2 — `7e56db0`.
+8. Aesthetic W3 — `58ef17a`.
+9. Aesthetic-Polish Coder W4 — `61a2ef1`.
 
-The coordinator then passed all release gates and accepted the fresh-practice entry as `IN DEMO — PARTIAL`.
+The coordinator then passed all release gates and accepted bounded PY-009 transfer evidence as `IN DEMO — PARTIAL`.
 
 ## Exact next action
 
@@ -171,20 +176,20 @@ Read `Agent Profiles/lore-builder-agent.md` in full plus the top of the current 
 A1 is limited to the nearest accepted edge:
 
 ```text
-accepted canonical blank SYSTEM fresh_practice entry
-    -> explicit Pilot-owned transfer submission attempt
-    -> existing strict transfer evaluation ownership only
+accepted bounded SYSTEM transfer_complete evidence
+    -> explicit Pilot-owned transition intent
+    -> canonical blank Python explanation entry ownership only
 ```
 
 A1 should lock ownership and meaning only. It must preserve:
 
-- the accepted result-dismissal/fresh-entry release unchanged;
-- canonical `fresh_practice` source and genuinely blank transfer fields;
-- transfer evidence as independent from primary evidence;
-- explicit Pilot ownership of only `classification` and `owner` updates;
-- existing strict six-check transfer authority, without copying answers or rules;
-- answer-free local/Teacher remediation and genuinely blank retry if later passes authorize it;
-- no result or credit unless every current transfer check passes;
+- the accepted primary, dismissal, fresh-transfer, feedback/retry, and bounded `6/6` release unchanged;
+- transfer evidence remains independent from primary evidence and is not mastery, access, or world authority;
+- the complete transfer acknowledgement remains visible until one explicit Pilot intent;
+- the destination, if later authorized, is the existing canonical genuinely blank Python explanation boundary;
+- no carried transfer values, answers, source, feedback, result transcript, token, or private work;
+- existing strict explanation dimensions and evaluator remain authoritative without copying answers or rules;
+- entry/presentation creates no explanation attempt, score, evidence, hint, result, or credit;
 - separate write-free returns;
 - deterministic sanitation/resume;
 - seven input modalities with one-hit suppression;
@@ -194,7 +199,7 @@ A1 should lock ownership and meaning only. It must preserve:
 
 Hard stop before:
 
-- Python explanation;
+- Python explanation submission, evaluation, feedback, or result;
 - `RP002-RAI-01`;
 - review/save/completion;
 - `RP-003+`;
@@ -208,7 +213,7 @@ Then continue sequentially with:
 2. Curriculum Checker A3.
 3. Gameplay Master A4.
 4. Coder A5 in `advance` mode.
-5. Player W1 on the accepted live blank fresh-practice group, reporting only the earliest transfer submit/evaluation gap.
+5. Player W1 on the accepted live bounded transfer-evidence group, reporting only the earliest explicit explanation-entry gap.
 6. Coder W2 in `bug-repair` mode.
 7. Aesthetic W3 on only the newly repaired states.
 8. Coder W4 in `aesthetic-polish` mode.
@@ -290,5 +295,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 blank fresh-practice boundary, locking only the nearest transfer submission/evaluation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 bounded transfer-evidence boundary, locking only the nearest explicit transition into canonical blank Python explanation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
 ```

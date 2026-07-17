@@ -1,5 +1,11 @@
 # Player Agent Work Log
 
+## 2026-07-17 — Coordinator closure: RP-002 transfer evidence partial release
+
+- **Outcome:** `PASS — PY-009 TRANSFER EVIDENCE IN DEMO PARTIAL`. Transfer submit, actual-miss feedback/blank retry, and bounded current-attempt `6/6` evidence are accepted; explanation and every later state remain closed.
+- **Release validation:** full `598/598`, all `15/15` readiness validators, production build, complete `97.1s` title-to-credits E2E with every emitted gate true and no runtime errors, HTTP/served markers, responsive title shells, patch integrity, and generated-capture cleanup passed.
+- **Preservation:** user storage and the two unrelated untracked items were untouched. Next W1 must begin from this accepted edge only after the next complete Advance handoff.
+
 ## 2026-07-17 — W1 RP002-P1-013: blank fresh practice cannot submit
 
 - **Demo build tested:** coordinator-accepted `index-CjiYW_Of.js` / `index-ghzUiZe9.css` at `http://127.0.0.1:4173/`; root, JS, and CSS returned HTTP `200`. RP-002 remains the oldest adjacent Working packet and the accepted boundary is canonical `DR-20` blank System fresh practice.

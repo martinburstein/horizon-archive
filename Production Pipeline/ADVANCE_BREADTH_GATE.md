@@ -1,5 +1,7 @@
 # Advance Breadth and Convergence Gate
 
+Latest RP-002 continuity release: `2026-07-17 / RP002-P1-013 PASS — TRANSFER EVIDENCE IN DEMO PARTIAL`. Protected and normal transfer submission/evaluation converged without opening explanation or adding a successor seam. Independent full `598/598`, all `15/15` validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. The next meaningful continuity tranche begins only at transfer completion and must reduce the explanation-entry gate.
+
 Latest RP-002 continuity A5 checkpoint: `2026-07-17 / RP002-P1-013 REVISE — PROTECTED TRANSFER SEAM ONLY`. The pure unimported controller closes the authorized transfer code deficit by composing existing evaluator/sanitizer/resume authorities rather than adding a separate micro-seam. Normal integration and Working evidence remain open; W1 begins at the accepted blank group. Explanation and every later boundary remain closed.
 
 Latest RP-002 continuity release: `2026-07-17 / RP002-P1-012 PASS — FRESH PRACTICE ENTRY IN DEMO PARTIAL`. Protected and normal result-dismissal-to-blank-entry work converged without an extra micro-seam. Independent full `587/587`, all `15/15` validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. The next meaningful continuity tranche is transfer submission/evaluation from the accepted blank group only; explanation and every later boundary remain closed.

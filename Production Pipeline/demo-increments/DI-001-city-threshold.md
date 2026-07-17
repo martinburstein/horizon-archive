@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator release — transfer evidence accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED` on `index-D0-watPG.js` / `index-ghzUiZe9.css`.
+- **Player-visible delta:** canonical blank transfer now submits, recovers from actual misses through answer-free feedback/blank retry, and ends only at bounded current-attempt `6/6` course evidence.
+- **Independent evidence:** full `598/598`, all `15/15` validators, build, `97.1s` complete E2E, exact desktop/narrow title checks, HTTP/served markers, clean logs, patch integrity, and QA cleanup pass. User storage was preserved.
+- **Next:** continuity begins only at the explicit transfer-complete-to-blank-explanation ownership edge; every later state remains closed.
+
 ## 2026-07-17 Working W4 — final transfer candidate
 
 - **Verdict:** verification-only final rebuild/reload passes; no W3 defect or production edit.
