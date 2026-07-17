@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A3 CURRICULUM PASS COMPLETE`
+- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE / A5 NEXT`
 - Target chapter/location: Chapter 3 expansion closure / exposed chronology landscape beyond Manyfold Return
 - Target demo horizon: fifth future slice after the accepted RP-001 boundary; directly after RP-005
 - Route order: 6
@@ -12,7 +12,7 @@
 - Spoiler class: `surface-safe`
 - Working title: `Interval Works` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase II — Expansion / slot 3 of 3
-- Target player time: `TBD by A3/A4`; A1 sets no learning duration
+- Target player time: `29–40 minutes` clean first play; `17–24 minutes` mastered replay; protected A5 reference-fixture target `<5 minutes` through the real frozen evaluators with no skipped evidence or explanation
 - Complete Advance cycles spent on this packet: 0 complete A1–A5 cycles; A1 story pass only
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
@@ -153,9 +153,74 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `UNASSIGNED — A4 NEXT; MAY NOT CHANGE SOLIDIFIED A3`
-- A1 assigns no puzzle graph, verb sequence, scoring logic, hint, retry behavior, reward, item, route unlock, or runtime state.
-- Any later graph must preserve sequence-not-causation, replica-only evidence, world invariance, reversible return, privacy, offline/no-authority, and no-credit Tour contracts.
+- Status: `PASS — A4 INTEGRATED GRAPH LOCKED; READY FOR CODER A5 PROTECTED CONSTRUCTION`
+- Graph: `IW-00 ARRIVE + IDLE -> IW-10 INSPECT MATERIAL ORDER -> IW-20 SEQUENCE + SAVE -> IW-30 VERIFY + RETURN`.
+- Boundary: sequence remains evidence of order only. Builder work uses sanitized replicas; the unavailable interval stays explicit, every `cause` stays `None`, and no action reads, replays, opens, ranks, corrects, or changes the live works.
+
+### Integrated phase graph
+
+| Phase | Entry | Required player work | Success exit | Failure/recovery |
+|---|---|---|---|---|
+| `IW-00 ARRIVE + IDLE` | Exact verified RP-005 completion; temporary work clear; unchanged `continuation`; `cityStateDelta=null`; `externalStateDelta=null` | Orient to the invariant SC-07 panorama and explicitly inspect or take a reversible return | Open `IW-10` with no observation, learning, save, route, or world credit | Invalid, stale, forged, or partial predecessor evidence fails closed to the exact RP-005 boundary; return consumes nothing |
+| `IW-10 INSPECT MATERIAL ORDER` | Registered cross-section detail; all learning evidence still empty | Deliberately record four equal-peer facts in any order: overlap/cross-cut order, changed/persistent pair, closed interval as unavailable, and layered stewardship | All four distinct observations open the sanitized Builder work at `IW-20`; revisits are idempotent | Duplicate/unsupported facts do not advance. Recovery names only the next unrecorded evidence class, clears transient navigation history, and focuses the first incomplete peer without assigning time, duration, cause, importance, category, or purpose |
+| `IW-20 SEQUENCE + SAVE` | Four observations complete; same invariant panorama; replica provenance and no-live-read/replay/open/control limit visible | Complete strict `PY-013`, then independent strict `RP006-SPEECH-01` plus both explanations; inspect the conjunctive review; explicitly request one atomic save | Only four finalized observations + exact Python evidence + exact independent speech evidence + both explanations may commit the allowlisted interval note/evidence record | Every miss is local, answer-free, unlimited, and blank on retry. Preserve finalized allowlisted evidence only; clear private/source/answer/feedback/transient work; resume at the deterministic first incomplete scored boundary |
+| `IW-30 VERIFY + RETURN` | Atomic commit succeeded; temporary work cleared | Verify restored order/change/persistence/unavailable/causal-limit note, then return to RP-005/earlier anchors or record the continuation as destinationless and undefined | Reversible return; unchanged continuation; null city/external deltas; invariant SC-07 and monotonic clocks; no replayed observation, evaluator, save, or world event | Missing, contaminated, Tour-derived, forged, or partial records fail closed without partial restore; recovery returns to the earliest incomplete pre-save boundary with safe returns intact |
+
+All `4! = 24` observation orders converge on the same `IW-20` boundary. Phase replacement, navigation, visibility, focus, material order, scene sound, presentation, timing, acknowledgement, save/restore display, Tour traversal, and story progress award zero observation, Python, AI-901, explanation, or save credit.
+
+### Required, optional, misleading, and unavailable actions
+
+- Required: orient; record each four peer observations; complete the exact frozen Python primary/remediation/retrieval/blank-transfer chain; complete the exact frozen independent speech-capability primary/remediation/retrieval/blank-transfer chain plus both explanations; review all conjuncts; request atomic save; verify restore; choose a reversible return.
+- Optional: revisit a recorded observation; inspect replica provenance and causal limits; request progressive hints; state confidence; clear a draft; review the expedition-side flattened sequence; take an early safe return; after verified restore, record the outbound continuation without opening it.
+- Misleading but recoverable: read left-to-right placement as time; infer cause from adjacency or transcript order; call the unavailable interval empty/false; fill its record; sort/reverse/hardcode the sequence; mutate inputs; treat a persistent feature as important; infer duration/authorship/purpose; equate recognition with synthesis; select a capability because audio or text appears anywhere rather than tracing input to output; use SC-07 sound, order, display, or story content as an answer.
+- Unavailable: read/replay/open/change live material; access the closed interval; establish absolute time, duration, cause, authorship, native category, metric, truth, or purpose; make a live Azure/Foundry/Speech/terminal/world call; use credentials/resources; authenticate, grant permission, or perform external action; save partially; use Tour for credit/save; open or name RP-007.
+
+### Frozen Python chain
+
+1. Primary is the exact frozen eight-check `PY-013` form. The learner imports `itertools` and calls `itertools.chain.from_iterable(record_groups)` exactly once, wrapped as the supplied list result.
+2. `8/8` is required. A miss exposes only its failed check and an answer-free progressive hint: name the imported module; trace the module-qualified helper; preserve group/source order; distinguish unavailable from empty/false; keep every `cause=None`; avoid sorting, reversal, hardcoding, mutation, live access, and inference. No hint gives solution code.
+3. Delayed closed-note retrieval traces the import, module, qualified helper, input groups, list output, source order, explicit gap, and cause boundary without reopening primary source.
+4. Transfer opens as a genuinely blank exact frozen eight-check form and requires `8/8`. Primary reuse or any forbidden shortcut fails closed.
+
+The four ordered record groups, fields, list wrapper, explicit unavailable record, and sanitized values are supplied unscored scaffold. Execution renders only an expedition-side sequence; it never supplies chronology, fills the gap, derives cause, or changes SC-07.
+
+### Independent speech-capability chain
+
+1. A separate neutral expedition course panel opens only after finalized Python evidence. It presents one course-authored text case at a time with persistent human-readable choices for speech recognition and speech synthesis; it requires no audio playback.
+2. Primary requires exact frozen `4 cases x 2 dimensions = 8/8`: capability plus deciding signal. Input/output direction selects the capability; content, order, and the mere presence of audio/text do not.
+3. Each miss receives only its failed case/dimension, an answer-free request to mark input and output modalities, a recognition/synthesis contrast, removal of content/scene cues, and one neutral guided case. Retry is unlimited and blank.
+4. Delayed closed-note direction-pair retrieval requires exact frozen `2 cases x 2 dimensions = 4/4`.
+5. Transfer opens as a genuinely blank exact frozen `4 cases x 2 dimensions = 8/8` form and requires `8/8`.
+6. Two separately scored explanations are mandatory: input/output direction selects recognition versus synthesis; transcript order or content does not establish causation.
+
+The course panel contains no SC-07 image/crop, layer or repair form, sequence/order marker, changed/persistent/closed/stewardship icon, scene sound, animation, Builder-world referent, story text, answer, or deciding signal. Scenery, world sequence, presentation, audio, and Tour are structurally absent as capability, cause, model, metric, truth, purpose, or answer channels. Python and AI evidence never cross-credit.
+
+### Hints, miss, recovery, focus, privacy, and save
+
+- Observation hints identify only an unrecorded physical relationship; they never supply Python or speech answers or strengthen sequence into cause.
+- Python hints progress from failed-check location to concept contrast to a neutral miniature import/collection example; speech hints progress from input/output marking to capability contrast to a neutral guided case. Both stop before answers.
+- Wrong, unsafe, duplicate, stale, forged, combined, hardcoded, sorted/reversed, gap-filled, causation-inferred, scene-derived, Tour-derived, private, contaminated, or partial evidence rejects locally. There is no attempt ceiling, dead end, world response, or cross-credit.
+- On retry/transition, clear learner source, submitted answers, free reasoning, evaluator feedback, copied case text, unsubmitted choices, pointer/focus/token history, credentials, endpoints, payloads, responses, and external-action requests. Preserve only finalized allowlisted IDs, dimension/check correctness, attempt count, hint level, confidence, misconception tags, and mastery status.
+- Resume accepts one contiguous finalized evidence prefix, focuses the current heading, announces owner/status/limits in a live region, then focuses the first incomplete control. Pre-save physical observations are re-observed after reload rather than stored as settled learning evidence.
+- Save is explicit and all-or-none. Commit only packet/mapping/form/skill/objective IDs, allowlisted finalized evidence metadata, the four observations, and the bounded interval note. A failed write preserves the prior record byte-for-byte.
+- Verified restore displays only the bounded note with temporary work absent and replays no observation, transcript/audio, evaluator, explanation, save, route, animation, or world event.
+
+### Pacing, delight, and accessibility
+
+- Clean first play: `29–40 minutes` (`5–7` observation, `8–11` Python, `12–17` speech capability, `4–5` review/save/restore). Mastered replay: `17–24 minutes`. No time limit, speed score, timing credit, forced audio, or forced animation.
+- Delight comes from the suit assembling the preserved source-order sequence while the closed interval remains an unmistakable blank record and every `cause` remains visibly unset. The result folds away before the neutral speech panel and causes no world reaction.
+- Representative `1920 x 1080` keeps the dominant world and complete current owner/message/content/action group inside `100dvh` without outer scroll. Narrow and `200%` text zoom reflow into one contained vertical column; controls remain at least `44 x 44 CSS px`.
+- One active group, persistent labels, field-associated text errors, live status, semantic headings, forced-colors support, reduced-motion stills/direct replacement, and equivalent pointer/touch/keyboard/switch/speech/screen-reader actions are mandatory. Color, motion, sound, position, sequence, and timing are never sole meaning or credit.
+- Demo Tour is a separate zero-credit projection and writes no observation, source, answer, score, mastery, save eligibility, route, world, successor, or resume evidence.
+
+### Player-observable A4 acceptance
+
+1. All 24 observation orders converge, revisits remain idempotent, and SC-07 never reacts.
+2. Python requires exact `8/8 -> retrieval -> blank 8/8`; independent AI requires exact `8/8 -> 4/4 retrieval -> blank 8/8` plus both explanations. No observation, scene sequence/sound, execution display, save, Tour, or other chain manufactures credit.
+3. The explicit gap stays unavailable, every cause remains `None`, source order stays exact, and no interaction converts sequence into causation, chronology, duration, authorship, category, or purpose.
+4. Every miss is answer-free, local, unlimited, blank on retry, privacy-cleared, and focused at the deterministic first incomplete boundary.
+5. Only the full conjunction saves atomically; verified restore retains bounded note/evidence, clears temporary/private work, and replays nothing.
+6. Early/final returns remain reversible; continuation stays unchanged; city/external deltas remain null; SC-07 remains invariant; the optional continuation stays undefined with no RP-007 content.
 
 ### Exact Gameplay Master A4 handoff
 
@@ -163,8 +228,8 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 ## Rough Code Track — Coder
 
-- Status: `UNASSIGNED — A5 AFTER A4`
-- A1 authorizes no production code, protected module, test, persistence schema, route, browser integration, asset, or accepted-demo change.
+- Status: `UNASSIGNED — A5 NEXT UNDER THE EXACT PROTECTED-CONSTRUCTION HANDOFF`
+- A5 may implement one pure protected journey/harness only. No App/main import, feature flag, browser persistence, normal route, production-art hook, accepted bundle, live Demo exposure, network request, live record/interval access, Working pass, or RP-007 content is authorized.
 
 ## Accessibility and presentation risks
 
@@ -179,7 +244,7 @@ Record the relative order supported by exposed evidence, distinguish what change
 ## Dependencies
 
 - Required existing systems: exact RP-005 verified completion boundary; reversible route ownership; privacy sanitizer; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
-- New systems: none assigned by A1.
+- New systems: none. A5 composes existing observation, frozen evaluator, evidence, sanitation, atomic save/restore, deterministic-focus, Tour-isolation, and reversible-return authorities in one protected journey rather than adding transition modules.
 - Art dependencies: A2 defines one registered maximum-quality cinematic photorealistic first-person plan after reading the visual spine.
 - Curriculum dependencies: A3 selects and verifies the nearest contiguous mappings under current official source-priority rules after A2 locks the scene.
 - Decisions awaiting Martin: none for this surface-safe seed.
@@ -197,7 +262,7 @@ Record the relative order supported by exposed evidence, distinguish what change
 - Exact landscape topology, scale, record morphology, material palette, atmosphere, collective-work evidence, maintenance form, causal order cues, coupling design, and registered world-plate count.
 - Whether entry, observation, completed, and return states reuse one registered invariant plate or require registered detail plates.
 - Exact expedition-facing labels for exposed states and features, provided they use observable physical evidence and never claim native time, causation, importance, purpose, or identity.
-- Curriculum, gameplay, and code details remain wholly unassigned until their owning roles act.
+- Curriculum cases/answers/dimensions/thresholds/sources/IDs, Python fields/order/gap/cause boundaries, graph/evidence order, and allowlist are frozen. A5 may vary only protected presentation details and answer-free hint phrasing without changing the integrated graph or isolation boundaries.
 
 ## Player-observable acceptance criteria
 
@@ -209,25 +274,29 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-013 and RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED`.
-- Packet gates remaining: Puzzle, Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
-- Did this pass reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
+- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-013 and RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED`; Puzzle `PASS — IW-00 through IW-30 integrated graph locked`.
+- Packet gates remaining: Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
+- Did this pass reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
 - Existing seams integrated or consolidated: RP-005's saved bounded summary, no-live-read/rank/correct rule, ordinary Builder executable literacy, privacy clearing, reversible returns, and serviced destinationless continuation become one direct Phase II closure premise.
 - Optional work trimmed or deferred: absolute chronology, missing-interval content, causal explanation, native category, live replay, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- New module or artifact integration consumer: none at A2; A3 consumes the unchanged story/scene contract next.
-- Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`
+- New module or artifact integration consumer: A5 composes one pure protected journey/harness through existing authorities; per-transition modules are rejected.
+- Breadth verdict: `CONTINUE — A5 ADVANCE CODER`
 - Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-006 reaches the coordinator gate`.
-- Exact next action in one sentence: Gameplay Master A4 composes one bounded graph around frozen PY-013 and RP006-SPEECH-01 while SC-07 remains zero evidence.
+- Exact next action in one sentence: Coder A5 builds one pure protected IW-00→IW-30 journey/harness through the real frozen evaluators, proving all 24 observation orders, sequence-not-causation, neutral speech-case isolation, atomic recovery, Tour isolation, and invariant SC-07 before Gate Review.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
 - Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
-- Gameplay Master sign-off: `PENDING`
+- Gameplay Master sign-off: `PASS — 2026-07-17`
 - Coder smoke-test result: `PENDING`
-- Readiness: `NOT READY — A2 COMPLETE / A3 NEXT`
-- Required revision: `A4–A5 complete their owned gates sequentially; no successor is defined`.
+- Readiness: `REVISE — A4 COMPLETE / A5 NEXT`
+- Required revision: `A5 completes protected construction on this unchanged graph; no successor is defined`.
+
+### Exact Coder A5 protected-construction handoff
+
+`Coder Agent — A5 advance-construction mode: work only on RP-006 Interval Works and implement exactly one pure protected IW-00 -> IW-30 journey/harness from exact verified RP-005 completion. Compose existing observation, frozen evaluator, evidence, sanitation, atomic-save, verified-restore, deterministic-focus/resume, Tour-isolation, and reversible-return authorities; do not create per-transition modules. Prove all 24 orders of the four equal-peer observations converge. Run exact frozen PY-013 8/8 primary -> answer-free remediation -> delayed closed-note import/module/helper/input-output/order/gap/cause trace -> genuinely blank 8/8 transfer and independent exact frozen RP006-SPEECH-01 8/8 primary -> per-case/per-dimension answer-free remediation -> 4/4 direction-pair retrieval -> genuinely blank 8/8 transfer plus both explanations through their real validators. Preserve supplied groups/fields/list wrapper unscored, source order exact, the unavailable record explicit, every cause None, and Python/AI/observation evidence non-cross-crediting. Keep the neutral speech panel structurally free of SC-07 images, layer/repair forms, order markers, changed/persistent/closed/stewardship icons, scene sound/motion, Builder-world referents, story text, answers, and deciding signals. Wrong, hardcoded, sorted/reversed, gap-filled, cause/duration/authorship/purpose-inferred, scene-derived, Tour-derived, private, contaminated, forged, stale, and partial evidence must fail closed to unlimited blank answer-free retry with deterministic first-incomplete focus and privacy clearing. Save only the exact allowlist atomically; verify restore without replay; preserve early/final reversible returns, unchanged continuation, null city/external deltas, invariant SC-07 geometry/material/effect clocks, offline/no-authority/no-exam-guarantee, and undefined destinationless continuation. Add focused protected tests and a <5-minute reference fixture through real evaluators. Do not change frozen cases, answers, dimensions, thresholds, sources, IDs, SC-07 composition/art, lore/native categories, App/main, browser persistence, normal routes, production assets, accepted bundles, live Demo, RP-001/RP-002 accepted behavior, RP-003/RP-004/RP-005 protected or Working state, or any RP-007 content. Update readiness/scoreboard/queue/map/log evidence and hand the packet to coordinator Gate Review or one documented HOLD.`
 
 ### Exact Storyboarder A2 handoff
 
@@ -241,7 +310,7 @@ Record the relative order supported by exposed evidence, distinguish what change
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-006 IN DESIGN — A3 COMPLETE / A4 NEXT`
+- Team 1 railhead after promotion: `RP-006 IN DESIGN — A4 COMPLETE / A5 NEXT`
 - Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A2 COMPLETE / A3 NEXT`
+- `STORY_RAIL_MAP.md` updated: `YES — A4 graph lock`
 - Coordinator: `PENDING`
