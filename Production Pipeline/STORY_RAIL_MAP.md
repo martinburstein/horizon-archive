@@ -8,6 +8,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Position summary
 
+- Current Working override: `RP-002 — IN DEMO PARTIAL / FIRST FAR OBSERVATION COORDINATOR PASS`. Independent full **523/523**, build, RP-002 through RP-009 validators, complete E2E, HTTP checks, and clean `1920 x 1080` / `390 x 844` live title-shell review passed. Either equal far peer can be the first record, one-far return/resume is accepted, and visible/assistive action states match. Next W1 owns only the earliest exact gap toward a second far observation; local comparison, learning, completion, and RP-003+ remain closed.
+
 - Current Working override: `RP-002 — FINAL VALIDATION / RP002-AESTH-004 RESOLVED`. W4 now derives visible and accessible Available/Recorded/Inert state text from one shared descriptor without changing gameplay or layout. Coordinator owns full E2E and live assistive release review; second far, local comparison, learning, completion, and RP-003+ remain closed.
 
 - Current Working override: `RP-002 — AESTHETIC IMPLEMENTATION / RP002-AESTH-004`. W3 found one bounded assistive-state parity defect: hard-coded owner/action button labels omit the visible Available/Recorded/Inert state and no description association restores it. W4 changes only that semantic association and focused coverage, preserving the integrated first far and every second-far/later lock.

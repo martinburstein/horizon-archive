@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator — first-far tranche accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / FIRST FAR OBSERVATION ACCEPTED`. The bounded RP002-P1-007 repair and RP002-AESTH-004 assistive parity polish are accepted on the live demo.
+- **Release evidence:** full **523/523**, production build, RP-002 through RP-009 curriculum self-tests, patch integrity, and full title-to-credits E2E passed with credits reached and no runtime errors. Root, JS, and CSS return HTTP `200`.
+- **Responsive evidence:** the title shell is horizontally contained at `1920 x 1080` and `390 x 844`, console is clean, actions remain `>=44px`, and the narrow frame occupies `385/390 CSS px`. The user's saved campaign was not inspected or altered; gated first-far behavior is accepted from focused deterministic evidence rather than a fabricated live traversal.
+- **Next boundary:** W1 may report only the earliest exact gap toward a second far observation. Local comparison, learning, completion, and RP-003+ remain closed.
+
 ## 2026-07-17 W4 — RP002-AESTH-004 assistive-state parity resolved
 
 - **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. Each first-far peer's owner/action accessible name now includes the exact same shared Available, Recorded/replay-only, or Inert/zero-credit state text rendered visibly inside the button.

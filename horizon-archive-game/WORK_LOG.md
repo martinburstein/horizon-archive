@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator release: first far accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / FIRST FAR OBSERVATION ACCEPTED` on `index-DlTR4eYT.js` / `index-R5wdIep0.css` at port `4173`.
+- **Validation:** independent full **523/523**, production build, all current RP-002 through RP-009 curriculum self-tests, patch integrity, and the complete **110s** title-to-credits E2E passed with `credits:true` and `runtimeErrors:false`. Incidental QA image regeneration was restored.
+- **Live review:** `1920 x 1080` and `390 x 844` title shells have no horizontal overflow or console warning/error; controls remain `>=44px`; narrow frame width is `385/390 CSS px`. The saved campaign remained untouched.
+- **Boundary:** first-far record/return/resume and visible/assistive state parity are accepted. Second far, local comparison, learning, completion, and RP-003+ remain closed.
+
 ## 2026-07-17 — Coder W4: RP002-AESTH-004 assistive-state parity
 
 - **Mode/verdict:** `aesthetic-polish` / `PASS — RP002-AESTH-004 RESOLVED; FINAL DEMO RELOADED / COORDINATOR NEXT`. The visible `AVAILABLE`, `RECORDED // REPLAY ADDS NO EVIDENCE`, and `INERT // ZERO CREDIT // NOT YET ACTIVE` copy now comes from one shared descriptor that also appends the exact same text to each action's owner/action accessible name.
