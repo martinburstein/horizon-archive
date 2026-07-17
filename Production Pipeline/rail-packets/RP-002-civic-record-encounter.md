@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 first-near clean final reload — 2026-07-16
+
+- **Disposition:** `CLEAN VERIFICATION / NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`.
+- **Evidence:** focused **49/49**, full **452/452**, production build, unchanged bundle identity, immutable civic hash, and root/JS/CSS/civic HTTP checks pass. Port `4173` is final-reloaded with `index-DumYcxh-.js` / `index-Dws9tyNW.css`.
+- **Boundary:** the preserved browser save remains before verified RP-001; W4 left storage untouched and defers direct blank -> one acknowledgement -> evidence return -> replay-only one-ID responsive proof to coordinator. Production runtime/art/tests are unchanged; one-ID maximum, zero-credit/Tour/save/accessibility boundaries, and no later-state exposure remain exact.
+- **Exact coordinator handoff:** traverse only the final-reloaded normal blank-to-one-ID path from an exact valid predecessor at representative desktop/narrow layouts. Confirm accepted art/crop, exact Scene/System hierarchy, evidence return, replay-only retained control, separate route return, focus, `>=44px`, non-color/reduced-motion meaning, first-person exclusion, deterministic resume, fail-closed recovery, zero learning/mastery/exam/world/city/access/external/successor credit, and no second observation or later content; then run release gates and record PASS or one exact residual.
+
 ## Working W3 first-near bounded aesthetic checkpoint — 2026-07-17
 
 - **Disposition:** `NO FINDING OPENED / W4 ROOT LIVE PROOF NEXT`.

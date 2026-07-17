@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 W4 — RP-002 one-ID clean final reload
+
+- **Disposition:** `PASS — NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`. W3 authorized no visual change and W4 reproduced no exact defect; production runtime, art, tests, saves, and routes remain unchanged.
+- **Evidence:** focused **49/49**, full **452/452**, build, immutable `1672 x 941` civic source, and root/JS/CSS/civic HTTP `200`. Port `4173` serves `index-DumYcxh-.js` / `index-Dws9tyNW.css`; civic asset is `2,594,095` bytes at SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **Boundary/limitation:** contracts retain three equal controls, one exact Scene/System acknowledgement, evidence return, replay-only one-ID state, separate route return, responsive/44px/focus/non-color/reduced-motion/first-person behavior, zero credit/world response, and no later exposure. The preserved user save remains before the predecessor; W4 did not mutate it or claim direct one-ID desktop/narrow traversal.
+- **Coordinator:** safely verify only the final-reloaded blank-to-one-ID path at representative desktop/narrow layouts, then run release gates. Preserve one-ID resume without acknowledgement replay, fail-closed recovery, all privacy/no-authority/Tour/no-credit boundaries, and no second observation or later packet content.
+
 ## 2026-07-17 W3 — RP-002 one-ID bounded aesthetic review
 
 - **Disposition:** `NO FINDING OPENED / W4 ROOT LIVE PROOF NEXT.` The user-owned browser remains before the verified predecessor, so W3 preserved it and makes no direct desktop/narrow one-ID claim.
