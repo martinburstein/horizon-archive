@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-AESTH-008 W4 VERIFIED — COORDINATOR NEXT`. The final transfer submit/feedback/retry/bounded-complete candidate is rebuilt with no W3 defect or extra production change. Team 2 remains on RP-002 pending independent release; Team 1 remains complete at RP-012 with no successor.
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-008 W3 CLEAN — W4 VERIFICATION ONLY`. The bounded transfer blank/feedback/complete presentation has no open aesthetic finding. Team 2 remains on RP-002 for final rebuild/reload; Team 1 remains complete at RP-012 with no successor.
 
 Latest Working handoff: `2026-07-17 / RP002-P1-013 W2 RESOLVED — W3 AESTHETIC REVIEW`. The accepted blank transfer group now submits through protected feedback/blank retry or bounded `6/6` evidence without persistence or later-state exposure. Team 2 remains on RP-002 for presentation review; Team 1 remains complete at RP-012 with no successor.

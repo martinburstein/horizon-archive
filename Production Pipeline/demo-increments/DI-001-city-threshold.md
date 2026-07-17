@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — final transfer candidate
+
+- **Verdict:** verification-only final rebuild/reload passes; no W3 defect or production edit.
+- **Candidate:** `index-D0-watPG.js` / `index-ghzUiZe9.css`; full `598/598`, RP-002 validator, build, HTTP/hash checks, clean final title reload, and patch integrity pass.
+- **Next:** independent coordinator release gate for RP002-P1-013 / RP002-AESTH-008 only.
+
 ## 2026-07-17 Working W3 — transfer presentation clean
 
 - **Verdict:** `RP002-AESTH-008 / NO FINDING`; transfer blank, feedback/retry, and bounded completion groups pass hierarchy, field-state, association, focus, target, responsive, and art review.
