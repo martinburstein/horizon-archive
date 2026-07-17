@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — blank local-comparison clean aesthetic review
+
+- **Disposition:** `NO FINDING OPENED — W4 VERIFICATION ONLY`. The enabled/Available comparison control, direct blank `SC-03-30` replacement, heading/ownership/zero-credit hierarchy, evidence return, separate route return, responsive structure, and immutable civic plate are coherent in fresh deterministic evidence.
+- **Evidence:** focused presentation/semantic **44/44** passes; root, `index-Cj1zShQS.js`, `index-R5wdIep0.css`, and the immutable civic master return HTTP `200`; exact bundle hashes/markers and original-size source inspection pass. User save/storage remained untouched, so no fabricated gated live capture is claimed.
+- **Boundary:** no visual, assistive, responsive, crop, sharpness, label, focus-intent, stale-announcement, or city-response implication defect was reproduced. PY-009, RP002-RAI-01, review/save/completion, and RP-003+ remain closed.
+- **W4:** make no production change unless one exact residual is safely reproduced. Re-run focused gates, build, HTTP/hash checks, final reload, and safe isolated/direct desktop-narrow proof while preserving the blank boundary and every no-credit/no-later contract.
+
 ## 2026-07-17 W2 — RP002-P1-009 blank local-comparison entry
 
 - **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. The accepted five-record boundary now presents enabled Available `OPEN LOCAL COMPARISON`; every supported deliberate modality enters only blank allowlisted `SC-03-30` while retaining all five records byte-stably.
