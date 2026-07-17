@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance continuity handoff — PY-009 curriculum preservation
+
+- A3 recorded `NO REOPEN — SOLIDIFIED`: A1/A2 changed presentation only and created no observation or mastery evidence.
+- Official Microsoft sources remain consistent; RP-002 self-test plus exact primary/transfer and anti-bypass checks pass. Fields, answers, `None`/`False`, thresholds, remediation, privacy, offline/no-authority/no-exam-guarantee, independent responsible-AI evidence, and later locks remain frozen.
+- Gameplay Master A4 owns interaction continuity only. Working still begins at the accepted blank primary; every later boundary remains closed.
+
 ## 2026-07-17 Advance continuity handoff — PY-009 presentation hierarchy
 
 - A2 specified only three mutually replacing expedition-interface groups over the unchanged SC-03 plate: blank/editable System, local checks or Teacher feedback, and provisional Suit result.

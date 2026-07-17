@@ -1,6 +1,8 @@
 # Horizon Archive Curriculum Spine
 
 Owner: **Curriculum Checker Agent**  
+
+**2026-07-17 RP-002 continuity preservation:** `NO REOPEN — SOLIDIFIED`. The A1/A2 owner-state hierarchy changes presentation only. Owner text, locking/editability, visibility, typing, focus, feedback/result display, reflow, motion, return, resume, sanitation, Tour, and tests are zero evidence. Exact `PY-009` cases, fields, answers, `None`/`False`, checks, `6/6` gates, remediation, privacy, offline/no-authority/no-exam-guarantee, independent `RP002-RAI-01`, and later locks remain frozen. A4 owns interaction continuity only.
 Status: **ACTIVE SUPPORTING SPINE — SPOILER-SAFE**
 
 ## Purpose
