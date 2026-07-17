@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE / COORDINATOR NEXT`
+- Status: `PROMOTED TO WORKING — QUEUED BEHIND RP-007`
 - Target chapter/location: Chapter 4 synthesis continuation / conditional-contact landscape beyond Braided Verge
 - Target demo horizon: seventh future slice after the accepted RP-001 boundary; directly after RP-007
 - Route order: 8
@@ -279,9 +279,9 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 - Existing seams integrated or consolidated: RP-007's saved bounded relation, no-live-read/join/route rule, exact temporary clearing, ordinary Builder executable literacy, privacy clearing, reversible returns, and destinationless infrastructure become one direct synthesis-continuation premise; prior recurrence, difference, comparison, unavailability, and scope disciplines combine without invalidating their earlier bounded evidence.
 - Optional work trimmed or deferred: unavailable-case contents, universal or causal conclusion, independence/equivalence, native category, live joining/routing, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
 - New module or artifact integration consumer: `curriculum/readiness/RP-008/contract.json` gives A4/A5 one frozen machine-readable consumer without authorizing runtime, final art, or RP-009.
-- Breadth verdict: `GATE REVIEW — A5 HANDOFF`
-- Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-008 reaches the coordinator gate`.
-- Exact next action in one sentence: Coordinator independently audits the complete RP-008 protected evidence bundle against all twelve gate items and either promotes RP-008 behind RP-007 or records one exact genuine hold; no RP-009 content is authorized before that decision.
+- Breadth verdict: `PASS — PROMOTED TO WORKING`
+- Next contiguous packet seed readiness: `YES — RP-009 BLANK SHELL ONLY`.
+- Exact next action in one sentence: Team 2 preserves strict Working order while Lore Builder A1 may define only the nearest contiguous RP-009 surface contract.
 
 ## Advance Handoff Gate
 
@@ -290,8 +290,8 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 - Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
 - Coder smoke-test result: `PASS — 14/14 RP-008 focused; 77/77 complete RP-003→RP-008 protected predecessor chain; frozen validator self-test and five canonical forms PASS; full 502/502; build PASS with accepted JS/CSS byte-identical; leakage/purity/cleanup/patch checks PASS`
-- Readiness: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE`
-- Required revision: `Coordinator independently audits all twelve gates; no additional protected seam or successor is authorized`.
+- Readiness: `READY — PROMOTED TO WORKING BEHIND RP-007`
+- Required revision: `Normal integration, final art, Working evidence, and release remain later ordered obligations`.
 
 ### Exact Storyboarder A2 handoff
 
@@ -311,9 +311,9 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 
 ## Promotion record
 
-- Approved commit: `PENDING`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-008 GATE REVIEW — A5 HANDOFF`
-- Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — GATE REVIEW / A5 HANDOFF`
-- Coordinator: `PENDING`
+- Approved commit: `8e33275`
+- Promoted to Working Queue on: `2026-07-17`
+- Team 1 railhead after coordinator: `RP-008 PROMOTED / RP-009 BLANK SHELL NEXT`
+- Next contiguous packet seeded: `YES — BLANK SHELL ONLY`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator promotion`
+- Coordinator: `PASS — focused 14/14; protected chain 77/77; full 502/502; validator/forms/build/assets/leakage/purity/cleanup/patch PASS`
