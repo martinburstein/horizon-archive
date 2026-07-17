@@ -1,5 +1,7 @@
 # Working Queue
 
+**Latest Advance continuity handoff (RP002-P1-013 / A3):** `PASS — NO REOPEN / A4 GRAPH NEXT`. The transfer mapping remains frozen and SOLIDIFIED: exact neutral source, expected two Pilot key updates, six current-attempt checks, answer-free actual-miss remediation, genuinely blank retry, and independent `6/6` transfer evidence. No normal integration is authorized before A5; W1 remains assigned only the earliest accepted live submit/evaluation gap.
+
 **Latest Advance continuity handoff (RP002-P1-013 / A2):** `PASS — A3 NO-REOPEN REVIEW NEXT`. One invariant-world, one-active-group presentation now distinguishes accepted blank/edit/submit, actual-failed-check Teacher/local-check feedback and blank retry, and bounded current-attempt `6/6` transfer evidence without previewing explanation. Normal integration remains unauthorized until A5; next W1 still reports only the earliest accepted-path submit/evaluation gap.
 
 **Latest Advance continuity handoff (RP002-P1-013 / A1):** `PASS — A2 PRESENTATION CONTINUITY NEXT`. The accepted blank fresh-practice group now has a locked surface ownership boundary for two Pilot edits, one explicit expedition-local submit intent, frozen six-check evaluation, actual-failed-check answer-free guidance/blank retry, and current-attempt `6/6` transfer evidence only. This authorizes no normal integration yet; next W1 still begins at the accepted blank group and reports only its earliest submit/evaluation gap after A2–A5 complete.

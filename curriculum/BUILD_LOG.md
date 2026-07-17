@@ -1,5 +1,19 @@
 # Build Log
 
+## Log entry: 2026-07-17T19:12:00-04:00
+
+Stage: RP-002 fresh-transfer submit/evaluation preservation (A3 continuity maintenance)
+
+Work completed: Audited only accepted blank `fresh_practice` -> Pilot edits -> explicit expedition-local submit -> actual-failed-check feedback/genuinely blank retry or current-attempt `6/6` transfer evidence. Recorded `NO REOPEN — SOLIDIFIED`. All display, editing, focus, activation, feedback, retry, acknowledgement, reflow, return, sanitation, resume, and Tour states remain zero observation and zero mastery evidence. The exact neutral transfer input, two expected updates, six simultaneous checks, primary/transfer separation, answer-free remediation, blank retry, and `transfer_complete` evidence gate remain unchanged. Explanation and every later chain remain closed.
+
+Sources: the required `foundry-azure-source-priority` skill was unavailable, so the repository official-source-first fallback was followed. Rechecked only official Microsoft Learn material on 2026-07-17: the AI-901 study guide (skills measured as of 2026-04-15; Python remains prerequisite knowledge; current two-domain weights unchanged), Foundry hub, SDKs/endpoints overview, Agent Service overview, and Content Understanding overview. No third-party source or exam item was used.
+
+Validation: RP-002 self-test PASS; exact Python primary `6/6` and transfer `6/6`; AI-901 primary `9/9` and transfer `9/9`; frozen field/answer/`None`/`False`/six-check assertions and bypass probes PASS; curriculum JSON parse unchanged.
+
+Next: Gameplay Master defines only `FT-00 -> FT-10 -> FT-20F/FT-20C`: blank/edit, one explicit seven-modality/one-hit submit, actual-failed-check answer-free feedback to genuinely blank retry, or current-attempt `6/6` course-evidence acknowledgement. Hard stop before explanation, RAI, review/save/completion, RP-003+, world/authority effect, or successor.
+
+Notes: `NO REOPEN — SOLIDIFIED`. No curriculum contract, source register, case, answer, validator, runtime, art, copy, storage, route, accepted Demo, live service, credential, hidden lore, successor, or user file changed.
+
 ## Log entry: 2026-07-17T15:24:00-04:00
 
 Stage: RP-002 result-dismissal to blank-transfer preservation (A3 continuity maintenance)

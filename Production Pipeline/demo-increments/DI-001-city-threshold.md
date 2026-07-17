@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A3 continuity — transfer mapping preserved
+
+- **Verdict:** `NO REOPEN — SOLIDIFIED`; current official Microsoft sources and RP-002 validation show no objective change, mismatch, bypass, or changed goal.
+- **Frozen evidence:** exact neutral input; two expected key updates; all six current-attempt checks; independent primary/transfer evidence; actual-miss-only answer-free remediation; genuinely blank retry; `6/6` transfer completion only.
+- **A4:** define only the four-state submit/failure-or-complete graph; keep explanation and every later state closed.
+
 ## 2026-07-17 Advance A2 continuity — transfer submit presentation
 
 - **Presentation:** unchanged SC-03 overview plus one mutually replacing expedition group for blank/edit/submit, actual-failed-check feedback, blank retry, or bounded `6/6` transfer evidence.
