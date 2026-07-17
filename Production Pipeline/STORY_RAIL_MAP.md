@@ -42,6 +42,8 @@ Latest Advance handoff: `2026-07-17 / RP-010 A5 PASS — COORDINATOR GATE REVIEW
 
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 ACCEPTED DEMO NEXT`. The protected, unimported A0/A1/A1F/A2 model passes focused `10/10`, full `575/575`, build, leakage, purity, and patch gates while leaving App/main/normal route/storage/art/curriculum/live Demo unchanged. It proves exact strict-evaluator feedback, blank retry, `6/6` read-only result, separate returns, sanitation, privacy/Tour/accessibility boundaries, and hard later-state absence. W1 must play only the accepted blank primary and report its earliest normal submission/result gap; the Advance railhead remains the completed RP-012 ending with no successor.
+
 ## Position summary
 
 - Current Working override: `RP-002 — FINAL VALIDATION / CLEAN RP002-P1-009 W4`. Blank local comparison passed verification-only focused/full/validator/build/reload gates with no production change. Coordinator owns release validation; every learning/completion/later lock remains closed.

@@ -1062,6 +1062,12 @@
 - **Validation:** source/model coverage includes 1600, 1920, approximately 2558, and 3440px desktop widths, portrait/narrow, and representative 200% zoom. Focused **36/36**, full suite **259/259**, and build passed (`index-mIMwOeBZ.js`, `index-DES0pYLs.css`).
 - **Coordinator gate:** live-confirm no cap-created gutters, stretching, horizontal escape, clipped copy, or focus/modal regression. Gameplay, hotspots, saves, mastery, Tour, art, and city state remain locked.
 
+## 2026-07-17 Advance Coder A5 — protected PY-009 primary interaction
+
+- One pure, non-routable A0/A1/A1F/A2 authority proves seven modalities/one hit, exact false-check feedback, answer-free privacy-cleared blank retry, immutable source, current-attempt `6/6` read-only result, separate write-free returns, sanitation/anti-forgery, campaign/Tour stability, accessibility metadata, and hard later-state absence.
+- Focused `10/10`, full `575/575`, build, accepted-entry/dist leakage, protected purity, and patch integrity pass. App/main, normal route, storage, Civic presentation, art, curriculum, accepted assets, and live Demo remain unchanged.
+- Verdict: `REVISE — protected seam only`. W1 tests only the accepted live blank-primary boundary; all later states remain closed.
+
 ## Identity
 
 - Rail Packet: `RP-001 — City Threshold`

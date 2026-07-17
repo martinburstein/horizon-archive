@@ -4,6 +4,8 @@
 
 The Advance Team uses this queue for future playable slices ordered from the current live-demo boundary toward the intended ending. There is no maximum queue depth. Complete the nearest unfinished segment first, then advance contiguously without waiting for the Working Team.
 
+**2026-07-17 continuity result (RP002-P1-011 / A5):** `REVISE — PROTECTED PRIMARY SEAM ONLY`. One pure non-routable authority now proves exact A0/A1/A1F/A2 evaluation, seven modalities/one hit, six-check-only answer-free remediation, genuinely blank retry, current-attempt `6/6` read-only Suit result, separate write-free returns, sanitation/anti-forgery, campaign/Tour stability, accessibility metadata, and the hard stop before every later state. Focused `10/10`, full `575/575`, build, leakage, purity, and patch checks pass. App/main/normal route/storage/assets/art/curriculum/live Demo remain unchanged; W1 owns only the accepted live blank-primary submission/result gap.
+
 ## Status vocabulary
 
 - `SEED`

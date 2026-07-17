@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest Advance continuity result: `2026-07-17 / RP002-P1-011 A5 REVISE — PROTECTED PRIMARY SEAM ONLY`. A pure unimported `30-A0 -> 30-A1/A1F -> 30-A2` model passes focused `10/10`, full `575/575`, build, leakage, purity, and patch checks. It proves seven modalities/one hit, exact six-check feedback, answer-free blank retry, `6/6`-only read-only result, separate write-free returns, sanitation, privacy, Tour/campaign stability, accessibility metadata, and hard later-state absence. Normal integration, accepted assets, storage, art, and live Demo remain unchanged; W1 still begins at the accepted blank primary.
+
 ## Purpose
 
 This spoiler-safe support spine tracks the evidence needed to turn each of the twelve expedition Rail Packets into a protected build, a production-quality visual presentation, a normal integrated route, a Working Team increment, and a releasable accepted demo. It complements `EXPEDITION_SPINE.md`; it does not authorize new story, curriculum, gameplay, code, art, or successor content.
