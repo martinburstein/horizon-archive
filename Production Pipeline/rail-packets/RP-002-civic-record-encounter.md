@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W3 second-far region-label finding — 2026-07-17
+
+- **Disposition:** `RP002-AESTH-005 P2 OPEN — W4 AESTHETIC IMPLEMENTATION NEXT`.
+- **Finding:** second-far acknowledgement, exact `5 of 5`, complete evidence return/replay/resume, two Recorded peers, dormant local comparison, separate route return, responsive hierarchy, and immutable civic art pass bounded review. The sole defect is the `SC-03-20` world region's static `blank distant observation view` accessible label, which remains stale during second-far acknowledgement and `sc03_far_complete`.
+- **Evidence:** focused presentation/semantic **57/57** and root/JS/CSS HTTP checks pass; served `index-DDeEi_QC.js` contains the complete checkpoint, exact action/status copy, and stale blank label. User storage remained untouched; no gated live traversal is fabricated.
+- **W4 lock:** make the world-region label truthful for zero-far blank, one-far partial, and two-far complete states without implying a city response or duplicating Scene/System copy. Change no visible copy, art, action behavior, evidence, save, route, credit, world, comparison, learning, completion, or successor state. Stop before comparison activation, `SC-03-30`, or RP-003+.
+
 ## Working W2 second-far observation integration — 2026-07-17
 
 - **Disposition:** `RP002-P1-008 RESOLVED — DEMO RELOADED / W3 NEXT`.

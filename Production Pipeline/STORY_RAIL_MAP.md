@@ -1,6 +1,6 @@
 # Horizon Archive Story Rail Map
 
-Latest Working handoff: `2026-07-17 / RP002-P1-008 W2 PASS — W3 AESTHETIC REVIEW NEXT`. Exact `sc03_far_first` now makes only the unselected peer Available; both far orders and all seven modalities preserve four records byte-stably, add one matching fifth record, and present exact Scene/System `5 of 5`. Exact `sc03_far_complete` return/replay/resume retains both peers as Recorded and exposes only disabled/handler-free zero-credit local comparison plus separate route return. Full `538/538`, validator, build, patch, reload, and HTTP checks pass. Comparison activation, SC-03-30, learning, completion, and RP-003+ remain closed.
+Latest Working handoff: `2026-07-17 / RP002-AESTH-005 W3 P2 — W4 AESTHETIC IMPLEMENTATION NEXT`. The integrated second-far acknowledgement, five-record return/replay, two Recorded peers, dormant local comparison, separate route return, responsive hierarchy, and immutable civic art pass bounded review. One assistive presentation defect remains: the `SC-03-20` world region still says `blank distant observation view` at second-far acknowledgement and complete return/resume. W4 changes only blank/partial/complete region naming plus focused coverage and final reload. Comparison activation, SC-03-30, learning, completion, and RP-003+ remain closed.
 
 Latest coordinator gate: `2026-07-17 / RP-009 PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete RP-002 through RP-009 protected chain `97/97`, full `518/518`, RP-009 validator and all canonical forms, build, byte-identical accepted assets, leakage, purity, cleanup, and patch integrity passed. RP-010 is the one active in-design packet.
 
@@ -9,6 +9,8 @@ Latest Advance handoff: `2026-07-17 / RP-010 A5 PASS — COORDINATOR GATE REVIEW
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
 ## Position summary
+
+- Current Working override: `RP-002 — AESTHETIC IMPLEMENTATION / RP002-AESTH-005`. W3 found one P2 assistive naming defect: the far-world region retains a stale blank-state label after the second far is recorded. W4 adds only checkpoint/evidence-aware blank/partial/complete region names and focused coverage while preserving the integrated five-record boundary and every comparison/later lock.
 
 - Current Working override: `RP-002 — AESTHETIC REVIEW / RP002-P1-008`. W2 integrated the remaining second far observation across both orders/all seven modalities, exact `5 of 5`, five-record return/replay/resume, and an honestly dormant local-comparison boundary. W3 reviews only presentation. `OPEN LOCAL COMPARISON` activation, `SC-03-30`, learning, completion, and RP-003+ remain closed.
 
@@ -49,7 +51,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 - Current Working position override: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED`. P0, staged continuation, blank entry, return, and bounded resume pass; observations remain protected.
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-002 — AESTHETIC REVIEW / RP002-P1-008 SECOND FAR INTEGRATED`
+- Team 2 active packet: `RP-002 — AESTHETIC IMPLEMENTATION / RP002-AESTH-005`
 - Team 1 railhead: `RP-010 — GATE REVIEW / A5 HANDOFF`
 - Ordered Advance lead beyond Team 2 accepted baseline: `8 promoted packets — RP-002 through RP-009`
 - Whole-story rail status: `IN PROGRESS`
@@ -70,7 +72,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / VIEWPORT COORDINATOR PASS` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | The accepted campaign remains clean. Coordinator validation now includes full `402/402`, production build, RP-002 validator, E2E syntax, `206.9s` full E2E, exact `1920 x 1080` full-shell containment, exact `390 x 844` narrow containment, `44px` controls, and an empty live console. The playable title remains live on port `4173`. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `AESTHETIC REVIEW — RP002-P1-008` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `SECOND FAR INTEGRATED; LOCAL COMPARISON DORMANT` | Both far orders/all modalities, exact five-record save/return/replay/resume, and honest dormant comparison pass. W3 reviews presentation only; no comparison activation, learning, completion, or RP-003+ exposure. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `AESTHETIC IMPLEMENTATION — RP002-AESTH-005` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `SECOND FAR INTEGRATED; REGION-LABEL POLISH OPEN; LOCAL COMPARISON DORMANT` | W4 corrects only stale blank/partial/complete far-world region naming; five-record evidence, dormant comparison, and every later lock remain exact. |
 
 ## Latest Working handoff — RP002-P1-008 W2
 

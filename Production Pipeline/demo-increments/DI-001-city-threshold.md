@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP002-AESTH-005 second-far world-region label
+
+- **Disposition:** `P2 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT`. The second-far interaction, acknowledgement, complete return/replay, dormant comparison, and separate route return are visually and functionally coherent, but the `SC-03-20` world region remains assistively named as a `blank distant observation view` at every far checkpoint.
+- **Exact defect:** the label is truthful only at zero-far `sc03_far_blank`; it becomes stale during second-far acknowledgement and returned/resumed `sc03_far_complete`, contradicting the correct visible `5 of 5` completion state for nonvisual orientation.
+- **Evidence/boundary:** focused **57/57** passes; root, `index-DDeEi_QC.js`, `index-R5wdIep0.css`, and the immutable civic master return HTTP `200`; served JS contains both the complete checkpoint and stale blank label. The user save/storage remained untouched. No comparison activation, `SC-03-30`, learning, completion, or RP-003+ claim is made.
+- **W4:** make the far-world region name reflect blank, one-far, and complete evidence states without implying a world response or duplicating Scene/System announcements. Add focused semantic coverage and final reload; preserve all visible, art, layout, action, save, privacy, Tour, accessibility, and no-later contracts.
+
 ## 2026-07-17 W2 — RP002-P1-008 second-far integration resolved
 
 - **Disposition:** `PASS — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. From exact sanitized `sc03_far_first`, only the unselected far peer is Available. Either far order and all seven modalities preserve the four prior records byte-stably, add only the matching fifth ID/Scene, and produce exact System `5 of 5` acknowledgement.
