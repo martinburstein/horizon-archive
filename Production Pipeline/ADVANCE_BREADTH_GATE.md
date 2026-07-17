@@ -1,5 +1,7 @@
 # Advance Breadth and Convergence Gate
 
+Latest RP-002 continuity A5 checkpoint: `2026-07-17 / RP002-P1-012 REVISE — PROTECTED DISMISSAL SEAM ONLY`. The pure unimported `DR-00 -> DR-20` controller reduced the current continuity-code deficit to zero without adding a micro-seam beyond the authorized owner replacement. Focused `72/72`, full `585/585`, validator, build, leakage, purity, and patch checks pass. Normal integration and Working evidence remain open; W1 begins at the accepted provisional result and reports only the dismissal/fresh-entry gap. No later transfer, successor, or additional protected seam is authorized first.
+
 Latest coordinator decision: `2026-07-17 / RP-012 PASS — PROMOTED TO WORKING`. Independent focused `5/5`, full `565/565`, all `15` readiness validators, production build, protected leakage/purity, complete `89.6s` title-to-credits E2E, responsive live gates, and patch integrity confirmed the final packet. The complete twelve-packet route and intended ending are outlined and protected; no successor is authorized. Team 2 continues in strict order from RP-002.
 
 Latest Advance application: `RP-012 IN DESIGN — A1 STORY PASS`. The final packet now has one bounded expedition-owned resolution contract: exact RP-011 entry, separate retained evidence, strict local readiness or exact recoverable remediation, no exam guarantee, no Builder/Machine/world authority, invariant physical state, central mystery preserved, reversible review, and no successor. A2 owns only the compact presentation and art plan.

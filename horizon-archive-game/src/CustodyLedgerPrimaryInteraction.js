@@ -173,7 +173,7 @@ function blankState(boundary, attemptCount = 0, focusTarget = "owner_heading") {
   };
 }
 
-function sourceFor(fields) {
+export function buildCustodyLedgerPrimarySource(fields) {
   return `comparison = {
     "condition": "${custodyLedgerSourceFields.condition}",
     "source": "${custodyLedgerSourceFields.source}",
@@ -297,7 +297,7 @@ export function createCustodyLedgerPrimaryInteraction(options = {}) {
       }
       handledTokens.add(intent.eventToken);
       const fields = { classification: intent.classification, owner: intent.fieldOwner };
-      const evaluation = evaluateCustodyLedgerPrimarySource(sourceFor(fields));
+      const evaluation = evaluateCustodyLedgerPrimarySource(buildCustodyLedgerPrimarySource(fields));
       const review = describeCustodyLedgerPrimaryReview(evaluation);
       const attemptCount = state.attemptCount + 1;
       state = review.passed

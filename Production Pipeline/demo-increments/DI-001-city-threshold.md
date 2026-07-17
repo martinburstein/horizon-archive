@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A5 continuity handoff — protected dismissal seam
+
+- **Disposition:** `REVISE — PROTECTED SEAM ONLY / W1 ACCEPTED DEMO NEXT`. One pure unimported controller composes exact protected result evidence and canonical dismissal into only atomic blank fresh-practice entry.
+- **Evidence:** seven modalities/one hit; complete result before intent; exact neutral source and blank fields after replacement; no carried result/learner/private/Builder/answer content; separate byte-stable write-free returns; deterministic protected restore/sanitation/focus; zero evidence/delta/authority/successor; hard absence of every later state.
+- **Validation:** focused `72/72`; full `585/585`; RP-002 self-test; production build; leakage, purity, and patch integrity pass. Accepted assets remain `index-BCpGPspB.js` / `index-ghzUiZe9.css`; no live reload occurred in Advance mode.
+- **W1:** play only the accepted normal provisional result and isolate its first explicit-dismissal/fresh-entry gap without inspecting storage or the protected module. Transfer submission/scoring/feedback and all later states remain closed.
+
 ## 2026-07-17 Advance A4 continuity handoff — explicit dismissal graph locked
 
 - **Disposition:** `PASS — PROTECTED A5 NEXT`. `DR-00 -> DR-10 -> DR-20` retains the complete read-only Suit result until one deliberate `CLEAR RESULT AND OPEN FRESH PRACTICE` action, then atomically replaces the entire group with only canonical blank System fresh practice.

@@ -1,5 +1,14 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance Coder continuity maintenance — protected dismissal seam
+
+- **Verdict:** `REVISE — A5 PROTECTED SEAM ONLY; ACCEPTED W1 NEXT`.
+- **Implementation:** one pure `CustodyLedgerPrimaryResultDismissal` controller composes exact protected `30-A2`, the existing primary-source builder, strict primary authority, canonical `primary_result`/`fresh_practice` ownership, and `dismissCustodyLedgerPrimaryResult` into only `DR-00 -> DR-20`; the atomic `DR-10` boundary has no exposed state.
+- **Proven behavior:** all seven modalities converge; fresh event tokens are one-hit; invalid requests do not consume a valid token; the complete result persists until intent; the destination is exact carry-free blank fresh practice; both returns preserve observation/predecessor bytes and write nothing; exact fresh restore is replay-free; contaminated restore downgrades to the complete result; owner focus and accessible semantic order remain exact.
+- **Hard isolation:** no App/main/Civic/normal-route/storage import, accepted-bundle marker, live Demo change, transfer submit/evaluation/scoring/feedback/result, explanation, RAI, review/save/completion, credits, RP-003+, world response, access, authority, or successor exists in the seam.
+- **Validation:** focused `72/72`; full `585/585`; RP-002 validator; production build; leakage, purity, and patch checks pass. Accepted bundles remain `index-BCpGPspB.js` / `index-ghzUiZe9.css`.
+- **Exact W1:** play only the accepted normal provisional result and report the first exact gap toward explicit dismissal and canonical blank fresh-practice entry. Preserve storage and every later lock; do not inspect the protected seam or report transfer scoring/later gaps first.
+
 ## 2026-07-17 Gameplay continuity maintenance — explicit result dismissal to blank transfer
 
 - **Verdict:** `PASS — A4 DISMISSAL GRAPH LOCKED; PROTECTED A5 NEXT`.
