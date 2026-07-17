@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 STORY PASS`
+- Status: `IN DESIGN — A2 SCENE BRIEF PASS`
 - Target chapter/location: Phase IV capstone opening / immense operating field beyond the Occluded Fold
 - Target demo horizon: ninth future slice after the accepted RP-001 boundary; directly after RP-009
 - Route order: 10
@@ -125,9 +125,19 @@ Determine which prior expedition claims remain defensible across several simulta
 
 ## Storyboard Track — Storyboarder
 
-- Status: `NOT STARTED — A2 NEXT`
-- A2 owns one compact maximum-quality cinematic-photorealistic first-person sequence that makes the immense separated districts, cross-scale evidence, independent clocks, layered stewardship, ordinary Builder work coupling, and invariant world legible without selecting curriculum, puzzle structure, or successor content.
-- A2 must preserve protagonist/ship/human-trace exclusion, nonhuman functional logic, responsive full-screen presentation, complete text equivalents, non-color meaning, reduced-motion equivalence, and zero visual world response.
+- Status: `PASS — SC-11 COMPACT TWO-MASTER BRIEF; NO FINAL ART`
+- Scene sheet: [SC-11 — Counterfield](../../Concept%20Art%20Book/scenes/SC-11-counterfield.md)
+- Compact sequence: `SC-11-00 ARRIVE + ORIENT -> SC-11-10 INSPECT SEVEN EQUAL PEERS -> SC-11-20 REVIEW WORK + SCOPE + SAVE -> SC-11-30 VERIFY + RETURN`. Four phases are the smallest buildable presentation; no separate board exists per district, evidence class, observation order, candidate, unavailable margin, retry, save state, environmental clock, or imagined successor.
+- Registered production strategy: one invariant `SC-11-COUNTERFIELD-PANORAMA-MASTER` plus one spatially consistent `SC-11-DISTRICT-DETAIL-MASTER`, each preferably `6144 x 3456` or larger and never below `3840 x 2160`. Registered crops, semantic masks, independent effect layers, direct reduced-motion stills, responsive derivatives, hotspot geometry, and provenance remain separate. No image was generated.
+- Dominant composition: an immense calm mineral field under deep vault atmosphere contains physically separated works at local, district, and landscape scales. Broad substrate and atmospheric intervals separate the silhouettes. No road, cable, channel, grid, aligned row, common horizon connector, central controller, matching layout, or synchronized emission composes the works into one system.
+- Seven equal non-answer-key observations remain available in any order: recurrent adjacency; incomplete ordered change with opaque intervals; cross-scale correspondence; one ordinary unmatched feature; one ordinary multi-candidate relation; one unavailable margin with no access action; and layered stewardship. They have equal hierarchy, natural material context, stable non-color structure, and no paired columns, numbers, arrows, lines, checks, rankings, progress glow, candidate emphasis, or world-side completion treatment.
+- Functional landscape: local replica-only coupling, district-local input/transformation/return/bypass/maintenance evidence, and a landscape of independently operating works satisfy three nested scales without assigning shared function. Foundation sockets, compatible inserted collars/sacrificial skins, and maintained-present detours/repair fabric express three stewardship strata without naming dates, institutions, occupations, hierarchy, one movement, or continuous settlement.
+- Independent clocks: vapor release, heat shimmer, deposition fall, condensation travel, pressure flex, and maintenance passage remain locally motivated, mutually unsynchronized, monotonic, and invariant across observation, work, save, leave, return, and restore. Reduced-motion presentation uses registered stills or direct replacement with identical evidence.
+- Ordinary Builder-work coupling: embedded asymmetrically in an outer repair layer and connected only to sealed sanitized-replica chambers. It has no monitor, readable Builder writing, keyboard, login, greeting, challenge, lock, response lamp, live-field conduit, route-control affordance, or Pilot-directed staging. Human-readable Python and feedback remain separate expedition UI.
+- Responsive/accessibility contract: representative 16:9 laptop/desktop containment uses the complete `100dvh` shell with no outer scroll or clipped required action; narrow and `200%` text zoom reflow world above one natural interface column. Controls remain at least `44 x 44 CSS px`, focus-visible, keyboard/touch/switch/speech/screen-reader equivalent. Complete text equivalents, non-color material distinctions, forced-colors grouping, deterministic focus, and reduced-motion equivalents preserve every observation and unsupported limit.
+- Production-art gate: eight-pass territory, selection, function, look-development, cleanup, gameplay-fit, registered-state/animation, and delivery evidence is required. Provenance must include prompts, model/tool/mode, references, dates, genuinely different territories, selection rationale, edits, cleanup, master dimensions, camera relationship, crops, masks, effects, derivatives, and approvals. Final art remains unauthorized.
+- Hard rejection: protagonist/ship/human trace; readable pseudo-writing; human workplace or ergonomics; campus/farm/factory/server-field/control-room readings; diagram/grid/matching/timeline/answer-key staging; common topology, purpose, chronology, clock, route, or controller; one-to-one pairing; success/failure styling; unmatched-as-damage; unavailable-as-reward; cloned districts; generic neon/fantasy; generation artifacts; and any visual world response.
+- Storyboarder sign-off: `PASS — SCENE AND PRODUCTION-ART-PLAN GATES CLOSED`. SC-11 preserves the exact RP-009 boundary, retained RP-007/RP-008/RP-009 summaries, every unresolved limit, invariant world, reversible returns, unchanged `continuation`, null city/external deltas, and no RP-011 content.
 
 ## Curriculum Verification Track — Curriculum Checker
 
@@ -160,7 +170,7 @@ Determine which prior expedition claims remain defensible across several simulta
 
 - Required existing systems: exact verified RP-009 completion; retained RP-007/RP-008/RP-009 summaries; separate evidence-class and unknown-limit ownership; sanitation and temporary-work clearing; reversible returns; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
 - New systems: none selected by A1.
-- Art dependencies: A2 must define a registered photorealistic production plan after reading the location visual spine.
+- Art dependencies: `SC-11` has a registered two-master photorealistic production plan, responsive/accessibility contract, provenance record requirements, eight-pass production gate, and hard cleanup/rejection gate. Final art remains deferred and unauthorized.
 - Curriculum dependencies: A3 must select the nearest current nonduplicate Python and AI-901 obligations after A2; none are implied here.
 - Decisions awaiting Martin: none for this surface-safe capstone opening.
 
@@ -174,9 +184,9 @@ Determine which prior expedition claims remain defensible across several simulta
 
 ## Flexible implementation choices
 
-- Exact field geometry, scale, district count, materials, atmosphere, maintenance forms, visible working processes, coupling morphology, and stewardship evidence remain A2 choices within the locked meanings.
-- Exact observation grouping and compact board sequence remain A2 choices; exact curriculum, assessment, and puzzle shape remain A3/A4 choices.
-- A2 may reuse one registered invariant master with details or specify multiple spatially registered masters, provided all world states remain physically invariant and the landscape never reads as a diagram or human workplace.
+- Exact district count above the minimum, silhouettes, distances, material proportions, local process morphologies, foundation/socket shapes, repair anatomy, maintenance-form anatomy/count, vault conditions, atmosphere, restrained grade, effect timing, crop coordinates, and lenses within the readability ranges remain flexible under the SC-11 brief.
+- Curriculum, assessment, puzzle, save, code, route, and successor choices remain A3/A4/A5 or coordinator responsibilities and were not selected by A2.
+- The panorama/detail relationship, four phases, seven equal peers, physical separation, nested scales, three stewardship strata, independent clocks, replica-only coupling, invariant world, responsive/accessibility/provenance/cleanup gates, and no-RP-011 boundary are locked.
 - Runtime labels may change if they remain expedition-owned, observable, compact, accessible, and uncertainty-preserving.
 
 ## Player-observable acceptance criteria
@@ -190,26 +200,26 @@ Determine which prior expedition claims remain defensible across several simulta
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface contract`.
-- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Production art plan, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — replaced the blank shell with one contiguous start/goal/end Lore contract and exact A2 handoff`.
-- Existing seams integrated or consolidated: retained RP-007/RP-008/RP-009 summaries, provenance, bounded support, counterevidence, ambiguity, unavailability, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline become one capstone-opening premise rather than new isolated lore seams.
+- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-11 compact two-master brief`; Production art plan `PASS plan — final assets later`.
+- Scoreboard gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — closed Scene and the production-art-plan gate with two registered invariant sources, four compact phases, seven equal-peer observations, and explicit responsive/accessibility/provenance/cleanup evidence`.
+- Existing seams integrated or consolidated: simultaneous association, incomplete order, cross-scale correspondence, ordinary mismatch, ambiguity, unavailability, stewardship, independent clocks, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline share one panorama/detail system rather than separate slides or district modules.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness decision, RP-011, native categories, internal topology, shared chronology, synchronized clocks, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
 - New module or artifact integration consumer: none authorized at A1.
-- Breadth verdict: `CONTINUE — A2 STORYBOARDER`.
+- Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`.
 - Next contiguous packet seed readiness: `NO — RP-011 remains reserved until RP-010 reaches Gate Review or promotion`.
-- Exact next action in one sentence: Storyboarder A2 builds the smallest responsive first-person photorealistic scene contract that makes the Counterfield's cross-scale evidence and invariant separate districts legible without a diagram, shared clock, Python lock, or successor reveal.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest nonduplicate Python and current AI-901 obligations while treating every SC-11 visual, spatial, interface, and motion state as zero mastery evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
-- Storyboarder sign-off: `PENDING`
+- Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PENDING`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — A2–A5 REQUIRED`
-- Required revision: A2 scene/production brief, A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
+- Readiness: `REVISE — A3–A5 REQUIRED`
+- Required revision: A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
 
-### Exact Storyboarder A2 handoff
+### Exact Curriculum Checker A3 handoff
 
-`Storyboarder Agent — A2: work only on RP-010 Counterfield. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, active photorealistic charter and production-quality guides, the exact RP-009 end state, and this A1 contract. Define the smallest compact first-person scene sequence and registered production plan that makes an immense open field of physically separate nonhuman operating districts legible at near, middle, and horizon scales. Show bounded recurrent adjacency, incomplete ordered change, cross-scale repeated plus unmatched material evidence, one multi-candidate relation, one unavailable margin, layered stewardship, and independently continuing environmental clocks without visually merging them into a network, chronology, shared system, route, campus, grid, matching exercise, or answer key. Treat the local Python coupling as ordinary incomplete Builder occupational work, not a lock, greeting, challenge, access surface, or Pilot-directed object. Preserve the exact RP-007/RP-008/RP-009 summaries, every RP-009 unknown, invariant world, reversible returns, zero live-world delta, first-person/no-protagonist/no-ship/no-human-trace framing, maximum-quality cinematic photorealism, responsive full-screen containment, non-color meaning, reduced-motion equivalence, complete text alternatives, and no RP-011 content. Choose composition, materials, physical process evidence, board consolidation, registered master/detail strategy, effects, masks, crops, provenance, cleanup, and accessibility presentation only. Do not select a Python skill, AI-901 objective, puzzle graph, code, save schema, final art, route, or successor. Update the packet, scene brief, visual spine, Storyboard log, queue/map/status artifacts, validate continuity and artifact integrity, then hand one exact unchanged-meaning contract to Curriculum Checker A3.`
+`Curriculum Checker Agent — A3: work only on RP-010 Counterfield. Read the canonical Curriculum Checker profile, current official AI-901 objectives under the project's Microsoft source-priority rules, CURRICULUM_SPINE.md, the exact RP-009 completion, this packet, and SC-11. Select only the nearest nonduplicate Python obligation and one current AI-901 obligation that legitimately exercise scope, provenance, counterevidence, ambiguity, and unavailable evidence without merging the districts or retained summaries. Keep the two learning chains independent, strict, privacy-cleared, offline/no-authority, accessible, and supported by primary, answer-free remediation, delayed retrieval or trace, genuinely blank transfer, and separate explanations where required. Treat every SC-11 district, material, scale, adjacency, layer, relation, unmatched or ambiguous feature, unavailable margin, clock, crop, hotspot, owner label, layout, focus state, animation, reduced-motion still, Python display, execution, save display, and return as zero mastery evidence, answer, misconception, weakness inference, remediation selector, access, permission, or world response. Preserve the exact retained RP-007/RP-008/RP-009 summaries; seven equal non-answer-key observations; ordinary replica-only Builder Python; invariant panorama/detail masters; separate unsynchronized districts; complete unsupported identity/topology/continuity/transformation/unity/synchronization/chronology/cause/purpose/authority/Machine limits; reversible returns; unchanged continuation; null world deltas; no final art; and no RP-011. Do not design the puzzle, code, save schema, route, final art, successor, or readiness result. Update the packet, mapping artifacts, curriculum spine, validator/evidence, work log, and direct queue/map/status records, then hand the exact verified mapping to Gameplay Master A4.`
