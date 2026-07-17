@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W1 — RP002-P1-011 blank-primary blocker
+
+- **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`.
+- **Expected:** exact accepted `sc03_python_primary_blank` permits editing only human-owned `classification` and `owner`, then one seven-modality/one-hit submit evaluates the existing six checks together and shows either actual-failed-check-only answer-free feedback with genuine blank retry or the current-attempt `6/6` read-only provisional Suit result.
+- **Actual:** both expedition fields render only as blank em dashes; there is no input, editable control, or submit action; both safe returns work, while every non-return request rejects as `python_primary_submission_not_integrated`.
+- **Acceptance:** compose the existing protected primary-interaction authority into normal UI/route without duplicating canonical answers or rules. Preserve five-record bytes, strict prerequisites, immutable source, privacy clearing, blank restore, write-free returns, accessibility/responsive contracts, Tour/world/authority isolation, and the hard stop before transfer, explanation, RP002-RAI-01, review/save/completion, RP-003+, or successor.
+- **Evidence limitation:** user storage was preserved because the live save was not at this gated checkpoint. Deterministic accepted-route/UI evidence and focused `93/93` plus exact HTTP asset checks establish the blocker; no gated screenshot or direct browser traversal is claimed.
+
 ## 2026-07-17 Advance continuity maintenance — editable PY-009 ownership boundary
 
 The accepted blank `UNFINISHED WORK IMAGE` now has one surface-safe ownership contract for the next Working seam. This contract clarifies meaning only; it does not reopen the SOLIDIFIED mapping, define interaction mechanics, alter runtime copy, or authorize submission/result exposure by itself.

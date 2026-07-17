@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — editable PY-009 blocker
+
+- **Issue:** `RP002-P1-011 / P1`. The accepted blank Custody Ledger surface cannot accept player work: `classification` and `owner` are display-only em dashes, no submit action exists, and non-return dispatch fails with `python_primary_submission_not_integrated`.
+- **Expected next visible delta:** exactly two editable expedition fields plus one accessible one-hit submit, producing only existing actual-failed-check answer-free feedback and blank unlimited retry or the current-attempt `6/6` read-only provisional Suit result. Source, five observations, returns, privacy, world, authority, and all later locks remain unchanged.
+- **Evidence:** focused accepted-route/exercise `93/93`; root/`index-VcgXSqIg.js`/`index-BQLB1SP6.css` HTTP `200`. The preserved user save was outside this gated boundary, so no direct traversal or screenshot is fabricated and browser storage was untouched.
+
 ## 2026-07-17 Advance continuity handoff — PY-009 primary interaction graph
 
 - A4 locked only `30-A0 -> 30-A1/A1F -> 30-A2`: submit two expedition fields, evaluate all six checks simultaneously, repair only actually failed checks with answer-free feedback and a genuinely blank retry, then show only a read-only provisional Suit result at current-attempt `6/6`.
