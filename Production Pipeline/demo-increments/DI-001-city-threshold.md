@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A4 continuity handoff — explicit dismissal graph locked
+
+- **Disposition:** `PASS — PROTECTED A5 NEXT`. `DR-00 -> DR-10 -> DR-20` retains the complete read-only Suit result until one deliberate `CLEAR RESULT AND OPEN FRESH PRACTICE` action, then atomically replaces the entire group with only canonical blank System fresh practice.
+- **Interaction:** pointer, touch, Enter, Space, switch, speech, and screen-reader activation converge on one fresh semantic intent/one hit. Automatic, passive, repeated, stale, forged, wrong-owner/mode, Tour, combined-return, private-bearing, partial, and later requests fail closed.
+- **Destination:** exact neutral `unresolved_interval` / `deidentified_sensor_log` / `None` / `False`; blank `classification` and `owner`; no carried primary work, result, checks, feedback, Builder evidence, private content, answer bank, or focus/token history.
+- **Recovery/presentation:** whole-group replacement, deterministic protected sanitation/resume, Suit-to-System owner-heading focus, blank-field keyboard order, separate write-free returns, literal non-color state, forced-color/reduced-motion parity, natural narrow/`200%` reflow, and `>=44px` actions remain exact.
+- **Hard stop:** dismissal and blank arrival add zero observation, mastery, score, check, save, exam, world/city, route, access, authority, external-action, or successor effect. Transfer submission/scoring/feedback/result, explanation, RAI, review/save/completion, credits, RP-003+, and successor remain absent. A5 implements one pure non-routable storage-free seam only; the accepted Demo remains at the provisional result.
+
 ## 2026-07-17 Advance A3 continuity handoff — transfer-entry curriculum preserved
 
 - **Verdict:** `NO REOPEN — SOLIDIFIED`. The result group, explicit dismissal, and replacement blank transfer group are presentation-only and create zero observation, mastery, score, check, save, transfer result, exam, world/city, access, authority, external-action, or successor evidence.
