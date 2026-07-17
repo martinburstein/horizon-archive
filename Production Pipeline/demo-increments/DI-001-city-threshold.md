@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 — RP002-P1-008 second-far finding
+
+- **Disposition:** `BLOCKED — RP002-P1-008 OPEN / W2 BUG REPAIR NEXT`. Accepted first-far acknowledgement/return/replay, exact three-near plus one-far evidence, visible/assistive state parity, separate return, immutable civic art, and all no-credit/no-delta boundaries remain stable.
+- **Expected/actual:** expected the selected peer to remain Recorded/replay-only and the only unselected peer to become honestly Available. One fresh unselected activation should preserve the four prior records byte-stably, add only the matching fifth ID/Scene, reach `near=3` / `far=2 of 2`, and show exact System `Required observations recorded: 5 of 5. Local comparison is available; no access request occurred.` Actual the unselected peer is disabled, handler-free, and Inert; normal dispatch rejects it with `second_far_not_integrated`, retaining `sc03_far_first` and far=1. Severity is P1 because the required observation set cannot finish.
+- **Evidence boundary:** browser control was unavailable and the accepted user save remains outside this gated state; W1 did not claim/reload the tab, inspect storage, or synthesize a campaign save. Focused normal-route/protected-observation checks pass **38/38**; accepted root/JS/CSS serve HTTP `200`; the bundle contains the rejection and protected completion authority but no normal five-record checkpoint. The preceding coordinator release remains the responsive/live authority.
+- **W2 acceptance:** from exact sanitized `sc03_far_first`, retain selected replay, enable only the unselected peer, permit exactly one matching fifth observation across both far orders/all seven modalities, present exact Scene/`5 of 5`, provide five-record evidence return/replay, separate route return, and allowlisted `sc03_far_complete` resume/sanitation, then expose only an honestly dormant zero-credit `OPEN LOCAL COMPARISON`. Preserve accessibility, responsive, privacy, Tour, offline/no-authority, immutable world, and zero-cross-credit contracts. Do not activate local comparison, enter `SC-03-30`, expose learning/completion, or touch RP-003+.
+
 ## 2026-07-17 Coordinator — first-far tranche accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / FIRST FAR OBSERVATION ACCEPTED`. The bounded RP002-P1-007 repair and RP002-AESTH-004 assistive parity polish are accepted on the live demo.

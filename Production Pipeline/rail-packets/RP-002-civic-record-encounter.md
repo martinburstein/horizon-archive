@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W1 second-far observation finding — 2026-07-17
+
+- **Disposition:** `RP002-P1-008 OPEN — W2 BUG REPAIR NEXT`.
+- **Earliest exact gap:** accepted `sc03_far_first` / one-far `SC-03-20` preserves three near plus one selected far record. The selected peer is correctly Recorded/replay-only, but the sole unselected peer is native/assistive disabled, handler-free, and Inert. Direct normal dispatch recognizes that second record then rejects it with `second_far_not_integrated`.
+- **Expected bounded increment:** one fresh unselected activation in either far order preserves the four existing records byte-stably, adds only its matching fifth ID/Scene, derives `near=3` / `far=2`, and shows exact System `Required observations recorded: 5 of 5. Local comparison is available; no access request occurred.` Evidence return/resume retains both far peers as replay-only and an honestly dormant zero-credit `OPEN LOCAL COMPARISON`; it does not activate comparison.
+- **Evidence boundary:** browser control was unavailable and the user's accepted save remains outside this gated boundary, so W1 did not claim/reload the existing tab or inspect/alter storage. Focused normal-route/protected-observation checks pass **38/38**. Root, `index-DlTR4eYT.js`, and `index-R5wdIep0.css` return HTTP `200`; the bundle contains the protected completion copy/control and the normal rejection reason, but no normal `sc03_far_complete` checkpoint. Runtime/art/tests remain unchanged.
+- **W2 lock:** integrate exactly one remaining second far record, both far orders and all seven modalities, exact matching record/Scene/completion status, four-record byte stability, five-record evidence return/replay and allowlisted `sc03_far_complete` resume/sanitation, separate route return, and an honestly dormant local-comparison boundary. Stop before `OPEN LOCAL COMPARISON` activation, `SC-03-30`, learning, completion, or RP-003+.
+
 ## Working W4 assistive-state parity — 2026-07-17
 
 - **Disposition:** `RP002-AESTH-004 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.
