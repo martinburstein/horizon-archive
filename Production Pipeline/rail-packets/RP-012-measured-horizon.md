@@ -66,7 +66,11 @@ Prove through fresh independent work whether the expedition can honestly mark th
 
 ## Storyboard Track — Storyboarder
 
-- Status: `MISSING — A2 NEXT`
+- Status: `PASS — SC-13 INVARIANT-WORLD / SUIT-OVERLAY BRIEF LOCKED; NO FINAL ART`
+- Scene authority: `Concept Art Book/scenes/SC-13-measured-horizon.md`.
+- Four compact boards reuse the eventual accepted SC-12 panorama and add one separate maximum-resolution expedition-interface master: assemble, fresh transfer, neutral decision, and close/review.
+- Ready and not-yet-ready share geometry and dignity; the world supplies no outcome, answer, response, reward, access, or successor imagery.
+- Exact A3 handoff: verify current official AI-901 coverage and select the smallest cumulative Python/fresh-transfer readiness contract. Treat every SC-13 world, layout, visibility, focus, outcome presentation, animation, credits, and Tour state as zero evidence, answer, weakness inference, or remediation selector. Preserve no-exam guarantee, offline/no-authority, separate scopes, privacy clearing, both recoverable outcomes, invariant world, and no successor.
 
 ## Curriculum Verification Track — Curriculum Checker
 
@@ -116,8 +120,8 @@ Prove through fresh independent work whether the expedition can honestly mark th
 ## Advance Handoff Gate
 
 - Lore Builder: `PASS — 2026-07-17`
-- Storyboarder/Curriculum/Gameplay/Coder: `PENDING`
-- Readiness: `IN DESIGN — A1 STORY PASS`
+- Storyboarder: `PASS — 2026-07-17`; Curriculum/Gameplay/Coder: `PENDING`
+- Readiness: `IN DESIGN — A2 SCENE PASS`
 
 ## Promotion record
 
