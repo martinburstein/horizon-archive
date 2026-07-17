@@ -1540,6 +1540,10 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world { width: 100%; height: auto; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-native { display: none; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-narrow { display: block; }
+.canonical-game-frame[data-canonical-layout="narrow"] .civic-record-world .city-world-plate-native {
+  display: block;
+  object-fit: cover;
+}
 .canonical-game-frame[data-canonical-layout="narrow"] .city-hotspot {
     left: var(--city-narrow-left);
     top: var(--city-narrow-top);

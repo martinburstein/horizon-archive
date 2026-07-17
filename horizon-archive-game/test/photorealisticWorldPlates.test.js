@@ -14,6 +14,7 @@ const civicRecordArrivalUrl = new URL(
 const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const city = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
 const civicRecordArrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
 const requiredPlates = [
   "drowned-archive-master.png",
@@ -58,4 +59,26 @@ test("photorealistic source plates retain high-resolution landscape masters", ()
   assert.ok(civicWidth >= 1600 && civicHeight >= 900);
   assert.ok(Math.abs((civicWidth / civicHeight) - (16 / 9)) < 0.01);
   assert.doesNotMatch(civicRecordArrival, /city-threshold-overview-master|REGISTERED CONTINUITY HOOK|SC-03-00-overview-pending/);
+});
+
+test("the sole civic master remains visible through the narrow responsive layout", () => {
+  const genericNativeHide = styles.indexOf(
+    '.canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-native { display: none; }',
+  );
+  const civicVisibilityOverride = styles.indexOf(
+    '.canonical-game-frame[data-canonical-layout="narrow"] .civic-record-world .city-world-plate-native',
+  );
+
+  assert.ok(genericNativeHide >= 0, "the paired City Threshold plate switch remains registered");
+  assert.ok(civicVisibilityOverride > genericNativeHide, "the civic visibility exception must win the cascade");
+  assert.match(
+    styles.slice(civicVisibilityOverride),
+    /\.civic-record-world \.city-world-plate-native\s*\{[^}]*display:\s*block;[^}]*object-fit:\s*cover;/,
+  );
+  assert.equal(
+    (civicRecordArrival.match(/<img\b/g) ?? []).length,
+    1,
+    "CivicRecordArrival must keep one immutable image request",
+  );
+  assert.doesNotMatch(civicRecordArrival, /city-world-plate-narrow|<picture\b|<source\b/);
 });

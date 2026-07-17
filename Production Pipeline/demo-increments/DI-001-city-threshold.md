@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — RP002-AESTH-002 narrow civic-world repair
+
+- **Disposition:** `PASS — AESTHETIC FINDING RESOLVED / COORDINATOR NEXT`.
+- **Player-visible delta:** the accepted Civic Record District master no longer disappears when the canonical frame selects its narrow responsive layout. The same plate now remains visible inside the 16:9 world with cover crop; desktop rendering and all two-observation gameplay are unchanged.
+- **Evidence:** focused **68/68**, full **471/471**, RP-002 validator, build, preflight **26**, and complete **81.2s** E2E all pass. Clean served-build checks at `1440 x 900` and `390 x 844` report `display:block`, `object-fit:cover`, exact image/world box equality, natural `1672 x 941`, zero horizontal overflow, and no console warning/error. The immutable source/built hash remains `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **Boundary:** no new art, duplicate source, third observation, `SC-03-20+`, learning, packet completion, or successor exposure was added. User campaign storage was not inspected or changed; coordinator retains direct valid-predecessor desktop/narrow traversal proof.
+- **Coordinator path:** verify one-ID -> exact second acknowledgement -> evidence return -> returned two-ID at representative desktop/narrow, then run final release gates. Preserve labels/owner hierarchy, focus, `>=44px`, non-color/reduced-motion meaning, save/resume, recovery, Tour/privacy/offline/no-authority, zero credit/deltas, and the fail-closed third action.
+
 ## 2026-07-17 W3 — RP002-AESTH-002 narrow civic-world finding
 
 - **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT.` The normal second-near behavior and immutable civic art remain correct, but the exact narrow presentation cannot display the world raster.
