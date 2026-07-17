@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance continuity handoff — PY-009 primary interaction graph
+
+- A4 locked only `30-A0 -> 30-A1/A1F -> 30-A2`: submit two expedition fields, evaluate all six checks simultaneously, repair only actually failed checks with answer-free feedback and a genuinely blank retry, then show only a read-only provisional Suit result at current-attempt `6/6`.
+- Seven modalities/one hit, deterministic sanitation/focus, privacy clearing, separate write-free returns, responsive/accessibility parity, zero-credit presentation/Tour, immutable source/world, and the hard stop before transfer, explanation, responsible-AI, review/save/completion, RP-003+, or successor are locked.
+- This is Advance protection only. The live Demo remains at accepted blank A0; A5 may add only a pure non-routable seam.
+
 ## 2026-07-17 Advance continuity handoff — PY-009 curriculum preservation
 
 - A3 recorded `NO REOPEN — SOLIDIFIED`: A1/A2 changed presentation only and created no observation or mastery evidence.

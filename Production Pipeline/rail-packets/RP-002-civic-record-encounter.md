@@ -88,6 +88,76 @@ This A2 pass boards one responsive expedition-interface replacement sequence ove
 
 `Gameplay Master Agent — A4 continuity-maintenance mode: preserve the unchanged SOLIDIFIED RP-002 contract and define only the smallest interaction graph for 30-A0 BLANK / EDITABLE -> 30-A1 LOCAL REVIEW -> 30-A2 PROVISIONAL SUIT RESULT. One explicit Pilot submit intent may pass exactly the two editable human-expedition fields to the existing local evaluator while the four source fields remain immutable. Evaluate all six checks simultaneously. A miss may expose only answer-free, actually-failed-check-associated 901 TEACHER remediation, clear transient learner source, and return a genuinely blank retry focused at the first failed field. A valid 6/6 primary may expose only the read-only SUIT // PROVISIONAL TRANSLATION result with source preserved; it must not open transfer, explanation, RP002-RAI-01, review/save/completion, RP-003+, or successor content. Keep cancel/evidence return and route return separate, reversible, and write-free. Treat art, headings, visibility, reading, typing, focus, layout, reflow, color, icon, motion, sound, feedback/result display, return, resume, sanitation, Tour, and tests as zero observation and zero mastery evidence. Preserve one-active-group replacement, literal non-color state, >=44 x 44 CSS px actions, field-associated errors, deterministic focus, reduced-motion parity, privacy clearing, offline/no-authority/no-exam-guarantee, invariant world, and zero city/access/external action. Do not change cases, answers, expected values, None/False meaning, checks, thresholds, remediation, storage contracts, copy authority, art, code, or later locks. Hand Coder A5 only this protected primary interaction seam.`
 
+## 2026-07-17 Gameplay Master continuity maintenance — PY-009 primary interaction graph
+
+- **Verdict:** `PASS — 30-A0 -> 30-A1 -> 30-A2 LOCKED / PROTECTED A5 NEXT`.
+- **Player goal:** complete only the two human-expedition Python updates, submit them for a local check, and read the provisional Suit result. This is never a Builder password, city request, access test, or world interaction.
+- **Learning contract:** the four source fields remain immutable; only `classification` and `owner` are submitted; the six frozen `PY-009` checks run simultaneously on one explicit submit. Presentation, navigation, time, confidence, tests, and result reading award no credit.
+- **Expected play time:** `3–6 minutes` first attempt and `1–2 minutes` mastered replay; time is neither stored nor scored.
+
+### Smallest complete graph
+
+```text
+30-A0 / BLANK_EDITABLE / SYSTEM // EXPEDITION SESSION
+  immutable: condition, source, identity, access_requested
+  editable/private: classification, owner
+  SUBMIT EXPEDITION FIELDS -> 30-A1
+  RETURN TO EVIDENCE -> accepted sc03_local_comparison_blank; clear work; write nothing
+  RETURN TO CITY THRESHOLD -> accepted route return; clear work; write nothing
+
+30-A1 / LOCAL_REVIEW / SYSTEM // LOCAL CHECKS
+  remove A0 from pointer, keyboard, and accessibility order
+  pass only classification + owner to the protected adapter
+  compose against the immutable four-field work image
+  evaluate all six existing checks simultaneously exactly once
+  any false -> 30-A1F / 901 TEACHER // FEEDBACK
+    expose only actually-failed check IDs through existing answer-free authority
+    discard submitted/private source and retain no result or answer bank
+    TRY AGAIN -> genuinely blank A0 focused at the first associated failed field
+  six true -> 30-A2
+
+30-A2 / PROVISIONAL_SUIT_RESULT / SUIT // PROVISIONAL TRANSLATION
+  read-only immutable source + two accepted expedition additions
+  literal provisional and closed-identity limits
+  separate write-free evidence and route returns only
+  no later learning, save, completion, access, authority, or successor action
+```
+
+`30-A1` is a local disposition boundary, not a persistable accomplishment. Only one owner/content/action group is current; editor, feedback, and result cannot coexist.
+
+### Scoring, remediation, and recovery locks
+
+1. The submit intent contains only the two human-owned field payloads plus allowed activation metadata. The adapter supplies frozen source; the player cannot submit or mutate `condition`, `source`, `identity`, or `access_requested`.
+2. The existing order remains `result_is_dictionary`, `exact_keys_only`, `condition_and_source_preserved`, `identity_remains_none`, `access_requested_remains_false`, `classification_and_owner_added_by_key_update`. Every submit computes all six before disposition; no short-circuit, partial pass, presentation pass, or carried check is allowed.
+3. Feedback identifies only false checks from that evaluation through existing approved answer-free authority. It reveals no expected value, reference source, corrected code, neighboring check, Builder intent, or later form; passed checks are not an answer bank.
+4. Retry is unlimited, unpenalized, and genuinely blank: clear both fields, submitted source, selections, result, transient review, and private work. Retain only evaluator-allowed attempt/false-check evidence; neither supplies an answer or later pass.
+5. Focus uses stable `classification -> owner` association. A global/source-integrity miss focuses the review heading then `classification`; this supplies no correctness signal beyond the actual false-check set.
+6. A2 requires six simultaneous true checks from the current blank-origin attempt. It creates no transfer, explanation, `RP002-RAI-01`, Pilot conclusion, review, save, campaign commit, city delta, access, external action, RP-003+, credits, or successor.
+
+### Resume, modality, privacy, and presentation locks
+
+- Evidence return and route return remain distinct at A0, A1F, and A2. Both clear private attempt/review/result state, preserve exact observations and predecessor facts, and write no Python, city, access, authority, save, or successor state.
+- The accepted save remains only `sc03_python_primary_blank` plus allowlisted observation/predecessor evidence. A0 resumes with frozen source, two blanks, six false checks, owner-heading-first focus, then `classification`. A1/A1F/A2 are session-only; reload, sanitation, stale, missing-prerequisite, malformed, or forged-result state returns to genuine A0 without replay or the later general Python resume path.
+- Learner source, field text, selections, feedback/result display, pointer path, dwell, coordinates, voice transcript, and notes never persist. Tour cannot type, submit, score, retry, or create campaign evidence.
+- Pointer, touch, Enter, Space, switch, speech, and screen reader share exact semantics. One fresh activation ID evaluates once. Duplicate, stale, combined, passive, hover, focus, dwell, owner-mismatched, Tour, private-bearing, or forged intents fail closed with byte-stable evidence and zero attempt, hint, mastery, observation, world, or route change.
+- Preserve one active owner group, literal locked/editable/review/needs-revision/provisional text, field-associated errors, deterministic focus, `>=44 x 44 CSS px` actions, forced-color meaning, screen-reader order, and reduced-motion equivalence. Desktop/laptop stays world-dominant; narrow and `200%` text zoom reflow world-first without horizontal page escape, clipping, or hover-only meaning.
+- SC-03, first-person crop, Builder structures, clocks, interlock, route, `continuation`, and `cityStateDelta=null` remain unchanged. The graph hard-stops at A2.
+
+### Acceptance checks
+
+1. All seven modalities submit the same two fields once; a duplicate cannot evaluate twice.
+2. Wrong attempts return exactly their simultaneous false-check set, no expected values, a blank retry, and deterministic failed-field focus.
+3. All six single-check failures and representative multi-check failures recover without carrying source, fields, checks, result, or answers.
+4. Only current-attempt `6/6` reaches one read-only provisional Suit result; source is byte-stable and expedition additions remain distinct.
+5. Both returns from every visible outcome are separate and write-free; reopen starts at genuine A0 blank.
+6. Blank, failed, stale, forged, and A2 reloads sanitize to A0 without replay or later-form exposure.
+7. Tour, layout, focus, typing, feedback/result display, motion, sound, tests, and time leave evidence byte-stable.
+8. Desktop/laptop, narrow, forced-colors, reduced-motion, keyboard-only, switch, speech, and screen-reader paths preserve the graph.
+
+### Exact Advance Coder A5 handoff — protected primary interaction seam only
+
+`Coder Agent — advance-construction mode: implement only one pure, non-routable protected primary-interaction seam for RP-002 30-A0 -> 30-A1/A1F -> 30-A2. Begin from exact sanitized sc03_python_primary_blank with five canonical observations and verified prerequisites. Accept one exact seven-modality/one-hit SUBMIT EXPEDITION FIELDS intent containing only classification and owner; supply the four immutable source fields internally and evaluate all six existing custodyLedgerPythonChecks simultaneously through the strict evaluator. Failure may retain only allowed attempt/false-check evidence, expose only actually-failed IDs through existing answer-free authority, clear submitted/private work, and create unlimited genuine blank retry with deterministic classification -> owner association (global/source-integrity miss: review heading then classification). Current-attempt 6/6 may create only a read-only SUIT // PROVISIONAL TRANSLATION state with byte-stable source, two expedition additions, and existing provisional/closed-identity limits. Keep RETURN TO EVIDENCE and RETURN TO CITY THRESHOLD separate and write-free from blank, feedback, and result. Sanitize A1/A1F/A2, stale, malformed, forged, private-bearing, Tour, missing-prerequisite, duplicate, combined, passive, focus/hover/dwell, and replay input to genuine A0 without replay, later resume, cross-credit, world delta, or external action. Preserve one-active-group accessibility metadata, owner-heading/failed-field focus, >=44px actions, responsive/narrow/text-zoom contract, forced-colors/reduced-motion parity, seven modalities, Tour isolation, exact observation/predecessor bytes, unchanged continuation, cityStateDelta=null, invariant SC-03, offline/no-live-service/no-authority/no-exam-guarantee, and zero access/city/external authority. Add focused pure tests for modalities, one-hit, six single failures plus multi-failure, false-check exactness, answer-free authority, blank retry/privacy, focus, source immutability, 6/6-only read-only result, both returns, sanitation/resume anti-forgery, Tour/campaign byte stability, accessibility metadata, and hard absence of transfer, explanation, RP002-RAI-01, review/save/completion, RP-003+, credits, or successor. Do not edit App.jsx, CivicRecordArrival.jsx, CustodyLedgerNormalRoute.js, browser storage, accepted routes/assets/copy, art, curriculum, or the live Demo. Return REVISE / protected seam only for later Working integration.`
+
 ## Coordinator acceptance of blank PY-009 entry — 2026-07-17
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`.

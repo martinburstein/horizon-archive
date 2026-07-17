@@ -1,5 +1,7 @@
 # Horizon Archive Gameplay Systems Spine
 
+Latest continuity handoff: `RP002-P1-011 A4 PRIMARY GRAPH PASS — PROTECTED A5 NEXT`. The nearest seam is only `30-A0 blank/editable -> 30-A1 local review/answer-free failed-check repair -> 30-A2 read-only provisional Suit result`: two human fields, four immutable source fields, six simultaneous checks, blank retry, deterministic sanitation/focus, seven modalities/one hit, separate write-free returns, and a hard stop before later learning/save/packet states. RP-012 remains the completed railhead; no successor exists.
+
 Latest gameplay handoff: `RP-012 A4 PUZZLE PASS`. One bounded `MH-00→MH-40` graph owns eligibility, independent cumulative forms, actual-miss-only remediation, blank retry, local ready/not-yet-ready outcome, atomic save, replay-free review, return, and credits. Both outcomes are recoverable; the world, authority, exam guarantee, and successor remain unchanged or absent.
 
 Owner: **Gameplay Master Agent**  

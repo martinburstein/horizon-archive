@@ -1,5 +1,7 @@
 # Advance Queue
 
+**2026-07-17 continuity result (RP002-P1-011 / A4):** `PASS — PRIMARY GRAPH LOCKED / PROTECTED A5 NEXT`. A0/A1/A2 now submit only `classification` and `owner` against four immutable source fields, evaluate all six checks simultaneously, route only actually-failed-check answer-free remediation to blank retry, and permit only a read-only provisional Suit result at current-attempt `6/6`. Seven modalities/one hit, sanitation/focus, separate write-free returns, privacy, responsive/accessibility parity, zero-credit presentation/Tour, invariant world, and the hard stop before every later state are locked. A5 owns one pure non-routable seam; no successor exists.
+
 The Advance Team uses this queue for future playable slices ordered from the current live-demo boundary toward the intended ending. There is no maximum queue depth. Complete the nearest unfinished segment first, then advance contiguously without waiting for the Working Team.
 
 ## Status vocabulary
