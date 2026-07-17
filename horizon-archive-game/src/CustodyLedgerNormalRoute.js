@@ -49,10 +49,31 @@ import {
   recordCustodyLedgerObservation,
   sanitizeCustodyLedgerObservationState,
 } from "./custodyLedgerExercise.js";
+import { createCustodyLedgerPrimaryInteraction } from "./CustodyLedgerPrimaryInteraction.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
 export const CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION = "OPEN UNFINISHED WORK IMAGE";
+
+export function createCustodyLedgerNormalPrimaryInteraction(routeState, predecessor) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || containsPrivateContent(routeState)) return null;
+  try {
+    return createCustodyLedgerPrimaryInteraction({
+      boundary: {
+        checkpoint: routeState.checkpoint,
+        boardId: routeState.boardId,
+        observationEvidence: routeState.observationEvidence,
+        predecessor,
+        learningState: routeState.learningState,
+      },
+    });
+  } catch {
+    return null;
+  }
+}
 
 const allowedCheckpoints = new Set([
   "city_threshold",

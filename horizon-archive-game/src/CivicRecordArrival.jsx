@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import {
@@ -11,9 +11,20 @@ import {
   custodyLedgerRouteActions,
   custodyLedgerRouteOwners,
 } from "./CustodyLedgerNormalRoute.js";
+import { CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS } from "./CustodyLedgerPrimaryInteraction.js";
 
-export function CivicRecordArrival({ routeState, onAction }) {
+export function CivicRecordArrival({
+  routeState,
+  primaryInteraction = null,
+  onAction,
+  onPrimarySubmit,
+  onPrimaryRetry,
+}) {
   const headingRef = useRef(null);
+  const classificationRef = useRef(null);
+  const ownerRef = useRef(null);
+  const [classification, setClassification] = useState("");
+  const [fieldOwner, setFieldOwner] = useState("");
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -40,9 +51,32 @@ export function CivicRecordArrival({ routeState, onAction }) {
   const routeActions = routeState.availableActions.filter((action) => action !== routeState.routeReturnAction);
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
+  const primaryPhase = primaryInteraction?.phase ?? (atPythonPrimary ? "30-A0" : null);
+
   useLayoutEffect(() => {
+    if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "classification") {
+      classificationRef.current?.focus({ preventScroll: true });
+      return;
+    }
+    if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "owner") {
+      ownerRef.current?.focus({ preventScroll: true });
+      return;
+    }
     headingRef.current?.focus({ preventScroll: true });
-  }, [routeState.checkpoint]);
+  }, [routeState.checkpoint, primaryPhase, primaryInteraction?.focusIntent?.target]);
+
+  function submitPrimary(event) {
+    event?.preventDefault?.();
+    onPrimarySubmit?.({ classification, owner: fieldOwner }, event);
+    setClassification("");
+    setFieldOwner("");
+  }
+
+  function retryPrimary() {
+    setClassification("");
+    setFieldOwner("");
+    onPrimaryRetry?.();
+  }
 
   function renderAction(action) {
     const owner = action === custodyLedgerRouteActions.continueProtected
@@ -122,8 +156,8 @@ export function CivicRecordArrival({ routeState, onAction }) {
                 {routeState.statusMessage.text}
               </p>
             )}
-            {atPythonPrimary && routeState.learningState && (
-              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-work-heading">
+            {atPythonPrimary && routeState.learningState && primaryPhase === "30-A0" && (
+              <form className="custody-ledger-work-image" aria-labelledby="custody-ledger-work-heading" onSubmit={submitPrimary}>
                 <p className="eyebrow">SYSTEM // EXPEDITION SESSION</p>
                 <h2 id="custody-ledger-work-heading">{routeState.learningState.unfinishedWorkImage.label}</h2>
                 <dl className="custody-ledger-fields">
@@ -133,14 +167,67 @@ export function CivicRecordArrival({ routeState, onAction }) {
                       <dd>{value === null ? "None" : String(value)}</dd>
                     </div>
                   ))}
-                  {Object.keys(routeState.learningState.expeditionFields).map((key) => (
-                    <div key={key} data-field-state="blank">
+                  <div data-field-state="editable">
+                    <dt><label htmlFor="custody-ledger-classification">classification</label></dt>
+                    <dd>
+                      <input ref={classificationRef} id="custody-ledger-classification" name="classification"
+                        value={classification} maxLength="40" autoComplete="off" spellCheck="false"
+                        aria-describedby="custody-ledger-field-help"
+                        onChange={(event) => setClassification(event.target.value)} />
+                    </dd>
+                  </div>
+                  <div data-field-state="editable">
+                    <dt><label htmlFor="custody-ledger-owner">owner</label></dt>
+                    <dd>
+                      <input ref={ownerRef} id="custody-ledger-owner" name="owner"
+                        value={fieldOwner} maxLength="40" autoComplete="off" spellCheck="false"
+                        aria-describedby="custody-ledger-field-help"
+                        onChange={(event) => setFieldOwner(event.target.value)} />
+                    </dd>
+                  </div>
+                </dl>
+                <p id="custody-ledger-field-help" className="civic-observation-status">
+                  The four source fields are locked. Only the two expedition fields may be updated locally.
+                </p>
+                <button className="primary-action" type="submit">
+                  {CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS}
+                </button>
+              </form>
+            )}
+            {atPythonPrimary && primaryPhase === "30-A1F" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-feedback-heading">
+                <p className="eyebrow">901 TEACHER // FEEDBACK</p>
+                <h2 id="custody-ledger-feedback-heading">Local checks need another pass</h2>
+                <ul className="custody-ledger-feedback" aria-label="Checks to review">
+                  {primaryInteraction.feedback.map((item) => (
+                    <li key={item.checkId}>
+                      <span className="eyebrow">{item.owner}</span><br />{item.text}
+                    </li>
+                  ))}
+                </ul>
+                <p className="civic-observation-status">Submitted work was cleared. Retry begins with two genuinely blank expedition fields.</p>
+                <button className="primary-action" type="button" onClick={retryPrimary}>RETRY BLANK</button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "30-A2" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-result-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 id="custody-ledger-result-heading">Provisional translation</h2>
+                <dl className="custody-ledger-fields">
+                  {Object.entries(primaryInteraction.sourceFields).map(([key, value]) => (
+                    <div key={key} data-field-state="locked">
                       <dt>{key.replaceAll("_", " ")}</dt>
-                      <dd aria-label={`${key.replaceAll("_", " ")} blank`}>—</dd>
+                      <dd>{value === null ? "None" : String(value)}</dd>
+                    </div>
+                  ))}
+                  {Object.entries(primaryInteraction.expeditionFields).map(([key, value]) => (
+                    <div key={key} data-field-state="read-only">
+                      <dt>{key.replaceAll("_", " ")}</dt>
+                      <dd>{value}</dd>
                     </div>
                   ))}
                 </dl>
-                <p className="civic-observation-status">Blank primary loaded. Submission and scoring are not active in this increment.</p>
+                <p className="civic-observation-status">All 6 local checks passed for this attempt. This read-only result grants no mastery, access, authority, or city change.</p>
               </section>
             )}
             <p>
@@ -149,7 +236,11 @@ export function CivicRecordArrival({ routeState, onAction }) {
                   ? `${observationCount} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : atPythonPrimary
-                  ? "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
+                  ? primaryPhase === "30-A2"
+                    ? "The suit rendered one provisional local result. No mastery, access, authority, or city change has been recorded."
+                    : primaryPhase === "30-A1F"
+                      ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
+                      : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
                 : atLocalComparison
                   ? "Five bounded Scene facts remain retained. This blank local boundary grants no learning evidence, attempt, hint, confidence, mastery, exam credit, save eligibility, access, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}

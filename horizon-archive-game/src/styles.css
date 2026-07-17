@@ -1512,6 +1512,30 @@ h1 {
 .custody-ledger-fields dt { font-size: 0.72em; letter-spacing: 0.08em; text-transform: uppercase; }
 .custody-ledger-fields dd { margin: 4px 0 0; overflow-wrap: anywhere; font-family: "Courier New", monospace; }
 .custody-ledger-fields [data-field-state="blank"] { border-style: dashed; }
+.custody-ledger-fields [data-field-state="editable"] { border-style: dashed; border-color: #9ea9bb; }
+.custody-ledger-fields [data-field-state="read-only"] { border-style: double; }
+.custody-ledger-fields input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #8792a5;
+  border-radius: 0;
+  color: #f2f5fa;
+  background: #070a10;
+  font: inherit;
+}
+.custody-ledger-fields input:focus-visible { outline: 3px solid #e4b36c; outline-offset: 2px; }
+.custody-ledger-work-image > .primary-action { min-width: 44px; min-height: 44px; margin-top: 10px; }
+.custody-ledger-feedback { display: grid; gap: 8px; margin: 10px 0; padding-left: 22px; }
+.custody-ledger-feedback li { padding-left: 4px; }
+
+@media (forced-colors: active) {
+  .custody-ledger-fields [data-field-state="editable"] { border-color: Highlight; }
+  .custody-ledger-fields [data-field-state="locked"],
+  .custody-ledger-fields [data-field-state="read-only"] { border-color: CanvasText; }
+  .custody-ledger-fields input:focus-visible { outline-color: Highlight; }
+}
 
 .canonical-game-frame[data-canonical-layout="narrow"] .custody-ledger-fields { grid-template-columns: 1fr; }
 

@@ -12,12 +12,17 @@ import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import { readVerifiedCityThresholdPredecessor } from "./cityThresholdExercise.js";
 import {
   clearCustodyLedgerNormalRoute,
+  createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
   readCustodyLedgerNormalRoute,
   writeCustodyLedgerNormalRoute,
 } from "./CustodyLedgerNormalRoute.js";
+import {
+  CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+  CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+} from "./CustodyLedgerPrimaryInteraction.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -615,11 +620,13 @@ export function App() {
   const [demoTourConfirmation, setDemoTourConfirmation] = useState(null);
   const [custodyLedgerRouteSave, setCustodyLedgerRouteSave] = useState(null);
   const [custodyLedgerRouteView, setCustodyLedgerRouteView] = useState(null);
+  const [custodyLedgerPrimaryView, setCustodyLedgerPrimaryView] = useState(null);
   const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const verifiedCityThresholdPredecessor = typeof window === "undefined"
     ? null
     : readVerifiedCityThresholdPredecessor(window.localStorage);
   const custodyLedgerRouteEventRef = useRef(0);
+  const custodyLedgerPrimaryControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -1197,6 +1204,8 @@ export function App() {
       || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
     setCustodyLedgerRouteSave(result.save);
     setCustodyLedgerRouteView(result.state);
+    setCustodyLedgerPrimaryView(null);
+    custodyLedgerPrimaryControllerRef.current = null;
     setMode("rp002-arrival");
   }
 
@@ -1220,6 +1229,8 @@ export function App() {
       clearCustodyLedgerNormalRoute(window.localStorage);
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
+      setCustodyLedgerPrimaryView(null);
+      custodyLedgerPrimaryControllerRef.current = null;
       setMode("city-threshold-staging");
       return;
     }
@@ -1227,6 +1238,36 @@ export function App() {
       || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
     setCustodyLedgerRouteSave(result.save);
     setCustodyLedgerRouteView(result.state);
+    setCustodyLedgerPrimaryView(null);
+    custodyLedgerPrimaryControllerRef.current = null;
+  }
+
+  function submitCustodyLedgerPrimary(routeState, fields, event) {
+    if (demoTour || typeof window === "undefined" || routeState?.checkpoint !== "sc03_python_primary_blank") return;
+    const predecessor = readVerifiedCityThresholdPredecessor(window.localStorage);
+    if (!predecessor) return;
+    const controller = custodyLedgerPrimaryControllerRef.current
+      ?? createCustodyLedgerNormalPrimaryInteraction(routeState, predecessor);
+    if (!controller) return;
+    custodyLedgerPrimaryControllerRef.current = controller;
+    const result = controller.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken("rp002-primary-submit"),
+      classification: fields.classification,
+      fieldOwner: fields.owner,
+    });
+    if (!["feedback", "provisional_result"].includes(result.status)) return;
+    setCustodyLedgerPrimaryView(result.state);
+  }
+
+  function retryCustodyLedgerPrimary() {
+    const result = custodyLedgerPrimaryControllerRef.current?.retryBlank();
+    if (result?.status === "blank_retry") setCustodyLedgerPrimaryView(result.state);
   }
 
   function returnToCompletedMeadow() {
@@ -2263,7 +2304,15 @@ export function App() {
       prerequisiteEvidence: { structuredPacketEvidence, responsibleAIEvidence },
     }).getState();
     const routeState = custodyLedgerRouteView ?? restoredRouteState;
-    return <CivicRecordArrival routeState={routeState} onAction={advanceCustodyLedgerNormalRoute} />;
+    return (
+      <CivicRecordArrival
+        routeState={routeState}
+        primaryInteraction={custodyLedgerPrimaryView}
+        onAction={advanceCustodyLedgerNormalRoute}
+        onPrimarySubmit={(fields, event) => submitCustodyLedgerPrimary(routeState, fields, event)}
+        onPrimaryRetry={retryCustodyLedgerPrimary}
+      />
+    );
   }
 
   if (mode === "city-threshold-staging") {

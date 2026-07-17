@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — RP002-P1-011 repaired
+
+- **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`.
+- **Accepted delta:** exact blank `sc03_python_primary_blank` now renders four locked source fields, exactly two editable expedition fields, and one `SUBMIT EXPEDITION FIELDS` action. The existing protected authority owns all six simultaneous checks and seven-modality one-hit handling.
+- **Outcomes:** actual misses alone replace the form with existing answer-free Teacher feedback; private work clears before unlimited blank retry. Current-attempt `6/6` alone replaces the group with the existing read-only provisional Suit result. Neither outcome grants mastery, access, authority, city response, world change, route progression, or successor.
+- **Persistence/recovery:** only the blank checkpoint and exact five-record allowlist remain durable. Feedback/result/attempt/field/token data are session-only; reload, stale, private, forged, or Tour state returns to blank. Evidence and City Threshold returns remain separate and write-free.
+- **Validation:** focused `50/50`; full `576/576`; build PASS. W3 owns only presentation review of blank/editable, feedback/retry, and read-only result. Transfer, explanation, RP002-RAI-01, review/save/completion, RP-003+, and successor remain closed.
+
 ## 2026-07-17 Working W1 — RP002-P1-011 blank-primary blocker
 
 - **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`.

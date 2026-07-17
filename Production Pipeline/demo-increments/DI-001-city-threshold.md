@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — editable PY-009 submission repaired
+
+- `RP002-P1-011` is resolved: two expedition-owned inputs and one semantic submit now compose the frozen six-check primary authority without copying answers into the UI.
+- A miss exposes only existing failed-check, answer-free Teacher feedback and clears to blank retry; current-attempt `6/6` exposes only the read-only provisional Suit result. The immutable source, five observation records, separate returns, blank durable checkpoint, privacy, world, authority, and no-successor contracts remain unchanged.
+- Focused `50/50`, full `576/576`, and production build pass. W3 reviews only this three-state UI seam; all later learning/save/packet states remain closed.
+
 ## 2026-07-17 Working W1 — editable PY-009 blocker
 
 - **Issue:** `RP002-P1-011 / P1`. The accepted blank Custody Ledger surface cannot accept player work: `classification` and `owner` are display-only em dashes, no submit action exists, and non-return dispatch fails with `python_primary_submission_not_integrated`.

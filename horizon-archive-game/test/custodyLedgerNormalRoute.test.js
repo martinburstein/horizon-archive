@@ -10,6 +10,7 @@ import {
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
   CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   clearCustodyLedgerNormalRoute,
+  createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
@@ -18,6 +19,10 @@ import {
   sanitizeCustodyLedgerNormalRouteSave,
   writeCustodyLedgerNormalRoute,
 } from "../src/CustodyLedgerNormalRoute.js";
+import {
+  CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+  CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+} from "../src/CustodyLedgerPrimaryInteraction.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -1078,6 +1083,47 @@ test("strict prerequisites open only a blank PY-009 primary across all seven mod
   }
 });
 
+test("accepted blank normal route composes the protected editable submission without expanding persisted state", () => {
+  const complete = completeFarSave("rp002-primary-submit");
+  const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "pointer",
+    "rp002-primary-submit-local",
+  )).save;
+  const route = createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: local,
+    prerequisiteEvidence: completedPrerequisites(),
+  });
+  const entered = route.dispatch(intent(
+    CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
+    "pointer",
+    "rp002-primary-submit-open",
+  ));
+  const persistedBytes = JSON.stringify(entered.save);
+  const primary = createCustodyLedgerNormalPrimaryInteraction(entered.state, predecessor);
+  assert.ok(primary);
+  const result = primary.dispatch({
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+    activationKind: "screen_reader",
+    eventToken: "rp002-primary-submit-exact",
+    classification: "unknown",
+    fieldOwner: "human_expedition",
+  });
+  assert.equal(result.status, "provisional_result");
+  assert.equal(result.state.phase, "30-A2");
+  assert.equal(result.state.owner, "SUIT // PROVISIONAL TRANSLATION");
+  assert.ok(Object.values(result.state.currentAttemptChecks).every(Boolean));
+  assert.equal(JSON.stringify(entered.save), persistedBytes);
+  assert.equal(entered.save.checkpoint, "sc03_python_primary_blank");
+  assert.equal(createCustodyLedgerNormalPrimaryInteraction({ ...entered.state, privateNotes: "PRIVATE" }, predecessor), null);
+  assert.equal(createCustodyLedgerNormalPrimaryInteraction(entered.state, { ...predecessor, verificationStatus: "forged" }), null);
+});
+
 test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
   const complete = completeFarSave("rp002-python-primary-restore");
   const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
@@ -1650,6 +1696,15 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /SC-03-30-local-comparison/);
   assert.match(arrival, /SC-03-30-python-primary-blank/);
   assert.match(arrival, /UNFINISHED WORK IMAGE|unfinishedWorkImage\.label/);
+  assert.match(arrival, /name="classification"/);
+  assert.match(arrival, /name="owner"/);
+  assert.match(arrival, /CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS/);
+  assert.match(arrival, /primaryPhase === "30-A1F"/);
+  assert.match(arrival, /primaryPhase === "30-A2"/);
+  assert.match(app, /createCustodyLedgerNormalPrimaryInteraction/);
+  assert.match(app, /custodyLedgerPrimaryControllerRef/);
+  assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
+  assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
   assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
@@ -1686,6 +1741,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
+  assert.match(styles, /\.custody-ledger-fields input[\s\S]*min-height:\s*44px/);
+  assert.match(styles, /@media \(forced-colors: active\)[\s\S]*\.custody-ledger-fields \[data-field-state="editable"\]/);
   assert.match(styles, /\.civic-route-return-actions/);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-command-panel[\s\S]*grid-template-columns:\s*1fr/);
 });
