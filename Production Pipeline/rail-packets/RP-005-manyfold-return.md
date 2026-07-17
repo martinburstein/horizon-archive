@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED JOURNEY COMPLETE / COORDINATOR NEXT`
+- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
 - Target chapter/location: Chapter 3 expansion continuation / repeated-receiver landscape beyond the Three-Current Reach
 - Target demo horizon: fourth future slice after the accepted RP-001 boundary; directly after RP-004
 - Route order: 5
@@ -292,7 +292,7 @@ The course panel contains no SC-06 image/crop, receiver or branch form, trace co
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PASS — 2026-07-16`
 - Coder smoke-test result: `PASS — 13/13 focused, 37/37 real predecessor path, 448/448 full suite, validator/build/leakage/purity/patch PASS`
-- Readiness: `GATE REVIEW`
+- Readiness: `READY FOR WORKING — COORDINATOR VERIFIED`
 - Required revision: `NONE AT PROTECTED STAGE — coordinator must independently verify or record one genuine HOLD; do not define RP-006 before that decision`.
 
 ### Exact coordinator Gate Review handoff
@@ -317,9 +317,9 @@ The course panel contains no SC-06 image/crop, receiver or branch form, trace co
 
 ## Promotion record
 
-- Approved commit: `PENDING`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-005 GATE REVIEW — A5 COMPLETE / COORDINATOR NEXT`
-- Next contiguous packet seeded: `NO — RP-006 remains reserved`
-- `STORY_RAIL_MAP.md` updated: `YES — A4 graph lock`
-- Coordinator: `PENDING`
+- Approved commit: `c4c784f` plus independent coordinator verification
+- Promoted to Working Queue on: `2026-07-17`
+- Team 1 railhead after promotion: `RP-005 PROMOTED; RP-006 RESERVED SHELL SEEDED`
+- Next contiguous packet seeded: `YES — blank RP-006 shell only; no content assigned`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator promotion`
+- Coordinator: `PASS — focused RP-003→RP-004→RP-005 and RP-005 journey checks, full 448/448, RP-005 AST/runtime self-test, production build, accepted-bundle identity, leakage/purity, and patch integrity independently verified`
