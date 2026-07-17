@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-009 CLEAN W4 — COORDINATOR RELEASE VALIDATION`. Verification-only W4 reproduced no residual and made no production change. Focused `44/44`, full `558/558`, RP-002 validator, build, patch/leakage, HTTP/hash, immutable-art, and safe isolated-title checks pass on final-reloaded `index-Cj1zShQS.js` / `index-R5wdIep0.css`; user storage remained untouched. Coordinator validates only the reversible blank `SC-03-30` boundary. PY-009, RP002-RAI-01, review/save/completion, and RP-003+ remain closed.
+
 Latest Working handoff: `2026-07-17 / RP002-P1-009 CLEAN W3 — W4 VERIFICATION ONLY`. Fresh deterministic review found no aesthetic or assistive defect in the enabled/Available comparison control, direct blank `SC-03-30` replacement, human System/zero-credit hierarchy, evidence and route returns, responsive reflow, or unchanged civic plate. Focused `44/44`, HTTP asset/hash, and original-source checks pass on `index-Cj1zShQS.js` / `index-R5wdIep0.css`; user storage remained untouched and no gated screenshot is fabricated. W4 makes no production change unless one exact residual is safely reproduced, then final-reloads. PY-009, RP002-RAI-01, review/save/completion, and RP-003+ remain closed.
 
 Latest Working handoff: `2026-07-17 / RP002-P1-009 W1 P1 — W2 BUG REPAIR NEXT`. Accepted `sc03_far_complete` preserves five canonical observations, exact `5 of 5`, two Recorded/replay-only far peers, deterministic save/return/replay/resume, and separate route return. `OPEN LOCAL COMPARISON` remains native/assistive disabled and direct normal dispatch returns `local_comparison_dormant`; focused **42/42** and served root/JS/CSS checks pass while the preserved live save remains untouched at opening Glass Meadow. W2 owns only one zero-credit transition to blank allowlisted `SC-03-30`, five-record retention, reversible recovery, and deterministic sanitation/resume; PY-009, RP002-RAI-01, review/save/completion, and RP-003+ remain closed.
@@ -20,7 +22,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Position summary
 
-- Current Working override: `RP-002 — FINAL VALIDATION / CLEAN RP002-P1-009 W3`. Blank local comparison passes deterministic visual/assistive review. W4 performs verification-only gates and final reload unless one exact residual is safely reproduced; every learning/completion/later lock remains closed.
+- Current Working override: `RP-002 — FINAL VALIDATION / CLEAN RP002-P1-009 W4`. Blank local comparison passed verification-only focused/full/validator/build/reload gates with no production change. Coordinator owns release validation; every learning/completion/later lock remains closed.
 
 - Current Working override: `RP-002 — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`. The five-record observation boundary and final assistive presentation passed coordinator release. Next W1 may test only the dormant `OPEN LOCAL COMPARISON` boundary; all later states remain closed.
 
@@ -67,7 +69,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 - Current Working position override: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED`. P0, staged continuation, blank entry, return, and bounded resume pass; observations remain protected.
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-002 — FINAL VALIDATION / CLEAN RP002-P1-009 W3`
+- Team 2 active packet: `RP-002 — FINAL VALIDATION / CLEAN RP002-P1-009 W4`
 - Team 1 railhead: `RP-011 — GATE REVIEW / A5 HANDOFF`
 - Ordered Advance lead beyond Team 2 accepted baseline: `10 ordered packets — RP-002 through RP-010 promoted; RP-011 at Gate Review`
 - Whole-story rail status: `IN PROGRESS`
@@ -88,7 +90,7 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / VIEWPORT COORDINATOR PASS` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | The accepted campaign remains clean. Coordinator validation now includes full `402/402`, production build, RP-002 validator, E2E syntax, `206.9s` full E2E, exact `1920 x 1080` full-shell containment, exact `390 x 844` narrow containment, `44px` controls, and an empty live console. The playable title remains live on port `4173`. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `FINAL VALIDATION — CLEAN RP002-P1-009 W3` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `BLANK LOCAL COMPARISON INTEGRATED; LEARNING CLOSED` | W4 verification-only final reload follows clean visual/assistive review; exact five-record evidence, blank return path, and every learning/completion/later lock remain exact. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `FINAL VALIDATION — CLEAN RP002-P1-009 W4` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `BLANK LOCAL COMPARISON INTEGRATED; LEARNING CLOSED` | Coordinator release validation follows verification-only W4; exact five-record evidence, blank return path, and every learning/completion/later lock remain exact. |
 
 ## Latest Working handoff — RP002-P1-008 W2
 

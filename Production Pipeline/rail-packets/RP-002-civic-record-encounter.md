@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 blank local-comparison final verification — 2026-07-17
+
+- **Disposition:** `PASS — CLEAN W3 VERIFIED / NO PRODUCTION CHANGE / FINAL DEMO RELOADED / COORDINATOR NEXT`.
+- **Verification:** exact five-record `sc03_far_complete` Available comparison, seven-modality direct blank `SC-03-30` entry, heading-first human-owned zero-credit boundary, evidence restore, separate route return, truthful region names, responsive/non-color/forced-color/reduced-motion contracts, and immutable civic plate remain exact. No stale Scene/city-response implication or later surface was reproduced.
+- **Evidence:** focused `44/44`, full `558/558`, RP-002 self-test, build, syntax/patch, served-marker/protected-copy leakage, HTTP/hash, immutable-art, and fresh isolated title checks pass. Port `4173` serves `index-Cj1zShQS.js` / `index-R5wdIep0.css`; storage was untouched and no gated live state is fabricated.
+- **Coordinator lock:** independently validate and accept only this reversible blank comparison boundary. Preserve all five record bytes, replay-free save/resume/sanitation, privacy/Tour/offline/no-authority/no-exam-guarantee, null deltas, and the hard stop before PY-009, RP002-RAI-01, review/save/completion, or RP-003+.
+
 ## Working W3 blank local-comparison aesthetic review — 2026-07-17
 
 - **Disposition:** `CLEAN — NO FINDING OPENED / W4 VERIFICATION ONLY`.

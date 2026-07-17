@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — blank local-comparison verification-only final reload
+
+- **Disposition:** `PASS — NO PRODUCTION CHANGE / COORDINATOR RELEASE VALIDATION NEXT`. W4 reproduced no residual against W3's clean handoff.
+- **Player-visible state:** exact five-record completion exposes enabled Available `OPEN LOCAL COMPARISON`; every supported modality enters only blank `SC-03-30`; evidence return restores the five records, two Recorded far peers, and Available comparison; route return remains separate. The plate, hierarchy, ownership, zero-credit limits, region naming, and responsive/accessibility behavior remain coherent.
+- **Evidence/reload:** focused `44/44`, full `558/558`, RP-002 validator, build, patch, leakage, HTTP/hash, immutable-art, and safe isolated-title checks pass. Port `4173` final-reloaded `index-Cj1zShQS.js` / `index-R5wdIep0.css`; user storage remained untouched.
+- **Hard stop:** coordinator validates this blank reversible boundary only. PY-009, RP002-RAI-01, review/save/completion, city/world/access/authority/successor changes, and RP-003+ remain closed.
+
 ## 2026-07-17 W3 — blank local-comparison clean aesthetic review
 
 - **Disposition:** `NO FINDING OPENED — W4 VERIFICATION ONLY`. The enabled/Available comparison control, direct blank `SC-03-30` replacement, heading/ownership/zero-credit hierarchy, evidence return, separate route return, responsive structure, and immutable civic plate are coherent in fresh deterministic evidence.
