@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator acceptance — PY-009 fresh-practice entry
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / FRESH PRACTICE ENTRY ACCEPTED`.
+- **Accepted:** complete provisional result retained until explicit intent; seven-modality/one-hit zero-effect dismissal; atomic canonical carry-free blank System fresh practice; exact neutral literals; blank editable transfer fields; owner focus; phase-aware evidence-return names; separate route return; blank-only persistence; privacy, Tour, invariant world, null deltas, zero authority, and no successor.
+- **Independent gates:** focused W4 `58/58`; coordinator full `587/587`; all `15/15` readiness validators; production build; `102.8s` complete E2E with all gates true, credits, and no runtime errors; desktop/narrow containment; HTTP/assets/logs; patch integrity; QA capture cleanup.
+- **Released assets:** `index-CjiYW_Of.js` / `index-ghzUiZe9.css`.
+- **Next edge:** transfer submission/evaluation from blank fresh practice only. Explanation, RAI, review/save/completion, RP-003+, world/authority response, and successor remain closed.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-007 resolved
 
 - **Verdict:** `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.

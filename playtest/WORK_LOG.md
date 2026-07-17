@@ -1,5 +1,12 @@
 # Player Agent Work Log
 
+## 2026-07-17 — Coordinator closure: RP-002 fresh-practice entry partial release
+
+- **Outcome:** `PASS — FRESH PRACTICE ENTRY IN DEMO PARTIAL`. Explicit result dismissal, atomic carry-free blank System entry, exact neutral/blank fields, owner focus, phase-aware return-group naming, blank-only persistence, separate returns, invariant world, and all later locks are accepted.
+- **Release validation:** full `587/587`, all `15/15` readiness validators, production build, complete `102.8s` title-to-credits E2E with every gate true and no runtime errors, HTTP/served-marker checks, patch integrity, and incidental QA capture cleanup passed.
+- **Live responsive evidence:** `1920 x 1080` and `390 x 844` title shells retained zero overflow, `48px` / `44px` actions, contained frames, and empty warning/error logs. The preserved gated campaign was not inspected or altered.
+- **Next W1:** report only the earliest exact gap from accepted blank fresh practice toward transfer-field submission/evaluation. Preserve every explanation/RAI/review-save/completion/RP-003+/world/authority/successor lock.
+
 ## 2026-07-17 — W1 RP002-P1-012: provisional result cannot open fresh practice
 
 - **Demo build tested:** accepted live `index-BCpGPspB.js` / `index-ghzUiZe9.css` at `http://127.0.0.1:4173/`; RP-002 remains the oldest adjacent Working packet and the coordinator-accepted edge is the complete `30-A2` provisional Suit result.

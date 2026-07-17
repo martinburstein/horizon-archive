@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator release — fresh-practice entry accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 FRESH PRACTICE ENTRY ACCEPTED`.
+- **Player-visible delta:** one explicit dismissal now clears only the complete local result and atomically opens canonical blank System fresh practice. Exact neutral fields, blank transfer sockets, owner focus, truthful return-group names, and separate returns are accepted; no transfer submit/scoring exists.
+- **Release evidence:** W4 focused `58/58`; coordinator full `587/587`; all `15/15` readiness validators; production build; `102.8s` title-to-credits E2E with every gate true, credits, and no runtime errors; HTTP/served markers; clean `1920 x 1080` and `390 x 844` title shells; patch/cleanup pass.
+- **Final assets:** `index-CjiYW_Of.js` / `index-ghzUiZe9.css`.
+- **Next increment edge:** only the first transfer submission/evaluation gap from accepted blank fresh practice; all explanation/RAI/review-save/completion/RP-003+/authority/world/successor boundaries remain closed.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-007 resolved
 
 - **Disposition:** `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.

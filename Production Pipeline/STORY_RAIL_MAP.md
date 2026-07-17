@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 FRESH PRACTICE ENTRY — IN DEMO PARTIAL`. Independent full `587/587`, `15/15` readiness validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. Team 2's accepted edge is now canonical blank System fresh practice after explicit provisional-result dismissal; its next adjacent ownership is transfer submission/evaluation only. Team 1 remains complete at RP-012 with no RP-013 or successor.
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-007 W4 RESOLVED — COORDINATOR NEXT`. The normal result-dismissal/blank-fresh transition is rebuilt with truthful phase-aware evidence-return group names. Focused `58/58`, full `587/587`, build, HTTP/served markers, and clean final reload pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002 pending independent release; Team 1 remains complete at RP-012 with no successor.
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-007 W3 REVISE — W4 NEXT`. Complete result, explicit dismissal, atomic blank fresh entry, focus, field states, responsive layout, and immutable civic art pass bounded review; one P2 remains because the evidence-return group is still announced as `Blank Python primary actions` in result/fresh states. W4 owns only phase-aware semantic group naming. Team 2 remains on RP-002; Team 1 remains complete at RP-012 with no successor.

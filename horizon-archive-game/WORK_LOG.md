@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator: RP-002 fresh-practice entry accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 FRESH PRACTICE ENTRY ACCEPTED`. The accepted RP-002 boundary now extends from the complete provisional Suit result through one explicit zero-effect dismissal into canonical carry-free blank System fresh practice. Transfer submission/evaluation/scoring/feedback/result remains closed.
+- **Independent validation:** all `15/15` readiness validators; full game `587/587`; production build; complete isolated title-to-credits E2E in `102.8s` with every reported gate true, `credits:true`, and `runtimeErrors:false`; root/JS/CSS HTTP `200`; all four phase-aware return-group names served; patch integrity and generated-capture cleanup pass.
+- **Live responsive review:** exact `1920 x 1080` title shell measured document `1920 x 1080`, zero overflow, contained frame, and `48px` actions. Exact `390 x 844` measured document `390 x 844`, zero overflow, contained `384/390px` frame, and `44px` actions. Browser warnings/errors were empty. The preserved user save was not inspected or altered; gated acceptance uses deterministic state/source/served evidence rather than a fabricated live capture.
+- **Accepted boundary:** complete result retention, explicit seven-modality/one-hit atomic replacement, exact neutral `unresolved_interval` / `deidentified_sensor_log` / `None` / `False`, blank editable `classification` / `owner`, System owner-heading focus, phase-aware evidence-return names, separate City Threshold return, blank-only durable checkpoint, privacy/Tour/offline/no-authority/no-exam-guarantee, invariant world, null deltas, and no successor.
+- **Next Working handoff:** W1 reports only the earliest exact accepted-path gap toward submitting and evaluating the two fresh transfer fields from the accepted blank fresh-practice group. Do not open explanation, RAI, review/save/completion, RP-003+, authority, world response, or successor first.
+
 ## 2026-07-17 — Working Coder W4: RP002-AESTH-007 phase-aware return-group name
 
 - **Mode/verdict:** `aesthetic-polish` / `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.

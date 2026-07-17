@@ -30,12 +30,12 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 ## Current durable state
 
-- Current commit: `0fd4f87028f6a67dc89dc29ae8ce5a5bfda25b95`
-- Short commit: `0fd4f87` — `Advance Curriculum: preserve RP-002 transfer entry`
-- `HEAD == origin/main`: **yes** at handoff time
+- Release candidate commit: `6692da6` — `Working Coder: polish RP-002 return group semantics`
+- Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
+- `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
-- Served assets: `index-BCpGPspB.js` / `index-ghzUiZe9.css`
+- Served assets: `index-CjiYW_Of.js` / `index-ghzUiZe9.css`
 - Automation `horizon-archive-two-team-continuation`: **PAUSED at Martin's request**
 - Do not resume or replace the automation until Martin explicitly asks.
 
@@ -83,7 +83,7 @@ Run one complete cycle sequentially:
 2. Storyboarder Agent
 3. Curriculum Checker Agent
 4. Gameplay Master Agent
-5. Coder Agent in `advance-construction` mode
+5. Coder Agent in `advance` mode
 
 ### Working Team
 
@@ -114,7 +114,7 @@ Team 1 is therefore in continuity-maintenance mode near Team 2's current edge. I
 
 ## Accepted playable boundary
 
-The coordinator accepted the RP-002 PY-009 primary submission/result boundary in commit `2a554ee`.
+The coordinator now accepts the RP-002 PY-009 boundary through explicit provisional-result dismissal and canonical blank fresh-practice entry. The earlier primary submission/result acceptance remains part of this boundary.
 
 Accepted player-visible behavior includes:
 
@@ -127,76 +127,91 @@ Accepted player-visible behavior includes:
 - a read-only `SUIT // PROVISIONAL TRANSLATION` result only on current-attempt `6/6`;
 - active System, Teacher, and Suit owner-heading focus;
 - literal and programmatic failed-field association;
+- one explicit `CLEAR RESULT AND OPEN FRESH PRACTICE` action after the complete result;
+- seven-modality/one-hit atomic replacement;
+- canonical `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`;
+- exact `unresolved_interval`, `deidentified_sensor_log`, `None`, and `False` neutral source fields;
+- genuinely blank editable fresh `classification` and `owner` fields;
+- System owner-heading focus with blank fields first in ordinary Tab order;
+- phase-aware evidence-return group names for blank, feedback, result, and fresh states;
 - separate, write-free evidence and City Threshold returns;
 - no world response, access, authority, route reward, mastery by presentation, or successor.
 
 Independent release evidence at that boundary:
 
-- full game suite: `577/577`;
+- full game suite: `587/587`;
 - readiness validators: `15/15`;
 - production build: pass;
-- full title-to-credits E2E: pass in `86.3s` with every reported gate true, `credits:true`, and `runtimeErrors:false`;
+- full title-to-credits E2E: pass in `102.8s` with every reported gate true, `credits:true`, and `runtimeErrors:false`;
 - live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors.
 
-## Interrupted cycle status
+## Completed cycle status
 
-The most recent cycle was intentionally paused after three Advance roles completed and pushed:
+The previously interrupted cycle was completed sequentially and every checkpoint was pushed:
 
-1. Lore Builder A1 — `0b61d06` — locked result-dismissal-to-blank-transfer ownership.
-2. Storyboarder A2 — `dd21ee0` — locked the two-group result-to-fresh-transfer presentation.
-3. Curriculum Checker A3 — `0fd4f87` — `PASS — NO REOPEN — SOLIDIFIED`.
+1. Lore Builder A1 — `0b61d06`.
+2. Storyboarder A2 — `dd21ee0`.
+3. Curriculum Checker A3 — `0fd4f87`.
+4. Gameplay Master A4 — `3315ba3`.
+5. Advance Coder A5 — `b0ca9b5`.
+6. Player W1 — `9cb9b75`.
+7. Bug-Repair Coder W2 — `fc3011b`.
+8. Aesthetic W3 — `7a016de`.
+9. Aesthetic-Polish Coder W4 — `6692da6`.
 
-No Gameplay Master A4 work was completed or committed in that cycle. No later role from that cycle ran.
+The coordinator then passed all release gates and accepted the fresh-practice entry as `IN DEMO — PARTIAL`.
 
 ## Exact next action
 
-Resume with **Gameplay Master Agent A4**, not Lore Builder and not the Working Team.
+Begin the next full sequential cycle with **Lore Builder Agent A1**.
 
-Read `Agent Profiles/gameplay-master-agent.md` in full plus the top of the current RP-002 packet, `Production Pipeline/GAMEPLAY_SYSTEMS_SPINE.md`, both queues, the rail map, and DI-001.
+Read `Agent Profiles/lore-builder-agent.md` in full plus the top of the current RP-002 packet, both queues, the rail map, DI-001, and the applicable lore/ownership records. Keep Team 1 in continuity-maintenance mode at RP-002; do not invent RP-013 or any post-ending content.
 
-A4 is limited to the smallest interaction graph:
+A1 is limited to the nearest accepted edge:
 
 ```text
-complete canonical SUIT primary_result
-    -> one explicit seven-modality / one-hit zero-effect dismissal
-    -> canonical carry-free blank SYSTEM fresh_practice entry
+accepted canonical blank SYSTEM fresh_practice entry
+    -> explicit Pilot-owned transfer submission attempt
+    -> existing strict transfer evaluation ownership only
 ```
 
-A4 must preserve:
+A1 should lock ownership and meaning only. It must preserve:
 
-- the complete read-only result before dismissal;
-- dismissal as the sole explicit forward intent;
-- atomic whole-group replacement;
-- canonical `primary_result` and `fresh_practice` authorities only;
-- no carried learner source, answer, output, check state, feedback, annotation, provisional result, Builder evidence, or answer bank;
-- blank transfer fields;
-- active System owner-heading focus after replacement;
+- the accepted result-dismissal/fresh-entry release unchanged;
+- canonical `fresh_practice` source and genuinely blank transfer fields;
+- transfer evidence as independent from primary evidence;
+- explicit Pilot ownership of only `classification` and `owner` updates;
+- existing strict six-check transfer authority, without copying answers or rules;
+- answer-free local/Teacher remediation and genuinely blank retry if later passes authorize it;
+- no result or credit unless every current transfer check passes;
 - separate write-free returns;
 - deterministic sanitation/resume;
 - seven input modalities with one-hit suppression;
 - fail-closed automatic, passive, invalid, stale, combined, Tour-derived, and repeated requests;
-- zero observation, mastery, score, check, save, world/city delta, access, authority, external action, or successor effect;
+- zero story observation, save, world/city delta, access, authority, external action, or successor effect from entry/presentation alone;
 - invariant civic plate and current responsive/accessibility contracts.
 
 Hard stop before:
 
-- transfer submission, evaluation, scoring, result, feedback, or retry;
 - Python explanation;
 - `RP002-RAI-01`;
 - review/save/completion;
 - `RP-003+`;
 - any world response, access, authority, identity disclosure, route reward, or successor.
 
-A4 should update the packet, `ADVANCE_QUEUE.md`, `GAMEPLAY_SYSTEMS_SPINE.md` when appropriate, `WORKING_QUEUE.md`, `STORY_RAIL_MAP.md`, and DI-001; run the applicable existing RP-002 focused tests and validator; commit and push a dedicated checkpoint; and leave an exact A5 Coder handoff.
+A1 should update the packet, `ADVANCE_QUEUE.md`, `WORKING_QUEUE.md`, `STORY_RAIL_MAP.md`, DI-001, and its own log; commit and push a dedicated checkpoint; and leave an exact A2 Storyboarder handoff.
 
-After A4, continue sequentially with:
+Then continue sequentially with:
 
-1. Coder A5 in `advance-construction` mode, building only a protected/pure seam unless the handoff explicitly authorizes more.
-2. Player W1 on the accepted live demo, reporting the earliest exact gap toward result dismissal and fresh blank transfer entry.
-3. Coder W2 in `bug-repair` mode.
-4. Aesthetic W3 on only the newly repaired states.
-5. Coder W4 in `aesthetic-polish` mode.
-6. Coordinator release validation.
+1. Storyboarder A2.
+2. Curriculum Checker A3.
+3. Gameplay Master A4.
+4. Coder A5 in `advance` mode.
+5. Player W1 on the accepted live blank fresh-practice group, reporting only the earliest transfer submit/evaluation gap.
+6. Coder W2 in `bug-repair` mode.
+7. Aesthetic W3 on only the newly repaired states.
+8. Coder W4 in `aesthetic-polish` mode.
+9. Coordinator release validation.
 
 ## Validation commands
 
@@ -274,5 +289,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. The recurring automation must remain paused until I explicitly ask to resume it. Continue the interrupted sequential cycle from Gameplay Master A4, using the exact bounded RP-002 result-dismissal-to-blank-transfer handoff, then proceed through the remaining roles and coordinator gates one at a time with dedicated pushed checkpoints.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. The recurring automation must remain paused until I explicitly ask to resume it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 blank fresh-practice boundary, locking only the nearest transfer submission/evaluation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
 ```
