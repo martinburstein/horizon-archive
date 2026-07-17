@@ -1,6 +1,8 @@
 # Horizon Archive Story Rail Map
 
-Latest coordinator gate: `2026-07-17 / RP-008 PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete protected predecessor chain `77/77`, full `502/502`, RP-008 validator and canonical forms, build, byte-identical accepted assets, leakage, purity, cleanup, and patch integrity passed. RP-009 remains a blank contiguous shell.
+Latest coordinator gate: `2026-07-17 / RP-008 PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete protected predecessor chain `77/77`, full `502/502`, RP-008 validator and canonical forms, build, byte-identical accepted assets, leakage, purity, cleanup, and patch integrity passed. The authorized RP-009 shell has since received its bounded A1 surface-story pass.
+
+Latest Advance handoff: `2026-07-17 / RP-009 A1 PASS — STORYBOARDER A2 NEXT`. `Occluded Fold` directly preserves RP-008's saved offset summary, the retained RP-007 summary, cleared temporary work, invariant world, reversible returns, and destinationless continuation. Only exposed edge correspondence, unmatched records, ambiguity, one unavailable margin, and interpretation limits are added; internal topology, identity, transformation, Machine relation, and RP-010 remain undefined.
 
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
@@ -34,8 +36,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-20 ACCEPTED`
-- Team 1 railhead: `RP-008 — PROMOTED / RP-009 BLANK SHELL NEXT`
-- Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-008 promoted`
+- Team 1 railhead: `RP-009 — A1 STORY PASS / STORYBOARDER A2 NEXT`
+- Ordered Advance lead beyond Team 2 accepted baseline: `7 promoted packets — RP-002 through RP-008; RP-009 in design`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 
@@ -61,7 +63,11 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 | 6 | `RP-006` | `Interval Works — expansion-phase closure` | `RP-005 summary saved -> serviced destinationless continuation observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-005` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-07 COMPACT TWO-MASTER BRIEF LOCKED` | `PY-013 SOLIDIFIED — PROTECTED 8/8 + EIGHT-DIMENSION TRACE + BLANK 8/8 PASS` | `RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED — PROTECTED 8/8 + 4/4 + BLANK 8/8 + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED IW-00→IW-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused `13/13`, combined predecessor `50/50`, full `465/465`, RP-006 validator, build, byte-identical accepted assets, leakage, purity, and patch integrity passed. Normal integration, production art, and live Demo exposure remain Team 2 work in strict order. |
 | 7 | `RP-007` | `Braided Verge — first synthesis-phase slice` | `RP-006 summary saved -> serviced destinationless continuation observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-006` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-08 COMPACT TWO-MASTER BRIEF LOCKED` | `PY-015 SOLIDIFIED — PROTECTED 8/8 + ROUND-TRIP TRACE + BLANK 8/8 PASS` | `RP007-VISION-GENERATION-01 / AI901-D1-O7 SOLIDIFIED — PROTECTED 8/8 + 4/4 + BLANK 8/8 + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED BV-00→BV-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused `13/13`, combined predecessor `63/63`, full `484/484`, RP-007 validator, build, byte-identical accepted assets, leakage, purity, temporary cleanup, and patch integrity passed. Normal integration, production art, and live Demo exposure remain Team 2 work in strict order. |
 | 8 | `RP-008` | `Offset Reach — synthesis continuation` | `RP-007 summary saved -> destinationless infrastructure observed` | `PROMOTED TO WORKING` | `READY — QUEUED BEHIND RP-007` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-09 COMPACT TWO-MASTER BRIEF LOCKED` | `PASS — PY-016 + RP008-INFORMATION-EXTRACTION-01 SOLIDIFIED` | `PASS — OR-00→OR-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY` | `PASS — COORDINATOR VERIFIED` | Independent focused `14/14`, complete protected predecessor chain `77/77`, full `502/502`, frozen validator/canonical forms, build/identity, leakage, purity, cleanup, and patch checks passed. Normal integration, final art, Working evidence, and live Demo exposure remain later ordered work. |
-| 9 | `RP-009` | `Reserved synthesis closure` | `RP-008 specified end state` | `RESERVED — BLANK SHELL` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | `NOT STARTED` | A1 may define only the nearest contiguous surface contract next cycle. |
+| 9 | `RP-009` | `Occluded Fold — synthesis closure` | `RP-008 offset summary saved -> destinationless outward continuation observed` | `IN DESIGN — A1 STORY PASS` | `NOT STARTED` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `A2 NEXT` | `TBD BY A3` | `TBD BY A3` | `NOT STARTED` | `NOT STARTED` | Exact RP-008 state is retained; A2 closes only the Scene/art-plan gate without mapping the occluded interior or defining RP-010. |
+
+## Latest Advance handoff — RP-009 A1
+
+- `2026-07-17 / RP-009 A1`: Lore Builder replaced the blank shell with the bounded `Occluded Fold` surface contract. Three familiar near-margin continuities, several far-margin records, bounded signature correspondences, unmatched records, multiple plausible candidates, one unavailable margin, and layered stewardship remain exposed around a physically occluded interior. RP-007 and RP-008 summaries remain valid; no internal path, identity, persistence, transformation, unity, cause, purpose, Machine relation, or successor is assigned. One unfinished real-Python Builder work image may later reconcile sanitized edge replicas only, and completion changes no physical state. Storyboarder A2 owns the compact first-person photorealistic scene and production-art plan; RP-010 remains reserved.
 
 ## Latest Working handoff
 

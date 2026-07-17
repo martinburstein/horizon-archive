@@ -24,19 +24,23 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
-| 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 is the next blank contiguous shell. |
-| 9 | `RP-009` | Reserved synthesis closure | `RESERVED — BLANK SHELL` | Lore Builder Agent (`A1`, next cycle) | No content is authorized yet | Exact RP-008 verified end state only | Define the smallest contiguous surface contract; preserve every unresolved limit. |
+| 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
+| 9 | `RP-009` | Occluded Fold | `IN DESIGN — A1 STORY PASS` | Storyboarder Agent (`A2`) | Story `PASS`; Scene/Curriculum/Puzzle/Code pending | Exact RP-008 verified end state; retained RP-007/RP-008 summaries; no live read/trace/join/route/open; invariant world; reversible returns | Close only the Scene and production-art-plan gates; preserve the occluded interior and every unresolved limit. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `7 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008`
-- In-design packets: `0`
-- Team 1 railhead: `RP-008 — PROMOTED / RP-009 BLANK SHELL NEXT`
+- In-design packets: `1 — RP-009`
+- Team 1 railhead: `RP-009 — A1 STORY PASS / STORYBOARDER A2 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-008 promoted`
 - Whole-story rail status: `IN PROGRESS`
+
+## 2026-07-17 RP-009 Lore Builder surface-story result
+
+`RP-009` is now `IN DESIGN — A1 STORY PASS`. The exact RP-008 completion enters one occluded-edge landscape where three familiar near-margin continuities and several far-margin records expose bounded correspondences, unmatched records, multiple plausible candidates, one unavailable margin, and no visible internal relation. RP-007 and RP-008 remain valid bounded summaries. One unfinished real-Python Builder work image may later reconcile sanitized edge replicas only; it cannot trace, identify, merge, split, transform, route, open, or alter the live work. Completion saves an expedition-owned edge ledger, clears temporary work, preserves reversible returns and a destinationless outward continuation, changes no physical state, and leaves RP-010 blank. A2 owns only the compact photorealistic first-person scene and production-art plan.
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
 
