@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS; ADVANCE CODER A5 NEXT`
+- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION PASS`
 - Target chapter/location: Chapter 4 synthesis closure / occluded working landscape beyond Offset Reach
 - Target demo horizon: eighth future slice after the accepted RP-001 boundary; directly after RP-008
 - Route order: 9
@@ -247,8 +247,10 @@ Phase replacement, order, navigation, visibility, focus, scene layout, near/far 
 
 ## Rough Code Track — Coder
 
-- Status: `NOT STARTED — A5 WAITS FOR THE LOCKED A2–A4 CONTRACTS`
-- No App/main route, browser persistence, component, protected module, test fixture, production asset, accepted bundle, live Demo exposure, or RP-010 content is authorized by A1.
+- Status: `PASS — ONE PURE NODE-ONLY OF-00→OF-30 PROTECTED JOURNEY; COORDINATOR GATE REVIEW NEXT`
+- Protected implementation: `horizon-archive-game/src/OccludedFoldProtectedJourney.js` composes the exact verified RP-008 restore, retained RP-007/RP-008 summaries, six peer observations, strict frozen `PY-017`, strict independent `RP009-PROMPT-BOUNDARY-01`, both explanations, bounded review, atomic save/restore, deterministic recovery/focus, reversible returns, Tour isolation, and one LOOK-only destinationless continuation.
+- Focused evidence: `horizon-archive-game/test/occludedFoldProtectedJourney.test.js` passes `14/14`, including all `720` observation orders plus revisits, one allowlisted nonsecret environment get per fresh form, exact four evidence classes and six `None` limits, failed-check-only Python remediation, actually-scored-tag-only AI remediation, byte-stable rejected writes, replay-free restore, private/transient clearing, world/null-delta invariance, offline/no-authority/no-exam-guarantee, and RP-010 isolation.
+- Isolation: the module is unimported and non-routable. App/main, browser persistence, accepted routes/bundles/live Demo, art, prior packet behavior, and RP-010 remain unchanged.
 
 ## Accessibility and presentation risks
 
@@ -297,14 +299,14 @@ Phase replacement, order, navigation, visibility, focus, scene layout, near/far 
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`; Curriculum `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`; Puzzle `PASS — OF-00→OF-30 integrated graph locked`.
-- Packet gates missing: Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — A4 closed Puzzle with one four-phase graph, all 720 peer-observation orders, frozen independent learning chains, bounded review, atomic save/verified restore, deterministic recovery/focus, privacy clearing, reversible returns, invariant world, and one LOOK-only destinationless continuation`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`; Curriculum `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`; Puzzle `PASS — OF-00→OF-30 integrated graph locked`; Protected code, Save/recovery, Accessibility protected evidence, and protected validation `PASS — one pure journey harness`.
+- Packet gates missing: coordinator Gate Review, Production art, Normal integration, Working evidence, and Release. Protected code, Save/recovery implementation, Accessibility protected evidence, and protected validation are closed.
+- Did this pass reduce the remaining-gate count?: `YES — A5 closed Protected code, Save/recovery, Accessibility protected evidence, and protected validation with one journey-level harness rather than per-state modules`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008 bounded summaries, no-live-read/join/route/open rule, temporary clearing, ordinary Builder executable literacy, reversible returns, destinationless continuation, and scope discipline become one Phase III closure premise rather than another isolated relation micro-seam.
 - Optional work trimmed or deferred: internal contents, full topology, identity, transformation, native category, live tracing/routing/opening, secondary programs, new identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- Breadth verdict: `CONTINUE — ADVANCE CODER A5`.
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`; no additional RP-009 protected seam is authorized before coordinator decision.
 - Next contiguous packet seed readiness: `NO — RP-010 REMAINS RESERVED UNTIL RP-009 REACHES GATE REVIEW OR READY FOR WORKING`.
-- Exact next action in one sentence: Advance Coder A5 builds one pure protected OF-00→OF-30 journey/harness through the frozen RP-009 authorities without runtime routing, production art, live Demo exposure, or RP-010 content.
+- Exact next action in one sentence: Coordinator independently verifies the A5 evidence bundle and records `READY FOR WORKING`, `REVISE`, or `HOLD` without normal integration, production art, live Demo exposure, or RP-010 content.
 
 ## Advance Handoff Gate
 
@@ -312,9 +314,13 @@ Phase replacement, order, navigation, visibility, focus, scene layout, near/far 
 - Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED — 2026-07-17`
 - Gameplay Master sign-off: `PASS — OF-00→OF-30 GRAPH LOCKED — 2026-07-17`
-- Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH ADVANCE CODER A5`
-- Required revision: Protected construction and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
+- Coder smoke-test result: `PASS — focused 14/14; complete protected predecessor chain 97/97; frozen validator self-test and five canonical forms PASS; full suite/build and isolation gates PASS`
+- Readiness: `GATE REVIEW — COORDINATOR DECISION NEXT`
+- Required revision: none inside protected construction. Independent Gate Review remains; production art, normal integration, Working evidence, and Release remain later obligations.
+
+### Exact coordinator Gate Review handoff
+
+`Coordinator: independently verify only the RP-009 A5 protected checkpoint. Confirm the pure non-routable OccludedFoldProtectedJourney begins solely from exact verified RP-008 completion, retains the verified RP-007 and RP-008 summaries, traverses OF-00→OF-30, and leaves App/main, browser persistence, accepted routes/bundles/live Demo, art, prior packets, and RP-010 unchanged. Re-run focused RP-009 and the complete RP-002→RP-009 protected predecessor chain; prove all 720 observation orders/revisits, strict independent real frozen PY-017 primary/trace/blank-transfer and prompt-boundary primary/retrieval/blank-transfer chains plus both explanations, failed-check-only Python and actually-scored-tag-only AI answer-free remediation, exact one allowlisted nonsecret environment get per form, unchanged records/environment, four evidence classes, six None limits, deterministic recovery/focus, private/transient clearing, conjunctive atomic byte-stable save, replay-free restore, reversible returns, Tour isolation, invariant world/clocks, null city/external deltas, offline/no-authority/no-exam-guarantee, and LOOK-only destinationless continuation. Re-run the RP-009 validator self-test and every canonical form, full game suite, production build, accepted-asset identity, App/main/dist leakage, browser/storage/network/DOM purity, cleanup, and patch integrity. If every gate passes, record READY FOR WORKING behind RP-008; otherwise record one exact REVISE or HOLD. Do not perform W1, normal integration, browser persistence, production art, Demo reload, or define RP-010 during review.`
 
 ### Exact Coder A5 handoff
 
