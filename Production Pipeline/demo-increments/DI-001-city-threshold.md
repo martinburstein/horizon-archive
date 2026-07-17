@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP002-AESTH-004 first-far assistive-state parity
+
+- **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT`. Visible first-far states are functionally honest, but each button's hard-coded owner/action `aria-label` masks its nested visible state and the status span has no programmatic description association.
+- **Exact defect:** after evidence return, the selected enabled peer omits `RECORDED // REPLAY ADDS NO EVIDENCE` from assistive naming and the unselected disabled peer omits `INERT // ZERO CREDIT // NOT YET ACTIVE`. The replay-versus-inert distinction is therefore sight-dependent even though pointer/keyboard behavior is correct.
+- **Evidence/boundary:** focused **91/91** passes; root, `index-tBB22K3Y.js`, `index-R5wdIep0.css`, and immutable civic master return HTTP `200`; source/served state and hashes are stable. The controlled demo tab and user save were untouched. No second far, local comparison, learning, completion, or RP-003+ claim is made.
+- **W4:** associate each visible `AVAILABLE`/`RECORDED`/`INERT` state with its button's accessible name or description while retaining owner/action, avoiding duplicate or stale announcements, and preserving all current layout, enabled/disabled behavior, acknowledgement, return, evidence, save, privacy, Tour, accessibility, and no-later boundaries. Add focused semantic coverage and final reload.
+
 ## 2026-07-17 W2 — RP002-P1-007 first-far integration
 
 - **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. Both equal blank `SC-03-20` peers now function as supported first choices; exactly one selected far record and its canonical Scene statement are added with exact System `1 of 2`.
