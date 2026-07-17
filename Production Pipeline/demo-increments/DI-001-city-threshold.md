@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-009 blank local-comparison entry
+
+- **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. The accepted five-record boundary now presents enabled Available `OPEN LOCAL COMPARISON`; every supported deliberate modality enters only blank allowlisted `SC-03-30` while retaining all five records byte-stably.
+- **Player-visible delta:** the former inert boundary is now one reversible zero-credit step. Blank local comparison retains the civic plate, shows human System ownership and no-learning/no-access limits, offers `RETURN TO EVIDENCE`, and keeps route return separate. Evidence return restores both Recorded far peers and Available comparison.
+- **Hard stop:** no Scene acknowledgement, learning prompt/result, attempt, hint, confidence, mastery/exam evidence, save eligibility, review/save/completion, city/world/access/external delta, successor, or RP-003+ surface exists. Resume/sanitation/focus are deterministic and replay-free; unsafe or combined inputs fail closed.
+- **Evidence/reload:** focused **37/37**, related **184/184**, full **558/558**, RP-002 validator, build, patch integrity, protected-copy leakage, and HTTP pass. Port `4173` serves `index-Cj1zShQS.js` / `index-R5wdIep0.css`; a fresh title tab has no warning/error log or overflow. User storage was not inspected or changed, so no fabricated gated live traversal is claimed.
+- **Five-minute demonstration:** from an accepted exact fixture, activate Available `OPEN LOCAL COMPARISON`, confirm blank `SC-03-30` and zero-credit ownership, return to evidence, and confirm five retained records/two Recorded far peers/comparison Available; alternatively use the separately owned route return.
+
 ## 2026-07-17 W1 — RP002-P1-009 local-comparison activation finding
 
 - **Disposition:** `P1 OPEN — W2 BUG REPAIR NEXT`. The accepted exact five-record `sc03_far_complete` boundary is stable, but `OPEN LOCAL COMPARISON` is native/assistive disabled and handler-free; exact direct dispatch returns `local_comparison_dormant` without changing state.

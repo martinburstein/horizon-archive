@@ -15,6 +15,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
   const headingRef = useRef(null);
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
+  const atLocalComparison = routeState.boardId === "SC-03-30";
   const atObservation = atNearObservation || atFarObservation;
   const observationCount = routeState.observationEvidence?.length ?? 0;
   const hasObservation = observationCount > 0;
@@ -22,11 +23,15 @@ export function CivicRecordArrival({ routeState, onAction }) {
     ? "Near Exposed Layers"
     : atFarObservation
       ? "Scale Echo and Closed Boundary"
+      : atLocalComparison
+        ? "Local Comparison"
       : "Civic Record District";
   const artRegistration = atNearObservation
     ? "SC-03-10-registered-continuity-hook"
     : atFarObservation
       ? "SC-03-20-registered-continuity-hook"
+      : atLocalComparison
+        ? "SC-03-30-registered-continuity-hook"
       : "SC-03-00-civic-record-arrival-v1";
   const routeActions = routeState.availableActions.filter((action) => action !== routeState.routeReturnAction);
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
@@ -41,7 +46,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
       : custodyLedgerRouteOwners.pilot;
     const primary = action === custodyLedgerRouteActions.continueProtected
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
-      || (atObservation && action !== routeState.routeReturnAction);
+      || ((atObservation || atLocalComparison) && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
     const isInert = actionState?.status === "inert";
     const accessibility = describeCivicActionAccessibility(owner, action, actionState?.status);
@@ -76,6 +81,8 @@ export function CivicRecordArrival({ routeState, onAction }) {
           ? "SC-03-10-detail-pending"
           : atFarObservation
             ? "SC-03-20-detail-pending"
+            : atLocalComparison
+              ? "SC-03-30-interface-pending"
             : undefined}
         data-observation-count={routeState.observationEvidence?.length ?? 0}
       >
@@ -113,6 +120,8 @@ export function CivicRecordArrival({ routeState, onAction }) {
                 ? hasObservation
                   ? `${observationCount} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
+                : atLocalComparison
+                  ? "Five bounded Scene facts remain retained. This blank local boundary grants no learning evidence, attempt, hint, confidence, mastery, exam credit, save eligibility, access, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
             </p>
           </div>
@@ -121,6 +130,8 @@ export function CivicRecordArrival({ routeState, onAction }) {
               ? "Near evidence actions"
               : atFarObservation
                 ? "Far evidence actions"
+                : atLocalComparison
+                  ? "Blank local comparison actions"
                 : "Civic route actions"}>
               {routeActions.map(renderAction)}
             </div>

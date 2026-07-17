@@ -1159,7 +1159,7 @@ export function App() {
     const routeSave = predecessor && typeof window !== "undefined"
       ? readCustodyLedgerNormalRoute(window.localStorage, predecessor)
       : null;
-    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_complete"].includes(routeSave?.checkpoint)) {
+    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_complete", "sc03_local_comparison_blank"].includes(routeSave?.checkpoint)) {
       setCustodyLedgerRouteSave(routeSave);
       setCustodyLedgerRouteView(null);
       setMode("rp002-arrival");
@@ -1218,7 +1218,7 @@ export function App() {
       setMode("city-threshold-staging");
       return;
     }
-    if (!["advanced", "recorded", "replayed", "returned_to_evidence"].includes(result.status)
+    if (!["advanced", "recorded", "replayed", "returned_to_evidence", "entered_local_comparison"].includes(result.status)
       || !writeCustodyLedgerNormalRoute(window.localStorage, result.save, predecessor)) return;
     setCustodyLedgerRouteSave(result.save);
     setCustodyLedgerRouteView(result.state);

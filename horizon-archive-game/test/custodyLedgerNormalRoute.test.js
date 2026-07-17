@@ -101,6 +101,22 @@ function farBlankSave(prefix = "rp002-far-blank") {
   )).save;
 }
 
+function completeFarSave(prefix = "rp002-far-complete") {
+  const first = createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: farBlankSave(prefix),
+  }).dispatch(intent(
+    custodyLedgerObservationActions.distant_repetition,
+    "pointer",
+    `${prefix}-first`,
+  ));
+  return createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.closed_boundary,
+    "touch",
+    `${prefix}-second`,
+  )).save;
+}
+
 function memoryStorage(initial = {}) {
   const values = new Map(Object.entries(initial));
   return {
@@ -159,6 +175,10 @@ test("SC-03-20 world-region names distinguish blank, partial, and complete exped
   assert.equal(
     describeCivicWorldRegionAccessibility({ boardId: "SC-03-00", checkpoint: "sc03_arrival" }),
     "Civic Record District arrival overview",
+  );
+  assert.equal(
+    describeCivicWorldRegionAccessibility({ boardId: "SC-03-30", checkpoint: "sc03_local_comparison_blank" }),
+    "Civic Record District unchanged; blank local comparison interface with five expedition observations retained.",
   );
   for (const checkpoint of [
     "sc03_far_blank",
@@ -844,7 +864,7 @@ test("either remaining far peer records only its matching fifth fact across all 
   }
 });
 
-test("complete far evidence returns to two replay peers and one dormant local comparison", () => {
+test("complete far evidence returns to two replay peers and one Available local comparison", () => {
   for (const selectedId of ["distant_repetition", "closed_boundary"]) {
     const unselectedId = selectedId === "distant_repetition" ? "closed_boundary" : "distant_repetition";
     const first = createCustodyLedgerNormalRouteController({
@@ -880,7 +900,7 @@ test("complete far evidence returns to two replay peers and one dormant local co
     assert.deepEqual(returned.state.actionStates.map(({ label, status }) => ({ label, status })), [
       { label: custodyLedgerObservationActions.distant_repetition, status: "replay" },
       { label: custodyLedgerObservationActions.closed_boundary, status: "replay" },
-      { label: custodyLedgerObservationControls.openLocalComparison.label, status: "inert" },
+      { label: custodyLedgerObservationControls.openLocalComparison.label, status: "available" },
     ]);
     assert.ok(returned.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
       minWidthCssPx >= 44 && minHeightCssPx >= 44
@@ -888,16 +908,17 @@ test("complete far evidence returns to two replay peers and one dormant local co
     assert.equal(JSON.stringify(returned.save.observationEvidence), evidenceBytes);
     assertNoDeltaOrCredit(returned.state, 5);
 
-    const dormant = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
-    const before = JSON.stringify(dormant.getState());
-    const blocked = dormant.dispatch(intent(
+    const opened = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
+    const entered = opened.dispatch(intent(
       custodyLedgerObservationControls.openLocalComparison.label,
       "pointer",
       `rp002-complete-return-${selectedId}-comparison`,
     ));
-    assert.equal(blocked.status, "rejected");
-    assert.equal(blocked.reason, "local_comparison_dormant");
-    assert.equal(JSON.stringify(blocked.state), before);
+    assert.equal(entered.status, "entered_local_comparison");
+    assert.equal(entered.state.checkpoint, "sc03_local_comparison_blank");
+    assert.equal(entered.state.boardId, "SC-03-30");
+    assert.equal(JSON.stringify(entered.save.observationEvidence), evidenceBytes);
+    assertNoDeltaOrCredit(entered.state, 5);
 
     for (const replayId of [selectedId, unselectedId]) {
       const replayController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
@@ -926,6 +947,198 @@ test("complete far evidence returns to two replay peers and one dormant local co
     assert.equal(route.state.checkpoint, "city_threshold");
     assertNoDeltaOrCredit(route.state);
   }
+});
+
+test("exact five-record completion enters only blank SC-03-30 across all seven modalities", () => {
+  const complete = completeFarSave("rp002-local-comparison-modalities");
+  const evidenceBytes = JSON.stringify(complete.observationEvidence);
+  for (const activationKind of activationKinds) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+    const beforeRecords = complete.observationEvidence.map((record) => JSON.stringify(record));
+    const result = controller.dispatch(intent(
+      custodyLedgerObservationControls.openLocalComparison.label,
+      activationKind,
+      `rp002-local-comparison-${activationKind}`,
+    ));
+    assert.equal(result.status, "entered_local_comparison");
+    assert.equal(result.reason, "blank_local_comparison_entered");
+    assert.equal(result.state.checkpoint, "sc03_local_comparison_blank");
+    assert.equal(result.state.boardId, "SC-03-30");
+    assert.equal(result.state.owner, "SYSTEM // EXPEDITION STATE");
+    assert.equal(result.state.sceneStatement, null);
+    assert.equal(result.state.statusMessage, null);
+    assert.deepEqual(result.state.focusIntent, {
+      group: "local_comparison_blank",
+      target: "rp002-arrival-heading",
+    });
+    assert.deepEqual(result.state.availableActions, [
+      custodyLedgerObservationControls.returnToEvidence.label,
+      custodyLedgerRouteActions.returnAccepted,
+    ]);
+    assert.deepEqual(result.state.actionStates, [{
+      label: custodyLedgerObservationControls.returnToEvidence.label,
+      status: "available",
+      minWidthCssPx: 44,
+      minHeightCssPx: 44,
+    }]);
+    assert.deepEqual(result.state.localComparisonState, {
+      packetId: "RP-002",
+      boardId: "SC-03-30",
+      phase: "blank_entry",
+      activeMessageKey: "prerequisites_incomplete",
+      scoringEnabled: false,
+      campaignCommitEnabled: false,
+      focusIntent: { group: "local_comparison_blank", target: "heading" },
+      nextFocusIntent: {
+        group: "local_comparison_blank",
+        target: custodyLedgerObservationControls.returnToEvidence.label,
+      },
+    });
+    assert.deepEqual(result.save.observationEvidence.map((record) => JSON.stringify(record)), beforeRecords);
+    assert.equal(JSON.stringify(result.save.observationEvidence), evidenceBytes);
+    assert.equal(result.save.checkpoint, "sc03_local_comparison_blank");
+    assertNoDeltaOrCredit(result.state, 5);
+    assert.doesNotMatch(JSON.stringify(result.state), /python_primary|python_transfer|rai_primary|learnerSource|answers|attemptCount|hintLevel|confidence|mastered|save bounded comparison|RP-003/i);
+  }
+});
+
+test("blank local comparison resumes without replay and returns separately to evidence or route", () => {
+  const complete = completeFarSave("rp002-local-comparison-return");
+  const entered = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "screen_reader",
+    "rp002-local-comparison-return-enter",
+  ));
+  const blankSave = entered.save;
+  const evidenceBytes = JSON.stringify(blankSave.observationEvidence);
+  assert.deepEqual(sanitizeCustodyLedgerNormalRouteSave(blankSave, predecessor), blankSave);
+
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, blankSave, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), blankSave);
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: blankSave });
+  assert.equal(resumed.getState().checkpoint, "sc03_local_comparison_blank");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.deepEqual(resumed.getSave(), blankSave);
+  assertNoDeltaOrCredit(resumed.getState(), 5);
+
+  const evidenceReturn = resumed.dispatch(intent(
+    custodyLedgerObservationControls.returnToEvidence.label,
+    "keyboard_space",
+    "rp002-local-comparison-return-evidence",
+  ));
+  assert.equal(evidenceReturn.status, "returned_to_evidence");
+  assert.equal(evidenceReturn.state.checkpoint, "sc03_far_complete");
+  assert.equal(JSON.stringify(evidenceReturn.save.observationEvidence), evidenceBytes);
+  assert.deepEqual(evidenceReturn.state.actionStates.map(({ label, status }) => ({ label, status })), [
+    { label: custodyLedgerObservationActions.distant_repetition, status: "replay" },
+    { label: custodyLedgerObservationActions.closed_boundary, status: "replay" },
+    { label: custodyLedgerObservationControls.openLocalComparison.label, status: "available" },
+  ]);
+  assertNoDeltaOrCredit(evidenceReturn.state, 5);
+
+  const routeController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: blankSave });
+  const routeReturn = routeController.dispatch(intent(
+    custodyLedgerRouteActions.returnAccepted,
+    "switch",
+    "rp002-local-comparison-return-route",
+  ));
+  assert.equal(routeReturn.status, "returned");
+  assert.equal(routeReturn.state.checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(routeReturn.state);
+});
+
+test("local comparison activation is one-hit and unsafe, passive, early, repeated, Tour, or combined intent fails closed", () => {
+  const complete = completeFarSave("rp002-local-comparison-negative");
+  const clean = intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "pointer",
+    "rp002-local-comparison-negative-clean",
+  );
+  const variants = [
+    { mode: "protected" },
+    { mode: "demo_tour" },
+    { owner: "SYSTEM // DEMO TOUR" },
+    { boardId: "SC-03-30" },
+    { version: "stale" },
+    { transition: "open_and_learn" },
+    { explicit: false },
+    { activationKind: "focus" },
+    { activationKind: "hover" },
+    { activationKind: "dwell" },
+    { stale: true },
+    { forged: true },
+    { implicit: true },
+    { multiHit: true },
+    { actions: [custodyLedgerObservationControls.openLocalComparison.label, "BEGIN PY-009"] },
+    { learnerSource: "PRIVATE" },
+    { answers: { python: "PRIVATE" } },
+  ];
+  for (const [index, override] of variants.entries()) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+    const before = JSON.stringify(controller.getState());
+    const result = controller.dispatch({
+      ...clean,
+      eventToken: `rp002-local-comparison-negative-${index}`,
+      ...override,
+    });
+    assert.equal(result.status, "rejected");
+    assert.equal(JSON.stringify(result.state), before);
+    assert.doesNotMatch(JSON.stringify(result.state), /PRIVATE|BEGIN PY-009/);
+    assertNoDeltaOrCredit(result.state, 5);
+  }
+
+  const duplicateController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+  const repeated = { ...clean, eventToken: "rp002-local-comparison-duplicate" };
+  assert.equal(duplicateController.dispatch(repeated).status, "entered_local_comparison");
+  const duplicate = duplicateController.dispatch(repeated);
+  assert.equal(duplicate.status, "duplicate_suppressed");
+  assert.equal(duplicate.state.checkpoint, "sc03_local_comparison_blank");
+  assertNoDeltaOrCredit(duplicate.state, 5);
+
+  const repeatedController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: duplicate.state.checkpoint === "sc03_local_comparison_blank" ? duplicateController.getSave() : null });
+  const repeatedFresh = repeatedController.dispatch({ ...clean, eventToken: "rp002-local-comparison-repeat-fresh" });
+  assert.equal(repeatedFresh.status, "rejected");
+  assert.equal(repeatedFresh.reason, "local_comparison_blank_closed");
+  assert.equal(repeatedFresh.state.checkpoint, "sc03_local_comparison_blank");
+  assertNoDeltaOrCredit(repeatedFresh.state, 5);
+
+  const early = createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: farBlankSave("rp002-local-comparison-early"),
+  });
+  const earlyBefore = JSON.stringify(early.getState());
+  assert.equal(early.dispatch({ ...clean, eventToken: "rp002-local-comparison-early-open" }).status, "rejected");
+  assert.equal(JSON.stringify(early.getState()), earlyBefore);
+
+  const tour = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete, mode: "demo_tour" });
+  const tourBefore = JSON.stringify(tour.getState());
+  assert.equal(tour.dispatch({ ...clean, eventToken: "rp002-local-comparison-tour" }).status, "rejected");
+  assert.equal(JSON.stringify(tour.getState()), tourBefore);
+  assertNoDeltaOrCredit(tour.getState());
+});
+
+test("blank local comparison sanitation rejects partial, stale, forged, private, successor, and learning-bearing saves", () => {
+  const complete = completeFarSave("rp002-local-comparison-sanitize");
+  const blank = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "speech",
+    "rp002-local-comparison-sanitize-enter",
+  )).save;
+  const [recordA, recordB, recordC, farA, farB] = blank.observationEvidence;
+  for (const invalid of [
+    { ...blank, privateNotes: "PRIVATE" },
+    { ...blank, learnerSource: "PRIVATE" },
+    { ...blank, answers: { python: "PRIVATE" } },
+    { ...blank, observationEvidence: [recordA, recordB, recordC, farA] },
+    { ...blank, observationEvidence: [recordA, recordB, recordC, farA, farA] },
+    { ...blank, observationEvidence: [recordA, recordB, recordC, farA, { ...farB, finalizationStatus: "draft" }] },
+    { ...blank, observationEvidence: [recordA, recordB, recordC, farA, { ...farB, observationId: "unknown_far" }] },
+    { ...blank, checkpoint: "SC-03-30" },
+    { ...blank, successor: "RP-003" },
+    { ...blank, saveEligibility: true },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
 });
 
 test("complete far save resumes and sanitizes only exact five-record evidence", () => {
@@ -1326,8 +1539,10 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /SC-03-00-civic-record-arrival-v1/);
   assert.match(arrival, /SC-03-10-registered-continuity-hook/);
   assert.match(arrival, /SC-03-20-registered-continuity-hook/);
+  assert.match(arrival, /SC-03-30-registered-continuity-hook/);
   assert.match(arrival, /SC-03-10-detail-pending/);
   assert.match(arrival, /SC-03-20-detail-pending/);
+  assert.match(arrival, /SC-03-30-interface-pending/);
   assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
@@ -1351,12 +1566,16 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /Separate route return/);
   assert.match(app, /advanceCustodyLedgerNormalRoute/);
   assert.match(app, /custodyLedgerRouteView/);
-  assert.match(app, /"recorded", "replayed", "returned_to_evidence"/);
+  assert.match(app, /"recorded", "replayed", "returned_to_evidence", "entered_local_comparison"/);
   assert.match(app, /"sc03_near_second"/);
   assert.match(app, /"sc03_near_complete"/);
   assert.match(app, /"sc03_far_blank"/);
   assert.match(app, /"sc03_far_first"/);
   assert.match(app, /"sc03_far_complete"/);
+  assert.match(app, /"sc03_local_comparison_blank"/);
+  assert.match(normalRoute, /open_local_comparison_to_blank/);
+  assert.match(normalRoute, /blank_entry/);
+  assert.doesNotMatch(arrival, /python_primary|python_transfer|rai_primary|SAVE BOUNDED COMPARISON/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

@@ -21,11 +21,13 @@ export const custodyLedgerPredecessorMessage = Object.freeze({
   text: "Required predecessor evidence is incomplete. Return to the saved City Threshold anchor.",
 });
 
+export const custodyLedgerLocalComparisonBlankMessage = Object.freeze({
+  owner: "SYSTEM // EXPEDITION STATE",
+  text: "Required practice evidence is incomplete. The district remains available; no local request has been sent.",
+});
+
 export const custodyLedgerOwnershipMessages = Object.freeze({
-  prerequisites_incomplete: Object.freeze({
-    owner: "SYSTEM // EXPEDITION STATE",
-    text: "Required practice evidence is incomplete. The district remains available; no local request has been sent.",
-  }),
+  prerequisites_incomplete: custodyLedgerLocalComparisonBlankMessage,
   tray_available: Object.freeze({
     owner: "SYSTEM // EXPEDITION SESSION",
     text: "Five exposed conditions logged. Add only the two expedition-owned fields.",

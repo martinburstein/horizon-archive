@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 blank local-comparison entry — 2026-07-17
+
+- **Disposition:** `RP002-P1-009 RESOLVED — DEMO RELOADED / W3 NEXT`.
+- **Integrated boundary:** exact sanitized `sc03_far_complete` now exposes enabled visible/assistive `AVAILABLE` `OPEN LOCAL COMPARISON` with `>=44px` state metadata. All seven modalities converge through one explicit one-hit zero-credit intent to only allowlisted `sc03_local_comparison_blank` / `SC-03-30`; the five canonical records remain byte-stable and no Scene acknowledgement is emitted.
+- **Blank hard stop:** the local boundary contains only the unchanged civic world plate, human System ownership/copy, one explicit zero-credit explanation, `RETURN TO EVIDENCE`, and separately grouped route return. It exposes no PY-009 or RP002-RAI-01 prompt/result, attempt, hint, confidence, learning/mastery/exam evidence, save eligibility, review, packet completion, access/authority/external action, successor, or later packet.
+- **Recovery/evidence:** exact blank save/resume is replay-free; evidence return reconstructs five-record completion with both far peers Recorded and comparison Available; route return remains separate. Unsafe, passive, private, Tour, early, repeated, contaminated, and compare-plus-learning inputs fail closed. Focused **37/37**, related **184/184**, full **558/558**, validator, build, patch, HTTP, protected-copy leakage, and clean-title browser checks pass on `index-Cj1zShQS.js` / `index-R5wdIep0.css`; user storage remained uninspected and unchanged.
+- **W3 lock:** review only the Available control, direct blank `SC-03-30` replacement, unchanged plate, ownership/zero-credit hierarchy, responsive/focus/non-color behavior, and reversible evidence/route returns. Do not expose learning, review/save/completion, or RP-003+.
+
 ## Working W1 local-comparison activation finding — 2026-07-17
 
 - **Disposition:** `RP002-P1-009 OPEN — W2 BUG REPAIR NEXT`.
