@@ -26,15 +26,20 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
 | 9 | `RP-009` | Occluded Fold | `PROMOTED TO WORKING` | Player Agent (after RP-008 acceptance) | Coordinator independently verified all twelve gates | Exact RP-008 verified end state -> one pure OF-00→OF-30 journey -> both prior summaries + six observations in all 720 orders/revisits + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world | Wait behind RP-008 in Working order; RP-010 holds the next strict Working position. |
-| 10 | `RP-010` | Counterfield | `PROMOTED TO WORKING` | Player Agent (after RP-009 acceptance) | Coordinator independently verified all twelve gates | Exact RP-009 edge ledger and retained RP-007/RP-008 summaries -> pure CF-00→CF-30 -> all 5,040 orders/revisits -> strict independent learning chains -> atomic scope register; invariant world and no RP-011 | Wait behind RP-009 in Working order; RP-011 is authorized only as a blank contiguous shell. |
+| 10 | `RP-010` | Counterfield | `PROMOTED TO WORKING` | Player Agent (after RP-009 acceptance) | Coordinator independently verified all twelve gates | Exact RP-009 edge ledger and retained RP-007/RP-008 summaries -> pure CF-00→CF-30 -> all 5,040 orders/revisits -> strict independent learning chains -> atomic scope register; invariant world and no RP-011 | Wait behind RP-009 in Working order; RP-011 now advances contiguously in A2 scene design. |
+| 11 | `RP-011` | Unborrowed Reach | `IN DESIGN — A1 STORY PASS` | Storyboarder Agent (`A2`) | Story `PASS`; Scene/Curriculum/Puzzle/Protected code pending | Exact RP-010 scope register plus retained RP-007/RP-008/RP-009 records -> follow only the already exposed margin -> fresh record before prior-record reopening -> separate bounded reconciliation; invariant world and no RP-012 | A2 defines only the compact scene and production-art plan; no curriculum, puzzle, code, readiness verdict, ending, or RP-012 content. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `9 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008, then RP-009, then RP-010`
-- In-design packets: `0`
-- Team 1 railhead: `RP-010 — PROMOTED TO WORKING / RP-011 BLANK SHELL AUTHORIZED`
+- In-design packets: `1 — RP-011`
+- Team 1 railhead: `RP-011 — IN DESIGN / A1 STORY PASS`
+
+## 2026-07-17 RP-011 Lore Builder surface-story result
+
+`RP-011` is now `IN DESIGN — A1 STORY PASS`. From the exact RP-010 scope register and four separate retained records, one deliberate Pilot follow intent reaches the `Unborrowed Reach`, an unfamiliar operating landscape where the expedition hides but does not delete prior conclusions while making one fresh bounded record. Only after that record is finalized may the prior records reopen for a separate method-and-limit reconciliation. One unfinished real-Python Builder work image uses sanitized new-record replicas as ordinary occupational literacy, never a password, assessment, access gate, readiness judge, or live control. Completion saves the fresh record and reconciliation separately, clears temporary work, preserves every RP-010 unknown and reversible return, changes no physical state, and leaves RP-012 and the ending undefined. Storyboarder A2 owns only the compact responsive maximum-quality photorealistic first-person scene and production plan.
 
 ## 2026-07-17 RP-010 coordinator Gate Review
 

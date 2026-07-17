@@ -1,0 +1,221 @@
+# RP-011 — Unborrowed Reach
+
+## Packet identity
+
+- Status: `IN DESIGN — A1 STORY PASS`
+- Target chapter/location: Phase IV capstone continuation / unfamiliar operating reach beyond the Counterfield margin
+- Target demo horizon: tenth future slice after the accepted RP-001 boundary; directly after RP-010
+- Route order: 11
+- Predecessor packet or accepted demo boundary: `RP-010 — Counterfield`
+- Planned successor packet or intended ending: `RP-012 — ENDING RESERVED`; no resolution, route, location, event, lesson, verdict, or destination is defined
+- Advance cycle: orientation cycle 1
+- Spoiler class: `surface-safe`
+- Working title: `Unborrowed Reach` — a Pilot expedition label for the fresh-evidence method, never a native category
+- Expedition spine phase and slot: Phase IV — Capstone and resolution / slot 2 of 3
+- Target player time: `TBD by A4`; no time limit, speed score, or timing credit is authorized
+- Complete Advance cycles spent on this packet: 0; A1 of orientation cycle 1 complete
+- Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
+
+## Locked premise
+
+The Counterfield's LOOK-only margin reveals one broad continuation into an unfamiliar operating reach whose exposed forms do not repeat the earlier districts closely enough to borrow their conclusions. The RP-007, RP-008, RP-009, and RP-010 records remain saved and valid within their scopes, but the Pilot deliberately hides them inside the expedition interface while making one fresh bounded record from newly exposed evidence. Only after that record is finalized may the expedition reopen the prior records and compare methods, limits, and provenance without treating any two locations as the same work. One unfinished Builder real-Python work image may use sanitized replicas from the reach as ordinary occupational literacy. It is not a test, password, message, invitation, readiness judgment, or live-world control.
+
+## Start state
+
+- Predecessor end-state match: the verified RP-010 scope register is saved beside the retained RP-007 braided summary, RP-008 offset summary, and RP-009 edge ledger; seven Counterfield observations preserve provenance, support, counterevidence, ambiguity, unavailability, and unknowns separately; temporary work is cleared; every district and local clock remains invariant; reversible returns remain available; and the field-margin continuation is LOOK-only with no destination, route, persistence, evidence, or successor content.
+- Player location: first-person at the Counterfield's exposed outer margin. A fresh Pilot-owned follow intent may turn the previously destinationless look into protected local staging at the near edge of the Unborrowed Reach; this is expedition navigation, never Builder or Machine access. No predecessor observation, code run, save, success, or world response replays.
+- Required prior evidence/state: exact verified RP-010 completion only. No learner source, answer, feedback, request/response replica, credential, endpoint, payload, transient event, temporary file, live sample, Tour state, identity, topology, chronology, cause, purpose, authority claim, or successor assumption crosses the boundary.
+- Visible world state: an immense unfamiliar reach contains physically separated exposures, material transitions, maintained bypasses, ambiguous relations, and at least one unavailable margin. No common origin, internal route, shared clock, native category, or relation to the Counterfield is physically established.
+- Available actions: orient without naming native function; choose an expedition-owned independent-record mode that hides but does not delete prior summaries; inspect only newly exposed physical evidence; review one incomplete local Python work image over sanitized replicas from this reach; finalize a fresh record; reopen prior summaries only afterward for a bounded method-and-limit reconciliation; return to RP-010 or earlier preserved anchors.
+
+## Player goal
+
+Make one defensible fresh record without consulting prior conclusions, then show which evidence methods transfer and which claims still do not.
+
+## End state
+
+- Required state change: the expedition saves one independent reach record before reopening the four prior records, then saves a separate reconciliation note. The fresh record preserves its own provenance, bounded support, counterevidence, ambiguity, unavailable evidence, and unknowns. The reconciliation note names only methods and limits that remain defensible across the records; it does not merge locations, observations, authorship, chronology, topology, or purpose. Temporary work clears and reversible returns remain.
+- Player understanding gained: durable inquiry can be demonstrated on unfamiliar evidence without copying an earlier conclusion. Agreement in method does not prove shared identity, function, source, or meaning, and disagreement does not prove error or failure.
+- Physical landscape delta: none. No exposure, surface, bypass, casing, aperture, maintenance form, light, sound, pressure, route, or environmental rhythm changes because of observation, record hiding, Python execution, reconciliation, save, return, or resume. `continuation` remains unchanged; city and external deltas remain `null`.
+- Next available action: restore or revisit the fresh record and separate reconciliation note; return to RP-010 or earlier anchors; or LOOK toward one still-unrecorded outward bearing. The look has no destination, route, persistence, evidence, readiness verdict, final answer, or RP-012 content.
+- Facts that remain unresolved: every unresolved RP-010 limit; the native name and purpose of the reach; whether its exposures belong to one work or many; whether material transitions, bypasses, missing margins, or recurring relations share a cause, origin, chronology, owner, or meaning; whether any prior method reflects a Builder category; who made or paused the Python work; why Builder executable literacy corresponds exactly to Python; what `continuation` identifies; whether any process is attentive; what would constitute expedition readiness beyond this bounded record; and how any evidence relates to the Machine, Builder continuity, the Builders' disappearance, or the ending.
+
+## Lore Track — Lore Builder
+
+### Surface observations
+
+1. The Counterfield's LOOK-only margin exposes a broad continuation; the continuation does not react when the Pilot follows it.
+2. The exposed forms and material transitions differ visibly from the recorded Counterfield districts.
+3. One exposed relation persists across a material transition without revealing a common source, identity, or purpose.
+4. A superficially similar form supports a different bounded relation without proving that either form is correct, failed, or replaced.
+5. A maintained bypass crosses an older surface while leaving its order, cause, authorship, and intended duration unresolved.
+6. One exposure supports more than one correspondence; another comparable margin is physically unavailable.
+7. Foundation surfaces, compatible insertions, sacrificial layers, and current repairs remain distinguishable without establishing dates, one institution, or continuous occupation.
+8. Local heat, deposition, pressure, condensation, and maintenance rhythms continue without a demonstrated shared clock.
+9. The expedition interface can hide prior summaries from the current work group without deleting them, changing the world, or claiming the Pilot forgot them.
+10. A local coupling exposes unfinished real Python over sanitized replicas of newly exposed records only.
+11. The work image contains routine executable structure but no greeting, challenge, identity request, permission state, score, reward, or readiness judgment.
+12. A valid run can help render the expedition's fresh record; it cannot consult prior expedition summaries, read live work, compare locations, route, open, command, or alter the reach.
+13. Reopening the earlier records after the fresh record is finalized changes only the expedition display.
+14. Every exposed process continues its prior operation after the reconciliation note is saved, restored, or left behind.
+
+### Pilot inferences
+
+- `Unborrowed Reach`, `fresh record`, `independent`, `method`, `transfer`, `reconciliation`, `similar`, `different`, and `limit` are expedition labels, not translated native categories.
+- A method may transfer to unfamiliar evidence without carrying an earlier conclusion with it.
+- Similar material or relation shapes do not prove shared identity, origin, continuity, coordination, authorship, or function.
+- A different bounded result may reflect different conditions, incomplete evidence, maintenance, scale, time, or human grouping error; it is not proof that a prior record was wrong.
+- Hiding prior summaries is a human inquiry choice, not memory erasure, Builder instruction, Machine intervention, or evidence that the reach was designed to assess anyone.
+- The unfinished Python may be paused occupational work, a preserved handoff, a damaged fragment, or another incomplete condition. Its suitability for sanitized replica work does not make it Pilot-directed.
+- A separate fresh record and reconciliation note are evidence of process discipline, not an exam prediction, final truth, permission, or authority.
+
+### Ownership language
+
+- `SCENE` owns only exposed continuations, physical relations, material transitions, similar and differing forms, bypasses, unavailable margins, layered stewardship, maintenance paths, and locally continuing rhythms.
+- `PILOT` owns the decision to hide prior records, every grouping and comparison, the `Unborrowed Reach` label, and every claim about method transfer, similarity, difference, readiness, identity, chronology, cause, purpose, or relation to earlier places.
+- `SYSTEM` owns local staging verification, record visibility, replica provenance, availability limits, progress, sanitation, save/restore status, and the no-prior-summary/no-live-read/compare/route/open/control statement.
+- The executable fragment is `BUILDER WORK`; English labels, accessible names, explanations, feedback, and safety boundaries remain expedition/suit mediation.
+- A valid run proves only bounded manipulation of sanitized new-record replicas. It does not authenticate the Pilot, grade readiness, consult prior records, identify an author, establish shared identity or function, reconcile the live works, open a route, grant authority, define the Machine, or reveal the ending.
+
+### Dialogue/observation ladder
+
+1. **Arrival — Scene:** “Beyond the Counterfield, unfamiliar work continues across a reach without a repeated landmark.”
+2. **System:** “Prior expedition records remain saved. Independent-record mode can hide them without deleting evidence or changing the world.”
+3. **Pilot:** “I will write this account before I borrow my own conclusions.”
+4. **Scene:** “One relation persists across a material change. Its source remains unseen.”
+5. **Scene:** “A similar exposed form carries a different bounded relation.”
+6. **Scene:** “A maintained bypass crosses older material without revealing order or cause.”
+7. **Scene:** “One exposure supports several correspondences. A comparable margin remains unavailable.”
+8. **System:** “Incomplete Python work available. Inputs are sanitized replicas from this reach only.”
+9. **System after valid run:** “Fresh record rendered. No prior summary or live work was read, compared, routed, opened, or changed.”
+10. **Pilot:** “Now I can compare methods without pretending the places are the same.”
+11. **Completion — System:** “Fresh record and reconciliation note saved separately. Unknowns and unsupported claims remain unassigned.”
+12. **Completion — Scene:** “Across the reach, every exposed process continues its prior rhythm.”
+13. **Return — System:** “Independent record restored. Prior summaries remain separate; no world event is replayed.”
+
+### Mystery protections
+
+- Preserve every RP-010 unknown and all four predecessor records as bounded, separate expedition artifacts. Do not use RP-011 to correct, merge, universalize, or reveal their native relation.
+- Do not define the Unborrowed Reach as a test site, school, examination, archive, processor, verifier, refinery, factory, organism, mind, body, memory, model, dataset, Machine organ, readiness gate, or final approach by native meaning.
+- Do not claim the reach was designed for independent verification, the Pilot, Python instruction, or any human learning purpose. Independent-record mode is expedition-owned interface behavior only.
+- Do not turn fresh agreement into proof of one identity, source, function, civilization-wide standard, chronology, topology, coordination, continuity, transformation, or truth.
+- Do not turn a different result into proof of error, failure, replacement, destruction, severance, deception, decline, correction, or intentional contradiction.
+- Do not portray the landscape as a human campus, laboratory, benchmark, examination hall, workplace, control room, server field, road grid, farm, ritual plaza, or puzzle board.
+- Do not make the Python work a password, lesson addressed to the Pilot, authentication gate, lock, permission test, assessment, score, reward mechanism, readiness verdict, or route control. It is ordinary incomplete Builder occupational literacy.
+- Do not explain why Builder executable literacy is exactly real Python, whether Builders called it Python, or whether the suit translates it.
+- Do not make hiding or reopening records erase memory, alter evidence, replay the past, change the world, or imply that the Machine observes, approves, remembers, or evaluates the Pilot.
+- Do not make a valid run, reconciliation, save, or restore alter geometry, clocks, maintenance, light, sound, pressure, access, routes, unavailable evidence, or outward infrastructure.
+- Do not identify maintenance activity as a species, robot class, named occupation, institution, response to the Pilot, or evidence of continued Builder presence.
+- Do not issue a readiness verdict, predict an exam result, define RP-012, open the ending, identify a final destination, answer the central mystery, define the Machine, explain Builder continuity, or explain the disappearance.
+- Preserve at least five plausible functional readings for the reach and at least two plausible readings for the unfinished program.
+- Keep world plates first-person and free of protagonist, ship, body part, reflection, portrait, readable pseudo-writing, humanoid occupant, human trace, or human ergonomic affordance.
+
+### Copy budgets
+
+- Arrival and completion cards: no more than two short sentences and `26` total words each.
+- Required Scene observation: no more than `20` words before optional expansion.
+- Pilot inference: no more than two short sentences and must preserve identity, topology, continuity, transformation, unity, synchronization, chronology, cause, authorship, purpose, and readiness uncertainty.
+- System record-mode notice: one ownership-prefixed message group that says prior records are hidden rather than deleted and that no world state changes.
+- System run result: one ownership-prefixed message group containing new-replica provenance plus the no-prior-summary/no-live-read/compare/route/open/control limit.
+- Persistent status: one complete ownership-prefixed sentence; never truncate fresh provenance, separate prior records, bounded support, counterevidence, ambiguity, unavailability, unknowns, or the no-verdict limit.
+- Storyboarder may shorten exact lines but may not merge owners, require memory of hidden content, turn Pilot inference into Scene fact, stage the reach as a test, present a Python lock, or strengthen the result into correctness, readiness, access, authority, world response, or ending content.
+
+### Lore Builder sign-off
+
+- Status: `PASS — RP-011 SURFACE STORY SEEDED; READY FOR STORYBOARDER A2`
+- Continuity: exact RP-010 scope register, retained RP-007/RP-008/RP-009 records, seven new Counterfield observations, separate evidence classes and unknowns, cleared temporary work, invariant districts/clocks, reversible returns, and the LOOK-only destinationless margin are preserved; no predecessor event replays.
+- State transition: `RP-010 bounded scope register saved -> deliberately follow only the already exposed margin -> hide but retain prior expedition records -> inspect unfamiliar exposed evidence -> review ordinary unfinished Builder Python over sanitized new-record replicas -> save one fresh record -> reopen prior records and save a separate method-and-limit reconciliation -> clear temporary work, preserve an invariant reach and reversible returns, and leave RP-012 undefined`.
+- Spoiler safety: the slice demonstrates independent fresh-evidence practice and bounded reconciliation. It does not identify the reach, prior works, identity, topology, continuity, transformation, unity, synchronization, chronology, cause, purpose, authority, readiness, Machine relation, Builder continuity, disappearance, ending, or successor.
+- Ownership: physical facts remain Scene-owned; inquiry choices and interpretations remain Pilot-owned; record visibility, rendering, provenance, sanitation, save, and no-prior-summary/no-live-read/compare/route/open/control limits remain System-owned; the reach remains unchanged.
+
+## Storyboard Track — Storyboarder
+
+- Status: `NOT STARTED — A2 NEXT`
+- A2 owns one compact maximum-quality cinematic-photorealistic first-person sequence that makes the unfamiliar reach, fresh-evidence boundary, separate prior-record ownership, layered stewardship, ordinary Builder work coupling, and invariant world legible without a test, answer key, curriculum mapping, or ending cue.
+- A2 must preserve protagonist/ship/human-trace exclusion, nonhuman functional logic, responsive full-screen presentation, complete text equivalents, non-color meaning, reduced-motion equivalence, no memory-dependent comparison, and zero visual world response.
+
+## Curriculum Verification Track — Curriculum Checker
+
+- Status: `NOT STARTED — A3 AFTER A2`
+- No Python skill, AI-901 objective, case, answer, threshold, lesson, evidence chain, remediation contract, or readiness verdict is selected by A1.
+- A3 must choose only the nearest nonduplicate current obligation under project source-priority rules and keep Builder Python ordinary occupational literacy rather than authentication or assessment by the world.
+
+## Puzzle Track — Gameplay Master
+
+- Status: `NOT STARTED — A4 AFTER A3`
+- No observation count, interaction order, score, hint ladder, retry rule, save schema, duration, graph, or readiness calculation is selected by A1.
+- A4 must preserve the Lore/Storyboard/A3 contracts, independent-record-before-reconciliation order, no memory test, physical world invariance, no password/access framing, reversible returns, and strict evidence ownership.
+
+## Advance Construction Track — Coder
+
+- Status: `NOT STARTED — A5 AFTER A4`
+- No module, route, component, storage key, asset hook, feature flag, test, or live-Demo exposure is authorized by A1.
+- A5 must remain protected and non-routable until the completed A1–A4 packet explicitly authorizes one smallest integration tranche.
+
+## Anticipated accessibility and presentation risks
+
+- Fresh versus prior records, supported versus counterevidential evidence, ambiguity, unavailability, and unknowns cannot depend on left/right placement, distance, color, animation, sound, brightness, or motion alone.
+- Hiding prior summaries must be explicit, reversible expedition-interface behavior; it cannot require the player to remember hidden content or imply deletion, amnesia, secrecy, or world response.
+- Reconciliation must present complete accessible text for the fresh record and each retained prior scope in manageable owner-distinct groups rather than a dense side-by-side comparison or visual answer key.
+- Local environmental rhythms need reduced-motion stills or direct replacements and cannot carry sole evidence, progress, or correctness meaning.
+- Required controls must remain at least `44 x 44 CSS px`; owner, message, current content, and required action must remain together in the responsive shell.
+- The dominant world and complete current interaction must fit a representative 16:9 laptop display without browser zoom, horizontal escape, clipping, or off-screen required actions; narrow and `200%` text zoom reflow vertically.
+- Present one owner/message/content/action group at a time and keep Scene evidence, Pilot inference, Builder work, System feedback, record visibility, and save limits separate.
+
+## Dependencies
+
+- Required existing systems: exact verified RP-010 completion; retained RP-007/RP-008/RP-009/RP-010 records; separate evidence-class and unknown-limit ownership; sanitation and temporary-work clearing; reversible returns; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
+- New systems: none selected by A1.
+- Art dependencies: A2 must define a registered photorealistic production plan after reading the location visual spine.
+- Curriculum dependencies: A3 must select the nearest current nonduplicate Python and AI-901 obligations after A2; none are implied here.
+- Decisions awaiting Martin: none for this surface-safe capstone continuation.
+
+## Locked decisions
+
+- RP-011 is the direct contiguous successor to RP-010 and occupies Phase IV slot 2 as independent fresh-evidence practice, not a revelation, final answer, readiness verdict, test site, or access escalation.
+- The retained RP-007/RP-008/RP-009/RP-010 records remain useful, separate, and bounded; independent-record mode hides but never deletes or weakens them.
+- The Pilot must finalize one fresh record from unfamiliar exposed evidence before reopening prior records for a separate method-and-limit reconciliation.
+- Builder real Python appears only as ordinary incomplete occupational literacy over sanitized replicas from the new reach. It is never a password, assessment, or live-world authority.
+- Completion saves a fresh record and reconciliation note separately, clears temporary work, changes no physical state, preserves unchanged `continuation`, null city/external deltas, reversible returns, and leaves RP-012 wholly undefined.
+
+## Flexible implementation choices
+
+- Exact reach geometry, scale, exposure count, materials, atmosphere, maintenance forms, visible working processes, coupling morphology, and stewardship evidence remain A2 choices within the locked meanings.
+- Exact observation grouping and compact board sequence remain A2 choices; exact curriculum, assessment, and puzzle shape remain A3/A4 choices.
+- A2 may use one registered invariant master with spatially consistent details or multiple registered masters, provided the independent-record/reconciliation boundary remains expedition-owned, no visual arrangement becomes an answer key, and the landscape never reads as a human test site.
+- Runtime labels may change if they remain expedition-owned, observable, compact, accessible, and uncertainty-preserving.
+
+## Player-observable acceptance criteria
+
+1. The player can make a fresh bounded record without seeing or copying prior expedition conclusions, then reopen complete prior records for a separate method-and-limit reconciliation.
+2. Similarity, difference, counterevidence, ambiguity, and unavailability remain distinguishable without proving shared identity, error, function, chronology, topology, or purpose.
+3. Any later Python work is visibly ordinary unfinished Builder occupational work over sanitized new-record replicas, never a test, password, invitation, access gate, readiness judge, or live control.
+4. Hiding, reopening, saving, or restoring records changes no physical reach state, replays no event, and preserves reversible returns plus every RP-010 unknown.
+5. No copy, art, state, or interaction defines RP-012, issues a readiness verdict, opens the ending, answers the central mystery, defines the Machine, explains Builder continuity, or explains the disappearance.
+6. The dominant world plus complete current interaction fits representative desktop and narrow responsive layouts with first-person/no-human framing, no memory-dependent task, and accessible equivalents.
+
+## Breadth and convergence record
+
+- Scoreboard gates passed: Story `PASS — A1 surface contract`.
+- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Production art plan, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — replaced the blank shell with one contiguous start/goal/end Lore contract and exact A2 handoff`.
+- Existing seams integrated or consolidated: retained RP-007/RP-008/RP-009/RP-010 records, provenance, bounded support, counterevidence, ambiguity, unavailability, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline become one independent-record/reconciliation premise rather than new isolated lore seams.
+- Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness verdict, RP-012, native categories, shared identity/topology/chronology/synchronization, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
+- New module or artifact integration consumer: none authorized at A1.
+- Breadth verdict: `CONTINUE — A2 STORYBOARDER`.
+- Next contiguous packet seed readiness: `NO — RP-012 remains ending-reserved until RP-011 reaches Gate Review or promotion`.
+- Exact next action in one sentence: Storyboarder A2 builds the smallest responsive first-person photorealistic scene contract that makes fresh evidence, hidden-but-retained prior records, bounded reconciliation, and an invariant alien work legible without a test, answer key, Python lock, readiness verdict, or ending cue.
+
+## Advance Handoff Gate
+
+- Lore Builder sign-off: `PASS — 2026-07-17`
+- Storyboarder sign-off: `PENDING`
+- Curriculum Checker sign-off: `PENDING`
+- Gameplay Master sign-off: `PENDING`
+- Coder smoke-test result: `PENDING`
+- Readiness: `REVISE — A2–A5 REQUIRED`
+- Required revision: A2 scene/production brief, A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
+
+### Exact Storyboarder A2 handoff
+
+`Storyboarder Agent — A2: work only on RP-011 Unborrowed Reach. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, active photorealistic charter and production-quality guides, the exact verified RP-010 end state, and this A1 contract. Define the smallest compact first-person scene sequence and registered production plan for one immense unfamiliar nonhuman operating reach beyond the Counterfield margin. Make a relation persisting across material transition, a superficially similar form with a different bounded relation, a maintained bypass across older material, one multi-candidate exposure, one physically unavailable comparable margin, layered stewardship, and independent local rhythms legible without turning the landscape into a test, benchmark, diagram, shared system, chronology, route, school, laboratory, matching exercise, or answer key. Keep independent-record mode entirely in the expedition interface: prior summaries are hidden but retained, complete accessible text is available again only after the fresh record is finalized, and the player is never required to remember hidden content. Treat the local Python coupling as ordinary incomplete Builder occupational work over sanitized new-record replicas, not a lock, greeting, assessment, access surface, readiness judge, or Pilot-directed object. Preserve all RP-010 unknowns and four separate predecessor records, invariant world, reversible returns, zero live-world delta, first-person/no-protagonist/no-ship/no-human-trace framing, maximum-quality cinematic photorealism, responsive full-screen containment, non-color meaning, reduced-motion equivalence, complete text alternatives, and no RP-012 or ending content. Choose composition, materials, physical process evidence, collective stewardship expression, compact board consolidation, registered master/detail strategy, effects, masks, crops, provenance, cleanup, and accessibility presentation only. Do not select a Python skill, AI-901 objective, puzzle graph, code, save schema, final art, route, readiness verdict, or ending. Update the packet, scene brief, visual spine, Storyboard log, queue/map/status artifacts, validate continuity and artifact integrity, then hand one exact unchanged-meaning contract to Curriculum Checker A3.`
