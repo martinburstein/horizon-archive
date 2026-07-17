@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A4 continuity — transfer interaction graph
+
+- **Graph:** `FT-00` blank/edit -> `FT-10` explicit one-hit submit -> `FT-20F` actual-failed-check feedback/`RETRY BLANK` or `FT-20C` current-attempt `6/6` transfer evidence.
+- **Recovery:** unlimited genuinely blank retry, deterministic focus, fail-closed sanitation/resume, seven equal modalities, separate returns, and no persisted private work.
+- **Hard stop:** no explanation, RAI, review/save/completion, RP-003+, world/access/authority effect, or successor. A5 builds one pure unimported controller only.
+
 ## 2026-07-17 Advance A3 continuity — transfer mapping preserved
 
 - **Verdict:** `NO REOPEN — SOLIDIFIED`; current official Microsoft sources and RP-002 validation show no objective change, mismatch, bypass, or changed goal.
