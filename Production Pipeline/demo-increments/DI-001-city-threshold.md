@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 coordinator release — RP-002 one near observation
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / ONE NEAR OBSERVATION ACCEPTED.` The normal path now offers three equal first-near controls, records exactly one matching canonical observation, presents the exact Scene/System `1 of 3` acknowledgement, and restores a replay-only one-ID state with separate evidence and route returns.
+- **Coordinator validation:** release checks **PASS in 140.1s**: full **452/452**, production build (`index-DumYcxh-.js` / `index-Dws9tyNW.css`), RP-002 release validator, RP-003/RP-004/RP-005 curriculum self-tests, E2E syntax, patch integrity, and complete title-to-credits E2E with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental QA PNG regeneration was restored.
+- **Responsive evidence boundary:** exact reloaded `1920 x 1080` and `390 x 844` title-shell checks retained zero overflow and `>=44px` actions. The user-owned save remained before the verified predecessor and was preserved; direct one-ID presentation is supported by focused normal-route/component tests and W2–W4 served-build/source/asset evidence rather than a fabricated coordinator traversal claim.
+- **Next bounded handoff:** Player Agent W1 starts at the accepted one-ID state and reports only the earliest exact gap toward one second near observation. Do not integrate multiple observations, expose `SC-03-20+`, learning, packet save/completion, RP-003, or later content in that Player pass.
+
 ## 2026-07-16 W4 — RP-002 one-ID clean final reload
 
 - **Disposition:** `PASS — NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`. W3 authorized no visual change and W4 reproduced no exact defect; production runtime, art, tests, saves, and routes remain unchanged.

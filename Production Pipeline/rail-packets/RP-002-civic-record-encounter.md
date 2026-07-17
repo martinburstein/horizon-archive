@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator one-ID partial release — 2026-07-17
+
+- **Disposition:** `IN DEMO — PARTIAL / ONE NEAR OBSERVATION COORDINATOR PASS`.
+- **Accepted boundary:** three equal first-near controls, exactly one canonical observation ID and Scene statement, literal System `1 of 3` acknowledgement, replay-only one-ID state, evidence return, route return, and deterministic sanitized resume.
+- **Evidence:** full **452/452**, production build, RP-002 release validator, RP-003/RP-004/RP-005 curriculum self-tests, patch integrity, complete **140.1s** E2E with every gate true and no runtime errors, plus responsive title-shell checks at `1920 x 1080` and `390 x 844` with zero overflow and `>=44px` actions. The earlier user save was preserved; focused normal-route/component tests plus W2–W4 evidence cover the direct one-ID boundary.
+- **Hard stop:** second-observation activation, `SC-03-20+`, PY-009, RP002-RAI-01, packet save/completion, RP-003, and later content remain protected. Next W1 reports only the first exact gap toward one second near observation.
+
 ## Working W4 first-near clean final reload — 2026-07-16
 
 - **Disposition:** `CLEAN VERIFICATION / NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`.
