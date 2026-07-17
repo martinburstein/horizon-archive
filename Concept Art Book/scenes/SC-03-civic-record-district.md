@@ -1,5 +1,15 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 transfer-complete to blank-explanation presentation continuity
+
+- Reuse the invariant SC-03 overview master, registered composition, and continuous clocks. No new plate, crop, geometry, light, material, maintenance, hotspot, effect, or art state is created.
+- Exactly two mutually exclusive expedition groups exist at this boundary. The first is complete `FT-20C` under `SYSTEM // EXPEDITION STATE`; the second is the existing canonical genuinely blank `30-D / python_explanation` prompt under `901 TEACHER // FEEDBACK`. There is no intermediate transition, reward, preview, result, or world-response group.
+- The completion group reads System owner heading -> bounded current-attempt `6/6` acknowledgement -> two separate write-free returns -> one distinctly Pilot-owned action labeled exactly `OPEN BLANK PYTHON EXPLANATION`. The group remains unchanged until a valid deliberate intent; time, reading, focus, hover, dwell, animation, reload, and presentation do not advance it.
+- Valid intent removes the entire completion group and directly mounts the canonical Teacher group. Focus reaches the Teacher heading before the first blank control. The unchanged prompt and all explanation controls are genuinely blank; no transfer source/values, answers, checks, feedback, completion transcript, token, focus history, private work, preselection, attempt, score, hint, confidence, result, or credit appears.
+- Inactive groups leave visual, pointer, keyboard, and accessibility order. Invalid, stale, repeated, Tour-derived, combined-return, wrong-owner/mode, presentation-derived, or private-bearing input reconstructs the last authorized safe group without replay and with transient work cleared.
+- At `1920 x 1080`, the dominant world and complete current group/actions fit without outer scroll. Narrow and `200%` text zoom use natural vertical reflow without horizontal escape. Actions remain `>=44px`; complete/blank and owner meaning is literal and non-color-dependent; forced colors retain boundaries/focus; reduced motion directly replaces groups; seven input modalities produce one semantic hit.
+- This presentation creates no Scene fact, explanation attempt, score, evidence, mastery, save, world/city response, route, access, authority, external action, identity, exam claim, RAI progress, credits, or successor. Hard stop before explanation submission/evaluation/feedback/result or any later state.
+
 ## 2026-07-17 transfer-submit presentation continuity
 
 - Reuse the invariant overview master; no new world plate, crop, geometry, light, material, maintenance, clock, hotspot, or art state is created.
