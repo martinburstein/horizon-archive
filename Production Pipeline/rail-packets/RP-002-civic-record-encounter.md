@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W1 — RP002-P1-013 open
+
+- **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`. The accepted `DR-20` group renders exact locked neutral source and genuinely blank editable `classification` / `owner`, but it has no submit action or App handler and says transfer submission/scoring is inactive.
+- **Evidence:** accepted root/JS/CSS HTTP `200`; focused accepted-path suites `105/105`; preserved user storage untouched. The normal route rejects non-return work as `python_primary_submission_not_integrated`.
+- **W2 boundary:** integrate only the protected transfer authority through miss/blank retry or bounded current-attempt `6/6` acknowledgement. Keep reload at the existing blank-primary durable checkpoint and stop before explanation or every later state.
+
 ## 2026-07-17 Advance A5 continuity handoff — protected transfer seam
 
 - **Disposition:** `REVISE — PROTECTED TRANSFER SEAM ONLY / ACCEPTED W1 NEXT`.

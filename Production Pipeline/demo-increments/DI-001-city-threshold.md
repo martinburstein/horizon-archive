@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — transfer submission blocker
+
+- **Issue:** `RP002-P1-013 / P1`; accepted blank fresh practice has editable fields but no submit action, evaluation handler, feedback/retry, or bounded completion acknowledgement.
+- **Stable evidence:** exact accepted assets serve HTTP `200`; focused accepted-path suites pass `105/105`; user storage and all existing returns/invariants were preserved.
+- **W2:** integrate only the existing protected transfer controller and stop before explanation or every later boundary.
+
 ## 2026-07-17 Advance A5 continuity — protected transfer seam
 
 - **Disposition:** `REVISE — PROTECTED SEAM ONLY / W1 NEXT`; accepted Demo assets are unchanged.
