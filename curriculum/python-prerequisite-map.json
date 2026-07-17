@@ -242,7 +242,7 @@
         "AI901-D2-O7"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "RP-007 SOLIDIFIED reinforcement: exact local UTF-8 Path write/read round trip over a supplied sanitized bounded-relation report; strict 8/8 primary, answer-free remediation, delayed closed-note trace, and genuinely blank 8/8 transfer. PY-014 is deferred because no package/environment mutation is required."
     },
     {
       "skill_id": "PY-016",

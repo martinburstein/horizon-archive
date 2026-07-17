@@ -1,0 +1,4 @@
+{
+  "R01": {"capability": "computer_vision", "deciding_signal": "inspect_an_existing_scan"},
+  "R02": {"capability": "image_generation", "deciding_signal": "create_a_new_illustration"}
+}

@@ -1,0 +1,86 @@
+{
+  "mapping_id": "RP007-A3-BRAIDED-VERGE",
+  "packet_id": "RP-007",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-08",
+  "source_verified_on": "2026-07-16",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-03 PY-015 local-file evidence remains complete after dictionary and function prerequisites; learner must write and read a supplied sanitized report with explicit UTF-8",
+    "ai901": "L-04-03 capability evidence and L-06-01 AI901-D1-O7 ledger row remain ready; confidence, scenery, or navigation never satisfies entry",
+    "missing_evidence_route": ["curriculum/lessons/L-03-03", "curriculum/lessons/L-04-03", "curriculum/lessons/L-06-01"],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true,
+    "py014_deferral": "PY-014 package/environment installation is deliberately deferred: RP-007 needs no package mutation and PY-015's mapped prerequisites are PY-009 and PY-012."
+  },
+  "unscored_scene_evidence": ["SC08_layout", "visible_contact_or_order", "motion", "sound", "hotspot_or_copy", "focus_navigation_return", "successful_execution_display", "save_restore_presentation", "accessibility_behavior", "Tour_traversal", "world_state"],
+  "python_contract": {
+    "skill_id": "PY-015",
+    "skill_name": "Read and write files",
+    "scope": "nearest_nonduplicate_local_file_reinforcement",
+    "implementation_reason": "Foundry and Azure AI workflows commonly exchange local inputs and outputs; an exact UTF-8 round trip demonstrates file handling while preserving bounded evidence and explicit unknowns.",
+    "learner_owned_action": "create the supplied Path, write the supplied report_text once with UTF-8, then read that same file once with UTF-8",
+    "provided_unscored_scaffold": ["sanitized replica observations", "bounded relation keys", "relative-order statement", "closed junction", "explicit None limits"],
+    "forms": {
+      "primary": {"filename": "braided_relation_report.txt", "lines": ["continuities=distinct", "association=recurrent", "difference=bounded", "order=relative", "junction=unavailable", "unity=None", "cause=None", "purpose=None"]},
+      "transfer": {"filename": "contact_replica_note.txt", "lines": ["continuities=separate", "association=observed", "difference=limited", "order=supported", "junction=unavailable", "unity=None", "cause=None", "purpose=None"]}
+    },
+    "checks": ["report_path_is_path", "exact_report_text", "write_text_called_once_utf8", "read_text_called_once_utf8", "round_trip_matches", "unavailable_junction_preserved", "unity_cause_purpose_none", "no_forbidden_or_external_operations"],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note Path/write/read/UTF-8/round-trip/unknown-boundary trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": ["hardcode_restored_report", "skip_write_or_read", "change_or_reorder_report_lines", "fill_closed_junction", "infer_unity_cause_purpose_coordination_or_ownership", "use_network_live_service_or_external_path", "reuse_primary_as_transfer", "count_SC08_layout_order_motion_sound_save_or_Tour"]
+  },
+  "ai901_contract": {
+    "check_id": "RP007-VISION-GENERATION-01",
+    "objective_id": "AI901-D1-O7",
+    "objective_title": "Identify features and capabilities of computer vision and image-generation models",
+    "scope": "focused_existing_visual_analysis_versus_new_visual_generation_retrieval_and_transfer; does_not_replace_L-04-03_or_L-06-01_mastery",
+    "dimensions": ["capability", "deciding_signal"],
+    "scene_and_sequence_are_never_cases_or_answer_cues": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Inspect an existing product photo for visible defects.","capability":"computer_vision","deciding_signal":"interpret_existing_visual_input"},
+        {"id":"P02","prompt":"Create a new landscape image from a written prompt.","capability":"image_generation","deciding_signal":"create_new_visual_output_from_prompt"},
+        {"id":"P03","prompt":"Identify objects in a supplied image.","capability":"computer_vision","deciding_signal":"identify_content_in_a_supplied_image"},
+        {"id":"P04","prompt":"Produce new image variants from a description.","capability":"image_generation","deciding_signal":"produce_new_images_from_a_description"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Inspect a provided scan.","capability":"computer_vision","deciding_signal":"inspect_an_existing_scan"},
+        {"id":"R02","prompt":"Create a new illustration.","capability":"image_generation","deciding_signal":"create_a_new_illustration"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"Classify objects in a provided photo.","capability":"computer_vision","deciding_signal":"classify_objects_in_a_provided_photo"},
+        {"id":"T02","prompt":"Render new concept art from text.","capability":"image_generation","deciding_signal":"render_new_concept_art_from_text"},
+        {"id":"T03","prompt":"Describe spatial relationships in an existing image.","capability":"computer_vision","deciding_signal":"describe_spatial_relationships_in_an_existing_image"},
+        {"id":"T04","prompt":"Generate new icon variants from a prompt.","capability":"image_generation","deciding_signal":"generate_new_icon_variants_from_a_prompt"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation, delayed closed-note 4/4 retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that existing visual input versus newly created visual output selects capability and visual adjacency, recurrence, difference, or order does not prove unity, cause, coordination, ownership, or purpose",
+    "misconception_tags": ["computer_vision_equals_image_generation", "any_image_means_computer_vision", "prompt_text_means_not_visual", "scene_or_sequence_selects_capability", "visual_order_proves_cause", "recurrence_proves_unity", "offline_case_proves_live_configuration", "valid_answer_authorizes_action"]
+  },
+  "remediation_contract": {
+    "python": ["name_Path_object", "trace_write_then_read", "restore_utf8", "compare_exact_lines", "preserve_None_limits", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["mark_existing_input_or_new_output", "contrast_analysis_and_generation", "remove_scene_cues", "explain_noncausal_visual_relation", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "report_content", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "credentials", "endpoints", "payloads", "responses", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_choices_feedback_case_answers_and_temporary_report_file",
+    "save_eligibility": "require finalized strict PY-015, finalized strict RP007-VISION-GENERATION-01, and separately finalized distinct-continuities recurrent-association bounded-difference relative-order closed-junction observations; no conjunct cross-credits another",
+    "after_save": "clear temporary work and keep only allowlisted finalized evidence plus expedition-owned relation note",
+    "resume": "restore only finalized dimension evidence and resume at first incomplete scored boundary"
+  },
+  "accessibility_contract": {"minimum_target_css_px":44,"one_active_owner_message_content_action_group":true,"persistent_labels":true,"field_associated_text_feedback":true,"status_live_region":true,"must_not_rely_on_color_motion_audio_position_or_sequence":true,"time_limit":false,"reduced_motion_equivalent":true,"focus_returns_to_first_invalid_or_next_required_control":true},
+  "authority_contract": {"course_authored_not_microsoft_exam_items":true,"no_exam_guarantee":true,"offline_only":true,"no_live_Azure_Foundry_vision_generation_terminal_or_world_call":true,"no_credential_resource_live_image_or_closed_junction_access":true,"no_permission_authentication_join_route_control_causation_or_external_action":true,"no_world_city_or_physical_delta":true,"tour_is_zero_credit_and_cannot_save":true},
+  "world_locks": ["RP-006 verified completion required", "two continuities remain distinct", "association recurrent but unity=None", "bounded difference preserved", "relative order preserved but cause=None", "closed junction unavailable", "purpose=None", "sanitized replicas only", "SC-08 invariant world and environmental clocks", "reversible RP-006 and earlier returns", "no RP-008 route or destination"],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

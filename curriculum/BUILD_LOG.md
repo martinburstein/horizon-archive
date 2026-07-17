@@ -1314,3 +1314,36 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the third-near-completion graph confirmation and returns the smallest isolated protected third-near-completion A5 seam with `REVISE` and no Working promotion.
 Unresolved risks: A4/A5 must not let Recorded display, sole-incomplete status, DOM or recovery order, replay, reading, focus, modality support, acknowledgement, `COMPARE SCALE` appearance/focus, responsive presentation, sanitation, restore, or Tour manufacture a third observation, mastery, comparison evidence, save eligibility, city response, access, or external action. Comparison activation, `SC-03-20`, far evidence, geometry, App/main, browser storage, art, route exposure, accepted-bundle/world change, successor, Demo, and Working remain absent.
 Notes: `NO REOPEN — SOLIDIFIED`. The named source-priority skill was unavailable, so the repository's official Microsoft source-priority rules and verified source register were followed directly. No settled curriculum, machine-readable contract, source register, runtime, UI, geometry, storage, art, route, canon, hidden lore, live service, Azure resource, credential, external action, exam claim, or world state changed.
+## Log entry: 2026-07-16T16:26:00-04:00
+
+Stage: RP-007 bounded relation synthesis curriculum verification (A3)
+Work completed: Closed the Curriculum gate with two independent SOLIDIFIED chains. Selected `PY-015` as the nearest fitting nonduplicate skill and defined one exact local UTF-8 `Path.write_text`/`Path.read_text` round trip over a supplied sanitized eight-line relation report; explicitly deferred `PY-014` because no package/environment mutation is required. Selected current `AI901-D1-O7` and defined neutral course-authored computer-vision versus image-generation cases according to whether the task analyzes existing visual input or creates new visual output. Locked strict primary, answer-free remediation, delayed retrieval/trace, genuinely blank fresh transfer, separate explanations, privacy allowlist, conjunctive save, accessibility, offline/no-authority, no-exam-guarantee, SOLIDIFIED/reopen, and anti-bypass rules. Preserved two distinct continuities, recurrence, bounded difference, relative order, the unavailable junction, explicit unity/cause/purpose limits, invariant SC-08, reversible returns, and no RP-008. SC-08 layout, order, motion, sound, presentation, save/restore, and Tour remain zero observation and mastery evidence.
+Files changed:
+- Production Pipeline/ADVANCE_BREADTH_GATE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/PACKET_SCOREBOARD.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/rail-packets/RP-007-braided-verge.md
+- curriculum/BUILD_LOG.md
+- curriculum/BUILD_STATUS.md
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/readiness/RP-007/contract.json
+- curriculum/readiness/RP-007/reference_primary.py
+- curriculum/readiness/RP-007/reference_transfer.py
+- curriculum/readiness/RP-007/reference_primary_answers.json
+- curriculum/readiness/RP-007/reference_retrieval_answers.json
+- curriculum/readiness/RP-007/reference_transfer_answers.json
+- curriculum/readiness/RP-007/validate_mapping.py
+Validation performed:
+- Read the workflow authority, registry, full canonical Curriculum Checker profile, RP-007 and SC-08, the exact RP-006 predecessor contract, current curriculum maps/status/log/source register, queue/map, and required production spines.
+- Checked the current official Microsoft AI-901 study guide, Foundry hub, SDK/endpoints overview, Agent Service overview, Content Understanding overview, and Computer Vision overview on 2026-07-16. No third-party source or exam item was used; the named source-priority skill was unavailable, so the repository's official-source fallback was followed directly.
+- RP-007 validator self-test passed. Python primary and genuinely fresh transfer references passed `8/8 + 8/8`. AI-901 primary/retrieval/genuinely fresh transfer references passed `8/8 + 4/4 + 8/8`. Empty-answer, wrong-capability, and hardcoded no-I/O bypass probes failed closed.
+- All curriculum JSON parsed; focused packet/spine/queue/map/scoreboard/source/zero-evidence/save-conjunction/Tour/privacy/offline/no-authority/no-exam-guarantee/no-RP-008 assertions and whitespace checks passed.
+Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-007, composing five equal-peer observations and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, privacy, save, mystery, authority, or successor boundaries.
+Unresolved risks: A4/A5 must not let scene imagery, contact adjacency/order, motion, sound, labels, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation or either mastery chain. The unavailable junction must remain unavailable; recurrence cannot become unity or coordination; relative order cannot become cause; and no world, route, external, exam, live-service, native-category, Machine, or RP-008 claim may emerge.
+Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native unity, hidden lore, route, external action, or successor content was created.

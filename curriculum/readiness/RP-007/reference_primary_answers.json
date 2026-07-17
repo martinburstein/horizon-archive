@@ -1,0 +1,6 @@
+{
+  "P01": {"capability": "computer_vision", "deciding_signal": "interpret_existing_visual_input"},
+  "P02": {"capability": "image_generation", "deciding_signal": "create_new_visual_output_from_prompt"},
+  "P03": {"capability": "computer_vision", "deciding_signal": "identify_content_in_a_supplied_image"},
+  "P04": {"capability": "image_generation", "deciding_signal": "produce_new_images_from_a_description"}
+}

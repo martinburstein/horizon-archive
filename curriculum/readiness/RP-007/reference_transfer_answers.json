@@ -1,0 +1,6 @@
+{
+  "T01": {"capability": "computer_vision", "deciding_signal": "classify_objects_in_a_provided_photo"},
+  "T02": {"capability": "image_generation", "deciding_signal": "render_new_concept_art_from_text"},
+  "T03": {"capability": "computer_vision", "deciding_signal": "describe_spatial_relationships_in_an_existing_image"},
+  "T04": {"capability": "image_generation", "deciding_signal": "generate_new_icon_variants_from_a_prompt"}
+}

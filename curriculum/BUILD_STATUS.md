@@ -120,3 +120,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added machine-readable contract, references, validator, official-source provenance, privacy/accessibility/offline/no-authority/no-exam-guarantee and bypass probes
 - [x] Preserved exact RP-005 completion, invariant SC-07, unavailable interval, cause None, independent observations, reversible returns, and no RP-007
 - [ ] Gameplay Master completes A4 against the exact solidified RP-006 contract
+
+## 2026-07-16 RP-007 curriculum verification
+
+- [x] Selected `PY-015` as the nearest fitting nonduplicate local-file reinforcement; deferred `PY-014` because RP-007 requires no package or environment mutation
+- [x] Added focused `RP007-VISION-GENERATION-01 / AI901-D1-O7` existing-visual-analysis versus new-visual-generation evidence
+- [x] Solidified Python `8/8 primary + answer-free remediation + delayed closed-note file trace + genuinely blank 8/8 transfer`
+- [x] Solidified AI `8/8 primary + per-dimension remediation + delayed 4/4 retrieval + genuinely blank 8/8 transfer + two boundary explanations`
+- [x] Added machine-readable contract, reference forms, validator, current official-source provenance, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and bypass probes
+- [x] Preserved distinct continuities, recurrent association, bounded difference, relative order, unavailable junction, unity/cause/purpose limits, independent five-observation evidence, invariant SC-08, reversible returns, and no RP-008
+- [ ] Gameplay Master completes A4 against the exact solidified RP-007 contract
