@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator acceptance of blank PY-009 entry — 2026-07-17
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`.
+- **Evidence:** independent full `565/565`, all `15` readiness validators through RP-012, production build, complete `89.6s` title-to-credits E2E, and live `1920 x 1080` plus `390 x 844` title-shell review pass. Port `4173` serves `index-VcgXSqIg.js` / `index-BQLB1SP6.css`; user storage and unrelated files were untouched.
+- **Accepted boundary:** exact five-record blank `SC-03-30` exposes one explicit Available `OPEN UNFINISHED WORK IMAGE`, which reaches only strict blank PY-009 primary with locked source fields, two empty expedition fields, and six false checks. Returns, sanitation, privacy, Tour isolation, offline/no-authority/no-exam-guarantee, invariant world, and null deltas remain exact.
+- **Next Working boundary:** W1 reports only the earliest exact gap toward an editable PY-009 submission/result seam. Transfer, explanation, responsible-AI work, review/save/completion, and RP-003+ remain closed.
+
 ## 2026-07-17 Working repair — RP002-P1-010
 
 Normal integration now reaches only the blank PY-009 primary through explicit `OPEN UNFINISHED WORK IMAGE` after strict five-record and prerequisite verification. The surface contains locked source fields, two empty expedition fields, six false checks, reversible returns, allowlisted replay-free resume, and no submission/result or later exposure. Focused `93/93`, full `565/565`, and build pass.

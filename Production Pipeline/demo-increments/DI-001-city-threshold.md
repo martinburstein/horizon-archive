@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator — blank PY-009 primary accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`.
+- **Release evidence:** full `565/565`, all `15` readiness validators through RP-012, production build, patch/leakage/purity checks, and complete `89.6s` title-to-credits E2E with `credits:true` and `runtimeErrors:false`. Incidental QA PNGs were restored.
+- **Live evidence:** exact `1920 x 1080` title shell has `1920/1920` width, `1428.7 x 744.4` game frame, and 48px actions; `390 x 844` has `390/390` width, `384 x 833.9` frame, and 44px actions. Current assets are `index-VcgXSqIg.js` / `index-BQLB1SP6.css`; user storage was untouched.
+- **Next boundary:** W1 reports only the earliest editable PY-009 submission/result gap. Transfer, explanation, responsible-AI work, review/save/completion, world/access/authority changes, and RP-003+ remain closed.
+
 ## 2026-07-17 W4 increment — RP002-P1-010 verification-only final reload
 
 - No production, art, gameplay, curriculum, state, or storage change was required after W3's clean review.
