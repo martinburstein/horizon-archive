@@ -464,7 +464,7 @@
           ],
           "mastery_check_type": "portal",
           "coverage_status": "mapped",
-          "notes": "Current portal, Agent Service API/SDK, tool, model, and identity details must be reverified before live use."
+          "notes": "RP-011 SOLIDIFIED focused reinforcement: distinguish prompt-agent portal authoring, agents-playground testing, lightweight client invocation, and client result/error handling using neutral course-authored cases. A configured tool or returned result never grants permission, proves truth, or authorizes action. Current portal, Agent Service API/SDK, tool, model, and identity details must be reverified before live use; SC-12 presentation, hidden/reopened records, reconciliation, and Tour are never cases, answers, weakness signals, or remediation cues."
         },
         {
           "objective_id": "AI901-D2-O5",

@@ -1,0 +1,6 @@
+{
+  "P01": {"agent_surface": "agent_portal_authoring", "deciding_signal": "configure_model_instructions_and_approved_tools"},
+  "P02": {"agent_surface": "agent_portal_testing", "deciding_signal": "exercise_agent_behavior_in_playground"},
+  "P03": {"agent_surface": "agent_client_invocation", "deciding_signal": "invoke_existing_agent_from_client"},
+  "P04": {"agent_surface": "agent_client_result_handling", "deciding_signal": "process_agent_result_or_error"}
+}

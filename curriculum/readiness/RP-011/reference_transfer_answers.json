@@ -1,0 +1,6 @@
+{
+  "T01": {"agent_surface": "agent_portal_authoring", "deciding_signal": "configure_model_instructions_and_approved_tools"},
+  "T02": {"agent_surface": "agent_client_invocation", "deciding_signal": "invoke_existing_agent_from_client"},
+  "T03": {"agent_surface": "agent_portal_testing", "deciding_signal": "exercise_agent_behavior_in_playground"},
+  "T04": {"agent_surface": "agent_client_result_handling", "deciding_signal": "process_agent_result_or_error"}
+}

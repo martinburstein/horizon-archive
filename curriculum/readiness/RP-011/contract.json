@@ -1,0 +1,161 @@
+{
+  "packet_id": "RP-011",
+  "mapping_id": "RP011-API-AGENT-BOUNDARY-01",
+  "status": "SOLIDIFIED",
+  "source_verified_on": "2026-07-17",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview"
+  ],
+  "prerequisites": {
+    "python_mastery_homes": ["L-05-03"],
+    "ai901_mastery_homes": ["L-05-04", "L-06-01"],
+    "retained_packet_evidence": ["RP-007 bounded relation summary", "RP-008 bounded offset summary", "RP-009 bounded edge ledger", "RP-010 bounded scope register"]
+  },
+  "python_contract": {
+    "skill_id": "PY-019",
+    "skill_name": "Understand APIs, SDKs, and endpoints",
+    "scope": "focused_offline_api_sdk_endpoint_role_synthesis; does_not_replace_L-05-03_mastery",
+    "implementation_reason": "A learner who later invokes a Foundry agent must distinguish the API contract, the SDK abstraction, and the endpoint address boundary. This packet rehearses those roles over supplied sanitized replicas without installing a package, using an address, or making a call.",
+    "learner_owned_action": "derive one fresh bounded integration record from three supplied sanitized replicas while preserving each API, SDK, and endpoint role, local provenance, a null endpoint value, and unsupported limits",
+    "provided_unscored_scaffold": ["three sanitized part replicas", "part labels", "bounded role strings", "local provenance label", "unsupported-limit keys"],
+    "checks": [
+      "local_python_only_no_import_or_remote_client",
+      "supplied_replicas_preserved_exactly",
+      "api_role_preserved_as_request_response_contract",
+      "sdk_role_preserved_as_client_library_abstraction",
+      "endpoint_role_preserved_as_address_boundary_with_null_value",
+      "fresh_record_uses_only_new_local_replica_provenance",
+      "unsupported_limits_remain_none",
+      "no_package_file_network_output_secret_credential_endpoint_or_external_operation"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every actually failed check, delayed closed-note API/SDK/endpoint/provenance/authority trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_or_replace_the_supplied_replica_set",
+      "collapse_API_SDK_and_endpoint_into_one_role",
+      "treat_endpoint_as_model_or_agent_identifier",
+      "supply_a_real_or_placeholder_address_credential_or_secret",
+      "reuse_any_prior_packet_record_or_summary_as_input",
+      "fill_identity_topology_continuity_transformation_unity_synchronization_chronology_cause_purpose_readiness_or_authority",
+      "import_install_or_use_an_SDK_HTTP_socket_or_remote_client",
+      "read_or_write_file_environment_network_output_or_private_content",
+      "reuse_primary_as_transfer",
+      "count_SC12_presentation_execution_hidden_or_reopened_status_save_return_or_Tour"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP011-SINGLE-AGENT-SURFACES-01",
+    "objective_id": "AI901-D2-O4",
+    "objective_title": "Create and test a single-agent solution in the Foundry portal and create a lightweight client application for an agent",
+    "scope": "focused_portal_authoring_portal_testing_client_invocation_and_result_handling_retrieval_and_transfer; does_not_replace_L-05-04_or_L-06-01_mastery",
+    "dimensions": ["agent_surface", "deciding_signal"],
+    "scene_prior_records_and_inferred_weakness_are_never_cases_answers_or_remediation_signals": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","case":"Configure one prompt agent's model, instructions, and approved tools in Foundry.","agent_surface":"agent_portal_authoring","deciding_signal":"configure_model_instructions_and_approved_tools"},
+        {"id":"P02","case":"Exercise expected behavior, an edge case, and a tool failure in the agents playground.","agent_surface":"agent_portal_testing","deciding_signal":"exercise_agent_behavior_in_playground"},
+        {"id":"P03","case":"A lightweight application submits current input to an existing agent interface.","agent_surface":"agent_client_invocation","deciding_signal":"invoke_existing_agent_from_client"},
+        {"id":"P04","case":"The lightweight application handles the returned agent result or error without granting new permission.","agent_surface":"agent_client_result_handling","deciding_signal":"process_agent_result_or_error"}
+      ],
+      "retrieval": [
+        {"id":"R01","case":"Use the playground to probe denied-action and tool-failure behavior before publication.","agent_surface":"agent_portal_testing","deciding_signal":"exercise_agent_behavior_in_playground"},
+        {"id":"R02","case":"Define stable instructions and attach only the approved tool while authoring the prompt agent.","agent_surface":"agent_portal_authoring","deciding_signal":"configure_model_instructions_and_approved_tools"},
+        {"id":"R03","case":"Send a fresh task from an app to an already defined agent.","agent_surface":"agent_client_invocation","deciding_signal":"invoke_existing_agent_from_client"},
+        {"id":"R04","case":"Branch locally on the result or error returned to the app.","agent_surface":"agent_client_result_handling","deciding_signal":"process_agent_result_or_error"}
+      ],
+      "transfer": [
+        {"id":"T01","case":"Choose the model, stable instructions, and allowed tools for a new prompt agent.","agent_surface":"agent_portal_authoring","deciding_signal":"configure_model_instructions_and_approved_tools"},
+        {"id":"T02","case":"A small app sends a new user task to the existing agent boundary.","agent_surface":"agent_client_invocation","deciding_signal":"invoke_existing_agent_from_client"},
+        {"id":"T03","case":"Inspect ordinary, edge, and failed-tool behavior in the agent testing surface.","agent_surface":"agent_portal_testing","deciding_signal":"exercise_agent_behavior_in_playground"},
+        {"id":"T04","case":"The app processes the returned result or error while preserving its action limits.","agent_surface":"agent_client_result_handling","deciding_signal":"process_agent_result_or_error"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation selected only from actually scored misses, delayed closed-note 8/8 retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that portal authoring, portal testing, client invocation, and client result handling remain distinct, and that configuring a tool or receiving a result neither grants permission nor proves truth",
+    "misconception_tags": [
+      "portal_authoring_equals_client_invocation",
+      "playground_test_equals_published_external_action",
+      "agent_identifier_equals_endpoint_model_or_credential",
+      "client_invocation_redefines_agent_instructions",
+      "returned_result_grants_permission",
+      "configured_tool_proves_authority",
+      "valid_agent_flow_proves_output_truth",
+      "scene_or_prior_record_selects_agent_surface",
+      "save_success_or_reopening_proves_mastery"
+    ]
+  },
+  "remediation_contract": {
+    "python": ["label_API_contract_role", "label_SDK_abstraction_role", "label_endpoint_address_role", "preserve_null_address", "preserve_new_replica_provenance", "preserve_none_limits", "remove_import_package_network_output_and_persistence", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["identify_portal_authoring", "identify_portal_testing", "identify_client_invocation", "identify_client_result_handling", "separate_agent_identifier_endpoint_model_and_credential", "remove_scene_prior_record_and_success_cues", "preserve_truth_permission_and_authority_boundaries", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_record_reopening_or_external_effect": true,
+    "remediation_is_selected_only_from_scored_python_checks_or_ai_misconception_tags": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "part_replicas", "integration_record", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "prior_record_content", "credentials", "secrets", "endpoints", "agent_identifiers", "instructions", "tool_payloads", "tool_results", "conversation_text", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_replica_records_feedback_case_answers_and_temporary_work",
+    "fresh_finalization_eligibility": "require finalized strict PY-019, finalized strict RP011-SINGLE-AGENT-SURFACES-01, and A4-defined deliberately finalized fresh observation evidence; no conjunct cross-credits another",
+    "prior_record_reopening": "only after the fresh record finalizes; reopen complete RP-007 RP-008 RP-009 and RP-010 records one individually navigable scope at a time without requiring memory of hidden content",
+    "reconciliation_eligibility": "require the finalized fresh record plus complete accessible reopened prior scopes; comparison of method provenance and limits remains separately scored from both learning chains and cannot change their evidence",
+    "after_save": "clear temporary work and keep only allowlisted finalized evidence, the fresh bounded record, four separate retained prior records, and the separately finalized method-and-limit reconciliation",
+    "resume": "restore only finalized dimension evidence and complete retained record metadata, preserve hidden or reopened status, then resume at the first incomplete scored boundary without replay or memory test"
+  },
+  "accessibility_contract": {
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "complete_prior_scopes_reopen_one_group_at_a_time": true,
+    "must_not_rely_on_color_motion_audio_position_scale_sequence_layout_or_memory": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_Microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_Azure_Foundry_model_agent_terminal_world_HTTP_API_SDK_endpoint_or_tool_call": true,
+    "no_real_secret_credential_endpoint_agent_identifier_instruction_tool_payload_result_resource_private_content_or_unavailable_margin_access": true,
+    "no_permission_authentication_readiness_correlation_synchronization_route_open_control_causation_or_external_action": true,
+    "no_world_city_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_finalize_reopen_reconcile_or_save": true
+  },
+  "zero_credit_events": [
+    "SC12_material_transition_similar_form_bypass_multiple_candidate_unavailable_margin_stewardship_or_local_rhythm",
+    "crop_hotspot_owner_label_hidden_retained_reopened_layout_focus_animation_or_reduced_motion_still",
+    "python_display_execution_result_prior_record_display_reconciliation_display_save_restore_return_navigation_or_Tour",
+    "confidence_timing_acknowledgement_or_presentation"
+  ],
+  "world_locks": [
+    "exact RP-010 verified completion and saved scope register required",
+    "RP-007 RP-008 RP-009 and RP-010 records remain separate valid bounded scopes",
+    "prior records hidden but retained until fresh finalization",
+    "no memory of hidden content is required",
+    "identity=None",
+    "topology=None",
+    "continuity=None",
+    "transformation=None",
+    "unity=None",
+    "synchronization=None",
+    "chronology=None",
+    "cause=None",
+    "purpose=None",
+    "readiness=None",
+    "authority=None",
+    "Machine_relation=None",
+    "sanitized new-reach replicas only",
+    "SC-12 invariant two-master four-phase world and independent local rhythms",
+    "reversible RP-010 and earlier returns",
+    "continuation unchanged",
+    "world city and external deltas null",
+    "no final art",
+    "no RP-012 route destination event lesson verdict or ending content"
+  ],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

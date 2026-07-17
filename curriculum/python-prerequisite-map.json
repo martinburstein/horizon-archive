@@ -305,10 +305,11 @@
       ],
       "supports_ai901_objectives": [
         "AI901-D2-O2",
-        "AI901-D2-O3"
+        "AI901-D2-O3",
+        "AI901-D2-O4"
       ],
       "mastery_level_required": "use_with_guidance",
-      "notes": ""
+      "notes": "RP-011 SOLIDIFIED synthesis: derive one fresh local integration record from supplied sanitized API, SDK, and endpoint replicas while preserving the request/response-contract, client-library-abstraction, and service-address-boundary roles, a null address, new-replica provenance, and unsupported None limits; strict 8/8 primary, actually-failed-check-only answer-free remediation, delayed closed-note trace, and genuinely blank 8/8 transfer. No import, install, package, file, environment, network, output, secret, credential, endpoint value, agent identifier, external action, or prior-record input is permitted."
     },
     {
       "skill_id": "PY-020",
