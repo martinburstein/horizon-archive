@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP002-AESTH-002 narrow civic-world finding
+
+- **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT.` The normal second-near behavior and immutable civic art remain correct, but the exact narrow presentation cannot display the world raster.
+- **Exact defect:** `CivicRecordArrival.jsx` supplies only `.city-world-plate-native`. The shipped narrow rule hides that class and shows only `.city-world-plate-narrow`, which the component does not render; no later civic-specific override restores the master. The deterministic result is an empty civic world area in narrow canonical layout across P0 and the reviewed one-ID/acknowledgement/two-ID `SC-03-10` states.
+- **Evidence:** focused route/first-near/second-near/hotspot/observation/photoreal **67/67 PASS**; root, `index-VF6buc7f.js`, `index-BZS4KKH0.css`, and the `BYTUil6H` civic asset HTTP `200`; served CSS reproduces the generic hide; original-size `1672 x 941` inspection and built-asset SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C` confirm no source-art regression. Browser attachment timed out before claim, so no gated screenshot, crop rectangle, console, or storage mutation is claimed.
+- **W4:** restore narrow visibility for the same immutable plate with aspect-preserving responsive behavior and add a focused regression check; do not create or modify art. Root live proof must cover desktop and narrow one-ID -> exact `2 of 3` Scene/System acknowledgement -> evidence return -> returned two-ID presentation. Preserve all two-ID maximum, save/replay/recovery, focus/44px/non-color/reduced-motion, first-person, privacy/Tour/no-credit/no-authority, unchanged-continuation, and no-later-exposure contracts.
+
 ## 2026-07-17 W2 — RP002-P1-004 second-near demo reload
 
 - **Disposition:** `DEMO RELOADED — RP002-P1-004 RESOLVED / W3 NEXT`. The normal one-ID group now displays one Recorded/replay-only action and two literal Available peer actions. Exactly one fresh remaining action adds its matching second ID and exact Scene statement, displays literal System `2 of 3`, and returns to a two-Recorded/one-Available group.
