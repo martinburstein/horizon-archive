@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP-002 third-near dormant-boundary review
+
+- **Disposition:** `NO AESTHETIC FINDING OPENED / W4 ROOT LIVE PROOF NEXT.` Available build, source, art, and focused evidence retain the intended two-ID -> third acknowledgement -> three-near/zero-far dormant boundary without authorizing comparison or later content.
+- **Evidence:** focused **85/85 PASS**; root, `index-Dgq5W_0s.js`, `index-R5wdIep0.css`, and the `BYTUil6H` civic asset HTTP `200`; served JS includes literal `3 of 3` and `DORMANT // ZERO CREDIT // NEXT STAGE NOT ACTIVE`; served CSS retains the narrow `display:block; object-fit:cover` repair; immutable built-asset SHA-256 remains `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **Presentation disposition:** persistent Recorded/Available text, exact Scene/System ownership, native-disabled plus `aria-disabled` dormant comparison, separate route return, heading-first focus intent, `>=44px` controls, natural narrow reflow, and non-color/reduced-motion meaning remain explicit. Original-size art inspection passes first-person, sharpness, Builder-function, no-protagonist/no-ship, no-text/UI, and artifact gates.
+- **Evidence boundary/W4:** the in-app browser was unavailable and the existing Chrome demo tab could not be safely claimed before timeout. The user save/storage remained untouched, so W3 makes no direct gated screenshot, crop, focus-ring, overflow, console, forced-color, or assistive-technology claim. W4/root must obtain exact desktop/narrow live proof; if clean, verification/final reload only with no production or art change. Preserve the three-near/zero-far maximum and no `SC-03-20`/far/learning/RP-003+ exposure.
+
 ## 2026-07-17 W2 — RP002-P1-005 third-near demo reload
 
 - **Disposition:** `DEMO RELOADED — RP002-P1-005 RESOLVED / W3 NEXT`. The exact accepted two-ID evidence group now permits only its sole remaining fresh near action. It preserves both prior records byte-stably, adds exactly the matching third ID/Scene statement, and presents literal System `Near evidence recorded: 3 of 3. Distant comparison is available; no city state changed.`
