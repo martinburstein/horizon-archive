@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE / A5 NEXT`
+- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE / COORDINATOR NEXT`
 - Target chapter/location: Chapter 3 expansion closure / exposed chronology landscape beyond Manyfold Return
 - Target demo horizon: fifth future slice after the accepted RP-001 boundary; directly after RP-005
 - Route order: 6
@@ -13,8 +13,8 @@
 - Working title: `Interval Works` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase II — Expansion / slot 3 of 3
 - Target player time: `29–40 minutes` clean first play; `17–24 minutes` mastered replay; protected A5 reference-fixture target `<5 minutes` through the real frozen evaluators with no skipped evidence or explanation
-- Complete Advance cycles spent on this packet: 0 complete A1–A5 cycles; A1 story pass only
-- Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
+- Complete Advance cycles spent on this packet: 1 complete A1–A5 orientation cycle
+- Convergence-budget status: `WITHIN BUDGET — ONE COMPLETE CYCLE; PROTECTED MISSING-GATE COUNT ZERO`
 
 ## Locked premise
 
@@ -228,8 +228,8 @@ The course panel contains no SC-07 image/crop, layer or repair form, sequence/or
 
 ## Rough Code Track — Coder
 
-- Status: `UNASSIGNED — A5 NEXT UNDER THE EXACT PROTECTED-CONSTRUCTION HANDOFF`
-- A5 may implement one pure protected journey/harness only. No App/main import, feature flag, browser persistence, normal route, production-art hook, accepted bundle, live Demo exposure, network request, live record/interval access, Working pass, or RP-007 content is authorized.
+- Status: `PASS — A5 PURE PROTECTED IW-00→IW-30 JOURNEY COMPLETE; COORDINATOR GATE REVIEW NEXT`
+- One pure `IntervalWorksProtectedJourney` caller composes the exact verified RP-005 boundary, all 24 equal-peer observation orders, both strict real frozen learning chains, answer-free recovery, allowlisted atomic save, replay-free restore, deterministic focus/resume, Tour isolation, reversible returns, invariant SC-07, and the undefined destinationless continuation. It remains unimported by App/main, non-routable, storage/network/DOM-free, absent from the accepted bundle, and unavailable to Working.
 
 ## Accessibility and presentation risks
 
@@ -274,15 +274,15 @@ The course panel contains no SC-07 image/crop, layer or repair form, sequence/or
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-013 and RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED`; Puzzle `PASS — IW-00 through IW-30 integrated graph locked`.
-- Packet gates remaining: Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
-- Did this pass reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-013 and RP006-SPEECH-01 / AI901-D1-O6 SOLIDIFIED`; Puzzle `PASS — IW-00 through IW-30 integrated graph locked`; Protected code `PASS`; Save/recovery implementation `PASS`; Accessibility implementation evidence `PASS`; post-integration protected validation `PASS`.
+- Packet gates remaining: final Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, and protected post-integration validation moved MISSING/PARTIAL -> PASS`.
 - Existing seams integrated or consolidated: RP-005's saved bounded summary, no-live-read/rank/correct rule, ordinary Builder executable literacy, privacy clearing, reversible returns, and serviced destinationless continuation become one direct Phase II closure premise.
 - Optional work trimmed or deferred: absolute chronology, missing-interval content, causal explanation, native category, live replay, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- New module or artifact integration consumer: A5 composes one pure protected journey/harness through existing authorities; per-transition modules are rejected.
-- Breadth verdict: `CONTINUE — A5 ADVANCE CODER`
+- New module or artifact integration consumer: one pure protected journey/harness now composes the existing authorities; no per-transition module or normal-route consumer was added.
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`
 - Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-006 reaches the coordinator gate`.
-- Exact next action in one sentence: Coder A5 builds one pure protected IW-00→IW-30 journey/harness through the real frozen evaluators, proving all 24 observation orders, sequence-not-causation, neutral speech-case isolation, atomic recovery, Tour isolation, and invariant SC-07 before Gate Review.
+- Exact next action in one sentence: Coordinator independently verifies the twelve protected gates and either promotes RP-006 behind RP-005 or records one genuine hold; no additional RP-006 micro-seam or RP-007 content starts first.
 
 ## Advance Handoff Gate
 
@@ -290,9 +290,13 @@ The course panel contains no SC-07 image/crop, layer or repair form, sequence/or
 - Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
-- Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — A4 COMPLETE / A5 NEXT`
-- Required revision: `A5 completes protected construction on this unchanged graph; no successor is defined`.
+- Coder smoke-test result: `PASS — focused 13/13; real RP-003→RP-004→RP-005→RP-006 path 50/50; RP-006 validator; full 465/465; build; unchanged accepted-bundle identity; leakage/purity/patch integrity`
+- Readiness: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE`
+- Required revision: `NONE at the protected stage; coordinator owns the independent twelve-gate decision and every successor remains undefined`.
+
+### Exact Coordinator Gate Review handoff
+
+`Coordinator: independently verify RP-006 against all twelve Gate Review items. Re-run focused RP-006 13/13 and combined real RP-003→RP-004→RP-005→RP-006 50/50, the RP-006 validator, full suite/build, accepted-bundle identity, App/main/dist leakage, protected purity, and patch integrity. Confirm all 24 orders; strict PY-013 8/8 primary + eight-dimension trace + blank 8/8 transfer; independent RP006-SPEECH-01 8/8 primary + 4/4 retrieval + blank 8/8 transfer + both explanations; exact source order, explicit unavailable gap, and every cause None; neutral scene/order/sound/Tour isolation; answer-free blank recovery; contiguous resume with physical re-observation; atomic allowlisted save; replay-free restore; deterministic focus; safe returns; destinationless continuation; responsive/accessibility metadata; unchanged bundle, continuation, null deltas, and invariant SC-07; and zero App/main/browser persistence/normal route/art/live Demo/prior-packet behavior/RP-007 change. If all pass, promote RP-006 behind RP-005 and authorize only a blank RP-007 contiguous shell; otherwise record one genuine hold. Do not add another RP-006 protected micro-seam during review.`
 
 ### Exact Coder A5 protected-construction handoff
 
@@ -310,7 +314,7 @@ The course panel contains no SC-07 image/crop, layer or repair form, sequence/or
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-006 IN DESIGN — A4 COMPLETE / A5 NEXT`
+- Team 1 railhead after promotion: `PENDING — RP-006 AT GATE REVIEW / A5 COMPLETE`
 - Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A4 graph lock`
+- `STORY_RAIL_MAP.md` updated: `YES — A5 protected construction and coordinator handoff`
 - Coordinator: `PENDING`
