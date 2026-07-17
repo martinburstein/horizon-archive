@@ -20,7 +20,8 @@ Andromeda survey corridor
 │       ├── SC-02 City Threshold [A2 brief / no final art]
 │       ├── SC-03 Civic Record District [A2 compact photorealistic brief / no final art]
 │       ├── SC-04 Calibration Margin [A2 invariant-world photorealistic brief / no final art]
-│       └── SC-05 Three-Current Reach [A2 panoramic exchange-landscape brief / no final art]
+│       ├── SC-05 Three-Current Reach [A2 panoramic exchange-landscape brief / no final art]
+│       └── SC-06 Manyfold Return [A2 repeated-receiver field brief / no final art]
 └── Future survey worlds [locked]
     ├── Ecological continuity world
     ├── Memorial-scale world
@@ -45,7 +46,7 @@ This line records player-facing progression only. It does not assert that the lo
 | 6 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
 | 7 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
 
-Within World D, `SC-02 -> SC-03 -> SC-04 -> SC-05` is a contiguous survey path. The threshold bridge enters the civic district, the marked adjacent direction reaches the calibration margin, and RP-003's previously undefined expedition bearing reaches the broad exchange landscape without replay, activation, destination reveal, or physical world response.
+Within World D, `SC-02 -> SC-03 -> SC-04 -> SC-05 -> SC-06` is a contiguous survey path. The threshold bridge enters the civic district, the marked adjacent direction reaches the calibration margin, the expedition bearing reaches the broad exchange landscape, and its observed physical return continues into the receiver field without replay, activation, value judgment, destination reveal, or physical world response.
 
 ## Expansion rule
 

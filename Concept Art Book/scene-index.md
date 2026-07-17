@@ -11,6 +11,7 @@
 | SC-03 | Civic Record District | World D / Volcanic Habitation Vault / City Beneath civic district | Brief — A2 compact four-phase presentation convergence locked; no final art | Three premium first-person masters support arrive, survey, interpret/save, and verify/return without turning existing micro-seams into separate slides | [Sheet](scenes/SC-03-civic-record-district.md) · [Historical scale reference](../Concept%20Art/Underground%20City.png) |
 | SC-04 | Calibration Margin | World D / Volcanic Habitation Vault / City Beneath working margin | Brief — A2 invariant-world sequence and one-master production plan locked; no final art | Two exposed corresponding process bands, one bounded difference, one sealed source boundary, and one occupational comparison coupling remain physically invariant across four compact phases | [Sheet](scenes/SC-04-calibration-margin.md) · [Historical scale reference](../Concept%20Art/Underground%20City.png) |
 | SC-05 | Three-Current Reach | World D / Volcanic Habitation Vault / broad exchange reach | Brief — A2 invariant-landscape sequence and panoramic-master plan locked; no final art | Three materially distinct current/handling relations converge on one apparent common return while five compact phases preserve zero live control and world invariance | [Sheet](scenes/SC-05-three-current-reach.md) |
+| SC-06 | Manyfold Return | World D / Volcanic Habitation Vault / repeated-receiver field | Brief — A2 compact invariant-field sequence and two-master plan locked; no final art | Panorama plus forensic detail make recurring trace range, bounded divergence, sealed unavailability, and layered compatible replacement readable without judgment or live control | [Sheet](scenes/SC-06-manyfold-return.md) |
 
 ## Status vocabulary
 
@@ -20,6 +21,6 @@
 - **Selected:** approved production direction with a complete scene sheet.
 - **Integrated:** implemented in the game and play-tested.
 
-Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-004 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
+Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-005 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
 
-Next coverage recommendation: Curriculum Checker should perform RP-004 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-05 visual, motion, interaction, and interface state as zero mastery evidence. SC-02 through SC-05 remain briefs unless their Working records say otherwise; SC-05 has no final art.
+Next coverage recommendation: Curriculum Checker should perform RP-005 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-06 visual distribution, trace frequency, motion, interaction, and interface state as zero mastery evidence and never an answer key. SC-06 has no final art.

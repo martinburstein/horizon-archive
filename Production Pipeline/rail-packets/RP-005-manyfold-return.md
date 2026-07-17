@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 LORE PASS COMPLETE`
+- Status: `IN DESIGN — A2 STORYBOARD PASS COMPLETE`
 - Target chapter/location: Chapter 3 expansion continuation / repeated-receiver landscape beyond the Three-Current Reach
 - Target demo horizon: fourth future slice after the accepted RP-001 boundary; directly after RP-004
 - Route order: 5
@@ -118,15 +118,29 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 
 ## Storyboard Track — Storyboarder
 
-- Status: `UNASSIGNED — A2 NEXT`
-- Narrative function to compose: make one dividing input, many materially varied receiving forms, a recurring trace range, bounded divergence, one sealed branch, and layered stewardship readable as patient collective work without labels, pseudo-writing, human machinery, or success-state reaction.
-- Required state boards: entry/full-field orientation, recurring-range detail, divergent-trace detail, sealed-boundary detail, stewardship detail, run-result interface state, completed local-save state, and reversible return; merge boards where one registered invariant world preserves legibility and ownership.
-- Locked continuity: first-person view; no protagonist/ship/human traces; no RP-004 event replay; no RP-006 destination; invariant field geometry, flow, traces, sealed branch, maintenance paths, and environmental clocks; a valid run changes only the separate suit interface.
-- Flexible visual areas: exact topology, scale, receiver morphology, material families, atmosphere, collective design movement, maintenance silhouettes, trace visualization, coupling placement, interaction zones, negative space, and plate count, provided repeated forms are not exact clones and recurrence/divergence/unavailability remain distinct without color or motion alone.
+- Status: `PASS — A2 COMPACT INVARIANT-FIELD SEQUENCE AND PRODUCTION BRIEF LOCKED`
+- Canonical scene sheet: `Concept Art Book/scenes/SC-06-manyfold-return.md`.
+- Location identity: a broad repeated-receiver field directly beyond the Three-Current Reach. One subsurface carrier divides through an irregular fan of branches into hundreds of unequal receiver forms, then returns through an underfield network; it is not a laboratory, factory line, orchard, cemetery, voting system, statistical chart, or human model-evaluation display.
+- Functional landscape: exposed receiver output collars retain physical mineral-deposition cuffs from repeated contact. Most occupy a narrow range without exact duplication; several bounded cuffs remain visibly outside that span; one fused branch exposes only an opaque service boundary and bypass. Incoming division, receiver treatment, trace formation, bypass, return, maintenance, and outbound continuation remain physically causal and purpose-unknown.
+- Collective movement evidence: foundation-era distribution beds and collars, later compatible glass-ceramic replacements, and maintained-present repair cuffs show a centuries-long movement toward compatible replacement without forced uniformity. This does not identify an institution, profession, author, doctrine, truth, quality standard, or intended operator.
+- Canonical boards: `SC-06-00 ARRIVE + IDLE`, `SC-06-10 INSPECT DISTRIBUTION`, `SC-06-20 SUMMARIZE + SAVE`, and `SC-06-30 VERIFY + RETURN`. One panorama serves entry/work/save/restore/return; one forensic detail master serves all four peer observations. Only registered crops, monotonic ambient samples, and the separate expedition interface may differ.
+- Composition: premium first-person panorama at `30–35 mm` with one incoming branch fan and deep unequal receiver field; registered detail view at `45–55 mm` contains recurring-range, divergent-trace, sealed-boundary, stewardship-joint, and replica-coupling evidence in one readable composition. Calm upper-vault and side negative space preserve gameplay hierarchy.
+- Interaction zones: `RECURRING-TRACE-RANGE`, `BOUNDED-DIVERGENT-TRACE`, `SEALED-BRANCH-BOUNDARY`, `LAYERED-STEWARDSHIP-JOINT`, `SANITIZED-TRACE-COUPLING`, and `RETURN-TO-THREE-CURRENT-REACH` register semantically to approved geometry. The four observations are equal peers in any order; no name uses normal/outlier, good/bad, correct/failed, color, position alone, purpose, model, metric, or native category.
+- State invariance: arrival, all observations, valid run, save/failure, verified restore, and return preserve flow, traces, receiver bodies, sealed branch, maintenance paths, routes, coupling body, light/sound sources, and monotonic environmental clocks. No result highlights frequency as preference or divergence as failure; no success ranks, corrects, opens, reroutes, or acknowledges.
+- Asset plan: one lossless `SC-06-PANORAMA-MASTER` and one spatially consistent `SC-06-DETAIL-MASTER`, preferably `6144 x 3456` or larger and never below `3840 x 2160`; registered overview/evidence crops; semantic masks; separate flow/dust/condensation/trace/maintenance layers; reduced-motion stills; registration/difference proof; and full-resolution/grayscale/thumbnail/wide/laptop/narrow/zoom/forced-color/artifact review packages.
+- Provenance plan: final prompts, model/tool/mode, references, dates, territory variants, selection rationale, edits, cleanup, both master dimensions and camera relation, crops, masks, effects, derivatives, and approvals must be recorded in `Concept Art Book/prompt-provenance-log.md`. Existing concepts are evidence only; no raster is authorized by A2.
+- Responsive presentation: representative `1920 x 1080` contains the complete outer shell in `100dvh` without outer scroll, distortion, clipped ownership/limits, or off-screen required actions while the current master remains dominant. Narrow and `200%` text zoom reflow naturally in one vertical column without horizontal escape; required controls remain at least `44 x 44 CSS px`.
+- Artifact rejection: no protagonist/ship/human trace or ergonomics, readable text, pseudo-writing, charts/graphs/histograms/scatter plots/tallies/votes/rankings, human machinery, exact clones, color-coded normal/outlier groups, warning divergence, fantasy ornament, mushroom/coral/crystal/cemetery shorthand, screen/console/kiosk, face/eye, portal continuation, access-like seal, live-control coupling, success effect, copied composition, generic neon, melted geometry, impossible material response, or crop that loses required evidence.
+
+### Storyboarder decisions and sign-off
+
+- Locked visual decisions: direct RP-004 adjacency; `SC-06` repeated-receiver field; one panoramic and one forensic detail master; four compact phases; equal-peer recurrence/divergence/sealed/stewardship zones; compatible-replacement movement across three eras; replica-only embedded coupling; first-person clean plates; invariant field/clocks; zero live read/rank/correct/control; reversible returns; LOOK-only destinationless continuation; responsive/accessibility, provenance, and artifact gates.
+- Flexible visual decisions: exact topology, receiver morphology, branch contours, compatible material proportions, vault depth, atmosphere, maintenance-form anatomy/count, trace anatomy, effect timing, crop coordinates, lenses within readability ranges, and restrained grade, provided none assigns truth, value, quality, model/evaluation category, native purpose, identity, authority, Machine relation, or successor meaning.
+- Sign-off: `PASS — A2 COMPLETE; SCENE AND PRODUCTION-ART-PLAN GATES CLOSED; READY FOR CURRICULUM CHECKER A3`.
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 MAY SELECT ONLY AFTER A2`
+- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
 - Lore-provided learning opportunity: summarize bounded exposed repetitions, preserve divergence without judgment, and represent a sealed branch as unavailable rather than inferred.
 - No Python skill ID, AI-901 objective, model/evaluation category, case, answer, threshold, remediation path, metric, or mastery evidence is authorized by A1.
 
@@ -185,35 +199,39 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`.
-- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Story moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 compact invariant-field sequence and premium production-art plan`.
+- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
+- Did this cycle reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
 - Existing seams integrated or consolidated: RP-004's saved form/corridor/purpose-unknown note, no-live-control rule, executable literacy, privacy clearing, reversible returns, and visible outbound continuation become one direct expansion premise.
 - Optional work trimmed or deferred: RP-006 destination, additional fields, secondary programs, identity-bearing matter, live sampling, quality judgment, correction, native categories, and Machine relationship.
 - New module or artifact integration consumer: later A5 may compose existing observation/summary/evidence/save authorities only after A2–A4; no new module is requested by A1.
 - Breadth verdict: `CONTINUE`
 - Next contiguous packet seed readiness: `RP-006 remains RESERVED until RP-005 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Storyboarder A2 composes the smallest registered scene sequence that makes recurrence, bounded divergence, sealed unavailability, and multi-era stewardship physically legible while the live field remains invariant.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating the complete SC-06 presentation as zero mastery evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
-- Storyboarder sign-off: `PENDING A2`
+- Storyboarder sign-off: `PASS — 2026-07-16`
 - Curriculum Checker sign-off: `PENDING A3`
 - Gameplay Master sign-off: `PENDING A4`
 - Coder smoke-test result: `PENDING A5`
 - Readiness: `REVISE`
-- Required revision: complete A2–A5 sequentially on this packet; do not define RP-006.
+- Required revision: complete A3–A5 sequentially on this packet; do not define RP-006.
 
 ### Exact Storyboarder A2 handoff
 
 `Storyboarder Agent — A2: work only on RP-005 Manyfold Return. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, this packet, RP-004's exact end state, the active maximum-quality photorealistic charter, and your latest work log. Compose the smallest registered first-person scene sequence that makes one dividing flow, many materially varied receivers, a recurring exposed range, bounded divergent traces, one sealed/unavailable branch, and multi-era stewardship causally legible as patient collective work without labels, pseudo-writing, human machinery, exact cloned forms, or a success-state reaction. Preserve the direct RP-004 start, saved predecessor note, no-live-read state, unchanged continuation, null city delta, real-Python occupational-work meaning, sanitized-replica provenance, expedition/suit ownership, no password/judgment/control framing, no protagonist/ship/human traces, invariant field/trace/maintenance/environment clocks, reversible returns, full-shell representative 1920 x 1080 containment, accessible narrow/text-zoom reflow, >=44px controls, and all mystery protections. Define entry/full-field orientation, recurring-range detail, divergent-trace detail, sealed-boundary detail, stewardship detail, run-result interface, completed local-save, and return evidence; merge boards where one registered invariant world can serve multiple interface states. Specify functional landscape, collective design movement, physically causal materials/lighting/atmosphere, landmarks, interaction zones, negative space, production assets/provenance, responsive mapping, reduced-motion/non-color equivalents, and artifact-cleanup acceptance. Do not select curriculum, model/evaluation categories, metrics, puzzle answers, code, native categories, truth/value judgments, Machine relation, RP-006 content, or hidden lore. Update RP-005, LOCATION_VISUAL_SPINE.md, your work log, queue/map handoff state, validate continuity and presentation, and hand the unchanged lore boundary to Curriculum Checker A3.`
 
+### Exact Curriculum Checker A3 handoff
+
+`Curriculum Checker Agent — A3: work only on RP-005 Manyfold Return. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, this packet, the exact A1 lore boundary, and the locked SC-06 scene sheet. Select and verify the nearest contiguous Python skill and current official AI-901 objective for summarizing sanitized exposed reading replicas while preserving bounded divergence, sealed unavailability, and explicit interpretation limits without judgment. Treat every SC-06 world view, trace frequency, material/flow animation, hotspot, crop, display, owner text, focus, navigation, successful execution display, save presentation, restore, return, and accessibility behavior as zero mastery evidence and never an answer key. Preserve real Python as ordinary Builder occupational work rather than authentication, model evaluation, live sampling, ranking, correction, or control; Scene/Pilot/System/Builder-work ownership; exact RP-004 predecessor state; unchanged continuation; null city/external delta; replica-only provenance; privacy, offline/no-authority, no-exam-guarantee, reversible returns, no truth/value/native-purpose/Machine claim, no RP-006 route, and all mystery protections. Define prerequisites, exact skill/objective IDs, current official sources, primary evidence, answer-free remediation, retrieval and genuinely fresh transfer, strict thresholds, misconception handling, privacy allowlist, save-eligibility conjunction, SOLIDIFIED/reopen status, and explicit model/evaluation-category and metric boundaries only if required by the official objective. Do not infer correctness, quality, model category, metric, or answer from the visual distribution; alter SC-06 composition; create puzzle mechanics beyond the curriculum contract; write code; generate art; define native categories or Machine relation; seed RP-006; or open hidden lore. Update RP-005, CURRICULUM_SPINE.md, queue/map/status records, and the Curriculum work log; validate under the project's Microsoft source-priority rules; then leave one exact Gameplay Master A4 handoff.`
+
 ## Promotion record
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-005 IN DESIGN — A1 COMPLETE`
+- Team 1 railhead after promotion: `RP-005 IN DESIGN — A2 COMPLETE`
 - Next contiguous packet seeded: `NO — RP-006 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`

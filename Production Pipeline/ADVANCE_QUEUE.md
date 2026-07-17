@@ -21,15 +21,15 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
-| 5 | `RP-005` | Manyfold Return | `IN DESIGN — A1 COMPLETE` | Storyboarder Agent (`A2`) | Lore `PASS`; Scene/Curriculum/Puzzle/Code pending | Exact RP-004 completion: bounded note saved, work cleared, live currents unchanged, unchanged `continuation`, null city delta, reversible returns, outbound physical continuation observed only | A2 composes the smallest registered invariant-field scene sequence; RP-006 remains reserved. |
+| 5 | `RP-005` | Manyfold Return | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`) | Lore and Scene `PASS`; Curriculum/Puzzle/Code pending | Exact RP-004 completion plus locked `SC-06` panorama/detail brief; unchanged `continuation`, null city delta, replica-only coupling, reversible returns, no RP-006 destination | A3 selects and validates only the nearest contiguous Python/AI-901 mapping; the visual distribution remains zero mastery evidence. |
 
 ## Team positions
 
 - Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `3 — RP-002, then RP-003, then RP-004`
-- In-design packets: `1 — RP-005 / A1 COMPLETE`
-- Team 1 railhead: `RP-005 — IN DESIGN / A1 COMPLETE / A2 NEXT`
+- In-design packets: `1 — RP-005 / A2 COMPLETE`
+- Team 1 railhead: `RP-005 — IN DESIGN / A2 COMPLETE / A3 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `4 ordered packets — RP-002, RP-003, and RP-004 promoted; RP-005 in design`
 - Whole-story rail status: `IN PROGRESS`
