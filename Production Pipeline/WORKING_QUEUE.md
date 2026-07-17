@@ -24,6 +24,7 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 | 3 | `RP-003` | `READY — QUEUED BEHIND RP-002` | Later integrate the approved Calibration Margin packet without skipping the older adjacent packet | Player Agent after RP-002 acceptance | RP-002 must be accepted first; final production assets and normal integration are unbuilt | Hold ordered position; do not begin Working until RP-002 is accepted |
 | 4 | `RP-004` | `READY — QUEUED BEHIND RP-003` | Later integrate the approved Three-Current Reach packet without skipping either older packet | Player Agent after RP-003 acceptance | RP-002 and RP-003 must be accepted first; final production assets and normal integration are unbuilt | Hold ordered position; do not begin Working until both predecessors are accepted |
 | 5 | `RP-005` | `READY — QUEUED BEHIND RP-004` | Later integrate the approved Manyfold Return packet without skipping the three older packets | Player Agent after RP-004 acceptance | RP-002 through RP-004 must be accepted first; final production assets and normal integration are unbuilt | Hold ordered position; do not begin Working until every predecessor is accepted |
+| 6 | `RP-006` | `READY — QUEUED BEHIND RP-005` | Later integrate the approved Interval Works packet without skipping the four older packets | Player Agent after RP-005 acceptance | RP-002 through RP-005 must be accepted first; final production assets and normal integration are unbuilt | Hold ordered position; do not begin Working until every predecessor is accepted |
 
 `RP-002` passed coordinator Gate Review and is promoted. Its protected journey still remains absent from App/main, browser storage, accepted bundles, normal routing, and the live Demo until the Working Team implements and accepts it.
 
@@ -32,6 +33,8 @@ The Working Team uses this queue for approved Rail Packets and current-demo bloc
 `RP-004` passed coordinator Gate Review on 2026-07-16 after independent `432/432`, focused predecessor/journey, curriculum-validator, build, leakage, purity, and patch checks. It is promoted strictly behind RP-003; its protected journey remains absent from App/main, browser storage, accepted bundles, normal routing, production art, and the live Demo.
 
 `RP-005` passed coordinator Gate Review on 2026-07-17 after independent focused predecessor/journey checks, full `448/448`, RP-005 validator, build, accepted-bundle identity, leakage, purity, and patch checks. It is promoted strictly behind RP-004 and remains absent from the live Demo.
+
+`RP-006` passed coordinator Gate Review on 2026-07-17 after independent focused `13/13`, combined predecessor `50/50`, full `465/465`, RP-006 validator, build, byte-identical accepted assets, leakage, purity, and patch checks. It is promoted strictly behind RP-005 and remains absent from the live Demo.
 
 **Current W2 result:** `RP002-P1-001` is resolved. The exact verified RP-001 predecessor now exposes a normal `FOLLOW RECORDED CIVIC ROUTE` action into only P0 / `SC-03-00`, with reversible return and a bounded allowlisted resume checkpoint. Focused `6/6`, full `419/419`, build, and complete E2E pass; port `4173` is reloaded. W3 owns only the first arrival's aesthetic review. The dedicated `SC-03-00` master remains an explicit temporary production-art hook, and no RP-003 content is exposed.
 

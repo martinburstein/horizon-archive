@@ -22,17 +22,18 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
-| 6 | `RP-006` | Interval Works | `GATE REVIEW — A5 HANDOFF` | Coordinator | Story through protected post-integration gates pass; independent twelve-gate review pending | Exact RP-005 end state plus one pure protected `IW-00→IW-30` caller; frozen PY-013 and independent RP006-SPEECH-01; invariant SC-07, null deltas, no RP-007 | Independently rerun focused predecessor/journey, validator, full suite/build, accepted-bundle identity, leakage/purity, and patch-integrity gates; promote or record one genuine hold. |
+| 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; Advance A1 owns only the blank RP-007 shell next. |
+| 7 | `RP-007` | Reserved contiguous shell | `SEED — RESERVED` | Lore Builder Agent (`A1`, next cycle) | No content assigned | Exact verified RP-006 end state only; no route, location, lesson, puzzle, art, or lore content exists yet | Seed one surface-safe contiguous slice next cycle; do not skip or predefine later packets. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `1 — RP-006`
+- Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
-- Promoted packets awaiting Working acceptance: `4 — RP-002, then RP-003, then RP-004, then RP-005`
+- Promoted packets awaiting Working acceptance: `5 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006`
 - In-design packets: `0`
-- Team 1 railhead: `RP-006 — GATE REVIEW / A5 COMPLETE / COORDINATOR NEXT`
+- Team 1 railhead: `RP-006 — PROMOTED`; `RP-007 — RESERVED SHELL / A1 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `5 ordered packets — RP-002 through RP-005 promoted; RP-006 at Gate Review`
+- Ordered Advance lead beyond Team 2 accepted baseline: `5 ordered packets — RP-002 through RP-006 promoted; RP-007 reserved only`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
@@ -40,6 +41,8 @@ When a packet becomes `READY FOR WORKING`, retain its ordered position, promote 
 ## 2026-07-17 RP-006 Advance Coder protected-journey result
 
 `RP-006` is `GATE REVIEW — A5 HANDOFF`, still protected from the accepted Demo. One pure `IntervalWorksProtectedJourney` caller traverses exact sanitized RP-005 completion through `IW-00 -> IW-30`, all 24 orders of the four equal-peer observations, strict PY-013 `8/8 primary -> eight-dimension import/sequence trace -> blank 8/8 transfer`, independent strict RP006-SPEECH-01 `8/8 primary -> 4/4 retrieval -> blank 8/8 transfer` plus both explanations, conjunctive review, all-or-none allowlisted save, replay-free restore, contiguous resume with physical observations re-observed, deterministic focus, Tour isolation, safe early/final returns, and an undefined destinationless continuation. Exact source order, the explicit unavailable gap, and every `cause=None` survive; unsafe, private, stale, forged, combined, hardcoded, sorted/reversed, gap-filled, cause-inferred, scenery/order/sound-derived, Tour-derived, partial, and contaminated inputs fail closed to answer-free blank recovery. Focused `13/13`, combined real RP-003→RP-004→RP-005→RP-006 `50/50`, RP-006 curriculum self-test, full `465/465`, production build, unchanged accepted bundle identity, leakage, purity, and patch integrity pass. App/main, browser persistence, normal routes, production art, accepted bundles, live Demo, prior packet behavior, and RP-007 remain unchanged. Coordinator owns the independent twelve-gate decision; no new protected seam or successor starts first.
+
+Coordinator result: `PASS — PROMOTED TO WORKING`. Independent focused `13/13`, combined predecessor `50/50`, full `465/465`, RP-006 validator, production build, byte-identical accepted assets, leakage/purity, and patch integrity confirmed all twelve gates. RP-006 holds ordered Working position behind RP-005. RP-007 is authorized only as a blank contiguous shell.
 
 ## 2026-07-17 RP-006 Gameplay graph result
 

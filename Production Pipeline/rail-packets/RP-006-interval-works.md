@@ -312,9 +312,9 @@ The course panel contains no SC-07 image/crop, layer or repair form, sequence/or
 
 ## Promotion record
 
-- Approved commit: `PENDING`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `PENDING — RP-006 AT GATE REVIEW / A5 COMPLETE`
-- Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A5 protected construction and coordinator handoff`
-- Coordinator: `PENDING`
+- Approved commit: `997c65f9cdf106c91f48ae33e5edc83cde171a5a`
+- Promoted to Working Queue on: `2026-07-17`
+- Team 1 railhead after promotion: `RP-006 PROMOTED; RP-007 RESERVED SHELL / A1 NEXT`
+- Next contiguous packet seeded: `YES — blank RP-007 shell only`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator promotion and RP-007 reservation`
+- Coordinator: `PASS — independent focused 13/13, combined predecessor 50/50, full 465/465, RP-006 validator, build, byte-identical accepted assets, leakage/purity, and patch integrity`
