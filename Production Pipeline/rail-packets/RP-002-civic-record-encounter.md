@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator — PY-009 primary result accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PRIMARY SUBMISSION-RESULT BOUNDARY ACCEPTED`.
+- **Accepted player path:** exact prerequisites open one blank work image; only `classification` and `owner` are editable; one semantic submission evaluates all six checks; failed checks alone produce answer-free Teacher feedback and a privacy-cleared blank retry; current-attempt `6/6` produces only the read-only provisional Suit result.
+- **Presentation/accessibility:** the active System, Teacher, and Suit headings receive deterministic programmatic focus; Teacher feedback exposes each existing failed field literally/programmatically; retry targets the first failed editable field; locked/editable/read-only states, `>=44px` controls, non-color/forced-color/reduced-motion meaning, responsive reflow, and separate evidence/route returns remain exact.
+- **Independent evidence:** full `577/577`; build; `15/15` readiness validators; complete `86.3s` E2E with every reported gate true and no runtime errors; current bundle/HTTP checks; zero-overflow `1920 x 1080` and `390 x 844` title-shell review with no console warnings/errors.
+- **Safety/next edge:** user storage was preserved. Four source fields, five observations, blank-only durable checkpoint, Tour isolation, privacy, no authority, null world/city delta, and every later boundary remain unchanged. W1 owns only the first exact gap toward fresh transfer entry after result dismissal; transfer scoring and explanation/RAI/review-save/completion/RP-003+/successor remain closed.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-006 resolved
 
 - **Disposition:** `RESOLVED — COORDINATOR FINAL VALIDATION NEXT`.

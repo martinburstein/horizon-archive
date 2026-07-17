@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator — RP-002 primary seam accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 PRIMARY RESULT ACCEPTED`.
+- **Accepted increment:** blank two-field expedition work image, one simultaneous six-check submission, answer-free Teacher miss/blank retry, read-only provisional Suit result on current-attempt `6/6`, active-owner heading focus, literal/programmatic failed-field association, and first-failed-field retry focus.
+- **Release evidence:** full `577/577`; production build; all `15/15` readiness validators; full E2E `86.3s`, every reported gate true, `credits:true`, `runtimeErrors:false`; served `index-BCpGPspB.js` / `index-ghzUiZe9.css`; clean no-overflow `1920 x 1080` and `390 x 844` title shells with `48px` / `44px` actions and empty warning/error console.
+- **Boundary:** no user save traversal, no fabricated gated screenshot, no new art, transfer scoring, explanation, RAI, review/save/completion, world response, authority, RP-003+, or successor. Next W1 isolates only fresh transfer entry after provisional-result dismissal.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-006 resolved
 
 - **Disposition:** `RESOLVED — COORDINATOR NEXT`. Blank entry, failed submission, and current-attempt `6/6` now focus the active System, Teacher, and Suit headings respectively; those headings remain outside the tab order.

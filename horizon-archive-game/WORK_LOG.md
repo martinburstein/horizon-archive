@@ -1,5 +1,14 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator: RP-002 primary submission/result accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 PRIMARY RESULT ACCEPTED`. The accepted RP-002 boundary now includes the blank two-field work image, one six-check submission, answer-free failed-check feedback with privacy-cleared blank retry, and the read-only provisional Suit result on current-attempt `6/6`.
+- **Independent validation:** full game suite `577/577`; production build; all `15/15` readiness validators; complete title-to-credits E2E in `86.3s` with every reported gate true, `credits:true`, and `runtimeErrors:false`; root/current assets served as `index-BCpGPspB.js` / `index-ghzUiZe9.css`.
+- **Live responsive review:** exact `1920 x 1080` title shell measured document `1920 x 1080` with zero overflow and `48px` actions. Exact `390 x 844` measured document `390 x 844`, zero horizontal overflow, a contained `384.8px` frame, and `44px` actions. Browser warnings/errors were empty. The user-owned save was not traversed or altered; gated presentation acceptance uses focused state/source/served evidence rather than a fabricated live capture.
+- **Accepted accessibility repair:** blank, failed, and successful replacements focus the active System, Teacher, and Suit owner headings; failed feedback retains literal/programmatic field association; retry focuses the controller-selected first failed editable field.
+- **Preserved boundary:** four source fields and five observations remain immutable; persistence remains blank-checkpoint/allowlist only; returns remain separate and write-free; Tour, privacy, offline/no-authority/no-exam-guarantee, first-person world, null city delta, and every transfer/explanation/RAI/review-save/completion/RP-003+/successor lock remain exact.
+- **Next Working handoff:** W1 reports only the earliest exact accepted-path gap toward fresh PY-009 transfer entry after dismissal of the provisional result. Do not open transfer scoring, explanation, RAI, review/save/completion, RP-003+, authority, world response, or a successor in the same tranche.
+
 ## 2026-07-17 — Working Coder W4: RP002-AESTH-006 focus/association repair
 
 - **Mode/verdict:** `aesthetic-polish` / `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.

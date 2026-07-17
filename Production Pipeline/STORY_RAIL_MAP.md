@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 PRIMARY RESULT — IN DEMO PARTIAL`. Independent full `577/577`, build, `15/15` readiness validators, complete E2E, current-asset HTTP, and responsive title-shell review passed. Team 2's accepted edge is now the read-only provisional Suit result; its next adjacent ownership is fresh transfer entry only. Team 1 remains complete at RP-012, no RP-013/successor exists, and all later RP-002 learning/completion boundaries remain closed.
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-006 W4 RESOLVED — COORDINATOR NEXT`. The three primary replacements now focus their active System/Teacher/Suit owner headings, Teacher feedback renders and programmatically associates each existing failed field, and blank retry retains first-failed editable-field focus. Focused `51/51`, full `577/577`, build, and patch checks pass on `index-BCpGPspB.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002; Team 1 remains complete at RP-012 with no successor.
 
 Latest Working handoff: `2026-07-17 / RP002-P1-011 W2 RESOLVED — W3 AESTHETIC REVIEW`. Two human-expedition fields now submit through the existing six-check authority; failed checks alone produce answer-free feedback and blank retry, while current-attempt `6/6` produces only the read-only provisional Suit result. The four source fields, five observations, blank persisted checkpoint, separate returns, first-person world, privacy, zero authority, and no-successor boundary remain exact. Focused `50/50`, full `576/576`, and build pass on `index-BTIyCAP4.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002; Team 1 remains complete at RP-012 with no successor.
@@ -51,6 +53,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 ACCEPTED DEMO NEXT`. The protected, unimported A0/A1/A1F/A2 model passes focused `10/10`, full `575/575`, build, leakage, purity, and patch gates while leaving App/main/normal route/storage/art/curriculum/live Demo unchanged. It proves exact strict-evaluator feedback, blank retry, `6/6` read-only result, separate returns, sanitation, privacy/Tour/accessibility boundaries, and hard later-state absence. W1 must play only the accepted blank primary and report its earliest normal submission/result gap; the Advance railhead remains the completed RP-012 ending with no successor.
 
 ## Position summary
+
+- Current Working override: `RP-002 — IN DEMO PARTIAL / PY-009 PRIMARY RESULT ACCEPTED`. Blank/editable submission, answer-free correction/retry, current-attempt `6/6` provisional result, active-owner focus, and failed-field association passed coordinator release gates. Next W1 may isolate only the first gap toward fresh transfer entry; no later seam is authorized.
 
 - Current Working override: `RP-002 — FINAL VALIDATION / RP002-AESTH-006 RESOLVED`. W4 corrected only active-owner heading focus and existing failed-field association, retained first-failed-field retry focus, and final-rebuilt `index-BCpGPspB.js` / `index-ghzUiZe9.css`. Focused `51/51`, full `577/577`, build, and patch gates pass. Coordinator owns independent release validation; the Working position remains RP-002 and every later boundary remains closed.
 
