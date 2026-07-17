@@ -21,20 +21,24 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 2 | `RP-002` | Civic Record Encounter | `PROMOTED TO WORKING` | Player Agent (`W1`) | Coordinator verified all twelve Gate Review items after the converged protected P0–P3 journey passed | One pure protected caller composes P0–P3 through existing route/view/hotspot/observation/learning/save/restore/return authorities. Historical micro-seams remain regression evidence only. | Team 2 begins normal integration methodically; Advance Team may seed RP-003 without inventing non-contiguous content. |
 | 3 | `RP-003` | Calibration Margin | `PROMOTED TO WORKING` | Player Agent (after RP-002 acceptance) | Coordinator independently verified all twelve gates | One pure CM-00–CM-50 caller begins only at exact verified RP-002 completion and preserves SOLIDIFIED mappings, unchanged `continuation`, null city delta, invariant SC-04, Tour isolation, and reversible returns | Wait behind RP-002 in Working order; Advance A1 owns the reserved RP-004 shell next. |
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
-| 5 | `RP-005` | Manyfold Return | `IN DESIGN — A4 COMPLETE` | Coder Agent (`A5`, advance-construction mode) | Lore, Scene, Curriculum, and Puzzle `PASS`; Protected code pending | Exact RP-004 completion plus locked `MF-00→MF-30`; SOLIDIFIED PY-012 and RP005-TEXT-01; unchanged continuation, null city/external delta, reversible returns, no RP-006 destination | A5 builds one pure protected journey/harness and proves all 24 observation orders, strict chain isolation, atomic restore, Tour isolation, and invariant world state. |
+| 5 | `RP-005` | Manyfold Return | `GATE REVIEW — A5 COMPLETE` | Coordinator | All protected A1–A5 gates pass; independent coordinator verification pending | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, preserves invariant world/route/safety, and defines no RP-006 destination | Independently verify all twelve gates; promote behind RP-004 or record one genuine hold. No further protected micro-seam first. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `0`
+- Gate Review packets awaiting coordinator decision: `1 — RP-005`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `3 — RP-002, then RP-003, then RP-004`
-- In-design packets: `1 — RP-005 / A4 COMPLETE`
-- Team 1 railhead: `RP-005 — IN DESIGN / A4 COMPLETE / A5 NEXT`
+- In-design packets: `0`
+- Team 1 railhead: `RP-005 — GATE REVIEW / A5 COMPLETE / COORDINATOR NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `4 ordered packets — RP-002, RP-003, and RP-004 promoted; RP-005 in design`
+- Ordered Advance lead beyond Team 2 accepted baseline: `4 ordered packets — RP-002, RP-003, and RP-004 promoted; RP-005 at Gate Review`
 - Whole-story rail status: `IN PROGRESS`
 
 When a packet becomes `READY FOR WORKING`, retain its ordered position, promote it to the Working Queue, update `STORY_RAIL_MAP.md`, and seed the immediately following segment. Do not remove historical route order when Team 2 accepts a packet.
+
+## 2026-07-16 RP-005 Advance Coder protected-journey result
+
+`RP-005` is `GATE REVIEW — A5 HANDOFF`, still protected from the accepted Demo. One pure `ManyfoldReturnProtectedJourney` caller traverses exact sanitized RP-004 completion through `MF-00 -> MF-30`, all 24 orders of the four equal-peer observations, strict PY-012 `8/8 primary -> 6-dimension function trace -> blank 8/8 transfer`, independent strict RP005-TEXT-01 `8/8 primary -> 6/6 retrieval -> blank 8/8 transfer` plus both explanations, bounded conjunctive review, all-or-none allowlisted save, replay-free restore, contiguous finalized resume with physical observations re-observed, deterministic focus, Tour isolation, safe early/final returns, and a destinationless continuation. Unsafe, private, stale, forged, combined, hardcoded, computed/ranked, scenery/frequency-derived, truth-inferred, Tour-derived, partial, and contaminated inputs fail closed to answer-free blank recovery. Focused `13/13`, combined real RP-003→RP-004→RP-005 `37/37`, RP-005 curriculum self-test, full `448/448`, production build, unchanged accepted bundle identity, leakage, purity, and patch integrity pass. App/main, browser persistence, normal routes, production art, accepted bundles, live Demo, and RP-006 remain unchanged. Coordinator owns the independent twelve-gate decision; no W1 or new protected seam starts first.
 
 ## 2026-07-16 RP-005 Gameplay graph result
 
