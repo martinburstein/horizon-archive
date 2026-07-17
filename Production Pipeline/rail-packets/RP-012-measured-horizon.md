@@ -83,7 +83,16 @@ Prove through fresh independent work whether the expedition can honestly mark th
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `MISSING — A4 AFTER A3`
+- Status: `PASS — MH-00→MH-40 READINESS / REMEDIATION GRAPH LOCKED`
+- `MH-00 ASSEMBLE`: exact RP-011 entry; reconstruct five separate complete scopes plus reconciliation, objective version, separate zero-credit return.
+- `MH-10 VERIFY ELIGIBILITY`: reject missing/stale/forged/Tour/private/incomplete/cross-credited evidence into only matching answer-free remediation and return; no decision or fresh form yet.
+- `MH-20 FRESH TRANSFER`: run frozen cumulative Python and independent all-objective AI-901 forms over neutral sanitized offline replicas. Only failed checks or actually scored case/dimension misses select remediation.
+- `MH-25 DELAY + TRANSFER`: after remediation and closed-note delay, run genuinely blank independent transfer forms; prior answers, focus, confidence, timing, scene, save, and Tour cannot populate or score them.
+- `MH-30 LOCAL DECISION`: any open remediation, nonperfect form, stale version, missing coverage, invalid provenance, or unsafe evidence produces recoverable not-yet-ready; exact complete coverage and perfect independent forms produces locally ready. Geometry and dignity are identical.
+- `MH-40 SAVE + REVIEW + CLOSE`: atomically save the allowlisted checksummed record, clear answers/private/transient work, restore without replay, and offer separate credits and expedition return. Neither changes outcome, world, authority, or route.
+- Hints name the missing category, then exact prior remediation route, never answers. Unsafe intents fail closed; failed save is byte-stable; resume focuses first incomplete verified gate. Each re-evaluation requires fresh blank forms.
+- Clean first review `28–42 minutes`; mastered replay `18–25`; protected smoke `<5`; no time credit.
+- Exact A5 handoff: build one pure unimported Node-only protected `MH-00→MH-40` journey composing the frozen RP-012 contract, existing CUM-01 and L-06-03 authorities, and an in-memory atomic readiness adapter. Prove exact entry, eligibility rejection, both outcomes, actual-miss-only remediation, fresh blank retries, allowlist/checksum/rollback, replay-free restore, deterministic focus, privacy clearing, Tour/presentation/world zero-credit, no live service/authority/exam guarantee, and successor `null`. Do not integrate App/main/routes/storage/art/live Demo or post-ending content.
 
 ## Advance Construction Track — Coder
 
@@ -125,8 +134,8 @@ Prove through fresh independent work whether the expedition can honestly mark th
 ## Advance Handoff Gate
 
 - Lore Builder: `PASS — 2026-07-17`
-- Storyboarder/Curriculum: `PASS — 2026-07-17`; Gameplay/Coder: `PENDING`
-- Readiness: `IN DESIGN — A3 CURRICULUM PASS`
+- Storyboarder/Curriculum/Gameplay: `PASS — 2026-07-17`; Coder: `PENDING`
+- Readiness: `IN DESIGN — A4 PUZZLE PASS`
 
 ## Promotion record
 
