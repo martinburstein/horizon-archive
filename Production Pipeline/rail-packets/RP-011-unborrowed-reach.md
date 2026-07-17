@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 STORY PASS`
+- Status: `IN DESIGN — A2 SCENE BRIEF PASS`
 - Target chapter/location: Phase IV capstone continuation / unfamiliar operating reach beyond the Counterfield margin
 - Target demo horizon: tenth future slice after the accepted RP-001 boundary; directly after RP-010
 - Route order: 11
@@ -130,15 +130,22 @@ Make one defensible fresh record without consulting prior conclusions, then show
 
 ## Storyboard Track — Storyboarder
 
-- Status: `NOT STARTED — A2 NEXT`
-- A2 owns one compact maximum-quality cinematic-photorealistic first-person sequence that makes the unfamiliar reach, fresh-evidence boundary, separate prior-record ownership, layered stewardship, ordinary Builder work coupling, and invariant world legible without a test, answer key, curriculum mapping, or ending cue.
-- A2 must preserve protagonist/ship/human-trace exclusion, nonhuman functional logic, responsive full-screen presentation, complete text equivalents, non-color meaning, reduced-motion equivalence, no memory-dependent comparison, and zero visual world response.
+- Status: `PASS — SC-12 COMPACT FOUR-PHASE / TWO-MASTER BRIEF; NO FINAL ART`
+- Scene sheet: `Concept Art Book/scenes/SC-12-unborrowed-reach.md`.
+- `SC-12 Unborrowed Reach` is a vault-wide laminar operating landscape materially and compositionally distinct from SC-11. Broad pressure-bent translucent membranes, porous mineral foams, conductive salt-metal seams, buried ceramic anchor bodies, compatible detours, sealed former feeds, and opaque accreted margins express an unfamiliar work without resolving whether it conditions atmosphere or pressure, exchanges heat, captures volatiles, sorts mineral phases, distributes stress, or returns material.
+- One invariant `SC-12-UNBORROWED-REACH-PANORAMA-MASTER` and one spatially consistent `SC-12-LAMINATE-INTERFACE-DETAIL-MASTER` support four compact phases: `ARRIVE + ISOLATE`, `INSPECT FRESH EVIDENCE`, `REVIEW LOCAL WORK + FINALIZE FRESH RECORD`, and `REOPEN + RECONCILE + VERIFY + RETURN`. No per-record or per-interface world plate is authorized.
+- Six visible responsibilities make persistence across a material transition, a superficially similar form with a different relation, a maintained bypass, multiple-candidate evidence, one unavailable comparable margin, and layered stewardship physically legible. They are not an A2-authored observation count, order, score, answer set, or puzzle graph.
+- Prior records are hidden but retained only in the expedition interface. They return after fresh finalization as complete individually navigable scopes, one owner group at a time; no side-by-side answer matrix or memory of hidden content is required.
+- A local oblique coupling terminates in sealed sanitized-replica chambers. It presents ordinary incomplete Builder work only and never resembles a terminal, screen, lock, greeting, assessment, access device, readiness judge, or live-reach control.
+- Three nested operating scales, three stewardship strata, independent local rhythms, invariant registered geometry, semantic masks, art-directed derivatives, high-quality responsive crops, reduced-motion stills, complete text alternatives, non-color meaning, forced-colors evidence, provenance, the eight-pass production pipeline, and hard artifact cleanup are specified. No raster or final art was generated.
+- Every world and interface state remains zero curriculum/mastery evidence, answer, weakness inference, misconception, remediation selector, access, authority, readiness, or successor signal.
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `NOT STARTED — A3 AFTER A2`
-- No Python skill, AI-901 objective, case, answer, threshold, lesson, evidence chain, remediation contract, or readiness verdict is selected by A1.
+- Status: `NOT STARTED — A3 NEXT AFTER SC-12 A2 PASS`
+- No Python skill, AI-901 objective, case, answer, threshold, lesson, evidence chain, remediation contract, or readiness verdict is selected by A1 or A2.
 - A3 must choose only the nearest nonduplicate current obligation under project source-priority rules and keep Builder Python ordinary occupational literacy rather than authentication or assessment by the world.
+- A3 must treat every SC-12 material, evidence region, crop, hotspot, effect, local rhythm, record-visibility state, Python display, save/restore display, and return as zero mastery evidence and must preserve fresh-finalization-before-prior-record reopening without a memory test.
 
 ## Puzzle Track — Gameplay Master
 
@@ -166,7 +173,7 @@ Make one defensible fresh record without consulting prior conclusions, then show
 
 - Required existing systems: exact verified RP-010 completion; retained RP-007/RP-008/RP-009/RP-010 records; separate evidence-class and unknown-limit ownership; sanitation and temporary-work clearing; reversible returns; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
 - New systems: none selected by A1.
-- Art dependencies: A2 must define a registered photorealistic production plan after reading the location visual spine.
+- Art dependencies: `SC-12` has a registered two-master photorealistic production plan, derivative/mask/effect requirements, responsive/accessibility contract, provenance record requirements, eight-pass production gate, and hard cleanup/rejection gate. Final art remains deferred and unauthorized.
 - Curriculum dependencies: A3 must select the nearest current nonduplicate Python and AI-901 obligations after A2; none are implied here.
 - Decisions awaiting Martin: none for this surface-safe capstone continuation.
 
@@ -177,12 +184,14 @@ Make one defensible fresh record without consulting prior conclusions, then show
 - The Pilot must finalize one fresh record from unfamiliar exposed evidence before reopening prior records for a separate method-and-limit reconciliation.
 - Builder real Python appears only as ordinary incomplete occupational literacy over sanitized replicas from the new reach. It is never a password, assessment, or live-world authority.
 - Completion saves a fresh record and reconciliation note separately, clears temporary work, changes no physical state, preserves unchanged `continuation`, null city/external deltas, reversible returns, and leaves RP-012 wholly undefined.
+- `SC-12` uses one invariant panorama and one spatially consistent laminate-interface detail master across four compact phases. The world has a continuous material-transition thesis distinct from SC-11, while six visible evidence responsibilities remain unscored and unordered by A2.
+- Prior-record hiding/reopening is overlay-only; all retained records return as complete individually navigable scopes after fresh finalization, and no visual state requires remembering hidden content.
 
 ## Flexible implementation choices
 
-- Exact reach geometry, scale, exposure count, materials, atmosphere, maintenance forms, visible working processes, coupling morphology, and stewardship evidence remain A2 choices within the locked meanings.
-- Exact observation grouping and compact board sequence remain A2 choices; exact curriculum, assessment, and puzzle shape remain A3/A4 choices.
-- A2 may use one registered invariant master with spatially consistent details or multiple registered masters, provided the independent-record/reconciliation boundary remains expedition-owned, no visual arrangement becomes an answer key, and the landscape never reads as a human test site.
+- Exact reach massing, membrane count, anchor spacing, phase-boundary contour, material proportions, bypass morphology, maintenance-form anatomy/count, vault depth, atmosphere, restrained grade, effect timing, crop coordinates, and lenses remain flexible within the SC-12 brief.
+- Exact curriculum, assessment, required observation count/order, and puzzle shape remain A3/A4 choices. A2's six visual responsibilities are not a scored or required interaction specification.
+- The two-master/four-phase plan, continuous material-transition thesis, fresh-finalization-before-reopening order, hidden-but-retained prior records, complete accessible reopening, no memory test, invariant world, and replica-only coupling are locked.
 - Runtime labels may change if they remain expedition-owned, observable, compact, accessible, and uncertainty-preserving.
 
 ## Player-observable acceptance criteria
@@ -196,25 +205,29 @@ Make one defensible fresh record without consulting prior conclusions, then show
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface contract`.
-- Scoreboard gates remaining: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, Production art plan, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — replaced the blank shell with one contiguous start/goal/end Lore contract and exact A2 handoff`.
+- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-12 compact two-master brief`; Production art plan `PASS plan — final assets later`.
+- Scoreboard gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility protected evidence, final Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — closed Scene and Production art planning with one compact registered two-master/four-phase contract`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008/RP-009/RP-010 records, provenance, bounded support, counterevidence, ambiguity, unavailability, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline become one independent-record/reconciliation premise rather than new isolated lore seams.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness verdict, RP-012, native categories, shared identity/topology/chronology/synchronization, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
-- New module or artifact integration consumer: none authorized at A1.
-- Breadth verdict: `CONTINUE — A2 STORYBOARDER`.
+- New module or artifact integration consumer: `Concept Art Book/scenes/SC-12-unborrowed-reach.md` is the single A2 scene/production authority for later A3/A4/A5 consumption; it authorizes no runtime or final art.
+- Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`.
 - Next contiguous packet seed readiness: `NO — RP-012 remains ending-reserved until RP-011 reaches Gate Review or promotion`.
-- Exact next action in one sentence: Storyboarder A2 builds the smallest responsive first-person photorealistic scene contract that makes fresh evidence, hidden-but-retained prior records, bounded reconciliation, and an invariant alien work legible without a test, answer key, Python lock, readiness verdict, or ending cue.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest current nonduplicate Python and AI-901 obligations while treating the entire SC-12 world and presentation as zero mastery evidence and preserving fresh finalization before complete prior-record reopening.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
-- Storyboarder sign-off: `PENDING`
+- Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PENDING`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
 - Readiness: `REVISE — A2–A5 REQUIRED`
-- Required revision: A2 scene/production brief, A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
+- Required revision: A3 verified mapping, A4 integrated puzzle graph, A5 protected journey, then coordinator Gate Review.
+
+### Exact Curriculum Checker A3 handoff
+
+`Curriculum Checker Agent — A3: work only on RP-011 Unborrowed Reach after reading the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, this packet, SC-12, current official AI-901/Foundry sources under project source priority, and the frozen RP-010 end state. Select and independently validate only the nearest nonduplicate Python prerequisite and current AI-901 obligation that can support one fresh bounded record before a separate method-and-limit reconciliation. Preserve the four RP-007/RP-008/RP-009/RP-010 records as valid, separate, hidden-but-retained scopes during fresh work; the fresh record must finalize before complete prior scopes reopen, and no task may require memory of hidden content. Keep the Builder Python image ordinary incomplete occupational literacy over sanitized new-reach replicas only, never a password, assessment, access surface, readiness judge, or live control. Define strict primary, actually-scored-miss-only answer-free remediation, delayed retrieval/trace, genuinely blank transfer, independent evidence, privacy clearing, accessibility, offline/no-authority, no-exam-guarantee, and exact source/validator evidence as applicable. Treat every SC-12 membrane, foam, seam, anchor, material transition, similar/different form, bypass, multi-candidate exposure, unavailable margin, stewardship cue, local rhythm, crop, hotspot, owner label, hidden/reopened status, Python display, execution, animation, reduced-motion still, save/restore display, return, and Tour state as zero mastery evidence, answer, weakness inference, misconception, or remediation selector. Do not change the four-phase/two-master visual contract; author a puzzle graph or save schema; write runtime code; generate final art; infer identity, shared purpose, chronology, topology, error, readiness, authority, or world response; define RP-012; open the ending; or access hidden lore. Update only A3-owned curriculum/readiness/packet/pipeline evidence and hand one exact frozen mapping to Gameplay Master A4.`
 
 ### Exact Storyboarder A2 handoff
 
