@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-013 W2 RESOLVED — W3 AESTHETIC REVIEW`. The accepted blank transfer group now submits through protected feedback/blank retry or bounded `6/6` evidence without persistence or later-state exposure. Team 2 remains on RP-002 for presentation review; Team 1 remains complete at RP-012 with no successor.
+
 Latest Working handoff: `2026-07-17 / RP002-P1-013 W1 P1 — W2 BUG REPAIR NEXT`. The accepted blank fresh-practice group is correctly editable but has no submit/evaluation action or handler. Team 2 remains on RP-002 for bounded protected transfer integration; Team 1 remains complete at RP-012 with no successor.
 
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-013 A5 PROTECTED TRANSFER SEAM — ACCEPTED W1 NEXT`. The pure unimported transfer controller passes its protected gates while normal App/route/storage/assets remain unchanged. Team 1 remains complete at RP-012 with no successor; Team 2 remains at the accepted RP-002 blank fresh-practice edge and next tests only submit/evaluation.

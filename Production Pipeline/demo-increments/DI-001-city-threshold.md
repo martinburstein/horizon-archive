@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — transfer evaluation integrated
+
+- **Resolved:** `RP002-P1-013`; accepted blank fresh practice now submits through the protected evaluator, recovers through actual-miss-only feedback and blank retry, or ends at bounded current-attempt `6/6` transfer evidence.
+- **Durability:** all new work is transient; reload keeps the existing blank-primary checkpoint. World, storage schema, assets, returns, authority, and later learning are unchanged.
+- **Candidate:** `index-D0-watPG.js` / `index-ghzUiZe9.css`; focused `126/126`, full `598/598`, RP-002 validator, build, HTTP/title reload, and clean logs pass. W3 reviews presentation only.
+
 ## 2026-07-17 Working W1 — transfer submission blocker
 
 - **Issue:** `RP002-P1-013 / P1`; accepted blank fresh practice has editable fields but no submit action, evaluation handler, feedback/retry, or bounded completion acknowledgement.

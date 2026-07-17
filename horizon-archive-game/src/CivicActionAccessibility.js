@@ -17,6 +17,8 @@ const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
   feedback: "Primary feedback evidence return",
   result: "Provisional result evidence return",
   fresh: "Fresh practice evidence return",
+  transferFeedback: "Transfer feedback evidence return",
+  transferComplete: "Transfer-complete evidence return",
 });
 
 export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
@@ -25,6 +27,9 @@ export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
     return custodyLedgerPrimaryReturnGroupLabels.result;
   }
   if (primaryPhase === "DR-20") return custodyLedgerPrimaryReturnGroupLabels.fresh;
+  if (primaryPhase === "FT-20F") return custodyLedgerPrimaryReturnGroupLabels.transferFeedback;
+  if (primaryPhase === "FT-20C") return custodyLedgerPrimaryReturnGroupLabels.transferComplete;
+  if (primaryPhase === "FT-00") return custodyLedgerPrimaryReturnGroupLabels.fresh;
   return custodyLedgerPrimaryReturnGroupLabels.blank;
 }
 

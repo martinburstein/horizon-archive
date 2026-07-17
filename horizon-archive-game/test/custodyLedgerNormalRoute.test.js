@@ -13,6 +13,7 @@ import {
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
+  createCustodyLedgerNormalTransferInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
@@ -29,6 +30,7 @@ import {
   CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
   CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
 } from "../src/CustodyLedgerPrimaryResultDismissal.js";
+import { CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION } from "../src/CustodyLedgerTransferInteraction.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -247,6 +249,9 @@ test("primary evidence-return group names follow the active owner replacement", 
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("30-A2"), "Provisional result evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("DR-00"), "Provisional result evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("DR-20"), "Fresh practice evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-00"), "Fresh practice evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-20F"), "Transfer feedback evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-20C"), "Transfer-complete evidence return");
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-00"), /blank python primary/i);
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-20"), /blank python primary/i);
 });
@@ -1217,6 +1222,108 @@ test("accepted provisional result composes one atomic blank fresh-practice dismi
   ), null);
 });
 
+test("accepted fresh practice composes protected transfer feedback, blank retry, and bounded 6/6", () => {
+  function openTransfer(token) {
+    const complete = completeFarSave(`${token}-complete`);
+    const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+      custodyLedgerObservationControls.openLocalComparison.label,
+      "pointer",
+      `${token}-local`,
+    )).save;
+    const route = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: local,
+      prerequisiteEvidence: completedPrerequisites(),
+    });
+    const entered = route.dispatch(intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "pointer", `${token}-open`));
+    const primary = createCustodyLedgerNormalPrimaryInteraction(entered.state, predecessor);
+    const primaryResult = primary.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+      activationKind: "pointer",
+      eventToken: `${token}-primary`,
+      classification: "unknown",
+      fieldOwner: "human_expedition",
+    });
+    const dismissal = createCustodyLedgerNormalPrimaryResultDismissal(entered.state, primaryResult.state, predecessor);
+    const fresh = dismissal.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+      activationKind: "pointer",
+      eventToken: `${token}-dismiss`,
+    });
+    return {
+      entered,
+      primaryResult,
+      fresh,
+      transfer: createCustodyLedgerNormalTransferInteraction(
+        entered.state,
+        primaryResult.state,
+        fresh.state,
+        predecessor,
+      ),
+    };
+  }
+
+  for (const activationKind of activationKinds) {
+    const fixture = openTransfer(`rp002-transfer-${activationKind}`);
+    assert.ok(fixture.transfer);
+    assert.equal(fixture.transfer.getState().phase, "FT-00");
+    const persistedBytes = JSON.stringify(fixture.entered.save);
+    const result = fixture.transfer.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+      activationKind,
+      eventToken: `rp002-transfer-submit-${activationKind}`,
+      classification: "unknown",
+      fieldOwner: "human_reviewer",
+    });
+    assert.equal(result.status, "transfer_evidence_complete");
+    assert.equal(result.state.phase, "FT-20C");
+    assert.equal(result.state.transferStatus, "complete");
+    assert.deepEqual(result.state.availableActions, ["RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD"]);
+    assert.equal(result.state.successor, null);
+    assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
+  }
+
+  const failed = openTransfer("rp002-transfer-feedback");
+  const result = failed.transfer.dispatch({
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+    activationKind: "keyboard_enter",
+    eventToken: "rp002-transfer-feedback-submit",
+    classification: "wrong",
+    fieldOwner: "wrong",
+  });
+  assert.equal(result.status, "feedback");
+  assert.equal(result.state.phase, "FT-20F");
+  assert.equal(result.state.expeditionFields, undefined);
+  assert.ok(result.state.falseCheckIds.length > 0);
+  assert.doesNotMatch(JSON.stringify(result.state), /\"wrong\"/);
+  const retry = failed.transfer.retryBlank();
+  assert.equal(retry.status, "blank_retry");
+  assert.equal(retry.state.phase, "FT-00");
+  assert.deepEqual(retry.state.expeditionFields, { classification: "", owner: "" });
+  assert.equal(createCustodyLedgerNormalTransferInteraction(
+    { ...failed.entered.state, privateNotes: "PRIVATE" },
+    failed.primaryResult.state,
+    failed.fresh.state,
+    predecessor,
+  ), null);
+});
+
 test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
   const complete = completeFarSave("rp002-python-primary-restore");
   const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
@@ -1796,12 +1903,19 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /primaryPhase === "30-A2"/);
   assert.match(arrival, /primaryPhase === "DR-00"/);
   assert.match(arrival, /primaryPhase === "DR-20"/);
+  assert.match(arrival, /primaryPhase === "FT-00"/);
+  assert.match(arrival, /primaryPhase === "FT-20F"/);
+  assert.match(arrival, /primaryPhase === "FT-20C"/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
   assert.match(arrival, /value === false[\s\S]*return "False"/);
   assert.match(app, /createCustodyLedgerNormalPrimaryInteraction/);
   assert.match(app, /createCustodyLedgerNormalPrimaryResultDismissal/);
+  assert.match(app, /createCustodyLedgerNormalTransferInteraction/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
-  assert.match(app, /onPrimaryDismiss=\{clearCustodyLedgerPrimaryResult\}/);
+  assert.match(app, /onPrimaryDismiss=\{\(event\) => clearCustodyLedgerPrimaryResult\(routeState, event\)\}/);
+  assert.match(app, /custodyLedgerTransferControllerRef/);
+  assert.match(app, /onTransferSubmit=\{submitCustodyLedgerTransfer\}/);
+  assert.match(app, /onTransferRetry=\{retryCustodyLedgerTransfer\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);

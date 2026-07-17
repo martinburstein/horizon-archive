@@ -14,6 +14,7 @@ import {
 } from "./CustodyLedgerNormalRoute.js";
 import { CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS } from "./CustodyLedgerPrimaryInteraction.js";
 import { CUSTODY_LEDGER_CLEAR_RESULT_ACTION } from "./CustodyLedgerPrimaryResultDismissal.js";
+import { CUSTODY_LEDGER_RETRY_TRANSFER_ACTION } from "./CustodyLedgerTransferInteraction.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -29,12 +30,16 @@ export function CivicRecordArrival({
   onPrimarySubmit,
   onPrimaryRetry,
   onPrimaryDismiss,
+  onTransferSubmit,
+  onTransferRetry,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
   const feedbackHeadingRef = useRef(null);
   const resultHeadingRef = useRef(null);
   const freshHeadingRef = useRef(null);
+  const transferFeedbackHeadingRef = useRef(null);
+  const transferCompleteHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
@@ -89,8 +94,27 @@ export function CivicRecordArrival({
         resultHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
-      if (primaryPhase === "DR-20") {
+      if (primaryPhase === "DR-20" || primaryPhase === "FT-00") {
+        const retryTarget = primaryInteraction?.attemptCount > 0
+          ? primaryInteraction?.focusIntent?.then
+          : null;
+        if (retryTarget === "classification") {
+          classificationRef.current?.focus({ preventScroll: true });
+          return;
+        }
+        if (retryTarget === "owner") {
+          ownerRef.current?.focus({ preventScroll: true });
+          return;
+        }
         freshHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "FT-20F") {
+        transferFeedbackHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "FT-20C") {
+        transferCompleteHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -108,6 +132,19 @@ export function CivicRecordArrival({
     setClassification("");
     setFieldOwner("");
     onPrimaryRetry?.();
+  }
+
+  function submitTransfer(event) {
+    event?.preventDefault?.();
+    onTransferSubmit?.({ classification, owner: fieldOwner }, event);
+    setClassification("");
+    setFieldOwner("");
+  }
+
+  function retryTransfer() {
+    setClassification("");
+    setFieldOwner("");
+    onTransferRetry?.();
   }
 
   function renderAction(action) {
@@ -281,8 +318,8 @@ export function CivicRecordArrival({
                 </button>
               </section>
             )}
-            {atPythonPrimary && primaryPhase === "DR-20" && (
-              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-fresh-heading">
+            {atPythonPrimary && (primaryPhase === "DR-20" || primaryPhase === "FT-00") && (
+              <form className="custody-ledger-work-image" aria-labelledby="custody-ledger-fresh-heading" onSubmit={submitTransfer}>
                 <p className="eyebrow">{primaryInteraction.owner}</p>
                 <h2 ref={freshHeadingRef} id="custody-ledger-fresh-heading" tabIndex="-1">
                   {primaryInteraction.workImageLabel}
@@ -314,8 +351,49 @@ export function CivicRecordArrival({
                   </div>
                 </dl>
                 <p id="custody-ledger-fresh-field-help" className="civic-observation-status">
-                  Fresh expedition practice is blank and local. No transfer submission or scoring is active.
+                  Fresh expedition practice is blank, local, and evaluated only by the six expedition checks.
                 </p>
+                {primaryPhase === "FT-00" && (
+                  <button className="primary-action" type="submit">
+                    {CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS}
+                  </button>
+                )}
+              </form>
+            )}
+            {atPythonPrimary && primaryPhase === "FT-20F" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-transfer-feedback-heading">
+                <p className="eyebrow">901 TEACHER // FEEDBACK</p>
+                <h2 ref={transferFeedbackHeadingRef} id="custody-ledger-transfer-feedback-heading" tabIndex="-1">
+                  Transfer checks need another pass
+                </h2>
+                <ul className="custody-ledger-feedback" aria-label="Transfer checks to review">
+                  {primaryInteraction.feedback.map((item) => {
+                    const fieldId = `custody-ledger-transfer-feedback-field-${item.checkId}`;
+                    const ownerId = `custody-ledger-transfer-feedback-owner-${item.checkId}`;
+                    const messageId = `custody-ledger-transfer-feedback-message-${item.checkId}`;
+                    return (
+                      <li key={item.checkId} data-feedback-field={item.field}
+                        aria-labelledby={`${fieldId} ${ownerId} ${messageId}`}>
+                        <span id={fieldId} className="custody-ledger-feedback-field">Field // {item.field}</span><br />
+                        <span id={ownerId} className="eyebrow">{item.owner}</span><br />
+                        <span id={messageId}>{item.text}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="civic-observation-status">Submitted work was cleared. Retry begins with two genuinely blank transfer fields.</p>
+                <button className="primary-action" type="button" onClick={retryTransfer}>
+                  {CUSTODY_LEDGER_RETRY_TRANSFER_ACTION}
+                </button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "FT-20C" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-transfer-complete-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={transferCompleteHeadingRef} id="custody-ledger-transfer-complete-heading" tabIndex="-1">
+                  Transfer evidence complete
+                </h2>
+                <p className="civic-observation-status">All 6 local transfer checks passed for this attempt. Course evidence is complete; no mastery, access, authority, or city change was granted.</p>
               </section>
             )}
             <p>
@@ -326,8 +404,12 @@ export function CivicRecordArrival({
                 : atPythonPrimary
                   ? primaryPhase === "30-A2" || primaryPhase === "DR-00"
                     ? "The suit rendered one provisional local result. No mastery, access, authority, or city change has been recorded."
-                    : primaryPhase === "DR-20"
+                    : primaryPhase === "DR-20" || primaryPhase === "FT-00"
                       ? "A carry-free blank fresh practice image is open. No result, mastery, access, authority, or city change has been recorded."
+                    : primaryPhase === "FT-20F"
+                      ? "Only the transfer checks that failed are shown. Private working values were cleared before this feedback appeared."
+                    : primaryPhase === "FT-20C"
+                      ? "Current-attempt transfer evidence is complete. Python explanation and later learning remain closed."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."

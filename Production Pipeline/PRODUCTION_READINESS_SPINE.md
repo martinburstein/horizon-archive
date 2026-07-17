@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest Working candidate: `2026-07-17 / RP002-P1-013 W2 RESOLVED — W3 NEXT`. Protected transfer submission/evaluation is now normally integrated through blank, actual-miss feedback/retry, and bounded current-attempt `6/6` groups. Full `598/598`, focused `126/126`, RP-002 validator, build, HTTP/title reload, and clean logs pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`; W3 reviews presentation only before release.
+
 Latest Advance continuity result: `2026-07-17 / RP002-P1-013 A5 REVISE — PROTECTED TRANSFER SEAM ONLY`. One pure unimported `FT-00 -> FT-20F/20C` controller composes the real evaluator and sanitation/resume authorities. Focused transfer coverage, full suite, validator, build, leakage, purity, and patch gates pass; normal App/route/storage/assets remain unchanged. W1 starts at the accepted blank fresh-practice group and reports only the submit/evaluation gap.
 
 Latest coordinator release: `2026-07-17 / RP002-P1-012 + RP002-AESTH-007 PASS — PY-009 FRESH PRACTICE ENTRY IN DEMO PARTIAL`. Independent full `587/587`, all `15/15` readiness validators, production build, `102.8s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Normal integration and release now extend through explicit result dismissal into canonical blank fresh practice; transfer submission/evaluation remains the next closed edge.

@@ -382,7 +382,7 @@ test("forged or incomplete entry cannot authorize the protected transfer seam", 
   }
 });
 
-test("accessibility metadata, campaign isolation, and protected-module purity remain exact", async () => {
+test("accessibility metadata, campaign isolation, and bounded normal integration remain exact", async () => {
   assert.equal(custodyLedgerTransferInteractionAccessibility.oneActiveGroup, true);
   assert.equal(custodyLedgerTransferInteractionAccessibility.minActionCssPx, 44);
   assert.equal(custodyLedgerTransferInteractionAccessibility.ownerHeadingInTabOrder, false);
@@ -403,13 +403,16 @@ test("accessibility metadata, campaign isolation, and protected-module purity re
     import("node:fs/promises"),
     import("node:url"),
   ]);
-  const [app, main, arrival, normalRoute] = await Promise.all([
+  const [app, main, arrival, normalRoute, interaction] = await Promise.all([
     "../src/App.jsx",
     "../src/main.jsx",
     "../src/CivicRecordArrival.jsx",
     "../src/CustodyLedgerNormalRoute.js",
+    "../src/CustodyLedgerTransferInteraction.js",
   ].map((relative) => readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8")));
-  for (const source of [app, main, arrival, normalRoute]) {
-    assert.doesNotMatch(source, /CustodyLedgerTransferInteraction|rp002\.transfer-interaction\.v1/);
-  }
+  assert.match(app, /createCustodyLedgerNormalTransferInteraction|CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION/);
+  assert.match(arrival, /FT-00|FT-20F|FT-20C/);
+  assert.match(normalRoute, /createCustodyLedgerTransferInteraction/);
+  assert.doesNotMatch(main, /CustodyLedgerTransferInteraction|rp002\.transfer-interaction\.v1/);
+  assert.doesNotMatch(interaction, /localStorage|sessionStorage|fetch\(|XMLHttpRequest|WebSocket|document\.|window\.|navigator\./);
 });

@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — RP002-P1-013 resolved
+
+- **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal App/route/UI now compose the protected transfer authority from exact accepted fresh practice through actual-failed-check feedback/blank retry or current-attempt `6/6` transfer evidence.
+- **Privacy/recovery:** transient fields, tokens, feedback, and result are never written; reload retains the existing blank-primary durable checkpoint. Separate returns, five observations, both predecessors, primary evidence, Tour isolation, invariant world, zero authority/effect, and no successor remain exact.
+- **Validation:** focused `126/126`, full `598/598`, RP-002 validator, production build, HTTP/title reload, and empty warning/error logs pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`.
+- **W3:** inspect only the bounded blank/feedback/complete transfer presentation; no runtime, storage, art, curriculum, explanation, RAI, or later-state expansion.
+
 ## 2026-07-17 Working W1 — RP002-P1-013 open
 
 - **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`. The accepted `DR-20` group renders exact locked neutral source and genuinely blank editable `classification` / `owner`, but it has no submit action or App handler and says transfer submission/scoring is inactive.
