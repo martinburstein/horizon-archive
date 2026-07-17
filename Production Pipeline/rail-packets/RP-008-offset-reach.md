@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS COMPLETE / A5 NEXT`
+- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE / COORDINATOR NEXT`
 - Target chapter/location: Chapter 4 synthesis continuation / conditional-contact landscape beyond Braided Verge
 - Target demo horizon: seventh future slice after the accepted RP-001 boundary; directly after RP-007
 - Route order: 8
@@ -13,7 +13,7 @@
 - Working title: `Offset Reach` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase III — Synthesis / slot 2 of 3
 - Target player time: `35–48 minutes clean first play`; `21–30 minutes mastered replay`; no time limit or timing credit
-- Complete Advance cycles spent on this packet: 0 complete A1–A5 cycles; A1 story pass only
+- Complete Advance cycles spent on this packet: 1 complete A1–A5 orientation cycle
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
 ## Locked premise
@@ -225,8 +225,9 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 
 ## Rough Code Track — Coder
 
-- Status: `AUTHORIZED — A5 NEXT; NOT IMPLEMENTED`
-- A1 authorizes no production code, protected module, test, persistence schema, route, browser integration, asset, or accepted-demo change.
+- Status: `PASS — A5 PURE PROTECTED OR-00→OR-30 JOURNEY COMPLETE; COORDINATOR GATE REVIEW NEXT`
+- `horizon-archive-game/src/OffsetReachProtectedJourney.js` is one pure Node-only, non-routable protected caller through the frozen RP-008 contract. It is absent from App/main/routes/browser persistence and the accepted production bundle.
+- `horizon-archive-game/test/offsetReachProtectedJourney.test.js` proves exact RP-007 entry and retained summary, all 720 observation orders plus idempotent revisits, strict independent PY-016 and AI901-D1-O8 chains, scored-misconception-only answer-free remediation, the exact bounded JSON summary, atomic byte-stable save failure, replay-free restore, deterministic recovery/focus, private/transient clearing, reversible returns, Tour isolation, invariant world/null deltas, offline/no-authority/no-exam-guarantee, and no RP-009.
 
 ## Accessibility and presentation risks
 
@@ -260,7 +261,7 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 - Exact landscape topology, scale, continuity morphology, contact and passage geometry, material palette, atmosphere, collective-work evidence, maintenance form, coupling design, and registered world-plate count.
 - Whether entry, observation, completed, and return states reuse one registered invariant plate or require registered detail plates.
 - Exact expedition-facing labels for continuities, contacts, and passages, provided they use observable physical evidence and never claim a universal rule, separation, interchangeability, cause, purpose, identity, or native meaning.
-- Curriculum is frozen by the SOLIDIFIED A3 contract and gameplay by the A4 graph; only protected A5 code remains authorized next.
+- Curriculum remains frozen by the SOLIDIFIED A3 contract and gameplay by the A4 graph; A5 protected construction is complete and no additional protected seam is authorized before coordinator Gate Review.
 
 ## Player-observable acceptance criteria
 
@@ -272,15 +273,15 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — A2 compact invariant-world sequence and premium production-art plan`; Curriculum `PASS — PY-016 + RP008-INFORMATION-EXTRACTION-01 SOLIDIFIED`; Puzzle `PASS — OR-00→OR-30 integrated graph`.
-- Packet gates remaining: Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
-- Did this pass reduce the remaining-gate count?: `YES — Puzzle moved MISSING -> PASS`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — A2 compact invariant-world sequence and premium production-art plan`; Curriculum `PASS — PY-016 + RP008-INFORMATION-EXTRACTION-01 SOLIDIFIED`; Puzzle `PASS — OR-00→OR-30 integrated graph`; Protected code `PASS — pure protected end-to-end journey`; Save/recovery `PASS — atomic allowlisted save, byte-stable rejection, replay-free restore`; Accessibility `PASS — protected metadata/evidence`; post-integration validation `PASS — focused, predecessor, frozen-validator, full-suite, build, leakage, purity, cleanup, and patch checks`.
+- Packet gates remaining after coordinator review: final Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — Protected code, Save/recovery, Accessibility protected evidence, and protected post-integration validation moved to PASS`.
 - Existing seams integrated or consolidated: RP-007's saved bounded relation, no-live-read/join/route rule, exact temporary clearing, ordinary Builder executable literacy, privacy clearing, reversible returns, and destinationless infrastructure become one direct synthesis-continuation premise; prior recurrence, difference, comparison, unavailability, and scope disciplines combine without invalidating their earlier bounded evidence.
 - Optional work trimmed or deferred: unavailable-case contents, universal or causal conclusion, independence/equivalence, native category, live joining/routing, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
 - New module or artifact integration consumer: `curriculum/readiness/RP-008/contract.json` gives A4/A5 one frozen machine-readable consumer without authorizing runtime, final art, or RP-009.
-- Breadth verdict: `CONTINUE — A5 CODER PROTECTED CONSTRUCTION`
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`
 - Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-008 reaches the coordinator gate`.
-- Exact next action in one sentence: Coder A5 composes one pure protected `OR-00→OR-30` journey against the real frozen evaluators and proves all 720 observation orders, scored-misconception-only remediation, exact JSON/scope limits, conjunctive atomic save, replay-free restore, deterministic recovery, Tour isolation, invariant world, and no RP-009 before Gate Review.
+- Exact next action in one sentence: Coordinator independently audits the complete RP-008 protected evidence bundle against all twelve gate items and either promotes RP-008 behind RP-007 or records one exact genuine hold; no RP-009 content is authorized before that decision.
 
 ## Advance Handoff Gate
 
@@ -288,9 +289,9 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 - Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
-- Coder smoke-test result: `PENDING`
-- Readiness: `NOT READY — A4 COMPLETE / A5 NEXT`
-- Required revision: `A5 completes the protected journey and evidence bundle; no successor is defined`.
+- Coder smoke-test result: `PASS — 14/14 RP-008 focused; 77/77 complete RP-003→RP-008 protected predecessor chain; frozen validator self-test and five canonical forms PASS; full 502/502; build PASS with accepted JS/CSS byte-identical; leakage/purity/cleanup/patch checks PASS`
+- Readiness: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE`
+- Required revision: `Coordinator independently audits all twelve gates; no additional protected seam or successor is authorized`.
 
 ### Exact Storyboarder A2 handoff
 
@@ -312,7 +313,7 @@ Python, AI-901, explanations, six observations, retained RP-007 summary, review,
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-008 IN DESIGN — A4 COMPLETE / A5 NEXT`
+- Team 1 railhead after promotion: `RP-008 GATE REVIEW — A5 HANDOFF`
 - Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A4 COMPLETE / A5 NEXT`
+- `STORY_RAIL_MAP.md` updated: `YES — GATE REVIEW / A5 HANDOFF`
 - Coordinator: `PENDING`
