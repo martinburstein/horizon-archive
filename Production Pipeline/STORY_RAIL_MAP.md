@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-010 W1 P1 — W2 BUG REPAIR NEXT`. Accepted blank `SC-03-30` remains stable, reversible, five-record exact, and zero-credit, but its normal UI exposes only evidence and route returns. No action composes the approved prerequisite/scaffold into a genuinely blank PY-009 primary. Focused `91/91` and HTTP asset checks pass with user storage untouched. W2 owns only that explicit learning-entry seam; submission/result and all later content remain closed.
+
 Latest Advance handoff: `2026-07-17 / RP-012 A4 PUZZLE PASS`. One bounded `MH-00→MH-40` graph locks eligibility, independent cumulative fresh forms, actual-miss-only remediation, blank retry, local ready/not-yet-ready outcome, atomic save, review, return, and credits. Both outcomes are recoverable; world/authority/exam/successor boundaries remain exact. A5 owns one pure protected journey.
 
 Latest coordinator gate: `2026-07-17 / RP002-P1-009 PASS + RP-011 PROMOTED`. Independent full `558/558`, RP-002 through RP-011 validators, production build, patch/leakage/purity checks, `93.5s` title-to-credits E2E, and clean `1920 x 1080` / `390 x 844` live review passed. Blank reversible `SC-03-30` is accepted in the demo; next W1 owns only the earliest gap toward PY-009. RP-011 holds ordered Working position behind RP-010; RP-012 remains the undefined ending reservation.

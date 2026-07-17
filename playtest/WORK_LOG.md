@@ -1,5 +1,13 @@
 # Player Agent Work Log
 
+## 2026-07-17 — W1 RP002-P1-010: blank comparison cannot begin PY-009
+
+- **Demo build:** `index-Cj1zShQS.js` / `index-R5wdIep0.css` at `http://127.0.0.1:4173/`.
+- **Outcome:** `P1 OPEN — W2 BUG REPAIR NEXT`. The accepted `sc03_local_comparison_blank` / `SC-03-30` boundary restores five exact observations and both reversible returns, but its only player actions are `RETURN TO EVIDENCE` and `RETURN TO CITY THRESHOLD`. No normal control can open the approved unfinished-work/prerequisite seam or the blank PY-009 primary.
+- **Expected / actual:** From the verified five-record blank comparison, one explicit zero-credit Pilot action should compose the existing prerequisite/scaffold authority and, only when prior strict evidence is valid, open the blank PY-009 primary. Instead, `CivicRecordArrival` identifies the surface as `SC-03-30-interface-pending`, exposes no learning action, and the normal route intentionally ends at blank entry.
+- **Recovery / isolation:** Both returns, five-record sanitation, replay-free resume, Tour isolation, invariant world, and every later lock remain intact. The user's save was not changed. Focused normal-route plus protected exercise suites pass `91/91`; served root/JS/CSS return HTTP `200`.
+- **Exact W2 handoff:** In `bug-repair` mode, integrate only one explicit, one-hit, accessible zero-credit action from exact sanitized `sc03_local_comparison_blank` into the existing Custody Ledger prerequisite/scaffold. Require the frozen five observations and strict predecessor/prerequisite evidence; open only a genuinely blank PY-009 primary with locked source fields, empty expedition fields, no prefilled source/answers/results, and deterministic focus. Preserve evidence bytes, both reversible returns, replay-free allowlisted resume, privacy clearing, offline/no-authority/no-exam-guarantee, invariant world, and `successor=null`. Wrong, stale, forged, private, Tour-derived, combined, passive, repeated, or missing-prerequisite requests must fail closed. Stop at blank primary: do not integrate submission/result, transfer, explanation, RP002-RAI-01, review/save/completion, or RP-003+.
+
 ## 2026-07-17 - Coordinator closure: RP-002 blank local-comparison partial release
 
 - **Outcome:** `PASS — BLANK SC-03-30 IN DEMO PARTIAL`. Enabled comparison entry, five-record byte stability, replay-free blank resume, evidence return, separate route return, responsive/assistive presentation, immutable civic art, and all no-credit locks are accepted.

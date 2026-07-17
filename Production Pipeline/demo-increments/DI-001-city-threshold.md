@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 increment — RP002-P1-010
+
+- Player verdict: `P1 OPEN` at accepted blank `SC-03-30`.
+- Earliest gap: no normal player action opens the existing prerequisite/Custody Ledger scaffold or a genuinely blank PY-009 primary.
+- Stable evidence: five observations, both returns, sanitation/resume, invariant world, and later locks remain exact; focused `91/91` and HTTP checks pass.
+- W2 scope: one explicit zero-credit blank-primary entry only; no submission/result, transfer, explanation, RAI, save/completion, or later packet.
+
 ## 2026-07-17 Coordinator — blank local-comparison boundary accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / BLANK SC-03-30 ACCEPTED`.
