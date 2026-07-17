@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance continuity handoff — PY-009 presentation hierarchy
+
+- A2 specified only three mutually replacing expedition-interface groups over the unchanged SC-03 plate: blank/editable System, local checks or Teacher feedback, and provisional Suit result.
+- Locked source and editable human-expedition fields stay distinct through literal text and programmatic semantics. Wide/narrow reflow, deterministic owner-first focus, forced-color/non-color meaning, reduced-motion replacement, separate returns, and `>=44 x 44 CSS px` controls are locked.
+- No final art, runtime, copy, curriculum, evaluator, route, storage, world state, or accepted-demo surface changed. Curriculum Checker A3 owns only a `NO REOPEN — SOLIDIFIED` preservation check; Working still begins at the accepted blank primary.
+
 ## 2026-07-17 Advance continuity handoff — editable PY-009 ownership
 
 - A1 locked surface meaning only for the nearest submission/result seam: sanitized suit-presented source, two human-expedition annotation fields, private temporary attempt, local/Teacher review, and provisional suit result.

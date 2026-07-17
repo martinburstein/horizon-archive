@@ -1,5 +1,7 @@
 # Horizon Archive Location Visual Spine
 
+**2026-07-17 RP-002 continuity lock:** the current Working-adjacent visual responsibility is one three-state expedition-interface replacement board over the unchanged SC-03 overview: blank/editable `SYSTEM // EXPEDITION SESSION` -> local `SYSTEM // LOCAL CHECKS` or `901 TEACHER // FEEDBACK` -> `SUIT // PROVISIONAL TRANSLATION`. The world plate remains dominant and invariant; responsive hierarchy, literal non-color state, reduced-motion equivalence, deterministic focus, separate returns, and `44 x 44 CSS px` controls are locked. This authorizes no new plate, final art, runtime state, curriculum reopen, or later-state exposure.
+
 Owner: **Storyboarder Agent**  
 Status: **ACTIVE SUPPORTING SPINE — SPOILER-SAFE**
 

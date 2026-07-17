@@ -1,5 +1,7 @@
 # Scene Index
 
+**SC-03 continuity note — 2026-07-17:** the existing three-master/four-phase brief now includes one Working-adjacent expedition-interface replacement board over the unchanged overview plate: blank/editable System -> local checks or Teacher feedback -> provisional Suit result. No new plate, final art, location, world state, or later-state exposure was added.
+
 | ID | Player-facing survey name | World / region | Status | Primary visual purpose | Art / sheet |
 |---|---|---|---|---|---|
 | GM-00 | Glass Garden Margin | World A / Glass Plain | Historical non-flat plate / absolute-flatness replacement required | Flush feedstock/subsurface distribution and dormant state-band sampling within an edge-to-edge glass field | [Historical non-flat art](images/glass-meadow-landing-shelf-v1.png) · [Sheet](scenes/GM-00-glass-meadow-landing-shelf.md) |
