@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { describeCivicActionAccessibility } from "./CivicActionAccessibility.js";
 import {
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
   custodyLedgerRouteActions,
@@ -40,12 +41,13 @@ export function CivicRecordArrival({ routeState, onAction }) {
       || (atObservation && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
     const isInert = actionState?.status === "inert";
+    const accessibility = describeCivicActionAccessibility(owner, action, actionState?.status);
     return (
       <button
         className={primary ? "primary-action" : "secondary-action"}
         type="button"
         key={action}
-        aria-label={`${owner} — ${action}`}
+        aria-label={accessibility.accessibleName}
         aria-disabled={isInert || undefined}
         disabled={isInert}
         onClick={isInert ? undefined : (event) => onAction(action, event)}
@@ -53,11 +55,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
         {action}
         {actionState && (
           <span className="civic-action-state" data-action-status={actionState.status}>
-            {actionState.status === "replay"
-              ? "RECORDED // REPLAY ADDS NO EVIDENCE"
-              : isInert
-                ? "INERT // ZERO CREDIT // NOT YET ACTIVE"
-                : "AVAILABLE"}
+            {accessibility.stateText}
           </span>
         )}
       </button>

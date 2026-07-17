@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 assistive-state parity — 2026-07-17
+
+- **Disposition:** `RP002-AESTH-004 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.
+- **Correction:** one shared descriptor supplies both visible status copy and the button accessible name. Available, selected Recorded/replay-only, and unselected Inert/zero-credit states are therefore distinguishable without sight and cannot drift into stale parallel wording.
+- **Preserved locks:** visible copy, equal order/layout/size, enabled/disabled behavior, handlers, first-far evidence, acknowledgement, return/replay/resume, immutable world, focus/reflow/forced-color/reduced-motion, privacy/Tour/offline/no-authority, zero credit/deltas, and every second-far/later lock remain unchanged.
+- **Evidence:** focused **29/29**, related **57/57**, full **523/523**, RP-002 validator, build, patch integrity, and HTTP checks pass. Port `4173` serves `index-DlTR4eYT.js` / `index-R5wdIep0.css`; user storage was untouched. Coordinator owns full E2E and live assistive release review.
+
 ## Working W2 first-far integration — 2026-07-17
 
 - **Disposition:** `RP002-P1-007 RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`.

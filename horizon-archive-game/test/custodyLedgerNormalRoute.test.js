@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { describeCivicActionAccessibility } from "../src/CivicActionAccessibility.js";
 import {
   CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
@@ -8,6 +9,7 @@ import {
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
+  custodyLedgerRouteOwners,
   readCustodyLedgerNormalRoute,
   sanitizeCustodyLedgerNormalRouteSave,
   writeCustodyLedgerNormalRoute,
@@ -104,6 +106,31 @@ function memoryStorage(initial = {}) {
     removeItem: (key) => values.delete(key),
   };
 }
+
+test("far peer accessible names share the exact visible Available, Recorded, and Inert state", async () => {
+  const cases = [
+    ["available", "AVAILABLE"],
+    ["replay", "RECORDED // REPLAY ADDS NO EVIDENCE"],
+    ["inert", "INERT // ZERO CREDIT // NOT YET ACTIVE"],
+  ];
+  for (const action of [
+    custodyLedgerObservationActions.distant_repetition,
+    custodyLedgerObservationActions.closed_boundary,
+  ]) {
+    for (const [status, stateText] of cases) {
+      const described = describeCivicActionAccessibility(custodyLedgerRouteOwners.pilot, action, status);
+      assert.equal(described.stateText, stateText);
+      assert.equal(
+        described.accessibleName,
+        `${custodyLedgerRouteOwners.pilot} — ${action} — ${stateText}`,
+      );
+    }
+  }
+  const arrival = await readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  assert.match(arrival, /aria-label=\{accessibility\.accessibleName\}/);
+  assert.match(arrival, /\{accessibility\.stateText\}/);
+  assert.doesNotMatch(arrival, /aria-label=\{`\$\{owner\}[^`]*\$\{action\}`\}/);
+});
 
 test("normal RP-002 entry reaches only SC-03-00 and exposes a reversible zero-credit continuation", () => {
   for (const activationKind of activationKinds) {
@@ -1082,10 +1109,11 @@ test("bounded storage keeps only exact allowlisted first-incomplete checkpoints 
 });
 
 test("normal app surface exposes reversible staged actions and a registered blank-view art hook", async () => {
-  const [app, city, arrival, normalRoute, styles] = await Promise.all([
+  const [app, city, arrival, actionAccessibility, normalRoute, styles] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/CivicActionAccessibility.js", import.meta.url), "utf8"),
     readFile(new URL("../src/CustodyLedgerNormalRoute.js", import.meta.url), "utf8"),
     readFile(new URL("../src/styles.css", import.meta.url), "utf8"),
   ]);
@@ -1109,9 +1137,11 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);
   assert.match(normalRoute, /custodyLedgerHotspotRegistry/);
   assert.match(arrival, /data-observation-count/);
-  assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
-  assert.match(arrival, /AVAILABLE/);
-  assert.match(arrival, /INERT \/\/ ZERO CREDIT \/\/ NOT YET ACTIVE/);
+  assert.match(actionAccessibility, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
+  assert.match(actionAccessibility, /AVAILABLE/);
+  assert.match(actionAccessibility, /INERT \/\/ ZERO CREDIT \/\/ NOT YET ACTIVE/);
+  assert.match(arrival, /aria-label=\{accessibility\.accessibleName\}/);
+  assert.match(arrival, /\{accessibility\.stateText\}/);
   assert.match(arrival, /aria-disabled=\{isInert \|\| undefined\}/);
   assert.match(arrival, /disabled=\{isInert\}/);
   assert.match(arrival, /onClick=\{isInert \? undefined/);

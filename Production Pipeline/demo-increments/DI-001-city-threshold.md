@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — RP002-AESTH-004 assistive-state parity resolved
+
+- **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. Each first-far peer's owner/action accessible name now includes the exact same shared Available, Recorded/replay-only, or Inert/zero-credit state text rendered visibly inside the button.
+- **Boundary:** no visual layout, visible copy, gameplay, save, world, credit, focus, responsive, forced-color, reduced-motion, privacy, Tour, or later-state contract changed. Selected replay and unselected disabled state are now independently distinguishable to assistive users.
+- **Validation/reload:** focused **29/29**, related **57/57**, full **523/523**, RP-002 validator, build, patch, and root/JS/CSS HTTP checks pass. Port `4173` serves `index-DlTR4eYT.js` / `index-R5wdIep0.css`; user save/storage remained untouched. Coordinator owns release E2E/live assistive review and must stop before second far or later content.
+
 ## 2026-07-17 W3 — RP002-AESTH-004 first-far assistive-state parity
 
 - **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT`. Visible first-far states are functionally honest, but each button's hard-coded owner/action `aria-label` masks its nested visible state and the status span has no programmatic description association.
