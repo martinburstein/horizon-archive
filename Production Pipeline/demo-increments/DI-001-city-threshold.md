@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP002-AESTH-003 blank far-stage false affordance
+
+- **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT.` The W2 transition to blank `SC-03-20` is functionally bounded and the immutable civic art remains intact, but both contractually inert far peers render as enabled primary buttons with literal `AVAILABLE` state.
+- **Exact defect:** `COMPARE DISTANT REPETITION` and `INSPECT CLOSED BOUNDARY` are visually, pointer-, keyboard-, and assistive-enabled even though normal dispatch returns `far_observations_not_integrated` for either and the App ignores the rejection. The player receives no status or focus change, so the only active-looking choices in the blank group silently do nothing. This is a false affordance, not a far-evidence or art defect.
+- **Evidence:** focused RP-002 presentation/state checks **87/87 PASS**; root, `index-C4ORHlkG.js`, `index-R5wdIep0.css`, and the immutable civic asset return HTTP `200`; served JS includes both peer labels, `AVAILABLE`, and the rejection reason. The civic source/built master remains SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`, first-person and undistorted; served CSS retains narrow `display:block; object-fit:cover`, one-column reflow, and `>=44px` targets.
+- **Evidence boundary:** the existing user demo tab is controlled by another browser session. W3 did not claim/reload it or inspect/alter the early Glass Meadow save, and makes no fabricated gated screenshot/crop/focus/console/assistive claim.
+- **W4:** preserve the exact two peer labels, equal order/size, System near=3/far=0 blank hierarchy, separate enabled route return, immutable world, and all zero-credit/no-later boundaries; make both peers honestly inert through native/assistive semantics and equal persistent non-color state text until far dispatch is integrated. Add focused regression coverage, then validate/reload without integrating far evidence or later content.
+
 ## 2026-07-17 W2 — RP002-P1-006 blank SC-03-20 demo reload
 
 - **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. Exact sanitized three-near/zero-far state now exposes enabled literal `COMPARE SCALE`; one explicit fresh activation enters only allowlisted `sc03_far_blank` / `SC-03-20`.
