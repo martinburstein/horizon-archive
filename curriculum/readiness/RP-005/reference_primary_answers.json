@@ -1,0 +1,6 @@
+{
+  "P01": {"technique": "keyword_extraction", "deciding_signal": "return_salient_words_or_phrases"},
+  "P02": {"technique": "entity_detection", "deciding_signal": "identify_named_people_places_organizations_or_other_entities"},
+  "P03": {"technique": "sentiment_analysis", "deciding_signal": "classify_expressed_opinion_or_emotional_tone"},
+  "P04": {"technique": "summarization", "deciding_signal": "condense_source_content_while_preserving_main_points"}
+}

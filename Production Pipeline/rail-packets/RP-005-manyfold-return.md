@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 STORYBOARD PASS COMPLETE`
+- Status: `IN DESIGN — A3 CURRICULUM PASS COMPLETE`
 - Target chapter/location: Chapter 3 expansion continuation / repeated-receiver landscape beyond the Three-Current Reach
 - Target demo horizon: fourth future slice after the accepted RP-001 boundary; directly after RP-004
 - Route order: 5
@@ -140,13 +140,20 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
-- Lore-provided learning opportunity: summarize bounded exposed repetitions, preserve divergence without judgment, and represent a sealed branch as unavailable rather than inferred.
-- No Python skill ID, AI-901 objective, model/evaluation category, case, answer, threshold, remediation path, metric, or mastery evidence is authorized by A1.
+- Status: `PASS — A3 MAPPING SOLIDIFIED; READY FOR GAMEPLAY MASTER A4`
+- Machine-readable authority: `curriculum/readiness/RP-005/contract.json` and `validate_mapping.py` with source, structure, blank-answer, wrong-technique, hardcoded-result, privacy, authority, and world-lock probes.
+- Python mapping: `PY-012 Write small functions`, reinforcement only after `L-03-02` function evidence remains `8/8`. The learner defines `build_summary(replica_summary, sealed_reading)`, returns one exact four-key dictionary, and calls it once. Sanitized precomputed counts, `None`, and field names are supplied/unscored; no loop, metric, ranking, threshold, or live read is scored.
+- Python gate: `8/8 primary -> answer-free remediation -> delayed closed-note function-name/parameters/body/return/call/None trace -> genuinely blank 8/8 transfer`. Hardcoded output, mutation, inference, live access, primary reuse, or judgment fails closed.
+- AI-901 mapping: `RP005-TEXT-01`, focused retrieval/transfer for current `AI901-D1-O5 Describe common text analysis techniques`: keyword extraction, entity detection, sentiment analysis, and summarization. `L-04-01` and the `L-06-01` objective ledger remain prerequisite mastery homes.
+- AI-901 gate: `8/8 primary -> per-case/per-dimension answer-free remediation -> delayed closed-note 6/6 confusion-pair retrieval -> genuinely blank 8/8 transfer`, plus separate explanations that requested output selects the technique and summarization does not establish truth or quality. It does not replace full lesson mastery.
+- Boundary: SC-06 frequency, recurrence, divergence, sealed branch, stewardship, crop, material, motion, sound, text, or interface order is never a text-analysis case, technique cue, metric, model, truth signal, quality judgment, or answer key. Neutral course-authored text cases use no Builder-world referent.
+- Evidence/save: four observations, strict PY-012, and strict RP005-TEXT-01 are independent conjuncts with no cross-credit. Store only allowlisted finalized IDs/dimension results/attempt metadata; clear source, answers, reasoning, feedback, and transient work at retry/transition/save.
+- Authority: course-authored offline practice only; no exam guarantee, live Azure/Foundry/Language/field call, credential/resource/sealed-reading access, authentication, ranking, correction, permission, external action, native truth/value/category/purpose, or world delta.
+- `SOLIDIFIED`: reopen only for a material official-objective change, validator/playtest mismatch or bypass, or Martin's changed learning goal.
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `UNASSIGNED — A4 MAY SELECT ONLY AFTER A3 SOLIDIFIES THE MAPPING`
+- Status: `UNASSIGNED — A4 NEXT; MAY NOT CHANGE THE SOLIDIFIED A3 CONTRACT`
 - Lore-provided interaction boundary: deliberate observation precedes executable work; the program uses sanitized replicas only; summary remains expedition-side and nonjudgmental; save records recurrence/divergence/unavailable/limits meaning; mistakes remain local and recoverable; live reading, ranking, correction, external action, and world response are forbidden.
 
 ## Advance Construction Track — Coder
@@ -170,7 +177,7 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 - Required existing systems: exact RP-004 verified completion boundary; reversible route ownership; privacy sanitizer; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
 - New systems: none authorized by A1; later roles decide whether existing observation, summary, evidence, recovery, and save patterns can be composed.
 - Art dependencies: A2 defines one registered maximum-quality photorealistic first-person field plan plus responsive interaction mapping after reading the visual spine.
-- Curriculum dependencies: A3 selects the nearest contiguous Python/AI-901 application from official project authorities without inheriting a model, metric, category, answer, or judgment from A1.
+- Curriculum dependencies: `PY-012` and `RP005-TEXT-01 / AI901-D1-O5` are SOLIDIFIED in `curriculum/readiness/RP-005/`; A4 composes them without changing prerequisites, cases, answers, dimensions, thresholds, sources, privacy, authority, or zero-credit presentation.
 - Decisions awaiting Martin: none for this surface-safe seed.
 
 ## Locked decisions
@@ -184,7 +191,7 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 ## Flexible implementation choices
 
 - Exact landscape topology, scale, receiver morphology, material palette, atmosphere, collective-work evidence, maintenance form, trace visualization, coupling design, and world-plate count.
-- Exact Python skill and AI-901 mapping, provided A3 verifies it against current official sources and preserves the lore boundary.
+- Puzzle order, hint wording, recovery presentation, and review layout may vary inside the frozen contract; skill/objective IDs, cases, answers, dimensions, thresholds, explanations, and evidence boundaries may not.
 - Exact puzzle cases, summary representation, hints, remediation, evidence order, and save schema.
 - Whether entry, changed, completed, and return states reuse one registered invariant plate or require registered detail plates.
 - Exact expedition-facing names for trace groups, provided they use observable physical evidence and never claim truth, quality, purpose, or native meaning.
@@ -199,25 +206,29 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface premise, player goal, predecessor match, end state, observation/copy ladder, mystery and ownership locks`; Scene `PASS — A2 compact invariant-field sequence and premium production-art plan`.
-- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
-- Did this cycle reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
+- Packet gates passed: Story `PASS`; Scene `PASS`; Curriculum `PASS — PY-012 and RP005-TEXT-01 / AI901-D1-O5 SOLIDIFIED with strict machine-readable evidence`.
+- Packet gates remaining: Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, final Production art, Normal integration, and Working evidence.
+- Did this cycle reduce the remaining-gate count?: `YES — Curriculum moved MISSING -> PASS`.
 - Existing seams integrated or consolidated: RP-004's saved form/corridor/purpose-unknown note, no-live-control rule, executable literacy, privacy clearing, reversible returns, and visible outbound continuation become one direct expansion premise.
 - Optional work trimmed or deferred: RP-006 destination, additional fields, secondary programs, identity-bearing matter, live sampling, quality judgment, correction, native categories, and Machine relationship.
 - New module or artifact integration consumer: later A5 may compose existing observation/summary/evidence/save authorities only after A2–A4; no new module is requested by A1.
 - Breadth verdict: `CONTINUE`
 - Next contiguous packet seed readiness: `RP-006 remains RESERVED until RP-005 reaches GATE REVIEW or READY FOR WORKING`.
-- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating the complete SC-06 presentation as zero mastery evidence.
+- Exact next action in one sentence: Gameplay Master A4 composes one bounded interaction graph around frozen PY-012 and RP005-TEXT-01 while keeping SC-06 frequency and presentation at zero mastery credit.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-16`
 - Storyboarder sign-off: `PASS — 2026-07-16`
-- Curriculum Checker sign-off: `PENDING A3`
+- Curriculum Checker sign-off: `PASS — 2026-07-16`
 - Gameplay Master sign-off: `PENDING A4`
 - Coder smoke-test result: `PENDING A5`
 - Readiness: `REVISE`
-- Required revision: complete A3–A5 sequentially on this packet; do not define RP-006.
+- Required revision: complete A4–A5 sequentially on this packet; do not define RP-006.
+
+### Exact Gameplay Master A4 handoff
+
+`Gameplay Master Agent — A4: work only on RP-005 Manyfold Return. Read the canonical Gameplay Master profile, GAMEPLAY_SYSTEMS_SPINE.md, this packet, locked SC-06, and curriculum/readiness/RP-005/contract.json plus validator. Build exactly one bounded graph from verified RP-004 completion through four equal-peer observations, strict PY-012 function reinforcement, independent strict RP005-TEXT-01 / AI901-D1-O5 technique recognition, conjunctive review, allowlisted atomic save, verified restore, and reversible return. Preserve the supplied unscored counts/None/output-key scaffold; 8/8 -> delayed retrieval -> blank 8/8 Python and 8/8 -> 6/6 retrieval -> blank 8/8 AI chains; separate requested-output and no-truth explanations; neutral text cases with no SC-06 referent; frequency/presentation/Tour zero credit; answer-free local remediation; unlimited blank retry; privacy clearing; deterministic first-incomplete focus/resume; accessibility; offline/no-authority/no-exam-guarantee; invariant SC-06 field/clocks; unchanged continuation; null city/external delta; sanitized replicas only; no metric, ranking, correction, live read, native truth/value/category/purpose, Machine meaning, or RP-006 route. Do not change cases, answers, dimensions, thresholds, sources, IDs, composition, art, runtime, accepted Demo, hidden lore, or successor content. Specify entry/success/failure/recovery/save/restore/return states, timing, verbs, feedback/focus, and exact A5 protected-construction handoff; update packet, GAMEPLAY_SYSTEMS_SPINE.md, queue/map, and Gameplay log, then validate against the frozen contract.`
 
 ### Exact Storyboarder A2 handoff
 
@@ -231,7 +242,7 @@ Describe what the exposed repetitions support—recurrence, bounded variation, a
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-005 IN DESIGN — A2 COMPLETE`
+- Team 1 railhead after promotion: `RP-005 IN DESIGN — A3 COMPLETE / A4 NEXT`
 - Next contiguous packet seeded: `NO — RP-006 remains reserved`
 - `STORY_RAIL_MAP.md` updated: `YES — A1 seed`
 - Coordinator: `PENDING`

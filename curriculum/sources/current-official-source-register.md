@@ -14,6 +14,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - A score of 700 or greater is required to pass. This curriculum uses higher internal gates; those gates are coaching policy, not Microsoft scoring policy.
   - Reverified July 16, 2026: the page remains last updated July 13, 2026 and the April 15, 2026 objective set and domain weights are unchanged.
   - Reverified for RP-004 A3 on July 16, 2026: `Identify AI workloads` still explicitly covers generative and agentic AI, text analysis, speech, computer vision, and information extraction. The packet uses separate course-authored cases and never infers a workload from story scenery.
+  - Reverified for RP-005 A3 on July 16, 2026: the guide still explicitly names keyword extraction, entity detection, sentiment analysis, and summarization as common text-analysis techniques. RP-005 uses separate neutral course-authored cases selected by requested output; SC-06 frequency is never a technique, metric, model, or answer cue.
 
 ## Priority Foundry sources checked first
 

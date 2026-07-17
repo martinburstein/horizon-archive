@@ -1,0 +1,129 @@
+{
+  "mapping_id": "RP005-A3-MANYFOLD-RETURN",
+  "packet_id": "RP-005",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-06",
+  "source_verified_on": "2026-07-16",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview"
+  ],
+  "entry_gate": {
+    "python": "L-03-02 PY-012 primary and fresh-transfer function evidence remains 8/8 with a closed-note parameter-return-call trace",
+    "ai901": "L-04-01 text-analysis evidence and L-06-01 AI901-D1-O5 objective ledger row remain ready; confidence alone never satisfies entry",
+    "missing_evidence_route": ["curriculum/lessons/L-03-02", "curriculum/lessons/L-04-01", "curriculum/lessons/L-06-01"],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": [
+    "world_visibility", "trace_frequency", "recurrence_or_divergence_composition", "sealed_boundary_visibility",
+    "stewardship_visibility", "hotspot_discovery", "crop_or_display", "owner_text", "motion_color_sound_or_timing",
+    "focus_navigation_or_return", "successful_execution_display", "save_or_restore_presentation", "accessibility_behavior", "field_state"
+  ],
+  "python_contract": {
+    "skill_id": "PY-012",
+    "skill_name": "Write small functions",
+    "scope": "reinforcement_only",
+    "implementation_reason": "Lightweight AI clients use small functions to transform supplied structured results into consistent reusable output without duplicating logic or mutating inputs.",
+    "learner_owned_action": "define build_summary with two parameters, return one four-key nonjudgmental dictionary, and call it once with supplied sanitized inputs",
+    "provided_unscored_scaffold": ["precomputed sanitized recurring and divergent counts", "sealed-reading None value", "required output field names"],
+    "forms": {
+      "primary": {"replica_summary": {"recurring_count": 5, "divergent_count": 2}, "sealed_reading": null},
+      "transfer": {"replica_summary": {"recurring_count": 4, "divergent_count": 3}, "sealed_reading": null}
+    },
+    "expected_keys": ["recurring_count", "divergent_count", "sealed", "judgment"],
+    "checks": [
+      "summary_is_dictionary", "exact_keys_and_values", "function_named_build_summary", "exact_two_parameters",
+      "return_uses_parameters_without_inference", "function_called_once_with_supplied_inputs",
+      "sealed_and_judgment_remain_none", "inputs_unchanged_and_no_forbidden_operations"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note trace of function name/parameters/body/return/call and None boundary, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_the_displayed_summary", "compute_or_rank_a_metric", "infer_sealed_content_truth_quality_or_purpose",
+      "mutate_supplied_inputs", "read_live_field_or_external_source", "reuse_completed_primary_as_transfer",
+      "count_execution_display_navigation_save_timing_confidence_color_motion_frequency_or_hints"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP005-TEXT-01",
+    "objective_id": "AI901-D1-O5",
+    "objective_title": "Describe common text analysis techniques",
+    "scope": "focused_retrieval_and_transfer_for_keyword_extraction_entity_detection_sentiment_analysis_and_summarization; does_not_replace_L-04-01_or_L-06-01_mastery",
+    "dimensions": ["technique", "deciding_signal"],
+    "landscape_is_never_a_case_metric_model_or_answer_key": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Return salient words or phrases from support notes.","technique":"keyword_extraction","deciding_signal":"return_salient_words_or_phrases"},
+        {"id":"P02","prompt":"Identify named people, places, and organizations in an article.","technique":"entity_detection","deciding_signal":"identify_named_people_places_organizations_or_other_entities"},
+        {"id":"P03","prompt":"Determine the opinion or emotional tone expressed in a review.","technique":"sentiment_analysis","deciding_signal":"classify_expressed_opinion_or_emotional_tone"},
+        {"id":"P04","prompt":"Create a shorter account that preserves the main points of a report.","technique":"summarization","deciding_signal":"condense_source_content_while_preserving_main_points"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Surface representative phrases from an incident log, not named items.","technique":"keyword_extraction","deciding_signal":"surface_representative_phrases_not_named_entities"},
+        {"id":"R02","prompt":"Locate named organizations in a transcript, not the speaker's opinion.","technique":"entity_detection","deciding_signal":"locate_named_organizations_not_opinion"},
+        {"id":"R03","prompt":"Produce a short account of a long memo, not a positive or negative label.","technique":"summarization","deciding_signal":"produce_a_shorter_account_not_a_sentiment_label"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"Return compact topic phrases from maintenance notes.","technique":"keyword_extraction","deciding_signal":"return_compact_topic_phrases_from_notes"},
+        {"id":"T02","prompt":"Identify named locations and products in a bulletin.","technique":"entity_detection","deciding_signal":"identify_named_locations_and_products"},
+        {"id":"T03","prompt":"Classify customer opinion as positive, negative, or neutral.","technique":"sentiment_analysis","deciding_signal":"classify_customer_opinion_as_positive_negative_or_neutral"},
+        {"id":"T04","prompt":"Create a brief account of a long source passage.","technique":"summarization","deciding_signal":"create_a_brief_account_of_the_source_text"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation, delayed closed-note 6/6 confusion-pair retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that requested output selects the technique and summarization does not establish truth or quality",
+    "misconception_tags": [
+      "frequent_words_equal_truth", "named_entity_equals_keyword", "sentiment_equals_summary", "summary_equals_judgment",
+      "input_text_alone_selects_technique", "scenery_frequency_selects_text_analysis", "offline_case_proves_live_service_configuration",
+      "valid_answer_authorizes_external_action"
+    ]
+  },
+  "remediation_contract": {
+    "python": ["name_function_parameters_and_return", "trace_one_parameter_to_one_output_field", "contrast_return_with_print_or_hardcode", "preserve_both_none_boundaries", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["state_the_requested_output", "contrast_one_confusion_pair", "remove_frequency_or_scenery_cues", "complete_one_neutral_guided_case", "restore_blank_first_incomplete_form", "retry_without_carried_answer"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "raw_case_answers", "free_form_reasoning", "private_notes", "identity_content", "credentials", "endpoints", "payloads", "responses", "source_content", "exam_item_text", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_choices_feedback_and_case_answers",
+    "save_eligibility": "require finalized strict PY-012, finalized strict RP005-TEXT-01, and separately finalized recurrence divergence sealed-unavailable and stewardship observations; no conjunct cross-credits another",
+    "after_save": "clear_all_temporary_work_and_keep_only_allowlisted_finalized_evidence_plus_the_expedition_owned_note",
+    "resume": "restore_only_finalized_dimension_evidence_and_resume_at_the_first_incomplete_scored_boundary"
+  },
+  "accessibility_contract": {
+    "representative_desktop": "complete responsive 16:9 laptop shell with dominant world and current required group visible without outer scroll",
+    "narrow_and_text_zoom": "natural vertical reflow without horizontal escape or clipped ownership and limits",
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_audio_position_or_frequency": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_azure_foundry_language_terminal_or_field_call": true,
+    "no_credential_resource_live_branch_or_sealed_reading_access": true,
+    "no_permission_consent_authentication_ranking_correction_or_external_action": true,
+    "no_field_city_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_save": true
+  },
+  "world_locks": [
+    "RP-004 verified completion required", "continuation unchanged", "city_state_delta=None", "external_state_delta=None",
+    "SC-06 invariant panorama detail field traces sealed branch stewardship coupling and monotonic environmental clocks",
+    "sanitized precomputed replicas only", "no native category truth value quality metric model or purpose inference",
+    "reversible RP-004 and earlier returns", "no RP-006 route or destination"
+  ],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

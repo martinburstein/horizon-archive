@@ -1,0 +1,5 @@
+{
+  "R01": {"technique": "keyword_extraction", "deciding_signal": "surface_representative_phrases_not_named_entities"},
+  "R02": {"technique": "entity_detection", "deciding_signal": "locate_named_organizations_not_opinion"},
+  "R03": {"technique": "summarization", "deciding_signal": "produce_a_shorter_account_not_a_sentiment_label"}
+}

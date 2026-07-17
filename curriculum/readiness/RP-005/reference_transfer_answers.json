@@ -1,0 +1,6 @@
+{
+  "T01": {"technique": "keyword_extraction", "deciding_signal": "return_compact_topic_phrases_from_notes"},
+  "T02": {"technique": "entity_detection", "deciding_signal": "identify_named_locations_and_products"},
+  "T03": {"technique": "sentiment_analysis", "deciding_signal": "classify_customer_opinion_as_positive_negative_or_neutral"},
+  "T04": {"technique": "summarization", "deciding_signal": "create_a_brief_account_of_the_source_text"}
+}

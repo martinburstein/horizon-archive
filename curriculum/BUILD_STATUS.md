@@ -100,3 +100,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added machine-readable cases, reference forms, current official-source verification, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and anti-bypass validation
 - [x] Preserved exact RP-003 completion, invariant SC-05, replica-only provenance, purpose unknown, separate observation evidence, zero landscape/city/external delta, reversible returns, and no RP-005 content
 - [ ] Gameplay Master completes A4 against the exact solidified RP-004 contract
+
+## 2026-07-16 RP-005 curriculum verification
+
+- [x] Selected `PY-012` as the nearest nonduplicative small-function reinforcement after RP-004's loop boundary
+- [x] Added focused `RP005-TEXT-01` retrieval/transfer for current `AI901-D1-O5` keyword extraction, entity detection, sentiment analysis, and summarization
+- [x] Solidified strict Python `8/8 primary + answer-free remediation + delayed closed-note function trace + blank 8/8 transfer`
+- [x] Solidified strict AI-901 `8/8 primary + per-dimension remediation + delayed 6/6 retrieval + blank 8/8 transfer + two boundary explanations`
+- [x] Added machine-readable cases, reference forms, official-source verification, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and anti-bypass validation
+- [x] Preserved exact RP-004 completion, invariant SC-06, sanitized precomputed replicas, unavailability and judgment as None, separate observation evidence, zero field/city/external delta, reversible returns, and no RP-006 content
+- [ ] Gameplay Master completes A4 against the exact solidified RP-005 contract

@@ -276,7 +276,8 @@
       "related_ai901_objectives": [
         "AI901-D2-O3",
         "AI901-D2-O7"
-      ]
+      ],
+      "rail_packet_reinforcement": "RP-005 SC-06 small two-parameter function over supplied sanitized summary counts; 8/8 primary, answer-free remediation, delayed closed-note function trace, and genuinely blank 8/8 transfer with sealed and judgment values preserved as None"
     },
     {
       "skill_id": "PY-013",

@@ -1,5 +1,15 @@
 # Build Log
 
+## Log entry: 2026-07-16T22:42:00-04:00
+
+Stage: RP-005 Manyfold Return contiguous curriculum verification (A3)
+Work completed: Closed exactly one RP-005 Curriculum gate as `SOLIDIFIED`. Selected `PY-012` function-only reinforcement over supplied sanitized precomputed counts and `RP005-TEXT-01` as focused current `AI901-D1-O5` text-technique retrieval/transfer. Locked strict primary/remediation/delayed-retrieval/genuinely-blank-transfer evidence, two boundary explanations, misconception repair, privacy allowlist, accessibility, offline/no-authority/no-exam-guarantee, zero-credit presentation/frequency, independent save conjuncts, and three reopen conditions. Added machine-readable contract, two Python references, three AI evidence forms, and anti-bypass/failure probes. Earlier mappings remain frozen and RP-006 remains reserved.
+Files changed: RP-005 packet; Curriculum/Expedition spines; Advance queue, rail map, scoreboard, breadth gate; RP-005 readiness package; Python prerequisite/progression maps; official source register; build status/log.
+Validation performed: followed repository official-source priority directly because the named skill was unavailable; reverified the current official AI-901 guide plus the four priority Microsoft sources and Azure Language overview, using no third party. Validator self-test, both Python forms `8/8`, AI primary `8/8`, retrieval `6/6`, transfer `8/8`, blank/wrong-technique/hardcoded probes, all curriculum JSON, focused packet/spine/queue/map/scoreboard/breadth checks, and patch checks passed.
+Next recommended item: Gameplay Master A4 builds exactly one bounded RP-005 graph from the packet's exact handoff without changing the frozen mapping.
+Unresolved risks: A4/A5 must keep supplied counts and None unscored, prevent SC-06 frequency from cueing any text technique, preserve observations and both learning chains independently, clear private work before blank retry/save, and prove deterministic recovery without live read, metric, ranking, correction, world response, or external action.
+Notes: Course-authored offline practice only; not Microsoft exam items, exam guarantee, Builder authentication, native truth/value/category/purpose, Machine meaning, or RP-006 route. No runtime, art, accepted Demo state, live service, credential, external action, hidden lore, or user file changed.
+
 ## Log entry: 2026-07-16T21:10:00-04:00
 
 Stage: RP-004 Three-Current Reach contiguous curriculum verification (A3)
