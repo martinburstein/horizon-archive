@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-005 third-near demo reload
+
+- **Disposition:** `DEMO RELOADED — RP002-P1-005 RESOLVED / W3 NEXT`. The exact accepted two-ID evidence group now permits only its sole remaining fresh near action. It preserves both prior records byte-stably, adds exactly the matching third ID/Scene statement, and presents literal System `Near evidence recorded: 3 of 3. Distant comparison is available; no city state changed.`
+- **Bounded surface:** the acknowledgement and restored three-near/zero-far group expose only dormant zero-credit `COMPARE SCALE` plus the separate route return. Comparison, `SC-03-20`, far evidence, learning, completion, and RP-003+ remain unreachable. Recorded controls replay idempotently; unsafe/private/Tour/duplicate/forged/ambiguous/combined inputs fail closed.
+- **Save/presentation:** exact zero/one/two/three-near-zero-far allowlisted resume remains deterministic and acknowledgement-free. The immutable first-person photoreal civic world, responsive cover crop, heading-first focus, natural narrow reflow, non-color state labels, reduced-motion equivalence, and `>=44px` controls remain unchanged.
+- **Validation:** focused **51/51**, full **488/488**, RP-002 validator, production build, preflight **26**, and complete **96s** E2E all pass; `credits:true`, every emitted gate true, and `runtimeErrors:false`. The final explicit dormant-control presentation rebuild is covered by the same focused/full gates. Incidental QA PNGs were restored. Port `4173` serves `index-Dgq5W_0s.js` / `index-R5wdIep0.css` with HTTP `200`.
+- **W3:** review only the exact two-ID -> third acknowledgement -> restored dormant near-complete presentation. Preserve all functional, save, accessibility, privacy, Tour, no-credit/no-delta, and no-later-exposure contracts; open a finding only for one reproduced visual defect.
+
 ## 2026-07-17 W1 — RP002-P1-005 third-near finding
 
 - **Disposition:** `BLOCKED — RP002-P1-005 OPEN / W2 BUG REPAIR NEXT.` The accepted two-ID evidence group, both Recorded replays, one visible Available control, evidence return, route return, and two-ID resume remain stable. The normal controller rejects activation of the sole Available action.

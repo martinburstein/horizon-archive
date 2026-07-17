@@ -31,18 +31,25 @@ export function CivicRecordArrival({ routeState, onAction }) {
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
       || (atNearObservation && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
+    const isDormant = actionState?.status === "dormant";
     return (
       <button
         className={primary ? "primary-action" : "secondary-action"}
         type="button"
         key={action}
         aria-label={`${owner} — ${action}`}
+        aria-disabled={isDormant || undefined}
+        disabled={isDormant}
         onClick={(event) => onAction(action, event)}
       >
         {action}
         {actionState && (
           <span className="civic-action-state" data-action-status={actionState.status}>
-            {actionState.status === "replay" ? "RECORDED // REPLAY ADDS NO EVIDENCE" : "AVAILABLE"}
+            {actionState.status === "replay"
+              ? "RECORDED // REPLAY ADDS NO EVIDENCE"
+              : isDormant
+                ? "DORMANT // ZERO CREDIT // NEXT STAGE NOT ACTIVE"
+                : "AVAILABLE"}
           </span>
         )}
       </button>
@@ -91,7 +98,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
             <p>
               {atNearObservation
                 ? hasObservation
-                  ? `${observationCount === 1 ? "One bounded Scene fact is" : "Two bounded Scene facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
+                  ? `${observationCount === 1 ? "One" : observationCount === 2 ? "Two" : "Three"} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
             </p>

@@ -433,7 +433,69 @@ test("two-ID return, close/reload, and getSave restore two Recorded actions plus
   assertNoDeltaOrCredit(routeReturn.state);
 });
 
-test("two-ID Recorded actions replay idempotently while the third Available action remains unactivatable", () => {
+test("all six near orders and seven modalities add exactly one third record and expose only dormant comparison", () => {
+  const orders = nearEntries.flatMap(([firstId, firstLabel]) => (
+    nearEntries.filter(([id]) => id !== firstId).map(([secondId, secondLabel]) => {
+      const [thirdId, thirdLabel] = nearEntries.find(([id]) => id !== firstId && id !== secondId);
+      return { firstId, firstLabel, secondId, secondLabel, thirdId, thirdLabel };
+    })
+  ));
+  assert.equal(orders.length, 6);
+  for (const order of orders) {
+    for (const activationKind of activationKinds) {
+      const first = blankController().dispatch(intent(
+        order.firstLabel,
+        "pointer",
+        `rp002-third-first-${order.firstId}-${order.secondId}-${activationKind}`,
+      ));
+      const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+        order.secondLabel,
+        "touch",
+        `rp002-third-second-${order.firstId}-${order.secondId}-${activationKind}`,
+      ));
+      const before = second.save.observationEvidence.map((record) => JSON.stringify(record));
+      const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+      const third = controller.dispatch(intent(
+        order.thirdLabel,
+        activationKind,
+        `rp002-third-${order.firstId}-${order.secondId}-${activationKind}`,
+      ));
+      assert.equal(third.status, "recorded", `${order.firstId}->${order.secondId}->${order.thirdId}/${activationKind}`);
+      assert.equal(third.observationId, order.thirdId);
+      assert.equal(third.state.checkpoint, "sc03_near_third_acknowledgement");
+      assert.deepEqual(third.state.sceneStatement, custodyLedgerObservationStatements[order.thirdId]);
+      assert.deepEqual(third.state.statusMessage, {
+        owner: "SYSTEM // EXPEDITION STATE",
+        text: custodyLedgerObservationInterfaceCopy.nearComplete,
+      });
+      assert.deepEqual(third.state.availableActions, [
+        custodyLedgerObservationControls.compareScale.label,
+        custodyLedgerRouteActions.returnAccepted,
+      ]);
+      assert.deepEqual(third.state.actionStates.map(({ label, status }) => ({ label, status })), [{
+        label: custodyLedgerObservationControls.compareScale.label,
+        status: "dormant",
+      }]);
+      assert.equal(third.save.checkpoint, "sc03_near_complete");
+      assert.deepEqual(third.save.observationEvidence.map((record) => record.observationId), [
+        order.firstId, order.secondId, order.thirdId,
+      ]);
+      assert.deepEqual(third.save.observationEvidence.slice(0, 2).map((record) => JSON.stringify(record)), before);
+      assertNoDeltaOrCredit(third.state, 3);
+
+      const compare = controller.dispatch(intent(
+        custodyLedgerObservationControls.compareScale.label,
+        "pointer",
+        `rp002-compare-dormant-${order.firstId}-${order.secondId}-${activationKind}`,
+      ));
+      assert.equal(compare.status, "rejected");
+      assert.equal(controller.getState().checkpoint, "sc03_near_third_acknowledgement");
+      assertNoDeltaOrCredit(controller.getState(), 3);
+    }
+  }
+});
+
+test("two-ID Recorded actions remain replay-only while the sole Available action remains exact", () => {
   const first = blankController().dispatch(intent(
     custodyLedgerObservationActions.fixed_trace,
     "pointer",
@@ -456,16 +518,119 @@ test("two-ID Recorded actions replay idempotently while the third Available acti
     assert.deepEqual(replay.state.observationEvidence.map((record) => record.observationId), ["fixed_trace", "later_stewardship"]);
     assertNoDeltaOrCredit(replay.state, 2);
   }
-  const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
-  const third = controller.dispatch(intent(
+});
+
+test("three-near zero-far save resumes without acknowledgement replay and route return stays separate", () => {
+  const first = blankController().dispatch(intent(
     custodyLedgerObservationActions.outlined_gap,
-    "switch",
-    "rp002-third-stays-closed",
+    "pointer",
+    "rp002-three-resume-first",
   ));
-  assert.equal(third.status, "rejected");
-  assert.equal(controller.getState().checkpoint, "sc03_near_second");
-  assert.deepEqual(controller.getState().observationEvidence.map((record) => record.observationId), ["fixed_trace", "later_stewardship"]);
-  assertNoDeltaOrCredit(controller.getState(), 2);
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "keyboard_enter",
+    "rp002-three-resume-second",
+  ));
+  const third = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save }).dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "screen_reader",
+    "rp002-three-resume-third",
+  ));
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: third.save });
+  assert.equal(resumed.getState().checkpoint, "sc03_near_complete");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.equal(resumed.getState().message, custodyLedgerObservationInterfaceCopy.nearComplete);
+  assert.deepEqual(resumed.getState().availableActions, [
+    custodyLedgerObservationControls.compareScale.label,
+    custodyLedgerRouteActions.returnAccepted,
+  ]);
+  assert.deepEqual(resumed.getState().actionStates.map(({ label, status }) => ({ label, status })), [{
+    label: custodyLedgerObservationControls.compareScale.label,
+    status: "dormant",
+  }]);
+  assert.deepEqual(resumed.getState().observationEvidence.map((record) => record.observationId), [
+    "outlined_gap", "fixed_trace", "later_stewardship",
+  ]);
+  assert.deepEqual(resumed.getSave(), third.save);
+  assertNoDeltaOrCredit(resumed.getState(), 3);
+  const compare = resumed.dispatch(intent(
+    custodyLedgerObservationControls.compareScale.label,
+    "keyboard_space",
+    "rp002-three-resume-compare",
+  ));
+  assert.equal(compare.status, "rejected");
+  assert.equal(compare.reason, "comparison_dormant");
+  assertNoDeltaOrCredit(compare.state, 3);
+  const route = resumed.dispatch(intent(
+    custodyLedgerRouteActions.returnAccepted,
+    "switch",
+    "rp002-three-resume-route",
+  ));
+  assert.equal(route.status, "returned");
+  assert.equal(route.state.checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(route.state);
+});
+
+test("unsafe third-observation and compare-through-observation input fail closed on exact two-ID evidence", () => {
+  const variants = [
+    { action: "UNKNOWN" },
+    { stale: true },
+    { forged: true },
+    { multiHit: true },
+    { tourDerived: true },
+    { actions: [custodyLedgerObservationActions.later_stewardship, custodyLedgerObservationActions.outlined_gap] },
+    { candidateSemanticIds: ["rp002.sc03_10.later_stewardship", "rp002.sc03_10.outlined_gap"] },
+    { privateNotes: "PRIVATE-THIRD" },
+    { action: custodyLedgerObservationControls.compareScale.label, comparisonIntent: true },
+  ];
+  for (const [index, override] of variants.entries()) {
+    const first = blankController().dispatch(intent(
+      custodyLedgerObservationActions.fixed_trace,
+      "pointer",
+      `rp002-unsafe-third-first-${index}`,
+    ));
+    const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+      custodyLedgerObservationActions.outlined_gap,
+      "touch",
+      `rp002-unsafe-third-second-${index}`,
+    ));
+    const before = JSON.stringify(second.save.observationEvidence);
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+    const clean = intent(
+      custodyLedgerObservationActions.later_stewardship,
+      "pointer",
+      `rp002-unsafe-third-${index}`,
+    );
+    const result = controller.dispatch({ ...clean, ...override });
+    assert.equal(result.status, "rejected");
+    assert.equal(controller.getState().checkpoint, "sc03_near_second");
+    assert.equal(JSON.stringify(controller.getState().observationEvidence), before);
+    assert.doesNotMatch(JSON.stringify(controller.getState()), /PRIVATE-THIRD/);
+    assertNoDeltaOrCredit(controller.getState(), 2);
+  }
+
+  const first = blankController().dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "pointer",
+    "rp002-third-duplicate-first",
+  ));
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "pointer",
+    "rp002-third-duplicate-second",
+  ));
+  const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+  const repeated = intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "pointer",
+    "rp002-third-duplicate-token",
+  );
+  assert.equal(controller.dispatch(repeated).status, "recorded");
+  const duplicate = controller.dispatch(repeated);
+  assert.equal(duplicate.status, "duplicate_suppressed");
+  assert.equal(duplicate.state.checkpoint, "sc03_near_third_acknowledgement");
+  assertNoDeltaOrCredit(duplicate.state, 3);
 });
 
 test("two-ID save sanitation accepts only two canonical near records and rejects private, forged, duplicate, or third evidence", () => {
@@ -490,6 +655,35 @@ test("two-ID save sanitation accepts only two canonical near records and rejects
     { ...second.save, observationEvidence: [recordA, { ...recordB, observationId: "forged" }] },
     { ...second.save, observationEvidence: [...second.save.observationEvidence, recordB] },
     { ...second.save, checkpoint: "SC-03-20" },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
+});
+
+test("three-near zero-far sanitation accepts only exact canonical evidence and no private or far state", () => {
+  const first = blankController().dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "pointer",
+    "rp002-three-save-first",
+  ));
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "pointer",
+    "rp002-three-save-second",
+  ));
+  const third = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save }).dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "pointer",
+    "rp002-three-save-third",
+  ));
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, third.save, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), third.save);
+  const [recordA, recordB, recordC] = third.save.observationEvidence;
+  for (const invalid of [
+    { ...third.save, privateNotes: "PRIVATE" },
+    { ...third.save, observationEvidence: [recordA, recordB] },
+    { ...third.save, observationEvidence: [recordA, recordB, recordB] },
+    { ...third.save, observationEvidence: [recordA, recordB, { ...recordC, observationId: "distant_repetition" }] },
+    { ...third.save, checkpoint: "SC-03-20" },
   ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
 });
 
@@ -589,17 +783,20 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
   assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerSecondNearDispatchOrchestrator/);
-  assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);
+  assert.match(normalRoute, /createCustodyLedgerThirdNearCompletionOrchestrator/);
   assert.match(normalRoute, /custodyLedgerHotspotRegistry/);
   assert.match(arrival, /data-observation-count/);
   assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
   assert.match(arrival, /AVAILABLE/);
+  assert.match(arrival, /DORMANT \/\/ ZERO CREDIT \/\/ NEXT STAGE NOT ACTIVE/);
+  assert.match(arrival, /disabled=\{isDormant\}/);
   assert.match(arrival, /Recorded Scene statement/);
   assert.match(arrival, /Separate route return/);
   assert.match(app, /advanceCustodyLedgerNormalRoute/);
   assert.match(app, /custodyLedgerRouteView/);
   assert.match(app, /"recorded", "replayed", "returned_to_evidence"/);
   assert.match(app, /"sc03_near_second"/);
+  assert.match(app, /"sc03_near_complete"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
