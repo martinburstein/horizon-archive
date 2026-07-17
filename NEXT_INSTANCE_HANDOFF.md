@@ -36,8 +36,9 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
 - Served assets: `index-CjiYW_Of.js` / `index-ghzUiZe9.css`
-- Automation `horizon-archive-two-team-continuation`: **PAUSED at Martin's request**
-- Do not resume or replace the automation until Martin explicitly asks.
+- Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
+- The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
+- Do not pause, replace, or duplicate the automation until Martin explicitly asks.
 
 The worktree intentionally contains these two untracked user-owned items:
 
@@ -289,5 +290,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. The recurring automation must remain paused until I explicitly ask to resume it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 blank fresh-practice boundary, locking only the nearest transfer submission/evaluation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 blank fresh-practice boundary, locking only the nearest transfer submission/evaluation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
 ```
