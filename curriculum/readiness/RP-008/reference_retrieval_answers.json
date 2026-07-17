@@ -1,0 +1,6 @@
+{
+  "R01": {"technique": "ocr", "deciding_signal": "turn_visible_characters_into_text"},
+  "R02": {"technique": "field_extraction", "deciding_signal": "place_document_values_into_a_fixed_record"},
+  "R03": {"technique": "multimodal_extraction", "deciding_signal": "produce_structured_fields_from_mixed_media"},
+  "R04": {"technique": "knowledge_mining", "deciding_signal": "enrich_and_index_content_for_search"}
+}

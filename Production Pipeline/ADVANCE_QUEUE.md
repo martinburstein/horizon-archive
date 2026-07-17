@@ -24,7 +24,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
-| 8 | `RP-008` | Offset Reach | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`, next) | Story and Scene gates passed; production-art plan passed; all later gates remain open | Exact verified RP-007 end state -> destinationless infrastructure -> recurring local contact, comparable open passage, cross-family contact, unavailable case, and retained bounded summary; every successor remains undefined | A3 selects and verifies only the contiguous Python/AI-901 mapping; SC-09 presentation remains zero mastery evidence and remediation signal. |
+| 8 | `RP-008` | Offset Reach | `IN DESIGN — A3 COMPLETE` | Gameplay Master Agent (`A4`, next) | Story, Scene, production-art plan, and Curriculum gates passed; all later gates remain open | Exact verified RP-007 end state -> destinationless infrastructure -> recurring local contact, comparable open passage, cross-family contact, unavailable case, retained bounded summary, and strict independent PY-016/AI901-D1-O8 chains; every successor remains undefined | A4 builds one bounded integrated graph against the frozen mapping; SC-09 presentation remains zero mastery evidence and remediation signal. |
 
 ## Team positions
 
@@ -32,7 +32,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `6 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007`
 - In-design packets: `1 — RP-008`
-- Team 1 railhead: `RP-008 — IN DESIGN / A2 COMPLETE / A3 NEXT`
+- Team 1 railhead: `RP-008 — IN DESIGN / A3 COMPLETE / A4 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-007 promoted; RP-008 in design`
 - Whole-story rail status: `IN PROGRESS`

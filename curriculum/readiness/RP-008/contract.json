@@ -1,0 +1,89 @@
+{
+  "mapping_id": "RP008-A3-OFFSET-REACH",
+  "packet_id": "RP-008",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-09",
+  "source_verified_on": "2026-07-17",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview",
+    "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/",
+    "https://learn.microsoft.com/en-us/training/modules/get-started-information-extraction/"
+  ],
+  "entry_gate": {
+    "python": "L-03-03 PY-016 JSON evidence remains complete after PY-009 dictionaries, PY-012 functions, and RP-007 PY-015 local-file reinforcement; learner must decode supplied sanitized JSON, build a bounded summary, serialize it deterministically, and decode it again",
+    "ai901": "L-04-04 information-extraction foundations and L-06-01 AI901-D1-O8 ledger row remain ready; confidence, scenery, inferred weakness, or navigation never satisfies entry",
+    "missing_evidence_route": ["curriculum/lessons/L-03-03", "curriculum/lessons/L-04-04", "curriculum/lessons/L-06-01"],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": ["SC09_layout", "familiar_trace", "contact_or_non_contact_position", "cross_family_contact", "unavailable_boundary", "motion", "sound", "hotspot_or_copy", "focus_navigation_return", "successful_execution_display", "save_restore_presentation", "accessibility_behavior", "Tour_traversal", "world_state"],
+  "python_contract": {
+    "skill_id": "PY-016",
+    "skill_name": "Work with JSON data",
+    "scope": "nearest_contiguous_nonduplicate_json_reinforcement",
+    "implementation_reason": "Foundry and Azure AI inputs and outputs are commonly structured as JSON; deterministic decoding and encoding lets a learner preserve supplied evidence, explicit unavailable values, and unsupported-claim limits without treating missing data as proof.",
+    "learner_owned_action": "decode the supplied records_json with json.loads, derive the bounded scope_summary from decoded records, encode it once with json.dumps(sort_keys=True), then decode it once to prove the round trip",
+    "provided_unscored_scaffold": ["sanitized contact and non-contact records", "case identifiers", "availability booleans", "bounded summary keys", "unsupported-claim keys"],
+    "forms": {
+      "primary": {"relations": ["familiar_contact", "non_contact", "cross_family_contact", null], "summary_counts": [1, 1, 1, 1]},
+      "transfer": {"relations": ["paired_interface", "exposed_gap", "alternate_interface", null], "summary_counts": [1, 1, 1, 1]}
+    },
+    "checks": ["json_import_and_call_shape", "records_decoded_exactly", "summary_exact_keys", "counts_and_retained_local", "unavailable_case_preserved", "unsupported_limits_remain_none", "round_trip_matches_sorted_json", "inputs_unchanged_and_no_forbidden_operations"],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note JSON decode/derive/encode/sorted-key/round-trip/unavailable/unsupported-limit trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": ["hardcode_restored_summary", "skip_decode_or_encode", "change_or_reorder_input_records", "convert_unavailable_to_false_evidence", "erase_retained_local_association", "infer_universal_exclusive_separation_equivalence_unity_cause_or_purpose", "use_file_network_live_service_or_external_input", "reuse_primary_as_transfer", "count_SC09_layout_contact_position_motion_sound_save_or_Tour"]
+  },
+  "ai901_contract": {
+    "check_id": "RP008-INFORMATION-EXTRACTION-01",
+    "objective_id": "AI901-D1-O8",
+    "objective_title": "Identify information extraction techniques",
+    "scope": "focused_OCR_field_multimodal_and_knowledge_mining_technique_retrieval_and_transfer; does_not_replace_L-04-04_or_L-06-01_mastery",
+    "dimensions": ["technique", "deciding_signal"],
+    "scene_cases_and_inferred_weakness_are_never_cases_answers_or_remediation_signals": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Turn visible characters in a scanned page into machine-readable text.","technique":"ocr","deciding_signal":"extract_text_from_pixels"},
+        {"id":"P02","prompt":"Map recognized invoice content into vendor, date, and total fields.","technique":"field_extraction","deciding_signal":"map_recognized_content_to_named_fields"},
+        {"id":"P03","prompt":"Extract schema-defined values from meeting audio or video.","technique":"multimodal_extraction","deciding_signal":"extract_schema_values_from_audio_or_video"},
+        {"id":"P04","prompt":"Extract, enrich, and index a document collection so it can be searched.","technique":"knowledge_mining","deciding_signal":"extract_enrich_and_index_searchable_content"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Convert characters visible in a photo into text.","technique":"ocr","deciding_signal":"turn_visible_characters_into_text"},
+        {"id":"R02","prompt":"Put values found in a document into a fixed record.","technique":"field_extraction","deciding_signal":"place_document_values_into_a_fixed_record"},
+        {"id":"R03","prompt":"Produce structured fields from mixed audio, image, or video content.","technique":"multimodal_extraction","deciding_signal":"produce_structured_fields_from_mixed_media"},
+        {"id":"R04","prompt":"Enrich and index content for search.","technique":"knowledge_mining","deciding_signal":"enrich_and_index_content_for_search"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"Extract printed labels from an equipment image.","technique":"ocr","deciding_signal":"extract_printed_labels_from_an_image"},
+        {"id":"T02","prompt":"Map a submitted form into named properties.","technique":"field_extraction","deciding_signal":"map_form_content_to_named_properties"},
+        {"id":"T03","prompt":"Extract typed values from recorded media using a schema.","technique":"multimodal_extraction","deciding_signal":"extract_typed_values_from_recorded_media"},
+        {"id":"T04","prompt":"Extract and enrich a collection, then make it searchable.","technique":"knowledge_mining","deciding_signal":"extract_enrich_and_make_a_collection_searchable"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation, delayed closed-note 8/8 retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that source/output contract selects the technique and that extracted or missing values do not establish truth, universality, exclusivity, separation, equivalence, unity, cause, or purpose",
+    "misconception_tags": ["ocr_equals_field_extraction", "all_extraction_is_ocr", "multimodal_equals_image_only", "knowledge_mining_equals_field_mapping", "scene_case_selects_technique", "visible_non_contact_proves_separation", "missing_value_proves_absence", "extraction_proves_truth_or_cause", "offline_case_proves_live_configuration", "valid_answer_authorizes_action"]
+  },
+  "remediation_contract": {
+    "python": ["identify_JSON_text_and_Python_objects", "trace_first_loads", "trace_record_derived_counts", "preserve_unavailable", "preserve_None_limits", "trace_sorted_dumps_and_round_trip", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["mark_source_modality", "mark_requested_output_shape", "contrast_OCR_field_multimodal_and_knowledge_mining", "remove_scene_and_weakness_cues", "preserve_missing_value_boundary", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true,
+    "remediation_is_selected_only_from_scored_misconception_tags": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "records_json", "summary_json", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "credentials", "endpoints", "payloads", "responses", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_JSON_choices_feedback_case_answers_and_temporary_work",
+    "save_eligibility": "require finalized strict PY-016, finalized strict RP008-INFORMATION-EXTRACTION-01, retained verified RP-007 summary, and separately finalized familiar-trace recurring-contact comparable-non-contact cross-family-contact unavailable-case stewardship observations; no conjunct cross-credits another",
+    "after_save": "clear temporary work and keep only allowlisted finalized evidence plus retained RP-007 summary and expedition-owned offset scope-limit note",
+    "resume": "restore only finalized dimension evidence and retained prior summary, then resume at first incomplete scored boundary"
+  },
+  "accessibility_contract": {"minimum_target_css_px":44,"one_active_owner_message_content_action_group":true,"persistent_labels":true,"field_associated_text_feedback":true,"status_live_region":true,"must_not_rely_on_color_motion_audio_position_sequence_or_binary_layout":true,"time_limit":false,"reduced_motion_equivalent":true,"focus_returns_to_first_invalid_or_next_required_control":true},
+  "authority_contract": {"course_authored_not_Microsoft_exam_items":true,"no_exam_guarantee":true,"offline_only":true,"no_live_Azure_Foundry_extraction_terminal_or_world_call":true,"no_credential_resource_live_content_or_unavailable_case_access":true,"no_permission_authentication_join_route_open_correct_separate_equate_control_causation_or_external_action":true,"no_world_city_or_physical_delta":true,"tour_is_zero_credit_and_cannot_save":true},
+  "world_locks": ["RP-007 verified completion and saved summary required", "RP-007 bounded local association remains valid", "recurring familiar contact retained", "comparable non-contact does not prove separation", "cross-family contact does not prove equivalence", "unavailable case remains unavailable", "universal=None", "exclusive=None", "unity=None", "cause=None", "purpose=None", "sanitized replicas only", "SC-09 invariant world and environmental clocks", "reversible RP-007 and earlier returns", "no RP-009 route or destination"],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

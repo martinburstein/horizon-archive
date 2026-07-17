@@ -1,0 +1,6 @@
+{
+  "T01": {"technique": "ocr", "deciding_signal": "extract_printed_labels_from_an_image"},
+  "T02": {"technique": "field_extraction", "deciding_signal": "map_form_content_to_named_properties"},
+  "T03": {"technique": "multimodal_extraction", "deciding_signal": "extract_typed_values_from_recorded_media"},
+  "T04": {"technique": "knowledge_mining", "deciding_signal": "extract_enrich_and_make_a_collection_searchable"}
+}

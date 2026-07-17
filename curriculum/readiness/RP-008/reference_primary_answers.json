@@ -1,0 +1,6 @@
+{
+  "P01": {"technique": "ocr", "deciding_signal": "extract_text_from_pixels"},
+  "P02": {"technique": "field_extraction", "deciding_signal": "map_recognized_content_to_named_fields"},
+  "P03": {"technique": "multimodal_extraction", "deciding_signal": "extract_schema_values_from_audio_or_video"},
+  "P04": {"technique": "knowledge_mining", "deciding_signal": "extract_enrich_and_index_searchable_content"}
+}

@@ -1347,3 +1347,36 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-007, composing five equal-peer observations and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, privacy, save, mystery, authority, or successor boundaries.
 Unresolved risks: A4/A5 must not let scene imagery, contact adjacency/order, motion, sound, labels, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation or either mastery chain. The unavailable junction must remain unavailable; recurrence cannot become unity or coordination; relative order cannot become cause; and no world, route, external, exam, live-service, native-category, Machine, or RP-008 claim may emerge.
 Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native unity, hidden lore, route, external action, or successor content was created.
+## Log entry: 2026-07-17T01:24:00-04:00
+
+Stage: RP-008 retained-evidence and scope-limit curriculum verification (A3)
+Work completed: Closed the Curriculum gate with two independent SOLIDIFIED chains. Selected `PY-016` as the nearest contiguous nonduplicate skill after RP-007 file work and defined deterministic JSON decode, record-derived bounded summary, sorted-key encode, and decode-again evidence over supplied sanitized contact/non-contact records. Selected current `AI901-D1-O8` and defined neutral course-authored OCR, field extraction/mapping, multimodal structured extraction, and knowledge-mining cases by source and requested output. Locked strict primary, answer-free per-check/per-dimension remediation, delayed retrieval/trace, genuinely blank fresh transfer, separate uncertainty explanations, scored-misconception-only remediation selection, privacy allowlist, retained-summary/save conjunction, accessibility, offline/no-authority, no-exam-guarantee, SOLIDIFIED/reopen, and anti-bypass rules. Preserved the valid bounded RP-007 association while adding counterexamples; unavailable data and universal/exclusive/unity/cause/purpose remain explicit unknowns. SC-09 layout, contact/non-contact position, motion, sound, presentation, inferred weakness, save/restore, and Tour remain zero observation, mastery, and remediation evidence.
+Files changed:
+- Production Pipeline/ADVANCE_BREADTH_GATE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/PACKET_SCOREBOARD.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/rail-packets/RP-008-offset-reach.md
+- curriculum/BUILD_LOG.md
+- curriculum/BUILD_STATUS.md
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/readiness/RP-008/contract.json
+- curriculum/readiness/RP-008/reference_primary.py
+- curriculum/readiness/RP-008/reference_transfer.py
+- curriculum/readiness/RP-008/reference_primary_answers.json
+- curriculum/readiness/RP-008/reference_retrieval_answers.json
+- curriculum/readiness/RP-008/reference_transfer_answers.json
+- curriculum/readiness/RP-008/validate_mapping.py
+Validation performed:
+- Read applicable AGENTS instructions, workflow authority, registry, full canonical Curriculum Checker profile, complete RP-008 and SC-09, exact RP-007 predecessor contract/state, current curriculum maps/status/log/source register, queue/map, and required production spines.
+- Checked only current official Microsoft sources on 2026-07-17: AI-901 study guide; Foundry hub; SDK/endpoints overview; Agent Service overview; Content Understanding overview; Introduction to AI-powered information extraction concepts; and Get started with AI-powered information extraction in Azure. The named source-priority skill was unavailable, so repository priority rules were followed directly. No third-party source or exam item was used.
+- RP-008 validator self-test passed. Python primary and genuinely fresh transfer references passed `8/8 + 8/8`. AI-901 primary/retrieval/genuinely fresh transfer references passed `8/8 + 8/8 + 8/8`. Empty-answer, wrong-technique, and hardcoded no-JSON bypass probes failed closed.
+- All curriculum JSON parsed; focused packet/spine/queue/map/scoreboard/source/retained-summary/zero-evidence/remediation/save-conjunction/Tour/privacy/offline/no-authority/no-exam-guarantee/no-RP-009 assertions and whitespace checks passed.
+Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-008, composing six equal-peer observations, retained RP-007 summary, and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, remediation selection, privacy, save, mystery, authority, or successor boundaries.
+Unresolved risks: A4/A5 must not let SC-09 imagery, contact/non-contact placement, layout, motion, sound, labels, inferred weakness, confidence, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation, either mastery chain, or remediation route. New counterexamples cannot erase valid bounded RP-007 evidence; unavailable cannot become absence; non-contact cannot become separation; cross-family contact cannot become equivalence; and no world, route, external, exam, live-service, native-category, Machine, or RP-009 claim may emerge.
+Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native relation claim, hidden lore, route, external action, or successor content was created.

@@ -130,3 +130,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added machine-readable contract, reference forms, validator, current official-source provenance, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and bypass probes
 - [x] Preserved distinct continuities, recurrent association, bounded difference, relative order, unavailable junction, unity/cause/purpose limits, independent five-observation evidence, invariant SC-08, reversible returns, and no RP-008
 - [ ] Gameplay Master completes A4 against the exact solidified RP-007 contract
+
+## 2026-07-17 RP-008 curriculum verification
+
+- [x] Selected `PY-016` as the nearest contiguous nonduplicate JSON reinforcement after RP-007 file work
+- [x] Added focused `RP008-INFORMATION-EXTRACTION-01 / AI901-D1-O8` OCR, field-extraction, multimodal-extraction, and knowledge-mining technique evidence
+- [x] Solidified Python `8/8 primary + answer-free remediation + delayed closed-note JSON trace + genuinely blank 8/8 transfer`
+- [x] Solidified AI `8/8 primary + per-dimension remediation + delayed 8/8 retrieval + genuinely blank 8/8 transfer + two boundary explanations`
+- [x] Added machine-readable contract, reference forms, validator, current official-source provenance, scored-misconception-only remediation, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and bypass probes
+- [x] Preserved the valid RP-007 local summary, recurring contact, bounded counterexamples, unavailable case, universal/exclusive/unity/cause/purpose limits, independent six-observation evidence, invariant SC-09, reversible returns, and no RP-009
+- [ ] Gameplay Master completes A4 against the exact solidified RP-008 contract

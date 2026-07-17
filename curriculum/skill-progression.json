@@ -366,6 +366,7 @@
         "PY-009",
         "PY-012"
       ],
+      "rail_packet_reinforcement": "RP-008 SOLIDIFIED: deterministic JSON decode/derive/sorted-encode/decode over sanitized contact and non-contact replicas; SC-09 presentation and Tour remain zero evidence",
       "unlocks": [
         "PY-019"
       ],

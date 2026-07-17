@@ -140,9 +140,17 @@ Test how far the braided account can travel: preserve the local association alre
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `UNASSIGNED — A3 NEXT; A2 PRESENTATION IS ZERO MASTERY EVIDENCE`
-- A1 assigns no Python skill, AI-901 objective, workload/model category, misconception route, learning case, answer, threshold, metric, source claim, or mastery evidence.
-- Every world view, contact pattern, non-contact relation, animation, hotspot, copy line, save, return, and Tour traversal remains zero mastery evidence.
+- Status: `PASS — A3 COMPLETE; PY-016 + RP008-INFORMATION-EXTRACTION-01 SOLIDIFIED`
+- Machine contract: `curriculum/readiness/RP-008/contract.json`; validator and primary/retrieval/genuinely fresh transfer references live beside it.
+- Python mapping: `PY-016 — Work with JSON data`, the nearest contiguous nonduplicate after RP-007 file work. The learner decodes supplied sanitized JSON, derives a ten-key bounded scope summary, encodes it once with deterministic sorted keys, and decodes it again. Strict gate: `8/8 primary -> answer-free remediation -> delayed closed-note JSON decode/derive/encode/sorted-key/round-trip/unavailable/unsupported-limit trace -> genuinely blank 8/8 transfer`.
+- AI-901 mapping: `RP008-INFORMATION-EXTRACTION-01 / AI901-D1-O8 — Identify information extraction techniques`. Neutral course-authored cases distinguish OCR, field extraction/mapping, multimodal structured extraction, and knowledge mining by source and requested output. Strict gate: `8/8 primary -> per-case/per-dimension answer-free remediation -> delayed 8/8 retrieval -> genuinely blank 8/8 transfer`, plus separate explanations that source/output contract selects the technique and that extracted or missing values establish neither truth nor a universal, exclusive, separation, equivalence, unity, causal, or purpose claim.
+- Prerequisites: `L-03-03` for PY-016 after PY-009/PY-012 and RP-007 PY-015 reinforcement, `L-04-04` for information-extraction foundations, and `L-06-01` for the current AI901-D1-O8 objective ledger. Missing evidence holds only the scored terminal; story navigation remains available.
+- Remediation is selected only from scored per-check/per-dimension misconception tags. Scene composition, contact/non-contact placement, inferred weakness, confidence, timing, and navigation never select remediation.
+- The six observation meanings, retained verified RP-007 summary, PY-016 evidence, RP008-INFORMATION-EXTRACTION-01 evidence, and save eligibility are independent conjuncts. No conjunct cross-credits another.
+- Privacy allowlist stores packet/mapping/form/skill-or-objective/dimension correctness/attempt/hint/confidence/misconception/mastery only. Learner source, JSON input/output, raw cases, free-form reasoning, identity/private content, credentials, endpoints, payloads, responses, exam items, and external-action requests are never saved.
+- Every SC-09 world view, material trace, contact or non-contact relation, unavailable boundary, layout, animation, motion, sound, hotspot, crop, owner line, focus, navigation, execution display, save/restore presentation, accessibility behavior, and Tour traversal is zero mastery evidence and never an answer key, binary verdict, or remediation signal.
+- The forms are offline, course-authored, and sanitized-replica-only. They make no live Azure, Foundry, extraction, terminal, unavailable-case, route, or world call; authorize no permission or external action; change no world/external state; and make no exam guarantee.
+- SOLIDIFIED reopening is allowed only if official objectives materially change, a validator/playtest proves a mismatch or bypass, or Martin changes the learning goal.
 
 ## Puzzle Track — Gameplay Master
 
@@ -171,7 +179,7 @@ Test how far the braided account can travel: preserve the local association alre
 - Required existing systems: exact RP-007 verified completion boundary; reversible route ownership; privacy sanitizer and temporary-file clearing; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
 - New systems: none assigned by A1.
 - Art dependencies: A2 defines one registered maximum-quality cinematic photorealistic first-person plan after reading the location visual spine.
-- Curriculum dependencies: A3 selects and verifies the nearest contiguous synthesis mapping and any evidence-based remediation obligation under current official source-priority rules after A2 locks the scene.
+- Curriculum dependencies: A3 has SOLIDIFIED PY-016 and independent AI901-D1-O8 evidence plus scored-misconception-only remediation under current official source-priority rules; A4 may compose but not alter them.
 - Decisions awaiting Martin: none for this surface-safe seed.
 
 ## Locked decisions
@@ -187,7 +195,7 @@ Test how far the braided account can travel: preserve the local association alre
 - Exact landscape topology, scale, continuity morphology, contact and passage geometry, material palette, atmosphere, collective-work evidence, maintenance form, coupling design, and registered world-plate count.
 - Whether entry, observation, completed, and return states reuse one registered invariant plate or require registered detail plates.
 - Exact expedition-facing labels for continuities, contacts, and passages, provided they use observable physical evidence and never claim a universal rule, separation, interchangeability, cause, purpose, identity, or native meaning.
-- Curriculum, gameplay, and code details remain wholly unassigned until their owning roles act.
+- Curriculum is assigned only by the SOLIDIFIED A3 contract; gameplay and code remain unassigned until their owning roles act.
 
 ## Player-observable acceptance criteria
 
@@ -199,25 +207,25 @@ Test how far the braided account can travel: preserve the local association alre
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — A2 compact invariant-world sequence and premium production-art plan`.
-- Packet gates remaining: Curriculum, Puzzle, Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
-- Did this pass reduce the remaining-gate count?: `YES — Scene and production-art-plan gates moved MISSING -> PASS/PASS PLAN`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — A2 compact invariant-world sequence and premium production-art plan`; Curriculum `PASS — PY-016 + RP008-INFORMATION-EXTRACTION-01 SOLIDIFIED`.
+- Packet gates remaining: Puzzle, Protected code, Save/recovery implementation evidence, Accessibility implementation evidence, final Production art, Normal integration, Working evidence, Release, and post-integration validation.
+- Did this pass reduce the remaining-gate count?: `YES — Curriculum moved MISSING -> PASS`.
 - Existing seams integrated or consolidated: RP-007's saved bounded relation, no-live-read/join/route rule, exact temporary clearing, ordinary Builder executable literacy, privacy clearing, reversible returns, and destinationless infrastructure become one direct synthesis-continuation premise; prior recurrence, difference, comparison, unavailability, and scope disciplines combine without invalidating their earlier bounded evidence.
 - Optional work trimmed or deferred: unavailable-case contents, universal or causal conclusion, independence/equivalence, native category, live joining/routing, secondary programs, identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- New module or artifact integration consumer: `SC-09` now provides one buildable two-master presentation contract for A3/A4/A5 without authorizing runtime or final art.
-- Breadth verdict: `CONTINUE — A3 CURRICULUM CHECKER`
+- New module or artifact integration consumer: `curriculum/readiness/RP-008/contract.json` gives A4/A5 one frozen machine-readable consumer without authorizing runtime, final art, or RP-009.
+- Breadth verdict: `CONTINUE — A4 GAMEPLAY MASTER`
 - Next contiguous packet seed readiness: `NO — every successor remains reserved and undefined until RP-008 reaches the coordinator gate`.
-- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating all SC-09 presentation as zero mastery evidence.
+- Exact next action in one sentence: Gameplay Master A4 builds one bounded integrated graph against the frozen independent PY-016, RP008-INFORMATION-EXTRACTION-01, retained-summary, six-observation, and save contracts while treating SC-09 and inferred weakness as zero mastery/remediation evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
 - Storyboarder sign-off: `PASS — 2026-07-17`
-- Curriculum Checker sign-off: `PENDING`
+- Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
-- Readiness: `NOT READY — A2 COMPLETE / A3 NEXT`
-- Required revision: `A3–A5 complete their owned gates sequentially; no successor is defined`.
+- Readiness: `NOT READY — A3 COMPLETE / A4 NEXT`
+- Required revision: `A4–A5 complete their owned gates sequentially; no successor is defined`.
 
 ### Exact Storyboarder A2 handoff
 
@@ -227,11 +235,15 @@ Test how far the braided account can travel: preserve the local association alre
 
 `Curriculum Checker Agent — A3: work only on RP-008 Offset Reach. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, this packet, the exact A1 lore boundary, and the locked SC-09 scene sheet. Select and verify the nearest contiguous Python skill and current official AI-901 objective for comparing sanitized contact and non-contact replicas while retaining the valid local RP-007 account and narrowing unsupported universal or exclusive claims. Treat every SC-09 world view, familiar-continuity trace, recurring contact, open passage, cross-family contact, unavailable boundary, stewardship layer, animation, hotspot, crop, display, owner text, focus, navigation, successful execution display, save presentation, restore, return, and accessibility behavior as zero mastery evidence and never an answer key, remediation signal, or binary verdict. Preserve real Python as ordinary Builder occupational work rather than authentication, live reading, joining, routing, opening, correction, separation proof, equivalence proof, unity proof, causal proof, or control; Scene/Pilot/System/Builder-work ownership; exact RP-007 predecessor state and retained summary; exact temporary-file/work clearing; unchanged region and continuation; null external delta; replica-only provenance; privacy, offline/no-authority, no-exam-guarantee, reversible returns, no native independence/equivalence/unity/coordination/cause/purpose/Machine claim, no RP-009 route, and all mystery protections. Define prerequisites, exact skill/objective IDs, current official sources, primary evidence, answer-free remediation, retrieval and genuinely fresh transfer, strict thresholds, misconception handling, privacy allowlist, save-eligibility conjunction, SOLIDIFIED/reopen status, and explicit workload/model/category/metric boundaries only when required by the official objective. Do not infer separation, independence, equivalence, interchangeability, unity, coordination, cause, correctness, model/workload category, weakness, remediation path, metric, or answer from the physical cases; turn case layout into learning order; alter SC-09 composition; create puzzle mechanics beyond the curriculum contract; write code; generate art; define native category or Machine relation; seed RP-009; or open hidden lore. Update RP-008, CURRICULUM_SPINE.md, queue/map/status records, and the Curriculum work log; validate under the project's Microsoft source-priority rules; then leave one exact Gameplay Master A4 handoff.`
 
+### Exact Gameplay Master A4 handoff
+
+`Gameplay Master Agent — A4: work only on RP-008 Offset Reach. Read the canonical Gameplay Master profile, GAMEPLAY_SYSTEMS_SPINE.md, this packet, SC-09, and curriculum/readiness/RP-008/contract.json plus its validator/reference forms. Build the smallest bounded integrated puzzle graph that begins only at exact verified RP-007 completion and composes six equal-peer physical observations in any of 720 orders, retained verified RP-007 summary, strict independent PY-016 primary/remediation/delayed-trace/genuinely-blank-transfer evidence, strict independent RP008-INFORMATION-EXTRACTION-01 primary/per-dimension-remediation/delayed-retrieval/genuinely-blank-transfer evidence plus both required boundary explanations, bounded review, and one conjunctive save. Preserve the valid local association without erasure; recurring familiar contact; comparable non-contact without separation; cross-family contact without equivalence; unavailable case; deterministic JSON decode/derive/sorted-encode/decode; universal/exclusive/unity/cause/purpose=None; sanitized replicas; scored-misconception-only remediation; answer-free unlimited retry; deterministic first-incomplete resume/focus; privacy sanitation; atomic allowlisted save/verified restore; temporary-work clearing; reversible returns; invariant SC-09/world clocks; null external delta; offline/no-authority/no-exam-guarantee; no-credit Tour; and no RP-009. Treat every scene view, layout, contact/non-contact position, material, motion, sound, hotspot, copy line, inferred weakness, confidence, focus, navigation, execution display, save/restore presentation, accessibility behavior, and Tour traversal as zero observation, mastery, and remediation evidence. The neutral AI-901 cases must contain no SC-09/Builder-world referent or visual answer channel. Do not alter cases, answers, dimensions, thresholds, reference forms, validators, sources, privacy fields, save conjuncts, art, prior-summary validity, native meaning, independence/separation/equivalence/unity/coordination/cause/purpose limits, route, code, or successor content; do not access live services, open the unavailable case, join/control/correct the continuities, or produce an exam guarantee. Update only the Puzzle Track, GAMEPLAY_SYSTEMS_SPINE.md, queue/map/logs, and leave one exact protected A5 handoff.`
+
 ## Promotion record
 
 - Approved commit: `PENDING`
 - Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after promotion: `RP-008 IN DESIGN — A2 COMPLETE`
+- Team 1 railhead after promotion: `RP-008 IN DESIGN — A3 COMPLETE`
 - Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A2 COMPLETE / A3 NEXT`
+- `STORY_RAIL_MAP.md` updated: `YES — A3 COMPLETE / A4 NEXT`
 - Coordinator: `PENDING`

@@ -259,7 +259,7 @@
         "AI901-D2-O7"
       ],
       "mastery_level_required": "use_independently",
-      "notes": ""
+      "notes": "RP-008 SOLIDIFIED reinforcement: decode supplied sanitized JSON, derive a bounded scope summary, encode with sorted keys, and decode again; strict 8/8 primary, answer-free remediation, delayed closed-note JSON trace, and genuinely blank 8/8 transfer."
     },
     {
       "skill_id": "PY-017",
