@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W3 — transfer presentation clean
+
+- **Verdict:** `RP002-AESTH-008 / NO FINDING`; transfer blank, feedback/retry, and bounded completion groups pass hierarchy, field-state, association, focus, target, responsive, and art review.
+- **Evidence:** focused `58/58`; exact desktop/narrow title shells show zero overflow and clean logs; unchanged civic master hash passes. User storage remained untouched.
+- **W4:** verification-only final rebuild/reload.
+
 ## 2026-07-17 Working W2 — transfer evaluation integrated
 
 - **Resolved:** `RP002-P1-013`; accepted blank fresh practice now submits through the protected evaluator, recovers through actual-miss-only feedback and blank retry, or ends at bounded current-attempt `6/6` transfer evidence.
