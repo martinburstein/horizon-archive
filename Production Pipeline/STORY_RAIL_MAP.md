@@ -1,6 +1,6 @@
 # Horizon Archive Story Rail Map
 
-Latest coordinator gate: `2026-07-17 / RP-008 PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete protected predecessor chain `77/77`, full `502/502`, RP-008 validator and canonical forms, build, byte-identical accepted assets, leakage, purity, cleanup, and patch integrity passed. RP-009 has since passed A1–A5 and awaits independent coordinator Gate Review.
+Latest coordinator gate: `2026-07-17 / RP-009 PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete RP-002 through RP-009 protected chain `97/97`, full `518/518`, RP-009 validator and all canonical forms, build, byte-identical accepted assets, leakage, purity, cleanup, and patch integrity passed. RP-010 exists only as a blank contiguous shell.
 
 Latest Advance handoff: `2026-07-17 / RP-009 A5 PASS — COORDINATOR GATE REVIEW NEXT`. One pure non-routable `OccludedFoldProtectedJourney` composes the exact RP-008 restore, both verified predecessor summaries, all 720 peer-observation orders/revisits, strict independent frozen `PY-017` and `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1` chains, both explanations, bounded review, atomic byte-stable save/replay-free restore, deterministic answer-free recovery/focus, reversible returns, Tour isolation, and one LOOK-only destinationless continuation. Focused `14/14`, complete protected chain `97/97`, and all validator/canonical forms pass; App/main, browser persistence, art, accepted Demo, prior packets, and RP-010 remain unchanged.
 
@@ -36,8 +36,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
 - Team 2 active packet: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-20 ACCEPTED`
-- Team 1 railhead: `RP-009 — A5 PROTECTED PASS / COORDINATOR GATE REVIEW NEXT`
-- Ordered Advance lead beyond Team 2 accepted baseline: `7 promoted packets — RP-002 through RP-008; RP-009 in design`
+- Team 1 railhead: `RP-009 — PROMOTED; RP-010 BLANK SHELL / A1 NEXT`
+- Ordered Advance lead beyond Team 2 accepted baseline: `8 promoted packets — RP-002 through RP-009`
 - Whole-story rail status: `IN PROGRESS`
 - Intended ending represented: `NO`
 

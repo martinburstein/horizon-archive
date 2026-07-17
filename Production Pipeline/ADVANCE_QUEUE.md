@@ -25,15 +25,20 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
-| 9 | `RP-009` | Occluded Fold | `GATE REVIEW — A5 PASS` | Coordinator | Story/Scene/Curriculum/Puzzle/Protected Code/Save/Accessibility protected evidence `PASS` | Exact RP-008 verified end state -> one pure OF-00→OF-30 journey -> both prior summaries + six observations in all 720 orders/revisits + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world and no RP-010 | Independently verify the A5 evidence bundle; do not run W1, route it, alter accepted runtime, create art, expose live services, or seed RP-010. |
+| 9 | `RP-009` | Occluded Fold | `PROMOTED TO WORKING` | Player Agent (after RP-008 acceptance) | Coordinator independently verified all twelve gates | Exact RP-008 verified end state -> one pure OF-00→OF-30 journey -> both prior summaries + six observations in all 720 orders/revisits + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world and no RP-010 | Wait behind RP-008 in Working order; Advance A1 owns only the blank RP-010 shell next. |
+| 10 | `RP-010` | Reserved | `SEED — BLANK SHELL` | Lore Builder Agent (`A1`) | Contiguous predecessor promoted; no content authorized | Exact RP-009 specified end state only; no story, location, learning, puzzle, art, route, or code selected | A1 may seed the nearest bounded Phase IV surface contract; preserve all unresolved RP-009 limits. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `1 — RP-009`
+- Gate Review packets awaiting coordinator decision: `0`
 - Ready packets awaiting promotion: `0`
-- Promoted packets awaiting Working acceptance: `7 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008`
-- In-design packets: `0`
-- Team 1 railhead: `RP-009 — A5 PASS / COORDINATOR GATE REVIEW NEXT`
+- Promoted packets awaiting Working acceptance: `8 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008, then RP-009`
+- In-design packets: `1 — RP-010 blank shell`
+- Team 1 railhead: `RP-009 — PROMOTED; RP-010 BLANK SHELL / A1 NEXT`
+
+## 2026-07-17 RP-009 coordinator Gate Review
+
+Coordinator result: `PASS — PROMOTED TO WORKING`. Independent focused `14/14`, complete RP-002 through RP-009 protected chain `97/97`, full `518/518`, RP-009 validator self-test plus five canonical forms, production build, byte-identical accepted JS/CSS, leakage, browser/storage/network/DOM purity, cleanup, and patch integrity confirmed all twelve gates. RP-009 holds ordered Working position behind RP-008. Only a blank contiguous RP-010 shell is authorized.
 
 ## 2026-07-17 RP-009 Advance Coder protected-journey result
 
@@ -51,7 +56,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 
 `RP-009` is now `IN DESIGN — A2 SCENE BRIEF PASS`. `SC-10 Occluded Fold` uses one invariant panorama and one spatially consistent edge-detail master across four compact phases. Six equal-peer observations keep three familiar near margins, bounded correspondences, one ordinary unmatched record, one ordinary multi-candidate record, one unavailable outer margin, and layered stewardship legible without pairing, ranking, a visible internal path, cutaway, map, matching exercise, identity/topology claim, or world response. The production plan covers registered crops/masks/effects, provenance, artifact cleanup, reduced motion, representative `1920 x 1080` containment, narrow/`200%` reflow, non-color meaning, and `>=44 x 44 CSS px` controls. No art was generated. Curriculum Checker A3 owns only the nearest contiguous verified mapping; RP-010 remains reserved.
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
-- Ordered Advance lead beyond Team 2 accepted baseline: `7 ordered packets — RP-002 through RP-008 promoted`
+- Ordered Advance lead beyond Team 2 accepted baseline: `8 ordered packets — RP-002 through RP-009 promoted`
 - Whole-story rail status: `IN PROGRESS`
 
 ## 2026-07-17 RP-009 Lore Builder surface-story result

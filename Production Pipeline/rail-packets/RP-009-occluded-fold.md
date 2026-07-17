@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION PASS`
+- Status: `PASS — PROMOTED TO WORKING / QUEUED BEHIND RP-008`
 - Target chapter/location: Chapter 4 synthesis closure / occluded working landscape beyond Offset Reach
 - Target demo horizon: eighth future slice after the accepted RP-001 boundary; directly after RP-008
 - Route order: 9
@@ -304,9 +304,9 @@ Phase replacement, order, navigation, visibility, focus, scene layout, near/far 
 - Did this pass reduce the remaining-gate count?: `YES — A5 closed Protected code, Save/recovery, Accessibility protected evidence, and protected validation with one journey-level harness rather than per-state modules`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008 bounded summaries, no-live-read/join/route/open rule, temporary clearing, ordinary Builder executable literacy, reversible returns, destinationless continuation, and scope discipline become one Phase III closure premise rather than another isolated relation micro-seam.
 - Optional work trimmed or deferred: internal contents, full topology, identity, transformation, native category, live tracing/routing/opening, secondary programs, new identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- Breadth verdict: `GATE REVIEW — A5 HANDOFF`; no additional RP-009 protected seam is authorized before coordinator decision.
-- Next contiguous packet seed readiness: `NO — RP-010 REMAINS RESERVED UNTIL RP-009 REACHES GATE REVIEW OR READY FOR WORKING`.
-- Exact next action in one sentence: Coordinator independently verifies the A5 evidence bundle and records `READY FOR WORKING`, `REVISE`, or `HOLD` without normal integration, production art, live Demo exposure, or RP-010 content.
+- Breadth verdict: `PASS — PROMOTED TO WORKING`; no additional RP-009 protected seam is authorized.
+- Next contiguous packet seed readiness: `YES — BLANK RP-010 SHELL ONLY`.
+- Exact next action in one sentence: Player Agent waits for strict Working order behind RP-008 while Lore Builder A1 may seed only the nearest bounded RP-010 surface contract from the exact RP-009 end state.
 
 ## Advance Handoff Gate
 
@@ -315,7 +315,7 @@ Phase replacement, order, navigation, visibility, focus, scene layout, near/far 
 - Curriculum Checker sign-off: `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED — 2026-07-17`
 - Gameplay Master sign-off: `PASS — OF-00→OF-30 GRAPH LOCKED — 2026-07-17`
 - Coder smoke-test result: `PASS — focused 14/14; complete protected predecessor chain 97/97; frozen validator self-test and five canonical forms PASS; full suite/build and isolation gates PASS`
-- Readiness: `GATE REVIEW — COORDINATOR DECISION NEXT`
+- Readiness: `PASS — PROMOTED TO WORKING / QUEUED BEHIND RP-008`
 - Required revision: none inside protected construction. Independent Gate Review remains; production art, normal integration, Working evidence, and Release remain later obligations.
 
 ### Exact coordinator Gate Review handoff
