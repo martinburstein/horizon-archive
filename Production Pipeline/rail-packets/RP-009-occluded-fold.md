@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 SURFACE STORY PASS; STORYBOARDER A2 NEXT`
+- Status: `IN DESIGN — A2 SCENE BRIEF PASS; CURRICULUM CHECKER A3 NEXT`
 - Target chapter/location: Chapter 4 synthesis closure / occluded working landscape beyond Offset Reach
 - Target demo horizon: eighth future slice after the accepted RP-001 boundary; directly after RP-008
 - Route order: 9
@@ -13,7 +13,7 @@
 - Working title: `Occluded Fold` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase III — Synthesis / slot 3 of 3
 - Target player time: `TBD by A4`; no time limit or timing credit is authorized by A1
-- Complete Advance cycles spent on this packet: 0; A1 of orientation cycle 1 complete
+- Complete Advance cycles spent on this packet: 0; A1–A2 of orientation cycle 1 complete
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
 ## Locked premise
@@ -127,9 +127,20 @@ Test whether the accumulated evidence supports one complete account across the f
 
 ## Storyboard Track — Storyboarder
 
-- Status: `NOT STARTED — A2 OWNS SCENE AND PRODUCTION-ART PLAN`
-- A2 must make exposed near/far margins, bounded signature correspondences, unmatched evidence, multiple plausible candidates, one unavailable margin, occlusion, and patient multi-era stewardship physically legible without drawing an internal map, data-flow diagram, answer key, or one-to-one route.
-- A2 may define topology, scale, materials, atmosphere, collective-work evidence, registered masters/crops/masks/effects, interaction zones, responsive composition, and return views within the locked lore boundary.
+- Status: `PASS — A2 COMPACT INVARIANT-WORLD SEQUENCE AND PRODUCTION BRIEF LOCKED`
+- Canonical scene sheet: `Concept Art Book/scenes/SC-10-occluded-fold.md`.
+- Location identity: one continent-scale re-entrant shellwork beyond Offset Reach. Three familiar continuities reach distinct near receiving faces; multiple outer records remain exposed around distant skirts and lateral faces; mass, curvature, accretion, and depth physically occlude every interior relation.
+- Functional landscape: deep refractory folds, material-specific receiving faces, pressure-relief valleys, sacrificial edge sleeves, deposition channels, an opaque unavailable apron, external service detours, and distributed maintenance participate in one operating landscape without identifying an internal topology or native purpose.
+- Collective movement: `stewardship at knowable edges` is an expedition description only. Foundation folds, later receiving faces, sacrificial skins, sealed former service scars, deposition reroutes, and maintained-present detours preserve compatible margins without proving intended concealment, hierarchy, or institutional ownership.
+- Registered masters: `SC-10-FOLD-PANORAMA-MASTER` and `SC-10-EDGE-DETAIL-MASTER`, both lossless 16:9 sources preferably `6144 x 3456` or larger and never below `3840 x 2160`; repeated states, masks, effects, and responsive crops register to these invariant sources.
+- Compact boards: `SC-10-00 ARRIVE + ORIENT`; `SC-10-10 INSPECT EXPOSED EDGES`; `SC-10-20 RECONCILE LIMITS + SAVE`; `SC-10-30 VERIFY + RETURN`. No separate board is created per record, signature, candidate, observation order, retry, save state, imagined interior, or unavailable margin.
+- Equal-peer evidence zones: `THREE-NEAR-MARGINS`, `BOUNDED-SIGNATURE-CORRESPONDENCES`, `UNMATCHED-EXPOSED-RECORD`, `AMBIGUOUS-CANDIDATE-RECORD`, `UNAVAILABLE-OUTER-MARGIN`, and `LAYERED-EDGE-STEWARDSHIP` may be inspected in any order. Physical structure plus complete accessible text carries meaning; no left/right, color, motion, sound, brightness, proximity, pairing, ranking, or route line may substitute.
+- Interface separation: human-readable Builder work, owner labels, provenance, retained summaries, correspondence status, feedback, save state, and interpretation limits remain in the expedition overlay. Clean plates contain no baked UI, pseudo-writing, map, graph, entry/exit columns, matching line, answer mark, evidence numbering, or completion trail.
+- World-state invariant: no margin, record, fold, apron, detour, maintenance form, light, pressure release, sound source, or outward continuation changes for observation, code execution, failure, save, restore, return, or resume. Effects remain monotonic environmental clocks.
+- Production package: two source masters; registered orientation, evidence, coupling, return, and narrow-safe crops; six semantic observation masks; separate atmosphere/maintenance effects; reduced-motion stills; geometry/material registration evidence; grayscale/thumbnail/desktop/narrow/`200%`/forced-color review; silhouette checks; artifact-cleanup contact sheets; and complete provenance history.
+- Responsive/accessibility: representative `1920 x 1080` contains the complete `100dvh` shell and current owner/message/content/action group without outer scroll; narrow and `200%` text zoom reflow vertically without horizontal escape; controls remain `>=44 x 44 CSS px`; forced-color, reduced-motion, keyboard, touch, switch, speech, and screen-reader equivalents preserve complete meaning. The unavailable margin is a non-action observation, never a disabled task or locked reward.
+- Hard rejection: protagonist, ship, body, reflection, human trace/ergonomics, cutaway, cross-section exposing the interior, map, maze, flow/network/Sankey/graph metaphor, diptych, matching exercise, paired near/far staging, candidate ranking, visual answer key, visible connector, unmatched-as-failure, ambiguous-as-merge, unavailable-as-reward, live control, success reaction, native/Machine claim, or any RP-010 cue.
+- Sign-off: `PASS — A2 COMPLETE; SCENE AND PRODUCTION-ART-PLAN GATES CLOSED; READY FOR CURRICULUM CHECKER A3`.
 
 ## Curriculum Verification Track — Curriculum Checker
 
@@ -189,25 +200,25 @@ Test whether the accumulated evidence supports one complete account across the f
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`.
-- Packet gates missing: Scene, Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility evidence, Production art, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — blank contiguous shell became a complete surface-safe premise, goal, exact predecessor/start/end/return contract, ownership ladder, mystery boundary, and A2-ready acceptance set`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`.
+- Packet gates missing: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — A2 closed Scene and the production-art-plan gate with one four-phase invariant landscape and a complete registered source/crop/mask/effect/accessibility/provenance contract`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008 bounded summaries, no-live-read/join/route/open rule, temporary clearing, ordinary Builder executable literacy, reversible returns, destinationless continuation, and scope discipline become one Phase III closure premise rather than another isolated relation micro-seam.
 - Optional work trimmed or deferred: internal contents, full topology, identity, transformation, native category, live tracing/routing/opening, secondary programs, new identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- Breadth verdict: `CONTINUE — STORYBOARDER A2`.
+- Breadth verdict: `CONTINUE — CURRICULUM CHECKER A3`.
 - Next contiguous packet seed readiness: `NO — RP-010 REMAINS RESERVED UNTIL RP-009 REACHES GATE REVIEW OR READY FOR WORKING`.
-- Exact next action in one sentence: Storyboarder A2 closes the Scene and production-art-plan gates for this one invariant occluded-edge landscape without drawing or implying its hidden interior relations.
+- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating all SC-10 scenery, geometry, crops, masks, motion, and presentation as zero mastery evidence.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
-- Storyboarder sign-off: `PENDING`
+- Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PENDING`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH STORYBOARDER A2`
-- Required revision: Scene, Curriculum, Puzzle, protected construction, and independent Gate Review remain sequential obligations.
+- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH CURRICULUM CHECKER A3`
+- Required revision: Curriculum, Puzzle, protected construction, and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
 
-### Exact Storyboarder A2 handoff
+### Exact Curriculum Checker A3 handoff
 
-`Storyboarder Agent — A2: work only on RP-009 Occluded Fold. Read the canonical Storyboarder profile, LOCATION_VISUAL_SPINE.md, this packet, RP-008's exact verified end state and SC-09 exit contract, the active maximum-quality cinematic photorealistic charter, and your latest work log. Compose the smallest registered first-person scene sequence that makes three familiar near-margin continuities, several far-margin records, bounded material-signature correspondences, unmatched exposed records, one record with multiple plausible correspondences, one unavailable outer margin, an entirely occluded interior, and multi-era stewardship physically legible as patient collective work. This is the Phase III synthesis closure: retain the valid RP-007 and RP-008 summaries while showing that exposed edges do not support one complete topology. Provide no internal route, visual answer key, prescriptive evidence order, or one-to-one mapping diagram. Preserve direct physical adjacency from RP-008's destinationless continuation; both saved predecessor summaries; exact temporary-work clearing; sanitized-replica provenance; ordinary real-Python Builder-work meaning; Scene/Pilot/System ownership; invariant world and environmental clocks; no live read, trace, joining, routing, opening, identity, transformation, unity, causation, success reaction, permission, or control; reversible returns; no protagonist, ship, body part, reflection, humanoid occupant, readable pseudo-writing, human flow/network diagram, graph, laboratory, or ergonomic machinery. Similarity, mismatch, ambiguity, margin, and occlusion must not depend on left/right, color, motion, or sound alone. Define entry/orientation, edge-evidence inspection, ambiguous and unavailable evidence, stewardship detail, Builder-work interface, run-result, bounded save, restore, return, and outward-continuation evidence; merge boards wherever one registered invariant world can serve multiple interface states. Specify functional landscape, collective design movement, physically causal materials/light/atmosphere, landmarks, interaction zones, negative space, registered masters/crops/masks/effects, provenance, artifact cleanup, representative full 16:9 laptop containment, accessible narrow/text-zoom reflow, >=44px controls, reduced-motion and non-color equivalents. Do not select a Python skill, AI-901 objective, learning case, answer, threshold, remediation lane, puzzle mechanic, code, native category, internal topology, identity, persistence, transformation, Machine relation, any RP-010 content, or hidden lore. Update RP-009, LOCATION_VISUAL_SPINE.md, queue/map handoff state, and the Storyboarder work log; validate predecessor continuity, edge-evidence legibility, responsive presentation, and mystery protections; then hand the unchanged lore boundary to Curriculum Checker A3.`
+`Curriculum Checker Agent — A3: work only on RP-009 Occluded Fold. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, current official AI-901 objectives under project source-priority rules, this packet, its locked Lore Track, and the complete SC-10 scene brief. Select and verify only the nearest contiguous, nonduplicate Python skill and AI-901 obligation for reconciling sanitized replicas of exposed edge records while retaining correspondence, unmatched, ambiguous, unavailable, and interpretation-limit meanings separately. Treat every SC-10 material feature, near/far position, record count, repeated signature, unmatched or ambiguous silhouette, unavailable margin, stewardship cue, crop, hotspot, animation, sound, lighting state, focus order, navigation state, interface state, success/failure display, save, restore, return, and accessibility behavior as zero mastery evidence, zero answer, zero weakness inference, and zero remediation signal. Preserve both prior summaries; Scene/Pilot/System/Builder-work ownership; sanitized-replica provenance; privacy clearing; offline/no-authority/no-exam-guarantee boundaries; world invariance; reversible returns; and no live read, trace, join, split, merge, route, opening, identity, transformation, topology, unity, cause, purpose, permission, or control. Do not alter SC-10 composition, pair near and far records, derive the answer from scenery, select remediation from presentation, author puzzle mechanics, write runtime code, generate art, define a native category or Machine relation, seed RP-010, or open hidden lore. Update the RP-009 Curriculum Track and required curriculum artifacts, validate the mapping independently with strict primary, answer-free remediation, delayed retrieval/trace, and genuinely blank transfer evidence, then hand the unchanged story/scene boundary to Gameplay Master A4.`

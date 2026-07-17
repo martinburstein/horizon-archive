@@ -15,6 +15,7 @@
 | SC-07 | Interval Works | World D / Volcanic Habitation Vault / exposed material works | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus cross-section detail make relative material order, one changed feature, one persistent feature, one closed interval, and layered stewardship legible without clocks, timelines, or causal claims | [Sheet](scenes/SC-07-interval-works.md) |
 | SC-08 | Braided Verge | World D / Volcanic Habitation Vault / intersecting works | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus contact detail keep two continuities distinct while recurrent contacts, bounded difference, cross-cut order, closed junction, and compatible stewardship remain legible without diagrams, answer cues, unity, or cause | [Sheet](scenes/SC-08-braided-verge.md) |
 | SC-09 | Offset Reach | World D / Volcanic Habitation Vault / conditional-contact landscape | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus relation detail retain the familiar local contact while comparable open passage, cross-family contact, unavailable case, and layered stewardship narrow unsupported scope without binary or causal conclusions | [Sheet](scenes/SC-09-offset-reach.md) |
+| SC-10 | Occluded Fold | World D / Volcanic Habitation Vault / folded working landscape | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus edge detail expose three familiar near margins, unpaired far records, bounded correspondence, unmatched evidence, multi-candidate ambiguity, one unavailable margin, and layered stewardship while physical mass occludes every interior relation | [Sheet](scenes/SC-10-occluded-fold.md) |
 
 ## Status vocabulary
 
@@ -24,6 +25,6 @@
 - **Selected:** approved production direction with a complete scene sheet.
 - **Integrated:** implemented in the game and play-tested.
 
-Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-008 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
+Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-009 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
 
-Next coverage recommendation: Curriculum Checker should perform RP-008 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-09 continuity, contact, open passage, cross-family relation, unavailable case, stewardship cue, motion, interaction, and interface state as zero mastery evidence and never an answer key or remediation signal. SC-09 has no final art.
+Next coverage recommendation: Curriculum Checker should perform RP-009 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-10 margin, record, repeated signature, unmatched or ambiguous silhouette, unavailable boundary, stewardship cue, crop, motion, interaction, and interface state as zero mastery evidence, answer, weakness inference, and remediation signal. SC-10 has no final art.
