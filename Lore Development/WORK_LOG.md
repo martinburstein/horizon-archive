@@ -1,5 +1,13 @@
 # Lore Keeper Work Log
 
+## 2026-07-17 — RP-012 Measured Horizon resolution seed
+
+- **Outcome:** Seeded the twelfth and final packet from exact RP-011 completion. It resolves only the expedition-owned learning journey through an evidence-based local ready/not-yet-ready decision with exact recoverable remediation. Separate records, unknowns, reversible review, invariant world, no exam guarantee, no Builder/Machine authority, and no successor remain exact.
+- **Files changed:** added `Production Pipeline/rail-packets/RP-012-measured-horizon.md`; updated the Advance Queue, Expedition Spine, Packet Scoreboard, Advance Breadth Gate, Story Rail Map, and this log.
+- **Validation:** verified predecessor adjacency; entry/completion/return meaning; Scene/Pilot/System/Builder-work ownership; central-mystery preservation; no hidden-vault use; no live service, credential, access, world response, exam prediction, certification, successor, curriculum assignment, puzzle, code, or final art. Both outcomes remain dignified, evidence-based, recoverable, privacy-safe, offline, and answer-free.
+- **Exact Storyboarder handoff:** define only a compact responsive first-person photoreal resolution presentation, preserving invariant world, both dignified outcomes, suit ownership, accessible evidence scopes, and no successor.
+
+
 ## 2026-07-17 — RP-011 Unborrowed Reach capstone-continuation seed
 
 - **Outcome:** Replaced the blank contiguous shell with the smallest Phase IV slot-2 surface contract after RP-010. Locked one unfamiliar operating reach where the Pilot deliberately hides but never deletes the retained RP-007/RP-008/RP-009/RP-010 records while making one fresh bounded account from newly exposed evidence. Only after that record is finalized may the prior records reopen for a separate method-and-limit reconciliation. One unfinished real-Python Builder work image remains ordinary occupational literacy over sanitized new-record replicas, never a password, assessment, readiness judge, access gate, or live-world control. Completion saves the fresh record and reconciliation separately, clears temporary work, preserves every RP-010 unknown and reversible return, causes no live-world delta, and leaves RP-012 and the ending undefined.

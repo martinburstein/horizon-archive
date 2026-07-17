@@ -1,5 +1,7 @@
 # Advance Breadth and Convergence Gate
 
+Latest Advance application: `RP-012 IN DESIGN — A1 STORY PASS`. The final packet now has one bounded expedition-owned resolution contract: exact RP-011 entry, separate retained evidence, strict local readiness or exact recoverable remediation, no exam guarantee, no Builder/Machine/world authority, invariant physical state, central mystery preserved, reversible review, and no successor. A2 owns only the compact presentation and art plan.
+
 Latest coordinator decision: `2026-07-17 / RP-011 PASS — PROMOTED TO WORKING`. Independent focused `15/15`, complete protected chain `124/124`, full `558/558`, RP-011 validator and five canonical forms, production build, accepted-asset identity, leakage/purity/cleanup, patch integrity, full E2E, and responsive live gates confirmed all twelve gates. RP-011 holds strict Working order behind RP-010. RP-012 is the intended ending reservation, so no successor shell or content is seeded; final art, normal integration, Working evidence, readiness verdict, RP-012, and ending work remain closed.
 
 ## Goal
