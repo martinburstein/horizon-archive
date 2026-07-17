@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working coordinator five-observation acceptance — 2026-07-17
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`.
+- **Accepted boundary:** either far order/all seven modalities, exact matching fifth record and Scene statement, `5 of 5`, five-record return/replay/resume/sanitation, two Recorded peers, truthful blank/partial/complete region names, separate route return, immutable civic world, and honestly dormant local comparison pass.
+- **Coordinator evidence:** independent full `539/539`, production build, RP-002 through RP-010 validators, patch integrity, complete title-to-credits E2E with `credits:true` and `runtimeErrors:false`, and contained `1920 x 1080` / `390 x 844` title-shell review. User storage remained untouched.
+- **Next lock:** W1 owns only the earliest exact gap toward activating local comparison. Do not enter `SC-03-30`, expose learning/completion, or touch RP-003+.
+
 ## Working W4 region-label correction — 2026-07-17
 
 - **Disposition:** `RP002-AESTH-005 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.

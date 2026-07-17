@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-008 + RP002-AESTH-005 COORDINATOR PASS — FIVE OBSERVATIONS ACCEPTED`. Independent full `539/539`, build, RP-002 through RP-010 validators, patch integrity, and complete title-to-credits E2E passed with no runtime errors. Live `1920 x 1080` and `390 x 844` title shells retained zero outer overflow and `44px` actions; the narrow frame used `384.8/390 CSS px`. Either far order, exact five-record save/return/replay/resume, truthful far-region names, dormant comparison, immutable art, and every no-credit/no-authority boundary are accepted. Next W1 owns only the earliest gap toward local-comparison activation; `SC-03-30`, learning, completion, and RP-003+ remain closed.
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-005 W4 RESOLVED — COORDINATOR NEXT`. Blank, one-far/acknowledgement, and two-far/acknowledgement `SC-03-20` world-region accessible names now truthfully describe retained expedition evidence without duplicating Scene/System announcements or implying Builder/city response, permission, access, authority, or world change. Focused **33/33**, related **139/139**, full **539/539**, validator, build, HTTP, served-marker, and immutable-art checks pass on the final-reloaded demo. Comparison activation, SC-03-30, learning, completion, and RP-003+ remain closed.
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-005 W3 P2 — W4 AESTHETIC IMPLEMENTATION NEXT`. The integrated second-far acknowledgement, five-record return/replay, two Recorded peers, dormant local comparison, separate route return, responsive hierarchy, and immutable civic art pass bounded review. One assistive presentation defect remains: the `SC-03-20` world region still says `blank distant observation view` at second-far acknowledgement and complete return/resume. W4 changes only blank/partial/complete region naming plus focused coverage and final reload. Comparison activation, SC-03-30, learning, completion, and RP-003+ remain closed.
@@ -11,6 +13,8 @@ Latest Advance handoff: `2026-07-17 / RP-010 A5 PASS — COORDINATOR GATE REVIEW
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
 ## Position summary
+
+- Current Working override: `RP-002 — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`. The five-record observation boundary and final assistive presentation passed coordinator release. Next W1 may test only the dormant `OPEN LOCAL COMPARISON` boundary; all later states remain closed.
 
 - Current Working override: `RP-002 — FINAL VALIDATION / RP002-AESTH-005 RESOLVED`. W4 corrected only evidence-aware far-world region naming and final-reloaded port `4173`. Coordinator owns release gates plus representative desktop/narrow assistive review; the user save and every comparison/later lock remain untouched.
 

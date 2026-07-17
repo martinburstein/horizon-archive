@@ -1,5 +1,12 @@
 # Player Agent Work Log
 
+## 2026-07-17 - Coordinator closure: RP-002 five-observation partial release
+
+- **Outcome:** `PASS — FIVE OBSERVATIONS IN DEMO PARTIAL`. The second far observation, exact five-record save/return/replay/resume, two Recorded peers, truthful blank/partial/complete region names, separate route return, and honestly dormant local comparison are accepted. No comparison activation, `SC-03-30`, learning, completion, or RP-003+ is public.
+- **Release validation:** full **539/539**, production build, RP-002 through RP-010 curriculum self-tests, patch integrity, and full title-to-credits E2E passed with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental QA PNGs were restored.
+- **Live responsive evidence:** exact `1920 x 1080` and `390 x 844` title shells retained zero outer overflow and `44px` actions; the narrow game frame used `384.8/390 CSS px`. The viewport override was reset. The preserved user save remained untouched, so no direct gated five-record traversal is fabricated.
+- **Next W1:** report only the earliest exact gap toward activating `OPEN LOCAL COMPARISON`; preserve every later lock.
+
 ## 2026-07-17 - W1 RP-002 first-far-to-second-far playtest
 
 - **Demo build tested:** repository `4bfc766` (`Advance Coder: protect RP-010 journey`) with accepted first-far assets `index-DlTR4eYT.js` / `index-R5wdIep0.css` served at `http://127.0.0.1:4173/`. RP-002 remains the oldest adjacent Working packet; RP-003 through RP-009 remained queued and RP-010 remained protected/unexposed.

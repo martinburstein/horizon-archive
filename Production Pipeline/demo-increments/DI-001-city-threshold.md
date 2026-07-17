@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator — second-far and complete observation boundary accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`. The bounded RP002-P1-008 repair and RP002-AESTH-005 evidence-aware region naming are accepted on the live demo.
+- **Release evidence:** full **539/539**, production build, RP-002 through RP-010 curriculum self-tests, patch integrity, and full title-to-credits E2E passed with credits reached and no runtime errors. Root, JS, and CSS return HTTP `200`; port `4173` serves `index-CdMwuH6o.js` / `index-R5wdIep0.css`.
+- **Responsive evidence:** the title shell is contained at `1920 x 1080` and `390 x 844` with zero outer overflow, `44px` actions, and a narrow frame width of `384.8/390 CSS px`. The user's saved campaign was not inspected or altered; gated five-record behavior is accepted from focused deterministic evidence rather than a fabricated live traversal.
+- **Next boundary:** W1 may report only the earliest exact gap toward activating `OPEN LOCAL COMPARISON`. `SC-03-30`, PY-009, RP002-RAI-01, completion, and RP-003+ remain closed.
+
 ## 2026-07-17 W4 — RP002-AESTH-005 resolved
 
 - **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. The far-world region retains the exact existing blank name at zero far observations, names one retained distant expedition observation at both one-far checkpoints, and names both retained distant expedition observations at both complete checkpoints.
