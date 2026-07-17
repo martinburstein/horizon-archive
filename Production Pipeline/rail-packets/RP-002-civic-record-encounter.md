@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 first-far integration — 2026-07-17
+
+- **Disposition:** `RP002-P1-007 RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`.
+- **Integrated boundary:** both equal blank `SC-03-20` peers can be the first deliberate choice. Exactly the selected canonical far ID and Scene statement are recorded, System reports exact `1 of 2`, and the three near records remain byte-stable. Evidence return makes the selected peer replay-only and the unselected peer honestly inert; the second far observation remains blocked.
+- **Persistence/recovery:** allowlisted `sc03_far_first` stores exactly three canonical near records plus one canonical far record. Restore replays no acknowledgement. Wrong, duplicate, stale, forged, combined, ambiguous, private, Tour, passive, wrong-owner/mode/board/registry, unreadable, contaminated-save, and second-far attempts fail closed. Route return remains separate; all credit/deltas remain zero/null.
+- **Evidence:** focused **28/28**, related **56/56**, full **522/522**, RP-002 validator, production build, patch integrity, and HTTP root/JS/CSS checks pass. Port `4173` serves `index-tBB22K3Y.js` / `index-R5wdIep0.css`. Browser storage and the user save were not opened or altered.
+- **Hard stop/W3:** review only the first-far acknowledgement and retained one-far presentation. Do not add the second far observation, local comparison, PY-009, AI check, completion, RP-003+, art replacement, or world response.
+
 ## Working W1 first-far observation finding - 2026-07-17
 
 - **Disposition:** `RP002-P1-007 OPEN - W2 BUG REPAIR NEXT`.

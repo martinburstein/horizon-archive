@@ -1159,7 +1159,7 @@ export function App() {
     const routeSave = predecessor && typeof window !== "undefined"
       ? readCustodyLedgerNormalRoute(window.localStorage, predecessor)
       : null;
-    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_far_blank"].includes(routeSave?.checkpoint)) {
+    if (["sc03_arrival", "sc03_survey_overview", "sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first"].includes(routeSave?.checkpoint)) {
       setCustodyLedgerRouteSave(routeSave);
       setCustodyLedgerRouteView(null);
       setMode("rp002-arrival");

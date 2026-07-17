@@ -87,6 +87,15 @@ function completedNearSave(prefix = "rp002-completed-near") {
   )).save;
 }
 
+function farBlankSave(prefix = "rp002-far-blank") {
+  const complete = completedNearSave(prefix);
+  return createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.compareScale.label,
+    "pointer",
+    `${prefix}-compare`,
+  )).save;
+}
+
 function memoryStorage(initial = {}) {
   const values = new Map(Object.entries(initial));
   return {
@@ -609,32 +618,14 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
     custodyLedgerRouteActions.returnAccepted,
   ]);
   assert.deepEqual(compare.state.actionStates.map(({ label, status }) => ({ label, status })), [
-    { label: custodyLedgerObservationActions.distant_repetition, status: "inert" },
-    { label: custodyLedgerObservationActions.closed_boundary, status: "inert" },
+    { label: custodyLedgerObservationActions.distant_repetition, status: "available" },
+    { label: custodyLedgerObservationActions.closed_boundary, status: "available" },
   ]);
   assert.ok(compare.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
     minWidthCssPx >= 44 && minHeightCssPx >= 44
   )));
   assert.deepEqual(compare.state.observationEvidence, third.save.observationEvidence);
   assertNoDeltaOrCredit(compare.state, 3);
-  const farBlankBytes = JSON.stringify(resumed.getState().observationEvidence);
-  for (const action of [
-    custodyLedgerObservationActions.distant_repetition,
-    custodyLedgerObservationActions.closed_boundary,
-  ]) {
-    for (const activationKind of activationKinds) {
-      const farAttempt = resumed.dispatch(intent(
-        action,
-        activationKind,
-        `rp002-three-resume-far-blocked-${action.replace(/[^A-Za-z0-9._:-]/g, "_")}-${activationKind}`,
-      ));
-      assert.equal(farAttempt.status, "rejected");
-      assert.equal(farAttempt.reason, "far_observations_not_integrated");
-      assert.equal(farAttempt.state.checkpoint, "sc03_far_blank");
-      assert.equal(JSON.stringify(farAttempt.state.observationEvidence), farBlankBytes);
-      assertNoDeltaOrCredit(farAttempt.state, 3);
-    }
-  }
   const route = resumed.dispatch(intent(
     custodyLedgerRouteActions.returnAccepted,
     "switch",
@@ -643,6 +634,185 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
   assert.equal(route.status, "returned");
   assert.equal(route.state.checkpoint, "city_threshold");
   assertNoDeltaOrCredit(route.state);
+});
+
+test("either first far peer records exactly one canonical statement across all seven modalities", () => {
+  const farChoices = ["distant_repetition", "closed_boundary"];
+  for (const observationId of farChoices) {
+    for (const activationKind of activationKinds) {
+      const blankSave = farBlankSave(`rp002-first-far-${observationId}-${activationKind}`);
+      const nearBytes = blankSave.observationEvidence.map((record) => JSON.stringify(record));
+      const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: blankSave });
+      const result = controller.dispatch(intent(
+        custodyLedgerObservationActions[observationId],
+        activationKind,
+        `rp002-first-far-${observationId}-${activationKind}-record`,
+      ));
+      assert.equal(result.status, "recorded");
+      assert.equal(result.observationId, observationId);
+      assert.equal(result.state.checkpoint, "sc03_far_first_acknowledgement");
+      assert.equal(result.state.boardId, "SC-03-20");
+      assert.deepEqual(result.state.sceneStatement, custodyLedgerObservationStatements[observationId]);
+      assert.deepEqual(result.state.statusMessage, {
+        owner: "SYSTEM // EXPEDITION STATE",
+        text: custodyLedgerObservationInterfaceCopy.partialFar,
+      });
+      assert.deepEqual(result.state.availableActions, [
+        custodyLedgerObservationControls.returnToEvidence.label,
+        custodyLedgerRouteActions.returnAccepted,
+      ]);
+      assert.equal(result.save.checkpoint, "sc03_far_first");
+      assert.deepEqual(result.save.observationEvidence.slice(0, 3).map((record) => JSON.stringify(record)), nearBytes);
+      assert.equal(result.save.observationEvidence[3].observationId, observationId);
+      assert.deepEqual(result.state.observationState.progress, {
+        near: 3, nearRequired: 3, far: 1, farRequired: 2,
+      });
+      assertNoDeltaOrCredit(result.state, 4);
+    }
+  }
+});
+
+test("first far evidence returns to a replay-only selected peer and an honestly inert unselected peer", () => {
+  for (const selectedId of ["distant_repetition", "closed_boundary"]) {
+    const unselectedId = selectedId === "distant_repetition" ? "closed_boundary" : "distant_repetition";
+    const controller = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: farBlankSave(`rp002-first-far-return-${selectedId}`),
+    });
+    const recorded = controller.dispatch(intent(
+      custodyLedgerObservationActions[selectedId],
+      "keyboard_enter",
+      `rp002-first-far-return-${selectedId}-record`,
+    ));
+    const evidenceBytes = JSON.stringify(recorded.save.observationEvidence);
+    const returned = controller.dispatch(intent(
+      custodyLedgerObservationControls.returnToEvidence.label,
+      "screen_reader",
+      `rp002-first-far-return-${selectedId}-evidence`,
+    ));
+    assert.equal(returned.status, "returned_to_evidence");
+    assert.equal(returned.state.checkpoint, "sc03_far_first");
+    assert.equal(returned.state.sceneStatement, null);
+    assert.equal(returned.state.statusMessage, null);
+    assert.deepEqual(returned.state.actionStates.map(({ label, status }) => ({ label, status })), [
+      {
+        label: custodyLedgerObservationActions.distant_repetition,
+        status: selectedId === "distant_repetition" ? "replay" : "inert",
+      },
+      {
+        label: custodyLedgerObservationActions.closed_boundary,
+        status: selectedId === "closed_boundary" ? "replay" : "inert",
+      },
+    ]);
+    assert.ok(returned.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
+      minWidthCssPx >= 44 && minHeightCssPx >= 44
+    )));
+    assert.equal(JSON.stringify(returned.save.observationEvidence), evidenceBytes);
+
+    const replay = controller.dispatch(intent(
+      custodyLedgerObservationActions[selectedId],
+      "speech",
+      `rp002-first-far-return-${selectedId}-replay`,
+    ));
+    assert.equal(replay.status, "replayed");
+    assert.deepEqual(replay.state.sceneStatement, custodyLedgerObservationStatements[selectedId]);
+    assert.deepEqual(replay.state.statusMessage, {
+      owner: "SYSTEM // EXPEDITION STATE",
+      text: custodyLedgerObservationInterfaceCopy.revisit,
+    });
+    assert.equal(JSON.stringify(replay.save.observationEvidence), evidenceBytes);
+    assertNoDeltaOrCredit(replay.state, 4);
+
+    const restored = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
+    const before = JSON.stringify(restored.getState());
+    const blocked = restored.dispatch(intent(
+      custodyLedgerObservationActions[unselectedId],
+      "switch",
+      `rp002-first-far-return-${selectedId}-second-blocked`,
+    ));
+    assert.equal(blocked.status, "rejected");
+    assert.equal(blocked.reason, "second_far_not_integrated");
+    assert.equal(JSON.stringify(blocked.state), before);
+    assertNoDeltaOrCredit(blocked.state, 4);
+  }
+});
+
+test("first-far save resumes and sanitizes only exact one-of-two canonical evidence", () => {
+  const blankSave = farBlankSave("rp002-first-far-save");
+  const recorded = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: blankSave }).dispatch(intent(
+    custodyLedgerObservationActions.distant_repetition,
+    "touch",
+    "rp002-first-far-save-record",
+  ));
+  const safe = recorded.save;
+  assert.deepEqual(sanitizeCustodyLedgerNormalRouteSave(safe, predecessor), safe);
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, safe, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), safe);
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: safe });
+  assert.equal(resumed.getState().checkpoint, "sc03_far_first");
+  assert.deepEqual(resumed.getSave(), safe);
+  assertNoDeltaOrCredit(resumed.getState(), 4);
+
+  const [recordA, recordB, recordC, farRecord] = safe.observationEvidence;
+  for (const invalid of [
+    { ...safe, privateNotes: "PRIVATE" },
+    { ...safe, observationEvidence: [recordA, recordB, recordC] },
+    { ...safe, observationEvidence: [recordA, recordB, recordC, farRecord, farRecord] },
+    { ...safe, observationEvidence: [recordA, recordB, recordC, { ...farRecord, finalizationStatus: "draft" }] },
+    { ...safe, observationEvidence: [recordA, recordB, recordC, { ...farRecord, observationId: "unknown_far" }] },
+    { ...safe, checkpoint: "sc03_far_second" },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
+});
+
+test("first far boundary rejects unsafe, passive, ambiguous, private, Tour, and duplicate input without evidence", () => {
+  const save = farBlankSave("rp002-first-far-negative");
+  const clean = intent(
+    custodyLedgerObservationActions.distant_repetition,
+    "pointer",
+    "rp002-first-far-negative-clean",
+  );
+  const alternateSemanticId = intent(
+    custodyLedgerObservationActions.closed_boundary,
+    "pointer",
+    "rp002-first-far-negative-alternate",
+  ).semanticHotspotId;
+  const variants = [
+    { mode: "protected" },
+    { mode: "demo_tour" },
+    { owner: "SYSTEM // DEMO TOUR" },
+    { boardId: "SC-03-10" },
+    { registryVersion: "stale" },
+    { stale: true },
+    { forged: true },
+    { implicit: true },
+    { multiHit: true },
+    { actions: [custodyLedgerObservationActions.distant_repetition, custodyLedgerObservationActions.closed_boundary] },
+    { candidateSemanticIds: [clean.semanticHotspotId, alternateSemanticId] },
+    { semanticHotspotId: alternateSemanticId },
+    { privateNotes: "PRIVATE-FAR" },
+    { activationKind: "focus" },
+    { activationKind: "hover" },
+    { activationKind: "dwell" },
+    { evidenceReadable: false },
+    { cropSafe: false },
+  ];
+  for (const [index, override] of variants.entries()) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: save });
+    const before = JSON.stringify(controller.getState());
+    const result = controller.dispatch({ ...clean, eventToken: `rp002-first-far-negative-${index}`, ...override });
+    assert.equal(result.status, "rejected");
+    assert.equal(JSON.stringify(result.state), before);
+    assert.doesNotMatch(JSON.stringify(result.state), /PRIVATE-FAR/);
+    assertNoDeltaOrCredit(result.state, 3);
+  }
+
+  const duplicateController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: save });
+  const repeated = { ...clean, eventToken: "rp002-first-far-negative-duplicate" };
+  assert.equal(duplicateController.dispatch(repeated).status, "recorded");
+  const duplicate = duplicateController.dispatch(repeated);
+  assert.equal(duplicate.status, "duplicate_suppressed");
+  assertNoDeltaOrCredit(duplicate.state, 4);
 });
 
 test("comparison boundary rejects wrong, stale, forged, combined, private, Tour, implicit, early, and duplicate attempts", () => {
@@ -936,6 +1106,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerSecondNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerThirdNearCompletionOrchestrator/);
+  assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);
   assert.match(normalRoute, /custodyLedgerHotspotRegistry/);
   assert.match(arrival, /data-observation-count/);
   assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
@@ -953,6 +1124,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /"sc03_near_second"/);
   assert.match(app, /"sc03_near_complete"/);
   assert.match(app, /"sc03_far_blank"/);
+  assert.match(app, /"sc03_far_first"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

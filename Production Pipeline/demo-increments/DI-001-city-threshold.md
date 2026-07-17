@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-007 first-far integration
+
+- **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. Both equal blank `SC-03-20` peers now function as supported first choices; exactly one selected far record and its canonical Scene statement are added with exact System `1 of 2`.
+- **Boundary:** three near records stay byte-stable. Evidence return exposes the selected peer as replay-only and the other as honestly inert; a second far activation returns `second_far_not_integrated`. Exact `sc03_far_first` save/resume/sanitation, idempotent replay, separate route return, accessibility, privacy, Tour, offline/no-authority, immutable world, and zero-credit/null-delta contracts remain exact.
+- **Validation/reload:** focused **28/28**, related **56/56**, full **522/522**, RP-002 validator, build, patch integrity, and root/JS/CSS HTTP `200` pass. Port `4173` serves `index-tBB22K3Y.js` / `index-R5wdIep0.css`; browser storage and user save remained untouched.
+- **W3:** inspect only the first-far acknowledgement/return/replay presentation. Stop before second far, local comparison, learning, completion, or RP-003+.
+
 ## 2026-07-17 W1 - RP002-P1-007 first-far finding
 
 - **Disposition:** `BLOCKED - RP002-P1-007 OPEN / W2 BUG REPAIR NEXT`. The accepted blank `SC-03-20`, exact three-near/zero-far evidence, honest equal inert peers, separate return, immutable civic art, and all no-credit/no-delta boundaries remain stable.

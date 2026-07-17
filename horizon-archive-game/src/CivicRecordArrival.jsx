@@ -114,7 +114,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
             <p>
               {atObservation
                 ? hasObservation
-                  ? `${observationCount === 1 ? "One" : observationCount === 2 ? "Two" : "Three"} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
+                  ? `${observationCount} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
             </p>
