@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-010 W3 CLEAN — W4 VERIFICATION ONLY`. The unchanged premium civic master and new work-image panel preserve first-person world dominance, literal locked/blank state, truthful action hierarchy, 44px targets, and narrow one-column reflow; no actionable defect is reproduced. Live title shells pass `1920 x 1080` / `390 x 844` containment with no console issues. User storage remained untouched, so gated state evidence is deterministic/source-based rather than fabricated live traversal.
+
 Latest Working handoff: `2026-07-17 / RP002-P1-010 W2 RESOLVED — W3 AESTHETIC REVIEW`. One explicit seven-modality action now composes strict prior evidence into only a blank PY-009 primary, with locked source fields, empty expedition fields, all checks false, five-record byte stability, reversible return/resume, privacy clearing, and no later exposure. Focused `93/93`, full `565/565`, build, and served asset checks pass on `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
 
 Latest Working handoff: `2026-07-17 / RP002-P1-010 W1 P1 — W2 BUG REPAIR NEXT`. Accepted blank `SC-03-30` remains stable, reversible, five-record exact, and zero-credit, but its normal UI exposes only evidence and route returns. No action composes the approved prerequisite/scaffold into a genuinely blank PY-009 primary. Focused `91/91` and HTTP asset checks pass with user storage untouched. W2 owns only that explicit learning-entry seam; submission/result and all later content remain closed.

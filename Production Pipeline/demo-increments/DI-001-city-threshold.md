@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 increment — clean RP002-P1-010 review
+
+- No aesthetic/assistive defect reproduced in the blank work-image entry.
+- Premium civic art remains unchanged and dominant; the compact interface keeps locked/blank state literal, owner text visible, actions truthful, 44px targets, and narrow one-column reflow.
+- Live desktop/narrow title shells retain zero overflow and clean logs. User storage was preserved; no gated screenshot is fabricated.
+- W4 is verification-only unless an exact residual appears.
+
 ## 2026-07-17 W2 increment — RP002-P1-010 resolved
 
 - `OPEN UNFINISHED WORK IMAGE` now enters only blank strict PY-009 primary after verified five-record and strict prerequisite evidence.
