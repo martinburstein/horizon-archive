@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance A5 continuity handoff — protected transfer seam
+
+- **Disposition:** `REVISE — PROTECTED TRANSFER SEAM ONLY / ACCEPTED W1 NEXT`.
+- **Implementation:** one pure, non-routable, storage-free controller composes the accepted exact fresh-practice boundary, canonical transfer source builder, existing six-check evaluator, submission sanitizer, and resume authorities. It implements only `FT-00 -> FT-10 -> FT-20F/FT-20C`; App/main, normal route, UI, storage, accepted assets, art, and curriculum remain unchanged.
+- **Evidence:** seven modalities/one hit; six isolated check failures and multi-failure; answer-free actual-miss feedback; private-work clearing; genuinely blank retry; exact current-attempt `6/6`; exact/contaminated restore; separate returns; byte-stable primary evidence, observations, and predecessors; accessibility metadata; purity/leakage; and hard absence of explanation or later states are directly tested.
+- **W1:** play only the accepted normal blank fresh-practice group and report its earliest submit/evaluation gap. Do not inspect the protected module or open explanation, RAI, review/save/completion, RP-003+, world/authority response, or successor work.
+
 ## 2026-07-17 Advance A4 continuity handoff — transfer interaction graph
 
 - **Disposition:** `PASS — FT-00/10/20F/20C GRAPH LOCKED / PROTECTED A5 NEXT`.

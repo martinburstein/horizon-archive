@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coder A5: protected transfer-submission seam
+
+- **Mode/verdict:** `advance` / `REVISE — PROTECTED TRANSFER SEAM ONLY / ACCEPTED W1 NEXT`. Added one pure, storage-free, non-routable `FT-00 -> FT-10 -> FT-20F/FT-20C` controller by composing the accepted fresh-practice boundary with the canonical transfer evaluator, submission sanitizer, and resume authorities. App/main, the normal route, Civic UI, browser persistence, accepted assets, art, curriculum, and the live Demo were not edited.
+- **Bounded behavior:** exact canonical fresh practice exposes only two private Pilot fields, one `SUBMIT EXPEDITION FIELDS` intent, and two separate returns. Seven modalities normalize to one token/one hit. Actual failed checks alone produce answer-free feedback; `RETRY BLANK` clears private work and restores deterministic focus. Exact current-attempt `6/6` yields only System-owned `transfer_complete` course evidence and never opens Python explanation.
+- **Protection/recovery:** all six single failures, multi-failure, wrong values, source mutation, replacement, extra keys, forbidden output/external work, invalid/Tour/stale/forged/duplicate/combined/private/later requests, exact restore, and contaminated restore are covered. Primary evidence, five observations, and both predecessor facts remain byte-stable; world, route, access, save, authority, score, identity, city delta, and successor remain absent or unchanged.
+- **Files changed:** `src/CustodyLedgerTransferInteraction.js`, `test/custodyLedgerTransferInteraction.test.js`, this log, RP-002, DI-001, Advance/Working queues, Story Rail Map, Production Readiness/Gameplay/Expedition/Breadth spines, and Packet Scoreboard.
+- **Exact W1 handoff:** `Player Agent: play only the coordinator-accepted normal RP-002 canonical blank SYSTEM // EXPEDITION SESSION / FRESH PRACTICE IMAGE on the current accepted assets. Preserve user storage. Report the earliest exact player-facing gap toward submitting and evaluating classification/owner. Do not inspect or route through the protected module, fabricate a gated state, or report explanation, RP002-RAI-01, review/save/completion, RP-003+, world/authority response, or successor gaps first.`
+
 ## 2026-07-17 — Coordinator: RP-002 fresh-practice entry accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 FRESH PRACTICE ENTRY ACCEPTED`. The accepted RP-002 boundary now extends from the complete provisional Suit result through one explicit zero-effect dismissal into canonical carry-free blank System fresh practice. Transfer submission/evaluation/scoring/feedback/result remains closed.

@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-013 A5 PROTECTED TRANSFER SEAM — ACCEPTED W1 NEXT`. The pure unimported transfer controller passes its protected gates while normal App/route/storage/assets remain unchanged. Team 1 remains complete at RP-012 with no successor; Team 2 remains at the accepted RP-002 blank fresh-practice edge and next tests only submit/evaluation.
+
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-013 A4 TRANSFER GRAPH PASS — PROTECTED A5 NEXT`. One bounded blank/edit -> explicit submit -> actual-failed-check/blank-retry or current-attempt `6/6` evidence graph is locked with separate returns, zero world effect, and no explanation. Team 1 remains complete at RP-012/no successor; Team 2 remains on accepted RP-002 blank fresh practice.
 
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-013 A3 NO REOPEN — A4 NEXT`. Official-source and validator review preserve SOLIDIFIED transfer evidence: exact neutral course record, two Pilot key updates, six simultaneous checks, actual-miss-only answer-free remediation/blank retry, and independent current-attempt `6/6`. Team 1 remains complete at RP-012/no successor; Team 2 remains on accepted RP-002 blank fresh practice.

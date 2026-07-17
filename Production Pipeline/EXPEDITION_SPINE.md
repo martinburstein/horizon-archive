@@ -1,5 +1,7 @@
 # Horizon Archive Expedition Spine
 
+Latest RP-002 continuity handoff: `2026-07-17 / RP002-P1-013 A5 REVISE — PROTECTED TRANSFER SEAM / ACCEPTED W1 NEXT`. The pure unimported submit/evaluation seam passes while normal App/route/storage/assets remain unchanged. Team 2's accepted edge stays canonical blank fresh practice; its next adjacent gap is submit/evaluation only. RP-012 remains the final railhead and no successor exists.
+
 Latest RP-002 release handoff: `2026-07-17 / RP002-P1-012 PASS — FRESH PRACTICE ENTRY ACCEPTED`. Team 2's accepted edge is canonical carry-free blank System practice after explicit provisional-result dismissal; its next adjacent gap is transfer submission/evaluation only. RP-012 remains the final railhead and no successor exists.
 
 Latest RP-002 continuity handoff: `2026-07-17 / RP002-P1-012 A5 REVISE — ACCEPTED W1 NEXT`. The protected explicit-dismissal-to-carry-free-blank-entry seam passes while accepted App/route/storage/assets/live Demo remain unchanged. Team 2's current accepted edge is the provisional PY-009 Suit result; its next adjacent gap is explicit dismissal and blank fresh-practice entry only. RP-012 remains the final railhead; no successor exists.

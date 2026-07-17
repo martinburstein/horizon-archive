@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A5 continuity — protected transfer seam
+
+- **Disposition:** `REVISE — PROTECTED SEAM ONLY / W1 NEXT`; accepted Demo assets are unchanged.
+- **Protected proof:** canonical fresh entry, explicit seven-modality submit, real six-check evaluation, actual-miss-only answer-free feedback, blank retry, exact `6/6` transfer evidence, fail-closed restore, separate returns, accessibility metadata, and no later state.
+- **Working handoff:** play only the accepted normal blank group and report its earliest submit/evaluation gap while preserving user storage.
+
 ## 2026-07-17 Advance A4 continuity — transfer interaction graph
 
 - **Graph:** `FT-00` blank/edit -> `FT-10` explicit one-hit submit -> `FT-20F` actual-failed-check feedback/`RETRY BLANK` or `FT-20C` current-attempt `6/6` transfer evidence.

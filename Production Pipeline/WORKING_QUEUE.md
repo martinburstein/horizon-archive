@@ -1,5 +1,7 @@
 # Working Queue
 
+**Latest Advance continuity handoff (RP002-P1-013 / A5):** `REVISE — PROTECTED TRANSFER SEAM ONLY / ACCEPTED W1 NEXT`. The pure unimported `FT-00 -> FT-20F/20C` controller proves canonical evaluation, actual-miss-only feedback, blank retry, current-attempt `6/6`, restore/sanitation, separate returns, accessibility parity, zero effect, and no explanation. W1 must preserve user storage and report only the earliest submit/evaluation gap in the accepted normal blank group.
+
 **Latest Advance continuity handoff (RP002-P1-013 / A4):** `PASS — PROTECTED A5 NEXT`. `FT-00 -> FT-10 -> FT-20F/FT-20C` locks one explicit seven-modality/one-hit transfer submit, actual-failed-check feedback/blank retry, and current-attempt `6/6` local evidence acknowledgement with separate returns and no explanation. A5 remains pure/unimported; W1 later tests only the accepted live blank group.
 
 **Latest Advance continuity handoff (RP002-P1-013 / A3):** `PASS — NO REOPEN / A4 GRAPH NEXT`. The transfer mapping remains frozen and SOLIDIFIED: exact neutral source, expected two Pilot key updates, six current-attempt checks, answer-free actual-miss remediation, genuinely blank retry, and independent `6/6` transfer evidence. No normal integration is authorized before A5; W1 remains assigned only the earliest accepted live submit/evaluation gap.

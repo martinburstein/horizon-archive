@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest Advance continuity result: `2026-07-17 / RP002-P1-013 A5 REVISE — PROTECTED TRANSFER SEAM ONLY`. One pure unimported `FT-00 -> FT-20F/20C` controller composes the real evaluator and sanitation/resume authorities. Focused transfer coverage, full suite, validator, build, leakage, purity, and patch gates pass; normal App/route/storage/assets remain unchanged. W1 starts at the accepted blank fresh-practice group and reports only the submit/evaluation gap.
+
 Latest coordinator release: `2026-07-17 / RP002-P1-012 + RP002-AESTH-007 PASS — PY-009 FRESH PRACTICE ENTRY IN DEMO PARTIAL`. Independent full `587/587`, all `15/15` readiness validators, production build, `102.8s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Normal integration and release now extend through explicit result dismissal into canonical blank fresh practice; transfer submission/evaluation remains the next closed edge.
 
 Latest Working candidate: `2026-07-17 / RP002-AESTH-007 W4 RESOLVED — COORDINATOR NEXT`. Phase-aware evidence-return group names close the sole W3 P2 without changing visible UI or gameplay. Final candidate `index-CjiYW_Of.js` / `index-ghzUiZe9.css` passes focused `58/58`, full `587/587`, build, served-marker/HTTP checks, and clean safe reload; release acceptance remains at the provisional result until independent coordinator validation.
