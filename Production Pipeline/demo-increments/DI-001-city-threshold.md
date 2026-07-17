@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 coordinator release — RP-002 two near observations
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / TWO NEAR OBSERVATIONS ACCEPTED.` The normal path preserves one recorded observation, permits exactly one fresh peer observation with the exact Scene/System `2 of 3` acknowledgement, and restores a two-Recorded/one-visible-Available state whose third action remains fail-closed.
+- **Coordinator validation:** release checks **PASS in 91.6s**: full **471/471**, production build (`index-B7abTqKC.js` / `index-R5wdIep0.css`), RP-002 release validator, RP-003/RP-004/RP-005/RP-006 curriculum self-tests, E2E syntax, patch integrity, and complete title-to-credits E2E with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental QA PNG regeneration was restored.
+- **Responsive evidence:** exact reloaded `1920 x 1080` and `390 x 844` title-shell checks retained zero outer overflow and `>=44px` actions. W4's isolated served-build review proves the same immutable civic master remains visible with `object-fit:cover` at desktop and narrow sizes, natural `1672 x 941`, exact world-box coverage, empty console, and unchanged SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **Evidence boundary:** the user-owned save remained before the verified predecessor and was preserved. Direct one-ID -> second acknowledgement -> returned two-ID evidence is supported by focused normal-route/component tests and W3/W4 served-build checks rather than a fabricated coordinator traversal claim.
+- **Next bounded handoff:** Player Agent W1 starts at the accepted two-ID state and reports only the earliest exact gap toward one third near observation. Do not enter `SC-03-20+`, learning, packet completion, RP-003, or later content.
+
 ## 2026-07-17 W4 — RP002-AESTH-002 narrow civic-world repair
 
 - **Disposition:** `PASS — AESTHETIC FINDING RESOLVED / COORDINATOR NEXT`.
