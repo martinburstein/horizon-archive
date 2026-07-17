@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator three-near partial release — 2026-07-17
+
+- **Disposition:** `IN DEMO — PARTIAL / THREE NEAR OBSERVATIONS COORDINATOR PASS`.
+- **Accepted boundary:** every six-order/seven-modality route through exactly three canonical near observations, exact Scene statements, literal System `3 of 3`, replay-only records, evidence/route returns, allowlisted three-near/zero-far resume without acknowledgement replay, and a visibly disabled zero-credit `COMPARE SCALE` boundary.
+- **Evidence:** focused **85/85**, full **488/488**, production build, RP-002 release validator, RP-003 through RP-007 curriculum self-tests, patch integrity, and complete **105.4s** title-to-credits E2E with every emitted gate true, `credits:true`, and `runtimeErrors:false`. Live `1920 x 1080` and `390 x 844` title-shell reviews had zero outer overflow, clean console, and all actions `>=44px`. The user save remained earlier and was preserved; focused normal-route/component evidence plus W2–W4 served/source/art checks cover the direct gated three-near boundary without fabrication.
+- **Hard stop:** comparison activation, `SC-03-20`, far evidence, PY-009, RP002-RAI-01, packet save/completion, RP-003, and later content remain protected. Next W1 reports only the first exact gap toward activating the local comparison stage.
+
 ## Coordinator one-ID partial release — 2026-07-17
 
 - **Disposition:** `IN DEMO — PARTIAL / ONE NEAR OBSERVATION COORDINATOR PASS`.

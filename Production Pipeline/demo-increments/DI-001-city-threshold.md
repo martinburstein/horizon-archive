@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 coordinator release — RP-002 three near observations
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / THREE NEAR OBSERVATIONS ACCEPTED.` Exactly one third near action now completes the near set across all supported orders/modalities, preserves both prior records, produces the matching Scene statement and literal System `3 of 3`, restores an allowlisted three-near/zero-far state without replay, and exposes only disabled `COMPARE SCALE` marked `DORMANT // ZERO CREDIT // NEXT STAGE NOT ACTIVE` plus a separate route return.
+- **Independent validation:** release script **PASS in 105.4s**; full **488/488**; production build; RP-002 validator; RP-003–RP-007 curriculum self-tests; patch integrity; complete title-to-credits E2E with every gate true, `credits:true`, and `runtimeErrors:false`; focused **85/85**; exact HTTP/hash/art checks.
+- **Live responsive review:** reloaded `1920 x 1080` and `390 x 844` title shells had zero horizontal/outer overflow, clean console, and all actions `>=44px`. The preserved user save remained before the valid RP-002 predecessor; coordinator did not inspect or alter storage and makes no fabricated direct gated crop/focus claim. Normal-route/component tests and W2–W4 evidence cover the bounded increment.
+- **Hard stop/next step:** comparison activation, `SC-03-20`, far evidence, learning, completion, RP-003, and later content remain absent. Next W1 reports only the first exact gap toward activating the local comparison stage.
+
 ## 2026-07-17 W4 — RP-002 third-near clean final reload
 
 - **Disposition:** `PASS — NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`. W3 authorized no visual change and W4 reproduced no exact defect. Runtime, art, CSS, tests, routes, saves, and curriculum remain unchanged from `2633d31`.
