@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 — RP002-P1-009 local-comparison activation finding
+
+- **Disposition:** `P1 OPEN — W2 BUG REPAIR NEXT`. The accepted exact five-record `sc03_far_complete` boundary is stable, but `OPEN LOCAL COMPARISON` is native/assistive disabled and handler-free; exact direct dispatch returns `local_comparison_dormant` without changing state.
+- **Expected/actual:** expected one explicit zero-credit activation to retain all five records and enter only blank protected `SC-03-30`. Actual remains at `SC-03-20` with both far peers Recorded and no comparison entry. No learning, mastery, save, completion, city/world/access/external action, successor, or later packet is exposed.
+- **Evidence:** the preserved campaign resumes at opening Glass Meadow, so live gated traversal was not fabricated and storage remained untouched. Focused checks pass **42/42**; root/JS/CSS are HTTP `200`; the served bundle includes `sc03_far_complete`, `OPEN LOCAL COMPARISON`, and `local_comparison_dormant` but no `SC-03-30`.
+- **W2:** integrate only the seven-modality, one-hit, five-record-stable transition to a blank allowlisted local-comparison checkpoint with reversible evidence/route returns and deterministic sanitation/resume. Stop before PY-009, RP002-RAI-01, bounded review/save/completion, or RP-003+.
+
 ## 2026-07-17 Coordinator — second-far and complete observation boundary accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`. The bounded RP002-P1-008 repair and RP002-AESTH-005 evidence-aware region naming are accepted on the live demo.

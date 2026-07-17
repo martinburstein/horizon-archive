@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W1 local-comparison activation finding — 2026-07-17
+
+- **Disposition:** `RP002-P1-009 OPEN — W2 BUG REPAIR NEXT`.
+- **Earliest exact gap:** accepted `sc03_far_complete` retains all five canonical observations, two Recorded/replay-only far peers, exact `5 of 5`, deterministic save/return/replay/resume, and a separate route return. `OPEN LOCAL COMPARISON` remains native/assistive disabled, handler-free, and visibly Inert; direct normal dispatch rejects its exact fresh intent with `local_comparison_dormant`, leaving the complete boundary byte-identical.
+- **Expected bounded increment:** one explicit zero-credit activation preserves all five records byte-stably and enters only the blank protected local-comparison boundary at `SC-03-30`. It emits no Scene acknowledgement, learning evidence, mastery, save eligibility, packet completion, city/world/access/external delta, successor, or RP-003+ state; evidence return and route return stay separate and reversible.
+- **Evidence boundary:** the preserved live save resumes at opening Glass Meadow rather than the gated five-record checkpoint, so W1 did not inspect or alter storage or claim direct gated traversal. Focused normal-route/protected-observation checks pass **42/42**; root, `index-CdMwuH6o.js`, and `index-R5wdIep0.css` return HTTP `200`; the shipped JS contains the complete checkpoint, control, and dormant rejection but no `SC-03-30`. Runtime, tests, art, curriculum, saves, and bundles are unchanged.
+- **W2 lock:** enable only exact `OPEN LOCAL COMPARISON` from sanitized five-record completion across all seven modalities, retain the five records, create one allowlisted blank `SC-03-30` first-incomplete checkpoint with deterministic return/resume/sanitation, preserve native/assistive/non-color state parity and every no-credit/no-authority invariant, rebuild/reload, and stop before PY-009, RP002-RAI-01, review/save/completion, or RP-003+.
+
 ## Working coordinator five-observation acceptance — 2026-07-17
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / FIVE OBSERVATIONS ACCEPTED`.
