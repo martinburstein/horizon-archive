@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A1 continuity — transfer submission ownership
+
+- **Boundary:** from the accepted blank fresh-practice group, the Pilot owns only `classification`/`owner` edits and one explicit local submit intent; the frozen expedition six-check authority owns evaluation.
+- **Meaning:** actual failures permit answer-free Teacher/local-check guidance and genuinely blank retry; current-attempt `6/6` permits independent transfer evidence only. Neither path is Builder/city communication, story truth, access, authority, world response, save, route reward, or successor progress.
+- **A2:** board only the bounded blank/edit/submit/feedback-or-complete hierarchy while preserving canonical copy, separate returns, focus/recovery, responsive/accessibility parity, invariant art/world, and the hard stop before explanation or every later state.
+
 ## 2026-07-17 Coordinator release — fresh-practice entry accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 FRESH PRACTICE ENTRY ACCEPTED`.

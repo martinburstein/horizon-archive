@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-013 A1 TRANSFER SUBMISSION OWNERSHIP PASS — A2 NEXT`. From Team 2's accepted blank System fresh-practice edge, only two Pilot annotations and one explicit expedition-local submit/evaluation boundary are locked. Actual failures remain answer-free/blank-retry; current-attempt `6/6` is independent course evidence only. Team 1 remains complete at RP-012 with no RP-013/successor; Team 2 remains on RP-002.
+
 Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 FRESH PRACTICE ENTRY — IN DEMO PARTIAL`. Independent full `587/587`, `15/15` readiness validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. Team 2's accepted edge is now canonical blank System fresh practice after explicit provisional-result dismissal; its next adjacent ownership is transfer submission/evaluation only. Team 1 remains complete at RP-012 with no RP-013 or successor.
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-007 W4 RESOLVED — COORDINATOR NEXT`. The normal result-dismissal/blank-fresh transition is rebuilt with truthful phase-aware evidence-return group names. Focused `58/58`, full `587/587`, build, HTTP/served markers, and clean final reload pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002 pending independent release; Team 1 remains complete at RP-012 with no successor.

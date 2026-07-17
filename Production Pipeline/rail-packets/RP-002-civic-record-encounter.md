@@ -1,5 +1,16 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance A1 continuity handoff — fresh-transfer submission ownership
+
+- **Disposition:** `PASS — TRANSFER SUBMISSION/EVALUATION OWNERSHIP LOCKED / A2 NEXT`.
+- **Accepted start:** canonical blank `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`, exact locked `unresolved_interval` / `deidentified_sensor_log` / `None` / `False`, and genuinely blank editable `classification` / `owner`.
+- **Pilot ownership:** the Pilot may alter only `classification` and `owner` and may issue one explicit semantic submission intent. That intent asks the expedition lesson to evaluate the current two annotations; it is not a city/Builder request, transmission, password, save, access attempt, permission claim, or story observation.
+- **Evaluation ownership:** only the existing local six-check authority evaluates the current transfer attempt. Failed checks alone may select existing answer-free Teacher/local-check guidance; private/submitted work clears before a genuinely blank retry. Only current-attempt `6/6` may establish independent `transfer_complete` course evidence. Primary evidence remains separate and cannot answer or satisfy transfer.
+- **Surface meaning:** failure is incomplete expedition practice, not Builder rejection. `6/6` is local course evidence, not native truth, translation certainty, identity, purpose, city acknowledgement, access, authority, world response, or successor progress. Submission/evaluation creates no Scene fact, item, route, save, city/world delta, or external action.
+- **Preserved boundary:** canonical owners/copy and frozen cases/answers/checks; separate write-free returns; seven modalities/one hit; deterministic sanitation/resume/focus; privacy clearing; Tour isolation; offline/no-authority/no-exam-guarantee; invariant first-person civic plate; responsive/accessibility contract; `campaignCommitEnabled=false`; unchanged continuation; `cityStateDelta=null`; no successor.
+- **Hard stop:** no Python explanation, `RP002-RAI-01`, review/save/completion, credits, `RP-003+`, world/city response, access, authority, identity disclosure, route reward, external action, or successor.
+- **Exact A2 handoff:** `Storyboarder Agent — continuity-maintenance mode: board only accepted blank fresh practice -> Pilot edits classification/owner -> one explicit local submit -> actual-failed-check answer-free feedback plus genuinely blank retry OR bounded current-attempt 6/6 transfer-evidence acknowledgement. Preserve exact neutral locked source, canonical ownership copy, primary/transfer separation, frozen six-check authority, separate write-free returns, seven modalities/one hit, deterministic focus/sanitation/resume, invariant civic plate, responsive/narrow/200% reflow, non-color/forced-color/reduced-motion parity, and >=44px actions. Make Pilot intent and expedition-local evaluation explicit; show no Builder/city request or response, password, transmission, save, access, authority, identity, story truth, world effect, explanation, RAI, review/completion, RP-003+, or successor. Change no runtime, art, curriculum, cases, answers, storage, route, or world state; hand A3 a NO-REOPEN preservation review.`
+
 ## 2026-07-17 Coordinator acceptance — PY-009 fresh-practice entry
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / FRESH PRACTICE ENTRY ACCEPTED`.
