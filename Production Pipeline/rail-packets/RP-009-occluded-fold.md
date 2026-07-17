@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A3 CURRICULUM PASS; GAMEPLAY MASTER A4 NEXT`
+- Status: `IN DESIGN — A4 PUZZLE PASS; ADVANCE CODER A5 NEXT`
 - Target chapter/location: Chapter 4 synthesis closure / occluded working landscape beyond Offset Reach
 - Target demo horizon: eighth future slice after the accepted RP-001 boundary; directly after RP-008
 - Route order: 9
@@ -12,7 +12,7 @@
 - Spoiler class: `surface-safe`
 - Working title: `Occluded Fold` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase III — Synthesis / slot 3 of 3
-- Target player time: `TBD by A4`; no time limit or timing credit is authorized by A1
+- Target player time: `36–49 minutes clean / 22–31 minutes mastered`; no time limit, speed score, or timing credit
 - Complete Advance cycles spent on this packet: 0; A1–A3 of orientation cycle 1 complete
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
@@ -183,8 +183,67 @@ Test whether the accumulated evidence supports one complete account across the f
 
 ## Puzzle Track — Gameplay Master
 
-- Status: `NOT STARTED — A4 COMPOSES ONLY AFTER A2/A3 SIGN-OFF`
-- A1 assigns no interaction graph, order count, scoring, hint, retry, recovery, duration, save adapter, or runtime state machine.
+- Status: `PASS — A4 ONE BOUNDED OF-00→OF-30 GRAPH LOCKED; A5 PROTECTED CONSTRUCTION NEXT`
+
+### Puzzle and learning contract
+
+The player is not asked to match edges or discover a route. The playable task is to finish an expedition-side **bounded edge ledger** that can hold four different evidence classes at once while refusing to invent the Fold's interior. Six Scene observations, retained verified RP-007 and RP-008 summaries, strict `PY-017`, strict independent `RP009-PROMPT-BOUNDARY-01`, bounded review, and save are separate conjuncts. No conjunct awards or predicts another.
+
+`PY-017` remains the exact frozen environment/configuration exercise: one `import os`, exactly one allowlisted nonsecret `os.environ.get`, required value `bounded`, unchanged supplied records and process environment, exact ledger keys, four preserved evidence classes, `identity/topology/continuity/transformation/cause/purpose=None`, and no secret, file, network, output, endpoint, credential, subprocess, live service, or external action. It requires exact `8/8` primary, answer-free remediation for every failed check, the frozen delayed closed-note environment/configuration/secret-boundary/record-derivation/unknown-limit trace, and a genuinely blank `8/8` transfer.
+
+Independent `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1` remains the exact frozen neutral case set. It requires `8/8` primary across `prompt_owner` and `deciding_signal`, answer-free remediation selected only from actually scored misconception tags, delayed closed-note `8/8` retrieval, genuinely blank `8/8` transfer, and two separately finalized explanations: system prompts carry persistent role/rules/boundaries/output contracts while user prompts carry the current task and supplied input; prompt quality neither proves output truth nor authorizes live action. No SC-10 or Builder-world referent appears in a scored case or hint.
+
+### Integrated four-phase graph
+
+| Phase | Exact entry | Required player work | Success exit | Failure and recovery |
+|---|---|---|---|---|
+| `OF-00 ARRIVE + ORIENT` | Exact verified RP-008 completion; retained RP-007 braided summary and RP-008 offset summary verified; temporary source/environment/case work clear; `continuation` unchanged; city/external deltas `null`; successor `null` | Hear the Scene-owned arrival, inspect the System-owned replica/no-live-operation limit, then enter the edge survey or take a reversible return | Open `OF-10` with zero observation, learning, save, route, or world credit | Missing, forged, stale, partial, contaminated, private, Tour-derived, or successor-bearing predecessor evidence fails closed to the exact RP-008 boundary. Return consumes and changes nothing |
+| `OF-10 SURVEY EXPOSED EDGES` | Registered invariant SC-10 panorama/detail; both prior summaries retained; all new observation and learning evidence empty | Deliberately record six equal peers in any order: `three_near_margins`, `bounded_signature_correspondences`, `unmatched_exposed_record`, `ambiguous_candidate_record`, `unavailable_outer_margin`, and `layered_edge_stewardship` | All six distinct observations open the sanitized replica work image at `OF-20`; all `6! = 720` orders converge and revisits are idempotent | Pairing, ranking, hidden-path, identity, continuity, transformation, branch/merge, failure, or access claims do not advance. Recovery names only the first unrecorded physical class and focuses its action without selecting a correspondence, candidate, curriculum answer, or remediation lane |
+| `OF-20 RECONCILE BOUNDARIES + SAVE` | Six observations finalized; both prior summaries independently verified; invariant SC-10; replica provenance and no-live-operation limit visible | Complete strict frozen `PY-017`; complete strict independent frozen prompt-boundary primary/remediation/retrieval/transfer evidence plus both explanations; inspect one bounded conjunctive review; explicitly request one atomic save | Only the full independent conjunction may commit the allowlisted RP-009 evidence and expedition-owned edge ledger | Every scored miss is local, answer-free, unlimited, and restored blank on retry. Remediation follows only a failed Python check or an actually scored AI misconception tag. Review identifies a missing conjunct but gives no answer. Resume focuses the deterministic first incomplete boundary |
+| `OF-30 VERIFY + RETURN` | Atomic commit succeeded; learner source, environment choices/values, edge-record working copies, raw cases, submitted answers, feedback, reasoning, and all other temporary/private work clear | Verify replay-free restore of both prior summaries and the bounded edge ledger; optionally use the separate LOOK-only outward-continuation observation; choose a reversible return | Restore replays no observation, execution, learning, review, save, route, animation, or world event. The LOOK-only continuation records no destination and opens no route. Return remains reversible | Missing, contaminated, Tour-derived, forged, partial, or successor-bearing records fail closed without partial restore. Recovery returns to the earliest incomplete pre-save boundary with safe returns intact |
+
+Phase replacement, order, navigation, visibility, focus, scene layout, near/far position, repeated signature, unmatched or ambiguous silhouette, unavailable margin, material, motion, sound, light, presentation, timing, confidence, acknowledgement, execution/save/restore display, accessibility behavior, Tour traversal, and story progress award zero observation, Python, AI-901, explanation, review, remediation, save, or successor credit.
+
+### Required, optional, misleading, and unavailable actions
+
+- **Required:** enter only from verified RP-008; retain both verified predecessor summaries; record all six equal-peer observations; complete exact strict `PY-017`; complete exact strict independent prompt-boundary evidence and both explanations; inspect the bounded review; request atomic save; verify replay-free restore; preserve reversible return.
+- **Optional:** inspect sanitized-replica provenance and scope limits; revisit any observation; request progressive hints; state confidence without routing effect; clear draft work; take an early safe return; after save, LOOK at the destinationless outward continuation. The LOOK action is idempotent, unsaved, zero-credit, and never becomes travel.
+- **Misleading but recoverable:** arrange near and far records into pairs or columns; rank an ambiguous candidate; treat unmatched as failure or transformation; treat unavailable as a locked reward; infer identity, topology, continuity, branch/merge, transformation, unity, cause, or purpose; hardcode the mode or ledger; read, print, persist, or mutate environment/secrets; collapse the four evidence classes; put current task/input in persistent rules; put persistent safety/output contracts only in the current request; treat grounding or prompt quality as truth; treat a valid answer as authority; use SC-10, confidence, save display, focus, timing, or Tour to choose an answer or remediation lane.
+- **Unavailable:** expose or enter the Fold interior; access the unavailable margin; identify, trace, join, split, merge, transform, route, open, operate, or alter any live continuity; read a secret, credential, endpoint, file, network, private input, live Azure/Foundry/model/agent/Terminal/world service, response, or external source; mutate process environment; authenticate, grant permission, execute an external action, or promise exam success; partially save; use Tour for credit/save; travel through the LOOK-only continuation; define or open RP-010.
+
+### Hints, mistakes, retry, and deterministic focus
+
+- Observation hints expose only the stable name of the first unrecorded physical evidence class. They never identify a pair, rank a candidate, imply an internal path, or reveal a curriculum answer.
+- Python hints progress from the actually failed check to a neutral contrast: nonsecret configuration versus secret; one allowlisted `os.environ.get`; unchanged environment/records; four distinct classes; six unsupported `None` limits; or removal of output/file/network/secret/external operations. They never provide solution source, the finished ledger, or an environment value beyond the supplied contract.
+- AI hints are selected only from an actually scored misconception tag and progress from persistent-versus-current scope marking to role/rule/boundary/output-contract versus current-task/input contrast, one neutral guided case, and a blank retry. They never expose a case answer or use the scene as a cue.
+- Unsafe, duplicate, stale, forged, combined, hardcoded, mutated, scene-derived, success-display-derived, confidence-derived, timing/focus/navigation-derived, Tour-derived, private, contaminated, or partial evidence rejects locally. Retry is unlimited, answer-free, blank, and causes no world, route, save, or external effect.
+- Deterministic boundary order is `observations -> pythonPrimary -> pythonTrace -> pythonTransfer -> promptPrimary -> promptRetrieval -> promptTransfer -> systemUserBoundaryExplanation -> truthAuthorityBoundaryExplanation -> review -> saved`. Field errors focus the first invalid control; successful replacement focuses the next required owner/message/content/action group; verified restore focuses saved controls. Focus history itself never persists or earns credit.
+
+### Privacy, atomic save, verified restore, and reversible return
+
+- On retry, phase replacement, return, or save, clear learner source, environment choices/snapshots/values, edge-record and ledger working copies, raw cases, answers, free reasoning, feedback, private notes, identity content, credentials, secrets, endpoints, payloads, responses, source content, exam items, external-action requests, and pointer/focus/token history.
+- Before final save, resume may restore only allowlisted finalized learning dimension evidence and both verified predecessor summaries. Physical observations and temporary work are re-observed/recreated rather than inferred or replayed. Resume announces owner/status/limits in the live region and focuses the deterministic first incomplete boundary.
+- Save is explicit, conjunctive, atomic, all-or-none, and allowlisted. It retains packet/mapping/checkpoint IDs, unchanged `continuation`, `cityStateDelta=null`, `externalStateDelta=null`, `successor=null`, both verified predecessor summaries, the six finalized observation IDs inside the expedition ledger, the exact four evidence classes, all six unsupported `None` limits, and only the finalized evidence fields authorized by `contract.json`. A failed write preserves the prior save byte-for-byte.
+- Verified restore accepts only the exact allowlist, proves temporary/private work absent, restores both bounded predecessor summaries and the expedition-owned ledger, replays nothing, and keeps SC-10 plus every environmental clock invariant. Early and final returns preserve `continuation`, null deltas, and no successor. The separate LOOK-only outward continuation always has `destination=null`, `routeOpened=false`, and zero persisted evidence.
+
+### Pacing, delight, cumulative-load audit, and accessibility
+
+- Clean first play: `36–49 minutes` (`7–10` survey, `9–12` Python, `14–19` prompt boundary, `6–8` review/save/restore). Mastered replay: `22–31 minutes`. Protected reference-fixture target: `<5 minutes` through real frozen evaluators with no skipped primary, remediation boundary, retrieval/trace, transfer, explanation, review, or restore. No time limit, speed score, timing credit, forced motion, or forced audio.
+- Phase III closes without another matching minigame, map, inventory object, route unlock, or observation-order puzzle. The six observations use the established peer-survey grammar; the new play is the discipline of leaving correspondence, unmatched, ambiguity, and unavailability visibly separate while one small configuration boundary and one neutral prompt-ownership check complete the ledger.
+- Delight comes from the expedition ledger remaining useful precisely because it refuses a complete map: four evidence classes settle into one readable review while six unsupported fields remain explicitly unassigned. The card is suit-owned, folds away before restore, and causes no world response.
+- Representative `1920 x 1080` keeps the dominant world and the complete current owner/message/content/action group inside the available `100dvh` shell without outer overflow or an off-screen required action. Narrow and `200%` text zoom reflow into one natural contained column. Required controls are at least `44 x 44 CSS px`.
+- Exactly one active owner group, semantic headings, persistent labels, field-associated errors, live status, forced-colors support, reduced-motion still/direct replacement, and equivalent pointer/touch/Enter/Space/switch/speech/screen-reader actions are mandatory. Meaning and credit never rely on color, left/right position, motion, sound, brightness, proximity, sequence, or binary layout. The unavailable margin is an observation, never a disabled task or implied reward.
+- Demo Tour is a separate zero-credit projection with no campaign dispatcher, observation, source, environment, answer, score, misconception, remediation, mastery, review, save, world, successor, or resume ownership.
+
+### Player-observable A4 acceptance
+
+1. All 720 observation orders converge; revisits are idempotent; both predecessor summaries remain valid; no UI pairs or ranks records; unmatched, ambiguous, and unavailable remain ordinary separate evidence; SC-10 never reacts.
+2. Python requires exact `8/8 primary -> answer-free repair -> delayed closed-note trace -> blank 8/8 transfer`; independent AI requires exact `8/8 primary -> scored-tag-only answer-free repair -> 8/8 retrieval -> blank 8/8 transfer -> two separate explanations`. No scene, presentation, accessibility, confidence, timing, save, return, or Tour signal manufactures credit or remediation.
+3. Exactly one allowlisted nonsecret environment read occurs; environment and records remain unchanged; the ledger retains four classes and `identity/topology/continuity/transformation/cause/purpose=None`; secret/file/network/output/live/external operations remain impossible.
+4. Every miss is local, answer-free, unlimited, blank on retry, privacy-cleared, and focused at the deterministic first incomplete boundary. No mistake can trap the player or alter the world.
+5. Only the full independent conjunction saves atomically. Failed writes are byte-stable; verified restore retains both predecessor summaries, six observation facts, the bounded edge ledger, and finalized allowlisted evidence, clears temporary/private work, and replays nothing.
+6. Early/final returns remain reversible; `continuation` stays unchanged; city/external deltas remain `null`; SC-10 and its clocks remain invariant; offline/no-authority/no-exam-guarantee remains explicit.
+7. The outward-continuation action is visibly LOOK-only, records no destination, opens no route, earns no evidence, and never names, defines, or enters RP-010.
 
 ## Rough Code Track — Coder
 
@@ -204,7 +263,7 @@ Test whether the accumulated evidence supports one complete account across the f
 ## Dependencies
 
 - Required existing systems: exact RP-008 verified completion boundary; retained RP-007/RP-008 summaries; reversible route ownership; privacy sanitation and temporary-work clearing; protected/accepted/Tour separation; offline/no-authority behavior; invariant-world and atomic-save patterns.
-- New systems: none assigned by A1.
+- New systems: one pure protected `OF-00→OF-30` journey/harness in A5 that composes the frozen RP-009 evaluators and established predecessor/save/recovery authorities without changing accepted runtime routes or persistence.
 - Art dependencies: A2 defines one registered maximum-quality cinematic photorealistic first-person plan after reading the location visual spine.
 - Curriculum dependencies: A3 must select the nearest nonduplicate Python and current official AI-901 obligations under project source-priority rules; no mapping is implied by this story seed.
 - Decisions awaiting Martin: none for this surface-safe seed.
@@ -216,6 +275,8 @@ Test whether the accumulated evidence supports one complete account across the f
 - Builder executable literacy may appear as one bounded unfinished real-Python reconciliation over sanitized replicas; it is ordinary occupational work, not authentication, live tracing, routing, opening, transformation proof, identity proof, or control.
 - A valid run renders only an expedition-side edge ledger and causes zero live read, trace, join, routing, opening, external action, or physical landscape delta.
 - Completion saves only expedition-owned retained-summary/correspondence/unmatched/ambiguity/unavailable/interpretation-limit meaning; identity, internal topology, continuity, transformation, unity, coordination, cause, native category, purpose, authority, Machine relation, disappearance, and every successor remain unresolved.
+- The locked interaction graph is `OF-00 ARRIVE + ORIENT -> OF-10 SURVEY EXPOSED EDGES -> OF-20 RECONCILE BOUNDARIES + SAVE -> OF-30 VERIFY + RETURN`; six observations work in all 720 orders; both learning chains, explanations, review, and save remain independent.
+- The only outward-continuation affordance is LOOK-only with `destination=null`, `routeOpened=false`, and zero credit or persistence.
 
 ## Flexible implementation choices
 
@@ -223,6 +284,7 @@ Test whether the accumulated evidence supports one complete account across the f
 - Whether entry, inspection, completed, restore, and return states reuse one registered invariant plate or require registered details.
 - Exact expedition-facing labels for physical signatures and margins, provided they use observable evidence and never claim identity, persistence, direction, transformation, topology, cause, purpose, or native meaning.
 - Exact curriculum and puzzle shape remain wholly owned by A3/A4 after A2 closes the presentation contract.
+- A5 may choose internal pure-function and fixture names, immutable data representation, and exact protected test decomposition only where the locked graph, order count, evidence allowlist, focus order, save semantics, privacy clearing, and player-observable acceptance remain exact.
 
 ## Player-observable acceptance criteria
 
@@ -231,28 +293,29 @@ Test whether the accumulated evidence supports one complete account across the f
 3. A local save restores the RP-007/RP-008 summaries and the bounded edge ledger, clears temporary work, and preserves reversible return without replaying entry or success.
 4. No copy, art, animation, interaction, or state identifies internal topology, identity, persistence, transformation, unity, coordination, cause, native category, purpose, authority, author, Machine relation, successor destination, or central mystery answer.
 5. The dominant region plus current required controls/status fits the representative full 16:9 laptop viewport; narrow/text-zoom reflow remains accessible and horizontally contained.
+6. All 720 observation orders, both strict independent learning chains, both prompt-boundary explanations, bounded review, atomic save, replay-free restore, reversible returns, and the LOOK-only destinationless continuation behave exactly as the A4 graph specifies without cross-credit.
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`; Curriculum `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`.
-- Packet gates missing: Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — A3 closed Curriculum with two independent strict evidence chains, canonical forms, answer-free remediation, delayed retrieval/trace, genuinely blank transfer, privacy/authority/accessibility gates, and fail-closed validation`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`; Curriculum `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`; Puzzle `PASS — OF-00→OF-30 integrated graph locked`.
+- Packet gates missing: Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — A4 closed Puzzle with one four-phase graph, all 720 peer-observation orders, frozen independent learning chains, bounded review, atomic save/verified restore, deterministic recovery/focus, privacy clearing, reversible returns, invariant world, and one LOOK-only destinationless continuation`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008 bounded summaries, no-live-read/join/route/open rule, temporary clearing, ordinary Builder executable literacy, reversible returns, destinationless continuation, and scope discipline become one Phase III closure premise rather than another isolated relation micro-seam.
 - Optional work trimmed or deferred: internal contents, full topology, identity, transformation, native category, live tracing/routing/opening, secondary programs, new identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- Breadth verdict: `CONTINUE — GAMEPLAY MASTER A4`.
+- Breadth verdict: `CONTINUE — ADVANCE CODER A5`.
 - Next contiguous packet seed readiness: `NO — RP-010 REMAINS RESERVED UNTIL RP-009 REACHES GATE REVIEW OR READY FOR WORKING`.
-- Exact next action in one sentence: Gameplay Master A4 composes one bounded graph around the frozen independent PY-017 and AI901-D2-O1 chains plus six peer observations without adding another curriculum seam or successor content.
+- Exact next action in one sentence: Advance Coder A5 builds one pure protected OF-00→OF-30 journey/harness through the frozen RP-009 authorities without runtime routing, production art, live Demo exposure, or RP-010 content.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
 - Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED — 2026-07-17`
-- Gameplay Master sign-off: `PENDING`
+- Gameplay Master sign-off: `PASS — OF-00→OF-30 GRAPH LOCKED — 2026-07-17`
 - Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH GAMEPLAY MASTER A4`
-- Required revision: Puzzle, protected construction, and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
+- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH ADVANCE CODER A5`
+- Required revision: Protected construction and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
 
-### Exact Gameplay Master A4 handoff
+### Exact Coder A5 handoff
 
-`Gameplay Master Agent — A4: work only on RP-009 Occluded Fold. Read the canonical Gameplay Master profile, the complete locked Lore/Storyboard/Curriculum tracks, SC-10, curriculum/readiness/RP-009/contract.json, and the current gameplay spine. Compose exactly one bounded four-phase graph from verified RP-008 entry through six equal-peer observations in any order, strict independent PY-017 and RP009-PROMPT-BOUNDARY-01 chains, bounded review, atomic save/verified restore, reversible returns, and one LOOK-only destinationless outward continuation. Preserve the canonical Python environment names, fixtures, eight checks, secret prohibition, exact four evidence classes, and None limits. Preserve all AI cases, answers, dimensions, thresholds, separately scored explanations, and remediation selected only from actually scored misconception tags. Treat every SC-10 scene/presentation/accessibility/save/return/Tour signal as zero learning evidence, answer, weakness, misconception, or remediation signal. Keep both prior summaries, sanitized-replica provenance, temporary/private clearing, offline/no-authority/no-exam-guarantee, invariant world, and all identity/topology/continuity/transformation/unity/cause/purpose/successor limits exact. Do not change curriculum artifacts, author runtime code or art, pair near/far records, expose the interior, grant access, make a live call, or seed RP-010. Return one exact A5 protected-journey handoff or one genuine HOLD.`
+`Coder Agent — A5 advance-construction mode: work only on RP-009 Occluded Fold. Read the canonical Coder profile, PRODUCTION_READINESS_SPINE.md, this packet's locked OF-00→OF-30 graph, SC-10, the exact verified RP-008 protected end state, and the entire frozen curriculum/readiness/RP-009 contract, validator, canonical forms, answers, and fixtures. Build the smallest pure Node-only, non-routable protected journey/harness beginning only at exact verified RP-008 completion while retaining the verified RP-007 and RP-008 summaries. Prove all 720 orders of three_near_margins, bounded_signature_correspondences, unmatched_exposed_record, ambiguous_candidate_record, unavailable_outer_margin, and layered_edge_stewardship converge and revisits are idempotent without pairing or ranking records. Use the real frozen PY-017 evaluator for exact 8/8 primary, failed-check-only answer-free remediation, delayed closed-note environment/configuration/secret-boundary/record-derivation/unknown-limit trace, and genuinely blank 8/8 transfer. Use the real frozen independent RP009-PROMPT-BOUNDARY-01 evaluator for exact 8/8 primary, remediation selected only from actually scored misconception tags, delayed 8/8 retrieval, genuinely blank 8/8 transfer, and both separately scored system/user and truth/authority explanations. Prove scene, near/far position, signature appearance, unmatched/ambiguous silhouette, unavailable margin, confidence, timing, focus, navigation, presentation, accessibility behavior, save/restore display, and Tour can never award evidence, select remediation, or alter answers. Preserve exactly one allowlisted nonsecret environment get, canonical environment names/values, canonical primary/transfer records, unchanged environment/records, exact ledger keys and four evidence classes, identity/topology/continuity/transformation/cause/purpose=None, sanitized replicas, no secret/file/network/output/live/external operation, and no exam guarantee. Implement the locked first-incomplete focus order, local unlimited blank retry, strict transient/private clearing, exact allowlisted conjunctive atomic save with byte-stable rejection, replay-free verified restore, safe early/final returns, unchanged continuation, null city/external deltas, invariant SC-10/clocks, and a separate LOOK-only outward continuation with destination=null, routeOpened=false, and zero persistence/credit. Fail closed on missing, forged, stale, duplicate, combined, hardcoded, mutated, collapsed-class, filled-limit, scene-derived, success-derived, private, contaminated, partial, Tour-derived, secret-reading, environment-mutating, file/network/output/live-service, external-action, successor-bearing, or unauthorized evidence. Do not alter frozen cases, answers, dimensions, thresholds, tags, validators, reference forms, story, art, accepted App/main/routes/browser persistence/bundles/live Demo, prior packet behavior, or RP-010. Keep the protected model unimported and non-routable; update owned code/tests and pipeline evidence only. Validate focused RP-009, the complete protected predecessor chain through RP-008, RP-009 self-test and every canonical primary/retrieval/transfer form, all 720 orders/revisits, save byte stability, restore/recovery/focus, Tour isolation, leakage/purity/cleanup/patch integrity, full suite, and production build; then hand the evidence bundle to coordinator Gate Review.`

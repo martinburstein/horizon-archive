@@ -25,7 +25,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
-| 9 | `RP-009` | Occluded Fold | `IN DESIGN — A3 CURRICULUM PASS` | Gameplay Master Agent (`A4`) | Story/Scene/Curriculum `PASS`; Puzzle/Code pending | Exact RP-008 verified end state; retained RP-007/RP-008 summaries; SC-10 invariant contract; strict independent PY-017 and AI901-D2-O1 chains; no live read/trace/join/route/open; invariant world; reversible returns | Compose one bounded graph without changing the SOLIDIFIED mapping; scenery/presentation remain zero learning evidence and RP-010 stays reserved. |
+| 9 | `RP-009` | Occluded Fold | `IN DESIGN — A4 PUZZLE PASS` | Coder Agent (`A5 advance`) | Story/Scene/Curriculum/Puzzle `PASS`; protected Code pending | Exact RP-008 verified end state -> OF-00→OF-30 -> both prior summaries + six observations in all 720 orders + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world and no RP-010 | Build one pure protected journey through the frozen evaluators; do not route it, alter accepted runtime, create art, expose live services, or seed RP-010. |
 
 ## Team positions
 
@@ -33,7 +33,11 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `7 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008`
 - In-design packets: `1 — RP-009`
-- Team 1 railhead: `RP-009 — A3 CURRICULUM PASS / GAMEPLAY MASTER A4 NEXT`
+- Team 1 railhead: `RP-009 — A4 PUZZLE PASS / ADVANCE CODER A5 NEXT`
+
+## 2026-07-17 RP-009 Gameplay Master result
+
+`RP-009` is now `IN DESIGN — A4 PUZZLE PASS`. One bounded `OF-00→OF-30` graph begins only from exact verified RP-008 completion, retains both predecessor summaries, records six equal-peer observations in all 720 orders without pairing or ranking, then composes strict independent `PY-017` and `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1` chains, both explanations, bounded review, atomic save, replay-free restore, reversible returns, and one zero-credit LOOK-only destinationless continuation. Remediation follows only an actually failed Python check or actually scored AI misconception tag; misses remain answer-free and blank on unlimited retry. Resume/focus is deterministic, private/transient work clears, failed saves are byte-stable, SC-10 and Tour remain zero evidence, and the world, continuation, city/external deltas, authority boundary, and RP-010 reservation remain unchanged. Clean play is `36–49 minutes`; mastered replay is `22–31 minutes`; there is no time or speed credit. Advance Coder A5 owns one pure protected journey/harness only.
 
 ## 2026-07-17 RP-009 Curriculum Checker result
 
