@@ -23,7 +23,8 @@ Andromeda survey corridor
 │       ├── SC-05 Three-Current Reach [A2 panoramic exchange-landscape brief / no final art]
 │       ├── SC-06 Manyfold Return [A2 repeated-receiver field brief / no final art]
 │       ├── SC-07 Interval Works [A2 exposed-material sequence brief / no final art]
-│       └── SC-08 Braided Verge [A2 intersecting-works synthesis brief / no final art]
+│       ├── SC-08 Braided Verge [A2 intersecting-works synthesis brief / no final art]
+│       └── SC-09 Offset Reach [A2 conditional-contact synthesis brief / no final art]
 └── Future survey worlds [locked]
     ├── Ecological continuity world
     ├── Memorial-scale world
@@ -48,7 +49,7 @@ This line records player-facing progression only. It does not assert that the lo
 | 6 | Intimate interior | Balances monumental vistas with inspectable, human-scale problem spaces. |
 | 7 | Future world keyframe | Expands planetary variety only after its gameplay purpose and surface-safe constraints are approved. |
 
-Within World D, `SC-02 -> SC-03 -> SC-04 -> SC-05 -> SC-06 -> SC-07 -> SC-08` is a contiguous survey path. The threshold bridge enters the civic district, the marked adjacent direction reaches the calibration margin, the expedition bearing reaches the broad exchange landscape, its observed physical return continues into the receiver field, the serviced continuation enters the exposed Interval Works, and that infrastructure reaches the shared Braided Verge. The route adds no replay, activation, joining, unity claim, causal claim, successor destination, or physical world response.
+Within World D, `SC-02 -> SC-03 -> SC-04 -> SC-05 -> SC-06 -> SC-07 -> SC-08 -> SC-09` is a contiguous survey path. The threshold bridge enters the civic district, the marked adjacent direction reaches the calibration margin, the expedition bearing reaches the broad exchange landscape, its observed physical return continues into the receiver field, the serviced continuation enters the exposed Interval Works, that infrastructure reaches the shared Braided Verge, and the same material continuities broaden into Offset Reach. The route adds no replay, correction, joining, separation/equivalence verdict, unity claim, causal claim, successor destination, or physical world response.
 
 ## Expansion rule
 
