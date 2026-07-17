@@ -1,0 +1,44 @@
+{
+  "packet_id": "RP-012",
+  "status": "SOLIDIFIED",
+  "verified_on": "2026-07-17",
+  "official_blueprint": {
+    "effective_date": "2026-04-15",
+    "guide_last_updated": "2026-07-13",
+    "domains": {
+      "AI901-D1": {"weight": "40-45%", "objective_count": 8},
+      "AI901-D2": {"weight": "55-60%", "objective_count": 7}
+    },
+    "total_objectives": 15,
+    "python_is_candidate_prerequisite": true
+  },
+  "python_mapping": {
+    "id": "PY-R12-CUMULATIVE-TRANSFER-01",
+    "kind": "cumulative_fresh_transfer_not_new_primary",
+    "requires": ["all prior SOLIDIFIED Python homes", "PY-020 accepted fresh reinforcement"],
+    "evidence": ["fresh closed-note offline Python form", "all required checks pass", "failed-check-only answer-free remediation", "new genuinely blank retry"],
+    "forbidden_credit": ["navigation", "scenery", "lore", "confidence", "timing", "save display", "Tour", "prior answer carryover"]
+  },
+  "ai901_mapping": {
+    "id": "RP012-CURRENT-COVERAGE-01",
+    "kind": "all_current_objective_readiness_gate",
+    "objective_ids": ["AI901-D1-O1", "AI901-D1-O2", "AI901-D1-O3", "AI901-D1-O4", "AI901-D1-O5", "AI901-D1-O6", "AI901-D1-O7", "AI901-D1-O8", "AI901-D2-O1", "AI901-D2-O2", "AI901-D2-O3", "AI901-D2-O4", "AI901-D2-O5", "AI901-D2-O6", "AI901-D2-O7"],
+    "requires_per_objective": ["primary", "retrieval", "remediation_if_missed", "fresh_transfer"],
+    "cumulative_authorities": ["CUM-01", "L-06-03 capstone readiness"],
+    "fresh_forms": ["primary", "transfer"],
+    "mastery": "all objective coverage complete and both independent fresh forms perfect after every demonstrated gap is remediated",
+    "not_yet_ready": "any unmet prerequisite, open remediation route, nonperfect fresh form, missing objective coverage, stale objective version, or invalid evidence"
+  },
+  "privacy_allowlist": ["objective_version", "objective_ids", "evidence_reference_ids", "per_gate_pass_boolean", "remediation_route_ids", "local_readiness_state", "audit_checksum"],
+  "privacy_forbidden": ["answers", "exam items", "private notes", "credentials", "endpoints", "payloads", "responses", "identity content", "live source content", "transient work"],
+  "boundaries": {
+    "offline_only": true,
+    "no_live_azure_or_foundry": true,
+    "no_exam_guarantee": true,
+    "no_authority_or_access": true,
+    "scene_and_presentation_zero_credit": true,
+    "ready_and_not_yet_ready_recoverable": true,
+    "no_successor": true
+  },
+  "reopen_conditions": ["official objectives materially change", "validator or playtest proves mismatch or bypass", "Martin changes the learning goal"]
+}

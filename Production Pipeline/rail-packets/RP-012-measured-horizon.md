@@ -74,7 +74,12 @@ Prove through fresh independent work whether the expedition can honestly mark th
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `MISSING — A3 AFTER A2`
+- Status: `PASS — PY-R12-CUMULATIVE-TRANSFER-01 + RP012-CURRENT-COVERAGE-01 SOLIDIFIED`
+- Current authority verified 2026-07-17: AI-901 English blueprint effective 2026-04-15, 40–45% concepts and 55–60% Foundry implementation, 15 mapped objectives, Python prerequisite retained. Official Microsoft study guide/exam page and required Foundry/Agent/SDK/Content Understanding sources only.
+- Python lane is cumulative fresh transfer, not a new primary home. It requires all prior SOLIDIFIED Python prerequisites, a fresh closed-note offline form, failed-check-only answer-free remediation, and a genuinely blank retry.
+- AI-901 lane requires all 15 current objectives to have primary, retrieval, remediation when missed, and fresh-transfer evidence; CUM-01 and L-06-03 remain the cumulative authorities. Any missing/stale/nonperfect/invalid evidence yields recoverable not-yet-ready.
+- SC-13 and every presentation, Tour, confidence, timing, save, lore, and world state remain zero credit. Persist only the contract allowlist; clear answers/private/transient/live/credential content.
+- Exact A4 handoff: build one bounded graph that checks prerequisite completeness, runs independent fresh Python and all-objective AI-901 forms, routes only demonstrated misses to answer-free remediation, requires a new blank retry, saves one checksummed local decision, supports dignified ready/not-yet-ready recovery, and never cross-credits presentation, story, time, confidence, save, or Tour. Do not change frozen objective IDs, weights, answers, thresholds, prior SOLIDIFIED homes, privacy allowlist, offline/no-authority/no-exam-guarantee, invariant world, or no-successor boundary.
 
 ## Puzzle Track — Gameplay Master
 
@@ -120,8 +125,8 @@ Prove through fresh independent work whether the expedition can honestly mark th
 ## Advance Handoff Gate
 
 - Lore Builder: `PASS — 2026-07-17`
-- Storyboarder: `PASS — 2026-07-17`; Curriculum/Gameplay/Coder: `PENDING`
-- Readiness: `IN DESIGN — A2 SCENE PASS`
+- Storyboarder/Curriculum: `PASS — 2026-07-17`; Gameplay/Coder: `PENDING`
+- Readiness: `IN DESIGN — A3 CURRICULUM PASS`
 
 ## Promotion record
 

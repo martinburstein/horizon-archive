@@ -1,5 +1,14 @@
 # Build Log
 
+## Log entry: 2026-07-17T13:40:00-04:00
+
+Stage: RP-012 Measured Horizon cumulative readiness verification (A3)
+Work completed: SOLIDIFIED `PY-R12-CUMULATIVE-TRANSFER-01` as cumulative fresh transfer rather than a duplicate primary and `RP012-CURRENT-COVERAGE-01` as the strict all-15-current-objective gate over existing CUM-01/L-06-03 authorities. Locked both recoverable outcomes, demonstrated-miss-only answer-free remediation, genuinely blank retry, privacy allowlist, offline/no-authority/no-exam-guarantee, zero-credit SC-13/Tour/presentation, objective-version check, and no successor. Earlier SOLIDIFIED mappings remain frozen.
+Sources: the named priority skill was unavailable; its required policy was followed directly. Official AI-901 study guide/exam page, Foundry hub, SDK/endpoints overview, Agent Service overview, and Content Understanding overview were checked on 2026-07-17; no third-party source was used.
+Validation: RP-012 self-test; CUM-01 self-test; L-06-03 self-test; all curriculum JSON; packet/spine/queue/map/scoreboard consistency; privacy/no-authority/no-exam/no-successor probes.
+Next: Gameplay Master A4 builds exactly one bounded readiness and remediation graph without changing the frozen contract.
+
+
 ## Log entry: 2026-07-16T23:58:00-04:00
 
 Stage: RP-006 Interval Works contiguous curriculum verification (A3)
