@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A1 STORY PASS`
+- Status: `GATE REVIEW — A5 PROTECTED JOURNEY PASS`
 - Target: Phase IV expedition resolution, directly after `RP-011 — Unborrowed Reach`
 - Route order: 12 of 12; no successor packet
 - Spoiler class: `surface-safe`
@@ -96,7 +96,10 @@ Prove through fresh independent work whether the expedition can honestly mark th
 
 ## Advance Construction Track — Coder
 
-- Status: `MISSING — A5 AFTER A4`
+- Status: `PASS — PURE MH-00→MH-40 PROTECTED JOURNEY`
+- One unimported Node-only `MeasuredHorizonProtectedJourney` now enforces exact RP-011 entry, all-gate eligibility, independent blank offline transfer, actual-miss-only remediation, new blank retry, both neutral decisions, atomic allowlisted checksummed save, byte-stable failure, replay-free restore, deterministic focus, cleared private/transient work, and `successor=null`.
+- It imports the frozen RP-012 contract and RP-011 journey version, but is absent from App/main/routes/browser storage and the accepted Demo bundle.
+- Focused validation: `5/5` protected journey tests pass. Normal integration, live art, and Working acceptance remain separate future gates.
 
 ## Anticipated accessibility risks
 
@@ -134,9 +137,9 @@ Prove through fresh independent work whether the expedition can honestly mark th
 ## Advance Handoff Gate
 
 - Lore Builder: `PASS — 2026-07-17`
-- Storyboarder/Curriculum/Gameplay: `PASS — 2026-07-17`; Coder: `PENDING`
-- Readiness: `IN DESIGN — A4 PUZZLE PASS`
+- Storyboarder/Curriculum/Gameplay/Coder: `PASS — 2026-07-17`
+- Readiness: `GATE REVIEW — A5 PROTECTED JOURNEY PASS`
 
 ## Promotion record
 
-- Not eligible; A2–A5 and coordinator Gate Review remain.
+- Eligible for coordinator Gate Review; no successor packet may be seeded.
