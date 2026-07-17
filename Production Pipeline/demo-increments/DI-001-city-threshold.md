@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A1 continuity handoff — result dismissal to fresh blank transfer
+
+- **Surface contract:** the accepted read-only Suit result remains provisional expedition output. Its explicit dismissal clears only the displayed local rendering; it does not accept, reject, revise, save, transmit, erase, or canonize Builder evidence or the primary attempt.
+- **Next owner:** the only destination is the canonical System-owned `fresh_practice` entry: one genuinely blank, neutral, course-authored expedition work image with no carried learner source, answer, output, check state, feedback, annotation, result, Builder evidence, or successor meaning.
+- **Zero-effect boundary:** result reading, dismissal, and blank-transfer arrival create no Scene fact, mastery, score, item, route, save eligibility, access, authority, world/city delta, external action, identity, or Machine answer. Transfer scoring and every explanation/RAI/review-save/completion/RP-003+/successor state remain closed.
+- **A2 handoff:** board only this owner replacement using the existing canonical copy, invariant civic plate, separate returns, responsive/accessibility parity, deterministic focus, non-color meaning, and reduced-motion equivalence. Do not expose transfer submission or any later state.
+
 ## 2026-07-17 Coordinator — RP-002 primary seam accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / PY-009 PRIMARY RESULT ACCEPTED`.

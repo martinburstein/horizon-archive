@@ -1,5 +1,38 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance continuity maintenance — result dismissal to blank transfer ownership
+
+The accepted read-only `SUIT // PROVISIONAL TRANSLATION` result now has one surface-safe transition contract into the already-defined fresh PY-009 practice boundary. This contract clarifies ownership and meaning only. It does not alter the canonical `primary_result` or `fresh_practice` copy exported by `custodyLedgerExercise.js`, implement the transition, expose transfer scoring, or authorize any later state.
+
+### Locked surface meaning
+
+1. The provisional result remains an expedition-side Suit rendering of the completed primary attempt. Its locked source came from sanitized Builder evidence, while its two added fields remain human annotations. The result is not Builder speech, a native record, an access response, permission, identity, purpose, or city acknowledgement.
+2. Dismissal must be an explicit expedition-interface action taken after the player has had access to the complete read-only result. It means only: clear this displayed Suit rendering and move the local lesson to its next fresh practice surface. It does not reject, revise, validate, save, transmit, canonize, or erase the underlying five Scene observations; revoke the primary attempt; or express Pilot agreement with the provisional label.
+3. Dismissal itself creates no Scene fact, mastery evidence, score, item, route, access, authority, world/city delta, external action, or successor state. Passive reading, focus, time, animation, reflow, return, reload, Tour, or disappearance of the result cannot substitute for the explicit action.
+4. The destination is a genuinely fresh `SYSTEM // EXPEDITION SESSION` work image owned by the expedition lesson. Its neutral course-authored source is not copied from the Builder surface, the primary output, the five Scene observations, the provisional Suit record, or a successor location. It is not a Builder challenge, password, message, invitation, judgment, or response.
+5. Fresh means no learner-entered primary source, answers, output, check states, feedback, annotations, or displayed result carry forward into the transfer work image. Any primary evidence retained internally remains bounded learning provenance only; it is neither visible as an answer bank nor promoted to story evidence.
+6. Arrival at the blank transfer entry establishes only that the local lesson surface changed owner from Suit result to expedition practice. Both transfer fields begin blank under the existing curriculum authority. The transition does not score them, reveal expected values, start explanation, unlock responsible-AI work, make review/save/completion eligible, or alter the district.
+
+### Owner and evidence boundary
+
+| Boundary | Visible owner | Surface-safe meaning | State/evidence effect |
+|---|---|---|---|
+| Accepted primary result | `SUIT // PROVISIONAL TRANSLATION` | Read-only expedition rendering with source preserved and human fields visibly provisional | No new Scene fact, authority, route, item, world response, or saved conclusion |
+| Explicit dismissal | Expedition interface / existing explicit action | Player clears the current local rendering and requests the next lesson surface | Zero observation, zero mastery, zero score, zero save, zero world/city delta |
+| Fresh blank transfer entry | `SYSTEM // EXPEDITION SESSION` using the canonical `fresh_practice` authority | Neutral course-authored practice, wholly separate from Builder evidence and the primary output | Blank entry only; no transfer result, explanation, RAI, review, save, completion, RP-003+, or successor |
+
+### What remains unresolved
+
+- The provisional result still does not establish Builder identity, native terminology, intent, chronology, purpose, authorship, access, or relation to the Machine.
+- The neutral transfer record reveals nothing about the city or Builders and cannot be interpreted as a second artifact, a reply, or a new location.
+- Why Python-like notation appears in Builder work, who authored the exposed instance, and what the Builders intended remain open.
+- Preserve the exact existing `primary_result` and `fresh_practice` runtime copy authorities. Later roles may compose their presentation but may not invent replacement lore text or a second narrative authority.
+- Transfer evaluation, feedback, retry, scoring, explanation, RP002-RAI-01, review/save/completion, world/city response, authority, identity, RP-003+, and every successor remain closed.
+
+### Exact Storyboarder A2 handoff
+
+`Storyboarder Agent — continuity-maintenance mode: board only the accepted read-only SUIT // PROVISIONAL TRANSLATION result -> one explicit expedition dismissal action -> genuinely fresh blank SYSTEM // EXPEDITION SESSION PY-009 transfer entry. Use the canonical primary_result and fresh_practice copy authorities without rewriting or supplementing them. Make the owner replacement unmistakable: the complete read-only Suit result is available before dismissal; dismissal is a deliberate local interface action with zero observation/mastery/score/save/world effect; the destination replaces it with one neutral course-authored blank transfer group containing no carried learner source, answer, output, check state, feedback, annotation, result, Builder evidence, or successor cue. Preserve the unchanged first-person civic plate, invariant world, separate evidence and route returns, deterministic focus, non-color/forced-color meaning, reduced-motion equivalence, responsive/narrow containment, natural reflow, and >=44 x 44 CSS px action targets. Do not depict a Builder prompt, password, message, invitation, judgment, permission, city response, access, identity, native translation certainty, second artifact, saved conclusion, exam result, Machine answer, RP-003+, or successor. Do not expose or board transfer submission/scoring/feedback, explanation, RP002-RAI-01, review/save/completion, or any later state. Hand this unchanged ownership boundary to Curriculum Checker for a NO-REOPEN preservation check.`
+
 ## 2026-07-17 Coordinator — PY-009 primary result accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / PRIMARY SUBMISSION-RESULT BOUNDARY ACCEPTED`.
