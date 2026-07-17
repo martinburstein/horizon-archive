@@ -315,9 +315,9 @@ The course panel contains no SC-08 crop, continuity/contact/junction form, recur
 
 ## Promotion record
 
-- Approved commit: `PENDING`
-- Promoted to Working Queue on: `PENDING`
-- Team 1 railhead after A5: `RP-007 GATE REVIEW — A5 COMPLETE / COORDINATOR NEXT`
-- Next contiguous packet seeded: `NO`
-- `STORY_RAIL_MAP.md` updated: `YES — A4 graph lock`
-- Coordinator: `PENDING`
+- Approved commit: `72b7fc2`
+- Promoted to Working Queue on: `2026-07-17`
+- Team 1 railhead after coordinator: `RP-007 PROMOTED / RP-008 BLANK SHELL NEXT`
+- Next contiguous packet seeded: `YES — BLANK SHELL ONLY`
+- `STORY_RAIL_MAP.md` updated: `YES — coordinator promotion`
+- Coordinator: `PASS — focused 13/13; combined 63/63; full 484/484; validator/build/assets/leakage/purity/temp/patch PASS`
