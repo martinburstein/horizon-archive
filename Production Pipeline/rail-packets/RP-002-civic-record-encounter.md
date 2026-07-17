@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W3 — RP002-AESTH-007
+
+- **Verdict:** `REVISE — P2 STALE ACTION-GROUP NAME / W4 NEXT`.
+- **Finding:** the bounded result/dismissal/fresh replacement passes visual, focus, field-state, target, responsive, and art review, but the evidence-return group is still programmatically named `Blank Python primary actions` during the provisional result and fresh practice.
+- **Repair contract:** phase-aware semantic group names for blank, feedback, result, and fresh only; separate route return, visible UI, gameplay, storage, art, and later locks remain unchanged.
+- **Evidence:** focused presentation `49/49`; safe desktop/narrow title-shell containment; accepted assets and immutable civic master/hash verified.
+
 ## 2026-07-17 Working W2 — RP002-P1-012 dismissal repair
 
 - **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`.

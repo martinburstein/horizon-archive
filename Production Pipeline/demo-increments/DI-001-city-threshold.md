@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W3 — RP002-AESTH-007 stale action-group name
+
+- **Disposition:** `REVISE — P2 OPEN / W4 AESTHETIC POLISH NEXT`.
+- **Finding:** result and fresh groups render correctly, but the external evidence-return group remains announced as `Blank Python primary actions` in every primary phase. This contradicts active `30-A2`/`DR-00` provisional-result and `DR-20` fresh-practice ownership for assistive users.
+- **Acceptance:** derive a truthful phase-aware group name for blank, feedback, result, and fresh states; retain the separate route-return label and all visible behavior/copy/order. Add exact semantic regression coverage only.
+- **Evidence:** focused presentation suites `49/49`; live title shells at `1920 x 1080` and `390 x 844` have zero overflow and `48px`/`44px` actions; immutable civic master/hash and W2 assets remain exact. User storage was preserved and no gated screenshot was fabricated.
+- **W4:** implement only `RP002-AESTH-007`, run focused/full/build, and final-reload port 4173. No art, gameplay, storage, transfer, or later-state change is authorized.
+
 ## 2026-07-17 Working W2 — result dismissal integrated
 
 - **Disposition:** `RESOLVED — RP002-P1-012 / W3 AESTHETIC REVIEW NEXT`.
