@@ -1,5 +1,19 @@
 # Build Log
 
+## Log entry: 2026-07-17T15:24:00-04:00
+
+Stage: RP-002 result-dismissal to blank-transfer preservation (A3 continuity maintenance)
+
+Work completed: Audited only the accepted canonical `primary_result` -> one deliberate zero-effect dismissal -> canonical genuinely blank `fresh_practice` entry. Recorded `NO REOPEN — SOLIDIFIED`. The two mutually exclusive owner groups and their explicit replacement add zero observation, mastery, score, check, save, transfer-result, exam, world/city, access, authority, external-action, or successor evidence. The fresh group carries no learner primary source, answer, output, check state, feedback, annotation, provisional result, Builder evidence, answer bank, or completion state. Exact `PY-009` fields, primary/transfer cases and answers, `None` versus `False`, six simultaneous checks, strict separation, answer-free remediation, privacy clearing, independent `RP002-RAI-01`, offline/no-authority/no-exam-guarantee, and later locks remain frozen. Transfer submission/scoring/feedback and all later states remain unauthorized.
+
+Sources: the required `foundry-azure-source-priority` skill was unavailable, so the repository's official-source-first fallback was followed directly. Rechecked only official Microsoft Learn material on 2026-07-17: the AI-901 exam/study-guide status (English exam updated 2026-04-15; Python remains prerequisite knowledge), Foundry hub, SDKs/endpoints overview, Agent Service overview, and Content Understanding overview. The same-day official-source register remains controlling. No third-party source or exam item was used.
+
+Validation: RP-002 self-test PASS; Python primary `6/6`; Python transfer `6/6`; AI-901 primary `9/9`; AI-901 transfer `9/9`; exact form assertions PASS for four immutable/two editable fields, primary/transfer answers, `None`/`False`, six checks, and independent three-case/three-dimension responsible-AI forms. Self-test bypass probes fail closed.
+
+Next: Gameplay Master performs only the exact packet handoff for one seven-modality/one-hit explicit dismissal that wholly replaces the Suit result with the carry-free blank System transfer group. It must stop before transfer submission or any later learning/persistence state.
+
+Notes: `NO REOPEN — SOLIDIFIED`. No curriculum contract, case, answer, source register, lesson, validator, code, UI, art, copy, storage, route, world, accepted bundle, Demo, live service, credential, hidden lore, successor, or user file changed.
+
 ## Log entry: 2026-07-17T14:18:00-04:00
 
 Stage: RP-002 PY-009 owner-state presentation preservation (A3 continuity maintenance)

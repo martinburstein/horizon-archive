@@ -54,6 +54,8 @@ Latest Advance handoff: `2026-07-17 / RP-010 A5 PASS — COORDINATOR GATE REVIEW
 
 This is the surface-safe, ordered map from the accepted live demo to the intended ending. It tracks adjacency and production maturity without exposing unrevealed story details in chat.
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-012 A3 PASS — A4 DISMISSAL GRAPH NEXT`. Curriculum remains `NO REOPEN — SOLIDIFIED`: the accepted Suit result, explicit zero-effect dismissal, and canonical carry-free blank System transfer entry add no observation, mastery, score, save, world, authority, or successor meaning. Exact PY-009 and independent RP002-RAI-01 contracts remain frozen. A4 owns only the smallest explicit dismissal-to-blank entry graph; transfer evaluation and every later state remain closed.
+
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 ACCEPTED DEMO NEXT`. The protected, unimported A0/A1/A1F/A2 model passes focused `10/10`, full `575/575`, build, leakage, purity, and patch gates while leaving App/main/normal route/storage/art/curriculum/live Demo unchanged. It proves exact strict-evaluator feedback, blank retry, `6/6` read-only result, separate returns, sanitation, privacy/Tour/accessibility boundaries, and hard later-state absence. W1 must play only the accepted blank primary and report its earliest normal submission/result gap; the Advance railhead remains the completed RP-012 ending with no successor.
 
 ## Position summary

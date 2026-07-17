@@ -4,6 +4,15 @@ Started: 2026-05-29T16:26:59-04:00
 Minimum intended work duration: 60 minutes
 Current status: four-pattern reference gate complete; sequential launch-package expansion in progress
 
+## 2026-07-17 RP-002 result-to-transfer continuity preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: accepted `primary_result` -> explicit zero-effect dismissal -> canonical blank `fresh_practice` changes presentation only
+- [x] Confirmed zero observation/mastery/score/check/save/transfer-result/exam/world/access/authority/successor effect
+- [x] Confirmed fresh transfer carries no primary learner work, answers, output, checks, feedback, annotation, provisional result, Builder evidence, or answer bank
+- [x] Reverified current official Microsoft-only AI-901/Foundry source posture and exact RP-002 primary/transfer forms
+- [x] Passed RP-002 self-test, Python `6/6 + 6/6`, AI-901 `9/9 + 9/9`, exact `None`/`False`, field, answer, separation, and bypass checks
+- [ ] Gameplay Master confirms only the explicit-dismissal-to-blank-entry graph; transfer scoring and every later state remain closed
+
 ## Required artifacts
 
 - [x] source inventory

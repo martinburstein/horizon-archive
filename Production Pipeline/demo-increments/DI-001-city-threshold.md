@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A3 continuity handoff — transfer-entry curriculum preserved
+
+- **Verdict:** `NO REOPEN — SOLIDIFIED`. The result group, explicit dismissal, and replacement blank transfer group are presentation-only and create zero observation, mastery, score, check, save, transfer result, exam, world/city, access, authority, external-action, or successor evidence.
+- **Clean entry:** only canonical `fresh_practice` neutral source appears; `classification` and `owner` begin blank; no primary learner work, answers, output, checks, feedback, annotation, provisional result, Builder evidence, answer bank, or completion state carries forward.
+- **Frozen contract:** exact PY-009 cases, answers, `None`/`False`, six simultaneous checks, primary/transfer separation, remediation/privacy, independent RP002-RAI-01, Tour/offline/no-authority/no-exam-guarantee, invariant world, null city delta, separate returns, and every later lock remain exact.
+- **A4:** confirm only one explicit seven-modality/one-hit dismissal that replaces the complete Suit result with the blank System group. Do not expose transfer submission/scoring/feedback, explanation, RAI, review/save/completion, RP-003+, or successor.
+
 ## 2026-07-17 Advance A2 continuity handoff — two-group result dismissal to blank transfer
 
 - **Presentation:** unchanged Civic Record District plate; complete read-only `SUIT // PROVISIONAL TRANSLATION` with one explicit dismissal; then fresh blank `SYSTEM // EXPEDITION SESSION` using canonical `fresh_practice`.
