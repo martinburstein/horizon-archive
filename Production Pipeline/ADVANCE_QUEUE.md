@@ -26,15 +26,19 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
 | 9 | `RP-009` | Occluded Fold | `PROMOTED TO WORKING` | Player Agent (after RP-008 acceptance) | Coordinator independently verified all twelve gates | Exact RP-008 verified end state -> one pure OF-00→OF-30 journey -> both prior summaries + six observations in all 720 orders/revisits + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world | Wait behind RP-008 in Working order; RP-010 now advances separately in A5 protected construction. |
-| 10 | `RP-010` | Counterfield | `IN DESIGN — A4 PUZZLE PASS` | Coder Agent (`A5`, advance mode) | Story, Scene/production-art-plan, Curriculum, and Puzzle gates passed; A5 and coordinator review remain | Exact RP-009 edge ledger and retained RP-007/RP-008 summaries -> one exposed continuation -> seven equal observations in all 5,040 orders -> independent strict PY-018 and AI901-D2-O3 chains -> expedition-owned scope register; invariant world and no RP-011 | A5 builds one pure non-routable CF-00→CF-30 protected journey through the real frozen evaluators; no normal integration, art, route, persistence, live Demo, or RP-011. |
+| 10 | `RP-010` | Counterfield | `GATE REVIEW — A5 HANDOFF` | Coordinator | Story, Scene/plan, Curriculum, Puzzle, Protected code, Save/recovery, and protected Accessibility pass; independent coordinator decision remains | Exact RP-009 edge ledger and retained RP-007/RP-008 summaries -> pure CF-00→CF-30 -> all 5,040 orders/revisits -> strict independent learning chains -> atomic scope register; invariant world and no RP-011 | Independently verify the focused/protected-chain/frozen/full/build/isolation evidence; no normal integration, art, live Demo, or RP-011. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `0`
+- Gate Review packets awaiting coordinator decision: `1 — RP-010`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `8 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008, then RP-009`
-- In-design packets: `1 — RP-010 A4 PUZZLE PASS / A5 NEXT`
-- Team 1 railhead: `RP-010 — IN DESIGN / A4 PUZZLE PASS`
+- In-design packets: `0`
+- Team 1 railhead: `RP-010 — GATE REVIEW / A5 HANDOFF`
+
+## 2026-07-17 RP-010 Advance Coder result
+
+`RP-010` is `GATE REVIEW — A5 HANDOFF`. One pure unimported Node-only Counterfield journey begins only at exact verified RP-009 completion, retains all three predecessor records, proves every `5,040` observation order plus revisits, runs strict independent frozen PY-018 and Foundry client-flow chains plus explanations, and enforces scored-miss-only answer-free recovery, exact provenance/four classes/nine `None` limits, deterministic clearing/focus, conjunctive byte-stable save, replay-free restore, safe returns, Tour/world/authority isolation, and LOOK-only destinationless continuation. Focused `12/12` passes. Coordinator independently validates the complete bundle; normal integration, art, live Demo, and RP-011 remain closed.
 
 ## 2026-07-17 RP-010 Gameplay Master result
 

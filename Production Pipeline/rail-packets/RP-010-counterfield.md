@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS`
+- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION PASS`
 - Target chapter/location: Phase IV capstone opening / immense operating field beyond the Occluded Fold
 - Target demo horizon: ninth future slice after the accepted RP-001 boundary; directly after RP-009
 - Route order: 10
@@ -13,7 +13,7 @@
 - Working title: `Counterfield` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase IV — Capstone and resolution / slot 1 of 3
 - Target player time: `39–54 minutes` clean; `24–35 minutes` mastered replay; protected reference-fixture target `<5 minutes`; no time limit, speed score, or timing credit
-- Complete Advance cycles spent on this packet: 0; A1–A4 of orientation cycle 1 complete
+- Complete Advance cycles spent on this packet: 0; A1–A5 of orientation cycle 1 complete
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
 ## Locked premise
@@ -221,9 +221,9 @@ Phase replacement, observation order, navigation, visibility, focus, scene layou
 
 ## Advance Construction Track — Coder
 
-- Status: `NOT STARTED — A5 AFTER A4`
-- No module, route, component, storage key, asset hook, feature flag, test, or live-Demo exposure is authorized by A1.
-- A5 must remain protected and non-routable until the completed A1–A4 packet explicitly authorizes one smallest integration tranche.
+- Status: `PASS — PURE PROTECTED CF-00→CF-30 JOURNEY; COORDINATOR GATE REVIEW NEXT`
+- One pure Node-only `CounterfieldProtectedJourney` and one focused test compose the frozen A1–A4 authorities from exact verified RP-009 completion. They remain unimported, non-routable, in-memory-only, and absent from App/main, accepted routes, browser persistence, production bundles, art, and the live Demo.
+- Focused `12/12` proves all `5,040` observation orders/revisits, three retained predecessor records, both strict independent learning chains and explanations, scored-miss-only answer-free recovery, exact provenance/four evidence classes/nine `None` limits, deterministic clearing/focus, conjunctive byte-stable save, replay-free restore, safe returns, Tour/world/authority isolation, and LOOK-only destinationless continuation.
 
 ## Anticipated accessibility and presentation risks
 
@@ -268,15 +268,15 @@ Phase replacement, observation order, navigation, visibility, focus, scene layou
 
 ## Breadth and convergence record
 
-- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-11 compact two-master brief`; Curriculum `PASS — PY-018 + RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 SOLIDIFIED`; Puzzle `PASS — CF-00→CF-30 graph locked`; Production art plan `PASS plan — final assets later`.
-- Scoreboard gates remaining: Protected code, Save/recovery implementation, Accessibility protected evidence, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — closed Puzzle with one four-phase graph, all 5,040 equal-peer observation orders, strict independent learning chains, deterministic answer-free recovery, conjunctive atomic save/restore design, and structural SC-11/Tour isolation`.
+- Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-11 compact two-master brief`; Curriculum `PASS — PY-018 + RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 SOLIDIFIED`; Puzzle `PASS — CF-00→CF-30 graph locked`; Protected code `PASS`; Save/recovery `PASS`; Accessibility protected evidence `PASS`; Production art plan `PASS plan — final assets later`.
+- Scoreboard gates remaining: coordinator Gate Review, Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — closed Protected code, Save/recovery implementation, and Accessibility protected evidence with one focused end-to-end harness`.
 - Existing seams integrated or consolidated: simultaneous association, incomplete order, cross-scale correspondence, ordinary mismatch, ambiguity, unavailability, stewardship, independent clocks, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline share one panorama/detail system rather than separate slides or district modules.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness decision, RP-011, native categories, internal topology, shared chronology, synchronized clocks, route unlocks, production art, normal integration, and live Demo exposure.
 - New module or artifact integration consumer: one smallest pure protected `CounterfieldProtectedJourney` caller/harness may consume the frozen RP-010 validator/forms and exact verified RP-009 protected completion; it must remain unimported, non-routable, storage-free outside its in-memory adapter, and absent from accepted bundles.
-- Breadth verdict: `CONTINUE — A5 ADVANCE CODER`.
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`.
 - Next contiguous packet seed readiness: `NO — RP-011 remains reserved until RP-010 reaches Gate Review or promotion`.
-- Exact next action in one sentence: Advance Coder A5 builds one pure non-routable CF-00→CF-30 protected journey through the real frozen evaluators and proves order convergence, evidence independence, atomic restore, privacy clearing, Tour isolation, invariant world, and no RP-011.
+- Exact next action in one sentence: coordinator independently verifies the complete RP-010 protected evidence bundle and records one PASS, REVISE, or HOLD without normal integration, art, live Demo exposure, or RP-011 work.
 
 ## Advance Handoff Gate
 
@@ -284,9 +284,14 @@ Phase replacement, observation order, navigation, visibility, focus, scene layou
 - Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
-- Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — A5 PROTECTED JOURNEY + COORDINATOR GATE REVIEW REQUIRED`
-- Required revision: A5 protected journey only, then coordinator Gate Review.
+- Coder smoke-test result: `PASS — focused 12/12; all 5,040 orders/revisits; frozen authorities and isolation pass`
+- Validation evidence: `RP-002→RP-010 protected chain 109/109; RP-010 self-test; canonical Python 8/8 + 8/8; canonical AI 8/8 + 8/8 + 8/8; full 535/535; build; byte-identical accepted JS/CSS; leakage/purity/cleanup/patch checks — PASS`
+- Readiness: `GATE REVIEW — COORDINATOR DECISION REQUIRED`
+- Required revision: none identified by A5; coordinator independently verifies all twelve gates.
+
+### Exact coordinator handoff
+
+`Coordinator: independently verify only the RP-010 A5 protected checkpoint. Confirm the pure non-routable CounterfieldProtectedJourney begins solely from exact verified RP-009 completion, retains the verified RP-007 summary, RP-008 summary, and RP-009 edge ledger, traverses CF-00→CF-30, and leaves App/main, browser persistence, accepted routes/bundles/live Demo, art, prior packets, and RP-011 unchanged. Re-run focused RP-010, the complete protected predecessor chain through RP-010, RP-010 validator self-test and canonical forms, full suite, production build/asset identity, leakage/purity/cleanup, and patch integrity. Confirm all 5,040 observation orders/revisits, strict independent real frozen learning chains and both explanations, failed-check-only Python and actually-scored-tag-only AI answer-free recovery, exact request/response provenance, four evidence classes, nine None limits, deterministic privacy clearing/focus, conjunctive byte-stable atomic save, replay-free restore, reversible returns, Tour/world/authority isolation, and LOOK-only destinationless continuation. Record READY FOR WORKING behind RP-009 only if every gate passes; otherwise record one exact REVISE or HOLD. Do not perform normal integration, production art, Demo reload, Working passes, or define RP-011.`
 
 ### Exact Advance Coder A5 handoff
 
