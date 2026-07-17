@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A3 NO REOPEN — A4 NEXT`. Official-source and validator review preserves the SOLIDIFIED RP-002 learning contract across explicit `FT-20C` -> Pilot intent -> canonical blank Teacher explanation entry; presentation creates no attempt/evidence, world/route/authority effect, RAI, later state, or successor. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
+
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A2 BLANK-EXPLANATION ENTRY PRESENTATION PASS — A3 NEXT`. Over the invariant SC-03 overview, visible System `FT-20C` now presents one explicit Pilot-owned action and atomically yields only the canonical genuinely blank Teacher explanation group, with no carried work, attempt/evidence, world/route/authority effect, RAI, later state, or successor. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
 
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A1 EXPLICIT EXPLANATION-ENTRY OWNERSHIP PASS — A2 NEXT`. At Team 2's accepted bounded `FT-20C` edge, only one explicit Pilot intent into the existing canonical blank Teacher explanation boundary is locked; entry carries no work and grants no attempt, evidence, world, route, authority, RAI, or successor effect. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).

@@ -1,5 +1,19 @@
 # Build Log
 
+## Log entry: 2026-07-17T19:56:30-04:00
+
+Stage: RP-002 blank Python explanation entry preservation (A3 continuity maintenance)
+
+Work completed: Audited only exact visible `FT-20C` -> one explicit Pilot-owned `OPEN BLANK PYTHON EXPLANATION` intent -> atomic replacement by the existing canonical genuinely blank `30-D / python_explanation` Teacher group. Recorded `NO REOPEN — SOLIDIFIED`. Acknowledgement display, reading, focus, hover, dwell, reflow, motion, action availability/activation, group replacement, blank prompt/control display, returns, sanitation, resume, modality, and Tour remain zero story, observation, attempt, score, evidence, and mastery. Exact `PY-009` primary/transfer cases, answers, fields, `None`/`False`, six simultaneous checks, independent finalized prerequisites, actual-miss-only answer-free remediation, genuinely blank retries, strict three-part explanation dimensions/evaluator, privacy, independent `RP002-RAI-01`, and later locks remain unchanged.
+
+Sources: the required `foundry-azure-source-priority` skill was unavailable, so the repository official-source-first fallback was followed directly. Rechecked only official Microsoft Learn material on 2026-07-17: the AI-901 study guide (skills measured as of 2026-04-15; Python remains prerequisite knowledge; current two-domain weights and relevant objectives unchanged), Foundry hub, SDKs/endpoints overview, Agent Service overview, and Content Understanding overview. No third-party source or exam item was used.
+
+Validation: RP-002 self-test PASS; Python primary `6/6`; Python transfer `6/6`; AI-901 primary `9/9`; AI-901 transfer `9/9`; canonical frozen forms, contract locks, and failure probes PASS. Manual scope review confirms blank entry creates no attempt/evidence and exposes no answer, expected value, rule, prior/private work, RAI state, save, world/route/authority effect, later state, or successor.
+
+Next: Gameplay Master defines only the smallest bounded explicit-entry graph from retained `FT-20C`, through one seven-modality/one-hit Pilot intent, to the canonical genuinely blank Teacher explanation group. Hard stop before explanation submission/evaluation/feedback/result, Pilot conclusion, `RP002-RAI-01`, review/save/completion, credits, `RP-003+`, world/authority effect, or successor.
+
+Notes: `NO REOPEN — SOLIDIFIED`. No curriculum contract, source register, case, answer, validator, runtime, art, copy, storage, route, world, accepted Demo, live service, credential, hidden lore, successor, or user file changed.
+
 ## Log entry: 2026-07-17T19:12:00-04:00
 
 Stage: RP-002 fresh-transfer submit/evaluation preservation (A3 continuity maintenance)
