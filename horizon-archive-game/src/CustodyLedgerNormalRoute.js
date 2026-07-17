@@ -20,6 +20,10 @@ import {
   custodyLedgerFirstNearDispatchPhases,
 } from "./CustodyLedgerFirstNearDispatch.js";
 import {
+  createCustodyLedgerSecondNearDispatchOrchestrator,
+  custodyLedgerSecondNearDispatchPhases,
+} from "./CustodyLedgerSecondNearDispatch.js";
+import {
   CUSTODY_LEDGER_HOTSPOT_REGISTRY_VERSION,
   createCustodyLedgerHotspotDispatcher,
   custodyLedgerHotspotRegistry,
@@ -42,6 +46,7 @@ const allowedCheckpoints = new Set([
   "sc03_survey_overview",
   "sc03_near_blank",
   "sc03_near_first",
+  "sc03_near_second",
 ]);
 const privateKeys = new Set([
   "privateNotes", "workingSource", "selections", "prose", "feedback", "credentials",
@@ -51,6 +56,9 @@ const privateKeys = new Set([
 const nearHotspotByLabel = new Map(custodyLedgerHotspotRegistry
   .filter((entry) => entry.boardId === "SC-03-10" && custodyLedgerObservationStages.near.includes(entry.observationId))
   .map((entry) => [entry.actionLabel, entry]));
+const nearHotspotByObservationId = new Map(custodyLedgerHotspotRegistry
+  .filter((entry) => entry.boardId === "SC-03-10" && custodyLedgerObservationStages.near.includes(entry.observationId))
+  .map((entry) => [entry.observationId, entry]));
 
 function predecessorIsExact(value) {
   return value && typeof value === "object"
@@ -77,11 +85,30 @@ function boundedFirstObservationEvidence(value) {
       : null;
 }
 
+function boundedSecondObservationEvidence(value) {
+  if (!Array.isArray(value) || value.length !== 2) return null;
+  const safe = sanitizeCustodyLedgerObservationState({ observationEvidence: value });
+  const exactRecords = value.every((record) => {
+    const canonical = safe.observationEvidence.find((candidate) => candidate.observationId === record?.observationId);
+    return canonical && JSON.stringify(canonical) === JSON.stringify(record);
+  });
+  return safe.finalizedObservationIds.length === 2
+    && safe.finalizedObservationIds.every((id) => custodyLedgerObservationStages.near.includes(id))
+    && safe.progress.near === 2
+    && safe.progress.far === 0
+    && safe.observationComplete === false
+    && safe.campaignCommitEnabled === false
+    && exactRecords
+      ? Object.freeze([...value])
+      : null;
+}
+
 export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
   const keys = Object.keys(value ?? {}).sort().join("|");
   const legacyKeys = "checkpoint|cityStateDelta|continuation|lastVerifiedBoundary|packetId|successor|version|worldStateDelta";
   const currentKeys = "checkpoint|cityStateDelta|continuation|lastVerifiedBoundary|observationEvidence|packetId|successor|version|worldStateDelta";
-  const evidence = boundedFirstObservationEvidence(value?.observationEvidence);
+  const firstEvidence = boundedFirstObservationEvidence(value?.observationEvidence);
+  const secondEvidence = boundedSecondObservationEvidence(value?.observationEvidence);
   if (!predecessorIsExact(predecessor)
     || !value
     || typeof value !== "object"
@@ -95,7 +122,11 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
     || value.worldStateDelta !== null
     || value.lastVerifiedBoundary !== "RP-001"
     || value.successor !== null
-    || (value.checkpoint === "sc03_near_first" ? !evidence : value.observationEvidence != null)) {
+    || (value.checkpoint === "sc03_near_first"
+      ? !firstEvidence
+      : value.checkpoint === "sc03_near_second"
+        ? !secondEvidence
+        : value.observationEvidence != null)) {
     return null;
   }
   return Object.freeze({
@@ -106,13 +137,18 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
     cityStateDelta: null,
     worldStateDelta: null,
     lastVerifiedBoundary: "RP-001",
-    observationEvidence: evidence,
+    observationEvidence: value.checkpoint === "sc03_near_first"
+      ? firstEvidence
+      : value.checkpoint === "sc03_near_second"
+        ? secondEvidence
+        : null,
     successor: null,
   });
 }
 
 function saveFor(checkpoint, observationEvidence = null) {
-  const evidence = boundedFirstObservationEvidence(observationEvidence);
+  const firstEvidence = boundedFirstObservationEvidence(observationEvidence);
+  const secondEvidence = boundedSecondObservationEvidence(observationEvidence);
   return Object.freeze({
     version: CUSTODY_LEDGER_NORMAL_ROUTE_VERSION,
     packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
@@ -121,18 +157,24 @@ function saveFor(checkpoint, observationEvidence = null) {
     cityStateDelta: null,
     worldStateDelta: null,
     lastVerifiedBoundary: "RP-001",
-    observationEvidence: checkpoint === "sc03_near_first" ? evidence : null,
+    observationEvidence: checkpoint === "sc03_near_first"
+      ? firstEvidence
+      : checkpoint === "sc03_near_second"
+        ? secondEvidence
+        : null,
     successor: null,
   });
 }
 
-function normalState(checkpoint, status = "ready", observationState = null, firstNearState = null) {
+function normalState(checkpoint, status = "ready", observationState = null, dispatchState = null, persistedEvidence = null) {
   const atArrival = checkpoint === "sc03_arrival";
   const atOverview = checkpoint === "sc03_survey_overview";
   const atBlank = checkpoint === "sc03_near_blank";
   const atAcknowledgement = checkpoint === "sc03_near_acknowledgement";
+  const atSecondAcknowledgement = checkpoint === "sc03_near_second_acknowledgement";
   const atFirst = checkpoint === "sc03_near_first";
-  const atNear = atBlank || atAcknowledgement || atFirst;
+  const atSecond = checkpoint === "sc03_near_second";
+  const atNear = atBlank || atAcknowledgement || atSecondAcknowledgement || atFirst || atSecond;
   const safeObservation = atNear && observationState
     ? sanitizeCustodyLedgerObservationState(observationState)
     : null;
@@ -140,41 +182,41 @@ function normalState(checkpoint, status = "ready", observationState = null, firs
     ? "Recorded civic route followed. District overview restored locally. No city response occurred."
     : atOverview
       ? "Protected survey overview ready. Orientation alone records no district evidence."
-      : atAcknowledgement
-        ? firstNearState?.interface?.primary?.text ?? "One bounded observation was recorded."
+      : atAcknowledgement || atSecondAcknowledgement
+        ? dispatchState?.interface?.primary?.text ?? "One bounded observation was recorded."
+        : atSecond
+          ? "Two bounded near observations are restored. No event or acknowledgement was replayed."
         : atFirst
           ? "One bounded near observation is restored. No event or acknowledgement was replayed."
           : atBlank
             ? "Near evidence is ready for deliberate inspection. Nothing has been recorded yet."
         : "The verified expedition record preserves one reversible civic route.";
-  const firstNearActions = atAcknowledgement
+  const nearActions = atAcknowledgement || atSecondAcknowledgement
     ? [custodyLedgerObservationControls.returnToEvidence.label]
-    : atFirst
-      ? (firstNearState?.controls ?? []).filter((control) => control.status === "replay").map((control) => control.label)
-      : atBlank
-        ? (firstNearState?.controls ?? []).filter((control) => control.status === "available").map((control) => control.label)
+    : atFirst || atSecond || atBlank
+      ? (dispatchState?.controls ?? []).map((control) => control.label)
         : [];
   const availableActions = atArrival
     ? [custodyLedgerRouteActions.continueProtected, custodyLedgerRouteActions.returnAccepted]
     : atOverview
       ? [CUSTODY_LEDGER_NEAR_DETAIL_ACTION, custodyLedgerRouteActions.returnAccepted]
       : atNear
-        ? [...firstNearActions, custodyLedgerRouteActions.returnAccepted]
+        ? [...nearActions, custodyLedgerRouteActions.returnAccepted]
         : [custodyLedgerRouteActions.enter];
   return Object.freeze({
     status,
     checkpoint,
     boardId: atNear ? "SC-03-10" : atArrival || atOverview ? "SC-03-00" : "SC-02-50",
     owner: atNear
-      ? firstNearState?.ownerMessage?.owner ?? custodyLedgerRouteObservationOwners.systemSession
+      ? dispatchState?.ownerMessage?.owner ?? custodyLedgerRouteObservationOwners.systemSession
       : atArrival || atOverview
         ? custodyLedgerRouteOwners.system
         : custodyLedgerRouteOwners.pilot,
     message,
-    sceneStatement: atAcknowledgement ? firstNearState?.interface?.primary ?? null : null,
-    statusMessage: atAcknowledgement ? firstNearState?.interface?.status ?? null : null,
+    sceneStatement: atAcknowledgement || atSecondAcknowledgement ? dispatchState?.interface?.primary ?? null : null,
+    statusMessage: atAcknowledgement || atSecondAcknowledgement ? dispatchState?.interface?.status ?? null : null,
     focusIntent: Object.freeze({
-      group: atNear ? firstNearState?.focusIntent?.group ?? "near_observations" : "route_transition",
+      group: atNear ? dispatchState?.focusIntent?.group ?? "near_observations" : "route_transition",
       target: atArrival
         ? custodyLedgerRouteActions.continueProtected
         : atOverview
@@ -184,16 +226,22 @@ function normalState(checkpoint, status = "ready", observationState = null, firs
             : custodyLedgerRouteActions.enter,
     }),
     availableActions: Object.freeze(availableActions),
+    actionStates: Object.freeze(((atFirst || atSecond) ? dispatchState?.controls ?? [] : []).map((control) => Object.freeze({
+      label: control.label,
+      status: control.status,
+      minWidthCssPx: control.minWidthCssPx,
+      minHeightCssPx: control.minHeightCssPx,
+    }))),
     routeReturnAction: atNear ? custodyLedgerRouteActions.returnAccepted : null,
     continuation: "continuation",
     cityStateDelta: null,
     worldStateDelta: null,
     accessStateDelta: null,
-    observationEvidence: Object.freeze([...(safeObservation?.observationEvidence ?? [])]),
+    observationEvidence: Object.freeze([...(persistedEvidence ?? safeObservation?.observationEvidence ?? [])]),
     learningEvidence: Object.freeze([]),
     masteryEvidence: Object.freeze([]),
     saveEligibility: false,
-    ...(atNear ? { observationState: safeObservation, firstNearState } : {}),
+    ...(atNear ? { observationState: safeObservation, dispatchState } : {}),
     successor: null,
     authorityGranted: false,
     externalActionEnabled: false,
@@ -357,6 +405,53 @@ function firstNearOrchestratorFor(predecessor, observationEvidence = null) {
   return orchestrator.getState().phase === expected ? orchestrator : null;
 }
 
+function secondNearOrchestratorFromFirst(predecessor, observationEvidence) {
+  const firstEvidence = boundedFirstObservationEvidence(observationEvidence);
+  if (!firstEvidence) return null;
+  const routeState = protectedRouteDispatcher(predecessor)?.getState();
+  if (!routeState) return null;
+  const boundary = blankObservationFromProtectedRoute(routeState, createCustodyLedgerNormalRouteIntent(
+    CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+    "screen_reader",
+    "rp002-second-near-reconstruction",
+  ));
+  if (!boundary) return null;
+  const first = createCustodyLedgerFirstNearDispatchOrchestrator({
+    routeObservationState: boundary,
+    routeState,
+    restoredState: { observationState: { observationEvidence: [firstEvidence] } },
+  });
+  if (first.getState().phase !== custodyLedgerFirstNearDispatchPhases.oneIdEvidence) return null;
+  const second = createCustodyLedgerSecondNearDispatchOrchestrator({
+    routeObservationState: boundary,
+    routeState,
+    firstNearState: first.getState(),
+  });
+  return second.getState().phase === custodyLedgerSecondNearDispatchPhases.verifiedOneId
+    ? second
+    : null;
+}
+
+function secondNearOrchestratorFor(predecessor, observationEvidence) {
+  const evidence = boundedSecondObservationEvidence(observationEvidence);
+  const second = secondNearOrchestratorFromFirst(predecessor, evidence?.[0]);
+  if (!second) return null;
+  const secondRecord = evidence[1];
+  const result = second.dispatch(createCustodyLedgerNormalRouteIntent(
+    nearHotspotByObservationId.get(secondRecord.observationId)?.actionLabel,
+    "screen_reader",
+    "rp002-second-near-restore-record",
+  ));
+  if (result.status !== "recorded") return null;
+  const returned = second.returnToEvidence();
+  const restored = boundedSecondObservationEvidence(returned.state.observationState.observationEvidence);
+  return returned.status === "returned_to_two_id_evidence"
+    && restored
+    && evidence.every((record) => restored.some((candidate) => JSON.stringify(candidate) === JSON.stringify(record)))
+      ? second
+      : null;
+}
+
 function returnToAccepted(predecessor, request) {
   const dispatcher = protectedRouteDispatcher(predecessor);
   if (!dispatcher) return null;
@@ -370,19 +465,26 @@ function returnToAccepted(predecessor, request) {
 }
 
 function restoredStateFor(checkpoint, predecessor, observationEvidence = null) {
-  if (checkpoint !== "sc03_near_blank" && checkpoint !== "sc03_near_first") {
+  if (!["sc03_near_blank", "sc03_near_first", "sc03_near_second"].includes(checkpoint)) {
     return normalState(checkpoint);
   }
-  const evidence = checkpoint === "sc03_near_first" ? observationEvidence : null;
-  const orchestrator = firstNearOrchestratorFor(predecessor, evidence);
+  const orchestrator = checkpoint === "sc03_near_second"
+    ? secondNearOrchestratorFor(predecessor, observationEvidence)
+    : firstNearOrchestratorFor(predecessor, checkpoint === "sc03_near_first" ? observationEvidence : null);
   if (!orchestrator) return unavailableState();
-  const firstNearState = orchestrator.getState();
-  return normalState(checkpoint, "ready", firstNearState.observationState, firstNearState);
+  const dispatchState = orchestrator.getState();
+  return normalState(
+    checkpoint,
+    "ready",
+    dispatchState.observationState,
+    dispatchState,
+    checkpoint === "sc03_near_second" ? observationEvidence : null,
+  );
 }
 
 /**
  * Thin normal integration over the existing protected route and viewpoint authorities.
- * It owns only reversible SC-03-00 staging and the first bounded SC-03-10 observation.
+ * It owns only reversible SC-03-00 staging and the first two bounded SC-03-10 observations.
  */
 export function createCustodyLedgerNormalRouteController(options = {}) {
   const predecessor = options.predecessor;
@@ -405,7 +507,13 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
   return Object.freeze({
     getState: () => state,
     snapshot: () => JSON.parse(JSON.stringify(state)),
-    getSave: () => state.status === "ready" ? saveFor(state.checkpoint) : null,
+    getSave: () => state.status === "ready"
+      ? saveFor(state.checkpoint, state.checkpoint === "sc03_near_first"
+        ? state.observationEvidence[0]
+        : state.checkpoint === "sc03_near_second"
+          ? state.observationEvidence
+          : null)
+      : null,
     dispatch(request) {
       if (typeof request?.eventToken === "string" && consumedTokens.has(request.eventToken)) {
         return Object.freeze({ status: "duplicate_suppressed", state });
@@ -466,29 +574,29 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
         return Object.freeze({ status: "advanced", state, save: saveFor("sc03_near_blank") });
       }
 
-      if (["sc03_near_blank", "sc03_near_first"].includes(state.checkpoint)) {
+      if (["sc03_near_blank", "sc03_near_first", "sc03_near_second"].includes(state.checkpoint)) {
         if (request?.action === custodyLedgerRouteActions.returnAccepted) {
           if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
           state = normalState("city_threshold");
           return Object.freeze({ status: "returned", state, save: saveFor("city_threshold") });
         }
 
-        if (state.checkpoint === "sc03_near_first"
+        if (["sc03_near_first", "sc03_near_second"].includes(state.checkpoint)
           && request?.action === custodyLedgerObservationControls.returnToEvidence.label) {
+          const evidence = state.checkpoint === "sc03_near_first"
+            ? state.observationEvidence[0]
+            : state.observationEvidence;
           return Object.freeze({
             status: "returned_to_evidence",
             state,
-            save: saveFor("sc03_near_first", state.observationEvidence[0]),
+            save: saveFor(state.checkpoint, evidence),
           });
         }
 
-        const validator = firstNearOrchestratorFor(predecessor);
-        const validated = validator?.dispatch(request);
-        if (validated?.status !== "recorded") {
-          return Object.freeze({ status: "rejected", state });
-        }
-
         if (state.checkpoint === "sc03_near_blank") {
+          const validator = firstNearOrchestratorFor(predecessor);
+          const validated = validator?.dispatch(request);
+          if (validated?.status !== "recorded") return Object.freeze({ status: "rejected", state });
           const evidence = boundedFirstObservationEvidence(
             validated.state.observationState?.observationEvidence?.[0],
           );
@@ -507,32 +615,81 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
           });
         }
 
-        const savedEvidence = boundedFirstObservationEvidence(state.observationEvidence[0]);
-        if (!savedEvidence || validated.observationId !== savedEvidence.observationId) {
-          return Object.freeze({ status: "rejected", state });
+        if (state.checkpoint === "sc03_near_first") {
+          const savedEvidence = boundedFirstObservationEvidence(state.observationEvidence[0]);
+          const validator = secondNearOrchestratorFromFirst(predecessor, savedEvidence);
+          const validated = validator?.dispatch(request);
+          if (!["recorded", "replayed"].includes(validated?.status)) {
+            return Object.freeze({ status: "rejected", reason: validated?.reason ?? "unverified_second_near_boundary", state });
+          }
+          if (validated.status === "recorded") {
+            const secondRecord = validated.state.observationState?.observationEvidence
+              ?.find((record) => record.observationId === validated.observationId);
+            const evidence = boundedSecondObservationEvidence([savedEvidence, secondRecord]);
+            if (!evidence) {
+              return Object.freeze({
+                status: "rejected",
+                reason: "invalid_second_evidence",
+                state,
+              });
+            }
+            state = normalState(
+              "sc03_near_second_acknowledgement",
+              "ready",
+              validated.state.observationState,
+              validated.state,
+              evidence,
+            );
+            return Object.freeze({
+              status: "recorded",
+              observationId: validated.observationId,
+              state,
+              save: saveFor("sc03_near_second", evidence),
+            });
+          }
+          state = normalState(
+            "sc03_near_acknowledgement",
+            "ready",
+            validated.state.observationState,
+            validated.state,
+          );
+          return Object.freeze({
+            status: "replayed",
+            observationId: validated.observationId,
+            state,
+            save: saveFor("sc03_near_first", savedEvidence),
+          });
         }
+
+        const savedEvidence = boundedSecondObservationEvidence(state.observationEvidence);
+        if (!savedEvidence) return Object.freeze({ status: "rejected", state });
         const dispatcher = createCustodyLedgerHotspotDispatcher({ initialState: state.observationState });
         const replay = dispatcher.dispatch(request);
-        if (replay.status !== "replayed" || replay.observationId !== savedEvidence.observationId) {
-          return Object.freeze({ status: "rejected", state });
+        if (replay.status !== "replayed"
+          || !savedEvidence.some((record) => record.observationId === replay.observationId)) {
+          return Object.freeze({ status: "rejected", reason: replay.reason ?? replay.status, state });
         }
         const replayInterface = describeCustodyLedgerObservationInterface(replay.state);
         const replayState = Object.freeze({
-          ...state.firstNearState,
-          phase: custodyLedgerFirstNearDispatchPhases.acknowledgement,
-          activeGroup: "observation_statement",
+          phase: custodyLedgerSecondNearDispatchPhases.recordedReplay,
           ownerMessage: replayInterface.primary,
           interface: replayInterface,
           controls: Object.freeze([]),
           observationState: replay.state,
           focusIntent: replay.state.focusIntent,
         });
-        state = normalState("sc03_near_acknowledgement", "ready", replay.state, replayState);
+        state = normalState(
+          "sc03_near_second_acknowledgement",
+          "ready",
+          replay.state,
+          replayState,
+          savedEvidence,
+        );
         return Object.freeze({
           status: "replayed",
           observationId: replay.observationId,
           state,
-          save: saveFor("sc03_near_first", savedEvidence),
+          save: saveFor("sc03_near_second", savedEvidence),
         });
       }
 

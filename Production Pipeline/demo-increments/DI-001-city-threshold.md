@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-004 second-near demo reload
+
+- **Disposition:** `DEMO RELOADED — RP002-P1-004 RESOLVED / W3 NEXT`. The normal one-ID group now displays one Recorded/replay-only action and two literal Available peer actions. Exactly one fresh remaining action adds its matching second ID and exact Scene statement, displays literal System `2 of 3`, and returns to a two-Recorded/one-Available group.
+- **Recovery/save boundary:** all six first/second prefixes and seven modalities pass; the first record stays byte-stable. Recorded replay, wrong/duplicate/combined/ambiguous/private/stale/forged/Tour input, evidence return, route return, and exact zero/one/two-ID save/resume are deterministic and zero credit. The one visible third Available control remains deliberately unactivatable; no `SC-03-20+`, comparison, learning, completion, or RP-003+ content is live.
+- **Presentation:** explicit text, not color, carries Recorded/Available state. The immutable first-person photoreal civic master, crop, responsive reflow, heading-first/first-incomplete focus, reduced-motion equivalence, and `>=44px` controls remain unchanged.
+- **Validation/reload:** focused **64/64** and normal-route **18/18**, full **470/470**, RP-002 validator, production build, preflight **26**, and complete **105.5s** E2E pass with every emitted gate true, `credits:true`, and `runtimeErrors:false`. Incidental QA PNGs were restored. Port `4173` serves `index-VF6buc7f.js` / `index-BZS4KKH0.css`; the civic source hash remains `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+- **W3:** review only the reloaded one-ID/second-acknowledgement/two-ID presentation. Preserve gameplay, save, focus, first-person, responsive, privacy, Tour, no-credit/no-authority, and no-third-observation boundaries; open a finding only for a reproduced visual defect.
+
 ## 2026-07-17 coordinator release — RP-002 one near observation
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / ONE NEAR OBSERVATION ACCEPTED.` The normal path now offers three equal first-near controls, records exactly one matching canonical observation, presents the exact Scene/System `1 of 3` acknowledgement, and restores a replay-only one-ID state with separate evidence and route returns.

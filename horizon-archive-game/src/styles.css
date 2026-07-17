@@ -1469,6 +1469,15 @@ h1 {
   min-height: 44px;
 }
 
+.civic-action-state {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72em;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  opacity: 0.82;
+}
+
 .civic-action-groups {
   display: grid;
   gap: 12px;

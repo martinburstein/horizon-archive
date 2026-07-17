@@ -131,6 +131,7 @@ test("explicit near-layer inspection enters only a blank sanitized SC-03-10 grou
       ...nearEntries.map(([, label]) => label),
       custodyLedgerRouteActions.returnAccepted,
     ]);
+    assert.deepEqual(result.state.actionStates, []);
     assert.deepEqual(result.state.observationState.observationEvidence, []);
     assert.deepEqual(result.state.observationState.finalizedObservationIds, []);
     assert.equal(result.state.observationState.progress.near, 0);
@@ -284,8 +285,15 @@ test("RETURN TO EVIDENCE, close/reload, replay, and separate route return preser
   assert.equal(resumed.getState().statusMessage, null);
   assert.deepEqual(resumed.getState().observationEvidence.map((record) => record.observationId), ["later_stewardship"]);
   assert.deepEqual(resumed.getState().availableActions, [
+    custodyLedgerObservationActions.fixed_trace,
     custodyLedgerObservationActions.later_stewardship,
+    custodyLedgerObservationActions.outlined_gap,
     custodyLedgerRouteActions.returnAccepted,
+  ]);
+  assert.deepEqual(resumed.getState().actionStates.map(({ label, status }) => ({ label, status })), [
+    { label: custodyLedgerObservationActions.fixed_trace, status: "available" },
+    { label: custodyLedgerObservationActions.later_stewardship, status: "replay" },
+    { label: custodyLedgerObservationActions.outlined_gap, status: "available" },
   ]);
   assert.equal(resumed.getState().focusIntent.target, "rp002-arrival-heading");
   assertNoDeltaOrCredit(resumed.getState(), 1);
@@ -319,7 +327,7 @@ test("RETURN TO EVIDENCE, close/reload, replay, and separate route return preser
   assertNoDeltaOrCredit(returned.state);
 });
 
-test("wrong, duplicate, combined, ambiguous, stale, forged, private, Tour, and second-observation input fail closed", () => {
+test("wrong, duplicate, combined, ambiguous, stale, forged, private, and Tour input fail closed", () => {
   const variants = [
     { action: "UNKNOWN" },
     { stale: true },
@@ -348,16 +356,174 @@ test("wrong, duplicate, combined, ambiguous, stale, forged, private, Tour, and s
   assert.equal(duplicate.status, "duplicate_suppressed");
   assert.deepEqual(duplicate.state.observationEvidence.map((record) => record.observationId), ["fixed_trace"]);
 
-  const oneId = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
-  const second = oneId.dispatch(intent(
+});
+
+test("all six first-second prefixes and seven modalities add exactly one byte-stable second near record", () => {
+  for (const [firstId, firstLabel] of nearEntries) {
+    for (const [secondId, secondLabel] of nearEntries.filter(([id]) => id !== firstId)) {
+      for (const activationKind of activationKinds) {
+        const first = blankController().dispatch(intent(
+          firstLabel,
+          "pointer",
+          `rp002-second-prefix-first-${firstId}-${secondId}-${activationKind}`,
+        ));
+        const firstRecord = JSON.stringify(first.save.observationEvidence);
+        const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
+        const second = controller.dispatch(intent(
+          secondLabel,
+          activationKind,
+          `rp002-second-prefix-${firstId}-${secondId}-${activationKind}`,
+        ));
+        assert.equal(second.status, "recorded", `${firstId}->${secondId}/${activationKind}`);
+        assert.equal(second.observationId, secondId);
+        assert.equal(second.state.checkpoint, "sc03_near_second_acknowledgement");
+        assert.deepEqual(second.state.sceneStatement, custodyLedgerObservationStatements[secondId]);
+        assert.deepEqual(second.state.statusMessage, {
+          owner: "SYSTEM // EXPEDITION STATE",
+          text: custodyLedgerObservationInterfaceCopy.partialNear(2),
+        });
+        assert.deepEqual(second.state.availableActions, [
+          custodyLedgerObservationControls.returnToEvidence.label,
+          custodyLedgerRouteActions.returnAccepted,
+        ]);
+        assert.equal(second.save.checkpoint, "sc03_near_second");
+        assert.equal(second.save.observationEvidence.length, 2);
+        assert.equal(JSON.stringify(second.save.observationEvidence[0]), firstRecord);
+        assert.deepEqual(second.save.observationEvidence.map((record) => record.observationId), [firstId, secondId]);
+        assertNoDeltaOrCredit(second.state, 2);
+      }
+    }
+  }
+});
+
+test("two-ID return, close/reload, and getSave restore two Recorded actions plus one Available without acknowledgement replay", () => {
+  const first = blankController().dispatch(intent(
     custodyLedgerObservationActions.outlined_gap,
-    "touch",
-    "rp002-second-forbidden",
+    "pointer",
+    "rp002-two-id-first",
   ));
-  assert.equal(second.status, "rejected");
-  assert.equal(oneId.getState().checkpoint, "sc03_near_first");
-  assert.deepEqual(oneId.getState().observationEvidence.map((record) => record.observationId), ["fixed_trace"]);
-  assertNoDeltaOrCredit(oneId.getState(), 1);
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "keyboard_enter",
+    "rp002-two-id-second",
+  ));
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+  assert.equal(resumed.getState().checkpoint, "sc03_near_second");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.deepEqual(resumed.getState().observationEvidence.map((record) => record.observationId), ["outlined_gap", "fixed_trace"]);
+  assert.equal(resumed.getState().actionStates.filter(({ status }) => status === "replay").length, 2);
+  assert.equal(resumed.getState().actionStates.filter(({ status }) => status === "available").length, 1);
+  assert.deepEqual(resumed.getSave(), second.save);
+  const returned = resumed.dispatch(intent(
+    custodyLedgerObservationControls.returnToEvidence.label,
+    "screen_reader",
+    "rp002-two-id-return-evidence",
+  ));
+  assert.equal(returned.status, "returned_to_evidence");
+  assert.deepEqual(returned.save, second.save);
+  assertNoDeltaOrCredit(returned.state, 2);
+  const routeReturn = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save }).dispatch(intent(
+    custodyLedgerRouteActions.returnAccepted,
+    "switch",
+    "rp002-two-id-route-return",
+  ));
+  assert.equal(routeReturn.status, "returned");
+  assert.equal(routeReturn.state.checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(routeReturn.state);
+});
+
+test("two-ID Recorded actions replay idempotently while the third Available action remains unactivatable", () => {
+  const first = blankController().dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "pointer",
+    "rp002-two-replay-first",
+  ));
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "touch",
+    "rp002-two-replay-second",
+  ));
+  for (const recordedLabel of [custodyLedgerObservationActions.fixed_trace, custodyLedgerObservationActions.later_stewardship]) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+    const replay = controller.dispatch(intent(
+      recordedLabel,
+      "speech",
+      `rp002-two-replay-${recordedLabel.replace(/[^A-Za-z0-9._:-]/g, "_")}`,
+    ));
+    assert.equal(replay.status, "replayed");
+    assert.deepEqual(replay.save, second.save);
+    assert.deepEqual(replay.state.observationEvidence.map((record) => record.observationId), ["fixed_trace", "later_stewardship"]);
+    assertNoDeltaOrCredit(replay.state, 2);
+  }
+  const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save });
+  const third = controller.dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "switch",
+    "rp002-third-stays-closed",
+  ));
+  assert.equal(third.status, "rejected");
+  assert.equal(controller.getState().checkpoint, "sc03_near_second");
+  assert.deepEqual(controller.getState().observationEvidence.map((record) => record.observationId), ["fixed_trace", "later_stewardship"]);
+  assertNoDeltaOrCredit(controller.getState(), 2);
+});
+
+test("two-ID save sanitation accepts only two canonical near records and rejects private, forged, duplicate, or third evidence", () => {
+  const first = blankController().dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "pointer",
+    "rp002-two-save-first",
+  ));
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "pointer",
+    "rp002-two-save-second",
+  ));
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, second.save, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), second.save);
+  const [recordA, recordB] = second.save.observationEvidence;
+  for (const invalid of [
+    { ...second.save, privateNotes: "PRIVATE" },
+    { ...second.save, observationEvidence: [recordA] },
+    { ...second.save, observationEvidence: [recordA, recordA] },
+    { ...second.save, observationEvidence: [recordA, { ...recordB, observationId: "forged" }] },
+    { ...second.save, observationEvidence: [...second.save.observationEvidence, recordB] },
+    { ...second.save, checkpoint: "SC-03-20" },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
+});
+
+test("unsafe second-observation intents fail closed on the byte-stable verified first record", () => {
+  const unsafe = [
+    { action: "UNKNOWN" },
+    { stale: true },
+    { forged: true },
+    { multiHit: true },
+    { tourDerived: true },
+    { actions: [custodyLedgerObservationActions.later_stewardship, custodyLedgerObservationActions.outlined_gap] },
+    { candidateSemanticIds: ["rp002.sc03_10.later_stewardship", "rp002.sc03_10.outlined_gap"] },
+    { privateNotes: "PRIVATE-SECOND" },
+  ];
+  for (const [index, override] of unsafe.entries()) {
+    const first = blankController().dispatch(intent(
+      custodyLedgerObservationActions.fixed_trace,
+      "pointer",
+      `rp002-unsafe-second-first-${index}`,
+    ));
+    const before = JSON.stringify(first.save.observationEvidence);
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
+    const clean = intent(
+      custodyLedgerObservationActions.later_stewardship,
+      "pointer",
+      `rp002-unsafe-second-${index}`,
+    );
+    const result = controller.dispatch({ ...clean, ...override });
+    assert.equal(result.status, "rejected");
+    assert.equal(controller.getState().checkpoint, "sc03_near_first");
+    assert.equal(JSON.stringify(controller.getState().observationEvidence[0]), before);
+    assert.doesNotMatch(JSON.stringify(controller.getState()), /PRIVATE-SECOND/);
+    assertNoDeltaOrCredit(controller.getState(), 1);
+  }
 });
 
 test("one-ID save sanitation accepts only the allowlisted canonical record and legacy blank saves", () => {
@@ -422,14 +588,18 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
   assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
   assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
+  assert.match(normalRoute, /createCustodyLedgerSecondNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);
   assert.match(normalRoute, /custodyLedgerHotspotRegistry/);
   assert.match(arrival, /data-observation-count/);
+  assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
+  assert.match(arrival, /AVAILABLE/);
   assert.match(arrival, /Recorded Scene statement/);
   assert.match(arrival, /Separate route return/);
   assert.match(app, /advanceCustodyLedgerNormalRoute/);
   assert.match(app, /custodyLedgerRouteView/);
   assert.match(app, /"recorded", "replayed", "returned_to_evidence"/);
+  assert.match(app, /"sc03_near_second"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

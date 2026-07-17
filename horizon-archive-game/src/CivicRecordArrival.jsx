@@ -10,7 +10,8 @@ import {
 export function CivicRecordArrival({ routeState, onAction }) {
   const headingRef = useRef(null);
   const atNearObservation = routeState.boardId === "SC-03-10";
-  const hasObservation = routeState.observationEvidence?.length === 1;
+  const observationCount = routeState.observationEvidence?.length ?? 0;
+  const hasObservation = observationCount > 0;
   const heading = atNearObservation ? "Near Exposed Layers" : "Civic Record District";
   const artRegistration = atNearObservation
     ? "SC-03-10-registered-continuity-hook"
@@ -29,6 +30,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
     const primary = action === custodyLedgerRouteActions.continueProtected
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
       || (atNearObservation && action !== routeState.routeReturnAction);
+    const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
     return (
       <button
         className={primary ? "primary-action" : "secondary-action"}
@@ -38,6 +40,11 @@ export function CivicRecordArrival({ routeState, onAction }) {
         onClick={(event) => onAction(action, event)}
       >
         {action}
+        {actionState && (
+          <span className="civic-action-state" data-action-status={actionState.status}>
+            {actionState.status === "replay" ? "RECORDED // REPLAY ADDS NO EVIDENCE" : "AVAILABLE"}
+          </span>
+        )}
       </button>
     );
   }
@@ -84,7 +91,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
             <p>
               {atNearObservation
                 ? hasObservation
-                  ? "One bounded Scene fact is retained. It grants no learning evidence, mastery, exam credit, access, or city change."
+                  ? `${observationCount === 1 ? "One bounded Scene fact is" : "Two bounded Scene facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
             </p>
