@@ -1162,3 +1162,10 @@
 - **Files changed:** `src/MeasuredHorizonProtectedJourney.js`, `test/measuredHorizonProtectedJourney.test.js`, RP-012 packet, scoreboard, pipeline maps/queues, and this log.
 - **Validation:** focused Node suite `5/5` PASS; full suite/build/leakage remain coordinator gates. App/main/routes/storage/art/live Demo were not changed.
 - **Exact W1 handoff:** play the oldest accepted live-demo increment from its documented baseline and report only the earliest exact defect or missing transition. Do not treat protected RP-012 as routable or reveal ending content.
+# 2026-07-17 — Working Coder W2: RP002-P1-010 blank PY-009 entry
+
+- **Mode / verdict:** `bug-repair`; `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`.
+- **Work completed:** Integrated one explicit `OPEN UNFINISHED WORK IMAGE` transition from exact five-record blank `SC-03-30` into the existing Custody Ledger scaffold. Strict sanitized Structured Packet and Responsible AI prerequisites are required; the resulting primary has locked source fields, two empty expedition fields, all six checks false, no submission/result, and deterministic resume/fail-closed downgrade.
+- **Recovery/safety:** Seven modalities normalize through a one-hit intent. Missing, forged, private, Tour-derived, repeated, passive, stale, or malformed entry fails closed. Five observation bytes, evidence/route returns, privacy clearing, offline/no-authority/no-exam-guarantee, invariant world, null deltas, and no successor remain exact.
+- **Validation:** focused `93/93`; full `565/565`; production build PASS. Port `4173` now serves `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
+- **Exact W3 handoff:** review only accepted blank local comparison plus the newly reachable blank Custody Ledger work image at representative desktop and narrow layouts. Check hierarchy, locked-versus-blank field legibility, action truthfulness, target sizing, reflow, focus, and first-person world continuity. Do not request submission/scoring or later content in this pass.

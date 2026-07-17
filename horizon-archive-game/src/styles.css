@@ -1499,6 +1499,22 @@ h1 {
   border-top: 1px solid #6f7684;
 }
 
+.custody-ledger-work-image {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #6f7684;
+  background: #0d111a;
+}
+
+.custody-ledger-work-image h2 { margin: 4px 0 10px; font-size: 1rem; }
+.custody-ledger-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 0; }
+.custody-ledger-fields > div { min-width: 0; padding: 7px; border: 1px solid #38404e; }
+.custody-ledger-fields dt { font-size: 0.72em; letter-spacing: 0.08em; text-transform: uppercase; }
+.custody-ledger-fields dd { margin: 4px 0 0; overflow-wrap: anywhere; font-family: "Courier New", monospace; }
+.custody-ledger-fields [data-field-state="blank"] { border-style: dashed; }
+
+.canonical-game-frame[data-canonical-layout="narrow"] .custody-ledger-fields { grid-template-columns: 1fr; }
+
 .city-overlay {
   position: absolute;
   z-index: 20;

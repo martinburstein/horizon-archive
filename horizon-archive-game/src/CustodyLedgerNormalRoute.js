@@ -39,8 +39,11 @@ import {
   describeCustodyLedgerObservationInterface,
 } from "./CustodyLedgerObservation.js";
 import {
+  advanceCustodyLedgerPrerequisite,
   CUSTODY_LEDGER_OBSERVATION_ACTION,
   CUSTODY_LEDGER_BOARD_ID,
+  createCustodyLedgerScaffoldFromVerifiedRouteBoundary,
+  getCustodyLedgerOwnershipMessage,
   custodyLedgerLocalComparisonBlankMessage,
   custodyLedgerObservationStages,
   recordCustodyLedgerObservation,
@@ -49,6 +52,7 @@ import {
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
+export const CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION = "OPEN UNFINISHED WORK IMAGE";
 
 const allowedCheckpoints = new Set([
   "city_threshold",
@@ -62,6 +66,7 @@ const allowedCheckpoints = new Set([
   "sc03_far_first",
   "sc03_far_complete",
   "sc03_local_comparison_blank",
+  "sc03_python_primary_blank",
 ]);
 const privateKeys = new Set([
   "privateNotes", "workingSource", "selections", "prose", "feedback", "credentials",
@@ -211,7 +216,7 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
           ? !thirdEvidence
         : value.checkpoint === "sc03_far_first"
           ? !firstFarEvidence
-        : ["sc03_far_complete", "sc03_local_comparison_blank"].includes(value.checkpoint)
+        : ["sc03_far_complete", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(value.checkpoint)
           ? !completeEvidence
         : value.observationEvidence != null)) {
     return null;
@@ -232,7 +237,7 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
           ? thirdEvidence
         : value.checkpoint === "sc03_far_first"
           ? firstFarEvidence
-        : ["sc03_far_complete", "sc03_local_comparison_blank"].includes(value.checkpoint)
+        : ["sc03_far_complete", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(value.checkpoint)
           ? completeEvidence
         : null,
     successor: null,
@@ -261,14 +266,14 @@ function saveFor(checkpoint, observationEvidence = null) {
           ? thirdEvidence
         : checkpoint === "sc03_far_first"
           ? firstFarEvidence
-        : ["sc03_far_complete", "sc03_local_comparison_blank"].includes(checkpoint)
+        : ["sc03_far_complete", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(checkpoint)
           ? completeEvidence
         : null,
     successor: null,
   });
 }
 
-function normalState(checkpoint, status = "ready", observationState = null, dispatchState = null, persistedEvidence = null) {
+function normalState(checkpoint, status = "ready", observationState = null, dispatchState = null, persistedEvidence = null, learningState = null) {
   const atArrival = checkpoint === "sc03_arrival";
   const atOverview = checkpoint === "sc03_survey_overview";
   const atBlank = checkpoint === "sc03_near_blank";
@@ -285,6 +290,7 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
   const atFarFirst = checkpoint === "sc03_far_first";
   const atFarComplete = checkpoint === "sc03_far_complete";
   const atLocalComparisonBlank = checkpoint === "sc03_local_comparison_blank";
+  const atPythonPrimaryBlank = checkpoint === "sc03_python_primary_blank";
   const atNear = atBlank || atAcknowledgement || atSecondAcknowledgement
     || atThirdAcknowledgement || atFirst || atSecond || atComplete;
   const atFar = atFarBlank || atFarAcknowledgement || atFarFirst || atFarComplete;
@@ -318,6 +324,8 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
           ? "All five bounded observations are restored. No event or acknowledgement was replayed."
         : atLocalComparisonBlank
           ? custodyLedgerLocalComparisonBlankMessage.text
+        : atPythonPrimaryBlank
+          ? getCustodyLedgerOwnershipMessage(learningState?.activeMessageKey).text
         : atFarBlank
           ? safeObservation?.ownerMessage?.text ?? "Inspect each exposed condition deliberately. Visibility and orientation alone record no evidence."
           : "The verified expedition record preserves one reversible civic route.";
@@ -344,13 +352,17 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
               ? [...farActions, custodyLedgerObservationControls.openLocalComparison.label]
               : farActions), custodyLedgerRouteActions.returnAccepted]
         : atLocalComparisonBlank
+          ? [CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, custodyLedgerObservationControls.returnToEvidence.label, custodyLedgerRouteActions.returnAccepted]
+        : atPythonPrimaryBlank
           ? [custodyLedgerObservationControls.returnToEvidence.label, custodyLedgerRouteActions.returnAccepted]
         : [custodyLedgerRouteActions.enter];
   return Object.freeze({
     status,
     checkpoint,
-    boardId: atNear ? "SC-03-10" : atFar ? "SC-03-20" : atLocalComparisonBlank ? CUSTODY_LEDGER_BOARD_ID : atArrival || atOverview ? "SC-03-00" : "SC-02-50",
-    owner: atLocalComparisonBlank
+    boardId: atNear ? "SC-03-10" : atFar ? "SC-03-20" : atLocalComparisonBlank || atPythonPrimaryBlank ? CUSTODY_LEDGER_BOARD_ID : atArrival || atOverview ? "SC-03-00" : "SC-02-50",
+    owner: atPythonPrimaryBlank
+      ? getCustodyLedgerOwnershipMessage(learningState?.activeMessageKey).owner
+      : atLocalComparisonBlank
       ? custodyLedgerLocalComparisonBlankMessage.owner
       : atObservation
       ? dispatchState?.ownerMessage?.owner ?? custodyLedgerRouteObservationOwners.systemSession
@@ -365,14 +377,16 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
       ? dispatchState?.interface?.status ?? null
       : null,
     focusIntent: Object.freeze({
-      group: atLocalComparisonBlank
+      group: atPythonPrimaryBlank
+        ? "python_primary_blank"
+        : atLocalComparisonBlank
         ? "local_comparison_blank"
         : atObservation ? dispatchState?.focusIntent?.group ?? (atFar ? "far_observations" : "near_observations") : "route_transition",
       target: atArrival
         ? custodyLedgerRouteActions.continueProtected
         : atOverview
           ? CUSTODY_LEDGER_NEAR_DETAIL_ACTION
-          : atObservation || atLocalComparisonBlank
+          : atObservation || atLocalComparisonBlank || atPythonPrimaryBlank
             ? "rp002-arrival-heading"
             : custodyLedgerRouteActions.enter,
     }),
@@ -398,6 +412,11 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
             { ...custodyLedgerObservationControls.openLocalComparison, status: "available", minWidthCssPx: 44, minHeightCssPx: 44 },
           ]
         : atLocalComparisonBlank
+          ? [
+            { label: CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, status: "available", minWidthCssPx: 44, minHeightCssPx: 44 },
+            { ...custodyLedgerObservationControls.returnToEvidence, status: "available", minWidthCssPx: 44, minHeightCssPx: 44 },
+          ]
+        : atPythonPrimaryBlank
           ? [{ ...custodyLedgerObservationControls.returnToEvidence, status: "available", minWidthCssPx: 44, minHeightCssPx: 44 }]
         : []).map((control) => Object.freeze({
       label: control.label,
@@ -430,6 +449,23 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
         nextFocusIntent: Object.freeze({
           group: "local_comparison_blank",
           target: custodyLedgerObservationControls.returnToEvidence.label,
+        }),
+      }),
+    } : atPythonPrimaryBlank ? {
+      learningState: Object.freeze({
+        phase: learningState.phase,
+        activeMessageKey: learningState.activeMessageKey,
+        prerequisiteStatus: learningState.prerequisiteStatus,
+        pythonForm: learningState.pythonForm,
+        scoringEnabled: learningState.scoringEnabled,
+        campaignCommitEnabled: learningState.campaignCommitEnabled,
+        sourceFields: Object.freeze({ ...learningState.sourceFields }),
+        expeditionFields: Object.freeze({ ...learningState.expeditionFields }),
+        pythonChecks: Object.freeze({ ...learningState.pythonChecks }),
+        unfinishedWorkImage: Object.freeze({
+          label: learningState.unfinishedWorkImage.label,
+          sourceFields: Object.freeze({ ...learningState.unfinishedWorkImage.sourceFields }),
+          expeditionFields: Object.freeze({ ...learningState.unfinishedWorkImage.expeditionFields }),
         }),
       }),
     } : {}),
@@ -501,6 +537,20 @@ export function createCustodyLedgerNormalRouteIntent(action, activationKind, eve
       boardId: "SC-03-20",
       action,
       transition: "open_local_comparison_to_blank",
+      explicit: true,
+      activationKind,
+      eventToken,
+    });
+  }
+  if (action === CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION) {
+    return Object.freeze({
+      packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
+      version: CUSTODY_LEDGER_NORMAL_ROUTE_VERSION,
+      mode: "campaign",
+      owner: custodyLedgerRouteOwners.pilot,
+      boardId: CUSTODY_LEDGER_BOARD_ID,
+      action,
+      transition: "open_blank_python_primary",
       explicit: true,
       activationKind,
       eventToken,
@@ -641,6 +691,27 @@ function localComparisonReturnIntentIsExact(request) {
     && request.saveIntent !== true
     && request.tourDerived !== true
     && !Array.isArray(request.actions)
+    && !containsPrivateContent(request);
+}
+
+function pythonPrimaryIntentIsExact(request) {
+  const exactKeys = [
+    "action", "activationKind", "boardId", "eventToken", "explicit", "mode",
+    "owner", "packetId", "transition", "version",
+  ];
+  return request && typeof request === "object"
+    && Object.keys(request).sort().join("|") === exactKeys.sort().join("|")
+    && request.packetId === CUSTODY_LEDGER_ROUTE_PACKET_ID
+    && request.version === CUSTODY_LEDGER_NORMAL_ROUTE_VERSION
+    && request.mode === "campaign"
+    && request.owner === custodyLedgerRouteOwners.pilot
+    && request.boardId === CUSTODY_LEDGER_BOARD_ID
+    && request.action === CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION
+    && request.transition === "open_blank_python_primary"
+    && request.explicit === true
+    && custodyLedgerRouteActivationKinds.includes(request.activationKind)
+    && typeof request.eventToken === "string"
+    && /^[A-Za-z0-9._:-]{8,128}$/.test(request.eventToken)
     && !containsPrivateContent(request);
 }
 
@@ -916,7 +987,7 @@ function returnToAccepted(predecessor, request) {
   return dispatcher.getState().phase === custodyLedgerRoutePhases.accepted ? dispatcher.getState() : null;
 }
 
-function restoredStateFor(checkpoint, predecessor, observationEvidence = null) {
+function restoredStateFor(checkpoint, predecessor, observationEvidence = null, prerequisiteEvidence = null) {
   if (checkpoint === "sc03_far_blank") {
     const farBlank = blankFarObservationFromCompletedNear(observationEvidence);
     return farBlank
@@ -940,6 +1011,16 @@ function restoredStateFor(checkpoint, predecessor, observationEvidence = null) {
     return complete
       ? normalState("sc03_local_comparison_blank", "ready", null, null, observationEvidence)
       : unavailableState();
+  }
+  if (checkpoint === "sc03_python_primary_blank") {
+    const complete = boundedCompleteObservationEvidence(observationEvidence);
+    const scaffold = createCustodyLedgerScaffoldFromVerifiedRouteBoundary(predecessor);
+    const learningState = advanceCustodyLedgerPrerequisite(scaffold, prerequisiteEvidence);
+    return complete && learningState.phase === "python_primary"
+      ? normalState("sc03_python_primary_blank", "ready", null, null, complete, learningState)
+      : complete
+        ? normalState("sc03_local_comparison_blank", "ready", null, null, complete)
+        : unavailableState();
   }
   if (!["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete"].includes(checkpoint)) {
     return normalState(checkpoint);
@@ -979,6 +1060,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
           restored?.checkpoint ?? "city_threshold",
           predecessor,
           restored?.observationEvidence ?? null,
+          options.prerequisiteEvidence ?? null,
         );
   const consumedTokens = new Set();
 
@@ -992,7 +1074,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
           ? "sc03_far_complete"
           : state.checkpoint, state.checkpoint === "sc03_near_first"
         ? state.observationEvidence[0]
-        : ["sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement", "sc03_local_comparison_blank"].includes(state.checkpoint)
+        : ["sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(state.checkpoint)
           ? state.observationEvidence
           : null)
       : null,
@@ -1056,7 +1138,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
         return Object.freeze({ status: "advanced", state, save: saveFor("sc03_near_blank") });
       }
 
-      if (["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_near_third_acknowledgement", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement", "sc03_local_comparison_blank"].includes(state.checkpoint)) {
+      if (["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_near_third_acknowledgement", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(state.checkpoint)) {
         if (request?.action === custodyLedgerRouteActions.returnAccepted) {
           if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
           state = normalState("city_threshold");
@@ -1065,6 +1147,23 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
 
         if (state.checkpoint === "sc03_local_comparison_blank") {
           const evidence = boundedCompleteObservationEvidence(state.observationEvidence);
+          if (request?.action === CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION) {
+            const scaffold = createCustodyLedgerScaffoldFromVerifiedRouteBoundary(predecessor);
+            const learningState = advanceCustodyLedgerPrerequisite(scaffold, options.prerequisiteEvidence);
+            if (!evidence
+              || !pythonPrimaryIntentIsExact(request)
+              || containsPrivateContent(options.prerequisiteEvidence)
+              || learningState.phase !== "python_primary") {
+              return Object.freeze({ status: "rejected", reason: "python_primary_prerequisites_incomplete", state });
+            }
+            state = normalState("sc03_python_primary_blank", "ready", null, null, evidence, learningState);
+            return Object.freeze({
+              status: "entered_python_primary",
+              reason: "blank_python_primary_entered",
+              state,
+              save: saveFor("sc03_python_primary_blank", evidence),
+            });
+          }
           if (!evidence || !localComparisonReturnIntentIsExact(request)) {
             return Object.freeze({ status: "rejected", reason: "local_comparison_blank_closed", state });
           }
@@ -1077,6 +1176,19 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
             status: "returned_to_evidence",
             state,
             save: saveFor("sc03_far_complete", evidence),
+          });
+        }
+
+        if (state.checkpoint === "sc03_python_primary_blank") {
+          const evidence = boundedCompleteObservationEvidence(state.observationEvidence);
+          if (!evidence || !localComparisonReturnIntentIsExact(request)) {
+            return Object.freeze({ status: "rejected", reason: "python_primary_submission_not_integrated", state });
+          }
+          state = normalState("sc03_local_comparison_blank", "ready", null, null, evidence);
+          return Object.freeze({
+            status: "returned_to_evidence",
+            state,
+            save: saveFor("sc03_local_comparison_blank", evidence),
           });
         }
 

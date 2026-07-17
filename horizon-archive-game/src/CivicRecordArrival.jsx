@@ -7,6 +7,7 @@ import {
 } from "./CivicActionAccessibility.js";
 import {
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+  CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   custodyLedgerRouteActions,
   custodyLedgerRouteOwners,
 } from "./CustodyLedgerNormalRoute.js";
@@ -16,6 +17,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
+  const atPythonPrimary = routeState.checkpoint === "sc03_python_primary_blank";
   const atObservation = atNearObservation || atFarObservation;
   const observationCount = routeState.observationEvidence?.length ?? 0;
   const hasObservation = observationCount > 0;
@@ -23,6 +25,8 @@ export function CivicRecordArrival({ routeState, onAction }) {
     ? "Near Exposed Layers"
     : atFarObservation
       ? "Scale Echo and Closed Boundary"
+      : atPythonPrimary
+        ? "Custody Ledger"
       : atLocalComparison
         ? "Local Comparison"
       : "Civic Record District";
@@ -46,6 +50,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
       : custodyLedgerRouteOwners.pilot;
     const primary = action === custodyLedgerRouteActions.continueProtected
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
+      || action === CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION
       || ((atObservation || atLocalComparison) && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
     const isInert = actionState?.status === "inert";
@@ -81,8 +86,10 @@ export function CivicRecordArrival({ routeState, onAction }) {
           ? "SC-03-10-detail-pending"
           : atFarObservation
             ? "SC-03-20-detail-pending"
+            : atPythonPrimary
+              ? "SC-03-30-python-primary-blank"
             : atLocalComparison
-              ? "SC-03-30-interface-pending"
+              ? "SC-03-30-local-comparison"
             : undefined}
         data-observation-count={routeState.observationEvidence?.length ?? 0}
       >
@@ -115,11 +122,34 @@ export function CivicRecordArrival({ routeState, onAction }) {
                 {routeState.statusMessage.text}
               </p>
             )}
+            {atPythonPrimary && routeState.learningState && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-work-heading">
+                <p className="eyebrow">SYSTEM // EXPEDITION SESSION</p>
+                <h2 id="custody-ledger-work-heading">{routeState.learningState.unfinishedWorkImage.label}</h2>
+                <dl className="custody-ledger-fields">
+                  {Object.entries(routeState.learningState.sourceFields).map(([key, value]) => (
+                    <div key={key} data-field-state="locked">
+                      <dt>{key.replaceAll("_", " ")}</dt>
+                      <dd>{value === null ? "None" : String(value)}</dd>
+                    </div>
+                  ))}
+                  {Object.keys(routeState.learningState.expeditionFields).map((key) => (
+                    <div key={key} data-field-state="blank">
+                      <dt>{key.replaceAll("_", " ")}</dt>
+                      <dd aria-label={`${key.replaceAll("_", " ")} blank`}>—</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="civic-observation-status">Blank primary loaded. Submission and scoring are not active in this increment.</p>
+              </section>
+            )}
             <p>
               {atObservation
                 ? hasObservation
                   ? `${observationCount} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
+                : atPythonPrimary
+                  ? "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
                 : atLocalComparison
                   ? "Five bounded Scene facts remain retained. This blank local boundary grants no learning evidence, attempt, hint, confidence, mastery, exam credit, save eligibility, access, or city change."
                 : "Arrival and orientation record no observation or learning evidence. The physical city remains unchanged."}
@@ -130,8 +160,10 @@ export function CivicRecordArrival({ routeState, onAction }) {
               ? "Near evidence actions"
               : atFarObservation
                 ? "Far evidence actions"
+                : atPythonPrimary
+                  ? "Blank Python primary actions"
                 : atLocalComparison
-                  ? "Blank local comparison actions"
+                  ? "Local comparison actions"
                 : "Civic route actions"}>
               {routeActions.map(renderAction)}
             </div>

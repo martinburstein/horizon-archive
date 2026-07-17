@@ -1,5 +1,9 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working repair — RP002-P1-010
+
+Normal integration now reaches only the blank PY-009 primary through explicit `OPEN UNFINISHED WORK IMAGE` after strict five-record and prerequisite verification. The surface contains locked source fields, two empty expedition fields, six false checks, reversible returns, allowlisted replay-free resume, and no submission/result or later exposure. Focused `93/93`, full `565/565`, and build pass.
+
 ## 2026-07-17 Working finding — RP002-P1-010
 
 Accepted blank `SC-03-30` has no normal action into the protected Custody Ledger prerequisite/PY-009 scaffold. W2 may integrate only one explicit zero-credit, fail-closed transition to a genuinely blank strict primary while preserving five-record bytes, returns, privacy, accessibility, offline/no-authority, invariant world, and all later locks.

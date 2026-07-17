@@ -8,6 +8,7 @@ import {
 import {
   CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
+  CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
@@ -17,6 +18,17 @@ import {
   sanitizeCustodyLedgerNormalRouteSave,
   writeCustodyLedgerNormalRoute,
 } from "../src/CustodyLedgerNormalRoute.js";
+import {
+  responsibleAIDimensions,
+  responsibleAIExercise,
+  responsibleAIPrimaryScenarios,
+  responsibleAITransferScenarios,
+} from "../src/responsibleAIExercise.js";
+import {
+  structuredPacketChecks,
+  structuredPacketExercise,
+  structuredPacketExplanationDimensions,
+} from "../src/structuredPacketExercise.js";
 import {
   custodyLedgerObservationActions,
   custodyLedgerObservationControls,
@@ -115,6 +127,29 @@ function completeFarSave(prefix = "rp002-far-complete") {
     "touch",
     `${prefix}-second`,
   )).save;
+}
+
+function completedPrerequisites() {
+  return {
+    structuredPacketEvidence: {
+      exerciseId: structuredPacketExercise.exercise_id,
+      checkCorrectness: {
+        primary: Object.fromEntries(structuredPacketChecks.map((id) => [id, true])),
+        transfer: Object.fromEntries(structuredPacketChecks.map((id) => [id, true])),
+        explanation: Object.fromEntries(structuredPacketExplanationDimensions.map((id) => [id, true])),
+      },
+      masteryStatus: "mastered",
+    },
+    responsibleAIEvidence: {
+      exerciseId: responsibleAIExercise.exercise_id,
+      dimensionCorrectness: Object.fromEntries([
+        ...responsibleAIPrimaryScenarios,
+        ...responsibleAITransferScenarios,
+        { id: "closed_note_explanation" },
+      ].map(({ id }) => [id, Object.fromEntries(responsibleAIDimensions.map((dimension) => [dimension, true]))])),
+      masteryStatus: "mastered",
+    },
+  };
 }
 
 function memoryStorage(initial = {}) {
@@ -972,15 +1007,24 @@ test("exact five-record completion enters only blank SC-03-30 across all seven m
       target: "rp002-arrival-heading",
     });
     assert.deepEqual(result.state.availableActions, [
+      CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
       custodyLedgerObservationControls.returnToEvidence.label,
       custodyLedgerRouteActions.returnAccepted,
     ]);
-    assert.deepEqual(result.state.actionStates, [{
-      label: custodyLedgerObservationControls.returnToEvidence.label,
-      status: "available",
-      minWidthCssPx: 44,
-      minHeightCssPx: 44,
-    }]);
+    assert.deepEqual(result.state.actionStates, [
+      {
+        label: CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
+        status: "available",
+        minWidthCssPx: 44,
+        minHeightCssPx: 44,
+      },
+      {
+        label: custodyLedgerObservationControls.returnToEvidence.label,
+        status: "available",
+        minWidthCssPx: 44,
+        minHeightCssPx: 44,
+      },
+    ]);
     assert.deepEqual(result.state.localComparisonState, {
       packetId: "RP-002",
       boardId: "SC-03-30",
@@ -1000,6 +1044,67 @@ test("exact five-record completion enters only blank SC-03-30 across all seven m
     assertNoDeltaOrCredit(result.state, 5);
     assert.doesNotMatch(JSON.stringify(result.state), /python_primary|python_transfer|rai_primary|learnerSource|answers|attemptCount|hintLevel|confidence|mastered|save bounded comparison|RP-003/i);
   }
+});
+
+test("strict prerequisites open only a blank PY-009 primary across all seven modalities", () => {
+  const complete = completeFarSave("rp002-python-primary");
+  const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "pointer",
+    "rp002-python-primary-local",
+  )).save;
+  const evidenceBytes = JSON.stringify(local.observationEvidence);
+  for (const activationKind of activationKinds) {
+    const controller = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: local,
+      prerequisiteEvidence: completedPrerequisites(),
+    });
+    const result = controller.dispatch(intent(
+      CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
+      activationKind,
+      `rp002-python-primary-${activationKind}`,
+    ));
+    assert.equal(result.status, "entered_python_primary");
+    assert.equal(result.state.checkpoint, "sc03_python_primary_blank");
+    assert.equal(result.state.learningState.phase, "python_primary");
+    assert.equal(result.state.learningState.pythonForm, "primary");
+    assert.equal(result.state.learningState.unfinishedWorkImage.label, "UNFINISHED WORK IMAGE");
+    assert.deepEqual(result.state.learningState.expeditionFields, { classification: "", owner: "" });
+    assert.ok(Object.values(result.state.learningState.pythonChecks).every((value) => value === false));
+    assert.equal(JSON.stringify(result.save.observationEvidence), evidenceBytes);
+    assertNoDeltaOrCredit(result.state, 5);
+    assert.doesNotMatch(JSON.stringify(result.state), /attemptCount|hintLevel|confidence|python_primary_result|rai_primary|RP-003/);
+  }
+});
+
+test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
+  const complete = completeFarSave("rp002-python-primary-restore");
+  const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "pointer",
+    "rp002-python-primary-restore-local",
+  )).save;
+  const open = (prerequisiteEvidence = completedPrerequisites()) => createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: local,
+    prerequisiteEvidence,
+  });
+  assert.equal(open().dispatch(intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "pointer", "rp002-python-primary-open")).status, "entered_python_primary");
+  assert.equal(open(null).dispatch(intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "pointer", "rp002-python-primary-missing")).status, "rejected");
+  assert.equal(open({ ...completedPrerequisites(), privateNotes: "PRIVATE" }).dispatch({
+    ...intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "pointer", "rp002-python-primary-private"),
+    learnerSource: "PRIVATE",
+  }).status, "rejected");
+
+  const entered = open().dispatch(intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "keyboard_enter", "rp002-python-primary-save"));
+  assert.deepEqual(sanitizeCustodyLedgerNormalRouteSave(entered.save, predecessor), entered.save);
+  const restored = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: entered.save, prerequisiteEvidence: completedPrerequisites() });
+  assert.equal(restored.getState().checkpoint, "sc03_python_primary_blank");
+  assert.equal(restored.getState().sceneStatement, null);
+  assert.equal(restored.getState().statusMessage, null);
+  assert.deepEqual(restored.getSave(), entered.save);
+  assert.equal(createCustodyLedgerNormalRouteController({ predecessor, restoredSave: entered.save }).getState().checkpoint, "sc03_local_comparison_blank");
 });
 
 test("blank local comparison resumes without replay and returns separately to evidence or route", () => {
@@ -1542,7 +1647,9 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /SC-03-30-registered-continuity-hook/);
   assert.match(arrival, /SC-03-10-detail-pending/);
   assert.match(arrival, /SC-03-20-detail-pending/);
-  assert.match(arrival, /SC-03-30-interface-pending/);
+  assert.match(arrival, /SC-03-30-local-comparison/);
+  assert.match(arrival, /SC-03-30-python-primary-blank/);
+  assert.match(arrival, /UNFINISHED WORK IMAGE|unfinishedWorkImage\.label/);
   assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
@@ -1575,7 +1682,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /"sc03_local_comparison_blank"/);
   assert.match(normalRoute, /open_local_comparison_to_blank/);
   assert.match(normalRoute, /blank_entry/);
-  assert.doesNotMatch(arrival, /python_primary|python_transfer|rai_primary|SAVE BOUNDED COMPARISON/);
+  assert.doesNotMatch(arrival, /python_transfer|rai_primary|SAVE BOUNDED COMPARISON/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 increment — RP002-P1-010 resolved
+
+- `OPEN UNFINISHED WORK IMAGE` now enters only blank strict PY-009 primary after verified five-record and strict prerequisite evidence.
+- Seven modalities, one-hit suppression, fail-closed invalid/private/Tour input, byte-stable observation retention, blank resume, missing-prerequisite downgrade, both returns, and all no-credit/no-authority boundaries pass.
+- Focused `93/93`; full `565/565`; build/HTTP PASS on `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
+- W3 reviews the blank work-image presentation; submission/result and every later boundary remain closed.
+
 ## 2026-07-17 W1 increment — RP002-P1-010
 
 - Player verdict: `P1 OPEN` at accepted blank `SC-03-30`.

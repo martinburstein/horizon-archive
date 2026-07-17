@@ -888,6 +888,27 @@ export function createCustodyLedgerScaffold(predecessorValue) {
   };
 }
 
+export function createCustodyLedgerScaffoldFromVerifiedRouteBoundary(predecessorValue) {
+  const exactKeys = Object.keys(predecessorValue ?? {}).sort().join("|")
+    === "cityThresholdAnchorRecorded|civicDistrictRouteAvailable|verificationStatus";
+  const predecessorReady = exactKeys
+    && predecessorValue.verificationStatus === "verified"
+    && predecessorValue.cityThresholdAnchorRecorded === true
+    && predecessorValue.civicDistrictRouteAvailable === true;
+  return {
+    packetId: CUSTODY_LEDGER_PACKET_ID,
+    boardId: CUSTODY_LEDGER_BOARD_ID,
+    phase: predecessorReady ? "prerequisite_check" : "predecessor_blocked",
+    activeMessageKey: "prerequisites_incomplete",
+    sourceFields: { ...custodyLedgerSourceFields },
+    expeditionFields: { ...custodyLedgerExpeditionFields },
+    scoringEnabled: false,
+    campaignCommitEnabled: false,
+    continuation: CITY_THRESHOLD_CONTINUATION,
+    cityStateDelta: null,
+  };
+}
+
 function normalizeCustodyLedgerScaffold(state) {
   const primaryReady = state?.phase === "python_primary"
     && state?.prerequisiteStatus === "complete"

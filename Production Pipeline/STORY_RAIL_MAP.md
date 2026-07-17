@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-P1-010 W2 RESOLVED — W3 AESTHETIC REVIEW`. One explicit seven-modality action now composes strict prior evidence into only a blank PY-009 primary, with locked source fields, empty expedition fields, all checks false, five-record byte stability, reversible return/resume, privacy clearing, and no later exposure. Focused `93/93`, full `565/565`, build, and served asset checks pass on `index-VcgXSqIg.js` / `index-BQLB1SP6.css`.
+
 Latest Working handoff: `2026-07-17 / RP002-P1-010 W1 P1 — W2 BUG REPAIR NEXT`. Accepted blank `SC-03-30` remains stable, reversible, five-record exact, and zero-credit, but its normal UI exposes only evidence and route returns. No action composes the approved prerequisite/scaffold into a genuinely blank PY-009 primary. Focused `91/91` and HTTP asset checks pass with user storage untouched. W2 owns only that explicit learning-entry seam; submission/result and all later content remain closed.
 
 Latest Advance handoff: `2026-07-17 / RP-012 A4 PUZZLE PASS`. One bounded `MH-00→MH-40` graph locks eligibility, independent cumulative fresh forms, actual-miss-only remediation, blank retry, local ready/not-yet-ready outcome, atomic save, review, return, and credits. Both outcomes are recoverable; world/authority/exam/successor boundaries remain exact. A5 owns one pure protected journey.
