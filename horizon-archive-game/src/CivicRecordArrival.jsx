@@ -21,6 +21,9 @@ export function CivicRecordArrival({
   onPrimaryRetry,
 }) {
   const headingRef = useRef(null);
+  const workHeadingRef = useRef(null);
+  const feedbackHeadingRef = useRef(null);
+  const resultHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
@@ -54,16 +57,30 @@ export function CivicRecordArrival({
   const primaryPhase = primaryInteraction?.phase ?? (atPythonPrimary ? "30-A0" : null);
 
   useLayoutEffect(() => {
-    if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "classification") {
-      classificationRef.current?.focus({ preventScroll: true });
-      return;
-    }
-    if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "owner") {
-      ownerRef.current?.focus({ preventScroll: true });
-      return;
+    if (atPythonPrimary) {
+      if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "classification") {
+        classificationRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "30-A0" && primaryInteraction?.focusIntent?.target === "owner") {
+        ownerRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "30-A0") {
+        workHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "30-A1F") {
+        feedbackHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "30-A2") {
+        resultHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
     }
     headingRef.current?.focus({ preventScroll: true });
-  }, [routeState.checkpoint, primaryPhase, primaryInteraction?.focusIntent?.target]);
+  }, [routeState.checkpoint, atPythonPrimary, primaryPhase, primaryInteraction?.focusIntent?.target]);
 
   function submitPrimary(event) {
     event?.preventDefault?.();
@@ -159,7 +176,9 @@ export function CivicRecordArrival({
             {atPythonPrimary && routeState.learningState && primaryPhase === "30-A0" && (
               <form className="custody-ledger-work-image" aria-labelledby="custody-ledger-work-heading" onSubmit={submitPrimary}>
                 <p className="eyebrow">SYSTEM // EXPEDITION SESSION</p>
-                <h2 id="custody-ledger-work-heading">{routeState.learningState.unfinishedWorkImage.label}</h2>
+                <h2 ref={workHeadingRef} id="custody-ledger-work-heading" tabIndex="-1">
+                  {routeState.learningState.unfinishedWorkImage.label}
+                </h2>
                 <dl className="custody-ledger-fields">
                   {Object.entries(routeState.learningState.sourceFields).map(([key, value]) => (
                     <div key={key} data-field-state="locked">
@@ -197,13 +216,25 @@ export function CivicRecordArrival({
             {atPythonPrimary && primaryPhase === "30-A1F" && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-feedback-heading">
                 <p className="eyebrow">901 TEACHER // FEEDBACK</p>
-                <h2 id="custody-ledger-feedback-heading">Local checks need another pass</h2>
+                <h2 ref={feedbackHeadingRef} id="custody-ledger-feedback-heading" tabIndex="-1">
+                  Local checks need another pass
+                </h2>
                 <ul className="custody-ledger-feedback" aria-label="Checks to review">
-                  {primaryInteraction.feedback.map((item) => (
-                    <li key={item.checkId}>
-                      <span className="eyebrow">{item.owner}</span><br />{item.text}
-                    </li>
-                  ))}
+                  {primaryInteraction.feedback.map((item) => {
+                    const fieldId = `custody-ledger-feedback-field-${item.checkId}`;
+                    const ownerId = `custody-ledger-feedback-owner-${item.checkId}`;
+                    const messageId = `custody-ledger-feedback-message-${item.checkId}`;
+                    return (
+                      <li key={item.checkId} data-feedback-field={item.field}
+                        aria-labelledby={`${fieldId} ${ownerId} ${messageId}`}>
+                        <span id={fieldId} className="custody-ledger-feedback-field">
+                          Field // {item.field}
+                        </span><br />
+                        <span id={ownerId} className="eyebrow">{item.owner}</span><br />
+                        <span id={messageId}>{item.text}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <p className="civic-observation-status">Submitted work was cleared. Retry begins with two genuinely blank expedition fields.</p>
                 <button className="primary-action" type="button" onClick={retryPrimary}>RETRY BLANK</button>
@@ -212,7 +243,9 @@ export function CivicRecordArrival({
             {atPythonPrimary && primaryPhase === "30-A2" && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-result-heading">
                 <p className="eyebrow">{primaryInteraction.owner}</p>
-                <h2 id="custody-ledger-result-heading">Provisional translation</h2>
+                <h2 ref={resultHeadingRef} id="custody-ledger-result-heading" tabIndex="-1">
+                  Provisional translation
+                </h2>
                 <dl className="custody-ledger-fields">
                   {Object.entries(primaryInteraction.sourceFields).map(([key, value]) => (
                     <div key={key} data-field-state="locked">

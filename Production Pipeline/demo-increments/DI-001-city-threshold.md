@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — RP002-AESTH-006 resolved
+
+- **Disposition:** `RESOLVED — COORDINATOR NEXT`. Blank entry, failed submission, and current-attempt `6/6` now focus the active System, Teacher, and Suit headings respectively; those headings remain outside the tab order.
+- **Association/recovery:** every existing answer-free Teacher item renders and programmatically associates its exact failed field. `RETRY BLANK` preserves controller-selected first-failed editable-field focus.
+- **Evidence/reload:** focused `51/51`, full `577/577`, production build, and patch integrity pass. Final assets are `index-BCpGPspB.js` / `index-ghzUiZe9.css`. Art, gameplay rules, storage, later learning, world/authority, and successor remain unchanged or closed.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-006 primary focus association
 
 - **Disposition:** `P1 OPEN — W4 NEXT`. The W2 primary seam preserves its unchanged premium world, one-group replacement, literal locked/editable/read-only states, `44px` controls, responsive and forced-color structure, and separate safe returns.

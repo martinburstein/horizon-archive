@@ -1746,3 +1746,18 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(styles, /\.civic-route-return-actions/);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-command-panel[\s\S]*grid-template-columns:\s*1fr/);
 });
+
+test("primary phase replacements focus their active owner and associate failed fields", async () => {
+  const arrival = await readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+
+  assert.match(arrival, /ref=\{workHeadingRef\}[\s\S]*id="custody-ledger-work-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "30-A0"[\s\S]*workHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{feedbackHeadingRef\}[\s\S]*id="custody-ledger-feedback-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "30-A1F"[\s\S]*feedbackHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{resultHeadingRef\}[\s\S]*id="custody-ledger-result-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "30-A2"[\s\S]*resultHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /primaryPhase === "30-A0"[\s\S]*focusIntent\?\.target === "classification"[\s\S]*classificationRef\.current\?\.focus/);
+  assert.match(arrival, /data-feedback-field=\{item\.field\}/);
+  assert.match(arrival, /Field \/\/ \{item\.field\}/);
+  assert.match(arrival, /aria-labelledby=\{`\$\{fieldId\} \$\{ownerId\} \$\{messageId\}`\}/);
+});

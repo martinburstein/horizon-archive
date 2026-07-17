@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W4 — RP002-AESTH-006 resolved
+
+- **Disposition:** `RESOLVED — COORDINATOR FINAL VALIDATION NEXT`.
+- **Accepted delta:** 30-A0, 30-A1F, and 30-A2 now focus their active System, Teacher, and Suit owner headings programmatically without adding tab stops. Existing Teacher feedback renders and semantically associates each exact failed `field`; blank retry still focuses the controller-selected first failed editable field.
+- **Preserved boundary:** visible approved feedback, source/value/check contracts, one-group replacement, art/layout, locked/editable/read-only state, returns, persistence/privacy, Tour/offline/no-authority/no-exam-guarantee, world/null delta, `6/6` gate, and every transfer/explanation/RAI/review/save/completion/RP-003+/successor lock are unchanged.
+- **Evidence:** focused `51/51`; full `577/577`; production build and patch integrity PASS. Final assets: `index-BCpGPspB.js` / `index-ghzUiZe9.css`.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-006 owner/failure focus
 
 - **Verdict:** `RP002-AESTH-006 P1 OPEN — W4 AESTHETIC IMPLEMENTATION NEXT`.
