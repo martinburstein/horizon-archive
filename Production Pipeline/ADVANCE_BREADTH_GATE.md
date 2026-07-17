@@ -1,5 +1,7 @@
 # Advance Breadth and Convergence Gate
 
+Latest coordinator decision: `2026-07-17 / RP-011 PASS — PROMOTED TO WORKING`. Independent focused `15/15`, complete protected chain `124/124`, full `558/558`, RP-011 validator and five canonical forms, production build, accepted-asset identity, leakage/purity/cleanup, patch integrity, full E2E, and responsive live gates confirmed all twelve gates. RP-011 holds strict Working order behind RP-010. RP-012 is the intended ending reservation, so no successor shell or content is seeded; final art, normal integration, Working evidence, readiness verdict, RP-012, and ending work remain closed.
+
 ## Goal
 
 Advance work must become both deep enough to build and broad enough to reach the intended ending. This gate prevents a Rail Packet from accumulating isolated micro-seams without approaching a playable handoff.

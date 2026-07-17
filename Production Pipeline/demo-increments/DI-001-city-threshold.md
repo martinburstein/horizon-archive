@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator — blank local-comparison boundary accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / BLANK SC-03-30 ACCEPTED`.
+- **Release evidence:** full `558/558`, production build, RP-002 through RP-011 curriculum validators, patch integrity, and full title-to-credits E2E passed in `93.5s` with `credits:true` and `runtimeErrors:false`. Incidental regenerated QA PNGs were restored.
+- **Live evidence:** `1920 x 1080` and `390 x 844` title shells had zero overflow and zero warning/error logs. Desktop actions were `48px`; narrow actions were `44px`; the narrow frame used `384.8/390 CSS px`. User storage remained untouched.
+- **Next boundary:** W1 reports only the earliest exact gap toward the still-closed PY-009 primary. RP002-RAI-01, review/save/completion, world/access/authority changes, and RP-003+ remain closed.
+
 ## 2026-07-17 W4 — blank local-comparison verification-only final reload
 
 - **Disposition:** `PASS — NO PRODUCTION CHANGE / COORDINATOR RELEASE VALIDATION NEXT`. W4 reproduced no residual against W3's clean handoff.

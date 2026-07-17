@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator release: RP-002 blank comparison and RP-011 promotion
+
+- **Outcome:** `PASS`. The reversible blank `SC-03-30` local-comparison boundary is accepted in the live Demo; PY-009 and every later RP-002 state remain closed. RP-011 passed all twelve Advance gates and is promoted to the ordered Working backlog behind RP-010; RP-012 remains an undefined ending reservation.
+- **Validation:** full `558/558`, focused RP-002 `44/44`, focused RP-011 `15/15`, protected chain `124/124`, RP-002 through RP-011 validators, production build, patch/leakage/purity/cleanup/hash/immutable-art checks, and full title-to-credits E2E passed in `93.5s` with `credits:true` and `runtimeErrors:false`. Regenerated QA PNGs were restored.
+- **Live review:** final assets `index-Cj1zShQS.js` / `index-R5wdIep0.css` passed at `1920 x 1080` and `390 x 844` with no overflow or warning/error logs; title actions retained `48px` desktop and `44px` narrow height. User save/storage remained untouched.
+- **Next:** W1 reports only the earliest exact gap from accepted blank SC-03-30 toward the still-closed PY-009 primary. No RP002-RAI-01, review/save/completion, RP-003+, RP-011 live integration, RP-012, or ending work is authorized by this release.
+
 ## 2026-07-17 — Coder W4: RP002-P1-009 verification-only final reload
 
 - **Mode/verdict:** `aesthetic-polish` / `PASS — CLEAN W3 VERIFIED; NO PRODUCTION CHANGE; FINAL DEMO RELOADED / COORDINATOR NEXT`. W3 opened no finding, and fresh W4 reproduction found no exact visual, assistive, responsive, crop, hierarchy, focus-intent, stale-announcement, or city-response residual that authorized implementation.

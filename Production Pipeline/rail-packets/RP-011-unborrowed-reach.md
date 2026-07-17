@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 HANDOFF`
+- Status: `PROMOTED TO WORKING — COORDINATOR PASS`
 - Target chapter/location: Phase IV capstone continuation / unfamiliar operating reach beyond the Counterfield margin
 - Target demo horizon: tenth future slice after the accepted RP-001 boundary; directly after RP-010
 - Route order: 11
@@ -288,8 +288,8 @@ Hiding/reopening, record navigation, phase replacement, world presentation, visi
 - Existing seams integrated or consolidated: retained RP-007/RP-008/RP-009/RP-010 records, provenance, bounded support, counterevidence, ambiguity, unavailability, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline become one independent-record/reconciliation premise rather than new isolated lore seams.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness verdict, RP-012, native categories, shared identity/topology/chronology/synchronization, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
 - New module or artifact integration consumer: `Concept Art Book/scenes/SC-12-unborrowed-reach.md` is the single A2 scene/production authority for later A3/A4/A5 consumption; it authorizes no runtime or final art.
-- Breadth verdict: `GATE REVIEW — A5 HANDOFF`.
-- Next contiguous packet seed readiness: `NO — RP-012 remains ending-reserved until coordinator Gate Review explicitly promotes RP-011`.
+- Breadth verdict: `PROMOTED TO WORKING — COORDINATOR PASS`.
+- Next contiguous packet seed readiness: `NO — RP-012 is the intended ending reservation and remains undefined`.
 - Exact next action in one sentence: coordinator independently verifies the complete RP-011 protected evidence bundle and records promotion, REVISE, or HOLD without defining RP-012 or the ending.
 
 ## Advance Handoff Gate
@@ -299,8 +299,12 @@ Hiding/reopening, record navigation, phase replacement, world presentation, visi
 - Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
 - Coder smoke-test result: `PASS — focused 15/15; protected chain 124/124; full 554/554; validator/forms/build/isolation pass`
-- Readiness: `GATE REVIEW — A5 HANDOFF`
-- Required revision: none identified by A5; coordinator independently verifies every gate.
+- Readiness: `READY FOR ORDERED WORKING — QUEUED BEHIND RP-010`
+- Required revision: none; coordinator independently verified every gate.
+
+### Coordinator disposition — 2026-07-17
+
+`PASS — PROMOTED TO WORKING`. Focused `15/15`, complete protected chain `124/124`, full `558/558`, RP-011 validator and five canonical forms, build/asset identity, leakage/purity/cleanup/patch integrity, complete E2E, and live responsive release gates passed. Final art, normal integration, browser persistence, Working evidence, readiness verdict, RP-012, and ending work remain closed.
 
 ### Exact coordinator Gate Review handoff
 
