@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — result dismissal integrated
+
+- **Disposition:** `RESOLVED — RP002-P1-012 / W3 AESTHETIC REVIEW NEXT`.
+- **Runtime:** normal App now composes the existing protected dismissal authority from exact accepted `30-A2`. One explicit native action keeps the result until intent, then atomically replaces it with canonical carry-free blank `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`.
+- **Boundary:** neutral source literals are exact; `classification` and `owner` are blank/editable; fresh owner heading receives programmatic focus; no transfer submit/scoring/feedback/result or later state exists. Result/fresh state and event tokens are not persisted; reload returns to the accepted blank-primary checkpoint.
+- **Validation/reload:** focused `114/114`, full `586/586`, build, HTTP `200`, exact served markers, and safe title reload pass. Candidate assets: `index-JnbDlM0E.js` / `index-ghzUiZe9.css`.
+- **W3:** inspect only hierarchy, field-state legibility, focus, target size, responsive/zoom, forced-color, reduced-motion, and association across this one owner replacement. Preserve art, behavior, storage, and all later locks.
+
 ## 2026-07-17 Working W1 — result dismissal blocker
 
 - **Disposition:** `P1 OPEN — RP002-P1-012 / W2 BUG REPAIR NEXT`.

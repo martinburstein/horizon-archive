@@ -50,6 +50,7 @@ import {
   sanitizeCustodyLedgerObservationState,
 } from "./custodyLedgerExercise.js";
 import { createCustodyLedgerPrimaryInteraction } from "./CustodyLedgerPrimaryInteraction.js";
+import { createCustodyLedgerPrimaryResultDismissal } from "./CustodyLedgerPrimaryResultDismissal.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -69,6 +70,23 @@ export function createCustodyLedgerNormalPrimaryInteraction(routeState, predeces
         predecessor,
         learningState: routeState.learningState,
       },
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalPrimaryResultDismissal(routeState, primaryResult, predecessor) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(primaryResult?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(primaryResult?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerPrimaryResultDismissal({
+      primaryResult,
+      learningState: routeState.learningState,
     });
   } catch {
     return null;

@@ -12,6 +12,14 @@ import {
   custodyLedgerRouteOwners,
 } from "./CustodyLedgerNormalRoute.js";
 import { CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS } from "./CustodyLedgerPrimaryInteraction.js";
+import { CUSTODY_LEDGER_CLEAR_RESULT_ACTION } from "./CustodyLedgerPrimaryResultDismissal.js";
+
+function formatCustodyLedgerValue(value) {
+  if (value === null) return "None";
+  if (value === true) return "True";
+  if (value === false) return "False";
+  return String(value);
+}
 
 export function CivicRecordArrival({
   routeState,
@@ -19,11 +27,13 @@ export function CivicRecordArrival({
   onAction,
   onPrimarySubmit,
   onPrimaryRetry,
+  onPrimaryDismiss,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
   const feedbackHeadingRef = useRef(null);
   const resultHeadingRef = useRef(null);
+  const freshHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
@@ -74,8 +84,12 @@ export function CivicRecordArrival({
         feedbackHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
-      if (primaryPhase === "30-A2") {
+      if (primaryPhase === "30-A2" || primaryPhase === "DR-00") {
         resultHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "DR-20") {
+        freshHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -183,7 +197,7 @@ export function CivicRecordArrival({
                   {Object.entries(routeState.learningState.sourceFields).map(([key, value]) => (
                     <div key={key} data-field-state="locked">
                       <dt>{key.replaceAll("_", " ")}</dt>
-                      <dd>{value === null ? "None" : String(value)}</dd>
+                      <dd>{formatCustodyLedgerValue(value)}</dd>
                     </div>
                   ))}
                   <div data-field-state="editable">
@@ -240,7 +254,7 @@ export function CivicRecordArrival({
                 <button className="primary-action" type="button" onClick={retryPrimary}>RETRY BLANK</button>
               </section>
             )}
-            {atPythonPrimary && primaryPhase === "30-A2" && (
+            {atPythonPrimary && (primaryPhase === "30-A2" || primaryPhase === "DR-00") && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-result-heading">
                 <p className="eyebrow">{primaryInteraction.owner}</p>
                 <h2 ref={resultHeadingRef} id="custody-ledger-result-heading" tabIndex="-1">
@@ -250,7 +264,7 @@ export function CivicRecordArrival({
                   {Object.entries(primaryInteraction.sourceFields).map(([key, value]) => (
                     <div key={key} data-field-state="locked">
                       <dt>{key.replaceAll("_", " ")}</dt>
-                      <dd>{value === null ? "None" : String(value)}</dd>
+                      <dd>{formatCustodyLedgerValue(value)}</dd>
                     </div>
                   ))}
                   {Object.entries(primaryInteraction.expeditionFields).map(([key, value]) => (
@@ -261,6 +275,46 @@ export function CivicRecordArrival({
                   ))}
                 </dl>
                 <p className="civic-observation-status">All 6 local checks passed for this attempt. This read-only result grants no mastery, access, authority, or city change.</p>
+                <button className="primary-action" type="button" onClick={onPrimaryDismiss}>
+                  {CUSTODY_LEDGER_CLEAR_RESULT_ACTION}
+                </button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "DR-20" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-fresh-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={freshHeadingRef} id="custody-ledger-fresh-heading" tabIndex="-1">
+                  {primaryInteraction.workImageLabel}
+                </h2>
+                <dl className="custody-ledger-fields">
+                  {Object.entries(primaryInteraction.sourceFields).map(([key, value]) => (
+                    <div key={key} data-field-state="locked">
+                      <dt>{key.replaceAll("_", " ")}</dt>
+                      <dd>{formatCustodyLedgerValue(value)}</dd>
+                    </div>
+                  ))}
+                  <div data-field-state="editable">
+                    <dt><label htmlFor="custody-ledger-fresh-classification">classification</label></dt>
+                    <dd>
+                      <input ref={classificationRef} id="custody-ledger-fresh-classification" name="classification"
+                        value={classification} maxLength="40" autoComplete="off" spellCheck="false"
+                        aria-describedby="custody-ledger-fresh-field-help"
+                        onChange={(event) => setClassification(event.target.value)} />
+                    </dd>
+                  </div>
+                  <div data-field-state="editable">
+                    <dt><label htmlFor="custody-ledger-fresh-owner">owner</label></dt>
+                    <dd>
+                      <input ref={ownerRef} id="custody-ledger-fresh-owner" name="owner"
+                        value={fieldOwner} maxLength="40" autoComplete="off" spellCheck="false"
+                        aria-describedby="custody-ledger-fresh-field-help"
+                        onChange={(event) => setFieldOwner(event.target.value)} />
+                    </dd>
+                  </div>
+                </dl>
+                <p id="custody-ledger-fresh-field-help" className="civic-observation-status">
+                  Fresh expedition practice is blank and local. No transfer submission or scoring is active.
+                </p>
               </section>
             )}
             <p>
@@ -269,8 +323,10 @@ export function CivicRecordArrival({
                   ? `${observationCount} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
                 : atPythonPrimary
-                  ? primaryPhase === "30-A2"
+                  ? primaryPhase === "30-A2" || primaryPhase === "DR-00"
                     ? "The suit rendered one provisional local result. No mastery, access, authority, or city change has been recorded."
+                    : primaryPhase === "DR-20"
+                      ? "A carry-free blank fresh practice image is open. No result, mastery, access, authority, or city change has been recorded."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."

@@ -11,6 +11,7 @@ import {
   CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalPrimaryInteraction,
+  createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
@@ -23,6 +24,10 @@ import {
   CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
   CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
 } from "../src/CustodyLedgerPrimaryInteraction.js";
+import {
+  CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+  CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+} from "../src/CustodyLedgerPrimaryResultDismissal.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -1124,6 +1129,83 @@ test("accepted blank normal route composes the protected editable submission wit
   assert.equal(createCustodyLedgerNormalPrimaryInteraction(entered.state, { ...predecessor, verificationStatus: "forged" }), null);
 });
 
+test("accepted provisional result composes one atomic blank fresh-practice dismissal without storage expansion", () => {
+  const complete = completeFarSave("rp002-result-dismiss");
+  const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+    custodyLedgerObservationControls.openLocalComparison.label,
+    "pointer",
+    "rp002-result-dismiss-local",
+  )).save;
+  const route = createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: local,
+    prerequisiteEvidence: completedPrerequisites(),
+  });
+  const entered = route.dispatch(intent(
+    CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
+    "pointer",
+    "rp002-result-dismiss-open",
+  ));
+  const persistedBytes = JSON.stringify(entered.save);
+  const primary = createCustodyLedgerNormalPrimaryInteraction(entered.state, predecessor);
+  const primaryResult = primary.dispatch({
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+    activationKind: "pointer",
+    eventToken: "rp002-result-dismiss-submit",
+    classification: "unknown",
+    fieldOwner: "human_expedition",
+  });
+  assert.equal(primaryResult.status, "provisional_result");
+
+  for (const activationKind of activationKinds) {
+    const dismissal = createCustodyLedgerNormalPrimaryResultDismissal(
+      entered.state,
+      primaryResult.state,
+      predecessor,
+    );
+    assert.ok(dismissal);
+    assert.equal(dismissal.getState().phase, "DR-00");
+    const result = dismissal.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+      activationKind,
+      eventToken: `rp002-result-dismiss-${activationKind}`,
+    });
+    assert.equal(result.status, "fresh_practice_opened");
+    assert.equal(result.replacement, "atomic");
+    assert.equal(result.state.phase, "DR-20");
+    assert.equal(result.state.owner, "SYSTEM // EXPEDITION SESSION");
+    assert.deepEqual(result.state.sourceFields, {
+      condition: "unresolved_interval",
+      source: "deidentified_sensor_log",
+      identity: null,
+      access_requested: false,
+    });
+    assert.deepEqual(result.state.expeditionFields, { classification: "", owner: "" });
+    assert.equal(result.state.transferSubmissionImplemented, false);
+    assert.equal(result.state.transferScoringEnabled, false);
+    assert.equal(result.state.successor, null);
+    assert.equal(JSON.stringify(entered.save), persistedBytes);
+  }
+  assert.equal(createCustodyLedgerNormalPrimaryResultDismissal(
+    { ...entered.state, privateNotes: "PRIVATE" },
+    primaryResult.state,
+    predecessor,
+  ), null);
+  assert.equal(createCustodyLedgerNormalPrimaryResultDismissal(
+    entered.state,
+    { ...primaryResult.state, successor: "RP-003" },
+    predecessor,
+  ), null);
+});
+
 test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
   const complete = completeFarSave("rp002-python-primary-restore");
   const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
@@ -1701,7 +1783,14 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS/);
   assert.match(arrival, /primaryPhase === "30-A1F"/);
   assert.match(arrival, /primaryPhase === "30-A2"/);
+  assert.match(arrival, /primaryPhase === "DR-00"/);
+  assert.match(arrival, /primaryPhase === "DR-20"/);
+  assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
+  assert.match(arrival, /value === false[\s\S]*return "False"/);
   assert.match(app, /createCustodyLedgerNormalPrimaryInteraction/);
+  assert.match(app, /createCustodyLedgerNormalPrimaryResultDismissal/);
+  assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
+  assert.match(app, /onPrimaryDismiss=\{clearCustodyLedgerPrimaryResult\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -1756,6 +1845,9 @@ test("primary phase replacements focus their active owner and associate failed f
   assert.match(arrival, /primaryPhase === "30-A1F"[\s\S]*feedbackHeadingRef\.current\?\.focus/);
   assert.match(arrival, /ref=\{resultHeadingRef\}[\s\S]*id="custody-ledger-result-heading"[\s\S]*tabIndex="-1"/);
   assert.match(arrival, /primaryPhase === "30-A2"[\s\S]*resultHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /primaryPhase === "DR-20"[\s\S]*freshHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /id="custody-ledger-fresh-classification"[\s\S]*name="classification"/);
+  assert.match(arrival, /id="custody-ledger-fresh-owner"[\s\S]*name="owner"/);
   assert.match(arrival, /primaryPhase === "30-A0"[\s\S]*focusIntent\?\.target === "classification"[\s\S]*classificationRef\.current\?\.focus/);
   assert.match(arrival, /data-feedback-field=\{item\.field\}/);
   assert.match(arrival, /Field \/\/ \{item\.field\}/);

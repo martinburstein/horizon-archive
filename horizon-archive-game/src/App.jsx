@@ -13,6 +13,7 @@ import { readVerifiedCityThresholdPredecessor } from "./cityThresholdExercise.js
 import {
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalPrimaryInteraction,
+  createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
@@ -23,6 +24,10 @@ import {
   CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
   CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
 } from "./CustodyLedgerPrimaryInteraction.js";
+import {
+  CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+  CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+} from "./CustodyLedgerPrimaryResultDismissal.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -627,6 +632,7 @@ export function App() {
     : readVerifiedCityThresholdPredecessor(window.localStorage);
   const custodyLedgerRouteEventRef = useRef(0);
   const custodyLedgerPrimaryControllerRef = useRef(null);
+  const custodyLedgerPrimaryDismissalControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -1206,6 +1212,7 @@ export function App() {
     setCustodyLedgerRouteView(result.state);
     setCustodyLedgerPrimaryView(null);
     custodyLedgerPrimaryControllerRef.current = null;
+    custodyLedgerPrimaryDismissalControllerRef.current = null;
     setMode("rp002-arrival");
   }
 
@@ -1231,6 +1238,7 @@ export function App() {
       setCustodyLedgerRouteView(null);
       setCustodyLedgerPrimaryView(null);
       custodyLedgerPrimaryControllerRef.current = null;
+      custodyLedgerPrimaryDismissalControllerRef.current = null;
       setMode("city-threshold-staging");
       return;
     }
@@ -1240,6 +1248,7 @@ export function App() {
     setCustodyLedgerRouteView(result.state);
     setCustodyLedgerPrimaryView(null);
     custodyLedgerPrimaryControllerRef.current = null;
+    custodyLedgerPrimaryDismissalControllerRef.current = null;
   }
 
   function submitCustodyLedgerPrimary(routeState, fields, event) {
@@ -1262,12 +1271,41 @@ export function App() {
       fieldOwner: fields.owner,
     });
     if (!["feedback", "provisional_result"].includes(result.status)) return;
-    setCustodyLedgerPrimaryView(result.state);
+    if (result.status === "feedback") {
+      custodyLedgerPrimaryDismissalControllerRef.current = null;
+      setCustodyLedgerPrimaryView(result.state);
+      return;
+    }
+    const dismissalController = createCustodyLedgerNormalPrimaryResultDismissal(
+      routeState,
+      result.state,
+      predecessor,
+    );
+    if (!dismissalController) return;
+    custodyLedgerPrimaryDismissalControllerRef.current = dismissalController;
+    setCustodyLedgerPrimaryView(dismissalController.getState());
   }
 
   function retryCustodyLedgerPrimary() {
     const result = custodyLedgerPrimaryControllerRef.current?.retryBlank();
-    if (result?.status === "blank_retry") setCustodyLedgerPrimaryView(result.state);
+    if (result?.status === "blank_retry") {
+      custodyLedgerPrimaryDismissalControllerRef.current = null;
+      setCustodyLedgerPrimaryView(result.state);
+    }
+  }
+
+  function clearCustodyLedgerPrimaryResult(event) {
+    if (demoTour || typeof window === "undefined") return;
+    const result = custodyLedgerPrimaryDismissalControllerRef.current?.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken("rp002-primary-result-dismiss"),
+    });
+    if (result?.status === "fresh_practice_opened") setCustodyLedgerPrimaryView(result.state);
   }
 
   function returnToCompletedMeadow() {
@@ -2311,6 +2349,7 @@ export function App() {
         onAction={advanceCustodyLedgerNormalRoute}
         onPrimarySubmit={(fields, event) => submitCustodyLedgerPrimary(routeState, fields, event)}
         onPrimaryRetry={retryCustodyLedgerPrimary}
+        onPrimaryDismiss={clearCustodyLedgerPrimaryResult}
       />
     );
   }

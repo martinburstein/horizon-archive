@@ -1,5 +1,14 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — RP002-P1-012 dismissal repair
+
+- **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`.
+- **Normal integration:** exact accepted `30-A2` now composes the existing protected dismissal authority through a bounded normal-route wrapper. One explicit native button retains the complete result until activation and atomically opens only canonical carry-free blank System fresh practice.
+- **Fresh boundary:** exact neutral `unresolved_interval` / `deidentified_sensor_log` / `None` / `False`, blank editable `classification` / `owner`, owner-heading focus, no submit/scoring control, no carried result/private/Builder/answer content, and no durable expansion.
+- **Preserved:** five observation bytes, exact predecessors, blank-only save/reload, separate returns, privacy/Tour/offline/no-authority/no-exam-guarantee, invariant world/null deltas, and every transfer evaluation/feedback/result or later lock.
+- **Validation:** focused `114/114`; full `586/586`; RP-002 mapping self-test; production build; served HTTP/bundle markers and safe title reload pass on `index-JnbDlM0E.js` / `index-ghzUiZe9.css`.
+- **W3 scope:** presentation review of only the complete-result/dismissal/blank-fresh owner replacement; runtime, art, curriculum, storage, and later learning remain closed.
+
 ## 2026-07-17 Working W1 — RP002-P1-012 result dismissal blocker
 
 - **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`.

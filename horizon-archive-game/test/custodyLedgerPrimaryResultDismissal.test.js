@@ -299,7 +299,7 @@ test("focus and accessibility metadata preserve owner replacement and blank-fiel
   assert.equal(fresh.accessibility.horizontalPageEscape, false);
 });
 
-test("campaign and Tour objects remain byte-stable and no accepted entrypoint imports the seam", async () => {
+test("campaign and Tour objects remain byte-stable while normal integration stays bounded", async () => {
   const campaign = { route: "city_threshold", observations: 5, completion: false };
   const tour = { mode: "demo_tour", cursor: "rp002", noCredit: true };
   const campaignBytes = JSON.stringify(campaign);
@@ -314,8 +314,18 @@ test("campaign and Tour objects remain byte-stable and no accepted entrypoint im
     import("node:fs/promises"),
     import("node:url"),
   ]);
-  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
-    const source = await readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8");
-    assert.doesNotMatch(source, /CustodyLedgerPrimaryResultDismissal|CLEAR RESULT AND OPEN FRESH PRACTICE/);
+  const [app, main, arrival, normalRoute] = await Promise.all([
+    "../src/App.jsx",
+    "../src/main.jsx",
+    "../src/CivicRecordArrival.jsx",
+    "../src/CustodyLedgerNormalRoute.js",
+  ].map((relative) => readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8")));
+  assert.match(app, /createCustodyLedgerNormalPrimaryResultDismissal/);
+  assert.match(app, /CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION/);
+  assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
+  assert.match(normalRoute, /createCustodyLedgerPrimaryResultDismissal/);
+  assert.doesNotMatch(main, /CustodyLedgerPrimaryResultDismissal|CLEAR RESULT AND OPEN FRESH PRACTICE/);
+  for (const source of [app, arrival, normalRoute]) {
+    assert.doesNotMatch(source, /transferSubmissionImplemented\s*=\s*true|transferScoringEnabled\s*=\s*true/);
   }
 });
