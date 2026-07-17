@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — RP-002 third-near clean final reload
+
+- **Disposition:** `PASS — NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`. W3 authorized no visual change and W4 reproduced no exact defect. Runtime, art, CSS, tests, routes, saves, and curriculum remain unchanged from `2633d31`.
+- **Evidence:** focused **85/85**, full **488/488**, RP-002 validator, production build, exact root/JS/CSS/civic HTTP checks, identical source/built civic SHA-256, and patch-integrity checks pass. The immutable `1672 x 941` 24-bit RGB master remains narrow-visible through `display:block; object-fit:cover`; exact Recorded/Available, Scene/System `3 of 3`, disabled dormant comparison, separate return, focus, `>=44px`, wrapping, non-color/reduced-motion, save/recovery, and all no-credit/no-later-exposure contracts remain covered.
+- **Evidence boundary:** the existing browser demo tab could not be safely claimed before timeout. User save/storage remained untouched, so direct valid-predecessor desktop/narrow proof is explicitly deferred to coordinator rather than fabricated. W2's post-change complete **96s** E2E remains current because W3/W4 made no runtime or presentation implementation change.
+- **Final reload:** port `4173` serves `index-Dgq5W_0s.js`, `index-R5wdIep0.css`, and `civic-record-district-arrival-master-v1-BYTUil6H.png` with HTTP `200`.
+- **Coordinator path:** traverse only exact two-ID -> third acknowledgement -> restored three-near/zero-far at representative desktop/narrow, confirm disabled dormant comparison and immutable civic crop/accessibility contracts, then record PASS or one exact residual. Do not activate comparison or expose `SC-03-20`, far evidence, learning, RP-003, or later content.
+
 ## 2026-07-17 W3 — RP-002 third-near dormant-boundary review
 
 - **Disposition:** `NO AESTHETIC FINDING OPENED / W4 ROOT LIVE PROOF NEXT.` Available build, source, art, and focused evidence retain the intended two-ID -> third acknowledgement -> three-near/zero-far dormant boundary without authorizing comparison or later content.
