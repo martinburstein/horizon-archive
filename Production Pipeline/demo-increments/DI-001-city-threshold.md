@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 — RP002-P1-005 third-near finding
+
+- **Disposition:** `BLOCKED — RP002-P1-005 OPEN / W2 BUG REPAIR NEXT.` The accepted two-ID evidence group, both Recorded replays, one visible Available control, evidence return, route return, and two-ID resume remain stable. The normal controller rejects activation of the sole Available action.
+- **Expected/actual:** expected one deliberate activation of the remaining canonical near action to retain both existing records byte-stably, add only the matching third ID/Scene statement, report `Near evidence recorded: 3 of 3. Distant comparison is available; no city state changed.`, and expose only dormant zero-credit `COMPARE SCALE` without entering `SC-03-20`. Actual normal dispatch accepts only either Recorded replay at `sc03_near_second`; the displayed Available action is rejected, so the third-near completion view is unreachable. This is P1 because RP-002 cannot finish its near phase without regressing the accepted two-ID boundary.
+- **Evidence boundary:** the preserved user save remains at early Glass Meadow; W1 did not inspect or overwrite storage and makes no direct two-ID traversal claim. Focused normal-route, protected third-near, hotspot, Tour, and photoreal checks pass **56/56**. The protected authority proves the required third completion while remaining isolated from the normal App route. The preceding coordinator gate covers accepted two-ID presentation, sanitation, resume, return, responsive/44px behavior, immutable first-person art, and zero cross-credit/delta.
+- **W2 acceptance:** normally compose the existing third-near authority into the exact two-Recorded/one-Available group, permit exactly one third observation and exact `3 of 3` acknowledgement, expose dormant but unactivated `COMPARE SCALE`, preserve replay/recovery and allowlisted three-near/zero-far resume, rebuild/reload, and stop before comparison activation, `SC-03-20`, far evidence, learning, completion, or RP-003+ exposure.
+
 ## 2026-07-17 coordinator release — RP-002 two near observations
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / TWO NEAR OBSERVATIONS ACCEPTED.` The normal path preserves one recorded observation, permits exactly one fresh peer observation with the exact Scene/System `2 of 3` acknowledgement, and restores a two-Recorded/one-visible-Available state whose third action remains fail-closed.
