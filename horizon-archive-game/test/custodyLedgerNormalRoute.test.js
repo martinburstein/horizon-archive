@@ -609,19 +609,32 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
     custodyLedgerRouteActions.returnAccepted,
   ]);
   assert.deepEqual(compare.state.actionStates.map(({ label, status }) => ({ label, status })), [
-    { label: custodyLedgerObservationActions.distant_repetition, status: "available" },
-    { label: custodyLedgerObservationActions.closed_boundary, status: "available" },
+    { label: custodyLedgerObservationActions.distant_repetition, status: "inert" },
+    { label: custodyLedgerObservationActions.closed_boundary, status: "inert" },
   ]);
+  assert.ok(compare.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
+    minWidthCssPx >= 44 && minHeightCssPx >= 44
+  )));
   assert.deepEqual(compare.state.observationEvidence, third.save.observationEvidence);
   assertNoDeltaOrCredit(compare.state, 3);
-  const farAttempt = resumed.dispatch(intent(
+  const farBlankBytes = JSON.stringify(resumed.getState().observationEvidence);
+  for (const action of [
     custodyLedgerObservationActions.distant_repetition,
-    "pointer",
-    "rp002-three-resume-far-blocked",
-  ));
-  assert.equal(farAttempt.status, "rejected");
-  assert.equal(farAttempt.reason, "far_observations_not_integrated");
-  assertNoDeltaOrCredit(farAttempt.state, 3);
+    custodyLedgerObservationActions.closed_boundary,
+  ]) {
+    for (const activationKind of activationKinds) {
+      const farAttempt = resumed.dispatch(intent(
+        action,
+        activationKind,
+        `rp002-three-resume-far-blocked-${action.replace(/[^A-Za-z0-9._:-]/g, "_")}-${activationKind}`,
+      ));
+      assert.equal(farAttempt.status, "rejected");
+      assert.equal(farAttempt.reason, "far_observations_not_integrated");
+      assert.equal(farAttempt.state.checkpoint, "sc03_far_blank");
+      assert.equal(JSON.stringify(farAttempt.state.observationEvidence), farBlankBytes);
+      assertNoDeltaOrCredit(farAttempt.state, 3);
+    }
+  }
   const route = resumed.dispatch(intent(
     custodyLedgerRouteActions.returnAccepted,
     "switch",
@@ -927,6 +940,10 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /data-observation-count/);
   assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
   assert.match(arrival, /AVAILABLE/);
+  assert.match(arrival, /INERT \/\/ ZERO CREDIT \/\/ NOT YET ACTIVE/);
+  assert.match(arrival, /aria-disabled=\{isInert \|\| undefined\}/);
+  assert.match(arrival, /disabled=\{isInert\}/);
+  assert.match(arrival, /onClick=\{isInert \? undefined/);
   assert.doesNotMatch(arrival, /DORMANT|isDormant/);
   assert.match(arrival, /Recorded Scene statement/);
   assert.match(arrival, /Separate route return/);

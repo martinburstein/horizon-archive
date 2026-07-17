@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 honest inert far-peer presentation — 2026-07-17
+
+- **Disposition:** `RP002-AESTH-003 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.
+- **Correction:** blank `SC-03-20` preserves exact far labels/order/equal `>=44px` hierarchy, but both unintegrated peers now carry `status=inert`, native disabled and `aria-disabled` semantics, no active handler, and identical persistent `INERT // ZERO CREDIT // NOT YET ACTIVE` text. Separate route return remains enabled and reversible.
+- **Preserved locks:** exact three-near/zero-far entry and resume, byte-stable evidence, System hierarchy, focus, immutable civic art, responsive/forced-color/reduced-motion behavior, sanitation/Tour/privacy/offline/no-authority/no-exam-guarantee, and all zero-credit/no-later rules remain exact. Direct probes across both peers and all seven modalities still fail closed before far evidence.
+- **Validation/build:** normal **24/24**, related **62/62**, full **504/504**, RP-002 validator, build, patch integrity, and complete **112.6s** E2E PASS. Final port `4173` build is `index-ZuUMhMdy.js` / `index-R5wdIep0.css`; immutable civic asset hash remains `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`.
+
 ## Working W2 blank comparison-stage integration — 2026-07-17
 
 - **Disposition:** `RP002-P1-006 RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`.

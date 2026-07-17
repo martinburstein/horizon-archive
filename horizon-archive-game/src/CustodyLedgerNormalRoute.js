@@ -286,7 +286,7 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
       : atThirdAcknowledgement || atComplete
         ? [{ ...custodyLedgerObservationControls.compareScale, status: "available" }]
         : atFarBlank
-          ? farActions.map((label) => ({ label, status: "available", minWidthCssPx: 44, minHeightCssPx: 44 }))
+          ? farActions.map((label) => ({ label, status: "inert", minWidthCssPx: 44, minHeightCssPx: 44 }))
         : []).map((control) => Object.freeze({
       label: control.label,
       status: control.status,

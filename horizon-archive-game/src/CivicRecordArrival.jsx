@@ -39,20 +39,25 @@ export function CivicRecordArrival({ routeState, onAction }) {
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
       || (atObservation && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
+    const isInert = actionState?.status === "inert";
     return (
       <button
         className={primary ? "primary-action" : "secondary-action"}
         type="button"
         key={action}
         aria-label={`${owner} — ${action}`}
-        onClick={(event) => onAction(action, event)}
+        aria-disabled={isInert || undefined}
+        disabled={isInert}
+        onClick={isInert ? undefined : (event) => onAction(action, event)}
       >
         {action}
         {actionState && (
           <span className="civic-action-state" data-action-status={actionState.status}>
             {actionState.status === "replay"
               ? "RECORDED // REPLAY ADDS NO EVIDENCE"
-              : "AVAILABLE"}
+              : isInert
+                ? "INERT // ZERO CREDIT // NOT YET ACTIVE"
+                : "AVAILABLE"}
           </span>
         )}
       </button>

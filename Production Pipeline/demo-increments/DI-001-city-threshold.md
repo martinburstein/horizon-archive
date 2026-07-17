@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — RP002-AESTH-003 honest inert far peers
+
+- **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. The two blank `SC-03-20` far peers preserve stable labels, order, equal primary layout, and `>=44px` metadata while replacing the false enabled/`AVAILABLE` affordance with native disabled, `aria-disabled`, handler-free controls and identical persistent `INERT // ZERO CREDIT // NOT YET ACTIVE` text. Separate route return remains enabled.
+- **Boundary/evidence:** exact three-near -> `COMPARE SCALE` -> blank far transition, System `near=3`/`far=0`, immutable civic world, byte-stable records, heading-first focus, resume/sanitation, responsive/non-color/forced-color/reduced-motion behavior, privacy/Tour/offline/no-authority/no-exam-guarantee, and all zero-credit/no-later locks remain exact. Two peers x seven direct modalities reject without evidence change.
+- **Validation/reload:** normal **24/24**, related presentation **62/62**, full **504/504**, RP-002 self-test, build, patch integrity, and complete **112.6s** E2E PASS with all gates true and no runtime errors. QA PNGs restored. Port `4173` serves `index-ZuUMhMdy.js`, `index-R5wdIep0.css`, and immutable civic asset, all HTTP `200`.
+- **Coordinator:** obtain direct representative desktop/narrow proof without inspecting or altering the user save, then accept or record one exact residual. Confirm both peers are equally inert in native/assistive/non-color semantics and the separately grouped return is enabled.
+
 ## 2026-07-17 W3 — RP002-AESTH-003 blank far-stage false affordance
 
 - **Disposition:** `P1 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT.` The W2 transition to blank `SC-03-20` is functionally bounded and the immutable civic art remains intact, but both contractually inert far peers render as enabled primary buttons with literal `AVAILABLE` state.
