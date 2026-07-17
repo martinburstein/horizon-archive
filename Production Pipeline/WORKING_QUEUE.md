@@ -1,5 +1,7 @@
 # Working Queue
 
+**Latest Advance continuity handoff (RP002-P1-014 / A1):** `PASS — A2 PRESENTATION CONTINUITY NEXT`. The accepted bounded `FT-20C` acknowledgement now has one locked ownership transition: explicit Pilot `OPEN BLANK PYTHON EXPLANATION` -> the existing canonical blank Teacher prompt, with no carried transfer/private work and zero attempt, evidence, save, world, route, authority, RAI, or successor effect. Normal integration is not authorized yet; after A2–A5, W1 will report only the earliest accepted explanation-entry gap.
+
 **Latest coordinator acceptance (RP002-P1-013 / RP002-AESTH-008):** `PASS — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED`. Independent full `598/598`, all `15/15` validators, build, `97.1s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`. Team 2's accepted edge is bounded transfer evidence; next W1 waits for the next complete Advance handoff and then reports only the nearest explanation-entry gap.
 
 **Current W4 result (RP002-AESTH-008):** `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. No W3 finding or reproduced defect required a production edit. Full `598/598`, RP-002 validator, build, HTTP/assets/hashes, clean final title reload, and patch integrity pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`. Coordinator owns independent bounded release validation.

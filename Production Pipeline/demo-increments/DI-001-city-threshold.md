@@ -1,5 +1,7 @@
 # DI-001 — City Threshold protected staging pass
 
+**Latest Advance continuity handoff (RP002-P1-014 / A1):** `PASS — EXPLICIT BLANK-EXPLANATION ENTRY OWNERSHIP LOCKED / A2 NEXT`. The accepted bounded transfer-complete group remains unchanged until one Pilot-owned `OPEN BLANK PYTHON EXPLANATION` intent replaces it with only the existing canonical blank Teacher prompt. Carry-free entry creates no explanation attempt/evidence and no story, save, world, route, access, authority, RAI, RP-003+, or successor effect. DI-001's accepted City Threshold state remains unchanged.
+
 ## 2026-07-17 Coordinator release — transfer evidence accepted
 
 - **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED` on `index-D0-watPG.js` / `index-ghzUiZe9.css`.
