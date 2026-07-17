@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION PASS`
+- Status: `PASS — PROMOTED TO WORKING / COORDINATOR GATE VERIFIED`
 - Target chapter/location: Phase IV capstone opening / immense operating field beyond the Occluded Fold
 - Target demo horizon: ninth future slice after the accepted RP-001 boundary; directly after RP-009
 - Route order: 10
@@ -275,8 +275,8 @@ Phase replacement, observation order, navigation, visibility, focus, scene layou
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness decision, RP-011, native categories, internal topology, shared chronology, synchronized clocks, route unlocks, production art, normal integration, and live Demo exposure.
 - New module or artifact integration consumer: one smallest pure protected `CounterfieldProtectedJourney` caller/harness may consume the frozen RP-010 validator/forms and exact verified RP-009 protected completion; it must remain unimported, non-routable, storage-free outside its in-memory adapter, and absent from accepted bundles.
 - Breadth verdict: `GATE REVIEW — A5 HANDOFF`.
-- Next contiguous packet seed readiness: `NO — RP-011 remains reserved until RP-010 reaches Gate Review or promotion`.
-- Exact next action in one sentence: coordinator independently verifies the complete RP-010 protected evidence bundle and records one PASS, REVISE, or HOLD without normal integration, art, live Demo exposure, or RP-011 work.
+- Next contiguous packet seed readiness: `YES — blank RP-011 shell only; no content authorized`.
+- Exact next action in one sentence: preserve RP-010's strict Working position behind RP-009 while Lore Builder A1 may replace only the blank RP-011 shell with one contiguous bounded surface contract.
 
 ## Advance Handoff Gate
 
@@ -286,6 +286,8 @@ Phase replacement, observation order, navigation, visibility, focus, scene layou
 - Gameplay Master sign-off: `PASS — 2026-07-17`
 - Coder smoke-test result: `PASS — focused 12/12; all 5,040 orders/revisits; frozen authorities and isolation pass`
 - Validation evidence: `RP-002→RP-010 protected chain 109/109; RP-010 self-test; canonical Python 8/8 + 8/8; canonical AI 8/8 + 8/8 + 8/8; full 535/535; build; byte-identical accepted JS/CSS; leakage/purity/cleanup/patch checks — PASS`
+- Coordinator validation: `focused 12/12; complete protected chain 109/109; RP-010 self-test and five canonical forms; full 539/539; production build; byte-identical accepted JS/CSS; leakage/purity/cleanup/patch checks — PASS`.
+- Coordinator disposition: `PROMOTED TO WORKING behind RP-009`; final art, normal integration, browser persistence, live Demo exposure, Working evidence, and release remain later ordered obligations.
 - Readiness: `GATE REVIEW — COORDINATOR DECISION REQUIRED`
 - Required revision: none identified by A5; coordinator independently verifies all twelve gates.
 
