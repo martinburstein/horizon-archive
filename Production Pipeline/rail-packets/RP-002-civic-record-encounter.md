@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## Working W1 comparison-stage entry finding — 2026-07-17
+
+- **Disposition:** `RP002-P1-006 OPEN — W2 BUG REPAIR NEXT`.
+- **Earliest exact gap:** the accepted `sc03_near_complete` / three-near/zero-far view correctly exposes literal disabled `COMPARE SCALE`, but normal dispatch rejects its exact intent with `comparison_dormant`. The approved explicit zero-credit transition to blank `SC-03-20` therefore remains unreachable.
+- **Evidence:** preserved user storage remained untouched; focused normal-route, third-near, observation, hotspot, Tour, and photoreal checks pass **69/69**; root/JS/CSS serve HTTP `200`; accepted JS contains the dormant copy but no `sc03_far_blank` checkpoint. W2 owns only enabled comparison-stage entry, byte-stable three-near retention, zero-far blank/resume/recovery, separate route return, rebuild, and reload. It must not record far evidence, open local comparison, expose learning/completion, or touch RP-003+.
+
 ## Coordinator three-near partial release — 2026-07-17
 
 - **Disposition:** `IN DEMO — PARTIAL / THREE NEAR OBSERVATIONS COORDINATOR PASS`.

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 — RP002-P1-006 comparison-stage entry finding
+
+- **Disposition:** `BLOCKED — RP002-P1-006 OPEN / W2 BUG REPAIR NEXT.` The accepted three-near/zero-far evidence, exact `3 of 3`, acknowledgement-free resume, separate route return, disabled dormant comparison presentation, and all no-credit/no-delta boundaries remain stable.
+- **Expected/actual:** expected one explicit zero-credit `COMPARE SCALE` activation to retain the three near records byte-stably and enter only blank `SC-03-20` with System entry copy, `near=3`, `far=0`, no Scene statement, no far evidence, and deterministic heading-first/first-incomplete focus. Actual the control is natively disabled and normal dispatch returns `comparison_dormant`, leaving `sc03_near_complete` / `SC-03-10` unchanged. This is P1 because the approved second observation stage is unreachable.
+- **Evidence boundary:** the preserved user save remains at early Glass Meadow; W1 did not inspect or modify storage and makes no direct gated traversal claim. Focused normal-route, third-near, observation, hotspot, Tour, and photoreal checks pass **69/69**. Served root/JS/CSS return HTTP `200`; accepted JS contains `COMPARE SCALE` and near-complete copy but no `sc03_far_blank` checkpoint. The preceding coordinator gate covers the accepted three-near presentation, sanitation, resume, responsive/44px behavior, immutable first-person art, and zero cross-credit/delta.
+- **W2 acceptance:** enable only the exact `COMPARE SCALE` transition from verified three-near/zero-far state into one allowlisted blank `SC-03-20` checkpoint, with no evidence write or acknowledgement replay; preserve fail-closed recovery, route return, Tour/privacy/accessibility invariants, rebuild/reload, and stop before any far observation, `OPEN LOCAL COMPARISON`, learning, completion, or RP-003+ exposure.
+
 ## 2026-07-17 coordinator release — RP-002 three near observations
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / THREE NEAR OBSERVATIONS ACCEPTED.` Exactly one third near action now completes the near set across all supported orders/modalities, preserves both prior records, produces the matching Scene statement and literal System `3 of 3`, restores an allowlisted three-near/zero-far state without replay, and exposes only disabled `COMPARE SCALE` marked `DORMANT // ZERO CREDIT // NEXT STAGE NOT ACTIVE` plus a separate route return.
