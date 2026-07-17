@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-006 blank SC-03-20 demo reload
+
+- **Disposition:** `RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. Exact sanitized three-near/zero-far state now exposes enabled literal `COMPARE SCALE`; one explicit fresh activation enters only allowlisted `sc03_far_blank` / `SC-03-20`.
+- **Boundary:** three near records remain byte-stable across all six orders and seven modalities. The blank far group has System expedition-session copy, `near=3`, `far=0`, heading-first/first-incomplete focus, exactly two visible peer actions plus separate route return, no acknowledgement replay, and zero evidence/Scene/learning/mastery/exam/save/world/city/access/external/completion/successor credit. Far actions and local comparison remain unintegrated and fail closed.
+- **Validation/reload:** normal route **24/24**, related RP-002 **59/59**, full **504/504**, RP-002 self-test, build, patch integrity, and complete **112.9s** E2E PASS with every gate true and no runtime errors. Incidental QA PNGs restored. Port `4173` serves `index-C4ORHlkG.js` / `index-R5wdIep0.css`, both HTTP `200`.
+- **Evidence boundary/W3:** browser claim timed out before direct live gated review; user save/storage remained untouched. W3 reviews only restored three-near -> comparison -> blank far at representative desktop/narrow, preserving the immutable first-person master, responsive/accessibility contracts, inert far controls, all zero-credit invariants, and no later exposure.
+
 ## 2026-07-17 W1 — RP002-P1-006 comparison-stage entry finding
 
 - **Disposition:** `BLOCKED — RP002-P1-006 OPEN / W2 BUG REPAIR NEXT.` The accepted three-near/zero-far evidence, exact `3 of 3`, acknowledgement-free resume, separate route return, disabled dormant comparison presentation, and all no-credit/no-delta boundaries remain stable.

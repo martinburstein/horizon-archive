@@ -69,6 +69,24 @@ function blankController() {
   return controller;
 }
 
+function completedNearSave(prefix = "rp002-completed-near") {
+  const first = blankController().dispatch(intent(
+    custodyLedgerObservationActions.fixed_trace,
+    "pointer",
+    `${prefix}-first`,
+  ));
+  const second = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.outlined_gap,
+    "touch",
+    `${prefix}-second`,
+  ));
+  return createCustodyLedgerNormalRouteController({ predecessor, restoredSave: second.save }).dispatch(intent(
+    custodyLedgerObservationActions.later_stewardship,
+    "keyboard_enter",
+    `${prefix}-third`,
+  )).save;
+}
+
 function memoryStorage(initial = {}) {
   const values = new Map(Object.entries(initial));
   return {
@@ -433,7 +451,7 @@ test("two-ID return, close/reload, and getSave restore two Recorded actions plus
   assertNoDeltaOrCredit(routeReturn.state);
 });
 
-test("all six near orders and seven modalities add exactly one third record and expose only dormant comparison", () => {
+test("all six near orders and seven modalities add exactly one third record and enter only blank far comparison", () => {
   const orders = nearEntries.flatMap(([firstId, firstLabel]) => (
     nearEntries.filter(([id]) => id !== firstId).map(([secondId, secondLabel]) => {
       const [thirdId, thirdLabel] = nearEntries.find(([id]) => id !== firstId && id !== secondId);
@@ -474,7 +492,7 @@ test("all six near orders and seven modalities add exactly one third record and 
       ]);
       assert.deepEqual(third.state.actionStates.map(({ label, status }) => ({ label, status })), [{
         label: custodyLedgerObservationControls.compareScale.label,
-        status: "dormant",
+        status: "available",
       }]);
       assert.equal(third.save.checkpoint, "sc03_near_complete");
       assert.deepEqual(third.save.observationEvidence.map((record) => record.observationId), [
@@ -486,10 +504,32 @@ test("all six near orders and seven modalities add exactly one third record and 
       const compare = controller.dispatch(intent(
         custodyLedgerObservationControls.compareScale.label,
         "pointer",
-        `rp002-compare-dormant-${order.firstId}-${order.secondId}-${activationKind}`,
+        `rp002-compare-stage-${order.firstId}-${order.secondId}-${activationKind}`,
       ));
-      assert.equal(compare.status, "rejected");
-      assert.equal(controller.getState().checkpoint, "sc03_near_third_acknowledgement");
+      assert.equal(compare.status, "advanced");
+      assert.equal(compare.reason, "comparison_stage_entered");
+      assert.equal(compare.save.checkpoint, "sc03_far_blank");
+      assert.equal(controller.getState().checkpoint, "sc03_far_blank");
+      assert.equal(controller.getState().boardId, "SC-03-20");
+      assert.equal(controller.getState().owner, "SYSTEM // EXPEDITION SESSION");
+      assert.equal(controller.getState().observationState.phase, "far_observations");
+      assert.equal(controller.getState().observationState.activeGroup, "far_observations");
+      assert.deepEqual(controller.getState().observationState.progress, {
+        near: 3, nearRequired: 3, far: 0, farRequired: 2,
+      });
+      assert.deepEqual(controller.getState().availableActions, [
+        custodyLedgerObservationActions.distant_repetition,
+        custodyLedgerObservationActions.closed_boundary,
+        custodyLedgerRouteActions.returnAccepted,
+      ]);
+      assert.deepEqual(controller.getState().observationEvidence.map((record) => JSON.stringify(record)), [
+        ...before,
+        JSON.stringify(third.save.observationEvidence[2]),
+      ]);
+      assert.deepEqual(
+        controller.getState().observationState.observationEvidence.map((record) => JSON.stringify(record)),
+        controller.getState().observationEvidence.map((record) => JSON.stringify(record)),
+      );
       assertNoDeltaOrCredit(controller.getState(), 3);
     }
   }
@@ -547,7 +587,7 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
   ]);
   assert.deepEqual(resumed.getState().actionStates.map(({ label, status }) => ({ label, status })), [{
     label: custodyLedgerObservationControls.compareScale.label,
-    status: "dormant",
+    status: "available",
   }]);
   assert.deepEqual(resumed.getState().observationEvidence.map((record) => record.observationId), [
     "outlined_gap", "fixed_trace", "later_stewardship",
@@ -559,9 +599,29 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
     "keyboard_space",
     "rp002-three-resume-compare",
   ));
-  assert.equal(compare.status, "rejected");
-  assert.equal(compare.reason, "comparison_dormant");
+  assert.equal(compare.status, "advanced");
+  assert.equal(compare.reason, "comparison_stage_entered");
+  assert.equal(compare.state.checkpoint, "sc03_far_blank");
+  assert.equal(compare.state.boardId, "SC-03-20");
+  assert.deepEqual(compare.state.availableActions, [
+    custodyLedgerObservationActions.distant_repetition,
+    custodyLedgerObservationActions.closed_boundary,
+    custodyLedgerRouteActions.returnAccepted,
+  ]);
+  assert.deepEqual(compare.state.actionStates.map(({ label, status }) => ({ label, status })), [
+    { label: custodyLedgerObservationActions.distant_repetition, status: "available" },
+    { label: custodyLedgerObservationActions.closed_boundary, status: "available" },
+  ]);
+  assert.deepEqual(compare.state.observationEvidence, third.save.observationEvidence);
   assertNoDeltaOrCredit(compare.state, 3);
+  const farAttempt = resumed.dispatch(intent(
+    custodyLedgerObservationActions.distant_repetition,
+    "pointer",
+    "rp002-three-resume-far-blocked",
+  ));
+  assert.equal(farAttempt.status, "rejected");
+  assert.equal(farAttempt.reason, "far_observations_not_integrated");
+  assertNoDeltaOrCredit(farAttempt.state, 3);
   const route = resumed.dispatch(intent(
     custodyLedgerRouteActions.returnAccepted,
     "switch",
@@ -570,6 +630,83 @@ test("three-near zero-far save resumes without acknowledgement replay and route 
   assert.equal(route.status, "returned");
   assert.equal(route.state.checkpoint, "city_threshold");
   assertNoDeltaOrCredit(route.state);
+});
+
+test("comparison boundary rejects wrong, stale, forged, combined, private, Tour, implicit, early, and duplicate attempts", () => {
+  const complete = completedNearSave("rp002-compare-negative");
+  const clean = intent(
+    custodyLedgerObservationControls.compareScale.label,
+    "pointer",
+    "rp002-compare-negative-clean",
+  );
+  const variants = [
+    { action: "WRONG" },
+    { stale: true },
+    { forged: true },
+    { multiHit: true },
+    { actions: [custodyLedgerObservationControls.compareScale.label, custodyLedgerObservationActions.distant_repetition] },
+    { privateNotes: "PRIVATE-COMPARE" },
+    { mode: "demo_tour" },
+    { explicit: false },
+    { owner: "SYSTEM // DEMO TOUR" },
+    { boardId: "SC-03-20" },
+    { transition: "compare_and_record_far" },
+  ];
+  for (const [index, override] of variants.entries()) {
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+    const before = JSON.stringify(controller.getState().observationEvidence);
+    const result = controller.dispatch({ ...clean, eventToken: `rp002-compare-negative-${index}`, ...override });
+    assert.equal(result.status, "rejected");
+    assert.equal(controller.getState().checkpoint, "sc03_near_complete");
+    assert.equal(JSON.stringify(controller.getState().observationEvidence), before);
+    assert.doesNotMatch(JSON.stringify(controller.getState()), /PRIVATE-COMPARE/);
+    assertNoDeltaOrCredit(controller.getState(), 3);
+  }
+
+  const early = createCustodyLedgerNormalRouteController({ predecessor });
+  assert.equal(early.dispatch(clean).status, "rejected");
+  assert.equal(early.getState().checkpoint, "city_threshold");
+  assertNoDeltaOrCredit(early.getState());
+
+  const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+  const repeated = { ...clean, eventToken: "rp002-compare-duplicate-token" };
+  assert.equal(controller.dispatch(repeated).status, "advanced");
+  const duplicate = controller.dispatch(repeated);
+  assert.equal(duplicate.status, "duplicate_suppressed");
+  assert.equal(duplicate.state.checkpoint, "sc03_far_blank");
+  assertNoDeltaOrCredit(duplicate.state, 3);
+});
+
+test("far-blank save is allowlisted only with exact three-near zero-far evidence", () => {
+  const complete = completedNearSave("rp002-far-save");
+  const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+  const advanced = controller.dispatch(intent(
+    custodyLedgerObservationControls.compareScale.label,
+    "screen_reader",
+    "rp002-far-save-compare",
+  ));
+  assert.equal(advanced.status, "advanced");
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, advanced.save, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), advanced.save);
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: advanced.save });
+  assert.equal(resumed.getState().checkpoint, "sc03_far_blank");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.deepEqual(resumed.getSave(), advanced.save);
+  assertNoDeltaOrCredit(resumed.getState(), 3);
+  const [recordA, recordB, recordC] = advanced.save.observationEvidence;
+  for (const invalid of [
+    { ...advanced.save, privateNotes: "PRIVATE" },
+    { ...advanced.save, observationEvidence: [recordA, recordB] },
+    { ...advanced.save, observationEvidence: [recordA, recordB, recordB] },
+    { ...advanced.save, observationEvidence: [recordA, recordB, recordC, {
+      ...recordC,
+      observationId: "distant_repetition",
+      boardId: "SC-03-20",
+    }] },
+    { ...advanced.save, checkpoint: "SC-03-20" },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
 });
 
 test("unsafe third-observation and compare-through-observation input fail closed on exact two-ID evidence", () => {
@@ -776,7 +913,9 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /2026-07-16-civic-record-district-arrival\/civic-record-district-arrival-master-v1\.png/);
   assert.match(arrival, /SC-03-00-civic-record-arrival-v1/);
   assert.match(arrival, /SC-03-10-registered-continuity-hook/);
+  assert.match(arrival, /SC-03-20-registered-continuity-hook/);
   assert.match(arrival, /SC-03-10-detail-pending/);
+  assert.match(arrival, /SC-03-20-detail-pending/);
   assert.doesNotMatch(arrival, /SC-03-00-overview-pending|REGISTERED CONTINUITY HOOK|city-threshold-overview-master/);
   assert.doesNotMatch(styles, /\.civic-record-art-status/);
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
@@ -788,8 +927,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /data-observation-count/);
   assert.match(arrival, /RECORDED \/\/ REPLAY ADDS NO EVIDENCE/);
   assert.match(arrival, /AVAILABLE/);
-  assert.match(arrival, /DORMANT \/\/ ZERO CREDIT \/\/ NEXT STAGE NOT ACTIVE/);
-  assert.match(arrival, /disabled=\{isDormant\}/);
+  assert.doesNotMatch(arrival, /DORMANT|isDormant/);
   assert.match(arrival, /Recorded Scene statement/);
   assert.match(arrival, /Separate route return/);
   assert.match(app, /advanceCustodyLedgerNormalRoute/);
@@ -797,6 +935,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /"recorded", "replayed", "returned_to_evidence"/);
   assert.match(app, /"sc03_near_second"/);
   assert.match(app, /"sc03_near_complete"/);
+  assert.match(app, /"sc03_far_blank"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

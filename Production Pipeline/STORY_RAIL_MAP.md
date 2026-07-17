@@ -6,6 +6,8 @@ This is the surface-safe, ordered map from the accepted live demo to the intende
 
 ## Position summary
 
+- Current Working override: `RP-002 — AESTHETIC REVIEW / RP002-P1-006`. W2 resolved the exact zero-credit `COMPARE SCALE` transition into allowlisted blank `SC-03-20`; W3 reviews only that bounded presentation. Both far actions, local comparison, learning, completion, and RP-003+ remain closed.
+
 - Current Working override: `RP-002 — BUG REPAIR / RP002-P1-006`. W2 owns only the explicit zero-credit `COMPARE SCALE` transition from accepted three-near/zero-far state into blank `SC-03-20`; far evidence and later content remain closed.
 
 - Current Working override: `RP-002 — IN DEMO PARTIAL / THREE NEAR OBSERVATIONS COORDINATOR PASS`. The next W1 owns only the first exact gap toward activating local comparison from the accepted three-near/zero-far boundary.

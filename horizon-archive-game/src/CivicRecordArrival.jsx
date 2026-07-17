@@ -10,12 +10,20 @@ import {
 export function CivicRecordArrival({ routeState, onAction }) {
   const headingRef = useRef(null);
   const atNearObservation = routeState.boardId === "SC-03-10";
+  const atFarObservation = routeState.boardId === "SC-03-20";
+  const atObservation = atNearObservation || atFarObservation;
   const observationCount = routeState.observationEvidence?.length ?? 0;
   const hasObservation = observationCount > 0;
-  const heading = atNearObservation ? "Near Exposed Layers" : "Civic Record District";
+  const heading = atNearObservation
+    ? "Near Exposed Layers"
+    : atFarObservation
+      ? "Scale Echo and Closed Boundary"
+      : "Civic Record District";
   const artRegistration = atNearObservation
     ? "SC-03-10-registered-continuity-hook"
-    : "SC-03-00-civic-record-arrival-v1";
+    : atFarObservation
+      ? "SC-03-20-registered-continuity-hook"
+      : "SC-03-00-civic-record-arrival-v1";
   const routeActions = routeState.availableActions.filter((action) => action !== routeState.routeReturnAction);
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
@@ -29,17 +37,14 @@ export function CivicRecordArrival({ routeState, onAction }) {
       : custodyLedgerRouteOwners.pilot;
     const primary = action === custodyLedgerRouteActions.continueProtected
       || action === CUSTODY_LEDGER_NEAR_DETAIL_ACTION
-      || (atNearObservation && action !== routeState.routeReturnAction);
+      || (atObservation && action !== routeState.routeReturnAction);
     const actionState = routeState.actionStates?.find((candidate) => candidate.label === action);
-    const isDormant = actionState?.status === "dormant";
     return (
       <button
         className={primary ? "primary-action" : "secondary-action"}
         type="button"
         key={action}
         aria-label={`${owner} — ${action}`}
-        aria-disabled={isDormant || undefined}
-        disabled={isDormant}
         onClick={(event) => onAction(action, event)}
       >
         {action}
@@ -47,9 +52,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
           <span className="civic-action-state" data-action-status={actionState.status}>
             {actionState.status === "replay"
               ? "RECORDED // REPLAY ADDS NO EVIDENCE"
-              : isDormant
-                ? "DORMANT // ZERO CREDIT // NEXT STAGE NOT ACTIVE"
-                : "AVAILABLE"}
+              : "AVAILABLE"}
           </span>
         )}
       </button>
@@ -63,7 +66,11 @@ export function CivicRecordArrival({ routeState, onAction }) {
         data-scene="civic-record-district"
         data-board={routeState.boardId}
         data-production-art={artRegistration}
-        data-production-art-hook={atNearObservation ? "SC-03-10-detail-pending" : undefined}
+        data-production-art-hook={atNearObservation
+          ? "SC-03-10-detail-pending"
+          : atFarObservation
+            ? "SC-03-20-detail-pending"
+            : undefined}
         data-observation-count={routeState.observationEvidence?.length ?? 0}
       >
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
@@ -71,7 +78,11 @@ export function CivicRecordArrival({ routeState, onAction }) {
         </p>
         <section
           className="city-world civic-record-world"
-          aria-label={atNearObservation ? "Near exposed layers, bounded observation view" : "Civic Record District arrival overview"}
+          aria-label={atNearObservation
+            ? "Near exposed layers, bounded observation view"
+            : atFarObservation
+              ? "Scale echo and closed boundary, blank distant observation view"
+              : "Civic Record District arrival overview"}
         >
           <img
             className="city-world-plate-native"
@@ -96,7 +107,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
               </p>
             )}
             <p>
-              {atNearObservation
+              {atObservation
                 ? hasObservation
                   ? `${observationCount === 1 ? "One" : observationCount === 2 ? "Two" : "Three"} bounded Scene ${observationCount === 1 ? "fact is" : "facts are"} retained. ${observationCount === 1 ? "It grants" : "They grant"} no learning evidence, mastery, exam credit, access, or city change.`
                   : "This blank view records no Scene fact, learning evidence, mastery, exam credit, or city change."
@@ -104,7 +115,11 @@ export function CivicRecordArrival({ routeState, onAction }) {
             </p>
           </div>
           <div className="civic-action-groups">
-            <div className="city-command-actions" aria-label={atNearObservation ? "Near evidence actions" : "Civic route actions"}>
+            <div className="city-command-actions" aria-label={atNearObservation
+              ? "Near evidence actions"
+              : atFarObservation
+                ? "Far evidence actions"
+                : "Civic route actions"}>
               {routeActions.map(renderAction)}
             </div>
             {returnActions.length > 0 && (

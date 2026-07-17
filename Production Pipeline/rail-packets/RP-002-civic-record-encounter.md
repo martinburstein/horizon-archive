@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 blank comparison-stage integration — 2026-07-17
+
+- **Disposition:** `RP002-P1-006 RESOLVED — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`.
+- **Integrated boundary:** exact sanitized `sc03_near_complete` now permits one explicit fresh `COMPARE SCALE` activation into only allowlisted `sc03_far_blank` / `SC-03-20`. All six near orders and seven modalities preserve the three near records byte-stably, restore System expedition-session copy with `near=3`, `far=0`, heading-first/first-incomplete focus, exactly two visible far peer actions, and separate route return. Both peers remain inert; no far evidence, Scene statement, local comparison, learning, mastery, exam/save credit, world/city/access/external delta, completion, successor, or RP-003+ is reachable.
+- **Recovery/evidence:** wrong, duplicate, stale, forged, combined, private, Tour, implicit, wrong-owner/mode/board/transition, and early comparison attempts fail closed. Exact far-blank save/resume is allowlisted; partial, duplicate, forged, private, contaminated, or far-bearing saves reject without acknowledgement replay.
+- **Validation:** normal route **24/24**, related RP-002 **59/59**, full **504/504**, mapping validator self-test, production build, patch integrity, and complete **112.9s** E2E PASS. Port `4173` serves `index-C4ORHlkG.js` / `index-R5wdIep0.css`; incidental QA regeneration was restored. W3 now reviews only the bounded responsive/aesthetic surface without touching user storage.
+
 ## Working W1 comparison-stage entry finding — 2026-07-17
 
 - **Disposition:** `RP002-P1-006 OPEN — W2 BUG REPAIR NEXT`.
