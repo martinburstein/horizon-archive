@@ -1,5 +1,38 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance continuity maintenance — editable PY-009 ownership boundary
+
+The accepted blank `UNFINISHED WORK IMAGE` now has one surface-safe ownership contract for the next Working seam. This contract clarifies meaning only; it does not reopen the SOLIDIFIED mapping, define interaction mechanics, alter runtime copy, or authorize submission/result exposure by itself.
+
+### Locked surface meaning
+
+1. The four locked source fields are a sanitized expedition transcription derived from the accepted five-observation set and narrowed to the recorded `outlined_gap` condition. They are evidence presented through the suit, not a live Builder record, native self-description, message, invitation, password, or claim about Builder intent.
+2. `classification` and `owner` are the only blank fields. They belong to the human expedition. Editing them annotates the local work image; it does not edit the exposed surface, reveal closed identity-bearing material, send a request, or acquire permission.
+3. The unfinished fragment remains evidence that Python-like notation was ordinary Builder work. The player may recognize and complete the notation, but the fragment does not prove why the Builders used it, who wrote this instance, whether it was addressed to anyone, or how it relates to the Machine.
+4. A submitted attempt is private, temporary expedition work until the existing strict local evaluator returns a result. Failure or remediation is `901 TEACHER` / local-System feedback, never a Builder or city response. No private learner source becomes lore, Scene evidence, or saved expedition canon.
+5. A valid local result may render only the existing suit-owned provisional three-condition record. It confirms that the Pilot updated two human-owned fields without replacing the locked source. It reveals no new Builder fact, identity, purpose, chronology, authority, access, route, world reaction, or successor.
+6. Cancel, return, retry, sanitation, and resume preserve the five recorded Scene facts and invariant city while clearing transient learner work as already specified. Presentation, focus, typing, execution animation, evaluator display, and result reading create no observation or mastery evidence by themselves.
+
+### Owner and state ladder
+
+| Boundary | Visible owner | Surface-safe meaning | Must not imply |
+|---|---|---|---|
+| Blank / editable | `SYSTEM // EXPEDITION SESSION` | A local unfinished work image with locked evidence and two human-expedition blanks | Builder prompt, live terminal request, invitation, access test, or city activity |
+| Attempt under review | `SYSTEM // LOCAL CHECKS` or `901 TEACHER // FEEDBACK` | Local evaluation of temporary learner work | Builder judgment, world response, saved conclusion, or exam prediction |
+| Valid local result | `SUIT // PROVISIONAL TRANSLATION` | A rendered expedition-side record with source preserved | Native translation certainty, closed identity, access, permission, or purpose |
+| Pilot conclusion after the existing full evidence chain | `PILOT // FLIGHT RECORDER` | A bounded human interpretation owned by the expedition | Builder fact, Machine answer, authority, or route change |
+
+### Mystery and production locks
+
+- Preserve the exact runtime copy authorities already exported by `custodyLedgerExercise.js`; no later role may invent a second narrative authority or silently rewrite those strings.
+- Keep the existing five Scene statements, source-field values, blank field names, provisional result meaning, and `None` / `False` distinction unchanged.
+- Keep transfer, explanation, responsible-AI work, save/completion, external action, RP-003+, and every post-ending successor closed until separately reached through the accepted Working order.
+- The world plate, city, Builder works, route, clocks, and physical state remain invariant. The central mystery, Builder disappearance, Machine nature, native purpose, and closed identity remain unresolved.
+
+### Exact Storyboarder A2 handoff
+
+`Storyboarder Agent: perform one bounded presentation-continuity pass for only the accepted blank PY-009 primary and its nearest editable-attempt/local-result seam. Preserve the existing world plate and first-person hierarchy. Board the smallest responsive state sequence that makes four ownership changes unmistakable without changing copy: SYSTEM // EXPEDITION SESSION blank/editable work image -> SYSTEM // LOCAL CHECKS or 901 TEACHER local review -> SUIT // PROVISIONAL TRANSLATION valid local result -> the already-defined later PILOT conclusion only when its full chain is actually reached. Keep the four source fields visibly locked and evidence-derived, the two expedition fields visibly editable and human-owned, private source transient, and returns separate. Do not depict a Builder prompt, live city request, password, invitation, permission, access, world reaction, saved conclusion, exam result, native translation certainty, closed identity, Machine answer, successor, or new lore. Treat focus, typing, submission animation, evaluation display, result reading, reflow, and Tour as zero Scene and zero mastery evidence. Specify presentation hierarchy, responsive/narrow containment, focus order, non-color state meaning, reduced-motion equivalence, and >=44 x 44 CSS px controls only; do not assign curriculum, change cases/answers/thresholds, implement code, generate final art, expose later states, or touch storage. Hand the unchanged ownership boundary to Curriculum Checker for a NO-REOPEN preservation check.`
+
 ## Coordinator acceptance of blank PY-009 entry — 2026-07-17
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`.

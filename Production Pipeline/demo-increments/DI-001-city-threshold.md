@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance continuity handoff — editable PY-009 ownership
+
+- A1 locked surface meaning only for the nearest submission/result seam: sanitized suit-presented source, two human-expedition annotation fields, private temporary attempt, local/Teacher review, and provisional suit result.
+- This adds no runtime, art, curriculum, puzzle, storage, route, or accepted-demo change. A valid result remains zero Builder/city response, closed identity, access, authority, external action, world delta, or successor.
+- Storyboarder A2 owns only the responsive ownership hierarchy; the Working Team still begins from the coordinator-accepted blank primary and must expose no later state without its own bounded pass.
+
 ## 2026-07-17 Coordinator — blank PY-009 primary accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`.
