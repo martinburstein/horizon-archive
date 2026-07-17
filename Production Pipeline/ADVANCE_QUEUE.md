@@ -25,7 +25,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
 | 7 | `RP-007` | Braided Verge | `PROMOTED TO WORKING` | Player Agent (after RP-006 acceptance) | Coordinator independently verified all twelve gates | One pure `BV-00→BV-30` caller begins at exact RP-006 completion; all 120 orders, strict independent real-evaluator chains, exact UTF-8 round trip, temporary cleanup, atomic restore, Tour isolation, and invariant SC-08 pass | Wait behind RP-006 in Working order; RP-008 now continues contiguously in Advance design. |
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
-| 9 | `RP-009` | Occluded Fold | `IN DESIGN — A2 SCENE BRIEF PASS` | Curriculum Checker Agent (`A3`) | Story/Scene `PASS`; Curriculum/Puzzle/Code pending | Exact RP-008 verified end state; retained RP-007/RP-008 summaries; SC-10 two-master/four-phase occluded-edge contract; no live read/trace/join/route/open; invariant world; reversible returns | Select and verify only the contiguous Python/AI-901 mapping; scenery and presentation remain zero mastery evidence. |
+| 9 | `RP-009` | Occluded Fold | `IN DESIGN — A3 CURRICULUM PASS` | Gameplay Master Agent (`A4`) | Story/Scene/Curriculum `PASS`; Puzzle/Code pending | Exact RP-008 verified end state; retained RP-007/RP-008 summaries; SC-10 invariant contract; strict independent PY-017 and AI901-D2-O1 chains; no live read/trace/join/route/open; invariant world; reversible returns | Compose one bounded graph without changing the SOLIDIFIED mapping; scenery/presentation remain zero learning evidence and RP-010 stays reserved. |
 
 ## Team positions
 
@@ -33,7 +33,11 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `7 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008`
 - In-design packets: `1 — RP-009`
-- Team 1 railhead: `RP-009 — A2 SCENE BRIEF PASS / CURRICULUM CHECKER A3 NEXT`
+- Team 1 railhead: `RP-009 — A3 CURRICULUM PASS / GAMEPLAY MASTER A4 NEXT`
+
+## 2026-07-17 RP-009 Curriculum Checker result
+
+`RP-009` is now `IN DESIGN — A3 CURRICULUM PASS`. `PY-017` is SOLIDIFIED as one allowlisted nonsecret `os.environ.get` configuration read over supplied sanitized edge records: exact environment and records remain unchanged; correspondence, unmatched, ambiguous, and unavailable remain separate; unsupported identity/topology/continuity/transformation/cause/purpose remain `None`; and no secret, file, network, output, endpoint, credential, or live service is touched. Independent `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1` is SOLIDIFIED over neutral course-authored system-versus-user prompt ownership cases. Both chains require strict primary, answer-free remediation, delayed retrieval/trace, genuinely blank transfer, separate boundary explanations, privacy clearing, accessibility, offline/no-authority, and no-exam-guarantee. SC-10 and Tour remain zero evidence, answer, weakness, misconception, and remediation signals. Canonical Python forms pass `8/8 + 8/8`; AI primary/retrieval/transfer pass `8/8 + 8/8 + 8/8`; bypass probes fail closed. Gameplay Master A4 owns one bounded graph only; RP-010 remains reserved.
 
 ## 2026-07-17 RP-009 Storyboarder scene result
 

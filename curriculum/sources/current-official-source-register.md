@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-16
+Verified: 2026-07-17
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 
@@ -18,6 +18,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Reverified for RP-006 A3 on July 16, 2026: the guide still explicitly requires recognition of speech recognition and speech synthesis features/capabilities. RP-006 uses neutral course-authored input/output-direction cases; SC-07 order, sound, and story content are never capability or causation cues.
   - Reverified for RP-007 A3 on July 16, 2026: the guide still explicitly requires identification of computer-vision and image-generation capabilities. RP-007 uses separate neutral course-authored existing-input versus new-output cases; SC-08 layout, association, order, motion, sound, and story content are never capability, unity, or causation cues. The Microsoft Computer Vision overview was also checked for current official capability context. No third-party source or exam item was used, and course gates do not guarantee an exam result.
   - Reverified for RP-008 A3 on July 17, 2026: the guide still explicitly requires identification of information-extraction techniques. Current official Microsoft Learn instruction continues to distinguish OCR, field extraction/mapping, multimodal extraction, and knowledge-mining scenarios. RP-008 uses separate neutral course-authored source/output cases; SC-09 contact/non-contact presentation and inferred weakness are never technique, answer, or remediation cues. No third-party source or exam item was used, and course gates do not guarantee an exam result.
+  - Reverified for RP-009 A3 on July 17, 2026: the guide still explicitly requires creating effective system and user prompts for generative AI models. RP-009 uses separate neutral course-authored cases to distinguish persistent system-prompt role/rules/boundaries/output contracts from current user-prompt task and supplied input. The current official system-message guidance was checked for role, scope, boundaries, output contracts, grounding/fallback, and test/iterate context. SC-10 scenery, saved summaries, execution display, and Tour are never prompt cases, answers, weakness signals, or remediation cues. No third-party source or exam item was used, and internal gates do not guarantee an exam result.
 
 ## Priority Foundry sources checked first
 

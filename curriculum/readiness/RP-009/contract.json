@@ -1,0 +1,117 @@
+{
+  "mapping_id": "RP009-A3-OCCLUDED-FOLD",
+  "packet_id": "RP-009",
+  "status": "SOLIDIFIED",
+  "scene_board": "SC-10",
+  "source_verified_on": "2026-07-17",
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
+    "https://learn.microsoft.com/en-us/azure/foundry/",
+    "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview",
+    "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/advanced-prompt-engineering"
+  ],
+  "entry_gate": {
+    "python": "L-03-03 PY-017 environment/configuration evidence remains complete after PY-009 dictionaries, PY-012 functions, and RP-008 PY-016 JSON reinforcement; learner must read one allowlisted nonsecret local mode through os.environ without reading, printing, persisting, or inventing any secret",
+    "ai901": "L-05-02 system/user/grounding prompt foundations and L-06-01 AI901-D2-O1 ledger row remain ready; confidence, scenery, navigation, saved summaries, or execution display never satisfies entry",
+    "missing_evidence_route": ["curriculum/lessons/L-03-03", "curriculum/lessons/L-05-02", "curriculum/lessons/L-06-01"],
+    "story_navigation_never_blocked": true,
+    "scored_terminal_holds_until_prerequisites_pass": true
+  },
+  "unscored_scene_evidence": [
+    "SC10_material_or_geometry", "near_or_far_position", "record_count", "repeated_signature", "unmatched_or_ambiguous_silhouette", "unavailable_margin", "stewardship", "crop_or_hotspot", "motion_or_sound", "lighting", "focus_or_navigation", "success_or_failure_display", "save_restore_or_return", "accessibility_behavior", "Tour_traversal", "world_state"
+  ],
+  "python_contract": {
+    "skill_id": "PY-017",
+    "skill_name": "Understand environment variables and secrets",
+    "scope": "nearest_contiguous_nonduplicate_environment_configuration_reinforcement",
+    "implementation_reason": "Foundry client work requires configuration and authentication boundaries. This offline bridge teaches a learner to read one allowlisted nonsecret mode from the process environment while keeping credentials, endpoints, private inputs, and live authority entirely absent.",
+    "learner_owned_action": "import os, read exactly one supplied nonsecret mode with os.environ.get, require the bounded value, and derive the edge ledger from supplied sanitized records without reading or storing a secret value or changing the environment",
+    "provided_unscored_scaffold": ["sanitized edge records", "record identifiers", "bounded status labels", "candidate lists", "unsupported-claim keys", "allowlisted nonsecret environment-variable name"],
+    "forms": {
+      "primary": {"environment_name": "EDGE_LEDGER_MODE", "environment_value": "bounded", "secret_names_forbidden": ["AZURE_API_KEY", "FOUNDRY_API_KEY", "AZURE_CLIENT_SECRET"]},
+      "transfer": {"environment_name": "REPLICA_LEDGER_MODE", "environment_value": "bounded", "secret_names_forbidden": ["MODEL_API_KEY", "PROJECT_SECRET", "AZURE_CLIENT_SECRET"]}
+    },
+    "checks": [
+      "os_import_and_single_allowlisted_get", "nonsecret_mode_read_exactly", "environment_unchanged", "records_preserved_exactly", "ledger_exact_keys", "four_evidence_classes_preserved", "unsupported_limits_remain_none", "no_secret_file_network_output_or_external_operation"
+    ],
+    "gate": "8/8 primary, answer-free remediation for every miss, delayed closed-note environment/config/secret-boundary/record-derivation/unknown-limit trace, then 8/8 genuinely blank fresh transfer",
+    "invalid_shortcuts": [
+      "hardcode_mode_or_ledger", "read_any_secret_named_variable", "print_or_persist_environment", "mutate_process_environment", "change_input_records", "collapse_unmatched_ambiguous_or_unavailable", "fill_identity_topology_continuity_transformation_cause_or_purpose", "use_file_network_live_service_endpoint_credential_or_external_input", "reuse_primary_as_transfer", "count_SC10_presentation_save_return_or_Tour"
+    ]
+  },
+  "ai901_contract": {
+    "check_id": "RP009-PROMPT-BOUNDARY-01",
+    "objective_id": "AI901-D2-O1",
+    "objective_title": "Create effective system and user prompts for generative AI models",
+    "scope": "focused_system_versus_user_prompt_ownership_and_deciding_signal_retrieval_and_transfer; does_not_replace_L-05-02_or_L-06-01_mastery",
+    "dimensions": ["prompt_owner", "deciding_signal"],
+    "scene_cases_and_inferred_weakness_are_never_cases_answers_or_remediation_signals": true,
+    "forms": {
+      "primary": [
+        {"id":"P01","prompt":"Apply the same bounded-evidence role, safety rules, and JSON output schema to every request.","prompt_owner":"system_prompt","deciding_signal":"persistent_behavior_constraints_and_output_contract"},
+        {"id":"P02","prompt":"For this request, compare the four supplied sanitized records and return their bounded statuses.","prompt_owner":"user_prompt","deciding_signal":"current_task_and_supplied_input"},
+        {"id":"P03","prompt":"Whenever supplied evidence is unavailable, return unknown instead of inferring a value.","prompt_owner":"system_prompt","deciding_signal":"persistent_fallback_and_uncertainty_boundary"},
+        {"id":"P04","prompt":"Using only these sanitized records, produce the requested bounded ledger for this turn.","prompt_owner":"user_prompt","deciding_signal":"current_request_with_bounded_context"}
+      ],
+      "retrieval": [
+        {"id":"R01","prompt":"Keep the same analyst role, constraints, and response format across requests.","prompt_owner":"system_prompt","deciding_signal":"reusable_role_rules_and_format"},
+        {"id":"R02","prompt":"Summarize this supplied record set for the current turn.","prompt_owner":"user_prompt","deciding_signal":"one_turn_goal_and_input"},
+        {"id":"R03","prompt":"Use only supplied context and say unknown when the context does not support a claim.","prompt_owner":"system_prompt","deciding_signal":"reusable_grounding_and_fallback_rule"},
+        {"id":"R04","prompt":"Answer this question using the excerpts attached to this request.","prompt_owner":"user_prompt","deciding_signal":"one_turn_question_and_context"}
+      ],
+      "transfer": [
+        {"id":"T01","prompt":"For every request, stay within the supplied evidence, follow the safety boundary, and emit the fixed schema.","prompt_owner":"system_prompt","deciding_signal":"stable_scope_safety_and_schema"},
+        {"id":"T02","prompt":"Classify the new supplied records for this task without adding unsupported fields.","prompt_owner":"user_prompt","deciding_signal":"new_task_with_current_records"},
+        {"id":"T03","prompt":"Across turns, represent unsupported conclusions as unknown rather than guessing.","prompt_owner":"system_prompt","deciding_signal":"stable_unknown_when_unsupported_rule"},
+        {"id":"T04","prompt":"Use these new excerpts to answer the current bounded question.","prompt_owner":"user_prompt","deciding_signal":"new_request_with_supplied_excerpts"}
+      ]
+    },
+    "gate": "8/8 primary, per-case/per-dimension answer-free remediation, delayed closed-note 8/8 retrieval, then 8/8 genuinely blank fresh transfer plus separate explanations that system prompts carry persistent role/rules/boundaries/output contracts while user prompts carry the current task and supplied input, and that prompt quality never proves output truth or authorizes live action",
+    "misconception_tags": [
+      "system_equals_first_message_only", "user_prompt_equals_end_user_identity", "current_input_belongs_in_persistent_rules", "persistent_safety_rule_belongs_only_in_current_request", "grounding_equals_guaranteed_truth", "prompt_quality_equals_output_truth", "scene_case_selects_prompt_owner", "save_or_success_display_proves_mastery", "offline_case_proves_live_configuration", "valid_answer_authorizes_action"
+    ]
+  },
+  "remediation_contract": {
+    "python": ["separate_nonsecret_configuration_from_secrets", "identify_allowlisted_environment_name", "trace_single_environ_get", "preserve_environment_and_records", "preserve_four_evidence_classes", "preserve_None_limits", "remove_output_file_network_and_secret_access", "restore_blank_form", "retry_without_carried_result"],
+    "ai901": ["mark_persistent_versus_current_scope", "identify_role_rules_boundary_or_output_contract", "identify_current_task_and_supplied_input", "contrast_system_and_user_ownership", "remove_scene_and_success_cues", "preserve_truth_and_authority_boundary", "complete_neutral_guided_case", "retry_blank_form"],
+    "unlimited_retry": true,
+    "answer_free_before_blank_retry": true,
+    "miss_has_no_world_route_save_or_external_effect": true,
+    "remediation_is_selected_only_from_scored_misconception_tags": true
+  },
+  "evidence_contract": {
+    "store": ["packet_id", "mapping_id", "form", "skill_or_objective_id", "dimension_correctness", "attempt_count", "hint_level", "confidence", "misconception_tags", "mastery_status"],
+    "do_not_store": ["learner_source", "environment_snapshot", "environment_values", "edge_records", "edge_ledger", "raw_cases", "free_form_reasoning", "private_notes", "identity_content", "credentials", "secrets", "endpoints", "payloads", "responses", "source_content", "exam_items", "external_action_requests"],
+    "scene_transition": "clear_unsubmitted_code_environment_choices_feedback_case_answers_and_temporary_work",
+    "save_eligibility": "require finalized strict PY-017, finalized strict RP009-PROMPT-BOUNDARY-01, retained verified RP-007 and RP-008 summaries, and separately finalized three-near-margins bounded-correspondence unmatched-record ambiguous-candidates unavailable-margin layered-stewardship observations; no conjunct cross-credits another",
+    "after_save": "clear temporary work and keep only allowlisted finalized evidence plus retained RP-007/RP-008 summaries and the expedition-owned bounded edge ledger",
+    "resume": "restore only finalized dimension evidence and retained summaries/ledger, then resume at the first incomplete scored boundary"
+  },
+  "accessibility_contract": {
+    "minimum_target_css_px": 44,
+    "one_active_owner_message_content_action_group": true,
+    "persistent_labels": true,
+    "field_associated_text_feedback": true,
+    "status_live_region": true,
+    "must_not_rely_on_color_motion_audio_position_sequence_or_binary_layout": true,
+    "time_limit": false,
+    "reduced_motion_equivalent": true,
+    "focus_returns_to_first_invalid_or_next_required_control": true
+  },
+  "authority_contract": {
+    "course_authored_not_Microsoft_exam_items": true,
+    "no_exam_guarantee": true,
+    "offline_only": true,
+    "no_live_Azure_Foundry_model_agent_terminal_or_world_call": true,
+    "no_real_secret_credential_endpoint_resource_private_content_or_unavailable_margin_access": true,
+    "no_permission_authentication_trace_join_split_merge_route_open_identify_transform_control_causation_or_external_action": true,
+    "no_world_city_or_physical_delta": true,
+    "tour_is_zero_credit_and_cannot_save": true
+  },
+  "world_locks": [
+    "RP-008 verified completion and saved summary required", "RP-007 and RP-008 bounded summaries remain valid", "correspondence does not prove identity or continuity", "unmatched does not prove creation destruction transformation or separation", "ambiguity does not prove branching merging copying or exchange", "unavailable margin remains unavailable", "identity=None", "topology=None", "continuity=None", "transformation=None", "unity=None", "cause=None", "purpose=None", "sanitized replicas only", "SC-10 invariant world and environmental clocks", "reversible RP-008 and earlier returns", "no RP-010 route destination event or learning content"
+  ],
+  "reopen_conditions": ["official_objectives_materially_change", "validator_or_playtest_proves_mismatch_or_bypass", "martin_changes_learning_goal"]
+}

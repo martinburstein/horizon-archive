@@ -140,3 +140,13 @@ Local source gaps remain; see curriculum/validation/missing-materials-report.md 
 - [x] Added machine-readable contract, reference forms, validator, current official-source provenance, scored-misconception-only remediation, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and bypass probes
 - [x] Preserved the valid RP-007 local summary, recurring contact, bounded counterexamples, unavailable case, universal/exclusive/unity/cause/purpose limits, independent six-observation evidence, invariant SC-09, reversible returns, and no RP-009
 - [ ] Gameplay Master completes A4 against the exact solidified RP-008 contract
+
+## 2026-07-17 RP-009 curriculum verification
+
+- [x] Selected `PY-017` as the nearest contiguous nonduplicate prerequisite after RP-008 JSON; retained `PY-014` as deferred and reserved `PY-018`/`PY-019` for later request/SDK/endpoint work
+- [x] Added focused `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1` persistent system-prompt responsibilities versus current user-task/input responsibilities
+- [x] Solidified Python `8/8 primary + answer-free remediation + delayed closed-note environment/configuration/secret-boundary trace + genuinely blank 8/8 transfer`
+- [x] Solidified AI `8/8 primary + per-dimension remediation + delayed 8/8 retrieval + genuinely blank 8/8 transfer + two boundary explanations`
+- [x] Added machine-readable contract, canonical forms, validator, current official-source provenance, actually-scored-tag-only remediation, privacy/accessibility/offline/no-authority/no-exam-guarantee boundaries, and hardcoded/secret-reader bypass probes
+- [x] Preserved RP-007/RP-008 bounded summaries, four separate edge evidence classes, unavailable evidence, identity/topology/continuity/transformation/unity/cause/purpose limits, independent six-observation evidence, invariant SC-10, reversible returns, and no RP-010
+- [ ] Gameplay Master completes A4 against the exact solidified RP-009 contract

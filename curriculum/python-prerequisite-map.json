@@ -31,7 +31,7 @@
         "AI901-D2-O3"
       ],
       "mastery_level_required": "use_with_guidance",
-      "notes": ""
+      "notes": "RP-009 SOLIDIFIED reinforcement: read exactly one allowlisted nonsecret local mode with os.environ.get, preserve the supplied sanitized edge records and four evidence classes, leave unsupported identity/topology/continuity/transformation/cause/purpose values as None, and never read, print, persist, or invent a secret; strict 8/8 primary, answer-free remediation, delayed closed-note trace, and genuinely blank 8/8 transfer."
     },
     {
       "skill_id": "PY-003",

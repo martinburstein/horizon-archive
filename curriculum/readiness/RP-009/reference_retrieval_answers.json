@@ -1,0 +1,6 @@
+{
+  "R01": {"prompt_owner": "system_prompt", "deciding_signal": "reusable_role_rules_and_format"},
+  "R02": {"prompt_owner": "user_prompt", "deciding_signal": "one_turn_goal_and_input"},
+  "R03": {"prompt_owner": "system_prompt", "deciding_signal": "reusable_grounding_and_fallback_rule"},
+  "R04": {"prompt_owner": "user_prompt", "deciding_signal": "one_turn_question_and_context"}
+}

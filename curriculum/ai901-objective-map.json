@@ -36,6 +36,25 @@
         "validator_or_playtest_proves_mismatch_or_bypass",
         "martin_changes_learning_goal"
       ]
+    },
+    {
+      "packet_id": "RP-009",
+      "status": "SOLIDIFIED",
+      "primary_objective_id": "AI901-D2-O1",
+      "focused_check_id": "RP009-PROMPT-BOUNDARY-01",
+      "focused_dimensions": [
+        "prompt_owner",
+        "deciding_signal"
+      ],
+      "full_objective_mastery_prerequisite": "L-05-02",
+      "python_skill_id": "PY-017",
+      "contract_path": "curriculum/readiness/RP-009/contract.json",
+      "notes": "Focused retrieval and fresh transfer for persistent system-prompt responsibilities versus current user-task/input responsibilities. Neutral course-authored cases only; SC-10, saved summaries, execution display, and Tour are unscored.",
+      "reopen_conditions": [
+        "official_objectives_materially_change",
+        "validator_or_playtest_proves_mismatch_or_bypass",
+        "martin_changes_learning_goal"
+      ]
     }
   ],
   "domains": [
@@ -317,7 +336,7 @@
       "objectives": [
         {
           "objective_id": "AI901-D2-O1",
-          "title": "Create effective system and user prompts",
+          "title": "Create effective system and user prompts for generative AI models",
           "subskills": [
             "system prompts",
             "user prompts",
@@ -337,14 +356,17 @@
             "ai-901-study-guide-markdown-source-md",
             "microsoft-learn-paths-ai-concepts-for-developers-and-technology-professionals-modules-02-introduction-to-generative-ai-a",
             "ai-900-study-guide-markdown-ai-900-study-guide-md",
-            "ai-900-study-guide-markdown-source-md"
+            "ai-900-study-guide-markdown-source-md",
+            "OFFICIAL-AI901-STUDY-GUIDE",
+            "OFFICIAL-FOUNDRY-HUB",
+            "OFFICIAL-FOUNDRY-SYSTEM-MESSAGES"
           ],
           "proposed_chapters": [
             "chapter-05"
           ],
           "mastery_check_type": "coding",
           "coverage_status": "mapped",
-          "notes": ""
+          "notes": "RP-009 SOLIDIFIED focused reinforcement: distinguish persistent system-prompt role/rules/boundaries/output contracts from current user-prompt task and supplied input using neutral course-authored cases. Prompt quality never proves truth or authorizes live action; SC-10 presentation and Tour are never cases, answers, weakness signals, or remediation cues."
         },
         {
           "objective_id": "AI901-D2-O2",

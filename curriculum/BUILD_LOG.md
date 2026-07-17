@@ -1380,3 +1380,36 @@ Validation performed:
 Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-008, composing six equal-peer observations, retained RP-007 summary, and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, remediation selection, privacy, save, mystery, authority, or successor boundaries.
 Unresolved risks: A4/A5 must not let SC-09 imagery, contact/non-contact placement, layout, motion, sound, labels, inferred weakness, confidence, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation, either mastery chain, or remediation route. New counterexamples cannot erase valid bounded RP-007 evidence; unavailable cannot become absence; non-contact cannot become separation; cross-family contact cannot become equivalence; and no world, route, external, exam, live-service, native-category, Machine, or RP-009 claim may emerge.
 Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native relation claim, hidden lore, route, external action, or successor content was created.
+## Log entry: 2026-07-17T07:25:00-04:00
+
+Stage: RP-009 environment-boundary and prompt-ownership curriculum verification (A3)
+Work completed: Closed the Curriculum gate with two independent SOLIDIFIED chains. Selected `PY-017` as the nearest contiguous nonduplicate prerequisite after RP-008 JSON and defined one exact allowlisted nonsecret `os.environ.get` configuration read over supplied sanitized edge records; environment and records remain unchanged, correspondence/unmatched/ambiguous/unavailable remain separate, unsupported limits remain `None`, and secret/file/network/output/external operations are forbidden. Selected current `AI901-D2-O1` and defined neutral course-authored system-versus-user prompt ownership cases: persistent role/rules/grounding-fallback/safety/output contracts remain system-prompt responsibilities, while the current task and supplied input/context remain user-prompt responsibilities. Locked strict primary, answer-free actually-scored-miss remediation, delayed retrieval/trace, genuinely blank transfer, separate boundary explanations, privacy allowlist, conjunctive save, accessibility, offline/no-authority, no-exam-guarantee, SOLIDIFIED/reopen, and anti-bypass rules. Preserved both prior bounded summaries, correspondence/mismatch/ambiguity/unavailability and all identity/topology/continuity/transformation/unity/cause/purpose limits. SC-10 material, geometry, layout, record appearance, unavailable margin, stewardship, presentation, save/restore/return, accessibility, and Tour remain zero observation, mastery, answer, weakness, misconception, and remediation evidence.
+Files changed:
+- Production Pipeline/ADVANCE_BREADTH_GATE.md
+- Production Pipeline/ADVANCE_QUEUE.md
+- Production Pipeline/CURRICULUM_SPINE.md
+- Production Pipeline/EXPEDITION_SPINE.md
+- Production Pipeline/PACKET_SCOREBOARD.md
+- Production Pipeline/STORY_RAIL_MAP.md
+- Production Pipeline/rail-packets/RP-009-occluded-fold.md
+- curriculum/BUILD_LOG.md
+- curriculum/BUILD_STATUS.md
+- curriculum/ai901-objective-map.json
+- curriculum/python-prerequisite-map.json
+- curriculum/skill-progression.json
+- curriculum/sources/current-official-source-register.md
+- curriculum/readiness/RP-009/contract.json
+- curriculum/readiness/RP-009/reference_primary.py
+- curriculum/readiness/RP-009/reference_transfer.py
+- curriculum/readiness/RP-009/reference_primary_answers.json
+- curriculum/readiness/RP-009/reference_retrieval_answers.json
+- curriculum/readiness/RP-009/reference_transfer_answers.json
+- curriculum/readiness/RP-009/validate_mapping.py
+Validation performed:
+- Read applicable AGENTS instructions, source-priority skill, workflow authority, registry, full canonical Curriculum Checker profile, RP-009 and SC-10, exact RP-008 predecessor contract/state, current curriculum maps/status/log/source register, queue/map, and required production spines.
+- Checked only current official Microsoft sources on 2026-07-17: AI-901 study guide; Foundry hub; SDK/endpoints overview; Agent Service overview; Content Understanding overview; and system-message design guidance. No third-party source or exam item was used.
+- RP-009 validator self-test passed. Python primary and genuinely fresh transfer references passed `8/8 + 8/8`. AI-901 primary/retrieval/genuinely fresh transfer references passed `8/8 + 8/8 + 8/8`. Empty-answer, wrong-owner, hardcoded-mode, missing-record, and secret-reader bypass probes failed closed.
+- All curriculum JSON parsed; focused packet/spine/queue/map/scoreboard/source/zero-evidence/remediation/save-conjunction/Tour/privacy/offline/no-authority/no-exam-guarantee/no-RP-010 assertions and whitespace checks passed.
+Next recommended item: Gameplay Master performs only the exact A4 handoff in RP-009, composing six equal-peer observations, retained RP-007/RP-008 summaries, and both frozen independent learning chains into one bounded graph without changing cases, answers, dimensions, thresholds, remediation selection, privacy, save, mystery, authority, or successor boundaries.
+Unresolved risks: A4/A5 must not let SC-10 imagery, near/far placement, signatures, unmatched/ambiguous appearance, unavailable margin, stewardship, motion, sound, labels, execution display, focus, navigation, save/restore, accessibility behavior, or Tour manufacture an observation, either mastery chain, or remediation route. Configuration cannot become a secret; prompt quality cannot become truth or authority; correspondence cannot become identity/continuity; unmatched cannot become creation/destruction/transformation/separation; ambiguity cannot become branching/merging/copying/exchange; unavailable remains unavailable; and no world, route, external, exam, live-service, native-category, Machine, or RP-010 claim may emerge.
+Notes: `SOLIDIFIED`. Reopen only for a material official-objective change, a validator/playtest mismatch or bypass, or Martin changing the learning goal. No puzzle graph, runtime, UI, production art, native topology claim, hidden lore, route, external action, or successor content was created.

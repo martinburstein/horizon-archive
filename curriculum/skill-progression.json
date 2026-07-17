@@ -43,7 +43,8 @@
       "related_ai901_objectives": [
         "AI901-D2-O2",
         "AI901-D2-O3"
-      ]
+      ],
+      "rail_packet_reinforcement": "RP-009 SOLIDIFIED: one allowlisted nonsecret os.environ.get mode read over supplied sanitized edge records; four evidence classes and None limits preserved, no secret/file/network/output/environment mutation; SC-10 presentation and Tour remain zero evidence"
     },
     {
       "skill_id": "PY-003",

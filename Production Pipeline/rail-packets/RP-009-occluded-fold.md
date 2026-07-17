@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A2 SCENE BRIEF PASS; CURRICULUM CHECKER A3 NEXT`
+- Status: `IN DESIGN — A3 CURRICULUM PASS; GAMEPLAY MASTER A4 NEXT`
 - Target chapter/location: Chapter 4 synthesis closure / occluded working landscape beyond Offset Reach
 - Target demo horizon: eighth future slice after the accepted RP-001 boundary; directly after RP-008
 - Route order: 9
@@ -13,7 +13,7 @@
 - Working title: `Occluded Fold` — an expedition label, never a native category
 - Expedition spine phase and slot: Phase III — Synthesis / slot 3 of 3
 - Target player time: `TBD by A4`; no time limit or timing credit is authorized by A1
-- Complete Advance cycles spent on this packet: 0; A1–A2 of orientation cycle 1 complete
+- Complete Advance cycles spent on this packet: 0; A1–A3 of orientation cycle 1 complete
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
 ## Locked premise
@@ -144,8 +144,42 @@ Test whether the accumulated evidence supports one complete account across the f
 
 ## Curriculum Verification Track — Curriculum Checker
 
-- Status: `NOT STARTED — A3 SELECTS THE NEAREST CONTIGUOUS VERIFIED MAPPING`
-- A1 assigns no Python skill, AI-901 objective, learning case, answer, dimension, threshold, remediation lane, source claim, save conjunct, or mastery evidence.
+- Status: `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`
+- Machine-readable authority: `curriculum/readiness/RP-009/contract.json` with canonical primary/retrieval/transfer forms and `validate_mapping.py`.
+- Official-source verification: current AI-901 study guide, Foundry hub, SDK/endpoints overview, Agent Service overview, Content Understanding overview, and official system-message design guidance rechecked `2026-07-17`; no third-party source or exam item used.
+
+### Python lane — `PY-017`
+
+- Selected skill: `Understand environment variables and secrets`, the nearest contiguous unassigned prerequisite after RP-008's `PY-016` JSON reinforcement. `PY-014` remains deferred because this packet installs no package and mutates no environment; `PY-018`/`PY-019` remain later prerequisites because this packet makes no request, response, SDK, endpoint, or live-service call.
+- Learner-owned action: import `os`, read exactly one supplied allowlisted nonsecret mode with `os.environ.get`, require the value `bounded`, and derive one edge ledger from supplied sanitized records without changing the process environment.
+- Required preserved classes: correspondence, unmatched, ambiguous candidates, and unavailable remain distinct. `identity`, `topology`, `continuity`, `transformation`, `cause`, and `purpose` remain `None`.
+- Secret boundary: no credential, secret value, endpoint, environment snapshot, private content, file, network, output, subprocess, live service, or external input may be read, printed, stored, invented, or changed. The exercise teaches the boundary; it never supplies a real secret.
+- Gate: exact `8/8` primary -> answer-free remediation for each missed check -> delayed closed-note environment/configuration/secret-boundary/derivation/unknown-limit trace -> genuinely blank fresh `8/8` transfer.
+- Checks: exact `os` import and one allowlisted `os.environ.get`; exact nonsecret value; unchanged environment; unchanged records; exact ledger keys; four evidence classes; unsupported `None` limits; and no secret/file/network/output/external operation.
+
+### AI-901 lane — `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1`
+
+- Current objective: `Create effective system and user prompts for generative AI models`.
+- Scope: focused retrieval and fresh transfer only; it does not replace complete `L-05-02` or `L-06-01` mastery.
+- Independent neutral cases distinguish system-prompt responsibilities—persistent role, rules, grounding/fallback boundaries, safety, and output contract—from user-prompt responsibilities—the current task and supplied input/context.
+- Gate: `8/8` primary across `prompt_owner` and `deciding_signal` -> per-case/per-dimension answer-free remediation selected only from scored misconception tags -> delayed closed-note `8/8` retrieval -> genuinely blank fresh `8/8` transfer -> separate explanations of the system/user boundary and the fact that prompt quality neither proves output truth nor authorizes live action.
+- All cases are course-authored and structurally isolated from the story. No Microsoft exam item, live model, portal state, SDK, credential, endpoint, response, external action, or exam guarantee is present.
+
+### Evidence, remediation, save, and zero-credit boundaries
+
+- `PY-017`, `RP009-PROMPT-BOUNDARY-01`, the retained verified RP-007/RP-008 summaries, and the six deliberately finalized Scene observations are independent conjuncts. No conjunct cross-credits another.
+- SC-10 material, geometry, near/far position, record count, repeated signature, unmatched/ambiguous silhouette, unavailable margin, stewardship, crop, hotspot, animation, sound, light, focus, navigation, interface state, success/failure display, save, restore, return, accessibility behavior, and Tour are zero mastery evidence, zero answers, zero weakness inference, zero misconception evidence, and zero remediation signals.
+- Remediation is unlimited, answer-free, local to the actually missed check/dimension, and followed by a restored blank form. Failure causes no save, route, access, world response, or external effect.
+- Allowlisted finalized evidence stores only IDs, form, per-dimension correctness, attempt/hint/confidence metadata, scored misconception tags, and mastery status. Learner source, environment snapshots/values, records, ledger work, case answers, free reasoning, secrets, credentials, endpoints, payloads, responses, private content, source content, and exam items never persist.
+- Save requires all independent conjuncts, then atomically retains only finalized evidence, both prior bounded summaries, and the expedition-owned bounded edge ledger. Temporary code, environment choices, feedback, answers, and working data clear. Restore replays no observation, execution, learning, save, or world event.
+- Offline/no-authority/no-exam-guarantee remains absolute. No valid result authenticates, permits, reads, traces, joins, splits, merges, routes, opens, identifies, transforms, controls, proves cause, or changes SC-10.
+
+### Curriculum Checker sign-off
+
+- Mapping: `SOLIDIFIED`.
+- Reopen only if official objectives materially change, a validator/playtest proves mismatch or bypass, or Martin changes the learning goal.
+- Validation: validator self-test passed; Python primary/transfer `8/8 + 8/8`; AI-901 primary/retrieval/transfer `8/8 + 8/8 + 8/8`; empty-answer, wrong-owner, hardcoded-mode, missing-record, and secret-reader bypasses fail closed.
+- Required A4 boundary: compose one bounded graph around the frozen independent chains and six peer observations without changing cases, answers, dimensions, thresholds, remediation tags, environment names, record fixtures, privacy allowlists, save conjuncts, story ownership, mystery limits, or successor boundary.
 
 ## Puzzle Track — Gameplay Master
 
@@ -200,25 +234,25 @@ Test whether the accumulated evidence supports one complete account across the f
 
 ## Breadth and convergence record
 
-- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`.
-- Packet gates missing: Curriculum, Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — A2 closed Scene and the production-art-plan gate with one four-phase invariant landscape and a complete registered source/crop/mask/effect/accessibility/provenance contract`.
+- Packet gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-10 compact two-master production brief`; Curriculum `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED`.
+- Packet gates missing: Puzzle, Protected code, Save/recovery implementation, Accessibility implementation/evidence, Production art, Normal integration, Working evidence, and Release.
+- Did this pass reduce the remaining-gate count?: `YES — A3 closed Curriculum with two independent strict evidence chains, canonical forms, answer-free remediation, delayed retrieval/trace, genuinely blank transfer, privacy/authority/accessibility gates, and fail-closed validation`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008 bounded summaries, no-live-read/join/route/open rule, temporary clearing, ordinary Builder executable literacy, reversible returns, destinationless continuation, and scope discipline become one Phase III closure premise rather than another isolated relation micro-seam.
 - Optional work trimmed or deferred: internal contents, full topology, identity, transformation, native category, live tracing/routing/opening, secondary programs, new identity-bearing matter, route unlocks, successor hints, and Machine relationship.
-- Breadth verdict: `CONTINUE — CURRICULUM CHECKER A3`.
+- Breadth verdict: `CONTINUE — GAMEPLAY MASTER A4`.
 - Next contiguous packet seed readiness: `NO — RP-010 REMAINS RESERVED UNTIL RP-009 REACHES GATE REVIEW OR READY FOR WORKING`.
-- Exact next action in one sentence: Curriculum Checker A3 selects and verifies only the nearest contiguous Python/AI-901 mapping while treating all SC-10 scenery, geometry, crops, masks, motion, and presentation as zero mastery evidence.
+- Exact next action in one sentence: Gameplay Master A4 composes one bounded graph around the frozen independent PY-017 and AI901-D2-O1 chains plus six peer observations without adding another curriculum seam or successor content.
 
 ## Advance Handoff Gate
 
 - Lore Builder sign-off: `PASS — 2026-07-17`
 - Storyboarder sign-off: `PASS — 2026-07-17`
-- Curriculum Checker sign-off: `PENDING`
+- Curriculum Checker sign-off: `PASS — PY-017 + RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED — 2026-07-17`
 - Gameplay Master sign-off: `PENDING`
 - Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH CURRICULUM CHECKER A3`
-- Required revision: Curriculum, Puzzle, protected construction, and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
+- Readiness: `REVISE — CONTINUE SEQUENTIALLY WITH GAMEPLAY MASTER A4`
+- Required revision: Puzzle, protected construction, and independent Gate Review remain sequential obligations; production art, normal integration, Working evidence, and Release remain later obligations.
 
-### Exact Curriculum Checker A3 handoff
+### Exact Gameplay Master A4 handoff
 
-`Curriculum Checker Agent — A3: work only on RP-009 Occluded Fold. Read the canonical Curriculum Checker profile, CURRICULUM_SPINE.md, current official AI-901 objectives under project source-priority rules, this packet, its locked Lore Track, and the complete SC-10 scene brief. Select and verify only the nearest contiguous, nonduplicate Python skill and AI-901 obligation for reconciling sanitized replicas of exposed edge records while retaining correspondence, unmatched, ambiguous, unavailable, and interpretation-limit meanings separately. Treat every SC-10 material feature, near/far position, record count, repeated signature, unmatched or ambiguous silhouette, unavailable margin, stewardship cue, crop, hotspot, animation, sound, lighting state, focus order, navigation state, interface state, success/failure display, save, restore, return, and accessibility behavior as zero mastery evidence, zero answer, zero weakness inference, and zero remediation signal. Preserve both prior summaries; Scene/Pilot/System/Builder-work ownership; sanitized-replica provenance; privacy clearing; offline/no-authority/no-exam-guarantee boundaries; world invariance; reversible returns; and no live read, trace, join, split, merge, route, opening, identity, transformation, topology, unity, cause, purpose, permission, or control. Do not alter SC-10 composition, pair near and far records, derive the answer from scenery, select remediation from presentation, author puzzle mechanics, write runtime code, generate art, define a native category or Machine relation, seed RP-010, or open hidden lore. Update the RP-009 Curriculum Track and required curriculum artifacts, validate the mapping independently with strict primary, answer-free remediation, delayed retrieval/trace, and genuinely blank transfer evidence, then hand the unchanged story/scene boundary to Gameplay Master A4.`
+`Gameplay Master Agent — A4: work only on RP-009 Occluded Fold. Read the canonical Gameplay Master profile, the complete locked Lore/Storyboard/Curriculum tracks, SC-10, curriculum/readiness/RP-009/contract.json, and the current gameplay spine. Compose exactly one bounded four-phase graph from verified RP-008 entry through six equal-peer observations in any order, strict independent PY-017 and RP009-PROMPT-BOUNDARY-01 chains, bounded review, atomic save/verified restore, reversible returns, and one LOOK-only destinationless outward continuation. Preserve the canonical Python environment names, fixtures, eight checks, secret prohibition, exact four evidence classes, and None limits. Preserve all AI cases, answers, dimensions, thresholds, separately scored explanations, and remediation selected only from actually scored misconception tags. Treat every SC-10 scene/presentation/accessibility/save/return/Tour signal as zero learning evidence, answer, weakness, misconception, or remediation signal. Keep both prior summaries, sanitized-replica provenance, temporary/private clearing, offline/no-authority/no-exam-guarantee, invariant world, and all identity/topology/continuity/transformation/unity/cause/purpose/successor limits exact. Do not change curriculum artifacts, author runtime code or art, pair near/far records, expose the interior, grant access, make a live call, or seed RP-010. Return one exact A5 protected-journey handoff or one genuine HOLD.`

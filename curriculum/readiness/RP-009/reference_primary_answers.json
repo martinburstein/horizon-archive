@@ -1,0 +1,6 @@
+{
+  "P01": {"prompt_owner": "system_prompt", "deciding_signal": "persistent_behavior_constraints_and_output_contract"},
+  "P02": {"prompt_owner": "user_prompt", "deciding_signal": "current_task_and_supplied_input"},
+  "P03": {"prompt_owner": "system_prompt", "deciding_signal": "persistent_fallback_and_uncertainty_boundary"},
+  "P04": {"prompt_owner": "user_prompt", "deciding_signal": "current_request_with_bounded_context"}
+}

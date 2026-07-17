@@ -1,0 +1,6 @@
+{
+  "T01": {"prompt_owner": "system_prompt", "deciding_signal": "stable_scope_safety_and_schema"},
+  "T02": {"prompt_owner": "user_prompt", "deciding_signal": "new_task_with_current_records"},
+  "T03": {"prompt_owner": "system_prompt", "deciding_signal": "stable_unknown_when_unsupported_rule"},
+  "T04": {"prompt_owner": "user_prompt", "deciding_signal": "new_request_with_supplied_excerpts"}
+}
