@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## Working W1 first-far observation finding - 2026-07-17
+
+- **Disposition:** `RP002-P1-007 OPEN - W2 BUG REPAIR NEXT`.
+- **Earliest exact gap:** accepted `sc03_far_blank` / blank `SC-03-20` retains the exact three near records and exposes both far peers with honest equal inert presentation. Neither peer can become the first far observation: both are native/assistive disabled and handler-free, while direct normal dispatch returns `far_observations_not_integrated` for every supported modality.
+- **Expected bounded increment:** either equal peer may be the one first choice. One fresh activation must preserve the near triplet byte-stably, add only the selected canonical far ID/Scene statement, present exact System `Far and closed evidence recorded: 1 of 2. The district remains unchanged.`, and allow zero-credit evidence/route return plus deterministic one-far replay/resume. The unselected far peer remains honestly inert so the second far observation and local comparison stay closed.
+- **Evidence boundary:** the browser controller was unavailable; W1 did not claim/reload the existing tab or inspect/alter the user's preserved early save. Focused normal-route/protected-observation checks pass **33/33**. Root, `index-ZuUMhMdy.js`, and `index-R5wdIep0.css` return HTTP `200`; the bundle contains both labels, honest inert copy, and the rejection reason, but no `sc03_far_first` checkpoint. Runtime/art/tests remain unchanged.
+- **W2 lock:** integrate exactly one first far observation from accepted blank `SC-03-20`, both possible first choices and all seven modalities, exact matching record/statement/status, byte-stable near evidence, one-far acknowledgement/evidence return/replay, allowlisted `sc03_far_first` resume/sanitation, separate route return, honest inert remaining peer, and zero credit/deltas. Stop before the second far observation, `OPEN LOCAL COMPARISON`, learning, completion, or RP-003+.
+
 ## Working W4 honest inert far-peer presentation — 2026-07-17
 
 - **Disposition:** `RP002-AESTH-003 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.

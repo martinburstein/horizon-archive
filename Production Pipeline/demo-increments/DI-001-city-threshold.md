@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W1 - RP002-P1-007 first-far finding
+
+- **Disposition:** `BLOCKED - RP002-P1-007 OPEN / W2 BUG REPAIR NEXT`. The accepted blank `SC-03-20`, exact three-near/zero-far evidence, honest equal inert peers, separate return, immutable civic art, and all no-credit/no-delta boundaries remain stable.
+- **Expected/actual:** expected either `COMPARE DISTANT REPETITION` or `INSPECT CLOSED BOUNDARY` to serve as one equal Available first choice, retain the three near records byte-stably, add only its matching far ID/Scene statement, and show exact System `Far and closed evidence recorded: 1 of 2. The district remains unchanged.` Actual both peers are native/assistive disabled and handler-free; normal dispatch rejects either with `far_observations_not_integrated`, so the boundary remains three near/zero far. Severity is P1 because the accepted observation journey cannot advance.
+- **Evidence boundary:** the live browser controller was unavailable, so W1 did not claim or reload the existing tab, inspect storage, overwrite the user's preserved early save, or fabricate a gated traversal. Focused normal-route/protected-observation checks pass **33/33**; accepted root/JS/CSS serve HTTP `200`; the shipped bundle contains both labels, honest inert copy, and the rejection reason but no one-far checkpoint. The preceding coordinator release remains the responsive/live authority.
+- **W2 acceptance:** from exact sanitized `sc03_far_blank`, enable both equal first choices; permit exactly one matching far observation across all seven modalities; retain all near records; present the matching Scene statement and exact `1 of 2`; provide evidence return, idempotent replay, separate route return, and allowlisted `sc03_far_first` resume/sanitation; leave the unselected peer honestly inert. Preserve accessibility, responsive, privacy, Tour, offline/no-authority, immutable world, and zero-cross-credit contracts. Do not activate a second far observation, open local comparison, expose learning/completion, or touch RP-003+.
+
 ## 2026-07-17 W4 — RP002-AESTH-003 honest inert far peers
 
 - **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. The two blank `SC-03-20` far peers preserve stable labels, order, equal primary layout, and `>=44px` metadata while replacing the false enabled/`AVAILABLE` affordance with native disabled, `aria-disabled`, handler-free controls and identical persistent `INERT // ZERO CREDIT // NOT YET ACTIVE` text. Separate route return remains enabled.
