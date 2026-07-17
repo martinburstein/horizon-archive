@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W3 — RP-002 one-ID bounded aesthetic review
+
+- **Disposition:** `NO FINDING OPENED / W4 ROOT LIVE PROOF NEXT.` The user-owned browser remains before the verified predecessor, so W3 preserved it and makes no direct desktop/narrow one-ID claim.
+- **Evidence:** focused **49/49 PASS**; root/JS/CSS/`BYTUil6H` HTTP `200`; unchanged `1672 x 941`, `2,594,095`-byte RGB master at SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`; source/tests retain exact blank controls, one Scene/System acknowledgement, `RETURN TO EVIDENCE`, replay-only one-ID state, separate route return, focus/44px/non-color/reduced-motion/reflow contracts, and zero cross-credit/world response.
+- **W4:** verify the exact path live at desktop and narrow; if clean, verification/final reload only. Preserve one observation maximum and expose no `SC-03-20+` or RP-003+ content.
+
 ## Working W2 RP002-P1-003 first-near checkpoint — 2026-07-16
 
 - **Disposition:** `DEMO RELOADED — RP002-P1-003 RESOLVED / W3 NEXT`.

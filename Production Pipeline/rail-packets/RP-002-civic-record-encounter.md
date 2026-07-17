@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## Working W3 first-near bounded aesthetic checkpoint — 2026-07-17
+
+- **Disposition:** `NO FINDING OPENED / W4 ROOT LIVE PROOF NEXT`.
+- **Evidence boundary:** focused **49/49**, exact served assets HTTP `200`, immutable civic source/hash, and source-level hierarchy/accessibility contracts pass. The preserved user browser remains before the verified predecessor, so W3 makes no direct rendered desktop/narrow claim.
+- **Handoff:** W4 verifies blank -> one acknowledgement -> evidence return -> replay-only one-ID state live and performs final reload only unless one exact defect is reproduced. Preserve one observation maximum, zero learning/world response, and no `SC-03-20+` or RP-003+ exposure.
+
 ## Working W2 first-near checkpoint — 2026-07-16
 
 - **Disposition:** `RP002-P1-003 RESOLVED / DEMO RELOADED / W3 NEXT`.
