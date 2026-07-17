@@ -3,6 +3,7 @@ import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import {
   describeCivicActionAccessibility,
+  describeCustodyLedgerPrimaryReturnGroup,
   describeCivicWorldRegionAccessibility,
 } from "./CivicActionAccessibility.js";
 import {
@@ -341,7 +342,7 @@ export function CivicRecordArrival({
               : atFarObservation
                 ? "Far evidence actions"
                 : atPythonPrimary
-                  ? "Blank Python primary actions"
+                  ? describeCustodyLedgerPrimaryReturnGroup(primaryPhase)
                 : atLocalComparison
                   ? "Local comparison actions"
                 : "Civic route actions"}>

@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-AESTH-007 W4 RESOLVED — COORDINATOR NEXT`. The normal result-dismissal/blank-fresh transition is rebuilt with truthful phase-aware evidence-return group names. Focused `58/58`, full `587/587`, build, HTTP/served markers, and clean final reload pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002 pending independent release; Team 1 remains complete at RP-012 with no successor.
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-007 W3 REVISE — W4 NEXT`. Complete result, explicit dismissal, atomic blank fresh entry, focus, field states, responsive layout, and immutable civic art pass bounded review; one P2 remains because the evidence-return group is still announced as `Blank Python primary actions` in result/fresh states. W4 owns only phase-aware semantic group naming. Team 2 remains on RP-002; Team 1 remains complete at RP-012 with no successor.
 
 Latest Working handoff: `2026-07-17 / RP002-P1-012 W2 RESOLVED — W3 AESTHETIC REVIEW`. The complete provisional Suit result now retains one explicit protected dismissal and atomically yields only the canonical carry-free blank System fresh-practice group. Exact neutral source, blank editable fields, transient-only result/fresh state, owner focus, separate returns, zero effect, invariant world, and all later locks pass focused `114/114`, full `586/586`, build, and served checks on `index-JnbDlM0E.js` / `index-ghzUiZe9.css`. Team 2 remains on RP-002 for W3; Team 1 remains complete at RP-012 with no successor.

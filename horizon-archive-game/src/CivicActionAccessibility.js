@@ -12,6 +12,22 @@ export function describeCivicActionAccessibility(owner, action, status) {
   });
 }
 
+const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
+  blank: "Blank Python primary evidence return",
+  feedback: "Primary feedback evidence return",
+  result: "Provisional result evidence return",
+  fresh: "Fresh practice evidence return",
+});
+
+export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
+  if (primaryPhase === "30-A1F") return custodyLedgerPrimaryReturnGroupLabels.feedback;
+  if (primaryPhase === "30-A2" || primaryPhase === "DR-00") {
+    return custodyLedgerPrimaryReturnGroupLabels.result;
+  }
+  if (primaryPhase === "DR-20") return custodyLedgerPrimaryReturnGroupLabels.fresh;
+  return custodyLedgerPrimaryReturnGroupLabels.blank;
+}
+
 const civicWorldRegionLabels = Object.freeze({
   overview: "Civic Record District arrival overview",
   near: "Near exposed layers, bounded observation view",

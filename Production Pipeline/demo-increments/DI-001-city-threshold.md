@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — RP002-AESTH-007 resolved
+
+- **Disposition:** `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.
+- **Change:** one phase-aware semantic helper names the external evidence-return group truthfully in `30-A0`, `30-A1F`, `30-A2`/`DR-00`, and `DR-20`; the separate route-return group and all visible behavior remain unchanged.
+- **Validation:** focused `58/58`; full `587/587`; production build; HTTP `200`; four exact served labels; clean final safe reload. Final candidate `index-CjiYW_Of.js` / `index-ghzUiZe9.css`.
+- **Release boundary:** coordinator verifies result retention, explicit atomic blank fresh entry, phase-aware names, blank-only persistence, responsive/accessibility parity, invariant world/zero authority, and every later-state lock.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-007 stale action-group name
 
 - **Disposition:** `REVISE — P2 OPEN / W4 AESTHETIC POLISH NEXT`.

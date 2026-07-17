@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W4 — RP002-AESTH-007 resolved
+
+- **Verdict:** `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`.
+- **Repair:** the primary evidence-return action group now derives exact phase-aware names for blank work, feedback, provisional result, and fresh practice. Result/fresh never announce a blank-primary group; the separate City Threshold return label is unchanged.
+- **Preserved:** visible UI, result/dismissal/fresh gameplay, focus, fields, order, targets, layout, art, storage, privacy, returns, zero effect, and every later lock.
+- **Validation:** focused `58/58`; full `587/587`; build; HTTP/served-name checks; warning/error-free final title reload. Final assets `index-CjiYW_Of.js` / `index-ghzUiZe9.css`.
+- **Coordinator:** independently validate only the bounded dismissal/fresh-entry plus phase-aware naming and release or hold it without opening later RP-002 states.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-007
 
 - **Verdict:** `REVISE — P2 STALE ACTION-GROUP NAME / W4 NEXT`.

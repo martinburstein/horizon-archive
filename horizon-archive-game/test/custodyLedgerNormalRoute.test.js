@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
   describeCivicActionAccessibility,
+  describeCustodyLedgerPrimaryReturnGroup,
   describeCivicWorldRegionAccessibility,
 } from "../src/CivicActionAccessibility.js";
 import {
@@ -238,6 +239,16 @@ test("SC-03-20 world-region names distinguish blank, partial, and complete exped
   }
   const arrival = await readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
   assert.match(arrival, /aria-label=\{describeCivicWorldRegionAccessibility\(routeState\)\}/);
+});
+
+test("primary evidence-return group names follow the active owner replacement", () => {
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("30-A0"), "Blank Python primary evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("30-A1F"), "Primary feedback evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("30-A2"), "Provisional result evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("DR-00"), "Provisional result evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("DR-20"), "Fresh practice evidence return");
+  assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-00"), /blank python primary/i);
+  assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-20"), /blank python primary/i);
 });
 
 test("normal RP-002 entry reaches only SC-03-00 and exposes a reversible zero-credit continuation", () => {
@@ -1808,6 +1819,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(actionAccessibility, /AVAILABLE/);
   assert.match(actionAccessibility, /INERT \/\/ ZERO CREDIT \/\/ NOT YET ACTIVE/);
   assert.match(arrival, /aria-label=\{accessibility\.accessibleName\}/);
+  assert.match(arrival, /describeCustodyLedgerPrimaryReturnGroup\(primaryPhase\)/);
+  assert.doesNotMatch(arrival, /\? "Blank Python primary actions"/);
   assert.match(arrival, /\{accessibility\.stateText\}/);
   assert.match(arrival, /aria-disabled=\{isInert \|\| undefined\}/);
   assert.match(arrival, /disabled=\{isInert\}/);

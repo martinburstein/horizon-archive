@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest Working candidate: `2026-07-17 / RP002-AESTH-007 W4 RESOLVED — COORDINATOR NEXT`. Phase-aware evidence-return group names close the sole W3 P2 without changing visible UI or gameplay. Final candidate `index-CjiYW_Of.js` / `index-ghzUiZe9.css` passes focused `58/58`, full `587/587`, build, served-marker/HTTP checks, and clean safe reload; release acceptance remains at the provisional result until independent coordinator validation.
+
 Latest Working candidate: `2026-07-17 / RP002-AESTH-007 W3 REVISE — W4 NEXT`. The W2 result-dismissal/blank-fresh build passes bounded visual, focus, field-state, responsive, and art review, with one P2 stale assistive action-group name. W4 is limited to phase-aware semantic naming; release acceptance remains at the provisional result until coordinator validation.
 
 Latest Advance continuity result: `2026-07-17 / RP002-P1-012 A5 REVISE — PROTECTED DISMISSAL SEAM ONLY`. A pure unimported `DR-00 -> DR-20` controller passes focused `72/72`, full `585/585`, validator, build, leakage, purity, and patch checks. It proves exact result retention, seven modalities/one hit, atomic canonical blank fresh practice, contamination rejection, separate returns, deterministic protected restore/focus, and hard later-state absence. Normal integration, browser storage, accepted assets, art, and live Demo remain unchanged; W1 begins at the accepted provisional result.
