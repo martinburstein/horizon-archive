@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator blank-view partial release — 2026-07-16
+
+- **Disposition:** `IN DEMO — PARTIAL / BLANK SC-03-10 COORDINATOR PASS`.
+- **Accepted boundary:** normal P0 arrival, zero-credit continuation, explicit Pilot near-layer inspection, blank sanitized `SC-03-10`, separate reversible return, and allowlisted deterministic resume.
+- **Evidence:** full **435/435**, production build, RP-002 release validator, RP-003/RP-004 curriculum self-tests, patch integrity, complete **130.4s** E2E with every gate true and no runtime errors, plus responsive title-shell checks at `1920 x 1080` and `390 x 844` with zero overflow and `>=44px` actions. The user save remained earlier and was preserved; focused normal-route/component tests plus W2–W4 evidence cover the direct blank boundary.
+- **Hard stop:** first observation activation, `SC-03-20+`, PY-009, RP002-RAI-01, packet save/completion, RP-003, and RP-004 remain protected. Next W1 reports only the first exact gap toward one deliberate near observation.
+
 ## Working W4 blank-view final reload — 2026-07-16
 
 - **Disposition:** `CLEAN VERIFICATION / NO AESTHETIC IMPLEMENTATION / COORDINATOR NEXT`.

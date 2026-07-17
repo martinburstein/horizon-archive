@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-16 coordinator release — RP-002 blank SC-03-10 increment
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED.` The normal route now reaches the staged zero-credit overview and blank sanitized near-layer group with separate return and deterministic bounded resume. No observation, Scene fact, learning/mastery/exam credit, city/world/external delta, successor, or later packet is exposed.
+- **Coordinator validation:** automated release checks **PASS in 130.4s**: full **435/435**, production build (`index-CMtUqHDM.js` / `index-BuFQ7Bya.css`), RP-002 release validator, RP-003 and RP-004 curriculum self-tests, E2E syntax, patch integrity, and complete title-to-credits E2E with `credits:true`, every emitted gate true, and `runtimeErrors:false`. Incidental tracked QA PNG regeneration was restored.
+- **Responsive evidence boundary:** exact reloaded `1920 x 1080` and `390 x 844` title-shell checks retained zero horizontal/outer overflow and `>=44px` visible actions. The user-owned save remained before the verified predecessor, so it was preserved; coordinator makes no direct blank-view crop claim beyond the passing focused normal-route/component suite and W2–W4 served-build/source/asset evidence.
+- **Next bounded handoff:** Player Agent W1 starts at the accepted blank `SC-03-10` boundary and reports only the earliest exact missing or broken step toward one deliberate near observation. Do not activate multiple observations, expose `SC-03-20+`, learning, packet save/completion, RP-003, or RP-004 in that Player pass.
+
 ## 2026-07-16 W4 — RP-002 blank-view clean final reload
 
 - **Disposition:** `PASS — NO W4 IMPLEMENTATION / COORDINATOR VALIDATION NEXT.` W3 authorized no visual change and W4 reproduced no exact defect from safely available evidence.
