@@ -23,7 +23,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 4 | `RP-004` | Three-Current Reach | `PROMOTED TO WORKING` | Player Agent (after RP-003 acceptance) | Coordinator independently verified all twelve gates | One pure TR-00→TR-40 caller begins at exact sanitized RP-003 completion and preserves SOLIDIFIED mappings, neutral landscape-isolated workload cases, unchanged continuation, null city/external delta, Tour isolation, safe returns, and no RP-005 destination | Wait behind RP-003 in Working order; Advance A1 owns only the reserved RP-005 shell next. |
 | 5 | `RP-005` | Manyfold Return | `PROMOTED TO WORKING` | Player Agent (after RP-004 acceptance) | Coordinator independently verified all twelve gates | One pure MF-00→MF-30 caller begins only at exact sanitized RP-004 completion, composes all 24 observations and both strict real-evaluator chains, and preserves invariant world/route/safety | Wait behind RP-004 in Working order; RP-006 now continues contiguously in Advance design. |
 | 6 | `RP-006` | Interval Works | `PROMOTED TO WORKING` | Player Agent (after RP-005 acceptance) | Coordinator independently verified all twelve gates | One pure `IW-00→IW-30` caller begins only at exact sanitized RP-005 completion, preserves exact order/gap/cause limits, composes both strict real-evaluator chains, and leaves SC-07 invariant | Wait behind RP-005 in Working order; RP-007 now continues contiguously in Advance design. |
-| 7 | `RP-007` | Braided Verge | `IN DESIGN — A1 STORY PASS` | Storyboarder Agent (`A2`, next) | Story gate passed; all later gates remain open | Exact verified RP-006 end state -> serviced destinationless continuation -> two distinct continuities with repeated association, bounded difference, relative order, and one closed junction; every successor remains undefined | A2 closes only the RP-007 Scene and production-art-plan gates. |
+| 7 | `RP-007` | Braided Verge | `IN DESIGN — A2 COMPLETE` | Curriculum Checker Agent (`A3`, next) | Story and Scene gates passed; production-art plan passed; all later gates remain open | Exact verified RP-006 end state -> serviced destinationless continuation -> two distinct continuities with recurrent association, bounded difference, relative order, and one closed junction; every successor remains undefined | A3 selects and verifies only the contiguous Python/AI-901 mapping; SC-08 presentation remains zero mastery evidence. |
 
 ## Team positions
 
@@ -31,7 +31,7 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `5 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006`
 - In-design packets: `1 — RP-007`
-- Team 1 railhead: `RP-007 — IN DESIGN / A1 STORY PASS / A2 NEXT`
+- Team 1 railhead: `RP-007 — IN DESIGN / A2 COMPLETE / A3 NEXT`
 - Team 2 live-demo position: `Accepted Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits baseline`
 - Ordered Advance lead beyond Team 2 accepted baseline: `6 ordered packets — RP-002 through RP-006 promoted; RP-007 in design`
 - Whole-story rail status: `IN PROGRESS`

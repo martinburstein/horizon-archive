@@ -13,6 +13,7 @@
 | SC-05 | Three-Current Reach | World D / Volcanic Habitation Vault / broad exchange reach | Brief — A2 invariant-landscape sequence and panoramic-master plan locked; no final art | Three materially distinct current/handling relations converge on one apparent common return while five compact phases preserve zero live control and world invariance | [Sheet](scenes/SC-05-three-current-reach.md) |
 | SC-06 | Manyfold Return | World D / Volcanic Habitation Vault / repeated-receiver field | Brief — A2 compact invariant-field sequence and two-master plan locked; no final art | Panorama plus forensic detail make recurring trace range, bounded divergence, sealed unavailability, and layered compatible replacement readable without judgment or live control | [Sheet](scenes/SC-06-manyfold-return.md) |
 | SC-07 | Interval Works | World D / Volcanic Habitation Vault / exposed material works | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus cross-section detail make relative material order, one changed feature, one persistent feature, one closed interval, and layered stewardship legible without clocks, timelines, or causal claims | [Sheet](scenes/SC-07-interval-works.md) |
+| SC-08 | Braided Verge | World D / Volcanic Habitation Vault / intersecting works | Brief — A2 four-phase invariant-world sequence and two-master plan locked; no final art | Panorama plus contact detail keep two continuities distinct while recurrent contacts, bounded difference, cross-cut order, closed junction, and compatible stewardship remain legible without diagrams, answer cues, unity, or cause | [Sheet](scenes/SC-08-braided-verge.md) |
 
 ## Status vocabulary
 
@@ -22,6 +23,6 @@
 - **Selected:** approved production direction with a complete scene sheet.
 - **Integrated:** implemented in the game and play-tested.
 
-Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-006 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
+Supporting breadth map: [Location Visual Spine](../Production%20Pipeline/LOCATION_VISUAL_SPINE.md). It records approved RP-001 through RP-007 visual facts and reserved future rows; it does not authorize later lore, locations, art, or routes.
 
-Next coverage recommendation: Curriculum Checker should perform RP-006 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-07 material-order cue, feature relation, motion, interaction, and interface state as zero mastery evidence and never an answer key. SC-07 has no final art.
+Next coverage recommendation: Curriculum Checker should perform RP-007 A3 only, selecting and verifying the contiguous Python/AI-901 mapping while treating every SC-08 continuity, contact, difference, order, closure, motion, interaction, and interface state as zero mastery evidence and never an answer key. SC-08 has no final art.
