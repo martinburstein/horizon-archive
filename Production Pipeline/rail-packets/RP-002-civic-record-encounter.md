@@ -1,5 +1,15 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Advance A2 continuity handoff — transfer submit/evaluation presentation
+
+- **Disposition:** `PASS — COMPACT TRANSFER SUBMIT/FEEDBACK/COMPLETE HIERARCHY LOCKED / A3 NEXT`.
+- **Boards:** one invariant SC-03 overview plus mutually exclusive expedition groups: `blank/edit -> submit`, `actual-failed-check feedback`, `genuinely blank retry`, or bounded `current-attempt 6/6 transfer evidence complete`. No transition/reward panel and no new art.
+- **Hierarchy:** System fresh-practice owner; four source rows visibly/semantically locked; two Pilot fields visibly/semantically editable; explicit submit after fields; failed-check Teacher/local-check owner with literal/programmatic associations; blank retry; System-owned course-evidence acknowledgement. Primary answers/work never appear as reference material.
+- **Focus/recovery:** owner heading first; ordinary Tab reaches `classification`, `owner`, then submit; failed feedback announces its heading and exact failed associations; blank retry focuses the first failed editable field after the replacement heading; complete acknowledgement focuses its heading. Invalid/stale/private/Tour input reconstructs the last safe blank boundary without replay.
+- **Responsive/accessibility:** one active group; complete textual state; non-color semantics; forced-color boundaries/focus; reduced-motion direct replacement; natural wide/narrow/`200%` reflow; no horizontal escape; `>=44px` actions; seven modalities/one hit; separate evidence and City Threshold returns.
+- **World/later locks:** unchanged first-person civic plate and clocks; zero Scene/mastery/save/world/route/access/authority/external/successor effect from presentation or submission alone. No explanation, RAI, review/save/completion, credits, `RP-003+`, or successor.
+- **Exact A3 handoff:** `Curriculum Checker Agent — perform only a NO REOPEN — SOLIDIFIED preservation review of accepted blank fresh practice -> Pilot edits -> explicit local submit -> actual-failed-check answer-free feedback/genuinely blank retry OR bounded current-attempt 6/6 transfer-evidence acknowledgement. Treat every visual, edit, focus, activation, feedback display, retry, acknowledgement, reflow, return, sanitation, resume, and Tour state as zero story/observation/mastery evidence. Preserve exact frozen PY-009 cases/answers/six simultaneous checks, independent primary/transfer evidence, actual-failed-check-only remediation, current-attempt 6/6, blank privacy recovery, separate returns, offline/no-authority/no-exam-guarantee, invariant world, null delta, no successor, and hard stop before explanation/RAI/review-save/completion/RP-003+. If unchanged, hand the same boundary to Gameplay Master without changing curriculum, copy, art, runtime, storage, route, or world state.`
+
 ## 2026-07-17 Advance A1 continuity handoff — fresh-transfer submission ownership
 
 - **Disposition:** `PASS — TRANSFER SUBMISSION/EVALUATION OWNERSHIP LOCKED / A2 NEXT`.

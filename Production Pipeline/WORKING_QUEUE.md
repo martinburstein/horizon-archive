@@ -1,5 +1,7 @@
 # Working Queue
 
+**Latest Advance continuity handoff (RP002-P1-013 / A2):** `PASS — A3 NO-REOPEN REVIEW NEXT`. One invariant-world, one-active-group presentation now distinguishes accepted blank/edit/submit, actual-failed-check Teacher/local-check feedback and blank retry, and bounded current-attempt `6/6` transfer evidence without previewing explanation. Normal integration remains unauthorized until A5; next W1 still reports only the earliest accepted-path submit/evaluation gap.
+
 **Latest Advance continuity handoff (RP002-P1-013 / A1):** `PASS — A2 PRESENTATION CONTINUITY NEXT`. The accepted blank fresh-practice group now has a locked surface ownership boundary for two Pilot edits, one explicit expedition-local submit intent, frozen six-check evaluation, actual-failed-check answer-free guidance/blank retry, and current-attempt `6/6` transfer evidence only. This authorizes no normal integration yet; next W1 still begins at the accepted blank group and reports only its earliest submit/evaluation gap after A2–A5 complete.
 
 **Latest coordinator acceptance (RP002-P1-012 / RP002-AESTH-007):** `PASS — IN DEMO PARTIAL / PY-009 FRESH PRACTICE ENTRY ACCEPTED`. Independent full `587/587`, all `15/15` readiness validators, build, `102.8s` title-to-credits E2E, responsive title shells, HTTP/assets/logs, patch integrity, and QA cleanup pass on `index-CjiYW_Of.js` / `index-ghzUiZe9.css`. Team 2's accepted edge is canonical blank System fresh practice after explicit result dismissal; next W1 reports only the earliest transfer submit/evaluation gap.

@@ -1,5 +1,15 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 transfer-submit presentation continuity
+
+- Reuse the invariant overview master; no new world plate, crop, geometry, light, material, maintenance, clock, hotspot, or art state is created.
+- Exactly one expedition group is active: blank/editable System practice; the same group with Pilot edits and submit; Teacher/local-check failed-check feedback; genuinely blank retry; or bounded System all-checks-complete acknowledgement. Inactive groups and submitted private values leave visual, pointer, keyboard, and accessibility order.
+- Stable semantic order is owner heading -> four locked neutral source rows -> two editable Pilot fields -> associated field help/error -> explicit submit -> separate evidence return. The City Threshold return remains a separately owned route group after the active practice group.
+- Failed evaluation replaces the edit group with answer-free feedback naming only actually failed checks. Acknowledging feedback opens a genuinely blank retry and focuses the first failed editable field after the new owner heading. Current-attempt `6/6` replaces the edit group with a bounded course-evidence acknowledgement; it exposes no explanation prompt or later action.
+- Wide presentation may place locked and editable fields in distinct columns only when DOM/reading order stays source then Pilot additions. At `1920 x 1080`, the dominant world plus complete current group and every required action fit without outer scroll. Narrow and `200%` text zoom use natural vertical reflow; no horizontal escape; actions remain `>=44px`.
+- Complete textual owner, locked/editable/failed/blank/complete state, associated errors, and actions carry meaning without color, position, icon, sound, or motion. Forced colors retain field/group boundaries and visible focus. Reduced motion uses direct group replacement. Pointer, touch, Enter, Space, switch, speech, and screen reader produce the same one-hit outcome.
+- Submission/evaluation is expedition-local and causes no world response, Scene fact, save, access, authority, route, external action, or successor. Hard stop before Python explanation, RAI, review/save/completion, RP-003+, or credits.
+
 ## Identity
 
 - **Scene ID:** `SC-03`

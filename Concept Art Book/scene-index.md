@@ -1,5 +1,7 @@
 # Scene Index
 
+**SC-03 transfer-submit continuity note — 2026-07-17:** the unchanged overview master now supports a compact expedition-interface sequence from blank fresh practice through Pilot edit/submit to answer-free failed-check/blank-retry or bounded `6/6` transfer-evidence acknowledgement. No new plate, final art, world state, explanation, later route, or successor was added.
+
 **SC-03 continuity note — 2026-07-17:** the existing three-master/four-phase brief now includes one Working-adjacent expedition-interface replacement board over the unchanged overview plate: blank/editable System -> local checks or Teacher feedback -> provisional Suit result. No new plate, final art, location, world state, or later-state exposure was added.
 
 | ID | Player-facing survey name | World / region | Status | Primary visual purpose | Art / sheet |

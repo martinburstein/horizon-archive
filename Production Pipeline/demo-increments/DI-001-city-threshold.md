@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A2 continuity — transfer submit presentation
+
+- **Presentation:** unchanged SC-03 overview plus one mutually replacing expedition group for blank/edit/submit, actual-failed-check feedback, blank retry, or bounded `6/6` transfer evidence.
+- **Access:** owner-first focus, exact failed associations, blank-retry focus, separate returns, seven modalities/one hit, `>=44px` actions, forced-color/reduced-motion parity, and desktop/narrow/`200%` reflow are locked.
+- **Boundary:** no new art/runtime/curriculum/storage/route; no world response, explanation, RAI, review/save/completion, RP-003+, or successor.
+
 ## 2026-07-17 Advance A1 continuity — transfer submission ownership
 
 - **Boundary:** from the accepted blank fresh-practice group, the Pilot owns only `classification`/`owner` edits and one explicit local submit intent; the frozen expedition six-check authority owns evaluation.
