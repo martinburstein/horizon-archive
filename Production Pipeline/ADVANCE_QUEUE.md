@@ -27,15 +27,19 @@ The Advance Team uses this queue for future playable slices ordered from the cur
 | 8 | `RP-008` | Offset Reach | `PROMOTED TO WORKING` | Player Agent (after RP-007 acceptance) | Coordinator independently verified all twelve gates | Exact verified RP-007 end state -> one pure OR-00→OR-30 journey -> retained prior summary + six observations in 720 orders/revisits + strict independent PY-016/AI901-D1-O8 chains + scored-tag-only remediation + conjunctive atomic save/replay-free restore; every successor remains undefined | Wait behind RP-007 in Working order; RP-009 now continues contiguously in Advance design. |
 | 9 | `RP-009` | Occluded Fold | `PROMOTED TO WORKING` | Player Agent (after RP-008 acceptance) | Coordinator independently verified all twelve gates | Exact RP-008 verified end state -> one pure OF-00→OF-30 journey -> both prior summaries + six observations in all 720 orders/revisits + strict independent PY-017/AI901-D2-O1 chains + bounded review + atomic save/restore + LOOK-only destinationless continuation; invariant world | Wait behind RP-008 in Working order; RP-010 holds the next strict Working position. |
 | 10 | `RP-010` | Counterfield | `PROMOTED TO WORKING` | Player Agent (after RP-009 acceptance) | Coordinator independently verified all twelve gates | Exact RP-009 edge ledger and retained RP-007/RP-008 summaries -> pure CF-00→CF-30 -> all 5,040 orders/revisits -> strict independent learning chains -> atomic scope register; invariant world and no RP-011 | Wait behind RP-009 in Working order; RP-011 now advances contiguously in A4 puzzle design. |
-| 11 | `RP-011` | Unborrowed Reach | `IN DESIGN — A4 PUZZLE PASS` | Coder Agent (`A5`, advance mode) | Story/Scene/Production-art plan/Curriculum/Puzzle `PASS`; Protected code pending | Exact RP-010 scope register plus four retained records -> six fresh observations in 720 orders -> strict independent PY-019 and AI901-D2-O4 chains -> atomic fresh finalization -> four complete scopes reopen in 24 orders -> separate six-method/twelve-limit reconciliation -> atomic final save/restore; invariant world and no RP-012 | A5 builds one pure protected non-routable journey through the frozen evaluators; normal integration, live Demo, art, readiness, ending, and RP-012 remain closed. |
+| 11 | `RP-011` | Unborrowed Reach | `GATE REVIEW — A5 HANDOFF` | Coordinator | Story/Scene/Curriculum/Puzzle/Protected code/Save-recovery/Accessibility/Production-art plan `PASS`; coordinator review pending | Exact RP-010 scope register plus four retained records -> six fresh observations in 720 orders -> strict independent PY-019 and AI901-D2-O4 chains -> checksummed atomic fresh finalization -> four complete scopes reopen in 24 orders -> exact six-method/twelve-limit reconciliation -> checksummed atomic final save/restore; invariant world and no RP-012 | Independently verify all twelve gates; normal integration, live Demo, final art, readiness verdict, ending, and RP-012 remain closed. |
 
 ## Team positions
 
-- Gate Review packets awaiting coordinator decision: `0`
+- Gate Review packets awaiting coordinator decision: `1 — RP-011`
 - Ready packets awaiting promotion: `0`
 - Promoted packets awaiting Working acceptance: `9 — RP-002, then RP-003, then RP-004, then RP-005, then RP-006, then RP-007, then RP-008, then RP-009, then RP-010`
-- In-design packets: `1 — RP-011`
-- Team 1 railhead: `RP-011 — IN DESIGN / A4 PUZZLE PASS`
+- In-design packets: `0`
+- Team 1 railhead: `RP-011 — GATE REVIEW / A5 HANDOFF`
+
+## 2026-07-17 RP-011 Advance Coder result
+
+`RP-011` is `GATE REVIEW — A5 HANDOFF`. One pure unimported Node-only Unborrowed Reach journey begins only at exact verified RP-010 completion and retains four separate byte-stable predecessor records. All `720` fresh-observation orders/revisits converge before strict frozen PY-019 and independent AI901-D2-O4 chains plus explanations gate one checksummed atomic fresh checkpoint with prior scopes hidden-but-retained. Only then do all four complete scopes reopen in all `24` orders/revisits; an independent exact `6/6` method plus `12/12` `None`-limit reconciliation gates one checksummed atomic final checkpoint and replay-free restore. Failed checks/scored tags/missed reconciliation items alone select answer-free blank unlimited remediation; privacy clearing and deterministic focus pass. Focused **15/15**, protected chain **124/124**, full **554/554**, RP-011 self-test/five forms, build, byte-identical assets, leakage/purity/cleanup, and patch integrity pass. Coordinator Gate Review is next; normal integration, final art, live Demo, Working, RP-012, and ending work remain closed.
 
 ## 2026-07-17 RP-011 Gameplay Master result
 

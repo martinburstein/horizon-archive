@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `IN DESIGN — A4 PUZZLE PASS`
+- Status: `GATE REVIEW — A5 HANDOFF`
 - Target chapter/location: Phase IV capstone continuation / unfamiliar operating reach beyond the Counterfield margin
 - Target demo horizon: tenth future slice after the accepted RP-001 boundary; directly after RP-010
 - Route order: 11
@@ -13,7 +13,7 @@
 - Working title: `Unborrowed Reach` — a Pilot expedition label for the fresh-evidence method, never a native category
 - Expedition spine phase and slot: Phase IV — Capstone and resolution / slot 2 of 3
 - Target player time: clean first play `46–64 minutes`; mastered replay `29–41 minutes`; no time limit, speed score, or timing credit
-- Complete Advance cycles spent on this packet: 0; A1 of orientation cycle 1 complete
+- Complete Advance cycles spent on this packet: 1; A1–A5 of orientation cycle 1 complete
 - Convergence-budget status: `WITHIN BUDGET — ORIENTATION CYCLE 1`
 
 ## Locked premise
@@ -231,9 +231,10 @@ Hiding/reopening, record navigation, phase replacement, world presentation, visi
 
 ## Advance Construction Track — Coder
 
-- Status: `NOT STARTED — A5 AFTER A4`
-- No module, route, component, storage key, asset hook, feature flag, test, or live-Demo exposure is authorized by A1.
-- A5 must remain protected and non-routable until the completed A1–A4 packet explicitly authorizes one smallest integration tranche.
+- Status: `PASS — PURE PROTECTED UR-00→UR-30 JOURNEY; COORDINATOR GATE REVIEW NEXT`
+- One pure Node-only `UnborrowedReachProtectedJourney` and one focused test consume the frozen A1–A4 authorities from exact verified RP-010 completion. They remain unimported, non-routable, in-memory-only, and absent from App/main, accepted routes, browser persistence, production bundles, art, the live Demo, RP-012, and the ending.
+- Focused **15/15** proves all `720` fresh-observation orders/revisits, all `24` post-finalization complete-scope reopen orders/revisits, strict real frozen PY-019 and single-agent-surface chains plus both explanations, failed-check/scored-tag-only answer-free recovery, exact fresh provenance/evidence classes/twelve `None` limits, two checksummed atomic checkpoints with byte-stable rejection, exact separate `6/6 + 12/12` reconciliation, replay-free restore, deterministic privacy clearing/focus, reversible returns, Tour/world/authority isolation, and LOOK-only destinationless bearing.
+- Complete protected RP-002→RP-011 chain **124/124**, full **554/554**, RP-011 self-test plus five canonical **8/8** forms, build, byte-identical accepted assets, leakage, browser/storage/network purity, cleanup, and patch integrity pass. Frozen curriculum, SC-12, earlier packets, accepted runtime, and user files remain unchanged.
 
 ## Anticipated accessibility and presentation risks
 
@@ -282,14 +283,14 @@ Hiding/reopening, record navigation, phase replacement, world presentation, visi
 ## Breadth and convergence record
 
 - Scoreboard gates passed: Story `PASS — A1 surface contract`; Scene `PASS — SC-12 compact two-master brief`; Curriculum `PASS — PY-019 + RP011-SINGLE-AGENT-SURFACES-01 / AI901-D2-O4 SOLIDIFIED`; Puzzle `PASS — UR-00→UR-30 graph locked`; Production art plan `PASS plan — final assets later`.
-- Scoreboard gates remaining: Protected code, Save/recovery implementation, Accessibility protected evidence, final Production art, Normal integration, Working evidence, and Release.
-- Did this pass reduce the remaining-gate count?: `YES — closed Puzzle with one coherent fresh-finalization/reopening/reconciliation graph instead of separate micro-seams`.
+- Scoreboard gates remaining: final Production art, Normal integration, Working evidence, and Release. Protected code, Save/recovery, Accessibility protected evidence, and protected validation now pass.
+- Did this pass reduce the remaining-gate count?: `YES — closed Protected code, Save/recovery, Accessibility protected evidence, and protected validation with one end-to-end journey rather than transition micro-seams`.
 - Existing seams integrated or consolidated: retained RP-007/RP-008/RP-009/RP-010 records, provenance, bounded support, counterevidence, ambiguity, unavailability, ordinary Builder executable literacy, invariant-world behavior, reversible returns, and destinationless-continuation discipline become one independent-record/reconciliation premise rather than new isolated lore seams.
 - Optional work trimmed or deferred: final revelation, Machine relationship, Builder continuity, disappearance, ending, readiness verdict, RP-012, native categories, shared identity/topology/chronology/synchronization, route unlocks, production art, curriculum selection, puzzle mechanics, and code.
 - New module or artifact integration consumer: `Concept Art Book/scenes/SC-12-unborrowed-reach.md` is the single A2 scene/production authority for later A3/A4/A5 consumption; it authorizes no runtime or final art.
-- Breadth verdict: `CONTINUE — A5 ADVANCE CODER`.
-- Next contiguous packet seed readiness: `NO — RP-012 remains ending-reserved until RP-011 reaches Gate Review or promotion`.
-- Exact next action in one sentence: Advance Coder A5 composes one pure non-routable `UR-00→UR-30` protected journey through the real frozen evaluators and proves all observation/reopen orders, two byte-stable atomic checkpoints, separate reconciliation, restore/recovery/focus, Tour/world/authority isolation, and no RP-012.
+- Breadth verdict: `GATE REVIEW — A5 HANDOFF`.
+- Next contiguous packet seed readiness: `NO — RP-012 remains ending-reserved until coordinator Gate Review explicitly promotes RP-011`.
+- Exact next action in one sentence: coordinator independently verifies the complete RP-011 protected evidence bundle and records promotion, REVISE, or HOLD without defining RP-012 or the ending.
 
 ## Advance Handoff Gate
 
@@ -297,9 +298,13 @@ Hiding/reopening, record navigation, phase replacement, world presentation, visi
 - Storyboarder sign-off: `PASS — 2026-07-17`
 - Curriculum Checker sign-off: `PASS — 2026-07-17`
 - Gameplay Master sign-off: `PASS — 2026-07-17`
-- Coder smoke-test result: `PENDING`
-- Readiness: `REVISE — A5 REQUIRED`
-- Required revision: A5 protected journey, then coordinator Gate Review.
+- Coder smoke-test result: `PASS — focused 15/15; protected chain 124/124; full 554/554; validator/forms/build/isolation pass`
+- Readiness: `GATE REVIEW — A5 HANDOFF`
+- Required revision: none identified by A5; coordinator independently verifies every gate.
+
+### Exact coordinator Gate Review handoff
+
+`Coordinator: independently validate only the RP-011 A5 protected checkpoint. Confirm UnborrowedReachProtectedJourney begins solely from exact verified RP-010 completion, retains four byte-stable separate predecessor records, and remains absent from App/main, routes, browser persistence, accepted bundles, art, and the live Demo. Re-run focused RP-011, the complete protected predecessor chain, RP-011 validator/self-test and all five canonical forms, full suite, production build/asset identity, leakage/purity/cleanup, and patch integrity. Confirm all 720 observation and 24 reopen orders/revisits, strict real frozen PY-019 and AI901-D2-O4 chains/explanations, failed-check/scored-tag-only answer-free recovery, checksummed byte-stable fresh and reconciliation checkpoints, post-finalization-only complete scope reopening, exact 6-method/12-None-limit reconciliation, replay-free restore, deterministic privacy clearing/focus, reversible returns, Tour/world/authority isolation, and LOOK-only destinationless bearing. Record READY FOR WORKING behind RP-010 only if every gate passes; otherwise record one exact REVISE or HOLD. Do not perform normal integration, production art, Demo reload, Working passes, RP-012, or ending work.`
 
 ### Exact Advance Coder A5 handoff
 
