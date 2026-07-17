@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A2 continuity handoff — two-group result dismissal to blank transfer
+
+- **Presentation:** unchanged Civic Record District plate; complete read-only `SUIT // PROVISIONAL TRANSLATION` with one explicit dismissal; then fresh blank `SYSTEM // EXPEDITION SESSION` using canonical `fresh_practice`.
+- **Placement:** dismissal follows the complete result and is the only forward intent; evidence and City Threshold returns remain separate. No persistent transition/reward panel and no automatic, focus-, time-, motion-, reload-, or return-driven advance exists.
+- **Accessibility/responsive:** Suit then System headings receive programmatic replacement focus outside the Tab order; next Tab from blank reaches its first blank field. Literal read-only/blank labels, forced-color boundaries, reduced-motion replacement, `>=44 x 44 CSS px` actions, desktop dominance, and narrow/`200%` text-zoom reflow are exact.
+- **Clean destination:** no learner primary source, answer, output, check, feedback, annotation, result, Builder evidence, answer bank, score, completion, or successor cue. Transfer submit/scoring/feedback and all explanation/RAI/review-save/completion/RP-003+ states remain closed.
+- **A3:** perform only the packet's `NO REOPEN — SOLIDIFIED` preservation check; change no copy, art, route, runtime, storage, curriculum, world, or successor boundary.
+
 ## 2026-07-17 Advance A1 continuity handoff — result dismissal to fresh blank transfer
 
 - **Surface contract:** the accepted read-only Suit result remains provisional expedition output. Its explicit dismissal clears only the displayed local rendering; it does not accept, reject, revise, save, transmit, erase, or canonize Builder evidence or the primary attempt.

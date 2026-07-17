@@ -1,5 +1,41 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Storyboarder continuity maintenance — provisional result to blank transfer hierarchy
+
+This A2 pass boards only the accepted `primary_result` display, one deliberate zero-effect dismissal, and canonical blank `fresh_practice` entry over the unchanged Civic Record District plate. It adds no copy, art, runtime state, curriculum evidence, scoring, persistence, or successor.
+
+### Smallest owner-replacement board
+
+| Board / transition | Literal owner and authority | Presentation responsibility | Hard stop |
+|---|---|---|---|
+| `30-A2 COMPLETE PRIMARY RESULT` | `SUIT // PROVISIONAL TRANSLATION`, canonical `primary_result` only | One complete read-only result group remains inspectable. Its owner heading is programmatic entry focus; one explicit expedition dismissal follows the complete result inside the same group. | No automatic advance, score, save, evidence, route, authority, or world response. |
+| `30-A2 -> 30-B0 EXPLICIT DISMISSAL` | Existing expedition interface; no narrative or assessment authority | The dismissal action is the only forward intent. It clears the Suit result and atomically replaces the whole active group. Separate evidence and City Threshold returns remain separate and never substitute for dismissal. | No intermediate reward, observation, mastery, check, feedback, result reuse, save eligibility, city delta, external action, or successor cue. |
+| `30-B0 FRESH TRANSFER ENTRY` | `SYSTEM // EXPEDITION SESSION`, canonical `fresh_practice` only | One fresh group replaces the Suit group. Neutral course-authored source is visibly locked; both learner fields are visibly and semantically blank. The System owner heading receives programmatic replacement focus outside the Tab order; next Tab reaches the first blank field. | No transfer submit, evaluation, output, checks, feedback, annotation, result, explanation, RAI, review/save/completion, RP-003+, or successor. |
+
+Only one group exists in visual, pointer, keyboard, and accessibility order at a time. Dismissal is a transition, not a third persistent panel. The first-person civic plate, environmental clock, routes, recorded evidence, and world geometry do not change.
+
+### Responsive and accessible hierarchy
+
+- **Desktop:** keep the unchanged 16:9 civic plate dominant. The current owner group occupies the existing expedition work-image region; result content precedes its neutral dismissal action, while separate evidence/route returns remain secondary and spatially distinct.
+- **Narrow and text zoom:** reflow the plate, one current owner group, its single in-group action when present, and the two separate returns in document order. Permit natural vertical scrolling; never clip copy, fields, focus, or a required action and never create horizontal escape.
+- **Focus:** entering the result focuses its Suit heading; explicit dismissal focuses the fresh System heading after replacement. Both headings remain outside the Tab order. Focus, reading, hover, time, animation, reload, or return never triggers dismissal.
+- **Non-color / forced colors:** literal owner labels plus `READ-ONLY` and `BLANK` state text carry meaning. In forced colors, system borders, field boundaries, and focus outlines remain visible; hue, glow, motion, and world response are never required cues.
+- **Reduced motion:** replace the complete group immediately and announce the new System-owned blank state. Any optional ordinary-motion dissolve is decorative, brief, and cannot reveal an intermediate state or alter focus timing.
+- **Targets:** dismissal and returns are at least `44 x 44 CSS px`; pointer, touch, keyboard, switch, speech, and assistive activation resolve to one semantic intent and one hit.
+
+### Blank-transfer contamination rejection
+
+`30-B0` contains no learner-entered primary source, primary answers, primary output, check state, Teacher feedback, annotations, provisional result, five-record Builder evidence, story inference, answer bank, score, completion signal, or successor cue. Retained primary data cannot surface through autofill, defaults, help, status, accessible descriptions, or responsive alternatives. Neutral source and both blank fields come only from `fresh_practice`.
+
+### Locked versus flexible presentation
+
+- **Locked:** invariant plate; two mutually exclusive owner groups; one explicit in-result dismissal; canonical copy only; complete result before dismissal; fresh blank destination; owner-heading focus; source locked/fields blank; separate returns; non-color/forced-color/reduced-motion equivalence; `44 x 44 CSS px` targets; zero-effect transition; no later state.
+- **Flexible:** spacing, restrained expedition-surface material, border weight, type scale, and optional short dissolve, provided world dominance, copy, document order, focus timing, state meaning, target size, and contamination rejection remain exact.
+
+### Exact Curriculum Checker A3 handoff
+
+`Curriculum Checker Agent — continuity-maintenance mode: perform only a NO REOPEN — SOLIDIFIED preservation review of the accepted primary_result -> explicit zero-effect dismissal -> genuinely fresh blank fresh_practice entry. Confirm that the two-group replacement and dismissal presentation add zero observation, mastery, score, check, saved evidence, transfer result, exam evidence, world/city effect, access, authority, or successor meaning; that blank transfer carries no learner primary source, answer, output, check state, feedback, annotation, provisional result, Builder evidence, or answer bank; and that only canonical primary_result and fresh_practice authorities are used. Preserve exact PY-009 fields, cases, answers, None/False behavior, primary/transfer separation, remediation, privacy clearing, offline/no-authority/no-exam-guarantee, independent RP002-RAI-01 evidence, and every later gate. Do not authorize transfer submission/scoring/feedback, explanation, RAI presentation, review/save/completion, RP-003+, code, art, copy, storage, route, or successor. Hand unchanged curriculum evidence to Gameplay Master for only the smallest explicit-dismissal-to-blank-entry interaction graph.`
+
 ## 2026-07-17 Advance continuity maintenance — result dismissal to blank transfer ownership
 
 The accepted read-only `SUIT // PROVISIONAL TRANSLATION` result now has one surface-safe transition contract into the already-defined fresh PY-009 practice boundary. This contract clarifies ownership and meaning only. It does not alter the canonical `primary_result` or `fresh_practice` copy exported by `custodyLedgerExercise.js`, implement the transition, expose transfer scoring, or authorize any later state.
