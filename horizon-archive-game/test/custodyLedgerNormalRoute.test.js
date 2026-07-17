@@ -1,7 +1,10 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { describeCivicActionAccessibility } from "../src/CivicActionAccessibility.js";
+import {
+  describeCivicActionAccessibility,
+  describeCivicWorldRegionAccessibility,
+} from "../src/CivicActionAccessibility.js";
 import {
   CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
@@ -130,6 +133,46 @@ test("far peer accessible names share the exact visible Available, Recorded, and
   assert.match(arrival, /aria-label=\{accessibility\.accessibleName\}/);
   assert.match(arrival, /\{accessibility\.stateText\}/);
   assert.doesNotMatch(arrival, /aria-label=\{`\$\{owner\}[^`]*\$\{action\}`\}/);
+});
+
+test("SC-03-20 world-region names distinguish blank, partial, and complete expedition evidence", async () => {
+  assert.equal(
+    describeCivicWorldRegionAccessibility({ boardId: "SC-03-20", checkpoint: "sc03_far_blank" }),
+    "Scale echo and closed boundary, blank distant observation view",
+  );
+  for (const checkpoint of ["sc03_far_first", "sc03_far_first_acknowledgement"]) {
+    assert.equal(
+      describeCivicWorldRegionAccessibility({ boardId: "SC-03-20", checkpoint }),
+      "Scale echo and closed boundary; one distant expedition observation retained.",
+    );
+  }
+  for (const checkpoint of ["sc03_far_complete", "sc03_far_complete_acknowledgement"]) {
+    assert.equal(
+      describeCivicWorldRegionAccessibility({ boardId: "SC-03-20", checkpoint }),
+      "Scale echo and closed boundary; both distant expedition observations retained.",
+    );
+  }
+  assert.equal(
+    describeCivicWorldRegionAccessibility({ boardId: "SC-03-10", checkpoint: "sc03_near_blank" }),
+    "Near exposed layers, bounded observation view",
+  );
+  assert.equal(
+    describeCivicWorldRegionAccessibility({ boardId: "SC-03-00", checkpoint: "sc03_arrival" }),
+    "Civic Record District arrival overview",
+  );
+  for (const checkpoint of [
+    "sc03_far_blank",
+    "sc03_far_first",
+    "sc03_far_first_acknowledgement",
+    "sc03_far_complete",
+    "sc03_far_complete_acknowledgement",
+  ]) {
+    const label = describeCivicWorldRegionAccessibility({ boardId: "SC-03-20", checkpoint });
+    assert.doesNotMatch(label, /Builder|city response|permission|access|world change/i);
+    assert.doesNotMatch(label, /Required observations|Far and closed evidence/i);
+  }
+  const arrival = await readFile(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  assert.match(arrival, /aria-label=\{describeCivicWorldRegionAccessibility\(routeState\)\}/);
 });
 
 test("normal RP-002 entry reaches only SC-03-00 and exposes a reversible zero-credit continuation", () => {

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W4 — RP002-AESTH-005 resolved
+
+- **Disposition:** `RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`. The far-world region retains the exact existing blank name at zero far observations, names one retained distant expedition observation at both one-far checkpoints, and names both retained distant expedition observations at both complete checkpoints.
+- **Boundary:** the new names report expedition observation state only. They do not duplicate adjacent Scene/System announcements or imply Builder/city response, permission, access, authority, or world change. Visible copy, art, CSS, layout, actions, evidence, save, route, credit, privacy, Tour, comparison, learning, completion, and RP-003+ are unchanged.
+- **Evidence:** focused **33/33**, related **139/139**, full **539/539**, RP-002 validator, build, patch integrity, HTTP `200` for root/JS/CSS/civic master, and served-bundle marker checks pass. Port `4173` serves `index-CdMwuH6o.js` / `index-R5wdIep0.css`; immutable civic master hash remains exact. User storage was not inspected or modified.
+- **Coordinator:** perform release gates and live representative desktop/narrow assistive review only; preserve every comparison/later lock.
+
 ## 2026-07-17 W3 — RP002-AESTH-005 second-far world-region label
 
 - **Disposition:** `P2 OPEN — AESTHETIC IMPLEMENTATION / W4 NEXT`. The second-far interaction, acknowledgement, complete return/replay, dormant comparison, and separate route return are visually and functionally coherent, but the `SC-03-20` world region remains assistively named as a `blank distant observation view` at every far checkpoint.

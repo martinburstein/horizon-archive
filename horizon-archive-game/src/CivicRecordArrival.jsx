@@ -1,7 +1,10 @@
 import { useLayoutEffect, useRef } from "react";
 import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
-import { describeCivicActionAccessibility } from "./CivicActionAccessibility.js";
+import {
+  describeCivicActionAccessibility,
+  describeCivicWorldRegionAccessibility,
+} from "./CivicActionAccessibility.js";
 import {
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
   custodyLedgerRouteActions,
@@ -81,11 +84,7 @@ export function CivicRecordArrival({ routeState, onAction }) {
         </p>
         <section
           className="city-world civic-record-world"
-          aria-label={atNearObservation
-            ? "Near exposed layers, bounded observation view"
-            : atFarObservation
-              ? "Scale echo and closed boundary, blank distant observation view"
-              : "Civic Record District arrival overview"}
+          aria-label={describeCivicWorldRegionAccessibility(routeState)}
         >
           <img
             className="city-world-plate-native"

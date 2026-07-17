@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W4 region-label correction — 2026-07-17
+
+- **Disposition:** `RP002-AESTH-005 RESOLVED — FINAL DEMO RELOADED / COORDINATOR NEXT`.
+- **Correction:** `SC-03-20` now exposes evidence-aware world-region accessible names: the exact existing blank label at zero far observations, one retained distant expedition observation at `sc03_far_first` and its acknowledgement, and both retained distant expedition observations at `sc03_far_complete` and its acknowledgement. Near and overview names remain exact.
+- **Semantic lock:** the names describe expedition observations only; they do not duplicate Scene/System announcements or imply Builder/city response, permission, access, authority, or world change. No visible copy, art/CSS/layout, action behavior, evidence, save, route, credit, privacy, Tour, comparison, learning, completion, successor, or RP-003+ state changed.
+- **Evidence:** focused **33/33**, related **139/139**, full **539/539**, RP-002 validator, build, patch integrity, served bundle markers, and root/JS/CSS/civic-master HTTP checks pass. Final reload serves `index-CdMwuH6o.js` / `index-R5wdIep0.css`; user storage remained untouched.
+
 ## Working W3 second-far region-label finding — 2026-07-17
 
 - **Disposition:** `RP002-AESTH-005 P2 OPEN — W4 AESTHETIC IMPLEMENTATION NEXT`.

@@ -11,3 +11,27 @@ export function describeCivicActionAccessibility(owner, action, status) {
     accessibleName: [owner, action, stateText].filter(Boolean).join(" — "),
   });
 }
+
+const civicWorldRegionLabels = Object.freeze({
+  overview: "Civic Record District arrival overview",
+  near: "Near exposed layers, bounded observation view",
+  farBlank: "Scale echo and closed boundary, blank distant observation view",
+  farPartial: "Scale echo and closed boundary; one distant expedition observation retained.",
+  farComplete: "Scale echo and closed boundary; both distant expedition observations retained.",
+});
+
+export function describeCivicWorldRegionAccessibility({ boardId, checkpoint } = {}) {
+  if (boardId === "SC-03-10") {
+    return civicWorldRegionLabels.near;
+  }
+  if (boardId !== "SC-03-20") {
+    return civicWorldRegionLabels.overview;
+  }
+  if (["sc03_far_complete", "sc03_far_complete_acknowledgement"].includes(checkpoint)) {
+    return civicWorldRegionLabels.farComplete;
+  }
+  if (["sc03_far_first", "sc03_far_first_acknowledgement"].includes(checkpoint)) {
+    return civicWorldRegionLabels.farPartial;
+  }
+  return civicWorldRegionLabels.farBlank;
+}
