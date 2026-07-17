@@ -699,7 +699,7 @@ test("either first far peer records exactly one canonical statement across all s
   }
 });
 
-test("first far evidence returns to a replay-only selected peer and an honestly inert unselected peer", () => {
+test("first far evidence returns to a replay-only selected peer and an honestly available unselected peer", () => {
   for (const selectedId of ["distant_repetition", "closed_boundary"]) {
     const unselectedId = selectedId === "distant_repetition" ? "closed_boundary" : "distant_repetition";
     const controller = createCustodyLedgerNormalRouteController({
@@ -724,11 +724,11 @@ test("first far evidence returns to a replay-only selected peer and an honestly 
     assert.deepEqual(returned.state.actionStates.map(({ label, status }) => ({ label, status })), [
       {
         label: custodyLedgerObservationActions.distant_repetition,
-        status: selectedId === "distant_repetition" ? "replay" : "inert",
+        status: selectedId === "distant_repetition" ? "replay" : "available",
       },
       {
         label: custodyLedgerObservationActions.closed_boundary,
-        status: selectedId === "closed_boundary" ? "replay" : "inert",
+        status: selectedId === "closed_boundary" ? "replay" : "available",
       },
     ]);
     assert.ok(returned.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
@@ -751,17 +751,175 @@ test("first far evidence returns to a replay-only selected peer and an honestly 
     assertNoDeltaOrCredit(replay.state, 4);
 
     const restored = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
-    const before = JSON.stringify(restored.getState());
-    const blocked = restored.dispatch(intent(
+    assert.equal(restored.getState().actionStates.find(({ label }) => (
+      label === custodyLedgerObservationActions[unselectedId]
+    )).status, "available");
+    assertNoDeltaOrCredit(restored.getState(), 4);
+  }
+});
+
+test("either remaining far peer records only its matching fifth fact across all seven modalities", () => {
+  for (const selectedId of ["distant_repetition", "closed_boundary"]) {
+    const unselectedId = selectedId === "distant_repetition" ? "closed_boundary" : "distant_repetition";
+    for (const activationKind of activationKinds) {
+      const first = createCustodyLedgerNormalRouteController({
+        predecessor,
+        restoredSave: farBlankSave(`rp002-second-far-${selectedId}-${activationKind}`),
+      }).dispatch(intent(
+        custodyLedgerObservationActions[selectedId],
+        "pointer",
+        `rp002-second-far-${selectedId}-${activationKind}-first`,
+      ));
+      const priorBytes = first.save.observationEvidence.map((record) => JSON.stringify(record));
+      const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
+      const result = controller.dispatch(intent(
+        custodyLedgerObservationActions[unselectedId],
+        activationKind,
+        `rp002-second-far-${selectedId}-${activationKind}-record`,
+      ));
+      assert.equal(result.status, "recorded");
+      assert.equal(result.observationId, unselectedId);
+      assert.equal(result.state.checkpoint, "sc03_far_complete_acknowledgement");
+      assert.deepEqual(result.state.sceneStatement, custodyLedgerObservationStatements[unselectedId]);
+      assert.deepEqual(result.state.statusMessage, {
+        owner: "SYSTEM // EXPEDITION STATE",
+        text: custodyLedgerObservationInterfaceCopy.complete,
+      });
+      assert.deepEqual(result.state.availableActions, [
+        custodyLedgerObservationControls.returnToEvidence.label,
+        custodyLedgerRouteActions.returnAccepted,
+      ]);
+      assert.equal(result.save.checkpoint, "sc03_far_complete");
+      assert.deepEqual(result.save.observationEvidence.slice(0, 4).map((record) => JSON.stringify(record)), priorBytes);
+      assert.equal(result.save.observationEvidence[4].observationId, unselectedId);
+      assert.deepEqual(result.state.observationState.progress, {
+        near: 3, nearRequired: 3, far: 2, farRequired: 2,
+      });
+      assert.equal(result.state.observationState.observationComplete, true);
+      assertNoDeltaOrCredit(result.state, 5);
+    }
+  }
+});
+
+test("complete far evidence returns to two replay peers and one dormant local comparison", () => {
+  for (const selectedId of ["distant_repetition", "closed_boundary"]) {
+    const unselectedId = selectedId === "distant_repetition" ? "closed_boundary" : "distant_repetition";
+    const first = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: farBlankSave(`rp002-complete-return-${selectedId}`),
+    }).dispatch(intent(
+      custodyLedgerObservationActions[selectedId],
+      "keyboard_enter",
+      `rp002-complete-return-${selectedId}-first`,
+    ));
+    const controller = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save });
+    const recorded = controller.dispatch(intent(
       custodyLedgerObservationActions[unselectedId],
+      "screen_reader",
+      `rp002-complete-return-${selectedId}-second`,
+    ));
+    const evidenceBytes = JSON.stringify(recorded.save.observationEvidence);
+    const returned = controller.dispatch(intent(
+      custodyLedgerObservationControls.returnToEvidence.label,
       "switch",
-      `rp002-first-far-return-${selectedId}-second-blocked`,
+      `rp002-complete-return-${selectedId}-evidence`,
+    ));
+    assert.equal(returned.status, "returned_to_evidence");
+    assert.equal(returned.state.checkpoint, "sc03_far_complete");
+    assert.equal(returned.state.sceneStatement, null);
+    assert.equal(returned.state.statusMessage, null);
+    assert.deepEqual(returned.state.availableActions, [
+      custodyLedgerObservationActions.distant_repetition,
+      custodyLedgerObservationActions.closed_boundary,
+      custodyLedgerObservationControls.openLocalComparison.label,
+      custodyLedgerRouteActions.returnAccepted,
+    ]);
+    assert.deepEqual(returned.state.actionStates.map(({ label, status }) => ({ label, status })), [
+      { label: custodyLedgerObservationActions.distant_repetition, status: "replay" },
+      { label: custodyLedgerObservationActions.closed_boundary, status: "replay" },
+      { label: custodyLedgerObservationControls.openLocalComparison.label, status: "inert" },
+    ]);
+    assert.ok(returned.state.actionStates.every(({ minWidthCssPx, minHeightCssPx }) => (
+      minWidthCssPx >= 44 && minHeightCssPx >= 44
+    )));
+    assert.equal(JSON.stringify(returned.save.observationEvidence), evidenceBytes);
+    assertNoDeltaOrCredit(returned.state, 5);
+
+    const dormant = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
+    const before = JSON.stringify(dormant.getState());
+    const blocked = dormant.dispatch(intent(
+      custodyLedgerObservationControls.openLocalComparison.label,
+      "pointer",
+      `rp002-complete-return-${selectedId}-comparison`,
     ));
     assert.equal(blocked.status, "rejected");
-    assert.equal(blocked.reason, "second_far_not_integrated");
+    assert.equal(blocked.reason, "local_comparison_dormant");
     assert.equal(JSON.stringify(blocked.state), before);
-    assertNoDeltaOrCredit(blocked.state, 4);
+
+    for (const replayId of [selectedId, unselectedId]) {
+      const replayController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
+      const replay = replayController.dispatch(intent(
+        custodyLedgerObservationActions[replayId],
+        "speech",
+        `rp002-complete-return-${selectedId}-${replayId}-replay`,
+      ));
+      assert.equal(replay.status, "replayed");
+      assert.deepEqual(replay.state.sceneStatement, custodyLedgerObservationStatements[replayId]);
+      assert.deepEqual(replay.state.statusMessage, {
+        owner: "SYSTEM // EXPEDITION STATE",
+        text: custodyLedgerObservationInterfaceCopy.revisit,
+      });
+      assert.equal(JSON.stringify(replay.save.observationEvidence), evidenceBytes);
+      assertNoDeltaOrCredit(replay.state, 5);
+    }
+
+    const routeController = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: returned.save });
+    const route = routeController.dispatch(intent(
+      custodyLedgerRouteActions.returnAccepted,
+      "touch",
+      `rp002-complete-return-${selectedId}-route`,
+    ));
+    assert.equal(route.status, "returned");
+    assert.equal(route.state.checkpoint, "city_threshold");
+    assertNoDeltaOrCredit(route.state);
   }
+});
+
+test("complete far save resumes and sanitizes only exact five-record evidence", () => {
+  const first = createCustodyLedgerNormalRouteController({
+    predecessor,
+    restoredSave: farBlankSave("rp002-complete-save"),
+  }).dispatch(intent(
+    custodyLedgerObservationActions.distant_repetition,
+    "pointer",
+    "rp002-complete-save-first",
+  ));
+  const complete = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: first.save }).dispatch(intent(
+    custodyLedgerObservationActions.closed_boundary,
+    "touch",
+    "rp002-complete-save-second",
+  )).save;
+  assert.deepEqual(sanitizeCustodyLedgerNormalRouteSave(complete, predecessor), complete);
+  const storage = memoryStorage();
+  assert.equal(writeCustodyLedgerNormalRoute(storage, complete, predecessor), true);
+  assert.deepEqual(readCustodyLedgerNormalRoute(storage, predecessor), complete);
+  const resumed = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete });
+  assert.equal(resumed.getState().checkpoint, "sc03_far_complete");
+  assert.equal(resumed.getState().sceneStatement, null);
+  assert.equal(resumed.getState().statusMessage, null);
+  assert.deepEqual(resumed.getSave(), complete);
+  assertNoDeltaOrCredit(resumed.getState(), 5);
+
+  const [recordA, recordB, recordC, farA, farB] = complete.observationEvidence;
+  for (const invalid of [
+    { ...complete, privateNotes: "PRIVATE" },
+    { ...complete, observationEvidence: [recordA, recordB, recordC, farA] },
+    { ...complete, observationEvidence: [recordA, recordB, recordC, farA, farA] },
+    { ...complete, observationEvidence: [recordA, recordB, recordC, farA, { ...farB, finalizationStatus: "draft" }] },
+    { ...complete, observationEvidence: [recordA, recordB, recordC, farA, { ...farB, observationId: "unknown_far" }] },
+    { ...complete, checkpoint: "sc03_far_first" },
+    { ...complete, checkpoint: "sc03_far_complete", successor: "SC-03-30" },
+  ]) assert.equal(sanitizeCustodyLedgerNormalRouteSave(invalid, predecessor), null);
 });
 
 test("first-far save resumes and sanitizes only exact one-of-two canonical evidence", () => {
@@ -1155,6 +1313,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /"sc03_near_complete"/);
   assert.match(app, /"sc03_far_blank"/);
   assert.match(app, /"sc03_far_first"/);
+  assert.match(app, /"sc03_far_complete"/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);

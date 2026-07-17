@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## Working W2 second-far observation integration — 2026-07-17
+
+- **Disposition:** `RP002-P1-008 RESOLVED — DEMO RELOADED / W3 NEXT`.
+- **Integrated boundary:** exact `sc03_far_first` retains the selected far peer as Recorded/replay-only and makes only the unselected peer Available. Both far orders and all seven modalities preserve four prior records byte-stably, add only the matching fifth canonical ID/Scene, and present exact System `5 of 5` acknowledgement.
+- **Persistence/recovery:** exact `sc03_far_complete` retains five canonical records, restores without replay, keeps both peers replay-only, and exposes only a dormant disabled/handler-free zero-credit local-comparison control plus separate enabled route return. Unsafe and contaminated inputs fail closed; every credit, authority, continuation, world, and privacy boundary remains exact.
+- **Evidence/hard stop:** focused `32/32`, related `108/108`, full `538/538`, validator, build, patch, reload, and HTTP checks pass on `index-DDeEi_QC.js` / `index-R5wdIep0.css`. W3 reviews this presentation only. Do not activate comparison, enter `SC-03-30`, expose learning/completion, or touch RP-003+.
+
 ## Working W1 second-far observation finding — 2026-07-17
 
 - **Disposition:** `RP002-P1-008 OPEN — W2 BUG REPAIR NEXT`.

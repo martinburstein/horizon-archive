@@ -39,7 +39,9 @@ import {
   describeCustodyLedgerObservationInterface,
 } from "./CustodyLedgerObservation.js";
 import {
+  CUSTODY_LEDGER_OBSERVATION_ACTION,
   custodyLedgerObservationStages,
+  recordCustodyLedgerObservation,
   sanitizeCustodyLedgerObservationState,
 } from "./custodyLedgerExercise.js";
 
@@ -56,6 +58,7 @@ const allowedCheckpoints = new Set([
   "sc03_near_complete",
   "sc03_far_blank",
   "sc03_far_first",
+  "sc03_far_complete",
 ]);
 const privateKeys = new Set([
   "privateNotes", "workingSource", "selections", "prose", "feedback", "credentials",
@@ -156,6 +159,25 @@ function boundedFirstFarObservationEvidence(value) {
       : null;
 }
 
+function boundedCompleteObservationEvidence(value) {
+  if (!Array.isArray(value) || value.length !== custodyLedgerObservationStages.near.length + custodyLedgerObservationStages.far.length) return null;
+  const safe = sanitizeCustodyLedgerObservationState({ observationEvidence: value });
+  const exactRecords = value.every((record) => {
+    const canonical = safe.observationEvidence.find((candidate) => candidate.observationId === record?.observationId);
+    return canonical && JSON.stringify(canonical) === JSON.stringify(record);
+  });
+  return safe.finalizedObservationIds.length === 5
+    && safe.progress.near === 3
+    && safe.progress.far === 2
+    && safe.phase === "observation_complete"
+    && safe.activeGroup === "observation_complete"
+    && safe.observationComplete === true
+    && safe.campaignCommitEnabled === false
+    && exactRecords
+      ? Object.freeze([...value])
+      : null;
+}
+
 export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
   const keys = Object.keys(value ?? {}).sort().join("|");
   const legacyKeys = "checkpoint|cityStateDelta|continuation|lastVerifiedBoundary|packetId|successor|version|worldStateDelta";
@@ -164,6 +186,7 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
   const secondEvidence = boundedSecondObservationEvidence(value?.observationEvidence);
   const thirdEvidence = boundedThirdObservationEvidence(value?.observationEvidence);
   const firstFarEvidence = boundedFirstFarObservationEvidence(value?.observationEvidence);
+  const completeEvidence = boundedCompleteObservationEvidence(value?.observationEvidence);
   if (!predecessorIsExact(predecessor)
     || !value
     || typeof value !== "object"
@@ -185,6 +208,8 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
           ? !thirdEvidence
         : value.checkpoint === "sc03_far_first"
           ? !firstFarEvidence
+        : value.checkpoint === "sc03_far_complete"
+          ? !completeEvidence
         : value.observationEvidence != null)) {
     return null;
   }
@@ -204,6 +229,8 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
           ? thirdEvidence
         : value.checkpoint === "sc03_far_first"
           ? firstFarEvidence
+        : value.checkpoint === "sc03_far_complete"
+          ? completeEvidence
         : null,
     successor: null,
   });
@@ -214,6 +241,7 @@ function saveFor(checkpoint, observationEvidence = null) {
   const secondEvidence = boundedSecondObservationEvidence(observationEvidence);
   const thirdEvidence = boundedThirdObservationEvidence(observationEvidence);
   const firstFarEvidence = boundedFirstFarObservationEvidence(observationEvidence);
+  const completeEvidence = boundedCompleteObservationEvidence(observationEvidence);
   return Object.freeze({
     version: CUSTODY_LEDGER_NORMAL_ROUTE_VERSION,
     packetId: CUSTODY_LEDGER_ROUTE_PACKET_ID,
@@ -230,6 +258,8 @@ function saveFor(checkpoint, observationEvidence = null) {
           ? thirdEvidence
         : checkpoint === "sc03_far_first"
           ? firstFarEvidence
+        : checkpoint === "sc03_far_complete"
+          ? completeEvidence
         : null,
     successor: null,
   });
@@ -246,17 +276,22 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
   const atSecond = checkpoint === "sc03_near_second";
   const atComplete = checkpoint === "sc03_near_complete";
   const atFarBlank = checkpoint === "sc03_far_blank";
-  const atFarAcknowledgement = checkpoint === "sc03_far_first_acknowledgement";
+  const atFarFirstAcknowledgement = checkpoint === "sc03_far_first_acknowledgement";
+  const atFarCompleteAcknowledgement = checkpoint === "sc03_far_complete_acknowledgement";
+  const atFarAcknowledgement = atFarFirstAcknowledgement || atFarCompleteAcknowledgement;
   const atFarFirst = checkpoint === "sc03_far_first";
+  const atFarComplete = checkpoint === "sc03_far_complete";
   const atNear = atBlank || atAcknowledgement || atSecondAcknowledgement
     || atThirdAcknowledgement || atFirst || atSecond || atComplete;
-  const atFar = atFarBlank || atFarAcknowledgement || atFarFirst;
+  const atFar = atFarBlank || atFarAcknowledgement || atFarFirst || atFarComplete;
   const atObservation = atNear || atFar;
   const safeObservation = atObservation && observationState
-    ? atFar
-      ? atFarBlank
-        ? blankFarObservationFromCompletedNear(persistedEvidence)
-        : firstFarObservationFromEvidence(persistedEvidence)
+      ? atFar
+        ? atFarBlank
+          ? blankFarObservationFromCompletedNear(persistedEvidence)
+          : atFarFirst || atFarFirstAcknowledgement
+            ? firstFarObservationFromEvidence(persistedEvidence)
+            : completeObservationFromEvidence(persistedEvidence)
       : sanitizeCustodyLedgerObservationState(observationState)
     : null;
   const message = atArrival
@@ -275,6 +310,8 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
             ? "Near evidence is ready for deliberate inspection. Nothing has been recorded yet."
         : atFarFirst
           ? "One bounded far observation is restored. No event or acknowledgement was replayed."
+        : atFarComplete
+          ? "All five bounded observations are restored. No event or acknowledgement was replayed."
         : atFarBlank
           ? safeObservation?.ownerMessage?.text ?? "Inspect each exposed condition deliberately. Visibility and orientation alone record no evidence."
           : "The verified expedition record preserves one reversible civic route.";
@@ -295,7 +332,11 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
       : atNear
         ? [...nearActions, custodyLedgerRouteActions.returnAccepted]
         : atFar
-          ? [...(atFarAcknowledgement ? [custodyLedgerObservationControls.returnToEvidence.label] : farActions), custodyLedgerRouteActions.returnAccepted]
+          ? [...(atFarAcknowledgement
+            ? [custodyLedgerObservationControls.returnToEvidence.label]
+            : atFarComplete
+              ? [...farActions, custodyLedgerObservationControls.openLocalComparison.label]
+              : farActions), custodyLedgerRouteActions.returnAccepted]
         : [custodyLedgerRouteActions.enter];
   return Object.freeze({
     status,
@@ -335,10 +376,15 @@ function normalState(checkpoint, status = "ready", observationState = null, disp
             label,
             status: safeObservation?.finalizedObservationIds?.includes(farHotspotByLabel.get(label)?.observationId)
               ? "replay"
-              : "inert",
+              : "available",
             minWidthCssPx: 44,
             minHeightCssPx: 44,
           }))
+        : atFarComplete
+          ? [
+            ...farActions.map((label) => ({ label, status: "replay", minWidthCssPx: 44, minHeightCssPx: 44 })),
+            { ...custodyLedgerObservationControls.openLocalComparison, status: "inert", minWidthCssPx: 44, minHeightCssPx: 44 },
+          ]
         : []).map((control) => Object.freeze({
       label: control.label,
       status: control.status,
@@ -524,6 +570,9 @@ function firstFarIntentIsBounded(request) {
     && request.boardId === "SC-03-20"
     && farHotspotByLabel.size === custodyLedgerObservationStages.far.length
     && [...farHotspotByLabel.values()].some((entry) => entry.semanticHotspotId === request.semanticHotspotId)
+    && Array.isArray(request.candidateSemanticIds)
+    && request.candidateSemanticIds.length === 1
+    && request.candidateSemanticIds[0] === request.semanticHotspotId
     && custodyLedgerRouteActivationKinds.includes(request.activationKind)
     && typeof request.eventToken === "string"
     && /^[A-Za-z0-9._:-]{1,128}$/.test(request.eventToken)
@@ -579,6 +628,43 @@ function firstFarObservationFromEvidence(observationEvidence) {
     observationEvidence: Object.freeze(retained.map((record) => Object.freeze({ ...record }))),
     finalizedObservationIds: Object.freeze(retained.map((record) => record.observationId)),
   });
+}
+
+function completeObservationFromEvidence(observationEvidence) {
+  const retained = boundedCompleteObservationEvidence(observationEvidence);
+  if (!retained) return null;
+  const sanitized = sanitizeCustodyLedgerObservationState({ observationEvidence: retained });
+  if (!(sanitized.phase === "observation_complete"
+    && sanitized.activeGroup === "observation_complete"
+    && sanitized.boardId === "SC-03-20"
+    && sanitized.ownerMessage?.owner === "SYSTEM // EXPEDITION SESSION"
+    && sanitized.progress.near === 3
+    && sanitized.progress.far === 2
+    && sanitized.finalizedObservationIds.length === 5
+    && sanitized.observationComplete === true
+    && sanitized.campaignCommitEnabled === false
+    && sanitized.cityStateDelta === null)) return null;
+  return Object.freeze({
+    ...sanitized,
+    observationEvidence: Object.freeze(retained.map((record) => Object.freeze({ ...record }))),
+    finalizedObservationIds: Object.freeze(retained.map((record) => record.observationId)),
+  });
+}
+
+function replayCompleteFarObservation(complete, request) {
+  if (!complete || !firstFarIntentIsBounded(request)) return null;
+  const entry = [...farHotspotByLabel.values()]
+    .find((candidate) => candidate.semanticHotspotId === request.semanticHotspotId);
+  if (!entry) return null;
+  const replayed = recordCustodyLedgerObservation(complete, {
+    actionType: CUSTODY_LEDGER_OBSERVATION_ACTION,
+    observationId: entry.observationId,
+    boardId: entry.boardId,
+    available: true,
+  });
+  return replayed.activeGroup === "observation_revisit"
+    ? Object.freeze({ status: "replayed", observationId: entry.observationId, state: replayed })
+    : null;
 }
 
 function blankObservationFromProtectedRoute(routeState, request) {
@@ -760,6 +846,12 @@ function restoredStateFor(checkpoint, predecessor, observationEvidence = null) {
       ? normalState("sc03_far_first", "ready", farFirst, farFirst, observationEvidence)
       : unavailableState();
   }
+  if (checkpoint === "sc03_far_complete") {
+    const complete = completeObservationFromEvidence(observationEvidence);
+    return complete
+      ? normalState("sc03_far_complete", "ready", complete, complete, observationEvidence)
+      : unavailableState();
+  }
   if (!["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete"].includes(checkpoint)) {
     return normalState(checkpoint);
   }
@@ -781,7 +873,7 @@ function restoredStateFor(checkpoint, predecessor, observationEvidence = null) {
 
 /**
  * Thin normal integration over the existing protected route and viewpoint authorities.
- * It owns reversible SC-03-00 staging, three bounded near observations, and one bounded first far observation.
+ * It owns reversible SC-03-00 staging and the five bounded observation records through a dormant comparison boundary.
  */
 export function createCustodyLedgerNormalRouteController(options = {}) {
   const predecessor = options.predecessor;
@@ -805,9 +897,13 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
     getState: () => state,
     snapshot: () => JSON.parse(JSON.stringify(state)),
     getSave: () => state.status === "ready"
-      ? saveFor(state.checkpoint === "sc03_far_first_acknowledgement" ? "sc03_far_first" : state.checkpoint, state.checkpoint === "sc03_near_first"
+      ? saveFor(state.checkpoint === "sc03_far_first_acknowledgement"
+        ? "sc03_far_first"
+        : state.checkpoint === "sc03_far_complete_acknowledgement"
+          ? "sc03_far_complete"
+          : state.checkpoint, state.checkpoint === "sc03_near_first"
         ? state.observationEvidence[0]
-        : ["sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement"].includes(state.checkpoint)
+        : ["sc03_near_second", "sc03_near_complete", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement"].includes(state.checkpoint)
           ? state.observationEvidence
           : null)
       : null,
@@ -871,7 +967,7 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
         return Object.freeze({ status: "advanced", state, save: saveFor("sc03_near_blank") });
       }
 
-      if (["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_near_third_acknowledgement", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement"].includes(state.checkpoint)) {
+      if (["sc03_near_blank", "sc03_near_first", "sc03_near_second", "sc03_near_complete", "sc03_near_third_acknowledgement", "sc03_far_blank", "sc03_far_first", "sc03_far_first_acknowledgement", "sc03_far_complete", "sc03_far_complete_acknowledgement"].includes(state.checkpoint)) {
         if (request?.action === custodyLedgerRouteActions.returnAccepted) {
           if (!returnToAccepted(predecessor, request)) return Object.freeze({ status: "rejected", state });
           state = normalState("city_threshold");
@@ -900,6 +996,19 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
             status: "returned_to_evidence",
             state,
             save: saveFor("sc03_far_first", evidence),
+          });
+        }
+
+        if (state.checkpoint === "sc03_far_complete_acknowledgement"
+          && request?.action === custodyLedgerObservationControls.returnToEvidence.label) {
+          const evidence = boundedCompleteObservationEvidence(state.observationEvidence);
+          const restoredComplete = completeObservationFromEvidence(evidence);
+          if (!restoredComplete) return Object.freeze({ status: "rejected", reason: "invalid_complete_far_evidence", state });
+          state = normalState("sc03_far_complete", "ready", restoredComplete, restoredComplete, evidence);
+          return Object.freeze({
+            status: "returned_to_evidence",
+            state,
+            save: saveFor("sc03_far_complete", evidence),
           });
         }
 
@@ -945,7 +1054,30 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
             ? createCustodyLedgerHotspotDispatcher({ initialState: firstFar }).dispatch(request)
             : null;
           if (result?.status === "recorded") {
-            return Object.freeze({ status: "rejected", reason: "second_far_not_integrated", state });
+            const farRecord = result.state.observationEvidence
+              ?.find((record) => record.observationId === result.observationId);
+            const completeEvidence = boundedCompleteObservationEvidence([...evidence, farRecord]);
+            const priorBytes = evidence.map((record) => JSON.stringify(record));
+            if (!completeEvidence || priorBytes.some((record, index) => JSON.stringify(completeEvidence[index]) !== record)) {
+              return Object.freeze({ status: "rejected", reason: "invalid_complete_far_evidence", state });
+            }
+            const dispatchState = Object.freeze({
+              ...result.state,
+              interface: describeCustodyLedgerObservationInterface(result.state),
+            });
+            state = normalState(
+              "sc03_far_complete_acknowledgement",
+              "ready",
+              result.state,
+              dispatchState,
+              completeEvidence,
+            );
+            return Object.freeze({
+              status: "recorded",
+              observationId: result.observationId,
+              state,
+              save: saveFor("sc03_far_complete", completeEvidence),
+            });
           }
           if (result?.status !== "replayed") {
             return Object.freeze({ status: "rejected", reason: result?.reason ?? "invalid_first_far_replay", state });
@@ -966,6 +1098,35 @@ export function createCustodyLedgerNormalRouteController(options = {}) {
             observationId: result.observationId,
             state,
             save: saveFor("sc03_far_first", evidence),
+          });
+        }
+
+        if (state.checkpoint === "sc03_far_complete") {
+          const evidence = boundedCompleteObservationEvidence(state.observationEvidence);
+          const complete = completeObservationFromEvidence(evidence);
+          if (request?.action === custodyLedgerObservationControls.openLocalComparison.label) {
+            return Object.freeze({ status: "rejected", reason: "local_comparison_dormant", state });
+          }
+          const result = replayCompleteFarObservation(complete, request);
+          if (result?.status !== "replayed") {
+            return Object.freeze({ status: "rejected", reason: result?.reason ?? "invalid_complete_far_replay", state });
+          }
+          const dispatchState = Object.freeze({
+            ...result.state,
+            interface: describeCustodyLedgerObservationInterface(result.state),
+          });
+          state = normalState(
+            "sc03_far_complete_acknowledgement",
+            "ready",
+            result.state,
+            dispatchState,
+            evidence,
+          );
+          return Object.freeze({
+            status: "replayed",
+            observationId: result.observationId,
+            state,
+            save: saveFor("sc03_far_complete", evidence),
           });
         }
 

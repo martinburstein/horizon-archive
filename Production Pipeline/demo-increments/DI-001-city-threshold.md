@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 W2 — RP002-P1-008 second-far integration resolved
+
+- **Disposition:** `PASS — DEMO RELOADED / W3 AESTHETIC REVIEW NEXT`. From exact sanitized `sc03_far_first`, only the unselected far peer is Available. Either far order and all seven modalities preserve the four prior records byte-stably, add only the matching fifth ID/Scene, and produce exact System `5 of 5` acknowledgement.
+- **Return/persistence:** evidence return and replay expose both far peers as Recorded/replay-only, separate enabled route return, and one honestly dormant `OPEN LOCAL COMPARISON` with disabled/handler-free zero-credit semantics. Exact allowlisted `sc03_far_complete` resumes without replay; unsafe, partial, contaminated, private, Tour, successor, and comparison-bypass inputs fail closed.
+- **Boundary:** no comparison activation, `SC-03-30`, learning, mastery, completion, RP-003+, art, curriculum, user-save inspection, world response, or non-null delta was added.
+- **Evidence:** focused **32/32**, related **108/108**, full **538/538**, RP-002 validator, build, patch integrity, and root/JS/CSS HTTP `200` pass. Port `4173` serves `index-DDeEi_QC.js` / `index-R5wdIep0.css`.
+- **W3:** review only second-far availability, exact matching acknowledgement, complete evidence return/replay, dormant local-comparison presentation, separate route return, and responsive/assistive visual coherence. Stop before local comparison or later content.
+
 ## 2026-07-17 W1 — RP002-P1-008 second-far finding
 
 - **Disposition:** `BLOCKED — RP002-P1-008 OPEN / W2 BUG REPAIR NEXT`. Accepted first-far acknowledgement/return/replay, exact three-near plus one-far evidence, visible/assistive state parity, separate return, immutable civic art, and all no-credit/no-delta boundaries remain stable.
