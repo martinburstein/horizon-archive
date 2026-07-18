@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
+
+- **Closed checklist item:** `[x] SC-03 / blank RAI explanation — interpretation-veil separation and depth`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png`, with neighboring provenance.
+- **Locked boundary:** after accepted exact transfer `9/9`, the genuinely blank Teacher explanation may consume one temporary expedition-owned veil with exactly three separate nested blank planes, corresponding only to application label, native fact, and authority. The planes remain visibly before and materially separate from the vast unchanged archive.
+- **Limit:** count, depth, ownership, material separation, and archive-dominant scale only; canonical reference, not runtime integration. No response, answer, evaluator, feedback, conclusion, evidence, world effect, access, authority, save, later state, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## 2026-07-18 coordinator release — strict RAI transfer accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`.

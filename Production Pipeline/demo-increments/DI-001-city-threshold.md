@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
+
+- **Closed checklist item:** `[x] SC-03 / blank RAI explanation — interpretation-veil separation and depth`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png`, with neighboring provenance; `1672 x 941`, `2,232,666` bytes, SHA-256 `633F5DCE1ACBB477482AE1CBE1FC39F57460F890F9329D1551371B94E943BA22`.
+- **Accepted visual fact:** one temporary expedition-owned interpretation veil contains exactly three separate nested blank translucent planes, one for each human explanation boundary, suspended before but never joined to the visibly greater unchanged archive.
+- **Limit:** canonical count/depth/ownership/separation reference only. No raster was integrated; no explanation response, evaluator, conclusion, world response, access, authority, save, route, later state, hidden lore, or successor is authorized.
+
 ## 2026-07-18 Coordinator — RAI-transfer convergence accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`. Normal play now accepts blank `T01` through one-at-a-time `T01`–`T03`, no interim result, third-case-only simultaneous strict `9/9`, bounded failed-pair Teacher recovery/one neutral zero-credit guide/blank retry, or exact-pass genuinely blank Teacher three-boundary explanation entry.

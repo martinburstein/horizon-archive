@@ -31,8 +31,8 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 ## Current durable state
 
 - Release candidate commit: `e7d619b` — `Working Coder Polish: separate RAI transfer guide cassette`
-- Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
-- `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
+- Coordinator acceptance commit: `0a6afd4` — `Coordinator: accept RAI transfer convergence`.
+- `HEAD == origin/main`: **must be verified after the cycle-reveal push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
 - Served assets: `index-CKaXmS2o.js` / `index-DyAC0bkf.css`
@@ -43,6 +43,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-pilot-conclusion-reveal/rp002-pilot-conclusion-triptych-v1.png` with neighboring provenance. It closes `SC-03 / EXS-20C Pilot conclusion visual identity`: one compact expedition-owned triptych object, exactly three equal blank laminae, remains visibly separate from the vast unchanged archive. Treat that question as closed; this is canonical item/composition evidence, not a claim of runtime integration.
 - Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-blank-rai-primary-reveal/rp002-blank-rai-review-frame-v1.png` with neighboring provenance. It closes `SC-03 / RAI-P0 blank review-frame ownership and scale`: one expedition-owned frame contains exactly three equal empty ordered channels, materially separate from the vast unchanged archive. Treat that question as closed; this is canonical item/composition evidence, not a claim of runtime integration.
 - Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-rai-guided-recovery-reveal/rp002-rai-guided-recovery-cassette-v1.png` with neighboring provenance. It closes `SC-03 / RAI-GUIDE neutral recovery-cassette identity`: exactly one removable expedition-owned single-aperture guide cassette remains outside the scored frame's exactly three blank channels, against the vast unchanged archive. Treat that question as closed; this is canonical item/count/separation evidence, not a claim of runtime integration.
+- Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png` with neighboring provenance. It closes `SC-03 / blank RAI explanation — interpretation-veil separation and depth`: exactly three nested blank expedition-owned planes remain visibly suspended before, and materially separate from, the greater unchanged archive. Treat that question as closed; this is canonical count/depth/ownership/separation evidence, not a claim of runtime integration.
 
 The worktree intentionally contains these two untracked user-owned items:
 
@@ -165,7 +166,7 @@ The immediate automation cycle was completed sequentially and every checkpoint w
 8. Aesthetic W3 — `5439520`.
 9. Aesthetic-Polish Coder W4 — `e7d619b`.
 
-The coordinator then passed all release gates and accepted strict three-case Responsible-AI transfer convergence, bounded answer-free recovery, exact-pass blank Teacher three-boundary entry, scored-frame/guide-cassette distinction, and responsive parity as `IN DEMO — PARTIAL`.
+The coordinator then passed all release gates and accepted strict three-case Responsible-AI transfer convergence, bounded answer-free recovery, exact-pass blank Teacher three-boundary entry, scored-frame/guide-cassette distinction, and responsive parity as `IN DEMO — PARTIAL`. The cycle-end reveal then closed `SC-03 / blank RAI explanation — interpretation-veil separation and depth` as canonical reference evidence without claiming runtime integration.
 
 ## Exact next action
 

@@ -1,5 +1,13 @@
 # SC-03 — Civic Record District
 
+## 2026-07-18 canonical blank Responsible-AI explanation interpretation veil
+
+- Canonical asset: `../../Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png`, with neighboring provenance.
+- Locked visual fact: the genuinely blank Teacher three-boundary explanation is one temporary expedition-owned interpretation veil composed of exactly three separate nested blank translucent planes. The three planes sit in depth before the archive and remain materially separate from it; the archive stays visible through and around them as the larger unchanged whole.
+- The planes correspond only to the human explanation boundaries of application label, native fact, and authority. They are not Builder doctrine, native facts, answers, evidence, permission, authority, a score, a conclusion, or a civic response.
+- This closes the named visual-production checklist item `SC-03 / blank RAI explanation — interpretation-veil separation and depth`. Future Lore Builder, Storyboarder, Aesthetic, and Coder passes consume it as settled evidence unless a demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction reopens it.
+- Scope limit: this is a canonical item/composition reference, not a runtime-integrated plate. It defines no explanation wording, evaluator, remediation, conclusion, interaction, world effect, access, save, later state, hidden lore, or successor.
+
 ## 2026-07-18 compact RAI transfer / blank Teacher presentation convergence
 
 - Reuse the invariant SC-03 overview, registered crop, geometry, light, material, maintenance, and continuous clocks. No new world plate, camera, effect, transition, result board, reward board, or per-case raster exists.
