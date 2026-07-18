@@ -54,7 +54,12 @@ import { createCustodyLedgerPrimaryResultDismissal } from "./CustodyLedgerPrimar
 import { createCustodyLedgerTransferInteraction } from "./CustodyLedgerTransferInteraction.js";
 import { createCustodyLedgerExplanationEntry } from "./CustodyLedgerExplanationEntry.js";
 import { createCustodyLedgerExplanationSubmission } from "./CustodyLedgerExplanationSubmission.js";
-import { createCustodyLedgerRAIPrimaryEntry } from "./CustodyLedgerRAIPrimaryEntry.js";
+import {
+  CUSTODY_LEDGER_OPEN_RAI_PRIMARY,
+  CUSTODY_LEDGER_RAI_PRIMARY_ENTRY_VERSION,
+  createCustodyLedgerRAIPrimaryEntry,
+} from "./CustodyLedgerRAIPrimaryEntry.js";
+import { createCustodyLedgerRAIPrimaryConvergence } from "./CustodyLedgerRAIPrimaryConvergence.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -206,6 +211,53 @@ export function createCustodyLedgerNormalRAIPrimaryEntry(
       explanationEntryState,
       explanationCompleteState,
     });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIPrimaryConvergence(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  blankRAIPrimaryState,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || explanationEntryState?.phase !== "EX-20"
+    || explanationCompleteState?.phase !== "EXS-20C"
+    || blankRAIPrimaryState?.phase !== "RAD-20"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(blankRAIPrimaryState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(blankRAIPrimaryState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  const options = {
+    primaryResult,
+    learningState: routeState.learningState,
+    freshPracticeState,
+    transferCompleteState,
+    explanationEntryState,
+    explanationCompleteState,
+  };
+  try {
+    const entry = createCustodyLedgerRAIPrimaryEntry(options).dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PRIMARY_ENTRY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_OPEN_RAI_PRIMARY,
+      activationKind: "pointer",
+      eventToken: "normal-route-convergence-boundary",
+    });
+    if (entry.status !== "blank_rai_primary_opened"
+      || JSON.stringify(entry.state) !== JSON.stringify(blankRAIPrimaryState)) return null;
+    return createCustodyLedgerRAIPrimaryConvergence(options);
   } catch {
     return null;
   }

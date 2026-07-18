@@ -15,6 +15,7 @@ import {
   createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
+  createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
   createCustodyLedgerNormalTransferInteraction,
   createCustodyLedgerNormalRouteController,
@@ -46,6 +47,10 @@ import {
   CUSTODY_LEDGER_OPEN_RAI_PRIMARY,
   CUSTODY_LEDGER_RAI_PRIMARY_ENTRY_VERSION,
 } from "../src/CustodyLedgerRAIPrimaryEntry.js";
+import {
+  CUSTODY_LEDGER_RAI_PRIMARY_CONVERGENCE_VERSION,
+  CUSTODY_LEDGER_SUBMIT_RAI_CASE,
+} from "../src/CustodyLedgerRAIPrimaryConvergence.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -1498,6 +1503,43 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     assert.equal(blankRAIPrimary.state.scoringEnabled, false);
     assert.equal(blankRAIPrimary.state.successor, null);
     assert.deepEqual(blankRAIPrimary.state.availableActions, ["RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD"]);
+    const convergence = createCustodyLedgerNormalRAIPrimaryConvergence(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      result.state,
+      complete.state,
+      blankRAIPrimary.state,
+      predecessor,
+    );
+    assert.ok(convergence);
+    assert.equal(convergence.getState().phase, "RAIC-00");
+    assert.equal(convergence.getState().case.id, "P01");
+    assert.deepEqual(convergence.getState().availableActions, [
+      CUSTODY_LEDGER_SUBMIT_RAI_CASE,
+      "RETURN TO EVIDENCE",
+      "RETURN TO CITY THRESHOLD",
+    ]);
+    for (const control of convergence.getState().controls) {
+      assert.equal(convergence.updateResponse({
+        caseId: "P01",
+        dimension: control.authorityDimension,
+        value: control.choices[0],
+      }).status, "response_updated_session_only");
+    }
+    const next = convergence.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PRIMARY_CONVERGENCE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_RAI_CASE,
+      activationKind,
+      eventToken: `rp002-rai-primary-submit-${activationKind}`,
+    });
+    assert.equal(next.status, "next_blank_case");
+    assert.equal(next.evaluationExposed, false);
+    assert.equal(next.state.case.id, "P02");
     assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
   }
 
@@ -2150,7 +2192,13 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_OPEN_RAI_PRIMARY/);
   assert.match(arrival, /onRAIPrimaryOpen/);
   assert.match(arrival, /value=\{raiPrimaryResponses\[control\.id\] \?\? ""\}/);
-  assert.match(arrival, /No Responsible-AI attempt, submission, evaluation, feedback, result, evidence, or credit is active/);
+  assert.match(arrival, /CUSTODY_LEDGER_SUBMIT_RAI_CASE/);
+  assert.match(arrival, /primaryPhase === "RAIC-20F"/);
+  assert.match(arrival, /CUSTODY_LEDGER_ACKNOWLEDGE_RAI_FEEDBACK/);
+  assert.match(arrival, /primaryPhase === "RAIC-30G"/);
+  assert.match(arrival, /CUSTODY_LEDGER_COMPLETE_RAI_GUIDE/);
+  assert.match(arrival, /primaryPhase === "RAIC-20C"/);
+  assert.match(arrival, /No transfer action, submission, evaluator, attempt, or later state is available/);
   assert.match(arrival, /CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION/);
   assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
@@ -2161,6 +2209,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalExplanationEntry/);
   assert.match(app, /createCustodyLedgerNormalExplanationSubmission/);
   assert.match(app, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  assert.match(app, /createCustodyLedgerNormalRAIPrimaryConvergence/);
   assert.match(app, /openCustodyLedgerRAIPrimary/);
   assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
@@ -2172,6 +2221,9 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onExplanationSubmit=\{handleCustodyLedgerExplanationSubmit\}/);
   assert.match(app, /onExplanationRetry=\{retryCustodyLedgerExplanation\}/);
   assert.match(app, /onRAIPrimaryOpen=\{openCustodyLedgerRAIPrimary\}/);
+  assert.match(app, /onRAIPrimarySubmit=\{submitCustodyLedgerRAICase\}/);
+  assert.match(app, /onRAIFeedbackAcknowledge=\{acknowledgeCustodyLedgerRAIFeedback\}/);
+  assert.match(app, /onRAIGuideComplete=\{completeCustodyLedgerRAIGuide\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -2181,6 +2233,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
   assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIPrimaryConvergence/);
   for (const acceptedSource of [app, arrival, normalRoute]) {
     assert.doesNotMatch(acceptedSource, /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
   }

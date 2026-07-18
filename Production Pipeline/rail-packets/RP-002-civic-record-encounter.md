@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W2 handoff — RAI-primary convergence resolved
+
+- **Disposition:** `RESOLVED — RP002-P1-017 / W3 AESTHETIC REVIEW NEXT`.
+- **Normal integration:** the exact accepted blank `RAD-20 / RAI-P0` boundary now authorizes only the existing protected convergence controller. One explicit Pilot submit advances `P01` and `P02` to wholly blank next cases with no interim result; only `P03` performs simultaneous strict `9/9`. Exact pass exposes only blank transfer with no transfer action/evaluator. A miss exposes only actual failed case/dimension Teacher guidance, one separate neutral zero-credit guide, and a wholly cleared blank first-failed retry.
+- **Privacy/invariants:** response and guide values remain transient UI/controller memory and clear on replacement; route storage, saves, world state, curriculum, art, and user paths are unchanged. Hidden `PY-009` prerequisites cannot cross-credit RAI. Both returns, one-active-group/focus/source order, accessibility/reflow, Tour/privacy/offline/no-authority/no-exam-guarantee, invariant world/null delta, no external effect, and `successor=null` remain exact. Transfer submission/evaluation and every later state remain closed.
+- **Evidence:** focused `63/63`; full `640/640`; Responsible-AI and RP-002 validators; production build `index-ZFaMnJWj.js` / `index-B85gq_mk.css`; served HTTP reload/action marker; patch integrity. W3 receives presentation review only.
+
 ## 2026-07-18 Working W1 handoff — blank RAI primary cannot submit
 
 - **Disposition:** `P1 OPEN — RP002-P1-017 / W2 BUG-REPAIR NEXT`.

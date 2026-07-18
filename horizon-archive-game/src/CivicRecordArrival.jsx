@@ -21,6 +21,11 @@ import {
   CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
 } from "./CustodyLedgerExplanationSubmission.js";
 import { CUSTODY_LEDGER_OPEN_RAI_PRIMARY } from "./CustodyLedgerRAIPrimaryEntry.js";
+import {
+  CUSTODY_LEDGER_ACKNOWLEDGE_RAI_FEEDBACK,
+  CUSTODY_LEDGER_COMPLETE_RAI_GUIDE,
+  CUSTODY_LEDGER_SUBMIT_RAI_CASE,
+} from "./CustodyLedgerRAIPrimaryConvergence.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -42,6 +47,9 @@ export function CivicRecordArrival({
   onExplanationSubmit,
   onExplanationRetry,
   onRAIPrimaryOpen,
+  onRAIPrimarySubmit,
+  onRAIFeedbackAcknowledge,
+  onRAIGuideComplete,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -54,12 +62,16 @@ export function CivicRecordArrival({
   const explanationFeedbackHeadingRef = useRef(null);
   const explanationConclusionHeadingRef = useRef(null);
   const raiPrimaryHeadingRef = useRef(null);
+  const raiFeedbackHeadingRef = useRef(null);
+  const raiGuideHeadingRef = useRef(null);
+  const raiTransferHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
   const [fieldOwner, setFieldOwner] = useState("");
   const [explanationResponses, setExplanationResponses] = useState({});
   const [raiPrimaryResponses, setRAIPrimaryResponses] = useState({});
+  const [raiGuideResponses, setRAIGuideResponses] = useState({});
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -96,10 +108,16 @@ export function CivicRecordArrival({
   }, [primaryPhase, explanationResponses]);
 
   useLayoutEffect(() => {
-    if (primaryPhase !== "RAD-20" && Object.keys(raiPrimaryResponses).length > 0) {
+    if (primaryPhase !== "RAIC-00" && Object.keys(raiPrimaryResponses).length > 0) {
       setRAIPrimaryResponses({});
     }
   }, [primaryPhase, raiPrimaryResponses]);
+
+  useLayoutEffect(() => {
+    if (primaryPhase !== "RAIC-30G" && Object.keys(raiGuideResponses).length > 0) {
+      setRAIGuideResponses({});
+    }
+  }, [primaryPhase, raiGuideResponses]);
 
   useLayoutEffect(() => {
     if (atPythonPrimary) {
@@ -158,13 +176,31 @@ export function CivicRecordArrival({
         explanationConclusionHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
-      if (primaryPhase === "RAD-20") {
+      if (primaryPhase === "RAD-20" || primaryPhase === "RAIC-00") {
         raiPrimaryHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RAIC-20F") {
+        raiFeedbackHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RAIC-30G") {
+        raiGuideHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RAIC-20C") {
+        raiTransferHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
     headingRef.current?.focus({ preventScroll: true });
-  }, [routeState.checkpoint, atPythonPrimary, primaryPhase, primaryInteraction?.focusIntent?.target]);
+  }, [
+    routeState.checkpoint,
+    atPythonPrimary,
+    primaryPhase,
+    primaryInteraction?.case?.id,
+    primaryInteraction?.focusIntent?.target,
+  ]);
 
   function submitPrimary(event) {
     event?.preventDefault?.();
@@ -203,6 +239,22 @@ export function CivicRecordArrival({
   function retryExplanation() {
     setExplanationResponses({});
     onExplanationRetry?.();
+  }
+
+  function submitRAIPrimary(event) {
+    event?.preventDefault?.();
+    const result = onRAIPrimarySubmit?.(raiPrimaryResponses, event);
+    if (["next_blank_case", "actual_miss_feedback", "strict_primary_complete"].includes(result?.status)) {
+      setRAIPrimaryResponses({});
+    }
+  }
+
+  function completeRAIGuide(event) {
+    event?.preventDefault?.();
+    const result = onRAIGuideComplete?.(raiGuideResponses, event);
+    if (["guided_practice_incomplete", "blank_primary_retry"].includes(result?.status)) {
+      setRAIGuideResponses({});
+    }
   }
 
   function renderAction(action) {
@@ -534,7 +586,7 @@ export function CivicRecordArrival({
                 <p>{primaryInteraction.ownershipMessage.text}</p>
               </section>
             )}
-            {atPythonPrimary && primaryPhase === "RAD-20" && (
+            {atPythonPrimary && ["RAD-20", "RAIC-00"].includes(primaryPhase) && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-primary-heading">
                 <p className="eyebrow">{primaryInteraction.owner}</p>
                 <h2 ref={raiPrimaryHeadingRef} id="custody-ledger-rai-primary-heading" tabIndex="-1">
@@ -542,36 +594,127 @@ export function CivicRecordArrival({
                 </h2>
                 <p>{primaryInteraction.ownershipMessage.text}</p>
                 <p>{primaryInteraction.case.prompt}</p>
+                <form onSubmit={submitRAIPrimary}>
+                  <dl className="custody-ledger-fields">
+                    {primaryInteraction.controls.map((control) => (
+                      <div key={control.id} data-field-state="editable">
+                        <dt>
+                          <label htmlFor={`custody-ledger-rai-${control.id}`}>
+                            {control.id.replaceAll("_", " ")}
+                          </label>
+                        </dt>
+                        <dd>
+                          <select
+                            id={`custody-ledger-rai-${control.id}`}
+                            name={control.id}
+                            value={raiPrimaryResponses[control.id] ?? ""}
+                            onChange={(event) => setRAIPrimaryResponses((current) => ({
+                              ...current,
+                              [control.id]: event.target.value,
+                            }))}
+                          >
+                            <option value="">Choose one</option>
+                            {control.choices.map((choice) => (
+                              <option key={choice} value={choice}>{choice}</option>
+                            ))}
+                          </select>
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  {primaryPhase === "RAIC-00" && (
+                    <div className="city-command-actions" aria-label="Pilot Responsible-AI case submission">
+                      <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                      <button
+                        className="primary-action"
+                        type="submit"
+                        disabled={primaryInteraction.controls.some((control) => !raiPrimaryResponses[control.id])}
+                      >
+                        {CUSTODY_LEDGER_SUBMIT_RAI_CASE}
+                      </button>
+                    </div>
+                  )}
+                </form>
+                <p className="civic-observation-status">
+                  This course case began genuinely blank. Responses remain private to this open view; P01 and P02 replace with the next blank case without interim evaluation.
+                </p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RAIC-20F" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-feedback-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiFeedbackHeadingRef} id="custody-ledger-rai-feedback-heading" tabIndex="-1">
+                  Responsible-AI case feedback
+                </h2>
+                <ul className="custody-ledger-feedback" aria-label="Actual failed Responsible-AI case dimensions">
+                  {primaryInteraction.failedCaseDimensions.map((item) => (
+                    <li key={`${item.scenarioId}-${item.dimension}`}>
+                      <span className="custody-ledger-feedback-field">Case {item.scenarioId} // {item.dimension}</span><br />
+                      <span>{item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="civic-observation-status">Only the actual failed case dimensions are shown. Submitted choices were cleared, and passed dimensions are not recapped.</p>
+                <button className="primary-action" type="button" onClick={onRAIFeedbackAcknowledge}>
+                  {CUSTODY_LEDGER_ACKNOWLEDGE_RAI_FEEDBACK}
+                </button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RAIC-30G" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-guide-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiGuideHeadingRef} id="custody-ledger-rai-guide-heading" tabIndex="-1">
+                  Neutral Responsible-AI guide
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <p>{primaryInteraction.guide.prompt}</p>
+                <form onSubmit={completeRAIGuide}>
+                  <dl className="custody-ledger-fields">
+                    {primaryInteraction.controls.map((control) => (
+                      <div key={control.id} data-field-state="editable">
+                        <dt><label htmlFor={`custody-ledger-rai-guide-${control.id}`}>{control.id.replaceAll("_", " ")}</label></dt>
+                        <dd>
+                          <input
+                            id={`custody-ledger-rai-guide-${control.id}`}
+                            name={control.id}
+                            value={raiGuideResponses[control.id] ?? ""}
+                            onChange={(event) => setRAIGuideResponses((current) => ({
+                              ...current,
+                              [control.id]: event.target.value,
+                            }))}
+                          />
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <button className="primary-action" type="submit">{CUSTODY_LEDGER_COMPLETE_RAI_GUIDE}</button>
+                </form>
+                <p className="civic-observation-status">This separate neutral guide grants zero credit. Complete work returns to a wholly cleared blank retry at the deterministic first failed dimension.</p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RAIC-20C" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-transfer-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiTransferHeadingRef} id="custody-ledger-rai-transfer-heading" tabIndex="-1">
+                  Responsible-AI primary complete
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <p>{primaryInteraction.case.prompt}</p>
                 <dl className="custody-ledger-fields">
                   {primaryInteraction.controls.map((control) => (
                     <div key={control.id} data-field-state="editable">
-                      <dt>
-                        <label htmlFor={`custody-ledger-rai-${control.id}`}>
-                          {control.id.replaceAll("_", " ")}
-                        </label>
-                      </dt>
+                      <dt>{control.id.replaceAll("_", " ")}</dt>
                       <dd>
-                        <select
-                          id={`custody-ledger-rai-${control.id}`}
-                          name={control.id}
-                          value={raiPrimaryResponses[control.id] ?? ""}
-                          onChange={(event) => setRAIPrimaryResponses((current) => ({
-                            ...current,
-                            [control.id]: event.target.value,
-                          }))}
-                        >
-                          <option value="">Choose one</option>
-                          {control.choices.map((choice) => (
-                            <option key={choice} value={choice}>{choice}</option>
-                          ))}
-                        </select>
+                        <input
+                          aria-label={`Blank transfer ${control.id.replaceAll("_", " ")}`}
+                          value=""
+                          readOnly
+                        />
                       </dd>
                     </div>
                   ))}
                 </dl>
-                <p className="civic-observation-status">
-                  This first course case is genuinely blank. No Responsible-AI attempt, submission, evaluation, feedback, result, evidence, or credit is active.
-                </p>
+                <p className="civic-observation-status">The transfer boundary is genuinely blank. No transfer action, submission, evaluator, attempt, or later state is available.</p>
               </section>
             )}
             <p>
@@ -594,8 +737,14 @@ export function CivicRecordArrival({
                       ? "Only the explanation dimensions that failed are shown. Private prose was cleared before this feedback appeared."
                     : primaryPhase === "EXS-20C"
                       ? "Current-attempt Python explanation evidence is complete. No access, authority, city change, or later learning has opened."
-                    : primaryPhase === "RAD-20"
-                      ? "The first Responsible-AI course case is open with three genuinely blank controls. No attempt, submission, evaluation, feedback, result, evidence, mastery, access, authority, or city change has been recorded."
+                    : primaryPhase === "RAD-20" || primaryPhase === "RAIC-00"
+                      ? "A Responsible-AI primary course case is open. Session responses are transient, and only P03 can trigger simultaneous strict 9/9 evaluation."
+                    : primaryPhase === "RAIC-20F"
+                      ? "Answer-free Teacher feedback names only actual failed case dimensions; submitted choices are cleared."
+                    : primaryPhase === "RAIC-30G"
+                      ? "A separate neutral guide is open. It grants no credit and stores no response."
+                    : primaryPhase === "RAIC-20C"
+                      ? "Strict 9/9 primary evidence is complete. The transfer case is blank and every transfer action and evaluator remains closed."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."

@@ -485,14 +485,14 @@ test("separate returns stay write-free and preserve Python, observation, predece
   assertZeroEffect(controller.getState());
 });
 
-test("protected controller remains pure, unimported, and hard-stopped before transfer evaluation and every later state", () => {
+test("protected controller remains pure, normally composed, and hard-stopped before transfer evaluation and every later state", () => {
   const source = readFileSync(new URL("../src/CustodyLedgerRAIPrimaryConvergence.js", import.meta.url), "utf8");
   const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   const main = readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8");
   const normalRoute = readFileSync(new URL("../src/CustodyLedgerNormalRoute.js", import.meta.url), "utf8");
-  assert.equal(app.includes("CustodyLedgerRAIPrimaryConvergence"), false);
+  assert.equal(app.includes("CustodyLedgerRAIPrimaryConvergence"), true);
   assert.equal(main.includes("CustodyLedgerRAIPrimaryConvergence"), false);
-  assert.equal(normalRoute.includes("CustodyLedgerRAIPrimaryConvergence"), false);
+  assert.equal(normalRoute.includes("CustodyLedgerRAIPrimaryConvergence"), true);
   for (const forbidden of [
     "submitCustodyLedgerRAITransferScenario",
     "evaluateCustodyLedgerRAITransfer",

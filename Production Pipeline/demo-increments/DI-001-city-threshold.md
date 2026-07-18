@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W2 — RAI-primary convergence integrated
+
+- **Cycle / disposition:** `RP002-P1-017 / W2 Coder bug-repair — RESOLVED; W3 AESTHETIC REVIEW NEXT`.
+- **Candidate behavior:** normal play now exposes explicit transient Pilot case submission; `P01`/`P02` replace with blank `P02`/`P03` without interim evaluation; only `P03` invokes strict simultaneous `9/9` and reaches either exact-pass blank transfer or failed-pair Teacher feedback -> neutral zero-credit guide -> wholly blank deterministic retry.
+- **Boundaries:** all private responses clear and remain outside storage; no transfer action/evaluator or later state is exposed. Independent Python evidence/no-cross-credit, separate returns, accessibility/privacy/Tour/offline/no-authority, invariant SC-03/world/null delta, and no successor remain exact.
+- **Evidence / next:** focused `63/63`, full `640/640`, Responsible-AI and RP-002 validators, build, HTTP served reload/action marker, and patch checks pass on `index-ZFaMnJWj.js` / unchanged `index-B85gq_mk.css`. W3 reviews only the newly reachable presentation states.
+
 ## 2026-07-18 Working W1 — blank RAI primary submission gap
 
 - **Cycle / disposition:** `RP002-P1-017 / W1 Player — P1 OPEN; W2 BUG-REPAIR NEXT`.
