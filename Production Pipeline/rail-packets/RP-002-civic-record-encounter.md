@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W3 — RP002-AESTH-012 RAI-primary three-channel rhythm
+
+- **Verdict:** `P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Blank/session-only `P01`–`P03`, no-interim whole-group replacement, P03-only simultaneous strict result, actual-failed-case/dimension Teacher feedback -> neutral guide -> wholly blank retry, and exact-pass blank transfer pass owner hierarchy, focus, source order, target, association, privacy, invariant art/world, and hard-stop review.
+- **Finding/evidence:** the three primary controls use only generic `.custody-ledger-fields { grid-template-columns:repeat(2,minmax(0,1fr)) }`, so the locked equal principle/mitigation/accountable-owner peers render `2 + 1` at wide size. The A2 presentation lock requires three equal source-ordered Pilot decision peers; the closed blank-RAI review-frame reference fixes exactly three equal empty ordered channels in one horizontal row. Focused `63/63`, current HTTP/markers/hashes, all three reference hashes, and runtime-master identity pass; Browser discovery returned no backend and storage remained untouched.
+- **Exact W4 edge:** Coder Agent in `aesthetic-polish` mode may add only one RAI-primary state-specific three-wide class/rule and focused regression, preserving existing one-column narrow/`200%` recovery and every owner/focus/target/association contract. Do not integrate any canonical raster or change primary/feedback/guide/blank-transfer gameplay, cases/choices/answers/evaluator/copy, privacy/storage/returns, invariant civic world, transfer evaluation/later states, or `successor=null`.
+- **Canonical closure:** blank explanation `6321100C...74DB`, Pilot conclusion `0EDA7DE3...BC6A`, and blank RAI frame `28880C47...DE58` remain closed non-runtime references; the runtime civic master remains exact `FD28D2D6...DAF6C`.
+
 ## 2026-07-18 Working W2 handoff — RAI-primary convergence resolved
 
 - **Disposition:** `RESOLVED — RP002-P1-017 / W3 AESTHETIC REVIEW NEXT`.

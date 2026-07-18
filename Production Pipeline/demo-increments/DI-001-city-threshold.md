@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W3 — RAI-primary three-channel composition
+
+- **Verdict:** `RP002-AESTH-012 P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Integrated primary convergence and recovery pass owner, one-active-group, focus, target, association, responsive/accessibility, privacy, invariant world/art, and later-state review.
+- **Bounded defect:** blank/session-only `P01`–`P03` use only the generic two-column custody grid, producing a wide `2 + 1` arrangement for the three locked equal principle/mitigation/accountable-owner peers. This contradicts the current A2 lock and closed blank-RAI three-channel horizontal-row decision.
+- **Evidence/next:** focused `63/63`, current root/assets HTTP `200`, exact served markers/hashes, all three closed references, and unchanged civic-master hash pass. Browser had no backend and storage was untouched. W4 may only add a state-specific RAI-primary three-wide grid, retain one-column narrow/`200%` recovery, add one focused regression, and rebuild/reload without touching gameplay, curriculum, copy, storage, art, blank-transfer behavior, or later states.
+
 ## 2026-07-18 Working W2 — RAI-primary convergence integrated
 
 - **Cycle / disposition:** `RP002-P1-017 / W2 Coder bug-repair — RESOLVED; W3 AESTHETIC REVIEW NEXT`.
