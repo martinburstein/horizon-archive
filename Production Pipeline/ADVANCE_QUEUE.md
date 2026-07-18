@@ -1,5 +1,11 @@
 # Advance Queue
 
+## 2026-07-18 A3 preservation — RAI transfer evidence firewall
+
+- **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.
+- **Preserved chain:** blank `T01` -> `T02` -> `T03`, no interim result, simultaneous strict `9/9`, mapped failed-pair Teacher recovery -> one zero-credit guide -> wholly blank retry, or exact-pass separate genuinely blank Teacher three-boundary entry. Only the frozen final evaluator result is evidence; `PY-009` cannot cross-credit.
+- **Exact next:** A4 composes one bounded protected transfer/recovery/blank-explanation-entry graph from existing authorities and stops before explanation submission/evaluation/feedback/result or every later state. No case, answer, threshold, scoring, source, runtime, world, RP-013, or successor change is authorized.
+
 ## 2026-07-18 A2 convergence — compact RAI transfer presentation
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / COMPACT PRESENTATION LOCKED / A3 NEXT`.

@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-18 RP-002 RAI transfer/recovery/blank-explanation preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: accepted blank transfer, sequential `T01`–`T03`, transient local Pilot submissions, delayed simultaneous `9/9`, mapped failed-pair recovery, wholly blank retry, and exact-pass genuinely blank Teacher three-boundary entry preserve the frozen mapping.
+- [x] Display, editing, submit activation, focus, reflow, motion, replacement, feedback, guidance, retry, return, resume, sanitation, modality, and Tour remain zero evidence except the frozen evaluator's final simultaneous result.
+- [x] Exact `9/9` opens only blank Teacher entry; actual misses alone select failed-case/dimension answer-free feedback, one neutral zero-credit guide, complete clearing, and deterministic wholly blank unlimited transfer retry.
+- [x] Cases, answers, dimensions, order, threshold, evaluator, remediation, evidence allowlist, privacy, independent hidden `PY-009` prerequisites/no cross-credit, accessibility, provisional-human-label/no-native-fact/no-authority meaning, offline/no-authority/no-exam-guarantee, invariant world/null delta, and no successor remain frozen.
+- [x] RP-002 self-test and canonical forms pass; `291` curriculum JSON files parse; focused Responsible-AI/primary-convergence/entry suites pass `27/27`; frozen curriculum authorities remain byte-stable.
+- [ ] Gameplay Master defines only one bounded protected transfer/recovery/blank-explanation-entry graph and stops before explanation submission/evaluation/feedback/result or every later state.
+
 ## 2026-07-18 RP-002 RAI primary/evaluation/recovery preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: accepted blank `RAI-P0`, sequential `P01`–`P03`, transient local Pilot submissions, delayed simultaneous `9/9`, mapped recovery, wholly blank retry, and exact-pass blank transfer preserve the frozen mapping.

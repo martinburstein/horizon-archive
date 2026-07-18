@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A3 preservation — RAI transfer evidence firewall
+
+- **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank RAI transfer.
+- **Evidence lock:** `T01` and `T02` remain transient and result-free; only the frozen evaluator after `T03` may score all nine dimensions together. Exact `9/9` clears into only genuinely blank Teacher three-boundary entry; any miss exposes actual-failed-pair answer-free Teacher feedback -> one neutral zero-credit guide -> wholly blank transfer retry.
+- **Independence/limits:** presentation, guide, focus, return, resume, accessibility, and Tour are zero evidence; hidden `PY-009` prerequisites cannot cross-credit. Application labels remain provisional human work, not native fact or authority. No runtime, accepted Demo, world, storage, art, source, case, answer, threshold, scoring, RP-013, or successor changed.
+- **Next:** A4 owns one bounded protected graph and must stop before explanation submission/evaluation/feedback/result or every later state.
+
 ## 2026-07-18 Advance A2 convergence — compact RAI transfer presentation
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A3 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank RAI transfer.
