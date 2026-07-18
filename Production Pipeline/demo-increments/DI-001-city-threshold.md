@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Coordinator — RAI-primary convergence accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-017 + RP002-AESTH-012`. Normal play now accepts blank `RAI-P0` through one-at-a-time `P01`–`P03`, no interim result, third-case-only simultaneous strict `9/9`, bounded failed-pair Teacher recovery/one neutral zero-credit guide/blank retry, or exact-pass genuinely blank transfer.
+- **Presentation:** exactly three equal source-ordered wide controls with one-column narrow/`200%` recovery; no canonical raster was integrated and the invariant civic master remains unchanged.
+- **Independent evidence:** full `641/641`; readiness validators `15/15`; build on `index-CaFYbIAD.js` / `index-gd0EXXXq.css`; clean complete E2E `394.5s` with all gates true, credits reached, and no runtime errors; live `1920 x 1080` and `390 x 844` title-shell review with no overflow/log warnings/errors and `48px` / `44px` actions. QA captures were restored and browser storage/save remained untouched.
+- **Next:** converge the existing blank RAI transfer/evaluator/Teacher-explanation authority; stop before explanation evaluation or later states.
+
 ## 2026-07-18 Working W4 — RAI-primary three-channel polish
 
 - **Verdict:** `RP002-AESTH-012 RESOLVED — COORDINATOR NEXT`. Only the blank/session-only primary list receives `custody-ledger-rai-primary-controls`: three equal source-ordered wide columns and one natural narrow/`200%` column.

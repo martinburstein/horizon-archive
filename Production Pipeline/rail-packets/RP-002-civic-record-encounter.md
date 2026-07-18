@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 coordinator release — strict RAI primary accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-017 + RP002-AESTH-012`.
+- **Accepted normal boundary:** the genuinely blank first RAI primary now continues through explicit transient `P01`–`P03` Pilot submissions, no interim result, `P03`-only simultaneous strict `9/9`, actual-failed-case/dimension Teacher feedback -> one neutral zero-credit guide -> wholly blank first-failed retry, or exact-pass genuinely blank RAI transfer. Wide controls are exactly three equal source-ordered columns and recover naturally to one column at narrow/`200%`.
+- **Independent release evidence:** full `641/641`, all `15/15` validators, production build, clean `394.5s` complete E2E, fresh desktop/narrow in-app review, HTTP/log/patch/cleanup, immutable civic art, and canonical-reference gates pass on `index-CaFYbIAD.js` / `index-gd0EXXXq.css`.
+- **Closed edge:** transfer submission/evaluation/recovery, Teacher explanation, RAI conclusion, review/save/completion, `RP-003+`, world/access/authority/external effects, and every successor remain absent. Next cycle may only converge existing transfer/evaluator/explanation authorities and must stop before explanation evaluation.
+
 ## 2026-07-18 Working W4 — RP002-AESTH-012 RAI-primary three-channel polish
 
 - **Verdict:** `RESOLVED — COORDINATOR NEXT`. Only the `RAD-20 / RAIC-00` principle/mitigation/accountable-owner list now carries `custody-ledger-rai-primary-controls`; it renders as exactly three equal `minmax(0, 1fr)` wide peers in existing source order and one natural narrow/`200%` column.
