@@ -15,6 +15,7 @@ import {
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalExplanationEntry,
+  createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalTransferInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
@@ -35,6 +36,10 @@ import {
   CUSTODY_LEDGER_EXPLANATION_ENTRY_VERSION,
   CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION,
 } from "./CustodyLedgerExplanationEntry.js";
+import {
+  CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
+  CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+} from "./CustodyLedgerExplanationSubmission.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -643,6 +648,7 @@ export function App() {
   const custodyLedgerTransferControllerRef = useRef(null);
   const custodyLedgerTransferContextRef = useRef(null);
   const custodyLedgerExplanationControllerRef = useRef(null);
+  const custodyLedgerExplanationSubmissionControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -1226,6 +1232,7 @@ export function App() {
     custodyLedgerTransferControllerRef.current = null;
     custodyLedgerTransferContextRef.current = null;
     custodyLedgerExplanationControllerRef.current = null;
+    custodyLedgerExplanationSubmissionControllerRef.current = null;
     setMode("rp002-arrival");
   }
 
@@ -1255,6 +1262,7 @@ export function App() {
       custodyLedgerTransferControllerRef.current = null;
       custodyLedgerTransferContextRef.current = null;
       custodyLedgerExplanationControllerRef.current = null;
+      custodyLedgerExplanationSubmissionControllerRef.current = null;
       setMode("city-threshold-staging");
       return;
     }
@@ -1268,6 +1276,7 @@ export function App() {
     custodyLedgerTransferControllerRef.current = null;
     custodyLedgerTransferContextRef.current = null;
     custodyLedgerExplanationControllerRef.current = null;
+    custodyLedgerExplanationSubmissionControllerRef.current = null;
   }
 
   function submitCustodyLedgerPrimary(routeState, fields, event) {
@@ -1295,6 +1304,7 @@ export function App() {
       custodyLedgerTransferControllerRef.current = null;
       custodyLedgerTransferContextRef.current = null;
       custodyLedgerExplanationControllerRef.current = null;
+      custodyLedgerExplanationSubmissionControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
       return;
     }
@@ -1308,6 +1318,7 @@ export function App() {
     custodyLedgerTransferControllerRef.current = null;
     custodyLedgerTransferContextRef.current = null;
     custodyLedgerExplanationControllerRef.current = null;
+    custodyLedgerExplanationSubmissionControllerRef.current = null;
     setCustodyLedgerPrimaryView(dismissalController.getState());
   }
 
@@ -1318,6 +1329,7 @@ export function App() {
       custodyLedgerTransferControllerRef.current = null;
       custodyLedgerTransferContextRef.current = null;
       custodyLedgerExplanationControllerRef.current = null;
+      custodyLedgerExplanationSubmissionControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
   }
@@ -1343,11 +1355,13 @@ export function App() {
     if (!transferController) return;
     custodyLedgerTransferControllerRef.current = transferController;
     custodyLedgerTransferContextRef.current = {
+      routeState,
       primaryResult,
       freshPracticeState: result.state,
       predecessor,
     };
     custodyLedgerExplanationControllerRef.current = null;
+    custodyLedgerExplanationSubmissionControllerRef.current = null;
     setCustodyLedgerPrimaryView(transferController.getState());
   }
 
@@ -1378,6 +1392,10 @@ export function App() {
         : null;
       if (!explanationController) return;
       custodyLedgerExplanationControllerRef.current = explanationController;
+      custodyLedgerTransferContextRef.current = {
+        ...context,
+        transferCompleteState: result.state,
+      };
     }
     setCustodyLedgerPrimaryView(result.state);
   }
@@ -1386,6 +1404,7 @@ export function App() {
     const result = custodyLedgerTransferControllerRef.current?.retryBlank();
     if (result?.status === "blank_retry") {
       custodyLedgerExplanationControllerRef.current = null;
+      custodyLedgerExplanationSubmissionControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
   }
@@ -1401,7 +1420,49 @@ export function App() {
       activationKind: routeActivationKind(event),
       eventToken: routeEventToken("rp002-open-blank-explanation"),
     });
-    if (result?.status === "blank_explanation_opened") setCustodyLedgerPrimaryView(result.state);
+    if (result?.status !== "blank_explanation_opened") return;
+    const context = custodyLedgerTransferContextRef.current;
+    const submissionController = context
+      ? createCustodyLedgerNormalExplanationSubmission(
+        context.routeState,
+        context.primaryResult,
+        context.freshPracticeState,
+        context.transferCompleteState,
+        result.state,
+        context.predecessor,
+      )
+      : null;
+    if (!submissionController) return;
+    custodyLedgerExplanationSubmissionControllerRef.current = submissionController;
+    setCustodyLedgerPrimaryView(submissionController.getState());
+  }
+
+  function handleCustodyLedgerExplanationSubmit(responses, event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerExplanationSubmissionControllerRef.current;
+    if (!controller) return null;
+    for (const [dimension, value] of Object.entries(responses)) {
+      const update = controller.updateResponse({ dimension, value });
+      if (update.status !== "response_updated_session_only") return null;
+    }
+    const result = controller.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken("rp002-explanation-submit"),
+    });
+    if (["feedback", "python_explanation_complete"].includes(result?.status)) {
+      setCustodyLedgerPrimaryView(result.state);
+    }
+    return result;
+  }
+
+  function retryCustodyLedgerExplanation() {
+    const result = custodyLedgerExplanationSubmissionControllerRef.current?.retryBlank();
+    if (result?.status === "blank_retry") setCustodyLedgerPrimaryView(result.state);
   }
 
   function returnToCompletedMeadow() {
@@ -2449,6 +2510,8 @@ export function App() {
         onTransferSubmit={(fields, event) => submitCustodyLedgerTransfer(routeState, fields, event)}
         onTransferRetry={retryCustodyLedgerTransfer}
         onExplanationOpen={openCustodyLedgerExplanation}
+        onExplanationSubmit={handleCustodyLedgerExplanationSubmit}
+        onExplanationRetry={retryCustodyLedgerExplanation}
       />
     );
   }

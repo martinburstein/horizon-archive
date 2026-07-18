@@ -16,6 +16,10 @@ import { CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS } from "./CustodyLedgerPrimaryI
 import { CUSTODY_LEDGER_CLEAR_RESULT_ACTION } from "./CustodyLedgerPrimaryResultDismissal.js";
 import { CUSTODY_LEDGER_RETRY_TRANSFER_ACTION } from "./CustodyLedgerTransferInteraction.js";
 import { CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION } from "./CustodyLedgerExplanationEntry.js";
+import {
+  CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION,
+  CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+} from "./CustodyLedgerExplanationSubmission.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -34,6 +38,8 @@ export function CivicRecordArrival({
   onTransferSubmit,
   onTransferRetry,
   onExplanationOpen,
+  onExplanationSubmit,
+  onExplanationRetry,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -43,10 +49,13 @@ export function CivicRecordArrival({
   const transferFeedbackHeadingRef = useRef(null);
   const transferCompleteHeadingRef = useRef(null);
   const explanationHeadingRef = useRef(null);
+  const explanationFeedbackHeadingRef = useRef(null);
+  const explanationConclusionHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
   const [fieldOwner, setFieldOwner] = useState("");
+  const [explanationResponses, setExplanationResponses] = useState({});
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -74,6 +83,13 @@ export function CivicRecordArrival({
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
   const primaryPhase = primaryInteraction?.phase ?? (atPythonPrimary ? "30-A0" : null);
+
+  useLayoutEffect(() => {
+    if (!["EX-20", "EXS-00"].includes(primaryPhase)
+      && Object.keys(explanationResponses).length > 0) {
+      setExplanationResponses({});
+    }
+  }, [primaryPhase, explanationResponses]);
 
   useLayoutEffect(() => {
     if (atPythonPrimary) {
@@ -120,8 +136,16 @@ export function CivicRecordArrival({
         transferCompleteHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
-      if (primaryPhase === "EX-20") {
+      if (primaryPhase === "EX-20" || primaryPhase === "EXS-00") {
         explanationHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "EXS-20F") {
+        explanationFeedbackHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "EXS-20C") {
+        explanationConclusionHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -152,6 +176,19 @@ export function CivicRecordArrival({
     setClassification("");
     setFieldOwner("");
     onTransferRetry?.();
+  }
+
+  function submitExplanation(event) {
+    event?.preventDefault?.();
+    const result = onExplanationSubmit?.(explanationResponses, event);
+    if (["feedback", "python_explanation_complete"].includes(result?.status)) {
+      setExplanationResponses({});
+    }
+  }
+
+  function retryExplanation() {
+    setExplanationResponses({});
+    onExplanationRetry?.();
   }
 
   function renderAction(action) {
@@ -403,26 +440,32 @@ export function CivicRecordArrival({
                 <p className="civic-observation-status">All 6 local transfer checks passed for this attempt. Course evidence is complete; no mastery, access, authority, or city change was granted.</p>
               </section>
             )}
-            {atPythonPrimary && primaryPhase === "EX-20" && (
-              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-explanation-heading">
+            {atPythonPrimary && ["EX-20", "EXS-00"].includes(primaryPhase) && (
+              <form className="custody-ledger-work-image" aria-labelledby="custody-ledger-explanation-heading"
+                onSubmit={submitExplanation}>
                 <p className="eyebrow">{primaryInteraction.owner}</p>
                 <h2 ref={explanationHeadingRef} id="custody-ledger-explanation-heading" tabIndex="-1">
                   Blank Python explanation
                 </h2>
                 <p>{primaryInteraction.ownershipMessage.text}</p>
                 <dl className="custody-ledger-fields">
-                  {Object.keys(primaryInteraction.explanationSelections).map((dimension, index) => (
+                  {(primaryInteraction.explanationControls?.map(({ id }) => id)
+                    ?? Object.keys(primaryInteraction.explanationSelections ?? {})).map((dimension, index) => (
                     <div key={dimension} data-field-state="editable">
                       <dt><label htmlFor={`custody-ledger-explanation-${dimension}`}>Explanation part {index + 1}</label></dt>
                       <dd>
                         <textarea
                           id={`custody-ledger-explanation-${dimension}`}
                           name={dimension}
-                          defaultValue=""
-                          maxLength="600"
+                          value={explanationResponses[dimension] ?? ""}
+                          maxLength="2000"
                           autoComplete="off"
                           spellCheck="true"
                           aria-describedby="custody-ledger-explanation-help"
+                          onChange={(event) => setExplanationResponses((current) => ({
+                            ...current,
+                            [dimension]: event.target.value,
+                          }))}
                         />
                       </dd>
                     </div>
@@ -431,6 +474,50 @@ export function CivicRecordArrival({
                 <p id="custody-ledger-explanation-help" className="civic-observation-status">
                   This course prompt is genuinely blank. No explanation attempt, evaluation, feedback, result, or credit is active.
                 </p>
+                {primaryPhase === "EXS-00" && (
+                  <button className="primary-action" type="submit">
+                    {CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION}
+                  </button>
+                )}
+              </form>
+            )}
+            {atPythonPrimary && primaryPhase === "EXS-20F" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-explanation-feedback-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={explanationFeedbackHeadingRef} id="custody-ledger-explanation-feedback-heading" tabIndex="-1">
+                  Python explanation needs another pass
+                </h2>
+                <p className="civic-observation-status">
+                  {primaryInteraction.boundedResult.confirmedDimensions} of {primaryInteraction.boundedResult.totalDimensions} dimensions passed for this attempt.
+                </p>
+                <ul className="custody-ledger-feedback" aria-label="Explanation dimensions to review">
+                  {primaryInteraction.remediation.map((item) => {
+                    const dimensionId = `custody-ledger-explanation-feedback-dimension-${item.dimension}`;
+                    const messageId = `custody-ledger-explanation-feedback-message-${item.dimension}`;
+                    return (
+                      <li key={item.dimension} aria-labelledby={`${dimensionId} ${messageId}`}>
+                        <span id={dimensionId} className="custody-ledger-feedback-field">Dimension // {item.dimension}</span><br />
+                        <span id={messageId}>{item.text}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="civic-observation-status">Submitted prose was cleared. Retry begins with all three explanation controls genuinely blank.</p>
+                <button className="primary-action" type="button" onClick={retryExplanation}>
+                  {CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION}
+                </button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "EXS-20C" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-explanation-conclusion-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={explanationConclusionHeadingRef} id="custody-ledger-explanation-conclusion-heading" tabIndex="-1">
+                  Python explanation complete
+                </h2>
+                <p className="civic-observation-status">
+                  {primaryInteraction.boundedResult.confirmedDimensions} of {primaryInteraction.boundedResult.totalDimensions} dimensions passed for this attempt.
+                </p>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
               </section>
             )}
             <p>
@@ -447,8 +534,12 @@ export function CivicRecordArrival({
                       ? "Only the transfer checks that failed are shown. Private working values were cleared before this feedback appeared."
                     : primaryPhase === "FT-20C"
                       ? "Current-attempt transfer evidence is complete. Python explanation and later learning remain closed."
-                    : primaryPhase === "EX-20"
+                    : primaryPhase === "EX-20" || primaryPhase === "EXS-00"
                       ? "A blank Teacher-owned Python explanation prompt is open. No attempt, evidence, result, mastery, access, authority, or city change has been recorded."
+                    : primaryPhase === "EXS-20F"
+                      ? "Only the explanation dimensions that failed are shown. Private prose was cleared before this feedback appeared."
+                    : primaryPhase === "EXS-20C"
+                      ? "Current-attempt Python explanation evidence is complete. No access, authority, city change, or later learning has opened."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."

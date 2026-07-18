@@ -459,9 +459,13 @@ test("accessibility, privacy, hard-stop, module-purity, and unimported boundarie
     "../src/CustodyLedgerNormalRoute.js",
     "../src/CustodyLedgerExplanationSubmission.js",
   ].map((relative) => readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8")));
-  for (const acceptedSource of [app, main, normalRoute]) {
-    assert.doesNotMatch(acceptedSource,
-      /CustodyLedgerExplanationSubmission|rp002\.explanation-submission\.v1|SUBMIT PYTHON EXPLANATION/);
+  assert.match(app, /CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION/);
+  assert.match(app, /handleCustodyLedgerExplanationSubmit/);
+  assert.match(normalRoute, /createCustodyLedgerNormalExplanationSubmission/);
+  assert.doesNotMatch(main,
+    /CustodyLedgerExplanationSubmission|rp002\.explanation-submission\.v1|SUBMIT PYTHON EXPLANATION/);
+  for (const acceptedSource of [app, normalRoute]) {
+    assert.doesNotMatch(acceptedSource, /custodyLedgerExplanationAnswers|dismissCustodyLedgerPythonConclusion/);
   }
   assert.doesNotMatch(source,
     /localStorage|sessionStorage|indexedDB|fetch\(|XMLHttpRequest|WebSocket|document\.|window\.|navigator\./);

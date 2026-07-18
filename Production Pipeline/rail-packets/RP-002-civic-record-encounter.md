@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — Python explanation submission repair
+
+- **Disposition:** `RP002-P1-015 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Exact canonical blank `EX-20` now creates only the protected `EXS-00` session authoring controller in normal App/route/UI. Three controlled Pilot responses remain transient and one explicit semantic submit enters the frozen evaluator without copying its dimensions, answers, rules, feedback associations, or conclusion authority.
+- **Outcomes:** actual misses show only bounded current-attempt count and existing answer-free remediation for failed dimensions, clear prose, and permit unlimited wholly blank retry with heading-first/first-failed recovery. Exact current-attempt `3/3` alone shows only the existing Pilot Python conclusion. Separate returns, hidden prerequisites, blank-primary durable checkpoint, sanitation/resume, accessibility/privacy/Tour/offline/no-authority/no-exam-guarantee, invariant world, unchanged continuation, `cityStateDelta=null`, zero effect, and `successor=null` remain exact.
+- **Hard stop/evidence:** conclusion dismissal, `RP002-RAI-01`, review/save/completion, `RP-003+`, authority/world response, route/access reward, external action, identity disclosure, and successor remain absent from this normal boundary. Focused `117/117`, full `617/617`, RP-002 validator, build, leakage/purity/patch, and served HTTP/marker gates pass on `index-wKYRIOow.js` / `index-CNOSF1pz.css`. No Browser backend was available; user storage was untouched.
+
 ## 2026-07-17 Working W1 — Python explanation submission blocker
 
 - **Issue/disposition:** `RP002-P1-015 / P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted live `EX-20 / 30-D` retains the canonical Teacher prompt, three genuinely blank controls, literal no-attempt state, owner-heading focus, separate write-free returns, responsive/accessibility contract, invariant civic world, and every hard later-state lock, but the normal group has no explicit `SUBMIT PYTHON EXPLANATION` control, response dispatch, evaluator integration, feedback/retry, or Pilot conclusion path.

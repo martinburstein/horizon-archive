@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — explanation submission candidate
+
+- **Player-visible delta:** canonical blank Teacher authoring now has three session-only Pilot controls and explicit `SUBMIT PYTHON EXPLANATION`; local evaluation replaces it with only actual-failed-dimension answer-free feedback plus wholly blank `RETRY BLANK`, or exact `3/3` plus the existing Pilot Python conclusion.
+- **Five-minute path:** from accepted `EX-20`, enter three responses and submit; observe either failed-dimension-only feedback, cleared prose, and blank retry, or the bounded `3/3` Pilot conclusion. Both evidence and City Threshold returns remain separate throughout.
+- **Preservation/status:** no prose, token, feedback, result, focus history, or conclusion persists. Blank-primary storage, hidden prerequisites, Tour/privacy/offline/accessibility/world/null-delta/no-authority locks and hard later-state absence remain exact. Candidate `index-wKYRIOow.js` / `index-CNOSF1pz.css` passes focused `117/117`, full `617/617`, RP-002 validator, build, leakage/purity/patch, and HTTP markers; W3 aesthetic review remains required before coordinator release.
+
 ## 2026-07-17 Working W1 — Python explanation submission blocker
 
 - **Issue:** `RP002-P1-015 / P1`; accepted canonical blank Teacher `EX-20 / 30-D` renders the unchanged prompt, three genuinely blank controls, literal no-attempt status, owner-heading focus contract, separate returns, responsive/accessibility metadata, and invariant civic world, but exposes no `SUBMIT PYTHON EXPLANATION` action or normal local-evaluation handler.

@@ -12,6 +12,7 @@ import {
   CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalExplanationEntry,
+  createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalTransferInteraction,
@@ -37,6 +38,10 @@ import {
   CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION,
 } from "../src/CustodyLedgerExplanationEntry.js";
 import {
+  CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
+  CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+} from "../src/CustodyLedgerExplanationSubmission.js";
+import {
   responsibleAIDimensions,
   responsibleAIExercise,
   responsibleAIPrimaryScenarios,
@@ -55,6 +60,8 @@ import {
 import {
   custodyLedgerObservationStages,
   custodyLedgerObservationStatements,
+  custodyLedgerExplanationAnswers,
+  custodyLedgerExplanationDimensions,
 } from "../src/custodyLedgerExercise.js";
 
 const predecessor = Object.freeze({
@@ -257,6 +264,9 @@ test("primary evidence-return group names follow the active owner replacement", 
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-00"), "Fresh practice evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-20F"), "Transfer feedback evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("FT-20C"), "Transfer-complete evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-00"), "Blank Python explanation evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-20F"), "Python explanation feedback evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-20C"), "Python explanation conclusion evidence return");
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-00"), /blank python primary/i);
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-20"), /blank python primary/i);
 });
@@ -1416,6 +1426,35 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     assert.equal(result.state.savePerformed, false);
     assert.equal(result.state.successor, null);
     assert.deepEqual(result.state.availableActions, ["RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD"]);
+    const submission = createCustodyLedgerNormalExplanationSubmission(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      result.state,
+      predecessor,
+    );
+    assert.ok(submission);
+    assert.equal(submission.getState().phase, "EXS-00");
+    for (const dimension of custodyLedgerExplanationDimensions) {
+      assert.equal(submission.updateResponse({
+        dimension,
+        value: custodyLedgerExplanationAnswers[dimension],
+      }).status, "response_updated_session_only");
+    }
+    const complete = submission.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+      activationKind,
+      eventToken: `rp002-explanation-submit-${activationKind}`,
+    });
+    assert.equal(complete.status, "python_explanation_complete");
+    assert.equal(complete.state.phase, "EXS-20C");
+    assert.equal(complete.state.boundedResult.confirmedDimensions, 3);
+    assert.equal(complete.state.successor, null);
     assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
   }
 
@@ -1434,6 +1473,43 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     { ...fixture.transferCompleteState, successor: "RP-003" },
     predecessor,
   ), null);
+
+  const feedbackEntry = createCustodyLedgerNormalExplanationEntry(
+    fixture.entered.state,
+    fixture.primaryResult,
+    fixture.freshPracticeState,
+    fixture.transferCompleteState,
+    predecessor,
+  ).dispatch({
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_EXPLANATION_ENTRY_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION,
+    activationKind: "pointer",
+    eventToken: "rp002-explanation-feedback-entry",
+  }).state;
+  const feedbackController = createCustodyLedgerNormalExplanationSubmission(
+    fixture.entered.state,
+    fixture.primaryResult,
+    fixture.freshPracticeState,
+    fixture.transferCompleteState,
+    feedbackEntry,
+    predecessor,
+  );
+  const feedback = feedbackController.dispatch({
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
+    activationKind: "pointer",
+    eventToken: "rp002-explanation-feedback-submit",
+  });
+  assert.equal(feedback.status, "feedback");
+  assert.deepEqual(feedback.state.failedDimensions, custodyLedgerExplanationDimensions);
+  assert.equal(feedback.state.privateProseCleared, true);
+  assert.equal(feedbackController.retryBlank().state.explanationControlState, "genuinely_blank");
 });
 
 test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
@@ -2022,7 +2098,12 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION/);
   assert.match(arrival, /onExplanationOpen/);
   assert.match(arrival, /PILOT \/\/ FLIGHT RECORDER[\s\S]*CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION/);
-  assert.match(arrival, /defaultValue=""/);
+  assert.match(arrival, /value=\{explanationResponses\[dimension\] \?\? ""\}/);
+  assert.match(arrival, /!\["EX-20", "EXS-00"\]\.includes\(primaryPhase\)[\s\S]*setExplanationResponses\(\{\}\)/);
+  assert.match(arrival, /CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION/);
+  assert.match(arrival, /primaryPhase === "EXS-20F"/);
+  assert.match(arrival, /primaryPhase === "EXS-20C"/);
+  assert.match(arrival, /CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION/);
   assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
   assert.match(arrival, /value === false[\s\S]*return "False"/);
@@ -2030,12 +2111,16 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalPrimaryResultDismissal/);
   assert.match(app, /createCustodyLedgerNormalTransferInteraction/);
   assert.match(app, /createCustodyLedgerNormalExplanationEntry/);
+  assert.match(app, /createCustodyLedgerNormalExplanationSubmission/);
+  assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
   assert.match(app, /onPrimaryDismiss=\{\(event\) => clearCustodyLedgerPrimaryResult\(routeState, event\)\}/);
   assert.match(app, /custodyLedgerTransferControllerRef/);
   assert.match(app, /onTransferSubmit=\{\(fields, event\) => submitCustodyLedgerTransfer\(routeState, fields, event\)\}/);
   assert.match(app, /onTransferRetry=\{retryCustodyLedgerTransfer\}/);
   assert.match(app, /onExplanationOpen=\{openCustodyLedgerExplanation\}/);
+  assert.match(app, /onExplanationSubmit=\{handleCustodyLedgerExplanationSubmit\}/);
+  assert.match(app, /onExplanationRetry=\{retryCustodyLedgerExplanation\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);

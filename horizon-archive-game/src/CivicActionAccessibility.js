@@ -20,6 +20,8 @@ const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
   transferFeedback: "Transfer feedback evidence return",
   transferComplete: "Transfer-complete evidence return",
   explanation: "Blank Python explanation evidence return",
+  explanationFeedback: "Python explanation feedback evidence return",
+  explanationConclusion: "Python explanation conclusion evidence return",
 });
 
 export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
@@ -31,6 +33,9 @@ export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
   if (primaryPhase === "FT-20F") return custodyLedgerPrimaryReturnGroupLabels.transferFeedback;
   if (primaryPhase === "FT-20C") return custodyLedgerPrimaryReturnGroupLabels.transferComplete;
   if (primaryPhase === "EX-20") return custodyLedgerPrimaryReturnGroupLabels.explanation;
+  if (primaryPhase === "EXS-00") return custodyLedgerPrimaryReturnGroupLabels.explanation;
+  if (primaryPhase === "EXS-20F") return custodyLedgerPrimaryReturnGroupLabels.explanationFeedback;
+  if (primaryPhase === "EXS-20C") return custodyLedgerPrimaryReturnGroupLabels.explanationConclusion;
   if (primaryPhase === "FT-00") return custodyLedgerPrimaryReturnGroupLabels.fresh;
   return custodyLedgerPrimaryReturnGroupLabels.blank;
 }
