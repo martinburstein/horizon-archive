@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A4 continuity — compact RAI-primary evaluation and recovery graph
+
+- **Cycle / disposition:** `RP002-P1-017 / A4 Gameplay Master — PASS; PROTECTED A5 NEXT`.
+- **Protected graph:** accepted blank `RAI-P0 / P01` -> transient one-hit Pilot `P01`, `P02`, and `P03` submissions with no interim evaluation -> frozen simultaneous strict `9/9` only after `P03` -> exact pass initializes only blank RAI transfer, or any miss initializes only actual-failed-case/dimension answer-free Teacher feedback -> one neutral zero-credit System guide -> complete clearing and wholly blank deterministic retry at the first incomplete/first-failed case/dimension.
+- **Recovery and controls:** one active group; seven modalities/one hit; invalid/stale/duplicate/combined/private/later requests fail closed; separate write-free returns; safe close/reload/Tour sanitation clears unfinalized choices, guide work, prose, private values, and focus/token history; deterministic owner-heading/first-control focus; `>=44px`, wide/narrow/`200%`, forced-color, reduced-motion, non-color, and natural-reflow parity remain exact.
+- **Evidence and invariants:** only the frozen final evaluator result may establish current-attempt `9/9`; hidden finalized `PY-009` evidence remains prerequisite-only with no cross-credit. Existing allowlisted booleans/counts/tags/identifiers, privacy, campaign/Tour separation, invariant SC-03/world/clocks, unchanged continuation, `cityStateDelta=null`, offline/no-authority/no-exam-guarantee, hard later-state absence, and `successor=null` remain exact.
+- **Validation:** RP-002 validator self-test `PASS`; focused existing Custody Ledger primary/recovery plus accepted blank-entry suites `63/63`; source/diff checks confirm the frozen authorities and documentation-only scope.
+- **Demo effect / next:** documentation-only; the accepted Demo remains at genuinely blank `RAI-P0`. A5 builds one pure unimported controller by composing existing authorities and stops at blank transfer or blank retry without exposing transfer evaluation, normal integration, storage, art, world, or later state. Protected path with one mapped miss is `3–5 minutes`; time is neither stored nor scored.
+
 ## 2026-07-18 Advance A3 continuity — RAI primary evidence preservation
 
 - **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
