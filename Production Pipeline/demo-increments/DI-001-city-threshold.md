@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A4 continuity — Pilot dismissal to blank RAI-primary graph
+
+- **Cycle:** `RP002-P1-016 / A4 Gameplay Master`.
+- **Disposition:** `PASS — RAD-00/10/20 GRAPH LOCKED / PROTECTED A5 NEXT`.
+- **Protected graph:** accepted stable Pilot Python conclusion -> one explicit fresh private-free seven-modality/one-hit zero-effect dismissal -> only the unchanged first `RP002-RAI-01 / RAI-P0` case with principle, mitigation, and accountable-owner controls genuinely blank.
+- **Evidence/recovery:** dismissal and blank arrival create no attempt, score, evidence, mastery, save, or cross-credit. Separate write-free returns, exact conclusion-versus-blank resume, fail-closed invalid/private/later requests, deterministic focus cleanup, privacy clearing, responsive/accessibility parity, invariant world/null delta, offline/no-authority/no-exam-guarantee, and no successor remain exact.
+- **Demo effect / next:** none. A5 owns one pure unimported protected dismissal controller; normal integration remains unauthorized and W1 remains at the accepted Pilot conclusion. Stop before every RAI submit/evaluate/feedback/result/evidence/transfer/explanation/conclusion or later state.
+
 ## 2026-07-17 Advance A3 continuity — Pilot dismissal evidence preservation
 
 - **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.
