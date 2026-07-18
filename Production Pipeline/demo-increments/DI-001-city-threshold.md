@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A2 continuity — Pilot dismissal presentation
+
+- **Presentation delta:** documentation-only. Over invariant SC-03, the accepted `PILOT // FLIGHT RECORDER` conclusion remains the sole stable group until one explicit Pilot dismissal directly mounts only the existing blank `RP002-RAI-01 / RAI-P0` group under `SYSTEM // EXPEDITION SESSION`; no transition, reward, loading, confirmation, city response, or preview board exists.
+- **Destination/readability:** unchanged first case plus principle, mitigation, and accountable-owner controls begin visibly and semantically blank. Whole-group removal, System-heading-first focus, separate returns, one-hit modalities, `>=44px` controls, natural wide/narrow/`200%` reflow, non-color/forced-color/reduced-motion parity, privacy clearing, and exact conclusion-versus-blank resume are locked.
+- **Canon preserved:** `SC-03 / EX-20 wide composition relationship` and `SC-03 / EXS-20C Pilot conclusion visual identity` remain closed canonical references. No image, art, plate, crop, geometry, runtime, curriculum, case, answer, scoring, storage, route, world, or successor changed.
+- **Hard stop / next:** no Python/private carry or RAI cross-credit; no submit/evaluate/feedback/result/evidence/transfer/explanation/conclusion or later state. A3 performs only `NO REOPEN — SOLIDIFIED` preservation review.
+
 ## 2026-07-17 Advance A1 continuity — Pilot conclusion dismissal ownership
 
 - **Boundary:** accepted visible `PILOT // FLIGHT RECORDER` Python conclusion -> one explicit Pilot-owned zero-effect dismissal -> only the existing genuinely blank `RP002-RAI-01 / RAI-P0` System primary group.

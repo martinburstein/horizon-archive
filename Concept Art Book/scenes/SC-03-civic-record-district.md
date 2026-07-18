@@ -1,5 +1,16 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 Pilot-conclusion dismissal to blank Responsible-AI presentation continuity
+
+- Reuse the invariant SC-03 world, crop, geometry, light, materials, maintenance, and clocks. The accepted Pilot conclusion and its closed canonical one-object/three-equal-lamina identity remain complete and solely visible until the explicit Pilot action `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW`; passive attention, time, reflow, motion, return, sanitation, resume, and Tour never advance it.
+- Exactly two mutually exclusive expedition groups exist: the complete `PILOT // FLIGHT RECORDER` conclusion group, then only the existing `RP002-RAI-01 / RAI-P0 / rai_primary` group under `SYSTEM // EXPEDITION SESSION`. Valid intent directly replaces the whole group. No transition, loading, reward, acknowledgement, city response, or later-state preview appears.
+- The blank destination reads owner heading -> unchanged course-authored first case -> principle -> mitigation -> accountable-owner controls. Every RAI choice/check begins blank in visible, semantic, and native state. There is no preselection, attempt, progress, score, submit, evaluation, feedback, result, evidence, transfer, explanation, conclusion, or credit display.
+- Replacement removes all conclusion descendants from visual, pointer, keyboard, and accessibility order and focuses the System heading before the first blank control. Exact conclusion resume restores only conclusion; exact blank-RAI resume restores only the blank System group. Invalid/private/stale/repeated/combined/Tour/later input reconstructs the last safe group without consuming future valid intent.
+- No Python prose, source, values, answers, checks, feedback, remediation, transcript, expected answer, conclusion text, token, focus history, private work, or presentation state carries. Completed Python evidence stays hidden prerequisite-only and cannot cross-credit RAI. The two write-free returns remain separate from dismissal and one another.
+- Wide presentation keeps the world dominant and each expedition group compact. Narrow and `200%` text zoom use one source-ordered column with natural wrap/scroll recovery and no horizontal escape. Actions/controls remain `>=44px`; literal owner/blank meaning, visible focus, non-color semantics, forced-color boundaries, reduced-motion direct replacement, and seven-modality/one-hit behavior remain equivalent.
+- Both canonical references remain settled: `SC-03 / EX-20 wide composition relationship` and `SC-03 / EXS-20C Pilot conclusion visual identity`. This pass generates no art and changes no plate, crop, geometry, material, lighting, copy, curriculum, case, answer, scoring, runtime, storage, route, world, or successor.
+- Stop at the genuinely blank RAI primary boundary before all RAI submit/evaluate/feedback/remediation/result/evidence/transfer/explanation/conclusion states and before review/save/completion/credits, `RP-003+`, world response, access, authority, external action, identity disclosure, route reward, or successor.
+
 ## 2026-07-17 canonical Pilot-conclusion item reference
 
 - Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-pilot-conclusion-reveal/rp002-pilot-conclusion-triptych-v1.png`, with neighboring provenance.
