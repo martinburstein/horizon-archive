@@ -1,5 +1,11 @@
 # Advance Queue
 
+## 2026-07-18 A5 convergence — protected RAI-transfer controller
+
+- **Disposition:** `REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`.
+- **Protected result:** pure unimported `T01`–`T03` convergence proves no-interim-result sequencing, T03-only strict `9/9`, failed-pair recovery/one zero-credit guide/blank retry, or exact-pass blank Teacher entry, with deterministic sanitation and no explanation evaluator/action.
+- **Exact next:** W1 uses only the accepted live blank transfer and reports the earliest normal gap. No additional protected micro-seam or W2 work is authorized in this pass.
+
 ## 2026-07-18 A4 convergence — compact RAI-transfer graph
 
 - **Disposition:** `PASS — T01/T02/T03 STRICT-TRANSFER GRAPH LOCKED / PROTECTED A5 NEXT`.

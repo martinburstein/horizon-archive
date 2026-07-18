@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A5 continuity — protected RAI-transfer convergence
+
+- **Cycle / disposition:** `RAI transfer / A5 Coder advance — REVISE; W1 NEXT`.
+- **Protected delta:** one pure unimported controller composes blank `T01`–`T03`, no interim result, T03-only simultaneous strict `9/9`, failed-pair Teacher feedback -> one zero-credit guide -> wholly blank deterministic retry, or exact-pass blank Teacher three-boundary entry. No normal Demo integration occurred.
+- **Boundaries/evidence:** private work clears; resume reconstructs only three authorized blank boundaries; explanation action/evaluator and every later state remain absent. Focused `12/12`, related `78/78`, full `653/653`, both validators, unchanged accepted build assets, non-integration/purity/leakage/patch gates pass.
+- **Next:** W1 plays only accepted live blank transfer and reports the earliest normal gap without inspecting protected code or mutating storage.
+
 ## 2026-07-18 Advance A4 continuity — compact RAI-transfer graph
 
 - **Cycle / disposition:** `RAI transfer / A4 Gameplay Master — PASS; PROTECTED A5 NEXT`.

@@ -1,5 +1,11 @@
 # Rail Packet Scoreboard
 
+## 2026-07-18 RP-002 A5 convergence checkpoint — protected transfer chain
+
+- **Gate result:** protected Code, Save/recovery, and Accessibility remain `PASS`; protected-design missing-gate count remains zero. One pure unimported wrapper composes the already-authorized shortest transfer chain without adding cases, mechanics, scores, authorities, or transitions.
+- **Evidence:** focused controller `12/12`; related frozen seams `78/78`; full `653/653`; Responsible-AI and RP-002 validators; production build on unchanged accepted assets; App/main/route/dist non-integration, purity, resume/restore, leakage, and patch gates pass.
+- **Boundary:** Normal integration, Working evidence, and release remain `PARTIAL` at accepted blank transfer. W1 reports only the earliest normal transfer submission/recovery/blank-Teacher-entry gap; explanation evaluation and every later state remain closed.
+
 ## Purpose
 
 This is the compact convergence view. Detailed truth remains in each Rail Packet, specialist log, validator, and Demo Increment.

@@ -1,5 +1,11 @@
 # Working Queue
 
+## 2026-07-18 Advance A5 handoff — protected transfer convergence complete
+
+- **Advance result:** `REVISE — ACCEPTED W1 NEXT`. The pure protected controller proves blank `T01`–`T03`, delayed strict `9/9`, mapped failed-pair recovery/one guide/blank retry, or exact-pass blank Teacher entry without normal integration.
+- **Team 2 position:** remains at coordinator-accepted blank RAI transfer. W1 reports only the earliest normal player-facing gap and preserves storage/save.
+- **Closed:** explanation submission/evaluation/feedback/result, conclusion, review/save/completion, `RP-003+`, world/authority effects, RP-013, successor, and W2.
+
 ## 2026-07-18 Advance A4 handoff — transfer graph locked
 
 - **Advance result:** `PASS — PROTECTED A5 TRANSFER CONTROLLER NEXT`. Team 2 remains at the coordinator-accepted genuinely blank RAI transfer. The shortest graph composes only existing `T01`–`T03`, delayed simultaneous strict `9/9`, actual-failed-pair Teacher recovery/one zero-credit guide/blank first-failed retry, or exact-pass blank Teacher three-boundary entry.

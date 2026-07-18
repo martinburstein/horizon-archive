@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Advance A5 continuity handoff — protected RAI-transfer convergence
+
+- **Disposition:** `REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`.
+- **Implementation:** one pure unimported controller composes the exact accepted blank transfer, frozen `T01`–`T03`, delayed simultaneous strict `9/9`, actual-failed-pair Teacher recovery, one neutral zero-credit guide, deterministic blank retry, resume/sanitation, separate returns, and exact-pass blank Teacher three-boundary entry. No authority was copied or changed.
+- **Boundary:** responses and guide work remain private session memory; no interim result exists; exact pass exposes no explanation action/evaluator. Sanitation reconstructs only blank `T01`, blank first-failed retry, or blank Teacher entry. Python/primary RAI evidence remains hidden prerequisite-only with zero cross-credit; world/null delta, accessibility, privacy, Tour, offline/no-authority/no-exam-guarantee, and no successor remain exact.
+- **Evidence:** focused `12/12`; related `78/78`; full `653/653`; Responsible-AI and RP-002 validators; build on unchanged accepted assets; non-integration/purity/leakage/restore/patch gates. Normal integration, Working evidence, and release remain partial at accepted blank transfer.
+- **Hard stop:** before explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, normal integration, `RP-003+`, world/route/access/authority/external action, RP-013, or successor.
+
 ## 2026-07-18 Advance A4 continuity handoff — compact RAI-transfer recovery and blank-explanation-entry graph
 
 - **Disposition:** `PASS — T01/T02/T03 STRICT-TRANSFER GRAPH LOCKED / PROTECTED A5 NEXT`.
