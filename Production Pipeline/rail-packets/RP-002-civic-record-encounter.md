@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W4 — RP002-AESTH-012 RAI-primary three-channel polish
+
+- **Verdict:** `RESOLVED — COORDINATOR NEXT`. Only the `RAD-20 / RAIC-00` principle/mitigation/accountable-owner list now carries `custody-ledger-rai-primary-controls`; it renders as exactly three equal `minmax(0, 1fr)` wide peers in existing source order and one natural narrow/`200%` column.
+- **Regression/boundary:** one focused presentation regression distinguishes the state-specific three-wide row from the generic two-column custody grid, proves narrow/effective-zoom recovery, and rejects canonical-raster integration. Existing full-width `44px` selects and normal/forced-color focus remain unchanged. No gameplay, cases/content/scoring, curriculum, route, storage/save, art, blank-transfer, transfer evaluator, or later-state behavior changed.
+- **Evidence/handoff:** focused `64/64`, full `641/641`, Responsible-AI/RP-002 validators, build, immutable civic/reference hashes, served-marker/HTTP/hash, final refresh, and patch gates pass on `index-CaFYbIAD.js` / `index-gd0EXXXq.css`. Browser remained unavailable and storage untouched. Coordinator independently confirms the three-wide/one-narrow contract, full recovery chain, hard stop, immutable references/art, complete E2E, cleanup, and synchronized main before release.
+
 ## 2026-07-18 Working W3 — RP002-AESTH-012 RAI-primary three-channel rhythm
 
 - **Verdict:** `P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Blank/session-only `P01`–`P03`, no-interim whole-group replacement, P03-only simultaneous strict result, actual-failed-case/dimension Teacher feedback -> neutral guide -> wholly blank retry, and exact-pass blank transfer pass owner hierarchy, focus, source order, target, association, privacy, invariant art/world, and hard-stop review.

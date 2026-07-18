@@ -92,3 +92,19 @@ test("blank Responsible-AI selects inherit custody-ledger target and focus treat
   assert.match(styles,
     /@media \(forced-colors: active\) \{[\s\S]*?\.custody-ledger-fields select:focus-visible \{ outline-color: Highlight; \}/);
 });
+
+test("Responsible-AI primary preserves three wide peers and one-column narrow or 200% recovery", () => {
+  const arrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  assert.match(arrival,
+    /\["RAD-20", "RAIC-00"\]\.includes\(primaryPhase\)[\s\S]*?<dl className="custody-ledger-fields custody-ledger-rai-primary-controls">[\s\S]*?primaryInteraction\.controls\.map\(\(control\) => \(/);
+  assert.match(styles,
+    /\.custody-ledger-fields \{[^}]*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+  assert.match(styles,
+    /\.custody-ledger-rai-primary-controls \{[^}]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/);
+  assert.match(styles,
+    /data-canonical-layout="narrow"\] \.custody-ledger-fields \{[^}]*grid-template-columns: 1fr;/);
+  assert.match(styles,
+    /@media \(max-width: 1279px\) \{[\s\S]*?\.custody-ledger-rai-primary-controls \{[^}]*grid-template-columns: 1fr;/);
+  assert.doesNotMatch(arrival,
+    /rp002-blank-rai-review-frame-v1|2026-07-17-rp002-blank-rai-primary-reveal/);
+});

@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W4 — RAI-primary three-channel polish
+
+- **Verdict:** `RP002-AESTH-012 RESOLVED — COORDINATOR NEXT`. Only the blank/session-only primary list receives `custody-ledger-rai-primary-controls`: three equal source-ordered wide columns and one natural narrow/`200%` column.
+- **Continuity:** the generic custody grid, native `44px` select appearance/focus/forced-color rules, gameplay, frozen cases/evaluator, recovery, storage, art/world, blank transfer, hard later-state stop, and all three canonical references remain unchanged/non-runtime.
+- **Evidence/next:** focused `64/64`, full `641/641`, Responsible-AI/RP-002 validators, build, immutable hashes, served markers, HTTP/hash, final refresh, and patch gates pass on `index-CaFYbIAD.js` / `index-gd0EXXXq.css`. Browser had no backend and storage/save was untouched. Coordinator independently validates before release.
+
 ## 2026-07-18 Working W3 — RAI-primary three-channel composition
 
 - **Verdict:** `RP002-AESTH-012 P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Integrated primary convergence and recovery pass owner, one-active-group, focus, target, association, responsive/accessibility, privacy, invariant world/art, and later-state review.

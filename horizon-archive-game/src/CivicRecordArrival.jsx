@@ -595,7 +595,7 @@ export function CivicRecordArrival({
                 <p>{primaryInteraction.ownershipMessage.text}</p>
                 <p>{primaryInteraction.case.prompt}</p>
                 <form onSubmit={submitRAIPrimary}>
-                  <dl className="custody-ledger-fields">
+                  <dl className="custody-ledger-fields custody-ledger-rai-primary-controls">
                     {primaryInteraction.controls.map((control) => (
                       <div key={control.id} data-field-state="editable">
                         <dt>
