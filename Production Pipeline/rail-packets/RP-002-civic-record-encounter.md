@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W4 — RP002-AESTH-009 verified
+
+- **Mode/verdict:** `aesthetic-polish` / `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. No W3 finding or exact presentation defect reproduced, so production runtime/art/tests remain unchanged.
+- **Boundary/evidence:** exact System `FT-20C` current-attempt `6/6`, two separate returns, distinct Pilot `OPEN BLANK PYTHON EXPLANATION`, and atomic canonical blank Teacher `EX-20` retain owner-first focus/order, three blank controls, literal no-attempt state, `>=44px` targets, responsive/assistive parity, transient-only work, blank-primary durability, immutable civic art/world, zero effect, and hard later-state absence. Focused `57/57`, full `607/607`, RP-002 validator, build, art, served-marker/HTTP/hash, cache-bypassed final HTTP refresh, and patch gates pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`.
+- **Live limitation/next:** the in-app Browser reported no available backend; storage remained untouched and no gated viewport, focus-ring, console, screenshot, or interactive reload claim is fabricated. Coordinator owns independent release gates and safe representative live review if reachable without storage mutation.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-009 clean
 
 - **Verdict:** `NO AESTHETIC FINDING OPENED — W4 VERIFICATION ONLY`. Exact retained `FT-20C`, two separate returns, distinct Pilot explanation-entry action, and atomic canonical blank `EX-20` Teacher group retain owner-first hierarchy, programmatic heading focus, ordinary Tab order into the first blank control, `>=44px` targets, literal non-color state, source-backed desktop/narrow/`200%` reflow, forced-color/reduced-motion parity, unchanged first-person civic art, and hard later-state absence.

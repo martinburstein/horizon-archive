@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — explanation entry candidate verified
+
+- **Verdict:** `RP002-AESTH-009 / VERIFIED — COORDINATOR NEXT`; verification-only `aesthetic-polish` reproduced no defect and changed no runtime, CSS, test, asset, art, curriculum, storage, or gameplay artifact.
+- **Evidence:** focused `57/57`, full `607/607`, RP-002 validator, build, immutable-art, served-marker/HTTP/hash, final cache-bypassed HTTP refresh, and patch gates pass. Port `4173` serves `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; in-app Browser discovery returned no available backend, so storage remained untouched and direct gated live claims remain deferred.
+- **Coordinator:** independently release-gate only retained `FT-20C`, separate returns, explicit Pilot entry, and atomic canonical blank Teacher `EX-20`, preserving every zero-effect and hard later-state lock.
+
 ## 2026-07-17 Working W3 — explanation entry presentation clean
 
 - **Verdict:** `RP002-AESTH-009 / NO FINDING`; retained System completion, separate returns, explicit Pilot entry, and atomic canonical blank Teacher group pass hierarchy, focus, target, blankness, whole-group, responsive/accessibility, invariant-art, and hard later-state review.
