@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator release — blank Responsible-AI primary accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / RP002-RAI-01 BLANK PRIMARY ENTRY ACCEPTED`.
+- **Player-visible delta:** the accepted Pilot Python conclusion now retains both returns plus one explicit zero-effect dismissal. Deliberate activation atomically mounts only the unchanged first System `RAI-P0` case with native principle, mitigation, and accountable-owner controls genuinely blank, literal no-attempt status, full-width `44px` target parity, and visible normal/forced-color focus treatment.
+- **Independent validation:** full `628/628`, all `15/15` readiness validators, production build, complete `130.9s` E2E with every emitted gate true/credits/no runtime errors, fresh `1920 x 1080` and `390 x 844` title-shell review with exact containment, `48px`/`44px` actions and clean logs, served assets/hashes, immutable art/reference hashes, patch integrity, and QA cleanup pass on `index-C2MkEQI0.js` / `index-B85gq_mk.css`.
+- **Safety/next:** Martin's save/storage and both user-owned paths were untouched. RAI primary case submission, simultaneous evaluation, mapped remediation, neutral guided practice, and blank retry remain the next closed convergence seam; RAI transfer evaluation and every later state remain closed.
+
 ## 2026-07-17 Working W4 — blank Responsible-AI native-control polish
 
 - **Verdict:** `RP002-AESTH-011 RESOLVED — COORDINATOR NEXT`. The existing custody-ledger field, target, normal-focus, and forced-color-focus selectors now include `select`; the three unchanged blank RAI controls receive full-width `44px` native-field and visible-focus parity.

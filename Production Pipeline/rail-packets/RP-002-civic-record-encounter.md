@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator release — blank Responsible-AI primary accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / RP002-P1-016 + RP002-AESTH-011 ACCEPTED`.
+- **Accepted edge:** exact stable Pilot Python conclusion, both returns, explicit private-free zero-effect dismissal, atomic System-owned first `RAI-P0` case, genuinely blank source-ordered principle/mitigation/accountable-owner controls, literal no-attempt state, `44px` native-target parity, and visible normal/forced-color focus treatment. Hidden Python evidence remains prerequisite-only with zero cross-credit; civic art/world/clocks and null delta remain invariant.
+- **Independent gates:** full `628/628`; all readiness validators `15/15`; build on `index-C2MkEQI0.js` / `index-B85gq_mk.css`; complete `130.9s` E2E with every emitted gate true, credits, and no runtime errors; fresh `1920 x 1080` / `390 x 844` title-shell review with exact containment, `48px` / `44px` actions, and clean logs; HTTP/assets/hashes, immutable-art/reference, patch, and QA cleanup pass. Browser storage/save and both user-owned paths were untouched.
+- **Next closed edge:** existing protected RAI primary submission/evaluation/remediation convergence only: three course-authored cases, simultaneous strict `9/9`, actual-failed-case/dimension-only Teacher feedback, one neutral zero-credit guided near case, wholly blank unlimited retry, or blank transfer after exact `9/9`. Stop before transfer submission/evaluation, explanation, conclusion, review/save/completion, `RP-003+`, world/authority/external effect, or successor.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-011 RAI native-control polish
 
 - **Verdict:** `RESOLVED — COORDINATOR NEXT`. `.custody-ledger-fields` now applies its established field sizing/appearance to `select`, and both normal and forced-color focus selectors include `select`. Each unchanged blank RAI control therefore has full width, `min-height:44px`, established visual treatment, and visible focus parity.

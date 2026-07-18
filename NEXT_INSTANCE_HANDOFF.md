@@ -30,12 +30,12 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 ## Current durable state
 
-- Release candidate commit: `46d961b` — `Working Coder Polish: restore three-surface authoring layout`
+- Release candidate commit: `9d17f4c` — `Working Coder Polish: restore RAI select parity`
 - Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
 - `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
-- Served assets: `index-BvLuO_XD.js` / `index-B112XlTz.css`
+- Served assets: `index-C2MkEQI0.js` / `index-B85gq_mk.css`
 - Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
@@ -117,18 +117,18 @@ Team 1 is therefore in continuity-maintenance mode near Team 2's current edge. I
 
 ## Accepted playable boundary
 
-The coordinator now accepts the RP-002 PY-009 boundary through strict three-part explanation submission, answer-free failed-dimension recovery, and the existing Pilot Python conclusion. The earlier primary, result dismissal, fresh transfer, feedback/retry, bounded current-attempt `6/6` transfer evidence, and canonical blank explanation entry remain accepted unchanged.
+The coordinator now accepts the RP-002 boundary through the existing Pilot Python conclusion, one explicit zero-effect Pilot dismissal, and atomic arrival at only the genuinely blank first `RP002-RAI-01 / RAI-P0` primary case. The complete Python primary, transfer, explanation, recovery, conclusion, and three-surface layout behavior remain accepted unchanged.
 
 Accepted player-visible behavior now additionally includes:
 
-- three session-only Pilot-authored explanation responses in frozen order;
-- one explicit local `SUBMIT PYTHON EXPLANATION` action with seven-modality/one-hit behavior;
-- only the existing strict three-dimension evaluator, with no answer/rule leakage;
-- actual-failed-dimension-only answer-free Teacher remediation, private prose clearing, and wholly blank unlimited retry with deterministic first-failed focus;
-- exact current-attempt `3/3` followed by only the existing `PILOT // FLIGHT RECORDER` Python conclusion;
-- exactly three equal authoring surfaces in one wide row and one source-ordered column at narrow/`200%` widths;
-- transient-only prose, feedback, token, focus, and result state; and
-- hard absence of conclusion dismissal, `RP002-RAI-01`, review/save/completion, `RP-003+`, world/authority effect, or successor.
+- the complete `PILOT // FLIGHT RECORDER` Python conclusion remains stable until deliberate intent;
+- one explicit `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW` action with seven-modality/one-hit behavior;
+- atomic whole-group replacement by only `SYSTEM // EXPEDITION SESSION` and the unchanged first `RP002-RAI-01 / RAI-P0` case;
+- genuinely blank native principle, mitigation, and accountable-owner controls in source order, with literal no-attempt status;
+- full-width controls with at least `44px` height plus visible normal and forced-color focus treatment;
+- hidden byte-stable Python prerequisites with no carried prose, answer, result, feedback, focus history, private work, preselection, or RAI cross-credit;
+- exact conclusion-versus-blank resume, separate write-free returns, transient-only UI state, and invariant civic world; and
+- hard absence of RAI submit/evaluation/feedback/result/evidence/transfer/explanation/conclusion, review/save/completion, `RP-003+`, world/authority effect, or successor.
 
 Earlier accepted player-visible behavior remains unchanged:
 
@@ -147,10 +147,10 @@ Earlier accepted player-visible behavior remains unchanged:
 
 Independent release evidence at that boundary:
 
-- full game suite: `618/618`;
+- full game suite: `628/628`;
 - readiness validators: `15/15`;
-- production build: pass on `index-BvLuO_XD.js` / `index-B112XlTz.css`;
-- full title-to-credits E2E: pass in `125.8s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
+- production build: pass on `index-C2MkEQI0.js` / `index-B85gq_mk.css`;
+- full title-to-credits E2E: pass in `130.9s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
 - live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors;
 - incidental tracked QA captures restored; the two user-owned untracked items and browser storage remained untouched.
 
@@ -158,17 +158,17 @@ Independent release evidence at that boundary:
 
 The immediate automation cycle was completed sequentially and every checkpoint was pushed:
 
-1. Lore Builder A1 — `8c42639`.
-2. Storyboarder A2 — `c78cf9d`.
-3. Curriculum Checker A3 — `0065a2e`.
-4. Gameplay Master A4 — `bf40ea3`.
-5. Advance Coder A5 — `9c19c01`.
-6. Player W1 — `294cbfa`.
-7. Bug-Repair Coder W2 — `f79b147`.
-8. Aesthetic W3 — `c87cab5`.
-9. Aesthetic-Polish Coder W4 — `46d961b`.
+1. Lore Builder A1 — `16cfb02`.
+2. Storyboarder A2 — `5c41822`.
+3. Curriculum Checker A3 — `8f8437b`.
+4. Gameplay Master A4 — `4e5fadd`.
+5. Advance Coder A5 — `65bfdc5`.
+6. Player W1 — `279970a`.
+7. Bug-Repair Coder W2 — `00ede82`.
+8. Aesthetic W3 — `3968c6f`.
+9. Aesthetic-Polish Coder W4 — `9d17f4c`.
 
-The coordinator then passed all release gates and accepted Python explanation submission, failed-dimension blank recovery, the wide three-surface layout, and the existing Pilot Python conclusion as `IN DEMO — PARTIAL`.
+The coordinator then passed all release gates and accepted explicit Pilot conclusion dismissal, atomic blank Responsible-AI primary entry, and native-select target/focus parity as `IN DEMO — PARTIAL`.
 
 ## Exact next action
 
@@ -179,32 +179,37 @@ Read `Agent Profiles/lore-builder-agent.md` in full plus the top of the current 
 A1 is limited to the nearest accepted edge:
 
 ```text
-accepted PILOT // FLIGHT RECORDER Python conclusion
-    -> one explicit Pilot-owned zero-effect dismissal
-    -> existing genuinely blank RP002-RAI-01 primary boundary only
+accepted genuinely blank RP002-RAI-01 / RAI-P0 first case
+    -> three course-authored primary cases, one at a time
+    -> Pilot-owned transient principle / mitigation / accountable-owner submissions
+    -> simultaneous strict 9/9 evaluation only after the third case
+    -> exact 9/9: genuinely blank RAI transfer boundary only
+    -> any miss: failed-case/dimension-only Teacher feedback
+                  -> one neutral zero-credit guided near case
+                  -> wholly blank primary retry at first incomplete/first-failed case
 ```
 
-A1 should lock ownership and meaning only. It must preserve:
+A1 should lock ownership and meaning only for this already-protected convergence seam. It must preserve:
 
-- every accepted Python primary, transfer, explanation, recovery, conclusion, and three-surface layout behavior unchanged;
-- the Pilot conclusion remains visible and stable until one deliberate Pilot dismissal intent;
-- dismissal is navigation/presentation only and grants no RAI attempt, score, evidence, mastery, save, route, access, authority, world effect, or successor;
-- valid dismissal atomically replaces the conclusion group with only the existing genuinely blank `RP002-RAI-01` primary group;
-- no Python prose, result, feedback, transcript, expected answer, conclusion text, token, focus history, or private work carries into the RAI group;
-- completed Python evidence remains hidden, byte-stable prerequisite-only material and cannot cross-credit RAI;
-- the blank RAI boundary exposes no submission, evaluation, feedback, result, evidence, transfer, explanation, or conclusion in this tranche;
+- every accepted Python behavior, conclusion dismissal, blank RAI entry, native control treatment, and both closed canonical visual decisions unchanged;
+- exactly the existing three course-authored primary cases and frozen `principle`, `mitigation`, and `owner` dimensions, with no new case, answer, threshold, or scoring rule;
+- one active System/Pilot/Teacher group at a time, private session-only choices, explicit Pilot submission per case, and no evaluation before the third case;
+- simultaneous strict `9/9`; a correct principle cannot compensate for an unsafe safeguard or nonhuman owner;
+- actual-failed-case/dimension-only answer-free Teacher remediation, one neutral guided near case, wholly blank unlimited retry, and deterministic first-incomplete/first-failed focus;
+- only allowlisted finalized booleans/counts/tags may persist; all choices, guided work, feedback prose, and private material clear;
+- strict `9/9` may open only the existing genuinely blank RAI transfer boundary, with no transfer evaluator or later action in this tranche;
 - separate write-free returns, seven modalities/one hit, sanitation/resume, privacy, offline/no-authority/no-exam-guarantee, responsive/accessibility parity, invariant world, null delta, and no successor.
 
 Hard stop before:
 
-- responsible-AI submission, evaluation, feedback, result, evidence, transfer, explanation, or conclusion;
+- responsible-AI transfer submission/evaluation, transfer feedback/result/evidence, explanation, or conclusion;
 - review/save/completion;
 - `RP-003+`;
 - any world response, access, authority, identity disclosure, route reward, external action, or successor.
 
 A1 should update the packet, `ADVANCE_QUEUE.md`, `WORKING_QUEUE.md`, `STORY_RAIL_MAP.md`, DI-001, and its own log; commit and push a dedicated checkpoint; and leave an exact A2 Storyboarder handoff.
 
-Then continue sequentially with Storyboarder A2, Curriculum Checker A3, Gameplay Master A4, Coder A5 in `advance` mode, Player W1 on the accepted live Pilot Python conclusion, Coder W2 in `bug-repair` mode, Aesthetic W3, Coder W4 in `aesthetic-polish` mode, and independent coordinator release validation.
+Then continue sequentially with Storyboarder A2, Curriculum Checker A3, Gameplay Master A4, Coder A5 in `advance` mode, Player W1 on the accepted live blank `RAI-P0` boundary, Coder W2 in `bug-repair` mode, Aesthetic W3, Coder W4 in `aesthetic-polish` mode, and independent coordinator release validation.
 
 ## Validation commands
 
