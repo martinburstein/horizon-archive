@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A5 REVISE — PROTECTED EXPLANATION ENTRY / W1 NEXT`. The pure unimported `EX-00 -> EX-10 -> EX-20` controller passes focused `8/8`, full `606/606`, validator, build, leakage, purity, and patch gates while accepted runtime/storage/assets/world remain unchanged. Team 2 stays at accepted bounded `FT-20C`; W1 reports only the earliest explicit explanation-entry gap. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
+
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A4 EXPLICIT BLANK-EXPLANATION ENTRY GRAPH PASS — PROTECTED A5 NEXT`. Exact retained `FT-20C` now advances only by one deliberate Pilot intent into the canonical blank Teacher group; atomic replacement, blankness, fail-closed recovery, separate returns, zero evidence/world/route/authority effect, hard later-state absence, and no successor are exact. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
 
 Latest Advance continuity handoff: `2026-07-17 / RP002-P1-014 A3 NO REOPEN — A4 NEXT`. Official-source and validator review preserves the SOLIDIFIED RP-002 learning contract across explicit `FT-20C` -> Pilot intent -> canonical blank Teacher explanation entry; presentation creates no attempt/evidence, world/route/authority effect, RAI, later state, or successor. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
@@ -102,6 +104,8 @@ Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 A
 
 ## Position summary
 
+- Current Working override: `RP-002 — IN DEMO PARTIAL / PY-009 TRANSFER EVIDENCE ACCEPTED`. Bounded current-attempt `6/6` transfer evidence passed coordinator release gates. A5's pure explanation-entry seam remains unimported; W1 owns only the first accepted-path gap toward explicit blank Python explanation entry, with user storage and every scoring/RAI/later lock preserved.
+
 - Current Working override: `RP-002 — IN DEMO PARTIAL / PY-009 PRIMARY RESULT ACCEPTED`. Blank/editable submission, answer-free correction/retry, current-attempt `6/6` provisional result, active-owner focus, and failed-field association passed coordinator release gates. Next W1 may isolate only the first gap toward fresh transfer entry; no later seam is authorized.
 
 - Current Working override: `RP-002 — FINAL VALIDATION / RP002-AESTH-006 RESOLVED`. W4 corrected only active-owner heading focus and existing failed-field association, retained first-failed-field retry focus, and final-rebuilt `index-BCpGPspB.js` / `index-ghzUiZe9.css`. Focused `51/51`, full `577/577`, build, and patch gates pass. Coordinator owns independent release validation; the Working position remains RP-002 and every later boundary remains closed.
@@ -153,7 +157,7 @@ Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 A
 - Current Working position override: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED`. P0, staged continuation, blank entry, return, and bounded resume pass; observations remain protected.
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-002 — IN DEMO PARTIAL / BLANK PY-009 PRIMARY ACCEPTED`
+- Team 2 active packet: `RP-002 — IN DEMO PARTIAL / PY-009 BOUNDED TRANSFER EVIDENCE ACCEPTED`
 - Team 1 railhead: `RP-012 — PROMOTED TO WORKING / FINAL PACKET`
 - Ordered Advance lead beyond Team 2 accepted baseline: `11 ordered packets — RP-002 through RP-012 promoted`
 - Whole-story rail status: `OUTLINED AND PROTECTED END TO END`
@@ -174,7 +178,7 @@ Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 A
 | Order | Packet | Surface-safe chapter/location | Predecessor | Advance status | Working status | Story | Location | Python skill | AI-901 check | Puzzle | Rough code | Dependencies/impact |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `RP-001` | `City Threshold — City Beneath` | `Witness Corridor complete -> City Beneath credits` | `PROMOTED TO WORKING — 7001340` | `IN DEMO — ACCEPTED / VIEWPORT COORDINATOR PASS` | `LORE LOCKED` | `STORYBOARD LOCKED` | `PY-020 SOLIDIFIED` | `CUM-01 SOLIDIFIED` | `A4 LOCKED` | `FUNCTIONAL + PHOTOREAL PASS` | The accepted campaign remains clean. Coordinator validation now includes full `402/402`, production build, RP-002 validator, E2E syntax, `206.9s` full E2E, exact `1920 x 1080` full-shell containment, exact `390 x 844` narrow containment, `44px` controls, and an empty live console. The playable title remains live on port `4173`. |
-| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `IN DEMO PARTIAL — BLANK PY-009 PRIMARY ACCEPTED` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH LOCKED` | `BLANK PRIMARY ENTRY ACCEPTED; SUBMISSION CLOSED` | Next W1 owns only the earliest editable submission/result gap; five-record evidence, blank primary, returns, and every later lock remain exact. |
+| 2 | `RP-002` | `Civic Record Encounter — City Beneath` | `RP-001 anchor complete -> civic route available` | `PROMOTED TO WORKING — COORDINATOR GATE PASS` | `IN DEMO PARTIAL — PY-009 TRANSFER EVIDENCE ACCEPTED` | `PASS — SURFACE PATH/END STATE CONSOLIDATED` | `PASS — A2 COMPACT RESPONSIVE PRESENTATION LOCKED` | `PY-009 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `RP002-RAI-01 SOLIDIFIED — A3 CONVERGENCE PASS / NO REOPEN` | `PASS — A4 INTEGRATED END-TO-END GRAPH + EXPLANATION ENTRY LOCKED` | `BOUNDED TRANSFER ACCEPTED; EXPLANATION ENTRY PROTECTED ONLY` | W1 owns only the earliest explicit explanation-entry gap from accepted `FT-20C`; user storage, returns, scoring/RAI/later locks, and no-successor remain exact. |
 
 ## Latest Working handoff — RP002-P1-008 W2
 

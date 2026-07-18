@@ -91,6 +91,8 @@ Record:
 
 ## Immediate application to RP-002
 
+`2026-07-17 / RP002-P1-014 A5 continuity checkpoint:` the coordinator-authorized nearest-edge pass added one pure unimported `EX-00 -> EX-10 -> EX-20` regression seam only. Focused `8/8`, full `606/606`, RP-002 validator, build, unchanged accepted assets, leakage/purity, and patch gates pass. **Gate reduction:** `NO` — the protected-design missing-gate count was already zero; this pass protects continuity but does not close normal integration, Working, final-art, or release obligations. **Verdict:** `REVISE`; W1 now plays accepted live `FT-20C` and reports only its earliest explicit explanation-entry gap. No further RP-002 protected micro-seam, RP-013, or successor is authorized by this pass.
+
 `RP-002` exceeded the normal convergence budget. Existing protected work remains valid, and the mandatory convergence cycle is complete: A2 consolidated presentation, A3 preserved the SOLIDIFIED mappings, A4 locked one end-to-end graph, and A5 composed one pure P0–P3 protected journey smoke through real authorities.
 
 Current verdict: `GATE REVIEW — A5 HANDOFF`. The protected-code and post-integration validation deficits are zero; normal integration, final production assets, Working evidence, and release remain later-stage obligations. `RP-003` is seed-ready but reserved pending the coordinator gate. No additional RP-002 protected micro-seam is authorized unless the coordinator records a genuine hold or a later validation reproduces a regression.
