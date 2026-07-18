@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W3 handoff — RAI-transfer guide identity defect
+
+- **Disposition:** `P2 OPEN — RP002-AESTH-013 / W4 AESTHETIC-POLISH NEXT`.
+- **Accepted presentation:** blank/editable `T01`–`T03` retain exactly three equal source-ordered wide scored peers, one-column narrow/`200%` recovery, owner-heading focus, native associations, `>=44px` targets, no-interim replacement, T03-only strict result, actual-failed-pair feedback, wholly blank retry, exact-pass blank Teacher entry, privacy, invariant world, and hard later-state absence.
+- **Bounded defect:** `RAITC-30G` uses the exact scored `custody-ledger-rai-primary-controls` three-column class. Its three guide inputs therefore repeat the scored-frame silhouette, contradicting the closed `RAI-GUIDE` one compact detached single-aperture cassette identity. The fix is presentation-only: one guide-specific enclosing cassette boundary containing the same three labeled controls, without the scored three-peer class or three separately framed apertures.
+- **Evidence / exact W4 boundary:** focused `64/64`; current root/assets HTTP `200`; exact JS/CSS hashes and canonical guide provenance/hash/original-size inspection pass. Browser had no backend and storage/save was untouched. W4 changes no gameplay, curriculum, guide copy/control count, evaluator, recovery, storage, route, art/assets, world, explanation evaluation, or later state; it adds only the guide-specific presentation and a regression distinguishing scored three-wide cases from single-cassette recovery while proving narrow/`200%` recovery.
+
 ## 2026-07-18 Working W2 handoff — RAI-transfer convergence resolved
 
 - **Disposition:** `RESOLVED — RP002-P1-018 / W3 AESTHETIC REVIEW NEXT`.

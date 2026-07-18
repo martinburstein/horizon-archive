@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W3 — RAI-transfer guide presentation
+
+- **Verdict:** `RP002-AESTH-013 P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Transfer cases/replacements/result/recovery/blank Teacher entry pass bounded presentation review, but `RAITC-30G` reuses the scored `.custody-ledger-rai-primary-controls` class and renders its guide inputs as three equal peer channels rather than one separate single-cassette recovery surface.
+- **Evidence/boundary:** focused `64/64`; served `index-B_NGtxrq.js` / `index-gd0EXXXq.css` HTTP `200` with exact hashes; canonical `RAI-GUIDE` provenance/hash/original-size inspection pass. Browser was unavailable and storage/save untouched. W4 may only add a guide-specific one-enclosure presentation and focused wide/narrow regression while retaining the three existing controls, zero-credit mechanics, unchanged art/world, and hard stop before explanation evaluation or later state.
+
 ## 2026-07-18 Working W2 — RAI-transfer convergence integrated
 
 - **Cycle / disposition:** `RP002-P1-018 / W2 Coder bug-repair — RESOLVED; W3 NEXT`.

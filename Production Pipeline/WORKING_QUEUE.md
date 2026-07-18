@@ -2,6 +2,8 @@
 
 **Current W2 result (RP002-P1-018):** `RESOLVED — W3 AESTHETIC REVIEW NEXT`. Protected transfer convergence now runs through the exact normal route with editable transient `T01`–`T03`, explicit Pilot submit, no interim result, T03-only strict `9/9`, failed-pair feedback/one zero-credit guide/blank retry, or exact-pass blank Teacher entry. Focused `76/76`, full `653/653`, both validators, build, served reload, and patch gates pass on `index-B_NGtxrq.js` / `index-gd0EXXXq.css`; all privacy, world, no-authority, hard explanation-stop, and no-successor locks remain exact.
 
+**Current W3 result (RP002-AESTH-013):** `P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Blank/editable `T01`–`T03`, no-interim replacement, T03-only strict result, actual-failed-pair feedback, wholly blank retry, exact-pass blank Teacher entry, owner/focus/target/association/privacy/world/hard-stop contracts pass. The separate zero-credit transfer guide incorrectly reuses the scored three-equal-peer class, so its three inputs read as another scored three-channel frame instead of one closed-canon single-cassette surface. W4 may only introduce a guide-specific single-enclosure presentation while retaining all three labeled controls and existing narrow/`200%` recovery; gameplay, copy, control count, storage, art, world, and later states remain unchanged. Focused `64/64`, HTTP/assets/hashes/reference provenance pass; Browser remained unavailable and storage untouched.
+
 ## 2026-07-18 Working W1 — blank transfer interaction P1
 
 - **Disposition:** `RP002-P1-018 P1 OPEN — W2 BUG-REPAIR NEXT`.
