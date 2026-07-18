@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A3 continuity — Pilot dismissal evidence preservation
+
+- **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.
+- **Evidence firewall:** conclusion display and explicit Pilot dismissal are navigation/presentation only. They create no `RP002-RAI-01` attempt, dimension, score, evidence, mastery, save, or cross-credit; finalized Python evidence remains hidden byte-stable prerequisite-only material.
+- **Blank destination:** only the unchanged first `RAI-P0` case and existing principle, mitigation, and accountable-owner controls mount, all blank in visible, semantic, programmatic, and native state. No autofill, preselection, submit, evaluation, feedback, result, evidence, or later state exists.
+- **Demo effect / next:** none. Frozen curriculum, accepted runtime/assets/storage/world, and Team 2 position remain unchanged. A4 owns one protected zero-effect dismissal-to-blank-primary graph and must stop before all RAI submission/evaluation or later states.
+
 ## 2026-07-17 Advance A2 continuity — Pilot dismissal presentation
 
 - **Presentation delta:** documentation-only. Over invariant SC-03, the accepted `PILOT // FLIGHT RECORDER` conclusion remains the sole stable group until one explicit Pilot dismissal directly mounts only the existing blank `RP002-RAI-01 / RAI-P0` group under `SYSTEM // EXPEDITION SESSION`; no transition, reward, loading, confirmation, city response, or preview board exists.

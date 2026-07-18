@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-17 RP-002 Pilot dismissal / blank RAI-primary preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: one explicit zero-effect Pilot dismissal and blank `RAI-P0` arrival add no attempt, dimension, score, evidence, mastery, save, or cross-credit.
+- [x] Finalized Python primary, transfer, and explanation evidence remains hidden byte-stable prerequisite-only material and cannot preselect or satisfy any Responsible-AI dimension.
+- [x] The unchanged first RAI case and principle, mitigation, and accountable-owner controls begin blank in visible, semantic, programmatic, and native state.
+- [x] No autofill, carried Python/private state, submit, evaluation, feedback, result, evidence, transfer, explanation, conclusion, or later state is exposed.
+- [x] Frozen independent mappings, privacy, accessibility, offline/no-authority/no-exam-guarantee, invariant world/null delta, and no-successor boundaries remain exact.
+- [ ] Gameplay Master defines only the bounded protected Pilot-dismissal-to-blank-RAI-primary graph without changing a frozen curriculum element.
+
 ## 2026-07-17 RP-002 Python explanation submission preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: A1 ownership and A2 presentation preserve the unchanged prompt, three blank controls, frozen three-dimension evaluator, exact completion threshold, and bounded Pilot conclusion.
