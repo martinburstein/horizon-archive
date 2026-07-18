@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — Pilot conclusion dismissal blocker
+
+- **Issue:** `RP002-P1-016 / P1`; the accepted `EXS-20C` Pilot Python conclusion remains complete, owner-heading focused, separately reversible, transient, accessible, and world-invariant, but exposes no `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW` action or normal transition into blank `RP002-RAI-01 / RAI-P0`.
+- **Expected / actual:** one private-free seven-modality/one-hit Pilot dismissal should atomically replace the conclusion with only the unchanged first System Responsible-AI case, with principle, mitigation, and accountable-owner controls all genuinely blank and no attempt or submit action. Actual normal state offers only the two write-free returns; the component has no conclusion action and the accepted JS lacks the dismissal label and `RAI-P0` marker.
+- **Evidence / limitation:** accepted root/JS/CSS HTTP `200`; focused accepted exercise/entry/submission/normal-route coverage `117/117`; accepted JS `961901` bytes. No in-app Browser backend was available, so no gated live claim was fabricated. Martin's storage/save and the protected A5 controller remained untouched.
+- **W2 boundary:** integrate only the existing protected dismissal-to-blank-primary authority into normal App/route/UI; preserve the complete conclusion until deliberate intent, atomic one-group replacement, blank controls, zero RAI attempt/evidence/cross-credit, separate returns, accessibility/privacy/world invariants, and every later-state hard stop.
+
 ## 2026-07-17 Advance A5 continuity — protected Pilot dismissal to blank RAI primary
 
 - **Cycle:** `RP002-P1-016 / A5 Coder Agent — advance mode`.

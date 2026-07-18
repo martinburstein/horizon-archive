@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W1 — RP002-P1-016 Pilot dismissal blocker
+
+- **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`. Exact accepted `EXS-20C` retains only the complete `PILOT // FLIGHT RECORDER` Python conclusion and the two separate write-free returns. Normal App/UI exposes no `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW` action, and blank `RP002-RAI-01 / RAI-P0` cannot be reached.
+- **Evidence:** root/accepted assets return HTTP `200`; the accepted JS contains the Pilot owner and prior explanation-submit marker but not the dismissal label or `RAI-P0`; focused accepted exercise, explanation-entry, explanation-submission, and normal-route coverage passes `117/117`. Browser storage/save and the protected A5 controller were untouched; no later RAI state was judged.
+- **Exact W2 edge:** compose only the existing protected `RAD-00 -> RAD-10 -> RAD-20` authority into normal App/route/UI: stable conclusion -> one explicit private-free seven-modality/one-hit Pilot dismissal -> only the unchanged first System RAI case with all three control families genuinely blank, no attempt, and no submit action. Preserve hidden Python prerequisites without cross-credit, atomic replacement, owner-heading focus, separate returns, sanitation/resume, privacy/accessibility parity, invariant world/null delta, offline/no-authority/no-exam-guarantee, and `successor=null`. Stop before every RAI evaluation or later state.
+
 ## 2026-07-17 Advance A5 continuity handoff — protected Pilot dismissal to genuinely blank RAI primary
 
 - **Disposition:** `REVISE — PROTECTED RAD-00/10/20 CONTROLLER ONLY / ACCEPTED W1 NEXT`.
