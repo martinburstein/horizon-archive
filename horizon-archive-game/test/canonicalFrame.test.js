@@ -108,3 +108,25 @@ test("Responsible-AI primary preserves three wide peers and one-column narrow or
   assert.doesNotMatch(arrival,
     /rp002-blank-rai-review-frame-v1|2026-07-17-rp002-blank-rai-primary-reveal/);
 });
+
+test("Responsible-AI transfer keeps three scored peers distinct from one guide cassette", () => {
+  const arrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  const scoredTransfer = arrival.match(/atPythonPrimary && primaryPhase === "RAITC-00"([\s\S]*?)atPythonPrimary && primaryPhase === "RAITC-20F"/)?.[1] ?? "";
+  const transferGuide = arrival.match(/atPythonPrimary && primaryPhase === "RAITC-30G"([\s\S]*?)atPythonPrimary && primaryPhase === "RAITC-20C"/)?.[1] ?? "";
+  assert.match(scoredTransfer, /<dl className="custody-ledger-fields custody-ledger-rai-primary-controls">/);
+  assert.doesNotMatch(scoredTransfer, /custody-ledger-rai-transfer-guide/);
+  assert.match(transferGuide, /<dl className="custody-ledger-fields custody-ledger-rai-transfer-guide">/);
+  assert.doesNotMatch(transferGuide, /custody-ledger-rai-primary-controls/);
+  assert.match(styles,
+    /\.custody-ledger-rai-primary-controls \{[^}]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/);
+  assert.match(styles,
+    /\.custody-ledger-rai-transfer-guide \{[^}]*grid-template-columns: minmax\(0, 1fr\);[^}]*width: 100%;[^}]*max-width: 48rem;[^}]*border: 1px solid #9ea9bb;/);
+  assert.match(styles,
+    /\.custody-ledger-rai-transfer-guide > div \{ padding: 0; border: 0; \}/);
+  assert.match(styles,
+    /data-canonical-layout="narrow"\] \.custody-ledger-fields \{[^}]*grid-template-columns: 1fr;/);
+  assert.match(styles,
+    /@media \(max-width: 1279px\) \{[\s\S]*?\.custody-ledger-rai-primary-controls \{[^}]*grid-template-columns: 1fr;/);
+  assert.doesNotMatch(arrival,
+    /rp002-rai-guided-recovery-cassette-v1|2026-07-17-rp002-rai-guided-recovery-reveal/);
+});

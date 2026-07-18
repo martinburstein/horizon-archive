@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W4 handoff — RAI-transfer guide identity resolved
+
+- **Disposition:** `RESOLVED — RP002-AESTH-013 / COORDINATOR NEXT`.
+- **Presentation delta:** only `RAITC-30G` now uses `custody-ledger-rai-transfer-guide`, one width-contained one-column cassette with one enclosing boundary and borderless internal field groups. Its same labeled `principle`, `mitigation`, and `owner` native inputs remain source ordered within it. `RAITC-00` retains the scored `custody-ledger-rai-primary-controls` class and exactly three equal wide peers; narrow and effective-`200%` widths recover naturally to one column without horizontal escape.
+- **Preservation/evidence:** prompt/copy, controls, validation, completion, zero-credit/retry meaning, targets/focus/associations/forced colors, all cases/answers/evaluator and state transitions, privacy/storage/returns, art/world, hard later-state stop, and successor remain unchanged; no canonical raster is integrated. Focused `65/65`, full `654/654`, both validators, build, immutable civic art/four references, HTTP/served markers/hashes, and patch gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`. Browser remained unavailable and storage untouched; coordinator owns independent release gates.
+
 ## 2026-07-18 Working W3 handoff — RAI-transfer guide identity defect
 
 - **Disposition:** `P2 OPEN — RP002-AESTH-013 / W4 AESTHETIC-POLISH NEXT`.

@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W4 — RAI-transfer guide presentation resolved
+
+- **Verdict:** `RP002-AESTH-013 RESOLVED — COORDINATOR NEXT`. Only `RAITC-30G` changed presentation class: one width-contained one-column cassette surface, one enclosing boundary, and borderless internal field groups containing the same source-ordered `principle`, `mitigation`, and `owner` native inputs. It no longer reuses the scored three-peer frame class. `RAITC-00` retains exactly three equal wide peers and existing narrow/`200%` one-column recovery.
+- **Preservation/evidence:** gameplay, curriculum, cases, answers, evaluator, copy, controls/labels, zero-credit/retry, storage/save, route, art/assets, world, explanation evaluation, and later states are unchanged. Focused `65/65`, full `654/654`, Responsible-AI/RP-002 validators, build, immutable civic art and four canonical references, served HTTP/markers/hashes, final refresh, and patch gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`. Browser had no backend; storage/save and user paths remained untouched. Independent coordinator release review remains required.
+
 ## 2026-07-18 Working W3 — RAI-transfer guide presentation
 
 - **Verdict:** `RP002-AESTH-013 P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Transfer cases/replacements/result/recovery/blank Teacher entry pass bounded presentation review, but `RAITC-30G` reuses the scored `.custody-ledger-rai-primary-controls` class and renders its guide inputs as three equal peer channels rather than one separate single-cassette recovery surface.
