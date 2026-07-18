@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — blank Responsible-AI native-control polish
+
+- **Verdict:** `RP002-AESTH-011 RESOLVED — COORDINATOR NEXT`. The existing custody-ledger field, target, normal-focus, and forced-color-focus selectors now include `select`; the three unchanged blank RAI controls receive full-width `44px` native-field and visible-focus parity.
+- **Continuity:** one focused regression protects existing ordered control mapping and all three CSS contracts. Native blank first options, generic two-wide/one-column narrow and `200%` recovery, System focus, no-attempt state, invariant world/art, privacy/storage, and hard absence of submit/evaluate/later state remain exact.
+- **Evidence/next:** focused `68/68`, full `628/628`, RP-002 validator, build, immutable reference/master hashes, served markers, HTTP/hash, final refresh, and patch gates pass on `index-C2MkEQI0.js` / `index-B85gq_mk.css`. Browser had no backend and storage was untouched. Coordinator independently validates the candidate before release.
+
 ## 2026-07-17 Working W3 — blank Responsible-AI native-control presentation
 
 - **Verdict:** `RP002-AESTH-011 P1 OPEN — W4 AESTHETIC-POLISH NEXT`. Stable conclusion/dismissal/System blank-entry hierarchy, source order, blankness, privacy, immutable civic world/art, responsive reflow, and later-state hard stop pass.

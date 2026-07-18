@@ -80,3 +80,15 @@ test("Python explanation authoring preserves three wide peers and one-column nar
   assert.doesNotMatch(arrival,
     /rp002-blank-explanation-archive-reveal-v1|2026-07-17-rp002-blank-explanation-reveal/);
 });
+
+test("blank Responsible-AI selects inherit custody-ledger target and focus treatment", () => {
+  const arrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  assert.match(arrival,
+    /primaryPhase === "RAD-20"[\s\S]*?<dl className="custody-ledger-fields">[\s\S]*?primaryInteraction\.controls\.map\(\(control\) => \([\s\S]*?<select/);
+  assert.match(styles,
+    /\.custody-ledger-fields input,\s*\.custody-ledger-fields textarea,\s*\.custody-ledger-fields select \{[^}]*box-sizing: border-box;[^}]*width: 100%;[^}]*min-height: 44px;[^}]*padding: 8px 10px;[^}]*border: 1px solid #8792a5;[^}]*color: #f2f5fa;[^}]*background: #070a10;[^}]*font: inherit;/);
+  assert.match(styles,
+    /\.custody-ledger-fields input:focus-visible,\s*\.custody-ledger-fields textarea:focus-visible,\s*\.custody-ledger-fields select:focus-visible \{ outline: 3px solid #e4b36c; outline-offset: 2px; \}/);
+  assert.match(styles,
+    /@media \(forced-colors: active\) \{[\s\S]*?\.custody-ledger-fields select:focus-visible \{ outline-color: Highlight; \}/);
+});

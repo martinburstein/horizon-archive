@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W4 — RP002-AESTH-011 RAI native-control polish
+
+- **Verdict:** `RESOLVED — COORDINATOR NEXT`. `.custody-ledger-fields` now applies its established field sizing/appearance to `select`, and both normal and forced-color focus selectors include `select`. Each unchanged blank RAI control therefore has full width, `min-height:44px`, established visual treatment, and visible focus parity.
+- **Regression/boundary:** one focused presentation test proves `RAD-20` still maps existing `primaryInteraction.controls` directly into the native selects and proves the base, focus, and forced-color CSS contracts. No gameplay, curriculum, case content/choices, storage, route, art, or later RAI code changed.
+- **Evidence/handoff:** focused `68/68`, full `628/628`, RP-002 validator, build, immutable-art, served-marker/HTTP/hash, final refresh, and patch gates pass on `index-C2MkEQI0.js` / `index-B85gq_mk.css`. Browser remained unavailable and storage untouched. Coordinator must independently confirm blank/source-ordered controls, `44px`/focus/forced-color treatment, responsive recovery, no-attempt/hard-stop continuity, both closed reference hashes, unchanged civic-master hash, complete E2E, cleanup, and synchronized main before release.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-011 RAI native-control treatment
 
 - **Verdict:** `P1 OPEN — W4 AESTHETIC-POLISH NEXT`. Stable `EXS-20C`, its separate Pilot dismissal, and atomic replacement by only blank System `RP002-RAI-01 / RAI-P0` pass ownership, hierarchy, focus transition, blank native values, control-family source order, literal no-attempt status, privacy, invariant world/art, and hard later-state review.
