@@ -15,6 +15,7 @@ import {
   createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
+  createCustodyLedgerNormalRAIPrimaryEntry,
   createCustodyLedgerNormalTransferInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
@@ -41,6 +42,10 @@ import {
   CUSTODY_LEDGER_EXPLANATION_SUBMISSION_VERSION,
   CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
 } from "../src/CustodyLedgerExplanationSubmission.js";
+import {
+  CUSTODY_LEDGER_OPEN_RAI_PRIMARY,
+  CUSTODY_LEDGER_RAI_PRIMARY_ENTRY_VERSION,
+} from "../src/CustodyLedgerRAIPrimaryEntry.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -267,6 +272,7 @@ test("primary evidence-return group names follow the active owner replacement", 
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-00"), "Blank Python explanation evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-20F"), "Python explanation feedback evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("EXS-20C"), "Python explanation conclusion evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("RAD-20"), "Blank Responsible-AI primary evidence return");
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-00"), /blank python primary/i);
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-20"), /blank python primary/i);
 });
@@ -1455,6 +1461,43 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     assert.equal(complete.state.phase, "EXS-20C");
     assert.equal(complete.state.boundedResult.confirmedDimensions, 3);
     assert.equal(complete.state.successor, null);
+    const raiPrimaryEntry = createCustodyLedgerNormalRAIPrimaryEntry(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      result.state,
+      complete.state,
+      predecessor,
+    );
+    assert.ok(raiPrimaryEntry);
+    assert.equal(raiPrimaryEntry.getState().phase, "RAD-00");
+    const blankRAIPrimary = raiPrimaryEntry.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PRIMARY_ENTRY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_OPEN_RAI_PRIMARY,
+      activationKind,
+      eventToken: `rp002-rai-primary-entry-${activationKind}`,
+    });
+    assert.equal(blankRAIPrimary.status, "blank_rai_primary_opened");
+    assert.equal(blankRAIPrimary.replacement, "atomic");
+    assert.equal(blankRAIPrimary.intentPhase, "RAD-10");
+    assert.equal(blankRAIPrimary.state.phase, "RAD-20");
+    assert.equal(blankRAIPrimary.state.mappingId, "RP002-RAI-01");
+    assert.equal(blankRAIPrimary.state.formId, "RAI-P0");
+    assert.deepEqual(blankRAIPrimary.state.controls.map(({ id, value, nativeValue, selected }) => ({
+      id, value, nativeValue, selected,
+    })), [
+      { id: "principle", value: "", nativeValue: "", selected: false },
+      { id: "mitigation", value: "", nativeValue: "", selected: false },
+      { id: "accountable_owner", value: "", nativeValue: "", selected: false },
+    ]);
+    assert.equal(blankRAIPrimary.state.attemptStatus, "no_attempt");
+    assert.equal(blankRAIPrimary.state.scoringEnabled, false);
+    assert.equal(blankRAIPrimary.state.successor, null);
+    assert.deepEqual(blankRAIPrimary.state.availableActions, ["RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD"]);
     assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
   }
 
@@ -2103,6 +2146,11 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION/);
   assert.match(arrival, /primaryPhase === "EXS-20F"/);
   assert.match(arrival, /primaryPhase === "EXS-20C"/);
+  assert.match(arrival, /primaryPhase === "RAD-20"/);
+  assert.match(arrival, /CUSTODY_LEDGER_OPEN_RAI_PRIMARY/);
+  assert.match(arrival, /onRAIPrimaryOpen/);
+  assert.match(arrival, /value=\{raiPrimaryResponses\[control\.id\] \?\? ""\}/);
+  assert.match(arrival, /No Responsible-AI attempt, submission, evaluation, feedback, result, evidence, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION/);
   assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
@@ -2112,6 +2160,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalTransferInteraction/);
   assert.match(app, /createCustodyLedgerNormalExplanationEntry/);
   assert.match(app, /createCustodyLedgerNormalExplanationSubmission/);
+  assert.match(app, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  assert.match(app, /openCustodyLedgerRAIPrimary/);
   assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
   assert.match(app, /onPrimaryDismiss=\{\(event\) => clearCustodyLedgerPrimaryResult\(routeState, event\)\}/);
@@ -2121,6 +2171,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onExplanationOpen=\{openCustodyLedgerExplanation\}/);
   assert.match(app, /onExplanationSubmit=\{handleCustodyLedgerExplanationSubmit\}/);
   assert.match(app, /onExplanationRetry=\{retryCustodyLedgerExplanation\}/);
+  assert.match(app, /onRAIPrimaryOpen=\{openCustodyLedgerRAIPrimary\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -2129,6 +2180,13 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /custodyLedgerRouteActions\.continueProtected/);
   assert.match(arrival, /CUSTODY_LEDGER_NEAR_DETAIL_ACTION/);
   assert.match(normalRoute, /createCustodyLedgerFirstNearDispatchOrchestrator/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  for (const acceptedSource of [app, arrival, normalRoute]) {
+    assert.doesNotMatch(acceptedSource, /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
+  }
+  for (const boundedSource of [arrival, normalRoute]) {
+    assert.doesNotMatch(boundedSource, /evaluateResponsibleAI/);
+  }
   assert.match(normalRoute, /createCustodyLedgerSecondNearDispatchOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerThirdNearCompletionOrchestrator/);
   assert.match(normalRoute, /createCustodyLedgerHotspotDispatcher/);

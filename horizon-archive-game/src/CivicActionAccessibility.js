@@ -22,6 +22,7 @@ const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
   explanation: "Blank Python explanation evidence return",
   explanationFeedback: "Python explanation feedback evidence return",
   explanationConclusion: "Python explanation conclusion evidence return",
+  raiPrimary: "Blank Responsible-AI primary evidence return",
 });
 
 export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
@@ -36,6 +37,7 @@ export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
   if (primaryPhase === "EXS-00") return custodyLedgerPrimaryReturnGroupLabels.explanation;
   if (primaryPhase === "EXS-20F") return custodyLedgerPrimaryReturnGroupLabels.explanationFeedback;
   if (primaryPhase === "EXS-20C") return custodyLedgerPrimaryReturnGroupLabels.explanationConclusion;
+  if (primaryPhase === "RAD-20") return custodyLedgerPrimaryReturnGroupLabels.raiPrimary;
   if (primaryPhase === "FT-00") return custodyLedgerPrimaryReturnGroupLabels.fresh;
   return custodyLedgerPrimaryReturnGroupLabels.blank;
 }

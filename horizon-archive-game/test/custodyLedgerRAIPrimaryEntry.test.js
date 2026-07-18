@@ -374,7 +374,7 @@ test("separate returns remain write-free and byte-stable from both RAD states", 
   }
 });
 
-test("accessibility, privacy, hard stop, module purity, and unimported normal-route boundaries remain exact", async () => {
+test("accessibility, privacy, hard stop, module purity, and normal-route composition boundaries remain exact", async () => {
   assert.equal(custodyLedgerRAIPrimaryEntryAccessibility.oneActiveGroup, true);
   assert.equal(custodyLedgerRAIPrimaryEntryAccessibility.minActionCssPx, 44);
   assert.equal(custodyLedgerRAIPrimaryEntryAccessibility.blankNativeControls, true);
@@ -402,15 +402,26 @@ test("accessibility, privacy, hard stop, module purity, and unimported normal-ro
     import("node:fs/promises"),
     import("node:url"),
   ]);
-  const [app, main, normalRoute, source] = await Promise.all([
+  const [app, main, normalRoute, arrival, source] = await Promise.all([
     "../src/App.jsx",
     "../src/main.jsx",
     "../src/CustodyLedgerNormalRoute.js",
+    "../src/CivicRecordArrival.jsx",
     "../src/CustodyLedgerRAIPrimaryEntry.js",
   ].map((relative) => readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8")));
-  for (const acceptedSource of [app, main, normalRoute]) {
+  assert.doesNotMatch(main,
+    /CustodyLedgerRAIPrimaryEntry|rp002\.rai-primary-entry\.v1|DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW/);
+  assert.match(app, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  assert.match(app, /CUSTODY_LEDGER_OPEN_RAI_PRIMARY/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIPrimaryEntry/);
+  assert.match(arrival, /CUSTODY_LEDGER_OPEN_RAI_PRIMARY/);
+  assert.match(arrival, /primaryPhase === "RAD-20"/);
+  for (const acceptedSource of [app, main, normalRoute, arrival]) {
     assert.doesNotMatch(acceptedSource,
-      /CustodyLedgerRAIPrimaryEntry|rp002\.rai-primary-entry\.v1|DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW/);
+      /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
+  }
+  for (const boundedSource of [normalRoute, arrival]) {
+    assert.doesNotMatch(boundedSource, /evaluateResponsibleAI/);
   }
   assert.doesNotMatch(source,
     /localStorage|sessionStorage|indexedDB|fetch\(|XMLHttpRequest|WebSocket|document\.|window\.|navigator\./);

@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — blank Responsible-AI primary candidate
+
+- **Candidate delta:** accepted Pilot Python conclusion now has one explicit zero-effect dismissal into only unchanged first System `RP002-RAI-01 / RAI-P0`; principle, mitigation, and accountable-owner controls are native and genuinely blank with no attempt or submit action.
+- **Demo safety:** hidden Python prerequisites remain byte-stable with zero RAI cross-credit; returns, world/clocks, storage boundary, privacy, accessibility, no-authority, null delta, and no-successor locks remain exact. Every RAI evaluator/result/evidence and later state stays closed.
+- **Evidence/next:** focused `126/126`, full `627/627`, RP-002 validator, build, leakage/hard-stop, HTTP/hash/served-marker, and patch gates pass on `index-C2Zfzu8k.js` / `index-B112XlTz.css`. Browser remained unavailable and storage untouched. W3 owns presentation review only; release remains coordinator-owned.
+
 ## 2026-07-17 Working W1 — Pilot conclusion dismissal blocker
 
 - **Issue:** `RP002-P1-016 / P1`; the accepted `EXS-20C` Pilot Python conclusion remains complete, owner-heading focused, separately reversible, transient, accessible, and world-invariant, but exposes no `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW` action or normal transition into blank `RP002-RAI-01 / RAI-P0`.

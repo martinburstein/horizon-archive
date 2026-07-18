@@ -54,6 +54,7 @@ import { createCustodyLedgerPrimaryResultDismissal } from "./CustodyLedgerPrimar
 import { createCustodyLedgerTransferInteraction } from "./CustodyLedgerTransferInteraction.js";
 import { createCustodyLedgerExplanationEntry } from "./CustodyLedgerExplanationEntry.js";
 import { createCustodyLedgerExplanationSubmission } from "./CustodyLedgerExplanationSubmission.js";
+import { createCustodyLedgerRAIPrimaryEntry } from "./CustodyLedgerRAIPrimaryEntry.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -171,6 +172,39 @@ export function createCustodyLedgerNormalExplanationSubmission(
       freshPracticeState,
       transferCompleteState,
       explanationEntryState,
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIPrimaryEntry(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || explanationEntryState?.phase !== "EX-20"
+    || explanationCompleteState?.phase !== "EXS-20C"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(explanationCompleteState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(explanationCompleteState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerRAIPrimaryEntry({
+      primaryResult,
+      learningState: routeState.learningState,
+      freshPracticeState,
+      transferCompleteState,
+      explanationEntryState,
+      explanationCompleteState,
     });
   } catch {
     return null;

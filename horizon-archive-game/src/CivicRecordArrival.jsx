@@ -20,6 +20,7 @@ import {
   CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION,
   CUSTODY_LEDGER_SUBMIT_PYTHON_EXPLANATION,
 } from "./CustodyLedgerExplanationSubmission.js";
+import { CUSTODY_LEDGER_OPEN_RAI_PRIMARY } from "./CustodyLedgerRAIPrimaryEntry.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -40,6 +41,7 @@ export function CivicRecordArrival({
   onExplanationOpen,
   onExplanationSubmit,
   onExplanationRetry,
+  onRAIPrimaryOpen,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -51,11 +53,13 @@ export function CivicRecordArrival({
   const explanationHeadingRef = useRef(null);
   const explanationFeedbackHeadingRef = useRef(null);
   const explanationConclusionHeadingRef = useRef(null);
+  const raiPrimaryHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
   const [fieldOwner, setFieldOwner] = useState("");
   const [explanationResponses, setExplanationResponses] = useState({});
+  const [raiPrimaryResponses, setRAIPrimaryResponses] = useState({});
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -90,6 +94,12 @@ export function CivicRecordArrival({
       setExplanationResponses({});
     }
   }, [primaryPhase, explanationResponses]);
+
+  useLayoutEffect(() => {
+    if (primaryPhase !== "RAD-20" && Object.keys(raiPrimaryResponses).length > 0) {
+      setRAIPrimaryResponses({});
+    }
+  }, [primaryPhase, raiPrimaryResponses]);
 
   useLayoutEffect(() => {
     if (atPythonPrimary) {
@@ -146,6 +156,10 @@ export function CivicRecordArrival({
       }
       if (primaryPhase === "EXS-20C") {
         explanationConclusionHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RAD-20") {
+        raiPrimaryHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -520,6 +534,46 @@ export function CivicRecordArrival({
                 <p>{primaryInteraction.ownershipMessage.text}</p>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "RAD-20" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-primary-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiPrimaryHeadingRef} id="custody-ledger-rai-primary-heading" tabIndex="-1">
+                  Responsible-AI review
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <p>{primaryInteraction.case.prompt}</p>
+                <dl className="custody-ledger-fields">
+                  {primaryInteraction.controls.map((control) => (
+                    <div key={control.id} data-field-state="editable">
+                      <dt>
+                        <label htmlFor={`custody-ledger-rai-${control.id}`}>
+                          {control.id.replaceAll("_", " ")}
+                        </label>
+                      </dt>
+                      <dd>
+                        <select
+                          id={`custody-ledger-rai-${control.id}`}
+                          name={control.id}
+                          value={raiPrimaryResponses[control.id] ?? ""}
+                          onChange={(event) => setRAIPrimaryResponses((current) => ({
+                            ...current,
+                            [control.id]: event.target.value,
+                          }))}
+                        >
+                          <option value="">Choose one</option>
+                          {control.choices.map((choice) => (
+                            <option key={choice} value={choice}>{choice}</option>
+                          ))}
+                        </select>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="civic-observation-status">
+                  This first course case is genuinely blank. No Responsible-AI attempt, submission, evaluation, feedback, result, evidence, or credit is active.
+                </p>
+              </section>
+            )}
             <p>
               {atObservation
                 ? hasObservation
@@ -540,6 +594,8 @@ export function CivicRecordArrival({
                       ? "Only the explanation dimensions that failed are shown. Private prose was cleared before this feedback appeared."
                     : primaryPhase === "EXS-20C"
                       ? "Current-attempt Python explanation evidence is complete. No access, authority, city change, or later learning has opened."
+                    : primaryPhase === "RAD-20"
+                      ? "The first Responsible-AI course case is open with three genuinely blank controls. No attempt, submission, evaluation, feedback, result, evidence, mastery, access, authority, or city change has been recorded."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
@@ -570,6 +626,14 @@ export function CivicRecordArrival({
                 <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
                 <button className="primary-action" type="button" onClick={onExplanationOpen}>
                   {CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION}
+                </button>
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "EXS-20C" && (
+              <div className="city-command-actions" aria-label="Pilot Responsible-AI entry">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button className="primary-action" type="button" onClick={onRAIPrimaryOpen}>
+                  {CUSTODY_LEDGER_OPEN_RAI_PRIMARY}
                 </button>
               </div>
             )}

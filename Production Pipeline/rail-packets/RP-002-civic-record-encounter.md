@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — RP002-P1-016 blank Responsible-AI entry resolved
+
+- **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`. Exact stable `EXS-20C` now retains two separate returns and exposes one explicit Pilot dismissal. One private-free seven-modality/one-hit intent composes only the existing protected authority and atomically mounts unchanged first `RP002-RAI-01 / RAI-P0` under System ownership.
+- **Blank/hard stop:** native principle, mitigation, and accountable-owner controls begin genuinely blank; literal no-attempt status is visible. No RAI attempt, submit, evaluation, feedback, result, evidence, transfer, explanation, conclusion, credit, save, completion, route reward, authority, world response, external action, identity disclosure, `RP-003+`, or successor action exists.
+- **Evidence:** focused `126/126`, full `627/627`, RP-002 validator, production build, leakage/hard-stop/privacy/storage invariants, HTTP/hash/served-marker, and patch gates pass on `index-C2Zfzu8k.js` / `index-B112XlTz.css`. Browser remained unavailable; user storage and unrelated files were untouched.
+- **W3 edge:** presentation review only for the stable conclusion/dismissal and blank System RAI-P0 group: hierarchy, atomic replacement, ownership, focus, source order, targets, responsive/zoom/forced-color/reduced-motion/non-color parity, and immutable civic art. No runtime, curriculum, art, storage, or later-state edit is authorized.
+
 ## 2026-07-17 Working W1 — RP002-P1-016 Pilot dismissal blocker
 
 - **Verdict:** `P1 OPEN — W2 BUG REPAIR NEXT`. Exact accepted `EXS-20C` retains only the complete `PILOT // FLIGHT RECORDER` Python conclusion and the two separate write-free returns. Normal App/UI exposes no `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW` action, and blank `RP002-RAI-01 / RAI-P0` cannot be reached.
