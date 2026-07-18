@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A1 convergence — RAI primary evaluation and recovery ownership
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. Documentation-only; accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
+- **Composed boundary:** existing three System-owned course cases appear one at a time; each receives only transient Pilot principle/mitigation/accountable-owner choices and one explicit local submission. Cases one and two advance without correctness or result. Case three triggers only the existing simultaneous strict `9/9` evaluator.
+- **Recovery/pass meaning:** any miss yields answer-free Teacher feedback for actual failed case/dimension pairs only, one separate neutral zero-credit guided near case, complete private/transient clearing, and a wholly blank deterministic unlimited retry. Exact current-attempt `9/9` opens only the existing genuinely blank System RAI transfer boundary. No transfer evaluation or later state is authorized.
+- **Preserved:** frozen cases/answers/dimensions/order/threshold/evaluator/remediation/guide; one active owner group; separate write-free returns; seven modalities/one hit; deterministic focus/sanitation/resume; only allowlisted finalized evidence; hidden Python prerequisites with zero cross-credit; privacy, accessibility, no-credit Tour, offline/no-authority/no-exam-guarantee; invariant civic art/world/clocks; `cityStateDelta=null`; no `RP-003+` or successor.
+- **Demo effect / next:** none. A2 owns only compact presentation continuity for this merged path. Runtime, tests, assets, art, curriculum, storage, route, world, transfer evaluator, explanation, conclusion, review/save/completion, and every later state remain unchanged or closed.
+
 ## 2026-07-17 Canonical cycle reveal — blank RAI review frame
 
 - **Subject / scale:** `ITEM / INTERFACE / INTERIOR`; one compact expedition-owned review frame above a civic service socket, with the archive continuing beyond and below it as the larger unchanged whole.
