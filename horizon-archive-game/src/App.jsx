@@ -18,6 +18,7 @@ import {
   createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
+  createCustodyLedgerNormalRAITransferConvergence,
   createCustodyLedgerNormalTransferInteraction,
   createCustodyLedgerNormalRouteController,
   createCustodyLedgerNormalRouteIntent,
@@ -52,6 +53,12 @@ import {
   CUSTODY_LEDGER_RAI_PRIMARY_CONVERGENCE_VERSION,
   CUSTODY_LEDGER_SUBMIT_RAI_CASE,
 } from "./CustodyLedgerRAIPrimaryConvergence.js";
+import {
+  CUSTODY_LEDGER_ACKNOWLEDGE_RAI_TRANSFER_FEEDBACK,
+  CUSTODY_LEDGER_COMPLETE_RAI_TRANSFER_GUIDE,
+  CUSTODY_LEDGER_RAI_TRANSFER_CONVERGENCE_VERSION,
+  CUSTODY_LEDGER_SUBMIT_RAI_TRANSFER_CASE,
+} from "./CustodyLedgerRAITransferConvergence.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -663,6 +670,7 @@ export function App() {
   const custodyLedgerExplanationSubmissionControllerRef = useRef(null);
   const custodyLedgerRAIPrimaryEntryControllerRef = useRef(null);
   const custodyLedgerRAIPrimaryConvergenceControllerRef = useRef(null);
+  const custodyLedgerRAITransferConvergenceControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -1249,6 +1257,7 @@ export function App() {
     custodyLedgerExplanationSubmissionControllerRef.current = null;
     custodyLedgerRAIPrimaryEntryControllerRef.current = null;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
     setMode("rp002-arrival");
   }
 
@@ -1281,6 +1290,7 @@ export function App() {
       custodyLedgerExplanationSubmissionControllerRef.current = null;
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setMode("city-threshold-staging");
       return;
     }
@@ -1297,6 +1307,7 @@ export function App() {
     custodyLedgerExplanationSubmissionControllerRef.current = null;
     custodyLedgerRAIPrimaryEntryControllerRef.current = null;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
   }
 
   function submitCustodyLedgerPrimary(routeState, fields, event) {
@@ -1327,6 +1338,7 @@ export function App() {
       custodyLedgerExplanationSubmissionControllerRef.current = null;
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
       return;
     }
@@ -1343,6 +1355,7 @@ export function App() {
     custodyLedgerExplanationSubmissionControllerRef.current = null;
     custodyLedgerRAIPrimaryEntryControllerRef.current = null;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
     setCustodyLedgerPrimaryView(dismissalController.getState());
   }
 
@@ -1356,6 +1369,7 @@ export function App() {
       custodyLedgerExplanationSubmissionControllerRef.current = null;
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
   }
@@ -1390,6 +1404,7 @@ export function App() {
     custodyLedgerExplanationSubmissionControllerRef.current = null;
     custodyLedgerRAIPrimaryEntryControllerRef.current = null;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
     setCustodyLedgerPrimaryView(transferController.getState());
   }
 
@@ -1435,6 +1450,7 @@ export function App() {
       custodyLedgerExplanationSubmissionControllerRef.current = null;
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
   }
@@ -1466,6 +1482,7 @@ export function App() {
     custodyLedgerExplanationSubmissionControllerRef.current = submissionController;
     custodyLedgerRAIPrimaryEntryControllerRef.current = null;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
     custodyLedgerTransferContextRef.current = {
       ...context,
       explanationEntryState: result.state,
@@ -1493,6 +1510,7 @@ export function App() {
     if (result?.status === "feedback") {
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
     if (result?.status === "python_explanation_complete") {
@@ -1511,6 +1529,7 @@ export function App() {
       if (!raiPrimaryEntryController) return null;
       custodyLedgerRAIPrimaryEntryControllerRef.current = raiPrimaryEntryController;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       custodyLedgerTransferContextRef.current = {
         ...context,
         explanationCompleteState: result.state,
@@ -1525,6 +1544,7 @@ export function App() {
     if (result?.status === "blank_retry") {
       custodyLedgerRAIPrimaryEntryControllerRef.current = null;
       custodyLedgerRAIPrimaryConvergenceControllerRef.current = null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
     }
   }
@@ -1556,6 +1576,7 @@ export function App() {
       : null;
     if (!convergenceController) return;
     custodyLedgerRAIPrimaryConvergenceControllerRef.current = convergenceController;
+    custodyLedgerRAITransferConvergenceControllerRef.current = null;
     setCustodyLedgerPrimaryView(convergenceController.getState());
   }
 
@@ -1589,8 +1610,26 @@ export function App() {
       event,
       `rp002-rai-submit-${current.case.id.toLowerCase()}`,
     ));
-    if (["next_blank_case", "actual_miss_feedback", "strict_primary_complete"].includes(result?.status)) {
+    if (["next_blank_case", "actual_miss_feedback"].includes(result?.status)) {
       setCustodyLedgerPrimaryView(result.state);
+    }
+    if (result?.status === "strict_primary_complete") {
+      const context = custodyLedgerTransferContextRef.current;
+      const transferConvergenceController = context
+        ? createCustodyLedgerNormalRAITransferConvergence(
+          context.routeState,
+          context.primaryResult,
+          context.freshPracticeState,
+          context.transferCompleteState,
+          context.explanationEntryState,
+          context.explanationCompleteState,
+          result.state,
+          context.predecessor,
+        )
+        : null;
+      if (!transferConvergenceController) return null;
+      custodyLedgerRAITransferConvergenceControllerRef.current = transferConvergenceController;
+      setCustodyLedgerPrimaryView(transferConvergenceController.getState());
     }
     return result;
   }
@@ -1625,6 +1664,77 @@ export function App() {
       "rp002-rai-guide-complete",
     ));
     if (["guided_practice_incomplete", "blank_primary_retry"].includes(result?.status)) {
+      setCustodyLedgerPrimaryView(result.state);
+    }
+    return result;
+  }
+
+  function custodyLedgerRAITransferConvergenceIntent(action, event, token) {
+    return {
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_TRANSFER_CONVERGENCE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken(token),
+    };
+  }
+
+  function submitCustodyLedgerRAITransferCase(responses, event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAITransferConvergenceControllerRef.current;
+    const current = controller?.getState();
+    if (!controller || current?.phase !== "RAITC-00") return null;
+    for (const control of current.controls) {
+      const update = controller.updateResponse({
+        caseId: current.case.id,
+        dimension: control.authorityDimension,
+        value: responses[control.id] ?? "",
+      });
+      if (update.status !== "response_updated_session_only") return null;
+    }
+    const result = controller.dispatch(custodyLedgerRAITransferConvergenceIntent(
+      CUSTODY_LEDGER_SUBMIT_RAI_TRANSFER_CASE,
+      event,
+      `rp002-rai-transfer-submit-${current.case.id.toLowerCase()}`,
+    ));
+    if (["next_blank_transfer_case", "actual_transfer_miss_feedback", "strict_transfer_complete"].includes(result?.status)) {
+      setCustodyLedgerPrimaryView(result.state);
+    }
+    return result;
+  }
+
+  function acknowledgeCustodyLedgerRAITransferFeedback(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAITransferConvergenceControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAITransferConvergenceIntent(
+      CUSTODY_LEDGER_ACKNOWLEDGE_RAI_TRANSFER_FEEDBACK,
+      event,
+      "rp002-rai-transfer-feedback-acknowledge",
+    ));
+    if (result?.status === "zero_credit_transfer_guide_opened") setCustodyLedgerPrimaryView(result.state);
+    return result;
+  }
+
+  function completeCustodyLedgerRAITransferGuide(responses, event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAITransferConvergenceControllerRef.current;
+    const current = controller?.getState();
+    if (!controller || current?.phase !== "RAITC-30G") return null;
+    for (const control of current.controls) {
+      const update = controller.updateGuidedResponse({
+        dimension: control.authorityDimension,
+        value: responses[control.id] ?? "",
+      });
+      if (update.status !== "guided_response_updated_session_only") return null;
+    }
+    const result = controller.dispatch(custodyLedgerRAITransferConvergenceIntent(
+      CUSTODY_LEDGER_COMPLETE_RAI_TRANSFER_GUIDE,
+      event,
+      "rp002-rai-transfer-guide-complete",
+    ));
+    if (["transfer_guided_practice_incomplete", "blank_transfer_retry"].includes(result?.status)) {
       setCustodyLedgerPrimaryView(result.state);
     }
     return result;
@@ -2681,6 +2791,9 @@ export function App() {
         onRAIPrimarySubmit={submitCustodyLedgerRAICase}
         onRAIFeedbackAcknowledge={acknowledgeCustodyLedgerRAIFeedback}
         onRAIGuideComplete={completeCustodyLedgerRAIGuide}
+        onRAITransferSubmit={submitCustodyLedgerRAITransferCase}
+        onRAITransferFeedbackAcknowledge={acknowledgeCustodyLedgerRAITransferFeedback}
+        onRAITransferGuideComplete={completeCustodyLedgerRAITransferGuide}
       />
     );
   }

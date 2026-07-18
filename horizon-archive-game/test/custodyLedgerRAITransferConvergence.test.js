@@ -353,11 +353,11 @@ test("separate returns are write-free and preserve accepted evidence and world b
   assertZeroEffect(controller.getState());
 });
 
-test("protected controller is unimported, storage/network/DOM free, and hard-stopped before explanation evaluation", () => {
+test("protected controller is normally composed, storage/network/DOM free, and hard-stopped before explanation evaluation", () => {
   const source = readFileSync(new URL("../src/CustodyLedgerRAITransferConvergence.js", import.meta.url), "utf8");
-  for (const entry of ["App.jsx", "main.jsx", "CustodyLedgerNormalRoute.js"]) {
-    assert.equal(readFileSync(new URL(`../src/${entry}`, import.meta.url), "utf8").includes("CustodyLedgerRAITransferConvergence"), false);
-  }
+  assert.equal(readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8").includes("CustodyLedgerRAITransferConvergence"), true);
+  assert.equal(readFileSync(new URL("../src/CustodyLedgerNormalRoute.js", import.meta.url), "utf8").includes("CustodyLedgerRAITransferConvergence"), true);
+  assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8").includes("CustodyLedgerRAITransferConvergence"), false);
   for (const forbidden of [
     "submitCustodyLedgerRAIExplanation", "evaluateCustodyLedgerRAIExplanation", "dismissCustodyLedgerRAIConclusion",
     "localStorage", "sessionStorage", "fetch(", "XMLHttpRequest", "document.", "window.", "RP-003", "RP-013",

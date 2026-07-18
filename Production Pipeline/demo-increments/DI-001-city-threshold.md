@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W2 — RAI-transfer convergence integrated
+
+- **Cycle / disposition:** `RP002-P1-018 / W2 Coder bug-repair — RESOLVED; W3 NEXT`.
+- **Candidate behavior:** normal play now exposes transient editable `T01`–`T03` and explicit Pilot submit; T01/T02 have no interim result; T03 alone reaches strict-pass blank Teacher entry or failed-pair feedback/one zero-credit guide/blank retry.
+- **Evidence/boundary:** focused `76/76`, full `653/653`, both validators, build, restarted served HTTP/action marker, and patch checks pass on `index-B_NGtxrq.js` / unchanged `index-gd0EXXXq.css`. Explanation submission/evaluation and later states remain closed; W3 reviews presentation only.
+
 ## 2026-07-18 Working W1 — blank RAI transfer interaction gap
 
 - **Cycle / disposition:** `RP002-P1-018 / W1 Player — P1 OPEN; W2 BUG-REPAIR NEXT`.

@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W2 handoff — RAI-transfer convergence resolved
+
+- **Disposition:** `RESOLVED — RP002-P1-018 / W3 AESTHETIC REVIEW NEXT`.
+- **Normal integration:** exact accepted blank transfer now composes only the protected transfer controller. Explicit transient Pilot submission advances `T01`/`T02` to blank next cases without interim result; only `T03` performs simultaneous strict `9/9`, reaching mapped failed-pair feedback/one guide/blank retry or exact-pass blank Teacher entry.
+- **Invariants/evidence:** no response enters storage; explanation action/evaluator and every later state remain closed. Focused `76/76`, full `653/653`, both validators, build `index-B_NGtxrq.js` / `index-gd0EXXXq.css`, served HTTP/action marker, privacy/hard-stop, and patch gates pass. W3 receives presentation review only.
+
 ## 2026-07-18 Working W1 handoff — blank RAI transfer cannot accept or submit T01
 
 - **Disposition:** `P1 OPEN — RP002-P1-018 / W2 BUG-REPAIR NEXT`.

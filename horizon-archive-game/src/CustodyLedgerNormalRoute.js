@@ -60,6 +60,7 @@ import {
   createCustodyLedgerRAIPrimaryEntry,
 } from "./CustodyLedgerRAIPrimaryEntry.js";
 import { createCustodyLedgerRAIPrimaryConvergence } from "./CustodyLedgerRAIPrimaryConvergence.js";
+import { createCustodyLedgerRAITransferConvergence } from "./CustodyLedgerRAITransferConvergence.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -258,6 +259,43 @@ export function createCustodyLedgerNormalRAIPrimaryConvergence(
     if (entry.status !== "blank_rai_primary_opened"
       || JSON.stringify(entry.state) !== JSON.stringify(blankRAIPrimaryState)) return null;
     return createCustodyLedgerRAIPrimaryConvergence(options);
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAITransferConvergence(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || explanationEntryState?.phase !== "EX-20"
+    || explanationCompleteState?.phase !== "EXS-20C"
+    || acceptedBlankTransferState?.phase !== "RAIC-20C"
+    || acceptedBlankTransferState?.stateName !== "GENUINELY_BLANK_RAI_TRANSFER_BOUNDARY"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(acceptedBlankTransferState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(acceptedBlankTransferState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerRAITransferConvergence({
+      primaryResult,
+      learningState: routeState.learningState,
+      freshPracticeState,
+      transferCompleteState,
+      explanationEntryState,
+      explanationCompleteState,
+      acceptedBlankTransferState,
+    });
   } catch {
     return null;
   }
