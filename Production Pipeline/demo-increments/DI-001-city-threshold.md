@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A4 continuity — explanation submission graph
+
+- **Disposition:** `PASS — EXS-00/10/20F/20C PROTECTED GRAPH / A5 NEXT`.
+- **Graph:** canonical blank Teacher authoring -> one explicit private-free seven-modality/one-hit Pilot `SUBMIT PYTHON EXPLANATION` -> existing frozen three-dimension evaluator -> either actually-failed-dimension-only answer-free Teacher remediation and wholly blank unlimited retry, or exact current-attempt `3/3` and the existing Pilot conclusion.
+- **Recovery/presentation:** separate write-free returns, session-only prose/result/focus/token state, deterministic Teacher-heading then first-failed-control recovery, sanitized blank resume, `>=44px` actions, natural narrow/`200%` reflow, forced-color/non-color/reduced-motion parity, and one active group remain locked.
+- **Demo effect / hard stop:** none. Accepted runtime, art, storage, bundle, route, world, `continuation`, and `cityStateDelta=null` remain unchanged. A5 builds only a pure unimported protected controller and stops before conclusion dismissal, RAI, review/save/completion, `RP-003+`, authority/world effect, or successor.
+
 ## 2026-07-17 Advance A3 continuity — explanation submission preservation
 
 - **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.
