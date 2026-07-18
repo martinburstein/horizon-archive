@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A5 continuity — protected Pilot dismissal to blank RAI primary
+
+- **Cycle:** `RP002-P1-016 / A5 Coder Agent — advance mode`.
+- **Disposition:** `REVISE — PROTECTED RAD-00/10/20 CONTROLLER COMPLETE / ACCEPTED W1 NEXT`.
+- **Protected delta:** one pure unimported controller revalidates exact accepted `EXS-20C`; seven deliberate modalities converge through one fresh private-free token to atomically replace the stable Pilot conclusion with only the unchanged first `RP002-RAI-01 / RAI-P0` case and genuinely blank principle/mitigation/accountable-owner controls. The existing Python-conclusion dismissal authority and existing RAI case/control definitions remain the only authorities.
+- **Evidence/recovery:** arrival creates no RAI attempt, score, evidence, mastery, cross-credit, save, route, access, authority, external effect, or later action. Invalid/private/combined/Tour/later requests fail byte-stable without spending a future valid token; exact conclusion/blank resume, mixed-state downgrade, privacy clearing, System-heading-first focus, separate returns, responsive/accessibility parity, invariant world/null delta, offline/no-authority/no-exam-guarantee, and no successor pass.
+- **Validation / Demo effect:** focused `9/9`, related seams `55/55`, full `627/627`, RP-002 validator, build, unchanged accepted `index-BvLuO_XD.js` / `index-B112XlTz.css`, leakage/purity/restore/patch gates pass. Demo effect is none: normal integration and reload were unauthorized. W1 starts only at the accepted live Pilot conclusion and reports the earliest explicit dismissal/blank-RAI-entry gap.
+
 ## 2026-07-17 Advance A4 continuity — Pilot dismissal to blank RAI-primary graph
 
 - **Cycle:** `RP002-P1-016 / A4 Gameplay Master`.
