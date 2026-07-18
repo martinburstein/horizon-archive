@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 BLANK EXPLANATION ENTRY — IN DEMO PARTIAL`. Independent full `607/607`, `15/15` validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. Team 2's accepted edge is canonical blank Teacher `EX-20`; Team 1 remains complete at RP-012 with no RP-013/successor and the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
+
 Latest Working handoff: `2026-07-17 / RP002-AESTH-009 W4 VERIFIED — COORDINATOR NEXT`. Verification-only final rebuild/HTTP refresh retains exact System `FT-20C`, two returns, explicit Pilot entry, and atomic canonical blank Teacher `EX-20` without an open presentation defect; focused `57/57`, full `607/607`, validator, build, art/HTTP/hash/patch gates pass. Team 2 remains on RP-002 for independent release validation; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-009 W3 CLEAN — W4 VERIFICATION ONLY`. Retained System transfer completion, separate returns, explicit Pilot explanation entry, and atomic canonical blank Teacher ownership have no open aesthetic finding; direct gated live viewport proof remains deferred because no Browser backend was available. Team 2 remains on RP-002 for final rebuild/reload; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).

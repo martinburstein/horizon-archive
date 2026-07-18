@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest coordinator acceptance: `2026-07-17 / RP002-P1-014 BLANK EXPLANATION ENTRY — IN DEMO PARTIAL`. Independent full `607/607`, all `15/15` validators, build, `79s` complete E2E, responsive `1920 x 1080` / `390 x 844`, HTTP/log/patch/cleanup gates pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`. Team 2's accepted edge is canonical blank Teacher `EX-20`; explanation submission/evaluation and all later states remain closed.
+
 Latest Working candidate: `2026-07-17 / RP002-AESTH-009 W4 VERIFIED — COORDINATOR NEXT`. Verification-only `aesthetic-polish` reproduced no presentation defect and changed no production artifact. Focused `57/57`, full `607/607`, RP-002 validator, build, immutable-art, served-marker/HTTP/hash, final HTTP refresh, and patch gates pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; no Browser backend was available, so independent live review remains with the coordinator.
 
 Latest Working candidate: `2026-07-17 / RP002-P1-014 W2 RESOLVED — W3 NEXT`. Protected explanation entry is now normally integrated from exact retained `FT-20C` through explicit Pilot action into only canonical blank Teacher ownership. Focused `135/135`, full `607/607`, RP-002 validator, build, HTTP/assets, purity/leakage, and patch gates pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; W3 reviews presentation only before release.

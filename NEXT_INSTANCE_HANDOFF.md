@@ -30,12 +30,12 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 ## Current durable state
 
-- Release candidate commit: `61a2ef1` — `Working Coder Polish: verify RP-002 transfer presentation`
+- Release candidate commit: `d2b9ab2` — `Working Coder Polish: verify explanation entry candidate`
 - Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
 - `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
-- Served assets: `index-D0-watPG.js` / `index-ghzUiZe9.css`
+- Served assets: `index-DOgjNRZx.js` / `index-CNOSF1pz.css`
 - Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
@@ -115,57 +115,48 @@ Team 1 is therefore in continuity-maintenance mode near Team 2's current edge. I
 
 ## Accepted playable boundary
 
-The coordinator now accepts the RP-002 PY-009 boundary through transfer submission/evaluation and bounded current-attempt transfer evidence. The earlier primary result, explicit dismissal, and canonical blank fresh-practice acceptance remain part of this boundary.
+The coordinator now accepts the RP-002 PY-009 boundary through explicit entry into the canonical genuinely blank Python explanation group. The earlier primary, result dismissal, fresh transfer, feedback/retry, and bounded current-attempt `6/6` transfer evidence remain accepted unchanged.
 
-Accepted player-visible behavior includes:
+Accepted player-visible behavior now additionally includes:
 
-- the existing five recorded observations and blank primary entry;
-- four immutable source fields;
-- exactly two editable human-expedition fields: `classification` and `owner`;
-- one submission action using the existing strict six-check authority;
-- answer-free feedback for actually failed checks only;
-- privacy-cleared blank retry with deterministic failed-field focus;
-- a read-only `SUIT // PROVISIONAL TRANSLATION` result only on current-attempt `6/6`;
-- active System, Teacher, and Suit owner-heading focus;
-- literal and programmatic failed-field association;
-- one explicit `CLEAR RESULT AND OPEN FRESH PRACTICE` action after the complete result;
-- seven-modality/one-hit atomic replacement;
-- canonical `SYSTEM // EXPEDITION SESSION` / `FRESH PRACTICE IMAGE`;
-- exact `unresolved_interval`, `deidentified_sensor_log`, `None`, and `False` neutral source fields;
-- genuinely blank editable fresh `classification` and `owner` fields;
-- one explicit transfer `SUBMIT EXPEDITION FIELDS` action backed by the existing six-check evaluator;
-- answer-free transfer feedback for actually failed checks only, with submitted values cleared;
-- `RETRY BLANK` into genuinely blank fresh fields with deterministic focus;
-- a bounded `SYSTEM // EXPEDITION STATE` transfer-evidence acknowledgement only on current-attempt `6/6`;
-- transfer fields, tokens, feedback, and result remain transient; reload keeps the existing blank-primary durable checkpoint;
-- System owner-heading focus with blank fields first in ordinary Tab order;
-- phase-aware evidence-return group names for blank, primary feedback/result, fresh transfer, transfer feedback, and transfer completion;
-- separate, write-free evidence and City Threshold returns;
-- no world response, access, authority, route reward, mastery by presentation, or successor.
+- exact retained `FT-20C` under `SYSTEM // EXPEDITION STATE`;
+- current-attempt `6/6` acknowledgement and two separate write-free returns;
+- one distinct Pilot-owned `OPEN BLANK PYTHON EXPLANATION` action;
+- seven-modality/one-hit activation with fail-closed invalid, stale, repeated, combined, Tour-derived, and private-bearing requests;
+- atomic whole-group replacement by only canonical `EX-20` / `python_explanation`;
+- `901 TEACHER // FEEDBACK` ownership, unchanged canonical prompt, and three genuinely blank editable controls;
+- deterministic owner-heading focus before ordinary Tab entry;
+- hidden prerequisite-only primary/transfer evidence with no carried source, values, answers, checks, feedback, transcript, token, focus history, or private work;
+- literal no-attempt status, transient-only explanation work, and the existing blank-primary durable checkpoint;
+- phase-aware evidence-return naming plus the separate City Threshold return;
+- `>=44px` targets, desktop/narrow/`200%` reflow, forced-color, reduced-motion, and non-color parity;
+- invariant civic art/world, `cityStateDelta=null`, no story/mastery/save/route/access/authority effect, and no successor;
+- hard absence of explanation submission/evaluation/feedback/result, `RP002-RAI-01`, review/save/completion, `RP-003+`, and every later state.
 
 Independent release evidence at that boundary:
 
-- full game suite: `598/598`;
+- full game suite: `607/607`;
 - readiness validators: `15/15`;
-- production build: pass;
-- full title-to-credits E2E: pass in `97.1s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
-- live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors.
+- production build: pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`;
+- full title-to-credits E2E: pass in `79s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
+- live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors;
+- incidental tracked QA captures restored; the two user-owned untracked items and browser storage remained untouched.
 
 ## Completed cycle status
 
 The immediate automation cycle was completed sequentially and every checkpoint was pushed:
 
-1. Lore Builder A1 — `b1fbdfe`.
-2. Storyboarder A2 — `90bbc37`.
-3. Curriculum Checker A3 — `c919f95`.
-4. Gameplay Master A4 — `e8b8dd7`.
-5. Advance Coder A5 — `b47a78e`.
-6. Player W1 — `f933e1d`.
-7. Bug-Repair Coder W2 — `7e56db0`.
-8. Aesthetic W3 — `58ef17a`.
-9. Aesthetic-Polish Coder W4 — `61a2ef1`.
+1. Lore Builder A1 — `f1bf2d9`.
+2. Storyboarder A2 — `1cf5728`.
+3. Curriculum Checker A3 — `d869ee7`.
+4. Gameplay Master A4 — `7634064`.
+5. Advance Coder A5 — `8ef0582`.
+6. Player W1 — `f5ca3b2`.
+7. Bug-Repair Coder W2 — `34f738f`.
+8. Aesthetic W3 — `a65fb0a`.
+9. Aesthetic-Polish Coder W4 — `d2b9ab2`.
 
-The coordinator then passed all release gates and accepted bounded PY-009 transfer evidence as `IN DEMO — PARTIAL`.
+The coordinator then passed all release gates and accepted canonical blank Python explanation entry as `IN DEMO — PARTIAL`.
 
 ## Exact next action
 
@@ -176,48 +167,35 @@ Read `Agent Profiles/lore-builder-agent.md` in full plus the top of the current 
 A1 is limited to the nearest accepted edge:
 
 ```text
-accepted bounded SYSTEM transfer_complete evidence
-    -> explicit Pilot-owned transition intent
-    -> canonical blank Python explanation entry ownership only
+accepted canonical blank 901 TEACHER Python explanation group
+    -> Pilot-authored three-part explanation work
+    -> one explicit local submission intent
+    -> existing strict explanation evaluation ownership only
 ```
 
 A1 should lock ownership and meaning only. It must preserve:
 
-- the accepted primary, dismissal, fresh-transfer, feedback/retry, and bounded `6/6` release unchanged;
-- transfer evidence remains independent from primary evidence and is not mastery, access, or world authority;
-- the complete transfer acknowledgement remains visible until one explicit Pilot intent;
-- the destination, if later authorized, is the existing canonical genuinely blank Python explanation boundary;
-- no carried transfer values, answers, source, feedback, result transcript, token, or private work;
-- existing strict explanation dimensions and evaluator remain authoritative without copying answers or rules;
-- entry/presentation creates no explanation attempt, score, evidence, hint, result, or credit;
-- separate write-free returns;
-- deterministic sanitation/resume;
-- seven input modalities with one-hit suppression;
-- fail-closed automatic, passive, invalid, stale, combined, Tour-derived, and repeated requests;
-- zero story observation, save, world/city delta, access, authority, external action, or successor effect from entry/presentation alone;
-- invariant civic plate and current responsive/accessibility contracts.
+- every accepted primary, transfer, and blank-explanation-entry behavior unchanged;
+- all three explanation controls begin genuinely blank and remain session-only;
+- the Pilot owns authored explanation work and the explicit local submission intent;
+- System may report the existing strict dimension result while `901 TEACHER // FEEDBACK` owns answer-free remediation;
+- only the existing evaluator and frozen explanation dimensions may judge the current attempt; do not copy answers, expected prose, rules, or feedback into lore/presentation;
+- a failed current attempt exposes only actually failed dimensions, clears private prose, and returns to a genuinely blank retry with deterministic first-failed-control focus;
+- a current-attempt complete result may establish only bounded Python explanation evidence and the existing Pilot-owned Python conclusion;
+- no explanation prose, token, feedback, or result becomes durable; preserve hidden independent primary/transfer prerequisites and the blank-primary checkpoint;
+- separate write-free returns, seven modalities/one hit, sanitation/resume, privacy, offline/no-authority/no-exam-guarantee, responsive/accessibility parity, invariant world, null delta, and no successor.
 
 Hard stop before:
 
-- Python explanation submission, evaluation, feedback, or result;
-- `RP002-RAI-01`;
+- dismissal of the Python conclusion or entry into `RP002-RAI-01`;
+- responsible-AI submission, evaluation, feedback, result, or evidence;
 - review/save/completion;
 - `RP-003+`;
-- any world response, access, authority, identity disclosure, route reward, or successor.
+- any world response, access, authority, identity disclosure, route reward, external action, or successor.
 
 A1 should update the packet, `ADVANCE_QUEUE.md`, `WORKING_QUEUE.md`, `STORY_RAIL_MAP.md`, DI-001, and its own log; commit and push a dedicated checkpoint; and leave an exact A2 Storyboarder handoff.
 
-Then continue sequentially with:
-
-1. Storyboarder A2.
-2. Curriculum Checker A3.
-3. Gameplay Master A4.
-4. Coder A5 in `advance` mode.
-5. Player W1 on the accepted live bounded transfer-evidence group, reporting only the earliest explicit explanation-entry gap.
-6. Coder W2 in `bug-repair` mode.
-7. Aesthetic W3 on only the newly repaired states.
-8. Coder W4 in `aesthetic-polish` mode.
-9. Coordinator release validation.
+Then continue sequentially with Storyboarder A2, Curriculum Checker A3, Gameplay Master A4, Coder A5 in `advance` mode, Player W1 on the accepted live blank explanation group, Coder W2 in `bug-repair` mode, Aesthetic W3, Coder W4 in `aesthetic-polish` mode, and independent coordinator release validation.
 
 ## Validation commands
 
@@ -295,5 +273,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 bounded transfer-evidence boundary, locking only the nearest explicit transition into canonical blank Python explanation ownership, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 canonical blank Python explanation group, locking only the nearest Pilot-authored explanation submission/evaluation ownership boundary, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
 ```

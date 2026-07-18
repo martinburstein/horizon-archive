@@ -1,5 +1,11 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-17 — Coordinator closure: RP-002 blank Python explanation entry partial release
+
+- **Outcome:** `PASS — PY-009 BLANK EXPLANATION ENTRY IN DEMO PARTIAL`. Exact retained `FT-20C`, separate returns, explicit Pilot entry, and atomic canonical blank Teacher `EX-20` are accepted; explanation submission/evaluation and every later state remain closed.
+- **Independent validation:** full game `607/607`; all `15/15` readiness validators; production build on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; complete `79s` title-to-credits E2E with every gate true, credits, and no runtime errors; live `1920 x 1080` and `390 x 844` title shells with zero overflow, `48px` / `44px` actions, and empty warning/error logs; HTTP/assets, patch integrity, and generated-capture cleanup pass.
+- **Preservation:** browser storage, immutable civic art/world, hard RAI/later locks, and the two user-owned untracked paths remained untouched. The next cycle starts only at canonical blank `EX-20` and may lock explanation submission/evaluation ownership without opening RAI.
+
 ## 2026-07-17 — Working Coder W4: RP002-AESTH-009 verification-only final rebuild
 
 - **Mode/verdict:** `aesthetic-polish` / `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. W3 opened no aesthetic finding, W4 reproduced no presentation defect, and no runtime, CSS, test, asset, art, curriculum, storage, or gameplay file changed.

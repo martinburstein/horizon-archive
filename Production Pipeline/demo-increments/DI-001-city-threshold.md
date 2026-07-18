@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator release — blank Python explanation entry accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 BLANK EXPLANATION ENTRY ACCEPTED` on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`.
+- **Accepted edge:** exact retained System `FT-20C`, separate returns, explicit Pilot entry, and atomic canonical blank Teacher `EX-20` with three blank controls, hidden prerequisites, no attempt/evidence, invariant world, and hard absence of explanation evaluation or later states.
+- **Independent gates:** full `607/607`; all readiness validators `15/15`; build; complete `79s` E2E with every gate true, credits, and no runtime errors; live title shells at `1920 x 1080` / `390 x 844` with zero overflow, `48px` / `44px` actions, and clean logs; HTTP/assets; patch integrity; QA capture cleanup.
+- **Preservation/next:** browser storage and both user-owned untracked paths were untouched. Next Advance cycle begins only at canonical blank `EX-20` and may lock explanation submission/evaluation ownership without opening RAI or later content.
+
 ## 2026-07-17 Working W4 — explanation entry candidate verified
 
 - **Verdict:** `RP002-AESTH-009 / VERIFIED — COORDINATOR NEXT`; verification-only `aesthetic-polish` reproduced no defect and changed no runtime, CSS, test, asset, art, curriculum, storage, or gameplay artifact.

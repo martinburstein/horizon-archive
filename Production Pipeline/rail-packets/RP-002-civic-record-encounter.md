@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator release — RP002-P1-014 / RP002-AESTH-009
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / BLANK PYTHON EXPLANATION ENTRY ACCEPTED`.
+- **Accepted boundary:** exact retained `FT-20C` remains until one explicit Pilot `OPEN BLANK PYTHON EXPLANATION` action atomically opens only canonical blank Teacher `EX-20`. Three explanation controls are genuinely blank, prerequisite evidence is hidden, work is transient, owner-heading focus and separate returns remain exact, and entry creates no attempt, score, evidence, save, world, route, access, authority, RAI, later state, or successor.
+- **Independent validation:** full game `607/607`; all `15/15` readiness validators; production build; complete title-to-credits E2E in `79s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`; live `1920 x 1080` / `390 x 844` title shells with zero overflow, `48px` / `44px` actions, and empty warning/error logs; HTTP/assets, patch integrity, and generated-capture cleanup pass.
+- **Next boundary:** A1 may lock only Pilot-authored three-part explanation work, one explicit local submission intent, and existing strict evaluator/Teacher-remediation ownership. Stop before conclusion dismissal, `RP002-RAI-01`, review/save/completion, `RP-003+`, world/authority effects, or successor.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-009 verified
 
 - **Mode/verdict:** `aesthetic-polish` / `VERIFIED — FINAL DEMO REBUILT / COORDINATOR NEXT`. No W3 finding or exact presentation defect reproduced, so production runtime/art/tests remain unchanged.
