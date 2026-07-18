@@ -103,10 +103,15 @@ Describe what a player can now see, do, understand, or recover from that was not
 
 - Subject and scale: `ITEM | CONSOLE | INTERFACE | INTERIOR | THRESHOLD | LANDSCAPE`
 - Accepted cycle material represented:
+- Canonical decision locked:
+- Visual-production checklist item closed:
 - Larger-whole mystery conveyed:
 - Prompt intent:
-- Status: `CONCEPT REVEAL — NOT CANON | ACCEPTED INTO ART PIPELINE`
-- Archived project path, if any:
+- Status: `CANONICAL VISUAL REFERENCE | CANONICAL AND RUNTIME-INTEGRATED`
+- Archived project path:
+- Provenance path:
+- Dimensions / SHA-256:
+- Reopen conditions:
 - Hidden-lore/spoiler check:
 - Shown inline to Martin:
 

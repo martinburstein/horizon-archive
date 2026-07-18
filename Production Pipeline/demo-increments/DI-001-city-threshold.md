@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Canonical cycle reveal — blank explanation archive threshold
+
+- **Subject / scale:** `CONSOLE / THRESHOLD / LANDSCAPE`; exactly three blank recessed foreground surfaces against a Civic Record District archive extending vertically, laterally, and into atmospheric depth.
+- **Canonical decision locked:** the `EX-20` three-part explanation boundary has one physical foreground civic relationship rather than reading as an isolated floating card. Its blankness is an architectural state, never Builder prose, an answer, feedback, judgment, or evidence.
+- **Checklist item closed:** `SC-03 / EX-20 wide composition relationship`.
+- **Status:** `CANONICAL VISUAL REFERENCE — NOT YET RUNTIME-INTEGRATED`.
+- **Asset / provenance:** `Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png`; neighboring `PROVENANCE.md`; `1672 x 941`; SHA-256 `6321100C3BE4D2FA2012F3878799CD237383FF1F46A1EB8AC07BCCD8307D74DB`.
+- **Mystery / safety:** the visible station is clearly one small edge of a much larger operating whole. No protagonist, hands, body, ship, readable text, answer key, Builder speech, hidden lore, result, city response, or successor appears.
+- **Reopen only for:** demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction.
+
 ## 2026-07-17 Coordinator release — blank Python explanation entry accepted
 
 - **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 BLANK EXPLANATION ENTRY ACCEPTED` on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`.

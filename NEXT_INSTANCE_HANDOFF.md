@@ -39,6 +39,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
+- Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png` with neighboring provenance. It locks the `SC-03 / EX-20 wide composition relationship`: exactly three blank foreground civic surfaces against an archive that extends far beyond the frame. Treat that question as closed; this is canonical reference evidence, not yet a runtime-integrated plate.
 
 The worktree intentionally contains these two untracked user-owned items:
 
@@ -105,7 +106,7 @@ Each role must:
 
 Do not run roles concurrently. Preserve the sequence so every role consumes the previous role's committed handoff.
 
-After all nine roles, the coordinator independently runs the full release gates, restores incidental QA binaries, records the disposition, commits, pushes, and verifies `HEAD == origin/main`. Then generate exactly one spoiler-safe cycle-reveal image as the final visible output: an accepted-cycle item, console, interface surface, threshold, interior, or landscape that makes the layout feel more developed while clearly implying a larger whole. The reveal is not canon or a shipped asset unless later accepted through the art pipeline.
+After all nine roles, the coordinator independently runs the full release gates, restores incidental QA binaries, records the disposition, commits, pushes, and verifies `HEAD == origin/main`. Then generate exactly one spoiler-safe cycle-reveal image as the final visible output: an accepted-cycle item, console, interface surface, threshold, interior, or landscape that makes one lore or layout decision certain while clearly implying a larger whole. Archive it under `Visual Direction/Production Masters/` with provenance, declare the exact canonical scope and limits, close one named visual checklist item, and treat that decision as accepted evidence thereafter. Canonical reference status does not by itself mean runtime integration.
 
 ## Twelve-packet rail status
 
@@ -273,5 +274,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 canonical blank Python explanation group, locking only the nearest Pilot-authored explanation submission/evaluation ownership boundary, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints. After coordinator closure and synchronization, end the cycle by producing exactly one spoiler-safe mysterious cycle-reveal image that visibly expands the game's layout and implies a larger whole.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 canonical blank Python explanation group, locking only the nearest Pilot-authored explanation submission/evaluation ownership boundary, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints. After coordinator closure and synchronization, end the cycle by producing exactly one spoiler-safe mysterious image that makes one accepted lore or layout decision certain, archives it as a canonical visual reference with provenance, closes one named visual checklist item, and implies a larger whole.
 ```

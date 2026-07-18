@@ -514,11 +514,14 @@ The reveal must:
 - use only accepted, spoiler-safe project material and never consult or reveal the hidden-lore vault;
 - preserve the first-person, maximum-quality cinematic photoreal direction unless the cycle explicitly accepted a different asset class;
 - contain no protagonist, hands, body, ship, prior human trace, readable Builder prose, answer key, watermark, or unapproved story revelation;
-- remain a concept/cycle reveal rather than canon or a shipped production asset unless the normal art-review pipeline later accepts it;
+- identify exactly one accepted lore, spatial, layout, material, item, or interface decision that the image makes certain, preferably a recent breakthrough from the completed cycle;
+- become a canonical visual reference for that declared decision as soon as it passes coordinator inspection, while remaining distinct from a shipped or runtime-integrated production asset;
+- close one named visual-production checklist item so later agents consume the image as accepted evidence instead of rechecking the same uncertainty, unless a regression, contradiction, accessibility failure, or Martin's direct instruction reopens it;
+- be copied into `Visual Direction/Production Masters/` with a non-overwriting versioned filename and a neighboring `PROVENANCE.md` that records the decision, limits, prompt intent, dimensions, hash, and integration status;
 - be shown inline to Martin as the final visible output of the cycle; and
-- be recorded in the Demo Increment with its subject, prompt intent, status, and project path when archived.
+- be recorded in the Demo Increment with its subject, locked decision, closed checklist item, prompt intent, canonical status, and project path.
 
-Choose the subject from the accepted cycle outcome. Vary the scale across cycles so the reveals gradually expose the world through objects, consoles, interiors, thresholds, and landscapes rather than repeatedly depicting the same view.
+Choose the subject from the accepted cycle outcome. Prefer the single uncertainty whose resolution will most reduce future checking, or the cycle's strongest spoiler-safe lore breakthrough. Vary the scale across cycles so the reveals gradually expose the world through objects, consoles, interiors, thresholds, and landscapes rather than repeatedly depicting the same view. Canon applies only to the decision and limits written in provenance; it does not automatically authorize runtime integration, new gameplay state, hidden lore, or facts outside the accepted cycle.
 
 At cycle end, the coordinator reports both teams separately:
 

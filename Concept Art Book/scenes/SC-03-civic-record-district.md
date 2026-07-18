@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 canonical blank-explanation composition reference
+
+- Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png`, with neighboring provenance.
+- Locked visual fact: exactly three genuinely blank recessed surfaces occupy one physical foreground civic threshold in a single row, while the operating archive remains dominant and continues vertically, laterally, and into atmospheric depth. Blankness is an architectural state, not Builder prose, an answer, feedback, judgment, or evidence.
+- This closes `SC-03 / EX-20 wide composition relationship`. Future Storyboarder, Aesthetic, and Coder passes consume it as accepted evidence and do not reconsider an isolated floating-card layout unless a production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction reopens the item.
+- Scope limit: this is a canonical composition reference, not yet a runtime-integrated world plate. It does not replace the invariant overview master or authorize explanation submission/evaluation, a world response, access, authority, hidden lore, or a successor.
+
 ## 2026-07-17 transfer-complete to blank-explanation presentation continuity
 
 - Reuse the invariant SC-03 overview master, registered composition, and continuous clocks. No new plate, crop, geometry, light, material, maintenance, hotspot, effect, or art state is created.
@@ -26,8 +33,8 @@
 - **Rail Packet:** `RP-002 — Civic Record Encounter`
 - **Player-facing survey name:** Civic Record District (human provisional label)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / first civic-record district
-- **Production status:** Brief — A2 compact four-phase presentation convergence and premium three-master plan locked; no final art
-- **Image:** No image selected. `Concept Art/Underground City.png` is scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
+- **Production status:** Brief — A2 compact four-phase presentation convergence and premium three-master runtime plan locked; canonical `EX-20` composition reference selected; runtime art incomplete
+- **Image:** Canonical composition reference: `../../Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png`. It locks only the three blank foreground surfaces and archive-dominant scale relationship; it is not yet a runtime world master. `Concept Art/Underground City.png` remains historical scale and warm/cool depth evidence only; its people, suits, rails, platforms, domes, buildings, baked UI, and composition are excluded.
 - **Purpose:** Show an exposed three-condition relation—fixed trace, later stewardship, outlined gap—at near and distant scales while a separate identity-bearing interlock stays closed and the physical district never changes.
 
 ## Sequence and state lock
