@@ -1,5 +1,11 @@
 # Advance Queue
 
+## 2026-07-18 coordinator release — next explanation convergence edge
+
+- **Accepted:** normal RP-002 now reaches strict three-case RAI-transfer `9/9`, bounded answer-free failed-pair recovery, and exact-pass genuinely blank Teacher three-boundary explanation entry. Scored transfer retains exactly three equal wide peers; the zero-credit guide reads as one separate cassette enclosure.
+- **Next A1:** converge the existing blank Teacher explanation, one explicit Pilot submission, separate simultaneous strict `3/3`, first-actual-failed-boundary-only answer-free feedback/complete clearing/wholly blank all-three retry, and exact-pass existing Pilot RAI conclusion. Merge existing authorities; add no prompt, answer, score, optional branch, world effect, RP-013, or successor.
+- **Hard stop:** before conclusion dismissal, review/save/commit/completion/credits, `RP-003+`, authority/external action, world change, RP-013, or successor.
+
 ## 2026-07-18 A5 convergence — protected RAI-transfer controller
 
 - **Disposition:** `REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`.

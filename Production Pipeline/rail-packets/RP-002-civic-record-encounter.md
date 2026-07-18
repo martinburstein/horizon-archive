@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 coordinator release — strict RAI transfer accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`.
+- **Accepted normal boundary:** the genuinely blank first RAI transfer now continues through explicit transient `T01`–`T03` Pilot submissions, no interim result, `T03`-only simultaneous strict `9/9`, actual-failed-case/dimension Teacher feedback -> one neutral zero-credit guide -> wholly blank first-failed retry, or exact-pass genuinely blank Teacher three-boundary explanation entry. Scored controls remain exactly three equal source-ordered wide peers; the guide reads as one separate cassette enclosure; both recover naturally to one column at narrow/`200%`.
+- **Independent release evidence:** full `654/654`, all `15/15` validators, production build, clean isolated `875.7s` complete E2E, fresh desktop/narrow in-app review, HTTP/log/patch/cleanup, immutable civic art, and four canonical-reference gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`.
+- **Closed edge:** explanation submission/evaluation/feedback/result, Responsible-AI conclusion, review/save/completion, `RP-003+`, world/access/authority/external effects, RP-013, and every successor remain absent. Next cycle may only converge existing explanation/evaluator/exact-conclusion authorities and must stop before conclusion dismissal.
+
 ## 2026-07-18 Working W4 handoff — RAI-transfer guide identity resolved
 
 - **Disposition:** `RESOLVED — RP002-AESTH-013 / COORDINATOR NEXT`.

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Coordinator — RAI-transfer convergence accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`. Normal play now accepts blank `T01` through one-at-a-time `T01`–`T03`, no interim result, third-case-only simultaneous strict `9/9`, bounded failed-pair Teacher recovery/one neutral zero-credit guide/blank retry, or exact-pass genuinely blank Teacher three-boundary explanation entry.
+- **Presentation:** scored transfer retains exactly three equal source-ordered wide peers; the zero-credit guide is one width-contained single-cassette enclosure containing the same three labeled inputs; both recover to one column at narrow/`200%`. No canonical raster was integrated and the invariant civic master remains unchanged.
+- **Independent evidence:** full `654/654`; readiness validators `15/15`; build on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`; clean isolated complete E2E `875.7s` with all gates true, credits reached, and no runtime errors; live `1920 x 1080` and `390 x 844` title-shell review with no overflow/log warnings/errors and `48px` / `44px` actions. One initial E2E harness window expired without result; the exact orphan was stopped, QA captures restored, and only the clean rerun was accepted. Browser storage/save remained untouched.
+- **Next:** converge the existing blank Teacher explanation submission/evaluator/exact Pilot conclusion authority; stop before conclusion dismissal or later states.
+
 ## 2026-07-18 Working W4 — RAI-transfer guide presentation resolved
 
 - **Verdict:** `RP002-AESTH-013 RESOLVED — COORDINATOR NEXT`. Only `RAITC-30G` changed presentation class: one width-contained one-column cassette surface, one enclosing boundary, and borderless internal field groups containing the same source-ordered `principle`, `mitigation`, and `owner` native inputs. It no longer reuses the scored three-peer frame class. `RAITC-00` retains exactly three equal wide peers and existing narrow/`200%` one-column recovery.

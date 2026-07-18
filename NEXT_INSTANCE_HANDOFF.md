@@ -1,6 +1,6 @@
 # Horizon Archive — New Task Handoff
 
-Last updated: **2026-07-17**  
+Last updated: **2026-07-18**
 Project owner: **Martin Burstein**  
 Workspace: `C:\Users\marti\OneDrive\Desktop\Horizon Archive`  
 Repository: `https://github.com/martinburstein/horizon-archive`  
@@ -30,12 +30,12 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 ## Current durable state
 
-- Release candidate commit: `21b9ca5` — `Working Coder Polish: restore RAI three-channel layout`
+- Release candidate commit: `e7d619b` — `Working Coder Polish: separate RAI transfer guide cassette`
 - Coordinator acceptance is recorded by the final commit containing this handoff; run `git rev-parse HEAD` for its exact identity.
 - `HEAD == origin/main`: **must be verified after the coordinator acceptance push**
 - Live demo: `http://127.0.0.1:4173/`
 - Demo status at handoff: **HTTP 200**
-- Served assets: `index-CaFYbIAD.js` / `index-gd0EXXXq.css`
+- Served assets: `index-CKaXmS2o.js` / `index-DyAC0bkf.css`
 - Automation `horizon-archive-two-team-continuation`: **ACTIVE at Martin's explicit request on 2026-07-17**
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
@@ -119,21 +119,13 @@ Team 1 is therefore in continuity-maintenance mode near Team 2's current edge. I
 
 ## Accepted playable boundary
 
-The coordinator now accepts the complete three-case `RP002-RAI-01` primary convergence in normal play. From genuinely blank `RAI-P0`, the three frozen course-authored cases submit one at a time with session-only Pilot choices; `P01` and `P02` replace atomically with wholly blank next cases and no interim judgment; only `P03` invokes simultaneous strict `9/9`. Exact pass opens only the genuinely blank RAI transfer boundary. Any miss opens only actual-failed-case/dimension Teacher feedback, one neutral zero-credit guided near case, and a wholly blank deterministic retry at the first incomplete/first-failed case. The wide primary controls are exactly three equal source-ordered columns and recover to one natural column at narrow/`200%`.
+The coordinator now accepts the complete `RP002-RAI-01` transfer convergence in normal play. From genuinely blank `T01`, the three frozen transfer cases submit one at a time with session-only Pilot choices; `T01` and `T02` replace atomically with wholly blank next cases and no interim judgment; only `T03` invokes simultaneous strict `9/9`. Exact pass clears all private work and mounts only the separate genuinely blank `901 TEACHER // FEEDBACK` three-boundary explanation entry. Any miss mounts only actual-failed-case/dimension Teacher feedback, one neutral zero-credit guided case, and a wholly blank deterministic transfer retry at the first incomplete/first-failed case.
 
-Accepted constraints remain exact: no response, guide work, feedback prose, or private material persists; Python evidence cannot cross-credit RAI; the civic world/art and `cityStateDelta=null` remain invariant; transfer submission/evaluation, later RAI states, review/save/completion, `RP-003+`, authority/external effects, and every successor remain closed.
+Accepted presentation now distinguishes the scored transfer frame from recovery: scored `T01`–`T03` retain exactly three equal source-ordered wide peers, while the zero-credit guide is one width-contained single-cassette enclosure containing the same three labeled inputs. Both recover to one natural column at narrow/`200%`. Canonical rasters remain non-integrated.
 
-The previously accepted Pilot Python conclusion, explicit zero-effect dismissal, and atomic blank RAI entry remain unchanged. Newly accepted player-visible behavior includes:
+Accepted constraints remain exact: no transfer response, guide work, feedback prose, or private material persists; Python and RAI-primary evidence cannot cross-credit transfer; the civic world/art and `cityStateDelta=null` remain invariant; explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, authority/external effects, RP-013, and every successor remain closed.
 
-- one explicit `SUBMIT RESPONSIBLE-AI CASE` action per primary case with seven-modality/one-hit behavior;
-- genuinely blank native principle, mitigation, and accountable-owner controls in source order for every new case and retry;
-- no interim result after `P01` or `P02`, and simultaneous strict `9/9` only after `P03`;
-- exact pass into only the existing genuinely blank RAI transfer boundary;
-- actual-failed-case/dimension-only answer-free Teacher feedback, one neutral zero-credit guided near case, and wholly blank first-incomplete/first-failed retry;
-- full-width controls with at least `44px` height, visible normal/forced-color focus, exactly three equal wide columns, and one-column narrow/`200%` recovery;
-- hidden byte-stable Python prerequisites with no carried prose, answer, result, feedback, focus history, private work, preselection, or RAI cross-credit;
-- exact resume, separate write-free returns, transient-only UI state, and invariant civic world; and
-- hard absence of transfer submission/evaluation, later RAI feedback/result/evidence/explanation/conclusion, review/save/completion, `RP-003+`, world/authority effect, or successor.
+The previously accepted Pilot Python conclusion, explicit zero-effect dismissal, blank RAI entry, and strict primary convergence remain unchanged. Primary `P01`–`P03` still submit one at a time with no interim result, third-case-only simultaneous strict `9/9`, actual-failed-pair Teacher recovery/one zero-credit guide/wholly blank retry, or exact-pass blank transfer. All accepted primary controls, focus, responsive/accessibility, privacy, Python isolation, and invariant-world behavior remain exact.
 
 Earlier accepted player-visible behavior remains unchanged:
 
@@ -152,10 +144,10 @@ Earlier accepted player-visible behavior remains unchanged:
 
 Independent release evidence at the current boundary:
 
-- full game suite: `641/641`;
+- full game suite: `654/654`;
 - readiness validators: `15/15`;
-- production build: pass on `index-CaFYbIAD.js` (`990642` bytes; SHA-256 `103BB3213ECDBC647D84AB8BD8142F793AB222D4F1436FF042E29CEFB8E022F6`) / `index-gd0EXXXq.css` (`73044` bytes; SHA-256 `0C34A7995463F8780D4DC4131C780A1FD10BFF3CD106B06EEAAE77AFAC285F1A`);
-- clean full title-to-credits E2E rerun: pass in `394.5s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`;
+- production build: pass on `index-CKaXmS2o.js` (`1012705` bytes; SHA-256 `EFD602C0CA03D6F7ABEC2FD030EBF049825D9DF19F1CADE99941D3241DB83090`) / `index-DyAC0bkf.css` (`73338` bytes; SHA-256 `E325370E1109440F4FEABF6ED745F3BE77163A0809A748CE28027AA7B46F5A42`);
+- clean isolated full title-to-credits E2E rerun: pass in `875.7s` with every emitted gate true, `credits:true`, and `runtimeErrors:false`; one initial harness window expired without a result, its exact orphan process was stopped, incidental captures restored, and only the clean rerun was accepted;
 - live `1920 x 1080` and `390 x 844` title-shell review: zero overflow, `48px` / `44px` actions, no console warnings or errors;
 - incidental tracked QA captures restored; the two user-owned untracked items and browser storage remained untouched.
 
@@ -163,17 +155,17 @@ Independent release evidence at the current boundary:
 
 The immediate automation cycle was completed sequentially and every checkpoint was pushed:
 
-1. Lore Builder A1 — `d459c86`.
-2. Storyboarder A2 — `65da44f`.
-3. Curriculum Checker A3 — `e1a4b4b`.
-4. Gameplay Master A4 — `fde9d85`.
-5. Advance Coder A5 — `c097fb8`.
-6. Player W1 — `c1d435b`.
-7. Bug-Repair Coder W2 — `5e5a319`.
-8. Aesthetic W3 — `94dcad3`.
-9. Aesthetic-Polish Coder W4 — `21b9ca5`.
+1. Lore Builder A1 — `8b95868`.
+2. Storyboarder A2 — `1288743`.
+3. Curriculum Checker A3 — `d3f099f`.
+4. Gameplay Master A4 — `70b2e9d`.
+5. Advance Coder A5 — `0797ca4`.
+6. Player W1 — `d013de9`.
+7. Bug-Repair Coder W2 — `24541df`.
+8. Aesthetic W3 — `5439520`.
+9. Aesthetic-Polish Coder W4 — `e7d619b`.
 
-The coordinator then passed all release gates and accepted strict three-case Responsible-AI primary convergence, bounded answer-free recovery, exact-pass blank transfer entry, and three-equal-channel wide layout as `IN DEMO — PARTIAL`.
+The coordinator then passed all release gates and accepted strict three-case Responsible-AI transfer convergence, bounded answer-free recovery, exact-pass blank Teacher three-boundary entry, scored-frame/guide-cassette distinction, and responsive parity as `IN DEMO — PARTIAL`.
 
 ## Exact next action
 
@@ -184,38 +176,36 @@ Read `Agent Profiles/lore-builder-agent.md` in full plus the top of the current 
 A1 is limited to the nearest accepted edge:
 
 ```text
-accepted strict RAI primary convergence
-    -> exact 9/9: genuinely blank RAI transfer T01
-    -> three frozen transfer cases, one at a time
-    -> Pilot-owned transient principle / mitigation / accountable-owner submissions
-    -> simultaneous strict 9/9 evaluation only after the third case
-    -> any miss: failed-case/dimension-only Teacher feedback
-                  -> one neutral zero-credit guided near case
-                  -> wholly blank transfer retry at first incomplete/first-failed case
-    -> exact transfer 9/9: separate Teacher-owned three-boundary explanation only
+accepted exact-transfer 9/9 and genuinely blank Teacher three-boundary entry
+    -> Pilot-owned transient application-label / native-fact / authority responses
+    -> one explicit explanation submission
+    -> separate simultaneous strict 3/3 evaluation
+    -> any miss: first-failed-boundary-only Teacher feedback
+                  -> clear every response and restore all three boundaries blank
+                  -> wholly blank unlimited explanation retry with first-failed focus
+    -> exact 3/3: exact Pilot Responsible-AI conclusion only
 ```
 
-A1 should run a convergence/integration audit for this already-protected transfer-and-explanation seam, merging existing authorities instead of adding micro-seams. It must preserve:
+A1 should run a convergence/integration audit for this already-protected explanation-submission-and-conclusion seam, merging existing authorities instead of adding micro-seams. It must preserve:
 
 - every accepted Python behavior, conclusion dismissal, primary convergence, native control treatment, and all closed canonical visual decisions unchanged;
-- the newly accepted primary chain unchanged and exactly the existing three course-authored transfer cases plus frozen `principle`, `mitigation`, and `owner` dimensions, with no new case, answer, threshold, or scoring rule;
-- one active System/Pilot/Teacher group at a time, private session-only choices, explicit Pilot submission per case, and no evaluation before the third case;
-- simultaneous strict `9/9`; a correct principle cannot compensate for an unsafe safeguard or nonhuman owner;
-- actual-failed-case/dimension-only answer-free Teacher remediation, one neutral guided near case, wholly blank unlimited retry, and deterministic first-incomplete/first-failed focus;
+- the newly accepted primary and transfer chains unchanged and exactly the existing three explanation boundaries, frozen answers, strict `3/3`, and exact Pilot conclusion, with no new prompt, answer, threshold, scoring rule, or branch;
+- one active Teacher/Pilot group at a time, private session-only responses, one explicit Pilot explanation submission, and no interim or presentation-derived evaluation;
+- separate strict `3/3`; a correct application-label boundary cannot compensate for a native-fact or authority miss;
+- first-actual-failed-boundary-only answer-free Teacher remediation, complete clearing, wholly blank unlimited all-three retry, and deterministic first-failed focus;
 - only allowlisted finalized booleans/counts/tags may persist; all choices, guided work, feedback prose, and private material clear;
-- strict transfer `9/9` may open only the existing separate Teacher-owned three-boundary explanation: application labels remain provisional human work, not native facts, and grant no authority;
+- strict explanation `3/3` may open only the existing exact Pilot conclusion: `My application label is a human interpretation, not their fact or permission to act.` The conclusion is zero credit and grants no authority;
 - separate write-free returns, seven modalities/one hit, sanitation/resume, privacy, offline/no-authority/no-exam-guarantee, responsive/accessibility parity, invariant world, null delta, and no successor.
 
 Hard stop before:
 
-- explanation submission/evaluation, explanation result, or responsible-AI conclusion;
-- review/save/completion;
+- conclusion dismissal, bounded review, save/commit, completion, or credits;
 - `RP-003+`;
 - any world response, access, authority, identity disclosure, route reward, external action, or successor.
 
 A1 should update the packet, `ADVANCE_QUEUE.md`, `WORKING_QUEUE.md`, `STORY_RAIL_MAP.md`, DI-001, and its own log; commit and push a dedicated checkpoint; and leave an exact A2 Storyboarder handoff.
 
-Then continue sequentially with Storyboarder A2, Curriculum Checker A3, Gameplay Master A4, Coder A5 in `advance` mode, Player W1 on the accepted live genuinely blank RAI transfer boundary, Coder W2 in `bug-repair` mode, Aesthetic W3, Coder W4 in `aesthetic-polish` mode, and independent coordinator release validation.
+Then continue sequentially with Storyboarder A2, Curriculum Checker A3, Gameplay Master A4, Coder A5 in `advance` mode, Player W1 on the accepted live genuinely blank RAI explanation boundary, Coder W2 in `bug-repair` mode, Aesthetic W3, Coder W4 in `aesthetic-polish` mode, and independent coordinator release validation.
 
 ## Validation commands
 

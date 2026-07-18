@@ -1,5 +1,11 @@
 # Working Queue
 
+## 2026-07-18 coordinator release — accepted Team 2 transfer edge
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`.
+- **Accepted boundary:** blank `T01` through explicit one-at-a-time `T01`–`T03` submission, no interim result, third-case-only simultaneous strict `9/9`, failed-pair Teacher feedback -> one neutral zero-credit guide -> wholly blank deterministic retry, or exact-pass genuinely blank Teacher three-boundary explanation entry. Scored transfer is exactly three equal wide peers; the guide is one separate cassette enclosure; narrow/`200%` remains one column.
+- **Next W1 after A5:** begin only at the coordinator-accepted genuinely blank Teacher explanation and report the earliest normal player-facing gap toward the protected explanation evaluator/exact Pilot conclusion. Preserve storage/save and stop before conclusion dismissal or every later state.
+
 **Current W4 result (RP002-AESTH-013):** `RESOLVED — COORDINATOR NEXT`. Only `RAITC-30G` now uses a guide-specific single-enclosure cassette class with borderless internal groups, retaining its three labeled source-ordered native inputs, targets, focus/forced-color behavior, zero-credit meaning, and one-column narrow/`200%` recovery. Scored `RAITC-00` remains exactly three equal wide peers. Focused `65/65`, full `654/654`, both validators, build, immutable art/references, served reload/markers/hashes, and patch gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`; Browser remained unavailable and storage untouched.
 
 **Current W2 result (RP002-P1-018):** `RESOLVED — W3 AESTHETIC REVIEW NEXT`. Protected transfer convergence now runs through the exact normal route with editable transient `T01`–`T03`, explicit Pilot submit, no interim result, T03-only strict `9/9`, failed-pair feedback/one zero-credit guide/blank retry, or exact-pass blank Teacher entry. Focused `76/76`, full `653/653`, both validators, build, served reload, and patch gates pass on `index-B_NGtxrq.js` / `index-gd0EXXXq.css`; all privacy, world, no-authority, hard explanation-stop, and no-successor locks remain exact.
