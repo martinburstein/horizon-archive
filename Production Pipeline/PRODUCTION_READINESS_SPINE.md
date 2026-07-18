@@ -1,5 +1,7 @@
 # Horizon Archive Production Readiness Spine
 
+Latest Working candidate: `2026-07-17 / RP002-P1-014 W2 RESOLVED — W3 NEXT`. Protected explanation entry is now normally integrated from exact retained `FT-20C` through explicit Pilot action into only canonical blank Teacher ownership. Focused `135/135`, full `607/607`, RP-002 validator, build, HTTP/assets, purity/leakage, and patch gates pass on `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; W3 reviews presentation only before release.
+
 Latest Advance continuity result: `2026-07-17 / RP002-P1-014 A5 REVISE — PROTECTED EXPLANATION-ENTRY SEAM ONLY`. One pure unimported `EX-00 -> EX-10 -> EX-20` controller composes exact canonical `FT-20C`, Python resume sanitation, canonical blank Teacher ownership, and separate returns. Focused `8/8`, full `606/606`, RP-002 validator, build, unchanged asset identity, leakage/purity, and patch gates pass; normal App/route/storage/assets/world remain unchanged. W1 starts at accepted live `FT-20C` and reports only the explicit explanation-entry gap.
 
 Latest coordinator release: `2026-07-17 / RP002-P1-013 + RP002-AESTH-008 PASS — PY-009 TRANSFER EVIDENCE IN DEMO PARTIAL`. Independent full `598/598`, all `15/15` validators, production build, `97.1s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass on `index-D0-watPG.js` / `index-ghzUiZe9.css`. Normal integration and release now extend through transfer submit, feedback/blank retry, and bounded current-attempt `6/6`; Python explanation remains the next closed edge.

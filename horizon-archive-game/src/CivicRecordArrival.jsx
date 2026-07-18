@@ -15,6 +15,7 @@ import {
 import { CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS } from "./CustodyLedgerPrimaryInteraction.js";
 import { CUSTODY_LEDGER_CLEAR_RESULT_ACTION } from "./CustodyLedgerPrimaryResultDismissal.js";
 import { CUSTODY_LEDGER_RETRY_TRANSFER_ACTION } from "./CustodyLedgerTransferInteraction.js";
+import { CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION } from "./CustodyLedgerExplanationEntry.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -32,6 +33,7 @@ export function CivicRecordArrival({
   onPrimaryDismiss,
   onTransferSubmit,
   onTransferRetry,
+  onExplanationOpen,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -40,6 +42,7 @@ export function CivicRecordArrival({
   const freshHeadingRef = useRef(null);
   const transferFeedbackHeadingRef = useRef(null);
   const transferCompleteHeadingRef = useRef(null);
+  const explanationHeadingRef = useRef(null);
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
@@ -115,6 +118,10 @@ export function CivicRecordArrival({
       }
       if (primaryPhase === "FT-20C") {
         transferCompleteHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "EX-20") {
+        explanationHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -396,6 +403,36 @@ export function CivicRecordArrival({
                 <p className="civic-observation-status">All 6 local transfer checks passed for this attempt. Course evidence is complete; no mastery, access, authority, or city change was granted.</p>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "EX-20" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-explanation-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={explanationHeadingRef} id="custody-ledger-explanation-heading" tabIndex="-1">
+                  Blank Python explanation
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <dl className="custody-ledger-fields">
+                  {Object.keys(primaryInteraction.explanationSelections).map((dimension, index) => (
+                    <div key={dimension} data-field-state="editable">
+                      <dt><label htmlFor={`custody-ledger-explanation-${dimension}`}>Explanation part {index + 1}</label></dt>
+                      <dd>
+                        <textarea
+                          id={`custody-ledger-explanation-${dimension}`}
+                          name={dimension}
+                          defaultValue=""
+                          maxLength="600"
+                          autoComplete="off"
+                          spellCheck="true"
+                          aria-describedby="custody-ledger-explanation-help"
+                        />
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <p id="custody-ledger-explanation-help" className="civic-observation-status">
+                  This course prompt is genuinely blank. No explanation attempt, evaluation, feedback, result, or credit is active.
+                </p>
+              </section>
+            )}
             <p>
               {atObservation
                 ? hasObservation
@@ -410,6 +447,8 @@ export function CivicRecordArrival({
                       ? "Only the transfer checks that failed are shown. Private working values were cleared before this feedback appeared."
                     : primaryPhase === "FT-20C"
                       ? "Current-attempt transfer evidence is complete. Python explanation and later learning remain closed."
+                    : primaryPhase === "EX-20"
+                      ? "A blank Teacher-owned Python explanation prompt is open. No attempt, evidence, result, mastery, access, authority, or city change has been recorded."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
@@ -433,6 +472,14 @@ export function CivicRecordArrival({
             {returnActions.length > 0 && (
               <div className="city-command-actions civic-route-return-actions" aria-label="Separate route return">
                 {returnActions.map(renderAction)}
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "FT-20C" && (
+              <div className="city-command-actions" aria-label="Pilot explanation entry">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button className="primary-action" type="button" onClick={onExplanationOpen}>
+                  {CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION}
+                </button>
               </div>
             )}
           </div>

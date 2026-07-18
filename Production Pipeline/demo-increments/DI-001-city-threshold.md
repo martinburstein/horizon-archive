@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W2 — RP002-P1-014 repaired
+
+- **Resolved:** the accepted bounded transfer-complete group now retains one explicit Pilot `OPEN BLANK PYTHON EXPLANATION` action. Valid activation atomically opens only the existing canonical genuinely blank Teacher explanation group; submission, evaluation, feedback, result, RAI, save/completion, RP-003+, and successor remain closed.
+- **Durability/zero effect:** the new controller/context/draft is transient; durable storage remains at the accepted blank-primary checkpoint. Both evidence and City Threshold returns remain separate/write-free, user storage was untouched, and world/city/route/access/authority state is unchanged.
+- **Candidate/evidence:** `index-DOgjNRZx.js` / `index-CNOSF1pz.css`; focused `135/135`, full `607/607`, RP-002 validator, build, bundle/purity/leakage/patch, and HTTP `200` checks pass. No in-app Browser backend was available, so W3/coordinator retain live presentation review.
+- **Next:** W3 reviews only the retained completion/action and blank explanation-entry presentation before W4 final polish/reload.
+
 ## 2026-07-17 Working W1 — blank Python explanation entry blocker
 
 - **Issue:** `RP002-P1-014 / P1`; accepted `FT-20C` truthfully shows System-owned current-attempt `6/6` transfer evidence, but there is no explicit Pilot `OPEN BLANK PYTHON EXPLANATION` control or normal App handler.

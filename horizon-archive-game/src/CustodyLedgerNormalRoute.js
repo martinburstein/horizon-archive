@@ -52,6 +52,7 @@ import {
 import { createCustodyLedgerPrimaryInteraction } from "./CustodyLedgerPrimaryInteraction.js";
 import { createCustodyLedgerPrimaryResultDismissal } from "./CustodyLedgerPrimaryResultDismissal.js";
 import { createCustodyLedgerTransferInteraction } from "./CustodyLedgerTransferInteraction.js";
+import { createCustodyLedgerExplanationEntry } from "./CustodyLedgerExplanationEntry.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -112,6 +113,33 @@ export function createCustodyLedgerNormalTransferInteraction(
       primaryResult,
       learningState: routeState.learningState,
       freshPracticeState,
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalExplanationEntry(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(transferCompleteState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(transferCompleteState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerExplanationEntry({
+      primaryResult,
+      learningState: routeState.learningState,
+      freshPracticeState,
+      transferCompleteState,
     });
   } catch {
     return null;

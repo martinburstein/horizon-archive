@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W2 — blank Python explanation entry integrated
+
+- **Mode/disposition:** Coder Agent used `bug-repair` mode. `RESOLVED — RP002-P1-014 / W3 AESTHETIC REVIEW NEXT`.
+- **Normal integration:** exact `FT-20C` remains the visible System-owned current-attempt `6/6` acknowledgement until one native `OPEN BLANK PYTHON EXPLANATION` Pilot action. The normal route composes the existing protected authority; valid intent atomically replaces the whole completion group with only canonical `EX-20 / 30-D`, unchanged `explanation_prompt`, and genuinely blank Teacher-owned controls.
+- **Preserved boundary:** no prompt/dimension/evaluator authority was copied; no transfer work, answers, checks, transcript, token, private value, attempt, score, hint, evidence, feedback, result, RAI, save, completion, world/route/access/authority effect, RP-003+, or successor appears. Both returns remain separate/write-free; durable storage remains the accepted blank-primary checkpoint; the civic plate and clocks remain invariant.
+- **Validation/candidate:** focused `135/135`; full `607/607`; RP-002 validator; production build; bundle/purity/leakage/patch and HTTP checks pass. Candidate assets are `index-DOgjNRZx.js` / `index-CNOSF1pz.css`. The in-app Browser exposed no available backend, so live gated presentation remains W3/coordinator review and no screenshot or console claim is fabricated.
+- **Exact W3 handoff:** review only the retained `FT-20C` group, separate returns, explicit Pilot entry action, and atomic canonical blank `EX-20` Teacher group for hierarchy, focus, target size, reflow, forced-color/reduced-motion/non-color parity, and immutable-art coherence. Preserve all gameplay/curriculum/storage/world/later-state locks; do not edit.
+
 ## 2026-07-17 Advance A5 continuity handoff — protected blank Python explanation entry
 
 - **Mode/disposition:** Coder Agent used `advance` mode. `REVISE — PROTECTED EXPLANATION-ENTRY SEAM ONLY / ACCEPTED W1 NEXT`.

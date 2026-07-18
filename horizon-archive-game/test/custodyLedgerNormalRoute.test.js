@@ -11,6 +11,7 @@ import {
   CUSTODY_LEDGER_NEAR_DETAIL_ACTION,
   CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION,
   clearCustodyLedgerNormalRoute,
+  createCustodyLedgerNormalExplanationEntry,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalTransferInteraction,
@@ -31,6 +32,10 @@ import {
   CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
 } from "../src/CustodyLedgerPrimaryResultDismissal.js";
 import { CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION } from "../src/CustodyLedgerTransferInteraction.js";
+import {
+  CUSTODY_LEDGER_EXPLANATION_ENTRY_VERSION,
+  CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION,
+} from "../src/CustodyLedgerExplanationEntry.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -1324,6 +1329,113 @@ test("accepted fresh practice composes protected transfer feedback, blank retry,
   ), null);
 });
 
+test("accepted FT-20C composes one atomic normal blank explanation entry without storage expansion", () => {
+  function openExplanation(token) {
+    const complete = completeFarSave(`${token}-complete`);
+    const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
+      custodyLedgerObservationControls.openLocalComparison.label,
+      "pointer",
+      `${token}-local`,
+    )).save;
+    const route = createCustodyLedgerNormalRouteController({
+      predecessor,
+      restoredSave: local,
+      prerequisiteEvidence: completedPrerequisites(),
+    });
+    const entered = route.dispatch(intent(CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION, "pointer", `${token}-open`));
+    const primaryResult = createCustodyLedgerNormalPrimaryInteraction(entered.state, predecessor).dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+      activationKind: "pointer",
+      eventToken: `${token}-primary`,
+      classification: "unknown",
+      fieldOwner: "human_expedition",
+    }).state;
+    const freshPracticeState = createCustodyLedgerNormalPrimaryResultDismissal(
+      entered.state,
+      primaryResult,
+      predecessor,
+    ).dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_PRIMARY_RESULT_DISMISSAL_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_CLEAR_RESULT_ACTION,
+      activationKind: "pointer",
+      eventToken: `${token}-dismiss`,
+    }).state;
+    const transferCompleteState = createCustodyLedgerNormalTransferInteraction(
+      entered.state,
+      primaryResult,
+      freshPracticeState,
+      predecessor,
+    ).dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_TRANSFER_INTERACTION_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
+      activationKind: "pointer",
+      eventToken: `${token}-transfer`,
+      classification: "unknown",
+      fieldOwner: "human_reviewer",
+    }).state;
+    return { entered, primaryResult, freshPracticeState, transferCompleteState };
+  }
+
+  for (const activationKind of activationKinds) {
+    const fixture = openExplanation(`rp002-explanation-${activationKind}`);
+    const persistedBytes = JSON.stringify(fixture.entered.save);
+    const controller = createCustodyLedgerNormalExplanationEntry(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      predecessor,
+    );
+    assert.ok(controller);
+    assert.equal(controller.getState().phase, "EX-00");
+    const result = controller.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_EXPLANATION_ENTRY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION,
+      activationKind,
+      eventToken: `rp002-explanation-entry-${activationKind}`,
+    });
+    assert.equal(result.status, "blank_explanation_opened");
+    assert.equal(result.replacement, "atomic");
+    assert.equal(result.state.phase, "EX-20");
+    assert.equal(result.state.owner, "901 TEACHER // FEEDBACK");
+    assert.equal(Object.values(result.state.explanationSelections).every((value) => value === ""), true);
+    assert.equal(result.state.scoringEnabled, false);
+    assert.equal(result.state.savePerformed, false);
+    assert.equal(result.state.successor, null);
+    assert.deepEqual(result.state.availableActions, ["RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD"]);
+    assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
+  }
+
+  const fixture = openExplanation("rp002-explanation-reject");
+  assert.equal(createCustodyLedgerNormalExplanationEntry(
+    { ...fixture.entered.state, privateNotes: "PRIVATE" },
+    fixture.primaryResult,
+    fixture.freshPracticeState,
+    fixture.transferCompleteState,
+    predecessor,
+  ), null);
+  assert.equal(createCustodyLedgerNormalExplanationEntry(
+    fixture.entered.state,
+    fixture.primaryResult,
+    fixture.freshPracticeState,
+    { ...fixture.transferCompleteState, successor: "RP-003" },
+    predecessor,
+  ), null);
+});
+
 test("blank primary restore is replay-free and missing or forged prerequisites fail closed", () => {
   const complete = completeFarSave("rp002-python-primary-restore");
   const local = createCustodyLedgerNormalRouteController({ predecessor, restoredSave: complete }).dispatch(intent(
@@ -1906,16 +2018,24 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /primaryPhase === "FT-00"/);
   assert.match(arrival, /primaryPhase === "FT-20F"/);
   assert.match(arrival, /primaryPhase === "FT-20C"/);
+  assert.match(arrival, /primaryPhase === "EX-20"/);
+  assert.match(arrival, /CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION/);
+  assert.match(arrival, /onExplanationOpen/);
+  assert.match(arrival, /PILOT \/\/ FLIGHT RECORDER[\s\S]*CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION/);
+  assert.match(arrival, /defaultValue=""/);
+  assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
   assert.match(arrival, /value === false[\s\S]*return "False"/);
   assert.match(app, /createCustodyLedgerNormalPrimaryInteraction/);
   assert.match(app, /createCustodyLedgerNormalPrimaryResultDismissal/);
   assert.match(app, /createCustodyLedgerNormalTransferInteraction/);
+  assert.match(app, /createCustodyLedgerNormalExplanationEntry/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
   assert.match(app, /onPrimaryDismiss=\{\(event\) => clearCustodyLedgerPrimaryResult\(routeState, event\)\}/);
   assert.match(app, /custodyLedgerTransferControllerRef/);
-  assert.match(app, /onTransferSubmit=\{submitCustodyLedgerTransfer\}/);
+  assert.match(app, /onTransferSubmit=\{\(fields, event\) => submitCustodyLedgerTransfer\(routeState, fields, event\)\}/);
   assert.match(app, /onTransferRetry=\{retryCustodyLedgerTransfer\}/);
+  assert.match(app, /onExplanationOpen=\{openCustodyLedgerExplanation\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -1957,7 +2077,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
-  assert.match(styles, /\.custody-ledger-fields input[\s\S]*min-height:\s*44px/);
+  assert.match(styles, /\.custody-ledger-fields input,[\s\S]*\.custody-ledger-fields textarea[\s\S]*min-height:\s*44px/);
   assert.match(styles, /@media \(forced-colors: active\)[\s\S]*\.custody-ledger-fields \[data-field-state="editable"\]/);
   assert.match(styles, /\.civic-route-return-actions/);
   assert.match(styles, /\.canonical-game-frame\[data-canonical-layout="narrow"\] \.city-command-panel[\s\S]*grid-template-columns:\s*1fr/);

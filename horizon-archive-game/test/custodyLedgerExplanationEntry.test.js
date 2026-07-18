@@ -328,7 +328,7 @@ test("entry has no explanation attempt, evaluator, result, RAI, review, save, co
   assert.equal(Object.values(opened.explanationSelections).every((value) => value === ""), true);
 });
 
-test("accessibility, campaign/Tour isolation, module purity, and normal-runtime non-import remain exact", async () => {
+test("accessibility, campaign/Tour isolation, module purity, and bounded normal integration remain exact", async () => {
   assert.equal(custodyLedgerExplanationEntryAccessibility.oneActiveGroup, true);
   assert.equal(custodyLedgerExplanationEntryAccessibility.minActionCssPx, 44);
   assert.equal(custodyLedgerExplanationEntryAccessibility.ownerHeadingInTabOrder, false);
@@ -357,10 +357,16 @@ test("accessibility, campaign/Tour isolation, module purity, and normal-runtime 
     "../src/CustodyLedgerNormalRoute.js",
     "../src/CustodyLedgerExplanationEntry.js",
   ].map((relative) => readFile(fileURLToPath(new URL(relative, import.meta.url)), "utf8")));
-  for (const source of [app, main, arrival, normalRoute]) {
-    assert.doesNotMatch(source, /CustodyLedgerExplanationEntry|rp002\.explanation-entry\.v1|OPEN BLANK PYTHON EXPLANATION/);
-  }
+  assert.match(app, /CustodyLedgerExplanationEntry|CUSTODY_LEDGER_EXPLANATION_ENTRY_VERSION/);
+  assert.match(app, /openCustodyLedgerExplanation/);
+  assert.match(arrival, /CUSTODY_LEDGER_OPEN_BLANK_EXPLANATION/);
+  assert.match(arrival, /primaryPhase === "EX-20"/);
+  assert.match(normalRoute, /createCustodyLedgerNormalExplanationEntry/);
+  assert.doesNotMatch(main, /CustodyLedgerExplanationEntry|rp002\.explanation-entry\.v1|OPEN BLANK PYTHON EXPLANATION/);
   assert.doesNotMatch(entry,
     /localStorage|sessionStorage|indexedDB|fetch\(|XMLHttpRequest|WebSocket|document\.|window\.|navigator\./);
   assert.doesNotMatch(entry, /evaluateCustodyLedgerExplanation|submitCustodyLedgerExplanation/);
+  for (const source of [app, arrival, normalRoute]) {
+    assert.doesNotMatch(source, /evaluateCustodyLedgerExplanation|submitCustodyLedgerExplanation/);
+  }
 });

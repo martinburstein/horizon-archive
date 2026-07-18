@@ -1514,7 +1514,8 @@ h1 {
 .custody-ledger-fields [data-field-state="blank"] { border-style: dashed; }
 .custody-ledger-fields [data-field-state="editable"] { border-style: dashed; border-color: #9ea9bb; }
 .custody-ledger-fields [data-field-state="read-only"] { border-style: double; }
-.custody-ledger-fields input {
+.custody-ledger-fields input,
+.custody-ledger-fields textarea {
   box-sizing: border-box;
   width: 100%;
   min-height: 44px;
@@ -1525,7 +1526,9 @@ h1 {
   background: #070a10;
   font: inherit;
 }
-.custody-ledger-fields input:focus-visible { outline: 3px solid #e4b36c; outline-offset: 2px; }
+.custody-ledger-fields textarea { resize: vertical; }
+.custody-ledger-fields input:focus-visible,
+.custody-ledger-fields textarea:focus-visible { outline: 3px solid #e4b36c; outline-offset: 2px; }
 .custody-ledger-work-image > .primary-action { min-width: 44px; min-height: 44px; margin-top: 10px; }
 .custody-ledger-feedback { display: grid; gap: 8px; margin: 10px 0; padding-left: 22px; }
 .custody-ledger-feedback li { padding-left: 4px; }
@@ -1534,7 +1537,8 @@ h1 {
   .custody-ledger-fields [data-field-state="editable"] { border-color: Highlight; }
   .custody-ledger-fields [data-field-state="locked"],
   .custody-ledger-fields [data-field-state="read-only"] { border-color: CanvasText; }
-  .custody-ledger-fields input:focus-visible { outline-color: Highlight; }
+  .custody-ledger-fields input:focus-visible,
+  .custody-ledger-fields textarea:focus-visible { outline-color: Highlight; }
 }
 
 .canonical-game-frame[data-canonical-layout="narrow"] .custody-ledger-fields { grid-template-columns: 1fr; }
