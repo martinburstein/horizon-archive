@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Coordinator release — Python explanation and Pilot conclusion accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 EXPLANATION + PILOT CONCLUSION ACCEPTED`.
+- **Player-visible delta:** the accepted blank three-surface Teacher group now permits session-only Pilot authoring and explicit local submission. Actual failed dimensions alone produce answer-free Teacher remediation followed by a wholly blank retry; exact current-attempt `3/3` alone produces the existing Pilot Python conclusion. Wide presentation uses three equal surfaces; narrow/`200%` uses one source-ordered column.
+- **Independent validation:** full `618/618`, all `15/15` readiness validators, production build, complete `125.8s` E2E with credits and no runtime errors, fresh `1920 x 1080` / `390 x 844` title-shell review with zero overflow and clean logs, HTTP/assets, immutable-art/reference hashes, patch integrity, and QA cleanup pass on `index-BvLuO_XD.js` / `index-B112XlTz.css`.
+- **Safety/next:** no explanation prose/result became durable; Martin's save/storage and both user-owned paths were untouched. Conclusion dismissal and blank `RP002-RAI-01` entry are the next closed edge; all responsible-AI evaluation and later states remain closed.
+
 ## 2026-07-17 Working W4 — three-surface authoring layout resolved
 
 - **Verdict:** `RP002-AESTH-010 / RESOLVED — COORDINATOR NEXT`. Only the explanation authoring list received a state-specific class: three equal wide columns in one row, with one-column narrow/`200%` recovery and unchanged source order.

@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Coordinator release — Python explanation submission accepted
+
+- **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 EXPLANATION + PILOT CONCLUSION ACCEPTED` on `index-BvLuO_XD.js` / `index-B112XlTz.css`.
+- **Accepted edge:** canonical blank Teacher `EX-20` now supports three session-only Pilot responses, one explicit `SUBMIT PYTHON EXPLANATION`, the frozen strict three-dimension evaluator, actual-failed-dimension-only answer-free Teacher remediation with private clearing and wholly blank unlimited retry, or exact current-attempt `3/3` followed by only the existing Pilot Python conclusion. Wide authoring preserves the canonical three-equal-surface rhythm; narrow and `200%` preserve one source-ordered column.
+- **Independent gates:** full `618/618`; readiness validators `15/15`; production build; complete `125.8s` title-to-credits E2E with every emitted gate true, `credits:true`, and `runtimeErrors:false`; fresh live title-shell review at `1920 x 1080` and `390 x 844` with zero overflow, `48px` / `44px` actions, and no warning/error logs; HTTP/assets; immutable runtime civic art and canonical-reference hashes; patch integrity; QA capture cleanup.
+- **Preservation/next:** browser storage and both user-owned untracked paths were untouched. Next Advance A1 may lock only explicit dismissal of the accepted Pilot Python conclusion into the existing genuinely blank `RP002-RAI-01` primary boundary. Responsible-AI submission/evaluation/feedback/result/evidence, review/save/completion, `RP-003+`, world/authority effects, and successor remain closed.
+
 ## 2026-07-17 Working W4 — RP002-AESTH-010 resolved
 
 - **Mode/verdict:** `aesthetic-polish` / `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`. W4 repaired only the reproduced wide authoring composition defect.
