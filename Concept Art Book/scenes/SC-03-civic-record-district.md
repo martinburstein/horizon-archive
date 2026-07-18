@@ -1,5 +1,13 @@
 # SC-03 — Civic Record District
 
+## 2026-07-18 compact RAI transfer / blank Teacher presentation convergence
+
+- Reuse the invariant SC-03 overview, registered crop, geometry, light, material, maintenance, and continuous clocks. No new world plate, camera, effect, transition, result board, reward board, or per-case raster exists.
+- One `SYSTEM // EXPEDITION SESSION` group reuses the closed three-channel frame identity for unchanged `T01`, `T02`, and `T03`, one at a time. Each case keeps exactly three equal source-ordered principle/mitigation/accountable-owner peers and one explicit Pilot local submit. The first two submissions directly replace the group with the next wholly blank case; no correctness, feedback, score, evidence, or retained-response transcript appears.
+- The third submit invokes the existing simultaneous strict `9/9` evaluator with no loading or evaluation treatment. Exact pass clears transfer work and directly mounts only the existing `901 TEACHER // FEEDBACK` three-boundary prompt with all three response controls genuinely blank. Any miss directly mounts only actual-failed-case/dimension answer-free Teacher feedback; acknowledgement then mounts the separate neutral zero-credit System guide, consuming the closed one-cassette identity without integrating its raster; guided completion clears all work and returns to wholly blank unlimited transfer retry.
+- Exactly one owner group exists in visual, pointer, keyboard, and accessibility order. Replacement focuses the complete new owner heading before its first control; failed associations and first-incomplete/first-failed retry focus remain literal. Wide keeps three calm equal peers when space permits; narrow and `200%` stack in source order. Preserve natural wrap and vertical recovery, no horizontal escape, `>=44px`, non-color meaning, forced-color boundaries, reduced-motion direct replacement, seven modalities/one hit, separate returns, sanitation/resume, and transient privacy clearing.
+- The frame, guide, layout, focus, replacement, return, and Tour remain zero evidence and zero world fact. Application labels are provisional human course work, not native fact or authority. Stop at the genuinely blank Teacher prompt or blank transfer retry before explanation submission/evaluation/feedback/result, RAI conclusion, save/completion, `RP-003+`, world/route/access/external effect, RP-013, or successor.
+
 ## 2026-07-17 canonical RAI guided-recovery item reference
 
 - Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-rai-guided-recovery-reveal/rp002-rai-guided-recovery-cassette-v1.png`, with neighboring provenance.

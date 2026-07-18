@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A2 convergence — compact RAI transfer presentation
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A3 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank RAI transfer.
+- **Presentation lock:** one System-owned three-channel group replaces `T01` -> `T02` -> `T03` without interim result. `T03` directly replaces it with actual-failed-pair Teacher feedback -> the separate zero-credit System guide -> wholly blank transfer retry, or exact-pass genuinely blank Teacher three-boundary authoring. No transition/result board or new art state was added.
+- **Canon consumption:** the closed `RAI-P0` frame supplies count/equality/order and the closed `RAI-GUIDE` cassette supplies separate neutral recovery identity; neither raster is runtime-integrated or extended.
+- **Demo effect / next:** none. A3 owns only `NO REOPEN — SOLIDIFIED` evidence preservation. Explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, world/authority effects, RP-013, and every successor remain closed.
+
 ## 2026-07-18 Advance A1 convergence — RAI transfer to blank explanation ownership
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. Documentation-only; the accepted Demo remains at the genuinely blank RAI transfer boundary.

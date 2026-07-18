@@ -1,5 +1,12 @@
 # Advance Queue
 
+## 2026-07-18 A2 convergence — compact RAI transfer presentation
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / COMPACT PRESENTATION LOCKED / A3 NEXT`.
+- **Merged presentation:** one System-owned three-channel group replaces `T01` -> `T02` -> `T03` with no interim result; `T03` directly replaces it with either failed-pair Teacher feedback -> separate zero-credit System guide -> wholly blank retry, or exact-pass genuinely blank Teacher three-boundary authoring. No result/transition board or new art state exists.
+- **Preserved:** one active group; equal source-ordered wide peers and narrow/`200%` stacking; owner-heading and first-failed focus; separate returns; privacy clearing; accessibility; invariant world/null delta; provisional-human label/no-authority meaning; no successor.
+- **Exact next:** A3 performs only `NO REOPEN — SOLIDIFIED` evidence preservation and stops before explanation submission/evaluation/result or later states.
+
 ## 2026-07-18 A1 convergence — RAI transfer to blank Teacher explanation
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`.

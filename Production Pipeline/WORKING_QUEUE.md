@@ -1,5 +1,11 @@
 # Working Queue
 
+## 2026-07-18 Advance A2 handoff — compact transfer presentation locked
+
+- **Advance result:** `PASS — CONVERGE + MERGE + TRIM / A3 NEXT`. `T01`–`T03`, mapped answer-free recovery/one neutral guide/blank retry, and exact-pass blank Teacher entry now share one compact one-active-group presentation over invariant SC-03. No normal runtime or accepted Demo state changed.
+- **Team 2 position:** remains at the coordinator-accepted genuinely blank RAI transfer and waits for A3–A5. Later W1 reports only the earliest normal player-facing gap in this composed path without changing browser storage or campaign save.
+- **Closed:** explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, world/route/access/authority/external effects, RP-013, and every successor.
+
 ## 2026-07-18 Advance A1 handoff — transfer convergence underway
 
 - **Advance result:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. A1 merged the existing blank RAI transfer, `T01`–`T03` simultaneous strict `9/9`, mapped failed-pair recovery, one neutral zero-credit guide, wholly blank retry, and exact-pass blank Teacher three-boundary entry into one ownership path. No normal runtime or accepted Demo state changed.
