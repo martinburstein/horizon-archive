@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 canonical Pilot-conclusion item reference
+
+- Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-pilot-conclusion-reveal/rp002-pilot-conclusion-triptych-v1.png`, with neighboring provenance.
+- Locked visual fact: the accepted Pilot Python conclusion is one compact expedition-owned triptych object with exactly three equal blank laminae. It consolidates three independently checked dimensions without displaying their prose, becoming Builder speech, or making the civic archive react. The archive remains visibly larger and unchanged.
+- This closes `SC-03 / EXS-20C Pilot conclusion visual identity`. Future Lore Builder, Storyboarder, Aesthetic, and Coder passes consume it as settled evidence unless a demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction reopens it.
+- Scope limit: this is a canonical item/composition reference, not a runtime-integrated plate. Its cold underside light belongs to the expedition object and is not a reward, city response, access cue, authority grant, save result, RAI state, or successor.
+
 ## 2026-07-17 blank-explanation submission presentation continuity
 
 - The canonical three-surface foreground/archive composition below is settled evidence, not a new runtime plate. At wide size, the three expedition controls preserve its readable foreground rhythm while remaining a semantically separate human overlay; no prompt, response, score, feedback, or conclusion is baked into Builder matter. Narrow and `200%` layouts may stack controls in source order without changing count, ownership, or archive-dominant meaning.

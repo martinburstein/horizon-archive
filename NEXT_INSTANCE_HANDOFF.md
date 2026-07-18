@@ -40,6 +40,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - The automation wakes hourly in this task and runs one complete sequential two-team cycle from the latest handoff state.
 - Do not pause, replace, or duplicate the automation until Martin explicitly asks.
 - Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png` with neighboring provenance. It locks the `SC-03 / EX-20 wide composition relationship`: exactly three blank foreground civic surfaces against an archive that extends far beyond the frame. Treat that question as closed; this is canonical reference evidence, not yet a runtime-integrated plate.
+- Canonical cycle reveal: `Visual Direction/Production Masters/2026-07-17-rp002-pilot-conclusion-reveal/rp002-pilot-conclusion-triptych-v1.png` with neighboring provenance. It closes `SC-03 / EXS-20C Pilot conclusion visual identity`: one compact expedition-owned triptych object, exactly three equal blank laminae, remains visibly separate from the vast unchanged archive. Treat that question as closed; this is canonical item/composition evidence, not a claim of runtime integration.
 
 The worktree intentionally contains these two untracked user-owned items:
 

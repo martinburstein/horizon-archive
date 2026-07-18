@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Canonical cycle reveal — Pilot conclusion triptych
+
+- **Subject / scale:** `ITEM / INTERFACE / INTERIOR`; one compact expedition-owned triptych wafer above a deep civic service socket, with the archive continuing beyond it as the larger unchanged whole.
+- **Canonical decision locked:** the accepted Pilot Python conclusion has one visual identity: exactly three equal blank laminae form one bounded object, consolidating three independently checked dimensions without displaying their prose, becoming Builder speech, or causing a city response.
+- **Checklist item closed:** `SC-03 / EXS-20C Pilot conclusion visual identity`.
+- **Status:** `CANONICAL VISUAL REFERENCE — NOT RUNTIME-INTEGRATED`.
+- **Asset / provenance:** `Visual Direction/Production Masters/2026-07-17-rp002-pilot-conclusion-reveal/rp002-pilot-conclusion-triptych-v1.png`; neighboring `PROVENANCE.md`; `1672 x 941`; SHA-256 `0EDA7DE39BEEE5FE0F8DF8B916EF2D1DE20D8121BCAAC20D7DA49CAA59AFBC6A`.
+- **Safety:** no text, symbol, answer, check, Builder inscription, human trace, world reaction, access, authority, responsible-AI state, save, successor, or hidden lore appears. The underside light belongs to the expedition object, not the city.
+- **Reopen only for:** demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction.
+
 ## 2026-07-17 Coordinator release — Python explanation and Pilot conclusion accepted
 
 - **Verdict:** `PASS — IN DEMO PARTIAL / PY-009 EXPLANATION + PILOT CONCLUSION ACCEPTED`.
