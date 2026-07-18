@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W1 — blank RAI primary submission gap
+
+- **Cycle / disposition:** `RP002-P1-017 / W1 Player — P1 OPEN; W2 BUG-REPAIR NEXT`.
+- **Accepted behavior verified:** exact `RAD-20 / RAI-P0` retains unchanged `P01`, System ownership, genuinely blank source-ordered principle/mitigation/accountable-owner selects, literal no-attempt status, separate write-free returns, responsive/accessibility parity, privacy/Tour isolation, and invariant world/null delta.
+- **Earliest gap:** normal UI/App and accepted served bundle expose no explicit `SUBMIT RESPONSIBLE-AI CASE` action or handler. The accepted boundary therefore cannot submit `P01`; W1 stopped before judging blank `P02`/`P03`, third-case-only simultaneous `9/9`, failed-pair recovery, blank retry, or blank transfer.
+- **Evidence:** accepted assets `index-C2MkEQI0.js` / `index-B85gq_mk.css` return HTTP `200`; focused accepted normal-route/entry/presentation coverage passes `60/60`; served JS contains the blank-RAI/no-attempt markers and lacks the expected submit label. Browser backend was unavailable, so no gated live traversal was fabricated and storage/save remained untouched.
+- **Next:** W2 in `bug-repair` mode integrates only the existing protected convergence authority into the normal transient UI/controller path, beginning with one explicit Pilot submission and preserving the hard stop before transfer evaluation or every later state.
+
 ## 2026-07-18 Advance A5 continuity — protected RAI-primary convergence controller
 
 - **Cycle / disposition:** `RP002-P1-017 / A5 Coder advance — REVISE; ACCEPTED W1 NEXT`.

@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W1 handoff — blank RAI primary cannot submit
+
+- **Disposition:** `P1 OPEN — RP002-P1-017 / W2 BUG-REPAIR NEXT`.
+- **Starting state:** coordinator-accepted `RAD-20 / RP002-RAI-01 / RAI-P0` on `index-C2MkEQI0.js` / `index-B85gq_mk.css`. Unchanged `P01`, System ownership, three genuinely blank source-ordered native controls, literal no-attempt status, separate write-free returns, owner-heading focus, responsive/accessibility parity, privacy, and invariant world/null delta remain stable.
+- **Earliest defect:** normal `CivicRecordArrival` presents no explicit `SUBMIT RESPONSIBLE-AI CASE` action and App exposes no first-case submission handler. The served JS contains the blank case and no-attempt markers but lacks the submit label. Severity is `P1`: the accepted group is safe and recoverable but cannot begin the approved three-case learning path.
+- **Evidence boundary:** in-app Browser was unavailable; no gated traversal was fabricated and browser storage/save remained untouched. Focused normal-route, blank-entry, and presentation coverage passes `60/60`; root/JS/CSS return HTTP `200`. The protected convergence module/test was not inspected or invoked, and W1 stopped before judging any dependent state.
+- **Exact W2 scope:** integrate only the existing protected convergence authority into normal transient App/route/UI. Add one explicit semantic `>=44px` Pilot submit action with seven-modality/one-hit parity; preserve one active group, blank `P02`/`P03` replacement without interim result, `P03`-only simultaneous strict `9/9`, exact-pass blank transfer, or actual-failed-case/dimension-only Teacher feedback -> neutral zero-credit guide -> complete clearing and wholly blank first-failed retry. Preserve frozen cases/answers/evaluator/remediation, hidden `PY-009` prerequisites/no cross-credit, privacy/non-persistence, sanitation/resume, separate returns, accessibility/reflow, invariant SC-03/world/clocks/null delta, offline/no-authority/no-exam-guarantee, no successor, and every hard stop. Stop before transfer submission/evaluation/feedback/result/evidence, explanation/conclusion, review/save/completion, `RP-003+`, or world/authority/external effect.
+
 ## 2026-07-18 Advance A5 continuity handoff — protected RAI-primary convergence controller
 
 - **Disposition:** `REVISE — PROTECTED CONVERGENCE COMPLETE / ACCEPTED W1 NEXT`.
