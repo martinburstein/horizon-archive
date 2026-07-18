@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A2 convergence — compact RAI primary and recovery presentation
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A3 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
+- **Composed presentation:** unchanged `P01`–`P03` replace one another under one active System group, each with three transient Pilot decision peers and one explicit local submit. No result appears after the first two cases; the third alone invokes simultaneous strict `9/9` and directly mounts either actual-failed-case/dimension-only Teacher feedback or exact-pass blank RAI transfer.
+- **Recovery:** Teacher feedback contains no answer, passed recap, or total score; its existing acknowledgement mounts one separate neutral zero-credit System guide. Guided completion clears every choice, response, prose fragment, private value, and focus history before a wholly blank unlimited retry at deterministic first-incomplete/first-failed focus.
+- **Visual/accessibility:** invariant SC-03 remains dominant. The canonical `RAI-P0` three-channel expedition-frame identity is consumed as closed count/order/ownership evidence without raster integration; canonical `EX-20` and `EXS-20C` remain closed and absent. One-active-group focus, source order, wide/narrow/`200%` reflow, `>=44px`, non-color/forced-color/reduced-motion/seven-modality parity, separate returns, privacy clearing, and no world response remain exact.
+- **Demo effect / next:** none. A3 owns only NO-REOPEN curriculum preservation. Runtime, tests, assets, art, curriculum, storage, route, world, transfer evaluator, later states, `RP-003+`, and successor remain unchanged or closed.
+
 ## 2026-07-17 Advance A1 convergence — RAI primary evaluation and recovery ownership
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. Documentation-only; accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
