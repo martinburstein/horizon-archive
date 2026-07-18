@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A3 continuity — explanation submission preservation
+
+- **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.
+- **Boundary:** canonical blank Teacher explanation -> three transient Pilot responses -> explicit local submit -> existing frozen evaluator -> actually-failed-dimension-only answer-free blank recovery or exact-complete Pilot conclusion.
+- **Evidence rule:** presentation/world/interaction, including the accepted three-surface/archive composition, remain zero evidence except the evaluator's exact current-attempt result. Frozen `PY-009`, independent prerequisites, RAI, privacy, authority, durability, world, later-state, and no-successor contracts remain exact.
+- **Demo effect:** none. DI-001's accepted City Threshold state, runtime, assets, storage, route, world, and Working position remain unchanged; A4 owns one protected graph only.
+
 ## 2026-07-17 Advance A2 continuity — explanation submission presentation
 
 - **Presentation:** invariant SC-03 plus one active expedition group: canonical blank Teacher three-part authoring -> explicit Pilot local submit -> actually-failed-dimension-only answer-free Teacher remediation and wholly blank retry, or exact current-attempt completion -> existing Pilot Python conclusion.

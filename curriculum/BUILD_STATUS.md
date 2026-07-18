@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-17 RP-002 Python explanation submission preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: A1 ownership and A2 presentation preserve the unchanged prompt, three blank controls, frozen three-dimension evaluator, exact completion threshold, and bounded Pilot conclusion.
+- [x] Presentation/world/interaction remain zero evidence except the existing evaluator's exact current-attempt result.
+- [x] Actually-failed-dimension-only answer-free remediation clears all private prose and returns to a wholly blank unlimited retry with the existing first-failed-control recovery target.
+- [x] Primary/transfer prerequisites remain hidden and independent; the blank-primary checkpoint remains the only durable RP-002 learning checkpoint at this edge.
+- [x] `RP002-RAI-01`, conclusion dismissal, review/save/completion, `RP-003+`, world/authority effect, and successor remain closed.
+- [ ] Gameplay Master defines only the bounded protected explanation submit/evaluate/remediate-or-conclude graph without changing any frozen curriculum element.
+
 ## 2026-07-17 RP-002 transfer submit/evaluation preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: A1 ownership and A2 presentation preserve the frozen neutral transfer input, two Pilot edits, six simultaneous checks, actual-miss-only answer-free remediation, genuinely blank retry, and current-attempt `6/6` transfer evidence.
