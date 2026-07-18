@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W3 — RP002-AESTH-010 three-surface authoring layout
+
+- **Verdict:** `P2 OPEN — W4 AESTHETIC-POLISH NEXT`. `EXS-00`, `EXS-20F`, and `EXS-20C` retain correct one-active-owner replacement, answer-free failed-dimension association, private clearing/blank retry, heading-first recovery, `>=44px` targets, forced-color/reduced-motion/non-color contracts, invariant civic world, and hard later-state absence.
+- **Finding/evidence:** the three `EX-20 / EXS-00` controls currently use only the generic two-column `.custody-ledger-fields` grid, yielding a wide `2 + 1` arrangement instead of the accepted one-row three-equal-surface composition relationship. Candidate `index-wKYRIOow.js` / `index-CNOSF1pz.css` and root return HTTP `200`; focused `59/59` passes. Browser discovery returned no backend and storage remained untouched.
+- **W4 boundary:** add only a state-specific three-equal-column wide authoring grid plus a focused wide/narrow regression; preserve existing one-column narrow/`200%` recovery. Do not integrate the canonical reference raster or alter runtime art, gameplay, curriculum, storage, world, or later states.
+
 ## 2026-07-17 Working W2 — Python explanation submission repair
 
 - **Disposition:** `RP002-P1-015 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Exact canonical blank `EX-20` now creates only the protected `EXS-00` session authoring controller in normal App/route/UI. Three controlled Pilot responses remain transient and one explicit semantic submit enters the frozen evaluator without copying its dimensions, answers, rules, feedback associations, or conclusion authority.
