@@ -99,6 +99,17 @@ Describe what a player can now see, do, understand, or recover from that was not
 
 -
 
+## Cycle-end visual reveal
+
+- Subject and scale: `ITEM | CONSOLE | INTERFACE | INTERIOR | THRESHOLD | LANDSCAPE`
+- Accepted cycle material represented:
+- Larger-whole mystery conveyed:
+- Prompt intent:
+- Status: `CONCEPT REVEAL — NOT CANON | ACCEPTED INTO ART PIPELINE`
+- Archived project path, if any:
+- Hidden-lore/spoiler check:
+- Shown inline to Martin:
+
 ## Packet disposition
 
 - Result: `IN DEMO — PARTIAL | IN DEMO — ACCEPTED | RETURN TO ADVANCE`

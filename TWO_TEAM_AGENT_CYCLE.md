@@ -502,6 +502,24 @@ Suggested commit prefixes:
 
 Push after each checkpoint when the round requires continuous backup. Use an empty commit for a read-only role when a per-role checkpoint is required.
 
+### Mandatory cycle-end visual reveal
+
+After the coordinator has completed the release disposition, pushed the handoff, and verified synchronization, produce exactly **one** new cycle-reveal image for Martin.
+
+The reveal must:
+
+- make the game's visual or spatial layout feel measurably more developed;
+- depict one bounded fragment from the completed cycle, such as an item, console, interface surface, architectural threshold, or landscape;
+- feel mysterious and unmistakably part of a much larger whole;
+- use only accepted, spoiler-safe project material and never consult or reveal the hidden-lore vault;
+- preserve the first-person, maximum-quality cinematic photoreal direction unless the cycle explicitly accepted a different asset class;
+- contain no protagonist, hands, body, ship, prior human trace, readable Builder prose, answer key, watermark, or unapproved story revelation;
+- remain a concept/cycle reveal rather than canon or a shipped production asset unless the normal art-review pipeline later accepts it;
+- be shown inline to Martin as the final visible output of the cycle; and
+- be recorded in the Demo Increment with its subject, prompt intent, status, and project path when archived.
+
+Choose the subject from the accepted cycle outcome. Vary the scale across cycles so the reveals gradually expose the world through objects, consoles, interiors, thresholds, and landscapes rather than repeatedly depicting the same view.
+
 At cycle end, the coordinator reports both teams separately:
 
 ```markdown
@@ -568,7 +586,7 @@ Read all applicable AGENTS.md files, Agent Profiles/README.md, the selected agen
 
 The coordinator inspects, commits, and pushes a dedicated checkpoint after every role; preserves user work and untracked files; enforces hidden-lore, official-source, high-resolution photorealistic, first-person, originality, privacy, no-authority, recovery, and accessibility contracts; and uses an empty commit for read-only checkpoints when required.
 
-After both teams, run independent curriculum, art, test, build, exact-viewport, and full E2E gates as appropriate. Update the playable demo at http://127.0.0.1:4173/, restore incidental QA files, verify HEAD equals origin/main, and report Advance Team progress, Working Team progress, the visible demo delta, Team 1's railhead, Team 2's live-demo position, the ordered packet lead, whole-story rail status, validation, and risks.
+After both teams, run independent curriculum, art, test, build, exact-viewport, and full E2E gates as appropriate. Update the playable demo at http://127.0.0.1:4173/, restore incidental QA files, verify HEAD equals origin/main, report Advance Team progress, Working Team progress, the visible demo delta, Team 1's railhead, Team 2's live-demo position, the ordered packet lead, whole-story rail status, validation, and risks, then produce exactly one spoiler-safe mysterious cycle-reveal image as the final visible output.
 ```
 
 ---
@@ -585,4 +603,5 @@ The two-team system is healthy when:
 - the playable demo never becomes a neglected prototype while planning expands;
 - Team 1 eventually reaches `END-TO-END OUTLINED`;
 - Team 2 eventually catches that completed railhead; and
-- the catch-up milestone triggers a deliberate workflow review with Martin rather than automatic scope expansion.
+- the catch-up milestone triggers a deliberate workflow review with Martin rather than automatic scope expansion; and
+- every completed cycle ends with one spoiler-safe visual fragment that lets Martin see the game world and layout accumulating into a larger whole.

@@ -105,7 +105,7 @@ Each role must:
 
 Do not run roles concurrently. Preserve the sequence so every role consumes the previous role's committed handoff.
 
-After all nine roles, the coordinator independently runs the full release gates, restores incidental QA binaries, records the disposition, commits, pushes, and verifies `HEAD == origin/main`.
+After all nine roles, the coordinator independently runs the full release gates, restores incidental QA binaries, records the disposition, commits, pushes, and verifies `HEAD == origin/main`. Then generate exactly one spoiler-safe cycle-reveal image as the final visible output: an accepted-cycle item, console, interface surface, threshold, interior, or landscape that makes the layout feel more developed while clearly implying a larger whole. The reveal is not canon or a shipped asset unless later accepted through the art pipeline.
 
 ## Twelve-packet rail status
 
@@ -273,5 +273,5 @@ This builds and serves the demo on `127.0.0.1:4173`. If a server is already runn
 ## Suggested opening message for the new task
 
 ```text
-Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 canonical blank Python explanation group, locking only the nearest Pilot-authored explanation submission/evaluation ownership boundary, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints.
+Please continue Horizon Archive from NEXT_INSTANCE_HANDOFF.md. Read AGENTS.md and the handoff in full first. Keep the active recurring automation attached to its current task unless I explicitly ask to pause or replace it. Begin the next full sequential cycle with Lore Builder A1 at the accepted RP-002 canonical blank Python explanation group, locking only the nearest Pilot-authored explanation submission/evaluation ownership boundary, then proceed through every remaining role and the coordinator gates one at a time with dedicated pushed checkpoints. After coordinator closure and synchronization, end the cycle by producing exactly one spoiler-safe mysterious cycle-reveal image that visibly expands the game's layout and implies a larger whole.
 ```
