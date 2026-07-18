@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Working handoff: `2026-07-17 / RP002-AESTH-009 W3 CLEAN — W4 VERIFICATION ONLY`. Retained System transfer completion, separate returns, explicit Pilot explanation entry, and atomic canonical blank Teacher ownership have no open aesthetic finding; direct gated live viewport proof remains deferred because no Browser backend was available. Team 2 remains on RP-002 for final rebuild/reload; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).
+
 Latest Working handoff: `2026-07-17 / RP002-P1-014 W2 RESOLVED — W3 AESTHETIC REVIEW`. Exact accepted `FT-20C` now retains its System acknowledgement and separate returns until explicit Pilot explanation-entry intent, then opens only the canonical blank Teacher group with no submission/evaluation/later state. Team 2 remains on RP-002 for bounded aesthetic review; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).
 
 Latest Working handoff: `2026-07-17 / RP002-P1-014 W1 P1 — W2 BUG REPAIR NEXT`. Accepted bounded `FT-20C` retains the truthful System current-attempt `6/6` acknowledgement and two separate write-free returns, but normal UI/runtime has no explicit Pilot explanation-entry action or handler. Team 2 remains on RP-002 for only the blank-explanation entry repair; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).

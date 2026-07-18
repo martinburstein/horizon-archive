@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W3 — RP002-AESTH-009 clean
+
+- **Verdict:** `NO AESTHETIC FINDING OPENED — W4 VERIFICATION ONLY`. Exact retained `FT-20C`, two separate returns, distinct Pilot explanation-entry action, and atomic canonical blank `EX-20` Teacher group retain owner-first hierarchy, programmatic heading focus, ordinary Tab order into the first blank control, `>=44px` targets, literal non-color state, source-backed desktop/narrow/`200%` reflow, forced-color/reduced-motion parity, unchanged first-person civic art, and hard later-state absence.
+- **Evidence:** root and `index-DOgjNRZx.js` / `index-CNOSF1pz.css` return HTTP `200`; focused explanation-entry/normal-route/frame coverage passes `57/57`; unchanged civic master is `1672 x 941`, `2594095` bytes, SHA-256 `FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C`. Browser discovery returned no available backend, so storage remained untouched and no direct gated viewport, console, or screenshot claim is made.
+- **W4:** use `aesthetic-polish` mode for verification-only rebuild/reload; preserve every gameplay/curriculum/storage/world/later-state lock and change nothing unless one exact presentation defect is reproduced.
+
 ## 2026-07-17 Working W2 — blank Python explanation entry integrated
 
 - **Mode/disposition:** Coder Agent used `bug-repair` mode. `RESOLVED — RP002-P1-014 / W3 AESTHETIC REVIEW NEXT`.

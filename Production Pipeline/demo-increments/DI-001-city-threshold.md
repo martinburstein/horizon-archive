@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W3 — explanation entry presentation clean
+
+- **Verdict:** `RP002-AESTH-009 / NO FINDING`; retained System completion, separate returns, explicit Pilot entry, and atomic canonical blank Teacher group pass hierarchy, focus, target, blankness, whole-group, responsive/accessibility, invariant-art, and hard later-state review.
+- **Evidence:** candidate root/JS/CSS return HTTP `200`; focused `57/57`; unchanged `1672 x 941` civic master/hash passes original-size inspection. User storage remained untouched. No Browser backend was available, so direct gated desktop/narrow, console, focus-ring, or screenshot proof is deferred rather than fabricated.
+- **W4:** `aesthetic-polish` verification-only final rebuild/reload; change nothing unless one exact presentation defect is reproduced.
+
 ## 2026-07-17 Working W2 — RP002-P1-014 repaired
 
 - **Resolved:** the accepted bounded transfer-complete group now retains one explicit Pilot `OPEN BLANK PYTHON EXPLANATION` action. Valid activation atomically opens only the existing canonical genuinely blank Teacher explanation group; submission, evaluation, feedback, result, RAI, save/completion, RP-003+, and successor remain closed.
