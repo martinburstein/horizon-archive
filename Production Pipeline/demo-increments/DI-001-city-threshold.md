@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W3 — blank Responsible-AI native-control presentation
+
+- **Verdict:** `RP002-AESTH-011 P1 OPEN — W4 AESTHETIC-POLISH NEXT`. Stable conclusion/dismissal/System blank-entry hierarchy, source order, blankness, privacy, immutable civic world/art, responsive reflow, and later-state hard stop pass.
+- **Bounded defect:** the three new RAI native selects sit in `.city-command-panel`, but custody-ledger `44px`, full-width, field appearance, focus, and forced-color rules cover only inputs/textareas; the separate `.city-overlay select` rule is not an ancestor match. Every required primary control therefore misses the locked target/focus parity.
+- **Evidence/next:** focused `69/69`, root/current assets HTTP `200`, exact served markers, both closed reference hashes, and unchanged civic-master hash pass. Browser had no available backend and storage was untouched. W4 may only extend the existing custody-ledger native-field/focus styling to selects, add one focused regression, validate/rebuild/reload, and preserve all gameplay/curriculum/storage/art/later-state boundaries.
+
 ## 2026-07-17 Working W2 — blank Responsible-AI primary candidate
 
 - **Candidate delta:** accepted Pilot Python conclusion now has one explicit zero-effect dismissal into only unchanged first System `RP002-RAI-01 / RAI-P0`; principle, mitigation, and accountable-owner controls are native and genuinely blank with no attempt or submit action.

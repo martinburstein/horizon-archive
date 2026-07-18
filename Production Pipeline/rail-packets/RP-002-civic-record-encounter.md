@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W3 — RP002-AESTH-011 RAI native-control treatment
+
+- **Verdict:** `P1 OPEN — W4 AESTHETIC-POLISH NEXT`. Stable `EXS-20C`, its separate Pilot dismissal, and atomic replacement by only blank System `RP002-RAI-01 / RAI-P0` pass ownership, hierarchy, focus transition, blank native values, control-family source order, literal no-attempt status, privacy, invariant world/art, and hard later-state review.
+- **Finding/evidence:** all three RAI controls render as `<select>` inside `.custody-ledger-fields`, but its `box-sizing`, full-width, `min-height:44px`, field appearance, `:focus-visible`, and forced-color rules include only `input`/`textarea`. The generic `.city-overlay select` target rule cannot match this `.city-command-panel` group. Focused `69/69`, current asset HTTP/markers, reference/master dimensions and hashes pass; Browser discovery returned no backend and storage remained untouched.
+- **Exact W4 edge:** Coder Agent in `aesthetic-polish` mode may extend only the existing custody-ledger native-field/focus/forced-color treatment to `select`, preserving native empty first option, three controls/source order, generic two-column wide and one-column narrow/`200%` recovery, owner-heading focus, separate returns, transient clearing, hidden Python prerequisites/zero cross-credit, privacy/offline/no-authority/no-exam-guarantee, invariant civic world/null delta, no submit/evaluate/later state, and `successor=null`. Add one focused presentation regression; change no gameplay, curriculum, case content/choices, storage, route, art, canonical reference, or later RAI behavior.
+- **Canonical closure:** the `6321100C...74DB` blank explanation reveal and `0EDA7DE3...BC6A` Pilot conclusion triptych remain closed non-runtime references; the runtime civic master remains exact `FD28D2D6...DAF6C`. W4 must not integrate or edit them.
+
 ## 2026-07-17 Working W2 — RP002-P1-016 blank Responsible-AI entry resolved
 
 - **Verdict:** `RESOLVED — W3 AESTHETIC REVIEW NEXT`. Exact stable `EXS-20C` now retains two separate returns and exposes one explicit Pilot dismissal. One private-free seven-modality/one-hit intent composes only the existing protected authority and atomically mounts unchanged first `RP002-RAI-01 / RAI-P0` under System ownership.
