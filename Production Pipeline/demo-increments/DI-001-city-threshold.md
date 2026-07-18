@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Canonical cycle reveal — neutral guided-recovery cassette
+
+- **Subject:** one detached expedition-owned single-aperture recovery cassette beside one scored frame with exactly three equal blank channels, against the vast unchanged archive.
+- **Locked decision / closed checklist:** `SC-03 / RAI-GUIDE neutral recovery-cassette identity`. The zero-credit guide is one removable practice object outside the scored frame—not a fourth decision channel, Builder technology, archive matter, evidence, credit, or world response.
+- **Prompt intent:** maximum-quality cinematic photorealistic first-person object-and-archive composition; blank surfaces; clear one-versus-three separation; no text, answer cues, protagonist trace, archive reaction, or successor imagery.
+- **Canonical status:** accepted visual reference only; not runtime-integrated and not authority for case content, evaluator logic, feedback, later state, world change, or hidden lore.
+- **Project path:** `Visual Direction/Production Masters/2026-07-17-rp002-rai-guided-recovery-reveal/rp002-rai-guided-recovery-cassette-v1.png`; `1672 x 941`; SHA-256 `B220B741414DA474117AB482E4655FC5DC22A235C36442CAE4B965FC9C9B692C`; neighboring provenance records limits and source.
+
 ## 2026-07-18 Coordinator — RAI-primary convergence accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-017 + RP002-AESTH-012`. Normal play now accepts blank `RAI-P0` through one-at-a-time `P01`–`P03`, no interim result, third-case-only simultaneous strict `9/9`, bounded failed-pair Teacher recovery/one neutral zero-credit guide/blank retry, or exact-pass genuinely blank transfer.

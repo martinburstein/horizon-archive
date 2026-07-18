@@ -1,5 +1,10 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 canonical cycle reveal — RAI guided-recovery identity
+
+- `Visual Direction/Production Masters/2026-07-17-rp002-rai-guided-recovery-reveal/rp002-rai-guided-recovery-cassette-v1.png` closes `SC-03 / RAI-GUIDE neutral recovery-cassette identity` with exactly one removable expedition-owned single-aperture cassette visibly outside one scored three-channel blank frame.
+- Canon applies only to recovery-object identity, count, ownership, separation, and archive-dominant scale. The reference is not runtime-integrated and supplies no answer, fourth dimension, evidence, credit, Builder fact, world response, authority, later state, or successor.
+
 ## 2026-07-18 coordinator release — strict RAI primary accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-017 + RP002-AESTH-012`.

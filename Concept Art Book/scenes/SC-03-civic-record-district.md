@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 canonical RAI guided-recovery item reference
+
+- Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-rai-guided-recovery-reveal/rp002-rai-guided-recovery-cassette-v1.png`, with neighboring provenance.
+- Locked visual fact: the zero-credit guided near case is exactly one compact removable expedition-owned single-aperture cassette beside, never inside, the scored frame's exactly three equal blank channels. It is not a fourth RAI dimension or answer channel; the archive remains the larger unchanged whole.
+- This closes `SC-03 / RAI-GUIDE neutral recovery-cassette identity`. Future Lore Builder, Storyboarder, Aesthetic, and Coder passes consume it as settled evidence unless a demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction reopens it.
+- Scope limit: this is a canonical item/composition reference, not a runtime-integrated plate. It defines no case content, answer, evaluator, feedback prose, credit, Builder fact, world response, access, authority, save, later state, or successor.
+
 ## 2026-07-17 compact Responsible-AI primary and recovery presentation convergence
 
 - Reuse the invariant SC-03 overview, crop, geometry, light, materials, maintenance, and continuous clocks. No new world plate, camera, effect, transition, result, reward, or per-case raster exists. Exactly one expedition group is active at a time.
