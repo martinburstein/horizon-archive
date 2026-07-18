@@ -1,5 +1,13 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 blank-explanation submission presentation continuity
+
+- The canonical three-surface foreground/archive composition below is settled evidence, not a new runtime plate. At wide size, the three expedition controls preserve its readable foreground rhythm while remaining a semantically separate human overlay; no prompt, response, score, feedback, or conclusion is baked into Builder matter. Narrow and `200%` layouts may stack controls in source order without changing count, ownership, or archive-dominant meaning.
+- One current owner/message/content/action group exists at a time: canonical blank `901 TEACHER // FEEDBACK` authoring with three transient Pilot responses and one explicit local `SUBMIT PYTHON EXPLANATION`; actually-failed-dimension-only answer-free Teacher remediation followed by a wholly blank unlimited retry; or the existing `PILOT // FLIGHT RECORDER` Python conclusion after exact current-attempt completion.
+- Entry and retry focus the Teacher heading before the appropriate blank control; feedback focuses the Teacher heading before retry; success focuses the Pilot heading before the conclusion. Removed groups have no focusable descendants. The two write-free returns remain separate from submit/retry and from one another.
+- Prompt, response prose, expected prose, evaluator/dimension logic, answers, feedback text, score transcript, and prior work never appear in world art or carry between groups. `>=44px` actions, natural responsive reflow, vertical scroll recovery, textual association, visible focus, forced-color boundaries, reduced-motion direct replacement, and seven-modality/one-hit parity preserve identical meaning.
+- SC-03, its clocks, `continuation`, and `cityStateDelta=null` remain invariant. Stop with the existing Pilot conclusion visible: no dismissal, RAI entry, review/save/completion, world response, access, authority, route reward, `RP-003+`, or successor.
+
 ## 2026-07-17 canonical blank-explanation composition reference
 
 - Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png`, with neighboring provenance.

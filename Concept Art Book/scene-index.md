@@ -1,5 +1,7 @@
 # Scene Index
 
+**SC-03 explanation-submit continuity note — 2026-07-17:** the canonical three-surface/archive composition remains settled while one expedition group replaces blank Teacher authoring with actually-failed-dimension-only answer-free remediation/wholly blank retry or the existing Pilot Python conclusion after exact current-attempt completion. Human overlay and world art remain semantically separate; no answer, score transcript, world response, later state, art, crop, geometry, or successor was added.
+
 **SC-03 canonical cycle-reveal note — 2026-07-17:** [the blank explanation archive reveal](../Visual%20Direction/Production%20Masters/2026-07-17-rp002-blank-explanation-reveal/rp002-blank-explanation-archive-reveal-v1.png) locks one wide-layout fact: exactly three blank recessed foreground civic surfaces sit at the edge of an operating archive whose scale continues far beyond the frame. This closes `SC-03 / EX-20 wide composition relationship`. It is a canonical visual reference, not yet a runtime-integrated world plate, and defines no answer, Builder speech, judgment, world response, or successor.
 
 **SC-03 blank-explanation-entry continuity note — 2026-07-17:** the unchanged overview master now supports direct whole-group replacement from visible System-owned `FT-20C`, through one explicit Pilot-owned `OPEN BLANK PYTHON EXPLANATION` action, to only the existing canonical genuinely blank Teacher explanation group. No new plate, final art, prompt preview, attempt, result, world state, later route, or successor was added.

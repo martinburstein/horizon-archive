@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A2 continuity — explanation submission presentation
+
+- **Presentation:** invariant SC-03 plus one active expedition group: canonical blank Teacher three-part authoring -> explicit Pilot local submit -> actually-failed-dimension-only answer-free Teacher remediation and wholly blank retry, or exact current-attempt completion -> existing Pilot Python conclusion.
+- **Canonical visual evidence:** the accepted three-blank-surface foreground/archive composition is consumed as settled wide-layout evidence. No art, crop, plate, geometry, or layout question was reopened; the human overlay remains semantically separate and narrow/`200%` layouts may stack controls without changing count or meaning.
+- **Focus/accessibility/privacy:** owner-heading-first focus, existing first-failed-control recovery, separate write-free returns, seven modalities/one hit, `>=44px` actions, non-color/forced-color/reduced-motion parity, natural responsive reflow, transient-only work, fail-closed sanitation/resume, and blank retry are locked.
+- **Hard stop / next:** no conclusion dismissal, RAI, review/save/completion, `RP-003+`, world/route/access/authority/external effect, or successor. A3 performs only NO-REOPEN preservation; accepted Demo runtime/assets remain unchanged.
+
 ## 2026-07-17 Advance A1 continuity — explanation submission ownership
 
 - **Boundary:** accepted canonical blank `EX-20` -> three Pilot-authored session-only responses -> one explicit local `SUBMIT PYTHON EXPLANATION` intent -> existing strict three-dimension evaluation only.
