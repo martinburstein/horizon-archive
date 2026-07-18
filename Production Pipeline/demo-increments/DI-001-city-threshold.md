@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A5 continuity — protected RAI-primary convergence controller
+
+- **Cycle / disposition:** `RP002-P1-017 / A5 Coder advance — REVISE; ACCEPTED W1 NEXT`.
+- **Protected delta:** new pure unimported controller composes accepted blank `RAI-P0` through transient `P01`/`P02`/`P03` one-hit submissions, no interim result, simultaneous strict `9/9` after `P03`, exact-pass blank transfer, or actual-failed-pair Teacher feedback -> neutral zero-credit guide -> wholly blank first-failed retry. No normal Demo integration occurred.
+- **Boundaries:** choices and guide work remain session-only; sanitation reconstructs only blank `P01`, blank first-failed retry, or blank transfer. Transfer evaluation/action and every later RAI/review/save/route/world/successor state remain absent. Existing Python evidence is hidden prerequisite-only with zero cross-credit; accessibility, privacy, offline/no-authority/no-exam-guarantee, separate returns, invariant world/null delta, and no successor remain exact.
+- **Evidence:** focused `12/12`; related seams `130/130`; full `640/640`; Responsible-AI validator; production build on unchanged accepted `index-C2MkEQI0.js` / `index-B85gq_mk.css`; purity/non-integration/restore/patch gates pass.
+- **Next:** W1 plays only the accepted live blank first RAI case and reports its earliest normal submission/evaluation/recovery gap without inspecting the protected module or mutating storage. Protected path with one mapped miss remains `3–5 minutes`; time is neither stored nor scored.
+
 ## 2026-07-18 Advance A4 continuity — compact RAI-primary evaluation and recovery graph
 
 - **Cycle / disposition:** `RP002-P1-017 / A4 Gameplay Master — PASS; PROTECTED A5 NEXT`.
