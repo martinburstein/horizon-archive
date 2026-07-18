@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Canonical cycle reveal — blank RAI review frame
+
+- **Checklist closure:** `SC-03 / RAI-P0 blank review-frame ownership and scale` is closed by `Visual Direction/Production Masters/2026-07-17-rp002-blank-rai-primary-reveal/rp002-blank-rai-review-frame-v1.png` and neighboring provenance.
+- **Locked fact:** blank `RAI-P0` has one expedition-owned three-channel frame identity. Exactly three equal empty channels remain ordered and materially separate from the civic archive; they are not Builder doctrine, answers, feedback, evidence, permission, authority, or a world response.
+- **Status/limit:** canonical item/composition reference only, not runtime-integrated. It authorizes no case content, selection, scoring, remediation, transfer, save, route, access, city effect, successor, or hidden lore.
+
 ## 2026-07-17 Coordinator release — blank Responsible-AI primary accepted
 
 - **Verdict:** `PASS — IN DEMO PARTIAL / RP002-P1-016 + RP002-AESTH-011 ACCEPTED`.

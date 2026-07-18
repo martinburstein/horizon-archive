@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-17 canonical blank-RAI review-frame reference
+
+- Canonical asset: `../../Visual Direction/Production Masters/2026-07-17-rp002-blank-rai-primary-reveal/rp002-blank-rai-review-frame-v1.png`, with neighboring provenance.
+- Locked visual fact: blank `RP002-RAI-01 / RAI-P0` is one bounded expedition-owned review frame with exactly three equal empty channels in strict left-to-right order. They correspond only to the human course's principle, mitigation, and accountable-owner decision families and are materially separate from the vast unchanged civic archive.
+- This closes `SC-03 / RAI-P0 blank review-frame ownership and scale`. Future Lore Builder, Storyboarder, Aesthetic, and Coder passes consume it as settled evidence unless a demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction reopens it.
+- Scope limit: this is a canonical item/composition reference, not a runtime-integrated plate. The channels and cold edge light are not Builder doctrine, answers, feedback, evidence, permission, authority, a city response, a transfer state, a save result, or a successor.
+
 ## 2026-07-17 Pilot-conclusion dismissal to blank Responsible-AI presentation continuity
 
 - Reuse the invariant SC-03 world, crop, geometry, light, materials, maintenance, and clocks. The accepted Pilot conclusion and its closed canonical one-object/three-equal-lamina identity remain complete and solely visible until the explicit Pilot action `DISMISS PYTHON CONCLUSION AND OPEN RESPONSIBLE-AI REVIEW`; passive attention, time, reflow, motion, return, sanitation, resume, and Tour never advance it.

@@ -1,5 +1,15 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Canonical cycle reveal — blank RAI review frame
+
+- **Subject / scale:** `ITEM / INTERFACE / INTERIOR`; one compact expedition-owned review frame above a civic service socket, with the archive continuing beyond and below it as the larger unchanged whole.
+- **Canonical decision locked:** blank `RP002-RAI-01 / RAI-P0` has one human review-frame identity: exactly three equal empty channels in strict order, corresponding only to principle, mitigation, and accountable-owner decision families. The channels are not Builder text, native doctrine, answers, feedback, evidence, permission, authority, or a city response.
+- **Checklist item closed:** `SC-03 / RAI-P0 blank review-frame ownership and scale`.
+- **Status:** `CANONICAL VISUAL REFERENCE — NOT RUNTIME-INTEGRATED`.
+- **Asset / provenance:** `Visual Direction/Production Masters/2026-07-17-rp002-blank-rai-primary-reveal/rp002-blank-rai-review-frame-v1.png`; neighboring `PROVENANCE.md`; `1672 x 941`; SHA-256 `28880C471DF085033971BA09900A7E02DA50C1D477FADB631167F66A1D05DE58`.
+- **Safety:** no text, symbol, selection, score, answer cue, human trace, Builder speech, city reaction, access, authority, save, successor, or hidden lore appears. Cold edge light belongs only to the expedition frame.
+- **Reopen only for:** demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction.
+
 ## 2026-07-17 Coordinator release — blank Responsible-AI primary accepted
 
 - **Verdict:** `PASS — IN DEMO PARTIAL / RP002-RAI-01 BLANK PRIMARY ENTRY ACCEPTED`.
