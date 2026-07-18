@@ -1,5 +1,14 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A4 continuity — compact RAI-transfer graph
+
+- **Cycle / disposition:** `RAI transfer / A4 Gameplay Master — PASS; PROTECTED A5 NEXT`.
+- **Protected graph:** accepted blank `T01` -> transient one-hit Pilot `T01`, `T02`, and `T03` submissions with no interim evaluation -> frozen simultaneous strict `9/9` only after `T03` -> exact pass clears work and initializes only separate blank Teacher three-boundary entry, or any miss initializes only actual-failed-case/dimension answer-free Teacher feedback -> one neutral zero-credit guide -> complete clearing and wholly blank deterministic first-failed retry.
+- **Recovery and controls:** one active group; seven modalities/one hit; invalid/stale/duplicate/combined/private/later requests fail closed; separate write-free returns; close/reload/Tour sanitation clears unfinalized choices, guide work, feedback prose, private values, and focus/token history; resume reconstructs only blank `T01`, blank first-failed retry, or blank Teacher entry; deterministic owner-heading/error-first focus and responsive/accessibility parity remain exact.
+- **Evidence and invariants:** only the frozen final evaluator result may establish transfer `9/9`; hidden `PY-009` evidence remains prerequisite-only with no cross-credit. Existing allowlists, campaign/Tour separation, invariant SC-03/world/clocks, unchanged continuation, `cityStateDelta=null`, offline/no-authority/no-exam-guarantee, provisional-human-label/no-native-fact/no-authority meaning, hard later-state absence, and `successor=null` remain exact.
+- **Validation:** RP-002 validator self-test `PASS`; focused frozen Custody Ledger transfer/primary-convergence suites `66/66`; source inspection confirms exact existing catalogs, evaluator, recovery, guide, sanitation/resume, blank entry, and null-delta authorities; documentation/diff checks pass.
+- **Demo effect / next:** documentation-only; the accepted Demo remains at genuinely blank RAI transfer. A5 builds one pure unimported controller and stops at blank Teacher entry or blank transfer retry without exposing explanation evaluation, normal integration, storage, art, world, or later state. Protected path with one mapped miss is `3–5 minutes`; time is neither stored nor scored.
+
 ## 2026-07-18 Advance A3 preservation — RAI transfer evidence firewall
 
 - **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank RAI transfer.

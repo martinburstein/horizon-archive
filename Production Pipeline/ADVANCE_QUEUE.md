@@ -1,5 +1,11 @@
 # Advance Queue
 
+## 2026-07-18 A4 convergence — compact RAI-transfer graph
+
+- **Disposition:** `PASS — T01/T02/T03 STRICT-TRANSFER GRAPH LOCKED / PROTECTED A5 NEXT`.
+- **Graph:** one existing `rai_transfer` case-indexed state carries wholly blank `T01` -> `T02` -> `T03`, transient one-hit Pilot submissions, no interim evaluation, and frozen simultaneous strict `9/9` only after `T03`; miss uses actual-failed-pair Teacher feedback -> one neutral zero-credit guide -> wholly blank first-failed retry, while exact pass mounts only separate blank Teacher three-boundary entry.
+- **Exact next:** A5 builds one pure unimported controller by composing frozen authorities, proves fail-closed modality/privacy/resume/invariant boundaries, and stops before explanation submission/evaluation/feedback/result or every later state. No case, action, phase, score, micro-seam, runtime import, world change, RP-013, or successor is authorized.
+
 ## 2026-07-18 A3 preservation — RAI transfer evidence firewall
 
 - **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`.

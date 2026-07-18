@@ -1,5 +1,11 @@
 # Working Queue
 
+## 2026-07-18 Advance A4 handoff — transfer graph locked
+
+- **Advance result:** `PASS — PROTECTED A5 TRANSFER CONTROLLER NEXT`. Team 2 remains at the coordinator-accepted genuinely blank RAI transfer. The shortest graph composes only existing `T01`–`T03`, delayed simultaneous strict `9/9`, actual-failed-pair Teacher recovery/one zero-credit guide/blank first-failed retry, or exact-pass blank Teacher three-boundary entry.
+- **Normal boundary:** no normal runtime, accepted Demo, art, storage, world, or Team 2 position changed. W1 waits until A5 completes and may then report only the earliest normal gap beginning at the accepted blank transfer.
+- **Closed:** explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, world/route/access/authority/external effect, RP-013, and every successor.
+
 ## 2026-07-18 Advance A3 handoff — transfer mapping remains solidified
 
 - **Advance result:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. The compact blank-transfer -> delayed strict `9/9` -> mapped failed-pair recovery/one zero-credit guide/blank retry -> exact-pass blank Teacher entry sequence preserves the frozen `RP002-RAI-01` evidence contract and independent hidden `PY-009` prerequisites.
