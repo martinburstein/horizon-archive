@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — Python explanation submission blocker
+
+- **Issue:** `RP002-P1-015 / P1`; accepted canonical blank Teacher `EX-20 / 30-D` renders the unchanged prompt, three genuinely blank controls, literal no-attempt status, owner-heading focus contract, separate returns, responsive/accessibility metadata, and invariant civic world, but exposes no `SUBMIT PYTHON EXPLANATION` action or normal local-evaluation handler.
+- **Expected/actual:** one private-free seven-modality/one-hit Pilot submit should use only the existing frozen evaluator and replace the group with actual-failed-dimension-only answer-free Teacher remediation plus wholly blank retry, or exact current-attempt `3/3` plus only the existing Pilot conclusion. Actual normal UI stops at blank authoring; no evaluation, feedback/retry, or conclusion is reachable.
+- **Evidence:** accepted root/JS/CSS HTTP `200`; served `index-DOgjNRZx.js` contains blank-entry/no-attempt markers but not `SUBMIT PYTHON EXPLANATION`; focused accepted exercise/entry/normal-route coverage `107/107` passes. No Browser backend was available, so no gated live claim was fabricated and user storage remained untouched.
+- **W2 boundary:** integrate only the existing protected submission authority into normal App/route/UI, keep all prose/results transient, preserve separate returns and every zero-effect/accessibility/privacy/world lock, and stop with feedback/blank retry or the existing Pilot conclusion before conclusion dismissal, RAI, review/save/completion, `RP-003+`, authority/world effect, or successor.
+
 ## 2026-07-17 Advance A5 continuity — protected explanation submission seam
 
 - **Disposition:** `REVISE — PROTECTED EXS-00/10/20F/20C ONLY / ACCEPTED W1 NEXT`.

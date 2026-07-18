@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W1 — Python explanation submission blocker
+
+- **Issue/disposition:** `RP002-P1-015 / P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted live `EX-20 / 30-D` retains the canonical Teacher prompt, three genuinely blank controls, literal no-attempt state, owner-heading focus, separate write-free returns, responsive/accessibility contract, invariant civic world, and every hard later-state lock, but the normal group has no explicit `SUBMIT PYTHON EXPLANATION` control, response dispatch, evaluator integration, feedback/retry, or Pilot conclusion path.
+- **Evidence:** `index-DOgjNRZx.js` / `index-CNOSF1pz.css` and root return HTTP `200`; the served JS contains accepted blank-entry/no-attempt markers but no submit label. Focused accepted exercise, explanation-entry, and normal-route coverage passes `107/107`. The in-app Browser had no available backend; user storage was not inspected or mutated, and no gated live traversal is claimed. Production code/assets and the protected A5 module remain untouched.
+- **Exact W2 boundary:** compose the existing protected submission authority into only the normal blank explanation group. Keep three session-only Pilot responses and one private-free seven-modality/one-hit submit; actual failures alone yield existing answer-free Teacher associations followed by wholly blank unlimited retry and deterministic Teacher-heading/first-failed-control recovery; exact current-attempt `3/3` alone yields only the existing Pilot Python conclusion. Persist no transient work/result and preserve hidden prerequisites, separate returns, sanitation/resume, accessibility/privacy/Tour/offline/no-authority/no-exam-guarantee, invariant world, unchanged `continuation`, `cityStateDelta=null`, zero external effect, and no successor. Stop before conclusion dismissal, `RP002-RAI-01`, review/save/completion, `RP-003+`, world response, access, authority, route reward, identity disclosure, external action, or successor.
+
 ## 2026-07-17 Advance A5 continuity handoff — protected Python explanation submission
 
 - **Mode/disposition:** `advance` / `REVISE — PROTECTED EXPLANATION-SUBMISSION SEAM ONLY / ACCEPTED W1 NEXT`.
