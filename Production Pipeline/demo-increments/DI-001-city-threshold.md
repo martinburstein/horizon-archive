@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A1 continuity — explanation submission ownership
+
+- **Boundary:** accepted canonical blank `EX-20` -> three Pilot-authored session-only responses -> one explicit local `SUBMIT PYTHON EXPLANATION` intent -> existing strict three-dimension evaluation only.
+- **Ownership/result:** Pilot owns authored prose and submit intent; the existing evaluator alone judges the current attempt; System may report only the bounded result; `901 TEACHER // FEEDBACK` owns answer-free remediation for actually failed dimensions. Failure clears all prose and returns to a wholly blank retry with first-failed-control focus; exact completion may establish only bounded PY-009 explanation evidence and the existing Pilot conclusion.
+- **Preserved:** hidden independent primary/transfer prerequisites; blank-primary durability; separate write-free returns; seven modalities/one hit; fail-closed sanitation/resume; transient-only explanation work; invariant SC-03/world/clocks; responsive/accessibility parity; offline/no-authority/no-exam-guarantee; unchanged `continuation`; `cityStateDelta=null`; zero story/save/world/route/access/authority/external effect; no successor.
+- **Hard stop / next:** conclusion dismissal, `RP002-RAI-01`, review/save/completion, `RP-003+`, and every later state remain closed. A2 boards this exact owner/result hierarchy without changing the accepted Demo, art, runtime, curriculum, storage, route, or world state.
+
 ## 2026-07-17 Canonical cycle reveal — blank explanation archive threshold
 
 - **Subject / scale:** `CONSOLE / THRESHOLD / LANDSCAPE`; exactly three blank recessed foreground surfaces against a Civic Record District archive extending vertically, laterally, and into atmospheric depth.

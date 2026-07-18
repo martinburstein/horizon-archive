@@ -1,5 +1,7 @@
 # Horizon Archive Story Rail Map
 
+Latest Advance continuity handoff: `2026-07-17 / RP002-P1-015 A1 EXPLANATION SUBMISSION OWNERSHIP PASS — A2 NEXT`. From Team 2's accepted blank Teacher `EX-20`, the Pilot owns three session-only responses and one explicit local submit intent; only the existing strict three-dimension evaluator may judge them. Actual misses permit answer-free failed-dimension Teacher remediation and a wholly blank retry; exact completion permits only bounded Python explanation evidence and the existing Pilot conclusion. Team 1 remains complete at RP-012 with no RP-013/successor; Team 2 remains on RP-002 and the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
+
 Latest coordinator acceptance: `2026-07-17 / RP-002 PY-009 BLANK EXPLANATION ENTRY — IN DEMO PARTIAL`. Independent full `607/607`, `15/15` validators, build, complete E2E, responsive/HTTP/log/patch/cleanup gates pass. Team 2's accepted edge is canonical blank Teacher `EX-20`; Team 1 remains complete at RP-012 with no RP-013/successor and the ordered Advance lead remains ten packets (`RP-003`–`RP-012`).
 
 Latest Working handoff: `2026-07-17 / RP002-AESTH-009 W4 VERIFIED — COORDINATOR NEXT`. Verification-only final rebuild/HTTP refresh retains exact System `FT-20C`, two returns, explicit Pilot entry, and atomic canonical blank Teacher `EX-20` without an open presentation defect; focused `57/57`, full `607/607`, validator, build, art/HTTP/hash/patch gates pass. Team 2 remains on RP-002 for independent release validation; Team 1 remains complete at RP-012 with no successor and a ten-packet lead (`RP-003`–`RP-012`).
@@ -167,7 +169,7 @@ Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 A
 - Current Working position override: `RP-002 — IN DEMO PARTIAL / BLANK SC-03-10 ACCEPTED`. P0, staged continuation, blank entry, return, and bounded resume pass; observations remain protected.
 
 - Team 2 live-demo position: `Accepted baseline — Witness Corridor complete -> THE CITY BENEATH / Prologue complete credits`
-- Team 2 active packet: `RP-002 — IN DEMO PARTIAL / PY-009 BOUNDED TRANSFER EVIDENCE ACCEPTED`
+- Team 2 active packet: `RP-002 — IN DEMO PARTIAL / CANONICAL BLANK PYTHON EXPLANATION ENTRY ACCEPTED`
 - Team 1 railhead: `RP-012 — PROMOTED TO WORKING / FINAL PACKET`
 - Ordered Advance lead beyond Team 2 accepted baseline: `11 ordered packets — RP-002 through RP-012 promoted`
 - Whole-story rail status: `OUTLINED AND PROTECTED END TO END`
