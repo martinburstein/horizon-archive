@@ -1,5 +1,12 @@
 # Advance Queue
 
+## 2026-07-18 A1 convergence — RAI transfer to blank Teacher explanation
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`.
+- **Merged shortest path:** accepted genuinely blank RAI transfer -> unchanged System-owned `T01`–`T03` one at a time -> transient Pilot three-dimension submit per case -> no interim result -> simultaneous strict `9/9` only after `T03` -> actual-failed-pair Teacher feedback / one neutral zero-credit guide / wholly blank first-failed transfer retry, or exact-pass entry into only the existing separate Teacher three-boundary prompt with all three controls blank.
+- **Ownership lock:** transfer cases and the prompt are expedition course material, not Builder doctrine or city process. Application labels remain provisional human work, establish no native fact, and grant no access, consent, permission, safeguard execution, or authority.
+- **Trim/hard stop:** existing cases, answers, evaluator, remediation map, guide, sanitizer, resume, evidence allowlist, and prompt are the only authorities. Add no micro-seam, result board, optional branch, explanation submit/evaluator/result, RAI conclusion, save/completion, world effect, `RP-003+`, RP-013, or successor. A2 owns compact presentation convergence only.
+
 ## 2026-07-18 coordinator release — next convergence edge
 
 - **Accepted:** normal RP-002 now reaches strict three-case RAI-primary `9/9`, bounded answer-free failed-pair recovery, and exact-pass genuinely blank transfer, with exactly three equal wide controls and one-column narrow recovery.

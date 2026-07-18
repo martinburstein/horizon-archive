@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A1 convergence — RAI transfer to blank explanation ownership
+
+- **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. Documentation-only; the accepted Demo remains at the genuinely blank RAI transfer boundary.
+- **Composed authority:** unchanged System `T01`–`T03` one at a time, transient Pilot choices/submits, no interim result, third-case-only simultaneous strict `9/9`, mapped actual-failed-pair Teacher feedback -> one neutral zero-credit guide -> wholly blank deterministic retry, or exact-pass clearing into only the existing blank Teacher three-boundary prompt.
+- **Meaning:** application labels remain provisional human course work, not native fact and never authority. Transfer evaluation is expedition-local and cannot create Builder/city/Machine judgment, safeguard execution, access, consent, permission, route reward, world response, external action, exam result, or successor progress.
+- **Demo effect / next:** none. A2 owns only compact presentation convergence and may not reopen canonical visual decisions. Explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, RP-013, world/authority effects, and every successor remain closed.
+
 ## 2026-07-17 Canonical cycle reveal — neutral guided-recovery cassette
 
 - **Subject:** one detached expedition-owned single-aperture recovery cassette beside one scored frame with exactly three equal blank channels, against the vast unchanged archive.

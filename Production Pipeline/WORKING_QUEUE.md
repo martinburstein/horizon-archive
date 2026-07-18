@@ -1,5 +1,11 @@
 # Working Queue
 
+## 2026-07-18 Advance A1 handoff — transfer convergence underway
+
+- **Advance result:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. A1 merged the existing blank RAI transfer, `T01`–`T03` simultaneous strict `9/9`, mapped failed-pair recovery, one neutral zero-credit guide, wholly blank retry, and exact-pass blank Teacher three-boundary entry into one ownership path. No normal runtime or accepted Demo state changed.
+- **Team 2 position:** remains on coordinator-accepted RP-002 at genuinely blank RAI transfer. W1 waits until A2–A5 complete and then reports only the earliest normal player-facing gap in the composed transfer/evaluator/recovery/explanation-entry path without changing storage/save.
+- **Closed:** explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, world/route/access/authority/external effects, RP-013, and every successor.
+
 ## 2026-07-18 coordinator release — accepted Team 2 edge
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-017 + RP002-AESTH-012`.
