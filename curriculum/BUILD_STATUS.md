@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-18 RP-002 RAI primary/evaluation/recovery preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: accepted blank `RAI-P0`, sequential `P01`–`P03`, transient local Pilot submissions, delayed simultaneous `9/9`, mapped recovery, wholly blank retry, and exact-pass blank transfer preserve the frozen mapping.
+- [x] Display, editing, submit activation, focus, hover, dwell, reflow, motion, replacement, feedback, guidance, retry, return, resume, sanitation, modality, and Tour remain zero evidence except the frozen evaluator's final simultaneous result.
+- [x] Exact `9/9` opens only genuinely blank transfer; actual misses alone select failed-case/dimension answer-free Teacher feedback, one neutral zero-credit guide, complete clearing, and deterministic wholly blank unlimited retry.
+- [x] Cases, answers, dimensions, order, threshold, evaluator, remediation, evidence allowlist, privacy, independent `PY-009` prerequisites/no cross-credit, accessibility, offline/no-authority/no-exam-guarantee, invariant world/null delta, and no successor remain frozen.
+- [x] RP-002 self-test and canonical forms pass; curriculum JSON parses; focused evaluator/blank-entry suites pass; frozen curriculum authorities remain byte-stable.
+- [ ] Gameplay Master defines only one bounded protected primary/evaluation/recovery graph and stops before RAI transfer evaluation or every later state.
+
 ## 2026-07-17 RP-002 Pilot dismissal / blank RAI-primary preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: one explicit zero-effect Pilot dismissal and blank `RAI-P0` arrival add no attempt, dimension, score, evidence, mastery, save, or cross-credit.

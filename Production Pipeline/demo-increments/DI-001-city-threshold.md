@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Advance A3 continuity — RAI primary evidence preservation
+
+- **Disposition:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
+- **Evidence firewall:** displaying, editing, submitting, focusing, replacing, returning, resuming, sanitizing, or traversing `P01` and `P02` creates no scored result or interim evidence. The three submitted response groups remain transient private work; only the frozen evaluator's simultaneous result after `P03` may establish strict current-attempt `9/9`.
+- **Pass/recovery:** exact `9/9` may mount only the existing genuinely blank RAI transfer boundary. Any miss may expose only actual-failed-case/dimension answer-free Teacher feedback, one separate neutral zero-credit System guide, complete private/transient clearing, and a wholly blank unlimited retry at deterministic first-incomplete/first-failed focus.
+- **Preserved curriculum:** course cases, prompts, choice families, answers, principle/mitigation/accountable-owner dimensions, order, threshold, evaluator, remediation map, guided case, allowlisted finalized evidence, independent hidden `PY-009` prerequisites/no cross-credit, privacy, accessibility, offline/no-authority/no-exam-guarantee, and no successor remain frozen.
+- **Demo effect / next:** none. Runtime, tests, assets, art, storage, route, world/null delta, Team 2 position, transfer evaluator, and every later state remain unchanged or closed. A4 owns one bounded protected `RAI-P0 -> P01/P02/P03 -> 9/9 or mapped blank recovery` graph only.
+
 ## 2026-07-17 Advance A2 convergence — compact RAI primary and recovery presentation
 
 - **Disposition:** `PASS — CONVERGE + MERGE + TRIM / A3 NEXT`. Documentation-only; the accepted Demo remains at genuinely blank `RP002-RAI-01 / RAI-P0`.
