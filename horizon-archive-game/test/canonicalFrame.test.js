@@ -64,3 +64,19 @@ test("representative 1920x1080 desktop contains the complete accepted shell", ()
   assert.ok(gameWidth >= viewportWidth * 0.75, "world remains visually dominant");
   assert.ok(worldHeight + interfaceHeight + desktopShellInset <= viewportHeight);
 });
+
+test("Python explanation authoring preserves three wide peers and one-column narrow or 200% recovery", () => {
+  const arrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  assert.match(arrival,
+    /\["EX-20", "EXS-00"\]\.includes\(primaryPhase\)[\s\S]*?<dl className="custody-ledger-fields custody-ledger-explanation-controls">/);
+  assert.match(styles,
+    /\.custody-ledger-fields \{[^}]*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+  assert.match(styles,
+    /\.custody-ledger-explanation-controls \{[^}]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/);
+  assert.match(styles,
+    /data-canonical-layout="narrow"\] \.custody-ledger-fields \{[^}]*grid-template-columns: 1fr;/);
+  assert.match(styles,
+    /@media \(max-width: 1279px\) \{[\s\S]*?\.custody-ledger-explanation-controls \{[^}]*grid-template-columns: 1fr;/);
+  assert.doesNotMatch(arrival,
+    /rp002-blank-explanation-archive-reveal-v1|2026-07-17-rp002-blank-explanation-reveal/);
+});

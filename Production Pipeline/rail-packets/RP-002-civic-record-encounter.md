@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-17 Working W4 — RP002-AESTH-010 resolved
+
+- **Mode/verdict:** `aesthetic-polish` / `RESOLVED — FINAL DEMO REBUILT / COORDINATOR NEXT`. W4 repaired only the reproduced wide authoring composition defect.
+- **Repair/evidence:** canonical `EX-20 / EXS-00` now uses a state-specific authoring class with exactly three equal `minmax(0, 1fr)` columns in one representative-wide row and one natural source-ordered column at narrow/`200%` effective widths. Focused `60/60`, full `618/618`, RP-002 validator, build, immutable-art, served-marker/HTTP/hash, final HTTP refresh, and patch gates pass on `index-BvLuO_XD.js` / `index-B112XlTz.css`.
+- **Boundary:** the generic custody grid, canonical reference/runtime-art separation, blankness, private authoring, evaluator/feedback/retry/conclusion, focus/targets/returns/modalities/accessibility, persistence/privacy/world/null-delta, and hard later-state absence remain exact. Browser discovery returned no backend; storage remained untouched and coordinator owns independent release/live gates.
+
 ## 2026-07-17 Working W3 — RP002-AESTH-010 three-surface authoring layout
 
 - **Verdict:** `P2 OPEN — W4 AESTHETIC-POLISH NEXT`. `EXS-00`, `EXS-20F`, and `EXS-20C` retain correct one-active-owner replacement, answer-free failed-dimension association, private clearing/blank retry, heading-first recovery, `>=44px` targets, forced-color/reduced-motion/non-color contracts, invariant civic world, and hard later-state absence.

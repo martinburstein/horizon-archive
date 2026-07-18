@@ -448,7 +448,7 @@ export function CivicRecordArrival({
                   Blank Python explanation
                 </h2>
                 <p>{primaryInteraction.ownershipMessage.text}</p>
-                <dl className="custody-ledger-fields">
+                <dl className="custody-ledger-fields custody-ledger-explanation-controls">
                   {(primaryInteraction.explanationControls?.map(({ id }) => id)
                     ?? Object.keys(primaryInteraction.explanationSelections ?? {})).map((dimension, index) => (
                     <div key={dimension} data-field-state="editable">

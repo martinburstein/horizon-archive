@@ -1508,6 +1508,7 @@ h1 {
 
 .custody-ledger-work-image h2 { margin: 4px 0 10px; font-size: 1rem; }
 .custody-ledger-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 0; }
+.custody-ledger-explanation-controls { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .custody-ledger-fields > div { min-width: 0; padding: 7px; border: 1px solid #38404e; }
 .custody-ledger-fields dt { font-size: 0.72em; letter-spacing: 0.08em; text-transform: uppercase; }
 .custody-ledger-fields dd { margin: 4px 0 0; overflow-wrap: anywhere; font-family: "Courier New", monospace; }
@@ -1542,6 +1543,10 @@ h1 {
 }
 
 .canonical-game-frame[data-canonical-layout="narrow"] .custody-ledger-fields { grid-template-columns: 1fr; }
+
+@media (max-width: 1279px) {
+  .custody-ledger-explanation-controls { grid-template-columns: 1fr; }
+}
 
 .city-overlay {
   position: absolute;

@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W4 — three-surface authoring layout resolved
+
+- **Verdict:** `RP002-AESTH-010 / RESOLVED — COORDINATOR NEXT`. Only the explanation authoring list received a state-specific class: three equal wide columns in one row, with one-column narrow/`200%` recovery and unchanged source order.
+- **Preserved:** the generic custody grid remains two-column; the canonical archive reveal remains non-integrated reference evidence; the runtime civic plate/crop/world/clocks, gameplay, privacy, accessibility, storage, and hard later-state boundary remain unchanged.
+- **Evidence:** focused `60/60`, full `618/618`, RP-002 validator, build, immutable-art, served-marker/HTTP/hash, cache-bypassed final HTTP refresh, and patch gates pass on `index-BvLuO_XD.js` / `index-B112XlTz.css`. No Browser backend was available; storage remained untouched and direct gated live claims remain deferred to coordinator.
+
 ## 2026-07-17 Working W3 — three-surface authoring finding
 
 - **Verdict:** `RP002-AESTH-010 / P2 OPEN — W4 NEXT`. The new blank/authoring, failed-dimension feedback/retry, and exact `3/3` conclusion states pass ownership, focus, target-size, privacy, accessibility, invariant-world, and hard later-state review except one wide composition defect.
