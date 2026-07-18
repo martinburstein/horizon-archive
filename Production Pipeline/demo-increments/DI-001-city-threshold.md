@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A5 continuity — protected explanation submission seam
+
+- **Disposition:** `REVISE — PROTECTED EXS-00/10/20F/20C ONLY / ACCEPTED W1 NEXT`.
+- **Protected proof:** exact accepted blank Teacher `EX-20` now has one pure unimported controller through session-only three-part Pilot authoring and a private-free seven-modality/one-hit submit into only the frozen evaluator. Actual failed dimensions produce answer-free Teacher associations and a wholly blank unlimited retry; exact current-attempt `3/3` produces only the existing Pilot conclusion.
+- **Recovery/safety:** prose clears before feedback/retry, blank/conclusion restore is exact, contamination downgrades blank, separate returns stay byte-stable, and accessibility/privacy/offline/no-authority/no-exam-guarantee/world/null-delta/no-successor contracts remain exact. Conclusion dismissal and every RAI/later state remain absent.
+- **Demo effect/evidence:** none. App, normal route/UI, storage, art, assets, accepted bundle, and live Demo remain unchanged. Focused `10/10`, full `617/617`, RP-002 validator, build, unchanged accepted assets, leakage/purity, and patch gates pass. W1 reports only the accepted live blank-group submission/evaluation gap.
+
 ## 2026-07-17 Advance A4 continuity — explanation submission graph
 
 - **Disposition:** `PASS — EXS-00/10/20F/20C PROTECTED GRAPH / A5 NEXT`.
