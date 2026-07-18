@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Advance A1 continuity — Pilot conclusion dismissal ownership
+
+- **Boundary:** accepted visible `PILOT // FLIGHT RECORDER` Python conclusion -> one explicit Pilot-owned zero-effect dismissal -> only the existing genuinely blank `RP002-RAI-01 / RAI-P0` System primary group.
+- **Ownership/meaning:** dismissal acknowledges and clears only the local conclusion presentation. It is expedition-course navigation, not submission, evaluation, evidence, mastery, save, transmission, access, authority, safeguard execution, city/world response, exam result, external action, or successor progress.
+- **Carry-free destination:** the Responsible-AI group uses only its existing System copy and first course-authored case; principle, mitigation, and accountable-owner choices/checks all begin blank. No Python prose/value/answer/check/feedback/result/transcript/conclusion/token/focus/private work carries; completed Python evidence remains hidden prerequisite-only and cannot cross-credit.
+- **Demo effect / hard stop:** none. The accepted runtime, assets, art, storage, route, world, and Pilot-conclusion boundary remain unchanged. A2 owns presentation continuity only; every RAI submit/evaluate/feedback/result/evidence/transfer/explanation/conclusion and every review/save/completion/`RP-003+`/world-authority/successor state remains closed.
+
 ## 2026-07-17 Canonical cycle reveal — Pilot conclusion triptych
 
 - **Subject / scale:** `ITEM / INTERFACE / INTERIOR`; one compact expedition-owned triptych wafer above a deep civic service socket, with the archive continuing beyond it as the larger unchanged whole.
