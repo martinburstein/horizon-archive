@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-17 Working W1 — blank Python explanation entry blocker
+
+- **Issue:** `RP002-P1-014 / P1`; accepted `FT-20C` truthfully shows System-owned current-attempt `6/6` transfer evidence, but there is no explicit Pilot `OPEN BLANK PYTHON EXPLANATION` control or normal App handler.
+- **Stable evidence:** `index-D0-watPG.js` / `index-ghzUiZe9.css` serve with HTTP `200`; the JS contains the complete acknowledgement and both separate returns but not the entry label. Focused normal/protected suites pass `62/62`, including exact `6/6`, byte-stable write-free returns, and hard later-state absence. User storage was untouched.
+- **W2:** integrate only the existing protected explanation-entry authority into normal App/route/UI. Keep `FT-20C` until one deliberate Pilot intent, then atomically open only the canonical carry-free blank Teacher explanation group; stop before submission/evaluation/feedback/result and every later boundary.
+
 **Latest Advance continuity handoff (RP002-P1-014 / A5):** `REVISE — PROTECTED EXPLANATION-ENTRY SEAM ONLY / W1 NEXT`. One pure unimported controller proves exact accepted `FT-20C` retention, explicit seven-modality/one-hit Pilot `OPEN BLANK PYTHON EXPLANATION`, and atomic canonical genuinely blank Teacher entry with hidden prerequisite-only evidence, exact resume/sanitation, separate returns, accessibility/privacy, invariant world, zero effect, and no later state/successor. Focused `8/8`, full `606/606`, RP-002 validator, build, leakage/purity, and patch gates pass; DI-001's accepted City Threshold state and live assets remain unchanged.
 
 **Latest Advance continuity handoff (RP002-P1-014 / A4):** `PASS — EX-00/10/20 ENTRY GRAPH LOCKED / PROTECTED A5 NEXT`. Exact retained `FT-20C` remains until one valid seven-modality/one-hit Pilot `OPEN BLANK PYTHON EXPLANATION` intent atomically replaces it with only the canonical genuinely blank Teacher group. Hidden prerequisite evidence, fail-closed sanitation/resume/focus, separate returns, accessibility/privacy, invariant world, zero story/save/world/route/access/authority effect, hard later-state absence, and no successor remain exact. DI-001's accepted City Threshold state is unchanged.
