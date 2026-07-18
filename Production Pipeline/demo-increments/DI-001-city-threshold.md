@@ -1,5 +1,13 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-18 Working W1 — blank RAI transfer interaction gap
+
+- **Cycle / disposition:** `RP002-P1-018 / W1 Player — P1 OPEN; W2 BUG-REPAIR NEXT`.
+- **Accepted behavior verified:** exact `RAIC-20C / T01` retains System ownership, three source-ordered genuinely blank principle/mitigation/accountable-owner surfaces, owner-heading focus, separate write-free returns, privacy, and invariant world/null delta.
+- **Earliest gap:** normal UI renders all three transfer controls as read-only blank inputs and explicitly exposes no transfer action, submission, evaluator, or attempt. App/normal route has no transfer-convergence handler, so T01 cannot accept a transient choice or submit. W1 stopped before judging T02/T03, third-case-only simultaneous `9/9`, failed-pair recovery/guide/blank retry, or blank Teacher entry.
+- **Evidence:** accepted root and `index-CaFYbIAD.js` / `index-gd0EXXXq.css` return HTTP `200`; focused normal-route/primary/presentation coverage passes `64/64`; served JS contains the blank-transfer heading/return/no-action markers. Browser discovery returned no backend, so no gated live traversal was fabricated and storage/save remained untouched. The protected transfer controller/test was not inspected or invoked.
+- **Next:** W2 in `bug-repair` mode integrates only the existing protected transfer-convergence authority into transient normal App/route/UI, beginning with editable/selectable T01 controls and one explicit Pilot submit. Preserve delayed T03-only evaluation, mapped answer-free recovery/blank retry or exact-pass blank Teacher entry, and the hard stop before explanation submission/evaluation or every later state.
+
 ## 2026-07-18 Advance A5 continuity — protected RAI-transfer convergence
 
 - **Cycle / disposition:** `RAI transfer / A5 Coder advance — REVISE; W1 NEXT`.

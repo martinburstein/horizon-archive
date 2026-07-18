@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-18 Working W1 handoff — blank RAI transfer cannot accept or submit T01
+
+- **Disposition:** `P1 OPEN — RP002-P1-018 / W2 BUG-REPAIR NEXT`.
+- **Starting state:** coordinator-accepted `RAIC-20C / RP002-RAI-01 / T01` on `index-CaFYbIAD.js` / `index-gd0EXXXq.css`. System ownership, three source-ordered genuinely blank transfer surfaces, owner-heading focus, separate write-free returns, privacy, and invariant world/null delta remain stable.
+- **Earliest defect:** normal `CivicRecordArrival` renders the three T01 controls as read-only blank inputs, states that no transfer action/submission/evaluator/attempt exists, and receives no transfer submit callback. App/normal route composes only through primary convergence and imports no transfer-convergence authority. Severity is `P1`: the accepted group is safe and reversible but cannot accept or submit its first transfer case.
+- **Evidence boundary:** Browser discovery returned no available backend; no gated traversal was fabricated and browser storage/save remained untouched. Focused accepted normal-route/primary/presentation coverage passes `64/64`; root/current JS/CSS return HTTP `200`; served JS contains the blank-transfer heading, return label, and exact no-action status. The protected transfer controller/test was not inspected or invoked, and W1 stopped before every dependent state.
+- **Exact W2 scope:** integrate only the existing protected transfer-convergence authority into normal transient App/route/UI. Replace read-only placeholders with three genuinely blank associated choice controls and add one explicit semantic `>=44px` Pilot submit with seven-modality/one-hit parity. Preserve blank T02/T03 whole-group replacement with no interim result, T03-only simultaneous strict `9/9`, exact-pass blank Teacher three-boundary entry without explanation action/evaluator, or actual-failed-pair Teacher feedback -> separate neutral zero-credit guide -> complete clearing and wholly blank first-failed retry. Preserve frozen cases/answers/evaluator/remediation, hidden Python/RAI-primary prerequisites and zero cross-credit, privacy/non-persistence, sanitation/resume, separate returns, accessibility/reflow, invariant SC-03/world/clocks/null delta, provisional-human-label/no-native-fact/no-authority meaning, no successor, and every hard stop. Stop before explanation submission/evaluation/feedback/result, RAI conclusion, review/save/completion, `RP-003+`, world/authority/external effect, RP-013, or successor.
+
 ## 2026-07-18 Advance A5 continuity handoff — protected RAI-transfer convergence
 
 - **Disposition:** `REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`.

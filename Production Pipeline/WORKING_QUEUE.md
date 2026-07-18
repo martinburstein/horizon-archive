@@ -1,5 +1,12 @@
 # Working Queue
 
+## 2026-07-18 Working W1 — blank transfer interaction P1
+
+- **Disposition:** `RP002-P1-018 P1 OPEN — W2 BUG-REPAIR NEXT`.
+- **Earliest normal gap:** exact accepted `RAIC-20C / T01` remains blank, System-owned, focused, reversible, private, and world-invariant, but its three source-ordered controls are read-only placeholders and no transfer submit action/handler exists. The approved transfer path cannot begin.
+- **Evidence:** focused normal-route/primary/presentation `64/64`; root/current assets HTTP `200`; served blank-transfer/no-action markers present; Browser unavailable and storage/save untouched; protected transfer controller/test not inspected.
+- **W2 boundary:** integrate only existing transfer-convergence authority through transient normal App/route/UI, allowing one explicit T01 submit and preserving blank T02/T03/no-interim-result, T03-only simultaneous `9/9`, mapped failed-pair recovery/one guide/blank retry, or exact-pass blank Teacher entry. Explanation submission/evaluation/feedback/result, conclusion, review/save/completion, `RP-003+`, world/authority effects, RP-013, successor, and every later state remain closed.
+
 ## 2026-07-18 Advance A5 handoff — protected transfer convergence complete
 
 - **Advance result:** `REVISE — ACCEPTED W1 NEXT`. The pure protected controller proves blank `T01`–`T03`, delayed strict `9/9`, mapped failed-pair recovery/one guide/blank retry, or exact-pass blank Teacher entry without normal integration.
