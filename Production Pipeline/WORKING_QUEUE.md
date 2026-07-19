@@ -3,9 +3,9 @@
 ## Current control — 2026-07-19
 
 - **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Current W2 result:** `RP002-P1-019 RESOLVED / W3 AESTHETIC REVIEW NEXT`. Existing protected explanation convergence now runs through normal transient App/route/UI with private all-three editing, explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary answer-free Teacher feedback/complete clearing/wholly blank retry, or the exact zero-credit Pilot conclusion.
-- **Required next review / stop:** W3 reviews only blank/editable authoring, first-failed feedback/blank retry, and exact conclusion presentation. W4 may correct only accepted presentation defects; conclusion dismissal and every later state remain closed.
-- **Evidence:** focused `75/75`, full `664/664`, both applicable validators, build, served HTTP/action/conclusion/feedback markers, private-leak rejection, and patch gates pass on `index-C4uncrHq.js` / unchanged `index-DyAC0bkf.css`. Storage/save and user paths remain untouched.
+- **Current W3 result:** `RP002-AESTH-014 P2 OPEN / W4 AESTHETIC-POLISH NEXT`. Authoring/retry currently preserve three blank source-ordered controls, hierarchy, feedback, focus intent, targets, reflow, privacy, exact conclusion, and hard stop, but reuse the generic flat three-equal-peer explanation grid instead of consuming the closed RAI interpretation veil's three nested-plane depth identity.
+- **Required W4 / stop:** add only an `RAIEC-00`-specific nested/inset three-plane presentation with one-column narrow/`200%` recovery and focused regression; preserve the older Python grid, all controls/copy/evaluator/recovery/focus authority, non-runtime canon, art/world/storage, and every later-state stop.
+- **Evidence:** focused W3 `63/63`; served HTTP/assets/markers/hashes, canonical provenance/hash/original-size inspection, unchanged civic-master hash, and patch baseline pass on `index-C4uncrHq.js` / `index-DyAC0bkf.css`. Browser reached the local title but gated DOM review timed out; no action or storage/save mutation occurred and user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 

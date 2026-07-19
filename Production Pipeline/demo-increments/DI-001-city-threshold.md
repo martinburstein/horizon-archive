@@ -3,9 +3,9 @@
 ## Current control — 2026-07-19
 
 - **Released delta:** RP-002 normal play reaches strict recoverable RAI transfer `9/9` and a genuinely blank Teacher three-boundary explanation entry with scored-frame/guide-cassette separation; release evidence remains `654/654`, `15/15`, build, clean `875.7s` E2E, desktop/narrow live review, hashes, cleanup, and synchronization.
-- **Current Working result:** `RP002-P1-019 RESOLVED / W3 AESTHETIC REVIEW NEXT`. Normal App/route/UI now compose the existing protected explanation convergence through private all-three editing, explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-failed answer-free Teacher feedback/full clear/wholly blank retry, or the exact zero-credit Pilot conclusion.
+- **Current Working result:** `RP002-AESTH-014 P2 OPEN / W4 AESTHETIC-POLISH NEXT`. The normal explanation convergence is coherent and recoverable, but editable/retry `RAIEC-00` reuses the generic flat three-equal-peer explanation grid and therefore loses the closed RAI interpretation veil's three nested-plane depth identity.
 - **Candidate stop:** `RAIEC-20C` conclusion visible with no dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor. Private responses, feedback, result material, tokens, and focus history remain transient and absent from durable state.
-- **Candidate evidence:** focused `75/75`; full `664/664`; both applicable validator self-tests; build; served root/JS/CSS HTTP `200`; action/conclusion/feedback markers and private-leak rejection pass on `index-C4uncrHq.js` (`C8D8F3EC…F2CD`) / unchanged `index-DyAC0bkf.css` (`E325370E…5A42`). Port `4173` was rebuilt/reloaded; browser storage/save remained untouched.
+- **Candidate evidence / exact next:** focused W3 `63/63`; served root/assets/markers/hashes, canonical veil provenance/hash/original-size inspection, unchanged civic-master hash, and patch baseline pass. Browser reached the local title but gated DOM inspection timed out without action or storage/save mutation. W4 may only add a state-specific nested/inset three-plane class and regression with natural one-column narrow/`200%` recovery; no raster, gameplay, copy, evaluator, focus authority, storage, art/world, conclusion dismissal, or later state changes.
 
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 

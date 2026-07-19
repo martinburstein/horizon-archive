@@ -1,10 +1,10 @@
 # Horizon Archive Location Visual Spine
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
 - **Closed canon:** five SC-03 canonical references, including the three-plane interpretation veil; canonical status does not claim runtime integration.
-- **A2 result / A3 next:** `PASS — COMPACT EXISTING-AUTHORITY PRESENTATION LOCKED`. One active Teacher form now runs from genuinely blank/private three-boundary input through explicit submit directly to first-failed answer-free recovery/wholly blank retry or only the exact zero-credit Pilot conclusion. A3 preserves evidence without reopening the five closed references.
-- **No new art state:** reuse invariant SC-03 and closed reference decisions; add no plate, board, crop, geometry, world response, or later-state presentation.
+- **Current W3 result / W4 next:** `RP002-AESTH-014 P2 OPEN`. The integrated Teacher form preserves the compact behavior and three-plane count but renders the three controls as a flat generic equal-peer row, losing the closed veil's nested-depth identity. W4 may add only a state-specific nested/inset presentation with safe narrow/`200%` recovery.
+- **No new art state:** reuse invariant SC-03 and the closed count/depth/ownership/separation decision without importing its raster; add no plate, board, crop, geometry, world response, or later-state presentation.
 
 **2026-07-18 RP-002 blank-RAI-explanation canonical cycle-reveal lock:** `Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png` closes the named visual-production checklist item `SC-03 / blank RAI explanation — interpretation-veil separation and depth`. One temporary expedition-owned veil consists of exactly three separate nested blank translucent planes positioned before, never joined to, the vast unchanged archive. They represent the human explanation boundaries of application label, native fact, and authority without supplying any response or conclusion. The image is canonical for count, depth, ownership, material separation, and archive-dominant scale; it is not runtime-integrated and authorizes no explanation content, evaluator, feedback, result, conclusion, world effect, access, authority, later state, successor, or hidden lore. Reopen only for demonstrated production conflict, accessibility failure, canon contradiction, regression, or Martin's direct instruction.
 
