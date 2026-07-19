@@ -6,6 +6,7 @@
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
 - Release evidence: full `665/665`, all `15/15` validators, production build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and sync pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
 - Next reduction: zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry only. Save preparation/persistence and every later state remain closed.
+- Visual canon: six closed SC-03 references; the latest locks `RAI conclusion — no-authority threshold silence` as canonical non-runtime evidence.
 
 ## 2026-07-18 RP-002 A5 convergence checkpoint — protected RAI explanation
 

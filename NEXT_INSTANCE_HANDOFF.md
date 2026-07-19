@@ -65,6 +65,14 @@ Editable/retry `RAIEC-00` alone uses exactly three source-ordered, progressively
 - CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
 - Incidental E2E captures restored; QA port `5174` stopped; browser storage/save untouched.
 
+## Latest canonical reveal
+
+`Visual Direction/Production Masters/2026-07-19-rp002-rai-no-authority-threshold-reveal/rp002-rai-no-authority-threshold-v1.png`
+
+Closed checklist item: `SC-03 / RAI conclusion — no-authority threshold silence`.
+
+One small expedition interpretation instrument remains physically separate from an immense sealed archive aperture. The correct human interpretation produces no archive response, access, approval, permission, authority, route, or world event. This is canonical reference evidence only and is not runtime-integrated.
+
 ## Exact next action
 
 Begin or resume one sequential cycle at A1. Converge only the already-authorized zero-effect conclusion-dismissal-to-bounded-review edge:

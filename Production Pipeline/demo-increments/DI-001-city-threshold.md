@@ -6,6 +6,13 @@
 - **Release evidence:** independent full `665/665`, all `15/15` validators, build, clean isolated `110.4s` E2E, desktop/narrow in-app review, exact hashes, clean logs/overflow, QA cleanup, and synchronization pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`. Storage/save and protected user paths remain untouched.
 - **Next exact edge:** one zero-effect RAI-conclusion dismissal -> strict eligibility sanitation -> bounded review or deterministic first-incomplete return. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
 
+## 2026-07-19 canonical cycle reveal — RAI no-authority threshold silence
+
+- **Closed checklist item:** `[x] SC-03 / RAI conclusion — no-authority threshold silence`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-19-rp002-rai-no-authority-threshold-reveal/rp002-rai-no-authority-threshold-v1.png`, with neighboring provenance; `1672 x 941`, `2,052,815` bytes, SHA-256 `F4607ECBFA79A349EBD74118CAD7D379A81D85C751FD397CA68896ADA461A9FE`.
+- **Accepted visual fact:** one small expedition interpretation instrument remains materially separate from an immense sealed archive aperture. Correct human interpretation produces no archive response, approval, access, permission, authority, route, or world event.
+- **Limit:** canonical no-response threshold reference only. No raster was integrated; no conclusion wording, dismissal, review, save, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
 - **Closed checklist item:** `[x] SC-03 / blank RAI explanation — interpretation-veil separation and depth`.
