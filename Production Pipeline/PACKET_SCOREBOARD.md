@@ -4,8 +4,13 @@
 
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI transfer and blank Teacher explanation entry.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
-- A4 gameplay: `RAIEC-00/10/20F/20C GRAPH PASS`; blank/private authoring, one-hit submit, strict simultaneous `3/3`, first-failed answer-free recovery/full clear/wholly blank retry, exact zero-credit conclusion, focus/resume/privacy/evidence firewall, and zero-effect contracts are locked; focused authorities `4/4` and the RP-002 self-test pass.
-- Next scoreboard reduction: A5 builds one pure protected explanation convergence controller; conclusion dismissal and every later state remain closed.
+- A5 code: `REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`; blank/private authoring, one-hit submit, strict simultaneous `3/3`, first-failed answer-free recovery/full clear/wholly blank retry, exact zero-credit conclusion, focus/resume/privacy/evidence firewall, and zero-effect contracts pass in one pure unimported controller.
+- Evidence / next reduction: focused `10/10`, related `76/76`, Responsible-AI and RP-002 validator self-tests, unchanged accepted production build, and leakage/purity/restore/patch gates pass. W1 reports the earliest normal player-facing gap; conclusion dismissal and every later state remain closed.
+
+## 2026-07-18 RP-002 A5 convergence checkpoint — protected RAI explanation
+
+- **Gate result:** protected Code, Save/recovery, and Accessibility remain `PASS`; protected-design missing-gate count remains zero. The controller begins only at exact canonical blank `RAITC-20C`, keeps authored values closure-only, and converges only existing explanation authorities through strict success or bounded blank recovery.
+- **Release boundary:** runtime integration, Working evidence, and coordinator release remain partial at the accepted live blank Teacher entry. No accepted asset, normal route, curriculum, art, world, storage, or later state changed.
 
 ## 2026-07-18 RP-002 coordinator release — RAI transfer accepted
 

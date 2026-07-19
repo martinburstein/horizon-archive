@@ -2,8 +2,8 @@
 
 ## Current control — 2026-07-18
 
-- **A4 result:** `PASS — RAIEC-00/10/20F/20C GRAPH LOCKED / PROTECTED A5 NEXT`. The complete protected graph now owns blank/private all-three Teacher authoring, one private-free seven-modality/one-hit Pilot submit, frozen simultaneous uncompensated strict current-attempt `3/3`, first-actual-failed-boundary-only answer-free Teacher feedback/full clear/wholly blank unlimited retry, or only the exact zero-credit Pilot conclusion.
-- **A5 next:** build one pure unimported protected convergence controller by composing the frozen evaluator, feedback/retry, resume/sanitizer, conclusion, and separate-return authorities. Add no prompt, answer, score, result board, branch, art integration, normal route, later transition, or micro-seam.
+- **A5 result:** `REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`. One pure unimported storage-free controller composes the frozen evaluator, feedback/retry, resume/sanitizer, conclusion, and separate-return authorities across exact `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` without adding a prompt, answer, score, result board, branch, art integration, normal route, later transition, or micro-seam.
+- **Evidence / next:** focused `10/10`, related `76/76`, both applicable validator self-tests, production build on byte-identical accepted assets, and leakage/purity/restore/patch gates pass. W1 now begins only at the accepted live genuinely blank Teacher explanation entry and reports the earliest normal player-facing gap.
 - **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge
