@@ -15,13 +15,26 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Expected synchronization after this handoff commit: `HEAD == origin/main`
 - Live demo URL when intentionally started: `http://127.0.0.1:4173/`
 - Released bundle: `index-BggOwTvz.js` / `index-BPvBS70Z.css`
-- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, anchored at `11:30 PM America/New_York` and recurring every three hours. If a cycle is active, continue it; never overlap or restart A1.
+- Automation: `horizon-archive-optimized-production-loop` — **DELETED / PAUSED BY MARTIN on 2026-07-19**. No Horizon Archive wake is scheduled. Do not recreate or resume it until Martin explicitly supplies or approves a new start time.
 - Adaptive retrospective: required after coordinator synchronization and before the reveal.
 
 Protected user-owned untracked paths — do not inspect, stage, alter, move, or delete:
 
 - `Art Of No Mans Sky Book Scan.pdf`
 - `Simplilearn Training Files/`
+
+## Restart and next-round improvements
+
+When Martin explicitly restarts the loop:
+
+1. Recreate one automation only, anchored at Martin's chosen local time and spaced three hours apart; preserve the non-overlap/continue-from-checkpoint rule.
+2. Before A1, run one read-only startup health check: `HEAD == origin/main`, only the two protected user paths are untracked, no role checkpoint is active, and the handoff exact edge still matches the current-control blocks.
+3. Record one timestamp per stage boundary in the cycle retrospective. Use those ten measurements—not intuition—to decide whether model routing, validation placement, or cadence needs another tune.
+4. Keep stable-authority hash checks and compact role-context reads; fully reread a stable authority only when its hash changed, a conflict appears, or the runbook requires it.
+5. At coordinator close, preflight the isolated `5174` production preview and HTTP `200` before the single complete E2E; stop only the coordinator-owned preview afterward.
+6. Select the reveal decision before generation, compare it with the six existing SC-03 references, and vary scale/subject so the image closes one genuinely new uncertainty rather than restating the preceding reveal.
+
+These are throughput and reliability improvements only. They do not relax sequential roles, canon, learning, privacy, accessibility, release validation, protected-user-work rules, or the exactly-one-reveal requirement.
 
 ## Team positions
 

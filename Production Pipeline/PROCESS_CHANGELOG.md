@@ -34,3 +34,12 @@
 - **Preserved guardrails:** role order, release independence, non-overlapping build/E2E, complete E2E coverage, live responsive review, privacy/save discipline, canon, learning, accessibility, protected user work, and reveal rules remain unchanged.
 - **Validation:** the next coordinator gate should reach a clean complete E2E on its first launch with a recorded `5174` HTTP preflight and no orphan listener.
 - **Rollback trigger:** the preflight starts the wrong bundle, conflicts with an existing listener, leaves an orphan, obscures a real product failure, or increases release ambiguity.
+
+## 2026-07-19 / scheduled-loop pause — RESTART NOTES
+
+- **State:** Martin canceled the next scheduled work. `horizon-archive-optimized-production-loop` was deleted; no Horizon Archive automation remains scheduled. Recreate nothing until Martin explicitly supplies or approves a new start time.
+- **Keep:** one complete non-overlapping cycle, strict sequential role ownership, local commit per role, five normal push gates, compact replace-in-place handoff, tiered validation, adaptive retrospective, and one final canonical reveal.
+- **Improve next round:** run a read-only startup synchronization/dirty-state/checkpoint audit; capture one timestamp at each of the ten stage boundaries; use stable-authority hashes to avoid unnecessary rereads; apply the new `5174` HTTP preflight before the single coordinator E2E; and compare the planned reveal against existing visual canon before generation so it closes a new uncertainty at a deliberately varied scale.
+- **Decision rule:** change model routing or the three-hour cadence only from measured stage durations, repeated overlap pressure, or demonstrated quality defects. Do not tune from a single subjective impression.
+- **Resume edge:** the exact accepted RAI Pilot conclusion -> one zero-effect dismissal -> strict eligibility sanitation -> bounded review or deterministic first-incomplete return. Stop before `PREPARE SAVE`, persistence, completion, world/authority effects, `RP-003+`, RP-013, or successor.
+- **Preserved guardrails:** product direction, canon, AI-901 evidence, privacy, accessibility, save discipline, invariant world, release independence, protected user work, hidden-lore prohibition, no RP-013, and reveal rules remain unchanged.
