@@ -3,8 +3,10 @@
 ## Current control — 2026-07-19
 
 - **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only; protected RAI explanation convergence is complete.
-- **Team 2:** `RP-002`, W4 resolved `RP002-AESTH-014`: editable/retry `RAIEC-00` now consumes the closed-canon three-plane interpretation depth without raster integration; coordinator release is next.
-- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). The rail does not extend; coordinator independently validates only the current explanation convergence and presentation, while conclusion dismissal and all later states remain closed.
+- **Team 2:** `RP-002`, accepted through `RP002-P1-019 + RP002-AESTH-014`: strict RAI explanation convergence, exact zero-credit Pilot conclusion, and responsive three-plane interpretation depth without raster integration.
+- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). The next cycle converges only conclusion dismissal -> strict eligibility -> bounded review and stops before save preparation; the rail does not extend.
+
+Latest coordinator acceptance: `2026-07-19 / RP002-P1-019 + RP002-AESTH-014 PASS — RAI EXPLANATION CONVERGENCE IN DEMO PARTIAL`. Team 2 accepts private blank all-three explanation authoring, strict simultaneous `3/3`, first-failed answer-free recovery/blank retry, exact zero-credit Pilot conclusion, and the responsive three-plane veil presentation. Independent full `665/665`, all `15/15` validators, build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and synchronization pass. Team 1 remains complete at RP-012 with no RP-013/successor.
 
 Latest Working handoff: `2026-07-19 / RP002-AESTH-014 W4 RESOLVED — COORDINATOR NEXT`. Only editable/retry `RAIEC-00` gained a state-specific wide three-plane progressive inset with complete narrow/`200%` flattening; generic Python authoring, controls, gameplay, privacy, focus authority, art/world, and hard stop remain unchanged. Team 2 stays on RP-002 pending independent release; Team 1 remains complete at RP-012 with no RP-013/successor and a ten-packet lead (`RP-003`–`RP-012`).
 

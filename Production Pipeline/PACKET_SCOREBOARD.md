@@ -1,11 +1,11 @@
 # Rail Packet Scoreboard
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
-- `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI transfer and blank Teacher explanation entry.
+- `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI explanation convergence and the exact zero-credit Pilot conclusion.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
-- A5 code: `REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`; blank/private authoring, one-hit submit, strict simultaneous `3/3`, first-failed answer-free recovery/full clear/wholly blank retry, exact zero-credit conclusion, focus/resume/privacy/evidence firewall, and zero-effect contracts pass in one pure unimported controller.
-- Evidence / next reduction: focused `10/10`, related `76/76`, Responsible-AI and RP-002 validator self-tests, unchanged accepted production build, and leakage/purity/restore/patch gates pass. W1 reports the earliest normal player-facing gap; conclusion dismissal and every later state remain closed.
+- Release evidence: full `665/665`, all `15/15` validators, production build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and sync pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
+- Next reduction: zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry only. Save preparation/persistence and every later state remain closed.
 
 ## 2026-07-18 RP-002 A5 convergence checkpoint — protected RAI explanation
 

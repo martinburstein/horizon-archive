@@ -2,10 +2,10 @@
 
 ## Current control — 2026-07-19
 
-- **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Current W4 result:** `RP002-AESTH-014 RESOLVED / COORDINATOR NEXT`. Editable and wholly blank retry `RAIEC-00` alone now uses a state-specific three-plane interpretation veil: three separate source-ordered, progressively inset, non-overlapping wide planes that flatten to one equal source-ordered column at narrow/effective-`200%` widths. The older Python explanation keeps its equal-peer grid unchanged.
-- **Coordinator stop:** independently release only the integrated explanation authoring/strict evaluation/first-failed blank recovery/exact conclusion plus the resolved veil presentation. Conclusion dismissal and every later state remain closed.
-- **Evidence:** focused gameplay/presentation `64/64`; both applicable validators; production build; served HTTP/assets/markers/hashes/final title reload; five canonical-reference and immutable civic-master hashes/original sizes; no-raster leakage; and patch gates pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`. Browser reloaded the local title with no warnings/errors; no campaign action, gated state, or storage/save inspection/mutation occurred, and protected user paths remain untouched.
+- **Accepted live edge:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. RP-002 normal play reaches private blank Responsible-AI explanation authoring, explicit submit, strict simultaneous `3/3`, first-failed answer-free recovery/wholly blank retry, or the exact zero-credit Pilot conclusion.
+- **Presentation:** editable/retry `RAIEC-00` alone uses exactly three source-ordered progressively inset wide planes and one equal column at narrow/effective-`200%`; the generic Python explanation remains three equal peers and no reveal raster is integrated.
+- **Next W1 after A5:** begin only at the accepted exact RAI conclusion and report the earliest normal gap toward one zero-effect dismissal and bounded review entry. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.
+- **Coordinator evidence:** full `665/665`, all `15/15` validators, production build, clean isolated `110.4s` E2E, desktop/narrow in-app review, hashes, cleanup, and synchronization pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`; storage/save and protected user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 

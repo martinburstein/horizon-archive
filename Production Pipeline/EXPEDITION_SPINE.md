@@ -1,10 +1,12 @@
 # Horizon Archive Expedition Spine
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
-- **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI transfer and blank Teacher explanation entry; ordered lead is ten packets.
-- **Current Advance result / next deficit:** A4 locks `RAIEC-00/10/20F/20C`; A5 must compose one pure protected explanation submit -> simultaneous strict `3/3` -> first-failed blank retry or exact zero-credit Pilot conclusion controller from existing authorities.
-- **Hard stop:** no conclusion dismissal, review/save/completion, `RP-003+` normal integration, RP-013, successor, world response, access, authority, or external action.
+- **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI explanation convergence and exact zero-credit Pilot conclusion; ordered lead is ten packets.
+- **Current release / next deficit:** `RP002-P1-019 + RP002-AESTH-014 PASS`. The next A1 may converge only one explicit zero-effect conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry from existing authorities.
+- **Hard stop:** before `PREPARE SAVE`, persistence, completion, `RP-003+` normal integration, RP-013, successor, world response, access, authority, or external action.
+
+Latest RP-002 release handoff: `2026-07-19 / RP002-P1-019 + RP002-AESTH-014 PASS — RAI EXPLANATION CONVERGENCE ACCEPTED`. Team 2's accepted edge is the exact zero-credit Pilot Responsible-AI conclusion after strict recoverable explanation `3/3`; its next adjacent gap is zero-effect dismissal and bounded-review entry only. RP-012 remains the final railhead and no RP-013 or successor exists.
 
 Latest RP-002 release handoff: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 PASS — RAI TRANSFER CONVERGENCE ACCEPTED`. Team 2's accepted edge is the genuinely blank Teacher three-boundary Responsible-AI explanation after strict recoverable transfer `9/9`; its next adjacent gap is explanation submission/evaluation and the exact Pilot conclusion only. RP-012 remains the final railhead and no RP-013 or successor exists.
 

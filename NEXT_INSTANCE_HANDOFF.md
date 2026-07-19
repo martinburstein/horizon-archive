@@ -1,154 +1,100 @@
 # Horizon Archive — Current Operational Handoff
 
-Last updated: **2026-07-18**
+Last updated: **2026-07-19**
 
 ## Start here
 
-Read these files in full:
-
-1. `AGENTS.md`
-2. `NEXT_INSTANCE_HANDOFF.md`
-3. `AUTONOMOUS_PRODUCTION_LOOP.md`
-
-Use `TWO_TEAM_AGENT_CYCLE.md` and `Agent Profiles/README.md` when their hashes changed, a conflict appears, or the optimized runbook requires them. Before each role, read its canonical profile in full and then only the current-control block, latest role-log entry, preceding handoff, and directly cited sections.
+Read `AGENTS.md`, this file, and `AUTONOMOUS_PRODUCTION_LOOP.md` in full. `NEXT_INSTANCE_HANDOFF.md` is the sole current-state and exact-next-action authority. Before each role, read its canonical profile plus only the current-control block, preceding handoff, latest role-log entry, and directly cited sections required by the optimized runbook.
 
 Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's explicit authorization.
 
 ## Synchronized state
 
 - Branch: `main`
-- Pre-optimization content baseline: `4ff52c1` — `Visual Canon: lock RAI interpretation veil identity`
-- Optimized loop configuration and this handoff are recorded by the current synchronized `HEAD`; resolve its exact identity with `git rev-parse HEAD`.
-- Coordinator release commit: `0a6afd4` — `Coordinator: accept RAI transfer convergence`
-- Expected synchronization: `HEAD == origin/main`
+- Coordinator release parent: `354c9d1` — `Working Coder Polish: restore RAI interpretation veil depth`
+- Expected synchronization after this handoff commit: `HEAD == origin/main`
 - Live demo URL when intentionally started: `http://127.0.0.1:4173/`
-- Current served-build identity: `index-CKaXmS2o.js` / `index-DyAC0bkf.css`
-- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, anchored at `11:30 PM America/New_York` on 2026-07-18 and recurring every three hours (`2:30 AM`, `5:30 AM`, `8:30 AM`, and onward). Scheduler state is authoritative. If a cycle is already active, the wake continues it and never starts an overlapping cycle.
-- Adaptive process authority: **ACTIVE**. After every completed coordinator release, record `KEEP`, `TUNE`, or `REDESIGN` in `Production Pipeline/PROCESS_CHANGELOG.md` and apply safe evidence-backed improvements for the next cycle before producing the reveal.
+- Released bundle: `index-BggOwTvz.js` / `index-BPvBS70Z.css`
+- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, anchored at `11:30 PM America/New_York` and recurring every three hours. If a cycle is active, continue it; never overlap or restart A1.
+- Adaptive retrospective: required after coordinator synchronization and before the reveal.
 
-Protected user-owned untracked paths:
+Protected user-owned untracked paths — do not inspect, stage, alter, move, or delete:
 
 - `Art Of No Mans Sky Book Scan.pdf`
 - `Simplilearn Training Files/`
 
-Do not inspect, move, delete, stage, commit, or alter them.
-
 ## Team positions
 
-- Team 1 railhead: `RP-012`, complete intended ending railhead; continuity-maintenance mode only.
-- Team 2 live-demo position: `RP-002`, accepted through strict Responsible-AI transfer convergence and genuinely blank Teacher three-boundary explanation entry.
-- Ordered Advance lead: ten packets, `RP-003` through `RP-012`.
-- Whole-story rail status: `END-TO-END OUTLINED`.
+- Team 1: `RP-012`, complete intended ending railhead; continuity-maintenance only.
+- Team 2: `RP-002`, accepted through strict Responsible-AI explanation convergence and exact zero-credit Pilot conclusion.
+- Ordered lead: ten packets, `RP-003` through `RP-012`.
+- Whole-story rail: `END-TO-END OUTLINED`.
 - No `RP-013`, successor, or post-ending content is authorized.
 
 ## Accepted player-visible boundary
 
-Normal play accepts the complete `RP002-RAI-01` transfer convergence:
+Normal play now accepts the complete `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` seam after strict RAI transfer `9/9`:
 
-- genuinely blank `T01`, `T02`, and `T03` appear one at a time;
-- Pilot choices are private session-only work;
-- `T01` and `T02` advance with no interim judgment;
-- only `T03` invokes simultaneous strict `9/9`;
-- any miss reveals only actual-failed-case/dimension Teacher feedback, one neutral zero-credit guide, and a wholly blank deterministic retry;
-- exact `9/9` clears transfer work and mounts only a separate genuinely blank `901 TEACHER // FEEDBACK` explanation entry with application-label, native-fact, and authority controls.
+- a genuinely blank Teacher-owned application-label/native-fact/authority explanation;
+- private session-only Pilot responses and one explicit submit;
+- simultaneous uncompensated strict current-attempt `3/3`;
+- on miss, only first-actual-failed-boundary answer-free Teacher feedback, complete clearing, and wholly blank unlimited all-three retry at deterministic first-failed focus;
+- on exact pass, only the exact zero-credit Pilot conclusion: `My application label is a human interpretation, not their fact or permission to act.`
 
-Accepted presentation keeps the scored transfer as exactly three equal source-ordered wide peers. The zero-credit guide is one distinct single-cassette enclosure containing the same three labeled inputs. Both recover to one column at narrow widths and `200%` text zoom.
-
-Previously accepted Python explanation, Pilot Python conclusion, zero-effect dismissal, blank RAI entry, strict RAI primary convergence, save discipline, focus, returns, and recovery remain unchanged.
+Editable/retry `RAIEC-00` alone uses exactly three source-ordered, progressively inset wide interpretation planes; at narrow/effective-`200%` widths they flatten into one equal source-ordered column. The generic Python explanation remains three equal wide peers. No canonical reveal raster is runtime-integrated.
 
 ## Closed invariants
 
-- AI-901 mastery evidence remains strict; Python, primary RAI, and transfer evidence cannot cross-credit the explanation.
-- Display, timing, presentation, Tour use, navigation, feedback acknowledgement, and the final conclusion are zero evidence.
-- Private responses, guide work, feedback prose, tokens, and focus history do not persist.
-- Preserve offline/no-authority/no-exam-guarantee, no live Azure effect, no-credit Demo Tour, and privacy allowlists.
-- Preserve one active owner group, seven modalities/one semantic hit, deterministic focus, `>=44px` controls, forced colors, reduced motion, narrow reflow, and `200%` zoom recovery.
-- Preserve first-person cinematic photorealism, no visible protagonist/ship/hands/body/prior-human trace, invariant civic world/art, unchanged clocks, and `cityStateDelta=null`.
-- No story, route, save, item, access, permission, identity, authority, city, external, or successor effect may arise at the current seam.
-- All five closed canonical SC-03 visual decisions remain reference evidence only; none implies runtime integration.
+- Python, Responsible-AI primary, transfer, and explanation evidence remain independent and cannot cross-credit.
+- Display, timing, layout, conclusion, dismissal, review, focus, navigation, and Tour traversal are zero evidence.
+- Private responses, feedback prose, result material, tokens, and focus history never persist.
+- Preserve privacy allowlists, save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `cityStateDelta=null`, and no external action.
+- Preserve first-person maximum-quality cinematic photorealism with no visible protagonist/ship/hands/body/prior-human trace.
+- No story, item, route, access, permission, identity, authority, city, world, external, `RP-003+`, RP-013, or successor effect may arise at the current edge.
+- Canonical visual references do not imply runtime integration.
 
 ## Latest release evidence
 
-- Full game suite: `654/654`.
+- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`.
+- Full game suite: `665/665`.
 - Readiness validators: `15/15`.
 - Production build: pass.
-- Complete isolated E2E: pass in `875.7s`, all emitted gates true, credits reached, no runtime errors.
-- Live desktop `1920 x 1080` and narrow `390 x 844` title-shell review: no overflow or console warnings/errors; actions met `48px` / `44px` targets.
-- Build assets:
-  - JS `index-CKaXmS2o.js`, `1,012,705` bytes, SHA-256 `EFD602C0CA03D6F7ABEC2FD030EBF049825D9DF19F1CADE99941D3241DB83090`
-  - CSS `index-DyAC0bkf.css`, `73,338` bytes, SHA-256 `E325370E1109440F4FEABF6ED745F3BE77163A0809A748CE28027AA7B46F5A42`
-
-## Latest canonical reveal
-
-`Visual Direction/Production Masters/2026-07-18-rp002-rai-blank-explanation-reveal/rp002-rai-interpretation-veil-v1.png`
-
-Closed checklist item: `SC-03 / blank RAI explanation — interpretation-veil separation and depth`.
-
-Exactly three nested blank expedition-owned interpretation planes remain visibly before and materially separate from the greater unchanged archive. This fixes count, depth, ownership, separation, and scale only. It is not runtime-integrated and defines no answer, evaluation, conclusion, authority, world response, hidden lore, or successor.
+- Complete isolated E2E: pass in `110.4s`; every emitted gate true, credits reached, no runtime errors. An initial connection-refused preflight with no server was discarded; the clean non-overlapping rerun alone is accepted.
+- Live title-shell review: desktop `1920 x 1080` and narrow `390 x 844`, zero horizontal overflow, clean browser logs, and `48px` / `44px` actions.
+- JS: `index-BggOwTvz.js`, `1,030,140` bytes, SHA-256 `D741F69C3FC6043105D8C2BACFB265ACDF09FD7D6F1E13AFF5F986429EFDFF2F`.
+- CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
+- Incidental E2E captures restored; QA port `5174` stopped; browser storage/save untouched.
 
 ## Exact next action
 
-Begin or resume one full sequential cycle at A1. Converge the already-protected explanation-submission-and-conclusion seam as one integration-sized tranche:
+Begin or resume one sequential cycle at A1. Converge only the already-authorized zero-effect conclusion-dismissal-to-bounded-review edge:
 
 ```text
-accepted exact transfer 9/9
-  -> genuinely blank Teacher application-label / native-fact / authority entry
-  -> private transient Pilot responses
-  -> one explicit Pilot explanation submission
-  -> separate simultaneous strict 3/3 evaluation
-  -> miss: first actual failed boundary only, answer-free Teacher feedback
-           -> clear all three responses
-           -> wholly blank unlimited all-three retry at deterministic first-failed focus
-  -> exact 3/3: exact Pilot conclusion only
+accepted exact RAI Pilot conclusion
+  -> one explicit private-free seven-modality / one-hit dismissal
+  -> SYSTEM // EXPEDITION SESSION eligibility sanitation
+  -> if every already-finalized Python chain, RAI chain, and five-observation conjunct is valid:
+       PILOT // FLIGHT RECORDER — bounded comparison review only
+  -> otherwise:
+       clear private work and return to the deterministic first incomplete protected boundary
 ```
 
-The exact accepted conclusion is:
+A1 audits ownership and no-authority meaning; A2 boards one compact owner-replacing transition; A3 preserves strict conjunctions and zero evidence; A4 locks dismissal/eligibility/review recovery; A5 composes one pure protected controller. W1 begins only at the accepted live exact RAI conclusion, W2 integrates the earliest normal gap, W3 reviews, W4 polishes, and the coordinator independently releases.
 
-`My application label is a human interpretation, not their fact or permission to act.`
-
-The conclusion is zero credit and grants no authority.
-
-A1 runs the convergence/ownership audit; A2 boards the complete compact presentation; A3 preserves strict evidence; A4 locks the full interaction/recovery graph; A5 builds one pure protected controller. W1 then reports the earliest normal player-facing gap from the accepted blank explanation entry; W2 integrates it; W3 reviews; W4 polishes; the coordinator independently releases; one cycle reveal closes the cycle.
+The bounded review may show only already-finalized summary material and the existing survey-marker meaning. Its display, reading, return, or dismissal grants no credit or world/route effect.
 
 ## Hard stop
 
-Do not cross into:
+Stop with bounded review visible. Do not expose or implement:
 
-- conclusion dismissal;
-- bounded review, save/commit, completion, or credits;
-- `RP-003+` normal integration;
-- world response, route reward, access, authority, identity disclosure, external action, RP-013, or successor content.
-
-Add no prompt, answer, threshold, score, compensation rule, optional branch, micro-seam, art integration, or new authority.
+- `PREPARE SAVE`, save confirmation, commit intent, persistence, local failure, retry-save, verified restore, or sanitation downgrade UI beyond returning to the first incomplete protected boundary;
+- completion, credits, `RP-003+` normal integration, world response, route reward, item, access, permission, identity disclosure, authority, city change, external action, RP-013, or successor content;
+- any new prompt, answer, score, compensation rule, optional branch, micro-seam, art integration, or authority.
 
 ## Role and checkpoint order
 
-Run strictly sequentially:
+Run strictly sequentially: A1 Lore Builder; A2 Storyboarder; A3 Curriculum Checker; A4 Gameplay Master; A5 Coder `advance`; W1 Player; W2 Coder `bug-repair`; W3 Aesthetic; W4 Coder `aesthetic-polish`; coordinator release; adaptive retrospective; exactly one canonical reveal.
 
-1. Lore Builder A1
-2. Storyboarder A2
-3. Curriculum Checker A3
-4. Gameplay Master A4
-5. Coder A5 `advance`
-6. Player W1
-7. Coder W2 `bug-repair`
-8. Aesthetic W3
-9. Coder W4 `aesthetic-polish`
-10. Coordinator release validation
-11. Adaptive process retrospective and any safe next-cycle tuning
-12. Exactly one canonical cycle reveal
+Create one local commit per role. Push after A5, W2, W4, coordinator handoff, and reveal, plus after any unusually risky runtime/save/recovery change. Use the tiered validation ladder in `AUTONOMOUS_PRODUCTION_LOOP.md`.
 
-Create one local commit per role. Push after A5, W2, W4, coordinator handoff, and reveal, plus immediately after any unusually risky runtime/save/recovery change. Use the validation ladder in `AUTONOMOUS_PRODUCTION_LOOP.md`.
-
-At final close, replace this handoff with the new synchronized state and exact next edge. Do not append a cycle diary.
-
-## Release commands
-
-Run from `horizon-archive-game/`:
-
-```powershell
-npm test
-npm run build
-```
-
-Run all `curriculum/readiness/**/validate*.py --self-test` validators from the repository root. Run `node playtest/e2e-playthrough.mjs` only after the build completes. Restore only incidental tracked `playtest/*.png` captures. Finish with `git diff --check`, clean status apart from the two protected user paths, and `HEAD == origin/main`.
+At close, replace this file with the next compact synchronized state and exact edge; never append a cycle diary.

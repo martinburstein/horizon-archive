@@ -1,10 +1,10 @@
 # Advance Queue
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
-- **A5 result:** `REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`. One pure unimported storage-free controller composes the frozen evaluator, feedback/retry, resume/sanitizer, conclusion, and separate-return authorities across exact `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` without adding a prompt, answer, score, result board, branch, art integration, normal route, later transition, or micro-seam.
-- **Evidence / next:** focused `10/10`, related `76/76`, both applicable validator self-tests, production build on byte-identical accepted assets, and leakage/purity/restore/patch gates pass. W1 now begins only at the accepted live genuinely blank Teacher explanation entry and reports the earliest normal player-facing gap.
-- **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
+- **Coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. Strict RAI explanation convergence and exact zero-credit Pilot conclusion are accepted in normal play; full `665/665`, `15/15`, build, clean `110.4s` E2E, desktop/narrow review, hashes, cleanup, and sync pass.
+- **Next A1:** converge only the existing exact RAI conclusion -> one zero-effect private-free dismissal -> strict finalized-chain/observation eligibility sanitation -> eligible bounded-review entry or deterministic first-incomplete return. Merge existing authorities; add no prompt, score, branch, micro-seam, world effect, RP-013, or successor.
+- **Hard stop:** bounded review visible; no `PREPARE SAVE`, persistence, completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge
 

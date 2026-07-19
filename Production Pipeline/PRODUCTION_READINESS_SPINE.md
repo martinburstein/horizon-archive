@@ -2,9 +2,9 @@
 
 ## Current control — 2026-07-19
 
-- **Accepted release:** RP-002 normal integration through strict RAI transfer, bounded recovery, and blank Teacher explanation entry on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`.
-- **W4 candidate:** `RP002-P1-019 + RP002-AESTH-014 RESOLVED / COORDINATOR NEXT`; private editable authoring, strict uncompensated `3/3`, first-failed answer-free recovery/wholly blank retry, exact zero-credit conclusion, and the state-specific three-plane wide/narrow veil presentation are normally composed. Focused `64/64`, both applicable validators, build, served identity, immutable art/reference, no-raster leakage, final title reload, and patch gates pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
-- **Release ladder:** coordinator alone runs the complete final suite, all readiness validators, build, non-overlapping E2E, safe live desktop/narrow review, cleanup, hashes, release disposition, retrospective, handoff synchronization, and reveal. Conclusion dismissal and every later state remain closed.
+- **Accepted release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014` on `index-BggOwTvz.js` / `index-BPvBS70Z.css`; strict RAI explanation authoring/evaluation/recovery, exact zero-credit conclusion, and the responsive three-plane veil presentation are normally composed.
+- **Independent gate:** full `665/665`, all `15/15` validators, production build, clean isolated `110.4s` E2E, `1920 x 1080` / `390 x 844` in-app review, exact asset hashes, clean logs/overflow, QA cleanup, and synchronization pass. Storage/save remained untouched.
+- **Next release edge:** only one explicit zero-effect RAI-conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.
 
 Latest Working candidate: `2026-07-19 / RP002-P1-019 W2 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal transient App/route/UI now compose the pure protected explanation convergence from exact strict-transfer blank Teacher entry through private all-three authoring, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary-only feedback and wholly blank unlimited retry, or the exact zero-credit Pilot conclusion. No response, feedback, token, result, or focus history persists; conclusion dismissal and every later state remain closed.
 
