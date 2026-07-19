@@ -1,5 +1,11 @@
 # Working Queue
 
+## Current control — 2026-07-18
+
+- **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
+- **Next Working entry:** after A5, W1 reports only the earliest normal player-facing gap toward explanation submit/evaluate/recover/exact conclusion, without inspecting implementation or mutating save/storage.
+- **Required visible delta:** W2 integrates the complete adjacent gap; W3/W4 protect coherent wide/narrow presentation and accessibility; coordinator independently releases.
+
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-018 + RP002-AESTH-013`.

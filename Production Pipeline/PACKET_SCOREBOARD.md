@@ -1,5 +1,11 @@
 # Rail Packet Scoreboard
 
+## Current control — 2026-07-18
+
+- `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI transfer and blank Teacher explanation entry.
+- Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
+- Next scoreboard reduction: explanation submission/evaluation/recovery/exact-conclusion convergence only; later states remain closed.
+
 ## 2026-07-18 RP-002 coordinator release — RAI transfer accepted
 
 - **Outcome:** `IN DEMO — PARTIAL / CONVERGE + MERGE + TRIM`. Normal integration and Working evidence now pass through explicit blank `T01`–`T03` transfer submissions, third-case-only simultaneous strict `9/9`, bounded failed-pair recovery, exact-pass blank Teacher three-boundary entry, and distinct scored-frame / guide-cassette presentation.

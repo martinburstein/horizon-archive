@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## Current control — 2026-07-18
+
+- **Released delta:** RP-002 normal play reaches strict recoverable RAI transfer `9/9` and a genuinely blank Teacher three-boundary explanation entry with scored-frame/guide-cassette separation.
+- **Evidence:** `654/654`, `15/15`, build, clean `875.7s` E2E, desktop/narrow live review, hashes, cleanup, and synchronization passed at the latest coordinator release.
+- **Next increment target:** integrate and visibly present the complete strict `3/3` explanation submit/recovery/exact-conclusion seam, then run the optimized Working and coordinator gates.
+
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
 - **Closed checklist item:** `[x] SC-03 / blank RAI explanation — interpretation-veil separation and depth`.

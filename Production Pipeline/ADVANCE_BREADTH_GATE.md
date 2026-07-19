@@ -1,5 +1,11 @@
 # Advance Breadth and Convergence Gate
 
+## Current control — 2026-07-18
+
+- **Mode:** mandatory RP-002 convergence/integration; protected missing-gate count remains zero.
+- **Authorized reduction:** merge only the existing blank explanation submission, strict `3/3`, first-failed recovery, and exact Pilot conclusion authorities as one tranche.
+- **Prohibited:** new prompt, answer, score, compensation, branch, micro-seam, art integration, RP-013, or successor.
+
 Latest RP-002 continuity release: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 PASS — RAI TRANSFER CONVERGENCE IN DEMO PARTIAL`. Protected and normal transfer work converged through strict `T01`–`T03`, bounded recovery, blank Teacher explanation entry, and scored-frame/guide-cassette separation without adding a micro-seam or successor. Independent full `654/654`, all `15/15` validators, build, clean isolated `875.7s` E2E, responsive/HTTP/log/patch/cleanup/immutable-reference gates pass. The next meaningful continuity tranche begins only at the accepted blank Teacher explanation and must reduce the explanation evaluator/exact-conclusion gate.
 
 Latest RP-002 continuity release: `2026-07-17 / RP002-P1-014 PASS — BLANK PYTHON EXPLANATION ENTRY IN DEMO PARTIAL`. Protected and normal explanation-entry work converged without opening explanation evaluation, RAI, or a successor seam. Independent full `607/607`, all `15/15` validators, build, `79s` complete E2E, responsive/HTTP/log/patch/cleanup gates pass. The next meaningful continuity tranche begins only at canonical blank explanation and must reduce the explanation submission/evaluation gate.

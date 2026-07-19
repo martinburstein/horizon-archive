@@ -1,5 +1,11 @@
 # Advance Queue
 
+## Current control — 2026-07-18
+
+- **A1 entry:** accepted exact transfer `9/9` and genuinely blank application-label/native-fact/authority Teacher explanation.
+- **Cycle target:** one complete existing-authority explanation submit/evaluate/recover/exact-conclusion convergence tranche through A1–A5.
+- **A1 next:** ownership and meaning audit only; preserve strict `3/3`, private transient work, complete clearing, exact conclusion copy, zero authority/effect, and every hard stop.
+
 ## 2026-07-18 coordinator release — next explanation convergence edge
 
 - **Accepted:** normal RP-002 now reaches strict three-case RAI-transfer `9/9`, bounded answer-free failed-pair recovery, and exact-pass genuinely blank Teacher three-boundary explanation entry. Scored transfer retains exactly three equal wide peers; the zero-credit guide reads as one separate cassette enclosure.

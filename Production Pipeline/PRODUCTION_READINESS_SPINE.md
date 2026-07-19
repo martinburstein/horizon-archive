@@ -1,5 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
+## Current control — 2026-07-18
+
+- **Accepted release:** RP-002 normal integration through strict RAI transfer, bounded recovery, and blank Teacher explanation entry on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`.
+- **A5 target:** one pure unimported existing-authority explanation convergence controller with focused tests; no normal integration, storage, route, art, world, or later-state change.
+- **Release ladder:** W2 performs full suite/build for normal integration, W4 rebuilds after visual work, and coordinator alone runs the complete final suite, all validators, build, E2E, live review, cleanup, hashes, disposition, and synchronization.
+
 Latest coordinator acceptance: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 RAI TRANSFER CONVERGENCE — IN DEMO PARTIAL`. Independent full `654/654`, all `15/15` validators, production build, clean isolated `875.7s` complete E2E, fresh `1920 x 1080` / `390 x 844` live title-shell review, HTTP/log/patch/cleanup, immutable-art, and four canonical-reference gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`. Team 2's accepted edge now includes strict three-case transfer submission, bounded failed-pair recovery, exact-pass blank Teacher three-boundary entry, and scored-frame/guide-cassette visual separation; explanation submission/evaluation and every later state remain closed.
 
 Latest Working candidate: `2026-07-18 / RP002-AESTH-013 W4 RESOLVED — COORDINATOR NEXT`. The zero-credit `RAITC-30G` guide now has one guide-specific, width-contained, one-column cassette surface with one enclosing boundary and borderless internal field groups; its three unchanged labeled native inputs retain source order, targets, focus, forced-color, and narrow/`200%` recovery. Scored `RAITC-00` remains exactly three equal wide peers. Focused `65/65`, full `654/654`, both validators, build, immutable art/four references, served HTTP/markers/hashes, final refresh, and patch gates pass on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`; Browser remained unavailable and storage untouched.

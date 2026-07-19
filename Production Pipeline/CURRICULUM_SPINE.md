@@ -1,5 +1,11 @@
 # Horizon Archive Curriculum Spine
 
+## Current control — 2026-07-18
+
+- **Status:** `SOLIDIFIED / NO REOPEN`; explanation uses exactly three separate boundaries and simultaneous strict `3/3` with no compensation.
+- **A3 target:** preserve private transient responses, explicit Pilot intent, zero interim/presentation credit, first-actual-failed-boundary-only answer-free remediation, complete clearing, blank retry, and zero-credit exact conclusion.
+- **Firewall:** Python, RAI primary, transfer, Tour, navigation, timing, feedback, focus, and conclusion cannot cross-credit explanation evidence.
+
 Owner: **Curriculum Checker Agent**  
 
 **2026-07-18 RP-002 RAI transfer/recovery/blank-explanation preservation:** `NO REOPEN — SOLIDIFIED`. The accepted blank transfer, unchanged `T01`–`T03` one at a time, transient three-dimension Pilot submission per case, no interim result, simultaneous frozen `9/9` only after `T03`, actual-failed-case/dimension-only answer-free Teacher feedback, one neutral zero-credit guide, complete clearing, wholly blank transfer retry, and exact-pass separate genuinely blank Teacher three-boundary entry preserve the existing `RP002-RAI-01` mapping. Presentation and interaction remain zero evidence except the frozen evaluator's final simultaneous result. Exact cases, answers, dimensions, order, threshold, remediation, evidence allowlist, privacy, accessibility, hidden independent `PY-009` prerequisites/no cross-credit, provisional-human-label/no-native-fact/no-authority meaning, offline/no-authority/no-exam-guarantee, invariant world/null delta, later locks, and no successor remain frozen. A4 owns one bounded protected transfer/recovery/blank-explanation-entry graph and must stop before explanation submission/evaluation.

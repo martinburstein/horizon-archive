@@ -1,5 +1,7 @@
 # Horizon Archive Two-Team Agent Cycle
 
+> **Scheduled-production optimization:** `AUTONOMOUS_PRODUCTION_LOOP.md` specializes this workflow for autonomous wakes. It preserves the role order and gates while defining compact reads, integration-sized tranches, tiered validation, push boundaries, non-overlap behavior, and replace-in-place handoffs.
+
 ## Purpose
 
 This is the authoritative workflow for new Horizon Archive development cycles.
@@ -500,7 +502,7 @@ Suggested commit prefixes:
 - `Working Aesthetic:`
 - `Working Coder Polish:`
 
-Push after each checkpoint when the round requires continuous backup. Use an empty commit for a read-only role when a per-role checkpoint is required.
+Create a dedicated local commit after each role. During scheduled autonomous production, push at the optimized boundaries in `AUTONOMOUS_PRODUCTION_LOOP.md`: after A5, W2, W4, coordinator handoff, and cycle reveal, plus immediately after any unusually risky runtime/save/recovery change. Do not create empty commits merely to prove a read-only role ran; record its signed disposition in the current-cycle control block and include it in the next boundary commit.
 
 ### Mandatory cycle-end visual reveal
 

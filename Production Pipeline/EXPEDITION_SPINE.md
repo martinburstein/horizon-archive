@@ -1,5 +1,11 @@
 # Horizon Archive Expedition Spine
 
+## Current control — 2026-07-18
+
+- **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI transfer and blank Teacher explanation entry; ordered lead is ten packets.
+- **Next deficit:** converge explanation submit -> simultaneous strict `3/3` -> first-failed blank retry or exact zero-credit Pilot conclusion.
+- **Hard stop:** no conclusion dismissal, review/save/completion, `RP-003+` normal integration, RP-013, successor, world response, access, authority, or external action.
+
 Latest RP-002 release handoff: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 PASS — RAI TRANSFER CONVERGENCE ACCEPTED`. Team 2's accepted edge is the genuinely blank Teacher three-boundary Responsible-AI explanation after strict recoverable transfer `9/9`; its next adjacent gap is explanation submission/evaluation and the exact Pilot conclusion only. RP-012 remains the final railhead and no RP-013 or successor exists.
 
 Latest RP-002 continuity handoff: `2026-07-17 / RP002-P1-014 A5 REVISE — PROTECTED EXPLANATION ENTRY / ACCEPTED W1 NEXT`. The pure unimported `EX-00 -> EX-10 -> EX-20` seam composes exact `FT-20C`, canonical Python resume/blank ownership, and separate returns without changing accepted runtime/storage/assets/world. W1 remains at accepted bounded transfer evidence and reports only the explicit explanation-entry gap. RP-012 remains the final railhead and no successor exists.

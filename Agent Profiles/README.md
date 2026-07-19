@@ -4,17 +4,17 @@ This directory stores the canonical, redeployable identity for every unique agen
 
 ## Loading protocol
 
-Before every agent pass, the coordinator must read, in order:
+At the start of a scheduled wake, the coordinator reads applicable `AGENTS.md`, `NEXT_INSTANCE_HANDOFF.md`, and `AUTONOMOUS_PRODUCTION_LOOP.md` in full. Before every agent pass, read in order:
 
-1. all applicable `AGENTS.md` files;
-2. `TWO_TEAM_AGENT_CYCLE.md`;
-3. this registry;
-4. the selected agent profile in full;
-5. the active Rail Packet or Demo Increment;
-6. the selected agent's work log; and
-7. the immediately preceding handoff.
+1. the selected agent profile in full;
+2. the immediately preceding current-cycle handoff;
+3. the active Rail Packet or Demo Increment's top current-control block;
+4. the selected agent's latest work-log entry; and
+5. exact sections directly cited by the handoff or profile.
 
-The profile is the stable identity. The active packet, work log, and handoff provide current context. Do not replace a profile with an improvised prompt when its file is available.
+Read `TWO_TEAM_AGENT_CYCLE.md`, this registry, and older append-only artifact history again only when their hashes changed, a current authority cites them, a contradiction or reopen condition appears, or an audit requires them. This optimization does not weaken any role boundary or project invariant.
+
+The profile is the stable identity. The active current-control block, latest work-log entry, and preceding handoff provide current context. Do not replace a profile with an improvised prompt when its file is available.
 
 ## Registry and run order
 

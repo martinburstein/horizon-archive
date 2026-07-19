@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## Current control — 2026-07-18
+
+- **Disposition:** `IN DEMO — PARTIAL`; accepted through strict three-case RAI transfer, bounded failed-pair recovery, and exact-pass genuinely blank Teacher explanation entry.
+- **Exact next tranche:** private blank application-label/native-fact/authority responses -> explicit Pilot submit -> simultaneous strict `3/3` -> first-actual-failed-boundary-only answer-free feedback and wholly blank retry, or exact zero-credit Pilot conclusion.
+- **Stop / invariants:** stop before conclusion dismissal and all later states; preserve privacy, evidence separation, accessibility, invariant SC-03/world/null delta, no authority/external effect, no RP-013, and no successor.
+
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
 - **Closed checklist item:** `[x] SC-03 / blank RAI explanation — interpretation-veil separation and depth`.
