@@ -169,6 +169,55 @@ The coordinator independently confirms:
 
 Do not mutate Martin's browser storage or campaign save to reach a gated state. Use deterministic source, test, served-bundle, and E2E evidence and state any live limitation.
 
+## Adaptive end-of-cycle retrospective
+
+Martin explicitly authorizes the coordinator to improve the production process at the end of every completed cycle.
+
+Run the retrospective after coordinator release validation and before the cycle reveal so the image remains the cycle's final visible output. Review:
+
+- player-visible progress delivered versus intended tranche;
+- total elapsed cycle time and the slowest phases;
+- repeated file reads or unnecessary context load;
+- redundant tests, builds, E2E runs, pushes, or reloads;
+- agent handoff ambiguity, duplicated work, or missed ownership;
+- validation failures, defects caught late, or evidence gaps;
+- model-routing quality and latency;
+- scheduled cadence versus actual cycle duration;
+- reveal usefulness and repeated visual uncertainty from the preceding cycle.
+
+Record one disposition in `Production Pipeline/PROCESS_CHANGELOG.md`:
+
+- `KEEP` — the process performed well enough; make no change;
+- `TUNE` — apply one to three bounded reversible improvements for the next cycle;
+- `REDESIGN` — evidence shows the structure itself is failing; make the smallest safe structural correction and document migration and rollback.
+
+The coordinator may autonomously change:
+
+- reading scope and current-control formats;
+- work-tranche sizing and handoff templates;
+- validation placement and deduplication;
+- local commit and push boundaries;
+- role model/reasoning routing;
+- schedule cadence and non-overlap handling;
+- log, queue, packet, increment, and handoff organization;
+- agent reuse and context-transfer mechanics.
+
+Process changes must be evidence-backed, reversible where practical, applied only to future work, and recorded with the problem, change, expected benefit, guardrails, and rollback trigger. Do not optimize for novelty or change a healthy process merely because modification is permitted.
+
+The retrospective may not silently weaken or remove:
+
+- Martin's latest direction;
+- hidden-lore restrictions;
+- canon and no-RP-013 boundaries;
+- AI-901 learning validity and strict evidence;
+- privacy, save, offline/no-authority/no-exam-guarantee, and no-credit Tour rules;
+- accessibility and responsive parity;
+- independent coordinator release judgment;
+- the requirement for one tangible canonical reveal per completed cycle;
+- preservation of user-owned work.
+
+If a proposed change would alter product direction, expose hidden material, weaken a safety/learning gate, cause destructive state change, or require external authority, stop and ask Martin. Otherwise, the coordinator may implement and synchronize it without waiting for confirmation.
+
 ## Cycle reveal contract
 
 After coordinator synchronization:
@@ -209,6 +258,7 @@ The recurring scheduled prompt should be short. It should:
 - continue one existing cycle or start one new cycle, never overlap;
 - follow the canonical role order;
 - close with coordinator validation, one reveal, and a synchronized compact handoff;
+- run the adaptive end-of-cycle retrospective, record `KEEP`, `TUNE`, or `REDESIGN`, and apply safe future-cycle improvements before the reveal;
 - preserve protected files and hidden-lore boundaries;
 - notify Martin only for a genuine blocker or completed cycle.
 

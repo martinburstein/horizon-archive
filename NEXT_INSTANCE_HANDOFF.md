@@ -24,6 +24,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Live demo URL when intentionally started: `http://127.0.0.1:4173/`
 - Current served-build identity: `index-CKaXmS2o.js` / `index-DyAC0bkf.css`
 - Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, attached to this task, immediate first wake and then every three hours. If a cycle is already active, the wake continues it and never starts an overlapping cycle.
+- Adaptive process authority: **ACTIVE**. After every completed coordinator release, record `KEEP`, `TUNE`, or `REDESIGN` in `Production Pipeline/PROCESS_CHANGELOG.md` and apply safe evidence-backed improvements for the next cycle before producing the reveal.
 
 Protected user-owned untracked paths:
 
@@ -134,7 +135,8 @@ Run strictly sequentially:
 8. Aesthetic W3
 9. Coder W4 `aesthetic-polish`
 10. Coordinator release validation
-11. Exactly one canonical cycle reveal
+11. Adaptive process retrospective and any safe next-cycle tuning
+12. Exactly one canonical cycle reveal
 
 Create one local commit per role. Push after A5, W2, W4, coordinator handoff, and reveal, plus immediately after any unusually risky runtime/save/recovery change. Use the validation ladder in `AUTONOMOUS_PRODUCTION_LOOP.md`.
 

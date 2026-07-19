@@ -17,6 +17,8 @@ When running or resuming the Horizon Archive two-team cycle, treat `TWO_TEAM_AGE
 
 For scheduled autonomous production, also read `AUTONOMOUS_PRODUCTION_LOOP.md`. It is the throughput and handoff authority for reading scope, integration-sized work, tiered validation, checkpoint/push cadence, non-overlap behavior, and compact state transfer. `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
+After every completed coordinator release, run the authorized adaptive retrospective in `AUTONOMOUS_PRODUCTION_LOOP.md`, record `KEEP`, `TUNE`, or `REDESIGN` in `Production Pipeline/PROCESS_CHANGELOG.md`, and apply only safe evidence-backed improvements to future cycles before producing the cycle reveal.
+
 Also read these pipeline-control artifacts before selecting Advance work:
 
 - `Production Pipeline/EXPEDITION_SPINE.md`
