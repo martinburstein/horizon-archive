@@ -941,7 +941,7 @@ export function CivicRecordArrival({
                   Responsible-AI explanation boundaries
                 </h2>
                 <p>{primaryInteraction.ownershipMessage.text}</p>
-                <dl className="custody-ledger-fields custody-ledger-explanation-controls">
+                <dl className="custody-ledger-fields custody-ledger-rai-explanation-veil">
                   {primaryInteraction.controls.map((control) => (
                     <div key={control.id} data-field-state="editable">
                       <dt>

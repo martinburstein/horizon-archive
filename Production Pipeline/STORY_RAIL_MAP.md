@@ -3,10 +3,10 @@
 ## Current control — 2026-07-19
 
 - **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only; protected RAI explanation convergence is complete.
-- **Team 2:** `RP-002`, W3 accepted the repaired authoring/feedback/retry/conclusion hierarchy but opened `RP002-AESTH-014 P2`: the RAI Teacher form is still a flat generic three-peer row rather than the closed-canon three nested interpretation planes.
-- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). The rail does not extend; W4 owns only the state-specific nested-plane presentation repair, while conclusion dismissal and all later states remain closed.
+- **Team 2:** `RP-002`, W4 resolved `RP002-AESTH-014`: editable/retry `RAIEC-00` now consumes the closed-canon three-plane interpretation depth without raster integration; coordinator release is next.
+- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). The rail does not extend; coordinator independently validates only the current explanation convergence and presentation, while conclusion dismissal and all later states remain closed.
 
-Latest Working handoff: `2026-07-19 / RP002-AESTH-014 W3 P2 — W4 AESTHETIC-POLISH NEXT`. `RAIEC-00/20F/20C` hierarchy, replacement, recovery, focus intent, targets, reflow, privacy, exact conclusion, invariant world/art, and hard stop pass; only editable/retry `RAIEC-00` fails to consume the closed three-nested-plane interpretation-veil identity because it reuses the older flat equal-peer explanation grid. Team 2 stays on RP-002; Team 1 remains complete at RP-012 with no RP-013/successor and a ten-packet lead (`RP-003`–`RP-012`).
+Latest Working handoff: `2026-07-19 / RP002-AESTH-014 W4 RESOLVED — COORDINATOR NEXT`. Only editable/retry `RAIEC-00` gained a state-specific wide three-plane progressive inset with complete narrow/`200%` flattening; generic Python authoring, controls, gameplay, privacy, focus authority, art/world, and hard stop remain unchanged. Team 2 stays on RP-002 pending independent release; Team 1 remains complete at RP-012 with no RP-013/successor and a ten-packet lead (`RP-003`–`RP-012`).
 
 Latest Advance handoff: `2026-07-18 / RAI EXPLANATION A5 REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`. Exact `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` is protected without runtime integration or accepted-build change; Team 2 remains on RP-002 and Team 1 remains complete at RP-012 with no RP-013/successor.
 

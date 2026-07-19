@@ -3,9 +3,9 @@
 ## Current control — 2026-07-19
 
 - **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Current W3 result:** `RP002-AESTH-014 P2 OPEN / W4 AESTHETIC-POLISH NEXT`. Authoring/retry currently preserve three blank source-ordered controls, hierarchy, feedback, focus intent, targets, reflow, privacy, exact conclusion, and hard stop, but reuse the generic flat three-equal-peer explanation grid instead of consuming the closed RAI interpretation veil's three nested-plane depth identity.
-- **Required W4 / stop:** add only an `RAIEC-00`-specific nested/inset three-plane presentation with one-column narrow/`200%` recovery and focused regression; preserve the older Python grid, all controls/copy/evaluator/recovery/focus authority, non-runtime canon, art/world/storage, and every later-state stop.
-- **Evidence:** focused W3 `63/63`; served HTTP/assets/markers/hashes, canonical provenance/hash/original-size inspection, unchanged civic-master hash, and patch baseline pass on `index-C4uncrHq.js` / `index-DyAC0bkf.css`. Browser reached the local title but gated DOM review timed out; no action or storage/save mutation occurred and user paths remain untouched.
+- **Current W4 result:** `RP002-AESTH-014 RESOLVED / COORDINATOR NEXT`. Editable and wholly blank retry `RAIEC-00` alone now uses a state-specific three-plane interpretation veil: three separate source-ordered, progressively inset, non-overlapping wide planes that flatten to one equal source-ordered column at narrow/effective-`200%` widths. The older Python explanation keeps its equal-peer grid unchanged.
+- **Coordinator stop:** independently release only the integrated explanation authoring/strict evaluation/first-failed blank recovery/exact conclusion plus the resolved veil presentation. Conclusion dismissal and every later state remain closed.
+- **Evidence:** focused gameplay/presentation `64/64`; both applicable validators; production build; served HTTP/assets/markers/hashes/final title reload; five canonical-reference and immutable civic-master hashes/original sizes; no-raster leakage; and patch gates pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`. Browser reloaded the local title with no warnings/errors; no campaign action, gated state, or storage/save inspection/mutation occurred, and protected user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 

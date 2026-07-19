@@ -130,3 +130,26 @@ test("Responsible-AI transfer keeps three scored peers distinct from one guide c
   assert.doesNotMatch(arrival,
     /rp002-rai-guided-recovery-cassette-v1|2026-07-17-rp002-rai-guided-recovery-reveal/);
 });
+
+test("Responsible-AI explanation uses three nested wide planes and flat narrow recovery", () => {
+  const arrival = readFileSync(new URL("../src/CivicRecordArrival.jsx", import.meta.url), "utf8");
+  const raiExplanation = arrival.match(/atPythonPrimary && primaryPhase === "RAIEC-00"([\s\S]*?)atPythonPrimary && primaryPhase === "RAIEC-20F"/)?.[1] ?? "";
+  assert.match(raiExplanation,
+    /<dl className="custody-ledger-fields custody-ledger-rai-explanation-veil">[\s\S]*?primaryInteraction\.controls\.map\(\(control\) => \(/);
+  assert.doesNotMatch(raiExplanation, /custody-ledger-explanation-controls/);
+  assert.match(arrival,
+    /\["EX-20", "EXS-00"\]\.includes\(primaryPhase\)[\s\S]*?<dl className="custody-ledger-fields custody-ledger-explanation-controls">/);
+  assert.match(styles,
+    /\.custody-ledger-rai-explanation-veil \{ grid-template-columns: minmax\(0, 1fr\); gap: 8px; \}/);
+  assert.match(styles,
+    /\.custody-ledger-rai-explanation-veil > div:nth-child\(2\) \{ width: calc\(100% - 40px\); margin-inline: 20px; \}/);
+  assert.match(styles,
+    /\.custody-ledger-rai-explanation-veil > div:nth-child\(3\) \{ width: calc\(100% - 80px\); margin-inline: 40px; \}/);
+  assert.doesNotMatch(styles, /\.custody-ledger-rai-explanation-veil > div:nth-child\(4\)/);
+  assert.match(styles,
+    /@media \(forced-colors: active\) \{[\s\S]*?\.custody-ledger-rai-explanation-veil > div \{ border-color: Highlight; \}/);
+  assert.match(styles,
+    /@media \(max-width: 1279px\) \{[\s\S]*?\.custody-ledger-rai-explanation-veil > div:nth-child\(3\) \{ width: 100%; margin-inline: 0; \}/);
+  assert.doesNotMatch(arrival,
+    /rp002-rai-interpretation-veil-v1|2026-07-18-rp002-rai-blank-explanation-reveal/);
+});
