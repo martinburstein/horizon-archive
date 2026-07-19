@@ -2,9 +2,9 @@
 
 ## Current control — 2026-07-18
 
-- **A4 target:** one protected graph from genuinely blank three-boundary Teacher entry through explicit Pilot submit and strict simultaneous `3/3` to wholly blank first-failed retry or exact Pilot conclusion.
-- **Recovery:** expose only first actual failed boundary, clear all three responses, restore all blank, focus deterministic first-failed boundary, and allow unlimited retry.
-- **Stop:** no conclusion dismissal, review/save/completion, world/access/authority effect, later packet, RP-013, or successor.
+- **A4 result:** `PASS — RAIEC-00/10/20F/20C GRAPH LOCKED / PROTECTED A5 NEXT`. One bounded graph owns genuinely blank/private Teacher three-boundary authoring -> one explicit private-free seven-modality/one-hit Pilot submit -> frozen simultaneous uncompensated strict current-attempt `3/3` -> first-actual-failed-boundary-only answer-free Teacher feedback/full clear/wholly blank unlimited retry or exact zero-credit Pilot conclusion.
+- **Recovery / focus:** private work never enters intent/view/evidence; miss clears all three responses and transient material, then restores every control blank with Teacher-heading followed by first-failed focus. Exact blank, feedback/retry, and conclusion resume without replay; unsafe/contaminated/Tour/private/later input fails closed. Separate returns remain write-free.
+- **A5 / stop:** compose one pure unimported controller from existing evaluator, remediation, sanitizer/resume, conclusion, and return authorities. Expose no conclusion dismissal, review/save/completion, world/access/authority effect, later packet, RP-013, or successor.
 
 Latest continuity handoff: `RAI TRANSFER A4 STRICT-GRAPH PASS — PROTECTED A5 NEXT`. One compact existing-authority graph composes wholly blank `T01`–`T03`, transient one-hit Pilot submissions, no interim evaluation, frozen simultaneous strict `9/9` only after `T03`, actual-failed-pair Teacher feedback -> one neutral zero-credit guide -> wholly cleared first-failed retry, or exact-pass separate blank Teacher three-boundary entry. One active group, seven modalities/one hit, deterministic sanitation/resume/focus, independent Python/no cross-credit, privacy, accessibility, invariant-world/null-delta, offline/no-authority/no-exam-guarantee, hard explanation-and-later-state absence, and no successor remain exact. A5 owns one pure protected transfer controller and must expose no explanation evaluator/action. RP-012 remains the completed railhead; no successor exists.
 

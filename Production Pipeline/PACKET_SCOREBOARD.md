@@ -4,8 +4,8 @@
 
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI transfer and blank Teacher explanation entry.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
-- A3 preservation: `NO REOPEN — SOLIDIFIED PASS`; strict simultaneous `3/3`, first-failed answer-free recovery/full clear/blank retry, exact zero-credit conclusion, and evidence firewall pass applicable validators and focused `84/84` suites.
-- Next scoreboard reduction: A4 locks one complete protected explanation interaction/recovery graph; conclusion dismissal and every later state remain closed.
+- A4 gameplay: `RAIEC-00/10/20F/20C GRAPH PASS`; blank/private authoring, one-hit submit, strict simultaneous `3/3`, first-failed answer-free recovery/full clear/wholly blank retry, exact zero-credit conclusion, focus/resume/privacy/evidence firewall, and zero-effect contracts are locked; focused authorities `4/4` and the RP-002 self-test pass.
+- Next scoreboard reduction: A5 builds one pure protected explanation convergence controller; conclusion dismissal and every later state remain closed.
 
 ## 2026-07-18 RP-002 coordinator release — RAI transfer accepted
 

@@ -2,8 +2,8 @@
 
 ## Current control — 2026-07-18
 
-- **A3 result:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Simultaneous uncompensated strict current-attempt `3/3`, first-failed-only answer-free recovery, complete private clearing, wholly blank unlimited retry, exact zero-credit conclusion, hidden prerequisite isolation/no cross-credit, and all existing curriculum/privacy/evidence authorities remain frozen. Validators and focused evidence-firewall suites pass.
-- **A4 next:** lock only one bounded protected interaction/recovery graph for blank/private all-three authoring -> explicit Pilot submit -> strict simultaneous `3/3` -> first-failed feedback/full clear/blank retry or exact Pilot conclusion. Add no prompt, answer, score, result board, branch, art integration, later transition, or micro-seam.
+- **A4 result:** `PASS — RAIEC-00/10/20F/20C GRAPH LOCKED / PROTECTED A5 NEXT`. The complete protected graph now owns blank/private all-three Teacher authoring, one private-free seven-modality/one-hit Pilot submit, frozen simultaneous uncompensated strict current-attempt `3/3`, first-actual-failed-boundary-only answer-free Teacher feedback/full clear/wholly blank unlimited retry, or only the exact zero-credit Pilot conclusion.
+- **A5 next:** build one pure unimported protected convergence controller by composing the frozen evaluator, feedback/retry, resume/sanitizer, conclusion, and separate-return authorities. Add no prompt, answer, score, result board, branch, art integration, normal route, later transition, or micro-seam.
 - **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge

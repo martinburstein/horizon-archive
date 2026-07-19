@@ -3,7 +3,7 @@
 ## Current control — 2026-07-18
 
 - **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI transfer and blank Teacher explanation entry; ordered lead is ten packets.
-- **Next deficit:** converge explanation submit -> simultaneous strict `3/3` -> first-failed blank retry or exact zero-credit Pilot conclusion.
+- **Current Advance result / next deficit:** A4 locks `RAIEC-00/10/20F/20C`; A5 must compose one pure protected explanation submit -> simultaneous strict `3/3` -> first-failed blank retry or exact zero-credit Pilot conclusion controller from existing authorities.
 - **Hard stop:** no conclusion dismissal, review/save/completion, `RP-003+` normal integration, RP-013, successor, world response, access, authority, or external action.
 
 Latest RP-002 release handoff: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 PASS — RAI TRANSFER CONVERGENCE ACCEPTED`. Team 2's accepted edge is the genuinely blank Teacher three-boundary Responsible-AI explanation after strict recoverable transfer `9/9`; its next adjacent gap is explanation submission/evaluation and the exact Pilot conclusion only. RP-012 remains the final railhead and no RP-013 or successor exists.

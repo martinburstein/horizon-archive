@@ -3,8 +3,8 @@
 ## Current control — 2026-07-18
 
 - **Released delta:** RP-002 normal play reaches strict recoverable RAI transfer `9/9` and a genuinely blank Teacher three-boundary explanation entry with scored-frame/guide-cassette separation; release evidence remains `654/654`, `15/15`, build, clean `875.7s` E2E, desktop/narrow live review, hashes, cleanup, and synchronization.
-- **Current Advance handoff:** `A3 NO REOPEN — SOLIDIFIED PASS / A4 NEXT`. The existing three-boundary explanation remains simultaneous and uncompensated at strict current-attempt `3/3`; presentation, editing, submit activation, recovery, conclusion display, return, sanitation, resume, modality, and Tour remain zero evidence outside that evaluator. First-failed-only answer-free feedback, full private clearing, wholly blank unlimited retry, exact zero-credit conclusion, and no cross-credit are frozen.
-- **Next increment target / stop:** A4 locks one complete protected interaction/recovery graph and A5 builds it unchanged before W1 reports the earliest normal gap. Stop with the exact conclusion visible before dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
+- **Current Advance handoff:** `A4 RAIEC-00/10/20F/20C GRAPH PASS / PROTECTED A5 NEXT`. One active blank/private Teacher group, one private-free seven-modality/one-hit Pilot submit, simultaneous uncompensated strict current-attempt `3/3`, first-actual-failed-boundary-only answer-free feedback/full clear/wholly blank unlimited retry, or only the exact zero-credit Pilot conclusion are locked with deterministic owner/first-failed focus, separate returns, sanitation/resume, no cross-credit, and invariant world/null delta.
+- **Next increment target / stop:** A5 composes only existing authorities into one pure protected controller; W1 then reports the earliest normal gap. Stop with the exact conclusion visible and no dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
 
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
