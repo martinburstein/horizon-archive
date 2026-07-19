@@ -2,9 +2,9 @@
 
 ## Current control — 2026-07-18
 
-- **A1 entry:** accepted exact transfer `9/9` and genuinely blank application-label/native-fact/authority Teacher explanation.
-- **Cycle target:** one complete existing-authority explanation submit/evaluate/recover/exact-conclusion convergence tranche through A1–A5.
-- **A1 next:** ownership and meaning audit only; preserve strict `3/3`, private transient work, complete clearing, exact conclusion copy, zero authority/effect, and every hard stop.
+- **A1 result:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. From accepted exact transfer `9/9` and genuinely blank Teacher explanation, one ownership path now covers private all-three Pilot work, explicit local submit, simultaneous strict `3/3`, first-actual-failed-boundary-only answer-free Teacher recovery with wholly blank retry, or the exact zero-credit Pilot conclusion.
+- **A2 next:** board the complete compact owner/focus/replacement sequence only. Reuse the existing prompt, three controls, evaluator, feedback, retry, evidence allowlist, and conclusion unchanged; add no result board, prompt, answer, score, branch, art integration, or micro-seam.
+- **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge
 

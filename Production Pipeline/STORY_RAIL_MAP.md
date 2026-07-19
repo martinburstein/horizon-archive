@@ -2,9 +2,9 @@
 
 ## Current control — 2026-07-18
 
-- **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only.
+- **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only; A1 explanation convergence ownership is `PASS / A2 NEXT`.
 - **Team 2:** `RP-002`, accepted at genuinely blank three-boundary RAI explanation after strict recoverable transfer `9/9`.
-- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`); next cycle integrates explanation strict `3/3`, blank first-failed retry, and the exact Pilot conclusion without extending the rail.
+- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). A2 receives one compact existing-authority path through private all-three Pilot work, explicit submit, simultaneous strict `3/3`, first-failed answer-free feedback/wholly blank retry, or the exact zero-credit Pilot conclusion. The rail does not extend; conclusion dismissal and all later states remain closed.
 
 Latest coordinator acceptance: `2026-07-18 / RP002-P1-018 + RP002-AESTH-013 PASS — RAI TRANSFER CONVERGENCE IN DEMO PARTIAL`. Team 2 now accepts blank `T01` through one-at-a-time `T01`–`T03`, third-case-only strict `9/9`, failed-pair Teacher recovery/one neutral guide/blank retry, or exact-pass separate blank Teacher three-boundary explanation entry. Team 1 remains complete at RP-012 with no RP-013/successor; the ordered lead remains ten packets (`RP-003`–`RP-012`). The next cycle converges the already-protected explanation submission/evaluation/exact Pilot conclusion seam without extending the ending.
 
