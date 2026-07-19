@@ -140,7 +140,7 @@ Run the cheapest decisive evidence at each stage. Do not repeat full release wor
 | W4 | focused gameplay/presentation tests, applicable validators, production build, final served-bundle identity |
 | Coordinator | full game suite, all readiness validators, production build, complete non-overlapping E2E, live desktop/narrow review, cleanup, hashes, and synchronization |
 
-The complete E2E runs once at coordinator close unless an earlier failure specifically requires a diagnostic rerun. Never overlap E2E with a build.
+The complete E2E runs once at coordinator close unless an earlier failure specifically requires a diagnostic rerun. Never overlap E2E with a build. Immediately before launching E2E, verify its isolated preview endpoint on port `5174` returns HTTP `200`; if absent, start the exact local production preview, confirm the listener and response, then run E2E. Stop only that coordinator-owned preview after review and cleanup. A failed no-server preflight is environmental evidence, not a product failure or an accepted E2E run.
 
 ## Checkpoint and push strategy
 

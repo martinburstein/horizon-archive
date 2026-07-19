@@ -25,3 +25,12 @@
 - **Preserved guardrails:** sequential role ownership, independent release validation, strict learning evidence, hidden-lore and no-RP-013 limits, privacy/save/accessibility/world invariants, protected user work, and exactly one canonical reveal.
 - **Validation:** compare the next cycle's elapsed time, repeated reads/builds/pushes, late defects, visible delta, release evidence, and handoff clarity against the previous cycle.
 - **Rollback trigger:** missed authorities, duplicated work, late regression, ambiguous handoff, unsafe overlap, or weaker release evidence attributable to the optimization.
+
+## 2026-07-19 / RAI explanation convergence — TUNE
+
+- **Observed:** the optimized read/checkpoint/push structure delivered the full ten-stage cycle without overlap or duplicated role work, and the clean complete E2E finished in `110.4s` versus the prior release's `875.7s`. The coordinator's first E2E launch nevertheless failed immediately with `ERR_CONNECTION_REFUSED` because the isolated port `5174` preview was absent; starting the exact preview and confirming HTTP `200` produced the single clean accepted rerun.
+- **Decision:** keep the optimized structure and add one coordinator E2E endpoint preflight: verify `5174` returns HTTP `200`, start the exact local production preview only when absent, then launch E2E and stop only that coordinator-owned preview after cleanup.
+- **Expected benefit:** remove an avoidable failed launch and make the one-E2E release rule deterministic without weakening coverage.
+- **Preserved guardrails:** role order, release independence, non-overlapping build/E2E, complete E2E coverage, live responsive review, privacy/save discipline, canon, learning, accessibility, protected user work, and reveal rules remain unchanged.
+- **Validation:** the next coordinator gate should reach a clean complete E2E on its first launch with a recorded `5174` HTTP preflight and no orphan listener.
+- **Rollback trigger:** the preflight starts the wrong bundle, conflicts with an existing listener, leaves an orphan, obscures a real product failure, or increases release ambiguity.
