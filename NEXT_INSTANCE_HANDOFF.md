@@ -23,7 +23,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Expected synchronization: `HEAD == origin/main`
 - Live demo URL when intentionally started: `http://127.0.0.1:4173/`
 - Current served-build identity: `index-CKaXmS2o.js` / `index-DyAC0bkf.css`
-- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, attached to this task on a three-hour recurrence. Scheduler state is authoritative for the next wall-clock wake. If a cycle is already active, the wake continues it and never starts an overlapping cycle.
+- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE**, anchored at `11:30 PM America/New_York` on 2026-07-18 and recurring every three hours (`2:30 AM`, `5:30 AM`, `8:30 AM`, and onward). Scheduler state is authoritative. If a cycle is already active, the wake continues it and never starts an overlapping cycle.
 - Adaptive process authority: **ACTIVE**. After every completed coordinator release, record `KEEP`, `TUNE`, or `REDESIGN` in `Production Pipeline/PROCESS_CHANGELOG.md` and apply safe evidence-backed improvements for the next cycle before producing the reveal.
 
 Protected user-owned untracked paths:
