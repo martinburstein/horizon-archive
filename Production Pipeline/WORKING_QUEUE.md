@@ -1,10 +1,11 @@
 # Working Queue
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
 - **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Advance status / next Working entry:** A5 has completed the pure protected `RAIEC-00/10/20F/20C` controller with focused `10/10`, related `76/76`, both applicable validators, unchanged accepted build, and leakage/purity/recovery gates passing. W1 now reports only the earliest normal player-facing gap from the accepted live genuinely blank Teacher explanation without inspecting implementation or mutating save/storage.
-- **Required visible delta / stop:** W2 later integrates private all-three input, explicit submit, simultaneous strict `3/3`, first-failed answer-free feedback/wholly blank retry, or the exact zero-credit Pilot conclusion; W3/W4 protect presentation/accessibility and the coordinator independently releases. Stop before conclusion dismissal and every later state.
+- **Current W1 result:** `RP002-P1-019 P1 OPEN / W2 BUG-REPAIR NEXT`. The accepted group remains genuinely blank, Teacher-owned, heading-focused, separately reversible, private, responsive, and world-invariant, but all three explanation controls are read-only and no normal submit action/handler exists.
+- **Required visible delta / stop:** W2 integrates only private all-three editing, one explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary answer-free feedback/complete clearing/wholly blank retry, or the exact zero-credit Pilot conclusion. W3/W4 protect only the repaired presentations; stop before conclusion dismissal and every later state.
+- **Evidence:** accepted normal/prior integrated seams `78/78`; root/current assets HTTP `200`; served JS contains the blank group and exact no-action status but lacks `SUBMIT RESPONSIBLE-AI EXPLANATION`. Storage/save and user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 

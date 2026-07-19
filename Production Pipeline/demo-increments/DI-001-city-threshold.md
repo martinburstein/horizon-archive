@@ -1,10 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
 - **Released delta:** RP-002 normal play reaches strict recoverable RAI transfer `9/9` and a genuinely blank Teacher three-boundary explanation entry with scored-frame/guide-cassette separation; release evidence remains `654/654`, `15/15`, build, clean `875.7s` E2E, desktop/narrow live review, hashes, cleanup, and synchronization.
-- **Current Advance handoff:** `A5 REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`. One pure unimported controller now composes blank/private Teacher authoring, one private-free seven-modality/one-hit Pilot submit, simultaneous uncompensated strict current-attempt `3/3`, first-actual-failed-boundary-only answer-free feedback/full clear/wholly blank unlimited retry, or only the exact zero-credit Pilot conclusion, with deterministic focus, exact recovery/sanitation, separate returns, zero cross-credit, and invariant world/null delta.
-- **Next increment target / stop:** W1 reports only the earliest normal player-facing gap from the accepted live blank Teacher explanation without inspecting protected implementation or mutating save/storage. Stop with the exact conclusion visible and no dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
+- **Current Working result:** `RP002-P1-019 P1 OPEN / W2 BUG-REPAIR NEXT`. The accepted Teacher group, three source-ordered blank controls, owner focus, separate returns, privacy, and invariant world remain exact, but all three controls are read-only and normal App/UI has no explanation submit action or handler.
+- **Next increment target / stop:** W2 integrates only private all-three editing, explicit Pilot submit, strict simultaneous uncompensated `3/3`, first-failed answer-free feedback/full clear/wholly blank retry, or the exact zero-credit Pilot conclusion. Stop with the conclusion visible and no dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
+- **Player evidence:** accepted normal/prior integrated suites `78/78`; root/assets HTTP `200`; current JS/CSS hashes `EFD602C0CA03D6F7ABEC2FD030EBF049825D9DF19F1CADE99941D3241DB83090` / `E325370E1109440F4FEABF6ED745F3BE77163A0809A748CE28027AA7B46F5A42`. Browser storage/save remained untouched.
 
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
