@@ -2,8 +2,8 @@
 
 ## Current control — 2026-07-18
 
-- **A1 result:** `PASS — CONVERGE + MERGE + TRIM / A2 NEXT`. From accepted exact transfer `9/9` and genuinely blank Teacher explanation, one ownership path now covers private all-three Pilot work, explicit local submit, simultaneous strict `3/3`, first-actual-failed-boundary-only answer-free Teacher recovery with wholly blank retry, or the exact zero-credit Pilot conclusion.
-- **A2 next:** board the complete compact owner/focus/replacement sequence only. Reuse the existing prompt, three controls, evaluator, feedback, retry, evidence allowlist, and conclusion unchanged; add no result board, prompt, answer, score, branch, art integration, or micro-seam.
+- **A2 result:** `PASS — COMPACT EXISTING-AUTHORITY PRESENTATION LOCKED / A3 NEXT`. One active Teacher form carries blank/private all-three input and explicit submit, then directly replaces with first-failed answer-free Teacher recovery and a wholly blank all-three retry or only the exact zero-credit Pilot conclusion. Owner/first-failed focus, privacy clearing, wide/narrow/`200%`, `>=44px`, non-color/forced-color/reduced-motion, seven-modality, return, invariant-world, and closed-canon rules remain exact.
+- **A3 next:** perform only `NO REOPEN — SOLIDIFIED` preservation of simultaneous strict `3/3`, first-failed-only recovery, complete clearing, wholly blank retry, exact conclusion, zero presentation credit, and all existing curriculum/privacy/evidence authorities. Add no prompt, answer, score, result board, branch, art integration, or micro-seam.
 - **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge

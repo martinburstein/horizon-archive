@@ -3,8 +3,8 @@
 ## Current control — 2026-07-18
 
 - **Released delta:** RP-002 normal play reaches strict recoverable RAI transfer `9/9` and a genuinely blank Teacher three-boundary explanation entry with scored-frame/guide-cassette separation; release evidence remains `654/654`, `15/15`, build, clean `875.7s` E2E, desktop/narrow live review, hashes, cleanup, and synchronization.
-- **Current Advance handoff:** `A1 CONVERGE + MERGE + TRIM PASS / A2 NEXT`. Existing authorities now form one ownership path through private all-three Pilot work, one explicit local submit, simultaneous strict `3/3`, first-actual-failed-boundary-only Teacher feedback plus wholly blank all-three retry, or the exact zero-credit Pilot conclusion.
-- **Next increment target / stop:** A2–A5 protect and build that complete compact path, then W1 reports its earliest normal gap. Stop with the exact conclusion visible before dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
+- **Current Advance handoff:** `A2 COMPACT PRESENTATION PASS / A3 NEXT`. One active Teacher form now owns blank/private all-three input and explicit submit, then directly yields first-failed answer-free Teacher recovery with a wholly blank all-three retry or only the exact zero-credit Pilot conclusion. No result board, new art state, raster integration, or later transition is authorized.
+- **Next increment target / stop:** A3 preserves strict evidence, then A4/A5 lock and build this unchanged compact path before W1 reports its earliest normal gap. Stop with the exact conclusion visible before dismissal, review/save/completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
 
 ## 2026-07-18 canonical cycle reveal — blank RAI explanation interpretation veil
 
