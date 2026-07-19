@@ -3,7 +3,7 @@
 ## Current control — 2026-07-18
 
 - **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Advance status / next Working entry:** A2 has locked the complete compact one-group presentation through private all-three input, explicit submit, strict simultaneous `3/3`, first-failed answer-free Teacher recovery/wholly blank retry, or the exact zero-credit Pilot conclusion. A3–A5 proceed sequentially; after A5, W1 reports only the earliest normal player-facing gap without inspecting implementation or mutating save/storage.
+- **Advance status / next Working entry:** A3 preserves the complete explanation evidence contract as `NO REOPEN — SOLIDIFIED`: private all-three input, explicit submit, strict simultaneous uncompensated current-attempt `3/3`, first-failed answer-free Teacher recovery/full clear/wholly blank retry, or the exact zero-credit Pilot conclusion. A4/A5 proceed sequentially; after A5, W1 reports only the earliest normal player-facing gap without inspecting implementation or mutating save/storage.
 - **Required visible delta / stop:** W2 later integrates private all-three input, explicit submit, simultaneous strict `3/3`, first-failed answer-free feedback/wholly blank retry, or the exact zero-credit Pilot conclusion; W3/W4 protect presentation/accessibility and the coordinator independently releases. Stop before conclusion dismissal and every later state.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge

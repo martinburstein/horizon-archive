@@ -4,7 +4,8 @@
 
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI transfer and blank Teacher explanation entry.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
-- Next scoreboard reduction: explanation submission/evaluation/recovery/exact-conclusion convergence only; later states remain closed.
+- A3 preservation: `NO REOPEN — SOLIDIFIED PASS`; strict simultaneous `3/3`, first-failed answer-free recovery/full clear/blank retry, exact zero-credit conclusion, and evidence firewall pass applicable validators and focused `84/84` suites.
+- Next scoreboard reduction: A4 locks one complete protected explanation interaction/recovery graph; conclusion dismissal and every later state remain closed.
 
 ## 2026-07-18 RP-002 coordinator release — RAI transfer accepted
 

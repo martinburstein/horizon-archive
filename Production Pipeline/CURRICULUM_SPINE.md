@@ -2,9 +2,9 @@
 
 ## Current control — 2026-07-18
 
-- **Status:** `SOLIDIFIED / NO REOPEN`; explanation uses exactly three separate boundaries and simultaneous strict `3/3` with no compensation.
-- **A3 target:** preserve private transient responses, explicit Pilot intent, zero interim/presentation credit, first-actual-failed-boundary-only answer-free remediation, complete clearing, blank retry, and zero-credit exact conclusion.
-- **Firewall:** Python, RAI primary, transfer, Tour, navigation, timing, feedback, focus, and conclusion cannot cross-credit explanation evidence.
+- **Status:** `NO REOPEN — SOLIDIFIED PASS / A4 NEXT`; explanation remains exactly three separate boundaries with simultaneous uncompensated strict current-attempt `3/3`.
+- **Preserved contract:** private transient responses, explicit Pilot intent, zero display/edit/submit/presentation credit, first-actual-failed-boundary-only answer-free remediation, complete clearing, wholly blank unlimited retry, and the exact zero-credit conclusion remain frozen. No objective, case, answer, dimension, evaluator, threshold, remediation, evidence, or source authority changed.
+- **Firewall / validation:** Python, RAI primary, RAI transfer, Tour, navigation, timing, confidence, feedback, focus, return, resume, and conclusion cannot prefill, satisfy, compensate for, or cross-credit explanation evidence. RP-002 canonical forms and self-test pass; focused evaluator/evidence-firewall suites pass `84/84`. A4 owns only the bounded protected interaction/recovery graph and must stop with the conclusion visible before dismissal.
 
 Owner: **Curriculum Checker Agent**  
 

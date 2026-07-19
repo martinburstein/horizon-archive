@@ -2,8 +2,8 @@
 
 ## Current control — 2026-07-18
 
-- **A2 result:** `PASS — COMPACT EXISTING-AUTHORITY PRESENTATION LOCKED / A3 NEXT`. One active Teacher form carries blank/private all-three input and explicit submit, then directly replaces with first-failed answer-free Teacher recovery and a wholly blank all-three retry or only the exact zero-credit Pilot conclusion. Owner/first-failed focus, privacy clearing, wide/narrow/`200%`, `>=44px`, non-color/forced-color/reduced-motion, seven-modality, return, invariant-world, and closed-canon rules remain exact.
-- **A3 next:** perform only `NO REOPEN — SOLIDIFIED` preservation of simultaneous strict `3/3`, first-failed-only recovery, complete clearing, wholly blank retry, exact conclusion, zero presentation credit, and all existing curriculum/privacy/evidence authorities. Add no prompt, answer, score, result board, branch, art integration, or micro-seam.
+- **A3 result:** `PASS — NO REOPEN / SOLIDIFIED / A4 NEXT`. Simultaneous uncompensated strict current-attempt `3/3`, first-failed-only answer-free recovery, complete private clearing, wholly blank unlimited retry, exact zero-credit conclusion, hidden prerequisite isolation/no cross-credit, and all existing curriculum/privacy/evidence authorities remain frozen. Validators and focused evidence-firewall suites pass.
+- **A4 next:** lock only one bounded protected interaction/recovery graph for blank/private all-three authoring -> explicit Pilot submit -> strict simultaneous `3/3` -> first-failed feedback/full clear/blank retry or exact Pilot conclusion. Add no prompt, answer, score, result board, branch, art integration, later transition, or micro-seam.
 - **Hard stop:** exact conclusion visible but not dismissed; no review/save/commit/completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge

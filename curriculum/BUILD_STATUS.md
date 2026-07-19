@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-18 RP-002 Responsible-AI explanation submission/recovery preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: accepted blank three-boundary explanation, private transient all-three responses, explicit Pilot submit, simultaneous uncompensated strict current-attempt `3/3`, first-failed-only answer-free feedback, complete clearing, wholly blank unlimited retry, and exact zero-credit Pilot conclusion preserve the frozen mapping.
+- [x] Prompt/control display, editing, focus, submit availability/activation, group replacement, feedback, retry, conclusion display, returns, reflow, motion, modality, sanitation, resume, and Tour remain zero evidence except the frozen evaluator's simultaneous current-attempt result.
+- [x] Python, RAI primary, and RAI transfer remain hidden independent prerequisites; none can prefill, satisfy, compensate for, or cross-credit an explanation boundary. Blank-primary durability, privacy allowlist, no-exam guarantee, and offline/no-authority remain exact.
+- [x] An actual miss exposes only the first failed boundary through existing answer-free Teacher authority, clears all three responses/private state, and restores wholly blank unlimited retry; exact `3/3` alone records explanation evidence and exposes the zero-credit exact conclusion.
+- [x] RP-002 self-test and canonical forms pass; focused evaluator/evidence-firewall suites pass `84/84`; frozen curriculum contracts, maps, source register, cases, answers, dimensions, threshold, evaluator, and runtime authority remain unchanged.
+- [ ] Gameplay Master defines only one bounded protected explanation interaction/recovery graph and stops with the exact conclusion visible before dismissal or every later state.
+
 ## 2026-07-18 RP-002 RAI transfer/recovery/blank-explanation preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: accepted blank transfer, sequential `T01`–`T03`, transient local Pilot submissions, delayed simultaneous `9/9`, mapped failed-pair recovery, wholly blank retry, and exact-pass genuinely blank Teacher three-boundary entry preserve the frozen mapping.
