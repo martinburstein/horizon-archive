@@ -1,10 +1,12 @@
 # Horizon Archive Production Readiness Spine
 
-## Current control — 2026-07-18
+## Current control — 2026-07-19
 
 - **Accepted release:** RP-002 normal integration through strict RAI transfer, bounded recovery, and blank Teacher explanation entry on `index-CKaXmS2o.js` / `index-DyAC0bkf.css`.
-- **A5 result:** `REVISE — PROTECTED RAIEC CONVERGENCE COMPLETE / W1 NEXT`; one pure unimported existing-authority explanation convergence controller passes focused `10/10`, related `76/76`, both applicable validator self-tests, unchanged accepted build, and leakage/purity/recovery/patch gates with no normal integration, storage, route, art, world, or later-state change.
-- **Release ladder:** W2 performs full suite/build for normal integration, W4 rebuilds after visual work, and coordinator alone runs the complete final suite, all validators, build, E2E, live review, cleanup, hashes, disposition, and synchronization.
+- **W2 candidate:** `RP002-P1-019 RESOLVED / W3 NEXT`; the existing protected `RAIEC` controller is normally composed through private editable authoring, explicit Pilot submit, strict uncompensated `3/3`, first-failed answer-free Teacher recovery/wholly blank retry, or the exact zero-credit Pilot conclusion. Focused `75/75`, full `664/664`, both applicable validators, build, served identity/leakage/patch gates pass on `index-C4uncrHq.js` / unchanged `index-DyAC0bkf.css`.
+- **Release ladder:** W3 reviews only the repaired presentation, W4 rebuilds after accepted visual work, and coordinator alone runs the complete final suite, all validators, build, E2E, live review, cleanup, hashes, disposition, and synchronization.
+
+Latest Working candidate: `2026-07-19 / RP002-P1-019 W2 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal transient App/route/UI now compose the pure protected explanation convergence from exact strict-transfer blank Teacher entry through private all-three authoring, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary-only feedback and wholly blank unlimited retry, or the exact zero-credit Pilot conclusion. No response, feedback, token, result, or focus history persists; conclusion dismissal and every later state remain closed.
 
 Latest Advance continuity result: `2026-07-18 / RAI EXPLANATION A5 REVISE — PROTECTED CONVERGENCE ONLY`. Exact canonical blank `RAITC-20C` now restores into pure `RAIEC-00`; private all-three authoring stays closure-only, one fresh private-free semantic submit invokes the existing simultaneous uncompensated `3/3` evaluator, a miss exposes only first-actual-failed-boundary answer-free recovery and wholly blank unlimited retry, and exact pass exposes only the exact zero-credit Pilot conclusion. Focused `10/10`, related `76/76`, both validators, unchanged accepted build, and non-integration/purity/restore/leakage/patch gates pass. W1 begins only at the accepted live blank Teacher entry.
 

@@ -61,6 +61,7 @@ import {
 } from "./CustodyLedgerRAIPrimaryEntry.js";
 import { createCustodyLedgerRAIPrimaryConvergence } from "./CustodyLedgerRAIPrimaryConvergence.js";
 import { createCustodyLedgerRAITransferConvergence } from "./CustodyLedgerRAITransferConvergence.js";
+import { createCustodyLedgerRAIExplanationConvergence } from "./CustodyLedgerRAIExplanationConvergence.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -295,6 +296,46 @@ export function createCustodyLedgerNormalRAITransferConvergence(
       explanationEntryState,
       explanationCompleteState,
       acceptedBlankTransferState,
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIExplanationConvergence(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  acceptedBlankExplanationState,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || explanationEntryState?.phase !== "EX-20"
+    || explanationCompleteState?.phase !== "EXS-20C"
+    || acceptedBlankTransferState?.phase !== "RAIC-20C"
+    || acceptedBlankExplanationState?.phase !== "RAITC-20C"
+    || acceptedBlankExplanationState?.stateName !== "GENUINELY_BLANK_RAI_EXPLANATION_ENTRY"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(acceptedBlankExplanationState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(acceptedBlankExplanationState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerRAIExplanationConvergence({
+      primaryResult,
+      learningState: routeState.learningState,
+      freshPracticeState,
+      transferCompleteState,
+      explanationEntryState,
+      explanationCompleteState,
+      acceptedBlankTransferState,
+      acceptedBlankExplanationState,
     });
   } catch {
     return null;

@@ -3,10 +3,10 @@
 ## Current control — 2026-07-19
 
 - **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only; protected RAI explanation convergence is complete.
-- **Team 2:** `RP-002`, accepted at genuinely blank three-boundary RAI explanation after strict recoverable transfer `9/9`; `RP002-P1-019` is open because all three normal explanation controls are read-only and no submit action/handler exists.
-- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). W2 integrates only private editing, strict submit/failure recovery, and the exact zero-credit conclusion. The rail does not extend; conclusion dismissal and all later states remain closed.
+- **Team 2:** `RP-002`, W2 candidate now normally reaches private three-boundary RAI explanation authoring, strict submit/first-failed blank recovery, or the exact zero-credit Pilot conclusion; W3 presentation review is next.
+- **Distance / next:** ten ordered packets (`RP-003`–`RP-012`). The rail does not extend; W3 reviews only the repaired candidate presentation, while conclusion dismissal and all later states remain closed.
 
-Latest Working handoff: `2026-07-19 / RP002-P1-019 W1 P1 — W2 BUG REPAIR NEXT`. Accepted blank Teacher ownership, three blank controls, separate returns, privacy, accessibility, and invariant world remain stable, but the controls are read-only and normal runtime exposes no explanation submit action. Team 2 stays on RP-002; Team 1 remains complete at RP-012 with no RP-013/successor and a ten-packet lead (`RP-003`–`RP-012`).
+Latest Working handoff: `2026-07-19 / RP002-P1-019 W2 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal transient App/route/UI now compose the existing protected explanation convergence through private all-three authoring, explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary-only answer-free Teacher feedback and wholly blank unlimited retry, or the exact zero-credit Pilot conclusion. Team 2 stays on RP-002; Team 1 remains complete at RP-012 with no RP-013/successor and a ten-packet lead (`RP-003`–`RP-012`).
 
 Latest Advance handoff: `2026-07-18 / RAI EXPLANATION A5 REVISE — PROTECTED CONVERGENCE COMPLETE / W1 NEXT`. Exact `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` is protected without runtime integration or accepted-build change; Team 2 remains on RP-002 and Team 1 remains complete at RP-012 with no RP-013/successor.
 

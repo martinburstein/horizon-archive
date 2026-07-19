@@ -394,11 +394,12 @@ test("sanitation, separate returns, campaign/Tour, prerequisites, observations, 
   assertZeroEffect(sanitized);
 });
 
-test("controller remains unimported, storage/network/DOM free, and hard-stopped before dismissal or later state", () => {
+test("controller is normally composed, storage/network/DOM free, and hard-stopped before dismissal or later state", () => {
   const source = readFileSync(new URL("../src/CustodyLedgerRAIExplanationConvergence.js", import.meta.url), "utf8");
-  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
-    assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8").includes("CustodyLedgerRAIExplanationConvergence"), false);
+  for (const relative of ["../src/App.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+    assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8").includes("CustodyLedgerRAIExplanationConvergence"), true);
   }
+  assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8").includes("CustodyLedgerRAIExplanationConvergence"), false);
   for (const forbidden of [
     "dismissCustodyLedgerRAIConclusion", "review_save", "localStorage", "sessionStorage", "fetch(",
     "XMLHttpRequest", "document.", "window.", "RP-003", "RP-013",

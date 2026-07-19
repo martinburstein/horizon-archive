@@ -3,9 +3,9 @@
 ## Current control — 2026-07-19
 
 - **Accepted live edge:** RP-002 strict RAI transfer, bounded recovery, and genuinely blank Teacher three-boundary explanation entry.
-- **Current W1 result:** `RP002-P1-019 P1 OPEN / W2 BUG-REPAIR NEXT`. The accepted group remains genuinely blank, Teacher-owned, heading-focused, separately reversible, private, responsive, and world-invariant, but all three explanation controls are read-only and no normal submit action/handler exists.
-- **Required visible delta / stop:** W2 integrates only private all-three editing, one explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary answer-free feedback/complete clearing/wholly blank retry, or the exact zero-credit Pilot conclusion. W3/W4 protect only the repaired presentations; stop before conclusion dismissal and every later state.
-- **Evidence:** accepted normal/prior integrated seams `78/78`; root/current assets HTTP `200`; served JS contains the blank group and exact no-action status but lacks `SUBMIT RESPONSIBLE-AI EXPLANATION`. Storage/save and user paths remain untouched.
+- **Current W2 result:** `RP002-P1-019 RESOLVED / W3 AESTHETIC REVIEW NEXT`. Existing protected explanation convergence now runs through normal transient App/route/UI with private all-three editing, explicit Pilot submit, simultaneous uncompensated strict `3/3`, first-actual-failed-boundary answer-free Teacher feedback/complete clearing/wholly blank retry, or the exact zero-credit Pilot conclusion.
+- **Required next review / stop:** W3 reviews only blank/editable authoring, first-failed feedback/blank retry, and exact conclusion presentation. W4 may correct only accepted presentation defects; conclusion dismissal and every later state remain closed.
+- **Evidence:** focused `75/75`, full `664/664`, both applicable validators, build, served HTTP/action/conclusion/feedback markers, private-leak rejection, and patch gates pass on `index-C4uncrHq.js` / unchanged `index-DyAC0bkf.css`. Storage/save and user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge
 

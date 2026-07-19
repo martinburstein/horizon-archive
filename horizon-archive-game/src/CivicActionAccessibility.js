@@ -30,6 +30,9 @@ const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
   raiTransferFeedback: "Responsible-AI transfer feedback evidence return",
   raiTransferGuide: "Zero-credit Responsible-AI transfer guide evidence return",
   raiExplanationBlank: "Blank Responsible-AI explanation evidence return",
+  raiExplanation: "Responsible-AI explanation evidence return",
+  raiExplanationFeedback: "Responsible-AI explanation feedback evidence return",
+  raiExplanationConclusion: "Responsible-AI conclusion evidence return",
 });
 
 export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
@@ -52,6 +55,9 @@ export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
   if (primaryPhase === "RAITC-20F") return custodyLedgerPrimaryReturnGroupLabels.raiTransferFeedback;
   if (primaryPhase === "RAITC-30G") return custodyLedgerPrimaryReturnGroupLabels.raiTransferGuide;
   if (primaryPhase === "RAITC-20C") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationBlank;
+  if (primaryPhase === "RAIEC-00") return custodyLedgerPrimaryReturnGroupLabels.raiExplanation;
+  if (primaryPhase === "RAIEC-20F") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationFeedback;
+  if (primaryPhase === "RAIEC-20C") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationConclusion;
   if (primaryPhase === "FT-00") return custodyLedgerPrimaryReturnGroupLabels.fresh;
   return custodyLedgerPrimaryReturnGroupLabels.blank;
 }

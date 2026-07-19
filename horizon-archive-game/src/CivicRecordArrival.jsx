@@ -31,6 +31,10 @@ import {
   CUSTODY_LEDGER_COMPLETE_RAI_TRANSFER_GUIDE,
   CUSTODY_LEDGER_SUBMIT_RAI_TRANSFER_CASE,
 } from "./CustodyLedgerRAITransferConvergence.js";
+import {
+  CUSTODY_LEDGER_RETRY_RAI_EXPLANATION,
+  CUSTODY_LEDGER_SUBMIT_RAI_EXPLANATION,
+} from "./CustodyLedgerRAIExplanationConvergence.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -58,6 +62,8 @@ export function CivicRecordArrival({
   onRAITransferSubmit,
   onRAITransferFeedbackAcknowledge,
   onRAITransferGuideComplete,
+  onRAIExplanationSubmit,
+  onRAIExplanationRetry,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -76,6 +82,9 @@ export function CivicRecordArrival({
   const raiTransferFeedbackHeadingRef = useRef(null);
   const raiTransferGuideHeadingRef = useRef(null);
   const raiExplanationEntryHeadingRef = useRef(null);
+  const raiExplanationFeedbackHeadingRef = useRef(null);
+  const raiExplanationConclusionHeadingRef = useRef(null);
+  const raiExplanationControlRefs = useRef({});
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
   const [classification, setClassification] = useState("");
@@ -85,6 +94,7 @@ export function CivicRecordArrival({
   const [raiGuideResponses, setRAIGuideResponses] = useState({});
   const [raiTransferResponses, setRAITransferResponses] = useState({});
   const [raiTransferGuideResponses, setRAITransferGuideResponses] = useState({});
+  const [raiExplanationResponses, setRAIExplanationResponses] = useState({});
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -143,6 +153,12 @@ export function CivicRecordArrival({
       setRAITransferGuideResponses({});
     }
   }, [primaryPhase, raiTransferGuideResponses]);
+
+  useLayoutEffect(() => {
+    if (primaryPhase !== "RAIEC-00" && Object.keys(raiExplanationResponses).length > 0) {
+      setRAIExplanationResponses({});
+    }
+  }, [primaryPhase, raiExplanationResponses]);
 
   useLayoutEffect(() => {
     if (atPythonPrimary) {
@@ -233,6 +249,22 @@ export function CivicRecordArrival({
         raiExplanationEntryHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
+      if (primaryPhase === "RAIEC-00") {
+        raiExplanationEntryHeadingRef.current?.focus({ preventScroll: true });
+        if (primaryInteraction?.attemptStatus === "blank_retry_not_submitted") {
+          raiExplanationControlRefs.current[primaryInteraction.focusIntent?.then]
+            ?.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (primaryPhase === "RAIEC-20F") {
+        raiExplanationFeedbackHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RAIEC-20C") {
+        raiExplanationConclusionHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
     }
     headingRef.current?.focus({ preventScroll: true });
   }, [
@@ -240,6 +272,8 @@ export function CivicRecordArrival({
     atPythonPrimary,
     primaryPhase,
     primaryInteraction?.case?.id,
+    primaryInteraction?.attemptStatus,
+    primaryInteraction?.focusIntent?.then,
     primaryInteraction?.focusIntent?.target,
   ]);
 
@@ -312,6 +346,19 @@ export function CivicRecordArrival({
     if (["transfer_guided_practice_incomplete", "blank_transfer_retry"].includes(result?.status)) {
       setRAITransferGuideResponses({});
     }
+  }
+
+  function submitRAIExplanation(event) {
+    event?.preventDefault?.();
+    const result = onRAIExplanationSubmit?.(raiExplanationResponses, event);
+    if (["first_actual_boundary_feedback", "strict_explanation_complete"].includes(result?.status)) {
+      setRAIExplanationResponses({});
+    }
+  }
+
+  function retryRAIExplanation(event) {
+    setRAIExplanationResponses({});
+    onRAIExplanationRetry?.(event);
   }
 
   function renderAction(action) {
@@ -886,6 +933,90 @@ export function CivicRecordArrival({
                 <p className="civic-observation-status">All three Teacher boundaries are genuinely blank. No explanation submit, evaluator, attempt, feedback, result, conclusion, or later action is available.</p>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "RAIEC-00" && (
+              <form className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-explanation-entry-heading"
+                onSubmit={submitRAIExplanation}>
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiExplanationEntryHeadingRef} id="custody-ledger-rai-explanation-entry-heading" tabIndex="-1">
+                  Responsible-AI explanation boundaries
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <dl className="custody-ledger-fields custody-ledger-explanation-controls">
+                  {primaryInteraction.controls.map((control) => (
+                    <div key={control.id} data-field-state="editable">
+                      <dt>
+                        <label htmlFor={`custody-ledger-rai-explanation-${control.id}`}>
+                          {control.id.replaceAll("_", " ")}
+                        </label>
+                      </dt>
+                      <dd>
+                        <textarea
+                          ref={(node) => { raiExplanationControlRefs.current[control.id] = node; }}
+                          id={`custody-ledger-rai-explanation-${control.id}`}
+                          name={control.id}
+                          value={raiExplanationResponses[control.id] ?? ""}
+                          maxLength="240"
+                          autoComplete="off"
+                          spellCheck="true"
+                          aria-describedby="custody-ledger-rai-explanation-help"
+                          onChange={(event) => setRAIExplanationResponses((current) => ({
+                            ...current,
+                            [control.id]: event.target.value,
+                          }))}
+                        />
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <p id="custody-ledger-rai-explanation-help" className="civic-observation-status">
+                  All three responses remain private to this open view. Evaluation occurs only after one explicit submission and grants no authority.
+                </p>
+                <div className="city-command-actions" aria-label="Pilot Responsible-AI explanation submission">
+                  <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                  <button
+                    className="primary-action"
+                    type="submit"
+                    disabled={primaryInteraction.controls.some((control) => !raiExplanationResponses[control.id])}
+                  >
+                    {CUSTODY_LEDGER_SUBMIT_RAI_EXPLANATION}
+                  </button>
+                </div>
+              </form>
+            )}
+            {atPythonPrimary && primaryPhase === "RAIEC-20F" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-explanation-feedback-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiExplanationFeedbackHeadingRef} id="custody-ledger-rai-explanation-feedback-heading" tabIndex="-1">
+                  Responsible-AI explanation needs another pass
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <ul className="custody-ledger-feedback" aria-label="First actual failed Responsible-AI explanation boundary">
+                  <li aria-labelledby={`custody-ledger-rai-explanation-failed-${primaryInteraction.failedBoundary.id} custody-ledger-rai-explanation-feedback-${primaryInteraction.failedBoundary.id}`}>
+                    <span id={`custody-ledger-rai-explanation-failed-${primaryInteraction.failedBoundary.id}`}
+                      className="custody-ledger-feedback-field">
+                      Boundary // {primaryInteraction.failedBoundary.id.replaceAll("_", " ")}
+                    </span><br />
+                    <span id={`custody-ledger-rai-explanation-feedback-${primaryInteraction.failedBoundary.id}`}>
+                      {primaryInteraction.failedBoundary.text}
+                    </span>
+                  </li>
+                </ul>
+                <p className="civic-observation-status">Only the first actual failed boundary is named. Every submitted response was cleared; passed boundaries are not recapped.</p>
+                <button className="primary-action" type="button" onClick={retryRAIExplanation}>
+                  {CUSTODY_LEDGER_RETRY_RAI_EXPLANATION}
+                </button>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RAIEC-20C" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-explanation-conclusion-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiExplanationConclusionHeadingRef} id="custody-ledger-rai-explanation-conclusion-heading" tabIndex="-1">
+                  Responsible-AI explanation complete
+                </h2>
+                <p>{primaryInteraction.conclusion.text}</p>
+                <p className="civic-observation-status">This Pilot conclusion is zero credit and grants no access, authority, city change, external action, or later state.</p>
+              </section>
+            )}
             <p>
               {atObservation
                 ? hasObservation
@@ -922,6 +1053,12 @@ export function CivicRecordArrival({
                       ? "A separate neutral transfer guide is open. It grants no credit and stores no response."
                     : primaryPhase === "RAITC-20C"
                       ? "Strict 9/9 transfer evidence is complete. The Teacher explanation boundaries are blank and every explanation action/evaluator remains closed."
+                    : primaryPhase === "RAIEC-00"
+                      ? "A private Responsible-AI explanation is open. All three boundaries are evaluated simultaneously only on explicit Pilot submission."
+                    : primaryPhase === "RAIEC-20F"
+                      ? "Answer-free Teacher feedback names only the first actual failed explanation boundary; every submitted response is cleared."
+                    : primaryPhase === "RAIEC-20C"
+                      ? "The exact zero-credit Pilot interpretation conclusion is visible. Dismissal and every later state remain closed."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
