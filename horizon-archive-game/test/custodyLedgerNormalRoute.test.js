@@ -16,6 +16,7 @@ import {
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalRAIConclusionReview,
+  createCustodyLedgerNormalRAIPrepareSaveConfirmation,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
@@ -68,6 +69,11 @@ import {
   CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
   CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
 } from "../src/CustodyLedgerRAIConclusionReview.js";
+import {
+  CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+  CUSTODY_LEDGER_PREPARE_SAVE,
+  CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+} from "../src/CustodyLedgerRAIPrepareSaveConfirmation.js";
 import {
   anchorPacketReference,
   commitCityThresholdAnchor,
@@ -335,6 +341,8 @@ test("primary evidence-return group names follow the active owner replacement", 
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("RAIEC-00"), "Responsible-AI explanation evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("RAIEC-20F"), "Responsible-AI explanation feedback evidence return");
   assert.equal(describeCustodyLedgerPrimaryReturnGroup("RAIEC-20C"), "Responsible-AI conclusion evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("RG-30"), "Bounded comparison review evidence return");
+  assert.equal(describeCustodyLedgerPrimaryReturnGroup("save_confirmation"), "Contained local save confirmation evidence return");
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-00"), /blank python primary/i);
   assert.doesNotMatch(describeCustodyLedgerPrimaryReturnGroup("DR-20"), /blank python primary/i);
 });
@@ -1811,6 +1819,80 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     assert.equal(review.state.cityStateDelta, null);
     assert.equal(review.state.campaignCommitEnabled, false);
     assert.equal(review.state.successor, null);
+    const prepareController = createCustodyLedgerNormalRAIPrepareSaveConfirmation(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      result.state,
+      complete.state,
+      primaryExit.state,
+      transferExit.state,
+      explanationComplete.state,
+      {
+        predecessorValue: completedCityThresholdSave(),
+        prerequisiteEvidence: completedPrerequisites(),
+      },
+      predecessor,
+      review.state,
+    );
+    assert.ok(prepareController);
+    assert.equal(prepareController.getState().phase, "RG-30");
+    assert.deepEqual(prepareController.getState().availableActions, [
+      CUSTODY_LEDGER_PREPARE_SAVE,
+      "RETURN TO EVIDENCE",
+      "RETURN TO CITY THRESHOLD",
+    ]);
+    const prepared = prepareController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_PREPARE_SAVE,
+      activationKind,
+      eventToken: `rp002-normal-prepare-save-${activationKind}`,
+    });
+    assert.equal(prepared.status, "local_confirmation_visible");
+    assert.equal(prepared.state.phase, "save_confirmation");
+    assert.equal(prepared.state.confirmationText,
+      "Save only the bounded expedition comparison and survey marker. This grants no access or authority.");
+    assert.equal(prepared.state.commitIntent, "SAVE BOUNDED COMPARISON");
+    assert.equal(prepared.state.commitIntentDispatchEnabled, false);
+    assert.equal(prepareController.holdConfirmation().status, "confirmation_held");
+    const commitRejected = prepareController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: "SAVE BOUNDED COMPARISON",
+      activationKind,
+      eventToken: `rp002-normal-commit-closed-${activationKind}`,
+    });
+    assert.equal(commitRejected.status, "rejected");
+    assert.equal(commitRejected.reason, "save_bounded_comparison_closed");
+    assert.deepEqual(commitRejected.state, prepared.state);
+    const cancelled = prepareController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+      activationKind,
+      eventToken: `rp002-normal-cancel-prepare-${activationKind}`,
+    });
+    assert.equal(cancelled.status, "confirmation_cancelled_write_free");
+    assert.equal(cancelled.state.phase, "RG-30");
+    assert.deepEqual(cancelled.state.focusIntent, { group: "bounded_review", target: "prepare_save" });
+    assert.equal(cancelled.state.savePerformed, false);
+    assert.equal(prepareController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_PREPARE_SAVE,
+      activationKind,
+      eventToken: `rp002-normal-reprepare-${activationKind}`,
+    }).status, "local_confirmation_visible");
     if (activationKind === "pointer") {
       const recoveryController = createCustodyLedgerNormalRAIConclusionReview(
         fixture.entered.state,
@@ -2526,8 +2608,16 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /primaryPhase === "RG-30"/);
   assert.match(arrival, /primaryInteraction\.boundedSummary\.comparison/);
   assert.match(arrival, /primaryInteraction\.boundedSummary\.surveyMarker/);
+  assert.match(arrival, /CUSTODY_LEDGER_PREPARE_SAVE/);
+  assert.match(arrival, /ref=\{raiPrepareSaveRef\}/);
+  assert.match(arrival, /primaryPhase === "save_confirmation"/);
+  assert.match(arrival, /primaryInteraction\.confirmationText/);
+  assert.match(arrival, /primaryInteraction\.commitIntent/);
+  assert.match(arrival, /CUSTODY_LEDGER_CANCEL_PREPARE_SAVE/);
+  assert.match(arrival, /disabled[\s\S]*aria-disabled="true"/);
+  assert.match(arrival, /event\.key !== "Escape"[\s\S]*onPrepareSaveCancel/);
   assert.match(arrival, /primaryPhase === "RG-U"/);
-  assert.doesNotMatch(arrival, /PREPARE SAVE|save confirmation|retry-save/i);
+  assert.doesNotMatch(arrival, /retry-save/i);
   assert.match(arrival, /CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION/);
   assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
@@ -2542,6 +2632,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalRAITransferConvergence/);
   assert.match(app, /createCustodyLedgerNormalRAIExplanationConvergence/);
   assert.match(app, /createCustodyLedgerNormalRAIConclusionReview/);
+  assert.match(app, /createCustodyLedgerNormalRAIPrepareSaveConfirmation/);
   assert.match(app, /openCustodyLedgerRAIPrimary/);
   assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
@@ -2563,6 +2654,9 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onRAIExplanationRetry=\{retryCustodyLedgerRAIExplanation\}/);
   assert.match(app, /onRAIConclusionDismiss=\{dismissCustodyLedgerRAIConclusion\}/);
   assert.match(app, /onBoundedComparisonReview=\{reviewCustodyLedgerBoundedComparison\}/);
+  assert.match(app, /onPrepareSave=\{prepareCustodyLedgerSaveConfirmation\}/);
+  assert.match(app, /onPrepareSaveCancel=\{cancelCustodyLedgerSaveConfirmation\}/);
+  assert.match(app, /event\?\.key === "Escape"[\s\S]*return "keyboard_escape"/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -2576,6 +2670,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(normalRoute, /createCustodyLedgerNormalRAITransferConvergence/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIExplanationConvergence/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIConclusionReview/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIPrepareSaveConfirmation/);
   for (const acceptedSource of [app, arrival, normalRoute]) {
     assert.doesNotMatch(acceptedSource, /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
   }
@@ -2611,7 +2706,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /"sc03_local_comparison_blank"/);
   assert.match(normalRoute, /open_local_comparison_to_blank/);
   assert.match(normalRoute, /blank_entry/);
-  assert.doesNotMatch(arrival, /python_transfer|rai_primary|SAVE BOUNDED COMPARISON/);
+  assert.doesNotMatch(arrival, /python_transfer|rai_primary|commitCustodyLedgerBoundedComparison/);
   assert.doesNotMatch(arrival, /RP-003|learning task/i);
   assert.doesNotMatch(arrival, /INSPECT FIXED TRACE|INSPECT LATER STEWARDSHIP|INSPECT OUTLINED GAP/);
   assert.match(styles, /\.civic-record-arrival[\s\S]*min-height:\s*44px/);
@@ -2638,7 +2733,9 @@ test("primary phase replacements focus their active owner and associate failed f
   assert.match(arrival, /ref=\{raiReviewEligibilityHeadingRef\}[\s\S]*id="custody-ledger-review-eligibility-heading"[\s\S]*tabIndex="-1"/);
   assert.match(arrival, /primaryPhase === "RG-20"[\s\S]*raiReviewEligibilityHeadingRef\.current\?\.focus/);
   assert.match(arrival, /ref=\{raiBoundedReviewHeadingRef\}[\s\S]*id="custody-ledger-bounded-review-heading"[\s\S]*tabIndex="-1"/);
-  assert.match(arrival, /primaryPhase === "RG-30"[\s\S]*raiBoundedReviewHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /primaryPhase === "RG-30"[\s\S]*focusIntent\?\.target === "prepare_save"[\s\S]*raiPrepareSaveRef\.current\?\.focus[\s\S]*raiBoundedReviewHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{raiSaveConfirmationHeadingRef\}[\s\S]*id="custody-ledger-save-confirmation-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "save_confirmation"[\s\S]*raiSaveConfirmationHeadingRef\.current\?\.focus/);
   assert.match(arrival, /ref=\{raiReviewRecoveryHeadingRef\}[\s\S]*id="custody-ledger-review-recovery-heading"[\s\S]*tabIndex="-1"/);
   assert.match(arrival, /primaryPhase === "RG-U"[\s\S]*raiReviewRecoveryHeadingRef\.current\?\.focus/);
   assert.match(arrival, /data-feedback-field=\{item\.field\}/);

@@ -22,6 +22,7 @@ import {
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
   createCustodyLedgerNormalRAIConclusionReview,
+  createCustodyLedgerNormalRAIPrepareSaveConfirmation,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAITransferConvergence,
   createCustodyLedgerNormalTransferInteraction,
@@ -74,6 +75,11 @@ import {
   CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
   CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
 } from "./CustodyLedgerRAIConclusionReview.js";
+import {
+  CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+  CUSTODY_LEDGER_PREPARE_SAVE,
+  CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+} from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -688,6 +694,7 @@ export function App() {
   const custodyLedgerRAITransferConvergenceControllerRef = useRef(null);
   const custodyLedgerRAIExplanationConvergenceControllerRef = useRef(null);
   const custodyLedgerRAIConclusionReviewControllerRef = useRef(null);
+  const custodyLedgerRAIPrepareSaveConfirmationControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -798,6 +805,9 @@ export function App() {
     }
     if (!["RG-00", "RG-20", "RG-30", "RG-U"].includes(custodyLedgerPrimaryView?.phase)) {
       custodyLedgerRAIConclusionReviewControllerRef.current = null;
+    }
+    if (!["RG-30", "save_confirmation", "RG-U"].includes(custodyLedgerPrimaryView?.phase)) {
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
     }
   }, [custodyLedgerPrimaryView?.phase]);
 
@@ -1248,8 +1258,9 @@ export function App() {
   function routeActivationKind(event) {
     const semanticKind = event?.horizonActivationKind ?? event?.nativeEvent?.horizonActivationKind;
     if ([
-      "pointer", "touch", "keyboard_enter", "keyboard_space", "switch", "speech", "screen_reader",
+      "pointer", "touch", "keyboard_enter", "keyboard_space", "keyboard_escape", "switch", "speech", "screen_reader",
     ].includes(semanticKind)) return semanticKind;
+    if (event?.key === "Escape") return "keyboard_escape";
     if (event?.key === " " || event?.code === "Space") return "keyboard_space";
     if (event?.key === "Enter") return "keyboard_enter";
     if (event?.detail === 0) return "keyboard_enter";
@@ -1837,6 +1848,10 @@ export function App() {
     if (result?.status === "strict_explanation_complete") {
       const context = custodyLedgerTransferContextRef.current;
       const predecessorValue = readVerifiedCityThresholdSave(window.localStorage);
+      const eligibilityDependencies = {
+        predecessorValue,
+        prerequisiteEvidence: { structuredPacketEvidence, responsibleAIEvidence },
+      };
       const reviewController = context
         ? createCustodyLedgerNormalRAIConclusionReview(
           context.routeState,
@@ -1848,15 +1863,18 @@ export function App() {
           context.acceptedBlankTransferState,
           context.acceptedBlankExplanationState,
           result.state,
-          {
-            predecessorValue,
-            prerequisiteEvidence: { structuredPacketEvidence, responsibleAIEvidence },
-          },
+          eligibilityDependencies,
           context.predecessor,
         )
         : null;
       if (!reviewController) return null;
       custodyLedgerRAIConclusionReviewControllerRef.current = reviewController;
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+      custodyLedgerTransferContextRef.current = {
+        ...context,
+        acceptedRAIConclusionState: result.state,
+        eligibilityDependencies,
+      };
       setCustodyLedgerPrimaryView(reviewController.getState());
     }
     return result;
@@ -1908,7 +1926,64 @@ export function App() {
       event,
       "rp002-review-bounded-comparison",
     ));
-    if (result?.status === "bounded_review_visible") setCustodyLedgerPrimaryView(result.state);
+    if (result?.status === "bounded_review_visible") {
+      const context = custodyLedgerTransferContextRef.current;
+      const prepareController = context
+        ? createCustodyLedgerNormalRAIPrepareSaveConfirmation(
+          context.routeState,
+          context.primaryResult,
+          context.freshPracticeState,
+          context.transferCompleteState,
+          context.explanationEntryState,
+          context.explanationCompleteState,
+          context.acceptedBlankTransferState,
+          context.acceptedBlankExplanationState,
+          context.acceptedRAIConclusionState,
+          context.eligibilityDependencies,
+          context.predecessor,
+          result.state,
+        )
+        : null;
+      if (!prepareController) return null;
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = prepareController;
+      setCustodyLedgerPrimaryView(prepareController.getState());
+    }
+    return result;
+  }
+
+  function custodyLedgerRAIPrepareSaveIntent(action, event, token) {
+    return {
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken(token),
+    };
+  }
+
+  function prepareCustodyLedgerSaveConfirmation(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIPrepareSaveConfirmationControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAIPrepareSaveIntent(
+      CUSTODY_LEDGER_PREPARE_SAVE,
+      event,
+      "rp002-prepare-save",
+    ));
+    if (result?.status === "local_confirmation_visible") setCustodyLedgerPrimaryView(result.state);
+    return result;
+  }
+
+  function cancelCustodyLedgerSaveConfirmation(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIPrepareSaveConfirmationControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAIPrepareSaveIntent(
+      CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+      event,
+      "rp002-cancel-prepare-save",
+    ));
+    if (result?.status === "confirmation_cancelled_write_free") setCustodyLedgerPrimaryView(result.state);
     return result;
   }
 
@@ -2970,6 +3045,8 @@ export function App() {
         onRAIExplanationRetry={retryCustodyLedgerRAIExplanation}
         onRAIConclusionDismiss={dismissCustodyLedgerRAIConclusion}
         onBoundedComparisonReview={reviewCustodyLedgerBoundedComparison}
+        onPrepareSave={prepareCustodyLedgerSaveConfirmation}
+        onPrepareSaveCancel={cancelCustodyLedgerSaveConfirmation}
       />
     );
   }

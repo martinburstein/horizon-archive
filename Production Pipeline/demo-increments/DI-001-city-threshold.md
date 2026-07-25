@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W2 result / W3 next — 2026-07-25
+
+- `RP002-P1-021 RESOLVED / W3 AESTHETIC REVIEW NEXT`. Transient normal App/route/UI now compose the protected exact `RG-30` -> private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> existing contained local confirmation graph. The `>=44px` prepare follows the unchanged bounded summary and precedes separate write-free returns; confirmation uses the exact canonical sentence as its heading, exposes disabled `SAVE BOUNDED COMPARISON`, and keeps `CANCEL` separate.
+- Hold is inert; cancel/Escape writes nothing and restores byte-equivalent review with prepare focus. All strict eligibility, sanitation, privacy, Tour, campaign/save byte, accessibility, continuation, world, and no-authority invariants remain exact. Confirmation visible is the hard stop before commit dispatch, adapter/persistence, failure/retry/restore, completion, `RP-003+`, RP-013, successor, or external effect.
+- Focused `68/68`, full `679/679`, RP-002/L-02-02 self-tests, production build, served byte identity/markers, and patch/leakage checks pass on reloaded `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. W3 reviews presentation only and must not force or inspect Martin's gated browser storage/save.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-021 P1 OPEN / W2 NEXT`. Exact accepted `RG-30` remains readable, reversible, private-free, accessible, and world-invariant, but normal App/route/UI has only the two separate returns and no player-facing `PREPARE SAVE` control/handler/transition.

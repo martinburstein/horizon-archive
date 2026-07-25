@@ -39,6 +39,10 @@ import {
   CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
   CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
 } from "./CustodyLedgerRAIConclusionReview.js";
+import {
+  CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+  CUSTODY_LEDGER_PREPARE_SAVE,
+} from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -70,6 +74,8 @@ export function CivicRecordArrival({
   onRAIExplanationRetry,
   onRAIConclusionDismiss,
   onBoundedComparisonReview,
+  onPrepareSave,
+  onPrepareSaveCancel,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -92,6 +98,8 @@ export function CivicRecordArrival({
   const raiExplanationConclusionHeadingRef = useRef(null);
   const raiReviewEligibilityHeadingRef = useRef(null);
   const raiBoundedReviewHeadingRef = useRef(null);
+  const raiPrepareSaveRef = useRef(null);
+  const raiSaveConfirmationHeadingRef = useRef(null);
   const raiReviewRecoveryHeadingRef = useRef(null);
   const raiExplanationControlRefs = useRef({});
   const classificationRef = useRef(null);
@@ -283,7 +291,15 @@ export function CivicRecordArrival({
         return;
       }
       if (primaryPhase === "RG-30") {
-        raiBoundedReviewHeadingRef.current?.focus({ preventScroll: true });
+        if (primaryInteraction?.focusIntent?.target === "prepare_save") {
+          raiPrepareSaveRef.current?.focus({ preventScroll: true });
+        } else {
+          raiBoundedReviewHeadingRef.current?.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (primaryPhase === "save_confirmation") {
+        raiSaveConfirmationHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
       if (primaryPhase === "RG-U") {
@@ -386,6 +402,13 @@ export function CivicRecordArrival({
     onRAIExplanationRetry?.(event);
   }
 
+  function cancelPrepareSaveOnEscape(event) {
+    if (primaryPhase !== "save_confirmation" || event.key !== "Escape") return;
+    event.preventDefault();
+    event.stopPropagation();
+    onPrepareSaveCancel?.(event);
+  }
+
   function renderAction(action) {
     const owner = action === custodyLedgerRouteActions.continueProtected
       ? custodyLedgerRouteOwners.system
@@ -434,6 +457,7 @@ export function CivicRecordArrival({
               ? "SC-03-30-local-comparison"
             : undefined}
         data-observation-count={routeState.observationEvidence?.length ?? 0}
+        onKeyDown={cancelPrepareSaveOnEscape}
       >
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
           {[routeState.sceneStatement?.text, routeState.statusMessage?.text, routeState.message].filter(Boolean).join(" ")}
@@ -1079,7 +1103,14 @@ export function CivicRecordArrival({
                     <dd>{primaryInteraction.boundedSummary.surveyMarker}</dd>
                   </div>
                 </dl>
-                <p className="civic-observation-status">Review is the current hard stop. It creates no credit, save, permission, city response, or external action.</p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "save_confirmation" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-save-confirmation-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiSaveConfirmationHeadingRef} id="custody-ledger-save-confirmation-heading" tabIndex="-1">
+                  {primaryInteraction.confirmationText}
+                </h2>
               </section>
             )}
             {atPythonPrimary && primaryPhase === "RG-U" && (
@@ -1139,7 +1170,9 @@ export function CivicRecordArrival({
                     : primaryPhase === "RG-20"
                       ? "Strict finalized evidence makes only bounded comparison review eligible."
                     : primaryPhase === "RG-30"
-                      ? "The bounded comparison review is visible. Save preparation and every later state remain closed."
+                      ? "The bounded comparison review is visible."
+                    : primaryPhase === "save_confirmation"
+                      ? "The contained local confirmation is visible."
                     : primaryPhase === "RG-U"
                       ? "Private work was cleared and the deterministic first incomplete protected boundary was selected."
                     : primaryPhase === "30-A1F"
@@ -1151,6 +1184,35 @@ export function CivicRecordArrival({
             </p>
           </div>
           <div className="civic-action-groups">
+            {atPythonPrimary && primaryPhase === "RG-30" && (
+              <div className="city-command-actions" aria-label="Pilot bounded comparison save preparation">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button
+                  ref={raiPrepareSaveRef}
+                  className="primary-action"
+                  type="button"
+                  onClick={onPrepareSave}
+                >
+                  {CUSTODY_LEDGER_PREPARE_SAVE}
+                </button>
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "save_confirmation" && (
+              <div className="city-command-actions" aria-label="Contained local save confirmation actions">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button
+                  className="primary-action"
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                >
+                  {primaryInteraction.commitIntent}
+                </button>
+                <button className="secondary-action" type="button" onClick={onPrepareSaveCancel}>
+                  {CUSTODY_LEDGER_CANCEL_PREPARE_SAVE}
+                </button>
+              </div>
+            )}
             <div className="city-command-actions" aria-label={atNearObservation
               ? "Near evidence actions"
               : atFarObservation

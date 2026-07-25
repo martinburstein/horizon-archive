@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## W2 result / W3 next — 2026-07-25
+
+- **Disposition:** `RP002-P1-021 RESOLVED — NORMAL CONFIRMATION ENTRY INTEGRATED / W3 AESTHETIC REVIEW NEXT`.
+- **Accepted candidate behavior:** exact sanitized eligible `RG-30` now adds one private-free `>=44px` seven-modality/one-hit Pilot `PREPARE SAVE` after the unchanged bounded summary and before the separate write-free returns. It composes the protected authority and mounts only the existing contained Pilot confirmation with exact canonical heading copy, visible disabled `SAVE BOUNDED COMPARISON`, separate `CANCEL`, and heading-first focus.
+- **Recovery / hard stop:** hold is inert; `CANCEL`/Escape calls no adapter and writes nothing, restores byte-equivalent `RG-30` with deterministic prepare focus, and permits a fresh prepare. Every invalid/private/stale/partial/review-required/duplicate/combined/passive/automatic/Tour/contaminated/commit input remains fail-closed. Confirmation visible is the hard stop before commit dispatcher, adapter, persistence, failure/retry/restore, completion, `RP-003+`, RP-013, successor, or world/access/authority/external effect.
+- **Evidence / W3 edge:** focused `68/68`, full `679/679`, both applicable validator self-tests, build, served byte identity/markers, and patch/leakage checks pass on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. W3 reviews only wide/narrow/effective-`200%`, hierarchy/focus, non-color/forced-color/reduced-motion, and invariant-world presentation without changing mechanics or copy and without touching browser storage/save.
+
 ## W1 result — 2026-07-25
 
 - **Disposition:** `RP002-P1-021 P1 OPEN — W2 BUG-REPAIR NEXT`.

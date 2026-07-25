@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W2 result — 2026-07-25
+
+- `RP002-P1-021 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, with a new Working candidate that normally composes exact `RG-30` -> explicit private-free one-hit Pilot prepare -> existing contained confirmation -> inert hold or cancel/Escape write-free review return. The ordered lead remains ten packets; the rail does not extend.
+- W3 reviews presentation only. Confirmation visible remains the hard stop before commit dispatch, adapter/persistence/completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-021 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`, now testing the missing normal prepare-save entry. The ordered lead remains ten packets and the rail does not extend.

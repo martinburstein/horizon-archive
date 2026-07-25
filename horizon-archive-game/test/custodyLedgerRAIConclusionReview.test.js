@@ -799,7 +799,7 @@ test("partial or review-required prerequisites sanitize to the existing first-in
   }
 });
 
-test("exact review and confirmation resume without replay while the prepare controller remains non-routable and pure", () => {
+test("exact review and confirmation resume without replay while the normal route composes the pure controller", () => {
   const options = acceptedPrepareSaveFixture();
   const initial = createCustodyLedgerRAIPrepareSaveConfirmation(options);
   const review = initial.getState();
@@ -819,10 +819,12 @@ test("exact review and confirmation resume without replay while the prepare cont
     "restoreCustodyLedgerBoundedComparison", "fetch(", "XMLHttpRequest", "document.", "window.",
     "RP-003", "RP-013",
   ]) assert.equal(source.includes(forbidden), false, forbidden);
-  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+  for (const relative of ["../src/App.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
     assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
-      .includes("CustodyLedgerRAIPrepareSaveConfirmation"), false, relative);
+      .includes("CustodyLedgerRAIPrepareSaveConfirmation"), true, relative);
   }
+  assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8")
+    .includes("CustodyLedgerRAIPrepareSaveConfirmation"), false);
   assert.equal(source.includes("prepareCustodyLedgerSave"), true);
   assert.equal(source.includes("cancelCustodyLedgerSave"), true);
   assert.equal(confirmation.campaignCommitEnabled, false);

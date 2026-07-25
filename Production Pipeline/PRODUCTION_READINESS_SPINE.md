@@ -1,5 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
+## W2 candidate result — 2026-07-25
+
+- `RP002-P1-021 RESOLVED — NORMAL CONFIRMATION ENTRY INTEGRATED / W3 NEXT`. Exact eligible `RG-30` now exposes one `>=44px` private-free seven-modality/one-hit Pilot `PREPARE SAVE`, atomically mounts only the existing contained confirmation, holds inertly, or returns through write-free cancel/Escape with deterministic prepare focus. Strict sanitation, one active group, exact copy, separate returns, privacy, accessibility, campaign/Tour/save-byte stability, invariant world, no-credit/no-authority, `campaignCommitEnabled=false`, and `cityStateDelta=null` remain exact.
+- **Gate evidence:** focused `68/68`; full game `679/679`; RP-002 and L-02-02 validator self-tests; production build; exact root/asset HTTP `200`; served-to-dist byte identity; required markers; commit-helper/retry/RP-013 absence; single strict `127.0.0.1:4173` listener; and patch checks pass on `index-xpeE9Qlm.js` (`1,060,272` bytes; SHA-256 `F506B573CA3BC875CBD922E57CB4DD3F4DC7457D5C97EC675F1A3097C5E1BFE9`) / `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Gated live state was not forced and browser storage/save remains untouched.
+- **W3 boundary:** review presentation only at wide/narrow/effective-`200%`, including hierarchy, action order, heading/prepare focus, non-color/forced-color/reduced-motion, and invariant civic world. Confirmation visible is the hard stop; no commit dispatcher, adapter, persistence, failure/retry/restore, completion, later packet, RP-013, successor, or external effect is authorized.
+
 ## A5 continuity result — 2026-07-25
 
 - `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. The pure unimported controller passes focused `14/14`, related `99/99`, RP-002/L-02-02 validator self-tests, build, non-integration, purity, leakage, and patch gates while accepted assets remain unchanged. It allows only exact strict `RG-30` -> fresh private-free seven-modality prepare -> existing contained confirmation, inert hold, or write-free cancel/Escape review return; commit is rejected before adapter access.

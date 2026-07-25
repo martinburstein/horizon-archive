@@ -63,6 +63,7 @@ import { createCustodyLedgerRAIPrimaryConvergence } from "./CustodyLedgerRAIPrim
 import { createCustodyLedgerRAITransferConvergence } from "./CustodyLedgerRAITransferConvergence.js";
 import { createCustodyLedgerRAIExplanationConvergence } from "./CustodyLedgerRAIExplanationConvergence.js";
 import { createCustodyLedgerRAIConclusionReview } from "./CustodyLedgerRAIConclusionReview.js";
+import { createCustodyLedgerRAIPrepareSaveConfirmation } from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -343,7 +344,7 @@ export function createCustodyLedgerNormalRAIExplanationConvergence(
   }
 }
 
-export function createCustodyLedgerNormalRAIConclusionReview(
+function normalRAIConclusionReviewOptions(
   routeState,
   primaryResult,
   freshPracticeState,
@@ -370,22 +371,90 @@ export function createCustodyLedgerNormalRAIConclusionReview(
     || containsPrivateContent(routeState)
     || JSON.stringify(acceptedRAIConclusionState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
     || JSON.stringify(acceptedRAIConclusionState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  return {
+    primaryResult,
+    learningState: routeState.learningState,
+    freshPracticeState,
+    transferCompleteState,
+    explanationEntryState,
+    explanationCompleteState,
+    acceptedBlankTransferState,
+    acceptedBlankExplanationState,
+    acceptedRAIConclusionState,
+    eligibilityDependencies: {
+      predecessorValue: eligibilityDependencies?.predecessorValue,
+      prerequisiteEvidence: eligibilityDependencies?.prerequisiteEvidence,
+      observationState: { observationEvidence: routeState.observationEvidence },
+    },
+  };
+}
+
+export function createCustodyLedgerNormalRAIConclusionReview(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  acceptedBlankExplanationState,
+  acceptedRAIConclusionState,
+  eligibilityDependencies,
+  predecessor,
+) {
+  const options = normalRAIConclusionReviewOptions(
+    routeState,
+    primaryResult,
+    freshPracticeState,
+    transferCompleteState,
+    explanationEntryState,
+    explanationCompleteState,
+    acceptedBlankTransferState,
+    acceptedBlankExplanationState,
+    acceptedRAIConclusionState,
+    eligibilityDependencies,
+    predecessor,
+  );
+  if (!options) return null;
   try {
-    return createCustodyLedgerRAIConclusionReview({
-      primaryResult,
-      learningState: routeState.learningState,
-      freshPracticeState,
-      transferCompleteState,
-      explanationEntryState,
-      explanationCompleteState,
-      acceptedBlankTransferState,
-      acceptedBlankExplanationState,
-      acceptedRAIConclusionState,
-      eligibilityDependencies: {
-        predecessorValue: eligibilityDependencies?.predecessorValue,
-        prerequisiteEvidence: eligibilityDependencies?.prerequisiteEvidence,
-        observationState: { observationEvidence: routeState.observationEvidence },
-      },
+    return createCustodyLedgerRAIConclusionReview(options);
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIPrepareSaveConfirmation(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  acceptedBlankExplanationState,
+  acceptedRAIConclusionState,
+  eligibilityDependencies,
+  predecessor,
+  acceptedReviewState,
+) {
+  const options = normalRAIConclusionReviewOptions(
+    routeState,
+    primaryResult,
+    freshPracticeState,
+    transferCompleteState,
+    explanationEntryState,
+    explanationCompleteState,
+    acceptedBlankTransferState,
+    acceptedBlankExplanationState,
+    acceptedRAIConclusionState,
+    eligibilityDependencies,
+    predecessor,
+  );
+  if (!options || acceptedReviewState?.phase !== "RG-30") return null;
+  try {
+    return createCustodyLedgerRAIPrepareSaveConfirmation({
+      ...options,
+      acceptedReviewState,
     });
   } catch {
     return null;
