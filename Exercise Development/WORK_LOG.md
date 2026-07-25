@@ -1,5 +1,12 @@
 # Exercise Agent Work Log
 
+## 2026-07-25 — RP-002 local-confirmation curriculum preservation
+
+- **Outcome:** `NO REOPEN — SOLIDIFIED`. The accepted bounded review, two equal human-summary leaves, one private-free explicit `PREPARE SAVE`, existing contained local Pilot confirmation, and `CANCEL`/Escape write-free exact-review return change presentation/navigation only. They add no exercise attempt, correctness, score, evidence, mastery, credit, save, route, authority, or world effect.
+- **Evidence firewall:** finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole hidden eligibility conjunction. Review, prepare, confirmation, visible commit intent, cancellation, focus, reflow, modality, sanitation, resume, and Tour cannot prefill, satisfy, compensate for, or cross-credit any conjunct. Private work remains cleared; Tour remains separate and no-credit.
+- **Validation:** RP-002 self-test; canonical Python `6/6 + 6/6`; RP-002 Responsible-AI `9/9 + 9/9`; L-02-02 self-test; focused strict-conjunction/Tour/cancel firewall `7/7`; all `291` curriculum JSON parses; and source/packet/scene structural assertions pass. No curriculum or runtime authority changed.
+- **Exact A4 handoff:** confirm only the protected exact-review -> private-free seven-modality/one-hit prepare -> existing contained local Pilot confirmation -> confirmation-visible hold or cancel/Escape write-free exact-review return with deterministic prepare focus. Preserve the strict finalized conjunction, zero evidence, privacy, local-only/offline/no-authority/no-exam-guarantee, no-credit Tour, responsive/accessibility parity, invariant world, and save discipline. Stop before `SAVE BOUNDED COMPARISON` activation, adapter/persistence/failure/retry/restore/completion, `RP-003+`, RP-013, successor, or any world/access/authority/external effect.
+
 ## 2026-07-13 - Entry-gated SIM-03 Final Confidence runtime
 
 - **Outcome:** Added the complete learner-facing `EX-SIM03-FINAL-CONFIDENCE` vertical slice as optional post-`SIM-01` Terminal practice. The learner first submits only the bounded, non-sensitive entry record required by the Teacher package. Scenario content cannot render until every prerequisite passes: L-06-03 next-practice readiness, CUM-01 transfer `16/16`, SIM-01 and SIM-02 `24/24`, at least 48 hours between prior simulations, zero open critical misconceptions, retested high-confidence misses, and official-source verification no more than seven days old. This optional block does not replace or block the existing scene departure.

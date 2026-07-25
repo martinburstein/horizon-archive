@@ -1,5 +1,9 @@
 # DI-001 — City Threshold protected staging pass
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / A4 NEXT`. Exact `RG-30` review -> explicit private-free one-hit `PREPARE SAVE` -> existing contained local Pilot confirmation -> confirmation-visible hold or `CANCEL`/Escape write-free exact-review return changes presentation/navigation only. Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole hidden eligibility conjunction; every review/dual-leaf/prepare/confirmation/cancel/focus/reflow/modality/resume/Tour event is zero evidence, score, mastery, credit, or save. RP-002 self-test, canonical `6/6 + 6/6` and `9/9 + 9/9`, L-02-02 self-test, focused firewall `7/7`, `291` JSON parse, and structural assertions pass. A4 confirms only this graph and stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation or persistence/later state.
+
 ## A2 result — 2026-07-25
 
 - `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Existing `RG-30` Pilot bounded review directly replaces with only existing contained local Pilot confirmation after one private-free one-hit `PREPARE SAVE`; confirmation remains visible or `CANCEL`/Escape clears transient intent and returns write-free to review with deterministic prepare focus. One active group, two equal human-summary leaves, `>=44px`, wide/narrow/`200%`, non-color/forced-color/reduced-motion/seven-modality parity, separate returns, private clearing, no-credit Tour, invariant world, and seven closed non-runtime references remain exact. Do not activate `SAVE BOUNDED COMPARISON` or enter persistence/later state; A3 preserves only the firewall.

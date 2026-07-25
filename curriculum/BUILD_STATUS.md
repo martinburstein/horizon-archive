@@ -1,5 +1,13 @@
 # Build Status
 
+## 2026-07-25 RP-002 bounded-review-to-local-confirmation preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: no official-objective change, validator/playtest mismatch, or changed learning goal reopens `PY-009` or `RP002-RAI-01`.
+- [x] Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole eligibility conjunction. Review, dual-leaf display, prepare, confirmation, visible commit intent, cancel/Escape, focus, return, reflow, modality, sanitation, resume, and Tour cannot prefill, satisfy, compensate for, or cross-credit any conjunct.
+- [x] `PREPARE SAVE` is private-free, local-only, unscored, and write-free; the contained confirmation adds zero attempt, correctness, evidence, mastery, credit, save, authority, or world effect. Cancel/Escape clears only transient intent and restores exact review with deterministic prepare focus.
+- [x] RP-002 mapping self-test, canonical Python `6/6 + 6/6`, RP-002 Responsible-AI `9/9 + 9/9`, L-02-02 self-test, focused firewall `7/7`, all `291` curriculum JSON parses, and source/packet/scene structural assertions pass.
+- [ ] Gameplay Master confirms only the protected review -> prepare -> confirmation -> cancel/Escape graph and stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/persistence/failure/retry/restore/completion, or later state.
+
 ## 2026-07-24 RP-002 conclusion-dismissal-to-bounded-review preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: exact `RAIEC-20C` conclusion -> one private-free zero-effect dismissal -> System eligibility -> bounded review preserves frozen `PY-009`, frozen `RP002-RAI-01`, and all five independent observation conjuncts.

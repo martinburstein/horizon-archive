@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A3 result — 2026-07-25
+
+- `RP-002` `NO REOPEN — SOLIDIFIED / A4 NEXT`. Exact review -> private-free explicit prepare -> existing contained local Pilot confirmation -> cancel/Escape write-free review return preserves the sole finalized Python AND finalized Responsible-AI AND five-finalized-observation eligibility conjunction without cross-credit. RP-002 self-test, canonical `6/6 + 6/6` / `9/9 + 9/9`, L-02-02 self-test, focused firewall `7/7`, `291` JSON parses, and structural assertions pass. Stop at confirmation before commit activation or any adapter/persistence/later state.
+
 ## A2 result — 2026-07-25
 
 - `RP-002` `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Exact Pilot `RG-30` review -> private-free one-hit `PREPARE SAVE` -> existing contained Pilot local confirmation -> visible hold or `CANCEL`/Escape write-free exact-review return preserves one active group, two equal human leaves, responsive/accessibility parity, invariant SC-03, and seven closed non-runtime references. Stop before `SAVE BOUNDED COMPARISON` activation, persistence, or later state; A3 performs NO-REOPEN preservation only.

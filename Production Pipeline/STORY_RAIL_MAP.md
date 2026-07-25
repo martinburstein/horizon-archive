@@ -1,5 +1,9 @@
 # Horizon Archive Story Rail Map
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted through `RP002-P1-020 + RP002-AESTH-015` on `RP-002`; the ordered lead remains ten packets and the rail does not extend. The review -> private-free prepare -> contained local confirmation -> cancel/Escape write-free return is zero learning/save/world evidence around the unchanged finalized Python, finalized Responsible-AI, and five-observation conjunction. A4 confirms only this protected graph and stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation, persistence, `RP-003+`, RP-013, or successor.
+
 ## A2 result — 2026-07-25
 
 - `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Existing exact RG-30 Pilot review -> one private-free one-hit Pilot `PREPARE SAVE` -> existing contained local Pilot confirmation -> confirmation visible or `CANCEL`/Escape direct write-free return with prepare focus. All seven canonical references remain non-runtime; no world/authority/evidence effect, save activation, persistence, later packet, RP-013, or successor exists. Team positions and ten-packet lead remain unchanged; A3 preserves only this boundary.
