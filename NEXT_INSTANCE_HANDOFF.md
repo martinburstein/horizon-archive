@@ -12,7 +12,9 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 - Branch: `main`
 - Candidate checkpoint: `5aca736` — `Working Coder Polish: expose RP-003 available state`
-- Coordinator release: the commit containing this handoff
+- Coordinator release: `6e8c40a` — `Coordinator: release RP-003 CM-10 survey`
+- Adaptive retrospective: `c41c0ef` — `Process: minimize shared role destinations` / `TUNE`
+- Cycle close: the reveal commit containing this handoff
 - Expected after coordinator, retrospective, and reveal pushes: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
 - Released bundle: `index-BWwt4kKy.js` / `index-JTpP97Cx.css`
@@ -76,9 +78,10 @@ Orientation, presentation, order, replay, focus, reflow, resume, returns, and el
 
 ## Latest canonical cycle reveal
 
-- Until this cycle's post-release reveal commit lands, the latest remains `SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
-- Asset: `Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`.
-- Status: canonical visual reference only, not runtime-integrated and not the final SC-04 production master.
+- Latest: `SC-04 / CM-10 survey — neutral bounded-difference material parity`.
+- Asset: `Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png`.
+- Locked fact: the bounded extra interval is materially ordinary and equivalent to its neighbors; sequence and spacing alone reveal the difference while the greater structure continues beyond the frame.
+- Status: canonical visual reference only, not runtime-integrated and not the final SC-04 production master. Fine scratches and exact incidental panel subdivisions are non-canonical.
 
 ## Exact next action
 

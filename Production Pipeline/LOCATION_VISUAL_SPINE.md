@@ -1,5 +1,11 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-07-25 RP-003 neutral-difference canonical cycle-reveal lock
+
+- `Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png` closes `SC-04 / CM-10 survey — neutral bounded-difference material parity`.
+- The additional interval is canonical as physically ordinary: the same pale mineral ceramic, dark structural ribs, wear, maintenance state, and practical light as its neighbors. Sequence and spacing alone carry the difference; repetition beyond the frame preserves greater-whole scale.
+- Status is canonical visual reference only, not runtime-integrated and not the approved `SC-04-MASTER`. Fine scratches and exact incidental panel subdivisions are non-canonical. No correctness, damage, repair priority, UI, observation mechanic, route, reward, access, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is defined.
+
 ## 2026-07-25 RP-003 canonical cycle-reveal lock
 
 - `Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png` closes `SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.

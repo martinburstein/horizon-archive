@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## 2026-07-25 canonical cycle reveal — neutral bounded-difference material parity
+
+- **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png`, with neighboring provenance.
+- **Locked decision:** the extra interval is the same pale mineral ceramic, dark structural ribs, ordinary wear, maintenance state, and practical illumination as its neighbors. Difference is carried only by sequence and spacing; no color, glow, damage, repair, correctness, privilege, or environmental response distinguishes it.
+- **Status / limit:** canonical material-parity/sequence/scale reference only, not runtime-integrated and not the final SC-04 master. Fine scratches and exact incidental panel subdivisions are non-canonical. No UI, answer, observation credit, access, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## Coordinator current control — 2026-07-25
 
 - **Working position:** `PASS — IN DEMO PARTIAL / CM-10 SURVEY ACCEPTED`. RP-002 remains complete; Team 2 stays on RP-003 with explicit orientation, all three separately finalized any-order observations, safe replay, textual Available/Recorded states, and disabled/non-dispatchable local-review eligibility accepted.

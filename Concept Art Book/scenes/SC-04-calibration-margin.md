@@ -1,5 +1,13 @@
 # SC-04 — Calibration Margin
 
+## 2026-07-25 canonical cycle reveal — neutral bounded-difference material parity
+
+- **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png`, with neighboring provenance.
+- **Locked boundary:** the extra interval has the same pale mineral ceramic, dark structural ribs, ordinary wear, maintenance state, and practical illumination as its neighbors. It is legible only through sequence and spacing; no color, glow, damage, repair, correctness, privilege, or response distinguishes it.
+- **Scale relationship:** the contact-scale foreground and rapid repetition out of frame imply a much greater working whole while deliberately varying from the prior corridor-wide spatial reference.
+- **Limit:** canonical material-parity/sequence/scale evidence only; not runtime integration and not the approved `SC-04-MASTER`. Fine scratches and exact incidental panel subdivisions are non-canonical. No UI, observation mechanic, answer, route, reward, access, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## 2026-07-25 canonical cycle reveal — blank-margin spatial identity
 
 - **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.

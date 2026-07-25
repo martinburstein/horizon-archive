@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-25 canonical cycle reveal — RP-003 neutral bounded-difference material parity
+
+- **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png`, with neighboring provenance.
+- **Locked decision:** the bounded extra interval is materially ordinary and equivalent to its neighbors; only sequence and spacing expose the difference. The close first-person material scale and repetition beyond the frame imply an immense continuing whole without reusing the prior wide corridor composition.
+- **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. Fine scratches and exact incidental panel subdivisions are non-canonical. No UI, answer, damage, repair priority, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. The accepted Demo now continues from blank CM-00 through explicit orientation, one CM-10 Scene group, three separate any-order observations with Available/Recorded text, safe replay, and disabled/non-dispatchable all-three Eligible review.
