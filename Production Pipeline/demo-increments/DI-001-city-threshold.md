@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / VERIFIED-RESTORE FIREWALL PASS / A4 NEXT`. Finalized Python, finalized Responsible-AI, and five finalized observations remain the sole strict reconstruction conjunction. Reload, sanitation, downgrade, restore, focus/no-replay, responsive presentation, Tour, and reversible return are zero evidence/credit/authority and cannot cross-credit.
+- Exact three-field allowlist plus every valid dependency alone reaches `verified_restore / SC-03-50`; all non-exact/private-bearing state clears the complete triplet to `sanitation_downgrade / progression={}` and deterministic first-incomplete focus. Focused firewall `6/6`, canonical `6/6 + 6/6` and `9/9 + 9/9`, both self-tests, `291` JSON parses, and structural checks pass.
+- A4 confirms only quiet `SC-03-40` -> sanitation -> downgrade or exact restore -> existing reversible City Threshold return. Hard stop before normal RP-003, departure, credits, RP-013, successor, or world/access/authority effect.
+
 ## A2 storyboard result — 2026-07-25
 
 - `PASS — EXISTING-AUTHORITY RECOVERY SEQUENCE BOARDED / A3 NEXT`. The unchanged SC-03 world carries only quiet System `SC-03-40` -> no-replay sanitation -> exact empty downgrade/first-incomplete focus or exact `SC-03-50` restored triplet/clear-work heading-then-controls focus -> existing reversible City Threshold return.

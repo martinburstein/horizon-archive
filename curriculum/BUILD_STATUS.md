@@ -1,5 +1,14 @@
 # Build Status
 
+## 2026-07-25 RP-002 verified-restore and downgrade preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: no official-objective change, validator/playtest mismatch, bypass, or changed learning goal reopens `PY-009` or `RP002-RAI-01`.
+- [x] Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole strict reconstruction conjunction. Reload/re-entry sanitation, downgrade, restore, focus, resume, reflow, Tour, and reversible City Threshold navigation cannot prefill, satisfy, compensate for, or cross-credit any conjunct.
+- [x] The allowlist remains exactly `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` together or none. Exact valid reconstruction alone reaches `verified_restore / SC-03-50`; false, missing, malformed, partial, extra, forged, stale, private, or `review_required` state clears all three fields and exposes only `sanitation_downgrade` with `progression={}` and first-incomplete focus.
+- [x] Restore and downgrade persist no private response, prose, feedback, score, result detail, token, focus history, credential, endpoint, payload, identity, or authority material. Tour owns no durable field; restore replays no prior event; return from exact restore is navigation-only and zero evidence.
+- [x] RP-002 self-test, canonical Python `6/6 + 6/6`, Responsible-AI `9/9 + 9/9`, L-02-02 self-test, focused firewall `6/6`, all `291` curriculum JSON parses, and structural allowlist/restore/downgrade/Tour assertions pass.
+- [ ] Gameplay Master confirms only protected quiet `SC-03-40` -> sanitation -> exact downgrade or verified `SC-03-50` -> reversible City Threshold return, then stops before normal RP-003, departure, credits, RP-013, successor, or world/access/authority effect.
+
 ## 2026-07-25 RP-002 atomic comparison commit preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: no official-objective change, validator/playtest mismatch, bypass, or changed learning goal reopens `PY-009` or `RP002-RAI-01`.

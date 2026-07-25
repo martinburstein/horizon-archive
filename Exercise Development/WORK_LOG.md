@@ -1,5 +1,12 @@
 # Exercise Agent Work Log
 
+## 2026-07-25 — RP-002 verified-restore curriculum preservation
+
+- **Outcome:** `NO REOPEN — SOLIDIFIED`. Reload/re-entry sanitation, exact verified reconstruction, deterministic complete-triplet downgrade, focus/resume, and reversible City Threshold navigation are expedition-local recovery only. They add no Python or Responsible-AI attempt, correctness, score, evidence, mastery, credit, observation, route reward, access, authority, exam guarantee, or world response.
+- **Evidence firewall / allowlist:** finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole strict conjunction. Only exact `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` plus every valid dependency may reconstruct `verified_restore / SC-03-50`; invalid or private-bearing state clears the triplet to `sanitation_downgrade / progression={}` and deterministic first-incomplete focus. Tour is isolated and replay creates no evidence.
+- **Validation:** RP-002 self-test; canonical Python `6/6 + 6/6`; Responsible-AI `9/9 + 9/9`; L-02-02 self-test; focused conjunction/downgrade/restore/no-replay/Tour/zero-effect firewall `6/6`; all `291` curriculum JSON parses; and structural allowlist assertions pass. No curriculum, objective, source, runtime, adapter, persistence mechanic, route, or copy changed.
+- **Exact A4 handoff:** confirm only quiet exact `SC-03-40` -> reload/re-entry sanitation -> complete empty downgrade with deterministic first-incomplete focus or exact no-replay `verified_restore / SC-03-50` with heading then saved-controls focus -> existing reversible City Threshold return from exact restore only. Preserve strict dependencies, exact three-field allowlist, private/transient clearing, one active System group, accessibility, no-credit Tour, offline/no-authority/no-exam-guarantee, invariant world, unchanged continuation, and `cityStateDelta=null`. Stop before normal RP-003, departure, credits, RP-013, successor, or world/access/authority/external effect.
+
 ## 2026-07-25 — RP-002 atomic comparison commit curriculum preservation
 
 - **Outcome:** `NO REOPEN — SOLIDIFIED`. The contained Pilot confirmation, one explicit private-free `SAVE BOUNDED COMPARISON`, complete local failure/retry/safe return, and exact `SC-03-40` saved acknowledgement change local progression/presentation only. They add no Python or Responsible-AI attempt, correctness, score, evidence, mastery, credit, authority, exam guarantee, observation, route, or world response.

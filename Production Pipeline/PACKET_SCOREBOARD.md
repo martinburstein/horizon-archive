@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A3 result — 2026-07-25
+
+- `RP-002 NO REOPEN — SOLIDIFIED / VERIFIED-RESTORE FIREWALL PASS / A4 NEXT`; protected missing-gate count remains zero. Finalized Python + Responsible-AI + five-observation evidence remains exact, and reload/sanitation/downgrade/restore/focus/Tour/return cannot cross-credit it.
+- Exact reconstruction requires the three allowlisted fields plus every valid dependency; all other states clear the triplet to empty downgrade. Canonical `6/6 + 6/6` / `9/9 + 9/9`, both self-tests, focused firewall `6/6`, `291` JSON parses, and structural checks pass. A4 stops at accepted City Threshold before normal RP-003 or later state.
+
 ## A2 result — 2026-07-25
 
 - `RP-002 PASS — EXISTING-AUTHORITY RESTORE / DOWNGRADE / REVERSIBLE RETURN BOARDED / A3 NEXT`; protected missing-gate count remains zero. The compact recovery presentation adds no board, art, evidence, credit, route reward, or world effect and stops at accepted City Threshold before normal RP-003/RP-013/successor.

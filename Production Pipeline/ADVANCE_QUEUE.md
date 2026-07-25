@@ -1,5 +1,11 @@
 # Advance Queue
 
+## A3 result — 2026-07-25
+
+- **Disposition:** `NO REOPEN — SOLIDIFIED / VERIFIED-RESTORE FIREWALL PASS / A4 NEXT`; convergence remains `CONVERGE + MERGE + TRIM`. Finalized Python + Responsible-AI + five-observation evidence remains the sole strict reconstruction conjunction; sanitation, downgrade, restore, focus/no-replay, Tour, and reversible return are zero evidence, credit, authority, and cross-credit.
+- **Allowlist / failure:** only the exact three-field triplet plus every valid dependency reconstructs `verified_restore / SC-03-50`. Any false/missing/malformed/partial/extra/forged/stale/private/`review_required` state clears all three fields to `sanitation_downgrade / progression={}` with deterministic first-incomplete focus; Tour owns no durable field.
+- **Exact A4 next:** confirm one protected quiet `SC-03-40` -> reload/re-entry sanitation -> complete downgrade or no-replay exact `SC-03-50` restore -> existing reversible City Threshold return graph. Preserve privacy, accessibility, invariant world, no-credit Tour, offline/no-authority/no-exam-guarantee, unchanged continuation/null city delta, and stop before normal RP-003, departure, credits, RP-013, successor, or world/access/authority effect.
+
 ## A2 result — 2026-07-25
 
 - **Disposition:** `PASS — EXISTING-AUTHORITY RESTORE / DOWNGRADE / RETURN BOARDED / A3 NEXT`; convergence remains `CONVERGE + MERGE + TRIM`. No new location or visual micro-seam: System reload sanitation reaches only exact `SC-03-50` restore or empty deterministic downgrade, with the pre-existing reversible City Threshold return available only after exact restore.

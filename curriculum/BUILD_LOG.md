@@ -1,5 +1,19 @@
 # Build Log
 
+## Log entry: 2026-07-25T04:11:16-04:00
+
+Stage: RP-002 verified-restore and sanitation-downgrade evidence-firewall preservation (A3 continuity maintenance)
+
+Work completed: Recorded `NO REOPEN — SOLIDIFIED` for accepted quiet System `comparison_complete / SC-03-40` -> reload/re-entry sanitation without replay -> either exact `sanitation_downgrade` with empty progression, complete triplet clearing, and deterministic first-incomplete heading/control focus, or exact `verified_restore / SC-03-50` with only the exact allowlisted triplet, cleared working/transient material, and heading-then-saved-controls focus -> existing reversible return to accepted City Threshold only from exact restore. Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole strict eligibility conjunction. Reload, sanitation, validation, downgrade, restore, focus, resume, reflow, Tour, and reversible navigation add zero attempt, correctness, observation, score, evidence, mastery, credit, access, authority, route reward, exam guarantee, or cross-credit.
+
+Freeze-rule and source result: no material official-objective change, validator/playtest mismatch, bypass, or changed learning goal is present. The required `foundry-azure-source-priority` skill is unavailable, so the checked-in official-Microsoft-source-first authorities remain controlling. A1/A2 introduce no Microsoft, Foundry, AI-901, objective, Python action, case, answer, score, threshold, remediation, evidence field, privacy exception, or source claim; no source research was reopened and no third-party source was used.
+
+Validation: RP-002 readiness self-test PASS; canonical Python primary and transfer PASS `6/6 + 6/6`; RP-002 Responsible-AI primary and transfer PASS `9/9 + 9/9`; L-02-02 Responsible-AI self-test PASS; focused strict-conjunction/downgrade-clearing/verified-restore/no-replay/Tour/zero-effect evidence firewall PASS `6/6`; all `291` curriculum JSON files parse. Structural checks confirm the exact progression allowlist remains only `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"`; invalid state clears the triplet to `progression={}`, exact restore alone reaches `SC-03-50`, and Tour owns no durable field.
+
+Next: Gameplay Master confirms only one protected graph from quiet exact `SC-03-40` through reload/re-entry sanitation to either complete triplet-clearing `sanitation_downgrade` with deterministic first-incomplete focus or exact no-replay `verified_restore / SC-03-50` with heading-then-saved-controls focus, followed only from exact restore by the existing reversible City Threshold return. Preserve validation before reconstruction, the strict finalized conjunction, exact three-field allowlist, private/transient clearing, one active System group, responsive/accessibility parity, no-credit Tour, offline/no-authority/no-exam-guarantee, invariant SC-03/world/clocks, unchanged continuation, `cityStateDelta=null`, and no successor. Stop at accepted City Threshold before normal RP-003, departure, credits, RP-013, successor, or any world/access/authority/external effect.
+
+Notes: no curriculum contract, source register, lesson, map, case, answer, evaluator, validator, runtime, UI, art, adapter, persistence mechanic, storage schema, route, world, accepted bundle, Demo, live service, credential, hidden lore, successor, or protected user file changed.
+
 ## Log entry: 2026-07-25T02:43:52-04:00
 
 Stage: RP-002 atomic comparison commit evidence-firewall preservation (A3 continuity maintenance)
