@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A5 result — 2026-07-25
+
+- `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. The pure unimported controller proves exact private-free seven-modality `RG-30` preparation reaches only existing contained local confirmation, with visible-only `SAVE BOUNDED COMPARISON`, inert hold, and `CANCEL`/Escape write-free return to review focus. No commit, adapter, persistence, credit, world, or normal Demo change occurs.
+- **W1 edge:** from accepted live bounded review, report only the earliest absent normal `PREPARE SAVE` control/transition; do not force state or touch browser storage/save.
+
 ## A4 result — 2026-07-25
 
 - `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Existing exact sanitized `RG-30` accepts one fresh private-free seven-modality/one-hit Pilot prepare, atomically mounts only existing contained local confirmation, holds there, or returns through `CANCEL`/Escape write-free to exact review with deterministic prepare focus.

@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## A5 continuity result — 2026-07-25
+
+- `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. The pure unimported controller passes focused `14/14`, related `99/99`, RP-002/L-02-02 validator self-tests, build, non-integration, purity, leakage, and patch gates while accepted assets remain unchanged. It allows only exact strict `RG-30` -> fresh private-free seven-modality prepare -> existing contained confirmation, inert hold, or write-free cancel/Escape review return; commit is rejected before adapter access.
+- W1 begins only at coordinator-accepted normal live bounded review and reports the earliest absent player-facing `PREPARE SAVE` transition. Normal integration, persistence/completion, later packets, RP-013, successor, and world/access/authority effects remain closed.
+
 ## Current control — 2026-07-24
 
 - **Authoritative accepted release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015` on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`; normal play now reaches the exact zero-credit RAI conclusion, explicit private-free dismissal, strict finalized-evidence System eligibility, and existing bounded comparison review or deterministic first-incomplete recovery.

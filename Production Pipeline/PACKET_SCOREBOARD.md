@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A5 result — 2026-07-25
+
+- `RP-002` `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. One pure non-routable controller passes exact sanitized review through fresh private-free seven-modality preparation to only existing contained confirmation, inert hold, or write-free cancel/Escape review return. It rejects commit before adapters and fails closed for hostile input without future-token loss; normal integration and Working evidence remain open.
+
 ## A4 result — 2026-07-25
 
 - `RP-002` `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Exact sanitized `RG-30` -> fresh private-free seven-modality/one-hit prepare -> existing contained local Pilot confirmation -> hold or cancel/Escape write-free exact-review return is now one protected graph.

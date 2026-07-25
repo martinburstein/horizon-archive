@@ -76,6 +76,13 @@ import {
   custodyLedgerRAIConclusionReviewModalities,
 } from "../src/CustodyLedgerRAIConclusionReview.js";
 import {
+  CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+  CUSTODY_LEDGER_PREPARE_SAVE,
+  CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+  createCustodyLedgerRAIPrepareSaveConfirmation,
+  custodyLedgerRAIPrepareSaveModalities,
+} from "../src/CustodyLedgerRAIPrepareSaveConfirmation.js";
+import {
   structuredPacketChecks,
   structuredPacketExercise,
   structuredPacketExplanationDimensions,
@@ -664,4 +671,161 @@ test("controller remains pure while the normal route composes it without direct 
   assert.equal(source.includes("deriveCustodyLedgerSaveEligibility"), true);
   assert.equal(source.includes("successor: null"), true);
   assert.equal(source.includes("cityStateDelta: null"), true);
+});
+
+function acceptedPrepareSaveFixture() {
+  const options = acceptedConclusionFixture();
+  const reviewController = createCustodyLedgerRAIConclusionReview(options);
+  reviewController.dispatch(intent(CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION, "prepare-fixture-dismiss"));
+  const acceptedReviewState = reviewController.dispatch(intent(
+    CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+    "prepare-fixture-review",
+  )).state;
+  return { ...options, acceptedReviewState };
+}
+
+function prepareIntent(action, eventToken, overrides = {}) {
+  return {
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action,
+    activationKind: "pointer",
+    eventToken,
+    ...overrides,
+  };
+}
+
+test("protected prepare-save controller atomically mounts only the existing local confirmation for every modality", () => {
+  for (const activationKind of custodyLedgerRAIPrepareSaveModalities) {
+    const controller = createCustodyLedgerRAIPrepareSaveConfirmation(acceptedPrepareSaveFixture());
+    const review = controller.getState();
+    assert.equal(review.phase, "RG-30");
+    assert.deepEqual(review.availableActions, [
+      CUSTODY_LEDGER_PREPARE_SAVE, "RETURN TO EVIDENCE", "RETURN TO CITY THRESHOLD",
+    ]);
+    const result = controller.dispatch(prepareIntent(
+      CUSTODY_LEDGER_PREPARE_SAVE,
+      `prepare-${activationKind}`,
+      { activationKind },
+    ));
+    assert.equal(result.status, "local_confirmation_visible");
+    assert.equal(result.replacement, "atomic");
+    assert.equal(result.state.phase, "save_confirmation");
+    assert.equal(result.state.activeGroup, "save_confirmation");
+    assert.equal(result.state.owner, "PILOT // FLIGHT RECORDER");
+    assert.equal(result.state.confirmationText,
+      "Save only the bounded expedition comparison and survey marker. This grants no access or authority.");
+    assert.equal(result.state.commitIntent, "SAVE BOUNDED COMPARISON");
+    assert.equal(result.state.commitIntentVisible, true);
+    assert.equal(result.state.commitIntentDispatchEnabled, false);
+    assert.deepEqual(result.state.focusIntent, {
+      group: "save_confirmation", target: "owner_heading", contained: true,
+    });
+    assert.equal(controller.holdConfirmation().status, "confirmation_held");
+    assertZeroEffect(result.state);
+  }
+});
+
+test("cancel and Escape are write-free, restore exact review focus, and permit a fresh prepare", () => {
+  for (const activationKind of ["pointer", "keyboard_escape"]) {
+    const controller = createCustodyLedgerRAIPrepareSaveConfirmation(acceptedPrepareSaveFixture());
+    controller.dispatch(prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, `prepare-before-${activationKind}`));
+    const cancelled = controller.dispatch(prepareIntent(
+      CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
+      `cancel-${activationKind}`,
+      { activationKind },
+    ));
+    assert.equal(cancelled.status, "confirmation_cancelled_write_free");
+    assert.equal(cancelled.state.phase, "RG-30");
+    assert.deepEqual(cancelled.state.focusIntent, { group: "bounded_review", target: "prepare_save" });
+    assert.equal(cancelled.state.savePerformed, false);
+    assertZeroEffect(cancelled.state);
+    assert.equal(controller.dispatch(prepareIntent(
+      CUSTODY_LEDGER_PREPARE_SAVE,
+      `prepare-after-${activationKind}`,
+    )).status, "local_confirmation_visible");
+  }
+});
+
+test("invalid, private, duplicate, commit, Tour, and contaminated inputs cannot spend a future valid prepare", () => {
+  const controller = createCustodyLedgerRAIPrepareSaveConfirmation(acceptedPrepareSaveFixture());
+  const token = "valid-after-prepare-rejections";
+  for (const invalid of [
+    prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token, { activationKind: "automatic" }),
+    prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token, { mode: "demo_tour" }),
+    prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token, { version: "stale" }),
+    prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token, { owner: "SYSTEM // EXPEDITION SESSION" }),
+    { ...prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token), privateResponse: "PRIVATE" },
+    prepareIntent("PREPARE + RETURN", token),
+  ]) {
+    assert.match(controller.dispatch(invalid).status, /rejected|sanitized/);
+    assert.equal(controller.getState().phase, "RG-30");
+  }
+  assert.equal(controller.dispatch(prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token)).status,
+    "local_confirmation_visible");
+  const beforeCommit = controller.getState();
+  const closed = controller.dispatch(prepareIntent("SAVE BOUNDED COMPARISON", "closed-commit"));
+  assert.equal(closed.status, "rejected");
+  assert.equal(closed.reason, "save_bounded_comparison_closed");
+  assert.deepEqual(closed.state, beforeCommit);
+  assert.equal(controller.dispatch(prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, token)).status,
+    "rejected");
+  const restored = controller.sanitizeBoundary({ ...beforeCommit, privateResponse: "PRIVATE" }).state;
+  assert.equal(restored.phase, "RG-30");
+  assert.doesNotMatch(JSON.stringify(restored), /PRIVATE/);
+  assert.equal(controller.dispatch(prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, "fresh-after-sanitize")).status,
+    "local_confirmation_visible");
+});
+
+test("partial or review-required prerequisites sanitize to the existing first-incomplete boundary before prepare", () => {
+  for (const [index, observationId] of custodyLedgerObservationIds.entries()) {
+    const options = acceptedPrepareSaveFixture();
+    options.eligibilityDependencies.observationFixtures[index] = {
+      ...options.eligibilityDependencies.observationFixtures[index],
+      finalizationStatus: index % 2 ? "review_required" : "stale",
+      privateNotes: `PRIVATE-${observationId}`,
+    };
+    const controller = createCustodyLedgerRAIPrepareSaveConfirmation(options);
+    const state = controller.getState();
+    assert.equal(state.phase, "RG-U");
+    assert.equal(state.returnedBoundary, `observation:${observationId}`);
+    assert.doesNotMatch(JSON.stringify(state), /PRIVATE|review_required|stale/);
+    assert.equal(controller.dispatch(prepareIntent(
+      CUSTODY_LEDGER_PREPARE_SAVE,
+      `partial-prepare-${index}`,
+    )).status, "sanitized_to_first_incomplete_protected_boundary");
+  }
+});
+
+test("exact review and confirmation resume without replay while the prepare controller remains non-routable and pure", () => {
+  const options = acceptedPrepareSaveFixture();
+  const initial = createCustodyLedgerRAIPrepareSaveConfirmation(options);
+  const review = initial.getState();
+  assert.deepEqual(createCustodyLedgerRAIPrepareSaveConfirmation({ ...options, restoredState: review }).getState(), review);
+  const confirmation = initial.dispatch(prepareIntent(CUSTODY_LEDGER_PREPARE_SAVE, "resume-confirmation")).state;
+  assert.deepEqual(
+    createCustodyLedgerRAIPrepareSaveConfirmation({ ...options, restoredState: confirmation }).getState(),
+    confirmation,
+  );
+  const source = readFileSync(
+    new URL("../src/CustodyLedgerRAIPrepareSaveConfirmation.js", import.meta.url),
+    "utf8",
+  );
+  for (const forbidden of [
+    "localStorage", "sessionStorage", "createCustodyLedgerPersistenceAdapter",
+    "commitCustodyLedgerBoundedComparison", "retryCustodyLedgerSave",
+    "restoreCustodyLedgerBoundedComparison", "fetch(", "XMLHttpRequest", "document.", "window.",
+    "RP-003", "RP-013",
+  ]) assert.equal(source.includes(forbidden), false, forbidden);
+  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+    assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
+      .includes("CustodyLedgerRAIPrepareSaveConfirmation"), false, relative);
+  }
+  assert.equal(source.includes("prepareCustodyLedgerSave"), true);
+  assert.equal(source.includes("cancelCustodyLedgerSave"), true);
+  assert.equal(confirmation.campaignCommitEnabled, false);
+  assert.equal(confirmation.cityStateDelta, null);
+  assert.equal(confirmation.successor, null);
 });

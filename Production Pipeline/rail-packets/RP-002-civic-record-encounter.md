@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## A5 result — 2026-07-25
+
+- **Disposition:** `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`.
+- **Protected result:** one pure unimported storage-free controller composes only exact sanitized `RG-30`, strict finalized `PY-009` + `RP002-RAI-01` + five-observation eligibility, a fresh opaque private-free seven-modality Pilot `PREPARE SAVE`, and the existing contained local `save_confirmation`. Its visible `SAVE BOUNDED COMPARISON` label is non-dispatchable; `campaignCommitEnabled=false` and `cityStateDelta=null` remain exact.
+- **Return / recovery:** hold is inert. `CANCEL` or Escape clear transients with no adapter/write and restore exact review with `prepare_save` focus; all invalid/private/stale/partial/review-required/duplicate/combined/passive/automatic/Tour/contaminated input fails closed to existing first-incomplete recovery without consuming a future valid token.
+- **Exact W1 edge:** inspect only the accepted normal RG-30 live boundary and report the earliest absent player-facing `PREPARE SAVE` control/transition. No route integration, commit activation, persistence, failure/retry/restore/completion, credit, `RP-003+`, RP-013, successor, or world/access/authority effect is authorized.
+
 ## A4 Gameplay Master current control — 2026-07-25
 
 - **Disposition:** `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`.

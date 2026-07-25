@@ -1,5 +1,10 @@
 # Working Queue
 
+## A5-to-W1 handoff — 2026-07-25
+
+- **Incoming protected result:** `REVISE — PREPARE-SAVE CONFIRMATION COMPLETE`. A5 added no normal route/UI or accepted-bundle change: the pure controller is unimported and stops at contained local confirmation before commit activation.
+- **Exact W1 task:** inspect only coordinator-accepted normal live/source-served evidence at `RG-30` bounded review. Report the earliest player-facing gap toward a private-free Pilot `PREPARE SAVE` control and contained local confirmation/cancel return; do not inspect protected code, force state, or read/mutate browser storage or campaign save. No commit, persistence, failure/retry/restore, completion, credit, `RP-003+`, RP-013, successor, or world/access/authority effect is in scope.
+
 ## Current control — 2026-07-24
 
 - **Authoritative coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`. Exact conclusion -> explicit private-free one-hit Pilot dismissal -> strict System eligibility -> existing bounded review, or deterministic first-incomplete recovery, is accepted on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`.

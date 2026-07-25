@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A5 result — 2026-07-25
+
+- `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; the ordered lead remains ten packets and the rail does not extend. The protected controller reaches contained confirmation only and keeps commit/persistence/later packets/RP-013/successor/world-access-authority effects closed.
+- **W1 edge:** record only the earliest absent normal `PREPARE SAVE` control/transition at accepted live bounded review.
+
 ## A4 result — 2026-07-25
 
 - `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; the ordered lead remains ten packets and the rail does not extend.
