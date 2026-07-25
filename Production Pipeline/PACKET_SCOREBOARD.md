@@ -47,10 +47,11 @@
 - `RP-002 PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.
 - A2 may board only one existing-authority recovery sequence: System reload sanitation -> exact `SC-03-50` restore without replay or all-three downgrade to deterministic first-incomplete focus -> from exact `SC-03-50` only, reversible accepted City Threshold navigation. Stop before normal `RP-003`, later departure, credits, RP-013, successor, route reward, or any world/access/authority effect.
 
-## Coordinator current control — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- **Authoritative release:** `RP-003 PASS — IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Normal play now includes exact predecessor sanitation, explicit adjacent-survey intent, replay-free blank `CM-00`, responsive inherited world continuity, and reversible returns. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-003`; the ordered lead is nine packets.
-- **Authoritative exact next edge:** protect and integrate the existing `CM-00 -> CM-10` orientation plus three distinct observations in any order. Each deliberate action finalizes only its matching observation; replay/order/focus grant zero credit; all three enable only `REVIEW LOCAL WORK IMAGE`. Stop before review activation, learning, save, later packets, RP-013, successor, or any reward/world/access/authority effect. Protected missing-gate count remains zero.
+- **Disposition / positions:** `RP-003 PASS — CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted blank `RP-003 CM-00`, the lead remains nine packets, and protected missing-gate count remains zero.
+- **Exact A2 edge:** one existing CM-10 survey group permits fresh deliberate A, B, and sealed-boundary observations in any order, each finalizing only itself; Recorded replay/order/focus/resume are zero credit and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Hard stop:** no lore/copy/art, review activation, CM-20, learning, save, later packet, RP-013, successor, reward, world/access/authority effect.
 
 ## A5 result — 2026-07-25
 

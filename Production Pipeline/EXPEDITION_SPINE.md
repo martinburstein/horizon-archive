@@ -35,10 +35,11 @@
 - **Locked edge:** the expedition System alone sanitizes reload/re-entry. Exact triplet plus every unchanged finalized dependency reconstructs only `SC-03-50`, clears work, and replays nothing; every invalid class clears the whole triplet plus private/transient work and targets the deterministic first incomplete protected boundary. From exact `SC-03-50` only, the existing reversible City Threshold return is navigation without evidence, reward, route, world, access, identity, authority, or external effect.
 - **Hard stop:** A2 boards this one existing-authority recovery sequence without new copy, additional visual state, micro-state, art, or story content and stops after accepted City Threshold return, before normal `RP-003`, later departure, credits, RP-013, successor, or post-ending content.
 
-## Coordinator current control — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-003`, now accepted normally through sanitized adjacent-survey entry and responsive blank `CM-00`. The ordered lead remains nine packets (`RP-004` through `RP-012`). No `RP-013` or successor exists.
-- **Authoritative exact next edge / stop:** converge the existing `CM-00 -> CM-10` orientation and complete three-observation survey loop as one tranche: explicit orient enters one blank `CM-10` group; one fresh deliberate action separately finalizes exposed A, exposed B, or sealed-boundary observation; replay/order/focus grant zero credit; all three enable only `REVIEW LOCAL WORK IMAGE`. Stop before activating review, Python, AI-901 evaluation, save, later RP-003 state, RP-004, RP-013, successor, or any reward/world/access/authority effect.
+- **Disposition / positions:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted blank `RP-003 CM-00`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
+- **Exact A2 edge:** reuse only explicit orientation into one Scene-owned `CM-10` group, where fresh deliberate A, B, and sealed-boundary inspections separately finalize their matching existing observation in any order; Recorded replay, ordering, focus, and resume are zero credit, and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Hard stop:** no new lore/copy/art, review activation, CM-20, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## Current control — 2026-07-25
 

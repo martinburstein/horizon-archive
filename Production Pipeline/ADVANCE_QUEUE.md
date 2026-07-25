@@ -58,10 +58,11 @@
 - **Exact A2 start:** from accepted quiet System `SC-03-40`, board reload/re-entry as local System sanitation without replay. Exact triplet plus every unchanged finalized dependency yields only System `verified_restore / SC-03-50`, cleared work, and heading then saved-controls focus; any extra, partial, stale, forged, private, or `review_required` state clears all three plus private/transient work and targets the deterministic first-incomplete protected heading/control. From exact `SC-03-50` only, show the existing reversible return to accepted City Threshold as navigation only.
 - **Stop:** add no new copy, additional visual state, micro-state, art, evidence, credit, save meaning, route reward, world response, normal `RP-003`, later departure, credits, RP-013, successor, access, identity, authority, or external effect. Preserve privacy, Tour isolation, responsive/accessibility parity, unchanged continuation/null city delta, and hand A3 the unchanged `SOLIDIFIED` conjunction.
 
-## Coordinator current control — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`; exact sanitation, explicit adjacent entry, blank `CM-00`, responsive continuity, and reversible returns are accepted normally.
-- **Authoritative A1 start:** continuity-audit only the existing `CM-00 -> CM-10` ownership and three-observation meanings. A2 boards one Scene survey group; A3 preserves three distinct observation IDs with zero cross-credit into Python/AI-901 evidence; A4 locks any-order finalize/replay/recovery/review-eligibility behavior; A5 composes one pure protected survey proof. Add no new lore/copy/art/learning content and stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated.
+- **Disposition:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; exact sanitation, explicit adjacent entry, blank `CM-00`, responsive continuity, and reversible returns remain accepted normally.
+- **Exact A2 edge:** board one existing Scene CM-10 survey group after explicit orient. A, B, and sealed-boundary inspection separately finalize only their matching existing observation in any order; Recorded replay/order/focus/resume are zero cross-credit and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Hard stop:** add no lore/copy/art, review activation, CM-20, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## A5 result — 2026-07-25
 

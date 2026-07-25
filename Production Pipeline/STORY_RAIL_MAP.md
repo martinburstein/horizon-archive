@@ -92,10 +92,11 @@
 - **Nearest rail edge:** System-only reload/re-entry sanitation may produce only exact `verified_restore / SC-03-50` with cleared work and no replay, or all-three fail-closed downgrade to the deterministic first incomplete protected boundary. Only exact `SC-03-50` reaches the existing reversible accepted City Threshold return, as navigation without evidence, reward, route unlock, city/world acknowledgement, access, authority, identity, or external effect.
 - **Rail stop:** accepted City Threshold return. No normal `RP-003`, later departure, credits, RP-013, successor, post-ending content, or world/access/authority effect exists beyond this bounded A2 handoff.
 
-## Coordinator current control — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-003`, accepted through blank `CM-00`; the ordered lead is nine packets (`RP-004` through `RP-012`).
-- **Authoritative exact next edge / rail stop:** integrate the existing explicit `ORIENT TO EXPOSED CHANNELS` transition into one `CM-10 SURVEY` group and complete its three separately owned observations in any order. All three may enable only `REVIEW LOCAL WORK IMAGE`; stop before activating it, Python/AI-901 learning, save, later RP-003 work, RP-004, RP-013, successor, or any world/access/authority effect. The rail does not extend.
+- **Disposition / positions:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted blank `RP-003 CM-00`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Exact A2 edge / rail stop:** one existing Scene CM-10 group follows explicit orient. Fresh deliberate A, B, and sealed-boundary inspections separately finalize only their matching observation in any order; Recorded replay/order/focus/resume are zero credit, and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Hard stop:** do not activate review or reach CM-20, Python/AI-901 learning, save, later RP-003, RP-004, RP-013, successor, or any reward/world/access/authority/external effect. The rail does not extend.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

@@ -33,10 +33,11 @@
 - **Gate:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action is `CONVERGE + MERGE + TRIM`.
 - **Bounded tranche:** merge only the existing System-owned reload sanitation, exact `SC-03-50` verified restore with cleared work/no replay, all-three fail-closed downgrade to deterministic first-incomplete focus, and exact-`SC-03-50`-only reversible City Threshold navigation. No prompt, answer, score, new copy, additional visual state, micro-state, art, evidence, credit, route reward, world response, authority, normal `RP-003`, RP-013, or successor is authorized.
 
-## Coordinator current control — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- **Authoritative release / mode:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`; blank-entry convergence is closed and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
-- **Authoritative exact next edge / stop:** `CONVERGE + MERGE + TRIM` the existing explicit orientation, three separately finalized Scene observations, replay/order neutrality, and review eligibility into one `CM-10` tranche. Add no new lore, prompt, answer, score, micro-seam, production-art integration, route reward, world response, RP-004 opening, RP-013, or successor. Stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated.
+- **Disposition / mode:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
+- **Exact A2 edge:** compose one existing-authority CM-10 survey group: explicit orient, three separate fresh deliberate A/B/sealed-boundary finalizations in any order, replay-safe Recorded states, zero cross-credit, and only review eligibility after all three.
+- **Hard stop:** add no lore/copy/art, prompt, answer, score, micro-seam, review activation, CM-20, learning, save, production-art integration, route reward, world response, RP-004, RP-013, or successor.
 
 ## Current control — 2026-07-25
 
