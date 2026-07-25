@@ -11,9 +11,33 @@ Before using third-party sources or general web results, check these official Mi
 
 Treat AI-901 objectives as the master learning goals. Use AI-900 material only as supporting background when it overlaps.
 
+## Active skyscraper agent workflow
+
+The active manual production workflow is `SKYSCRAPER_AGENT_WORKFLOW.md`. Its canonical registry is `Skyscraper Agent Profiles/README.md`, with five Alpha shell-making roles and six Beta as-built roles.
+
+At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`, `SKYSCRAPER_AGENT_WORKFLOW.md`, and the registry. Before each stage, read the selected profile in full, the immediately preceding handoff, and the exact current-control or shell sections cited by that role.
+
+Run strictly sequentially:
+
+1. Alpha 1 — Game Vision & Development Director
+2. Alpha 2 — World & Narrative Architect
+3. Alpha 3 — Campaign & Progression Architect
+4. Alpha 4 — Systems, Learning & Performance Director
+5. Alpha 5 — Shell Integration Director
+6. Beta 1 — Playable Slice Creative Director
+7. Beta 2 — Experience Architect
+8. Beta 3 — Gameplay Build Specialist
+9. Beta 4 — World Finishes & Content Designer
+10. Beta 5 — Atmosphere & Polish Director
+11. Beta 6 — As-Built Reconciliation Director
+
+Alpha 5 must issue a versioned `SHELL READY` contract before Beta begins. Beta may request a variance but may not silently change the shell. Beta 6 independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
+
+No recurring automation is active. Do not schedule this workflow until Martin explicitly approves automation after the manual test drive.
+
 ## Two-team agent profiles
 
-**Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates this workflow. `NEXT_INSTANCE_HANDOFF.md` is now a dormant marker and awaits a new workflow.
+**Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates that archived workflow. The current `NEXT_INSTANCE_HANDOFF.md` belongs to the skyscraper workflow.
 
 The instructions below are retained only as historical reactivation guidance.
 

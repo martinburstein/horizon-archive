@@ -1,44 +1,84 @@
-# Horizon Archive — Dormant Workflow Handoff
+# Horizon Archive — Skyscraper Workflow Handoff
 
 Last updated: **2026-07-25**
 
-## Status
+## Start here
 
-The Team 1 / Team 2 agent infrastructure is archived and inactive at Martin's request.
+Read in full:
 
-- The recurring `horizon-archive-optimized-production-loop` automation was deleted.
-- No scheduled wake, role sequence, coordinator release, retrospective, or cycle reveal remains active.
-- Do not resume the former `CM-20` exact-next-action edge.
-- Wait for Martin to define the replacement workflow.
+1. `AGENTS.md`
+2. this file
+3. `SKYSCRAPER_AGENT_WORKFLOW.md`
+4. `Skyscraper Agent Profiles/README.md`
 
-## Archive
+Before each stage, read that stage's canonical profile in full and follow the exact sequential handoff. Never reuse the archived Team 1 / Team 2 exact-next-action edge.
 
-- Immutable Git tag: `two-team-infrastructure-archive-2026-07-25`
-- Tagged commit: `9b669c8422d4622cf43675769d991e4386b836c8`
+## Workflow status
+
+- New Alpha/Beta infrastructure: constructed and ready for a manual test drive.
+- Alpha roles: five shell-making stages.
+- Beta roles: five as-built production stages plus Beta 6 independent reconciliation.
+- Recurring automation: none.
+- Test-drive execution: manual, sequential, and non-overlapping.
+- Construction checkpoint: the commit containing this handoff.
+
+Archived predecessor system:
+
+- Tag: `two-team-infrastructure-archive-2026-07-25`
 - Archive index: `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`
-- Last active handoff: `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/LAST_ACTIVE_HANDOFF.md`
-- Integrity manifest: `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/MANIFEST.md`
+- Do not reactivate it implicitly.
 
-## Final preserved state
+## Current product state
 
 - Whole-story rail: outlined through the intended ending at `RP-012`.
 - Accepted playable Demo: implemented through `RP-003 / CM-10 SURVEY`.
-- Team 1 and Team 2: retired in place; positions preserved in the tagged snapshot.
-- No `RP-013`, successor, or post-ending content exists.
+- Latest accepted player boundary: all three CM-10 observations complete; `REVIEW LOCAL WORK IMAGE` is visible only as disabled/non-dispatchable `Eligible`.
 - Latest canonical reveal: `SC-04 / CM-10 survey — neutral bounded-difference material parity`.
-- Last synchronized cycle close: `9b669c8422d4622cf43675769d991e4386b836c8`.
+- No `RP-013`, successor, or post-ending content is authorized.
 
-## Continuing product invariants
+## Proposed test drive
 
-Until Martin replaces them, preserve closed canon, learning evidence, privacy, accessibility, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, invariant world, save discipline, hidden-lore restrictions, and protected user files. Archiving the workflow does not reopen product decisions or authorize new story content.
+- Test ID: `TD-001`
+- Shell candidate: `SS-RP003-PY010-v1`
+- Campaign address: `RP-003 / SC-04 / CM-20–CM-23`
+- Objective: exercise all 11 new handoffs on one bounded existing-authority implementation slice.
+- Starting boundary: accepted all-three CM-10 observation completion.
+- Intended completion: finalized `PY-010` only.
+- Hard stop: before `CM-30`, AI-901 extraction, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or physical world response.
 
-Never inspect, stage, alter, move, or delete:
+Target player path:
 
-- `Art Of No Mans Sky Book Scan.pdf`
-- `Simplilearn Training Files/`
+```text
+accepted all-three CM-10 observation completion
+  -> fresh explicit REVIEW LOCAL WORK IMAGE
+  -> CM-20 genuinely blank PYTHON PRIMARY
+  -> strict 8/8
+       pass -> CM-22 closed-note retrieval
+       miss -> CM-21 first-actual-missed-check answer-free repair
+               -> clear private/transient work
+               -> genuinely blank retry
+  -> CM-22 condition / true branch / false branch /
+     unavailable-boundary closed-note retrieval
+  -> CM-23 genuinely blank unseen transfer at strict 8/8
+  -> finalize only PY-010
+```
 
-Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's explicit authorization.
+The test evaluates workflow quality as well as product output: stage duration, artifact usefulness, duplicated reading, ambiguity, return routing, variance quality, implementation throughput, release evidence, and reveal value.
+
+## Continuing invariants
+
+- Preserve closed canon, the intended ending, and all invariant-world limits.
+- Preserve strict `PY-010` evidence, private clearing, fresh transfer, and zero cross-credit into `RP003-IE-01`.
+- Preserve privacy, accessibility, responsive behavior, deterministic save/resume, offline/no-authority/no-exam-guarantee, and no-credit Demo Tour.
+- Preserve first-person maximum-quality cinematic photorealism.
+- Do not inspect or mutate Martin's browser storage or campaign save to reach gated state.
+- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's explicit authorization.
+- Never inspect, stage, alter, move, or delete:
+  - `Art Of No Mans Sky Book Scan.pdf`
+  - `Simplilearn Training Files/`
 
 ## Exact next action
 
-None. Await Martin's replacement workflow. When it arrives, create a new active authority and handoff rather than silently reusing the archived two-team loop.
+Begin the manual `TD-001` test drive at **Alpha 1 — Game Vision & Development Director**.
+
+Alpha 1 performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to Alpha 2.
