@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A3 result — 2026-07-25
+
+- `RP-003 NO REOPEN — SOLIDIFIED / ENTRY FIREWALL PASS / A4 NEXT`; protected missing-gate count remains zero. `PY-010`, `RP003-IE-01`, separate observations, and save eligibility remain independent strict contracts; CM-00 sanitation/presentation/focus/returns/Tour cannot cross-credit them.
+- RP-003 self-test and focused prerequisite/zero-evidence/authority/hard-stop firewall assertions pass `11/11`. CM-10, learning, save, RP-004, RP-013, successor, reward, world/access/authority effects remain closed.
+
 ## A2 result — 2026-07-25
 
 - `RP-003 PASS — BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.

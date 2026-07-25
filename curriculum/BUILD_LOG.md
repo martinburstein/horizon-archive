@@ -1,5 +1,21 @@
 # Build Log
 
+## Log entry: 2026-07-25T10:19:00-04:00
+
+Stage: RP-003 blank CM-00 entry evidence-firewall preservation (A3 continuity maintenance)
+
+Work completed: Recorded `NO REOPEN — SOLIDIFIED` for exact verified RP-002 predecessor sanitation -> one blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE` group without replay -> existing orientation, sealed-boundary, RP-002-return, or City-Threshold-return navigation, or invalid/Tour/private/partial/stale/forged/contaminated state clearing transients and failing closed to exact RP-002. Sanitation, entry, presentation, focus, reflow, existing returns, and Tour create zero observation, Python, AI-901, mastery, save, reward, access, authority, city, or world evidence.
+
+Freeze-rule and source result: no material official-objective change, validator/playtest mismatch or bypass, or changed learning goal is present. The required `foundry-azure-source-priority` skill is unavailable, so the checked-in official-Microsoft-source-first authorities remain controlling. A1/A2 introduce no Microsoft or Foundry claim, objective, Python action, case, answer, score, dimension, threshold, remediation, evidence field, privacy exception, save behavior, or authority meaning; no source research was reopened and no third-party source was used.
+
+Evidence firewall: `PY-010` remains `8/8` primary -> answer-free remediation -> closed-note retrieval -> genuinely blank `8/8` transfer; `RP003-IE-01` remains `3/3` primary -> per-dimension remediation -> delayed retrieval -> genuinely blank `3/3` transfer plus unsupported-input explanation. Their finalized evidence and separately finalized correspondence/difference/unavailable observations remain the sole components of save eligibility without cross-credit. Entry/navigation cannot prefill, satisfy, compensate for, or bypass a prerequisite or scored terminal. Private/transient working material clears; finalized evidence remains allowlisted only; `continuation` is unchanged; `cityStateDelta=null`; offline/no-authority/no-exam-guarantee and zero-credit Tour remain exact.
+
+Validation: RP-003 readiness self-test PASS, including primary/transfer conditional forms, AI-901 primary/retrieval/transfer forms, empty-answer and bypass probes. Focused prerequisite/zero-evidence/authority/hard-stop firewall assertions PASS `11/11`: SOLIDIFIED status; navigation-zero-credit and scored-terminal prerequisites; PY-010 and RP003-IE-01 gates; presentation unscored evidence; independent save conjunction; Tour/authority; world locks; and packet/DI entry boundaries. Intended-file and diff checks pass; only protected user paths are untracked.
+
+Next: Gameplay Master locks only one protected graph: exact verified RP-002 -> sanitation -> one blank Scene-owned CM-00 group, or invalid/Tour/private/partial/stale/forged/contaminated state -> transient clearing -> exact RP-002; preserve one-group focus/resume and existing reversible returns. Preserve frozen independent chains, separate observations/save eligibility, privacy clearing, accessibility, no-credit Tour, invariant SC-04/world/clocks, unchanged continuation, `cityStateDelta=null`, and offline/no-authority/no-exam-guarantee. Stop before CM-10, observation, primary/retrieval/transfer evaluation, remediation, save, RP-004, RP-013, successor, or any reward/access/authority/world/external effect.
+
+Notes: no curriculum contract, source register, map, case, prompt, answer, dimension, threshold, evaluator, remediation, evidence allowlist, validator, runtime, UI, art, adapter, persistence mechanic, storage schema, route, world, accepted bundle, Demo, live service, credential, hidden lore, successor, or protected user file changed.
+
 ## Log entry: 2026-07-25T04:11:16-04:00
 
 Stage: RP-002 verified-restore and sanitation-downgrade evidence-firewall preservation (A3 continuity maintenance)

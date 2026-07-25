@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. Team 1 stays at complete `RP-012`; Team 2 stays at active `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- Sanitized blank CM-00 entry, presentation, focus, reflow, existing actions/returns, and Tour are navigation/accessibility only: zero learning, observation, save, reward, authority, or route evidence; they cannot bypass or cross-credit the strict frozen chains. The rail stops before CM-10, RP-004, RP-013, successor, reward, access, authority, or world change.
+
 ## A2 result — 2026-07-25
 
 - **Team positions / handoff:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Team 1 stays at complete `RP-012`; Team 2 stays at active `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. No reopen condition occurred for `PY-010` or `RP003-IE-01`. Exact RP-002 predecessor sanitation, entry into blank one-group CM-00, SC-04 presentation, focus, reflow, existing actions/returns, and Tour create zero observation, Python, AI-901, mastery, save, reward, authority, or physical-response evidence.
+- `PY-010` remains strict `8/8` primary -> remediation -> closed-note retrieval -> blank `8/8` transfer; `RP003-IE-01` remains strict `3/3` primary -> per-dimension remediation -> delayed retrieval -> blank `3/3` transfer plus unsupported-input explanation. Neither chain nor separately finalized observations/save eligibility may be prefilled, satisfied, compensated for, bypassed, or cross-credited by entry behavior. Private/transient material clears; `continuation` remains unchanged; `cityStateDelta=null`; offline/no-authority/no-exam-guarantee and zero-credit Tour remain exact.
+- RP-003 self-test and focused prerequisite/zero-evidence/authority/hard-stop firewall assertions pass `11/11`. A4 locks only valid blank entry or invalid/Tour/private/partial/stale/forged/contaminated fail-closed exact-RP-002 return with deterministic focus/resume and existing reversible returns; stop before CM-10, learning, save, RP-004, RP-013, successor, or any reward/access/authority/world effect.
+
 ## A2 result — 2026-07-25
 
 - **Disposition / presentation handoff:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Exact verified RP-002 completion at accepted City Threshold reuses only the existing first-person SC-04 overview and blank Scene-owned CM-00 group after System predecessor/Tour/privacy/transient sanitation; valid entry replays no event and yields no evidence, credit, save, reward, authority, or physical response.

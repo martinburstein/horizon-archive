@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## A3 result — 2026-07-25
+
+- **Gate / mode:** `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero.
+- **Curriculum boundary:** sanitized blank CM-00 presentation, focus, reflow, existing returns, and Tour are zero evidence and cannot bypass or cross-credit frozen `PY-010`, `RP003-IE-01`, or separately finalized observations/save eligibility. No CM-10, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or world effect is added.
+
 ## A2 result — 2026-07-25
 
 - **Gate / mode:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero.

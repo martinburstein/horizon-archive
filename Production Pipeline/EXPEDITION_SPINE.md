@@ -1,5 +1,10 @@
 # Horizon Archive Expedition Spine
 
+## A3 result — 2026-07-25
+
+- **Advance disposition / positions:** `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Curriculum lock / stop:** predecessor sanitation, blank CM-00 entry, focus, reflow, current actions/returns, and Tour are zero evidence and cannot satisfy, compensate for, or cross-credit strict `PY-010`, strict `RP003-IE-01`, or separate observations/save eligibility. Preserve privacy, `continuation`, `cityStateDelta=null`, offline/no-authority/no-exam-guarantee, and exact-RP-002 fail-closed recovery. No CM-10, learning, save, reward, access, authority, world change, RP-004, RP-013, or successor is authorized.
+
 ## A2 result — 2026-07-25
 
 - **Advance disposition / positions:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets (`RP-004` through `RP-012`).

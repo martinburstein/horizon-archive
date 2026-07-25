@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A3 result — 2026-07-25
+
+- **Advance handoff:** `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.
+- **Exact A4 scope / stop:** only sanitation -> blank one-group CM-00 or fail-closed return to exact RP-002, with focus/resume and existing reversible returns. Entry, presentation, focus, reflow, and Tour remain zero observation/Python/AI-901/mastery/save/authority evidence and cannot bypass frozen prerequisites or cross-credit separate observations. Stop before CM-10, learning, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## A2 result — 2026-07-25
 
 - **Advance handoff:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.
