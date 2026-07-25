@@ -4,7 +4,7 @@
 
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI explanation convergence and the exact zero-credit Pilot conclusion.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
-- A3 result / A4 next: `NO REOPEN — SOLIDIFIED`; the existing zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry / deterministic first-incomplete return preserve frozen evidence conjunctions. Save preparation/persistence and every later state remain closed.
+- A4 result / A5 next: `PASS — GRAPH LOCKED; PROTECTED A5 NEXT`; the existing one-hit zero-effect conclusion dismissal, strict finalized-chain/five-observation eligibility sanitation, and bounded-review entry / deterministic first-incomplete return preserve frozen evidence conjunctions. Save preparation/persistence and every later state remain closed.
 - Release evidence: full `665/665`, all `15/15` validators, production build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and sync pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
 - A2 result / A3 next: the existing zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry / deterministic first-incomplete return are locked as one compact presentation sequence. Save preparation/persistence and every later state remain closed.
 - Visual canon: six closed SC-03 references; the latest locks `RAI conclusion — no-authority threshold silence` as canonical non-runtime evidence.
