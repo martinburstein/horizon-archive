@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W4 result — 2026-07-25
+
+- `RP003-AESTH-019 RESOLVED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The normal rail remains exact verified RP-002 return -> one transient adjacent-survey intent -> one blank Scene-owned CM-00 group. Its sole inherited world plate now remains visible through narrow/effective-`200%` without new art, crop, state, or effect; CM-10 and every later rail/reward/world/access/authority effect remain closed.
+
 ## W3 result — 2026-07-25
 
 - `RP003-AESTH-019 P1 OPEN — W4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

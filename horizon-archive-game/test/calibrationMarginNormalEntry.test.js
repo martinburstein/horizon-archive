@@ -192,6 +192,7 @@ test("normal resume revalidates exact blank state to heading and rejects contami
 test("normal App and UI integrate only the transient blank boundary with no storage, learning, or later-state surface", () => {
   const normal = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", import.meta.url), "utf8");
   const view = readFileSync(new URL("../src/CalibrationMarginEntry.jsx", import.meta.url), "utf8");
+  const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
   const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
   const city = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
   for (const forbidden of [
@@ -207,6 +208,30 @@ test("normal App and UI integrate only the transient blank boundary with no stor
   assert.match(view, /data-active-group=\{entryState\.activeGroup\}/);
   assert.match(view, /entryState\.availableActions\.map/);
   assert.match(view, /tabIndex="-1"/);
+  assert.match(view, /className="city-world calibration-margin-world"/);
+  assert.equal((view.match(/<img\b/g) ?? []).length, 1);
+  assert.doesNotMatch(view, /city-world-plate-narrow|<picture\b|<source\b/);
+  const genericNativeHide = styles.indexOf(
+    '.canonical-game-frame[data-canonical-layout="narrow"] .city-world-plate-native { display: none; }',
+  );
+  const calibrationVisibilityOverride = styles.indexOf(
+    '.canonical-game-frame[data-canonical-layout="narrow"] .calibration-margin-world .city-world-plate-native',
+  );
+  assert.ok(genericNativeHide >= 0, "paired City Threshold narrow switching remains registered");
+  assert.ok(
+    calibrationVisibilityOverride > genericNativeHide,
+    "the blank CM-00 same-master visibility exception must win the narrow/effective-200% cascade",
+  );
+  assert.match(
+    styles.slice(calibrationVisibilityOverride),
+    /\.calibration-margin-world \.city-world-plate-native\s*\{[^}]*display:\s*block;[^}]*object-fit:\s*cover;/,
+  );
+  assert.match(styles, /\.canonical-game-frame \.city-world \{[\s\S]*?aspect-ratio: 16 \/ 9;/);
+  assert.match(styles, /data-canonical-layout="narrow"\] \.city-command-panel \{[\s\S]*?grid-template-columns: 1fr;/);
+  assert.match(styles, /\.canonical-game-host \{[\s\S]*?overflow-x: clip;/);
+  assert.match(styles, /\.canonical-game-frame \.city-command-actions button,[\s\S]*?min-height: 44px;/);
+  assert.match(styles, /@media \(forced-colors: active\)/);
+  assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(view, /CM-10|learning|observation|save|RP-004|RP-013/);
   assert.equal(calibrationMarginNormalEntryAccessibility.minActionCssPx, 44);
   assert.equal(calibrationMarginNormalEntryAccessibility.modalities.length, 7);

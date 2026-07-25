@@ -23,7 +23,7 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
         data-board={entryState.boardState}
         data-phase={entryState.phase}
       >
-        <section className="city-world" aria-label={entryState.boardState}>
+        <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
             className="city-world-plate city-world-plate-native"
             src={cityOverviewImage}

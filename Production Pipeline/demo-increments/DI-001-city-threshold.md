@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W4 result — 2026-07-25
+
+- `RP003-AESTH-019 RESOLVED — SAME-MASTER NARROW CONTINUITY / COORDINATOR NEXT`. Blank SC-04/CM-00 now retains the same sole inherited City Threshold overview at narrow/effective-`200%` through one scoped cascade exception. Wide behavior, 16:9 crop, source bytes, first-person world, one group, four actions, focus, and normal mechanics remain unchanged; no SC-04 production art or new cue exists.
+- Focused gameplay/presentation/frame `73/73`, both applicable self-tests, build, final `4173` refresh, exact HTTP/assets/markers/served-dist identity, CM-10 absence, and immutable source/built master pass on `index-BqxRwsLa.js` / `index-JTpP97Cx.css`. Coordinator independently releases; W4 did not force or inspect campaign storage/save and ran no E2E.
+
 ## W3 result — 2026-07-25
 
 - `RP003-AESTH-019 P1 OPEN — NARROW CM-00 WORLD PLATE HIDDEN / W4 NEXT`. Blank CM-00 uses only the inherited native City Threshold image, but the active narrow-layout stylesheet hides that native class and reveals only an absent narrow sibling. The CM-00 16:9 world therefore becomes blank at narrow/effective-`200%`, violating the approved temporary no-new-art continuity and world-dominance contract.

@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W4 final-candidate result — 2026-07-25
+
+- `RP003-AESTH-019 RESOLVED — SAME-MASTER NARROW VISIBILITY / COORDINATOR NEXT`. The sole inherited CM-00 image now wins the narrow/effective-`200%` cascade through a CalMargin-only exception; wide behavior, immutable crop/bytes, normal gameplay, and all closed rails remain unchanged.
+- **Evidence / candidate:** focused gameplay/presentation/frame `73/73`; RP-003 + RP-002 self-tests; build; one strict `4173` listener; HTTP/markers/served-dist identity; no CM-10; immutable source/built image; patch boundaries pass. `index-BqxRwsLa.js` SHA-256 `D88DB76FFCACE6E19D5F4CC962EFEF42391956ADA91F2B72DAF21ABE9BF39F7D`; `index-JTpP97Cx.css` SHA-256 `3D5B4E6FFAAAE27D4EB44D698AC6F8B797E39E32892076A5E0DBBBC08C2C59BD`. Coordinator independently runs the full release gate and stops before CM-10 or any later learning/save/rail/world/authority state.
+
 ## W3 presentation result — 2026-07-25
 
 - `RP003-AESTH-019 P1 OPEN — NARROW CM-00 WORLD VISIBILITY / W4 NEXT`. Candidate CM-00 has no narrow image element but inherits a narrow rule that hides `.city-world-plate-native`; its registered 16:9 first-person world becomes a bare background at narrow/effective-`200%`. Wide source structure, action hierarchy, focus contract, target rules, and hard stop remain intact.

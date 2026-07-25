@@ -1,5 +1,10 @@
 # Working Queue
 
+## W4 result / coordinator next — 2026-07-25
+
+- **Resolved:** `RP003-AESTH-019 — SAME INHERITED CM-00 WORLD VISIBLE AT NARROW / COORDINATOR NEXT`. A scene-specific cascade exception preserves the sole existing City Threshold overview in the blank CM-00 16:9 world at narrow/effective-`200%`; wide, crop, image bytes, and the four-action blank group remain unchanged.
+- **Gate evidence:** focused gameplay/presentation/frame `73/73`; RP-003 and RP-002 self-tests; build; exact HTTP/assets/markers/served-dist identity; no CM-10; immutable source/built master; and one strict `4173` listener pass on `index-BqxRwsLa.js` / `index-JTpP97Cx.css`. Coordinator performs the independent full release gate. No SC-04 art/copy/state, persistence, evidence, world response, or later rail effect was added.
+
 ## W3 result / W4 next — 2026-07-25
 
 - **Open:** `RP003-AESTH-019 P1 — blank CM-00 world plate disappears at narrow/effective-200%`. `CalibrationMarginEntry` renders only the inherited `.city-world-plate-native`, while shared narrow CSS hides it and displays only `.city-world-plate-narrow`; no narrow sibling exists in the blank entry. The scene therefore loses its entire first-person world plate rather than naturally reflowing it.

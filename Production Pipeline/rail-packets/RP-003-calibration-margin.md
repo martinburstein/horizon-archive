@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## W4 Coder result — responsive CM-00 world continuity
+
+- **Disposition:** `RP003-AESTH-019 RESOLVED — FINAL CANDIDATE / COORDINATOR NEXT`. One CalMargin-scoped narrow cascade exception now keeps the same sole inherited City Threshold overview visible in blank CM-00; wide behavior, the immutable 16:9 master/crop, and the existing interface remain unchanged. No SC-04 art, copy, state, cue, animation, gameplay, or persistence was added.
+- **Evidence:** focused gameplay/presentation/frame selection `73/73`; RP-003 and predecessor RP-002 self-tests; production build; single `4173` listener; root/assets/markers HTTP `200`; served-to-`dist` identity; CM-10 absence; and source/built image identity pass. Candidate is `index-BqxRwsLa.js` / `index-JTpP97Cx.css`; the inherited master remains `2,626,795` bytes / SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D`.
+- **Exact coordinator handoff:** independently release only normal blank CM-00 plus resolved narrow/effective-`200%` same-master visibility. Confirm one Scene group, heading/action focus, `>=44px`, no overflow, non-color/forced-color/reduced-motion parity, first-person/invariant world, transient sanitation, zero evidence, and reversible returns. Run the full coordinator gate and stop before CM-10, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
+
 ## W3 Aesthetic result — narrow CM-00 world continuity
 
 - **Disposition:** `RP003-AESTH-019 P1 OPEN — W4 AESTHETIC-POLISH NEXT`. The exact blank entry is coherent at wide source layout, but its sole inherited City Threshold image is suppressed in the registered narrow layout. This is one reproducible responsive presentation defect, not a new-art request.
