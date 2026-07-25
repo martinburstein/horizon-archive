@@ -1,5 +1,21 @@
 # Build Log
 
+## Log entry: 2026-07-25T13:17:58-04:00
+
+Stage: RP-003 CM-10 separate-observation evidence-firewall preservation (A3 continuity maintenance)
+
+Work completed: Recorded `NO REOPEN — SOLIDIFIED` for accepted blank `CM-00` orientation and one Scene-owned `CM-10 SURVEY` group. The existing exposed-sequence A, exposed-sequence B, and sealed-boundary observations remain three distinct IDs. Only one fresh deliberate semantic action finalizes its matching observation; its textual/non-color `Recorded` replay changes no observation. Orient, presentation, replay, ordering, focus, reflow, resume, returns, and review eligibility create zero observation, Python, AI-901, mastery, save, reward, access, authority, city, or world evidence. All three finalized observations enable only inactive `REVIEW LOCAL WORK IMAGE` eligibility.
+
+Freeze-rule and source result: no material official-objective change, validator/playtest mismatch or bypass, or changed learning goal is present. The required `foundry-azure-source-priority` skill is unavailable, so the checked-in official-Microsoft-source-first authorities remain controlling. A2 introduces no Microsoft or Foundry claim, objective, Python action, case, answer, score, dimension, threshold, remediation, evidence field, privacy exception, save behavior, or authority meaning; no source research was reopened and no third-party source was used.
+
+Evidence firewall: `PY-010` remains `8/8` primary -> answer-free remediation -> closed-note retrieval -> genuinely blank `8/8` transfer; `RP003-IE-01` remains `3/3` primary -> per-dimension remediation -> delayed retrieval -> genuinely blank `3/3` transfer plus unsupported-input explanation. Neither strict chain nor any observation can prefill, satisfy, compensate for, or cross-credit another. The three observation IDs, the two strict chains, and any future save eligibility remain separate conjuncts. Private/transient working material clears; finalized evidence remains allowlisted only; `continuation` is unchanged; `cityStateDelta=null`; offline/no-authority/no-exam-guarantee and zero-credit Tour remain exact.
+
+Validation: RP-003 readiness self-test PASS, including primary/transfer conditional forms, AI-901 primary/retrieval/transfer forms, empty-answer and bypass probes. Focused contract/evidence-firewall assertions PASS: SOLIDIFIED status and three reopen conditions; separate orientation/A/B/sealed observation wording; strict PY-010 and RP003-IE-01 gates; independent non-cross-credit save conjunction; transient/private clearing; presentation/navigation/replay/focus/resume zero credit; inactive local-review-only eligibility; Tour/authority/world locks; CM-20 hard stop; and A4-only handoff. Intended-file and diff checks pass; only protected user paths are untracked.
+
+Next: Gameplay Master locks only one protected graph: accepted blank `CM-00` -> explicit orient -> one Scene-owned `CM-10` survey group -> any-order fresh one-hit A/B/sealed observation finalization -> replay-safe `Recorded` states -> inactive local-review eligibility only after all three. Preserve invalid/Tour/private/stale/forged/combined/wrong-owner fail-closed recovery, one active group, seven modalities/one semantic hit, `>=44px`, responsive/non-color/forced-color/reduced-motion parity, private clearing, frozen strict chains/no cross-credit, invariant SC-04/world/clocks, reversible returns, unchanged continuation, and `cityStateDelta=null`. Stop before review activation, CM-20, Python/AI-901 evaluation, remediation, save, RP-004, RP-013, successor, or any reward/access/authority/world/external effect.
+
+Notes: `NO REOPEN — SOLIDIFIED`. No curriculum contract, source register, lesson, map, case, prompt, answer, dimension, threshold, evaluator, remediation, evidence allowlist, validator, runtime, UI, art, adapter, persistence mechanic, storage schema, route, world, accepted bundle, Demo, live service, credential, hidden lore, successor, or protected user file changed.
+
 ## Log entry: 2026-07-25T10:19:00-04:00
 
 Stage: RP-003 blank CM-00 entry evidence-firewall preservation (A3 continuity maintenance)

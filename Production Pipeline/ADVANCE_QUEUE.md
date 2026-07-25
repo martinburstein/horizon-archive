@@ -60,9 +60,9 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
-- **Exact A3 edge:** preserve the separate existing A, B, and sealed-boundary observation IDs. Each Recorded replay state remains zero cross-credit; only all three enable `REVIEW LOCAL WORK IMAGE` eligibility.
-- **Hard stop:** add no lore/copy/art, review activation, CM-20, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
+- **Disposition:** `NO REOPEN — SOLIDIFIED / RP-003 CM-10 FIREWALL PASS / A4 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
+- **Exact A4 edge:** preserve separate orientation plus A/B/sealed observation IDs; fresh action finalizes only its match. Recorded replay and presentation/order/focus/reflow/resume/review eligibility remain zero observation/Python/AI-901/mastery/save/reward/authority/world credit; all three enable only inactive `REVIEW LOCAL WORK IMAGE` eligibility.
+- **Hard stop:** add no lore/copy/art, review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## A5 result — 2026-07-25
 

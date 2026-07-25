@@ -8,9 +8,9 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- `PASS — RP-003 / SC-04 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`. Reuse the same registered first-person Calibration Margin overview only: explicit orient reaches one Scene group with equal any-order A, B, and sealed-boundary observations; each textual/non-color `Recorded` replay state changes only itself and all three enable only review eligibility.
+- `NO REOPEN — SOLIDIFIED / RP-003 / SC-04 CM-10 FIREWALL PASS / A4 NEXT`. Reuse the same registered first-person Calibration Margin overview only: explicit orient and equal any-order A, B, and sealed-boundary observations remain separate; only fresh deliberate action finalizes its matching observation, and textual/non-color `Recorded` replay changes no evidence.
 - Wide world dominance and narrow/effective-`200%` source-order reflow, one-group focus, `>=44px`, seven-modalities, non-color/forced-color/reduced-motion parity, first-person invariance, privacy/Tour isolation, reversible returns, `continuation`, and `cityStateDelta=null` remain exact. No new crop, plate, board, raster, copy, hotspot cue, or physical response is introduced.
-- **Hard stop / A3:** preserve separate zero-cross-credit observation IDs; do not activate `REVIEW LOCAL WORK IMAGE` or surface `CM-20`, work image, learning, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
+- **Hard stop / A4:** presentation, replay, order, focus, reflow, resume, and review eligibility remain zero observation/Python/AI-901/mastery/save/reward/authority/world credit. Preserve frozen chains, no cross-credit, and local-review-only eligibility; do not activate `REVIEW LOCAL WORK IMAGE` or surface `CM-20`, work image, learning, evaluation, remediation, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
 
 ## 2026-07-25 verified-return canonical cycle-reveal lock
 
