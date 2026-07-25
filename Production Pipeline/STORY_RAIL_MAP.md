@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W3 result - 2026-07-25
+
+- Team 1 remains complete at `RP-012`; Team 2 remains on accepted normal `RP-002` through the verified-restore/reversible-return candidate; ordered lead remains ten packets. `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`.
+- Visual review found the quiet System recovery and separate Pilot return consistent with the invariant first-person Civic Record/Threshold presentation. W4 verifies only; the rail stops at accepted City Threshold before normal `RP-003`, departure, credits, RP-013, successor, or world/access/authority effects.
+
 ## W2 result - 2026-07-25
 
 - `RP002-P1-023 RESOLVED - W3 PRESENTATION REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now with a Working candidate through exact re-entry sanitation, no-replay `SC-03-50` restore or complete downgrade, and the existing reversible return to accepted City Threshold. The ordered lead remains ten packets.

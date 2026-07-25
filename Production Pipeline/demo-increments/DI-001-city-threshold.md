@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W3 presentation result - 2026-07-25
+
+- `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`. Served `index-DCMrW-hp.js` / `index-BPvBS70Z.css` is coherent through quiet `SC-03-40`, System-only sanitation downgrade, System-only `SC-03-50` verified restore, the sole separate Pilot return, and accepted City Threshold boundary. No production visual, art, copy, or behavior change is warranted.
+- Deterministic JSX/CSS/state evidence confirms one active group, heading-first then saved-controls/first-required-control focus, `>=44px` action, natural narrow recovery, text/non-color meaning, forced-color focus, reduced-motion direct replacement, and invariant Civic Record/Threshold art. Focused normal-route `45/45` and HTTP `200` served assets pass. Browser unavailable; no gated viewport or storage claim is made.
+- **Exact W4 next:** verification only. Reproduce one exact residual before any edit; otherwise preserve the candidate and hard stop at accepted City Threshold before normal `RP-003`, departure, credits, RP-013, successor, or world/access/authority effect.
+
 ## W2 result / W3 next - 2026-07-25
 
 - `RP002-P1-023 RESOLVED - NORMAL VERIFIED RESTORE CANDIDATE / W3 NEXT`. Existing RP-002 route persistence now carries only the exact sanitized comparison checkpoint needed for automatic re-entry sanitation. Exact state yields no-replay System `verified_restore / SC-03-50` and the existing reversible City Threshold return; every non-exact/private/review-required state clears completely into System downgrade and deterministic first-incomplete focus.

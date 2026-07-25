@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W3 presentation result - 2026-07-25
+
+- `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`. Source/CSS/served evidence supports a coherent one-group recovery presentation: quiet `SC-03-40`, System sanitation downgrade with deterministic focus, System no-replay `SC-03-50` restore with heading then saved controls, and only its separate Pilot return. No visual implementation is authorized.
+- Root and current JS/CSS are HTTP `200`; focused normal-route suite `45/45` passes. Live gated viewport review remains unavailable because no Browser backend exists; no storage/save was inspected or changed. W4 must reproduce an exact residual before edit and preserve all hard stops.
+
 ## W2 candidate result - 2026-07-25
 
 - `RP002-P1-023 RESOLVED - NORMAL VERIFIED RESTORE / DOWNGRADE / RETURN GRAPH / W3 NEXT`. The normal route now persists only an exact sanitized comparison checkpoint inside the existing RP-002 route save and composes the protected A5 controller for Tour-first isolation, complete invalid/private clearing, exact no-replay `SC-03-50`, and the existing adapter-free reversible City Threshold return.

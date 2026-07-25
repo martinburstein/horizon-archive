@@ -1,5 +1,11 @@
 # Working Queue
 
+## W3 result / W4 next - 2026-07-25
+
+- **Disposition:** `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`. W3 found no exact visual or assistive residual in the W2 verified-restore candidate. Served root/JS/CSS are HTTP `200`; normal-route state/presentation regression is `45/45`; browser-safe evidence confirms owner replacement, focus, targets, narrow/forced-color/reduced-motion contracts, and invariant art.
+- **Limitation:** no Browser backend was available. The gated campaign path was not forced and browser storage/save was untouched, so no rendered desktop/narrow/`200%` viewport claim is made.
+- **Exact W4 task:** verification only on `index-DCMrW-hp.js` / `index-BPvBS70Z.css`; implement only one exact reproducible presentation defect. Preserve quiet `SC-03-40`, System downgrade and exact System `SC-03-50`, separate `>=44px` Pilot City Threshold return, one active group, heading/focus order, responsive/accessibility parity, invariant art, privacy, and the hard stop at accepted City Threshold.
+
 ## W2 result / W3 next - 2026-07-25
 
 - **Closed:** `RP002-P1-023`. Normal re-entry now uses the existing RP-002 route save for an exact sanitized comparison checkpoint and composes the protected verified-restore authority: Tour-first isolation, complete invalid/private downgrade, exact no-replay System `SC-03-50`, and only the existing reversible City Threshold return.
