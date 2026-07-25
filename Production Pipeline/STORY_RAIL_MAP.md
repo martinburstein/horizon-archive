@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W1 result — 2026-07-25
+
+- `RP002-P1-021 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`, now testing the missing normal prepare-save entry. The ordered lead remains ten packets and the rail does not extend.
+- Exact `RG-30` and both write-free returns remain accepted, but normal App/route/UI has no `PREPARE SAVE` control/handler/transition. W2 may integrate only the existing protected prepare-save-confirmation authority through contained transient UI and must stop with confirmation visible before commit dispatch, adapter, persistence, completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## A5 result — 2026-07-25
 
 - `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; the ordered lead remains ten packets and the rail does not extend. The protected controller reaches contained confirmation only and keeps commit/persistence/later packets/RP-013/successor/world-access-authority effects closed.

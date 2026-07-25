@@ -1,5 +1,12 @@
 # Working Queue
 
+## W1 result / W2 next — 2026-07-25
+
+- **Finding:** `RP002-P1-021 P1 OPEN`. Exact accepted `RG-30` renders the Pilot-owned two-field bounded review, owner-heading focus, truthful hard-stop copy, and separate write-free `RETURN TO EVIDENCE` / `RETURN TO CITY THRESHOLD`, but normal App/route/UI exposes no `PREPARE SAVE` control, handler, or transition.
+- **Evidence:** `index-DRVkMZaH.js` / `index-BPvBS70Z.css` remain healthy at HTTP `200`; focused normal-route/frame coverage passes `54/54`; explicit source and served markers confirm the earliest gap. W1 did not inspect the protected prepare-save controller/test, force gated state, or inspect/mutate browser storage/save.
+- **W2 task:** bug-repair only this missing entry by composing the existing protected authority into transient normal App/route/UI. Add one private-free `>=44px` seven-modality/one-hit Pilot `PREPARE SAVE` after the summary and before the separate returns. Exact eligible RG-30 alone may mount only the contained confirmation; hold remains inert; `CANCEL`/Escape returns write-free to byte-equivalent review with prepare focus. Preserve all fail-closed, privacy, accessibility, Tour, invariant-world, and storage-byte contracts.
+- **Hard stop:** confirmation visible. `SAVE BOUNDED COMPARISON` remains non-dispatchable; no adapter, persistence, failure/retry/restore UI, completion, `RP-003+`, RP-013, successor, or world/access/authority/external effect is in scope.
+
 ## A5-to-W1 handoff — 2026-07-25
 
 - **Incoming protected result:** `REVISE — PREPARE-SAVE CONFIRMATION COMPLETE`. A5 added no normal route/UI or accepted-bundle change: the pure controller is unimported and stops at contained local confirmation before commit activation.

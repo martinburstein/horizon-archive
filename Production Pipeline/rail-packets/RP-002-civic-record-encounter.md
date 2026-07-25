@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## W1 result — 2026-07-25
+
+- **Disposition:** `RP002-P1-021 P1 OPEN — W2 BUG-REPAIR NEXT`.
+- **Earliest normal gap:** exact accepted `RG-30` remains a stable Pilot-owned two-field bounded review with heading focus, truthful hard-stop copy, separate write-free evidence/threshold returns, privacy, accessibility, and invariant world intact. Normal App/route/UI exposes no `PREPARE SAVE` control, handler, or transition, so the existing protected contained-confirmation path cannot begin.
+- **Evidence:** coordinator-served `index-DRVkMZaH.js` / `index-BPvBS70Z.css` return HTTP `200`; focused normal-route/frame coverage passes `54/54`; served markers and explicit normal source confirm the exact review and both returns while `PREPARE SAVE` and `SAVE BOUNDED COMPARISON` are absent from the accepted JS. No protected controller/test, browser storage/save, or fabricated gated state was used.
+- **Exact W2 edge:** integrate only the existing protected prepare-save-confirmation authority through transient normal App/route/UI. Add one private-free `>=44px` seven-modality/one-hit Pilot `PREPARE SAVE` after the summary and before separate returns; exact eligible RG-30 alone mounts only the contained confirmation, while hold is inert and `CANCEL`/Escape returns write-free to byte-equivalent review with prepare focus. Keep `SAVE BOUNDED COMPARISON` non-dispatchable and stop before adapter, persistence, retry/restore, completion, `RP-003+`, RP-013, successor, or world/access/authority/external effect.
+
 ## A5 result — 2026-07-25
 
 - **Disposition:** `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`.

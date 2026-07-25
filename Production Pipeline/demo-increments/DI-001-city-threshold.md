@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W1 result — 2026-07-25
+
+- `RP002-P1-021 P1 OPEN / W2 NEXT`. Exact accepted `RG-30` remains readable, reversible, private-free, accessible, and world-invariant, but normal App/route/UI has only the two separate returns and no player-facing `PREPARE SAVE` control/handler/transition.
+- Focused normal-route/frame coverage passes `54/54`; accepted assets `index-DRVkMZaH.js` / `index-BPvBS70Z.css` are HTTP `200` with expected review markers and no `PREPARE SAVE` or `SAVE BOUNDED COMPARISON` label. No protected controller/test or browser storage/save was inspected, and no gated state was fabricated.
+- W2 integrates only the existing protected authority through transient normal UI: one private-free `>=44px` seven-modality/one-hit Pilot prepare, contained confirmation, inert hold, and write-free cancel/Escape return with prepare focus. Confirmation visible remains the hard stop before commit dispatch, adapter, persistence, completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## A5 result — 2026-07-25
 
 - `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. The pure unimported controller proves exact private-free seven-modality `RG-30` preparation reaches only existing contained local confirmation, with visible-only `SAVE BOUNDED COMPARISON`, inert hold, and `CANCEL`/Escape write-free return to review focus. No commit, adapter, persistence, credit, world, or normal Demo change occurs.
