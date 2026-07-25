@@ -1,5 +1,13 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-25 — Coordinator: contained local confirmation accepted
+
+- **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Normal play now reaches exact sanitized `RG-30`, one explicit private-free seven-modality/one-hit Pilot `PREPARE SAVE`, only the existing contained local confirmation, inert hold, and write-free cancel/Escape return with deterministic prepare focus. Confirmation remains the hard stop; commit dispatch and all persistence/later states remain absent.
+- **Independent release evidence:** full game `679/679`; all `15/15` readiness validator self-tests; production build; clean first-launch isolated E2E after verified port-`5174` HTTP `200` preflight in `110.2s`, with credits reached, every reported gate true, and `runtimeErrors:false`; in-app title-shell review at `1920 x 1080` and `390 x 844` with zero horizontal overflow, `48px` / `44px` actions, and no browser logs; exact HTTP/assets/hashes; immutable civic master and seven-reference isolation; patch integrity; incidental QA-capture restoration; coordinator preview shutdown; and repository hygiene pass.
+- **Build identity:** `index-xpeE9Qlm.js`, `1,060,272` bytes, SHA-256 `F506B573CA3BC875CBD922E57CB4DD3F4DC7457D5C97EC675F1A3097C5E1BFE9`; `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
+- **Evidence boundary:** Martin's gated campaign storage/save was not inspected, mutated, or forced. Deterministic source, focused integration, served-bundle, and E2E evidence support the release; no gated screenshot is claimed.
+- **Exact next action:** one sequential cycle may converge only exact contained confirmation -> explicit private-free `SAVE BOUNDED COMPARISON` -> existing atomic local triplet -> deterministic no-partial local failure with retry/safe return or exact `SC-03-40` saved success. Stop with success visible before verified restore, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority/external effect.
+
 ## 2026-07-25 — Working Coder W4: RP002-AESTH-016 verification-only final refresh
 
 - **Mode / verdict:** `aesthetic-polish` / `PASS — VERIFICATION ONLY / FINAL DEMO REFRESHED / COORDINATOR NEXT`. W3 opened no reproducible presentation finding, and W4 reproduced no exact residual on the unchanged W2 candidate. Production code, style, art, assets, copy, state, route, curriculum, tests, and storage/save remain unchanged.

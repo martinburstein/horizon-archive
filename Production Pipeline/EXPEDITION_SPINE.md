@@ -1,5 +1,10 @@
 # Horizon Archive Expedition Spine
 
+## Current control — 2026-07-25
+
+- **Release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now accepted through contained local save confirmation and write-free cancel/Escape recovery. The ordered lead remains ten packets and no `RP-013` or successor exists.
+- **Exact next edge / stop:** contained confirmation -> explicit Pilot `SAVE BOUNDED COMPARISON` -> existing all-or-none local three-field adapter -> either recoverable local failure with retry/safe return or exact `SC-03-40` comparison-complete state. Stop with saved success visible before verified restore, return/departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## A4 current control — 2026-07-25
 
 - **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; ordered lead remains ten packets.

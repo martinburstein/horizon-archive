@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## Current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact bounded review -> private-free Pilot prepare -> contained confirmation -> inert hold or write-free cancel/Escape recovery is accepted.
+- **Authoritative exact next edge:** contained confirmation -> explicit atomic comparison save -> deterministic no-partial local failure with retry/safe return or exact `SC-03-40` saved success. Stop before verified restore, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## W4 result — 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED / NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact presentation residual, left every production/style/art/test artifact unchanged, and cache-bypass refreshed the same candidate.

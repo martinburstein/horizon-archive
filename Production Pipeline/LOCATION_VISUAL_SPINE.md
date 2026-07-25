@@ -1,5 +1,10 @@
 # Horizon Archive Location Visual Spine
 
+## Current control — 2026-07-25
+
+- **Released presentation / canon:** `RP002-AESTH-016 PASS`. Exact two-leaf review, `>=44px` Pilot prepare, contained confirmation, disabled commit label, separate cancel, responsive/accessibility parity, invariant SC-03, and seven closed non-runtime canonical references are accepted.
+- **Exact next visual edge / stop:** present only existing atomic save attempt, recoverable local failure/retry/safe return, and exact `SC-03-40` saved-success ownership over the unchanged civic plate. No new raster or world response; stop before restore/departure/credits/later packets/RP-013/successor.
+
 - **A2 local-confirmation presentation lock (2026-07-25):** invariant SC-03 carries existing Pilot bounded review -> one explicit private-free `PREPARE SAVE` -> existing contained local Pilot confirmation with exact existing copy -> confirmation-visible hold or `CANCEL`/Escape direct write-free return to review and deterministic prepare focus. Wide retains the two equal human-summary leaves; narrow/effective-`200%` stacks one natural column. One active Pilot group, heading-first focus, `>=44px`, non-color/forced-color/reduced-motion/seven-modality parity, separate returns, private clearing, Tour isolation, zero effect, and the inert archive/world remain exact. The confirmation's existing `SAVE BOUNDED COMPARISON` intent may be visible but not activated. Stop before adapter/persistence/failure/retry/restore/completion or every later state. All seven references remain non-runtime only; no plate, raster, crop, camera, effect, or world response changes.
 
 ## Current control — 2026-07-24

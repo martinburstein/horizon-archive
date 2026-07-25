@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## Current control — 2026-07-25
+
+- **Release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.
+- **Exact next edge / stop:** converge the existing explicit commit, atomic local write, no-partial failure, retry/safe-return, and exact `SC-03-40` success authorities as one integration-sized tranche. Stop at saved success; add no new prompt, score, branch, micro-seam, art integration, verified restore, departure, later packet, RP-013, or successor.
+
 ## A4 current control — 2026-07-25
 
 - **Mode / result:** mandatory RP-002 convergence; `PASS — GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero.

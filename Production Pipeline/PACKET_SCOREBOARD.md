@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## Current control — 2026-07-25
+
+- **Authoritative release:** `RP-002 PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Normal play reaches exact `RG-30`, explicit private-free Pilot prepare, contained local confirmation, inert hold, and write-free cancel/Escape return; Team 1 is complete at `RP-012`, Team 2 remains at `RP-002`, and the lead remains ten packets.
+- **Authoritative exact next edge:** contained confirmation -> explicit `SAVE BOUNDED COMPARISON` -> existing atomic local triplet -> recoverable no-partial failure with retry/safe return or exact `SC-03-40` success. Stop with saved success visible before restore/departure/credits/`RP-003+`/RP-013/successor/world-authority effect.
+
 ## A5 result — 2026-07-25
 
 - `RP-002` `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`. One pure non-routable controller passes exact sanitized review through fresh private-free seven-modality preparation to only existing contained confirmation, inert hold, or write-free cancel/Escape review return. It rejects commit before adapters and fails closed for hostile input without future-token loss; normal integration and Working evidence remain open.

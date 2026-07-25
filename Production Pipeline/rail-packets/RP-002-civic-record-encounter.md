@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## Current control — 2026-07-25
+
+- **Authoritative coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Normal play accepts exact sanitized `RG-30`, explicit private-free Pilot `PREPARE SAVE`, only the contained local confirmation, inert hold, and write-free cancel/Escape return with deterministic prepare focus.
+- **Authoritative release evidence:** independent full `679/679`; all `15/15` readiness validators; production build; clean first-launch `110.2s` isolated E2E after HTTP `200` preflight; desktop `1920 x 1080` and narrow `390 x 844` in-app title-shell review with zero horizontal escape, clean logs, and `48px` / `44px` actions; exact hashes; QA cleanup; coordinator-preview shutdown; civic-master/reference isolation; and patch gates pass. Martin's gated storage/save was untouched.
+- **Authoritative exact next edge / hard stop:** from exact contained confirmation only, one explicit private-free `SAVE BOUNDED COMPARISON` may call the existing all-or-none local three-field adapter. Deterministic failure must clear the triplet and expose only retry or safe return; retry returns to confirmation; safe return returns write-free to `RG-30`; exact success may expose only existing `SC-03-40`. Stop with saved success visible before verified restore, departure/route/credits, `RP-003+`, RP-013, successor, or any world/access/authority/external effect.
+
 ## W4 result — 2026-07-25
 
 - **Disposition:** `RP002-AESTH-016 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact W3 residual and changed no production, style, art, asset, test, gameplay, copy, route, storage/save, curriculum, world, or later-state artifact.

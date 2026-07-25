@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## Current control — 2026-07-25
+
+- **Authoritative positions / release:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through `RP002-P1-021 + RP002-AESTH-016` contained confirmation and write-free cancellation. The ordered lead remains ten packets (`RP-003`–`RP-012`); the rail does not extend.
+- **Authoritative exact next edge:** integrate only explicit atomic comparison save, recoverable no-partial failure/retry/safe return, and exact `SC-03-40` success. Stop before verified restore, return/departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## W4 result — 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on accepted `RP-002 / RP002-P1-020 + RP002-AESTH-015` with the unchanged W2 prepare-save candidate now through W4 verification. The ordered lead remains ten packets and the rail does not extend.

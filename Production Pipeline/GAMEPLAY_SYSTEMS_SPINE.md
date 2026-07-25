@@ -1,5 +1,10 @@
 # Horizon Archive Gameplay Systems Spine
 
+## Current control — 2026-07-25
+
+- **Release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Exact sanitized review -> fresh private-free prepare -> contained confirmation -> inert hold or write-free cancel/Escape review return is accepted with one active group and deterministic focus.
+- **Exact next graph / stop:** compose explicit `SAVE BOUNDED COMPARISON`, existing atomic triplet adapter, deterministic no-partial failure, unlimited retry or safe return, and exact `SC-03-40` success. Stop with saved success visible before verified restore/departure/credits/`RP-003+`/RP-013/successor/world-authority effect.
+
 ## A4 current control — 2026-07-25
 
 - **Result:** `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Exact sanitized `RG-30` remains the sole entry; one fresh private-free pointer/touch/Enter/Space/switch/speech/screen-reader `PREPARE SAVE` token atomically mounts only the existing contained local Pilot confirmation. Confirmation may hold visibly, while `CANCEL`/Escape returns write-free to exact `RG-30` with deterministic `prepare_save` focus.

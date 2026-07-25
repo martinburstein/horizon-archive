@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## Current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Independent full `679/679`, all `15/15` readiness validators, build, clean first-launch `110.2s` E2E, desktop/narrow title-shell review, exact hashes, clean logs/overflow, QA cleanup, coordinator-preview shutdown, reference isolation, and patch gates pass.
+- **Authoritative exact next edge:** protect and integrate only explicit atomic comparison commit, deterministic no-partial local failure, retry/safe return, and exact `SC-03-40` saved success. Stop before verified restore, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority/external effects.
+
 ## W4 result — 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact residual and left production/style/art/test/runtime unchanged. Focused `68/68`, both applicable validators, build, immutable civic master, seven-reference no-runtime leakage, unchanged W2 production diff, exact served HTTP/byte identity/markers/hashes, one strict `4173` listener, cache-bypassed final refresh, and patch gates pass.

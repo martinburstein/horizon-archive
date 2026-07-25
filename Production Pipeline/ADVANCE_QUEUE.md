@@ -1,5 +1,10 @@
 # Advance Queue
 
+## Current control — 2026-07-25
+
+- **Released edge:** `PASS — RP002-P1-021 + RP002-AESTH-016`. Normal play now owns the complete bounded-review -> prepare -> contained-confirmation -> write-free cancel/Escape loop.
+- **Exact A1 next:** converge only contained confirmation -> explicit `SAVE BOUNDED COMPARISON` -> existing all-or-none local triplet -> recoverable local failure with retry/safe return or exact `SC-03-40` success. Preserve strict evidence, privacy, accessibility, invariant world, local-only/no-authority/no-exam-guarantee, and stop before verified restore/departure/credits/later packets/RP-013/successor.
+
 ## A5 result — 2026-07-25
 
 - **Disposition:** `REVISE — PROTECTED PREPARE-SAVE CONFIRMATION COMPLETE / W1 NEXT`.

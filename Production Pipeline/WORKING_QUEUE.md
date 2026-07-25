@@ -1,5 +1,10 @@
 # Working Queue
 
+## Current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact review, prepare, contained confirmation, inert hold, and write-free cancel/Escape recovery are accepted; browser storage/save was not forced or inspected.
+- **Exact next Working boundary:** after the next protected A5 handoff, W1 starts only at accepted contained confirmation and reports the earliest normal commit/failure/retry/success gap. Saved success is the next hard stop; verified restore, departure, credits, `RP-003+`, RP-013, successor, and world/access/authority effects remain closed.
+
 ## W4 result / coordinator next — 2026-07-25
 
 - **Disposition:** `RP002-AESTH-016 VERIFIED — NO IMPLEMENTATION REQUIRED`. Verification-only `aesthetic-polish` reproduced no exact W3 residual and changed no production/style/art/test/runtime artifact.
