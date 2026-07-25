@@ -1,5 +1,10 @@
 # RP-002 — Civic Record Encounter
 
+## W3 aesthetic result — 2026-07-25 — RP002-AESTH-017
+
+- `VERIFIED — NO FINDING / W4 VERIFICATION ONLY`. The normal atomic result presentation preserves contained Pilot intent, System-only failure/recovery, and a quiet no-action `SC-03-40` acknowledgement without implying city response, permission, authority, route, or successor.
+- The current first-person Civic Record master/crop and contained-cradle visual decision remain unchanged and non-runtime. Source/served evidence passes; Browser-gated proof is unavailable without touching Martin's save and is not claimed.
+
 ## W2 result — 2026-07-25
 
 - **Disposition:** `RP002-P1-022 RESOLVED — NORMAL ATOMIC COMMIT GRAPH / W3 NEXT`. The exact accepted normal contained confirmation now enables one private-free seven-modality/one-hit Pilot commit by composing the protected A5 controller, not by duplicating transaction rules.

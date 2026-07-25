@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W3 presentation result — 2026-07-25
+
+- `RP002-AESTH-017 VERIFIED — W4 VERIFICATION ONLY`. Served `index-C7qPZ0yi.js` / `index-BPvBS70Z.css` is byte-identical to `dist`; focused normal-route presentation/state coverage `45/45` passes. Enabled commit/cancel, failure/retry/safe return, fresh retry, prepare focus, and no-action `SC-03-40` are presentation-consistent with one-group, responsive/accessibility, and invariant-world contracts.
+- Live gated review was unavailable because no Browser backend exists; no storage/save was inspected or forced. W4 changes nothing absent one exact reproducible residual.
+
 ## W2 candidate result — 2026-07-25
 
 - `RP002-P1-022 RESOLVED — NORMAL ATOMIC COMMIT GRAPH / W3 NEXT`. The normal route now composes the existing protected controller for exact contained confirmation -> one validated adapter call -> complete empty failure/retry/safe return or exact no-action System `SC-03-40` success. Validation-before-consumption, triplet atomicity, privacy, focus/resume, accessibility, Tour, unchanged continuation/null city delta, and invariant world remain exact.

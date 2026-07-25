@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W3 result — 2026-07-25 — RP002-AESTH-017
+
+- `VERIFIED — NO PRESENTATION FINDING / W4 VERIFICATION ONLY`. The integrated local atomic graph reads as one contained expedition action: enabled Pilot commit and separate cancel; complete System failure with only retry/safe return; fresh retry; write-free review return; or System `SC-03-40` saved acknowledgement with no follow-on action.
+- Source/CSS/state and served evidence preserve heading focus, one active group, `>=44px` targets, narrow/effective-`200%` recovery, visible/forced-color focus, reduced-motion parity, textual meaning, and invariant first-person civic crop. Live gated review is unavailable without forbidden save use, so no direct viewport claim is made; no art or runtime change is requested.
+
 ## W2 result — 2026-07-25
 
 - `RP002-P1-022 RESOLVED — W3 AESTHETIC REVIEW NEXT`. The accepted normal contained confirmation now has one enabled private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON` backed only by the existing atomic controller. Exact success shows only System `SC-03-40`; every non-exact result clears the complete triplet and shows only exact failure with fresh retry or write-free safe return.
