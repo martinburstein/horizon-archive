@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A4 result — 2026-07-25
+
+- `PASS — RP-003 BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. From accepted City Threshold, only exact verified RP-002 completion survives predecessor/Tour/privacy/transient sanitation to one blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE` group; invalid, Tour-derived, private, partial, stale, forged, combined, or contaminated state clears and returns to exact RP-002.
+- CM-00 retains only `ORIENT TO EXPOSED CHANNELS`, `INSPECT SEALED BOUNDARY`, `RETURN TO CIVIC COMPARISON`, and `RETURN TO CITY THRESHOLD`. The first two are same-group zero-evidence presentation; returns remain reversible navigation. Heading-first deterministic resume, seven-modality/one-hit validation, privacy/Tour isolation, unchanged continuation/null city delta, and invariant world remain exact. Stop before CM-10, observation, save, normal integration, or later rail/world/access/authority effect.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. No reopen condition occurred for `PY-010` or `RP003-IE-01`. Exact RP-002 predecessor sanitation, entry into blank one-group CM-00, SC-04 presentation, focus, reflow, existing actions/returns, and Tour create zero observation, Python, AI-901, mastery, save, reward, authority, or physical-response evidence.

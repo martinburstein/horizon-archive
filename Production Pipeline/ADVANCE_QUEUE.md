@@ -1,5 +1,11 @@
 # Advance Queue
 
+## A4 result — 2026-07-25
+
+- `RP-003 PASS — BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. Exact verified RP-002 completion at accepted City Threshold sanitizes predecessor/Tour/privacy/transient material into one blank Scene-owned SC-04 CM-00 group; every invalid/Tour/private/partial/stale/forged/combined/contaminated input clears transients and fails closed to exact RP-002.
+- CM-00 allows only orient, sealed-boundary inspection, RP-002 return, and City Threshold return. It preserves heading-first deterministic resume, validated seven-modality/one-hit activation, reversible returns, privacy, zero evidence/authority, unchanged continuation/null city delta, and invariant world. No CM-10 observation or later packet state is opened.
+- A5 owns one pure protected controller and focused checks only; normal integration remains closed.
+
 ## A3 result — 2026-07-25
 
 - **Advance handoff:** `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.

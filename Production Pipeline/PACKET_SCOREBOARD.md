@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A4 result — 2026-07-25
+
+- `RP-003 gameplay entry/recovery gate: PASS`. Exact predecessor sanitation -> blank one-group CM-00 or complete invalid/Tour/private/partial/stale/forged/combined/contaminated fail-closed return is locked with one-hit modalities, deterministic focus/resume, zero evidence/authority, invariant world, and reversible existing returns. Missing-gate count is unchanged; A5 may compose only the protected entry controller and must stop before CM-10.
+
 ## A3 result — 2026-07-25
 
 - `RP-003 NO REOPEN — SOLIDIFIED / ENTRY FIREWALL PASS / A4 NEXT`; protected missing-gate count remains zero. `PY-010`, `RP003-IE-01`, separate observations, and save eligibility remain independent strict contracts; CM-00 sanitation/presentation/focus/returns/Tour cannot cross-credit them.

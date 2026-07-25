@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A4 result — 2026-07-25
+
+- `PASS — RP-003 BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The rail extends only from exact verified RP-002 at accepted City Threshold through sanitation into one blank SC-04/CM-00 Scene group, or through invalid/Tour/private/partial/stale/forged/combined/contaminated clearing back to exact RP-002. Orient/sealed-boundary presentation and both existing returns remain zero-effect; no CM-10, RP-004, RP-013, successor, reward, access, authority, or world change is opened.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`. Team 1 stays at complete `RP-012`; Team 2 stays at active `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

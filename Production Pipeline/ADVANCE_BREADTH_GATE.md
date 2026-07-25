@@ -1,5 +1,9 @@
 # Advance Breadth and Convergence Gate
 
+## A4 result — 2026-07-25
+
+- `RP-003 PASS — ONE COMPLETE ENTRY/RECOVERY LOOP / A5 NEXT`. The tranche merges prerequisite verification, sanitation, blank CM-00 action availability, focus/resume, Tour isolation, invalid fail-closed RP-002 recovery, and reversible returns into one bounded graph; it does not add a micro-seam or authorize CM-10.
+
 ## A3 result — 2026-07-25
 
 - **Gate / mode:** `NO REOPEN — SOLIDIFIED / RP-003 ENTRY FIREWALL PASS / A4 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero.
