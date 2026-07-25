@@ -1,5 +1,11 @@
 # Horizon Archive Story Rail Map
 
+## A1 current control — 2026-07-25
+
+- **Authoritative positions:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through `RP002-P1-020 + RP002-AESTH-015`; the ordered lead is ten packets and no RP-013/successor exists.
+- **A1 ownership lock / exact A2 edge:** accepted exact `RG-30` bounded review -> explicit private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> existing contained local confirmation -> `CANCEL`/Escape write-free return with deterministic `PREPARE SAVE` focus. Prepare requests only a local confirmation; it grants no evidence, save, access, authority, city, world, route, item, or external effect.
+- **Hard stop:** confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter access, persistence/failure/retry/restore/completion, `RP-003+`, RP-013, or successor; the rail does not extend.
+
 ## Current control — 2026-07-24
 
 - **Authoritative positions:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now accepted through `RP002-P1-020 + RP002-AESTH-015` bounded RAI review. The ordered lead remains ten packets (`RP-003`—`RP-012`); no `RP-013` or successor exists.

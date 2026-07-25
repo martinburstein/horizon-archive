@@ -1,5 +1,12 @@
 # Advance Queue
 
+## A1 current control — 2026-07-25
+
+- **Coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`. Exact conclusion dismissal, strict finalized-evidence eligibility, and bounded review are accepted in normal play; full `674/674`, `15/15`, build, clean `113.2s` E2E, desktop/narrow review, hashes, cleanup, and sync pass.
+- **A1 lock / exact A2 next:** board one compact existing-authority sequence only: accepted exact `RG-30` Pilot bounded review -> one explicit private-free seven-modality/one-hit `PILOT // FLIGHT RECORDER — PREPARE SAVE` -> existing contained Pilot local confirmation -> `CANCEL`/Escape clears transient confirmation intent and returns write-free to exact `RG-30` with deterministic focus on `PREPARE SAVE`.
+- **Meaning/evidence lock:** prepare means request the local confirmation, not save, approval, access, or city action. Confirmation, reading, focus, cancellation, return, reflow, modality, and Tour remain zero story/observation/learning/save/world evidence; finalized prerequisites remain allowlisted and private work stays cleared.
+- **Hard stop:** confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter access, atomic triplet, partial write, persistence failure/retry/restore/sanitation UI, completion/credits, `RP-003+`, world/route/item/access/permission/identity/authority/city/external effect, RP-013, or successor.
+
 ## Current control — 2026-07-24
 
 - **Coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. Strict RAI explanation convergence and exact zero-credit Pilot conclusion are accepted in normal play; full `665/665`, `15/15`, build, clean `110.4s` E2E, desktop/narrow review, hashes, cleanup, and sync pass.

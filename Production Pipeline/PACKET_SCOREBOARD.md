@@ -1,5 +1,11 @@
 # Rail Packet Scoreboard
 
+## A1 current control — 2026-07-25
+
+- `RP-002` remains `IN DEMO — PARTIAL / RP002-P1-020 + RP002-AESTH-015`; exact `RG-30` bounded review is the accepted edge.
+- A1 convergence lock / A2 next: accepted exact `RG-30` -> one explicit private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> existing contained local confirmation -> `CANCEL`/Escape clears transient intent and returns write-free with deterministic `PREPARE SAVE` focus. A2 boards one compact owner-preserving sequence from existing authorities.
+- Hard stop: confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter access, persistence, failure/retry-save, verified restore, completion, or later packets.
+
 ## Current control — 2026-07-24
 
 - `RP-002` authoritative status: `IN DEMO — PARTIAL / RP002-P1-020 + RP002-AESTH-015`; normal integration is accepted through strict RAI explanation convergence, exact zero-credit Pilot conclusion, explicit private-free dismissal, strict finalized-evidence eligibility, and bounded review / deterministic first-incomplete recovery.

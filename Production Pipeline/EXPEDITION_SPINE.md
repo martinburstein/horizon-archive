@@ -1,5 +1,11 @@
 # Horizon Archive Expedition Spine
 
+## A1 current control — 2026-07-25
+
+- **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through `RP002-P1-020 + RP002-AESTH-015` exact bounded review; ordered lead is ten packets.
+- **Current release / A1 convergence lock:** `RP002-P1-020 + RP002-AESTH-015 PASS`. A1 has merged only accepted exact `RG-30` -> one explicit private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> existing contained local confirmation -> `CANCEL`/Escape write-free return with deterministic `PREPARE SAVE` focus. A2 boards it from existing authorities.
+- **Hard stop:** with confirmation visible, before `SAVE BOUNDED COMPARISON` activation, adapter access, persistence/failure/retry/restore/completion, `RP-003+`, RP-013, successor, world response, access, authority, or external action.
+
 ## Current control — 2026-07-24
 
 - **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI explanation convergence and exact zero-credit Pilot conclusion; ordered lead is ten packets.

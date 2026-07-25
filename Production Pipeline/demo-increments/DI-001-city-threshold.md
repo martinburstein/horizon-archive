@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A1 current control — 2026-07-25
+
+- **Accepted edge:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`; normal play reaches exact `RG-30` bounded review or deterministic first-incomplete recovery.
+- **A1 lock / authoritative A2 edge:** existing exact `RG-30` bounded review -> one explicit private-free seven-modality/one-hit `PILOT // FLIGHT RECORDER — PREPARE SAVE` -> existing contained local Pilot confirmation -> `CANCEL`/Escape clears transient intent and returns write-free to exact `RG-30` with deterministic `PREPARE SAVE` focus. Prepare/confirmation/cancel are local presentation only and create zero evidence or world/authority effect.
+- **Hard stop:** confirmation visible; do not activate `SAVE BOUNDED COMPARISON`, call an adapter, persist, enter failure/retry/restore/sanitation UI, complete RP-002, expose `RP-003+`, or create any world/route/item/access/permission/identity/authority/city/external effect, RP-013, or successor.
+
 ## Current control — 2026-07-24
 
 - **Authoritative coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`. RP-002 normal play reaches the exact zero-credit RAI conclusion, one explicit private-free dismissal, strict finalized-Python/finalized-RAI/five-observation System eligibility, and the existing bounded comparison review or deterministic first-incomplete recovery.

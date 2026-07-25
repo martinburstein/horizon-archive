@@ -1,5 +1,12 @@
 # Advance Breadth and Convergence Gate
 
+## A1 current control — 2026-07-25
+
+- **Mode:** mandatory RP-002 convergence/integration; protected missing-gate count remains zero.
+- **Accepted reduction:** exact conclusion dismissal, strict finalized-evidence eligibility, and bounded review are released through `RP002-P1-020 + RP002-AESTH-015`.
+- **Convergence audit / A1 result:** `CONVERGE + MERGE + TRIM`. Accepted exact `RG-30` -> explicit private-free Pilot `PREPARE SAVE` -> existing contained confirmation -> `CANCEL`/Escape write-free deterministic return is one complete tranche; A2 must board it without further micro-seams.
+- **Prohibited:** `SAVE BOUNDED COMPARISON` activation, adapter access, persistence/failure/retry/restore/completion, new prompt, answer, score, compensation, branch, micro-seam, art integration, RP-013, or successor.
+
 ## Current control — 2026-07-24
 
 - **Mode:** mandatory RP-002 convergence/integration; protected missing-gate count remains zero.
