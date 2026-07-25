@@ -13,7 +13,7 @@
 - A5 result / W1 next: `REVISE — PROTECTED RG-00/10/20/30/U CONVERGENCE COMPLETE`; protected code, recovery, focus/accessibility, strict eligibility, Tour/privacy isolation, and non-integration gates remain `PASS`, while normal integration and Working evidence remain `PARTIAL`. Missing-gate count remains zero; W1 begins at accepted live exact `RAIEC-20C`.
 - Release evidence: full `665/665`, all `15/15` validators, production build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and sync pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
 - A2 result / A3 next: the existing zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry / deterministic first-incomplete return are locked as one compact presentation sequence. Save preparation/persistence and every later state remain closed.
-- Visual canon: six closed SC-03 references; the latest locks `RAI conclusion — no-authority threshold silence` as canonical non-runtime evidence.
+- Visual canon: seven closed SC-03 references; the latest locks `bounded comparison review — dual-leaf human-summary instrument` as canonical non-runtime evidence.
 
 ## 2026-07-24 RP-002 A5 convergence checkpoint — protected conclusion review
 

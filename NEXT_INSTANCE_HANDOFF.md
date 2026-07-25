@@ -70,6 +70,13 @@ Missing, forged, stale, partial, Tour-derived, private-bearing, or `review_requi
 - Incidental E2E captures restored; coordinator port `5174` stopped; Martin's browser storage/save untouched.
 - The gated RP-002 state was not forced through Martin's campaign save; deterministic integration, served-bundle, and focused evidence support it.
 
+## Latest canonical cycle reveal
+
+- Closed item: `SC-03 / bounded comparison review — dual-leaf human-summary instrument`.
+- Asset: `Visual Direction/Production Masters/2026-07-24-rp002-bounded-review-dual-leaf-reveal/rp002-bounded-review-dual-leaf-v1.png`.
+- Canonical scope: exactly two equal blank expedition-owned leaves distinguish provisional human comparison from the expedition next-survey marker while remaining materially separate from the immense inert archive.
+- Status: canonical visual reference only, not runtime-integrated; no save success, permission, authority, world response, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## Exact next action
 
 Begin or resume one sequential cycle at A1. Converge only the existing bounded-review-to-contained-confirmation edge:

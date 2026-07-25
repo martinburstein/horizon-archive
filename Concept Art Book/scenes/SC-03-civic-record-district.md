@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-24 canonical cycle reveal — bounded-review dual-leaf instrument
+
+- **Closed checklist item:** `[x] SC-03 / bounded comparison review — dual-leaf human-summary instrument`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-24-rp002-bounded-review-dual-leaf-reveal/rp002-bounded-review-dual-leaf-v1.png`, with neighboring provenance.
+- **Locked boundary:** exactly two equal blank removable expedition-owned leaves form one bounded review instrument. One represents only a provisional human comparison; the other represents only an expedition next-survey marker. They remain materially separate from the immense sealed archive, which stays inert, unchanged, and visibly greater.
+- **Limit:** canonical object/count/equality/blankness/ownership/separation/scale evidence only, not runtime integration. No native fact, permission, evidence, approval, authority, save success, world response, review copy, later state, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## 2026-07-24 compact conclusion-dismissal / bounded-review presentation lock
 
 - Reuse the invariant SC-03 overview, registered crop, geometry, light, material, maintenance, and continuous clocks. All six canonical references remain closed, non-runtime-integrated evidence only; no plate, camera, effect, result board, raster integration, or world-facing transition is added.

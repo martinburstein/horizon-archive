@@ -80,6 +80,8 @@ The top of each active packet, Demo Increment, queue, rail map, scoreboard, and 
 
 Update the current-control block in place. Preserve useful history in Git and specialist logs instead of endlessly expanding the active handoff.
 
+At coordinator close, leave exactly one authoritative release-status bullet and one authoritative exact-next-edge bullet in each top current-control block. Move superseded peer bullets into dated history or delete them when Git already preserves the evidence; do not accumulate “authoritative” disclaimers above stale current peers.
+
 `NEXT_INSTANCE_HANDOFF.md` is a replace-in-place operational state file, not a cycle diary. Keep it concise enough to read in one pass.
 
 ## Work sizing

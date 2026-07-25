@@ -15,6 +15,13 @@
 - **Working W2 / W3 next:** `RP002-P1-020 RESOLVED`. Exact conclusion now remains stable in normal `RG-00` until one explicit private-free Pilot dismissal; strict sanitized finalized dependencies expose only `RG-20` System eligibility and `REVIEW BOUNDED COMPARISON`, which mounts only existing `RG-30` Pilot bounded review. Invalid dependencies clear transient/private work into deterministic first-incomplete recovery. Focused `75/75`, full `674/674`, both applicable validator self-tests, build, served HTTP/markers/exact hashes, and patch gates pass on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`; no route-storage expansion or save/browser-storage inspection/mutation occurred. W3 reviews only presentation, focus, wide/narrow/`200%`, forced-color/non-color/reduced-motion, and hard-stop truthfulness before W4.
 - **Advance A2 lock / next exact edge:** existing authorities now form one compact presentation path: one zero-effect RAI-conclusion dismissal -> strict System eligibility sanitation -> bounded review or deterministic first-incomplete return. A3 preserves only that evidence firewall and stops with bounded review visible, before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
 
+## 2026-07-24 canonical cycle reveal — bounded-review dual-leaf instrument
+
+- **Closed checklist item:** `[x] SC-03 / bounded comparison review — dual-leaf human-summary instrument`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-24-rp002-bounded-review-dual-leaf-reveal/rp002-bounded-review-dual-leaf-v1.png`, with neighboring provenance.
+- **Locked decision:** exactly two equal blank removable expedition leaves keep provisional human comparison and expedition next-survey marking distinct while the immense sealed archive remains materially separate, inert, unchanged, and visibly greater.
+- **Limit:** canonical reference only, not runtime-integrated. No native fact, authority, save success, review copy, persistence, later state, world response, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## 2026-07-19 canonical cycle reveal — RAI no-authority threshold silence
 
 - **Closed checklist item:** `[x] SC-03 / RAI conclusion — no-authority threshold silence`.
