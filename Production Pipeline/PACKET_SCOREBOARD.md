@@ -5,9 +5,16 @@
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI explanation convergence and the exact zero-credit Pilot conclusion.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
 - A4 result / A5 next: `PASS — GRAPH LOCKED; PROTECTED A5 NEXT`; the existing one-hit zero-effect conclusion dismissal, strict finalized-chain/five-observation eligibility sanitation, and bounded-review entry / deterministic first-incomplete return preserve frozen evidence conjunctions. Save preparation/persistence and every later state remain closed.
+- A5 result / W1 next: `REVISE — PROTECTED RG-00/10/20/30/U CONVERGENCE COMPLETE`; protected code, recovery, focus/accessibility, strict eligibility, Tour/privacy isolation, and non-integration gates remain `PASS`, while normal integration and Working evidence remain `PARTIAL`. Missing-gate count remains zero; W1 begins at accepted live exact `RAIEC-20C`.
 - Release evidence: full `665/665`, all `15/15` validators, production build, clean `110.4s` E2E, desktop/narrow in-app review, asset hashes, cleanup, and sync pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`.
 - A2 result / A3 next: the existing zero-effect conclusion dismissal, strict eligibility sanitation, and bounded-review entry / deterministic first-incomplete return are locked as one compact presentation sequence. Save preparation/persistence and every later state remain closed.
 - Visual canon: six closed SC-03 references; the latest locks `RAI conclusion — no-authority threshold silence` as canonical non-runtime evidence.
+
+## 2026-07-24 RP-002 A5 convergence checkpoint — protected conclusion review
+
+- **Gate result:** protected Code, Save/recovery, and Accessibility remain `PASS`; protected-design missing-gate count remains zero. One pure unimported controller composes exact accepted `RAIEC-20C` through fresh one-hit dismissal, strict existing SAVE-A eligibility sanitation, and existing SAVE-B bounded review / deterministic first-incomplete return without exposing the later save graph.
+- **Evidence:** focused controller `9/9`; directly related Custody Ledger regression `79/79`; Responsible-AI and RP-002 validator self-tests; production build on unchanged accepted assets; App/main/normal-route/dist non-integration; storage/network/DOM purity; exact/contaminated restore; private/later-state leakage; and patch gates pass.
+- **Boundary:** normal integration, Working evidence, and release remain `PARTIAL` at the accepted exact RAI conclusion. W1 reports only the earliest normal dismissal/eligibility/review gap; save preparation/persistence and every later state remain closed.
 
 ## 2026-07-18 RP-002 A5 convergence checkpoint — protected RAI explanation
 
