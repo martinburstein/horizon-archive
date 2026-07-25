@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## W1 Player result — normal CM-10 entry gap
+
+- **Finding:** `RP003-P1-002 P1 OPEN`. At the accepted normal blank `SC-04 / CM-00 ARRIVE + IDLE`, `ORIENT TO EXPOSED CHANNELS` is present but its normal dispatch returns only `orientation_presented_zero_evidence` and preserves CM-00. The normal App renders RP-003 only for CM-00, while the current served JS contains zero CM-10, exposed-sequence-A, or local-work-image markers; no normal player can reach the one-group observation loop.
+- **Evidence / limitation:** post-A5 `55fc9ec`, root HTTP `200`, `index-BqxRwsLa.js` (`1,098,877` bytes; `D88DB76...F7D`) and `index-JTpP97Cx.css` (`74,121` bytes; `3D5B4E6...9BD`); focused existing normal-entry test `5/5`. The gated campaign state was not read, forced, or changed, and the unavailable in-app Browser means no gated rendered/focus/assistive claim. This pass established the normal player-visible result before source inspection and did not open the protected CM-10 controller or tests.
+- **Exact W2 acceptance:** compose only the existing protected CM-10 authority into normal UI from exact sanitized CM-00 after one fresh private-free semantic orient. Replace CM-00 with one Scene-owned CM-10 group containing coequal A, B, and sealed-boundary observations in any order; each becomes visibly Recorded, matching replay is idempotent, and all three alone expose inactive/rejected `REVIEW LOCAL WORK IMAGE`. Preserve both returns, fail-closed sanitation, one-group/focus/reflow/accessibility, privacy/Tour isolation, zero evidence/cross-credit, invariant SC-04, unchanged continuation/null city delta, and stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effect.
+
 ## A5 Coder result — protected CM-10 contained survey
 
 - **Mode / disposition:** `advance` / `REVISE — PROTECTED CM-10 SURVEY COMPLETE / W1 NEXT`. One pure, unimported, storage-free controller now composes the accepted protected blank CM-00 into exactly one Scene-owned CM-10 group after one fresh validated orient. Normal App/main/route/UI, storage/persistence, copy/CSS/art, curriculum, and world state remain untouched.

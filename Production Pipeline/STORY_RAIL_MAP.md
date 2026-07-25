@@ -1,9 +1,9 @@
 # Horizon Archive Story Rail Map
 
-## W4 result — 2026-07-25
+## Active cycle handoff — W1 Player / 2026-07-25
 
-- `RP003-AESTH-019 RESOLVED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
-- The normal rail remains exact verified RP-002 return -> one transient adjacent-survey intent -> one blank Scene-owned CM-00 group. Its sole inherited world plate now remains visible through narrow/effective-`200%` without new art, crop, state, or effect; CM-10 and every later rail/reward/world/access/authority effect remain closed.
+- `RP003-P1-002 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The normal rail reaches exact verified RP-002 return -> transient adjacent-survey intent -> blank Scene-owned CM-00, but fresh orient cannot mount CM-10. W2 accepts only normal composition of the existing CM-10 authority: one survey group; A/B/sealed in any order; visibly Recorded idempotent replay; inactive/rejected local review only after all three. Returns, fail-closed sanitation, privacy/Tour, zero evidence, invariant world, unchanged continuation/null delta, and the hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects remain exact.
 
 ## W3 result — 2026-07-25
 

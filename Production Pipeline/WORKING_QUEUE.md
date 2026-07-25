@@ -1,9 +1,9 @@
 # Working Queue
 
-## W4 result / coordinator next — 2026-07-25
+## Active cycle handoff — W1 Player / 2026-07-25
 
-- **Resolved:** `RP003-AESTH-019 — SAME INHERITED CM-00 WORLD VISIBLE AT NARROW / COORDINATOR NEXT`. A scene-specific cascade exception preserves the sole existing City Threshold overview in the blank CM-00 16:9 world at narrow/effective-`200%`; wide, crop, image bytes, and the four-action blank group remain unchanged.
-- **Gate evidence:** focused gameplay/presentation/frame `73/73`; RP-003 and RP-002 self-tests; build; exact HTTP/assets/markers/served-dist identity; no CM-10; immutable source/built master; and one strict `4173` listener pass on `index-BqxRwsLa.js` / `index-JTpP97Cx.css`. Coordinator performs the independent full release gate. No SC-04 art/copy/state, persistence, evidence, world response, or later rail effect was added.
+- **Open:** `RP003-P1-002 P1`. The accepted normal rail reaches blank CM-00, but orient cannot enter any normal CM-10 survey group; current served JS contains no CM-10/observation/review markers.
+- **Exact W2 acceptance:** compose only the protected survey authority into normal RP-003 after fresh sanitized orient: one Scene-owned CM-10 group, A/B/sealed in any order, visible Recorded/idempotent replay, and inactive/rejected `REVIEW LOCAL WORK IMAGE` only after all three. Preserve returns, fail-closed sanitation, privacy/Tour, focus/reflow, zero evidence, invariant SC-04, continuation/null delta, and the hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effect.
 
 ## W3 result / W4 next — 2026-07-25
 
