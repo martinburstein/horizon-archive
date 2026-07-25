@@ -87,6 +87,16 @@ function enterSurvey(controller, activationKind = "pointer", token = "normal-ori
   )).state;
 }
 
+function renderedActionLabels(state) {
+  const observations = new Map(
+    (state.observationControls ?? []).map((control) => [control.action, control]),
+  );
+  return state.availableActions.map((action) => {
+    const observation = observations.get(action);
+    return observation ? `${action} — ${observation.status}` : action;
+  });
+}
+
 function assertZeroEffect(state) {
   assert.deepEqual(state.observationEvidence, []);
   assert.deepEqual(state.learningEvidence, []);
@@ -155,6 +165,13 @@ test("normal fresh ORIENT mounts exactly one zero-effect CM-10 survey in all sev
     assert.equal(state.owner, "SCENE");
     assert.deepEqual(state.availableActions, calibrationMarginSurveyActions);
     assert.deepEqual(state.recordedObservationIds, []);
+    assert.deepEqual(renderedActionLabels(state), [
+      "INSPECT EXPOSED SEQUENCE A — Available",
+      "INSPECT EXPOSED SEQUENCE B — Available",
+      "INSPECT SEALED BOUNDARY — Available",
+      calibrationMarginActions.returnCivicComparison,
+      calibrationMarginActions.returnCityThreshold,
+    ]);
     assert.deepEqual(state.focusIntent, { group: "cm10_survey", target: "heading" });
     assert.equal(state.localReviewEligibility.eligible, false);
     assert.equal(state.localReviewEligibility.dispatchable, false);
@@ -174,7 +191,12 @@ test("normal A/B/sealed actions finalize only matching IDs in any order with saf
   for (const [orderIndex, order] of orders.entries()) {
     const controller = createCalibrationMarginNormalEntry(options());
     enterBlank(controller, `order-entry-${orderIndex}`);
-    enterSurvey(controller, "pointer", `order-orient-${orderIndex}`);
+    const initial = enterSurvey(controller, "pointer", `order-orient-${orderIndex}`);
+    let expectedRecorded = [];
+    assert.equal(
+      renderedActionLabels(initial).filter((label) => label.endsWith("— Available")).length,
+      3,
+    );
     order.forEach((action, actionIndex) => {
       const result = controller.dispatch(intent(
         action,
@@ -183,6 +205,13 @@ test("normal A/B/sealed actions finalize only matching IDs in any order with saf
         "CM-10 SURVEY",
       ));
       assert.equal(result.status, "observation_recorded_zero_evidence");
+      expectedRecorded = [...expectedRecorded, action];
+      assert.deepEqual(
+        renderedActionLabels(result.state).slice(0, 3),
+        calibrationMarginSurveyActions.slice(0, 3).map((candidate) => (
+          `${candidate} — ${expectedRecorded.includes(candidate) ? "Recorded" : "Available"}`
+        )),
+      );
       assert.deepEqual(result.state.focusIntent, { group: "cm10_survey", target: action });
       assert.deepEqual(
         result.state.recordedObservationIds,
@@ -212,6 +241,7 @@ test("normal A/B/sealed actions finalize only matching IDs in any order with saf
     ));
     assert.equal(replay.status, "recorded_replay_zero_evidence");
     assert.deepEqual(replay.state.recordedObservationIds, complete.recordedObservationIds);
+    assert.deepEqual(renderedActionLabels(replay.state), renderedActionLabels(complete));
     assert.deepEqual(replay.state.focusIntent, {
       group: "cm10_survey",
       target: order[1],
@@ -410,6 +440,10 @@ test("normal App and UI compose only transient CM-00 and CM-10 with inactive rev
   assert.match(view, /entryState\.availableActions\.map/);
   assert.match(view, /data-observation-id/);
   assert.match(view, /data-recorded/);
+  assert.match(
+    view,
+    /const label = observation \? `\$\{action\} — \$\{observation\.status\}` : action;/,
+  );
   assert.match(view, /data-review-eligibility="eligible-inactive"/);
   assert.match(view, /disabled/);
   assert.match(view, /aria-disabled="true"/);

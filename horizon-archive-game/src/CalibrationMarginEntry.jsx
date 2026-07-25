@@ -51,7 +51,7 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
           <div className="city-command-actions" role="group" aria-label={entryState.phase}>
             {entryState.availableActions.map((action) => {
               const observation = observationControls.get(action);
-              const label = observation?.recorded ? `${action} — Recorded` : action;
+              const label = observation ? `${action} — ${observation.status}` : action;
               return (
                 <button
                   key={action}

@@ -1,9 +1,9 @@
 # Working Queue
 
-## Active cycle handoff — W3 Aesthetic / 2026-07-25
+## Active cycle handoff — W4 Coder / 2026-07-25
 
-- `RP003-AESTH-020 P2 OPEN — W4 NEXT`: CM-10's model exposes `Available`/`Recorded`, but the rendered initial actions omit `— Available`. W4 renders only those existing labels, preserving matching `— Recorded`, replay focus, and all-three disabled/non-dispatchable Eligible review.
-- Use served W2 `index-DY0O1g9z.js` / `index-JTpP97Cx.css` and focused `10/10` as the baseline. Preserve one group, source-order wide/narrow/`200%` reflow, `>=44px`, non-color/forced-color/reduced-motion focus, immutable inherited world, privacy/Tour/transient zero evidence, reversible returns, continuation/null delta, and the hard stop before activation, CM-20, learning, save, later rail, or world/access/authority effects.
+- `RP003-AESTH-020 RESOLVED — COORDINATOR NEXT`: each initial CM-10 A/B/sealed control now renders its existing `— Available` status; only its matching finalized state renders `— Recorded`. Replay/action focus, unchanged returns, and disabled/non-dispatchable all-three Eligible review remain exact.
+- Independently release `index-BWwt4kKy.js` / `index-JTpP97Cx.css` after full tests, all validators, build, isolated E2E, safe wide/narrow review, and exact asset/listener/cleanup/synchronization gates. Preserve one group, source-order reflow, `>=44px`, forced-color/reduced-motion parity, immutable world, privacy/Tour/transient zero evidence, continuation/null delta, and every activation/CM-20/learning/save/later-rail/world/access/authority stop; do not inspect or force browser storage/save.
 
 ## W3 result / W4 next — 2026-07-25
 

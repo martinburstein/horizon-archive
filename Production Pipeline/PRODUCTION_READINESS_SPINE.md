@@ -1,9 +1,9 @@
 # Horizon Archive Production Readiness Spine
 
-## Active cycle handoff — W3 Aesthetic / 2026-07-25
+## Active cycle handoff — W4 Coder / 2026-07-25
 
-- `RP003-AESTH-020 P2 OPEN — W4 aesthetic-polish next`: expose the existing CM-10 model `Available` text on every unrecorded observation, retaining matching `Recorded`, replay/action focus, and disabled/non-dispatchable Eligible review only after all three.
-- Baseline: W2 served `index-DY0O1g9z.js` (`F7B7D93E...9FC7`) / `index-JTpP97Cx.css` (`3D5B4E6F...9BD`), focused normal entry `10/10`. Preserve all one-group/reflow/target/focus/forced-color/reduced-motion/world/privacy/zero-evidence/return and hard-stop contracts; no review activation, CM-20, learning, save, later rail, or world/access/authority effect.
+- `RP003-AESTH-020 RESOLVED — FINAL CANDIDATE / COORDINATOR NEXT`: CM-10 now renders each existing model status, giving three initial `— Available` controls and only matching `— Recorded` replacements while replay/focus and disabled/non-dispatchable all-three Eligible review remain exact.
+- Candidate `index-BWwt4kKy.js` (`293796EB...99A6`) / `index-JTpP97Cx.css` (`3D5B4E6F...9BD`) passes focused `10/10`, related `106/106`, RP-003/RP-002 self-tests, build, HTTP/served identity, hard-stop markers, immutable world, and patch gates. Coordinator independently runs full release validation through safe wide/narrow review and isolated E2E without forcing browser storage/save; stop before activation, CM-20, learning, save, later rail, or world/access/authority effect.
 
 ## W4 final-candidate result — 2026-07-25
 

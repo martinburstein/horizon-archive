@@ -1,9 +1,9 @@
 # Horizon Archive Story Rail Map
 
-## Active cycle handoff — W3 Aesthetic / 2026-07-25
+## Active cycle handoff — W4 Coder / 2026-07-25
 
-- `RP003-AESTH-020 P2 OPEN — W4 AESTHETIC-POLISH NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at adjacent `RP-003`; ordered lead remains nine packets (`RP-004` through `RP-012`).
-- W4 exposes only the existing textual `Available` status beside unrecorded CM-10 actions, retaining matching `Recorded`, safe replay focus, and disabled/non-dispatchable Eligible review after all three. Preserve the exact normal rail, reflow/accessibility, invariant world, zero-effect sanitation/returns, continuation/null delta, and stop before activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects.
+- `RP003-AESTH-020 RESOLVED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at adjacent `RP-003`; ordered lead remains nine packets (`RP-004` through `RP-012`).
+- Final candidate now makes the existing CM-10 status explicit: three initial `— Available` controls, separate matching `— Recorded` controls in any order, replay-safe focus, and disabled/non-dispatchable all-three Eligible review. Coordinator independently releases only this exact rail through full validation; preserve sanitation/returns, responsive-accessibility, invariant world, zero evidence, continuation/null delta, and the stop before activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects.
 
 ## W3 result — 2026-07-25
 

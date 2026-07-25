@@ -7,10 +7,10 @@
 - **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
 
-## Active cycle handoff — W3 Aesthetic / 2026-07-25
+## Active cycle handoff — W4 Coder / 2026-07-25
 
-- **Disposition / exact W4 scope:** `RP003-AESTH-020 P2 OPEN — TEXTUAL AVAILABLE STATE MISSING / W4 AESTHETIC-POLISH NEXT`. Render only the existing observation model's status text: every unrecorded CM-10 control must visibly show `— Available`, its matching recorded control `— Recorded`; preserve disabled/non-dispatchable Eligible review after all three.
-- **Evidence / hard stop:** served W2 `index-DY0O1g9z.js` / `index-JTpP97Cx.css` matches `dist`; focused normal-entry `10/10` passes. Preserve one group, equal A/B/sealed hierarchy, focus, reflow, `>=44px`, non-color/forced-color/reduced-motion parity, immutable inherited world, privacy/Tour, transient zero evidence, returns, continuation/null delta, and every review-activation/CM-20/learning/save/later-rail/world/access/authority stop.
+- **Disposition / exact coordinator scope:** `RP003-AESTH-020 RESOLVED — TEXTUAL AVAILABLE/RECORDED PARITY / COORDINATOR NEXT`. Independently validate the accepted blank CM-00 -> fresh orient -> one CM-10 group -> three initial `— Available` controls -> separate matching `— Recorded` states in any order -> replay-safe focus -> disabled/non-dispatchable Eligible review only after all three.
+- **Evidence / hard stop:** candidate `index-BWwt4kKy.js` / `index-JTpP97Cx.css` passes focused `10/10`, related `106/106`, RP-003/RP-002 self-tests, build, served identity, marker/later-state absence, and immutable-world gates. Coordinator owns full suite, all validators, isolated E2E, safe wide/narrow review, cleanup, and synchronization without forcing browser storage/save. Preserve one group, reflow, `>=44px`, forced-color/reduced-motion parity, privacy/Tour, zero evidence, returns, continuation/null delta, and stop before activation, CM-20, learning, save, later rail, or world/access/authority effect.
 
 ## W3 result — 2026-07-25
 
