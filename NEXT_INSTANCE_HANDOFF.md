@@ -57,7 +57,7 @@ RP-002 is complete in Demo unless a reproduced regression reopens it. Every reco
 - Private responses, feedback, result material, tokens, focus history, and adapter diagnostics never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Nine SC-03 canonical visual references remain non-runtime until the required cycle reveal is archived.
+- Ten SC-03 canonical visual references remain closed and non-runtime.
 - No story reward, item, access, permission, identity, authority, city/world response, external action, RP-004 opening, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
@@ -75,9 +75,10 @@ RP-002 is complete in Demo unless a reproduced regression reopens it. Every reco
 
 ## Latest canonical cycle reveal
 
-- Closed item: `SC-03 / atomic local save — indivisible three-lamina expedition seal`.
-- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png`.
-- Status: canonical visual reference only, not runtime-integrated. The image defines no readable save content, permission, authority, reward, world response, hidden lore, RP-003 integration, RP-013, or successor.
+- Closed item: `SC-03 / verified restore — inert return sightline and no-replay separation`.
+- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
+- Canonical scope: a tiny closed expedition cradle remains dark and separate from the immense unchanged archive; a remote pale circulation gap is only the pre-existing reversible City Threshold sightline. Curved floor grooves are inert service channels, not rails or route guidance; the far gap is not a portal or destination.
+- Status: canonical visual reference only, not runtime-integrated. The image defines no restore UI, replay, new path, RP-003 entry, permission, authority, reward, world response, hidden lore, RP-013, or successor.
 
 ## Exact next action
 

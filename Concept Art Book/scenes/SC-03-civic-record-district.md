@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-25 canonical cycle reveal — verified-return sightline
+
+- **Closed checklist item:** `[x] SC-03 / verified restore — inert return sightline and no-replay separation`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`, with neighboring provenance.
+- **Locked boundary:** one tiny closed expedition cradle remains dark and separate from an immense unchanged archive; a remote pale circulation gap is only the pre-existing reversible sightline toward the familiar City Threshold. Restore produces no opening, relight, camera move, replay, reward, or response.
+- **Limit:** canonical invariant-world/scale/separation/sightline evidence only; not runtime integration. Curved floor grooves are inert service channels, not rails or route guidance; the far opening is not a portal or destination. No readable record, restore UI, access, authority, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## 2026-07-25 A2 recovery/re-entry presentation lock
 
 - Keep the registered first-person civic master, crop, material hierarchy, lighting, clocks, and lower interface separation invariant. Quiet System `SC-03-40`, empty sanitation downgrade, and exact `SC-03-50` restore are direct local overlay replacement only; no replay, camera move, visual effect, archive response, route signal, or new art board exists.

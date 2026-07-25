@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-25 canonical cycle reveal — verified-return sightline
+
+- **Closed checklist item:** `[x] SC-03 / verified restore — inert return sightline and no-replay separation`.
+- **Asset:** `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
+- **Canonical decision:** exact restore leaves one small closed expedition cradle dark and separate while the archive remains immense, inert, unchanged, and visually continuous; the remote City Threshold sightline already existed and is only reversible navigation.
+- **Limit:** canonical visual reference only, not runtime-integrated. Floor grooves are inert service channels rather than rails/route guidance, and the far gap is not a portal/destination. No restore UI, replay, new path, RP-003 entry, access, permission, authority, reward, world response, hidden lore, RP-013, or successor is authorized.
+
 ## W4 verification result - 2026-07-25
 
 - **Disposition:** `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. No W3 residual reproduced; the W2 production candidate remains unchanged.

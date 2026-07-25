@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-25 canonical cycle reveal — verified-return sightline
+
+- `[x] SC-03 / verified restore — inert return sightline and no-replay separation` is closed by `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
+- The accepted reference locks only a tiny dark closed expedition cradle, archive-dominant unchanged mass, and one remote pre-existing reversible City Threshold sightline. Restore creates no replay, camera move, opening, light response, reward, route, access, permission, or authority.
+- Canonical reference only, not runtime-integrated. Curved grooves are inert service channels, not rails or guidance; the far pale gap is not a portal or destination. No RP-003 entry, later state, hidden lore, RP-013, or successor is defined.
+
 ## W4 verification result - 2026-07-25
 
 - `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 found no residual and changed no production, style, art, asset, copy, test, curriculum, route, state, or save behavior.

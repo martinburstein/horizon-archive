@@ -1,5 +1,11 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-07-25 verified-return canonical cycle-reveal lock
+
+- `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png` closes `SC-03 / verified restore — inert return sightline and no-replay separation`.
+- One small dark closed expedition cradle remains removable and materially separate from the immense unchanged Civic Record archive. A remote pale circulation gap is canonical only as the pre-existing reversible sightline toward the familiar City Threshold; restore does not create, open, relight, or privilege it.
+- Status is canonical visual reference only, not runtime-integrated. Curved floor grooves are inert service/drainage channels, not rails, roads, tracks, or route guidance; the far gap is not a portal, door, reward, or destination. The reference authorizes no restore UI, readable state, camera move, RP-003 entry, access, permission, authority, world response, hidden lore, RP-013, or successor.
+
 ## A2 local-reconstruction presentation lock — 2026-07-25
 
 - The invariant first-person SC-03 plate remains dominant through quiet System `SC-03-40`, reload/re-entry sanitation, exact empty downgrade, or exact `verified_restore / SC-03-50`; no raster, crop, lighting, animation, camera, visual micro-state, or world response is added. Each outcome is one contained System owner -> heading/status -> available-controls group, and only exact `SC-03-50` exposes the already-accepted reversible City Threshold return.
