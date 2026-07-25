@@ -1,5 +1,13 @@
 # RP-002 — Civic Record Encounter
 
+## A2 Storyboard Track - local atomic commit presentation
+
+- **Disposition:** `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`.
+- **Boards:** one existing `PILOT // FLIGHT RECORDER` contained confirmation with its exact sentence; one deliberate private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON`; direct replacement by only `SYSTEM // EXPEDITION STATE` complete failure with exact failure copy and `RETRY SAVE` / `RETURN SAFELY`, or only `SYSTEM // EXPEDITION STATE` exact saved copy at `SC-03-40`. There is no waiting, spinner, progress, partial, adapter diagnostic, or new branch.
+- **Composition / recovery:** retain one active textual owner/message/action group. The existing world/crop stays dominant; wide contains the compact status/actions, narrow/effective-`200%` stacks source order naturally, and every control is `>=44px`. Heading-first focus applies to each replacement; retry reaches a fresh exact confirmation and new commit; safe return writes nothing and reaches exact RG-30 `PREPARE SAVE` focus; saved success stops at its System heading. Visible focus, non-color, forced-color, and reduced-motion direct replacement remain equivalent.
+- **Hard limits:** the exact atomic triplet is expedition-local only; failure retains none and no private work. Tour, city, Builders, Machine, suit, world, route, authority, and external systems remain absent. No new art/raster, restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or post-ending content is authorized.
+- **Exact A3 handoff:** preserve only the SOLIDIFIED finalized Python AND finalized Responsible-AI AND five-observation conjunction and its zero-cross-credit/privacy contract across these presentation states. Do not reopen curriculum, mappings, cases, answers, scoring, remediation, persistence behavior, copy authority, art, runtime, route, world, or later state.
+
 ## Current control — 2026-07-25
 
 - **Authoritative coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Normal play accepts exact sanitized `RG-30`, explicit private-free Pilot `PREPARE SAVE`, only the contained local confirmation, inert hold, and write-free cancel/Escape return with deterministic prepare focus.

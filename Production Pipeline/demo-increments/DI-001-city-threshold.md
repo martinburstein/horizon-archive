@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A2 result - 2026-07-25
+
+- `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. Existing contained Pilot confirmation becomes one direct local commit outcome: exact System complete failure with only `RETRY SAVE` / `RETURN SAFELY`, or exact System saved acknowledgement at `SC-03-40`; no waiting/progress/partial/diagnostic board or world response exists.
+- The status/action slab remains contained over invariant SC-03 with `>=44px`, one active group, heading-first focus, seven-modality/one-hit parity, natural wide/narrow/effective-`200%` reflow, visible focus/non-color/forced-color/reduced-motion parity, no raster integration, and private/Tour isolation. Retry is fresh confirmation; safe return is write-free RG-30 preparation focus; success stops before restore or later state.
+
 ## Current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact bounded review -> private-free Pilot prepare -> contained confirmation -> inert hold or write-free cancel/Escape recovery is accepted.

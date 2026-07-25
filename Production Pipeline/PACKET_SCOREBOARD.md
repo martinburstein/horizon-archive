@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A2 result - 2026-07-25
+
+- `RP-002` `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. The missing-gate count remains zero. One direct contained-confirmation -> explicit one-hit commit -> complete System failure/retry-safe-return or `SC-03-40` saved-success presentation replaces the prior A2 edge; no new board, state, runtime, art, or later content is introduced.
+
 ## Current control — 2026-07-25
 
 - **Authoritative release:** `RP-002 PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Normal play reaches exact `RG-30`, explicit private-free Pilot prepare, contained local confirmation, inert hold, and write-free cancel/Escape return; Team 1 is complete at `RP-012`, Team 2 remains at `RP-002`, and the lead remains ten packets.

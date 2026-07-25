@@ -1,5 +1,10 @@
 # Horizon Archive Location Visual Spine
 
+## A2 atomic-commit presentation lock - 2026-07-25
+
+- Invariant SC-03 carries only the direct contained-Pilot-confirmation -> explicit one-hit private-free commit -> System failure-recovery or `SC-03-40` System saved-acknowledgement replacement. The exact Pilot sentence, exact System failure/saved copy, and only failure controls `RETRY SAVE` / `RETURN SAFELY` are retained; no loading/progress/partial/diagnostic board exists.
+- Wide keeps the existing world/crop dominant and the compact status/action group contained; narrow/effective-`200%` stack source order naturally. One active group, heading-first focus, `>=44px`, seven-modality parity, visible focus, non-color/forced-color/reduced-motion equivalence, no-credit Tour, privacy clearing, local-only/no-authority/no-exam-guarantee, unchanged continuation, `cityStateDelta=null`, and inert world/clocks remain exact. Retry reopens fresh confirmation; safe return reaches RG-30 `PREPARE SAVE` focus; success stops at visible `SC-03-40` before restore/departure/later state. All eight visual references remain non-runtime only; no art integration is authorized.
+
 ## Current control — 2026-07-25
 
 - **Released presentation / canon:** `RP002-AESTH-016 PASS`. Exact two-leaf review, `>=44px` Pilot prepare, contained confirmation, disabled commit label, separate cancel, responsive/accessibility parity, invariant SC-03, and eight closed non-runtime canonical references are accepted.

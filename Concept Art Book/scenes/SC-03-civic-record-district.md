@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-25 atomic local-commit presentation lock
+
+- Reuse the invariant first-person SC-03 overview, registered crop, geometry, material, motivated light, maintenance rhythm, and continuous clocks. No plate, raster, camera, crop, effect, animation, result board, or world-facing transition changes; all eight canonical references remain non-runtime only.
+- Board exactly one direct local sequence: contained `PILOT // FLIGHT RECORDER` confirmation headed `Save only the bounded expedition comparison and survey marker. This grants no access or authority.` -> one fresh private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON` -> either `SYSTEM // EXPEDITION STATE` headed `Local save did not complete. No comparison, marker, or checkpoint was retained.` with only `RETRY SAVE` then `RETURN SAFELY`, or `SYSTEM // EXPEDITION STATE` headed `Bounded comparison saved. No access request or external action occurred; \`continuation\` is unchanged.` at only `SC-03-40`.
+- No waiting/spinner/progress/partial-success/adapter-detail group exists. Retry is direct replacement by a fresh exact contained confirmation with owner-heading focus and a new explicit commit requirement. Safe return writes nothing and directly restores exact RG-30 `PREPARE SAVE` focus. Saved success is one System acknowledgement with heading-first focus and no restore/departure/route action.
+- Keep one active owner/message/action group, textual ownership, `>=44px` actions, wide compact command-band containment, narrow/effective-`200%` natural source-order stacking, visible focus, non-color/forced-color/reduced-motion equivalence, privacy clearing, no-credit Tour, offline/no-authority/no-exam-guarantee, unchanged continuation, `cityStateDelta=null`, and the archive/world wholly inert. The triplet is expedition-local only; neither city, Builders, Machine, surface, suit, marker, nor plate supplies approval, rejection, route, identity, access, authority, or an external effect. Stop with `SC-03-40` visible before `SC-03-50`, credits, `RP-003+`, RP-013, or successor.
+
 ## 2026-07-25 canonical cycle reveal — contained-confirmation cradle
 
 - **Closed checklist item:** `[x] SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.

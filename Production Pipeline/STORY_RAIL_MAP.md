@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A2 result - 2026-07-25
+
+- `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`; the ordered lead remains ten packets and the rail does not extend. A2 boards only contained confirmation -> explicit local commit -> System complete failure/recovery or `SC-03-40` saved acknowledgement.
+- The city, Builders, Machine, world, and Tour own no commit/result. Restore/`SC-03-50`, departure, `RP-003+`, RP-013, successor, and world/access/authority effects remain closed; A3 preserves the evidence firewall only.
+
 ## Current control — 2026-07-25
 
 - **Authoritative positions / release:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through `RP002-P1-021 + RP002-AESTH-016` contained confirmation and write-free cancellation. The ordered lead remains ten packets (`RP-003`–`RP-012`); the rail does not extend.

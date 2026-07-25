@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A2 result - 2026-07-25
+
+- **Disposition:** `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. One compact existing-authority storyboard replaces contained Pilot confirmation directly with either complete System local failure and only `RETRY SAVE` / `RETURN SAFELY`, or System `SC-03-40` saved acknowledgement. It adds no loading/progress/partial/adapter diagnostic, new copy, branch, art, runtime, restore, or later state.
+- **Exact A3 next:** preserve the finalized Python + Responsible-AI + five-observation conjunction as zero-evidence presentation. Keep fresh explicit retry, write-free safe return to RG-30 preparation focus, exact all-or-none triplet, one active group, responsive/accessibility parity, inert SC-03, no-credit Tour, no authority, and the hard stop at saved success.
+
 ## Current control — 2026-07-25
 
 - **Released edge:** `PASS — RP002-P1-021 + RP002-AESTH-016`. Normal play now owns the complete bounded-review -> prepare -> contained-confirmation -> write-free cancel/Escape loop.
