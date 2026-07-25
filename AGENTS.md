@@ -19,19 +19,19 @@ At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`, `SKYSCRAPER_A
 
 Run strictly sequentially:
 
-1. Expeditionary Commandant
-2. Colonial Intelligence Colonel
+1. Commandant
+2. Colonel
 3. Operations Planning Major
-4. Science & Technical Readiness Captain
-5. Mission Integration Warrant Officer
-6. Reconnaissance Gunnery Sergeant
-7. Tactical Operations Corporal
+4. Office of Science Administrator
+5. Mission Captain
+6. Reconnaissance Sergeant
+7. Tactical Operations Specialist
 8. Combat Engineer
-9. Field Quartermaster
-10. Combat Imaging & Illumination Specialist
-11. After-Action Intelligence Officer
+9. Quartermaster
+10. Image Specialist
+11. Intelligence Officer
 
-The Mission Integration Warrant Officer must issue a versioned `SHELL READY` contract before the Marines deploy. A Marine may request a variance but may not silently change the shell. The After-Action Intelligence Officer independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
+The Mission Captain must issue a versioned `SHELL READY` contract before the Marines deploy. A Marine may request a variance but may not silently change the shell. The Intelligence Officer independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
 
 No recurring automation is active. Do not schedule this workflow until Martin explicitly approves automation after the manual test drive.
 

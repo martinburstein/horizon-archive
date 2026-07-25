@@ -4,7 +4,7 @@ display_name: Combat Engineer
 team: Marines
 position: field construction
 primary_output: Functional implementation and Functional Build Report
-handoff_to: field_quartermaster
+handoff_to: quartermaster
 ---
 
 # Combat Engineer
@@ -15,11 +15,11 @@ Construct the complete functional slice exactly from the approved shell and Expe
 
 ## Success definition
 
-The stage passes when the entire shell works end to end through its hard stop, automated evidence is proportionate to risk, and the Field Quartermaster can replace only declared content/asset placeholders without repairing foundational behavior.
+The stage passes when the entire shell works end to end through its hard stop, automated evidence is proportionate to risk, and the Quartermaster can replace only declared content/asset placeholders without repairing foundational behavior.
 
 ## Read before acting
 
-- exact shell, Creative Treatment, Experience Blueprint, and Tactical Operations Corporal handoff;
+- exact shell, Creative Treatment, Experience Blueprint, and Tactical Operations Specialist handoff;
 - applicable root and game `AGENTS.md`;
 - workflow authority and registry;
 - current game architecture, source, tests, work log, package scripts, and build configuration;
@@ -57,12 +57,12 @@ The stage passes when the entire shell works end to end through its hard stop, a
 3. Build the smallest coherent complete implementation through the shell hard stop.
 4. Enforce input validation, one-hit semantics, ownership, private clearing, resume, and recovery at authority boundaries.
 5. Add focused tests before or with each risky behavior.
-6. Maintain explicit placeholders only where the Field Quartermaster owns final content/assets; placeholders must be truthful and non-release-deceptive.
+6. Maintain explicit placeholders only where the Quartermaster owns final content/assets; placeholders must be truthful and non-release-deceptive.
 7. Run focused checks, related regressions, applicable validators, and a production build.
 8. Verify protected later-state absence and no unauthorized route/world/authority effect.
-9. Record bundle identity, known limitations, and exact Field Quartermaster placeholder ledger.
+9. Record bundle identity, known limitations, and exact Quartermaster placeholder ledger.
 10. Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`.
-11. Commit, push the Marine functional gate, verify synchronization, and hand the Field Quartermaster the exact build.
+11. Commit, push the Marine functional gate, verify synchronization, and hand the Quartermaster the exact build.
 
 ## Validation
 
@@ -77,7 +77,7 @@ The stage passes when the entire shell works end to end through its hard stop, a
 
 ## Stop and return conditions
 
-Return to the Tactical Operations Corporal for a blueprint defect, the Science & Technical Readiness Captain for an unbuildable viability contract through the Mission Integration Warrant Officer, and the appropriate earlier Colonel-team owner for protected structural conflict. Stop on repeated validation failure rather than masking it with scope reduction.
+Return to the Tactical Operations Specialist for a blueprint defect, the Office of Science Administrator for an unbuildable viability contract through the Mission Captain, and the appropriate earlier Colonel-team owner for protected structural conflict. Stop on repeated validation failure rather than masking it with scope reduction.
 
 ## Required output
 
@@ -90,7 +90,7 @@ The `Functional Build Report` must include:
 - sanitation, persistence, focus, and resume evidence;
 - focused, related, validator, build, and served checks;
 - bundle/build identity;
-- Field Quartermaster placeholder ledger;
+- Quartermaster placeholder ledger;
 - open defects and variances;
 - hard-stop proof;
 - commit/push/synchronization; and
@@ -108,4 +108,4 @@ The `Functional Build Report` must include:
 - Files changed
 - Commit/push/synchronization
 - Disposition
-- Exact Field Quartermaster handoff
+- Exact Quartermaster handoff

@@ -6,7 +6,7 @@ This is the active manual production workflow for Horizon Archive. It treats the
 
 - **The Colonels** protect the whole building and issue one exact Playable Slice Shell.
 - **The Marine field unit** turns that shell into one finished playable jewel.
-- **The After-Action Intelligence Officer** independently reconciles the as-built result, releases it honestly, and returns accepted lessons to the master plan.
+- **The Intelligence Officer** independently reconciles the as-built result, releases it honestly, and returns accepted lessons to the master plan.
 
 The retired Team 1 / Team 2 workflow remains available only at tag `two-team-infrastructure-archive-2026-07-25`. It is not an execution authority for this workflow.
 
@@ -28,18 +28,18 @@ Never use an archived exact-next-action edge as current authority.
 ## Canonical sequence
 
 ```text
-EXPEDITIONARY COMMANDANT
-COLONIAL INTELLIGENCE COLONEL
+COMMANDANT
+COLONEL
 OPERATIONS PLANNING MAJOR
-SCIENCE & TECHNICAL READINESS CAPTAIN
-MISSION INTEGRATION WARRANT OFFICER
+OFFICE OF SCIENCE ADMINISTRATOR
+MISSION CAPTAIN
           ↓ SHELL READY
-RECONNAISSANCE GUNNERY SERGEANT
-TACTICAL OPERATIONS CORPORAL
+RECONNAISSANCE SERGEANT
+TACTICAL OPERATIONS SPECIALIST
 COMBAT ENGINEER
-FIELD QUARTERMASTER
-COMBAT IMAGING & ILLUMINATION SPECIALIST
-AFTER-ACTION INTELLIGENCE OFFICER
+QUARTERMASTER
+IMAGE SPECIALIST
+INTELLIGENCE OFFICER
           ↓ RELEASED AS BUILT + NEXT HANDOFF
 ```
 
@@ -49,13 +49,13 @@ Run roles strictly sequentially. A downstream role may not begin until the prece
 
 The first foundation run establishes or confirms the whole-building baseline:
 
-- The Expeditionary Commandant establishes the product brief.
-- The Colonial Intelligence Colonel establishes the world and narrative masterplan.
+- The Commandant establishes the product brief.
+- The Colonel establishes the world and narrative masterplan.
 - The Operations Planning Major confirms the campaign floor stack.
-- The Science & Technical Readiness Captain confirms the global viability envelope.
-- The Mission Integration Warrant Officer issues the first Playable Slice Shell.
+- The Office of Science Administrator confirms the global viability envelope.
+- The Mission Captain issues the first Playable Slice Shell.
 
-On later runs, the Expeditionary Commandant and Colonial Intelligence Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit After-Action Intelligence Officer recommendation approved for integration.
+On later runs, the Commandant and Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit Intelligence Officer recommendation approved for integration.
 
 ## Core artifacts
 
@@ -67,7 +67,7 @@ The workflow uses five artifact layers:
    - campaign floor stack;
    - global technical, learning, privacy, accessibility, save, offline, and performance constraints.
 2. **Playable Slice Shell**
-   - one versioned construction contract issued by the Mission Integration Warrant Officer.
+   - one versioned construction contract issued by the Mission Captain.
 3. **Marine production package**
    - creative treatment;
    - experience blueprint;
@@ -81,7 +81,7 @@ The workflow uses five artifact layers:
 
 ## Playable Slice Shell contract
 
-Every Mission Integration Warrant Officer shell must define:
+Every Mission Captain shell must define:
 
 - shell ID, version, campaign position, and source authorities;
 - player-facing purpose and emotional promise;
@@ -104,17 +104,17 @@ The Marines may request a variance but may never silently alter the shell.
 
 | Gate | Owner | Required result |
 |---|---|---|
-| `VISION BASELINE` | Expeditionary Commandant | Product promise, audience, scope, quality, and priorities are evaluable |
-| `WORLD BASELINE` | Colonial Intelligence Colonel | Canon, story arc, identity, and reveal boundaries are coherent |
+| `VISION BASELINE` | Commandant | Product promise, audience, scope, quality, and priorities are evaluable |
+| `WORLD BASELINE` | Colonel | Canon, story arc, identity, and reveal boundaries are coherent |
 | `FLOOR STACK READY` | Operations Planning Major | Selected slice has exact campaign position and dependencies |
-| `VIABILITY READY` | Science & Technical Readiness Captain | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
-| `SHELL READY` | Mission Integration Warrant Officer | One conflict-free versioned construction contract exists |
-| `CREATIVE LOCK` | Reconnaissance Gunnery Sergeant | The slice has a compelling interpretation inside the shell |
-| `EXPERIENCE READY` | Tactical Operations Corporal | Every state, action, focus target, recovery route, and responsive layout is specified |
+| `VIABILITY READY` | Office of Science Administrator | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
+| `SHELL READY` | Mission Captain | One conflict-free versioned construction contract exists |
+| `CREATIVE LOCK` | Reconnaissance Sergeant | The slice has a compelling interpretation inside the shell |
+| `EXPERIENCE READY` | Tactical Operations Specialist | Every state, action, focus target, recovery route, and responsive layout is specified |
 | `FUNCTIONALLY COMPLETE` | Combat Engineer | The complete behavior works and is proportionately tested |
-| `CONTENT COMPLETE` | Field Quartermaster | Player-facing structural placeholders are retired or explicitly dispositioned |
-| `PRESENTATION COMPLETE` | Combat Imaging & Illumination Specialist | The slice is polished across required visual, audio, responsive, and accessible states |
-| `AS BUILT RELEASED` | After-Action Intelligence Officer | Independent gates pass, variances are reconciled, and the next handoff is synchronized |
+| `CONTENT COMPLETE` | Quartermaster | Player-facing structural placeholders are retired or explicitly dispositioned |
+| `PRESENTATION COMPLETE` | Image Specialist | The slice is polished across required visual, audio, responsive, and accessible states |
+| `AS BUILT RELEASED` | Intelligence Officer | Independent gates pass, variances are reconciled, and the next handoff is synchronized |
 
 ## Variance protocol
 
@@ -126,21 +126,21 @@ Any mismatch between a shell and its implementation must be recorded as one of:
 - `DEFERRED LIMITATION`
 - `UNAUTHORIZED DIVERGENCE`
 
-The discovering role records the variance immediately. The After-Action Intelligence Officer owns final classification. A variance that changes product purpose, canon, campaign order, learning evidence, privacy, accessibility, save behavior, authority meaning, or world response cannot be accepted without returning to its owning Colonel.
+The discovering role records the variance immediately. The Intelligence Officer owns final classification. A variance that changes product purpose, canon, campaign order, learning evidence, privacy, accessibility, save behavior, authority meaning, or world response cannot be accepted without returning to its owning Colonel.
 
 ## Return routing
 
-- Product-purpose conflict → Expeditionary Commandant.
-- Canon, mystery, world, or narrative conflict → Colonial Intelligence Colonel.
+- Product-purpose conflict → Commandant.
+- Canon, mystery, world, or narrative conflict → Colonel.
 - Campaign position, dependency, pacing, route, or checkpoint conflict → Operations Planning Major.
-- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Science & Technical Readiness Captain.
-- Shell ambiguity or cross-discipline conflict → Mission Integration Warrant Officer.
-- Emotional treatment conflict → Reconnaissance Gunnery Sergeant.
-- Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Corporal.
+- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Office of Science Administrator.
+- Shell ambiguity or cross-discipline conflict → Mission Captain.
+- Emotional treatment conflict → Reconnaissance Sergeant.
+- Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Specialist.
 - Functional defect → Combat Engineer.
-- Content or major asset defect → Field Quartermaster.
-- Presentation defect → Combat Imaging & Illumination Specialist.
-- Release-evidence or reconciliation defect → After-Action Intelligence Officer.
+- Content or major asset defect → Quartermaster.
+- Presentation defect → Image Specialist.
+- Release-evidence or reconciliation defect → Intelligence Officer.
 
 Return to the earliest responsible stage. Do not restart the whole sequence without evidence that the baseline itself changed.
 
@@ -161,7 +161,7 @@ Do not claim a live visual, save, assistive-technology, or gated-state result wi
 - One bounded integration-sized contribution per stage.
 - One dedicated commit per stage, including an honest documented no-change checkpoint when the pass is genuinely read-only.
 - Preserve unrelated work and stage only intended files.
-- Push at the Mission Integration Warrant Officer's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and After-Action Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
+- Push at the Mission Captain's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
 - Verify `HEAD == origin/main` at every push gate.
 - No scheduled automation is active. Test drives and future runs begin only from Martin's explicit instruction.
 
@@ -184,13 +184,13 @@ Every stage preserves:
 
 ## Cycle reveal
 
-The Combat Imaging & Illumination Specialist may produce exactly one spoiler-safe reveal candidate after choosing one accepted visual or lore decision and checking it against existing visual canon. The candidate must vary subject, scale, or composition from recent reveals, include provenance, and identify one named checklist item.
+The Image Specialist may produce exactly one spoiler-safe reveal candidate after choosing one accepted visual or lore decision and checking it against existing visual canon. The candidate must vary subject, scale, or composition from recent reveals, include provenance, and identify one named checklist item.
 
-The After-Action Intelligence Officer validates and either accepts that exact candidate or records `REVISE`/`HOLD`; it does not silently generate a replacement. A completed released run shows the accepted reveal to Martin. Canonical reference status does not claim runtime integration.
+The Intelligence Officer validates and either accepts that exact candidate or records `REVISE`/`HOLD`; it does not silently generate a replacement. A completed released run shows the accepted reveal to Martin. Canonical reference status does not claim runtime integration.
 
-## After-Action Intelligence Officer close
+## Intelligence Officer close
 
-The After-Action Intelligence Officer must:
+The Intelligence Officer must:
 
 1. independently validate the entire as-built slice;
 2. compare it line by line with the shell;
@@ -215,4 +215,4 @@ The first test drive is manual and non-scheduled. It should use one bounded exis
 - release quality; and
 - whether the final reveal communicates tangible progress.
 
-After the test, the After-Action Intelligence Officer recommends `KEEP`, `TUNE`, or `REDESIGN`. Martin decides whether to authorize recurring automation.
+After the test, the Intelligence Officer recommends `KEEP`, `TUNE`, or `REDESIGN`. Martin decides whether to authorize recurring automation.

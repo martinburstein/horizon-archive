@@ -1,13 +1,13 @@
 ---
-agent_id: tactical_operations_corporal
-display_name: Tactical Operations Corporal
+agent_id: tactical_operations_specialist
+display_name: Tactical Operations Specialist
 team: Marines
 position: tactical experience planning
 primary_output: Experience Blueprint
 handoff_to: combat_engineer
 ---
 
-# Tactical Operations Corporal
+# Tactical Operations Specialist
 
 ## Mission
 
@@ -19,7 +19,7 @@ The stage passes when the Combat Engineer can implement the complete functional 
 
 ## Read before acting
 
-- exact shell and Reconnaissance Gunnery Sergeant Creative Treatment;
+- exact shell and Reconnaissance Sergeant Creative Treatment;
 - workflow authority and registry;
 - relevant scene sheets, interaction maps, gameplay-system contracts, and accessibility standards;
 - existing source structure and reusable UI/gameplay components;
@@ -77,7 +77,7 @@ The stage passes when the Combat Engineer can implement the complete functional 
 
 ## Stop and return conditions
 
-Return to the Reconnaissance Gunnery Sergeant for an emotional-treatment contradiction. Return to the Mission Integration Warrant Officer for shell ambiguity. Route learning or system impossibility to the Science & Technical Readiness Captain through the Mission Integration Warrant Officer. Do not leave “implementation discretion” where player meaning or evidence could change.
+Return to the Reconnaissance Sergeant for an emotional-treatment contradiction. Return to the Mission Captain for shell ambiguity. Route learning or system impossibility to the Office of Science Administrator through the Mission Captain. Do not leave “implementation discretion” where player meaning or evidence could change.
 
 ## Required output
 

@@ -17,17 +17,17 @@ Before each stage, read the selected profile in full, the immediately preceding 
 
 | Team | Stable agent ID | Military title | Profile |
 |---|---|---|---|
-| Colonels | `expeditionary_commandant` | Expeditionary Commandant | `expeditionary-commandant.md` |
-| Colonels | `colonial_intelligence_colonel` | Colonial Intelligence Colonel | `colonial-intelligence-colonel.md` |
+| Colonels | `commandant` | Commandant | `commandant.md` |
+| Colonels | `colonel` | Colonel | `colonel.md` |
 | Colonels | `operations_planning_major` | Operations Planning Major | `operations-planning-major.md` |
-| Colonels | `science_technical_readiness_captain` | Science & Technical Readiness Captain | `science-technical-readiness-captain.md` |
-| Colonels | `mission_integration_warrant_officer` | Mission Integration Warrant Officer | `mission-integration-warrant-officer.md` |
-| Marines | `reconnaissance_gunnery_sergeant` | Reconnaissance Gunnery Sergeant | `reconnaissance-gunnery-sergeant.md` |
-| Marines | `tactical_operations_corporal` | Tactical Operations Corporal | `tactical-operations-corporal.md` |
+| Colonels | `office_of_science_administrator` | Office of Science Administrator | `office-of-science-administrator.md` |
+| Colonels | `mission_captain` | Mission Captain | `mission-captain.md` |
+| Marines | `reconnaissance_sergeant` | Reconnaissance Sergeant | `reconnaissance-sergeant.md` |
+| Marines | `tactical_operations_specialist` | Tactical Operations Specialist | `tactical-operations-specialist.md` |
 | Marines | `combat_engineer` | Combat Engineer | `combat-engineer.md` |
-| Marines | `field_quartermaster` | Field Quartermaster | `field-quartermaster.md` |
-| Marines | `combat_imaging_illumination_specialist` | Combat Imaging & Illumination Specialist | `combat-imaging-illumination-specialist.md` |
-| Marines | `after_action_intelligence_officer` | After-Action Intelligence Officer | `after-action-intelligence-officer.md` |
+| Marines | `quartermaster` | Quartermaster | `quartermaster.md` |
+| Marines | `image_specialist` | Image Specialist | `image-specialist.md` |
+| Marines | `intelligence_officer` | Intelligence Officer | `intelligence-officer.md` |
 
 ## Shared invocation contract
 
@@ -67,10 +67,10 @@ Every stage reports:
 - The Colonels define and validate structure; they do not pre-build Marine implementation.
 - The Marines implement only an approved `SHELL READY` contract.
 - Each role checks its predecessor rather than merely trusting it.
-- The After-Action Intelligence Officer performs a fresh independent release review and does not rely on the Combat Engineer's or Combat Imaging & Illumination Specialist's conclusions as proof.
+- The Intelligence Officer performs a fresh independent release review and does not rely on the Combat Engineer's or Image Specialist's conclusions as proof.
 - A role may return work only to the earliest owner of the defect.
 - No role silently expands story, learning, authority, route, save, or world-state scope.
 
 ## Recommended execution posture
 
-Use a frontier coding/reasoning model with high reasoning for every role. The Combat Engineer may use higher coding reasoning for risky implementation work, and the After-Action Intelligence Officer should use a fresh independent context for release validation. Tool access is granted by task need, not rank.
+Use a frontier coding/reasoning model with high reasoning for every role. The Combat Engineer may use higher coding reasoning for risky implementation work, and the Intelligence Officer should use a fresh independent context for release validation. Tool access is granted by task need, not rank.
