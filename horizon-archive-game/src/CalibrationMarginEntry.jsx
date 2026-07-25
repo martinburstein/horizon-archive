@@ -5,6 +5,9 @@ import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 export function CalibrationMarginEntry({ entryState, onAction }) {
   const headingRef = useRef(null);
   const actionRefs = useRef(new Map());
+  const observationControls = new Map(
+    (entryState.observationControls ?? []).map((control) => [control.action, control]),
+  );
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -46,19 +49,35 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
             </h1>
           </div>
           <div className="city-command-actions" role="group" aria-label={entryState.phase}>
-            {entryState.availableActions.map((action) => (
+            {entryState.availableActions.map((action) => {
+              const observation = observationControls.get(action);
+              const label = observation?.recorded ? `${action} — Recorded` : action;
+              return (
+                <button
+                  key={action}
+                  ref={(element) => {
+                    if (element) actionRefs.current.set(action, element);
+                    else actionRefs.current.delete(action);
+                  }}
+                  type="button"
+                  data-observation-id={observation?.observationId}
+                  data-recorded={observation?.recorded || undefined}
+                  onClick={(event) => onAction(action, event)}
+                >
+                  {label}
+                </button>
+              );
+            })}
+            {entryState.localReviewEligibility?.eligible && (
               <button
-                key={action}
-                ref={(element) => {
-                  if (element) actionRefs.current.set(action, element);
-                  else actionRefs.current.delete(action);
-                }}
                 type="button"
-                onClick={(event) => onAction(action, event)}
+                disabled
+                aria-disabled="true"
+                data-review-eligibility="eligible-inactive"
               >
-                {action}
+                {entryState.localReviewEligibility.action} — Eligible
               </button>
-            ))}
+            )}
           </div>
         </section>
       </main>

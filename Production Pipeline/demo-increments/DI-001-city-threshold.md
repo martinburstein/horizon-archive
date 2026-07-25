@@ -7,10 +7,10 @@
 - **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
 
-## Active cycle handoff — W1 Player / 2026-07-25
+## Active cycle handoff — W2 Coder / 2026-07-25
 
-- **Disposition:** `RP003-P1-002 P1 OPEN`. The normal blank CM-00 group exposes `ORIENT TO EXPOSED CHANNELS`, but normal dispatch preserves only CM-00; no normal CM-10, observation, Recorded, or local-review-eligibility surface exists.
-- **Exact W2 acceptance:** integrate only the existing protected CM-10 survey authority after one fresh sanitized orient. One Scene-owned CM-10 group must permit A/B/sealed observations in any order, make each visibly Recorded with idempotent replay, and expose only inactive/rejected `REVIEW LOCAL WORK IMAGE` after all three. Preserve the returns, sanitation, privacy/Tour, one-group/focus/reflow, zero evidence, invariant SC-04, unchanged continuation/null city delta, and hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Disposition:** `RP003-P1-002 RESOLVED — NORMAL CM-10 OBSERVATION LOOP / W3 NEXT`. Fresh sanitized orient now replaces accepted blank CM-00 with one Scene CM-10 group; A/B/sealed finalize separate matching IDs in any order, remain textually Recorded on replay, and all three alone reveal disabled/non-dispatchable `REVIEW LOCAL WORK IMAGE — Eligible`.
+- **Evidence / exact W3 edge:** repaired `20/20`; related `106/106`; full `714/714`; both validator self-tests; build; HTTP/served identity; hard-stop markers; immutable inherited image; and patch gates pass on `index-DY0O1g9z.js` / unchanged `index-JTpP97Cx.css`. W3 reviews only wide/narrow/`200%` one-group hierarchy, Available/Recorded states, heading/action focus, `>=44px`, natural reflow, unchanged world plate, and inactive Eligible review. Preserve returns, sanitation, privacy/Tour, transient zero evidence, invariant SC-04, unchanged continuation/null delta, and the stop before activation, CM-20, learning, save, later packets, successor, or world/access/authority effects.
 
 ## W3 result — 2026-07-25
 

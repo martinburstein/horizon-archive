@@ -5,12 +5,18 @@ import {
   calibrationMarginEntryActions,
   createCalibrationMarginProtectedEntry,
 } from "./CalibrationMarginProtectedEntry.js";
+import {
+  CALIBRATION_MARGIN_PROTECTED_SURVEY_VERSION,
+  calibrationMarginSurveyObservations,
+  createCalibrationMarginProtectedSurvey,
+} from "./CalibrationMarginProtectedSurvey.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
   nextSurveyDirectionMarked: true,
   rp002Checkpoint: "comparison_complete",
 });
+const normalOrientAction = calibrationMarginEntryActions[0];
 
 function containsPrivateContent(value) {
   const forbiddenKey = /^(?:private(?:response|notes?|source|work)|response|feedback|answer|credential|eventToken|focusHistory|adapterDiagnostics?|forged|contaminated)$/i;
@@ -85,18 +91,91 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   if (options.mode === "demo_tour") {
     return createCalibrationMarginProtectedEntry({ mode: "demo_tour" });
   }
-  return createCalibrationMarginProtectedEntry(protectedOptions(
+  const authority = protectedOptions(
     options.verifiedRestoreState,
     options.returnedCityThreshold,
-    options.restoredState,
-  ));
+    null,
+  );
+  let entryController;
+  let surveyController = null;
+
+  const configure = (restoredState) => {
+    const restoringSurvey = restoredState?.phase === "CM-10 SURVEY";
+    entryController = createCalibrationMarginProtectedEntry({
+      ...authority,
+      restoredState: restoringSurvey ? null : restoredState,
+    });
+    surveyController = null;
+
+    if (restoringSurvey && entryController.getState().phase === "city_threshold") {
+      const blank = entryController.dispatch({
+        packetId: "RP-003",
+        version: CALIBRATION_MARGIN_PROTECTED_ENTRY_VERSION,
+        mode: "campaign",
+        owner: "PILOT // FLIGHT RECORDER",
+        action: CALIBRATION_MARGIN_ENTRY_ACTION,
+        activationKind: "screen_reader",
+        eventToken: "normal-survey-resume-boundary",
+      }).state;
+      surveyController = createCalibrationMarginProtectedSurvey({
+        acceptedBlankState: blank,
+        restoredState,
+      });
+    }
+  };
+
+  configure(options.restoredState);
+
+  return Object.freeze({
+    getState() {
+      return (surveyController ?? entryController).getState();
+    },
+    dispatch(intent) {
+      const state = (surveyController ?? entryController).getState();
+      if (state.phase === "CM-10 SURVEY") {
+        return surveyController.dispatch(intent);
+      }
+      if (state.phase === "CM-00 ARRIVE + IDLE"
+        && intent?.version === CALIBRATION_MARGIN_PROTECTED_SURVEY_VERSION
+        && intent?.action === normalOrientAction) {
+        surveyController = createCalibrationMarginProtectedSurvey({
+          acceptedBlankState: state,
+        });
+        return surveyController.dispatch(intent);
+      }
+      return entryController.dispatch(intent);
+    },
+    sanitizeBoundary(restoredState = (surveyController ?? entryController).getState()) {
+      configure(restoredState);
+      return Object.freeze({
+        status: restoredState?.phase === "CM-10 SURVEY"
+          && surveyController?.getState().phase === "CM-10 SURVEY"
+          ? "resumed"
+          : "revalidated",
+        state: (surveyController ?? entryController).getState(),
+      });
+    },
+  });
 }
 
 export function createCalibrationMarginNormalEntryIntent(
   action,
   activationKind,
   eventToken,
+  phase = null,
 ) {
+  if (action === normalOrientAction || phase === "CM-10 SURVEY") {
+    return Object.freeze({
+      packetId: "RP-003",
+      version: CALIBRATION_MARGIN_PROTECTED_SURVEY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action,
+      observationId: calibrationMarginSurveyObservations[action] ?? null,
+      activationKind,
+      eventToken,
+    });
+  }
   return Object.freeze({
     packetId: "RP-003",
     version: CALIBRATION_MARGIN_PROTECTED_ENTRY_VERSION,

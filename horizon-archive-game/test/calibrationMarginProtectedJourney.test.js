@@ -285,6 +285,7 @@ test("complete protected RP-003 journey remains storage-free, network-free, and 
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
   assert.doesNotMatch(source, /localStorage|sessionStorage|indexedDB|fetch\s*\(|XMLHttpRequest|WebSocket|navigator\.|document\.|window\./i);
-  assert.doesNotMatch(app, /from "\.\/CalibrationMarginProtectedJourney\.js"|runCalibrationMarginProtectedJourneySmoke|CM-10|CM-50/);
+  assert.doesNotMatch(app, /from "\.\/CalibrationMarginProtectedJourney\.js"|runCalibrationMarginProtectedJourneySmoke|CM-50/);
+  assert.match(app, /CM-10 SURVEY/);
   assert.doesNotMatch(main, /CalibrationMarginProtectedJourney|runCalibrationMarginProtectedJourneySmoke|RP-003|SC-04/);
 });

@@ -1,9 +1,9 @@
 # Horizon Archive Story Rail Map
 
-## Active cycle handoff — W1 Player / 2026-07-25
+## Active cycle handoff — W2 Coder / 2026-07-25
 
-- `RP003-P1-002 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
-- The normal rail reaches exact verified RP-002 return -> transient adjacent-survey intent -> blank Scene-owned CM-00, but fresh orient cannot mount CM-10. W2 accepts only normal composition of the existing CM-10 authority: one survey group; A/B/sealed in any order; visibly Recorded idempotent replay; inactive/rejected local review only after all three. Returns, fail-closed sanitation, privacy/Tour, zero evidence, invariant world, unchanged continuation/null delta, and the hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects remain exact.
+- `RP003-P1-002 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The normal rail now reaches exact verified RP-002 return -> transient adjacent-survey intent -> blank CM-00 -> fresh orient -> one Scene CM-10 group -> separate A/B/sealed Recorded controls in any order -> disabled/non-dispatchable Eligible local review after all three. Returns, fail-closed sanitation, privacy/Tour, transient zero evidence, deterministic focus/recovery, invariant SC-04, unchanged continuation/null delta, and the hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects remain exact.
 
 ## W3 result — 2026-07-25
 

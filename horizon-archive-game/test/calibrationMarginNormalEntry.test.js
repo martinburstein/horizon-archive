@@ -8,6 +8,11 @@ import {
   createCalibrationMarginNormalEntryIntent,
 } from "../src/CalibrationMarginNormalEntry.js";
 import {
+  CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
+  calibrationMarginSurveyActions,
+  calibrationMarginSurveyObservations,
+} from "../src/CalibrationMarginProtectedSurvey.js";
+import {
   CALIBRATION_MARGIN_INSPECT_SEALED_BOUNDARY,
   calibrationMarginEntryActions,
 } from "../src/CalibrationMarginProtectedEntry.js";
@@ -61,8 +66,25 @@ function options(overrides = {}) {
   };
 }
 
-function intent(action, activationKind, eventToken) {
-  return createCalibrationMarginNormalEntryIntent(action, activationKind, eventToken);
+function intent(action, activationKind, eventToken, phase = null) {
+  return createCalibrationMarginNormalEntryIntent(action, activationKind, eventToken, phase);
+}
+
+function enterBlank(controller, token = "normal-entry") {
+  return controller.dispatch(intent(
+    CALIBRATION_MARGIN_ENTRY_ACTION,
+    "pointer",
+    token,
+  )).state;
+}
+
+function enterSurvey(controller, activationKind = "pointer", token = "normal-orient") {
+  return controller.dispatch(intent(
+    calibrationMarginActions.orient,
+    activationKind,
+    token,
+    "CM-00 ARRIVE + IDLE",
+  )).state;
 }
 
 function assertZeroEffect(state) {
@@ -101,9 +123,8 @@ test("normal exact verified return exposes one private-free seven-modality blank
   }
 });
 
-test("normal blank entry preserves only zero-effect orientation, sealed boundary, and reversible returns", () => {
+test("normal blank entry preserves zero-effect sealed-boundary presentation and reversible returns", () => {
   for (const [action, expected] of [
-    [calibrationMarginActions.orient, "orientation_presented_zero_evidence"],
     [CALIBRATION_MARGIN_INSPECT_SEALED_BOUNDARY, "sealed_boundary_presented_zero_evidence"],
     [calibrationMarginActions.returnCivicComparison, "returned_to_rp002_write_free"],
     [calibrationMarginActions.returnCityThreshold, "returned_to_city_threshold_write_free"],
@@ -121,6 +142,184 @@ test("normal blank entry preserves only zero-effect orientation, sealed boundary
       assert.deepEqual(result.route.replayedEvents, []);
     }
   }
+});
+
+test("normal fresh ORIENT mounts exactly one zero-effect CM-10 survey in all seven modalities", () => {
+  for (const activationKind of calibrationMarginNormalEntryAccessibility.modalities) {
+    const controller = createCalibrationMarginNormalEntry(options());
+    enterBlank(controller, `entry-${activationKind}`);
+    const state = enterSurvey(controller, activationKind, `orient-${activationKind}`);
+    assert.equal(state.phase, "CM-10 SURVEY");
+    assert.equal(state.boardState, "SC-04");
+    assert.equal(state.activeGroup, "cm10_survey");
+    assert.equal(state.owner, "SCENE");
+    assert.deepEqual(state.availableActions, calibrationMarginSurveyActions);
+    assert.deepEqual(state.recordedObservationIds, []);
+    assert.deepEqual(state.focusIntent, { group: "cm10_survey", target: "heading" });
+    assert.equal(state.localReviewEligibility.eligible, false);
+    assert.equal(state.localReviewEligibility.dispatchable, false);
+    assertZeroEffect(state);
+  }
+});
+
+test("normal A/B/sealed actions finalize only matching IDs in any order with safe Recorded replay", () => {
+  const orders = [
+    ["INSPECT EXPOSED SEQUENCE A", "INSPECT EXPOSED SEQUENCE B", "INSPECT SEALED BOUNDARY"],
+    ["INSPECT EXPOSED SEQUENCE A", "INSPECT SEALED BOUNDARY", "INSPECT EXPOSED SEQUENCE B"],
+    ["INSPECT EXPOSED SEQUENCE B", "INSPECT EXPOSED SEQUENCE A", "INSPECT SEALED BOUNDARY"],
+    ["INSPECT EXPOSED SEQUENCE B", "INSPECT SEALED BOUNDARY", "INSPECT EXPOSED SEQUENCE A"],
+    ["INSPECT SEALED BOUNDARY", "INSPECT EXPOSED SEQUENCE A", "INSPECT EXPOSED SEQUENCE B"],
+    ["INSPECT SEALED BOUNDARY", "INSPECT EXPOSED SEQUENCE B", "INSPECT EXPOSED SEQUENCE A"],
+  ];
+  for (const [orderIndex, order] of orders.entries()) {
+    const controller = createCalibrationMarginNormalEntry(options());
+    enterBlank(controller, `order-entry-${orderIndex}`);
+    enterSurvey(controller, "pointer", `order-orient-${orderIndex}`);
+    order.forEach((action, actionIndex) => {
+      const result = controller.dispatch(intent(
+        action,
+        "keyboard_enter",
+        `record-${orderIndex}-${actionIndex}`,
+        "CM-10 SURVEY",
+      ));
+      assert.equal(result.status, "observation_recorded_zero_evidence");
+      assert.deepEqual(result.state.focusIntent, { group: "cm10_survey", target: action });
+      assert.deepEqual(
+        result.state.recordedObservationIds,
+        Object.values(calibrationMarginSurveyObservations)
+          .filter((id) => order.slice(0, actionIndex + 1)
+            .some((recordedAction) => calibrationMarginSurveyObservations[recordedAction] === id)),
+      );
+      assertZeroEffect(result.state);
+    });
+    const complete = controller.getState();
+    assert.equal(complete.observationControls.every((control) => (
+      control.recorded && control.status === "Recorded" && !control.meaningUsesColorAlone
+    )), true);
+    assert.deepEqual(complete.localReviewEligibility, {
+      action: CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
+      eligible: true,
+      status: "Eligible",
+      dispatchable: false,
+      activated: false,
+    });
+
+    const replay = controller.dispatch(intent(
+      order[1],
+      "touch",
+      `replay-${orderIndex}`,
+      "CM-10 SURVEY",
+    ));
+    assert.equal(replay.status, "recorded_replay_zero_evidence");
+    assert.deepEqual(replay.state.recordedObservationIds, complete.recordedObservationIds);
+    assert.deepEqual(replay.state.focusIntent, {
+      group: "cm10_survey",
+      target: order[1],
+    });
+    assertZeroEffect(replay.state);
+  }
+});
+
+test("normal CM-10 resume is heading-first, malformed recovery is blank, and review activation stays closed", () => {
+  const first = createCalibrationMarginNormalEntry(options());
+  enterBlank(first);
+  enterSurvey(first);
+  const action = "INSPECT EXPOSED SEQUENCE B";
+  const partial = first.dispatch(intent(
+    action,
+    "switch",
+    "resume-record-b",
+    "CM-10 SURVEY",
+  )).state;
+
+  const resumedController = createCalibrationMarginNormalEntry(options({ restoredState: partial }));
+  const resumed = resumedController.getState();
+  assert.equal(resumed.phase, "CM-10 SURVEY");
+  assert.deepEqual(resumed.recordedObservationIds, ["bounded_difference"]);
+  assert.deepEqual(resumed.focusIntent, { group: "cm10_survey", target: "heading" });
+  assertZeroEffect(resumed);
+
+  const review = resumedController.dispatch(intent(
+    CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
+    "pointer",
+    "review-remains-closed",
+    "CM-10 SURVEY",
+  ));
+  assert.equal(review.status, "rejected");
+  assert.equal(review.reason, "review_activation_closed");
+  assert.deepEqual(review.state, resumed);
+
+  for (const contaminated of [
+    { ...partial, privateNotes: "PRIVATE" },
+    { ...partial, recordedObservationIds: ["forged"] },
+    { ...partial, phase: "CM-20 REVIEW" },
+  ]) {
+    const safe = createCalibrationMarginNormalEntry(options({ restoredState: contaminated }))
+      .getState();
+    if (contaminated.phase === "CM-10 SURVEY") {
+      assert.equal(safe.phase, "CM-00 ARRIVE + IDLE");
+      assert.deepEqual(safe.focusIntent, { group: "cm00_blank", target: "heading" });
+    } else {
+      assert.equal(safe.phase, "rp002_verified_boundary");
+    }
+    assert.doesNotMatch(JSON.stringify(safe), /PRIVATE|forged|CM-20/);
+    assertZeroEffect(safe);
+  }
+});
+
+test("normal CM-10 retains both write-free returns without saving observation state", () => {
+  for (const [action, status, target] of [
+    [calibrationMarginActions.returnCivicComparison, "returned_to_rp002_write_free", "RP-002"],
+    [calibrationMarginActions.returnCityThreshold, "returned_to_city_threshold_write_free", "CITY_THRESHOLD"],
+  ]) {
+    const controller = createCalibrationMarginNormalEntry(options());
+    enterBlank(controller, `return-entry-${target}`);
+    enterSurvey(controller, "pointer", `return-orient-${target}`);
+    controller.dispatch(intent(
+      "INSPECT EXPOSED SEQUENCE A",
+      "speech",
+      `return-record-${target}`,
+      "CM-10 SURVEY",
+    ));
+    const result = controller.dispatch(intent(
+      action,
+      "screen_reader",
+      `return-action-${target}`,
+      "CM-10 SURVEY",
+    ));
+    assert.equal(result.status, status);
+    assert.equal(result.route.target, target);
+    assert.equal(result.route.cityStateDelta, null);
+    assert.equal(result.route.authorityGranted, false);
+    assertZeroEffect(result.state);
+  }
+});
+
+test("CM-10 RP-002 return can continue write-free to City Threshold from the restored survey", () => {
+  const controller = createCalibrationMarginNormalEntry(options());
+  enterBlank(controller);
+  enterSurvey(controller);
+  const returned = controller.dispatch(intent(
+    calibrationMarginActions.returnCivicComparison,
+    "pointer",
+    "survey-return-rp002",
+    "CM-10 SURVEY",
+  ));
+  assert.equal(returned.status, "returned_to_rp002_write_free");
+
+  const restoredController = createCalibrationMarginNormalEntry(options({
+    restoredState: returned.state,
+  }));
+  assert.equal(restoredController.getState().phase, "CM-10 SURVEY");
+  const threshold = restoredController.dispatch(intent(
+    calibrationMarginActions.returnCityThreshold,
+    "keyboard_space",
+    "survey-rp002-to-threshold",
+    "CM-10 SURVEY",
+  ));
+  assert.equal(threshold.status, "returned_to_city_threshold_write_free");
+  assert.equal(threshold.route.target, "CITY_THRESHOLD");
+  assertZeroEffect(threshold.state);
 });
 
 test("Tour and invalid, private, partial, stale, forged, and contaminated boundaries fail closed to exact RP-002", () => {
@@ -164,7 +363,7 @@ test("Tour and invalid, private, partial, stale, forged, and contaminated bounda
   }
 });
 
-test("normal resume revalidates exact blank state to heading and rejects contaminated later state", () => {
+test("normal resume revalidates exact blank state to heading and rejects contaminated blank state", () => {
   const first = createCalibrationMarginNormalEntry(options());
   const blank = first.dispatch(intent(
     CALIBRATION_MARGIN_ENTRY_ACTION,
@@ -177,19 +376,18 @@ test("normal resume revalidates exact blank state to heading and rejects contami
   assertZeroEffect(resumed);
 
   for (const contaminated of [
-    { ...blank, phase: "CM-10 SURVEY" },
     { ...blank, privateNotes: "PRIVATE" },
     { ...blank, observationEvidence: ["forged"] },
     { ...blank, availableActions: [...blank.availableActions, "OPEN RP-004"] },
   ]) {
     const state = createCalibrationMarginNormalEntry(options({ restoredState: contaminated })).getState();
     assert.equal(state.phase, "rp002_verified_boundary");
-    assert.doesNotMatch(JSON.stringify(state), /CM-10|PRIVATE|forged|RP-004/);
+    assert.doesNotMatch(JSON.stringify(state), /PRIVATE|forged|RP-004/);
     assertZeroEffect(state);
   }
 });
 
-test("normal App and UI integrate only the transient blank boundary with no storage, learning, or later-state surface", () => {
+test("normal App and UI compose only transient CM-00 and CM-10 with inactive review", () => {
   const normal = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", import.meta.url), "utf8");
   const view = readFileSync(new URL("../src/CalibrationMarginEntry.jsx", import.meta.url), "utf8");
   const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
@@ -197,16 +395,24 @@ test("normal App and UI integrate only the transient blank boundary with no stor
   const city = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
   for (const forbidden of [
     "localStorage", "sessionStorage", "indexedDB", "fetch(", "XMLHttpRequest",
-    "WebSocket", "navigator.", "document.", "window.", "CM-10", "RP-004", "RP-013",
+    "WebSocket", "navigator.", "document.", "window.", "CM-20", "RP-004", "RP-013",
   ]) assert.equal(normal.includes(forbidden), false, forbidden);
+  assert.match(normal, /createCalibrationMarginProtectedSurvey/);
+  assert.doesNotMatch(normal, /from "\.\/CalibrationMarginProtectedJourney\.js"/);
   assert.match(app, /createCalibrationMarginNormalEntry/);
   assert.match(app, /mode === "rp003-entry"/);
+  assert.match(app, /"CM-10 SURVEY"/);
   assert.match(app, /calibrationReturnToRp002/);
   assert.doesNotMatch(app, /createCalibrationMarginProtectedEntry/);
   assert.match(city, /onEnterAdjacentSurvey/);
   assert.match(city, /adjacentSurveyActionRef/);
   assert.match(view, /data-active-group=\{entryState\.activeGroup\}/);
   assert.match(view, /entryState\.availableActions\.map/);
+  assert.match(view, /data-observation-id/);
+  assert.match(view, /data-recorded/);
+  assert.match(view, /data-review-eligibility="eligible-inactive"/);
+  assert.match(view, /disabled/);
+  assert.match(view, /aria-disabled="true"/);
   assert.match(view, /tabIndex="-1"/);
   assert.match(view, /className="city-world calibration-margin-world"/);
   assert.equal((view.match(/<img\b/g) ?? []).length, 1);
@@ -232,7 +438,7 @@ test("normal App and UI integrate only the transient blank boundary with no stor
   assert.match(styles, /\.canonical-game-frame \.city-command-actions button,[\s\S]*?min-height: 44px;/);
   assert.match(styles, /@media \(forced-colors: active\)/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.doesNotMatch(view, /CM-10|learning|observation|save|RP-004|RP-013/);
+  assert.doesNotMatch(view, /learning|save|RP-004|RP-013/);
   assert.equal(calibrationMarginNormalEntryAccessibility.minActionCssPx, 44);
   assert.equal(calibrationMarginNormalEntryAccessibility.modalities.length, 7);
 });

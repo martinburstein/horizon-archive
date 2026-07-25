@@ -1,9 +1,9 @@
 # Working Queue
 
-## Active cycle handoff — W1 Player / 2026-07-25
+## Active cycle handoff — W2 Coder / 2026-07-25
 
-- **Open:** `RP003-P1-002 P1`. The accepted normal rail reaches blank CM-00, but orient cannot enter any normal CM-10 survey group; current served JS contains no CM-10/observation/review markers.
-- **Exact W2 acceptance:** compose only the protected survey authority into normal RP-003 after fresh sanitized orient: one Scene-owned CM-10 group, A/B/sealed in any order, visible Recorded/idempotent replay, and inactive/rejected `REVIEW LOCAL WORK IMAGE` only after all three. Preserve returns, fail-closed sanitation, privacy/Tour, focus/reflow, zero evidence, invariant SC-04, continuation/null delta, and the hard stop before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effect.
+- **Closed / next:** `RP003-P1-002 RESOLVED — NORMAL CM-10 OBSERVATION LOOP / W3 AESTHETIC REVIEW NEXT`. The unchanged protected survey authority is now transiently composed after exact blank CM-00: fresh orient mounts one Scene group; A/B/sealed record separate IDs in any order; replay is idempotent; and all three alone reveal disabled/non-dispatchable Eligible local review.
+- **Evidence / W3 task:** repaired `20/20`; related `106/106`; full `714/714`; RP-003/RP-002 self-tests; build; strict `4173`; HTTP/served-dist identity; CM-10/A/B/sealed/review markers present and CM-20/CM-50 absent; image and patch gates pass on `index-DY0O1g9z.js` / `index-JTpP97Cx.css`. Review only representative wide/narrow/`200%` hierarchy, Available/Recorded non-color states, focus, `>=44px`, natural reflow, unchanged inherited world, and disabled Eligible review. Preserve returns, sanitation, privacy/Tour, transient zero evidence, invariant world/null delta, and every activation/learning/save/later-rail/authority hard stop.
 
 ## W3 result / W4 next — 2026-07-25
 

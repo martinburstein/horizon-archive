@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## Active cycle handoff — W2 Coder / 2026-07-25
+
+- **Candidate / next:** `RP003-P1-002 RESOLVED — NORMAL CM-10 OBSERVATION LOOP / W3 NEXT`. The normal transient adapter composes the unchanged A5 survey authority from exact blank CM-00 through one fresh orient into one Scene-owned CM-10 group. Separate A/B/sealed Recorded states, idempotent replay, heading/action focus, safe blank recovery, both write-free returns, and disabled/non-dispatchable Eligible review after all three are live; no review activation or later state is live.
+- **Evidence / gate:** repaired `20/20`; related `106/106`; full `714/714`; RP-003 + RP-002 self-tests; build; one strict `4173` listener; root/assets/markers/served-dist identity; CM-20/CM-50 absence; immutable inherited world image; and patch checks pass. Candidate is `index-DY0O1g9z.js` SHA-256 `F7B7D93EB33EA583584EE64193CA1BF0F7ED623FC5B41DA83B77298EC9239FC7` / `index-JTpP97Cx.css` SHA-256 `3D5B4E6FFAAAE27D4EB44D698AC6F8B797E39E32892076A5E0DBBBC08C2C59BD`. W3 reviews only CM-10 presentation at wide/narrow/`200%` and preserves every privacy/evidence/world/learning/save/later-rail hard stop.
+
 ## W4 final-candidate result — 2026-07-25
 
 - `RP003-AESTH-019 RESOLVED — SAME-MASTER NARROW VISIBILITY / COORDINATOR NEXT`. The sole inherited CM-00 image now wins the narrow/effective-`200%` cascade through a CalMargin-only exception; wide behavior, immutable crop/bytes, normal gameplay, and all closed rails remain unchanged.

@@ -2225,10 +2225,13 @@ export function App() {
       action,
       routeActivationKind(event),
       routeEventToken("rp003-blank-entry"),
+      calibrationMarginEntryView?.phase,
     ));
     if ([
-      "orientation_presented_zero_evidence",
+      "survey_visible",
       "sealed_boundary_presented_zero_evidence",
+      "observation_recorded_zero_evidence",
+      "recorded_replay_zero_evidence",
     ].includes(result?.status)) {
       setCalibrationMarginEntryView(result.state);
       return result;
@@ -2260,6 +2263,7 @@ export function App() {
       calibrationMarginNormalReturnActions.cityThreshold,
       routeActivationKind(event),
       routeEventToken("rp003-rp002-return-threshold"),
+      calibrationMarginEntryView?.phase,
     ));
     if (result?.status !== "returned_to_city_threshold_write_free") return result;
     setCustodyLedgerPrimaryView(null);
@@ -3338,7 +3342,10 @@ export function App() {
     );
   }
 
-  if (mode === "rp003-entry" && calibrationMarginEntryView?.phase === "CM-00 ARRIVE + IDLE") {
+  if (mode === "rp003-entry" && [
+    "CM-00 ARRIVE + IDLE",
+    "CM-10 SURVEY",
+  ].includes(calibrationMarginEntryView?.phase)) {
     return (
       <CalibrationMarginEntry
         entryState={calibrationMarginEntryView}
