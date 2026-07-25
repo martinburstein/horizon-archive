@@ -11,74 +11,114 @@ Read in full:
 3. `SKYSCRAPER_AGENT_WORKFLOW.md`
 4. `Skyscraper Agent Profiles/README.md`
 
-Before each stage, read that stage's canonical profile in full and follow the exact sequential handoff. Never reuse the archived Team 1 / Team 2 exact-next-action edge.
+No recurring automation is active. Do not schedule or begin another shell until
+Martin explicitly authorizes it.
 
-## Workflow status
+## Synchronized release state
 
-- New Colonels-and-Marines infrastructure: constructed and ready for a manual test drive.
-- Colonels: five strategic shell-making roles.
-- Marines: five as-built field roles plus the Intelligence Officer's independent reconciliation.
-- Recurring automation: none.
-- Test-drive execution: manual, sequential, and non-overlapping.
-- Construction checkpoint: the commit containing this handoff.
+- Test drive: `TD-001`
+- Disposition: `PASS — AS BUILT RELEASED`
+- Shell: `SS-RP003-PY010-v1`
+- Campaign address: `RP-003 / SC-04 / CM-20-CM-23`
+- Accepted playable landing: no-action `PY010-P3`, finalized `PY-010` only
+- Functional commit: `949297b149d8b2fa90f21858f46af80f8b274ccc`
+- Content commit: `b1371584b7e03811296d6f9d2178a653314fd802`
+- Presentation commit: `d318572e5ec61d1d50de6349a9219a0eec64d1e2`
+- As-built package:
+  `Production Pipeline/Skyscraper Test Drives/TD-001/11-AS-BUILT-RECONCILIATION.md`
+- Final synchronization: Intelligence Officer release commit on `main`;
+  `HEAD == origin/main` verified after push
 
-Archived predecessor system:
+## Accepted product boundary
 
-- Tag: `two-team-infrastructure-archive-2026-07-25`
-- Archive index: `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`
-- Do not reactivate it implicitly.
-
-## Current product state
-
-- Whole-story rail: outlined through the intended ending at `RP-012`.
-- Accepted playable Demo: implemented through `RP-003 / CM-10 SURVEY`.
-- Latest accepted player boundary: all three CM-10 observations complete; `REVIEW LOCAL WORK IMAGE` is visible only as disabled/non-dispatchable `Eligible`.
-- Latest canonical reveal: `SC-04 / CM-10 survey — neutral bounded-difference material parity`.
-- No `RP-013`, successor, or post-ending content is authorized.
-
-## Proposed test drive
-
-- Test ID: `TD-001`
-- Shell candidate: `SS-RP003-PY010-v1`
-- Campaign address: `RP-003 / SC-04 / CM-20–CM-23`
-- Objective: exercise all 11 new handoffs on one bounded existing-authority implementation slice.
-- Starting boundary: accepted all-three CM-10 observation completion.
-- Intended completion: finalized `PY-010` only.
-- Hard stop: before `CM-30`, AI-901 extraction, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or physical world response.
-
-Target player path:
+Normal RP-003 play now supports:
 
 ```text
-accepted all-three CM-10 observation completion
-  -> fresh explicit REVIEW LOCAL WORK IMAGE
-  -> CM-20 genuinely blank PYTHON PRIMARY
-  -> strict 8/8
-       pass -> CM-22 closed-note retrieval
-       miss -> CM-21 first-actual-missed-check answer-free repair
-               -> clear private/transient work
-               -> genuinely blank retry
-  -> CM-22 condition / true branch / false branch /
-     unavailable-boundary closed-note retrieval
-  -> CM-23 genuinely blank unseen transfer at strict 8/8
-  -> finalize only PY-010
+accepted all-three CM-10
+  -> one fresh REVIEW LOCAL WORK IMAGE
+  -> blank CM-20 primary
+  -> strict 8/8 or actual-miss-only answer-free repair / blank retry
+  -> blank closed-note CM-22 retrieval at strict 4/4
+  -> blank distinct CM-23 transfer at strict 8/8
+  -> atomic P3
+  -> PY010-P3 no-action landing
 ```
 
-The test evaluates workflow quality as well as product output: stage duration, artifact usefulness, duplicated reading, ambiguity, return routing, variance quality, implementation throughput, release evidence, and reveal value.
+Only exact ordered allowlisted P0-P3 evidence persists. Private/transient work
+clears on repair, retry, return, replacement, recovery, reload sanitation, and
+finalization. `PY-010` grants no `RP003-IE-01` credit.
 
-## Continuing invariants
+The hard stop remains before:
 
-- Preserve closed canon, the intended ending, and all invariant-world limits.
-- Preserve strict `PY-010` evidence, private clearing, fresh transfer, and zero cross-credit into `RP003-IE-01`.
-- Preserve privacy, accessibility, responsive behavior, deterministic save/resume, offline/no-authority/no-exam-guarantee, and no-credit Demo Tour.
-- Preserve first-person maximum-quality cinematic photorealism.
-- Do not inspect or mutate Martin's browser storage or campaign save to reach gated state.
-- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's explicit authorization.
-- Never inspect, stage, alter, move, or delete:
+- `CM-30` and `RP003-IE-01`;
+- expedition-note save or save eligibility;
+- onward bearing or RP-004;
+- RP-013, successor, or post-ending content;
+- reward, access, authority, identity, exam standing, external action; and
+- any physical or world response.
+
+## Release evidence
+
+- Full game suite: `737/737 PASS`
+- Readiness validators: `15/15 PASS`
+- Production build: `173` modules
+- JS: `index-BHYcpGmM.js`, `1,138,689` bytes,
+  SHA-256 `7D580F7BC58C7E7075D0851E85917F68B7408C94770F7693E602079DA7C0C41A`
+- CSS: `index-BPUl5qmV.css`, `77,814` bytes,
+  SHA-256 `0E099AABEC927D829AEFCF81CC7304A4A65771805BE0B9D74897EE5A1BA30BF3`
+- Complete accepted E2E: `101.06s`, credits reached, all emitted gates true,
+  `runtimeErrors:false`
+- Served root/assets: HTTP `200` and byte-identical to `dist`
+- QA captures restored; Intelligence-owned preview stopped; port `5174` clear
+
+## Accepted reveal
+
+- Decision:
+  `SC-04 / PY-010 landing — independent environmental clocks remain unsynchronized`
+- Asset:
+  `Visual Direction/Production Masters/2026-07-25-rp003-independent-clock-landscape-reveal/rp003-independent-clock-landscape-v1.png`
+- Dimensions: `1672 x 941`
+- SHA-256:
+  `543EC03C6915777CCBBC4FC368F93F9E29B822A8C83C063F6835271F525F625A`
+- Status: spoiler-safe canonical reference only; not runtime-integrated and not
+  `SC-04-MASTER`
+
+## Deferred limitations
+
+1. The runtime still uses the inherited City Threshold plate as temporary SC-04
+   atmosphere.
+2. Direct gated in-app-browser review was unavailable without manufacturing
+   Martin's storage/save; deterministic source, UI, controller, and served
+   evidence is recorded instead.
+3. CSS retains only `14` bytes of shell-cap headroom.
+
+## Process result
+
+Recommendation: `TUNE`.
+
+Keep the eleven-role order and gates. For future authorized shells, use compact
+delta verification for the four pre-shell baseline roles, keep the Mission
+Captain shell as the single complete contract, launch the release preview
+directly with owned PID/liveness checks, and add a storage-free gated review
+fixture. The full rationale is recorded in
+`Production Pipeline/PROCESS_CHANGELOG.md`.
+
+## Continuing protections
+
+- Preserve closed canon, intended ending, strict evidence, privacy,
+  accessibility, responsive behavior, offline/no-authority/no-exam-guarantee,
+  no-credit Tour, invariant world, and deterministic recovery.
+- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without
+  Martin's explicit authorization.
+- Never inspect, alter, stage, commit, move, or delete:
   - `Art Of No Mans Sky Book Scan.pdf`
   - `Simplilearn Training Files/`
+- Never inspect or mutate Martin's browser storage or campaign save to
+  manufacture a gated state.
+- The archived Team 1 / Team 2 workflow remains inactive.
 
 ## Exact next action
 
-Begin the manual `TD-001` test drive with the **Commandant**.
-
-The Commandant performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to the Colonel.
+Await Martin's explicit decision on the `TD-001` result and whether to keep,
+tune further, or replace the manual skyscraper workflow. Do not begin or
+schedule another shell before that instruction.

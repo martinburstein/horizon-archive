@@ -1,9 +1,9 @@
 # Horizon Archive Story Rail Map
 
-## Coordinator current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-25
 
-- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Team 1 remains complete at RP-012; Team 2 remains on RP-003, accepted through all three CM-10 observations and inactive local-review eligibility; the ordered lead remains nine packets (`RP-004` through `RP-012`).
-- **Authoritative exact next edge / rail stop:** integrate only explicit review activation and the complete existing `CM-20`–`CM-23` Python primary/repair/retrieval/fresh-transfer chain through finalized `PY-010`. Stop before CM-30, AI-901 extraction, save, later packet integration, RP-013, successor, or any world/access/authority effect. The rail does not extend.
+- **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-001 / SS-RP003-PY010-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position advances within `RP-003 / SC-04` from all-three CM-10 completion through explicit local review, `CM-20`–`CM-23`, and finalized `PY-010` at `PY010-P3`.
+- **Authoritative rail stop:** the normal route stops at the no-action `PY010-P3` landing. `CM-30`, `RP003-IE-01`, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.
 
 ## Dated cycle handoff history — W4 Coder / 2026-07-25
 

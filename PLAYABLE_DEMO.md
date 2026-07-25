@@ -13,6 +13,14 @@ includes the zero-Python learning path, the packaged AI-901 lesson sequence,
 Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
+The accepted normal campaign continuation also reaches `RP-003 / SC-04`
+through the complete local `PY-010` conditional-reinforcement floor: fresh
+review, blank primary, answer-free repair and blank retry when needed,
+closed-note retrieval, blank unseen transfer, and a no-action finalized
+`PY010-P3` landing. It stops before AI-901 extraction, expedition-note save,
+onward bearing, RP-004, RP-013, a successor, access, authority, or any physical
+world response.
+
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.
 

@@ -1,9 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
-## Coordinator current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Independent full `714/714`, all `15/15` readiness validators, production build (`170` modules), isolated first-launch `114s` E2E after port-5174 HTTP `200`, desktop/narrow title-shell review, exact served hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable inherited-art identity, and synchronization gates pass.
-- **Authoritative exact next edge:** protect and integrate only explicit local-work review plus the complete existing `CM-20`–`CM-23` strict Python primary/answer-free repair/blank retry/closed-note retrieval/genuinely blank transfer chain through finalized `PY-010`. Stop before CM-30, AI-901 extraction, save, later packets, RP-013, successor, or any reward/world/access/authority/external effect.
+- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-001 / SS-RP003-PY010-v1`. Independent full `737/737`, all `15/15` readiness self-tests, `173`-module production build, exact served JS/CSS/world-plate identities, one complete accepted `101.06s` E2E with credits and `runtimeErrors:false`, patch/object integrity, QA restoration, owned-preview shutdown, reveal validation, and final synchronization pass.
+- **Candidate identity:** `index-BHYcpGmM.js` (`1,138,689` bytes; SHA-256 `7D580F7BC58C7E7075D0851E85917F68B7408C94770F7693E602079DA7C0C41A`) / `index-BPUl5qmV.css` (`77,814` bytes; SHA-256 `0E099AABEC927D829AEFCF81CC7304A4A65771805BE0B9D74897EE5A1BA30BF3`).
+- **Accepted stop and limitations:** normal play stops at no-action finalized `PY010-P3`; CM-30, AI-901, save, bearing, later packets, RP-013, successor, and world/access/authority effects remain closed. The inherited plate remains temporary SC-04 atmosphere, CSS has 14 bytes of cap headroom, and direct gated in-app rendered review was unavailable without Martin's storage/save. These are documented nonblocking limitations, not hidden claims.
+- **Next authority:** await Martin's explicit test-drive decision. No automation or successor shell is authorized.
 
 ## Dated cycle handoff history — W4 Coder / 2026-07-25
 

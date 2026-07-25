@@ -17,6 +17,15 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-25 / TD-001 skyscraper manual test drive — TUNE
+
+- **Observed:** all eleven roles remained sequential, produced one dedicated commit apiece, and delivered release-ready `SS-RP003-PY010-v1` without a required correction or unauthorized divergence. Ten predecessor stages through the Image Specialist commit used `92m13s`; Combat Engineer was longest at `25m59s`. Independent release passed `737/737`, all `15/15` validators, build, served identity, and one complete accepted `101.06s` E2E. The Mission Captain shell, Tactical blueprint, functional report, and reconciliation were especially useful. The ten predecessor artifacts nevertheless total roughly `3,748` lines and repeat many stable invariants. An npm-wrapper preview also exited during an incomplete E2E attempt; direct Vite launch was stable.
+- **Decision:** `TUNE`. Keep the eleven-role order, dedicated stage commits, Mission Captain `SHELL READY`, Combat Engineer `FUNCTIONALLY COMPLETE`, Intelligence Officer independent release, and exactly one reveal. On later runs, use compact delta verification for Commandant through Science after the baseline is accepted; keep the Mission Captain shell as the single complete construction contract. Add a direct Vite owned-PID/liveness recipe and a deterministic storage-free gated-state review fixture.
+- **Expected benefit:** preserve the strong ownership and release quality while reducing repeated reading/drafting, avoiding preview-lifecycle ambiguity, and enabling direct gated responsive/accessibility review without touching Martin's save.
+- **Preserved guardrails:** product direction, canon, intended ending, learning evidence, privacy, accessibility, save discipline, offline/no-authority/no-exam-guarantee, no-credit Tour, invariant world, hidden-lore prohibition, no RP-013/successor, protected user work, independent release, and exactly one reveal remain unchanged.
+- **Validation:** the next authorized manual shell should have shorter Colonel artifacts with no lost requirement, a stable first complete E2E after recorded reload preflight, and direct storage-free gated visual evidence.
+- **Rollback trigger:** compact baselines omit an authority or cause a downstream correction; the release fixture changes production behavior or weakens privacy; direct preview launch leaves an orphan or obscures a real failure; or release quality drops.
+
 ## 2026-07-18 / optimized-loop authorization — TUNE
 
 - **Observed:** the original heartbeat duplicated repository authorities; active packet/increment history was repeatedly reread; full validation and pushes were repeated more often than required; the fixed hourly wake could arrive before a long cycle completed.

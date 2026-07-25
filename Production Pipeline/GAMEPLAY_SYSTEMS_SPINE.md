@@ -1,10 +1,10 @@
 # Horizon Archive Gameplay Systems Spine
 
-## A4 current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-25
 
-- **Result:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY / REPLAY / RECOVERY GRAPH LOCKED / PROTECTED A5 NEXT`. Exact revalidated blank CM-00 accepts only fresh private-free orient into one Scene-owned CM-10 survey group. Equal A/B/sealed actions finalize only `correspondence` / `bounded_difference` / `sealed_unavailable`; all six orders converge on three replay-safe Recorded states and inactive local-review eligibility only.
-- **Actions / focus / recovery:** heading focus follows orient and exact resume; fresh inspection and idempotent replay focus that control. Seven one-hit modalities reject invalid/duplicate/combined/stale/wrong-owner/private/Tour input before consumption. Exact CM-10 resume rebuilds only its valid Recorded set; malformed/private resume clears transients to safe blank CM-00. Existing returns remain reversible; no action, focus, replay, or review eligibility becomes evidence.
-- **A5 / stop:** compose one pure non-routable storage-free survey controller plus focused graph/recovery tests. Preserve one group, accessibility/reflow, privacy/Tour isolation, frozen learning chains/no cross-credit, no authority, invariant SC-04/world/clocks, unchanged continuation/null city delta, and zero evidence. Stop at inactive `REVIEW LOCAL WORK IMAGE` eligibility before review activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority/external effect.
+- **Result:** `PASS — TD-001 / SS-RP003-PY010-v1 AS BUILT RELEASED`. The accepted normal graph is exact all-three CM-10 -> one fresh review -> blank primary -> actual-miss-only repair/blank retry or P1 -> blank closed-note retrieval -> repair/blank retry or P2 -> blank distinct transfer -> repair/blank retry or P3 -> no-action `PY010-P3`.
+- **Actions / focus / recovery:** seven modalities converge after validation-before-consumption; one owner group is mounted at a time; incomplete submit, actual miss, pass, retry, return, resume, and malformed recovery have deterministic focus. Early primary return is write-free and requires fresh review. Exact P1/P2/P3 resume reconstructs only the blank first-incomplete group or final landing.
+- **State / stop:** ordered allowlisted P0-P3 evidence is atomic; private/transient fields clear on replacement, retry, return, recovery, reload sanitation, and finalization. The SC-04 world plate and environmental clocks remain invariant. No CM-30, AI-901, save, bearing, later route, RP-013, successor, reward, access, authority, or world effect is reachable from P3.
 
 ## A4 current control — 2026-07-25
 
