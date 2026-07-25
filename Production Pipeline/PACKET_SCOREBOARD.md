@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A4 result — 2026-07-25
+
+- `RP-002 PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.
+- A5 composes only the existing protected System sanitation/restore and exact-restore-only reversible-return authorities in one pure unimported storage-free controller with focused tests, then returns `REVISE`. Stop after accepted City Threshold navigation before normal `RP-003`, later departure, credits, RP-013, successor, reward, or any world/access/authority effect.
+
 ## A3 result — 2026-07-25
 
 - `RP-002 NO REOPEN — SOLIDIFIED / VERIFIED-RESTORE FIREWALL PASS / A4 NEXT`; protected missing-gate count remains zero. Finalized Python + Responsible-AI + five-observation evidence remains exact, and reload/sanitation/downgrade/restore/focus/Tour/return cannot cross-credit it.

@@ -1,5 +1,11 @@
 # Horizon Archive Expedition Spine
 
+## A4 result — 2026-07-25
+
+- **Advance disposition / positions:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through `SC-03-40`; the ordered lead remains ten packets.
+- **Locked recovery graph:** Tour isolation -> canonical dependency sanitation -> local triplet read -> exact triplet-plus-conjunction validation -> all-three/private/transient fail-closed downgrade to deterministic first incomplete control or exact System `SC-03-50` restore with cleared work/no replay -> from exact restore only, one validated existing reversible City Threshold return. One active group, deterministic focus/resume, `>=44px`, seven modalities, privacy, zero evidence, invariant world, and no authority remain exact.
+- **A5 / hard stop:** implement only one pure unimported storage-free protected composition and focused proof, returning `REVISE`. Add no copy, state, art, persistence rule, normal integration, reward, world effect, normal `RP-003`, later departure, credits, RP-013, successor, access, authority, or external action.
+
 ## A1 result — 2026-07-25
 
 - **Advance disposition / positions:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through `SC-03-40`; the ordered lead remains ten packets.

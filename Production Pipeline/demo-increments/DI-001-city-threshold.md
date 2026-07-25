@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## A4 result — 2026-07-25
+
+- **Disposition:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`.
+- **Protected graph:** quiet accepted System `SC-03-40` re-entry performs Tour isolation, canonical dependency sanitation, adapter read, then exact triplet-plus-conjunction validation in that order. Invalid state clears all three fields and private/transient work before mounting only System `sanitation_downgrade` and deterministic first-incomplete heading/control; exact valid state mounts only System `verified_restore / SC-03-50`, clears work, focuses heading then saved controls, and replays nothing.
+- **Return / stop:** only exact revalidated `SC-03-50` exposes the existing separate `>=44px` seven-modality one-hit `RETURN TO CITY THRESHOLD`. It is adapter-free reversible navigation with zero evidence, credit, checkpoint, reward, access, authority, or world meaning. Stop after accepted City Threshold return before normal `RP-003`, later departure, credits, RP-013, successor, or external effect.
+- **A5 next:** compose the existing authorities in one pure unimported storage-free protected controller; prove validation-before-consumption, fail-closed clearing/focus, exact restore/no replay, return rejection/acceptance, deterministic resume, privacy, Tour, accessibility, invariant bytes, and normal non-integration. Add no copy, state, art, persistence rule, or route/world effect; return `REVISE`.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / VERIFIED-RESTORE FIREWALL PASS / A4 NEXT`. Finalized Python, finalized Responsible-AI, and five finalized observations remain the sole strict reconstruction conjunction. Reload, sanitation, downgrade, restore, focus/no-replay, responsive presentation, Tour, and reversible return are zero evidence/credit/authority and cannot cross-credit.

@@ -1,5 +1,11 @@
 # Horizon Archive Story Rail Map
 
+## A4 result — 2026-07-25
+
+- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets. `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`.
+- **Protected rail graph:** quiet System `SC-03-40` -> re-entry sanitation -> all-three/private/transient downgrade with deterministic first-incomplete focus or exact System no-replay `verified_restore / SC-03-50` -> only exact restore may use the existing reversible accepted City Threshold return. Validation order, one active group, focus/resume, `>=44px`, seven modalities, Tour isolation, privacy, zero evidence, and invariant world are locked.
+- **Rail stop:** accepted City Threshold return. A5 adds only a pure non-routable protected composition/tests and returns `REVISE`; no normal `RP-003`, later departure, credits, RP-013, successor, route reward, world response, access, identity, authority, or external effect exists beyond this edge.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002` through `SC-03-40`; the ordered lead remains ten packets and the rail does not extend.

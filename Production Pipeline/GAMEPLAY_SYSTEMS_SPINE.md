@@ -1,5 +1,12 @@
 # Horizon Archive Gameplay Systems Spine
 
+## A4 current control — 2026-07-25
+
+- **Result:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`. The graph is one protected recovery seam: quiet accepted System `SC-03-40` -> reload/re-entry sanitation -> complete downgrade or exact no-replay restore -> exact-restore-only reversible City Threshold navigation.
+- **Validation / branches:** isolate Tour; sanitize canonical predecessor/observation/prerequisite/learning dependencies; read local progression; then require exact triplet plus the complete unchanged conjunction. Invalid, stale, partial, extra, forged, private, or `review_required` state clears all three fields plus private/transient work before mounting only System `sanitation_downgrade / progression={}` and deterministic first-incomplete heading/control. Exact valid state mounts only System `verified_restore / SC-03-50`, clears work/transients, focuses heading then saved controls, and replays nothing.
+- **Return / recovery:** only exact revalidated `SC-03-50` exposes the existing separate `RETURN TO CITY THRESHOLD`. One fresh private-free seven-modality Pilot hit is validated before token consumption/dispatch; invalid intent spends no future token. Accepted return calls no adapter and creates no evidence, checkpoint, reward, access, authority, route unlock, or world effect.
+- **A5 / stop:** compose one pure unimported storage-free protected controller and focused tests from existing authorities. Preserve one active group, `>=44px`, deterministic resume/focus, responsive/accessibility parity, privacy, no-credit Tour, offline/no-authority/no-exam-guarantee, invariant world/clocks, unchanged continuation/null city delta, zero evidence, and normal non-integration. Stop after accepted City Threshold return before normal `RP-003`, later departure, credits, RP-013, successor, or external effect; return `REVISE`.
+
 ## Current control — 2026-07-25
 
 - **Release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Exact sanitized review -> fresh private-free prepare -> contained confirmation -> inert hold or write-free cancel/Escape review return is accepted with one active group and deterministic focus.

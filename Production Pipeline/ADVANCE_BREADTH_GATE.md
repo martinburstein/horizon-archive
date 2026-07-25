@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## A4 result — 2026-07-25
+
+- **Gate:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action remains `CONVERGE + MERGE + TRIM`.
+- **Bounded graph:** compose only existing Tour isolation, dependency sanitation, exact triplet validation, all-three/private/transient downgrade clearing with deterministic focus, exact no-replay `SC-03-50` restore, and exact-restore-only reversible City Threshold navigation. A5 may add one pure protected controller/tests but no copy, visual state, micro-state, art, persistence rule, normal integration, evidence, credit, reward, world effect, normal `RP-003`, RP-013, or successor; return `REVISE`.
+
 ## A1 result — 2026-07-25
 
 - **Gate:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action is `CONVERGE + MERGE + TRIM`.
