@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## W1 result — 2026-07-25
+
+- **Disposition:** `RP002-P1-023 P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted normal `comparison_complete / SC-03-40` is a quiet no-action System group, but normal App/route/UI has no reload/re-entry sanitation factory, deterministic downgrade or `verified_restore / SC-03-50` phase, focus authority, or exact-restore City Threshold return. The protected A5 graph is not integrated.
+- **Evidence boundary:** accepted `index-C7qPZ0yi.js` / `index-BPvBS70Z.css` remains byte-stable; served save/restore markers are present and normal player-path tests pass `45/45`. Gated live traversal would require browser save use, so storage/save remained untouched and protected restore code/tests were not inspected.
+- **Exact W2 edge:** compose only the existing protected restore authority through automatic normal re-entry. Tour precedes adapter access; dependencies precede exact triplet validation; every non-exact/private state clears the triplet to empty `sanitation_downgrade` and deterministic first-incomplete focus; exact valid state alone reaches no-replay `verified_restore / SC-03-50`, clears work, and focuses heading then saved controls; exact restore alone offers one fresh one-hit adapter-free return to accepted City Threshold. Preserve privacy, replay-free resume, one group, responsive/accessibility, invariant world, zero evidence, unchanged continuation/null city delta, and no successor. Stop at accepted City Threshold before normal RP-003, departure, credits, RP-013, successor, or world/access/authority effects.
+
 ## A5 implementation - protected verified restore composition
 
 - **Disposition:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. The new unimported pure controller composes only accepted `SC-03-40`, bounded dependency/triplet sanitation, exact `sanitation_downgrade` or `verified_restore / SC-03-50`, existing focus, and exact-restore-only reversible City Threshold navigation. It adds no normal route, storage rule, copy, art, evidence, reward, or world effect.

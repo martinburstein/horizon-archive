@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W1 result — 2026-07-25
+
+- `RP002-P1-023 P1 OPEN — W2 BUG-REPAIR NEXT`. Accepted normal `SC-03-40` remains a stable quiet no-action System acknowledgement on unchanged `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`, but normal App/route/UI cannot automatically sanitize on reload/re-entry or mount deterministic downgrade, exact `SC-03-50` restore, or the restore-only reversible return.
+- Normal player-path `45/45`, HTTP/assets/hashes, and required served markers pass; Martin's browser storage/save and the protected controller/tests remained untouched. W2 integrates only the existing protected authority and stops at the accepted City Threshold before normal RP-003 or any later rail/world/authority state.
+
 ## A5 result - protected verified restore controller
 
 - `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. Pure unimported composition now proves Tour-before-adapter isolation, dependency-before-record sanitation, exact all-three clearing/downgrade or exact no-replay `SC-03-50` restore, deterministic focus/resume, and exact-restore-only adapter-free return.
