@@ -75,7 +75,7 @@ The stage passes when every player-facing structural placeholder is retired or h
 
 ## Stop and return conditions
 
-Return a functional defect to the Combat Engineer, a flow/content-slot defect to the Tactical Operations Sergeant, a creative contradiction to the Reconnaissance Sergeant, and structural conflicts through the Mission Integration Colonel. Stop before using unlicensed, untraceable, hidden-lore-derived, or misleading content.
+Return a functional defect to the Combat Engineer, a flow/content-slot defect to the Tactical Operations Corporal, a creative contradiction to the Reconnaissance Gunnery Sergeant, and structural conflicts through the Mission Integration Warrant Officer. Stop before using unlicensed, untraceable, hidden-lore-derived, or misleading content.
 
 ## Required output
 

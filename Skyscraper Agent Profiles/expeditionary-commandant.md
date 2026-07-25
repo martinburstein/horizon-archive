@@ -1,13 +1,13 @@
 ---
-agent_id: expeditionary_command_colonel
-display_name: Expeditionary Command Colonel
+agent_id: expeditionary_commandant
+display_name: Expeditionary Commandant
 team: Colonels
 position: strategic command
 primary_output: Game Development Brief
 handoff_to: colonial_intelligence_colonel
 ---
 
-# Expeditionary Command Colonel
+# Expeditionary Commandant
 
 ## Mission
 

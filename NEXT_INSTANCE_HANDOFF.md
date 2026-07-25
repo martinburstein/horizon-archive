@@ -79,6 +79,6 @@ The test evaluates workflow quality as well as product output: stage duration, a
 
 ## Exact next action
 
-Begin the manual `TD-001` test drive with the **Expeditionary Command Colonel**.
+Begin the manual `TD-001` test drive with the **Expeditionary Commandant**.
 
-The Expeditionary Command Colonel performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to the Colonial Intelligence Colonel.
+The Expeditionary Commandant performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to the Colonial Intelligence Colonel.

@@ -28,14 +28,14 @@ Never use an archived exact-next-action edge as current authority.
 ## Canonical sequence
 
 ```text
-EXPEDITIONARY COMMAND COLONEL
+EXPEDITIONARY COMMANDANT
 COLONIAL INTELLIGENCE COLONEL
-OPERATIONS PLANNING COLONEL
-SCIENCE & TECHNICAL READINESS COLONEL
-MISSION INTEGRATION COLONEL
+OPERATIONS PLANNING MAJOR
+SCIENCE & TECHNICAL READINESS CAPTAIN
+MISSION INTEGRATION WARRANT OFFICER
           ↓ SHELL READY
-RECONNAISSANCE SERGEANT
-TACTICAL OPERATIONS SERGEANT
+RECONNAISSANCE GUNNERY SERGEANT
+TACTICAL OPERATIONS CORPORAL
 COMBAT ENGINEER
 FIELD QUARTERMASTER
 COMBAT IMAGING & ILLUMINATION SPECIALIST
@@ -49,13 +49,13 @@ Run roles strictly sequentially. A downstream role may not begin until the prece
 
 The first foundation run establishes or confirms the whole-building baseline:
 
-- The Expeditionary Command Colonel establishes the product brief.
+- The Expeditionary Commandant establishes the product brief.
 - The Colonial Intelligence Colonel establishes the world and narrative masterplan.
-- The Operations Planning Colonel confirms the campaign floor stack.
-- The Science & Technical Readiness Colonel confirms the global viability envelope.
-- The Mission Integration Colonel issues the first Playable Slice Shell.
+- The Operations Planning Major confirms the campaign floor stack.
+- The Science & Technical Readiness Captain confirms the global viability envelope.
+- The Mission Integration Warrant Officer issues the first Playable Slice Shell.
 
-On later runs, the Expeditionary Command Colonel and Colonial Intelligence Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit After-Action Intelligence Officer recommendation approved for integration.
+On later runs, the Expeditionary Commandant and Colonial Intelligence Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit After-Action Intelligence Officer recommendation approved for integration.
 
 ## Core artifacts
 
@@ -67,7 +67,7 @@ The workflow uses five artifact layers:
    - campaign floor stack;
    - global technical, learning, privacy, accessibility, save, offline, and performance constraints.
 2. **Playable Slice Shell**
-   - one versioned construction contract issued by the Mission Integration Colonel.
+   - one versioned construction contract issued by the Mission Integration Warrant Officer.
 3. **Marine production package**
    - creative treatment;
    - experience blueprint;
@@ -81,7 +81,7 @@ The workflow uses five artifact layers:
 
 ## Playable Slice Shell contract
 
-Every Mission Integration Colonel shell must define:
+Every Mission Integration Warrant Officer shell must define:
 
 - shell ID, version, campaign position, and source authorities;
 - player-facing purpose and emotional promise;
@@ -104,13 +104,13 @@ The Marines may request a variance but may never silently alter the shell.
 
 | Gate | Owner | Required result |
 |---|---|---|
-| `VISION BASELINE` | Expeditionary Command Colonel | Product promise, audience, scope, quality, and priorities are evaluable |
+| `VISION BASELINE` | Expeditionary Commandant | Product promise, audience, scope, quality, and priorities are evaluable |
 | `WORLD BASELINE` | Colonial Intelligence Colonel | Canon, story arc, identity, and reveal boundaries are coherent |
-| `FLOOR STACK READY` | Operations Planning Colonel | Selected slice has exact campaign position and dependencies |
-| `VIABILITY READY` | Science & Technical Readiness Colonel | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
-| `SHELL READY` | Mission Integration Colonel | One conflict-free versioned construction contract exists |
-| `CREATIVE LOCK` | Reconnaissance Sergeant | The slice has a compelling interpretation inside the shell |
-| `EXPERIENCE READY` | Tactical Operations Sergeant | Every state, action, focus target, recovery route, and responsive layout is specified |
+| `FLOOR STACK READY` | Operations Planning Major | Selected slice has exact campaign position and dependencies |
+| `VIABILITY READY` | Science & Technical Readiness Captain | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
+| `SHELL READY` | Mission Integration Warrant Officer | One conflict-free versioned construction contract exists |
+| `CREATIVE LOCK` | Reconnaissance Gunnery Sergeant | The slice has a compelling interpretation inside the shell |
+| `EXPERIENCE READY` | Tactical Operations Corporal | Every state, action, focus target, recovery route, and responsive layout is specified |
 | `FUNCTIONALLY COMPLETE` | Combat Engineer | The complete behavior works and is proportionately tested |
 | `CONTENT COMPLETE` | Field Quartermaster | Player-facing structural placeholders are retired or explicitly dispositioned |
 | `PRESENTATION COMPLETE` | Combat Imaging & Illumination Specialist | The slice is polished across required visual, audio, responsive, and accessible states |
@@ -130,13 +130,13 @@ The discovering role records the variance immediately. The After-Action Intellig
 
 ## Return routing
 
-- Product-purpose conflict → Expeditionary Command Colonel.
+- Product-purpose conflict → Expeditionary Commandant.
 - Canon, mystery, world, or narrative conflict → Colonial Intelligence Colonel.
-- Campaign position, dependency, pacing, route, or checkpoint conflict → Operations Planning Colonel.
-- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Science & Technical Readiness Colonel.
-- Shell ambiguity or cross-discipline conflict → Mission Integration Colonel.
-- Emotional treatment conflict → Reconnaissance Sergeant.
-- Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Sergeant.
+- Campaign position, dependency, pacing, route, or checkpoint conflict → Operations Planning Major.
+- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Science & Technical Readiness Captain.
+- Shell ambiguity or cross-discipline conflict → Mission Integration Warrant Officer.
+- Emotional treatment conflict → Reconnaissance Gunnery Sergeant.
+- Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Corporal.
 - Functional defect → Combat Engineer.
 - Content or major asset defect → Field Quartermaster.
 - Presentation defect → Combat Imaging & Illumination Specialist.
@@ -161,7 +161,7 @@ Do not claim a live visual, save, assistive-technology, or gated-state result wi
 - One bounded integration-sized contribution per stage.
 - One dedicated commit per stage, including an honest documented no-change checkpoint when the pass is genuinely read-only.
 - Preserve unrelated work and stage only intended files.
-- Push at the Mission Integration Colonel's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and After-Action Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
+- Push at the Mission Integration Warrant Officer's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and After-Action Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
 - Verify `HEAD == origin/main` at every push gate.
 - No scheduled automation is active. Test drives and future runs begin only from Martin's explicit instruction.
 

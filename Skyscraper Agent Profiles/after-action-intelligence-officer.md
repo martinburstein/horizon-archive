@@ -4,7 +4,7 @@ display_name: After-Action Intelligence Officer
 team: Marines
 position: independent after-action intelligence
 primary_output: As-Built Reconciliation Package and synchronized next handoff
-handoff_to: next authorized Expeditionary Command Colonel verification or routed correction owner
+handoff_to: next authorized Expeditionary Commandant verification or routed correction owner
 ---
 
 # After-Action Intelligence Officer

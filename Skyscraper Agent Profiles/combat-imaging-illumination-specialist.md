@@ -75,7 +75,7 @@ The stage passes when the slice feels intentional and premium across required la
 
 ## Stop and return conditions
 
-Return functional defects to the Combat Engineer and content defects to the Field Quartermaster. Return flow problems to the Tactical Operations Sergeant. Route shell conflicts through the Mission Integration Colonel. Record `HOLD` if safe live review or required image input is unavailable and deterministic evidence cannot support the claim.
+Return functional defects to the Combat Engineer and content defects to the Field Quartermaster. Return flow problems to the Tactical Operations Corporal. Route shell conflicts through the Mission Integration Warrant Officer. Record `HOLD` if safe live review or required image input is unavailable and deterministic evidence cannot support the claim.
 
 ## Required output
 

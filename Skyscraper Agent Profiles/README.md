@@ -17,13 +17,13 @@ Before each stage, read the selected profile in full, the immediately preceding 
 
 | Team | Stable agent ID | Military title | Profile |
 |---|---|---|---|
-| Colonels | `expeditionary_command_colonel` | Expeditionary Command Colonel | `expeditionary-command-colonel.md` |
+| Colonels | `expeditionary_commandant` | Expeditionary Commandant | `expeditionary-commandant.md` |
 | Colonels | `colonial_intelligence_colonel` | Colonial Intelligence Colonel | `colonial-intelligence-colonel.md` |
-| Colonels | `operations_planning_colonel` | Operations Planning Colonel | `operations-planning-colonel.md` |
-| Colonels | `science_technical_readiness_colonel` | Science & Technical Readiness Colonel | `science-technical-readiness-colonel.md` |
-| Colonels | `mission_integration_colonel` | Mission Integration Colonel | `mission-integration-colonel.md` |
-| Marines | `reconnaissance_sergeant` | Reconnaissance Sergeant | `reconnaissance-sergeant.md` |
-| Marines | `tactical_operations_sergeant` | Tactical Operations Sergeant | `tactical-operations-sergeant.md` |
+| Colonels | `operations_planning_major` | Operations Planning Major | `operations-planning-major.md` |
+| Colonels | `science_technical_readiness_captain` | Science & Technical Readiness Captain | `science-technical-readiness-captain.md` |
+| Colonels | `mission_integration_warrant_officer` | Mission Integration Warrant Officer | `mission-integration-warrant-officer.md` |
+| Marines | `reconnaissance_gunnery_sergeant` | Reconnaissance Gunnery Sergeant | `reconnaissance-gunnery-sergeant.md` |
+| Marines | `tactical_operations_corporal` | Tactical Operations Corporal | `tactical-operations-corporal.md` |
 | Marines | `combat_engineer` | Combat Engineer | `combat-engineer.md` |
 | Marines | `field_quartermaster` | Field Quartermaster | `field-quartermaster.md` |
 | Marines | `combat_imaging_illumination_specialist` | Combat Imaging & Illumination Specialist | `combat-imaging-illumination-specialist.md` |

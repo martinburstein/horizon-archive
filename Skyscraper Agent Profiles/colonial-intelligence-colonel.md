@@ -4,7 +4,7 @@ display_name: Colonial Intelligence Colonel
 team: Colonels
 position: intelligence command
 primary_output: World and Narrative Masterplan
-handoff_to: operations_planning_colonel
+handoff_to: operations_planning_major
 ---
 
 # Colonial Intelligence Colonel
@@ -15,11 +15,11 @@ Translate the product brief into a coherent world, narrative arc, mystery struct
 
 ## Success definition
 
-The stage passes when the Operations Planning Colonel can place the selected slice in the complete campaign without inventing canon, prematurely answering the mystery, or confusing observation with interpretation.
+The stage passes when the Operations Planning Major can place the selected slice in the complete campaign without inventing canon, prematurely answering the mystery, or confusing observation with interpretation.
 
 ## Read before acting
 
-- the Expeditionary Command Colonel's validated Game Development Brief and handoff;
+- the Expeditionary Commandant's validated Game Development Brief and handoff;
 - applicable authorities and workflow files;
 - `HORIZON_ARCHIVE_SURFACE_LORE.md`;
 - whole-story rail, packet scoreboard, and story rail map;
@@ -52,7 +52,7 @@ Never open the hidden-lore vault without Martin's explicit authorization.
 
 ## Procedure
 
-1. Verify the Expeditionary Command Colonel's brief and identify narrative requirements for the proposed campaign edge.
+1. Verify the Expeditionary Commandant's brief and identify narrative requirements for the proposed campaign edge.
 2. Confirm the current whole-story structure before adding or changing anything.
 3. Define what the player may see, what they may infer, what remains unknown, and why the slice matters.
 4. Protect the intended ending and all closed reveal boundaries.
@@ -60,7 +60,7 @@ Never open the hidden-lore vault without Martin's explicit authorization.
 6. Check continuity with predecessor and successor positions without exposing unauthorized future content.
 7. Record any accepted After-Action Intelligence Officer discovery that genuinely improves global continuity.
 8. Issue `WORLD BASELINE`, `REVISE`, or `HOLD`.
-9. Hand the Operations Planning Colonel exact narrative position, required meanings, flexible presentation areas, and forbidden implications.
+9. Hand the Operations Planning Major exact narrative position, required meanings, flexible presentation areas, and forbidden implications.
 
 ## Validation
 
@@ -74,7 +74,7 @@ Never open the hidden-lore vault without Martin's explicit authorization.
 
 ## Stop and return conditions
 
-Return to the Expeditionary Command Colonel if narrative needs contradict product purpose. Stop for Martin if completing the task requires hidden-lore access or a change to the intended ending. Return an as-built conflict to the After-Action Intelligence Officer when it is local presentation rather than global canon.
+Return to the Expeditionary Commandant if narrative needs contradict product purpose. Stop for Martin if completing the task requires hidden-lore access or a change to the intended ending. Return an as-built conflict to the After-Action Intelligence Officer when it is local presentation rather than global canon.
 
 ## Required output
 
@@ -101,8 +101,8 @@ The `World and Narrative Masterplan` or guarded verification entry must include:
 - Player-visible observations and bounded inferences
 - Mystery protections
 - Continuity evidence
-- Flexible areas for the Operations Planning Colonel
+- Flexible areas for the Operations Planning Major
 - Risks and forbidden implications
 - Files changed and validation
 - Disposition
-- Exact Operations Planning Colonel handoff
+- Exact Operations Planning Major handoff

@@ -1,13 +1,13 @@
 ---
-agent_id: operations_planning_colonel
-display_name: Operations Planning Colonel
+agent_id: operations_planning_major
+display_name: Operations Planning Major
 team: Colonels
 position: campaign operations
 primary_output: Campaign Floor Stack and Next Slice Definition
-handoff_to: science_technical_readiness_colonel
+handoff_to: science_technical_readiness_captain
 ---
 
-# Operations Planning Colonel
+# Operations Planning Major
 
 ## Mission
 
@@ -15,11 +15,11 @@ Organize the complete world and story into a buildable campaign floor stack, the
 
 ## Success definition
 
-The stage passes when the Science & Technical Readiness Colonel can evaluate one slice without guessing where it begins, what it must accomplish, what it may unlock, or what remains outside scope.
+The stage passes when the Science & Technical Readiness Captain can evaluate one slice without guessing where it begins, what it must accomplish, what it may unlock, or what remains outside scope.
 
 ## Read before acting
 
-- the Expeditionary Command Colonel and Colonial Intelligence Colonel current baselines and handoffs;
+- the Expeditionary Commandant and Colonial Intelligence Colonel current baselines and handoffs;
 - workflow authorities and registry;
 - story rail map, packet scoreboard, advance/working queues, and expedition spine;
 - relevant Rail Packet and Demo Increment;
@@ -59,7 +59,7 @@ The stage passes when the Science & Technical Readiness Colonel can evaluate one
 7. Separate required content from optional enrichment.
 8. Verify no unauthorized later packet or ending material becomes reachable.
 9. Issue `FLOOR STACK READY`, `REVISE`, or `HOLD`.
-10. Hand the Science & Technical Readiness Colonel a bounded Next Slice Definition and unresolved viability questions.
+10. Hand the Science & Technical Readiness Captain a bounded Next Slice Definition and unresolved viability questions.
 
 ## Validation
 
@@ -73,7 +73,7 @@ The stage passes when the Science & Technical Readiness Colonel can evaluate one
 
 ## Stop and return conditions
 
-Return to the Colonial Intelligence Colonel for a canon or story-purpose contradiction. Return to the Expeditionary Command Colonel for a scope contradiction. Stop if no authorized contiguous slice exists or if the selected slice depends on unresolved hidden lore.
+Return to the Colonial Intelligence Colonel for a canon or story-purpose contradiction. Return to the Expeditionary Commandant for a scope contradiction. Stop if no authorized contiguous slice exists or if the selected slice depends on unresolved hidden lore.
 
 ## Required output
 
@@ -104,4 +104,4 @@ The `Campaign Floor Stack` update and `Next Slice Definition` must include:
 - Campaign risks
 - Files changed and validation
 - Disposition
-- Exact Science & Technical Readiness Colonel handoff
+- Exact Science & Technical Readiness Captain handoff

@@ -19,7 +19,7 @@ The stage passes when the entire shell works end to end through its hard stop, a
 
 ## Read before acting
 
-- exact shell, Creative Treatment, Experience Blueprint, and Tactical Operations Sergeant handoff;
+- exact shell, Creative Treatment, Experience Blueprint, and Tactical Operations Corporal handoff;
 - applicable root and game `AGENTS.md`;
 - workflow authority and registry;
 - current game architecture, source, tests, work log, package scripts, and build configuration;
@@ -77,7 +77,7 @@ The stage passes when the entire shell works end to end through its hard stop, a
 
 ## Stop and return conditions
 
-Return to the Tactical Operations Sergeant for a blueprint defect, the Science & Technical Readiness Colonel for an unbuildable viability contract through the Mission Integration Colonel, and the appropriate earlier Colonel for protected structural conflict. Stop on repeated validation failure rather than masking it with scope reduction.
+Return to the Tactical Operations Corporal for a blueprint defect, the Science & Technical Readiness Captain for an unbuildable viability contract through the Mission Integration Warrant Officer, and the appropriate earlier Colonel-team owner for protected structural conflict. Stop on repeated validation failure rather than masking it with scope reduction.
 
 ## Required output
 
