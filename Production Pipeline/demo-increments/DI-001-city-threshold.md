@@ -7,10 +7,10 @@
 - **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
 
-## Active cycle handoff — W2 Coder / 2026-07-25
+## Active cycle handoff — W3 Aesthetic / 2026-07-25
 
-- **Disposition:** `RP003-P1-002 RESOLVED — NORMAL CM-10 OBSERVATION LOOP / W3 NEXT`. Fresh sanitized orient now replaces accepted blank CM-00 with one Scene CM-10 group; A/B/sealed finalize separate matching IDs in any order, remain textually Recorded on replay, and all three alone reveal disabled/non-dispatchable `REVIEW LOCAL WORK IMAGE — Eligible`.
-- **Evidence / exact W3 edge:** repaired `20/20`; related `106/106`; full `714/714`; both validator self-tests; build; HTTP/served identity; hard-stop markers; immutable inherited image; and patch gates pass on `index-DY0O1g9z.js` / unchanged `index-JTpP97Cx.css`. W3 reviews only wide/narrow/`200%` one-group hierarchy, Available/Recorded states, heading/action focus, `>=44px`, natural reflow, unchanged world plate, and inactive Eligible review. Preserve returns, sanitation, privacy/Tour, transient zero evidence, invariant SC-04, unchanged continuation/null delta, and the stop before activation, CM-20, learning, save, later packets, successor, or world/access/authority effects.
+- **Disposition / exact W4 scope:** `RP003-AESTH-020 P2 OPEN — TEXTUAL AVAILABLE STATE MISSING / W4 AESTHETIC-POLISH NEXT`. Render only the existing observation model's status text: every unrecorded CM-10 control must visibly show `— Available`, its matching recorded control `— Recorded`; preserve disabled/non-dispatchable Eligible review after all three.
+- **Evidence / hard stop:** served W2 `index-DY0O1g9z.js` / `index-JTpP97Cx.css` matches `dist`; focused normal-entry `10/10` passes. Preserve one group, equal A/B/sealed hierarchy, focus, reflow, `>=44px`, non-color/forced-color/reduced-motion parity, immutable inherited world, privacy/Tour, transient zero evidence, returns, continuation/null delta, and every review-activation/CM-20/learning/save/later-rail/world/access/authority stop.
 
 ## W3 result — 2026-07-25
 

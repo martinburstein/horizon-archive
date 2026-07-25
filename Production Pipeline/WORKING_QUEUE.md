@@ -1,9 +1,9 @@
 # Working Queue
 
-## Active cycle handoff — W2 Coder / 2026-07-25
+## Active cycle handoff — W3 Aesthetic / 2026-07-25
 
-- **Closed / next:** `RP003-P1-002 RESOLVED — NORMAL CM-10 OBSERVATION LOOP / W3 AESTHETIC REVIEW NEXT`. The unchanged protected survey authority is now transiently composed after exact blank CM-00: fresh orient mounts one Scene group; A/B/sealed record separate IDs in any order; replay is idempotent; and all three alone reveal disabled/non-dispatchable Eligible local review.
-- **Evidence / W3 task:** repaired `20/20`; related `106/106`; full `714/714`; RP-003/RP-002 self-tests; build; strict `4173`; HTTP/served-dist identity; CM-10/A/B/sealed/review markers present and CM-20/CM-50 absent; image and patch gates pass on `index-DY0O1g9z.js` / `index-JTpP97Cx.css`. Review only representative wide/narrow/`200%` hierarchy, Available/Recorded non-color states, focus, `>=44px`, natural reflow, unchanged inherited world, and disabled Eligible review. Preserve returns, sanitation, privacy/Tour, transient zero evidence, invariant world/null delta, and every activation/learning/save/later-rail/authority hard stop.
+- `RP003-AESTH-020 P2 OPEN — W4 NEXT`: CM-10's model exposes `Available`/`Recorded`, but the rendered initial actions omit `— Available`. W4 renders only those existing labels, preserving matching `— Recorded`, replay focus, and all-three disabled/non-dispatchable Eligible review.
+- Use served W2 `index-DY0O1g9z.js` / `index-JTpP97Cx.css` and focused `10/10` as the baseline. Preserve one group, source-order wide/narrow/`200%` reflow, `>=44px`, non-color/forced-color/reduced-motion focus, immutable inherited world, privacy/Tour/transient zero evidence, reversible returns, continuation/null delta, and the hard stop before activation, CM-20, learning, save, later rail, or world/access/authority effects.
 
 ## W3 result / W4 next — 2026-07-25
 
