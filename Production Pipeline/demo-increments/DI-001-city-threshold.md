@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W4 result — 2026-07-25
+
+- `RP002-AESTH-016 VERIFIED / NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact presentation residual, left every production/style/art/test artifact unchanged, and cache-bypass refreshed the same candidate.
+- Focused `68/68`, RP-002/L-02-02 self-tests, production build, civic-master and seven-reference isolation, unchanged W2 production diff, exact served byte identity/markers/hashes, one strict `4173` listener, and patch gates pass on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. The full `679/679` suite remains W2 evidence and was not redundantly rerun.
+- Coordinator independently validates the exact review/prepare/contained-confirmation/cancel graph and full release gates. Confirmation visible remains the hard stop before commit dispatch, adapter/persistence, failure/retry/restore, completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## W3 result — 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED — CLEAN / W4 VERIFICATION ONLY`. W2's contained confirmation is visually coherent: the two equal review leaves remain distinct; preparation is a `>=44px` Pilot action before separate returns; atomic confirmation carries the canonical sentence as heading, visibly disabled commit intent, and separate cancel. Source/CSS evidence confirms one-active-group replacement, deterministic focus, natural narrow/effective-`200%` reflow, non-color/forced-color/reduced-motion parity, invariant civic crop, and no raster integration.

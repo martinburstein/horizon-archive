@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W4 result — 2026-07-25
+
+- `RP002-AESTH-016 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact residual and left production/style/art/test/runtime unchanged. Focused `68/68`, both applicable validators, build, immutable civic master, seven-reference no-runtime leakage, unchanged W2 production diff, exact served HTTP/byte identity/markers/hashes, one strict `4173` listener, cache-bypassed final refresh, and patch gates pass.
+- Candidate remains `index-xpeE9Qlm.js` (`1,060,272` bytes; SHA-256 `F506B573CA3BC875CBD922E57CB4DD3F4DC7457D5C97EC675F1A3097C5E1BFE9`) / `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Coordinator independently runs the full release gate; confirmation visible remains the hard stop before commit dispatch, adapter/persistence, retry/restore, completion, later packets, RP-013, successor, or world/access/authority effects.
+
 ## W3 result - 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED - CLEAN / W4 VERIFICATION ONLY` on W2 `5f55055`. Source/CSS/served-bundle evidence confirms coherent contained confirmation presentation, action sizing, owner/focus replacement, narrow/`200%` reflow, non-color/forced-color/reduced-motion parity, invariant crop, raster isolation, and hard-stop truthfulness. Focused normal-route presentation coverage passes `45/45`; gated Browser evidence is intentionally not claimed because campaign storage/save was not used.

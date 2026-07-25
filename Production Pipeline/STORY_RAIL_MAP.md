@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W4 result — 2026-07-25
+
+- `RP002-AESTH-016 VERIFIED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on accepted `RP-002 / RP002-P1-020 + RP002-AESTH-015` with the unchanged W2 prepare-save candidate now through W4 verification. The ordered lead remains ten packets and the rail does not extend.
+- W4 changed no production artifact after reproducing no exact residual. Coordinator owns the independent release decision for exact review -> prepare -> contained confirmation / write-free cancel return. Commit/persistence/completion, `RP-003+`, RP-013, successor, and world/access/authority effects remain closed.
+
 ## W3 result - 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED - CLEAN / W4 VERIFICATION ONLY`. Team 1 remains complete at `RP-012`; Team 2 remains on accepted `RP-002 / RP002-P1-020 + RP002-AESTH-015` with its current W2 prepare-save candidate under review. The ordered lead remains ten packets and the rail does not extend.
