@@ -35,8 +35,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / mode:** `NO REOPEN — SOLIDIFIED / RP-003 CM-10 FIREWALL PASS / A4 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
-- **Exact A4 edge:** retain separate orientation and A/B/sealed observations; only fresh deliberate action finalizes its matching observation. Replay/order/focus/reflow/resume/presentation and review eligibility remain zero observation/Python/AI-901/mastery/save/reward/authority/world credit; all three permit only inactive local-review eligibility. Preserve frozen chains, no cross-credit, privacy clearing, Tour isolation, and accessibility/invariant-world limits.
+- **Disposition / mode:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
+- **Exact A5 edge:** one pure protected controller must compose fresh orient, one Scene-owned CM-10 group, any-order A/B/sealed matching finalization, replay-safe Recorded states, deterministic focus/resume/recovery, and inactive local-review eligibility only. Preserve frozen chains, no cross-credit, privacy clearing, Tour isolation, accessibility, and invariant-world limits.
 - **Hard stop:** add no lore/copy/art, prompt, answer, score, micro-seam, review activation, CM-20, learning/evaluation/remediation, save, production-art integration, route reward, world response, RP-004, RP-013, or successor.
 
 ## Current control — 2026-07-25

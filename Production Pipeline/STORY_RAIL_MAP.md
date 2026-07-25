@@ -94,8 +94,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `NO REOPEN — SOLIDIFIED / RP-003 CM-10 FIREWALL PASS / A4 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003 CM-10`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
-- **Exact A4 edge / rail stop:** retain separate orientation and A/B/sealed IDs; fresh deliberate action finalizes only its match. Presentation, replay, order, focus, reflow, resume, and review eligibility are zero observation/Python/AI-901/mastery/save/reward/authority/world credit; only all three make inactive `REVIEW LOCAL WORK IMAGE` eligible.
+- **Disposition / positions:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Exact A5 edge / rail stop:** the protected rail extends only blank CM-00 -> fresh orient -> one Scene CM-10 group -> any-order matching A/B/sealed observations -> Recorded replay -> inactive local-review eligibility. Invalid/Tour/private input fails closed or preserves the revalidated safe group; frozen learning chains, returns, focus, and invariant continuity remain separate.
 - **Hard stop:** do not activate review or reach CM-20, Python/AI-901 learning/evaluation/remediation, save, later RP-003, RP-004, RP-013, successor, or any reward/world/access/authority/external effect. The rail does not extend.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017

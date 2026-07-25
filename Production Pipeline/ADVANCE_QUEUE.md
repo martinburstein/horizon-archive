@@ -7,9 +7,9 @@
 
 ## A4 result — 2026-07-25
 
-- `RP-003 PASS — BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. Exact verified RP-002 completion at accepted City Threshold sanitizes predecessor/Tour/privacy/transient material into one blank Scene-owned SC-04 CM-00 group; every invalid/Tour/private/partial/stale/forged/combined/contaminated input clears transients and fails closed to exact RP-002.
-- CM-00 allows only orient, sealed-boundary inspection, RP-002 return, and City Threshold return. It preserves heading-first deterministic resume, validated seven-modality/one-hit activation, reversible returns, privacy, zero evidence/authority, unchanged continuation/null city delta, and invariant world. No CM-10 observation or later packet state is opened.
-- A5 owns one pure protected controller and focused checks only; normal integration remains closed.
+- `RP-003 PASS — CM-10 ONE-GROUP SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`. From accepted blank CM-00, only one fresh private-free orient mounts Scene-owned CM-10. Its A/B/sealed peers map only to existing `correspondence` / `bounded_difference` / `sealed_unavailable`; each fresh matching action finalizes one ID, any order converges, and Recorded replay is idempotent.
+- All three Recorded states expose only inactive `REVIEW LOCAL WORK IMAGE` eligibility. Orientation, presentation, order, focus, resume, Recorded replay, returns, and review eligibility are zero evidence; PY-010/RP003-IE-01 and future save stay separate. Invalid/duplicate/combined/stale/wrong-owner/private/Tour input rejects before token use; exact resume rebuilds the safe group, malformed resume clears to blank CM-00. One group, deterministic focus, seven modalities, reversible returns, privacy, accessibility, invariant world, unchanged continuation/null city delta, and no authority remain exact.
+- A5 owns one pure protected survey controller and focused tests only; normal integration remains closed. Stop before review activation, CM-20, learning, remediation, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
 
 ## A3 result — 2026-07-25
 
@@ -60,8 +60,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition:** `NO REOPEN — SOLIDIFIED / RP-003 CM-10 FIREWALL PASS / A4 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
-- **Exact A4 edge:** preserve separate orientation plus A/B/sealed observation IDs; fresh action finalizes only its match. Recorded replay and presentation/order/focus/reflow/resume/review eligibility remain zero observation/Python/AI-901/mastery/save/reward/authority/world credit; all three enable only inactive `REVIEW LOCAL WORK IMAGE` eligibility.
+- **Disposition:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
+- **Exact A5 edge:** implement one pure protected CM-10 controller: fresh orient -> one Scene group -> any-order A/B/sealed one-ID observations -> replay-safe Recorded -> inactive local-review eligibility. Preserve focus/resume/recovery, invalid/Tour/private rejection, strict frozen chains/no cross-credit, and zero evidence/authority/world effect.
 - **Hard stop:** add no lore/copy/art, review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## A5 result — 2026-07-25

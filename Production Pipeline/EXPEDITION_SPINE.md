@@ -37,8 +37,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `NO REOPEN — SOLIDIFIED / RP-003 CM-10 FIREWALL PASS / A4 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003 CM-10`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
-- **Exact A4 edge:** retain separate `CM-00` orientation plus A/B/sealed observation IDs; fresh deliberate finalization changes only its matching observation. Presentation, Recorded replay, order, focus, reflow, resume, and review eligibility are zero observation/Python/AI-901/mastery/save/reward/authority/world credit; all three make only `REVIEW LOCAL WORK IMAGE` eligible. Preserve frozen `PY-010`/`RP003-IE-01`, no cross-credit, private/transient clearing, Tour isolation, and invariant continuity.
+- **Disposition / positions:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
+- **Exact A5 edge:** compose fresh CM-00 orient -> one Scene CM-10 group -> any-order matching A/B/sealed finalization -> Recorded replay -> inactive `REVIEW LOCAL WORK IMAGE` eligibility, with deterministic focus/resume and fail-closed invalid/Tour/private recovery. Preserve frozen `PY-010`/`RP003-IE-01`, no cross-credit, private/transient clearing, and invariant continuity.
 - **Hard stop:** no review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## Current control — 2026-07-25
