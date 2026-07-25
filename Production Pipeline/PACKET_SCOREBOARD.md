@@ -1,5 +1,11 @@
 # Rail Packet Scoreboard
 
+## A4 result — 2026-07-25
+
+- `RP-002` `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Exact sanitized `RG-30` -> fresh private-free seven-modality/one-hit prepare -> existing contained local Pilot confirmation -> hold or cancel/Escape write-free exact-review return is now one protected graph.
+- Invalid/forged/stale/partial/private/`review_required`/duplicate/combined/passive/automatic/Tour/contaminated entry consumes no future valid token and uses existing private-clearing deterministic first-incomplete recovery. Exact review/confirmation resume, heading/prepare focus, one active group, strict conjunction, zero evidence, accessibility, invariant world, and separate returns remain locked.
+- A5 builds only a pure unimported controller and tests. Stop with confirmation visible before commit activation, adapter/persistence/failure/retry/restore/completion/later packets, RP-013, or successor.
+
 ## A3 result — 2026-07-25
 
 - `RP-002` `NO REOPEN — SOLIDIFIED / A4 NEXT`. Exact review -> private-free explicit prepare -> existing contained local Pilot confirmation -> cancel/Escape write-free review return preserves the sole finalized Python AND finalized Responsible-AI AND five-finalized-observation eligibility conjunction without cross-credit. RP-002 self-test, canonical `6/6 + 6/6` / `9/9 + 9/9`, L-02-02 self-test, focused firewall `7/7`, `291` JSON parses, and structural assertions pass. Stop at confirmation before commit activation or any adapter/persistence/later state.

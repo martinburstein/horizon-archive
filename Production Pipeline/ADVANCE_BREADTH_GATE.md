@@ -1,5 +1,11 @@
 # Advance Breadth and Convergence Gate
 
+## A4 current control — 2026-07-25
+
+- **Mode / result:** mandatory RP-002 convergence; `PASS — GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero.
+- **Converged tranche:** exact sanitized `RG-30` -> one fresh private-free seven-modality/one-hit prepare -> existing contained local confirmation -> hold or cancel/Escape write-free exact-review return, with one shared fail-closed sanitation/resume contract rather than another micro-seam.
+- **Prohibited:** commit activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion, new action/copy/prompt/answer/score/branch/art, normal integration, RP-003+, RP-013, or successor.
+
 ## A1 current control — 2026-07-25
 
 - **Mode:** mandatory RP-002 convergence/integration; protected missing-gate count remains zero.

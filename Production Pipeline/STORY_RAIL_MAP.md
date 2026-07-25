@@ -1,5 +1,11 @@
 # Horizon Archive Story Rail Map
 
+## A4 result — 2026-07-25
+
+- `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; the ordered lead remains ten packets and the rail does not extend.
+- The protected graph is exact sanitized `RG-30` -> fresh private-free seven-modality/one-hit Pilot prepare -> existing contained local confirmation -> visible hold or cancel/Escape write-free exact-review return. Fail-closed sanitation, strict conjunction, focus/resume, accessibility, zero evidence, privacy, invariant world, and no-authority boundaries remain exact.
+- A5 stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/persistence/completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted through `RP002-P1-020 + RP002-AESTH-015` on `RP-002`; the ordered lead remains ten packets and the rail does not extend. The review -> private-free prepare -> contained local confirmation -> cancel/Escape write-free return is zero learning/save/world evidence around the unchanged finalized Python, finalized Responsible-AI, and five-observation conjunction. A4 confirms only this protected graph and stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation, persistence, `RP-003+`, RP-013, or successor.

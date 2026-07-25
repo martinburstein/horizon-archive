@@ -1,5 +1,11 @@
 # Horizon Archive Expedition Spine
 
+## A4 current control — 2026-07-25
+
+- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; ordered lead remains ten packets.
+- **A4 graph lock / exact A5 edge:** sanitized exact `RG-30` -> one fresh private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> only existing contained local Pilot confirmation -> visible hold or `CANCEL`/Escape write-free exact-review return with deterministic prepare focus; invalid or contaminated entry sanitizes without consuming a future valid token.
+- **Hard stop:** confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+
 ## A1 current control — 2026-07-25
 
 - **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through `RP002-P1-020 + RP002-AESTH-015` exact bounded review; ordered lead is ten packets.

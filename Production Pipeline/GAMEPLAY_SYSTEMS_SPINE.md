@@ -1,5 +1,12 @@
 # Horizon Archive Gameplay Systems Spine
 
+## A4 current control — 2026-07-25
+
+- **Result:** `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Exact sanitized `RG-30` remains the sole entry; one fresh private-free pointer/touch/Enter/Space/switch/speech/screen-reader `PREPARE SAVE` token atomically mounts only the existing contained local Pilot confirmation. Confirmation may hold visibly, while `CANCEL`/Escape returns write-free to exact `RG-30` with deterministic `prepare_save` focus.
+- **Recovery / resume:** validate state, strict finalized conjunction, owner/action/mode/version, private-free payload, modality, and fresh token before consumption. Any invalid/forged/stale/partial/private/`review_required`/duplicate/combined/passive/automatic/Tour/contaminated entry consumes no future valid token and uses the existing private-clearing deterministic first-incomplete recovery. Exact review resumes heading-first; exact confirmation resumes contained and heading-first; neither replays prepare. Cancellation clears all transient token/focus history so a new valid prepare remains possible.
+- **Invariant / stop:** one active group, separate write-free returns, `>=44px` and seven-modality parity, zero evidence, local-only/offline/no-authority/no-exam-guarantee, no-credit Tour, invariant world/clocks, `cityStateDelta=null`, `campaignCommitEnabled=false`, and `successor=null`. Stop with confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion/credits/RP-003+/RP-013/successor/world-access-authority effect.
+- **A5:** compose one pure unimported storage-free protected controller from existing authorities, prove the graph and every fail-closed/resume/focus case with focused tests, and return `REVISE` because normal integration remains outside the pass.
+
 ## Current control — 2026-07-24
 
 - **A4 result:** `PASS — CONCLUSION-DISMISSAL / ELIGIBILITY / BOUNDED-REVIEW GRAPH LOCKED; PROTECTED A5 NEXT`. The existing exact RAI Pilot conclusion -> one explicit private-free seven-modality/one-hit dismissal -> `SYSTEM // EXPEDITION SESSION` eligibility path derives review access only from finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations. Only the existing `REVIEW BOUNDED COMPARISON` may atomically replace eligibility with the existing Pilot bounded review.

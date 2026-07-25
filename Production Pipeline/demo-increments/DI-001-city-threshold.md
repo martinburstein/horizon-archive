@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A4 result — 2026-07-25
+
+- `PASS — LOCAL SAVE-CONFIRMATION GRAPH LOCKED / PROTECTED A5 NEXT`. Existing exact sanitized `RG-30` accepts one fresh private-free seven-modality/one-hit Pilot prepare, atomically mounts only existing contained local confirmation, holds there, or returns through `CANCEL`/Escape write-free to exact review with deterministic prepare focus.
+- Invalid/forged/stale/partial/private/`review_required`/duplicate/combined/passive/automatic/Tour/contaminated entry consumes no future valid token and uses existing private-clearing deterministic first-incomplete recovery. Strict finalized evidence, exact owner/copy, one group, heading-first focus, exact resume, separate returns, accessibility, zero evidence, privacy, local-only/offline/no-authority/no-exam-guarantee, and invariant world remain locked.
+- A5 composes only one pure unimported controller and focused tests. Stop with confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion/credits/normal integration/RP-003+/RP-013/successor/world-access-authority effect.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / A4 NEXT`. Exact `RG-30` review -> explicit private-free one-hit `PREPARE SAVE` -> existing contained local Pilot confirmation -> confirmation-visible hold or `CANCEL`/Escape write-free exact-review return changes presentation/navigation only. Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole hidden eligibility conjunction; every review/dual-leaf/prepare/confirmation/cancel/focus/reflow/modality/resume/Tour event is zero evidence, score, mastery, credit, or save. RP-002 self-test, canonical `6/6 + 6/6` and `9/9 + 9/9`, L-02-02 self-test, focused firewall `7/7`, `291` JSON parse, and structural assertions pass. A4 confirms only this graph and stops with confirmation visible before `SAVE BOUNDED COMPARISON` activation or persistence/later state.
