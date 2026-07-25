@@ -88,3 +88,16 @@ test("EXP-027 landing and UI source contain no later action, route, reward or wo
   assert.match(view, /No onward action is available here/);
   assert.doesNotMatch(view, /\bonWorld\b|\bhotspot\b|\bmask\b|\beffect\b|\baudio\b|\bsound\b|\banimation\b/i);
 });
+
+test("Quartermaster copy retires structural placeholders and raw evaluator identifiers", () => {
+  assert.doesNotMatch(view, /COPY-|data-copy-placeholder/);
+  assert.match(view, /Pilot field folio: bounded comparison/);
+  assert.match(view, /Teacher check: closed-note boundaries/);
+  assert.match(view, /Pilot field folio: independent transfer/);
+  assert.match(view, /Local Python objective finalized/);
+  assert.match(view, /Course-authored practice runs offline on this device/);
+  assert.match(view, /repairCopy\[failedId\]/);
+  assert.doesNotMatch(view, />\s*\{failedId\}\s*</);
+  assert.doesNotMatch(view, /exposed_a\[index\]\s*==\s*exposed_b\[index\]/);
+  assert.doesNotMatch(view, /["'](?:corresponding|different)["']/);
+});

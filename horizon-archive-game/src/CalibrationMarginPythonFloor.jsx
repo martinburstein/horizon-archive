@@ -6,59 +6,79 @@ import {
 
 const fieldCopy = Object.freeze({
   condition: Object.freeze({
-    label: "Equality condition",
-    help: "Write only the comparison expression used at the aligned index.",
+    label: "Condition at one aligned index",
+    help: "Write only the Boolean comparison for the two exposed values at the same index.",
   }),
   trueBranch: Object.freeze({
-    label: "Label when the condition is true",
-    help: "Write one local label value. No completed line is supplied.",
+    label: "True-branch label",
+    help: "Write the local label used when your comparison holds. No value is supplied.",
   }),
   falseBranch: Object.freeze({
-    label: "Label when the condition is false",
-    help: "Write one local label value. No completed line is supplied.",
+    label: "False-branch label",
+    help: "Write the local label used when your comparison does not hold. No value is supplied.",
   }),
   unavailableBoundary: Object.freeze({
     label: "Unavailable-source boundary",
-    help: "State how unavailable source material remains bounded without inferring a value.",
+    help: "Describe how an absent source stays bounded without assigning it a comparison outcome.",
   }),
 });
 
 const groupCopy = Object.freeze({
   python_primary: Object.freeze({
-    heading: "Blank bounded Python primary",
-    instruction: "Complete the three Pilot-owned fields inside the supplied bounded scaffold.",
-    placeholder: "COPY-CM20-INSTRUCTION",
+    heading: "Pilot field folio: bounded comparison",
+    instruction: "Complete one equality condition and its two branch labels inside the supplied scaffold. The sealed source remains unavailable.",
   }),
   primary_repair: Object.freeze({
-    heading: "Primary repair for the current missed checks",
-    instruction: "Review only the checks listed below. No expected value or completed line is shown.",
-    placeholder: "COPY-CM21-PY-CHECK",
+    heading: "Teacher review: primary attempt",
+    instruction: "Review only the listed boundaries. Your submitted fields remain visible for association, but no expected value or completed line is shown.",
   }),
   python_retrieval: Object.freeze({
-    heading: "Closed-note four-boundary retrieval",
-    instruction: "Recall all four boundaries together without reopening the primary work.",
-    placeholder: "COPY-CM22-INSTRUCTION",
+    heading: "Teacher check: closed-note boundaries",
+    instruction: "Without reopening the primary form, state the condition, both branch meanings, and the unavailable-source boundary.",
   }),
   retrieval_repair: Object.freeze({
-    heading: "Retrieval repair for the current missed dimensions",
-    instruction: "Review only the named dimensions, then begin a wholly blank retrieval.",
-    placeholder: "COPY-CM21-RETRIEVAL",
+    heading: "Teacher review: retrieval attempt",
+    instruction: "Review only the listed boundaries. No prior response or expected value will carry into the blank retry.",
   }),
   python_transfer: Object.freeze({
-    heading: "Blank unseen transfer",
-    instruction: "Complete the same bounded responsibility in a distinct fresh case.",
-    placeholder: "COPY-CM23-INSTRUCTION",
+    heading: "Pilot field folio: independent transfer",
+    instruction: "Complete the fresh case from its supplied inputs. Nothing from the primary or retrieval forms carries into this attempt.",
   }),
   transfer_repair: Object.freeze({
-    heading: "Transfer repair for the current missed checks",
-    instruction: "Review only the checks listed below, then begin a wholly blank transfer.",
-    placeholder: "COPY-CM21-PY-CHECK",
+    heading: "Teacher review: transfer attempt",
+    instruction: "Review only the listed boundaries. No prior response or expected value will carry into the blank retry.",
   }),
   python_finalized: Object.freeze({
-    heading: "PY-010 local evidence finalized",
-    instruction: "The bounded local objective is complete. No onward action is available here.",
-    placeholder: "COPY-PY010-P3-STATUS",
+    heading: "Local Python objective finalized",
+    instruction: "PY-010 evidence is finalized on this device. The city remains unchanged. No onward action is available here.",
   }),
+});
+
+const repairCopy = Object.freeze({
+  result_is_list:
+    "Recheck the result container used to collect the bounded comparison records.",
+  one_record_per_exposed_index:
+    "Trace one aligned index and verify that the supplied append is reached once.",
+  exact_record_keys_and_index_order:
+    "Keep the supplied record shape and aligned index order unchanged.",
+  corresponding_positions_correct:
+    "Trace one aligned pair where the condition holds, then name only the branch taken.",
+  difference_positions_correct:
+    "Trace one aligned pair where the condition does not hold, then name only the branch taken.",
+  conditional_compares_exposed_values_at_same_index:
+    "State the Boolean comparison between the two exposed values at one shared index.",
+  sealed_source_marked_unavailable_none:
+    "Keep the sealed source unavailable; do not compare it, infer a value, or relabel it.",
+  inputs_unchanged_and_no_forbidden_operations:
+    "Use only the three learner-owned fields; leave the supplied inputs and scaffold unchanged.",
+  condition:
+    "Rebuild what the condition compares at one aligned index without reopening the primary form.",
+  trueBranch:
+    "Name the responsibility of the branch taken when the condition holds; no label is supplied.",
+  falseBranch:
+    "Name the responsibility of the branch taken when the condition does not hold; no label is supplied.",
+  unavailableBoundary:
+    "Separate a supplied mismatch from a source that was never available; do not infer from missing input.",
 });
 
 const suppliedCases = Object.freeze({
@@ -118,7 +138,7 @@ function InputFields({ state, inputRefs, onFieldChange }) {
               <p id={errorId} className="python-floor-field-error">
                 {error === "required"
                   ? "This Pilot-owned field is required for a complete local attempt."
-                  : "This field participates in one or more currently missed checks. No answer is supplied."}
+                  : "This field is involved in at least one boundary listed below. No answer is supplied."}
               </p>
             )}
           </div>
@@ -134,7 +154,7 @@ function SuppliedScaffold({ form }) {
   return (
     <section className="python-floor-scaffold" aria-labelledby={`${form}-scaffold-heading`}>
       <p className="eyebrow">BUILDER WORK // SUPPLIED</p>
-      <h2 id={`${form}-scaffold-heading`}>Bounded exposed inputs and result structure</h2>
+      <h2 id={`${form}-scaffold-heading`}>Supplied bounded inputs and result shape</h2>
       <pre>
         {`exposed_a = ${supplied.exposedA}
 exposed_b = ${supplied.exposedB}
@@ -208,11 +228,11 @@ export function CalibrationMarginPythonFloor({
       )}
       {state.failedIds.length > 0 && (
         <section className="python-floor-repair" aria-labelledby={`${state.activeGroup}-repair-heading`}>
-          <h2 id={`${state.activeGroup}-repair-heading`}>Current answer-free review boundary</h2>
+          <h2 id={`${state.activeGroup}-repair-heading`}>Answer-free review for this attempt</h2>
           <ul>
             {state.failedIds.map((failedId) => (
-              <li key={failedId} data-copy-placeholder={`${copy.placeholder}-${failedId}`}>
-                {failedId}
+              <li key={failedId}>
+                {repairCopy[failedId] ?? "Review this bounded check without reopening prior work."}
               </li>
             ))}
           </ul>
@@ -241,7 +261,6 @@ export function CalibrationMarginPythonFloor({
           ref={headingRef}
           id={`${state.activeGroup}-heading`}
           tabIndex="-1"
-          data-copy-placeholder={copy.placeholder}
         >
           {copy.heading}
         </h1>
@@ -275,8 +294,8 @@ export function CalibrationMarginPythonFloor({
           {controls}
         </div>
       )}
-      <p className="python-floor-negative-authority" data-copy-placeholder="COPY-NEGATIVE-AUTHORITY">
-        Local course-authored practice. Offline evidence grants no access, service authority, or exam guarantee.
+      <p className="python-floor-negative-authority">
+        Course-authored practice runs offline on this device. Its evidence grants no access or service authority and is not a Microsoft exam item or exam guarantee.
       </p>
     </section>
   );

@@ -327,7 +327,7 @@ export function createCalibrationMarginPythonFloor(options = {}) {
       ? `${group.activeGroup}:resume`
       : "python_primary:fresh-review",
     statusMessage: canResume
-      ? "Sanitized local evidence resumed at the first incomplete blank group."
+      ? "Finalized local evidence restored. The first unfinished form is blank."
       : "Fresh local review opened. The primary form is blank.",
   });
   let active = freshEntry || canResume;
@@ -480,7 +480,7 @@ export function createCalibrationMarginPythonFloor(options = {}) {
           readOnly: true,
           focusTarget: failedFields[0] ?? "heading",
           statusMessageId: `${group.activeGroup}:actual-miss`,
-          statusMessage: "Current attempt needs bounded answer-free review.",
+          statusMessage: "This attempt needs a bounded, answer-free review.",
         });
         return Object.freeze({
           status: "actual_miss_repair",
@@ -503,7 +503,7 @@ export function createCalibrationMarginPythonFloor(options = {}) {
           active = false;
           state = makeState(calibrationMarginPythonGroups.primary, {
             statusMessageId: "python_primary:checkpoint-recovery",
-            statusMessage: "Local review recovered to the accepted survey boundary.",
+            statusMessage: "Evidence could not be finalized. Private work was cleared; return to the accepted survey to begin again.",
           });
           return Object.freeze({
             status: "checkpoint_commit_failed_to_survey",
@@ -513,7 +513,7 @@ export function createCalibrationMarginPythonFloor(options = {}) {
         }
         reconstruct(
           checkpoint,
-          "Local review recovered to the last finalized evidence boundary.",
+          "The current form could not be finalized. Private work was cleared; the last finalized boundary is ready.",
         );
         return Object.freeze({
           status: "checkpoint_commit_failed_recovered",
