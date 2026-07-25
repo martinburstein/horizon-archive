@@ -15,7 +15,7 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 - Expected synchronization after this handoff commit: `HEAD == origin/main`
 - Live demo URL when intentionally started: `http://127.0.0.1:4173/`
 - Released bundle: `index-BggOwTvz.js` / `index-BPvBS70Z.css`
-- Automation: `horizon-archive-optimized-production-loop` — **DELETED / PAUSED BY MARTIN on 2026-07-19**. No Horizon Archive wake is scheduled. Do not recreate or resume it until Martin explicitly supplies or approves a new start time.
+- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE / RESTARTED BY MARTIN on 2026-07-24**. The first wake begins immediately from this synchronized handoff; later wakes recur every three hours. If a cycle is already active or interrupted, continue its latest valid role checkpoint and never overlap or restart A1.
 - Adaptive retrospective: required after coordinator synchronization and before the reveal.
 
 Protected user-owned untracked paths — do not inspect, stage, alter, move, or delete:
@@ -25,9 +25,9 @@ Protected user-owned untracked paths — do not inspect, stage, alter, move, or 
 
 ## Restart and next-round improvements
 
-When Martin explicitly restarts the loop:
+For the restarted loop:
 
-1. Recreate one automation only, anchored at Martin's chosen local time and spaced three hours apart; preserve the non-overlap/continue-from-checkpoint rule.
+1. Keep exactly one active automation, spaced three hours apart; preserve the non-overlap/continue-from-checkpoint rule.
 2. Before A1, run one read-only startup health check: `HEAD == origin/main`, only the two protected user paths are untracked, no role checkpoint is active, and the handoff exact edge still matches the current-control blocks.
 3. Record one timestamp per stage boundary in the cycle retrospective. Use those ten measurements—not intuition—to decide whether model routing, validation placement, or cadence needs another tune.
 4. Keep stable-authority hash checks and compact role-context reads; fully reread a stable authority only when its hash changed, a conflict appears, or the runbook requires it.

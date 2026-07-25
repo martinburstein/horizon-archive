@@ -43,3 +43,10 @@
 - **Decision rule:** change model routing or the three-hour cadence only from measured stage durations, repeated overlap pressure, or demonstrated quality defects. Do not tune from a single subjective impression.
 - **Resume edge:** the exact accepted RAI Pilot conclusion -> one zero-effect dismissal -> strict eligibility sanitation -> bounded review or deterministic first-incomplete return. Stop before `PREPARE SAVE`, persistence, completion, world/authority effects, `RP-003+`, RP-013, or successor.
 - **Preserved guardrails:** product direction, canon, AI-901 evidence, privacy, accessibility, save discipline, invariant world, release independence, protected user work, hidden-lore prohibition, no RP-013, and reveal rules remain unchanged.
+
+## 2026-07-24 / scheduled-loop restart — ACTIVE
+
+- **State:** Martin explicitly restarted `horizon-archive-optimized-production-loop`. Exactly one heartbeat automation is active on this task; its first wake begins immediately and subsequent wakes recur every three hours.
+- **Resume behavior:** read the current authorities, begin from the synchronized exact edge in `NEXT_INSTANCE_HANDOFF.md`, and continue any valid interrupted role checkpoint instead of duplicating A1 or overlapping a cycle.
+- **Applied improvements:** startup synchronization/dirty/checkpoint audit; one timestamp per stage boundary; optimized stable-authority reads; coordinator `5174` HTTP preflight before the single complete E2E; and pre-generation comparison against existing visual canon for a genuinely new, varied-scale reveal.
+- **Preserved guardrails:** strict sequential roles, compact handoff, tiered validation, independent release, adaptive retrospective, exactly one reveal, product/canon/AI-901/privacy/accessibility/save/world protections, protected user files, hidden-lore prohibition, no RP-013, and no successor remain unchanged.
