@@ -1,5 +1,10 @@
 # SC-03 — Civic Record District
 
+## 2026-07-25 A2 recovery/re-entry presentation lock
+
+- Keep the registered first-person civic master, crop, material hierarchy, lighting, clocks, and lower interface separation invariant. Quiet System `SC-03-40`, empty sanitation downgrade, and exact `SC-03-50` restore are direct local overlay replacement only; no replay, camera move, visual effect, archive response, route signal, or new art board exists.
+- Restore owns only the exact local triplet and cleared transients; downgrade owns only the existing exact failure text and first-incomplete heading/control focus. Exact `SC-03-50` alone may show the existing reversible City Threshold return. These are not Pilot intent, elapsed time, city/Builder communication, permission, authority, or successor imagery.
+
 ## 2026-07-25 canonical cycle reveal — atomic triplet seal
 
 - **Closed checklist item:** `[x] SC-03 / atomic local save — indivisible three-lamina expedition seal`.

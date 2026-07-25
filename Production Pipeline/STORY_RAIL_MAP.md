@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A2 result — 2026-07-25
+
+- `PASS — LOCAL RECONSTRUCTION PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002` through `SC-03-40`; the ordered lead remains ten packets. A2 adds no rail location or runtime state: System-only re-entry produces exact `SC-03-50` restore or deterministic downgrade, then only the accepted City Threshold return.
+- The rail still stops before normal RP-003, departure, credits, RP-013, successor, and every route/world/access/authority effect.
+
 ## A1 result — 2026-07-25
 
 - **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets. `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`.

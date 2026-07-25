@@ -1,5 +1,10 @@
 # Horizon Archive Location Visual Spine
 
+## A2 local-reconstruction presentation lock — 2026-07-25
+
+- The invariant first-person SC-03 plate remains dominant through quiet System `SC-03-40`, reload/re-entry sanitation, exact empty downgrade, or exact `verified_restore / SC-03-50`; no raster, crop, lighting, animation, camera, visual micro-state, or world response is added. Each outcome is one contained System owner -> heading/status -> available-controls group, and only exact `SC-03-50` exposes the already-accepted reversible City Threshold return.
+- Wide/narrow/effective-`200%` preserve one-group source order, `>=44px`, heading then saved-controls restoration focus, deterministic first-incomplete downgrade focus, non-color/forced-color/reduced-motion parity, and inert archive/civic clocks. All closed SC-03 references remain non-runtime evidence; none defines restore copy, saved animation, permission, route, authority, or successor.
+
 ## 2026-07-25 atomic-triplet canonical cycle-reveal lock
 
 - `Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png` closes `SC-03 / atomic local save — indivisible three-lamina expedition seal`.

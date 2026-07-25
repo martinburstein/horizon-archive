@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A2 storyboard result — 2026-07-25
+
+- `PASS — EXISTING-AUTHORITY RECOVERY SEQUENCE BOARDED / A3 NEXT`. The unchanged SC-03 world carries only quiet System `SC-03-40` -> no-replay sanitation -> exact empty downgrade/first-incomplete focus or exact `SC-03-50` restored triplet/clear-work heading-then-controls focus -> existing reversible City Threshold return.
+- No new visual state, copy, art, effect, evidence, route reward, world response, or authority is introduced. Preserve one active group, wide/narrow/`200%`, `>=44px`, heading focus, non-color/forced-color/reduced-motion parity, privacy/Tour isolation, and the hard stop before normal `RP-003`/later departure/credits/RP-013/successor.
+
 ## A1 result — 2026-07-25
 
 - **Disposition:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`.

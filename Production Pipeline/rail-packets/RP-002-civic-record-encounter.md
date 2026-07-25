@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## A2 storyboard result — 2026-07-25 — local reconstruction without replay
+
+- **Disposition:** `PASS — EXISTING-AUTHORITY RESTORE / DOWNGRADE / REVERSIBLE RETURN BOARDED / A3 NEXT`. One compact System-only sequence is locked: quiet `SC-03-40` -> reload/re-entry sanitation with no replay -> either exact `sanitation_downgrade` with `progression={}` and deterministic first-incomplete heading/control, or exact `verified_restore / SC-03-50` with the allowlisted triplet, clear work/transients, and heading then saved-controls focus -> only from exact `SC-03-50`, existing reversible return to accepted City Threshold.
+- **Presentation and canon:** this is local expedition reconstruction, never Pilot intent, time jump, new story beat, city/Builder response, or world change. Wide retains the invariant first-person SC-03 plate and contained System group; narrow/effective-`200%` retains source order and natural vertical recovery. One active group, `>=44px`, heading focus, textual/non-color meaning, forced-color and reduced-motion parity, Tour isolation, unchanged continuation/null city delta, and all nine closed references as non-runtime evidence remain locked.
+- **Stop / A3 handoff:** `Curriculum Checker Agent — NO REOPEN / SOLIDIFIED preservation only. Confirm that reload sanitation, verified restore, downgrade, focus, responsive presentation, and reversible City Threshold navigation award zero evidence, score, mastery, credit, access, authority, route, or exam guarantee. Preserve the exact finalized PY-009 AND finalized RP002-RAI-01 AND five-observation conjunction, exact triplet allowlist, privacy clearing, and hard stop before normal RP-003, departure, credits, RP-013, successor, or world/access/authority effect. Change no curriculum, copy, art, runtime, storage, route, or world state.`
+
 ## A1 result — 2026-07-25
 
 - **Disposition / convergence:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`. This is one continuity-maintenance recovery tranche from the accepted quiet System `SC-03-40`, not new story content or a new micro-state.

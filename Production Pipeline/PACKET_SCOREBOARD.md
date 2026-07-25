@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A2 result — 2026-07-25
+
+- `RP-002 PASS — EXISTING-AUTHORITY RESTORE / DOWNGRADE / REVERSIBLE RETURN BOARDED / A3 NEXT`; protected missing-gate count remains zero. The compact recovery presentation adds no board, art, evidence, credit, route reward, or world effect and stops at accepted City Threshold before normal RP-003/RP-013/successor.
+
 ## A1 result — 2026-07-25
 
 - `RP-002 PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.
