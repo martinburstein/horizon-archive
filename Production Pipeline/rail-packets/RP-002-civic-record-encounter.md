@@ -1,5 +1,10 @@
 # RP-002 — Civic Record Encounter
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Normal play accepts exact contained confirmation -> one private-free atomic commit -> either complete empty-triplet failure with fresh retry/write-free safe return or quiet no-action System `comparison_complete / SC-03-40`. The strict Python + Responsible-AI + five-observation conjunction, privacy, Tour, focus, responsive/accessibility, invariant-world, unchanged continuation/null city delta, and no-authority contracts remain exact.
+- **Authoritative exact next edge / hard stop:** on reload or later re-entry, sanitize the stored triplet and every unchanged eligibility dependency. Exact all-three plus every valid dependency may reconstruct only System `verified_restore / SC-03-50`, clear working/transient material, focus the restored heading then saved controls, and replay no arrival, observation, work image, suit result, conclusion, confirmation, success status/effect, or world event. Any false, missing, malformed, partial, forged, stale, private, or `review_required` state clears all three fields and targets the exact first incomplete protected boundary heading/control. From exact `SC-03-50`, preserve only the already-locked reversible return to accepted City Threshold. Stop there before normal `RP-003`, later departure, credits, RP-013, successor, route reward, or any world/access/authority/external effect.
+
 ## W4 aesthetic-polish result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. No W3 residual reproduced. Production/style/art/test/runtime remains unchanged while enabled Pilot commit/cancel, System-only failure/retry/safe return, fresh retry, write-free review focus, and no-action `SC-03-40` retain one-group responsive/accessibility clarity.

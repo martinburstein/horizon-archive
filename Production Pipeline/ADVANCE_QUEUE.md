@@ -1,5 +1,10 @@
 # Advance Queue
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; exact atomic save success/failure/retry/safe-return is accepted normally through visible `SC-03-40`.
+- **Authoritative A1 start:** audit one final RP-002 recovery tranche only: accepted `SC-03-40` -> exact triplet/dependency sanitation on reload or re-entry -> exact `SC-03-50` verified restore with clear working state and no replay, or all-three downgrade to the deterministic first incomplete boundary -> existing reversible City Threshold return. Preserve zero evidence, privacy, Tour isolation, invariant world, unchanged continuation/null city delta, and no authority. Stop before normal `RP-003`, later departure, credits, RP-013, successor, or any new content/effect.
+
 ## A5 result — 2026-07-25
 
 - **Disposition:** `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The nearest authorized edge is now implemented only as a pure non-routable controller: exact contained confirmation -> validated one-hit local triplet -> exact empty failure with fresh retry/write-free safe return or System `SC-03-40` success.

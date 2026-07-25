@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 1 is complete at `RP-012`; Team 2 is accepted at `RP-002` through exact local `SC-03-40` save success and complete recoverable failure; the ordered lead remains ten packets.
+- **Authoritative exact next edge / rail stop:** reload/re-entry may next prove only exact `SC-03-50` verified restore or all-three sanitation downgrade, followed by the existing reversible return to accepted City Threshold. The rail stops there before normal `RP-003` integration, later departure, credits, RP-013, successor, or any route reward/world/access/authority effect.
+
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002` with the unchanged W2 atomic local-result candidate through final Working verification. The ordered lead remains ten packets and the rail does not extend.

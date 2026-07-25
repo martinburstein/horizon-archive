@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. The accepted Demo now includes the exact contained Pilot commit, local all-or-none success, complete recoverable failure, fresh retry, write-free safe return, and quiet no-action System `SC-03-40`.
+- **Authoritative exact next edge / stop:** converge existing reload/re-entry sanitation, exact verified `SC-03-50` restore with clear working state/no replay, invalid-state all-three downgrade with deterministic first-incomplete focus, and reversible return to accepted City Threshold. Stop after that return before normal `RP-003`, later departure, credits, RP-013, successor, or any world/access/authority effect.
+
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — FINAL DEMO REFRESHED / COORDINATOR NEXT`. W4 reproduced no presentation residual and made no production change. The exact contained confirmation, complete failure/recovery, fresh retry, write-free safe return, and no-action System `SC-03-40` remain presentation-consistent with the accepted responsive/accessibility and invariant-world contracts.

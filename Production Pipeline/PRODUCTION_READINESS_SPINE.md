@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Independent full `684/684`, all `15/15` readiness validators, production build, isolated `113.5s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact asset hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable-art, and synchronization gates pass.
+- **Authoritative exact next edge:** protect and integrate only exact saved-triplet reload/re-entry, verified `SC-03-50` restore, all-three sanitation downgrade with deterministic first-incomplete focus, and the already-locked reversible City Threshold return. Stop before normal `RP-003`, later departure, credits, RP-013, successor, or any route reward/world/access/authority/external effect.
+
 ## W4 verification result — 2026-07-25
 
 - `RP002-AESTH-017 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no residual and left production/style/art/test/runtime unchanged. Focused normal-route/frame `54/54`, RP-002 and L-02-02 self-tests, production build, exact HTTP/served-dist identity/markers, single-listener final refresh, immutable civic master, and patch gates pass.

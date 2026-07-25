@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.
+- **Authoritative exact next edge / stop:** `CONVERGE + MERGE + TRIM` the existing reload/re-entry sanitation, exact verified `SC-03-50` restore, deterministic first-incomplete downgrade, and reversible City Threshold return as one final RP-002 recovery tranche. Add no new prompt, answer, score, copy authority, art integration, route reward, normal `RP-003` integration, RP-013, successor, or world/access/authority effect.
+
 ## Current control — 2026-07-25
 
 - **Release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.

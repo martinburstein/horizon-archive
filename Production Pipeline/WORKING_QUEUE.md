@@ -1,5 +1,10 @@
 # Working Queue
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 2 accepts the normal atomic local save result through quiet `SC-03-40`; failure is complete and recoverable, retry is fresh, and safe return is write-free.
+- **Authoritative Working boundary:** remain at accepted `SC-03-40` until Advance protects the existing reload/re-entry restore/downgrade and reversible-return tranche. W1 then reports only the earliest normal gap in that tranche. Do not begin normal `RP-003`, later departure, credits, RP-013, successor, or any world/access/authority effect.
+
 ## W4 result / coordinator next — 2026-07-25
 
 - **Disposition:** `RP002-AESTH-017 VERIFIED — NO IMPLEMENTATION REQUIRED / FINAL DEMO REFRESHED`. W4 reproduced no exact residual and left production, style, art, tests, mechanics, copy, storage/save, evidence, route, and world state unchanged.

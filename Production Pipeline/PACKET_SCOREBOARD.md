@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `RP-002 PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Normal play now reaches the exact contained atomic save success or complete recoverable failure/retry/safe-return loop; exact success stops at quiet System `SC-03-40`. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`; the ordered lead remains ten packets.
+- **Authoritative exact next edge:** protect and integrate only exact saved-triplet reload/re-entry, verified `SC-03-50` restore, fail-closed all-three sanitation downgrade with deterministic first-incomplete focus, and the already-locked reversible City Threshold return. Stop before normal `RP-003`, later departure, credits, RP-013, successor, or any route reward/world/access/authority effect. Protected missing-gate count remains zero.
+
 ## A5 result — 2026-07-25
 
 - `RP-002` `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`; protected missing-gate count remains zero. The protected controller validates before consumption and calls the existing local adapter once only for the exact three-field triplet; failure is empty, retry is fresh, safe return is write-free, and success stops at `SC-03-40`.

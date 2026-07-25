@@ -11,10 +11,11 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 ## Synchronized state
 
 - Branch: `main`
-- Coordinator release: `3185523` — `Coordinator: release prepare-save confirmation`
-- Expected after the reveal commit: `HEAD == origin/main`
+- Candidate checkpoint: `3c65d30` — `Working Coder Polish: verify atomic save presentation`
+- Coordinator release: the commit containing this handoff
+- Expected after coordinator and reveal pushes: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
-- Released bundle: `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`
+- Released bundle: `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`
 - Automation: `horizon-archive-optimized-production-loop` remains active on a three-hour cadence. Continue any valid interrupted checkpoint; never overlap a cycle or restart A1.
 - Adaptive retrospective remains required after coordinator synchronization and before the reveal.
 
@@ -26,7 +27,7 @@ Protected untracked user paths — never inspect, stage, alter, move, or delete:
 ## Team positions
 
 - Team 1: `RP-012`, complete intended ending railhead; continuity-maintenance only.
-- Team 2: `RP-002`, accepted through contained local save confirmation and write-free cancellation.
+- Team 2: `RP-002`, accepted through exact local atomic save success and complete failure/retry/safe-return recovery.
 - Ordered lead: ten packets, `RP-003` through `RP-012`.
 - Whole-story rail: `END-TO-END OUTLINED`.
 - No `RP-013`, successor, or post-ending content is authorized.
@@ -36,39 +37,41 @@ Protected untracked user paths — never inspect, stage, alter, move, or delete:
 Normal play accepts:
 
 ```text
-exact sanitized RG-30 Pilot bounded review
-  -> explicit private-free seven-modality / one-hit
-     PILOT // FLIGHT RECORDER — PREPARE SAVE
-  -> existing contained local Pilot confirmation
-     with exact canonical heading
-     and visible disabled SAVE BOUNDED COMPARISON
-  -> inert hold
-     OR CANCEL / Escape:
-        clear transient intent
-        return write-free to exact RG-30
-        with deterministic PREPARE SAVE focus
+exact contained Pilot save confirmation
+  -> one explicit private-free seven-modality / one-hit
+     SAVE BOUNDED COMPARISON
+  -> one existing all-or-none local three-field adapter call
+  -> deterministic local failure:
+       complete triplet absent
+       only RETRY SAVE or RETURN SAFELY
+       retry returns to fresh exact confirmation
+       safe return writes nothing and restores exact RG-30 / PREPARE SAVE focus
+     OR exact success:
+       only SYSTEM // EXPEDITION STATE
+       comparison_complete / SC-03-40
+       no action
 ```
 
-Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations. Review, prepare, confirmation, cancellation, focus, reflow, modality, resume, and Tour grant zero evidence or authority.
+Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations. Review, prepare, confirmation, commit presentation, failure, retry, safe return, success, focus, reflow, modality, resume, and Tour grant zero evidence or authority.
 
 ## Closed invariants
 
 - Preserve independent Python and Responsible-AI evidence with no cross-credit.
-- Private responses, feedback, result material, tokens, and focus history never persist.
+- Private responses, feedback, result material, tokens, focus history, and adapter diagnostics never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Eight SC-03 canonical visual references remain non-runtime.
-- No story, item, route, access, permission, identity, authority, city, world, external, `RP-003+`, RP-013, or successor effect may arise at the current edge.
+- Eight SC-03 canonical visual references remain non-runtime until the cycle reveal adds exactly one more.
+- No story reward, item, route reward, access, permission, identity, authority, city/world response, external action, normal `RP-003+` integration, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
 
-- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`.
-- Full game suite: `679/679`.
+- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`.
+- Full game suite: `684/684`.
 - Readiness validators: `15/15`.
 - Production build: pass.
-- Isolated E2E: first accepted launch after port-`5174` HTTP `200` preflight passed in `110.2s`; credits reached, every reported gate true, `runtimeErrors:false`.
-- In-app title-shell review: `1920 x 1080` and `390 x 844`; zero horizontal overflow, clean browser logs, `48px` / `44px` actions.
-- JS: `index-xpeE9Qlm.js`, `1,060,272` bytes, SHA-256 `F506B573CA3BC875CBD922E57CB4DD3F4DC7457D5C97EC675F1A3097C5E1BFE9`.
+- Isolated E2E: port-`5174` HTTP `200` preflight passed; complete run passed in `113.5s`; credits reached, every reported gate true, `runtimeErrors:false`.
+- In-app title-shell review: `1920 x 1080` and `390 x 844`; zero horizontal overflow, clean browser logs, `48px` / `44px` primary actions.
+- JS: `index-C7qPZ0yi.js`, `1,071,347` bytes, SHA-256 `BA0C685A33A9B2BFD2E3EF8578DC32E78A08A6D6B6059EF617006E1F59A83488`.
 - CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
 - Civic master/reference isolation, HTTP/served-byte identity, patch integrity, QA restoration, and coordinator-preview shutdown passed.
 - Martin's gated browser storage/save was untouched; deterministic source, tests, served bundle, and E2E support the release without a fabricated gated screenshot.
@@ -82,31 +85,37 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 
 ## Exact next action
 
-Begin or resume one sequential cycle at A1. Converge only the existing atomic local-save loop:
+Begin or resume one sequential cycle at A1. Converge only the existing verified local restore and reversible-return loop:
 
 ```text
-accepted exact contained save confirmation
-  -> one explicit private-free seven-modality / one-hit
-     SAVE BOUNDED COMPARISON
-  -> existing all-or-none local three-field adapter
-  -> deterministic local failure:
-       clear the complete triplet
-       expose only RETRY SAVE or safe return
-       retry returns to exact confirmation
-       safe return returns write-free to exact RG-30
-     OR exact success:
-       expose only existing SC-03-40 comparison-complete state
+accepted exact SC-03-40 saved acknowledgement
+  -> reload or later re-entry
+  -> sanitize exact stored triplet plus every unchanged eligibility dependency
+  -> deterministic invalid / stale / partial / forged / private /
+     review_required state:
+       clear all three progression fields together
+       clear private and transient work
+       show only existing System sanitation downgrade
+       target exact first incomplete protected boundary heading/control
+     OR exact valid state:
+       reconstruct only SYSTEM verified_restore / SC-03-50
+       clear private and transient work
+       focus restored heading, then saved controls
+       replay no arrival, observation, work image, suit result,
+       conclusion, confirmation, success status/effect, or world event
+  -> from exact SC-03-50 only:
+       existing reversible return to accepted City Threshold
 ```
 
-A1 audits explicit local commit ownership and no-authority/no-world-effect meaning. A2 boards one compact confirmation/attempt/failure-retry-or-success sequence. A3 preserves the strict evidence firewall. A4 locks commit, all-or-none failure, retry/safe-return, focus, resume, and success. A5 composes a pure protected controller around existing commit/retry/safe-return authorities. W1 begins only at accepted live contained confirmation; W2 integrates the earliest normal gap; W3 reviews; W4 polishes or verifies; coordinator independently releases.
+A1 audits System-only restore/downgrade ownership and no-authority/no-world-effect meaning. A2 boards one compact reload-or-re-entry / downgrade-or-restore / reversible-return sequence. A3 preserves the strict zero-credit evidence firewall. A4 locks sanitation, exact restore, first-incomplete recovery, focus, no-replay, and return. A5 composes a pure protected controller around existing restore/return authorities. W1 begins only at accepted live `SC-03-40`; W2 integrates the earliest normal gap; W3 reviews; W4 polishes or verifies; coordinator independently releases.
 
 ## Hard stop
 
-Stop with exact `SC-03-40` saved success visible. Do not implement or expose:
+Stop after the exact reversible return to the already-accepted City Threshold. Do not implement or expose:
 
-- verified restore / `SC-03-50`;
-- departure, later route, credits, or normal `RP-003+` integration;
-- world response, route reward, item, access, permission, identity disclosure, authority, city change, external action, RP-013, successor, or post-ending content;
+- normal `RP-003` integration or departure beyond the accepted return;
+- credits, later packet traversal, RP-013, successor, or post-ending content;
+- route reward, world response, item, access, permission, identity disclosure, authority, city change, or external action;
 - new prompt, answer, score, compensation, branch, art integration, or invented persistence behavior.
 
 ## Role and checkpoint order

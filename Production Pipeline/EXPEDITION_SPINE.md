@@ -1,5 +1,10 @@
 # Horizon Archive Expedition Spine
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through the exact local atomic save result at `SC-03-40`; the ordered lead remains ten packets and no `RP-013` or successor exists.
+- **Authoritative exact next edge / stop:** converge the existing saved-triplet reload/re-entry path as one verified-restore, fail-closed sanitation-downgrade, and reversible City Threshold return tranche. Valid exact triplet plus every unchanged dependency may reconstruct only `SC-03-50`; invalid, stale, partial, forged, private, or `review_required` state clears all three fields and targets the deterministic first incomplete boundary. Stop after the reversible accepted City Threshold return, before normal `RP-003` integration, departure beyond that accepted return, credits, RP-013, successor, or any world/access/authority effect.
+
 ## Current control — 2026-07-25
 
 - **Release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now accepted through contained local save confirmation and write-free cancel/Escape recovery. The ordered lead remains ten packets and no `RP-013` or successor exists.
