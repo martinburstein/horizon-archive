@@ -4,7 +4,7 @@
 
 - **Released delta:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. RP-002 normal play reaches private blank Responsible-AI explanation authoring, strict simultaneous `3/3`, first-failed answer-free recovery/wholly blank retry, or the exact zero-credit Pilot conclusion. Editable/retry `RAIEC-00` uses three progressively inset wide planes and one equal narrow/`200%` column; generic Python remains three equal peers and no raster is integrated.
 - **Release evidence:** independent full `665/665`, all `15/15` validators, build, clean isolated `110.4s` E2E, desktop/narrow in-app review, exact hashes, clean logs/overflow, QA cleanup, and synchronization pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`. Storage/save and protected user paths remain untouched.
-- **Advance A1 lock / next exact edge:** existing authorities now form one ownership path: one zero-effect RAI-conclusion dismissal -> strict System eligibility sanitation -> bounded review or deterministic first-incomplete return. A2 boards only that path and stops with bounded review visible, before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
+- **Advance A2 lock / next exact edge:** existing authorities now form one compact presentation path: one zero-effect RAI-conclusion dismissal -> strict System eligibility sanitation -> bounded review or deterministic first-incomplete return. A3 preserves only that evidence firewall and stops with bounded review visible, before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/access/authority/external effect, RP-013, or successor.
 
 ## 2026-07-19 canonical cycle reveal — RAI no-authority threshold silence
 

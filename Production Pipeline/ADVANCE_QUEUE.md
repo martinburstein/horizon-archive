@@ -3,7 +3,7 @@
 ## Current control — 2026-07-24
 
 - **Coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. Strict RAI explanation convergence and exact zero-credit Pilot conclusion are accepted in normal play; full `665/665`, `15/15`, build, clean `110.4s` E2E, desktop/narrow review, hashes, cleanup, and sync pass.
-- **A1 locked / A2 next:** the existing exact RAI conclusion -> one zero-effect private-free dismissal -> System-derived strict finalized-chain/five-observation eligibility sanitation -> existing eligible bounded-review entry or deterministic first-incomplete return is one merged tranche, not a micro-seam. A2 boards only existing owner text and finalized summary material; add no prompt, score, branch, art, copy, world effect, RP-013, or successor.
+- **A2 locked / A3 next:** the existing exact RAI conclusion -> one zero-effect private-free dismissal -> System-derived strict finalized-chain/five-observation eligibility sanitation -> existing eligible bounded-review entry or deterministic first-incomplete return is now one compact presentation sequence. A3 preserves its evidence firewall only; add no prompt, score, branch, art, copy, world effect, RP-013, or successor.
 - **Hard stop:** bounded review visible; no `PREPARE SAVE`, persistence, completion/credits, `RP-003+`, world response, route reward, access, authority, external action, RP-013, or successor.
 
 ## 2026-07-18 coordinator release — next explanation convergence edge

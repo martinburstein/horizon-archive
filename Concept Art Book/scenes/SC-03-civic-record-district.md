@@ -1,5 +1,13 @@
 # SC-03 — Civic Record District
 
+## 2026-07-24 compact conclusion-dismissal / bounded-review presentation lock
+
+- Reuse the invariant SC-03 overview, registered crop, geometry, light, material, maintenance, and continuous clocks. All six canonical references remain closed, non-runtime-integrated evidence only; no plate, camera, effect, result board, raster integration, or world-facing transition is added.
+- The exact `PILOT // FLIGHT RECORDER` conclusion remains one active group until one existing private-free seven-modality/one-hit dismissal. Direct replacement mounts only existing `SYSTEM // EXPEDITION SESSION` eligibility. Only the already-finalized strict Python chain, strict RAI chain, and five finalized observations may expose existing `REVIEW BOUNDED COMPARISON`; review directly replaces eligibility with only existing `PILOT // FLIGHT RECORDER` bounded-review summary material.
+- Missing, forged, stale, partial, or `review_required` state mounts only existing `SYSTEM // EXPEDITION STATE` sanitation, clears private work, and returns to the deterministic first incomplete protected boundary. This is no city refusal, access change, permission, authority, memory loss, or world response.
+- One owner/message/summary-or-status/action group is present across dismissal, eligibility, review, and sanitation. The new owner heading receives focus; sanitation continues to the existing first required control. Wide keeps the world dominant; narrow and `200%` retain one natural scroll-safe column. Existing textual non-color meaning, forced-color boundaries/focus, reduced-motion direct replacement, `>=44px`, separate write-free returns, and Tour isolation remain exact.
+- Stop with bounded review visible. `PREPARE SAVE`, confirmation, commit intent, persistence, completion, credits, `RP-003+`, RP-013, successor, and any city/route/access/authority/external effect remain absent. No summary display, reading, focus, dismissal, return, reflow, modality, sanitation, or Tour event supplies evidence.
+
 ## 2026-07-19 canonical Responsible-AI no-authority threshold reference
 
 - Canonical asset: `../../Visual Direction/Production Masters/2026-07-19-rp002-rai-no-authority-threshold-reveal/rp002-rai-no-authority-threshold-v1.png`, with neighboring provenance.
