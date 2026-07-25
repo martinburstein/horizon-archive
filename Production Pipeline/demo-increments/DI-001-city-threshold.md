@@ -1,5 +1,9 @@
 # DI-001 — City Threshold protected staging pass
 
+## A2 result — 2026-07-25
+
+- `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Existing `RG-30` Pilot bounded review directly replaces with only existing contained local Pilot confirmation after one private-free one-hit `PREPARE SAVE`; confirmation remains visible or `CANCEL`/Escape clears transient intent and returns write-free to review with deterministic prepare focus. One active group, two equal human-summary leaves, `>=44px`, wide/narrow/`200%`, non-color/forced-color/reduced-motion/seven-modality parity, separate returns, private clearing, no-credit Tour, invariant world, and seven closed non-runtime references remain exact. Do not activate `SAVE BOUNDED COMPARISON` or enter persistence/later state; A3 preserves only the firewall.
+
 ## A1 current control — 2026-07-25
 
 - **Accepted edge:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`; normal play reaches exact `RG-30` bounded review or deterministic first-incomplete recovery.

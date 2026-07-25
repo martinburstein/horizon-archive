@@ -1,5 +1,14 @@
 # SC-03 — Civic Record District
 
+## 2026-07-25 compact bounded-review to local-confirmation presentation lock
+
+- Reuse the invariant SC-03 overview, registered crop, geometry, motivated light, material, maintenance, and continuous clocks. All seven canonical references remain closed non-runtime evidence only; no plate, raster, camera, crop, geometry, effect, result board, or world-facing transition is added.
+- Exact `RG-30` is one `PILOT // FLIGHT RECORDER` group: owner heading -> existing two equal bounded human-summary leaves -> explicit private-free `PREPARE SAVE` -> separate existing write-free returns. The two leaves retain provisional-comparison and next-survey-marker meaning only; neither becomes Builder fact, confirmation, permission, route, or world signal.
+- One fresh valid prepare activation atomically replaces that group with only the existing contained `PILOT // FLIGHT RECORDER` confirmation, preserving exactly `Save only the bounded expedition comparison and survey marker. This grants no access or authority.` The existing `SAVE BOUNDED COMPARISON` and separate `CANCEL` remain contained there, but this storyboard stops before commit activation. No visual treatment may imply a saved, approved, opened, or completed state.
+- `CANCEL` or Escape directly restores exact `RG-30`, clears only transient confirmation intent, and places focus on `PREPARE SAVE`; it writes nothing and does not erase finalized prerequisites or summary material. One active group, owner-heading-first focus, separate returns, `>=44px`, wide two-leaf hierarchy, narrow/effective-`200%` source-order stacking, non-color/forced-color/reduced-motion/seven-modality parity, privacy clearing, no-credit Tour, offline/no-authority/no-exam-guarantee, `continuation` stability, `cityStateDelta=null`, and successor absence remain exact.
+- Consume `EX-20`, `EXS-20C`, `RAI-P0`, `RAI-GUIDE`, the interpretation veil, no-authority threshold, and dual-leaf instrument only for human ownership, bounded count, material separation, and archive-dominant inert scale. They introduce no runtime object, review/save wording, native fact, permission, evidence, approval, authority, save success, world response, hidden lore, `RP-003+`, RP-013, or successor.
+- Stop with confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter access, persistence/failure/retry/restore/sanitation, completion, credits, later packet, or external effect.
+
 ## 2026-07-24 canonical cycle reveal — bounded-review dual-leaf instrument
 
 - **Closed checklist item:** `[x] SC-03 / bounded comparison review — dual-leaf human-summary instrument`.

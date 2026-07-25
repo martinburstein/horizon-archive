@@ -1,5 +1,9 @@
 # Advance Queue
 
+## A2 result — 2026-07-25
+
+- `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. One existing Pilot review group directly replaces with only existing contained Pilot confirmation, then direct `CANCEL`/Escape write-free return; wide keeps two equal human-summary leaves and narrow/`200%` stacks naturally. All seven canonical references remain non-runtime evidence; `SAVE BOUNDED COMPARISON` remains visible-only and the stop precedes activation/persistence/later states. A3 preserves this zero-evidence boundary only.
+
 ## A1 current control — 2026-07-25
 
 - **Coordinator release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`. Exact conclusion dismissal, strict finalized-evidence eligibility, and bounded review are accepted in normal play; full `674/674`, `15/15`, build, clean `113.2s` E2E, desktop/narrow review, hashes, cleanup, and sync pass.

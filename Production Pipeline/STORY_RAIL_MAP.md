@@ -1,5 +1,9 @@
 # Horizon Archive Story Rail Map
 
+## A2 result — 2026-07-25
+
+- `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Existing exact RG-30 Pilot review -> one private-free one-hit Pilot `PREPARE SAVE` -> existing contained local Pilot confirmation -> confirmation visible or `CANCEL`/Escape direct write-free return with prepare focus. All seven canonical references remain non-runtime; no world/authority/evidence effect, save activation, persistence, later packet, RP-013, or successor exists. Team positions and ten-packet lead remain unchanged; A3 preserves only this boundary.
+
 ## A1 current control — 2026-07-25
 
 - **Authoritative positions:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through `RP002-P1-020 + RP002-AESTH-015`; the ordered lead is ten packets and no RP-013/successor exists.

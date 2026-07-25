@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A2 result — 2026-07-25
+
+- `RP-002` `PASS — COMPACT LOCAL-CONFIRMATION PRESENTATION LOCKED / A3 NEXT`. Exact Pilot `RG-30` review -> private-free one-hit `PREPARE SAVE` -> existing contained Pilot local confirmation -> visible hold or `CANCEL`/Escape write-free exact-review return preserves one active group, two equal human leaves, responsive/accessibility parity, invariant SC-03, and seven closed non-runtime references. Stop before `SAVE BOUNDED COMPARISON` activation, persistence, or later state; A3 performs NO-REOPEN preservation only.
+
 ## A1 current control — 2026-07-25
 
 - `RP-002` remains `IN DEMO — PARTIAL / RP002-P1-020 + RP002-AESTH-015`; exact `RG-30` bounded review is the accepted edge.
