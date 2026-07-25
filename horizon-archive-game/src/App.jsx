@@ -22,6 +22,7 @@ import {
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
   createCustodyLedgerNormalRAIConclusionReview,
+  createCustodyLedgerNormalRAIAtomicSaveCommit,
   createCustodyLedgerNormalRAIPrepareSaveConfirmation,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAITransferConvergence,
@@ -32,6 +33,7 @@ import {
   readCustodyLedgerNormalRoute,
   writeCustodyLedgerNormalRoute,
 } from "./CustodyLedgerNormalRoute.js";
+import { CUSTODY_LEDGER_SAVE_INTENT } from "./custodyLedgerExercise.js";
 import {
   CUSTODY_LEDGER_PRIMARY_INTERACTION_VERSION,
   CUSTODY_LEDGER_SUBMIT_EXPEDITION_FIELDS,
@@ -80,6 +82,11 @@ import {
   CUSTODY_LEDGER_PREPARE_SAVE,
   CUSTODY_LEDGER_RAI_PREPARE_SAVE_VERSION,
 } from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
+import {
+  CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
+  CUSTODY_LEDGER_RETRY_SAVE,
+  CUSTODY_LEDGER_RETURN_SAFELY,
+} from "./CustodyLedgerRAIAtomicSaveCommit.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -695,6 +702,7 @@ export function App() {
   const custodyLedgerRAIExplanationConvergenceControllerRef = useRef(null);
   const custodyLedgerRAIConclusionReviewControllerRef = useRef(null);
   const custodyLedgerRAIPrepareSaveConfirmationControllerRef = useRef(null);
+  const custodyLedgerRAIAtomicSaveCommitControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -806,8 +814,15 @@ export function App() {
     if (!["RG-00", "RG-20", "RG-30", "RG-U"].includes(custodyLedgerPrimaryView?.phase)) {
       custodyLedgerRAIConclusionReviewControllerRef.current = null;
     }
-    if (!["RG-30", "save_confirmation", "RG-U"].includes(custodyLedgerPrimaryView?.phase)) {
+    if (!["RG-30", "save_confirmation", "recoverable_save_failure", "RG-U"].includes(
+      custodyLedgerPrimaryView?.phase,
+    )) {
       custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+    }
+    if (!["RG-30", "save_confirmation", "recoverable_save_failure", "comparison_complete"].includes(
+      custodyLedgerPrimaryView?.phase,
+    )) {
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
     }
   }, [custodyLedgerPrimaryView?.phase]);
 
@@ -1870,6 +1885,7 @@ export function App() {
       if (!reviewController) return null;
       custodyLedgerRAIConclusionReviewControllerRef.current = reviewController;
       custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
       custodyLedgerTransferContextRef.current = {
         ...context,
         acceptedRAIConclusionState: result.state,
@@ -1927,23 +1943,7 @@ export function App() {
       "rp002-review-bounded-comparison",
     ));
     if (result?.status === "bounded_review_visible") {
-      const context = custodyLedgerTransferContextRef.current;
-      const prepareController = context
-        ? createCustodyLedgerNormalRAIPrepareSaveConfirmation(
-          context.routeState,
-          context.primaryResult,
-          context.freshPracticeState,
-          context.transferCompleteState,
-          context.explanationEntryState,
-          context.explanationCompleteState,
-          context.acceptedBlankTransferState,
-          context.acceptedBlankExplanationState,
-          context.acceptedRAIConclusionState,
-          context.eligibilityDependencies,
-          context.predecessor,
-          result.state,
-        )
-        : null;
+      const prepareController = createNormalCustodyLedgerPrepareSaveController(result.state);
       if (!prepareController) return null;
       custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = prepareController;
       setCustodyLedgerPrimaryView(prepareController.getState());
@@ -1963,6 +1963,46 @@ export function App() {
     };
   }
 
+  function createNormalCustodyLedgerPrepareSaveController(acceptedReviewState) {
+    const context = custodyLedgerTransferContextRef.current;
+    return context
+      ? createCustodyLedgerNormalRAIPrepareSaveConfirmation(
+        context.routeState,
+        context.primaryResult,
+        context.freshPracticeState,
+        context.transferCompleteState,
+        context.explanationEntryState,
+        context.explanationCompleteState,
+        context.acceptedBlankTransferState,
+        context.acceptedBlankExplanationState,
+        context.acceptedRAIConclusionState,
+        context.eligibilityDependencies,
+        context.predecessor,
+        acceptedReviewState,
+      )
+      : null;
+  }
+
+  function createNormalCustodyLedgerAtomicSaveController(acceptedConfirmationState) {
+    const context = custodyLedgerTransferContextRef.current;
+    return context
+      ? createCustodyLedgerNormalRAIAtomicSaveCommit(
+        context.routeState,
+        context.primaryResult,
+        context.freshPracticeState,
+        context.transferCompleteState,
+        context.explanationEntryState,
+        context.explanationCompleteState,
+        context.acceptedBlankTransferState,
+        context.acceptedBlankExplanationState,
+        context.acceptedRAIConclusionState,
+        context.eligibilityDependencies,
+        context.predecessor,
+        acceptedConfirmationState,
+      )
+      : null;
+  }
+
   function prepareCustodyLedgerSaveConfirmation(event) {
     if (demoTour || typeof window === "undefined") return null;
     const controller = custodyLedgerRAIPrepareSaveConfirmationControllerRef.current;
@@ -1971,7 +2011,12 @@ export function App() {
       event,
       "rp002-prepare-save",
     ));
-    if (result?.status === "local_confirmation_visible") setCustodyLedgerPrimaryView(result.state);
+    if (result?.status === "local_confirmation_visible") {
+      const atomicController = createNormalCustodyLedgerAtomicSaveController(result.state);
+      if (!atomicController) return null;
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = atomicController;
+      setCustodyLedgerPrimaryView(atomicController.getState());
+    }
     return result;
   }
 
@@ -1983,8 +2028,73 @@ export function App() {
       event,
       "rp002-cancel-prepare-save",
     ));
-    if (result?.status === "confirmation_cancelled_write_free") setCustodyLedgerPrimaryView(result.state);
+    if (result?.status === "confirmation_cancelled_write_free") {
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+      setCustodyLedgerPrimaryView(result.state);
+    }
     return result;
+  }
+
+  function custodyLedgerRAIAtomicSaveIntent(action, event, token) {
+    return {
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
+      mode: "campaign",
+      owner: action === CUSTODY_LEDGER_SAVE_INTENT
+        ? "PILOT // FLIGHT RECORDER"
+        : "SYSTEM // EXPEDITION STATE",
+      action,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken(token),
+    };
+  }
+
+  function dispatchCustodyLedgerAtomicSave(action, event, token) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIAtomicSaveCommitControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAIAtomicSaveIntent(
+      action,
+      event,
+      token,
+    ));
+    if (result?.status === "returned_safely_write_free") {
+      const prepareController = createNormalCustodyLedgerPrepareSaveController(result.state);
+      if (!prepareController) return null;
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = prepareController;
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+      setCustodyLedgerPrimaryView(prepareController.getState());
+    } else if ([
+      "comparison_saved",
+      "recoverable_save_failure",
+      "fresh_confirmation_visible",
+    ].includes(result?.status)) {
+      setCustodyLedgerPrimaryView(result.state);
+    }
+    return result;
+  }
+
+  function commitCustodyLedgerAtomicSave(event) {
+    return dispatchCustodyLedgerAtomicSave(
+      CUSTODY_LEDGER_SAVE_INTENT,
+      event,
+      "rp002-save-bounded-comparison",
+    );
+  }
+
+  function retryCustodyLedgerAtomicSave(event) {
+    return dispatchCustodyLedgerAtomicSave(
+      CUSTODY_LEDGER_RETRY_SAVE,
+      event,
+      "rp002-retry-save",
+    );
+  }
+
+  function returnSafelyFromCustodyLedgerAtomicSave(event) {
+    return dispatchCustodyLedgerAtomicSave(
+      CUSTODY_LEDGER_RETURN_SAFELY,
+      event,
+      "rp002-return-safely",
+    );
   }
 
   function returnToCompletedMeadow() {
@@ -3047,6 +3157,9 @@ export function App() {
         onBoundedComparisonReview={reviewCustodyLedgerBoundedComparison}
         onPrepareSave={prepareCustodyLedgerSaveConfirmation}
         onPrepareSaveCancel={cancelCustodyLedgerSaveConfirmation}
+        onSaveCommit={commitCustodyLedgerAtomicSave}
+        onSaveRetry={retryCustodyLedgerAtomicSave}
+        onSaveReturnSafely={returnSafelyFromCustodyLedgerAtomicSave}
       />
     );
   }

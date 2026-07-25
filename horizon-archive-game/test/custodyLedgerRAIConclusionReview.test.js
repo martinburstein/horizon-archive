@@ -975,7 +975,7 @@ test("invalid, private, stale, Tour, duplicate, combined, and malformed-commit i
   assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 0 });
 });
 
-test("protected atomic confirmation and empty failure resume without replay and remain unimported by normal routes", () => {
+test("protected atomic confirmation and empty failure resume without replay while normal routes compose the authority", () => {
   const tracked = countedAtomicAdapter({ failuresBeforeSuccess: 1 });
   const options = { ...acceptedAtomicSaveFixture(), adapter: tracked.adapter };
   const initial = createCustodyLedgerRAIAtomicSaveCommit(options);
@@ -990,8 +990,10 @@ test("protected atomic confirmation and empty failure resume without replay and 
   for (const forbidden of ["localStorage", "sessionStorage", "restoreCustodyLedgerBoundedComparison", "fetch(", "XMLHttpRequest", "document.", "window.", "RP-003", "RP-013"]) {
     assert.equal(source.includes(forbidden), false, forbidden);
   }
-  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+  for (const relative of ["../src/App.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
     assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
-      .includes("CustodyLedgerRAIAtomicSaveCommit"), false, relative);
+      .includes("CustodyLedgerRAIAtomicSaveCommit"), true, relative);
   }
+  assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8")
+    .includes("CustodyLedgerRAIAtomicSaveCommit"), false);
 });

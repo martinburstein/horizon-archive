@@ -64,6 +64,7 @@ import { createCustodyLedgerRAITransferConvergence } from "./CustodyLedgerRAITra
 import { createCustodyLedgerRAIExplanationConvergence } from "./CustodyLedgerRAIExplanationConvergence.js";
 import { createCustodyLedgerRAIConclusionReview } from "./CustodyLedgerRAIConclusionReview.js";
 import { createCustodyLedgerRAIPrepareSaveConfirmation } from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
+import { createCustodyLedgerRAIAtomicSaveCommit } from "./CustodyLedgerRAIAtomicSaveCommit.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -455,6 +456,46 @@ export function createCustodyLedgerNormalRAIPrepareSaveConfirmation(
     return createCustodyLedgerRAIPrepareSaveConfirmation({
       ...options,
       acceptedReviewState,
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIAtomicSaveCommit(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  acceptedBlankExplanationState,
+  acceptedRAIConclusionState,
+  eligibilityDependencies,
+  predecessor,
+  acceptedConfirmationState,
+  adapter,
+) {
+  const options = normalRAIConclusionReviewOptions(
+    routeState,
+    primaryResult,
+    freshPracticeState,
+    transferCompleteState,
+    explanationEntryState,
+    explanationCompleteState,
+    acceptedBlankTransferState,
+    acceptedBlankExplanationState,
+    acceptedRAIConclusionState,
+    eligibilityDependencies,
+    predecessor,
+  );
+  if (!options || acceptedConfirmationState?.phase !== "save_confirmation") return null;
+  try {
+    return createCustodyLedgerRAIAtomicSaveCommit({
+      ...options,
+      acceptedConfirmationState,
+      adapter,
     });
   } catch {
     return null;

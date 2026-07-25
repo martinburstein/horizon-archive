@@ -1,5 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
+## W2 candidate result — 2026-07-25
+
+- `RP002-P1-022 RESOLVED — NORMAL ATOMIC COMMIT GRAPH / W3 NEXT`. The normal route now composes the existing protected controller for exact contained confirmation -> one validated adapter call -> complete empty failure/retry/safe return or exact no-action System `SC-03-40` success. Validation-before-consumption, triplet atomicity, privacy, focus/resume, accessibility, Tour, unchanged continuation/null city delta, and invariant world remain exact.
+- **Gate evidence:** focused `4/4`; full `684/684`; both applicable validator self-tests; production build; one strict existing `4173` preview; HTTP `200`; five exact result/recovery markers; and raw served-to-dist identity pass on `index-C7qPZ0yi.js` (`1,071,347` bytes; SHA-256 `BA0C685A33A9B2BFD2E3EF8578DC32E78A08A6D6B6059EF617006E1F59A83488`) / unchanged `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Browser storage/save was not inspected or mutated.
+- **W3 boundary:** presentation review only. Hard stop is visible `SC-03-40`; no restore/`SC-03-50`, departure, credits, later packet, RP-013, successor, browser persistence, world/access/authority, or external effect is authorized.
+
 ## A5 protected result — 2026-07-25
 
 - `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The candidate adds only an unimported pure controller and focused `19/19` coverage for exact commit atomicity, empty failure, fresh retry, write-free safe return, seven modalities, replay-free resume, and normal-route non-integration.

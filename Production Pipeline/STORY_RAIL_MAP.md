@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W2 result — 2026-07-25
+
+- `RP002-P1-022 RESOLVED — W3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted through `RP002-P1-021 + RP002-AESTH-016` while the new `RP002-P1-022` Working candidate awaits aesthetic/coordinator review. The ordered lead remains ten packets and the rail does not extend.
+- The candidate reaches only exact local `SC-03-40` success or complete recoverable failure/retry/safe return. Restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, and world/access/authority effects remain closed.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`, now testing the disabled contained-confirmation commit. The ordered lead remains ten packets and the rail does not extend.

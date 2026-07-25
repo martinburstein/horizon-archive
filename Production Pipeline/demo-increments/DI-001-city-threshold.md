@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W2 result — 2026-07-25
+
+- `RP002-P1-022 RESOLVED — W3 AESTHETIC REVIEW NEXT`. The accepted normal contained confirmation now has one enabled private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON` backed only by the existing atomic controller. Exact success shows only System `SC-03-40`; every non-exact result clears the complete triplet and shows only exact failure with fresh retry or write-free safe return.
+- Failure/retry/safe-return/success preserve one active group, owner-heading focus, separate `>=44px` actions, responsive/accessibility parity, privacy, zero evidence/authority, no-credit Tour, unchanged continuation, `cityStateDelta=null`, and invariant world. Existing confirmation cancel/Escape remains write-free. No art/style asset changed.
+- Focused `4/4`, full `684/684`, both validators, production build, and served identity/marker/hash gates pass on `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`. W3 reviews presentation only; visible `SC-03-40` remains the hard stop before restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority effect.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. The coordinator-accepted contained Pilot confirmation is present on unchanged `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`, but `SAVE BOUNDED COMPARISON` remains disabled/aria-disabled with no normal handler. Focused player-path coverage passes `54/54`; protected code and Martin's browser storage/save remained untouched.

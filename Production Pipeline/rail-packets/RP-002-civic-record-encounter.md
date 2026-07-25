@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## W2 result — 2026-07-25
+
+- **Disposition:** `RP002-P1-022 RESOLVED — NORMAL ATOMIC COMMIT GRAPH / W3 NEXT`. The exact accepted normal contained confirmation now enables one private-free seven-modality/one-hit Pilot commit by composing the protected A5 controller, not by duplicating transaction rules.
+- **Player path:** one valid `SAVE BOUNDED COMPARISON` reaches exactly one adapter call with only the exact three-field triplet. Exact all-three success replaces the group with only System `comparison_complete / SC-03-40` and no actions. Every false/absent/malformed/partial/mismatched result clears the full triplet and mounts only exact empty `recoverable_save_failure` with separate `RETRY SAVE` / `RETURN SAFELY`; retry is adapter-free and fresh, safe return is adapter-free/write-free exact `RG-30` `prepare_save`, and existing confirmation cancel/Escape remains write-free.
+- **Contracts / evidence:** validation-before-consumption, replay-free confirmation/failure, owner-heading focus, one active group, `>=44px`, responsive/non-color/forced-color/reduced-motion, privacy, zero evidence/authority, no-credit Tour, unchanged continuation/null city delta, invariant world, and no successor remain exact. Focused `4/4`, full `684/684`, both validators, build, and served identity pass on `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`; no browser save/storage or art changed.
+- **Exact W3 handoff:** inspect presentation only for exact enabled confirmation commit, complete failure/two actions, fresh retry, safe-return focus, and no-action System `SC-03-40` success across wide/narrow/effective-`200%`. Confirm one active group, heading-first focus, target size, reflow, non-color/forced-color/reduced-motion, invariant civic plate, and no new art. Do not change mechanics/copy/storage/evidence/authority/rail state or cross the hard stop into restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or external effect.
+
 ## W1 result — 2026-07-25
 
 - **Disposition:** `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted contained Pilot confirmation remains stable, focused, reversible, private, and world-invariant, but normal UI renders `SAVE BOUNDED COMPARISON` literally disabled and aria-disabled with no commit handler. The protected A5 graph is not integrated, so neither exact empty-triplet failure nor `comparison_complete / SC-03-40` can be reached normally.

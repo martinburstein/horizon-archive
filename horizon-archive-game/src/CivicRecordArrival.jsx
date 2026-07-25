@@ -43,6 +43,10 @@ import {
   CUSTODY_LEDGER_CANCEL_PREPARE_SAVE,
   CUSTODY_LEDGER_PREPARE_SAVE,
 } from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
+import {
+  CUSTODY_LEDGER_RETRY_SAVE,
+  CUSTODY_LEDGER_RETURN_SAFELY,
+} from "./CustodyLedgerRAIAtomicSaveCommit.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -76,6 +80,9 @@ export function CivicRecordArrival({
   onBoundedComparisonReview,
   onPrepareSave,
   onPrepareSaveCancel,
+  onSaveCommit,
+  onSaveRetry,
+  onSaveReturnSafely,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -100,6 +107,8 @@ export function CivicRecordArrival({
   const raiBoundedReviewHeadingRef = useRef(null);
   const raiPrepareSaveRef = useRef(null);
   const raiSaveConfirmationHeadingRef = useRef(null);
+  const raiSaveFailureHeadingRef = useRef(null);
+  const raiSaveCompleteHeadingRef = useRef(null);
   const raiReviewRecoveryHeadingRef = useRef(null);
   const raiExplanationControlRefs = useRef({});
   const classificationRef = useRef(null);
@@ -139,6 +148,10 @@ export function CivicRecordArrival({
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
   const primaryPhase = primaryInteraction?.phase ?? (atPythonPrimary ? "30-A0" : null);
+  const saveResultOwnsActions = [
+    "recoverable_save_failure",
+    "comparison_complete",
+  ].includes(primaryPhase);
 
   useLayoutEffect(() => {
     if (!["EX-20", "EXS-00"].includes(primaryPhase)
@@ -300,6 +313,14 @@ export function CivicRecordArrival({
       }
       if (primaryPhase === "save_confirmation") {
         raiSaveConfirmationHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "recoverable_save_failure") {
+        raiSaveFailureHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "comparison_complete") {
+        raiSaveCompleteHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
       if (primaryPhase === "RG-U") {
@@ -1113,6 +1134,22 @@ export function CivicRecordArrival({
                 </h2>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "recoverable_save_failure" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-save-failure-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiSaveFailureHeadingRef} id="custody-ledger-save-failure-heading" tabIndex="-1">
+                  {primaryInteraction.failureText}
+                </h2>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "comparison_complete" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-save-complete-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiSaveCompleteHeadingRef} id="custody-ledger-save-complete-heading" tabIndex="-1">
+                  {primaryInteraction.savedText}
+                </h2>
+              </section>
+            )}
             {atPythonPrimary && primaryPhase === "RG-U" && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-review-recovery-heading">
                 <p className="eyebrow">{primaryInteraction.owner}</p>
@@ -1173,6 +1210,10 @@ export function CivicRecordArrival({
                       ? "The bounded comparison review is visible."
                     : primaryPhase === "save_confirmation"
                       ? "The contained local confirmation is visible."
+                    : primaryPhase === "recoverable_save_failure"
+                      ? primaryInteraction.failureText
+                    : primaryPhase === "comparison_complete"
+                      ? primaryInteraction.savedText
                     : primaryPhase === "RG-U"
                       ? "Private work was cleared and the deterministic first incomplete protected boundary was selected."
                     : primaryPhase === "30-A1F"
@@ -1203,8 +1244,7 @@ export function CivicRecordArrival({
                 <button
                   className="primary-action"
                   type="button"
-                  disabled
-                  aria-disabled="true"
+                  onClick={onSaveCommit}
                 >
                   {primaryInteraction.commitIntent}
                 </button>
@@ -1213,18 +1253,31 @@ export function CivicRecordArrival({
                 </button>
               </div>
             )}
-            <div className="city-command-actions" aria-label={atNearObservation
-              ? "Near evidence actions"
-              : atFarObservation
-                ? "Far evidence actions"
-                : atPythonPrimary
-                  ? describeCustodyLedgerPrimaryReturnGroup(primaryPhase)
-                : atLocalComparison
-                  ? "Local comparison actions"
-                : "Civic route actions"}>
-              {routeActions.map(renderAction)}
-            </div>
-            {returnActions.length > 0 && (
+            {atPythonPrimary && primaryPhase === "recoverable_save_failure" && (
+              <div className="city-command-actions" aria-label="Recoverable local save actions">
+                <span className="eyebrow">SYSTEM // EXPEDITION STATE</span>
+                <button className="primary-action" type="button" onClick={onSaveRetry}>
+                  {CUSTODY_LEDGER_RETRY_SAVE}
+                </button>
+                <button className="secondary-action" type="button" onClick={onSaveReturnSafely}>
+                  {CUSTODY_LEDGER_RETURN_SAFELY}
+                </button>
+              </div>
+            )}
+            {!saveResultOwnsActions && (
+              <div className="city-command-actions" aria-label={atNearObservation
+                ? "Near evidence actions"
+                : atFarObservation
+                  ? "Far evidence actions"
+                  : atPythonPrimary
+                    ? describeCustodyLedgerPrimaryReturnGroup(primaryPhase)
+                  : atLocalComparison
+                    ? "Local comparison actions"
+                    : "Civic route actions"}>
+                {routeActions.map(renderAction)}
+              </div>
+            )}
+            {!saveResultOwnsActions && returnActions.length > 0 && (
               <div className="city-command-actions civic-route-return-actions" aria-label="Separate route return">
                 {returnActions.map(renderAction)}
               </div>

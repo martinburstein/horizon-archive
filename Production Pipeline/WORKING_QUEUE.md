@@ -1,5 +1,12 @@
 # Working Queue
 
+## W2 result / W3 next — 2026-07-25
+
+- **Disposition:** `RP002-P1-022 RESOLVED — ATOMIC COMMIT GRAPH IN NORMAL DEMO / W3 NEXT`. The exact accepted contained Pilot confirmation now composes the protected atomic authority and enables one private-free `>=44px` `SAVE BOUNDED COMPARISON`. Seven modalities converge on one semantic token; one valid commit calls only the existing adapter once with the exact three-field triplet.
+- **Result / recovery:** exact all-three success replaces the active group with only System `comparison_complete / SC-03-40` and accepts no later action. Any non-exact adapter result clears the triplet and private/transient material, then shows only exact `recoverable_save_failure` with separate `RETRY SAVE` / `RETURN SAFELY`; retry calls no adapter and requires a fresh commit, while safe return calls no adapter, writes nothing, and restores exact `RG-30` `prepare_save` focus. Existing confirmation cancel/Escape remains write-free.
+- **Evidence / preservation:** focused repaired-path `4/4`; full game `684/684`; RP-002 and L-02-02 self-tests; production build; single strict `4173` preview; cache-bypassed HTTP refresh; five required served markers; and served-to-dist byte identity pass on `index-C7qPZ0yi.js` / unchanged `index-BPvBS70Z.css`. No browser storage/save, art, style, copy authority, restore, later rail state, or protected user work was touched.
+- **Exact W3 task:** presentation review only on this candidate. Review the enabled contained-confirmation commit, exact complete failure with its two separate actions, fresh retry, write-free safe return focus, and exact no-action System `SC-03-40` success at wide, narrow, and effective-`200%`. Confirm one active group, owner-heading focus, `>=44px`, natural reflow, non-color/forced-color/reduced-motion meaning, invariant first-person civic world/crop, and no new art. Do not alter mechanics, copy, storage, evidence, authority, or rail state; stop before restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or external effect.
+
 ## W1 result / W2 next — 2026-07-25
 
 - **Finding:** `RP002-P1-022 P1 OPEN`. At exact accepted `save_confirmation`, the Pilot heading/copy, `CANCEL`, and separate returns are present, but `SAVE BOUNDED COMPARISON` is literally disabled and aria-disabled with no normal handler. The player cannot begin the protected local result graph.
