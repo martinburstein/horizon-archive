@@ -3,7 +3,8 @@
 ## Current control — 2026-07-25
 
 - **Release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.
-- **Exact next edge / stop:** converge the existing explicit commit, atomic local write, no-partial failure, retry/safe-return, and exact `SC-03-40` success authorities as one integration-sized tranche. Stop at saved success; add no new prompt, score, branch, micro-seam, art integration, verified restore, departure, later packet, RP-013, or successor.
+- **A1 convergence audit:** `CONVERGE + MERGE + TRIM / A2 NEXT`. The existing contained confirmation, explicit private-free one-hit commit, exact local all-or-none triplet, complete no-partial failure, retry/safe return, and exact `SC-03-40` success are one integration-sized ownership path. Protected missing-gate count remains zero; A2 may add no waiting/progress/partial-result micro-state.
+- **Stop:** saved success visible; no new prompt, copy, score, branch, art integration, verified restore/`SC-03-50`, departure, later packet, RP-013, or successor.
 
 ## A4 current control — 2026-07-25
 

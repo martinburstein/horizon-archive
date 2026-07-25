@@ -3,7 +3,8 @@
 ## Current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact bounded review -> private-free Pilot prepare -> contained confirmation -> inert hold or write-free cancel/Escape recovery is accepted.
-- **Authoritative exact next edge:** contained confirmation -> explicit atomic comparison save -> deterministic no-partial local failure with retry/safe return or exact `SC-03-40` saved success. Stop before verified restore, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
+- **A1 convergence lock / exact A2 edge:** accepted contained Pilot confirmation -> one explicit private-free seven-modality/one-hit comparison commit -> existing expedition-System all-or-none local three-field adapter -> complete non-commit failure with only retry/safe return, or exact `SC-03-40` saved success. Pilot owns intent; expedition System owns local status; city/Builders/Machine/world own none. A2 boards one compact sequence without a new micro-state.
+- **Hard stop:** saved success visible before verified restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
 
 ## 2026-07-25 canonical cycle reveal — contained-confirmation cradle
 

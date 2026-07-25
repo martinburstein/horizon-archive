@@ -3,7 +3,8 @@
 ## Current control — 2026-07-25
 
 - **Release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now accepted through contained local save confirmation and write-free cancel/Escape recovery. The ordered lead remains ten packets and no `RP-013` or successor exists.
-- **Exact next edge / stop:** contained confirmation -> explicit Pilot `SAVE BOUNDED COMPARISON` -> existing all-or-none local three-field adapter -> either recoverable local failure with retry/safe return or exact `SC-03-40` comparison-complete state. Stop with saved success visible before verified restore, return/departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
+- **A1 convergence lock / exact A2 edge:** `PASS — COMMIT OWNERSHIP AND LOCAL ATOMIC LOOP LOCKED`. Accepted contained Pilot confirmation -> one fresh private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON` -> existing exact three-field local all-or-none adapter -> complete non-commit failure with only retry/safe return, or exact `SC-03-40` saved success. Pilot owns intent; expedition System owns transaction status; city/Builders/Machine/world own none. A2 boards this one existing-authority loop without a new micro-state.
+- **Stop:** saved success visible before verified restore/`SC-03-50`, return/departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
 
 ## A4 current control — 2026-07-25
 
