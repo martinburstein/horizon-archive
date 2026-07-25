@@ -8,9 +8,9 @@
 
 ## A4 current control — 2026-07-25
 
-- **Mode / result:** mandatory RP-002 convergence; `PASS — GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero.
-- **Converged tranche:** exact sanitized `RG-30` -> one fresh private-free seven-modality/one-hit prepare -> existing contained local confirmation -> hold or cancel/Escape write-free exact-review return, with one shared fail-closed sanitation/resume contract rather than another micro-seam.
-- **Prohibited:** commit activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion, new action/copy/prompt/answer/score/branch/art, normal integration, RP-003+, RP-013, or successor.
+- **Mode / result:** mandatory RP-002 convergence; `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero.
+- **Converged tranche:** exact contained confirmation, sole validated commit, one all-or-none adapter call, empty failure, fresh retry/write-free safe return, and exact `SC-03-40` success are one complete protected graph. No waiting/progress/partial/diagnostic micro-state was added.
+- **Prohibited:** restore/`SC-03-50`, departure, credits, new action/copy/prompt/answer/score/branch/art, normal integration, `RP-003+`, RP-013, successor, or world/access/authority effect.
 
 ## A1 current control — 2026-07-25
 

@@ -8,9 +8,9 @@
 
 ## A4 current control — 2026-07-25
 
-- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-020 + RP002-AESTH-015`; ordered lead remains ten packets.
-- **A4 graph lock / exact A5 edge:** sanitized exact `RG-30` -> one fresh private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> only existing contained local Pilot confirmation -> visible hold or `CANCEL`/Escape write-free exact-review return with deterministic prepare focus; invalid or contaminated entry sanitizes without consuming a future valid token.
-- **Hard stop:** confirmation visible before `SAVE BOUNDED COMPARISON` activation, adapter/atomic transaction/persistence/failure/retry/restore/sanitation UI/completion, `RP-003+`, RP-013, successor, or world/access/authority effect.
+- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`; ordered lead remains ten packets.
+- **A4 graph lock / exact A5 edge:** exact contained confirmation -> fully validated fresh private-free seven-modality/one-hit commit -> one existing local all-or-none adapter call -> empty-triplet exact failure with fresh retry/write-free safe return, or exact System `SC-03-40` acknowledgement. One active group, focus/resume, privacy, Tour, accessibility, and invariant-world contracts remain exact.
+- **Hard stop:** saved success visible before restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
 
 ## A1 current control — 2026-07-25
 

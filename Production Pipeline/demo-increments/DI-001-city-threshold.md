@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A4 result — 2026-07-25
+
+- `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`. Exact contained confirmation accepts only one fresh validated private-free seven-modality/one-hit commit; one adapter call produces either the exact complete triplet and only the System `SC-03-40` acknowledgement, or empty-triplet exact failure.
+- Failure exposes only separate `>=44px` `RETRY SAVE` / `RETURN SAFELY`. Retry calls no adapter, returns fresh confirmation heading-first, and requires a new commit; safe return writes nothing and reaches exact `RG-30` `prepare_save` focus. Exact confirmation/failure resume is heading-first and replay-free; one active group, accessibility, privacy, no-credit Tour, invariant world, unchanged continuation, and null city delta remain exact.
+- Focused commit/cancel/failure/Tour/invariant recovery checks pass `5/5`; graph/contract/source and diff checks pass. A5 builds only a pure protected controller and stops visible at `SC-03-40` before restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority effect.
+
 ## A3 result — 2026-07-25
 
 - `NO REOPEN — SOLIDIFIED / ATOMIC COMMIT FIREWALL PASS / A4 NEXT`. Finalized Python, finalized Responsible-AI, and five finalized observations remain the sole strict eligibility conjunction. Commit, failure, retry, safe return, saved acknowledgement, focus, reflow, modality, Tour, and world presentation are zero evidence/credit/authority and cannot cross-credit.
