@@ -13,6 +13,10 @@ Treat AI-901 objectives as the master learning goals. Use AI-900 material only a
 
 ## Two-team agent profiles
 
+**Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates this workflow. `NEXT_INSTANCE_HANDOFF.md` is now a dormant marker and awaits a new workflow.
+
+The instructions below are retained only as historical reactivation guidance.
+
 When running or resuming the Horizon Archive two-team cycle, treat `TWO_TEAM_AGENT_CYCLE.md` as the workflow authority and `Agent Profiles/README.md` as the agent registry.
 
 For scheduled autonomous production, also read `AUTONOMOUS_PRODUCTION_LOOP.md`. It is the throughput and handoff authority for reading scope, integration-sized work, tiered validation, checkpoint/push cadence, non-overlap behavior, and compact state transfer. `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.

@@ -1,5 +1,7 @@
 # Horizon Archive Two-Team Agent Cycle
 
+> **ARCHIVED — 2026-07-25:** This workflow is retired. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not resume or schedule it unless Martin explicitly reactivates it.
+
 > **Scheduled-production optimization:** `AUTONOMOUS_PRODUCTION_LOOP.md` specializes this workflow for autonomous wakes. It preserves the role order and gates while defining compact reads, integration-sized tranches, tiered validation, push boundaries, non-overlap behavior, and replace-in-place handoffs.
 
 ## Purpose

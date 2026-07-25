@@ -1,5 +1,7 @@
 # Horizon Archive Autonomous Production Loop
 
+> **ARCHIVED — 2026-07-25:** The recurring automation has been deleted and this runbook is retired. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25`. Do not use it as an active execution authority unless Martin explicitly reactivates the archived workflow.
+
 ## Purpose
 
 This is the optimized execution overlay for scheduled Horizon Archive work. It preserves the ten-stage quality line in `TWO_TEAM_AGENT_CYCLE.md` while maximizing useful production work per wake-up.

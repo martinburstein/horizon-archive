@@ -1,5 +1,7 @@
 # Horizon Archive Agent Registry
 
+> **ARCHIVED — 2026-07-25:** These seven identities and nine sequential specialist passes belong to the retired Team 1 / Team 2 workflow. Preserve them for reference; do not invoke the registry as an active run order unless Martin explicitly reactivates the archived system.
+
 This directory stores the canonical, redeployable identity for every unique agent in the two-team production cycle.
 
 ## Loading protocol
