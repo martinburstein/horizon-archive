@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## A1 result — 2026-07-25
+
+- **Gate / mode:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + REUSE` remains the selected action and protected missing-gate count remains zero.
+- **Bounded tranche:** merge only the existing exact verified RP-002 predecessor, sanitization/fail-closed authority, blank `SC-04 / CM-00 ARRIVE + IDLE` group, one-group focus, and existing reversible CM-00 return actions. Valid entry changes neither evidence nor world state; invalid/Tour/private/partial/stale/forged/contaminated entry returns to the exact RP-002 boundary. Add no copy, art, observation, CM-10+, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, or authority.
+
 ## A4 result — 2026-07-25
 
 - **Gate:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action remains `CONVERGE + MERGE + TRIM`.

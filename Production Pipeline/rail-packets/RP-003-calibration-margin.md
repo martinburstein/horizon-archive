@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## A1 result — 2026-07-25
+
+- **Disposition / ownership lock:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Exact verified RP-002 completion at the accepted City Threshold is the sole valid predecessor for this tranche. `SYSTEM` sanitizes predecessor, Tour, privacy, and transient state; `SCENE` owns only the already-registered blank `SC-04 / CM-00 ARRIVE + IDLE` group and its invariant setting; `PILOT` gains no new inference, intent, reward, access, identity, authority, or world effect.
+- **Entry / failure meaning:** valid entry replays no RP-002 event, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned active group, and exposes only existing `ORIENT`, `SEALED BOUNDARY`, `RP-002 RETURN`, and `CITY THRESHOLD RETURN` actions. Invalid, Tour-derived, partial, stale, forged, private, or contaminated state clears transients and fails closed to the exact verified RP-002 boundary; it is local expedition sanitation, never a city response, judgment, revocation, or loss of evidence.
+- **Hard stop / A2 handoff:** reuse the registered CM-00 composition only. Add no lore, copy, art, observation, CM-10+, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or city/world change. A2 boards one no-replay arrival/idle presentation with one active group and preserves the existing return meanings.
+
 ## Coordinator current control — 2026-07-25
 
 - **Working position:** `READY — ACTIVE TEAM 2 EDGE / BLANK CM-00 ENTRY NEXT`. RP-002 is complete in Demo through exact restore and reversible accepted City Threshold return; Team 1 remains complete at RP-012.

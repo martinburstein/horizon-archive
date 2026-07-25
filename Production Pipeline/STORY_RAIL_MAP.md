@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A1 result — 2026-07-25
+
+- **Team positions / handoff:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Team 1 stays at complete `RP-012`; Team 2 stays at active `RP-003`; the ordered lead stays nine packets, `RP-004` through `RP-012`.
+- **Exact edge / boundary:** only exact verified RP-002 completion at accepted City Threshold may sanitize to blank no-replay `SC-04 / CM-00 ARRIVE + IDLE`, with one Scene-owned active group, unchanged `continuation`, and `cityStateDelta=null`. Every invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to RP-002. Existing CM-00 orient/sealed-boundary/RP-002-return/City-Threshold-return actions remain the full action set; no CM-10, RP-004, RP-013, successor, reward, access, authority, or world change is opened.
+
 ## W4 result - 2026-07-25
 
 - Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002` through the verified-restore/reversible-return candidate and accepted City Threshold; ordered lead remains ten packets. `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`.

@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A1 result — 2026-07-25
+
+- **Advance handoff:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; lead remains nine packets.
+- **Exact A2 scope:** from exact verified RP-002 completion at accepted City Threshold, reuse only System sanitation/fail-closed entry and existing blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`; preserve no RP-002 replay, one active group, unchanged `continuation`, `cityStateDelta=null`, and the registered orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to exact RP-002. Add no CM-10, lore/copy/art, learning, save, onward state, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## A5 result - 2026-07-25
 
 - **Disposition / work completed:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`; convergence remains `CONVERGE + MERGE + TRIM`. One pure unimported storage-free controller composes the previously accepted recovery graph with fresh validated City Threshold return, without touching normal runtime integration.

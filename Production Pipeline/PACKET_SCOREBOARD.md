@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A1 result — 2026-07-25
+
+- `RP-003 PASS — BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at the active `RP-003` Working edge; the ordered lead remains nine packets.
+- Exact verified RP-002 completion at accepted City Threshold may sanitize into only blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`, preserving `continuation` and `cityStateDelta=null`. Invalid, Tour-derived, private, partial, stale, forged, or contaminated state fails closed to exact RP-002. A2 reuses only registered CM-00 presentation; CM-10, lore/copy/art additions, learning, save, RP-004, RP-013, successor, reward, world/access/authority effects remain closed.
+
 ## A5 result - 2026-07-25
 
 - `RP-002 REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains accepted at normal `RP-002` `SC-03-40`; the ordered lead remains ten packets.

@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A1 result — 2026-07-25
+
+- **Disposition / boundary handoff:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Exact verified RP-002 completion at accepted City Threshold may enter only after System clears predecessor/Tour/privacy/transient material; valid entry has no replay, evidence, credit, save, reward, or physical response.
+- **Exact result / fail-closed rule:** mount only the existing blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE` group, retain `continuation`, keep `cityStateDelta=null`, and expose only existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Invalid, Tour-derived, private, partial, stale, forged, or contaminated entry clears transients and returns to the exact verified RP-002 boundary. No CM-10, RP-004, RP-013, successor, access, authority, or world change is defined.
+
 ## 2026-07-25 canonical cycle reveal — verified-return sightline
 
 - `[x] SC-03 / verified restore — inert return sightline and no-replay separation` is closed by `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
