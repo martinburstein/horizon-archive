@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A5 protected atomic result — 2026-07-25
+
+- `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The protected model now has exact confirmation -> one validated local all-or-none triplet -> only complete System failure with fresh retry/write-free safe return or `SC-03-40` saved acknowledgement. Seven modalities, token consumption, no-partial clearing, focus, resume, privacy, Tour, and invariant-world contracts are covered by the focused `19/19` suite.
+- It is not runtime integration. The accepted Demo remains at contained confirmation; W1 identifies only the earliest normal player-facing commit/result gap and stops there.
+
 ## A4 result — 2026-07-25
 
 - `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`. Exact contained confirmation accepts only one fresh validated private-free seven-modality/one-hit commit; one adapter call produces either the exact complete triplet and only the System `SC-03-40` acknowledgement, or empty-triplet exact failure.

@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## A5 protected result — 2026-07-25
+
+- `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The candidate adds only an unimported pure controller and focused `19/19` coverage for exact commit atomicity, empty failure, fresh retry, write-free safe return, seven modalities, replay-free resume, and normal-route non-integration.
+- The coordinator-accepted bundle remains unchanged. W1 uses normal live/source-served evidence only to locate the first missing player-facing commit/result transition; it must not force gated browser state or inspect storage/save.
+
 ## Current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Independent full `679/679`, all `15/15` readiness validators, build, clean first-launch `110.2s` E2E, desktop/narrow title-shell review, exact hashes, clean logs/overflow, QA cleanup, coordinator-preview shutdown, reference isolation, and patch gates pass.

@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A5 result — 2026-07-25
+
+- `RP-002` `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`; protected missing-gate count remains zero. The protected controller validates before consumption and calls the existing local adapter once only for the exact three-field triplet; failure is empty, retry is fresh, safe return is write-free, and success stops at `SC-03-40`.
+- Normal-player evidence and integration remain open. Restore/`SC-03-50`, later packets, RP-013, successor, and world/access/authority effects remain closed.
+
 ## A4 result — 2026-07-25
 
 - `RP-002` `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero. One valid explicit commit makes exactly one all-or-none adapter call; failure retains no triplet/private result and permits only fresh retry or write-free safe return; exact success stops at `SC-03-40`.

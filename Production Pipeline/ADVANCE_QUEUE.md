@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A5 result — 2026-07-25
+
+- **Disposition:** `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The nearest authorized edge is now implemented only as a pure non-routable controller: exact contained confirmation -> validated one-hit local triplet -> exact empty failure with fresh retry/write-free safe return or System `SC-03-40` success.
+- **Evidence / boundary:** focused protected suite `19/19` passes. No normal integration, restore, `SC-03-50`, departure, credits, RP-003+, RP-013, successor, browser storage/save, or world/access/authority effect was added. Working begins from the accepted normal confirmation and reports its earliest player-facing missing commit transition.
+
 ## A4 result — 2026-07-25
 
 - **Disposition / work completed:** `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`. Composed the existing exact contained confirmation, validated sole explicit commit, all-or-none adapter branch, empty recoverable failure, fresh retry, write-free safe return, and exact saved acknowledgement as one protected graph. Added no waiting/progress/partial state, prompt, score, persistence rule, art, runtime, route, restore, or successor.

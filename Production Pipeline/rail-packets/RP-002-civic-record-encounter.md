@@ -1,5 +1,10 @@
 # RP-002 — Civic Record Encounter
 
+## A5 implementation result — protected atomic comparison commit
+
+- `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The exact existing confirmation, commit, adapter, retry, and safe-return authorities are composed in one unimported pure controller. Seven validated modalities yield exactly one local three-field commit or an empty System failure; retry is fresh and safe return is write-free to `RG-30` prepare focus.
+- This remains protected-only: no normal route/UI/bundle integration, browser storage/save, restore/`SC-03-50`, new copy or board, learning evidence, credit, RP-003+, RP-013, successor, or world/access/authority effect. W1 reports only the earliest normal player-facing commit gap.
+
 ## A4 Puzzle Track — protected atomic commit and recovery graph
 
 - **Disposition:** `PASS — ATOMIC COMMIT / COMPLETE-FAILURE / SC-03-40 GRAPH LOCKED / PROTECTED A5 NEXT`. The A3 `NO REOPEN — SOLIDIFIED` verdict is accepted unchanged. This pass composes one existing-authority gameplay graph and adds no prompt, score, evidence, presentation board, micro-state, persistence rule, art, route, world effect, or successor.

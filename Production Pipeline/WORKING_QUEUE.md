@@ -1,5 +1,10 @@
 # Working Queue
 
+## A5-to-W1 handoff — 2026-07-25
+
+- **Incoming protected result:** `REVISE — PROTECTED ATOMIC COMMIT COMPLETE`. Exact confirmation can now be proven through a non-routable pure local atomic graph: validated commit -> empty failure/retry/safe return or `SC-03-40` success. It changes no normal runtime, bundle, browser storage/save, copy, art, curriculum, or world state.
+- **Exact W1 task:** inspect only the coordinator-accepted normal contained Pilot confirmation and report the earliest player-facing gap from its visible disabled `SAVE BOUNDED COMPARISON` to the explicit private-free commit/result graph. Do not inspect protected code, force state, or read/mutate browser storage/save. Stop at the first gap; no restore, departure, credits, RP-003+, RP-013, successor, or world/access/authority effect is in scope.
+
 ## Current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact review, prepare, contained confirmation, inert hold, and write-free cancel/Escape recovery are accepted; browser storage/save was not forced or inspected.

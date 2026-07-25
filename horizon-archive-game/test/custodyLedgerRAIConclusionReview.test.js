@@ -83,6 +83,14 @@ import {
   custodyLedgerRAIPrepareSaveModalities,
 } from "../src/CustodyLedgerRAIPrepareSaveConfirmation.js";
 import {
+  CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
+  CUSTODY_LEDGER_RETURN_SAFELY,
+  CUSTODY_LEDGER_RETRY_SAVE,
+  createCustodyLedgerRAIAtomicSaveCommit,
+  custodyLedgerRAIAtomicSaveModalities,
+} from "../src/CustodyLedgerRAIAtomicSaveCommit.js";
+import { createCustodyLedgerPersistenceAdapter } from "../src/custodyLedgerExercise.js";
+import {
   structuredPacketChecks,
   structuredPacketExercise,
   structuredPacketExplanationDimensions,
@@ -830,4 +838,160 @@ test("exact review and confirmation resume without replay while the normal route
   assert.equal(confirmation.campaignCommitEnabled, false);
   assert.equal(confirmation.cityStateDelta, null);
   assert.equal(confirmation.successor, null);
+});
+
+function acceptedAtomicSaveFixture() {
+  const options = acceptedPrepareSaveFixture();
+  const prepare = createCustodyLedgerRAIPrepareSaveConfirmation(options);
+  const acceptedConfirmationState = prepare.dispatch(prepareIntent(
+    CUSTODY_LEDGER_PREPARE_SAVE,
+    "atomic-fixture-prepare",
+  )).state;
+  return { ...options, acceptedConfirmationState };
+}
+
+function atomicSaveIntent(action, eventToken, overrides = {}) {
+  return {
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
+    mode: "campaign",
+    owner: action === "SAVE BOUNDED COMPARISON"
+      ? "PILOT // FLIGHT RECORDER"
+      : "SYSTEM // EXPEDITION STATE",
+    action,
+    activationKind: "pointer",
+    eventToken,
+    ...overrides,
+  };
+}
+
+function countedAtomicAdapter(options = {}) {
+  const base = createCustodyLedgerPersistenceAdapter({}, options);
+  let commitCalls = 0;
+  let clearCalls = 0;
+  return {
+    adapter: {
+      read: () => base.read(),
+      commitAtomicTriplet(value) {
+        commitCalls += 1;
+        return base.commitAtomicTriplet(value);
+      },
+      clearAtomicTriplet() {
+        clearCalls += 1;
+        return base.clearAtomicTriplet();
+      },
+    },
+    counts: () => ({ commitCalls, clearCalls }),
+  };
+}
+
+test("protected atomic save consumes one valid token and commits the exact triplet once for every modality", () => {
+  for (const activationKind of custodyLedgerRAIAtomicSaveModalities) {
+    const tracked = countedAtomicAdapter();
+    const controller = createCustodyLedgerRAIAtomicSaveCommit({
+      ...acceptedAtomicSaveFixture(), adapter: tracked.adapter,
+    });
+    assert.equal(controller.getState().phase, "save_confirmation");
+    const saved = controller.dispatch(atomicSaveIntent(
+      "SAVE BOUNDED COMPARISON",
+      `atomic-save-${activationKind}`,
+      { activationKind },
+    ));
+    assert.equal(saved.status, "comparison_saved");
+    assert.equal(saved.state.phase, "comparison_complete");
+    assert.equal(saved.state.boardState, "SC-03-40");
+    assert.deepEqual(saved.state.progression, {
+      civicComparisonSaved: true,
+      nextSurveyDirectionMarked: true,
+      rp002Checkpoint: "comparison_complete",
+    });
+    assert.deepEqual(saved.state.availableActions, []);
+    assert.equal(saved.state.owner, "SYSTEM // EXPEDITION STATE");
+    assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 0 });
+    assert.equal(controller.dispatch(atomicSaveIntent(
+      "SAVE BOUNDED COMPARISON",
+      `later-${activationKind}`,
+      { activationKind },
+    )).reason, "commit_unavailable");
+  }
+});
+
+test("protected atomic save clears every failed result and retry requires a fresh explicit commit", () => {
+  const tracked = countedAtomicAdapter({ failuresBeforeSuccess: 1 });
+  const controller = createCustodyLedgerRAIAtomicSaveCommit({
+    ...acceptedAtomicSaveFixture(), adapter: tracked.adapter,
+  });
+  const failed = controller.dispatch(atomicSaveIntent("SAVE BOUNDED COMPARISON", "atomic-failure"));
+  assert.equal(failed.status, "recoverable_save_failure");
+  assert.equal(failed.state.phase, "recoverable_save_failure");
+  assert.deepEqual(failed.state.progression, {});
+  assert.deepEqual(failed.state.availableActions, [CUSTODY_LEDGER_RETRY_SAVE, CUSTODY_LEDGER_RETURN_SAFELY]);
+  assert.equal(failed.state.failureText, "Local save did not complete. No comparison, marker, or checkpoint was retained.");
+  assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 1 });
+  const retried = controller.dispatch(atomicSaveIntent(CUSTODY_LEDGER_RETRY_SAVE, "atomic-retry"));
+  assert.equal(retried.status, "fresh_confirmation_visible");
+  assert.equal(retried.state.phase, "save_confirmation");
+  assert.equal(retried.state.confirmationText,
+    "Save only the bounded expedition comparison and survey marker. This grants no access or authority.");
+  assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 1 });
+  assert.equal(controller.dispatch(atomicSaveIntent(
+    "SAVE BOUNDED COMPARISON", "atomic-after-retry",
+  )).status, "comparison_saved");
+  assert.deepEqual(tracked.counts(), { commitCalls: 2, clearCalls: 1 });
+});
+
+test("protected atomic safe return is write-free and restores exact prepare focus", () => {
+  const tracked = countedAtomicAdapter({ failuresBeforeSuccess: 2 });
+  const controller = createCustodyLedgerRAIAtomicSaveCommit({
+    ...acceptedAtomicSaveFixture(), adapter: tracked.adapter,
+  });
+  controller.dispatch(atomicSaveIntent("SAVE BOUNDED COMPARISON", "atomic-before-return"));
+  const returned = controller.dispatch(atomicSaveIntent(CUSTODY_LEDGER_RETURN_SAFELY, "atomic-safe-return"));
+  assert.equal(returned.status, "returned_safely_write_free");
+  assert.equal(returned.state.phase, "RG-30");
+  assert.deepEqual(returned.state.focusIntent, { group: "bounded_review", target: "prepare_save" });
+  assert.deepEqual(returned.state.progression, {});
+  assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 1 });
+});
+
+test("invalid, private, stale, Tour, duplicate, combined, and malformed-commit inputs do not spend a future valid atomic token", () => {
+  const tracked = countedAtomicAdapter();
+  const controller = createCustodyLedgerRAIAtomicSaveCommit({
+    ...acceptedAtomicSaveFixture(), adapter: tracked.adapter,
+  });
+  const token = "atomic-valid-after-rejection";
+  for (const invalid of [
+    atomicSaveIntent("SAVE BOUNDED COMPARISON", token, { activationKind: "automatic" }),
+    atomicSaveIntent("SAVE BOUNDED COMPARISON", token, { mode: "demo_tour" }),
+    atomicSaveIntent("SAVE BOUNDED COMPARISON", token, { version: "stale" }),
+    atomicSaveIntent("SAVE BOUNDED COMPARISON", token, { owner: "SYSTEM // EXPEDITION STATE" }),
+    { ...atomicSaveIntent("SAVE BOUNDED COMPARISON", token), privateResponse: "PRIVATE" },
+    atomicSaveIntent("SAVE + RETURN", token),
+  ]) {
+    assert.equal(controller.dispatch(invalid).status, "rejected");
+    assert.equal(controller.getState().phase, "save_confirmation");
+  }
+  assert.equal(controller.dispatch(atomicSaveIntent("SAVE BOUNDED COMPARISON", token)).status, "comparison_saved");
+  assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 0 });
+});
+
+test("protected atomic confirmation and empty failure resume without replay and remain unimported by normal routes", () => {
+  const tracked = countedAtomicAdapter({ failuresBeforeSuccess: 1 });
+  const options = { ...acceptedAtomicSaveFixture(), adapter: tracked.adapter };
+  const initial = createCustodyLedgerRAIAtomicSaveCommit(options);
+  const confirmation = initial.getState();
+  assert.deepEqual(createCustodyLedgerRAIAtomicSaveCommit({ ...options, acceptedConfirmationState: confirmation }).getState(), confirmation);
+  const failure = initial.dispatch(atomicSaveIntent("SAVE BOUNDED COMPARISON", "atomic-resume-failure")).state;
+  const resumed = createCustodyLedgerRAIAtomicSaveCommit({ ...options, restoredState: failure }).getState();
+  assert.equal(resumed.phase, "recoverable_save_failure");
+  assert.deepEqual(resumed.progression, {});
+  assert.deepEqual(tracked.counts(), { commitCalls: 1, clearCalls: 1 });
+  const source = readFileSync(new URL("../src/CustodyLedgerRAIAtomicSaveCommit.js", import.meta.url), "utf8");
+  for (const forbidden of ["localStorage", "sessionStorage", "restoreCustodyLedgerBoundedComparison", "fetch(", "XMLHttpRequest", "document.", "window.", "RP-003", "RP-013"]) {
+    assert.equal(source.includes(forbidden), false, forbidden);
+  }
+  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+    assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
+      .includes("CustodyLedgerRAIAtomicSaveCommit"), false, relative);
+  }
 });

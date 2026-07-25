@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-25 — Advance Coder A5: protected atomic comparison commit
+
+- **Mode / verdict:** `advance` / `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. Added the pure, storage-free, unimported `CustodyLedgerRAIAtomicSaveCommit` controller and focused coverage only; normal App/route/UI, accepted bundle, browser storage/save, curriculum, art, copy, and world remain unchanged.
+- **Bounded behavior:** only the accepted contained Pilot confirmation and an exact private-free fresh seven-modality intent reach one existing local adapter call with the exact three-field triplet. Exact success shows only System `comparison_complete / SC-03-40`; every malformed or failed result clears to the exact empty `recoverable_save_failure`, with only fresh `RETRY SAVE` or write-free `RETURN SAFELY` to `RG-30` prepare focus. Resume is replay-free; no restore or `SC-03-50` exists.
+- **Validation:** protected conclusion/prepare/atomic suite `19/19` passes. Wider regression, validators, build, purity/non-integration, and patch checks are recorded with the A5 commit. Protected user paths remain untouched.
+- **Exact W1 handoff:** `Player Agent — inspect only coordinator-accepted normal live/source-served evidence at the contained Pilot confirmation. Report the earliest player-facing normal gap from visible disabled SAVE BOUNDED COMPARISON to an explicit private-free local commit and only the accepted failure/retry/safe-return or SC-03-40 result. Do not inspect this protected controller, force campaign state, or read/mutate browser storage/save. Stop at that earliest gap; no restore, departure, credits, RP-003+, RP-013, successor, or world/access/authority/external effect.`
+
 ## 2026-07-25 — Coordinator: contained local confirmation accepted
 
 - **Disposition:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Normal play now reaches exact sanitized `RG-30`, one explicit private-free seven-modality/one-hit Pilot `PREPARE SAVE`, only the existing contained local confirmation, inert hold, and write-free cancel/Escape return with deterministic prepare focus. Confirmation remains the hard stop; commit dispatch and all persistence/later states remain absent.
