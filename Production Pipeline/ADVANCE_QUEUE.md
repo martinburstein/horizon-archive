@@ -34,8 +34,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; exact atomic save success/failure/retry/safe-return is accepted normally through visible `SC-03-40`.
-- **Authoritative A1 start:** audit one final RP-002 recovery tranche only: accepted `SC-03-40` -> exact triplet/dependency sanitation on reload or re-entry -> exact `SC-03-50` verified restore with clear working state and no replay, or all-three downgrade to the deterministic first incomplete boundary -> existing reversible City Threshold return. Preserve zero evidence, privacy, Tour isolation, invariant world, unchanged continuation/null city delta, and no authority. Stop before normal `RP-003`, later departure, credits, RP-013, successor, or any new content/effect.
+- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`; atomic save, recovery, exact restore, and reversible City Threshold return are accepted normally.
+- **Authoritative A1 start:** continuity-audit only the existing RP-003 blank-entry ownership from exact verified RP-002 completion at accepted City Threshold. A2 may reuse the registered SC-04 CM-00 presentation; A3 preserves zero-credit prerequisite/evidence separation; A4 locks fail-closed entry and reversible CM-00 returns; A5 composes one pure protected entry proof. Add no new lore/copy/art/learning content and stop before CM-10.
 
 ## A5 result — 2026-07-25
 

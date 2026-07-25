@@ -12,8 +12,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.
-- **Authoritative exact next edge / stop:** `CONVERGE + MERGE + TRIM` the existing reload/re-entry sanitation, exact verified `SC-03-50` restore, deterministic first-incomplete downgrade, and reversible City Threshold return as one final RP-002 recovery tranche. Add no new prompt, answer, score, copy authority, art integration, route reward, normal `RP-003` integration, RP-013, successor, or world/access/authority effect.
+- **Authoritative release / mode:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`; RP-002 convergence is closed and protected missing-gate count remains zero. RP-003 was already promoted to Working and is now the nearest Team 2 edge.
+- **Authoritative exact next edge / stop:** `CONVERGE + REUSE` only the existing RP-003 start-state, CM-00, predecessor-sanitizer, Tour, focus, accessibility, privacy, and invariant-world authorities as one blank-entry tranche. Add no new lore, prompt, answer, score, observation, art integration, route reward, world response, RP-004 opening, RP-013, or successor. Stop before CM-10.
 
 ## Current control — 2026-07-25
 

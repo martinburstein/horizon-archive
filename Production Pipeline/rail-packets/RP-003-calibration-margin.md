@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## Coordinator current control — 2026-07-25
+
+- **Working position:** `READY — ACTIVE TEAM 2 EDGE / BLANK CM-00 ENTRY NEXT`. RP-002 is complete in Demo through exact restore and reversible accepted City Threshold return; Team 1 remains complete at RP-012.
+- **Exact next tranche:** reuse only the existing start-state and protected authorities for exact verified RP-002 completion at accepted City Threshold -> sanitized no-replay `CM-00 ARRIVE + IDLE`. Invalid, Tour-derived, private, partial, stale, forged, or contaminated entry fails closed to RP-002. Valid entry clears transients, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned blank CM-00 group, and exposes only the existing orient/sealed-boundary/return actions.
+- **Hard stop:** blank CM-00 visible. Do not implement CM-10 observation, Python or AI-901 work, save, onward bearing, RP-004, RP-013, successor, reward, access, identity, authority, or any physical city/world response.
+
 ## Packet identity
 
 - Status: `READY FOR WORKING — COORDINATOR GATE PASS`

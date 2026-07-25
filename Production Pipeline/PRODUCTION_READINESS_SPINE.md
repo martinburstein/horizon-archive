@@ -23,8 +23,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Independent full `684/684`, all `15/15` readiness validators, production build, isolated `113.5s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact asset hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable-art, and synchronization gates pass.
-- **Authoritative exact next edge:** protect and integrate only exact saved-triplet reload/re-entry, verified `SC-03-50` restore, all-three sanitation downgrade with deterministic first-incomplete focus, and the already-locked reversible City Threshold return. Stop before normal `RP-003`, later departure, credits, RP-013, successor, or any route reward/world/access/authority/external effect.
+- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Independent full `687/687`, all `15/15` readiness validators, production build, isolated `110.1s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact asset hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable-art, and synchronization gates pass.
+- **Authoritative exact next edge:** protect and integrate only exact verified RP-002 completion at accepted City Threshold -> sanitized blank RP-003 `CM-00`, including fail-closed predecessor/Tour/private handling, no replay, deterministic focus, and reversible returns. Stop before CM-10, RP-004, RP-013, successor, or any reward/world/access/authority/external effect.
 
 ## W4 verification result — 2026-07-25
 

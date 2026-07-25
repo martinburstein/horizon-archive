@@ -11,11 +11,11 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 ## Synchronized state
 
 - Branch: `main`
-- Candidate checkpoint: `3c65d30` — `Working Coder Polish: verify atomic save presentation`
+- Candidate checkpoint: `87bf866` — `Working Coder Polish: verify restore presentation`
 - Coordinator release: the commit containing this handoff
-- Expected after coordinator and reveal pushes: `HEAD == origin/main`
+- Expected after coordinator, retrospective, and reveal pushes: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
-- Released bundle: `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`
+- Released bundle: `index-DCMrW-hp.js` / `index-BPvBS70Z.css`
 - Automation: `horizon-archive-optimized-production-loop` remains active on a three-hour cadence. Continue any valid interrupted checkpoint; never overlap a cycle or restart A1.
 - Adaptive retrospective remains required after coordinator synchronization and before the reveal.
 
@@ -27,32 +27,29 @@ Protected untracked user paths — never inspect, stage, alter, move, or delete:
 ## Team positions
 
 - Team 1: `RP-012`, complete intended ending railhead; continuity-maintenance only.
-- Team 2: `RP-002`, accepted through exact local atomic save success and complete failure/retry/safe-return recovery.
-- Ordered lead: ten packets, `RP-003` through `RP-012`.
+- Team 2: `RP-003`, already promoted to Working; blank `CM-00 ARRIVE + IDLE` entry is the nearest unfinished normal edge.
+- Ordered lead: nine packets, `RP-004` through `RP-012`.
 - Whole-story rail: `END-TO-END OUTLINED`.
 - No `RP-013`, successor, or post-ending content is authorized.
 
 ## Accepted player-visible boundary
 
-Normal play accepts:
+Normal play now accepts the complete RP-002 local expedition loop:
 
 ```text
-exact contained Pilot save confirmation
-  -> one explicit private-free seven-modality / one-hit
-     SAVE BOUNDED COMPARISON
-  -> one existing all-or-none local three-field adapter call
-  -> deterministic local failure:
-       complete triplet absent
-       only RETRY SAVE or RETURN SAFELY
-       retry returns to fresh exact confirmation
-       safe return writes nothing and restores exact RG-30 / PREPARE SAVE focus
-     OR exact success:
-       only SYSTEM // EXPEDITION STATE
-       comparison_complete / SC-03-40
-       no action
+exact strict Python + Responsible-AI + five-observation conjunction
+  -> bounded review and explicit private-free atomic save
+  -> exact success or complete recoverable failure/retry/safe return
+  -> reload/re-entry sanitation
+  -> invalid/private/stale/partial/forged/review_required:
+       all-three clear + deterministic first-incomplete downgrade
+     OR exact:
+       System verified_restore / SC-03-50
+       cleared work + no replay
+  -> one explicit reversible return to accepted City Threshold
 ```
 
-Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations. Review, prepare, confirmation, commit presentation, failure, retry, safe return, success, focus, reflow, modality, resume, and Tour grant zero evidence or authority.
+RP-002 is complete in Demo unless a reproduced regression reopens it. Every recovery, focus, reflow, resume, Tour, return, and presentation event remains zero learning evidence and zero authority.
 
 ## Closed invariants
 
@@ -60,18 +57,18 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 - Private responses, feedback, result material, tokens, focus history, and adapter diagnostics never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Nine SC-03 canonical visual references remain non-runtime.
-- No story reward, item, route reward, access, permission, identity, authority, city/world response, external action, normal `RP-003+` integration, RP-013, or successor effect may arise at the current edge.
+- Nine SC-03 canonical visual references remain non-runtime until the required cycle reveal is archived.
+- No story reward, item, access, permission, identity, authority, city/world response, external action, RP-004 opening, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
 
-- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`.
-- Full game suite: `684/684`.
+- Disposition: `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`.
+- Full game suite: `687/687`.
 - Readiness validators: `15/15`.
 - Production build: pass.
-- Isolated E2E: port-`5174` HTTP `200` preflight passed; complete run passed in `113.5s`; credits reached, every reported gate true, `runtimeErrors:false`.
+- Isolated E2E: port-`5174` HTTP `200` preflight passed; complete non-overlapping run passed in `110.1s`; credits reached, every reported gate true, `runtimeErrors:false`.
 - In-app title-shell review: `1920 x 1080` and `390 x 844`; zero horizontal overflow, clean browser logs, `48px` / `44px` primary actions.
-- JS: `index-C7qPZ0yi.js`, `1,071,347` bytes, SHA-256 `BA0C685A33A9B2BFD2E3EF8578DC32E78A08A6D6B6059EF617006E1F59A83488`.
+- JS: `index-DCMrW-hp.js`, `1,082,619` bytes, SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`.
 - CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
 - Civic master/reference isolation, HTTP/served-byte identity, patch integrity, QA restoration, and coordinator-preview shutdown passed.
 - Martin's gated browser storage/save was untouched; deterministic source, tests, served bundle, and E2E support the release without a fabricated gated screenshot.
@@ -80,43 +77,40 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 
 - Closed item: `SC-03 / atomic local save — indivisible three-lamina expedition seal`.
 - Asset: `Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png`.
-- Canonical scope: exactly three pale mineral-ceramic laminae interlock as one all-or-none local seal inside one removable expedition cradle, sharing one restrained contained confirmation seam while the archive remains inert and greater.
-- Status: canonical visual reference only, not runtime-integrated. The dark center is not a portal or destination; fine cracks are non-canonical generation texture. The image defines no readable save content, adapter behavior, permission, authority, reward, world response, hidden lore, normal `RP-003+` integration, RP-013, or successor.
+- Status: canonical visual reference only, not runtime-integrated. The image defines no readable save content, permission, authority, reward, world response, hidden lore, RP-003 integration, RP-013, or successor.
 
 ## Exact next action
 
-Begin or resume one sequential cycle at A1. Converge only the existing verified local restore and reversible-return loop:
+Begin or resume one sequential cycle at A1. Reuse only already-approved RP-003 authorities to converge one blank-entry tranche:
 
 ```text
-accepted exact SC-03-40 saved acknowledgement
-  -> reload or later re-entry
-  -> sanitize exact stored triplet plus every unchanged eligibility dependency
-  -> deterministic invalid / stale / partial / forged / private /
-     review_required state:
-       clear all three progression fields together
-       clear private and transient work
-       show only existing System sanitation downgrade
-       target exact first incomplete protected boundary heading/control
-     OR exact valid state:
-       reconstruct only SYSTEM verified_restore / SC-03-50
-       clear private and transient work
-       focus restored heading, then saved controls
-       replay no arrival, observation, work image, suit result,
-       conclusion, confirmation, success status/effect, or world event
-  -> from exact SC-03-50 only:
-       existing reversible return to accepted City Threshold
+accepted City Threshold
+  + exact verified RP-002 completion
+  -> explicit adjacent-survey entry intent
+  -> sanitize predecessor, Tour, privacy, and transient state
+  -> invalid / Tour-derived / partial / stale / forged / private:
+       clear transients
+       fail closed to exact RP-002 verified boundary
+     OR exact:
+       enter only SC-04 / CM-00 ARRIVE + IDLE
+       one Scene-owned active group
+       no RP-002 replay
+       continuation unchanged
+       cityStateDelta=null
+       existing ORIENT / SEALED BOUNDARY / RP-002 RETURN /
+       CITY THRESHOLD RETURN actions only
 ```
 
-A1 audits System-only restore/downgrade ownership and no-authority/no-world-effect meaning. A2 boards one compact reload-or-re-entry / downgrade-or-restore / reversible-return sequence. A3 preserves the strict zero-credit evidence firewall. A4 locks sanitation, exact restore, first-incomplete recovery, focus, no-replay, and return. A5 composes a pure protected controller around existing restore/return authorities. W1 begins only at accepted live `SC-03-40`; W2 integrates the earliest normal gap; W3 reviews; W4 polishes or verifies; coordinator independently releases.
+A1 continuity-audits ownership and no-reward/no-authority meaning without new lore. A2 reuses the existing registered SC-04 CM-00 composition without new art or copy. A3 preserves prerequisite and evidence separation. A4 locks fail-closed entry, one-group focus/resume, and reversible returns. A5 composes one pure protected entry controller. W1 begins only at accepted City Threshold and reports the earliest normal gap; W2 integrates only blank CM-00 entry; W3 reviews; W4 polishes or verifies; coordinator independently releases.
 
 ## Hard stop
 
-Stop after the exact reversible return to the already-accepted City Threshold. Do not implement or expose:
+Stop with blank `CM-00 ARRIVE + IDLE` visible. Do not implement or expose:
 
-- normal `RP-003` integration or departure beyond the accepted return;
-- credits, later packet traversal, RP-013, successor, or post-ending content;
+- `CM-10` observation or any later RP-003 learning, review, save, restore, or onward-bearing state;
+- RP-004, credits, RP-013, successor, or post-ending content;
 - route reward, world response, item, access, permission, identity disclosure, authority, city change, or external action;
-- new prompt, answer, score, compensation, branch, art integration, or invented persistence behavior.
+- new lore, prompt, answer, score, compensation, branch, production art integration, or invented persistence behavior.
 
 ## Role and checkpoint order
 

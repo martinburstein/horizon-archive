@@ -61,8 +61,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. The accepted Demo now includes the exact contained Pilot commit, local all-or-none success, complete recoverable failure, fresh retry, write-free safe return, and quiet no-action System `SC-03-40`.
-- **Authoritative exact next edge / stop:** converge existing reload/re-entry sanitation, exact verified `SC-03-50` restore with clear working state/no replay, invalid-state all-three downgrade with deterministic first-incomplete focus, and reversible return to accepted City Threshold. Stop after that return before normal `RP-003`, later departure, credits, RP-013, successor, or any world/access/authority effect.
+- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. The accepted Demo includes atomic save, complete recoverable failure, fresh retry, write-free safe return, fail-closed re-entry sanitation, exact no-replay `SC-03-50` restore, and reversible return to accepted City Threshold.
+- **Authoritative exact next edge / stop:** use only the already-promoted RP-003 design/protected authorities to reach blank `CM-00 ARRIVE + IDLE` from exact verified RP-002 completion. Invalid/Tour/private state fails closed to RP-002; valid entry replays nothing, grants nothing, and changes nothing physical. Stop before CM-10 observation or later RP-003 work.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 
