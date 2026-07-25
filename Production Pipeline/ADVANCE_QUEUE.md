@@ -60,8 +60,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`; atomic save, recovery, exact restore, and reversible City Threshold return are accepted normally.
-- **Authoritative A1 start:** continuity-audit only the existing RP-003 blank-entry ownership from exact verified RP-002 completion at accepted City Threshold. A2 may reuse the registered SC-04 CM-00 presentation; A3 preserves zero-credit prerequisite/evidence separation; A4 locks fail-closed entry and reversible CM-00 returns; A5 composes one pure protected entry proof. Add no new lore/copy/art/learning content and stop before CM-10.
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`; exact sanitation, explicit adjacent entry, blank `CM-00`, responsive continuity, and reversible returns are accepted normally.
+- **Authoritative A1 start:** continuity-audit only the existing `CM-00 -> CM-10` ownership and three-observation meanings. A2 boards one Scene survey group; A3 preserves three distinct observation IDs with zero cross-credit into Python/AI-901 evidence; A4 locks any-order finalize/replay/recovery/review-eligibility behavior; A5 composes one pure protected survey proof. Add no new lore/copy/art/learning content and stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated.
 
 ## A5 result — 2026-07-25
 

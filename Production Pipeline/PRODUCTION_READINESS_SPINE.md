@@ -44,8 +44,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Independent full `687/687`, all `15/15` readiness validators, production build, isolated `110.1s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact asset hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable-art, and synchronization gates pass.
-- **Authoritative exact next edge:** protect and integrate only exact verified RP-002 completion at accepted City Threshold -> sanitized blank RP-003 `CM-00`, including fail-closed predecessor/Tour/private handling, no replay, deterministic focus, and reversible returns. Stop before CM-10, RP-004, RP-013, successor, or any reward/world/access/authority/external effect.
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Independent full `699/699`, all `15/15` readiness validators, production build, isolated `114.5s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact served hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable inherited-art identity, and synchronization gates pass.
+- **Authoritative exact next edge:** protect and integrate only blank `CM-00` -> explicit orientation -> one `CM-10` group with three separately finalized observations in any order, safely replayable and zero cross-credit, enabling only `REVIEW LOCAL WORK IMAGE`. Stop before review activation, Python/AI-901 learning, save, later packets, RP-013, successor, or any reward/world/access/authority/external effect.
 
 ## W4 verification result — 2026-07-25
 

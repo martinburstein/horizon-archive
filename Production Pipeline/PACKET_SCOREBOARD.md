@@ -49,8 +49,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `RP-002 PASS — COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Normal play now includes atomic save, fail-closed reload sanitation, exact no-replay `SC-03-50` restore, and the reversible return to accepted City Threshold. Team 1 remains complete at `RP-012`; Team 2 advances to the already-promoted `RP-003` Working edge; the ordered lead is nine packets.
-- **Authoritative exact next edge:** protect and integrate only exact verified RP-002 completion at accepted City Threshold -> sanitized no-replay blank RP-003 `CM-00 ARRIVE + IDLE`, with invalid/Tour/private state failing closed to RP-002. Stop before CM-10 observation, learning, save, RP-004, RP-013, successor, or any reward/world/access/authority effect. Protected missing-gate count remains zero.
+- **Authoritative release:** `RP-003 PASS — IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Normal play now includes exact predecessor sanitation, explicit adjacent-survey intent, replay-free blank `CM-00`, responsive inherited world continuity, and reversible returns. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-003`; the ordered lead is nine packets.
+- **Authoritative exact next edge:** protect and integrate the existing `CM-00 -> CM-10` orientation plus three distinct observations in any order. Each deliberate action finalizes only its matching observation; replay/order/focus grant zero credit; all three enable only `REVIEW LOCAL WORK IMAGE`. Stop before review activation, learning, save, later packets, RP-013, successor, or any reward/world/access/authority effect. Protected missing-gate count remains zero.
 
 ## A5 result — 2026-07-25
 

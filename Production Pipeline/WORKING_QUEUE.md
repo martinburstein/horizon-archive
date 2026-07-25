@@ -53,8 +53,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Team 2 accepts exact save, complete failure/retry/safe return, fail-closed re-entry sanitation, exact no-replay restore, and reversible City Threshold return.
-- **Authoritative Working boundary:** `RP003-P1-001` identifies the absent normal explicit adjacent-survey entry from accepted City Threshold to blank RP-003 `CM-00`. W2 may repair only that entry/reversible-return shell. Stop before CM-10 observation, learning, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 2 accepts exact predecessor sanitation, explicit adjacent-survey entry, blank `CM-00`, responsive inherited world continuity, and reversible returns.
+- **Authoritative Working boundary:** after A5, W1 begins at accepted blank `CM-00` and reports the earliest normal gap toward explicit orientation plus the complete three-observation `CM-10` loop. W2 may integrate only that loop; W3/W4 review it. Stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated, before learning, save, RP-004, RP-013, successor, or any world/access/authority effect.
 
 ## W4 result / coordinator next — 2026-07-25
 

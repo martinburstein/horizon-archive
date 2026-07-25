@@ -114,8 +114,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. The accepted Demo includes atomic save, complete recoverable failure, fresh retry, write-free safe return, fail-closed re-entry sanitation, exact no-replay `SC-03-50` restore, and reversible return to accepted City Threshold.
-- **Authoritative exact next edge / stop:** `RP003-P1-001` is the absent normal explicit adjacent-survey entry from exact verified RP-002 completion to blank `CM-00 ARRIVE + IDLE`. W2 may repair only that first player-facing link; invalid/Tour/private state fails closed to RP-002, while valid entry replays nothing, grants nothing, and changes nothing physical. Stop before CM-10 observation or later RP-003 work.
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. The accepted Demo now continues from exact verified RP-002 through explicit adjacent-survey intent, fail-closed sanitation, replay-free blank `CM-00`, responsive inherited world continuity, and reversible returns.
+- **Authoritative exact next edge / stop:** integrate the existing `CM-00 -> CM-10` orientation and complete three distinct observations in any order as one tranche. All three enable only `REVIEW LOCAL WORK IMAGE`; stop before activating review, Python/AI-901 learning, save, later RP-003 state, RP-004, RP-013, successor, or any world/access/authority effect.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

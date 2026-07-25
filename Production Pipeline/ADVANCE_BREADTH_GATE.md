@@ -35,8 +35,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release / mode:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`; RP-002 convergence is closed and protected missing-gate count remains zero. RP-003 was already promoted to Working and is now the nearest Team 2 edge.
-- **Authoritative exact next edge / stop:** `CONVERGE + REUSE` only the existing RP-003 start-state, CM-00, predecessor-sanitizer, Tour, focus, accessibility, privacy, and invariant-world authorities as one blank-entry tranche. Add no new lore, prompt, answer, score, observation, art integration, route reward, world response, RP-004 opening, RP-013, or successor. Stop before CM-10.
+- **Authoritative release / mode:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`; blank-entry convergence is closed and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
+- **Authoritative exact next edge / stop:** `CONVERGE + MERGE + TRIM` the existing explicit orientation, three separately finalized Scene observations, replay/order neutrality, and review eligibility into one `CM-10` tranche. Add no new lore, prompt, answer, score, micro-seam, production-art integration, route reward, world response, RP-004 opening, RP-013, or successor. Stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated.
 
 ## Current control — 2026-07-25
 

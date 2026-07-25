@@ -94,8 +94,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release / positions:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Team 1 remains complete at `RP-012`; Team 2 moves to the oldest already-promoted adjacent packet, `RP-003`; the ordered lead is nine packets (`RP-004` through `RP-012`).
-- **Authoritative exact next edge / rail stop:** `RP003-P1-001` is the absent normal explicit adjacent-survey entry from accepted City Threshold to blank `CM-00 ARRIVE + IDLE`; it is the sole W2 repair edge. Valid entry must remain replay-free, zero-evidence, zero-reward, and physically inert; invalid/Tour/private state fails closed to RP-002. Stop before CM-10, normal observation, later RP-003 work, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-003`, accepted through blank `CM-00`; the ordered lead is nine packets (`RP-004` through `RP-012`).
+- **Authoritative exact next edge / rail stop:** integrate the existing explicit `ORIENT TO EXPOSED CHANNELS` transition into one `CM-10 SURVEY` group and complete its three separately owned observations in any order. All three may enable only `REVIEW LOCAL WORK IMAGE`; stop before activating it, Python/AI-901 learning, save, later RP-003 work, RP-004, RP-013, successor, or any world/access/authority effect. The rail does not extend.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

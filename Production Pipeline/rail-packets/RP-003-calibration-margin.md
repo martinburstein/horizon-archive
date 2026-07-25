@@ -64,13 +64,13 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Working position:** `READY — ACTIVE TEAM 2 EDGE / BLANK CM-00 ENTRY NEXT`. RP-002 is complete in Demo through exact restore and reversible accepted City Threshold return; Team 1 remains complete at RP-012.
-- **Exact next tranche:** `RP003-P1-001` is the first normal-player gap. Repair only the absent explicit adjacent-survey entry from exact verified RP-002 at accepted City Threshold to sanitized no-replay `CM-00 ARRIVE + IDLE`; invalid, Tour-derived, private, partial, stale, forged, or contaminated entry fails closed to RP-002. Valid entry clears transients, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned blank CM-00 group, and exposes only the existing orient/sealed-boundary/return actions.
-- **Hard stop:** blank CM-00 visible. Do not implement CM-10 observation, Python or AI-901 work, save, onward bearing, RP-004, RP-013, successor, reward, access, identity, authority, or any physical city/world response.
+- **Working position:** `PASS — IN DEMO PARTIAL / BLANK CM-00 ACCEPTED`. RP-002 remains complete; Team 2 stays on RP-003 with normal explicit entry, fail-closed sanitation, blank CM-00, responsive inherited world continuity, and reversible returns accepted.
+- **Exact next tranche:** explicit `ORIENT TO EXPOSED CHANNELS` enters one `CM-10 SURVEY` group. One fresh deliberate activation separately finalizes `INSPECT EXPOSED SEQUENCE A`, `INSPECT EXPOSED SEQUENCE B`, or `INSPECT SEALED BOUNDARY`; any order converges, completed actions remain visibly Recorded and safely replayable, and replay/order/focus grant zero credit. All three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Hard stop:** do not activate review or enter CM-20. Add no Python/AI-901 evaluation, save, onward bearing, RP-004, RP-013, successor, reward, access, identity, authority, or physical city/world response.
 
 ## Packet identity
 
-- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
+- Status: `IN DEMO — PARTIAL / BLANK CM-00 ACCEPTED`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / neighboring civic comparison surface inside the City Beneath
 - Target demo horizon: second future slice after the accepted RP-001 boundary; directly after RP-002
 - Route order: 3

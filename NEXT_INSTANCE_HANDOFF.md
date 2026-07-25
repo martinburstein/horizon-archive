@@ -11,11 +11,11 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 ## Synchronized state
 
 - Branch: `main`
-- Candidate checkpoint: `87bf866` — `Working Coder Polish: verify restore presentation`
+- Candidate checkpoint: `0e1d63d` — `Working Coder Polish: preserve RP-003 world image`
 - Coordinator release: the commit containing this handoff
 - Expected after coordinator, retrospective, and reveal pushes: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
-- Released bundle: `index-DCMrW-hp.js` / `index-BPvBS70Z.css`
+- Released bundle: `index-BqxRwsLa.js` / `index-JTpP97Cx.css`
 - Automation: `horizon-archive-optimized-production-loop` remains active on a three-hour cadence. Continue any valid interrupted checkpoint; never overlap a cycle or restart A1.
 - Adaptive retrospective remains required after coordinator synchronization and before the reveal.
 
@@ -27,29 +27,31 @@ Protected untracked user paths — never inspect, stage, alter, move, or delete:
 ## Team positions
 
 - Team 1: `RP-012`, complete intended ending railhead; continuity-maintenance only.
-- Team 2: `RP-003`, already promoted to Working; blank `CM-00 ARRIVE + IDLE` entry is the nearest unfinished normal edge.
+- Team 2: `RP-003`, accepted in Demo through normal blank `CM-00 ARRIVE + IDLE`.
 - Ordered lead: nine packets, `RP-004` through `RP-012`.
 - Whole-story rail: `END-TO-END OUTLINED`.
 - No `RP-013`, successor, or post-ending content is authorized.
 
 ## Accepted player-visible boundary
 
-Normal play now accepts the complete RP-002 local expedition loop:
+Normal play now accepts:
 
 ```text
-exact strict Python + Responsible-AI + five-observation conjunction
-  -> bounded review and explicit private-free atomic save
-  -> exact success or complete recoverable failure/retry/safe return
-  -> reload/re-entry sanitation
-  -> invalid/private/stale/partial/forged/review_required:
-       all-three clear + deterministic first-incomplete downgrade
+exact verified RP-002 completion at accepted City Threshold
+  -> explicit ENTER ADJACENT SURVEY
+  -> Tour / predecessor / privacy / transient sanitation
+  -> invalid / private / stale / partial / forged / contaminated:
+       clear and fail closed to exact RP-002
      OR exact:
-       System verified_restore / SC-03-50
-       cleared work + no replay
-  -> one explicit reversible return to accepted City Threshold
+       replay-free SC-04 / CM-00 ARRIVE + IDLE
+       one Scene-owned group
+       responsive inherited City Threshold continuity plate
+       ORIENT / SEALED BOUNDARY / RP-002 RETURN /
+       CITY THRESHOLD RETURN only
+       continuation unchanged; cityStateDelta=null
 ```
 
-RP-002 is complete in Demo unless a reproduced regression reopens it. Every recovery, focus, reflow, resume, Tour, return, and presentation event remains zero learning evidence and zero authority.
+The blank entry, local presentation actions, returns, focus, reflow, resume, and Tour remain zero evidence, zero reward, zero authority, and physically inert.
 
 ## Closed invariants
 
@@ -57,61 +59,56 @@ RP-002 is complete in Demo unless a reproduced regression reopens it. Every reco
 - Private responses, feedback, result material, tokens, focus history, and adapter diagnostics never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Ten SC-03 canonical visual references remain closed and non-runtime.
+- Existing canonical visual references remain closed and non-runtime.
 - No story reward, item, access, permission, identity, authority, city/world response, external action, RP-004 opening, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
 
-- Disposition: `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`.
-- Full game suite: `687/687`.
+- Disposition: `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`.
+- Full game suite: `699/699`.
 - Readiness validators: `15/15`.
 - Production build: pass.
-- Isolated E2E: port-`5174` HTTP `200` preflight passed; complete non-overlapping run passed in `110.1s`; credits reached, every reported gate true, `runtimeErrors:false`.
-- In-app title-shell review: `1920 x 1080` and `390 x 844`; zero horizontal overflow, clean browser logs, `48px` / `44px` primary actions.
-- JS: `index-DCMrW-hp.js`, `1,082,619` bytes, SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`.
-- CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
-- Civic master/reference isolation, HTTP/served-byte identity, patch integrity, QA restoration, and coordinator-preview shutdown passed.
+- Isolated E2E: port-`5174` HTTP `200` preflight passed; complete non-overlapping run passed in `114.5s`; credits reached, every reported gate true, `runtimeErrors:false`.
+- In-app title-shell review: `1920 x 1080` and `390 x 844`; zero horizontal overflow, clean browser logs, `48px` / `44px` primary actions. No gated CM-00 screenshot is claimed.
+- JS: `index-BqxRwsLa.js`, `1,098,877` bytes, SHA-256 `D88DB76FFCACE6E19D5F4CC962EFEF42391956ADA91F2B72DAF21ABE9BF39F7D`.
+- CSS: `index-JTpP97Cx.css`, `74,121` bytes, SHA-256 `3D5B4E6FFAAAE27D4EB44D698AC6F8B797E39E32892076A5E0DBBBC08C2C59BD`.
+- Inherited City Threshold master: source and built bytes both `2,626,795`, SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D`.
+- HTTP/served-byte identity, patch integrity, QA restoration, and coordinator-preview shutdown passed.
 - Martin's gated browser storage/save was untouched; deterministic source, tests, served bundle, and E2E support the release without a fabricated gated screenshot.
 
 ## Latest canonical cycle reveal
 
-- Closed item: `SC-03 / verified restore — inert return sightline and no-replay separation`.
+- Until this cycle's post-release reveal commit lands, the latest remains `SC-03 / verified restore — inert return sightline and no-replay separation`.
 - Asset: `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
-- Canonical scope: a tiny closed expedition cradle remains dark and separate from the immense unchanged archive; a remote pale circulation gap is only the pre-existing reversible City Threshold sightline. Curved floor grooves are inert service channels, not rails or route guidance; the far gap is not a portal or destination.
-- Status: canonical visual reference only, not runtime-integrated. The image defines no restore UI, replay, new path, RP-003 entry, permission, authority, reward, world response, hidden lore, RP-013, or successor.
+- Status: canonical visual reference only, not runtime-integrated.
 
 ## Exact next action
 
-Begin or resume one sequential cycle at A1. Reuse only already-approved RP-003 authorities to converge one blank-entry tranche:
+Begin or resume one sequential cycle at A1. Converge one complete existing-authority observation tranche:
 
 ```text
-accepted City Threshold
-  + exact verified RP-002 completion
-  -> explicit adjacent-survey entry intent
-  -> sanitize predecessor, Tour, privacy, and transient state
-  -> invalid / Tour-derived / partial / stale / forged / private:
-       clear transients
-       fail closed to exact RP-002 verified boundary
-     OR exact:
-       enter only SC-04 / CM-00 ARRIVE + IDLE
-       one Scene-owned active group
-       no RP-002 replay
-       continuation unchanged
-       cityStateDelta=null
-       existing ORIENT / SEALED BOUNDARY / RP-002 RETURN /
-       CITY THRESHOLD RETURN actions only
+accepted blank SC-04 / CM-00 ARRIVE + IDLE
+  -> explicit ORIENT TO EXPOSED CHANNELS
+  -> one blank CM-10 SURVEY group
+  -> in any order, one fresh deliberate action separately finalizes:
+       INSPECT EXPOSED SEQUENCE A
+       INSPECT EXPOSED SEQUENCE B
+       INSPECT SEALED BOUNDARY
+  -> completed actions remain visibly Recorded and safely replayable
+  -> replay / ordering / focus / resume grant zero credit
+  -> all three enable only REVIEW LOCAL WORK IMAGE
 ```
 
-A1 continuity-audits ownership and no-reward/no-authority meaning without new lore. A2 reuses the existing registered SC-04 CM-00 composition without new art or copy. A3 preserves prerequisite and evidence separation. A4 locks fail-closed entry, one-group focus/resume, and reversible returns. A5 composes one pure protected entry controller. W1 begins only at accepted City Threshold and reports the earliest normal gap; W2 integrates only blank CM-00 entry; W3 reviews; W4 polishes or verifies; coordinator independently releases.
+A1 locks existing ownership and uncertainty. A2 boards the one-group, any-order observation presentation. A3 preserves the three distinct observation IDs and zero cross-credit into Python/AI-901 evidence. A4 locks validation, replay, recovery, focus, and review-eligibility behavior. A5 composes one pure protected controller. W1 begins only at accepted blank CM-00 and reports the earliest normal gap; W2 integrates only this complete observation loop; W3 reviews; W4 polishes or verifies; coordinator independently releases.
 
 ## Hard stop
 
-Stop with blank `CM-00 ARRIVE + IDLE` visible. Do not implement or expose:
+Stop with all three observations finalized and `REVIEW LOCAL WORK IMAGE` enabled but not activated. Do not implement or expose:
 
-- `CM-10` observation or any later RP-003 learning, review, save, restore, or onward-bearing state;
+- review activation, CM-20, Python or AI-901 assessment, remediation, save, restore, or onward-bearing state;
 - RP-004, credits, RP-013, successor, or post-ending content;
 - route reward, world response, item, access, permission, identity disclosure, authority, city change, or external action;
-- new lore, prompt, answer, score, compensation, branch, production art integration, or invented persistence behavior.
+- new lore, prompt, answer, score, compensation, branch, production-art integration, or invented persistence behavior.
 
 ## Role and checkpoint order
 

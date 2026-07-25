@@ -37,8 +37,8 @@
 
 ## Coordinator current control — 2026-07-25
 
-- **Authoritative release / positions:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Team 1 remains complete at `RP-012`; Team 2 advances to the already-promoted `RP-003` Working edge from the accepted City Threshold, reducing the ordered lead to nine packets (`RP-004` through `RP-012`). No `RP-013` or successor exists.
-- **Authoritative exact next edge / stop:** use only the existing RP-003 authorities to protect and test the transition from exact verified RP-002 completion at the accepted City Threshold into blank `CM-00 ARRIVE + IDLE`. Entry must fail closed to RP-002 for invalid, Tour-derived, private, or contaminated state; valid entry replays no RP-002 event, changes no world state, grants no evidence or authority, and exposes only the already-specified reversible CM-00 actions. Stop with blank CM-00 visible before any `CM-10` observation or later RP-003 work.
+- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-003`, now accepted normally through sanitized adjacent-survey entry and responsive blank `CM-00`. The ordered lead remains nine packets (`RP-004` through `RP-012`). No `RP-013` or successor exists.
+- **Authoritative exact next edge / stop:** converge the existing `CM-00 -> CM-10` orientation and complete three-observation survey loop as one tranche: explicit orient enters one blank `CM-10` group; one fresh deliberate action separately finalizes exposed A, exposed B, or sealed-boundary observation; replay/order/focus grant zero credit; all three enable only `REVIEW LOCAL WORK IMAGE`. Stop before activating review, Python, AI-901 evaluation, save, later RP-003 state, RP-004, RP-013, successor, or any reward/world/access/authority effect.
 
 ## Current control — 2026-07-25
 
