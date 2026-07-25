@@ -15,9 +15,9 @@ Before each stage, read that stage's canonical profile in full and follow the ex
 
 ## Workflow status
 
-- New Alpha/Beta infrastructure: constructed and ready for a manual test drive.
-- Alpha roles: five shell-making stages.
-- Beta roles: five as-built production stages plus Beta 6 independent reconciliation.
+- New Colonels-and-Marines infrastructure: constructed and ready for a manual test drive.
+- Colonels: five strategic shell-making roles.
+- Marines: five as-built field roles plus the After-Action Intelligence Officer's independent reconciliation.
 - Recurring automation: none.
 - Test-drive execution: manual, sequential, and non-overlapping.
 - Construction checkpoint: the commit containing this handoff.
@@ -79,6 +79,6 @@ The test evaluates workflow quality as well as product output: stage duration, a
 
 ## Exact next action
 
-Begin the manual `TD-001` test drive at **Alpha 1 — Game Vision & Development Director**.
+Begin the manual `TD-001` test drive with the **Expeditionary Command Colonel**.
 
-Alpha 1 performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to Alpha 2.
+The Expeditionary Command Colonel performs a guarded verification, not a product reinvention. Confirm that `SS-RP003-PY010-v1` serves the established player promise, learning purpose, maximum-quality presentation, privacy/accessibility/offline constraints, and current implementation boundary. Produce the bounded Game Development Brief entry, commit it, and hand the same test shell candidate to the Colonial Intelligence Colonel.

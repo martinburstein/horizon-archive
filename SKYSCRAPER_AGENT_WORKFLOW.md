@@ -4,9 +4,9 @@
 
 This is the active manual production workflow for Horizon Archive. It treats the complete game as a 33-story skyscraper and each production-quality playable slice as a fully realized showroom inside a construction-ready shell.
 
-- **Alpha 1–5** protect the whole building and issue one exact Playable Slice Shell.
-- **Beta 1–5** turn that shell into one finished playable jewel.
-- **Beta 6** independently reconciles the as-built result, releases it honestly, and returns accepted lessons to the master plan.
+- **The Colonels** protect the whole building and issue one exact Playable Slice Shell.
+- **The Marine field unit** turns that shell into one finished playable jewel.
+- **The After-Action Intelligence Officer** independently reconciles the as-built result, releases it honestly, and returns accepted lessons to the master plan.
 
 The retired Team 1 / Team 2 workflow remains available only at tag `two-team-infrastructure-archive-2026-07-25`. It is not an execution authority for this workflow.
 
@@ -19,7 +19,7 @@ When instructions conflict, use this order:
 3. `NEXT_INSTANCE_HANDOFF.md` for current state and the exact next action.
 4. This workflow.
 5. `Skyscraper Agent Profiles/README.md`.
-6. The selected canonical Alpha or Beta profile.
+6. The selected canonical Colonel or Marine profile.
 7. The approved Playable Slice Shell.
 8. Current product, canon, curriculum, technical, visual, and work-log artifacts.
 
@@ -28,34 +28,34 @@ Never use an archived exact-next-action edge as current authority.
 ## Canonical sequence
 
 ```text
-ALPHA 1  Game Vision & Development Director
-ALPHA 2  World & Narrative Architect
-ALPHA 3  Campaign & Progression Architect
-ALPHA 4  Systems, Learning & Performance Director
-ALPHA 5  Shell Integration Director
+EXPEDITIONARY COMMAND COLONEL
+COLONIAL INTELLIGENCE COLONEL
+OPERATIONS PLANNING COLONEL
+SCIENCE & TECHNICAL READINESS COLONEL
+MISSION INTEGRATION COLONEL
           ↓ SHELL READY
-BETA 1   Playable Slice Creative Director
-BETA 2   Experience Architect
-BETA 3   Gameplay Build Specialist
-BETA 4   World Finishes & Content Designer
-BETA 5   Atmosphere & Polish Director
-BETA 6   As-Built Reconciliation Director
+RECONNAISSANCE SERGEANT
+TACTICAL OPERATIONS SERGEANT
+COMBAT ENGINEER
+FIELD QUARTERMASTER
+COMBAT IMAGING & ILLUMINATION SPECIALIST
+AFTER-ACTION INTELLIGENCE OFFICER
           ↓ RELEASED AS BUILT + NEXT HANDOFF
 ```
 
-Run stages strictly sequentially. A downstream stage may not begin until the preceding stage leaves a validated handoff. Do not run Alpha and Beta roles concurrently on the same shell.
+Run roles strictly sequentially. A downstream role may not begin until the preceding role leaves a validated handoff. Do not run the Colonel staff and Marine field unit concurrently on the same shell.
 
 ## Stable baseline versus recurring work
 
 The first foundation run establishes or confirms the whole-building baseline:
 
-- Alpha 1 establishes the product brief.
-- Alpha 2 establishes the world and narrative masterplan.
-- Alpha 3 confirms the campaign floor stack.
-- Alpha 4 confirms the global viability envelope.
-- Alpha 5 issues the first Playable Slice Shell.
+- The Expeditionary Command Colonel establishes the product brief.
+- The Colonial Intelligence Colonel establishes the world and narrative masterplan.
+- The Operations Planning Colonel confirms the campaign floor stack.
+- The Science & Technical Readiness Colonel confirms the global viability envelope.
+- The Mission Integration Colonel issues the first Playable Slice Shell.
 
-On later runs, Alpha 1 and Alpha 2 normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit Beta 6 recommendation approved for integration.
+On later runs, the Expeditionary Command Colonel and Colonial Intelligence Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit After-Action Intelligence Officer recommendation approved for integration.
 
 ## Core artifacts
 
@@ -67,8 +67,8 @@ The workflow uses five artifact layers:
    - campaign floor stack;
    - global technical, learning, privacy, accessibility, save, offline, and performance constraints.
 2. **Playable Slice Shell**
-   - one versioned construction contract issued by Alpha 5.
-3. **Beta production package**
+   - one versioned construction contract issued by the Mission Integration Colonel.
+3. **Marine production package**
    - creative treatment;
    - experience blueprint;
    - functional build report;
@@ -81,7 +81,7 @@ The workflow uses five artifact layers:
 
 ## Playable Slice Shell contract
 
-Every Alpha 5 shell must define:
+Every Mission Integration Colonel shell must define:
 
 - shell ID, version, campaign position, and source authorities;
 - player-facing purpose and emotional promise;
@@ -98,23 +98,23 @@ Every Alpha 5 shell must define:
 - definition of done; and
 - explicit `SHELL READY`, `REVISE`, or `HOLD` disposition.
 
-Beta may request a variance but may never silently alter the shell.
+The Marines may request a variance but may never silently alter the shell.
 
 ## Stage gates
 
 | Gate | Owner | Required result |
 |---|---|---|
-| `VISION BASELINE` | Alpha 1 | Product promise, audience, scope, quality, and priorities are evaluable |
-| `WORLD BASELINE` | Alpha 2 | Canon, story arc, identity, and reveal boundaries are coherent |
-| `FLOOR STACK READY` | Alpha 3 | Selected slice has exact campaign position and dependencies |
-| `VIABILITY READY` | Alpha 4 | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
-| `SHELL READY` | Alpha 5 | One conflict-free versioned construction contract exists |
-| `CREATIVE LOCK` | Beta 1 | The slice has a compelling interpretation inside the shell |
-| `EXPERIENCE READY` | Beta 2 | Every state, action, focus target, recovery route, and responsive layout is specified |
-| `FUNCTIONALLY COMPLETE` | Beta 3 | The complete behavior works and is proportionately tested |
-| `CONTENT COMPLETE` | Beta 4 | Player-facing structural placeholders are retired or explicitly dispositioned |
-| `PRESENTATION COMPLETE` | Beta 5 | The slice is polished across required visual, audio, responsive, and accessible states |
-| `AS BUILT RELEASED` | Beta 6 | Independent gates pass, variances are reconciled, and the next handoff is synchronized |
+| `VISION BASELINE` | Expeditionary Command Colonel | Product promise, audience, scope, quality, and priorities are evaluable |
+| `WORLD BASELINE` | Colonial Intelligence Colonel | Canon, story arc, identity, and reveal boundaries are coherent |
+| `FLOOR STACK READY` | Operations Planning Colonel | Selected slice has exact campaign position and dependencies |
+| `VIABILITY READY` | Science & Technical Readiness Colonel | Systems, learning, evidence, privacy, accessibility, performance, save, and recovery are buildable |
+| `SHELL READY` | Mission Integration Colonel | One conflict-free versioned construction contract exists |
+| `CREATIVE LOCK` | Reconnaissance Sergeant | The slice has a compelling interpretation inside the shell |
+| `EXPERIENCE READY` | Tactical Operations Sergeant | Every state, action, focus target, recovery route, and responsive layout is specified |
+| `FUNCTIONALLY COMPLETE` | Combat Engineer | The complete behavior works and is proportionately tested |
+| `CONTENT COMPLETE` | Field Quartermaster | Player-facing structural placeholders are retired or explicitly dispositioned |
+| `PRESENTATION COMPLETE` | Combat Imaging & Illumination Specialist | The slice is polished across required visual, audio, responsive, and accessible states |
+| `AS BUILT RELEASED` | After-Action Intelligence Officer | Independent gates pass, variances are reconciled, and the next handoff is synchronized |
 
 ## Variance protocol
 
@@ -126,21 +126,21 @@ Any mismatch between a shell and its implementation must be recorded as one of:
 - `DEFERRED LIMITATION`
 - `UNAUTHORIZED DIVERGENCE`
 
-The discovering role records the variance immediately. Beta 6 owns final classification. A variance that changes product purpose, canon, campaign order, learning evidence, privacy, accessibility, save behavior, authority meaning, or world response cannot be accepted without returning to its owning Alpha role.
+The discovering role records the variance immediately. The After-Action Intelligence Officer owns final classification. A variance that changes product purpose, canon, campaign order, learning evidence, privacy, accessibility, save behavior, authority meaning, or world response cannot be accepted without returning to its owning Colonel.
 
 ## Return routing
 
-- Product-purpose conflict → Alpha 1.
-- Canon, mystery, world, or narrative conflict → Alpha 2.
-- Campaign position, dependency, pacing, route, or checkpoint conflict → Alpha 3.
-- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Alpha 4.
-- Shell ambiguity or cross-discipline conflict → Alpha 5.
-- Emotional treatment conflict → Beta 1.
-- Flow, layout, interaction, focus, or responsive blueprint conflict → Beta 2.
-- Functional defect → Beta 3.
-- Content or major asset defect → Beta 4.
-- Presentation defect → Beta 5.
-- Release-evidence or reconciliation defect → Beta 6.
+- Product-purpose conflict → Expeditionary Command Colonel.
+- Canon, mystery, world, or narrative conflict → Colonial Intelligence Colonel.
+- Campaign position, dependency, pacing, route, or checkpoint conflict → Operations Planning Colonel.
+- Systems, learning, evidence, privacy, accessibility, save, offline, recovery, or performance conflict → Science & Technical Readiness Colonel.
+- Shell ambiguity or cross-discipline conflict → Mission Integration Colonel.
+- Emotional treatment conflict → Reconnaissance Sergeant.
+- Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Sergeant.
+- Functional defect → Combat Engineer.
+- Content or major asset defect → Field Quartermaster.
+- Presentation defect → Combat Imaging & Illumination Specialist.
+- Release-evidence or reconciliation defect → After-Action Intelligence Officer.
 
 Return to the earliest responsible stage. Do not restart the whole sequence without evidence that the baseline itself changed.
 
@@ -161,7 +161,7 @@ Do not claim a live visual, save, assistive-technology, or gated-state result wi
 - One bounded integration-sized contribution per stage.
 - One dedicated commit per stage, including an honest documented no-change checkpoint when the pass is genuinely read-only.
 - Preserve unrelated work and stage only intended files.
-- Push at Alpha 5 `SHELL READY`, Beta 3 `FUNCTIONALLY COMPLETE`, and Beta 6 `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
+- Push at the Mission Integration Colonel's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and After-Action Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
 - Verify `HEAD == origin/main` at every push gate.
 - No scheduled automation is active. Test drives and future runs begin only from Martin's explicit instruction.
 
@@ -184,13 +184,13 @@ Every stage preserves:
 
 ## Cycle reveal
 
-Beta 5 may produce exactly one spoiler-safe reveal candidate after choosing one accepted visual or lore decision and checking it against existing visual canon. The candidate must vary subject, scale, or composition from recent reveals, include provenance, and identify one named checklist item.
+The Combat Imaging & Illumination Specialist may produce exactly one spoiler-safe reveal candidate after choosing one accepted visual or lore decision and checking it against existing visual canon. The candidate must vary subject, scale, or composition from recent reveals, include provenance, and identify one named checklist item.
 
-Beta 6 validates and either accepts that exact candidate or records `REVISE`/`HOLD`; it does not silently generate a replacement. A completed released run shows the accepted reveal to Martin. Canonical reference status does not claim runtime integration.
+The After-Action Intelligence Officer validates and either accepts that exact candidate or records `REVISE`/`HOLD`; it does not silently generate a replacement. A completed released run shows the accepted reveal to Martin. Canonical reference status does not claim runtime integration.
 
-## Beta 6 close
+## After-Action Intelligence Officer close
 
-Beta 6 must:
+The After-Action Intelligence Officer must:
 
 1. independently validate the entire as-built slice;
 2. compare it line by line with the shell;
@@ -215,4 +215,4 @@ The first test drive is manual and non-scheduled. It should use one bounded exis
 - release quality; and
 - whether the final reveal communicates tangible progress.
 
-After the test, Beta 6 recommends `KEEP`, `TUNE`, or `REDESIGN`. Martin decides whether to authorize recurring automation.
+After the test, the After-Action Intelligence Officer recommends `KEEP`, `TUNE`, or `REDESIGN`. Martin decides whether to authorize recurring automation.

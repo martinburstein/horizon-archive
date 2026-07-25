@@ -1,6 +1,6 @@
 # Horizon Archive Skyscraper Agent Registry
 
-This directory contains the canonical identities for the active Alpha/Beta skyscraper workflow.
+This directory contains the canonical identities for the active Colonels-and-Marines skyscraper workflow. The titles use a 1986 *Aliens*-inspired Colonial Marine setting while preserving the agents' original functions exactly.
 
 ## Loading protocol
 
@@ -11,30 +11,30 @@ At the start of a manual run, read:
 3. `SKYSCRAPER_AGENT_WORKFLOW.md`; and
 4. this registry.
 
-Before each stage, read the selected profile in full, the immediately preceding handoff, the current Playable Slice Shell or its in-progress Alpha sources, and only the current-control or exact cited sections needed for that role. Do not inherit another role's unverified conclusions.
+Before each stage, read the selected profile in full, the immediately preceding handoff, the current Playable Slice Shell or its in-progress Colonel sources, and only the current-control or exact cited sections needed for that role. Do not inherit another role's unverified conclusions.
 
 ## Canonical order
 
-| Stage | Stable agent ID | Display name | Profile |
+| Team | Stable agent ID | Military title | Profile |
 |---|---|---|---|
-| Alpha 1 | `alpha_1_game_vision_director` | Game Vision & Development Director | `alpha-1-game-vision-director.md` |
-| Alpha 2 | `alpha_2_world_narrative_architect` | World & Narrative Architect | `alpha-2-world-narrative-architect.md` |
-| Alpha 3 | `alpha_3_campaign_progression_architect` | Campaign & Progression Architect | `alpha-3-campaign-progression-architect.md` |
-| Alpha 4 | `alpha_4_systems_learning_performance_director` | Systems, Learning & Performance Director | `alpha-4-systems-learning-performance-director.md` |
-| Alpha 5 | `alpha_5_shell_integration_director` | Shell Integration Director | `alpha-5-shell-integration-director.md` |
-| Beta 1 | `beta_1_playable_slice_creative_director` | Playable Slice Creative Director | `beta-1-playable-slice-creative-director.md` |
-| Beta 2 | `beta_2_experience_architect` | Experience Architect | `beta-2-experience-architect.md` |
-| Beta 3 | `beta_3_gameplay_build_specialist` | Gameplay Build Specialist | `beta-3-gameplay-build-specialist.md` |
-| Beta 4 | `beta_4_world_finishes_content_designer` | World Finishes & Content Designer | `beta-4-world-finishes-content-designer.md` |
-| Beta 5 | `beta_5_atmosphere_polish_director` | Atmosphere & Polish Director | `beta-5-atmosphere-polish-director.md` |
-| Beta 6 | `beta_6_as_built_reconciliation_director` | As-Built Reconciliation Director | `beta-6-as-built-reconciliation-director.md` |
+| Colonels | `expeditionary_command_colonel` | Expeditionary Command Colonel | `expeditionary-command-colonel.md` |
+| Colonels | `colonial_intelligence_colonel` | Colonial Intelligence Colonel | `colonial-intelligence-colonel.md` |
+| Colonels | `operations_planning_colonel` | Operations Planning Colonel | `operations-planning-colonel.md` |
+| Colonels | `science_technical_readiness_colonel` | Science & Technical Readiness Colonel | `science-technical-readiness-colonel.md` |
+| Colonels | `mission_integration_colonel` | Mission Integration Colonel | `mission-integration-colonel.md` |
+| Marines | `reconnaissance_sergeant` | Reconnaissance Sergeant | `reconnaissance-sergeant.md` |
+| Marines | `tactical_operations_sergeant` | Tactical Operations Sergeant | `tactical-operations-sergeant.md` |
+| Marines | `combat_engineer` | Combat Engineer | `combat-engineer.md` |
+| Marines | `field_quartermaster` | Field Quartermaster | `field-quartermaster.md` |
+| Marines | `combat_imaging_illumination_specialist` | Combat Imaging & Illumination Specialist | `combat-imaging-illumination-specialist.md` |
+| Marines | `after_action_intelligence_officer` | After-Action Intelligence Officer | `after-action-intelligence-officer.md` |
 
 ## Shared invocation contract
 
 Every invocation must name:
 
 - stage and stable agent ID;
-- shell ID and version, or the Alpha baseline being prepared;
+- shell ID and version, or the Colonel baseline being prepared;
 - exact starting authority;
 - one bounded objective;
 - permitted files and systems;
@@ -64,13 +64,13 @@ Every stage reports:
 
 ## Independence rules
 
-- Alpha roles define and validate structure; they do not pre-build Beta implementation.
-- Beta roles implement only an approved `SHELL READY` contract.
+- The Colonels define and validate structure; they do not pre-build Marine implementation.
+- The Marines implement only an approved `SHELL READY` contract.
 - Each role checks its predecessor rather than merely trusting it.
-- Beta 6 performs a fresh independent release review and does not rely on Beta 3 or Beta 5 conclusions as proof.
+- The After-Action Intelligence Officer performs a fresh independent release review and does not rely on the Combat Engineer's or Combat Imaging & Illumination Specialist's conclusions as proof.
 - A role may return work only to the earliest owner of the defect.
 - No role silently expands story, learning, authority, route, save, or world-state scope.
 
 ## Recommended execution posture
 
-Use a frontier coding/reasoning model with high reasoning for every role. Beta 3 may use higher coding reasoning for risky implementation work, and Beta 6 should use a fresh independent context for release validation. Tool access is granted by task need, not role prestige.
+Use a frontier coding/reasoning model with high reasoning for every role. The Combat Engineer may use higher coding reasoning for risky implementation work, and the After-Action Intelligence Officer should use a fresh independent context for release validation. Tool access is granted by task need, not rank.
