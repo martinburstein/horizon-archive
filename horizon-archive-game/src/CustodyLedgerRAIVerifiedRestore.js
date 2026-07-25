@@ -133,7 +133,10 @@ export function createCustodyLedgerRAIVerifiedRestore(options = {}) {
   let returnController = null;
 
   if (!tour && authority?.phase === "verified_restore") {
-    try {
+    if (options.returnController
+      && typeof options.returnController.returnToCityThreshold === "function") {
+      returnController = options.returnController;
+    } else try {
       returnController = createCustodyLedgerRAIConclusionReview({
         ...options,
         acceptedRAIConclusionState: options.acceptedRAIConclusionState,

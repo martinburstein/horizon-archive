@@ -47,6 +47,7 @@ import {
   CUSTODY_LEDGER_RETRY_SAVE,
   CUSTODY_LEDGER_RETURN_SAFELY,
 } from "./CustodyLedgerRAIAtomicSaveCommit.js";
+import { CUSTODY_LEDGER_RETURN_CITY_THRESHOLD } from "./CustodyLedgerRAIVerifiedRestore.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -83,6 +84,7 @@ export function CivicRecordArrival({
   onSaveCommit,
   onSaveRetry,
   onSaveReturnSafely,
+  onVerifiedRestoreReturn,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -109,6 +111,9 @@ export function CivicRecordArrival({
   const raiSaveConfirmationHeadingRef = useRef(null);
   const raiSaveFailureHeadingRef = useRef(null);
   const raiSaveCompleteHeadingRef = useRef(null);
+  const raiSanitationDowngradeHeadingRef = useRef(null);
+  const raiVerifiedRestoreHeadingRef = useRef(null);
+  const raiVerifiedRestoreReturnRef = useRef(null);
   const raiReviewRecoveryHeadingRef = useRef(null);
   const raiExplanationControlRefs = useRef({});
   const classificationRef = useRef(null);
@@ -151,6 +156,8 @@ export function CivicRecordArrival({
   const saveResultOwnsActions = [
     "recoverable_save_failure",
     "comparison_complete",
+    "sanitation_downgrade",
+    "verified_restore",
   ].includes(primaryPhase);
 
   useLayoutEffect(() => {
@@ -321,6 +328,17 @@ export function CivicRecordArrival({
       }
       if (primaryPhase === "comparison_complete") {
         raiSaveCompleteHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "sanitation_downgrade") {
+        raiSanitationDowngradeHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "verified_restore") {
+        raiVerifiedRestoreHeadingRef.current?.focus({ preventScroll: true });
+        if (primaryInteraction?.focusIntent?.then === "saved_controls") {
+          queueMicrotask(() => raiVerifiedRestoreReturnRef.current?.focus({ preventScroll: true }));
+        }
         return;
       }
       if (primaryPhase === "RG-U") {
@@ -1150,6 +1168,25 @@ export function CivicRecordArrival({
                 </h2>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "sanitation_downgrade" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-sanitation-downgrade-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiSanitationDowngradeHeadingRef} id="custody-ledger-sanitation-downgrade-heading" tabIndex="-1">
+                  {primaryInteraction.sanitationText}
+                </h2>
+                <p className="civic-observation-status">
+                  The first incomplete protected boundary is {primaryInteraction.firstIncompleteBoundary}. No evidence, route reward, access, or authority was created.
+                </p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "verified_restore" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-verified-restore-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiVerifiedRestoreHeadingRef} id="custody-ledger-verified-restore-heading" tabIndex="-1">
+                  {primaryInteraction.restoredText}
+                </h2>
+              </section>
+            )}
             {atPythonPrimary && primaryPhase === "RG-U" && (
               <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-review-recovery-heading">
                 <p className="eyebrow">{primaryInteraction.owner}</p>
@@ -1214,6 +1251,10 @@ export function CivicRecordArrival({
                       ? primaryInteraction.failureText
                     : primaryPhase === "comparison_complete"
                       ? primaryInteraction.savedText
+                    : primaryPhase === "sanitation_downgrade"
+                      ? primaryInteraction.sanitationText
+                    : primaryPhase === "verified_restore"
+                      ? primaryInteraction.restoredText
                     : primaryPhase === "RG-U"
                       ? "Private work was cleared and the deterministic first incomplete protected boundary was selected."
                     : primaryPhase === "30-A1F"
@@ -1261,6 +1302,19 @@ export function CivicRecordArrival({
                 </button>
                 <button className="secondary-action" type="button" onClick={onSaveReturnSafely}>
                   {CUSTODY_LEDGER_RETURN_SAFELY}
+                </button>
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "verified_restore" && (
+              <div className="city-command-actions" aria-label="Verified comparison navigation">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button
+                  ref={raiVerifiedRestoreReturnRef}
+                  className="primary-action"
+                  type="button"
+                  onClick={onVerifiedRestoreReturn}
+                >
+                  {CUSTODY_LEDGER_RETURN_CITY_THRESHOLD}
                 </button>
               </div>
             )}

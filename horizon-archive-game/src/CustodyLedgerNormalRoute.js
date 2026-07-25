@@ -43,10 +43,14 @@ import {
   CUSTODY_LEDGER_OBSERVATION_ACTION,
   CUSTODY_LEDGER_BOARD_ID,
   createCustodyLedgerScaffoldFromVerifiedRouteBoundary,
+  createCustodyLedgerPersistenceAdapter,
+  custodyLedgerAtomicProgression,
+  custodyLedgerOwnershipMessages,
   getCustodyLedgerOwnershipMessage,
   custodyLedgerLocalComparisonBlankMessage,
   custodyLedgerObservationStages,
   recordCustodyLedgerObservation,
+  restoreCustodyLedgerBoundedComparison,
   sanitizeCustodyLedgerObservationState,
 } from "./custodyLedgerExercise.js";
 import { createCustodyLedgerPrimaryInteraction } from "./CustodyLedgerPrimaryInteraction.js";
@@ -65,9 +69,11 @@ import { createCustodyLedgerRAIExplanationConvergence } from "./CustodyLedgerRAI
 import { createCustodyLedgerRAIConclusionReview } from "./CustodyLedgerRAIConclusionReview.js";
 import { createCustodyLedgerRAIPrepareSaveConfirmation } from "./CustodyLedgerRAIPrepareSaveConfirmation.js";
 import { createCustodyLedgerRAIAtomicSaveCommit } from "./CustodyLedgerRAIAtomicSaveCommit.js";
+import { createCustodyLedgerRAIVerifiedRestore } from "./CustodyLedgerRAIVerifiedRestore.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
+export const CUSTODY_LEDGER_NORMAL_COMPARISON_CHECKPOINT_VERSION = "rp002.normal-comparison-checkpoint.v1";
 export const CUSTODY_LEDGER_OPEN_PYTHON_PRIMARY_ACTION = "OPEN UNFINISHED WORK IMAGE";
 
 export function createCustodyLedgerNormalPrimaryInteraction(routeState, predecessor) {
@@ -544,6 +550,88 @@ function containsPrivateContent(value) {
   return Object.keys(value).some((key) => privateKeys.has(key) || containsPrivateContent(value[key]));
 }
 
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function exactAtomicProgression(value) {
+  return value && typeof value === "object" && !Array.isArray(value)
+    && Object.keys(value).length === Object.keys(custodyLedgerAtomicProgression).length
+    && Object.entries(custodyLedgerAtomicProgression).every(([key, expected]) => value[key] === expected);
+}
+
+function raiConclusionFromSaveDependencies(saveDependencies) {
+  const learning = saveDependencies?.learning;
+  return {
+    phase: "rai_complete",
+    pythonEvidence: learning?.pythonEvidence,
+    pythonTransferEvidence: learning?.pythonTransferEvidence,
+    pythonExplanationEvidence: learning?.pythonExplanationEvidence,
+    raiEvidence: learning?.raiEvidence,
+    raiTransferEvidence: learning?.raiTransferEvidence,
+    raiExplanationEvidence: learning?.raiExplanationEvidence,
+  };
+}
+
+function acceptedRAIConclusionFromSaveDependencies(saveDependencies) {
+  const learning = saveDependencies?.learning;
+  return {
+    primaryEvidence: learning?.pythonEvidence,
+    transferEvidence: learning?.pythonTransferEvidence,
+    pythonExplanationEvidence: learning?.pythonExplanationEvidence,
+    finalizedRAIPrimaryEvidence: learning?.raiEvidence,
+    finalizedRAITransferEvidence: learning?.raiTransferEvidence,
+    finalizedRAIExplanationEvidence: learning?.raiExplanationEvidence,
+  };
+}
+
+function eligibilityDependenciesFromSaveDependencies(saveDependencies) {
+  return {
+    predecessorValue: saveDependencies?.predecessor,
+    prerequisiteEvidence: saveDependencies?.prerequisites,
+    observationFixtures: Array.isArray(saveDependencies?.observations)
+      ? saveDependencies.observations.map((observationId) => ({
+        observationId,
+        finalizationStatus: "finalized",
+        fixtureType: "protected_sanitized",
+      }))
+      : [],
+  };
+}
+
+function canonicalComparisonCheckpoint(value) {
+  const keys = Object.keys(value ?? {}).sort().join("|");
+  if (keys !== "boardState|owner|phase|progression|saveDependencies|savedText|version"
+    || containsPrivateContent(value)
+    || value.version !== CUSTODY_LEDGER_NORMAL_COMPARISON_CHECKPOINT_VERSION
+    || value.phase !== "comparison_complete"
+    || value.boardState !== "SC-03-40"
+    || value.owner !== custodyLedgerOwnershipMessages.saved.owner
+    || value.savedText !== custodyLedgerOwnershipMessages.saved.text
+    || !exactAtomicProgression(value.progression)) return null;
+  const restored = restoreCustodyLedgerBoundedComparison(
+    createCustodyLedgerPersistenceAdapter(value.progression),
+    raiConclusionFromSaveDependencies(value.saveDependencies),
+    eligibilityDependenciesFromSaveDependencies(value.saveDependencies),
+  );
+  if (restored?.phase !== "verified_restore" || restored?.boardState !== "SC-03-50") return null;
+  return Object.freeze({
+    version: CUSTODY_LEDGER_NORMAL_COMPARISON_CHECKPOINT_VERSION,
+    phase: "comparison_complete",
+    boardState: "SC-03-40",
+    owner: custodyLedgerOwnershipMessages.saved.owner,
+    savedText: custodyLedgerOwnershipMessages.saved.text,
+    progression: Object.freeze({ ...custodyLedgerAtomicProgression }),
+    saveDependencies: Object.freeze(cloneJson(restored.saveDependencies)),
+  });
+}
+
+function routeSaveWithoutComparison(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return value;
+  const { comparisonCheckpoint: _comparisonCheckpoint, ...base } = value;
+  return base;
+}
+
 function boundedFirstObservationEvidence(value) {
   const safe = sanitizeCustodyLedgerObservationState({
     observationEvidence: value == null ? [] : [value],
@@ -638,6 +726,10 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
   const keys = Object.keys(value ?? {}).sort().join("|");
   const legacyKeys = "checkpoint|cityStateDelta|continuation|lastVerifiedBoundary|packetId|successor|version|worldStateDelta";
   const currentKeys = "checkpoint|cityStateDelta|continuation|lastVerifiedBoundary|observationEvidence|packetId|successor|version|worldStateDelta";
+  const comparisonKeys = "checkpoint|cityStateDelta|comparisonCheckpoint|continuation|lastVerifiedBoundary|observationEvidence|packetId|successor|version|worldStateDelta";
+  const comparisonCheckpoint = Object.hasOwn(value ?? {}, "comparisonCheckpoint")
+    ? canonicalComparisonCheckpoint(value.comparisonCheckpoint)
+    : null;
   const firstEvidence = boundedFirstObservationEvidence(value?.observationEvidence);
   const secondEvidence = boundedSecondObservationEvidence(value?.observationEvidence);
   const thirdEvidence = boundedThirdObservationEvidence(value?.observationEvidence);
@@ -647,7 +739,9 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
     || !value
     || typeof value !== "object"
     || containsPrivateContent(value)
-    || (keys !== legacyKeys && keys !== currentKeys)
+    || (keys !== legacyKeys && keys !== currentKeys && keys !== comparisonKeys)
+    || (keys === comparisonKeys && !comparisonCheckpoint)
+    || (comparisonCheckpoint && value.checkpoint !== "sc03_python_primary_blank")
     || value.version !== CUSTODY_LEDGER_NORMAL_ROUTE_VERSION
     || value.packetId !== CUSTODY_LEDGER_ROUTE_PACKET_ID
     || !allowedCheckpoints.has(value.checkpoint)
@@ -688,6 +782,7 @@ export function sanitizeCustodyLedgerNormalRouteSave(value, predecessor) {
         : ["sc03_far_complete", "sc03_local_comparison_blank", "sc03_python_primary_blank"].includes(value.checkpoint)
           ? completeEvidence
         : null,
+    ...(comparisonCheckpoint ? { comparisonCheckpoint } : {}),
     successor: null,
   });
 }
@@ -1037,6 +1132,109 @@ export function writeCustodyLedgerNormalRoute(storage, value, predecessor) {
 
 export function clearCustodyLedgerNormalRoute(storage) {
   storage?.removeItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY);
+}
+
+export function writeCustodyLedgerNormalComparisonCheckpoint(
+  storage,
+  routeSave,
+  comparisonState,
+  predecessor,
+) {
+  if (containsPrivateContent(comparisonState)) return null;
+  const base = sanitizeCustodyLedgerNormalRouteSave(
+    routeSaveWithoutComparison(routeSave),
+    predecessor,
+  );
+  if (!base || base.checkpoint !== "sc03_python_primary_blank") return null;
+  const checkpoint = canonicalComparisonCheckpoint({
+    version: CUSTODY_LEDGER_NORMAL_COMPARISON_CHECKPOINT_VERSION,
+    phase: comparisonState?.phase,
+    boardState: comparisonState?.boardState,
+    owner: comparisonState?.owner,
+    savedText: comparisonState?.savedText,
+    progression: comparisonState?.progression,
+    saveDependencies: comparisonState?.saveDependencies,
+  });
+  if (!checkpoint) return null;
+  const safe = sanitizeCustodyLedgerNormalRouteSave({
+    ...base,
+    comparisonCheckpoint: checkpoint,
+  }, predecessor);
+  if (!safe) return null;
+  storage?.setItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY, JSON.stringify(safe));
+  return safe;
+}
+
+export function createCustodyLedgerNormalRAIVerifiedRestore(storage, predecessor, options = {}) {
+  if (options.mode === "demo_tour") {
+    return createCustodyLedgerRAIVerifiedRestore({ mode: "demo_tour" });
+  }
+  try {
+    const raw = JSON.parse(storage?.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY) ?? "null");
+    const base = sanitizeCustodyLedgerNormalRouteSave(
+      routeSaveWithoutComparison(raw),
+      predecessor,
+    );
+    if (!base || !Object.hasOwn(raw ?? {}, "comparisonCheckpoint")) return null;
+    const rawCheckpoint = raw.comparisonCheckpoint;
+    const safeCheckpoint = canonicalComparisonCheckpoint(rawCheckpoint);
+    let progression = safeCheckpoint
+      ? { ...safeCheckpoint.progression }
+      : {
+        ...(rawCheckpoint?.progression && typeof rawCheckpoint.progression === "object"
+          ? rawCheckpoint.progression
+          : {}),
+        invalidStoredComparison: true,
+      };
+    const adapter = {
+      read() {
+        return { ...progression };
+      },
+      clearAtomicTriplet() {
+        progression = {};
+        storage?.setItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY, JSON.stringify(base));
+        return { ok: true, value: {} };
+      },
+    };
+    const saveDependencies = safeCheckpoint?.saveDependencies ?? rawCheckpoint?.saveDependencies;
+    const acceptedComparisonState = {
+      phase: "comparison_complete",
+      boardState: "SC-03-40",
+      owner: custodyLedgerOwnershipMessages.saved.owner,
+      savedText: custodyLedgerOwnershipMessages.saved.text,
+      progression: { ...custodyLedgerAtomicProgression },
+    };
+    const returnController = {
+      returnToCityThreshold() {
+        const route = createCustodyLedgerNormalRouteController({
+          predecessor,
+          restoredSave: base,
+        });
+        const returned = route.dispatch(createCustodyLedgerNormalRouteIntent(
+          custodyLedgerRouteActions.returnAccepted,
+          "screen_reader",
+          "rp002-normal-verified-return",
+        ));
+        if (returned.status !== "returned") throw new Error("Verified restore return was rejected.");
+        clearCustodyLedgerNormalRoute(storage);
+        return {
+          writePerformed: false,
+          continuation: returned.state.continuation,
+          cityStateDelta: returned.state.cityStateDelta,
+          state: returned.state,
+        };
+      },
+    };
+    return createCustodyLedgerRAIVerifiedRestore({
+      acceptedComparisonState,
+      acceptedRAIConclusionState: acceptedRAIConclusionFromSaveDependencies(saveDependencies),
+      eligibilityDependencies: eligibilityDependenciesFromSaveDependencies(saveDependencies),
+      adapter,
+      returnController,
+    });
+  } catch {
+    return null;
+  }
 }
 
 function protectedRouteDispatcher(predecessor) {

@@ -1,5 +1,11 @@
 # Working Queue
 
+## W2 result / W3 next - 2026-07-25
+
+- **Closed:** `RP002-P1-023`. Normal re-entry now uses the existing RP-002 route save for an exact sanitized comparison checkpoint and composes the protected verified-restore authority: Tour-first isolation, complete invalid/private downgrade, exact no-replay System `SC-03-50`, and only the existing reversible City Threshold return.
+- **Next role:** Aesthetic Agent, presentation review only on `index-DCMrW-hp.js` / `index-BPvBS70Z.css`. Inspect safe source/served evidence without forcing or reading Martin's browser storage/save. Verify downgrade heading plus deterministic first-incomplete focus/no action, restore heading then saved controls, separate `>=44px` return, wide/narrow/effective-`200%`, one group, focus visibility, forced-color/non-color/reduced-motion parity, and invariant civic crop. Report one reproducible defect or `VERIFIED`; no mechanics, copy, persistence, art, rail, evidence, or authority changes.
+- **Boundary:** Team 2 remains on RP-002 candidate through reversible accepted City Threshold; Team 1 remains complete at RP-012; ordered lead remains ten packets. No normal RP-003, departure, credits, RP-013, successor, or world/access/authority/external effect.
+
 ## W1 result / W2 next — 2026-07-25
 
 - **Finding:** `RP002-P1-023 P1 OPEN`. Exact normal `comparison_complete / SC-03-40` is a quiet System acknowledgement with no actions, but its state lives only in transient normal controller/component refs. Normal App/route/UI has no automatic re-entry sanitation, downgrade/restore phases, restore focus, or exact-restore reversible return.

@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## W2 result / W3 next - 2026-07-25
+
+- **Disposition:** `RP002-P1-023 RESOLVED - VERIFIED RESTORE / DOWNGRADE / REVERSIBLE RETURN IN NORMAL DEMO / W3 NEXT`. Normal `SC-03-40` success now persists only the exact sanitized comparison checkpoint inside the existing RP-002 route save; automatic campaign re-entry composes the protected A5 authority without adding a storage key, copy, art, learning case, route reward, or world effect.
+- **Result:** Tour precedes storage access. Exact route/checkpoint/dependency state alone mounts no-replay System `verified_restore / SC-03-50`, clears working/transient material, focuses heading then saved controls, and offers only the existing separate seven-modality `RETURN TO CITY THRESHOLD`. Any non-exact/private/review-required comparison state clears the whole triplet plus private/transient material and mounts only System `sanitation_downgrade / progression={}` with deterministic first-incomplete focus and no route action.
+- **Evidence / preservation:** focused restore `67/67`, focused normal `45/45`, full game `687/687`, both applicable validator self-tests, production build, seven served markers, and exact served-to-`dist` identity pass on `index-DCMrW-hp.js` / unchanged `index-BPvBS70Z.css`. Browser storage/save was not inspected or mutated. W3 reviews presentation only; accepted City Threshold remains the hard stop before normal RP-003, departure, credits, RP-013, successor, or any world/access/authority/external effect.
+
 ## W1 result — 2026-07-25
 
 - **Disposition:** `RP002-P1-023 P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted normal `comparison_complete / SC-03-40` is a quiet no-action System group, but normal App/route/UI has no reload/re-entry sanitation factory, deterministic downgrade or `verified_restore / SC-03-50` phase, focus authority, or exact-restore City Threshold return. The protected A5 graph is not integrated.

@@ -1070,7 +1070,7 @@ test("protected re-entry sanitizes malformed storage before presentation and rev
   assert.equal(revalidated.state.phase, "sanitation_downgrade");
 });
 
-test("protected re-entry isolates Tour before adapter access and remains pure and unimported by normal routes", () => {
+test("protected re-entry isolates Tour before adapter access and remains pure while normal routes compose it", () => {
   const options = acceptedVerifiedRestoreFixture();
   const throwingAdapter = {
     read: () => { throw new Error("Tour must not read adapter"); },
@@ -1083,8 +1083,10 @@ test("protected re-entry isolates Tour before adapter access and remains pure an
     assert.equal(source.includes(forbidden), false, forbidden);
   }
   assert.equal(source.includes("restoreCustodyLedgerBoundedComparison"), true);
-  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+  for (const relative of ["../src/App.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
     assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
-      .includes("CustodyLedgerRAIVerifiedRestore"), false, relative);
+      .includes("CustodyLedgerRAIVerifiedRestore"), true, relative);
   }
+  assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8")
+    .includes("CustodyLedgerRAIVerifiedRestore"), false);
 });

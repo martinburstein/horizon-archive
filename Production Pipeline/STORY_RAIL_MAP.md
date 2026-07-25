@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W2 result - 2026-07-25
+
+- `RP002-P1-023 RESOLVED - W3 PRESENTATION REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now with a Working candidate through exact re-entry sanitation, no-replay `SC-03-50` restore or complete downgrade, and the existing reversible return to accepted City Threshold. The ordered lead remains ten packets.
+- The rail does not extend. W3 may review presentation only. Normal RP-003, departure, credits, RP-013, successor, route reward, and every world/access/authority/external effect remain closed.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-023 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at normal `RP-002` through quiet `SC-03-40`, now testing its missing normal reload/re-entry sanitation. The ordered lead remains ten packets and the rail does not extend.

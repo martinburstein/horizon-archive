@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W2 result / W3 next - 2026-07-25
+
+- `RP002-P1-023 RESOLVED - NORMAL VERIFIED RESTORE CANDIDATE / W3 NEXT`. Existing RP-002 route persistence now carries only the exact sanitized comparison checkpoint needed for automatic re-entry sanitation. Exact state yields no-replay System `verified_restore / SC-03-50` and the existing reversible City Threshold return; every non-exact/private/review-required state clears completely into System downgrade and deterministic first-incomplete focus.
+- Candidate gates pass: focused `67/67` and `45/45`, full `687/687`, RP-002 and L-02-02 validator self-tests, build, seven served markers, and served-to-`dist` identity on `index-DCMrW-hp.js` / `index-BPvBS70Z.css`. W3 is presentation review only. Team 2 remains on RP-002; accepted City Threshold is still the hard stop before normal RP-003 or any later rail/world/authority effect.
+
 ## W1 result — 2026-07-25
 
 - `RP002-P1-023 P1 OPEN — W2 BUG-REPAIR NEXT`. Accepted normal `SC-03-40` remains a stable quiet no-action System acknowledgement on unchanged `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`, but normal App/route/UI cannot automatically sanitize on reload/re-entry or mount deterministic downgrade, exact `SC-03-50` restore, or the restore-only reversible return.

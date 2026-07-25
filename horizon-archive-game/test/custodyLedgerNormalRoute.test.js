@@ -17,6 +17,7 @@ import {
   createCustodyLedgerNormalPrimaryResultDismissal,
   createCustodyLedgerNormalRAIConclusionReview,
   createCustodyLedgerNormalRAIAtomicSaveCommit,
+  createCustodyLedgerNormalRAIVerifiedRestore,
   createCustodyLedgerNormalRAIPrepareSaveConfirmation,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAIPrimaryConvergence,
@@ -29,6 +30,7 @@ import {
   custodyLedgerRouteOwners,
   readCustodyLedgerNormalRoute,
   sanitizeCustodyLedgerNormalRouteSave,
+  writeCustodyLedgerNormalComparisonCheckpoint,
   writeCustodyLedgerNormalRoute,
 } from "../src/CustodyLedgerNormalRoute.js";
 import {
@@ -80,6 +82,10 @@ import {
   CUSTODY_LEDGER_RETRY_SAVE,
   CUSTODY_LEDGER_RETURN_SAFELY,
 } from "../src/CustodyLedgerRAIAtomicSaveCommit.js";
+import {
+  CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+  CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+} from "../src/CustodyLedgerRAIVerifiedRestore.js";
 import {
   anchorPacketReference,
   commitCityThresholdAnchor,
@@ -1902,6 +1908,55 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
       rp002Checkpoint: "comparison_complete",
     });
     assert.deepEqual(committed.state.availableActions, []);
+    const restoreStorage = memoryStorage();
+    const persistedComparison = writeCustodyLedgerNormalComparisonCheckpoint(
+      restoreStorage,
+      fixture.entered.save,
+      committed.state,
+      predecessor,
+    );
+    assert.ok(persistedComparison);
+    assert.deepEqual(persistedComparison.comparisonCheckpoint.progression, {
+      civicComparisonSaved: true,
+      nextSurveyDirectionMarked: true,
+      rp002Checkpoint: "comparison_complete",
+    });
+    const restoreController = createCustodyLedgerNormalRAIVerifiedRestore(
+      restoreStorage,
+      predecessor,
+    );
+    assert.ok(restoreController);
+    const restored = restoreController.getState();
+    assert.equal(restored.phase, "verified_restore");
+    assert.equal(restored.boardState, "SC-03-50");
+    assert.deepEqual(restored.focusIntent, {
+      group: "verified_restore",
+      target: "heading",
+      then: "saved_controls",
+    });
+    assert.deepEqual(restored.availableActions, [CUSTODY_LEDGER_RETURN_CITY_THRESHOLD]);
+    const returnToken = `rp002-normal-restore-return-${activationKind}`;
+    assert.equal(restoreController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+      mode: "campaign",
+      owner: "SYSTEM // EXPEDITION STATE",
+      action: CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+      activationKind,
+      eventToken: returnToken,
+    }).reason, "protected_verified_restore_closed");
+    const returnedFromRestore = restoreController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+      activationKind,
+      eventToken: returnToken,
+    });
+    assert.equal(returnedFromRestore.status, "returned_to_city_threshold_write_free");
+    assert.equal(returnedFromRestore.route.writePerformed, false);
+    assert.equal(restoreStorage.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY), null);
     assert.equal(atomicController.dispatch({
       packetId: "RP-002",
       version: CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
@@ -1912,6 +1967,41 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
       eventToken: `rp002-normal-later-${activationKind}`,
     }).reason, "commit_unavailable");
     if (activationKind === "pointer") {
+      const malformedStorage = memoryStorage();
+      const malformedSave = {
+        ...persistedComparison,
+        comparisonCheckpoint: {
+          ...persistedComparison.comparisonCheckpoint,
+          progression: {
+            ...persistedComparison.comparisonCheckpoint.progression,
+            extra: true,
+          },
+          privateNotes: "PRIVATE",
+        },
+      };
+      malformedStorage.setItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY, JSON.stringify(malformedSave));
+      const downgradedController = createCustodyLedgerNormalRAIVerifiedRestore(
+        malformedStorage,
+        predecessor,
+      );
+      assert.equal(downgradedController.getState().phase, "sanitation_downgrade");
+      assert.deepEqual(downgradedController.getState().progression, {});
+      assert.equal(downgradedController.getState().nextFocusIntent.target, "first_required_control");
+      assert.doesNotMatch(JSON.stringify(downgradedController.getState()), /PRIVATE|extra/);
+      const clearedSave = JSON.parse(malformedStorage.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY));
+      assert.equal(Object.hasOwn(clearedSave, "comparisonCheckpoint"), false);
+
+      const tourStorage = {
+        getItem() {
+          throw new Error("Tour must resolve before campaign storage access");
+        },
+      };
+      assert.equal(createCustodyLedgerNormalRAIVerifiedRestore(
+        tourStorage,
+        predecessor,
+        { mode: "demo_tour" },
+      ).getState().phase, "tour_preview");
+
       let commitCalls = 0;
       let clearCalls = 0;
       const retryAdapter = {
@@ -2781,6 +2871,12 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_RETURN_SAFELY/);
   assert.match(arrival, /primaryPhase === "comparison_complete"/);
   assert.match(arrival, /primaryInteraction\.savedText/);
+  assert.match(arrival, /primaryPhase === "sanitation_downgrade"/);
+  assert.match(arrival, /primaryInteraction\.sanitationText/);
+  assert.match(arrival, /primaryPhase === "verified_restore"/);
+  assert.match(arrival, /primaryInteraction\.restoredText/);
+  assert.match(arrival, /CUSTODY_LEDGER_RETURN_CITY_THRESHOLD/);
+  assert.match(arrival, /onClick=\{onVerifiedRestoreReturn\}/);
   assert.match(arrival, /saveResultOwnsActions[\s\S]*recoverable_save_failure[\s\S]*comparison_complete/);
   assert.match(arrival, /!saveResultOwnsActions[\s\S]*routeActions\.map\(renderAction\)/);
   assert.match(arrival, /!saveResultOwnsActions && returnActions\.length > 0/);
@@ -2801,6 +2897,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalRAIConclusionReview/);
   assert.match(app, /createCustodyLedgerNormalRAIPrepareSaveConfirmation/);
   assert.match(app, /createCustodyLedgerNormalRAIAtomicSaveCommit/);
+  assert.match(app, /createCustodyLedgerNormalRAIVerifiedRestore/);
+  assert.match(app, /writeCustodyLedgerNormalComparisonCheckpoint/);
   assert.match(app, /openCustodyLedgerRAIPrimary/);
   assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
@@ -2827,6 +2925,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onSaveCommit=\{commitCustodyLedgerAtomicSave\}/);
   assert.match(app, /onSaveRetry=\{retryCustodyLedgerAtomicSave\}/);
   assert.match(app, /onSaveReturnSafely=\{returnSafelyFromCustodyLedgerAtomicSave\}/);
+  assert.match(app, /onVerifiedRestoreReturn=\{returnFromCustodyLedgerVerifiedRestore\}/);
   assert.match(app, /event\?\.key === "Escape"[\s\S]*return "keyboard_escape"/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
@@ -2843,6 +2942,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(normalRoute, /createCustodyLedgerNormalRAIConclusionReview/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIPrepareSaveConfirmation/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIAtomicSaveCommit/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIVerifiedRestore/);
+  assert.match(normalRoute, /writeCustodyLedgerNormalComparisonCheckpoint/);
   for (const acceptedSource of [app, arrival, normalRoute]) {
     assert.doesNotMatch(acceptedSource, /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
   }

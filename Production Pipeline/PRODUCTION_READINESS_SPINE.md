@@ -1,5 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
+## W2 candidate result - 2026-07-25
+
+- `RP002-P1-023 RESOLVED - NORMAL VERIFIED RESTORE / DOWNGRADE / RETURN GRAPH / W3 NEXT`. The normal route now persists only an exact sanitized comparison checkpoint inside the existing RP-002 route save and composes the protected A5 controller for Tour-first isolation, complete invalid/private clearing, exact no-replay `SC-03-50`, and the existing adapter-free reversible City Threshold return.
+- **Gate evidence:** focused restore `67/67`; focused normal `45/45`; full `687/687`; RP-002 and L-02-02 self-tests; production build; one strict existing `4173` listener; seven required served markers; and served-to-`dist` identity pass on `index-DCMrW-hp.js` (`1,082,619` bytes; SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`) / unchanged `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Browser storage/save remained untouched.
+- **W3 boundary:** presentation review only. Preserve exact copy/state/persistence, one active group, focus, responsive/accessibility parity, privacy, zero evidence, invariant world, and the accepted City Threshold hard stop before normal RP-003, later departure, credits, RP-013, successor, or any world/access/authority/external effect.
+
 ## A5 protected result - 2026-07-25
 
 - `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. An unimported pure controller and focused coverage establish recovery semantics without changing the accepted production bundle or normal route: Tour-before-adapter, dependency-before-record sanitation, complete fail-closed clearing, exact no-replay restore, and one fresh exact-restore-only adapter-free return.

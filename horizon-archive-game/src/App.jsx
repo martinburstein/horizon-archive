@@ -23,6 +23,7 @@ import {
   createCustodyLedgerNormalRAIPrimaryEntry,
   createCustodyLedgerNormalRAIConclusionReview,
   createCustodyLedgerNormalRAIAtomicSaveCommit,
+  createCustodyLedgerNormalRAIVerifiedRestore,
   createCustodyLedgerNormalRAIPrepareSaveConfirmation,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAITransferConvergence,
@@ -31,6 +32,7 @@ import {
   createCustodyLedgerNormalRouteIntent,
   custodyLedgerRouteActions,
   readCustodyLedgerNormalRoute,
+  writeCustodyLedgerNormalComparisonCheckpoint,
   writeCustodyLedgerNormalRoute,
 } from "./CustodyLedgerNormalRoute.js";
 import { CUSTODY_LEDGER_SAVE_INTENT } from "./custodyLedgerExercise.js";
@@ -87,6 +89,10 @@ import {
   CUSTODY_LEDGER_RETRY_SAVE,
   CUSTODY_LEDGER_RETURN_SAFELY,
 } from "./CustodyLedgerRAIAtomicSaveCommit.js";
+import {
+  CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+  CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+} from "./CustodyLedgerRAIVerifiedRestore.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -703,6 +709,7 @@ export function App() {
   const custodyLedgerRAIConclusionReviewControllerRef = useRef(null);
   const custodyLedgerRAIPrepareSaveConfirmationControllerRef = useRef(null);
   const custodyLedgerRAIAtomicSaveCommitControllerRef = useRef(null);
+  const custodyLedgerRAIVerifiedRestoreControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -823,6 +830,9 @@ export function App() {
       custodyLedgerPrimaryView?.phase,
     )) {
       custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+    }
+    if (!["verified_restore", "sanitation_downgrade"].includes(custodyLedgerPrimaryView?.phase)) {
+      custodyLedgerRAIVerifiedRestoreControllerRef.current = null;
     }
   }, [custodyLedgerPrimaryView?.phase]);
 
@@ -1292,6 +1302,26 @@ export function App() {
     if (demoTour || typeof window === "undefined") return;
     const predecessor = readVerifiedCityThresholdPredecessor(window.localStorage);
     if (!predecessor) return;
+    const restoreController = createCustodyLedgerNormalRAIVerifiedRestore(
+      window.localStorage,
+      predecessor,
+    );
+    if (restoreController) {
+      const restoredSave = readCustodyLedgerNormalRoute(window.localStorage, predecessor);
+      const routeController = createCustodyLedgerNormalRouteController({
+        predecessor,
+        restoredSave,
+        prerequisiteEvidence: { structuredPacketEvidence, responsibleAIEvidence },
+      });
+      custodyLedgerRAIVerifiedRestoreControllerRef.current = restoreController;
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+      setCustodyLedgerRouteSave(restoredSave);
+      setCustodyLedgerRouteView(routeController.getState());
+      setCustodyLedgerPrimaryView(restoreController.getState());
+      setMode("rp002-arrival");
+      return;
+    }
     const controller = createCustodyLedgerNormalRouteController({
       predecessor,
       restoredSave: readCustodyLedgerNormalRoute(window.localStorage, predecessor),
@@ -2057,14 +2087,30 @@ export function App() {
       event,
       token,
     ));
-    if (result?.status === "returned_safely_write_free") {
+    if (result?.status === "comparison_saved") {
+      const context = custodyLedgerTransferContextRef.current;
+      const routeSave = context?.predecessor
+        ? custodyLedgerRouteSave
+          ?? readCustodyLedgerNormalRoute(window.localStorage, context.predecessor)
+        : null;
+      const persisted = context?.predecessor
+        ? writeCustodyLedgerNormalComparisonCheckpoint(
+          window.localStorage,
+          routeSave,
+          result.state,
+          context.predecessor,
+        )
+        : null;
+      if (!persisted) return null;
+      setCustodyLedgerRouteSave(persisted);
+      setCustodyLedgerPrimaryView(result.state);
+    } else if (result?.status === "returned_safely_write_free") {
       const prepareController = createNormalCustodyLedgerPrepareSaveController(result.state);
       if (!prepareController) return null;
       custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = prepareController;
       custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
       setCustodyLedgerPrimaryView(prepareController.getState());
     } else if ([
-      "comparison_saved",
       "recoverable_save_failure",
       "fresh_confirmation_visible",
     ].includes(result?.status)) {
@@ -2095,6 +2141,29 @@ export function App() {
       event,
       "rp002-return-safely",
     );
+  }
+
+  function returnFromCustodyLedgerVerifiedRestore(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIVerifiedRestoreControllerRef.current;
+    const result = controller?.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken("rp002-verified-return"),
+    });
+    if (result?.status !== "returned_to_city_threshold_write_free") return result;
+    setCustodyLedgerRouteSave(null);
+    setCustodyLedgerRouteView(null);
+    setCustodyLedgerPrimaryView(null);
+    custodyLedgerRAIVerifiedRestoreControllerRef.current = null;
+    custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+    custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+    setMode("city-threshold-staging");
+    return result;
   }
 
   function returnToCompletedMeadow() {
@@ -3160,6 +3229,7 @@ export function App() {
         onSaveCommit={commitCustodyLedgerAtomicSave}
         onSaveRetry={retryCustodyLedgerAtomicSave}
         onSaveReturnSafely={returnSafelyFromCustodyLedgerAtomicSave}
+        onVerifiedRestoreReturn={returnFromCustodyLedgerVerifiedRestore}
       />
     );
   }
