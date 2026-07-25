@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W4 verification result — 2026-07-25
+
+- `RP002-AESTH-017 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no residual and left production/style/art/test/runtime unchanged. Focused normal-route/frame `54/54`, RP-002 and L-02-02 self-tests, production build, exact HTTP/served-dist identity/markers, single-listener final refresh, immutable civic master, and patch gates pass.
+- Candidate remains `index-C7qPZ0yi.js` (`1,071,347` bytes; SHA-256 `BA0C685A33A9B2BFD2E3EF8578DC32E78A08A6D6B6059EF617006E1F59A83488`) / `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Coordinator owns independent full release validation; visible `SC-03-40` remains the hard stop before restore/`SC-03-50` or any later state/effect.
+
 ## W3 presentation result — 2026-07-25
 
 - `RP002-AESTH-017 VERIFIED — W4 VERIFICATION ONLY`. Served `index-C7qPZ0yi.js` / `index-BPvBS70Z.css` is byte-identical to `dist`; focused normal-route presentation/state coverage `45/45` passes. Enabled commit/cancel, failure/retry/safe return, fresh retry, prepare focus, and no-action `SC-03-40` are presentation-consistent with one-group, responsive/accessibility, and invariant-world contracts.

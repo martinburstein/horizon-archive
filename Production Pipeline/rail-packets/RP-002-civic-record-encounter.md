@@ -1,5 +1,10 @@
 # RP-002 — Civic Record Encounter
 
+## W4 aesthetic-polish result — 2026-07-25 — RP002-AESTH-017
+
+- `VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. No W3 residual reproduced. Production/style/art/test/runtime remains unchanged while enabled Pilot commit/cancel, System-only failure/retry/safe return, fresh retry, write-free review focus, and no-action `SC-03-40` retain one-group responsive/accessibility clarity.
+- Focused `54/54`, both applicable validators, build, exact served/dist identity and markers, strict single-listener refresh, immutable civic master, and patch gates pass on `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`. Browser storage/save remained untouched; visible `SC-03-40` remains the hard stop before restore/`SC-03-50` or any later rail/world/authority state.
+
 ## W3 aesthetic result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — NO FINDING / W4 VERIFICATION ONLY`. The normal atomic result presentation preserves contained Pilot intent, System-only failure/recovery, and a quiet no-action `SC-03-40` acknowledgement without implying city response, permission, authority, route, or successor.

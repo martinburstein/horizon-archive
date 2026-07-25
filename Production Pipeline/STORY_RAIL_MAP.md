@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W4 result — 2026-07-25 — RP002-AESTH-017
+
+- `VERIFIED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002` with the unchanged W2 atomic local-result candidate through final Working verification. The ordered lead remains ten packets and the rail does not extend.
+- Visible `SC-03-40` remains the Working hard stop. Verified restore/`SC-03-50`, departure, credits, RP-003+, RP-013, successor, and world/access/authority effects remain closed pending independent coordinator disposition.
+
 ## W3 result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — W4 VERIFICATION ONLY`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002` with the W2 atomic local-result candidate under final visual verification. The lead remains ten packets; W3 opens no rail, art, or world-state change.

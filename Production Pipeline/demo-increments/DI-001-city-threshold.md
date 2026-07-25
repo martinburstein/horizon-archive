@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W4 result — 2026-07-25 — RP002-AESTH-017
+
+- `VERIFIED — FINAL DEMO REFRESHED / COORDINATOR NEXT`. W4 reproduced no presentation residual and made no production change. The exact contained confirmation, complete failure/recovery, fresh retry, write-free safe return, and no-action System `SC-03-40` remain presentation-consistent with the accepted responsive/accessibility and invariant-world contracts.
+- Focused gameplay/presentation `54/54`, RP-002 and L-02-02 self-tests, build, HTTP/asset/dist identity, required markers, immutable civic master, single-listener final refresh, and patch gates pass on `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`. No gated save was forced; coordinator independently owns the full release gate.
+
 ## W3 result — 2026-07-25 — RP002-AESTH-017
 
 - `VERIFIED — NO PRESENTATION FINDING / W4 VERIFICATION ONLY`. The integrated local atomic graph reads as one contained expedition action: enabled Pilot commit and separate cancel; complete System failure with only retry/safe return; fresh retry; write-free review return; or System `SC-03-40` saved acknowledgement with no follow-on action.
