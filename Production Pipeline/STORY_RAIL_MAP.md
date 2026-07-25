@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W1 result — 2026-07-25
+
+- `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`, now testing the disabled contained-confirmation commit. The ordered lead remains ten packets and the rail does not extend.
+- W2 may integrate only explicit atomic commit -> complete empty-triplet failure/retry/safe return or exact System `comparison_complete / SC-03-40`. Visible `SC-03-40` is the hard stop; verified restore/`SC-03-50`, departure, credits, RP-003+, RP-013, successor, and world/access/authority effects remain closed.
+
 ## A5 result — 2026-07-25
 
 - `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`; the ordered lead remains ten packets. Protected A5 reaches no new live rail state.

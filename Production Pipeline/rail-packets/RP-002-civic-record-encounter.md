@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## W1 result — 2026-07-25
+
+- **Disposition:** `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. Exact accepted contained Pilot confirmation remains stable, focused, reversible, private, and world-invariant, but normal UI renders `SAVE BOUNDED COMPARISON` literally disabled and aria-disabled with no commit handler. The protected A5 graph is not integrated, so neither exact empty-triplet failure nor `comparison_complete / SC-03-40` can be reached normally.
+- **Evidence boundary:** accepted served identity remains `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`; player-path markers are present and focused normal-route/frame tests pass `54/54`. Gated live traversal would require browser save mutation, so storage/save remained untouched and the protected A5 controller/tests were not inspected.
+- **Exact W2 edge:** integrate only the existing protected atomic authority through one private-free seven-modality/one-hit Pilot commit. One valid commit calls the existing adapter once with only the exact three-field triplet; exact all-three success mounts only System `SC-03-40`, while every false/absent/malformed/partial/mismatched failure clears the triplet and mounts only exact failure with separate fresh retry/write-free safe return. Preserve validation-before-consumption, replay-free confirmation/failure resume, heading/focus, responsive/accessibility, privacy, Tour, invariant world, null city delta, unchanged continuation, no authority/exam guarantee, and no successor. Stop visible at `SC-03-40`; restore/`SC-03-50`, departure, credits, RP-003+, RP-013, successor, and world/access/authority effects remain closed.
+
 ## A5 implementation result — protected atomic comparison commit
 
 - `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The exact existing confirmation, commit, adapter, retry, and safe-return authorities are composed in one unimported pure controller. Seven validated modalities yield exactly one local three-field commit or an empty System failure; retry is fresh and safe return is write-free to `RG-30` prepare focus.

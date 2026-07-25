@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W1 result — 2026-07-25
+
+- `RP002-P1-022 P1 OPEN — W2 BUG-REPAIR NEXT`. The coordinator-accepted contained Pilot confirmation is present on unchanged `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`, but `SAVE BOUNDED COMPARISON` remains disabled/aria-disabled with no normal handler. Focused player-path coverage passes `54/54`; protected code and Martin's browser storage/save remained untouched.
+- W2 integrates only the protected one-hit atomic commit/result authority: exact three-field all-or-none adapter success -> only System `comparison_complete / SC-03-40`; every non-exact output -> empty-triplet exact failure with fresh retry or write-free safe return. Preserve the accepted copy, focus, one active group, responsive/accessibility/privacy/Tour/invariant-world contracts and stop at visible `SC-03-40` before restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority effect.
+
 ## A5 protected atomic result — 2026-07-25
 
 - `REVISE — PROTECTED ATOMIC COMMIT COMPLETE / W1 NEXT`. The protected model now has exact confirmation -> one validated local all-or-none triplet -> only complete System failure with fresh retry/write-free safe return or `SC-03-40` saved acknowledgement. Seven modalities, token consumption, no-partial clearing, focus, resume, privacy, Tour, and invariant-world contracts are covered by the focused `19/19` suite.
