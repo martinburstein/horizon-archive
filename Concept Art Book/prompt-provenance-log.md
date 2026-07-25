@@ -11,3 +11,10 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Retired:** low logical resolution, square-pixel authorship, deliberate clusters, palette limits, stepped edges, dithering, nearest-neighbor scaling, CRT degradation, Pixel Patrol, and Curse-era art matching.
 - **New active Terminal prompt:** [Photorealistic signal-coupler V3](References/terminal-gif-inspiration/terminal-photorealistic-art-direction-prompt-v3.md).
 - **Next provenance entry:** record the first generated photorealistic RP-001 master and all responsive/animation derivatives here.
+
+## 2026-07-25 — RP-003 independent-clock landscape reveal
+
+- **Decision:** close `SC-04 / PY-010 landing — independent environmental clocks remain unsynchronized`.
+- **Asset and complete prompt/provenance:** [RP-003 independent-clock landscape reveal](../Visual%20Direction/Production%20Masters/2026-07-25-rp003-independent-clock-landscape-reveal/PROVENANCE.md).
+- **Mode:** one built-in `image_gen` generation; no variants or edits.
+- **Status:** spoiler-safe canonical scale/independent-clock/invariant-world reference only; not runtime integration and not `SC-04-MASTER`.

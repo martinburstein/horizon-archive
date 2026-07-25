@@ -1,5 +1,13 @@
 # SC-04 — Calibration Margin
 
+## 2026-07-25 canonical cycle reveal — independent environmental clocks
+
+- **Closed checklist item:** `[x] SC-04 / PY-010 landing — independent environmental clocks remain unsynchronized`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-independent-clock-landscape-reveal/rp003-independent-clock-landscape-v1.png`, with neighboring provenance.
+- **Locked boundary:** condensation, deep thermal circulation, and distant nonhumanoid maintenance exchange continue as physically separate service rhythms. None aligns with the small inactive expedition folio or changes for a learning result; human capability increases while SC-04 remains unchanged.
+- **Scale relationship:** a steep landscape-scale civic cross-section follows the prior medium-wide spatial and close material studies, making the greater working whole tangible without opening a new route or defining native purpose.
+- **Limit:** canonical scale/independent-clock/invariant-world/material-era evidence only; not runtime integration and not the approved `SC-04-MASTER`. Exact rings, rims, platform-like edges, wall marks, maintenance anatomy, and folio casing are non-canonical and define no human architecture, route, access, destination, answer, reward, authority, hidden lore, RP-004 opening, RP-013, successor, or post-ending content.
+
 ## 2026-07-25 canonical cycle reveal — neutral bounded-difference material parity
 
 - **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.
