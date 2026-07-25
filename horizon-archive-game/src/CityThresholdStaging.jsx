@@ -229,7 +229,12 @@ function Cum01Checkpoint({ save, updateSave }) {
   );
 }
 
-export function CityThresholdStaging({ onReturnToCredits, onFollowCivicRoute }) {
+export function CityThresholdStaging({
+  onReturnToCredits,
+  onFollowCivicRoute,
+  onEnterAdjacentSurvey,
+  adjacentSurveyAction,
+}) {
   const [save, setSave] = useState(loadStagingSave);
   const [board, setBoard] = useState(() => getCityThresholdResumeBoard(loadStagingSave()));
   const [observations, setObservations] = useState({});
@@ -237,12 +242,14 @@ export function CityThresholdStaging({ onReturnToCredits, onFollowCivicRoute }) 
   const [overlayOpen, setOverlayOpen] = useState(() => loadStagingSave().checkpoint !== "threshold_entry" && loadStagingSave().checkpoint !== "anchor_complete");
   const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance movement are already mid-cycle. No occupant is visible.");
   const routeActionRef = useRef(null);
+  const adjacentSurveyActionRef = useRef(null);
 
   useLayoutEffect(() => {
     if (board === "SC-02-50" && save.checkpoint === "anchor_complete") {
-      routeActionRef.current?.focus({ preventScroll: true });
+      (onEnterAdjacentSurvey ? adjacentSurveyActionRef : routeActionRef)
+        .current?.focus({ preventScroll: true });
     }
-  }, [board, save.checkpoint]);
+  }, [board, save.checkpoint, onEnterAdjacentSurvey]);
 
   function updateSave(next) {
     const safe = sanitizeCityThresholdSave(next) ?? createCityThresholdSave();
@@ -322,6 +329,21 @@ export function CityThresholdStaging({ onReturnToCredits, onFollowCivicRoute }) 
                 onClick={onFollowCivicRoute}
               >
                 {custodyLedgerRouteActions.enter}
+              </button>
+            </>}
+            {board === "SC-02-50"
+              && save.checkpoint === "anchor_complete"
+              && onEnterAdjacentSurvey
+              && adjacentSurveyAction && <>
+              <p id="adjacent-survey-owner">{custodyLedgerRouteOwners.pilot}</p>
+              <button
+                ref={adjacentSurveyActionRef}
+                className="primary-action"
+                type="button"
+                aria-describedby="adjacent-survey-owner"
+                onClick={onEnterAdjacentSurvey}
+              >
+                {adjacentSurveyAction}
               </button>
             </>}
             <button onClick={onReturnToCredits}>RETURN TO PROLOGUE CREDITS</button>

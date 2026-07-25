@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## W2 Coder result — normal blank CM-00 entry
+
+- **Mode / disposition:** `bug-repair` / `RP003-P1-001 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal App, City Threshold staging, and a bounded transient UI now compose the protected A5 entry authority only after the exact verified RP-002 write-free return. No new persistence, curriculum, copy, CSS, or SC-04 production art was introduced.
+- **Bounded behavior:** the accepted Threshold exposes only `ENTER ADJACENT SURVEY`; one fresh validated private-free semantic activation across seven modalities mounts only Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`. The active group contains exactly `ORIENT TO EXPOSED CHANNELS`, `INSPECT SEALED BOUNDARY`, `RETURN TO CIVIC COMPARISON`, and `RETURN TO CITY THRESHOLD`. The first two remain same-group zero-evidence presentation; both returns remain write-free and reversible. Entry/resume focuses the group heading, while local presentation focuses the originating action.
+- **Sanitation / hard stop:** Tour resolves before predecessor access. Invalid, private, stale, partial, forged, contaminated, or non-exact verified-restore/Threshold/resume state clears and fails closed to exact RP-002 without spending a later valid token. Reload owns no RP-003 durable state. `continuation`, `cityStateDelta=null`, zero observation/learning/mastery/save/authority, and invariant world remain exact. Stop before CM-10.
+- **Evidence / W3 handoff:** focused/related `120/120`; full `699/699`; RP-003 and RP-002 self-tests; production build; root/JS/CSS HTTP `200`; required entry/blank/action markers; served-to-`dist` identity; later-state absence; and patch checks pass on `index-PlgdZgkr.js` / `index-BPvBS70Z.css`. W3 reviews only hierarchy, focus, `>=44px` actions, wide/narrow/`200%`, forced-color/reduced-motion parity, and the unchanged inherited City Threshold overview used as temporary no-new-art continuity. Do not add mechanics, copy, persistence, learning, CM-10, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## W1 Player result — normal blank-entry gap
 
 - **Finding:** `RP003-P1-001 P1 OPEN — normal verified City Threshold has no adjacent-survey entry.` The accepted normal return reaches only the existing City Threshold staging surface; it exposes no player-facing adjacent-survey control or transition into the approved blank `SC-04 / CM-00 ARRIVE + IDLE` group.

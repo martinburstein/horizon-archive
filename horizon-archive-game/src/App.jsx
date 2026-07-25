@@ -7,8 +7,15 @@ import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio
 import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_primary.py?raw";
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { CalibrationMarginEntry } from "./CalibrationMarginEntry.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
+import {
+  CALIBRATION_MARGIN_ENTRY_ACTION,
+  createCalibrationMarginNormalEntry,
+  createCalibrationMarginNormalEntryIntent,
+  calibrationMarginNormalReturnActions,
+} from "./CalibrationMarginNormalEntry.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -691,6 +698,8 @@ export function App() {
   const [custodyLedgerRouteSave, setCustodyLedgerRouteSave] = useState(null);
   const [custodyLedgerRouteView, setCustodyLedgerRouteView] = useState(null);
   const [custodyLedgerPrimaryView, setCustodyLedgerPrimaryView] = useState(null);
+  const [calibrationMarginEntryView, setCalibrationMarginEntryView] = useState(null);
+  const [calibrationReturnToRp002, setCalibrationReturnToRp002] = useState(false);
   const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const verifiedCityThresholdPredecessor = typeof window === "undefined"
     ? null
@@ -710,6 +719,8 @@ export function App() {
   const custodyLedgerRAIPrepareSaveConfirmationControllerRef = useRef(null);
   const custodyLedgerRAIAtomicSaveCommitControllerRef = useRef(null);
   const custodyLedgerRAIVerifiedRestoreControllerRef = useRef(null);
+  const calibrationMarginEntryControllerRef = useRef(null);
+  const calibrationMarginEntryAuthorityRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -2146,6 +2157,7 @@ export function App() {
   function returnFromCustodyLedgerVerifiedRestore(event) {
     if (demoTour || typeof window === "undefined") return null;
     const controller = custodyLedgerRAIVerifiedRestoreControllerRef.current;
+    const verifiedRestoreState = controller?.getState();
     const result = controller?.dispatch({
       packetId: "RP-002",
       version: CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
@@ -2156,12 +2168,102 @@ export function App() {
       eventToken: routeEventToken("rp002-verified-return"),
     });
     if (result?.status !== "returned_to_city_threshold_write_free") return result;
+    const authority = { verifiedRestoreState, returnedCityThreshold: result };
+    const entryController = createCalibrationMarginNormalEntry(authority);
+    const entryState = entryController.getState();
+    if (entryState.phase !== "city_threshold") {
+      setCustodyLedgerPrimaryView(entryState);
+      return result;
+    }
     setCustodyLedgerRouteSave(null);
     setCustodyLedgerRouteView(null);
     setCustodyLedgerPrimaryView(null);
     custodyLedgerRAIVerifiedRestoreControllerRef.current = null;
     custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
     custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+    calibrationMarginEntryAuthorityRef.current = authority;
+    calibrationMarginEntryControllerRef.current = entryController;
+    setCalibrationMarginEntryView(entryState);
+    setCalibrationReturnToRp002(false);
+    setMode("city-threshold-staging");
+    return result;
+  }
+
+  function resetCalibrationMarginAtCityThreshold() {
+    const authority = calibrationMarginEntryAuthorityRef.current;
+    if (!authority) return null;
+    const controller = createCalibrationMarginNormalEntry(authority);
+    const state = controller.getState();
+    calibrationMarginEntryControllerRef.current = controller;
+    setCalibrationMarginEntryView(state);
+    setCalibrationReturnToRp002(false);
+    return state;
+  }
+
+  function enterCalibrationMargin(event) {
+    if (demoTour) return null;
+    const controller = calibrationMarginEntryControllerRef.current;
+    const result = controller?.dispatch(createCalibrationMarginNormalEntryIntent(
+      CALIBRATION_MARGIN_ENTRY_ACTION,
+      routeActivationKind(event),
+      routeEventToken("rp003-enter-adjacent-survey"),
+    ));
+    if (result?.status === "blank_entry_visible") {
+      setCalibrationMarginEntryView(result.state);
+      setMode("rp003-entry");
+    } else if (result?.state?.phase === "rp002_verified_boundary") {
+      setCustodyLedgerPrimaryView(result.state);
+      setMode("rp002-arrival");
+    }
+    return result;
+  }
+
+  function dispatchCalibrationMarginEntry(action, event) {
+    if (demoTour) return null;
+    const controller = calibrationMarginEntryControllerRef.current;
+    const result = controller?.dispatch(createCalibrationMarginNormalEntryIntent(
+      action,
+      routeActivationKind(event),
+      routeEventToken("rp003-blank-entry"),
+    ));
+    if ([
+      "orientation_presented_zero_evidence",
+      "sealed_boundary_presented_zero_evidence",
+    ].includes(result?.status)) {
+      setCalibrationMarginEntryView(result.state);
+      return result;
+    }
+    if (result?.status === "returned_to_city_threshold_write_free") {
+      setCustodyLedgerPrimaryView(null);
+      resetCalibrationMarginAtCityThreshold();
+      setMode("city-threshold-staging");
+      return result;
+    }
+    if (result?.status === "returned_to_rp002_write_free") {
+      const authority = calibrationMarginEntryAuthorityRef.current;
+      const returnController = createCalibrationMarginNormalEntry({
+        ...authority,
+        restoredState: result.state,
+      });
+      calibrationMarginEntryControllerRef.current = returnController;
+      setCalibrationMarginEntryView(returnController.getState());
+      setCalibrationReturnToRp002(true);
+      setCustodyLedgerPrimaryView(authority?.verifiedRestoreState ?? null);
+      setMode("rp002-arrival");
+    }
+    return result;
+  }
+
+  function returnFromCalibrationCivicComparison(event) {
+    const controller = calibrationMarginEntryControllerRef.current;
+    const result = controller?.dispatch(createCalibrationMarginNormalEntryIntent(
+      calibrationMarginNormalReturnActions.cityThreshold,
+      routeActivationKind(event),
+      routeEventToken("rp003-rp002-return-threshold"),
+    ));
+    if (result?.status !== "returned_to_city_threshold_write_free") return result;
+    setCustodyLedgerPrimaryView(null);
+    resetCalibrationMarginAtCityThreshold();
     setMode("city-threshold-staging");
     return result;
   }
@@ -3229,7 +3331,18 @@ export function App() {
         onSaveCommit={commitCustodyLedgerAtomicSave}
         onSaveRetry={retryCustodyLedgerAtomicSave}
         onSaveReturnSafely={returnSafelyFromCustodyLedgerAtomicSave}
-        onVerifiedRestoreReturn={returnFromCustodyLedgerVerifiedRestore}
+        onVerifiedRestoreReturn={calibrationReturnToRp002
+          ? returnFromCalibrationCivicComparison
+          : returnFromCustodyLedgerVerifiedRestore}
+      />
+    );
+  }
+
+  if (mode === "rp003-entry" && calibrationMarginEntryView?.phase === "CM-00 ARRIVE + IDLE") {
+    return (
+      <CalibrationMarginEntry
+        entryState={calibrationMarginEntryView}
+        onAction={dispatchCalibrationMarginEntry}
       />
     );
   }
@@ -3238,7 +3351,11 @@ export function App() {
     return (
       <CityThresholdStaging
         onReturnToCredits={() => setMode("ending")}
-        onFollowCivicRoute={followRecordedCivicRoute}
+        onFollowCivicRoute={calibrationMarginEntryView ? undefined : followRecordedCivicRoute}
+        onEnterAdjacentSurvey={calibrationMarginEntryView ? enterCalibrationMargin : undefined}
+        adjacentSurveyAction={calibrationMarginEntryView
+          ? CALIBRATION_MARGIN_ENTRY_ACTION
+          : undefined}
       />
     );
   }

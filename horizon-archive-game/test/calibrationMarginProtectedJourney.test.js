@@ -278,13 +278,13 @@ test("responsive metadata and explicit safe-return boundaries carry no route or 
   });
 });
 
-test("protected RP-003 remains unimported, storage-free, network-free, and absent from accepted entrypoints", async () => {
+test("complete protected RP-003 journey remains storage-free, network-free, and absent from accepted entrypoints", async () => {
   const [source, app, main] = await Promise.all([
     readFile(new URL("../src/CalibrationMarginProtectedJourney.js", import.meta.url), "utf8"),
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
   assert.doesNotMatch(source, /localStorage|sessionStorage|indexedDB|fetch\s*\(|XMLHttpRequest|WebSocket|navigator\.|document\.|window\./i);
-  assert.doesNotMatch(app, /CalibrationMarginProtectedJourney|runCalibrationMarginProtectedJourneySmoke|RP-003|SC-04/);
+  assert.doesNotMatch(app, /from "\.\/CalibrationMarginProtectedJourney\.js"|runCalibrationMarginProtectedJourneySmoke|CM-10|CM-50/);
   assert.doesNotMatch(main, /CalibrationMarginProtectedJourney|runCalibrationMarginProtectedJourneySmoke|RP-003|SC-04/);
 });

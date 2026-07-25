@@ -1,5 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
+## W2 candidate result — 2026-07-25
+
+- `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 NEXT`. Normal App/City Threshold/UI now compose the protected RP-003 blank-entry authority only from the exact verified RP-002 write-free return. The authority remains transient and private-free; exact entry mounts one Scene-owned blank CM-00 group, while Tour and every non-exact/private/stale/partial/forged/contaminated boundary fail closed to exact RP-002.
+- **Gate evidence:** focused/related `120/120`; full `699/699`; RP-003 and RP-002 self-tests; production build; existing port-`4173` root/assets HTTP `200`; five required entry/blank/action markers; served-to-`dist` byte identity; source hard-stop/purity and patch checks pass. Candidate is `index-PlgdZgkr.js` (`1,098,852` bytes; SHA-256 `0B78533FC51D1B37F28D81BB9226042ED71DA589EF045C96ADE5F52CFC29F6BD`) / unchanged `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`).
+- **W3 boundary:** review the blank entry's one-group hierarchy, focus/targets, representative reflow, and unchanged inherited City Threshold overview only. No new SC-04 production art is claimed. Preserve transient-only state, zero evidence, privacy/Tour isolation, invariant world, unchanged continuation/null city delta, and the hard stop before CM-10, learning, save, RP-004, RP-013, successor, reward, access, authority, or external/world effect.
+
 ## A5 protected result — 2026-07-25
 
 - `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. One pure unimported storage-free controller composes exact verified RP-002 at accepted City Threshold into only blank SC-04/CM-00, or sanitizes Tour/private/stale/partial/forged/contaminated state to the exact RP-002 recovery target. Existing orient/sealed-boundary presentation and both reversible returns remain zero-effect.

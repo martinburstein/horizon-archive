@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W2 result — 2026-07-25
+
+- `RP003-P1-001 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The normal rail now reaches only exact verified RP-002 return at accepted City Threshold -> one transient explicit adjacent-survey intent -> blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`, with zero-effect orient/sealed-boundary presentation and both reversible returns. Invalid/Tour/private/stale/partial/forged/contaminated state fails closed to RP-002. CM-10 and every later rail/reward/world/access/authority effect remain closed.
+
 ## W1 result — 2026-07-25
 
 - `RP003-P1-001 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

@@ -1,5 +1,11 @@
 # Working Queue
 
+## W2 result / W3 next — 2026-07-25
+
+- **Closed:** `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 AESTHETIC REVIEW NEXT`. Exact verified RP-002 return now creates one transient private-free adjacent-survey authority at the accepted City Threshold. One validated seven-modality semantic activation mounts only Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`; orient and sealed-boundary inspection remain zero-effect, and both existing returns remain reversible.
+- **Gate evidence:** focused/related `120/120`; full game `699/699`; RP-003 and predecessor RP-002 validator self-tests; production build; root/assets HTTP `200`; required entry/blank/action markers; served-to-`dist` identity; later-state absence; and patch checks pass on `index-PlgdZgkr.js` / unchanged `index-BPvBS70Z.css`. Browser storage/save was untouched.
+- **Exact W3 task:** review only the blank CM-00 presentation, heading/action focus, one active group, `>=44px` actions, wide/narrow/`200%` reflow, forced-color/reduced-motion/non-color parity, and the unchanged inherited City Threshold overview used as temporary no-new-art continuity. Open only a concrete presentation finding. Preserve transient-only sanitation, zero evidence, invariant world, unchanged continuation/null city delta, and the stop before CM-10, learning, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## W1 result / W2 next — 2026-07-25
 
 - **Finding:** `RP003-P1-001 P1 OPEN`. Exact verified RP-002 returns to the accepted normal City Threshold, but there is no explicit adjacent-survey action or transition to blank `SC-04 / CM-00`; normal play stops before the RP-003 entry can begin.

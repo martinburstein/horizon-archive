@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W2 result — 2026-07-25
+
+- `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 NEXT`. The accepted exact RP-002 City Threshold return now creates only a transient normal RP-003 entry controller. One fresh private-free one-hit intent across seven modalities reaches one Scene-owned blank `SC-04 / CM-00 ARRIVE + IDLE` group with exactly the existing orient, sealed-boundary, RP-002-return, and City-Threshold-return actions. Orientation and boundary presentation remain zero evidence; both returns are reversible and write-free.
+- Tour resolves before boundary access; invalid, private, stale, partial, forged, contaminated, or non-exact predecessor/return/resume state clears and fails closed to exact RP-002. No new storage key, durable record, learning state, copy, CSS, or SC-04 art was added. Focused/related `120/120`, full `699/699`, both applicable validator self-tests, build, HTTP/served identity, hard-stop, and patch gates pass on `index-PlgdZgkr.js` / `index-BPvBS70Z.css`. W3 reviews presentation only and stops before CM-10.
+
 ## A5 result — 2026-07-25
 
 - `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. A pure unimported storage-free controller now composes exact verified RP-002 at accepted City Threshold into only blank `SC-04 / CM-00 ARRIVE + IDLE`, with one Scene group and the existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Tour and every non-exact/private/stale/partial/forged/contaminated boundary fail closed to the exact RP-002 recovery target.

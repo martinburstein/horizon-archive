@@ -87,6 +87,11 @@ import {
   CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
 } from "../src/CustodyLedgerRAIVerifiedRestore.js";
 import {
+  CALIBRATION_MARGIN_ENTRY_ACTION,
+  createCalibrationMarginNormalEntry,
+  createCalibrationMarginNormalEntryIntent,
+} from "../src/CalibrationMarginNormalEntry.js";
+import {
   anchorPacketReference,
   commitCityThresholdAnchor,
   createCityThresholdSave,
@@ -1957,6 +1962,22 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
     assert.equal(returnedFromRestore.status, "returned_to_city_threshold_write_free");
     assert.equal(returnedFromRestore.route.writePerformed, false);
     assert.equal(restoreStorage.getItem(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY), null);
+    const adjacentController = createCalibrationMarginNormalEntry({
+      verifiedRestoreState: restored,
+      returnedCityThreshold: returnedFromRestore,
+    });
+    assert.equal(adjacentController.getState().phase, "city_threshold");
+    const adjacent = adjacentController.dispatch(createCalibrationMarginNormalEntryIntent(
+      CALIBRATION_MARGIN_ENTRY_ACTION,
+      activationKind,
+      `rp003-normal-entry-after-rp002-${activationKind}`,
+    ));
+    assert.equal(adjacent.status, "blank_entry_visible");
+    assert.equal(adjacent.state.phase, "CM-00 ARRIVE + IDLE");
+    assert.deepEqual(adjacent.state.observationEvidence, []);
+    assert.deepEqual(adjacent.state.learningEvidence, []);
+    assert.equal(adjacent.state.cityStateDelta, null);
+    assert.equal(adjacent.state.successor, null);
     assert.equal(atomicController.dispatch({
       packetId: "RP-002",
       version: CUSTODY_LEDGER_RAI_ATOMIC_SAVE_VERSION,
@@ -2925,7 +2946,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onSaveCommit=\{commitCustodyLedgerAtomicSave\}/);
   assert.match(app, /onSaveRetry=\{retryCustodyLedgerAtomicSave\}/);
   assert.match(app, /onSaveReturnSafely=\{returnSafelyFromCustodyLedgerAtomicSave\}/);
-  assert.match(app, /onVerifiedRestoreReturn=\{returnFromCustodyLedgerVerifiedRestore\}/);
+  assert.match(app, /onVerifiedRestoreReturn=\{calibrationReturnToRp002[\s\S]*returnFromCalibrationCivicComparison[\s\S]*returnFromCustodyLedgerVerifiedRestore\}/);
   assert.match(app, /event\?\.key === "Escape"[\s\S]*return "keyboard_escape"/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
