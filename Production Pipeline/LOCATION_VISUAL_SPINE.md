@@ -1,5 +1,11 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-07-25 RP-003 canonical cycle-reveal lock
+
+- `Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png` closes `SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
+- Exactly two exposed articulated bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole sealed boundary and reveals no interior or access. The surrounding archive continues beyond the frame and remains inert.
+- Status is canonical visual reference only, not runtime-integrated and not the approved `SC-04-MASTER`. The pale separator is not a third exposed band, the copper tone is not correctness/damage, and floor seams are not route guidance. No UI, hotspot, learning state, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is defined.
+
 ## A2 blank-entry presentation lock — 2026-07-25
 
 - `PASS — RP-003 / SC-04 CM-00 BOARDED / A3 NEXT`. Reuse the existing registered first-person Calibration Margin overview only: the composition's paired exposed bands, bounded difference, sealed boundary, flush coupling, and far-left reversible continuity remain visually legible but inert; no new crop, plate, board, raster, copy, or world cue is introduced.

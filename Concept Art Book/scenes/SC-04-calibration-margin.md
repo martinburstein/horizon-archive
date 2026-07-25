@@ -1,13 +1,20 @@
 # SC-04 — Calibration Margin
 
+## 2026-07-25 canonical cycle reveal — blank-margin spatial identity
+
+- **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`, with neighboring provenance.
+- **Locked boundary:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole sealed boundary and reveals no interior, opening, invitation, or access.
+- **Limit:** canonical count/nonidentity/opacity/material/scale evidence only; not runtime integration and not the approved `SC-04-MASTER`. The pale mass between exposed bands is structural separation, not a third band; the copper tone is not correctness or damage; floor seams are not rails or guidance. No readable content, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
+
 ## Identity
 
 - **Scene ID:** `SC-04`
 - **Rail Packet:** `RP-003 — Calibration Margin`
 - **Player-facing survey name:** Calibration Margin (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / City Beneath / working margin adjacent to the Civic Record District
-- **Production status:** Brief — A2 invariant-world sequence and premium one-master plan locked; no final art
-- **Image:** No image selected or generated. `Concept Art/Underground City.png` may inform only subsurface scale and warm/cool depth; its human architecture, people, platforms, composition, and props are excluded.
+- **Production status:** Brief — A2 invariant-world sequence and premium one-master plan locked; one canonical spatial reference closed; no runtime-integrated final master
+- **Image:** Canonical spatial reference: `../../Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`. It does not replace the future production master/crop/mask/effect package. `Concept Art/Underground City.png` may inform only subsurface scale and warm/cool depth; its human architecture, people, platforms, composition, and props are excluded.
 - **Purpose:** Make two exposed corresponding physical sequences, one bounded difference, and one materially sealed source legible while the city remains physically indifferent to inspection, Python execution, save, and return.
 
 ## Current blank-entry presentation lock — 2026-07-25

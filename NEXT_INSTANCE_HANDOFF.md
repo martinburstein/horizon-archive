@@ -12,7 +12,9 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 
 - Branch: `main`
 - Candidate checkpoint: `0e1d63d` — `Working Coder Polish: preserve RP-003 world image`
-- Coordinator release: the commit containing this handoff
+- Coordinator release: `375ab40` — `Coordinator: release RP-003 blank entry`
+- Retrospective: `c695258` — `TUNE / compact shared role handoffs`
+- Cycle close: the reveal commit containing this handoff
 - Expected after coordinator, retrospective, and reveal pushes: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
 - Released bundle: `index-BqxRwsLa.js` / `index-JTpP97Cx.css`
@@ -78,9 +80,10 @@ The blank entry, local presentation actions, returns, focus, reflow, resume, and
 
 ## Latest canonical cycle reveal
 
-- Until this cycle's post-release reveal commit lands, the latest remains `SC-03 / verified restore — inert return sightline and no-replay separation`.
-- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png`.
-- Status: canonical visual reference only, not runtime-integrated.
+- Closed item: `SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
+- Asset: `Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`.
+- Canonical scope: exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole sealed boundary and reveals nothing within.
+- Status: canonical visual reference only, not runtime-integrated and not the final SC-04 production master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, access, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is defined.
 
 ## Exact next action
 

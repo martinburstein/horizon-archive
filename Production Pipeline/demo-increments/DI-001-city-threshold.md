@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-25 canonical cycle reveal — RP-003 blank-margin spatial identity
+
+- **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`, with neighboring provenance.
+- **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
+- **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
+
 ## W4 result — 2026-07-25
 
 - `RP003-AESTH-019 RESOLVED — SAME-MASTER NARROW CONTINUITY / COORDINATOR NEXT`. Blank SC-04/CM-00 now retains the same sole inherited City Threshold overview at narrow/effective-`200%` through one scoped cascade exception. Wide behavior, 16:9 crop, source bytes, first-person world, one group, four actions, focus, and normal mechanics remain unchanged; no SC-04 production art or new cue exists.

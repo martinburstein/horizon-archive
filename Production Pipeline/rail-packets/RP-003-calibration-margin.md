@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## 2026-07-25 canonical cycle reveal — blank-margin spatial identity
+
+- **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp003-blank-margin-spatial-reveal/rp003-blank-margin-spatial-v1.png`, with neighboring provenance.
+- **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
+- **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 production master. The pale separator is not a third band, copper is not correctness/damage, and floor seams are not route guidance. No UI, observation credit, access, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
+
 ## W4 Coder result — responsive CM-00 world continuity
 
 - **Disposition:** `RP003-AESTH-019 RESOLVED — FINAL CANDIDATE / COORDINATOR NEXT`. One CalMargin-scoped narrow cascade exception now keeps the same sole inherited City Threshold overview visible in blank CM-00; wide behavior, the immutable 16:9 master/crop, and the existing interface remain unchanged. No SC-04 art, copy, state, cue, animation, gameplay, or persistence was added.
