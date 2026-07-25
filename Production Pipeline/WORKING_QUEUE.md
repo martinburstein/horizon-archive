@@ -1,5 +1,11 @@
 # Working Queue
 
+## W1 result / W2 next — 2026-07-25
+
+- **Finding:** `RP003-P1-001 P1 OPEN`. Exact verified RP-002 returns to the accepted normal City Threshold, but there is no explicit adjacent-survey action or transition to blank `SC-04 / CM-00`; normal play stops before the RP-003 entry can begin.
+- **Evidence / limitation:** normal App/City Threshold/RP-002-route source and accepted served JS have zero SC-04/CM-00/adjacent-survey entry markers; root and `index-DCMrW-hp.js` are HTTP `200`, with the accepted JS at `1,082,619` bytes / `7C52373B...55AF`. Focused normal-route evidence passes `45/45`. W1 did not force or inspect browser storage/save, so no gated rendered traversal is claimed.
+- **Exact W2 task:** bug-repair only the player-facing RP003-P1-001 entry gap. From exact verified RP-002 at accepted City Threshold, expose only the approved explicit private-free adjacent-survey entry into one blank Scene-owned CM-00 group; retain its four existing zero-effect actions and reversible returns. Invalid/Tour/private/partial/stale/forged/contaminated state must fail closed to exact RP-002. Preserve zero evidence, privacy, one group/focus, responsive-accessibility parity, unchanged continuation/null city delta, and invariant world. Stop before CM-10, learning, save, RP-004, RP-013, successor, or reward/access/authority/world effect.
+
 ## W4 result / coordinator next - 2026-07-25
 
 - **Closed:** `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED`. W4 reproduced no exact residual and made no production change. Focused normal-route/frame `54/54`, both applicable validator self-tests, production build, one strict `4173` listener, cache-bypassed final refresh, exact root/assets/hashes/served-dist identity, six required markers, immutable Civic Record art, and patch gates pass.
@@ -32,7 +38,7 @@
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Team 2 accepts exact save, complete failure/retry/safe return, fail-closed re-entry sanitation, exact no-replay restore, and reversible City Threshold return.
-- **Authoritative Working boundary:** after the next protected A5 handoff, W1 starts only from the accepted City Threshold with exact verified RP-002 state and reports the earliest normal gap toward the already-specified blank RP-003 `CM-00`. W2 may integrate only that entry/reversible-return shell. Stop before CM-10 observation, learning, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Authoritative Working boundary:** `RP003-P1-001` identifies the absent normal explicit adjacent-survey entry from accepted City Threshold to blank RP-003 `CM-00`. W2 may repair only that entry/reversible-return shell. Stop before CM-10 observation, learning, RP-004, RP-013, successor, or any world/access/authority effect.
 
 ## W4 result / coordinator next — 2026-07-25
 

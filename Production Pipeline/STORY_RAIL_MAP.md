@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W1 result — 2026-07-25
+
+- `RP003-P1-001 P1 OPEN — W2 BUG-REPAIR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The accepted normal route reaches verified RP-002's City Threshold return but has no explicit adjacent-survey entry to the approved blank `SC-04 / CM-00` group. W2 repairs only that first normal gap; CM-10, RP-004, RP-013, successor, reward, access, authority, and world change remain closed.
+
 ## A5 result — 2026-07-25
 
 - `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
@@ -75,7 +80,7 @@
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release / positions:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. Team 1 remains complete at `RP-012`; Team 2 moves to the oldest already-promoted adjacent packet, `RP-003`; the ordered lead is nine packets (`RP-004` through `RP-012`).
-- **Authoritative exact next edge / rail stop:** from the accepted City Threshold, exact verified RP-002 completion may enter only blank `CM-00 ARRIVE + IDLE` without replay, evidence, reward, or physical response; invalid/Tour/private state fails closed to RP-002. Stop before CM-10, normal observation, later RP-003 work, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Authoritative exact next edge / rail stop:** `RP003-P1-001` is the absent normal explicit adjacent-survey entry from accepted City Threshold to blank `CM-00 ARRIVE + IDLE`; it is the sole W2 repair edge. Valid entry must remain replay-free, zero-evidence, zero-reward, and physically inert; invalid/Tour/private state fails closed to RP-002. Stop before CM-10, normal observation, later RP-003 work, RP-004, RP-013, successor, or any world/access/authority effect.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

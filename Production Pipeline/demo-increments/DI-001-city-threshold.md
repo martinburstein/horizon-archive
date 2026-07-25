@@ -91,10 +91,16 @@
 - **Locked decision:** exactly three pale mineral-ceramic laminae form one all-or-none local seal inside one removable expedition cradle. Their shared warm seam is contained confirmation only; the cool archive stays inert and greater. No segment independently grants status, permission, reward, route, authority, or world effect.
 - **Status / limit:** canonical visual reference only, not runtime-integrated. The central void is not a portal or destination; fine cracks are non-canonical texture. No readable save content, adapter implementation, success animation, access, hidden lore, normal `RP-003+` integration, RP-013, or successor is authorized.
 
+## 2026-07-25 W1 — RP003-P1-001 normal blank-entry gap
+
+- **Bug:** `RP003-P1-001 — verified City Threshold has no normal adjacent-survey entry.` Exact verified RP-002 reaches the accepted City Threshold boundary, but the normal player route exposes no explicit action or transition into the approved blank `SC-04 / CM-00 ARRIVE + IDLE` group. **Severity: P1** because the next approved adjacent demo edge cannot start.
+- **Evidence / limitation:** normal App/City Threshold/RP-002-route source and served `index-DCMrW-hp.js` contain zero SC-04, CM-00, adjacent-survey, exposed-channel, or sealed-boundary entry markers. Root and JS are HTTP `200`; JS is `1,082,619` bytes, SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`. Focused normal-route evidence passes `45/45`. Browser storage/save remained untouched, so W1 makes no gated rendered-state claim.
+- **Acceptance / W2 handoff:** repair only one explicit private-free normal entry from exact verified RP-002 at City Threshold to blank Scene-owned CM-00, preserving its existing four zero-effect actions and reversible returns. Invalid/Tour/private/partial/stale/forged/contaminated entry returns exactly to RP-002. Stop before CM-10, learning, save, RP-004, RP-013, successor, or any authority/world effect.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-002 COMPLETE IN DEMO / RP002-P1-023 + RP002-AESTH-018`. The accepted Demo includes atomic save, complete recoverable failure, fresh retry, write-free safe return, fail-closed re-entry sanitation, exact no-replay `SC-03-50` restore, and reversible return to accepted City Threshold.
-- **Authoritative exact next edge / stop:** use only the already-promoted RP-003 design/protected authorities to reach blank `CM-00 ARRIVE + IDLE` from exact verified RP-002 completion. Invalid/Tour/private state fails closed to RP-002; valid entry replays nothing, grants nothing, and changes nothing physical. Stop before CM-10 observation or later RP-003 work.
+- **Authoritative exact next edge / stop:** `RP003-P1-001` is the absent normal explicit adjacent-survey entry from exact verified RP-002 completion to blank `CM-00 ARRIVE + IDLE`. W2 may repair only that first player-facing link; invalid/Tour/private state fails closed to RP-002, while valid entry replays nothing, grants nothing, and changes nothing physical. Stop before CM-10 observation or later RP-003 work.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

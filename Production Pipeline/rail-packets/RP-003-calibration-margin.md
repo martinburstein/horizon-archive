@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## W1 Player result — normal blank-entry gap
+
+- **Finding:** `RP003-P1-001 P1 OPEN — normal verified City Threshold has no adjacent-survey entry.` The accepted normal return reaches only the existing City Threshold staging surface; it exposes no player-facing adjacent-survey control or transition into the approved blank `SC-04 / CM-00 ARRIVE + IDLE` group.
+- **Evidence / limitation:** normal `App`, City Threshold, and RP-002 route source contain zero `SC-04`, `CM-00`, adjacent-survey, exposed-channel, or sealed-boundary entry markers; the served `index-DCMrW-hp.js` contains zero of the same markers. Root and accepted JS returned HTTP `200`; JS is `1,082,619` bytes, SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`. Focused normal-route evidence passes `45/45`. A gated live traversal would require Martin's browser state, which W1 did not inspect, force, or mutate.
+- **Expected / actual:** from exact verified RP-002 at City Threshold, the player needs the single approved explicit adjacent-survey entry that reaches only blank CM-00. Instead, the normal route ends at City Threshold, so the approved entry cannot begin. Stop at this first gap; CM-00 actions and every later state remain untested.
+- **Exact W2 handoff:** `Coder Agent operating mode: bug-repair. Repair only RP003-P1-001 by making the already-approved private-free explicit adjacent-survey entry available on the normal accepted City Threshold route. Acceptance is one valid semantic player activation from exact verified RP-002 into only blank Scene-owned SC-04 / CM-00 ARRIVE + IDLE, with the four approved zero-effect actions and existing reversible returns; invalid, Tour-derived, private, partial, stale, forged, or contaminated state fails closed to exact RP-002. Preserve one group, heading-first focus, privacy, zero evidence, unchanged continuation, cityStateDelta=null, accessibility parity, and invariant world. Stop before CM-10, observation, learning, save, RP-004, RP-013, successor, or any reward/access/authority/world effect.`
+
 ## A5 Coder result — protected blank CM-00 entry
 
 - **Mode / disposition:** `advance` / `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. Added one pure, unimported, storage-free `CalibrationMarginProtectedEntry` controller that composes the accepted City Threshold, exact verified RP-002 predecessor, existing SC-04 presentation/accessibility metadata, and existing reversible-return derivation. Normal App/route/UI, browser persistence, copy, art, observation, learning, save, and accepted bundles remain unchanged.
@@ -39,7 +46,7 @@
 ## Coordinator current control — 2026-07-25
 
 - **Working position:** `READY — ACTIVE TEAM 2 EDGE / BLANK CM-00 ENTRY NEXT`. RP-002 is complete in Demo through exact restore and reversible accepted City Threshold return; Team 1 remains complete at RP-012.
-- **Exact next tranche:** reuse only the existing start-state and protected authorities for exact verified RP-002 completion at accepted City Threshold -> sanitized no-replay `CM-00 ARRIVE + IDLE`. Invalid, Tour-derived, private, partial, stale, forged, or contaminated entry fails closed to RP-002. Valid entry clears transients, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned blank CM-00 group, and exposes only the existing orient/sealed-boundary/return actions.
+- **Exact next tranche:** `RP003-P1-001` is the first normal-player gap. Repair only the absent explicit adjacent-survey entry from exact verified RP-002 at accepted City Threshold to sanitized no-replay `CM-00 ARRIVE + IDLE`; invalid, Tour-derived, private, partial, stale, forged, or contaminated entry fails closed to RP-002. Valid entry clears transients, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned blank CM-00 group, and exposes only the existing orient/sealed-boundary/return actions.
 - **Hard stop:** blank CM-00 visible. Do not implement CM-10 observation, Python or AI-901 work, save, onward bearing, RP-004, RP-013, successor, reward, access, identity, authority, or any physical city/world response.
 
 ## Packet identity
