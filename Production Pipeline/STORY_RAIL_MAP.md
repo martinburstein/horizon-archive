@@ -2,6 +2,11 @@
 
 ## Current control — 2026-07-24
 
+- **Authoritative positions:** Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, now accepted through `RP002-P1-020 + RP002-AESTH-015` bounded RAI review. The ordered lead remains ten packets (`RP-003`—`RP-012`); no `RP-013` or successor exists.
+- **Authoritative exact next edge:** bounded review -> explicit Pilot `PREPARE SAVE` -> existing contained confirmation -> cancel/Escape write-free return. Stop before `SAVE BOUNDED COMPARISON` activation or persistence; the rail does not extend.
+- **Coordinator evidence:** full `674/674`, all `15/15` validators, build, clean `113.2s` E2E, desktop/narrow in-app title-shell review, exact hashes, cleanup, and coordinator-preview shutdown pass on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`.
+- The W4/coordinator-next position bullets immediately below are superseded by this accepted position block.
+
 - **Current Working handoff:** ten ordered packets (`RP-003`—`RP-012`). `RP002-AESTH-015 W4 VERIFIED — COORDINATOR NEXT`; verification-only polish changed no production artifact and normal play still stops after exact conclusion -> explicit one-hit Pilot dismissal -> strict System eligibility or deterministic first-incomplete recovery -> existing bounded review. Focused `74/74`, full `674/674`, both applicable validators, build, immutable-art/reference, leakage, exact served identity/marker/hash, single-listener final-refresh, and patch gates pass on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`; browser-backed gated review remains unavailable and storage/save was not inspected or mutated. Team 2 remains on RP-002 pending coordinator acceptance; Team 1 remains complete at RP-012 with no RP-013/successor and the rail does not extend.
 - **Team 1:** `RP-012`, end-to-end outlined, continuity-maintenance only; protected RAI conclusion-dismissal / eligibility / bounded-review convergence is complete.
 - **Team 2:** `RP-002`, accepted through `RP002-P1-019 + RP002-AESTH-014`: strict RAI explanation convergence, exact zero-credit Pilot conclusion, and responsive three-plane interpretation depth without raster integration.

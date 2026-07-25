@@ -2,6 +2,11 @@
 
 ## Current control — 2026-07-24
 
+- `RP-002` authoritative status: `IN DEMO — PARTIAL / RP002-P1-020 + RP002-AESTH-015`; normal integration is accepted through strict RAI explanation convergence, exact zero-credit Pilot conclusion, explicit private-free dismissal, strict finalized-evidence eligibility, and bounded review / deterministic first-incomplete recovery.
+- Authoritative release evidence: full `674/674`, all `15/15` validators, production build, clean first-launch `113.2s` E2E after HTTP `200` preflight, desktop/narrow in-app title-shell review, exact hashes, QA cleanup, and coordinator-preview shutdown pass on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`.
+- Next convergence edge: bounded review -> explicit Pilot `PREPARE SAVE` -> existing contained confirmation -> write-free cancel/Escape return. Stop before `SAVE BOUNDED COMPARISON` activation, persistence, failure/retry-save, completion, or later packets.
+- Older release-status bullets immediately below are retained as prior-cycle history and are superseded by these authoritative bullets.
+
 - `RP-002`: `IN DEMO — PARTIAL`; normal integration is accepted through strict RAI explanation convergence and the exact zero-credit Pilot conclusion.
 - Team 1 railhead: `RP-012`; Team 2 position: `RP-002`; ordered lead: ten packets.
 - A4 result / A5 next: `PASS — GRAPH LOCKED; PROTECTED A5 NEXT`; the existing one-hit zero-effect conclusion dismissal, strict finalized-chain/five-observation eligibility sanitation, and bounded-review entry / deterministic first-incomplete return preserve frozen evidence conjunctions. Save preparation/persistence and every later state remain closed.

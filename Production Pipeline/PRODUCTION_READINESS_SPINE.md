@@ -2,6 +2,13 @@
 
 ## Current control — 2026-07-24
 
+- **Authoritative accepted release:** `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015` on `index-DRVkMZaH.js` / `index-BPvBS70Z.css`; normal play now reaches the exact zero-credit RAI conclusion, explicit private-free dismissal, strict finalized-evidence System eligibility, and existing bounded comparison review or deterministic first-incomplete recovery.
+- **Authoritative independent gate:** full `674/674`, all `15/15` validators, production build, first-launch isolated `113.2s` E2E after an HTTP `200` preflight, `1920 x 1080` / `390 x 844` in-app title-shell review, exact hashes, clean logs/overflow, QA cleanup, and coordinator-preview shutdown pass. Martin's browser storage/save remained untouched.
+- **Authoritative next release edge:** bounded review -> one explicit Pilot `PREPARE SAVE` intent -> existing contained local save confirmation, with cancel/Escape returning write-free to bounded review. Stop before activating `SAVE BOUNDED COMPARISON`, persistence, failure/retry-save, completion, `RP-003+`, world/authority effects, RP-013, or successor.
+- The older accepted-release bullets immediately below are retained as prior-cycle history and are superseded by this authoritative block.
+
+Latest coordinator acceptance: `2026-07-24 / RP002-P1-020 + RP002-AESTH-015 PASS — BOUNDED RAI REVIEW IN DEMO PARTIAL`. Independent full `674/674`, all `15/15` validators, production build, clean isolated `113.2s` E2E, fresh `1920 x 1080` / `390 x 844` in-app title-shell review, exact assets/hashes, clean logs/overflow, QA cleanup, port-`5174` shutdown, and patch gates pass. The gated review was not forced through Martin's campaign save; deterministic source, focused integration, served-bundle, and E2E evidence support it.
+
 - **Accepted release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014` on `index-BggOwTvz.js` / `index-BPvBS70Z.css`; strict RAI explanation authoring/evaluation/recovery, exact zero-credit conclusion, and the responsive three-plane veil presentation are normally composed.
 - **Independent gate:** full `665/665`, all `15/15` validators, production build, clean isolated `110.4s` E2E, `1920 x 1080` / `390 x 844` in-app review, exact asset hashes, clean logs/overflow, QA cleanup, and synchronization pass. Storage/save remained untouched.
 - **Next release edge:** only one explicit zero-effect RAI-conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.

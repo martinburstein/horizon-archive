@@ -1,115 +1,98 @@
 # Horizon Archive — Current Operational Handoff
 
-Last updated: **2026-07-19**
+Last updated: **2026-07-24**
 
 ## Start here
 
-Read `AGENTS.md`, this file, and `AUTONOMOUS_PRODUCTION_LOOP.md` in full. `NEXT_INSTANCE_HANDOFF.md` is the sole current-state and exact-next-action authority. Before each role, read its canonical profile plus only the current-control block, preceding handoff, latest role-log entry, and directly cited sections required by the optimized runbook.
+Read `AGENTS.md`, this file, and `AUTONOMOUS_PRODUCTION_LOOP.md` in full. This file is the sole current-state and exact-next-action authority. Before each role, read its canonical profile plus the current-control block, immediately preceding handoff, latest role-log entry, and directly cited sections required by the runbook.
 
 Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's explicit authorization.
 
 ## Synchronized state
 
 - Branch: `main`
-- Coordinator release parent: `354c9d1` — `Working Coder Polish: restore RAI interpretation veil depth`
-- Expected synchronization after this handoff commit: `HEAD == origin/main`
-- Live demo URL when intentionally started: `http://127.0.0.1:4173/`
-- Released bundle: `index-BggOwTvz.js` / `index-BPvBS70Z.css`
-- Automation: `horizon-archive-optimized-production-loop` — **ACTIVE / RESTARTED BY MARTIN on 2026-07-24**. The first wake begins immediately from this synchronized handoff; later wakes recur every three hours. If a cycle is already active or interrupted, continue its latest valid role checkpoint and never overlap or restart A1.
-- Adaptive retrospective: required after coordinator synchronization and before the reveal.
+- Coordinator release parent: `f946a7d` — `Working Coder: verify bounded RAI review presentation`
+- Expected after the coordinator handoff commit: `HEAD == origin/main`
+- Live demo when intentionally running: `http://127.0.0.1:4173/`
+- Released bundle: `index-DRVkMZaH.js` / `index-BPvBS70Z.css`
+- Automation: `horizon-archive-optimized-production-loop` remains active on a three-hour cadence. If a cycle is already active or interrupted, continue the latest valid synchronized role checkpoint; never overlap or restart A1.
+- Adaptive retrospective: required after coordinator synchronization and before the cycle reveal.
 
 Protected user-owned untracked paths — do not inspect, stage, alter, move, or delete:
 
 - `Art Of No Mans Sky Book Scan.pdf`
 - `Simplilearn Training Files/`
 
-## Restart and next-round improvements
-
-For the restarted loop:
-
-1. Keep exactly one active automation, spaced three hours apart; preserve the non-overlap/continue-from-checkpoint rule.
-2. Before A1, run one read-only startup health check: `HEAD == origin/main`, only the two protected user paths are untracked, no role checkpoint is active, and the handoff exact edge still matches the current-control blocks.
-3. Record one timestamp per stage boundary in the cycle retrospective. Use those ten measurements—not intuition—to decide whether model routing, validation placement, or cadence needs another tune.
-4. Keep stable-authority hash checks and compact role-context reads; fully reread a stable authority only when its hash changed, a conflict appears, or the runbook requires it.
-5. At coordinator close, preflight the isolated `5174` production preview and HTTP `200` before the single complete E2E; stop only the coordinator-owned preview afterward.
-6. Select the reveal decision before generation, compare it with the six existing SC-03 references, and vary scale/subject so the image closes one genuinely new uncertainty rather than restating the preceding reveal.
-
-These are throughput and reliability improvements only. They do not relax sequential roles, canon, learning, privacy, accessibility, release validation, protected-user-work rules, or the exactly-one-reveal requirement.
-
 ## Team positions
 
 - Team 1: `RP-012`, complete intended ending railhead; continuity-maintenance only.
-- Team 2: `RP-002`, accepted through strict Responsible-AI explanation convergence and exact zero-credit Pilot conclusion.
+- Team 2: `RP-002`, accepted through bounded Responsible-AI review.
 - Ordered lead: ten packets, `RP-003` through `RP-012`.
 - Whole-story rail: `END-TO-END OUTLINED`.
 - No `RP-013`, successor, or post-ending content is authorized.
 
 ## Accepted player-visible boundary
 
-Normal play now accepts the complete `RAIEC-00 -> RAIEC-10 -> RAIEC-20F/RAIEC-20C` seam after strict RAI transfer `9/9`:
+Normal play now accepts:
 
-- a genuinely blank Teacher-owned application-label/native-fact/authority explanation;
-- private session-only Pilot responses and one explicit submit;
-- simultaneous uncompensated strict current-attempt `3/3`;
-- on miss, only first-actual-failed-boundary answer-free Teacher feedback, complete clearing, and wholly blank unlimited all-three retry at deterministic first-failed focus;
-- on exact pass, only the exact zero-credit Pilot conclusion: `My application label is a human interpretation, not their fact or permission to act.`
+```text
+exact RAIEC-20C zero-credit Pilot conclusion
+  -> explicit private-free seven-modality / one-hit Pilot dismissal
+  -> strict SYSTEM // EXPEDITION SESSION eligibility
+     derived only from finalized PY-009
+     AND finalized RP002-RAI-01
+     AND all five finalized observations
+  -> eligible: existing REVIEW BOUNDED COMPARISON
+  -> existing Pilot bounded review
+```
 
-Editable/retry `RAIEC-00` alone uses exactly three source-ordered, progressively inset wide interpretation planes; at narrow/effective-`200%` widths they flatten into one equal source-ordered column. The generic Python explanation remains three equal wide peers. No canonical reveal raster is runtime-integrated.
+Missing, forged, stale, partial, Tour-derived, private-bearing, or `review_required` dependencies clear transient/private work and return to the deterministic first incomplete protected boundary. Bounded review shows only the existing provisional-human comparison and expedition survey-marker meaning. Display, focus, dismissal, eligibility, review, return, reflow, modality, and Tour grant zero evidence or authority.
 
 ## Closed invariants
 
 - Python, Responsible-AI primary, transfer, and explanation evidence remain independent and cannot cross-credit.
-- Display, timing, layout, conclusion, dismissal, review, focus, navigation, and Tour traversal are zero evidence.
-- Private responses, feedback prose, result material, tokens, and focus history never persist.
-- Preserve privacy allowlists, save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `cityStateDelta=null`, and no external action.
-- Preserve first-person maximum-quality cinematic photorealism with no visible protagonist/ship/hands/body/prior-human trace.
-- No story, item, route, access, permission, identity, authority, city, world, external, `RP-003+`, RP-013, or successor effect may arise at the current edge.
+- Private responses, feedback, result material, tokens, and focus history never persist.
+- Preserve privacy allowlists, save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, `cityStateDelta=null`, and no external action.
+- Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
 - Canonical visual references do not imply runtime integration.
+- No story, item, route, access, permission, identity, authority, city, world, external, `RP-003+`, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
 
-- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`.
-- Full game suite: `665/665`.
+- Disposition: `PASS — IN DEMO PARTIAL / RP002-P1-020 + RP002-AESTH-015`.
+- Full game suite: `674/674`.
 - Readiness validators: `15/15`.
 - Production build: pass.
-- Complete isolated E2E: pass in `110.4s`; every emitted gate true, credits reached, no runtime errors. An initial connection-refused preflight with no server was discarded; the clean non-overlapping rerun alone is accepted.
-- Live title-shell review: desktop `1920 x 1080` and narrow `390 x 844`, zero horizontal overflow, clean browser logs, and `48px` / `44px` actions.
-- JS: `index-BggOwTvz.js`, `1,030,140` bytes, SHA-256 `D741F69C3FC6043105D8C2BACFB265ACDF09FD7D6F1E13AFF5F986429EFDFF2F`.
+- Complete isolated E2E: pass on first launch after port-`5174` HTTP `200` preflight in `113.2s`; `credits:true`, every reported gate true, `runtimeErrors:false`.
+- In-app title-shell review: desktop `1920 x 1080` and narrow `390 x 844`; zero horizontal overflow, clean browser logs, readable hierarchy, and `48px` / `44px` actions.
+- JS: `index-DRVkMZaH.js`, `1,051,277` bytes, SHA-256 `AFF7BC9AE080453053D15DE61B13A009B3467AA30870FF57248EFD640B92EB38`.
 - CSS: `index-BPvBS70Z.css`, `74,018` bytes, SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`.
-- Incidental E2E captures restored; QA port `5174` stopped; browser storage/save untouched.
-
-## Latest canonical reveal
-
-`Visual Direction/Production Masters/2026-07-19-rp002-rai-no-authority-threshold-reveal/rp002-rai-no-authority-threshold-v1.png`
-
-Closed checklist item: `SC-03 / RAI conclusion — no-authority threshold silence`.
-
-One small expedition interpretation instrument remains physically separate from an immense sealed archive aperture. The correct human interpretation produces no archive response, access, approval, permission, authority, route, or world event. This is canonical reference evidence only and is not runtime-integrated.
+- Incidental E2E captures restored; coordinator port `5174` stopped; Martin's browser storage/save untouched.
+- The gated RP-002 state was not forced through Martin's campaign save; deterministic integration, served-bundle, and focused evidence support it.
 
 ## Exact next action
 
-Begin or resume one sequential cycle at A1. Converge only the already-authorized zero-effect conclusion-dismissal-to-bounded-review edge:
+Begin or resume one sequential cycle at A1. Converge only the existing bounded-review-to-contained-confirmation edge:
 
 ```text
-accepted exact RAI Pilot conclusion
-  -> one explicit private-free seven-modality / one-hit dismissal
-  -> SYSTEM // EXPEDITION SESSION eligibility sanitation
-  -> if every already-finalized Python chain, RAI chain, and five-observation conjunct is valid:
-       PILOT // FLIGHT RECORDER — bounded comparison review only
-  -> otherwise:
-       clear private work and return to the deterministic first incomplete protected boundary
+accepted exact RG-30 bounded review
+  -> one explicit private-free seven-modality / one-hit
+     PILOT // FLIGHT RECORDER — PREPARE SAVE
+  -> existing contained local save-confirmation group
+  -> CANCEL or Escape:
+       clear transient intent and return write-free
+       to exact bounded review with deterministic focus
 ```
 
-A1 audits ownership and no-authority meaning; A2 boards one compact owner-replacing transition; A3 preserves strict conjunctions and zero evidence; A4 locks dismissal/eligibility/review recovery; A5 composes one pure protected controller. W1 begins only at the accepted live exact RAI conclusion, W2 integrates the earliest normal gap, W3 reviews, W4 polishes, and the coordinator independently releases.
-
-The bounded review may show only already-finalized summary material and the existing survey-marker meaning. Its display, reading, return, or dismissal grants no credit or world/route effect.
+A1 audits ownership, local-only meaning, and no-authority/no-world-effect language. A2 boards one compact owner-preserving contained confirmation. A3 preserves the strict evidence conjunction and zero-evidence presentation firewall. A4 locks prepare/cancel/Escape/focus/resume recovery. A5 composes one pure protected controller around the existing `prepareCustodyLedgerSave` and `cancelCustodyLedgerSave` authorities without importing a persistence adapter. W1 begins only at the accepted live bounded review; W2 integrates the earliest normal gap; W3 reviews; W4 polishes or verifies; the coordinator independently releases.
 
 ## Hard stop
 
-Stop with bounded review visible. Do not expose or implement:
+Stop with the contained save confirmation visible. Do not activate or implement:
 
-- `PREPARE SAVE`, save confirmation, commit intent, persistence, local failure, retry-save, verified restore, or sanitation downgrade UI beyond returning to the first incomplete protected boundary;
-- completion, credits, `RP-003+` normal integration, world response, route reward, item, access, permission, identity disclosure, authority, city change, external action, RP-013, or successor content;
+- `SAVE BOUNDED COMPARISON`;
+- any persistence adapter call, atomic-triplet write, partial write, local failure, retry-save, verified restore, sanitation-downgrade UI, or completion;
+- credits, `RP-003+` normal integration, world response, route reward, item, access, permission, identity disclosure, authority, city change, external action, RP-013, or successor content;
 - any new prompt, answer, score, compensation rule, optional branch, micro-seam, art integration, or authority.
 
 ## Role and checkpoint order
@@ -118,4 +101,4 @@ Run strictly sequentially: A1 Lore Builder; A2 Storyboarder; A3 Curriculum Check
 
 Create one local commit per role. Push after A5, W2, W4, coordinator handoff, and reveal, plus after any unusually risky runtime/save/recovery change. Use the tiered validation ladder in `AUTONOMOUS_PRODUCTION_LOOP.md`.
 
-At close, replace this file with the next compact synchronized state and exact edge; never append a cycle diary.
+At close, replace this file with the new compact synchronized state and exact edge; never append a cycle diary.
