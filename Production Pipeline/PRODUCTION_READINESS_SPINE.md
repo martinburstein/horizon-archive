@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W3 result - 2026-07-25
+
+- `RP002-AESTH-016 VERIFIED - CLEAN / W4 VERIFICATION ONLY` on W2 `5f55055`. Source/CSS/served-bundle evidence confirms coherent contained confirmation presentation, action sizing, owner/focus replacement, narrow/`200%` reflow, non-color/forced-color/reduced-motion parity, invariant crop, raster isolation, and hard-stop truthfulness. Focused normal-route presentation coverage passes `45/45`; gated Browser evidence is intentionally not claimed because campaign storage/save was not used.
+- W4 makes no production edit unless it reproduces one exact residual; otherwise it verifies the same candidate before coordinator release.
+
 ## W2 candidate result — 2026-07-25
 
 - `RP002-P1-021 RESOLVED — NORMAL CONFIRMATION ENTRY INTEGRATED / W3 NEXT`. Exact eligible `RG-30` now exposes one `>=44px` private-free seven-modality/one-hit Pilot `PREPARE SAVE`, atomically mounts only the existing contained confirmation, holds inertly, or returns through write-free cancel/Escape with deterministic prepare focus. Strict sanitation, one active group, exact copy, separate returns, privacy, accessibility, campaign/Tour/save-byte stability, invariant world, no-credit/no-authority, `campaignCommitEnabled=false`, and `cityStateDelta=null` remain exact.

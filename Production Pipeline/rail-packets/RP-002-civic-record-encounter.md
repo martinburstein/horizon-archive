@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## W3 result — 2026-07-25
+
+- **Disposition:** `RP002-AESTH-016 VERIFIED — CLEAN / W4 VERIFICATION ONLY`.
+- The W2 normal candidate preserves the compact two-leaf review, `>=44px` private-free Pilot preparation, contained confirmation sentence, visibly disabled commit label, separate cancel, deterministic focus/return, one active group, narrow/effective-`200%` reflow, non-color/forced-color/reduced-motion parity, and invariant Civic Record world/crop. No canonical raster is integrated and confirmation-visible remains the truthful hard stop.
+- **Evidence boundary / W4 edge:** gated Browser traversal would require Martin's campaign state and was not attempted. Source/CSS/served-bundle hashes and focused normal-route presentation coverage are clean; W4 reproduces only an exact residual or makes no production edit.
+
 ## W2 result / W3 next — 2026-07-25
 
 - **Disposition:** `RP002-P1-021 RESOLVED — NORMAL CONFIRMATION ENTRY INTEGRATED / W3 AESTHETIC REVIEW NEXT`.

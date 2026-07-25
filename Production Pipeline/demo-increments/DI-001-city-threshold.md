@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W3 result — 2026-07-25
+
+- `RP002-AESTH-016 VERIFIED — CLEAN / W4 VERIFICATION ONLY`. W2's contained confirmation is visually coherent: the two equal review leaves remain distinct; preparation is a `>=44px` Pilot action before separate returns; atomic confirmation carries the canonical sentence as heading, visibly disabled commit intent, and separate cancel. Source/CSS evidence confirms one-active-group replacement, deterministic focus, natural narrow/effective-`200%` reflow, non-color/forced-color/reduced-motion parity, invariant civic crop, and no raster integration.
+- No safe gated Browser traversal was available without campaign-save access. W4 opens no change unless an exact residual is reproduced; confirmation-visible remains the hard stop.
+
 ## W2 result / W3 next — 2026-07-25
 
 - `RP002-P1-021 RESOLVED / W3 AESTHETIC REVIEW NEXT`. Transient normal App/route/UI now compose the protected exact `RG-30` -> private-free seven-modality/one-hit Pilot `PREPARE SAVE` -> existing contained local confirmation graph. The `>=44px` prepare follows the unchanged bounded summary and precedes separate write-free returns; confirmation uses the exact canonical sentence as its heading, exposes disabled `SAVE BOUNDED COMPARISON`, and keeps `CANCEL` separate.
