@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A5 result - 2026-07-25
+
+- **Disposition / work completed:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`; convergence remains `CONVERGE + MERGE + TRIM`. One pure unimported storage-free controller composes the previously accepted recovery graph with fresh validated City Threshold return, without touching normal runtime integration.
+- **Exact W1 next:** `Player Agent - inspect only accepted normal SC-03-40 source/served evidence and report the earliest player-facing absence toward automatic reload sanitation, SC-03-50 verified restore, or deterministic downgrade. Do not inspect protected controller/tests, force campaign state, or read/mutate browser storage/save. Stop at that first gap.`
+
 ## A4 result — 2026-07-25
 
 - **Disposition / work completed:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`; convergence remains `CONVERGE + MERGE + TRIM`. Composed only the existing quiet saved state, reload/re-entry sanitation, complete downgrade, exact no-replay restore, and exact-restore-only reversible City Threshold return as one protected gameplay graph.

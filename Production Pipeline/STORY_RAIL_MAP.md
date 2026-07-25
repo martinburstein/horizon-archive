@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A5 result - 2026-07-25
+
+- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains accepted at normal `RP-002` through quiet `SC-03-40`; ordered lead remains ten packets. `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`.
+- The non-routable controller preserves the existing protected graph: `SC-03-40` -> Tour-first re-entry sanitation -> all-three/private/transient downgrade or exact no-replay `SC-03-50` -> fresh exact-restore-only adapter-free City Threshold navigation. W1 identifies only the earliest normal player-facing gap; no normal RP-003 or later effect exists.
+
 ## A4 result — 2026-07-25
 
 - **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets. `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`.

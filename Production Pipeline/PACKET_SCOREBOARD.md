@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A5 result - 2026-07-25
+
+- `RP-002 REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains accepted at normal `RP-002` `SC-03-40`; the ordered lead remains ten packets.
+- Protected composition validates Tour before adapter access, dependencies before saved state, all-three clearing before downgrade, no-replay exact restore, and fresh exact-restore-only adapter-free return. Focused `22/22`, related `99/99`, validators, build, purity/non-integration, and patch checks pass. Normal integration and all later rail states remain closed.
+
 ## A4 result — 2026-07-25
 
 - `RP-002 PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.

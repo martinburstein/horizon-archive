@@ -1,5 +1,10 @@
 # Working Queue
 
+## A5-to-W1 handoff - 2026-07-25
+
+- **Incoming protected result:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE`. The protected controller has exact Tour isolation, sanitation/downgrade, no-replay `SC-03-50` restore, focus/resume, and fresh adapter-free City Threshold return coverage; it has no normal runtime or bundle integration.
+- **Exact W1 task:** inspect only accepted normal live/source-served evidence at quiet `SC-03-40` and report the earliest player-facing absence toward automatic reload sanitation, deterministic downgrade, or verified restore. Do not inspect protected code/tests, force a campaign state, or inspect/mutate browser storage/save. Stop at the first gap; all post-RP-002 and world/access/authority effects remain closed.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 2 accepts the normal atomic local save result through quiet `SC-03-40`; failure is complete and recoverable, retry is fresh, and safe return is write-free.

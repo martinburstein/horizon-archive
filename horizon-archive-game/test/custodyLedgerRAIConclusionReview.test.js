@@ -89,6 +89,12 @@ import {
   createCustodyLedgerRAIAtomicSaveCommit,
   custodyLedgerRAIAtomicSaveModalities,
 } from "../src/CustodyLedgerRAIAtomicSaveCommit.js";
+import {
+  CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+  CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+  createCustodyLedgerRAIVerifiedRestore,
+  custodyLedgerRAIVerifiedRestoreAccessibility,
+} from "../src/CustodyLedgerRAIVerifiedRestore.js";
 import { createCustodyLedgerPersistenceAdapter } from "../src/custodyLedgerExercise.js";
 import {
   structuredPacketChecks,
@@ -996,4 +1002,89 @@ test("protected atomic confirmation and empty failure resume without replay whil
   }
   assert.equal(readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8")
     .includes("CustodyLedgerRAIAtomicSaveCommit"), false);
+});
+
+function acceptedVerifiedRestoreFixture() {
+  const options = acceptedAtomicSaveFixture();
+  const adapter = createCustodyLedgerPersistenceAdapter();
+  const atomic = createCustodyLedgerRAIAtomicSaveCommit({ ...options, adapter });
+  const acceptedComparisonState = atomic.dispatch(atomicSaveIntent(
+    "SAVE BOUNDED COMPARISON",
+    "restore-fixture-save",
+  )).state;
+  return { ...options, adapter, acceptedComparisonState };
+}
+
+function restoreIntent(eventToken, overrides = {}) {
+  return {
+    packetId: "RP-002",
+    version: CUSTODY_LEDGER_RAI_VERIFIED_RESTORE_VERSION,
+    mode: "campaign",
+    owner: "PILOT // FLIGHT RECORDER",
+    action: CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
+    activationKind: "pointer",
+    eventToken,
+    ...overrides,
+  };
+}
+
+test("protected re-entry restores only an exact triplet and returns once through the existing City Threshold authority", () => {
+  for (const activationKind of custodyLedgerRAIAtomicSaveModalities) {
+    const options = acceptedVerifiedRestoreFixture();
+    const controller = createCustodyLedgerRAIVerifiedRestore(options);
+    const restored = controller.getState();
+    assert.equal(restored.phase, "verified_restore");
+    assert.equal(restored.boardState, "SC-03-50");
+    assert.equal(restored.restoredText, "Civic comparison restored. Working notes are cleared; closed records remain closed.");
+    assert.deepEqual(restored.progression, {
+      civicComparisonSaved: true,
+      nextSurveyDirectionMarked: true,
+      rp002Checkpoint: "comparison_complete",
+    });
+    assert.deepEqual(restored.focusIntent, { group: "verified_restore", target: "heading", then: "saved_controls" });
+    assert.deepEqual(restored.availableActions, [CUSTODY_LEDGER_RETURN_CITY_THRESHOLD]);
+    assert.deepEqual(restored.accessibility, custodyLedgerRAIVerifiedRestoreAccessibility);
+    const returned = controller.dispatch(restoreIntent(`restore-return-${activationKind}`, { activationKind }));
+    assert.equal(returned.status, "returned_to_city_threshold_write_free");
+    assert.equal(returned.route.writePerformed, false);
+    assert.equal(returned.route.continuation, "continuation");
+    assert.deepEqual(controller.dispatch(restoreIntent(`restore-again-${activationKind}`, { activationKind })).state, restored);
+  }
+});
+
+test("protected re-entry sanitizes malformed storage before presentation and revalidates resume without spending return tokens", () => {
+  const options = acceptedVerifiedRestoreFixture();
+  const invalidAdapter = {
+    read: () => ({ civicComparisonSaved: true, nextSurveyDirectionMarked: true, rp002Checkpoint: "comparison_complete", extra: true }),
+    clearAtomicTriplet: () => ({}),
+  };
+  const controller = createCustodyLedgerRAIVerifiedRestore({ ...options, adapter: invalidAdapter });
+  const downgraded = controller.getState();
+  assert.equal(downgraded.phase, "sanitation_downgrade");
+  assert.equal(downgraded.sanitationText, "Saved comparison could not be verified. Private work and all comparison markers were cleared.");
+  assert.deepEqual(downgraded.progression, {});
+  assert.deepEqual(downgraded.focusIntent, { group: "sanitation_downgrade", target: "heading" });
+  assert.equal(downgraded.nextFocusIntent.target, "first_required_control");
+  assert.equal(controller.dispatch(restoreIntent("restore-invalid-return")).reason, "return_unavailable");
+  const revalidated = controller.sanitizeBoundary();
+  assert.equal(revalidated.state.phase, "sanitation_downgrade");
+});
+
+test("protected re-entry isolates Tour before adapter access and remains pure and unimported by normal routes", () => {
+  const options = acceptedVerifiedRestoreFixture();
+  const throwingAdapter = {
+    read: () => { throw new Error("Tour must not read adapter"); },
+    clearAtomicTriplet: () => { throw new Error("Tour must not clear adapter"); },
+  };
+  const tour = createCustodyLedgerRAIVerifiedRestore({ ...options, mode: "demo_tour", adapter: throwingAdapter });
+  assert.equal(tour.getState().phase, "tour_preview");
+  const source = readFileSync(new URL("../src/CustodyLedgerRAIVerifiedRestore.js", import.meta.url), "utf8");
+  for (const forbidden of ["localStorage", "sessionStorage", "fetch(", "XMLHttpRequest", "document.", "window.", "RP-003", "RP-013"]) {
+    assert.equal(source.includes(forbidden), false, forbidden);
+  }
+  assert.equal(source.includes("restoreCustodyLedgerBoundedComparison"), true);
+  for (const relative of ["../src/App.jsx", "../src/main.jsx", "../src/CivicRecordArrival.jsx", "../src/CustodyLedgerNormalRoute.js"]) {
+    assert.equal(readFileSync(new URL(relative, import.meta.url), "utf8")
+      .includes("CustodyLedgerRAIVerifiedRestore"), false, relative);
+  }
 });

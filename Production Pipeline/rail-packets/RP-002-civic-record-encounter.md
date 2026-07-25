@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## A5 implementation - protected verified restore composition
+
+- **Disposition:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. The new unimported pure controller composes only accepted `SC-03-40`, bounded dependency/triplet sanitation, exact `sanitation_downgrade` or `verified_restore / SC-03-50`, existing focus, and exact-restore-only reversible City Threshold navigation. It adds no normal route, storage rule, copy, art, evidence, reward, or world effect.
+- **Verified boundary:** Tour returns before adapter access. Invalid stored state clears the entire triplet and private/transient work before `progression={}` downgrade and deterministic heading/first-incomplete focus; exact state clears work, preserves only the exact triplet, focuses heading then saved controls, and does not replay. A one-hit private-free seven-modality return is accepted only after fresh exact-`SC-03-50` validation and is adapter-free; rejected input preserves its future token.
+- **Evidence / next:** focused controller `22/22`, related regressions `99/99`, both applicable validator self-tests, production build, purity/non-integration, and patch checks pass. W1 inspects the earliest normal player-facing missing transition only; the rail remains hard-stopped before normal `RP-003`, departure, credits, RP-013, successor, or any world/access/authority/external effect.
+
 ## A4 Puzzle Track — protected verified-restore recovery graph
 
 - **Disposition:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`. The A3 `NO REOPEN — SOLIDIFIED` verdict is accepted unchanged. This pass composes one existing-authority recovery graph and adds no copy, prompt, score, learning case, visual state, micro-state, art, runtime integration, persistence rule, route reward, world effect, or successor.

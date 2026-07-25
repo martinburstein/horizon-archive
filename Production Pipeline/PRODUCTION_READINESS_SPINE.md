@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## A5 protected result - 2026-07-25
+
+- `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. An unimported pure controller and focused coverage establish recovery semantics without changing the accepted production bundle or normal route: Tour-before-adapter, dependency-before-record sanitation, complete fail-closed clearing, exact no-replay restore, and one fresh exact-restore-only adapter-free return.
+- Gate evidence: focused `22/22`; related `99/99`; RP-002 and L-02-02 self-tests; production build; purity/normal-non-integration and patch checks pass. W1 must use normal evidence only and report its first player-facing gap; it may not force or inspect browser storage/save.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Independent full `684/684`, all `15/15` readiness validators, production build, isolated `113.5s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact asset hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable-art, and synchronization gates pass.

@@ -1,5 +1,12 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-25 - Advance Coder A5: protected verified restore composition
+
+- **Mode / verdict:** `advance` / `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. Added only the pure, storage-free, unimported `CustodyLedgerRAIVerifiedRestore` controller and focused tests. Normal App/route/UI, browser storage/save, copy, curriculum, art, world, and accepted runtime bundle remain unchanged.
+- **Bounded behavior:** Tour resolves before any adapter read. Campaign re-entry sanitizes dependencies before judging the exact saved triplet: invalid/extra/private/transient state clears all three fields and mounts only System `sanitation_downgrade / progression={}` with heading then first-incomplete focus; exact state mounts only System `verified_restore / SC-03-50`, clears work, focuses heading then saved controls, and replays nothing. Only a fresh private-free seven-modality `>=44px` Pilot return from exact restore dispatches the existing adapter-free City Threshold navigation; invalid return spends no token and changes nothing.
+- **Validation / preservation:** focused verified-restore suite `22/22`; related exercise/normal-route regressions `99/99`; RP-002 and L-02-02 validator self-tests; production build; purity, normal non-integration, and patch checks pass. Build output remains `index-C7qPZ0yi.js` / `index-BPvBS70Z.css`. No live browser storage/save was read or mutated.
+- **Exact W1 handoff:** `Player Agent - inspect only coordinator-accepted normal live/source-served evidence at quiet System SC-03-40. Report the earliest player-facing normal gap toward automatic local reload sanitation, exact SC-03-50 restore, or deterministic downgrade. Do not inspect this protected controller, force campaign state, or read/mutate browser storage/save. Stop at that first gap; no normal RP-003, departure, credits, RP-013, successor, or world/access/authority/external effect.`
+
 ## 2026-07-25 — Working Coder W4: RP002-AESTH-017 verification-only final refresh
 
 - **Mode / verdict:** `aesthetic-polish` / `RP002-AESTH-017 VERIFIED — NO IMPLEMENTATION REQUIRED / FINAL DEMO REFRESHED / COORDINATOR NEXT`. W3 opened no reproducible presentation finding, and W4 reproduced no residual on the unchanged W2 candidate. Production code, style, art, assets, copy, state, route, curriculum, tests, and browser storage/save remain unchanged.

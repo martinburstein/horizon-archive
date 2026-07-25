@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A5 result - protected verified restore controller
+
+- `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. Pure unimported composition now proves Tour-before-adapter isolation, dependency-before-record sanitation, exact all-three clearing/downgrade or exact no-replay `SC-03-50` restore, deterministic focus/resume, and exact-restore-only adapter-free return.
+- Focused controller `22/22`, related `99/99`, two self-tests, build, purity/non-integration, and patch checks pass; the accepted normal bundle is unchanged. W1 may identify only the first normal player-facing absence toward this protected behavior. No normal runtime integration or rail extension is claimed.
+
 ## A4 result — 2026-07-25
 
 - **Disposition:** `PASS — SC-03-40 RE-ENTRY / FAIL-CLOSED DOWNGRADE / SC-03-50 RETURN GRAPH LOCKED / PROTECTED A5 NEXT`.
