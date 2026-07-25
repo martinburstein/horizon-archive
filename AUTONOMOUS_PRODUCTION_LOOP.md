@@ -88,6 +88,8 @@ At coordinator close, leave exactly one authoritative release-status bullet and 
 
 Replace the preceding coordinator current-control block in place; do not prepend a second coordinator block. When older role-era blocks still use a `Current control` heading, relabel them as dated history during the same bounded coordinator edit so the top authority is structurally unique.
 
+During A1–W4, do not prepend a new named role-result section to every shared control artifact. In the active spines, queues, scoreboard, rail map, and Demo Increment, replace one compact `Active cycle handoff` block with only the current disposition, exact next role/edge, and hard stop. Put detailed role evidence in the canonical role log and, when the profile requires packet-local authority, the active rail packet. The coordinator replaces the shared active-cycle handoff with the final coordinator control. This rule applies to future cycles; Git preserves prior stacked history.
+
 `NEXT_INSTANCE_HANDOFF.md` is a replace-in-place operational state file, not a cycle diary. Keep it concise enough to read in one pass.
 
 ## Work sizing
