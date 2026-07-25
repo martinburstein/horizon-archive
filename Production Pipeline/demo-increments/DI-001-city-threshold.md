@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. The accepted Demo now continues from blank CM-00 through explicit orientation, one CM-10 Scene group, three separate any-order observations with Available/Recorded text, safe replay, and disabled/non-dispatchable all-three Eligible review.
+- **Authoritative exact next edge / stop:** integrate explicit review activation plus the complete existing `CM-20`–`CM-23` Python primary/repair/retrieval/fresh-transfer chain through finalized `PY-010`. Stop before CM-30/AI-901 extraction, save, later RP-003 state, RP-004, RP-013, successor, or any world/access/authority effect.
+
 ## 2026-07-25 canonical cycle reveal — RP-003 blank-margin spatial identity
 
 - **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
@@ -7,7 +12,7 @@
 - **Locked decision:** exactly two exposed process bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole materially sealed boundary and reveals nothing within.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. The pale separator is not a third band, copper is not a correctness/damage cue, and floor seams are not route guidance. No UI, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is authorized.
 
-## Active cycle handoff — W4 Coder / 2026-07-25
+## Dated cycle handoff history — W4 Coder / 2026-07-25
 
 - **Disposition / exact coordinator scope:** `RP003-AESTH-020 RESOLVED — TEXTUAL AVAILABLE/RECORDED PARITY / COORDINATOR NEXT`. Independently validate the accepted blank CM-00 -> fresh orient -> one CM-10 group -> three initial `— Available` controls -> separate matching `— Recorded` states in any order -> replay-safe focus -> disabled/non-dispatchable Eligible review only after all three.
 - **Evidence / hard stop:** candidate `index-BWwt4kKy.js` / `index-JTpP97Cx.css` passes focused `10/10`, related `106/106`, RP-003/RP-002 self-tests, build, served identity, marker/later-state absence, and immutable-world gates. Coordinator owns full suite, all validators, isolated E2E, safe wide/narrow review, cleanup, and synchronization without forcing browser storage/save. Preserve one group, reflow, `>=44px`, forced-color/reduced-motion parity, privacy/Tour, zero evidence, returns, continuation/null delta, and stop before activation, CM-20, learning, save, later rail, or world/access/authority effect.
@@ -119,7 +124,7 @@
 - **Evidence / limitation:** normal App/City Threshold/RP-002-route source and served `index-DCMrW-hp.js` contain zero SC-04, CM-00, adjacent-survey, exposed-channel, or sealed-boundary entry markers. Root and JS are HTTP `200`; JS is `1,082,619` bytes, SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`. Focused normal-route evidence passes `45/45`. Browser storage/save remained untouched, so W1 makes no gated rendered-state claim.
 - **Acceptance / W2 handoff:** repair only one explicit private-free normal entry from exact verified RP-002 at City Threshold to blank Scene-owned CM-00, preserving its existing four zero-effect actions and reversible returns. Invalid/Tour/private/partial/stale/forged/contaminated entry returns exactly to RP-002. Stop before CM-10, learning, save, RP-004, RP-013, successor, or any authority/world effect.
 
-## Coordinator current control — 2026-07-25
+## Dated coordinator history — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. The accepted Demo now continues from exact verified RP-002 through explicit adjacent-survey intent, fail-closed sanitation, replay-free blank `CM-00`, responsive inherited world continuity, and reversible returns.
 - **Authoritative exact next edge / stop:** integrate the existing `CM-00 -> CM-10` orientation and complete three distinct observations in any order as one tranche. All three enable only `REVIEW LOCAL WORK IMAGE`; stop before activating review, Python/AI-901 learning, save, later RP-003 state, RP-004, RP-013, successor, or any world/access/authority effect.

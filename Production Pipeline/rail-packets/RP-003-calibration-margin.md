@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## Coordinator current control — 2026-07-25
+
+- **Working position:** `PASS — IN DEMO PARTIAL / CM-10 SURVEY ACCEPTED`. RP-002 remains complete; Team 2 stays on RP-003 with explicit orientation, all three separately finalized any-order observations, safe replay, textual Available/Recorded states, and disabled/non-dispatchable local-review eligibility accepted.
+- **Exact next tranche:** one fresh explicit `REVIEW LOCAL WORK IMAGE` activation enters only `CM-20 PYTHON PRIMARY`, then the existing strict `8/8` primary or answer-free `CM-21` repair/blank retry, `CM-22` closed-note retrieval, and genuinely blank `CM-23` transfer finalize only `PY-010`. Preserve supplied inputs, sealed-source unavailable state, private/transient clearing, zero cross-credit, deterministic focus/resume, and reversible survey returns.
+- **Hard stop:** finalized `PY-010`. Do not enter CM-30 or expose AI-901 extraction work, save, onward bearing, RP-004, RP-013, successor, reward, access, identity, authority, or any physical city/world response.
+
 ## W4 Coder result — textual CM-10 Available state
 
 - **Mode / disposition:** `aesthetic-polish` / `RP003-AESTH-020 RESOLVED — TEXTUAL AVAILABLE/RECORDED PARITY / COORDINATOR NEXT`. `CalibrationMarginEntry` now renders each observation control's existing model-provided `status`, so every initial A/B/sealed action visibly and accessibly ends in `— Available`, and only its matching finalized action changes to `— Recorded`. Return labels, controller authority, IDs/order, replay/action focus, and disabled/non-dispatchable all-three review eligibility remain unchanged.
@@ -99,7 +105,7 @@
 - **Entry / failure meaning:** valid entry replays no RP-002 event, preserves `continuation`, keeps `cityStateDelta=null`, mounts one Scene-owned active group, and exposes only existing `ORIENT`, `SEALED BOUNDARY`, `RP-002 RETURN`, and `CITY THRESHOLD RETURN` actions. Invalid, Tour-derived, partial, stale, forged, private, or contaminated state clears transients and fails closed to the exact verified RP-002 boundary; it is local expedition sanitation, never a city response, judgment, revocation, or loss of evidence.
 - **Hard stop / A2 handoff:** reuse the registered CM-00 composition only. Add no lore, copy, art, observation, CM-10+, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or city/world change. A2 boards one no-replay arrival/idle presentation with one active group and preserves the existing return meanings.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition / next role:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; `CONVERGE + REUSE`. Team 1 remains complete at `RP-012`; Team 2 remains at accepted normal blank `RP-003`; the ordered lead remains nine packets and protected missing-gate count remains zero.
 - **Exact W1 edge:** start only at accepted normal blank CM-00 without inspecting protected implementation or browser storage/save; report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> separate any-order A/B/sealed Recorded controls -> inactive local-review eligibility.
@@ -107,7 +113,7 @@
 
 ## Packet identity
 
-- Status: `IN DEMO — PARTIAL / BLANK CM-00 ACCEPTED`
+- Status: `IN DEMO — PARTIAL / CM-10 SURVEY ACCEPTED`
 - Target chapter/location: Chapter 2, `Measures of a Life` (working title) / neighboring civic comparison surface inside the City Beneath
 - Target demo horizon: second future slice after the accepted RP-001 boundary; directly after RP-002
 - Route order: 3

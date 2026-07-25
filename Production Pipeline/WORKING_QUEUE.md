@@ -1,6 +1,11 @@
 # Working Queue
 
-## Active cycle handoff — W4 Coder / 2026-07-25
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Team 2 accepts normal explicit orientation, all three separately finalized CM-10 observations in any order, safe replay, textual Available/Recorded states, and disabled/non-dispatchable all-three Eligible review.
+- **Authoritative Working boundary:** after A5, W1 begins at accepted all-three CM-10 completion and reports the earliest normal gap toward explicit review activation plus the complete `CM-20`–`CM-23` Python chain. W2 may integrate only that chain; W3/W4 review it. Stop at finalized `PY-010` before CM-30, AI-901 extraction, save, RP-004, RP-013, successor, or any world/access/authority effect.
+
+## Dated cycle handoff history — W4 Coder / 2026-07-25
 
 - `RP003-AESTH-020 RESOLVED — COORDINATOR NEXT`: each initial CM-10 A/B/sealed control now renders its existing `— Available` status; only its matching finalized state renders `— Recorded`. Replay/action focus, unchanged returns, and disabled/non-dispatchable all-three Eligible review remain exact.
 - Independently release `index-BWwt4kKy.js` / `index-JTpP97Cx.css` after full tests, all validators, build, isolated E2E, safe wide/narrow review, and exact asset/listener/cleanup/synchronization gates. Preserve one group, source-order reflow, `>=44px`, forced-color/reduced-motion parity, immutable world, privacy/Tour/transient zero evidence, continuation/null delta, and every activation/CM-20/learning/save/later-rail/world/access/authority stop; do not inspect or force browser storage/save.
@@ -51,7 +56,7 @@
 - **Incoming protected result:** `REVISE - PROTECTED VERIFIED RESTORE COMPLETE`. The protected controller has exact Tour isolation, sanitation/downgrade, no-replay `SC-03-50` restore, focus/resume, and fresh adapter-free City Threshold return coverage; it has no normal runtime or bundle integration.
 - **Exact W1 task:** inspect only accepted normal live/source-served evidence at quiet `SC-03-40` and report the earliest player-facing absence toward automatic reload sanitation, deterministic downgrade, or verified restore. Do not inspect protected code/tests, force a campaign state, or inspect/mutate browser storage/save. Stop at the first gap; all post-RP-002 and world/access/authority effects remain closed.
 
-## Coordinator current control — 2026-07-25
+## Dated coordinator history — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Team 2 accepts exact predecessor sanitation, explicit adjacent-survey entry, blank `CM-00`, responsive inherited world continuity, and reversible returns.
 - **Authoritative Working boundary:** after A5, W1 begins at accepted blank `CM-00` and reports the earliest normal gap toward explicit orientation plus the complete three-observation `CM-10` loop. W2 may integrate only that loop; W3/W4 review it. Stop with `REVIEW LOCAL WORK IMAGE` enabled but not activated, before learning, save, RP-004, RP-013, successor, or any world/access/authority effect.

@@ -1,5 +1,10 @@
 # Advance Queue
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`; normal CM-10 orientation, three separate observations, safe replay, textual status parity, and inactive review eligibility are accepted.
+- **Authoritative A1 start:** continuity-audit only the existing explicit review -> `CM-20`–`CM-23` Python chain. A2 boards one compact work-image/primary/repair/retrieval/transfer sequence; A3 preserves strict `PY-010` `8/8` and fresh-evidence separation; A4 locks failure/retry/focus/resume; A5 composes one pure protected chain. Add no new lore/copy/art/case/answer/score and stop at finalized `PY-010` before CM-30.
+
 ## A5 result — 2026-07-25
 
 - `RP-003 REVISE — PROTECTED BLANK CM-00 ENTRY COMPLETE / W1 NEXT`. The protected non-routable controller now proves exact accepted City Threshold plus verified RP-002 plus fresh private-free adjacent-survey intent -> one blank Scene-owned SC-04/CM-00 group, or complete Tour/private/stale/partial/forged/contaminated sanitation -> exact RP-002 recovery. All seven modalities are one-hit; invalid input spends no valid token; heading-first resume, one active group, the four existing actions, reversible returns, privacy, unchanged continuation/null city delta, invariant world, and zero evidence/authority remain exact.
@@ -58,7 +63,7 @@
 - **Exact A2 start:** from accepted quiet System `SC-03-40`, board reload/re-entry as local System sanitation without replay. Exact triplet plus every unchanged finalized dependency yields only System `verified_restore / SC-03-50`, cleared work, and heading then saved-controls focus; any extra, partial, stale, forged, private, or `review_required` state clears all three plus private/transient work and targets the deterministic first-incomplete protected heading/control. From exact `SC-03-50` only, show the existing reversible return to accepted City Threshold as navigation only.
 - **Stop:** add no new copy, additional visual state, micro-state, art, evidence, credit, save meaning, route reward, world response, normal `RP-003`, later departure, credits, RP-013, successor, access, identity, authority, or external effect. Preserve privacy, Tour isolation, responsive/accessibility parity, unchanged continuation/null city delta, and hand A3 the unchanged `SOLIDIFIED` conjunction.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; exact sanitation, normal blank adjacent entry, responsive invariant-world continuity, and reversible returns remain accepted.
 - **Exact W1 edge:** begin only at accepted normal blank CM-00 and, without protected-code or browser-state inspection, report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> any-order A/B/sealed Recorded controls -> inactive local-review eligibility.

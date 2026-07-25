@@ -1,6 +1,11 @@
 # Horizon Archive Story Rail Map
 
-## Active cycle handoff — W4 Coder / 2026-07-25
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Team 1 remains complete at RP-012; Team 2 remains on RP-003, accepted through all three CM-10 observations and inactive local-review eligibility; the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Authoritative exact next edge / rail stop:** integrate only explicit review activation and the complete existing `CM-20`–`CM-23` Python primary/repair/retrieval/fresh-transfer chain through finalized `PY-010`. Stop before CM-30, AI-901 extraction, save, later packet integration, RP-013, successor, or any world/access/authority effect. The rail does not extend.
+
+## Dated cycle handoff history — W4 Coder / 2026-07-25
 
 - `RP003-AESTH-020 RESOLVED — COORDINATOR NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at adjacent `RP-003`; ordered lead remains nine packets (`RP-004` through `RP-012`).
 - Final candidate now makes the existing CM-10 status explicit: three initial `— Available` controls, separate matching `— Recorded` controls in any order, replay-safe focus, and disabled/non-dispatchable all-three Eligible review. Coordinator independently releases only this exact rail through full validation; preserve sanitation/returns, responsive-accessibility, invariant world, zero evidence, continuation/null delta, and the stop before activation, CM-20, learning, save, RP-004, RP-013, successor, or world/access/authority effects.
@@ -92,7 +97,7 @@
 - **Nearest rail edge:** System-only reload/re-entry sanitation may produce only exact `verified_restore / SC-03-50` with cleared work and no replay, or all-three fail-closed downgrade to the deterministic first incomplete protected boundary. Only exact `SC-03-50` reaches the existing reversible accepted City Threshold return, as navigation without evidence, reward, route unlock, city/world acknowledgement, access, authority, identity, or external effect.
 - **Rail stop:** accepted City Threshold return. No normal `RP-003`, later departure, credits, RP-013, successor, post-ending content, or world/access/authority effect exists beyond this bounded A2 handoff.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition / positions:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted normal blank `RP-003`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
 - **Exact W1 edge / rail stop:** start only at accepted normal blank CM-00 without inspecting protected implementation or browser state and report the earliest missing normal step toward fresh orient -> one Scene CM-10 group -> any-order matching A/B/sealed Recorded controls -> inactive local-review eligibility. The protected rail reaches that stop; the normal rail does not yet.

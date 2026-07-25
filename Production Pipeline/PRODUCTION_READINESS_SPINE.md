@@ -1,6 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
-## Active cycle handoff — W4 Coder / 2026-07-25
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Independent full `714/714`, all `15/15` readiness validators, production build (`170` modules), isolated first-launch `114s` E2E after port-5174 HTTP `200`, desktop/narrow title-shell review, exact served hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable inherited-art identity, and synchronization gates pass.
+- **Authoritative exact next edge:** protect and integrate only explicit local-work review plus the complete existing `CM-20`–`CM-23` strict Python primary/answer-free repair/blank retry/closed-note retrieval/genuinely blank transfer chain through finalized `PY-010`. Stop before CM-30, AI-901 extraction, save, later packets, RP-013, successor, or any reward/world/access/authority/external effect.
+
+## Dated cycle handoff history — W4 Coder / 2026-07-25
 
 - `RP003-AESTH-020 RESOLVED — FINAL CANDIDATE / COORDINATOR NEXT`: CM-10 now renders each existing model status, giving three initial `— Available` controls and only matching `— Recorded` replacements while replay/focus and disabled/non-dispatchable all-three Eligible review remain exact.
 - Candidate `index-BWwt4kKy.js` (`293796EB...99A6`) / `index-JTpP97Cx.css` (`3D5B4E6F...9BD`) passes focused `10/10`, related `106/106`, RP-003/RP-002 self-tests, build, HTTP/served identity, hard-stop markers, immutable world, and patch gates. Coordinator independently runs full release validation through safe wide/narrow review and isolated E2E without forcing browser storage/save; stop before activation, CM-20, learning, save, later rail, or world/access/authority effect.
@@ -47,7 +52,7 @@
 - `REVISE - PROTECTED VERIFIED RESTORE COMPLETE / W1 NEXT`. An unimported pure controller and focused coverage establish recovery semantics without changing the accepted production bundle or normal route: Tour-before-adapter, dependency-before-record sanitation, complete fail-closed clearing, exact no-replay restore, and one fresh exact-restore-only adapter-free return.
 - Gate evidence: focused `22/22`; related `99/99`; RP-002 and L-02-02 self-tests; production build; purity/normal-non-integration and patch checks pass. W1 must use normal evidence only and report its first player-facing gap; it may not force or inspect browser storage/save.
 
-## Coordinator current control — 2026-07-25
+## Dated coordinator history — 2026-07-25
 
 - **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-001 + RP003-AESTH-019`. Independent full `699/699`, all `15/15` readiness validators, production build, isolated `114.5s` E2E after port-`5174` HTTP `200`, desktop/narrow title-shell review, exact served hashes, clean logs/overflow, QA restoration, coordinator-preview shutdown, immutable inherited-art identity, and synchronization gates pass.
 - **Authoritative exact next edge:** protect and integrate only blank `CM-00` -> explicit orientation -> one `CM-10` group with three separately finalized observations in any order, safely replayable and zero cross-credit, enabling only `REVIEW LOCAL WORK IMAGE`. Stop before review activation, Python/AI-901 learning, save, later packets, RP-013, successor, or any reward/world/access/authority/external effect.

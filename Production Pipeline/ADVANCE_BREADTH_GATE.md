@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / mode:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`; CM-10 observation convergence is closed and protected missing-gate count remains zero.
+- **Authoritative exact next edge / stop:** `CONVERGE + MERGE + TRIM` the existing local-work review activation, strict Python primary, answer-free repair/blank retry, closed-note retrieval, and genuinely blank transfer into one `CM-20`–`CM-23` tranche ending only at finalized `PY-010`. Add no new case, prompt, answer, score, hint branch, art integration, AI-901 extraction work, save, RP-004, RP-013, successor, reward, access, authority, or world response.
+
 ## A5 result — 2026-07-25
 
 - `RP-003 REVISE — PROTECTED BLANK ENTRY COMPLETE / W1 NEXT`; `CONVERGE + REUSE` succeeded and protected missing-gate count remains zero. The complete entry/recovery loop is now implemented once without a transition module per micro-seam; normal integration remains Working-owned. No CM-10, prompt, answer, score, observation, copy, art, save, RP-004, RP-013, successor, reward, access, authority, or world effect was added.
@@ -33,7 +38,7 @@
 - **Gate:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action is `CONVERGE + MERGE + TRIM`.
 - **Bounded tranche:** merge only the existing System-owned reload sanitation, exact `SC-03-50` verified restore with cleared work/no replay, all-three fail-closed downgrade to deterministic first-incomplete focus, and exact-`SC-03-50`-only reversible City Threshold navigation. No prompt, answer, score, new copy, additional visual state, micro-state, art, evidence, credit, route reward, world response, authority, normal `RP-003`, RP-013, or successor is authorized.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition / mode:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
 - **Exact W1 edge:** start only at accepted normal blank CM-00, inspect no protected implementation or browser state, and report the earliest normal absence toward the complete orient / one-group / any-order Recorded / inactive-review loop.

@@ -1,5 +1,10 @@
 # Horizon Archive Expedition Spine
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release / positions:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-003`, now accepted normally through explicit orientation, all three any-order `CM-10` observations, replay-safe textual Available/Recorded states, and inactive all-three local-review eligibility. The ordered lead remains nine packets (`RP-004` through `RP-012`); no RP-013 or successor exists.
+- **Authoritative exact next edge / stop:** converge one complete existing-authority Python tranche: exact all-three CM-10 observations -> explicit `REVIEW LOCAL WORK IMAGE` -> `CM-20` blank primary -> strict `8/8` or answer-free `CM-21` repair/blank retry -> `CM-22` closed-note retrieval -> genuinely blank `CM-23` transfer -> finalized `PY-010`. Stop before `CM-30`, AI-901 extraction work, save, RP-004, RP-013, successor, or any reward/world/access/authority effect.
+
 ## A5 result — 2026-07-25
 
 - `RP-003 REVISE — PROTECTED BLANK ENTRY COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets. One pure controller now proves only exact verified RP-002 at accepted City Threshold -> sanitized blank SC-04/CM-00, or fail-closed exact-RP-002 recovery. No CM-10 or later breadth is opened.
@@ -35,7 +40,7 @@
 - **Locked edge:** the expedition System alone sanitizes reload/re-entry. Exact triplet plus every unchanged finalized dependency reconstructs only `SC-03-50`, clears work, and replays nothing; every invalid class clears the whole triplet plus private/transient work and targets the deterministic first incomplete protected boundary. From exact `SC-03-50` only, the existing reversible City Threshold return is navigation without evidence, reward, route, world, access, identity, authority, or external effect.
 - **Hard stop:** A2 boards this one existing-authority recovery sequence without new copy, additional visual state, micro-state, art, or story content and stops after accepted City Threshold return, before normal `RP-003`, later departure, credits, RP-013, successor, or post-ending content.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition / positions:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted normal blank `RP-003`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
 - **Exact W1 edge:** begin only at accepted normal blank CM-00 without protected-code or browser-state inspection and report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> any-order matching A/B/sealed Recorded controls -> inactive local-review eligibility.

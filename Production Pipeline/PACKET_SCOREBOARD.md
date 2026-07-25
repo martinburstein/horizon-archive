@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## Coordinator current control — 2026-07-25
+
+- **Authoritative release:** `RP-003 PASS — IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Normal play now includes blank CM-00, explicit orientation, one CM-10 Scene group, separate any-order A/B/sealed observations, textual Available/Recorded states, safe replay, and inactive all-three review eligibility. Team 1 remains complete at RP-012; Team 2 remains at RP-003; the ordered lead is nine packets.
+- **Authoritative exact next edge:** protect and integrate one complete `CM-20`–`CM-23` Python chain from explicit local-work review through strict primary, answer-free repair/blank retry, closed-note retrieval, and genuinely blank transfer to finalized `PY-010`. Stop before CM-30/AI-901 extraction, save, later packets, RP-013, successor, or any reward/world/access/authority effect. Protected missing-gate count remains zero.
+
 ## A5 result — 2026-07-25
 
 - `RP-003 protected blank-entry code gate: PASS / REVISE TO WORKING`. Missing-gate count remains zero. Focused `7/7`, related `85/85`, RP-003 self-test, unchanged build, purity/non-integration, and CM-10 hard-stop checks pass. Team 1 remains complete at `RP-012`; Team 2 remains active at `RP-003`; W1 begins at accepted City Threshold.
@@ -47,7 +52,7 @@
 - `RP-002 PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.
 - A2 may board only one existing-authority recovery sequence: System reload sanitation -> exact `SC-03-50` restore without replay or all-three downgrade to deterministic first-incomplete focus -> from exact `SC-03-50` only, reversible accepted City Threshold navigation. Stop before normal `RP-003`, later departure, credits, RP-013, successor, route reward, or any world/access/authority effect.
 
-## Active cycle handoff — 2026-07-25
+## Dated cycle handoff history — 2026-07-25
 
 - **Disposition / positions:** `RP-003 protected CM-10 controller PASS / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted normal blank `RP-003`, the lead remains nine packets, and protected missing-gate count remains zero.
 - **Exact W1 edge:** from accepted normal blank CM-00 only, report the earliest player-facing absence toward fresh orient, one Scene group, six-order-safe matching A/B/sealed Recorded controls, and inactive review eligibility; inspect no protected implementation or browser storage/save.
