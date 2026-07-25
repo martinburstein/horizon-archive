@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## A5 Coder result — protected CM-10 contained survey
+
+- **Mode / disposition:** `advance` / `REVISE — PROTECTED CM-10 SURVEY COMPLETE / W1 NEXT`. One pure, unimported, storage-free controller now composes the accepted protected blank CM-00 into exactly one Scene-owned CM-10 group after one fresh validated orient. Normal App/main/route/UI, storage/persistence, copy/CSS/art, curriculum, and world state remain untouched.
+- **Bounded behavior:** coequal `INSPECT EXPOSED SEQUENCE A`, `INSPECT EXPOSED SEQUENCE B`, and `INSPECT SEALED BOUNDARY` map only to `correspondence`, `bounded_difference`, and `sealed_unavailable`. All six orders converge on exactly three textual/non-color Recorded controls; matching replay is idempotent. Only the complete set makes `REVIEW LOCAL WORK IMAGE` visibly Eligible, while it remains absent from dispatchable actions, inactive, and rejected on attempted activation.
+- **Recovery / hard stop:** exact resume reconstructs only a valid Recorded subset and heading-first focus; malformed/private/forged/later-state resume clears to safe blank CM-00. Invalid, duplicate-token, combined, passive, stale, wrong-owner, mismatched-ID, private, and Tour input rejects before token use. Recorded/replay/order/focus/resume/eligibility create zero observation/Python/AI-901/mastery/save/authority/world evidence or cross-credit. Both returns remain write-free; `continuation`, `cityStateDelta=null`, invariant first-person SC-04, and no-credit Tour remain exact. Stop before review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
+- **Evidence / W1 handoff:** focused `10/10`; directly related `33/33`; RP-003 validator self-test; unchanged production build `index-BqxRwsLa.js` / `index-JTpP97Cx.css`; purity, App/main non-integration, later-state absence, leakage, intended-file, and patch checks pass. W1 starts only at the accepted normal blank CM-00 without inspecting protected implementation or browser storage/save and reports the earliest missing normal step toward the complete contained observation loop.
+
 ## 2026-07-25 canonical cycle reveal — blank-margin spatial identity
 
 - **Closed checklist item:** `[x] SC-04 / blank CM-00 — paired exposed-band and sealed-boundary spatial identity`.
@@ -70,9 +77,9 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / next role:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; `CONVERGE + REUSE`. Team 1 remains complete at `RP-012`; Team 2 remains at accepted `RP-003`; the ordered lead remains nine packets.
-- **Exact A5 edge:** compose one pure controller for accepted blank CM-00 -> fresh orient -> one Scene CM-10 group -> any-order A/B/sealed matching finalization -> replay-safe Recorded -> inactive `REVIEW LOCAL WORK IMAGE` eligibility. Preserve deterministic focus/resume/recovery, invalid/Tour/private rejection, frozen chains/no cross-credit, accessibility, invariant continuity, and reversible returns.
-- **Hard stop:** no review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
+- **Disposition / next role:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; `CONVERGE + REUSE`. Team 1 remains complete at `RP-012`; Team 2 remains at accepted normal blank `RP-003`; the ordered lead remains nine packets and protected missing-gate count remains zero.
+- **Exact W1 edge:** start only at accepted normal blank CM-00 without inspecting protected implementation or browser storage/save; report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> separate any-order A/B/sealed Recorded controls -> inactive local-review eligibility.
+- **Hard stop:** no review activation, CM-20, learning/evaluation/remediation, save, copy/art expansion, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## Packet identity
 

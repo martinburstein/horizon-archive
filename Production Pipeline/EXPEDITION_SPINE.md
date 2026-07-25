@@ -37,9 +37,9 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
-- **Exact A5 edge:** compose fresh CM-00 orient -> one Scene CM-10 group -> any-order matching A/B/sealed finalization -> Recorded replay -> inactive `REVIEW LOCAL WORK IMAGE` eligibility, with deterministic focus/resume and fail-closed invalid/Tour/private recovery. Preserve frozen `PY-010`/`RP003-IE-01`, no cross-credit, private/transient clearing, and invariant continuity.
-- **Hard stop:** no review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
+- **Disposition / positions:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted normal blank `RP-003`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
+- **Exact W1 edge:** begin only at accepted normal blank CM-00 without protected-code or browser-state inspection and report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> any-order matching A/B/sealed Recorded controls -> inactive local-review eligibility.
+- **Hard stop:** no review activation, CM-20, learning/evaluation/remediation, save, copy/art expansion, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## Current control — 2026-07-25
 

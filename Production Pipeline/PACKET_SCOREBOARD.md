@@ -49,8 +49,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `RP-003 gameplay gate PASS / CM-10 survey-recovery graph locked / A5 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted `RP-003`, the lead remains nine packets, and protected missing-gate count remains zero.
-- **Exact A5 edge:** prove the pure controller’s six A/B/sealed orders, fresh-action-only matching IDs, Recorded idempotence, inactive local-review eligibility, focus/resume/recovery, and invalid/Tour/private rejection, without cross-credit or effect.
+- **Disposition / positions:** `RP-003 protected CM-10 controller PASS / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted normal blank `RP-003`, the lead remains nine packets, and protected missing-gate count remains zero.
+- **Exact W1 edge:** from accepted normal blank CM-00 only, report the earliest player-facing absence toward fresh orient, one Scene group, six-order-safe matching A/B/sealed Recorded controls, and inactive review eligibility; inspect no protected implementation or browser storage/save.
 - **Hard stop:** no lore/copy/art, review activation, CM-20, learning/evaluation/remediation, save, later packet, RP-013, successor, reward, world/access/authority effect.
 
 ## A5 result — 2026-07-25

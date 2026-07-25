@@ -94,9 +94,9 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
-- **Exact A5 edge / rail stop:** the protected rail extends only blank CM-00 -> fresh orient -> one Scene CM-10 group -> any-order matching A/B/sealed observations -> Recorded replay -> inactive local-review eligibility. Invalid/Tour/private input fails closed or preserves the revalidated safe group; frozen learning chains, returns, focus, and invariant continuity remain separate.
-- **Hard stop:** do not activate review or reach CM-20, Python/AI-901 learning/evaluation/remediation, save, later RP-003, RP-004, RP-013, successor, or any reward/world/access/authority/external effect. The rail does not extend.
+- **Disposition / positions:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted normal blank `RP-003`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Exact W1 edge / rail stop:** start only at accepted normal blank CM-00 without inspecting protected implementation or browser state and report the earliest missing normal step toward fresh orient -> one Scene CM-10 group -> any-order matching A/B/sealed Recorded controls -> inactive local-review eligibility. The protected rail reaches that stop; the normal rail does not yet.
+- **Hard stop:** do not activate review or reach CM-20, Python/AI-901 learning/evaluation/remediation, save, later RP-003, RP-004, RP-013, successor, or any reward/world/access/authority/external effect.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017
 

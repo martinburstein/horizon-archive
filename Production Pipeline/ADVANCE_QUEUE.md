@@ -60,8 +60,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition:** `PASS — RP-003 CM-10 SURVEY / REPLAY / RECOVERY GRAPH LOCKED / A5 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
-- **Exact A5 edge:** implement one pure protected CM-10 controller: fresh orient -> one Scene group -> any-order A/B/sealed one-ID observations -> replay-safe Recorded -> inactive local-review eligibility. Preserve focus/resume/recovery, invalid/Tour/private rejection, strict frozen chains/no cross-credit, and zero evidence/authority/world effect.
+- **Disposition:** `REVISE — PROTECTED RP-003 CM-10 SURVEY COMPLETE / W1 NEXT`; exact sanitation, normal blank adjacent entry, responsive invariant-world continuity, and reversible returns remain accepted.
+- **Exact W1 edge:** begin only at accepted normal blank CM-00 and, without protected-code or browser-state inspection, report the earliest normal absence toward fresh orient -> one CM-10 Scene group -> any-order A/B/sealed Recorded controls -> inactive local-review eligibility.
 - **Hard stop:** add no lore/copy/art, review activation, CM-20, learning/evaluation/remediation, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## A5 result — 2026-07-25
