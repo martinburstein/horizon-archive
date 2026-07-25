@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## A2 result — 2026-07-25
+
+- **Gate / mode:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero.
+- **Bounded tranche:** existing SC-04 master composition, sanitation/fail-closed authority, blank CM-00 group, one-group focus, responsive/accessibility contract, and existing reversible actions form the complete presentation path. No copy, art, observation, CM-10+, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or world effect was added.
+
 ## A1 result — 2026-07-25
 
 - **Gate / mode:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + REUSE` remains the selected action and protected missing-gate count remains zero.

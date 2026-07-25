@@ -10,6 +10,10 @@
 - **Image:** No image selected or generated. `Concept Art/Underground City.png` may inform only subsurface scale and warm/cool depth; its human architecture, people, platforms, composition, and props are excluded.
 - **Purpose:** Make two exposed corresponding physical sequences, one bounded difference, and one materially sealed source legible while the city remains physically indifferent to inspection, Python execution, save, and return.
 
+## Current blank-entry presentation lock — 2026-07-25
+
+For the active Team 2 edge, reuse only the registered `SC-04-00 / CM-00 ARRIVE + IDLE` overview and the existing `ORIENT`, `SEALED BOUNDARY`, `RP-002 RETURN`, and `CITY THRESHOLD RETURN` actions. Exact verified RP-002 completion at accepted City Threshold reaches one Scene-owned no-replay group after sanitation; invalid, Tour-derived, private, partial, stale, forged, or contaminated state returns fail-closed to RP-002. The broad canonical sequence below remains the approved future packet brief, not entry exposure: do not surface `SC-04-10+`, a coupling/work-image action, learning, save, onward bearing, new copy, board, crop, plate, raster, or world response. Preserve `continuation`, `cityStateDelta=null`, one active group, first-person invariant world, deterministic heading/action focus, reversible returns, wide/narrow/`200%` reflow, and closed-reference isolation.
+
 ## Functional identity
 
 The margin is a civilization-scale working cross-section, not a room, corridor, console bay, archive aisle, or shrine. Two exposed process bands run from a deep geothermal intake field through repeating interval chambers and onward into distribution continuities beyond the frame. Their broad sequence corresponds, but one bounded chamber appears in only one band. A third route is present only as a sealed structural boundary: its service continuities enter and leave the fused surface, proving that a boundary exists without exposing what lies behind it.

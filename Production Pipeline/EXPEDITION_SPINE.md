@@ -1,5 +1,10 @@
 # Horizon Archive Expedition Spine
 
+## A2 result — 2026-07-25
+
+- **Advance disposition / positions:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Locked edge / stop:** exact verified RP-002 completion at accepted City Threshold -> System sanitation -> one existing first-person Scene-owned blank `SC-04 / CM-00 ARRIVE + IDLE` group. Existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions, focus/reflow/accessibility, no replay, unchanged `continuation`, and `cityStateDelta=null` remain exact; invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to RP-002. No `CM-10`, work image, learning, save, reward, access, authority, world change, RP-004, RP-013, or successor is authorized.
+
 ## A1 result — 2026-07-25
 
 - **Advance disposition / positions:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at the active `RP-003` Working edge; the ordered lead remains nine packets (`RP-004` through `RP-012`).

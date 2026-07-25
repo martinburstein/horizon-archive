@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A2 result — 2026-07-25
+
+- `RP-003 PASS — BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.
+- Existing SC-04 composition now presents only one sanitized Scene-owned no-replay CM-00 group and existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Responsive/accessibility, first-person invariance, reversible returns, `continuation`, `cityStateDelta=null`, and fail-closed invalid/Tour/private/partial/stale/forged/contaminated entry remain exact and zero evidence. CM-10, copy/art additions, learning, save, RP-004, RP-013, successor, reward, world/access/authority effects remain closed.
+
 ## A1 result — 2026-07-25
 
 - `RP-003 PASS — BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at the active `RP-003` Working edge; the ordered lead remains nine packets.

@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A2 result — 2026-07-25
+
+- **Advance handoff:** `PASS — RP-003 BLANK CM-00 PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; the ordered lead remains nine packets.
+- **Exact A3 scope / stop:** existing first-person SC-04 composition presents only sanitized, no-replay blank Scene-owned CM-00 with one group and existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Preserve `continuation`, `cityStateDelta=null`, reversible returns, wide/narrow/`200%`, focus, `>=44px`, and closed-reference isolation; invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to exact RP-002. Presentation is zero evidence. Add no CM-10, copy, art, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## A1 result — 2026-07-25
 
 - **Advance handoff:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains at active `RP-003`; lead remains nine packets.

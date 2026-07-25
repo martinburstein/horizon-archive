@@ -1,5 +1,11 @@
 # Horizon Archive Location Visual Spine
 
+## A2 blank-entry presentation lock — 2026-07-25
+
+- `PASS — RP-003 / SC-04 CM-00 BOARDED / A3 NEXT`. Reuse the existing registered first-person Calibration Margin overview only: the composition's paired exposed bands, bounded difference, sealed boundary, flush coupling, and far-left reversible continuity remain visually legible but inert; no new crop, plate, board, raster, copy, or world cue is introduced.
+- Exact verified RP-002 completion at accepted City Threshold sanitizes into one Scene-owned blank `CM-00 ARRIVE + IDLE` group with the existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Wide preserves world dominance; narrow and `200%` reflow one source-ordered group with heading/action focus, `>=44px`, seven-modalities/non-color/forced-color/reduced-motion parity, and no horizontal escape. Invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to RP-002; valid entry has no replay, evidence, reward, authority, or physical response and preserves `continuation` / `cityStateDelta=null`.
+- SC-03 references remain closed non-runtime evidence. Stop before `CM-10`, work-image exposure, learning, save, onward bearing, RP-004, RP-013, successor, or world/access/authority effect; A3 treats all presentation as zero credit.
+
 ## 2026-07-25 verified-return canonical cycle-reveal lock
 
 - `Visual Direction/Production Masters/2026-07-25-rp002-verified-return-sightline-reveal/rp002-verified-return-sightline-v1.png` closes `SC-03 / verified restore — inert return sightline and no-replay separation`.

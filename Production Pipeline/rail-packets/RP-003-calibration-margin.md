@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## A2 result — 2026-07-25
+
+- **Disposition / presentation lock:** `PASS — RP-003 BLANK CM-00 ENTRY BOARDED / A3 NEXT`. The existing first-person `SC-04` registered overview is the sole presentation: exact verified RP-002 completion at accepted City Threshold sanitizes to one blank, Scene-owned `CM-00 ARRIVE + IDLE` group without replay. The two exposed bands, bounded difference, sealed boundary, flush coupling, far-left return continuity, material/light causes, and environmental clock remain inert registered composition evidence; no new plate, crop, board, art, raster, copy, or microstate is introduced.
+- **Responsive / interaction boundary:** wide retains world dominance and one complete group; narrow and `200%` text-zoom reflow that same group in source order without horizontal escape. Heading-first deterministic focus, visible focus, seven modalities/one semantic hit, non-color/forced-color/reduced-motion parity, and `>=44px` existing actions are retained. Only `ORIENT`, `SEALED BOUNDARY`, `RP-002 RETURN`, and `CITY THRESHOLD RETURN` are exposed; returns remain reversible and zero-effect.
+- **Closed canon / hard stop / A3 handoff:** all SC-03 references remain closed, non-runtime evidence and do not define SC-04 entry. Invalid, Tour-derived, private, partial, stale, forged, or contaminated state clears transients and fails closed to exact RP-002; valid entry preserves `continuation` and `cityStateDelta=null`. Curriculum Checker must preserve the SOLIDIFIED chains and treat this entire presentation, sanitation, focus, reflow, and returns as zero evidence; stop with blank CM-00 before `CM-10`, learning, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, or world response.
+
 ## A1 result — 2026-07-25
 
 - **Disposition / ownership lock:** `PASS — RP-003 BLANK ENTRY OWNERSHIP LOCKED / A2 NEXT`. Exact verified RP-002 completion at the accepted City Threshold is the sole valid predecessor for this tranche. `SYSTEM` sanitizes predecessor, Tour, privacy, and transient state; `SCENE` owns only the already-registered blank `SC-04 / CM-00 ARRIVE + IDLE` group and its invariant setting; `PILOT` gains no new inference, intent, reward, access, identity, authority, or world effect.
