@@ -1,5 +1,13 @@
 # Build Status
 
+## 2026-07-24 RP-002 conclusion-dismissal-to-bounded-review preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: exact `RAIEC-20C` conclusion -> one private-free zero-effect dismissal -> System eligibility -> bounded review preserves frozen `PY-009`, frozen `RP002-RAI-01`, and all five independent observation conjuncts.
+- [x] Dismissal, eligibility, review, sanitation, focus, return, reflow, modality, and Tour are zero evidence; presentation cannot prefill, satisfy, compensate for, or cross-credit the finalized Python, RAI, or observation chains.
+- [x] Missing, forged, stale, partial, or `review_required` state clears private work and fails closed to the deterministic first incomplete protected boundary; it cannot grant eligibility or review.
+- [x] No objective, source, case, answer, dimension, evaluator, threshold, remediation, evidence, privacy allowlist, or runtime authority changed. Existing RP-002 canonical forms/self-test and focused evidence-firewall coverage remain applicable.
+- [ ] Gameplay Master confirms only the protected conclusion -> sanitation/eligibility -> bounded-review-or-first-incomplete graph, stopping before `PREPARE SAVE`, persistence, completion, or later states.
+
 ## 2026-07-18 RP-002 Responsible-AI explanation submission/recovery preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: accepted blank three-boundary explanation, private transient all-three responses, explicit Pilot submit, simultaneous uncompensated strict current-attempt `3/3`, first-failed-only answer-free feedback, complete clearing, wholly blank unlimited retry, and exact zero-credit Pilot conclusion preserve the frozen mapping.
