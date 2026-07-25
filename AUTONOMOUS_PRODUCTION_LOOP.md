@@ -56,6 +56,8 @@ Read in full:
 - the latest entry in the selected role's work log;
 - the exact sections directly named by the handoff or profile.
 
+Give the role an explicit terminal condition in its assignment: once the named evidence ladder is sufficient, immediately write only the bounded current-control/log handoff, run diff checks, create the dedicated local commit, and stop. Do not continue historical reading or exploratory validation after the disposition is already decidable.
+
 Do not reread thousands of lines of append-only history by default. Read older packet, increment, queue, rail-map, or log history only when:
 
 - a current control block cites it;
@@ -81,6 +83,8 @@ The top of each active packet, Demo Increment, queue, rail map, scoreboard, and 
 Update the current-control block in place. Preserve useful history in Git and specialist logs instead of endlessly expanding the active handoff.
 
 At coordinator close, leave exactly one authoritative release-status bullet and one authoritative exact-next-edge bullet in each top current-control block. Move superseded peer bullets into dated history or delete them when Git already preserves the evidence; do not accumulate “authoritative” disclaimers above stale current peers.
+
+Replace the preceding coordinator current-control block in place; do not prepend a second coordinator block. When older role-era blocks still use a `Current control` heading, relabel them as dated history during the same bounded coordinator edit so the top authority is structurally unique.
 
 `NEXT_INSTANCE_HANDOFF.md` is a replace-in-place operational state file, not a cycle diary. Keep it concise enough to read in one pass.
 
