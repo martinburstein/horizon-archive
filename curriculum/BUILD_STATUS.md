@@ -1,5 +1,13 @@
 # Build Status
 
+## 2026-07-25 RP-002 atomic comparison commit preservation
+
+- [x] `NO REOPEN — SOLIDIFIED`: no official-objective change, validator/playtest mismatch, bypass, or changed learning goal reopens `PY-009` or `RP002-RAI-01`.
+- [x] Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole eligibility conjunction. Confirmation, explicit commit, failure, retry, safe return, saved acknowledgement, focus, reflow, modality, Tour, and world presentation cannot prefill, satisfy, compensate for, or cross-credit any conjunct.
+- [x] The atomic allowlist remains exactly `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` together or none. It contains no private result, learning response, score, feedback, token, focus history, credential, endpoint, payload, identity, or authority material.
+- [x] Failure retains no triplet and exposes only fresh retry or write-free safe return; `SC-03-40` is a zero-evidence expedition acknowledgement. RP-002 self-test, canonical Python `6/6 + 6/6`, Responsible-AI `9/9 + 9/9`, L-02-02 self-test, focused firewall `8/8`, all `291` curriculum JSON parses, and exact allowlist/copy/status structural checks pass.
+- [ ] Gameplay Master confirms only the protected confirmation -> explicit commit -> complete failure/recovery or `SC-03-40` acknowledgement graph and stops before verified restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority effect.
+
 ## 2026-07-25 RP-002 bounded-review-to-local-confirmation preservation
 
 - [x] `NO REOPEN — SOLIDIFIED`: no official-objective change, validator/playtest mismatch, or changed learning goal reopens `PY-009` or `RP002-RAI-01`.

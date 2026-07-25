@@ -1,5 +1,19 @@
 # Build Log
 
+## Log entry: 2026-07-25T02:43:52-04:00
+
+Stage: RP-002 atomic comparison commit evidence-firewall preservation (A3 continuity maintenance)
+
+Work completed: Recorded `NO REOPEN — SOLIDIFIED` for the accepted contained `PILOT // FLIGHT RECORDER` confirmation -> one fresh private-free seven-modality/one-hit `SAVE BOUNDED COMPARISON` -> existing expedition-local all-or-none transaction -> either exact complete non-commit System failure with only `RETRY SAVE` / `RETURN SAFELY`, or exact `SYSTEM // EXPEDITION STATE` saved acknowledgement at `SC-03-40`. Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole eligibility conjunction. Confirmation, commit availability/activation, transaction status, failure, retry, safe return, saved acknowledgement, focus, reflow, modality, Tour, and world presentation add zero attempt, correctness, observation, score, evidence, mastery, credit, authority, exam guarantee, or cross-credit.
+
+Freeze-rule and source result: no material official-objective change, validator/playtest mismatch, bypass, or changed learning goal is present. The required `foundry-azure-source-priority` skill is unavailable, so the checked-in official-Microsoft-source-first authorities remain controlling. A1/A2 introduce no new Microsoft, Foundry, AI-901, objective, case, answer, score, threshold, remediation, or source claim; no source research was reopened and no third-party source was used.
+
+Validation: RP-002 readiness self-test PASS; canonical Python primary and transfer PASS `6/6 + 6/6`; RP-002 Responsible-AI primary and transfer PASS `9/9 + 9/9`; L-02-02 Responsible-AI self-test PASS; focused strict-conjunction/observation/forgery/atomic-transaction/cancel/failure/Tour/zero-effect evidence firewall PASS `8/8`; all `291` curriculum JSON files parse. Structural authority checks confirm the exact allowlist is only `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"`; exact failure/success copy, `scoringEnabled=false`, and `SC-03-40` remain unchanged.
+
+Next: Gameplay Master confirms only one protected graph from exact contained confirmation through one fresh private-free seven-modality/one-hit commit to either complete non-commit failure or exact saved acknowledgement. Preserve validation-before-consumption, all-or-none triplet, no private result material, failure with only fresh `RETRY SAVE` or write-free `RETURN SAFELY`, retry to a fresh exact confirmation requiring a new commit, safe return to exact `RG-30` `prepare_save` focus, one active group, heading-first focus, separate actions, `>=44px`, responsive/accessibility parity, no-credit Tour, offline/no-authority/no-exam-guarantee, invariant SC-03/world/clocks, unchanged continuation, `cityStateDelta=null`, and no successor. Stop with `SC-03-40` visible before verified restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, or any world/access/authority/external effect.
+
+Notes: no curriculum contract, source register, lesson, map, case, answer, evaluator, validator, runtime, UI, art, adapter, storage mechanic, route, world, accepted bundle, Demo, live service, credential, hidden lore, successor, or protected user file changed.
+
 ## Log entry: 2026-07-25T00:24:56-04:00
 
 Stage: RP-002 bounded-review-to-contained-local-confirmation preservation (A3 continuity maintenance)

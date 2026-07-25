@@ -1,5 +1,12 @@
 # Exercise Agent Work Log
 
+## 2026-07-25 — RP-002 atomic comparison commit curriculum preservation
+
+- **Outcome:** `NO REOPEN — SOLIDIFIED`. The contained Pilot confirmation, one explicit private-free `SAVE BOUNDED COMPARISON`, complete local failure/retry/safe return, and exact `SC-03-40` saved acknowledgement change local progression/presentation only. They add no Python or Responsible-AI attempt, correctness, score, evidence, mastery, credit, authority, exam guarantee, observation, route, or world response.
+- **Evidence firewall / allowlist:** finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole strict conjunction with zero cross-credit. The only atomic progression fields remain `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` together or none; no private result material persists. Failure retains none, retry requires a fresh commit, safe return writes nothing, and success acknowledges only the local triplet.
+- **Validation:** RP-002 self-test; canonical Python `6/6 + 6/6`; Responsible-AI `9/9 + 9/9`; L-02-02 self-test; focused strict-conjunction/atomic/failure/Tour/zero-effect firewall `8/8`; all `291` curriculum JSON parses; and exact allowlist/copy/status structural assertions pass. No curriculum, objective, source, runtime, adapter, or persistence mechanic changed.
+- **Exact A4 handoff:** confirm only exact contained confirmation -> one fresh private-free seven-modality/one-hit commit -> complete non-commit failure with only `RETRY SAVE` / `RETURN SAFELY`, or exact `SC-03-40` saved acknowledgement. Preserve validation-before-consumption, the all-or-none triplet, no private result material, fresh retry, write-free RG-30/prepare-focus return, one active group, accessibility, no-credit Tour, offline/no-authority/no-exam-guarantee, invariant world, unchanged continuation, and `cityStateDelta=null`. Stop at visible `SC-03-40` before restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority/external effect.
+
 ## 2026-07-25 — RP-002 local-confirmation curriculum preservation
 
 - **Outcome:** `NO REOPEN — SOLIDIFIED`. The accepted bounded review, two equal human-summary leaves, one private-free explicit `PREPARE SAVE`, existing contained local Pilot confirmation, and `CANCEL`/Escape write-free exact-review return change presentation/navigation only. They add no exercise attempt, correctness, score, evidence, mastery, credit, save, route, authority, or world effect.

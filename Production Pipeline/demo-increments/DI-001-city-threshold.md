@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / ATOMIC COMMIT FIREWALL PASS / A4 NEXT`. Finalized Python, finalized Responsible-AI, and five finalized observations remain the sole strict eligibility conjunction. Commit, failure, retry, safe return, saved acknowledgement, focus, reflow, modality, Tour, and world presentation are zero evidence/credit/authority and cannot cross-credit.
+- The only atomic progression allowlist remains exactly `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` together or none; no private result material persists. Focused firewall `8/8`, canonical `6/6 + 6/6` and `9/9 + 9/9`, both self-tests, `291` JSON parses, and structural checks pass.
+- A4 confirms only contained confirmation -> one explicit commit -> complete non-commit failure/recovery or exact `SC-03-40` acknowledgement. Hard stop at visible `SC-03-40` before restore/`SC-03-50`, departure, credits, later packets, RP-013, successor, or world/access/authority effect.
+
 ## A2 result - 2026-07-25
 
 - `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. Existing contained Pilot confirmation becomes one direct local commit outcome: exact System complete failure with only `RETRY SAVE` / `RETURN SAFELY`, or exact System saved acknowledgement at `SC-03-40`; no waiting/progress/partial/diagnostic board or world response exists.

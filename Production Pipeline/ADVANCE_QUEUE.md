@@ -1,5 +1,11 @@
 # Advance Queue
 
+## A3 result — 2026-07-25
+
+- **Disposition:** `NO REOPEN — SOLIDIFIED / A4 NEXT`. Finalized `PY-009` AND finalized `RP002-RAI-01` AND all five finalized observations remain the sole strict conjunction. Confirmation/commit/failure/retry/safe-return/success presentation is zero evidence, credit, authority, and cross-credit.
+- **Allowlist:** only `civicComparisonSaved=true`, `nextSurveyDirectionMarked=true`, and `rp002Checkpoint="comparison_complete"` may commit together or none; no private result material persists. Validators, canonical forms, focused firewall `8/8`, `291` JSON parses, and structural checks pass.
+- **Exact A4 next:** lock one protected contained-confirmation -> explicit fresh one-hit commit -> complete failure with fresh retry/write-free safe return or exact `SC-03-40` success graph. Preserve privacy, accessibility, no-credit Tour, invariant world, no authority/exam guarantee, and stop at visible success before restore/departure/credits/later packets/RP-013/successor.
+
 ## A2 result - 2026-07-25
 
 - **Disposition:** `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. One compact existing-authority storyboard replaces contained Pilot confirmation directly with either complete System local failure and only `RETRY SAVE` / `RETURN SAFELY`, or System `SC-03-40` saved acknowledgement. It adds no loading/progress/partial/adapter diagnostic, new copy, branch, art, runtime, restore, or later state.

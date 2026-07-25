@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A3 result — 2026-07-25
+
+- `RP-002` `NO REOPEN — SOLIDIFIED / A4 NEXT`; protected missing-gate count remains zero. The finalized Python + Responsible-AI + five-observation conjunction remains exact and no commit/failure/retry/safe-return/success presentation can cross-credit it.
+- Exact atomic progression remains three allowlisted fields together or none, with no private result material. Canonical `6/6 + 6/6` / `9/9 + 9/9`, both self-tests, focused firewall `8/8`, `291` JSON parses, and structural allowlist checks pass. A4 stops at visible `SC-03-40`.
+
 ## A2 result - 2026-07-25
 
 - `RP-002` `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. The missing-gate count remains zero. One direct contained-confirmation -> explicit one-hit commit -> complete System failure/retry-safe-return or `SC-03-40` saved-success presentation replaces the prior A2 edge; no new board, state, runtime, art, or later content is introduced.

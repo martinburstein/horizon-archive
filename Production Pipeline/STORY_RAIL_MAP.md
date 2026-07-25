@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A3 result — 2026-07-25
+
+- `NO REOPEN — SOLIDIFIED / A4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`; the ordered lead remains ten packets and the rail does not extend.
+- The atomic local triplet remains zero learning/observation evidence and grants no route or successor. A4 confirms only contained confirmation -> explicit commit -> complete failure/recovery or exact `SC-03-40` acknowledgement and stops there; restore/`SC-03-50`, departure, credits, `RP-003+`, RP-013, successor, and world/access/authority effects remain closed.
+
 ## A2 result - 2026-07-25
 
 - `PASS - ATOMIC COMMIT PRESENTATION LOCKED / A3 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains accepted at `RP-002 / RP002-P1-021 + RP002-AESTH-016`; the ordered lead remains ten packets and the rail does not extend. A2 boards only contained confirmation -> explicit local commit -> System complete failure/recovery or `SC-03-40` saved acknowledgement.
