@@ -1,5 +1,11 @@
 # RP-002 — Civic Record Encounter
 
+## W4 verification result - 2026-07-25
+
+- **Disposition:** `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. No W3 residual reproduced; the W2 production candidate remains unchanged.
+- **Evidence:** focused normal-route/frame `54/54`, both applicable validator self-tests, production build, one strict `4173` listener, cache-bypassed final root, root/JS/CSS HTTP `200`, six required served markers, served-to-`dist` byte identity, immutable Civic Record master, and patch gates pass on `index-DCMrW-hp.js` / `index-BPvBS70Z.css`.
+- **Coordinator boundary:** independently validate `RP002-P1-023` plus verified `RP002-AESTH-018`. Preserve quiet `SC-03-40`, complete System downgrade, exact no-replay System `SC-03-50`, its separate `>=44px` Pilot return, one active group, deterministic focus, responsive/accessibility parity, privacy, zero evidence, invariant art/world, and the accepted City Threshold hard stop. Do not cross into normal `RP-003`, departure, credits, RP-013, successor, or any world/access/authority/external effect.
+
 ## W2 result / W3 next - 2026-07-25
 
 - **Disposition:** `RP002-P1-023 RESOLVED - VERIFIED RESTORE / DOWNGRADE / REVERSIBLE RETURN IN NORMAL DEMO / W3 NEXT`. Normal `SC-03-40` success now persists only the exact sanitized comparison checkpoint inside the existing RP-002 route save; automatic campaign re-entry composes the protected A5 authority without adding a storage key, copy, art, learning case, route reward, or world effect.

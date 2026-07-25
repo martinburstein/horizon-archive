@@ -1,5 +1,11 @@
 # DI-001 — City Threshold protected staging pass
 
+## W4 verification result - 2026-07-25
+
+- `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 found no residual and changed no production, style, art, asset, copy, test, curriculum, route, state, or save behavior.
+- Focused gameplay/presentation `54/54`, RP-002 and L-02-02 self-tests, fresh build, strict single-listener final refresh, exact HTTP/assets/hashes/served-dist identity, six recovery markers, and immutable Civic Record art pass on `index-DCMrW-hp.js` / `index-BPvBS70Z.css`.
+- Coordinator independently validates the release. Accepted City Threshold remains the exact stop before normal `RP-003`, departure, credits, RP-013, successor, or any later rail/world/access/authority effect.
+
 ## W3 presentation result - 2026-07-25
 
 - `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`. Served `index-DCMrW-hp.js` / `index-BPvBS70Z.css` is coherent through quiet `SC-03-40`, System-only sanitation downgrade, System-only `SC-03-50` verified restore, the sole separate Pilot return, and accepted City Threshold boundary. No production visual, art, copy, or behavior change is warranted.

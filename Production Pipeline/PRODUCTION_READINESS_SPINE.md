@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W4 verification result - 2026-07-25
+
+- `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no presentation residual and left production/style/art/tests unchanged. Focused normal-route/frame `54/54`, RP-002 and L-02-02 self-tests, production build, strict single-listener final refresh, root/assets HTTP `200`, six markers, served-to-`dist` identity, immutable Civic Record art, and patch gates pass.
+- Candidate remains `index-DCMrW-hp.js` (`1,082,619` bytes; SHA-256 `7C52373B6CAFCAEFCA01C3FCA75C4496732A00591B4D4C36AFBC7C3445AF55AF`) / `index-BPvBS70Z.css` (`74,018` bytes; SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`). Coordinator owns independent full release validation; accepted City Threshold remains the hard stop before normal `RP-003` or any later rail/world/access/authority effect.
+
 ## W3 presentation result - 2026-07-25
 
 - `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`. Source/CSS/served evidence supports a coherent one-group recovery presentation: quiet `SC-03-40`, System sanitation downgrade with deterministic focus, System no-replay `SC-03-50` restore with heading then saved controls, and only its separate Pilot return. No visual implementation is authorized.

@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W4 result - 2026-07-25
+
+- Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002` through the verified-restore/reversible-return candidate and accepted City Threshold; ordered lead remains ten packets. `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`.
+- W4 changed no production or rail state. Coordinator independently validates the exact candidate and keeps accepted City Threshold as the hard stop before normal `RP-003`, departure, credits, RP-013, successor, route reward, or any world/access/authority/external effect.
+
 ## W3 result - 2026-07-25
 
 - Team 1 remains complete at `RP-012`; Team 2 remains on accepted normal `RP-002` through the verified-restore/reversible-return candidate; ordered lead remains ten packets. `RP002-AESTH-018 VERIFIED - NO FINDING / W4 VERIFICATION ONLY`.
