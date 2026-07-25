@@ -58,6 +58,8 @@ Read in full:
 
 Give the role an explicit terminal condition in its assignment: once the named evidence ladder is sufficient, immediately write only the bounded current-control/log handoff, run diff checks, create the dedicated local commit, and stop. Do not continue historical reading or exploratory validation after the disposition is already decidable.
 
+For every delegated role turn, make the completion contract mechanically explicit in four parts: bounded outcome, required validation rung, exact canonical log/control destinations, and required dedicated commit hash. A role turn is nonterminal until it reports either that commit hash or one genuine blocker with evidence; commentary, a plan, or an uncommitted disposition is only an intermediate checkpoint and should not require a coordinator nudge to resume.
+
 Do not reread thousands of lines of append-only history by default. Read older packet, increment, queue, rail-map, or log history only when:
 
 - a current control block cites it;
