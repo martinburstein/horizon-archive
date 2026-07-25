@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## W3 result — 2026-07-25
+
+- `RP003-AESTH-019 P1 OPEN — NARROW CM-00 WORLD PLATE HIDDEN / W4 NEXT`. Blank CM-00 uses only the inherited native City Threshold image, but the active narrow-layout stylesheet hides that native class and reveals only an absent narrow sibling. The CM-00 16:9 world therefore becomes blank at narrow/effective-`200%`, violating the approved temporary no-new-art continuity and world-dominance contract.
+- Served root, `index-PlgdZgkr.js`, and `index-BPvBS70Z.css` are HTTP `200` and byte-identical to `dist`; focused normal entry evidence is `2/2`. No browser storage/save was read, forced, or changed; the finding is deterministically reproduced from the candidate JSX and served CSS. W4 changes only the responsive rendering exception/same-master narrow output and preserves the blank four-action group and every hard stop.
+
 ## W2 result — 2026-07-25
 
 - `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 NEXT`. The accepted exact RP-002 City Threshold return now creates only a transient normal RP-003 entry controller. One fresh private-free one-hit intent across seven modalities reaches one Scene-owned blank `SC-04 / CM-00 ARRIVE + IDLE` group with exactly the existing orient, sealed-boundary, RP-002-return, and City-Threshold-return actions. Orientation and boundary presentation remain zero evidence; both returns are reversible and write-free.

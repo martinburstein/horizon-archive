@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## W3 result — 2026-07-25
+
+- `RP003-AESTH-019 P1 OPEN — W4 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent blank `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- Only the CM-00 narrow/effective-`200%` presentation is defective: shared narrow CSS hides its sole inherited City Threshold plate, leaving the 16:9 world region blank. W4 restores same-master world visibility only; the normal rail remains exact verified RP-002 return -> one transient adjacent-survey intent -> one blank Scene-owned CM-00 group, with CM-10 and all later reward/world/access/authority effects closed.
+
 ## W2 result — 2026-07-25
 
 - `RP003-P1-001 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

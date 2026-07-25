@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## W3 presentation result — 2026-07-25
+
+- `RP003-AESTH-019 P1 OPEN — NARROW CM-00 WORLD VISIBILITY / W4 NEXT`. Candidate CM-00 has no narrow image element but inherits a narrow rule that hides `.city-world-plate-native`; its registered 16:9 first-person world becomes a bare background at narrow/effective-`200%`. Wide source structure, action hierarchy, focus contract, target rules, and hard stop remain intact.
+- **Evidence / gate:** root and candidate JS/CSS return HTTP `200`, served bytes equal `dist` (`index-PlgdZgkr.js` SHA-256 `0B78533FC51D1B37F28D81BB9226042ED71DA589EF045C96ADE5F52CFC29F6BD`; `index-BPvBS70Z.css` SHA-256 `C31746CDDCF439F35F7AF77A35B0E1C882DFD04A01594358555532970AAFEAF1`); focused normal-entry checks pass `2/2`. W4 may fix only same-master narrow visibility and must validate wide/narrow/200%, one-group/focus/`>=44px`, natural reflow, non-color/forced-color/reduced-motion parity, no new SC-04 art or world cue, and every CM-10+ hard stop.
+
 ## W2 candidate result — 2026-07-25
 
 - `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 NEXT`. Normal App/City Threshold/UI now compose the protected RP-003 blank-entry authority only from the exact verified RP-002 write-free return. The authority remains transient and private-free; exact entry mounts one Scene-owned blank CM-00 group, while Tour and every non-exact/private/stale/partial/forged/contaminated boundary fail closed to exact RP-002.

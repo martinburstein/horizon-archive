@@ -1,5 +1,10 @@
 # Working Queue
 
+## W3 result / W4 next — 2026-07-25
+
+- **Open:** `RP003-AESTH-019 P1 — blank CM-00 world plate disappears at narrow/effective-200%`. `CalibrationMarginEntry` renders only the inherited `.city-world-plate-native`, while shared narrow CSS hides it and displays only `.city-world-plate-narrow`; no narrow sibling exists in the blank entry. The scene therefore loses its entire first-person world plate rather than naturally reflowing it.
+- **Evidence / task:** candidate root and `index-PlgdZgkr.js` / `index-BPvBS70Z.css` are HTTP `200` and served-to-`dist` identical; focused normal-entry assertions pass `2/2`. W4 repairs only responsive image visibility using the same existing City Threshold master, then verifies wide/narrow/effective-`200%`, one group, heading/action focus, `>=44px`, non-color/forced-color/reduced-motion parity, and no overflow. No SC-04 art, crop, copy, state, persistence, evidence, world response, CM-10, or later rail effect is authorized.
+
 ## W2 result / W3 next — 2026-07-25
 
 - **Closed:** `RP003-P1-001 RESOLVED — NORMAL BLANK CM-00 ENTRY / W3 AESTHETIC REVIEW NEXT`. Exact verified RP-002 return now creates one transient private-free adjacent-survey authority at the accepted City Threshold. One validated seven-modality semantic activation mounts only Scene-owned `SC-04 / CM-00 ARRIVE + IDLE`; orient and sealed-boundary inspection remain zero-effect, and both existing returns remain reversible.
