@@ -1,10 +1,10 @@
 # Working Queue
 
-## Current control — 2026-07-19
+## Current control — 2026-07-24
 
 - **Accepted live edge:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014`. RP-002 normal play reaches private blank Responsible-AI explanation authoring, explicit submit, strict simultaneous `3/3`, first-failed answer-free recovery/wholly blank retry, or the exact zero-credit Pilot conclusion.
 - **Presentation:** editable/retry `RAIEC-00` alone uses exactly three source-ordered progressively inset wide planes and one equal column at narrow/effective-`200%`; the generic Python explanation remains three equal peers and no reveal raster is integrated.
-- **Next W1 after A5:** begin only at the accepted exact RAI conclusion and report the earliest normal gap toward one zero-effect dismissal and bounded review entry. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.
+- **Advance checkpoint / next W1 after A5:** A1 has locked one existing-authority path from the accepted exact RAI conclusion through zero-effect dismissal, System eligibility sanitation, and either bounded review or deterministic first-incomplete return. W1 still begins only at the accepted exact RAI conclusion and reports the earliest normal gap; stop with bounded review visible, before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.
 - **Coordinator evidence:** full `665/665`, all `15/15` validators, production build, clean isolated `110.4s` E2E, desktop/narrow in-app review, hashes, cleanup, and synchronization pass on `index-BggOwTvz.js` / `index-BPvBS70Z.css`; storage/save and protected user paths remain untouched.
 
 ## 2026-07-18 coordinator release — accepted Team 2 transfer edge

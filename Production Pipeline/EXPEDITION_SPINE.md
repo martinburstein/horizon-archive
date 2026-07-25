@@ -1,9 +1,9 @@
 # Horizon Archive Expedition Spine
 
-## Current control — 2026-07-19
+## Current control — 2026-07-24
 
 - **Positions:** Team 1 is complete at `RP-012`; Team 2 is accepted through RP-002 strict RAI explanation convergence and exact zero-credit Pilot conclusion; ordered lead is ten packets.
-- **Current release / next deficit:** `RP002-P1-019 + RP002-AESTH-014 PASS`. The next A1 may converge only one explicit zero-effect conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry from existing authorities.
+- **Current release / A1 convergence lock:** `RP002-P1-019 + RP002-AESTH-014 PASS`. A1 has merged only the existing explicit zero-effect conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry / deterministic first-incomplete return; A2 boards it from existing authorities.
 - **Hard stop:** before `PREPARE SAVE`, persistence, completion, `RP-003+` normal integration, RP-013, successor, world response, access, authority, or external action.
 
 Latest RP-002 release handoff: `2026-07-19 / RP002-P1-019 + RP002-AESTH-014 PASS — RAI EXPLANATION CONVERGENCE ACCEPTED`. Team 2's accepted edge is the exact zero-credit Pilot Responsible-AI conclusion after strict recoverable explanation `3/3`; its next adjacent gap is zero-effect dismissal and bounded-review entry only. RP-012 remains the final railhead and no RP-013 or successor exists.
