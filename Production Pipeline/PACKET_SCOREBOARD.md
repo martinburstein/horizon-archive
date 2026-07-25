@@ -28,7 +28,7 @@
 
 - **Authoritative release:** `RP-002 PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016`. Normal play reaches exact `RG-30`, explicit private-free Pilot prepare, contained local confirmation, inert hold, and write-free cancel/Escape return; Team 1 is complete at `RP-012`, Team 2 remains at `RP-002`, and the lead remains ten packets.
 - **A1 result / exact A2 edge:** `PASS — COMMIT OWNERSHIP AND LOCAL ATOMIC LOOP LOCKED`; protected missing-gate count remains zero. Pilot-owned contained confirmation -> explicit private-free one-hit commit -> System-owned exact local all-or-none triplet -> complete no-partial failure with retry/safe return or exact `SC-03-40` success is one merged tranche. Stop with saved success visible before restore/departure/credits/`RP-003+`/RP-013/successor/world-authority effect.
-- **Visual canon:** eight closed SC-03 references; the latest locks `contained local confirmation — expedition cradle separation and archive-dominant scale` as canonical non-runtime evidence.
+- **Visual canon:** nine closed SC-03 references; the latest locks `atomic local save — indivisible three-lamina expedition seal` as canonical non-runtime evidence.
 
 ## A5 result — 2026-07-25
 

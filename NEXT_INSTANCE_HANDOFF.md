@@ -60,7 +60,7 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 - Private responses, feedback, result material, tokens, focus history, and adapter diagnostics never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Eight SC-03 canonical visual references remain non-runtime until the cycle reveal adds exactly one more.
+- Nine SC-03 canonical visual references remain non-runtime.
 - No story reward, item, route reward, access, permission, identity, authority, city/world response, external action, normal `RP-003+` integration, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
@@ -78,10 +78,10 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 
 ## Latest canonical cycle reveal
 
-- Closed item: `SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.
-- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png`.
-- Canonical scope: one small removable expedition cradle encloses the paired human-summary instrument; locally contained warm light remains materially separate from an immense inert archive.
-- Status: canonical visual reference only, not runtime-integrated. Fine leaf markings are non-canonical generation texture and define no readable record, saved content, permission, authority, world response, hidden lore, `RP-003+`, RP-013, or successor.
+- Closed item: `SC-03 / atomic local save — indivisible three-lamina expedition seal`.
+- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png`.
+- Canonical scope: exactly three pale mineral-ceramic laminae interlock as one all-or-none local seal inside one removable expedition cradle, sharing one restrained contained confirmation seam while the archive remains inert and greater.
+- Status: canonical visual reference only, not runtime-integrated. The dark center is not a portal or destination; fine cracks are non-canonical generation texture. The image defines no readable save content, adapter behavior, permission, authority, reward, world response, hidden lore, normal `RP-003+` integration, RP-013, or successor.
 
 ## Exact next action
 

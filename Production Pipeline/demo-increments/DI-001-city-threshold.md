@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-25 canonical cycle reveal — atomic triplet seal
+
+- **Closed checklist item:** `[x] SC-03 / atomic local save — indivisible three-lamina expedition seal`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png`, with neighboring provenance.
+- **Locked decision:** exactly three pale mineral-ceramic laminae form one all-or-none local seal inside one removable expedition cradle. Their shared warm seam is contained confirmation only; the cool archive stays inert and greater. No segment independently grants status, permission, reward, route, authority, or world effect.
+- **Status / limit:** canonical visual reference only, not runtime-integrated. The central void is not a portal or destination; fine cracks are non-canonical texture. No readable save content, adapter implementation, success animation, access, hidden lore, normal `RP-003+` integration, RP-013, or successor is authorized.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. The accepted Demo now includes the exact contained Pilot commit, local all-or-none success, complete recoverable failure, fresh retry, write-free safe return, and quiet no-action System `SC-03-40`.

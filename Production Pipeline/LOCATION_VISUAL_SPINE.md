@@ -1,5 +1,11 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-07-25 atomic-triplet canonical cycle-reveal lock
+
+- `Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png` closes `SC-03 / atomic local save — indivisible three-lamina expedition seal`.
+- Exactly three pale mineral-ceramic laminae interlock inside one removable expedition cradle and share one restrained local confirmation seam. The three-part count and all-or-none relationship are canonical; no lamina is an independent status, permission, reward, route, or authority. The dark center is not a portal or destination. The archive remains cool, inert, unchanged, and materially greater.
+- Status is canonical visual reference only, not runtime-integrated. Fine cracks are non-canonical generation texture. The reference authorizes no readable save content, adapter behavior, status animation, world response, access, route reward, hidden lore, normal `RP-003+` integration, RP-013, or successor.
+
 ## A2 atomic-commit presentation lock - 2026-07-25
 
 - Invariant SC-03 carries only the direct contained-Pilot-confirmation -> explicit one-hit private-free commit -> System failure-recovery or `SC-03-40` System saved-acknowledgement replacement. The exact Pilot sentence, exact System failure/saved copy, and only failure controls `RETRY SAVE` / `RETURN SAFELY` are retained; no loading/progress/partial/diagnostic board exists.
@@ -7,7 +13,7 @@
 
 ## Current control — 2026-07-25
 
-- **Released presentation / canon:** `RP002-AESTH-016 PASS`. Exact two-leaf review, `>=44px` Pilot prepare, contained confirmation, disabled commit label, separate cancel, responsive/accessibility parity, invariant SC-03, and eight closed non-runtime canonical references are accepted.
+- **Released presentation / canon:** `RP002-P1-022 + RP002-AESTH-017 PASS`. Exact local commit/failure/retry/safe-return/`SC-03-40` presentation, responsive/accessibility parity, invariant SC-03, and nine closed non-runtime canonical references are accepted.
 - **Exact next visual edge / stop:** present only existing atomic save attempt, recoverable local failure/retry/safe return, and exact `SC-03-40` saved-success ownership over the unchanged civic plate. No new raster or world response; stop before restore/departure/credits/later packets/RP-013/successor.
 
 **2026-07-25 RP-002 contained-confirmation canonical cycle-reveal lock:** `Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png` closes `SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`. One small removable expedition cradle forms one enclosing boundary around the paired human-summary instrument while its warm light remains local and the immense sealed archive stays inert, silent, unchanged, and visibly greater. The image is canonical for containment, paired identity, ownership, separation, local-light containment, and archive-dominant scale only; it is not runtime-integrated. Fine leaf markings are non-canonical generation texture and authorize no readable record, review copy, saved content, action, permission, authority, persistence, world response, hidden lore, later packet, RP-013, or successor.

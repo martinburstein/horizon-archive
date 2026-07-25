@@ -1,5 +1,12 @@
 # RP-002 — Civic Record Encounter
 
+## 2026-07-25 canonical cycle reveal — atomic triplet seal
+
+- **Closed checklist item:** `[x] SC-03 / atomic local save — indivisible three-lamina expedition seal`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp002-atomic-triplet-seal-reveal/rp002-atomic-triplet-seal-v1.png`, with neighboring provenance.
+- **Locked boundary:** exactly three pale mineral-ceramic laminae close as one all-or-none local seal inside one removable expedition cradle. Their single contained warm seam confirms only the triplet relationship; the archive remains cool, inert, unchanged, and materially greater.
+- **Limit:** canonical count/atomicity/ownership/material/object-scale evidence only, not runtime integration. The dark center is not an aperture, route, or destination; fine cracks are non-canonical texture. No readable save content, adapter behavior, permission, authority, reward, city/world response, hidden lore, normal `RP-003+` integration, RP-013, or successor is authorized.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Normal play accepts exact contained confirmation -> one private-free atomic commit -> either complete empty-triplet failure with fresh retry/write-free safe return or quiet no-action System `comparison_complete / SC-03-40`. The strict Python + Responsible-AI + five-observation conjunction, privacy, Tour, focus, responsive/accessibility, invariant-world, unchanged continuation/null city delta, and no-authority contracts remain exact.
