@@ -1,5 +1,10 @@
 # Advance Breadth and Convergence Gate
 
+## A1 result — 2026-07-25
+
+- **Gate:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; mandatory RP-002 convergence remains active, protected missing-gate count remains zero, and the selected action is `CONVERGE + MERGE + TRIM`.
+- **Bounded tranche:** merge only the existing System-owned reload sanitation, exact `SC-03-50` verified restore with cleared work/no replay, all-three fail-closed downgrade to deterministic first-incomplete focus, and exact-`SC-03-50`-only reversible City Threshold navigation. No prompt, answer, score, new copy, additional visual state, micro-state, art, evidence, credit, route reward, world response, authority, normal `RP-003`, RP-013, or successor is authorized.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release / mode:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; mandatory RP-002 convergence remains active and protected missing-gate count remains zero.

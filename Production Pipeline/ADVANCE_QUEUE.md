@@ -1,5 +1,11 @@
 # Advance Queue
 
+## A1 result — 2026-07-25
+
+- **Disposition:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`. Protected missing-gate count remains zero.
+- **Exact A2 start:** from accepted quiet System `SC-03-40`, board reload/re-entry as local System sanitation without replay. Exact triplet plus every unchanged finalized dependency yields only System `verified_restore / SC-03-50`, cleared work, and heading then saved-controls focus; any extra, partial, stale, forged, private, or `review_required` state clears all three plus private/transient work and targets the deterministic first-incomplete protected heading/control. From exact `SC-03-50` only, show the existing reversible return to accepted City Threshold as navigation only.
+- **Stop:** add no new copy, additional visual state, micro-state, art, evidence, credit, save meaning, route reward, world response, normal `RP-003`, later departure, credits, RP-013, successor, access, identity, authority, or external effect. Preserve privacy, Tour isolation, responsive/accessibility parity, unchanged continuation/null city delta, and hand A3 the unchanged `SOLIDIFIED` conjunction.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`; exact atomic save success/failure/retry/safe-return is accepted normally through visible `SC-03-40`.

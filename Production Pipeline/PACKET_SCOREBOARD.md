@@ -1,5 +1,10 @@
 # Rail Packet Scoreboard
 
+## A1 result — 2026-07-25
+
+- `RP-002 PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; protected missing-gate count remains zero. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets.
+- A2 may board only one existing-authority recovery sequence: System reload sanitation -> exact `SC-03-50` restore without replay or all-three downgrade to deterministic first-incomplete focus -> from exact `SC-03-50` only, reversible accepted City Threshold navigation. Stop before normal `RP-003`, later departure, credits, RP-013, successor, route reward, or any world/access/authority effect.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release:** `RP-002 PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Normal play now reaches the exact contained atomic save success or complete recoverable failure/retry/safe-return loop; exact success stops at quiet System `SC-03-40`. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`; the ordered lead remains ten packets.

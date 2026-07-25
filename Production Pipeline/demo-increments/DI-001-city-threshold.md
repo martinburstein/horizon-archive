@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## A1 result — 2026-07-25
+
+- **Disposition:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`.
+- **Accepted recovery contract:** after quiet System `SC-03-40`, reload/re-entry is expedition-local System reconstruction only. Exact triplet plus every unchanged finalized dependency may become only `verified_restore / SC-03-50`, with working/transient material cleared, the existing System restore message, heading then saved-controls focus, and no replay. Extra, partial, stale, forged, private, or `review_required` state instead clears all three fields and private/transient work, uses the existing System sanitation-downgrade message, and focuses the deterministic first-incomplete protected boundary.
+- **Return / stop:** only exact `SC-03-50` may use the already-accepted reversible return to City Threshold. That return is navigation only: no evidence, credit, new save, route unlock, city/Builder acknowledgement, world event, access, authority, identity, external action, or successor. Stop at accepted City Threshold before normal `RP-003`, later departure, credits, RP-013, or post-ending content.
+- **A2 next:** express the two System-owned reload outcomes and exact `SC-03-50`-only return as one compact existing-authority sequence, with no new copy, additional visual state, micro-state, art, effect, or route meaning; preserve privacy, Tour isolation, one active group, responsive/accessibility parity, unchanged continuation/null city delta, and every hard stop.
+
 ## 2026-07-25 canonical cycle reveal — atomic triplet seal
 
 - **Closed checklist item:** `[x] SC-03 / atomic local save — indivisible three-lamina expedition seal`.

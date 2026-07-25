@@ -1,5 +1,11 @@
 # Horizon Archive Story Rail Map
 
+## A1 result — 2026-07-25
+
+- **Positions:** Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through exact `SC-03-40`; the ordered lead remains ten packets. `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`.
+- **Nearest rail edge:** System-only reload/re-entry sanitation may produce only exact `verified_restore / SC-03-50` with cleared work and no replay, or all-three fail-closed downgrade to the deterministic first incomplete protected boundary. Only exact `SC-03-50` reaches the existing reversible accepted City Threshold return, as navigation without evidence, reward, route unlock, city/world acknowledgement, access, authority, identity, or external effect.
+- **Rail stop:** accepted City Threshold return. No normal `RP-003`, later departure, credits, RP-013, successor, post-ending content, or world/access/authority effect exists beyond this bounded A2 handoff.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 1 is complete at `RP-012`; Team 2 is accepted at `RP-002` through exact local `SC-03-40` save success and complete recoverable failure; the ordered lead remains ten packets.

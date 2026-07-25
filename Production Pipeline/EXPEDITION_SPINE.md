@@ -1,5 +1,11 @@
 # Horizon Archive Expedition Spine
 
+## A1 result — 2026-07-25
+
+- **Advance disposition / positions:** `PASS — VERIFIED RESTORE / FAIL-CLOSED DOWNGRADE / REVERSIBLE RETURN OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + MERGE + TRIM`. Team 1 remains complete at `RP-012`; Team 2 remains at `RP-002`, accepted through `SC-03-40`; the ordered lead remains ten packets.
+- **Locked edge:** the expedition System alone sanitizes reload/re-entry. Exact triplet plus every unchanged finalized dependency reconstructs only `SC-03-50`, clears work, and replays nothing; every invalid class clears the whole triplet plus private/transient work and targets the deterministic first incomplete protected boundary. From exact `SC-03-50` only, the existing reversible City Threshold return is navigation without evidence, reward, route, world, access, identity, authority, or external effect.
+- **Hard stop:** A2 boards this one existing-authority recovery sequence without new copy, additional visual state, micro-state, art, or story content and stops after accepted City Threshold return, before normal `RP-003`, later departure, credits, RP-013, successor, or post-ending content.
+
 ## Coordinator current control — 2026-07-25
 
 - **Authoritative release / positions:** `PASS — IN DEMO PARTIAL / RP002-P1-022 + RP002-AESTH-017`. Team 1 remains complete at `RP-012`; Team 2 remains on `RP-002`, accepted through the exact local atomic save result at `SC-03-40`; the ordered lead remains ten packets and no `RP-013` or successor exists.
