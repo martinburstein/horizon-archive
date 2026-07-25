@@ -6,11 +6,11 @@
 - Exactly two exposed articulated bands share a broad interval rhythm but remain nonidentical; one bounded copper-toned interval occurs only in the lower band. The broad dark fused plane at right is the sole sealed boundary and reveals no interior or access. The surrounding archive continues beyond the frame and remains inert.
 - Status is canonical visual reference only, not runtime-integrated and not the approved `SC-04-MASTER`. The pale separator is not a third exposed band, the copper tone is not correctness/damage, and floor seams are not route guidance. No UI, hotspot, learning state, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, or successor is defined.
 
-## A2 blank-entry presentation lock — 2026-07-25
+## Active cycle handoff — 2026-07-25
 
-- `PASS — RP-003 / SC-04 CM-00 BOARDED / A3 NEXT`. Reuse the existing registered first-person Calibration Margin overview only: the composition's paired exposed bands, bounded difference, sealed boundary, flush coupling, and far-left reversible continuity remain visually legible but inert; no new crop, plate, board, raster, copy, or world cue is introduced.
-- Exact verified RP-002 completion at accepted City Threshold sanitizes into one Scene-owned blank `CM-00 ARRIVE + IDLE` group with the existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Wide preserves world dominance; narrow and `200%` reflow one source-ordered group with heading/action focus, `>=44px`, seven-modalities/non-color/forced-color/reduced-motion parity, and no horizontal escape. Invalid/Tour/private/partial/stale/forged/contaminated entry fails closed to RP-002; valid entry has no replay, evidence, reward, authority, or physical response and preserves `continuation` / `cityStateDelta=null`.
-- SC-03 references remain closed non-runtime evidence. Stop before `CM-10`, work-image exposure, learning, save, onward bearing, RP-004, RP-013, successor, or world/access/authority effect; A3 treats all presentation as zero credit.
+- `PASS — RP-003 / SC-04 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`. Reuse the same registered first-person Calibration Margin overview only: explicit orient reaches one Scene group with equal any-order A, B, and sealed-boundary observations; each textual/non-color `Recorded` replay state changes only itself and all three enable only review eligibility.
+- Wide world dominance and narrow/effective-`200%` source-order reflow, one-group focus, `>=44px`, seven-modalities, non-color/forced-color/reduced-motion parity, first-person invariance, privacy/Tour isolation, reversible returns, `continuation`, and `cityStateDelta=null` remain exact. No new crop, plate, board, raster, copy, hotspot cue, or physical response is introduced.
+- **Hard stop / A3:** preserve separate zero-cross-credit observation IDs; do not activate `REVIEW LOCAL WORK IMAGE` or surface `CM-20`, work image, learning, save, RP-004, RP-013, successor, reward, access, authority, or world effect.
 
 ## 2026-07-25 verified-return canonical cycle-reveal lock
 

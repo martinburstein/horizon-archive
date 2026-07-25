@@ -94,8 +94,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted blank `RP-003 CM-00`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
-- **Exact A2 edge / rail stop:** one existing Scene CM-10 group follows explicit orient. Fresh deliberate A, B, and sealed-boundary inspections separately finalize only their matching observation in any order; Recorded replay/order/focus/resume are zero credit, and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Disposition / positions:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003 CM-10`, and the ordered lead remains nine packets (`RP-004` through `RP-012`).
+- **Exact A3 edge / rail stop:** retain the separate A, B, and sealed-boundary IDs and their zero cross-credit; each Recorded replay state is safe and only all three make `REVIEW LOCAL WORK IMAGE` eligible.
 - **Hard stop:** do not activate review or reach CM-20, Python/AI-901 learning, save, later RP-003, RP-004, RP-013, successor, or any reward/world/access/authority/external effect. The rail does not extend.
 
 ## W4 result — 2026-07-25 — RP002-AESTH-017

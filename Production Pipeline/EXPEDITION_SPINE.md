@@ -37,8 +37,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted blank `RP-003 CM-00`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
-- **Exact A2 edge:** reuse only explicit orientation into one Scene-owned `CM-10` group, where fresh deliberate A, B, and sealed-boundary inspections separately finalize their matching existing observation in any order; Recorded replay, ordering, focus, and resume are zero credit, and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Disposition / positions:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains on accepted `RP-003 CM-10`, and the ordered lead remains nine packets. No `RP-013` or successor exists.
+- **Exact A3 edge:** preserve three distinct existing A/B/sealed observation IDs and their zero cross-credit into frozen evidence. Fresh finalization changes only its matching action; Recorded replay, order, focus, and resume are zero credit, and all three enable only `REVIEW LOCAL WORK IMAGE` eligibility.
 - **Hard stop:** no new lore/copy/art, review activation, CM-20, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## Current control — 2026-07-25

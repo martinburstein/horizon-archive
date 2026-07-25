@@ -35,8 +35,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / mode:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
-- **Exact A2 edge:** compose one existing-authority CM-10 survey group: explicit orient, three separate fresh deliberate A/B/sealed-boundary finalizations in any order, replay-safe Recorded states, zero cross-credit, and only review eligibility after all three.
+- **Disposition / mode:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; `CONVERGE + REUSE` remains selected and protected missing-gate count remains zero. RP-003 remains the nearest Team 2 edge.
+- **Exact A3 edge:** preserve the existing separate A, B, and sealed-boundary observation IDs and zero cross-credit into frozen evidence. Recorded replay/order/focus/resume remain zero credit; only all three permit review eligibility.
 - **Hard stop:** add no lore/copy/art, prompt, answer, score, micro-seam, review activation, CM-20, learning, save, production-art integration, route reward, world response, RP-004, RP-013, or successor.
 
 ## Current control — 2026-07-25

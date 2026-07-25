@@ -60,8 +60,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition:** `PASS — RP-003 CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; exact sanitation, explicit adjacent entry, blank `CM-00`, responsive continuity, and reversible returns remain accepted normally.
-- **Exact A2 edge:** board one existing Scene CM-10 survey group after explicit orient. A, B, and sealed-boundary inspection separately finalize only their matching existing observation in any order; Recorded replay/order/focus/resume are zero cross-credit and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Disposition:** `PASS — RP-003 CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; exact sanitation, explicit adjacent entry, and responsive invariant-world/reversible-return continuity remain accepted normally.
+- **Exact A3 edge:** preserve the separate existing A, B, and sealed-boundary observation IDs. Each Recorded replay state remains zero cross-credit; only all three enable `REVIEW LOCAL WORK IMAGE` eligibility.
 - **Hard stop:** add no lore/copy/art, review activation, CM-20, learning, save, RP-004, RP-013, successor, reward, access, authority, or world/external effect.
 
 ## A5 result — 2026-07-25

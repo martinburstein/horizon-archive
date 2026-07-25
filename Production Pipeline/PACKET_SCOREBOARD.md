@@ -49,8 +49,8 @@
 
 ## Active cycle handoff — 2026-07-25
 
-- **Disposition / positions:** `RP-003 PASS — CM-10 OBSERVATION OWNERSHIP LOCKED / A2 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted blank `RP-003 CM-00`, the lead remains nine packets, and protected missing-gate count remains zero.
-- **Exact A2 edge:** one existing CM-10 survey group permits fresh deliberate A, B, and sealed-boundary observations in any order, each finalizing only itself; Recorded replay/order/focus/resume are zero credit and all three enable only `REVIEW LOCAL WORK IMAGE`.
+- **Disposition / positions:** `RP-003 PASS — CM-10 ONE-GROUP SURVEY BOARDED / A3 NEXT`; Team 1 remains complete at `RP-012`, Team 2 remains at accepted `RP-003 CM-10`, the lead remains nine packets, and protected missing-gate count remains zero.
+- **Exact A3 edge:** retain the existing distinct A, B, and sealed-boundary observation IDs, zero cross-credit, and replay-safe textual/non-color Recorded states; all three enable only `REVIEW LOCAL WORK IMAGE` eligibility.
 - **Hard stop:** no lore/copy/art, review activation, CM-20, learning, save, later packet, RP-013, successor, reward, world/access/authority effect.
 
 ## A5 result — 2026-07-25
