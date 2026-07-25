@@ -62,6 +62,7 @@ import {
 import { createCustodyLedgerRAIPrimaryConvergence } from "./CustodyLedgerRAIPrimaryConvergence.js";
 import { createCustodyLedgerRAITransferConvergence } from "./CustodyLedgerRAITransferConvergence.js";
 import { createCustodyLedgerRAIExplanationConvergence } from "./CustodyLedgerRAIExplanationConvergence.js";
+import { createCustodyLedgerRAIConclusionReview } from "./CustodyLedgerRAIConclusionReview.js";
 
 export const CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY = "horizon-archive-rp002-route-v1";
 export const CUSTODY_LEDGER_NORMAL_ROUTE_VERSION = "rp002.normal-route.v1";
@@ -336,6 +337,55 @@ export function createCustodyLedgerNormalRAIExplanationConvergence(
       explanationCompleteState,
       acceptedBlankTransferState,
       acceptedBlankExplanationState,
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function createCustodyLedgerNormalRAIConclusionReview(
+  routeState,
+  primaryResult,
+  freshPracticeState,
+  transferCompleteState,
+  explanationEntryState,
+  explanationCompleteState,
+  acceptedBlankTransferState,
+  acceptedBlankExplanationState,
+  acceptedRAIConclusionState,
+  eligibilityDependencies,
+  predecessor,
+) {
+  if (routeState?.checkpoint !== "sc03_python_primary_blank"
+    || routeState?.boardId !== CUSTODY_LEDGER_BOARD_ID
+    || routeState?.learningState?.phase !== "python_primary"
+    || freshPracticeState?.phase !== "DR-20"
+    || transferCompleteState?.phase !== "FT-20C"
+    || explanationEntryState?.phase !== "EX-20"
+    || explanationCompleteState?.phase !== "EXS-20C"
+    || acceptedBlankTransferState?.phase !== "RAIC-20C"
+    || acceptedBlankExplanationState?.phase !== "RAITC-20C"
+    || acceptedRAIConclusionState?.phase !== "RAIEC-20C"
+    || acceptedRAIConclusionState?.stateName !== "EXACT_ZERO_CREDIT_PILOT_RAI_CONCLUSION"
+    || containsPrivateContent(routeState)
+    || JSON.stringify(acceptedRAIConclusionState?.observationEvidence) !== JSON.stringify(routeState.observationEvidence)
+    || JSON.stringify(acceptedRAIConclusionState?.predecessor) !== JSON.stringify(predecessor)) return null;
+  try {
+    return createCustodyLedgerRAIConclusionReview({
+      primaryResult,
+      learningState: routeState.learningState,
+      freshPracticeState,
+      transferCompleteState,
+      explanationEntryState,
+      explanationCompleteState,
+      acceptedBlankTransferState,
+      acceptedBlankExplanationState,
+      acceptedRAIConclusionState,
+      eligibilityDependencies: {
+        predecessorValue: eligibilityDependencies?.predecessorValue,
+        prerequisiteEvidence: eligibilityDependencies?.prerequisiteEvidence,
+        observationState: { observationEvidence: routeState.observationEvidence },
+      },
     });
   } catch {
     return null;

@@ -624,24 +624,26 @@ test("separate returns, sanitation, campaign, Tour, evidence, continuation, and 
   assertZeroEffect(review);
 });
 
-test("controller is non-routable, storage/network/DOM free, and absent from normal and accepted bundle sources", () => {
+test("controller remains pure while the normal route composes it without direct main entry", () => {
   const source = readFileSync(
     new URL("../src/CustodyLedgerRAIConclusionReview.js", import.meta.url),
     "utf8",
   );
   for (const relative of [
     "../src/App.jsx",
-    "../src/main.jsx",
     "../src/CivicRecordArrival.jsx",
     "../src/CustodyLedgerNormalRoute.js",
-  ]) {
-    assert.equal(
-      readFileSync(new URL(relative, import.meta.url), "utf8")
-        .includes("CustodyLedgerRAIConclusionReview"),
-      false,
-      relative,
-    );
-  }
+  ]) assert.equal(
+    readFileSync(new URL(relative, import.meta.url), "utf8")
+      .includes("CustodyLedgerRAIConclusionReview"),
+    true,
+    relative,
+  );
+  assert.equal(
+    readFileSync(new URL("../src/main.jsx", import.meta.url), "utf8")
+      .includes("CustodyLedgerRAIConclusionReview"),
+    false,
+  );
   for (const forbidden of [
     "localStorage",
     "sessionStorage",

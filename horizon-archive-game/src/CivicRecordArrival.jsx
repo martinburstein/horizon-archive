@@ -35,6 +35,10 @@ import {
   CUSTODY_LEDGER_RETRY_RAI_EXPLANATION,
   CUSTODY_LEDGER_SUBMIT_RAI_EXPLANATION,
 } from "./CustodyLedgerRAIExplanationConvergence.js";
+import {
+  CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+  CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+} from "./CustodyLedgerRAIConclusionReview.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
@@ -64,6 +68,8 @@ export function CivicRecordArrival({
   onRAITransferGuideComplete,
   onRAIExplanationSubmit,
   onRAIExplanationRetry,
+  onRAIConclusionDismiss,
+  onBoundedComparisonReview,
 }) {
   const headingRef = useRef(null);
   const workHeadingRef = useRef(null);
@@ -84,6 +90,9 @@ export function CivicRecordArrival({
   const raiExplanationEntryHeadingRef = useRef(null);
   const raiExplanationFeedbackHeadingRef = useRef(null);
   const raiExplanationConclusionHeadingRef = useRef(null);
+  const raiReviewEligibilityHeadingRef = useRef(null);
+  const raiBoundedReviewHeadingRef = useRef(null);
+  const raiReviewRecoveryHeadingRef = useRef(null);
   const raiExplanationControlRefs = useRef({});
   const classificationRef = useRef(null);
   const ownerRef = useRef(null);
@@ -263,6 +272,22 @@ export function CivicRecordArrival({
       }
       if (primaryPhase === "RAIEC-20C") {
         raiExplanationConclusionHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RG-00") {
+        raiExplanationConclusionHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RG-20") {
+        raiReviewEligibilityHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RG-30") {
+        raiBoundedReviewHeadingRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (primaryPhase === "RG-U") {
+        raiReviewRecoveryHeadingRef.current?.focus({ preventScroll: true });
         return;
       }
     }
@@ -1017,6 +1042,56 @@ export function CivicRecordArrival({
                 <p className="civic-observation-status">This Pilot conclusion is zero credit and grants no access, authority, city change, external action, or later state.</p>
               </section>
             )}
+            {atPythonPrimary && primaryPhase === "RG-00" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-rai-explanation-conclusion-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiExplanationConclusionHeadingRef} id="custody-ledger-rai-explanation-conclusion-heading" tabIndex="-1">
+                  Responsible-AI explanation complete
+                </h2>
+                <p>{primaryInteraction.conclusion.text}</p>
+                <p className="civic-observation-status">This complete Pilot conclusion remains zero credit. Dismissal changes only the open presentation and grants no access, authority, city change, external action, or later state.</p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RG-20" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-review-eligibility-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiReviewEligibilityHeadingRef} id="custody-ledger-review-eligibility-heading" tabIndex="-1">
+                  Bounded comparison ready for review
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <p className="civic-observation-status">Eligibility derives only from finalized Python, Responsible-AI, and five-record observation evidence. Review remains zero credit and grants no authority.</p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RG-30" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-bounded-review-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiBoundedReviewHeadingRef} id="custody-ledger-bounded-review-heading" tabIndex="-1">
+                  Bounded comparison review
+                </h2>
+                <p>{primaryInteraction.ownershipMessage.text}</p>
+                <dl className="custody-ledger-fields">
+                  <div data-field-state="locked">
+                    <dt>Comparison</dt>
+                    <dd>{primaryInteraction.boundedSummary.comparison}</dd>
+                  </div>
+                  <div data-field-state="locked">
+                    <dt>Survey marker</dt>
+                    <dd>{primaryInteraction.boundedSummary.surveyMarker}</dd>
+                  </div>
+                </dl>
+                <p className="civic-observation-status">Review is the current hard stop. It creates no credit, save, permission, city response, or external action.</p>
+              </section>
+            )}
+            {atPythonPrimary && primaryPhase === "RG-U" && (
+              <section className="custody-ledger-work-image" aria-labelledby="custody-ledger-review-recovery-heading">
+                <p className="eyebrow">{primaryInteraction.owner}</p>
+                <h2 ref={raiReviewRecoveryHeadingRef} id="custody-ledger-review-recovery-heading" tabIndex="-1">
+                  Protected evidence needs recovery
+                </h2>
+                <p>Private and transient work was cleared. The first incomplete protected boundary is {primaryInteraction.returnedBoundary}.</p>
+                <p className="civic-observation-status">No review, save, credit, permission, city response, or later state was opened.</p>
+              </section>
+            )}
             <p>
               {atObservation
                 ? hasObservation
@@ -1059,6 +1134,14 @@ export function CivicRecordArrival({
                       ? "Answer-free Teacher feedback names only the first actual failed explanation boundary; every submitted response is cleared."
                     : primaryPhase === "RAIEC-20C"
                       ? "The exact zero-credit Pilot interpretation conclusion is visible. Dismissal and every later state remain closed."
+                    : primaryPhase === "RG-00"
+                      ? "The exact zero-credit Pilot interpretation conclusion remains visible until one explicit dismissal."
+                    : primaryPhase === "RG-20"
+                      ? "Strict finalized evidence makes only bounded comparison review eligible."
+                    : primaryPhase === "RG-30"
+                      ? "The bounded comparison review is visible. Save preparation and every later state remain closed."
+                    : primaryPhase === "RG-U"
+                      ? "Private work was cleared and the deterministic first incomplete protected boundary was selected."
                     : primaryPhase === "30-A1F"
                       ? "Only the checks that failed are shown. Private working values were cleared before this feedback appeared."
                       : "The unfinished work image is local, blank, and offline. No answer, result, attempt, mastery, access, authority, or city change has been recorded."
@@ -1097,6 +1180,22 @@ export function CivicRecordArrival({
                 <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
                 <button className="primary-action" type="button" onClick={onRAIPrimaryOpen}>
                   {CUSTODY_LEDGER_OPEN_RAI_PRIMARY}
+                </button>
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "RG-00" && (
+              <div className="city-command-actions" aria-label="Pilot Responsible-AI conclusion dismissal">
+                <span className="eyebrow">PILOT // FLIGHT RECORDER</span>
+                <button className="primary-action" type="button" onClick={onRAIConclusionDismiss}>
+                  {CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION}
+                </button>
+              </div>
+            )}
+            {atPythonPrimary && primaryPhase === "RG-20" && (
+              <div className="city-command-actions" aria-label="System bounded comparison eligibility">
+                <span className="eyebrow">SYSTEM // EXPEDITION SESSION</span>
+                <button className="primary-action" type="button" onClick={onBoundedComparisonReview}>
+                  {CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON}
                 </button>
               </div>
             )}

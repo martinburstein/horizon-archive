@@ -9,7 +9,10 @@ import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
-import { readVerifiedCityThresholdPredecessor } from "./cityThresholdExercise.js";
+import {
+  readVerifiedCityThresholdPredecessor,
+  readVerifiedCityThresholdSave,
+} from "./cityThresholdExercise.js";
 import {
   clearCustodyLedgerNormalRoute,
   createCustodyLedgerNormalPrimaryInteraction,
@@ -18,6 +21,7 @@ import {
   createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
+  createCustodyLedgerNormalRAIConclusionReview,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAITransferConvergence,
   createCustodyLedgerNormalTransferInteraction,
@@ -65,6 +69,11 @@ import {
   CUSTODY_LEDGER_RETRY_RAI_EXPLANATION,
   CUSTODY_LEDGER_SUBMIT_RAI_EXPLANATION,
 } from "./CustodyLedgerRAIExplanationConvergence.js";
+import {
+  CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+  CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+  CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+} from "./CustodyLedgerRAIConclusionReview.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
 import {
   clearDemoTour,
@@ -678,6 +687,7 @@ export function App() {
   const custodyLedgerRAIPrimaryConvergenceControllerRef = useRef(null);
   const custodyLedgerRAITransferConvergenceControllerRef = useRef(null);
   const custodyLedgerRAIExplanationConvergenceControllerRef = useRef(null);
+  const custodyLedgerRAIConclusionReviewControllerRef = useRef(null);
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
@@ -785,6 +795,9 @@ export function App() {
   useEffect(() => {
     if (!["RAIEC-00", "RAIEC-20F", "RAIEC-20C"].includes(custodyLedgerPrimaryView?.phase)) {
       custodyLedgerRAIExplanationConvergenceControllerRef.current = null;
+    }
+    if (!["RG-00", "RG-20", "RG-30", "RG-U"].includes(custodyLedgerPrimaryView?.phase)) {
+      custodyLedgerRAIConclusionReviewControllerRef.current = null;
     }
   }, [custodyLedgerPrimaryView?.phase]);
 
@@ -1233,6 +1246,12 @@ export function App() {
   }
 
   function routeActivationKind(event) {
+    const semanticKind = event?.horizonActivationKind ?? event?.nativeEvent?.horizonActivationKind;
+    if ([
+      "pointer", "touch", "keyboard_enter", "keyboard_space", "switch", "speech", "screen_reader",
+    ].includes(semanticKind)) return semanticKind;
+    if (event?.key === " " || event?.code === "Space") return "keyboard_space";
+    if (event?.key === "Enter") return "keyboard_enter";
     if (event?.detail === 0) return "keyboard_enter";
     if (event?.nativeEvent?.pointerType === "touch") return "touch";
     return "pointer";
@@ -1737,6 +1756,11 @@ export function App() {
         : null;
       if (!explanationConvergenceController) return null;
       custodyLedgerRAIExplanationConvergenceControllerRef.current = explanationConvergenceController;
+      custodyLedgerRAIConclusionReviewControllerRef.current = null;
+      custodyLedgerTransferContextRef.current = {
+        ...context,
+        acceptedBlankExplanationState: result.state,
+      };
       setCustodyLedgerPrimaryView(explanationConvergenceController.getState());
     }
     return result;
@@ -1806,8 +1830,34 @@ export function App() {
       event,
       "rp002-rai-explanation-submit",
     ));
-    if (["first_actual_boundary_feedback", "strict_explanation_complete"].includes(result?.status)) {
+    if (result?.status === "first_actual_boundary_feedback") {
+      custodyLedgerRAIConclusionReviewControllerRef.current = null;
       setCustodyLedgerPrimaryView(result.state);
+    }
+    if (result?.status === "strict_explanation_complete") {
+      const context = custodyLedgerTransferContextRef.current;
+      const predecessorValue = readVerifiedCityThresholdSave(window.localStorage);
+      const reviewController = context
+        ? createCustodyLedgerNormalRAIConclusionReview(
+          context.routeState,
+          context.primaryResult,
+          context.freshPracticeState,
+          context.transferCompleteState,
+          context.explanationEntryState,
+          context.explanationCompleteState,
+          context.acceptedBlankTransferState,
+          context.acceptedBlankExplanationState,
+          result.state,
+          {
+            predecessorValue,
+            prerequisiteEvidence: { structuredPacketEvidence, responsibleAIEvidence },
+          },
+          context.predecessor,
+        )
+        : null;
+      if (!reviewController) return null;
+      custodyLedgerRAIConclusionReviewControllerRef.current = reviewController;
+      setCustodyLedgerPrimaryView(reviewController.getState());
     }
     return result;
   }
@@ -1821,6 +1871,44 @@ export function App() {
       "rp002-rai-explanation-retry",
     ));
     if (result?.status === "blank_explanation_retry") setCustodyLedgerPrimaryView(result.state);
+    return result;
+  }
+
+  function custodyLedgerRAIConclusionReviewIntent(action, event, token) {
+    return {
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action,
+      activationKind: routeActivationKind(event),
+      eventToken: routeEventToken(token),
+    };
+  }
+
+  function dismissCustodyLedgerRAIConclusion(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIConclusionReviewControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAIConclusionReviewIntent(
+      CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+      event,
+      "rp002-rai-conclusion-dismiss",
+    ));
+    if (["strict_review_eligible", "returned_to_first_incomplete_protected_boundary"].includes(result?.status)) {
+      setCustodyLedgerPrimaryView(result.state);
+    }
+    return result;
+  }
+
+  function reviewCustodyLedgerBoundedComparison(event) {
+    if (demoTour || typeof window === "undefined") return null;
+    const controller = custodyLedgerRAIConclusionReviewControllerRef.current;
+    const result = controller?.dispatch(custodyLedgerRAIConclusionReviewIntent(
+      CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+      event,
+      "rp002-review-bounded-comparison",
+    ));
+    if (result?.status === "bounded_review_visible") setCustodyLedgerPrimaryView(result.state);
     return result;
   }
 
@@ -2880,6 +2968,8 @@ export function App() {
         onRAITransferGuideComplete={completeCustodyLedgerRAITransferGuide}
         onRAIExplanationSubmit={submitCustodyLedgerRAIExplanation}
         onRAIExplanationRetry={retryCustodyLedgerRAIExplanation}
+        onRAIConclusionDismiss={dismissCustodyLedgerRAIConclusion}
+        onBoundedComparisonReview={reviewCustodyLedgerBoundedComparison}
       />
     );
   }

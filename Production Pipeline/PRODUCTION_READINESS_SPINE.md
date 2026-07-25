@@ -1,10 +1,12 @@
 # Horizon Archive Production Readiness Spine
 
-## Current control — 2026-07-19
+## Current control — 2026-07-24
 
 - **Accepted release:** `PASS — IN DEMO PARTIAL / RP002-P1-019 + RP002-AESTH-014` on `index-BggOwTvz.js` / `index-BPvBS70Z.css`; strict RAI explanation authoring/evaluation/recovery, exact zero-credit conclusion, and the responsive three-plane veil presentation are normally composed.
 - **Independent gate:** full `665/665`, all `15/15` validators, production build, clean isolated `110.4s` E2E, `1920 x 1080` / `390 x 844` in-app review, exact asset hashes, clean logs/overflow, QA cleanup, and synchronization pass. Storage/save remained untouched.
 - **Next release edge:** only one explicit zero-effect RAI-conclusion dismissal, strict eligibility sanitation, and eligible bounded-review entry. Stop before `PREPARE SAVE`, persistence, completion, `RP-003+`, world/authority effects, RP-013, or successor.
+
+Latest Working candidate: `2026-07-24 / RP002-P1-020 W2 RESOLVED — W3 AESTHETIC REVIEW NEXT`. Normal transient App/route/UI compose the pure protected conclusion-review controller from exact accepted conclusion through one private-free seven-modality/one-hit dismissal into strict System eligibility or deterministic first-incomplete recovery, then eligible `REVIEW BOUNDED COMPARISON` into only existing Pilot bounded review. Focused `75/75`, full `674/674`, Responsible-AI and RP-002 validator self-tests, production build, served HTTP/markers/exact hashes, and patch gates pass on `index-DRVkMZaH.js` / unchanged `index-BPvBS70Z.css`. Route storage, browser save, curriculum, art, world, access/authority, and every later state remain unchanged; W3 reviews presentation only.
 
 Latest Advance continuity result: `2026-07-24 / RAI CONCLUSION REVIEW A5 REVISE — PROTECTED CONVERGENCE ONLY`. One pure unimported controller composes exact accepted `RAIEC-20C`, fresh private-free seven-modality/one-hit dismissal, existing strict SAVE-A finalized-chain/five-observation eligibility sanitation, and existing SAVE-B bounded review or deterministic first-incomplete return. Focused `9/9`, related `79/79`, both validator self-tests, unchanged accepted production build, normal-source/dist non-integration, storage/network/DOM purity, exact/contaminated restore, private/later-state leakage, and patch gates pass. W1 begins only at the accepted live exact conclusion.
 

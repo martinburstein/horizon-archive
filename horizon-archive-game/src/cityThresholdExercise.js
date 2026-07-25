@@ -294,7 +294,7 @@ export function createCityThresholdSave() {
   return sanitizeCityThresholdSave({ packetId: CITY_THRESHOLD_PACKET_ID, checkpoint: "threshold_entry" });
 }
 
-export function readVerifiedCityThresholdPredecessor(storage) {
+export function readVerifiedCityThresholdSave(storage) {
   try {
     const safe = sanitizeCityThresholdSave(JSON.parse(storage?.getItem(CITY_THRESHOLD_SAVE_KEY) ?? "null"));
     if (safe?.checkpoint !== "anchor_complete"
@@ -302,14 +302,19 @@ export function readVerifiedCityThresholdPredecessor(storage) {
       || safe.civicDistrictRouteAvailable !== true
       || safe.continuation !== CITY_THRESHOLD_CONTINUATION
       || safe.cityStateDelta !== null) return null;
-    return Object.freeze({
-      verificationStatus: "verified",
-      cityThresholdAnchorRecorded: true,
-      civicDistrictRouteAvailable: true,
-    });
+    return safe;
   } catch {
     return null;
   }
+}
+
+export function readVerifiedCityThresholdPredecessor(storage) {
+  const safe = readVerifiedCityThresholdSave(storage);
+  return safe ? Object.freeze({
+    verificationStatus: "verified",
+    cityThresholdAnchorRecorded: true,
+    civicDistrictRouteAvailable: true,
+  }) : null;
 }
 
 export function getCityThresholdResumeBoard(save) {

@@ -15,6 +15,7 @@ import {
   createCustodyLedgerNormalExplanationSubmission,
   createCustodyLedgerNormalPrimaryInteraction,
   createCustodyLedgerNormalPrimaryResultDismissal,
+  createCustodyLedgerNormalRAIConclusionReview,
   createCustodyLedgerNormalRAIExplanationConvergence,
   createCustodyLedgerNormalRAIPrimaryConvergence,
   createCustodyLedgerNormalRAIPrimaryEntry,
@@ -62,6 +63,25 @@ import {
   CUSTODY_LEDGER_RETRY_RAI_EXPLANATION,
   CUSTODY_LEDGER_SUBMIT_RAI_EXPLANATION,
 } from "../src/CustodyLedgerRAIExplanationConvergence.js";
+import {
+  CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+  CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+  CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+} from "../src/CustodyLedgerRAIConclusionReview.js";
+import {
+  anchorPacketReference,
+  commitCityThresholdAnchor,
+  createCityThresholdSave,
+  cum01Forms,
+  evaluateAnchorExplanation,
+  evaluateAnchorPacketSource,
+  evaluateCum01Form,
+  evaluateSafetyExplanation,
+  withAnchorExplanation,
+  withAnchorProbeResult,
+  withCum01Result,
+  withSafetyExplanation,
+} from "../src/cityThresholdExercise.js";
 import {
   responsibleAIDimensions,
   responsibleAIExercise,
@@ -198,6 +218,27 @@ function completedPrerequisites() {
       masteryStatus: "mastered",
     },
   };
+}
+
+function completedCityThresholdSave() {
+  const answers = (form) => Object.fromEntries(cum01Forms[form].map((item) => [
+    item.id, { decision: item.decision, reason: item.reason },
+  ]));
+  let save = createCityThresholdSave();
+  save = withAnchorProbeResult(save, evaluateAnchorPacketSource(anchorPacketReference));
+  save = withAnchorExplanation(save, evaluateAnchorExplanation({
+    list_role: "ordered observation collection",
+    dictionary_role: "named nested state",
+    json_role: "string interchange requires parsing and serialization",
+  }));
+  save = withCum01Result(save, evaluateCum01Form("primary", answers("primary")));
+  save = withCum01Result(save, evaluateCum01Form("transfer", answers("transfer")));
+  save = withSafetyExplanation(save, evaluateSafetyExplanation({
+    valid_output_boundary: "valid output is not authority to act",
+    exam_claim_boundary: "internal readiness is not an exam guarantee",
+    external_action_boundary: "external action needs separate scope authority and privacy review",
+  }));
+  return commitCityThresholdAnchor(save);
 }
 
 function memoryStorage(initial = {}) {
@@ -1701,6 +1742,107 @@ test("accepted FT-20C composes one atomic normal blank explanation entry without
       "My application label is a human interpretation, not their fact or permission to act.");
     assert.equal(explanationComplete.state.dismissalExposed, false);
     assert.equal(explanationComplete.state.successor, null);
+    const reviewController = createCustodyLedgerNormalRAIConclusionReview(
+      fixture.entered.state,
+      fixture.primaryResult,
+      fixture.freshPracticeState,
+      fixture.transferCompleteState,
+      result.state,
+      complete.state,
+      primaryExit.state,
+      transferExit.state,
+      explanationComplete.state,
+      {
+        predecessorValue: completedCityThresholdSave(),
+        prerequisiteEvidence: completedPrerequisites(),
+      },
+      predecessor,
+    );
+    assert.ok(reviewController);
+    assert.equal(reviewController.getState().phase, "RG-00");
+    assert.deepEqual(reviewController.getState().availableActions, [
+      CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+      "RETURN TO EVIDENCE",
+      "RETURN TO CITY THRESHOLD",
+    ]);
+    const dismissalToken = `rp002-rai-conclusion-dismiss-${activationKind}`;
+    const dismissed = reviewController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+      activationKind,
+      eventToken: dismissalToken,
+    });
+    assert.equal(dismissed.status, "strict_review_eligible");
+    assert.equal(dismissed.state.phase, "RG-20");
+    assert.deepEqual(dismissed.state.availableActions, [
+      CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+      "RETURN TO EVIDENCE",
+      "RETURN TO CITY THRESHOLD",
+    ]);
+    assert.equal(reviewController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+      activationKind,
+      eventToken: dismissalToken,
+    }).status, "duplicate_suppressed");
+    const review = reviewController.dispatch({
+      packetId: "RP-002",
+      version: CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON,
+      activationKind,
+      eventToken: `rp002-bounded-review-${activationKind}`,
+    });
+    assert.equal(review.status, "bounded_review_visible");
+    assert.equal(review.state.phase, "RG-30");
+    assert.equal(review.state.hardStop, true);
+    assert.deepEqual(review.state.availableActions, [
+      "RETURN TO EVIDENCE",
+      "RETURN TO CITY THRESHOLD",
+    ]);
+    assert.equal(JSON.stringify(review.state).includes("PREPARE SAVE"), false);
+    assert.equal(review.state.cityStateDelta, null);
+    assert.equal(review.state.campaignCommitEnabled, false);
+    assert.equal(review.state.successor, null);
+    if (activationKind === "pointer") {
+      const recoveryController = createCustodyLedgerNormalRAIConclusionReview(
+        fixture.entered.state,
+        fixture.primaryResult,
+        fixture.freshPracticeState,
+        fixture.transferCompleteState,
+        result.state,
+        complete.state,
+        primaryExit.state,
+        transferExit.state,
+        explanationComplete.state,
+        {
+          predecessorValue: null,
+          prerequisiteEvidence: completedPrerequisites(),
+        },
+        predecessor,
+      );
+      const recovery = recoveryController.dispatch({
+        packetId: "RP-002",
+        version: CUSTODY_LEDGER_RAI_CONCLUSION_REVIEW_VERSION,
+        mode: "campaign",
+        owner: "PILOT // FLIGHT RECORDER",
+        action: CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION,
+        activationKind,
+        eventToken: "rp002-rai-conclusion-recovery",
+      });
+      assert.equal(recovery.status, "returned_to_first_incomplete_protected_boundary");
+      assert.equal(recovery.state.phase, "RG-U");
+      assert.equal(recovery.state.privateWorkCleared, true);
+      assert.equal(recovery.state.returnedBoundary, "rp001_anchor");
+      assert.deepEqual(recovery.state.availableActions, []);
+    }
     assert.equal(JSON.stringify(fixture.entered.save), persistedBytes);
   }
 
@@ -2376,6 +2518,16 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(arrival, /CUSTODY_LEDGER_RETRY_RAI_EXPLANATION/);
   assert.match(arrival, /primaryPhase === "RAIEC-20C"/);
   assert.match(arrival, /primaryInteraction\.conclusion\.text/);
+  assert.match(arrival, /primaryPhase === "RG-00"/);
+  assert.match(arrival, /CUSTODY_LEDGER_DISMISS_RAI_CONCLUSION/);
+  assert.match(arrival, /primaryPhase === "RG-20"/);
+  assert.match(arrival, /SYSTEM \/\/ EXPEDITION SESSION/);
+  assert.match(arrival, /CUSTODY_LEDGER_REVIEW_BOUNDED_COMPARISON/);
+  assert.match(arrival, /primaryPhase === "RG-30"/);
+  assert.match(arrival, /primaryInteraction\.boundedSummary\.comparison/);
+  assert.match(arrival, /primaryInteraction\.boundedSummary\.surveyMarker/);
+  assert.match(arrival, /primaryPhase === "RG-U"/);
+  assert.doesNotMatch(arrival, /PREPARE SAVE|save confirmation|retry-save/i);
   assert.match(arrival, /CUSTODY_LEDGER_RETRY_BLANK_EXPLANATION/);
   assert.match(arrival, /No explanation attempt, evaluation, feedback, result, or credit is active/);
   assert.match(arrival, /CUSTODY_LEDGER_CLEAR_RESULT_ACTION/);
@@ -2389,6 +2541,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /createCustodyLedgerNormalRAIPrimaryConvergence/);
   assert.match(app, /createCustodyLedgerNormalRAITransferConvergence/);
   assert.match(app, /createCustodyLedgerNormalRAIExplanationConvergence/);
+  assert.match(app, /createCustodyLedgerNormalRAIConclusionReview/);
   assert.match(app, /openCustodyLedgerRAIPrimary/);
   assert.match(app, /handleCustodyLedgerExplanationSubmit/);
   assert.match(app, /custodyLedgerPrimaryDismissalControllerRef/);
@@ -2408,6 +2561,8 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(app, /onRAITransferGuideComplete=\{completeCustodyLedgerRAITransferGuide\}/);
   assert.match(app, /onRAIExplanationSubmit=\{submitCustodyLedgerRAIExplanation\}/);
   assert.match(app, /onRAIExplanationRetry=\{retryCustodyLedgerRAIExplanation\}/);
+  assert.match(app, /onRAIConclusionDismiss=\{dismissCustodyLedgerRAIConclusion\}/);
+  assert.match(app, /onBoundedComparisonReview=\{reviewCustodyLedgerBoundedComparison\}/);
   assert.match(app, /custodyLedgerPrimaryControllerRef/);
   assert.match(app, /setCustodyLedgerPrimaryView\(result\.state\)/);
   assert.match(app, /onPrimaryRetry=\{retryCustodyLedgerPrimary\}/);
@@ -2420,6 +2575,7 @@ test("normal app surface exposes reversible staged actions and a registered blan
   assert.match(normalRoute, /createCustodyLedgerNormalRAIPrimaryConvergence/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAITransferConvergence/);
   assert.match(normalRoute, /createCustodyLedgerNormalRAIExplanationConvergence/);
+  assert.match(normalRoute, /createCustodyLedgerNormalRAIConclusionReview/);
   for (const acceptedSource of [app, arrival, normalRoute]) {
     assert.doesNotMatch(acceptedSource, /submitCustodyLedgerRAIPrimaryScenario|custodyLedgerRAIAnswers/);
   }
@@ -2478,6 +2634,13 @@ test("primary phase replacements focus their active owner and associate failed f
   assert.match(arrival, /id="custody-ledger-fresh-classification"[\s\S]*name="classification"/);
   assert.match(arrival, /id="custody-ledger-fresh-owner"[\s\S]*name="owner"/);
   assert.match(arrival, /primaryPhase === "30-A0"[\s\S]*focusIntent\?\.target === "classification"[\s\S]*classificationRef\.current\?\.focus/);
+  assert.match(arrival, /primaryPhase === "RG-00"[\s\S]*raiExplanationConclusionHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{raiReviewEligibilityHeadingRef\}[\s\S]*id="custody-ledger-review-eligibility-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "RG-20"[\s\S]*raiReviewEligibilityHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{raiBoundedReviewHeadingRef\}[\s\S]*id="custody-ledger-bounded-review-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "RG-30"[\s\S]*raiBoundedReviewHeadingRef\.current\?\.focus/);
+  assert.match(arrival, /ref=\{raiReviewRecoveryHeadingRef\}[\s\S]*id="custody-ledger-review-recovery-heading"[\s\S]*tabIndex="-1"/);
+  assert.match(arrival, /primaryPhase === "RG-U"[\s\S]*raiReviewRecoveryHeadingRef\.current\?\.focus/);
   assert.match(arrival, /data-feedback-field=\{item\.field\}/);
   assert.match(arrival, /Field \/\/ \{item\.field\}/);
   assert.match(arrival, /aria-labelledby=\{`\$\{fieldId\} \$\{ownerId\} \$\{messageId\}`\}/);

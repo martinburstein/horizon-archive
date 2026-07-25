@@ -33,6 +33,9 @@ const custodyLedgerPrimaryReturnGroupLabels = Object.freeze({
   raiExplanation: "Responsible-AI explanation evidence return",
   raiExplanationFeedback: "Responsible-AI explanation feedback evidence return",
   raiExplanationConclusion: "Responsible-AI conclusion evidence return",
+  raiReviewEligibility: "Bounded comparison eligibility evidence return",
+  raiBoundedReview: "Bounded comparison review evidence return",
+  raiReviewRecovery: "Protected evidence recovery return",
 });
 
 export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
@@ -58,6 +61,10 @@ export function describeCustodyLedgerPrimaryReturnGroup(primaryPhase) {
   if (primaryPhase === "RAIEC-00") return custodyLedgerPrimaryReturnGroupLabels.raiExplanation;
   if (primaryPhase === "RAIEC-20F") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationFeedback;
   if (primaryPhase === "RAIEC-20C") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationConclusion;
+  if (primaryPhase === "RG-00") return custodyLedgerPrimaryReturnGroupLabels.raiExplanationConclusion;
+  if (primaryPhase === "RG-20") return custodyLedgerPrimaryReturnGroupLabels.raiReviewEligibility;
+  if (primaryPhase === "RG-30") return custodyLedgerPrimaryReturnGroupLabels.raiBoundedReview;
+  if (primaryPhase === "RG-U") return custodyLedgerPrimaryReturnGroupLabels.raiReviewRecovery;
   if (primaryPhase === "FT-00") return custodyLedgerPrimaryReturnGroupLabels.fresh;
   return custodyLedgerPrimaryReturnGroupLabels.blank;
 }
