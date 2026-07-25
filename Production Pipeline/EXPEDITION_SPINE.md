@@ -1,5 +1,9 @@
 # Horizon Archive Expedition Spine
 
+## A5 result — 2026-07-25
+
+- `RP-003 REVISE — PROTECTED BLANK ENTRY COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets. One pure controller now proves only exact verified RP-002 at accepted City Threshold -> sanitized blank SC-04/CM-00, or fail-closed exact-RP-002 recovery. No CM-10 or later breadth is opened.
+
 ## A4 result — 2026-07-25
 
 - `RP-003 PASS — BLANK ENTRY GRAPH LOCKED / A5 NEXT`. Team 2's active adjacent edge is only exact verified RP-002 at accepted City Threshold -> sanitized one-group SC-04/CM-00, or invalid/Tour/private/partial/stale/forged/combined/contaminated state -> transient clearing -> exact RP-002. The retained four CM-00 actions are zero-evidence reversible presentation/navigation; no CM-10 or later breadth is opened.

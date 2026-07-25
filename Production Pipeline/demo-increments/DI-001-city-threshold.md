@@ -1,5 +1,10 @@
 # DI-001 — City Threshold protected staging pass
 
+## A5 result — 2026-07-25
+
+- `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. A pure unimported storage-free controller now composes exact verified RP-002 at accepted City Threshold into only blank `SC-04 / CM-00 ARRIVE + IDLE`, with one Scene group and the existing orient/sealed-boundary/RP-002-return/City-Threshold-return actions. Tour and every non-exact/private/stale/partial/forged/contaminated boundary fail closed to the exact RP-002 recovery target.
+- Seven modalities/one hit, heading-first replay-free resume, reversible write-free returns, privacy clearing, unchanged continuation/null city delta, invariant world, and zero observation/learning/mastery/save/authority pass. Focused `7/7`, related `85/85`, RP-003 self-test, unchanged build, purity/non-integration, and hard-stop checks pass. W1 assesses only the accepted normal City Threshold gap toward blank CM-00; no CM-10 or later state is authorized.
+
 ## A4 result — 2026-07-25
 
 - `PASS — RP-003 BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. From accepted City Threshold, only exact verified RP-002 completion survives predecessor/Tour/privacy/transient sanitation to one blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE` group; invalid, Tour-derived, private, partial, stale, forged, combined, or contaminated state clears and returns to exact RP-002.

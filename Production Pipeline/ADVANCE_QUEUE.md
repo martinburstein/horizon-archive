@@ -1,5 +1,10 @@
 # Advance Queue
 
+## A5 result — 2026-07-25
+
+- `RP-003 REVISE — PROTECTED BLANK CM-00 ENTRY COMPLETE / W1 NEXT`. The protected non-routable controller now proves exact accepted City Threshold plus verified RP-002 plus fresh private-free adjacent-survey intent -> one blank Scene-owned SC-04/CM-00 group, or complete Tour/private/stale/partial/forged/contaminated sanitation -> exact RP-002 recovery. All seven modalities are one-hit; invalid input spends no valid token; heading-first resume, one active group, the four existing actions, reversible returns, privacy, unchanged continuation/null city delta, invariant world, and zero evidence/authority remain exact.
+- Focused `7/7`, related `85/85`, RP-003 self-test, unchanged build, purity/non-integration/later-state absence, and patch checks pass. W1 now begins only at the accepted normal City Threshold and reports the first missing normal transition toward blank CM-00. Stop before CM-10, normal observation, learning, save, copy/art integration, RP-004, RP-013, successor, reward, access, authority, or world effect.
+
 ## A4 result — 2026-07-25
 
 - `RP-003 PASS — BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. Exact verified RP-002 completion at accepted City Threshold sanitizes predecessor/Tour/privacy/transient material into one blank Scene-owned SC-04 CM-00 group; every invalid/Tour/private/partial/stale/forged/combined/contaminated input clears transients and fails closed to exact RP-002.

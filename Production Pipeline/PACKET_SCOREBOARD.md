@@ -1,5 +1,9 @@
 # Rail Packet Scoreboard
 
+## A5 result — 2026-07-25
+
+- `RP-003 protected blank-entry code gate: PASS / REVISE TO WORKING`. Missing-gate count remains zero. Focused `7/7`, related `85/85`, RP-003 self-test, unchanged build, purity/non-integration, and CM-10 hard-stop checks pass. Team 1 remains complete at `RP-012`; Team 2 remains active at `RP-003`; W1 begins at accepted City Threshold.
+
 ## A4 result — 2026-07-25
 
 - `RP-003 gameplay entry/recovery gate: PASS`. Exact predecessor sanitation -> blank one-group CM-00 or complete invalid/Tour/private/partial/stale/forged/combined/contaminated fail-closed return is locked with one-hit modalities, deterministic focus/resume, zero evidence/authority, invariant world, and reversible existing returns. Missing-gate count is unchanged; A5 may compose only the protected entry controller and must stop before CM-10.

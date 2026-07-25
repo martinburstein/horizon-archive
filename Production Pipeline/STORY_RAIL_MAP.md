@@ -1,5 +1,10 @@
 # Horizon Archive Story Rail Map
 
+## A5 result — 2026-07-25
+
+- `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.
+- The protected rail now reaches only exact verified RP-002 at accepted City Threshold -> sanitized blank Scene-owned SC-04/CM-00, with the four existing zero-effect actions and replay-free heading-first resume. Every invalid/Tour/private/stale/partial/forged/contaminated boundary fails closed to exact RP-002. Normal integration and CM-10 remain absent.
+
 ## A4 result — 2026-07-25
 
 - `PASS — RP-003 BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. Team 1 remains complete at `RP-012`; Team 2 remains active at adjacent `RP-003`; the ordered lead remains nine packets, `RP-004` through `RP-012`.

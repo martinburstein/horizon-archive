@@ -1,5 +1,12 @@
 # RP-003 — Calibration Margin
 
+## A5 Coder result — protected blank CM-00 entry
+
+- **Mode / disposition:** `advance` / `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. Added one pure, unimported, storage-free `CalibrationMarginProtectedEntry` controller that composes the accepted City Threshold, exact verified RP-002 predecessor, existing SC-04 presentation/accessibility metadata, and existing reversible-return derivation. Normal App/route/UI, browser persistence, copy, art, observation, learning, save, and accepted bundles remain unchanged.
+- **Bounded behavior:** one exact private-free adjacent-survey intent across seven modalities mounts only the blank Scene-owned `SC-04 / CM-00 ARRIVE + IDLE` group with `ORIENT TO EXPOSED CHANNELS`, `INSPECT SEALED BOUNDARY`, `RETURN TO CIVIC COMPARISON`, and `RETURN TO CITY THRESHOLD`. Orient and sealed-boundary inspection remain in the same group with zero evidence. Both returns are write-free navigation. Valid resume revalidates heading-first with no replay.
+- **Sanitation / hard stop:** Tour is isolated before campaign-boundary access. Missing, stale, partial, extra, forged, private, contaminated, or non-exact predecessor/threshold/resume state clears private/transient material and fails closed to the exact RP-002 verified-boundary target. Invalid, duplicate, combined, passive, wrong-owner, stale, private, or Tour-derived intent spends no future valid token. `continuation`, `cityStateDelta=null`, invariant world, zero observation/learning/mastery/save/authority, and no-exam-guarantee remain exact. The controller contains no CM-10 or later state.
+- **Evidence / W1 handoff:** focused entry `7/7`; related RP-002 restore/normal plus complete RP-003 protected-journey regressions `85/85`; RP-003 validator self-test; unchanged production build `index-DCMrW-hp.js` / `index-BPvBS70Z.css`; source purity, App/main non-integration, later-state absence, and patch checks pass. W1 starts only at the accepted normal City Threshold and reports the earliest player-facing absence toward one explicit blank CM-00 entry; do not inspect protected code or force/mutate browser storage/save. Stop before CM-10.
+
 ## A4 Gameplay Track — blank CM-00 protected entry and recovery graph
 
 - **Disposition / exact scope:** `PASS — RP-003 BLANK CM-00 ENTRY / FAIL-CLOSED RP-002 RETURN GRAPH LOCKED / A5 NEXT`. This current-cycle overlay locks only one protected pre-learning graph. It supersedes no future `CM-10`–`CM-50` design decision, but authorizes none of those states at this entry edge.

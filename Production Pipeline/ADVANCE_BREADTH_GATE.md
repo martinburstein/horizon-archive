@@ -1,5 +1,9 @@
 # Advance Breadth and Convergence Gate
 
+## A5 result — 2026-07-25
+
+- `RP-003 REVISE — PROTECTED BLANK ENTRY COMPLETE / W1 NEXT`; `CONVERGE + REUSE` succeeded and protected missing-gate count remains zero. The complete entry/recovery loop is now implemented once without a transition module per micro-seam; normal integration remains Working-owned. No CM-10, prompt, answer, score, observation, copy, art, save, RP-004, RP-013, successor, reward, access, authority, or world effect was added.
+
 ## A4 result — 2026-07-25
 
 - `RP-003 PASS — ONE COMPLETE ENTRY/RECOVERY LOOP / A5 NEXT`. The tranche merges prerequisite verification, sanitation, blank CM-00 action availability, focus/resume, Tour isolation, invalid fail-closed RP-002 recovery, and reversible returns into one bounded graph; it does not add a micro-seam or authorize CM-10.

@@ -1,5 +1,10 @@
 # Horizon Archive Production Readiness Spine
 
+## A5 protected result — 2026-07-25
+
+- `REVISE — PROTECTED RP-003 BLANK ENTRY COMPLETE / W1 NEXT`. One pure unimported storage-free controller composes exact verified RP-002 at accepted City Threshold into only blank SC-04/CM-00, or sanitizes Tour/private/stale/partial/forged/contaminated state to the exact RP-002 recovery target. Existing orient/sealed-boundary presentation and both reversible returns remain zero-effect.
+- Focused `7/7`, related `85/85`, RP-003 self-test, unchanged production build `index-DCMrW-hp.js` / `index-BPvBS70Z.css`, purity/non-integration/later-state absence, and patch gates pass. Normal integration, copy, art, storage, observation, learning, save, CM-10+, RP-004, RP-013, successor, reward, access, authority, and world effect remain absent.
+
 ## W4 verification result - 2026-07-25
 
 - `RP002-AESTH-018 VERIFIED - NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no presentation residual and left production/style/art/tests unchanged. Focused normal-route/frame `54/54`, RP-002 and L-02-02 self-tests, production build, strict single-listener final refresh, root/assets HTTP `200`, six markers, served-to-`dist` identity, immutable Civic Record art, and patch gates pass.
