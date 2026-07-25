@@ -6,6 +6,13 @@
 - **Authoritative release evidence:** independent full `679/679`; all `15/15` readiness validators; production build; clean first-launch `110.2s` isolated E2E after HTTP `200` preflight; desktop `1920 x 1080` and narrow `390 x 844` in-app title-shell review with zero horizontal escape, clean logs, and `48px` / `44px` actions; exact hashes; QA cleanup; coordinator-preview shutdown; civic-master/reference isolation; and patch gates pass. Martin's gated storage/save was untouched.
 - **Authoritative exact next edge / hard stop:** from exact contained confirmation only, one explicit private-free `SAVE BOUNDED COMPARISON` may call the existing all-or-none local three-field adapter. Deterministic failure must clear the triplet and expose only retry or safe return; retry returns to confirmation; safe return returns write-free to `RG-30`; exact success may expose only existing `SC-03-40`. Stop with saved success visible before verified restore, departure/route/credits, `RP-003+`, RP-013, successor, or any world/access/authority/external effect.
 
+## 2026-07-25 canonical cycle reveal — contained-confirmation cradle
+
+- **Closed checklist item:** `[x] SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png`, with neighboring provenance.
+- **Locked boundary:** one removable expedition-owned cradle forms one enclosing boundary around the paired human-summary instrument; its restrained warm light remains local while the immense sealed archive stays inert, silent, unchanged, and visibly greater.
+- **Limit:** canonical containment/paired-identity/ownership/separation/scale reference only, not runtime integration. Fine leaf markings are non-canonical generation texture and authorize no readable record, review copy, saved content, commit, persistence, permission, authority, world response, hidden lore, `RP-003+`, RP-013, or successor.
+
 ## W4 result — 2026-07-25
 
 - **Disposition:** `RP002-AESTH-016 VERIFIED — NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact W3 residual and changed no production, style, art, asset, test, gameplay, copy, route, storage/save, curriculum, world, or later-state artifact.

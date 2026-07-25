@@ -11,8 +11,8 @@ Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without Martin's e
 ## Synchronized state
 
 - Branch: `main`
-- Release parent: `822f8eb` — `Working Coder: verify prepare-save presentation`
-- Expected after coordinator commit: `HEAD == origin/main`
+- Coordinator release: `3185523` — `Coordinator: release prepare-save confirmation`
+- Expected after the reveal commit: `HEAD == origin/main`
 - Live Demo when intentionally running: `http://127.0.0.1:4173/`
 - Released bundle: `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`
 - Automation: `horizon-archive-optimized-production-loop` remains active on a three-hour cadence. Continue any valid interrupted checkpoint; never overlap a cycle or restart A1.
@@ -57,7 +57,7 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 - Private responses, feedback, result material, tokens, and focus history never persist.
 - Preserve privacy allowlists, atomic save discipline, offline/no-authority/no-exam-guarantee, no-credit Demo Tour, accessibility/responsive parity, one active group, seven modalities/one semantic hit, invariant world/clocks, `continuation`, and `cityStateDelta=null`.
 - Preserve first-person maximum-quality cinematic photorealism with no visible protagonist, ship, hands, body, reflection, or prior-human trace.
-- Seven SC-03 canonical visual references remain non-runtime.
+- Eight SC-03 canonical visual references remain non-runtime.
 - No story, item, route, access, permission, identity, authority, city, world, external, `RP-003+`, RP-013, or successor effect may arise at the current edge.
 
 ## Latest release evidence
@@ -75,9 +75,10 @@ Strict eligibility remains only finalized `PY-009` AND finalized `RP002-RAI-01` 
 
 ## Latest canonical cycle reveal
 
-- Current latest until this cycle's final reveal commit: `SC-03 / bounded comparison review — dual-leaf human-summary instrument`.
-- Asset: `Visual Direction/Production Masters/2026-07-24-rp002-bounded-review-dual-leaf-reveal/rp002-bounded-review-dual-leaf-v1.png`.
-- Canonical visual references do not claim runtime integration.
+- Closed item: `SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.
+- Asset: `Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png`.
+- Canonical scope: one small removable expedition cradle encloses the paired human-summary instrument; locally contained warm light remains materially separate from an immense inert archive.
+- Status: canonical visual reference only, not runtime-integrated. Fine leaf markings are non-canonical generation texture and define no readable record, saved content, permission, authority, world response, hidden lore, `RP-003+`, RP-013, or successor.
 
 ## Exact next action
 

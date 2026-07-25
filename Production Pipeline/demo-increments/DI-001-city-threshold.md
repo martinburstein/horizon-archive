@@ -5,6 +5,13 @@
 - **Authoritative release:** `PASS — IN DEMO PARTIAL / RP002-P1-021 + RP002-AESTH-016` on `index-xpeE9Qlm.js` / `index-BPvBS70Z.css`. Exact bounded review -> private-free Pilot prepare -> contained confirmation -> inert hold or write-free cancel/Escape recovery is accepted.
 - **Authoritative exact next edge:** contained confirmation -> explicit atomic comparison save -> deterministic no-partial local failure with retry/safe return or exact `SC-03-40` saved success. Stop before verified restore, departure, credits, `RP-003+`, RP-013, successor, or world/access/authority effect.
 
+## 2026-07-25 canonical cycle reveal — contained-confirmation cradle
+
+- **Closed checklist item:** `[x] SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.
+- **Canonical asset:** `Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png`, with neighboring provenance.
+- **Locked decision:** one small removable expedition cradle encloses the paired human-summary instrument while local warm light remains contained and the immense sealed archive stays inert, silent, unchanged, and visibly greater.
+- **Limit:** canonical reference only, not runtime-integrated. Fine leaf markings are non-canonical generation texture; no readable record, review wording, saved content, action, permission, authority, persistence, world response, hidden lore, `RP-003+`, RP-013, or successor is authorized.
+
 ## W4 result — 2026-07-25
 
 - `RP002-AESTH-016 VERIFIED / NO IMPLEMENTATION REQUIRED / COORDINATOR NEXT`. W4 reproduced no exact presentation residual, left every production/style/art/test artifact unchanged, and cache-bypass refreshed the same candidate.

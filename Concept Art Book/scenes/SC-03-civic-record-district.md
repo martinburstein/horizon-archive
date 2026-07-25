@@ -1,5 +1,12 @@
 # SC-03 — Civic Record District
 
+## 2026-07-25 canonical cycle reveal — contained-confirmation cradle
+
+- **Closed checklist item:** `[x] SC-03 / contained local confirmation — expedition cradle separation and archive-dominant scale`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-25-rp002-contained-confirmation-cradle-reveal/rp002-contained-confirmation-cradle-v1.png`, with neighboring provenance.
+- **Locked boundary:** one removable expedition-owned cradle encloses the paired human-summary instrument; its restrained warm light remains local while the immense sealed archive stays inert, silent, unchanged, and visibly greater.
+- **Limit:** canonical one-enclosure containment, paired-surface identity, ownership, material separation, local-light containment, and archive-dominant scale only; not runtime integration. Fine leaf markings are non-canonical generation texture and define no readable record, review copy, saved content, permission, authority, persistence behavior, world response, hidden lore, `RP-003+`, RP-013, or successor.
+
 ## 2026-07-25 compact bounded-review to local-confirmation presentation lock
 
 - Reuse the invariant SC-03 overview, registered crop, geometry, motivated light, material, maintenance, and continuous clocks. All seven canonical references remain closed non-runtime evidence only; no plate, raster, camera, crop, geometry, effect, result board, or world-facing transition is added.
