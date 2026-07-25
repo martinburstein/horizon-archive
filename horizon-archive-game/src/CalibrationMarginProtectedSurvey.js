@@ -149,7 +149,7 @@ function surveyState(recordedIds = [], focusTarget = "heading") {
       action: CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
       eligible,
       status: eligible ? "Eligible" : "Inactive",
-      dispatchable: false,
+      dispatchable: eligible,
       activated: false,
     }),
     focusIntent: Object.freeze({ group: "cm10_survey", target: focusTarget }),
@@ -284,7 +284,16 @@ export function createCalibrationMarginProtectedSurvey(options = {}) {
 
       if (state.phase !== "CM-10 SURVEY" || returned) return reject("survey_action_unavailable");
       if (intent.action === CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE) {
-        return reject("review_activation_closed");
+        if (intent.observationId !== null
+          || !state.localReviewEligibility.eligible
+          || !state.localReviewEligibility.dispatchable) {
+          return reject("review_not_eligible");
+        }
+        handledTokens.add(intent.eventToken);
+        return Object.freeze({
+          status: "review_activated",
+          state: clone(state),
+        });
       }
 
       if ([calibrationMarginActions.returnCivicComparison,

@@ -17,6 +17,9 @@ import {
   calibrationMarginNormalReturnActions,
 } from "./CalibrationMarginNormalEntry.js";
 import {
+  sanitizeCalibrationMarginPythonCheckpoint,
+} from "./CalibrationMarginPythonCheckpoint.js";
+import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
 } from "./cityThresholdExercise.js";
@@ -338,6 +341,29 @@ import { deriveMixedSimulationResume,evaluateMixedSimulationItem,getMixedSimulat
 import { deriveFinalConfidenceResume,evaluateFinalConfidenceEntryGate,evaluateFinalConfidenceItem,finalConfidenceDialogDescribedBy,finalConfidenceDimensions,finalConfidenceExercise,finalConfidenceItems,getFinalConfidenceFeedback,getFinalConfidenceOptions,sanitizeFinalConfidenceEvidence,updateFinalConfidenceEvidence } from "./finalConfidenceExercise.js";
 
 const SAVE_KEY = "horizon-archive-prologue-v1";
+const CALIBRATION_MARGIN_PYTHON_CHECKPOINT_KEY =
+  "horizon-archive-rp003-python-checkpoint-v1";
+
+function readCalibrationMarginPythonCheckpoint(storage) {
+  try {
+    return sanitizeCalibrationMarginPythonCheckpoint(
+      JSON.parse(storage?.getItem(CALIBRATION_MARGIN_PYTHON_CHECKPOINT_KEY) ?? "null"),
+    );
+  } catch {
+    return null;
+  }
+}
+
+function writeCalibrationMarginPythonCheckpoint(storage, value) {
+  const safe = sanitizeCalibrationMarginPythonCheckpoint(value);
+  if (!safe) return false;
+  try {
+    storage?.setItem(CALIBRATION_MARGIN_PYTHON_CHECKPOINT_KEY, JSON.stringify(safe));
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 const FINAL_CONFIDENCE_ENTRY_ERRORS = {
   l0603Readiness: "Record the completed L-06-03 readiness checkpoint.",
@@ -2169,8 +2195,31 @@ export function App() {
     });
     if (result?.status !== "returned_to_city_threshold_write_free") return result;
     const authority = { verifiedRestoreState, returnedCityThreshold: result };
-    const entryController = createCalibrationMarginNormalEntry(authority);
+    const entryController = createCalibrationMarginNormalEntry({
+      ...authority,
+      restoredPythonCheckpoint: typeof window === "undefined"
+        ? null
+        : readCalibrationMarginPythonCheckpoint(window.localStorage),
+      commitPythonCheckpoint: (candidate) => (
+        typeof window !== "undefined"
+        && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+      ),
+    });
     const entryState = entryController.getState();
+    if (entryState.shellVersion === "SS-RP003-PY010-v1") {
+      setCustodyLedgerRouteSave(null);
+      setCustodyLedgerRouteView(null);
+      setCustodyLedgerPrimaryView(null);
+      custodyLedgerRAIVerifiedRestoreControllerRef.current = null;
+      custodyLedgerRAIPrepareSaveConfirmationControllerRef.current = null;
+      custodyLedgerRAIAtomicSaveCommitControllerRef.current = null;
+      calibrationMarginEntryAuthorityRef.current = authority;
+      calibrationMarginEntryControllerRef.current = entryController;
+      setCalibrationMarginEntryView(entryState);
+      setCalibrationReturnToRp002(false);
+      setMode("rp003-entry");
+      return result;
+    }
     if (entryState.phase !== "city_threshold") {
       setCustodyLedgerPrimaryView(entryState);
       return result;
@@ -2192,7 +2241,16 @@ export function App() {
   function resetCalibrationMarginAtCityThreshold() {
     const authority = calibrationMarginEntryAuthorityRef.current;
     if (!authority) return null;
-    const controller = createCalibrationMarginNormalEntry(authority);
+    const controller = createCalibrationMarginNormalEntry({
+      ...authority,
+      restoredPythonCheckpoint: typeof window === "undefined"
+        ? null
+        : readCalibrationMarginPythonCheckpoint(window.localStorage),
+      commitPythonCheckpoint: (candidate) => (
+        typeof window !== "undefined"
+        && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+      ),
+    });
     const state = controller.getState();
     calibrationMarginEntryControllerRef.current = controller;
     setCalibrationMarginEntryView(state);
@@ -2227,11 +2285,14 @@ export function App() {
       routeEventToken("rp003-blank-entry"),
       calibrationMarginEntryView?.phase,
     ));
-    if ([
+    if (result?.state?.shellVersion === "SS-RP003-PY010-v1"
+      || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
       "observation_recorded_zero_evidence",
       "recorded_replay_zero_evidence",
+      "returned_to_survey_write_free",
+      "checkpoint_commit_failed_to_survey",
     ].includes(result?.status)) {
       setCalibrationMarginEntryView(result.state);
       return result;
@@ -2247,12 +2308,28 @@ export function App() {
       const returnController = createCalibrationMarginNormalEntry({
         ...authority,
         restoredState: result.state,
+        restoredPythonCheckpoint: typeof window === "undefined"
+          ? null
+          : readCalibrationMarginPythonCheckpoint(window.localStorage),
+        commitPythonCheckpoint: (candidate) => (
+          typeof window !== "undefined"
+          && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+        ),
       });
       calibrationMarginEntryControllerRef.current = returnController;
       setCalibrationMarginEntryView(returnController.getState());
       setCalibrationReturnToRp002(true);
       setCustodyLedgerPrimaryView(authority?.verifiedRestoreState ?? null);
       setMode("rp002-arrival");
+    }
+    return result;
+  }
+
+  function updateCalibrationMarginPythonField(name, value) {
+    if (demoTour) return null;
+    const result = calibrationMarginEntryControllerRef.current?.updateField(name, value);
+    if (result?.status === "field_updated_private") {
+      setCalibrationMarginEntryView(result.state);
     }
     return result;
   }
@@ -3342,14 +3419,18 @@ export function App() {
     );
   }
 
-  if (mode === "rp003-entry" && [
-    "CM-00 ARRIVE + IDLE",
-    "CM-10 SURVEY",
-  ].includes(calibrationMarginEntryView?.phase)) {
+  if (mode === "rp003-entry" && (
+    calibrationMarginEntryView?.shellVersion === "SS-RP003-PY010-v1"
+    || [
+      "CM-00 ARRIVE + IDLE",
+      "CM-10 SURVEY",
+    ].includes(calibrationMarginEntryView?.phase)
+  )) {
     return (
       <CalibrationMarginEntry
         entryState={calibrationMarginEntryView}
         onAction={dispatchCalibrationMarginEntry}
+        onFieldChange={updateCalibrationMarginPythonField}
       />
     );
   }

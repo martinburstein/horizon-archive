@@ -1865,3 +1865,239 @@ h1 {
   .canonical-game-frame[data-canonical-layout="narrow"] .verb-grid,
   .canonical-game-frame[data-canonical-layout="narrow"] .inventory { grid-template-columns: 1fr; overflow-x: visible; }
 }
+
+/* SS-RP003-PY010-v1 structural field-folio shell. Final material and
+   atmosphere tuning remains owned by the Image Specialist. */
+.calibration-margin-entry[data-python-floor="true"] {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.canonical-game-frame .python-floor-panel {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  gap: clamp(10px, 1.1vw, 18px);
+  padding: clamp(16px, 1.5vw, 26px);
+  overflow-wrap: anywhere;
+  background:
+    linear-gradient(145deg, rgb(27 31 38 / 96%), rgb(8 11 16 / 99%)),
+    #090b13;
+  border-color: #a47749;
+}
+
+.python-floor-heading h1 {
+  margin: 4px 0 0;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.08;
+}
+
+.python-floor-heading p,
+.python-floor-negative-authority {
+  line-height: 1.45;
+}
+
+.python-floor-status {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid #665d50;
+  background: rgb(0 0 0 / 32%);
+}
+
+.python-floor-form,
+.python-floor-content {
+  display: grid;
+  min-width: 0;
+  gap: 14px;
+}
+
+.python-floor-scaffold,
+.python-floor-repair {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #625847;
+  background: rgb(0 0 0 / 26%);
+}
+
+.python-floor-scaffold h2,
+.python-floor-repair h2 {
+  margin: 4px 0 8px;
+  font-size: 1rem;
+}
+
+.python-floor-scaffold pre {
+  max-width: 100%;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 0.78rem/1.35 "Courier New", monospace;
+}
+
+.python-floor-repair ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.python-floor-fields {
+  display: grid;
+  min-width: 0;
+  gap: 12px;
+}
+
+.python-floor-fields-retrieval {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.python-floor-field {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.python-floor-field label {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.python-floor-field-help,
+.python-floor-field-error {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.python-floor-field-error {
+  padding-left: 9px;
+  border-left: 3px solid #da9b73;
+}
+
+.python-floor-field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px 10px;
+  border: 2px solid #807766;
+  background: #11141a;
+  color: #fff7df;
+  font: 0.95rem/1.3 "Courier New", monospace;
+}
+
+.python-floor-field input[readonly] {
+  border-style: dashed;
+  background: #17191d;
+}
+
+.python-floor-field input[aria-invalid="true"] {
+  border-style: double;
+  border-width: 3px;
+}
+
+.python-floor-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.python-floor-actions button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px 12px;
+  white-space: normal;
+}
+
+.python-floor-actions button[data-action-id^="SUBMIT_"] {
+  grid-column: 1 / -1;
+}
+
+.python-floor-negative-authority {
+  border-top: 1px solid #4d4b46;
+  font-size: 0.78rem;
+}
+
+.python-floor-panel :focus-visible {
+  outline: 3px solid #fff2c8;
+  outline-offset: 3px;
+}
+
+@media (min-width: 1280px) {
+  .canonical-game-frame .calibration-margin-entry[data-python-floor="true"] {
+    grid-template-columns: minmax(0, 3fr) minmax(430px, 2fr);
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .canonical-game-frame .calibration-margin-entry[data-python-floor="true"] .city-world {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .canonical-game-frame .calibration-margin-entry[data-python-floor="true"] .python-floor-panel {
+    min-height: 100%;
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1279px) {
+  .canonical-game-frame .calibration-margin-entry[data-python-floor="true"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .python-floor-fields-retrieval {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .canonical-game-frame .python-floor-panel {
+    padding: 14px 12px;
+  }
+
+  .python-floor-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .python-floor-actions button[data-action-id^="SUBMIT_"] {
+    grid-column: auto;
+  }
+
+  .python-floor-scaffold pre {
+    font-size: 0.72rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .canonical-game-frame .python-floor-panel,
+  .python-floor-status,
+  .python-floor-scaffold,
+  .python-floor-repair,
+  .python-floor-field input {
+    forced-color-adjust: auto;
+    border-color: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .python-floor-field-error {
+    border-color: Highlight;
+  }
+
+  .python-floor-panel :focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .python-floor-panel,
+  .python-floor-panel * {
+    scroll-behavior: auto;
+    transition: none;
+    animation: none;
+  }
+}

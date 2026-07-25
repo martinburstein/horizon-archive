@@ -229,7 +229,7 @@ test("normal A/B/sealed actions finalize only matching IDs in any order with saf
       action: CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
       eligible: true,
       status: "Eligible",
-      dispatchable: false,
+      dispatchable: true,
       activated: false,
     });
 
@@ -250,7 +250,7 @@ test("normal A/B/sealed actions finalize only matching IDs in any order with saf
   }
 });
 
-test("normal CM-10 resume is heading-first, malformed recovery is blank, and review activation stays closed", () => {
+test("normal CM-10 resume is heading-first, malformed recovery is blank, and partial review stays closed", () => {
   const first = createCalibrationMarginNormalEntry(options());
   enterBlank(first);
   enterSurvey(first);
@@ -276,7 +276,7 @@ test("normal CM-10 resume is heading-first, malformed recovery is blank, and rev
     "CM-10 SURVEY",
   ));
   assert.equal(review.status, "rejected");
-  assert.equal(review.reason, "review_activation_closed");
+  assert.equal(review.reason, "review_not_eligible");
   assert.deepEqual(review.state, resumed);
 
   for (const contaminated of [
@@ -417,7 +417,7 @@ test("normal resume revalidates exact blank state to heading and rejects contami
   }
 });
 
-test("normal App and UI compose only transient CM-00 and CM-10 with inactive review", () => {
+test("normal App and UI compose the bounded Python floor through the active review boundary", () => {
   const normal = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", import.meta.url), "utf8");
   const view = readFileSync(new URL("../src/CalibrationMarginEntry.jsx", import.meta.url), "utf8");
   const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
@@ -425,7 +425,7 @@ test("normal App and UI compose only transient CM-00 and CM-10 with inactive rev
   const city = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
   for (const forbidden of [
     "localStorage", "sessionStorage", "indexedDB", "fetch(", "XMLHttpRequest",
-    "WebSocket", "navigator.", "document.", "window.", "CM-20", "RP-004", "RP-013",
+    "WebSocket", "navigator.", "document.", "window.", "RP-004", "RP-013",
   ]) assert.equal(normal.includes(forbidden), false, forbidden);
   assert.match(normal, /createCalibrationMarginProtectedSurvey/);
   assert.doesNotMatch(normal, /from "\.\/CalibrationMarginProtectedJourney\.js"/);
@@ -444,9 +444,9 @@ test("normal App and UI compose only transient CM-00 and CM-10 with inactive rev
     view,
     /const label = observation \? `\$\{action\} — \$\{observation\.status\}` : action;/,
   );
-  assert.match(view, /data-review-eligibility="eligible-inactive"/);
-  assert.match(view, /disabled/);
-  assert.match(view, /aria-disabled="true"/);
+  assert.match(view, /data-review-eligibility="eligible-active"/);
+  assert.match(view, /CalibrationMarginPythonFloor/);
+  assert.match(view, /onFieldChange/);
   assert.match(view, /tabIndex="-1"/);
   assert.match(view, /className="city-world calibration-margin-world"/);
   assert.equal((view.match(/<img\b/g) ?? []).length, 1);

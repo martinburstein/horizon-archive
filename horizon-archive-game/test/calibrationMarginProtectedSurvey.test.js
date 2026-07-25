@@ -133,7 +133,7 @@ test("fresh validated ORIENT replaces accepted blank CM-00 with one Scene CM-10 
   }
 });
 
-test("all six A/B/sealed orders converge on three distinct Recorded controls and inactive review eligibility", () => {
+test("all six A/B/sealed orders converge on three distinct Recorded controls and active review eligibility", () => {
   const actions = Object.keys(calibrationMarginSurveyObservations);
   for (const order of permutations(actions)) {
     const controller = enterSurvey();
@@ -161,7 +161,7 @@ test("all six A/B/sealed orders converge on three distinct Recorded controls and
       action: CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
       eligible: true,
       status: "Eligible",
-      dispatchable: false,
+      dispatchable: true,
       activated: false,
     });
     assert.equal(state.availableActions.includes(CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE), false);
@@ -285,21 +285,28 @@ test("exact resume reconstructs only Recorded controls heading-first; malformed 
   }
 });
 
-test("review stays non-dispatchable after completion and both accepted returns remain write-free", () => {
+test("review dispatches exactly once after completion and both accepted returns remain write-free", () => {
   const controller = enterSurvey();
   Object.entries(calibrationMarginSurveyObservations).forEach(([action, observationId], index) => {
     controller.dispatch(intent(action, observationId, `complete-${index}`));
   });
   const token = "review-token-reusable";
+  const review = controller.dispatch(intent(
+    CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
+    null,
+    token,
+  ));
+  assert.equal(review.status, "review_activated");
+  assert.equal(review.state.localReviewEligibility.dispatchable, true);
   assert.equal(controller.dispatch(intent(
     CALIBRATION_MARGIN_REVIEW_LOCAL_WORK_IMAGE,
     null,
     token,
-  )).reason, "review_activation_closed");
+  )).reason, "one_hit_only");
   const returned = controller.dispatch(intent(
     calibrationMarginActions.returnCivicComparison,
     null,
-    token,
+    "review-then-return",
   ));
   assert.equal(returned.status, "returned_to_rp002_write_free");
   assert.equal(returned.route.target, "RP-002");

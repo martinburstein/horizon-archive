@@ -10,6 +10,14 @@ import {
   calibrationMarginSurveyObservations,
   createCalibrationMarginProtectedSurvey,
 } from "./CalibrationMarginProtectedSurvey.js";
+import {
+  calibrationMarginPythonGroups,
+  createCalibrationMarginPythonFloor,
+  createCalibrationMarginPythonIntent,
+} from "./CalibrationMarginPythonFloor.js";
+import {
+  sanitizeCalibrationMarginPythonCheckpoint,
+} from "./CalibrationMarginPythonCheckpoint.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -98,14 +106,18 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   );
   let entryController;
   let surveyController = null;
+  let surveyAcceptedBlank = null;
+  let pythonController = null;
 
-  const configure = (restoredState) => {
+  const configure = (restoredState, restoredPythonCheckpoint = options.restoredPythonCheckpoint) => {
     const restoringSurvey = restoredState?.phase === "CM-10 SURVEY";
     entryController = createCalibrationMarginProtectedEntry({
       ...authority,
       restoredState: restoringSurvey ? null : restoredState,
     });
     surveyController = null;
+    surveyAcceptedBlank = null;
+    pythonController = null;
 
     if (restoringSurvey && entryController.getState().phase === "city_threshold") {
       const blank = entryController.dispatch({
@@ -117,9 +129,18 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         activationKind: "screen_reader",
         eventToken: "normal-survey-resume-boundary",
       }).state;
+      surveyAcceptedBlank = blank;
       surveyController = createCalibrationMarginProtectedSurvey({
         acceptedBlankState: blank,
         restoredState,
+      });
+    }
+
+    const checkpoint = sanitizeCalibrationMarginPythonCheckpoint(restoredPythonCheckpoint);
+    if (checkpoint && ["P1", "P2", "P3"].includes(checkpoint.checkpoint)) {
+      pythonController = createCalibrationMarginPythonFloor({
+        restoredCheckpoint: checkpoint,
+        commitCheckpoint: options.commitPythonCheckpoint,
       });
     }
   };
@@ -128,16 +149,44 @@ export function createCalibrationMarginNormalEntry(options = {}) {
 
   return Object.freeze({
     getState() {
-      return (surveyController ?? entryController).getState();
+      return (pythonController ?? surveyController ?? entryController).getState();
     },
     dispatch(intent) {
-      const state = (surveyController ?? entryController).getState();
+      const state = (pythonController ?? surveyController ?? entryController).getState();
+      if (pythonController) {
+        const result = pythonController.dispatch(intent);
+        if (["returned_to_survey_write_free", "checkpoint_commit_failed_to_survey"]
+          .includes(result.status)) {
+          const acceptedSurvey = surveyController?.getState();
+          if (surveyAcceptedBlank && acceptedSurvey?.phase === "CM-10 SURVEY") {
+            surveyController = createCalibrationMarginProtectedSurvey({
+              acceptedBlankState: surveyAcceptedBlank,
+              restoredState: acceptedSurvey,
+            });
+            pythonController = null;
+            return Object.freeze({ ...result, state: surveyController.getState() });
+          }
+        }
+        return result;
+      }
       if (state.phase === "CM-10 SURVEY") {
-        return surveyController.dispatch(intent);
+        const result = surveyController.dispatch(intent);
+        if (result.status === "review_activated") {
+          pythonController = createCalibrationMarginPythonFloor({
+            acceptedSurveyState: result.state,
+            commitCheckpoint: options.commitPythonCheckpoint,
+          });
+          return Object.freeze({
+            status: "python_primary_visible",
+            state: pythonController.getState(),
+          });
+        }
+        return result;
       }
       if (state.phase === "CM-00 ARRIVE + IDLE"
         && intent?.version === CALIBRATION_MARGIN_PROTECTED_SURVEY_VERSION
         && intent?.action === normalOrientAction) {
+        surveyAcceptedBlank = state;
         surveyController = createCalibrationMarginProtectedSurvey({
           acceptedBlankState: state,
         });
@@ -145,14 +194,33 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       }
       return entryController.dispatch(intent);
     },
-    sanitizeBoundary(restoredState = (surveyController ?? entryController).getState()) {
-      configure(restoredState);
+    updateField(name, value) {
+      if (!pythonController) {
+        return Object.freeze({
+          status: "rejected",
+          reason: "python_floor_closed",
+          state: (surveyController ?? entryController).getState(),
+        });
+      }
+      return pythonController.updateField(name, value);
+    },
+    getPythonCheckpoint() {
+      return pythonController?.getCheckpoint() ?? null;
+    },
+    sanitizeBoundary(
+      restoredState = (pythonController ?? surveyController ?? entryController).getState(),
+      restoredPythonCheckpoint = pythonController?.getCheckpoint()
+        ?? options.restoredPythonCheckpoint,
+    ) {
+      configure(restoredState, restoredPythonCheckpoint);
       return Object.freeze({
-        status: restoredState?.phase === "CM-10 SURVEY"
-          && surveyController?.getState().phase === "CM-10 SURVEY"
-          ? "resumed"
-          : "revalidated",
-        state: (surveyController ?? entryController).getState(),
+        status: pythonController
+          ? "python_checkpoint_resumed"
+          : restoredState?.phase === "CM-10 SURVEY"
+            && surveyController?.getState().phase === "CM-10 SURVEY"
+            ? "resumed"
+            : "revalidated",
+        state: (pythonController ?? surveyController ?? entryController).getState(),
       });
     },
   });
@@ -164,6 +232,16 @@ export function createCalibrationMarginNormalEntryIntent(
   eventToken,
   phase = null,
 ) {
+  const pythonGroup = Object.values(calibrationMarginPythonGroups)
+    .find((group) => group.phase === phase);
+  if (pythonGroup) {
+    return createCalibrationMarginPythonIntent(
+      { activeGroup: pythonGroup.activeGroup, owner: pythonGroup.owner },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (action === normalOrientAction || phase === "CM-10 SURVEY") {
     return Object.freeze({
       packetId: "RP-003",

@@ -1,13 +1,15 @@
 import { useLayoutEffect, useRef } from "react";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { CalibrationMarginPythonFloor } from "./CalibrationMarginPythonFloor.jsx";
 
-export function CalibrationMarginEntry({ entryState, onAction }) {
+export function CalibrationMarginEntry({ entryState, onAction, onFieldChange }) {
   const headingRef = useRef(null);
   const actionRefs = useRef(new Map());
   const observationControls = new Map(
     (entryState.observationControls ?? []).map((control) => [control.action, control]),
   );
+  const pythonFloorActive = entryState.shellVersion === "SS-RP003-PY010-v1";
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -25,6 +27,7 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
         data-scene="calibration-margin"
         data-board={entryState.boardState}
         data-phase={entryState.phase}
+        data-python-floor={pythonFloorActive || undefined}
       >
         <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
@@ -33,6 +36,13 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
             alt="An immense empty underground civic landscape already operating above geothermal chasms"
           />
         </section>
+        {pythonFloorActive ? (
+          <CalibrationMarginPythonFloor
+            state={entryState}
+            onAction={onAction}
+            onFieldChange={onFieldChange}
+          />
+        ) : (
         <section
           className="city-command-panel"
           aria-labelledby="calibration-margin-entry-heading"
@@ -71,15 +81,18 @@ export function CalibrationMarginEntry({ entryState, onAction }) {
             {entryState.localReviewEligibility?.eligible && (
               <button
                 type="button"
-                disabled
-                aria-disabled="true"
-                data-review-eligibility="eligible-inactive"
+                data-review-eligibility="eligible-active"
+                onClick={(event) => onAction(
+                  entryState.localReviewEligibility.action,
+                  event,
+                )}
               >
                 {entryState.localReviewEligibility.action} — Eligible
               </button>
             )}
           </div>
         </section>
+        )}
       </main>
     </CanonicalGameFrame>
   );
