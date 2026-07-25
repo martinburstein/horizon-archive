@@ -90,6 +90,17 @@ Replace the preceding coordinator current-control block in place; do not prepend
 
 During A1–W4, do not prepend a new named role-result section to every shared control artifact. In the active spines, queues, scoreboard, rail map, and Demo Increment, replace one compact `Active cycle handoff` block with only the current disposition, exact next role/edge, and hard stop. Put detailed role evidence in the canonical role log and, when the profile requires packet-local authority, the active rail packet. The coordinator replaces the shared active-cycle handoff with the final coordinator control. This rule applies to future cycles; Git preserves prior stacked history.
 
+Use this minimum shared-destination matrix for future role turns:
+
+- every role: canonical role log plus the active rail packet;
+- Advance roles: `ADVANCE_QUEUE.md` and only the selected role's applicable supporting spine;
+- Working roles: `WORKING_QUEUE.md`; W2 may also update the Demo Increment for the actual player-visible delta;
+- Coder roles: `PRODUCTION_READINESS_SPINE.md`;
+- `STORY_RAIL_MAP.md` only when Team position, ordered lead, or rail status changes;
+- `EXPEDITION_SPINE.md`, `ADVANCE_BREADTH_GATE.md`, and `PACKET_SCOREBOARD.md` only when a breadth/convergence gate or Team position changes, otherwise coordinator-only.
+
+Do not update a shared artifact merely to repeat an unchanged handoff. The active packet, role log, team queue, and exact commit are sufficient interruption-recovery evidence.
+
 `NEXT_INSTANCE_HANDOFF.md` is a replace-in-place operational state file, not a cycle diary. Keep it concise enough to read in one pass.
 
 ## Work sizing
