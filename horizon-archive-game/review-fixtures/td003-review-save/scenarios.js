@@ -174,9 +174,7 @@ function fixedBoundary(recovery, statusMessage = "The first incomplete blank bou
     saveDisabled: false,
     note: null,
     recordIntegrity: null,
-    availableActions: [
-      recovery.target === "heading" ? "FOCUS BLANK BOUNDARY" : recovery.target,
-    ],
+    availableActions: ["FOCUS BLANK BOUNDARY"],
     focusIntent: { group: recovery.group, target: "heading" },
     privateWorkCleared: true,
     transientWorkCleared: true,

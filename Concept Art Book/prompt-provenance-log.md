@@ -25,3 +25,10 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Asset and complete prompt/provenance:** [RP-003 expedition provenance carrier reveal](../Visual%20Direction/Production%20Masters/2026-07-26-rp003-provenance-carrier-reveal/PROVENANCE.md).
 - **Mode:** one built-in `image_gen` generation; no retry, variant, or edit.
 - **Status:** spoiler-safe canonical expedition-ownership/provenance/unmarked-unavailability/scale reference only; not runtime integration, not a case or interface model, and not `SC-04-MASTER`.
+
+## 2026-07-26 — RP-003 five-filament retention braid reveal
+
+- **Decision:** close `RP-003 / CM-50 — five independent obligations remain distinct inside one atomic expedition memory`.
+- **Asset and complete prompt/provenance:** [RP-003 five-filament retention braid reveal](../Visual%20Direction/Production%20Masters/2026-07-26-rp003-five-filament-retention-braid-reveal/PROVENANCE.md).
+- **Mode:** one built-in `image_gen` generation; no retry, variant, or edit.
+- **Status:** spoiler-safe canonical five-filament independence/local-memory/invariant-world reference only; not runtime integration, not a save implementation or schema, and not `SC-04-MASTER`.

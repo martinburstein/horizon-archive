@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-26 canonical cycle reveal — RP-003 five-filament retention braid
+
+- **Closed checklist item:** `[x] RP-003 / CM-50 — five independent obligations remain distinct inside one atomic expedition memory`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-26-rp003-five-filament-retention-braid-reveal/rp003-five-filament-retention-braid-v1.png`, with neighboring provenance.
+- **Locked decision:** one compact removable expedition braid retains exactly five physically distinct, non-glowing, individually traceable filaments as one coherent local memory while the immense SC-04 working whole remains unchanged and indifferent.
+- **Status / limit:** spoiler-safe canonical reference only; not runtime-integrated, not a save implementation/schema/evidence model/interface, and not the final SC-04 master. Exact object construction, support, wear, distant forms, and lighting details are non-canonical. No route, reward, access, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## 2026-07-25 canonical cycle reveal — RP-003 neutral bounded-difference material parity
 
 - **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.

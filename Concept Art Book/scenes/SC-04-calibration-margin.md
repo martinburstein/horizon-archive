@@ -1,5 +1,13 @@
 # SC-04 — Calibration Margin
 
+## 2026-07-26 canonical cycle reveal — five-filament retention braid
+
+- **Closed checklist item:** `[x] RP-003 / CM-50 — five independent obligations remain distinct inside one atomic expedition memory`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-26-rp003-five-filament-retention-braid-reveal/rp003-five-filament-retention-braid-v1.png`, with neighboring provenance.
+- **Locked boundary:** exactly five physically distinct, non-glowing expedition filaments remain individually traceable while mechanically retained as one coherent, removable local braid. The compact suit-space object remains inert and physically separate from the immense SC-04 working whole, which neither receives nor responds.
+- **Scale relationship:** a mid-scale low-oblique object/world composition follows the prior landscape-clock and extreme-macro carrier studies without repeating folio, cassette, triptych, leaf, cradle, seal, or doorway arrangements.
+- **Limit:** canonical five-filament independence, local atomic-memory metaphor, expedition ownership, inert physical separation, and greater-whole scale only. It is not runtime-integrated, not a save mechanism/schema/evidence model/interface, and not `SC-04-MASTER`. Exact support surface, braid geometry, retainers, filament materials, wear, terminal anatomy, distant ringed masses, apertures, lights, steam, and circulation forms are non-canonical. No human room, native purpose, route, access, reward, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## 2026-07-26 canonical cycle reveal — expedition provenance carrier
 
 - **Closed checklist item:** `[x] RP-003 / RP003-IE-01 — expedition provenance carrier preserves an honest unavailable-input boundary`.
