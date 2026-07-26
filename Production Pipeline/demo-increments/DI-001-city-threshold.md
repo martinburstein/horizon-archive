@@ -14,10 +14,10 @@
 - **Locked decision:** the bounded extra interval is materially ordinary and equivalent to its neighbors; only sequence and spacing expose the difference. The close first-person material scale and repetition beyond the frame imply an immense continuing whole without reusing the prior wide corridor composition.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. Fine scratches and exact incidental panel subdivisions are non-canonical. No UI, answer, damage, repair priority, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
 
-## Coordinator current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release:** `PASS — RP-003 IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. The accepted Demo now continues from blank CM-00 through explicit orientation, one CM-10 Scene group, three separate any-order observations with Available/Recorded text, safe replay, and disabled/non-dispatchable all-three Eligible review.
-- **Authoritative exact next edge / stop:** integrate explicit review activation plus the complete existing `CM-20`–`CM-23` Python primary/repair/retrieval/fresh-transfer chain through finalized `PY-010`. Stop before CM-30/AI-901 extraction, save, later RP-003 state, RP-004, RP-013, successor, or any world/access/authority effect.
+- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. The accepted Demo now continues through finalized IE-P3, five independent CM-40 review obligations, fresh provenance, one strict atomic local save, exact no-replay CM-50 verified restore, and only the two known write-free returns.
+- **Authoritative exact stop:** SC-04 remains invariant and neither receives nor responds to the record. Stop before onward bearing, an RP-004 destination/opening, RP-013, successor, reward, access, authority, external action, or world response. Await Martin's explicit instruction; do not infer or schedule another shell.
 
 ## 2026-07-25 canonical cycle reveal — RP-003 blank-margin spatial identity
 

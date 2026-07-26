@@ -1,9 +1,9 @@
 # Rail Packet Scoreboard
 
-## Coordinator current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release:** `RP-003 PASS — IN DEMO PARTIAL / RP003-P1-002 + RP003-AESTH-020`. Normal play now includes blank CM-00, explicit orientation, one CM-10 Scene group, separate any-order A/B/sealed observations, textual Available/Recorded states, safe replay, and inactive all-three review eligibility. Team 1 remains complete at RP-012; Team 2 remains at RP-003; the ordered lead is nine packets.
-- **Authoritative exact next edge:** protect and integrate one complete `CM-20`–`CM-23` Python chain from explicit local-work review through strict primary, answer-free repair/blank retry, closed-note retrieval, and genuinely blank transfer to finalized `PY-010`. Stop before CM-30/AI-901 extraction, save, later packets, RP-013, successor, or any reward/world/access/authority effect. Protected missing-gate count remains zero.
+- **Authoritative release:** `RP-003 PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. Normal play now reaches exact finalized IE-P3, five independent CM-40 review obligations, fresh provenance, one strict atomic local save, exact no-replay CM-50 verified restore, and only the two known write-free returns. The archived Team 1/Team 2 positions remain historical; protected missing-gate count remains zero.
+- **Authoritative exact stop:** SC-04 remains invariant and does not receive or respond to the record. No onward bearing, RP-004 destination/opening, RP-013, successor, reward, world/access/authority, or external effect is authorized. Await Martin's explicit instruction before another Commandant shell.
 
 ## A5 result — 2026-07-25
 

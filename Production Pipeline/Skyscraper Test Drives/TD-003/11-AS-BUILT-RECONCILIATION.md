@@ -9,23 +9,25 @@
 | Test drive | `TD-003` |
 | Shell | `SS-RP003-REVIEW-SAVE-v1` |
 | Campaign address | `RP-003 / SC-04 / CM-40-CM-50` |
-| Candidate commit | `5c843f589ba63ceef0d200e2f05b16e12f1fd2ae` |
-| Candidate source chain | Commandant `5d4dd5d` through Image Specialist `5c843f5`, including the Mission return/correction chain |
-| Release disposition | **`REVISE`** |
-| Return owner | Image Specialist / `image_specialist` |
-| Blocking finding | `TD003-INT-001` |
-| Process recommendation | Provisional `TUNE`; record in `PROCESS_CHANGELOG.md` only after a completed release |
+| Released candidate | `3fde325866cf83bc07d7526e5827d07e2ff33bcb` |
+| Candidate source chain | Commandant `5d4dd5d` through Image Specialist correction `3fde325`, including both bounded return/correction chains |
+| Release disposition | **`PASS — AS BUILT RELEASED`** |
+| Accepted landing | exact saved `CM-50 VERIFIED RESTORE`, plus only the two known write-free returns |
+| Resolved finding | `TD003-INT-001` |
+| Process recommendation | `TUNE`; recorded in `Production Pipeline/PROCESS_CHANGELOG.md` |
 
-The candidate is functionally correct and clears every independent automated
-gate, but it does not satisfy the shell's exact representative desktop
-containment contract. At exact CSS `1920 x 1080`, required CM-40 actions extend
-below the viewport and the document and command panel scroll vertically.
-The Intelligence Officer therefore does not release the slice, update the
-accepted playable landing, or accept the reveal yet.
+The corrected candidate satisfies the complete shell. Fresh independent
+release work reran the full game suite, all fifteen readiness validators, the
+production build, one post-build E2E, served-byte identity, and every one of
+the eleven manifest-owned fixture scenarios across four exact CSS layouts.
+At exact DPR-1 `1920 x 1080`, every scenario now fits the document, the world
+remains dominant, all required actions remain inside the viewport, and every
+CM-40 panel has no internal overflow. TD-003 is therefore released.
 
 ## Repository and chain audit
 
-- Starting `HEAD`: `5c843f589ba63ceef0d200e2f05b16e12f1fd2ae`.
+- Release-rerun starting `HEAD`:
+  `3fde325866cf83bc07d7526e5827d07e2ff33bcb`.
 - Expected dedicated stage chain is contiguous and ordered:
   Commandant, Colonel, Operations, Science, Mission `REVISE`, Operations
   correction, Science revalidation, Mission `SHELL READY`, Reconnaissance,
@@ -35,8 +37,14 @@ accepted playable landing, or accept the reveal yet.
   the packet-mapping identity. Operations `123b4b9` and Science `5393646`
   corrected and revalidated the exact distinction before Mission issued
   `e8b7b3f`.
-- Mission shell push and Combat functional push are present. The Quartermaster
-  and Image commits were intentionally local pending this Intelligence gate.
+- Mission shell push and Combat functional push are present. The Quartermaster,
+  initial Image, first Intelligence return, and bounded Image correction form
+  one contiguous local release chain at the rerun edge.
+- Intelligence commit `9e37443` correctly returned exact desktop containment
+  as `TD003-INT-001`. Image correction commit `3fde325` changed only
+  presentation CSS, its Polish Review, and stage metrics; it changed no
+  component, copy, controller, schema, evidence, save, route, world plate, or
+  reveal.
 - Before Intelligence documentation, the only worktree entries were the two
   protected untracked paths. They were not inspected, altered, staged, moved,
   deleted, or committed.
@@ -64,13 +72,13 @@ accepted playable landing, or accept the reveal yet.
 | CM-50 explains integrity, provenance, unavailable input, and no external action | production copy and fixture | PASS |
 | Both known returns are explicit, write-free, adapter-free, and replay-free | controller/App tests and both return fixtures | PASS |
 | Bearing and later rail remain absent | source and `dist` scans | PASS |
-| One group, focus, status, non-color meaning, `44px`, responsive/accessibility states | structural tests plus 44 direct scenario/layout reviews | **REVISE — exact desktop vertical containment fails** |
+| One group, focus, status, non-color meaning, `44px`, responsive/accessibility states | structural tests plus 44 fresh exact scenario/layout reviews, including forced colors and reduced motion | PASS |
 | Offline/local privacy, Tour isolation, no authority/exam guarantee, invariant SC-04 | source/tests/network/fixture scans | PASS |
-| Production caps | JS `1,195,380`; CSS `81,688`; modules `179`; no new runtime media | PASS |
+| Production caps | JS `1,195,380`; CSS `81,704`; modules `179`; no new runtime media | PASS |
 | Closed fixture and launch manifest | exact eleven IDs, fixed loopback `4175`, owned PID lifecycle, no arbitrary state | PASS |
 | Fixture absent from production | source and built marker/path/port/scenario scans | PASS |
 | Content placeholders retired | Quartermaster ledger, copy tests, source scan | PASS |
-| Exactly one reveal candidate | one image and provenance record | PASS AS CANDIDATE; acceptance withheld until release |
+| Exactly one reveal | unchanged image and provenance record | PASS; accepted as spoiler-safe canonical reference only |
 | Variances recorded and unauthorized divergence absent | register below | PASS |
 
 ## Exact save-schema audit
@@ -110,15 +118,15 @@ conditions and are not widened into durable keys.
 
 | Gate | Independent result |
 |---|---|
-| Full game suite | `785/785 PASS`, `9.907s` |
+| Full game suite | `785/785 PASS`, `9.826s` |
 | Readiness validators | `15/15 PASS` |
-| Production build | PASS, `179` modules, `21.72s` |
-| JavaScript | `index-DUDSudk8.js`, `1,195,380` bytes, SHA-256 `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3` |
-| CSS | `index-Dmsam-J8.css`, `81,688` bytes, SHA-256 `00A9C50F467FC704A1C69D0FDBEA3E014253C207E94DC5B2D36AB1BAEDA90DD0` |
-| Budget headroom | JS `244` bytes; CSS `17` bytes; modules `3` |
+| Production build | PASS, `179` modules, `24.84s` |
+| JavaScript | `index-DHPBT_yG.js`, `1,195,380` bytes, SHA-256 `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3` |
+| CSS | `index-DD5Uz-s3.css`, `81,704` bytes, SHA-256 `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B` |
+| Budget headroom | JS `244` bytes; CSS `1` byte; modules `3` |
 | Preview preflight | owned strict `127.0.0.1:5174`, root HTTP `200` |
 | Served identity | root/assets/reload HTTP `200`; JS/CSS byte-identical to `dist` |
-| Complete E2E | exactly one post-build run, `109.143s`, credits reached, all emitted gates true, `runtimeErrors:false` |
+| Complete E2E | exactly one post-build run, `106.8s`, credits reached, all emitted gates true, `runtimeErrors:false` |
 | QA restoration | all incidental E2E-generated tracked captures restored |
 | Fixture exclusion | marker, path, port, config/manifest identity, and scenario IDs absent from production source/`dist` |
 | Cleanup | only owned listeners stopped; ports `5174` and `4175` clear |
@@ -148,35 +156,32 @@ Across all `44` scenario/layout combinations:
 - bearing, RP-004, RP-013, successor, reward, access, authority, or city
   acceptance language did not appear.
 
-Direct Chrome review independently corroborated the first eight scenario
-families and production title at desktop/narrow. The controlled surface
-reported scaled effective viewports (`1920 x 1080` request became
-`2133 x 1200`; `390 x 844` became `434 x 938`). This scaling is the reason
-the exact desktop containment defect was not visible in the earlier Image
-review and is not accepted as a substitute for exact CSS-pixel evidence.
+The release runner used exact Playwright contexts at DPR 1, not a scaled
+responsive override. For each scenario it launched the manifest's exact
+Vite target with one fixed scenario environment, proved that the captured
+process PID owned `4175`, inspected all four layouts, stopped only that PID,
+and proved the port clear before proceeding.
 
-### Blocking exact desktop evidence
+### Resolved exact desktop evidence
 
-At exact CSS `1920 x 1080` in
-`cm40-five-conjunct-ready`:
+Fresh exact CSS `1920 x 1080` measurements after `3fde325`:
 
-```text
-document client:  1920 x 1080
-document scroll:  1920 x 1126
-panel client:     1077
-panel scroll:     1313
+| Scenario family | Document | Panel | Result |
+|---|---:|---:|---|
+| `cm40-five-conjunct-ready` | `1920 x 1080` | `571.5 x 957.9` | all four actions inside viewport; no outer or panel overflow |
+| `cm40-provenance-pending` | `1920 x 1080` | `571.5 x 957.9` | all four actions inside viewport; no outer or panel overflow |
+| `cm40-observation/python/ie/invariant-invalid` | `1920 x 1080` | `571.5 x 484.3–534.3` | one recovery action contained |
+| `cm41-save-committed` | `1920 x 1080` | `571.5 x 435.1` | no player action, transaction state contained |
+| `cm41-write-failed-last-good` | `1920 x 1080` | `571.5 x 975.9` | four actions contained; save remains natively disabled |
+| `cm50-verified-restore` | `1920 x 1080` | `571.5 x 1034.0` | both known returns contained |
+| both returned landings | `1920 x 1080` | `571.5 x 499.8–534.3` | bounded return presentation contained |
 
-REVIEW PROVENANCE                 top 1046.64 / bottom 1104.64
-RETURN TO CIVIC COMPARISON        top 1046.64 / bottom 1104.64
-RETURN TO CITY THRESHOLD          top 1114.64 / bottom 1172.64
-SAVE EXPEDITION NOTE              top 1114.64 / bottom 1172.64
-```
-
-All four required actions are partly or wholly below the exact viewport.
-This violates the shell requirement that the dominant world and complete
-current group/actions fit at representative `1920 x 1080` without outer
-vertical scroll. The same content family also has internal command-panel
-scroll. This is not a platform-only or assistive-technology limitation.
+Every desktop world column was wider than its panel. All `44` exact
+scenario/layout combinations passed heading-first focus, one polite atomic
+status, `>=44px` visible actions, horizontal containment, local `1672 x 941`
+plate identity, no console/page errors, and active forced-colors plus
+reduced-motion emulation. The fixed candidate therefore closes
+`TD003-INT-001` without hiding required content.
 
 ## Variance register
 
@@ -185,15 +190,15 @@ scroll. This is not a platform-only or assistive-technology limitation.
 | `TD003-MC-R01` | Process return evidence, resolved before shell | Operations / Science / Mission | The field-identity conflict was correctly returned and corrected; it is not erased from history and did not reach Marines. |
 | `TD003-IMG-001` | `ACCEPTED IMPROVEMENT` | Image Specialist | `min-width:0` corrects sparse-state horizontal clipping inside shell intent; tests/build/44-layout review pass. |
 | `TD003-IMG-002` | `ACCEPTED IMPROVEMENT` | Image Specialist | Human-readable fixture-only recovery label removes an internal token without state or production change. |
-| `TD003-INT-001` | **`REQUIRED CORRECTION`** | **Image Specialist** | Exact `1920 x 1080` CM-40 required actions extend below the viewport and outer/panel vertical scroll violates the shell. Release is returned. |
+| `TD003-INT-001` | `REQUIRED CORRECTION — RESOLVED` | Image Specialist | Intelligence `9e37443` returned exact `1920 x 1080` containment; presentation-only correction `3fde325` then passed the entire fresh Tier 5 release gate and is accepted. |
 
 No product, canon, campaign, learning, privacy, persistence schema, route,
 world, authority, or later-content divergence was found.
 
 ## Reveal validation
 
-The Intelligence Officer inspected the Image Specialist's exact candidate;
-it was not regenerated.
+The Intelligence Officer reinspected the Image Specialist's exact candidate;
+it was not regenerated or edited.
 
 | Field | Verified value |
 |---|---|
@@ -208,34 +213,34 @@ it was not regenerated.
 
 Original-resolution inspection shows five materially distinct, non-glowing
 traceable strands in one inert local braid; no readable text, UI, route,
-reward, access, authority, person, or visible world response. The asset is a
-valid pending candidate. Because the slice is `REVISE`, reveal acceptance and
-publication are withheld; Image Specialist must not regenerate it while
-correcting `TD003-INT-001`.
+reward, access, authority, person, or visible world response. Its exact
+`1672 x 941`, `1,923,084`-byte identity and SHA-256 remain unchanged. The
+reference is accepted as the one spoiler-safe TD-003 reveal. Canonical
+reference status does not claim runtime integration.
 
 ## Limitations carried forward
 
 1. The inherited City Threshold overview remains temporary SC-04 atmosphere
    and is not `SC-04-MASTER`.
-2. Candidate headroom is only `244` JS bytes and `17` CSS bytes.
+2. Released headroom is only `244` JS bytes and `1` CSS byte.
 3. English is the only integrated locale.
-4. Exact native forced-color, reduced-motion, text-only `200%`, human
-   screen-reader speech, and physical switch hardware were not directly
-   emulated. Deterministic source/tests and width-equivalent layout evidence
-   pass.
+4. Exact forced-color and reduced-motion media states were emulated across
+   all `44` fixture/layout combinations. Human screen-reader speech, physical
+   switch hardware, and platform-native text-only `200%` remain untested;
+   deterministic source/tests and width-equivalent layout evidence pass.
 5. The fixture proves closed in-memory behavior and does not claim Martin's
    real browser persistence; his storage remained untouched.
-6. Chrome's responsive override exposed scaled effective CSS viewports.
-   Exact CSS-pixel headless measurements therefore remain necessary for the
-   desktop containment gate.
+6. Chrome responsive overrides can report scaled effective CSS viewports.
+   Exact DPR-1 CSS-pixel measurement is now required evidence rather than an
+   inferred browser-override size.
 
-## Process metrics and provisional recommendation
+## Process metrics and recommendation
 
-`STAGE-METRICS.json` preserves all thirteen predecessor entries, including
-the Mission `REVISE` and both correction stages, and resolves the Image
-commit to `5c843f5`. Those stages used `6,700,302ms` (`111.67m`) before
-Intelligence. Combat was the longest implementation stage (`28.01m`); Image
-was the longest presentation stage (`26.21m`).
+`STAGE-METRICS.json` preserves all predecessor entries, including the Mission
+return, first Intelligence `REVISE`, and Image correction. The fifteen stages
+before this release rerun used `10,806,936ms` (`180.12m`). Combat remained the
+longest initial implementation stage (`28.01m`); the returned Image correction
+used `39.47m` after its interrupted no-filesystem-change attempt.
 
 Artifact utility:
 
@@ -249,7 +254,7 @@ Artifact utility:
 - explicit return routing prevented the mapping-ID conflict from reaching
   construction, then gave this exact presentation defect one bounded owner.
 
-Provisional recommendation: **`TUNE`**, not redesign. Keep all eleven roles,
+Recommendation: **`TUNE`**, not redesign. Keep all eleven roles,
 the Mission shell, return routing, dedicated commits, functional/content/
 presentation gates, independent release, and exact reveal. For the next
 completed release retrospective:
@@ -263,51 +268,27 @@ completed release retrospective:
 4. preserve the ledger's explicit self-reference convention for a stage's
    own commit.
 
-Do not write this recommendation into `PROCESS_CHANGELOG.md` until the
-returned correction passes and TD-003 completes a release.
+The completed-release retrospective is now recorded in
+`Production Pipeline/PROCESS_CHANGELOG.md`.
 
 ## Release disposition
 
-**`REVISE`**
+**`PASS — AS BUILT RELEASED`**
 
-The functional build, content, save schema, privacy, fixture, reveal
-candidate, full suite, validators, build, served identity, and E2E all pass.
-`TD003-INT-001` is nevertheless a fixed shell failure and blocks
-`AS BUILT RELEASED`.
+The released normal campaign boundary now reaches exact five-conjunct CM-40
+review, fresh provenance, one strict atomic local save, exact no-replay CM-50
+verified restore, and only the two known write-free returns. SC-04 remains
+invariant and does not receive or respond to the record. The hard stop remains
+before any bearing, RP-004 destination/opening, RP-013, successor, reward,
+access, authority, external action, or world response.
 
-No playable-demo, story-rail, packet-current-control, production-readiness,
-or other master release artifact is advanced by this reconciliation.
+## Exact next action
 
-## Exact Image Specialist return
-
-- **Stage / agent:** Image Specialist / `image_specialist`
-- **Shell:** `SS-RP003-REVIEW-SAVE-v1`
-- **Starting authority:** candidate commit `5c843f5`, this independent
-  reconciliation, and exact `TD003-INT-001` measurements above
-- **Bounded objective:** make the full CM-40 current group and every required
-  action fit inside exact CSS `1920 x 1080` with no outer vertical or
-  horizontal scroll, while preserving natural laptop/narrow/effective-`200%`
-  reflow
-- **Permitted scope:** presentation-only CSS/layout adjustment and focused
-  presentation tests; update `10-POLISH-REVIEW.md` and stage metrics
-- **Do not change:** player copy, controller, schema, evidence, storage,
-  state graph, actions, focus destination classes, world plate/crop, route,
-  fixture identities, reveal image/provenance, canon, hard stop, or runtime
-  media
-- **Caps:** JS `<=1,195,624`; CSS `<=81,705`; modules `<=182`; zero new
-  runtime media
-- **Acceptance evidence:** exact CSS `1920 x 1080` document
-  `scrollWidth==clientWidth` and `scrollHeight==clientHeight`; all four CM-40
-  actions fully within the viewport; command panel has no hidden required
-  content/action; all eleven scenarios remain horizontally contained at
-  desktop/laptop/narrow/effective-`200%`; every visible action `>=44px`;
-  focus/non-color/forced-color/reduced-motion contracts remain exact;
-  focused tests and production build/caps pass
-- **Reveal:** preserve the existing exact candidate; do not generate another
-- **Required disposition:** `PRESENTATION COMPLETE — REVALIDATED`,
-  `REVISE`, or `HOLD`
-- **Next recipient:** Intelligence Officer for a fresh complete Tier 5
-  release; prior passing gates are evidence, not a substitute
+Await Martin's explicit instruction. Do not begin a Commandant stage, choose
+an RP-004 destination, infer an opening, or schedule recurring work. If Martin
+authorizes another manual test drive, begin with the Commandant against this
+released synchronized baseline and preserve the no-successor hard stop until
+that role establishes a new bounded purpose.
 
 ## Protected-work confirmation
 

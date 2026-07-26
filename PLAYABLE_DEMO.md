@@ -19,9 +19,17 @@ bounded `RP003-IE-01` expedition information-extraction floor: genuinely blank
 primary, answer-free repair and blank retry when needed, zero-credit
 provenance interlude, closed-note retrieval, distinct blank transfer with an
 honest unavailable-input boundary, and a no-action finalized `IE-P3` landing.
-It stops before CM-40, review/save, onward bearing, RP-004, RP-013, a
-successor, reward, access, authority, external action, or any physical world
-response.
+From there, one explicit review preserves five independently verified
+obligations, requires fresh provenance, and can atomically replace one strict
+sanitized local expedition note. Exact read-back reaches no-replay
+`CM-50 VERIFIED RESTORE`; failed writes preserve the last verified bytes.
+Players may use only the two known write-free returns to Civic Comparison or
+City Threshold.
+
+The accepted boundary stops before any onward bearing, RP-004 destination or
+opening, RP-013, successor, reward, access, authority, external action, or
+physical world response. SC-04 neither receives nor responds to the local
+record.
 
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.

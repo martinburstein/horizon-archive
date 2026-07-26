@@ -1,5 +1,14 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-26 — Intelligence Officer: TD-003 as-built release
+
+- **Disposition:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1` on corrected candidate `3fde325866cf83bc07d7526e5827d07e2ff33bcb`.
+- **Independent gate:** full game `785/785`; readiness validators `15/15`; production build `179` modules; exactly one post-build E2E reached credits with every emitted gate true and `runtimeErrors:false`; isolated preview root/reload and JS/CSS served-byte identity passed; E2E QA captures were restored; only owned listeners were stopped and `5174`/`4175` were clear.
+- **Exact presentation revalidation:** the manifest-owned storage-free fixture passed all eleven scenarios at DPR-1 `1920x1080`, `1366x768`, `390x844`, and `768x900`. The document and panel are contained, world remains dominant on desktop, all actions remain within the viewport and measure at least `44px`, heading-first focus/one status/plate identity/console silence pass, and forced-colors plus reduced-motion media states were active. This resolves `TD003-INT-001`.
+- **Released identity:** JavaScript `index-DHPBT_yG.js`, `1,195,380` bytes, SHA-256 `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3`; CSS `index-DD5Uz-s3.css`, `81,704` bytes, SHA-256 `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B`.
+- **Boundary:** exact CM-40 review, fresh provenance, atomic local save, no-replay CM-50 restore, and only the two known write-free returns are accepted. SC-04 remains invariant. No bearing, RP-004 destination/opening, RP-013, successor, reward, access, authority, external action, or world response is open.
+- **Next:** await Martin's explicit instruction. No recurring automation is active and no new Commandant shell is authorized.
+
 ## 2026-07-25 — Working Coder W4: RP003-AESTH-020 textual Available state
 
 - **Mode / verdict:** `aesthetic-polish` / `RP003-AESTH-020 RESOLVED — TEXTUAL AVAILABLE/RECORDED PARITY / FINAL DEMO REFRESHED / COORDINATOR NEXT`.

@@ -1,5 +1,11 @@
 # RP-003 — Calibration Margin
 
+## Intelligence Officer current control — 2026-07-26
+
+- **Released boundary:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. Exact finalized IE-P3 may enter one five-conjunct CM-40 review, require fresh provenance, atomically replace one strict sanitized local expedition record, revalidate exact read-back, and land at no-replay `CM-50 VERIFIED RESTORE`.
+- **Recovery / returns:** invalid observation, Python, extraction, invariant, private, Tour, malformed, stale, forged, partial, extra, and failed-write paths fail closed. A failed write preserves last verified bytes. Only the known write-free Civic Comparison and City Threshold returns exist.
+- **Hard stop:** SC-04 remains invariant and neither receives nor responds to the record. No onward bearing, RP-004 destination/opening, RP-013, successor, reward, access, authority, external action, or world response is open. Await Martin's explicit instruction before another shell.
+
 ## 2026-07-25 canonical cycle reveal — neutral bounded-difference material parity
 
 - **Closed checklist item:** `[x] SC-04 / CM-10 survey — neutral bounded-difference material parity`.

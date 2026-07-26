@@ -209,9 +209,30 @@
           "sha256": "3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B"
         }
       },
-      "commit": "SELF:IMAGE_SPECIALIST_CORRECTION_COMMIT",
-      "commitConvention": "The dedicated commit containing this ledger entry is the immutable Image Specialist correction commit; storing its own hash here would require a recursive successor commit.",
+      "commit": "3fde325866cf83bc07d7526e5827d07e2ff33bcb",
       "synchronization": "local-only-no-push"
+    },
+    {
+      "sequence": 16,
+      "stage": "Intelligence Officer release rerun",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-26T12:10:00.0000000Z",
+      "endedAt": "2026-07-26T12:34:54.3878095Z",
+      "durationMs": 1494388,
+      "disposition": "PASS — AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/11-AS-BUILT-RECONCILIATION.md",
+      "releasedCandidate": "3fde325866cf83bc07d7526e5827d07e2ff33bcb",
+      "resolvedFinding": "TD003-INT-001",
+      "releaseEvidence": {
+        "gameTests": "785/785",
+        "readinessValidators": "15/15",
+        "productionModules": 179,
+        "fixtureLayouts": "11x4",
+        "completeE2ERuns": 1
+      },
+      "commit": "SELF:INTELLIGENCE_OFFICER_RELEASE_RERUN_COMMIT",
+      "commitConvention": "The dedicated commit containing this ledger entry is the immutable Intelligence Officer release-rerun commit; storing its own hash here would require a recursive successor commit.",
+      "synchronization": "push-main-and-verify-after-commit"
     }
   ]
 }
