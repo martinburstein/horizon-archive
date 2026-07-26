@@ -220,6 +220,54 @@
       "commit": "PENDING_QUARTERMASTER_COMMIT",
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 13,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-26T16:50:00.0000000Z",
+      "endedAt": "2026-07-26T17:12:37.2778287Z",
+      "durationMs": 1357278,
+      "disposition": "PRESENTATION COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "4b7a9ec6213401ffb2998933617cee9d279b4413",
+      "assetPlaceholderDisposition": "TD004-ASSET-SC05-PLACEHOLDER retained as temporary inherited atmosphere; sole SC-05 reveal accepted as canonical reference only and not runtime-integrated",
+      "reveal": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "runtimeStatus": "canonical physical-layout reference only"
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CAdIIK0s.js",
+          "bytes": 1246963,
+          "sha256": "6CF04ECF500B0922864CF6DFD3A2C61E39ADE73527F51CEB0AD5806A81CDBF94"
+        },
+        "css": {
+          "file": "index-BxET_qxJ.css",
+          "bytes": 84962,
+          "sha256": "DF87C5E5A91310463D9AB522192B0E44106E2C2911B986F360B477F744EBF871"
+        },
+        "modules": 182
+      },
+      "validation": {
+        "focusedConnected": "108/108",
+        "fullGame": "804/804",
+        "readinessValidators": "15/15",
+        "budget": "PBA-TD004-v1 PASS",
+        "liveFixtureStates": 5,
+        "liveFixtureViewports": 5,
+        "horizontalOverflowFailures": 0,
+        "clippedControlFailures": 0,
+        "minimumControlCssPx": 44
+      },
+      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commitConvention": "The dedicated Image Specialist commit containing this review and ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
     }
   ]
 }

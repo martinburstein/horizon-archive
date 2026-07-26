@@ -30,6 +30,11 @@ test("TD004 renderer owns one heading, one polite status, blank native forms and
 
 test("TD004 responsive, target, forced-color and reduced-motion rules are explicit", () => {
   assert.match(styles, /\.three-current-reach/);
+  assert.match(styles, /\.three-current-reach \.three-current-world \{[\s\S]*?aspect-ratio: auto/);
+  assert.match(styles, /\.three-current-reach \.three-current-panel \{[\s\S]*?grid-template-columns: minmax\(0, 1fr\)/);
+  assert.match(styles, /\.three-current-actions \{[\s\S]*?position: sticky/);
+  assert.match(styles, /\.three-current-actions button\[data-action-id\^="SUBMIT "\]/);
+  assert.match(styles, /\.three-current-world \.city-world-plate-native \{[\s\S]*?display: block/);
   assert.match(styles, /min-height: 44px/);
   assert.match(styles, /@media \(max-width: 1279px\)/);
   assert.match(styles, /@media \(max-width: 520px\)/);

@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-26 canonical cycle reveal — RP-004 three-current capped return
+
+- **Closed checklist item:** `[x] RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`, with neighboring provenance.
+- **Locked decision:** porous suspended-matter handling, tensioned cyclic-pressure handling, and jointed conducted-heat handling remain equal, materially distinct, and individually traceable into one low, broad, glass-ceramic-capped apparent common return while its purpose, category, destination, route, authority, and response remain unknown.
+- **Status / limit:** spoiler-safe canonical physical-layout reference only; not runtime-integrated and not the final SC-05 master. Exact generated component anatomy is non-canonical. No pipe, road, canal, bridge, rail, platform, human architecture, control, purpose, route, access, reward, authority, world response, hidden lore, RP-005 content, RP-013, successor, or post-ending content is authorized.
+
 ## 2026-07-26 canonical cycle reveal — RP-003 five-filament retention braid
 
 - **Closed checklist item:** `[x] RP-003 / CM-50 — five independent obligations remain distinct inside one atomic expedition memory`.

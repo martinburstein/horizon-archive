@@ -4,6 +4,13 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-07-26 — RP-004 three-current capped-return reveal
+
+- **Decision:** close `RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.
+- **Asset and complete prompt/provenance:** [RP-004 three-current capped-return reveal](../Visual%20Direction/Production%20Masters/2026-07-26-rp004-three-current-capped-return-reveal/PROVENANCE.md).
+- **Mode:** exactly one built-in `image_gen` generation; no edit, retry, or variant.
+- **Status:** spoiler-safe canonical physical-layout reference only; not runtime-integrated and not the approved `SC-05-PANORAMA-MASTER`.
+
 ## 2026-07-15 — Visual strategy migration
 
 - **Decision:** replace retro illustrated/pixel production targets with premium cinematic photorealism.

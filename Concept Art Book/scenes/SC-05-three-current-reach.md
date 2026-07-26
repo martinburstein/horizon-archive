@@ -1,13 +1,20 @@
 # SC-05 — Three-Current Reach
 
+## 2026-07-26 canonical cycle reveal — three-current capped return
+
+- **Closed checklist item:** `[x] RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`, with neighboring provenance.
+- **Locked decision:** porous suspended-matter handling, tensioned cyclic-pressure handling, and jointed conducted-heat handling remain equal, materially distinct, and individually traceable into one low, broad, glass-ceramic-capped apparent common return.
+- **Limit:** spoiler-safe physical-layout reference only; not runtime-integrated and not `SC-05-PANORAMA-MASTER`. Exact carrier cross-sections, apertures, cap, collars, fasteners, lights, grooves, and maintenance details are non-canonical and define no pipe, road, canal, bridge, rail, platform, human architecture, mechanism, purpose, route, access, destination, authority, response, hidden lore, RP-005 content, RP-013, successor, or post-ending content.
+
 ## Identity
 
 - **Scene ID:** `SC-05`
 - **Rail Packet:** `RP-004 — Three-Current Reach`
 - **Player-facing survey name:** Three-Current Reach (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / broad exchange reach beyond the surveyed civic margin
-- **Production status:** Brief — A2 invariant-landscape sequence and premium panoramic-master plan locked; no final art
-- **Image:** No image selected or generated. Existing City Beneath concepts may provide only evidence of subsurface scale and motivated geothermal depth; their composition, architecture, people, platforms, props, and palette are not templates.
+- **Production status:** Brief plus one canonical physical-layout reference; no final art or approved production master
+- **Image:** Canonical layout reference: `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`. It does not replace the future production master/crop/mask/effect package. Existing City Beneath concepts may provide only evidence of subsurface scale and motivated geothermal depth; their composition, architecture, people, platforms, props, and palette are not templates.
 - **Purpose:** Present three physically distinct current-and-handling relations and one apparent common return as monumental collective work while observation, Python execution, save, and return leave the live landscape unchanged.
 
 ## Functional landscape and collective movement

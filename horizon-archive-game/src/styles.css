@@ -2354,24 +2354,60 @@ h1 {
   overflow: hidden;
 }
 
-.three-current-world {
+.three-current-reach .three-current-world {
   min-height: 0;
   height: 100%;
+  aspect-ratio: auto;
+  border-right: 1px solid #4d4b46;
 }
 
-.three-current-panel {
+.three-current-world::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(5 7 12 / 4%) 54%, rgb(5 7 12 / 58%)),
+    linear-gradient(0deg, rgb(5 7 12 / 44%), transparent 24%);
+}
+
+.three-current-reach .three-current-panel {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: start;
   gap: 12px;
   max-height: calc(100dvh - 46px);
   overflow-y: auto;
   padding: 18px;
+  border-top: 0;
+  background: linear-gradient(145deg, #111622, #090b13 42%);
+  scrollbar-gutter: stable;
 }
 
 .three-current-panel h1,
 .three-current-panel h2,
 .three-current-panel p {
   margin-block: 0;
+}
+
+.three-current-heading {
+  display: grid;
+  gap: 7px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #6c5a41;
+}
+
+.three-current-heading .eyebrow {
+  margin: 0;
+  color: #d4b778;
+  font-size: .75rem;
+}
+
+.three-current-heading h1 {
+  max-width: 18ch;
+  font-size: clamp(1.65rem, 2.3vw, 2.65rem);
+  line-height: 1.04;
+  text-wrap: balance;
 }
 
 .three-current-form {
@@ -2421,6 +2457,9 @@ h1 {
 .three-current-review li {
   display: grid;
   gap: 4px;
+  padding: 9px 10px;
+  border-left: 2px solid #9a6c3d;
+  background: rgb(255 242 200 / 4%);
 }
 
 .three-current-actions button,
@@ -2428,6 +2467,18 @@ h1 {
 .three-current-panel textarea {
   min-width: 44px;
   min-height: 44px;
+}
+
+.three-current-actions {
+  position: sticky;
+  z-index: 2;
+  bottom: -18px;
+  padding: 10px 0 18px;
+  background: linear-gradient(0deg, #090b13 76%, transparent);
+}
+
+.three-current-actions button[data-action-id^="SUBMIT "] {
+  grid-column: 1 / -1;
 }
 
 .three-current-panel :focus-visible {
@@ -2443,12 +2494,19 @@ h1 {
     overflow: visible;
   }
 
-  .three-current-world {
+  .three-current-reach .three-current-world {
     height: auto;
     aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid #4d4b46;
   }
 
-  .three-current-panel {
+  .canonical-game-frame[data-canonical-layout="narrow"] .three-current-world .city-world-plate-native {
+    display: block;
+    object-fit: cover;
+  }
+
+  .three-current-reach .three-current-panel {
     max-height: none;
     overflow: visible;
   }
@@ -2473,6 +2531,10 @@ h1 {
     border-color: CanvasText;
     background: Canvas;
     color: CanvasText;
+  }
+
+  .three-current-world::after {
+    display: none;
   }
 
   .three-current-panel :focus-visible {
