@@ -1,5 +1,5 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
-import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
+import threeCurrentReachImage from "../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { threeCurrentReachActions } from "./ThreeCurrentReachNormal.js";
 
@@ -421,7 +421,7 @@ export function ThreeCurrentReach({
         <section className="city-world three-current-world" aria-label={`${state.boardState} invariant world`}>
           <img
             className="city-world-plate city-world-plate-native"
-            src={cityOverviewImage}
+            src={threeCurrentReachImage}
             alt={worldAlt}
           />
         </section>

@@ -4,6 +4,22 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-07-26 — RP-004 SC-05 deterministic runtime master
+
+- **Decision:** correct `TD004-VAR-001` by retiring the inherited City
+  Threshold placeholder and directly integrating one shell-compliant SC-05
+  runtime presentation master.
+- **Asset and complete derivation/provenance:** [SC-05 Three-Current Reach
+  runtime master](../Visual%20Direction/Production%20Masters/2026-07-26-rp004-three-current-runtime-master/PROVENANCE.md).
+- **Mode:** deterministic local Pillow `12.2.0` RGB/Lanczos resize,
+  one-pixel lower-edge trim, and q100 exact-RGB WebP encode from the exact
+  already-generated reveal; no generation, inpainting, cleanup, compositing,
+  sharpening, or semantic edit.
+- **Status:** approved invariant TD-004 SC-05 runtime presentation master
+  pending Image Specialist revalidation and fresh Intelligence release. It
+  does not claim native 4K source detail or alter the reveal's unchanged
+  reference-only status.
+
 ## 2026-07-26 — RP-004 three-current capped-return reveal
 
 - **Decision:** close `RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.

@@ -1,5 +1,13 @@
 # SC-05 — Three-Current Reach
 
+## 2026-07-26 TD004-VAR-001 runtime-master correction
+
+- **Runtime master:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`, with neighboring complete provenance.
+- **Identity:** `3840 x 2160`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
+- **Derivation boundary:** deterministic, non-generative q100 WebP derivative of the exact one existing reveal; zero added generations, no semantic edit, and no claim of native 4K source detail.
+- **Runtime approval:** approved for the invariant TD-004 SC-05 world presentation after direct import, grayscale structural review, registered responsive crops, alternative text, no-human/artifact review, emitted/served identity, tests, and `PBA-TD004-v1`.
+- **Remaining gate:** Image Specialist presentation/reveal revalidation and fresh Intelligence release. The source reveal remains byte-for-byte unchanged and reference-only.
+
 ## 2026-07-26 canonical cycle reveal — three-current capped return
 
 - **Closed checklist item:** `[x] RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.
@@ -13,8 +21,8 @@
 - **Rail Packet:** `RP-004 — Three-Current Reach`
 - **Player-facing survey name:** Three-Current Reach (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / broad exchange reach beyond the surveyed civic margin
-- **Production status:** Brief plus one canonical physical-layout reference; no final art or approved production master
-- **Image:** Canonical layout reference: `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`. It does not replace the future production master/crop/mask/effect package. Existing City Beneath concepts may provide only evidence of subsurface scale and motivated geothermal depth; their composition, architecture, people, platforms, props, and palette are not templates.
+- **Production status:** Brief plus one canonical physical-layout reference and one approved deterministic TD-004 runtime presentation master; native-detail source/crop/mask/effect package remains future work
+- **Image:** Runtime master: `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`. Source layout reference: `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`. The runtime derivative does not claim native 4K source detail or complete the future premium source/crop/mask/effect package. Existing City Beneath concepts may provide only evidence of subsurface scale and motivated geothermal depth; their composition, architecture, people, platforms, props, and palette are not templates.
 - **Purpose:** Present three physically distinct current-and-handling relations and one apparent common return as monumental collective work while observation, Python execution, save, and return leave the live landscape unchanged.
 
 ## Functional landscape and collective movement
@@ -133,4 +141,8 @@ Also reject fantasy ornament, mushroom/coral shorthand, magical crystals, lava s
 - `PASS` — three specialist material traditions, later shared compatibility, and maintained-present repair provide collective-movement evidence without inventing an institution, author, occupation, or social doctrine.
 - `PASS` — source resolution, crops, masks, effects, reduced motion, responsive containment, accessibility, provenance, and artifact-cleanup acceptance are specified without generating final production art.
 
-Production status remains **Brief**. A2 creates no raster, production asset, curriculum/workload mapping, puzzle answer, code, live route, Machine definition, RP-005 content, or hidden-lore change.
+Production status is **Brief plus approved deterministic TD-004 runtime
+presentation master**. The runtime approval does not claim a native-detail
+premium source/crop/mask/effect package. A2 created no raster, production
+asset, curriculum/workload mapping, puzzle answer, code, live route, Machine
+definition, RP-005 content, or hidden-lore change.

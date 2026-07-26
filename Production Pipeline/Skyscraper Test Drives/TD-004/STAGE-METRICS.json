@@ -329,9 +329,64 @@
         "generationCount": 1,
         "status": "validated unchanged; reference-only; acceptance and publication held pending release"
       },
-      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commit": "abad806fd103be7768ef1af567b6736224b861a0",
       "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; push and release synchronization withheld"
+    },
+    {
+      "sequence": 15,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-07-26T17:40:00.0000000Z",
+      "endedAt": "2026-07-26T17:59:58.5161392Z",
+      "durationMs": 1198516,
+      "disposition": "CONTENT COMPLETE - TD004-VAR-001 CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "abad806fd103be7768ef1af567b6736224b861a0",
+      "returnOwner": "Image Specialist / image_specialist",
+      "variance": {
+        "id": "TD004-VAR-001",
+        "classification": "REQUIRED CORRECTION - IMPLEMENTED, NOT YET ACCEPTED",
+        "correction": "Retired inherited City Threshold placeholder and directly imported one provenanced deterministic SC-05 runtime master derived from the exact unchanged single reveal with zero added generations."
+      },
+      "runtimeMaster": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp",
+        "dimensions": "3840 x 2160",
+        "bytes": 2163752,
+        "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F",
+        "sourceRevealStatus": "byte-identical and reference-only",
+        "additionalGenerationCount": 0,
+        "native4kDetailClaim": false
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-C8qIMjxS.js",
+          "bytes": 1247036,
+          "sha256": "ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4"
+        },
+        "css": {
+          "file": "index-BxET_qxJ.css",
+          "bytes": 84962,
+          "sha256": "DF87C5E5A91310463D9AB522192B0E44106E2C2911B986F360B477F744EBF871"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "td004Connected": "33/33",
+        "fullGame": "805/805",
+        "readinessValidators": "15/15",
+        "buildSeconds": 16.52,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/JS/CSS/SC-05 master HTTP 200; all served bytes and hashes identical to dist; owned preview stopped; port clear",
+        "fixtureExclusion": "PASS",
+        "sourceRevealIntegrity": "unchanged SHA-256 CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F; exactly one generation"
+      },
+      "commit": "PENDING_QUARTERMASTER_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Quartermaster correction commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; returned to Image Specialist"
     }
   ]
 }

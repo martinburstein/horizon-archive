@@ -15,37 +15,43 @@ No recurring automation is active. Do not schedule another shell.
 - Shell: `SS-RP004-THREE-CURRENT-v1`
 - Slice: `TD-004-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
-- Candidate: Image Specialist commit
-  `57fe57ccd2d571af5f341181d78c0a9cbe8d9143`
+- Candidate: dedicated Quartermaster correction commit; resolve immutable
+  hash from Git history
 - Released functional base / current `origin/main`:
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`
 - Intelligence disposition: **`REVISE - NOT AS BUILT RELEASED`**
-- Blocking finding: `TD004-VAR-001`
-- Classification: **`REQUIRED CORRECTION`**
-- Return owner: Quartermaster / `quartermaster`
+- Finding: `TD004-VAR-001`
+- Classification:
+  **`REQUIRED CORRECTION - IMPLEMENTED, NOT YET ACCEPTED`**
+- Return owner: Image Specialist / `image_specialist`
 - Full evidence:
   `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
 
 TD-003 remains the accepted released playable boundary. TD-004 is not
 `AS BUILT RELEASED`; no playable-demo, rail, packet, expedition, curriculum,
 gameplay, visual-master, or successor control advances from this candidate.
-Do not push or publish this candidate.
+Do not push or publish this candidate before Image Specialist revalidation
+and fresh Intelligence release.
 
 ## Passing evidence retained for revalidation
 
-- focused TD-004 `19/19`;
-- related TD-003/TD-004 `134/134`;
-- full game `804/804`;
+- corrected TD-004 connected suite `33/33`;
+- full game `805/805`;
 - readiness validators `15/15`;
-- build `182` modules in `14.02s`;
-- JS `index-CAdIIK0s.js`, `1,246,963` bytes, SHA-256
-  `6CF04ECF500B0922864CF6DFD3A2C61E39ADE73527F51CEB0AD5806A81CDBF94`;
+- build `183` modules in `16.52s`;
+- JS `index-C8qIMjxS.js`, `1,247,036` bytes, SHA-256
+  `ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4`;
 - CSS `index-BxET_qxJ.css`, `84,962` bytes, SHA-256
   `DF87C5E5A91310463D9AB522192B0E44106E2C2911B986F360B477F744EBF871`;
-- aggregate runtime media `19,372,371` bytes; new runtime media `0`;
+- directly imported SC-05 master
+  `sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp`,
+  `2,163,752` bytes, SHA-256
+  `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`;
+- aggregate runtime media `21,536,123` bytes; new runtime media
+  `2,163,752`;
 - `PBA-TD004-v1 PASS`;
-- root, reload, fallback, JS, and CSS HTTP `200`, with served JS/CSS
-  byte/hash-identical to `dist`;
+- root, JS, CSS, and SC-05 master HTTP `200`, with served bytes/hashes
+  identical to `dist`;
 - exactly one complete post-build non-overlapping E2E in `93.809s`, all
   emitted gates true, credits reached, `runtimeErrors:false`;
 - five representative closed fixture states across 20 exact DPR-1
@@ -58,26 +64,28 @@ Do not push or publish this candidate.
 - all 69 incidental tracked E2E captures were restored; owned ports `4176`
   and `5184` are clear; and
 - the one reveal's exact hash, dimensions, provenance, and unchanged
-  reference-only status pass, but release acceptance/publication is held.
+  reference-only status pass; correction added zero generations.
 
-## Blocking exact evidence
+## Correction exact evidence
 
-The shell requires final release to contain one shell-compliant SC-05
-first-person world presentation with provenance and honest runtime identity.
-Requirement 25 further requires maximum-quality, causally legible SC-05 with
-the three distinct current/handling relations and capped apparent return.
+Quartermaster retired `TD004-ASSET-SC05-PLACEHOLDER`.
+`ThreeCurrentReach.jsx` now directly imports a separately registered
+`3840 x 2160` runtime master deterministically derived from the exact existing
+single reveal. Neighboring provenance records Pillow `12.2.0`, Lanczos
+resampling, a one-pixel lower-edge trim, q100 WebP encoding, crop zones,
+grayscale structural review, invariance, accessibility text, and the
+no-human/no-authority boundary. It explicitly disclaims native 4K source
+detail.
 
-The current runtime instead directly imports the inherited
-`city-threshold-overview-master.png`. Quartermaster records
-`TD004-ASSET-SC05-PLACEHOLDER` as temporarily retained, not satisfying the
-SC-05 brief, and not an SC-05 master. Image Specialist likewise records that
-no runtime import or media byte changed and that the plate remains temporary.
-The SC-05 production panorama is absent.
+The exact reveal source remains byte-for-byte unchanged, reference-only,
+`1672 x 941`, `2,764,920` bytes, SHA-256
+`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`,
+with generation count exactly `1`. No second generation, edit, or replacement
+is authorized.
 
-The single `1672 x 941` reveal remains a valid unchanged physical-layout
-reference, but it is explicitly reference-only and below the scene sheet's
-production minimum. It is not eligible as the runtime master, and no second
-reveal generation is authorized.
+The correction is not a release. Image Specialist must independently
+revalidate the corrected presentation and unchanged reveal; fresh
+Intelligence must then classify `TD004-VAR-001`.
 
 ## Continuing protections
 
@@ -90,7 +98,7 @@ reveal generation is authorized.
   RP-013, successor, reward, access, identity, permission, authority,
   external action, or world response.
 - Preserve the exact existing reveal unchanged and reference-only; do not
-  generate a replacement or second candidate.
+  generate, edit, replace, or publish a second candidate.
 - Never open or infer from the hidden-lore vault.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
@@ -100,15 +108,12 @@ reveal generation is authorized.
 
 ## Exact next action
 
-Resume only the **Quartermaster** at `TD004-VAR-001`. Retire
-`TD004-ASSET-SC05-PLACEHOLDER` by selecting and directly integrating one
-approved shell-compliant SC-05 first-person runtime master with complete
-provenance and honest identity inside `PBA-TD004-v1`; prove the three
-distinct current/handling relations and capped apparent return,
-invariant/no-human boundary, responsive accessibility, source import,
-emitted bytes/hashes, relevant tests, build, budget, and production
-exclusion. If no eligible asset exists, issue a formal bounded variance
-instead of claiming `CONTENT COMPLETE`. Preserve the existing single reveal
-unchanged and reference-only. Then return through Image Specialist
-presentation revalidation before a fresh complete Intelligence Tier 5. Do
-not begin a new Commandant shell.
+Resume only the **Image Specialist** from the dedicated Quartermaster
+correction commit. Revalidate the directly imported SC-05 runtime master at
+required wide, narrow, and effective-200% presentations; confirm all three
+structural current/handling relations, the capped apparent return, crop
+registration, alternative text, invariance, no-human/no-authority boundary,
+production identity, and `PBA-TD004-v1`. Revalidate the existing single
+reveal byte-for-byte unchanged and reference-only. Generate no second image.
+Record `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`, then return to a fresh
+complete Intelligence Tier 5. Do not begin a new Commandant shell.
