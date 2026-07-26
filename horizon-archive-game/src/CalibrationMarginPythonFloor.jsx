@@ -94,7 +94,7 @@ const suppliedCases = Object.freeze({
 
 function actionLabel(actionId) {
   if (actionId === "BEGIN_EXTRACTION") {
-    return "BEGIN EXPEDITION EXTRACTION CHECK";
+    return "BEGIN FRESH EXTRACTION RECORD";
   }
   return calibrationMarginPythonActionLabels[actionId] ?? actionId;
 }

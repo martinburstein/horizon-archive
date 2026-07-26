@@ -96,9 +96,13 @@ test("IE-EXP-003/007/010/013/017 blankness and answer-free repair have no defaul
 });
 
 test("IE-EXP-014/019/029/032/033 UI has silent course ownership and hard stop", () => {
-  assert.match(view, /EXPEDITION COURSE SOURCE/);
-  assert.match(view, /course material actually supplied/i);
+  assert.match(view, /EXPEDITION TRAINING CASE \/\/ LOCAL/);
+  assert.match(view, /Supplied input:/);
+  assert.match(view, /Output record:/);
+  assert.match(view, /Unavailable input:/);
+  assert.match(view, /Provenance:/);
   assert.match(view, /Course-authored practice runs offline on this device/);
+  assert.match(view, /not City evidence or a live Microsoft Foundry or Content/);
   assert.match(view, /no onward action is available/i);
   assert.doesNotMatch(
     view,
@@ -108,4 +112,45 @@ test("IE-EXP-014/019/029/032/033 UI has silent course ownership and hard stop", 
     view,
     /CM-40|SAVE EXPEDITION NOTE|MARK ONWARD|RP-004|RP-013|onWorld|hotspot|mask|relight/i,
   );
+});
+
+test("Quartermaster production copy retires raw evaluator labels without marking an answer", () => {
+  const expectedChoiceKeys = [
+    "process_supplied_content_only",
+    "process_every_referenced_source_even_when_not_supplied",
+    "infer_the_missing_source_from_the_supplied_images",
+    "schema_aligned_structured_fields_with_provenance",
+    "return_a_free_form_summary_without_provenance",
+    "return_schema_fields_without_source_links",
+    "preserve_unavailable_field_as_null_do_not_infer",
+    "record_the_unavailable_field_as_a_negative_result",
+    "infer_the_unavailable_value_from_other_sources",
+    "identify_supplied_modalities_and_sources",
+    "treat_every_named_modality_as_supplied",
+    "use_the_requested_schema_as_proof_of_source_availability",
+    "return_requested_fields_in_the_defined_schema",
+    "return_an_unstructured_description",
+    "add_fields_outside_the_defined_schema",
+    "ground_supported_values_and_leave_unsupported_values_null",
+    "convert_unsupported_values_to_false",
+    "fill_unsupported_values_from_context",
+    "process_the_available_video_without_claiming_audio_analysis",
+    "claim_audio_analysis_from_the_video_track",
+    "treat_the_missing_audio_file_as_silent_audio",
+    "return_schema_fields_with_source_provenance",
+    "return_schema_fields_without_source_provenance",
+    "replace_the_requested_schema_with_a_narrative_summary",
+    "keep_audio_only_fields_null_until_audio_is_supplied",
+    "mark_audio_only_fields_as_negative",
+    "infer_audio_only_fields_from_video",
+    "unavailable_input_can_be_reported_as_a_negative_result",
+    "unavailable_input_cannot_support_an_extracted_value",
+    "missing_input_can_be_inferred_from_available_modalities",
+  ];
+  expectedChoiceKeys.forEach((key) => {
+    assert.match(view, new RegExp(`\\b${key}:`));
+  });
+  assert.doesNotMatch(view, /function humanize/);
+  assert.match(view, /getCalibrationMarginExtractionChoiceLabel\(choice\)/);
+  assert.doesNotMatch(view, /correctAnswer|expectedAnswer|isCorrect|data-correct/);
 });

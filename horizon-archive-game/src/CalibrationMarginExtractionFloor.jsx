@@ -6,55 +6,55 @@ import {
 
 const dimensionCopy = Object.freeze({
   input_boundary: Object.freeze({
-    label: "Supplied input boundary",
-    help: "Identify only the course material supplied for this case.",
+    label: "Evidence actually supplied",
+    help: "Choose the statement that accounts only for the course input present in this case.",
   }),
   output_contract: Object.freeze({
-    label: "Structured output and provenance",
-    help: "Choose the accountable output obligation for the supplied source.",
+    label: "Record shape and source trace",
+    help: "Choose how the requested fields remain structured and traceable to their supporting source.",
   }),
   unsupported_rule: Object.freeze({
-    label: "Unsupported-value boundary",
-    help: "Choose how the record treats a value its supplied input cannot support.",
+    label: "Field without supporting input",
+    help: "Choose how the record preserves a field that the supplied evidence cannot support.",
   }),
   unsupported_explanation: Object.freeze({
-    label: "Why unavailable input cannot support an extracted value",
-    help: "Select the accountable reasoning boundary separately from the three extraction dimensions.",
+    label: "Reason for leaving an unsupported field unclaimed",
+    help: "Choose why input that was not supplied cannot support an extracted value.",
   }),
 });
 
 const groupCopy = Object.freeze({
   ie_primary: Object.freeze({
-    heading: "Pilot provenance ledger: source boundary",
-    instruction: "Build one expedition-owned record from the course material actually supplied.",
+    heading: "Pilot claim ledger: account for the supplied evidence",
+    instruction: "Complete three blank responsibilities for this course case. No answer or prior selection is carried in.",
   }),
   ie_primary_repair: Object.freeze({
-    heading: "Teacher review: primary source boundary",
-    instruction: "Reconstruct only the listed responsibilities. The prior attempt has been cleared.",
+    heading: "Teacher review: reconstruct the primary claim",
+    instruction: "Reconsider only the listed responsibilities. Every selection from the prior attempt has been cleared.",
   }),
   ie_interlude: Object.freeze({
-    heading: "Primary boundary recorded locally",
-    instruction: "This pause grants no evidence. Continue deliberately when ready for a fresh closed-note check.",
+    heading: "Primary claim recorded; the next check remains fresh",
+    instruction: "This pause records nothing new. Continue deliberately when ready to reconstruct the boundary without notes.",
   }),
   ie_retrieval: Object.freeze({
-    heading: "Pilot provenance ledger: closed-note reconstruction",
-    instruction: "Rebuild the source, output, and unsupported-value boundaries without the primary answer set.",
+    heading: "Pilot claim ledger: reconstruct without notes",
+    instruction: "Rebuild the supplied-evidence, record-shape, and unsupported-field boundaries. No primary choices are present.",
   }),
   ie_retrieval_repair: Object.freeze({
-    heading: "Teacher review: closed-note boundary",
-    instruction: "Reconstruct only the listed responsibilities. No prior selection remains.",
+    heading: "Teacher review: reconstruct the closed-note claim",
+    instruction: "Reconsider only the listed responsibilities. No selection from the attempt remains.",
   }),
   ie_transfer: Object.freeze({
-    heading: "Pilot provenance ledger: missing-input transfer",
-    instruction: "Apply the boundary to a distinct course audio/video case in which one referenced input was not supplied.",
+    heading: "Pilot claim ledger: hold the missing-input line",
+    instruction: "Apply the boundary to a distinct course audio/video case. The referenced audio input was not supplied.",
   }),
   ie_transfer_repair: Object.freeze({
-    heading: "Teacher review: missing-input transfer",
-    instruction: "Reconstruct only the listed dimensions or explanation boundary. The complete attempt has been cleared.",
+    heading: "Teacher review: reconstruct the missing-input claim",
+    instruction: "Reconsider only the listed responsibilities or explanation boundary. The complete attempt has been cleared.",
   }),
   ie_finalized: Object.freeze({
-    heading: "Information-extraction objective finalized locally",
-    instruction: "RP003-IE-01 is finalized on this device. The City and route remain unchanged; no onward action is available.",
+    heading: "Local information-extraction record complete",
+    instruction: "RP003-IE-01 is finalized on this device. Nothing was sent to a service. The City and route remain unchanged, and no onward action is available.",
   }),
 });
 
@@ -69,12 +69,75 @@ const repairCopy = Object.freeze({
     "Explain only why unavailable input cannot support a value; do not infer from another modality.",
 });
 
-function humanize(value) {
-  return String(value)
-    .split("_")
-    .filter(Boolean)
-    .map((word) => `${word[0]?.toUpperCase() ?? ""}${word.slice(1)}`)
-    .join(" ");
+const choiceCopy = Object.freeze({
+  process_supplied_content_only:
+    "Use only the maintenance images that were supplied",
+  process_every_referenced_source_even_when_not_supplied:
+    "Treat every referenced source as supplied",
+  infer_the_missing_source_from_the_supplied_images:
+    "Infer the missing source from the supplied images",
+  schema_aligned_structured_fields_with_provenance:
+    "Return the defined fields and trace each value to its source",
+  return_a_free_form_summary_without_provenance:
+    "Return a free-form summary without a source trace",
+  return_schema_fields_without_source_links:
+    "Return the defined fields without tracing their sources",
+  preserve_unavailable_field_as_null_do_not_infer:
+    "Keep the unsupported field null; do not infer a value",
+  record_the_unavailable_field_as_a_negative_result:
+    "Record the unavailable field as a negative result",
+  infer_the_unavailable_value_from_other_sources:
+    "Infer the unavailable value from other sources",
+  identify_supplied_modalities_and_sources:
+    "Identify which source modalities were supplied",
+  treat_every_named_modality_as_supplied:
+    "Treat every named modality as supplied",
+  use_the_requested_schema_as_proof_of_source_availability:
+    "Treat a requested field as proof that its source was supplied",
+  return_requested_fields_in_the_defined_schema:
+    "Return only the requested fields in the defined schema",
+  return_an_unstructured_description:
+    "Return an unstructured description",
+  add_fields_outside_the_defined_schema:
+    "Add fields outside the defined schema",
+  ground_supported_values_and_leave_unsupported_values_null:
+    "Trace supported values to evidence and keep unsupported values null",
+  convert_unsupported_values_to_false:
+    "Convert unsupported values to false",
+  fill_unsupported_values_from_context:
+    "Fill unsupported values from surrounding context",
+  process_the_available_video_without_claiming_audio_analysis:
+    "Use the supplied video without claiming audio analysis",
+  claim_audio_analysis_from_the_video_track:
+    "Claim audio analysis from the video track",
+  treat_the_missing_audio_file_as_silent_audio:
+    "Treat the missing audio file as silent audio",
+  return_schema_fields_with_source_provenance:
+    "Return the schema fields with a source trace for each value",
+  return_schema_fields_without_source_provenance:
+    "Return schema fields without tracing their sources",
+  replace_the_requested_schema_with_a_narrative_summary:
+    "Replace the requested schema with a narrative summary",
+  keep_audio_only_fields_null_until_audio_is_supplied:
+    "Keep audio-only fields null until audio is supplied",
+  mark_audio_only_fields_as_negative:
+    "Mark audio-only fields as negative",
+  infer_audio_only_fields_from_video:
+    "Infer audio-only fields from the video",
+  unavailable_input_can_be_reported_as_a_negative_result:
+    "Unavailable input can be reported as a negative result",
+  unavailable_input_cannot_support_an_extracted_value:
+    "Input that was not supplied cannot support an extracted value",
+  missing_input_can_be_inferred_from_available_modalities:
+    "Missing input can be inferred from the available modalities",
+});
+
+export function getCalibrationMarginExtractionChoiceLabel(value) {
+  const label = choiceCopy[value];
+  if (!label) {
+    throw new TypeError("Every extraction choice requires approved player-facing copy.");
+  }
+  return label;
 }
 
 function submitAction(state) {
@@ -119,7 +182,7 @@ function ExtractionChoice({
               checked={state.fieldValues[name] === choice}
               onChange={(event) => onFieldChange(name, event.target.value)}
             />
-            <span>{humanize(choice)}</span>
+            <span>{getCalibrationMarginExtractionChoiceLabel(choice)}</span>
           </label>
         ))}
       </div>
@@ -190,12 +253,26 @@ export function CalibrationMarginExtractionFloor({
           className="extraction-source-envelope"
           aria-labelledby={`${state.activeGroup}-source-heading`}
         >
-          <p className="eyebrow">EXPEDITION COURSE SOURCE</p>
-          <h2 id={`${state.activeGroup}-source-heading`}>Supplied case boundary</h2>
-          <p>{state.presentation.prompt}</p>
+          <p className="eyebrow">EXPEDITION TRAINING CASE // LOCAL</p>
+          <h2 id={`${state.activeGroup}-source-heading`}>
+            Case material and reporting boundary
+          </h2>
           <p>
-            The case is course-authored practice. Unavailable input remains
-            unsupported; it is not a negative result or a City response.
+            <strong>Supplied input:</strong> {state.presentation.prompt}
+          </p>
+          <p>
+            <strong>Output record:</strong> Account for the requested fields
+            and the source supporting each value.
+          </p>
+          <p>
+            <strong>Unavailable input:</strong> A source that was not supplied
+            supports no value. It is not false, negative, or permission to
+            infer.
+          </p>
+          <p>
+            <strong>Provenance:</strong> This is course-authored local
+            practice, not City evidence or a live Microsoft Foundry or Content
+            Understanding analysis.
           </p>
         </section>
       )}
@@ -256,9 +333,10 @@ export function CalibrationMarginExtractionFloor({
         <details className="extraction-source-reinspection">
           <summary>Review the source boundary before the closed-note check</summary>
           <p>
-            Separate the supplied course input, the requested structured output
-            with provenance, and values the supplied input cannot support.
-            Opening this note records nothing.
+            Keep four things distinct: the input the course supplied, the
+            requested record shape, the source trace for each supported value,
+            and fields the supplied input cannot support. Opening this note
+            records nothing and reveals no choice.
           </p>
         </details>
       )}
@@ -308,9 +386,10 @@ export function CalibrationMarginExtractionFloor({
         </div>
       )}
       <p className="extraction-floor-negative-authority">
-        Course-authored practice runs offline on this device. It grants no
-        service access or authority and is not a Microsoft exam item or exam
-        guarantee.
+        Course-authored practice runs offline on this device; it does not send
+        content to Microsoft Foundry or Content Understanding. It grants no
+        service access, permission, or authority and is not a Microsoft exam
+        item or an exam guarantee.
       </p>
     </section>
   );

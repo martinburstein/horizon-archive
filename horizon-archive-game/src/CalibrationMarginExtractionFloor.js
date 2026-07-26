@@ -28,21 +28,25 @@ export const calibrationMarginExtractionActions = Object.freeze({
 });
 
 export const calibrationMarginExtractionActionLabels = Object.freeze({
-  [calibrationMarginExtractionActions.begin]: "BEGIN EXPEDITION EXTRACTION CHECK",
-  [calibrationMarginExtractionActions.submitPrimary]: "CHECK SOURCE BOUNDARY",
-  [calibrationMarginExtractionActions.clear]: "CLEAR EXTRACTION WORK",
-  [calibrationMarginExtractionActions.returnPython]: "RETURN TO PYTHON LANDING",
-  [calibrationMarginExtractionActions.retryPrimary]: "RETRY BLANK PRIMARY",
+  [calibrationMarginExtractionActions.begin]: "BEGIN FRESH EXTRACTION RECORD",
+  [calibrationMarginExtractionActions.submitPrimary]:
+    "CHECK PRIMARY SOURCE BOUNDARY",
+  [calibrationMarginExtractionActions.clear]:
+    "CLEAR CURRENT EXTRACTION WORK",
+  [calibrationMarginExtractionActions.returnPython]:
+    "RETURN TO FINALIZED PYTHON",
+  [calibrationMarginExtractionActions.retryPrimary]:
+    "OPEN BLANK PRIMARY RETRY",
   [calibrationMarginExtractionActions.continueRetrieval]:
-    "CONTINUE TO CLOSED-NOTE CHECK",
+    "CONTINUE TO FRESH CLOSED-NOTE CHECK",
   [calibrationMarginExtractionActions.submitRetrieval]:
-    "CHECK CLOSED-NOTE BOUNDARY",
+    "CHECK CLOSED-NOTE SOURCE BOUNDARY",
   [calibrationMarginExtractionActions.retryRetrieval]:
-    "RETRY BLANK RETRIEVAL",
+    "OPEN BLANK RETRIEVAL RETRY",
   [calibrationMarginExtractionActions.submitTransfer]:
-    "CHECK MISSING-INPUT TRANSFER",
+    "CHECK MISSING-INPUT BOUNDARY",
   [calibrationMarginExtractionActions.retryTransfer]:
-    "RETRY BLANK TRANSFER",
+    "OPEN BLANK TRANSFER RETRY",
 });
 
 const dimensions = CALIBRATION_MARGIN_IE_DIMENSIONS;
@@ -270,7 +274,7 @@ function makeState(group, options = {}) {
       ? [...explanationChoices]
       : [],
     statusMessageId: options.statusMessageId ?? `${group.activeGroup}:ready`,
-    statusMessage: options.statusMessage ?? "Local extraction group ready.",
+    statusMessage: options.statusMessage ?? "This local extraction boundary is ready.",
     focusIntent: {
       group: group.activeGroup,
       target: options.focusTarget ?? "heading",
@@ -320,18 +324,18 @@ function passStatus(form) {
   if (form === "primary") {
     return Object.freeze({
       status: "extraction_primary_finalized",
-      message: "Primary source boundary finalized locally. The next check will be fresh.",
+      message: "Primary source boundary recorded locally. No choices will carry into the fresh closed-note check.",
     });
   }
   if (form === "retrieval") {
     return Object.freeze({
       status: "extraction_retrieval_finalized",
-      message: "Closed-note boundary finalized locally. Blank distinct transfer is ready.",
+      message: "Closed-note boundary recorded locally. A distinct blank missing-input transfer is ready.",
     });
   }
   return Object.freeze({
     status: "extraction_finalized",
-    message: "RP003-IE-01 finalized locally. No onward action is available.",
+    message: "RP003-IE-01 is finalized locally. Nothing was sent to a service, and no onward action is available.",
   });
 }
 
@@ -375,7 +379,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
       ? canResume
         ? "Finalized local prefix restored at the first incomplete boundary."
         : "Python is finalized. A fresh Pilot extraction choice is available."
-      : "Extraction state was cleared to the accepted local boundary.",
+      : "Unsafe extraction state was cleared; finalized Python remains available.",
   });
   let active = acceptedPython || canResume;
   const handledTokens = new Set();
@@ -460,8 +464,8 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
           checkpoint: checkpointAdapter.getState().checkpoint,
           statusMessageId: `${group.activeGroup}:fresh-entry`,
           statusMessage: group === calibrationMarginExtractionGroups.primary
-            ? "Blank source-accountability check ready."
-            : "The first incomplete extraction boundary is ready.",
+            ? "A fresh blank source-accountability record is ready. No prior answer is present."
+            : "The first incomplete local boundary is ready. Prior active work was not restored.",
         });
         return Object.freeze({
           status: group === calibrationMarginExtractionGroups.primary
@@ -480,7 +484,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
           checkpoint: checkpointAdapter.getState().checkpoint,
           focusTarget: firstField(group),
           statusMessageId: `${group.activeGroup}:cleared`,
-          statusMessage: "Current extraction work cleared.",
+          statusMessage: "Current private selections and confidence cleared.",
         });
         return Object.freeze({ status: "extraction_work_cleared", state: clone(state) });
       }
@@ -491,7 +495,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
         state = makeState(group, {
           checkpoint: checkpointAdapter.getState().checkpoint,
           statusMessageId: "python_finalized:extraction-closed",
-          statusMessage: "Extraction work closed. Python remains finalized.",
+          statusMessage: "Extraction work cleared. Finalized Python remains unchanged.",
         });
         return Object.freeze({
           status: "returned_to_python_write_free",
@@ -507,7 +511,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
         state = makeState(group, {
           checkpoint: "IE-P1",
           statusMessageId: "ie_retrieval:fresh-continue",
-          statusMessage: "Fresh closed-note source boundary ready.",
+          statusMessage: "A fresh blank closed-note record is ready; no primary choices were carried forward.",
         });
         return Object.freeze({
           status: "extraction_retrieval_visible",
@@ -523,7 +527,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
           checkpoint: checkpointAdapter.getState().checkpoint,
           focusTarget: firstField(group),
           statusMessageId: `${group.activeGroup}:blank-retry`,
-          statusMessage: "Private work cleared. Blank retry ready.",
+          statusMessage: "The prior attempt was cleared. A wholly blank retry is ready.",
         });
         return Object.freeze({ status: "extraction_blank_retry_ready", state: clone(state) });
       }
@@ -539,7 +543,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
             incomplete.map((name) => [name, "required"]),
           ),
           statusMessageId: `${group.activeGroup}:incomplete`,
-          statusMessage: "Required extraction fields remain incomplete; no evaluation occurred.",
+          statusMessage: "Complete every required boundary. Nothing was evaluated or recorded.",
           focusIntent: { group: group.activeGroup, target: incomplete[0] },
         };
         return Object.freeze({ status: "incomplete", state: clone(state) });
@@ -572,7 +576,7 @@ export function createCalibrationMarginExtractionFloor(options = {}) {
           failedIds,
           focusTarget: "heading",
           statusMessageId: `${group.activeGroup}:actual-miss`,
-          statusMessage: "This attempt needs answer-free review. Prior private work was cleared.",
+          statusMessage: "This attempt needs answer-free review. All private selections were cleared.",
         });
         return Object.freeze({
           status: "extraction_actual_miss_repair",
