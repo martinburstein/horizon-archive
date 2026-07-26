@@ -1,15 +1,23 @@
 import { useLayoutEffect, useRef } from "react";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
+import { CalibrationMarginExtractionFloor } from "./CalibrationMarginExtractionFloor.jsx";
 import { CalibrationMarginPythonFloor } from "./CalibrationMarginPythonFloor.jsx";
 
-export function CalibrationMarginEntry({ entryState, onAction, onFieldChange }) {
+export function CalibrationMarginEntry({
+  entryState,
+  onAction,
+  onFieldChange,
+  onConfidenceChange,
+}) {
   const headingRef = useRef(null);
   const actionRefs = useRef(new Map());
   const observationControls = new Map(
     (entryState.observationControls ?? []).map((control) => [control.action, control]),
   );
   const pythonFloorActive = entryState.shellVersion === "SS-RP003-PY010-v1";
+  const extractionFloorActive =
+    entryState.shellVersion === "SS-RP003-IE01-v1";
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -28,6 +36,7 @@ export function CalibrationMarginEntry({ entryState, onAction, onFieldChange }) 
         data-board={entryState.boardState}
         data-phase={entryState.phase}
         data-python-floor={pythonFloorActive || undefined}
+        data-extraction-floor={extractionFloorActive || undefined}
       >
         <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
@@ -36,7 +45,14 @@ export function CalibrationMarginEntry({ entryState, onAction, onFieldChange }) 
             alt="An immense empty underground civic landscape already operating above geothermal chasms"
           />
         </section>
-        {pythonFloorActive ? (
+        {extractionFloorActive ? (
+          <CalibrationMarginExtractionFloor
+            state={entryState}
+            onAction={onAction}
+            onFieldChange={onFieldChange}
+            onConfidenceChange={onConfidenceChange}
+          />
+        ) : pythonFloorActive ? (
           <CalibrationMarginPythonFloor
             state={entryState}
             onAction={onAction}

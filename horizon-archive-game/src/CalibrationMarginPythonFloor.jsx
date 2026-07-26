@@ -50,7 +50,7 @@ const groupCopy = Object.freeze({
   }),
   python_finalized: Object.freeze({
     heading: "Local Python objective finalized",
-    instruction: "PY-010 evidence is finalized on this device. The city remains unchanged. No onward action is available here.",
+    instruction: "PY-010 evidence is finalized on this device. The City remains unchanged. No onward action is available here; any expedition check shown below is separate, fresh Pilot-owned work.",
   }),
 });
 
@@ -93,6 +93,9 @@ const suppliedCases = Object.freeze({
 });
 
 function actionLabel(actionId) {
+  if (actionId === "BEGIN_EXTRACTION") {
+    return "BEGIN EXPEDITION EXTRACTION CHECK";
+  }
   return calibrationMarginPythonActionLabels[actionId] ?? actionId;
 }
 

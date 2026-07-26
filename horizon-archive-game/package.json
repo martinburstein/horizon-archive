@@ -8,6 +8,7 @@
     "build": "vite build",
     "demo": "npm run build && vite preview --host 127.0.0.1 --port 4173 --open",
     "preview": "vite preview",
+    "review:td002-extraction": "vite --config review-fixtures/td002-extraction/vite.config.js --host 127.0.0.1 --port 4174",
     "test": "node --test"
   },
   "dependencies": {

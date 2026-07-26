@@ -18,6 +18,15 @@ import {
 import {
   sanitizeCalibrationMarginPythonCheckpoint,
 } from "./CalibrationMarginPythonCheckpoint.js";
+import {
+  sanitizeCalibrationMarginExtractionCheckpoint,
+} from "./CalibrationMarginExtractionCheckpoint.js";
+import {
+  calibrationMarginExtractionActions,
+  calibrationMarginExtractionGroups,
+  createCalibrationMarginExtractionFloor,
+  createCalibrationMarginExtractionIntent,
+} from "./CalibrationMarginExtractionFloor.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -108,8 +117,35 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let surveyController = null;
   let surveyAcceptedBlank = null;
   let pythonController = null;
+  let extractionController = null;
+  let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
+    options.restoredExtractionCheckpoint,
+  );
 
-  const configure = (restoredState, restoredPythonCheckpoint = options.restoredPythonCheckpoint) => {
+  const currentState = () => {
+    if (extractionController) return extractionController.getState();
+    const current = (pythonController ?? surveyController ?? entryController).getState();
+    if (pythonController
+      && current.phase === "PY010-P3"
+      && current.activeGroup === "python_finalized"
+      && current.checkpoint === "P3") {
+      return {
+        ...current,
+        availableActions: [calibrationMarginExtractionActions.begin],
+        statusMessageId: "python_finalized:extraction-available",
+        statusMessage:
+          "PY-010 remains finalized. A fresh Pilot extraction check is available.",
+      };
+    }
+    return current;
+  };
+
+  const configure = (
+    restoredState,
+    restoredPythonCheckpoint = options.restoredPythonCheckpoint,
+    restoredExtractionCheckpoint = extractionCheckpoint
+      ?? options.restoredExtractionCheckpoint,
+  ) => {
     const restoringSurvey = restoredState?.phase === "CM-10 SURVEY";
     entryController = createCalibrationMarginProtectedEntry({
       ...authority,
@@ -118,6 +154,10 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     surveyController = null;
     surveyAcceptedBlank = null;
     pythonController = null;
+    extractionController = null;
+    extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
+      restoredExtractionCheckpoint,
+    );
 
     if (restoringSurvey && entryController.getState().phase === "city_threshold") {
       const blank = entryController.dispatch({
@@ -142,6 +182,16 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         restoredCheckpoint: checkpoint,
         commitCheckpoint: options.commitPythonCheckpoint,
       });
+      const pythonState = pythonController.getState();
+      if (checkpoint.checkpoint === "P3"
+        && extractionCheckpoint
+        && ["IE-P1", "IE-P2", "IE-P3"].includes(extractionCheckpoint.checkpoint)) {
+        extractionController = createCalibrationMarginExtractionFloor({
+          acceptedPythonState: pythonState,
+          restoredCheckpoint: extractionCheckpoint,
+          commitCheckpoint: options.commitExtractionCheckpoint,
+        });
+      }
     }
   };
 
@@ -149,11 +199,37 @@ export function createCalibrationMarginNormalEntry(options = {}) {
 
   return Object.freeze({
     getState() {
-      return (pythonController ?? surveyController ?? entryController).getState();
+      return clonePublicState(currentState());
     },
     dispatch(intent) {
-      const state = (pythonController ?? surveyController ?? entryController).getState();
+      const state = currentState();
+      if (extractionController) {
+        const result = extractionController.dispatch(intent);
+        extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
+          extractionController.getCheckpoint(),
+        );
+        if (result.status === "returned_to_python_write_free") {
+          extractionController = null;
+          return Object.freeze({ ...result, state: clonePublicState(currentState()) });
+        }
+        return result;
+      }
       if (pythonController) {
+        const pythonState = pythonController.getState();
+        if (pythonState.phase === "PY010-P3"
+          && intent?.allowlistedActionId === calibrationMarginExtractionActions.begin) {
+          extractionController = createCalibrationMarginExtractionFloor({
+            acceptedPythonState: pythonState,
+            restoredCheckpoint: extractionCheckpoint,
+            commitCheckpoint: options.commitExtractionCheckpoint,
+            requireFreshEntry: true,
+          });
+          const result = extractionController.dispatch(intent);
+          extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
+            extractionController.getCheckpoint(),
+          );
+          return result;
+        }
         const result = pythonController.dispatch(intent);
         if (["returned_to_survey_write_free", "checkpoint_commit_failed_to_survey"]
           .includes(result.status)) {
@@ -195,6 +271,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (extractionController) {
+        return extractionController.updateField(name, value);
+      }
       if (!pythonController) {
         return Object.freeze({
           status: "rejected",
@@ -204,26 +283,53 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       }
       return pythonController.updateField(name, value);
     },
+    updateConfidence(value) {
+      if (!extractionController) {
+        return Object.freeze({
+          status: "rejected",
+          reason: "extraction_floor_closed",
+          state: clonePublicState(currentState()),
+        });
+      }
+      return extractionController.updateConfidence(value);
+    },
     getPythonCheckpoint() {
       return pythonController?.getCheckpoint() ?? null;
     },
+    getExtractionCheckpoint() {
+      return extractionController?.getCheckpoint()
+        ?? (extractionCheckpoint ? clonePublicState(extractionCheckpoint) : null);
+    },
     sanitizeBoundary(
-      restoredState = (pythonController ?? surveyController ?? entryController).getState(),
+      restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
         ?? options.restoredPythonCheckpoint,
+      restoredExtractionCheckpoint = extractionController?.getCheckpoint()
+        ?? extractionCheckpoint
+        ?? options.restoredExtractionCheckpoint,
     ) {
-      configure(restoredState, restoredPythonCheckpoint);
+      configure(
+        restoredState,
+        restoredPythonCheckpoint,
+        restoredExtractionCheckpoint,
+      );
       return Object.freeze({
-        status: pythonController
-          ? "python_checkpoint_resumed"
+        status: extractionController
+          ? "extraction_checkpoint_resumed"
+          : pythonController
+            ? "python_checkpoint_resumed"
           : restoredState?.phase === "CM-10 SURVEY"
             && surveyController?.getState().phase === "CM-10 SURVEY"
             ? "resumed"
             : "revalidated",
-        state: (pythonController ?? surveyController ?? entryController).getState(),
+        state: clonePublicState(currentState()),
       });
     },
   });
+}
+
+function clonePublicState(value) {
+  return JSON.parse(JSON.stringify(value));
 }
 
 export function createCalibrationMarginNormalEntryIntent(
@@ -232,6 +338,24 @@ export function createCalibrationMarginNormalEntryIntent(
   eventToken,
   phase = null,
 ) {
+  if (action === calibrationMarginExtractionActions.begin) {
+    return createCalibrationMarginExtractionIntent(
+      { activeGroup: "python_finalized", owner: "SYSTEM" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  const extractionGroup = Object.values(calibrationMarginExtractionGroups)
+    .find((group) => group.phase === phase);
+  if (extractionGroup) {
+    return createCalibrationMarginExtractionIntent(
+      { activeGroup: extractionGroup.activeGroup, owner: extractionGroup.owner },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   const pythonGroup = Object.values(calibrationMarginPythonGroups)
     .find((group) => group.phase === phase);
   if (pythonGroup) {

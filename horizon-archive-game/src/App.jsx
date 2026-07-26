@@ -20,6 +20,9 @@ import {
   sanitizeCalibrationMarginPythonCheckpoint,
 } from "./CalibrationMarginPythonCheckpoint.js";
 import {
+  sanitizeCalibrationMarginExtractionCheckpoint,
+} from "./CalibrationMarginExtractionCheckpoint.js";
+import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
 } from "./cityThresholdExercise.js";
@@ -343,6 +346,8 @@ import { deriveFinalConfidenceResume,evaluateFinalConfidenceEntryGate,evaluateFi
 const SAVE_KEY = "horizon-archive-prologue-v1";
 const CALIBRATION_MARGIN_PYTHON_CHECKPOINT_KEY =
   "horizon-archive-rp003-python-checkpoint-v1";
+const CALIBRATION_MARGIN_EXTRACTION_CHECKPOINT_KEY =
+  "horizon-archive-rp003-extraction-checkpoint-v1";
 
 function readCalibrationMarginPythonCheckpoint(storage) {
   try {
@@ -359,6 +364,30 @@ function writeCalibrationMarginPythonCheckpoint(storage, value) {
   if (!safe) return false;
   try {
     storage?.setItem(CALIBRATION_MARGIN_PYTHON_CHECKPOINT_KEY, JSON.stringify(safe));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function readCalibrationMarginExtractionCheckpoint(storage) {
+  try {
+    return sanitizeCalibrationMarginExtractionCheckpoint(
+      JSON.parse(storage?.getItem(CALIBRATION_MARGIN_EXTRACTION_CHECKPOINT_KEY) ?? "null"),
+    );
+  } catch {
+    return null;
+  }
+}
+
+function writeCalibrationMarginExtractionCheckpoint(storage, value) {
+  const safe = sanitizeCalibrationMarginExtractionCheckpoint(value);
+  if (!safe) return false;
+  try {
+    storage?.setItem(
+      CALIBRATION_MARGIN_EXTRACTION_CHECKPOINT_KEY,
+      JSON.stringify(safe),
+    );
     return true;
   } catch {
     return false;
@@ -2200,9 +2229,16 @@ export function App() {
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
         : readCalibrationMarginPythonCheckpoint(window.localStorage),
+      restoredExtractionCheckpoint: typeof window === "undefined"
+        ? null
+        : readCalibrationMarginExtractionCheckpoint(window.localStorage),
       commitPythonCheckpoint: (candidate) => (
         typeof window !== "undefined"
         && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+      ),
+      commitExtractionCheckpoint: (candidate) => (
+        typeof window !== "undefined"
+        && writeCalibrationMarginExtractionCheckpoint(window.localStorage, candidate)
       ),
     });
     const entryState = entryController.getState();
@@ -2246,9 +2282,16 @@ export function App() {
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
         : readCalibrationMarginPythonCheckpoint(window.localStorage),
+      restoredExtractionCheckpoint: typeof window === "undefined"
+        ? null
+        : readCalibrationMarginExtractionCheckpoint(window.localStorage),
       commitPythonCheckpoint: (candidate) => (
         typeof window !== "undefined"
         && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+      ),
+      commitExtractionCheckpoint: (candidate) => (
+        typeof window !== "undefined"
+        && writeCalibrationMarginExtractionCheckpoint(window.localStorage, candidate)
       ),
     });
     const state = controller.getState();
@@ -2286,6 +2329,7 @@ export function App() {
       calibrationMarginEntryView?.phase,
     ));
     if (result?.state?.shellVersion === "SS-RP003-PY010-v1"
+      || result?.state?.shellVersion === "SS-RP003-IE01-v1"
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -2308,13 +2352,20 @@ export function App() {
       const returnController = createCalibrationMarginNormalEntry({
         ...authority,
         restoredState: result.state,
-        restoredPythonCheckpoint: typeof window === "undefined"
-          ? null
-          : readCalibrationMarginPythonCheckpoint(window.localStorage),
-        commitPythonCheckpoint: (candidate) => (
-          typeof window !== "undefined"
-          && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
-        ),
+          restoredPythonCheckpoint: typeof window === "undefined"
+            ? null
+            : readCalibrationMarginPythonCheckpoint(window.localStorage),
+          restoredExtractionCheckpoint: typeof window === "undefined"
+            ? null
+            : readCalibrationMarginExtractionCheckpoint(window.localStorage),
+          commitPythonCheckpoint: (candidate) => (
+            typeof window !== "undefined"
+            && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+          ),
+          commitExtractionCheckpoint: (candidate) => (
+            typeof window !== "undefined"
+            && writeCalibrationMarginExtractionCheckpoint(window.localStorage, candidate)
+          ),
       });
       calibrationMarginEntryControllerRef.current = returnController;
       setCalibrationMarginEntryView(returnController.getState());
@@ -2329,6 +2380,15 @@ export function App() {
     if (demoTour) return null;
     const result = calibrationMarginEntryControllerRef.current?.updateField(name, value);
     if (result?.status === "field_updated_private") {
+      setCalibrationMarginEntryView(result.state);
+    }
+    return result;
+  }
+
+  function updateCalibrationMarginExtractionConfidence(value) {
+    if (demoTour) return null;
+    const result = calibrationMarginEntryControllerRef.current?.updateConfidence(value);
+    if (result?.status === "confidence_updated_zero_credit") {
       setCalibrationMarginEntryView(result.state);
     }
     return result;
@@ -3421,6 +3481,7 @@ export function App() {
 
   if (mode === "rp003-entry" && (
     calibrationMarginEntryView?.shellVersion === "SS-RP003-PY010-v1"
+    || calibrationMarginEntryView?.shellVersion === "SS-RP003-IE01-v1"
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3431,6 +3492,7 @@ export function App() {
         entryState={calibrationMarginEntryView}
         onAction={dispatchCalibrationMarginEntry}
         onFieldChange={updateCalibrationMarginPythonField}
+        onConfidenceChange={updateCalibrationMarginExtractionConfidence}
       />
     );
   }

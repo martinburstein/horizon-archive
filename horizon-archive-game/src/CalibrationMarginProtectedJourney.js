@@ -1,4 +1,8 @@
 import contract from "../../curriculum/readiness/RP-003/contract.json" with { type: "json" };
+import {
+  CALIBRATION_MARGIN_UNSUPPORTED_EXPLANATION,
+  evaluateCalibrationMarginInformationExtraction,
+} from "./CalibrationMarginInformationExtraction.js";
 
 export const CALIBRATION_MARGIN_PROTECTED_JOURNEY_VERSION = "rp003.protected-journey.v1";
 
@@ -83,7 +87,7 @@ export const calibrationMarginPythonRetrievalAnswers = Object.freeze({
 });
 
 export const calibrationMarginUnsupportedExplanation =
-  "unavailable_input_cannot_support_an_extracted_value";
+  CALIBRATION_MARGIN_UNSUPPORTED_EXPLANATION;
 
 const observationIds = Object.freeze(["correspondence", "bounded_difference", "sealed_unavailable"]);
 const pythonCheckIds = Object.freeze([...contract.python_contract.checks]);
@@ -181,21 +185,7 @@ export function evaluateCalibrationMarginPythonRetrieval(answers) {
   });
 }
 
-export function evaluateCalibrationMarginInformationExtraction(form, answers) {
-  const specification = contract.ai901_contract.forms[form]?.[0];
-  if (!specification) throw new TypeError("form must be primary, retrieval, or transfer.");
-  const correctness = Object.fromEntries(aiDimensions.map((dimension) => [
-    dimension,
-    answers?.[specification.id]?.[dimension] === specification[dimension],
-  ]));
-  return Object.freeze({
-    form,
-    caseId: specification.id,
-    correctness: Object.freeze(correctness),
-    score: Object.values(correctness).filter(Boolean).length,
-    passed: Object.values(correctness).every(Boolean),
-  });
-}
+export { evaluateCalibrationMarginInformationExtraction };
 
 function prerequisitesPass(value) {
   return value?.python?.lessonId === "L-03-02"

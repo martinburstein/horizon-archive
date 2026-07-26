@@ -2101,3 +2101,237 @@ h1 {
     animation: none;
   }
 }
+
+/* SS-RP003-IE01-v1 structural expedition provenance ledger. */
+.calibration-margin-entry[data-extraction-floor="true"] {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.canonical-game-frame .extraction-floor-panel {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  gap: clamp(10px, 1.1vw, 18px);
+  padding: clamp(16px, 1.5vw, 26px);
+  overflow-wrap: anywhere;
+  background: linear-gradient(145deg, rgb(24 29 34 / 97%), rgb(7 10 14 / 99%));
+  border-color: #8e765b;
+}
+
+.extraction-floor-heading h1 {
+  margin: 4px 0 0;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.08;
+}
+
+.extraction-floor-heading p,
+.extraction-floor-negative-authority {
+  line-height: 1.45;
+}
+
+.extraction-floor-status,
+.extraction-source-envelope,
+.extraction-floor-repair,
+.extraction-source-reinspection {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #665d50;
+  background: rgb(0 0 0 / 30%);
+}
+
+.extraction-floor-status {
+  display: grid;
+  gap: 4px;
+}
+
+.extraction-floor-form,
+.extraction-floor-content,
+.extraction-floor-fields {
+  display: grid;
+  min-width: 0;
+  gap: 14px;
+}
+
+.extraction-source-envelope h2,
+.extraction-floor-repair h2 {
+  margin: 4px 0 8px;
+  font-size: 1rem;
+}
+
+.extraction-floor-field {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #625847;
+}
+
+.extraction-floor-field legend {
+  padding: 0 5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.extraction-floor-field-help,
+.extraction-floor-field-error {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.extraction-floor-field-error {
+  padding-left: 9px;
+  border-left: 3px solid #da9b73;
+}
+
+.extraction-floor-options {
+  display: grid;
+  gap: 6px;
+}
+
+.extraction-floor-options label {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 9px;
+  border: 1px solid #4f514f;
+  background: #11151a;
+}
+
+.extraction-floor-options input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.extraction-confidence {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.extraction-confidence select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 2px solid #807766;
+  background: #11141a;
+  color: #fff7df;
+}
+
+.extraction-source-reinspection summary {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.extraction-floor-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.extraction-floor-actions button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px 12px;
+  white-space: normal;
+}
+
+.extraction-floor-actions button[data-action-id^="SUBMIT_"] {
+  grid-column: 1 / -1;
+}
+
+.extraction-floor-negative-authority {
+  border-top: 1px solid #4d4b46;
+  font-size: 0.78rem;
+}
+
+.extraction-floor-panel :focus-visible {
+  outline: 3px solid #fff2c8;
+  outline-offset: 3px;
+}
+
+@media (min-width: 1280px) {
+  .canonical-game-frame .calibration-margin-entry[data-extraction-floor="true"] {
+    grid-template-columns: minmax(0, 3fr) minmax(430px, 2fr);
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .canonical-game-frame .calibration-margin-entry[data-extraction-floor="true"] .city-world {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .canonical-game-frame .calibration-margin-entry[data-extraction-floor="true"] .extraction-floor-panel {
+    min-height: 100%;
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1279px) {
+  .canonical-game-frame .calibration-margin-entry[data-extraction-floor="true"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .canonical-game-frame .extraction-floor-panel {
+    padding: 14px 12px;
+  }
+
+  .extraction-floor-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .extraction-floor-actions button[data-action-id^="SUBMIT_"] {
+    grid-column: auto;
+  }
+}
+
+@media (forced-colors: active) {
+  .canonical-game-frame .extraction-floor-panel,
+  .extraction-floor-status,
+  .extraction-source-envelope,
+  .extraction-floor-repair,
+  .extraction-floor-field,
+  .extraction-floor-options label,
+  .extraction-confidence select,
+  .extraction-source-reinspection {
+    forced-color-adjust: auto;
+    border-color: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .extraction-floor-field-error {
+    border-color: Highlight;
+  }
+
+  .extraction-floor-panel :focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .extraction-floor-panel,
+  .extraction-floor-panel * {
+    scroll-behavior: auto;
+    transition: none;
+    animation: none;
+  }
+}
