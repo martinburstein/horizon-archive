@@ -10,11 +10,11 @@
 | Shell | `SS-RP004-THREE-CURRENT-v1` |
 | Slice | `TD-004-RP004-THREE-CURRENT-v1` |
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
-| Candidate | Quartermaster revalidation commit; resolve immutable hash from Git history |
+| Candidate | Image Specialist revalidation commit; resolve immutable hash from Git history |
 | Released functional base | Combat Engineer commit `95fb6402c281ec1294bdb76582de04e80f3f3cb9` (`origin/main` at audit start) |
 | Release disposition | **`REVISE - NOT AS BUILT RELEASED`** |
-| Current finding | `TD004-VAR-002`: required correction content/asset revalidated; presentation and fresh release revalidation pending |
-| Return owner | Image Specialist / `image_specialist` |
+| Current finding | `TD004-VAR-002`: required correction presentation revalidated; fresh release revalidation pending |
+| Return owner | Intelligence Officer / `intelligence_officer` |
 | Process recommendation | `TUNE` |
 
 Fresh Tier 5 confirmed that `TD004-VAR-001` is **`REQUIRED CORRECTION
@@ -24,9 +24,9 @@ mounted the RP-004 renderer and exposed SC-05 before the fresh Pilot route.
 That finding correctly returned to Combat Engineer and could not be deferred.
 
 The Combat Engineer correction checkpoint below records the bounded local
-repair. Quartermaster content/asset revalidation now passes. Release remains
-withheld until Image Specialist and fresh Intelligence revalidate it
-sequentially.
+repair. Quartermaster content/asset revalidation and Image Specialist
+presentation revalidation now pass. Release remains withheld until one fresh
+independent Intelligence Tier 5 classifies the candidate.
 
 ## Combat Engineer correction checkpoint
 
@@ -106,6 +106,49 @@ Disposition: **`CONTENT COMPLETE — REVALIDATED`**. This is not an
 Intelligence release. Image Specialist must now revalidate exact responsive
 presentation on both sides of the route boundary and the unchanged reveal,
 then return to one fresh complete Tier 5.
+
+## Image Specialist TD004-VAR-002 revalidation
+
+Image Specialist resumed strictly from Quartermaster revalidation commit
+`fbc167fefc744a9ec5ce92e2e95ae4dc2629f773` and made no runtime, style,
+content, controller, asset, provenance, or raster change.
+
+Six closed storage-free boundary states were rendered at exact DPR-1
+`1920 x 1080`, `1366 x 768`, `390 x 844`, and width-equivalent
+effective-`200%` `768 x 900`: `24/24` passed.
+
+- exact CM-50 and invalid pre-route intent presented SC-04;
+- accepted TR-00 and high-density TR-30 presented SC-05;
+- early return and completed RP-004 return restored SC-04;
+- every state exposed the exact registered asset ID, decoded source, and
+  scene-specific alternative text;
+- every layout remained horizontally contained, world-dominant, and
+  `object-fit:cover`, with one focused `h1`, one polite atomic status, and
+  controls at least `44 CSS px`;
+- forced colors and reduced motion passed on all six boundary states at
+  `390 x 844`; and
+- the established SC-05 wide/laptop registered crop and full 16:9
+  narrow/effective-200 composition remain unchanged.
+
+Fresh source regressions passed normal/resolver/UI `17/17`, closed-fixture
+identity `2/2`, and protected journey `13/13`. Image Specialist relied on the
+immediately preceding unchanged Quartermaster build/release evidence for
+focused `22/22`, related `136/136`, full game `806/806`, readiness `15/15`,
+the `183`-module build in `14.22s`, `PBA-TD004-v1`, and exact isolated served
+identity. The agent did not duplicate those byte-stable gates.
+
+SC-04 remains `2,626,795` bytes, SHA-256
+`1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D`.
+SC-05 remains `2,163,752` bytes, SHA-256
+`B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
+The sole reveal remains unchanged/reference-only at `1672 x 941`,
+`2,764,920` bytes, SHA-256
+`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`,
+with generation count exactly `1` and zero edits or additional generations.
+
+Disposition: **`PRESENTATION COMPLETE — REVALIDATED`**. This is not an
+Intelligence release. The exact next owner is one fresh complete Intelligence
+Tier 5.
 
 ## Quartermaster correction checkpoint
 
@@ -323,7 +366,7 @@ from production output and `dist`.
 | Runtime source | `ThreeCurrentReach.jsx` directly imports `sc05-three-current-panorama-runtime-master-v1.webp` |
 | SC-05 runtime master | `3840 x 2160`; `2,163,752` bytes; SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`; complete neighboring provenance |
 | Quartermaster record | `TD004-ASSET-SC05-PLACEHOLDER` is **retired and corrected** |
-| Image record | `PRESENTATION COMPLETE — CORRECTED`; exact responsive/crop/accessibility review and unchanged reveal revalidation pass |
+| Image record | `PRESENTATION COMPLETE — REVALIDATED`; exact SC-04/SC-05 scene identity, responsive/crop/accessibility review, and unchanged reveal revalidation pass |
 | Source reveal | unchanged/reference-only; `1672 x 941`; `2,764,920` bytes; SHA-256 `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`; exactly one generation |
 | Shell asset contract | final release requires one shell-compliant SC-05 first-person world presentation with provenance and honest runtime identity |
 
@@ -339,7 +382,7 @@ provenance, quality, crop, or budget.
 | ID | Classification | Owner | Disposition |
 |---|---|---|---|
 | `TD004-VAR-001` | **`REQUIRED CORRECTION RESOLVED`** | Intelligence Officer / `intelligence_officer` | Fresh Tier 5 independently reproduced exact provenance, verified the direct SC-05 import and emitted/served identity, inspected the unchanged reveal and runtime master, and passed responsive, accessibility, invariance, no-human/no-authority, full-gate, and budget checks. |
-| `TD004-VAR-002` | **`REQUIRED CORRECTION — CONTENT/ASSET REVALIDATED, PRESENTATION/RELEASE PENDING`** | Image Specialist / `image_specialist` | Exact CM-50 now resolves to the accepted SC-04 master; accepted TR-00 onward resolves to SC-05; malformed, invalid/duplicate pre-route intent, pre-save reload, and RP-004 return resolve to SC-04. Quartermaster confirms every retired copy/asset placeholder and exact asset/provenance/reveal identity remain intact. Image Specialist, then fresh Intelligence must revalidate/classify. |
+| `TD004-VAR-002` | **`REQUIRED CORRECTION — PRESENTATION REVALIDATED, RELEASE PENDING`** | Intelligence Officer / `intelligence_officer` | Exact CM-50, invalid/fail-closed pre-route states, interrupted pre-save reload, and RP-004 return resolve to SC-04; accepted TR-00 onward resolves to SC-05. Quartermaster confirms exact content/assets, and Image Specialist confirms exact scene/master/alt identity, crop, responsive containment, accessibility presentation, and unchanged reveal. Fresh Intelligence must independently classify. |
 
 No `ACCEPTED IMPROVEMENT`, `MASTERPLAN UPDATE`, `DEFERRED LIMITATION`, or
 `UNAUTHORIZED DIVERGENCE` is recorded. No master plan advances from this
@@ -418,9 +461,9 @@ The recommendation is recorded in
 **`REVISE - NOT AS BUILT RELEASED`**
 
 `TD004-VAR-001` is resolved. Combat Engineer implemented the required
-requirements 1 and 2 correction, and Quartermaster has now revalidated every
-content and asset boundary. Image Specialist and fresh independent
-Intelligence have not yet revalidated or released it.
+requirements 1 and 2 correction, Quartermaster revalidated every content and
+asset boundary, and Image Specialist revalidated presentation. Fresh
+independent Intelligence has not yet released it.
 TD-003 remains the accepted released playable
 boundary. TD-004 does not advance `PLAYABLE_DEMO.md`, the rail, packet
 scoreboard, expedition spine, curriculum/gameplay/visual masters, or any
@@ -428,16 +471,16 @@ successor control. No push is permitted from this candidate.
 
 ## Exact next action
 
-Resume only the **Image Specialist** from the dedicated local Quartermaster
-revalidation commit. Revalidate exact presentation identity, crop,
-alternative text, accessibility, responsive containment, forced colors, and
-reduced motion with accepted SC-04 at CM-50/fail-closed/return states and
-registered SC-05 only from accepted TR-00 onward. Revalidate the existing
-single reveal byte-for-byte unchanged and reference-only; generate no second
-image. Change no content, assets, provenance, controller, or reveal unless an
-exact presentation regression is found. Record `PRESENTATION COMPLETE —
-REVALIDATED`, `REVISE`, or `HOLD`; then return to one fresh complete
-Intelligence Tier 5. Do not push, publish, or begin a new Commandant shell.
+Resume only one fresh complete **Intelligence Officer** Tier 5 from the
+dedicated local Image Specialist revalidation commit. Independently verify
+the complete commit chain, exact SC-04/SC-05 state-to-scene identity,
+responsive/accessibility presentation, exact build/media/served identities,
+unchanged one-generation reference-only reveal, full release gates, fixture
+exclusion, budget, protections, and every variance. Record `AS BUILT
+RELEASED`, `REVISE`, or `HOLD` honestly; update the master plan only from
+accepted as-built evidence; replace `NEXT_INSTANCE_HANDOFF.md`; and perform
+the workflow's release synchronization only if all gates pass. Do not begin a
+new Commandant shell before this classification.
 
 ## Protected-work confirmation
 

@@ -15,7 +15,7 @@ No recurring automation is active. Do not schedule another shell.
 - Shell: `SS-RP004-THREE-CURRENT-v1`
 - Slice: `TD-004-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
-- Candidate: dedicated Quartermaster `TD004-VAR-002` revalidation commit;
+- Candidate: dedicated Image Specialist `TD004-VAR-002` revalidation commit;
   resolve immutable hash from Git history
 - Released functional base / current `origin/main`:
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`
@@ -23,16 +23,15 @@ No recurring automation is active. Do not schedule another shell.
 - Resolved finding: `TD004-VAR-001` —
   **`REQUIRED CORRECTION RESOLVED`**
 - Current finding: `TD004-VAR-002` —
-  **`REQUIRED CORRECTION CONTENT/ASSET REVALIDATED — PRESENTATION AND RELEASE PENDING`**
-- Return owner: Image Specialist / `image_specialist`
+  **`REQUIRED CORRECTION PRESENTATION REVALIDATED — RELEASE PENDING`**
+- Return owner: Intelligence Officer / `intelligence_officer`
 - Full evidence:
   `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
 
 TD-003 remains the accepted released playable boundary. TD-004 is not
 `AS BUILT RELEASED`; no playable-demo, rail, packet, expedition, curriculum,
 gameplay, visual-master, or successor control advances from this candidate.
-Do not push or publish this candidate before Image Specialist revalidation
-and fresh Intelligence release.
+Do not push or publish this candidate before fresh Intelligence release.
 
 ## Passing evidence retained for revalidation
 
@@ -121,7 +120,41 @@ Fresh Quartermaster evidence passes focused `22/22`, related `136/136`, full
 game `806/806`, readiness `15/15`, `183`-module build in `14.22s`,
 `PBA-TD004-v1`, fixture exclusion, and isolated root/JS/CSS/SC-04/SC-05
 served-byte identity. The candidate remains `REVISE - NOT AS BUILT RELEASED`
-pending Image Specialist and fresh Intelligence.
+pending fresh Intelligence.
+
+## Image Specialist revalidation checkpoint
+
+Image Specialist resumed from Quartermaster revalidation commit
+`fbc167fefc744a9ec5ce92e2e95ae4dc2629f773` and issued
+**`PRESENTATION COMPLETE — REVALIDATED`**.
+
+Six closed storage-free boundary states passed at exact DPR-1
+`1920 x 1080`, `1366 x 768`, `390 x 844`, and width-equivalent
+effective-`200%` `768 x 900`: `24/24`.
+
+- exact CM-50, invalid intent, early return, and completed RP-004 return
+  present the accepted SC-04 master and SC-04 alternative text;
+- accepted TR-00 and high-density TR-30 present the registered SC-05 master
+  and SC-05 alternative text;
+- all layouts remain horizontally contained, world-dominant,
+  `object-fit:cover`, at least `44 CSS px`, with one focused `h1` and one
+  polite atomic status;
+- forced colors and reduced motion passed across all six boundary states at
+  `390 x 844`; and
+- fresh normal/resolver/UI `17/17`, fixture identity `2/2`, and protected
+  journey `13/13` passed.
+
+No presentation defect was found. No runtime, style, content, controller,
+asset, provenance, or raster changed. Immediate-predecessor focused `22/22`,
+related `136/136`, full `806/806`, readiness `15/15`, build,
+`PBA-TD004-v1`, and exact served identity remain applicable to the
+byte-identical candidate.
+
+SC-04, SC-05, and the sole reveal retain their exact bytes and hashes. The
+reveal remains unchanged/reference-only at `1672 x 941`, `2,764,920` bytes,
+SHA-256
+`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`,
+with generation count exactly `1` and zero edits or additional generations.
 
 ## Continuing protections
 
@@ -144,13 +177,13 @@ pending Image Specialist and fresh Intelligence.
 
 ## Exact next action
 
-Resume only the **Image Specialist** from the dedicated local Quartermaster
-revalidation commit. Revalidate exact presentation identity, crop,
-alternative text, accessibility, responsive containment, forced colors, and
-reduced motion with accepted SC-04 at CM-50/fail-closed/return states and
-registered SC-05 only from accepted TR-00 onward. Revalidate the existing
-single reveal byte-for-byte unchanged and reference-only; generate no second
-image. Change no content, assets, provenance, controller, or reveal unless an
-exact presentation regression is found. Record `PRESENTATION COMPLETE —
-REVALIDATED`, `REVISE`, or `HOLD`; then return to one fresh complete
-Intelligence Tier 5. Do not push, publish, or begin a new Commandant shell.
+Resume only one fresh complete **Intelligence Officer** Tier 5 from the
+dedicated local Image Specialist revalidation commit. Independently verify
+the complete commit chain, exact SC-04/SC-05 state-to-scene identity,
+responsive/accessibility presentation, exact build/media/served identities,
+unchanged one-generation reference-only reveal, full release gates, fixture
+exclusion, budget, protections, and every variance. Record `AS BUILT
+RELEASED`, `REVISE`, or `HOLD` honestly; update the master plan only from
+accepted as-built evidence; replace this handoff; and perform release
+synchronization only if all gates pass. Do not begin a new Commandant shell
+before this classification.

@@ -1,4 +1,4 @@
-# TD-004 Image Specialist corrected polish review
+# TD-004 Image Specialist revalidated polish review
 
 ## Document control
 
@@ -10,14 +10,15 @@
 | Shell | `SS-RP004-THREE-CURRENT-v1` |
 | Slice | `TD-004-RP004-THREE-CURRENT-v1` |
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
-| Starting commit | Quartermaster correction `82fc431ff7209165039b49af41c8ed96cc9169e3` |
-| Functional authority | `08-FUNCTIONAL-BUILD-REPORT.md`, `FUNCTIONALLY COMPLETE` |
-| Content authority | `09-CONTENT-ASSET-LEDGER.md`, `CONTENT COMPLETE - TD004-VAR-001 CORRECTED` |
+| Starting commit | Quartermaster revalidation `fbc167fefc744a9ec5ce92e2e95ae4dc2629f773` |
+| Functional authority | `08-FUNCTIONAL-BUILD-REPORT.md`, `FUNCTIONALLY COMPLETE — CORRECTED (TD004-VAR-002)` |
+| Content authority | `09-CONTENT-ASSET-LEDGER.md`, `CONTENT COMPLETE — REVALIDATED` |
 | Production budget | `PBA-TD004-v1` |
-| Disposition | **`PRESENTATION COMPLETE — CORRECTED`** |
+| Disposition | **`PRESENTATION COMPLETE — REVALIDATED`** |
 
-This correction pass produced no image. It did not regenerate, edit, replace,
-or republish the one existing reveal.
+This revalidation produced no image and changed no runtime source, style,
+content, controller, asset, or provenance file. It did not regenerate, edit,
+replace, or republish the one existing reveal.
 
 ## Exact build reviewed
 
@@ -44,28 +45,26 @@ The corrected production build is:
 
 | Output | Exact identity |
 |---|---|
-| JavaScript | `index-589WID4d.js`; `1,247,036` bytes; SHA-256 `ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4` |
+| JavaScript | `index-CynBBXnS.js`; `1,247,724` bytes; SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409` |
 | CSS | `index-DVnUbAwl.css`; `85,151` bytes; SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` |
 | Modules | `183` |
-| Build time | Vite `19.30s`; wall `21.838s` |
+| Build time | retained immediate-predecessor Vite `14.22s` |
 | Runtime media | `21,536,123` bytes |
 | New runtime media | `2,163,752` bytes |
 
-An isolated `127.0.0.1:5184` production preview returned HTTP `200` for the
-root, JS, CSS, and SC-05 master. Served JS, CSS, and image bytes/hashes were
-identical to `dist`. Only the owned preview was stopped, and port `5184` was
-clear afterward.
+The immediately preceding Quartermaster gate independently served root, JS,
+CSS, SC-04, and SC-05 from isolated `127.0.0.1:5184`, each HTTP `200` and
+byte/hash-identical to `dist`; its owned preview was stopped and the port was
+clear. Image Specialist did not duplicate that unchanged served/build gate.
 
 ## Presentation findings and corrections
 
-The direct master exposed one exact presentation defect that the placeholder
-could not reveal: the shared desktop shell-width cap reduced the TD-004 world
-to a center-only cover crop. The cyclic/tensioned center remained visible,
-but most of the porous left relation and jointed right relation fell outside
-the world pane. That failed the shell requirement that the three equal
-relations remain simultaneously legible.
+No new presentation defect was found. `TD004-VAR-002` changes only the
+state-to-scene resolver. The already accepted Image correction remains exact:
+the TD-004-only full-width wide stage preserves the SC-05 three-relation crop,
+and narrow actions remain in natural source-order flow.
 
-The bounded correction:
+The retained bounded presentation correction:
 
 - lets only a canonical host containing `.three-current-reach` use the full
   available stage width at the shared desktop-height breakpoint;
@@ -76,35 +75,38 @@ The bounded correction:
 - changes the narrow action group from sticky to natural source-order flow so
   long learning forms are not visually interrupted or overlaid.
 
-No controller, component copy, state, route, intent, evidence, evaluator,
-focus destination, persistence, save, privacy, world image, image bytes,
-asset import, audio, or invariant-world behavior changed. Two source
-assertions lock the TD-004-only wide-stage rule and natural narrow action
-flow.
+This pass made no presentation change. Fresh rendered evidence instead proves
+that the corrected resolver selects the accepted SC-04 plate and SC-04
+alternative text at CM-50, invalid/fail-closed and return states, while only
+accepted TR-00 onward selects the registered SC-05 plate and SC-05
+alternative text.
 
 ## Exact responsive and crop evidence
 
-Five representative storage-free states were launched independently:
+Six representative storage-free states were launched independently:
 
 1. `cm50-three-choice-route-ready`;
-2. `tr10-relations-none-recorded`;
-3. `tr30-ai901-transfer-neutral`;
-4. `tr30-save-failed-last-good`; and
-5. `tr40-verified-restore`.
+2. `cm50-route-rejected-stale-token`;
+3. `tr00-arrive-orient`;
+4. `tr30-ai901-transfer-neutral`;
+5. `tr00-early-return-calibration`; and
+6. `tr40-return-calibration`.
 
 Each was measured at exact DPR-1 `1920 x 1080`, `1366 x 768`, `390 x 844`,
-and width-equivalent effective-`200%` `768 x 900`: `20` state/layout
+and width-equivalent effective-`200%` `768 x 900`: `24` state/layout
 combinations.
 
-| Gate | Corrected result |
+| Gate | Revalidated result |
 |---|---|
-| Outer horizontal containment | PASS in `20/20`; document client width equaled scroll width |
+| Exact scene identity | PASS in `24/24`; CM-50, invalid intent, early return, and RP-004 return were SC-04; accepted TR-00 and TR-30 were SC-05 |
+| Exact master and alternative text | PASS in `24/24`; each scene exposed only its registered asset ID, decoded source, and scene-specific alternative text |
+| Outer horizontal containment | PASS in `24/24`; document client width equaled scroll width |
 | Desktop outer containment | PASS; every `1920 x 1080` state remained `1920 x 1080` with no outer scroll |
-| Wide world dominance | PASS; world width share `0.600` |
+| Wide world dominance | PASS; measured viewport share `0.584-0.586`, preserving the issued `3fr / 2fr` inner split |
 | Wide registered crop | PASS; worst measured normalized crop `x 0.194-0.806`, retaining meaningful portions of left porous, center tensioned, right jointed, and the capped return |
 | Laptop registered crop | PASS; normalized crop `x 0.192-0.808` in the high-density state |
 | Narrow/effective-200 crop | PASS; full normalized `x 0.000-1.000` 16:9 composition |
-| Runtime master identity | PASS; every state decoded `3840 x 2160` from the emitted SC-05 asset |
+| Runtime master identity | PASS; accepted SC-05 decoded `3840 x 2160`; every SC-04 state decoded the accepted City Threshold plate instead |
 | Text fit | PASS; zero measured heading, paragraph, list, label, legend, or button horizontal text overflow |
 | Required controls | PASS; minimum `44 x 44 CSS px` |
 | Required actions | PASS; reachable through native panel or page scrolling |
@@ -132,8 +134,10 @@ A grayscale desktop world capture was inspected at the worst high-density
 wide crop. Particle/porous texture, braided tension, repeated joint
 boundaries, and the solid capped return remain separable without hue.
 
-Forced colors and reduced motion were jointly emulated for route-ready and
-high-density transfer states at all four exact layouts: `8/8` combinations.
+Forced colors and reduced motion were jointly emulated on all six boundary
+states at the narrow `390 x 844` gate: `6/6`. The preceding corrected Image
+pass also retains its `8/8` four-layout emulation on route-ready and the
+high-density transfer state.
 
 - forced colors removed the decorative world falloff and preserved system
   borders, native controls, text, grouping, and `Highlight` focus;
@@ -155,10 +159,12 @@ browser emulation, target size, and width-equivalent review passed.
 
 ## Invariance, artifact, and authority review
 
-Source, runtime, and the five representative states use the same directly
-imported world master. Observation, course work, miss, save failure, verified
-restore, and return change only the separate interface; no answer, success,
-failure, save, or route state changes the world image.
+Source, runtime, and the six representative states use exactly one plate per
+authorized scene: the accepted SC-04 predecessor at CM-50/fail-closed/return,
+and the registered SC-05 master only after accepted route entry. Within each
+scene, observation, course work, miss, save failure, and verified restore
+change only the separate interface; no answer, success, failure, or save
+state changes that scene's world image.
 
 Original-resolution and crop review found no person, protagonist, hands,
 body, face, human shadow/reflection, ship, occupant, readable text,
@@ -200,13 +206,16 @@ regenerated, or republished in this correction.
 
 | Gate | Result |
 |---|---|
-| Focused TD-004 connected suite | PASS, `33/33` |
-| Related TD-003/TD-004 selected suite | PASS, `48/48` |
-| Full game suite | PASS, `805/805` |
+| Fresh normal/resolver/UI suite | PASS, `17/17` |
+| Fresh closed-fixture identity suite | PASS, `2/2` |
+| Fresh protected-journey suite | PASS, `13/13` |
+| Focused correction gate retained from immediate predecessor | PASS, `22/22` |
+| Related TD-003/TD-004 gate retained from immediate predecessor | PASS, `136/136` |
+| Full game suite retained from immediate predecessor | PASS, `806/806` |
 | Readiness validators | PASS, `15/15`: `CUM-01`, `RP-002` through `RP-012`, `SIM-01` through `SIM-03` |
-| Production build | PASS, `183` modules in `19.30s` |
+| Production build | PASS, retained byte-identical `183` modules in `14.22s` |
 | Budget validator | `PBA-TD004-v1 PASS` |
-| JavaScript | `1,247,036 <= 1,255,149`; headroom `8,113` |
+| JavaScript | `1,247,724 <= 1,255,149`; headroom `7,425` |
 | CSS | `85,151 <= 85,789`; headroom `638` |
 | Modules | `183 <= 187`; headroom `4` |
 | New runtime media | `2,163,752 <= 4,194,304`; headroom `2,030,552` |
@@ -220,10 +229,10 @@ now only `638` bytes and is not a rolling entitlement.
 
 ## Variance status and limitations
 
-`TD004-VAR-001` is **implemented and Image-validated, pending fresh
-Intelligence classification**. The required SC-05 runtime master is directly
-imported, presentation-corrected, provenance-complete, invariant, accessible,
-within budget, and independently revalidated by this stage.
+`TD004-VAR-001` remains **`REQUIRED CORRECTION RESOLVED`**.
+`TD004-VAR-002` is **presentation revalidated, pending fresh Intelligence
+classification**. Exact scene identity, alternative text, crop,
+accessibility presentation, and the unchanged reveal all pass.
 
 Remaining honest limitations:
 
@@ -237,45 +246,42 @@ Remaining honest limitations:
 
 ## Files changed
 
-- `horizon-archive-game/src/styles.css`
-- `horizon-archive-game/test/threeCurrentReachUi.test.js`
-- this corrected Polish Review
+- this revalidated Polish Review
 - `TD-004/11-AS-BUILT-RECONCILIATION.md`
 - `TD-004/STAGE-METRICS.json`
-- `Concept Art Book/scenes/SC-05-three-current-reach.md`
-- `Concept Art Book/prompt-provenance-log.md`
-- `Production Pipeline/demo-increments/DI-001-city-threshold.md`
-- runtime-master neighboring `PROVENANCE.md`
-- source-reveal neighboring `PROVENANCE.md`
+- `NEXT_INSTANCE_HANDOFF.md`
 
-No raster image changed.
+No runtime, raster, content, controller, style, asset, or provenance file
+changed.
 
 ## Disposition
 
-**`PRESENTATION COMPLETE — CORRECTED`**
+**`PRESENTATION COMPLETE — REVALIDATED`**
 
-The exact SC-05 world now remains world-dominant and simultaneously legible
-through its three distinct structural relations and capped apparent return at
-required wide, laptop, narrow, effective-`200%`, grayscale, forced-color, and
-reduced-motion presentations. Functional/content behavior is unchanged,
-every validation and budget gate passed, and the single reveal remains exact
-and reference-only.
+Exact CM-50, invalid/fail-closed and return states now present the accepted
+SC-04 plate, while accepted TR-00 onward presents the registered SC-05 world.
+Both sides preserve exact alternative text, containment, focus/status,
+minimum targets, reduced motion, forced colors, and responsive composition.
+The single reveal remains exact and reference-only.
 
 ## Exact Intelligence Officer handoff
 
 - **Stage / agent:** fresh Intelligence Officer / `intelligence_officer`
-- **Starting commit:** the dedicated corrected Image Specialist commit
+- **Starting commit:** the dedicated revalidated Image Specialist commit
   containing this review; resolve its immutable hash from Git history
 - **Shell:** `SS-RP004-THREE-CURRENT-v1`
-- **Variance:** classify `TD004-VAR-001` from the Quartermaster correction and
-  this `PRESENTATION COMPLETE — CORRECTED` evidence
+- **Variance:** independently classify `TD004-VAR-002` from the Combat
+  correction, Quartermaster revalidation, and this
+  `PRESENTATION COMPLETE — REVALIDATED` evidence; retain
+  `TD004-VAR-001 REQUIRED CORRECTION RESOLVED`
 - **Candidate:** functionally complete; content correction complete;
-  presentation correction complete; one exact reference-only reveal; one
+  presentation revalidated; one exact reference-only reveal; one
   directly imported provenanced SC-05 runtime derivative; no added generation
 - **Independent objective:** run a fresh complete Tier 5 release, verify exact
-  build/media identities and registered crop behavior, classify every
-  variance, update the master plan only from accepted as-built evidence, and
-  record `AS BUILT RELEASED`, `REVISE`, or `HOLD` honestly
+  SC-04/SC-05 state-to-scene identity, build/media identities and registered
+  crop behavior, classify every variance, update the master plan only from
+  accepted as-built evidence, and record `AS BUILT RELEASED`, `REVISE`, or
+  `HOLD` honestly
 - **Synchronization:** no push was made by Image Specialist; replace
   `NEXT_INSTANCE_HANDOFF.md` only from the fresh Intelligence release
 - **Hard stop:** no RP-005 runtime route/content, RP-013, successor,

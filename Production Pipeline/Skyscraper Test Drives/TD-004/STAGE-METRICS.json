@@ -654,9 +654,85 @@
         "fixtureExclusion": "PASS",
         "copyIntegrity": "player-facing string set unchanged; no placeholder or answer leakage"
       },
-      "commit": "PENDING_QUARTERMASTER_REVALIDATION_COMMIT",
+      "commit": "fbc167fefc744a9ec5ce92e2e95ae4dc2629f773",
       "commitConvention": "The dedicated Quartermaster revalidation commit containing this ledger entry is authoritative; downstream roles resolve its immutable hash from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; returned to Image Specialist revalidation"
+    },
+    {
+      "sequence": 20,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-26T19:22:00.0000000Z",
+      "endedAt": "2026-07-26T20:01:02.8544681Z",
+      "durationMs": 2342854,
+      "disposition": "PRESENTATION COMPLETE — REVALIDATED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "fbc167fefc744a9ec5ce92e2e95ae4dc2629f773",
+      "returnOwner": "Intelligence Officer / intelligence_officer",
+      "variance": {
+        "id": "TD004-VAR-002",
+        "classification": "REQUIRED CORRECTION — PRESENTATION REVALIDATED, RELEASE PENDING",
+        "revalidation": "Exact CM-50, invalid pre-route intent, early return, and completed RP-004 return present SC-04; accepted TR-00 and high-density TR-30 present SC-05. Exact asset ID, decoded source, alternative text, crop, containment, targets, focus/status, forced colors, reduced motion, and unchanged reveal pass."
+      },
+      "assetIdentity": {
+        "sc04": {
+          "asset": "city-threshold-overview-master.png",
+          "bytes": 2626795,
+          "sha256": "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"
+        },
+        "sc05": {
+          "asset": "sc05-three-current-panorama-runtime-master-v1.webp",
+          "dimensions": "3840 x 2160",
+          "bytes": 2163752,
+          "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F",
+          "provenanceStatus": "unchanged"
+        },
+        "reveal": {
+          "asset": "rp004-three-current-capped-return-v1.png",
+          "dimensions": "1672 x 941",
+          "bytes": 2764920,
+          "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+          "generationCount": 1,
+          "status": "byte-identical and reference-only; zero generation or edit"
+        }
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CynBBXnS.js",
+          "bytes": 1247724,
+          "sha256": "875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "freshNormalResolverUi": "17/17",
+        "freshFixtureIdentity": "2/2",
+        "freshProtectedJourney": "13/13",
+        "focusedRetained": "22/22",
+        "relatedSelectedRetained": "136/136",
+        "fullGameRetained": "806/806",
+        "readinessValidatorsRetained": "15/15",
+        "buildSecondsRetained": 14.22,
+        "budgetRetained": "PBA-TD004-v1 PASS",
+        "servedIdentityRetained": "127.0.0.1:5184 root/JS/CSS/SC-04/SC-05 HTTP 200; every served byte/hash identical to dist; owned preview stopped; port clear",
+        "liveFixtureStates": 6,
+        "liveFixtureLayouts": 24,
+        "forcedColorReducedMotionLayouts": 6,
+        "minimumControlCssPx": 44,
+        "sceneIdentity": "CM-50/invalid/early-return/RP-004-return SC-04; accepted TR-00/TR-30 SC-05",
+        "defectFound": false
+      },
+      "commit": "PENDING_IMAGE_REVALIDATION_COMMIT",
+      "commitConvention": "The dedicated Image Specialist revalidation commit containing this report and ledger entry is authoritative; Intelligence resolves its immutable hash from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; returned to fresh Intelligence Tier 5"
     }
   ]
 }
