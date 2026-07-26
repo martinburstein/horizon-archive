@@ -55,8 +55,20 @@
       "durationMs": 199722,
       "disposition": "VIABILITY READY",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/04-VIABILITY-ENVELOPE.md",
-      "commit": "PENDING_SCIENCE_COMMIT",
+      "commit": "7fe06d05d250f2643b9ed5a934d135d4f4caadbf",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-26T06:06:00.0000000Z",
+      "endedAt": "2026-07-26T06:09:28.2164768Z",
+      "durationMs": 208216,
+      "disposition": "REVISE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/05-PLAYABLE-SLICE-SHELL.md",
+      "commit": "PENDING_MISSION_CAPTAIN_COMMIT",
+      "synchronization": "local-only-no-shell-gate"
     }
   ]
 }
