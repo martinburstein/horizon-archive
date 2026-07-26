@@ -10,9 +10,11 @@
 | Shell candidate | `SS-RP003-REVIEW-SAVE-v1` |
 | Campaign address | `RP-003 / SC-04 / CM-40-CM-50` |
 | Exact predecessor | accepted no-action `IE-P3` |
-| Preceding commit | `709853888972229a5329d0876b10183dea207213` |
+| Initial viability commit | `7fe06d05d250f2643b9ed5a934d135d4f4caadbf` |
+| Mission return commit | `d4d85a59dff9355ebfcd6e7476c8f2ff6c8c7ec8` |
+| Operations correction commit | `123b4b9ed797e87091154217d4d20e15ce276e2c` |
 | Pass type | Hash-keyed baseline delta |
-| Disposition | `VIABILITY READY` |
+| Disposition | `VIABILITY READY — REVALIDATED` |
 
 This envelope makes only the TD-003 review/save/restore floor buildable. It
 does not reopen either finalized learning mapping, add a learning claim, or
@@ -34,7 +36,8 @@ the named skill or the ordered official Microsoft authorities are available.
 | `Skyscraper Agent Profiles/office-of-science-administrator.md` | `CB5C3A8D1699A9A91829FC403359A59B01EE5F95805794E8C2298EB4EBFD6B44` |
 | `TD-003/01-GAME-DEVELOPMENT-BRIEF.md` | `CD5E98AAC3F9281BDB2056F17FE184187187F509BFA3B049A729707512F090C7` |
 | `TD-003/02-WORLD-NARRATIVE-MASTERPLAN.md` | `BE67E67666053727C72980DA4F9CEB770857F43A8589B02FC5C18A9558EA5411` |
-| `TD-003/03-CAMPAIGN-FLOOR-STACK.md` | `43C08379F0A56CE266D18AE8A911879751F6B656FCE23659EA921C7B1F6A8066` |
+| `TD-003/03-CAMPAIGN-FLOOR-STACK.md` | `9B31D5CAB6E198655426A54F0CD2D69EDA89C9B6160E449C998880703C7B2618` |
+| `TD-003/05-PLAYABLE-SLICE-SHELL.md` (`REVISE`) | `55FC509E69AA667ABBCEE2378B68025FF49D395CF9895FB781D759B8A21E3D9F` |
 | `Production Pipeline/CURRICULUM_SPINE.md` | `2439A2A1ECEF574FC7053F00CC3049010DB8FF0153DCCAEE98D65F9036084519` |
 | `Production Pipeline/GAMEPLAY_SYSTEMS_SPINE.md` | `489559254CE9FBDFE7248B81BD335D812DD61190B5ACE70F59B96BF1C5A00BFF` |
 | `Production Pipeline/PRODUCTION_READINESS_SPINE.md` | `CB20F97A149C84969E6D6058ECDEF210E735055E51C9F5E4B69F98905749ABFC` |
@@ -183,6 +186,12 @@ packet_id, mapping_id, form, skill_or_objective_id,
 dimension_correctness, attempt_count, hint_level, confidence,
 misconception_tags, mastery_status
 ```
+
+Every one of the seven records has
+`mapping_id=RP003-A3-CALIBRATION-MARGIN`. Records 1-3 separately have
+`skill_or_objective_id=PY-010`; records 4-7 separately have
+`skill_or_objective_id=RP003-IE-01`. The packet mapping identity and the
+learning identity are different fields and are never interchangeable.
 
 All required dimensions are `true`; mastery is `mastered`; attempt count,
 hint level, confidence, and misconception tags must pass their existing
@@ -370,9 +379,10 @@ toward production caps.
 ## Focused viability evidence
 
 - Focused RP-003 checkpoint/journey/normal-route/UI/fixture suite:
-  `45/45 PASS` in `480.851ms`.
+  initial `45/45 PASS` in `480.851ms`; post-correction revalidation
+  `45/45 PASS` in `434.610ms`.
 - RP-003 mapping validator:
-  `SELF-TEST PASS`.
+  `SELF-TEST PASS` initially and after the Operations correction.
 - Exact seven-record protected serializer, strict P0-P3 checkpoint adapters,
   atomic commit failure, private rejection, Tour isolation, no-cross-credit,
   replay-free return, seven-modality metadata, and fixture production
@@ -380,6 +390,28 @@ toward production caps.
 - This is viability evidence, not a claim that the TD-003 normal floor,
   transaction, fixture manifest, or player-facing presentation already
   exists.
+
+## TD003-MC-R01 revalidation certificate
+
+Mission's `REVISE` correctly returned the original Operations certificate for
+a packet-mapping contradiction. Operations correction commit
+`123b4b9ed797e87091154217d4d20e15ce276e2c` now agrees with every current
+source authority:
+
+- durable top-level `mappingId=RP003-A3-CALIBRATION-MARGIN`;
+- all seven evidence records use
+  `mapping_id=RP003-A3-CALIBRATION-MARGIN`;
+- ordered records 1-3 use `skill_or_objective_id=PY-010`; and
+- ordered records 4-7 use
+  `skill_or_objective_id=RP003-IE-01`.
+
+The corrected floor stack matches this envelope's nine-key top-level record,
+three-key note, seven-record order, ten-key record shape, transaction,
+last-known-good failure, sanitation, deterministic recovery, CM-50 restore,
+returns, fixture, accessibility, budget, and hard-stop requirements. No
+remaining Science-owned contradiction was found. `TD003-MC-R01` is resolved
+for shell integration; Mission must still perform a fresh full shell audit
+and issue the actual contract before Marines deploy.
 
 ## Risk register
 
@@ -440,14 +472,16 @@ return:
 - **Files changed:** this envelope and `TD-003/STAGE-METRICS.json`.
 - **Synchronization:** local only; no push at this stage.
 
-**Disposition: `VIABILITY READY`.**
+**Disposition: `VIABILITY READY — REVALIDATED`.**
 
 ## Exact Mission Captain handoff
 
-Using `GDB-TD003-v1`, `WNMP-TD003-v1`, `CFS-TD003-v1`, `VE-TD003-v1`, and
-preceding commit `709853888972229a5329d0876b10183dea207213`, issue one
-conflict-free `SS-RP003-REVIEW-SAVE-v1` shell for exact no-action `IE-P3` to
-`CM-40 -> CM-41 -> CM-50`.
+Using `GDB-TD003-v1`, `WNMP-TD003-v1`, corrected `CFS-TD003-v1`,
+revalidated `VE-TD003-v1`, Mission return
+`d4d85a59dff9355ebfcd6e7476c8f2ff6c8c7ec8`, and Operations correction
+`123b4b9ed797e87091154217d4d20e15ce276e2c`, rerun the full integration
+audit and issue one conflict-free `SS-RP003-REVIEW-SAVE-v1` shell for exact
+no-action `IE-P3` to `CM-40 -> CM-41 -> CM-50`.
 
 Lock the fixed five-conjunct Boolean review, zero-credit provenance
 inspection, fresh validated one-hit save, exact nine-key top-level record,
@@ -458,6 +492,11 @@ CM-50 restore, and both known returns. Require all seven modalities,
 focus/reflow/forced-color/reduced-motion parity, closed storage-free fixture
 plus owned launch manifest, production exclusion, unchanged TD-002 caps, and
 the full validation ladder.
+
+Explicitly lock top-level `mappingId` and all seven records' `mapping_id` to
+`RP003-A3-CALIBRATION-MARGIN`; lock `skill_or_objective_id` to `PY-010` only
+for records 1-3 and `RP003-IE-01` only for records 4-7. Do not reproduce the
+resolved field-identity contradiction.
 
 Omit the bearing. Permit no objective/claim change, protected-journey import,
 new runtime media, network or credential seam, RP-004 destination, RP-013,
