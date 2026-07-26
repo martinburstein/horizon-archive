@@ -7,7 +7,9 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-No recurring automation is active. Do not schedule another shell.
+The authorized Skyscraper production automation is active on a two-hour
+cadence. Each wake may complete exactly one non-overlapping cycle and must
+resume any documented return loop before beginning new work.
 
 ## Current synchronized state
 
@@ -81,8 +83,8 @@ the archived two-team workflow.
 
 ## Exact next action
 
-**Await Martin's explicit instruction.** If he authorizes another manual
-skyscraper run, begin with Commandant guarded verification from this released
-TD-004 boundary and define only the next selection envelope. Do not preselect
-story, canon, packet, destination, route, or shell, and do not schedule
-automation.
+At the next scheduled wake, begin with **Commandant guarded verification**
+from this released TD-004 boundary and define only the next selection
+envelope. Do not preselect story, canon, packet, destination, route, or shell.
+If a cycle is already active or interrupted, resume its latest valid
+synchronized checkpoint instead of restarting Commandant.

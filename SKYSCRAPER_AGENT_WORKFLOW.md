@@ -163,7 +163,10 @@ Do not claim a live visual, save, assistive-technology, or gated-state result wi
 - Preserve unrelated work and stage only intended files.
 - Push at the Mission Captain's `SHELL READY`, Combat Engineer's `FUNCTIONALLY COMPLETE`, and Intelligence Officer's `AS BUILT RELEASED`, unless the current handoff requires a safer earlier synchronization.
 - Verify `HEAD == origin/main` at every push gate.
-- No scheduled automation is active. Test drives and future runs begin only from Martin's explicit instruction.
+- Recurring automation may run only under Martin's explicit authorization.
+  `NEXT_INSTANCE_HANDOFF.md` is the sole authority for its current status and
+  next exact stage; never restart a completed stage from a stale scheduled
+  prompt.
 
 ## Continuing Horizon Archive invariants
 

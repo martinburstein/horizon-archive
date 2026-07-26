@@ -33,7 +33,10 @@ Run strictly sequentially:
 
 The Mission Captain must issue a versioned `SHELL READY` contract before the Marines deploy. A Marine may request a variance but may not silently change the shell. The Intelligence Officer independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
 
-No recurring automation is active. Do not schedule this workflow until Martin explicitly approves automation after the manual test drive.
+Martin explicitly approved recurring Skyscraper production after the manual
+test drives. The current automation status, cadence, and exact next action live
+only in `NEXT_INSTANCE_HANDOFF.md`; do not infer them from an older workflow
+edge or archived prompt.
 
 ## Two-team agent profiles
 
