@@ -339,7 +339,7 @@ Intelligence may classify the variance resolved.
 - Tactical predecessor:
   `40552d911c8dfbf5d5bc8fe5099bac2ae840df6c`.
 - Dedicated Combat Engineer commit:
-  `PENDING_COMBAT_CORRECTION_COMMIT`.
+  `4a34454f17ec133e768c8c104b396da6e6491700`.
 - This is an Intelligence return loop. Per the exact handoff, create one
   dedicated local commit and do **not** push before downstream revalidation
   and fresh Intelligence release.

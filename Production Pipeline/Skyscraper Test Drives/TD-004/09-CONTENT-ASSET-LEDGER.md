@@ -9,11 +9,62 @@
 | Test drive | `TD-004` |
 | Shell | `SS-RP004-THREE-CURRENT-v1` |
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
-| Starting build | Intelligence return commit `abad806fd103be7768ef1af567b6736224b861a0` |
-| Functional authority | `08-FUNCTIONAL-BUILD-REPORT.md`, `FUNCTIONALLY COMPLETE` |
+| Starting build | Combat Engineer correction commit `4a34454f17ec133e768c8c104b396da6e6491700` |
+| Functional authority | `08-FUNCTIONAL-BUILD-REPORT.md`, `FUNCTIONALLY COMPLETE — CORRECTED (TD004-VAR-002)` |
 | Content candidate | This dedicated Quartermaster commit; resolve its immutable identity from Git history |
 | Production budget | `PBA-TD004-v1` |
-| Disposition | **`CONTENT COMPLETE - TD004-VAR-001 CORRECTED`** |
+| Disposition | **`CONTENT COMPLETE — REVALIDATED`** |
+
+## TD004-VAR-002 Quartermaster revalidation
+
+Quartermaster resumed strictly from Combat Engineer correction commit
+`4a34454f17ec133e768c8c104b396da6e6491700`. No player-facing content,
+asset byte, provenance record, CSS/layout rule, or reveal changed in that
+correction. The only production change was the bounded state-to-scene
+resolver and its exact identity markers.
+
+Every retired content and asset placeholder remains correctly retired:
+
+- exact `CM-50 / cm50_route / SC-04` uses the accepted City Threshold
+  overview with the unchanged Calibration Margin alternative text;
+- only accepted `SC-05` states from `tr00_orient` onward use the registered
+  Three-Current master and its SC-05 alternative text;
+- malformed state combinations fail closed to the SC-04 presentation;
+- invalid and duplicate pre-route intents remain at CM-50 / SC-04;
+- interrupted unsaved arrival reloads to CM-50 / SC-04; and
+- write-free `RETURN TO CALIBRATION MARGIN` restores CM-50 / SC-04.
+
+Comparison against Intelligence return commit
+`dfc8544e5f7741b93e49e6d01a567ba68f6939f1` confirms that the complete set
+of player-facing strings in `ThreeCurrentReach.jsx` is unchanged; only the
+accepted SC-04 import, asset selection, and `SC-04`/`SC-05` resolver
+identities were added.
+No raw placeholder token, temporary-placeholder label, fixture identity, or
+answer-bearing content appears in production source or output.
+
+### Fresh revalidation evidence
+
+| Gate | Result |
+|---|---|
+| Focused TD-004 plus connected TD-003 | `22/22 PASS` |
+| Related TD-003/TD-004 | `136/136 PASS` |
+| Full game suite | `806/806 PASS` |
+| Readiness validators | `15/15 PASS` |
+| Production build | PASS; `183` modules; Vite `14.22s`; wall `16.636s` |
+| JavaScript | `index-CynBBXnS.js`; `1,247,724` bytes; SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409` |
+| CSS | `index-DVnUbAwl.css`; `85,151` bytes; SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` |
+| Runtime media | `21,536,123` bytes total; `2,163,752` new image-only bytes |
+| Budget | `PBA-TD004-v1 PASS`; JS headroom `7,425`, CSS headroom `638`, module headroom `4`, media headroom `2,030,552` |
+| Served identity | isolated `127.0.0.1:5184` root, JS, CSS, accepted SC-04 master, and registered SC-05 master HTTP `200`; every served byte/hash identical to `dist`; owned preview stopped; port clear |
+| Production exclusion | TD-004 fixture marker/path/port and source-map URL absent from `dist` |
+| Copy integrity | authored string set unchanged; all `TD004-COPY-*` entries remain retired |
+| Asset integrity | SC-04 SHA-256 `1D727694...EFF6D`; SC-05 SHA-256 `B6E0F34A...9F63F`; reveal SHA-256 `CE7FDDF3...C83F` |
+
+The SC-05 master remains `3840 x 2160`, `2,163,752` bytes, directly
+runtime-integrated only for accepted SC-05 states, and fully governed by its
+unchanged provenance. The sole reveal remains `1672 x 941`, `2,764,920`
+bytes, exactly one generation, byte-for-byte unchanged, and reference-only.
+No image was generated, edited, replaced, or reclassified.
 
 ## TD004-VAR-001 Quartermaster correction
 
@@ -170,7 +221,7 @@ and raw failed-check display are no longer player-facing.
 | Review/provenance | shell conjunctive firewall; Creative Lock owner envelope | controller `reviewRows`; renderer review list | PRODUCTION |
 | Local save/privacy/authority | shell persistence and authority contracts; RP-004 evidence/authority contracts | controller statuses; renderer footer and return boundary | PRODUCTION |
 | Surface mystery and world language | `HORIZON_ARCHIVE_SURFACE_LORE.md`; SC-05 scene contract | headings, introductions, relation and note copy | PRODUCTION / spoiler-safe |
-| World imagery | SC-05 scene contract and photorealistic charter | unchanged inherited City Threshold overview | TEMPORARY PLACEHOLDER |
+| World imagery | SC-04 predecessor authority; SC-05 scene contract and photorealistic charter | exact resolver selects accepted City Threshold overview at CM-50/fail-closed return states and registered Three-Current master only from accepted TR-00 onward | PRODUCTION / STATE-EXACT |
 
 ## Player-facing content inventory
 
@@ -213,12 +264,12 @@ and raw failed-check display are no longer player-facing.
 
 | Asset | Provenance | Runtime status | Identity | Approval |
 |---|---|---|---|---|
-| City Threshold overview | `Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png`; sibling `PROVENANCE.md` | no longer used by SC-05 | unchanged source; no TD-004 runtime claim | approved inherited asset for its original scope only |
+| City Threshold overview | `Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png`; sibling `PROVENANCE.md` | direct invariant SC-04 predecessor/fail-closed/return import; never used as SC-05 | `1672 x 941`; `2,626,795` bytes; SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D` | approved inherited runtime asset in its original scope |
 | SC-05 production panorama | `Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`; sibling `PROVENANCE.md` | direct invariant SC-05 runtime import | `3840 x 2160`; `2,163,752` bytes; SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F` | **approved runtime master; deterministic derivative with no native-4K-detail claim** |
 | Interface typography | existing application stack | reused unchanged | `0` new font bytes | approved reuse |
 | New icons/symbols | none | absent | `0` bytes | required absence |
 | New audio | none | absent | `0` bytes | required silence |
-| TD-004 reveal | not generated by Quartermaster | Image Specialist reference task | n/a | downstream only |
+| TD-004 reveal | `Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png`; sibling `PROVENANCE.md` | unchanged canonical physical-layout reference only; not imported | `1672 x 941`; `2,764,920` bytes; SHA-256 `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`; exactly one generation | revalidation required; no second image |
 
 No external, licensed, untraceable, hidden-lore-derived, concept-only, or
 newly generated asset entered runtime. The inherited plate was not edited,
@@ -262,15 +313,15 @@ Those remain independent release evidence.
 
 | Measure | Quartermaster candidate | Cap | Result |
 |---|---:|---:|---|
-| Production modules | `182` | `<=187` | PASS |
-| Raw JavaScript | `1,246,963` bytes | `<=1,255,149` | PASS, `8,186` bytes headroom |
-| JavaScript identity | `index-CTwaOcxe.js`; SHA-256 `6CF04ECF500B0922864CF6DFD3A2C61E39ADE73527F51CEB0AD5806A81CDBF94` | exact candidate | RECORDED |
-| Raw CSS | `83,699` bytes | `<=85,789` | PASS, `2,090` bytes headroom |
-| CSS identity | `index-KrTPDfvo.css`; SHA-256 `3F9B98753E35D998664410988788B44B61A474A86E8F37DB6E00AFEA128761BE` | exact functional build | BYTE-STABLE |
-| Runtime media | `19,372,371` bytes | `<=23,566,675` | PASS, `0` new bytes |
-| New runtime media | `0` bytes | `<=4,194,304` | PASS |
-| Production build | `182` modules in `16.14s` | `<=60s` | PASS |
-| Isolated preview | owned `127.0.0.1:5184`; root/JS/CSS HTTP `200`; served bytes matched `dist`; owned PID stopped; port clear | exact candidate | PASS |
+| Production modules | `183` | `<=187` | PASS |
+| Raw JavaScript | `1,247,724` bytes | `<=1,255,149` | PASS, `7,425` bytes headroom |
+| JavaScript identity | `index-CynBBXnS.js`; SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409` | exact candidate | RECORDED |
+| Raw CSS | `85,151` bytes | `<=85,789` | PASS, `638` bytes headroom |
+| CSS identity | `index-DVnUbAwl.css`; SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` | exact functional build | BYTE-STABLE |
+| Runtime media | `21,536,123` bytes | `<=23,566,675` | PASS, `2,030,552` bytes headroom |
+| New runtime media | `2,163,752` bytes | `<=4,194,304` | PASS |
+| Production build | `183` modules in `14.22s` | `<=60s` | PASS |
+| Isolated preview | owned `127.0.0.1:5184`; root/JS/CSS/SC-04/SC-05 HTTP `200`; every served byte/hash matched `dist`; owned PID stopped; port clear | exact candidate | PASS |
 
 JavaScript headroom is now limited. The Image Specialist should prefer
 byte-neutral styling and reference-only reveal work. Any runtime SC-05 asset
@@ -282,8 +333,9 @@ runtime approval.
 
 | Gate | Result |
 |---|---|
-| Focused TD-004 and connected TD-003 tests | PASS, `18/18` |
-| Full game suite | PASS, `804/804` |
+| Focused TD-004 and connected TD-003 tests | PASS, `22/22` |
+| Related TD-003/TD-004 tests | PASS, `136/136` |
+| Full game suite | PASS, `806/806` |
 | Readiness validator self-tests | PASS, `15/15`: `CUM-01`, `RP-002` through `RP-012`, `SIM-01` through `SIM-03` |
 | Production build and budget | PASS under every fixed cap |
 | Production served identity | PASS on owned isolated preview; exact JS/CSS byte lengths |
@@ -293,27 +345,27 @@ runtime approval.
 
 ## Remaining polish opportunities
 
-1. Replace the temporary atmosphere plate only if the Image Specialist can
-   produce and validate a true SC-05 visual authority within the fixed budget;
-   otherwise retain it honestly and keep the limitation visible in the
-   release record.
-2. Refine presentation hierarchy without changing source order, content,
+1. Revalidate the corrected SC-04/SC-05 scene boundary at exact viewports
+   without changing either master, its provenance, or responsive registration.
+2. Preserve presentation hierarchy without changing source order, content,
    focus, targets, owner boundaries, or the one-group replacement model.
 3. Review the longest course forms at the exact desktop, narrow, and
    effective-200% gates; trim only if meaning and answer neutrality remain
    complete.
-4. Produce exactly one spoiler-safe TD-004 reveal candidate from an accepted
-   SC-05 physical-layout decision, with provenance and reference-only status
-   unless separately integrated and validated.
+4. Revalidate the existing sole reveal byte-for-byte unchanged and
+   reference-only; generate no second image.
 
 ## Variances and limitations
 
 ### Variances
 
-`TD004-VAR-001` was a required correction. It is implemented locally by the
-registered direct SC-05 master import and returns to Image Specialist for
-presentation/reveal revalidation. No shell, flow, mechanic, evidence, save,
-route, focus, layout, world, or budget variance was introduced.
+`TD004-VAR-001` is resolved by fresh Intelligence. `TD004-VAR-002` is
+implemented by Combat Engineer and now **content/asset revalidated** by
+Quartermaster: exact SC-04 presentation remains at CM-50/fail-closed/return
+states, and SC-05 begins only from accepted TR-00. It returns to Image
+Specialist for presentation revalidation before fresh Intelligence
+classification. No shell, content meaning, mechanic, evidence, save, focus,
+layout, asset, provenance, reveal, world, or budget variance was introduced.
 
 ### Honest limitations
 
@@ -340,13 +392,14 @@ route, focus, layout, world, or budget variance was introduced.
 
 ## Disposition
 
-**`CONTENT COMPLETE - TD004-VAR-001 CORRECTED`**
+**`CONTENT COMPLETE — REVALIDATED`**
 
-All player-facing structural copy placeholders remain retired. The sole asset
-placeholder is now also retired through an exact, directly imported,
-provenanced SC-05 runtime master. The candidate remains functionally green and
-within the issued production budget, pending Image Specialist and Intelligence
-revalidation.
+All player-facing structural copy placeholders remain retired. The asset
+placeholder remains retired through the exact, directly imported, provenanced
+SC-05 runtime master. The corrected scene resolver now preserves the accepted
+SC-04 predecessor and fail-closed states without changing either asset or any
+copy. The candidate remains within budget, pending Image Specialist and fresh
+Intelligence revalidation.
 
 ## Exact Image Specialist handoff
 
@@ -355,11 +408,11 @@ revalidation.
   ledger; resolve its immutable hash from Git history
 - **Shell:** `SS-RP004-THREE-CURRENT-v1`
 - **Exact build:** corrected normal `TD004-RTA-001` through no-replay
-  `TR-40`, with `805/805`, all `15/15` readiness self-tests, `183` modules,
-  and the candidate identities recorded in the correction section
-- **Presentation objective:** complete `TD004-STYLE-STRUCTURAL` with
-  exact-viewport hierarchy, text fit, contrast, forced-color/reduced-motion
-  parity, and no loss of world-first framing or one-owner replacement
+  `TR-40`, with `806/806`, all `15/15` readiness self-tests, `183` modules,
+  and the candidate identities recorded in the revalidation section
+- **Presentation objective:** revalidate `TD004-STYLE-STRUCTURAL` plus exact
+  SC-04-at-CM-50 / SC-05-from-TR-00 identity at wide, narrow,
+  effective-200%, forced-color, and reduced-motion states
 - **Asset objective:** revalidate the corrected direct SC-05 runtime master,
   its three grayscale-independent structural relations, capped apparent
   return, registered wide/narrow crops, alternative text, invariant/no-human
@@ -375,16 +428,16 @@ revalidation.
   fixture identity, world response, safe returns, purpose unknown,
   destinationless hard stop, no authority/exam/external-action limits, hidden
   lore, protected user work, or Martin storage
-- **Budget warning:** JavaScript headroom `8,113` bytes; CSS headroom `827`
+- **Budget warning:** JavaScript headroom `7,425` bytes; CSS headroom `638`
   bytes; aggregate runtime-media headroom `2,030,552` bytes; production build
   cap `60s`
 - **Validation:** direct visual review at required viewports plus focused
   regressions, full suite/build if runtime source changes, budget/identity,
   provenance, answer/spoiler, fixture-exclusion, patch, and protected-file
   checks
-- **Required output:** `TD-004/10-POLISH-REVIEW.md`, one reveal package under
-  `Visual Direction/Production Masters/`, updated visual canon/checklist
-  records as required, and `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`
+- **Required output:** updated `TD-004/10-POLISH-REVIEW.md`, exact unchanged
+  reveal-package revalidation, and `PRESENTATION COMPLETE — REVALIDATED`,
+  `REVISE`, or `HOLD`
 - **Next recipient:** Intelligence Officer / `intelligence_officer`
 
 If honest presentation completion requires changing mechanics, content

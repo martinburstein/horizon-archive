@@ -15,7 +15,7 @@ No recurring automation is active. Do not schedule another shell.
 - Shell: `SS-RP004-THREE-CURRENT-v1`
 - Slice: `TD-004-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
-- Candidate: dedicated Combat Engineer `TD004-VAR-002` correction commit;
+- Candidate: dedicated Quartermaster `TD004-VAR-002` revalidation commit;
   resolve immutable hash from Git history
 - Released functional base / current `origin/main`:
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`
@@ -23,16 +23,16 @@ No recurring automation is active. Do not schedule another shell.
 - Resolved finding: `TD004-VAR-001` —
   **`REQUIRED CORRECTION RESOLVED`**
 - Current finding: `TD004-VAR-002` —
-  **`REQUIRED CORRECTION IMPLEMENTED — PENDING DOWNSTREAM REVALIDATION`**
-- Return owner: Quartermaster / `quartermaster`
+  **`REQUIRED CORRECTION CONTENT/ASSET REVALIDATED — PRESENTATION AND RELEASE PENDING`**
+- Return owner: Image Specialist / `image_specialist`
 - Full evidence:
   `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
 
 TD-003 remains the accepted released playable boundary. TD-004 is not
 `AS BUILT RELEASED`; no playable-demo, rail, packet, expedition, curriculum,
 gameplay, visual-master, or successor control advances from this candidate.
-Do not push or publish this candidate before Quartermaster and Image
-Specialist revalidation and fresh Intelligence release.
+Do not push or publish this candidate before Image Specialist revalidation
+and fresh Intelligence release.
 
 ## Passing evidence retained for revalidation
 
@@ -40,7 +40,7 @@ Specialist revalidation and fresh Intelligence release.
 - selected related TD-003/TD-004 suite `136/136`;
 - full game `806/806`;
 - readiness validators `15/15`;
-- build `183` modules in `14.11s`;
+- build `183` modules in `14.22s`;
 - JS `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256
   `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`;
 - CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
@@ -95,8 +95,33 @@ Focused regression asserts image/scene identity at CM-50, accepted TR-00,
 invalid intent, interrupted pre-save reload, and RP-004 return. Route
 semantics, tokens, evidence, save/rollback, content, layout, assets,
 provenance, reveal, and world invariance are unchanged. The candidate remains
-`REVISE - NOT AS BUILT RELEASED` pending sequential Quartermaster, Image
-Specialist, and fresh Intelligence revalidation.
+`REVISE - NOT AS BUILT RELEASED` pending sequential Image Specialist and
+fresh Intelligence revalidation.
+
+## Quartermaster revalidation checkpoint
+
+Quartermaster resumed from Combat correction commit
+`4a34454f17ec133e768c8c104b396da6e6491700` and issued
+**`CONTENT COMPLETE — REVALIDATED`**.
+
+All retired `TD004-COPY-*` entries remain exact. The authored player-facing
+string set is unchanged from the Intelligence return candidate; no raw
+placeholder, answer, fixture, later-state, authority, or temporary-status
+content leaks into production.
+
+`TD004-ASSET-SC05-PLACEHOLDER` remains retired. Exact CM-50,
+malformed/fail-closed pre-route state, invalid/duplicate pre-route intent,
+interrupted unsaved reload, and RP-004 return use the accepted SC-04 master.
+Accepted TR-00 onward uses the registered SC-05 master. SC-04, SC-05, and the
+sole reveal retain exact dimensions, bytes, hashes, provenance, and
+runtime/reference boundaries. The reveal remains unchanged, reference-only,
+and exactly one generation; no image was generated or edited.
+
+Fresh Quartermaster evidence passes focused `22/22`, related `136/136`, full
+game `806/806`, readiness `15/15`, `183`-module build in `14.22s`,
+`PBA-TD004-v1`, fixture exclusion, and isolated root/JS/CSS/SC-04/SC-05
+served-byte identity. The candidate remains `REVISE - NOT AS BUILT RELEASED`
+pending Image Specialist and fresh Intelligence.
 
 ## Continuing protections
 
@@ -119,13 +144,13 @@ Specialist, and fresh Intelligence revalidation.
 
 ## Exact next action
 
-Resume only the **Quartermaster** from the dedicated local Combat Engineer
-correction commit. Revalidate that all retired TD-004 copy placeholders and
-the retired SC-05 asset placeholder remain exact while CM-50 uses the
-accepted SC-04 master, accepted TR-00 onward uses SC-05, invalid/interrupted
-pre-save paths remain SC-04, and RP-004 return restores SC-04. Change no
-content, assets, provenance, controller, layout, reveal, or budget unless an
-exact regression is found. Record `CONTENT COMPLETE — REVALIDATED`, `REVISE`,
-or `HOLD`; then return sequentially to Image Specialist revalidation and one
-fresh complete Intelligence Tier 5. Do not push, publish, or begin a new
-Commandant shell.
+Resume only the **Image Specialist** from the dedicated local Quartermaster
+revalidation commit. Revalidate exact presentation identity, crop,
+alternative text, accessibility, responsive containment, forced colors, and
+reduced motion with accepted SC-04 at CM-50/fail-closed/return states and
+registered SC-05 only from accepted TR-00 onward. Revalidate the existing
+single reveal byte-for-byte unchanged and reference-only; generate no second
+image. Change no content, assets, provenance, controller, or reveal unless an
+exact presentation regression is found. Record `PRESENTATION COMPLETE —
+REVALIDATED`, `REVISE`, or `HOLD`; then return to one fresh complete
+Intelligence Tier 5. Do not push, publish, or begin a new Commandant shell.

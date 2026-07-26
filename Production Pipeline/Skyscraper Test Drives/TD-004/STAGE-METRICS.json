@@ -531,7 +531,7 @@
         "generationCount": 1,
         "status": "validated byte-identical and reference-only; TD004-VAR-001 resolved; release still held by TD004-VAR-002"
       },
-      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commit": "dfc8544e5f7741b93e49e6d01a567ba68f6939f1",
       "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; release synchronization withheld"
     },
@@ -585,9 +585,78 @@
         "generationCount": 1,
         "status": "unchanged and reference-only; no generation, edit, replacement, or publication"
       },
-      "commit": "PENDING_COMBAT_CORRECTION_COMMIT",
+      "commit": "4a34454f17ec133e768c8c104b396da6e6491700",
       "commitConvention": "The dedicated Combat Engineer correction commit containing this report and ledger entry is authoritative; downstream roles resolve its immutable hash from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; returned to Quartermaster revalidation"
+    },
+    {
+      "sequence": 19,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-07-26T19:12:00.0000000Z",
+      "endedAt": "2026-07-26T19:20:19.3482501Z",
+      "durationMs": 499348,
+      "disposition": "CONTENT COMPLETE — REVALIDATED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "4a34454f17ec133e768c8c104b396da6e6491700",
+      "returnOwner": "Image Specialist / image_specialist",
+      "variance": {
+        "id": "TD004-VAR-002",
+        "classification": "REQUIRED CORRECTION — CONTENT/ASSET REVALIDATED, PRESENTATION/RELEASE PENDING",
+        "revalidation": "All retired TD004-COPY-* items and TD004-ASSET-SC05-PLACEHOLDER remain exact. CM-50, malformed/fail-closed pre-route state, invalid/duplicate pre-route intent, interrupted unsaved reload, and RP-004 return present SC-04; accepted TR-00 onward presents SC-05."
+      },
+      "assetIdentity": {
+        "sc04": {
+          "asset": "city-threshold-overview-master.png",
+          "bytes": 2626795,
+          "sha256": "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"
+        },
+        "sc05": {
+          "asset": "sc05-three-current-panorama-runtime-master-v1.webp",
+          "dimensions": "3840 x 2160",
+          "bytes": 2163752,
+          "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F",
+          "provenanceStatus": "unchanged"
+        },
+        "reveal": {
+          "asset": "rp004-three-current-capped-return-v1.png",
+          "dimensions": "1672 x 941",
+          "bytes": 2764920,
+          "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+          "generationCount": 1,
+          "status": "byte-identical and reference-only; no generation or edit"
+        }
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CynBBXnS.js",
+          "bytes": 1247724,
+          "sha256": "875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "focused": "22/22",
+        "relatedSelected": "136/136",
+        "fullGame": "806/806",
+        "readinessValidators": "15/15",
+        "buildSeconds": 14.22,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/JS/CSS/SC-04/SC-05 HTTP 200; every served byte/hash identical to dist; owned preview stopped; port clear",
+        "fixtureExclusion": "PASS",
+        "copyIntegrity": "player-facing string set unchanged; no placeholder or answer leakage"
+      },
+      "commit": "PENDING_QUARTERMASTER_REVALIDATION_COMMIT",
+      "commitConvention": "The dedicated Quartermaster revalidation commit containing this ledger entry is authoritative; downstream roles resolve its immutable hash from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; returned to Image Specialist revalidation"
     }
   ]
 }
