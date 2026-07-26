@@ -35,6 +35,19 @@
       "commit": "PENDING_COLONEL_COMMIT",
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-07-26T14:51:01.8355734Z",
+      "endedAt": "2026-07-26T14:58:13.5974457Z",
+      "durationMs": 431762,
+      "disposition": "HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/03-CAMPAIGN-FLOOR-STACK.md",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations Planning Major commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
     }
   ]
 }
