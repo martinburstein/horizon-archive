@@ -31,7 +31,19 @@
       "durationMs": 133575,
       "disposition": "WORLD BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/02-WORLD-NARRATIVE-MASTERPLAN.md",
-      "commit": "PENDING_COLONEL_COMMIT",
+      "commit": "21ee8b2bebfac517fd7475f3b259ac8f2c166d05",
+      "synchronization": "local-only"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-07-26T05:50:00.0000000Z",
+      "endedAt": "2026-07-26T05:57:06.7624370Z",
+      "durationMs": 426762,
+      "disposition": "FLOOR STACK READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/03-CAMPAIGN-FLOOR-STACK.md",
+      "commit": "PENDING_OPERATIONS_COMMIT",
       "synchronization": "local-only"
     }
   ]
