@@ -103,8 +103,20 @@
       "durationMs": 396909,
       "disposition": "SHELL READY",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/05-PLAYABLE-SLICE-SHELL.md",
-      "commit": "PENDING_MISSION_CAPTAIN_SHELL_READY_COMMIT",
+      "commit": "e8b7b3fafa8d4fe3006d79e85b1b4617051d392d",
       "synchronization": "push-main-and-verify"
+    },
+    {
+      "sequence": 9,
+      "stage": "Reconnaissance Sergeant",
+      "agentId": "reconnaissance_sergeant",
+      "startedAt": "2026-07-26T06:26:30.0000000Z",
+      "endedAt": "2026-07-26T06:34:26.7737672Z",
+      "durationMs": 476774,
+      "disposition": "CREATIVE LOCK",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/06-CREATIVE-TREATMENT.md",
+      "commit": "PENDING_RECONNAISSANCE_SERGEANT_COMMIT",
+      "synchronization": "local-only"
     }
   ]
 }
