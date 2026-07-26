@@ -8,13 +8,13 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
 The authorized Skyscraper automation is active on a three-hour cadence.
-TD-005 has crossed the strategic `SHELL READY` gate. Resume at the exact next
-Marine stage; do not restart a Colonel stage or run roles concurrently.
+TD-005 has crossed `CREATIVE LOCK`. Resume at the exact next Marine stage; do
+not restart a completed stage or run roles concurrently.
 
 ## Synchronized state
 
 - Active test drive: `TD-005`
-- Latest completed stage: `8 - returned Mission Captain`
+- Latest completed stage: `9 - Reconnaissance Sergeant`
 - Shell: **`SS-RP005-MANYFOLD-RETURN-v1 / SHELL READY`**
 - Slice: `TD-005-RP005-MANYFOLD-RETURN-v1`
 - Campaign address: `RP-005 / SC-06 / MF-00-MF-30`
@@ -24,11 +24,17 @@ Marine stage; do not restart a Colonel stage or run roles concurrently.
   `PBA-TD005-v1`
 - Historical stop chain:
   `CFS-TD005-v1`, `VE-TD005-v1`, `MC-TD005-HOLD-v1`
-- Mission shell commit: the dedicated commit containing
+- Mission shell commit: the pushed dedicated commit containing
   `TD-005/05-PLAYABLE-SLICE-SHELL.md`, metrics, this handoff, readiness, rail,
   scoreboard, and packet controls is authoritative.
-- Synchronization: **Mission `SHELL READY` commit pushed to `main`; verify
-  `HEAD == origin/main` before Recon begins**
+- Creative lock:
+  `Production Pipeline/Skyscraper Test Drives/TD-005/06-CREATIVE-TREATMENT.md`
+- Reconnaissance commit: the dedicated local commit containing the creative
+  treatment, metrics, and this handoff is authoritative under the ledger
+  self-reference convention; no push occurs at this stage.
+- Synchronization: Mission `SHELL READY` remains synchronized at
+  `0ffa55b636bbb94772d8659c6009d43395085033`; the Recon commit is the local
+  sequential edge for Tactical Operations.
 - Released playable boundary: **still TD-004** until Intelligence releases
   the completed as-built shell
 
@@ -110,30 +116,36 @@ content, hidden lore, or changed ending.
 
 ## Exact next action
 
-**Reconnaissance Sergeant — creative treatment.**
+**Tactical Operations Specialist — experience blueprint.**
 
-Read the Reconnaissance Sergeant profile and
-`TD-005/05-PLAYABLE-SLICE-SHELL.md` in full, then the exact shell-cited
-product, world, scene, visual-charter, released predecessor, recent-reveal,
-and current-control sections.
+Read the Tactical Operations Specialist profile,
+`TD-005/05-PLAYABLE-SLICE-SHELL.md`, and
+`TD-005/06-CREATIVE-TREATMENT.md` in full. Preserve the creative thesis:
+care without verdict. Recurrence remains description, divergence remains
+supported difference, sealed evidence remains unavailable, and stewardship
+remains compatible material continuity without named authority.
 
-Create one bounded `TD-005/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md` that
-defines:
+Create one bounded `TD-005/07-EXPERIENCE-BLUEPRINT.md` that specifies:
 
-- one emotional promise and player fantasy;
-- arrival, developing tension, understanding, and exit emotions;
-- attention hierarchy and pacing;
-- world/interface/Builder-work/course relationship;
-- concept-level materials, lighting, atmosphere, existing-audio use, motion,
-  and reduced-motion direction;
-- contrast with recent scenes/reveals;
-- fixed invariants, flexible staging, risks, and any variance.
+- the exact state/component/semantic map from strict TR-40 through MF-30;
+- seven-modality route-token convergence and scene reconstruction;
+- one active owner/group/heading/status at every state;
+- panorama/detail registration and four equal any-order observation controls;
+- exact blank Python and neutral AI-901 learning/recovery/focus sequences;
+- five-owner bounded review, atomic save, failure, rollback, restore, and
+  exact return presentation;
+- deterministic focus/error/status destinations;
+- desktop, laptop, narrow, effective-zoom, grayscale, forced-color,
+  reduced-motion, target, overflow, crop/hotspot, scene/alt, and silent
+  behavior; and
+- one closed storage-free allowlisted fixture and compact-summary blueprint.
 
-Do not change route, graph, learning/evidence, record, privacy, recovery,
-accessibility, responsive, asset, budget, offline/Tour, world, return, or
-hard-stop requirements. Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`; update
-metrics and this handoff; create one dedicated Recon commit; and leave an
-exact Tactical Operations Specialist handoff.
+Do not write runtime code, final production copy, final CSS, generated art,
+media, new route/state/evidence/schema/save meaning, canon, world effect,
+RP-006, RP-013, successor, post-ending content, or hidden lore. Do not add a
+third image or arbitrary fixture state. Issue `EXPERIENCE READY`, `REVISE`,
+or `HOLD`; update metrics and this handoff; create one dedicated Tactical
+Operations commit; and leave an exact Combat Engineer handoff.
 
 ## Protected boundaries
 
