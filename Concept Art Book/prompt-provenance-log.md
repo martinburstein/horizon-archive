@@ -18,9 +18,10 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Status:** approved invariant TD-004 SC-05 runtime presentation master;
   Image Specialist issued `PRESENTATION COMPLETE — CORRECTED` after exact
   responsive/crop, grayscale, forced-color, reduced-motion, alt, invariance,
-  no-human, served-identity, and budget review. Fresh Intelligence release
-  remains pending. The derivative does not claim native 4K source detail or
-  alter the reveal's unchanged reference-only status.
+  no-human, served-identity, and budget review. Fresh Intelligence issued
+  `PASS — AS BUILT RELEASED`; exact deterministic reproduction and the full
+  rendered state matrix passed. The derivative does not claim native 4K
+  source detail or alter the reveal's unchanged reference-only status.
 
 ## 2026-07-26 — RP-004 three-current capped-return reveal
 

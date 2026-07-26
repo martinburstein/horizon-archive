@@ -730,9 +730,81 @@
         "sceneIdentity": "CM-50/invalid/early-return/RP-004-return SC-04; accepted TR-00/TR-30 SC-05",
         "defectFound": false
       },
-      "commit": "PENDING_IMAGE_REVALIDATION_COMMIT",
+      "commit": "aeb77787fd34b281103c26864ab0d62fe3927d6e",
       "commitConvention": "The dedicated Image Specialist revalidation commit containing this report and ledger entry is authoritative; Intelligence resolves its immutable hash from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; returned to fresh Intelligence Tier 5"
+    },
+    {
+      "sequence": 21,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-26T20:05:20.0000000Z",
+      "endedAt": "2026-07-26T20:28:21.6045011Z",
+      "durationMs": 1381605,
+      "disposition": "PASS — AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "aeb77787fd34b281103c26864ab0d62fe3927d6e",
+      "variances": [
+        {
+          "id": "TD004-VAR-001",
+          "classification": "REQUIRED CORRECTION RESOLVED"
+        },
+        {
+          "id": "TD004-VAR-002",
+          "classification": "REQUIRED CORRECTION RESOLVED"
+        }
+      ],
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CynBBXnS.js",
+          "bytes": 1247724,
+          "sha256": "875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "focused": "22/22",
+        "relatedSelected": "140/140",
+        "fullGame": "806/806",
+        "readinessValidators": "15/15",
+        "buildViteSeconds": 12.13,
+        "buildWallSeconds": 15.001,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/deep fallback/JS/CSS/SC-04/SC-05 HTTP 200; every served byte/hash identical to dist; owned preview stopped; port clear",
+        "postBuildE2e": "exactly one complete non-overlapping run; 99.498s; all emitted gates true; credits true; runtimeErrors false",
+        "normalFixtureLayoutChecks": "24/24",
+        "forcedColorReducedMotionChecks": "8/8",
+        "grayscaleChecks": "4/4",
+        "minimumControlCssPx": 44,
+        "worldShareDesktop": 0.6,
+        "foreignRequests": 0,
+        "consoleOrPageErrors": 0,
+        "qaCapturesRestored": 69,
+        "ownedPortsClear": [
+          4176,
+          5184
+        ]
+      },
+      "reveal": {
+        "asset": "rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "additionalGenerationOrEditCount": 0,
+        "status": "byte-identical and reference-only"
+      },
+      "commit": "PENDING_INTELLIGENCE_RELEASE_COMMIT",
+      "commitConvention": "The dedicated Intelligence release commit containing this reconciliation and ledger entry is authoritative; its immutable hash is resolved from Git history after commit without creating a recursive successor commit.",
+      "synchronization": "release push gate; verify HEAD, origin/main, and remote refs/heads/main equality"
     }
   ]
 }

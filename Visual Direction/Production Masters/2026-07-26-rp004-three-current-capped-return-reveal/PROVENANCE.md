@@ -23,6 +23,13 @@ derivative does not alter this PNG's status, does not claim native 4K source
 detail, and does not make this source the approved native-detail
 `SC-05-PANORAMA-MASTER`.
 
+Fresh Intelligence independently rehashed this source, reproduced the
+runtime derivative byte-for-byte, and issued `PASS — AS BUILT RELEASED /
+TD-004`. This PNG remains exactly `1672 x 941`, `2,764,920` bytes, SHA-256
+`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`,
+reference-only, with generation count exactly `1` and zero later
+generation/edit/replacement.
+
 ## Accepted visual decision
 
 Three equally important handling relationships remain materially distinct and

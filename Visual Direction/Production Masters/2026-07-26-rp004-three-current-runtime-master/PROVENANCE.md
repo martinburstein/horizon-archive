@@ -9,7 +9,7 @@
 - Bytes: `2,163,752`
 - SHA-256:
   `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`
-- Runtime status: **approved TD-004 SC-05 presentation master**
+- Runtime status: **approved and as-built released TD-004 SC-05 presentation master**
 - Scope: invariant world plate for `RP-004 / SC-05 / TR-00-TR-40`
 
 ## Exact source and generation accounting
@@ -93,6 +93,16 @@ All three relations and the capped return remain legible. Grayscale,
 forced-colors, reduced-motion, alternative text, one-status/focus, `>=44px`
 targets, text fit, local-only requests, and no-human/no-authority review
 passed. No raster was generated, edited, or rewritten by this validation.
+
+## Intelligence release verification
+
+Fresh Intelligence reproduced this runtime master byte-for-byte with the
+registered Pillow `12.2.0` process, verified exact emitted and served identity,
+and passed all six closed shell states across the four exact DPR-1 layouts
+(`24/24`), forced-colors/reduced-motion checks (`8/8`), and grayscale
+arrival/transfer checks (`4/4`). Exact CM-50, invalid, early-return, and
+completed-return states use SC-04; accepted TR-00 onward uses this SC-05
+master. Final disposition: **`PASS — AS BUILT RELEASED / TD-004`**.
 
 ## Budget and identity boundary
 

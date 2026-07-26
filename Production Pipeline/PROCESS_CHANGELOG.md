@@ -17,6 +17,32 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-26 / TD-004 Intelligence release — TUNE
+
+- **Observed:** the complete predecessor sequence consumed `17,545,948ms`
+  (`292.43m`) before final Intelligence. The corrected candidate then passed
+  focused `22/22`, selected related `140/140`, full `806/806`, validators
+  `15/15`, the 183-module build, `PBA-TD004-v1`, exact served identity, one
+  complete post-build `99.498s` E2E, and 36 visual-state/layout checks.
+  Boundary-specific image assertions and a real rendered-fixture sweep both
+  proved the corrected SC-04-to-SC-05 transition.
+- **Decision:** `TUNE`. Retain exact predecessor/destination/return image
+  identity assertions whenever one renderer spans a route boundary, and keep
+  the final visual sweep state-matrix driven so every shell state is reviewed
+  without touching browser save data.
+- **Expected benefit:** route-boundary presentation leakage is caught by the
+  earliest code owner and independently confirmed at release with less
+  ambiguity.
+- **Preserved guardrails:** sequential roles, versioned shell, independent
+  release, strict learning separation, privacy, accessibility, invariant
+  world, exact save/recovery, protected work, budget, one reveal, and hard
+  stops remain unchanged.
+- **Validation:** the next authorized shell must name its cross-scene identity
+  matrix before construction and release must reconcile that matrix against
+  both source tests and rendered states.
+- **Rollback trigger:** the matrix duplicates only same-scene states, couples
+  to hashed output names, or replaces rather than complements visual judgment.
+
 ## 2026-07-26 / TD-004 fresh Intelligence rerun — TUNE
 
 - **Observed:** the corrected candidate passed fresh `19/19` focused,

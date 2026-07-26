@@ -2,8 +2,8 @@
 
 ## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position now advances within `RP-003 / SC-04` from exact finalized `IE-P3` through five-conjunct CM-40 review, fresh provenance, one strict atomic local save, and exact no-replay `CM-50 VERIFIED RESTORE`, with only the two known write-free returns.
-- **Authoritative rail stop:** the normal route stops at exact saved CM-50 or its known Civic Comparison/City Threshold return. SC-04 remains invariant and neither receives nor responds to the record. Onward bearing, an RP-004 destination/opening, RP-013, successor, reward, access, authority, external action, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.
+- **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position now advances from exact released TD-003 CM-50 through the full `RP-004 / SC-05 / TR-00–TR-40` shell, deterministic restore, both write-free returns, and the optional destinationless record.
+- **Authoritative rail stop:** the normal route stops at restored TR-40, either authorized return, or the destinationless notation. SC-04 and SC-05 remain invariant. RP-005 route/destination, a traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, access, authority, external action, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.
 
 ## Dated cycle handoff history — W4 Coder / 2026-07-25
 

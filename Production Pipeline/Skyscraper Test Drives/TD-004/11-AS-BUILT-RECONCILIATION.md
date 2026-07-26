@@ -2,485 +2,278 @@
 
 ## Document control
 
-| Field | Value |
+| Field | Released value |
 |---|---|
-| Stage | Intelligence Officer |
-| Agent ID | `intelligence_officer` |
+| Stage / agent | Intelligence Officer / `intelligence_officer` |
 | Test drive | `TD-004` |
 | Shell | `SS-RP004-THREE-CURRENT-v1` |
 | Slice | `TD-004-RP004-THREE-CURRENT-v1` |
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
-| Candidate | Image Specialist revalidation commit; resolve immutable hash from Git history |
-| Released functional base | Combat Engineer commit `95fb6402c281ec1294bdb76582de04e80f3f3cb9` (`origin/main` at audit start) |
-| Release disposition | **`REVISE - NOT AS BUILT RELEASED`** |
-| Current finding | `TD004-VAR-002`: required correction presentation revalidated; fresh release revalidation pending |
-| Return owner | Intelligence Officer / `intelligence_officer` |
+| Candidate audited | Image Specialist revalidation commit `aeb77787fd34b281103c26864ab0d62fe3927d6e` |
+| Released functional base | `95fb6402c281ec1294bdb76582de04e80f3f3cb9` |
+| Release disposition | **`PASS — AS BUILT RELEASED`** |
+| Variances | `TD004-VAR-001 REQUIRED CORRECTION RESOLVED`; `TD004-VAR-002 REQUIRED CORRECTION RESOLVED` |
 | Process recommendation | `TUNE` |
 
-Fresh Tier 5 confirmed that `TD004-VAR-001` is **`REQUIRED CORRECTION
-RESOLVED`** and discovered the separate fixed-requirement
-presentation/state-mapping defect `TD004-VAR-002`. At audit time, exact CM-50
-mounted the RP-004 renderer and exposed SC-05 before the fresh Pilot route.
-That finding correctly returned to Combat Engineer and could not be deferred.
+Fresh Intelligence treated every predecessor report as a claim to verify.
+The complete current source, tests, validators, production build, isolated
+served output, closed fixture, visual states, provenance package, and Git
+chain were independently reconciled. All fixed requirements pass. No
+unauthorized divergence, deferred release limitation, or masterplan-changing
+discovery remains.
 
-The Combat Engineer correction checkpoint below records the bounded local
-repair. Quartermaster content/asset revalidation and Image Specialist
-presentation revalidation now pass. Release remains withheld until one fresh
-independent Intelligence Tier 5 classifies the candidate.
+## Repository and candidate integrity
 
-## Combat Engineer correction checkpoint
-
-Combat Engineer resumed from Intelligence return commit
-`dfc8544e5f7741b93e49e6d01a567ba68f6939f1` and implemented only the
-earliest-owner state-to-scene correction:
-
-- exact restored `CM-50 / cm50_route / SC-04` now resolves to the accepted
-  `city-threshold-overview-master.png`;
-- only accepted `SC-05` states from `tr00_orient` onward resolve to the
-  registered `sc05-three-current-panorama-runtime-master-v1.webp`;
-- invalid or malformed route state fails closed to SC-04;
-- an accepted but unsaved arrival is transient, so interruption/reload
-  reconstructs exact CM-50 and SC-04; and
-- `RETURN TO CALIBRATION MARGIN` is write-free and restores SC-04.
-
-Focused image/scene identity coverage now asserts exact CM-50, accepted
-TR-00, invalid intent, interrupted pre-save reload, and RP-004 return. The
-correction passed focused `22/22`, related TD-003/TD-004 `136/136`, full game
-`806/806`, readiness validators `15/15`, production build at `183` modules in
-`14.11s`, and `PBA-TD004-v1`.
-
-Corrected output:
-
-- JavaScript `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256
-  `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`;
-- CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
-  `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`;
-- runtime media `21,536,123` bytes, of which the accepted SC-05 master is the
-  same `2,163,752` new image-only bytes; and
-- owned `127.0.0.1:5184` root, JS, CSS, SC-04, and SC-05 HTTP `200`, with
-  served bytes/hashes identical to `dist`; owned preview stopped and port
-  clear.
-
-No route semantics, content, presentation CSS, asset bytes, provenance,
-reveal, evidence, persistence, return, or world-invariance behavior changed.
-The reveal remains byte-for-byte unchanged and reference-only. This
-checkpoint is **`FUNCTIONALLY COMPLETE — CORRECTED`**, not an Intelligence
-release. Quartermaster and Image Specialist must revalidate sequentially
-before one fresh complete Tier 5.
-
-## Quartermaster TD004-VAR-002 revalidation
-
-Quartermaster resumed from dedicated Combat correction commit
-`4a34454f17ec133e768c8c104b396da6e6491700` and made no content, asset,
-provenance, CSS/layout, or reveal change. The state-to-scene correction
-preserves every retired `TD004-COPY-*` item and the retired
-`TD004-ASSET-SC05-PLACEHOLDER`.
-
-Fresh content/asset evidence confirms:
-
-- exact CM-50, malformed/fail-closed pre-route state, invalid/duplicate
-  pre-route intent, interrupted unsaved reload, and RP-004 return present the
-  accepted SC-04 master and SC-04 alternative text;
-- accepted TR-00 onward presents the registered SC-05 master and SC-05
-  alternative text;
-- the authored player-facing string set is unchanged from the Intelligence
-  return candidate;
-- no raw placeholder, fixture identity, answer, later-state, authority, or
-  asset-status token leaks into production;
-- SC-04, SC-05, and the sole reveal retain their exact bytes, hashes, and
-  approval/reference boundaries; and
-- no image was generated, edited, replaced, or reclassified.
-
-Fresh validation passed focused `22/22`, related `136/136`, full game
-`806/806`, readiness `15/15`, build `183` modules in `14.22s`,
-`PBA-TD004-v1`, production exclusion, and isolated served identity for root,
-JS, CSS, SC-04, and SC-05.
-
-The reproduced output remains JavaScript `index-CynBBXnS.js`,
-`1,247,724` bytes, SHA-256
-`875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`,
-and CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
-`9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`.
-
-Disposition: **`CONTENT COMPLETE — REVALIDATED`**. This is not an
-Intelligence release. Image Specialist must now revalidate exact responsive
-presentation on both sides of the route boundary and the unchanged reveal,
-then return to one fresh complete Tier 5.
-
-## Image Specialist TD004-VAR-002 revalidation
-
-Image Specialist resumed strictly from Quartermaster revalidation commit
-`fbc167fefc744a9ec5ce92e2e95ae4dc2629f773` and made no runtime, style,
-content, controller, asset, provenance, or raster change.
-
-Six closed storage-free boundary states were rendered at exact DPR-1
-`1920 x 1080`, `1366 x 768`, `390 x 844`, and width-equivalent
-effective-`200%` `768 x 900`: `24/24` passed.
-
-- exact CM-50 and invalid pre-route intent presented SC-04;
-- accepted TR-00 and high-density TR-30 presented SC-05;
-- early return and completed RP-004 return restored SC-04;
-- every state exposed the exact registered asset ID, decoded source, and
-  scene-specific alternative text;
-- every layout remained horizontally contained, world-dominant, and
-  `object-fit:cover`, with one focused `h1`, one polite atomic status, and
-  controls at least `44 CSS px`;
-- forced colors and reduced motion passed on all six boundary states at
-  `390 x 844`; and
-- the established SC-05 wide/laptop registered crop and full 16:9
-  narrow/effective-200 composition remain unchanged.
-
-Fresh source regressions passed normal/resolver/UI `17/17`, closed-fixture
-identity `2/2`, and protected journey `13/13`. Image Specialist relied on the
-immediately preceding unchanged Quartermaster build/release evidence for
-focused `22/22`, related `136/136`, full game `806/806`, readiness `15/15`,
-the `183`-module build in `14.22s`, `PBA-TD004-v1`, and exact isolated served
-identity. The agent did not duplicate those byte-stable gates.
-
-SC-04 remains `2,626,795` bytes, SHA-256
-`1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D`.
-SC-05 remains `2,163,752` bytes, SHA-256
-`B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
-The sole reveal remains unchanged/reference-only at `1672 x 941`,
-`2,764,920` bytes, SHA-256
-`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`,
-with generation count exactly `1` and zero edits or additional generations.
-
-Disposition: **`PRESENTATION COMPLETE — REVALIDATED`**. This is not an
-Intelligence release. The exact next owner is one fresh complete Intelligence
-Tier 5.
-
-## Quartermaster correction checkpoint
-
-Following the dedicated Intelligence return commit
-`abad806fd103be7768ef1af567b6736224b861a0`, Quartermaster implemented the
-required correction without a second image generation:
-
-- retired `TD004-ASSET-SC05-PLACEHOLDER`;
-- directly imported the approved SC-05 runtime master
-  `sc05-three-current-panorama-runtime-master-v1.webp`;
-- registered `3840 x 2160`, `2,163,752` bytes, SHA-256
-  `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`;
-- proved three grayscale-independent current/handling relations, the shared
-  capped apparent return, responsive crop registration, invariant use,
-  alternative text, and no protagonist/human trace;
-- retained the exact one generated reveal unchanged and reference-only; and
-- passed TD-004 connected `33/33`, full game `805/805`, readiness `15/15`,
-  production build, exact served identity, fixture exclusion, and
-  `PBA-TD004-v1`.
-
-The runtime master is a disclosed deterministic derivative of the reveal,
-not a new generation and not native-4K-detail source material. The correction
-is locally implemented but is **not** an Intelligence acceptance. Image
-Specialist revalidation now passes; release remains `REVISE` until a fresh
-independent Intelligence Tier 5 classifies the correction.
-
-## Image Specialist correction return
-
-Image Specialist resumed only from Quartermaster correction commit
-`82fc431ff7209165039b49af41c8ed96cc9169e3` and issued
-**`PRESENTATION COMPLETE — CORRECTED`**.
-
-The direct master exposed a desktop crop defect: the inherited shared
-frame-width cap reduced the world to a center-only crop and largely removed
-the left porous and right jointed relations. A TD-004-only CSS correction now
-uses the full wide stage while preserving the `3fr / 2fr` split,
-`object-fit:cover`, undistorted framing, and `0.600` world-width share.
-Narrow actions now remain in natural source-order flow instead of becoming a
-mid-form sticky overlay.
-
-Fresh Image evidence passed:
-
-- five representative states across exact DPR-1 `1920 x 1080`,
-  `1366 x 768`, `390 x 844`, and effective-`200%` `768 x 900`: `20/20`;
-- worst meaningful wide crop normalized `x 0.194-0.806`, with all three
-  structural relations and the capped return legible;
-- forced colors plus reduced motion on two high-risk states across all four
-  layouts: `8/8`;
-- zero horizontal escape, text overflow, undersized controls, focus/status
-  failures, console/page errors, or foreign requests;
-- focused `33/33`, related `48/48`, full game `805/805`, readiness `15/15`,
-  production build, served identity, and `PBA-TD004-v1`;
-- exact SC-05 runtime master identity unchanged; and
-- source reveal exact hash/dimensions/reference-only status unchanged, with
-  zero additional generations or edits.
-
-The corrected production output is `index-589WID4d.js` (`1,247,036` bytes,
-SHA-256
-`ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4`)
-and `index-DVnUbAwl.css` (`85,151` bytes, SHA-256
-`9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`),
-with `183` modules. CSS headroom is `638` bytes.
-
-That return was not itself a release. This fresh Tier 5 now independently
-classifies `TD004-VAR-001` resolved while recording the separate blocking
-`TD004-VAR-002`.
-
-## Repository and chain audit
-
-- Starting `HEAD`:
-  `f6a8deec3bd68c33714c25957eff29cf21dbfbec`.
-- Starting `origin/main`:
-  `95fb6402c281ec1294bdb76582de04e80f3f3cb9`.
-- The dedicated stage chain is contiguous and ordered:
-  Commandant `524f71e`, Colonel `6130810`, Operations HOLD `e1d54c0`,
-  Science HOLD `c274ca3`, Mission HOLD `555496a`, returned Operations
-  `e8b4b63`, returned Science `644d074`, Mission `SHELL READY` `cb124fa`,
-  Reconnaissance `126e89d`, Tactical Operations `40552d9`, Combat
-  `95fb640`, Quartermaster `4b7a9ec`, Image Specialist `57fe57c`,
-  Intelligence return `abad806`, Quartermaster correction `82fc431`, and
-  corrected Image Specialist `f6a8dee`, followed by fresh Intelligence return
-  `dfc8544`. The dedicated Combat Engineer correction commit follows this
-  artifact and is resolved from Git history.
-- The three HOLD records correctly prevented Marine deployment before
-  Martin's exact route authority was encoded, revalidated, and issued in a
-  versioned shell.
-- The stage ledger's predecessor commit placeholders are reconciled to the
-  immutable hashes above.
-- Before Intelligence documentation, the only worktree entries were the two
-  protected untracked paths. They were not inspected, altered, staged,
+- Starting `HEAD` was exact Image Specialist revalidation commit
+  `aeb77787fd34b281103c26864ab0d62fe3927d6e`.
+- Starting `origin/main` was the released functional base
+  `95fb6402c281ec1294bdb76582de04e80f3f3cb9`; the nine local stage commits
+  from Quartermaster content through Image revalidation were contiguous.
+- The full TD-004 stage chain is ordered and auditable. Historical `HOLD` and
+  `REVISE` commits remain evidence; none was rewritten.
+- `git diff --check` passed before release documentation.
+- The only initial worktree entries were the two protected untracked user
+  paths named by the shell. Neither was opened, inspected, altered, staged,
   moved, deleted, or committed.
-- `git diff --check` passed before documentation.
 
-## Requirement-by-requirement reconciliation
+The dedicated Intelligence release commit containing this artifact is
+authoritative. Its own immutable hash is resolved from Git history after
+commit, avoiding a recursive documentation commit.
 
-| # | Shell requirement | Independent evidence | Result |
+## Requirement-by-requirement shell reconciliation
+
+| # | Shell requirement | Fresh independent evidence | Result |
 |---:|---|---|---|
-| 1 | Exact released CM-50 predecessor and no replay | corrected source and focused regression map exact CM-50 to the accepted SC-04 master; interruption/reload also reconstructs SC-04; Quartermaster copy/asset revalidation passes | **CORRECTION IMPLEMENTED — QUARTERMASTER REVALIDATED** |
-| 2 | `TD004-RTA-001` is the sole fresh normal entry | corrected source and focused regression map SC-05 only from accepted TR-00 onward; invalid/duplicate pre-route intent remains SC-04; Quartermaster copy/asset revalidation passes | **CORRECTION IMPLEMENTED — QUARTERMASTER REVALIDATED** |
-| 3 | Validation precedes one-hit token consumption | controller tests for valid, invalid, stale, and repeated intents | PASS |
-| 4 | Arrival changes no world or durable record | controller state/source audit and fixture | PASS |
-| 5 | Three equal observations converge in all six orders | focused test and TR-10 fixture | PASS |
-| 6 | Observation remains zero-credit and replay-safe | controller/source tests | PASS |
-| 7 | Apparent common return remains purpose/category/destination unknown | rejection test, copy, and fixture | PASS |
-| 8 | Purpose inference does not consume token or grant evidence | focused test | PASS |
-| 9 | Python primary/retrieval/transfer remain independent | evaluator/controller tests and source audit | PASS |
-| 10 | AI-901 primary/retrieval/transfer remain independent | exact fixture recipes, controller tests, frozen references | PASS |
-| 11 | Modality and agentic explanations remain separately scored | controller/source tests | PASS |
-| 12 | Misses expose answer-free public boundaries and blank retry | focused test and repair fixture recipe | PASS |
-| 13 | No cross-credit or partial-credit accumulation | evaluator/controller tests and exact ordered evidence audit | PASS |
-| 14 | Review keeps physical, Python, AI workload, and source/authority obligations separate | source, UI test, conjunctive review recipe | PASS |
-| 15 | Fresh provenance and save intents are required | controller tests and state graph audit | PASS |
-| 16 | Dedicated RP-004 sanitizer precedes one atomic replacement | storage adapter/source and strict save tests | PASS |
+| 1 | Exact released CM-50 predecessor and no replay | source, focused integration, and closed rendered states show exact CM-50 as `SC-04`; interrupted pre-save reconstruction also returns to exact CM-50/SC-04 | PASS |
+| 2 | `TD004-RTA-001` alone crosses into TR-00 | source and regression prove only accepted `tr00_orient` or later `SC-05` state selects the SC-05 master; invalid/duplicate intent remains SC-04 | PASS |
+| 3 | Validation precedes one-hit token consumption | seven-modality, invalid, stale, duplicate, wrong-owner, and future-valid-token tests | PASS |
+| 4 | Arrival changes no world or durable record | controller state, rendered status, no-write tests, invariant master | PASS |
+| 5 | Three equal observations converge in all six orders | focused normal and protected journey tests | PASS |
+| 6 | Observation remains zero-credit and replay-safe | controller and evidence-firewall tests | PASS |
+| 7 | Apparent common return stays purpose/category/destination unknown | controller rejection, copy, fixture, and visual inspection | PASS |
+| 8 | Purpose inference consumes no token and grants no evidence | focused test | PASS |
+| 9 | Python primary/retrieval/transfer remain strict and independent | frozen-contract evaluator/controller tests | PASS |
+| 10 | AI-901 primary/retrieval/transfer remain strict and independent | frozen-contract evaluator/controller tests and neutral rendered course interface | PASS |
+| 11 | Modality and agentic explanations remain separate evidence | controller, schema, and ordered-evidence tests | PASS |
+| 12 | Misses expose answer-free boundaries and wholly blank retry | focused normal/protected tests and repair fixture states | PASS |
+| 13 | No cross-credit or partial accumulation | exact evidence-order and controller tests | PASS |
+| 14 | Conjunctive review preserves separate obligations | source, UI, controller, and rendered review state | PASS |
+| 15 | Fresh provenance and save intents are required | controller state graph and save tests | PASS |
+| 16 | Dedicated sanitizer precedes one atomic replacement | adapter source and strict transaction tests | PASS |
 | 17 | Strict read-back defines success | exact save/read-back tests | PASS |
-| 18 | Failure preserves prior RP-004 bytes or verified absence and all TD-003 bytes | throw/malformed read-back tests and failure fixture | PASS |
-| 19 | First-incomplete recovery is blank, deterministic, and no replay | contiguous-prefix tests and resume recipes | PASS |
+| 18 | Failure preserves prior RP-004 bytes or absence and all TD-003 bytes | throw/malformed read-back and predecessor-byte tests | PASS |
+| 19 | First-incomplete recovery is blank, deterministic, and replay-free | contiguous-prefix/gap tests and fixture states | PASS |
 | 20 | Exact saved re-entry mounts heading-first TR-40 | integration/controller tests and restore fixture | PASS |
-| 21 | Calibration Margin and City Threshold returns are exact and write-free | controller tests and fixture recipes | PASS |
-| 22 | No direct Civic Comparison shortcut exists | actions/source/production scans | PASS |
+| 21 | Calibration Margin and City Threshold returns are exact and write-free | controller tests, early/completed return fixtures, and SC-04 identity | PASS |
+| 22 | No direct RP-004-to-Civic shortcut | action/source/production scans | PASS |
 | 23 | Optional continuation stays destinationless and opens no route | controller/source tests | PASS |
-| 24 | Seven input modalities converge; one owner/group/heading/status is active | focused tests plus live review | PASS |
-| 25 | SC-05 is maximum-quality, first-person, causally legible, accessible, invariant, and free of protagonist/human trace | independent provenance reproduction, visual review, exact runtime identity, responsive crop, grayscale, forced-color, reduced-motion, accessibility, no-human, served, and budget evidence | **PASS - TD004-VAR-001 RESOLVED** |
-| 26 | Closed fixture is storage-free, allowlisted, and absent from production | isolation tests; source/dist marker, path, port, scenario scans | PASS |
-| 27 | Offline, no authority/exam guarantee, Tour isolation | source/tests, no foreign live-review requests | PASS |
-| 28 | Every `PBA-TD004-v1` aggregate cap passes | independent build and budget validator | PASS |
-| 29 | RP-005, traversable return, RP-013, successor, reward, access, permission, authority, live service, external action, and world response remain absent | tests and source/dist scans | PASS |
-| 30 | Focused, related, full, validator, build, served, E2E, exact-layout, cleanup, patch, and sync gates pass | all technical gates pass; sync/release withheld by required correction | PASS except release sync intentionally withheld |
-| 31 | Exactly one reveal candidate and provenance package exists | one PNG, one provenance record, exact hash/dimensions | PASS; acceptance/publication held |
-| 32 | Every variance is classified and no unauthorized divergence remains | variance register below | PASS |
-| 33 | Intelligence issues `AS BUILT RELEASED` only after the whole shell passes | requirements 1 and 2 fail presentation sequencing | **NOT ISSUED** |
+| 24 | Seven modalities; one owner/group/heading/status; accessible controls | focused tests plus exact DPR-1 fixture matrix | PASS |
+| 25 | Maximum-quality, first-person, legible, accessible, invariant SC-05 with no human trace | exact runtime identity, reproducible derivative, original/grayscale/crop inspection, alt text, forced colors, reduced motion, and served evidence | PASS |
+| 26 | Closed fixture is allowlisted, storage-free, and absent from production | fixture isolation tests and source/`dist` marker/path/port/scenario scans | PASS |
+| 27 | Offline/no-authority/no-exam-guarantee and Tour isolation | source/tests, rendered copy, zero foreign requests | PASS |
+| 28 | Every `PBA-TD004-v1` cap passes | fresh production build and budget validator | PASS |
+| 29 | RP-005, traversable return, RP-013, successor, reward, access, permission, authority, live service, external action, and world response remain closed | focused/full tests, source/output review, hard-stop state | PASS |
+| 30 | Focused, related, full, validator, build, served, E2E, exact-layout, cleanup, patch, and sync gates pass | complete release evidence below; final Git synchronization performed at the release gate | PASS |
+| 31 | Exactly one reveal candidate and complete provenance package exist | exact one PNG, one neighboring provenance record, unchanged bytes/hash, generation count `1` | PASS |
+| 32 | Every variance is classified and no unauthorized divergence remains | final variance register below | PASS |
+| 33 | Intelligence issues release only after the whole shell passes | all preceding rows pass | **PASS — AS BUILT RELEASED** |
 
-## Independent release evidence
+## Independent Tier-5 release evidence
 
-### Automated product gates
+### Automated, build, budget, and served gates
 
-| Gate | Fresh Intelligence result |
+| Gate | Fresh result |
 |---|---|
-| Focused TD-004 suite | `19/19 PASS`, Node duration `0.447s`, wall `0.625s` |
-| Related TD-003/TD-004 suite | `55/55 PASS`, Node duration `0.624s`, wall `0.794s` |
-| Full game suite | `805/805 PASS`, Node duration `9.948s`, wall `11.635s` |
+| Focused TD-004/scene-boundary suite | `22/22 PASS`; Node `0.477s` |
+| Broader connected TD-003/TD-004 regression | `140/140 PASS`; Node `0.997s` |
+| Full game suite | `806/806 PASS`; Node `9.235s` |
 | Readiness validators | `15/15 PASS`: `CUM-01`, `RP-002` through `RP-012`, `SIM-01` through `SIM-03` |
-| Production build | PASS, `183` modules, Vite `14.84s`, wall `17.151s` |
-| JavaScript | `index-589WID4d.js`, `1,247,036` bytes, SHA-256 `ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4` |
-| CSS | `index-DVnUbAwl.css`, `85,151` bytes, SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` |
-| Runtime media | `21,536,123` bytes; `2,163,752` new image-only runtime bytes |
-| Budget | `PBA-TD004-v1 PASS`; JS headroom `8,113`, CSS headroom `638`, modules headroom `4`, image headroom `2,030,552` |
-| Production exclusion | no fixture marker, fixture path, port, scenario ID, or source mapping URL in `dist` |
-| Preview and fallback | isolated strict `127.0.0.1:5184`; root, reload, and route fallback HTTP `200`; root/reload bytes identical |
-| Served identity | served JS/CSS/SC-05 master HTTP `200` and byte/hash-identical to `dist` |
-| Complete E2E | exactly one post-build, non-overlapping run; `109.563s`; every emitted gate true, credits reached, `runtimeErrors:false` |
-| QA restoration | all 69 incidental tracked E2E captures restored; no generated capture retained in the repository |
-| Cleanup | only owned fixture/preview PIDs stopped; ports `4176` and `5184` clear |
+| Production build | PASS; `183` modules; Vite `12.13s`; wall `15.001s` |
+| JavaScript | `index-CynBBXnS.js`; `1,247,724` bytes; SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409` |
+| CSS | `index-DVnUbAwl.css`; `85,151` bytes; SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` |
+| SC-04 emitted master | `city-threshold-overview-master-BaTX4tqK.png`; `2,626,795` bytes; SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D` |
+| SC-05 emitted master | `sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp`; `2,163,752` bytes; SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F` |
+| Runtime media | `21,536,123` bytes total; `2,163,752` new image-only bytes |
+| Budget | `PBA-TD004-v1 PASS`; JS headroom `7,425`, CSS `638`, modules `4`, new-media `2,030,552` |
+| Production exclusion | fixture marker, ID, path, port, scenario names, and source-map URL absent from `dist` |
+| Isolated preview | owned strict `127.0.0.1:5184`; root, reload, deep fallback, JS, CSS, SC-04, and SC-05 all HTTP `200` |
+| Served identity | every served root/asset byte count and SHA-256 was identical to `dist` |
+| Complete E2E | exactly one post-build non-overlapping run; `99.498s`; every emitted gate true; credits reached; `runtimeErrors:false` |
+| QA restoration | exactly `69` incidental tracked E2E captures restored |
+| Cleanup | only owned preview/fixture processes stopped; ports `5184` and `4176` clear |
 
-The production build completed before the preview and E2E began. No build
-overlapped the complete E2E.
+The build finished before preview or E2E began. No build overlapped E2E.
+Existing unrelated Node processes were neither stopped nor changed.
 
-### Representative exact DPR-1 live review
+### Exact DPR-1 rendered review
 
-The closed storage-free fixture was launched independently for:
+The closed storage-free fixture was independently launched for:
 
-- `cm50-three-choice-route-ready`;
-- `tr10-relations-none-recorded`;
-- `tr30-ai901-transfer-neutral`;
-- `tr30-save-failed-last-good`; and
-- `tr40-verified-restore`.
+1. exact CM-50 route-ready;
+2. rejected invalid/stale pre-route intent;
+3. accepted TR-00 arrival;
+4. high-density TR-30 AI-901 transfer;
+5. early RP-004 return; and
+6. completed RP-004 return.
 
-Every state was measured at exact CSS `1920 x 1080`, `1366 x 768`,
-`390 x 844`, and width-equivalent effective-`200%` `768 x 900`: 20 exact
-state/layout combinations.
+All six states passed at exact DPR-1 `1920 x 1080`, `1366 x 768`,
+`390 x 844`, and width-equivalent effective-`200%` `768 x 900`: `24/24`.
+Route-ready and high-density transfer additionally passed combined
+forced-colors/reduced-motion emulation across all four layouts: `8/8`.
+SC-05 arrival and transfer passed deterministic grayscale review at desktop
+and laptop: `4/4`.
 
-Across all 20:
+Across the matrix:
 
-- document width equaled scroll width; no horizontal escape occurred;
-- desktop/laptop states retained a `0.600` world-width share;
-- every visible control was at least `44 CSS px` high and wide;
-- the expected `h1` held initial focus;
+- document and shell horizontal containment passed;
+- every desktop inner world share measured exactly `0.600`;
+- controls measured at least `44 CSS px` (`44px` minimum height);
+- each state entered on its expected `h1`;
 - exactly one polite atomic status existed;
-- the required action group was reachable inside the viewport after native
-  panel/page scrolling;
-- no console error, page error, or foreign network request occurred;
-- the runtime image decoded at exact `3840 x 2160`; and
-- meaningful wide SC-05 crops preserved all three structural relations and
-  the capped return, with worst normalized crop `x 0.194-0.806`.
+- required actions remained reachable through native panel/page scrolling;
+- text overflow count, console warnings/errors, page errors, and foreign
+  requests were all zero;
+- forced colors removed the decorative world overlay while preserving
+  borders, grouping, focus, and native controls;
+- reduced motion produced zero nonzero TD-004 animation/transition durations
+  and `scroll-behavior:auto`; and
+- SC-04 decoded at `1672 x 941`; SC-05 decoded at `3840 x 2160`, both with
+  exact scene-specific alternative text and `object-fit:cover`.
 
-Forced-colors and reduced-motion emulation were exercised on route-ready and
-the high-density TR-30 transfer state at all four layouts. Forced colors
-removed the decorative world overlay and preserved system control borders;
-reduced motion reported zero nonzero animation/transition durations and
-`scroll-behavior:auto`.
+The worst meaningful wide SC-05 crop was normalized
+`x 0.194-0.806`. Original-resolution and grayscale inspection retained the
+porous suspended-matter relation at left, the braided/tensioned
+cyclic-pressure relation at center, the jointed conducted-heat relation at
+right, and their shared visibly capped, non-traversable apparent return.
+No relation became privileged or dependent on hue, motion, sound, or
+position alone.
 
-Original-resolution visual review confirmed clean containment and legible
-world/panel hierarchy. It also confirmed the blocking sequencing mismatch:
-the `cm50-three-choice-route-ready` state visibly presents the SC-05 master
-before `TD004-RTA-001`.
+Deterministic source/integration tests independently prove the remaining
+non-durable interruption boundary: an accepted unsaved TR-00 arrival followed
+by reload reconstructs exact CM-50/SC-04 and requires a fresh route intent.
+No Martin-owned browser storage or campaign save was needed or touched.
 
-Source reconciliation proves that this is normal behavior, not a fixture-only
-artifact:
+## Runtime derivative and reveal provenance
 
-- `CalibrationMarginNormalEntry.js` creates
-  `createThreeCurrentReachNormalController` immediately when an exact
-  restored review record exists;
-- its `currentState()` prioritizes that controller;
-- `App.jsx` consequently renders `ThreeCurrentReach`; and
-- `ThreeCurrentReach.jsx` changes its alternative text for `boardState:
-  "SC-04"` but unconditionally uses the SC-05 master as the image source.
+Fresh reproduction used the disclosed exact process:
 
-The fixture root correctly carries its allowlisted fixture marker. The
-required production exclusion independently passed; the marker is absent
-from production output and `dist`.
+1. Pillow `12.2.0`;
+2. decode the unchanged source PNG to RGB;
+3. Lanczos-resize `1672 x 941` to `3840 x 2161`;
+4. trim one lower-edge pixel to `3840 x 2160`; and
+5. encode exact RGB WebP at quality `100`, method `6`.
 
-## Runtime asset reconciliation
+The independent temporary result was `2,163,752` bytes with SHA-256
+`B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`
+and was byte-for-byte identical to the registered runtime master. The
+temporary derivative was removed. This proves a deterministic,
+non-generative sampling derivative; it does not prove or claim native 4K
+source detail.
 
-| Evidence | Verified fact |
-|---|---|
-| Runtime source | `ThreeCurrentReach.jsx` directly imports `sc05-three-current-panorama-runtime-master-v1.webp` |
-| SC-05 runtime master | `3840 x 2160`; `2,163,752` bytes; SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`; complete neighboring provenance |
-| Quartermaster record | `TD004-ASSET-SC05-PLACEHOLDER` is **retired and corrected** |
-| Image record | `PRESENTATION COMPLETE — REVALIDATED`; exact SC-04/SC-05 scene identity, responsive/crop/accessibility review, and unchanged reveal revalidation pass |
-| Source reveal | unchanged/reference-only; `1672 x 941`; `2,764,920` bytes; SHA-256 `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`; exactly one generation |
-| Shell asset contract | final release requires one shell-compliant SC-05 first-person world presentation with provenance and honest runtime identity |
+The sole reveal remains:
 
-The asset correction is complete and accepted. Independent in-memory
-reproduction from the exact reveal using the disclosed Pillow `12.2.0`,
-Lanczos resize, one-pixel lower-edge crop, and q100/method-6 WebP encoding
-produced byte-identical output and the exact registered hash. The release
-block is now the CM-50/SC-05 state-to-presentation mapping, not asset identity,
-provenance, quality, crop, or budget.
-
-## Variance register
-
-| ID | Classification | Owner | Disposition |
-|---|---|---|---|
-| `TD004-VAR-001` | **`REQUIRED CORRECTION RESOLVED`** | Intelligence Officer / `intelligence_officer` | Fresh Tier 5 independently reproduced exact provenance, verified the direct SC-05 import and emitted/served identity, inspected the unchanged reveal and runtime master, and passed responsive, accessibility, invariance, no-human/no-authority, full-gate, and budget checks. |
-| `TD004-VAR-002` | **`REQUIRED CORRECTION — PRESENTATION REVALIDATED, RELEASE PENDING`** | Intelligence Officer / `intelligence_officer` | Exact CM-50, invalid/fail-closed pre-route states, interrupted pre-save reload, and RP-004 return resolve to SC-04; accepted TR-00 onward resolves to SC-05. Quartermaster confirms exact content/assets, and Image Specialist confirms exact scene/master/alt identity, crop, responsive containment, accessibility presentation, and unchanged reveal. Fresh Intelligence must independently classify. |
-
-No `ACCEPTED IMPROVEMENT`, `MASTERPLAN UPDATE`, `DEFERRED LIMITATION`, or
-`UNAUTHORIZED DIVERGENCE` is recorded. No master plan advances from this
-candidate.
-
-## Reveal validation
-
-The exact single Image Specialist reveal was inspected at original
-resolution. It was not regenerated or edited.
-
-| Field | Verified value |
+| Field | Released value |
 |---|---|
 | Asset | `Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png` |
 | Dimensions | `1672 x 941` |
 | Bytes | `2,764,920` |
 | SHA-256 | `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F` |
 | Generation count | exactly `1` |
-| Provenance | complete neighboring `PROVENANCE.md` and prompt/scene records |
-| Runtime status | canonical physical-layout reference only; not imported |
+| Additional generation/edit count | `0` |
+| Status | unchanged spoiler-safe canonical physical-layout reference only; not runtime-imported |
 
-The image depicts three materially distinct paths converging toward one
-large capped return without a person, body trace, readable text, UI, portal
-claim, route, reward, access, authority, or world response. Its composition
-is an acceptable spoiler-safe layout reference. It is below the SC-05 scene
-sheet's `3840 x 2160` production minimum, so the source reveal itself remains
-reference-only. Quartermaster used it only
-as the exact source for a separately registered deterministic runtime
-derivative with explicit resampling, grayscale, crop, artifact, import,
-emitted-byte, served-identity, and budget evidence. That derivative does not
-claim native 4K detail. Fresh Intelligence accepts this exact asset
-correction as `TD004-VAR-001 REQUIRED CORRECTION RESOLVED`.
+The exact reveal is accepted unchanged. It was not regenerated, edited,
+replaced, or promoted to a native-detail production master. Its neighboring
+provenance, prompt log, scene sheet, and demo-increment reference agree.
 
-The reveal is validated unchanged but acceptance/publication is held until
-the complete shell releases. No second generation is authorized.
+## Final variance register
 
-## Limitations retained
+| ID | Final classification | Owner | Release disposition |
+|---|---|---|---|
+| `TD004-VAR-001` | **`REQUIRED CORRECTION RESOLVED`** | Intelligence Officer | The registered, directly imported SC-05 runtime derivative has complete provenance, reproducible exact bytes, grayscale/crop/accessibility/no-human review, served identity, and budget evidence. |
+| `TD004-VAR-002` | **`REQUIRED CORRECTION RESOLVED`** | Intelligence Officer | Exact CM-50, invalid/fail-closed state, interrupted pre-save reload, early return, and completed RP-004 return use SC-04 plus its alt; accepted TR-00 onward uses SC-05 plus its alt. Source, tests, and `24/24` rendered states agree. |
+
+No `ACCEPTED IMPROVEMENT`, `MASTERPLAN UPDATE`, `DEFERRED LIMITATION`, or
+`UNAUTHORIZED DIVERGENCE` remains. The shell did not change after issuance.
+
+## Accepted as-built master updates
+
+Only release-position artifacts advance:
+
+- playable demo boundary: exact RP-004 TR-40 verified restore plus the two
+  approved write-free returns and optional destinationless notation;
+- Story Rail Map and Packet Scoreboard: accepted playable position is RP-004;
+- RP-004 packet and demo increment: released as built, with SC-05 runtime
+  approval and the exact reference-only reveal;
+- Production Readiness Spine and game work log: released build identity and
+  hard stop; and
+- current handoff: synchronized released state and one future Commandant
+  action that does not preselect story or canon.
+
+No product, canon, campaign order, learning truth, privacy, accessibility,
+save, authority, or world-state master required alteration.
+
+## Honest retained limitations
 
 1. Human screen-reader speech, physical switch hardware, native platform
-   forced colors, and native text-only `200%` were not exercised.
-   Deterministic semantics, emulation, and width-equivalent review passed.
+   forced-colors hardware, and native text-only `200%` were not exercised;
+   deterministic semantics, browser emulation, and width-equivalent review
+   passed.
 2. English is the only integrated locale.
-3. The closed fixture proves in-memory states; it does not claim Martin's
-   real browser persistence.
-4. CSS has `638` bytes of remaining cap headroom.
+3. The SC-05 runtime master is a deterministic upscale for runtime sampling,
+   not native 4K capture detail.
+4. CSS has `638` bytes of budget headroom. The one-time rebaseline does not
+   roll forward.
 
-These are honest direct-review or localization limitations. They do not
-replace the required downstream revalidation of the implemented
-`TD004-VAR-002` correction.
+These limitations are truthful and non-blocking. They do not remove or defer
+any shell requirement.
 
-## Process metrics and recommendation
+## Measured retrospective
 
-The sequential return chain correctly stopped an unauthorized shell. The
-fresh independent gate also caught a second fixed presentation/state-mapping
-defect despite green controller, layout, budget, build, and E2E evidence.
+The twenty predecessor invocations used `17,545,948ms` (`292.43m`) before
+this final release pass. The workflow required three strategic
+HOLD/return stages and two Intelligence correction loops:
 
-Recommendation: **`TUNE`**, not redesign.
+- the pre-shell returns prevented construction before exact route and budget
+  authority existed;
+- `TD004-VAR-001` caught the missing required runtime master;
+- `TD004-VAR-002` caught predecessor/destination image leakage after the
+  first correction; and
+- the final pass independently reproduced all gates without a third product
+  correction.
 
-- Keep the eleven sequential roles, versioned Mission shell, dedicated
-  commits, return ownership, independent release, closed fixture, one reveal,
-  build/E2E non-overlap, and all product guardrails.
-- Add a mandatory Quartermaster completion assertion that every shell
-  `required` runtime asset has an approved identity, direct import, provenance,
-  and exact placeholder-retirement row before `CONTENT COMPLETE`.
-- Add an Image gate that rejects `PRESENTATION COMPLETE` when its own record
-  still names a required runtime plate as temporary.
-- Add an exact predecessor/destination image-identity assertion to the
-  Combat Engineer and Image gates whenever one renderer spans both sides of
-  a route boundary.
-- Keep reference-reveal acceptance separate from runtime-master eligibility.
+Recommendation: **`TUNE`**.
 
-The recommendation is recorded in
-`Production Pipeline/PROCESS_CHANGELOG.md`.
+- Keep the eleven sequential roles, versioned shell, specialist commits,
+  earliest-owner returns, closed storage-free fixture, exact reveal limit,
+  non-overlapping build/E2E cadence, and fresh Intelligence release.
+- Retain the newly added required-asset and predecessor/destination
+  image-identity assertions.
+- For the next scheduled cycle, require the manifest-driven fixture review
+  to include a grayscale phase and emit one compact machine-readable summary
+  plus a bounded screenshot set; this reduces repeated ad hoc orchestration
+  while preserving independent human visual judgment.
+- Roll back that addition if the runner creates a production seam, accepts
+  arbitrary state, obscures exact process ownership, or replaces visual
+  inspection with metrics alone.
 
 ## Release disposition
 
-**`REVISE - NOT AS BUILT RELEASED`**
+**`PASS — AS BUILT RELEASED`**
 
-`TD004-VAR-001` is resolved. Combat Engineer implemented the required
-requirements 1 and 2 correction, Quartermaster revalidated every content and
-asset boundary, and Image Specialist revalidated presentation. Fresh
-independent Intelligence has not yet released it.
-TD-003 remains the accepted released playable
-boundary. TD-004 does not advance `PLAYABLE_DEMO.md`, the rail, packet
-scoreboard, expedition spine, curriculum/gameplay/visual masters, or any
-successor control. No push is permitted from this candidate.
+TD-004 advances the accepted playable boundary through exact TR-40 verified
+restore, with only the approved returns and optional destinationless
+notation. No RP-005 route, traversable common return, RP-013, successor,
+reward, access, identity, permission, authority, external action, or world
+response is released.
 
 ## Exact next action
 
-Resume only one fresh complete **Intelligence Officer** Tier 5 from the
-dedicated local Image Specialist revalidation commit. Independently verify
-the complete commit chain, exact SC-04/SC-05 state-to-scene identity,
-responsive/accessibility presentation, exact build/media/served identities,
-unchanged one-generation reference-only reveal, full release gates, fixture
-exclusion, budget, protections, and every variance. Record `AS BUILT
-RELEASED`, `REVISE`, or `HOLD` honestly; update the master plan only from
-accepted as-built evidence; replace `NEXT_INSTANCE_HANDOFF.md`; and perform
-the workflow's release synchronization only if all gates pass. Do not begin a
-new Commandant shell before this classification.
+Await Martin's explicit instruction. At the next authorized scheduled cycle,
+begin one Commandant guarded verification from this synchronized TD-004
+release and define only the next selection envelope. Do not preselect story,
+canon, packet, destination, route, or shell; do not schedule recurring
+automation.
 
 ## Protected-work confirmation
 
@@ -489,5 +282,5 @@ new Commandant shell before this classification.
   not inspected, altered, staged, moved, deleted, or committed.
 - Martin's browser storage, campaign save, cookies, profile, and session were
   not inspected or mutated.
-- Only deterministic source/tests, the closed fixture, an isolated production
-  preview, and agent-owned headless browser contexts were used.
+- Only source/tests, the closed fixture, isolated production preview, and
+  agent-owned headless browser contexts were used.

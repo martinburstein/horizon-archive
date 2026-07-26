@@ -2,7 +2,7 @@
 
 ## Packet identity
 
-- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
+- Status: `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`
 - Target chapter/location: Chapter 3 opening expansion / first broad working landscape beyond the surveyed civic margin
 - Target demo horizon: third future slice after the accepted RP-001 boundary; directly after RP-003
 - Route order: 4
@@ -15,6 +15,16 @@
 - Target player time: `34–46 minutes` clean first play; `20–28 minutes` mastered replay; protected reference-fixture smoke target `<5 minutes` without injected evidence, landscape hints, or skipped evaluators
 - Complete Advance cycles spent on this packet: 1
 - Convergence-budget status: `ORIENTATION COMPLETE — GATE REVIEW WITHIN BUDGET`
+
+## Intelligence release — 2026-07-26
+
+- Exact released candidate: `aeb77787fd34b281103c26864ab0d62fe3927d6e`.
+- `TD004-VAR-001` and `TD004-VAR-002` are `RESOLVED`; every shell
+  requirement is accepted as built through `TR-40`, both write-free returns,
+  and the optional destinationless record.
+- Release stops before RP-005 route/destination, a traversable common return,
+  direct Civic shortcut, RP-013, successor, reward, access, authority, live
+  service, external action, or world response.
 
 ## Locked premise
 

@@ -2,31 +2,28 @@
 
 ## TD-004 Intelligence Officer current control — 2026-07-26
 
-- **Disposition:** `REVISE / NOT AS BUILT RELEASED / TD004-VAR-002 /
-  COMBAT ENGINEER RETURN`. Fresh independent `19/19` focused, `55/55`
-  selected related, `805/805` full, `15/15` validator, `183`-module build,
-  aggregate budget, exact emitted/served identity, one complete
-  non-overlapping `109.563s` E2E, and 20 exact DPR-1 fixture/layout checks
-  pass.
-- **Resolved correction:** `TD004-VAR-001` is `REQUIRED CORRECTION RESOLVED`.
-  Fresh Tier 5 reproduced the deterministic runtime-master bytes, verified
-  direct import and exact emitted/served identity, accepted the responsive
-  SC-05 presentation, and confirmed the exact single reveal remains
-  byte-identical, reference-only, and generation count `1`.
-- **Blocking fixed requirement:** exact restored CM-50 immediately mounts the
-  RP-004 renderer, whose image source is unconditionally the SC-05 runtime
-  master even while public state declares SC-04. The destination world is
-  therefore visible before fresh `TD004-RTA-001`; the action is not the sole
-  presentation boundary into TR-00/SC-05.
-- **Return boundary:** `TD004-VAR-002` is `REQUIRED CORRECTION`, not a
-  deferred limitation. Combat Engineer must preserve accepted SC-04 at exact
-  CM-50, expose SC-05 only from accepted TR-00 onward, and add exact
-  CM-50/TR-00/return image-identity regression coverage. Quartermaster and
-  Image Specialist must revalidate before a fresh complete Intelligence
-  Tier 5.
-- **Release boundary:** TD-003 remains the accepted playable boundary. No
-  TD-004 playable-demo, rail, packet, expedition, curriculum, gameplay,
-  visual-master, successor, push, or release control advances.
+- **Disposition:** `PASS — AS BUILT RELEASED / TD-004 /
+  SS-RP004-THREE-CURRENT-v1` on exact corrected candidate
+  `aeb77787fd34b281103c26864ab0d62fe3927d6e`. All 33 shell requirements pass.
+- **Independent Tier 5:** focused `22/22`; selected related `140/140`; full
+  game `806/806`; readiness validators `15/15`; production build `183`
+  modules; exact emitted/served identity; `PBA-TD004-v1 PASS`; exactly one
+  complete post-build `99.498s` E2E with all emitted gates true, credits
+  reached, and `runtimeErrors:false`.
+- **Presentation:** six closed fixture states across all four exact DPR-1
+  layouts pass, plus forced colors, reduced motion, grayscale, responsive
+  crops, focus, one polite atomic status, `>=44px` controls, containment, and
+  local-only requests. Exact CM-50, invalid, early-return, and completed-return
+  states present SC-04; accepted TR-00/TR-30 states present SC-05.
+- **Variances:** `TD004-VAR-001 RESOLVED`; `TD004-VAR-002 RESOLVED`. The SC-05
+  master was reproduced byte-identically by the disclosed deterministic
+  non-generative process. The one reveal remains unchanged, reference-only,
+  and generation count `1`.
+- **Release boundary:** accepted play reaches TR-40, deterministic restore,
+  both write-free returns, and optional destinationless notation. SC-04 and
+  SC-05 remain invariant. RP-005 route/destination, traversable common return,
+  direct Civic shortcut, RP-013, successor, reward, access, authority, live
+  service, external action, and world response remain closed.
 
 ## TD-004 pre-release Mission history — 2026-07-26
 

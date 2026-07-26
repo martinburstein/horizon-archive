@@ -7,7 +7,7 @@
 - **Derivation boundary:** deterministic, non-generative q100 WebP derivative of the exact one existing reveal; zero added generations, no semantic edit, and no claim of native 4K source detail.
 - **Runtime approval:** approved for the invariant TD-004 SC-05 world presentation after direct import, grayscale structural review, registered responsive crops, alternative text, no-human/artifact review, emitted/served identity, tests, and `PBA-TD004-v1`.
 - **Image gate:** `PRESENTATION COMPLETE — CORRECTED`; exact wide/laptop/narrow/effective-200, grayscale, forced-color, reduced-motion, crop, alt, invariance, no-human, build, served-identity, and budget review pass.
-- **Remaining gate:** fresh Intelligence release only. The source reveal remains byte-for-byte unchanged and reference-only.
+- **Release gate:** `PASS — AS BUILT RELEASED / TD-004`. The source reveal remains byte-for-byte unchanged and reference-only.
 
 ## 2026-07-26 canonical cycle reveal — three-current capped return
 

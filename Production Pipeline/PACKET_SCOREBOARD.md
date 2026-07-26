@@ -2,8 +2,8 @@
 
 ## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release:** `RP-003 PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. Normal play now reaches exact finalized IE-P3, five independent CM-40 review obligations, fresh provenance, one strict atomic local save, exact no-replay CM-50 verified restore, and only the two known write-free returns. The archived Team 1/Team 2 positions remain historical; protected missing-gate count remains zero.
-- **Authoritative exact stop:** SC-04 remains invariant and does not receive or respond to the record. No onward bearing, RP-004 destination/opening, RP-013, successor, reward, world/access/authority, or external effect is authorized. Await Martin's explicit instruction before another Commandant shell.
+- **Authoritative release:** `RP-004 PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. Normal play now reaches the complete `TR-00–TR-40` Three-Current Reach, including three independent observations, strict Python and AI-901 evidence, deterministic save/restore, both write-free returns, and the optional destinationless record. `TD004-VAR-001` and `TD004-VAR-002` are resolved; protected missing-gate count remains zero.
+- **Authoritative exact stop:** SC-04 and SC-05 remain invariant. No RP-005 route, named destination, traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, world/access/authority, live service, or external effect is authorized. Await Martin's explicit instruction before another Commandant shell.
 
 ## A5 result — 2026-07-25
 

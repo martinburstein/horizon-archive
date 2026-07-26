@@ -1,5 +1,14 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-26 — Intelligence Officer: TD-004 as-built release
+
+- **Disposition:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1` on corrected candidate `aeb77787fd34b281103c26864ab0d62fe3927d6e`; `TD004-VAR-001` and `TD004-VAR-002` are resolved.
+- **Independent gate:** focused `22/22`; selected related `140/140`; full game `806/806`; readiness validators `15/15`; production build `183` modules; `PBA-TD004-v1 PASS`; exactly one post-build `99.498s` E2E reached credits with every emitted gate true and `runtimeErrors:false`; isolated root/deep-link and JS/CSS/SC-04/SC-05 served-byte identity passed.
+- **Presentation gate:** six closed states across four exact DPR-1 layouts, forced colors, reduced motion, grayscale, responsive crop, heading focus, one polite atomic status, `>=44px` controls, containment, and local-only request checks passed. Exact CM-50/invalid/early-return/completed-return states present SC-04; accepted TR-00/TR-30 states present SC-05.
+- **Released identity:** JavaScript `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`; CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`; SC-05 master `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
+- **Boundary:** the complete `TR-00–TR-40` shell, deterministic restore, both write-free returns, and optional destinationless notation are accepted. SC-04/SC-05 remain invariant; RP-005 route/destination, traversable common return, direct Civic shortcut, successor, reward, access, authority, service, external action, and world response remain closed.
+- **Next:** await Martin's explicit instruction. No recurring automation is active and no new Commandant shell is authorized.
+
 ## 2026-07-26 — Intelligence Officer: TD-003 as-built release
 
 - **Disposition:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1` on corrected candidate `3fde325866cf83bc07d7526e5827d07e2ff33bcb`.

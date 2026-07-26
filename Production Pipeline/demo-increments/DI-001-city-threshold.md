@@ -5,7 +5,7 @@
 - **Runtime master:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`, `3840 x 2160`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
 - **Presentation disposition:** `PRESENTATION COMPLETE — CORRECTED`; exact desktop/laptop/narrow/effective-200 crop and containment, grayscale/non-color structure, forced-color/reduced-motion parity, alternative text, invariance, no-human/no-authority, served identity, full regression, and `PBA-TD004-v1` gates pass.
 - **Correction:** TD-004 alone uses the full available wide stage so porous-left, tensioned-center, jointed-right, and the capped apparent return remain simultaneously legible; narrow actions use natural source-order flow.
-- **Boundary:** fresh Intelligence release remains pending. The deterministic derivative claims no native 4K detail. The source reveal below remains byte-identical/reference-only with generation count exactly `1`; no image was generated or edited by this return.
+- **Boundary:** `PASS — AS BUILT RELEASED / TD-004`. The deterministic derivative claims no native 4K detail. The source reveal below remains byte-identical/reference-only with generation count exactly `1`; no image was generated or edited by the correction or release.
 
 ## 2026-07-26 canonical cycle reveal — RP-004 three-current capped return
 
@@ -30,8 +30,8 @@
 
 ## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. The accepted Demo now continues through finalized IE-P3, five independent CM-40 review obligations, fresh provenance, one strict atomic local save, exact no-replay CM-50 verified restore, and only the two known write-free returns.
-- **Authoritative exact stop:** SC-04 remains invariant and neither receives nor responds to the record. Stop before onward bearing, an RP-004 destination/opening, RP-013, successor, reward, access, authority, external action, or world response. Await Martin's explicit instruction; do not infer or schedule another shell.
+- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. The accepted Demo continues from exact released TD-003 CM-50 through the complete Three-Current Reach, strict independent observation/Python/AI-901 evidence, deterministic save/restore, both write-free returns, and optional destinationless notation.
+- **Authoritative exact stop:** SC-04 and SC-05 remain invariant and neither receives nor responds to a record. Stop before RP-005 route/destination, a traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, access, authority, live service, external action, or world response. Await Martin's explicit instruction; do not infer or schedule another shell.
 
 ## 2026-07-25 canonical cycle reveal — RP-003 blank-margin spatial identity
 
