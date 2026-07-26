@@ -1,5 +1,13 @@
 # SC-04 — Calibration Margin
 
+## 2026-07-26 canonical cycle reveal — expedition provenance carrier
+
+- **Closed checklist item:** `[x] RP-003 / RP003-IE-01 — expedition provenance carrier preserves an honest unavailable-input boundary`.
+- **Canonical asset:** `../../Visual Direction/Production Masters/2026-07-26-rp003-provenance-carrier-reveal/rp003-provenance-carrier-v1.png`, with neighboring provenance.
+- **Locked boundary:** one small removable expedition-owned continuous non-glowing laminate can preserve the metaphor of a supplied-source trace while leaving an unsupported continuation honestly unmarked. It remains physically supported in suit space, materially separate from Builder matter, and subordinate to an immense unchanged greater whole.
+- **Scale relationship:** the extreme-macro single-object study follows the prior landscape-clock, medium-wide spatial, and close environmental-material references while avoiding recent triptych, leaf, cradle, seal, cassette, and threshold arrangements.
+- **Limit:** canonical expedition ownership, single-piece continuity, source-trace/unmarked-unavailability metaphor, material microstructure, and greater-whole scale only. It is not runtime-integrated, not a factual case/schema/interface/checkpoint/persistence object, and not `SC-04-MASTER`. Exact carrier geometry, trace, wear, ledge anatomy, attachment method, and defocused background forms are non-canonical. No answer, negative result, unavailable-value representation, Builder teaching, world response, access, reward, route, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
+
 ## 2026-07-25 canonical cycle reveal — independent environmental clocks
 
 - **Closed checklist item:** `[x] SC-04 / PY-010 landing — independent environmental clocks remain unsynchronized`.

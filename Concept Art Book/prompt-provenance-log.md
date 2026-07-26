@@ -18,3 +18,10 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Asset and complete prompt/provenance:** [RP-003 independent-clock landscape reveal](../Visual%20Direction/Production%20Masters/2026-07-25-rp003-independent-clock-landscape-reveal/PROVENANCE.md).
 - **Mode:** one built-in `image_gen` generation; no variants or edits.
 - **Status:** spoiler-safe canonical scale/independent-clock/invariant-world reference only; not runtime integration and not `SC-04-MASTER`.
+
+## 2026-07-26 — RP-003 expedition provenance carrier reveal
+
+- **Decision:** close `RP-003 / RP003-IE-01 — expedition provenance carrier preserves an honest unavailable-input boundary`.
+- **Asset and complete prompt/provenance:** [RP-003 expedition provenance carrier reveal](../Visual%20Direction/Production%20Masters/2026-07-26-rp003-provenance-carrier-reveal/PROVENANCE.md).
+- **Mode:** one built-in `image_gen` generation; no retry, variant, or edit.
+- **Status:** spoiler-safe canonical expedition-ownership/provenance/unmarked-unavailability/scale reference only; not runtime integration, not a case or interface model, and not `SC-04-MASTER`.
