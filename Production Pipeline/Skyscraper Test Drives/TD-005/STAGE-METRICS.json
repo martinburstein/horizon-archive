@@ -63,6 +63,21 @@
       "commit": "PENDING_SCIENCE_COMMIT",
       "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-26T21:49:28.9519138Z",
+      "endedAt": "2026-07-26T21:55:05.7376444Z",
+      "durationMs": 336786,
+      "disposition": "HOLD - NO SHELL",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/05-PLAYABLE-SLICE-SHELL.md",
+      "returnTo": "Operations Planning Major",
+      "decisionRequired": "Martin must authorize or decline one fresh Pilot-owned transition from exact released TD-004 TR-40 VERIFY + RETURN into the existing RP-005 / SC-06 / MF-00-MF-30 current-source candidate",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "mission-hold-push-gate"
     }
   ]
 }
