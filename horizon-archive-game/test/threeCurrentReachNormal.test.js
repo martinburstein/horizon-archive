@@ -243,6 +243,37 @@ test("TD004 misses expose only public failed IDs and reopen a wholly blank retry
   )).reason, "one_hit_only");
 });
 
+test("TD004 review rows use owner-separated production language without changing evidence", () => {
+  const controller = createThreeCurrentReachNormalController(controllerOptions());
+  enterAndObserve(controller);
+  completeLearning(controller);
+  const reviewed = dispatch(controller, threeCurrentReachActions.review, "copy-review-token");
+  assert.equal(reviewed.status, "provenance_inspected_zero_credit");
+  assert.deepEqual(reviewed.state.reviewRows, [
+    {
+      id: "physical",
+      label: "Four physical observations",
+      state: "Three relations and one apparent return finalized separately",
+    },
+    {
+      id: "python",
+      label: "Python loop evidence",
+      state: "Primary, closed-note retrieval, and fresh transfer finalized",
+    },
+    {
+      id: "ai901",
+      label: "AI workload evidence",
+      state: "Three forms and two explanations finalized independently",
+    },
+    {
+      id: "provenance",
+      label: "Local source and authority boundary",
+      state: "Sanitized replicas only; no live read, control, or external action",
+    },
+  ]);
+  assert.equal(reviewed.state.evidenceCount, 8);
+});
+
 test("TD004 contiguous learning prefix resumes only after fresh route and re-observation", () => {
   const evidence = completeAndSave(
     createThreeCurrentReachNormalController(controllerOptions()),

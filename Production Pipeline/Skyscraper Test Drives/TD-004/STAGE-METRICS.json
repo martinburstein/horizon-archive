@@ -181,9 +181,45 @@
         "budget": "PBA-TD004-v1 PASS",
         "fixtureScenarios": 34
       },
-      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commit": "95fb6402c281ec1294bdb76582de04e80f3f3cb9",
       "commitConvention": "The dedicated Combat Engineer commit containing this report and ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "combat-functional-push-gate"
+    },
+    {
+      "sequence": 12,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-07-26T16:34:00.0000000Z",
+      "endedAt": "2026-07-26T16:49:38.0976292Z",
+      "durationMs": 938098,
+      "disposition": "CONTENT COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "95fb6402c281ec1294bdb76582de04e80f3f3cb9",
+      "assetPlaceholderDisposition": "TD004-ASSET-SC05-PLACEHOLDER explicitly retained as temporary inherited atmosphere; not an SC-05 master",
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CTwaOcxe.js",
+          "bytes": 1246963,
+          "sha256": "6CF04ECF500B0922864CF6DFD3A2C61E39ADE73527F51CEB0AD5806A81CDBF94"
+        },
+        "css": {
+          "file": "index-KrTPDfvo.css",
+          "bytes": 83699,
+          "sha256": "3F9B98753E35D998664410988788B44B61A474A86E8F37DB6E00AFEA128761BE"
+        },
+        "modules": 182
+      },
+      "validation": {
+        "focused": "18/18",
+        "fullGame": "804/804",
+        "readinessValidators": "15/15",
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/JS/CSS HTTP 200; exact byte lengths; owned PID stopped; port clear"
+      },
+      "commit": "PENDING_QUARTERMASTER_COMMIT",
+      "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
     }
   ]
 }

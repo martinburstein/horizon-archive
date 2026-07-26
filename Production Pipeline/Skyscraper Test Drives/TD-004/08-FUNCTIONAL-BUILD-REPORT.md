@@ -306,7 +306,7 @@ fixture identity, production budgets, and hard stop.
 - Tactical predecessor:
   `40552d911c8dfbf5d5bc8fe5099bac2ae840df6c`.
 - Dedicated Combat Engineer commit:
-  `PENDING_COMBAT_ENGINEER_COMMIT`.
+  `95fb6402c281ec1294bdb76582de04e80f3f3cb9`.
 - Push gate: push `main` after this exact package is committed.
 - Required synchronization: verify `HEAD == origin/main` before Quartermaster.
 

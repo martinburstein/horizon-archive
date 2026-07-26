@@ -249,6 +249,45 @@ const groupDefinitions = Object.freeze({
   }),
 });
 
+const readyStatusMessages = Object.freeze({
+  cm50_route:
+    "The verified predecessor note is held unchanged. Choose one independent Pilot movement.",
+  tr00_orient:
+    "Orientation remains pending. No observation or course evidence is recorded.",
+  tr10_relations:
+    "Unrecorded physical relations remain available as equal peers.",
+  tr20_common_return:
+    "Three physical relations are recorded separately. The apparent return remains capped and unassigned.",
+  tr30_python_primary:
+    "A blank primary form is ready with course-owned sanitized replicas only.",
+  tr30_python_retrieval:
+    "The prior source is cleared. A closed-note loop trace is ready.",
+  tr30_python_transfer:
+    "A fresh transfer form is blank and uses a different sanitized replica set.",
+  tr30_workload_primary:
+    "Neutral primary cases are ready; each requested workload and deciding signal is separate.",
+  tr30_workload_retrieval:
+    "A smaller closed-note workload set is ready with no carried choices.",
+  tr30_workload_transfer:
+    "A fresh workload transfer set is ready with no landscape answer channel.",
+  tr30_modality:
+    "The modality boundary remains separately accountable.",
+  tr30_agentic:
+    "The agentic-work boundary remains separately accountable.",
+  tr30_repair:
+    "The prior response is cleared. Review only the named incomplete boundary.",
+  tr30_review:
+    "Physical, Python, and AI workload obligations are finalized independently.",
+  tr30_provenance:
+    "Only sanitized replicas and finalized local evidence are eligible for the expedition note.",
+  tr30_save_recovery:
+    "The last verified note, or verified absence, remains unchanged.",
+  tr40_restore:
+    "The exact local note is restored without replaying any completed event.",
+  tr40_restore_recorded:
+    "The outbound physical continuation is local, destinationless, and non-routing.",
+});
+
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
 }
@@ -615,7 +654,7 @@ function baseState(group, options = {}) {
     headingId: definition.headingId,
     statusRegionId: "three-current-status",
     statusMessageId: options.statusMessageId ?? `td004:${group}:ready`,
-    statusMessage: options.statusMessage ?? "The current boundary is ready.",
+    statusMessage: options.statusMessage ?? readyStatusMessages[group],
     availableActions: actions,
     recordedObservationIds: [...relationStatus],
     observationControls: observationActions.map((action) => ({
@@ -876,7 +915,7 @@ export function createThreeCurrentReachNormalController(options = {}) {
           evidenceGranted: false,
           state: setGroup("tr00_orient", {
             statusMessageId: "td004:tr00_orient:arrived",
-            statusMessage: "The reach is present and unchanged. Orientation grants no observation or learning evidence.",
+            statusMessage: "Arrival is recorded locally. No observation, course evidence, record write, or world response occurred.",
           }),
         });
       }
@@ -1042,10 +1081,26 @@ export function createThreeCurrentReachNormalController(options = {}) {
           evidenceGranted: false,
           state: setGroup("tr30_provenance", {
             reviewRows: [
-              { id: "physical", label: "Physical observation", state: "Finalized separately" },
-              { id: "python", label: "Python", state: "Finalized separately" },
-              { id: "ai901", label: "AI-901", state: "Finalized separately" },
-              { id: "provenance", label: "Provenance", state: "Sanitized replicas only; no live control" },
+              {
+                id: "physical",
+                label: "Four physical observations",
+                state: "Three relations and one apparent return finalized separately",
+              },
+              {
+                id: "python",
+                label: "Python loop evidence",
+                state: "Primary, closed-note retrieval, and fresh transfer finalized",
+              },
+              {
+                id: "ai901",
+                label: "AI workload evidence",
+                state: "Three forms and two explanations finalized independently",
+              },
+              {
+                id: "provenance",
+                label: "Local source and authority boundary",
+                state: "Sanitized replicas only; no live read, control, or external action",
+              },
             ],
             statusMessageId: "td004:tr30_provenance:inspected",
             statusMessage: "Sanitized replicas, offline processing, and no external action are confirmed for this local note.",

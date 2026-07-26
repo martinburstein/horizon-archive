@@ -4,10 +4,10 @@ import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { threeCurrentReachActions } from "./ThreeCurrentReachNormal.js";
 
 const headings = Object.freeze({
-  cm50_route: "Choose the next expedition movement",
-  tr00_orient: "Three-Current Reach",
+  cm50_route: "Depart from the verified expedition note",
+  tr00_orient: "Orient within Three-Current Reach",
   tr10_relations: "Observe three equal physical relations",
-  tr20_common_return: "Trace the apparent common return",
+  tr20_common_return: "Record convergence without assigning purpose",
   tr30_python_primary: "Relate three sanitized replicas with one loop",
   tr30_python_retrieval: "Retrieve the loop boundary from memory",
   tr30_python_transfer: "Transfer the loop to a fresh replica set",
@@ -16,12 +16,51 @@ const headings = Object.freeze({
   tr30_workload_transfer: "Transfer workload recognition to six new cases",
   tr30_modality: "Separate modality from requested workload",
   tr30_agentic: "Separate generation from agentic work",
-  tr30_repair: "Review the named boundary",
-  tr30_review: "Review independent expedition obligations",
-  tr30_provenance: "Review local provenance",
+  tr30_repair: "Review one incomplete boundary",
+  tr30_review: "Confirm each obligation stands alone",
+  tr30_provenance: "Confirm local source boundaries",
   tr30_save_recovery: "Local note not replaced",
-  tr40_restore: "Restored Three-Current expedition note",
-  tr40_restore_recorded: "Restored note with outbound relation recorded",
+  tr40_restore: "Verify the restored expedition note",
+  tr40_restore_recorded: "Restore with a destinationless continuation note",
+});
+
+const groupIntroductions = Object.freeze({
+  cm50_route:
+    "The prior note is verified. One expedition-marked survey and two known, write-free returns remain independent Pilot choices.",
+  tr00_orient:
+    "Three distinct handling systems share one immense reach. Orient to their visible relations before recording any observation.",
+  tr10_relations:
+    "The three observations are equal peers. Record them in any order; no observation creates course evidence.",
+  tr20_common_return:
+    "All three relations enter one visibly capped return. Record the convergence while leaving purpose, category, and destination unknown.",
+  tr30_python_primary:
+    "Builder work supplies a bounded unfinished pattern; the course supplies sanitized replicas. Your loop remains local and controls nothing in the reach.",
+  tr30_python_retrieval:
+    "The completed source is cleared. Reconstruct the loop's responsibilities from memory without reopening the prior form.",
+  tr30_python_transfer:
+    "A different sanitized replica set is ready in a genuinely blank form. Apply the same loop discipline without carrying source forward.",
+  tr30_workload_primary:
+    "Classify each neutral course case by its requested outcome and deciding signal. The landscape supplies no answer.",
+  tr30_workload_retrieval:
+    "Retrieve the workload boundaries in a smaller closed-note set. Each case and each dimension remains independently accountable.",
+  tr30_workload_transfer:
+    "Apply workload recognition to a fresh neutral set. No current, material, sound, or Builder feature maps to a choice.",
+  tr30_modality:
+    "Explain whether an input or output method is enough to determine the requested AI workload.",
+  tr30_agentic:
+    "Explain which responsibility separates multi-step agentic work from content generation alone.",
+  tr30_repair:
+    "Only the named boundary is incomplete. The prior response has been cleared, and the review below includes no answer.",
+  tr30_review:
+    "Physical observations, Python work, and AI workload practice must each stand on their own; none can substitute for another.",
+  tr30_provenance:
+    "The note may include only finalized local evidence and expedition observations derived from the supplied, sanitized material.",
+  tr30_save_recovery:
+    "The attempted replacement did not become the verified note. The last verified note, or verified absence, remains unchanged.",
+  tr40_restore:
+    "The expedition note passed strict local read-back. Its integrity verifies the record only, not a theory, destination, or authority.",
+  tr40_restore_recorded:
+    "The local note now includes an outbound physical continuation without a destination, route, or successor.",
 });
 
 const relationCopy = Object.freeze({
@@ -32,6 +71,126 @@ const relationCopy = Object.freeze({
   conducted_heat_jointed_relation:
     "Conducted heat remains visibly paired with a jointed handling corridor.",
 });
+
+const fieldCopy = Object.freeze({
+  iterable: "Collection traversed by the loop",
+  currentItem: "Name for the current item",
+  loopBody: "Work performed once per item",
+  outputCount: "Expected number of output records",
+  purposeBoundary: "Boundary on the apparent common return",
+  workload: "Requested AI workload",
+  deciding_signal: "Deciding signal",
+});
+
+const optionCopy = Object.freeze({
+  samples: "The supplied samples",
+  corridor_for_form: "The supplied form-to-corridor lookup",
+  correspondence: "The output correspondence records",
+  sample: "One current sample",
+  corridor: "One current corridor",
+  append_one_ordered_correspondence_record:
+    "Append one ordered sample-and-corridor record",
+  replace_the_supplied_samples: "Replace the supplied sample collection",
+  open_a_live_source: "Open a live source",
+  three_records_for_three_samples: "Three records for three samples",
+  one_summary_for_all_samples: "One combined summary for all samples",
+  unbounded_records: "A variable number of records",
+  common_return_purpose_remains_none:
+    "The apparent common return remains observed with no assigned purpose",
+  common_return_is_a_route: "The apparent common return provides a travel route",
+  common_return_identifies_a_workload:
+    "The apparent common return identifies an AI workload",
+  generative_ai: "Generative AI",
+  agentic_ai: "Agentic AI",
+  text_analysis: "Text analysis",
+  speech: "Speech",
+  computer_vision: "Computer vision",
+  information_extraction: "Information extraction",
+  create_new_content_from_a_prompt: "Create new content from a prompt",
+  reason_across_steps_and_select_approved_tools:
+    "Reason across steps and select approved tools",
+  derive_sentiment_and_key_phrases_from_text:
+    "Derive sentiment and key phrases from text",
+  recognize_spoken_language_as_text: "Recognize spoken language as text",
+  interpret_visible_defects_in_an_image:
+    "Interpret visible defects in an image",
+  return_named_invoice_fields_in_a_defined_schema:
+    "Return named invoice fields in a defined schema",
+  analyze_the_already_supplied_transcript_not_the_audio:
+    "Analyze the supplied transcript rather than its original audio",
+  describe_visual_damage_without_a_field_schema:
+    "Describe visible damage without a field schema",
+  populate_fixed_fields_from_the_supplied_image:
+    "Populate fixed fields from the supplied image",
+  choose_approved_tools_and_actions_across_multiple_steps:
+    "Choose approved tools and actions across multiple steps",
+  create_a_new_illustration_from_a_prompt:
+    "Create a new illustration from a prompt",
+  plan_then_call_approved_systems_across_multiple_steps:
+    "Plan, then call approved systems across multiple steps",
+  detect_named_entities_in_written_content:
+    "Detect named entities in written content",
+  synthesize_spoken_audio_from_text: "Synthesize spoken audio from text",
+  interpret_objects_and_spatial_relations_in_an_image:
+    "Interpret objects and spatial relations in an image",
+  return_named_fields_from_audio_and_video_in_a_defined_schema:
+    "Return named fields from supplied audio and video in a defined schema",
+  modality_alone_does_not_determine_the_requested_workload:
+    "The input or output method alone does not determine the requested workload",
+  input_modality_alone_determines_the_requested_workload:
+    "The input or output method alone determines the requested workload",
+  all_audio_requests_are_speech_workloads:
+    "Every request involving audio belongs to the speech workload",
+  multi_step_autonomy_and_approved_tool_selection_distinguish_agentic_work:
+    "Multi-step autonomy and selection of approved tools distinguish agentic work",
+  generation_alone_makes_a_system_agentic:
+    "Generating content alone makes a system agentic",
+  any_single_model_response_is_an_agent:
+    "Any single model response is an agent",
+});
+
+const failedBoundaryCopy = Object.freeze({
+  result_is_list: "The output must be a list.",
+  one_record_per_sample: "One output record is required for each supplied sample.",
+  exact_record_keys_and_order:
+    "Each output record must preserve the required fields and field order.",
+  every_sample_id_preserved_once:
+    "Each supplied sample identifier must appear exactly once.",
+  exact_form_to_corridor_lookup:
+    "Each form must use its value from the supplied corridor lookup.",
+  for_loop_iterates_samples_and_appends_once:
+    "One loop must traverse the supplied samples and append once per item.",
+  common_return_observed_and_purpose_none:
+    "The common return may be recorded as observed while its purpose remains unassigned.",
+  inputs_unchanged_and_no_forbidden_operations:
+    "Supplied inputs must remain unchanged and no live or forbidden operation may be used.",
+  iterable: "Review which collection the loop traverses.",
+  currentItem: "Review the name used for one current item.",
+  loopBody: "Review the work performed once for each item.",
+  outputCount: "Review the expected number of output records.",
+  purposeBoundary: "Review the boundary on the apparent common return.",
+  modality_boundary: "Review whether modality alone determines the requested workload.",
+  agentic_boundary:
+    "Review whether generation alone includes multi-step autonomy and approved-tool selection.",
+});
+
+function productionOptionCopy(value) {
+  return optionCopy[value] ?? "Unrecognized course option";
+}
+
+function productionFailedBoundaryCopy(id) {
+  if (failedBoundaryCopy[id]) return failedBoundaryCopy[id];
+  const caseDimension = id.match(/^([PRT])(\d{2})\.(workload|deciding_signal)$/);
+  if (caseDimension) {
+    const formName = {
+      P: "Primary",
+      R: "Retrieval",
+      T: "Transfer",
+    }[caseDimension[1]];
+    return `${formName} case ${Number(caseDimension[2])} — ${fieldCopy[caseDimension[3]]} remains incomplete.`;
+  }
+  return "A required course boundary remains incomplete.";
+}
 
 function actionTargetId(action) {
   return {
@@ -107,17 +266,21 @@ export function ThreeCurrentReach({
     if (form.kind === "python") {
       return (
         <section className="three-current-form" aria-labelledby={`${state.headingId}-instructions`}>
-          <h2 id={`${state.headingId}-instructions`}>Sanitized replica exercise</h2>
+          <h2 id={`${state.headingId}-instructions`}>
+            {form.form === "primary"
+              ? "Local loop practice with supplied replicas"
+              : "Fresh loop transfer with new replicas"}
+          </h2>
           <p>
-            The supplied sample dictionaries and lookup are course-owned,
-            offline replicas. Write one loop that appends one ordered
-            sample/corridor record per supplied item and leaves purpose unknown.
+            {form.form === "primary"
+              ? "Use the course-owned sample dictionaries and lookup to build one ordered correspondence record per supplied item. Keep the apparent return observed and its purpose unassigned."
+              : "Use this different course-owned sample set to build the same bounded correspondence. Begin from a blank source field; no completed source has been carried forward."}
           </p>
           <pre aria-label={`${form.form} supplied replica shape`}>
             {JSON.stringify(form.starter, null, 2)}
           </pre>
           <label htmlFor={`${state.activeGroup}-editor`}>
-            Python source
+            Your Python loop
           </label>
           <textarea
             id={`${state.activeGroup}-editor`}
@@ -134,9 +297,9 @@ export function ThreeCurrentReach({
             onChange={(event) => updateField("learnerSource", event.target.value)}
           />
           <small id={`${state.activeGroup}-help`}>
-            Runs only against the supplied sanitized replicas. It cannot read
-            or control the landscape, a live source, Azure, Foundry, or any
-            external system.
+            Evaluated locally against only the displayed sanitized replicas.
+            It cannot read or control the reach, a live source, Azure,
+            Foundry, or any external system.
           </small>
         </section>
       );
@@ -147,7 +310,7 @@ export function ThreeCurrentReach({
           <legend>Closed-note loop trace</legend>
           {form.fieldIds.map((fieldId, index) => (
             <label key={fieldId}>
-              <span>{fieldId.replaceAll(/([A-Z])/g, " $1")}</span>
+              <span>{fieldCopy[fieldId]}</span>
               <select
                 ref={(element) => {
                   if (index === 0 && element) {
@@ -160,7 +323,7 @@ export function ThreeCurrentReach({
                 <option value="">Choose one</option>
                 {form.options[fieldId].map((option) => (
                   <option key={option} value={option}>
-                    {option.replaceAll("_", " ")}
+                    {productionOptionCopy(option)}
                   </option>
                 ))}
               </select>
@@ -178,12 +341,12 @@ export function ThreeCurrentReach({
           </p>
           {form.cases.map((scenario, caseIndex) => (
             <fieldset key={scenario.id}>
-              <legend>{scenario.id} · {scenario.prompt}</legend>
+              <legend>Case {caseIndex + 1}: {scenario.prompt}</legend>
               {form.dimensions.map((dimension, dimensionIndex) => {
                 const name = `${scenario.id}.${dimension}`;
                 return (
                   <label key={name}>
-                    <span>{dimension.replaceAll("_", " ")}</span>
+                    <span>{fieldCopy[dimension]}</span>
                     <select
                       ref={(element) => {
                         if (caseIndex === 0 && dimensionIndex === 0 && element) {
@@ -197,7 +360,7 @@ export function ThreeCurrentReach({
                       <option value="">Choose one</option>
                       {form.options[dimension].map((option) => (
                         <option key={option} value={option}>
-                          {option.replaceAll("_", " ")}
+                          {productionOptionCopy(option)}
                         </option>
                       ))}
                     </select>
@@ -233,7 +396,7 @@ export function ThreeCurrentReach({
             <option value="">Choose one</option>
             {form.options.map((option) => (
               <option key={option} value={option}>
-                {option.replaceAll("_", " ")}
+                {productionOptionCopy(option)}
               </option>
             ))}
           </select>
@@ -272,11 +435,7 @@ export function ThreeCurrentReach({
               {headings[state.activeGroup] ?? state.phase}
             </h1>
             <p>
-              {state.activeGroup === "tr10_relations"
-                ? "The three observations are equal peers. Record them in any order; no observation creates course evidence."
-                : state.activeGroup.startsWith("tr40")
-                  ? "The local note is expedition-owned and verified. Nothing in the reach responded, and no completed event replayed."
-                  : "The world remains invariant. Only the current expedition or course boundary can change."}
+              {groupIntroductions[state.activeGroup]}
             </p>
           </header>
 
@@ -319,9 +478,11 @@ export function ThreeCurrentReach({
             <section className="three-current-repair" aria-labelledby="three-current-failed-boundaries">
               <h2 id="three-current-failed-boundaries">Named boundaries to review</h2>
               <ul>
-                {state.failedIds.map((id) => <li key={id}>{id}</li>)}
+                {state.failedIds.map((id) => (
+                  <li key={id}>{productionFailedBoundaryCopy(id)}</li>
+                ))}
               </ul>
-              <p>No answer or prior response is retained here.</p>
+              <p>The prior response has been cleared. No answer is retained or supplied here.</p>
             </section>
           )}
 
@@ -353,8 +514,9 @@ export function ThreeCurrentReach({
 
           {state.availableActions.some((action) => action.startsWith("RETURN TO ")) && (
             <p id="three-current-return-boundary">
-              PILOT // SAFE RETURN · Each return is explicit, write-free,
-              replay-free, and grants no evidence, route, or world response.
+              PILOT // KNOWN RETURN · Each destination is already known. A
+              return is write-free and replay-free, preserves verified records,
+              and creates no evidence, onward route, or world response.
             </p>
           )}
 
@@ -367,10 +529,12 @@ export function ThreeCurrentReach({
           </div>
 
           <p className="extraction-floor-negative-authority">
-            Offline local expedition work only. No live landscape, Azure,
-            Foundry, credential, endpoint, request, response, external action,
-            access, authority, exam standing, exam guarantee, or world response
-            is created.
+            This expedition record stays local to this browser and device; it
+            stores finalized allowlisted evidence, not submitted code,
+            selections, reasoning, account data, credentials, or source
+            content. No live landscape, Azure, Foundry, endpoint, request,
+            response, cloud sync, external action, access, authority, exam
+            standing, exam guarantee, or world response is created.
           </p>
         </section>
       </main>

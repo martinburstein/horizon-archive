@@ -10,6 +10,10 @@ const styles = readFileSync(
   new URL("../src/styles.css", import.meta.url),
   "utf8",
 );
+const controller = readFileSync(
+  new URL("../src/ThreeCurrentReachNormal.js", import.meta.url),
+  "utf8",
+);
 
 test("TD004 renderer owns one heading, one polite status, blank native forms and deterministic focus", () => {
   assert.match(component, /<h1 ref=\{headingRef\} id=\{state\.headingId\} tabIndex="-1">/);
@@ -39,4 +43,16 @@ test("TD004 public renderer states no live control, authority, guarantee, or wor
   assert.match(component, /exam guarantee,/);
   assert.match(component, /world response/);
   assert.match(component, /no landscape crop, material,/);
+});
+
+test("TD004 production copy replaces raw evaluator and structural placeholder labels", () => {
+  assert.doesNotMatch(component, /replaceAll\("_", " "\)/);
+  assert.doesNotMatch(component, /<legend>\{scenario\.id\}/);
+  assert.match(component, /Collection traversed by the loop/);
+  assert.match(component, /Requested AI workload/);
+  assert.match(component, /Append one ordered sample-and-corridor record/);
+  assert.match(component, /The prior response has been cleared/);
+  assert.match(controller, /Four physical observations/);
+  assert.match(component, /PILOT \/\/ KNOWN RETURN/);
+  assert.doesNotMatch(component, /Â|â€”/);
 });
