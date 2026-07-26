@@ -168,8 +168,22 @@
         "TD003-IMG-001",
         "TD003-IMG-002"
       ],
-      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commit": "5c843f589ba63ceef0d200e2f05b16e12f1fd2ae",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 14,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-26T08:03:00.0000000Z",
+      "endedAt": "2026-07-26T08:31:58.5132437Z",
+      "durationMs": 1738513,
+      "disposition": "REVISE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/11-AS-BUILT-RECONCILIATION.md",
+      "blockingFinding": "TD003-INT-001",
+      "commit": "SELF:INTELLIGENCE_OFFICER_RECONCILIATION_COMMIT",
+      "commitConvention": "The dedicated commit containing this ledger entry is the immutable Intelligence Officer commit; storing its own hash here would require a recursive successor commit.",
+      "synchronization": "push-main-and-verify-after-commit"
     }
   ]
 }

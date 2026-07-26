@@ -4,130 +4,82 @@ Last updated: **2026-07-26**
 
 ## Start here
 
-Read in full:
+Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
+`Skyscraper Agent Profiles/README.md` in full.
 
-1. `AGENTS.md`
-2. this file
-3. `SKYSCRAPER_AGENT_WORKFLOW.md`
-4. `Skyscraper Agent Profiles/README.md`
+No recurring automation is active. Do not schedule another shell.
 
-No recurring automation is active. Do not schedule or begin another shell until
-Martin explicitly authorizes it.
+## Current synchronized state
 
-## Synchronized release state
+- Test drive: `TD-003`
+- Shell: `SS-RP003-REVIEW-SAVE-v1`
+- Campaign address: `RP-003 / SC-04 / CM-40-CM-50`
+- Candidate: Image Specialist commit
+  `5c843f589ba63ceef0d200e2f05b16e12f1fd2ae`
+- Intelligence disposition: **`REVISE`**
+- Blocking finding: `TD003-INT-001`
+- Return owner: Image Specialist / `image_specialist`
+- Full evidence:
+  `Production Pipeline/Skyscraper Test Drives/TD-003/11-AS-BUILT-RECONCILIATION.md`
 
-- Test drive: `TD-002`
-- Disposition: `PASS — AS BUILT RELEASED`
-- Shell: `SS-RP003-IE01-v1`
-- Campaign address: `RP-003 / SC-04 / CM-30-CM-34`
-- Accepted playable landing: no-action `IE-P3`, finalized `RP003-IE-01` only
-- Functional commit: `7065d20a4e1f2d285cfced708d93d7f7a336d364`
-- Content commit: `4af907c5f99ce4ff764258e5e654d66851630a9d`
-- Presentation commit: `75b5b64`
-- As-built package:
-  `Production Pipeline/Skyscraper Test Drives/TD-002/11-AS-BUILT-RECONCILIATION.md`
-- Final synchronization: dedicated Intelligence Officer release commit on
-  `main`; `HEAD == origin/main` verified after push
+TD-002 remains the accepted released playable boundary. TD-003 is not
+`AS BUILT RELEASED`, and no playable-demo, rail, packet, or master release
+control advances from this candidate.
 
-## Accepted product boundary
+## Passing evidence retained for revalidation
 
-Normal RP-003 play now supports:
+- full game `785/785`;
+- readiness validators `15/15`;
+- build `179` modules;
+- JS `index-DUDSudk8.js`, `1,195,380` bytes;
+- CSS `index-Dmsam-J8.css`, `81,688` bytes;
+- served identity and reload HTTP `200`, byte-identical to `dist`;
+- exactly one complete post-build E2E `109.143s`, all gates true,
+  `runtimeErrors:false`;
+- eleven closed fixture scenarios across 44 exact layout combinations passed
+  horizontal containment, one-group/status, `>=44px`, console, plate, and
+  forbidden-boundary checks;
+- fixture excluded from production;
+- reveal candidate hash/dimensions/provenance pass but acceptance is withheld;
+- QA restored and owned ports `5174`/`4175` cleared.
 
-```text
-exact no-action PY010-P3
-  -> fresh blank CM-30 primary
-  -> strict 3/3 or actual-miss-only answer-free repair / blank retry
-  -> zero-credit CM-32 provenance interlude
-  -> blank closed-note CM-33 retrieval at strict 3/3
-  -> blank distinct CM-34 transfer at strict 3/3
-     plus separate unsupported-input explanation
-  -> atomic IE-P3
-  -> RP003-IE-01 no-action landing
-```
+## Blocking exact evidence
 
-Only exact ordered allowlisted IE P0-P3 evidence persists. Private/transient
-work clears on repair, retry, return, replacement, recovery, reload sanitation,
-and finalization. `PY-010` cannot cross-credit `RP003-IE-01`. Unavailable audio
-and video input remains unavailable; no source value is invented.
+At exact CSS `1920 x 1080` in `cm40-five-conjunct-ready`:
 
-The hard stop remains before:
+- document scroll height `1126 > 1080`;
+- command-panel scroll height `1313 > 1077`;
+- first action row ends at `1104.64`;
+- second action row ends at `1172.64`.
 
-- `CM-40`, review/save, or save eligibility;
-- onward bearing or RP-004;
-- RP-013, successor, or post-ending content;
-- reward, access, authority, identity, exam standing, or external action; and
-- any physical or world response.
-
-## Release evidence
-
-- Full game suite: `769/769 PASS`
-- Readiness validators: `15/15 PASS`
-- Production build: `177` modules
-- JS: `index-DDAc5mlT.js`, `1,172,546` bytes,
-  SHA-256 `9419B9F969C0789A9B086D569EAD24DC4C626D9D9945754BB355B52CAE3F439C`
-- CSS: `index-hd_9FUHO.css`, `81,676` bytes,
-  SHA-256 `F7C0F531E1F1C1944AE70472FFB9D51C97A0BB09261FA5DB7F403A936E4DC834`
-- Complete accepted E2E: `113.241s`, credits reached, all emitted gates true,
-  `runtimeErrors:false`
-- Production preview root/reload/assets: HTTP `200` and byte-identical to
-  `dist`
-- All nine closed storage-free fixture scenarios reviewed across desktop,
-  intermediate, narrow, and width-equivalent effective-200-percent layouts
-- QA captures restored; Intelligence-owned preview/fixture processes stopped;
-  ports `5174` and `4174` clear
-
-## Accepted reveal
-
-- Decision:
-  `RP-003 / RP003-IE-01 — an expedition provenance carrier preserves a supplied-source trace without inventing a mark for unavailable input`
-- Asset:
-  `Visual Direction/Production Masters/2026-07-26-rp003-provenance-carrier-reveal/rp003-provenance-carrier-v1.png`
-- Dimensions: `1672 x 941`
-- SHA-256:
-  `6F5404F6640F2503FA02C5826990C7A30CF414A50A9F4BC408FA1D0D10D4D670`
-- Status: spoiler-safe canonical reference only; not runtime-integrated, not a
-  case/schema/checkpoint/interface model, and not `SC-04-MASTER`
-
-## Deferred limitations
-
-1. The inherited City Threshold overview remains temporary SC-04 atmosphere
-   and is not `SC-04-MASTER`.
-2. CSS retains only `29` bytes of shell-cap headroom.
-3. Exact platform forced-color, reduced-motion, text-only 200-percent zoom,
-   human screen-reader speech, and physical switch hardware were not directly
-   emulated; deterministic source/tests and width-equivalent browser evidence
-   pass.
-4. English is the only integrated locale.
-
-## Process result
-
-Recommendation: `TUNE`.
-
-Keep the eleven-role structure and all release gates. For a future authorized
-shell, use compact baseline-delta certificates for Commandant through Science,
-retain the Mission Captain shell as the one full contract, add an auditable
-owned fixture-launch manifest, and record stage boundaries in a
-machine-readable metrics ledger. The full rationale is in
-`Production Pipeline/PROCESS_CHANGELOG.md`.
+Required CM-40 actions are below the exact viewport. This violates the shell's
+complete desktop group/action containment contract. A Chrome override had
+reported a scaled `2133 x 1200` effective viewport, so that requested-size
+review did not prove exact `1920 x 1080`.
 
 ## Continuing protections
 
-- Preserve closed canon, intended ending, strict evidence, privacy,
-  accessibility, responsive behavior, offline/no-authority/no-exam-guarantee,
-  no-credit Tour, invariant world, and deterministic recovery.
-- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md` without
-  Martin's explicit authorization.
-- Never inspect, alter, stage, commit, move, or delete:
-  - `Art Of No Mans Sky Book Scan.pdf`
-  - `Simplilearn Training Files/`
-- Never inspect or mutate Martin's browser storage or campaign save to
-  manufacture a gated state.
-- The archived Team 1 / Team 2 workflow remains inactive.
+- Preserve closed canon, intended ending, strict evidence/no cross-credit,
+  privacy, accessibility, offline/no-authority/no-exam-guarantee, no-credit
+  Tour, deterministic save/recovery, invariant SC-04, and hard stop at CM-50
+  plus only the two known returns.
+- No bearing, RP-004 destination/opening, RP-013, successor, reward, access,
+  identity, authority, external action, or world response.
+- Do not regenerate the exact TD-003 reveal candidate.
+- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
+- Never inspect, alter, stage, move, delete, or commit
+  `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
+- Never inspect or mutate Martin's browser storage or campaign save.
+- The archived two-team workflow remains inactive.
 
 ## Exact next action
 
-Await Martin's explicit instruction before beginning or scheduling another
-skyscraper shell. If Martin requests another manual run, begin at the
-Commandant from this exact synchronized TD-002 release; do not infer or open
-CM-40, review/save, RP-004, RP-013, successor, or any world/access/authority
-effect.
+Resume only the **Image Specialist** at `TD003-INT-001`. Make one
+presentation-only correction so the complete CM-40 group and all four
+required actions fit inside exact CSS `1920 x 1080` with zero outer
+horizontal/vertical scroll, while preserving every shell behavior, copy,
+focus class, responsive/accessibility contract, fixed cap, fixture identity,
+world plate, reveal candidate, and hard stop. Prove the exact measurements,
+all eleven scenario/layout families, focused tests, build, and caps; commit
+once; then return to the Intelligence Officer for a fresh complete Tier 5
+release. Do not begin a new Commandant shell.
