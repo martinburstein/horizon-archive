@@ -1,5 +1,31 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-004 Mission current control — 2026-07-26
+
+- **Status:** `SHELL READY / SS-RP004-THREE-CURRENT-v1 /
+  RECONNAISSANCE SERGEANT NEXT`. The shell locks exact released TD-003 CM-50,
+  Pilot-owned `TD004-RTA-001`, one validation-before-consumption transient
+  TR-00 arrival, the complete TR-00–TR-40 graph, exact returns, frozen
+  independent learning, separate RP-004 persistence, deterministic recovery,
+  accessibility/responsive/offline parity, invariant SC-04/SC-05, and the
+  hard stop before RP-005.
+- **Construction boundary:** normal RP-004 route/controller/persistence/UI/art
+  remains unbuilt. Protected RP-004 is reference evidence only and may not be
+  imported as normal proof. Marines construct only
+  `SS-RP004-THREE-CURRENT-v1`, one role at a time, with variance return to the
+  earliest owner.
+- **Budget gate:** `PBA-TD004-v1` remains one-time and non-compounding:
+  aggregate JS `1,255,149`, CSS `85,789`, `187` modules, and `4,194,304`
+  new image-only runtime bytes. Every emitted chunk and media hash counts;
+  `scripts/validate_td004_budget.py` is mandatory. No quality, evidence,
+  privacy, accessibility, save/recovery, or release gate may be traded for
+  budget.
+- **Release boundary:** stop at TR-40 plus Calibration Margin/City Threshold
+  returns and an optional destinationless record. No direct RP-004-to-Civic
+  shortcut, traversable common return, RP-005 route, RP-013, successor,
+  reward, permission, authority, live service, external action, or world
+  response is authorized.
+
 ## TD-004 Science current control — 2026-07-26
 
 - **Status:** `VIABILITY READY — ROUTE AND BUDGET REVALIDATED / MISSION NEXT`.

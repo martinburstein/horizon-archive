@@ -7,14 +7,14 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-TD-004 is active on a validated sequential return chain. Do not restart a
-completed stage, repeat an earlier HOLD, or deploy a Marine before Mission
-Captain issues a versioned `SHELL READY` contract.
+TD-004 has passed the Mission shell gate. Do not restart a completed strategic
+stage or widen the issued contract.
 
-## Current local state
+## Current synchronized state
 
 - Test drive: `TD-004`
-- Selected slice: `TD-004-RP004-THREE-CURRENT-v1`
+- Slice: `TD-004-RP004-THREE-CURRENT-v1`
+- Shell: `SS-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
 - Released predecessor:
   `TD-003 / SS-RP003-REVIEW-SAVE-v1 / CM-50 VERIFIED RESTORE`
@@ -22,97 +22,79 @@ Captain issues a versioned `SHELL READY` contract.
 - Floor-stack certificate: `CFS-TD004-v2`
 - Science certificate: `VE-TD004-v2`
 - Budget authority: `PBA-TD004-v1`
-- Science disposition:
-  **`VIABILITY READY - ROUTE AND BUDGET REVALIDATED`**
-- Operations return commit:
-  `e8b4b63a1ee7f9f82433d34bd24c5c611b082956`
-- Science return commit: the dedicated local commit containing
-  `04-VIABILITY-ENVELOPE.md`, `04A-PRODUCTION-BUDGET-AUTHORITY.json`,
-  `scripts/validate_td004_budget.py`, this handoff, and the related current
-  controls is authoritative.
-- Shell ID/version: **not yet issued**
-- Marine deployment: **not authorized**
-- Synchronization: **local-only until the Mission `SHELL READY` push gate**
+- Mission disposition: **`SHELL READY`**
+- Science commit:
+  `644d07482723809468d69b7800e81faf7b5ae6e7`
+- Mission commit: the dedicated shell commit containing
+  `05-PLAYABLE-SLICE-SHELL.md`, this handoff, stage metrics, and the Mission
+  current control is authoritative under the ledger self-reference
+  convention.
+- Full shell:
+  `Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md`
 
-Martin explicitly authorized the exact transition from the released TD-003
-`CM-50 VERIFIED RESTORE` state into `RP-004 / SC-05 / TR-00-TR-40`.
-Operations encoded that decision as `TD004-RTA-001`; Science has now
-independently found the route and its bounded production envelope supportable.
+The historical Mission HOLD remains process evidence. Martin's exact route
+authorization resolved the route gap through `CFS-TD004-v2`; Science resolved
+the measured budget gap through `VE-TD004-v2` and `PBA-TD004-v1`. No other
+product, canon, learning, authority, return, or later-route boundary reopened.
 
-The earlier Operations, Science, and Mission HOLDs remain historical evidence
-of the correctly detected route and budget gaps. `CFS-TD004-v2`,
-`VE-TD004-v2`, and `PBA-TD004-v1` are the current authorities.
+## Frozen construction boundary
 
-## Frozen transition and recovery contract
-
-The sole Pilot action is:
+The sole new route action is:
 
 ```text
+TD004-RTA-001
 PILOT // FOLLOW EXPEDITION-MARKED SURVEY TO THREE-CURRENT REACH
 ```
 
-It is available only after Tour isolation, strict sanitation of the exact
-released TD-003 record, exact no-replay `CM-50` reconstruction,
-private/transient clearing, complete intent validation, and an unused
-seven-modality one-hit token. Validation precedes token consumption.
+It requires exact sanitized TD-003, no-replay CM-50, cleared private/transient
+work, all seven modalities, complete validation before one-hit token
+consumption, and one fresh Pilot action. It performs one transient TR-00
+arrival, writes no predecessor field, grants no evidence/authority, and
+causes no world response.
 
-One accepted intent performs exactly one transient in-memory transition to
-`TR-00 ARRIVE + ORIENT`. It writes no TD-003 field, grants no evidence,
-authority, invitation, permission, access, reward, identity, world response,
-or external action, replays nothing, and preserves
-`continuation="continuation"` and `successor=null`.
+Exact CM-50 retains its two released independent write-free returns. RP-004
+returns only to Calibration Margin or City Threshold; no direct Civic
+Comparison shortcut is added. Stop at TR-40. The apparent common return is
+observation only and never a route.
 
-RP-004 persistence uses the dedicated key
-`horizon-archive-rp004-three-current-save-v1` and record version
-`rp004.three-current-save.v1`. The exact schema, sanitation, denylist,
-atomic write/readback/rollback, resume, re-entry, accessibility, responsive,
-offline, evidence, and invariant-world contracts are frozen in
-`VE-TD004-v2`.
-
-The two released write-free CM-50 choices remain unchanged:
-
-- `RETURN TO CIVIC COMPARISON`
-- `RETURN TO CITY THRESHOLD`
-
-RP-004's existing `RETURN TO CALIBRATION MARGIN` must restore exact CM-50,
-where both known returns and a new fresh RP-004 intent are available.
-RP-004's direct City Threshold return remains write-free. No direct
-RP-004-to-Civic-Comparison shortcut is authorized.
+RP-004 persistence uses key
+`horizon-archive-rp004-three-current-save-v1`, record version
+`rp004.three-current-save.v1`, the exact ten-key top-level allowlist,
+canonical purpose-unknown note, eight ordered ten-key evidence records, one
+atomic replacement, strict read-back, rollback, deterministic recovery, and
+no-replay restore. TD-003 bytes remain independently unchanged.
 
 ## Production budget authority
 
-`PBA-TD004-v1` replaces the exhausted inherited limits with a one-time,
-non-compounding five-percent TD-004 rebaseline grounded in the accepted TD-003
-production build:
+`PBA-TD004-v1` is one-time and non-compounding:
 
-- aggregate JavaScript: at most `1,255,149` bytes
-- aggregate CSS: at most `85,789` bytes
-- production modules: at most `187`
-- new image-only runtime media: at most `4,194,304` bytes
-- total runtime media: at most `23,566,675` bytes
-- no new audio, font, video, or network payload
-- production build: at most `60` seconds
-- focused tests: at most `30` seconds
-- complete E2E: at most `180` seconds
-- sampled main-thread task: at most `100` milliseconds
+- aggregate JavaScript `<=1,255,149` bytes;
+- aggregate CSS `<=85,789` bytes;
+- production modules `<=187`;
+- new runtime media `<=4,194,304` bytes, image-only;
+- total runtime media `<=23,566,675` bytes;
+- no new audio, font, video, source-map payload, or network asset;
+- production build `<=60s`;
+- focused suite `<=30s`;
+- complete non-overlapping E2E `<=180s`; and
+- sampled main-thread task `<=100ms`.
 
-The executable validator is `scripts/validate_td004_budget.py`. It aggregates
-every emitted JS/CSS chunk, identifies accepted media by SHA-256, rejects
-unapproved media classes, and fails on any exceeded cap. The accepted baseline
-passes exactly; over-cap module and build-time probes fail closed.
+Every emitted chunk and new media hash counts. Use
+`scripts/validate_td004_budget.py`. Never meet a cap by weakening quality,
+learning, privacy, accessibility, responsive behavior, save/recovery, or a
+release gate.
 
 ## Continuing protections
 
-- Preserve closed canon, the intended ending, strict AI-901 learning evidence
-  and no cross-credit, privacy, accessibility, responsive parity,
+- Preserve closed canon, intended ending, exact AI-901/Python evidence and no
+  cross-credit, privacy, accessibility, responsive/focus parity,
   offline/no-authority/no-exam-guarantee, no-credit Tour, deterministic atomic
   save/rollback/restore, and invariant SC-04/SC-05.
-- The apparent common return remains observation only and is never a route.
-- Stop at `TR-40 VERIFY + RETURN`; no RP-005 route is authorized.
-- No RP-013, successor, post-ending content, hidden-lore explanation, live
-  service call, external action, or world change is authorized.
-- Protected RP-004 code remains reference evidence, not proof of normal
-  integration.
+- No RP-005 route, traversable common return, RP-013, successor, post-ending
+  content, hidden-lore answer, reward, permission, access, identity,
+  authority, live service, external action, or world response is open.
+- Protected RP-004 remains non-routable reference evidence, not production
+  proof.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
@@ -121,19 +103,24 @@ passes exactly; over-cap module and build-time probes fail closed.
 
 ## Exact next action
 
-**Mission Captain re-entry.**
+**Reconnaissance Sergeant / `reconnaissance_sergeant`.**
 
-Read the Mission profile, `CFS-TD004-v2`, `VE-TD004-v2`,
-`PBA-TD004-v1`, the historical `MC-TD004-HOLD-v1`, the exact released TD-003
-record/controller evidence, the frozen RP-004 contract, and current technical
-controls.
+Read the canonical profile and
+`Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md`
+in full. Create only
+`Production Pipeline/Skyscraper Test Drives/TD-004/06-CREATIVE-TREATMENT.md`.
 
-Reconcile every boundary without silently changing Operations or Science.
-If no conflict remains, replace the historical HOLD with a versioned
-`SHELL READY` contract that freezes the playable boundary, implementation
-ownership, acceptance matrix, budget command, variance protocol, and exact
-Marine deployment order. Commit, push the `SHELL READY` gate, verify
-`HEAD == origin/main`, and only then hand off to Reconnaissance Sergeant.
+Produce one bounded creative treatment for the exact shell: Pilot-owned CM-50
+departure, invariant TR-00 arrival, three equal physical observations,
+apparent-common-return/purpose-unknown boundary, strict separate learning,
+accountable local save/restore, and existing-anchor return. Define emotional
+arc, owner-separated answer-free language, world/interface intent, fixed
+versus flexible choices, risk checks, optional-scope recommendation, one
+reveal-decision candidate, and the exact Tactical Operations Specialist
+handoff.
 
-If any conflict remains, return it to the earliest responsible stage with a
-bounded revision request. Do not deploy Marines on a partial or implied shell.
+Do not write code, layout blueprint, final production copy, generated art,
+new canon, learning truth, route, state, asset, fixture, RP-005, RP-013,
+successor, post-ending content, or world/authority effect. Issue
+`CREATIVE LOCK`, `REVISE`, or `HOLD`, create one dedicated local commit, then
+stop for the next sequential role.
