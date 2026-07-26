@@ -7,60 +7,58 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-No recurring automation is active. Do not schedule another shell.
+Do not restart TD-004 or deploy a Marine from this handoff.
 
 ## Current synchronized state
 
-- Test drive: `TD-003`
-- Shell: `SS-RP003-REVIEW-SAVE-v1`
-- Campaign address: `RP-003 / SC-04 / CM-40-CM-50`
-- Released candidate:
-  `3fde325866cf83bc07d7526e5827d07e2ff33bcb`
-- Intelligence disposition: **`PASS — AS BUILT RELEASED`**
-- Resolved return: `TD003-INT-001`
+- Test drive: `TD-004`
+- Mission certificate: `MC-TD004-HOLD-v1`
+- Candidate planning address: `RP-004 / SC-05 / TR-00–TR-40`
+- Released player boundary:
+  `TD-003 / SS-RP003-REVIEW-SAVE-v1 / CM-50 VERIFIED RESTORE`
+- Latest strategic commit before Mission:
+  `c274ca349610a954af6780564768a137b3dc6057`
+- Mission disposition: **`HOLD — NO SHELL`**
+- Shell ID/version: **not issued**
+- Marine deployment: **not authorized**
 - Full evidence:
-  `Production Pipeline/Skyscraper Test Drives/TD-003/11-AS-BUILT-RECONCILIATION.md`
+  `Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md`
 
-The accepted normal route now reaches exact five-conjunct CM-40 review,
-fresh provenance, one strict atomic local save, exact no-replay
-`CM-50 VERIFIED RESTORE`, and only the two known write-free returns. Failed
-writes preserve the last verified bytes. SC-04 remains invariant and neither
-receives nor responds to the record.
+The RP-004 planning candidate is technically coherent but unreachable from
+the released player boundary. TD-003 exposes only exact CM-50 and two known
+write-free returns; no current approved source supplies a fresh semantic Pilot
+transition, destination, dispatch control, or arrival state. A separate
+production blocker also remains: released headroom is only `244` JavaScript
+bytes, `1` CSS byte, and `3` modules.
 
-## Released evidence
+Recurring-cycle authorization does not supply story-route authority.
 
-- full game `785/785`;
-- readiness validators `15/15`;
-- production build `179` modules;
-- JavaScript `index-DHPBT_yG.js`, `1,195,380` bytes, SHA-256
-  `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3`;
-- CSS `index-DD5Uz-s3.css`, `81,704` bytes, SHA-256
-  `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B`;
-- isolated production preview root/reload HTTP `200` and served JS/CSS
-  byte-identical to `dist`;
-- exactly one post-build complete E2E reached credits with every emitted gate
-  true and `runtimeErrors:false`;
-- all eleven manifest-owned storage-free scenarios passed at exact DPR-1
-  `1920x1080`, `1366x768`, `390x844`, and `768x900`, including document and
-  panel containment, desktop world dominance, viewport-contained `>=44px`
-  actions, heading-first focus, one polite atomic status, local plate identity,
-  console silence, forced colors, and reduced motion;
-- fixture markers and scenarios remain absent from production source/`dist`;
-- incidental E2E QA captures were restored and owned ports `5174`/`4175`
-  were cleared;
-- the exact one-generation TD-003 reveal is accepted unchanged at
-  `1672 x 941`, `1,923,084` bytes, SHA-256
-  `574936396CC062762E07AB6EBEA3FFA60059ACA919A36A8A60A4DAFA6A2AF7B2`.
+## Required return chain
+
+1. Operations Planning Major may re-enter only with an existing current
+   authority that explicitly defines the fresh transition from released
+   CM-50, including owner, one-hit meaning, exact record relationship,
+   validation, failure recovery, and relationship to both known returns.
+2. Office of Science Administrator must then issue a new certificate covering
+   that route plus a measurable production-budget recovery or rebaseline and
+   all learning, privacy, save, accessibility, responsive, offline, recovery,
+   and invariant-world requirements.
+3. Mission Captain may reconsider shell issuance only after those two
+   corrected certificates agree and Science issues `VIABILITY READY`.
+
+Do not restart Commandant or Colonel unless a genuine product or canon reopen
+trigger appears. Do not skip directly to Mission or Marine work.
 
 ## Continuing protections
 
-- Preserve closed canon, intended ending, strict evidence/no cross-credit,
+- Preserve closed canon, the intended ending, strict evidence/no cross-credit,
   privacy, accessibility, offline/no-authority/no-exam-guarantee, no-credit
-  Tour, deterministic atomic save/rollback/restore, invariant SC-04, and only
-  the two known returns.
-- No onward bearing, RP-004 destination/opening, RP-013, successor, reward,
-  access, identity, authority, external action, or world response is open.
-- Canonical reveal status does not claim runtime integration.
+  Tour, deterministic atomic save/rollback/restore, invariant SC-04/SC-05,
+  and only the two released TD-003 returns.
+- No onward bearing, RP-004 opening, destination, permission, response,
+  reward, authority, external action, RP-005 route, RP-013, successor, or
+  post-ending content is open.
+- Protected RP-004 code remains non-routable reference evidence.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
@@ -69,7 +67,11 @@ receives nor responds to the record.
 
 ## Exact next action
 
-Await Martin's explicit instruction. Do not begin another Commandant stage,
-choose an RP-004 destination, infer an opening, or create recurring
-automation. If Martin explicitly authorizes a new manual test drive, start
-with the Commandant against this synchronized released baseline.
+**Await Martin's route decision.**
+
+Do not repeat completed TD-004 stages on a scheduled wake. Do not infer a
+transition from planned rail order, protected code, save/restore success,
+visual alignment, or automation authority. If Martin supplies or explicitly
+approves a current transition authority, resume at Operations Planning Major,
+then Science, then Mission. Until then, preserve `HOLD — NO SHELL` and do not
+deploy the Reconnaissance Sergeant or any later Marine.

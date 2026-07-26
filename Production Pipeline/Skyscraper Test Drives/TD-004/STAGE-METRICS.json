@@ -61,6 +61,19 @@
       "commit": "PENDING_SCIENCE_COMMIT",
       "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-26T15:05:17.0000000Z",
+      "endedAt": "2026-07-26T15:10:45.3319483Z",
+      "durationMs": 328332,
+      "disposition": "HOLD — NO SHELL",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; a later Intelligence reconciliation records the immutable hash only if construction is eventually authorized.",
+      "synchronization": "mission-hold-push-gate"
     }
   ]
 }
