@@ -7,9 +7,11 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-The authorized Skyscraper automation remains active on a two-hour cadence,
-but TD-005 is stopped at a decision gate. A wake must preserve this hold and
-must not restart completed stages or deploy Marines.
+The authorized Skyscraper automation is active on a three-hour cadence.
+Martin has granted standing adjacent-transition authority under the exact
+proof conditions in `AGENTS.md` and `SKYSCRAPER_AGENT_WORKFLOW.md`.
+TD-005 must resume from its current return chain rather than restart completed
+stages.
 
 ## Synchronized state
 
@@ -39,31 +41,23 @@ cannot act as a production adapter. Technical viability, protected code,
 packet order, common-return geometry, destinationless notation, released
 residual capacity, and recurring automation cannot create route authority.
 
-## Exact decision required from Martin
+## Standing route decision
 
-Martin must choose one:
-
-> **Authorize or decline a new Pilot-owned transition from exact released
-> TD-004 `TR-40 VERIFY + RETURN` into the existing current-source
-> `RP-005 / SC-06 / MF-00-MF-30` candidate.**
+Martin authorizes a new Pilot-owned transition from exact released TD-004
+`TR-40 VERIFY + RETURN` into the existing current-source
+`RP-005 / SC-06 / MF-00-MF-30` candidate, subject to fresh sequential
+Operations, Science, and Mission proof.
 
 Authorization permits Operations to define and validate the transition; it
-does not itself issue a shell or authorize construction. Declining preserves
-TD-004 as the released hard stop and closes TD-005 without Marine deployment.
+does not itself issue a shell or authorize construction.
 
 ## Exact next action
 
-**Await Martin's explicit decision.**
-
-- If Martin authorizes the transition: resume at Operations Planning Major,
-  then perform a fresh Office of Science Administrator validation, then
-  return to Mission Captain for reconsideration. Do not restart Commandant or
-  Colonel.
-- If Martin declines: preserve the TD-004 released boundary and close TD-005
-  without a shell.
-- Until either decision: do not run Reconnaissance Sergeant or any later
-  Marine, construct RP-005, infer a transition, or repeat the completed hold
-  stages.
+Resume at **Operations Planning Major**, define and validate the narrow
+fail-closed transition under Martin's standing authority, then perform a fresh
+Office of Science Administrator validation and return to Mission Captain for
+shell reconsideration. Do not restart Commandant or Colonel. Do not deploy a
+Marine until Mission issues `SHELL READY`.
 
 Never open the hidden-lore vault. Never inspect or mutate Martin's browser
 storage or campaign save. Never inspect, alter, stage, move, delete, or

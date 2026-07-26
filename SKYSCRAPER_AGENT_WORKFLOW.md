@@ -57,6 +57,24 @@ The first foundation run establishes or confirms the whole-building baseline:
 
 On later runs, the Commandant and Colonel normally perform guarded verification rather than reinvention. Reopen either baseline only for a documented contradiction, product-direction change from Martin, failed viability requirement, accepted as-built discovery with global impact, or an explicit Intelligence Officer recommendation approved for integration.
 
+### Standing adjacent-transition authority
+
+Martin authorizes the sequential roles to open the next already-mapped
+adjacent surface-canon transition without pausing for a separate decision only
+when all four conditions pass:
+
+1. the Colonel derives one candidate from current approved surface authority;
+2. Operations proves exact released adjacency and defines a narrow fail-closed
+   transition;
+3. Science independently validates learning, evidence, privacy,
+   accessibility, save/recovery, offline, performance, and budget; and
+4. Mission issues a conflict-free versioned `SHELL READY` contract.
+
+This standing authority does not permit invented canon, a skipped packet, an
+unsupported route, hidden lore, reward, access, identity, authority, world
+response, successor, RP-013, or post-ending content. If any proof fails, the
+owning role records `HOLD`.
+
 ## Core artifacts
 
 The workflow uses five artifact layers:

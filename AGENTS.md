@@ -38,6 +38,15 @@ test drives. The current automation status, cadence, and exact next action live
 only in `NEXT_INSTANCE_HANDOFF.md`; do not infer them from an older workflow
 edge or archived prompt.
 
+Martin also grants standing route authority for the sequential roles to open
+the next already-mapped adjacent surface-canon transition without a separate
+decision when the Colonel derives it from current approved authority,
+Operations proves exact released adjacency and a narrow fail-closed
+transition, Science independently confirms the complete viability envelope,
+and Mission issues a conflict-free versioned shell. This never authorizes
+invented canon, a skipped packet, hidden lore, reward, access, identity,
+authority, world response, successor, RP-013, or post-ending content.
+
 ## Two-team agent profiles
 
 **Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates that archived workflow. The current `NEXT_INSTANCE_HANDOFF.md` belongs to the skyscraper workflow.
