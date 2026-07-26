@@ -2,27 +2,31 @@
 
 ## TD-004 Intelligence Officer current control — 2026-07-26
 
-- **Disposition:** `REVISE / NOT AS BUILT RELEASED / TD004-VAR-001 /
-  QUARTERMASTER RETURN`. Fresh independent `19/19` focused, `134/134`
-  related, `804/804` full, `15/15` validator, `182`-module build, aggregate
-  budget, served-byte identity, one complete non-overlapping `93.809s` E2E,
-  and 20 exact DPR-1 live fixture/layout checks pass.
-- **Blocking fixed requirement:** final release requires one shell-compliant
-  SC-05 first-person runtime world presentation with provenance and honest
-  runtime identity. Runtime still imports the inherited City Threshold
-  overview that Quartermaster and Image both identify as a temporary
-  non-SC-05 placeholder. The reference-only `1672 x 941` reveal is valid and
-  unchanged but ineligible as the runtime master.
-- **Return boundary:** this is `REQUIRED CORRECTION`, not a deferred
-  limitation. Quartermaster owns final runtime asset completeness and must
-  retire `TD004-ASSET-SC05-PLACEHOLDER` through one approved directly
-  imported SC-05 runtime master inside `PBA-TD004-v1`, or issue a formal
-  bounded variance. Image Specialist then revalidates presentation and the
-  unchanged reveal before a fresh complete Intelligence Tier 5.
+- **Disposition:** `REVISE / NOT AS BUILT RELEASED / TD004-VAR-002 /
+  COMBAT ENGINEER RETURN`. Fresh independent `19/19` focused, `55/55`
+  selected related, `805/805` full, `15/15` validator, `183`-module build,
+  aggregate budget, exact emitted/served identity, one complete
+  non-overlapping `109.563s` E2E, and 20 exact DPR-1 fixture/layout checks
+  pass.
+- **Resolved correction:** `TD004-VAR-001` is `REQUIRED CORRECTION RESOLVED`.
+  Fresh Tier 5 reproduced the deterministic runtime-master bytes, verified
+  direct import and exact emitted/served identity, accepted the responsive
+  SC-05 presentation, and confirmed the exact single reveal remains
+  byte-identical, reference-only, and generation count `1`.
+- **Blocking fixed requirement:** exact restored CM-50 immediately mounts the
+  RP-004 renderer, whose image source is unconditionally the SC-05 runtime
+  master even while public state declares SC-04. The destination world is
+  therefore visible before fresh `TD004-RTA-001`; the action is not the sole
+  presentation boundary into TR-00/SC-05.
+- **Return boundary:** `TD004-VAR-002` is `REQUIRED CORRECTION`, not a
+  deferred limitation. Combat Engineer must preserve accepted SC-04 at exact
+  CM-50, expose SC-05 only from accepted TR-00 onward, and add exact
+  CM-50/TR-00/return image-identity regression coverage. Quartermaster and
+  Image Specialist must revalidate before a fresh complete Intelligence
+  Tier 5.
 - **Release boundary:** TD-003 remains the accepted playable boundary. No
   TD-004 playable-demo, rail, packet, expedition, curriculum, gameplay,
-  visual-master, successor, or release control advances. No push is
-  authorized from the candidate.
+  visual-master, successor, push, or release control advances.
 
 ## TD-004 pre-release Mission history — 2026-07-26
 

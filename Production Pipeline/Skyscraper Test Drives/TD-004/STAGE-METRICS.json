@@ -460,9 +460,80 @@
         "generationCount": 1,
         "status": "revalidated byte-identical and reference-only; no image generated or edited"
       },
-      "commit": "PENDING_IMAGE_CORRECTION_COMMIT",
+      "commit": "f6a8deec3bd68c33714c25957eff29cf21dbfbec",
       "commitConvention": "The dedicated corrected Image Specialist commit containing this report and ledger entry is authoritative; Intelligence resolves its immutable hash from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; returned to fresh Intelligence Tier 5"
+    },
+    {
+      "sequence": 17,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-26T18:27:35.9097955Z",
+      "endedAt": "2026-07-26T18:52:24.3160502Z",
+      "durationMs": 1488406,
+      "disposition": "REVISE - NOT AS BUILT RELEASED - TD004-VAR-002",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "f6a8deec3bd68c33714c25957eff29cf21dbfbec",
+      "returnOwner": "Combat Engineer / combat_engineer",
+      "variances": [
+        {
+          "id": "TD004-VAR-001",
+          "classification": "REQUIRED CORRECTION RESOLVED",
+          "disposition": "Fresh Tier 5 independently reproduced the deterministic runtime-master bytes, verified exact source/reveal/provenance and direct emitted/served identity, and passed responsive, accessibility, no-human/no-authority, full-gate, and PBA-TD004-v1 checks."
+        },
+        {
+          "id": "TD004-VAR-002",
+          "classification": "REQUIRED CORRECTION",
+          "disposition": "Exact restored CM-50 enters the RP-004 renderer and unconditionally displays the SC-05 master before fresh TD004-RTA-001. Combat Engineer must restore exact SC-04 presentation at CM-50 and gate SC-05 presentation to accepted TR-00 onward."
+        }
+      ],
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-589WID4d.js",
+          "bytes": 1247036,
+          "sha256": "ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "focused": "19/19",
+        "relatedSelected": "55/55",
+        "fullGame": "805/805",
+        "readinessValidators": "15/15",
+        "buildSeconds": 14.84,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/reload/fallback and JS/CSS/SC-05 master HTTP 200; served bytes and hashes identical to dist",
+        "completeE2ESeconds": 109.563,
+        "completeE2E": "one post-build non-overlapping run; every emitted gate true; credits reached; runtimeErrors false",
+        "liveFixtureStates": 5,
+        "liveFixtureLayouts": 20,
+        "forcedColorReducedMotionLayouts": 8,
+        "minimumControlCssPx": 44,
+        "consoleOrPageErrors": 0,
+        "foreignRequests": 0,
+        "worstWideCropNormalizedX": "0.194-0.806",
+        "qaCapturesRestored": 69,
+        "blockingFinding": "route-ready CM-50 visibly displays the SC-05 runtime master before TD004-RTA-001"
+      },
+      "reveal": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "status": "validated byte-identical and reference-only; TD004-VAR-001 resolved; release still held by TD004-VAR-002"
+      },
+      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; release synchronization withheld"
     }
   ]
 }

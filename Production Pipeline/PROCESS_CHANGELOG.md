@@ -17,6 +17,33 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-26 / TD-004 fresh Intelligence rerun — TUNE
+
+- **Observed:** the corrected candidate passed fresh `19/19` focused,
+  `55/55` selected related, `805/805` full, `15/15` validators, the
+  `183`-module build, exact served identity, `PBA-TD004-v1`, one complete
+  non-overlapping `109.563s` E2E, and `20` exact DPR-1 layout checks. Fresh
+  visual reconciliation still found `TD004-VAR-002`: the normal route-ready
+  CM-50 state declares SC-04 but the shared renderer unconditionally displays
+  the SC-05 master before fresh `TD004-RTA-001`.
+- **Decision:** `TUNE`. Keep the prior required-asset assertion. Add an exact
+  predecessor/destination image-identity assertion to Combat Engineer and
+  Image gates whenever one controller or renderer spans both sides of a route
+  transition. Test exact predecessor, accepted destination, and write-free
+  return identities, not only state labels, actions, and asset quality.
+- **Expected benefit:** catch state-to-presentation boundary leakage at the
+  earliest owner instead of after full release validation.
+- **Preserved guardrails:** the versioned shell, sequential roles, exact
+  predecessor, fresh one-hit route, invariant SC-04/SC-05, privacy,
+  accessibility, atomic save/recovery, offline/no-authority, hard stop,
+  protected work, and one reveal remain unchanged.
+- **Validation:** Combat Engineer regression coverage must fail on the current
+  CM-50 image identity, pass after correction, and prove SC-05 first appears
+  at accepted TR-00 and disappears on the write-free CM-50 return.
+- **Rollback trigger:** the identity assertion couples tests to hashed build
+  filenames, replaces necessary visual judgment, or prevents legitimate
+  same-scene state reuse without improving boundary detection.
+
 ## 2026-07-26 / TD-004 skyscraper Intelligence return — TUNE
 
 - **Measured stage boundaries:** the 13 predecessor stages used

@@ -15,34 +15,37 @@ No recurring automation is active. Do not schedule another shell.
 - Shell: `SS-RP004-THREE-CURRENT-v1`
 - Slice: `TD-004-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
-- Candidate: dedicated Quartermaster correction commit; resolve immutable
-  hash from Git history
+- Candidate: corrected Image Specialist commit
+  `f6a8deec3bd68c33714c25957eff29cf21dbfbec`
 - Released functional base / current `origin/main`:
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`
 - Intelligence disposition: **`REVISE - NOT AS BUILT RELEASED`**
-- Finding: `TD004-VAR-001`
-- Classification:
-  **`REQUIRED CORRECTION - IMPLEMENTED, NOT YET ACCEPTED`**
-- Return owner: Image Specialist / `image_specialist`
+- Resolved finding: `TD004-VAR-001` —
+  **`REQUIRED CORRECTION RESOLVED`**
+- Blocking finding: `TD004-VAR-002` —
+  **`REQUIRED CORRECTION`**
+- Return owner: Combat Engineer / `combat_engineer`
 - Full evidence:
   `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
 
 TD-003 remains the accepted released playable boundary. TD-004 is not
 `AS BUILT RELEASED`; no playable-demo, rail, packet, expedition, curriculum,
 gameplay, visual-master, or successor control advances from this candidate.
-Do not push or publish this candidate before Image Specialist revalidation
-and fresh Intelligence release.
+Do not push or publish this candidate before Combat Engineer correction,
+Quartermaster and Image Specialist revalidation, and fresh Intelligence
+release.
 
 ## Passing evidence retained for revalidation
 
-- corrected TD-004 connected suite `33/33`;
+- focused TD-004 suite `19/19`;
+- selected related TD-003/TD-004 suite `55/55`;
 - full game `805/805`;
 - readiness validators `15/15`;
-- build `183` modules in `16.52s`;
-- JS `index-C8qIMjxS.js`, `1,247,036` bytes, SHA-256
+- build `183` modules in `14.84s`;
+- JS `index-589WID4d.js`, `1,247,036` bytes, SHA-256
   `ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4`;
-- CSS `index-BxET_qxJ.css`, `84,962` bytes, SHA-256
-  `DF87C5E5A91310463D9AB522192B0E44106E2C2911B986F360B477F744EBF871`;
+- CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
+  `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`;
 - directly imported SC-05 master
   `sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp`,
   `2,163,752` bytes, SHA-256
@@ -52,7 +55,7 @@ and fresh Intelligence release.
 - `PBA-TD004-v1 PASS`;
 - root, JS, CSS, and SC-05 master HTTP `200`, with served bytes/hashes
   identical to `dist`;
-- exactly one complete post-build non-overlapping E2E in `93.809s`, all
+- exactly one complete post-build non-overlapping E2E in `109.563s`, all
   emitted gates true, credits reached, `runtimeErrors:false`;
 - five representative closed fixture states across 20 exact DPR-1
   layout combinations passed horizontal containment, world balance,
@@ -66,16 +69,15 @@ and fresh Intelligence release.
 - the one reveal's exact hash, dimensions, provenance, and unchanged
   reference-only status pass; correction added zero generations.
 
-## Correction exact evidence
+## Fresh Intelligence classification
 
-Quartermaster retired `TD004-ASSET-SC05-PLACEHOLDER`.
-`ThreeCurrentReach.jsx` now directly imports a separately registered
-`3840 x 2160` runtime master deterministically derived from the exact existing
-single reveal. Neighboring provenance records Pillow `12.2.0`, Lanczos
-resampling, a one-pixel lower-edge trim, q100 WebP encoding, crop zones,
-grayscale structural review, invariance, accessibility text, and the
-no-human/no-authority boundary. It explicitly disclaims native 4K source
-detail.
+`TD004-VAR-001` is resolved. Quartermaster retired
+`TD004-ASSET-SC05-PLACEHOLDER`; `ThreeCurrentReach.jsx` directly imports the
+registered `3840 x 2160` runtime master. Fresh Tier 5 independently reproduced
+its exact bytes from the disclosed Pillow `12.2.0`, Lanczos, one-pixel
+lower-edge trim, and q100/method-6 WebP process. Provenance, responsive crop,
+grayscale structure, invariance, accessibility text, no-human/no-authority
+boundary, direct emitted/served identity, and `PBA-TD004-v1` all pass.
 
 The exact reveal source remains byte-for-byte unchanged, reference-only,
 `1672 x 941`, `2,764,920` bytes, SHA-256
@@ -83,9 +85,12 @@ The exact reveal source remains byte-for-byte unchanged, reference-only,
 with generation count exactly `1`. No second generation, edit, or replacement
 is authorized.
 
-The correction is not a release. Image Specialist must independently
-revalidate the corrected presentation and unchanged reveal; fresh
-Intelligence must then classify `TD004-VAR-001`.
+The candidate still does not release. At exact restored CM-50,
+`CalibrationMarginNormalEntry.js` immediately mounts the RP-004 controller;
+`App.jsx` selects `ThreeCurrentReach`; and that renderer unconditionally
+uses the SC-05 image even while `boardState` remains `SC-04`. The exact
+route-ready state visibly exposes SC-05 before fresh `TD004-RTA-001`.
+This is `TD004-VAR-002 REQUIRED CORRECTION`.
 
 ## Continuing protections
 
@@ -108,12 +113,12 @@ Intelligence must then classify `TD004-VAR-001`.
 
 ## Exact next action
 
-Resume only the **Image Specialist** from the dedicated Quartermaster
-correction commit. Revalidate the directly imported SC-05 runtime master at
-required wide, narrow, and effective-200% presentations; confirm all three
-structural current/handling relations, the capped apparent return, crop
-registration, alternative text, invariance, no-human/no-authority boundary,
-production identity, and `PBA-TD004-v1`. Revalidate the existing single
-reveal byte-for-byte unchanged and reference-only. Generate no second image.
-Record `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`, then return to a fresh
-complete Intelligence Tier 5. Do not begin a new Commandant shell.
+Resume only the **Combat Engineer** from the dedicated Intelligence REVISE
+commit. Correct normal state-to-presentation mapping so exact CM-50 retains
+the accepted SC-04 world and the SC-05 master first appears only after one
+accepted fresh `TD004-RTA-001` reaches TR-00. Add focused image-identity
+coverage for exact CM-50, accepted TR-00, and the write-free return to CM-50.
+Preserve all action/token, return, persistence, accessibility, budget, asset,
+reveal, and hard-stop contracts. Then return sequentially through
+Quartermaster, Image Specialist, and one fresh complete Intelligence Tier 5.
+Do not begin a new Commandant shell.
