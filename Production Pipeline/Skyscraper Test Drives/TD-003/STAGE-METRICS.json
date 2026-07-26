@@ -184,6 +184,34 @@
       "commit": "SELF:INTELLIGENCE_OFFICER_RECONCILIATION_COMMIT",
       "commitConvention": "The dedicated commit containing this ledger entry is the immutable Intelligence Officer commit; storing its own hash here would require a recursive successor commit.",
       "synchronization": "push-main-and-verify-after-commit"
+    },
+    {
+      "sequence": 15,
+      "stage": "Image Specialist correction",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-26T11:30:00.0000000Z",
+      "endedAt": "2026-07-26T12:09:28.1211030Z",
+      "durationMs": 2368121,
+      "timingBasis": "Resumed correction interval after an interrupted no-filesystem-change attempt.",
+      "disposition": "PRESENTATION COMPLETE — CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/10-POLISH-REVIEW.md",
+      "resolvedFinding": "TD003-INT-001",
+      "resolvedIntelligenceCommit": "9e374431976636c217da11d3ba16493c32852515",
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-DHPBT_yG.js",
+          "bytes": 1195380,
+          "sha256": "D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3"
+        },
+        "css": {
+          "file": "index-DD5Uz-s3.css",
+          "bytes": 81704,
+          "sha256": "3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B"
+        }
+      },
+      "commit": "SELF:IMAGE_SPECIALIST_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated commit containing this ledger entry is the immutable Image Specialist correction commit; storing its own hash here would require a recursive successor commit.",
+      "synchronization": "local-only-no-push"
     }
   ]
 }

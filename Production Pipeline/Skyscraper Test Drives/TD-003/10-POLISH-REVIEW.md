@@ -13,9 +13,88 @@
 | Functional authority | Combat Engineer synchronized `FUNCTIONALLY COMPLETE` build `e6c4f995d29ee5257e6ab7caa68a8a0bd920f036` |
 | Presentation candidate | This dedicated Image Specialist commit; resolve its immutable identity from Git history |
 | Validation tier | Direct closed-fixture presentation review, focused regression, production build/budget identity, reveal inspection, provenance, and patch checks |
-| Disposition | `PRESENTATION COMPLETE` |
+| Disposition | `PRESENTATION COMPLETE — CORRECTED` |
 
-## Exact build reviewed
+## Intelligence correction return — `TD003-INT-001`
+
+Intelligence Officer release commit
+`9e374431976636c217da11d3ba16493c32852515` returned one presentation
+finding: at an actual CSS viewport of `1920 x 1080`, the CM-40 panel and
+document overflowed, and the second action row was below the viewport.
+
+The earlier controlled-Chrome overrides reported scaled viewports
+(`2133 x 1200` for a requested `1920 x 1080`) and are superseded for this
+finding. The correction return used the manifest-owned, storage-free fixture
+in a clean Chromium context whose runtime reported exactly
+`window.innerWidth=1920`, `window.innerHeight=1080`, and
+`devicePixelRatio=1`.
+
+The bounded CSS correction:
+
+- caps the existing desktop extraction-floor panel inside the `46px` shell
+  chrome budget;
+- compacts only active CM-40 panel spacing;
+- keeps the ordered five-obligation list in one DOM/source-order column while
+  presenting each obligation's status, owner, and limit as three wrapping
+  tracks; and
+- removes behaviorally redundant desktop grid declarations to pay for the
+  correction without weakening the fixed byte cap.
+
+No copy, component markup, source order, focus order, mechanic, state,
+controller, evidence, schema, persistence, route, world plate, asset, reveal,
+audio, font, or network behavior changed.
+
+### Exact corrected desktop evidence
+
+For `cm40-five-conjunct-ready` at exact CSS `1920 x 1080`:
+
+| Measurement | Corrected result |
+|---|---:|
+| Document client / scroll | `1920 x 1080` / `1920 x 1080` |
+| Review panel client / scroll | `571 x 955` / `571 x 955` |
+| Dominant invariant world | `857.19 x 957.86` |
+| `REVIEW PROVENANCE` bottom | `794.64` |
+| `RETURN TO CIVIC COMPARISON` bottom | `794.64` |
+| `RETURN TO CITY THRESHOLD` bottom | `848.64` |
+| `SAVE EXPEDITION NOTE` bottom | `848.64` |
+| Local-only negative-authority copy bottom | `964.86` |
+
+The heading owned initial focus. One `Tab` moved focus to
+`REVIEW PROVENANCE` without scrolling; its target measured
+`264.73 x 58`, with a visible `3px` solid outline and `3px` separation.
+Every action remained at least `44 x 44`.
+
+All eleven allowlisted scenarios passed a `44`-render sweep at exact CSS
+desktop `1920 x 1080`, laptop `1366 x 768`, narrow `390 x 844`, and
+width-equivalent effective-`200%` `768 x 900`. The sweep verified fixture and
+scenario identity, exact CSS dimensions at DPR `1`, no horizontal document or
+panel escape, world-first source order, heading-first focus, one polite atomic
+status, `44px` targets, required-content horizontal bounds, console silence,
+reduced-motion matching, forced-color matching on desktop, and the exact
+CM-40 desktop document/panel/action/world-dominance gate. Each fixture launch
+owned its exact listener PID, returned HTTP `200`, stopped only that PID, and
+left port `4175` clear.
+
+Focused presentation/regression tests pass `38/38`; the full suite passes
+`785/785`; the production build passes with `179` modules. The corrected
+build is:
+
+- JavaScript `index-DHPBT_yG.js`, `1,195,380` bytes,
+  `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3`;
+- CSS `index-DD5Uz-s3.css`, `81,704` bytes,
+  `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B`;
+- JavaScript headroom `244` bytes; CSS headroom `1` byte.
+
+The exact reveal candidate remains untouched: `1672 x 941`,
+`1,923,084` bytes,
+`574936396CC062762E07AB6EBEA3FFA60059ACA919A36A8A60A4DAFA6A2AF7B2`.
+
+## Original Image Specialist pass retained for audit
+
+The sections below preserve the original Image Specialist evidence as run.
+Where its scaled controlled-Chrome dimensions or original build identity
+conflict with the correction-return section above, the correction-return
+evidence is authoritative.
 
 The stage began from exact Quartermaster commit
 `6f8b471e54feb17e79e1fa25f749390babc5d7bd`. Its content, controller,
@@ -249,6 +328,7 @@ Exactly one reveal image was generated for TD-003.
 |---|---|---|---|
 | `TD003-IMG-001` | Sparse recovery states clipped inside narrow/zoom shell because an intrinsic-ratio world grid item could not shrink | `REQUIRED CORRECTION` | RESOLVED by bounded `min-width: 0`; tests/build/review pass |
 | `TD003-IMG-002` | Closed observation-recovery fixture exposed an internal target token as its visible label | `REQUIRED CORRECTION` | RESOLVED in test-only fixture; tests/review pass |
+| `TD003-INT-001` | Exact CSS `1920 x 1080` CM-40 document/panel overflow placed required actions below the viewport | `REQUIRED CORRECTION` | RESOLVED by exact shell-height accounting plus active-CM-40 evidence-row compaction; exact layout, focus, tests, and build pass |
 
 No product, canon, campaign, learning, evidence, privacy, save, route, world,
 content, mechanic, or unauthorized shell divergence remains.
@@ -313,31 +393,37 @@ must independently validate and classify them.
 
 ## Disposition
 
-**`PRESENTATION COMPLETE`**
+**`PRESENTATION COMPLETE — CORRECTED`**
 
-All eleven closed scenarios pass direct multi-layout review after two bounded
-presentation corrections. Focus, target size, status, semantic ownership,
-disabled state, non-color meaning, text fit, asset identity, local-only
-origin, console, production exclusion, focused regression, build, and byte
-caps pass. The one reveal candidate is distinct, spoiler-safe,
-provenance-complete, and explicitly reference-only.
+`TD003-INT-001` is resolved against Intelligence Officer release commit
+`9e374431976636c217da11d3ba16493c32852515`. All eleven closed scenarios
+pass the exact-CSS multi-layout correction sweep. Focus, target size, status,
+semantic ownership, disabled state, non-color meaning, text fit, asset
+identity, local-only origin, console, production exclusion, focused
+regression, full suite, build, and byte caps pass. The existing one reveal
+candidate remains byte-identical, provenance-complete, spoiler-safe, and
+explicitly reference-only.
 
 ## Exact Intelligence Officer handoff
 
 - **Stage / agent:** Intelligence Officer / `intelligence_officer`
 - **Shell:** `SS-RP003-REVIEW-SAVE-v1`
-- **Starting authority:** this exact `PRESENTATION COMPLETE` commit,
-  Quartermaster commit
+- **Starting authority:** this exact
+  `PRESENTATION COMPLETE — CORRECTED` commit, Intelligence Officer
+  `REVISE` release
+  `9e374431976636c217da11d3ba16493c32852515`, Quartermaster commit
   `6f8b471e54feb17e79e1fa25f749390babc5d7bd`, synchronized Combat Engineer
-  build `e6c4f995d29ee5257e6ab7caa68a8a0bd920f036`, shell, Creative Treatment,
-  Experience Blueprint, Functional Build Report, and Content/Asset Ledger
-- **Exact runtime candidate:** JavaScript `index-DUDSudk8.js`,
+  build `e6c4f995d29ee5257e6ab7caa68a8a0bd920f036`, final shell, Creative
+  Treatment, Experience Blueprint, Functional Build Report, Content/Asset
+  Ledger, and Intelligence reconciliation
+- **Exact runtime candidate:** JavaScript `index-DHPBT_yG.js`,
   `1,195,380` bytes,
   `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3`;
-  CSS `index-Dmsam-J8.css`, `81,688` bytes,
-  `00A9C50F467FC704A1C69D0FDBEA3E014253C207E94DC5B2D36AB1BAEDA90DD0`
-- **Runtime delta from Quartermaster:** one `12`-byte minified CSS
-  shrink-to-parent correction; no JavaScript/content/mechanic delta
+  CSS `index-DD5Uz-s3.css`, `81,704` bytes,
+  `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B`
+- **Correction delta:** CSS-only exact-desktop CM-40 containment and ordered
+  evidence-row compaction; byte-offset by redundant grid declaration removal;
+  no JavaScript/content/component/mechanic/schema/focus/source-order delta
 - **Fixture delta:** one test-only human-readable recovery label; no state,
   target, route, storage, or production delta
 - **Reveal candidate:** absolute project path
@@ -347,8 +433,13 @@ provenance-complete, and explicitly reference-only.
 - **Reveal status:** exactly one generated candidate; canonical reference
   only; Intelligence may accept this exact image or issue `REVISE`/`HOLD`,
   but may not silently replace it
-- **Resolved findings to classify:** `TD003-IMG-001`,
-  `TD003-IMG-002`
+- **Resolved findings to reclassify:** `TD003-IMG-001`,
+  `TD003-IMG-002`, and Intelligence blocking finding `TD003-INT-001`
+- **Exact correction evidence:** real CSS `1920 x 1080` at DPR `1`;
+  document `scrollHeight=1080`; panel `clientHeight=955` and
+  `scrollHeight=955`; all required action bottoms `<=848.64`; world
+  `857.19px` wide versus panel `571.47px`; initial heading focus and visible
+  first-action focus pass
 - **Independent release required:** full suite; all readiness validator
   self-tests; production build; isolated production preview with root/assets
   HTTP `200`, served byte identity, owned PID/liveness and cleanup; one
@@ -358,9 +449,9 @@ provenance-complete, and explicitly reference-only.
   QA restoration; line-by-line shell reconciliation; final variance
   classification; handoff replacement; commit, push, and
   `HEAD == origin/main`
-- **Limitations to classify:** inherited temporary plate; `17` CSS bytes;
+- **Limitations to classify:** inherited temporary plate; `1` CSS byte;
   `244` JS bytes; English-only; exact platform zoom/color/motion/human-AT
-  review; fixture screenshot-export limitation
+  review beyond deterministic emulation
 - **Protected boundary:** do not inspect or mutate Martin's browser storage or
   campaign save; do not open hidden lore; do not inspect, alter, stage, move,
   delete, or commit the named PDF or training directory
