@@ -114,6 +114,7 @@ test("RS-EXP-001/014/015 normal restored IE-P3 rechecks observations then comple
     "normal-save-fresh",
   ));
   assert.equal(saved.status, "save_committed_verified_restore");
-  assert.equal(saved.state.activeGroup, "cm50_verified_restore");
+  assert.equal(saved.state.activeGroup, "cm50_route");
+  assert.equal(saved.state.availableActions.length, 3);
   assert.equal(controller.getReviewSaveRecord().checkpoint, "calibration_margin_complete");
 });

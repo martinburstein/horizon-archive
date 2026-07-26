@@ -33,6 +33,13 @@ import {
   createCalibrationMarginReviewSaveIntent,
   sanitizeCalibrationMarginReviewSave,
 } from "./CalibrationMarginReviewSave.js";
+import {
+  THREE_CURRENT_REACH_SHELL_VERSION,
+  createThreeCurrentReachIntent,
+  createThreeCurrentReachNormalController,
+  sanitizeThreeCurrentReachSave,
+  threeCurrentReachActions,
+} from "./ThreeCurrentReachNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -125,12 +132,14 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let pythonController = null;
   let extractionController = null;
   let reviewController = null;
+  let threeCurrentController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
+    if (threeCurrentController) return threeCurrentController.getState();
     if (reviewController) return reviewController.getState();
     if (reviewRecovery && surveyController) return surveyController.getState();
     if (extractionController) return extractionController.getState();
@@ -179,6 +188,11 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     reviewRecovery = false;
     return reviewController.getState();
   };
+  const currentPredecessorBytes = (record) => (
+    typeof options.readPredecessorBytes === "function"
+      ? options.readPredecessorBytes()
+      : options.predecessorBytes ?? JSON.stringify(record)
+  );
 
   const mountObservationRecovery = () => {
     const blank = entryController.dispatch({
@@ -225,6 +239,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     pythonController = null;
     extractionController = null;
     reviewController = null;
+    threeCurrentController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -234,6 +249,17 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     );
     if (restoredReview) {
       mountReview(restoredReview);
+      const restoredThreeCurrent = sanitizeThreeCurrentReachSave(
+        options.restoredThreeCurrentReach,
+      );
+      threeCurrentController = createThreeCurrentReachNormalController({
+        predecessorRecord: restoredReview,
+        predecessorBytes: currentPredecessorBytes(restoredReview),
+        readPredecessorBytes: options.readPredecessorBytes,
+        restoredRecord: restoredThreeCurrent,
+        restoredEvidence: options.restoredThreeCurrentEvidence,
+        adapter: options.threeCurrentReachAdapter,
+      });
       return;
     }
 
@@ -284,8 +310,36 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (threeCurrentController) {
+        const result = threeCurrentController.dispatch(intent);
+        return result;
+      }
       if (reviewController) {
+        if (reviewController.getState().activeGroup === "cm50_verified_restore"
+          && intent?.allowlistedActionId === threeCurrentReachActions.route) {
+          threeCurrentController = createThreeCurrentReachNormalController({
+            predecessorRecord: reviewController.getRecord(),
+            predecessorBytes: currentPredecessorBytes(reviewController.getRecord()),
+            readPredecessorBytes: options.readPredecessorBytes,
+            restoredEvidence: options.restoredThreeCurrentEvidence,
+            adapter: options.threeCurrentReachAdapter,
+          });
+          return threeCurrentController.dispatch(intent);
+        }
         const result = reviewController.dispatch(intent);
+        if (result.status === "save_committed_verified_restore") {
+          threeCurrentController = createThreeCurrentReachNormalController({
+            predecessorRecord: reviewController.getRecord(),
+            predecessorBytes: currentPredecessorBytes(reviewController.getRecord()),
+            readPredecessorBytes: options.readPredecessorBytes,
+            restoredEvidence: options.restoredThreeCurrentEvidence,
+            adapter: options.threeCurrentReachAdapter,
+          });
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(threeCurrentController.getState()),
+          });
+        }
         if (result.status === "source_boundary_incomplete"
           && result.recoveryTarget?.group === "observations") {
           return Object.freeze({
@@ -386,6 +440,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (threeCurrentController) {
+        return threeCurrentController.updateField(name, value);
+      }
       if (extractionController) {
         return extractionController.updateField(name, value);
       }
@@ -418,6 +475,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getReviewSaveRecord() {
       return reviewController?.getRecord() ?? null;
     },
+    getThreeCurrentReachRecord() {
+      return threeCurrentController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -432,7 +492,11 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         restoredExtractionCheckpoint,
       );
       return Object.freeze({
-        status: reviewController
+        status: threeCurrentController
+          ? threeCurrentController.getState().activeGroup.startsWith("tr40_")
+            ? "three_current_reach_restored"
+            : "three_current_reach_revalidated"
+          : reviewController
           ? reviewController.getState().activeGroup === "cm50_verified_restore"
             ? "review_save_restored"
             : "review_boundary_restored"
@@ -461,6 +525,19 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (action === threeCurrentReachActions.route
+    || shellVersionOrPhaseIsThreeCurrent(phase, activeGroup)) {
+    return createThreeCurrentReachIntent(
+      {
+        shellVersion: THREE_CURRENT_REACH_SHELL_VERSION,
+        activeGroup: activeGroup ?? "cm50_route",
+        owner: threeCurrentOwner(activeGroup),
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   const reviewPhase = [
     "IE-P3",
     "CM-40 BOUNDED REVIEW",
@@ -538,6 +615,36 @@ export function createCalibrationMarginNormalEntryIntent(
     activationKind,
     eventToken,
   });
+}
+
+function shellVersionOrPhaseIsThreeCurrent(phase, activeGroup) {
+  return typeof activeGroup === "string"
+    && (activeGroup === "cm50_route" || activeGroup.startsWith("tr"));
+}
+
+function threeCurrentOwner(activeGroup) {
+  if (activeGroup === "cm50_route") return "PILOT // EXPEDITION NAVIGATION";
+  if (activeGroup === "tr00_orient") return "SCENE // THREE-CURRENT REACH";
+  if (["tr10_relations", "tr20_common_return"].includes(activeGroup)) {
+    return "PILOT // EXPEDITION OBSERVATION";
+  }
+  if (activeGroup?.startsWith("tr30_python")) {
+    return "BUILDER WORK // SANITIZED REPLICA";
+  }
+  if (activeGroup?.startsWith("tr30_workload")
+    || ["tr30_modality", "tr30_agentic", "tr30_repair"].includes(activeGroup)) {
+    return "901 TEACHER // COURSE PRACTICE";
+  }
+  if (["tr30_review", "tr30_provenance"].includes(activeGroup)) {
+    return "PILOT // BOUNDED REVIEW";
+  }
+  if (activeGroup === "tr30_save_recovery") {
+    return "SYSTEM // LOCAL EXPEDITION NOTE";
+  }
+  if (activeGroup?.startsWith("tr40_")) {
+    return "SYSTEM // RESTORED EXPEDITION NOTE";
+  }
+  return "PILOT // EXPEDITION NAVIGATION";
 }
 
 export const calibrationMarginNormalEntryAccessibility =

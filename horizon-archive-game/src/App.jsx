@@ -8,6 +8,7 @@ import routePrimaryStarter from "../../curriculum/lessons/L-01-02/route_marker_p
 import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_transfer.py?raw";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginEntry } from "./CalibrationMarginEntry.jsx";
+import { ThreeCurrentReach } from "./ThreeCurrentReach.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -23,8 +24,13 @@ import {
   sanitizeCalibrationMarginExtractionCheckpoint,
 } from "./CalibrationMarginExtractionCheckpoint.js";
 import {
+  CALIBRATION_MARGIN_REVIEW_SAVE_KEY,
   createCalibrationMarginReviewSaveStorageAdapter,
 } from "./CalibrationMarginReviewSave.js";
+import {
+  THREE_CURRENT_REACH_SHELL_VERSION,
+  createThreeCurrentReachStorageAdapter,
+} from "./ThreeCurrentReachNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -399,9 +405,26 @@ function writeCalibrationMarginExtractionCheckpoint(storage, value) {
 
 function calibrationMarginReviewSaveOptions(storage) {
   const reviewSaveAdapter = createCalibrationMarginReviewSaveStorageAdapter(storage);
+  const threeCurrentReachAdapter = createThreeCurrentReachStorageAdapter(storage);
+  let predecessorBytes = null;
+  try {
+    predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
+  } catch {
+    predecessorBytes = null;
+  }
   return {
     reviewSaveAdapter,
     restoredReviewSave: reviewSaveAdapter.read(),
+    threeCurrentReachAdapter,
+    restoredThreeCurrentReach: threeCurrentReachAdapter.read(),
+    predecessorBytes,
+    readPredecessorBytes: () => {
+      try {
+        return storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
+      } catch {
+        return null;
+      }
+    },
   };
 }
 
@@ -2260,6 +2283,7 @@ export function App() {
       "SS-RP003-PY010-v1",
       "SS-RP003-IE01-v1",
       "SS-RP003-REVIEW-SAVE-v1",
+      THREE_CURRENT_REACH_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2325,10 +2349,18 @@ export function App() {
   function enterCalibrationMargin(event) {
     if (demoTour) return null;
     const controller = calibrationMarginEntryControllerRef.current;
-    if (controller?.getState().shellVersion === "SS-RP003-REVIEW-SAVE-v1") {
+    if ([
+      "SS-RP003-REVIEW-SAVE-v1",
+      THREE_CURRENT_REACH_SHELL_VERSION,
+    ].includes(controller?.getState().shellVersion)) {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
-      return { status: "review_save_restored", state: controller.getState() };
+      return {
+        status: controller.getState().shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
+          ? "three_current_reach_restored"
+          : "review_save_restored",
+        state: controller.getState(),
+      };
     }
     const result = controller?.dispatch(createCalibrationMarginNormalEntryIntent(
       CALIBRATION_MARGIN_ENTRY_ACTION,
@@ -2361,6 +2393,7 @@ export function App() {
     ].includes(result?.status) && (result?.state?.shellVersion === "SS-RP003-PY010-v1"
       || result?.state?.shellVersion === "SS-RP003-IE01-v1"
       || result?.state?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
+      || result?.state?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -2384,8 +2417,10 @@ export function App() {
     }
     if (result?.status === "returned_to_rp002_write_free") {
       const authority = calibrationMarginEntryAuthorityRef.current;
-      const returnController = calibrationMarginEntryView?.shellVersion
-        === "SS-RP003-REVIEW-SAVE-v1"
+      const returnController = [
+        "SS-RP003-REVIEW-SAVE-v1",
+        THREE_CURRENT_REACH_SHELL_VERSION,
+      ].includes(calibrationMarginEntryView?.shellVersion)
         ? controller
         : createCalibrationMarginNormalEntry({
         ...authority,
@@ -3525,11 +3560,21 @@ export function App() {
     calibrationMarginEntryView?.shellVersion === "SS-RP003-PY010-v1"
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-IE01-v1"
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
+    || calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
     ].includes(calibrationMarginEntryView?.phase)
   )) {
+    if (calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION) {
+      return (
+        <ThreeCurrentReach
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
     return (
       <CalibrationMarginEntry
         entryState={calibrationMarginEntryView}

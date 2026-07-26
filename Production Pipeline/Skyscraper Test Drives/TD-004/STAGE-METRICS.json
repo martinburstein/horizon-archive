@@ -149,6 +149,41 @@
       "commit": "PENDING_TACTICAL_OPERATIONS_COMMIT",
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 11,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-07-26T16:05:45.0000000Z",
+      "endedAt": "2026-07-26T16:33:26.4112396Z",
+      "durationMs": 1661411,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "40552d911c8dfbf5d5bc8fe5099bac2ae840df6c",
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-eb39pAwv.js",
+          "bytes": 1237250,
+          "sha256": "EF2BC8ED3CB8856DD7A8C44FA3707C78C201E42FE84CD607246709B0DFE51456"
+        },
+        "css": {
+          "file": "index-KrTPDfvo.css",
+          "bytes": 83699,
+          "sha256": "3F9B98753E35D998664410988788B44B61A474A86E8F37DB6E00AFEA128761BE"
+        },
+        "modules": 182
+      },
+      "validation": {
+        "focused": "18/18",
+        "fullGame": "802/802",
+        "readinessValidators": "15/15",
+        "budget": "PBA-TD004-v1 PASS",
+        "fixtureScenarios": 34
+      },
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat Engineer commit containing this report and ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "combat-functional-push-gate"
     }
   ]
 }
