@@ -1,0 +1,147 @@
+{
+  "schema": "horizon-archive.production-budget-authority",
+  "schemaVersion": 1,
+  "authorityId": "PBA-TD004-v1",
+  "testDrive": "TD-004",
+  "sliceId": "TD-004-RP004-THREE-CURRENT-v1",
+  "campaignAddress": "RP-004 / SC-05 / TR-00-TR-40",
+  "basis": {
+    "acceptedRelease": "TD-003 / SS-RP003-REVIEW-SAVE-v1",
+    "acceptedCommit": "a8ad23a9bdeaf0ec5b32ca42a31f877a90eb7479",
+    "measuredBuildDate": "2026-07-26",
+    "buildCommand": "npm run build",
+    "buildSeconds": 13.81,
+    "modules": 179,
+    "javascript": {
+      "name": "index-DHPBT_yG.js",
+      "bytes": 1195380,
+      "sha256": "D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3"
+    },
+    "css": {
+      "name": "index-DD5Uz-s3.css",
+      "bytes": 81704,
+      "sha256": "3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B"
+    },
+    "runtimeMediaBytes": 19372371,
+    "runtimeMedia": [
+      {
+        "name": "basin_audio-D7yN7Fu4.wav",
+        "bytes": 96044,
+        "sha256": "AB396955D4533B7D73676D3271DABF9B9DE68EE4C5A4AEBE3CEC80DDB5756030"
+      },
+      {
+        "name": "city-threshold-access-master-CTF9U6Ho.png",
+        "bytes": 3076970,
+        "sha256": "E03FCFFEB1AAF941E9EE8C5A4EA9C840B4F90271353FDF0B26F51350421C7B4E"
+      },
+      {
+        "name": "city-threshold-boundary-master-CPr5uvhv.png",
+        "bytes": 2990550,
+        "sha256": "8A932F027A0DB79DF7D24EAC6803B0ADE45BEB3E9099E48C324D887E38DE3E4A"
+      },
+      {
+        "name": "city-threshold-overview-master-BaTX4tqK.png",
+        "bytes": 2626795,
+        "sha256": "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"
+      },
+      {
+        "name": "civic-record-district-arrival-master-v1-BYTUil6H.png",
+        "bytes": 2594095,
+        "sha256": "FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C"
+      },
+      {
+        "name": "drowned-archive-master-eoqmWy_0.png",
+        "bytes": 2727857,
+        "sha256": "AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED"
+      },
+      {
+        "name": "glass-meadow-integrated-terminal-master-v1-CsiDmSf1.png",
+        "bytes": 2688247,
+        "sha256": "6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2"
+      },
+      {
+        "name": "witness-corridor-master-BLfy2vNi.png",
+        "bytes": 2571813,
+        "sha256": "EEA780A0E0AF3E57497552601E00AD80851036C26CD29AB512C0E25EF3E0C4CF"
+      }
+    ]
+  },
+  "historicalEvidence": {
+    "acceptedSlices": [
+      {
+        "testDrive": "TD-001",
+        "modules": 173,
+        "javascriptBytes": 1138689,
+        "cssBytes": 77814
+      },
+      {
+        "testDrive": "TD-002",
+        "modules": 177,
+        "javascriptBytes": 1172546,
+        "cssBytes": 81676
+      },
+      {
+        "testDrive": "TD-003",
+        "modules": 179,
+        "javascriptBytes": 1195380,
+        "cssBytes": 81704
+      }
+    ],
+    "largestAcceptedSliceDelta": {
+      "modules": 4,
+      "javascriptBytes": 33857,
+      "cssBytes": 3862
+    },
+    "largestExistingRuntimeMediaAssetBytes": 3076970
+  },
+  "policy": {
+    "kind": "one-time-noncompounding-phase-transition-rebaseline",
+    "javascriptAndCssRule": "floor(accepted TD-003 aggregate production bytes * 1.05)",
+    "moduleRule": "floor(accepted TD-003 modules * 1.05)",
+    "runtimeMediaRule": "one aggregate 4 MiB image-only allowance above the exact accepted media hash set",
+    "notARollingEntitlement": true,
+    "qualityRequirementsRemainMandatory": true,
+    "allOutputChunksCount": true,
+    "allNewRuntimeAssetsCount": true,
+    "sourceMapsDoNotHideRuntimePayload": true,
+    "futureOverageRequiresScienceMissionVariance": true
+  },
+  "caps": {
+    "aggregateJavascriptBytes": 1255149,
+    "aggregateCssBytes": 85789,
+    "productionModules": 187,
+    "newRuntimeMediaBytes": 4194304,
+    "totalRuntimeMediaBytes": 23566675,
+    "allowedNewRuntimeMediaExtensions": [
+      ".avif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".webp"
+    ],
+    "forbiddenNewRuntimeMediaClasses": [
+      "audio",
+      "font",
+      "video",
+      "network-fetched-payload"
+    ],
+    "productionBuildSeconds": 60,
+    "focusedSuiteSeconds": 30,
+    "completeE2ESeconds": 180,
+    "sampledMainThreadTaskMs": 100
+  },
+  "headroom": {
+    "javascriptBytes": 59769,
+    "cssBytes": 4085,
+    "productionModules": 8,
+    "newRuntimeMediaBytes": 4194304
+  },
+  "requiredGates": [
+    "aggregate every emitted JavaScript and CSS chunk rather than measuring only the largest file",
+    "classify new runtime media by SHA-256 against the accepted TD-003 media set",
+    "reject any new runtime audio, font, video, or network payload",
+    "retain maximum-quality first-person presentation, complete learning evidence, privacy, accessibility, responsive, save, recovery, offline, and invariant-world gates",
+    "run the complete game suite, all readiness validators, production build, served byte identity, non-overlapping E2E, exact responsive review, fixture exclusion, QA restoration, and shell-to-as-built reconciliation",
+    "record any overage as an explicit Science and Mission variance; never hide payload, remove quality, or weaken a release gate"
+  ]
+}

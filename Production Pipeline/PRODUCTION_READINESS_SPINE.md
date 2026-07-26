@@ -1,5 +1,35 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-004 Science current control — 2026-07-26
+
+- **Status:** `VIABILITY READY — ROUTE AND BUDGET REVALIDATED / MISSION NEXT`.
+  Martin-authorized `TD004-RTA-001` is technically bounded as one fresh
+  Pilot-owned, seven-modality, validation-before-consumption transition from
+  exact released `CM-50 VERIFIED RESTORE` to transient
+  `TR-00 ARRIVE + ORIENT`. It writes no TD-003 field, mints no evidence,
+  preserves both released returns, requires a fresh token after return or
+  pre-save interruption, and grants no authority or world effect.
+- **Budget authority:** `PBA-TD004-v1` is a one-time, non-compounding
+  phase-transition rebaseline anchored to the accepted TD-003 production
+  identity. Aggregate caps are JavaScript `1,255,149` bytes, CSS `85,789`
+  bytes, `187` production modules, and `4,194,304` new image-only runtime
+  media bytes above the exact accepted media hash set. New audio, font, video,
+  and network payloads remain forbidden.
+- **Executable control:** `scripts/validate_td004_budget.py` aggregates every
+  emitted JavaScript/CSS chunk, classifies runtime media by SHA-256, enforces
+  allowed image extensions, modules, build time, and baseline identity, and
+  rejects overages. The rebaseline is not a per-role entitlement; any excess
+  returns to Science and Mission and may not be hidden by chunking, media,
+  source maps, or quality/accessibility/evidence removal.
+- **Release boundary:** normal RP-004 implementation remains unbuilt.
+  Protected RP-004 is reference evidence only. Mission must issue a
+  conflict-free shell before Marine work and retain the complete learning,
+  privacy, sanitation, atomic save/rollback/restore, accessibility,
+  responsive, offline, invariant-world, full-suite, validator, build, served
+  identity, non-overlapping E2E, exact viewport, fixture-isolation, QA
+  restoration, and reconciliation gates. Hard stop remains `TR-40`; no
+  RP-005 route or successor is open.
+
 ## Intelligence Officer current control — 2026-07-26
 
 - **Authoritative release:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. Independent full `785/785`, all `15/15` readiness self-tests, `179`-module production build, exact served JS/CSS identities, exactly one complete post-build E2E with credits and `runtimeErrors:false`, `11 x 4` exact DPR-1 closed-scenario responsive/accessibility review, fixture production exclusion, QA restoration, owned-process shutdown, unchanged reveal validation, and final reconciliation pass.
