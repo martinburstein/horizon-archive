@@ -19,7 +19,19 @@
       "durationMs": 121518,
       "disposition": "VISION BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/01-GAME-DEVELOPMENT-BRIEF.md",
-      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commit": "5d4dd5d0ecc599c382f8f17422a5b76a10332433",
+      "synchronization": "local-only"
+    },
+    {
+      "sequence": 2,
+      "stage": "Colonel",
+      "agentId": "colonel",
+      "startedAt": "2026-07-26T05:46:28.6152149Z",
+      "endedAt": "2026-07-26T05:48:42.1904308Z",
+      "durationMs": 133575,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "commit": "PENDING_COLONEL_COMMIT",
       "synchronization": "local-only"
     }
   ]
