@@ -1,6 +1,30 @@
 # Horizon Archive Production Readiness Spine
 
-## TD-004 Mission current control — 2026-07-26
+## TD-004 Intelligence Officer current control — 2026-07-26
+
+- **Disposition:** `REVISE / NOT AS BUILT RELEASED / TD004-VAR-001 /
+  QUARTERMASTER RETURN`. Fresh independent `19/19` focused, `134/134`
+  related, `804/804` full, `15/15` validator, `182`-module build, aggregate
+  budget, served-byte identity, one complete non-overlapping `93.809s` E2E,
+  and 20 exact DPR-1 live fixture/layout checks pass.
+- **Blocking fixed requirement:** final release requires one shell-compliant
+  SC-05 first-person runtime world presentation with provenance and honest
+  runtime identity. Runtime still imports the inherited City Threshold
+  overview that Quartermaster and Image both identify as a temporary
+  non-SC-05 placeholder. The reference-only `1672 x 941` reveal is valid and
+  unchanged but ineligible as the runtime master.
+- **Return boundary:** this is `REQUIRED CORRECTION`, not a deferred
+  limitation. Quartermaster owns final runtime asset completeness and must
+  retire `TD004-ASSET-SC05-PLACEHOLDER` through one approved directly
+  imported SC-05 runtime master inside `PBA-TD004-v1`, or issue a formal
+  bounded variance. Image Specialist then revalidates presentation and the
+  unchanged reveal before a fresh complete Intelligence Tier 5.
+- **Release boundary:** TD-003 remains the accepted playable boundary. No
+  TD-004 playable-demo, rail, packet, expedition, curriculum, gameplay,
+  visual-master, successor, or release control advances. No push is
+  authorized from the candidate.
+
+## TD-004 pre-release Mission history — 2026-07-26
 
 - **Status:** `SHELL READY / SS-RP004-THREE-CURRENT-v1 /
   RECONNAISSANCE SERGEANT NEXT`. The shell locks exact released TD-003 CM-50,
@@ -26,7 +50,7 @@
   reward, permission, authority, live service, external action, or world
   response is authorized.
 
-## TD-004 Science current control — 2026-07-26
+## TD-004 pre-release Science history — 2026-07-26
 
 - **Status:** `VIABILITY READY — ROUTE AND BUDGET REVALIDATED / MISSION NEXT`.
   Martin-authorized `TD004-RTA-001` is technically bounded as one fresh
@@ -56,7 +80,7 @@
   restoration, and reconciliation gates. Hard stop remains `TR-40`; no
   RP-005 route or successor is open.
 
-## Intelligence Officer current control — 2026-07-26
+## TD-003 released baseline history — 2026-07-26
 
 - **Authoritative release:** `PASS — AS BUILT RELEASED / TD-003 / SS-RP003-REVIEW-SAVE-v1`. Independent full `785/785`, all `15/15` readiness self-tests, `179`-module production build, exact served JS/CSS identities, exactly one complete post-build E2E with credits and `runtimeErrors:false`, `11 x 4` exact DPR-1 closed-scenario responsive/accessibility review, fixture production exclusion, QA restoration, owned-process shutdown, unchanged reveal validation, and final reconciliation pass.
 - **Candidate identity:** `index-DHPBT_yG.js` (`1,195,380` bytes; SHA-256 `D98AFEF9BD364F513523831E67114FEA800208AF15882DE4767D09BA3BF71DC3`) / `index-DD5Uz-s3.css` (`81,704` bytes; SHA-256 `3CFAC5DF70551BEFDEAF24E257CCA4729356BE1FE2D15E8BB6D1EEC4002FA53B`).

@@ -7,7 +7,7 @@
     "campaignAddress": "RP-004 / SC-05 / TR-00–TR-40",
     "sourceCommit": "a8ad23a9bdeaf0ec5b32ca42a31f877a90eb7479",
     "timezone": "America/New_York",
-    "executionMode": "scheduled-sequential-nonoverlapping"
+    "executionMode": "manual-sequential-nonoverlapping"
   },
   "stages": [
     {
@@ -19,7 +19,7 @@
       "durationMs": 145310,
       "disposition": "VISION BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/01-GAME-DEVELOPMENT-BRIEF.md",
-      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commit": "524f71ee22516f91ac977f9925b6529ee275732b",
       "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -32,7 +32,7 @@
       "durationMs": 460423,
       "disposition": "WORLD BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/02-WORLD-NARRATIVE-MASTERPLAN.md",
-      "commit": "PENDING_COLONEL_COMMIT",
+      "commit": "61308109e80bbabba181cfd3aa7526613b3a06bc",
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -45,7 +45,7 @@
       "durationMs": 431762,
       "disposition": "HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/03-CAMPAIGN-FLOOR-STACK.md",
-      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commit": "e1d54c0405e3eb5c1a9ce26133c5eeaf63bf0e77",
       "commitConvention": "The dedicated Operations Planning Major commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -58,7 +58,7 @@
       "durationMs": 42343,
       "disposition": "HOLD — TECHNICALLY COHERENT / NO AUTHORIZED ENTRY / NO SHELL",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/04-VIABILITY-ENVELOPE.md",
-      "commit": "PENDING_SCIENCE_COMMIT",
+      "commit": "c274ca349610a954af6780564768a137b3dc6057",
       "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -71,7 +71,7 @@
       "durationMs": 328332,
       "disposition": "HOLD — NO SHELL",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md",
-      "commit": "PENDING_MISSION_COMMIT",
+      "commit": "555496a0b7ef7fb7db51e197b886c97d715f2503",
       "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; a later Intelligence reconciliation records the immutable hash only if construction is eventually authorized.",
       "synchronization": "mission-hold-push-gate"
     },
@@ -86,7 +86,7 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/03-CAMPAIGN-FLOOR-STACK.md",
       "returnFrom": "Mission Captain / MC-TD004-HOLD-v1",
       "routeAuthority": "Martin explicit Go ahead for exact TD-003 CM-50 to RP-004 / SC-05 / TR-00–TR-40 transition",
-      "commit": "PENDING_OPERATIONS_RETURN_COMMIT",
+      "commit": "e8b4b63a1ee7f9f82433d34bd24c5c611b082956",
       "commitConvention": "The dedicated returned Operations Planning Major commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -101,7 +101,7 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/04-VIABILITY-ENVELOPE.md",
       "budgetAuthority": "Production Pipeline/Skyscraper Test Drives/TD-004/04A-PRODUCTION-BUDGET-AUTHORITY.json",
       "returnFrom": "Operations Planning Major / CFS-TD004-v2",
-      "commit": "PENDING_SCIENCE_RETURN_COMMIT",
+      "commit": "644d07482723809468d69b7800e81faf7b5ae6e7",
       "commitConvention": "The dedicated returned Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -116,7 +116,7 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md",
       "shellId": "SS-RP004-THREE-CURRENT-v1",
       "returnFrom": "Office of Science Administrator / VE-TD004-v2",
-      "commit": "PENDING_MISSION_SHELL_COMMIT",
+      "commit": "cb124faf87629d292ee030c1efbcb0b04392f029",
       "commitConvention": "The dedicated returned Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "mission-shell-push-gate"
     },
@@ -131,7 +131,7 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/06-CREATIVE-TREATMENT.md",
       "shellId": "SS-RP004-THREE-CURRENT-v1",
       "precedingCommit": "cb124faf87629d292ee030c1efbcb0b04392f029",
-      "commit": "PENDING_RECONNAISSANCE_COMMIT",
+      "commit": "126e89dad07f7350b37f3d794cecd08f1d5342ba",
       "commitConvention": "The dedicated Reconnaissance Sergeant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -146,7 +146,7 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/07-EXPERIENCE-BLUEPRINT.md",
       "shellId": "SS-RP004-THREE-CURRENT-v1",
       "precedingCommit": "126e89dad07f7350b37f3d794cecd08f1d5342ba",
-      "commit": "PENDING_TACTICAL_OPERATIONS_COMMIT",
+      "commit": "40552d911c8dfbf5d5bc8fe5099bac2ae840df6c",
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -217,7 +217,7 @@
         "budget": "PBA-TD004-v1 PASS",
         "servedIdentity": "127.0.0.1:5184 root/JS/CSS HTTP 200; exact byte lengths; owned PID stopped; port clear"
       },
-      "commit": "PENDING_QUARTERMASTER_COMMIT",
+      "commit": "4b7a9ec6213401ffb2998933617cee9d279b4413",
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -265,9 +265,73 @@
         "clippedControlFailures": 0,
         "minimumControlCssPx": 44
       },
-      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commit": "57fe57ccd2d571af5f341181d78c0a9cbe8d9143",
       "commitConvention": "The dedicated Image Specialist commit containing this review and ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 14,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-26T17:12:37.2778287Z",
+      "endedAt": "2026-07-26T17:39:29.0423652Z",
+      "durationMs": 1611765,
+      "disposition": "REVISE - REQUIRED CORRECTION TD004-VAR-001",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "57fe57ccd2d571af5f341181d78c0a9cbe8d9143",
+      "returnOwner": "Quartermaster / quartermaster",
+      "variance": {
+        "id": "TD004-VAR-001",
+        "classification": "REQUIRED CORRECTION",
+        "finding": "Required shell-compliant SC-05 runtime master is absent; runtime retains the inherited City Threshold overview explicitly classified as a temporary non-SC-05 placeholder."
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CAdIIK0s.js",
+          "bytes": 1246963,
+          "sha256": "6CF04ECF500B0922864CF6DFD3A2C61E39ADE73527F51CEB0AD5806A81CDBF94"
+        },
+        "css": {
+          "file": "index-BxET_qxJ.css",
+          "bytes": 84962,
+          "sha256": "DF87C5E5A91310463D9AB522192B0E44106E2C2911B986F360B477F744EBF871"
+        },
+        "modules": 182,
+        "runtimeMediaBytes": 19372371,
+        "newRuntimeMediaBytes": 0
+      },
+      "validation": {
+        "focused": "19/19",
+        "related": "134/134",
+        "fullGame": "804/804",
+        "readinessValidators": "15/15",
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/reload/fallback/JS/CSS HTTP 200; JS/CSS byte and hash identical to dist",
+        "completeE2E": "exactly one post-build non-overlapping run; 93.809s; all gates true; credits true; runtimeErrors false",
+        "liveFixtureStates": 5,
+        "liveFixtureLayouts": 20,
+        "horizontalOverflowFailures": 0,
+        "minimumControlCssPx": 44,
+        "consoleOrPageErrors": 0,
+        "foreignRequests": 0,
+        "qaCapturesRestored": 69,
+        "ownedPortsCleared": [
+          4176,
+          5184
+        ]
+      },
+      "reveal": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "status": "validated unchanged; reference-only; acceptance and publication held pending release"
+      },
+      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; push and release synchronization withheld"
     }
   ]
 }

@@ -17,6 +17,45 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-26 / TD-004 skyscraper Intelligence return — TUNE
+
+- **Measured stage boundaries:** the 13 predecessor stages used
+  `7,630,146ms` (`127.17m`). Combat Engineer was longest at `27.69m`, Image
+  Specialist used `22.62m`, and Quartermaster used `15.63m`. The three
+  pre-shell HOLD/return stages prevented construction before exact route
+  authority existed.
+- **Observed:** the technical candidate passed fresh `19/19` focused,
+  `134/134` related, `804/804` full, `15/15` validators, `182`-module build,
+  budget, served identity, one non-overlapping `93.809s` E2E, and 20 exact
+  live fixture/layout checks. Independent reconciliation still found
+  `TD004-VAR-001`: Quartermaster and Image honestly retained the inherited
+  City Threshold plate as a temporary non-SC-05 placeholder even though the
+  Mission shell makes a shell-compliant SC-05 runtime presentation a fixed
+  final-release requirement.
+- **Decision:** `TUNE`. Keep the eleven-role order, versioned shell,
+  dedicated commits, explicit returns, closed fixture, functional/content/
+  presentation separation, independent Tier 5, and exactly one reveal. Add a
+  Quartermaster completion assertion for every shell-required runtime asset:
+  approved identity, direct import, provenance, emitted bytes/hash, and an
+  explicit retired-placeholder row. Image may not issue `PRESENTATION
+  COMPLETE` while its own record still labels a required runtime asset
+  temporary.
+- **Expected benefit:** prevent a green functional/presentation-layout pass
+  from masking an incomplete required asset, and return the defect at the
+  earliest owning role before repeating the full release gate.
+- **Preserved guardrails:** canon, intended ending, strict independent
+  learning/no cross-credit, privacy, accessibility, atomic save/recovery,
+  no-credit Tour, offline/no-authority/no-exam-guarantee, invariant world,
+  no RP-005/RP-013/successor, protected user work, independent release, and
+  one spoiler-safe reveal remain unchanged.
+- **Validation:** the Quartermaster correction must prove one approved
+  shell-compliant SC-05 runtime master and direct import inside
+  `PBA-TD004-v1`; Image must revalidate exact presentation without generating
+  a second reveal; Intelligence must then rerun the complete Tier 5.
+- **Rollback trigger:** the new assertion duplicates authority without
+  catching required-asset omissions, encourages false runtime claims, allows
+  reference art to bypass production approval, or weakens any existing gate.
+
 ## 2026-07-26 / TD-003 skyscraper manual test drive — TUNE
 
 - **Measured stage boundaries:** the fifteen stages before final Intelligence release used `10,806,936ms` (`180.12m`), including the preserved Mission return, first Intelligence `REVISE`, and Image correction. Initial Combat implementation used `28.01m`; the resumed presentation correction used `39.47m`. The metrics ledger retains one timestamp pair and one dedicated commit identity or self-reference convention for every stage.
