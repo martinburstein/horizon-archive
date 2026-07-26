@@ -13,27 +13,30 @@ resume any documented return loop before beginning new work.
 
 ## Current synchronized state
 
-- Test drive: `TD-004`
-- Shell: `SS-RP004-THREE-CURRENT-v1`
-- Slice: `TD-004-RP004-THREE-CURRENT-v1`
-- Campaign address: `RP-004 / SC-05 / TR-00–TR-40`
-- Released as-built candidate:
-  `aeb77787fd34b281103c26864ab0d62fe3927d6e`
-- Intelligence disposition: **`PASS — AS BUILT RELEASED`**
-- Variances: `TD004-VAR-001 RESOLVED`; `TD004-VAR-002 RESOLVED`
-- Full evidence:
-  `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
+- Active test drive: `TD-005`
+- Latest completed stage: `3 — Operations Planning Major`
+- Product baseline: `GDB-TD005-v1`
+- World baseline: `WNMP-TD005-v1`
+- Campaign floor-stack certificate: `CFS-TD005-v1`
+- Current-source candidate: `RP-005 / SC-06 / MF-00–MF-30`
+- Selected campaign address: **unselected**
+- Shell candidate: **none**
+- Operations disposition:
+  **`HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED`**
+- Stage evidence:
+  `Production Pipeline/Skyscraper Test Drives/TD-005/03-CAMPAIGN-FLOOR-STACK.md`
 
-The accepted playable boundary now runs from exact TD-003
-`CM-50 VERIFIED RESTORE` through one fresh transient route intent into the
-complete RP-004 Three-Current Reach. It accepts the three independent physical
-relations, strict Python loop evidence, strict AI-901 workload evidence,
-deterministic save/restore, `TR-40`, both write-free returns, and the optional
-destinationless record. SC-04 and SC-05 remain invariant and do not respond.
+The current-source repeated-receiver field is structurally exact, but the
+released player boundary remains TD-004 `TR-40 VERIFY + RETURN`, either
+approved write-free return, or optional destinationless notation. The
+apparent/common return is not traversable. The destinationless notation,
+planning name `Manyfold Return`, RP-005 row, protected predicate, and
+recurring-cycle authority do not create a campaign route or fresh Pilot
+intent.
 
-The hard stop remains before any RP-005 route, named destination, traversable
-common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward,
-permission, authority, live service, external action, or world response.
+No RP-005/SC-06 state is reachable. No Mission Captain shell may be issued
+unless the missing transition is resolved by current authority and then
+passes independent Science review.
 
 ## Released evidence
 
@@ -83,8 +86,19 @@ the archived two-team workflow.
 
 ## Exact next action
 
-At the next scheduled wake, begin with **Commandant guarded verification**
-from this released TD-004 boundary and define only the next selection
-envelope. Do not preselect story, canon, packet, destination, route, or shell.
-If a cycle is already active or interrupted, resume its latest valid
-synchronized checkpoint instead of restarting Commandant.
+Continue the active TD-005 cycle with the **Office of Science Administrator**
+only; do not restart Commandant, Colonel, or Operations.
+
+Read the Science profile, the immediately preceding `CFS-TD005-v1` handoff,
+the TD-005 product/world baselines, the exact TD-004 reconciliation, and the
+current performance evidence. Independently confirm the exact held
+`RP-005 / SC-06 / MF-00–MF-30` technical envelope and remeasure the TD-004
+production baseline. Technical viability, budget capacity, protected code,
+the common return, and destinationless notation cannot supply the missing
+fresh campaign transition.
+
+Issue `HOLD` if the missing entry remains unresolved. Do not issue
+implementation instructions or a shell; do not invent a route, destination,
+identity, purpose, answer, reward, authority, world response, RP-006 route,
+RP-013, successor, or post-ending content. The Mission Captain follows only
+after Science leaves a dedicated validated handoff.
