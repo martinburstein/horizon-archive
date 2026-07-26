@@ -10,6 +10,19 @@
 - **SHA-256:** `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`
 - **Runtime status:** spoiler-safe canonical physical-layout reference only; not runtime-integrated and not the approved `SC-05-PANORAMA-MASTER`
 
+## 2026-07-26 corrected presentation revalidation
+
+Image Specialist revalidated this exact source at `1672 x 941`,
+`2,764,920` bytes, and the SHA-256 above. It remains byte-for-byte unchanged,
+reference-only, and generation count `1`; this pass added zero generations,
+edits, retries, variants, or replacements.
+
+A separately registered deterministic WebP derivative is directly
+runtime-integrated for TD-004 and has its own neighboring provenance. That
+derivative does not alter this PNG's status, does not claim native 4K source
+detail, and does not make this source the approved native-detail
+`SC-05-PANORAMA-MASTER`.
+
 ## Accepted visual decision
 
 Three equally important handling relationships remain materially distinct and

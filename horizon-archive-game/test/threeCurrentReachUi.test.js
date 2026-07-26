@@ -65,7 +65,9 @@ test("TD004 responsive, target, forced-color and reduced-motion rules are explic
   assert.match(styles, /\.three-current-reach/);
   assert.match(styles, /\.three-current-reach \.three-current-world \{[\s\S]*?aspect-ratio: auto/);
   assert.match(styles, /\.three-current-reach \.three-current-panel \{[\s\S]*?grid-template-columns: minmax\(0, 1fr\)/);
+  assert.match(styles, /\.canonical-game-host:has\(\.three-current-reach\) \.crt-stage-anchor \{[\s\S]*?width: 100%/);
   assert.match(styles, /\.three-current-actions \{[\s\S]*?position: sticky/);
+  assert.match(styles, /@media \(max-width: 1279px\) \{[\s\S]*?\.three-current-actions \{[\s\S]*?position: static/);
   assert.match(styles, /\.three-current-actions button\[data-action-id\^="SUBMIT "\]/);
   assert.match(styles, /\.three-current-world \.city-world-plate-native \{[\s\S]*?display: block/);
   assert.match(styles, /min-height: 44px/);

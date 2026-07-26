@@ -1,5 +1,12 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-26 TD-004 SC-05 runtime-master presentation return
+
+- **Runtime master:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`, `3840 x 2160`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
+- **Presentation disposition:** `PRESENTATION COMPLETE — CORRECTED`; exact desktop/laptop/narrow/effective-200 crop and containment, grayscale/non-color structure, forced-color/reduced-motion parity, alternative text, invariance, no-human/no-authority, served identity, full regression, and `PBA-TD004-v1` gates pass.
+- **Correction:** TD-004 alone uses the full available wide stage so porous-left, tensioned-center, jointed-right, and the capped apparent return remain simultaneously legible; narrow actions use natural source-order flow.
+- **Boundary:** fresh Intelligence release remains pending. The deterministic derivative claims no native 4K detail. The source reveal below remains byte-identical/reference-only with generation count exactly `1`; no image was generated or edited by this return.
+
 ## 2026-07-26 canonical cycle reveal — RP-004 three-current capped return
 
 - **Closed checklist item:** `[x] RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.

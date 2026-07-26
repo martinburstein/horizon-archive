@@ -15,17 +15,22 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
   one-pixel lower-edge trim, and q100 exact-RGB WebP encode from the exact
   already-generated reveal; no generation, inpainting, cleanup, compositing,
   sharpening, or semantic edit.
-- **Status:** approved invariant TD-004 SC-05 runtime presentation master
-  pending Image Specialist revalidation and fresh Intelligence release. It
-  does not claim native 4K source detail or alter the reveal's unchanged
-  reference-only status.
+- **Status:** approved invariant TD-004 SC-05 runtime presentation master;
+  Image Specialist issued `PRESENTATION COMPLETE — CORRECTED` after exact
+  responsive/crop, grayscale, forced-color, reduced-motion, alt, invariance,
+  no-human, served-identity, and budget review. Fresh Intelligence release
+  remains pending. The derivative does not claim native 4K source detail or
+  alter the reveal's unchanged reference-only status.
 
 ## 2026-07-26 — RP-004 three-current capped-return reveal
 
 - **Decision:** close `RP-004 / SC-05 — three equal physical relations remain distinct at the apparent common return`.
 - **Asset and complete prompt/provenance:** [RP-004 three-current capped-return reveal](../Visual%20Direction/Production%20Masters/2026-07-26-rp004-three-current-capped-return-reveal/PROVENANCE.md).
 - **Mode:** exactly one built-in `image_gen` generation; no edit, retry, or variant.
-- **Status:** spoiler-safe canonical physical-layout reference only; not runtime-integrated and not the approved `SC-05-PANORAMA-MASTER`.
+- **Status:** spoiler-safe canonical physical-layout reference only;
+  byte-identical and revalidated after the deterministic derivative
+  integration; not itself runtime-integrated and not the approved native-detail
+  `SC-05-PANORAMA-MASTER`.
 
 ## 2026-07-15 — Visual strategy migration
 

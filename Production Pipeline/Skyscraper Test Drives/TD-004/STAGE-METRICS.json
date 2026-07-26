@@ -384,9 +384,85 @@
         "fixtureExclusion": "PASS",
         "sourceRevealIntegrity": "unchanged SHA-256 CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F; exactly one generation"
       },
-      "commit": "PENDING_QUARTERMASTER_CORRECTION_COMMIT",
+      "commit": "82fc431ff7209165039b49af41c8ed96cc9169e3",
       "commitConvention": "The dedicated Quartermaster correction commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; returned to Image Specialist"
+    },
+    {
+      "sequence": 16,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-26T18:00:00.0000000Z",
+      "endedAt": "2026-07-26T18:27:35.9097955Z",
+      "durationMs": 1655910,
+      "disposition": "PRESENTATION COMPLETE — CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "82fc431ff7209165039b49af41c8ed96cc9169e3",
+      "returnOwner": "Intelligence Officer / intelligence_officer",
+      "variance": {
+        "id": "TD004-VAR-001",
+        "classification": "REQUIRED CORRECTION - IMPLEMENTED + IMAGE-VALIDATED, NOT YET ACCEPTED",
+        "correction": "Expanded only the TD-004 wide stage to preserve simultaneous porous-left, tensioned-center, jointed-right, and capped-return visibility; restored natural narrow action flow."
+      },
+      "runtimeMaster": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp",
+        "dimensions": "3840 x 2160",
+        "bytes": 2163752,
+        "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F",
+        "sourceRevealStatus": "byte-identical and reference-only",
+        "additionalGenerationCount": 0,
+        "native4kDetailClaim": false
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-589WID4d.js",
+          "bytes": 1247036,
+          "sha256": "ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "focusedConnected": "33/33",
+        "relatedSelected": "48/48",
+        "fullGame": "805/805",
+        "readinessValidators": "15/15",
+        "buildSeconds": 19.3,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/JS/CSS/SC-05 master HTTP 200; served bytes and hashes identical to dist; owned preview stopped; port clear",
+        "liveFixtureStates": 5,
+        "liveFixtureLayouts": 20,
+        "forcedColorReducedMotionLayouts": 8,
+        "horizontalOverflowFailures": 0,
+        "textOverflowFailures": 0,
+        "minimumControlCssPx": 44,
+        "consoleOrPageErrors": 0,
+        "foreignRequests": 0,
+        "worstWideCropNormalizedX": "0.194-0.806",
+        "temporaryCapturesRestored": true,
+        "ownedPortsCleared": [
+          4176,
+          5184
+        ]
+      },
+      "reveal": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "status": "revalidated byte-identical and reference-only; no image generated or edited"
+      },
+      "commit": "PENDING_IMAGE_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated corrected Image Specialist commit containing this report and ledger entry is authoritative; Intelligence resolves its immutable hash from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; returned to fresh Intelligence Tier 5"
     }
   ]
 }

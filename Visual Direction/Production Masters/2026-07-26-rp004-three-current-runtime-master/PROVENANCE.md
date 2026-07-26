@@ -77,6 +77,23 @@ identity, reward, or authority to the capped return.
 - Grayscale inspection is recorded as a validation derivative only and is
   not a runtime or canonical asset.
 
+## Image Specialist corrected presentation validation
+
+The resumed Image Specialist pass found and corrected one downstream CSS
+registration defect without changing this image. The shared desktop frame
+cap had reduced TD-004 to a center-only crop; the TD-004 host now uses the
+full available wide stage while retaining the issued `3fr / 2fr` split,
+`object-fit:cover`, undistorted framing, and `0.600` world-width share.
+
+Fresh exact DPR-1 review passed five representative states across
+`1920 x 1080`, `1366 x 768`, `390 x 844`, and effective-`200%`
+`768 x 900`: `20/20`. The worst meaningful wide crop measured normalized
+`x 0.194-0.806`; narrow and effective-`200%` retained `x 0.000-1.000`.
+All three relations and the capped return remain legible. Grayscale,
+forced-colors, reduced-motion, alternative text, one-status/focus, `>=44px`
+targets, text fit, local-only requests, and no-human/no-authority review
+passed. No raster was generated, edited, or rewritten by this validation.
+
 ## Budget and identity boundary
 
 This is the sole new runtime-media file for the TD-004 correction. Its

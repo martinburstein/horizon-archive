@@ -2354,6 +2354,12 @@ h1 {
   overflow: hidden;
 }
 
+@media (min-width: 1280px) and (min-height: 800px) {
+  .canonical-game-host:has(.three-current-reach) .crt-stage-anchor {
+    width: 100%;
+  }
+}
+
 .three-current-reach .three-current-world {
   min-height: 0;
   height: 100%;
@@ -2509,6 +2515,12 @@ h1 {
   .three-current-reach .three-current-panel {
     max-height: none;
     overflow: visible;
+  }
+
+  .three-current-actions {
+    position: static;
+    padding: 0;
+    background: none;
   }
 }
 

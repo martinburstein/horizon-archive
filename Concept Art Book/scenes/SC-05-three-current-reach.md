@@ -6,7 +6,8 @@
 - **Identity:** `3840 x 2160`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
 - **Derivation boundary:** deterministic, non-generative q100 WebP derivative of the exact one existing reveal; zero added generations, no semantic edit, and no claim of native 4K source detail.
 - **Runtime approval:** approved for the invariant TD-004 SC-05 world presentation after direct import, grayscale structural review, registered responsive crops, alternative text, no-human/artifact review, emitted/served identity, tests, and `PBA-TD004-v1`.
-- **Remaining gate:** Image Specialist presentation/reveal revalidation and fresh Intelligence release. The source reveal remains byte-for-byte unchanged and reference-only.
+- **Image gate:** `PRESENTATION COMPLETE — CORRECTED`; exact wide/laptop/narrow/effective-200, grayscale, forced-color, reduced-motion, crop, alt, invariance, no-human, build, served-identity, and budget review pass.
+- **Remaining gate:** fresh Intelligence release only. The source reveal remains byte-for-byte unchanged and reference-only.
 
 ## 2026-07-26 canonical cycle reveal — three-current capped return
 

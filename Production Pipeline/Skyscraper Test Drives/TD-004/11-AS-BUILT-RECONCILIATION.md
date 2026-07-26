@@ -10,11 +10,11 @@
 | Shell | `SS-RP004-THREE-CURRENT-v1` |
 | Slice | `TD-004-RP004-THREE-CURRENT-v1` |
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
-| Candidate | Quartermaster correction commit; resolve immutable hash from Git history |
+| Candidate | Corrected Image Specialist commit; resolve immutable hash from Git history |
 | Released functional base | Combat Engineer commit `95fb6402c281ec1294bdb76582de04e80f3f3cb9` (`origin/main` at audit start) |
 | Release disposition | **`REVISE - NOT AS BUILT RELEASED`** |
-| Blocking finding | `TD004-VAR-001` correction implemented; downstream revalidation pending |
-| Return owner | Image Specialist / `image_specialist` |
+| Blocking finding | `TD004-VAR-001` correction implemented and Image-validated; fresh Tier 5 classification pending |
+| Return owner | Intelligence Officer / `intelligence_officer` |
 | Process recommendation | `TUNE` |
 
 The Intelligence-audited candidate was functionally strong and every fresh automated, build,
@@ -51,9 +51,50 @@ required correction without a second image generation:
 
 The runtime master is a disclosed deterministic derivative of the reveal,
 not a new generation and not native-4K-detail source material. The correction
-is locally implemented but is **not** an Intelligence acceptance. Release
-remains `REVISE` until Image Specialist revalidates presentation and the
-unchanged reveal, followed by a fresh independent Intelligence Tier 5.
+is locally implemented but is **not** an Intelligence acceptance. Image
+Specialist revalidation now passes; release remains `REVISE` until a fresh
+independent Intelligence Tier 5 classifies the correction.
+
+## Image Specialist correction return
+
+Image Specialist resumed only from Quartermaster correction commit
+`82fc431ff7209165039b49af41c8ed96cc9169e3` and issued
+**`PRESENTATION COMPLETE — CORRECTED`**.
+
+The direct master exposed a desktop crop defect: the inherited shared
+frame-width cap reduced the world to a center-only crop and largely removed
+the left porous and right jointed relations. A TD-004-only CSS correction now
+uses the full wide stage while preserving the `3fr / 2fr` split,
+`object-fit:cover`, undistorted framing, and `0.600` world-width share.
+Narrow actions now remain in natural source-order flow instead of becoming a
+mid-form sticky overlay.
+
+Fresh Image evidence passed:
+
+- five representative states across exact DPR-1 `1920 x 1080`,
+  `1366 x 768`, `390 x 844`, and effective-`200%` `768 x 900`: `20/20`;
+- worst meaningful wide crop normalized `x 0.194-0.806`, with all three
+  structural relations and the capped return legible;
+- forced colors plus reduced motion on two high-risk states across all four
+  layouts: `8/8`;
+- zero horizontal escape, text overflow, undersized controls, focus/status
+  failures, console/page errors, or foreign requests;
+- focused `33/33`, related `48/48`, full game `805/805`, readiness `15/15`,
+  production build, served identity, and `PBA-TD004-v1`;
+- exact SC-05 runtime master identity unchanged; and
+- source reveal exact hash/dimensions/reference-only status unchanged, with
+  zero additional generations or edits.
+
+The corrected production output is `index-589WID4d.js` (`1,247,036` bytes,
+SHA-256
+`ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4`)
+and `index-DVnUbAwl.css` (`85,151` bytes, SHA-256
+`9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`),
+with `183` modules. CSS headroom is `638` bytes.
+
+This return is not a release and does not overwrite the historical
+Intelligence finding below. Fresh Intelligence must independently classify
+`TD004-VAR-001`.
 
 ## Repository and chain audit
 
@@ -105,7 +146,7 @@ unchanged reveal, followed by a fresh independent Intelligence Tier 5.
 | 22 | No direct Civic Comparison shortcut exists | actions/source/production scans | PASS |
 | 23 | Optional continuation stays destinationless and opens no route | controller/source tests | PASS |
 | 24 | Seven input modalities converge; one owner/group/heading/status is active | focused tests plus live review | PASS |
-| 25 | SC-05 is maximum-quality, first-person, causally legible, accessible, invariant, and free of protagonist/human trace | Quartermaster correction directly imports the provenanced SC-05 master; source/test/build/crop/grayscale evidence passes; Image/Intelligence revalidation pending | **CORRECTION IMPLEMENTED — PENDING REVALIDATION** |
+| 25 | SC-05 is maximum-quality, first-person, causally legible, accessible, invariant, and free of protagonist/human trace | Quartermaster directly imports the provenanced SC-05 master; Image corrected the wide crop and passed exact wide/narrow/effective-200, grayscale, forced-color, reduced-motion, source/test/build/served/budget, invariance, alt, and no-human review | **CORRECTION IMPLEMENTED + IMAGE-VALIDATED - PENDING FRESH INTELLIGENCE** |
 | 26 | Closed fixture is storage-free, allowlisted, and absent from production | isolation tests; source/dist marker, path, port, scenario scans | PASS |
 | 27 | Offline, no authority/exam guarantee, Tour isolation | source/tests, no foreign live-review requests | PASS |
 | 28 | Every `PBA-TD004-v1` aggregate cap passes | independent build and budget validator | PASS |
@@ -186,7 +227,7 @@ current/handling relations and capped apparent return required by the shell.
 | Runtime source | `ThreeCurrentReach.jsx` directly imports `sc05-three-current-panorama-runtime-master-v1.webp` |
 | SC-05 runtime master | `3840 x 2160`; `2,163,752` bytes; SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`; complete neighboring provenance |
 | Quartermaster record | `TD004-ASSET-SC05-PLACEHOLDER` is **retired and corrected** |
-| Image record | prior Image record remains historical; corrected presentation/reveal revalidation is now required |
+| Image record | `PRESENTATION COMPLETE — CORRECTED`; exact responsive/crop/accessibility review and unchanged reveal revalidation pass |
 | Source reveal | unchanged/reference-only; `1672 x 941`; `2,764,920` bytes; SHA-256 `CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`; exactly one generation |
 | Shell asset contract | final release requires one shell-compliant SC-05 first-person world presentation with provenance and honest runtime identity |
 
@@ -198,7 +239,7 @@ also means this cannot be excused as a measured cap overage.
 
 | ID | Classification | Owner | Disposition |
 |---|---|---|---|
-| `TD004-VAR-001` | **`REQUIRED CORRECTION — IMPLEMENTED, NOT YET ACCEPTED`** | Image Specialist / `image_specialist` | Quartermaster retired the placeholder through an approved, directly imported, provenanced SC-05 runtime master inside `PBA-TD004-v1`. Image Specialist must revalidate presentation/crops/accessibility and the unchanged reveal before fresh Intelligence Tier 5 classifies closure. |
+| `TD004-VAR-001` | **`REQUIRED CORRECTION - IMPLEMENTED + IMAGE-VALIDATED, NOT YET ACCEPTED`** | Intelligence Officer / `intelligence_officer` | Quartermaster retired the placeholder through a directly imported, provenanced SC-05 runtime master inside `PBA-TD004-v1`; Image Specialist corrected and validated wide crop, natural narrow flow, accessibility presentation, exact identity, and the unchanged reveal. Fresh Intelligence Tier 5 must classify closure. |
 
 No `ACCEPTED IMPROVEMENT`, `MASTERPLAN UPDATE`, `DEFERRED LIMITATION`, or
 `UNAUTHORIZED DIVERGENCE` is recorded. No master plan advances from this
@@ -228,7 +269,8 @@ reference-only. Quartermaster used it only
 as the exact source for a separately registered deterministic runtime
 derivative with explicit resampling, grayscale, crop, artifact, import,
 emitted-byte, served-identity, and budget evidence. That derivative does not
-claim native 4K detail and now awaits Image Specialist revalidation.
+claim native 4K detail. Image Specialist revalidation now passes; fresh
+Intelligence classification remains pending.
 
 The reveal is validated unchanged but acceptance/publication is held until
 the complete shell releases. No second generation is authorized.
@@ -241,7 +283,7 @@ the complete shell releases. No second generation is authorized.
 2. English is the only integrated locale.
 3. The closed fixture proves in-memory states; it does not claim Martin's
    real browser persistence.
-4. CSS has `827` bytes of remaining cap headroom.
+4. CSS has `638` bytes of remaining cap headroom.
 
 These are honest direct-review or localization limitations. The required
 SC-05 runtime asset correction is implemented separately and does not use
@@ -274,8 +316,8 @@ The recommendation is recorded in
 
 **`REVISE - NOT AS BUILT RELEASED`**
 
-Requirement 25 now has a locally implemented correction, but downstream
-Image Specialist and fresh independent Intelligence acceptance have not run.
+Requirement 25 now has a locally implemented and Image-validated correction,
+but fresh independent Intelligence acceptance has not run.
 TD-003 remains the accepted released playable
 boundary. TD-004 does not advance `PLAYABLE_DEMO.md`, the rail, packet
 scoreboard, expedition spine, curriculum/gameplay/visual masters, or any
@@ -283,15 +325,15 @@ successor control. No push is permitted from this candidate.
 
 ## Exact next action
 
-Resume only the **Image Specialist** from the dedicated Quartermaster
-correction commit. Revalidate the directly imported SC-05 runtime master at
-the required wide, narrow, and effective-200% presentations; confirm all
-three structural relations, capped apparent return, crop registration,
-alternative text, invariance, no-human boundary, production identity, and
-`PBA-TD004-v1`. Revalidate the existing single reveal byte-for-byte unchanged
-and reference-only. Generate no second image. Record `PRESENTATION COMPLETE`,
-`REVISE`, or `HOLD`, then return to a fresh complete Intelligence Tier 5. Do
-not begin a new Commandant shell.
+Run one fresh complete **Intelligence Officer Tier 5** from the dedicated
+corrected Image Specialist commit. Independently reconcile the issued shell
+against the Quartermaster runtime-master correction and Image
+`PRESENTATION COMPLETE — CORRECTED` evidence; verify exact build/media
+identity, registered wide/narrow/effective-200 crop behavior, invariance,
+alternative text, no-human/no-authority boundary, source reveal integrity,
+and `PBA-TD004-v1`; classify `TD004-VAR-001`; run the complete release gates;
+and record `AS BUILT RELEASED`, `REVISE`, or `HOLD` honestly. Do not begin a
+new Commandant shell.
 
 ## Protected-work confirmation
 
