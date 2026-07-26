@@ -16,7 +16,9 @@
 | Campaign address | `RP-003 / SC-04 / CM-40-CM-50` |
 | Accepted predecessor | exact no-action `RP003-IE-01 / IE-P3` |
 | Preceding stage commit | `21ee8b2bebfac517fd7475f3b259ac8f2c166d05` |
-| Disposition | `FLOOR STACK READY` |
+| Mission return commit | `d4d85a59dff9355ebfcd6e7476c8f2ff6c8c7ec8` |
+| Correction | `TD003-MC-R01` — packet mapping identity |
+| Disposition | `FLOOR STACK READY — CORRECTED` |
 
 This certificate selects and bounds only the nearest contiguous playable
 increment after TD-002. The twelve-packet story rail, intended `RP-012`
@@ -36,6 +38,8 @@ Stable prose is incorporated by hash rather than repeated.
 | `Skyscraper Agent Profiles/operations-planning-major.md` | `95BD88D25C1ABF418589E235F1C5AE9C31DF733D3A032AC046FB51CACFD461DC` |
 | `TD-003/01-GAME-DEVELOPMENT-BRIEF.md` | `CD5E98AAC3F9281BDB2056F17FE184187187F509BFA3B049A729707512F090C7` |
 | `TD-003/02-WORLD-NARRATIVE-MASTERPLAN.md` | `BE67E67666053727C72980DA4F9CEB770857F43A8589B02FC5C18A9558EA5411` |
+| `TD-003/04-VIABILITY-ENVELOPE.md` | `91F9992C26EF72B15455D964E50731A95BEC7D6707734C142E053B5E283651D1` |
+| `TD-003/05-PLAYABLE-SLICE-SHELL.md` | `55FC509E69AA667ABBCEE2378B68025FF49D395CF9895FB781D759B8A21E3D9F` |
 | `TD-002/08-FUNCTIONAL-BUILD-REPORT.md` | `560EAECC7856B94A0611E8FC9D422A3A353BCF4608CAE9DDBD99202BC6CC46F0` |
 | `TD-002/11-AS-BUILT-RECONCILIATION.md` | `5F8F83AFD42E46246C755C46A8905819C185B8ADFD651CCCF7A023B37088E906` |
 | `Production Pipeline/STORY_RAIL_MAP.md` | `204AFCB5D116E8FB665308F10BA25CD31DB7A9A642FEE65582E885D7AD836838` |
@@ -45,6 +49,7 @@ Stable prose is incorporated by hash rather than repeated.
 | `Production Pipeline/EXPEDITION_SPINE.md` | `5F56D0067B74DB84143B39377A01C6465ADAD6CCA7D11AF1D90C871F8C25AABB` |
 | `Production Pipeline/rail-packets/RP-003-calibration-margin.md` | `15EFEB2190118EB4B21935D12A348B793D1F01690525E1B28F842CD704F7558A` |
 | `PLAYABLE_DEMO.md` | `90ACFEDA4C844218CA86BC7A25BEC8BEAD19B0EF8F07C8E1EC5060E4557C588B` |
+| `curriculum/readiness/RP-003/contract.json` | `A861CFE60BE3C403EB487A40069E3E6CB1DBEBBF3BA3B96A761FAA3FD37BBDA6` |
 | `CalibrationMarginProtectedJourney.js` | `1DE64B590BD7AF25A632731631A48A94315E87598EF69ED72CAA035AB4ED77FF` |
 | `CalibrationMarginNormalEntry.js` | `56BEFA8BD209E694314F054097A58151CFAAC6B17CA619015C807E68C8AD5F4C` |
 | `CalibrationMarginPythonCheckpoint.js` | `E1F8B3331587E333F07CE4954F21E95B373068E479F6404AF27DF57229F4AEED` |
@@ -55,6 +60,14 @@ The accepted normal route ends at exact no-action `IE-P3`. The older protected
 replay-free restore, safe return, and strict sanitation are buildable, but it
 is non-routable and cannot itself be exposed. TD-003 integrates only the
 remaining `CM-40-CM-50` floor against the normal TD-002 checkpoint chain.
+
+Mission return `TD003-MC-R01` identified one Operations-owned identity error.
+The source-derived packet mapping is `RP003-A3-CALIBRATION-MARGIN` at both the
+durable record's top-level `mappingId` and every evidence record's
+`mapping_id`. `RP003-IE-01` remains only the independent information-
+extraction `skill_or_objective_id` for four of the seven evidence records.
+This correction changes no floor, evidence count/order, note value, route,
+budget, or product meaning.
 
 ## Whole-building and playable positions
 
@@ -112,7 +125,7 @@ cannot spend a later valid activation.
 | Floor | Active group and purpose | Required transition | Checkpoint / recovery |
 |---|---|---|---|
 | `CM-40 BOUNDED REVIEW` | One System-owned review reconstructs five visibly separate checklist conjuncts: observations; `PY-010`; `RP003-IE-01`; supplied-input provenance plus unavailable-source discipline; and no external/physical action. No row derives from or substitutes for another. | `REVIEW PROVENANCE` is a required zero-credit inspection inside the same group. It exposes source ownership and unavailable boundaries without replaying cases, answers, observations, or results. Only then may a fresh `SAVE EXPEDITION NOTE` intent dispatch `CM-41`. | `CM40-R1` is transient and is reconstructed from exact finalized authorities, never persisted as evidence. Early or invalid save dispatch returns to the first incomplete verified boundary. |
-| `CM-41 ATOMIC SAVE` | System sanitation performs exactly one all-or-none local expedition transaction. This is a transaction phase, not a new puzzle, confirmation room, or mastery event. | The fresh save intent must still be current and all five conjuncts must revalidate immediately before write. On success, commit the exact allowlist, clear private/transient material, read through the sanitizer, and enter `CM-50`. | Durable identity is `version=rp003.review-save.v1`, `packetId=RP-003`, `mappingId=RP003-IE-01`, `checkpoint=calibration_margin_complete`, unchanged `continuation`, `cityStateDelta=null`, and `successor=null`. A failed write leaves the last verified durable value byte-stable and returns to `CM-40` with a retry available. |
+| `CM-41 ATOMIC SAVE` | System sanitation performs exactly one all-or-none local expedition transaction. This is a transaction phase, not a new puzzle, confirmation room, or mastery event. | The fresh save intent must still be current and all five conjuncts must revalidate immediately before write. On success, commit the exact allowlist, clear private/transient material, read through the sanitizer, and enter `CM-50`. | Durable identity is `version=rp003.review-save.v1`, `packetId=RP-003`, `mappingId=RP003-A3-CALIBRATION-MARGIN`, `checkpoint=calibration_margin_complete`, unchanged `continuation`, `cityStateDelta=null`, and `successor=null`. A failed write leaves the last verified durable value byte-stable and returns to `CM-40` with a retry available. |
 | `CM-50 VERIFY + RETURN` | One System-owned restored-note group shows local record integrity, the expedition-owned correspondence/difference/unavailable note, exposed-input provenance, the unavailable-source boundary, and the exact no-external-action statement. | Verification itself completes TD-003 at a no-action landing. The player may then explicitly return to Civic Comparison or City Threshold. | `CM50-V1` is derived only from a sanitized exact `calibration_margin_complete` record. Restore replays no entry, observation, learning, review, save-success, city, or world event. |
 
 The group sequence is mutually replacing. Only one owner/message/content/action
@@ -142,7 +155,8 @@ return, and Tour remain zero evidence.
 
 The atomic record contains only:
 
-- the exact document-control identity named above;
+- the exact document-control identity named above, including top-level
+  `mappingId=RP003-A3-CALIBRATION-MARGIN`;
 - one ordered seven-record finalized evidence array:
   `PY-010 primary`, `PY-010 retrieval`, `PY-010 transfer`,
   `RP003-IE-01 primary`, `RP003-IE-01 retrieval`,
@@ -152,6 +166,12 @@ The atomic record contains only:
   - `correspondence=bounded_exposed_correspondence_observed`;
   - `difference=one_bounded_exposed_difference_observed`;
   - `unavailable=sealed_source_unavailable_and_unread`.
+
+Every one of the seven evidence records uses
+`mapping_id=RP003-A3-CALIBRATION-MARGIN`. Their separate
+`skill_or_objective_id` values remain `PY-010` for records 1-3 and
+`RP003-IE-01` for records 4-7. Packet mapping identity and independent
+learning identity are never interchangeable.
 
 The note is built only after exact observation verification; it cannot be
 used to manufacture or backfill the observation set. The record excludes raw
@@ -326,6 +346,7 @@ display:
 | Integration-sized rather than micro-seam or whole packet | PASS |
 | Exact predecessor, entry action, and completion landing | PASS |
 | Five-conjunct independence / no cross-credit | PASS |
+| Packet mapping ID / evidence learning-ID separation | PASS — corrected |
 | Fresh explicit review and save intents | PASS |
 | Atomic allowlist, sanitation, and first-incomplete recovery | PASS |
 | Verified restore and replay-free returns | PASS |
@@ -354,27 +375,31 @@ display:
   protected-journey reconciliation, checkpoint/save/return architecture
   inspection, first-incomplete routing review, pacing check, hard-stop audit,
   and protected-boundary audit
-- **Variances:** none; bearing omission is an authorized optional-scope
+- **Variances:** `TD003-MC-R01` resolved by correcting the durable packet
+  mapping identity; bearing omission remains an authorized optional-scope
   decision, not a shell variance
 - **Synchronization:** local only; no push authorized at this gate
-- **Disposition:** `FLOOR STACK READY`
+- **Disposition:** `FLOOR STACK READY — CORRECTED`
 
 ## Exact Office of Science Administrator handoff
 
-Using `GDB-TD003-v1`, `WNMP-TD003-v1`, `CFS-TD003-v1`, preceding commit
-`21ee8b2bebfac517fd7475f3b259ac8f2c166d05`, and exact no-action `IE-P3`,
-evaluate the buildability of `SS-RP003-REVIEW-SAVE-v1` at
+Using `GDB-TD003-v1`, `WNMP-TD003-v1`, corrected `CFS-TD003-v1`, Mission
+return commit `d4d85a59dff9355ebfcd6e7476c8f2ff6c8c7ec8`, and exact no-action
+`IE-P3`, revalidate the buildability of `SS-RP003-REVIEW-SAVE-v1` at
 `RP-003 / SC-04 / CM-40-CM-50`.
 
 Confirm that the normal checkpoint chain can reconstruct five independent
 review conjuncts without cross-credit; require fresh explicit review,
-provenance inspection, and save intents; bind one `rp003.review-save.v1`
-all-or-none local transaction to exactly seven ordered finalized evidence
-records plus the three-field expedition note; clear private/transient
-material; reject early, stale, forged, Tour-derived, malformed, partial, or
-failed writes without mutating accepted durable state; restore only exact
-`calibration_margin_complete` to no-action `CM-50`; and reconstruct Civic
-Comparison or City Threshold without replay.
+provenance inspection, and save intents. Confirm that the durable top-level
+`mappingId` and all seven records' `mapping_id` are exactly
+`RP003-A3-CALIBRATION-MARGIN`, while `RP003-IE-01` remains only the
+`skill_or_objective_id` for the four independent IE records. Bind one
+`rp003.review-save.v1` all-or-none local transaction to those exactly seven
+ordered finalized evidence records plus the three-field expedition note;
+clear private/transient material; reject early, stale, forged, Tour-derived,
+malformed, partial, or failed writes without mutating accepted durable state;
+restore only exact `calibration_margin_complete` to no-action `CM-50`; and
+reconstruct Civic Comparison or City Threshold without replay.
 
 Resolve the eight viability questions above, especially exact persistence
 ownership, sanitizer/reload order, storage-free fixture isolation, accessible
