@@ -7,58 +7,97 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-Do not restart TD-004 or deploy a Marine from this handoff.
+TD-004 is active on a validated return chain. Do not restart Commandant or
+Colonel, repeat the earlier HOLD stages, or deploy a Marine.
 
 ## Current synchronized state
 
 - Test drive: `TD-004`
-- Mission certificate: `MC-TD004-HOLD-v1`
-- Candidate planning address: `RP-004 / SC-05 / TR-00–TR-40`
-- Released player boundary:
+- Selected slice: `TD-004-RP004-THREE-CURRENT-v1`
+- Campaign address: `RP-004 / SC-05 / TR-00–TR-40`
+- Released predecessor:
   `TD-003 / SS-RP003-REVIEW-SAVE-v1 / CM-50 VERIFIED RESTORE`
-- Latest strategic commit before Mission:
-  `c274ca349610a954af6780564768a137b3dc6057`
-- Mission disposition: **`HOLD — NO SHELL`**
-- Shell ID/version: **not issued**
+- Route contract: `TD004-RTA-001`
+- Floor-stack certificate: `CFS-TD004-v2`
+- Operations disposition:
+  **`FLOOR STACK READY — ROUTE AUTHORIZED`**
+- Return-source commit:
+  `555496a0b7ef7fb7db51e197b886c97d715f2503`
+- Authoritative Operations correction: the dedicated commit containing
+  `Production Pipeline/Skyscraper Test Drives/TD-004/03-CAMPAIGN-FLOOR-STACK.md`
+  and this handoff
+- Shell ID/version: **not yet issued**
 - Marine deployment: **not authorized**
-- Full evidence:
-  `Production Pipeline/Skyscraper Test Drives/TD-004/05-PLAYABLE-SLICE-SHELL.md`
 
-The RP-004 planning candidate is technically coherent but unreachable from
-the released player boundary. TD-003 exposes only exact CM-50 and two known
-write-free returns; no current approved source supplies a fresh semantic Pilot
-transition, destination, dispatch control, or arrival state. A separate
-production blocker also remains: released headroom is only `244` JavaScript
-bytes, `1` CSS byte, and `3` modules.
+Martin explicitly replied **“Go ahead!”** to the documented request for
+authority to transition from exact released TD-003 `CM-50 VERIFIED RESTORE`
+into the mapped `RP-004 / SC-05 / TR-00–TR-40` slice. That decision resolves
+the route-authority HOLD without reopening product purpose or canon.
 
-Recurring-cycle authorization does not supply story-route authority.
+The previous `CFS-TD004-v1`, `VE-TD004-v1`, and
+`MC-TD004-HOLD-v1` remain valid historical evidence of the correctly detected
+gap. Operations v2 supersedes only the route HOLD. Science and Mission must
+now re-enter in order.
 
-## Required return chain
+## Authorized transition summary
 
-1. Operations Planning Major may re-enter only with an existing current
-   authority that explicitly defines the fresh transition from released
-   CM-50, including owner, one-hit meaning, exact record relationship,
-   validation, failure recovery, and relationship to both known returns.
-2. Office of Science Administrator must then issue a new certificate covering
-   that route plus a measurable production-budget recovery or rebaseline and
-   all learning, privacy, save, accessibility, responsive, offline, recovery,
-   and invariant-world requirements.
-3. Mission Captain may reconsider shell issuance only after those two
-   corrected certificates agree and Science issues `VIABILITY READY`.
+`TD004-RTA-001` is one fresh semantic Pilot action:
 
-Do not restart Commandant or Colonel unless a genuine product or canon reopen
-trigger appears. Do not skip directly to Mission or Marine work.
+```text
+PILOT // FOLLOW EXPEDITION-MARKED SURVEY TO THREE-CURRENT REACH
+```
+
+It is available only after Tour isolation, strict sanitation of the exact
+released TD-003 record, exact no-replay `CM-50` reconstruction,
+private/transient clearing, complete intent validation, and an unused
+seven-modality one-hit token. Validation precedes token consumption.
+
+One accepted intent performs exactly one transient in-memory transition to
+`TR-00 ARRIVE + ORIENT`. It writes no TD-003 field, leaves
+`continuation="continuation"` and `successor=null`, grants no evidence or
+authority, replays nothing, and changes no world/access/external state.
+Duplicate, stale, malformed, private, Tour-derived, contaminated, or implicit
+requests fail closed without exposing SC-05 or changing the last verified
+bytes.
+
+The two released write-free choices remain unchanged at CM-50:
+
+- `RETURN TO CIVIC COMPARISON`; and
+- `RETURN TO CITY THRESHOLD`.
+
+RP-004's existing `RETURN TO CALIBRATION MARGIN` restores exact CM-50, where
+both known returns and a new fresh RP-004 intent are available. RP-004's
+direct City Threshold return remains write-free. No new direct
+RP-004-to-Civic-Comparison shortcut exists.
+
+## Open viability requirement
+
+Route authority is resolved, but Science has not revalidated it and the
+independent production-budget blocker remains:
+
+- JavaScript headroom: `244` bytes;
+- CSS headroom: `1` byte; and
+- module headroom: `3`.
+
+Science must issue a new certificate covering the released-record-to-entry
+adapter, privacy/evidence/save/recovery/accessibility/responsive/offline/world
+contracts, and one measurable budget recovery or evidence-backed rebaseline.
+Quality, evidence, privacy, accessibility, responsive behavior, or truthful
+presentation may not be weakened or hidden outside measurement.
 
 ## Continuing protections
 
-- Preserve closed canon, the intended ending, strict evidence/no cross-credit,
+- Preserve closed canon, the intended ending, strict learning/no-cross-credit,
   privacy, accessibility, offline/no-authority/no-exam-guarantee, no-credit
-  Tour, deterministic atomic save/rollback/restore, invariant SC-04/SC-05,
-  and only the two released TD-003 returns.
-- No onward bearing, RP-004 opening, destination, permission, response,
-  reward, authority, external action, RP-005 route, RP-013, successor, or
-  post-ending content is open.
-- Protected RP-004 code remains non-routable reference evidence.
+  Tour, deterministic atomic save/rollback/restore, and invariant SC-04/SC-05.
+- The transition is an expedition navigation decision, not invitation,
+  permission, access, reward, identity, authority, or world response.
+- The apparent common return remains observation only and is never a route.
+- Stop at `TR-40 VERIFY + RETURN`; no RP-005 route is authorized.
+- No RP-013, successor, post-ending content, hidden-lore explanation, live
+  service call, external action, or world change is authorized.
+- Protected RP-004 code remains reference evidence, not proof of normal
+  integration.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
@@ -67,11 +106,18 @@ trigger appears. Do not skip directly to Mission or Marine work.
 
 ## Exact next action
 
-**Await Martin's route decision.**
+**Office of Science Administrator revalidation.**
 
-Do not repeat completed TD-004 stages on a scheduled wake. Do not infer a
-transition from planned rail order, protected code, save/restore success,
-visual alignment, or automation authority. If Martin supplies or explicitly
-approves a current transition authority, resume at Operations Planning Major,
-then Science, then Mission. Until then, preserve `HOLD — NO SHELL` and do not
-deploy the Reconnaissance Sergeant or any later Marine.
+Read the Science profile, `CFS-TD004-v2`, the prior `VE-TD004-v1` HOLD, the
+Mission HOLD return, exact released TD-003 record/controller evidence, the
+frozen RP-004 contracts/protected journey, and the applicable current
+technical controls.
+
+Independently validate `TD004-RTA-001`, define the exact normal transition,
+persistence, recovery, privacy, evidence, accessibility, responsive, offline,
+invariant-world, and validation envelope, and resolve the production budget
+through measurable recovery or an evidence-backed rebaseline. Issue a new
+`VIABILITY READY`, `REVISE`, or `HOLD` certificate honestly.
+
+Do not skip to Mission. Mission may reconsider a versioned shell only after
+the new Science certificate agrees with `CFS-TD004-v2`.

@@ -1,4 +1,4 @@
-# TD-004 Campaign Floor Stack — Released-Adjacency Audit
+# TD-004 Campaign Floor Stack — Authorized Transition Definition
 
 ## Document control
 
@@ -6,396 +6,443 @@
 |---|---|
 | Stage | Operations Planning Major |
 | Agent ID | `operations_planning_major` |
-| Pass type | Current-source address and predecessor audit |
-| Certificate ID | `CFS-TD004-v1` |
+| Pass type | Returned route-authority correction |
+| Certificate ID | `CFS-TD004-v2` |
+| Supersedes | `CFS-TD004-v1` HOLD at commit `e1d54c0405e3eb5c1a9ce26133c5eeaf63bf0e77` |
 | Product brief | `GDB-TD004-v1` |
 | Narrative candidate | `WNMP-TD004-v1` |
-| Released predecessor | `TD-003 / SS-RP003-REVIEW-SAVE-v1` |
-| Current-source candidate address | `RP-004 / SC-05 / TR-00–TR-40` |
-| Selected shell address | **Unselected — the current-source address is planned and protected, but has no released entry** |
-| Preceding stage commit | `61308109e80bbabba181cfd3aa7526613b3a06bc` |
-| Disposition | **`HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED`** |
+| Route authority | Martin's latest explicit **“Go ahead!”** response to the documented request to transition from released TD-003 `CM-50 VERIFIED RESTORE` into `RP-004 / SC-05 / TR-00–TR-40` |
+| Released predecessor | `TD-003 / SS-RP003-REVIEW-SAVE-v1 / CM-50 VERIFIED RESTORE` |
+| Selected slice | `TD-004-RP004-THREE-CURRENT-v1` |
+| Campaign address | `RP-004 / SC-05 / TR-00–TR-40` |
+| Route contract | `TD004-RTA-001` |
+| Return source commit | `555496a0b7ef7fb7db51e197b886c97d715f2503` |
+| Disposition | **`FLOOR STACK READY — ROUTE AUTHORIZED`** |
 
-The Colonel's one three-input / three-handling / apparent-common-return
-candidate maps exactly to the existing current-source `RP-004 / SC-05 /
-TR-00–TR-40` packet. Its structural packet order and protected predecessor
-predicate are coherent. It is not, however, contiguous with the released
-TD-003 player boundary: the current release deliberately ends at exact
-`CM-50 VERIFIED RESTORE` or one of two known write-free returns and explicitly
-opens no onward bearing, RP-004 destination, or RP-004 entry.
+Martin's explicit decision supplies the route authority that
+`CFS-TD004-v1`, `VE-TD004-v1`, and `MC-TD004-HOLD-v1` correctly found
+missing. It authorizes one expedition-owned transition from exact released
+TD-003 into the already-mapped, Colonel-approved RP-004 candidate. It does
+not authorize reward, permission, access, identity, authority, external
+action, world response, live control, RP-005, RP-013, a successor, or
+post-ending content.
 
-This stage therefore proves the source address and rejects the playable
-transition. It does not promote a planned bearing into an opening, substitute
-recurring-cycle authorization for route authority, or manufacture a
-destination. No Mission Captain shell may be issued from this certificate.
+The Operations HOLD is therefore resolved. The independent Science budget
+blocker remains open: the current release has only `244` JavaScript bytes,
+`1` CSS byte, and `3` module slots of headroom. Science must issue a new
+certificate covering this route and a measurable recovery or rebaseline
+before Mission may reconsider a shell.
 
-## Hash-keyed authority certificate
+## Authority and source certificate
 
-The following exact authorities were reconciled against Colonel commit
-`61308109e80bbabba181cfd3aa7526613b3a06bc`.
+The return pass began at synchronized Mission-HOLD commit
+`555496a0b7ef7fb7db51e197b886c97d715f2503`.
 
-| Authority | SHA-256 |
+| Authority | SHA-256 or identity |
 |---|---|
+| Martin's latest route decision | Explicit `Go ahead!` for the documented exact TD-003-to-RP-004 transition request; highest current authority |
 | `AGENTS.md` | `CC76D86D21ADA75D3BC6A340D2BDE41B7FEC00678CB74A1F3D0E9EAD3A0953CD` |
-| `NEXT_INSTANCE_HANDOFF.md` | `7B85C8004424B01FC7393C54BF29791E670C3BF622B0C628C174864726C3B657` |
+| `NEXT_INSTANCE_HANDOFF.md` at return start | `8F387125D5A9AD48F5D4D6414039E7DBC0373881BA349DD0558A2456777784E6` |
 | `SKYSCRAPER_AGENT_WORKFLOW.md` | `6C22C4C8660BAF5F854246F55AC825B5F52DD6A5D2311C1579EB1C80DF212A43` |
 | `Skyscraper Agent Profiles/README.md` | `78170827BD7BA4D420EC985937810396C3ED241A81E9ED6F697B0D9C24666D13` |
-| `Skyscraper Agent Profiles/operations-planning-major.md` | `95BD88D25C1ABF418589E235F1C5AE9C31DF733D3A032AC046FB51CACFD461DC` |
+| `operations-planning-major.md` | `95BD88D25C1ABF418589E235F1C5AE9C31DF733D3A032AC046FB51CACFD461DC` |
 | `TD-004/01-GAME-DEVELOPMENT-BRIEF.md` | `4230A32C91991A523B47C1544AFE46885DE3230C89CED93A3E9C956E50B297C7` |
 | `TD-004/02-WORLD-NARRATIVE-MASTERPLAN.md` | `1D6FB3D9C96619741DE569ADBA58770275BCC99C74F7777FFA8423E917F37EFE` |
+| superseded `TD-004/03-CAMPAIGN-FLOOR-STACK.md` | `D2602A1DEB807E205B7A829181BAE0F3FD0ACEE1C6F6DA1F585169AE08E92EFE` |
+| `TD-004/04-VIABILITY-ENVELOPE.md` v1 | `208F8F832C68B3BBB37E3F8709BF44814EFBAF593C644C490E5D3CE02644489C` |
+| `TD-004/05-PLAYABLE-SLICE-SHELL.md` HOLD | `0829767441BFBA68D4D020D7096305A78AB527226CC27650BB1BB97B420C571F` |
 | `TD-003/11-AS-BUILT-RECONCILIATION.md` | `DEE140D5847A4B0705B25DA5FE2020E64D365C72AE69FCE3F996FFF999BEEFBD` |
-| `Production Pipeline/STORY_RAIL_MAP.md` | `6BF94BE293B87CDAB2FB8FE399590ADFC5CEDEEEF52985BDBBC48AE87B6DD182` |
-| `Production Pipeline/EXPEDITION_SPINE.md` | `5F56D0067B74DB84143B39377A01C6465ADAD6CCA7D11AF1D90C871F8C25AABB` |
-| `Production Pipeline/PACKET_SCOREBOARD.md` | `70365D5BBDEB45FDAF77468606F375AC153801B308CFE058C59555AC9978556B` |
-| `Production Pipeline/ADVANCE_QUEUE.md` | `061C24BC66E7BC778FC5FE6E92848A662EDC268A78FF15A0BBB65BCB48EA2592` |
-| `Production Pipeline/WORKING_QUEUE.md` | `8538FAC5D92086ED6ECC43AA3ECC860D9C8D644F4CF86702B0B9BA5B64E58B3B` |
+| `STORY_RAIL_MAP.md` | `6BF94BE293B87CDAB2FB8FE399590ADFC5CEDEEEF52985BDBBC48AE87B6DD182` |
+| `EXPEDITION_SPINE.md` | `5F56D0067B74DB84143B39377A01C6465ADAD6CCA7D11AF1D90C871F8C25AABB` |
+| `PACKET_SCOREBOARD.md` | `70365D5BBDEB45FDAF77468606F375AC153801B308CFE058C59555AC9978556B` |
+| `ADVANCE_QUEUE.md` | `061C24BC66E7BC778FC5FE6E92848A662EDC268A78FF15A0BBB65BCB48EA2592` |
+| `WORKING_QUEUE.md` | `8538FAC5D92086ED6ECC43AA3ECC860D9C8D644F4CF86702B0B9BA5B64E58B3B` |
 | `RP-003-calibration-margin.md` | `BE753C9C313A62E9FA2A23CD874B859CA514FFC4BF9BCFF0D5CA180A871FE640` |
 | `RP-004-three-current-reach.md` | `359A55ED21B1A5CD14F078BE970828E8E764C8604F4683050C70A55813C9CFAE` |
 | `DI-001-city-threshold.md` | `FB960CC40E462B9B3B35F40BEA8AA4F4AC2211B4799D507E887134667A5039DC` |
+| `CalibrationMarginReviewSave.js` | `D82E9F916B682D51F07C8B382610B4A7977FEC7813855F0DD4AFE08C255BECF7` |
+| `ThreeCurrentReachProtectedJourney.js` | `43F74ACBD0A20ADA37034038F279AF406362997833DEE4A9E3FD2796A5999A3A` |
 
-The legacy queue rows remain useful evidence of planned order and protected
-construction, but their older Working-position prose is superseded by the
-2026-07-26 Intelligence controls and TD-003 as-built reconciliation for the
-released player boundary.
+The route decision changes only reachability between two existing surface-safe
+authorities. It does not reopen Commandant product purpose, Colonel canon,
+the RP-004 narrative candidate, the frozen learning mappings, or the intended
+ending.
 
 ## Whole-building and playable positions
 
-- **Whole-story position:** the surface-safe rail remains mapped through the
-  intended `RP-012` ending, with no `RP-013` or successor.
-- **Current released player position:** `RP-003 / SC-04 / CM-50`, after exact
-  verified local restore, or one of its two existing write-free returns.
-- **Current-source candidate position:** `RP-004 / SC-05 / TR-00–TR-40`,
-  route order `4`, Phase II slot `1 of 3`, structurally after RP-003.
-- **Implementation distance:** the RP-004 protected design, learning
-  contracts, pure journey, and coordinator Gate Review exist, but normal
-  entry, production art, browser persistence, accepted route exposure, and
-  live release do not.
-- **Selected TD-004 playable position:** none. A planned/protected next packet
-  is not a released opening.
+- **Whole-story position:** mapped through the intended `RP-012` ending; no
+  `RP-013`, successor, or post-ending floor exists.
+- **Released player position:** exact TD-003 `CM-50 VERIFIED RESTORE`, with
+  the existing write-free Civic Comparison and City Threshold returns.
+- **Selected TD-004 slice:** `TD-004-RP004-THREE-CURRENT-v1`.
+- **Selected campaign address:** `RP-004 / SC-05 / TR-00–TR-40`, route order
+  `4`, Phase II slot `1 of 3`, directly after RP-003.
+- **Implementation distance:** protected RP-004 design, frozen learning
+  contracts, pure journey, and coordinator Gate Review exist. Normal
+  released-record entry, production integration, persistence, production art,
+  responsive UI, and live release remain unbuilt.
 
 ## Required output index
 
 | Required field | Operations result |
 |---|---|
-| Slice ID and campaign address | No TD-004 slice selected; exact held current-source candidate is `RP-004 / SC-05 / TR-00–TR-40` |
-| Predecessor and entry state | Released predecessor is exact TD-003 `CM-50 VERIFIED RESTORE`; no authorized entry to `TR-00` exists |
-| Player purpose | Relate three sanitized sample forms to three visible handling relations while preserving purpose unknown |
-| Ordered milestones | Held `TR-00 → TR-10 → TR-20 → TR-30 → TR-40` stack |
-| Puzzle and learning placement | Four independent observations, strict `PY-011`, strict independent `RP004-WORKLOAD-01`, conjunctive review, then save |
-| Routes, returns, and checkpoints | Current release permits only CM-50, Civic Comparison return, and City Threshold return; all TR checkpoints remain held |
-| Expected play duration | Existing source target remains `34–46` minutes clean and `20–28` minutes mastered |
-| Completion state and permitted outputs | None for TD-004 while held; the source candidate would permit only a local purpose-unknown note and existing-anchor returns |
-| Required dependencies | Exact TD-003 record plus a separately authorized fresh transition intent; the latter is missing |
-| Optional elements | Recorded-observation replay, maintenance inspection, provenance review, hints, clear-work, confidence, and early return |
-| Hard stop and forbidden exposure | Stop at released TD-003; no bearing, destination, opening, RP-005, RP-013, successor, authority, or world response |
-| Implementation-distance note | Protected design/code exists; normal entry, art, persistence, accepted route exposure, and live release do not |
-| Disposition | `HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED` |
+| Slice ID and campaign address | `TD-004-RP004-THREE-CURRENT-v1`; `RP-004 / SC-05 / TR-00–TR-40` |
+| Predecessor and entry state | Exact strict TD-003 record at no-replay `CM-50 VERIFIED RESTORE`, then one fresh Pilot-owned `TD004-RTA-001` intent |
+| Player purpose | Relate three sanitized sample forms to three visible handling relations while preserving the apparent common return and purpose unknown |
+| Ordered milestones | `CM-50 route choice → TR-00 → TR-10 → TR-20 → TR-30 → TR-40` |
+| Puzzle and learning placement | Four independent observations, strict `PY-011`, strict independent `RP004-WORKLOAD-01`, conjunctive review, atomic save |
+| Routes, returns, and checkpoints | Fresh one-hit entry; early/final return to exact Calibration Margin or City Threshold; Civic Comparison remains reachable from restored Calibration Margin |
+| Expected play duration | `34–46` minutes clean; `20–28` minutes mastered; protected smoke under five minutes |
+| Completion state and permitted outputs | Verified local RP-004 purpose-unknown note, restored without replay; existing-anchor returns; no later route |
+| Required dependencies | Exact TD-003 sanitizer/record/restore; `TD004-RTA-001`; frozen RP-004 contracts; Science budget decision |
+| Optional elements | Recorded-observation replay, maintenance inspection, provenance review, hints, clear-work, confidence, early return, destinationless continuation record |
+| Hard stop and forbidden exposure | Stop at `TR-40`; no RP-005 route, RP-013, successor, reward, authority, identity, external action, or world response |
+| Implementation-distance note | Protected reference exists; all normal route/UI/persistence/art/release work remains |
+| Disposition | `FLOOR STACK READY — ROUTE AUTHORIZED` |
 
-## Exact address proof
+## Exact transition contract — `TD004-RTA-001`
 
-The Colonel candidate is not ambiguous:
+### Owner and semantic action
 
-1. `RP-004-three-current-reach.md` defines route order `4`, target scene
-   `SC-05`, and the integrated `TR-00` through `TR-40` graph.
-2. Its observations are the same three equal physical relations authorized by
-   `WNMP-TD004-v1`: suspended matter / porous handling, cyclic pressure /
-   tensioned handling, and conducted heat / jointed handling, plus one
-   apparent common return and purpose unknown.
-3. The packet, Expedition Spine, Story Rail Map, Advance Queue, Working Queue,
-   and Packet Scoreboard all place RP-004 directly after RP-003 and before
-   RP-005.
-4. The protected journey begins only from exact sanitized RP-003 completion,
-   preserves both returns, and leaves any later continuation destinationless.
+The transition is owned by the **Pilot**, not the Scene, city, Builders,
+Machine, System, save record, or world.
 
-The exact current-source address is therefore:
+Its semantic action identity is:
 
-> `RP-004 / SC-05 / TR-00 ARRIVE + ORIENT → TR-10 OBSERVE THREE RELATIONS →
-> TR-20 TRACE APPARENT COMMON RETURN → TR-30 RELATE + SAVE → TR-40 VERIFY +
-> RETURN`
+```text
+TD004-RTA-001
+PILOT // FOLLOW EXPEDITION-MARKED SURVEY TO THREE-CURRENT REACH
+```
 
-That proof establishes planning identity and structural order only. It does
-not establish a released player transition.
+`Three-Current Reach` is the existing expedition-side label from approved
+surface authority. The action expresses the Pilot's decision to continue the
+expedition along the existing mapped physical survey relation. It is not an
+invitation, permission, access grant, native route name, world instruction,
+Builder message, Machine response, reward, or claim that the landscape
+noticed the Pilot.
 
-## Released-predecessor contradiction
+Mission and the Marine roles may refine display copy within their existing
+authority, but may not change this owner, destination address, one-hit
+meaning, or no-authority boundary.
 
-The released TD-003 authority is stricter than the older RP-003/RP-004
-planning seam:
+### Exact availability predicate
 
-| Question | Current evidence | Result |
-|---|---|---|
-| Is exact TD-003 completion released? | Yes: strict local record, verified read-back, and no-replay `CM-50 VERIFIED RESTORE` | `PASS` |
-| Does the release preserve two known returns? | Yes: Civic Comparison and City Threshold, both write-free | `PASS` |
-| Does the release mark or expose an onward bearing? | No; Intelligence explicitly closes it | `FAIL FOR ENTRY` |
-| Does any released control name or open RP-004 or SC-05? | No | `FAIL FOR ENTRY` |
-| Can the planned packet row itself authorize reachability? | No; current controls distinguish planned breadth from released route authority | `FAIL FOR ENTRY` |
-| Can recurring-cycle authorization substitute for route intent or canon? | No | `FAIL FOR ENTRY` |
+The action is available only when all of the following are true:
 
-The RP-004 source assumes an expedition-marked bearing and first-person
-arrival along it. The TD-003 release intentionally removed that assumption
-from the reachable boundary. Using the old bearing would silently widen
-campaign state and violate the Commandant and Colonel handoffs.
+1. mode is exact normal `campaign`, never Demo Tour;
+2. the TD-003 record is read through the existing adapter and passes the
+   released strict sanitizer with no extra or private keys;
+3. record key is `horizon-archive-rp003-review-save-v1`;
+4. record version is `rp003.review-save.v1`;
+5. shell version is `SS-RP003-REVIEW-SAVE-v1`;
+6. packet is `RP-003`;
+7. mapping is `RP003-A3-CALIBRATION-MARGIN`;
+8. checkpoint is `calibration_margin_complete`;
+9. `continuation="continuation"`, `cityStateDelta=null`, and
+   `successor=null`;
+10. the exact three-value correspondence/difference/unavailable note passes;
+11. the seven ordered strictly sanitized evidence records pass with distinct
+    `PY-010` and `RP003-IE-01` identities;
+12. the mounted predecessor state is exact no-replay
+    `CM-50 VERIFIED RESTORE`;
+13. all private and transient work is cleared;
+14. the Pilot supplies one explicit allowlisted `TD004-RTA-001` action across
+    one of the seven approved modalities; and
+15. the opaque fresh event token is valid and unused.
 
-No current exact source authorizes a fresh Pilot transition intent, a route
-dispatcher, a destination presentation, or an arrival state connecting
-`CM-50` to `TR-00`. Exact released adjacency is therefore rejected.
+The durable record is necessary evidence of completed expedition work. It is
+not permission and does not itself trigger or persist the route. The Pilot's
+fresh action is the only transition intent.
 
-## Minimum predecessor evidence
+### Validation-before-consumption and one-hit meaning
 
-If the route gap is later resolved by the owning strategic authority, Science
-may evaluate only an entry predicate that begins with all of the following:
+The System performs, in order:
 
-1. the exact TD-003 storage key
-   `horizon-archive-rp003-review-save-v1`;
-2. record version `rp003.review-save.v1`;
-3. shell version `SS-RP003-REVIEW-SAVE-v1`;
-4. packet `RP-003`, mapping `RP003-A3-CALIBRATION-MARGIN`, checkpoint
-   `calibration_margin_complete`, and unchanged `continuation`;
-5. `cityStateDelta=null` and `successor=null`;
-6. the exact three-value correspondence/difference/unavailable note;
-7. seven ordered, strictly sanitized evidence records with exact packet
-   mapping and distinct `PY-010` / `RP003-IE-01` learning identities;
-8. successful atomic replacement plus strict byte-equivalent read-back;
-9. exact no-replay `CM-50 VERIFIED RESTORE`; and
-10. one newly authorized, fresh, semantic, one-hit Pilot transition intent
-    whose route, ownership, and recovery are defined outside this HOLD.
+1. Tour isolation;
+2. strict record read and sanitation;
+3. exact `CM-50` mounted-state verification;
+4. complete intent-shape, mode, owner, action, modality, and token validation;
+5. unused-token verification;
+6. transient/private clearing confirmation; then
+7. one atomic in-memory transition to `TR-00 ARRIVE + ORIENT`.
 
-Items 1–9 exist in the released boundary. Item 10 does not. Neither a stored
-note, prior planned bearing, return selection, Tour fixture, visual cue,
-learning result, save success, timing, confidence, nor recurring automation
-may substitute for it.
+The token is consumed only after steps 1–6 pass. One accepted intent yields
+exactly one `TR-00` arrival. It writes no record, grants no evidence or credit,
+replays no TD-003 event, changes no world/access/authority/external state, and
+does not alter the verified TD-003 bytes.
 
-## Sanitation and entry envelope
+A duplicate token cannot replay arrival, create a second state transition,
+write, erase evidence, or alter focus. After accepted entry, a duplicate is a
+no-op at the current RP-004 boundary. A fresh intent is required after every
+voluntary return, reload, or interrupted pre-save session.
 
-No TD-004 entry is currently permitted. The minimum future ordering, if an
-entry is explicitly authorized, is:
+### Failure and interruption recovery
 
-1. resolve and isolate Demo Tour before any campaign adapter access;
-2. sanitize the complete TD-003 dependency and exact record before consuming
-   an entry intent;
-3. reject and clear private, transient, extra, malformed, partial, stale,
-   forged, combined, Tour-derived, or cross-packet material while preserving
-   the last verified bytes;
-4. reconstruct exact `CM-50 VERIFIED RESTORE` or the appropriate existing
-   write-free return without replay;
-5. accept only one fresh separately owned Pilot transition intent after exact
-   predecessor validation;
-6. spend that intent once and stage only the explicitly authorized first
-   downstream checkpoint; and
-7. preserve TD-003 bytes, learning evidence, SC-04, both returns,
-   `continuation`, null world deltas, and all invariant-world clocks.
+- **Tour-derived request:** rejected before campaign adapter access; Tour
+  remains isolated, zero-credit, and write-free.
+- **Malformed, extra-key, private, partial, stale, forged, combined, or
+  contaminated record:** no entry action is exposed. Existing TD-003
+  sanitation clears unauthorized material, preserves last-known-good bytes,
+  and returns to its first valid incomplete recovery boundary.
+- **Wrong mode, owner, action, modality, active group, or token:** remain at
+  exact `CM-50`; write nothing; keep both known returns; focus the Pilot route
+  choice and require a fresh token.
+- **Duplicate token before transition:** reject as one-hit-only and remain at
+  `CM-50`.
+- **Duplicate token after transition:** no-op at the current RP-004 boundary;
+  no arrival replay.
+- **Interruption or reload before the first verified RP-004 save:** no route
+  state is reconstructed from TD-003. Restore exact `CM-50` from the retained
+  record and require a fresh Pilot intent. Any finalized protected learning
+  evidence later permitted by Science remains subject to its own allowlist
+  and cannot synthesize entry.
+- **Early voluntary return:** clear RP-004 transient work and reconstruct the
+  selected existing anchor without replay or write.
 
-Because step 5 has no current authority, dispatch must stop after step 4.
-Science may not solve the missing route by treating sanitation success,
-verified restore, or a visual bearing as consent to advance.
+No failed or interrupted transition exposes an SC-05 view, observation,
+learning case, workload clue, save, successor state, or world response.
 
-## Candidate checkpoint stack, held behind entry
+## Relationship to the retained record and both known returns
 
-The existing current-source checkpoint order is coherent but not deployable:
+### Retained TD-003 record
 
-| Checkpoint | Bounded purpose | Entry dependency | Permitted recovery |
+`TD004-RTA-001` treats the released TD-003 record as immutable predecessor
+evidence:
+
+- entry reads and validates it but never rewrites it;
+- the ambiguous durable `continuation` value remains unchanged and is not
+  reinterpreted as a destination;
+- `successor` remains `null`;
+- the transition token and route choice are transient and are never added to
+  the TD-003 record;
+- exact TD-003 observations and learning evidence are not copied into RP-004
+  evidence and cannot cross-credit it; and
+- a failed RP-004 transition or later save cannot damage the last verified
+  TD-003 bytes.
+
+### Existing write-free returns at `CM-50`
+
+At exact `CM-50`, the new Pilot entry action is a peer choice beside the two
+already-known routes. It does not replace, rename, gate, delay, or write
+through either one:
+
+- `RETURN TO CIVIC COMPARISON` remains the exact write-free route to RP-002;
+- `RETURN TO CITY THRESHOLD` remains the exact write-free route to the
+  accepted City Threshold anchor; and
+- choosing either return consumes only that return's fresh one-hit action and
+  does not activate `TD004-RTA-001`.
+
+Returning to either known anchor requires the player to re-enter exact TD-003
+normally, restore `CM-50`, and make a new Pilot route choice before RP-004 can
+be entered.
+
+### Returns from RP-004
+
+The existing RP-004 source remains exact:
+
+- `RETURN TO CALIBRATION MARGIN` restores exact no-replay `CM-50`, where both
+  known TD-003 returns and a new fresh RP-004 intent are again available;
+- `RETURN TO CITY THRESHOLD` remains the approved direct write-free
+  existing-anchor return;
+- no new direct RP-004-to-Civic-Comparison shortcut is created; Civic
+  Comparison remains reachable through restored Calibration Margin; and
+- all returns preserve `continuation`, null city/external deltas,
+  `successor=null`, zero evidence, zero credit, zero authority, and zero world
+  response.
+
+## Ordered slice definition
+
+| Checkpoint | Required player-visible purpose | Completion | Recovery / returns |
 |---|---|---|---|
-| `TR-00 ARRIVE + ORIENT` | Establish one Scene-owned invariant panorama and explicit orientation | Missing fresh authorized transition from exact TD-003 | Fail closed to exact `CM-50` or its chosen existing return |
-| `TR-10 OBSERVE THREE RELATIONS` | Record the three equal physical relations in any order | Explicit `TR-00` orientation | Replay Recorded facts; recover first unrecorded relation |
-| `TR-20 TRACE APPARENT COMMON RETURN` | Record apparent convergence and `purpose=None` | All three relations recorded | Reject purpose/destination inference locally; retain returns |
-| `TR-30 RELATE + SAVE` | Run strict independent `PY-011` and `RP004-WORKLOAD-01`, review, sanitize, and save | Four observations plus frozen prerequisites | Answer-free blank remediation, first-incomplete resume, no cross-credit |
-| `TR-40 VERIFY + RETURN` | Strict restore and one existing-anchor return | Atomic save and verified read-back | Restore without replay; return to RP-003 or City Threshold |
-
-The common return remains observation only. It is never a travel control,
-route, successor, workload answer, native category, or proof of shared
-purpose.
-
-## Routes, returns, recovery, and save opportunities
-
-### Currently permitted
-
-- remain at exact saved `CM-50 VERIFIED RESTORE`;
-- return write-free to Civic Comparison; or
-- return write-free to City Threshold.
-
-Those are the entire released route set. Each return remains adapter-free,
-write-free, replay-free, zero evidence, zero credit, and zero world response.
-
-### Held candidate behavior
-
-The RP-004 source's early/final returns to RP-003 and City Threshold,
-pre-save re-observation, answer-free learning recovery, atomic local save,
-verified restore, and destinationless later continuation remain valid
-planning constraints. None becomes reachable until a valid entry is issued.
-
-### Fail-closed rule
-
-Any invalid, absent, stale, duplicate, partial, private, Tour-derived,
-contaminated, cross-packet, replayed, forged, or implicit entry request:
-
-- consumes no valid intent;
-- writes no record and changes no verified bytes;
-- clears only unauthorized transient/private material;
-- reconstructs exact TD-003 at the first valid boundary;
-- retains the two known returns; and
-- exposes no SC-05 view, TR checkpoint, RP-004 label, bearing, destination,
-  workload, reward, access, authority, or world response.
+| `CM-50 ROUTE CHOICE` | Exact restored note plus one Pilot-owned entry and both known write-free returns | fresh validated `TD004-RTA-001` | invalid intent stays at CM-50; TD-003 sanitation owns invalid-record recovery |
+| `TR-00 ARRIVE + ORIENT` | One invariant SC-05 panorama and explicit `ORIENT TO THREE CURRENT RELATIONS` | explicit orientation | return to Calibration Margin or City Threshold; no evidence |
+| `TR-10 OBSERVE THREE RELATIONS` | Record suspended-matter/porous, cyclic-pressure/tensioned, and conducted-heat/jointed relations as equal peers | all three deliberate observations in any of six orders | replay Recorded facts; first-unrecorded focus; safe returns |
+| `TR-20 TRACE APPARENT COMMON RETURN` | Record only visible convergence and `purpose=None` | separate common-return observation | reject purpose/destination inference locally; return remains observation, never route |
+| `TR-30 RELATE + SAVE` | Complete strict independent Python and AI-901 chains, bounded review, sanitation, and one atomic local save | four observations + finalized `PY-011` + finalized `RP004-WORKLOAD-01` + verified save | answer-free blank remediation, first-incomplete resume, byte-stable failed write |
+| `TR-40 VERIFY + RETURN` | Restore the local purpose-unknown note without replay | strict read-back and restored controls | return to Calibration Margin or City Threshold; destinationless continuation record may open no route |
 
 ## Player purpose, learning placement, and pacing
 
-If the entry contradiction is resolved without changing the Colonel
-candidate, the existing bounded slice remains integration-sized:
+- **Story purpose:** move from visible plurality to disciplined uncertainty:
+  different physical forms can require different handling and still appear to
+  participate in one larger process without revealing that process's purpose.
+- **Puzzle purpose:** preserve physical observation, executable
+  correspondence, human course taxonomy, and unavailable purpose as separate
+  evidence owners.
+- **Python:** frozen `PY-011` exact `8/8` primary, answer-free remediation,
+  delayed five-dimension trace, and genuinely blank exact `8/8` transfer.
+- **AI-901:** frozen independent
+  `RP004-WORKLOAD-01 / AI901-D1-O4` exact `12/12` primary, `8/8`
+  retrieval, genuinely blank `12/12` transfer, and two separate explanations.
+- **No cross-credit:** entry, route, observation, scenery, motion, sound,
+  presentation, execution display, navigation, focus, accessibility,
+  confidence, timing, hints, save/restore display, and Tour remain zero
+  mastery evidence.
+- **Clean first play:** `34–46 minutes`.
+- **Mastered replay:** `20–28 minutes`.
+- **Protected reference smoke:** under five minutes through real evaluators.
 
-- **player purpose:** relate three sanitized sample forms to three visibly
-  distinct handling relations while preserving the apparent common return and
-  purpose unknown;
-- **observations:** three equal physical relations plus one separate apparent
-  common-return / `purpose=None` observation;
-- **Python placement:** frozen `PY-011` loop primary, answer-free remediation,
-  delayed trace, and genuinely blank transfer;
-- **AI-901 placement:** frozen independent
-  `RP004-WORKLOAD-01 / AI901-D1-O4` primary, retrieval, genuinely blank
-  transfer, and two separate explanations;
-- **no cross-credit:** observation, scenery, movement, presentation,
-  execution display, focus, accessibility, save, return, confidence, timing,
-  and Tour remain zero mastery evidence;
-- **clean first play:** `34–46 minutes`;
-- **mastered replay:** `20–28 minutes`; and
-- **protected smoke target:** under five minutes through real evaluators.
+## Completion state and permitted outputs
 
-Science may check the viability of this held scope, but it may not reopen the
-frozen learning contracts or use technical feasibility to authorize entry.
+The slice may finish only with:
+
+- one strictly sanitized, allowlisted, expedition-owned RP-004 record;
+- three observed form/handling relationships;
+- one apparent-common-return observation with purpose explicitly unknown;
+- independently finalized `PY-011` and `RP004-WORKLOAD-01` evidence;
+- unchanged `continuation`;
+- null city and external deltas;
+- `successor=null`;
+- no live read, route, optimization, control, authority, or world response;
+- strict read-back and no-replay `TR-40` restore; and
+- the existing safe returns.
+
+The optional `RECORD OUTBOUND PHYSICAL CONTINUATION` may record only that a
+physical relation continues beyond the visible reach. Its destination remains
+undefined; it opens no route and cannot expose RP-005.
 
 ## Required versus optional scope
 
-### Required if the hold is cleared
+### Required
 
-- one explicitly authorized predecessor-to-entry transition;
-- exact TD-003 validation and sanitation;
+- exact released TD-003 validation and immutable predecessor bytes;
+- the new fresh Pilot-owned `TD004-RTA-001` transition;
 - `TR-00` through `TR-40` in order;
 - three independent relation observations in all six orders;
-- separate apparent-common-return / purpose-unknown observation;
+- separate apparent-common-return / `purpose=None` observation;
 - strict independent Python and AI-901 chains;
 - conjunctive review with no cross-credit;
-- one allowlisted atomic local save and strict restore;
-- deterministic recovery and both existing-anchor returns;
-- invariant SC-05 and zero live read/control/world effect; and
-- accessible responsive presentation inside the current production envelope.
+- one allowlisted atomic local save and strict read-back;
+- deterministic recovery, write-free returns, and fresh re-entry;
+- invariant SC-04 and SC-05 with zero live read/control/world effect;
+- full responsive/accessibility parity; and
+- Science-approved measurable budget recovery or rebaseline before shell.
 
 ### Optional
 
 - replay of Recorded observations;
 - maintenance-continuity inspection;
-- replica-provenance review;
+- sanitized-replica provenance review;
 - answer-free hints;
 - clear-work and confidence controls with zero credit;
-- early return and exact predecessor re-entry; and
-- a post-restore destinationless physical-continuation record that opens no
-  route.
+- early return and fresh re-entry; and
+- the destinationless post-restore physical-continuation record.
 
-Optional elements may be trimmed for budget or clarity. They may not repair
-the missing entry authority.
+Optional scope may be trimmed for clarity or budget. No optional item may
+replace evidence, create a route, or weaken accessibility, privacy, save,
+recovery, or world invariance.
 
-## Dependencies and risks for Science
+## Dependencies and implementation-distance note
 
-### Existing dependencies
+### Reusable exact dependencies
 
-- exact TD-003 strict record, sanitation, atomic save, rollback, and restore;
-- two known write-free returns;
-- frozen `PY-011` and `RP004-WORKLOAD-01 / AI901-D1-O4` contracts;
-- the pure protected RP-004 journey and related validator;
-- privacy allowlists and Tour isolation;
-- deterministic focus/resume/recovery;
-- offline/no-authority/no-exam-guarantee behavior;
-- invariant SC-04 and planned invariant SC-05; and
-- responsive/accessibility requirements.
+- released TD-003 record sanitizer, adapter, strict restore, and both known
+  returns;
+- seven-modality semantic intent and one-hit token pattern;
+- frozen RP-004 curriculum contract and validator;
+- pure protected `TR-00–TR-40` journey as reference evidence;
+- privacy clearing, Tour isolation, answer-free recovery, atomic save,
+  rollback, verified restore, deterministic focus, and safe-return patterns;
+- SC-05 invariant panoramic scene authority; and
+- existing tiered validation ladder.
 
-### Unresolved blocking dependency
+### New normal capability required
 
-There is no current authorized transition from released `CM-50` or either
-known return into `RP-004 / SC-05 / TR-00`. That is a campaign-route and
-shell-selection blocker, not a technical implementation detail.
+- one production route-choice boundary at exact `CM-50`;
+- one strict adapter from released `rp003.review-save.v1` to transient
+  `TD004-RTA-001` validation;
+- one normal `TR-00–TR-40` integration using the frozen contracts;
+- RP-004 local persistence defined by Science/Mission without altering
+  TD-003 bytes;
+- production SC-05 art/content/UI with responsive and accessible states; and
+- fixtures and release evidence proving the complete new path.
 
-### Measured implementation risk
+The protected journey is reference evidence, not a production import contract.
+Normal integration must reconcile its protected predecessor version with the
+released TD-003 record explicitly.
 
-The released build has only `244` JavaScript bytes, `1` CSS byte, and `3`
-module slots of headroom. A future shell must recover or deliberately
-rebaseline budget before adding a full new landscape and interaction stack.
-Budget pressure cannot justify hiding content, weakening accessibility,
-dropping evidence, or silently exceeding caps.
+### Open Science blocker
+
+Released headroom remains `244` JavaScript bytes, `1` CSS byte, and `3`
+modules. Science must document one measurable recovery or evidence-backed
+rebaseline that can contain the complete quality bar. No role may hide payload,
+drop requirements, weaken presentation/accessibility/evidence/privacy, or
+silently exceed caps.
 
 ## Hard stop and forbidden exposure
 
-The active stop remains exact TD-003 `CM-50 VERIFIED RESTORE` or either known
-write-free return.
+The active TD-004 hard stop is `TR-40 VERIFY + RETURN`.
 
 Do not expose or imply:
 
-- an onward bearing;
-- an RP-004 or SC-05 destination, opening, arrival, route, invitation, or
-  access;
+- RP-005 or any named destination beyond the visible common return;
 - a traversable common return;
-- any native category, purpose, author, audience, identity, permission,
-  reward, judgment, readiness verdict, Machine relation, or world response;
-- a live read, control, route, optimization, service call, external action,
-  Azure/Foundry authority, or exam guarantee;
-- RP-005, RP-013, a successor, post-ending content, or hidden lore; or
-- any mutation of Martin's browser storage or campaign save.
+- RP-013, successor, post-ending content, or hidden lore;
+- native purpose, category, correctness, author, audience, identity,
+  permission, reward, judgment, readiness verdict, or Machine relation;
+- live landscape, terminal, Azure, Foundry, service, credential, endpoint,
+  payload, external action, or world response;
+- city/Builder/Machine invitation, acceptance, refusal, attention, or memory;
+  or
+- any mutation of Martin's real browser storage or campaign save to
+  manufacture evidence.
+
+The route is an expedition navigation decision authorized by Martin. It is
+not authority conferred by the world.
 
 ## Validation and report envelope
 
 | Check | Result |
 |---|---|
-| Colonel candidate maps to exactly one current-source address | `PASS — RP-004 / SC-05 / TR-00–TR-40` |
-| Packet order and protected predecessor predicate are exact | `PASS — structural/protected only` |
-| Released TD-003 exposes the assumed onward bearing | `FAIL — explicitly closed` |
-| Released TD-003 exposes another valid RP-004 transition | `FAIL — none found` |
-| Existing returns can substitute for a new entry | `FAIL — both are write-free returns only` |
-| Planned rail/protected code can substitute for released reachability | `FAIL` |
-| Minimum predecessor evidence and sanitation order defined | `PASS` |
-| Candidate checkpoint, recovery, return, pacing, and dependency stack bounded | `PASS — held behind entry` |
+| Latest explicit instruction authorizes the exact documented transition | `PASS` |
+| No Commandant or Colonel reopen trigger introduced | `PASS` |
+| Exact campaign address and structural predecessor remain current-source | `PASS` |
+| Entry owner, action, one-hit meaning, and validation order defined | `PASS` |
+| Exact retained-record relationship defined without rewriting or permission inference | `PASS` |
+| Failure, duplicate, interruption, reload, return, and re-entry recovery defined | `PASS` |
+| Both released write-free returns preserved and related exactly | `PASS` |
+| RP-004 checkpoint, learning, save, pacing, and completion stack bounded | `PASS` |
 | Common return remains apparent and non-traversable | `PASS` |
 | Sanitized replicas remain separate from live landscape | `PASS` |
-| No destination, permission, reward, identity, authority, response, RP-013, successor, or post-ending content invented | `PASS` |
+| No reward, authority, identity, external action, world response, RP-005 route, RP-013, successor, or post-ending content added | `PASS` |
+| Science budget blocker retained for independent revalidation | `PASS` |
 | Hidden lore / protected work / browser save | Unopened / untouched / uninspected |
 
-- **Current whole-building and playable positions:** whole-story plan through
-  RP-012; released play through TD-003 CM-50 or two known returns
-- **Selected slice:** none; exact current-source candidate address proven but
-  released adjacency rejected
-- **Entry and milestones:** no entry; held `TR-00` through `TR-40` stack
-  recorded without exposure
-- **Exits:** only the two already released TD-003 write-free returns
-- **Required dependencies:** exact TD-003 strict record and a separately
-  authorized fresh transition intent; the latter is missing
-- **Required versus optional scope:** separated above
-- **Pacing:** existing `34–46` minute clean / `20–28` minute mastered target
-  remains coherent if the hold is later cleared
-- **Campaign risks:** planned-bearing promotion, route-by-save, return-as-entry,
-  common-return traversal, budget pressure, and protected-code-as-live-proof
-- **Files changed:** this certificate and `TD-004/STAGE-METRICS.json`
-- **Validation tier:** Tier 1 contract/current-source continuity audit; no
-  runtime or browser state was needed or inspected
-- **Variances:** one blocking predecessor contradiction documented; no
-  implementation variance
-- **Commit:** `PENDING_OPERATIONS_COMMIT`; the dedicated commit containing
-  this artifact is authoritative and Intelligence must reconcile its hash
+- **Disposition:** `FLOOR STACK READY — ROUTE AUTHORIZED`
+- **Resolved variance:** `V4-R01` / missing campaign-route authority resolved
+  by Martin's explicit exact transition approval
+- **Still open:** Science performance-budget decision and complete
+  route/record/privacy/evidence/save/accessibility/offline/world revalidation
+- **Files changed:** this v2 certificate, `TD-004/STAGE-METRICS.json`, and
+  `NEXT_INSTANCE_HANDOFF.md`
+- **Validation tier:** Tier 1 authority/contract/source continuity; no
+  production, browser, storage, or campaign-save mutation
+- **Commit:** `PENDING_OPERATIONS_RETURN_COMMIT`; the dedicated commit
+  containing this certificate is authoritative under the metrics
+  self-reference convention
 - **Synchronization:** local only; no push authorized at this stage
-- **Disposition:** **`HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED`**
 
 ## Exact Office of Science Administrator handoff
 
-Using `GDB-TD004-v1`, `WNMP-TD004-v1`, `CFS-TD004-v1`, Colonel commit
-`61308109e80bbabba181cfd3aa7526613b3a06bc`, and the released TD-003
-reconciliation, perform one bounded viability review of this HOLD.
+Using `GDB-TD004-v1`, `WNMP-TD004-v1`, `CFS-TD004-v2`, Martin's explicit
+route authorization, and return-source commit
+`555496a0b7ef7fb7db51e197b886c97d715f2503`, re-enter Science without
+restarting Commandant or Colonel.
 
-Confirm independently that `RP-004 / SC-05 / TR-00–TR-40` is the exact
-current-source candidate and that its frozen learning, privacy, save,
-recovery, accessibility, offline, invariant-world, and performance envelope
-is technically coherent. Also confirm that technical viability cannot supply
-the missing campaign transition: exact TD-003 validates only through
-`CM-50 VERIFIED RESTORE` and its two known write-free returns, with no onward
-bearing, RP-004 destination, or fresh transition intent.
+Independently validate `TD004-RTA-001`: exact released TD-003 sanitation and
+no-replay `CM-50`; Pilot-owned fresh semantic action; validation before token
+consumption; exactly one transient `TR-00` arrival; no TD-003 rewrite;
+deterministic invalid/duplicate/interruption/reload recovery; unchanged
+write-free Civic Comparison and City Threshold returns; explicit RP-004
+returns; fresh re-entry; zero evidence/cross-credit/authority/world response;
+and the hard stop at `TR-40` before RP-005.
 
-Issue `HOLD` if the missing entry remains unresolved. Do not define or imply a
-route, destination, opening, permission, reward, identity, authority, world
-response, live read/control, later dependency, RP-013, successor, or
-post-ending content. Do not issue implementation instructions or a shell.
-Return any attempt to revive the planned bearing as a released opening to the
-Operations Planning Major; return any new location/canon fact to the Colonel.
-Hand the Mission Captain a viability certificate that either names one
-existing-authority resolution or requires `HOLD — NO SHELL`.
+Then issue a new viability certificate that defines the released-record to
+normal-entry adapter, RP-004 persistence and recovery envelope, complete
+privacy/evidence/accessibility/responsive/offline/invariant-world constraints,
+focused-to-release validation ladder, and one measurable production-budget
+recovery or evidence-backed rebaseline. Do not treat route authorization as
+technical proof, do not modify frozen learning claims, and do not issue
+implementation instructions. Return `VIABILITY READY`, `REVISE`, or `HOLD`
+honestly. Mission may reconsider a shell only after the new Science
+certificate agrees with this floor stack.
