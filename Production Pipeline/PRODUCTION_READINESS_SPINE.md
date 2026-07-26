@@ -2,28 +2,40 @@
 
 ## TD-005 Science current control - 2026-07-26
 
-- **Disposition:** `HOLD - NO AUTHORIZED ENTRY / NO SHELL`.
-  `RP-005 / SC-06 / MF-00-MF-30` is a technically coherent protected
-  candidate, but exact released play ends at TD-004 TR-40, either approved
-  return, or destinationless non-routing notation. No current fresh Pilot
-  intent, dispatcher, destination presentation, or SC-06 mount exists.
-- **Boundary:** technical feasibility, protected predicates, packet order,
-  common-return geometry, destinationless notation, residual bundle capacity,
-  and recurring automation cannot create campaign authority. MF and SC-06
-  remain unreachable and production-unexposed.
-- **Learning/system evidence:** frozen RP-005 mapping self-test passes and
-  protected/TD-004 connected focused tests pass `38/38`; this proves bounded
-  reference logic only, not normal entry or release.
-- **Fresh production evidence:** `183` modules; `12.70s`; JS `1,247,724`
-  bytes; CSS `85,151` bytes; runtime media `21,536,123` bytes;
-  `PBA-TD004-v1 PASS`. Exact released identities are unchanged.
-- **Budget control:** no TD-005 budget authority is issued without a selected
-  address, authorized entry, shell, asset requirement, or measurable
-  candidate delta. TD-004 residuals do not roll forward.
-- **Mission stop:** Mission Captain must record `HOLD - NO SHELL` and return
-  the missing transition to Operations. No shell, Marine deployment,
-  implementation instruction, production asset, fixture, or RP-006 exposure
-  is authorized.
+- **Disposition:** `VIABILITY READY / VE-TD005-v2 / MISSION NEXT`.
+  Standing adjacent-transition authority and `CFS-TD005-v2` define
+  `TD005-RTA-001` as the sole fresh Pilot-owned action from exact released
+  TD-004 TR-40/SC-05 to one transient zero-evidence MF-00/SC-06 arrival.
+  Common-return geometry and destinationless notation remain non-routing.
+- **Record control:** TD-004 bytes remain immutable. RP-005 uses dedicated key
+  `horizon-archive-rp005-manyfold-return-save-v1`, version
+  `rp005.manyfold-return-save.v1`, exact ten-key/eight-record allowlist,
+  strict sanitation, one atomic replacement, exact read-back, verified
+  rollback, replay-free MF-30 restore, and TR-40 recovery for unsaved/invalid
+  re-entry.
+- **Evidence control:** four observations, strict `PY-012`, independent
+  `RP005-TEXT-01 / AI901-D1-O5`, and two explanations remain separate
+  conjuncts. Scenery, frequency, route, focus, modality, timing,
+  presentation, Tour, and save/restore display remain zero-credit.
+- **Accessibility/system control:** seven modalities, validation-before-token
+  consumption, heading-first deterministic focus, one polite atomic status,
+  `>=44px` targets, exact desktop/laptop/narrow/effective-zoom layouts,
+  forced-color, reduced-motion, grayscale, offline/no-authority/Tour
+  isolation, invariant SC-05/SC-06, exact returns, and hard MF-30 stop.
+- **Budget:** `PBA-TD005-v1` is a fresh one-time non-compounding authority:
+  JS `<=1,310,110`, CSS `<=89,408`, modules `<=192`, and at most two new
+  image-only runtime assets totaling `<=8,388,608` bytes. Total runtime media
+  `<=29,924,731`; no new audio/font/video/network payload. Maximum-quality
+  visual, provenance, accessibility, responsive, and human review gates
+  remain mandatory.
+- **Executable control:** `scripts/validate_td005_budget.py` passes the exact
+  TD-004 baseline and fails deliberate module, build, release-timing,
+  disallowed-audio, and three-image probes. Fresh focused `38/38`, related
+  `58/58`, full `806/806`, and 183-module build pass.
+- **Mission boundary:** Mission may issue
+  `SS-RP005-MANYFOLD-RETURN-v1 SHELL READY` only after conflict-free
+  reconciliation. No Marine work begins before that push gate; no RP-006,
+  RP-013, successor, authority, response, or world effect is authorized.
 
 ## TD-004 Intelligence Officer current control — 2026-07-26
 

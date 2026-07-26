@@ -1,0 +1,136 @@
+{
+  "schema": "horizon-archive.production-budget-authority",
+  "schemaVersion": 1,
+  "authorityId": "PBA-TD005-v1",
+  "testDrive": "TD-005",
+  "sliceId": "TD-005-RP005-MANYFOLD-RETURN-v1",
+  "campaignAddress": "RP-005 / SC-06 / MF-00-MF-30",
+  "basis": {
+    "acceptedRelease": "TD-004 / SS-RP004-THREE-CURRENT-v1",
+    "releaseAuthority": "Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md",
+    "measuredAtCommit": "9d3829563d783f9069332417f79bae360d9b9114",
+    "measuredOn": "2026-07-26",
+    "buildCommand": "npm run build",
+    "buildSeconds": 11.13,
+    "modules": 183,
+    "javascript": {
+      "name": "index-CynBBXnS.js",
+      "bytes": 1247724,
+      "sha256": "875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409"
+    },
+    "css": {
+      "name": "index-DVnUbAwl.css",
+      "bytes": 85151,
+      "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+    },
+    "runtimeMediaBytes": 21536123,
+    "runtimeMedia": [
+      {
+        "name": "basin_audio-D7yN7Fu4.wav",
+        "bytes": 96044,
+        "sha256": "AB396955D4533B7D73676D3271DABF9B9DE68EE4C5A4AEBE3CEC80DDB5756030"
+      },
+      {
+        "name": "city-threshold-access-master-CTF9U6Ho.png",
+        "bytes": 3076970,
+        "sha256": "E03FCFFEB1AAF941E9EE8C5A4EA9C840B4F90271353FDF0B26F51350421C7B4E"
+      },
+      {
+        "name": "city-threshold-boundary-master-CPr5uvhv.png",
+        "bytes": 2990550,
+        "sha256": "8A932F027A0DB79DF7D24EAC6803B0ADE45BEB3E9099E48C324D887E38DE3E4A"
+      },
+      {
+        "name": "city-threshold-overview-master-BaTX4tqK.png",
+        "bytes": 2626795,
+        "sha256": "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"
+      },
+      {
+        "name": "civic-record-district-arrival-master-v1-BYTUil6H.png",
+        "bytes": 2594095,
+        "sha256": "FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C"
+      },
+      {
+        "name": "drowned-archive-master-eoqmWy_0.png",
+        "bytes": 2727857,
+        "sha256": "AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED"
+      },
+      {
+        "name": "glass-meadow-integrated-terminal-master-v1-CsiDmSf1.png",
+        "bytes": 2688247,
+        "sha256": "6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2"
+      },
+      {
+        "name": "sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp",
+        "bytes": 2163752,
+        "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F"
+      },
+      {
+        "name": "witness-corridor-master-BLfy2vNi.png",
+        "bytes": 2571813,
+        "sha256": "EEA780A0E0AF3E57497552601E00AD80851036C26CD29AB512C0E25EF3E0C4CF"
+      }
+    ]
+  },
+  "policy": {
+    "kind": "one-time-noncompounding-current-release-rebaseline",
+    "javascriptAndCssRule": "floor(accepted TD-004 aggregate production bytes * 1.05)",
+    "moduleRule": "floor(accepted TD-004 production modules * 1.05)",
+    "runtimeMediaRule": "at most two new image-only runtime assets totaling at most 8 MiB above the exact accepted TD-004 media hash set",
+    "plannedRuntimeImageRoles": [
+      "SC-06 panoramic world identity",
+      "SC-06 registered forensic detail identity"
+    ],
+    "notARollingEntitlement": true,
+    "qualityRequirementsRemainMandatory": true,
+    "allOutputChunksCount": true,
+    "allNewRuntimeAssetsCount": true,
+    "acceptedRuntimeMediaMustRemainPresent": true,
+    "sourceMapsDoNotHideRuntimePayload": true,
+    "futureOverageRequiresScienceMissionVariance": true
+  },
+  "caps": {
+    "aggregateJavascriptBytes": 1310110,
+    "aggregateCssBytes": 89408,
+    "productionModules": 192,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608,
+    "totalRuntimeMediaBytes": 29924731,
+    "allowedNewRuntimeMediaExtensions": [
+      ".avif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".webp"
+    ],
+    "forbiddenNewRuntimeMediaClasses": [
+      "audio",
+      "font",
+      "video",
+      "network-fetched-payload"
+    ],
+    "productionBuildSeconds": 60,
+    "focusedSuiteSeconds": 30,
+    "relatedSuiteSeconds": 60,
+    "fullSuiteSeconds": 60,
+    "completeE2ESeconds": 180,
+    "sampledMainThreadTaskMs": 100
+  },
+  "headroom": {
+    "javascriptBytes": 62386,
+    "cssBytes": 4257,
+    "productionModules": 9,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608
+  },
+  "requiredQualityGates": [
+    "runtime images remain maximum-quality cinematic photorealistic first-person world identities; byte caps never authorize visible degradation",
+    "each runtime image has direct import, emitted byte and SHA-256 identity, provenance, accessible alternative treatment, responsive crops, grayscale review, and explicit placeholder retirement",
+    "every emitted JavaScript and CSS chunk is aggregated",
+    "every runtime media asset is classified by SHA-256 against the accepted TD-004 set",
+    "all accepted TD-004 runtime media identities remain present",
+    "new runtime audio, font, video, and network payloads are rejected",
+    "focused, related, full, validator, build, served identity, non-overlapping E2E, responsive/accessibility review, fixture exclusion, QA restoration, and as-built reconciliation remain mandatory",
+    "quality, learning evidence, privacy, sanitation, accessibility, responsive behavior, save/recovery, offline behavior, and invariant-world limits cannot be reduced to meet a cap"
+  ]
+}
