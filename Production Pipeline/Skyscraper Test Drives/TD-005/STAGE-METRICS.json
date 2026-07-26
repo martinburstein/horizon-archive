@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-005",
-    "shellCandidate": "UNSELECTED",
+    "shellCandidate": "SS-RP005-MANYFOLD-RETURN-v1",
     "campaignAddress": "RP-005 / SC-06 / MF-00–MF-30",
     "sourceCommit": "e3f1fb3b71a9940989e6af646fab1c22cc945e80",
     "timezone": "America/New_York",
@@ -109,6 +109,22 @@
       "commit": "PENDING_SCIENCE_RETURN_COMMIT",
       "commitConvention": "The dedicated returned Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 8,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-26T23:31:48.3457002Z",
+      "endedAt": "2026-07-26T23:42:55.7145993Z",
+      "durationMs": 667369,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/05-PLAYABLE-SLICE-SHELL.md",
+      "shellId": "SS-RP005-MANYFOLD-RETURN-v1",
+      "supersedes": "MC-TD005-HOLD-v1",
+      "returnFrom": "Office of Science Administrator / VE-TD005-v2",
+      "commit": "PENDING_MISSION_SHELL_COMMIT",
+      "commitConvention": "The dedicated returned Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "shell-ready-push-gate"
     }
   ]
 }

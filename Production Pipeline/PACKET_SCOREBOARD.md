@@ -1,5 +1,18 @@
 # Rail Packet Scoreboard
 
+## TD-005 Mission shell control — 2026-07-26
+
+- **RP-005 construction status:** `SHELL READY /
+  SS-RP005-MANYFOLD-RETURN-v1`. Mission's conflict-free shell freezes the
+  Pilot-owned `TD005-RTA-001`, MF-00-MF-30 graph, exact scene identities,
+  separate strict evidence, private-free atomic record/rollback/restore,
+  seven modalities, responsive/accessibility fixture, invariant world,
+  exact returns, two-image runtime plan, and `PBA-TD005-v1`.
+- **Working edge:** Reconnaissance Sergeant is next. RP-005 remains
+  unreleased and normal integration remains unbuilt. No Marine may widen the
+  shell; no common-return route, later packet, purpose/identity, access,
+  reward, authority, successor, or world response is opened.
+
 ## TD-005 Operations return control — 2026-07-26
 
 - **RP-005 placement gate:** `PASS — FLOOR STACK READY / CFS-TD005-v2`.

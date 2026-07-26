@@ -1,5 +1,35 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-005 Mission current control - 2026-07-26
+
+- **Disposition:** `SHELL READY / SS-RP005-MANYFOLD-RETURN-v1`.
+  Mission reconciled `GDB-TD005-v1`, `WNMP-TD005-v1`, `CFS-TD005-v2`,
+  `VE-TD005-v2`, and `PBA-TD005-v1` without conflict. The historical Mission
+  HOLD is superseded; Marine construction may begin only from this exact
+  pushed shell.
+- **Route and graph:** `TD005-RTA-001` alone provides one validated,
+  fresh-token, Pilot-owned, zero-evidence TR-40/SC-05 to MF-00/SC-06
+  transition. MF-00 through MF-30, exact state/scene identity, immutable
+  TD-004 bytes, deterministic failure/re-entry, and exact returns are frozen.
+- **Evidence and record:** four observations, strict independent `PY-012`,
+  `RP005-TEXT-01`, and two explanations are conjunctive with zero
+  presentation cross-credit. RP-005 uses the exact ten-key/nine-note-key/
+  eight-record allowlist, private/transient denylist, one atomic replacement,
+  strict read-back, verified rollback, and replay-free MF-30 restore.
+- **Presentation and assets:** seven modalities, deterministic focus/status,
+  exact desktop/laptop/narrow/effective-zoom layouts, forced colors, reduced
+  motion, grayscale, closed fixture, offline/Tour/world invariance, and the
+  two-image-only SC-06 panorama/detail runtime plan are fixed. Runtime crops
+  sample those masters; no extra image, audio, font, video, or network
+  payload is authorized.
+- **Budget and release:** `PBA-TD005-v1` remains one-time and
+  non-compounding. Normal RP-005 is not yet integrated or released. Hard stop
+  is MF-30 before any RP-006 route, RP-013, successor, purpose/identity,
+  access/reward/authority, world response, or post-ending content.
+- **Exact next stage:** Reconnaissance Sergeant creates one bounded creative
+  treatment inside the shell and returns `CREATIVE LOCK`, `REVISE`, or
+  `HOLD`; no structural requirement may be silently changed.
+
 ## TD-005 Science current control - 2026-07-26
 
 - **Disposition:** `VIABILITY READY / VE-TD005-v2 / MISSION NEXT`.

@@ -1,5 +1,20 @@
 # Horizon Archive Story Rail Map
 
+## TD-005 Mission shell control — 2026-07-26
+
+- **Construction gate:** `SHELL READY /
+  SS-RP005-MANYFOLD-RETURN-v1`. The selected adjacent rail remains
+  `RP-005 / SC-06 / MF-00-MF-30`; `TD005-RTA-001` is the sole Pilot-owned
+  entry from exact released TD-004 TR-40. MF-00 through MF-30, immutable
+  predecessor bytes, exact RP-005 record/recovery, evidence firewall,
+  accessibility/responsive/offline/Tour/world limits, two-image budget, and
+  exact returns are frozen for sequential Marine construction.
+- **Release position unchanged:** RP-005 is not live until Intelligence
+  releases the as-built shell. The apparent common return and destinationless
+  notation remain non-routing. MF-30 is the hard stop before RP-006,
+  RP-013, successor, purpose/identity, access/reward/authority, response, or
+  post-ending exposure.
+
 ## TD-005 Operations return control — 2026-07-26
 
 - **Selected adjacent rail:** `FLOOR STACK READY — ROUTE AUTHORIZED /

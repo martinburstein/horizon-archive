@@ -1,5 +1,21 @@
 # RP-005 — Manyfold Return
 
+## TD-005 Mission shell — 2026-07-26
+
+- **Disposition:** `SHELL READY /
+  SS-RP005-MANYFOLD-RETURN-v1`; Marine construction begins with
+  Reconnaissance Sergeant.
+- **Frozen build contract:** exact released TD-004 bytes and SC-05 identity;
+  sole Pilot-owned `TD005-RTA-001`; one zero-evidence MF-00 arrival;
+  MF-00-MF-30 graph; exact RP-005 record, sanitation, atomic rollback,
+  replay-free restore, evidence firewall, seven modalities, responsive/
+  accessibility/offline/Tour/world invariance, exact returns, two SC-06
+  runtime images, and `PBA-TD005-v1`.
+- **Release boundary:** normal RP-005 remains unimplemented and unreleased.
+  MF-30 remains the stop before any RP-006 route, RP-013, successor,
+  purpose/identity, access, reward, authority, response, or post-ending
+  content.
+
 ## TD-005 Operations route selection — 2026-07-26
 
 - **Planning disposition:** `FLOOR STACK READY — ROUTE AUTHORIZED /
