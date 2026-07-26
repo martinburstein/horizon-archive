@@ -1,7 +1,12 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import calibrationMarginImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import threeCurrentReachImage from "../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
-import { threeCurrentReachActions } from "./ThreeCurrentReachNormal.js";
+import {
+  resolveThreeCurrentReachWorldScene,
+  threeCurrentReachActions,
+  threeCurrentReachWorldPlateIds,
+} from "./ThreeCurrentReachNormal.js";
 
 const headings = Object.freeze({
   cm50_route: "Depart from the verified expedition note",
@@ -405,7 +410,17 @@ export function ThreeCurrentReach({
     );
   }
 
-  const worldAlt = state.boardState === "SC-04"
+  const worldScene = resolveThreeCurrentReachWorldScene(state);
+  const showThreeCurrentReach = worldScene?.assetId
+    === threeCurrentReachWorldPlateIds.threeCurrentReach;
+  const worldImage = showThreeCurrentReach
+    ? threeCurrentReachImage
+    : calibrationMarginImage;
+  const worldAssetId = showThreeCurrentReach
+    ? threeCurrentReachWorldPlateIds.threeCurrentReach
+    : threeCurrentReachWorldPlateIds.calibrationMargin;
+  const worldSceneId = showThreeCurrentReach ? "SC-05" : "SC-04";
+  const worldAlt = worldSceneId === "SC-04"
     ? "The restored Calibration Margin remains unchanged at its three-choice navigation boundary"
     : "A vast first-person working reach where suspended matter, cyclic pressure, and conducted heat follow three equally legible handling relations toward an apparent capped return";
 
@@ -418,10 +433,15 @@ export function ThreeCurrentReach({
         data-phase={state.phase}
         data-active-group={state.activeGroup}
       >
-        <section className="city-world three-current-world" aria-label={`${state.boardState} invariant world`}>
+        <section
+          className="city-world three-current-world"
+          aria-label={`${worldSceneId} invariant world`}
+          data-world-scene={worldSceneId}
+          data-world-master={worldAssetId}
+        >
           <img
             className="city-world-plate city-world-plate-native"
-            src={threeCurrentReachImage}
+            src={worldImage}
             alt={worldAlt}
           />
         </section>

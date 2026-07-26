@@ -47,6 +47,31 @@ export const threeCurrentReachObservationIds = Object.freeze([
   "conducted_heat_jointed_relation",
 ]);
 
+export const threeCurrentReachWorldPlateIds = Object.freeze({
+  calibrationMargin:
+    "city-threshold-overview-master.png",
+  threeCurrentReach:
+    "sc05-three-current-panorama-runtime-master-v1.webp",
+});
+
+export function resolveThreeCurrentReachWorldScene(state) {
+  if (state?.boardState === "SC-04" && state?.activeGroup === "cm50_route") {
+    return Object.freeze({
+      sceneId: "SC-04",
+      assetId: threeCurrentReachWorldPlateIds.calibrationMargin,
+    });
+  }
+  if (state?.boardState === "SC-05"
+    && typeof state?.activeGroup === "string"
+    && state.activeGroup.startsWith("tr")) {
+    return Object.freeze({
+      sceneId: "SC-05",
+      assetId: threeCurrentReachWorldPlateIds.threeCurrentReach,
+    });
+  }
+  return null;
+}
+
 const actionForObservation = Object.freeze({
   [threeCurrentReachActions.observeSuspended]: threeCurrentReachObservationIds[0],
   [threeCurrentReachActions.observeCyclic]: threeCurrentReachObservationIds[1],

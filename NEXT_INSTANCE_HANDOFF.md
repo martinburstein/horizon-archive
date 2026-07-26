@@ -15,35 +15,34 @@ No recurring automation is active. Do not schedule another shell.
 - Shell: `SS-RP004-THREE-CURRENT-v1`
 - Slice: `TD-004-RP004-THREE-CURRENT-v1`
 - Campaign address: `RP-004 / SC-05 / TR-00-TR-40`
-- Candidate: corrected Image Specialist commit
-  `f6a8deec3bd68c33714c25957eff29cf21dbfbec`
+- Candidate: dedicated Combat Engineer `TD004-VAR-002` correction commit;
+  resolve immutable hash from Git history
 - Released functional base / current `origin/main`:
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`
 - Intelligence disposition: **`REVISE - NOT AS BUILT RELEASED`**
 - Resolved finding: `TD004-VAR-001` —
   **`REQUIRED CORRECTION RESOLVED`**
-- Blocking finding: `TD004-VAR-002` —
-  **`REQUIRED CORRECTION`**
-- Return owner: Combat Engineer / `combat_engineer`
+- Current finding: `TD004-VAR-002` —
+  **`REQUIRED CORRECTION IMPLEMENTED — PENDING DOWNSTREAM REVALIDATION`**
+- Return owner: Quartermaster / `quartermaster`
 - Full evidence:
   `Production Pipeline/Skyscraper Test Drives/TD-004/11-AS-BUILT-RECONCILIATION.md`
 
 TD-003 remains the accepted released playable boundary. TD-004 is not
 `AS BUILT RELEASED`; no playable-demo, rail, packet, expedition, curriculum,
 gameplay, visual-master, or successor control advances from this candidate.
-Do not push or publish this candidate before Combat Engineer correction,
-Quartermaster and Image Specialist revalidation, and fresh Intelligence
-release.
+Do not push or publish this candidate before Quartermaster and Image
+Specialist revalidation and fresh Intelligence release.
 
 ## Passing evidence retained for revalidation
 
-- focused TD-004 suite `19/19`;
-- selected related TD-003/TD-004 suite `55/55`;
-- full game `805/805`;
+- focused TD-004 suite `22/22`;
+- selected related TD-003/TD-004 suite `136/136`;
+- full game `806/806`;
 - readiness validators `15/15`;
-- build `183` modules in `14.84s`;
-- JS `index-589WID4d.js`, `1,247,036` bytes, SHA-256
-  `ABAAF0A8DA6B11AB55A862917622F9AE0EEB5938E16041B5722D12A3C55435C4`;
+- build `183` modules in `14.11s`;
+- JS `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256
+  `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`;
 - CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
   `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`;
 - directly imported SC-05 master
@@ -53,8 +52,8 @@ release.
 - aggregate runtime media `21,536,123` bytes; new runtime media
   `2,163,752`;
 - `PBA-TD004-v1 PASS`;
-- root, JS, CSS, and SC-05 master HTTP `200`, with served bytes/hashes
-  identical to `dist`;
+- root, JS, CSS, accepted SC-04 master, and registered SC-05 master HTTP
+  `200`, with served bytes/hashes identical to `dist`;
 - exactly one complete post-build non-overlapping E2E in `109.563s`, all
   emitted gates true, credits reached, `runtimeErrors:false`;
 - five representative closed fixture states across 20 exact DPR-1
@@ -69,7 +68,7 @@ release.
 - the one reveal's exact hash, dimensions, provenance, and unchanged
   reference-only status pass; correction added zero generations.
 
-## Fresh Intelligence classification
+## Combat Engineer correction checkpoint
 
 `TD004-VAR-001` is resolved. Quartermaster retired
 `TD004-ASSET-SC05-PLACEHOLDER`; `ThreeCurrentReach.jsx` directly imports the
@@ -85,12 +84,19 @@ The exact reveal source remains byte-for-byte unchanged, reference-only,
 with generation count exactly `1`. No second generation, edit, or replacement
 is authorized.
 
-The candidate still does not release. At exact restored CM-50,
-`CalibrationMarginNormalEntry.js` immediately mounts the RP-004 controller;
-`App.jsx` selects `ThreeCurrentReach`; and that renderer unconditionally
-uses the SC-05 image even while `boardState` remains `SC-04`. The exact
-route-ready state visibly exposes SC-05 before fresh `TD004-RTA-001`.
-This is `TD004-VAR-002 REQUIRED CORRECTION`.
+`TD004-VAR-002` is locally corrected. Exact restored
+`CM-50 / cm50_route / SC-04` now resolves to the accepted City Threshold
+overview. Only accepted `SC-05` states from `tr00_orient` onward resolve to
+the registered Three-Current master. Invalid route intent, malformed scene
+state, and interrupted pre-save reload fail closed to SC-04; the write-free
+RP-004 return also restores SC-04.
+
+Focused regression asserts image/scene identity at CM-50, accepted TR-00,
+invalid intent, interrupted pre-save reload, and RP-004 return. Route
+semantics, tokens, evidence, save/rollback, content, layout, assets,
+provenance, reveal, and world invariance are unchanged. The candidate remains
+`REVISE - NOT AS BUILT RELEASED` pending sequential Quartermaster, Image
+Specialist, and fresh Intelligence revalidation.
 
 ## Continuing protections
 
@@ -113,12 +119,13 @@ This is `TD004-VAR-002 REQUIRED CORRECTION`.
 
 ## Exact next action
 
-Resume only the **Combat Engineer** from the dedicated Intelligence REVISE
-commit. Correct normal state-to-presentation mapping so exact CM-50 retains
-the accepted SC-04 world and the SC-05 master first appears only after one
-accepted fresh `TD004-RTA-001` reaches TR-00. Add focused image-identity
-coverage for exact CM-50, accepted TR-00, and the write-free return to CM-50.
-Preserve all action/token, return, persistence, accessibility, budget, asset,
-reveal, and hard-stop contracts. Then return sequentially through
-Quartermaster, Image Specialist, and one fresh complete Intelligence Tier 5.
-Do not begin a new Commandant shell.
+Resume only the **Quartermaster** from the dedicated local Combat Engineer
+correction commit. Revalidate that all retired TD-004 copy placeholders and
+the retired SC-05 asset placeholder remain exact while CM-50 uses the
+accepted SC-04 master, accepted TR-00 onward uses SC-05, invalid/interrupted
+pre-save paths remain SC-04, and RP-004 return restores SC-04. Change no
+content, assets, provenance, controller, layout, reveal, or budget unless an
+exact regression is found. Record `CONTENT COMPLETE — REVALIDATED`, `REVISE`,
+or `HOLD`; then return sequentially to Image Specialist revalidation and one
+fresh complete Intelligence Tier 5. Do not push, publish, or begin a new
+Commandant shell.

@@ -15,7 +15,7 @@
 | Campaign address | `RP-004 / SC-05 / TR-00-TR-40` |
 | Production budget | `PBA-TD004-v1` |
 | Validation tier | Tiers 2-4 |
-| Disposition | **`FUNCTIONALLY COMPLETE`** |
+| Disposition | **`FUNCTIONALLY COMPLETE — CORRECTED (TD004-VAR-002)`** |
 
 ## Exact build objective
 
@@ -41,6 +41,32 @@ TD-003 remains independently byte-stable. No action creates cross-credit,
 authority, a live-system effect, a traversable common return, a successor, or
 a world response.
 
+## Intelligence return correction checkpoint
+
+Fresh Intelligence commit
+`dfc8544e5f7741b93e49e6d01a567ba68f6939f1` classified
+`TD004-VAR-002` as a required functional correction. The controller correctly
+reported `SC-04` at exact restored CM-50, but the shared TD-004 renderer
+unconditionally selected the registered SC-05 master before the fresh route
+action.
+
+The correction is deliberately limited to state-to-scene presentation:
+
+- exact `CM-50 VERIFIED RESTORE / cm50_route / SC-04` resolves to the accepted
+  `city-threshold-overview-master.png`;
+- only exact `SC-05` states whose active group begins at accepted
+  `tr00_orient` or later resolve to
+  `sc05-three-current-panorama-runtime-master-v1.webp`;
+- malformed state combinations fail closed to the SC-04 presentation;
+- an invalid route intent remains at SC-04;
+- a pre-save interruption/reload reconstructs CM-50 and SC-04 because the
+  transient arrival is not durable; and
+- `RETURN TO CALIBRATION MARGIN` clears the transient RP-004 route and restores
+  the exact SC-04 presentation.
+
+No route, action, token, evidence, save, rollback, content, layout, asset,
+provenance, reveal, or world-invariance contract changed.
+
 ## Functional work completed
 
 ### Normal route, state, and action authority
@@ -65,6 +91,9 @@ separate from `ThreeCurrentReachProtectedJourney.js`.
   Threshold as authorized.
 - Optional outbound notation records only
   `destination=null`, `routeOpened=false`, and `successor=null`.
+- The renderer now resolves world identity from the exact controller
+  `boardState` plus active-group boundary: SC-04 at CM-50, SC-05 only from
+  accepted TR-00 onward, and SC-04 as the fail-closed fallback.
 
 `CalibrationMarginNormalEntry.js` mounts this controller only from the exact
 strict TD-003 record. It preserves the existing controller and both released
@@ -126,7 +155,7 @@ cross-credited, or replayed.
 ### Renderer and responsive/accessibility behavior
 
 `ThreeCurrentReach.jsx` composes the slice in the canonical first-person frame
-without final art:
+with both accepted world identities:
 
 - one focusable `h1`, one visible owner, one content/action group, and one
   polite atomic live region;
@@ -140,8 +169,10 @@ without final art:
 - `>=44px` controls, desktop split, natural narrow/zoom reflow, no intended
   horizontal escape, forced-color compatibility, and reduced-motion parity.
 
-The renderer temporarily reuses the unchanged City Threshold overview as an
-honest atmosphere placeholder. It is not claimed as an SC-05 master.
+The exact accepted City Threshold overview remains the SC-04 predecessor
+plate. The separately registered SC-05 runtime master appears only after the
+fresh accepted `TD004-RTA-001` state transition. Both remain invariant within
+their own scenes.
 
 ### Closed fixture
 
@@ -185,15 +216,16 @@ normal production imports and the built production bundle.
 
 | Gate | Result |
 |---|---|
-| Focused TD-004 + connected TD-003 suite | PASS, `18/18` |
-| Full game suite | PASS, `802/802`, `9.901s` test duration |
+| Focused TD-004 + connected TD-003 suite | PASS, `22/22` |
+| Related TD-003/TD-004 suite | PASS, `136/136` |
+| Full game suite | PASS, `806/806`, `9.644s` test duration |
 | Readiness validator self-tests | PASS, `15/15`: `CUM-01`, `RP-002` through `RP-012`, `SIM-01` through `SIM-03` |
-| Production build | PASS, `182` modules, `15.902s` |
-| Sampled main-thread/focused case | PASS, individual route/controller cases remained below `100ms`; the `150.415ms` aggregate fixture case constructs all 34 scenarios and is not one runtime task |
-| JavaScript budget | PASS, `1,237,250` bytes, `17,899` bytes below cap |
-| CSS budget | PASS, `83,699` bytes, `2,090` bytes below cap |
-| Runtime media | PASS, `19,372,371` total; `0` new bytes |
-| Production served identity | PASS, owned `127.0.0.1:5184`; root/JS/CSS HTTP `200`; served byte lengths equal `dist`; owned PID stopped; port clear |
+| Production build | PASS, `183` modules, `14.11s` |
+| Sampled main-thread/focused case | PASS, individual route/controller cases remained below `100ms`; the `170.247ms` aggregate fixture case constructs all 34 scenarios and is not one runtime task |
+| JavaScript budget | PASS, `1,247,724` bytes, `7,425` bytes below cap |
+| CSS budget | PASS, `85,151` bytes, `638` bytes below cap |
+| Runtime media | PASS, `21,536,123` total; `2,163,752` new image-only bytes |
+| Production served identity | PASS, owned `127.0.0.1:5184`; root/JS/CSS/SC-04/SC-05 HTTP `200`; served bytes and SHA-256 identities equal `dist`; owned PID stopped; port clear |
 | Fixture lifecycle | PASS, owned `127.0.0.1:4176`; root HTTP `200` with exact marker; only owned PID stopped; port clear |
 | Fixture production exclusion | PASS, marker/ID/path/scenario/protected-module scans returned no production match |
 | Patch integrity | PASS, `git diff --check` |
@@ -208,9 +240,10 @@ does not claim those results.
 
 | Artifact | Candidate identity |
 |---|---|
-| JavaScript | `index-eb39pAwv.js`, `1,237,250` bytes, SHA-256 `EF2BC8ED3CB8856DD7A8C44FA3707C78C201E42FE84CD607246709B0DFE51456` |
-| CSS | `index-KrTPDfvo.css`, `83,699` bytes, SHA-256 `3F9B98753E35D998664410988788B44B61A474A86E8F37DB6E00AFEA128761BE` |
-| Reused temporary atmosphere | `city-threshold-overview-master.png`, `2,626,795` bytes, SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D` |
+| JavaScript | `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256 `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409` |
+| CSS | `index-DVnUbAwl.css`, `85,151` bytes, SHA-256 `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985` |
+| Accepted SC-04 predecessor | `city-threshold-overview-master-BaTX4tqK.png`, `2,626,795` bytes, SHA-256 `1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D` |
+| Accepted SC-05 destination | `sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F` |
 
 ## Quartermaster placeholder ledger
 
@@ -227,7 +260,7 @@ does not claim those results.
 | `TD004-COPY-SAVE` | transaction/failure/read-back statuses | retain local/offline/all-or-none/last-good semantics without upload or ceremony |
 | `TD004-COPY-TR40` | restored note and continuation | retain no replay, purpose unknown, destinationless notation, and exact returns |
 | `TD004-COPY-NEGATIVE-AUTHORITY` | persistent footer | retain offline/no-live/no-authority/no-exam/no-world-response limits |
-| `TD004-ASSET-SC05-PLACEHOLDER` | reused City Threshold overview | record unchanged provenance; replace or explicitly retain only under later visual authority |
+| `TD004-ASSET-SC05-PLACEHOLDER` | retired by accepted Quartermaster correction `82fc431ff7209165039b49af41c8ed96cc9169e3` | preserve the exact registered SC-05 master and its provenance; do not change the SC-04/SC-05 route boundary |
 | `TD004-STYLE-STRUCTURAL` | new bounded CSS | Quartermaster changes copy only; Image Specialist owns final presentation |
 
 No functional placeholder remains. Quartermaster may refine bounded
@@ -239,23 +272,23 @@ fixture boundary, world behavior, budget, or hard stop.
 
 ### Defects
 
-**None open.**
+**None open at Combat Engineer scope.**
 
 ### Variances
 
-**None.** The implementation follows the issued state graph, route, learning
-identities, persistence contract, owner/focus/status grammar, return set,
-fixture identity, production budgets, and hard stop.
+`TD004-VAR-002` is **`REQUIRED CORRECTION IMPLEMENTED — PENDING DOWNSTREAM
+REVALIDATION`**. The exact image/scene identity boundary now follows the
+issued entry and TR-00 contract. Quartermaster and Image Specialist must
+revalidate their unchanged content/presentation contracts before fresh
+Intelligence may classify the variance resolved.
 
 ### Honest limitations
 
-1. The inherited City Threshold overview is a temporary SC-05 atmosphere
-   placeholder, not an accepted SC-05 master.
-2. Final surface copy and asset disposition remain Quartermaster work.
-3. Final art, exact viewport polish, and reveal remain Image Specialist work.
-4. Browser/device persistence was validated with closed adapters, not
+1. The predecessor and destination masters are both production assets;
+   downstream roles must revalidate their corrected route-boundary use.
+2. Browser/device persistence was validated with closed adapters, not
    Martin's actual storage, which remained untouched.
-5. Human assistive-technology and physical-switch results remain unclaimed.
+3. Human assistive-technology and physical-switch results remain unclaimed.
 
 ## Protected boundaries
 
@@ -306,47 +339,50 @@ fixture identity, production budgets, and hard stop.
 - Tactical predecessor:
   `40552d911c8dfbf5d5bc8fe5099bac2ae840df6c`.
 - Dedicated Combat Engineer commit:
+  `PENDING_COMBAT_CORRECTION_COMMIT`.
+- This is an Intelligence return loop. Per the exact handoff, create one
+  dedicated local commit and do **not** push before downstream revalidation
+  and fresh Intelligence release.
+- Released `origin/main` remains
   `95fb6402c281ec1294bdb76582de04e80f3f3cb9`.
-- Push gate: push `main` after this exact package is committed.
-- Required synchronization: verify `HEAD == origin/main` before Quartermaster.
 
 ## Disposition
 
-**`FUNCTIONALLY COMPLETE`**
+**`FUNCTIONALLY COMPLETE — CORRECTED (TD004-VAR-002)`**
 
-The complete bounded TD-004 behavior through TR-40 is implemented and passes
-Tiers 2-4. Quartermaster owns final surface copy and asset accounting; Image
-Specialist owns final presentation and one reveal candidate; Intelligence
-Officer owns independent Tier 5 release.
+The complete bounded TD-004 behavior through TR-40 remains intact. The exact
+SC-04/SC-05 presentation transition now occurs only across the accepted fresh
+route action and passes Tiers 2-4. This is not a release; Quartermaster and
+Image Specialist must revalidate the corrected boundary before one fresh
+independent Intelligence Tier 5.
 
 ## Exact Quartermaster handoff
 
 - **Stage / agent:** Quartermaster / `quartermaster`
 - **Shell:** `SS-RP004-THREE-CURRENT-v1`
-- **Starting authority:** synchronized `SHELL READY`, Recon `CREATIVE LOCK`,
-  `EB-TD004-v1 EXPERIENCE READY`, this `FUNCTIONALLY COMPLETE` report, and the
-  dedicated Combat Engineer commit
+- **Starting authority:** Intelligence `TD004-VAR-002 REQUIRED CORRECTION`,
+  the exact shell/blueprint, this
+  `FUNCTIONALLY COMPLETE — CORRECTED` report, and the dedicated local Combat
+  correction commit
 - **Exact build:** one normal `TD004-RTA-001` beside both released CM-50
   returns; complete TR-00 through TR-40 controller, renderer, strict
   independent learning, atomic local save/rollback/read-back, restore,
   approved returns, and closed 34-scenario fixture
-- **Content objective:** retire every `TD004-COPY-*` item with concise
-  owner-separated production language while preserving exact action labels,
-  answer-free boundaries, independent evidence, purpose unknown, local/offline
-  ownership, no-live/no-authority/no-exam/no-world-response, and known returns
-- **Asset objective:** disposition `TD004-ASSET-SC05-PLACEHOLDER` honestly;
-  add no runtime media unless separately authorized within `PBA-TD004-v1`
-- **Permitted files:** bounded player-facing strings/status mappings in
-  `ThreeCurrentReach.jsx` and `ThreeCurrentReachNormal.js`; exact related
-  copy tests; `09-CONTENT-ASSET-LEDGER.md`; stage metrics
+- **Revalidation objective:** confirm all retired `TD004-COPY-*` language and
+  the retired `TD004-ASSET-SC05-PLACEHOLDER` remain exact while CM-50 now uses
+  the accepted SC-04 master, accepted TR-00 onward uses the SC-05 master, and
+  RP-004 return restores SC-04
+- **Permitted files:** Quartermaster ledger/report/control evidence only,
+  unless an exact content or asset regression requires a bounded return
 - **Do not change:** controller graph, intent shape, modalities, evaluators,
   learning identities, dedicated key/version, ten/four/eight/ten schema,
   source sanitation, atomic adapter, TD-003 byte check, recovery order,
   focus/owner/status IDs, return targets, fixture identity, CSS/layout,
   assets/world, budget, or hard stop
-- **Validation tier:** focused copy/placeholder/asset/source checks plus
-  connected TD-004 regression and build/budget if production source changes
-- **Required disposition:** `CONTENT COMPLETE`, `REVISE`, or `HOLD`
+- **Validation tier:** focused content/asset/source identity plus connected
+  scene-boundary regression; build/budget only if production source changes
+- **Required disposition:** `CONTENT COMPLETE — REVALIDATED`, `REVISE`, or
+  `HOLD`
 - **Stop boundary:** no final art/reveal, RP-005, RP-013, successor,
   traversable common return, purpose inference, reward, permission, access,
   authority, exam standing/guarantee, external action, world response, hidden

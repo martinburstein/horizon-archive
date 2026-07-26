@@ -20,6 +20,11 @@ const runtimeMasterUrl = new URL(
   import.meta.url,
 );
 const runtimeMaster = readFileSync(runtimeMasterUrl);
+const calibrationMarginMasterUrl = new URL(
+  "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png",
+  import.meta.url,
+);
+const calibrationMarginMaster = readFileSync(calibrationMarginMasterUrl);
 const runtimeMasterProvenance = readFileSync(
   new URL(
     "../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/PROVENANCE.md",
@@ -41,12 +46,24 @@ test("TD004 renderer owns one heading, one polite status, blank native forms and
   assert.match(component, /headingRef\.current\?\.focus/);
 });
 
-test("TD004 directly imports the registered SC-05 runtime master with exact identity", () => {
+test("TD004 maps exact SC-04 and SC-05 states to their registered runtime masters", () => {
   assert.match(
     component,
     /2026-07-26-rp004-three-current-runtime-master\/sc05-three-current-panorama-runtime-master-v1\.webp/,
   );
-  assert.doesNotMatch(component, /city-threshold-overview-master\.png/);
+  assert.match(
+    component,
+    /2026-07-15-photorealistic-demo\/city-threshold-overview-master\.png/,
+  );
+  assert.match(component, /resolveThreeCurrentReachWorldScene\(state\)/);
+  assert.match(component, /data-world-scene=\{worldSceneId\}/);
+  assert.match(component, /data-world-master=\{worldAssetId\}/);
+  assert.match(component, /src=\{worldImage\}/);
+  assert.equal(statSync(calibrationMarginMasterUrl).size, 2_626_795);
+  assert.equal(
+    createHash("sha256").update(calibrationMarginMaster).digest("hex").toUpperCase(),
+    "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D",
+  );
   assert.equal(statSync(runtimeMasterUrl).size, 2_163_752);
   assert.equal(
     createHash("sha256").update(runtimeMaster).digest("hex").toUpperCase(),

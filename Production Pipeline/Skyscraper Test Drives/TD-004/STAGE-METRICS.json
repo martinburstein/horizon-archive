@@ -534,6 +534,60 @@
       "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
       "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; its own immutable hash is resolved from Git history without creating a recursive successor commit.",
       "synchronization": "local-only; no push; release synchronization withheld"
+    },
+    {
+      "sequence": 18,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-07-26T18:53:00.0000000Z",
+      "endedAt": "2026-07-26T19:11:39.0034396Z",
+      "durationMs": 1119003,
+      "disposition": "FUNCTIONALLY COMPLETE — CORRECTED - TD004-VAR-002",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP004-THREE-CURRENT-v1",
+      "precedingCommit": "dfc8544e5f7741b93e49e6d01a567ba68f6939f1",
+      "returnOwner": "Quartermaster / quartermaster",
+      "variance": {
+        "id": "TD004-VAR-002",
+        "classification": "REQUIRED CORRECTION IMPLEMENTED — PENDING DOWNSTREAM REVALIDATION",
+        "correction": "Exact CM-50 and every fail-closed or returned pre-route state resolve to the accepted SC-04 master; the registered SC-05 master resolves only from accepted TR-00 onward."
+      },
+      "runtimeBuild": {
+        "javascript": {
+          "file": "index-CynBBXnS.js",
+          "bytes": 1247724,
+          "sha256": "875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409"
+        },
+        "css": {
+          "file": "index-DVnUbAwl.css",
+          "bytes": 85151,
+          "sha256": "9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985"
+        },
+        "modules": 183,
+        "runtimeMediaBytes": 21536123,
+        "newRuntimeMediaBytes": 2163752
+      },
+      "validation": {
+        "focused": "22/22",
+        "relatedSelected": "136/136",
+        "fullGame": "806/806",
+        "readinessValidators": "15/15",
+        "buildSeconds": 14.11,
+        "budget": "PBA-TD004-v1 PASS",
+        "servedIdentity": "127.0.0.1:5184 root/JS/CSS/SC-04/SC-05 HTTP 200; served bytes and hashes identical to dist; owned preview stopped; port clear",
+        "sceneIdentity": "exact CM-50 SC-04; accepted TR-00 SC-05; invalid intent, pre-save reload, and RP-004 return SC-04"
+      },
+      "reveal": {
+        "asset": "Visual Direction/Production Masters/2026-07-26-rp004-three-current-capped-return-reveal/rp004-three-current-capped-return-v1.png",
+        "dimensions": "1672 x 941",
+        "bytes": 2764920,
+        "sha256": "CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F",
+        "generationCount": 1,
+        "status": "unchanged and reference-only; no generation, edit, replacement, or publication"
+      },
+      "commit": "PENDING_COMBAT_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat Engineer correction commit containing this report and ledger entry is authoritative; downstream roles resolve its immutable hash from Git history without creating a recursive successor commit.",
+      "synchronization": "local-only; no push; returned to Quartermaster revalidation"
     }
   ]
 }
