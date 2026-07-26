@@ -48,6 +48,21 @@
       "commit": "PENDING_OPERATIONS_COMMIT",
       "commitConvention": "The dedicated Operations Planning Major commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-07-26T21:42:00.0000000Z",
+      "endedAt": "2026-07-26T21:49:28.9519138Z",
+      "durationMs": 448952,
+      "disposition": "HOLD - NO AUTHORIZED ENTRY / NO SHELL",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/04-VIABILITY-ENVELOPE.md",
+      "returnFrom": "Operations Planning Major / CFS-TD005-v1",
+      "budgetDisposition": "Fresh released TD-004 baseline measured; no TD-005 budget authority issued without selected address, authorized entry, shell, or candidate delta",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
     }
   ]
 }

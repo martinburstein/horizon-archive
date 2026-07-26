@@ -1,5 +1,30 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-005 Science current control - 2026-07-26
+
+- **Disposition:** `HOLD - NO AUTHORIZED ENTRY / NO SHELL`.
+  `RP-005 / SC-06 / MF-00-MF-30` is a technically coherent protected
+  candidate, but exact released play ends at TD-004 TR-40, either approved
+  return, or destinationless non-routing notation. No current fresh Pilot
+  intent, dispatcher, destination presentation, or SC-06 mount exists.
+- **Boundary:** technical feasibility, protected predicates, packet order,
+  common-return geometry, destinationless notation, residual bundle capacity,
+  and recurring automation cannot create campaign authority. MF and SC-06
+  remain unreachable and production-unexposed.
+- **Learning/system evidence:** frozen RP-005 mapping self-test passes and
+  protected/TD-004 connected focused tests pass `38/38`; this proves bounded
+  reference logic only, not normal entry or release.
+- **Fresh production evidence:** `183` modules; `12.70s`; JS `1,247,724`
+  bytes; CSS `85,151` bytes; runtime media `21,536,123` bytes;
+  `PBA-TD004-v1 PASS`. Exact released identities are unchanged.
+- **Budget control:** no TD-005 budget authority is issued without a selected
+  address, authorized entry, shell, asset requirement, or measurable
+  candidate delta. TD-004 residuals do not roll forward.
+- **Mission stop:** Mission Captain must record `HOLD - NO SHELL` and return
+  the missing transition to Operations. No shell, Marine deployment,
+  implementation instruction, production asset, fixture, or RP-006 exposure
+  is authorized.
+
 ## TD-004 Intelligence Officer current control — 2026-07-26
 
 - **Disposition:** `PASS — AS BUILT RELEASED / TD-004 /

@@ -1,4 +1,4 @@
-# Horizon Archive — Skyscraper Workflow Handoff
+# Horizon Archive - Skyscraper Workflow Handoff
 
 Last updated: **2026-07-26**
 
@@ -9,96 +9,102 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 
 The authorized Skyscraper production automation is active on a two-hour
 cadence. Each wake may complete exactly one non-overlapping cycle and must
-resume any documented return loop before beginning new work.
+resume this documented return loop rather than begin a new cycle or restart a
+completed stage.
 
-## Current synchronized state
+## Current local state
 
 - Active test drive: `TD-005`
-- Latest completed stage: `3 — Operations Planning Major`
+- Latest completed stage: `4 - Office of Science Administrator`
 - Product baseline: `GDB-TD005-v1`
 - World baseline: `WNMP-TD005-v1`
-- Campaign floor-stack certificate: `CFS-TD005-v1`
-- Current-source candidate: `RP-005 / SC-06 / MF-00–MF-30`
+- Campaign floor stack: `CFS-TD005-v1`
+- Viability certificate: `VE-TD005-v1`
+- Current-source candidate: `RP-005 / SC-06 / MF-00-MF-30`
 - Selected campaign address: **unselected**
 - Shell candidate: **none**
-- Operations disposition:
-  **`HOLD — ADDRESS PROVED / RELEASED ADJACENCY REJECTED`**
-- Stage evidence:
-  `Production Pipeline/Skyscraper Test Drives/TD-005/03-CAMPAIGN-FLOOR-STACK.md`
+- Science disposition:
+  **`HOLD - NO AUTHORIZED ENTRY / NO SHELL`**
+- Operations commit:
+  `26dc49b9fb25b333722ec06af5f5da54e455cb12`
+- Science commit: the dedicated local commit containing
+  `TD-005/04-VIABILITY-ENVELOPE.md`, the metrics entry, this handoff, and the
+  Production Readiness Spine update is authoritative.
+- Synchronization: **local only; no push at the Science stage**
+- Marine deployment: **forbidden**
 
-The current-source repeated-receiver field is structurally exact, but the
-released player boundary remains TD-004 `TR-40 VERIFY + RETURN`, either
-approved write-free return, or optional destinationless notation. The
-apparent/common return is not traversable. The destinationless notation,
-planning name `Manyfold Return`, RP-005 row, protected predicate, and
-recurring-cycle authority do not create a campaign route or fresh Pilot
-intent.
+## Independent Science finding
 
-No RP-005/SC-06 state is reachable. No Mission Captain shell may be issued
-unless the missing transition is resolved by current authority and then
-passes independent Science review.
+`RP-005 / SC-06 / MF-00-MF-30` is technically coherent as protected,
+non-routable reference evidence. Its frozen learning, privacy, sanitation,
+atomic save/rollback/read-back, deterministic recovery, accessibility,
+responsive, offline, no-authority, Tour-isolation, invariant-world, and
+return contracts are supportable.
 
-## Released evidence
+It is not reachable. Released play ends at exact TD-004
+`TR-40 VERIFY + RETURN`, either approved write-free return, or optional
+destinationless notation. The apparent common return remains observation
+only. Production exposes no fresh Pilot action, route dispatcher,
+destination presentation, or SC-06 mount.
 
-- focused TD-004 suite `22/22`; selected related suite `140/140`; full game
-  `806/806`; all readiness validators `15/15`;
-- production build `183` modules;
-- JavaScript `index-CynBBXnS.js`, `1,247,724` bytes, SHA-256
+Technical feasibility, protected predicates, packet order, common-return
+geometry, destinationless notation, spare bundle capacity, and recurring
+automation cannot create campaign authority.
+
+## Fresh production evidence
+
+- production build: `183` modules in `12.70s`;
+- JavaScript: `1,247,724` bytes, SHA-256
   `875A2E9FDD9F3F38BCE3B2CD29556678AA3D6F638D61923B30D2FE9917608409`;
-- CSS `index-DVnUbAwl.css`, `85,151` bytes, SHA-256
+- CSS: `85,151` bytes, SHA-256
   `9222AAE71766D4E9DC7ACFA8D2FEB16F958D5D1CDC36C158982075C602D4F985`;
-- SC-05 runtime master
-  `sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp`,
-  `2,163,752` bytes, SHA-256
-  `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`;
-- aggregate runtime media `21,536,123` bytes; new runtime media `2,163,752`;
-  `PBA-TD004-v1 PASS`;
-- root, deep-link fallback, JS, CSS, SC-04, and SC-05 served HTTP `200` with
-  exact `dist` byte/hash identity;
-- exactly one complete post-build E2E in `99.498s`, all emitted gates true,
-  credits reached, and `runtimeErrors:false`;
-- all six closed fixture states across the four exact DPR-1 layouts passed;
-  forced colors, reduced motion, grayscale, responsive crops, focus, one
-  polite atomic status, `>=44px` controls, containment, and local-only request
-  checks passed; and
-- all incidental QA captures were restored, temporary review material was
-  removed, and owned ports were cleared.
+- runtime media: `21,536,123` bytes across `9` files;
+- existing `PBA-TD004-v1`: `PASS`;
+- RP-005 mapping validator: `PASS`; and
+- RP-005 protected plus TD-004 connected focused tests: `38/38 PASS`.
 
-## Image and provenance control
+No TD-005 budget authority or validator was issued. TD-004's one-time
+non-compounding residuals are release evidence, not a roll-forward
+entitlement, and TD-005 has no authorized entry, shell, asset requirement, or
+measurable candidate delta.
 
-The SC-05 runtime master is the exact deterministic non-generative Pillow
-`12.2.0` derivative of the one accepted reveal: Lanczos resize to
-`3840 x 2161`, one-pixel lower-edge trim, then q100/method-6 WebP. Fresh
-reproduction was byte-identical. It makes no native-4K-detail claim.
+## Active hard stop
 
-The source reveal remains byte-for-byte unchanged and reference-only:
-`1672 x 941`, `2,764,920` bytes, SHA-256
-`CE7FDDF3694FBE0912B03172C6A0FE2DC9FD8B42ED2AFBB1857D54A02AD3C83F`.
-Generation count remains exactly `1`; no second generation, edit, or
-replacement is authorized.
+Remain at exact released TD-004 TR-40, its two approved returns, or its
+destinationless non-routing notation.
 
-## Protected boundaries
+Do not issue or imply:
 
-Do not inspect or mutate Martin's browser storage/save. Do not inspect the
-hidden-lore vault, protected `Art Of No Mans Sky Book Scan.pdf`, or
-`Simplilearn Training Files/`. Preserve untracked user paths. Do not reactivate
-the archived two-team workflow.
+- an RP-005 action, destination, opening, arrival, route, invitation, access,
+  permission, identity, purpose, answer, reward, authority, response, or world
+  effect;
+- an MF or SC-06 production state, adapter, record schema, controller, UI,
+  fixture, asset, acceptance matrix, or budget allocation;
+- a traversable common return or route-bearing destinationless notation;
+- live field, sealed-branch, credential, endpoint, service, network, Azure,
+  Foundry, Language, terminal, external-action, city, Builder, or Machine
+  control;
+- an RP-006 route, RP-013, successor, post-ending content, or hidden lore.
+
+Never inspect or mutate Martin's browser storage or campaign save. Never open
+the hidden-lore vault. Never inspect, alter, stage, move, delete, or commit
+`Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
+The archived two-team workflow remains inactive.
 
 ## Exact next action
 
-Continue the active TD-005 cycle with the **Office of Science Administrator**
-only; do not restart Commandant, Colonel, or Operations.
+**Mission Captain stop-only review.**
 
-Read the Science profile, the immediately preceding `CFS-TD005-v1` handoff,
-the TD-005 product/world baselines, the exact TD-004 reconciliation, and the
-current performance evidence. Independently confirm the exact held
-`RP-005 / SC-06 / MF-00–MF-30` technical envelope and remeasure the TD-004
-production baseline. Technical viability, budget capacity, protected code,
-the common return, and destinationless notation cannot supply the missing
-fresh campaign transition.
+Read the Mission profile, `GDB-TD005-v1`, `WNMP-TD005-v1`,
+`CFS-TD005-v1`, `VE-TD005-v1`, the released TD-004 reconciliation, and this
+handoff.
 
-Issue `HOLD` if the missing entry remains unresolved. Do not issue
-implementation instructions or a shell; do not invent a route, destination,
-identity, purpose, answer, reward, authority, world response, RP-006 route,
-RP-013, successor, or post-ending content. The Mission Captain follows only
-after Science leaves a dedicated validated handoff.
+Record **`HOLD - NO SHELL`**. Do not issue a shell ID, versioned construction
+contract, Marine deployment, implementation instruction, route, destination,
+opening, arrival, budget allocation, runtime asset requirement, fixture, or
+acceptance matrix.
+
+Return the missing fresh transition to the Operations Planning Major as the
+earliest responsible stage. Any later re-entry requires new explicit route
+authority and a fresh sequential Operations and Science validation before
+Mission may reconsider a shell.
