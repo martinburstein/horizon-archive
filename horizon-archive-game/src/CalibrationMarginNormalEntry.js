@@ -27,6 +27,12 @@ import {
   createCalibrationMarginExtractionFloor,
   createCalibrationMarginExtractionIntent,
 } from "./CalibrationMarginExtractionFloor.js";
+import {
+  calibrationMarginReviewSaveActions,
+  createCalibrationMarginReviewSaveController,
+  createCalibrationMarginReviewSaveIntent,
+  sanitizeCalibrationMarginReviewSave,
+} from "./CalibrationMarginReviewSave.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -118,11 +124,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let surveyAcceptedBlank = null;
   let pythonController = null;
   let extractionController = null;
+  let reviewController = null;
+  let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
+    if (reviewController) return reviewController.getState();
+    if (reviewRecovery && surveyController) return surveyController.getState();
     if (extractionController) return extractionController.getState();
     const current = (pythonController ?? surveyController ?? entryController).getState();
     if (pythonController
@@ -140,6 +150,65 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     return current;
   };
 
+  const reviewSources = () => {
+    const extractionState = extractionController?.getState() ?? {};
+    return {
+      observations: surveyController?.getState().recordedObservationIds ?? [],
+      pythonCheckpoint: pythonController?.getCheckpoint()
+        ?? options.restoredPythonCheckpoint,
+      extractionCheckpoint: extractionController?.getCheckpoint()
+        ?? extractionCheckpoint
+        ?? options.restoredExtractionCheckpoint,
+      extractionState,
+      invariants: {
+        worldStateDelta: extractionState.worldStateDelta ?? null,
+        accessStateDelta: extractionState.accessStateDelta ?? null,
+        authorityGranted: extractionState.authorityGranted ?? false,
+        externalActionEnabled: extractionState.externalActionEnabled ?? false,
+        worldStateChanged: extractionState.worldStateChanged ?? false,
+      },
+    };
+  };
+
+  const mountReview = (restoredRecord = null) => {
+    reviewController = createCalibrationMarginReviewSaveController({
+      getSources: reviewSources,
+      restoredRecord,
+      adapter: options.reviewSaveAdapter,
+    });
+    reviewRecovery = false;
+    return reviewController.getState();
+  };
+
+  const mountObservationRecovery = () => {
+    const blank = entryController.dispatch({
+      packetId: "RP-003",
+      version: CALIBRATION_MARGIN_PROTECTED_ENTRY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: CALIBRATION_MARGIN_ENTRY_ACTION,
+      activationKind: "screen_reader",
+      eventToken: "review-observation-recovery-entry",
+    }).state;
+    surveyAcceptedBlank = blank;
+    surveyController = createCalibrationMarginProtectedSurvey({
+      acceptedBlankState: blank,
+    });
+    surveyController.dispatch({
+      packetId: "RP-003",
+      version: CALIBRATION_MARGIN_PROTECTED_SURVEY_VERSION,
+      mode: "campaign",
+      owner: "PILOT // FLIGHT RECORDER",
+      action: normalOrientAction,
+      observationId: null,
+      activationKind: "screen_reader",
+      eventToken: "review-observation-recovery-survey",
+    });
+    reviewController = null;
+    reviewRecovery = true;
+    return surveyController.getState();
+  };
+
   const configure = (
     restoredState,
     restoredPythonCheckpoint = options.restoredPythonCheckpoint,
@@ -155,9 +224,18 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     surveyAcceptedBlank = null;
     pythonController = null;
     extractionController = null;
+    reviewController = null;
+    reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
     );
+    const restoredReview = sanitizeCalibrationMarginReviewSave(
+      options.restoredReviewSave,
+    );
+    if (restoredReview) {
+      mountReview(restoredReview);
+      return;
+    }
 
     if (restoringSurvey && entryController.getState().phase === "city_threshold") {
       const blank = entryController.dispatch({
@@ -191,6 +269,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
           restoredCheckpoint: extractionCheckpoint,
           commitCheckpoint: options.commitExtractionCheckpoint,
         });
+        if (extractionCheckpoint.checkpoint === "IE-P3") {
+          mountReview();
+        }
       }
     }
   };
@@ -203,11 +284,38 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (reviewController) {
+        const result = reviewController.dispatch(intent);
+        if (result.status === "source_boundary_incomplete"
+          && result.recoveryTarget?.group === "observations") {
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(mountObservationRecovery()),
+          });
+        }
+        return result;
+      }
+      if (reviewRecovery && surveyController) {
+        const result = surveyController.dispatch(intent);
+        if (result.state?.localReviewEligibility?.eligible === true) {
+          return Object.freeze({
+            status: "review_boundary_restored",
+            state: clonePublicState(mountReview()),
+          });
+        }
+        return result;
+      }
       if (extractionController) {
         const result = extractionController.dispatch(intent);
         extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
           extractionController.getCheckpoint(),
         );
+        if (result.status === "extraction_finalized") {
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(mountReview()),
+          });
+        }
         if (result.status === "returned_to_python_write_free") {
           extractionController = null;
           return Object.freeze({ ...result, state: clonePublicState(currentState()) });
@@ -247,6 +355,13 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       }
       if (state.phase === "CM-10 SURVEY") {
         const result = surveyController.dispatch(intent);
+        if (reviewRecovery
+          && result.state?.localReviewEligibility?.eligible === true) {
+          return Object.freeze({
+            status: "review_boundary_restored",
+            state: clonePublicState(mountReview()),
+          });
+        }
         if (result.status === "review_activated") {
           pythonController = createCalibrationMarginPythonFloor({
             acceptedSurveyState: result.state,
@@ -300,6 +415,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return extractionController?.getCheckpoint()
         ?? (extractionCheckpoint ? clonePublicState(extractionCheckpoint) : null);
     },
+    getReviewSaveRecord() {
+      return reviewController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -314,7 +432,11 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         restoredExtractionCheckpoint,
       );
       return Object.freeze({
-        status: extractionController
+        status: reviewController
+          ? reviewController.getState().activeGroup === "cm50_verified_restore"
+            ? "review_save_restored"
+            : "review_boundary_restored"
+          : extractionController
           ? "extraction_checkpoint_resumed"
           : pythonController
             ? "python_checkpoint_resumed"
@@ -337,7 +459,36 @@ export function createCalibrationMarginNormalEntryIntent(
   activationKind,
   eventToken,
   phase = null,
+  activeGroup = null,
 ) {
+  const reviewPhase = [
+    "IE-P3",
+    "CM-40 BOUNDED REVIEW",
+    "CM-41 ATOMIC SAVE",
+    "CM-50 VERIFIED RESTORE",
+  ].includes(phase);
+  if (Object.values(calibrationMarginReviewSaveActions).includes(action)
+    && (reviewPhase || [
+      calibrationMarginReviewSaveActions.review,
+      calibrationMarginReviewSaveActions.provenance,
+      calibrationMarginReviewSaveActions.save,
+    ].includes(action))) {
+    return createCalibrationMarginReviewSaveIntent(
+      {
+        activeGroup: activeGroup ?? (phase === "IE-P3" ? "ie_finalized" : phase),
+        owner: phase === "IE-P3"
+          ? "SYSTEM"
+          : phase === "CM-41 ATOMIC SAVE"
+            ? "SYSTEM // LOCAL EXPEDITION TRANSACTION"
+            : phase === "CM-50 VERIFIED RESTORE"
+              ? "SYSTEM // RESTORED EXPEDITION NOTE"
+              : "SYSTEM // EXPEDITION STATE",
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (action === calibrationMarginExtractionActions.begin) {
     return createCalibrationMarginExtractionIntent(
       { activeGroup: "python_finalized", owner: "SYSTEM" },

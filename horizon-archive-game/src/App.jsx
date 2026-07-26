@@ -23,6 +23,9 @@ import {
   sanitizeCalibrationMarginExtractionCheckpoint,
 } from "./CalibrationMarginExtractionCheckpoint.js";
 import {
+  createCalibrationMarginReviewSaveStorageAdapter,
+} from "./CalibrationMarginReviewSave.js";
+import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
 } from "./cityThresholdExercise.js";
@@ -392,6 +395,14 @@ function writeCalibrationMarginExtractionCheckpoint(storage, value) {
   } catch {
     return false;
   }
+}
+
+function calibrationMarginReviewSaveOptions(storage) {
+  const reviewSaveAdapter = createCalibrationMarginReviewSaveStorageAdapter(storage);
+  return {
+    reviewSaveAdapter,
+    restoredReviewSave: reviewSaveAdapter.read(),
+  };
 }
 
 const FINAL_CONFIDENCE_ENTRY_ERRORS = {
@@ -2226,6 +2237,9 @@ export function App() {
     const authority = { verifiedRestoreState, returnedCityThreshold: result };
     const entryController = createCalibrationMarginNormalEntry({
       ...authority,
+      ...calibrationMarginReviewSaveOptions(
+        typeof window === "undefined" ? null : window.localStorage,
+      ),
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
         : readCalibrationMarginPythonCheckpoint(window.localStorage),
@@ -2242,7 +2256,11 @@ export function App() {
       ),
     });
     const entryState = entryController.getState();
-    if (entryState.shellVersion === "SS-RP003-PY010-v1") {
+    if ([
+      "SS-RP003-PY010-v1",
+      "SS-RP003-IE01-v1",
+      "SS-RP003-REVIEW-SAVE-v1",
+    ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
       setCustodyLedgerPrimaryView(null);
@@ -2279,6 +2297,9 @@ export function App() {
     if (!authority) return null;
     const controller = createCalibrationMarginNormalEntry({
       ...authority,
+      ...calibrationMarginReviewSaveOptions(
+        typeof window === "undefined" ? null : window.localStorage,
+      ),
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
         : readCalibrationMarginPythonCheckpoint(window.localStorage),
@@ -2304,6 +2325,11 @@ export function App() {
   function enterCalibrationMargin(event) {
     if (demoTour) return null;
     const controller = calibrationMarginEntryControllerRef.current;
+    if (controller?.getState().shellVersion === "SS-RP003-REVIEW-SAVE-v1") {
+      setCalibrationMarginEntryView(controller.getState());
+      setMode("rp003-entry");
+      return { status: "review_save_restored", state: controller.getState() };
+    }
     const result = controller?.dispatch(createCalibrationMarginNormalEntryIntent(
       CALIBRATION_MARGIN_ENTRY_ACTION,
       routeActivationKind(event),
@@ -2327,9 +2353,14 @@ export function App() {
       routeActivationKind(event),
       routeEventToken("rp003-blank-entry"),
       calibrationMarginEntryView?.phase,
+      calibrationMarginEntryView?.activeGroup,
     ));
-    if (result?.state?.shellVersion === "SS-RP003-PY010-v1"
+    if (![
+      "returned_to_city_threshold_write_free",
+      "returned_to_rp002_write_free",
+    ].includes(result?.status) && (result?.state?.shellVersion === "SS-RP003-PY010-v1"
       || result?.state?.shellVersion === "SS-RP003-IE01-v1"
+      || result?.state?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -2337,36 +2368,46 @@ export function App() {
       "recorded_replay_zero_evidence",
       "returned_to_survey_write_free",
       "checkpoint_commit_failed_to_survey",
-    ].includes(result?.status)) {
+    ].includes(result?.status))) {
       setCalibrationMarginEntryView(result.state);
       return result;
     }
     if (result?.status === "returned_to_city_threshold_write_free") {
       setCustodyLedgerPrimaryView(null);
-      resetCalibrationMarginAtCityThreshold();
+      if (calibrationMarginEntryView?.shellVersion === "SS-RP003-REVIEW-SAVE-v1") {
+        setCalibrationMarginEntryView(controller.getState());
+      } else {
+        resetCalibrationMarginAtCityThreshold();
+      }
       setMode("city-threshold-staging");
       return result;
     }
     if (result?.status === "returned_to_rp002_write_free") {
       const authority = calibrationMarginEntryAuthorityRef.current;
-      const returnController = createCalibrationMarginNormalEntry({
+      const returnController = calibrationMarginEntryView?.shellVersion
+        === "SS-RP003-REVIEW-SAVE-v1"
+        ? controller
+        : createCalibrationMarginNormalEntry({
         ...authority,
+        ...calibrationMarginReviewSaveOptions(
+          typeof window === "undefined" ? null : window.localStorage,
+        ),
         restoredState: result.state,
-          restoredPythonCheckpoint: typeof window === "undefined"
-            ? null
-            : readCalibrationMarginPythonCheckpoint(window.localStorage),
-          restoredExtractionCheckpoint: typeof window === "undefined"
-            ? null
-            : readCalibrationMarginExtractionCheckpoint(window.localStorage),
-          commitPythonCheckpoint: (candidate) => (
-            typeof window !== "undefined"
-            && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
-          ),
-          commitExtractionCheckpoint: (candidate) => (
-            typeof window !== "undefined"
-            && writeCalibrationMarginExtractionCheckpoint(window.localStorage, candidate)
-          ),
-      });
+        restoredPythonCheckpoint: typeof window === "undefined"
+          ? null
+          : readCalibrationMarginPythonCheckpoint(window.localStorage),
+        restoredExtractionCheckpoint: typeof window === "undefined"
+          ? null
+          : readCalibrationMarginExtractionCheckpoint(window.localStorage),
+        commitPythonCheckpoint: (candidate) => (
+          typeof window !== "undefined"
+          && writeCalibrationMarginPythonCheckpoint(window.localStorage, candidate)
+        ),
+        commitExtractionCheckpoint: (candidate) => (
+          typeof window !== "undefined"
+          && writeCalibrationMarginExtractionCheckpoint(window.localStorage, candidate)
+        ),
+        });
       calibrationMarginEntryControllerRef.current = returnController;
       setCalibrationMarginEntryView(returnController.getState());
       setCalibrationReturnToRp002(true);
@@ -2401,6 +2442,7 @@ export function App() {
       routeActivationKind(event),
       routeEventToken("rp003-rp002-return-threshold"),
       calibrationMarginEntryView?.phase,
+      calibrationMarginEntryView?.activeGroup,
     ));
     if (result?.status !== "returned_to_city_threshold_write_free") return result;
     setCustodyLedgerPrimaryView(null);
@@ -3482,6 +3524,7 @@ export function App() {
   if (mode === "rp003-entry" && (
     calibrationMarginEntryView?.shellVersion === "SS-RP003-PY010-v1"
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-IE01-v1"
+    || calibrationMarginEntryView?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",

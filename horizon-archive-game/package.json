@@ -9,6 +9,7 @@
     "demo": "npm run build && vite preview --host 127.0.0.1 --port 4173 --open",
     "preview": "vite preview",
     "review:td002-extraction": "vite --config review-fixtures/td002-extraction/vite.config.js --host 127.0.0.1 --port 4174",
+    "review:td003-review-save": "vite --config review-fixtures/td003-review-save/vite.config.js --host 127.0.0.1 --port 4175",
     "test": "node --test"
   },
   "dependencies": {

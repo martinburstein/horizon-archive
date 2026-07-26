@@ -127,8 +127,20 @@
       "durationMs": 458193,
       "disposition": "EXPERIENCE READY",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/07-EXPERIENCE-BLUEPRINT.md",
-      "commit": "PENDING_TACTICAL_OPERATIONS_SPECIALIST_COMMIT",
+      "commit": "6675d18e603ffe2e0ceaea1bc35ce1776bf2a4e0",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 11,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-07-26T06:47:30.0000000Z",
+      "endedAt": "2026-07-26T07:15:30.3863733Z",
+      "durationMs": 1680386,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/08-FUNCTIONAL-BUILD-REPORT.md",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "synchronization": "push-main-and-verify-intent"
     }
   ]
 }

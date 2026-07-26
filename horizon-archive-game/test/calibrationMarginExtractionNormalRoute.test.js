@@ -169,7 +169,7 @@ test("IE-EXP-009-020 normal route finalizes only ordered IE evidence and preserv
   assert.equal(final.status, "extraction_finalized");
   assert.equal(final.state.activeGroup, "ie_finalized");
   assert.deepEqual(final.state.finalizedSkillIds, ["RP003-IE-01"]);
-  assert.deepEqual(final.state.availableActions, []);
+  assert.deepEqual(final.state.availableActions, ["REVIEW EXPEDITION EVIDENCE"]);
   assert.equal(JSON.stringify(subject.getPythonCheckpoint()), sourceBytes);
   assert.deepEqual(stored.evidence.map((item) => item.form), [
     "primary",
@@ -179,7 +179,7 @@ test("IE-EXP-009-020 normal route finalizes only ordered IE evidence and preserv
   ]);
   assert.doesNotMatch(
     JSON.stringify(final.state),
-    /CM-40|"reviewEligibility":true|"saveEligibility":true|bearing|RP-004|RP-013|authorityGranted":true|worldStateChanged":true/i,
+    /CM-40|"saveEligibility":true|bearing|RP-004|RP-013|authorityGranted":true|worldStateChanged":true/i,
   );
 });
 

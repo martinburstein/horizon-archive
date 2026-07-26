@@ -3,6 +3,7 @@ import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginExtractionFloor } from "./CalibrationMarginExtractionFloor.jsx";
 import { CalibrationMarginPythonFloor } from "./CalibrationMarginPythonFloor.jsx";
+import { CalibrationMarginReviewSave } from "./CalibrationMarginReviewSave.jsx";
 
 export function CalibrationMarginEntry({
   entryState,
@@ -18,6 +19,8 @@ export function CalibrationMarginEntry({
   const pythonFloorActive = entryState.shellVersion === "SS-RP003-PY010-v1";
   const extractionFloorActive =
     entryState.shellVersion === "SS-RP003-IE01-v1";
+  const reviewSaveActive =
+    entryState.shellVersion === "SS-RP003-REVIEW-SAVE-v1";
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -36,7 +39,7 @@ export function CalibrationMarginEntry({
         data-board={entryState.boardState}
         data-phase={entryState.phase}
         data-python-floor={pythonFloorActive || undefined}
-        data-extraction-floor={extractionFloorActive || undefined}
+        data-extraction-floor={extractionFloorActive || reviewSaveActive || undefined}
       >
         <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
@@ -45,7 +48,12 @@ export function CalibrationMarginEntry({
             alt="An immense empty underground civic landscape already operating above geothermal chasms"
           />
         </section>
-        {extractionFloorActive ? (
+        {reviewSaveActive ? (
+          <CalibrationMarginReviewSave
+            state={entryState}
+            onAction={onAction}
+          />
+        ) : extractionFloorActive ? (
           <CalibrationMarginExtractionFloor
             state={entryState}
             onAction={onAction}

@@ -1,0 +1,29 @@
+{
+  "fixtureId": "td003-review-save-v1",
+  "owner": "Intelligence Officer",
+  "host": "127.0.0.1",
+  "port": 4175,
+  "packageCommand": "npm run review:td003-review-save",
+  "configPath": "review-fixtures/td003-review-save/vite.config.js",
+  "scenarios": [
+    "cm40-five-conjunct-ready",
+    "cm40-provenance-pending",
+    "cm40-observation-invalid",
+    "cm40-python-invalid",
+    "cm40-ie-invalid",
+    "cm40-invariant-invalid",
+    "cm41-save-committed",
+    "cm41-write-failed-last-good",
+    "cm50-verified-restore",
+    "cm50-return-civic-comparison",
+    "cm50-return-city-threshold"
+  ],
+  "expectedRootMarker": "TD003_REVIEW_SAVE_FIXTURE",
+  "productionExclusionMarkers": [
+    "TD003_REVIEW_SAVE_FIXTURE",
+    "td003-review-save",
+    "4175"
+  ],
+  "pidCapture": "exact spawned fixture-process PID",
+  "cleanupCommand": "stop only that captured PID"
+}
