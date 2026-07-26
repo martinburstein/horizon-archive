@@ -1,0 +1,26 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-003",
+    "shellCandidate": "SS-RP003-REVIEW-SAVE-v1",
+    "campaignAddress": "RP-003 / SC-04 / CM-40-CM-50",
+    "sourceCommit": "49200787467106dad3d8da9908ff6aa189dc2197",
+    "timezone": "America/New_York",
+    "executionMode": "manual-sequential"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-07-26T05:41:16.1521226Z",
+      "endedAt": "2026-07-26T05:43:17.6698517Z",
+      "durationMs": 121518,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-003/01-GAME-DEVELOPMENT-BRIEF.md",
+      "commit": "PENDING_COMMANDANT_COMMIT",
+      "synchronization": "local-only"
+    }
+  ]
+}
