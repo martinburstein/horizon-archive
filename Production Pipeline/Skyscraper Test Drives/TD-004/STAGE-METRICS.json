@@ -1,0 +1,27 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-004",
+    "shellCandidate": "UNSELECTED",
+    "campaignAddress": "UNSELECTED",
+    "sourceCommit": "a8ad23a9bdeaf0ec5b32ca42a31f877a90eb7479",
+    "timezone": "America/New_York",
+    "executionMode": "scheduled-sequential-nonoverlapping"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-07-26T14:40:56.1030000Z",
+      "endedAt": "2026-07-26T14:43:21.4129238Z",
+      "durationMs": 145310,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-004/01-GAME-DEVELOPMENT-BRIEF.md",
+      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
+    }
+  ]
+}
