@@ -1,10 +1,33 @@
 import { useLayoutEffect, useRef } from "react";
 import { calibrationMarginReviewSaveActions } from "./CalibrationMarginReviewSave.js";
 
-const noteLabels = Object.freeze({
-  correspondence: "Correspondence",
-  difference: "Bounded difference",
-  unavailable: "Unavailable source",
+const noteDisplay = Object.freeze({
+  correspondence: Object.freeze({
+    label: "Correspondence",
+    value: "A bounded correspondence was observed between the exposed source sequences.",
+  }),
+  difference: Object.freeze({
+    label: "Bounded difference",
+    value: "One bounded difference was observed between the exposed source sequences.",
+  }),
+  unavailable: Object.freeze({
+    label: "Unavailable source",
+    value: "The sealed source remains unavailable and unread.",
+  }),
+});
+
+const phaseTitles = Object.freeze({
+  ie_finalized: "Expedition record ready for review",
+  cm40_review: "Review expedition evidence",
+  cm40_provenance_pending: "Review expedition evidence",
+  cm40_provenance_inspected: "Review expedition evidence",
+  cm41_transaction: "Preserve local expedition note",
+  cm50_verified_restore: "Restored expedition note",
+  observations: "Return to incomplete observations",
+  python_retrieval: "Return to incomplete Python work",
+  ie_retrieval: "Return to incomplete extraction work",
+  rp002_verified_restore: "Civic Comparison restored",
+  city_threshold: "City Threshold",
 });
 
 export function CalibrationMarginReviewSave({ state, onAction }) {
@@ -29,6 +52,10 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
   const transaction = state.activeGroup === "cm41_transaction";
   const entry = state.activeGroup === "ie_finalized";
   const saveDisabled = state.saveDisabled === true;
+  const hasReturns = state.availableActions.some((action) => (
+    action === calibrationMarginReviewSaveActions.returnCivicComparison
+    || action === calibrationMarginReviewSaveActions.returnCityThreshold
+  ));
 
   return (
     <section
@@ -39,16 +66,16 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
       <header className="extraction-floor-heading">
         <p className="eyebrow">{state.owner}</p>
         <h1 ref={headingRef} id="calibration-review-save-heading" tabIndex="-1">
-          {state.phase}
+          {phaseTitles[state.activeGroup] ?? "Expedition review"}
         </h1>
         <p>
           {entry
-            ? "Finalized expedition evidence remains separate until a fresh review begins."
+            ? "Your completed observations and learning records remain separate until you choose to review them together."
             : transaction
-              ? "One local, offline record is being validated all-or-none."
+              ? "The System is checking one local offline note and will replace it only as a complete verified record."
               : restored
-                ? "The expedition note returned intact without replaying completed work."
-                : "Review five independent obligations. This is not a score or verdict."}
+                ? "The local expedition note returned intact. Completed work was not replayed, and the city did not respond."
+                : "Inspect five separate obligations before preserving a local note. Each must stand on its own; this is not a score or verdict."}
         </p>
       </header>
 
@@ -67,7 +94,7 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
         <ol className="extraction-floor-content" aria-label="Five independent expedition obligations">
           {state.reviewRows.map((row) => (
             <li className="extraction-floor-field" key={row.id} data-review-row={row.id}>
-              <strong>{row.label} â€” {row.state}</strong>
+              <strong>{row.label} — {row.state}</strong>
               <span>{row.owner}</span>
               <small>{row.limit}</small>
             </li>
@@ -93,10 +120,10 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
           <section className="extraction-source-envelope" aria-labelledby="expedition-note-heading">
             <h2 id="expedition-note-heading">Expedition-owned note</h2>
             <dl className="custody-ledger-fields">
-              {Object.entries(state.note).map(([key, value]) => (
+              {Object.keys(state.note).map((key) => (
                 <div key={key} data-field-state="read-only">
-                  <dt>{noteLabels[key]}</dt>
-                  <dd>{value.replaceAll("_", " ")}</dd>
+                  <dt>{noteDisplay[key].label}</dt>
+                  <dd>{noteDisplay[key].value}</dd>
                 </div>
               ))}
             </dl>
@@ -104,7 +131,19 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
         </div>
       )}
 
-      <div className="extraction-floor-actions" role="group" aria-label={`${state.phase} actions`}>
+      {hasReturns && (
+        <p id="known-return-context" className="extraction-floor-field-help">
+          {restored
+            ? "Choose either already-known return when ready. Both leave this local note unchanged and create no onward route."
+            : "Optional return: both destinations are already known. Returning writes nothing, replays nothing, and opens no new route."}
+        </p>
+      )}
+
+      <div
+        className="extraction-floor-actions"
+        role="group"
+        aria-label={`${phaseTitles[state.activeGroup] ?? "Expedition review"} actions`}
+      >
         {state.availableActions.map((action) => (
           <button
             key={action}
@@ -114,6 +153,7 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
             }}
             type="button"
             data-action-id={action}
+            aria-describedby={action.startsWith("RETURN TO ") ? "known-return-context" : undefined}
             onClick={(event) => onAction(action, event)}
           >
             {action}
@@ -139,8 +179,11 @@ export function CalibrationMarginReviewSave({ state, onAction }) {
       )}
 
       <p className="extraction-floor-negative-authority">
-        Local device only. No account, network service, city action, access,
-        authority, exam standing, exam guarantee, or world response is created.
+        {restored ? "This note is" : "Any saved note stays"} only in this
+        browser on this device. It contains no submitted answers, drafts,
+        account data, or source content. No network or cloud sync is used.
+        It grants no city action, access, authority, exam standing, exam
+        guarantee, or world response.
       </p>
     </section>
   );

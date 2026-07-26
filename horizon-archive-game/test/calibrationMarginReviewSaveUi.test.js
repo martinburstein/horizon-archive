@@ -27,3 +27,18 @@ test("RS-EXP-003/019-026 review-save UI preserves semantic, responsive and invar
   assert.match(app, /createCalibrationMarginReviewSaveStorageAdapter/);
   assert.doesNotMatch(view, /bearing|RP-004|RP-013|successor|reward|permission/i);
 });
+
+test("Quartermaster copy retires engineering labels, raw note tokens, and ambiguous returns", () => {
+  const view = readFileSync(new URL("../src/CalibrationMarginReviewSave.jsx", import.meta.url), "utf8");
+  const controller = readFileSync(new URL("../src/CalibrationMarginReviewSave.js", import.meta.url), "utf8");
+  assert.match(view, /Expedition record ready for review/);
+  assert.match(view, /Restored expedition note/);
+  assert.match(view, /already-known return/);
+  assert.match(view, /No network or cloud sync is used/);
+  assert.match(view, /contains no submitted answers, drafts/);
+  assert.doesNotMatch(view, /value\.replaceAll|noteLabels/);
+  assert.match(controller, /Three expedition observations/);
+  assert.match(controller, /Python conditional record/);
+  assert.match(controller, /Information-extraction record/);
+  assert.doesNotMatch(controller, /label: "PY-010"|label: "RP003-IE-01"/);
+});

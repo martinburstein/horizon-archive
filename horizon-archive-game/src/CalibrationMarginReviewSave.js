@@ -101,38 +101,38 @@ const exactNote = Object.freeze({
 export const calibrationMarginReviewRows = Object.freeze([
   Object.freeze({
     id: "observations",
-    label: "Observations",
+    label: "Three expedition observations",
     state: "Complete",
-    owner: "Expedition observation record",
-    limit: "Python or extraction evidence cannot substitute for the three recorded observations.",
+    owner: "Pilot-owned observation record",
+    limit: "Neither learning record can stand in for correspondence, one bounded difference, and the unavailable sealed source.",
   }),
   Object.freeze({
     id: "python",
-    label: "PY-010",
+    label: "Python conditional record",
     state: "Complete",
-    owner: "Finalized Python checkpoint",
-    limit: "This checkpoint cannot supply information-extraction credit.",
+    owner: "Finalized local Python work",
+    limit: "This work cannot provide information-extraction evidence or replace an observation.",
   }),
   Object.freeze({
     id: "extraction",
-    label: "RP003-IE-01",
+    label: "Information-extraction record",
     state: "Complete",
-    owner: "Finalized information-extraction checkpoint",
-    limit: "This checkpoint cannot supply Python or observation credit.",
+    owner: "Finalized local extraction work",
+    limit: "This work cannot provide Python evidence or replace an observation.",
   }),
   Object.freeze({
     id: "provenance",
-    label: "Provenance",
+    label: "Source provenance",
     state: "Source-bound",
-    owner: "Exposed or supplied course input",
-    limit: "Unavailable and sealed input remains unavailable and unread.",
+    owner: "Exposed or supplied course inputs",
+    limit: "Sealed material and any input that was not supplied remain unavailable and unread.",
   }),
   Object.freeze({
     id: "no_external_action",
     label: "No external action",
     state: "Complete",
-    owner: "Expedition invariant",
-    limit: "No city, world, access, authority, service, or successor change occurred.",
+    owner: "Local expedition boundary",
+    limit: "The city, world, known routes, access, services, and authority remain unchanged.",
   }),
 ]);
 
@@ -442,25 +442,25 @@ function baseState(group, options = {}) {
     reviewRows: entry || transaction || restored ? [] : clone(calibrationMarginReviewRows),
     provenanceInspected: inspected,
     provenanceDetail: inspected || restored
-      ? "Retained records come only from exposed or supplied course input. Sealed, audio, video, and unsupplied input remains unavailable and unread. Inspection grants zero credit."
+      ? "The records eligible for this note come only from exposed or supplied course inputs. Sealed material and any audio, video, or other input that was not supplied remain unavailable and unread. This inspection adds no learning credit and creates no evidence."
       : null,
     saveEligibility: inspected,
     saveDisabled: pending,
     note: restored ? clone(exactNote) : null,
     recordIntegrity: restored
-      ? "The exact sanitized local expedition record returned intact."
+      ? "The saved note passed the same strict local check used at creation and restored without replaying completed observations or learning work."
       : null,
     statusMessageId: options.statusMessageId ?? `${group}:ready`,
     statusMessage: options.statusMessage ?? (
       entry
-        ? "Finalized evidence is unchanged. A fresh expedition review is available."
+        ? "Five independently completed obligations remain unchanged. Begin a new review when you are ready."
         : transaction
-          ? "Validating one local all-or-none expedition record."
+          ? "Checking the complete note locally and replacing it only if the full read-back matches."
           : restored
-            ? "The local expedition record restored without replay or external action."
+            ? "The exact local expedition note was verified and restored. No completed work or world event replayed."
             : inspected
-              ? "Provenance is inspected. A fresh local save may be attempted."
-              : "Five independent obligations are ready. Provenance inspection is required before local save."
+              ? "Source ownership and unavailable boundaries are reviewed. You may make a new local save."
+              : "Five independent obligations are present. Review where the evidence came from before saving."
     ),
     publicReason: options.publicReason ?? null,
     availableActions: entry
@@ -570,7 +570,7 @@ export function createCalibrationMarginReviewSaveController(options = {}) {
           state = baseState("cm40_provenance_pending", {
             publicReason: "provenance_inspection_required",
             statusMessageId: "cm40_provenance_pending:intent-rejected",
-            statusMessage: "The save action was not accepted. Inspect provenance again before a fresh attempt.",
+            statusMessage: "The save request was not accepted. Review provenance again before making a fresh request.",
           });
           return Object.freeze({
             status: "save_intent_rejected_recovered",
@@ -642,7 +642,7 @@ export function createCalibrationMarginReviewSaveController(options = {}) {
           state = baseState("cm40_provenance_pending", {
             publicReason: result.reason ?? "local_write_not_completed",
             statusMessageId: "cm40_provenance_pending:save-failed",
-            statusMessage: "No accepted local write completed. Prior verified bytes remain unchanged; inspect provenance before a fresh save.",
+            statusMessage: "The new local note was not accepted. Any last verified note remains unchanged. Review provenance again before a fresh save.",
           });
           return Object.freeze({
             status: "save_failed_recovered",
@@ -669,7 +669,7 @@ export function createCalibrationMarginReviewSaveController(options = {}) {
         if (state.activeGroup !== "cm50_verified_restore") {
           state = baseState("ie_finalized", {
             statusMessageId: "ie_finalized:known-return",
-            statusMessage: "Review transients cleared. Finalized evidence remains unchanged.",
+            statusMessage: "Review details were cleared. Finalized evidence and any verified local note remain unchanged.",
           });
         }
         return Object.freeze({
