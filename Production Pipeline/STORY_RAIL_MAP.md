@@ -1,9 +1,9 @@
 # Horizon Archive Story Rail Map
 
-## Intelligence Officer current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-001 / SS-RP003-PY010-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position advances within `RP-003 / SC-04` from all-three CM-10 completion through explicit local review, `CM-20`–`CM-23`, and finalized `PY-010` at `PY010-P3`.
-- **Authoritative rail stop:** the normal route stops at the no-action `PY010-P3` landing. `CM-30`, `RP003-IE-01`, save, onward bearing, RP-004, RP-013, successor, reward, access, authority, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.
+- **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-002 / SS-RP003-IE01-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position advances within `RP-003 / SC-04` from exact no-action `PY010-P3` through blank `CM-30`, strict primary/repair, zero-credit `CM-32`, blank `CM-33` retrieval, blank `CM-34` transfer/explanation, and finalized `RP003-IE-01` at exact `IE-P3`.
+- **Authoritative rail stop:** the normal route stops at the no-action `IE-P3` landing. `CM-40`, review/save, onward bearing, RP-004, RP-013, successor, reward, access, authority, external action, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.
 
 ## Dated cycle handoff history — W4 Coder / 2026-07-25
 

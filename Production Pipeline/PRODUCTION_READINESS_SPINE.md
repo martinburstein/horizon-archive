@@ -1,11 +1,11 @@
 # Horizon Archive Production Readiness Spine
 
-## Intelligence Officer current control — 2026-07-25
+## Intelligence Officer current control — 2026-07-26
 
-- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-001 / SS-RP003-PY010-v1`. Independent full `737/737`, all `15/15` readiness self-tests, `173`-module production build, exact served JS/CSS/world-plate identities, one complete accepted `101.06s` E2E with credits and `runtimeErrors:false`, patch/object integrity, QA restoration, owned-preview shutdown, reveal validation, and final synchronization pass.
-- **Candidate identity:** `index-BHYcpGmM.js` (`1,138,689` bytes; SHA-256 `7D580F7BC58C7E7075D0851E85917F68B7408C94770F7693E602079DA7C0C41A`) / `index-BPUl5qmV.css` (`77,814` bytes; SHA-256 `0E099AABEC927D829AEFCF81CC7304A4A65771805BE0B9D74897EE5A1BA30BF3`).
-- **Accepted stop and limitations:** normal play stops at no-action finalized `PY010-P3`; CM-30, AI-901, save, bearing, later packets, RP-013, successor, and world/access/authority effects remain closed. The inherited plate remains temporary SC-04 atmosphere, CSS has 14 bytes of cap headroom, and direct gated in-app rendered review was unavailable without Martin's storage/save. These are documented nonblocking limitations, not hidden claims.
-- **Next authority:** await Martin's explicit test-drive decision. No automation or successor shell is authorized.
+- **Authoritative release:** `PASS — AS BUILT RELEASED / TD-002 / SS-RP003-IE01-v1`. Independent full `769/769`, all `15/15` readiness self-tests, `177`-module production build, exact served JS/CSS/world-plate identities, one complete accepted `113.241s` E2E with credits and `runtimeErrors:false`, direct closed-scenario responsive/accessibility review, fixture production-exclusion, QA restoration, owned-process shutdown, reveal validation, and final synchronization pass.
+- **Candidate identity:** `index-DDAc5mlT.js` (`1,172,546` bytes; SHA-256 `9419B9F969C0789A9B086D569EAD24DC4C626D9D9945754BB355B52CAE3F439C`) / `index-hd_9FUHO.css` (`81,676` bytes; SHA-256 `F7C0F531E1F1C1944AE70472FFB9D51C97A0BB09261FA5DB7F403A936E4DC834`).
+- **Accepted stop and limitations:** normal play stops at no-action finalized `IE-P3 / RP003-IE-01`; CM-40, review/save, bearing, later packets, RP-013, successor, and world/access/authority effects remain closed. The inherited plate remains temporary SC-04 atmosphere, CSS has 29 bytes of cap headroom, exact platform color/motion/text-zoom and human assistive-hardware behavior were not directly emulated, and English remains the only integrated locale. These are documented nonblocking limitations, not hidden claims.
+- **Next authority:** await Martin's explicit instruction. No automation or successor shell is authorized.
 
 ## Dated cycle handoff history — W4 Coder / 2026-07-25
 
