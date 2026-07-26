@@ -1,5 +1,21 @@
 # Horizon Archive Story Rail Map
 
+## TD-005 Operations return control — 2026-07-26
+
+- **Selected adjacent rail:** `FLOOR STACK READY — ROUTE AUTHORIZED /
+  CFS-TD005-v2`. Under Martin's standing adjacent-transition authority,
+  `TD005-RTA-001` is one fresh Pilot-owned, validation-before-consumption,
+  one-hit navigation decision from exact released TD-004 `TR-40 / SC-05`
+  into existing `RP-005 / SC-06 / MF-00–MF-30`.
+- **Release position unchanged / exact next gate:** RP-005 is selected but not
+  live. The apparent common return stays non-traversable and destinationless
+  notation stays non-routing. Science must independently validate the route,
+  immutable TD-004 record, recovery, evidence, privacy, accessibility,
+  offline/world invariance, and fresh non-compounding budget before Mission
+  may reconsider a shell. Hard stop remains MF-30 before any RP-006 route,
+  RP-013, successor, reward, access, authority, response, or post-ending
+  content.
+
 ## Intelligence Officer current control — 2026-07-26
 
 - **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position now advances from exact released TD-003 CM-50 through the full `RP-004 / SC-05 / TR-00–TR-40` shell, deterministic restore, both write-free returns, and the optional destinationless record.

@@ -1,5 +1,22 @@
 # RP-005 — Manyfold Return
 
+## TD-005 Operations route selection — 2026-07-26
+
+- **Planning disposition:** `FLOOR STACK READY — ROUTE AUTHORIZED /
+  CFS-TD005-v2`; exact selected address is
+  `RP-005 / SC-06 / MF-00–MF-30`.
+- **Entry authority:** `TD005-RTA-001` is a new, separate, fresh Pilot-owned
+  adjacent-survey decision from exact strict released TD-004 TR-40. It is not
+  derived from the apparent common return, destinationless notation, saved
+  record, scenery, packet title, or world response. Validation precedes
+  one-hit token consumption; accepted entry mounts exactly one zero-evidence
+  MF-00/SC-06 arrival and writes no durable record.
+- **Release and hard stop:** selection is not live integration or a shell.
+  Science and Mission remain required before construction. Exact TR-40 and
+  City Threshold returns remain write-free; MF-30 remains the stop before
+  any RP-006 route, RP-013, successor, reward, access, authority, response,
+  or post-ending content.
+
 ## Packet identity
 
 - Status: `READY FOR WORKING — COORDINATOR GATE PASS`

@@ -1,5 +1,18 @@
 # Rail Packet Scoreboard
 
+## TD-005 Operations return control — 2026-07-26
+
+- **RP-005 placement gate:** `PASS — FLOOR STACK READY / CFS-TD005-v2`.
+  Existing `RP-005 / SC-06 / MF-00–MF-30` is selected directly after exact
+  released TD-004 TR-40. `TD005-RTA-001` is Pilot-owned, fresh, one-hit,
+  private-free, zero-evidence, write-free at transition, and preserves null
+  city/external deltas, `successor=null`, and invariant SC-05/SC-06.
+- **Remaining strategic gates:** RP-005 remains absent from released play.
+  Science must issue a fresh viability/budget certificate and Mission must
+  issue `SHELL READY` before Marine construction. The common return and prior
+  notation remain non-routable; no RP-006 route, RP-013, successor, reward,
+  access, authority, external action, or world response is opened.
+
 ## Intelligence Officer current control — 2026-07-26
 
 - **Authoritative release:** `RP-004 PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. Normal play now reaches the complete `TR-00–TR-40` Three-Current Reach, including three independent observations, strict Python and AI-901 evidence, deterministic save/restore, both write-free returns, and the optional destinationless record. `TD004-VAR-001` and `TD004-VAR-002` are resolved; protected missing-gate count remains zero.

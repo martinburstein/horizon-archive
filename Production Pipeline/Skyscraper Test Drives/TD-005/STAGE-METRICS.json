@@ -4,7 +4,7 @@
   "run": {
     "testDrive": "TD-005",
     "shellCandidate": "UNSELECTED",
-    "campaignAddress": "UNSELECTED",
+    "campaignAddress": "RP-005 / SC-06 / MF-00–MF-30",
     "sourceCommit": "e3f1fb3b71a9940989e6af646fab1c22cc945e80",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -78,6 +78,22 @@
       "commit": "PENDING_MISSION_COMMIT",
       "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "mission-hold-push-gate"
+    },
+    {
+      "sequence": 6,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-07-26T23:10:44.0000000Z",
+      "endedAt": "2026-07-26T23:18:50.7177962Z",
+      "durationMs": 486718,
+      "disposition": "FLOOR STACK READY — ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/03-CAMPAIGN-FLOOR-STACK.md",
+      "returnFrom": "Mission Captain / MC-TD005-HOLD-v1",
+      "routeAuthority": "Martin standing adjacent-transition authority for exact released TD-004 TR-40 to existing RP-005 / SC-06 / MF-00–MF-30",
+      "routeContract": "TD005-RTA-001",
+      "commit": "PENDING_OPERATIONS_RETURN_COMMIT",
+      "commitConvention": "The dedicated returned Operations Planning Major commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
     }
   ]
 }
