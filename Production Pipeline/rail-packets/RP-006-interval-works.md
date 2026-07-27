@@ -1,5 +1,22 @@
 # RP-006 — Interval Works
 
+## TD-006 Mission shell control - 2026-07-27
+
+- **Disposition:** `SHELL READY / SS-RP006-INTERVAL-WORKS-v1 / SAFE STOP`.
+  Mission found the strategic package conflict-free and froze exact
+  `TD006-RTA-001`, MF-30/SC-06 validation-before-consumption, one transient
+  zero-evidence IW-00 arrival, IW-00-IW-30, four equal observations,
+  independent learning chains, strict bounded persistence, atomic rollback
+  and replay-free restore, exact returns, accessibility/responsive fixture,
+  two runtime image roles, invariant world, and `PBA-TD006-v1`.
+- **Construction state:** normal RP-006 remains unbuilt and unreleased.
+  Reconnaissance Sergeant is pending explicit manual or scheduled resume;
+  no Marine stage has begun.
+- **Hard boundary:** IW-30. The serviced continuation remains
+  destinationless and non-routing. No purpose, identity, cause, duration,
+  closed contents, reward, access, authority, response, RP-007 route,
+  RP-013, successor, or post-ending content is open.
+
 ## TD-006 Operations placement control - 2026-07-27
 
 - **Disposition:** `FLOOR STACK READY - ROUTE AUTHORIZED / CFS-TD006-v1`.

@@ -1,5 +1,23 @@
 # Horizon Archive Story Rail Map
 
+## TD-006 Mission shell current control - 2026-07-27
+
+- **Construction gate:** `SHELL READY /
+  SS-RP006-INTERVAL-WORKS-v1`. The selected adjacent rail is exactly
+  `RP-006 / SC-07 / IW-00-IW-30`; sole fresh Pilot-owned
+  `TD006-RTA-001` enters from released MF-30/SC-06 and no environmental,
+  record, label, or continuation cue can route.
+- **Frozen graph:** `MF-30 / SC-06 -> IW-00 -> IW-10 -> IW-20 -> IW-30 /
+  SC-07`, followed only by exact Manyfold Return or City Threshold returns.
+  Invalid or unsaved TD-006 state recovers to MF-30 and requires fresh
+  intent.
+- **Release position unchanged:** RP-006 remains unreleased and unbuilt.
+  TD-005 is still the live boundary. No Marine is active; Reconnaissance
+  Sergeant is pending explicit manual or scheduled resume.
+- **Exact stop:** IW-30 before any later route, identity, purpose, cause,
+  duration, closed contents, reward, access, authority, response, RP-013,
+  successor, or post-ending exposure.
+
 ## TD-006 Operations current control - 2026-07-27
 
 - **Selected adjacent rail:** `FLOOR STACK READY - ROUTE AUTHORIZED /

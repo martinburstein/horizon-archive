@@ -1,5 +1,32 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-006 Mission current control - 2026-07-27
+
+- **Disposition:** `SHELL READY / SS-RP006-INTERVAL-WORKS-v1 / SAFE STOP`.
+  Mission reconciled `GDB-TD006-v1`, `WNMP-TD006-v1`, `CFS-TD006-v1`,
+  `VE-TD006-v1`, `PBA-TD006-v1`, the protected reference, released TD-005,
+  and current controls without conflict.
+- **Frozen construction shell:** exact Pilot-owned `TD006-RTA-001`,
+  MF-30/SC-06 to zero-evidence IW-00/SC-07 entry, IW-00-IW-30 graph, exact
+  ownership, four equal observations, independent `PY-013`,
+  `RP006-SPEECH-01`, two explanation records, ten-key/eleven-note-key/
+  eight-record persistence, sanitation, atomic replacement/read-back/
+  rollback, replay-free restore, MF-30 recovery, exact returns, seven
+  modalities, four layouts, closed fixture, two image roles, offline/Tour,
+  invariant world, budget, and validation ladder are frozen.
+- **Fresh Mission evidence:** protected focused `13/13`, RP-006 mapping
+  validator `PASS`, production build `188` modules / `9.63s` Vite /
+  `12.31s` wall, and `PBA-TD006-v1` baseline `PASS` at exact released
+  TD-005 JS/CSS/media identity.
+- **Release boundary:** TD-005 remains the only released play. RP-006 normal
+  integration, images, fixture, E2E, and release remain unbuilt.
+- **Pause boundary:** no Marine has deployed. Reconnaissance Sergeant is
+  pending an explicit manual or scheduled resume and must begin from the
+  synchronized shell rather than restarting a strategic stage.
+- **Hard stop:** IW-30. No purpose, identity, reward, access, authority,
+  response, world effect, RP-007 route, RP-013, successor, or post-ending
+  content is authorized.
+
 ## TD-006 Science current control - 2026-07-27
 
 - **Disposition:** `VIABILITY READY / VE-TD006-v1 / MISSION NEXT`.

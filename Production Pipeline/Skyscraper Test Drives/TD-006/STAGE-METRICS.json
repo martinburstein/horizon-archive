@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-006",
-    "shellCandidate": "TD-006-RP006-INTERVAL-WORKS-v1 / PRE-SHELL",
+    "shellCandidate": "SS-RP006-INTERVAL-WORKS-v1",
     "campaignAddress": "RP-006 / SC-07 / IW-00-IW-30",
     "sourceCommit": "a2720da439d077f1d05fc834b862ebaf35d2d98a",
     "timezone": "America/New_York",
@@ -70,6 +70,29 @@
       "commit": "PENDING_SCIENCE_COMMIT",
       "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-27T03:37:30.2733841Z",
+      "endedAt": "2026-07-27T03:45:08.4655701Z",
+      "durationMs": 458192,
+      "disposition": "SHELL READY - SAFE STOP BEFORE MARINE DEPLOYMENT",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/05-PLAYABLE-SLICE-SHELL.md",
+      "shellId": "SS-RP006-INTERVAL-WORKS-v1",
+      "returnFrom": "Office of Science Administrator / VE-TD006-v1",
+      "routeContract": "TD006-RTA-001",
+      "focusedTests": "13/13 PASS",
+      "readinessValidators": "RP-006 mapping validator PASS",
+      "build": "PASS; 188 modules; 9.63s Vite; 12.31s wall",
+      "budget": "PBA-TD006-v1 baseline PASS; JS 1295773; CSS 87267; media 26078751; 11 accepted files",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "shell-ready-push-gate",
+      "pauseAfterStage": true,
+      "nextStage": "Reconnaissance Sergeant pending explicit manual or scheduled resume",
+      "marineDeployment": "not-started"
     }
   ]
 }

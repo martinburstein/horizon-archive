@@ -1,5 +1,21 @@
 # Rail Packet Scoreboard
 
+## TD-006 Mission shell current control - 2026-07-27
+
+- **RP-006 construction status:** `SHELL READY /
+  SS-RP006-INTERVAL-WORKS-v1`. Mission froze the exact Pilot-owned route,
+  IW-00-IW-30 graph, scene identity, separate learning/evidence, strict
+  record and private-free atomic recovery, seven modalities, responsive
+  fixture, invariant world, exact returns, two-image plan, and
+  `PBA-TD006-v1`.
+- **Working edge:** safe stop before Marine deployment. Reconnaissance
+  Sergeant is next only after explicit manual or scheduled resume. Normal
+  RP-006 integration, images, fixture, and release evidence remain unbuilt.
+- **Release state:** TD-005 remains authoritative. No Marine may widen the
+  shell; IW-30 remains the hard stop before a later floor, purpose,
+  identity, reward, access, authority, response, RP-013, successor, or
+  post-ending content.
+
 ## TD-006 Operations current control - 2026-07-27
 
 - **RP-006 placement gate:** `PASS - FLOOR STACK READY / CFS-TD006-v1`.
