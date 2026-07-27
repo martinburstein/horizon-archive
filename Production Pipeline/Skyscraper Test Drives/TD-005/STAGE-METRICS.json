@@ -172,9 +172,34 @@
       "fullTests": "824/824 PASS; 9.879s",
       "build": "PASS; 186 modules; 13.589s wall",
       "budget": "PBA-TD005-v1 candidate PASS; JS 1292429; CSS 87267; media 21536123; zero new placeholder media",
-      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commit": "bcda22c049b822216b86399fd6fb5c2eaae10583",
       "commitConvention": "The dedicated Combat Engineer commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "functional-complete-push-gate"
+    },
+    {
+      "sequence": 12,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-07-27T01:00:00.0000000Z",
+      "endedAt": "2026-07-27T01:13:40.6733600Z",
+      "durationMs": 820673,
+      "disposition": "REVISE - COPY COMPLETE / TWO SC-06 MASTERS REQUIRED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP005-MANYFOLD-RETURN-v1",
+      "precedingCommit": "bcda22c049b822216b86399fd6fb5c2eaae10583",
+      "copyRetirement": "All twelve TD005-COPY-* structural surfaces retired; raw evaluator IDs, raw case IDs, and underscore fallback absent from player rendering",
+      "assetDisposition": "SC-06-PANORAMA-MASTER and SC-06-DETAIL-MASTER remain explicit Image Specialist gaps; no approved SC-06 assets exist; no image generated, edited, or reclassified",
+      "focusedTests": "18/18 PASS; 0.335s",
+      "relatedTests": "65/65 PASS; 0.798s wall",
+      "fullTests": "825/825 PASS; 12.088s wall",
+      "readinessValidators": "15/15 PASS",
+      "build": "PASS; 186 modules; 12.95s Vite; 15.618s wall",
+      "budget": "PBA-TD005-v1 candidate PASS; JS 1295678; CSS 87267; media 21536123; zero new media",
+      "servedIdentity": "PASS; root/JS/CSS/SC-05 placeholder/City Threshold placeholder HTTP 200 with exact hashes; owned PID 18488 stopped; port 5185 clear",
+      "commit": "PENDING_QUARTERMASTER_COMMIT",
+      "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "returnOwner": "Image Specialist / image_specialist",
+      "synchronization": "local-only; no push"
     }
   ]
 }

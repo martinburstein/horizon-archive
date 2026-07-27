@@ -92,6 +92,17 @@ const optionCopy = Object.freeze({
   entity_detection: "Entity detection",
   sentiment_analysis: "Sentiment analysis",
   summarization: "Summarization",
+  return_salient_words_or_phrases: "Return salient words or phrases",
+  identify_named_people_places_organizations_or_other_entities: "Identify named people, places, organizations, or other entities",
+  classify_expressed_opinion_or_emotional_tone: "Classify expressed opinion or emotional tone",
+  condense_source_content_while_preserving_main_points: "Condense source content while preserving its main points",
+  surface_representative_phrases_not_named_entities: "Surface representative phrases rather than named entities",
+  locate_named_organizations_not_opinion: "Locate named organizations rather than opinion",
+  produce_a_shorter_account_not_a_sentiment_label: "Produce a shorter account rather than a sentiment label",
+  return_compact_topic_phrases_from_notes: "Return compact topic phrases from notes",
+  identify_named_locations_and_products: "Identify named locations and products",
+  classify_customer_opinion_as_positive_negative_or_neutral: "Classify customer opinion as positive, negative, or neutral",
+  create_a_brief_account_of_the_source_text: "Create a brief account of the source text",
   build_summary: "build_summary",
   replica_summary_and_sealed_reading: "replica_summary and sealed_reading",
   construct_the_four_key_dictionary_from_parameters: "Construct the four-key dictionary from parameters",
@@ -100,6 +111,25 @@ const optionCopy = Object.freeze({
   sealed_and_judgment_remain_none: "sealed and judgment remain None",
   the_requested_output_selects_the_text_analysis_technique: "The requested output selects the text analysis technique",
   summarization_does_not_establish_truth_or_quality: "Summarization does not establish truth or quality",
+});
+
+const failedBoundaryCopy = Object.freeze({
+  summary_is_dictionary: "Return one dictionary.",
+  exact_keys_and_values: "Preserve the four required fields and their supplied values.",
+  function_named_build_summary: "Name the function build_summary.",
+  exact_two_parameters: "Use the two supplied parameters.",
+  return_uses_parameters_without_inference: "Build the returned fields from the supplied parameters without inference.",
+  function_called_once_with_supplied_inputs: "Call the function once with the supplied inputs.",
+  sealed_and_judgment_remain_none: "Keep sealed and judgment as None.",
+  inputs_unchanged_and_no_forbidden_operations: "Leave the supplied inputs unchanged and use no live or forbidden operation.",
+  functionName: "Review the function name.",
+  parameters: "Review the two parameter names.",
+  body: "Review how the four-key dictionary is constructed.",
+  returnValue: "Review the returned nonjudgmental dictionary.",
+  callSite: "Review the single call with supplied inputs.",
+  noneBoundary: "Review the None boundary for sealed and judgment.",
+  requested_output: "Review which part of a request selects the text-analysis technique.",
+  truth_boundary: "Review what summarization cannot establish about truth or quality.",
 });
 const actionIds = Object.freeze({
   [manyfoldReturnActions.orient]: "mf00-orient-action",
@@ -118,7 +148,33 @@ const actionIds = Object.freeze({
 });
 
 function optionLabel(value) {
-  return optionCopy[value] ?? String(value).replaceAll("_", " ");
+  if (optionCopy[value]) return optionCopy[value];
+  const reviewBoundary = String(value).match(/^review_(.+)_boundary$/);
+  if (reviewBoundary && fieldCopy[reviewBoundary[1]]) {
+    return `Review only the ${fieldCopy[reviewBoundary[1]].toLowerCase()} boundary`;
+  }
+  const noInference = String(value).match(/^do_not_infer_(.+)$/);
+  if (noInference && fieldCopy[noInference[1]]) {
+    return `Do not infer the ${fieldCopy[noInference[1]].toLowerCase()}`;
+  }
+  return "Unrecognized course option";
+}
+
+function caseLabel(id, fallbackIndex) {
+  const match = String(id).match(/^([PRT])(\d{2})$/);
+  if (!match) return `Course case ${fallbackIndex + 1}`;
+  const form = { P: "Primary", R: "Retrieval", T: "Transfer" }[match[1]];
+  return `${form} case ${Number(match[2])}`;
+}
+
+function publicFailedBoundary(id) {
+  if (failedBoundaryCopy[id]) return failedBoundaryCopy[id];
+  const caseDimension = String(id).match(/^([PRT])(\d{2})\.(technique|deciding_signal)$/);
+  if (caseDimension) {
+    const form = { P: "Primary", R: "Retrieval", T: "Transfer" }[caseDimension[1]];
+    return `${form} case ${Number(caseDimension[2])} — ${fieldCopy[caseDimension[3]]} remains incomplete.`;
+  }
+  return "One required course boundary remains incomplete.";
 }
 
 function ManyfoldForm({ form, onFieldChange }) {
@@ -171,7 +227,7 @@ function ManyfoldForm({ form, onFieldChange }) {
       <div className="three-current-form manyfold-cases">
         {form.cases.map((item, caseIndex) => (
           <fieldset key={item.id}>
-            <legend>{item.id}: {item.prompt}</legend>
+            <legend>{caseLabel(item.id, caseIndex)}: {item.prompt}</legend>
             {form.dimensions.map((dimension, dimensionIndex) => {
               const name = `${item.id}.${dimension}`;
               return (
@@ -221,8 +277,11 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
     ? detailPlaceholder
     : panoramaPlaceholder;
   const worldAlt = worldScene?.role === "SC-06-DETAIL-MASTER"
-    ? "A noninteractive forensic placeholder view of recurring exposed traces, one supported bounded divergence, an opaque bypassed sealed boundary, and compatible material-era stewardship in one assembly"
-    : "A noninteractive panoramic placeholder for a vast invariant first-person distribution field with four equal observable relations and an ongoing greater whole";
+    ? "Temporary noninteractive visual reference: the existing City Threshold access scene stands in for the pending SC-06 forensic detail master and supplies no SC-06 observation or course evidence"
+    : "Temporary noninteractive visual reference: the released Three-Current Reach panorama stands in for the pending SC-06 panorama master and supplies no SC-06 observation or course evidence";
+  const runtimeSourceMaster = worldScene?.role === "SC-06-DETAIL-MASTER"
+    ? "city-threshold-access-master.png"
+    : "sc05-three-current-panorama-runtime-master-v1.webp";
   const recorded = useMemo(() => new Set(state.recordedObservationIds ?? []), [state.recordedObservationIds]);
 
   useLayoutEffect(() => {
@@ -245,10 +304,14 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
           data-world-master={worldScene?.masterId}
           data-world-role={worldScene?.role}
           data-world-crop={worldScene?.cropId}
-          data-placeholder-retirement="Quartermaster must replace both honest role placeholders before release"
+          data-runtime-source-master={runtimeSourceMaster}
+          data-asset-status="PLACEHOLDER — IMAGE SPECIALIST GAP"
+          data-placeholder-retirement="SC-06 masters remain unfilled; predecessor assets are disclosed and grant no SC-06 evidence"
         >
           <img src={worldImage} alt={worldAlt} />
-          <figcaption>World image is noninteractive, invariant, and zero evidence. Current assets are honest Combat-stage placeholders for the two issued SC-06 roles.</figcaption>
+          <figcaption>
+            Visual production gap: this disclosed predecessor image is noninteractive and grants no SC-06 observation or course evidence. The adjacent expedition text carries the complete current meaning.
+          </figcaption>
         </figure>
 
         <section ref={panelRef} className="three-current-panel manyfold-panel" aria-labelledby={state.headingId}>
@@ -278,7 +341,7 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
           {state.failedPublicIds?.length > 0 && (
             <section className="manyfold-errors" aria-labelledby="manyfold-error-heading">
               <h2 id="manyfold-error-heading">Incomplete public checks</h2>
-              <ul>{state.failedPublicIds.map((id) => <li key={id}>{id}</li>)}</ul>
+              <ul>{state.failedPublicIds.map((id) => <li key={id}>{publicFailedBoundary(id)}</li>)}</ul>
               <p>Review the named responsibility only. No expected source, answer, score, case choice, or truth value is supplied.</p>
             </section>
           )}
