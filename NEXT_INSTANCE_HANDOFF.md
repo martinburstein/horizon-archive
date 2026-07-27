@@ -7,143 +7,106 @@ Last updated: **2026-07-26**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-The authorized Skyscraper automation remains active on a three-hour cadence.
-TD-005 has crossed `EXPERIENCE READY`. Resume at Combat Engineer; do not
-restart a completed stage or run roles concurrently.
+The authorized three-hour Skyscraper automation remains active. TD-005 is
+`FUNCTIONALLY COMPLETE`. Resume at Quartermaster; do not restart a completed
+stage, run roles concurrently, or infer a stale edge from the scheduled
+prompt.
 
 ## Synchronized state
 
 - Active test drive: `TD-005`
-- Latest completed stage: `10 - Tactical Operations Specialist`
+- Latest completed stage: `11 - Combat Engineer`
 - Shell: `SS-RP005-MANYFOLD-RETURN-v1 / SHELL READY`
-- Experience contract: `EB-TD005-v1 / EXPERIENCE READY`
+- Experience: `EB-TD005-v1 / EXPERIENCE READY`
+- Functional build: `TD-005/08-FUNCTIONAL-BUILD-REPORT.md /
+  FUNCTIONALLY COMPLETE`
 - Slice: `TD-005-RP005-MANYFOLD-RETURN-v1`
-- Campaign address: `RP-005 / SC-06 / MF-00-MF-30`
+- Address: `RP-005 / SC-06 / MF-00-MF-30`
 - Route: `TD005-RTA-001`
-- Strategic authorities:
-  `GDB-TD005-v1`, `WNMP-TD005-v1`, `CFS-TD005-v2`, `VE-TD005-v2`,
-  `PBA-TD005-v1`
-- Mission synchronized commit:
-  `0ffa55b636bbb94772d8659c6009d43395085033`
-- Recon local commit:
-  `b7dd779ce4630abae50e5e6119c9c6c1fde8b7bf`
-- Tactical commit: the dedicated local commit containing
-  `TD-005/07-EXPERIENCE-BLUEPRINT.md`, metrics, and this handoff is
+- Strategic authorities: `GDB-TD005-v1`, `WNMP-TD005-v1`,
+  `CFS-TD005-v2`, `VE-TD005-v2`, `PBA-TD005-v1`
+- Tactical commit:
+  `765f42872da23c83aa860e75975cd29f074b8797`
+- Combat commit: the dedicated synchronized commit containing the normal
+  build, `08-FUNCTIONAL-BUILD-REPORT.md`, metrics, and this handoff is
   authoritative under the ledger self-reference convention.
-- Released playable boundary: still TD-004 until Intelligence releases the
-  completed TD-005 as-built shell.
+- Released playable boundary remains TD-004 until Intelligence independently
+  releases the completed TD-005 as-built shell.
 
-## Frozen construction boundary
+## Accepted Combat evidence
 
-The sole new route is the fresh Pilot-owned `TD005-RTA-001` from exact strict
-released TD-004 TR-40/SC-05. Validation and private clearing precede token
-consumption. One accepted token mounts one transient zero-evidence MF-00.
-TD-004 raw bytes remain unchanged throughout.
-
-The exact graph is:
-
-```text
-TR-40 / SC-05
-  -> MF-00 ARRIVE + IDLE / SC-06 panorama
-  -> MF-10 INSPECT DISTRIBUTION / SC-06 detail
-  -> MF-20 SUMMARIZE + SAVE / SC-06 panorama
-  -> MF-30 VERIFY + RETURN / SC-06 panorama
-  -> exact TR-40 / SC-05 OR City Threshold
-```
-
-Four equal observations converge in any of 24 orders:
-
-```text
-recurring_exposed_trace_range
-bounded_divergent_trace
-sealed_branch_unavailable
-layered_stewardship_visible
-```
-
-Recurrence is description, divergence supported difference, the sealed branch
-unavailable evidence, and stewardship compatible material continuity. None
-supplies truth, failure, access, owner, authority, purpose, or world response.
-
-## Frozen learning, save, and presentation
-
-- Strict `PY-012`: primary `8/8`, answer-free repair, trace `6/6`, genuinely
-  blank transfer `8/8`.
-- Independent `RP005-TEXT-01 / AI901-D1-O5`: primary `8/8`, answer-free
-  repair, retrieval `6/6`, blank transfer `8/8`, requested-output
-  explanation, truth-boundary explanation.
-- Five-responsibility conjunctive review; no total, score, rank, grade,
-  readiness, or verdict.
-- Key `horizon-archive-rp005-manyfold-return-save-v1`, exact ten top-level
-  keys, nine note keys, eight ordered evidence records.
-- Sanitize-before-write, exact prior bytes/absence, exact raw and object
-  read-back, verified rollback, unchanged TD-004 bytes, no-replay MF-30.
-- Seven modalities, one active group, one heading/status, deterministic
-  focus, `>=44px`, desktop/laptop/narrow/effective-200%, forced colors,
-  reduced motion, grayscale, and silence.
-- Exactly two new runtime image roles: `SC-06-PANORAMA-MASTER` and
-  `SC-06-DETAIL-MASTER`. CSS crops emit no additional runtime image.
-- Closed storage-free 44-scenario fixture and bounded compact summary are
-  specified in `TD-005/07-EXPERIENCE-BLUEPRINT.md`.
-
-## Budget
-
-`PBA-TD005-v1` remains one-time and non-compounding:
-
-- aggregate JS `<=1,310,110` bytes;
-- aggregate CSS `<=89,408` bytes;
-- production modules `<=192`;
-- exactly two new runtime images totaling `<=8,388,608` bytes;
-- total runtime media `<=29,924,731` bytes;
-- build/full/focused/related/E2E/main-task caps remain exact.
-
-No product, learning, privacy, accessibility, visual, save, recovery, or
-release requirement may be weakened to meet budget.
+- Exact TD-004 TR-40 route and byte-stable predecessor integration: PASS.
+- MF-00-MF-30 state graph, state-only panorama/detail resolver, four equal
+  observations, all 24 orders, seven modalities, exact owners/focus/status,
+  hard stop, and write-free returns: PASS.
+- Independent `PY-012` `8/8 -> 6/6 -> 8/8` and
+  `RP005-TEXT-01` `8/8 -> 6/6 -> 8/8` plus separate requested-output and
+  truth-boundary explanations: PASS.
+- Blank eligibility, answer-free whole-form remediation, independent
+  eight-record evidence, and five-responsibility review: PASS.
+- Exact ten-key/nine-note-key/eight-record sanitizer; raw/object equality;
+  rollback verification; rollback-unverified hold; no-replay restore; unchanged
+  TD-004 bytes: PASS.
+- Closed storage-free 44-scenario fixture and production exclusion: PASS.
+- Focused `17/17`, related `46/46`, full `824/824`, RP-005 validator, build,
+  candidate PBA, served root/JS/CSS, both role IDs, fixture build, patch
+  integrity, and owned preview cleanup: PASS.
+- Candidate: `186` modules; JS `1,292,429` bytes; CSS `87,267` bytes; runtime
+  media `21,536,123` bytes.
 
 ## Exact next action
 
-**Combat Engineer / `combat_engineer`.**
+**Quartermaster / `quartermaster`.**
 
-Read the canonical Combat Engineer profile, exact shell, Creative Treatment,
-and `TD-005/07-EXPERIENCE-BLUEPRINT.md` in full. Implement one bounded normal
-production tranche for the complete `EB-TD005-v1` graph:
+Read the canonical Quartermaster profile, exact shell, Creative Treatment,
+Experience Blueprint, and `08-FUNCTIONAL-BUILD-REPORT.md` in full.
 
-- exact TD-004 TR-40 route integration and seven-modality one-hit intent;
-- dedicated RP-005 controller, strict sanitizer, raw-byte storage adapter,
-  rollback verification, restore, returns, and state-only scene resolver;
-- MF-00 orientation, MF-10 four-peer/24-order observations, MF-20 independent
-  blank Python/text/explanation forms and answer-free recovery,
-  five-responsibility review, provenance, save/failure states, and MF-30;
-- renderer/focus/status/responsive/forced-color/reduced-motion/grayscale/
-  silent structure;
-- exactly two SC-06 role import placeholders/direct paths, without generating
-  or accepting final art or adding a third image; and
-- the exact closed storage-free 44-scenario fixture with production exclusion
-  and compact summary.
+Complete one bounded content-and-asset tranche:
 
-Run focused and connected tests, all 24 observation orders, RP-005 validator,
-full tests, production build, and `scripts/validate_td005_budget.py`. Do not
-overlap build and E2E. Write
-`Production Pipeline/Skyscraper Test Drives/TD-005/08-FUNCTIONAL-BUILD-REPORT.md`.
+1. preserve the entire accepted functional graph, exact semantic IDs,
+   learning/evidence truth, privacy, focus, persistence, returns, fixture, and
+   hard stop;
+2. retire structural player-facing copy placeholders while preserving care
+   without verdict, neutral course ownership, offline/no-live/no-authority/
+   no-exam/no-world-response limits, and no score/rank/readiness language;
+3. replace the two explicitly marked Combat placeholders with exactly:
+   `SC-06-PANORAMA-MASTER` and `SC-06-DETAIL-MASTER`;
+4. the two masters must be maximum-quality cinematic photorealistic,
+   first-person, spatially consistent, invariant, spoiler-safe, and conform to
+   the panorama/detail crop and alt contracts;
+5. add exact provenance, direct imports, emitted byte/SHA-256 identities,
+   responsive crops, grayscale evidence, accessible alternatives, and
+   explicit placeholder retirement;
+6. add no third image, new audio/font/video/network payload, answer cue,
+   judgment, access, owner, purpose, route, world response, or later content;
+7. run focused copy/asset/source checks, connected TD-004/TD-005 regression,
+   production build, `scripts/validate_td005_budget.py --mode candidate`, and
+   fixture/protected/source-map exclusion; and
+8. write
+   `Production Pipeline/Skyscraper Test Drives/TD-005/09-CONTENT-ASSET-LEDGER.md`.
 
-Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`. On honest
-`FUNCTIONALLY COMPLETE`, create one dedicated commit, push `main`, and verify
-`HEAD == origin/main`. Then hand off to Quartermaster.
+Issue `CONTENT COMPLETE`, `REVISE`, or `HOLD`. Create one dedicated local
+commit. Do not push at Quartermaster unless a safer synchronized checkpoint is
+required by the workflow; the next defined push gate is `AS BUILT RELEASED`.
+Hand off to Image Specialist.
 
-Do not use protected RP-005 code as production proof, generate art, write
-final copy, invent a route/state/evidence/schema/save meaning, weaken a gate,
-or expose RP-006/later content.
+## Frozen boundaries
 
-## Hard stop and protected boundaries
-
-MF-30 is the hard stop before RP-006, RP-013, successor, post-ending content,
-hidden lore, or a changed ending. Exact returns are Three-Current Reach and
-City Threshold only; there is no direct Calibration Margin or Civic shortcut.
-No truth, quality, purpose, sealed contents, access, permission, reward,
-authority, external action, exam guarantee, city/Builder/Machine response, or
-world delta is authorized.
-
-Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`. Never inspect
-or mutate Martin's browser storage, campaign save, cookies, profile, or
-session. Never inspect, alter, stage, move, delete, or commit
-`Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`. The
-archived two-team workflow remains inactive.
+- Exactly one SC-06 panorama role and one SC-06 forensic detail role; CSS
+  crops emit no derivative asset.
+- PBA caps remain JS `<=1,310,110`, CSS `<=89,408`, modules `<=192`, no more
+  than two new image-only assets totaling `<=8,388,608`, total media
+  `<=29,924,731`.
+- Recurrence is description; divergence is supported difference; sealed
+  branch is unavailable; stewardship is material continuity. None becomes
+  truth, failure, value, access, contents, owner, institution, doctrine,
+  authority, or purpose.
+- MF-30 is the hard stop. Returns are Three-Current Reach and City Threshold
+  only. No direct Calibration Margin/Civic route, RP-006, RP-013, successor,
+  reward, permission, external action, exam guarantee, or world response.
+- Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
+- Never inspect or mutate Martin's browser storage, campaign save, cookies,
+  profile, or session.
+- Never inspect, alter, stage, move, delete, or commit
+  `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
+- The archived two-team workflow remains inactive.

@@ -9,6 +9,7 @@ import routeTransferStarter from "../../curriculum/lessons/L-01-02/route_marker_
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginEntry } from "./CalibrationMarginEntry.jsx";
 import { ThreeCurrentReach } from "./ThreeCurrentReach.jsx";
+import { ManyfoldReturn } from "./ManyfoldReturn.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -29,8 +30,13 @@ import {
 } from "./CalibrationMarginReviewSave.js";
 import {
   THREE_CURRENT_REACH_SHELL_VERSION,
+  THREE_CURRENT_REACH_SAVE_KEY,
   createThreeCurrentReachStorageAdapter,
 } from "./ThreeCurrentReachNormal.js";
+import {
+  MANYFOLD_RETURN_SHELL_VERSION,
+  createManyfoldReturnStorageAdapter,
+} from "./ManyfoldReturnNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -406,6 +412,24 @@ function writeCalibrationMarginExtractionCheckpoint(storage, value) {
 function calibrationMarginReviewSaveOptions(storage) {
   const reviewSaveAdapter = createCalibrationMarginReviewSaveStorageAdapter(storage);
   const threeCurrentReachAdapter = createThreeCurrentReachStorageAdapter(storage);
+  const restoredThreeCurrentReach = threeCurrentReachAdapter.read();
+  let threeCurrentBytes = null;
+  try {
+    threeCurrentBytes = storage?.getItem(THREE_CURRENT_REACH_SAVE_KEY) ?? null;
+  } catch {
+    threeCurrentBytes = null;
+  }
+  const readThreeCurrentBytes = () => {
+    try {
+      return storage?.getItem(THREE_CURRENT_REACH_SAVE_KEY) ?? null;
+    } catch {
+      return null;
+    }
+  };
+  const manyfoldReturnAdapter = createManyfoldReturnStorageAdapter(storage, {
+    record: restoredThreeCurrentReach,
+    bytes: threeCurrentBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -416,7 +440,10 @@ function calibrationMarginReviewSaveOptions(storage) {
     reviewSaveAdapter,
     restoredReviewSave: reviewSaveAdapter.read(),
     threeCurrentReachAdapter,
-    restoredThreeCurrentReach: threeCurrentReachAdapter.read(),
+    restoredThreeCurrentReach,
+    readThreeCurrentBytes,
+    manyfoldReturnAdapter,
+    restoredManyfoldReturn: manyfoldReturnAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2284,6 +2311,7 @@ export function App() {
       "SS-RP003-IE01-v1",
       "SS-RP003-REVIEW-SAVE-v1",
       THREE_CURRENT_REACH_SHELL_VERSION,
+      MANYFOLD_RETURN_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2352,11 +2380,14 @@ export function App() {
     if ([
       "SS-RP003-REVIEW-SAVE-v1",
       THREE_CURRENT_REACH_SHELL_VERSION,
+      MANYFOLD_RETURN_SHELL_VERSION,
     ].includes(controller?.getState().shellVersion)) {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
+        status: controller.getState().shellVersion === MANYFOLD_RETURN_SHELL_VERSION
+          ? "manyfold_return_restored"
+          : controller.getState().shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
           ? "three_current_reach_restored"
           : "review_save_restored",
         state: controller.getState(),
@@ -2394,6 +2425,7 @@ export function App() {
       || result?.state?.shellVersion === "SS-RP003-IE01-v1"
       || result?.state?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
       || result?.state?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
+      || result?.state?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3561,11 +3593,21 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-IE01-v1"
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
     || calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
     ].includes(calibrationMarginEntryView?.phase)
   )) {
+    if (calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION) {
+      return (
+        <ManyfoldReturn
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
     if (calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION) {
       return (
         <ThreeCurrentReach

@@ -29,6 +29,8 @@ export const threeCurrentReachActions = Object.freeze({
   returnCalibration: "RETURN TO CALIBRATION MARGIN",
   returnThreshold: "RETURN TO CITY THRESHOLD",
   continuation: "RECORD OUTBOUND PHYSICAL CONTINUATION",
+  manyfoldReturn:
+    "PILOT // FOLLOW EXPEDITION-MARKED ADJACENT SURVEY TO MANYFOLD RETURN",
 });
 
 export const threeCurrentReachModalities = Object.freeze([
@@ -258,6 +260,7 @@ const groupDefinitions = Object.freeze({
     owner: "SYSTEM // RESTORED EXPEDITION NOTE",
     headingId: "tr40-restore-heading",
     actions: Object.freeze([
+      threeCurrentReachActions.manyfoldReturn,
       threeCurrentReachActions.continuation,
       threeCurrentReachActions.returnCalibration,
       threeCurrentReachActions.returnThreshold,
@@ -268,6 +271,7 @@ const groupDefinitions = Object.freeze({
     owner: "SYSTEM // RESTORED EXPEDITION NOTE",
     headingId: "tr40-restore-heading",
     actions: Object.freeze([
+      threeCurrentReachActions.manyfoldReturn,
       threeCurrentReachActions.returnCalibration,
       threeCurrentReachActions.returnThreshold,
     ]),

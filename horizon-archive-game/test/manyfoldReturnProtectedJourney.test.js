@@ -445,12 +445,12 @@ test("protected RP-005 stays unimported, storage-free, network-free, DOM-free, a
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
   assert.doesNotMatch(source, /localStorage|sessionStorage|indexedDB|fetch\s*\(|XMLHttpRequest|WebSocket|navigator\.|document\.|window\./i);
-  assert.doesNotMatch(app, /ManyfoldReturnProtectedJourney|runManyfoldReturnProtectedJourneySmoke|RP-005|SC-06/);
-  assert.doesNotMatch(main, /ManyfoldReturnProtectedJourney|runManyfoldReturnProtectedJourneySmoke|RP-005|SC-06/);
+  assert.doesNotMatch(app, /ManyfoldReturnProtectedJourney|runManyfoldReturnProtectedJourneySmoke|rp005\.protected-journey\.v1/);
+  assert.doesNotMatch(main, /ManyfoldReturnProtectedJourney|runManyfoldReturnProtectedJourneySmoke|rp005\.protected-journey\.v1/);
   const distAssets = await readdir(new URL("../dist/assets/", import.meta.url));
   const jsAssets = distAssets.filter((name) => name.endsWith(".js"));
   for (const asset of jsAssets) {
     const built = await readFile(new URL(`../dist/assets/${asset}`, import.meta.url), "utf8");
-    assert.doesNotMatch(built, /ManyfoldReturnProtectedJourney|manyfold_return_complete|MF-00 ARRIVE|RP005-TEXT-01/);
+    assert.doesNotMatch(built, /ManyfoldReturnProtectedJourney|runManyfoldReturnProtectedJourneySmoke|rp005\.protected-journey\.v1/);
   }
 });

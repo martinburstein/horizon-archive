@@ -1859,6 +1859,149 @@ h1 {
   }
 }
 
+.manyfold-world {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  background: #080b10;
+}
+
+.manyfold-world img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.72) contrast(1.04);
+}
+
+.manyfold-world figcaption {
+  position: absolute;
+  z-index: 1;
+  inset: auto 18px 16px;
+  max-width: 62ch;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 242 200 / 25%);
+  background: rgb(5 7 12 / 86%);
+  color: #d9d7cf;
+  font-size: .75rem;
+}
+
+.manyfold-owner {
+  color: #c9d6de;
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: .78rem;
+  letter-spacing: .04em;
+  overflow-wrap: anywhere;
+}
+
+.manyfold-panel [role="status"] {
+  padding: 10px 12px;
+  border: 1px solid #626d74;
+  border-left: 4px solid #9fb6c4;
+  background: rgb(180 214 235 / 5%);
+  overflow-wrap: anywhere;
+}
+
+.manyfold-form-grid,
+.manyfold-cases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.manyfold-cases fieldset {
+  padding: 10px;
+  border: 1px solid #4d4b46;
+}
+
+.manyfold-cases legend {
+  padding-inline: 4px;
+  overflow-wrap: anywhere;
+}
+
+.manyfold-scaffold {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px dashed #68727a;
+}
+
+.manyfold-observations li:has(span:first-of-type:last-child) span,
+.manyfold-errors {
+  overflow-wrap: anywhere;
+}
+
+.manyfold-observations li span {
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: .76rem;
+}
+
+.manyfold-review li {
+  border-left-style: double;
+  border-left-width: 4px;
+}
+
+.manyfold-review span {
+  overflow-wrap: anywhere;
+}
+
+.manyfold-errors {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 2px solid #bc805b;
+}
+
+.manyfold-boundary {
+  padding-top: 10px;
+  border-top: 1px solid #4d4b46;
+  color: #c9c6bb;
+  font-size: .82rem;
+}
+
+@media (max-width: 767px) {
+  .manyfold-form-grid,
+  .manyfold-cases {
+    grid-template-columns: 1fr;
+  }
+
+  .manyfold-world figcaption {
+    position: static;
+    max-width: none;
+    border-inline: 0;
+  }
+}
+
+@media (forced-colors: active) {
+  .manyfold-panel [role="status"],
+  .manyfold-scaffold,
+  .manyfold-cases fieldset,
+  .manyfold-errors,
+  .manyfold-boundary,
+  .manyfold-world figcaption {
+    forced-color-adjust: auto;
+    border-color: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .manyfold-actions button:disabled {
+    color: GrayText;
+    border-style: double;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manyfold-return,
+  .manyfold-return * {
+    scroll-behavior: auto;
+    transition: none;
+    animation: none;
+  }
+}
+
 @media (max-width: 480px) {
   body { min-width: 0; }
   .canonical-game-host { padding: 0; }

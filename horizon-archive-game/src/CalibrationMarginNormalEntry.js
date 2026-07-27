@@ -40,6 +40,13 @@ import {
   sanitizeThreeCurrentReachSave,
   threeCurrentReachActions,
 } from "./ThreeCurrentReachNormal.js";
+import {
+  MANYFOLD_RETURN_SHELL_VERSION,
+  createManyfoldReturnIntent,
+  createManyfoldReturnNormalController,
+  manyfoldReturnActions,
+  sanitizeManyfoldReturnSave,
+} from "./ManyfoldReturnNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -133,12 +140,14 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let extractionController = null;
   let reviewController = null;
   let threeCurrentController = null;
+  let manyfoldReturnController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
+    if (manyfoldReturnController) return manyfoldReturnController.getState();
     if (threeCurrentController) return threeCurrentController.getState();
     if (reviewController) return reviewController.getState();
     if (reviewRecovery && surveyController) return surveyController.getState();
@@ -240,6 +249,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     extractionController = null;
     reviewController = null;
     threeCurrentController = null;
+    manyfoldReturnController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -260,6 +270,16 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         restoredEvidence: options.restoredThreeCurrentEvidence,
         adapter: options.threeCurrentReachAdapter,
       });
+      const restoredManyfold = sanitizeManyfoldReturnSave(options.restoredManyfoldReturn);
+      if (restoredThreeCurrent && restoredManyfold) {
+        manyfoldReturnController = createManyfoldReturnNormalController({
+          predecessorRecord: restoredThreeCurrent,
+          predecessorBytes: options.readThreeCurrentBytes?.(),
+          readPredecessorBytes: options.readThreeCurrentBytes,
+          restoredRecord: restoredManyfold,
+          adapter: options.manyfoldReturnAdapter,
+        });
+      }
       return;
     }
 
@@ -310,7 +330,38 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (manyfoldReturnController) {
+        const result = manyfoldReturnController.dispatch(intent);
+        if (result.status === "returned_to_three_current_reach_write_free") {
+          manyfoldReturnController = null;
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(threeCurrentController.getState()),
+          });
+        }
+        return result;
+      }
       if (threeCurrentController) {
+        if (["tr40_restore", "tr40_restore_recorded"].includes(
+          threeCurrentController.getState().activeGroup,
+        ) && intent?.allowlistedActionId === manyfoldReturnActions.route) {
+          const validation = threeCurrentController.dispatch(intent);
+          if (validation?.reason !== "action_unavailable") return validation;
+          const predecessorRecord = threeCurrentController.getRecord();
+          manyfoldReturnController = createManyfoldReturnNormalController({
+            predecessorRecord,
+            predecessorBytes: options.readThreeCurrentBytes?.()
+              ?? JSON.stringify(predecessorRecord),
+            readPredecessorBytes: options.readThreeCurrentBytes,
+            restoredRecord: options.restoredManyfoldReturn,
+            adapter: options.manyfoldReturnAdapter,
+          });
+          return Object.freeze({
+            status: "manyfold_arrived_zero_evidence",
+            evidenceGranted: false,
+            state: clonePublicState(manyfoldReturnController.getState()),
+          });
+        }
         const result = threeCurrentController.dispatch(intent);
         return result;
       }
@@ -440,6 +491,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (manyfoldReturnController) {
+        return manyfoldReturnController.updateField(name, value);
+      }
       if (threeCurrentController) {
         return threeCurrentController.updateField(name, value);
       }
@@ -525,7 +579,20 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (shellVersionOrPhaseIsManyfold(activeGroup)) {
+    return createManyfoldReturnIntent(
+      {
+        shellVersion: MANYFOLD_RETURN_SHELL_VERSION,
+        activeGroup: activeGroup ?? "mf00_arrive",
+        owner: manyfoldOwner(activeGroup),
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (action === threeCurrentReachActions.route
+    || action === manyfoldReturnActions.route
     || shellVersionOrPhaseIsThreeCurrent(phase, activeGroup)) {
     return createThreeCurrentReachIntent(
       {
@@ -620,6 +687,32 @@ export function createCalibrationMarginNormalEntryIntent(
 function shellVersionOrPhaseIsThreeCurrent(phase, activeGroup) {
   return typeof activeGroup === "string"
     && (activeGroup === "cm50_route" || activeGroup.startsWith("tr"));
+}
+
+function shellVersionOrPhaseIsManyfold(activeGroup) {
+  return typeof activeGroup === "string" && activeGroup.startsWith("mf");
+}
+
+function manyfoldOwner(activeGroup) {
+  if (activeGroup === "mf00_arrive") return "SCENE // MANYFOLD RETURN";
+  if (["mf00_oriented", "mf10_observations"].includes(activeGroup)) {
+    return "PILOT // EXPEDITION OBSERVATION";
+  }
+  if (activeGroup?.startsWith("mf20_python")) {
+    return "BUILDER WORK // SANITIZED PRECOMPUTED REPLICAS";
+  }
+  if (activeGroup?.startsWith("mf20_text")
+    || ["mf20_requested_output", "mf20_truth_boundary", "mf20_repair"].includes(activeGroup)) {
+    return "TEACHER / COURSE // TEXT TECHNIQUE PRACTICE";
+  }
+  if (["mf20_review", "mf20_provenance"].includes(activeGroup)) {
+    return "PILOT // BOUNDED REVIEW";
+  }
+  if (["mf20_transaction", "mf20_save_recovery", "mf20_rollback_unverified"].includes(activeGroup)) {
+    return "SYSTEM // LOCAL EXPEDITION NOTE";
+  }
+  if (activeGroup?.startsWith("mf30_")) return "SYSTEM // RESTORED EXPEDITION NOTE";
+  return "SCENE // MANYFOLD RETURN";
 }
 
 function threeCurrentOwner(activeGroup) {

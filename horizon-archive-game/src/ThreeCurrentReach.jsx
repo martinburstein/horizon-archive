@@ -205,6 +205,7 @@ function actionTargetId(action) {
     [threeCurrentReachActions.commonReturn]: "common-return-action",
     [threeCurrentReachActions.save]: "tr30-save-action",
     [threeCurrentReachActions.continuation]: "tr40-continuation-action",
+    [threeCurrentReachActions.manyfoldReturn]: "td005-route-action",
     [threeCurrentReachActions.returnCalibration]: "return-calibration-action",
     [threeCurrentReachActions.returnThreshold]: "return-threshold-action",
   }[action];
