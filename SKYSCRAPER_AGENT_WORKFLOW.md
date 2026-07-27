@@ -205,9 +205,24 @@ Every stage preserves:
 
 ## Cycle reveal
 
-The Image Specialist may produce exactly one spoiler-safe reveal candidate after choosing one accepted visual or lore decision and checking it against existing visual canon. The candidate must vary subject, scale, or composition from recent reveals, include provenance, and identify one named checklist item.
+The Image Specialist produces exactly one accepted spoiler-safe reveal after
+choosing one accepted visual or lore decision and checking it against existing
+visual canon. The accepted candidate must vary subject, scale, or composition
+from recent reveals, include provenance, and identify one named checklist
+item.
 
-The Intelligence Officer validates and either accepts that exact candidate or records `REVISE`/`HOLD`; it does not silently generate a replacement. A completed released run shows the accepted reveal to Martin. Canonical reference status does not claim runtime integration.
+The generation quality-recovery budget is:
+
+1. one initial private generation;
+2. if and only if that output fails documented Image Specialist QA before it
+   enters the workspace, one targeted recovery generation; and
+3. no third attempt.
+
+The rejected draft remains outside the workspace, canon, runtime, provenance
+package, commits, and user-facing reveal. Exactly one accepted image is
+archived, committed, and shown. The Intelligence Officer validates that exact
+accepted candidate or records `REVISE`/`HOLD`; it does not silently generate a
+replacement. Canonical reference status does not claim runtime integration.
 
 ## Intelligence Officer close
 
