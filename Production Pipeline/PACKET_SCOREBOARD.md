@@ -1,5 +1,22 @@
 # Rail Packet Scoreboard
 
+## TD-006 Operations current control - 2026-07-27
+
+- **RP-006 placement gate:** `PASS - FLOOR STACK READY / CFS-TD006-v1`.
+  Existing `RP-006 / SC-07 / IW-00-IW-30` is selected directly after exact
+  released TD-005 MF-30. `TD006-RTA-001` is Pilot-owned, fresh, one-hit,
+  private-free, zero-evidence, and write-free at transition; it preserves
+  immutable predecessor bytes, null city/external deltas, `successor=null`,
+  and invariant SC-06/SC-07.
+- **Remaining strategic gates:** RP-006 remains absent from released play.
+  Science must issue a fresh viability, normal persistence, and
+  non-compounding budget certificate; Mission must then issue `SHELL READY`
+  before Marine construction. The serviced continuation and every
+  receiver/cuff/frequency/bypass/planning cue remain non-routing. IW-30 is
+  the selected candidate stop before any later floor, purpose/identity/
+  cause/duration/closed contents, reward, access, authority, response,
+  RP-013, or post-ending content.
+
 ## Intelligence Officer current control - 2026-07-27
 
 - **Authoritative release:** `RP-005 PASS - AS BUILT RELEASED / TD-005 /

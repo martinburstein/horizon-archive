@@ -1,5 +1,29 @@
 # RP-006 — Interval Works
 
+## TD-006 Operations placement control - 2026-07-27
+
+- **Disposition:** `FLOOR STACK READY - ROUTE AUTHORIZED / CFS-TD006-v1`.
+  The selected pre-shell address is exactly `RP-006 / SC-07 /
+  IW-00-IW-30`, directly after released TD-005 MF-30 through one fresh
+  Pilot-owned `TD006-RTA-001` intent.
+- **Entry boundary:** the exact released TD-005 record, immutable TD-004
+  bytes, no-replay MF-30/SC-06 identity, private/transient sanitation,
+  allowlisted semantic action, approved modality, and fresh token must all
+  validate before consumption. One accepted intent mounts only IW-00/SC-07
+  with zero evidence, write, replay, authority, access, reward, response, or
+  world delta.
+- **Non-route evidence:** the serviced continuation, receiver field,
+  repeated cuffs, frequency, bypass, this packet row, `Interval Works`
+  label, and SC-07 sheet are neither required nor sufficient to open entry.
+  Route availability is identical before and after the optional serviced
+  continuation notation.
+- **Recovery and stop:** invalid/duplicate/interrupted/Tour/private/stale/
+  contaminated entry fails closed to released MF-30 recovery. RP-006 may
+  return write-free only to exact Manyfold Return or City Threshold.
+  Science must independently validate normal persistence and full viability;
+  Mission must issue `SHELL READY`. Released play is unchanged, and IW-30 is
+  the selected hard stop before any later route or forbidden implication.
+
 ## Packet identity
 
 - Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE / COORDINATOR NEXT`

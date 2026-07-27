@@ -3,8 +3,8 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-006",
-    "shellCandidate": "UNSELECTED",
-    "campaignAddress": "UNSELECTED",
+    "shellCandidate": "TD-006-RP006-INTERVAL-WORKS-v1 / PRE-SHELL",
+    "campaignAddress": "RP-006 / SC-07 / IW-00-IW-30",
     "sourceCommit": "a2720da439d077f1d05fc834b862ebaf35d2d98a",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -34,6 +34,19 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/02-WORLD-NARRATIVE-MASTERPLAN.md",
       "commit": "PENDING_COLONEL_COMMIT",
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-07-27T03:16:24.4801662Z",
+      "endedAt": "2026-07-27T03:25:09.7682109Z",
+      "durationMs": 525288,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/03-CAMPAIGN-FLOOR-STACK.md",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     }
   ]

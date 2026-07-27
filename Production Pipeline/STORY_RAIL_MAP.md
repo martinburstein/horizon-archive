@@ -1,5 +1,23 @@
 # Horizon Archive Story Rail Map
 
+## TD-006 Operations current control - 2026-07-27
+
+- **Selected adjacent rail:** `FLOOR STACK READY - ROUTE AUTHORIZED /
+  CFS-TD006-v1`. Existing `RP-006 / SC-07 / IW-00-IW-30` is the exact
+  mapped floor directly after released TD-005 MF-30. `TD006-RTA-001` is one
+  fresh Pilot-owned, validation-before-consumption, one-hit expedition
+  navigation decision; it is independent of the serviced continuation,
+  receiver/cuff/frequency/bypass observations, and every planning label.
+- **Release position unchanged / next gate:** released play still stops at
+  MF-30 or its Three-Current Reach/City Threshold returns. Science must
+  independently validate the route, immutable TD-005/TD-004 records,
+  distinct normal RP-006 persistence, recovery, strict independent learning,
+  privacy, accessibility, offline/world invariance, fixture, and fresh
+  non-compounding budget before Mission may issue a shell. Selected hard stop
+  is IW-30 with no later route, identity/purpose/cause/duration/closed
+  contents, reward, access, authority, response, RP-013, or post-ending
+  exposure.
+
 ## Intelligence Officer current control - 2026-07-27
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-005 /
