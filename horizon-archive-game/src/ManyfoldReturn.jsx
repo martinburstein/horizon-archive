@@ -1,6 +1,6 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
-import panoramaPlaceholder from "../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp";
-import detailPlaceholder from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png";
+import panoramaMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp";
+import detailMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import {
   manyfoldReturnActions,
@@ -274,14 +274,14 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
   const panelRef = useRef(null);
   const worldScene = resolveManyfoldReturnWorldScene(state);
   const worldImage = worldScene?.role === "SC-06-DETAIL-MASTER"
-    ? detailPlaceholder
-    : panoramaPlaceholder;
+    ? detailMaster
+    : panoramaMaster;
   const worldAlt = worldScene?.role === "SC-06-DETAIL-MASTER"
-    ? "Temporary noninteractive visual reference: the existing City Threshold access scene stands in for the pending SC-06 forensic detail master and supplies no SC-06 observation or course evidence"
-    : "Temporary noninteractive visual reference: the released Three-Current Reach panorama stands in for the pending SC-06 panorama master and supplies no SC-06 observation or course evidence";
+    ? "Closer invariant view of unequal maintained receiver collars: recurring but nonidentical mineral cuffs, bounded supported differences, three compatible material eras, and one opaque bypassed branch mass"
+    : "Immense asymmetric field of unequal low mineral receivers with nonmatching pale contact cuffs, irregular buried conduits, and an upright opaque branch mass bypassed at right";
   const runtimeSourceMaster = worldScene?.role === "SC-06-DETAIL-MASTER"
-    ? "city-threshold-access-master.png"
-    : "sc05-three-current-panorama-runtime-master-v1.webp";
+    ? "sc06-manyfold-return-detail-runtime-master-v1.webp"
+    : "sc06-manyfold-return-panorama-runtime-master-v1.webp";
   const recorded = useMemo(() => new Set(state.recordedObservationIds ?? []), [state.recordedObservationIds]);
 
   useLayoutEffect(() => {
@@ -305,12 +305,12 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
           data-world-role={worldScene?.role}
           data-world-crop={worldScene?.cropId}
           data-runtime-source-master={runtimeSourceMaster}
-          data-asset-status="PLACEHOLDER — IMAGE SPECIALIST GAP"
-          data-placeholder-retirement="SC-06 masters remain unfilled; predecessor assets are disclosed and grant no SC-06 evidence"
+          data-asset-status="PRODUCTION MASTER — IMAGE SPECIALIST ACCEPTED"
+          data-source-provenance="2026-07-27-rp005-manyfold-return-runtime"
         >
           <img src={worldImage} alt={worldAlt} />
           <figcaption>
-            Visual production gap: this disclosed predecessor image is noninteractive and grants no SC-06 observation or course evidence. The adjacent expedition text carries the complete current meaning.
+            Registered invariant SC-06 source. These physical relations remain descriptive and nonjudgmental; the adjacent expedition text carries the exact evidence and limits.
           </figcaption>
         </figure>
 

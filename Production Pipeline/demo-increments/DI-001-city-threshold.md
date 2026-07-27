@@ -1,5 +1,25 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-07-27 TD-005 Image Specialist presentation complete
+
+- **Closed checklist item:** `[x] RP-005 / SC-06 - layered stewardship
+  remains compatible without establishing a standard or owner`.
+- **Accepted source:** `../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png`,
+  `1672 x 941`, `2,979,891` bytes, SHA-256
+  `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
+- **Runtime masters:** direct panorama and forensic-detail derivatives,
+  `3840 x 2160` each, with exact prompt/crop/encoding/hash provenance in the
+  neighboring `PROVENANCE.md`.
+- **Disposition:** `PRESENTATION COMPLETE`. Non-cloned asymmetry, recurring
+  but nonmatching cuffs, ordinary supported difference, three compatible
+  material eras, an upright opaque bypassed mass, and larger invariant field
+  pass artifact and runtime review. Fresh Intelligence release remains
+  pending; TD-004 remains the released boundary until that gate passes.
+- **Limit:** exact incidental receiver anatomy/count, conduit routing, seams,
+  and wear are flexible detail. Runtime integration grants no course answer,
+  evidence, world response, route, access, reward, owner, authority, RP-006,
+  or successor.
+
 ## 2026-07-26 TD-004 SC-05 runtime-master presentation return
 
 - **Runtime master:** `../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp`, `3840 x 2160`, `2,163,752` bytes, SHA-256 `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.

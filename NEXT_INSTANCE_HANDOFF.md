@@ -7,21 +7,25 @@ Last updated: **2026-07-27**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-The authorized three-hour Skyscraper automation remains active. TD-005
-Quartermaster copy is complete, but both required SC-06 masters remain open.
-Resume at Image Specialist; do not restart a completed stage, run roles
+The authorized three-hour Skyscraper automation remains active. TD-005 Image
+Specialist issued `PRESENTATION COMPLETE` with both required SC-06 masters
+integrated. Resume at fresh Intelligence Officer reconciliation. Do not
+restart a completed stage, generate or edit another raster, run roles
 concurrently, or infer a stale edge from the scheduled prompt.
 
 ## Synchronized state
 
 - Active test drive: `TD-005`
-- Latest completed stage: `12 - Quartermaster`
+- Latest completed stage: `13 - Image Specialist`
 - Shell: `SS-RP005-MANYFOLD-RETURN-v1 / SHELL READY`
 - Experience: `EB-TD005-v1 / EXPERIENCE READY`
 - Functional build: `TD-005/08-FUNCTIONAL-BUILD-REPORT.md /
   FUNCTIONALLY COMPLETE`
 - Content and asset ledger: `TD-005/09-CONTENT-ASSET-LEDGER.md /
-  REVISE - COPY COMPLETE / TWO SC-06 MASTERS REQUIRED`
+  PRESENTATION COMPLETE - TWO SC-06 MASTERS ACCEPTED`
+- Polish review: `TD-005/10-POLISH-REVIEW.md / PRESENTATION COMPLETE`
+- Reconciliation input: `TD-005/11-AS-BUILT-RECONCILIATION.md /
+  AWAITING FRESH INTELLIGENCE`
 - Slice: `TD-005-RP005-MANYFOLD-RETURN-v1`
 - Address: `RP-005 / SC-06 / MF-00-MF-30`
 - Route: `TD005-RTA-001`
@@ -31,13 +35,15 @@ concurrently, or infer a stale edge from the scheduled prompt.
   `765f42872da23c83aa860e75975cd29f074b8797`
 - Combat commit:
   `bcda22c049b822216b86399fd6fb5c2eaae10583`
-- Quartermaster commit: the dedicated local commit containing
-  `09-CONTENT-ASSET-LEDGER.md`, metrics, and this handoff is authoritative
-  under the ledger self-reference convention.
+- Quartermaster commit:
+  `0695265f86c6b2d6448802ccb490cf4827737def`
+- Image Specialist commit: the dedicated local commit containing
+  `10-POLISH-REVIEW.md`, reconciliation input, metrics, and this handoff is
+  authoritative under the ledger self-reference convention.
 - Released playable boundary remains TD-004 until Intelligence independently
   releases the completed TD-005 as-built shell.
 
-## Accepted Quartermaster evidence
+## Accepted Image-gate evidence
 
 - All twelve `TD005-COPY-*` structural surfaces are retired.
 - Raw case IDs, raw evaluator identifiers, and underscore-conversion fallback
@@ -48,61 +54,52 @@ concurrently, or infer a stale edge from the scheduled prompt.
 - The complete accepted state graph, semantic IDs, evaluators, evidence,
   persistence, route, focus, CSS, fixture, returns, and MF-30 hard stop are
   unchanged.
-- `SC-06-PANORAMA-MASTER` remains an explicit gap. The currently imported
-  released SC-05 master is a disclosed predecessor placeholder only:
-  `3840 x 2160`, `2,163,752` bytes,
-  `B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F`.
-- `SC-06-DETAIL-MASTER` remains an explicit gap. The currently imported City
-  Threshold access plate is a disclosed predecessor placeholder only:
-  `1672 x 941`, `3,076,970` bytes,
-  `E03FCFFEB1AAF941E9EE8C5A4EA9C840B4F90271353FDF0B26F51350421C7B4E`.
-- Temporary alt and caption text now describe the actual served predecessor
-  pixels and grant no SC-06 observation or course evidence. They do not claim
-  final SC-06 compliance.
-- Focused `18/18`, related `65/65`, full `825/825`, readiness `15/15`,
-  build, candidate PBA, served identity, exclusion, and owned preview cleanup:
-  PASS.
-- Candidate: `186` modules; JS `1,295,678` bytes; CSS `87,267` bytes;
-  runtime media `21,536,123` bytes; zero new media.
-- No image was generated, edited, copied, recompressed, or reclassified.
+- Accepted source:
+  `Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png`;
+  `1672 x 941`, `2,979,891` bytes, SHA-256
+  `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
+- `SC-06-PANORAMA-MASTER`: `3840 x 2160`, `2,416,978` bytes, SHA-256
+  `3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B`.
+- `SC-06-DETAIL-MASTER`: `3840 x 2160`, `2,125,650` bytes, SHA-256
+  `1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9`.
+- Both deterministic Pillow derivatives are direct imports. Temporary
+  predecessor imports, gap disclosures, and placeholder alt/caption text are
+  retired.
+- Non-cloned asymmetry, recurring but nonmatching cuffs, ordinary supported
+  difference, three compatible material eras, an upright opaque bypassed
+  mass, no-human/no-authority boundaries, and larger invariant-field context
+  pass original-resolution review.
+- Focused `18/18`, full `825/825`, retained readiness `15/15`, build,
+  candidate PBA, exact served identity, desktop closed-fixture panorama/detail
+  review, and owned preview cleanup: PASS.
+- Candidate: `186` modules; JS `1,295,773` bytes; CSS `87,267` bytes;
+  runtime media `26,078,751` bytes; two new images / `4,542,628` bytes.
 
 ## Exact next action
 
-**Image Specialist / `image_specialist`.**
+**Intelligence Officer / `intelligence_officer`.**
 
-Read the canonical Image Specialist profile, exact shell, Creative Treatment,
-Experience Blueprint, Functional Build Report, and
-`09-CONTENT-ASSET-LEDGER.md` in full.
+Read the canonical Intelligence Officer profile, shell 05, treatment 06,
+blueprint 07, functional report 08, ledger 09, polish review 10,
+reconciliation input 11, metrics, and this handoff in full.
 
-Resolve exactly the two open role gaps:
+1. Reproduce the archived source and both deterministic runtime-master
+   identities and settings.
+2. Independently inspect artifact cleanup, four-peer equality, grayscale,
+   alt, crops, responsive layouts, forced colors, reduced motion, no-human,
+   no-authority, and invariant-world behavior.
+3. Rerun focused/full/readiness/build/PBA/served/exclusion and the complete
+   representative presentation matrix without using Martin's browser
+   storage or campaign save.
+4. Classify `TD005-VAR-001` plus resolved `TD005-LIM-001` and
+   `TD005-LIM-002`; update master-plan truth only from accepted as-built
+   evidence.
+5. Issue `PASS - AS BUILT RELEASED`, `REVISE`, or `HOLD` honestly, replace
+   this handoff with one synchronized exact next action, create the dedicated
+   Intelligence commit, and apply the workflow push gate.
 
-1. replace the disclosed SC-05 predecessor placeholder with one
-   `SC-06-PANORAMA-MASTER`;
-2. replace the disclosed City Threshold placeholder with one spatially
-   consistent `SC-06-DETAIL-MASTER`;
-3. use maximum-quality cinematic photorealistic first-person 16:9 sources,
-   preferably `6144 x 3456` or larger and never below `3840 x 2160`;
-4. preserve recurrence without truth, supported divergence without failure,
-   sealed unavailability without access/contents, and stewardship without
-   owner/institution/doctrine/authority;
-5. add direct imports, exact source/emitted/served bytes and SHA-256,
-   provenance, registered crops, truthful alt, grayscale, responsive,
-   forced-color, reduced-motion, spatial-consistency, and artifact-cleanup
-   evidence;
-6. keep exactly two new runtime image assets within `PBA-TD005-v1`; add no
-   third runtime image, new audio/font/video/network payload, answer cue,
-   response, route, or later content;
-7. preserve all Quartermaster copy and every accepted functional boundary;
-8. produce exactly one spoiler-safe cycle-reveal candidate under the workflow
-   rule without silently treating reference status as runtime integration;
-9. run focused/related/full, readiness, build, PBA, served identity,
-   representative presentation, fixture/protected/source-map exclusion, and
-   owned-process cleanup checks; and
-10. issue `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`, create one dedicated
-    local commit, and hand the exact candidate to Intelligence Officer.
-
-Do not accept either predecessor placeholder as SC-06 merely because the role
-resolver names the intended role.
+No further image generation or raster edit belongs to this completed Image
+stage.
 
 ## Frozen boundaries
 

@@ -6,8 +6,8 @@
 - **Rail Packet:** `RP-005 — Manyfold Return`
 - **Player-facing survey name:** Manyfold Return (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / repeated-receiver field beyond the Three-Current Reach
-- **Production status:** Brief — A2 four-phase invariant-field sequence and premium two-master plan locked; no final art
-- **Image:** No image selected or generated. Prior City Beneath and exchange-reach work supplies continuity constraints only; no earlier composition, prop, palette, or texture is a production template.
+- **Production status:** Image Specialist `PRESENTATION COMPLETE` — accepted source plus panorama/detail runtime masters integrated; fresh Intelligence release pending
+- **Image:** [Accepted Manyfold Return source](../../Visual%20Direction/Production%20Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png), with neighboring provenance and two deterministic runtime masters
 - **Purpose:** Make one dividing flow, a recurring exposed trace range, bounded divergence, a sealed branch, and layered stewardship physically readable without converting repetition into truth, divergence into failure, or absence into permission to infer.
 
 ## Functional field and collective movement
@@ -142,3 +142,25 @@ Also reject fantasy ornament, flowers, mushrooms, coral, magical crystals, cemet
 - `PASS` — source masters, crops, masks, effects, reduced motion, responsive containment, accessibility, provenance, and artifact cleanup are specified without generating final production art.
 
 Production status remains **Brief**. A2 creates no raster, production asset, curriculum/model/evaluation mapping, metric, puzzle answer, code, live route, truth/value claim, Machine definition, RP-006 content, or hidden-lore change.
+
+## 2026-07-27 Image Specialist production acceptance
+
+One accepted no-reference source closes `RP-005 / SC-06 - layered
+stewardship remains compatible without establishing a standard or owner`.
+Materially varied low receivers, recurring but nonmatching cuffs, ordinary
+supported differences, three compatible material eras, an upright opaque
+bypassed mass, and the larger invariant field remain legible together without
+truth, value, failure, access, purpose, or authority.
+
+The accepted RGB source is `1672 x 941`, `2,979,891` bytes, SHA-256
+`1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
+Deterministic Pillow derivatives resolve `SC-06-PANORAMA-MASTER` and
+`SC-06-DETAIL-MASTER` at `3840 x 2160` each. Complete prompts, crops,
+hashes, limits, validation, and source/runtime status are recorded in
+`TD-005/10-POLISH-REVIEW.md` and neighboring Production Master provenance.
+
+Exact incidental receiver count/anatomy, conduit routing, seams, and wear are
+flexible detail. Runtime integration does not create an answer channel,
+learning evidence, world response, route, access, reward, owner, institution,
+doctrine, authority, RP-006 content, or successor. Fresh Intelligence release
+validation remains pending.

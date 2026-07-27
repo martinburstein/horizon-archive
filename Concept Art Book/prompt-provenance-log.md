@@ -4,6 +4,23 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-07-27 - RP-005 SC-06 Manyfold Return source and runtime masters
+
+- **Decision:** close `RP-005 / SC-06 - layered stewardship remains
+  compatible without establishing a standard or owner`.
+- **Asset and complete prompt/provenance:** [Manyfold Return source and
+  runtime masters](../Visual%20Direction/Production%20Masters/2026-07-27-rp005-manyfold-return-runtime/PROVENANCE.md).
+- **Accepted source:** `1672 x 941`, RGB PNG, `2,979,891` bytes; SHA-256
+  `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
+- **Mode:** exactly one accepted built-in `image_gen` source generation, no
+  references or edits; two deterministic Pillow `12.2.0` RGB/Lanczos q100
+  exact-RGB WebP derivatives.
+- **Status:** spoiler-safe accepted SC-06 physical-layout source and direct
+  source for the integrated panorama/detail runtime masters. Image Specialist
+  issued `PRESENTATION COMPLETE`; fresh Intelligence release remains pending.
+  Exact incidental receiver anatomy/count, conduit routing, seams, and wear
+  remain non-canonical flexible detail.
+
 ## 2026-07-26 — RP-004 SC-05 deterministic runtime master
 
 - **Decision:** correct `TD004-VAR-001` by retiring the inherited City

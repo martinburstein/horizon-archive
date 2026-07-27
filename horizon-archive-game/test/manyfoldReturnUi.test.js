@@ -1,10 +1,28 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 const view = readFileSync(new URL("../src/ManyfoldReturn.jsx", import.meta.url), "utf8");
 const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
+const panoramaMasterUrl = new URL(
+  "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp",
+  import.meta.url,
+);
+const detailMasterUrl = new URL(
+  "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp",
+  import.meta.url,
+);
+const panoramaMaster = readFileSync(panoramaMasterUrl);
+const detailMaster = readFileSync(detailMasterUrl);
+const masterProvenance = readFileSync(
+  new URL(
+    "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/PROVENANCE.md",
+    import.meta.url,
+  ),
+  "utf8",
+);
 
 test("TD005 UI has one polite atomic status, heading focus, persistent labels, and native controls", () => {
   assert.match(view, /role="status"/);
@@ -16,17 +34,33 @@ test("TD005 UI has one polite atomic status, heading focus, persistent labels, a
   assert.match(view, /<button/);
   assert.doesNotMatch(view, /onMouseOver|onPointerMove|imageMap|<area\b/);
 });
-test("TD005 UI binds exactly two honestly disclosed role gaps and state metadata", () => {
-  assert.equal((view.match(/^import .*Placeholder from /gm) ?? []).length, 2);
+test("TD005 UI binds exactly two accepted SC-06 role masters and state metadata", () => {
+  assert.equal((view.match(/^import .*Master from /gm) ?? []).length, 2);
   assert.match(view, /data-world-role=\{worldScene\?\.role\}/);
   assert.match(view, /data-world-master=\{worldScene\?\.masterId\}/);
   assert.match(view, /data-world-crop=\{worldScene\?\.cropId\}/);
   assert.match(view, /data-runtime-source-master=\{runtimeSourceMaster\}/);
-  assert.match(view, /data-asset-status="PLACEHOLDER — IMAGE SPECIALIST GAP"/);
-  assert.match(view, /data-placeholder-retirement=/);
-  assert.match(view, /released Three-Current Reach panorama stands in for the pending SC-06 panorama master/);
-  assert.match(view, /existing City Threshold access scene stands in for the pending SC-06 forensic detail master/);
-  assert.match(view, /adjacent expedition text carries the complete current meaning/);
+  assert.match(view, /data-asset-status="PRODUCTION MASTER — IMAGE SPECIALIST ACCEPTED"/);
+  assert.match(view, /data-source-provenance="2026-07-27-rp005-manyfold-return-runtime"/);
+  assert.doesNotMatch(view, /PLACEHOLDER|Image Specialist gap|data-placeholder-retirement/);
+  assert.match(view, /sc06-manyfold-return-panorama-runtime-master-v1\.webp/);
+  assert.match(view, /sc06-manyfold-return-detail-runtime-master-v1\.webp/);
+  assert.match(view, /Registered invariant SC-06 source/);
+  assert.match(view, /adjacent expedition text carries the exact evidence and limits/);
+  assert.equal(statSync(panoramaMasterUrl).size, 2_416_978);
+  assert.equal(
+    createHash("sha256").update(panoramaMaster).digest("hex").toUpperCase(),
+    "3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B",
+  );
+  assert.equal(statSync(detailMasterUrl).size, 2_125_650);
+  assert.equal(
+    createHash("sha256").update(detailMaster).digest("hex").toUpperCase(),
+    "1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9",
+  );
+  assert.match(masterProvenance, /\| panorama \|[\s\S]*`3840 x 2160`/);
+  assert.match(masterProvenance, /\| detail \|[\s\S]*`3840 x 2160`/);
+  assert.match(masterProvenance, /do not claim native 4K detail/);
+  assert.match(masterProvenance, /No generation, inpainting, cleanup, compositing, sharpening, semantic edit/);
   assert.match(app, /MANYFOLD_RETURN_SHELL_VERSION/);
 });
 

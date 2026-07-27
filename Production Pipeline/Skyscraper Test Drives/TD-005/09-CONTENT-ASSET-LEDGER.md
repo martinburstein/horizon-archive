@@ -4,22 +4,22 @@
 
 | Field | Value |
 |---|---|
-| Stage | Quartermaster |
-| Agent ID | `quartermaster` |
+| Stage | Quartermaster ledger plus Image Specialist completion checkpoint |
+| Agent ID | `quartermaster` -> `image_specialist` |
 | Shell | `SS-RP005-MANYFOLD-RETURN-v1` |
 | Slice | `TD-005-RP005-MANYFOLD-RETURN-v1` |
 | Campaign address | `RP-005 / SC-06 / MF-00-MF-30` |
 | Starting functional commit | `bcda22c049b822216b86399fd6fb5c2eaae10583` |
 | Functional authority | `08-FUNCTIONAL-BUILD-REPORT.md / FUNCTIONALLY COMPLETE` |
 | Validation tier | Tiers 2-4 content, asset, build, budget, and served identity |
-| Disposition | **`REVISE - COPY COMPLETE / TWO SC-06 MASTERS REQUIRED`** |
-| Next recipient | Image Specialist / `image_specialist` |
+| Disposition | **`PRESENTATION COMPLETE - COPY AND TWO SC-06 MASTERS ACCEPTED`** |
+| Next recipient | Intelligence Officer / `intelligence_officer` |
 
-This ledger retires the bounded player-facing structural copy scaffolding and
-honestly inventories the two Combat-stage image-role placeholders. It does
-not alter the accepted route, graph, controller, evaluators, evidence,
-persistence, focus, accessibility behavior, CSS, world state, returns, or
-hard stop.
+This ledger retires the bounded player-facing structural copy scaffolding,
+records the original two Combat-stage image gaps, and appends their exact
+Image Specialist resolution. It does not alter the accepted route, graph,
+controller, evaluators, evidence, persistence, focus, accessibility behavior,
+world state, returns, or hard stop.
 
 ## Combat Engineer build confirmed
 
@@ -317,3 +317,53 @@ open and honestly disclosed. The candidate is not `CONTENT COMPLETE`,
   access, turn stewardship into authority, or imply response/later content
 - **Required disposition:** `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`
 - **Next recipient:** Intelligence Officer / `intelligence_officer`
+
+## Image Specialist completion checkpoint - 2026-07-27
+
+**Disposition: `PRESENTATION COMPLETE - TWO SC-06 MASTERS ACCEPTED`.**
+
+The Image Specialist accepted one no-reference recovery source for the
+preselected compatible-replacement/stewardship decision:
+
+- archived source:
+  `Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png`;
+- `1672 x 941`, RGB PNG, `2,979,891` bytes;
+- SHA-256
+  `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`;
+- no reference, edit, inpainting, compositing, cleanup, or semantic change.
+
+The accepted source varies every receiver's silhouette, spacing, collar, and
+repair history; no receiver is privileged as the answer. One upright opaque
+mass remains materially unavailable and visibly bypassed without an opening,
+ledge, route, road, platform, bridge, or portal. The close junction and wider
+field jointly retain recurrence, bounded supported difference, three
+compatible stewardship layers, and larger invariant context.
+
+Two deterministic Pillow `12.2.0` RGB/Lanczos WebP derivatives resolve the
+runtime gaps:
+
+| Role | Runtime master | Dimensions | Bytes | SHA-256 |
+|---|---|---:|---:|---|
+| `SC-06-PANORAMA-MASTER` | `sc06-manyfold-return-panorama-runtime-master-v1.webp` | `3840 x 2160` | `2,416,978` | `3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B` |
+| `SC-06-DETAIL-MASTER` | `sc06-manyfold-return-detail-runtime-master-v1.webp` | `3840 x 2160` | `2,125,650` | `1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9` |
+
+The panorama is the complete source resampled to `3840 x 2161` then trimmed
+one lower-edge pixel. The detail uses exact source crop
+`(180, 120)-(1492, 858)` (`1312 x 738`) before `3840 x 2160` resampling.
+Both encode WebP quality `100`, method `6`, exact RGB. The enlarged rasters
+improve runtime sampling only and do not claim native 4K detail.
+
+`TD005-ASSET-SC06-PANORAMA`, `TD005-ASSET-SC06-DETAIL`,
+`TD005-LIM-001`, and `TD005-LIM-002` are resolved for Image presentation.
+Both predecessor placeholders, temporary gap copy, source disclosures, and
+placeholder tests are retired. All Quartermaster gameplay copy and functional
+contracts remain unchanged.
+
+Fresh evidence passes focused `18/18`, full `825/825`, retained readiness
+`15/15`, production build (`186` modules; JS `1,295,773`; CSS `87,267`),
+`PBA-TD005-v1` (two new images, `4,542,628` bytes; total runtime media
+`26,078,751`), exact source/emitted/served identity, closed-fixture desktop
+panorama/detail review, `>=44px` targets, no horizontal escape, no
+console/warning output, and owned-process cleanup. Complete evidence and the
+fresh Intelligence handoff are in `10-POLISH-REVIEW.md` and
+`11-AS-BUILT-RECONCILIATION.md`.
