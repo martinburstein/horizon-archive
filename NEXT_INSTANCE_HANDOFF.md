@@ -8,8 +8,8 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
 The authorized three-hour Skyscraper automation remains active. TD-006 is
-currently in its sequential strategic relay. Do not restart its completed
-Commandant, Colonel, or Operations stages, duplicate work, run roles
+currently in its sequential strategic relay. Do not restart Commandant,
+Colonel, Operations, or Science; do not duplicate work, run roles
 concurrently, generate a reveal, or infer an older workflow edge.
 
 ## Synchronized state
@@ -19,93 +19,106 @@ concurrently, generate a reveal, or infer an older workflow edge.
 - Released shell: `SS-RP005-MANYFOLD-RETURN-v1`
 - Released address: `RP-005 / SC-06 / MF-00-MF-30`
 - Released route: `TD005-RTA-001`
-- Released boundary: complete MF-00-MF-30, or exact write-free return to
-  Three-Current Reach or City Threshold.
+- Released boundary: MF-30 plus exact write-free Manyfold Return and City
+  Threshold returns.
 - Active test drive: `TD-006`
-- Latest completed active stage: `3 - Operations Planning Major`
-- Operations disposition: `FLOOR STACK READY - ROUTE AUTHORIZED`
-- Selected pre-shell slice: `TD-006-RP006-INTERVAL-WORKS-v1`
+- Latest completed active stage: `4 - Office of Science Administrator`
+- Science disposition:
+  `VIABILITY READY - ROUTE, RECORD, EVIDENCE, RECOVERY, ACCESSIBILITY, AND BUDGET VALIDATED`
+- Selected slice: `TD-006-RP006-INTERVAL-WORKS-v1`
 - Selected address: `RP-006 / SC-07 / IW-00-IW-30`
-- Proposed route: `TD006-RTA-001`
+- Route: `TD006-RTA-001`
+- Science certificate:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/04-VIABILITY-ENVELOPE.md`
+- Budget:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/04A-PRODUCTION-BUDGET-AUTHORITY.json`
+- Budget validator: `scripts/validate_td006_budget.py`
 - Current authoritative input commit:
-  `PENDING_OPERATIONS_COMMIT` under the dedicated-stage non-recursive
+  `PENDING_SCIENCE_COMMIT` under the dedicated-stage non-recursive
   self-reference convention.
-- Upstream Colonel commit:
-  `cba55befe7bb3daa3f0e8f250bd1a87a69ce3767`
-- Operations certificate:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/03-CAMPAIGN-FLOOR-STACK.md`
+- Preceding Operations commit:
+  `87fedd7e28fc4d8d89974ec6d7be4ac76b5eec5e`
 - Synchronization: local role commits only; no push is authorized until
   Mission issues `SHELL READY`, unless a safer explicit checkpoint is
   required.
 
-## Accepted Operations boundary
+## Accepted Science boundary
 
-- Current approved authority proves that existing `RP-006 / SC-07 /
-  IW-00-IW-30` is the exact mapped adjacent floor after released TD-005.
-- Entry is one new Pilot-owned fresh one-hit semantic navigation intent from
-  either exact no-replay MF-30 variant. Validation occurs before token
-  consumption; one accepted intent mounts only IW-00/SC-07 with zero
-  evidence, write, replay, authority, access, reward, response, or world
-  delta.
-- The serviced continuation, receiver field, recurring cuffs, frequency,
-  bypass, RP-006 row, `Interval Works` label, and SC-07 planning sheet are
-  neither required nor sufficient to open the route.
-- The released TD-005 record and retained TD-004 bytes remain immutable.
-  Invalid, duplicate, interrupted, Tour-derived, private, stale, or
-  contaminated entry fails closed to released MF-30/SC-06 recovery.
-- The candidate is bounded to relative material order, one neutral visible
-  change, one non-identity persistence, one unavailable interval, compatible
-  stewardship, sanitized replicas, strict independent frozen learning,
-  atomic local record/recovery, exact returns, and hard stop at IW-30.
-- This is route placement only. RP-006 remains absent from released play.
-  No shell, normal record schema, technical viability, production budget,
-  construction, visual candidate, or release has been authorized.
+- Exact released TD-005 key/version/shell/controller, strict sanitizer,
+  canonical read-back, MF-30 state, SC-06 identity, and retained TD-004 bytes
+  must all validate before route-token consumption.
+- One fresh Pilot-owned `TD006-RTA-001` intent mounts only
+  `IW-00 ARRIVE + IDLE / SC-07` with zero evidence, write, replay, access,
+  authority, reward, response, external action, or world delta.
+- Serviced-continuation notation, scenery, receiver field, cuffs, frequency,
+  bypass, packet/scene labels, and predecessor completion are neither
+  required nor sufficient to route.
+- Normal RP-006 requires dedicated key
+  `horizon-archive-rp006-interval-works-save-v1`, record
+  `rp006.interval-works-save.v1`, controller
+  `rp006.interval-works-controller.v1`, exact ten-key/eleven-note-key/
+  eight-record allowlists, strict sanitation, one atomic replacement, exact
+  read-back, verified rollback, replay-free IW-30 restore, and MF-30
+  recovery for invalid or unsaved re-entry.
+- Four equal observations, strict independent `PY-013`,
+  `RP006-SPEECH-01 / AI901-D1-O6`, and two explanations are conjunctive.
+  Route, scene, order/sound, focus, modality, timing, confidence,
+  presentation, Tour, and save display are zero-credit.
+- Seven modalities, deterministic focus/status, `>=44px` targets, exact
+  desktop/laptop/narrow/effective-zoom layouts, forced colors, reduced
+  motion, grayscale, closed storage-free fixture, offline/Tour isolation,
+  exact returns, and invariant SC-06/SC-07 are mandatory.
+- Fresh `PBA-TD006-v1`: JS `<=1,360,561`, CSS `<=91,630`, modules `<=197`,
+  at most two new image-only runtime assets totaling `<=8,388,608`, total
+  media `<=34,467,359`, and no new audio/font/video/source-map/network
+  payload. The two planned roles are SC-07 panorama and registered
+  cross-section; visual quality remains mandatory.
+- Fresh evidence: focused `13/13`, related `42/42`, full `825/825`,
+  RP-002-RP-012 readiness `11/11`, 188-module build, exact TD-005 budget
+  baseline, and all module/build/timing/audio/three-image negative probes
+  pass.
 
 ## Exact next action
 
-**Office of Science Administrator / `office_of_science_administrator`: TD-006
-independent viability proof only.**
+**Mission Captain / `mission_captain`: issue or reject the TD-006 shell.**
 
-1. Begin from the dedicated Operations commit containing `CFS-TD006-v1`;
-   do not restart Commandant, Colonel, or Operations.
-2. Read the Science profile, complete current TD-006 strategic handoffs,
-   released TD-005 reconciliation and source contracts, exact RP-006
-   packet/curriculum/protected journey, current production/readiness spines,
-   and measured release baseline.
-3. Independently validate `TD006-RTA-001`: exact TD-005 storage key and
-   sanitizer/read-back; immutable TD-005 and TD-004 bytes; no-replay
-   MF-30/SC-06 identity; fresh Pilot owner/action/token; independence from
-   serviced continuation and planning/scenery; validation before
-   consumption; one zero-evidence IW-00/SC-07 arrival; all
-   invalid/duplicate/interruption/reload cases; exact source choices and
-   RP-006 returns; fresh re-entry; zero world/authority/access/reward delta.
-4. Issue `VE-TD006-v1` with a strict released-normal-TD-005 to
-   normal-RP-006 adapter; a distinct normal RP-006 key/version and complete
-   sanitation/atomic rollback/read-back/restore contract; frozen independent
-   `PY-013` and `RP006-SPEECH-01`; privacy/Tour/offline/no-authority/
-   no-exam-guarantee; complete state-to-scene/accessibility/responsive/
-   forced-color/reduced-motion/grayscale/fixture evidence; invariant-world
-   enforcement; connected-to-release validation; and one fresh
-   non-compounding `PBA-TD006-v1` measured from exact TD-005 release.
-5. Record `VIABILITY READY`, `REVISE`, or `HOLD` honestly, update stage
-   metrics and this handoff, and make one dedicated local Science commit.
-   Do not push. Mission may begin only from that validated commit.
+1. Begin from the dedicated Science commit containing `VE-TD006-v1`,
+   `PBA-TD006-v1`, and the current handoff. Do not restart an upstream role.
+2. Read the Mission profile, `GDB-TD006-v1`, `WNMP-TD006-v1`,
+   `CFS-TD006-v1`, `VE-TD006-v1`, the PBA, exact RP-006 packet/curriculum/
+   protected journey, released TD-005 contract/implementation, current
+   production/readiness controls, and the applicable SC-07 visual brief.
+3. Reconcile route, state-to-scene identity, normal record/evidence shape,
+   privacy/sanitation, atomic write/rollback/restore, invalid/unsaved
+   recovery, modalities, focus/status, responsive/accessibility states,
+   offline/Tour/world boundaries, exact returns, assets, budgets, validation,
+   and hard stop without conflict.
+4. If and only if complete, issue versioned
+   `SS-RP006-INTERVAL-WORKS-v1 / SHELL READY`, update shell/control/metrics/
+   handoff, make the dedicated Mission commit, push the complete strategic
+   relay, and verify `HEAD == origin/main`.
+5. If any conflict exists, return `REVISE` or `HOLD` to the earliest
+   responsible owner. Do not weaken learning, privacy, accessibility,
+   recovery, quality, budget, canon, or release gates.
+6. After a synchronized `SHELL READY`, hand exactly that shell to
+   Reconnaissance Sergeant. No Marine deploys before the push gate.
 
 ## Frozen boundaries
 
-- Released play still stops at MF-30 or its two exact returns. The proposed
-  TD-006 route is not live before a Mission shell, Marine construction, and
-  Intelligence release.
-- IW-30 is the selected candidate hard stop. No later route/floor, purpose,
+- Released play still stops at MF-30 and its exact returns. TD-006 is not live
+  before Mission shell, Marine construction, and Intelligence release.
+- IW-30 is the candidate hard stop. No RP-007 route, later floor, purpose,
   identity, duration, cause, authorship, closed contents, reward, access,
-  permission, authority, external action, world response, `RP-013`, or
-  post-ending content may be exposed.
+  permission, authority, external action, world response, `RP-013`,
+  successor, or post-ending content may be exposed.
 - Relative order is not absolute chronology or cause. Visible change is not
-  progress/damage/correction. Persistence is not identity/importance.
-  Closed unavailability is not an access challenge.
-- All executable work uses sanitized replicas only. No live read, replay,
+  progress, damage, or correction. Persistence is not identity or
+  importance. Closed unavailability is not an access challenge.
+- Executable work uses sanitized replicas only. No live read, replay,
   opening, sorting/reversing, gap filling, control, service call, or external
   action.
+- The protected RP-006 journey is pure reference evidence only and remains
+  absent from normal production.
 - Preserve strict independent learning, privacy/transient clearing,
   accessibility/responsive/focus/forced-color/reduced-motion parity,
   offline/no-authority/no-exam-guarantee, no-credit Tour, deterministic

@@ -1,5 +1,45 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-006 Science current control - 2026-07-27
+
+- **Disposition:** `VIABILITY READY / VE-TD006-v1 / MISSION NEXT`.
+  `TD006-RTA-001` is the sole fresh Pilot-owned transition from exact
+  released TD-005 MF-30/SC-06 to one transient zero-evidence IW-00/SC-07
+  arrival. Serviced-continuation notation, scenery, planning labels, and
+  predecessor completion remain non-routing.
+- **Record control:** TD-005 and TD-004 bytes remain immutable. Normal RP-006
+  must use key `horizon-archive-rp006-interval-works-save-v1`, version
+  `rp006.interval-works-save.v1`, controller
+  `rp006.interval-works-controller.v1`, exact ten-key/eleven-note-key/
+  eight-record allowlists, strict sanitation, one atomic replacement, exact
+  read-back, verified rollback, replay-free IW-30 restore, and MF-30 recovery
+  for unsaved/invalid re-entry.
+- **Evidence control:** four equal observations, strict independent
+  `PY-013`, `RP006-SPEECH-01 / AI901-D1-O6`, and two explanations are
+  conjunctive. Scene order/sound, route, focus, modality, timing,
+  presentation, Tour, confidence, and save/restore display remain
+  zero-credit.
+- **Accessibility/system control:** seven modalities,
+  validation-before-consumption, heading-first deterministic focus, one
+  polite atomic status, `>=44px` targets, exact desktop/laptop/narrow/
+  effective-zoom layouts, forced color, reduced motion, grayscale, closed
+  storage-free fixture, offline/no-authority/Tour isolation, invariant
+  SC-06/SC-07, exact returns, and hard IW-30 stop.
+- **Budget:** fresh non-compounding `PBA-TD006-v1`: JS `<=1,360,561`, CSS
+  `<=91,630`, modules `<=197`, and at most two new image-only runtime assets
+  totaling `<=8,388,608` bytes. Total media `<=34,467,359`; no new
+  audio/font/video/source-map/network payload. Quality, provenance,
+  accessibility, responsive, and human-review gates remain mandatory.
+- **Executable evidence:** `scripts/validate_td006_budget.py` passes exact
+  TD-005 identity and rejects module/build/timing/audio/three-image probes.
+  Fresh focused `13/13`, related `42/42`, full `825/825`, RP readiness
+  `11/11`, and 188-module build pass.
+- **Mission boundary:** Mission may issue
+  `SS-RP006-INTERVAL-WORKS-v1 SHELL READY` only after conflict-free
+  reconciliation. The protected RP-006 journey is reference-only. No Marine
+  work begins before the push gate; no RP-007, RP-013, successor, authority,
+  response, or world effect is authorized.
+
 ## Intelligence Officer current control - 2026-07-27
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-005 /
