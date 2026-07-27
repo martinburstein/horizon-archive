@@ -1,5 +1,18 @@
 # DI-001 — City Threshold protected staging pass
 
+## Intelligence Officer current control - 2026-07-27
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-005 /
+  SS-RP005-MANYFOLD-RETURN-v1`. The accepted Demo now continues from exact
+  TD-004 TR-40 through complete Manyfold Return MF-00-MF-30.
+- **Included:** four equal observations; independent Python, AI-901, and
+  explanation evidence; five-owner review; atomic local record/rollback/
+  recovery; replay-free restore; two exact returns; and both direct SC-06
+  panorama/detail masters.
+- **Stop:** MF-30 or either authorized return. No direct Calibration/Civic
+  route, RP-006 route, RP-013, successor, reward, access, authority, external
+  action, or world response is included.
+
 ## 2026-07-27 TD-005 Image Specialist presentation complete
 
 - **Closed checklist item:** `[x] RP-005 / SC-06 - layered stewardship
@@ -13,8 +26,8 @@
 - **Disposition:** `PRESENTATION COMPLETE`. Non-cloned asymmetry, recurring
   but nonmatching cuffs, ordinary supported difference, three compatible
   material eras, an upright opaque bypassed mass, and larger invariant field
-  pass artifact and runtime review. Fresh Intelligence release remains
-  pending; TD-004 remains the released boundary until that gate passes.
+  pass artifact and runtime review. Intelligence subsequently issued
+  `PASS - AS BUILT RELEASED`; the current authority is recorded above.
 - **Limit:** exact incidental receiver anatomy/count, conduit routing, seams,
   and wear are flexible detail. Runtime integration grants no course answer,
   evidence, world response, route, access, reward, owner, authority, RP-006,
@@ -48,7 +61,7 @@
 - **Locked decision:** the bounded extra interval is materially ordinary and equivalent to its neighbors; only sequence and spacing expose the difference. The close first-person material scale and repetition beyond the frame imply an immense continuing whole without reusing the prior wide corridor composition.
 - **Status / limit:** canonical reference only, not runtime-integrated and not the final SC-04 master. Fine scratches and exact incidental panel subdivisions are non-canonical. No UI, answer, damage, repair priority, observation credit, route, reward, authority, world response, hidden lore, RP-004 opening, RP-013, successor, or post-ending content is authorized.
 
-## Intelligence Officer current control — 2026-07-26
+## Dated TD-004 Intelligence release — 2026-07-26
 
 - **Authoritative release:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. The accepted Demo continues from exact released TD-003 CM-50 through the complete Three-Current Reach, strict independent observation/Python/AI-901 evidence, deterministic save/restore, both write-free returns, and optional destinationless notation.
 - **Authoritative exact stop:** SC-04 and SC-05 remain invariant and neither receives nor responds to a record. Stop before RP-005 route/destination, a traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, access, authority, live service, external action, or world response. Await Martin's explicit instruction; do not infer or schedule another shell.

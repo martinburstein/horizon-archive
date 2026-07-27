@@ -1,5 +1,20 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-07-27 TD-005 Intelligence release control
+
+- `PASS - AS BUILT RELEASED / TD-005 / SC-06`. The sole accepted and archived
+  source and its two deterministic `3840 x 2160` runtime masters are the
+  released Manyfold Return presentation.
+- Panorama states preserve the asymmetric maintained whole; the detail state
+  preserves four equal reads: recurring nonmatching cuffs, ordinary supported
+  difference, sealed opaque bypass, and three compatible stewardship eras.
+  Grayscale, desktop/laptop/narrow/zoom crops, forced colors, reduced motion,
+  alt, invariant-role switching, and no-human/no-authority review pass.
+- Generation history is exactly two private attempts, one accepted/archive,
+  and no third. The first failed Image QA and remained outside the workspace,
+  canon, runtime, provenance package, commit, and reveal. Incidental receiver
+  anatomy/count, conduit routing, seams, and wear remain flexible detail.
+
 ## 2026-07-25 RP-003 neutral-difference canonical cycle-reveal lock
 
 - `Visual Direction/Production Masters/2026-07-25-rp003-neutral-difference-parity-reveal/rp003-neutral-difference-parity-v1.png` closes `SC-04 / CM-10 survey — neutral bounded-difference material parity`.

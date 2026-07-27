@@ -41,7 +41,12 @@ larger maintained whole beyond it.
 - **Bytes:** `2,979,891`.
 - **SHA-256:**
   `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
-- **Accepted-source generation count:** exactly `1`.
+- **Private generation attempts:** exactly `2`.
+- **Accepted and archived sources:** exactly `1`.
+- **Recovery rule:** the first private attempt failed Image Specialist QA and
+  remained outside the workspace, canon, runtime, provenance package, commit,
+  and user-facing reveal. The one permitted targeted recovery produced the
+  accepted source below. No third attempt occurred.
 - **Mode:** built-in `image_gen`, new generation, no references.
 - **Edits/inpainting/compositing/cleanup:** none.
 - **Canonical status:** spoiler-safe accepted SC-06 physical-layout source

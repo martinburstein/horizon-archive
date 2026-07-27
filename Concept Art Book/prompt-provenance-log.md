@@ -12,14 +12,17 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
   runtime masters](../Visual%20Direction/Production%20Masters/2026-07-27-rp005-manyfold-return-runtime/PROVENANCE.md).
 - **Accepted source:** `1672 x 941`, RGB PNG, `2,979,891` bytes; SHA-256
   `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`.
-- **Mode:** exactly one accepted built-in `image_gen` source generation, no
-  references or edits; two deterministic Pillow `12.2.0` RGB/Lanczos q100
-  exact-RGB WebP derivatives.
+- **Mode:** exactly two private built-in `image_gen` attempts, no references
+  or edits; the first failed Image Specialist QA and remained outside the
+  workspace/canon/runtime/provenance/commit/reveal, while the one permitted
+  targeted recovery became the sole accepted and archived source. No third
+  attempt occurred. Two deterministic Pillow `12.2.0` RGB/Lanczos q100
+  exact-RGB WebP derivatives were made from that accepted source.
 - **Status:** spoiler-safe accepted SC-06 physical-layout source and direct
   source for the integrated panorama/detail runtime masters. Image Specialist
-  issued `PRESENTATION COMPLETE`; fresh Intelligence release remains pending.
-  Exact incidental receiver anatomy/count, conduit routing, seams, and wear
-  remain non-canonical flexible detail.
+  issued `PRESENTATION COMPLETE`; Intelligence independently issued
+  `PASS - AS BUILT RELEASED`. Exact incidental receiver anatomy/count,
+  conduit routing, seams, and wear remain non-canonical flexible detail.
 
 ## 2026-07-26 — RP-004 SC-05 deterministic runtime master
 

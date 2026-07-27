@@ -1,5 +1,17 @@
 # TD-005 World and Narrative Masterplan — Guarded Candidate Certificate
 
+## Intelligence accepted as-built reconciliation - 2026-07-27
+
+`PASS - AS BUILT RELEASED / TD-005` accepts only the planned surface-safe
+physical decision: an asymmetric maintained receiver field where recurring
+but nonmatching cuffs, ordinary supported difference, sealed unavailability,
+and three compatible stewardship eras remain equal observations. The
+accepted SC-06 source and panorama/detail masters implement that decision
+without establishing a native category, purpose, owner, institution,
+doctrine, value, authority, route, response, or successor. Incidental
+receiver anatomy/count, conduit routing, seams, and wear remain flexible
+visual detail. No hidden or post-ending lore is added.
+
 ## Document control
 
 | Field | Value |

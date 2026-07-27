@@ -213,7 +213,7 @@
       "reconciliationInput": "Production Pipeline/Skyscraper Test Drives/TD-005/11-AS-BUILT-RECONCILIATION.md",
       "shellId": "SS-RP005-MANYFOLD-RETURN-v1",
       "precedingCommit": "0695265f86c6b2d6448802ccb490cf4827737def",
-      "generation": "Exactly one accepted built-in image_gen source; no references or edits; two deterministic Pillow runtime derivatives",
+      "generation": "Exactly two private built-in image_gen attempts, no references or edits; first failed Image QA and remained outside workspace/canon/runtime/provenance/commit/reveal; one permitted recovery became the sole accepted and archived source; no third attempt; two deterministic Pillow runtime derivatives",
       "sourceOutput": "Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png",
       "sourceIdentity": "1672x941 RGB PNG; 2979891 bytes; SHA-256 1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28",
       "runtimeMasters": "Panorama 3840x2160, 2416978 bytes, SHA-256 3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B; detail 3840x2160, 2125650 bytes, SHA-256 1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9",
@@ -230,6 +230,33 @@
       "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "returnOwner": "Intelligence Officer / intelligence_officer",
       "synchronization": "local-only; no push"
+    },
+    {
+      "sequence": 14,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-27T02:22:00.000Z",
+      "endedAt": "2026-07-27T03:01:35.429Z",
+      "durationMs": 2375430,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-005/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP005-MANYFOLD-RETURN-v1",
+      "candidateCommit": "558674bd8ea3b2bef039c250275a9c17e663e164",
+      "focusedTests": "18/18 PASS; 0.405s Node; 0.597s wall",
+      "relatedTests": "77/77 PASS; 0.740s Node; 0.880s wall",
+      "fullTests": "825/825 PASS; 9.975s Node; 11.739s wall",
+      "readinessValidators": "15/15 PASS",
+      "build": "PASS; 188 modules; 10.80s Vite; 13.469s wall; JS 1295773; CSS 87267",
+      "budget": "PBA-TD005-v1 release PASS; two new images 4542628 bytes; total media 26078751",
+      "servedIdentity": "PASS; root/reload/fallback/JS/CSS/panorama/detail HTTP 200 with exact bytes and hashes; owned preview stopped; ports clear",
+      "presentationReview": "PASS; 44 scenarios x 4 layouts = 176 checks plus 6 scenarios x 4 layouts = 24 parity checks; min control 44px; representative desktop/narrow/grayscale inspection; no containment, console, page, failed-request, or foreign-request failures",
+      "e2e": "Exactly one complete post-build run; PASS; 94.241s; all emitted gates true; runtimeErrors false; credits true; 69 incidental captures restored",
+      "generationReconciliation": "Exactly two private no-reference attempts; first failed Image QA outside workspace/canon/runtime/provenance/commit/reveal; one permitted recovery is the sole accepted and archived source; no third attempt",
+      "variances": "TD005-LIM-001 and TD005-LIM-002 required corrections resolved before release; TD005-VAR-001 accepted improvement; no deferred limitation",
+      "totalSequentialDurationMsThroughRelease": 15495814,
+      "commit": "PENDING_INTELLIGENCE_COMMIT",
+      "commitConvention": "The dedicated Intelligence commit containing this ledger entry, final reconciliation, controls, retrospective, and handoff is authoritative; no recursive successor commit is required.",
+      "synchronization": "intelligence-release-push-gate"
     }
   ]
 }

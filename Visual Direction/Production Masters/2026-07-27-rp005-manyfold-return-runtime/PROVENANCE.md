@@ -7,7 +7,8 @@
 - Bytes: `2,979,891`
 - SHA-256:
   `1DF61905EC19F28DD10839D95FADCEE81FBA4EF3AF12C0A94B2F44AC9738AC28`
-- Mode: exactly one accepted built-in `image_gen` generation, no references
+- Mode: two private built-in `image_gen` attempts, no references; exactly one
+  accepted and archived source
 - Edits: none
 - Decision: compatible replacement preserves visible difference across
   layered stewardship without establishing a standard, owner, purpose, or
@@ -15,6 +16,12 @@
 
 The exact prompt and complete production review are recorded in
 `Production Pipeline/Skyscraper Test Drives/TD-005/10-POLISH-REVIEW.md`.
+
+The first private attempt failed Image Specialist QA and remained wholly
+outside the workspace, canon, runtime, provenance package, commit, and
+user-facing reveal. The one permitted targeted recovery produced the accepted
+source identified above. No third attempt occurred, and no rejected draft is
+stored in this package.
 
 ## Runtime masters
 
@@ -53,4 +60,5 @@ into learning evidence or world response.
 Image Specialist disposition:
 `PRESENTATION COMPLETE - TWO SC-06 MASTERS ACCEPTED`.
 
-Fresh Intelligence release validation remains mandatory.
+Intelligence disposition:
+`PASS - AS BUILT RELEASED / TD-005 / SS-RP005-MANYFOLD-RETURN-v1`.

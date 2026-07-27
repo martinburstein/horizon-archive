@@ -6,7 +6,9 @@
 - **Rail Packet:** `RP-005 — Manyfold Return`
 - **Player-facing survey name:** Manyfold Return (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / repeated-receiver field beyond the Three-Current Reach
-- **Production status:** Image Specialist `PRESENTATION COMPLETE` — accepted source plus panorama/detail runtime masters integrated; fresh Intelligence release pending
+- **Production status:** Intelligence `PASS - AS BUILT RELEASED` - accepted
+  source plus panorama/detail runtime masters integrated and independently
+  released
 - **Image:** [Accepted Manyfold Return source](../../Visual%20Direction/Production%20Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png), with neighboring provenance and two deterministic runtime masters
 - **Purpose:** Make one dividing flow, a recurring exposed trace range, bounded divergence, a sealed branch, and layered stewardship physically readable without converting repetition into truth, divergence into failure, or absence into permission to infer.
 

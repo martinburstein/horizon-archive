@@ -1,5 +1,29 @@
 # Horizon Archive Game Work Log
 
+## 2026-07-27 - Intelligence Officer: TD-005 as-built release
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-005 /
+  SS-RP005-MANYFOLD-RETURN-v1` on Image candidate
+  `558674bd8ea3b2bef039c250275a9c17e663e164`.
+- **Independent gate:** focused `18/18`; related `77/77`; full `825/825`;
+  readiness `15/15`; build `188` modules; release PBA; exact served identity;
+  fixture `176 + 24` checks; one post-build E2E `94.241s`, every gate true,
+  `runtimeErrors:false`, credits reached.
+- **Released identity:** JS `index-C4WKXvKt.js`, `1,295,773` bytes,
+  `D26D82884E75444D3BFD0804D5FE65D555AFA755960EC4A48787B9425D8BB6A9`;
+  CSS `index-DfYUL49q.css`, `87,267` bytes,
+  `20F300C19DEB36C2420EC554B9317190095179C1179205DC3218182A38E2174D`;
+  exact SC-06 panorama/detail hashes remain registered in provenance.
+- **Variance/recovery:** both Image limitations are resolved required
+  corrections; placeholder replacement is an accepted improvement. Exactly
+  two private generation attempts produced one accepted/archive; the failed
+  first attempt stayed outside every project/reveal boundary and no third
+  attempt occurred.
+- **Boundary:** MF-30 and the exact Three-Current Reach/City Threshold returns
+  are final. RP-006, RP-013, successor, identity, purpose, access, reward,
+  authority, external action, post-ending content, and world response remain
+  closed.
+
 ## 2026-07-26 — Intelligence Officer: TD-004 as-built release
 
 - **Disposition:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1` on corrected candidate `aeb77787fd34b281103c26864ab0d62fe3927d6e`; `TD004-VAR-001` and `TD004-VAR-002` are resolved.

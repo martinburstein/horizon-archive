@@ -322,8 +322,12 @@ open and honestly disclosed. The candidate is not `CONTENT COMPLETE`,
 
 **Disposition: `PRESENTATION COMPLETE - TWO SC-06 MASTERS ACCEPTED`.**
 
-The Image Specialist accepted one no-reference recovery source for the
-preselected compatible-replacement/stewardship decision:
+The Image Specialist made exactly two private no-reference attempts for the
+preselected compatible-replacement/stewardship decision. The first failed
+Image Specialist QA and remained outside the workspace, canon, runtime,
+provenance package, commit, and user-facing reveal. The one permitted targeted
+recovery became the sole accepted and archived source below; no third attempt
+occurred:
 
 - archived source:
   `Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/rp005-manyfold-return-source-v1.png`;

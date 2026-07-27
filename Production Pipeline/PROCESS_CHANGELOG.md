@@ -17,6 +17,38 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-27 / TD-005 Intelligence release - TUNE
+
+- **Observed:** fourteen sequential stages used `15,495,814ms` (`258.26m`)
+  through the Intelligence disposition. Fresh release evidence passed focused
+  `18/18`, related `77/77`, full `825/825`, validators `15/15`, the
+  188-module build, release PBA, exact served identity, `176 + 24` fixture
+  checks, and one `94.241s` post-build E2E. The real product passed without a
+  late repair. Two record ambiguities did consume release time: the fixture's
+  own scenario selector/summary initially contaminated target-size and
+  containment measurements, and provenance wording recorded one accepted
+  source without separately recording two private attempts.
+- **Decision:** `TUNE`. Keep the complete sequential role order, shell,
+  release ladder, one-reveal recovery rule, and independent Intelligence
+  gate. Future closed fixtures must expose target-only measurement roots that
+  exclude harness controls/output. Image ledgers must record two separate
+  integers from the first Image checkpoint: private attempts and accepted
+  archived sources.
+- **Expected benefit:** fewer false presentation findings and unambiguous
+  enforcement of the one-recovery/no-third-attempt rule without weakening
+  visual judgment or provenance.
+- **Preserved guardrails:** exact shell, sequential roles, independent release,
+  canon, learning separation, privacy, accessibility, atomic save/recovery,
+  invariant world, budget, protected user work, one accepted reveal, and all
+  route/later-content hard stops remain unchanged.
+- **Validation:** the next generated-visual cycle should require no release-
+  time reinterpretation of attempt count, and its fixture summary should
+  report only player-surface controls and containment while human wide,
+  narrow, and grayscale review still occurs.
+- **Rollback trigger:** target-only roots hide a real document-level escape,
+  attempt/accepted accounting becomes more ambiguous, or the tune reduces
+  independent visual/provenance review.
+
 ## 2026-07-26 / TD-004 Intelligence release — TUNE
 
 - **Observed:** the complete predecessor sequence consumed `17,545,948ms`

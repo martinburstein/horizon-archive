@@ -1,6 +1,22 @@
 # RP-005 — Manyfold Return
 
-## TD-005 Mission shell — 2026-07-26
+## TD-005 Intelligence release - 2026-07-27
+
+- **Disposition:** `PASS - AS BUILT RELEASED /
+  SS-RP005-MANYFOLD-RETURN-v1`.
+- **Accepted boundary:** sole `TD005-RTA-001` from exact TD-004 TR-40 through
+  complete MF-00-MF-30, four equal observations, strict independent learning,
+  atomic local record/recovery, replay-free restore, and only the exact
+  Three-Current Reach and City Threshold returns.
+- **Presentation:** the provenance-complete accepted source and exactly two
+  direct SC-06 panorama/detail runtime masters pass source, derivative,
+  grayscale, responsive, accessibility, invariant-world, served-byte, and
+  release-budget gates.
+- **Hard stop:** MF-30. The serviced continuation is not a route; RP-006,
+  RP-013, successor, purpose/identity, access, reward, authority, external
+  action, response, and post-ending content remain closed.
+
+## Dated TD-005 Mission shell — 2026-07-26
 
 - **Disposition:** `SHELL READY /
   SS-RP005-MANYFOLD-RETURN-v1`; Marine construction begins with
@@ -35,7 +51,7 @@
 
 ## Packet identity
 
-- Status: `READY FOR WORKING — COORDINATOR GATE PASS`
+- Status: `PASS - AS BUILT RELEASED / TD-005`
 - Target chapter/location: Chapter 3 expansion continuation / repeated-receiver landscape beyond the Three-Current Reach
 - Target demo horizon: fourth future slice after the accepted RP-001 boundary; directly after RP-004
 - Route order: 5

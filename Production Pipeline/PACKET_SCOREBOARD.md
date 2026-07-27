@@ -1,6 +1,20 @@
 # Rail Packet Scoreboard
 
-## TD-005 Mission shell control — 2026-07-26
+## Intelligence Officer current control - 2026-07-27
+
+- **Authoritative release:** `RP-005 PASS - AS BUILT RELEASED / TD-005 /
+  SS-RP005-MANYFOLD-RETURN-v1`. Protected missing-gate count remains zero.
+  Normal play now includes MF-00-MF-30, exact `PY-012` and
+  `RP005-TEXT-01` evidence, atomic local record/recovery, replay-free restore,
+  both exact returns, and the accepted SC-06 panorama/detail presentation.
+- **Variance state:** `TD005-LIM-001` and `TD005-LIM-002` are required
+  corrections resolved before release; `TD005-VAR-001` is an accepted
+  shell-conforming improvement. No deferred limitation remains.
+- **Exact stop:** MF-30 or either authorized return. No RP-006 route,
+  RP-013, successor, identity, purpose, reward, access, authority, external
+  action, or world response is released.
+
+## Dated TD-005 Mission shell control — 2026-07-26
 
 - **RP-005 construction status:** `SHELL READY /
   SS-RP005-MANYFOLD-RETURN-v1`. Mission's conflict-free shell freezes the
@@ -26,7 +40,7 @@
   notation remain non-routable; no RP-006 route, RP-013, successor, reward,
   access, authority, external action, or world response is opened.
 
-## Intelligence Officer current control — 2026-07-26
+## Dated TD-004 Intelligence release — 2026-07-26
 
 - **Authoritative release:** `RP-004 PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. Normal play now reaches the complete `TR-00–TR-40` Three-Current Reach, including three independent observations, strict Python and AI-901 evidence, deterministic save/restore, both write-free returns, and the optional destinationless record. `TD004-VAR-001` and `TD004-VAR-002` are resolved; protected missing-gate count remains zero.
 - **Authoritative exact stop:** SC-04 and SC-05 remain invariant. No RP-005 route, named destination, traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, world/access/authority, live service, or external effect is authorized. Await Martin's explicit instruction before another Commandant shell.

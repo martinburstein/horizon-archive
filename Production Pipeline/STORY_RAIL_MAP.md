@@ -1,6 +1,20 @@
 # Horizon Archive Story Rail Map
 
-## TD-005 Mission shell control — 2026-07-26
+## Intelligence Officer current control - 2026-07-27
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-005 /
+  SS-RP005-MANYFOLD-RETURN-v1`. Normal play advances from exact released
+  TD-004 TR-40 through sole validated `TD005-RTA-001` into complete
+  `RP-005 / SC-06 / MF-00-MF-30`, with four equal observations, independent
+  learning chains, atomic local record/recovery, replay-free restore, and
+  exact write-free returns.
+- **Authoritative rail stop:** MF-30, Three-Current Reach return, or City
+  Threshold return. The serviced continuation remains scenery only. No
+  RP-006 route, direct Calibration/Civic shortcut, RP-013, successor,
+  identity, purpose, access, reward, authority, external action, post-ending
+  content, or world response is open.
+
+## Dated TD-005 Mission shell control — 2026-07-26
 
 - **Construction gate:** `SHELL READY /
   SS-RP005-MANYFOLD-RETURN-v1`. The selected adjacent rail remains
@@ -31,7 +45,7 @@
   RP-013, successor, reward, access, authority, response, or post-ending
   content.
 
-## Intelligence Officer current control — 2026-07-26
+## Dated TD-004 Intelligence release — 2026-07-26
 
 - **Authoritative release / position:** `PASS — AS BUILT RELEASED / TD-004 / SS-RP004-THREE-CURRENT-v1`. The whole-story rail remains complete through the intended `RP-012` ending. The accepted playable position now advances from exact released TD-003 CM-50 through the full `RP-004 / SC-05 / TR-00–TR-40` shell, deterministic restore, both write-free returns, and the optional destinationless record.
 - **Authoritative rail stop:** the normal route stops at restored TR-40, either authorized return, or the destinationless notation. SC-04 and SC-05 remain invariant. RP-005 route/destination, a traversable common return, direct RP-004-to-Civic shortcut, RP-013, successor, reward, access, authority, external action, and every physical/world response remain closed. No new shell or rail extension is authorized until Martin gives an explicit instruction.

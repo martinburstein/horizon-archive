@@ -1,6 +1,25 @@
 # Horizon Archive Production Readiness Spine
 
-## TD-005 Mission current control - 2026-07-26
+## Intelligence Officer current control - 2026-07-27
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-005 /
+  SS-RP005-MANYFOLD-RETURN-v1` on candidate
+  `558674bd8ea3b2bef039c250275a9c17e663e164`.
+- **Independent gate:** focused `18/18`; related `77/77`; full `825/825`;
+  readiness `15/15`; build `188` modules; release `PBA-TD005-v1 PASS`;
+  served bytes exact; closed fixture `176 + 24` checks; one post-build E2E
+  `94.241s` with every gate true, `runtimeErrors:false`, and credits reached.
+- **Release identity:** JS `1,295,773` bytes / `D26D8288...`; CSS `87,267`
+  bytes / `20F300C1...`; source plus exactly two direct SC-06 masters retain
+  their registered hashes. Generation history is two private attempts, one
+  accepted/archive, no third; the first failed QA outside every project and
+  reveal boundary.
+- **Boundary:** MF-30 and the exact Three-Current Reach/City Threshold returns
+  are final. No direct Calibration/Civic route, RP-006 route, RP-013,
+  successor, identity, purpose, access, reward, authority, external action,
+  post-ending content, or world response is open.
+
+## Dated TD-005 Mission control - 2026-07-26
 
 - **Disposition:** `SHELL READY / SS-RP005-MANYFOLD-RETURN-v1`.
   Mission reconciled `GDB-TD005-v1`, `WNMP-TD005-v1`, `CFS-TD005-v2`,
