@@ -1,0 +1,164 @@
+{
+  "schema": "horizon-archive.production-budget-authority",
+  "schemaVersion": 1,
+  "authorityId": "PBA-TD007-v1",
+  "testDrive": "TD-007",
+  "sliceId": "TD-007-RP007-BRAIDED-VERGE-v1",
+  "campaignAddress": "RP-007 / SC-08 / BV-00-BV-30",
+  "basis": {
+    "acceptedRelease": "TD-006 / SS-RP006-INTERVAL-WORKS-v1",
+    "releaseAuthority": "Production Pipeline/Skyscraper Test Drives/TD-006/11-AS-BUILT-RECONCILIATION.md",
+    "productionIdentityCommit": "5329813778da41fdaa984165f986c2182eb887bd",
+    "measuredAtCommit": "4893c3e0be645e6456ddec1b63488ed81aa35bde",
+    "measuredOn": "2026-07-29",
+    "buildCommand": "npm run build",
+    "buildSeconds": 10.979,
+    "modules": 193,
+    "javascript": {
+      "name": "index-BCbt17Qq.js",
+      "bytes": 1340562,
+      "sha256": "220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372"
+    },
+    "css": {
+      "name": "index-D_AzN0xq.css",
+      "bytes": 91182,
+      "sha256": "3114E2046599582B5295A6535B05853BC6E7E98B2CA022EFD23868ACA955BA72"
+    },
+    "runtimeMediaBytes": 29686267,
+    "runtimeMedia": [
+      {
+        "name": "basin_audio-D7yN7Fu4.wav",
+        "bytes": 96044,
+        "sha256": "AB396955D4533B7D73676D3271DABF9B9DE68EE4C5A4AEBE3CEC80DDB5756030"
+      },
+      {
+        "name": "city-threshold-access-master-CTF9U6Ho.png",
+        "bytes": 3076970,
+        "sha256": "E03FCFFEB1AAF941E9EE8C5A4EA9C840B4F90271353FDF0B26F51350421C7B4E"
+      },
+      {
+        "name": "city-threshold-boundary-master-CPr5uvhv.png",
+        "bytes": 2990550,
+        "sha256": "8A932F027A0DB79DF7D24EAC6803B0ADE45BEB3E9099E48C324D887E38DE3E4A"
+      },
+      {
+        "name": "city-threshold-overview-master-BaTX4tqK.png",
+        "bytes": 2626795,
+        "sha256": "1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"
+      },
+      {
+        "name": "civic-record-district-arrival-master-v1-BYTUil6H.png",
+        "bytes": 2594095,
+        "sha256": "FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C"
+      },
+      {
+        "name": "drowned-archive-master-eoqmWy_0.png",
+        "bytes": 2727857,
+        "sha256": "AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED"
+      },
+      {
+        "name": "glass-meadow-integrated-terminal-master-v1-CsiDmSf1.png",
+        "bytes": 2688247,
+        "sha256": "6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2"
+      },
+      {
+        "name": "sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp",
+        "bytes": 2163752,
+        "sha256": "B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F"
+      },
+      {
+        "name": "sc06-manyfold-return-detail-runtime-master-v1-DctucPk5.webp",
+        "bytes": 2125650,
+        "sha256": "1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9"
+      },
+      {
+        "name": "sc06-manyfold-return-panorama-runtime-master-v1-CyiVc4sj.webp",
+        "bytes": 2416978,
+        "sha256": "3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B"
+      },
+      {
+        "name": "sc07-interval-works-crosssection-runtime-master-v1-DqI0ldpo.webp",
+        "bytes": 1790866,
+        "sha256": "0D79C2C2096C0114216A666279D5ACD2ED35F6920D60A117726C625177A0615D"
+      },
+      {
+        "name": "sc07-interval-works-panorama-runtime-master-v1-DjuC7yYh.webp",
+        "bytes": 1816650,
+        "sha256": "EF5917632EB2440D7D6D85895F5775767389745F1534F4E107F7BB0DE7D59202"
+      },
+      {
+        "name": "witness-corridor-master-BLfy2vNi.png",
+        "bytes": 2571813,
+        "sha256": "EEA780A0E0AF3E57497552601E00AD80851036C26CD29AB512C0E25EF3E0C4CF"
+      }
+    ]
+  },
+  "policy": {
+    "kind": "one-time-noncompounding-current-release-rebaseline",
+    "javascriptAndCssRule": "floor(exact accepted TD-006 aggregate production bytes * 1.05)",
+    "moduleRule": "floor(exact accepted TD-006 production modules * 1.05)",
+    "runtimeMediaRule": "at most two new image-only runtime assets totaling at most 8 MiB above the exact accepted TD-006 media hash set",
+    "plannedRuntimeImageRoles": [
+      "SC-08 panoramic shared-region world identity",
+      "SC-08 registered contact-detail identity"
+    ],
+    "browserTemporaryWorkspaceRule": "session-only memory-backed relative-path workspace; one declared UTF-8 write and one declared UTF-8 read; destroyed in finally; no IndexedDB, OPFS, localStorage, sessionStorage, Cache API, service worker, download, external path, network, package, environment, process, or arbitrary Python execution",
+    "truthfulExecutionLabel": "The course validator executes the approved file-operation plan against an isolated session-only virtual temporary file; it does not execute arbitrary Python or contact a live service.",
+    "notARollingEntitlement": true,
+    "qualityRequirementsRemainMandatory": true,
+    "allOutputChunksCount": true,
+    "allNewRuntimeAssetsCount": true,
+    "acceptedRuntimeMediaMustRemainPresent": true,
+    "sourceMapsDoNotHideRuntimePayload": true,
+    "futureOverageRequiresScienceMissionVariance": true
+  },
+  "caps": {
+    "aggregateJavascriptBytes": 1407590,
+    "aggregateCssBytes": 95741,
+    "productionModules": 202,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608,
+    "totalRuntimeMediaBytes": 38074875,
+    "allowedNewRuntimeMediaExtensions": [
+      ".avif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".webp"
+    ],
+    "forbiddenNewRuntimeMediaClasses": [
+      "audio",
+      "font",
+      "video",
+      "network-fetched-payload",
+      "python-runtime",
+      "wasm-runtime"
+    ],
+    "productionBuildSeconds": 60,
+    "focusedSuiteSeconds": 30,
+    "relatedSuiteSeconds": 60,
+    "fullSuiteSeconds": 60,
+    "completeE2ESeconds": 180,
+    "sampledMainThreadTaskMs": 100
+  },
+  "headroom": {
+    "javascriptBytes": 67028,
+    "cssBytes": 4559,
+    "productionModules": 9,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608
+  },
+  "requiredQualityGates": [
+    "runtime images remain maximum-quality cinematic photorealistic first-person world identities; byte caps never authorize visible degradation",
+    "each runtime image has direct import, emitted byte and SHA-256 identity, provenance, accessible alternative treatment, responsive crops, grayscale review, and explicit placeholder retirement",
+    "the two accepted source masters remain separately counted from private generation attempts and runtime derivatives",
+    "the browser-safe PY-015 workspace remains memory-only, relative-path-only, UTF-8, one-write/one-read, cleanup-proven, private-free, and truthfully labeled as approved-plan execution rather than arbitrary Python execution",
+    "learner source, report content, restored report, filename work state, raw cases, answers, feedback, and diagnostics are never placed in durable persistence",
+    "every emitted JavaScript and CSS chunk is aggregated",
+    "every runtime media file is counted and classified by SHA-256 against the accepted TD-006 set",
+    "all accepted TD-006 runtime media identities remain present",
+    "new runtime audio, font, video, source-map, Python/WASM runtime, and network payloads are rejected",
+    "focused, related, full, validator, build, served identity, non-overlapping E2E, responsive/accessibility review, fixture exclusion, QA restoration, and as-built reconciliation remain mandatory",
+    "quality, learning evidence, privacy, sanitation, accessibility, responsive behavior, save/recovery, offline behavior, and invariant-world limits cannot be reduced to meet a cap"
+  ]
+}

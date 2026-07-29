@@ -3,8 +3,8 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-007",
-    "shellCandidate": "unselected",
-    "campaignAddress": "unselected",
+    "shellCandidate": "TD-007-RP007-BRAIDED-VERGE-v1 / shell unissued",
+    "campaignAddress": "RP-007 / SC-08 / BV-00-BV-30",
     "sourceCommit": "5329813778da41fdaa984165f986c2182eb887bd",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -60,6 +60,25 @@
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Office of Science Administrator"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-07-29T14:34:00.000Z",
+      "endedAt": "2026-07-29T14:43:23.524Z",
+      "durationMs": 563524,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-007/04-VIABILITY-ENVELOPE.md",
+      "budgetAuthority": "PBA-TD007-v1",
+      "releasedPredecessor": "TD-006 / SS-RP006-INTERVAL-WORKS-v1 / IW-30 plus exact write-free returns",
+      "candidateSelection": "TD-007-RP007-BRAIDED-VERGE-v1 / RP-007 / SC-08 / BV-00-BV-30 through fresh Pilot-owned TD007-RTA-001",
+      "validation": "focused 13/13; related 26/26; full 838/838; RP-007 mapping self-test PASS; production build 193 modules / 10.979s wall; PBA-TD007-v1 baseline PASS with negative module/timing probes rejected",
+      "variances": "none; browser-safe PY-015 is viable only through the frozen session-only memory-backed relative-path UTF-8 workspace and truthful approved-plan-execution label",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only",
+      "nextStage": "Mission Captain"
     }
   ]
 }

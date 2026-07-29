@@ -7,8 +7,8 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 
 The authorized three-hour Skyscraper cycle is active and non-overlapping.
 TD-006 remains the synchronized released product. TD-007 Commandant,
-Colonel, and Operations stages are complete at dedicated local checkpoints.
-No shell or Marine deployment is authorized.
+Colonel, Operations, and Science stages are complete at dedicated local
+checkpoints. No shell or Marine deployment is authorized yet.
 
 ## Released authority
 
@@ -26,79 +26,86 @@ No shell or Marine deployment is authorized.
 
 ## Active TD-007 checkpoint
 
-- Completed stage: Operations Planning Major /
-  `operations_planning_major`
+- Completed stage: Office of Science Administrator /
+  `office_of_science_administrator`
 - Product certificate: `GDB-TD007-v1 / VISION BASELINE`
 - World certificate: `WNMP-TD007-v1 / WORLD BASELINE`
 - Operations certificate:
   `CFS-TD007-v1 / FLOOR STACK READY - ROUTE AUTHORIZED`
-- Artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-007/03-CAMPAIGN-FLOOR-STACK.md`
+- Science certificate: `VE-TD007-v1 / VIABILITY READY`
+- Science artifact:
+  `Production Pipeline/Skyscraper Test Drives/TD-007/04-VIABILITY-ENVELOPE.md`
+- Budget authority:
+  `Production Pipeline/Skyscraper Test Drives/TD-007/04A-PRODUCTION-BUDGET-AUTHORITY.json`
 - Selected slice: `TD-007-RP007-BRAIDED-VERGE-v1`
 - Campaign address: `RP-007 / SC-08 / BV-00-BV-30`
 - Route: `TD007-RTA-001`
 - Exact source: strict released TD-006 `IW-30 / SC-07`
-- Exact entry: one fresh Pilot-owned validation-before-consumption action;
-  scenery, saved completion, physical continuation, sound, repair,
-  deposition, packet labels, and protected code remain non-routing
 - Checkpoints: `IW-30 ROUTE CHOICE -> BV-00 -> BV-10 -> BV-20 -> BV-30`
+- Learning: exact strict independent `PY-015`,
+  `RP007-VISION-GENERATION-01 / AI901-D1-O7`, and two explanations
+- Browser file boundary: session-only memory-backed relative-path UTF-8
+  workspace; one declared write/read; unconditional cleanup; no durable
+  storage, network, external path, Python/WASM runtime, or arbitrary-Python
+  claim
+- Normal record: distinct key/version/controller, exact ten-key root,
+  fourteen-note-key meaning, eight ordered evidence records, atomic
+  read-back/rollback, immutable TD-006 through TD-004 bytes, replay-free
+  BV-30 restore
 - Five equal any-order observations: separate continuities; recurrent local
   association; bounded neutral difference; relative noncausal order;
   closed-junction unavailability with layered compatible stewardship
 - Candidate returns: write-free exact IW-30 or City Threshold
+- Two runtime roles: SC-08 panorama and registered contact detail
+- Budget: `PBA-TD007-v1`; JS `<=1,407,590`; CSS `<=95,741`; modules
+  `<=202`; at most two image-only assets totaling `<=8,388,608`; total
+  media `<=38,074,875`
+- Fresh Science proof: focused `13/13`; related `26/26`; full `838/838`;
+  RP-007 validator `PASS`; build `193` modules / `10.979s`; budget baseline
+  `PASS`; over-cap module/timing probes reject
 - Selected hard stop: BV-30 before any RP-008 route, cue, event, or state
 - Shell: unissued
-- Commit: the dedicated local Operations commit containing this handoff is
+- Commit: the dedicated local Science commit containing this handoff is
   authoritative under the non-recursive ledger convention
 - Synchronization: local-only; push remains deferred to the Mission gate
 
 ## Exact next action
 
-**Run Office of Science Administrator /
-`office_of_science_administrator` for TD-007.**
+**Run Mission Captain / `mission_captain` for TD-007.**
 
-Read the Science profile in full, this Operations handoff,
-`GDB-TD007-v1`, `WNMP-TD007-v1`, `CFS-TD007-v1`, the released TD-006
-reconciliation and normal record/restore authorities, the entire frozen
-RP-007 learning contract/validator/reference package, and only the exact
-current technical, curriculum, privacy, accessibility, save, asset, and
-budget controls required by the profile.
+Read the Mission profile in full, this Science handoff, `GDB-TD007-v1`,
+`WNMP-TD007-v1`, `CFS-TD007-v1`, `VE-TD007-v1`, `PBA-TD007-v1`, the
+released TD-006 reconciliation and exact normal route/save/restore
+authorities, the entire frozen RP-007 contract/validator/reference package,
+the protected journey as reference only, and the exact current technical,
+curriculum, gameplay, accessibility, visual, privacy, asset, and readiness
+controls cited by Science.
 
-Independently prove or reject the complete viability of
-`TD-007-RP007-BRAIDED-VERGE-v1` through `TD007-RTA-001`. Validate strict
-TD-006 dependency and predecessor-byte preservation; fresh one-hit route
-intent; invalid/duplicate/stale/Tour/interruption sanitation; a distinct
-normal RP-007 record; atomic read-back/rollback; replay-free BV-30 restore;
-and exact returns.
+Reconcile one conflict-free versioned Playable Slice Shell for
+`TD-007-RP007-BRAIDED-VERGE-v1` through sole route `TD007-RTA-001`.
+Freeze exact entry/exit, state-to-scene and alternative-text identities,
+five equal observations in all 120 orders, independent learning/evidence,
+truthful browser-safe temporary work, sanitation, atomic save/rollback,
+replay-free restore, accessibility/responsive/assistive parity, offline/Tour
+and invariant-world limits, two SC-08 image roles, closed fixture,
+validation ladder, budget, returns, and BV-30 hard stop.
 
-Verify exact frozen `PY-015` and independent
-`RP007-VISION-GENERATION-01` evidence plus both explanations, including a
-truthful browser-safe isolated temporary-file work boundary with no retained
-report content, network, external path, environment mutation, or false
-execution claim. Verify zero cross-credit, five equal any-order
-observations, privacy, accessibility, responsive/assistive parity, offline/
-no-authority/no-exam behavior, invariant SC-07/SC-08, two runtime image
-roles, closed fixture, provenance, cleanup, and a fresh non-compounding
-TD-007 performance/asset budget.
-
-Produce
-`Production Pipeline/Skyscraper Test Drives/TD-007/04-GLOBAL-VIABILITY-CONSTRAINTS.md`,
-issue `VIABILITY READY`, `REVISE`, or `HOLD`, create one dedicated local
-commit, and hand one exact viability envelope to Mission Captain. Do not
-issue a shell or deploy a Marine.
+Issue exactly `SHELL READY`, `REVISE`, or `HOLD`. If `SHELL READY`, create
+one dedicated Mission commit, push the complete strategic chain, verify
+`HEAD == origin/main`, and hand the versioned shell to Reconnaissance
+Sergeant. Do not deploy a Marine within the Mission stage.
 
 ## Frozen boundaries
 
-- TD-006 remains the released product. Operations selection does not make
+- TD-006 remains the released product. TD-007 viability does not make
   RP-007 live.
-- `TD007-RTA-001` is the sole selected transition. It is Pilot-owned, fresh,
+- `TD007-RTA-001` is the sole transition. It is Pilot-owned, fresh,
   one-hit, validation-before-consumption, zero-write, zero-evidence, and
-  zero-world-effect. The serviced continuation remains destinationless and
-  non-routing.
-- BV-30 is the selected hard stop. No RP-008 route, cue, learning, location,
-  event, scene, destination, purpose, identity, reward, access, permission,
-  authority, response, world effect, `RP-013`, successor, or post-ending
-  content is open.
+  zero-world-effect. Scenery, completion, continuation, sound, repair,
+  deposition, relative order, save, or packet labels remain non-routing.
+- The browser file workspace is transient memory only. It may execute only
+  the approved write/read plan and must state that it does not execute
+  arbitrary Python. Learner source/report/restored content is never durable.
 - Five observations remain equal and any-order. Association is not unity,
   coordination, communication, dependence, equivalence, ownership, or
   purpose. Difference is not error, damage, correction, progress, or
@@ -109,8 +116,11 @@ issue a shell or deploy a Marine.
 - Preserve exact TD-004 through TD-006 bytes, routes, evidence, returns,
   runtime assets, sanitation, atomic recovery, replay-free restore,
   accessibility, offline/Tour behavior, invariant worlds, and budgets.
-- Protected RP-007 code and designs remain reference-only and absent from
-  production until the complete authority chain passes.
+- Protected RP-007 code remains reference-only and absent from production.
+- BV-30 is the hard stop. No RP-008 route, cue, learning, location, event,
+  scene, destination, purpose, identity, reward, access, permission,
+  authority, response, world effect, `RP-013`, successor, or post-ending
+  content is open.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect or mutate Martin's browser storage or campaign save.
 - Never inspect, alter, stage, move, delete, or commit the protected PDF or
