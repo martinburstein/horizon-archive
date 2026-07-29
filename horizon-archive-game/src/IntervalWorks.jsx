@@ -4,6 +4,7 @@ import {
   intervalWorksObservationIds,
   resolveIntervalWorksWorldScene,
 } from "./IntervalWorksNormal.js";
+import { braidedVergeActions } from "./BraidedVergeNormal.js";
 import intervalWorksPanorama from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp";
 import intervalWorksCrosssection from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp";
 
@@ -25,6 +26,7 @@ const headingCopy = {
   iw20_save_recovery: "Recover the local save",
   iw20_rollback_unverified: "Local rollback is unverified",
   iw30_restore: "IW-30 verified restore",
+  iw30_braided_route_choice: "Choose the next expedition boundary",
 };
 
 const introductionCopy = {
@@ -45,6 +47,7 @@ const introductionCopy = {
   iw20_save_recovery: "The prior RP-006 bytes or verified absence were restored and checked. Retry or return safely.",
   iw20_rollback_unverified: "Progression is held because rollback or predecessor stability cannot be proven. No save or route is claimed.",
   iw30_restore: "The bounded note was restored without replay. Cause, duration, authorship, identity, importance, purpose, destination, and closed contents remain unresolved.",
+  iw30_braided_route_choice: "The exact released note remains restored. The Braided Verge action is a fresh Pilot-owned adjacent-survey choice; scenery, completion, and destinationless notation neither require nor dispatch it.",
 };
 
 const observationLabels = {
@@ -66,6 +69,7 @@ const actionIds = {
   [intervalWorksActions.retrySave]: "iw20-save-retry-action",
   [intervalWorksActions.returnManyfold]: "iw-return-manyfold",
   [intervalWorksActions.returnThreshold]: "iw-return-threshold",
+  [braidedVergeActions.route]: "iw-route-braided-verge",
 };
 
 function optionLabel(value) {

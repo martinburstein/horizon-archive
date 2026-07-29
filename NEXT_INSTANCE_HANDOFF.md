@@ -7,8 +7,8 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 
 The authorized three-hour Skyscraper cycle is active and non-overlapping.
 TD-006 remains the synchronized released product. TD-007 has passed all five
-strategic stages, Reconnaissance creative lock, and Tactical experience lock.
-Combat work has not begun.
+strategic stages, Reconnaissance creative lock, Tactical experience lock, and
+Combat functional construction. Quartermaster work has not begun.
 
 ## Released authority
 
@@ -25,9 +25,8 @@ Combat work has not begun.
 
 ## Active TD-007 checkpoint
 
-- Completed stage: Tactical Operations Specialist /
-  `tactical_operations_specialist`
-- Disposition: `EXPERIENCE READY`
+- Completed stage: Combat Engineer / `combat_engineer`
+- Disposition: `FUNCTIONALLY COMPLETE`
 - Shell: `SS-RP007-BRAIDED-VERGE-v1 / SHELL READY`
 - Shell artifact:
   `Production Pipeline/Skyscraper Test Drives/TD-007/05-PLAYABLE-SLICE-SHELL.md`
@@ -35,6 +34,8 @@ Combat work has not begun.
   `Production Pipeline/Skyscraper Test Drives/TD-007/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
 - Experience blueprint:
   `Production Pipeline/Skyscraper Test Drives/TD-007/07-EXPERIENCE-BLUEPRINT.md`
+- Functional build report:
+  `Production Pipeline/Skyscraper Test Drives/TD-007/08-FUNCTIONAL-BUILD-REPORT.md`
 - Product / world / operations / science:
   `GDB-TD007-v1 / WNMP-TD007-v1 / CFS-TD007-v1 / VE-TD007-v1`
 - Budget: `PBA-TD007-v1`
@@ -73,56 +74,74 @@ Combat work has not begun.
 - Responsive/accessibility: four exact layouts; seven modalities through one
   semantic one-hit seam; `>=44px`; forced-color, reduced-motion, grayscale,
   silence, focus, status, target, crop, and overflow parity
-- Fixture: `td007-braided-verge-v1`; loopback `127.0.0.1:4179`; exactly 56
-  allowlisted product scenarios; exactly two separately counted harness
-  elements; frozen memory only; no URL/arbitrary state/storage/network;
-  production excluded
+- Fixture: implemented `td007-braided-verge-v1`; loopback
+  `127.0.0.1:4179`; exactly 56 allowlisted product scenarios; exactly two
+  separately counted harness elements; frozen memory only; no URL/arbitrary
+  state/storage/network; production excluded; served root/module/scenario
+  registry PASS and owned port cleared
 - Returns: exact write-free/replay-free IW-30 or City Threshold only
 - Hard stop: BV-30 before every RP-008 or later cue, route, event, state, or
   meaning
 - Budget caps: JS `<=1,407,590`; CSS `<=95,741`; modules `<=202`; exactly at
   most two image-only assets totaling `<=8,388,608`; total media
   `<=38,074,875`
-- Tactical variances: none
-- Tactical validation: required-section trace `PASS`; 56-scenario count
-  `PASS`; focused RP-007 protected suite `13/13 PASS`; mapping self-test
-  `PASS`; Stage Metrics JSON parse `PASS`; patch whitespace check `PASS`
-- Marine deployment: Combat Engineer next; no Combat or later Marine work has
-  begun
-- Synchronization: local Tactical commit only; no Tactical push is authorized
+- Normal implementation: exact fresh Pilot-owned `TD007-RTA-001`; complete
+  BV-00-BV-30 controller/UI; one approved session-only relative-path UTF-8
+  memory workspace; five equal any-order observations; independent PY-015,
+  vision/generation, and explanation evidence; strict ten-root/fourteen-note/
+  eight-record sanitation; atomic persistence and verified rollback;
+  replay-free restore; exact returns and hard stop
+- Placeholder ledger: exactly `SC-08-PANORAMA-MASTER` and
+  `SC-08-CONTACT-DETAIL-MASTER`; both truthful structural placeholders; no new
+  runtime media
+- Build identity: `196` modules; JS `1,391,861` bytes /
+  `2FDCCEC4601F280D4798E308316ADA49B494DB1FA700704FC211CD25A2F43BF1`;
+  CSS `95,318` bytes /
+  `8116B5ABFA14EB37E5E7BE0042557CF21A57FD14168F7A65AE9A51DF99CFC463`;
+  index `551` bytes /
+  `1DAC518FBF3B9BFEAC9D7242E421380A7A45FBB25FC19A15AC4CBAFF29312E51`
+- Combat validation: focused `40/40 PASS`; related `74/74 PASS`; full
+  `865/865 PASS`; fifteen validator self-tests `PASS`; build `PASS`; served
+  root/deep/all 15 assets `PASS`; fixture serve/isolation `PASS`;
+  `PBA-TD007-v1 PASS`; source exclusion and patch checks `PASS`
+- Combat variances: none
+- Marine deployment: Quartermaster next; no Quartermaster or later Marine work
+  has begun
+- Synchronization: dedicated Combat commit is authoritative under the
+  non-recursive hash convention; push and three-way main verification
+  completed at handoff
 
 ## Exact next action
 
-**Run Combat Engineer / `combat_engineer` for TD-007.**
+**Run Quartermaster / `quartermaster` for TD-007.**
 
-Read the Combat profile, this exact `EXPERIENCE READY`, shell, creative
-treatment, all cited current-control authorities, released TD-006
-reconciliation, normal Interval Works integration/controller/UI/storage
-patterns, current App and style controls, fixture isolation pattern, RP-007
-frozen contract and protected reference, and `PBA-TD007-v1`.
+Read the Quartermaster profile, this exact `FUNCTIONALLY COMPLETE`, shell,
+creative treatment, experience blueprint, functional build report, all cited
+current-control authorities, released TD-006 reconciliation, normal Braided
+Verge implementation and closed fixture, asset-role seams, and
+`PBA-TD007-v1`.
 
-Implement the exact normal `TD007-RTA-001` route, strict predecessor
-validation and one-hit token flow, `BV-00-BV-30` controller, exact sanitizer
-and persistence adapter, approved memory-only PY-015 workspace, independent
-AI-901 forms and explanations, five equal any-order observations, conjunctive
-review, strict preview/save/read-back/rollback/restore/returns, scene resolver,
-semantic production UI, focus/status/error/recovery behavior, App integration,
-responsive/accessibility structural CSS, direct future asset-role seams, and
-the closed 56-scenario storage-free fixture.
+Retire every player-facing structural placeholder and complete the exact
+content, asset, provenance, alt, crop, hotspot, and runtime-import ledger
+without redesigning behavior. Refine player-facing copy only inside the locked
+owners, association-without-consolidation thesis, file-work truth, five equal
+peer meaning, independent learning evidence, atomic save/recovery, exact
+returns, and BV-30 stop.
 
-Preserve exact released TD-006/TD-005/TD-004 bytes and identities; route,
-graph, five peers, strict independent evidence, file-work truth, record,
-privacy, atomic recovery, four layouts, seven modalities, two-image budget,
-offline/Tour, invariant worlds, exact returns, reveal accounting, and BV-30
-hard stop.
+Acquire or create exactly `SC-08-PANORAMA-MASTER` and
+`SC-08-CONTACT-DETAIL-MASTER`; directly import both accepted masters, record
+source/full-resolution/emitted identities and provenance, register responsive
+crops/hotspots, and retire both structural placeholders. Preserve exact
+released predecessor assets and bytes; add no third image or disallowed
+audio/font/video/network/source-map payload.
 
-Run the proportional focused, related, full, build, budget, source-exclusion,
-fixture-isolation, patch, and protected-file gates. Create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-007/08-FUNCTIONAL-BUILD-REPORT.md`.
-Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`; update metrics and this
-handoff; make one dedicated Combat commit; push and verify the Combat gate;
-then hand exactly to Quartermaster. Do not perform Quartermaster or later
-Marine work.
+Run the proportional focused, related, full, validator, build, two-role
+runtime import, predecessor-media identity, placeholder, privacy/canon/
+hard-stop, fixture, patch, and `PBA-TD007-v1` gates. Create exactly
+`Production Pipeline/Skyscraper Test Drives/TD-007/09-CONTENT-ASSET-LEDGER.md`.
+Issue `CONTENT COMPLETE`, `REVISE`, or `HOLD`; update metrics and this handoff;
+then hand exactly to Image Specialist. Do not perform Image Specialist or
+later Marine work.
 
 ## Frozen boundaries
 

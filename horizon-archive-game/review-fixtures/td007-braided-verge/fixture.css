@@ -1,0 +1,45 @@
+[data-fixture-marker="TD007_BRAIDED_VERGE_FIXTURE"] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.fixture-scenario-picker {
+  position: fixed;
+  z-index: 10;
+  inset: 0 auto auto 0;
+  display: grid;
+  max-width: min(94vw, 32rem);
+  padding: 0.35rem;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid CanvasText;
+}
+
+.fixture-scenario-picker select {
+  min-height: 44px;
+  max-width: 100%;
+}
+
+[data-fixture-summary] {
+  max-width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid CanvasText;
+}
+
+.braided-fixture-return {
+  min-height: 100dvh;
+  min-width: 0;
+  padding: 4rem 1rem 1rem;
+  overflow-wrap: anywhere;
+}
+
+.braided-fixture-return button {
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 100%;
+}

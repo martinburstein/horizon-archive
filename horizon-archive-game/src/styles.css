@@ -393,6 +393,293 @@ h1 {
   }
 }
 
+/* TD-007 Braided Verge functional presentation. Final SC-08 art is Quartermaster-owned. */
+.braided-verge {
+  min-height: 100dvh;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 64fr) minmax(360px, 36fr);
+  background: #090d0f;
+  color: #e8e4da;
+}
+
+.braided-world {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  overflow: hidden;
+  background: #12191b;
+}
+
+.braided-world-placeholder {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.6rem;
+  padding: clamp(1rem, 3vw, 3rem);
+  text-align: center;
+  background: #26302f;
+  border: 2px dashed #807b6e;
+}
+
+.braided-world-placeholder strong,
+.braided-world-placeholder small {
+  overflow-wrap: anywhere;
+}
+
+.braided-world figcaption {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #4f5552;
+  background: #0d1214;
+  color: #c8c3b8;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.braided-panel {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: clamp(1rem, 2vw, 2rem);
+  background: #11171a;
+}
+
+.braided-heading h1 {
+  margin-block: 0.15rem 0.75rem;
+}
+
+.braided-boundary,
+.braided-errors,
+.braided-panel [role="status"],
+.braided-preview-limit,
+.braided-workspace-truth {
+  padding: 0.8rem;
+  border: 1px solid #68757a;
+  overflow-wrap: anywhere;
+}
+
+.braided-workspace-truth,
+.braided-preview-limit {
+  border-style: double;
+}
+
+.braided-observations,
+.braided-review {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.braided-observations li,
+.braided-review li {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #68757a;
+}
+
+.braided-observations button {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem;
+  text-align: left;
+  color: #e8e4da;
+  background: #11171a;
+  border: 2px solid #68757a;
+}
+
+.braided-observations button[data-recorded="true"] {
+  border-style: double;
+  border-width: 4px;
+}
+
+.braided-form-grid,
+.braided-cases {
+  min-width: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.braided-form-grid label,
+.braided-cases fieldset,
+.braided-note {
+  min-width: 0;
+  padding: 0.8rem;
+  border: 1px solid #68757a;
+}
+
+.braided-form-grid textarea,
+.braided-form-grid select,
+.braided-cases select,
+.braided-panel > label select {
+  width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+  margin-top: 0.4rem;
+}
+
+.braided-form-grid textarea {
+  resize: vertical;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.braided-scaffold {
+  min-width: 0;
+}
+
+.braided-scaffold pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.braided-cases fieldset {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.braided-note dl {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.braided-note div {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.braided-note dd {
+  margin: 0;
+}
+
+.braided-actions {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+
+.braided-actions button,
+.braided-panel select,
+.braided-panel textarea,
+.braided-observations button {
+  min-width: 0;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.braided-actions button {
+  padding: 0.75rem;
+  overflow-wrap: anywhere;
+  color: #e8e4da;
+  background: #11171a;
+  border: 2px solid #68757a;
+}
+
+.braided-panel :focus-visible {
+  outline: 3px solid #f2d59a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1500px) and (min-width: 841px) {
+  .braided-verge {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 56fr) minmax(0, 44fr);
+  }
+
+  .braided-world {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .braided-verge {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .braided-world {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .braided-world-placeholder {
+    aspect-ratio: 16 / 9;
+  }
+
+  .braided-world figcaption {
+    position: static;
+  }
+
+  .braided-panel {
+    overflow: visible;
+  }
+
+  .braided-observations,
+  .braided-actions,
+  .braided-note div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .braided-verge,
+  .braided-verge * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .braided-world,
+  .braided-world-placeholder,
+  .braided-world figcaption,
+  .braided-panel,
+  .braided-boundary,
+  .braided-errors,
+  .braided-panel [role="status"],
+  .braided-preview-limit,
+  .braided-workspace-truth,
+  .braided-observations li,
+  .braided-review li,
+  .braided-form-grid label,
+  .braided-cases fieldset,
+  .braided-note {
+    color: CanvasText;
+    background: Canvas;
+    border-color: CanvasText;
+    forced-color-adjust: auto;
+  }
+
+  .braided-actions button,
+  .braided-observations button {
+    color: ButtonText;
+    background: ButtonFace;
+    border-color: ButtonText;
+  }
+
+  .braided-panel :focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
 /* TD-006 Interval Works production presentation. */
 .interval-works {
   display: grid;

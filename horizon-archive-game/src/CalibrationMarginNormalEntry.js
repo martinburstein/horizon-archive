@@ -54,6 +54,16 @@ import {
   intervalWorksActions,
   sanitizeIntervalWorksSave,
 } from "./IntervalWorksNormal.js";
+import {
+  BRAIDED_VERGE_ROUTE_GROUP,
+  BRAIDED_VERGE_ROUTE_OWNER,
+  BRAIDED_VERGE_SHELL_VERSION,
+  braidedVergeActions,
+  createBraidedVergeIntent,
+  createBraidedVergeNormalController,
+  createBraidedVergeRouteIntent,
+  sanitizeBraidedVergeSave,
+} from "./BraidedVergeNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -105,6 +115,28 @@ function exactReturnedThreshold(value) {
     && state?.accessStateDelta === null;
 }
 
+function intervalStateWithBraidedRoute(state) {
+  if (state?.activeGroup !== "iw30_restore") return state;
+  return {
+    ...state,
+    phase: "IW-30 ROUTE CHOICE",
+    activeGroup: BRAIDED_VERGE_ROUTE_GROUP,
+    owner: BRAIDED_VERGE_ROUTE_OWNER,
+    headingId: "bv-route-choice-heading",
+    statusMessageId: "td007:iw30_braided_route_choice:ready",
+    statusMessage: "The exact released Interval Works note remains restored. A fresh independent Pilot choice may follow the expedition-marked adjacent survey; no scenery or prior result dispatches it.",
+    availableActions: [
+      braidedVergeActions.route,
+      intervalWorksActions.returnManyfold,
+      intervalWorksActions.returnThreshold,
+    ],
+    focusIntent: {
+      group: BRAIDED_VERGE_ROUTE_GROUP,
+      target: "bv-route-choice-heading",
+    },
+  };
+}
+
 function protectedOptions(verifiedRestoreState, returnedCityThreshold, restoredState) {
   const valid = exactVerifiedRestore(verifiedRestoreState)
     && exactReturnedThreshold(returnedCityThreshold);
@@ -149,13 +181,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let threeCurrentController = null;
   let manyfoldReturnController = null;
   let intervalWorksController = null;
+  let braidedVergeController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (intervalWorksController) return intervalWorksController.getState();
+    if (braidedVergeController) return braidedVergeController.getState();
+    if (intervalWorksController) return intervalStateWithBraidedRoute(intervalWorksController.getState());
     if (manyfoldReturnController) return manyfoldReturnController.getState();
     if (threeCurrentController) return threeCurrentController.getState();
     if (reviewController) return reviewController.getState();
@@ -260,6 +294,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     threeCurrentController = null;
     manyfoldReturnController = null;
     intervalWorksController = null;
+    braidedVergeController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -300,6 +335,20 @@ export function createCalibrationMarginNormalEntry(options = {}) {
             restoredRecord: restoredInterval,
             adapter: options.intervalWorksAdapter,
           });
+          const restoredBraided = sanitizeBraidedVergeSave(options.restoredBraidedVerge);
+          if (restoredBraided) {
+            braidedVergeController = createBraidedVergeNormalController({
+              predecessorRecord: restoredInterval,
+              predecessorBytes: options.readIntervalBytes?.(),
+              readPredecessorBytes: options.readIntervalBytes,
+              manyfoldBytes: options.readManyfoldBytes?.(),
+              readManyfoldBytes: options.readManyfoldBytes,
+              threeCurrentBytes: options.readThreeCurrentBytes?.(),
+              readThreeCurrentBytes: options.readThreeCurrentBytes,
+              restoredRecord: restoredBraided,
+              adapter: options.braidedVergeAdapter,
+            });
+          }
         }
       }
       return;
@@ -352,8 +401,62 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (braidedVergeController) {
+        const result = braidedVergeController.dispatch(intent);
+        if (result.status === "returned_to_interval_works_write_free") {
+          braidedVergeController = null;
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(intervalStateWithBraidedRoute(intervalWorksController.getState())),
+          });
+        }
+        return result;
+      }
       if (intervalWorksController) {
-        const result = intervalWorksController.dispatch(intent);
+        const intervalState = intervalWorksController.getState();
+        if (intervalState.activeGroup === "iw30_restore"
+          && intent?.allowlistedActionId === braidedVergeActions.route) {
+          const predecessorRecord = intervalWorksController.getRecord();
+          const currentIntervalBytes = options.readIntervalBytes?.()
+            ?? JSON.stringify(predecessorRecord);
+          const candidate = createBraidedVergeNormalController({
+            predecessorRecord,
+            predecessorBytes: currentIntervalBytes,
+            readPredecessorBytes: options.readIntervalBytes,
+            manyfoldBytes: options.readManyfoldBytes?.(),
+            readManyfoldBytes: options.readManyfoldBytes,
+            threeCurrentBytes: options.readThreeCurrentBytes?.(),
+            readThreeCurrentBytes: options.readThreeCurrentBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredBraidedVerge,
+            adapter: options.createBraidedVergeAdapter?.(
+              predecessorRecord,
+              currentIntervalBytes,
+            ) ?? options.braidedVergeAdapter,
+          });
+          if (candidate.getState().shellVersion !== BRAIDED_VERGE_SHELL_VERSION) {
+            return Object.freeze({
+              status: "rejected",
+              reason: "braided_route_rejected",
+              state: clonePublicState(intervalStateWithBraidedRoute(intervalState)),
+            });
+          }
+          braidedVergeController = candidate;
+          return Object.freeze({
+            status: "braided_verge_arrived_zero_evidence",
+            evidenceGranted: false,
+            state: clonePublicState(braidedVergeController.getState()),
+          });
+        }
+        const mappedIntent = intent?.activeGroupId === BRAIDED_VERGE_ROUTE_GROUP
+          ? createIntervalWorksIntent(
+            intervalState,
+            intent.allowlistedActionId,
+            intent.activationKind,
+            intent.opaqueFreshEventToken,
+          )
+          : intent;
+        const result = intervalWorksController.dispatch(mappedIntent);
         if (result.status === "returned_to_manyfold_return_write_free") {
           intervalWorksController = null;
           return Object.freeze({
@@ -555,6 +658,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (braidedVergeController) {
+        return braidedVergeController.updateField(name, value);
+      }
       if (intervalWorksController) {
         return intervalWorksController.updateField(name, value);
       }
@@ -601,6 +707,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     getIntervalWorksRecord() {
       return intervalWorksController?.getRecord() ?? null;
+    },
+    getBraidedVergeRecord() {
+      return braidedVergeController?.getRecord() ?? null;
     },
     sanitizeBoundary(
       restoredState = currentState(),
@@ -649,6 +758,31 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === BRAIDED_VERGE_ROUTE_GROUP) {
+    if (action === braidedVergeActions.route) {
+      return createBraidedVergeRouteIntent(action, activationKind, eventToken);
+    }
+    return createIntervalWorksIntent(
+      {
+        activeGroup: "iw30_restore",
+        owner: "SYSTEM // RESTORED EXPEDITION NOTE",
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (shellVersionOrPhaseIsBraidedVerge(activeGroup)) {
+    return createBraidedVergeIntent(
+      {
+        activeGroup: activeGroup ?? "bv00_orientation",
+        owner: braidedVergeOwner(activeGroup),
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (shellVersionOrPhaseIsIntervalWorks(activeGroup)) {
     return createIntervalWorksIntent(
       {
@@ -790,6 +924,31 @@ function shellVersionOrPhaseIsManyfold(activeGroup) {
 
 function shellVersionOrPhaseIsIntervalWorks(activeGroup) {
   return typeof activeGroup === "string" && activeGroup.startsWith("iw");
+}
+
+function shellVersionOrPhaseIsBraidedVerge(activeGroup) {
+  return typeof activeGroup === "string" && activeGroup.startsWith("bv");
+}
+
+function braidedVergeOwner(activeGroup) {
+  if (activeGroup === "bv00_orientation") return "PILOT // FIELD ORIENTATION";
+  if (activeGroup === "bv10_observations") return "PILOT // FIELD OBSERVATION";
+  if (activeGroup === "bv20_python_primary" || activeGroup === "bv20_python_transfer") {
+    return "BUILDER WORK // SANITIZED REPLICA";
+  }
+  if (activeGroup === "bv20_python_trace") return "TEACHER / COURSE // METHOD TRACE";
+  if (activeGroup?.startsWith("bv20_vision")) return "TEACHER / COURSE // CAPABILITY PRACTICE";
+  if (["bv20_capability_boundary", "bv20_relation_boundary"].includes(activeGroup)) {
+    return "TEACHER / COURSE // EXPLANATION";
+  }
+  if (activeGroup === "bv20_repair") return "SYSTEM // PRIVATE-SAFE RECOVERY";
+  if (activeGroup === "bv20_review") return "PILOT // EXPEDITION REVIEW";
+  if (activeGroup === "bv20_save") return "PILOT // LOCAL EXPEDITION RECORD";
+  if (activeGroup === "bv20_transaction") return "SYSTEM // LOCAL TRANSACTION";
+  if (activeGroup === "bv20_save_recovery") return "SYSTEM // VERIFIED ROLLBACK";
+  if (activeGroup === "bv20_rollback_unverified") return "SYSTEM // TRANSACTION HOLD";
+  if (activeGroup === "bv30_restore") return "SYSTEM // RESTORED EXPEDITION NOTE";
+  return "PILOT // FIELD ORIENTATION";
 }
 
 function intervalWorksOwner(activeGroup) {

@@ -139,6 +139,26 @@
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-07-29T15:14:00.000Z",
+      "endedAt": "2026-07-29T15:41:34.4033327Z",
+      "durationMs": 1654403,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-007/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP007-BRAIDED-VERGE-v1",
+      "returnFrom": "Tactical Operations Specialist / EXPERIENCE READY",
+      "routeContract": "TD007-RTA-001",
+      "buildIdentity": "normal BV-00-BV-30 controller and semantic UI; fresh strict IW-30 route; five equal any-order observations; approved transient PY-015 workspace; independent AI-901 evidence; exact atomic record; two registered SC-08 placeholders; closed 56-scenario fixture",
+      "validation": "focused 40/40; related 74/74; full 865/865 / 11.195s wall; 15/15 validator self-tests; production build 196 modules / 10.476s wall; PBA-TD007-v1 PASS; root/deep/assets/fixture served PASS; source exclusion and patch checks PASS",
+      "variances": "none",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat Engineer commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "dedicated Combat commit pushed; local HEAD, origin/main, and remote refs/heads/main verified identical at FUNCTIONALLY COMPLETE handoff",
+      "nextStage": "Quartermaster"
     }
   ]
 }

@@ -11,6 +11,7 @@ import { CalibrationMarginEntry } from "./CalibrationMarginEntry.jsx";
 import { ThreeCurrentReach } from "./ThreeCurrentReach.jsx";
 import { ManyfoldReturn } from "./ManyfoldReturn.jsx";
 import { IntervalWorks } from "./IntervalWorks.jsx";
+import { BraidedVerge } from "./BraidedVerge.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -41,8 +42,13 @@ import {
 } from "./ManyfoldReturnNormal.js";
 import {
   INTERVAL_WORKS_SHELL_VERSION,
+  INTERVAL_WORKS_SAVE_KEY,
   createIntervalWorksStorageAdapter,
 } from "./IntervalWorksNormal.js";
+import {
+  BRAIDED_VERGE_SHELL_VERSION,
+  createBraidedVergeStorageAdapter,
+} from "./BraidedVergeNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -455,6 +461,26 @@ function calibrationMarginReviewSaveOptions(storage) {
     manyfoldBytes,
     threeCurrentBytes,
   });
+  const restoredIntervalWorks = intervalWorksAdapter.read();
+  let intervalBytes = null;
+  try {
+    intervalBytes = storage?.getItem(INTERVAL_WORKS_SAVE_KEY) ?? null;
+  } catch {
+    intervalBytes = null;
+  }
+  const readIntervalBytes = () => {
+    try {
+      return storage?.getItem(INTERVAL_WORKS_SAVE_KEY) ?? null;
+    } catch {
+      return null;
+    }
+  };
+  const braidedVergeAdapter = createBraidedVergeStorageAdapter(storage, {
+    intervalRecord: restoredIntervalWorks,
+    intervalBytes,
+    manyfoldBytes,
+    threeCurrentBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -478,7 +504,18 @@ function calibrationMarginReviewSaveOptions(storage) {
         threeCurrentBytes: readThreeCurrentBytes(),
       })
     ),
-    restoredIntervalWorks: intervalWorksAdapter.read(),
+    restoredIntervalWorks,
+    readIntervalBytes,
+    braidedVergeAdapter,
+    createBraidedVergeAdapter: (intervalRecord, currentIntervalBytes) => (
+      createBraidedVergeStorageAdapter(storage, {
+        intervalRecord,
+        intervalBytes: currentIntervalBytes,
+        manyfoldBytes: readManyfoldBytes(),
+        threeCurrentBytes: readThreeCurrentBytes(),
+      })
+    ),
+    restoredBraidedVerge: braidedVergeAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2348,7 +2385,7 @@ export function App() {
       THREE_CURRENT_REACH_SHELL_VERSION,
       MANYFOLD_RETURN_SHELL_VERSION,
       INTERVAL_WORKS_SHELL_VERSION,
-      INTERVAL_WORKS_SHELL_VERSION,
+      BRAIDED_VERGE_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2422,7 +2459,9 @@ export function App() {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === INTERVAL_WORKS_SHELL_VERSION
+        status: controller.getState().shellVersion === BRAIDED_VERGE_SHELL_VERSION
+          ? "braided_verge_restored"
+          : controller.getState().shellVersion === INTERVAL_WORKS_SHELL_VERSION
           ? "interval_works_restored"
           : controller.getState().shellVersion === MANYFOLD_RETURN_SHELL_VERSION
           ? "manyfold_return_restored"
@@ -2466,6 +2505,7 @@ export function App() {
       || result?.state?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
       || result?.state?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
       || result?.state?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
+      || result?.state?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3635,6 +3675,7 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3652,6 +3693,15 @@ export function App() {
     if (calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION) {
       return (
         <IntervalWorks
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
+    if (calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION) {
+      return (
+        <BraidedVerge
           state={calibrationMarginEntryView}
           onAction={dispatchCalibrationMarginEntry}
           onFieldChange={updateCalibrationMarginPythonField}

@@ -348,7 +348,7 @@ test("protected source is leakage-free, absent from the app bundle, and leaves n
   const main = await readFile(new URL("../src/main.jsx", import.meta.url), "utf8");
   assert.doesNotMatch(source, /localStorage|sessionStorage|indexedDB|fetch\(|XMLHttpRequest|WebSocket|navigator\.|document\.|window\./);
   assert.doesNotMatch(source, /from\s+["']node:child_process|execSync\(|spawnSync\(|process\.env|npm\s+install|pip\s+install/);
-  assert.doesNotMatch(`${app}\n${main}`, /BraidedVergeProtectedJourney|RP-007|SC-08|braided_verge_complete/);
+  assert.doesNotMatch(`${app}\n${main}`, /BraidedVergeProtectedJourney|runBraidedVergeProtectedJourneySmoke|braidedVergeReferenceAnswers|node:(?:fs|os|path)/);
 
   const before = (await readdir(tmpdir())).filter((name) => name.startsWith("horizon-rp007-")).sort();
   runBraidedVergeProtectedJourneySmoke(fixture());
@@ -359,6 +359,6 @@ test("protected source is leakage-free, absent from the app bundle, and leaves n
   const distAssets = await readdir(new URL("../dist/assets/", import.meta.url));
   for (const filename of distAssets.filter((name) => name.endsWith(".js"))) {
     const bytes = await readFile(new URL(`../dist/assets/${filename}`, import.meta.url), "utf8");
-    assert.doesNotMatch(bytes, /BraidedVergeProtectedJourney|braided_verge_complete|BV-00 ARRIVE|RP007-VISION-GENERATION-01/);
+    assert.doesNotMatch(bytes, /BraidedVergeProtectedJourney|runBraidedVergeProtectedJourneySmoke|braidedVergeReferenceAnswers|horizon-rp007-/);
   }
 });
