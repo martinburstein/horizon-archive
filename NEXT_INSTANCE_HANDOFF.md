@@ -1,16 +1,16 @@
 # Horizon Archive - Skyscraper Workflow Handoff
 
-Last updated: **2026-07-27**
+Last updated: **2026-07-28**
 
 ## Start here
 
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
-TD-006 is safely paused at the synchronized Mission `SHELL READY` boundary.
-Do not restart Commandant, Colonel, Operations, Science, or Mission. Do not
-deploy a Marine, generate a reveal, or infer a stale workflow edge until
-Martin or an active scheduled wake explicitly resumes the workflow.
+TD-006 resumed from the synchronized Mission `SHELL READY` checkpoint at
+Martin's explicit instruction. Reconnaissance Sergeant is complete. Do not
+restart Commandant, Colonel, Operations, Science, Mission, or Recon. Continue
+only from the Tactical Operations Specialist handoff below.
 
 ## Synchronized state
 
@@ -21,82 +21,91 @@ Martin or an active scheduled wake explicitly resumes the workflow.
 - Released boundary: MF-30 plus exact write-free Manyfold Return and City
   Threshold returns.
 - Active test drive: `TD-006`
-- Latest completed active stage: `5 - Mission Captain`
-- Active disposition: `SHELL READY - SAFE STOP BEFORE MARINE DEPLOYMENT`
+- Latest completed active stage: `6 - Reconnaissance Sergeant`
+- Active disposition: `CREATIVE LOCK`
 - Shell: `SS-RP006-INTERVAL-WORKS-v1`
 - Slice/address: `TD-006-RP006-INTERVAL-WORKS-v1 /
   RP-006 / SC-07 / IW-00-IW-30`
 - Route: `TD006-RTA-001`
 - Shell artifact:
   `Production Pipeline/Skyscraper Test Drives/TD-006/05-PLAYABLE-SLICE-SHELL.md`
-- Preceding Science commit:
-  `d5d1570cfb586125392092841ec5ecf79d083104`
-- Marine deployment: `NOT STARTED`
+- Creative artifact:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
+- Recon commit: the dedicated Reconnaissance Sergeant commit containing this
+  handoff is authoritative under the non-recursive ledger convention.
+- Next Marine: `Tactical Operations Specialist`
 
-## Frozen shell summary
+## Creative lock summary
 
-- One fresh Pilot-owned route from exact released MF-30/SC-06 mounts only
-  zero-evidence IW-00/SC-07. The serviced continuation, scenery, labels, and
-  predecessor completion remain non-routing.
-- Graph: `MF-30 -> IW-00 -> IW-10 -> IW-20 -> IW-30`, followed only by exact
-  Manyfold Return or City Threshold returns. Invalid or unsaved TD-006 state
-  recovers to MF-30 and requires fresh intent.
-- Exact predecessor bytes remain immutable. Normal RP-006 uses its own
-  strict ten-key record, eleven-key note, eight evidence records, sanitation,
-  atomic replacement/read-back/rollback, and replay-free IW-30 restore.
-- Four equal observations, independent `PY-013`,
-  `RP006-SPEECH-01 / AI901-D1-O6`, and two independent explanations are
-  conjunctive with no cross-credit.
-- Seven modalities, deterministic focus/status, `>=44px` targets, four
-  responsive layouts, forced colors, reduced motion, grayscale, closed
-  storage-free fixture, offline/Tour isolation, invariant world, exact
-  returns, and two runtime image roles are frozen.
-- `PBA-TD006-v1`: JS `<=1,360,561`, CSS `<=91,630`, modules `<=197`, at
-  most two new image-only runtime assets totaling `<=8,388,608`, and total
-  media `<=34,467,359`.
-- Mission evidence: focused protected suite `13/13 PASS`; RP-006 mapping
-  validator `PASS`; build `188` modules / `9.63s` Vite / `12.31s` wall;
-  budget baseline `PASS` at exact TD-005 JS/CSS/media identity.
-- Normal RP-006 implementation, images, fixture, E2E, and release remain
-  unbuilt. TD-005 remains the only released play.
+- Thesis: **order without history**. Physical superposition, cross-cut
+  repair, later deposition, neutral change, ordinary persistence, unavailable
+  interval, and compatible stewardship support a bounded relative sequence
+  while cause, duration, authorship, identity, importance, purpose, and
+  closed contents remain unresolved.
+- Emotional arc: chosen route -> awe before narration -> supported order ->
+  resisted causation -> neutral change/continuity -> accepted
+  unavailability -> visible care without ownership -> independent practice
+  -> bounded note -> safe return.
+- Attention: active owner -> current evidence -> interpretation limit -> four
+  equal peers -> one action -> invariant greater works -> exact returns.
+- Visual direction: deep transverse first-person exposed cut, not SC-05
+  convergence or SC-06 distribution; nested mineral-ceramic masses, pale
+  cross-cut repair under later deposition, ordinary matte continuity, heavy
+  opaque interval, motivated geothermal/vault light, restrained existing
+  audio, monotonic/still parity.
+- Two registered image roles remain exact: SC-07 panorama and spatially
+  consistent cross-section. No final art exists.
+- Later reveal candidate: contact-scale repair crossing older exposed
+  materials and itself covered by later deposition, with a much greater works
+  implied beyond the crop. Recon generated and archived nothing.
+- Formal variances: none.
 
-## Exact next action - paused
+## Exact next action
 
-**No action while paused.**
+**Begin Tactical Operations Specialist now.**
 
-When Martin or an active scheduled wake explicitly resumes, begin
-Reconnaissance Sergeant from this synchronized shell:
-
-1. Read the Recon profile, the complete shell, its cited strategic and visual
-   authorities, released TD-005, recent reveal controls, and current-control
-   sections.
-2. Create only
-   `TD-006/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md` for exact
-   `SS-RP006-INTERVAL-WORKS-v1`.
-3. Define emotional promise, player fantasy, pacing, attention hierarchy,
-   invariant-world/interface/learning relationship, concept-level material,
-   light, atmosphere, existing-audio, motion/reduced-motion direction,
-   SC-05/SC-06 contrast, fixed invariants, flexible staging, risks, and any
-   formal variance.
-4. Preserve the route, graph, evidence, record, privacy, recovery, seven
-   modalities, accessibility/responsive fixture, two-image budget,
-   offline/Tour, invariant world, returns, reveal accounting, and IW-30 stop.
-5. Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`, then make the dedicated Recon
-   commit and exact Tactical handoff. Do not skip ahead.
+1. Read the Tactical profile in full, this handoff, exact
+   `SS-RP006-INTERVAL-WORKS-v1`, and the complete Recon creative treatment.
+2. Read only the exact current-control and shell-cited technical, scene,
+   accessibility, responsive, fixture, predecessor, and visual sections
+   required by the role.
+3. Create only
+   `Production Pipeline/Skyscraper Test Drives/TD-006/07-EXPERIENCE-BLUEPRINT.md`.
+4. Specify the exact state/component/semantic map; MF-30 route/return/notation
+   independence; seven-modality validation and token convergence; exact
+   SC-06/SC-07 state-to-scene and alt matrix; IW-00 orientation; registered
+   panorama/cross-section behavior; four equal any-order observations;
+   owner headings/status/errors; independent Python, speech, and explanation
+   flows; conjunctive review; exact record preview; atomic save/read-back/
+   rollback/restore/return presentation; deterministic focus; all four
+   layouts; forced-color/reduced-motion/grayscale/silent parity; target-only
+   fixture roots; and independent document containment.
+5. Preserve the creative thesis, attention hierarchy, pacing, exact graph,
+   evidence ownership, record, privacy, recovery, asset count, invariant
+   world, returns, budget, and IW-30 stop.
+6. Issue `EXPERIENCE READY`, `REVISE`, or `HOLD`; update metrics and this
+   handoff; create one dedicated Tactical commit. Do not begin Combat.
 
 ## Frozen boundaries
 
 - IW-30 is the hard stop. No RP-007 route, purpose, identity, duration,
-  cause, authorship, closed contents, reward, access, permission, authority,
-  response, world effect, RP-013, successor, or post-ending content.
-- Relative order is not absolute chronology or cause. Change is not progress
-  or damage. Persistence is not identity or importance. Unavailability is
-  not an access challenge.
+  cause, authorship, native category, closed contents, reward, access,
+  permission, authority, response, world effect, RP-013, successor, or
+  post-ending content.
+- Relative order is not absolute chronology or cause. Change is not progress,
+  damage, correction, or response. Persistence is not identity, importance,
+  approval, or authority. Unavailability is not an access challenge.
+- Four observations remain equal and any-order. Scene, order, sound, route,
+  focus, modality, timing, Tour, save, and presentation grant zero learning
+  evidence.
+- Exact TD-005 and TD-004 bytes remain immutable. Invalid or unsaved TD-006
+  state returns to MF-30/SC-06 and requires fresh Pilot intent.
+- Preserve strict independent `PY-013`, `RP006-SPEECH-01`, both
+  explanations, ten-key/eleven-note-key/eight-record persistence,
+  sanitation, atomic recovery, replay-free restore, seven modalities, four
+  layouts, closed storage-free fixture, exactly two runtime images,
+  offline/Tour, invariant worlds, exact returns, and `PBA-TD006-v1`.
 - Protected RP-006 code remains reference-only and absent from production.
-- Preserve strict learning evidence, privacy/transient clearing,
-  accessibility/responsive parity, offline/no-authority/no-exam-guarantee,
-  no-credit Tour, deterministic atomic recovery, invariant world, and the
-  intended ending.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect or mutate Martin's browser storage or campaign save.
 - Never inspect, alter, stage, move, delete, or commit
