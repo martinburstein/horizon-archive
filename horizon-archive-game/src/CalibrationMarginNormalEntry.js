@@ -47,6 +47,13 @@ import {
   manyfoldReturnActions,
   sanitizeManyfoldReturnSave,
 } from "./ManyfoldReturnNormal.js";
+import {
+  INTERVAL_WORKS_SHELL_VERSION,
+  createIntervalWorksIntent,
+  createIntervalWorksNormalController,
+  intervalWorksActions,
+  sanitizeIntervalWorksSave,
+} from "./IntervalWorksNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -141,12 +148,14 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let reviewController = null;
   let threeCurrentController = null;
   let manyfoldReturnController = null;
+  let intervalWorksController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
+    if (intervalWorksController) return intervalWorksController.getState();
     if (manyfoldReturnController) return manyfoldReturnController.getState();
     if (threeCurrentController) return threeCurrentController.getState();
     if (reviewController) return reviewController.getState();
@@ -250,6 +259,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     reviewController = null;
     threeCurrentController = null;
     manyfoldReturnController = null;
+    intervalWorksController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -279,6 +289,18 @@ export function createCalibrationMarginNormalEntry(options = {}) {
           restoredRecord: restoredManyfold,
           adapter: options.manyfoldReturnAdapter,
         });
+        const restoredInterval = sanitizeIntervalWorksSave(options.restoredIntervalWorks);
+        if (restoredInterval) {
+          intervalWorksController = createIntervalWorksNormalController({
+            predecessorRecord: restoredManyfold,
+            predecessorBytes: options.readManyfoldBytes?.(),
+            readPredecessorBytes: options.readManyfoldBytes,
+            threeCurrentBytes: options.readThreeCurrentBytes?.(),
+            readThreeCurrentBytes: options.readThreeCurrentBytes,
+            restoredRecord: restoredInterval,
+            adapter: options.intervalWorksAdapter,
+          });
+        }
       }
       return;
     }
@@ -330,7 +352,49 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (intervalWorksController) {
+        const result = intervalWorksController.dispatch(intent);
+        if (result.status === "returned_to_manyfold_return_write_free") {
+          intervalWorksController = null;
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(manyfoldReturnController.getState()),
+          });
+        }
+        return result;
+      }
       if (manyfoldReturnController) {
+        if (["mf30_restore", "mf30_restore_recorded"].includes(
+          manyfoldReturnController.getState().activeGroup,
+        ) && intent?.allowlistedActionId === intervalWorksActions.route) {
+          const predecessorRecord = manyfoldReturnController.getRecord();
+          const candidate = createIntervalWorksNormalController({
+            predecessorRecord,
+            predecessorBytes: options.readManyfoldBytes?.() ?? JSON.stringify(predecessorRecord),
+            readPredecessorBytes: options.readManyfoldBytes,
+            threeCurrentBytes: options.readThreeCurrentBytes?.(),
+            readThreeCurrentBytes: options.readThreeCurrentBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredIntervalWorks,
+            adapter: options.createIntervalWorksAdapter?.(
+              predecessorRecord,
+              options.readManyfoldBytes?.() ?? JSON.stringify(predecessorRecord),
+            ) ?? options.intervalWorksAdapter,
+          });
+          if (candidate.getState().shellVersion !== INTERVAL_WORKS_SHELL_VERSION) {
+            return Object.freeze({
+              status: "rejected",
+              reason: "interval_route_rejected",
+              state: clonePublicState(manyfoldReturnController.getState()),
+            });
+          }
+          intervalWorksController = candidate;
+          return Object.freeze({
+            status: "interval_works_arrived_zero_evidence",
+            evidenceGranted: false,
+            state: clonePublicState(intervalWorksController.getState()),
+          });
+        }
         const result = manyfoldReturnController.dispatch(intent);
         if (result.status === "returned_to_three_current_reach_write_free") {
           manyfoldReturnController = null;
@@ -491,6 +555,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (intervalWorksController) {
+        return intervalWorksController.updateField(name, value);
+      }
       if (manyfoldReturnController) {
         return manyfoldReturnController.updateField(name, value);
       }
@@ -531,6 +598,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     getThreeCurrentReachRecord() {
       return threeCurrentController?.getRecord() ?? null;
+    },
+    getIntervalWorksRecord() {
+      return intervalWorksController?.getRecord() ?? null;
     },
     sanitizeBoundary(
       restoredState = currentState(),
@@ -579,7 +649,32 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (shellVersionOrPhaseIsIntervalWorks(activeGroup)) {
+    return createIntervalWorksIntent(
+      {
+        shellVersion: INTERVAL_WORKS_SHELL_VERSION,
+        activeGroup: activeGroup ?? "iw00_orientation",
+        owner: intervalWorksOwner(activeGroup),
+      },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (shellVersionOrPhaseIsManyfold(activeGroup)) {
+    if (action === intervalWorksActions.route) {
+      return Object.freeze({
+        mode: "campaign",
+        shellVersion: MANYFOLD_RETURN_SHELL_VERSION,
+        controllerVersion: "rp005.manyfold-return-controller.v1",
+        packetId: "RP-005",
+        activeGroupId: activeGroup,
+        expectedOwner: "PILOT // EXPEDITION NAVIGATION",
+        allowlistedActionId: action,
+        activationKind,
+        opaqueFreshEventToken: eventToken,
+      });
+    }
     return createManyfoldReturnIntent(
       {
         shellVersion: MANYFOLD_RETURN_SHELL_VERSION,
@@ -691,6 +786,27 @@ function shellVersionOrPhaseIsThreeCurrent(phase, activeGroup) {
 
 function shellVersionOrPhaseIsManyfold(activeGroup) {
   return typeof activeGroup === "string" && activeGroup.startsWith("mf");
+}
+
+function shellVersionOrPhaseIsIntervalWorks(activeGroup) {
+  return typeof activeGroup === "string" && activeGroup.startsWith("iw");
+}
+
+function intervalWorksOwner(activeGroup) {
+  if (activeGroup === "iw00_orientation") return "SYSTEM // EXPEDITION ORIENTATION";
+  if (activeGroup === "iw10_observations") return "SCENE // SENSOR RECORD";
+  if (activeGroup?.startsWith("iw20_python")) return "BUILDER WORK // SANITIZED PRECOMPUTED REPLICAS";
+  if (activeGroup?.startsWith("iw20_speech")
+    || ["iw20_direction", "iw20_causation"].includes(activeGroup)) {
+    return "TEACHER / COURSE // SPEECH CAPABILITY PRACTICE";
+  }
+  if (activeGroup === "iw20_repair") return "SYSTEM // LOCAL PRACTICE RECOVERY";
+  if (["iw20_review", "iw20_save"].includes(activeGroup)) return "PILOT // BOUNDED EXPEDITION NOTE";
+  if (["iw20_transaction", "iw20_save_recovery", "iw20_rollback_unverified"].includes(activeGroup)) {
+    return "SYSTEM // LOCAL EXPEDITION NOTE";
+  }
+  if (activeGroup === "iw30_restore") return "SYSTEM // RESTORED EXPEDITION NOTE";
+  return "SYSTEM // EXPEDITION ORIENTATION";
 }
 
 function manyfoldOwner(activeGroup) {

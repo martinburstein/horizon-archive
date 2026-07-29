@@ -393,6 +393,270 @@ h1 {
   }
 }
 
+/* TD-006 Interval Works functional shell. Final SC-07 masters are owned by
+   Quartermaster/Image; these rules preserve the approved responsive and
+   accessible structure without inventing production art. */
+.interval-works {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, .75fr);
+  min-height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  color: #e8e4da;
+  background: #080b0d;
+}
+
+.interval-world {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-right: 1px solid #526066;
+  background: #0b1013;
+}
+
+.interval-world-placeholder {
+  display: grid;
+  place-content: center;
+  gap: .75rem;
+  width: 100%;
+  height: 100%;
+  min-height: 54dvh;
+  padding: 2rem;
+  color: #d7d1c4;
+  text-align: center;
+  background: #20272a;
+}
+
+.interval-world.is-crosssection .interval-world-placeholder {
+  background: #343a3d;
+}
+
+.interval-world figcaption {
+  position: absolute;
+  inset: auto 1rem 1rem;
+  padding: .7rem .85rem;
+  border: 1px solid rgba(215, 209, 196, .45);
+  background: rgba(5, 8, 10, .86);
+  font-size: .74rem;
+  line-height: 1.45;
+}
+
+.interval-panel {
+  min-width: 0;
+  overflow: auto;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  background: linear-gradient(180deg, #12171a, #090c0e);
+}
+
+.interval-heading h1 {
+  margin: .25rem 0 .75rem;
+  font: 500 clamp(1.45rem, 2.5vw, 2.2rem)/1.05 Georgia, serif;
+}
+
+.interval-boundary,
+.interval-errors,
+.interval-panel [role="status"] {
+  padding: .65rem .75rem;
+  border: 1px solid #526066;
+  background: #0b1013;
+  font-size: .74rem;
+  line-height: 1.45;
+}
+
+.interval-observations,
+.interval-review {
+  display: grid;
+  gap: .7rem;
+  padding: 0;
+  list-style: none;
+}
+
+.interval-observations {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.interval-observations li,
+.interval-review li {
+  padding: .65rem;
+  border: 1px solid #4b555a;
+  background: #11171a;
+}
+
+.interval-observations button {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .75rem;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  text-align: left;
+}
+
+.interval-observations button[data-recorded="true"] {
+  border-style: double;
+}
+
+.interval-form-grid,
+.interval-cases {
+  display: grid;
+  gap: .8rem;
+}
+
+.interval-form-grid label,
+.interval-cases fieldset,
+.interval-note {
+  min-width: 0;
+  padding: .75rem;
+  border: 1px solid #4b555a;
+}
+
+.interval-form-grid textarea,
+.interval-form-grid select,
+.interval-cases select,
+.interval-panel > label select {
+  width: 100%;
+  min-height: 44px;
+  margin-top: .35rem;
+}
+
+.interval-form-grid textarea {
+  resize: vertical;
+  font: .82rem/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.interval-scaffold pre {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: .7rem;
+}
+
+.interval-cases fieldset {
+  display: grid;
+  gap: .6rem;
+}
+
+.interval-note div {
+  display: grid;
+  grid-template-columns: minmax(7rem, .35fr) 1fr;
+  padding: .45rem 0;
+  border-top: 1px solid #343e43;
+}
+
+.interval-note dd {
+  margin: 0;
+}
+
+.interval-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+  margin-top: .8rem;
+}
+
+.interval-actions button,
+.interval-panel select,
+.interval-panel textarea,
+.interval-observations button {
+  min-height: 44px;
+}
+
+.interval-actions button {
+  padding: .7rem;
+}
+
+.interval-panel :focus-visible {
+  outline: 3px solid #f2d889;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1500px) and (min-width: 841px) {
+  .interval-works {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 58dvh) minmax(0, 42dvh);
+  }
+
+  .interval-world {
+    border-right: 0;
+    border-bottom: 1px solid #526066;
+  }
+
+  .interval-world-placeholder {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .interval-works {
+    display: block;
+    min-height: 100dvh;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .interval-world {
+    min-height: 44dvh;
+    border-right: 0;
+    border-bottom: 1px solid #526066;
+  }
+
+  .interval-world-placeholder {
+    min-height: 44dvh;
+  }
+
+  .interval-world figcaption {
+    position: static;
+    margin: 0;
+  }
+
+  .interval-panel {
+    overflow: visible;
+  }
+
+  .interval-observations,
+  .interval-actions,
+  .interval-note div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interval-works,
+  .interval-works * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .interval-world,
+  .interval-world figcaption,
+  .interval-panel,
+  .interval-boundary,
+  .interval-errors,
+  .interval-panel [role="status"],
+  .interval-observations li,
+  .interval-review li,
+  .interval-form-grid label,
+  .interval-cases fieldset,
+  .interval-note {
+    border-color: CanvasText;
+    color: CanvasText;
+    background: Canvas;
+  }
+
+  .interval-world-placeholder {
+    color: CanvasText;
+    background: Canvas;
+  }
+
+  .interval-panel :focus-visible {
+    outline-color: Highlight;
+  }
+}
+
 .terminal-workbench {
   position: absolute;
   inset: 5.5rem clamp(18px, 4vw, 64px) 18px;

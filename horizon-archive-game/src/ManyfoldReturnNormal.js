@@ -30,6 +30,7 @@ export const manyfoldReturnActions = Object.freeze({
   save: "SAVE EXPEDITION NOTE",
   reviewAgain: "REVIEW PROVENANCE AGAIN",
   continuation: "RECORD SERVICED CONTINUATION",
+  intervalWorks: "PILOT // FOLLOW EXPEDITION-MARKED ADJACENT SURVEY TO INTERVAL WORKS",
   returnThreeCurrent: "RETURN TO THREE-CURRENT REACH",
   returnThreshold: "RETURN TO CITY THRESHOLD",
 });
@@ -118,8 +119,8 @@ const groups = Object.freeze({
   mf20_transaction: ["MF-20 LOCAL TRANSACTION", "SYSTEM // LOCAL EXPEDITION NOTE", "mf20-transaction-heading", []],
   mf20_save_recovery: ["MF-20 SAVE RECOVERY", "SYSTEM // LOCAL EXPEDITION NOTE", "mf20-save-recovery-heading", [manyfoldReturnActions.reviewAgain]],
   mf20_rollback_unverified: ["MF-20 ROLLBACK UNVERIFIED", "SYSTEM // LOCAL EXPEDITION NOTE", "mf20-rollback-unverified-heading", []],
-  mf30_restore: ["MF-30 VERIFIED RESTORE", "SYSTEM // RESTORED EXPEDITION NOTE", "mf30-restore-heading", [manyfoldReturnActions.continuation]],
-  mf30_restore_recorded: ["MF-30 CONTINUATION NOTED", "SYSTEM // RESTORED EXPEDITION NOTE", "mf30-restore-recorded-heading", []],
+  mf30_restore: ["MF-30 VERIFIED RESTORE", "SYSTEM // RESTORED EXPEDITION NOTE", "mf30-restore-heading", [manyfoldReturnActions.continuation, manyfoldReturnActions.intervalWorks]],
+  mf30_restore_recorded: ["MF-30 CONTINUATION NOTED", "SYSTEM // RESTORED EXPEDITION NOTE", "mf30-restore-recorded-heading", [manyfoldReturnActions.intervalWorks]],
 });
 
 const formGroups = Object.freeze([
@@ -402,6 +403,14 @@ function stateFor(group, observations, evidence, extra = {}) {
     statusMessageId: extra.statusMessageId ?? `td005:${group}:ready`,
     statusMessage: extra.statusMessage ?? "The current responsibility is ready. No world, authority, or external action changed.",
     availableActions: [...localActions, ...returnActions],
+    actionOwners: Object.fromEntries(
+      [...localActions, ...returnActions].map((action) => [
+        action,
+        action === manyfoldReturnActions.intervalWorks
+          ? "PILOT // EXPEDITION NAVIGATION"
+          : owner,
+      ]),
+    ),
     recordedObservationIds: [...observations],
     form: publicForm(group),
     failedPublicIds: extra.failedPublicIds ?? [],

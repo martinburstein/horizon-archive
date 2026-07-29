@@ -10,6 +10,7 @@ import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginEntry } from "./CalibrationMarginEntry.jsx";
 import { ThreeCurrentReach } from "./ThreeCurrentReach.jsx";
 import { ManyfoldReturn } from "./ManyfoldReturn.jsx";
+import { IntervalWorks } from "./IntervalWorks.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -35,8 +36,13 @@ import {
 } from "./ThreeCurrentReachNormal.js";
 import {
   MANYFOLD_RETURN_SHELL_VERSION,
+  MANYFOLD_RETURN_SAVE_KEY,
   createManyfoldReturnStorageAdapter,
 } from "./ManyfoldReturnNormal.js";
+import {
+  INTERVAL_WORKS_SHELL_VERSION,
+  createIntervalWorksStorageAdapter,
+} from "./IntervalWorksNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -430,6 +436,25 @@ function calibrationMarginReviewSaveOptions(storage) {
     record: restoredThreeCurrentReach,
     bytes: threeCurrentBytes,
   });
+  const restoredManyfoldReturn = manyfoldReturnAdapter.read();
+  let manyfoldBytes = null;
+  try {
+    manyfoldBytes = storage?.getItem(MANYFOLD_RETURN_SAVE_KEY) ?? null;
+  } catch {
+    manyfoldBytes = null;
+  }
+  const readManyfoldBytes = () => {
+    try {
+      return storage?.getItem(MANYFOLD_RETURN_SAVE_KEY) ?? null;
+    } catch {
+      return null;
+    }
+  };
+  const intervalWorksAdapter = createIntervalWorksStorageAdapter(storage, {
+    manyfoldRecord: restoredManyfoldReturn,
+    manyfoldBytes,
+    threeCurrentBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -443,7 +468,17 @@ function calibrationMarginReviewSaveOptions(storage) {
     restoredThreeCurrentReach,
     readThreeCurrentBytes,
     manyfoldReturnAdapter,
-    restoredManyfoldReturn: manyfoldReturnAdapter.read(),
+    restoredManyfoldReturn,
+    readManyfoldBytes,
+    intervalWorksAdapter,
+    createIntervalWorksAdapter: (manyfoldRecord, currentManyfoldBytes) => (
+      createIntervalWorksStorageAdapter(storage, {
+        manyfoldRecord,
+        manyfoldBytes: currentManyfoldBytes,
+        threeCurrentBytes: readThreeCurrentBytes(),
+      })
+    ),
+    restoredIntervalWorks: intervalWorksAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2312,6 +2347,8 @@ export function App() {
       "SS-RP003-REVIEW-SAVE-v1",
       THREE_CURRENT_REACH_SHELL_VERSION,
       MANYFOLD_RETURN_SHELL_VERSION,
+      INTERVAL_WORKS_SHELL_VERSION,
+      INTERVAL_WORKS_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2385,7 +2422,9 @@ export function App() {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === MANYFOLD_RETURN_SHELL_VERSION
+        status: controller.getState().shellVersion === INTERVAL_WORKS_SHELL_VERSION
+          ? "interval_works_restored"
+          : controller.getState().shellVersion === MANYFOLD_RETURN_SHELL_VERSION
           ? "manyfold_return_restored"
           : controller.getState().shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
           ? "three_current_reach_restored"
@@ -2426,6 +2465,7 @@ export function App() {
       || result?.state?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
       || result?.state?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
       || result?.state?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
+      || result?.state?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3594,6 +3634,7 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === "SS-RP003-REVIEW-SAVE-v1"
     || calibrationMarginEntryView?.shellVersion === THREE_CURRENT_REACH_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3602,6 +3643,15 @@ export function App() {
     if (calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION) {
       return (
         <ManyfoldReturn
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
+    if (calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION) {
+      return (
+        <IntervalWorks
           state={calibrationMarginEntryView}
           onAction={dispatchCalibrationMarginEntry}
           onFieldChange={updateCalibrationMarginPythonField}

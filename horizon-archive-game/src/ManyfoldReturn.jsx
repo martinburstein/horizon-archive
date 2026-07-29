@@ -143,6 +143,7 @@ const actionIds = Object.freeze({
   [manyfoldReturnActions.save]: "mf20-save-action",
   [manyfoldReturnActions.reviewAgain]: "mf20-provenance-action",
   [manyfoldReturnActions.continuation]: "mf30-continuation-action",
+  [manyfoldReturnActions.intervalWorks]: "mf30-interval-works-action",
   [manyfoldReturnActions.returnThreeCurrent]: "return-three-current-action",
   [manyfoldReturnActions.returnThreshold]: "return-threshold-action",
 });
@@ -381,6 +382,7 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
                   id={actionIds[action]}
                   type="button"
                   data-action-id={action}
+                  data-action-owner={state.actionOwners?.[action] ?? state.owner}
                   disabled={disabled}
                   aria-describedby={action === manyfoldReturnActions.returnThreeCurrent || action === manyfoldReturnActions.returnThreshold ? "manyfold-return-boundary" : undefined}
                   onClick={(event) => onAction(action, event)}

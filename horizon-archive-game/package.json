@@ -12,6 +12,7 @@
     "review:td003-review-save": "vite --config review-fixtures/td003-review-save/vite.config.js --host 127.0.0.1 --port 4175",
     "review:td004-three-current": "vite --config review-fixtures/td004-three-current/vite.config.js --host 127.0.0.1 --port 4176",
     "review:td005-manyfold-return": "vite --config review-fixtures/td005-manyfold-return/vite.config.js --host 127.0.0.1 --port 4177",
+    "review:td006-interval-works": "vite --config review-fixtures/td006-interval-works/vite.config.js --host 127.0.0.1 --port 4178",
     "test": "node --test"
   },
   "dependencies": {

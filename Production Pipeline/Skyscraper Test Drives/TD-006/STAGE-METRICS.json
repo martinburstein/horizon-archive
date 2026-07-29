@@ -129,6 +129,31 @@
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-07-29T04:53:19.0507743Z",
+      "endedAt": "2026-07-29T05:14:34.1976929Z",
+      "durationMs": 1275147,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP006-INTERVAL-WORKS-v1",
+      "returnFrom": "Tactical Operations Specialist / EXPERIENCE READY",
+      "routeContract": "TD006-RTA-001",
+      "focusedTests": "13/13 PASS",
+      "relatedTests": "29/29 PASS",
+      "fullTests": "838/838 PASS; 5.954s",
+      "readinessValidators": "RP-006 mapping validator SELF-TEST PASS",
+      "build": "PASS; 191 modules; 6.45s",
+      "servedIdentity": "root 200; JS 200 / 1340569 bytes; CSS 200 / 91198 bytes",
+      "budget": "PBA-TD006-v1 PASS; JS 1340569; CSS 91198; media unchanged 26078751 / 11",
+      "variances": "none",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat Engineer commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "functional-gate-push-pending",
+      "nextStage": "Quartermaster"
     }
   ]
 }

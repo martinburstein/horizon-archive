@@ -454,12 +454,12 @@ test("protected RP-006 stays unimported, storage-free, network-free, DOM-free, a
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
   assert.doesNotMatch(source, /localStorage|sessionStorage|indexedDB|fetch\s*\(|XMLHttpRequest|WebSocket|navigator\.|document\.|window\./i);
-  assert.doesNotMatch(app, /IntervalWorksProtectedJourney|runIntervalWorksProtectedJourneySmoke|RP-006|SC-07/);
-  assert.doesNotMatch(main, /IntervalWorksProtectedJourney|runIntervalWorksProtectedJourneySmoke|RP-006|SC-07/);
+  assert.doesNotMatch(app, /IntervalWorksProtectedJourney|runIntervalWorksProtectedJourneySmoke|rp006\.protected-journey\.v1/);
+  assert.doesNotMatch(main, /IntervalWorksProtectedJourney|runIntervalWorksProtectedJourneySmoke|rp006\.protected-journey\.v1/);
   const distAssets = await readdir(new URL("../dist/assets/", import.meta.url));
   const jsAssets = distAssets.filter((name) => name.endsWith(".js"));
   for (const asset of jsAssets) {
     const built = await readFile(new URL(`../dist/assets/${asset}`, import.meta.url), "utf8");
-    assert.doesNotMatch(built, /IntervalWorksProtectedJourney|interval_works_complete|IW-00 ARRIVE|RP006-SPEECH-01/);
+    assert.doesNotMatch(built, /IntervalWorksProtectedJourney|runIntervalWorksProtectedJourneySmoke|rp006\.protected-journey\.v1/);
   }
 });
