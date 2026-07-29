@@ -62,11 +62,11 @@ export const braidedVergeWorldPlateIds = Object.freeze({
 });
 
 export const braidedVergeRegions = Object.freeze({
-  distinct_continuities_trace: Object.freeze({ id: "sc08-region-continuities", master: "panorama", x: 0.06, y: 0.14, width: 0.88, height: 0.64 }),
-  recurrent_exposed_association: Object.freeze({ id: "sc08-region-association", master: "panorama", x: 0.16, y: 0.24, width: 0.66, height: 0.46 }),
-  bounded_contact_difference: Object.freeze({ id: "sc08-region-difference", master: "detail", x: 0.08, y: 0.19, width: 0.28, height: 0.52 }),
-  crosscut_relative_order: Object.freeze({ id: "sc08-region-order", master: "detail", x: 0.35, y: 0.15, width: 0.27, height: 0.58 }),
-  closed_junction_stewardship: Object.freeze({ id: "sc08-region-junction-stewardship", master: "detail", x: 0.63, y: 0.16, width: 0.31, height: 0.62 }),
+  distinct_continuities_trace: Object.freeze({ id: "sc08-region-continuities", master: "panorama", x: 0.02, y: 0.03, width: 0.95, height: 0.9 }),
+  recurrent_exposed_association: Object.freeze({ id: "sc08-region-association", master: "panorama", x: 0.03, y: 0.02, width: 0.72, height: 0.88 }),
+  bounded_contact_difference: Object.freeze({ id: "sc08-region-difference", master: "detail", x: 0.38, y: 0.18, width: 0.32, height: 0.58 }),
+  crosscut_relative_order: Object.freeze({ id: "sc08-region-order", master: "detail", x: 0.05, y: 0.12, width: 0.52, height: 0.68 }),
+  closed_junction_stewardship: Object.freeze({ id: "sc08-region-junction-stewardship", master: "detail", x: 0.68, y: 0.12, width: 0.3, height: 0.7 }),
 });
 
 export const braidedVergePythonTraceAnswers = Object.freeze({

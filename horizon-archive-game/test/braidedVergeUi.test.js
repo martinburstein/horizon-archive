@@ -61,13 +61,14 @@ test("TD007 UI has one status, deterministic focus, native controls, and equal t
   assert.match(component, /data-region-id=\{braidedVergeRegions\[id\]\.id\}/);
 });
 
-test("TD007 exposes exactly two truthful structural image-role placeholders", () => {
-  assert.match(component, /STRUCTURAL PLACEHOLDER/);
-  assert.match(component, /data-placeholder-owner="quartermaster"/);
-  assert.match(component, /SC-08-PANORAMA-MASTER — QUARTERMASTER ASSET PENDING/);
-  assert.match(component, /SC-08-CONTACT-DETAIL-MASTER — QUARTERMASTER ASSET PENDING/);
-  assert.doesNotMatch(component, /import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/i);
-  assert.doesNotMatch(component, /<img/);
+test("TD007 directly imports exactly two truthful production image roles", () => {
+  assert.doesNotMatch(component, /STRUCTURAL PLACEHOLDER|data-placeholder-owner|ASSET PENDING/);
+  const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
+  assert.equal(imports.length, 2);
+  assert.match(component, /sc08-braided-verge-panorama-runtime-master-v1\.webp/);
+  assert.match(component, /sc08-braided-verge-contact-detail-runtime-master-v1\.webp/);
+  assert.match(component, /<img/);
+  assert.match(component, /detailAltByCropId/);
   assert.doesNotMatch(controller, /Production Masters|\.png|\.webp|\.jpg|\.avif/i);
 });
 

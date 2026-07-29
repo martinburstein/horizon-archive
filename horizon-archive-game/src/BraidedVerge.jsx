@@ -6,6 +6,8 @@ import {
   braidedVergeRegions,
   resolveBraidedVergeWorldScene,
 } from "./BraidedVergeNormal.js";
+import braidedVergePanorama from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-panorama-runtime-master-v1.webp";
+import braidedVergeContactDetail from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp";
 
 const headingCopy = {
   bv00_orientation: "Braided Verge",
@@ -89,6 +91,14 @@ const actionIds = {
   [braidedVergeActions.notation]: "bv30-notation-action",
   [braidedVergeActions.returnInterval]: "bv-return-interval",
   [braidedVergeActions.returnThreshold]: "bv-return-threshold",
+};
+
+const panoramaAlt = "First-person panorama across an immense mineral vault. A laminated glass-ceramic ribbon and dense cellular mantle remain separately traceable through recurrent saddle contacts. An opaque off-axis junction remains sealed while a separate bypass continues around it.";
+
+const detailAltByCropId = {
+  "sc08-detail-difference": "Close first-person material view. One offset saddle carries an ordinary quilted granular repair while the surrounding laminated ribbon and cellular mantle continue as distinct structures.",
+  "sc08-detail-order": "Close first-person material view. Cellular substrate ends beneath crossing glass-ceramic lamellae and later mineral accretion covers both, supporting relative order only.",
+  "sc08-detail-junction-stewardship": "Close first-person material view. An opaque junction has separate peripheral seams and an external bypass beside compatible foundation, crossing, and repaired contact layers. Its interior remains unavailable.",
 };
 
 function optionLabel(value) {
@@ -187,12 +197,11 @@ export function BraidedVerge({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const scene = resolveBraidedVergeWorldScene(state);
   const isDetail = scene?.role === "SC-08-CONTACT-DETAIL-MASTER";
-  const alt = isDetail
-    ? "Structural placeholder for a first-person registered contact detail: one bounded neutral difference, one relative cross-cut order, and one opaque closed junction with separate peripheral seams and layered compatible stewardship. The interior remains unavailable."
-    : "Structural placeholder for a first-person panorama: two distinct material continuities remain separately traceable through a vast shared region with recurrent exposed contacts. No reaction, route, unity, ownership, or purpose is shown.";
+  const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
+  const imageSource = isDetail ? braidedVergeContactDetail : braidedVergePanorama;
   const sourceName = isDetail
-    ? "SC-08-CONTACT-DETAIL-MASTER — QUARTERMASTER ASSET PENDING"
-    : "SC-08-PANORAMA-MASTER — QUARTERMASTER ASSET PENDING";
+    ? "sc08-braided-verge-contact-detail-runtime-master-v1.webp"
+    : "sc08-braided-verge-panorama-runtime-master-v1.webp";
 
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -217,22 +226,16 @@ export function BraidedVerge({ state, onAction, onFieldChange }) {
       ref={rootRef}
     >
       <figure className={`braided-world ${isDetail ? "is-detail" : "is-panorama"}`}>
-        <div
-          className="braided-world-placeholder"
-          role="img"
-          aria-label={alt}
+        <img
+          src={imageSource}
+          alt={alt}
           data-image-role={scene?.role}
           data-runtime-source-master={sourceName}
-          data-placeholder-owner="quartermaster"
-        >
-          <span>STRUCTURAL PLACEHOLDER</span>
-          <strong>{scene?.role}</strong>
-          <small>{scene?.cropId}</small>
-        </div>
+        />
         <figcaption>
-          Expedition registration only. The two continuities, recurrent contacts, bounded
-          difference, relative order, and closed boundary support cautious description—not
-          unity, cause, coordination, ownership, purpose, access, or response.
+          Expedition view only. Distinct continuities, recurrent contact, bounded difference,
+          relative order, and a closed boundary support cautious description—not unity,
+          cause, coordination, ownership, purpose, access, or response.
         </figcaption>
       </figure>
 

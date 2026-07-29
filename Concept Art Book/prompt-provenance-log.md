@@ -4,6 +4,23 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-07-29 - RP-007 SC-08 Braided Verge source and runtime masters
+
+- **Decision:** complete both and only both `SC-08` runtime roles while
+  preserving association without consolidation, relative-order-only meaning,
+  closed unavailability, layered stewardship, and invariant-world limits.
+- **Asset and complete prompt/provenance:** [Braided Verge source and runtime
+  masters](../Visual%20Direction/Production%20Masters/2026-07-29-rp007-braided-verge-runtime/PROVENANCE.md).
+- **Mode:** built-in `image_gen`, two delegated roles, one initial and one
+  targeted recovery per role, no third attempt and no CLI/API fallback.
+  Rejected drafts remained outside workspace, runtime, canon, provenance
+  package, commit, and reveal.
+- **Derivatives:** deterministic Pillow `12.2.0` RGB/Lanczos enlargement to
+  exact `3840 x 2160` lossless PNG, then WebP quality `96`, method `6`,
+  exact RGB. This makes no native-4K detail claim.
+- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist and
+  Intelligence review remain mandatory.
+
 ## 2026-07-27 - RP-005 SC-06 Manyfold Return source and runtime masters
 
 - **Decision:** close `RP-005 / SC-06 - layered stewardship remains

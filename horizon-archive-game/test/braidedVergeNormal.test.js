@@ -487,7 +487,7 @@ test("TD007 early/final returns are write-free, replay-free, and target only app
   assert.equal(threshold.route.successor, null);
 });
 
-test("TD007 scene resolver exposes only the two registered SC-08 placeholder seams", () => {
+test("TD007 scene resolver exposes only the two registered SC-08 production seams", () => {
   const { controller } = subject();
   assert.equal(resolveBraidedVergeWorldScene(controller.getState()).role, "SC-08-PANORAMA-MASTER");
   dispatch(controller, braidedVergeActions.inspect);
