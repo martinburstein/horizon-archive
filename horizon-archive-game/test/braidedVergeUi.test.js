@@ -47,6 +47,8 @@ test("TD007 production entry exposes one independent IW-30 route and normal BV c
 
 test("TD007 UI has one status, deterministic focus, native controls, and equal textual peers", () => {
   assert.equal((component.match(/role="status"/g) ?? []).length, 1);
+  assert.equal((component.match(/<h1\b/g) ?? []).length, 1);
+  assert.match(component, /bv20_review:\s*"Review independent responsibilities"/);
   assert.match(component, /aria-live="polite"/);
   assert.match(component, /aria-atomic="true"/);
   assert.match(component, /CSS\.escape\(state\.focusIntent/);
@@ -91,6 +93,7 @@ test("TD007 CSS preserves targets, four layouts, forced colors, reduced motion, 
   assert.match(td007, /scroll-behavior:\s*auto/);
   assert.match(td007, /grid-template-columns:\s*1fr/);
   assert.match(td007, /border-style:\s*double/);
+  assert.match(td007, /\.braided-heading h1\s*\{[^}]*max-inline-size:\s*100%[^}]*font-size:\s*clamp\(2rem,\s*3\.2vw,\s*3\.6rem\)[^}]*overflow-wrap:\s*anywhere/s);
 });
 
 test("TD007 production excludes protected reference, fixture, storage APIs, network, and later content", () => {

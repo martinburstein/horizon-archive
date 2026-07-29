@@ -195,8 +195,11 @@ interface recedes through depth.
 ## Variances and remaining limitations
 
 - Formal shell variances: **none**.
-- Presentation blockers: **none found in available evidence**.
-- No presentation correction or runtime change was made.
+- Presentation blockers at the original Image handoff: **none found in
+  available evidence**.
+- Intelligence later returned one presentation-only defect: the BV-20
+  `Review independent responsibilities` heading could be clipped on the
+  right at `1920 x 1080`.
 - Browser live-matrix observation was unavailable in this Image Specialist
   session; deterministic evidence passed, but Intelligence must reproduce the
   live release matrix independently.
@@ -205,6 +208,61 @@ interface recedes through depth.
 - The contact detail remains a material/context registration, not a literal
   panorama pixel crop.
 - The reveal is reference-only and awaits Intelligence acceptance unchanged.
+
+## Intelligence-requested heading-containment correction
+
+Intelligence returned the Image Specialist for one bounded presentation
+revision after observing the BV-20 heading clipped at the right edge under
+the global `h1` scale and `.braided-panel { overflow-x: hidden }`.
+
+The correction is scoped only to `.braided-heading h1`:
+
+- `max-inline-size: 100%` binds the heading to the active panel;
+- `font-size: clamp(2rem, 3.2vw, 3.6rem)` replaces the unsuitable global
+  `clamp(2.2rem, 6vw, 5.4rem)` scale for this interface heading;
+- `line-height: 1` and `letter-spacing: 0.04em` preserve the established
+  hierarchy at the contained scale; and
+- `overflow-wrap: anywhere` guarantees the complete heading can wrap rather
+  than escape or be hidden.
+
+The fixture/source regression locks one semantic `h1`, exact unchanged copy
+`Review independent responsibilities`, scoped sizing, maximum inline size,
+and wrapping. The existing responsive rules then provide these deterministic
+layout envelopes:
+
+| Contract | Containment evidence |
+|---|---|
+| `1920 x 1080` | bounded `36fr` panel with internal vertical scroll; heading maximum `3.6rem`, maximum inline size `100%`, and wrapping |
+| `1366 x 768` | one-column `841-1500px` shell; full-width internally scrollable panel and wrapping |
+| `390 x 844` | natural narrow column; `overflow: visible`, `2rem` heading floor, maximum inline size `100%`, and wrapping |
+| effective-`200%` / `768 x 900` | natural narrow reflow; `2rem` heading floor, full-width column, and wrapping |
+
+No copy, owner, status, focus target, action, state, evidence, record, save,
+route, return, hard stop, scene crop, image, media hash, forced-color rule,
+reduced-motion rule, scrolling contract, or `>=44px` target changed.
+
+Correction validation:
+
+| Gate | Result |
+|---|---|
+| Focused TD-007 UI plus closed-fixture isolation | `10/10 PASS`; `0.250s` |
+| Production build | `PASS`; `198` modules; `9.135s` wall |
+| JavaScript | `index-DZHephx8.js`; `1,392,211` bytes; SHA-256 `37FC8DDA6435EAB878410746C6EA989C5A7141E359C330F1A0B6BCC8AC4ADCE6` |
+| CSS | `index-C7RpNj2r.css`; `95,573` bytes; SHA-256 `AB0B450E5CE4C6890F197BA4D7E82B8797919010FC2BFFEE8E1747E5A2043C98` |
+| Built index | `551` bytes; SHA-256 `E64A5C07561F9DFD570633335BEC03A3A165DA4DADF8795752632E4B66A5E80C` |
+| `PBA-TD007-v1` | `PASS`; CSS headroom `168` bytes; all other counts and bytes unchanged |
+| Production served identity | root/deep HTTP `200`; all `17` emitted assets exact byte/hash |
+| Fixture served identity | root/module/scenario registry HTTP `200` |
+
+The in-app Browser connection again exposed no available backend after the
+required recovery check. No substitute browser surface or Martin-owned
+browser state was used. The four-layout finding above is deterministic
+fixture/source/build evidence, not a fresh live-viewport claim; Intelligence
+must independently reproduce the live matrix before release.
+
+Correction disposition:
+**`PRESENTATION COMPLETE - REQUIRED HEADING CONTAINMENT CORRECTED`**.
+The exact next recipient remains Intelligence Officer.
 
 ## Protected boundaries
 
@@ -223,6 +281,8 @@ interface recedes through depth.
 
 - `Visual Direction/Production Masters/2026-07-29-rp007-recurrent-contact-reveal/*`
 - `Concept Art Book/prompt-provenance-log.md`
+- `horizon-archive-game/src/styles.css`
+- `horizon-archive-game/test/braidedVergeUi.test.js`
 - this review
 - `Production Pipeline/Skyscraper Test Drives/TD-007/STAGE-METRICS.json`
 - `NEXT_INSTANCE_HANDOFF.md`

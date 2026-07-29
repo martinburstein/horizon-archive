@@ -457,6 +457,11 @@ h1 {
 
 .braided-heading h1 {
   margin-block: 0.15rem 0.75rem;
+  max-inline-size: 100%;
+  font-size: clamp(2rem, 3.2vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
 }
 
 .braided-boundary,
