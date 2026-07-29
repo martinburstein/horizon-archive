@@ -1,151 +1,106 @@
-# Horizon Archive - Skyscraper Workflow Handoff
+# Horizon Archive - Synchronized Next Instance Handoff
 
 Last updated: **2026-07-29**
 
-## Start here
-
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
-`Skyscraper Agent Profiles/README.md` in full.
+`Skyscraper Agent Profiles/README.md` in full at the start of the next run.
 
-TD-006 resumed from the synchronized Mission `SHELL READY` checkpoint at
-Martin's explicit instruction. Image Specialist is complete. Do not restart
-Commandant, Colonel, Operations, Science, Mission, Recon, Tactical, Combat,
-Quartermaster, or Image Specialist. Continue only from the Intelligence
-Officer handoff below.
+The authorized three-hour Skyscraper automation remains active. TD-006 is
+fully released and synchronized through Intelligence Officer. Do not restart
+a completed role, preselect the next story edge, generate another TD-006
+image, inspect Martin's browser storage/save, or infer work from the archived
+two-team workflow.
 
-## Synchronized state
+## Synchronized released state
 
-- Latest released test drive: `TD-005`
-- Released disposition: `PASS - AS BUILT RELEASED`
-- Released shell/address: `SS-RP005-MANYFOLD-RETURN-v1 /
-  RP-005 / SC-06 / MF-00-MF-30`
-- Released boundary: MF-30 plus exact write-free Manyfold Return and City
-  Threshold returns.
-- Active test drive: `TD-006`
-- Latest completed active stage: `10 - Image Specialist`
-- Active disposition:
-  `PRESENTATION COMPLETE - CONTACT-ORDER REVEAL ACCEPTED`
+- Latest released test drive: `TD-006`
+- Disposition: `PASS - AS BUILT RELEASED`
 - Shell: `SS-RP006-INTERVAL-WORKS-v1`
 - Slice/address: `TD-006-RP006-INTERVAL-WORKS-v1 /
   RP-006 / SC-07 / IW-00-IW-30`
 - Route: `TD006-RTA-001`
-- Shell artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/05-PLAYABLE-SLICE-SHELL.md`
-- Creative artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
-- Blueprint artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/07-EXPERIENCE-BLUEPRINT.md`
-- Functional artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/08-FUNCTIONAL-BUILD-REPORT.md`
-- Content/asset artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/09-CONTENT-ASSET-LEDGER.md`
-- Provenance:
+- Released predecessor: `TD-005 / MF-30 / SC-06`
+- Released boundary: IW-30 plus exact write-free Manyfold Return and City
+  Threshold returns
+- Candidate input:
+  `af2ea0877ad11f6a48c954387c3fab23b77e3090`
+- Reconciliation:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/11-AS-BUILT-RECONCILIATION.md`
+- Runtime provenance:
   `Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/PROVENANCE.md`
-- Polish artifact:
-  `Production Pipeline/Skyscraper Test Drives/TD-006/10-POLISH-REVIEW.md`
-- Reveal:
+- Accepted reveal:
   `Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png`
 - Reveal provenance:
   `Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/PROVENANCE.md`
-- Image Specialist commit: the dedicated Image Specialist commit containing this
-  handoff is authoritative under the non-recursive ledger convention.
-- Next Marine: `Intelligence Officer`
+- Intelligence commit: the dedicated commit containing this handoff is
+  authoritative under the non-recursive ledger convention
 
-## Experience lock summary
+## Released proof
 
-- Thesis: **order without history**. Physical superposition, cross-cut
-  repair, later deposition, neutral change, ordinary persistence, unavailable
-  interval, and compatible stewardship support a bounded relative sequence
-  while cause, duration, authorship, identity, importance, purpose, and
-  closed contents remain unresolved.
-- Emotional arc: chosen route -> awe before narration -> supported order ->
-  resisted causation -> neutral change/continuity -> accepted
-  unavailability -> visible care without ownership -> independent practice
-  -> bounded note -> safe return.
-- Attention: active owner -> current evidence -> interpretation limit -> four
-  equal peers -> one action -> invariant greater works -> exact returns.
-- Visual direction: deep transverse first-person exposed cut, not SC-05
-  convergence or SC-06 distribution; nested mineral-ceramic masses, pale
-  cross-cut repair under later deposition, ordinary matte continuity, heavy
-  opaque interval, motivated geothermal/vault light, restrained existing
-  audio, monotonic/still parity.
-- Exact state/component/semantic, route/token, owner, heading/status, focus,
-  SC-06/SC-07 resolver/alt, crop/hotspot, four-observation, learning,
-  review/schema, atomic recovery, layout, modality, parity, and closed-fixture
-  contracts are locked in the blueprint.
-- Four observations are equal native controls with supplementary registered
-  hotspots; all 24 orders converge; Available/Recorded is non-color and
-  revisits are idempotent.
-- Python primary/trace/transfer, speech primary/retrieval/transfer, and two
-  explanations replace one another as independent owners with blank
-  answer-free recovery and zero cross-credit.
-- Save is one explicit Pilot intent followed by strict System sanitation,
-  dedicated replacement, raw/object read-back, predecessor proof, verified
-  rollback or no-effect failure, and replay-free heading-first IW-30.
-- Two registered image roles remain exact: SC-07 panorama and spatially
-  consistent cross-section. Both final `3840 x 2160` runtime masters are
-  directly imported with complete source/prompt/derivative provenance; every
-  structural placeholder is retired.
-- The complete normal route/controller/storage/resolver/UI/styles/tests and a
-  36-scenario closed fixture are integrated. Protected RP-006 remains
-  unimported.
-- Focused `13/13`, related `29/29`, full `838/838`, mapping self-test, build,
-  served identity, fixture/leakage, and budget checks pass.
-- Quartermaster focused `24/24`, full `838/838`, mapping self-test, build,
-  served identity, placeholder/fixture/leakage, predecessor-media, grayscale,
-  source/provenance, and candidate-budget gates pass.
-- Current production identity: `193` modules; JS `1,340,562` bytes
-  (`220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372`);
-  CSS `91,182` bytes
-  (`3114E2046599582B5295A6535B05853BC6E7E98B2CA022EFD23868ACA955BA72`);
-  media `29,686,267` bytes / `13`, including exactly two new SC-07
-  images totaling `3,607,516` bytes.
-- Image Specialist closed one live contrast defect and one fixture-only
-  narrow-overflow defect without functional or semantic change.
-- Live `1920 x 1080`, `1366 x 768`, `390 x 844`, and effective-200
-  `768 x 900` checks pass for exact image identity, focus, `>=44px` targets,
-  text/control reflow, non-color meaning, containment, local-only resources,
-  and no console warnings/errors. Forced-color and reduced-motion contracts
-  pass source/focused regression; the current browser had both OS modes
-  inactive.
-- Focused `24/24`, related `55/55`, full `838/838`, RP-006 self-test,
-  production build, served identity, and `PBA-TD006-v1` release mode pass.
-- Exactly one spoiler-safe contact-order reveal was generated, accepted,
-  archived, and provenance-completed: one initial generation, zero recovery,
-  no third attempt. It is reference-only and not runtime media.
-- Formal variances: none.
+- Focused TD-006 plus fixture isolation: `26/26 PASS` (`24 + 2`);
+  `0.321s` wall.
+- Related TD-005/TD-006: `55/55 PASS`; `0.341s` wall.
+- Full game suite: `838/838 PASS`; `10.943s` wall.
+- Readiness: CUM-01, RP-002 through RP-012, and SIM-01 through SIM-03;
+  `15/15 PASS`.
+- Build: `193` modules; Vite `8.97s`; `10.719s` wall.
+- E2E: one non-overlapping post-build run; `119.647s`; every emitted gate
+  true; `runtimeErrors:false`; `credits:true`.
+- Release budget: `PBA-TD006-v1 PASS`.
+- Production identity:
+  - JS `1,340,562` bytes /
+    `220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372`;
+  - CSS `91,182` bytes /
+    `3114E2046599582B5295A6535B05853BC6E7E98B2CA022EFD23868ACA955BA72`;
+  - runtime media `29,686,267` bytes / `13`;
+  - exactly two new SC-07 images / `3,607,516` bytes.
+- Served root, deep link, JS, CSS, panorama, and cross-section return HTTP
+  `200` with exact build hashes.
+- Closed live fixture passes `1920 x 1080`, `1366 x 768`, `390 x 844`, and
+  `768 x 900` effective-200; exact state-only roles, focus, one status,
+  `>=44px`, containment, local-only requests, and clean logs.
+- Forced colors and reduced motion were both actively emulated and passed.
+- Exactly one contact-order reveal was generated, accepted, archived, and
+  provenance-completed: one initial generation, zero recovery, no third
+  attempt. It remains reference-only and absent from runtime.
+- Owned preview and fixture processes are stopped; ports `5189` and `4179`
+  are clear; all `69` incidental E2E captures were restored.
+
+## Variance state
+
+- `TD006-PRES-001`: `ACCEPTED IMPROVEMENT` - explicit accessible control
+  contrast; no semantic or functional change.
+- `TD006-PRES-002`: `ACCEPTED IMPROVEMENT` - fixture-only narrow summary
+  containment; no production import/output change.
+- `TD006-EVID-001`: `ACCEPTED IMPROVEMENT` - corrected documentary Combat
+  CSS identity from an exact-commit rebuild.
+- `TD006-LIM-001`: `DEFERRED LIMITATION` - generator-native image outputs
+  were below the preferred `6144 x 3456`; deterministic tracked
+  `3840 x 2160` sources and runtime masters pass every mandatory quality and
+  release gate. Future visual production should prefer native source output
+  at or above the preferred size.
+- No required correction, masterplan contradiction, or unauthorized
+  divergence remains.
 
 ## Exact next action
 
-**Begin Intelligence Officer now.**
+**At the next active three-hour wake, begin Commandant guarded verification
+of the synchronized TD-006 release and define only the next selection
+envelope.**
 
-1. Read the Intelligence Officer profile in full, this handoff, shell 05, all
-   Marine artifacts 06-10, both provenance packages, exact current source/
-   tests/fixture/build, and the current master-control sections named by the
-   profile.
-2. Independently reconcile every shell line against as-built evidence,
-   including route, state, learning, persistence, accessibility, invariant
-   world, images, budgets, returns, IW-30, reveal accounting, and protected
-   boundaries.
-3. Reproduce focused/related/full/readiness/build/release-budget, source/
-   emitted/served hashes, predecessor media, live representative matrix,
-   fixture/protected/later-marker/source-map exclusions, and owned-process
-   cleanup.
-4. Classify every variance and the two bounded presentation corrections.
-   Accept or return the single reveal unchanged.
-5. Update master-plan truth only from accepted as-built evidence, record the
-   concise process retrospective, and replace this handoff with one
-   synchronized exact next action.
-6. Create `11-AS-BUILT-RECONCILIATION.md`, issue `PASS - AS BUILT RELEASED`,
-   `REVISE`, or `HOLD`, commit, push, and verify local `HEAD` equals
-   `origin/main`.
+The Commandant must verify `HEAD == origin/main`, read the current authorities,
+release reconciliation, this handoff, and current master-control sections,
+then issue the next product-selection baseline or an honest hold. Do not
+preselect RP-007 or deploy a later role. Any adjacent surface-canon
+transition must again pass the full sequential Colonel, Operations, Science,
+and Mission authorities before Marine deployment.
 
 ## Frozen boundaries
 
 - IW-30 is the hard stop. No RP-007 route, purpose, identity, duration,
   cause, authorship, native category, closed contents, reward, access,
   permission, authority, response, world effect, RP-013, successor, or
-  post-ending content.
+  post-ending content is released.
 - Relative order is not absolute chronology or cause. Change is not progress,
   damage, correction, or response. Persistence is not identity, importance,
   approval, or authority. Unavailability is not an access challenge.
@@ -153,12 +108,12 @@ Officer handoff below.
   focus, modality, timing, Tour, save, and presentation grant zero learning
   evidence.
 - Exact TD-005 and TD-004 bytes remain immutable. Invalid or unsaved TD-006
-  state returns to MF-30/SC-06 and requires fresh Pilot intent.
+  returns to MF-30/SC-06 and requires fresh Pilot intent.
 - Preserve strict independent `PY-013`, `RP006-SPEECH-01`, both
   explanations, ten-key/eleven-note-key/eight-record persistence,
   sanitation, atomic recovery, replay-free restore, seven modalities, four
-  layouts, closed storage-free fixture, exactly two runtime images,
-  offline/Tour, invariant worlds, exact returns, and `PBA-TD006-v1`.
+  layouts, closed fixture, exactly two runtime images, offline/Tour,
+  invariant worlds, exact returns, and `PBA-TD006-v1`.
 - Protected RP-006 code remains reference-only and absent from production.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect or mutate Martin's browser storage or campaign save.

@@ -19,7 +19,7 @@
       "durationMs": 138286,
       "disposition": "VISION BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/01-GAME-DEVELOPMENT-BRIEF.md",
-      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commit": "c25081ff3838b4fec43c1ae7a6bcc18fcefa79d1",
       "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -32,7 +32,7 @@
       "durationMs": 340870,
       "disposition": "WORLD BASELINE",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/02-WORLD-NARRATIVE-MASTERPLAN.md",
-      "commit": "PENDING_COLONEL_COMMIT",
+      "commit": "cba55befe7bb3daa3f0e8f250bd1a87a69ce3767",
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -45,7 +45,7 @@
       "durationMs": 525288,
       "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/03-CAMPAIGN-FLOOR-STACK.md",
-      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commit": "87fedd7e28fc4d8d89974ec6d7be4ac76b5eec5e",
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -67,7 +67,7 @@
       "readinessValidators": "RP-002 through RP-012 11/11 PASS",
       "build": "PASS; 188 modules; 18.74s Vite; 21.765s wall",
       "budget": "PBA-TD006-v1 baseline PASS; JS 1295773; CSS 87267; media 26078751; 11 accepted files",
-      "commit": "PENDING_SCIENCE_COMMIT",
+      "commit": "d5d1570cfb586125392092841ec5ecf79d083104",
       "commitConvention": "The dedicated Office of Science Administrator commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only"
     },
@@ -87,7 +87,7 @@
       "readinessValidators": "RP-006 mapping validator PASS",
       "build": "PASS; 188 modules; 9.63s Vite; 12.31s wall",
       "budget": "PBA-TD006-v1 baseline PASS; JS 1295773; CSS 87267; media 26078751; 11 accepted files",
-      "commit": "PENDING_MISSION_COMMIT",
+      "commit": "4b172ebb85a522115f416a733b39a3708bc17177",
       "commitConvention": "The dedicated Mission Captain commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "shell-ready-push-gate",
       "pauseAfterStage": true,
@@ -107,7 +107,7 @@
       "returnFrom": "Mission Captain / SHELL READY",
       "routeContract": "TD006-RTA-001",
       "variances": "none",
-      "commit": "PENDING_RECONNAISSANCE_COMMIT",
+      "commit": "b7a65d13bc4f5131e37ddf346cb030bd3d2dc87c",
       "commitConvention": "The dedicated Reconnaissance Sergeant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Tactical Operations Specialist"
@@ -125,7 +125,7 @@
       "returnFrom": "Reconnaissance Sergeant / CREATIVE LOCK",
       "routeContract": "TD006-RTA-001",
       "variances": "none",
-      "commit": "PENDING_TACTICAL_OPERATIONS_COMMIT",
+      "commit": "fc0c6d97d706978459c5f3f3976a830341cc03ce",
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Combat Engineer"
@@ -150,7 +150,7 @@
       "servedIdentity": "root 200; JS 200 / 1340569 bytes; CSS 200 / 91198 bytes",
       "budget": "PBA-TD006-v1 PASS; JS 1340569; CSS 91198; media unchanged 26078751 / 11",
       "variances": "none",
-      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commit": "d8c05e26dbb2dd78776ae91b43eb2fe6b005c5ae",
       "commitConvention": "The dedicated Combat Engineer commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "functional-gate-push-pending",
       "nextStage": "Quartermaster"
@@ -174,7 +174,7 @@
       "servedIdentity": "root, JS, CSS, panorama, and cross-section 200 with exact hashes; port 5187 clear",
       "budget": "PBA-TD006-v1 candidate PASS; JS 1340562; CSS 91038; runtime media 29686267 / 13; new images 3607516 / 2",
       "variances": "none",
-      "commit": "PENDING_QUARTERMASTER_COMMIT",
+      "commit": "1b47fee407f4c4d7225ee4f1163d087dc815248d",
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Image Specialist"
@@ -202,10 +202,39 @@
       "reveal": "Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png",
       "revealGenerationAccounting": "one initial accepted; zero recovery; no third attempt",
       "variances": "none",
-      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commit": "af2ea0877ad11f6a48c954387c3fab23b77e3090",
       "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Intelligence Officer"
+    },
+    {
+      "sequence": 11,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-07-29T05:49:59.8943512Z",
+      "endedAt": "2026-07-29T06:04:46.6503453Z",
+      "durationMs": 886756,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP006-INTERVAL-WORKS-v1",
+      "candidateInput": "af2ea0877ad11f6a48c954387c3fab23b77e3090",
+      "routeContract": "TD006-RTA-001",
+      "focusedTests": "26/26 PASS; 24 product plus 2 fixture-isolation; 0.321s wall",
+      "relatedTests": "55/55 PASS; 0.341s wall",
+      "fullTests": "838/838 PASS; 10.943s wall",
+      "readinessValidators": "CUM-01, RP-002 through RP-012, SIM-01 through SIM-03; 15/15 PASS",
+      "build": "PASS; 193 modules; 8.97s Vite; 10.719s wall",
+      "servedIdentity": "root, deep link, JS, CSS, panorama, and cross-section HTTP 200 with exact hashes; port 5189 clear",
+      "e2e": "PASS; one non-overlapping post-build run; 119.647s; every emitted gate true; runtimeErrors false; credits true",
+      "liveReview": "isolated closed fixture; 1920x1080, 1366x768, 390x844, 768x900 effective-200; active forced colors and reduced motion; exact roles/focus/status/targets/containment/local-only/logs PASS; port 4179 clear",
+      "budget": "PBA-TD006-v1 release PASS; JS 1340562; CSS 91182; runtime media 29686267 / 13; new images 3607516 / 2",
+      "variances": "TD006-PRES-001, TD006-PRES-002, and TD006-EVID-001 ACCEPTED IMPROVEMENTS; TD006-LIM-001 DEFERRED LIMITATION; no required correction, masterplan contradiction, or unauthorized divergence",
+      "reveal": "Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png; exact candidate accepted unchanged; reference-only",
+      "retrospective": "TUNE - separate product-focused and fixture-isolation counts and name exact live role scenarios in future reporting",
+      "commit": "PENDING_INTELLIGENCE_COMMIT",
+      "commitConvention": "The dedicated Intelligence commit containing this ledger entry is authoritative; this field remains non-recursive and synchronization is proven by HEAD equality after push.",
+      "synchronization": "push pending",
+      "nextStage": "Commandant guarded verification at the next active three-hour wake"
     }
   ]
 }

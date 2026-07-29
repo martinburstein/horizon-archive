@@ -1,6 +1,25 @@
 # Horizon Archive Story Rail Map
 
-## TD-006 Mission shell current control - 2026-07-27
+## TD-006 Intelligence release current control - 2026-07-29
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-006 /
+  SS-RP006-INTERVAL-WORKS-v1`. Normal play advances from exact released
+  TD-005 MF-30 through sole fresh Pilot-owned `TD006-RTA-001` into complete
+  `RP-006 / SC-07 / IW-00-IW-30`.
+- **Released graph:** `MF-30 / SC-06 -> IW-00 -> IW-10 -> IW-20 -> IW-30 /
+  SC-07`, followed only by exact Manyfold Return or City Threshold returns.
+  Invalid or unsaved TD-006 state fails closed to MF-30 and requires fresh
+  Pilot intent.
+- **Released evidence:** four equal observations in all 24 orders,
+  independent `PY-013`, `RP006-SPEECH-01`, two explanations, atomic
+  rollback-safe persistence, replay-free restore, invariant SC-06/SC-07,
+  and exactly two direct SC-07 image roles pass the full release ladder.
+- **Authoritative rail stop:** IW-30 or either exact return. Serviced
+  continuation remains destinationless and non-routing. No RP-007 route,
+  chronology, cause, purpose, identity, closed contents, reward, access,
+  authority, response, RP-013, successor, or post-ending exposure is open.
+
+## Dated TD-006 Mission shell control - 2026-07-27
 
 - **Construction gate:** `SHELL READY /
   SS-RP006-INTERVAL-WORKS-v1`. The selected adjacent rail is exactly

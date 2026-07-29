@@ -1,6 +1,32 @@
 # Horizon Archive Production Readiness Spine
 
-## TD-006 Mission current control - 2026-07-27
+## TD-006 Intelligence release current control - 2026-07-29
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-006 /
+  SS-RP006-INTERVAL-WORKS-v1` on candidate
+  `af2ea0877ad11f6a48c954387c3fab23b77e3090`.
+- **Independent gate:** focused `26/26`; related `55/55`; full `838/838`;
+  readiness `15/15`; build `193` modules / `10.719s` wall; release
+  `PBA-TD006-v1 PASS`; exact served root/deep-link/JS/CSS/SC-07 identities;
+  one complete `119.647s` E2E with every gate true, credits reached, and
+  `runtimeErrors:false`.
+- **Release identity:** JS `1,340,562` bytes /
+  `220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372`;
+  CSS `91,182` bytes /
+  `3114E2046599582B5295A6535B05853BC6E7E98B2CA022EFD23868ACA955BA72`;
+  runtime media `29,686,267` bytes across `13` files, including exactly two
+  new direct SC-07 images totaling `3,607,516` bytes.
+- **Presentation gate:** exact panorama/cross-section identities, desktop,
+  laptop, narrow, effective-200, forced-color, reduced-motion, focus, status,
+  target, containment, local-request, and runtime-log checks pass. Exactly
+  one spoiler-safe contact-order reveal is accepted as reference-only and is
+  absent from runtime output.
+- **Boundary:** IW-30 plus exact Manyfold Return and City Threshold returns
+  are final. No RP-007 route, absolute chronology, cause, purpose, identity,
+  reward, access, authority, response, RP-013, successor, post-ending
+  content, or world effect is open.
+
+## Dated TD-006 Mission control - 2026-07-27
 
 - **Disposition:** `SHELL READY / SS-RP006-INTERVAL-WORKS-v1 / SAFE STOP`.
   Mission reconciled `GDB-TD006-v1`, `WNMP-TD006-v1`, `CFS-TD006-v1`,

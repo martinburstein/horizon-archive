@@ -1,6 +1,25 @@
 # DI-001 — City Threshold protected staging pass
 
-## Intelligence Officer current control - 2026-07-27
+## Intelligence Officer current control - 2026-07-29
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-006 /
+  SS-RP006-INTERVAL-WORKS-v1`. The accepted Demo now continues from exact
+  TD-005 MF-30 through complete Interval Works IW-00-IW-30.
+- **Included:** four equal observations; independent Python, AI-901, and
+  explanation evidence; atomic local record/rollback/recovery; replay-free
+  restore; exact Manyfold Return and City Threshold returns; and exactly two
+  direct SC-07 panorama/cross-section runtime masters.
+- **Closed checklist item:** `[x] RP-006 / SC-07 - repair cross-cut beneath
+  later deposition establishes relative order only`.
+- **Reveal:** `../../Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png`,
+  `1672 x 941`, `2,653,821` bytes, SHA-256
+  `BCB938C5F99EBD07F047691C152A8EA049EE3991E99CADBE763220E7E0A38DC9`;
+  accepted as spoiler-safe reference-only, not runtime media.
+- **Stop:** IW-30 or either authorized return. No RP-007 route, absolute
+  chronology, cause, purpose, identity, reward, access, authority, response,
+  RP-013, successor, post-ending content, or world effect is included.
+
+## Dated TD-005 Intelligence control - 2026-07-27
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-005 /
   SS-RP005-MANYFOLD-RETURN-v1`. The accepted Demo now continues from exact

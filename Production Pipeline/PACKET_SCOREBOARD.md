@@ -1,6 +1,26 @@
 # Rail Packet Scoreboard
 
-## TD-006 Mission shell current control - 2026-07-27
+## TD-006 Intelligence release current control - 2026-07-29
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-006 /
+  SS-RP006-INTERVAL-WORKS-v1`. Normal play now advances from exact released
+  TD-005 MF-30 through sole validated `TD006-RTA-001` into complete
+  `RP-006 / SC-07 / IW-00-IW-30`.
+- **Included:** four equal any-order observations; independent `PY-013`,
+  `RP006-SPEECH-01`, and two explanation records; strict ten-key/
+  eleven-note-key/eight-record persistence; atomic rollback-safe save;
+  replay-free restore; exact Manyfold Return and City Threshold returns; and
+  exactly two direct SC-07 runtime masters.
+- **Independent release gate:** focused `26/26`, related `55/55`, full
+  `838/838`, readiness `15/15`, build `193` modules, release
+  `PBA-TD006-v1 PASS`, exact served bytes, one complete `119.647s` E2E, and
+  representative responsive/forced-color/reduced-motion fixture review pass.
+- **Exact stop:** IW-30 or either authorized return. No RP-007 route,
+  absolute chronology, cause, purpose, identity, reward, access, authority,
+  response, RP-013, successor, post-ending content, or world effect is
+  released.
+
+## Dated TD-006 Mission shell control - 2026-07-27
 
 - **RP-006 construction status:** `SHELL READY /
   SS-RP006-INTERVAL-WORKS-v1`. Mission froze the exact Pilot-owned route,
