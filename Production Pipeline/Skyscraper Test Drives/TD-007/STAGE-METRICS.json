@@ -1,0 +1,31 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-007",
+    "shellCandidate": "unselected",
+    "campaignAddress": "unselected",
+    "sourceCommit": "5329813778da41fdaa984165f986c2182eb887bd",
+    "timezone": "America/New_York",
+    "executionMode": "scheduled-sequential-nonoverlapping"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-07-29T06:55:51.236Z",
+      "endedAt": "2026-07-29T07:03:09.9434893Z",
+      "durationMs": 438707,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-007/01-GAME-DEVELOPMENT-BRIEF.md",
+      "releasedPredecessor": "TD-006 / SS-RP006-INTERVAL-WORKS-v1 / IW-30 plus exact write-free returns",
+      "candidateSelection": "deliberately unselected; Colonel owns one provisional surface-safe candidate or HOLD",
+      "variances": "none requiring product-baseline revision",
+      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only",
+      "nextStage": "Colonel"
+    }
+  ]
+}
