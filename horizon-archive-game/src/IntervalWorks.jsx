@@ -4,6 +4,8 @@ import {
   intervalWorksObservationIds,
   resolveIntervalWorksWorldScene,
 } from "./IntervalWorksNormal.js";
+import intervalWorksPanorama from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp";
+import intervalWorksCrosssection from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp";
 
 const headingCopy = {
   iw00_orientation: "Interval Works",
@@ -154,8 +156,12 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
   const scene = resolveIntervalWorksWorldScene(state);
   const isCrosssection = scene?.role === "SC-07-CROSSSECTION-MASTER";
   const alt = isCrosssection
-    ? "Registered exposed-material cross-section: an underlay lies beneath an overlay, a pale repair crosses both, and a thinner deposit covers the repair. A changed branch form, an ordinary continuous phase, an opaque interval with external bypass, and compatible material contacts remain visible together."
-    : "Panoramic first-person view into immense nested mineral and glass-ceramic works. A broad opaque interval, an ordinary continuous phase, layered material contacts, fixed maintenance, and destinationless service infrastructure remain unchanged.";
+    ? "Close first-person material section. Dark underlay and translucent overlay meet pale crossing repairs and a thinner covering deposit. A changed branch form, a continuous dark phase, a sealed opaque interval with an external bypass, and compatible layers remain visible together."
+    : "First-person panorama across immense nested mineral and glass-ceramic works. Pale repaired seams cross dark exposed layers around a broad opaque interval while maintained conductive lines continue beyond the view.";
+  const imageSource = isCrosssection ? intervalWorksCrosssection : intervalWorksPanorama;
+  const imageSourceName = isCrosssection
+    ? "sc07-interval-works-crosssection-runtime-master-v1.webp"
+    : "sc07-interval-works-panorama-runtime-master-v1.webp";
 
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -179,19 +185,15 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
       ref={rootRef}
     >
       <figure className={`interval-world ${isCrosssection ? "is-crosssection" : "is-panorama"}`}>
-        <div
-          className="interval-world-placeholder"
-          role="img"
-          aria-label={alt}
+        <img
+          src={imageSource}
+          alt={alt}
           data-image-role={scene?.role}
-          data-placeholder-owner="Quartermaster / Image Specialist"
-        >
-          <span>{scene?.role}</span>
-          <small>STRUCTURAL PLACEHOLDER — FINAL SC-07 MASTER PENDING</small>
-        </div>
+          data-runtime-source-master={imageSourceName}
+        />
         <figcaption>
-          Registered invariant SC-07 role. The visible material relations remain descriptive,
-          noncausal, and unchanged by observation, practice, save, restore, or return.
+          Expedition view only. These visible relations support bounded description, not a
+          date, cause, author, purpose, or account of the closed interval.
         </figcaption>
       </figure>
 

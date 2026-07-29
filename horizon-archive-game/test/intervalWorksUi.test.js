@@ -21,13 +21,17 @@ test("TD006 UI has one polite status, heading focus, native controls, and persis
   assert.match(component, /<textarea/);
 });
 
-test("TD006 UI binds exactly two structural image roles with state-only resolver metadata", () => {
+test("TD006 UI binds exactly two production masters with state-only resolver metadata", () => {
   assert.match(controller, /SC-07-PANORAMA-MASTER/);
   assert.match(controller, /SC-07-CROSSSECTION-MASTER/);
+  assert.match(component, /sc07-interval-works-panorama-runtime-master-v1\.webp/);
+  assert.match(component, /sc07-interval-works-crosssection-runtime-master-v1\.webp/);
   assert.match(component, /data-image-role/);
   assert.match(component, /data-scene-role/);
   assert.match(component, /data-crop-id/);
-  assert.match(component, /STRUCTURAL PLACEHOLDER/);
+  assert.match(component, /data-runtime-source-master/);
+  assert.match(component, /<img/);
+  assert.doesNotMatch(component, /STRUCTURAL PLACEHOLDER|data-placeholder-owner|interval-world-placeholder/);
   assert.doesNotMatch(controller, /SC-08|BRAIDED VERGE|RP-007/i);
 });
 

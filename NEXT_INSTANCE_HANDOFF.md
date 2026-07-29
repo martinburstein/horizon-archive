@@ -1,6 +1,6 @@
 # Horizon Archive - Skyscraper Workflow Handoff
 
-Last updated: **2026-07-28**
+Last updated: **2026-07-29**
 
 ## Start here
 
@@ -8,10 +8,9 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
 TD-006 resumed from the synchronized Mission `SHELL READY` checkpoint at
-Martin's explicit instruction. Reconnaissance Sergeant and Tactical
-Operations Specialist are complete. Do not restart Commandant, Colonel,
-Operations, Science, Mission, Recon, Tactical, or Combat. Continue only from
-the Quartermaster handoff below.
+Martin's explicit instruction. Quartermaster is complete. Do not restart
+Commandant, Colonel, Operations, Science, Mission, Recon, Tactical, Combat, or
+Quartermaster. Continue only from the Image Specialist handoff below.
 
 ## Synchronized state
 
@@ -22,8 +21,8 @@ the Quartermaster handoff below.
 - Released boundary: MF-30 plus exact write-free Manyfold Return and City
   Threshold returns.
 - Active test drive: `TD-006`
-- Latest completed active stage: `8 - Combat Engineer`
-- Active disposition: `FUNCTIONALLY COMPLETE`
+- Latest completed active stage: `9 - Quartermaster`
+- Active disposition: `CONTENT COMPLETE`
 - Shell: `SS-RP006-INTERVAL-WORKS-v1`
 - Slice/address: `TD-006-RP006-INTERVAL-WORKS-v1 /
   RP-006 / SC-07 / IW-00-IW-30`
@@ -36,9 +35,13 @@ the Quartermaster handoff below.
   `Production Pipeline/Skyscraper Test Drives/TD-006/07-EXPERIENCE-BLUEPRINT.md`
 - Functional artifact:
   `Production Pipeline/Skyscraper Test Drives/TD-006/08-FUNCTIONAL-BUILD-REPORT.md`
-- Combat commit: the dedicated Combat Engineer commit containing this
+- Content/asset artifact:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/09-CONTENT-ASSET-LEDGER.md`
+- Provenance:
+  `Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/PROVENANCE.md`
+- Quartermaster commit: the dedicated Quartermaster commit containing this
   handoff is authoritative under the non-recursive ledger convention.
-- Next Marine: `Quartermaster`
+- Next Marine: `Image Specialist`
 
 ## Experience lock summary
 
@@ -72,43 +75,49 @@ the Quartermaster handoff below.
   dedicated replacement, raw/object read-back, predecessor proof, verified
   rollback or no-effect failure, and replay-free heading-first IW-30.
 - Two registered image roles remain exact: SC-07 panorama and spatially
-  consistent cross-section. Truthful structural placeholders are integrated;
-  no final art exists.
+  consistent cross-section. Both final `3840 x 2160` runtime masters are
+  directly imported with complete source/prompt/derivative provenance; every
+  structural placeholder is retired.
 - The complete normal route/controller/storage/resolver/UI/styles/tests and a
   36-scenario closed fixture are integrated. Protected RP-006 remains
   unimported.
 - Focused `13/13`, related `29/29`, full `838/838`, mapping self-test, build,
   served identity, fixture/leakage, and budget checks pass.
-- Current production identity: `191` modules; JS `1,340,569` bytes
-  (`1BF2DF98CEC787118FBE97BB30777163693AE67DFA301C671726C59DF9E9FD5A`);
-  CSS `91,198` bytes
-  (`C34EFD5660C19B032F96A34002F0589D6F0B02FCA8F69E524B83A7AAD36FDA0C`);
-  media unchanged `26,078,751` bytes / `11`.
+- Quartermaster focused `24/24`, full `838/838`, mapping self-test, build,
+  served identity, placeholder/fixture/leakage, predecessor-media, grayscale,
+  source/provenance, and candidate-budget gates pass.
+- Current production identity: `193` modules; JS `1,340,562` bytes
+  (`220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372`);
+  CSS `91,038` bytes
+  (`0729BEFD3590DE92B25EC729335E77165F8445BAB6CCE1D174840DF0BF950844`);
+  media `29,686,267` bytes / `13`, including exactly two new SC-07
+  images totaling `3,607,516` bytes.
 - Formal variances: none.
 
 ## Exact next action
 
-**Begin Quartermaster now.**
+**Begin Image Specialist now.**
 
-1. Read the Quartermaster profile in full, this handoff, exact shell,
-   Creative Treatment, Experience Blueprint, and Functional Build Report.
-2. Read only the exact copy, visual, asset, provenance, runtime import,
-   fixture, budget, predecessor, and placeholder sections required by the
-   role.
-3. Refine all player-facing copy inside the locked owner and interpretation
-   boundaries; retire every structural copy placeholder without changing
-   behavior, evidence, schema, focus, route, or world meaning.
-4. Create or acquire exactly `SC-07-PANORAMA-MASTER` and
-   `SC-07-CROSSSECTION-MASTER`, import both directly, register crops/hotspots
-   and alternatives, record provenance and source/emitted identities, and
-   remove the structural visual placeholders. Do not add a third image or
-   other media class.
-5. Run focused, related, full, validator, build, placeholder, provenance,
-   asset-count/hash, predecessor-media, fixture/leakage, hard-stop, and
-   `PBA-TD006-v1` checks.
-6. Create the content/asset ledger, metrics, and synchronized handoff; issue
-   `CONTENT COMPLETE`, `REVISE`, or `HOLD`; create one dedicated Quartermaster
-   commit. Do not begin Image Specialist.
+1. Read the Image Specialist profile in full, this handoff, exact shell,
+   Creative Treatment, Experience Blueprint, Functional Build Report,
+   Content/Asset Ledger, and exact provenance.
+2. Independently inspect both source and runtime masters for artifact,
+   canon, spatial/material continuity, full-size, grayscale, and alt/caption
+   accuracy.
+3. Run the complete live representative layout matrix for panorama and
+   cross-section: desktop, intermediate, narrow/effective-200, forced colors,
+   reduced motion, focus, target size, containment, local requests, and
+   console/page errors. Make only bounded presentation corrections.
+4. Select one spoiler-safe accepted SC-07 decision, compare recent visual
+   canon, and follow the exact one-initial/one-recovery/no-third cycle-reveal
+   rule. Archive and expose exactly one accepted reveal; rejected drafts stay
+   outside the workspace and canon.
+5. Re-run focused/full/readiness/build/release-budget, direct-import,
+   emitted/served identity, predecessor-media, placeholder/fixture/protected/
+   later-marker, and owned-process cleanup gates.
+6. Create the polish review, metrics, and synchronized handoff; issue
+   `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`; create one dedicated Image
+   Specialist commit. Do not begin Intelligence Officer.
 
 ## Frozen boundaries
 

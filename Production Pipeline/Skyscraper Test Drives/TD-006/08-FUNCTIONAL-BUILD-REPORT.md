@@ -113,7 +113,7 @@ asset count, returns, budget, or IW-30 hard stop.
 | Aggregate JavaScript | `1,340,569` bytes | `1,360,561` | PASS; `19,992` headroom |
 | JavaScript SHA-256 | `1BF2DF98CEC787118FBE97BB30777163693AE67DFA301C671726C59DF9E9FD5A` | identity evidence | recorded |
 | Aggregate CSS | `91,198` bytes | `91,630` | PASS; `432` headroom |
-| CSS SHA-256 | `C34EFD5660C19B032F96A34002F0589D6F0B02FCA8F69E524B83A7AAD36FDA0C` | identity evidence | recorded |
+| CSS SHA-256 | `24218F08F762C2CDA94BCCC0696C40532488FFEB535BCF792F5784D5DE38FF47` | identity evidence | recorded |
 | Runtime media | `26,078,751` bytes / `11` | `34,467,359` / two new images | PASS; no Combat media |
 | Build time | `6.45s` | `60s` | PASS |
 | Full suite | `5.954s` | `60s` | PASS |
@@ -123,6 +123,10 @@ removed nonessential placeholder decoration, rebuilt, and remeasured before
 this disposition. The accepted functional build is under every cap without
 weakening targets, reflow, forced colors, reduced motion, focus, or meaning.
 This was an in-stage correction, not a shell variance.
+
+Quartermaster independently reproduced the exact Combat commit and corrected
+the originally transcribed pre-simplification CSS hash above. The byte count,
+bundle content, cap result, and Combat disposition are unchanged.
 
 ## Source and test files changed
 
