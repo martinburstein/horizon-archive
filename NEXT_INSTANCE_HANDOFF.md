@@ -8,9 +8,10 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full.
 
 TD-006 resumed from the synchronized Mission `SHELL READY` checkpoint at
-Martin's explicit instruction. Quartermaster is complete. Do not restart
-Commandant, Colonel, Operations, Science, Mission, Recon, Tactical, Combat, or
-Quartermaster. Continue only from the Image Specialist handoff below.
+Martin's explicit instruction. Image Specialist is complete. Do not restart
+Commandant, Colonel, Operations, Science, Mission, Recon, Tactical, Combat,
+Quartermaster, or Image Specialist. Continue only from the Intelligence
+Officer handoff below.
 
 ## Synchronized state
 
@@ -21,8 +22,9 @@ Quartermaster. Continue only from the Image Specialist handoff below.
 - Released boundary: MF-30 plus exact write-free Manyfold Return and City
   Threshold returns.
 - Active test drive: `TD-006`
-- Latest completed active stage: `9 - Quartermaster`
-- Active disposition: `CONTENT COMPLETE`
+- Latest completed active stage: `10 - Image Specialist`
+- Active disposition:
+  `PRESENTATION COMPLETE - CONTACT-ORDER REVEAL ACCEPTED`
 - Shell: `SS-RP006-INTERVAL-WORKS-v1`
 - Slice/address: `TD-006-RP006-INTERVAL-WORKS-v1 /
   RP-006 / SC-07 / IW-00-IW-30`
@@ -39,9 +41,15 @@ Quartermaster. Continue only from the Image Specialist handoff below.
   `Production Pipeline/Skyscraper Test Drives/TD-006/09-CONTENT-ASSET-LEDGER.md`
 - Provenance:
   `Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/PROVENANCE.md`
-- Quartermaster commit: the dedicated Quartermaster commit containing this
+- Polish artifact:
+  `Production Pipeline/Skyscraper Test Drives/TD-006/10-POLISH-REVIEW.md`
+- Reveal:
+  `Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png`
+- Reveal provenance:
+  `Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/PROVENANCE.md`
+- Image Specialist commit: the dedicated Image Specialist commit containing this
   handoff is authoritative under the non-recursive ledger convention.
-- Next Marine: `Image Specialist`
+- Next Marine: `Intelligence Officer`
 
 ## Experience lock summary
 
@@ -88,36 +96,49 @@ Quartermaster. Continue only from the Image Specialist handoff below.
   source/provenance, and candidate-budget gates pass.
 - Current production identity: `193` modules; JS `1,340,562` bytes
   (`220BD78CB5BDB3374FD759FA4C15A3ED4ED2532BCAE9E9BC71C4737DC59A2372`);
-  CSS `91,038` bytes
-  (`0729BEFD3590DE92B25EC729335E77165F8445BAB6CCE1D174840DF0BF950844`);
+  CSS `91,182` bytes
+  (`3114E2046599582B5295A6535B05853BC6E7E98B2CA022EFD23868ACA955BA72`);
   media `29,686,267` bytes / `13`, including exactly two new SC-07
   images totaling `3,607,516` bytes.
+- Image Specialist closed one live contrast defect and one fixture-only
+  narrow-overflow defect without functional or semantic change.
+- Live `1920 x 1080`, `1366 x 768`, `390 x 844`, and effective-200
+  `768 x 900` checks pass for exact image identity, focus, `>=44px` targets,
+  text/control reflow, non-color meaning, containment, local-only resources,
+  and no console warnings/errors. Forced-color and reduced-motion contracts
+  pass source/focused regression; the current browser had both OS modes
+  inactive.
+- Focused `24/24`, related `55/55`, full `838/838`, RP-006 self-test,
+  production build, served identity, and `PBA-TD006-v1` release mode pass.
+- Exactly one spoiler-safe contact-order reveal was generated, accepted,
+  archived, and provenance-completed: one initial generation, zero recovery,
+  no third attempt. It is reference-only and not runtime media.
 - Formal variances: none.
 
 ## Exact next action
 
-**Begin Image Specialist now.**
+**Begin Intelligence Officer now.**
 
-1. Read the Image Specialist profile in full, this handoff, exact shell,
-   Creative Treatment, Experience Blueprint, Functional Build Report,
-   Content/Asset Ledger, and exact provenance.
-2. Independently inspect both source and runtime masters for artifact,
-   canon, spatial/material continuity, full-size, grayscale, and alt/caption
-   accuracy.
-3. Run the complete live representative layout matrix for panorama and
-   cross-section: desktop, intermediate, narrow/effective-200, forced colors,
-   reduced motion, focus, target size, containment, local requests, and
-   console/page errors. Make only bounded presentation corrections.
-4. Select one spoiler-safe accepted SC-07 decision, compare recent visual
-   canon, and follow the exact one-initial/one-recovery/no-third cycle-reveal
-   rule. Archive and expose exactly one accepted reveal; rejected drafts stay
-   outside the workspace and canon.
-5. Re-run focused/full/readiness/build/release-budget, direct-import,
-   emitted/served identity, predecessor-media, placeholder/fixture/protected/
-   later-marker, and owned-process cleanup gates.
-6. Create the polish review, metrics, and synchronized handoff; issue
-   `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`; create one dedicated Image
-   Specialist commit. Do not begin Intelligence Officer.
+1. Read the Intelligence Officer profile in full, this handoff, shell 05, all
+   Marine artifacts 06-10, both provenance packages, exact current source/
+   tests/fixture/build, and the current master-control sections named by the
+   profile.
+2. Independently reconcile every shell line against as-built evidence,
+   including route, state, learning, persistence, accessibility, invariant
+   world, images, budgets, returns, IW-30, reveal accounting, and protected
+   boundaries.
+3. Reproduce focused/related/full/readiness/build/release-budget, source/
+   emitted/served hashes, predecessor media, live representative matrix,
+   fixture/protected/later-marker/source-map exclusions, and owned-process
+   cleanup.
+4. Classify every variance and the two bounded presentation corrections.
+   Accept or return the single reveal unchanged.
+5. Update master-plan truth only from accepted as-built evidence, record the
+   concise process retrospective, and replace this handoff with one
+   synchronized exact next action.
+6. Create `11-AS-BUILT-RECONCILIATION.md`, issue `PASS - AS BUILT RELEASED`,
+   `REVISE`, or `HOLD`, commit, push, and verify local `HEAD` equals
+   `origin/main`.
 
 ## Frozen boundaries
 

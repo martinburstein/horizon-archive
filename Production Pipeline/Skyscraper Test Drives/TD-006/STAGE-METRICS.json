@@ -178,6 +178,34 @@
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Image Specialist"
+    },
+    {
+      "sequence": 10,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-29T05:33:17.4199485Z",
+      "endedAt": "2026-07-29T05:49:59.8943512Z",
+      "durationMs": 1002475,
+      "disposition": "PRESENTATION COMPLETE - CONTACT-ORDER REVEAL ACCEPTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-006/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP006-INTERVAL-WORKS-v1",
+      "returnFrom": "Quartermaster / CONTENT COMPLETE",
+      "routeContract": "TD006-RTA-001",
+      "focusedTests": "24/24 PASS; 0.308s wall",
+      "relatedTests": "55/55 PASS; 0.355s wall",
+      "fullTests": "838/838 PASS; 10.652s wall",
+      "readinessValidators": "RP-006 mapping validator SELF-TEST PASS",
+      "build": "PASS; 193 modules; 10.872s wall",
+      "servedIdentity": "root, JS, CSS, panorama, and cross-section 200 with exact hashes; port 5188 clear",
+      "budget": "PBA-TD006-v1 release PASS; JS 1340562; CSS 91182; runtime media 29686267 / 13; new images 3607516 / 2",
+      "liveReview": "1920x1080 panorama/cross-section; 1366x768; 390x844; 768x900 effective-200; focus/targets/non-color/containment/local-only/console PASS",
+      "reveal": "Visual Direction/Production Masters/2026-07-29-rp006-contact-order-reveal/rp006-contact-order-reveal-v1.png",
+      "revealGenerationAccounting": "one initial accepted; zero recovery; no third attempt",
+      "variances": "none",
+      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only",
+      "nextStage": "Intelligence Officer"
     }
   ]
 }

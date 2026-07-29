@@ -1,0 +1,18 @@
+html,
+body,
+#root {
+  min-width: 0;
+  margin: 0;
+}
+
+.fixture-scenario-picker {
+  display: grid;
+  width: min(100%, 24rem);
+}
+
+[data-fixture-summary] {
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

@@ -554,10 +554,18 @@ h1 {
 .interval-panel textarea,
 .interval-observations button {
   min-height: 44px;
+  border: 1px solid #68757a;
+  color: #e8e4da;
+  background: #11171a;
 }
 
 .interval-actions button {
   padding: .7rem;
+}
+
+.interval-actions button:hover,
+.interval-observations button:hover {
+  background: #20292d;
 }
 
 .interval-panel :focus-visible {
