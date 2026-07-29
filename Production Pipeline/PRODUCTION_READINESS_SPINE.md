@@ -1,5 +1,31 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-007 Mission current control - 2026-07-29
+
+- **Disposition:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`. Mission
+  reconciled `GDB-TD007-v1`, `WNMP-TD007-v1`, `CFS-TD007-v1`,
+  `VE-TD007-v1`, `PBA-TD007-v1`, the protected reference, released TD-006,
+  and exact current controls without conflict.
+- **Frozen construction shell:** exact Pilot-owned `TD007-RTA-001`,
+  IW-30/SC-07 to zero-evidence BV-00/SC-08 entry, BV-00-BV-30 graph,
+  state/alternative-text identities, five equal any-order observations,
+  strict independent `PY-015`, `RP007-VISION-GENERATION-01`, two
+  explanations, truthful memory-only UTF-8 file work, ten-key/
+  fourteen-note-key/eight-record persistence, sanitation, atomic
+  replacement/read-back/rollback, replay-free restore, exact returns, seven
+  modalities, four layouts, closed fixture, two image roles, offline/Tour,
+  invariant world, budget, and validation ladder.
+- **Fresh Mission evidence:** protected focused `13/13` / `0.876s` wall;
+  RP-007 mapping validator `PASS`; production build `193` modules /
+  `8.16s` Vite / `9.25s` wall; `PBA-TD007-v1` baseline `PASS` at exact
+  released TD-006 JS/CSS/media identity.
+- **Release boundary:** TD-006 remains released. RP-007 normal integration,
+  images, fixture, E2E, and release remain unbuilt. Reconnaissance Sergeant
+  is next.
+- **Hard stop:** BV-30. No RP-008 route/cue, unity, cause, purpose,
+  identity, reward, access, authority, response, world effect, RP-013,
+  successor, or post-ending content is authorized.
+
 ## TD-006 Intelligence release current control - 2026-07-29
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-006 /

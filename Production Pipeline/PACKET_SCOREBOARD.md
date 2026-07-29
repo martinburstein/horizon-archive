@@ -1,5 +1,21 @@
 # Rail Packet Scoreboard
 
+## TD-007 Mission shell current control - 2026-07-29
+
+- **RP-007 construction status:** `SHELL READY /
+  SS-RP007-BRAIDED-VERGE-v1`. Mission froze sole Pilot-owned
+  `TD007-RTA-001`, BV-00-BV-30, the exact state/alternative-text matrix,
+  five equal observations in all 120 orders, strict independent learning,
+  truthful memory-only file work, ten-key/fourteen-note-key/eight-record
+  persistence, atomic recovery, exact returns, seven modalities, closed
+  responsive fixture, two-image plan, invariant world, and `PBA-TD007-v1`.
+- **Working edge:** Reconnaissance Sergeant is next. Normal RP-007
+  integration, images, fixture, E2E, and release evidence remain unbuilt.
+- **Release state:** TD-006 remains authoritative. No Marine may widen the
+  shell; BV-30 is the hard stop before RP-008, unity/cause/purpose,
+  identity, reward, access, authority, response, RP-013, successor, or
+  post-ending content.
+
 ## TD-006 Intelligence release current control - 2026-07-29
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-006 /

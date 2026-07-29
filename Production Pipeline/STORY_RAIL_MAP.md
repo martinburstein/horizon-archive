@@ -1,5 +1,23 @@
 # Horizon Archive Story Rail Map
 
+## TD-007 Mission shell current control - 2026-07-29
+
+- **Construction gate:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`.
+  The selected adjacent rail is exactly `RP-007 / SC-08 / BV-00-BV-30`;
+  sole fresh Pilot-owned `TD007-RTA-001` enters from exact released
+  IW-30/SC-07 and no scenery, continuation, record, sound, relation, save,
+  or planning label can route.
+- **Frozen graph:** `IW-30 / SC-07 -> BV-00 -> BV-10 -> BV-20 -> BV-30 /
+  SC-08`, followed only by exact Interval Works or City Threshold returns.
+  Invalid or unsaved TD-007 state recovers to IW-30 and requires fresh
+  intent.
+- **Construction position:** RP-007 remains unreleased and unbuilt. TD-006
+  is still the live boundary. Reconnaissance Sergeant is next; no Marine has
+  yet changed normal production.
+- **Exact stop:** BV-30 before RP-008, unity, coordination, cause, purpose,
+  identity, junction contents, reward, access, authority, response, RP-013,
+  successor, or post-ending exposure.
+
 ## TD-006 Intelligence release current control - 2026-07-29
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-006 /

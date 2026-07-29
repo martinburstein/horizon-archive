@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-007",
-    "shellCandidate": "TD-007-RP007-BRAIDED-VERGE-v1 / shell unissued",
+    "shellCandidate": "SS-RP007-BRAIDED-VERGE-v1 / SHELL READY",
     "campaignAddress": "RP-007 / SC-08 / BV-00-BV-30",
     "sourceCommit": "5329813778da41fdaa984165f986c2182eb887bd",
     "timezone": "America/New_York",
@@ -79,6 +79,25 @@
       "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only",
       "nextStage": "Mission Captain"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-07-29T14:44:00.000Z",
+      "endedAt": "2026-07-29T14:52:46.3773467Z",
+      "durationMs": 526377,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-007/05-PLAYABLE-SLICE-SHELL.md",
+      "shell": "SS-RP007-BRAIDED-VERGE-v1",
+      "releasedPredecessor": "TD-006 / SS-RP006-INTERVAL-WORKS-v1 / IW-30 plus exact write-free returns",
+      "candidateSelection": "TD-007-RP007-BRAIDED-VERGE-v1 / RP-007 / SC-08 / BV-00-BV-30 through sole Pilot-owned TD007-RTA-001",
+      "validation": "focused protected 13/13 / 0.876s wall; RP-007 mapping self-test PASS; production build 193 modules / 9.25s wall; PBA-TD007-v1 baseline PASS at exact TD-006 release identity; contract and protected-boundary scans PASS",
+      "variances": "none; the Science-mandated browser-safe PY-015 memory-workspace and exact truthful execution label are frozen as shell requirements",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "push and three-way main verification required at SHELL READY",
+      "nextStage": "Reconnaissance Sergeant"
     }
   ]
 }

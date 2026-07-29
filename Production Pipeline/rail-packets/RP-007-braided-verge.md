@@ -1,5 +1,22 @@
 # RP-007 — Braided Verge
 
+## TD-007 Mission shell control - 2026-07-29
+
+- **Disposition:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`. Mission found
+  the strategic package conflict-free and froze exact `TD007-RTA-001`,
+  IW-30/SC-07 validation-before-consumption, one transient zero-evidence
+  BV-00 arrival, BV-00-BV-30, five equal observations, strict independent
+  learning, truthful memory-only browser file work, bounded persistence,
+  atomic rollback and replay-free restore, exact returns, accessibility/
+  responsive fixture, two runtime image roles, invariant world, and
+  `PBA-TD007-v1`.
+- **Construction state:** normal RP-007 remains unbuilt and unreleased.
+  Reconnaissance Sergeant is next; no Marine implementation has begun.
+- **Hard boundary:** BV-30. Destinationless infrastructure remains inert
+  and non-routing. No RP-008 cue, unity, coordination, cause, purpose,
+  identity, junction contents, reward, access, authority, response,
+  RP-013, successor, or post-ending content is open.
+
 ## Packet identity
 
 - Status: `GATE REVIEW — A5 PROTECTED CONSTRUCTION COMPLETE`
