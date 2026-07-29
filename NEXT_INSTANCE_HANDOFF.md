@@ -6,9 +6,9 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next role.
 
 The authorized three-hour Skyscraper cycle is active and non-overlapping.
-TD-006 remains the synchronized released product. TD-007 has passed its five
-strategic stages and Reconnaissance Sergeant creative lock. Tactical work has
-not begun.
+TD-006 remains the synchronized released product. TD-007 has passed all five
+strategic stages, Reconnaissance creative lock, and Tactical experience lock.
+Combat work has not begun.
 
 ## Released authority
 
@@ -25,17 +25,16 @@ not begun.
 
 ## Active TD-007 checkpoint
 
-- Completed stage: Reconnaissance Sergeant / `reconnaissance_sergeant`
-- Disposition: `CREATIVE LOCK`
+- Completed stage: Tactical Operations Specialist /
+  `tactical_operations_specialist`
+- Disposition: `EXPERIENCE READY`
 - Shell: `SS-RP007-BRAIDED-VERGE-v1 / SHELL READY`
 - Shell artifact:
   `Production Pipeline/Skyscraper Test Drives/TD-007/05-PLAYABLE-SLICE-SHELL.md`
 - Creative treatment:
   `Production Pipeline/Skyscraper Test Drives/TD-007/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
-- Creative thesis: **association without consolidation** - recurrence
-  supports a local relationship while distinctness, bounded difference,
-  noncausal order, closed unavailability, and compatible stewardship remain
-  separate
+- Experience blueprint:
+  `Production Pipeline/Skyscraper Test Drives/TD-007/07-EXPERIENCE-BLUEPRINT.md`
 - Product / world / operations / science:
   `GDB-TD007-v1 / WNMP-TD007-v1 / CFS-TD007-v1 / VE-TD007-v1`
 - Budget: `PBA-TD007-v1`
@@ -43,74 +42,87 @@ not begun.
 - Address: `RP-007 / SC-08 / BV-00-BV-30`
 - Sole route: `TD007-RTA-001`
 - Graph: `IW-30 ROUTE CHOICE -> BV-00 -> BV-10 -> BV-20 -> BV-30`
+- Creative thesis: **association without consolidation**
 - Pacing: `32-44` minutes clean; `19-27` minutes mastered
+- Stable normal identities:
+  `horizon-archive-rp007-braided-verge-save-v1` /
+  `rp007.braided-verge-save.v1` /
+  `rp007.braided-verge-controller.v1` /
+  `td007.route-controller.v1`
+- Stable semantic surface: one active owner group; deterministic headings,
+  focus and `braided-verge-status`; native semantic actions only
 - Five equal any-order observations: distinct continuities; recurrent local
   association; bounded neutral difference; relative noncausal order; closed
   junction/unavailable interior with layered compatible stewardship
-- Learning: strict independent `PY-015`,
-  `RP007-VISION-GENERATION-01 / AI901-D1-O7`, and two explanations
-- Browser file truth: approved-plan, session-only, memory-backed,
-  relative-path UTF-8 one-write/one-read workspace; unconditional cleanup; no
-  arbitrary-Python, disk, external path, network, storage, or live-service
-  claim
-- Record: exact key/version/controller, ten root keys, fourteen note keys,
-  eight ordered evidence records, sanitation, atomic read-back/rollback,
-  immutable predecessors, and replay-free BV-30 restore
-- Visual roles: exactly `SC-08-PANORAMA-MASTER` and
-  `SC-08-CONTACT-DETAIL-MASTER`
-- Presentation lock: two incompatible material continuities remain separately
-  traceable through distributed saddle contacts; no hub, merged silhouette,
-  synchronized emission, answer-key lighting, anomalous difference, access
-  junction, native terminal, or world response
-- Accessibility: one active owner group; seven modalities; deterministic
-  focus; one polite atomic status; `>=44px`; non-color, forced-color,
-  reduced-motion, grayscale, desktop/laptop/narrow/effective-200 parity
-- Returns: exact write-free IW-30 or City Threshold only
+- Observation presentation: one unnumbered peer list; literal
+  `Available`/`Recorded`; solid/double non-color distinction; all `120` orders
+  converge; revisit idempotent
+- Learning: strict independent `PY-015` primary/trace/transfer,
+  `RP007-VISION-GENERATION-01 / AI901-D1-O7` primary/retrieval/transfer, and
+  two separate explanations
+- Browser file truth: approved-plan, session-only, fresh unshared
+  memory-backed relative-path UTF-8 one-write/one-read workspace;
+  unconditional cleanup; exact truthful label; no arbitrary Python, disk,
+  network, external path, storage, or live-service claim
+- Record: exact ten ordered root keys, fourteen ordered note keys, eight
+  ordered evidence records, strict sanitation, atomic read-back/rollback,
+  immutable TD-006/TD-005/TD-004 bytes, replay-free BV-30 restore
+- Scene roles: exactly `SC-08-PANORAMA-MASTER` and
+  `SC-08-CONTACT-DETAIL-MASTER`; registered semantic regions are metadata,
+  never image-map evidence; exact SC-07/SC-08 role/alt/crop matrix
+- Responsive/accessibility: four exact layouts; seven modalities through one
+  semantic one-hit seam; `>=44px`; forced-color, reduced-motion, grayscale,
+  silence, focus, status, target, crop, and overflow parity
+- Fixture: `td007-braided-verge-v1`; loopback `127.0.0.1:4179`; exactly 56
+  allowlisted product scenarios; exactly two separately counted harness
+  elements; frozen memory only; no URL/arbitrary state/storage/network;
+  production excluded
+- Returns: exact write-free/replay-free IW-30 or City Threshold only
 - Hard stop: BV-30 before every RP-008 or later cue, route, event, state, or
   meaning
 - Budget caps: JS `<=1,407,590`; CSS `<=95,741`; modules `<=202`; exactly at
   most two image-only assets totaling `<=8,388,608`; total media
   `<=38,074,875`
-- Recon variances: none
-- Recon validation: required-section trace `PASS`; Stage Metrics JSON parse
-  `PASS`; focused RP-007 protected suite `13/13 PASS`; RP-007 mapping
-  self-test `PASS`; patch whitespace check `PASS`
-- Marine deployment: Tactical Operations Specialist next; no Tactical or
-  later Marine work has begun
-- Synchronization: local Recon commit only; no Recon push is authorized
+- Tactical variances: none
+- Tactical validation: required-section trace `PASS`; 56-scenario count
+  `PASS`; focused RP-007 protected suite `13/13 PASS`; mapping self-test
+  `PASS`; Stage Metrics JSON parse `PASS`; patch whitespace check `PASS`
+- Marine deployment: Combat Engineer next; no Combat or later Marine work has
+  begun
+- Synchronization: local Tactical commit only; no Tactical push is authorized
 
 ## Exact next action
 
-**Run Tactical Operations Specialist / `tactical_operations_specialist` for
-TD-007.**
+**Run Combat Engineer / `combat_engineer` for TD-007.**
 
-Read the Tactical profile, exact shell
-`SS-RP007-BRAIDED-VERGE-v1`, this `CREATIVE LOCK`, all cited strategic and
-current-control authorities, released TD-006 reconciliation, SC-08 brief,
-photorealistic charter, predecessor experience, and fixture/accessibility
-controls.
+Read the Combat profile, this exact `EXPERIENCE READY`, shell, creative
+treatment, all cited current-control authorities, released TD-006
+reconciliation, normal Interval Works integration/controller/UI/storage
+patterns, current App and style controls, fixture isolation pattern, RP-007
+frozen contract and protected reference, and `PBA-TD007-v1`.
 
-Create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-007/07-EXPERIENCE-BLUEPRINT.md`.
-Define the complete state/component/semantic map; IW-30 route-choice and
-return independence; seven-modality validation and one-hit convergence;
-SC-07/SC-08 world-role/alternative-text matrix; BV-00 orientation; registered
-panorama/detail geometry; five equal any-order observation controls and
-Recorded behavior; owner/focus/status/error identities; Python and memory
-workspace lifecycle; independent AI-901 forms and explanations; conjunctive
-review; exact record preview; save/read-back/failure/rollback/restore/return;
-desktop/laptop/narrow/effective-200, forced-color, reduced-motion, grayscale,
-target, overflow, crop/hotspot, local-request, and runtime-log behavior; and
-one closed storage-free fixture plan with separate product and harness counts.
+Implement the exact normal `TD007-RTA-001` route, strict predecessor
+validation and one-hit token flow, `BV-00-BV-30` controller, exact sanitizer
+and persistence adapter, approved memory-only PY-015 workspace, independent
+AI-901 forms and explanations, five equal any-order observations, conjunctive
+review, strict preview/save/read-back/rollback/restore/returns, scene resolver,
+semantic production UI, focus/status/error/recovery behavior, App integration,
+responsive/accessibility structural CSS, direct future asset-role seams, and
+the closed 56-scenario storage-free fixture.
 
-Preserve the creative thesis, exact route, graph, pacing, state/alt matrix,
-five equal peers, strict independent evidence, truthful file work, record,
-sanitation, atomic recovery, accessibility, two-image budget, offline/Tour,
-invariant worlds, returns, reveal accounting, and BV-30 hard stop.
+Preserve exact released TD-006/TD-005/TD-004 bytes and identities; route,
+graph, five peers, strict independent evidence, file-work truth, record,
+privacy, atomic recovery, four layouts, seven modalities, two-image budget,
+offline/Tour, invariant worlds, exact returns, reveal accounting, and BV-30
+hard stop.
 
-Issue exactly `EXPERIENCE READY`, `REVISE`, or `HOLD`; update metrics and this
-handoff; make one dedicated local Tactical commit; and hand exactly to Combat
-Engineer. Do not perform Combat or later Marine work.
+Run the proportional focused, related, full, build, budget, source-exclusion,
+fixture-isolation, patch, and protected-file gates. Create exactly
+`Production Pipeline/Skyscraper Test Drives/TD-007/08-FUNCTIONAL-BUILD-REPORT.md`.
+Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`; update metrics and this
+handoff; make one dedicated Combat commit; push and verify the Combat gate;
+then hand exactly to Quartermaster. Do not perform Quartermaster or later
+Marine work.
 
 ## Frozen boundaries
 
