@@ -179,6 +179,27 @@
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
       "synchronization": "local-only; Image Specialist next",
       "nextStage": "Image Specialist"
+    },
+    {
+      "sequence": 10,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-07-29T16:08:00.000Z",
+      "endedAt": "2026-07-29T16:25:50.7980243Z",
+      "durationMs": 1070798,
+      "disposition": "PRESENTATION COMPLETE - RECURRENT-CONTACT REVEAL ACCEPTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-007/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP007-BRAIDED-VERGE-v1",
+      "returnFrom": "Quartermaster / CONTENT COMPLETE",
+      "routeContract": "TD007-RTA-001",
+      "presentationIdentity": "unchanged exact Quartermaster runtime; both SC-08 masters independently pass full-resolution, five-crop, grayscale, alt/caption, sealed-junction, nodule, and contextual-registration review; one initial-only reference reveal accepted",
+      "validation": "focused 40/40 / 1.066s; related TD-004 through TD-007 131/131 / 1.109s; full 865/865 / 8.217s; 15/15 validator self-tests; production build 198 modules / 7.93s; PBA-TD007-v1 PASS; root/deep/all 17 emitted assets and fixture served PASS; predecessor/reveal/leakage/cleanup checks PASS; Browser backend unavailable so no fresh live browser viewport claim",
+      "variances": "none; live Browser review unavailable in this session and delegated to independent Intelligence release reproduction; native runtime sources remain deterministic 1672 x 941 enlargements; detail registration is contextual rather than a literal panorama crop",
+      "reveal": "Visual Direction/Production Masters/2026-07-29-rp007-recurrent-contact-reveal/rp007-recurrent-contact-reveal-v1.png / 1672 x 941 / 2,679,896 bytes / 9D3E21DA68F979F46FF2099DE192DBC9298736953F51DF9292C102C585CE2FCB / one initial, zero recovery, no third / board revision 17",
+      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; Intelligence reconciles the immutable hash without creating a recursive successor commit.",
+      "synchronization": "local-only; Intelligence Officer next; no push authorized",
+      "nextStage": "Intelligence Officer"
     }
   ]
 }

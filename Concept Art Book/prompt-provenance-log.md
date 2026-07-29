@@ -4,6 +4,24 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-07-29 - RP-007 recurrent-contact cycle reveal
+
+- **Decision:** close the Image Specialist candidate
+  `RP-007 / SC-08 - recurrent exposed saddles preserve two separately
+  traceable continuities`.
+- **Asset and complete prompt/provenance:** [RP-007 recurrent-contact cycle
+  reveal](../Visual%20Direction/Production%20Masters/2026-07-29-rp007-recurrent-contact-reveal/PROVENANCE.md).
+- **Mode:** exactly one built-in `image_gen` initial generation; accepted at
+  original resolution; no recovery, edit, variant, reference, or CLI/API
+  fallback.
+- **Creative Production board:** persistent board
+  `294b4090-1b9a-4831-bf98-eecaabacd695`; item
+  `td007-cycle-reveal`; begin revision `16`; completion revision `17`.
+- **Status:** Image Specialist
+  `PRESENTATION COMPLETE - RECURRENT-CONTACT REVEAL ACCEPTED`; spoiler-safe
+  canonical reference candidate only, not runtime integration. Intelligence
+  acceptance remains mandatory before checklist closure and publication.
+
 ## 2026-07-29 - RP-007 SC-08 Braided Verge source and runtime masters
 
 - **Decision:** complete both and only both `SC-08` runtime roles while

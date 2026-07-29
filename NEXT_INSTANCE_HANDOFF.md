@@ -7,8 +7,8 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 
 The authorized three-hour Skyscraper cycle is active and non-overlapping.
 TD-006 remains the synchronized released product. TD-007 has passed all five
-strategic stages and the first four Marine stages through Quartermaster.
-Image Specialist work has not begun.
+strategic stages and all five production Marines through Image Specialist.
+Intelligence Officer release work has not begun.
 
 ## Released authority
 
@@ -23,8 +23,9 @@ Image Specialist work has not begun.
 
 ## Active TD-007 checkpoint
 
-- Completed stage: Quartermaster / `quartermaster`
-- Disposition: `CONTENT COMPLETE`
+- Completed stage: Image Specialist / `image_specialist`
+- Disposition:
+  `PRESENTATION COMPLETE - RECURRENT-CONTACT REVEAL ACCEPTED`
 - Shell: `SS-RP007-BRAIDED-VERGE-v1 / SHELL READY`
 - Shell:
   `Production Pipeline/Skyscraper Test Drives/TD-007/05-PLAYABLE-SLICE-SHELL.md`
@@ -36,6 +37,8 @@ Image Specialist work has not begun.
   `Production Pipeline/Skyscraper Test Drives/TD-007/08-FUNCTIONAL-BUILD-REPORT.md`
 - Content/asset ledger:
   `Production Pipeline/Skyscraper Test Drives/TD-007/09-CONTENT-ASSET-LEDGER.md`
+- Polish review:
+  `Production Pipeline/Skyscraper Test Drives/TD-007/10-POLISH-REVIEW.md`
 - Product / world / operations / science:
   `GDB-TD007-v1 / WNMP-TD007-v1 / CFS-TD007-v1 / VE-TD007-v1`
 - Budget: `PBA-TD007-v1`
@@ -85,13 +88,23 @@ Image Specialist work has not begun.
   predecessor media remain exact; no third image or new media class exists
 - Registered panorama/detail regions, state crops, four truthful alternatives,
   bounded caption, grayscale evidence, and narrow full-source fit are recorded
+- Runtime generation accounting: each role used one initial and one targeted
+  recovery; both rejected first drafts remained outside workspace/runtime/
+  canon/provenance/commit/reveal; no third attempt and no CLI/API fallback
+- Accepted reveal:
+  `Visual Direction/Production Masters/2026-07-29-rp007-recurrent-contact-reveal/rp007-recurrent-contact-reveal-v1.png`
+  / `1672 x 941` / `2,679,896` bytes /
+  `9D3E21DA68F979F46FF2099DE192DBC9298736953F51DF9292C102C585CE2FCB`
+- Reveal checklist candidate:
+  `[x] RP-007 / SC-08 - recurrent exposed saddles preserve two separately
+  traceable continuities`
+- Reveal generation accounting: exactly one initial built-in generation,
+  accepted at original resolution; zero recovery, edit, variant, reference, or
+  third attempt; reference-only and not runtime
 - Creative Production board:
-  `294b4090-1b9a-4831-bf98-eecaabacd695`; stable items
-  `td007-sc08-panorama` and `td007-sc08-contact-detail`; accepted completions
-  at revisions `11` and `12`
-- Generation accounting: each role used one initial and one targeted recovery;
-  both rejected first drafts remained outside workspace/runtime/canon/
-  provenance/commit/reveal; no third attempt and no CLI/API fallback
+  `294b4090-1b9a-4831-bf98-eecaabacd695`; runtime items completed revisions
+  `11` and `12`; reveal item `td007-cycle-reveal` began revision `16` and
+  completed revision `17`
 - Build identity: `198` modules; JS `1,392,211` bytes /
   `37FC8DDA6435EAB878410746C6EA989C5A7141E359C330F1A0B6BCC8AC4ADCE6`;
   CSS `95,459` bytes /
@@ -100,56 +113,56 @@ Image Specialist work has not begun.
   `6C87C94FD07FCD52963EB320C04FEC0D15C46FAD244FB5A0AB02422F02D7C836`
 - Runtime media: `15` files / `33,421,873` bytes; new SC-08 images:
   `2` / `3,735,606` bytes; accepted predecessor media missing: `0`
-- Quartermaster validation: focused `40/40`; related `131/131`; full
-  `865/865`; fifteen validator self-tests; build; `PBA-TD007-v1`; root/deep/
-  all 17 emitted assets; fixture; source/provenance/placeholder/leakage/patch
-  checks all `PASS`
-- Quartermaster variances: none
-- Honest limitation: native outputs were `1672 x 941` and deterministically
-  enlarged to exact `3840 x 2160`; no native-4K detail claim
-- Marine deployment: Image Specialist next; no Image Specialist or
-  Intelligence Officer work has begun
-- Synchronization: dedicated Quartermaster commit is local-only at handoff;
-  no push is authorized for this stage
+- Image validation: focused `40/40`; related `131/131`; full `865/865`;
+  fifteen validator self-tests; build; `PBA-TD007-v1`; root/deep/all 17
+  emitted assets; fixture served identity; original-resolution/crop/grayscale/
+  alt/caption/junction/nodule/registration/leakage/cleanup checks all `PASS`
+- Image changes to production/runtime/fixture: none
+- Image formal variances: none
+- Honest limitations: native runtime outputs were `1672 x 941` and
+  deterministically enlarged to exact `3840 x 2160` without a native-4K
+  detail claim; detail registration is contextual, not a literal panorama
+  crop; the Image-stage in-app Browser backend was unavailable, so no fresh
+  live viewport, live OS forced-color/reduced-motion, or live-console claim
+  was made
+- Marine deployment: Intelligence Officer next
+- Synchronization: dedicated Image Specialist commit is local-only at
+  handoff; no push was authorized for Image
 
 ## Exact next action
 
-**Run Image Specialist / `image_specialist` for TD-007.**
+**Run Intelligence Officer / `intelligence_officer` for TD-007.**
 
-Read the Image Specialist profile, this exact `CONTENT COMPLETE`, shell,
-creative treatment, experience blueprint, functional report, content/asset
-ledger, complete source/provenance package, current runtime integration,
-closed fixture, recent reveal history, exact visual controls, and
-`PBA-TD007-v1`.
+Use a fresh independent context. Read the Intelligence Officer profile, the
+exact shell, all TD-007 stage artifacts 01 through 10, both provenance
+packages, exact source/runtime/reveal identities, current source/build,
+closed fixture, `PBA-TD007-v1`, recent release evidence, and exact master
+controls cited by the profile.
 
-Independently inspect both accepted masters at full resolution and through the
-live `1920 x 1080`, `1366 x 768`, `390 x 844`, and effective-`200%` matrix.
-Review the panorama saddle-versus-aperture reading, sealed opaque junction,
-detail nodule, material/context registration, five crop responsibilities,
-grayscale, forced colors, reduced motion, alternative text, focus, targets,
-containment, local-only requests, and runtime logs. Apply only bounded
-presentation polish without changing mechanics, geometry, evidence, schema,
-owners, route, image count, or world meaning.
+Independently compare the as-built result line by line with the shell. Re-run
+focused, related, full, fifteen-validator, build, release-budget,
+predecessor-media, protected-source, fixture/protected/later/source-map,
+served root/deep/all-asset identity, non-overlapping release E2E, exact
+desktop/intermediate/narrow/effective-200, focus/status/target/containment,
+forced-color, reduced-motion, grayscale/crop/alternative, local request/log,
+process-cleanup, patch, and synchronization gates without inspecting or
+mutating Martin's browser storage or campaign save.
 
-Select one spoiler-safe accepted SC-08 visual decision after comparing recent
-canon. Generate exactly one initial cycle reveal. If and only if it fails
-Image Specialist QA before entering the project, document the rejection and
-make one targeted recovery; a second failure is `HOLD`, with no third attempt.
-Rejected material stays outside workspace, canon, runtime, provenance package,
-commit, and user-facing reveal.
-
-Run focused, related, full, validator, build, PBA release, served identity,
-predecessor-media, responsive/accessibility, fixture/protected/later-marker,
-process-cleanup, patch, and reveal-provenance gates. Create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-007/10-POLISH-REVIEW.md`.
-Issue `PRESENTATION COMPLETE`, `REVISE`, or `HOLD`; update metrics and this
-handoff; make one dedicated local Image Specialist commit; then hand exactly
-to Intelligence Officer. Do not perform Intelligence release work or push.
+Validate the exact accepted reveal unchanged. Classify every variance and
+limitation, including the two rejected runtime first attempts, the native
+source enlargement, contextual-not-literal detail registration, and
+Image-stage unavailable Browser observation. Do not generate a replacement.
+Update master truth and close the named checklist item only from accepted
+as-built evidence. Create exactly
+`Production Pipeline/Skyscraper Test Drives/TD-007/11-AS-BUILT-RECONCILIATION.md`.
+Issue `PASS - AS BUILT RELEASED`, `REVISE`, or `HOLD`, update metrics and the
+master controls warranted by accepted evidence, replace this handoff with one
+synchronized exact next action, commit, push, and verify
+`HEAD == origin/main == remote refs/heads/main`.
 
 ## Frozen boundaries
 
-- TD-006 remains released. TD-007 is not live until Intelligence releases the
-  as-built result.
+- TD-006 remains released until Intelligence independently releases TD-007.
 - `TD007-RTA-001` is the sole transition. It is fresh, Pilot-owned, one-hit,
   validation-before-consumption, zero-write, zero-evidence, and
   zero-world-effect.
@@ -165,7 +178,8 @@ to Intelligence Officer. Do not perform Intelligence release work or push.
 - Preserve exact TD-004 through TD-006 bytes, routes, evidence, returns,
   runtime assets, sanitation, atomic recovery, replay-free restore,
   accessibility, offline/Tour behavior, invariant worlds, and budgets.
-- Preserve exactly two SC-08 runtime assets and their accepted identities.
+- Preserve exactly two SC-08 runtime assets and the exact one reference-only
+  reveal candidate.
 - Protected RP-007 code remains reference-only and absent from production.
 - No RP-008 cue, RP-013, successor, post-ending content, hidden lore, unity,
   cause, purpose, identity, reward, access, authority, response, or world
