@@ -19,8 +19,9 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
   `td007-cycle-reveal`; begin revision `16`; completion revision `17`.
 - **Status:** Image Specialist
   `PRESENTATION COMPLETE - RECURRENT-CONTACT REVEAL ACCEPTED`; spoiler-safe
-  canonical reference candidate only, not runtime integration. Intelligence
-  acceptance remains mandatory before checklist closure and publication.
+  canonical reference only, not runtime integration. Intelligence issued
+  `PASS - AS BUILT RELEASED`, accepted the exact candidate unchanged, and
+  closed the named RP-007/SC-08 checklist item.
 
 ## 2026-07-29 - RP-007 SC-08 Braided Verge source and runtime masters
 
@@ -36,8 +37,9 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Derivatives:** deterministic Pillow `12.2.0` RGB/Lanczos enlargement to
   exact `3840 x 2160` lossless PNG, then WebP quality `96`, method `6`,
   exact RGB. This makes no native-4K detail claim.
-- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist and
-  Intelligence review remain mandatory.
+- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist
+  `PRESENTATION COMPLETE`; Intelligence `PASS - AS BUILT RELEASED`. Both
+  runtime roles are accepted exactly as built.
 
 ## 2026-07-27 - RP-005 SC-06 Manyfold Return source and runtime masters
 

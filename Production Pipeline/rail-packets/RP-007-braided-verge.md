@@ -1,6 +1,21 @@
 # RP-007 — Braided Verge
 
-## TD-007 Mission shell control - 2026-07-29
+## TD-007 Intelligence release control - 2026-07-29
+
+- **Disposition:** `PASS - AS BUILT RELEASED /
+  SS-RP007-BRAIDED-VERGE-v1`. Sole fresh Pilot route `TD007-RTA-001`,
+  BV-00-BV-30, five equal observations, independent learning, bounded
+  persistence, exact returns, two SC-08 runtime roles, and release budget
+  pass independent reconciliation.
+- **Release evidence:** focused `40/40`, related `131/131`, full `865/865`,
+  validators `15/15`, corrected affected `10/10`, 198-module build, release
+  PBA, exact served identity, and four-layout live heading/accessibility
+  review pass.
+- **Hard boundary:** BV-30. No RP-008 route, unity, coordination, cause,
+  purpose, identity, junction contents, reward, access, authority, response,
+  RP-013, successor, or post-ending content is open.
+
+## Dated TD-007 Mission shell control - 2026-07-29
 
 - **Disposition:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`. Mission found
   the strategic package conflict-free and froze exact `TD007-RTA-001`,

@@ -1,6 +1,30 @@
 # Horizon Archive Production Readiness Spine
 
-## TD-007 Mission current control - 2026-07-29
+## TD-007 Intelligence release current control - 2026-07-29
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-007 /
+  SS-RP007-BRAIDED-VERGE-v1` on corrected candidate
+  `5234b95d7c4126eeba6acdbfc56a7c4714c128cb`.
+- **Independent gate:** focused `40/40`; related `131/131`; full `865/865`;
+  readiness `15/15`; corrected affected UI/fixture `10/10`; build `198`
+  modules / `8.539s` wall; release `PBA-TD007-v1 PASS`; exact root/deep/all
+  17 served assets; four-layout live containment/accessibility matrix.
+- **Release identity:** JS `1,392,211` bytes /
+  `37FC8DDA6435EAB878410746C6EA989C5A7141E359C330F1A0B6BCC8AC4ADCE6`;
+  CSS `95,573` bytes /
+  `AB0B450E5CE4C6890F197BA4D7E82B8797919010FC2BFFEE8E1747E5A2043C98`;
+  runtime media `33,421,873` bytes / `15`, with exactly two new SC-08
+  images totaling `3,735,606` bytes.
+- **Presentation gate:** exact panorama/detail roles, long-heading
+  containment, desktop, laptop, narrow, effective-200, forced-color,
+  reduced-motion, focus, status, targets, and local-only review pass.
+  Exactly one recurrent-contact reveal is accepted reference-only.
+- **Boundary:** BV-30 plus exact Interval Works and City Threshold returns
+  are final. No RP-008 route, unity, cause, purpose, identity, reward,
+  access, authority, response, RP-013, successor, or post-ending content is
+  open.
+
+## Dated TD-007 Mission control - 2026-07-29
 
 - **Disposition:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`. Mission
   reconciled `GDB-TD007-v1`, `WNMP-TD007-v1`, `CFS-TD007-v1`,

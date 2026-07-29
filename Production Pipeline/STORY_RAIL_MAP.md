@@ -1,6 +1,24 @@
 # Horizon Archive Story Rail Map
 
-## TD-007 Mission shell current control - 2026-07-29
+## TD-007 Intelligence release current control - 2026-07-29
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-007 /
+  SS-RP007-BRAIDED-VERGE-v1`. Normal play advances from exact released
+  TD-006 IW-30 through sole fresh Pilot-owned `TD007-RTA-001` into complete
+  `RP-007 / SC-08 / BV-00-BV-30`.
+- **Released graph:** `IW-30 / SC-07 -> BV-00 -> BV-10 -> BV-20 -> BV-30 /
+  SC-08`, followed only by exact Interval Works or City Threshold returns.
+  Invalid or unsaved TD-007 state fails closed to IW-30 and requires fresh
+  Pilot intent.
+- **Released evidence:** five equal observations in all 120 orders,
+  independent `PY-015`, `RP007-VISION-GENERATION-01`, two explanations,
+  atomic rollback-safe persistence, replay-free restore, invariant
+  SC-07/SC-08, and exactly two direct SC-08 image roles pass release.
+- **Authoritative rail stop:** BV-30 or either exact return. No RP-008 route,
+  unity, cause, purpose, identity, closed contents, reward, access,
+  authority, response, RP-013, successor, or post-ending exposure is open.
+
+## Dated TD-007 Mission shell control - 2026-07-29
 
 - **Construction gate:** `SHELL READY / SS-RP007-BRAIDED-VERGE-v1`.
   The selected adjacent rail is exactly `RP-007 / SC-08 / BV-00-BV-30`;

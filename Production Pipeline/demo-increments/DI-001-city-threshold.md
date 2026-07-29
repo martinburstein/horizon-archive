@@ -1,6 +1,25 @@
 # DI-001 — City Threshold protected staging pass
 
-## Intelligence Officer current control - 2026-07-29
+## Intelligence Officer current control - TD-007 release / 2026-07-29
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-007 /
+  SS-RP007-BRAIDED-VERGE-v1`. The accepted Demo continues from exact TD-006
+  IW-30 through complete Braided Verge BV-00-BV-30.
+- **Included:** five equal observations; independent Python, AI-901, and
+  explanation evidence; atomic local record/rollback/recovery; replay-free
+  restore; exact Interval Works and City Threshold returns; and exactly two
+  direct SC-08 panorama/contact-detail runtime masters.
+- **Closed checklist item:** `[x] RP-007 / SC-08 - recurrent exposed saddles
+  preserve two separately traceable continuities`.
+- **Reveal:** `../../Visual Direction/Production Masters/2026-07-29-rp007-recurrent-contact-reveal/rp007-recurrent-contact-reveal-v1.png`,
+  `1672 x 941`, `2,679,896` bytes, SHA-256
+  `9D3E21DA68F979F46FF2099DE192DBC9298736953F51DF9292C102C585CE2FCB`;
+  accepted spoiler-safe reference-only, not runtime media.
+- **Stop:** BV-30 or either authorized return. No RP-008 route, unity, cause,
+  purpose, identity, reward, access, authority, response, RP-013, successor,
+  post-ending content, or world effect is included.
+
+## Dated TD-006 Intelligence control - 2026-07-29
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-006 /
   SS-RP006-INTERVAL-WORKS-v1`. The accepted Demo now continues from exact

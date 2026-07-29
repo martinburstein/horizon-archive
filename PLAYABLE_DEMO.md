@@ -14,20 +14,19 @@ Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
 The accepted normal campaign continuation reaches complete `RP-003 / SC-04`,
-then complete `RP-004 / SC-05`, and from exact `TR-40` permits one fresh
-validated entry into complete `RP-005 / SC-06 / MF-00-MF-30`. Manyfold
-Return includes four equal physical observations, bounded Python and AI-901
-practice with independent explanations, five-owner review, deterministic
-atomic local save/rollback/recovery, replay-free restore, and exact write-free
-returns to Three-Current Reach or City Threshold. Invalid, private, stale,
-partial, forged, interrupted, or Tour-derived state fails closed without
-consuming a future valid intent.
+`RP-004 / SC-05`, `RP-005 / SC-06`, `RP-006 / SC-07`, and now exact fresh
+entry into complete `RP-007 / SC-08 / BV-00-BV-30`. Braided Verge includes
+five equal physical observations, bounded Python and AI-901 practice with
+independent explanations, deterministic atomic local save/rollback/recovery,
+replay-free restore, and exact write-free returns to Interval Works or City
+Threshold. Invalid, private, stale, partial, forged, interrupted, or
+Tour-derived state fails closed without consuming a future valid intent.
 
-The accepted boundary stops at MF-30 or either authorized return. The
-serviced continuation is scenery only. No direct Calibration/Civic shortcut,
-RP-006 route, RP-013, successor, reward, access, authority, external action,
-live service, or physical world response is included. SC-04, SC-05, and
-SC-06 neither receive nor respond to the local records.
+The accepted boundary stops at BV-30 or either authorized return. Existing
+continuation is scenery only. No RP-008 route, RP-013, successor, unity,
+cause, purpose, identity, reward, access, authority, external action, live
+service, or physical world response is included. SC-04 through SC-08 neither
+receive nor respond to the local records.
 
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.

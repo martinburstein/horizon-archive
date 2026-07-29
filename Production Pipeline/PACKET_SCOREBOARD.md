@@ -1,6 +1,25 @@
 # Rail Packet Scoreboard
 
-## TD-007 Mission shell current control - 2026-07-29
+## TD-007 Intelligence release current control - 2026-07-29
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-007 /
+  SS-RP007-BRAIDED-VERGE-v1`. Normal play now advances from exact released
+  TD-006 IW-30 through sole validated `TD007-RTA-001` into complete
+  `RP-007 / SC-08 / BV-00-BV-30`.
+- **Included:** five equal any-order observations; independent `PY-015`,
+  `RP007-VISION-GENERATION-01`, and two explanation records; strict ten-key/
+  fourteen-note-key/eight-record persistence; atomic rollback-safe save;
+  replay-free restore; exact Interval Works and City Threshold returns; and
+  exactly two direct SC-08 runtime masters.
+- **Independent release gate:** focused `40/40`, related `131/131`, full
+  `865/865`, readiness `15/15`, corrected affected `10/10`, 198-module
+  build, `PBA-TD007-v1 PASS`, exact served bytes, and a four-layout live
+  heading/accessibility matrix pass.
+- **Exact stop:** BV-30 or either authorized return. No RP-008 route, unity,
+  cause, purpose, identity, reward, access, authority, response, RP-013,
+  successor, post-ending content, or world effect is released.
+
+## Dated TD-007 Mission shell control - 2026-07-29
 
 - **RP-007 construction status:** `SHELL READY /
   SS-RP007-BRAIDED-VERGE-v1`. Mission froze sole Pilot-owned

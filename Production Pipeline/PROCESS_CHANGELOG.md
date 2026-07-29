@@ -17,6 +17,30 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-07-29 / TD-007 Intelligence release - TUNE
+
+- **Observed:** the ten predecessor stages used `6,940,587ms` (`115.68m`).
+  Functional, content, and source-level presentation gates passed, but fresh
+  Intelligence rendering found the longest BV-20 heading clipped at
+  `1920 x 1080`. The bounded Image correction then passed affected `10/10`,
+  a 198-module build, release PBA, exact served identity, and four live
+  layout checks without repeating unrelated green suites.
+- **Decision:** `TUNE`. Keep the sequential roles, versioned shell, return
+  ownership, full release ladder, and one reveal. Before
+  `PRESENTATION COMPLETE`, Image Specialist must live-render the longest
+  heading or label in every shell-defined layout in addition to source tests.
+- **Expected benefit:** text-containment defects return from the presentation
+  owner before final release while independent Intelligence remains intact.
+- **Preserved guardrails:** product, canon, learning separation, privacy,
+  accessibility, persistence, invariant world, budget, protected work, exact
+  route/hard stop, and one accepted reveal remain unchanged.
+- **Validation:** the next visual cycle records exact longest-copy bounds,
+  glyph containment, document containment, and semantic heading count at
+  desktop, intermediate, narrow, and effective-200 before Image handoff.
+- **Rollback trigger:** longest-copy sampling hides ordinary-state escapes,
+  becomes a substitute for the full state matrix, or adds churn without
+  catching presentation defects earlier.
+
 ## 2026-07-27 / TD-005 Intelligence release - TUNE
 
 - **Observed:** fourteen sequential stages used `15,495,814ms` (`258.26m`)
