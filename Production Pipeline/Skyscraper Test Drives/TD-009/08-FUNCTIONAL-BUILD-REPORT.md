@@ -11,7 +11,7 @@
 | Address | `RP-009 / SC-10 / OF-00-OF-30` |
 | Route | `TD009-RTA-001` |
 | Build | Normal production integration |
-| Disposition | **`FUNCTIONALLY COMPLETE`** |
+| Disposition | **`FUNCTIONALLY COMPLETE - RETURN CORRECTED`** |
 
 ## Exact build objective
 
@@ -158,6 +158,41 @@ runtime payload exists.
   verification completed at handoff
 - **Disposition:** **`FUNCTIONALLY COMPLETE`**
 
+## Returned Combat correction pass
+
+Intelligence returned the candidate at commit
+`6a5d9caad78ea6a906e1dc8aaa8f6f47dcc46b74` for exactly two functional
+corrections. Combat independently reproduced and resolved both without touching
+the Quartermaster-owned rollback sentence:
+
+- `TD009-FUNC-001`: the pre-save review now begins with three exact ordered,
+  separately named, read-only scope rows: retained RP-007 summary, retained
+  RP-008 summary, and candidate RP-009 edge ledger. The following six
+  observation and eight evidence rows remain independently visible under the
+  candidate scope; the record schema, evidence, credit, and save behavior are
+  unchanged.
+- `TD009-FUNC-002`: every one of the eight OF-20 learning groups now renders
+  `PILOT // COURSE WORK` as its active action owner. Builder and Teacher labels
+  survive only as visibly subordinate content attribution.
+- Focused rendered-contract tests fail on an absent, merged, renamed, or
+  reordered RP-008/RP-009 scope and on any non-Pilot active owner across the
+  eight groups.
+
+Correction validation passed: focused `16/16`; connected TD-007 through
+TD-009 `95/95`; full product `898/898` twice, including the automated release
+validator; mappings `11/11`; production build `206` modules; served production
+`22/22`; served fixture `4/4`; scoped source leakage, patch integrity, and
+owned-port cleanup. `PBA-TD009-v1` passes at JavaScript `1,509,975` bytes / SHA-
+256 `CEAF606E998375C78967E3CC67CB3995500C074B8B8B0ECF740F42C1B9721754`,
+CSS `104,035` bytes / SHA-256
+`1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`,
+and exact predecessor media `17 / 37,410,731` bytes.
+
+No route, graph, observation or evidence meaning, record schema, save behavior,
+privacy, accessibility, image waiver, CSS environment, return, canon,
+invariant-world boundary, or hard stop changed. `TD009-CONT-002` remains open
+and owned solely by Quartermaster.
+
 ## Exact Quartermaster handoff
 
 - **Stage / agent:** Quartermaster / `quartermaster`
@@ -165,22 +200,20 @@ runtime payload exists.
 - **Starting authority:** this `FUNCTIONALLY COMPLETE`, exact shell, Creative
   Treatment, Experience Blueprint, normal production build, closed fixture,
   and `PBA-TD009-v1`
-- **Bounded objective:** retire every player-facing structural placeholder and
-  complete the content/asset/provenance ledger without redesigning behavior
-- **Required asset work:** acquire or create exactly `SC-10-PANORAMA-MASTER`
-  and `SC-10-EXPOSED-EDGE-DETAIL-MASTER`; directly import both; record source,
-  full-resolution and emitted identities and provenance; register responsive
-  crops/hotspots; retire both placeholders
-- **Required content work:** polish owner headings, six equal observation
-  labels, PY-017/prompt-boundary/explanation copy, review/save/cancel/recovery/
-  restore/return language, and exact alternatives inside the semantic locks
+- **Bounded objective:** resolve only `TD009-CONT-002` by correcting the
+  rollback message from prior RP-008 bytes to prior RP-009 bytes or verified
+  absence, then rerun the bounded content and exact UTF-8 audit
+- **Image boundary:** Martin's TD-009-only image deferral and Image Specialist /
+  reveal waiver remain in force; make no image or board call
 - **Validation:** focused/connected/full, all validators, build, two-role
   runtime import, all predecessor media identities, no third/disallowed media,
   placeholder/privacy/canon/hard-stop scans, and `PBA-TD009-v1`
-- **Stop boundary:** no functional redesign, new route/evidence/schema, third
-  image, new audio/font/video/network payload, RP-010/RP-013/successor/later
+- **Stop boundary:** no functional redesign, owner/scope regression, new
+  route/evidence/schema, image call, new audio/font/video/network payload,
+  RP-010/RP-013/successor/later
   content, hidden lore, protected files, or Martin browser/save access
 - **Required output:**
   `Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md`
 - **Required disposition:** `CONTENT COMPLETE`, `REVISE`, or `HOLD`
-- **Next recipient:** Image Specialist / `image_specialist`
+- **Next recipient:** fresh independent Intelligence Officer /
+  `intelligence_officer`; Image Specialist remains waived for TD-009 only

@@ -63,21 +63,18 @@ synchronization were not claimed after the decisive contract failure.
 
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against
-`SS-RP009-OCCLUDED-FOLD-v1`.
+Run **Quartermaster / `quartermaster` only** against
+`SS-RP009-OCCLUDED-FOLD-v1` after the dedicated Combat correction commit.
 
-Implement `TD009-FUNC-001` and `TD009-FUNC-002` exactly as specified in the
-Intelligence reconciliation. Add focused rendered-contract tests that fail if
-the RP-008 or RP-009 review scope is absent, merged, renamed, or reordered, and
-that assert `PILOT // COURSE WORK` as the active owner for every OF-20 group.
-Do not alter route, graph, observation/evidence semantics, save schema,
-accessibility, visual waiver, returns, invariant world, or hard stop. Issue one
-dedicated stable Combat correction commit and synchronized handoff.
+Resolve only `TD009-CONT-002`: the rollback message must truthfully name prior
+RP-009 bytes or verified absence, not prior RP-008 bytes. Add exact UTF-8 and
+rollback-path coverage, rerun the bounded content audit, and confirm the
+corrected three ordered record scopes and all eight Pilot-owned course-work
+groups remain intact. Make one dedicated local Quartermaster correction commit
+and synchronize the handoff to fresh independent Intelligence.
 
-Do not deploy Quartermaster or Intelligence concurrently. After Combat is
-complete, Quartermaster must resolve `TD009-CONT-002`, rerun the bounded
-content/UTF-8 audit, and leave a new stable candidate for fresh independent
-Intelligence validation.
+Do not deploy Intelligence concurrently. Make no image or board call; Martin's
+TD-009-only image deferral and Image Specialist/reveal waiver remain in force.
 
 ## Recurring automation
 

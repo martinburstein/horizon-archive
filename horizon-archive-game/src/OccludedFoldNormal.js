@@ -130,14 +130,14 @@ const actionObservation = Object.freeze({
 const groups = Object.freeze({
   of00_orientation: ["OF-00 ARRIVE + ORIENT", "SYSTEM // EXPEDITION LEDGER", "of00-heading", [occludedFoldActions.inspect]],
   of10_observations: ["OF-10 SURVEY EXPOSED EDGES", "PILOT // EDGE SURVEY", "of10-heading", Object.keys(actionObservation)],
-  of20_python_primary: ["OF-20 PYTHON PRIMARY", "BUILDER WORK // SANITIZED REPLICA", "of20-python-primary-heading", [occludedFoldActions.pythonPrimary]],
-  of20_python_trace: ["OF-20 PYTHON TRACE", "TEACHER / COURSE // CLOSED-NOTE TRACE", "of20-python-trace-heading", [occludedFoldActions.pythonTrace]],
-  of20_python_transfer: ["OF-20 PYTHON TRANSFER", "BUILDER WORK // SANITIZED REPLICA", "of20-python-transfer-heading", [occludedFoldActions.pythonTransfer]],
-  of20_prompt_primary: ["OF-20 PROMPT BOUNDARY PRIMARY", "TEACHER // COURSE", "of20-prompt-primary-heading", [occludedFoldActions.visionPrimary]],
-  of20_prompt_retrieval: ["OF-20 PROMPT BOUNDARY RETRIEVAL", "TEACHER // COURSE", "of20-prompt-retrieval-heading", [occludedFoldActions.visionRetrieval]],
-  of20_prompt_transfer: ["OF-20 PROMPT BOUNDARY TRANSFER", "TEACHER // COURSE", "of20-prompt-transfer-heading", [occludedFoldActions.visionTransfer]],
-  of20_system_user_explanation: ["OF-20 SYSTEM AND USER RESPONSIBILITY", "TEACHER // COURSE", "of20-system-user-explanation-heading", [occludedFoldActions.capabilityBoundary]],
-  of20_truth_authority_explanation: ["OF-20 TRUTH AND AUTHORITY LIMIT", "TEACHER // COURSE", "of20-truth-authority-explanation-heading", [occludedFoldActions.relationBoundary]],
+  of20_python_primary: ["OF-20 PYTHON PRIMARY", "PILOT // COURSE WORK", "of20-python-primary-heading", [occludedFoldActions.pythonPrimary], "BUILDER WORK // SANITIZED REPLICA"],
+  of20_python_trace: ["OF-20 PYTHON TRACE", "PILOT // COURSE WORK", "of20-python-trace-heading", [occludedFoldActions.pythonTrace], "TEACHER / COURSE // CLOSED-NOTE TRACE"],
+  of20_python_transfer: ["OF-20 PYTHON TRANSFER", "PILOT // COURSE WORK", "of20-python-transfer-heading", [occludedFoldActions.pythonTransfer], "BUILDER WORK // SANITIZED REPLICA"],
+  of20_prompt_primary: ["OF-20 PROMPT BOUNDARY PRIMARY", "PILOT // COURSE WORK", "of20-prompt-primary-heading", [occludedFoldActions.visionPrimary], "TEACHER // COURSE"],
+  of20_prompt_retrieval: ["OF-20 PROMPT BOUNDARY RETRIEVAL", "PILOT // COURSE WORK", "of20-prompt-retrieval-heading", [occludedFoldActions.visionRetrieval], "TEACHER // COURSE"],
+  of20_prompt_transfer: ["OF-20 PROMPT BOUNDARY TRANSFER", "PILOT // COURSE WORK", "of20-prompt-transfer-heading", [occludedFoldActions.visionTransfer], "TEACHER // COURSE"],
+  of20_system_user_explanation: ["OF-20 SYSTEM AND USER RESPONSIBILITY", "PILOT // COURSE WORK", "of20-system-user-explanation-heading", [occludedFoldActions.capabilityBoundary], "TEACHER // COURSE"],
+  of20_truth_authority_explanation: ["OF-20 TRUTH AND AUTHORITY LIMIT", "PILOT // COURSE WORK", "of20-truth-authority-explanation-heading", [occludedFoldActions.relationBoundary], "TEACHER // COURSE"],
   of20_recovery: ["OF-20 RECOVERY", "SYSTEM // RECOVERY", "of20-recovery-heading", [occludedFoldActions.retry]],
   of20_review: ["OF-20 RECONCILE + SAVE", "PILOT // EXPEDITION REVIEW", "of20-review-heading", [occludedFoldActions.review]],
   of20_save: ["OF-20 LOCAL SAVE", "PILOT // EXPEDITION LEDGER", "of20-save-heading", [occludedFoldActions.save, occludedFoldActions.cancelSave]],
@@ -584,7 +584,7 @@ export function resolveOccludedFoldWorldScene(state) {
 }
 
 function stateFor(group, observations, evidence, extra = {}) {
-  const [phase, owner, headingId, localActions] = groups[group];
+  const [phase, owner, headingId, localActions, contentAttribution] = groups[group];
   const returnActions = group === "of20_transaction" ? []
     : [occludedFoldActions.returnInterval, occludedFoldActions.returnThreshold];
   return {
@@ -596,6 +596,7 @@ function stateFor(group, observations, evidence, extra = {}) {
     boardState: "SC-10",
     activeGroup: group,
     owner,
+    contentAttribution: contentAttribution ?? null,
     headingId,
     statusRegionId: "occluded-fold-status",
     statusMessageId: extra.statusMessageId ?? `td009:${group}:ready`,
@@ -1004,9 +1005,11 @@ export function createOccludedFoldNormalController(options = {}) {
         }
         tokens.add(token);
         const reviewRows = [
-          { id: "retained_rp007_summary", owner: "Retained — separately valid", state: "Complete" },
-          ...occludedFoldObservationIds.map((id) => ({ id, owner: `PILOT // ${id}`, state: "Complete" })),
-          ...expectedEvidence().map(([skill, form]) => ({ id: `${skill}:${form}`, owner: `${skill} / ${form}`, state: "Complete" })),
+          { id: "retained_rp007_scope", scope: "RP-007", owner: "Retained RP-007 summary", state: "Read-only // separately attributable" },
+          { id: "retained_rp008_scope", scope: "RP-008", owner: "Retained RP-008 summary", state: "Read-only // separately attributable" },
+          { id: "candidate_rp009_scope", scope: "RP-009", owner: "Candidate RP-009 edge ledger", state: "Read-only // separately attributable" },
+          ...occludedFoldObservationIds.map((id) => ({ id, scope: "RP-009", owner: `PILOT // ${id}`, state: "Complete" })),
+          ...expectedEvidence().map(([skill, form]) => ({ id: `${skill}:${form}`, scope: "RP-009", owner: `${skill} / ${form}`, state: "Complete" })),
         ];
         return Object.freeze({
           status: "bounded_review_visible_zero_credit",
@@ -1014,7 +1017,7 @@ export function createOccludedFoldNormalController(options = {}) {
           state: setGroup("of20_save", {
             reviewRows,
             statusMessageId: "td009:review:ready",
-            statusMessage: "Six observations and eight learning records are complete. The separately retained RP-007 summary remains valid. The strict bounded preview is ready for an explicit local-only save.",
+            statusMessage: "The retained RP-007 summary, retained RP-008 summary, and candidate RP-009 edge ledger are ordered, separate, and read-only. Six observations and eight learning records are complete; the strict bounded preview is ready for an explicit local-only save.",
           }),
         });
       }

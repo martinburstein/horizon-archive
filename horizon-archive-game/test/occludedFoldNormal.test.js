@@ -122,6 +122,40 @@ test("TD009 PY-017 and prompt responsibilities are independent and private-free"
   for (const form of ["primary", "retrieval", "transfer"]) { const answers = Object.fromEntries(rp009.ai901_contract.forms[form].map((item) => [item.id, { prompt_owner: item.prompt_owner, deciding_signal: item.deciding_signal }])); assert.equal(evaluateOccludedFoldPromptBoundary(form, answers).passed, true); }
   assert.match(OCCLUDED_FOLD_TRUTHFUL_WORKSPACE_LABEL, /does not execute arbitrary Python/);
 });
+test("TD009 all eight OF-20 course-work groups retain Pilot as active owner", () => {
+  const { controller } = subject();
+  enterLearning(controller);
+  const assertPilotOwner = (group) => {
+    const state = controller.getState();
+    assert.equal(state.activeGroup, group);
+    assert.equal(state.owner, "PILOT // COURSE WORK");
+    assert.match(state.contentAttribution, /^(?:BUILDER WORK|TEACHER)/);
+  };
+  assertPilotOwner("of20_python_primary");
+  update(controller, { learnerSource: pythonSource("primary") }); dispatch(controller, occludedFoldActions.pythonPrimary);
+  assertPilotOwner("of20_python_trace");
+  update(controller, occludedFoldPythonTraceAnswers); dispatch(controller, occludedFoldActions.pythonTrace);
+  assertPilotOwner("of20_python_transfer");
+  update(controller, { learnerSource: pythonSource("transfer") }); dispatch(controller, occludedFoldActions.pythonTransfer);
+  assertPilotOwner("of20_prompt_primary"); submitPrompt(controller, "primary");
+  assertPilotOwner("of20_prompt_retrieval"); submitPrompt(controller, "retrieval");
+  assertPilotOwner("of20_prompt_transfer"); submitPrompt(controller, "transfer");
+  assertPilotOwner("of20_system_user_explanation");
+  update(controller, { capabilityBoundary: occludedFoldExplanationAnswers.capabilityBoundary }); dispatch(controller, occludedFoldActions.capabilityBoundary);
+  assertPilotOwner("of20_truth_authority_explanation");
+});
+test("TD009 pre-save review renders three exact ordered record scopes without merging", () => {
+  const { controller } = subject(); advance(controller);
+  const reviewed = dispatch(controller, occludedFoldActions.review);
+  assert.deepEqual(reviewed.state.reviewRows.slice(0, 3).map(({ id, scope, owner, state }) => ({ id, scope, owner, state })), [
+    { id: "retained_rp007_scope", scope: "RP-007", owner: "Retained RP-007 summary", state: "Read-only // separately attributable" },
+    { id: "retained_rp008_scope", scope: "RP-008", owner: "Retained RP-008 summary", state: "Read-only // separately attributable" },
+    { id: "candidate_rp009_scope", scope: "RP-009", owner: "Candidate RP-009 edge ledger", state: "Read-only // separately attributable" },
+  ]);
+  assert.equal(reviewed.state.reviewRows.length, 17);
+  assert.equal(new Set(reviewed.state.reviewRows.slice(0, 3).map((row) => row.scope)).size, 3);
+  assert.equal(reviewed.state.reviewRows.slice(3).every((row) => row.scope === "RP-009"), true);
+});
 test("TD009 exact twelve-key save commits atomically, restores without replay, and hard-stops", () => {
   const { controller } = subject(); advance(controller); assert.equal(controller.getState().activeGroup, "of20_review"); dispatch(controller, occludedFoldActions.review); const saved = dispatch(controller, occludedFoldActions.save); assert.equal(saved.status, "save_committed_verified_restore"); assert.deepEqual(Object.keys(saved.record), ["version", "packetId", "mappingId", "checkpoint", "continuation", "cityStateDelta", "externalStateDelta", "successor", "retainedRp007Summary", "retainedRp008Summary", "edgeLedger", "evidence"]); assert.equal(saved.record.evidence.length, 8); assert.equal(saved.record.version, OCCLUDED_FOLD_RECORD_VERSION); assert.equal(sanitizeOccludedFoldSave(saved.record)?.checkpoint, "occluded_fold_complete"); const look = dispatch(controller, occludedFoldActions.notation); assert.equal(look.routeOpened, false); assert.equal(controller.getState().activeGroup, "of30_restore"); assert.equal(controller.getState().successor, null);
 });

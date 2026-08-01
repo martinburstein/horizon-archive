@@ -152,17 +152,33 @@ current broad behavioral suites all passed while these three shell-visible
 mismatches remained, so those assertions belong in the corrected candidate's
 focused gate before Intelligence reruns the full ladder.
 
+## Combat return evidence
+
+The returned Combat pass independently reproduced and resolved
+`TD009-FUNC-001` and `TD009-FUNC-002`. The corrected build exposes three exact
+ordered scope rows (`RP-007`, `RP-008`, `RP-009`) before the six observation
+and eight evidence responsibilities, and all eight OF-20 course-work groups
+render `PILOT // COURSE WORK` as active owner with Builder/Teacher retained
+only as subordinate content attribution. New focused tests bind both the
+controller state and rendered source contract.
+
+Correction evidence is focused `16/16`, connected `95/95`, full `898/898`
+twice including the release validator, mappings `11/11`, build `206` modules,
+served production `22/22`, served fixture `4/4`, and `PBA-TD009-v1` PASS at
+JavaScript `1,509,975` bytes, CSS `104,035` bytes, and exact predecessor media
+`17 / 37,410,731` bytes. This is Marine return evidence, not a new Intelligence
+release decision. `TD009-CONT-002` was deliberately not changed.
+
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against
-`SS-RP009-OCCLUDED-FOLD-v1`. Correct `TD009-FUNC-001` and
-`TD009-FUNC-002` without changing route, graph, learning, sanitation, save
-schema, accessibility, visual waiver, returns, invariant world, or hard stop;
-add focused rendered-contract tests; issue a new dedicated stable candidate
-commit and Combat handoff. Do not run Quartermaster or Intelligence
-concurrently. Quartermaster must subsequently resolve `TD009-CONT-002` and
-perform the bounded content re-audit before a fresh independent Intelligence
-gate.
+Run **Quartermaster / `quartermaster` only** against
+`SS-RP009-OCCLUDED-FOLD-v1`. Resolve only `TD009-CONT-002`: replace the false
+prior-RP-008 rollback sentence with truthful prior-RP-009-bytes-or-verified-
+absence copy and add the exact UTF-8/rollback-path coverage required here.
+Reconfirm the two Combat corrections remain intact, rerun the bounded content
+audit, and issue one dedicated local Quartermaster correction commit. Make no
+image or board call. Do not run Intelligence concurrently; a fresh independent
+Intelligence release gate follows the stable Quartermaster candidate.
 
 ## Synchronization and protection
 

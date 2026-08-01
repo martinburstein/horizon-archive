@@ -254,9 +254,12 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
 
       <section className="occluded-panel" aria-labelledby={state.headingId}>
         <header className="occluded-heading">
-          <p className="eyebrow">{state.owner}</p>
+          <p className="eyebrow" data-active-owner={state.owner}>{state.owner}</p>
           <h1 id={state.headingId} tabIndex="-1">{headingCopy[state.activeGroup]}</h1>
         </header>
+        {state.contentAttribution && (
+          <p className="occluded-content-attribution">Content attribution: {state.contentAttribution}</p>
+        )}
         <p>{introductionCopy[state.activeGroup]}</p>
         <p className="occluded-boundary">
           SANITIZED PRECOMPUTED REPLICAS ONLY · OFFLINE COURSE-AUTHORED PRACTICE ·
@@ -303,9 +306,9 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
         )}
 
         {state.reviewRows?.length > 0 && (
-          <ul className="occluded-review" aria-label="Retained summary plus fourteen independent responsibilities">
+          <ul className="occluded-review" aria-label="Three ordered record scopes plus fourteen independent responsibilities">
             {state.reviewRows.map((row) => (
-              <li key={row.id}><strong>{row.owner}</strong><span>{row.state}</span></li>
+              <li key={row.id} data-review-scope={row.scope}><strong>{row.owner}</strong><span>{row.state}</span></li>
             ))}
           </ul>
         )}

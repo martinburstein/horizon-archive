@@ -40,6 +40,17 @@ test("TD009 UI preserves native semantics, one status, deterministic focus, and 
   assert.match(css, /@media\(max-width:900px\)/);
 });
 
+test("TD009 rendered contract exposes the frozen active owner and three exact ordered scopes", () => {
+  assert.match(component, /data-active-owner=\{state\.owner\}>\{state\.owner\}/);
+  assert.match(component, /Content attribution: \{state\.contentAttribution\}/);
+  assert.match(component, /data-review-scope=\{row\.scope\}/);
+  const rp007 = controller.indexOf('id: "retained_rp007_scope", scope: "RP-007", owner: "Retained RP-007 summary"');
+  const rp008 = controller.indexOf('id: "retained_rp008_scope", scope: "RP-008", owner: "Retained RP-008 summary"');
+  const rp009 = controller.indexOf('id: "candidate_rp009_scope", scope: "RP-009", owner: "Candidate RP-009 edge ledger"');
+  assert.ok(rp007 >= 0 && rp007 < rp008 && rp008 < rp009);
+  assert.equal((controller.match(/\["OF-20 [^\n]+, "PILOT \/\/ COURSE WORK"/g) ?? []).length, 8);
+});
+
 test("TD009 is normal-App wired and protected identity remains excluded", () => {
   assert.match(app, /import \{ OccludedFold \} from "\.\/OccludedFold\.jsx"/);
   assert.match(app, /createOccludedFoldStorageAdapter/);

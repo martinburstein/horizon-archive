@@ -228,6 +228,26 @@
       "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only correction checkpoint; no AS BUILT RELEASED push gate and no HEAD == origin/main claim",
       "nextStage": "Combat Engineer only for TD009-FUNC-001 and TD009-FUNC-002; Quartermaster and fresh Intelligence remain strictly subsequent"
+    },
+    {
+      "sequence": 8.1,
+      "stage": "Combat Engineer Return Correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T19:54:05.961Z",
+      "endedAt": "2026-08-01T20:05:27.613Z",
+      "durationMs": 681652,
+      "disposition": "FUNCTIONALLY COMPLETE - RETURN CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "startingAuthority": "6a5d9caad78ea6a906e1dc8aaa8f6f47dcc46b74 / Intelligence REVISE",
+      "corrections": "TD009-FUNC-001 resolved with exact ordered retained RP-007, retained RP-008, candidate RP-009 rendered scopes; TD009-FUNC-002 resolved with PILOT // COURSE WORK active owner for all eight OF-20 groups and Builder/Teacher subordinate attribution only",
+      "validation": "focused 16/16; connected TD-007 through TD-009 95/95; full 898/898 twice including release validator; mappings 11/11; production 206 modules; served production 22/22 and fixture 4/4; scoped source leakage, patch integrity, and owned ports PASS",
+      "budget": "PBA-TD009-v1 PASS: JS 1509975 bytes / CEAF606E998375C78967E3CC67CB3995500C074B8B8B0ECF740F42C1B9721754; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 predecessor media / 37410731 bytes",
+      "variances": "TD009-FUNC-001 and TD009-FUNC-002 resolved; TD009-CONT-002 deliberately unchanged and remains Quartermaster-owned",
+      "commit": "PENDING_COMBAT_RETURN_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local correction checkpoint; no push before Quartermaster and fresh Intelligence release gate",
+      "nextStage": "Quartermaster only for TD009-CONT-002; no image calls; fresh Intelligence strictly subsequent"
     }
   ]
 }
