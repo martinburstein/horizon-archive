@@ -5,11 +5,11 @@ Last updated: **2026-07-31**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next stage.
 
-The authorized three-hour Skyscraper automation remains active. TD-007 is
-fully released. TD-008 has completed Commandant through Combat Engineer in
-strict sequence. Do not restart a completed role, skip Quartermaster, run
-Marines concurrently, inspect Martin's browser storage/save, or infer work
-from the archived two-team workflow.
+The authorized three-hour Skyscraper automation remains configured, but
+TD-008 is now on an explicit Quartermaster `HOLD`. A scheduled wake must read
+this file and stop. It may not restart Quartermaster, begin Image Specialist,
+begin Intelligence Officer, spend a third generation attempt, or select a new
+cycle from a stale prompt.
 
 ## Synchronized released state
 
@@ -22,71 +22,59 @@ from the archived two-team workflow.
 - Release commit: `0f074cd8f632ae40a2570ba34cc5580f4682e3db`
 - Release record: `Production Pipeline/Skyscraper Test Drives/TD-007/11-INTELLIGENCE-RELEASE.md`
 
-TD-008 is not released. Until Intelligence independently accepts it, the
-player-facing release boundary remains TD-007 BV-30 plus its exact returns.
+TD-008 is not released. The player-facing release boundary remains TD-007
+BV-30 plus its exact returns.
 
 ## Active TD-008 state
 
-- Completed stages: Commandant, Colonel, Operations Planning Major, Office of
-  Science Administrator, Mission Captain, Reconnaissance Sergeant, Tactical
-  Operations Specialist, Combat Engineer
-- Product/world/operations: `VISION BASELINE`, `WORLD BASELINE`,
-  `FLOOR STACK READY - ROUTE AUTHORIZED`
-- Science/Mission/Recon/Tactical/Combat: `VIABILITY READY`, `SHELL READY`,
-  `CREATIVE LOCK`, `EXPERIENCE READY`, `FUNCTIONALLY COMPLETE`
-- Shell: `SS-RP008-OFFSET-REACH-v1`
-- Slice/address: `TD-008-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 / OR-00-OR-30`
-- Sole route: fresh Pilot-owned `TD008-RTA-001`
-- Graph: `BV-30 / SC-08 -> OR-00 -> OR-10 -> OR-20 -> OR-30 / SC-09`
-- Hard stop: OR-30 followed only by exact write-free/replay-free Braided Verge
-  or City Threshold returns
-- Functional build: normal route/controller/storage/UI/scene resolver,
-  focused/connected tests, and production-absent 64-scenario fixture
-- Validation: focused `14/14`, connected `48/48`, full `879/879`, RP-008
-  mapping, release validator, 201-module production build, served identity,
-  fixture isolation, protected leakage and `PBA-TD008-v1` candidate PASS
-- Budget: JS `1,450,029`, CSS `99,302`, 15 predecessor runtime media totaling
-  `33,421,873`; zero new runtime media
-- Formal variances: none
-- Remaining placeholders: exactly `SC-09-PANORAMA-MASTER` and
-  `SC-09-RELATION-DETAIL-MASTER`, both structural and absent from runtime
-- Functional report: `Production Pipeline/Skyscraper Test Drives/TD-008/08-FUNCTIONAL-BUILD-REPORT.md`
-- Next role: `Quartermaster / quartermaster`
+- Completed gates: Commandant through Combat Engineer.
+- Current stage: Quartermaster / `quartermaster`.
+- Quartermaster disposition: **`HOLD`**.
+- Shell: `SS-RP008-OFFSET-REACH-v1`.
+- Slice/address: `TD-008-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 / OR-00-OR-30`.
+- Functional source commit:
+  `c6f8459135c54565af20e0a39b42b8e4dad6befb`.
+- Functional validation remains green: focused `28/28`, connected `82/82`,
+  full `879/879`, mapping `11/11`, production build `201` modules, served
+  identity and `PBA-TD008-v1` candidate PASS.
+- Runtime remains unchanged with the exact `15` predecessor media totaling
+  `33,421,873` bytes and zero TD-008 media.
+- Placeholders remain exactly `SC-09-PANORAMA-MASTER` and
+  `SC-09-RELATION-DETAIL-MASTER`, both truthful and absent from runtime.
+- Formal variances: none.
+- HOLD report:
+  `Production Pipeline/Skyscraper Test Drives/TD-008/09-CONTENT-ASSET-LEDGER.md`.
+
+## HOLD cause
+
+The first private SC-09 panorama generation passed Quartermaster source QA but
+was not integrated because the required pair is incomplete.
+
+The relation-detail initial generation failed before workspace entry because
+it read as an inviting traversable corridor, made the third continuity
+rope-like, and did not preserve three equal bounded relationship regions. Its
+one permitted targeted recovery removed the corridor but still read as a
+dominant door-like human assembly with opening-like cavities and unequal peer
+regions. It also failed before workspace entry.
+
+Both rejected drafts remain outside workspace, canon, runtime, provenance,
+commit, and reveal. The two-attempt relation-detail budget is exhausted. No
+third generation is permitted.
 
 ## Exact next action
 
-**Run only the TD-008 Quartermaster content and asset pass.**
+**Stop and await Martin's explicit direction.**
 
-Read the full `Skyscraper Agent Profiles/quartermaster.md`, the complete
-Mission shell, Recon creative treatment, Tactical blueprint, Combat functional
-report, `PBA-TD008-v1`, and exact current normal source, fixture, style, build,
-asset registry and provenance sections cited by that role.
-
-Preserve all functional behavior, exact route/evidence/schema/save identities,
-six equal observations, eight independent learning records, one owner/status,
-deterministic focus, four layouts, 64 fixture cases, exact returns and OR-30
-hard stop. Refine only player-facing content inside the locked semantics.
-
-Acquire or create exactly `SC-09-PANORAMA-MASTER` and
-`SC-09-RELATION-DETAIL-MASTER`. Directly import both accepted masters; record
-source, full-resolution and emitted hashes/bytes plus provenance; register
-responsive crops/hotspots and exact alternatives; retire both structural
-placeholders. Preserve all 15 predecessor media identities. No third image,
-new audio, font, video, source map or network payload is authorized.
-
-Run focused/connected/full validation, all release and mapping validators,
-production build, exact two-role import and predecessor-media checks,
-placeholder/privacy/canon/hard-stop scans and `PBA-TD008-v1`. Issue
-`CONTENT COMPLETE`, `REVISE` or `HOLD`.
-
-On pass, create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-008/09-CONTENT-ASSET-LEDGER.md`,
-update TD-008 metrics and this handoff to Image Specialist, make one dedicated
-Quartermaster commit, and preserve non-overlap. Quartermaster does not push.
+Do not perform an automated retry or downstream stage. Martin may explicitly
+end TD-008, provide a new source/asset authority, or authorize a new bounded
+cycle with a fresh generation contract. Without that new authority, every
+scheduled three-hour wake performs read-only synchronization, records no new
+stage, and exits.
 
 ## Frozen boundaries
 
-- TD-008 remains unreleased until independent Intelligence acceptance.
+- TD-008 remains unreleased; Image Specialist and Intelligence Officer have
+  not run.
 - OR-30 opens only exact Braided Verge or City Threshold returns. Optional
   destinationless notation opens nothing.
 - No universal/exclusive truth, separation, equivalence, unity, coordination,
