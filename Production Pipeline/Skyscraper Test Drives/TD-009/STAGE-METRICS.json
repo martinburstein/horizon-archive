@@ -3,8 +3,8 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-009",
-    "shellCandidate": "unselected - Colonel provisional exposed-edge reconciliation candidate only",
-    "campaignAddress": "unselected - released predecessor is RP-008 / SC-09 / OR-30 plus exact approved returns",
+    "shellCandidate": "unselected - Operations floor stack only; Mission shell not issued",
+    "campaignAddress": "RP-009 / SC-10 / OF-00-OF-30 through sole conditional TD009-RTA-001",
     "sourceCommit": "b0c8c7bea04ba5f17712e090a05f2f651d98581a",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -46,6 +46,27 @@
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Colonel push gate",
       "nextStage": "Operations Planning Major"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-08-01T08:25:00.000Z",
+      "endedAt": "2026-08-01T08:37:00.000Z",
+      "durationMs": 720000,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/03-CAMPAIGN-FLOOR-STACK.md",
+      "releasedPredecessor": "TD-008 / SS-RP008-OFFSET-REACH-v1 / OR-30 / SC-09 plus exact write-free/replay-free returns",
+      "selectedAddress": "RP-009 / SC-10 / OF-00-OF-30",
+      "route": "sole conditional TD009-RTA-001; fresh Pilot-owned one-hit intent after exact RP-008 record, byte, owner, mode, modality and sanitation proof",
+      "graph": "OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10",
+      "hardStop": "OF-30 plus exact Offset Reach or City Threshold returns and one LOOK-only null-destination notation; no RP-010 exposure",
+      "validation": "12/12 Operations contract checks and 22/22 focused current-source RP-008 normal plus RP-009 protected tests PASS",
+      "variances": "none; current OR-30 notation remains inert and the new route is planning-only pending Science and Mission",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Operations push gate",
+      "nextStage": "Office of Science Administrator"
     }
   ]
 }

@@ -26,6 +26,8 @@ registry before acting.
 
 - Commandant certificate: `GDB-TD009-v1 / VISION BASELINE`.
 - Colonel certificate: `WNMP-TD009-v1 / WORLD BASELINE`.
+- Operations certificate:
+  `CFS-TD009-v1 / FLOOR STACK READY - ROUTE AUTHORIZED`.
 - Source authority: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - The whole-product baseline is unchanged.
 - Exactly one provisional surface-safe candidate is derived: a bounded
@@ -33,11 +35,18 @@ registry before acting.
   margins, bounded correspondence, one unmatched record, one ordinary
   multi-candidate ambiguity, one unavailable outer margin, and layered edge
   stewardship.
-- `RP-009 / Occluded Fold / SC-10` are protected planning handles proving the
-  candidate is already mapped; they are not a selected campaign address,
-  destination, opening, or route.
-- Route, campaign address, token, checkpoint, shell ID, learning identity,
-  asset, and implementation remain deliberately unselected.
+- Operations independently proved the candidate is the nearest already-mapped
+  unfinished edge and selected exact address `RP-009 / SC-10 / OF-00-OF-30`.
+- Sole conditional planning route `TD009-RTA-001` begins only at exact
+  verified `OR-30 / SC-09`, after strict RP-008 record/byte proof and one
+  fresh Pilot-owned one-hit intent. Current released OR-30 notation remains
+  inert and the route is not yet present in the build.
+- Selected graph:
+  `OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10`.
+- Hard stop: OF-30 followed only by exact Offset Reach or City Threshold
+  returns and one LOOK-only `destination=null`, `routeOpened=false` notation.
+- Science viability, budget authority, shell ID, assets, normal
+  implementation, and Marine work remain deliberately unissued.
 - TD-008 lessons are mandatory: freeze one stable committed candidate before
   Intelligence; inspect generated lineages at original resolution against
   required and forbidden material readings; live-render the exact longest
@@ -47,28 +56,35 @@ registry before acting.
 
 ## Exact next action
 
-Run **Operations Planning Major / `operations_planning_major`** only.
+Run **Office of Science Administrator /
+`office_of_science_administrator`** only.
 
-Read the full Operations profile, `GDB-TD009-v1`, `WNMP-TD009-v1`, the TD-008
-Intelligence reconciliation, exact released OR-30 controller/scene/return
-authority, current rail controls, and exact current-control sections cited by
-that role. Prove or reject one exact current-source campaign address and one
-narrow fail-closed transition from exact released `OR-30 / SC-09` into the
-sole Colonel candidate.
+Read the full Science profile, `GDB-TD009-v1`, `WNMP-TD009-v1`,
+`CFS-TD009-v1`, the TD-008 Intelligence reconciliation and exact released
+OR-30 authority, the complete frozen RP-009 curriculum/evaluator authorities,
+the protected Occluded Fold journey, current technical/accessibility/privacy/
+save/offline controls, asset requirements, and fresh current production
+baseline. Independently validate the complete viability envelope for exact
+`RP-009 / SC-10 / OF-00-OF-30` and `TD009-RTA-001`.
 
-Do not treat destinationless notation, exposed continuation, retained
-summaries, recurrence, correspondence, persistence, sound, imagery, saved
-completion, planning order, or protected handles as route authority. Define
-the minimum predecessor proof, fresh Pilot intent/token if required,
-sanitation, entry, state-to-scene identity, checkpoints, exact returns,
-failure recovery, and hard stop, or issue an honest `HOLD`. Do not perform
-Science, Mission, learning design, implementation, generation, or Marine work
-in the same stage.
+Prove or reject exact predecessor and token sanitation; all 720 observation
+orders; strict independent PY-017 and prompt-boundary learning plus both
+explanations; no cross-credit; privacy clearing; ordered separate retained
+records; atomic save/read-back/rollback; replay-free restore; deterministic
+recovery/focus; Tour isolation; offline/no-authority/no-exam-guarantee;
+four-layout accessibility; asset/provenance/original-resolution constraints;
+one closed storage-free fixture; served identity; and a fresh executable
+non-compounding budget. Issue `VIABILITY READY` with a versioned budget
+authority or an honest `REVISE`/`HOLD`. Do not issue a shell, implement,
+generate, inspect browser storage/save, or expose RP-010 or later content.
 
 ## Frozen boundaries
 
-- OR-30 opens only exact Braided Verge or City Threshold returns; optional
-  destinationless notation opens nothing.
+- The currently released OR-30 opens only exact Braided Verge or City
+  Threshold returns; optional destinationless notation opens nothing.
+  `TD009-RTA-001` is planning-only pending Science and Mission and may never
+  derive authority from that notation, scenery, retained records, or planning
+  order.
 - Six observations remain equal, any-order, idempotent, and world-invariant;
   PY-016, extraction, and both explanations remain independent; save/restore
   remains exact, atomic, and replay-free.
@@ -79,9 +95,12 @@ in the same stage.
   Correspondence is not identity or continuity; unmatched is not
   transformation or separation; ambiguity is not topology; occlusion is not
   access, contents, reward, invitation, or route.
-- No `RP-009` route, successor, `RP-013`, ending, post-ending content,
-  invented canon, reward, access, identity, authority, response, or world
-  effect is authorized by this handoff.
+- OF-30 is the selected hard stop. No RP-010 name, event, destination, route,
+  cue, asset, learning, save field, focus target, or implementation is
+  authorized.
+- No successor, `RP-013`, ending extension, post-ending content, invented
+  canon, reward, access, identity, authority, response, unavailable contents,
+  or world effect is authorized by this handoff.
 - Never open the hidden lore vault or inspect/mutate Martin's browser/profile/
   campaign save.
 - Never inspect, alter, stage, move, delete, or commit
