@@ -6,11 +6,11 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next stage.
 
 The authorized three-hour Skyscraper automation remains active. TD-007 is
-fully released. TD-008 has completed all five Colonel stages and the
-Reconnaissance Sergeant has issued one shell-faithful `CREATIVE LOCK`. Do not
-restart a completed role, skip Tactical Operations Specialist, run Marines
-concurrently, inspect Martin's browser storage/save, or infer work from the
-archived two-team workflow.
+fully released. TD-008 has completed all five Colonel stages, Reconnaissance
+Sergeant, and Tactical Operations Specialist in strict sequence. Do not
+restart a completed role, skip Combat Engineer, run Marines concurrently,
+inspect Martin's browser storage/save, or infer work from the archived
+two-team workflow.
 
 ## Synchronized released state
 
@@ -32,13 +32,15 @@ returns.
 ## Active TD-008 state
 
 - Completed stages: Commandant, Colonel, Operations Planning Major, Office of
-  Science Administrator, Mission Captain, Reconnaissance Sergeant
+  Science Administrator, Mission Captain, Reconnaissance Sergeant, Tactical
+  Operations Specialist
 - Product: `VISION BASELINE / GDB-TD008-v1`
 - World: `WORLD BASELINE / WNMP-TD008-v1`
 - Operations: `FLOOR STACK READY - ROUTE AUTHORIZED / CFS-TD008-v1`
 - Science: `VIABILITY READY / VE-TD008-v1 / PBA-TD008-v1`
 - Mission: `SHELL READY / SS-RP008-OFFSET-REACH-v1`
 - Recon: `CREATIVE LOCK / EXPANSION WITHOUT VERDICT`
+- Tactical: `EXPERIENCE READY / SS-RP008-OFFSET-REACH-v1`
 - Slice: `TD-008-RP008-OFFSET-REACH-v1`
 - Address: `RP-008 / SC-09 / OR-00-OR-30`
 - Sole route: fresh Pilot-owned `TD008-RTA-001`
@@ -50,7 +52,9 @@ returns.
   `Production Pipeline/Skyscraper Test Drives/TD-008/05-PLAYABLE-SLICE-SHELL.md`
 - Creative treatment:
   `Production Pipeline/Skyscraper Test Drives/TD-008/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
-- Next role: `Tactical Operations Specialist / tactical_operations_specialist`
+- Experience blueprint:
+  `Production Pipeline/Skyscraper Test Drives/TD-008/07-EXPERIENCE-BLUEPRINT.md`
+- Next role: `Combat Engineer / combat_engineer`
 
 Mission independently reconciled `GDB-TD008-v1`, `WNMP-TD008-v1`,
 `CFS-TD008-v1`, `VE-TD008-v1`, `PBA-TD008-v1`, the released TD-007 boundary,
@@ -69,40 +73,56 @@ exactly provisional `SC-09-PANORAMA-MASTER` and
 `SC-09-RELATION-DETAIL-MASTER`. Recon generated no image, performed no runtime
 work, and requested no variance.
 
+Tactical reconciled the complete shell, creative treatment, frozen RP-008
+contract, current released TD-007 controller/UI/App/scene/storage/fixture/CSS
+patterns, SC-09, and accessibility controls. The blueprint freezes every
+owner/group/action/focus/status/recovery/crop/alternative identity, seven-
+modal route convergence, all `720` observation orders and idempotent revisits,
+independent PY-016 and AI-901 flows, exact eleven-key persistence and rollback,
+four layouts, and all `64` storage-free fixture scenarios. Exactly two SC-09
+runtime roles remain provisional structural placeholders. Tactical changed no
+runtime source or media, revalidated the RP-008 mapping and focused protected
+suite at `14/14`, and requested no variance.
+
 ## Exact next action
 
-**Run only the TD-008 Tactical Operations Specialist experience blueprint.**
+**Run only the TD-008 Combat Engineer functional implementation.**
 
 Read the full
-`Skyscraper Agent Profiles/tactical-operations-specialist.md`, the complete
-`SS-RP008-OFFSET-REACH-v1` shell, the immediate Recon creative treatment, and
-the exact current controller/UI/scene/fixture/accessibility sections cited by
-the role.
+`Skyscraper Agent Profiles/combat-engineer.md`, the complete
+`SS-RP008-OFFSET-REACH-v1` shell, the Recon creative treatment, the complete
+Tactical experience blueprint, and the exact current normal controller,
+storage, App, UI, scene, CSS, test, fixture, build, and budget sections cited
+by the role.
 
-Create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-008/07-EXPERIENCE-BLUEPRINT.md`.
-Freeze every state, owner/message/content/action replacement, action,
-focus target, status, recovery route, copy surface, scene/crop/alternative
-identity, and responsive layout for exact graph
-`BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30` under the creative thesis
-**expansion without verdict**.
+Implement the complete normal route/controller/storage/UI/scene resolver,
+focused and connected tests, and one production-absent storage-free fixture
+for exact graph `BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30`. Reuse released
+TD-007 through TD-004 adapters and bytes without mutation. Use distinct normal
+TD-008 identities and keep the protected journey absent from production.
 
-Specify exact route validation and seven-modal one-hit activation; OR-00;
-six equal unordered observations and all `720` orders/revisits; independent
-PY-016 and AI-901 primary/remediation/retrieval-or-trace/blank-transfer flows;
-both explanations; no cross-credit; every miss/retry/sanitation/interruption/
-review/save/rollback/restore/return state; the eleven-key record preview; the
-two provisional asset-role placeholder and crop matrix; all four layouts;
-the exact longest-copy sample; forced colors, reduced motion, grayscale,
-focus/status/targets/containment/local-request requirements; and all exact 64
-fixture scenarios with product and harness controls separate.
+Implement exact validation-before-consumption and seven-modal one-hit routing;
+six equal observations with exhaustive `720`-order convergence and idempotent
+revisits; independent PY-016 and AI-901 primary/remediation/trace-or-retrieval/
+blank-transfer flows plus both explanations; zero cross-credit; complete
+private clearing; exact eleven/eight/thirteen/eight persistence; atomic save,
+verified rollback, replay-free restore, and exact returns; the four layouts;
+one owner/status, deterministic focus, `>=44px`, forced colors, reduced
+motion, grayscale, longest-copy containment, and local-request/log hygiene.
 
-Issue `EXPERIENCE READY`, `REVISE`, or `HOLD`. On pass, update TD-008 metrics
-and this handoff to Combat Engineer and make one dedicated local commit. Do
-not implement runtime behavior, generate images, create media, change the
-route/evidence/schema/save/canon, open hidden lore, inspect browser storage,
-or expose world response, reward, access, identity, authority, RP-009,
-successor, or ending.
+Create exactly one fixture `td008-offset-reach-v1` with the exact `64`
+allowlisted scenarios and separate harness/product controls. Wire exactly two
+truthful structural placeholder seams for `SC-09-PANORAMA-MASTER` and
+`SC-09-RELATION-DETAIL-MASTER`; do not generate or import final media. Preserve
+`PBA-TD008-v1` and all 15 predecessor media identities.
+
+Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`. On pass, create exactly
+`Production Pipeline/Skyscraper Test Drives/TD-008/08-FUNCTIONAL-BUILD-REPORT.md`,
+update TD-008 metrics and this handoff to Quartermaster, make one dedicated
+Combat commit, push, and verify `HEAD == origin/main == remote main`. Do not
+generate images, retire the two placeholders, change route/evidence/schema/
+save/canon, open hidden lore, inspect browser storage, or expose world
+response, reward, access, identity, authority, RP-009, successor, or ending.
 
 ## Shell construction lock
 

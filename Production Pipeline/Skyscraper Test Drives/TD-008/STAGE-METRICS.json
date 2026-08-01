@@ -124,6 +124,29 @@
       "commitConvention": "The dedicated Reconnaissance Sergeant commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Reconnaissance Sergeant push gate",
       "nextStage": "Tactical Operations Specialist"
+    },
+    {
+      "sequence": 7,
+      "stage": "Tactical Operations Specialist",
+      "agentId": "tactical_operations_specialist",
+      "startedAt": "2026-08-01T01:16:00.000Z",
+      "endedAt": "2026-08-01T01:24:00.000Z",
+      "durationMs": 480000,
+      "disposition": "EXPERIENCE READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/07-EXPERIENCE-BLUEPRINT.md",
+      "shell": "SS-RP008-OFFSET-REACH-v1",
+      "creativeThesis": "expansion without verdict",
+      "stateGraph": "exact BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30 with one owner/group, deterministic focus/status/recovery, and only exact write-free/replay-free returns",
+      "observationContract": "six equal unordered observations; all 720 orders converge; revisits idempotent; canonical persisted order; zero cross-credit",
+      "learningAndSave": "independent PY-016 primary/trace/blank-transfer; independent AI-901 primary/retrieval/blank-transfer plus two explanations; exact eleven-key record, atomic rollback, and replay-free restore",
+      "fixture": "exactly 64 storage-free production-absent scenarios in fixed 12/4/6/18/8/8/8 groups",
+      "presentation": "exactly two provisional SC-09 roles; four layouts; seven modalities; forced colors, reduced motion, grayscale, longest-copy, focus/status/target/containment contracts frozen",
+      "validation": "complete shell/treatment/current-source trace; every owner/action/focus/status/recovery/crop/alternative identity frozen; all 64 shell fixture IDs covered; RP-008 mapping self-test PASS; focused protected suite 14/14 PASS including all 720 orders; markdown, JSON, and forbidden-boundary checks PASS",
+      "variances": "none; Combat can implement without inventing experience meaning or weakening the shell",
+      "commit": "PENDING_TACTICAL_COMMIT",
+      "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Tactical Operations Specialist push gate",
+      "nextStage": "Combat Engineer"
     }
   ]
 }
