@@ -1,0 +1,32 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-008",
+    "shellCandidate": "unselected; Commandant selection envelope only",
+    "campaignAddress": "unselected; released predecessor is RP-007 / SC-08 / BV-30 plus exact returns",
+    "sourceCommit": "0f074cd8f632ae40a2570ba34cc5580f4682e3db",
+    "timezone": "America/New_York",
+    "executionMode": "scheduled-sequential-nonoverlapping"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-08-01T00:20:00.000Z",
+      "endedAt": "2026-08-01T00:34:00.000Z",
+      "durationMs": 840000,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/01-GAME-DEVELOPMENT-BRIEF.md",
+      "releasedPredecessor": "TD-007 / SS-RP007-BRAIDED-VERGE-v1 / BV-30 plus exact write-free/replay-free returns",
+      "candidateSelection": "deliberately unselected; Colonel owns one provisional surface-safe candidate or HOLD",
+      "validation": "HEAD == origin/main == remote main at source release; TD-007 handoff/release/master controls reconciled; 11/11 Commandant contract checks PASS",
+      "variances": "none requiring product-baseline revision",
+      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Commandant push gate",
+      "nextStage": "Colonel"
+    }
+  ]
+}
