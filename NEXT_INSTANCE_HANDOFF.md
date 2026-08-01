@@ -137,45 +137,76 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit: dedicated local Science commit for the current stage; no push at
   this gate.
 
+### Mission Captain
+
+- Stage: **`Mission Captain / mission_captain`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Disposition: **`SHELL READY`**.
+- Address/route: exact `RP-010 / SC-11 / CF-00-CF-30` through sole
+  `TD010-RTA-001`; graph
+  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`.
+- Strategic audit: Commandant `a3347ed`, Colonel `8fcef9b`, Operations
+  `381fb51`, and Science `59fc2c7` form one exact sole-parent chain with
+  dedicated `3/3/3/4`-file scopes and byte-identical working authorities.
+  `GDB-TD010-v1`, `WNMP-TD010-v1`, `CFS-TD010-v1`, `VE-TD010-v1`, and
+  `PBA-TD010-v1` reconcile without contradiction or variance.
+- Released/protected boundary: normal entry accepts only exact canonical
+  released `rp009.occluded-fold-save.v1` raw/object bytes after independent
+  TD-004-TD-009 byte proof. `rp009.protected-journey.v1` is an exact named
+  rejection; no protected module, adapter, object, identity, or fixture may
+  enter normal production.
+- Normal identities: distinct shell/route controller/group/action/token,
+  `rp010.counterfield-controller.v1`,
+  `horizon-archive-rp010-counterfield-save-v1`,
+  `rp010.counterfield-save.v1`, and `td010-counterfield-v1` are frozen.
+- Learning/persistence: seven equal observations in all `5,040` orders;
+  strict independent `PY-018` and
+  `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` chains plus two explanations;
+  mapping/check IDs remain distinct; no cross-credit; four ordered scopes;
+  exact 13-key/eight-evidence private-free record; atomic canonical write,
+  read-back, TD-004-TD-009 proof, verified rollback, and replay-free restore.
+- Accessibility/fixture: seven modalities, `>=44px`, exact owner/status/focus
+  and UTF-8 contracts, four layouts and assistive modes; all exact `66`
+  fixture IDs have shell-frozen rendered owner and actual-focus contracts.
+- Assets/generation: at most two conditional SC-11 runtime roles with full
+  provenance, truthful native/output dimensions, original-resolution QA,
+  responsive/accessibility treatment, and the one-initial/one-targeted-
+  recovery boundary. No asset was generated or selected.
+- Budget/hard stop: `PBA-TD010-v1` is mandatory. Hard stop is exact CF-30,
+  exact Occluded Fold or City Threshold returns, or inert LOOK-only null
+  field-margin continuation. No RP-011 or later content is exposed.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md`.
+- Commit/synchronization: one dedicated Mission commit and Mission push gate;
+  the committed Git HEAD is the non-recursive commit authority.
+
 ## Exact next action
 
-Run **Mission Captain / `mission_captain` only**.
+Run **Reconnaissance Sergeant / `reconnaissance_sergeant` only** against
+exact shell `SS-RP010-COUNTERFIELD-v1`.
 
-Read the full Mission profile; `GDB-TD010-v1`, `WNMP-TD010-v1`,
-`CFS-TD010-v1`, `VE-TD010-v1`, and `PBA-TD010-v1`; exact released TD-009
-normal record/route/return/state authorities; current RP-010 curriculum,
-puzzle, protected journey, SC-11, asset, accessibility, privacy, save,
-fixture, validation, and latest variance controls.
+Read the full Recon profile, shell, all five strategic authorities, immediate
+Mission handoff, exact released TD-009 normal OF-30 source/release, RP-010 and
+SC-11 visual/provenance controls, and current reveal lessons. Create
+`Production Pipeline/Skyscraper Test Drives/TD-010/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
 
-Reconcile the five Colonel contracts without changing them. Issue one
-conflict-free versioned `SHELL READY` contract for
-`RP-010 / SC-11 / CF-00-CF-30` and sole `TD010-RTA-001`, or an honest
-`REVISE`/`HOLD`.
+Lock one compelling surface-safe creative thesis, emotional pacing, scene and
+interface hierarchy, sound/atmosphere restraint, material-language intent,
+and exact guidance for the two conditional SC-11 roles without implementing
+or generating them. Preserve sole `TD010-RTA-001`, released/protected
+rejection, all normal identities, OF-30/CF-00-CF-30, seven equal observations
+and all `5,040` orders, independent learning plus two explanations,
+mapping/check distinction, four scopes, exact 13-key record, privacy,
+rollback/restore, exact returns, seven modalities, four layouts, frozen UTF-8,
+all `66` owner/focus contracts, original-resolution/provenance and generation
+gates, `PBA-TD010-v1`, invariant world, and CF-30 hard stop.
 
-Freeze exact released-versus-protected predecessor rejection; canonical
-released RP-009 raw/object and TD-004-TD-009 byte proof; one new normal
-bridge with fresh Pilot one-hit intent and validation-before-consumption;
-CF-00-CF-30 state-to-scene identities; seven equal observations/all `5,040`
-orders; strict independent `PY-018` and
-`RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` chains plus both explanations;
-mapping/check-ID distinction; no-cross-credit; scored-miss-only blank
-recovery; privacy clearing; four ordered scopes; exact 13-key record; atomic
-write/read-back/rollback; replay-free restore; exact returns; Tour isolation;
-offline/no-authority/no-exam-guarantee; seven modalities; four layouts;
-rendered-owner/actual-focus proof across the exact 66-scenario closed fixture;
-two conditional SC-11 image roles and original-resolution/provenance gates;
-one-initial/one-targeted-recovery generation boundary; fresh PBA caps; served
-identity; complete validation ladder; and CF-30 hard stop.
-
-Produce
-`Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md`,
-update the stage ledger and this handoff, make one dedicated Mission commit,
-push only at the Mission `SHELL READY` gate after verifying synchronization,
-and stop before Marines. Do not implement, generate assets, inspect Martin's
-browser/profile/save, open hidden lore, touch protected user files, or expose
-RP-011, RP-013, a successor, ending extension, reward, access, permission,
-identity, authority, response, unavailable contents, Machine relation,
-readiness judgment, or world effect.
+Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`; update the ledger and this
+handoff; make one dedicated local Recon commit; stop before Tactical. Do not
+implement, generate/select assets, inspect browser/profile/save, open hidden
+lore, touch protected user files, or expose RP-011, RP-013, a successor,
+ending extension, reward, access, permission, identity, authority, response,
+unavailable contents, Machine relation, readiness judgment, or world effect.
 
 ## Recurring automation
 
@@ -184,9 +215,9 @@ readiness judgment, or world effect.
 
 ## Frozen boundaries
 
-- `RP-010 / SC-11 / CF-00-CF-30` and `TD010-RTA-001` are planning-only.
-  No released destination, normal route, persisted token, shell, scene
-  opening, implementation, or Marine deployment exists until Mission passes.
+- `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
+  `TD010-RTA-001` remain unreleased and unimplemented; Marine deployment is
+  authorized only in canonical sequential order beginning with Recon.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do

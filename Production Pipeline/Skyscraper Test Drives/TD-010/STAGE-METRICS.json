@@ -3,9 +3,9 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-010",
-    "shellCandidate": "deliberately unselected; Mission shell not authorized",
+    "shellCandidate": "SS-RP010-COUNTERFIELD-v1 / SHELL READY",
     "campaignAddress": "RP-010 / SC-11 / CF-00-CF-30 through sole conditional TD010-RTA-001",
-    "provisionalSurfaceCandidate": "selected by Operations and independently found viable by Science as the sole current-source cumulative-scope slice; Mission shell remains pending",
+    "provisionalSurfaceCandidate": "reconciled by Mission into the sole conflict-free construction shell for RP-010 / SC-11 / CF-00-CF-30",
     "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -98,6 +98,31 @@
       "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Science push gate",
       "nextStage": "Mission Captain"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-08-01T22:32:00.000Z",
+      "endedAt": "2026-08-01T22:52:00.000Z",
+      "durationMs": 1200000,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "predecessorVerification": "Commandant a3347ed, Colonel 8fcef9b, Operations 381fb51, and Science 59fc2c7 independently verified as a four-commit sole-parent chain with dedicated 3/3/3/4-file scopes; all five working authority blobs equal Science HEAD",
+      "strategicReconciliation": "GDB-TD010-v1, WNMP-TD010-v1, CFS-TD010-v1, VE-TD010-v1, and PBA-TD010-v1 are conflict-free; no upstream return or formal variance",
+      "releasedPredecessor": "exact canonical released rp009.occluded-fold-save.v1 raw/object at OF-30 / SC-10 plus TD-004-TD-009 byte proof; rp009.protected-journey.v1 is a named rejection and never a normal bridge",
+      "routeAndGraph": "sole TD010-RTA-001 after validation-before-consumption; OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11",
+      "learningAndPersistence": "seven equal observations across all 5,040 orders; strict independent PY-018 and RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 chains plus two explanations; mapping/check IDs distinct; no cross-credit; four ordered scopes; exact 13-key private-free record; canonical write/read-back, TD-004-TD-009 equality, verified rollback, replay-free restore",
+      "accessibilityAndFixture": "seven modalities, >=44px targets, exact owners/status/focus and UTF-8 copy, four layouts and assistive modes; exact 66-scenario storage-free production-absent fixture with all 66 shell-frozen rendered owner/actual activeElement contracts",
+      "assetsAndBudget": "at most two conditional SC-11 roles with provenance, truthful native/output dimensions and original-resolution QA; one-initial/one-targeted-recovery generation boundary; PBA-TD010-v1 caps frozen",
+      "hardStop": "CF-30, exact Occluded Fold or City Threshold returns, or inert LOOK-only null field-margin continuation; no RP-011 or later exposure",
+      "validation": "four predecessor commits/parents/dedicated scopes and five authority blobs PASS; current normal/protected boundary inspected; focused released-normal plus protected-candidate 20/20 PASS including all 5,040 orders; RP-010 mapping self-test PASS; fresh production build 206 modules / 7.10s with exact released TD-009 assets; sequential full suite 905/905 PASS in 8.908s; 66 fixture IDs exact, unique, ordered, and owner/focus-complete; Mission contract, JSON, tracked scope, and diff checks PASS",
+      "variances": "none; TD-009 owner/focus corrections are mandatory regressions and the image/reveal waiver does not carry forward",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Mission push gate; verify HEAD == origin/main == remote refs/heads/main after the dedicated commit",
+      "nextStage": "Reconnaissance Sergeant"
     }
   ]
 }
