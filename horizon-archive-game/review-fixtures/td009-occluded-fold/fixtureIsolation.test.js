@@ -13,6 +13,9 @@ test("TD009 fixture constructs exactly 64 closed storage-free scenarios", () => 
     const scenario = createOccludedFoldScenario(name);
     assert.equal(scenario.storage, "frozen-in-memory-only");
     assert.equal(scenario.arbitraryStateAccepted, false);
+    assert.equal(scenario.scene.structuralPlaceholder, false);
+    assert.equal(scenario.scene.renderingMedium, "css");
+    assert.equal(scenario.scene.runtimeImage, "deferred");
     assert.doesNotMatch(JSON.stringify(scenario), /"(?:learner_source|records_json|summary_json|raw_cases?|answers?|credentials?|endpoints?|payloads?|responses?|event_token|focus_history)"/i);
   }
   assert.throws(() => createOccludedFoldScenario("unknown"));

@@ -98,13 +98,13 @@ const actionIds = {
   [occludedFoldActions.returnThreshold]: "of-return-city-threshold",
 };
 
-const panoramaAlt = "Structural placeholder for the SC-10 Occluded Fold panorama: an immense folded Builder work exposes three distinct near margins and separated far records around an opaque outer margin; the interior remains unavailable and nothing responds or opens.";
+const panoramaAlt = "Code-native environmental treatment of the SC-10 Occluded Fold: an immense opaque folded Builder work exposes three separately traceable near margins, bounded correspondences, an ordinary unmatched record, ordinary unranked ambiguity, an unavailable outer margin, and layered stewardship. No interior relation, response, or route is shown.";
 
 const detailAltByCropId = {
-  "sc10-detail-unmatched": "Structural detail placeholder: one maintained ordinary far record remains unmatched without implying failure or transformation.",
-  "sc10-detail-ambiguous": "Structural detail placeholder: one ordinary record carries two independently legible compatible feature families without ranking, branching, merging, or identity.",
-  "sc10-detail-unavailable": "Structural detail placeholder: an opaque pressure apron, complete external boundary, and service detour expose no gap, contents, access, invitation, or route.",
-  "sc10-detail-stewardship": "Structural detail placeholder: foundation folds, later faces, sacrificial skins, sealed service scars, detours, and maintained repairs remain separately legible.",
+  "sc10-detail-unmatched": "Code-native exposed-edge treatment: one maintained ordinary far record remains unmatched without implying failure, creation, destruction, or transformation.",
+  "sc10-detail-ambiguous": "Code-native exposed-edge treatment: one ordinary record carries two independently legible compatible feature families without ranking, branching, merging, identity, or internal topology.",
+  "sc10-detail-unavailable": "Code-native exposed-edge treatment: an opaque pressure apron, complete external boundary, and service detour expose no gap, interior, contents, access, invitation, reward, or route.",
+  "sc10-detail-stewardship": "Code-native exposed-edge treatment: foundation folds, later faces, sacrificial skins, sealed service scars, detours, and maintained repairs remain separately legible without implying unity, ownership, cause, purpose, or response.",
 };
 
 function optionLabel(value) {
@@ -203,10 +203,6 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
   const scene = resolveOccludedFoldWorldScene(state);
   const isDetail = scene?.role === "SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
-  const sourceName = isDetail
-    ? "SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL structural placeholder"
-    : "SC-10-OCCLUDED-FOLD-PANORAMA structural placeholder";
-
   useLayoutEffect(() => {
     const root = rootRef.current;
     const target = root?.querySelector(`#${CSS.escape(state.focusIntent?.target ?? state.headingId)}`)
@@ -235,13 +231,19 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
         }
       }}
     >
-      <figure className={`occluded-world occluded-structural-placeholder ${isDetail ? "is-detail" : "is-panorama"}`}>
+      <figure className={`occluded-world occluded-code-native-environment ${isDetail ? "is-detail" : "is-panorama"}`}>
         <div
+          className="occluded-native-scene"
           role="img"
           aria-label={alt}
           data-image-role={scene?.role}
-          data-runtime-source-master={sourceName}
-        ><span>{sourceName}</span><small>Quartermaster-owned final media seam — not final art</small></div>
+          data-rendering-medium="css"
+          data-runtime-image="deferred"
+        >
+          <span className="occluded-native-mass occluded-native-mass-primary" aria-hidden="true" />
+          <span className="occluded-native-mass occluded-native-mass-lamellar" aria-hidden="true" />
+          <span className="occluded-native-mass occluded-native-mass-cellular" aria-hidden="true" />
+        </div>
         <figcaption>
           Expedition view only. Three near margins, bounded correspondences, one unmatched
           record, one ordinary ambiguity, one unavailable outer margin, and layered stewardship

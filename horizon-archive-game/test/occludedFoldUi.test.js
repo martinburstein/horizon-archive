@@ -16,12 +16,15 @@ test("TD009 production UI exposes the four exact longest UTF-8 samples", () => {
   assert.doesNotMatch(`${component}\n${controller}`, /Ã|Â|â€”|â€“|â€|â€™/);
 });
 
-test("TD009 wires exactly two truthful structural placeholders and no final media", () => {
-  assert.equal((component.match(/structural placeholder/g) ?? []).length >= 2, true);
+test("TD009 retires image placeholders into truthful code-native treatment with no runtime media", () => {
+  assert.doesNotMatch(component, /structural placeholder|final media seam|not final art/i);
   assert.equal((component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? []).length, 0);
   assert.match(controller, /SC-10-OCCLUDED-FOLD-PANORAMA/);
   assert.match(controller, /SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL/);
-  assert.match(component, /Quartermaster-owned final media seam — not final art/);
+  assert.match(component, /data-rendering-medium="css"/);
+  assert.match(component, /data-runtime-image="deferred"/);
+  assert.match(component, /Code-native environmental treatment of the SC-10 Occluded Fold/);
+  assert.doesNotMatch(css, /occluded-structural-placeholder/);
 });
 
 test("TD009 UI preserves native semantics, one status, deterministic focus, and 44px targets", () => {

@@ -99,11 +99,15 @@
   .offset-panel :focus-visible { outline-color: Highlight; }
 }
 
-/* TD-009 Occluded Fold functional shell; Quartermaster replaces only the two structural media seams. */
+/* TD-009 Occluded Fold code-native environment; runtime imagery is explicitly deferred. */
 .occluded-verge{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(22rem,.85fr);color:#eef3f1;background:#0b0d0d;overflow:hidden}
 .occluded-world{min-width:0;margin:0;display:grid;grid-template-rows:minmax(0,1fr) auto;background:#111515;border-right:1px solid #68736f}
-.occluded-structural-placeholder>div[role="img"]{min-width:0;min-height:58vh;width:100%;height:100%;display:grid;place-content:center;gap:.55rem;padding:2rem;text-align:center;border:2px dashed #87918d;background:#171c1a;color:#eef3f1;overflow-wrap:anywhere}
-.occluded-structural-placeholder small{display:block;color:#c9d0cd}
+.occluded-native-scene{position:relative;min-width:0;min-height:58vh;width:100%;height:100%;overflow:hidden;background:radial-gradient(ellipse at 24% 22%,#4d5e56,transparent 25%),radial-gradient(ellipse at 78% 35%,#4d382d,transparent 28%),linear-gradient(151deg,#26332f,#080c0b 72%,#17201d)}
+.occluded-native-mass{position:absolute;display:block;pointer-events:none;filter:drop-shadow(0 1rem 1.4rem #000)}
+.occluded-native-mass-primary{inset:7% 5% 5% 18%;clip-path:polygon(5% 19%,28% 2%,50% 13%,72% 0,96% 22%,84% 39%,100% 58%,78% 72%,87% 96%,52% 84%,29% 100%,18% 74%,0 61%);background:linear-gradient(164deg,#56635d,#202a26 44%,#4b5751 70%,#111816)}
+.occluded-native-mass-lamellar{left:-3%;bottom:8%;width:52%;height:48%;clip-path:polygon(0 70%,18% 32%,39% 48%,58% 8%,76% 22%,100% 0,80% 52%,52% 73%,25% 63%,9% 100%);background:linear-gradient(151deg,#a4b5ad,#334a41 35%,#121b18 58%,#778b82)}
+.occluded-native-mass-cellular{right:2%;top:15%;width:38%;height:56%;clip-path:polygon(9% 0,76% 7%,100% 35%,84% 81%,55% 100%,5% 82%,0 36%);background:radial-gradient(circle at 25% 27%,#101715 0 7%,transparent 8%),radial-gradient(circle at 61% 63%,#17211d 0 9%,transparent 10%),#536159}
+.occluded-code-native-environment.is-detail .occluded-native-mass-primary{inset:1% -5% 1% 0}.occluded-code-native-environment.is-detail .occluded-native-mass-lamellar{width:61%;height:58%;bottom:1%}
 .occluded-world figcaption{padding:.7rem 1rem;color:#d0d6d3;background:#0e1211;border-top:1px solid #4e5955;font-size:.78rem;overflow-wrap:anywhere}
 .occluded-panel{min-width:0;max-height:100vh;padding:clamp(1rem,2.4vw,2rem);overflow:auto;scrollbar-gutter:stable}
 .occluded-heading h1{margin:.15rem 0 .65rem;font-size:clamp(1.45rem,2.5vw,2.45rem);line-height:1.08;overflow-wrap:anywhere}
@@ -117,9 +121,9 @@
 .occluded-form-grid textarea{resize:vertical;white-space:pre-wrap;overflow:auto}.occluded-scaffold pre{max-width:100%;overflow-x:auto;white-space:pre}
 .occluded-actions{display:grid;gap:.55rem;margin-top:1rem}.occluded-actions button,.occluded-observations button{min-width:44px;min-height:44px;padding:.65rem .8rem;border:1px solid #9ca9a3;color:#f6f8f7;background:#202825;overflow-wrap:anywhere}
 .occluded-panel :focus-visible{outline:3px solid #edf4f1;outline-offset:3px}.occluded-note dl{display:grid;gap:.5rem}.occluded-note div{display:grid;grid-template-columns:minmax(8rem,.4fr) 1fr;gap:.7rem}.occluded-note dd{margin:0}
-@media(max-width:900px){.occluded-verge{grid-template-columns:1fr;grid-template-rows:auto auto;overflow:visible}.occluded-world{border-right:0;border-bottom:1px solid #68736f}.occluded-structural-placeholder>div[role="img"]{min-height:0;aspect-ratio:16/9}.occluded-panel{max-height:none;overflow:visible}.occluded-observations button,.occluded-note div{grid-template-columns:1fr}}
+@media(max-width:900px){.occluded-verge{grid-template-columns:1fr;grid-template-rows:auto auto;overflow:visible}.occluded-world{border-right:0;border-bottom:1px solid #68736f}.occluded-native-scene{min-height:0;aspect-ratio:16/9}.occluded-panel{max-height:none;overflow:visible}.occluded-observations button,.occluded-note div{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.occluded-verge,.occluded-verge *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media(forced-colors:active){.occluded-verge,.occluded-world,.occluded-structural-placeholder>div[role="img"],.occluded-panel,.occluded-boundary,.occluded-longest-copy,.occluded-errors,.occluded-panel [role="status"],.occluded-observations li,.occluded-review li,.occluded-form-grid label,.occluded-cases fieldset,.occluded-note,.occluded-actions button,.occluded-observations button{color:CanvasText;background:Canvas;border-color:CanvasText;forced-color-adjust:auto}.occluded-panel :focus-visible{outline-color:Highlight}}
+@media(forced-colors:active){.occluded-verge,.occluded-world,.occluded-native-scene,.occluded-panel,.occluded-boundary,.occluded-longest-copy,.occluded-errors,.occluded-panel [role="status"],.occluded-observations li,.occluded-review li,.occluded-form-grid label,.occluded-cases fieldset,.occluded-note,.occluded-actions button,.occluded-observations button{color:CanvasText;background:Canvas;border-color:CanvasText;forced-color-adjust:auto}.occluded-native-mass{background:CanvasText;filter:none;opacity:.28}.occluded-panel :focus-visible{outline-color:Highlight}}
 
 * { box-sizing: border-box; }
 

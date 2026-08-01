@@ -1,8 +1,8 @@
-# RP-009 Occluded Fold Partial Source Provenance — Quartermaster HOLD
+# RP-009 Occluded Fold Partial Source Provenance — Runtime Image Deferred
 
 ## Disposition
 
-Status: **`PARTIAL SOURCE ACCEPTED / RUNTIME HOLD`**.
+Status: **`SOURCE-ONLY PRESERVED / NOT A RUNTIME DEPENDENCY`**.
 
 Martin explicitly authorized TD-009 Quartermaster to bypass the Creative
 Production board because the image-generation/board path has been glitchy.
@@ -12,10 +12,13 @@ Desktop workers, one per uncached role.
 
 The panorama exhausted its one initial and one targeted recovery without an
 acceptable candidate. The exposed-edge detail used one rejected initial and
-one accepted targeted recovery. The accepted detail native source is archived
-here so the successful output is not regenerated. It is not a runtime asset,
-is not imported by production or fixture code, retires no placeholder, and
-does not make TD-009 `CONTENT COMPLETE`.
+one accepted targeted recovery. Martin subsequently directed Quartermaster to
+defer the panorama and release TD-009 without images. Under proposed variance
+`TD009-CONT-001`, imagery is therefore not a TD-009 release dependency. The
+accepted detail native source remains archived here so the successful output
+is not regenerated. It was not edited, imported, emitted, treated as a paired
+world identity, promoted to runtime canon, or used as the cycle reveal. No
+image attempt occurred during the image-deferred completion pass.
 
 ## Exact attempt accounting
 
@@ -164,7 +167,9 @@ source, never a claimed literal panorama crop.
 
 ## Attempt-limit boundary
 
-The two panorama attempts and two detail attempts are fully consumed. No
-scheduled wake may generate, edit, integrate, or replace either role. A new
-panorama lineage requires Martin's explicit fresh authorization or a supplied
-acceptable panorama source. The accepted detail source must be reused.
+The historical two panorama attempts and two detail attempts remain the exact
+accounting for that generation pass. No image work is a TD-009 release
+dependency now. Any future image work belongs to a separately authorized and
+validated cycle; the accepted detail source remains reusable without a new
+generation. No generation or edit attempt was consumed during the
+image-deferred completion pass.

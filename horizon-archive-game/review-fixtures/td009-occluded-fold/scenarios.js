@@ -24,14 +24,14 @@ const groupFor = (name) => {
 };
 
 export function createOccludedFoldScenario(name) {
-  if (!occludedFoldScenarioNames.includes(name)) throw new TypeError("A closed TD-008 scenario is required.");
+  if (!occludedFoldScenarioNames.includes(name)) throw new TypeError("A closed TD-009 scenario is required.");
   const group = groupFor(name);
   const layout = name === "layout_desktop" ? "1920x1080" : name === "layout_laptop" ? "1366x768"
     : name === "layout_narrow" ? "390x844" : name === "layout_effective_200" ? "768x900-effective-200" : "representative";
   return Object.freeze({
     name,
     state: Object.freeze({
-      shellVersion: "SS-RP009-OFFSET-REACH-v1",
+      shellVersion: "SS-RP009-OCCLUDED-FOLD-v1",
       activeGroup: group,
       boardState: group === "td009-occluded-fold-route" ? "SC-09" : group === "city_threshold" ? "SC-02-50" : "SC-10",
       owner: group.includes("prompt") || group.includes("explanation") ? "PILOT // COURSE WORK" : group === "of10_observations" ? "PILOT // EDGE SURVEY" : "SYSTEM // CLOSED FIXTURE",
@@ -43,7 +43,7 @@ export function createOccludedFoldScenario(name) {
       successor: null,
       privateWorkCleared: true,
     }),
-    scene: Object.freeze({ role: group === "of10_observations" ? "SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL" : "SC-10-OCCLUDED-FOLD-PANORAMA", structuralPlaceholder: true }),
+    scene: Object.freeze({ role: group === "of10_observations" ? "SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL" : "SC-10-OCCLUDED-FOLD-PANORAMA", structuralPlaceholder: false, renderingMedium: "css", runtimeImage: "deferred" }),
     storage: "frozen-in-memory-only",
     arbitraryStateAccepted: false,
   });
