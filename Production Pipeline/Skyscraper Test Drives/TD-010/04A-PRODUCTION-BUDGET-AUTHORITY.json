@@ -1,0 +1,110 @@
+{
+  "schema": "horizon-archive.production-budget-authority",
+  "schemaVersion": 1,
+  "authorityId": "PBA-TD010-v1",
+  "testDrive": "TD-010",
+  "sliceId": "TD-010-RP010-COUNTERFIELD-v1",
+  "campaignAddress": "RP-010 / SC-11 / CF-00-CF-30",
+  "basis": {
+    "acceptedRelease": "TD-009 / SS-RP009-OCCLUDED-FOLD-v1",
+    "releaseAuthority": "Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md",
+    "productionIdentityCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
+    "measuredAtCommit": "381fb5175de6490e15f1ae30a0457d0e9c3256df",
+    "measuredOn": "2026-08-01",
+    "buildCommand": "npm run build",
+    "buildSeconds": 6.83,
+    "buildWallSeconds": 8.313,
+    "modules": 206,
+    "javascript": {
+      "name": "index-CdESPhNH.js",
+      "bytes": 1509968,
+      "sha256": "4929C07F478C2B1F06D01AE2CF5D00A9FD800F12C6F59AB10A9C462E975011A3"
+    },
+    "css": {
+      "name": "index-CXqubXh5.css",
+      "bytes": 104035,
+      "sha256": "1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB"
+    },
+    "runtimeMediaBytes": 37410731,
+    "runtimeMedia": [
+      {"name":"basin_audio-D7yN7Fu4.wav","bytes":96044,"sha256":"AB396955D4533B7D73676D3271DABF9B9DE68EE4C5A4AEBE3CEC80DDB5756030"},
+      {"name":"city-threshold-access-master-CTF9U6Ho.png","bytes":3076970,"sha256":"E03FCFFEB1AAF941E9EE8C5A4EA9C840B4F90271353FDF0B26F51350421C7B4E"},
+      {"name":"city-threshold-boundary-master-CPr5uvhv.png","bytes":2990550,"sha256":"8A932F027A0DB79DF7D24EAC6803B0ADE45BEB3E9099E48C324D887E38DE3E4A"},
+      {"name":"city-threshold-overview-master-BaTX4tqK.png","bytes":2626795,"sha256":"1D727694FA1DBB4311F9D7974A017D6165E66F10080114E5F81FE3CFD44EFF6D"},
+      {"name":"civic-record-district-arrival-master-v1-BYTUil6H.png","bytes":2594095,"sha256":"FD28D2D6BD02F40E5A37D2FD08C9CD5F29CED47608804B900CEB17F497DDAF6C"},
+      {"name":"drowned-archive-master-eoqmWy_0.png","bytes":2727857,"sha256":"AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED"},
+      {"name":"glass-meadow-integrated-terminal-master-v1-CsiDmSf1.png","bytes":2688247,"sha256":"6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2"},
+      {"name":"sc05-three-current-panorama-runtime-master-v1-VoJlZWmR.webp","bytes":2163752,"sha256":"B6E0F34A917732DBB7B66B65968198CFC068BC650AC00CD8A01F095A6109F63F"},
+      {"name":"sc06-manyfold-return-detail-runtime-master-v1-DctucPk5.webp","bytes":2125650,"sha256":"1F64EE18EB14ED0FB7B35EF4814C308391635865056A21F7EC76F3F5BA48D0E9"},
+      {"name":"sc06-manyfold-return-panorama-runtime-master-v1-CyiVc4sj.webp","bytes":2416978,"sha256":"3EEC1A762ABB1C0654CF41753044173136E79F933DB55C6FE7CA097E33A5012B"},
+      {"name":"sc07-interval-works-crosssection-runtime-master-v1-DqI0ldpo.webp","bytes":1790866,"sha256":"0D79C2C2096C0114216A666279D5ACD2ED35F6920D60A117726C625177A0615D"},
+      {"name":"sc07-interval-works-panorama-runtime-master-v1-DjuC7yYh.webp","bytes":1816650,"sha256":"EF5917632EB2440D7D6D85895F5775767389745F1534F4E107F7BB0DE7D59202"},
+      {"name":"sc08-braided-verge-contact-detail-runtime-master-v1-DmWb0qci.webp","bytes":1638180,"sha256":"182E79793CEB3F375BCAABD87FF6D6279E54B53927B8AF90F988D2DFAABC4640"},
+      {"name":"sc08-braided-verge-panorama-runtime-master-v1-C1XfZYJo.webp","bytes":2097426,"sha256":"63148566D2745C45E0D9F1BDEDBB437B0D74A6DAE09028F61828BE2F0E96031E"},
+      {"name":"sc09-offset-reach-panorama-runtime-master-v4-BvpJxZ4V.webp","bytes":1619836,"sha256":"7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9"},
+      {"name":"sc09-offset-reach-relation-detail-runtime-master-v1-CgZBvlrl.webp","bytes":2369022,"sha256":"CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8"},
+      {"name":"witness-corridor-master-BLfy2vNi.png","bytes":2571813,"sha256":"EEA780A0E0AF3E57497552601E00AD80851036C26CD29AB512C0E25EF3E0C4CF"}
+    ]
+  },
+  "policy": {
+    "kind": "one-time-noncompounding-current-release-rebaseline",
+    "javascriptAndCssRule": "floor(exact accepted TD-009 aggregate production bytes * 1.05)",
+    "moduleRule": "floor(exact accepted TD-009 production modules * 1.05)",
+    "runtimeMediaRule": "at most two new image-only runtime assets totaling at most 8 MiB above the exact accepted TD-009 media hash set",
+    "plannedRuntimeImageRoles": [
+      "SC-11 invariant Counterfield panoramic world identity",
+      "SC-11 spatially consistent continuous-landscape district detail"
+    ],
+    "pythonExecutionRule": "pure deterministic approved-source-shape validation plus session-only sanitized request/response replica derivation; no eval, Function constructor, Worker, arbitrary Python, Python/WASM runtime, import, file, browser persistence, network, SDK, endpoint, credential, package, process, clipboard, download, or external operation",
+    "truthfulExecutionLabel": "The course validator checks the approved Python source shape and derives the bounded exchange summary from session-only sanitized request/response replicas. It does not execute arbitrary Python, contact a network or Foundry service, use a credential or endpoint, or perform an external action.",
+    "protectedReferenceRule": "rp009.protected-journey.v1 and rp010.protected-journey.v1 remain non-routable design evidence; normal TD-010 must bridge only canonical released rp009.occluded-fold-save.v1 raw/object bytes through released normal sanitizers",
+    "notARollingEntitlement": true,
+    "qualityRequirementsRemainMandatory": true,
+    "allOutputChunksCount": true,
+    "allNewRuntimeAssetsCount": true,
+    "acceptedRuntimeMediaMustRemainPresent": true,
+    "sourceMapsDoNotHideRuntimePayload": true,
+    "futureOverageRequiresScienceMissionVariance": true
+  },
+  "caps": {
+    "aggregateJavascriptBytes": 1585466,
+    "aggregateCssBytes": 109236,
+    "productionModules": 216,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608,
+    "totalRuntimeMediaBytes": 45799339,
+    "allowedNewRuntimeMediaExtensions": [".avif", ".jpeg", ".jpg", ".png", ".webp"],
+    "forbiddenNewRuntimeMediaClasses": ["audio", "font", "video", "source-map", "network-fetched-payload", "python-runtime", "wasm-runtime", "service-worker"],
+    "productionBuildSeconds": 60,
+    "focusedSuiteSeconds": 30,
+    "relatedSuiteSeconds": 60,
+    "fullSuiteSeconds": 60,
+    "completeE2ESeconds": 180,
+    "sampledMainThreadTaskMs": 100
+  },
+  "headroom": {
+    "javascriptBytes": 75498,
+    "cssBytes": 5201,
+    "productionModules": 10,
+    "newRuntimeMediaAssets": 2,
+    "newRuntimeMediaBytes": 8388608
+  },
+  "requiredQualityGates": [
+    "normal TD010-RTA-001 accepts only exact canonical released rp009.occluded-fold-save.v1 raw/object bytes after TD-004-through-TD-009 byte proof and rejects protected predecessor versions",
+    "normal RP-010 save has exact ordered 13-key private-free schema, four separately attributable scopes, canonical write/read-back, verified rollback, and replay-free restore",
+    "PY-018 and RP010-FOUNDRY-CLIENT-FLOW-01 remain independent, genuinely blank across forms, scored-miss-only answer-free, no-cross-credit, offline, no-authority, and truthfully labeled",
+    "one exact 66-scenario storage-free fixture is absent from production and compares every declared owner/focus contract with rendered owner text and actual document.activeElement.id",
+    "runtime images remain maximum-quality cinematic photorealistic first-person world identities; byte caps never authorize visible degradation",
+    "each runtime image has direct import, emitted byte and SHA-256 identity, complete generation/edit/selection provenance, truthful source/output dimensions, accessible alternatives, registered responsive crops, grayscale review, and explicit placeholder retirement",
+    "every generated lineage is inspected at original resolution against required and forbidden equal-peer, no-connector, no-route, no-answer, no-human, invariant-world, and no-RP-011 readings before integration",
+    "deterministic enlargement is disclosed and never described as native resolution; contextual registration is not called a literal crop without pixel proof",
+    "the cycle reveal uses one initial private generation and at most one documented targeted recovery; rejected drafts never enter the workspace, canon, runtime, provenance, commits, or user-facing reveal",
+    "learner source, request/response replicas, derived exchange, cases, answers, reasoning, feedback, diagnostics, credentials, endpoints, headers, payloads, responses, prompts, unavailable contents, external-action requests, and temporary state never enter durable persistence",
+    "every emitted JavaScript and CSS chunk is aggregated",
+    "every runtime media file is counted and classified by SHA-256 against the accepted TD-009 set",
+    "all accepted TD-009 runtime media identities remain present",
+    "new runtime audio, font, video, source-map, Python/WASM runtime, service worker, and network payloads are rejected",
+    "focused, related, full, readiness-validator, build, served-identity, non-overlapping E2E, four-layout accessibility, 66-scenario fixture, QA restoration, stable-candidate freeze, and independent as-built reconciliation remain mandatory",
+    "quality, learning evidence, privacy, sanitation, accessibility, responsive behavior, save/recovery, offline behavior, invariant-world limits, and CF-30 hard stop cannot be reduced to meet a cap"
+  ]
+}

@@ -5,7 +5,7 @@
     "testDrive": "TD-010",
     "shellCandidate": "deliberately unselected; Mission shell not authorized",
     "campaignAddress": "RP-010 / SC-11 / CF-00-CF-30 through sole conditional TD010-RTA-001",
-    "provisionalSurfaceCandidate": "selected by Operations as the sole current-source cumulative-scope slice; Science viability and Mission shell remain pending",
+    "provisionalSurfaceCandidate": "selected by Operations and independently found viable by Science as the sole current-source cumulative-scope slice; Mission shell remains pending",
     "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -73,6 +73,31 @@
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Operations push gate",
       "nextStage": "Office of Science Administrator"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-08-01T22:18:00.000Z",
+      "endedAt": "2026-08-01T22:31:00.000Z",
+      "durationMs": 780000,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/04-GLOBAL-VIABILITY-ENVELOPE.md",
+      "certificateId": "VE-TD010-v1",
+      "budgetAuthority": "PBA-TD010-v1",
+      "selectedAddress": "RP-010 / SC-11 / CF-00-CF-30",
+      "route": "sole conditional TD010-RTA-001 after exact released rp009.occluded-fold-save.v1 raw/object, TD-004-TD-009 byte, mode, owner, modality, sanitation, and fresh one-hit token proof; protected rp009.protected-journey.v1 is explicitly rejected",
+      "learning": "seven equal observations across all 5,040 orders; strict independent PY-018 primary/trace/transfer and RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 primary/retrieval/transfer plus two explanations; mapping and check IDs remain distinct; no cross-credit",
+      "privacyAndRecovery": "13-key allowlisted record; exact ordered separate RP-007, RP-008, RP-009, and candidate RP-010 scopes; private/transient clearing; atomic canonical write/read-back; TD-004-TD-009 byte proof; verified rollback; replay-free restore",
+      "accessibilityAndFixture": "seven modalities, >=44px targets, deterministic owner/status/focus, desktop/laptop/narrow/effective-200 layouts, forced colors, reduced motion, grayscale, and exact 66-scenario storage-free production-absent fixture with rendered owner/actual activeElement proof",
+      "assets": "at most two conditional SC-11 image roles with direct identity, complete provenance, truthful native/output dimensions, original-resolution QA, responsive crops, accessible alternatives, and one-initial/one-targeted-recovery generation boundary",
+      "budget": "fresh one-time non-compounding TD-009 rebaseline: JS <=1585466 bytes, CSS <=109236 bytes, <=216 modules, <=2 new images / <=8388608 bytes, total media <=45799339 bytes",
+      "validation": "official Microsoft-only current-source verification PASS; focused 20/20 in 1.486s including all 5,040 orders; readiness 15/15 in 2.073s; full 905/905 in 11.800s; fresh production build 206 modules in 6.83s / 8.313s wall; exact released TD-009 JS/CSS/17-media identities; PBA baseline PASS",
+      "variances": "none; released/protected predecessor distinction is mandatory; resolved TD-009 owner/focus/content/fixture corrections remain regression gates and the TD-009 image/reveal waiver does not carry forward",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Science push gate",
+      "nextStage": "Mission Captain"
     }
   ]
 }

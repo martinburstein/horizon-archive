@@ -96,46 +96,86 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit: dedicated local Operations commit for the current stage; no push at
   this gate.
 
+### Office of Science Administrator
+
+- Stage: **`Office of Science Administrator / office_of_science_administrator`**.
+- Certificate: `VE-TD010-v1`.
+- Budget: `PBA-TD010-v1`.
+- Disposition: **`VIABILITY READY`**.
+- Released/protected boundary: normal TD-010 must accept only exact canonical
+  released `rp009.occluded-fold-save.v1` raw/object bytes and independently
+  prove TD-004 through TD-009 bytes. Protected
+  `rp009.protected-journey.v1` remains non-routable reference evidence and is
+  an explicit route-rejection case.
+- Normal identities: new distinct route/controller/group/save/fixture
+  identities are required; no protected module, adapter, identity, or object
+  may enter App/main, browser persistence, production bundle, or the fixture.
+- Learning: seven equal observations in all `5,040` orders; strict frozen
+  `PY-018`; independent `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3`; both
+  explanations; mapping/check IDs remain distinct; no cross-credit.
+- Persistence: exact ordered 13-key private-free record; ordered separate
+  RP-007, RP-008, RP-009, and candidate RP-010 scopes; canonical write/read-
+  back; TD-004-TD-009 byte proof; verified rollback; replay-free restore.
+- Accessibility/fixture: seven modalities, `>=44px`, deterministic owner,
+  status and focus; exact four layouts and assistive modes; one exact
+  66-scenario storage-free production-absent fixture that compares declared
+  owner/focus with rendered owner text and actual `document.activeElement.id`.
+- Assets/generation: at most two conditional SC-11 runtime image roles with
+  complete provenance, truthful native/output dimensions, original-resolution
+  QA, responsive/accessible treatment, and the one-initial/one-targeted-
+  recovery generation boundary. TD-009's image/reveal waiver does not carry.
+- Budget: fresh non-compounding TD-009 rebaseline: JS `<=1,585,466`, CSS
+  `<=109,236`, modules `<=216`, at most two new images totaling
+  `<=8,388,608` bytes, total runtime media `<=45,799,339` bytes.
+- Validation: current official Microsoft-only claim review; focused `20/20`
+  including all `5,040` orders; readiness `15/15`; full `905/905`; fresh
+  `206`-module build; exact released TD-009 JS/CSS/17-media identity; PBA
+  baseline PASS.
+- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/04-GLOBAL-VIABILITY-ENVELOPE.md`.
+- Variances: none. Resolved TD-009 owner/focus/content/fixture corrections are
+  mandatory regressions.
+- Commit: dedicated local Science commit for the current stage; no push at
+  this gate.
+
 ## Exact next action
 
-Run **Office of Science Administrator / `office_of_science_administrator`
-only**.
+Run **Mission Captain / `mission_captain` only**.
 
-Read the full Science profile, `GDB-TD010-v1`, `WNMP-TD010-v1`,
-`CFS-TD010-v1`, exact released TD-009 normal route/record/return/state
-authorities, and the exact current RP-010 learning, evidence, privacy,
-accessibility, save/recovery, offline, performance, fixture, asset, and budget
-controls needed for this boundary.
+Read the full Mission profile; `GDB-TD010-v1`, `WNMP-TD010-v1`,
+`CFS-TD010-v1`, `VE-TD010-v1`, and `PBA-TD010-v1`; exact released TD-009
+normal record/route/return/state authorities; current RP-010 curriculum,
+puzzle, protected journey, SC-11, asset, accessibility, privacy, save,
+fixture, validation, and latest variance controls.
 
-Independently validate the complete viability envelope for
-`RP-010 / SC-11 / CF-00-CF-30` and sole conditional route
-`TD010-RTA-001`. Prove exact released RP-009 canonical raw/object and
-TD-004-TD-009 byte identity; preserve the distinction between the released
-normal predecessor and protected reference version; validate one new normal
-bridge, fresh Pilot intent/token, ordered validation before consumption,
-invalid/duplicate/stale/Tour/interruption recovery, all exact state-to-scene
-identities and checkpoints, exact returns, and the CF-30 hard stop.
+Reconcile the five Colonel contracts without changing them. Issue one
+conflict-free versioned `SHELL READY` contract for
+`RP-010 / SC-11 / CF-00-CF-30` and sole `TD010-RTA-001`, or an honest
+`REVISE`/`HOLD`.
 
-Validate seven equal observations across all `5,040` orders; strict frozen
-`PY-018` and independent
+Freeze exact released-versus-protected predecessor rejection; canonical
+released RP-009 raw/object and TD-004-TD-009 byte proof; one new normal
+bridge with fresh Pilot one-hit intent and validation-before-consumption;
+CF-00-CF-30 state-to-scene identities; seven equal observations/all `5,040`
+orders; strict independent `PY-018` and
 `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` chains plus both explanations;
-no cross-credit; answer-free scored-miss-only recovery; private/transient
-clearing; exact four-scope review; atomic canonical save/read-back/rollback;
-replay-free restore; Tour isolation; offline/no-authority/no-exam-guarantee;
-four-layout accessibility; rendered-owner/actual-focus fixture proof; SC-11
-asset/provenance/original-resolution and bounded-generation obligations; one
-closed storage-free production-absent fixture; served identity; and one fresh
-executable non-compounding budget.
+mapping/check-ID distinction; no-cross-credit; scored-miss-only blank
+recovery; privacy clearing; four ordered scopes; exact 13-key record; atomic
+write/read-back/rollback; replay-free restore; exact returns; Tour isolation;
+offline/no-authority/no-exam-guarantee; seven modalities; four layouts;
+rendered-owner/actual-focus proof across the exact 66-scenario closed fixture;
+two conditional SC-11 image roles and original-resolution/provenance gates;
+one-initial/one-targeted-recovery generation boundary; fresh PBA caps; served
+identity; complete validation ladder; and CF-30 hard stop.
 
 Produce
-`Production Pipeline/Skyscraper Test Drives/TD-010/04-GLOBAL-VIABILITY-ENVELOPE.md`
-and a fresh versioned production-budget authority; issue `VIABILITY READY`,
-`REVISE`, or `HOLD`; update the stage ledger and this handoff; make one
-dedicated local Science commit; and stop after Science. Do not issue a shell,
-implement, generate assets, inspect Martin's browser/profile/save, open hidden
-lore, touch protected user files, or expose RP-011, RP-013, a successor,
-ending extension, reward, access, permission, identity, authority, response,
-unavailable contents, Machine relation, readiness judgment, or world effect.
+`Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md`,
+update the stage ledger and this handoff, make one dedicated Mission commit,
+push only at the Mission `SHELL READY` gate after verifying synchronization,
+and stop before Marines. Do not implement, generate assets, inspect Martin's
+browser/profile/save, open hidden lore, touch protected user files, or expose
+RP-011, RP-013, a successor, ending extension, reward, access, permission,
+identity, authority, response, unavailable contents, Machine relation,
+readiness judgment, or world effect.
 
 ## Recurring automation
 
@@ -146,8 +186,7 @@ unavailable contents, Machine relation, readiness judgment, or world effect.
 
 - `RP-010 / SC-11 / CF-00-CF-30` and `TD010-RTA-001` are planning-only.
   No released destination, normal route, persisted token, shell, scene
-  opening, implementation, or Marine deployment exists until Science and
-  Mission pass.
+  opening, implementation, or Marine deployment exists until Mission passes.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
