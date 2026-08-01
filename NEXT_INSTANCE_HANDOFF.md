@@ -6,10 +6,12 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next stage.
 
 The authorized three-hour Skyscraper automation remains configured, but
-TD-008 is now on an explicit Quartermaster `HOLD`. A scheduled wake must read
-this file and stop. It may not restart Quartermaster, begin Image Specialist,
-begin Intelligence Officer, spend a third generation attempt, or select a new
-cycle from a stale prompt.
+TD-008 is on an explicit Quartermaster `HOLD`. Martin's `Keep it up!`
+direction was consumed by the versioned bounded asset-recovery contract
+`GC-TD008-SC09-v2`; it was not permission for unlimited retries. A scheduled
+wake must read this file and stop. It may not restart Quartermaster, begin
+Image Specialist, begin Intelligence Officer, spend a third v2 generation
+attempt, or select a new cycle from a stale prompt.
 
 ## Synchronized released state
 
@@ -34,9 +36,11 @@ BV-30 plus its exact returns.
 - Slice/address: `TD-008-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 / OR-00-OR-30`.
 - Functional source commit:
   `c6f8459135c54565af20e0a39b42b8e4dad6befb`.
-- Functional validation remains green: focused `28/28`, connected `82/82`,
-  full `879/879`, mapping `11/11`, production build `201` modules, served
-  identity and `PBA-TD008-v1` candidate PASS.
+- Quartermaster HOLD baseline commit:
+  `26f63e5932186849f955fc52f4ae3c7574b81149`.
+- Functional validation remains green: latest focused `28/28`; prior
+  connected `82/82`, full `879/879`, mapping `11/11`, production build `201`
+  modules, served identity and `PBA-TD008-v1` candidate PASS.
 - Runtime remains unchanged with the exact `15` predecessor media totaling
   `33,421,873` bytes and zero TD-008 media.
 - Placeholders remain exactly `SC-09-PANORAMA-MASTER` and
@@ -45,31 +49,41 @@ BV-30 plus its exact returns.
 - HOLD report:
   `Production Pipeline/Skyscraper Test Drives/TD-008/09-CONTENT-ASSET-LEDGER.md`.
 
-## HOLD cause
+## Recovery accounting
 
-The first private SC-09 panorama generation passed Quartermaster source QA but
-was not integrated because the required pair is incomplete.
+- Creative Production board:
+  `9d5428ed-f5bb-41f5-b9cb-c30175ad705a`; opened once only.
+- Original board receipts: revisions `1-5`.
+- `GC-TD008-SC09-v2` stable item:
+  `td008-sc09-relation-detail-v2`.
+- v2 receipts: initial begin revision `6`, targeted recovery begin revision
+  `7`, terminal failure revision `8`.
+- The exact cached panorama remained present with native SHA-256
+  `C68462B8A805BE4BD816A728A3BC19D650C8DA69052328D9F050128A7C1C09B4`
+  and independently re-passed original-resolution QA. It was preserved; no new
+  panorama was generated.
 
-The relation-detail initial generation failed before workspace entry because
-it read as an inviting traversable corridor, made the third continuity
-rope-like, and did not preserve three equal bounded relationship regions. Its
-one permitted targeted recovery removed the corridor but still read as a
-dominant door-like human assembly with opening-like cavities and unequal peer
-regions. It also failed before workspace entry.
+The v2 fresh detail removed the original corridor, door assembly, rope-like
+continuity, and dominant-center failures, but it did not make the middle
+no-contact pair independently clear and showed the rigid third continuity
+apparently touching both familiar materials. The targeted recovery clarified
+the solid no-contact offset and sealed recesses, but the third continuity
+still visibly contacted the cellular mantle as well as the glass ribbon. It
+therefore contradicted the exact one-familiar-continuity contact.
 
-Both rejected drafts remain outside workspace, canon, runtime, provenance,
-commit, and reveal. The two-attempt relation-detail budget is exhausted. No
-third generation is permitted.
+Both v2 detail drafts remain outside workspace, canon, runtime, provenance,
+commit, and reveal. The v2 two-attempt budget is exhausted. No third v2
+generation is permitted.
 
 ## Exact next action
 
-**Stop and await Martin's explicit direction.**
+**Stop and await Martin's explicit new direction.**
 
 Do not perform an automated retry or downstream stage. Martin may explicitly
-end TD-008, provide a new source/asset authority, or authorize a new bounded
-cycle with a fresh generation contract. Without that new authority, every
-scheduled three-hour wake performs read-only synchronization, records no new
-stage, and exits.
+end TD-008, supply a source asset that already satisfies the unresolved role,
+or authorize another distinctly versioned bounded recovery contract. Without
+that new authority, every scheduled three-hour wake performs read-only
+synchronization, records no new stage, and exits.
 
 ## Frozen boundaries
 

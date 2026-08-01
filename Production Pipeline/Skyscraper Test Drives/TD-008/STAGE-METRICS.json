@@ -180,15 +180,16 @@
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/09-CONTENT-ASSET-LEDGER.md",
       "shell": "SS-RP008-OFFSET-REACH-v1",
       "combatBuild": "c6f8459135c54565af20e0a39b42b8e4dad6befb / FUNCTIONALLY COMPLETE",
-      "board": "9d5428ed-f5bb-41f5-b9cb-c30175ad705a / revisions 1-5 / one board only",
-      "generation": "panorama initial accepted privately but unintegrated; relation-detail initial and targeted recovery rejected before workspace; no third attempt",
+      "board": "9d5428ed-f5bb-41f5-b9cb-c30175ad705a / revisions 1-8 / one board only",
+      "recoveryContract": "GC-TD008-SC09-v2 / Martin explicit Keep it up authority / cached panorama preserved / only td008-sc09-relation-detail-v2",
+      "generation": "panorama initial accepted privately and exact cache reverified but unintegrated; original relation-detail initial/recovery and v2 relation-detail fresh initial/recovery all rejected before workspace; no unauthorized third attempt",
       "placeholders": "SC-09-PANORAMA-MASTER and SC-09-RELATION-DETAIL-MASTER remain truthful structural placeholders; zero new runtime media",
       "validation": "focused 28/28, connected 82/82, full 879/879, 11/11 mapping validators, 201-module build, served root/deep/all 17 assets, cleanup and unchanged PBA-TD008-v1 candidate PASS",
-      "variances": "none; required relation-detail asset quality gap exhausted the authorized two-attempt budget",
+      "variances": "none; required relation-detail asset quality gap exhausted both the original and separately authorized GC-TD008-SC09-v2 two-attempt budgets",
       "commit": "PENDING_QUARTERMASTER_HOLD_COMMIT",
       "commitConvention": "The dedicated Quartermaster HOLD commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Quartermaster push gate",
-      "nextStage": "none; explicit Martin authority required before any retry or downstream stage"
+      "nextStage": "none; explicit Martin source/new versioned authority required before any retry or downstream stage"
     }
   ]
 }

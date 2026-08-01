@@ -15,6 +15,58 @@
 | Disposition | **`HOLD`** |
 | Return owner | Quartermaster / `quartermaster` |
 
+## Authorized recovery contract
+
+`GC-TD008-SC09-v2` is a new bounded generation contract issued under
+Martin's explicit `Keep it up!` direction after the v1 HOLD. It is not a
+retroactive third attempt under the exhausted v1 contract.
+
+- Starting authority:
+  `26f63e5932186849f955fc52f4ae3c7574b81149`, this ledger, the exact Mission
+  shell, Recon treatment, Tactical blueprint, Combat build, visual charter,
+  and Martin's new direction.
+- Preserved success: the exact cached panorama candidate at native SHA-256
+  `C68462B8A805BE4BD816A728A3BC19D650C8DA69052328D9F050128A7C1C09B4`
+  exists and independently re-passes original-resolution QA. Generating a new
+  panorama is forbidden.
+- Sole unresolved output: `SC-09-RELATION-DETAIL-MASTER`.
+- Board: reuse only `9d5428ed-f5bb-41f5-b9cb-c30175ad705a` with new stable
+  item `td008-sc09-relation-detail-v2`; never open another board.
+- Attempt budget: one fresh private initial generation; only if it fails
+  documented Quartermaster QA before workspace entry, one targeted recovery;
+  no third attempt under v2.
+- Mandatory composition: one continuous non-traversable monumental material
+  wall, presented nearly orthographically, with exactly three equal,
+  clearly separable peer relationship regions. No region may dominate.
+- Mandatory material semantics: separately traceable familiar laminated
+  glass-ceramic ribbon and cellular mineral-ceramic mantle; ordinary recurring
+  bounded familiar contact; a comparable broad solid offset with no visible
+  contact; rigid sintered-mineral third continuity contacting only one
+  familiar continuity; completely solid unavailable mass.
+- Forbidden readings: corridor, canyon, route, ground plane, vanishing point,
+  door, human architectural assembly, aperture, cavity, opening, eye, face,
+  symmetry, central hero zone, rope, cable, string, cloth, tendon, hair,
+  organic fiber, verdict, answer cue, access, authority, reward, response,
+  cause, purpose, identity, RP-009 or later content.
+- Acceptance gate: inspect original resolution for all mandatory and forbidden
+  readings before copying any new detail file into the workspace.
+- Stop rule: two v2 detail failures produce an honest renewed `HOLD`; no
+  Image Specialist or Intelligence Officer work may begin.
+
+This contract was recorded before the v2 board reservation and generation.
+
+### `GC-TD008-SC09-v2` attempt log
+
+The fresh initial relation-detail candidate was rejected before workspace
+entry. It successfully removed the corridor, route, human door assembly,
+rope-like continuity, and dominant-center failures, but the right-hand rigid
+third continuity appeared to contact the cellular mantle as well as the
+glass-ceramic ribbon; the middle familiar-pair no-contact responsibility was
+not independently legible; and small dark recesses remained in the upper
+solid mass. A single targeted recovery is authorized to correct exactly these
+remaining failures. The rejected initial remains outside workspace, canon,
+runtime, provenance, commit, and reveal.
+
 ## Outcome
 
 Quartermaster did not retire the two SC-09 structural placeholders. The
@@ -30,6 +82,20 @@ No image remains in the workspace, production imports, emitted build, canon,
 provenance package, commit, or reveal. The normal build remains byte-identical
 to the Combat Engineer handoff with both truthful structural placeholders
 intact.
+
+Martin subsequently issued explicit `Keep it up!` authority for exactly one
+new bounded recovery contract, `GC-TD008-SC09-v2`. That contract preserved the
+cached panorama and authorized only one fresh relation-detail generation plus
+one conditional targeted recovery. Both v2 detail candidates were rejected
+before workspace entry. The initial candidate left the right-hand third
+continuity apparently touching both familiar materials and did not make the
+middle no-contact responsibility independently clear. The targeted recovery
+clarified the middle solid offset and sealed the remaining recesses, but the
+rigid third continuity still visibly contacted the cellular mantle on its
+outer edge as well as the glass ribbon. This violates the exact
+cross-family-contact-with-only-one-familiar-continuity contract.
+
+`GC-TD008-SC09-v2` is therefore also **`HOLD`**. No third v2 attempt was made.
 
 ## Combat Engineer build confirmed
 
@@ -55,6 +121,9 @@ intact.
 - Panorama completion was accepted by the board at revision `3`.
 - The relation-detail targeted recovery began at revision `4`.
 - The relation-detail item was terminally failed at revision `5`.
+- Under `GC-TD008-SC09-v2`, the new stable item
+  `td008-sc09-relation-detail-v2` began at revision `6`, entered its one
+  targeted recovery at revision `7`, and terminally failed at revision `8`.
 - No second board was opened. No CLI, API, local endpoint, or process-based
   native-generation fallback was used.
 
@@ -88,6 +157,11 @@ intact.
 Both rejected drafts remain outside the workspace, canon, runtime,
 provenance package, commit, and reveal. The second rejection exhausted the
 explicit generation budget. No third attempt is permitted.
+
+Under the separate v2 contract, both new detail drafts likewise remain
+outside the workspace, canon, runtime, provenance package, commit, and reveal.
+The second v2 rejection exhausted that fresh contract. No third v2 attempt is
+permitted.
 
 ## Placeholder dispositions
 
@@ -143,7 +217,9 @@ pair into `CONTENT COMPLETE`.
 - Formal shell variance: **none**.
 - Required unresolved content gap: one acceptable
   `SC-09-RELATION-DETAIL-MASTER` and therefore the complete two-master pair.
-- Generation limitation: the relation-detail two-attempt budget is exhausted.
+- Generation limitation: both the original relation-detail two-attempt budget
+  and the separately authorized `GC-TD008-SC09-v2` two-attempt budget are
+  exhausted.
 - The accepted private panorama is native `1672 x 941`; no native-4K or
   runtime-integration claim is made.
 - No Image Specialist reveal generation is authorized while Quartermaster is
@@ -174,7 +250,7 @@ changed.
 **`HOLD`**
 
 Do not run Image Specialist or Intelligence Officer. Do not restart
-Quartermaster automatically and do not make a third relation-detail
+Quartermaster automatically and do not make a third v2 relation-detail
 generation. The loop remains at the Combat Engineer functional boundary until
-Martin explicitly supplies new authority for the held asset role or starts a
-new cycle that lawfully resets its generation contract.
+Martin explicitly supplies a source asset or new authority for another
+lawfully versioned bounded recovery contract.
