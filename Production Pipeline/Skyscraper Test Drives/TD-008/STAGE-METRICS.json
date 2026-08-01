@@ -273,6 +273,20 @@
         "commit": "PENDING_TD008_PRES_001_IMAGE_COMMIT",
         "synchronization": "local dedicated correction commit only; Intelligence remains next and owns final live acceptance and push"
       },
+      "intelligencePresentationReQa": {
+        "id": "TD008-PRES-002",
+        "disposition": "PRESENTATION COMPLETE - TD008-PRES-002 CORRECTION ACCEPTED",
+        "startingCommit": "d8c9b79846ec2075518b8513ab700750e0397fd8",
+        "originalResolution": "v4 3840x2160 source/runtime PASS: thick rigid fractured refractory mineral vanes with solid cross-sections, irregular nonparallel profiles, discontinuous non-traversable ridges and open voids; no cable/wire/root/hair/tentacle/rope/web/fiber-optic/flexible-strand or deck/bridge/walkway/road/rail/corridor/route read; one clustered bounded ribbon contact; cellular mantle remains separate; open offset and closed peripheral mass preserved",
+        "media": "v4 panorama source E34092F3777A455869BC80A5CEC67437FBF0FC00ACE8471CD15057C4D920EAA6 / runtime 7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9; relation source 6FD59B0D8E66BB04C12EE27CB9DED7A4F765A4E44E2C7BB61FCB0A5DF8135013 / runtime CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8 unchanged; reveal 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1 unchanged",
+        "liveReview": "in-app Browser exact CSS viewport matrix PASS at DPR1: heading lines 1920x1080 2<=3, 1366x768 3<=4, 390x844 3 natural, effective-200 768x900 2<=4; zero horizontal escape; desktop/laptop contained; narrow/effective200 natural vertical flow; world 58.3% of fixture product at desktop/laptop and full-width above panel at narrow/zoom; one polite atomic status; visible focus; 44px product target; zero warning/error logs; local-only 127.0.0.1 fixture assets",
+        "liveLimit": "browser exposes no DPR override or OS forced-colors/reduced-motion emulation; DPR2 and OS media states are not claimed live; exact production source/media contracts and focused assertions pass",
+        "validation": "focused TD-008 normal/protected/UI 28/28 including all 720 observation orders; 203-module build; JS 1450367 / 59D8B731F50A560496394336F9B7AC379409AAD12E5ABFC7E85BAA4ABFA214D1; CSS 99210 / 29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F; root/two-deep/all-19-assets exact served byte/hash 22/22; browser logs and requests clean",
+        "impact": "no generation, board access, image edit, runtime/content/mechanic/canon/evidence/schema/save/route/return/hard-stop/copy/heading-CSS/relation-detail/reveal/world-state change",
+        "variances": "none; fresh Intelligence release gate required",
+        "commit": "PENDING_TD008_PRES_002_IMAGE_REQA_COMMIT",
+        "synchronization": "local dedicated Image re-QA commit only; no push; Intelligence remains next and owns final release"
+      },
       "nextStage": "Intelligence Officer"
     }
   ]

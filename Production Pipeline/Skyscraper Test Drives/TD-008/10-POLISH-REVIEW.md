@@ -193,6 +193,99 @@ horizontal escape, visible focus, one atomic status, and `>=44px` targets.
 Correction disposition:
 **`CORRECTED - RETURN TO INTELLIGENCE; EXACT LIVE ACCEPTANCE PENDING`**.
 
+## Intelligence return closure - `TD008-PRES-002`
+
+### Exact stable candidate and original-resolution disposition
+
+Image Specialist independently re-reviewed Quartermaster correction commit
+`d8c9b79846ec2075518b8513ab700750e0397fd8` after the separately owned
+heading correction `49d7bac1f568540458b9c5ccce1aec632d2e6fab`.
+
+The exact `3840 x 2160` v4 lossless source and direct runtime WebP both pass
+at original resolution. The lower-right third lineage reads as a sparse fan
+of thick, rigid, fractured refractory mineral vanes with solid mass and
+cross-sections, irregular nonparallel profiles, unequal widths, broken
+non-traversable ridges, and open voids. It does not reasonably read as cable,
+wire, root, hair, tentacle, rope, web, net, thread, string, tendon, vine,
+branch, brush, whisker, conduit, decorative fiber optic, flexible strand,
+deck, bridge, walkway, road, rail, corridor, or route. No continuous planar
+or traversable surface exists.
+
+One clustered bounded contact under the laminated ribbon remains. The vanes
+do not merge with the cellular mantle. The separately traceable familiar
+continuities, recurring local contact, broad open offset, closed peripheral
+mass, layered stewardship, invariant light/composition, and every no-door,
+no-opening, no-text, no-face, no-answer, no-authority, no-response, and
+no-later-content boundary remain intact.
+
+| Asset | Dimensions / bytes | SHA-256 | Re-QA result |
+|---|---:|---|---|
+| v4 panorama source | `3840 x 2160` / `9,972,403` | `E34092F3777A455869BC80A5CEC67437FBF0FC00ACE8471CD15057C4D920EAA6` | original-resolution PASS |
+| v4 panorama runtime | `3840 x 2160` / `1,619,836` | `7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9` | original-resolution/runtime PASS |
+| relation-detail source | `3840 x 2160` / `12,258,944` | `6FD59B0D8E66BB04C12EE27CB9DED7A4F765A4E44E2C7BB61FCB0A5DF8135013` | unchanged |
+| relation-detail runtime | `3840 x 2160` / `2,369,022` | `CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8` | unchanged |
+| reference-only reveal | `1672 x 941` / `2,878,532` | `345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1` | unchanged; still pending Intelligence acceptance |
+
+No generation, board access, image edit, replacement, added role, runtime
+content change, or reveal change occurred in this re-QA.
+
+### Exact storage-free layout evidence
+
+The in-app Browser viewport capability honored all four requested CSS
+viewports against the closed, storage-free `td008-offset-reach-v1` review
+surface. DOM Range line rectangles measured the full exact heading without
+ellipsis or clipping:
+
+| CSS viewport | Heading lines | Containment / hierarchy |
+|---|---:|---|
+| `1920 x 1080` | `2` (`<=3`) | document `1920/1920`; no outer scroll; world `58.3%` of the fixture product width; product target `44px` |
+| `1366 x 768` | `3` (`<=4`) | document `1366/1366`; no outer scroll; world `58.3%`; product target `44px` |
+| `390 x 844` | `3`, natural | browser content width `375/375` after its scrollbar gutter; world above one full-width product column; natural vertical flow; no horizontal escape; target `44px` |
+| effective-200 `768 x 900` | `2` (`<=4`) | browser content width `753/753` after its scrollbar gutter; world above one full-width product column; natural vertical flow; no horizontal escape; target `44px` |
+
+The closed fixture intentionally separates one harness `h1` from its product
+`h2`; the exact production component independently retains one semantic
+product `h1`, the complete heading text, the scoped `or20_review` correction,
+heading-first `useLayoutEffect`, one polite atomic status, native controls,
+and `>=44px` production targets. The live fixture exposed one polite atomic
+status, a visible focused `44px` product button, and zero warning/error logs.
+Its PageAssets inventory contained only `127.0.0.1:4180` fixture modules and
+one stylesheet, with zero font, image, video, remote, or external asset
+requests.
+
+The in-app Browser reports DPR approximately `1` and exposes no DPR override
+or OS forced-color/reduced-motion emulation. DPR2, forced colors, and reduced
+motion are therefore not overstated as live results. Exact production source
+retains centered full-source `object-fit:contain` below `900px`, system-color
+forced-color treatment with Highlight focus, and animation/transition removal
+plus `scroll-behavior:auto` under reduced motion. Original-resolution pixels,
+production alternative/caption copy, registered default and centered narrow
+crops, complete text, and static regression cover the same meaning without
+color, motion, sound, or side-only dependence.
+
+### Focused, build, and served evidence
+
+| Gate | Re-QA result |
+|---|---|
+| TD-008 normal/protected/UI | `28/28 PASS`; all `720` observation orders retained; `0.308s` Node duration |
+| Production build | `PASS`; `203` modules; Vite `6.33s` |
+| JavaScript | `index-CUBq7F91.js`; `1,450,367` bytes; SHA-256 `59D8B731F50A560496394336F9B7AC379409AAD12E5ABFC7E85BAA4ABFA214D1` |
+| CSS | `index-C733m8E_.css`; `99,210` bytes; SHA-256 `29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F` |
+| Served identity | root, two deep fallbacks, and all `19` emitted assets exact byte/hash: `22/22 PASS` |
+| SC-09 served assets | v4 panorama `1,619,836` and relation detail `2,369,022` bytes; each exact to `dist` |
+
+No mechanics, content meaning, canon, evidence, schema, save, route, return,
+hard stop, copy punctuation, heading CSS, relation detail, reveal, or world
+state changed. Formal Image variance requests remain **none**.
+
+Re-QA disposition:
+**`PRESENTATION COMPLETE - TD008-PRES-002 CORRECTION ACCEPTED`**.
+
+Fresh Intelligence Officer release review remains mandatory. Intelligence
+must independently accept or return this exact stable candidate; no release,
+master-plan update, checklist closure, reveal publication, or push is claimed
+by Image Specialist.
+
 ## Accepted cycle reveal
 
 ### Decision and named checklist
