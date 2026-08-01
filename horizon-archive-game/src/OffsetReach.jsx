@@ -121,7 +121,7 @@ function OffsetReachForm({ form, onFieldChange }) {
         <div className="offset-scaffold" aria-label="Supplied sanitized JSON replica">
           <strong>Supplied sanitized relation values and interpretation limits</strong>
           <pre>{JSON.stringify(form.scaffold.relations, null, 2)}</pre>
-          <p>{form.scaffold.interpretationLimits.join(" Â· ")}</p>
+          <p>{form.scaffold.interpretationLimits.join(" · ")}</p>
         </div>
         <label>
           <span>Learner-owned approved JSON fragment</span>
@@ -259,7 +259,7 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
         </header>
         <p>{introductionCopy[state.activeGroup]}</p>
         <p className="offset-boundary">
-          SANITIZED PRECOMPUTED REPLICAS ONLY Â· OFFLINE COURSE-AUTHORED PRACTICE Â·
+          SANITIZED PRECOMPUTED REPLICAS ONLY · OFFLINE COURSE-AUTHORED PRACTICE ·
           NO LIVE EXTRACTION, FILE, SERVICE, ACCESS, AUTHORITY, EXAM GUARANTEE,
           EXTERNAL ACTION, OR WORLD RESPONSE
         </p>
@@ -311,7 +311,7 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
 
         {state.activeGroup === "or20_save" && (
           <p className="offset-preview-limit">
-            Local expedition record only â€” no world, route, service, Microsoft, exam, or authority effect.
+            Local expedition record only — no world, route, service, Microsoft, exam, or authority effect.
             Exact schema: eleven root keys, eight retained-summary keys, thirteen note keys, eight evidence records.
           </p>
         )}

@@ -202,6 +202,19 @@
       "commit": "PENDING_QUARTERMASTER_CONTENT_COMPLETE_COMMIT",
       "commitConvention": "The dedicated Quartermaster CONTENT COMPLETE commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Quartermaster push gate",
+      "intelligenceCorrection": {
+        "id": "TD008-CONT-002",
+        "disposition": "CORRECTED - RETURN TO INTELLIGENCE AFTER TD008-PRES-001",
+        "scope": "OffsetReach player copy only: replace three visible mojibake middle-dot separators and one mojibake em dash with exact UTF-8 punctuation; preserve all wording and semantics",
+        "entryChainScan": "App.jsx, CalibrationMarginNormalEntry.js, BraidedVerge.jsx, OffsetReachNormal.js and OffsetReach.jsx contain no remaining Â or â€ sequence; historical records and provenance not broadly rewritten",
+        "impact": "no mechanic, evidence, schema, save, route, return, canon, asset, reveal, hard-stop or world-state change",
+        "validation": "focused normal/protected/UI 27/27 including all 720 observation orders; 203-module build; PBA-TD008-v1 candidate; root/two-deep/all-19-assets served identity 22/22; served UTF-8 copy and owned-process cleanup PASS",
+        "bundle": "JS 1450332 / 95CA58D345EEF318AA807B9B3B357E8CEAE4882580FB5BED5ABBE79D97FD4FFA; CSS 99112 / 6BEF0D7BDA63696C96BE14473B936DDFA751795A4EE1A3B7593C5FDD9E2C251D; media unchanged 17 / 37506807",
+        "media": "SC-09 panorama B25E90052EECF46ABA9949F47BB1FFF32602C1CB9984F7572F2F311A56E0D366; relation detail CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8; reveal 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1 unchanged",
+        "variances": "none",
+        "commit": "PENDING_TD008_CONT_002_QUARTERMASTER_COMMIT",
+        "synchronization": "local dedicated correction commit only; Intelligence final gate owns push after separately pending Image correction TD008-PRES-001"
+      },
       "nextStage": "Image Specialist"
     },
     {

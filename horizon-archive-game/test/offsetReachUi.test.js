@@ -6,6 +6,7 @@ const component = readFileSync(new URL("../src/OffsetReach.jsx", import.meta.url
 const controller = readFileSync(new URL("../src/OffsetReachNormal.js", import.meta.url), "utf8");
 const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const entry = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", import.meta.url), "utf8");
+const braidedVerge = readFileSync(new URL("../src/BraidedVerge.jsx", import.meta.url), "utf8");
 const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
 test("TD008 production UI exposes exact longest copy and exactly two truthful production masters", () => {
@@ -48,4 +49,14 @@ test("TD008 hard-stop and privacy vocabulary are explicit in normal source", () 
   assert.match(component, /NO LIVE EXTRACTION, FILE, SERVICE, ACCESS, AUTHORITY, EXAM GUARANTEE/);
   assert.doesNotMatch(component, /RP-009|RP-013|successor|ending/i);
   assert.doesNotMatch(controller, /\blocalStorage\.|\bsessionStorage\.|\bindexedDB\.|fetch\(|XMLHttpRequest|WebSocket|Worker\s*\(|WebAssembly\./);
+});
+
+test("TD008 player copy preserves exact UTF-8 separators without mojibake", () => {
+  const productionEntryChain = [app, entry, braidedVerge, controller, component].join("\n");
+  assert.doesNotMatch(productionEntryChain, /Â|â€/);
+  assert.equal((component.match(/·/g) ?? []).length, 3);
+  assert.match(component, /interpretationLimits\.join\(" · "\)/);
+  assert.match(component, /SANITIZED PRECOMPUTED REPLICAS ONLY · OFFLINE COURSE-AUTHORED PRACTICE ·/);
+  assert.match(component, /Local expedition record only — no world, route, service, Microsoft, exam, or authority effect\./);
+  assert.match(controller, /Retained — separately valid/);
 });

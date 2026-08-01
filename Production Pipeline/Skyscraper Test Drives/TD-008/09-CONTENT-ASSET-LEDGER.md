@@ -265,6 +265,61 @@ Quartermaster regeneration or third runtime image is authorized.
 - `Production Pipeline/Skyscraper Test Drives/TD-008/STAGE-METRICS.json`;
 - `NEXT_INSTANCE_HANDOFF.md`.
 
+## Intelligence-required correction `TD008-CONT-002`
+
+Intelligence returned one exact UTF-8 player-copy defect to Quartermaster
+ownership from starting commit
+`01be49f416d8530c81d47f702eeb02fcbeb52fb8`.
+
+The production `OffsetReach.jsx` surface contained three visible mojibake
+middle-dot separators and one mojibake em dash:
+
+- the interpretation-limit list used malformed delimiter `Â·`;
+- the persistent offline boundary rendered two malformed `Â·` separators;
+  and
+- the save-limit sentence rendered malformed `â€”` punctuation.
+
+The bounded correction replaces only those verified player-facing glyphs
+with exact `·` and `—`. All wording, ordering, ownership, interpretation
+limits, offline/no-authority meaning, schema meaning and shell semantics are
+unchanged. A scoped scan of the exact TD-008 production entry chain
+(`App.jsx`, `CalibrationMarginNormalEntry.js`, `BraidedVerge.jsx`,
+`OffsetReachNormal.js`, and `OffsetReach.jsx`) found no other `Â` or `â€`
+sequence. Historical reports and provenance were not broadly rewritten.
+
+The UI regression now scans that complete entry chain for `Â|â€`, asserts the
+three exact middle-dot source glyphs, asserts the interpretation delimiter
+and persistent boundary copy, and asserts both exact em-dash player-copy
+identities. The existing retained-summary controller label already contained
+the correct `Retained — separately valid` text and was preserved.
+
+| Gate | Corrected result |
+|---|---|
+| Focused TD-008 normal/protected/UI | `27/27 PASS`; includes all `720` observation orders |
+| Production build | `PASS`; `203` modules; Vite `8.03s` |
+| JavaScript | `index-PCLJVI21.js`; `1,450,332` bytes; SHA-256 `95CA58D345EEF318AA807B9B3B357E8CEAE4882580FB5BED5ABBE79D97FD4FFA` |
+| CSS | unchanged `index-BJjBVihW.css`; `99,112` bytes; SHA-256 `6BEF0D7BDA63696C96BE14473B936DDFA751795A4EE1A3B7593C5FDD9E2C251D` |
+| Built index | `551` bytes; SHA-256 `F256F62DF56271656AAC06994951B5F46922DB1A9296F119B2561629C878FA8D` |
+| `PBA-TD008-v1` | `PASS`; JS, CSS, `203 <= 207` modules, new-media and total-media caps pass |
+| Served identity | root, two deep fallbacks and all `19` emitted assets: `22/22 PASS` with exact bytes/hashes |
+| Served copy | exact `·` and `—` present in UTF-8 JavaScript response; `Â|â€` absent |
+| Owned cleanup | preview stopped; port `5194` clear |
+
+Runtime media remains exact `17` files / `37,506,807` bytes. The panorama
+remains SHA-256
+`B25E90052EECF46ABA9949F47BB1FFF32602C1CB9984F7572F2F311A56E0D366`,
+the relation detail remains
+`CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8`,
+and the reference-only reveal remains
+`345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1`.
+No image, provenance, board receipt, mechanic, evidence, schema, save, route,
+return, canon, reveal, hard stop or world state changed. Formal variances
+remain **none**.
+
+This dedicated local correction returns to Intelligence after the separately
+pending Image Specialist `TD008-PRES-001` correction is synchronized. No push
+is owned by Quartermaster.
+
 ## Disposition
 
 **`CONTENT COMPLETE`**
