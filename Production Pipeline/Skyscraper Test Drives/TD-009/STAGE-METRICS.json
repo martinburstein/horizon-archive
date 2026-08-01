@@ -183,6 +183,28 @@
       "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "Combat push gate; verify HEAD == origin/main == remote refs/heads/main",
       "nextStage": "Quartermaster"
+    },
+    {
+      "sequence": 9,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-08-01T09:39:00.000Z",
+      "endedAt": "2026-08-01T09:48:00.000Z",
+      "durationMs": 540000,
+      "disposition": "HOLD - DIRECT CREATIVE PRODUCTION BOARD SURFACE UNAVAILABLE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "startingBuild": "2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551 / FUNCTIONALLY COMPLETE",
+      "toolBoundary": "creative_production_board is discoverable only as a deferred functions.exec tool; produce skill requires a direct call and forbids functions.exec wrapping; direct callable board surface unavailable to Quartermaster and coordinator",
+      "attempts": "zero boards opened; zero begin calls; zero generations; zero recoveries; zero candidates; zero accepted or rejected images; zero workspace/runtime/reveal media",
+      "placeholders": "exactly SC-10-PANORAMA-MASTER and SC-10-EXPOSED-EDGE-DETAIL-MASTER remain truthful structural placeholders; no false retirement or final-media claim",
+      "validation": "full authority, shell, creative, blueprint, build, PBA, exact source/placeholder/fixture seams, visual canon, recent runtime provenance, produce/board/scenes/imagegen contracts read; scoped read-only import/placeholder state confirmed; Combat evidence preserved unchanged",
+      "variances": "none to shell, build, canon, learning, evidence, privacy, accessibility, save, route, returns, budget, or hard stop; external tool availability HOLD only",
+      "unblock": "re-enter Quartermaster when creative_production_board is directly callable; open one TD-009 board exactly once and reuse its boardId",
+      "commit": "PENDING_QUARTERMASTER_HOLD_COMMIT",
+      "commitConvention": "The dedicated Quartermaster HOLD commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Quartermaster push gate",
+      "nextStage": "Quartermaster re-entry; Image Specialist is not authorized"
     }
   ]
 }
