@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-009",
-    "shellCandidate": "unselected - Commandant selection envelope only",
+    "shellCandidate": "unselected - Colonel provisional exposed-edge reconciliation candidate only",
     "campaignAddress": "unselected - released predecessor is RP-008 / SC-09 / OR-30 plus exact approved returns",
     "sourceCommit": "b0c8c7bea04ba5f17712e090a05f2f651d98581a",
     "timezone": "America/New_York",
@@ -28,6 +28,24 @@
       "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Commandant push gate",
       "nextStage": "Colonel"
+    },
+    {
+      "sequence": 2,
+      "stage": "Colonel",
+      "agentId": "colonel",
+      "startedAt": "2026-08-01T08:18:00.000Z",
+      "endedAt": "2026-08-01T08:24:00.000Z",
+      "durationMs": 360000,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "releasedPredecessor": "TD-008 / SS-RP008-OFFSET-REACH-v1 / OR-30 / SC-09 plus exact write-free/replay-free returns",
+      "candidateSelection": "one provisional exposed-edge reconciliation study: three separately traceable near margins, bounded correspondence, unmatched evidence, ordinary multi-candidate ambiguity, one unavailable outer margin, and layered edge stewardship; no address or route assigned",
+      "validation": "current Commandant brief, TD-008 Intelligence reconciliation, surface lore, whole-story controls, exact RP-008 boundary, protected mapped RP-009/SC-10 candidate, visual canon, and lore/art logs reconciled; 18/18 Colonel contract checks PASS",
+      "variances": "none; protected future planning handles, retained summaries, and destinationless continuation remain non-routable",
+      "commit": "PENDING_COLONEL_COMMIT",
+      "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Colonel push gate",
+      "nextStage": "Operations Planning Major"
     }
   ]
 }
