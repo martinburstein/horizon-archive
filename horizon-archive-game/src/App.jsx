@@ -13,6 +13,7 @@ import { ManyfoldReturn } from "./ManyfoldReturn.jsx";
 import { IntervalWorks } from "./IntervalWorks.jsx";
 import { BraidedVerge } from "./BraidedVerge.jsx";
 import { OffsetReach } from "./OffsetReach.jsx";
+import { OccludedFold } from "./OccludedFold.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -55,6 +56,10 @@ import {
   OFFSET_REACH_SHELL_VERSION,
   createOffsetReachStorageAdapter,
 } from "./OffsetReachNormal.js";
+import {
+  OCCLUDED_FOLD_SHELL_VERSION,
+  createOccludedFoldStorageAdapter,
+} from "./OccludedFoldNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -508,6 +513,24 @@ function calibrationMarginReviewSaveOptions(storage) {
     manyfoldBytes,
     threeCurrentBytes,
   });
+  const restoredOffsetReach = offsetReachAdapter.read();
+  let offsetBytes = null;
+  try {
+    offsetBytes = storage?.getItem("horizon-archive-rp008-offset-reach-save-v1") ?? null;
+  } catch {
+    offsetBytes = null;
+  }
+  const readOffsetBytes = () => {
+    try { return storage?.getItem("horizon-archive-rp008-offset-reach-save-v1") ?? null; } catch { return null; }
+  };
+  const occludedFoldAdapter = createOccludedFoldStorageAdapter(storage, {
+    offsetRecord: restoredOffsetReach,
+    offsetBytes,
+    braidedBytes,
+    intervalBytes,
+    manyfoldBytes,
+    threeCurrentBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -555,6 +578,17 @@ function calibrationMarginReviewSaveOptions(storage) {
       })
     ),
     restoredOffsetReach: offsetReachAdapter.read(),
+    readOffsetBytes,
+    occludedFoldAdapter,
+    createOccludedFoldAdapter: (offsetRecord, currentOffsetBytes) => createOccludedFoldStorageAdapter(storage, {
+      offsetRecord,
+      offsetBytes: currentOffsetBytes,
+      braidedBytes: readBraidedBytes(),
+      intervalBytes: readIntervalBytes(),
+      manyfoldBytes: readManyfoldBytes(),
+      threeCurrentBytes: readThreeCurrentBytes(),
+    }),
+    restoredOccludedFold: occludedFoldAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2426,9 +2460,11 @@ export function App() {
       INTERVAL_WORKS_SHELL_VERSION,
       BRAIDED_VERGE_SHELL_VERSION,
       OFFSET_REACH_SHELL_VERSION,
+      OCCLUDED_FOLD_SHELL_VERSION,
       INTERVAL_WORKS_SHELL_VERSION,
       BRAIDED_VERGE_SHELL_VERSION,
       OFFSET_REACH_SHELL_VERSION,
+      OCCLUDED_FOLD_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2502,7 +2538,9 @@ export function App() {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === OFFSET_REACH_SHELL_VERSION
+        status: controller.getState().shellVersion === OCCLUDED_FOLD_SHELL_VERSION
+          ? "occluded_fold_restored"
+          : controller.getState().shellVersion === OFFSET_REACH_SHELL_VERSION
           ? "offset_reach_restored"
           : controller.getState().shellVersion === BRAIDED_VERGE_SHELL_VERSION
           ? "braided_verge_restored"
@@ -2552,6 +2590,7 @@ export function App() {
       || result?.state?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
       || result?.state?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
       || result?.state?.shellVersion === OFFSET_REACH_SHELL_VERSION
+      || result?.state?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3723,6 +3762,7 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3758,6 +3798,15 @@ export function App() {
     if (calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION) {
       return (
         <OffsetReach
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
+    if (calibrationMarginEntryView?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION) {
+      return (
+        <OccludedFold
           state={calibrationMarginEntryView}
           onAction={dispatchCalibrationMarginEntry}
           onFieldChange={updateCalibrationMarginPythonField}

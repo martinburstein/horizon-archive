@@ -325,17 +325,18 @@ test("canonical sources/forms match frozen RP-009 authorities and presentation r
   assert.equal(occludedFoldPresentation.accessibility.timeLimit, false);
 });
 
-test("protected module remains absent from App, main, browser authority, and production bundle", async () => {
+test("protected module remains absent while the distinct normal RP-009 implementation is production-wired", async () => {
   const [app, main] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
-  assert.doesNotMatch(`${app}\n${main}`, /OccludedFoldProtectedJourney|RP-009|SC-10|occluded_fold_complete/);
+  assert.doesNotMatch(`${app}\n${main}`, /OccludedFoldProtectedJourney|rp009\.protected-journey\.v1/);
+  assert.match(app, /OccludedFold|OCCLUDED_FOLD_SHELL_VERSION/);
   const source = await readFile(new URL("../src/OccludedFoldProtectedJourney.js", import.meta.url), "utf8");
   assert.doesNotMatch(source, /localStorage|sessionStorage|fetch\(|XMLHttpRequest|https?:\/\//);
   const distFiles = await readdir(new URL("../dist/assets", import.meta.url));
   for (const file of distFiles.filter((name) => /\.(?:js|css)$/.test(name))) {
     const bytes = await readFile(new URL(`../dist/assets/${file}`, import.meta.url), "utf8");
-    assert.doesNotMatch(bytes, /OccludedFoldProtectedJourney|occluded_fold_complete|OF-00 ARRIVE|RP009-PROMPT-BOUNDARY-01/);
+    assert.doesNotMatch(bytes, /OccludedFoldProtectedJourney|rp009\.protected-journey\.v1|protected_reference_complete/);
   }
 });

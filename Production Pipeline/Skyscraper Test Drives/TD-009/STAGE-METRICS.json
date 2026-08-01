@@ -159,6 +159,30 @@
       "commitConvention": "The dedicated Tactical commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Tactical push gate",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T09:12:00.000Z",
+      "endedAt": "2026-08-01T09:38:00.000Z",
+      "durationMs": 1560000,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "route": "distinct normal TD009-RTA-001 from exact OR-30 / SC-09 after ordered record, byte, owner, mode, modality, sanitation and fresh one-hit intent proof",
+      "graph": "OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10 with exact write-free/replay-free returns and inert LOOK-only hard stop",
+      "implementation": "normal controller, route, UI, App integration, storage adapter, scene resolver, responsive CSS, focused tests, and one production-absent storage-free exact 64-scenario fixture",
+      "learning": "six equal observations across all 720 orders; strict independent PY-017 and prompt-boundary primary/retrieval-or-trace/blank-transfer chains plus both explanations; miss-only answer-free recovery and no cross-credit",
+      "persistence": "exact ordered 12-key record; retained RP-007, retained RP-008 and RP-009 edge-ledger scopes remain separate/read-only; atomic canonical write/read-back, predecessor proof, verified rollback, replay-free restore",
+      "presentation": "exactly two truthful structural SC-10 placeholders; four-layout CSS, exact longest UTF-8 samples, seven modalities, one owner/status, >=44px targets, forced colors, reduced motion, grayscale and local-only containment",
+      "validation": "focused 27/27; connected TD-007 through TD-009 92/92; full 895/895; mappings 11/11; release validator PASS; production 206 modules in 13.02s; fixture 31 modules; served production 22/22 and fixture 4/4; owned ports clear; PBA-TD009-v1 PASS",
+      "budget": "JS 1508813 bytes / B356AC0761524CCBF3DE3FAB8695CA0E7DB6EC1D77EEDA4BAD8B44C227AA6C9B; CSS 102935 bytes / CDA22AD13DE70FAE1F5C423F13E42EFA32090A2347BDB3B11019881449C8AECF; 206 modules; 17 predecessor media / 37410731 bytes; zero new media",
+      "variances": "none; two final SC-10 masters, copy/provenance polish, live presentation review and E2E remain sequential downstream obligations",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Combat push gate; verify HEAD == origin/main == remote refs/heads/main",
+      "nextStage": "Quartermaster"
     }
   ]
 }

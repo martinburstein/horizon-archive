@@ -1,0 +1,17 @@
+{
+  "fixtureId": "td009-occluded-fold-v1",
+  "rootMarker": "TD009_OCCLUDED_FOLD_FIXTURE",
+  "host": "127.0.0.1",
+  "port": 4181,
+  "storage": "frozen-in-memory-only",
+  "acceptsArbitraryState": false,
+  "scenarios": [
+    "route_pointer", "route_touch", "route_keyboard_enter", "route_keyboard_space", "route_switch", "route_speech", "route_screen_reader", "route_invalid_predecessor", "route_invalid_intent", "route_duplicate_or_stale", "route_private_contaminated", "route_tour_isolated",
+    "of00_arrive", "of10_survey", "of20_reconcile", "of30_restore",
+    "observation_three_near_margins", "observation_bounded_signature_correspondences", "observation_unmatched_exposed_record", "observation_ambiguous_candidate_record", "observation_unavailable_outer_margin", "observation_layered_edge_stewardship",
+    "python_primary_blank", "python_primary_miss", "python_primary_pass", "python_trace_blank", "python_trace_pass", "python_transfer_blank", "python_transfer_pass", "prompt_primary_blank", "prompt_primary_miss", "prompt_primary_pass", "prompt_retrieval_blank", "prompt_retrieval_pass", "prompt_transfer_blank", "prompt_transfer_pass", "system_user_explanation_blank", "system_user_explanation_pass", "truth_authority_explanation_blank", "truth_authority_explanation_pass",
+    "resume_contiguous_prefix", "resume_first_gap", "interruption_before_consumption", "interruption_after_of00_pre_save", "private_work_cleared", "environment_work_cleared", "prompt_work_cleared", "atomic_polite_status",
+    "review_ineligible", "review_eligible", "save_committed", "save_rollback_verified", "restore_replay_free", "return_offset_reach", "return_city_threshold", "continuation_inert",
+    "layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "mode_forced_colors", "mode_reduced_motion", "mode_grayscale", "longest_copy_contained"
+  ]
+}

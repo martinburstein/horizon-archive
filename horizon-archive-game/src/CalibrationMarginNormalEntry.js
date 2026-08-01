@@ -1,4 +1,4 @@
-﻿import {
+import {
   CALIBRATION_MARGIN_ENTRY_ACTION,
   CALIBRATION_MARGIN_PROTECTED_ENTRY_VERSION,
   calibrationMarginEntryAccessibility,
@@ -74,6 +74,16 @@ import {
   offsetReachActions,
   sanitizeOffsetReachSave,
 } from "./OffsetReachNormal.js";
+import {
+  OCCLUDED_FOLD_ROUTE_GROUP,
+  OCCLUDED_FOLD_ROUTE_OWNER,
+  OCCLUDED_FOLD_SHELL_VERSION,
+  createOccludedFoldIntent,
+  createOccludedFoldNormalController,
+  createOccludedFoldRouteIntent,
+  occludedFoldActions,
+  sanitizeOccludedFoldSave,
+} from "./OccludedFoldNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -166,6 +176,21 @@ function braidedStateWithOffsetRoute(state) {
   };
 }
 
+function offsetStateWithOccludedRoute(state) {
+  if (state?.activeGroup !== "or30_restore") return state;
+  return {
+    ...state,
+    phase: "OR-30 ROUTE CHOICE",
+    activeGroup: OCCLUDED_FOLD_ROUTE_GROUP,
+    owner: OCCLUDED_FOLD_ROUTE_OWNER,
+    headingId: "td009-route-heading",
+    statusMessageId: "td009:route:ready",
+    statusMessage: "One adjacent expedition survey is available; the released Offset Reach returns and inert notation remain unchanged.",
+    availableActions: [occludedFoldActions.route, offsetReachActions.returnInterval, offsetReachActions.returnThreshold],
+    focusIntent: { group: OCCLUDED_FOLD_ROUTE_GROUP, target: "td009-route-heading" },
+  };
+}
+
 function protectedOptions(verifiedRestoreState, returnedCityThreshold, restoredState) {
   const valid = exactVerifiedRestore(verifiedRestoreState)
     && exactReturnedThreshold(returnedCityThreshold);
@@ -212,13 +237,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let intervalWorksController = null;
   let braidedVergeController = null;
   let offsetReachController = null;
+  let occludedFoldController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (offsetReachController) return offsetReachController.getState();
+    if (occludedFoldController) return occludedFoldController.getState();
+    if (offsetReachController) return offsetStateWithOccludedRoute(offsetReachController.getState());
     if (braidedVergeController) return braidedStateWithOffsetRoute(braidedVergeController.getState());
     if (intervalWorksController) return intervalStateWithBraidedRoute(intervalWorksController.getState());
     if (manyfoldReturnController) return manyfoldReturnController.getState();
@@ -395,6 +422,24 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                 restoredRecord: restoredOffset,
                 adapter: options.offsetReachAdapter,
               });
+              const restoredOccluded = sanitizeOccludedFoldSave(options.restoredOccludedFold);
+              if (restoredOccluded) {
+                occludedFoldController = createOccludedFoldNormalController({
+                  predecessorRecord: restoredOffset,
+                  predecessorBytes: options.readOffsetBytes?.(),
+                  readPredecessorBytes: options.readOffsetBytes,
+                  braidedBytes: options.readBraidedBytes?.(),
+                  readBraidedBytes: options.readBraidedBytes,
+                  intervalBytes: options.readIntervalBytes?.(),
+                  readIntervalBytes: options.readIntervalBytes,
+                  manyfoldBytes: options.readManyfoldBytes?.(),
+                  readManyfoldBytes: options.readManyfoldBytes,
+                  threeCurrentBytes: options.readThreeCurrentBytes?.(),
+                  readThreeCurrentBytes: options.readThreeCurrentBytes,
+                  restoredRecord: restoredOccluded,
+                  adapter: options.occludedFoldAdapter,
+                });
+              }
             }
           }
         }
@@ -449,7 +494,37 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (occludedFoldController) {
+        const result = occludedFoldController.dispatch(intent);
+        if (result.status === "returned_to_offset_reach_write_free") {
+          occludedFoldController = null;
+          return Object.freeze({ ...result, state: clonePublicState(offsetStateWithOccludedRoute(offsetReachController.getState())) });
+        }
+        return result;
+      }
       if (offsetReachController) {
+        const offsetState = offsetReachController.getState();
+        if (offsetState.activeGroup === "or30_restore" && intent?.allowlistedActionId === occludedFoldActions.route) {
+          const predecessorRecord = offsetReachController.getRecord();
+          const currentOffsetBytes = options.readOffsetBytes?.() ?? JSON.stringify(predecessorRecord);
+          const candidate = createOccludedFoldNormalController({
+            predecessorRecord,
+            predecessorBytes: currentOffsetBytes,
+            readPredecessorBytes: options.readOffsetBytes,
+            braidedBytes: options.readBraidedBytes?.(), readBraidedBytes: options.readBraidedBytes,
+            intervalBytes: options.readIntervalBytes?.(), readIntervalBytes: options.readIntervalBytes,
+            manyfoldBytes: options.readManyfoldBytes?.(), readManyfoldBytes: options.readManyfoldBytes,
+            threeCurrentBytes: options.readThreeCurrentBytes?.(), readThreeCurrentBytes: options.readThreeCurrentBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredOccludedFold,
+            adapter: options.createOccludedFoldAdapter?.(predecessorRecord, currentOffsetBytes) ?? options.occludedFoldAdapter,
+          });
+          if (candidate.getState().shellVersion !== OCCLUDED_FOLD_SHELL_VERSION) {
+            return Object.freeze({ status: "rejected", reason: "occluded_route_rejected", state: clonePublicState(offsetStateWithOccludedRoute(offsetState)) });
+          }
+          occludedFoldController = candidate;
+          return Object.freeze({ status: "occluded_fold_arrived_zero_evidence", evidenceGranted: false, state: clonePublicState(occludedFoldController.getState()) });
+        }
         const result = offsetReachController.dispatch(intent);
         if (result.status === "returned_to_braided_verge_write_free") {
           offsetReachController = null;
@@ -458,7 +533,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
             state: clonePublicState(braidedStateWithOffsetRoute(braidedVergeController.getState())),
           });
         }
-        return result;
+        return result?.state ? Object.freeze({ ...result, state: clonePublicState(offsetStateWithOccludedRoute(result.state)) }) : result;
       }
       if (braidedVergeController) {
         const braidedState = braidedVergeController.getState();
@@ -749,6 +824,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (occludedFoldController) return occludedFoldController.updateField(name, value);
       if (offsetReachController) {
         return offsetReachController.updateField(name, value);
       }
@@ -808,6 +884,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getOffsetReachRecord() {
       return offsetReachController?.getRecord() ?? null;
     },
+    getOccludedFoldRecord() {
+      return occludedFoldController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -855,6 +934,23 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === OCCLUDED_FOLD_ROUTE_GROUP) {
+    if (action === occludedFoldActions.route) return createOccludedFoldRouteIntent(action, activationKind, eventToken);
+    return createOffsetReachIntent(
+      { activeGroup: "or30_restore", owner: "SYSTEM // RESTORED EXPEDITION NOTES" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (shellVersionOrPhaseIsOccludedFold(activeGroup)) {
+    return createOccludedFoldIntent(
+      { activeGroup: activeGroup ?? "of00_orientation", owner: occludedFoldOwner(activeGroup) },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (activeGroup === OFFSET_REACH_ROUTE_GROUP) {
     if (action === offsetReachActions.route) {
       return createOffsetReachRouteIntent(action, activationKind, eventToken);
@@ -1048,6 +1144,21 @@ function shellVersionOrPhaseIsBraidedVerge(activeGroup) {
 
 function shellVersionOrPhaseIsOffsetReach(activeGroup) {
   return typeof activeGroup === "string" && activeGroup.startsWith("or");
+}
+
+function shellVersionOrPhaseIsOccludedFold(activeGroup) {
+  return typeof activeGroup === "string" && activeGroup.startsWith("of");
+}
+
+function occludedFoldOwner(activeGroup) {
+  if (activeGroup === "of00_orientation") return "SYSTEM // EXPEDITION LEDGER";
+  if (activeGroup === "of10_observations") return "PILOT // EDGE SURVEY";
+  if (["of20_python_primary", "of20_python_trace", "of20_python_transfer", "of20_prompt_primary", "of20_prompt_retrieval", "of20_prompt_transfer", "of20_system_user_explanation", "of20_truth_authority_explanation"].includes(activeGroup)) return "PILOT // COURSE WORK";
+  if (["of20_recovery", "of20_save_recovery", "of20_rollback_unverified"].includes(activeGroup)) return "SYSTEM // RECOVERY";
+  if (activeGroup === "of20_review") return "PILOT // EXPEDITION REVIEW";
+  if (activeGroup === "of20_save") return "PILOT // EXPEDITION LEDGER";
+  if (["of20_transaction", "of30_restore"].includes(activeGroup)) return "SYSTEM // EXPEDITION LEDGER";
+  return "SYSTEM // EXPEDITION LEDGER";
 }
 
 function offsetReachOwner(activeGroup) {

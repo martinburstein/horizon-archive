@@ -99,6 +99,28 @@
   .offset-panel :focus-visible { outline-color: Highlight; }
 }
 
+/* TD-009 Occluded Fold functional shell; Quartermaster replaces only the two structural media seams. */
+.occluded-verge{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(22rem,.85fr);color:#eef3f1;background:#0b0d0d;overflow:hidden}
+.occluded-world{min-width:0;margin:0;display:grid;grid-template-rows:minmax(0,1fr) auto;background:#111515;border-right:1px solid #68736f}
+.occluded-structural-placeholder>div[role="img"]{min-width:0;min-height:58vh;width:100%;height:100%;display:grid;place-content:center;gap:.55rem;padding:2rem;text-align:center;border:2px dashed #87918d;background:#171c1a;color:#eef3f1;overflow-wrap:anywhere}
+.occluded-structural-placeholder small{display:block;color:#c9d0cd}
+.occluded-world figcaption{padding:.7rem 1rem;color:#d0d6d3;background:#0e1211;border-top:1px solid #4e5955;font-size:.78rem;overflow-wrap:anywhere}
+.occluded-panel{min-width:0;max-height:100vh;padding:clamp(1rem,2.4vw,2rem);overflow:auto;scrollbar-gutter:stable}
+.occluded-heading h1{margin:.15rem 0 .65rem;font-size:clamp(1.45rem,2.5vw,2.45rem);line-height:1.08;overflow-wrap:anywhere}
+.occluded-verge[data-active-group="of20_review"] .occluded-heading h1{font-size:clamp(1.35rem,1.8vw,1.85rem)}
+.occluded-boundary,.occluded-longest-copy,.occluded-errors,.occluded-panel [role="status"],.occluded-preview-limit,.occluded-workspace-truth{padding:.7rem;border:1px solid #64716c;background:#151a18;overflow-wrap:anywhere}
+.occluded-observations,.occluded-review{display:grid;gap:.65rem;padding:0;list-style:none}
+.occluded-observations li,.occluded-review li,.occluded-form-grid label,.occluded-cases fieldset,.occluded-note{padding:.7rem;border:1px solid #56625d;background:#111614}
+.occluded-observations button{width:100%;display:grid;grid-template-columns:1fr auto;gap:.6rem;text-align:left}
+.occluded-form-grid,.occluded-cases{display:grid;gap:.75rem}.occluded-form-grid label,.occluded-cases label{display:grid;gap:.35rem}
+.occluded-form-grid textarea,.occluded-form-grid select,.occluded-cases select,.occluded-panel>label select{width:100%;min-height:44px;color:inherit;background:#0b0d0d;border:1px solid #7f8d87;overflow-wrap:anywhere}
+.occluded-form-grid textarea{resize:vertical;white-space:pre-wrap;overflow:auto}.occluded-scaffold pre{max-width:100%;overflow-x:auto;white-space:pre}
+.occluded-actions{display:grid;gap:.55rem;margin-top:1rem}.occluded-actions button,.occluded-observations button{min-width:44px;min-height:44px;padding:.65rem .8rem;border:1px solid #9ca9a3;color:#f6f8f7;background:#202825;overflow-wrap:anywhere}
+.occluded-panel :focus-visible{outline:3px solid #edf4f1;outline-offset:3px}.occluded-note dl{display:grid;gap:.5rem}.occluded-note div{display:grid;grid-template-columns:minmax(8rem,.4fr) 1fr;gap:.7rem}.occluded-note dd{margin:0}
+@media(max-width:900px){.occluded-verge{grid-template-columns:1fr;grid-template-rows:auto auto;overflow:visible}.occluded-world{border-right:0;border-bottom:1px solid #68736f}.occluded-structural-placeholder>div[role="img"]{min-height:0;aspect-ratio:16/9}.occluded-panel{max-height:none;overflow:visible}.occluded-observations button,.occluded-note div{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.occluded-verge,.occluded-verge *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){.occluded-verge,.occluded-world,.occluded-structural-placeholder>div[role="img"],.occluded-panel,.occluded-boundary,.occluded-longest-copy,.occluded-errors,.occluded-panel [role="status"],.occluded-observations li,.occluded-review li,.occluded-form-grid label,.occluded-cases fieldset,.occluded-note,.occluded-actions button,.occluded-observations button{color:CanvasText;background:Canvas;border-color:CanvasText;forced-color-adjust:auto}.occluded-panel :focus-visible{outline-color:Highlight}}
+
 * { box-sizing: border-box; }
 
 .sr-only {

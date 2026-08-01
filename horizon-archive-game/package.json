@@ -15,6 +15,7 @@
     "review:td006-interval-works": "vite --config review-fixtures/td006-interval-works/vite.config.js --host 127.0.0.1 --port 4178",
     "review:td007-braided-verge": "vite --config review-fixtures/td007-braided-verge/vite.config.js --host 127.0.0.1 --port 4179",
     "review:td008-offset-reach": "vite --config review-fixtures/td008-offset-reach/vite.config.js --host 127.0.0.1 --port 4180",
+    "review:td009-occluded-fold": "vite --config review-fixtures/td009-occluded-fold/vite.config.js --host 127.0.0.1 --port 4181",
     "test": "node --test"
   },
   "dependencies": {
