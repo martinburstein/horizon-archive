@@ -6,10 +6,10 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next stage.
 
 The authorized three-hour Skyscraper automation remains active. TD-007 is
-fully released. TD-008 has completed Commandant, Colonel, Operations Planning
-Major, and Office of Science Administrator only. Do not restart a completed
-role, skip Mission, deploy a Marine, generate art, inspect Martin's browser
-storage/save, or infer work from the archived two-team workflow.
+fully released. TD-008 has completed all five Colonel stages and now has one
+versioned `SHELL READY` construction contract. Do not restart a completed
+role, skip Reconnaissance Sergeant, run Marines concurrently, inspect Martin's
+browser storage/save, or infer work from the archived two-team workflow.
 
 ## Synchronized released state
 
@@ -24,129 +24,172 @@ storage/save, or infer work from the archived two-team workflow.
 - Release record:
   `Production Pipeline/Skyscraper Test Drives/TD-007/11-INTELLIGENCE-RELEASE.md`
 
+TD-008 is not yet released or playable. Until independent Intelligence
+release, the player-facing boundary remains TD-007 BV-30 plus its exact
+returns.
+
 ## Active TD-008 state
 
 - Completed stages: Commandant, Colonel, Operations Planning Major, Office of
-  Science Administrator
+  Science Administrator, Mission Captain
 - Product: `VISION BASELINE / GDB-TD008-v1`
 - World: `WORLD BASELINE / WNMP-TD008-v1`
 - Operations: `FLOOR STACK READY - ROUTE AUTHORIZED / CFS-TD008-v1`
 - Science: `VIABILITY READY / VE-TD008-v1 / PBA-TD008-v1`
-- Selected slice: `TD-008-RP008-OFFSET-REACH-v1`
+- Mission: `SHELL READY / SS-RP008-OFFSET-REACH-v1`
+- Slice: `TD-008-RP008-OFFSET-REACH-v1`
 - Address: `RP-008 / SC-09 / OR-00-OR-30`
-- Conditional sole route: fresh Pilot-owned `TD008-RTA-001`
+- Sole route: fresh Pilot-owned `TD008-RTA-001`
 - Graph: `BV-30 / SC-08 -> OR-00 -> OR-10 -> OR-20 -> OR-30 / SC-09`
 - Hard stop: `OR-30 / SC-09`, followed only by exact write-free/replay-free
   Braided Verge or City Threshold returns
-- Product, world, Operations, and Science variances: none
-- Next role: `Mission Captain / mission_captain`
+- Strategic and Mission variances: none
+- Shell artifact:
+  `Production Pipeline/Skyscraper Test Drives/TD-008/05-PLAYABLE-SLICE-SHELL.md`
+- Next role: `Reconnaissance Sergeant / reconnaissance_sergeant`
 
-Science independently proved the complete route, learning, evidence, privacy,
-save/recovery, accessibility, fixture, offline, invariant-world, asset, and
-performance envelope. Current official Microsoft AI-901 and Content
-Understanding material continues to support the frozen offline
-information-extraction objective. The required source-priority skill was not
-available, so Science used the mandated official-source-first fallback and
-recorded it in the certificate.
+Mission independently reconciled `GDB-TD008-v1`, `WNMP-TD008-v1`,
+`CFS-TD008-v1`, `VE-TD008-v1`, `PBA-TD008-v1`, the released TD-007 boundary,
+the protected RP-008 reference, the frozen curriculum, SC-09 plan, and exact
+current source without conflict. Fresh Mission evidence passed protected
+`14/14`, the RP-008 mapping self-test, and a 198-module production build at
+exact released TD-007 JS/CSS/media identity.
 
 ## Exact next action
 
-**Run only the TD-008 Mission Captain shell reconciliation.**
+**Run only the TD-008 Reconnaissance Sergeant creative treatment.**
 
-Read the full `Skyscraper Agent Profiles/mission-captain.md`, all four TD-008
-predecessor artifacts, `PBA-TD008-v1`, the TD-007 Intelligence release and
-exact normal route/controller/storage/return authorities, the frozen RP-008
-curriculum contract and protected evidence, SC-09 plan, current shell and
-validation controls, and every exact dependency cited by `VE-TD008-v1`.
+Read the full `Skyscraper Agent Profiles/reconnaissance-sergeant.md`, the
+complete `SS-RP008-OFFSET-REACH-v1` shell, all five TD-008 Colonel artifacts,
+the TD-007 Intelligence release, SC-09, the photorealistic charter, current
+visual controls, recent accepted reveal history, and the exact current-control
+sections cited by the role.
 
-Reconcile `GDB-TD008-v1`, `WNMP-TD008-v1`, `CFS-TD008-v1`, `VE-TD008-v1`,
-and `PBA-TD008-v1` into one complete conflict-free versioned shell for exactly
-`TD-008-RP008-OFFSET-REACH-v1` at
-`RP-008 / SC-09 / OR-00-OR-30` through sole route `TD008-RTA-001`.
+Create exactly
+`Production Pipeline/Skyscraper Test Drives/TD-008/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
+Interpret the shell through one emotional treatment while preserving every
+fixed route, state, learning, evidence, privacy, save, accessibility, fixture,
+asset, canon, and hard-stop boundary. Define arrival, tension, understanding,
+exit, pacing, attention, materials, lighting, atmosphere, existing-audio use,
+motion/reduced-motion treatment, contrast with recent slices/reveals, risks,
+and fixed versus flexible boundaries.
 
-Issue `SHELL READY`, `REVISE`, or `HOLD`. On pass, create the exact
-construction contract, update TD-008 metrics and this handoff to
-Reconnaissance Sergeant, commit, push, and prove
-`HEAD == origin/main == remote main`. Do not perform Marine work, generate
-art, create normal runtime implementation, inspect Martin's browser/save, or
-expose RP-009 or any forbidden meaning.
+Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`. On pass, update TD-008 metrics and
+this handoff to Tactical Operations Specialist and make one dedicated local
+commit. Do not implement normal runtime behavior, create content assets,
+generate images, alter curriculum, open hidden lore, inspect browser storage,
+or expand the route, world response, reward, access, identity, authority,
+successor, or ending.
 
-## Science contract lock
+## Shell construction lock
 
-### Entry and graph
+### Entry and route
 
 - Start only from strict released `BV-30 VERIFY + RETURN / SC-08` under exact
   RP-007 raw/object equality and immutable TD-004 through TD-007 bytes.
 - Tour rejects before campaign storage. Route validation precedes one-hit
   token consumption across seven modalities.
 - Wrong, invalid, duplicate, stale, forged, combined, contaminated, partial,
-  private, Tour, or interrupted state fails closed exactly as
-  `VE-TD008-v1` specifies.
+  private, Tour, or interrupted state fails closed.
+- Sole route is `TD008-RTA-001`, owner
+  `PILOT // EXPEDITION NAVIGATION`, active group
+  `bv30_offset_reach_route_choice`.
 - Atomic mount is only `OR-00`; the hard stop is OR-30.
+- BV-30, recurrence, association, continuation, scenery, planning order,
+  imagery, sound, focus, save, restore, and destinationless notation are not
+  route authority.
 
-### Normal identities and durable record
+### State and physical observations
+
+- Normal graph is exactly OR-00 arrival, OR-10 evidence, OR-20 independent
+  learning/review/save, and OR-30 verified return.
+- Six equal observations converge in all `720` orders and revisits are
+  idempotent:
+  `familiar_continuity_trace`, `recurring_familiar_contact`,
+  `comparable_non_contact`, `cross_family_contact`, `unavailable_case`, and
+  `layered_stewardship`.
+- The retained RP-007 account remains separately valid. Recurrence is not a
+  universal rule; non-contact is not separation; cross-family contact is not
+  equivalence; unavailable evidence stays unavailable.
+- Presentation, route, focus, modality, timing, Tour, save, restore, and scene
+  grant zero observation or mastery evidence.
+
+### Learning and execution truth
+
+- `PY-016`: strict `8/8 primary -> failed-check-only answer-free remediation
+  -> delayed closed-note 8/8 trace -> genuinely blank 8/8 transfer`.
+- The exact ten-key JSON summary retains local truth, four counts of `1`, and
+  `universal`, `exclusive`, `unity`, `cause`, and `purpose` as null/None.
+- Browser work is session-memory-only and sanitized-replica-only. It performs
+  no arbitrary Python, file, browser persistence, network, Worker, Python/WASM,
+  package, environment, process, clipboard, download, or external operation.
+- Exact truthful label is frozen in the shell.
+- `RP008-INFORMATION-EXTRACTION-01 / AI901-D1-O8`: strict independent
+  `8/8 primary -> actually-scored-tag-only answer-free remediation -> delayed
+  8/8 retrieval -> genuinely blank 8/8 transfer`, plus two explanations.
+- No cross-credit. A miss clears all private/transient work and opens a wholly
+  blank unlimited retry at the deterministic first incomplete control.
+
+### Normal identities and persistence
 
 - save key `horizon-archive-rp008-offset-reach-save-v1`
 - record version `rp008.offset-reach-save.v1`
 - controller `rp008.offset-reach-controller.v1`
 - route controller `td008.route-controller.v1`
 - fixture `td008-offset-reach-v1`
-- exactly eleven root keys: version, packet, mapping, checkpoint,
-  continuation, city/external deltas, successor, retained RP-007 summary,
-  offset note, and evidence
+- exactly eleven ordered root keys
+- exact retained eight-key RP-007 summary
+- exact thirteen-key bounded offset note
 - exactly eight ordered finalized evidence records
-- exact in-memory sanitation, canonical write/read-back, predecessor-byte
+- strict private-free sanitation, canonical write/read-back, predecessor-byte
   proof, verified byte-stable rollback, and replay-free OR-30 restore
+- no identity may alias `rp008.protected-journey.v1`
 
-### Learning and privacy
+### Accessibility and fixture
 
-- Six equal observations in all `720` orders; the exact TD-007 summary remains
-  valid and separately retained.
-- Strict independent `PY-016` primary/trace/blank transfer.
-- Strict independent `RP008-INFORMATION-EXTRACTION-01 / AI901-D1-O8`
-  primary/retrieval/blank transfer plus two explanations.
-- No cross-credit. Remediation uses only actually failed checks or actually
-  scored misconception tags, gives no answer, clears all work, and opens a
-  genuinely blank unlimited retry.
-- Browser work is session-memory-only and sanitized-replica-only. It performs
-  no arbitrary Python, file, browser persistence, network, live service,
-  resource, endpoint, credential, package, process, or external operation.
-- Persist only exact allowlisted finalized evidence and bounded notes; clear
-  source, JSON, cases, answers, reasoning, feedback, diagnostics, identity,
-  credential, endpoint, payload, response, prompt, and temporary data.
+- Seven modalities, one-hit activation, one active owner group, deterministic
+  focus, one atomic polite status, native labels/error association, and
+  `>=44px` targets.
+- Required layouts: `1920x1080`, `1366x768`, `390x844`, and effective-200
+  `768x900`, plus forced colors, reduced motion, grayscale, non-color meaning,
+  focus, heading, crop, alternative text, local requests, and containment.
+- Exact longest sample:
+  `Review retained local association and independent offset responsibilities`.
+  Image Specialist must live-render it at all four layouts; Intelligence must
+  independently reproduce the result.
+- One storage-free production-absent fixture contains exactly 64 allowlisted
+  scenarios in the seven fixed groups named by the shell. Harness controls and
+  product controls remain separate.
 
-### Accessibility, fixture, assets, and budget
+### Assets and budget
 
-- Seven modalities, one-hit activation, deterministic focus, one atomic
-  polite status, native labels/error association, and `>=44px` targets.
-- Desktop `1920x1080`, laptop `1366x768`, narrow `390x844`, effective-200
-  `768x900`, forced-color, reduced-motion, grayscale, non-color, focus,
-  heading, longest-copy, crop, alternative-text, and containment gates.
-- One storage-free, production-absent fixture with exactly 64 allowlisted
-  scenarios in the seven fixed groups named by `VE-TD008-v1`.
-- Planned art remains provisional: exactly two later image-only runtime roles,
+- Exactly two provisional image-only runtime roles:
   `SC-09-PANORAMA-MASTER` and `SC-09-RELATION-DETAIL-MASTER`.
+- They are not accepted runtime media yet. Each requires direct import,
+  provenance, source/runtime hashes and bytes, responsive crops, exact
+  alternatives, grayscale/forced-color/reduced-motion review, artifact
+  cleanup, and explicit placeholder retirement.
+- Prefer generator-native `6144x3456` or larger, never below `3840x2160`.
+  Report native and deterministic enlargement separately.
 - `PBA-TD008-v1`: JS `<=1,461,821`, CSS `<=100,351`, modules `<=207`, at
   most two new images totaling `<=8,388,608` bytes, total runtime media
   `<=41,810,481`; every emitted chunk/asset counts and all 15 TD-007 media
   identities remain.
-- Focused `14/14`, connected `78/78`, full `865/865`, mapping self-test,
-  198-module build, exact released identity, PBA baseline, and negative probes
-  passed fresh in Science.
+- Exactly one accepted spoiler-safe cycle reveal may enter the project under
+  the one-initial, at-most-one-targeted-recovery, no-third-attempt rule.
 
 ## Frozen boundaries
 
-- The conditional route is not released or playable until Mission issues a
-  versioned `SHELL READY`, Marines build it, and Intelligence releases it.
-- SC-09 planned roles are not accepted runtime media.
+- `SHELL READY` authorizes sequential Marine construction only. TD-008 remains
+  unreleased until Intelligence accepts the complete as-built slice.
 - OR-30 opens only exact Braided Verge or City Threshold returns. Optional
   destinationless notation opens nothing.
 - No universal/exclusive truth, separation, independence, equivalence,
   interchangeability, unity, coordination, cause, purpose, identity,
   unavailable contents, reward, access, permission, authority, response,
   world effect, RP-009, RP-013, successor, or post-ending content is released.
-- Presentation, route, focus, modality, timing, Tour, save, restore, and scene
-  grant zero observation or learning evidence.
+- SC-08 and SC-09 remain invariant. Learning and save change no live work,
+  geometry, contact, passage, casing, maintenance, light, sound, or clock.
 - Never open `DO_NOT_READ_HORIZON_ARCHIVE_HIDDEN_LORE_VAULT.md`.
 - Never inspect or mutate Martin's browser storage, profile, or campaign save.
 - Never inspect, alter, stage, move, delete, or commit
