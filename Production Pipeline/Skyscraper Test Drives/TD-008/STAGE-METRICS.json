@@ -3,8 +3,8 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-008",
-    "shellCandidate": "unselected; Commandant selection envelope only",
-    "campaignAddress": "unselected; released predecessor is RP-007 / SC-08 / BV-30 plus exact returns",
+    "shellCandidate": "unselected; Colonel provisional narrative candidate only",
+    "campaignAddress": "unselected; Operations must prove exact address from RP-007 / SC-08 / BV-30 plus exact returns",
     "sourceCommit": "0f074cd8f632ae40a2570ba34cc5580f4682e3db",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -27,6 +27,24 @@
       "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Commandant push gate",
       "nextStage": "Colonel"
+    },
+    {
+      "sequence": 2,
+      "stage": "Colonel",
+      "agentId": "colonel",
+      "startedAt": "2026-08-01T00:35:00.000Z",
+      "endedAt": "2026-08-01T00:39:00.000Z",
+      "durationMs": 240000,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "releasedPredecessor": "TD-007 / SS-RP007-BRAIDED-VERGE-v1 / BV-30 / SC-08 plus exact write-free/replay-free returns",
+      "candidateSelection": "one provisional retained-association / recurring-contact / comparable-non-contact / cross-family-contact / unavailable-case scope-revision study with layered stewardship; no address or route assigned",
+      "validation": "current Commandant brief, TD-007 release, surface lore, whole-story controls, protected mapped candidate, location/visual canon, and lore/art logs reconciled; 18/18 Colonel contract checks PASS",
+      "variances": "none; protected future planning handles remain non-routable",
+      "commit": "PENDING_COLONEL_COMMIT",
+      "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Colonel push gate",
+      "nextStage": "Operations Planning Major"
     }
   ]
 }
