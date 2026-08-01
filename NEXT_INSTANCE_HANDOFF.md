@@ -8,6 +8,7 @@ registry before acting.
 ## Synchronized released state
 
 - Latest release: **`TD-008 / PASS - AS BUILT RELEASED`**.
+- Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - Shell: `SS-RP008-OFFSET-REACH-v1`.
 - Candidate audited: `b0d0d1b26e37c9fea49777cd81a9d775f7759228`.
 - Slice/address: `RP-008 / SC-09 / OR-00-OR-30`.
@@ -16,24 +17,38 @@ registry before acting.
 - Returns: exact write-free/replay-free Braided Verge or City Threshold.
 - Record: `Production Pipeline/Skyscraper Test Drives/TD-008/11-AS-BUILT-RECONCILIATION.md`.
 - Release evidence: focused `31/31`, full `882/882`, mappings `11/11`,
-  203-module build, `PBA-TD008-v1`, served `22/22`, and one isolated
-  `87.9s` E2E all pass.
-- Exactly two SC-09 runtime masters are accepted. Exactly one spoiler-safe
-  reveal with SHA-256 `345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1`
-  is accepted reference-only.
-- `TD008-FUNC-001`, `TD008-CONT-002`, `TD008-PRES-001`, and
-  `TD008-PRES-002` are corrected and closed.
+  203-module build, `PBA-TD008-v1`, served `22/22`, one isolated `87.9s`
+  E2E, and complete production presentation matrix pass.
+- Exactly two SC-09 runtime masters and one spoiler-safe reference-only reveal
+  are accepted.
+
+## Active TD-009 stage
+
+- Commandant certificate: `GDB-TD009-v1 / VISION BASELINE`.
+- Source authority: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
+- The whole-product baseline is unchanged.
+- Candidate, packet, story identity, destination, route, campaign address,
+  shell ID, and curriculum identity remain deliberately unselected.
+- TD-008 lessons are mandatory: freeze one stable committed candidate before
+  Intelligence; inspect generated lineages at original resolution against
+  required and forbidden material readings; live-render the exact longest
+  copy at every required layout; preserve exact UTF-8 player copy; and keep
+  retained summaries ordered, separately attributable, read-only, and free of
+  replay or cross-credit.
 
 ## Exact next action
 
-At the next scheduled three-hour wake, run **Commandant / `commandant`** only.
+Run **Colonel / `colonel`** only.
 
-Guardedly verify the synchronized TD-008 release and define only the next
-selection envelope. Do not preselect RP-009 or deploy a later role. Under
-standing route authority, any next already-mapped adjacent surface-canon
-transition must still pass Colonel derivation, Operations exact adjacency,
-Science viability, and a conflict-free versioned Mission `SHELL READY`
-contract before Marines deploy.
+Read the full Colonel profile, `GDB-TD009-v1`, the TD-008 Intelligence
+reconciliation, current surface-lore and story controls, and exact visual/lore
+authorities cited by that role. Guardedly derive exactly one provisional
+surface-safe already-mapped adjacent candidate from exact released OR-30, or
+issue an honest `HOLD`.
+
+Do not assign a route, campaign address, shell, technical design, scene copy,
+learning identity, or asset; those belong to later roles. Do not deploy
+Operations or Marines in the same stage.
 
 ## Frozen boundaries
 
@@ -42,9 +57,12 @@ contract before Marines deploy.
 - Six observations remain equal, any-order, idempotent, and world-invariant;
   PY-016, extraction, and both explanations remain independent; save/restore
   remains exact, atomic, and replay-free.
-- No RP-009 route, successor, RP-013, ending, post-ending content, invented
-  canon, reward, access, identity, authority, response, or world effect is
-  authorized by this handoff.
+- The retained RP-007 summary and complete TD-008 record remain exact and may
+  not be replayed, overwritten, merged, universalized, or used as fresh
+  learning credit.
+- No `RP-009` route, successor, `RP-013`, ending, post-ending content,
+  invented canon, reward, access, identity, authority, response, or world
+  effect is authorized by this handoff.
 - Never open the hidden lore vault or inspect/mutate Martin's browser/profile/
   campaign save.
 - Never inspect, alter, stage, move, delete, or commit
