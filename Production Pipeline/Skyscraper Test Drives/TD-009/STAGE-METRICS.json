@@ -293,6 +293,27 @@
       "commitConvention": "The dedicated Intelligence fixture-REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only correction checkpoint; no AS BUILT RELEASED push gate and no HEAD == origin/main claim",
       "nextStage": "Combat Engineer only for TD009-FIX-001 fixture implementation; fresh Intelligence strictly subsequent"
+    },
+    {
+      "sequence": 8.2,
+      "stage": "Combat Engineer Fixture Return Correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T20:31:09.349Z",
+      "endedAt": "2026-08-01T20:49:31.464Z",
+      "durationMs": 1102115,
+      "disposition": "FUNCTIONALLY COMPLETE - FIXTURE CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "startingAuthority": "cafd17b134ae7dc89fd8197746afc44d96d25a2a / Intelligence fixture REVISE",
+      "correction": "TD009-FIX-001 corrected: the exact production OccludedFold component renders from a deterministic storage-free contract adapter; boundary scenarios are contract-equivalent; exact owner/group/heading/status/controls/labels/public errors/focus/landmark are mapped; all learning groups retain PILOT // COURSE WORK; all four frozen UTF-8 samples render together at all four layout scenarios; forced colors, reduced motion, and grayscale are deterministic live states",
+      "validation": "focused TD-009 35/35; connected TD-007 through TD-009 106/106; full 903/903 twice including release validator; mappings 11/11; production build 206 modules in 7.31s; fixture build 50 modules; served production 22/22; served fixture 4/4; production fixture exclusion, scoped leakage, patch integrity, and owned ports PASS",
+      "budget": "PBA-TD009-v1 PASS unchanged: JS 1509976 bytes / 70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 predecessor media / 37410731 bytes; zero new runtime media",
+      "boundaries": "no accepted production behavior, player copy/assets, route, evidence, persistence, curriculum, canon, hard stop, image waiver, browser/profile/save, or protected file changed; no image or board calls",
+      "variances": "TD009-FIX-001 corrected pending fresh independent Intelligence acceptance; TD009-PROC-001, TD009-PRES-001, and TD009-CONT-001 remain deferred limitations; all earlier product/content corrections remain resolved",
+      "commit": "PENDING_COMBAT_FIXTURE_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat fixture-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "one dedicated local correction commit; no push before fresh independent Intelligence release gate",
+      "nextStage": "Fresh independent Intelligence Officer only; Quartermaster need not repeat; Image Specialist remains waived and no image or board calls are allowed"
     }
   ]
 }

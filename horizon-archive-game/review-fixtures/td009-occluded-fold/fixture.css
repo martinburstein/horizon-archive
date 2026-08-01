@@ -1,13 +1,44 @@
 :root { color: #edf4f0; background: #07100f; font-family: system-ui, sans-serif; }
 * { box-sizing: border-box; }
 body { margin: 0; }
-.fixture-shell { min-height: 100vh; display: grid; grid-template-columns: 18rem 1fr; }
-.fixture-harness { padding: 1rem; border-right: 2px solid #8ca59c; background: #111c19; }
+.fixture-shell { min-height: 100vh; display: grid; grid-template-columns: 18rem minmax(0, 1fr); background: #07100f; }
+.fixture-harness { position: relative; z-index: 2; padding: 1rem; border-right: 2px solid #8ca59c; background: #111c19; overflow-wrap: anywhere; }
 .fixture-harness select, .fixture-product button { width: 100%; min-height: 44px; }
-.fixture-product { display: grid; grid-template-columns: 1.4fr 1fr; min-width: 0; }
-.fixture-world { min-height: 50vh; background: radial-gradient(circle at 65% 40%, #587267, #172622 28%, #07100f 70%); }
-.fixture-panel { padding: clamp(1rem, 3vw, 2rem); min-width: 0; overflow-wrap: anywhere; }
-.fixture-panel [role=status] { padding: .75rem; border: 1px solid #8ca59c; }
-@media (max-width: 800px) { .fixture-shell, .fixture-product { grid-template-columns: 1fr; } .fixture-harness { border-right: 0; border-bottom: 2px solid #8ca59c; } }
-@media (forced-colors: active) { .fixture-harness, .fixture-world, .fixture-panel { background: Canvas; color: CanvasText; border-color: CanvasText; } }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.fixture-measurements { display: grid; gap: .65rem; margin-top: 1rem; }
+.fixture-measurements div { padding: .55rem; border: 1px solid #61736c; }
+.fixture-measurements dt { font-weight: 700; }
+.fixture-measurements dd { margin: .2rem 0 0; overflow-wrap: anywhere; }
+.fixture-product { min-width: 0; overflow: auto; background: #0b0d0d; }
+.fixture-product > .occluded-verge { min-height: 100vh; }
+.fixture-boundary-product { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(22rem, .85fr); }
+.fixture-boundary-world { min-height: 58vh; background: radial-gradient(circle at 65% 40%, #587267, #172622 28%, #07100f 70%); border-right: 1px solid #68736f; }
+.fixture-boundary-panel { min-width: 0; padding: clamp(1rem, 3vw, 2rem); overflow-wrap: anywhere; }
+.fixture-boundary-panel [role="status"] { padding: .75rem; border: 1px solid #8ca59c; }
+.fixture-boundary-actions { display: grid; gap: .55rem; }
+.fixture-boundary-actions button { padding: .65rem .8rem; border: 1px solid #9ca9a3; color: #f6f8f7; background: #202825; }
+.fixture-frozen-copy { margin: 1rem; padding: clamp(1rem, 3vw, 2rem); border: 2px solid #9ca9a3; background: #111614; overflow-wrap: anywhere; }
+.fixture-frozen-copy p { padding: .7rem; border: 1px solid #64716c; background: #151a18; overflow-wrap: anywhere; }
+.fixture-frozen-copy[data-frozen-copy-layout="1920x1080"] { max-width: 1920px; }
+.fixture-frozen-copy[data-frozen-copy-layout="1366x768"] { max-width: 1366px; }
+.fixture-frozen-copy[data-frozen-copy-layout="390x844"] { max-width: 390px; }
+.fixture-frozen-copy[data-frozen-copy-layout="768x900-effective-200"] { max-width: 768px; font-size: 2rem; }
+.fixture-mode-forced-colors .fixture-product,
+.fixture-mode-forced-colors .occluded-verge,
+.fixture-mode-forced-colors .occluded-verge *,
+.fixture-mode-forced-colors .fixture-boundary-product,
+.fixture-mode-forced-colors .fixture-boundary-product * { color: CanvasText; background: Canvas; border-color: CanvasText; forced-color-adjust: none; }
+.fixture-mode-forced-colors :focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+.fixture-mode-reduced-motion .fixture-product,
+.fixture-mode-reduced-motion .fixture-product * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+.fixture-mode-grayscale .fixture-product { filter: grayscale(1); }
+@media (max-width: 900px) {
+  .fixture-shell, .fixture-boundary-product { grid-template-columns: 1fr; }
+  .fixture-harness { border-right: 0; border-bottom: 2px solid #8ca59c; }
+  .fixture-boundary-world { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: 1px solid #68736f; }
+}
+@media (forced-colors: active) {
+  .fixture-harness, .fixture-product, .fixture-frozen-copy { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

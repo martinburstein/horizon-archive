@@ -154,3 +154,26 @@ Protected `Art Of No Mans Sky Book Scan.pdf` and `Simplilearn Training Files/`
 remain unmodified, unstaged, and uncommitted.
 
 **Final disposition: `REVISE - NOT RELEASED`.**
+
+## Combat return status - `TD009-FIX-001`
+
+Combat returned one fixture-only corrected candidate after this independent
+`REVISE`. The correction directly renders the production Occluded Fold
+component through a deterministic storage-free contract adapter, preserves
+contract-equivalent predecessor/anchor boundary surfaces, supplies exact
+scenario owners/headings/statuses/controls/labels/errors/focus/landmarks,
+keeps all eight learning groups Pilot-owned, renders all four frozen UTF-8
+samples together across the four required layout scenarios, and makes forced
+colors, reduced motion, and grayscale deterministic live modes.
+
+Combat reports focused `35/35`, connected `106/106`, full `903/903`, mappings
+`11/11`, automated release validator PASS, production and fixture builds,
+served production `22/22`, served fixture `4/4`, exact unchanged production
+bundle/media identity, fixture exclusion, leakage, patch, and cleanup PASS.
+Those results are construction evidence, not release acceptance.
+
+`TD009-FIX-001` status is therefore **`CORRECTED - PENDING FRESH INDEPENDENT
+INTELLIGENCE VERIFICATION`**. This original `REVISE` decision remains the last
+release disposition until a fresh Intelligence context validates the exact
+committed candidate. Quartermaster need not repeat because no player content
+or runtime asset changed; the TD-009 image/reveal waiver remains unchanged.

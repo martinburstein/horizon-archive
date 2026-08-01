@@ -217,3 +217,75 @@ and owned solely by Quartermaster.
 - **Required disposition:** `CONTENT COMPLETE`, `REVISE`, or `HOLD`
 - **Next recipient:** fresh independent Intelligence Officer /
   `intelligence_officer`; Image Specialist remains waived for TD-009 only
+
+## Returned Combat fixture correction - `TD009-FIX-001`
+
+Intelligence returned the stable TD-009 candidate at commit
+`cafd17b134ae7dc89fd8197746afc44d96d25a2a` for one fixture-only correction.
+Combat reproduced the four live-review defects and corrected only the closed,
+local-only `td009-occluded-fold-v1` review surface:
+
+- the fixture now renders the production `OccludedFold` component against a
+  deterministic, storage-free contract adapter for every SC-10 scenario;
+  released route/return boundaries use a narrow contract-equivalent review
+  surface because those identities are owned by predecessor/anchor components;
+- every selected scenario now carries an exact owner, active group, heading,
+  complete atomic status, available controls, labels or public failed IDs,
+  focus target, layout, presentation mode, and named product landmark;
+- Python, prompt, and explanation learning groups retain
+  `PILOT // COURSE WORK`; Builder/Teacher remain subordinate attribution;
+- the heading, longest label, retained RP-008 row, and truthful PY-017 label
+  render together in the longest-copy scenario and each of the four frozen
+  layout scenarios; and
+- forced colors, reduced motion, and grayscale now apply deterministic live
+  classes with system colors/focus, still direct replacement/auto scroll, and
+  a true grayscale filter respectively. They are no longer heading aliases.
+
+Focused fixture regressions now fail if the product component/landmark is
+removed, a learning owner changes, a frozen sample disappears, a named mode
+becomes inert, or browser/URL/storage/file/network/arbitrary state is added.
+The isolation proof was narrowed from forbidding every production import to
+allowing exactly `OccludedFold.jsx` and `OccludedFoldNormal.js`; production
+continues to import no fixture marker, scenario, source, or route.
+
+Correction validation passed:
+
+- focused TD-009 normal/protected/UI/fixture: **`35/35`**;
+- connected TD-007 through TD-009: **`106/106`**;
+- full product: **`903/903`**, repeated by the automated release validator;
+- RP-002 through RP-012 mappings: **`11/11`**;
+- production build: **206 modules / 7.31s**;
+- `PBA-TD009-v1`: JavaScript **1,509,976 bytes** / SHA-256
+  `70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693`;
+  CSS **104,035 bytes** / SHA-256
+  `1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`;
+  exact predecessor media **17 / 37,410,731 bytes**, zero new media;
+- fixture build: **50 modules**; served fixture **4/4**;
+- served production root, two deep fallbacks, and every emitted asset:
+  **22/22**, with exact byte/hash identity;
+- fixture exclusion, scoped leakage, patch integrity, and owned port cleanup:
+  **PASS**.
+
+`TD009-FIX-001` is **RESOLVED IN CORRECTED CANDIDATE / PENDING FRESH
+INTELLIGENCE ACCEPTANCE**. No accepted production behavior, player copy,
+asset, route, evidence, persistence, curriculum, canon, hard stop, image
+waiver, runtime media, browser state, or campaign save changed. Quartermaster
+does not need to repeat.
+
+### Exact fresh Intelligence handoff
+
+- **Stage / agent:** Intelligence Officer / `intelligence_officer`
+- **Shell:** `SS-RP009-OCCLUDED-FOLD-v1`
+- **Starting authority:** the dedicated local Combat fixture-correction commit
+  containing this section, plus Intelligence `REVISE` commit `cafd17b...`
+- **Bounded objective:** independently rerun the TD-009 release gate and
+  decide `AS BUILT RELEASED`, `REVISE`, or `HOLD`; validate the corrected live
+  fixture rather than inheriting Combat's conclusions
+- **Image boundary:** Martin's TD-009-only no-image deferral and Image
+  Specialist/reveal waiver remain in force; make no image or board call
+- **Stop boundary:** no Combat, Quartermaster, player-copy, asset, route,
+  evidence, persistence, curriculum, canon, successor, or hard-stop change
+- **Synchronization:** Combat correction is one dedicated local commit and is
+  deliberately not pushed; Intelligence owns the next release push gate
+
+**Disposition: `FUNCTIONALLY COMPLETE - FIXTURE CORRECTED`.**
