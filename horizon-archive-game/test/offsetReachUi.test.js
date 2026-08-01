@@ -8,11 +8,15 @@ const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const entry = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", import.meta.url), "utf8");
 const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
-test("TD008 production UI exposes exact longest copy and two truthful structural placeholders", () => {
+test("TD008 production UI exposes exact longest copy and exactly two truthful production masters", () => {
   assert.match(component, /Review retained local association and independent offset responsibilities/);
-  assert.match(component, /SC-09-PANORAMA-MASTER \/\/ PROVISIONAL STRUCTURAL PLACEHOLDER/);
-  assert.match(component, /SC-09-RELATION-DETAIL-MASTER \/\/ PROVISIONAL STRUCTURAL PLACEHOLDER/);
-  assert.doesNotMatch(component, /Production Masters|\.png"|\.webp"|\.avif"|<img/);
+  assert.doesNotMatch(component, /PROVISIONAL STRUCTURAL PLACEHOLDER|offset-world-placeholder/);
+  const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
+  assert.equal(imports.length, 2);
+  assert.match(component, /sc09-offset-reach-panorama-runtime-master-v1\.webp/);
+  assert.match(component, /sc09-offset-reach-relation-detail-runtime-master-v1\.webp/);
+  assert.match(component, /<img/);
+  assert.match(component, /detailAltByCropId/);
   assert.deepEqual([...controller.matchAll(/imageRoles:[\s\S]*?Object\.freeze\(\[([^\]]+)/g)].length, 1);
 });
 

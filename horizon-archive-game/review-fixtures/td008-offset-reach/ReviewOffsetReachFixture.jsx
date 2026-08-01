@@ -18,7 +18,7 @@ export function ReviewOffsetReachFixture() {
         <p data-fixture-summary>{offsetReachScenarioNames.length} allowlisted scenarios · storage-free · no arbitrary state</p>
       </aside>
       <section className="fixture-product" aria-labelledby="fixture-product-heading" data-layout={scenario.state.layout}>
-        <div className="fixture-world" role="img" aria-label={`${scenario.scene.role} structural placeholder`} />
+        <div className="fixture-world" role="img" aria-label={`${scenario.scene.role} closed-fixture review surface`} />
         <div className="fixture-panel">
           <p>{scenario.state.owner}</p>
           <h2 id="fixture-product-heading">{scenario.state.heading}</h2>

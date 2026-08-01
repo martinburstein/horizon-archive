@@ -6,6 +6,8 @@ import {
   offsetReachRegions,
   resolveOffsetReachWorldScene,
 } from "./OffsetReachNormal.js";
+import offsetReachPanorama from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v1.webp";
+import offsetReachRelationDetail from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp";
 
 const headingCopy = {
   or00_orientation: "Offset Reach",
@@ -98,12 +100,12 @@ const actionIds = {
   [offsetReachActions.returnThreshold]: "or-return-city-threshold",
 };
 
-const panoramaAlt = "First-person structural placeholder for the immense Offset Reach panorama. The familiar laminated ribbon and cellular mantle remain separately traceable; recurring contact, open non-contact, a third continuity, one externally bounded unavailable case, and layered stewardship remain visible without response or opening.";
+const panoramaAlt = "First-person view across the immense Offset Reach. A translucent laminated glass-ceramic ribbon and a dark cellular mineral mantle remain separately traceable through one recurring bounded contact and a broad open offset. A rigid mauve mineral continuity meets the ribbon once while an opaque peripheral mass remains closed.";
 
 const detailAltByCropId = {
-  "sc09-detail-recurring-contact": "Structural relation-detail placeholder: one familiar bounded contact recurs while both familiar continuities remain distinct.",
-  "sc09-detail-non-contact": "Structural relation-detail placeholder: both familiar continuities cross one exposed passage without visible contact; depth remains unresolved.",
-  "sc09-detail-cross-family": "Structural relation-detail placeholder: a third material continuity makes one bounded contact with only one familiar continuity without implying equivalence.",
+  "sc09-detail-recurring-contact": "Flat-on material view of one ordinary bounded contact between the laminated glass-ceramic ribbon and cellular mineral mantle; both continuities remain distinct.",
+  "sc09-detail-non-contact": "Flat-on material view of the familiar continuities remaining visible around a broad solid mineral offset without visible contact; the offset establishes no separation.",
+  "sc09-detail-cross-family": "Flat-on material view of a rigid mauve sintered-mineral continuity touching the glass-ceramic ribbon at one small point while broad solid host rock separates it from the cellular mantle.",
 };
 
 function optionLabel(value) {
@@ -202,9 +204,10 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
   const scene = resolveOffsetReachWorldScene(state);
   const isDetail = scene?.role === "SC-09-RELATION-DETAIL-MASTER";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
+  const imageSource = isDetail ? offsetReachRelationDetail : offsetReachPanorama;
   const sourceName = isDetail
-    ? "SC-09-RELATION-DETAIL-MASTER // PROVISIONAL STRUCTURAL PLACEHOLDER"
-    : "SC-09-PANORAMA-MASTER // PROVISIONAL STRUCTURAL PLACEHOLDER";
+    ? "sc09-offset-reach-relation-detail-runtime-master-v1.webp"
+    : "sc09-offset-reach-panorama-runtime-master-v1.webp";
 
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -235,13 +238,12 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
       }}
     >
       <figure className={`offset-world ${isDetail ? "is-detail" : "is-panorama"}`}>
-        <div
-          className="offset-world-placeholder"
-          role="img"
-          aria-label={alt}
+        <img
+          src={imageSource}
+          alt={alt}
           data-image-role={scene?.role}
           data-runtime-source-master={sourceName}
-        ><span>{sourceName}</span></div>
+        />
         <figcaption>
           Expedition view only. Retained local association, recurring contact, comparable
           non-contact, cross-family contact, unavailable evidence, and compatible stewardship

@@ -4,6 +4,24 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-08-01 - RP-008 SC-09 Offset Reach source and runtime masters
+
+- **Decision:** complete exactly `SC-09-PANORAMA-MASTER` and
+  `SC-09-RELATION-DETAIL-MASTER` while preserving expansion without verdict,
+  non-universal recurrence, non-separating visible non-contact, isolated
+  cross-family contact, closed unavailability and invariant-world limits.
+- **Asset and complete prompt/provenance:** [Offset Reach source and runtime
+  masters](../Visual%20Direction/Production%20Masters/2026-08-01-rp008-offset-reach-runtime/PROVENANCE.md).
+- **Mode:** built-in `image_gen`; preserved cached first-attempt panorama plus
+  one accepted `GC-TD008-SC09-v3` precise edit. Earlier rejected detail
+  candidates remained outside workspace, runtime, canon, provenance, commit
+  and reveal. No CLI/API fallback or second Creative Production board.
+- **Derivatives:** deterministic Pillow `12.2.0` RGB/Lanczos enlargement to
+  exact `3840 x 2160` lossless PNG, then WebP quality `96`, method `6`, exact
+  RGB. This makes no native-4K detail claim.
+- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist and
+  Intelligence Officer review remain required before release.
+
 ## 2026-07-29 - RP-007 recurrent-contact cycle reveal
 
 - **Decision:** close the Image Specialist candidate

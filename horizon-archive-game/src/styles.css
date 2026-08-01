@@ -5,7 +5,7 @@
   font-synthesis: none;
 }
 
-/* TD-008 Offset Reach functional shell. Quartermaster replaces only the two labelled SC-09 placeholders. */
+/* TD-008 Offset Reach production presentation. */
 .offset-verge {
   min-height: 100vh;
   display: grid;
@@ -22,23 +22,24 @@
   background: #0c1714;
   border-right: 1px solid #527068;
 }
-.offset-world-placeholder {
+.offset-world img {
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
   min-height: 58vh;
-  display: grid;
-  place-items: end start;
-  padding: clamp(1rem, 3vw, 3rem);
-  background:
-    linear-gradient(115deg, transparent 0 28%, rgba(170, 196, 184, .2) 29% 35%, transparent 36% 52%, rgba(94, 132, 119, .25) 53% 61%, transparent 62%),
-    radial-gradient(circle at 74% 38%, #263d37 0 8%, #101d1a 9% 32%, #07100f 70%);
-  color: #d9e5df;
-  font: 700 .72rem/1.4 ui-monospace, monospace;
-  letter-spacing: .08em;
-  overflow-wrap: anywhere;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
-.offset-world.is-detail .offset-world-placeholder {
-  background:
-    linear-gradient(85deg, #0a1512 0 22%, #526d63 23% 31%, #15241f 32% 54%, #82988e 55% 61%, #09120f 62%),
-    #0b1512;
+.offset-verge[data-crop-id="sc09-detail-recurring-contact"] .offset-world img {
+  object-position: 18% 50%;
+}
+.offset-verge[data-crop-id="sc09-detail-non-contact"] .offset-world img {
+  object-position: 50% 50%;
+}
+.offset-verge[data-crop-id="sc09-detail-cross-family"] .offset-world img {
+  object-position: 82% 50%;
 }
 .offset-world figcaption {
   padding: .7rem 1rem;
@@ -81,7 +82,7 @@
 @media (max-width: 900px) {
   .offset-verge { grid-template-columns: 1fr; grid-template-rows: minmax(16rem, 42vh) auto; overflow: visible; }
   .offset-world { border-right: 0; border-bottom: 1px solid #527068; }
-  .offset-world-placeholder { min-height: 0; }
+  .offset-world img { min-height: 0; object-fit: contain; object-position: 50% 50%; }
   .offset-panel { max-height: none; overflow: visible; }
   .offset-observations button, .offset-note div { grid-template-columns: 1fr; }
 }
@@ -89,7 +90,7 @@
   .offset-verge, .offset-verge * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 @media (forced-colors: active) {
-  .offset-verge, .offset-world, .offset-world-placeholder, .offset-panel, .offset-boundary, .offset-errors,
+  .offset-verge, .offset-world, .offset-world img, .offset-panel, .offset-boundary, .offset-errors,
   .offset-panel [role="status"], .offset-observations li, .offset-review li, .offset-form-grid label,
   .offset-cases fieldset, .offset-note, .offset-actions button, .offset-observations button {
     color: CanvasText; background: Canvas; border-color: CanvasText; forced-color-adjust: auto;

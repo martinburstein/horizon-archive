@@ -43,7 +43,7 @@ export function createOffsetReachScenario(name) {
       successor: null,
       privateWorkCleared: true,
     }),
-    scene: Object.freeze({ role: group === "or10_observations" ? "SC-09-RELATION-DETAIL-MASTER" : "SC-09-PANORAMA-MASTER", provisional: true }),
+    scene: Object.freeze({ role: group === "or10_observations" ? "SC-09-RELATION-DETAIL-MASTER" : "SC-09-PANORAMA-MASTER", provisional: false }),
     storage: "frozen-in-memory-only",
     arbitraryStateAccepted: false,
   });
