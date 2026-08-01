@@ -57,6 +57,7 @@
   scrollbar-gutter: stable;
 }
 .offset-heading h1 { margin: .15rem 0 .65rem; font-size: clamp(1.45rem, 2.5vw, 2.45rem); line-height: 1.08; overflow-wrap: anywhere; }
+.offset-verge[data-active-group="or20_review"] .offset-heading h1 { font-size: clamp(1.45rem, 2vw, 2rem); }
 .offset-boundary, .offset-errors, .offset-panel [role="status"], .offset-preview-limit, .offset-workspace-truth {
   padding: .7rem; border: 1px solid #526c64; background: #101d1a; overflow-wrap: anywhere;
 }

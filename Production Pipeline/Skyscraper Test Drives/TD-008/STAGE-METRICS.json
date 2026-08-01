@@ -237,6 +237,23 @@
       "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
       "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Image Specialist push gate",
+      "intelligenceCorrection": {
+        "id": "TD008-PRES-001",
+        "startedAt": "2026-08-01T06:26:00.000Z",
+        "endedAt": "2026-08-01T06:48:00.000Z",
+        "disposition": "CORRECTED - RETURN TO INTELLIGENCE; EXACT LIVE ACCEPTANCE PENDING",
+        "startingCommit": "01638076aa3b4d045c6266892d7aa4efa368725f",
+        "returnedEvidence": "exact longest heading was four lines at 1920x1080 against maximum three and five lines at 1366x768 against maximum four; 390x844 natural wrap and effective-200 768x900 containment passed",
+        "scope": "one TD-008-only CSS rule for the real or20_review heading: font-size clamp(1.45rem, 2vw, 2rem), plus one static exact-copy/scoped-rule regression assertion",
+        "impact": "full exact copy, one semantic h1, approximately 64/36 desktop world dominance, content, mechanics, canon, evidence, schema, save, route, returns, focus/status, >=44px targets, forced colors, reduced motion, crops, alternatives and all assets unchanged",
+        "validation": "focused TD-008 normal/protected/UI 27/27 including all 720 observation orders; 203-module build; PBA-TD008-v1; root/two-deep/all-19-assets 22/22 HTTP HEAD 200; media/reveal invariance; patch and owned-process cleanup PASS",
+        "bundle": "JS unchanged 1450332 / 95CA58D345EEF318AA807B9B3B357E8CEAE4882580FB5BED5ABBE79D97FD4FFA; CSS 99210 / 29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F; modules 203; media unchanged 17 / 37506807",
+        "media": "SC-09 panorama B25E90052EECF46ABA9949F47BB1FFF32602C1CB9984F7572F2F311A56E0D366; relation detail CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8; reveal 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1 unchanged",
+        "liveReview": "Browser backend unavailable to returned Image stage, so no post-correction live line-count claim; Intelligence working disposable harness must independently confirm <=3/<=4/natural/effective-200 line-wrap and containment acceptance",
+        "variances": "none; unresolved release evidence is an explicitly assigned Intelligence recheck, not a claimed pass",
+        "commit": "PENDING_TD008_PRES_001_IMAGE_COMMIT",
+        "synchronization": "local dedicated correction commit only; Intelligence remains next and owns final live acceptance and push"
+      },
       "nextStage": "Intelligence Officer"
     }
   ]

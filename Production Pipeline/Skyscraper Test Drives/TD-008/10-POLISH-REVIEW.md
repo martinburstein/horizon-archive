@@ -21,9 +21,11 @@ Image Specialist began from exact Quartermaster `CONTENT COMPLETE` commit
 runtime masters, their complete provenance, exact production source and
 closed fixture, and `PBA-TD008-v1`.
 
-No production source, test, fixture, runtime image, emitted runtime asset,
-player-facing copy, mechanic, evidence, schema, owner, focus target, route,
-return, hard stop, or world meaning changed during this stage.
+During the initial pass, no production source, test, fixture, runtime image,
+emitted runtime asset, player-facing copy, mechanic, evidence, schema, owner,
+focus target, route, return, hard stop, or world meaning changed. Intelligence
+later returned the bounded heading-wrap defect `TD008-PRES-001`; the scoped
+CSS and source assertion recorded below are the only reopened changes.
 
 | Role | Dimensions | Bytes | SHA-256 |
 |---|---:|---:|---|
@@ -34,12 +36,14 @@ return, hard stop, or world meaning changed during this stage.
 
 ## Presentation decision
 
-No bounded production correction was required. Both accepted runtime masters,
-their direct imports, alternatives, caption, registered wide crops, full
-centered narrow treatment, typography, focus-visible treatment, targets,
-forced-color rules, reduced-motion rules, and containment contracts remain
-fit for the shell. Changing the accepted Quartermaster build would add risk
-without a demonstrated presentation gain.
+The initial review found no bounded production correction. Intelligence's
+independent exact-layout matrix subsequently demonstrated one real typography
+defect: the frozen longest heading wrapped to four lines at `1920 x 1080`
+where at most three are allowed, and five lines at `1366 x 768` where at most
+four are allowed. Natural `390 x 844` wrapping and effective-200
+`768 x 900` containment already passed. `TD008-PRES-001` corrects only that
+returned defect; all accepted asset, interaction, accessibility, and meaning
+boundaries remain unchanged.
 
 ## Original-resolution asset review
 
@@ -136,6 +140,59 @@ independently reproduce the complete live release matrix or return the slice.
 
 The reveal is reference-only and does not count as runtime media.
 
+## Intelligence return correction - `TD008-PRES-001`
+
+### Returned evidence and smallest correction
+
+Intelligence's disposable, storage-free matrix established the exact
+pre-correction defect above. Image Specialist reopened from exact commit
+`01638076aa3b4d045c6266892d7aa4efa368725f` and changed one scoped rule:
+
+```css
+.offset-verge[data-active-group="or20_review"] .offset-heading h1 {
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+```
+
+The selector applies only to the real TD-008 `or20_review` group. It preserves
+the complete exact heading, the one semantic `h1`, owner, focus target,
+status, source order, approximately `64/36` desktop world dominance, image
+crops, alternatives, caption, controls, and every other group. At wide
+layouts it reduces only the returned heading from the general `2.45rem` cap
+to `2rem`; at narrow and effective-200 layouts the existing `1.45rem` floor
+remains unchanged.
+
+One source assertion now protects both the exact longest copy and this
+TD-008-only correction selector. No JSX, player copy, runtime master, reveal,
+content, mechanic, canon, state, evidence, schema, save, route, return, focus,
+status, forced-color, reduced-motion, or hard-stop source changed.
+
+### Correction validation
+
+| Gate | Result |
+|---|---|
+| Focused TD-008 normal/protected/UI | `27/27 PASS`; all `720` observation orders retained; `0.425s` wall |
+| Production build | `PASS`; `203` modules; Vite `7.56s`; `8.638s` wall |
+| JavaScript | unchanged `index-Br7hhc_5.js`; `1,450,332` bytes; SHA-256 `95CA58D345EEF318AA807B9B3B357E8CEAE4882580FB5BED5ABBE79D97FD4FFA` |
+| CSS | `index-C733m8E_.css`; `99,210` bytes; SHA-256 `29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F` |
+| `PBA-TD008-v1` | PASS; JS, CSS, `203 <= 207` modules, media, and reveal exclusion |
+| Served production | root, two deep fallbacks, and all `19` emitted assets: `22/22` HTTP HEAD `200` |
+| Runtime media | unchanged exact `17` / `37,506,807` bytes |
+| SC-09 runtime identities | panorama `B25E9005...D366`; relation detail `CA09C4BD...D0B8`; unchanged |
+| Reveal identity | `345900D8...D8D9C1`; unchanged and absent from `dist` |
+| Owned cleanup | ports `4180` and `5195` clear |
+
+The Browser runtime exposed no available browser to this returned Image
+stage after its required connection troubleshooting. Image Specialist
+therefore makes no post-correction live line-count claim. Intelligence must
+use its working disposable harness to confirm exactly `<=3` lines at
+`1920 x 1080`, `<=4` at `1366 x 768`, and unchanged readable containment at
+`390 x 844` and effective-200 `768 x 900`, including no document or panel
+horizontal escape, visible focus, one atomic status, and `>=44px` targets.
+
+Correction disposition:
+**`CORRECTED - RETURN TO INTELLIGENCE; EXACT LIVE ACCEPTANCE PENDING`**.
+
 ## Accepted cycle reveal
 
 ### Decision and named checklist
@@ -210,7 +267,9 @@ lineage entering an already occupied reach.
 - `Concept Art Book/prompt-provenance-log.md`;
 - this review;
 - `Production Pipeline/Skyscraper Test Drives/TD-008/STAGE-METRICS.json`;
-- `NEXT_INSTANCE_HANDOFF.md`.
+- `NEXT_INSTANCE_HANDOFF.md`;
+- `horizon-archive-game/src/styles.css` (`TD008-PRES-001` only); and
+- `horizon-archive-game/test/offsetReachUi.test.js` (scoped regression only).
 
 ## Disposition
 
@@ -248,3 +307,16 @@ mandatory before TD-008 release.
 - **Required output:**
   `Production Pipeline/Skyscraper Test Drives/TD-008/11-AS-BUILT-RECONCILIATION.md`.
 - **Required disposition:** `PASS - AS BUILT RELEASED`, `REVISE`, or `HOLD`.
+
+### `TD008-PRES-001` corrected-build addendum
+
+- **Correction baseline:**
+  `01638076aa3b4d045c6266892d7aa4efa368725f`.
+- **Correction owner:** Image Specialist / `image_specialist`.
+- **Exact changed surface:** one TD-008 `or20_review` heading font-size rule
+  plus one static regression assertion; no other product surface changed.
+- **Mandatory first Intelligence action:** reproduce all four exact live
+  layouts and accept only if the frozen `3/4/natural/4` wrap and containment
+  contract passes with the exact full heading unchanged.
+- **Synchronization:** local dedicated Image correction commit only; no push.
+  Intelligence remains the next and sole release role.
