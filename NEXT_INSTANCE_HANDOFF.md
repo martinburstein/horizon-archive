@@ -25,76 +25,85 @@ registry before acting.
 - Combat candidate: commit
   `2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551`, pushed and three-way synchronized
   at Combat handoff; **`FUNCTIONALLY COMPLETE`**.
-- Functional evidence: focused `27/27`, connected `92/92`, full `895/895`,
-  mappings `11/11`, release validator PASS, 206-module production build,
-  served production `22/22`, served fixture `4/4`, cleanup and
+- Functional evidence remains focused `27/27`, connected `92/92`, full
+  `895/895`, mappings `11/11`, release validator PASS, 206-module production
+  build, served production `22/22`, served fixture `4/4`, cleanup and
   `PBA-TD009-v1` PASS.
-- The candidate implements the exact route, OF-00 through OF-30, all 720 equal
-  observation orders, independent PY-017 and prompt-boundary chains plus two
-  explanations, no cross-credit, exact twelve-key three-scope atomic record,
-  verified rollback, replay-free restore, seven modalities, four layouts,
-  exact 64-scenario storage-free fixture, exact returns, and inert hard stop.
 - Exactly two truthful SC-10 structural placeholders remain:
   `SC-10-PANORAMA-MASTER` and `SC-10-EXPOSED-EDGE-DETAIL-MASTER`.
-- Current runtime media remains the exact 17-file TD-008 set totaling
-  `37,410,731` bytes; TD-009 has zero runtime media.
-- TD-009 remains an unreleased candidate. Image Specialist and Intelligence
-  Officer have not begun.
+- Normal production runtime media remains the exact 17-file TD-008 set
+  totaling `37,410,731` bytes; TD-009 still emits zero runtime media.
+- TD-009 remains an unreleased candidate. Intelligence Officer has not begun.
 
-## Quartermaster disposition
+## Martin's current process authority
 
-**`HOLD - DIRECT CREATIVE PRODUCTION BOARD SURFACE UNAVAILABLE`**
+Martin explicitly authorized Quartermaster to bypass the Creative Production
+board because image-generation/board behavior is glitchy. The board was not
+called. He also waived Image Specialist and the cycle reveal for this TD-009
+cycle only. All other sequential roles remain in the workflow.
 
-Quartermaster read the complete shell-to-build package, exact source and
-placeholder seams, active visual canon, recent runtime provenance, and the
-full Creative Production and imagegen instructions. The required
-`creative_production_board` service is exposed in the current runtime only as
-a deferred tool callable through `functions.exec`. The governing `produce`
-skill requires the board tool to be called directly and explicitly forbids
-wrapping it in `functions.exec`; the direct callable namespace is unavailable
-to both Quartermaster and coordinator.
+The board bypass is recorded as `TD009-PROC-001`; the Image Specialist/reveal
+waiver is recorded as `TD009-PRES-001`. Intelligence owns their final
+classification only after a future content-complete candidate exists.
 
-No board was opened. No generation began. Attempt accounting is zero boards,
-zero begin calls, zero native generations, zero recoveries, zero candidates,
-zero accepted or rejected drafts, zero source masters, zero runtime assets,
-and zero reveals. No source, runtime, test, fixture, CSS, copy, route, record,
-canon, save, world state, or browser state changed. Both placeholders remain
-truthful.
+## Quartermaster re-entry disposition
 
-The HOLD record is
-`Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md`.
+**`HOLD - PANORAMA ATTEMPT LIMIT EXHAUSTED`**
+
+Two Desktop workers ran built-in ImageGen directly, one per uncached role.
+Each role used one private initial and one documented targeted recovery:
+
+- panorama initial: rejected for a traversable floor/route, human
+  architectural seams, and aperture-like opening;
+- panorama recovery: rejected for a tunnel-like route, webbed strands, and
+  loss of the required opaque technical shell to an organic-cave reading;
+- detail initial: rejected for retaining-wall/facade, road, unclear required
+  peer records, and aperture/face-risk recesses;
+- detail recovery: accepted at source level after original-resolution QA.
+
+The panorama has no accepted candidate and its two-attempt allowance is
+exhausted. No third attempt is permitted. All three rejected drafts remain
+outside workspace, canon, runtime, provenance package, commits, and reveal.
+
+The accepted detail native source is preserved without regeneration at:
+
+`Visual Direction/Production Masters/2026-08-01-rp009-occluded-fold-source-hold/rp009-occluded-fold-exposed-edge-detail-native-source-v1.png`
+
+Identity: `1672 x 941`, RGB PNG, `3,002,386` bytes, SHA-256
+`B8F11413ADA44A1B038C74AA062B9672E58047921E705AB27503836FB66E0952`.
+It is not enlarged, runtime-derived, imported, emitted, canonized as a paired
+world identity, or used to retire a placeholder.
+
+The complete ledger and exact prompt/attempt provenance are:
+
+- `Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md`;
+- `Visual Direction/Production Masters/2026-08-01-rp009-occluded-fold-source-hold/PROVENANCE.md`.
 
 ## Exact next action
 
-Run **Quartermaster / `quartermaster` only** when
-`creative_production_board` is exposed as a direct callable tool.
+Retain this HOLD. Scheduled wakes must not generate, edit, integrate, or
+replace either SC-10 role and must not consume another image attempt.
 
-Open exactly one new TD-009 Creative Production board directly and reuse its
-returned `boardId`. Begin stable items `td009-sc10-panorama` and
-`td009-sc10-exposed-edge-detail` only immediately before generation. Delegate
-the two uncached built-in image generations to two Desktop workers, one per
-role. Each role receives one private initial generation and at most one
-targeted recovery after documented original-resolution QA rejection; never a
-third attempt. Rejected drafts stay outside workspace, canon, runtime,
-provenance, commits, and reveal.
+Re-enter **Quartermaster / `quartermaster` only** after Martin either:
 
-If the direct board surface remains unavailable, retain this HOLD. Do not call
-the board through `functions.exec`, do not use CLI/API/local-process fallbacks,
-do not generate, and do not advance to Image Specialist.
+1. explicitly authorizes one fresh, distinctly versioned panorama lineage
+   with a new bounded attempt budget; or
+2. supplies an acceptable panorama source for original-resolution QA.
 
-On lawful re-entry, integrate exactly the two accepted SC-10 runtime masters,
-retire both placeholders, complete source/native/derivative dimensions,
-bytes, SHA-256, provenance, truthful alternatives, responsive crop/hotspot,
-grayscale, predecessor-media, focused/connected/full/build/served/PBA and
-cleanup evidence, then issue `CONTENT COMPLETE`, `REVISE`, or `HOLD` and hand
-only a content-complete candidate to Image Specialist.
+Reuse the accepted detail source; do not regenerate it. Once an acceptable
+panorama exists, create honest source/runtime derivatives, integrate exactly
+the two roles, retire both placeholders, and complete all content gates.
+Image Specialist and the reveal remain waived only for this TD-009 cycle.
+Only a future `CONTENT COMPLETE` candidate may advance to a fresh independent
+Intelligence Officer.
 
 ## Recurring automation
 
 - The authorized Skyscraper production heartbeat remains **ACTIVE**.
-- Cadence remains every three hours.
+- Cadence remains every three hours in this current task.
 - Every wake must read this file as the sole exact-next-action authority,
-  respect non-overlap, and resume only the Quartermaster re-entry above.
+  respect non-overlap, retain the HOLD without further generation, and wait
+  for the fresh panorama authority/source above.
 
 ## Frozen boundaries
 
@@ -104,11 +113,12 @@ only a content-complete candidate to Image Specialist.
   independent learning/evidence, exact sanitation/save/recovery, seven
   modalities, four layouts, exact UTF-8 copy, exact fixture, exact returns,
   invariant world, and OF-30 hard stop.
-- No third image, new audio, font, video, source map, Python/WASM runtime, or
-  network payload.
+- No third image attempt, new audio, font, video, source map, Python/WASM
+  runtime, or network payload.
 - No RP-010 name, cue, asset, destination, route, focus target, save field, or
-  world response. No RP-013, successor, ending extension, hidden lore, reward,
-  access, identity, authority, unavailable contents, or post-ending content.
+  world response. No RP-013, successor, ending extension, hidden lore,
+  reward, access, identity, authority, unavailable contents, or post-ending
+  content.
 - Never inspect or mutate Martin's browser/profile/campaign save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.

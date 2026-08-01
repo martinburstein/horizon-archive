@@ -1,4 +1,4 @@
-# TD-009 Content and Asset Ledger - Quartermaster HOLD
+# TD-009 Content and Asset Ledger — Quartermaster Re-entry HOLD
 
 ## Document control
 
@@ -9,209 +9,146 @@
 | Shell | `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY` |
 | Address | `RP-009 / SC-10 / OF-00-OF-30` |
 | Starting build | Combat commit `2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551` |
+| Re-entry checkpoint | `95c7108327b35f317ca9d817894aebe063f6d1b0` |
 | Combat disposition | `FUNCTIONALLY COMPLETE` |
 | Creative thesis | `LEGIBLE EDGES, UNREADABLE WHOLE` |
 | Budget authority | `PBA-TD009-v1` |
 | Date | `2026-08-01` |
-| Disposition | **`HOLD - DIRECT CREATIVE PRODUCTION BOARD SURFACE UNAVAILABLE`** |
-| Re-entry owner | Quartermaster / `quartermaster` |
+| Disposition | **`HOLD — PANORAMA ATTEMPT LIMIT EXHAUSTED`** |
+| Re-entry owner | Quartermaster / `quartermaster` after fresh Martin authority or supplied acceptable panorama |
 
 ## Outcome
 
-Quartermaster independently confirmed the exact Combat build and all upstream
-content, visual, accessibility, privacy, provenance, performance, and hard-stop
-contracts. The build remains a valid functionally complete candidate with
-exactly two truthful player-facing SC-10 structural placeholders:
+Martin explicitly authorized Quartermaster to bypass the unavailable Creative
+Production board because image generation and board behavior have been
+glitchy. He also waived Image Specialist and the required cycle reveal for
+this TD-009 cycle only. All other workflow roles remain active; the waiver did
+not relax Quartermaster's source, quality, placeholder-retirement, provenance,
+or attempt limits.
 
-- `SC-10-PANORAMA-MASTER`;
-- `SC-10-EXPOSED-EDGE-DETAIL-MASTER`.
+Quartermaster called no board. Two Desktop workers used built-in `image_gen`
+directly, one per uncached SC-10 role. Each role used one private initial and
+one documented targeted recovery. The panorama failed original-resolution QA
+twice. Its allowance is exhausted and no third attempt is permitted. The
+detail recovery passed and its exact native source was archived for reuse, but
+it is not runtime-integrated while the panorama is absent.
 
-The required Creative Production board service is discoverable in this Codex
-runtime only as a deferred tool callable through `functions.exec`. The active
-Creative Production `produce` skill requires `creative_production_board` to be
-called directly, explicitly forbids wrapping it in `functions.exec`, requires
-exactly one `open` call, and requires the returned `boardId` to be reused for
-all generation updates. No direct callable board namespace is exposed to this
-Quartermaster or to the coordinating root agent.
+The normal build remains the exact functionally complete Combat candidate.
+Both player-facing structural placeholders remain truthful. No source code,
+fixture, CSS, route, controller, learning evidence, persistence, save,
+predecessor media, world state, or browser state changed.
 
-Quartermaster therefore stopped before board creation, generation, asset
-selection, derivative production, integration, or placeholder retirement. An
-indirect board call would violate the governing skill and could prevent the
-host from mounting and updating the one authoritative board. This is an honest
-tooling `HOLD`, not a shell, Combat, content, asset-brief, budget, or canon
-variance.
+## User-authorized process variances for Intelligence classification
 
-## Authorities and evidence read
+| Variance | Exact scope | Quartermaster treatment |
+|---|---|---|
+| `TD009-PROC-001` | Bypass Creative Production board/open/begin/complete/fail receipts for this TD-009 re-entry because the board/image path is glitchy | Applied narrowly. Board calls: zero. Built-in ImageGen and all per-output attempt/provenance/QA rules remained mandatory. Proposed classification: `ACCEPTED IMPROVEMENT` or `DEFERRED LIMITATION`; Intelligence owns final classification after a complete candidate exists. |
+| `TD009-PRES-001` | Waive Image Specialist and cycle reveal for this TD-009 cycle only | Recorded but not exercised because Quartermaster did not reach `CONTENT COMPLETE`. No reveal was generated or expected. Proposed classification: `DEFERRED LIMITATION`; Intelligence owns final classification after a complete candidate exists. |
 
-Quartermaster read and reconciled in full:
+Neither variance changes shell canon, route, learning, evidence, privacy,
+accessibility, save/recovery, performance, returns, world response, or hard
+stop.
 
-- `AGENTS.md`, `NEXT_INSTANCE_HANDOFF.md`,
-  `SKYSCRAPER_AGENT_WORKFLOW.md`, and the canonical profile registry;
-- the full Quartermaster profile;
-- TD-009 shell `05`, Recon creative lock `06`, Tactical experience blueprint
-  `07`, Combat functional build report `08`, and `PBA-TD009-v1`;
-- the implemented normal `OccludedFold.jsx`, the exact scene resolver and
-  SC-10 identities in `OccludedFoldNormal.js`, the TD-009 CSS seams, focused
-  UI tests, and the closed 64-scenario fixture source;
-- the active photorealistic charter, premium art style guide, art-direction
-  charter, SC-10 scene sheet, current location visual control, the TD-008
-  content ledger, and recent runtime provenance;
-- Creative Production `produce/SKILL.md`, `board-runtime.md`, `scenes.md`, and
-  the full built-in `imagegen/SKILL.md`.
+## Complete four-attempt accounting
 
-The repository began at exact pushed Combat identity
-`HEAD == origin/main == 2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551` with only the two protected
-untracked user paths present. Quartermaster did not inspect either protected
-path.
+| Role / attempt | Result | Original-resolution finding | Identity / disposition |
+|---|---|---|---|
+| panorama initial | REJECT | Broad level foreground read as a traversable floor/route; regular orthogonal seams read as human architecture; bright upper-right opening read as an aperture | `1672 x 941`, RGB PNG, `3,004,117` bytes, SHA-256 `E7D5B1C4DED170C7BEC3B89734D0A0C2C032A20D78EE4D0159C72DD0D2D2E5FC`; outside workspace/canon/runtime/provenance package/commit/reveal |
+| panorama targeted recovery | REJECT / terminal | Central void read as a tunnel-like route; glass-ceramic read as webbed strands; dominant opaque asymmetric technical shell was lost to an organic-cave reading | `1672 x 941`, RGB PNG, `2,696,652` bytes, SHA-256 `B7A21A2AB0C20F33EE6EFF522FF7C3AB0C9FE4DB0CB91B4F0052D1FBEAC65D97`; outside workspace/canon/runtime/provenance package/commit/reveal |
+| detail initial | REJECT | Planar bands read as retaining wall/facade beside road-like ground; required trajectories and peer records were unclear; round recesses risked aperture/face readings | `1672 x 941`, RGB PNG, `2,946,437` bytes, SHA-256 `5534311FFF18034C0E8B12E6B79AF4455752E2B619DFA902A897552CA2C9D3D6`; outside workspace/canon/runtime/provenance package/commit/reveal |
+| detail targeted recovery | ACCEPTED SOURCE ONLY | Continuous nonhuman outer-margin landscape; three unequal material strata; bounded recurrence; ordinary unmatched and multi-candidate peers; opaque exterior; layered stewardship; all hard-reject scans pass | `1672 x 941`, RGB PNG, `3,002,386` bytes, SHA-256 `B8F11413ADA44A1B038C74AA062B9672E58047921E705AB27503836FB66E0952`; exact native source archived, not imported or emitted |
 
-## Creative Production and attempt accounting
+Totals: zero boards, zero board receipts, four built-in generations, two
+initials, two targeted recoveries, three rejected drafts, one accepted native
+source, zero runtime assets, zero reveal attempts, and zero accepted reveals.
+There is no remaining recovery allowance for either role.
 
-| Control | Result |
-|---|---|
-| TD-009 board opened | `0` |
-| Board IDs created or reused | `0` |
-| `begin_generation` calls | `0` |
-| Built-in image generations | `0` |
-| Recovery generations | `0` |
-| Candidate images | `0` |
-| Accepted source masters | `0` |
-| Rejected drafts | `0` |
-| Workspace image files added | `0` |
-| Runtime media added | `0` |
-| Reveal generations | `0` |
-
-No generation worker was spawned because the prerequisite one-board session
-could not be opened lawfully. No CLI/API, local endpoint, process-based image
-generator, second board, fallback model, or substitute asset path was used.
-The one-initial/one-targeted-recovery allowance for each of the two runtime
-roles remains wholly unused.
+Exact prompts, full rejection narratives, original-resolution QA, and native
+identities are recorded in:
+`Visual Direction/Production Masters/2026-08-01-rp009-occluded-fold-source-hold/PROVENANCE.md`.
 
 ## Placeholder-by-placeholder disposition
 
 | Placeholder | Current truthful state | HOLD disposition |
 |---|---|---|
-| `SC-10-PANORAMA-MASTER` | Semantic structural placeholder; no runtime media | Preserved unchanged. Re-enter Quartermaster after direct board access, generate one private candidate lineage, pass original-resolution required/forbidden QA, then integrate one accepted production master. |
-| `SC-10-EXPOSED-EDGE-DETAIL-MASTER` | Semantic contextual-detail placeholder; no runtime media | Preserved unchanged. Re-enter Quartermaster after direct board access, generate one private candidate lineage, pass original-resolution and spatial-consistency QA, then integrate one accepted production master. |
-| Panorama alternatives/crops/hotspots | Complete truthful structural contract | Not falsely finalized against nonexistent pixels. |
-| Detail alternatives/crops/hotspots | Complete truthful structural contract | Not falsely finalized against nonexistent pixels. |
-| Player-facing functional copy | Complete safe Combat copy with frozen UTF-8 samples | Preserved; no copy polish claimed. |
-| Closed fixture presentation | Exactly 64 storage-free scenarios with truthful structural state | Preserved; no final-media state claimed. |
+| `SC-10-PANORAMA-MASTER` | Semantic structural placeholder; no accepted source and no runtime media | Preserved. The authorized two-attempt lineage is exhausted. Requires Martin's explicit authorization for a fresh versioned panorama lineage or a supplied acceptable panorama source. |
+| `SC-10-EXPOSED-EDGE-DETAIL-MASTER` | Semantic structural placeholder; accepted native source exists outside runtime | Preserved. Reuse the archived accepted source after an acceptable panorama exists; do not regenerate. Spatial/material consistency and runtime derivative remain unclaimed. |
+| panorama/detail alternatives, crops, and hotspots | Complete truthful structural contracts | Not falsely finalized against an incomplete pair. |
+| player-facing copy | Complete safe Combat copy with all frozen UTF-8 samples | Preserved unchanged. |
+| closed fixture | Exactly 64 storage-free scenarios with truthful structural state | Preserved unchanged; no final-media state claimed. |
 
-Every placeholder remains disclosed and truthful. `CONTENT COMPLETE` is not
-claimed.
+`CONTENT COMPLETE` is not claimed and no incomplete candidate is handed to
+Intelligence.
 
-## Frozen production brief for re-entry
+## Accepted partial source inventory
 
-The two uncached roles remain exactly:
+| Status | File | Dimensions | Bytes | SHA-256 |
+|---|---|---:|---:|---|
+| accepted native source; source-only HOLD | `Visual Direction/Production Masters/2026-08-01-rp009-occluded-fold-source-hold/rp009-occluded-fold-exposed-edge-detail-native-source-v1.png` | `1672 x 941` | `3,002,386` | `B8F11413ADA44A1B038C74AA062B9672E58047921E705AB27503836FB66E0952` |
 
-1. `sc10-occluded-fold-panorama` — first-person `26-32 mm` invariant
-   continent-scale re-entrant shellwork with three separately traceable near
-   margins, unpaired far records, bounded correspondence, one ordinary
-   unmatched record, ordinary unranked multi-candidate ambiguity, one opaque
-   unavailable outer margin, and layered stewardship;
-2. `sc10-occluded-fold-exposed-edge-detail` — first-person `58-72 mm`
-   contextual outer-margin landscape with coherent materials, lighting,
-   wear, all six bounded responsibilities, and no exposed interior.
+This file is the exact generator output. It was not enlarged or described as
+native 4K. No runtime WebP derivative exists. No production or fixture import
+references the file. It does not count as runtime media under
+`PBA-TD009-v1`.
 
-Both must preserve **legible edges, unreadable whole**. Reject human
-architecture, door, corridor, bridge, walkway, road, rail, cable, wire, rope,
-web, root, hair, tentacle, face-like aperture, map, connector, diagram,
-cutaway, cross-section exposing the interior, readable text, UI, watermark,
-protagonist, ship, human trace, reward, access, response, authority, answer,
-identity, equivalence, cause, purpose, world effect, or later-content cue.
+## Validation and preserved build evidence
 
-## Source, provenance, and runtime inventory
+- Main Quartermaster independently inspected all four native outputs at
+  original resolution and confirmed the worker rejection/acceptance findings.
+- Exact source copy identity passed byte and SHA-256 verification.
+- `rg` import/placeholder inspection confirms zero SC-10 raster imports and
+  both explicit structural seams remain in the normal component.
+- Git scope inspection confirms only the accepted detail source, this ledger,
+  its provenance, stage metrics, and synchronized handoff are intended.
+- The source-only archive is not emitted by the production bundle, so the
+  exact Combat budget identity remains `206` modules, JavaScript `1,508,813`
+  bytes, CSS `102,935` bytes, and 17 runtime media totaling `37,410,731`
+  bytes until a future content-complete integration.
+- Focused `27/27`, connected `92/92`, full `895/895` (`9.7s`), mappings
+  `11/11`, automated release validator, patch integrity, and cleanup passed.
+- Production rebuilt `206` modules in `8.17s`; `PBA-TD009-v1` candidate mode
+  passed with JavaScript `1,508,813`, CSS `102,935`, the exact 17 predecessor
+  media totaling `37,410,731` bytes, and zero new runtime media.
+- The accepted source archive is absent from production/fixture imports, zero
+  `sc10-*` media are emitted, and owned ports `5194` and `4181` are clear.
+  No served live-layout or final-media claim is made.
 
-No new source or runtime asset exists. The exact accepted TD-008 predecessor
-inventory remains `17` runtime media files totaling `37,410,731` bytes. Combat
-measured zero TD-009 media, `206` production modules, JavaScript `1,508,813`
-bytes, and CSS `102,935` bytes, all within `PBA-TD009-v1`.
+## Variances, limitations, and protected boundaries
 
-Because no pixel candidate exists, Quartermaster makes no unsupported claim
-about native resolution, deterministic enlargement, original-resolution QA,
-dimensions, bytes, SHA-256, grayscale distribution, crop registration,
-responsive fit, direct import, served identity, or runtime optimization.
-
-## Validation and preserved behavior
-
-This HOLD checkpoint changes no normal source, test, fixture, style, media,
-route, controller, action, evidence, record schema, save meaning, focus target,
-return, canon, or world state. The immediately preceding Combat evidence
-remains the exact functional candidate evidence:
-
-- focused `27/27`;
-- connected TD-007 through TD-009 `92/92`;
-- full product `895/895`;
-- mappings `11/11`;
-- release validator, production build, fixture build, served production
-  `22/22`, served fixture `4/4`, cleanup, and `PBA-TD009-v1` all passed;
-- exactly two truthful structural SC-10 placeholders and zero new media.
-
-Quartermaster performed a scoped read-only placeholder and import inspection
-before the HOLD. The production component still has zero raster imports and
-the two explicit structural seams; the fixture still truthfully identifies
-structural content. No presentation, E2E, served-media, or asset-identity
-result is claimed beyond Combat's unchanged evidence.
-
-## Variances and limitations
-
-- Formal shell variance: **none**.
-- Functional defect: **none discovered**.
-- Content contradiction: **none discovered**.
-- Tool limitation: the required direct Creative Production board call surface
-  is unavailable in the current agent environment.
-- Unfinished Quartermaster work: both private native generations, original-
-  resolution QA, candidate freeze, source/runtime derivative production,
-  exact provenance, direct imports, crop/hotspot registration, final
-  alternatives, placeholder retirement, content regression, complete build/
-  media/PBA/served checks, and content-complete commit.
-- Image Specialist and Intelligence Officer may not begin from this HOLD.
-
-## Protected boundaries
-
+- Shell/content result: **HOLD** because one required production role has no
+  acceptable candidate under the consumed attempt limit.
+- User-authorized process variances: `TD009-PROC-001` and
+  `TD009-PRES-001`, pending later Intelligence classification.
+- Functional defect: none discovered.
 - Hidden lore remained unopened and unnecessary.
 - Martin's browser profile, browser storage, campaign save, cookies,
   credentials, and personal session were neither inspected nor mutated.
 - `Art Of No Mans Sky Book Scan.pdf` and `Simplilearn Training Files/`
   remained untouched, uninspected, unstaged, and uncommitted.
-- Protected RP-009 design/test evidence remains unimported by production.
+- Protected RP-009 evidence remains unimported by production.
 - No RP-010, RP-013, successor, ending extension, post-ending content,
   unavailable contents, reward, access, identity, authority, response, or
   world effect was created or exposed.
 - The archived two-team workflow remains inactive.
 
-## Precise unblock condition
+## Exact unblock and next action
 
-Re-enter **Quartermaster / `quartermaster`** only when
-`creative_production_board` is exposed as a direct callable tool to the active
-agent, so the Creative Production skill can be followed exactly:
+Automated wakes must retain this HOLD and consume no additional image attempt.
+Re-enter **Quartermaster / `quartermaster` only** after Martin either:
 
-1. call direct `open` exactly once for one new TD-009 board;
-2. retain and reuse its returned `boardId`;
-3. call direct `begin_generation` immediately before generation for stable
-   items `td009-sc10-panorama` and `td009-sc10-exposed-edge-detail`;
-4. delegate the two uncached built-in image generations to two Desktop
-   workers, one per role;
-5. allow at most one targeted recovery per role after documented private QA
-   rejection, never a third attempt;
-6. call direct `complete_generation` or `fail_generation` for every item;
-7. integrate only accepted candidates after original-resolution QA and finish
-   the full Quartermaster ledger and validation ladder.
+1. explicitly authorizes one fresh, distinctly versioned panorama lineage
+   with a new bounded attempt budget; or
+2. supplies an acceptable panorama source for original-resolution QA.
 
-If only the deferred wrapper remains available, keep this HOLD. Do not route
-the board call through `functions.exec` and do not substitute another
-generation path.
-
-## Files changed by this HOLD checkpoint
-
-- `Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md`;
-- `Production Pipeline/Skyscraper Test Drives/TD-009/STAGE-METRICS.json`;
-- `NEXT_INSTANCE_HANDOFF.md`.
+Reuse the accepted detail source; do not regenerate it. After a panorama
+passes, produce honest derivatives, integrate exactly the two roles, retire
+both placeholders, and run the full content validation ladder. Image
+Specialist/reveal remain waived only for this TD-009 cycle unless Martin
+changes that instruction. Intelligence may begin only from a future
+`CONTENT COMPLETE` candidate.
 
 ## Disposition
 
-**`HOLD - DIRECT CREATIVE PRODUCTION BOARD SURFACE UNAVAILABLE`**
+**`HOLD — PANORAMA ATTEMPT LIMIT EXHAUSTED`**
 
-This checkpoint is local-only and must not be pushed. It preserves the exact
-functionally complete Combat candidate and hands no incomplete candidate to
-Image Specialist.
+This checkpoint is local-only and must not be pushed.
