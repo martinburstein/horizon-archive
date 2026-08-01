@@ -15,6 +15,8 @@ registry before acting. This file is the sole exact-next-action authority.
 - Route: sole Pilot-owned `TD009-RTA-001` from exact TD-008 OR-30.
 - Graph: `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`.
 - Returns: exact write-free/replay-free Offset Reach or City Threshold.
+- Hard stop: `OF-30`, either exact return, or inert LOOK-only continuation
+  with `destination=null`, `routeOpened=false`, `successor=null`.
 - Record: `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
 - Release evidence: focused `37/37`, full `905/905`, mappings `11/11`,
   readiness `15/15`, 206/50-module builds, `PBA-TD009-v1`, 64/64 rendered
@@ -22,36 +24,65 @@ registry before acting. This file is the sole exact-next-action authority.
 - Runtime imagery was deferred and Image Specialist/reveal waived for TD-009
   only. The exception does not carry into TD-010.
 
-## TD-010 Commandant state
+## TD-010 completed stages
 
-- Stage: **`Commandant / commandant`**.
+### Commandant
+
+- Commit: `a3347edd72e631abbaa6a359b3d29ed19cb3eee3` (local, not pushed).
 - Brief: `GDB-TD010-v1`.
-- Pass type: guarded verification.
 - Disposition: **`VISION BASELINE`**.
 - Product decisions changed: none.
-- Packet, candidate, location, destination, route, campaign address, and shell
-  remain deliberately unselected.
-- The next selection must pass Colonel derivation, Operations exact adjacency,
-  Science viability, and a conflict-free versioned Mission `SHELL READY`
-  contract before Marines deploy.
-- TD-009's process tune is active: closed fixtures must compare shell-frozen
-  owner/focus contracts with rendered owner text and actual active focus.
+
+### Colonel
+
+- Stage: **`Colonel / colonel`**.
+- Certificate: `WNMP-TD010-v1`.
+- Disposition: **`WORLD BASELINE`**.
+- Baseline reopened: no.
+- Variances: none.
+- Provisional candidate: exactly one approved cumulative-scope study across
+  physically separate operating districts, preserving provenance,
+  counterevidence, ambiguity, unavailability, and unknowns.
+- Protected planning handles: `RP-010 / Counterfield / SC-11 / CF-00-CF-30`.
+  These handles are not a campaign address, destination, route, token, or
+  shell.
+- Required story shape: seven equal observations; exact ordered retained
+  `RP-007`, `RP-008`, and `RP-009` scopes; any later candidate record is a
+  fourth separate bounded scope only after all later gates.
+- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/02-WORLD-NARRATIVE-MASTERPLAN.md`.
+- Predecessor verification: Commandant commit, parent, dedicated file set, and
+  byte-identical brief blob independently passed.
+- Commit: dedicated local Colonel commit for the current stage; no push at
+  this gate.
 
 ## Exact next action
 
-Run **Colonel / `colonel` only**.
+Run **Operations Planning Major / `operations_planning_major` only**.
 
-Read the full Colonel profile, `GDB-TD010-v1`, and exact current
-world/narrative authorities. From exact released `OF-30 / SC-10` plus only the
-two released write-free/replay-free returns, derive exactly one provisional
-surface-safe, already-mapped adjacent candidate or issue an honest `HOLD`.
-Do not preselect a campaign address, issue a route, open hidden lore, write
-scene copy, alter learning, or deploy a later role.
+Read the full Operations profile, `GDB-TD010-v1`, `WNMP-TD010-v1`, exact
+released TD-009 route/return/state authorities, and only the exact current
+campaign/dependency controls needed for this boundary.
+
+Evaluate the sole provisional candidate. Prove or reject one exact
+current-source campaign address and one narrow fail-closed transition from
+exact released `OF-30 / SC-10`. Do not treat the destinationless LOOK, either
+released return, the three retained scopes, recurrence, association, sound,
+imagery, persistence, saved completion, planning order, or protected
+`RP-010 / SC-11 / CF-00-CF-30` handles as a released opening.
+
+Define the exact predecessor evidence, one fresh Pilot-owned intent/token,
+sanitation, invalid/interrupted-state recovery, entry, state-to-scene
+identity, checkpoint sequence, both exact write-free/replay-free returns, and
+one deterministic hard stop. Preserve all seven observations as equal and
+any-order; preserve the three predecessor scopes exactly, in order,
+separately named, read-only, and free of replay or cross-credit.
 
 Produce
-`Production Pipeline/Skyscraper Test Drives/TD-010/02-WORLD-NARRATIVE-MASTERPLAN.md`,
-issue `WORLD BASELINE`, `REVISE`, or `HOLD`, update the stage ledger and this
-handoff, make one dedicated local Colonel commit, and stop after Colonel.
+`Production Pipeline/Skyscraper Test Drives/TD-010/03-CAMPAIGN-FLOOR-STACK.md`,
+issue `FLOOR STACK READY`, `REVISE`, or `HOLD`, update the stage ledger and
+this handoff, make one dedicated local Operations commit, and stop after
+Operations. If exact released adjacency cannot be proven, issue an honest
+`HOLD`; do not invent a route.
 
 ## Recurring automation
 
@@ -60,12 +91,21 @@ handoff, make one dedicated local Colonel commit, and stop after Colonel.
 
 ## Frozen boundaries
 
+- No TD-010 campaign address, destination, route, token, checkpoint, shell,
+  scene opening, or Marine deployment exists until Operations and subsequent
+  strategic gates pass.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
-- No preselected packet, campaign address, destination, route, or shell; no
-  RP-010 exposure, successor, RP-013, ending extension, invented canon,
-  reward, access, identity, authority, response, world effect, or post-ending
-  content.
+- Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
+  not replay, overwrite, erase, merge, correct, reinterpret, universalize, or
+  cross-credit them.
+- Preserve seven equal candidate observations without common identity,
+  topology, chronology, synchronization, unity, cause, purpose, institution,
+  or Machine relation.
+- Preserve invariant world, no reward, no access, no permission, no identity,
+  no authority, no response, no readiness judgment, and no external action.
+- No successor, RP-013, ending extension, post-ending content, invented canon,
+  or hidden-lore inference.
 - Never open hidden lore or inspect/mutate Martin's browser/profile/save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.

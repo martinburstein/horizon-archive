@@ -4,7 +4,8 @@
   "run": {
     "testDrive": "TD-010",
     "shellCandidate": "deliberately unselected; Mission shell not authorized",
-    "campaignAddress": "deliberately unselected; Colonel derivation and Operations adjacency required",
+    "campaignAddress": "unassigned; Operations must prove or reject exact OF-30 adjacency and route",
+    "provisionalSurfaceCandidate": "one approved cumulative-scope study; protected planning handles RP-010 / Counterfield / SC-11 / CF-00-CF-30 are not an address or route",
     "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -28,6 +29,27 @@
       "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Commandant push gate",
       "nextStage": "Colonel"
+    },
+    {
+      "sequence": 2,
+      "stage": "Colonel",
+      "agentId": "colonel",
+      "startedAt": "2026-08-01T21:59:00.000Z",
+      "endedAt": "2026-08-01T22:06:55.000Z",
+      "durationMs": 475000,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "baselineVersion": "WNMP-TD010-v1",
+      "predecessorVerification": "Commandant commit a3347edd72e631abbaa6a359b3d29ed19cb3eee3 verified as HEAD with sole parent b61aea3806e8d14ff2f36d506ffc6135d8c30045, dedicated three-file scope, and byte-identical brief blob 310b2531b9621b922238cad514c57e3fc536c85c",
+      "releasedBoundary": "TD-009 / SS-RP009-OCCLUDED-FOLD-v1 / OF-30 plus exact write-free/replay-free Offset Reach and City Threshold returns; LOOK remains destination=null, routeOpened=false, successor=null",
+      "candidateDerivation": "exactly one approved surface-safe cumulative-scope study across physically separate operating districts; protected handles RP-010 / Counterfield / SC-11 / CF-00-CF-30 remain provisional and non-routable",
+      "canonLocks": "seven equal observations; exact ordered retained RP-007, RP-008, and RP-009 scopes; bounded fourth scope only after later gates; invariant world; no common identity/topology/chronology/synchronization/unity/cause/purpose/Machine relation",
+      "validation": "18/18 Colonel contract checks PASS; Commandant provenance and hash-keyed current authorities verified; observation/inference/unknown ownership, intended ending, no-successor, and protected boundaries PASS",
+      "variances": "none; no baseline reopen trigger",
+      "commit": "PENDING_COLONEL_COMMIT",
+      "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Colonel push gate",
+      "nextStage": "Operations Planning Major"
     }
   ]
 }
