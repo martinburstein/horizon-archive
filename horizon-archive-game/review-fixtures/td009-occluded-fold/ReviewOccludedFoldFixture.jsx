@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { OccludedFold } from "../../src/OccludedFold.jsx";
 import { createOccludedFoldScenario, occludedFoldScenarioNames } from "./scenarios.js";
 import "../../src/styles.css";
@@ -13,8 +13,13 @@ export const fixtureMeasurements = Object.freeze({
 });
 
 function BoundaryProductState({ state }) {
+  const rootRef = useRef(null);
+  useLayoutEffect(() => {
+    const target = rootRef.current?.querySelector(`#${CSS.escape(state.focusIntent.target)}`);
+    target?.focus?.({ preventScroll: true });
+  }, [state.focusIntent.target]);
   return (
-    <main className="fixture-boundary-product" data-product-landmark={state.landmark} aria-labelledby={state.headingId}>
+    <main ref={rootRef} className="fixture-boundary-product" data-product-landmark={state.landmark} aria-labelledby={state.headingId}>
       <div className="fixture-boundary-world" role="img" aria-label="Released boundary review surface; no onward scene, route, or world response is manufactured." />
       <section className="fixture-boundary-panel">
         <p className="eyebrow" data-active-owner={state.owner}>{state.owner}</p>
@@ -44,7 +49,22 @@ function FrozenCopyEvidence({ copy, layout }) {
 export function ReviewOccludedFoldFixture() {
   const [name, setName] = useState(occludedFoldScenarioNames[0]);
   const scenario = useMemo(() => createOccludedFoldScenario(name), [name]);
+  const productRef = useRef(null);
+  const [renderedContract, setRenderedContract] = useState(null);
   const modeClass = `fixture-mode-${scenario.presentationMode}`;
+  const declaredOwner = scenario.state.owner;
+  const declaredFocusTarget = scenario.state.focusIntent.target;
+  useLayoutEffect(() => {
+    const renderedOwner = productRef.current?.querySelector("[data-active-owner]")?.textContent?.trim() ?? "";
+    const activeElementId = document.activeElement?.id ?? "";
+    setRenderedContract({
+      renderedOwner,
+      declaredOwner,
+      activeElementId,
+      declaredFocusTarget,
+      passed: renderedOwner === declaredOwner && activeElementId === declaredFocusTarget,
+    });
+  }, [name, declaredOwner, declaredFocusTarget]);
   return (
     <main className={`fixture-shell ${modeClass}`} data-fixture-root="TD009_OCCLUDED_FOLD_FIXTURE" data-presentation-mode={scenario.presentationMode}>
       <aside className="fixture-harness" aria-labelledby="fixture-harness-heading">
@@ -58,10 +78,19 @@ export function ReviewOccludedFoldFixture() {
           <div><dt>Product landmark</dt><dd>{scenario.productLandmark}</dd></div>
           <div><dt>Layout</dt><dd>{scenario.layout}</dd></div>
           <div><dt>Presentation mode</dt><dd>{scenario.presentationMode}</dd></div>
-          <div><dt>Focus target</dt><dd>{scenario.state.focusIntent?.target ?? scenario.state.focusTarget}</dd></div>
+          <div><dt>Focus target</dt><dd>{declaredFocusTarget}</dd></div>
         </dl>
+        <output
+          data-rendered-contract={renderedContract?.passed ? "PASS" : "FAIL"}
+          data-rendered-owner={renderedContract?.renderedOwner ?? "pending"}
+          data-declared-owner={declaredOwner}
+          data-active-element={renderedContract?.activeElementId ?? "pending"}
+          data-declared-focus={declaredFocusTarget}
+        >
+          Rendered owner and focus contract: {renderedContract?.passed ? "PASS" : "pending"}
+        </output>
       </aside>
-      <section className="fixture-product" aria-label="Selected exact product state" data-layout={scenario.layout} data-product-landmark={scenario.productLandmark}>
+      <section ref={productRef} className="fixture-product" aria-label="Selected exact product state" data-layout={scenario.layout} data-product-landmark={scenario.productLandmark}>
         {scenario.surface === "production-occluded-fold" ? (
           <OccludedFold state={scenario.state} onAction={() => {}} onFieldChange={() => {}} />
         ) : (

@@ -28,24 +28,24 @@ const layouts = Object.freeze({
 });
 
 const groupContract = Object.freeze({
-  of00_orientation: Object.freeze({ owner: "SYSTEM // EXPEDITION LEDGER", headingId: "of00-heading", actions: [occludedFoldActions.inspect] }),
-  of10_observations: Object.freeze({ owner: "PILOT // EDGE SURVEY", headingId: "of10-heading", actions: Object.freeze([
+  of00_orientation: Object.freeze({ owner: "SYSTEM // EXPEDITION LEDGER", headingId: "of00-heading", focusTarget: "of00-heading", actions: [occludedFoldActions.inspect] }),
+  of10_observations: Object.freeze({ owner: "PILOT // EDGE SURVEY", headingId: "of10-heading", focusTarget: "of-observe-three-near-margins", actions: Object.freeze([
     occludedFoldActions.continuities, occludedFoldActions.association, occludedFoldActions.difference,
     occludedFoldActions.order, occludedFoldActions.junction, occludedFoldActions.stewardship,
   ]) }),
-  of20_python_primary: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-primary-heading", actions: [occludedFoldActions.pythonPrimary], attribution: "BUILDER WORK // SANITIZED REPLICA" }),
-  of20_python_trace: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-trace-heading", actions: [occludedFoldActions.pythonTrace], attribution: "TEACHER / COURSE // CLOSED-NOTE TRACE" }),
-  of20_python_transfer: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-transfer-heading", actions: [occludedFoldActions.pythonTransfer], attribution: "BUILDER WORK // SANITIZED REPLICA" }),
-  of20_prompt_primary: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-primary-heading", actions: [occludedFoldActions.visionPrimary], attribution: "TEACHER // COURSE" }),
-  of20_prompt_retrieval: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-retrieval-heading", actions: [occludedFoldActions.visionRetrieval], attribution: "TEACHER // COURSE" }),
-  of20_prompt_transfer: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-transfer-heading", actions: [occludedFoldActions.visionTransfer], attribution: "TEACHER // COURSE" }),
-  of20_system_user_explanation: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-system-user-explanation-heading", actions: [occludedFoldActions.capabilityBoundary], attribution: "TEACHER // COURSE" }),
-  of20_truth_authority_explanation: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-truth-authority-explanation-heading", actions: [occludedFoldActions.relationBoundary], attribution: "TEACHER // COURSE" }),
-  of20_recovery: Object.freeze({ owner: "SYSTEM // RECOVERY", headingId: "of20-recovery-heading", actions: [occludedFoldActions.retry] }),
-  of20_review: Object.freeze({ owner: "PILOT // EXPEDITION REVIEW", headingId: "of20-review-heading", actions: [occludedFoldActions.review] }),
-  of20_save: Object.freeze({ owner: "PILOT // EXPEDITION LEDGER", headingId: "of20-save-heading", actions: [occludedFoldActions.save, occludedFoldActions.cancelSave] }),
-  of20_save_recovery: Object.freeze({ owner: "SYSTEM // RECOVERY", headingId: "of20-save-recovery-heading", actions: [occludedFoldActions.retrySave] }),
-  of30_restore: Object.freeze({ owner: "SYSTEM // RESTORED EXPEDITION NOTES", headingId: "of30-restore-heading", actions: [occludedFoldActions.notation] }),
+  of20_python_primary: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-primary-heading", focusTarget: "of20-python-primary-editor", actions: [occludedFoldActions.pythonPrimary], attribution: "BUILDER WORK // SANITIZED REPLICA" }),
+  of20_python_trace: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-trace-heading", focusTarget: "of20-python-trace-first", actions: [occludedFoldActions.pythonTrace], attribution: "TEACHER / COURSE // CLOSED-NOTE TRACE" }),
+  of20_python_transfer: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-python-transfer-heading", focusTarget: "of20-python-transfer-editor", actions: [occludedFoldActions.pythonTransfer], attribution: "BUILDER WORK // SANITIZED REPLICA" }),
+  of20_prompt_primary: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-primary-heading", focusTarget: "of20-prompt-primary-first", actions: [occludedFoldActions.visionPrimary], attribution: "TEACHER // COURSE" }),
+  of20_prompt_retrieval: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-retrieval-heading", focusTarget: "of20-prompt-retrieval-first", actions: [occludedFoldActions.visionRetrieval], attribution: "TEACHER // COURSE" }),
+  of20_prompt_transfer: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-prompt-transfer-heading", focusTarget: "of20-prompt-transfer-first", actions: [occludedFoldActions.visionTransfer], attribution: "TEACHER // COURSE" }),
+  of20_system_user_explanation: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-system-user-explanation-heading", focusTarget: "of20-system-user-explanation-field", actions: [occludedFoldActions.capabilityBoundary], attribution: "TEACHER // COURSE" }),
+  of20_truth_authority_explanation: Object.freeze({ owner: "PILOT // COURSE WORK", headingId: "of20-truth-authority-explanation-heading", focusTarget: "of20-truth-authority-explanation-field", actions: [occludedFoldActions.relationBoundary], attribution: "TEACHER // COURSE" }),
+  of20_recovery: Object.freeze({ owner: "SYSTEM // RECOVERY", headingId: "of20-recovery-heading", focusTarget: "of20-recovery-heading", actions: [occludedFoldActions.retry] }),
+  of20_review: Object.freeze({ owner: "PILOT // EXPEDITION REVIEW", headingId: "of20-review-heading", focusTarget: "of20-review-heading", actions: [occludedFoldActions.review] }),
+  of20_save: Object.freeze({ owner: "PILOT // EXPEDITION LEDGER", headingId: "of20-save-heading", focusTarget: "of20-save-heading", actions: [occludedFoldActions.save, occludedFoldActions.cancelSave] }),
+  of20_save_recovery: Object.freeze({ owner: "SYSTEM // RECOVERY", headingId: "of20-save-recovery-heading", focusTarget: "of20-save-recovery-heading", actions: [occludedFoldActions.retrySave] }),
+  of30_restore: Object.freeze({ owner: "SYSTEM // EXPEDITION LEDGER", headingId: "of30-restore-heading", focusTarget: "of30-restore-heading", actions: [occludedFoldActions.notation] }),
 });
 
 const returnActions = Object.freeze([occludedFoldActions.returnInterval, occludedFoldActions.returnThreshold]);
@@ -110,7 +110,7 @@ function groupFor(name) {
   if (learning) return learning;
   if (name === "of00_arrive" || name === "interruption_after_of00_pre_save") return "of00_orientation";
   if (name === "of10_survey" || name.startsWith("observation_") || name.startsWith("resume_")) return "of10_observations";
-  if (name === "of20_reconcile" || name === "review_ineligible") return "of20_review";
+  if (name === "of20_reconcile" || name === "review_ineligible") return "of20_python_primary";
   if (name === "review_eligible") return "of20_save";
   if (name === "save_rollback_verified") return "of20_save_recovery";
   if (["of30_restore", "save_committed", "restore_replay_free", "continuation_inert"].includes(name)) return "of30_restore";
@@ -126,10 +126,33 @@ function reviewRows() {
   ];
 }
 
+function observationFixtureState(name) {
+  if (name === "resume_contiguous_prefix") {
+    return {
+      recordedIds: occludedFoldObservationIds.slice(0, 2),
+      focusTarget: "of-observe-unmatched-record",
+    };
+  }
+  if (name === "resume_first_gap") {
+    return {
+      recordedIds: [occludedFoldObservationIds[0], occludedFoldObservationIds[2]],
+      focusTarget: "of-observe-bounded-correspondences",
+    };
+  }
+  if (name.startsWith("observation_")) {
+    return {
+      recordedIds: [name.slice("observation_".length)],
+      focusTarget: "of10-observation-peer-heading",
+    };
+  }
+  return { recordedIds: [], focusTarget: "of-observe-three-near-margins" };
+}
+
 function stateFor(name) {
   const group = groupFor(name);
   const spec = groupContract[group];
   const observationId = name.startsWith("observation_") ? name.slice("observation_".length) : null;
+  const observationState = group === "of10_observations" ? observationFixtureState(name) : null;
   const layout = layouts[name] ?? "representative";
   const isMiss = name.endsWith("_miss") || name === "review_ineligible";
   const state = {
@@ -146,7 +169,8 @@ function stateFor(name) {
         ? "Only the named public dimensions remain incomplete. Private work was discarded; guidance contains no answer and retry starts blank."
         : `Selected exact ${name} product state is ready; no storage, network, cross-credit, route authority, or world response occurred.`,
     availableActions: [...spec.actions, ...returnActions],
-    recordedObservationIds: observationId ? [observationId] : name === "of20_reconcile" || group.startsWith("of20") || group === "of30_restore" ? [...occludedFoldObservationIds] : [],
+    recordedObservationIds: observationState?.recordedIds
+      ?? (group.startsWith("of20") || group === "of30_restore" ? [...occludedFoldObservationIds] : []),
     sceneObservationId: observationId,
     form: publicForm(group),
     failedPublicIds: isMiss ? [name.includes("prompt") ? "P01.prompt_owner" : name.includes("python") ? "ledger_exact_keys" : "first_incomplete_responsibility"] : [],
@@ -158,7 +182,7 @@ function stateFor(name) {
     cityStateDelta: null, externalStateDelta: null, successor: null,
     authorityGranted: false, externalActionEnabled: false, worldStateChanged: false,
     replayedEvents: [], routeOpened: false,
-    focusIntent: { group, target: spec.headingId },
+    focusIntent: { group, target: observationState?.focusTarget ?? spec.focusTarget },
   };
   return Object.freeze(state);
 }
@@ -182,7 +206,7 @@ function boundaryStateFor(name) {
         ? "City Threshold restored write-free and replay-free; no route, authority, evidence, or world effect was created."
         : "One adjacent expedition survey is available; the released Offset Reach returns and inert notation remain unchanged.",
     controls: city ? ["CONTINUE AT CITY THRESHOLD"] : [occludedFoldActions.route, occludedFoldActions.returnInterval, occludedFoldActions.returnThreshold],
-    focusTarget: city ? "city-threshold-heading" : "td009-route-heading",
+    focusIntent: { group: city ? "city-threshold-return" : "td009-occluded-fold-route", target: city ? "city-threshold-heading" : "td009-route-heading" },
     landmark: city ? "city-threshold-product-landmark" : "offset-reach-product-landmark",
   });
 }

@@ -144,7 +144,7 @@ const groups = Object.freeze({
   of20_transaction: ["OF-20 LOCAL TRANSACTION", "SYSTEM // EXPEDITION LEDGER", "of20-transaction-heading", []],
   of20_save_recovery: ["OF-20 VERIFIED ROLLBACK", "SYSTEM // RECOVERY", "of20-save-recovery-heading", [occludedFoldActions.retrySave]],
   of20_rollback_unverified: ["OF-20 TRANSACTION HOLD", "SYSTEM // RECOVERY", "of20-rollback-unverified-heading", []],
-  of30_restore: ["OF-30 VERIFY + RETURN", "SYSTEM // RESTORED EXPEDITION NOTES", "of30-restore-heading", [occludedFoldActions.notation]],
+  of30_restore: ["OF-30 VERIFY + RETURN", "SYSTEM // EXPEDITION LEDGER", "of30-restore-heading", [occludedFoldActions.notation]],
 });
 
 const learningGroups = Object.freeze([

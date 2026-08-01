@@ -54,6 +54,8 @@ test("TD009 rendered contract exposes the frozen active owner and three exact or
   const rp009 = controller.indexOf('id: "candidate_rp009_scope", scope: "RP-009", owner: "Candidate RP-009 edge ledger"');
   assert.ok(rp007 >= 0 && rp007 < rp008 && rp008 < rp009);
   assert.equal((controller.match(/\["OF-20 [^\n]+, "PILOT \/\/ COURSE WORK"/g) ?? []).length, 8);
+  assert.match(controller, /of30_restore: \["OF-30 VERIFY \+ RETURN", "SYSTEM \/\/ EXPEDITION LEDGER"/);
+  assert.doesNotMatch(controller, /SYSTEM \/\/ RESTORED EXPEDITION NOTES/);
 });
 
 test("TD009 is normal-App wired and protected identity remains excluded", () => {

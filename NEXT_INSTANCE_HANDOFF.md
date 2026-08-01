@@ -9,68 +9,59 @@ registry before acting. This file is the sole exact-next-action authority.
 
 - Latest released slice: **`TD-008 / PASS - AS BUILT RELEASED`**.
 - Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
-- Released shell/address: `SS-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 /
-  OR-00-OR-30`.
-- TD-009 remains **`REVISE - NOT RELEASED`**.
+- TD-009 remains **`REVISE - COMBAT CORRECTED / NOT YET RELEASED`**.
 - TD-009 shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
-- Failed candidate: `de2fb1c05a61f00aed99970e220060d48aae0866`.
+- Starting Intelligence REVISE: `ccd320f2239696a8e5c4b95e5243a2f4118ff640`.
 - Starting remote remains `2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551`.
 
-## Decisive Intelligence evidence
+## Corrected candidate evidence
 
-Fresh Intelligence accepted the corrected fixture's real production component,
-all four frozen UTF-8 samples, four DPR-1 layouts, 44px targets, deterministic
-forced-colors/reduced-motion/grayscale states, local-only runtime inventory,
-clean console, and exact OF-30 hard stop. Automated gates also passed: focused
-`35/35`, connected `106/106`, full `903/903`, mappings `11/11`, all readiness
-self-tests, builds, served identities, and `PBA-TD009-v1`.
+Combat corrected only `TD009-FUNC-003` and `TD009-FIX-002`:
 
-Release still fails two exact shell contracts:
+1. normal and fixture OF-30 now use exact owner
+   `SYSTEM // EXPEDITION LEDGER`;
+2. every closed fixture scenario declares its shell-frozen replacement-focus
+   target, including first-incomplete OF-10 controls, all Python/prompt/
+   explanation fields, recovery targets, route heading, and heading-owned
+   states;
+3. boundary surfaces focus the declared heading on mount; and
+4. a real browser selected all **64/64** scenarios and found zero mismatch
+   between rendered owner/declaration or `document.activeElement.id`/declared
+   focus.
 
-1. **`TD009-FUNC-003`**: OF-30 real product owner is
-   `SYSTEM // RESTORED EXPEDITION NOTES`; shell requires
-   `SYSTEM // EXPEDITION LEDGER`.
-2. **`TD009-FIX-002`**: fixture learning blanks focus headings rather than the
-   exact editor/control targets, and the contract-equivalent route surface
-   reports `td009-route-heading` without actually focusing it.
-
-`TD009-FIX-001` is only partially resolved: its product rendering, copy, and
-mode corrections pass, but its exact-focus claim does not.
+Combat gates pass: focused `37/37`, connected `108/108`, full `905/905`,
+mappings `11/11`, readiness `15/15`, automated release validator, production
+build `206` modules, fixture build `50` modules, served production `22/22`,
+served fixture `4/4`, and `PBA-TD009-v1`. The correction is one dedicated
+local commit and is deliberately not pushed.
 
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** for one narrow correction
-against the dedicated local Intelligence REVISE commit containing this handoff.
+Run **fresh independent Intelligence Officer / `intelligence_officer` only**.
 
-Read the full Combat profile, Mission shell 05 exact owner/focus sections,
-Tactical blueprint 07 focus table, Combat report 08 return section, current
-reconciliation 11, the exact corrected fixture source/tests/manifest, and
-`OccludedFoldNormal.js`/`OccludedFold.jsx`. Then:
+Read the full Intelligence profile, shell 05 owner/focus and definition-of-done
+sections, Tactical 07 focus table, corrected Combat report 08, reconciliation
+11, the committed correction diff, exact fixture source/tests/manifest,
+`OccludedFoldNormal.js`, `OccludedFold.jsx`, PBA, and current controls. Then:
 
-1. change only OF-30 active owner to `SYSTEM // EXPEDITION LEDGER` in normal
-   product state and its exact fixture contract;
-2. map every fixture state to the shell-frozen replacement-focus target,
-   including first incomplete OF-10 control, Python/prompt/explanation fields,
-   recovery target, route heading, and heading-owned states;
-3. make the contract-equivalent boundary surface actually focus its declared
-   heading on mount;
-4. add rendered-DOM regression tests comparing exact owner text and
-   `document.activeElement` with the declared target; nonempty string checks
-   are insufficient;
-5. rerun the bounded Combat validation ladder, restore incidental captures,
-   stop owned previews, and make one dedicated local correction commit;
-6. return directly to a fresh independent Intelligence Officer. Do not push.
+1. independently compare the corrected owner and every one of the 64 declared
+   focus targets with the rendered DOM and actual `document.activeElement`;
+2. classify `TD009-FUNC-003`, `TD009-FIX-002`, and residual `TD009-FIX-001`;
+3. run the complete non-overlapping Intelligence release gate; and
+4. decide `AS BUILT RELEASED`, `REVISE`, or `HOLD`, synchronize the next exact
+   action, commit, and push only on an accepted release.
 
-Do not rerun Commandant through Tactical, Quartermaster, or Image Specialist.
+Do not rerun Commandant through Combat, Quartermaster, or Image Specialist.
 Do not perform image, board, generation, edit, derivative, integration, reveal,
-canon, route, persistence, curriculum, reward, access, or successor work.
+canon, route, evidence, persistence, curriculum, reward, access, or successor
+work.
 
 ## Recurring automation
 
 - The authorized Skyscraper heartbeat remains active every three hours in
   this task.
-- The next wake must resume at Combat Engineer for exactly
-  `TD009-FUNC-003` and `TD009-FIX-002` and must not repeat earlier stages.
+- The next wake resumes at fresh Intelligence only and must not repeat the
+  completed Combat correction.
 
 ## Frozen boundaries
 

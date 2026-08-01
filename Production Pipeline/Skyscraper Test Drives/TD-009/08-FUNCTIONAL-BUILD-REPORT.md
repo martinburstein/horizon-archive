@@ -289,3 +289,62 @@ does not need to repeat.
   deliberately not pushed; Intelligence owns the next release push gate
 
 **Disposition: `FUNCTIONALLY COMPLETE - FIXTURE CORRECTED`.**
+
+## Returned Combat owner/focus correction - `TD009-FUNC-003` / `TD009-FIX-002`
+
+Intelligence returned candidate `de2fb1c05a61f00aed99970e220060d48aae0866`
+through local REVISE checkpoint `ccd320f2239696a8e5c4b95e5243a2f4118ff640`
+for one narrow owner/focus correction. Combat changed no route, evidence,
+persistence, copy meaning, media, canon, return, or hard-stop behavior.
+
+- Normal OF-30 and the exact fixture contract now use the shell-frozen active
+  owner `SYSTEM // EXPEDITION LEDGER`.
+- All 64 fixture scenarios declare their exact replacement-focus target.
+  OF-10 first-entry and resume states point to the first incomplete observation
+  control; observation results point to the peer heading; Python, prompt, and
+  explanation states point to their exact first editor/control; recovery and
+  heading-owned states retain the shell-defined heading or control.
+- The contract-equivalent route and return surfaces now focus their declared
+  heading on mount.
+- The browser fixture now compares rendered owner text and
+  `document.activeElement.id` directly with the scenario's declared contract.
+  A live exhaustive pass selected all **64/64** allowlisted scenarios with
+  **zero** owner or focus failures.
+
+Correction validation passed:
+
+- focused TD-009: **37/37**;
+- connected TD-007 through TD-009: **108/108**;
+- full product: **905/905**, repeated by the automated release validator;
+- mappings **11/11** and readiness self-tests **15/15**;
+- production build: **206 modules / 7.25s**; fixture build: **50 modules**;
+- `PBA-TD009-v1`: JavaScript **1,509,968 bytes** / SHA-256
+  `4929C07F478C2B1F06D01AE2CF5D00A9FD800F12C6F59AB10A9C462E975011A3`;
+  CSS **104,035 bytes** / SHA-256
+  `1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`;
+  exact predecessor media **17 / 37,410,731 bytes**, zero new media;
+- served production **22/22** and served fixture **4/4**, with exact
+  production asset byte/hash identity;
+- scoped leakage, patch integrity, protected-path preservation, QA cleanup,
+  and owned ports `4181`/`5194`: **PASS**.
+
+`TD009-FUNC-003` and `TD009-FIX-002` are **CORRECTED IN CANDIDATE / PENDING
+FRESH INDEPENDENT INTELLIGENCE ACCEPTANCE**. `TD009-FIX-001` is likewise ready
+for fresh exact-focus acceptance. Martin's TD-009-only image deferral and Image
+Specialist/reveal waiver remain unchanged; no image or board call occurred.
+
+### Exact fresh Intelligence handoff
+
+- **Stage / agent:** Intelligence Officer / `intelligence_officer`
+- **Shell:** `SS-RP009-OCCLUDED-FOLD-v1`
+- **Starting authority:** the dedicated local Combat owner/focus correction
+  commit containing this section and Intelligence REVISE `ccd320f...`
+- **Bounded objective:** independently validate the exact OF-30 owner and all
+  64 rendered owner/focus contracts, then rerun the TD-009 release gate and
+  decide `AS BUILT RELEASED`, `REVISE`, or `HOLD`
+- **Stop boundary:** no Combat, Quartermaster, Image Specialist, image/board,
+  route, evidence, persistence, curriculum, canon, successor, or hard-stop work
+- **Synchronization:** one dedicated local Combat correction commit; no push;
+  Intelligence owns the release push gate
+
+**Disposition: `FUNCTIONALLY COMPLETE - OWNER/FOCUS CORRECTED`.**

@@ -135,12 +135,24 @@ Image Specialist, image generation, board work, and reveal do not repeat.
 | `TD009-FUNC-001` | `RESOLVED` | Three ordered RP-007/RP-008/RP-009 review scopes remain accepted. |
 | `TD009-FUNC-002` | `RESOLVED` | All eight learning groups remain Pilot-owned. |
 | `TD009-CONT-002` | `RESOLVED` | Rollback copy truthfully names prior RP-009 bytes or verified absence. |
-| `TD009-FIX-001` | `PARTIALLY RESOLVED` | Exact component/copy/modes are corrected; its exact-focus claim failed live verification. |
-| `TD009-FUNC-003` | `REQUIRED CORRECTION` | Combat Engineer; exact OF-30 owner mismatch. |
-| `TD009-FIX-002` | `REQUIRED CORRECTION` | Combat Engineer; exact rendered focus mismatch. |
+| `TD009-FIX-001` | `CORRECTED IN CANDIDATE` | Combat's rendered 64-state proof now includes exact focus; fresh Intelligence acceptance required. |
+| `TD009-FUNC-003` | `CORRECTED IN CANDIDATE` | Normal and fixture OF-30 owner now match the shell; fresh Intelligence acceptance required. |
+| `TD009-FIX-002` | `CORRECTED IN CANDIDATE` | Exact controls/headings are declared and actually focused in all 64 states; fresh Intelligence acceptance required. |
 
 No `MASTERPLAN UPDATE` or `ACCEPTED IMPROVEMENT` is recorded. The shell remains
 authoritative.
+
+## Combat correction checkpoint
+
+Combat's dedicated return pass changed only the defects named above. Focused
+`37/37`, connected `108/108`, full `905/905`, mappings `11/11`, readiness
+`15/15`, automated release validation, both builds, PBA, served production
+`22/22`, and served fixture `4/4` pass. A real browser selected all 64 closed
+fixture states and compared rendered owner text plus
+`document.activeElement.id` with the declared shell target; all **64/64**
+passed. This evidence is a Marine correction checkpoint, not release
+acceptance. Fresh independent Intelligence still owns final classification and
+the release gate.
 
 ## Retrospective
 
@@ -162,4 +174,5 @@ integration, or reveal call occurred.
 Protected `Art Of No Mans Sky Book Scan.pdf` and `Simplilearn Training Files/`
 remain unmodified, unstaged, and uncommitted.
 
-**Final disposition: `REVISE - NOT RELEASED`.**
+**Final disposition: `REVISE - COMBAT CORRECTED / PENDING FRESH INDEPENDENT
+INTELLIGENCE`.**

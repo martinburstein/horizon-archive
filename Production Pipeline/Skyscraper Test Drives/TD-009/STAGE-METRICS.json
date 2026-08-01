@@ -338,6 +338,28 @@
       "commitConvention": "The dedicated Intelligence owner/focus REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only correction checkpoint; no push and no HEAD == origin/main claim",
       "nextStage": "Combat Engineer only for TD009-FUNC-003 and TD009-FIX-002; fresh Intelligence strictly subsequent; no Quartermaster/Image/reveal repeat"
+    },
+    {
+      "sequence": 8.3,
+      "stage": "Combat Engineer Owner/Focus Return Correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T21:08:33.288Z",
+      "endedAt": "2026-08-01T21:20:53.612Z",
+      "durationMs": 740324,
+      "disposition": "FUNCTIONALLY COMPLETE - OWNER/FOCUS CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "startingAuthority": "ccd320f2239696a8e5c4b95e5243a2f4118ff640 / Intelligence owner-focus REVISE",
+      "correction": "TD009-FUNC-003 corrected with exact SYSTEM // EXPEDITION LEDGER OF-30 owner in product and fixture; TD009-FIX-002 corrected with exact shell replacement-focus targets, boundary heading focus on mount, and rendered owner/activeElement contract comparisons for all 64 scenarios",
+      "liveEvidence": "real browser selected all 64 allowlisted fixture scenarios; rendered owner equaled declared owner and document.activeElement.id equaled declared focus in 64/64 with zero failures",
+      "validation": "focused TD-009 37/37; connected TD-007 through TD-009 108/108; full 905/905 twice including release validator; mappings 11/11; readiness 15/15; production 206 modules; fixture 50 modules; served production 22/22; served fixture 4/4; leakage, patch integrity and owned ports PASS",
+      "budget": "PBA-TD009-v1 PASS: JS 1509968 bytes / 4929C07F478C2B1F06D01AE2CF5D00A9FD800F12C6F59AB10A9C462E975011A3; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 predecessor media / 37410731 bytes; zero new runtime media",
+      "boundaries": "no Quartermaster, Image Specialist, image/board, accepted copy meaning, route, evidence, persistence, curriculum, canon, hard stop, browser profile/save or protected-file change",
+      "variances": "TD009-FUNC-003, TD009-FIX-002 and residual exact-focus portion of TD009-FIX-001 corrected in candidate pending fresh Intelligence acceptance",
+      "commit": "PENDING_COMBAT_OWNER_FOCUS_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat owner/focus correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "one dedicated local correction commit; no push before fresh independent Intelligence release gate",
+      "nextStage": "Fresh independent Intelligence Officer only; no Quartermaster/Image/reveal repeat"
     }
   ]
 }

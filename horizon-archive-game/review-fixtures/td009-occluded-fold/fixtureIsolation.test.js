@@ -69,6 +69,39 @@ test("TD009 fixture renders exact product ownership, controls, focus, errors, an
   }
 });
 
+test("TD009 every fixture state declares the shell-frozen owner and replacement-focus target", () => {
+  const exactTargets = {
+    python_primary_blank: "of20-python-primary-editor",
+    python_trace_blank: "of20-python-trace-first",
+    python_transfer_blank: "of20-python-transfer-editor",
+    prompt_primary_blank: "of20-prompt-primary-first",
+    prompt_retrieval_blank: "of20-prompt-retrieval-first",
+    prompt_transfer_blank: "of20-prompt-transfer-first",
+    system_user_explanation_blank: "of20-system-user-explanation-field",
+    truth_authority_explanation_blank: "of20-truth-authority-explanation-field",
+    resume_contiguous_prefix: "of-observe-unmatched-record",
+    resume_first_gap: "of-observe-bounded-correspondences",
+    route_pointer: "td009-route-heading",
+    of30_restore: "of30-restore-heading",
+  };
+  for (const name of occludedFoldScenarioNames) {
+    const scenario = createOccludedFoldScenario(name);
+    assert.ok(scenario.state.owner.length > 0, name);
+    assert.ok(scenario.state.focusIntent.target.length > 0, name);
+    if (Object.hasOwn(exactTargets, name)) assert.equal(scenario.state.focusIntent.target, exactTargets[name], name);
+    if (scenario.state.activeGroup === "of30_restore") assert.equal(scenario.state.owner, "SYSTEM // EXPEDITION LEDGER", name);
+  }
+});
+
+test("TD009 browser fixture compares rendered owner and document.activeElement to the declared contract", () => {
+  const source = readFileSync(new URL("./ReviewOccludedFoldFixture.jsx", import.meta.url), "utf8");
+  assert.match(source, /renderedOwner === declaredOwner && activeElementId === declaredFocusTarget/);
+  assert.match(source, /document\.activeElement\?\.id/);
+  assert.match(source, /data-rendered-contract=/);
+  assert.match(source, /data-declared-owner=/);
+  assert.match(source, /data-declared-focus=/);
+});
+
 test("TD009 fixture exposes all four frozen UTF-8 samples at every frozen layout", () => {
   for (const name of ["layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "longest_copy_contained"]) {
     const scenario = createOccludedFoldScenario(name);
