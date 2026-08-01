@@ -1,0 +1,33 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-010",
+    "shellCandidate": "deliberately unselected; Mission shell not authorized",
+    "campaignAddress": "deliberately unselected; Colonel derivation and Operations adjacency required",
+    "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
+    "timezone": "America/New_York",
+    "executionMode": "scheduled-sequential-nonoverlapping"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-08-01T21:46:00.000Z",
+      "endedAt": "2026-08-01T21:58:35.000Z",
+      "durationMs": 755000,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/01-GAME-DEVELOPMENT-BRIEF.md",
+      "releasedPredecessor": "TD-009 / SS-RP009-OCCLUDED-FOLD-v1 / OF-30 plus exact write-free/replay-free returns",
+      "candidateSelection": "deliberately unselected; Colonel owns one provisional surface-safe candidate or HOLD",
+      "validation": "HEAD == origin/main == remote main at source release; TD-009 handoff/reconciliation/master controls reconciled; 11/11 Commandant contract checks PASS",
+      "lessonsCarried": "rendered owner text and actual activeElement must match shell-frozen fixture contracts; stable committed candidate before Intelligence; exact UTF-8 longest-copy live matrix; original-resolution material-language QA; separately ordered retained scopes; TD-009 imagery/reveal waiver not inherited",
+      "variances": "none requiring product-baseline revision",
+      "commit": "PENDING_COMMANDANT_COMMIT",
+      "commitConvention": "The dedicated Commandant commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Commandant push gate",
+      "nextStage": "Colonel"
+    }
+  ]
+}
