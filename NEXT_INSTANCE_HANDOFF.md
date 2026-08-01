@@ -180,33 +180,90 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated Mission commit and Mission push gate;
   the committed Git HEAD is the non-recursive commit authority.
 
+### Reconnaissance Sergeant
+
+- Stage: **`Reconnaissance Sergeant / reconnaissance_sergeant`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Disposition: **`CREATIVE LOCK`**.
+- Creative thesis: **vastness without convergence** - the open field tempts
+  one grand reading, while the Pilot earns restrained confidence by preserving
+  seven equal observations and four bounded scopes without synthesis.
+- Emotional movement: chosen adjacent survey -> awe at simultaneous scale ->
+  temptation to unify -> disciplined differentiation -> replica-bound method
+  -> independent client-flow judgment -> four bounded scopes without merger
+  -> unchanged field and safe return.
+- Attention/pacing: active owner and bounded responsibility lead the
+  operational hierarchy while the level long-horizon field remains visually
+  dominant; exact `39-54` clean and `24-35` mastered envelopes are preserved.
+- World/interface: SC-11 is open breadth separated by irregular mineral and
+  atmospheric intervals; the removable expedition overlay is a scope ledger,
+  never a field map, common clock, matching board, native terminal, or world
+  control.
+- Sensory lock: physically distinct glass-ceramic, porous ceramic, pressure
+  skins, far casings, substrate, replica coupling, and stewardship strata;
+  motivated vault thermal light; restrained unsynchronized local ambience and
+  monotonic motion; complete silent/still parity; no world response.
+- Distinctiveness: no TD-007 recurrent-contact hero, TD-008 high-oblique rigid
+  lineage/contact hero, or TD-009 central occluding mass/outer-apron grammar.
+  Counterfield uses level lateral breadth, several separated silhouettes,
+  independent local rhythms, and stewardship without standardization.
+- Conditional assets: at most
+  `SC-11-COUNTERFIELD-PANORAMA-MASTER` and
+  `SC-11-DISTRICT-DETAIL-MASTER`; each remains conditional on material benefit,
+  complete provenance, truthful dimensions, original-resolution required and
+  forbidden readings, spatial/context registration, responsive/accessibility,
+  direct/emitted identity, cleanup, placeholder retirement, PBA, and bounded
+  generation gates. No asset was generated or selected.
+- Invariants: sole `TD010-RTA-001`, released/protected rejection, all normal
+  IDs, OF-30/CF-00-CF-30, seven equal observations/all `5,040` orders,
+  independent learning and two explanations, mapping/check distinction, four
+  scopes, exact 13-key/eight-evidence record, privacy, rollback/restore, exact
+  returns, seven modalities, four layouts, frozen UTF-8, all `66` owner/focus
+  contracts, generation/provenance gates, `PBA-TD010-v1`, invariant world,
+  and CF-30 hard stop are unchanged.
+- Validation: Mission commit `338da62...` equals local, tracking, and remote
+  main; shell committed and working blobs are byte-identical
+  `85e57757cdf8a1a208a338027e150f0a2edc6d7b`; creative contract trace PASS;
+  no variance.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
+- Commit/synchronization: one dedicated local Recon commit; no push at this
+  gate. The commit containing this handoff is the non-recursive authority.
+
 ## Exact next action
 
-Run **Reconnaissance Sergeant / `reconnaissance_sergeant` only** against
-exact shell `SS-RP010-COUNTERFIELD-v1`.
+Run **Tactical Operations Specialist / `tactical_operations_specialist` only**
+against exact shell `SS-RP010-COUNTERFIELD-v1` and the Recon creative lock
+**vastness without convergence**.
 
-Read the full Recon profile, shell, all five strategic authorities, immediate
-Mission handoff, exact released TD-009 normal OF-30 source/release, RP-010 and
-SC-11 visual/provenance controls, and current reveal lessons. Create
-`Production Pipeline/Skyscraper Test Drives/TD-010/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
+Read the full Tactical profile, shell, all five strategic authorities,
+immediate Recon handoff/treatment, exact released TD-009 normal OF-30 source
+and release, RP-010/SC-11 controls, and the exact shell-frozen UTF-8 and
+66-scenario owner/focus registries. Create
+`Production Pipeline/Skyscraper Test Drives/TD-010/07-EXPERIENCE-BLUEPRINT.md`.
 
-Lock one compelling surface-safe creative thesis, emotional pacing, scene and
-interface hierarchy, sound/atmosphere restraint, material-language intent,
-and exact guidance for the two conditional SC-11 roles without implementing
-or generating them. Preserve sole `TD010-RTA-001`, released/protected
-rejection, all normal identities, OF-30/CF-00-CF-30, seven equal observations
-and all `5,040` orders, independent learning plus two explanations,
-mapping/check distinction, four scopes, exact 13-key record, privacy,
-rollback/restore, exact returns, seven modalities, four layouts, frozen UTF-8,
-all `66` owner/focus contracts, original-resolution/provenance and generation
-gates, `PBA-TD010-v1`, invariant world, and CF-30 hard stop.
+Freeze every state, owner/message/content/action replacement, action,
+transition, recovery path, status, focus target, component hierarchy,
+responsive layout, registered crop/mask/hotspot assignment, and fixture
+contract for
+`OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`. Preserve exact
+ordered route validation and protected-version rejection; seven modalities
+and one-hit consumption; seven equal observations/all `5,040` orders;
+independent `PY-018` and client-flow chains plus two explanations;
+mapping/check distinction; deterministic first-incomplete recovery;
+four-scope review; exact 13-key/eight-evidence record; sanitation, atomic
+write/read-back/rollback and replay-free restore; exact returns; four layouts;
+frozen UTF-8; all `66` rendered owner/actual-focus contracts; at most the two
+conditional image roles as structural placeholders only; provenance,
+generation and `PBA-TD010-v1` gates; invariant world; and CF-30 hard stop.
 
-Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`; update the ledger and this
-handoff; make one dedicated local Recon commit; stop before Tactical. Do not
-implement, generate/select assets, inspect browser/profile/save, open hidden
-lore, touch protected user files, or expose RP-011, RP-013, a successor,
-ending extension, reward, access, permission, identity, authority, response,
-unavailable contents, Machine relation, readiness judgment, or world effect.
+Issue `EXPERIENCE READY`, `REVISE`, or `HOLD`; update the ledger and this
+handoff; make one dedicated local Tactical commit; stop before Combat. Do not
+implement runtime code/CSS, finalize production assets, generate/select
+images, inspect browser/profile/save, open hidden lore, touch protected user
+files, or expose RP-011, RP-013, a successor, ending extension, reward,
+access, permission, identity, authority, response, unavailable contents,
+Machine relation, readiness judgment, or world effect.
 
 ## Recurring automation
 
@@ -217,7 +274,7 @@ unavailable contents, Machine relation, readiness judgment, or world effect.
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
   `TD010-RTA-001` remain unreleased and unimplemented; Marine deployment is
-  authorized only in canonical sequential order beginning with Recon.
+  authorized only in canonical sequential order continuing with Tactical.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
