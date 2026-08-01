@@ -30,6 +30,7 @@ registry before acting.
   `CFS-TD009-v1 / FLOOR STACK READY - ROUTE AUTHORIZED`.
 - Science certificate: `VE-TD009-v1 / VIABILITY READY`.
 - Budget authority: `PBA-TD009-v1`.
+- Mission shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
 - Source authority: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - The whole-product baseline is unchanged.
 - Exactly one provisional surface-safe candidate is derived: a bounded
@@ -39,7 +40,7 @@ registry before acting.
   stewardship.
 - Operations independently proved the candidate is the nearest already-mapped
   unfinished edge and selected exact address `RP-009 / SC-10 / OF-00-OF-30`.
-- Sole conditional planning route `TD009-RTA-001` begins only at exact
+- Sole shell-authorized but unimplemented route `TD009-RTA-001` begins only at exact
   verified `OR-30 / SC-09`, after strict RP-008 record/byte proof and one
   fresh Pilot-owned one-hit intent. Current released OR-30 notation remains
   inert and the route is not yet present in the build.
@@ -60,8 +61,15 @@ registry before acting.
 - The fresh non-compounding caps are JavaScript `1,522,885`, CSS `104,170`,
   `213` modules, at most two new image-only runtime assets totaling at most
   `8,388,608` bytes, and total runtime media at most `45,799,339` bytes.
-- Shell ID, assets, normal implementation, and Marine work remain
-  deliberately unissued.
+- Mission independently reconciled all five upstream authorities without
+  conflict and froze the exact predecessor/token/sanitation order, distinct
+  normal identities, OF-00 through OF-30 graph, all 720 observation orders,
+  independent PY-017 and prompt-boundary chains plus both explanations, exact
+  12-key three-scope atomic record, replay-free restore, seven modalities,
+  four-layout longest-copy gate, exact 64-scenario fixture, two conditional
+  SC-10 image roles, fresh PBA gates, release ladder, and OF-30 hard stop.
+- The shell is construction authority only. Assets, normal implementation,
+  live layout evidence, served identity, and E2E remain unbuilt and unclaimed.
 - TD-008 lessons are mandatory: freeze one stable committed candidate before
   Intelligence; inspect generated lineages at original resolution against
   required and forbidden material readings; live-render the exact longest
@@ -71,34 +79,32 @@ registry before acting.
 
 ## Exact next action
 
-Run **Mission Captain / `mission_captain`** only.
+Run **Reconnaissance Sergeant / `reconnaissance_sergeant`** only.
 
-Read the full Mission profile, `GDB-TD009-v1`, `WNMP-TD009-v1`,
-`CFS-TD009-v1`, `VE-TD009-v1`, `PBA-TD009-v1`, the exact released TD-008
-boundary, frozen RP-009 curriculum/evaluator authorities, protected journey,
-current route/controller/UI/test/asset controls, and TD-008 production lessons.
-Reconcile one conflict-free versioned Playable Slice Shell for exact
-`RP-009 / SC-10 / OF-00-OF-30` and sole `TD009-RTA-001`, or issue an honest
-`REVISE`/`HOLD`.
+Read the full Reconnaissance profile,
+`TD-009/05-PLAYABLE-SLICE-SHELL.md`, all five shell sources, the exact released
+TD-008 predecessor, current surface/visual controls, and recent TD-007/TD-008
+production and reveal lessons. Independently verify
+`SS-RP009-OCCLUDED-FOLD-v1`, then create one exact
+`TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md` or issue `REVISE`/`HOLD`.
 
-Freeze exact predecessor/token/sanitation order; distinct normal identities;
-the OF-00 through OF-30 graph; six equal observations/all 720 orders; strict
-independent PY-017 and prompt-boundary chains plus both explanations; no-cross-
-credit; privacy clearing; ordered separate RP-007/RP-008/RP-009 records; exact
-12-key atomic persistence/read-back/rollback; replay-free restore; deterministic
-recovery/focus and returns; seven modalities; four layouts and exact longest
-UTF-8 copy; forced colors/reduced motion/grayscale; two conditional SC-10
-runtime image roles with provenance/original-resolution gates; exact 64-state
-storage-free fixture; offline/no-authority/no-exam-guarantee; `PBA-TD009-v1`;
-served identity; stable-candidate freeze; release ladder; and OF-30 hard stop.
-Issue a versioned `SHELL READY` before any Marine deploys. Do not implement,
-generate, inspect browser storage/save, or expose RP-010 or later content.
+Lock one compelling surface-safe creative thesis, emotional pacing, scene and
+interface hierarchy, atmosphere/sound restraint, material-language intent,
+and exact creative guidance for the two provisional SC-10 roles without
+implementing or generating them. Preserve sole `TD009-RTA-001`, OF-00 through
+OF-30, all six equal observations/720 orders, independent learning and both
+explanations, three separate record scopes, sanitation/atomic save/replay-free
+restore, seven modalities, four layouts, exact longest UTF-8 samples,
+original-resolution required/forbidden readings, invariant world, exact
+returns, and OF-30 hard stop. Issue `CREATIVE LOCK` before Tactical begins.
+Do not implement, generate, inspect browser storage/save, or expose RP-010 or
+later content.
 
 ## Frozen boundaries
 
 - The currently released OR-30 opens only exact Braided Verge or City
   Threshold returns; optional destinationless notation opens nothing.
-  `TD009-RTA-001` is planning-only pending Science and Mission and may never
+  `TD009-RTA-001` is shell-authorized but not yet implemented and may never
   derive authority from that notation, scenery, retained records, or planning
   order.
 - Six observations remain equal, any-order, idempotent, and world-invariant;

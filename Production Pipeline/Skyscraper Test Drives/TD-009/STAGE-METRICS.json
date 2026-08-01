@@ -90,6 +90,30 @@
       "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Science push gate",
       "nextStage": "Mission Captain"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-08-01T08:44:00.000Z",
+      "endedAt": "2026-08-01T08:50:00.000Z",
+      "durationMs": 360000,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/05-PLAYABLE-SLICE-SHELL.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "selectedAddress": "RP-009 / SC-10 / OF-00-OF-30",
+      "route": "sole TD009-RTA-001 from exact verified OR-30 after ordered predecessor, owner, modality, fresh one-hit token and sanitation proof",
+      "graph": "OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10",
+      "learning": "six equal observations across all 720 orders; strict independent PY-017 and RP009-PROMPT-BOUNDARY-01 chains plus both explanations; no cross-credit",
+      "persistence": "exact ordered 12-key private-free record with separate retained RP-007, retained RP-008 and RP-009 edge-ledger scopes; canonical write/read-back, predecessor byte proof, verified rollback and replay-free restore",
+      "presentation": "seven modalities, four DPR-1 layouts, forced colors, reduced motion, grayscale, exact longest UTF-8 heading/label/retained row/execution label, two conditional SC-10 image roles and original-resolution gates",
+      "fixture": "exact closed 64-scenario storage-free td009-occluded-fold-v1 fixture, absent from production",
+      "validation": "five upstream contracts reconciled with no conflict; shell contract and JSON syntax checks pass; focused 22/22 in 0.318s, full 882/882 in 7.364s, RP-009 mapping self-test PASS, production build 203 modules in 9.24s, and PBA-TD009-v1 baseline PASS with exact TD-008 JS/CSS/17-media identities",
+      "variances": "none; normal implementation, fixture, assets, live layout evidence, served identity and E2E remain sequential Marine obligations",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Mission push gate; verify HEAD == origin/main == remote refs/heads/main",
+      "nextStage": "Reconnaissance Sergeant"
     }
   ]
 }
