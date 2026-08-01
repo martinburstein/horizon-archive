@@ -68,6 +68,19 @@ registry before acting.
   12-key three-scope atomic record, replay-free restore, seven modalities,
   four-layout longest-copy gate, exact 64-scenario fixture, two conditional
   SC-10 image roles, fresh PBA gates, release ladder, and OF-30 hard stop.
+- Reconnaissance independently verified the shell and issued
+  `CREATIVE LOCK - LEGIBLE EDGES, UNREADABLE WHOLE`. The treatment frames the
+  Pilot as a surveyor of knowable edges: three familiar near continuities,
+  bounded correspondence, one ordinary unmatched record, one ordinary
+  unranked multi-candidate record, one materially unavailable outer margin,
+  and layered stewardship remain precise while every interior relation stays
+  physically and semantically unreadable.
+- Recon freezes `36-49` minutes clean and `22-31` mastered pacing, a
+  world-dominant occluding mass, a field-ledger-not-connection-map interface,
+  existing-audio-only restraint, all four exact longest UTF-8 samples, and
+  exact creative briefs for only `sc10-occluded-fold-panorama` and
+  `sc10-occluded-fold-exposed-edge-detail`. No image, implementation, route,
+  mechanic, record, evidence, canon, or world-state change was made.
 - The shell is construction authority only. Assets, normal implementation,
   live layout evidence, served identity, and E2E remain unbuilt and unclaimed.
 - TD-008 lessons are mandatory: freeze one stable committed candidate before
@@ -79,26 +92,31 @@ registry before acting.
 
 ## Exact next action
 
-Run **Reconnaissance Sergeant / `reconnaissance_sergeant`** only.
+Run **Tactical Operations Specialist / `tactical_operations_specialist`**
+only.
 
-Read the full Reconnaissance profile,
-`TD-009/05-PLAYABLE-SLICE-SHELL.md`, all five shell sources, the exact released
-TD-008 predecessor, current surface/visual controls, and recent TD-007/TD-008
-production and reveal lessons. Independently verify
-`SS-RP009-OCCLUDED-FOLD-v1`, then create one exact
-`TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md` or issue `REVISE`/`HOLD`.
+Read the full Tactical profile, `TD-009/05-PLAYABLE-SLICE-SHELL.md`,
+`TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`, the exact Mission and Recon
+handoffs, and the current source/control sections they cite. Independently
+verify `SS-RP009-OCCLUDED-FOLD-v1` and the Recon thesis **legible edges,
+unreadable whole**, then create one exact
+`TD-009/07-EXPERIENCE-BLUEPRINT.md` or issue `REVISE`/`HOLD`.
 
-Lock one compelling surface-safe creative thesis, emotional pacing, scene and
-interface hierarchy, atmosphere/sound restraint, material-language intent,
-and exact creative guidance for the two provisional SC-10 roles without
-implementing or generating them. Preserve sole `TD009-RTA-001`, OF-00 through
-OF-30, all six equal observations/720 orders, independent learning and both
-explanations, three separate record scopes, sanitation/atomic save/replay-free
-restore, seven modalities, four layouts, exact longest UTF-8 samples,
-original-resolution required/forbidden readings, invariant world, exact
-returns, and OF-30 hard stop. Issue `CREATIVE LOCK` before Tactical begins.
-Do not implement, generate, inspect browser storage/save, or expose RP-010 or
-later content.
+Freeze every owner/message/content/action replacement; ordered route
+validation and seven-modal one-hit entry; OF-00 through OF-30; all six equal
+observations, 720 orders, revisits, status and focus; complete independent
+PY-017 and prompt-boundary chains plus both explanations; every blank, miss,
+retry, sanitation, interruption, return, review, atomic save, rollback and
+replay-free restore state; exact 12-key three-scope record presentation; the
+two-role scene/crop/alternative matrix; all four layouts with every exact
+longest UTF-8 sample; forced colors, reduced motion, grayscale, >=44px
+targets, one atomic polite status, local-only request/log containment; and all
+exact 64 storage-free fixture scenarios with product/harness separation.
+
+Use structural placeholders only for the two provisional SC-10 roles. Do not
+implement, generate, alter route/evidence/schema/save/canon/world state,
+inspect browser storage/save, or expose RP-010 or later content. Issue
+`EXPERIENCE READY` before Combat Engineer begins.
 
 ## Frozen boundaries
 

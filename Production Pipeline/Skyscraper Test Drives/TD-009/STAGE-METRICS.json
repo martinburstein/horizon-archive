@@ -114,6 +114,28 @@
       "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "Mission push gate; verify HEAD == origin/main == remote refs/heads/main",
       "nextStage": "Reconnaissance Sergeant"
+    },
+    {
+      "sequence": 6,
+      "stage": "Reconnaissance Sergeant",
+      "agentId": "reconnaissance_sergeant",
+      "startedAt": "2026-08-01T08:51:00.000Z",
+      "endedAt": "2026-08-01T09:00:00.000Z",
+      "durationMs": 540000,
+      "disposition": "CREATIVE LOCK",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "creativeThesis": "legible edges, unreadable whole",
+      "emotionalPromise": "every exposed edge becomes more legible while the whole remains honestly unreadable; incompleteness is preserved rather than filled",
+      "pacing": "36-49 minutes clean; 22-31 minutes mastered; no timing credit or forced sensory cue",
+      "presentation": "world-dominant continent-scale occluding mass; field-ledger-not-connection-map overlay; existing-audio-only restraint; independent monotonic environmental clocks; exact longest UTF-8 samples at four layouts",
+      "assetRoles": "exactly sc10-occluded-fold-panorama and sc10-occluded-fold-exposed-edge-detail; provisional briefs only; no generation or implementation",
+      "validation": "Mission shell, five shell sources, exact TD-008 release, surface lore, SC-09/SC-10 controls, active visual charters, and recent TD-007/TD-008 production/reveal lessons reconciled; Tier-1 creative trace PASS",
+      "variances": "none; route, graph, six observations/all 720 orders, independent learning/explanations, three scopes, sanitation, atomic save/rollback, replay-free restore, accessibility, returns, invariant world and OF-30 hard stop remain exact",
+      "commit": "PENDING_RECON_COMMIT",
+      "commitConvention": "The dedicated Recon commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Recon push gate",
+      "nextStage": "Tactical Operations Specialist"
     }
   ]
 }
