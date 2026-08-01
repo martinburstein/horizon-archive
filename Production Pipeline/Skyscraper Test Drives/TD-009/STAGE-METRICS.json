@@ -314,6 +314,30 @@
       "commitConvention": "The dedicated Combat fixture-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "one dedicated local correction commit; no push before fresh independent Intelligence release gate",
       "nextStage": "Fresh independent Intelligence Officer only; Quartermaster need not repeat; Image Specialist remains waived and no image or board calls are allowed"
+    },
+    {
+      "sequence": 11.2,
+      "stage": "Intelligence Officer Corrected-Candidate Release Gate",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-01T20:49:31.464Z",
+      "endedAt": "2026-08-01T21:08:33.288Z",
+      "durationMs": 1141824,
+      "disposition": "REVISE - NOT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "candidate": "de2fb1c05a61f00aed99970e220060d48aae0866",
+      "startingRemote": "2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551",
+      "imageStage": "sequence 10 and reveal waived by Martin for TD-009 only; no image, board, or reveal calls made",
+      "acceptedEvidence": "real production component, all four frozen UTF-8 samples at all four DPR-1 layouts, 44px targets, deterministic forced-colors/reduced-motion/grayscale modes, clean console/local-only asset inventory, and exact OF-30 hard stop passed live review",
+      "contractAudit": "FAIL: real OF-30 owner is SYSTEM // RESTORED EXPEDITION NOTES rather than shell-frozen SYSTEM // EXPEDITION LEDGER; fixture learning blanks focus headings rather than exact first editor/control targets; contract-equivalent route surface reports td009-route-heading but does not focus it",
+      "validation": "patch and object integrity PASS; focused 35/35 in 0.455s; connected 106/106 in 1.116s; full 903/903 in 9.968s; mappings 11/11 in 1.451s; 15 readiness validators PASS in 1.791s; automated release validator PASS; production 206 modules in 7.945s; fixture 50 modules in 4.073s; served production 22/22; served fixture 4/4; one E2E reached final capture set with final stdout lost during compaction and no rerun; live gate FAIL; owned ports clear",
+      "budget": "PBA-TD009-v1 release mode PASS using conservative 157s E2E marker and 2ms sampled main-thread task: JS 1509976 bytes / 70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 media / 37410731 bytes; zero new runtime media",
+      "variances": "TD009-PROC-001, TD009-PRES-001, and TD009-CONT-001 remain DEFERRED LIMITATION; TD009-FUNC-001, TD009-FUNC-002, and TD009-CONT-002 remain RESOLVED; TD009-FIX-001 PARTIALLY RESOLVED; TD009-FUNC-003 and TD009-FIX-002 REQUIRED CORRECTION to Combat Engineer",
+      "retrospective": "TUNE not promoted on failed release: rendered fixture tests must compare shell-frozen owner/focus values with actual DOM text and activeElement, not only nonempty state strings",
+      "commit": "PENDING_INTELLIGENCE_OWNER_FOCUS_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence owner/focus REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only correction checkpoint; no push and no HEAD == origin/main claim",
+      "nextStage": "Combat Engineer only for TD009-FUNC-003 and TD009-FIX-002; fresh Intelligence strictly subsequent; no Quartermaster/Image/reveal repeat"
     }
   ]
 }

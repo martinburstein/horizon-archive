@@ -11,74 +11,66 @@ registry before acting. This file is the sole exact-next-action authority.
 - Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - Released shell/address: `SS-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 /
   OR-00-OR-30`.
-- TD-009 remains **`REVISE - NOT RELEASED`** until fresh Intelligence accepts
-  the corrected committed candidate.
+- TD-009 remains **`REVISE - NOT RELEASED`**.
 - TD-009 shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
-- Fixture-return authority: Intelligence `REVISE` commit
-  `cafd17b134ae7dc89fd8197746afc44d96d25a2a` plus the dedicated Combat
-  fixture-correction commit containing this handoff.
+- Failed candidate: `de2fb1c05a61f00aed99970e220060d48aae0866`.
+- Starting remote remains `2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551`.
 
-## Corrected TD-009 candidate
+## Decisive Intelligence evidence
 
-- `TD009-FUNC-001`, `TD009-FUNC-002`, and `TD009-CONT-002` remain resolved.
-- `TD009-FIX-001` is corrected pending independent acceptance: the closed,
-  storage-free fixture renders the production Occluded Fold component through
-  a deterministic contract adapter; boundary scenarios remain narrow and
-  contract-equivalent.
-- Every selected state carries exact owner, group, heading, status, controls,
-  labels/public errors, focus target, layout/mode, and product landmark.
-- All Python/prompt/explanation learning groups retain
-  `PILOT // COURSE WORK`; Builder/Teacher attribution is subordinate.
-- All four frozen UTF-8 samples render together in the longest-copy scenario
-  and each of the four required layout scenarios.
-- Forced colors, reduced motion, and grayscale are deterministic live review
-  states rather than heading labels.
-- Combat validation: focused `35/35`; connected `106/106`; full `903/903`;
-  mappings `11/11`; automated release validator PASS; production build 206
-  modules; served production `22/22`; fixture build 50 modules; served fixture
-  `4/4`; leakage, patch, cleanup, and `PBA-TD009-v1` PASS.
-- Production identity is unchanged: JavaScript `1,509,976` bytes / SHA-256
-  `70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693`;
-  CSS `104,035` bytes / SHA-256
-  `1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`;
-  exact predecessor media `17 / 37,410,731` bytes; zero new media.
+Fresh Intelligence accepted the corrected fixture's real production component,
+all four frozen UTF-8 samples, four DPR-1 layouts, 44px targets, deterministic
+forced-colors/reduced-motion/grayscale states, local-only runtime inventory,
+clean console, and exact OF-30 hard stop. Automated gates also passed: focused
+`35/35`, connected `106/106`, full `903/903`, mappings `11/11`, all readiness
+self-tests, builds, served identities, and `PBA-TD009-v1`.
+
+Release still fails two exact shell contracts:
+
+1. **`TD009-FUNC-003`**: OF-30 real product owner is
+   `SYSTEM // RESTORED EXPEDITION NOTES`; shell requires
+   `SYSTEM // EXPEDITION LEDGER`.
+2. **`TD009-FIX-002`**: fixture learning blanks focus headings rather than the
+   exact editor/control targets, and the contract-equivalent route surface
+   reports `td009-route-heading` without actually focusing it.
+
+`TD009-FIX-001` is only partially resolved: its product rendering, copy, and
+mode corrections pass, but its exact-focus claim does not.
 
 ## Exact next action
 
-Run **fresh independent Intelligence Officer / `intelligence_officer` only**
-against the dedicated local Combat fixture-correction commit and
-`SS-RP009-OCCLUDED-FOLD-v1`.
+Run **Combat Engineer / `combat_engineer` only** for one narrow correction
+against the dedicated local Intelligence REVISE commit containing this handoff.
 
-Read the full Intelligence profile, shell 05, Tactical 07, corrected Combat
-report 08, Quartermaster ledger 09, current 64-scenario fixture source/tests/
-manifest, PBA, this handoff, and the complete reconciliation. Independently:
+Read the full Combat profile, Mission shell 05 exact owner/focus sections,
+Tactical blueprint 07 focus table, Combat report 08 return section, current
+reconciliation 11, the exact corrected fixture source/tests/manifest, and
+`OccludedFoldNormal.js`/`OccludedFold.jsx`. Then:
 
-1. compare the exact committed corrected fixture and unchanged production
-   slice line by line with the shell and prior `TD009-FIX-001` acceptance;
-2. run focused/connected/full tests, all readiness self-tests, production and
-   fixture builds, PBA, served production/fixture identity, and exact fixture
-   exclusion/leakage/patch/cleanup checks;
-3. run exactly one complete non-overlapping post-build E2E;
-4. directly review the corrected fixture at DPR 1 desktop, laptop, narrow,
-   effective-200, forced-colors, reduced-motion, grayscale, focus/status/
-   target, and exact longest-copy states without reading or mutating Martin's
-   browser storage/profile/campaign save;
-5. classify `TD009-FIX-001` and every carried variance, record the release
-   disposition and retrospective, replace this handoff with one synchronized
-   next action, then commit/push only if the release gate passes and verify
-   `HEAD == origin/main == remote refs/heads/main`.
+1. change only OF-30 active owner to `SYSTEM // EXPEDITION LEDGER` in normal
+   product state and its exact fixture contract;
+2. map every fixture state to the shell-frozen replacement-focus target,
+   including first incomplete OF-10 control, Python/prompt/explanation fields,
+   recovery target, route heading, and heading-owned states;
+3. make the contract-equivalent boundary surface actually focus its declared
+   heading on mount;
+4. add rendered-DOM regression tests comparing exact owner text and
+   `document.activeElement` with the declared target; nonempty string checks
+   are insufficient;
+5. rerun the bounded Combat validation ladder, restore incidental captures,
+   stop owned previews, and make one dedicated local correction commit;
+6. return directly to a fresh independent Intelligence Officer. Do not push.
 
-Do not rerun Commandant through Quartermaster. Do not invoke Image Specialist,
-board, image generation, edit, derivative, integration, or reveal work.
-Quartermaster need not repeat unless fresh evidence proves a player-content or
-runtime-asset defect.
+Do not rerun Commandant through Tactical, Quartermaster, or Image Specialist.
+Do not perform image, board, generation, edit, derivative, integration, reveal,
+canon, route, persistence, curriculum, reward, access, or successor work.
 
 ## Recurring automation
 
 - The authorized Skyscraper heartbeat remains active every three hours in
   this task.
-- The next wake must resume at fresh Intelligence for this exact corrected
-  candidate and must not repeat earlier stages.
+- The next wake must resume at Combat Engineer for exactly
+  `TD009-FUNC-003` and `TD009-FIX-002` and must not repeat earlier stages.
 
 ## Frozen boundaries
 
