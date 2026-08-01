@@ -6,10 +6,11 @@ Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and
 `Skyscraper Agent Profiles/README.md` in full at the start of the next stage.
 
 The authorized three-hour Skyscraper automation remains active. TD-007 is
-fully released. TD-008 has completed all five Colonel stages and now has one
-versioned `SHELL READY` construction contract. Do not restart a completed
-role, skip Reconnaissance Sergeant, run Marines concurrently, inspect Martin's
-browser storage/save, or infer work from the archived two-team workflow.
+fully released. TD-008 has completed all five Colonel stages and the
+Reconnaissance Sergeant has issued one shell-faithful `CREATIVE LOCK`. Do not
+restart a completed role, skip Tactical Operations Specialist, run Marines
+concurrently, inspect Martin's browser storage/save, or infer work from the
+archived two-team workflow.
 
 ## Synchronized released state
 
@@ -31,12 +32,13 @@ returns.
 ## Active TD-008 state
 
 - Completed stages: Commandant, Colonel, Operations Planning Major, Office of
-  Science Administrator, Mission Captain
+  Science Administrator, Mission Captain, Reconnaissance Sergeant
 - Product: `VISION BASELINE / GDB-TD008-v1`
 - World: `WORLD BASELINE / WNMP-TD008-v1`
 - Operations: `FLOOR STACK READY - ROUTE AUTHORIZED / CFS-TD008-v1`
 - Science: `VIABILITY READY / VE-TD008-v1 / PBA-TD008-v1`
 - Mission: `SHELL READY / SS-RP008-OFFSET-REACH-v1`
+- Recon: `CREATIVE LOCK / EXPANSION WITHOUT VERDICT`
 - Slice: `TD-008-RP008-OFFSET-REACH-v1`
 - Address: `RP-008 / SC-09 / OR-00-OR-30`
 - Sole route: fresh Pilot-owned `TD008-RTA-001`
@@ -46,7 +48,9 @@ returns.
 - Strategic and Mission variances: none
 - Shell artifact:
   `Production Pipeline/Skyscraper Test Drives/TD-008/05-PLAYABLE-SLICE-SHELL.md`
-- Next role: `Reconnaissance Sergeant / reconnaissance_sergeant`
+- Creative treatment:
+  `Production Pipeline/Skyscraper Test Drives/TD-008/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`
+- Next role: `Tactical Operations Specialist / tactical_operations_specialist`
 
 Mission independently reconciled `GDB-TD008-v1`, `WNMP-TD008-v1`,
 `CFS-TD008-v1`, `VE-TD008-v1`, `PBA-TD008-v1`, the released TD-007 boundary,
@@ -55,30 +59,49 @@ current source without conflict. Fresh Mission evidence passed protected
 `14/14`, the RP-008 mapping self-test, and a 198-module production build at
 exact released TD-007 JS/CSS/media identity.
 
+Recon independently reconciled the shell, all five TD-008 Colonel artifacts,
+the TD-007 release, SC-09, the photorealistic charter, current visual
+controls, and recent runtime/reveal provenance. The locked creative thesis is
+**expansion without verdict**: a wider evidence field narrows interpretation
+while preserving the retained RP-007 local account as separately valid. Exact
+pacing remains `35-48` minutes clean and `21-30` mastered. Runtime roles remain
+exactly provisional `SC-09-PANORAMA-MASTER` and
+`SC-09-RELATION-DETAIL-MASTER`. Recon generated no image, performed no runtime
+work, and requested no variance.
+
 ## Exact next action
 
-**Run only the TD-008 Reconnaissance Sergeant creative treatment.**
+**Run only the TD-008 Tactical Operations Specialist experience blueprint.**
 
-Read the full `Skyscraper Agent Profiles/reconnaissance-sergeant.md`, the
-complete `SS-RP008-OFFSET-REACH-v1` shell, all five TD-008 Colonel artifacts,
-the TD-007 Intelligence release, SC-09, the photorealistic charter, current
-visual controls, recent accepted reveal history, and the exact current-control
-sections cited by the role.
+Read the full
+`Skyscraper Agent Profiles/tactical-operations-specialist.md`, the complete
+`SS-RP008-OFFSET-REACH-v1` shell, the immediate Recon creative treatment, and
+the exact current controller/UI/scene/fixture/accessibility sections cited by
+the role.
 
 Create exactly
-`Production Pipeline/Skyscraper Test Drives/TD-008/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
-Interpret the shell through one emotional treatment while preserving every
-fixed route, state, learning, evidence, privacy, save, accessibility, fixture,
-asset, canon, and hard-stop boundary. Define arrival, tension, understanding,
-exit, pacing, attention, materials, lighting, atmosphere, existing-audio use,
-motion/reduced-motion treatment, contrast with recent slices/reveals, risks,
-and fixed versus flexible boundaries.
+`Production Pipeline/Skyscraper Test Drives/TD-008/07-EXPERIENCE-BLUEPRINT.md`.
+Freeze every state, owner/message/content/action replacement, action,
+focus target, status, recovery route, copy surface, scene/crop/alternative
+identity, and responsive layout for exact graph
+`BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30` under the creative thesis
+**expansion without verdict**.
 
-Issue `CREATIVE LOCK`, `REVISE`, or `HOLD`. On pass, update TD-008 metrics and
-this handoff to Tactical Operations Specialist and make one dedicated local
-commit. Do not implement normal runtime behavior, create content assets,
-generate images, alter curriculum, open hidden lore, inspect browser storage,
-or expand the route, world response, reward, access, identity, authority,
+Specify exact route validation and seven-modal one-hit activation; OR-00;
+six equal unordered observations and all `720` orders/revisits; independent
+PY-016 and AI-901 primary/remediation/retrieval-or-trace/blank-transfer flows;
+both explanations; no cross-credit; every miss/retry/sanitation/interruption/
+review/save/rollback/restore/return state; the eleven-key record preview; the
+two provisional asset-role placeholder and crop matrix; all four layouts;
+the exact longest-copy sample; forced colors, reduced motion, grayscale,
+focus/status/targets/containment/local-request requirements; and all exact 64
+fixture scenarios with product and harness controls separate.
+
+Issue `EXPERIENCE READY`, `REVISE`, or `HOLD`. On pass, update TD-008 metrics
+and this handoff to Combat Engineer and make one dedicated local commit. Do
+not implement runtime behavior, generate images, create media, change the
+route/evidence/schema/save/canon, open hidden lore, inspect browser storage,
+or expose world response, reward, access, identity, authority, RP-009,
 successor, or ending.
 
 ## Shell construction lock

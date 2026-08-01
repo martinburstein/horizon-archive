@@ -104,6 +104,26 @@
       "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "push and three-way main verification required at SHELL READY",
       "nextStage": "Reconnaissance Sergeant"
+    },
+    {
+      "sequence": 6,
+      "stage": "Reconnaissance Sergeant",
+      "agentId": "reconnaissance_sergeant",
+      "startedAt": "2026-08-01T01:09:00.000Z",
+      "endedAt": "2026-08-01T01:15:00.000Z",
+      "durationMs": 360000,
+      "disposition": "CREATIVE LOCK",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md",
+      "shell": "SS-RP008-OFFSET-REACH-v1",
+      "creativeThesis": "expansion without verdict; a wider evidence field narrows interpretation while preserving the separately valid retained RP-007 local account",
+      "pacing": "35-48 minutes clean / 21-30 minutes mastered; no timing credit or forced sensory cue",
+      "provisionalAssets": "exactly SC-09-PANORAMA-MASTER and SC-09-RELATION-DETAIL-MASTER; no generation or runtime acceptance at Recon",
+      "validation": "Mission shell, all five TD-008 Colonel artifacts, TD-007 release, SC-09, photorealistic charter, current location controls, and recent TD-006/TD-007 runtime/reveal provenance reconciled; route/state/evidence/privacy/save/accessibility/fixture/asset/PBA/hard-stop contract trace PASS",
+      "variances": "none; creative treatment preserves all shell locks and leaves exact downstream staging flexibility",
+      "commit": "PENDING_RECON_COMMIT",
+      "commitConvention": "The dedicated Reconnaissance Sergeant commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Reconnaissance Sergeant push gate",
+      "nextStage": "Tactical Operations Specialist"
     }
   ]
 }
