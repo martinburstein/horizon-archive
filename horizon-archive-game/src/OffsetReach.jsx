@@ -6,7 +6,7 @@ import {
   offsetReachRegions,
   resolveOffsetReachWorldScene,
 } from "./OffsetReachNormal.js";
-import offsetReachPanorama from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v1.webp";
+import offsetReachPanorama from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v4.webp";
 import offsetReachRelationDetail from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp";
 
 const headingCopy = {
@@ -100,7 +100,7 @@ const actionIds = {
   [offsetReachActions.returnThreshold]: "or-return-city-threshold",
 };
 
-const panoramaAlt = "First-person view across the immense Offset Reach. A translucent laminated glass-ceramic ribbon and a dark cellular mineral mantle remain separately traceable through one recurring bounded contact and a broad open offset. A rigid mauve mineral continuity meets the ribbon once while an opaque peripheral mass remains closed.";
+const panoramaAlt = "First-person view across the immense Offset Reach. A translucent laminated glass-ceramic ribbon and a dark cellular mineral mantle remain separately traceable through one recurring bounded contact and a broad open offset. A fan of thick fractured refractory mineral vanes meets the ribbon at one bounded contact while an opaque peripheral mass remains closed.";
 
 const detailAltByCropId = {
   "sc09-detail-recurring-contact": "Flat-on material view of one ordinary bounded contact between the laminated glass-ceramic ribbon and cellular mineral mantle; both continuities remain distinct.",
@@ -207,7 +207,7 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
   const imageSource = isDetail ? offsetReachRelationDetail : offsetReachPanorama;
   const sourceName = isDetail
     ? "sc09-offset-reach-relation-detail-runtime-master-v1.webp"
-    : "sc09-offset-reach-panorama-runtime-master-v1.webp";
+    : "sc09-offset-reach-panorama-runtime-master-v4.webp";
 
   useLayoutEffect(() => {
     const root = rootRef.current;

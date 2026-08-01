@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
@@ -15,11 +16,19 @@ test("TD008 production UI exposes exact longest copy and exactly two truthful pr
   assert.doesNotMatch(component, /PROVISIONAL STRUCTURAL PLACEHOLDER|offset-world-placeholder/);
   const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
   assert.equal(imports.length, 2);
-  assert.match(component, /sc09-offset-reach-panorama-runtime-master-v1\.webp/);
+  assert.match(component, /sc09-offset-reach-panorama-runtime-master-v4\.webp/);
+  assert.doesNotMatch(component, /sc09-offset-reach-panorama-runtime-master-v1\.webp/);
   assert.match(component, /sc09-offset-reach-relation-detail-runtime-master-v1\.webp/);
   assert.match(component, /<img/);
   assert.match(component, /detailAltByCropId/);
   assert.deepEqual([...controller.matchAll(/imageRoles:[\s\S]*?Object\.freeze\(\[([^\]]+)/g)].length, 1);
+});
+
+test("TD008 panorama v4 and preserved relation-detail runtime identities are exact", () => {
+  const panorama = readFileSync(new URL("../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v4.webp", import.meta.url));
+  const relationDetail = readFileSync(new URL("../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp", import.meta.url));
+  assert.equal(createHash("sha256").update(panorama).digest("hex").toUpperCase(), "7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9");
+  assert.equal(createHash("sha256").update(relationDetail).digest("hex").toUpperCase(), "CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8");
 });
 
 test("TD008 UI preserves one status, native labelled forms, focus, and minimum targets", () => {

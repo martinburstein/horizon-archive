@@ -215,6 +215,25 @@
         "commit": "PENDING_TD008_CONT_002_QUARTERMASTER_COMMIT",
         "synchronization": "local dedicated correction commit only; Intelligence final gate owns push after separately pending Image correction TD008-PRES-001"
       },
+      "intelligencePresentationCorrection": {
+        "id": "TD008-PRES-002",
+        "contract": "GC-TD008-SC09-PAN-v4",
+        "disposition": "CORRECTED - IMAGE SPECIALIST RE-QA REQUIRED",
+        "startingCommit": "49d7bac1f568540458b9c5ccce1aec632d2e6fab",
+        "board": "9d5428ed-f5bb-41f5-b9cb-c30175ad705a / stable item td008-sc09-panorama-v4 / initial begin revision 13 / targeted recovery begin revision 14 / accepted completion revision 15 / no second board",
+        "attempts": "initial private edit rejected for bridge/walkway/route read; sole targeted recovery accepted at original resolution; no third v4 attempt",
+        "acceptedNative": "1672x941 RGB PNG / 2921671 bytes / SHA-256 6D8F53A62E7DE2AFB2385845B9CECD5DB978FC91037415A2188B67E967A845FC",
+        "source": "rp008-offset-reach-panorama-source-v4.png / 3840x2160 / 9972403 bytes / SHA-256 E34092F3777A455869BC80A5CEC67437FBF0FC00ACE8471CD15057C4D920EAA6",
+        "runtime": "sc09-offset-reach-panorama-runtime-master-v4.webp / 3840x2160 / 1619836 bytes / SHA-256 7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9",
+        "qa": "thick rigid fractured refractory mineral vanes with solid cross-sections, discontinuous non-traversable ridges and open voids; no cable/wire/root/hair/tentacle/rope/web/fiber-optic/flexible-strand or deck/bridge/walkway/route read; one clustered bounded ribbon contact; all other panorama meaning preserved",
+        "impact": "only versioned panorama source/runtime/import and truthful alternative changed; relation detail, reveal, mechanics, canon, evidence, schema, save, route, returns, hard stop and world-state semantics unchanged",
+        "validation": "focused TD-008 31/31; full 882/882; mapping self-tests 11/11; 203-module build; PBA-TD008-v1; root/two-deep/all-19-assets served identity 22/22; direct-import, leakage and owned-process cleanup PASS",
+        "bundle": "JS 1450367 / 59D8B731F50A560496394336F9B7AC379409AAD12E5ABFC7E85BAA4ABFA214D1; CSS 99210 / 29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F; modules 203; media 17 / 37410731",
+        "preserved": "relation detail CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8; reveal 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1; all 15 predecessor media exact",
+        "variances": "none",
+        "commit": "PENDING_TD008_PRES_002_QUARTERMASTER_COMMIT",
+        "synchronization": "local dedicated correction commit only; Image Specialist must independently re-QA before fresh Intelligence release gate"
+      },
       "nextStage": "Image Specialist"
     },
     {

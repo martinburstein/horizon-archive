@@ -12,7 +12,7 @@
 | Shell | `SS-RP008-OFFSET-REACH-v1 / SHELL READY` |
 | Address | `RP-008 / SC-09 / OR-00-OR-30` |
 | Route | `TD008-RTA-001` |
-| Accepted generation contract | `GC-TD008-SC09-v3` |
+| Accepted generation contracts | `GC-TD008-SC09-v3`; panorama correction `GC-TD008-SC09-PAN-v4` |
 | Date | `2026-08-01` |
 | Disposition | **`CONTENT COMPLETE`** |
 | Next recipient | Image Specialist / `image_specialist` |
@@ -58,6 +58,52 @@ as a new bounded contract, not a reopened v1/v2 attempt.
   package, commit and reveal. Only the accepted v3 derivative entered the
   project.
 
+## Intelligence-required panorama contract `GC-TD008-SC09-PAN-v4`
+
+Status: **`ACCEPTED - TARGETED RECOVERY`**.
+
+Independent Intelligence variance `TD008-PRES-002` found that the accepted
+panorama's third lineage reads as thin flexible web/cable strands rather than
+the mandatory rigid refractory lineage. Martin's continuing autonomous
+authority through `04:00` America/New_York authorizes one new separately
+versioned correction contract:
+
+- reuse only Creative Production board
+  `9d5428ed-f5bb-41f5-b9cb-c30175ad705a`;
+- stable item `td008-sc09-panorama-v4`;
+- precise-object-edit target: exact accepted lossless v1 panorama source;
+- one initial private edit, then at most one targeted recovery only if the
+  initial fails documented original-resolution QA;
+- second failure is `HOLD`; no third v4 attempt;
+- rejected private bytes never enter workspace, canon, runtime, provenance,
+  commits or reveal.
+
+Only the web-like third lineage may change. It must become thick rigid
+faceted refractory vanes or monolithic ceramic-mineral beam members with
+unmistakable compression-bearing thickness and no plausible cable, wire,
+root, hair, tentacle, rope, web, strand or decorative fiber-optic read.
+Every other topology, material, composition, light and shell meaning remains
+fixed.
+
+The first private v4 edit removed the flexible-strand defect but failed
+original-resolution QA because continuous flat upper faces and engineered
+beam joints created a plausible bridge/walkway/route read. It was rejected
+before workspace entry. Creative Production begin receipt is revision `13`.
+The one permitted targeted recovery must remove only that route-like planar
+language by using irregular nonparallel solid mineral fins with fractured
+prismatic cross-sections and discontinuous ridge tops.
+
+The recovery began at board revision `14` and completed accepted at revision
+`15` on the same stable item. It produced a sparse fan of thick rigid
+fractured refractory mineral vanes with solid cross-sections, broken
+non-traversable ridges, unequal widths and open voids. Original-resolution QA
+found no plausible cable, wire, root, hair, tentacle, rope, web, net, thread,
+string, tendon, vine, branch, brush, whisker, conduit bundle, decorative
+fiber-optic, flexible-strand, deck, bridge, walkway, road, rail, corridor or
+route read. The vanes form one clustered bounded ribbon contact without
+merging with the cellular mantle. All v4 attempt allowance is exhausted:
+one rejected initial, one accepted targeted recovery, no third attempt.
+
 ## Content and source mapping
 
 | Surface | Final treatment | Locked meaning |
@@ -85,15 +131,24 @@ Complete prompts, accepted-source accounting, hashes, crops and visual review:
 
 | Role | Direct runtime master | Dimensions | Bytes | SHA-256 |
 |---|---|---:|---:|---|
-| `SC-09-PANORAMA-MASTER` | `sc09-offset-reach-panorama-runtime-master-v1.webp` | `3840 x 2160` | `1,715,912` | `B25E90052EECF46ABA9949F47BB1FFF32602C1CB9984F7572F2F311A56E0D366` |
+| `SC-09-PANORAMA-MASTER` | `sc09-offset-reach-panorama-runtime-master-v4.webp` | `3840 x 2160` | `1,619,836` | `7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9` |
 | `SC-09-RELATION-DETAIL-MASTER` | `sc09-offset-reach-relation-detail-runtime-master-v1.webp` | `3840 x 2160` | `2,369,022` | `CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8` |
 
 | Lossless source | Dimensions | Bytes | SHA-256 |
 |---|---:|---:|---|
-| `rp008-offset-reach-panorama-source-v1.png` | `3840 x 2160` | `10,276,898` | `5EB66FE47691F6BAD70D325ED5EC56E3AC5B89043E7286204E2998A52775EBF7` |
+| `rp008-offset-reach-panorama-source-v4.png` | `3840 x 2160` | `9,972,403` | `E34092F3777A455869BC80A5CEC67437FBF0FC00ACE8471CD15057C4D920EAA6` |
 | `rp008-offset-reach-relation-detail-source-v1.png` | `3840 x 2160` | `12,258,944` | `6FD59B0D8E66BB04C12EE27CB9DED7A4F765A4E44E2C7BB61FCB0A5DF8135013` |
 
-Both accepted native outputs are `1672 x 941`. Deterministic Pillow `12.2.0`
+The superseded v1 panorama source/runtime remain byte-stable, non-imported
+project predecessors: source SHA-256
+`5EB66FE47691F6BAD70D325ED5EC56E3AC5B89043E7286204E2998A52775EBF7`;
+runtime SHA-256
+`B25E90052EECF46ABA9949F47BB1FFF32602C1CB9984F7572F2F311A56E0D366`.
+
+All accepted native outputs are `1672 x 941`. The accepted v4 native
+panorama is `2,921,671` bytes with SHA-256
+`6D8F53A62E7DE2AFB2385845B9CECD5DB978FC91037415A2188B67E967A845FC`.
+Deterministic Pillow `12.2.0`
 RGB/Lanczos enlargement produced the exact lossless sources; WebP quality
 `96`, method `6`, exact RGB produced the runtime masters. No native-4K detail
 claim is made.
@@ -110,6 +165,9 @@ claim is made.
 - v3 item `td008-sc09-relation-detail-v3`: begin revision `9`, accepted
   completion revision `10`.
 - v3 used one precise-object-edit generation and no recovery.
+- v4 panorama item `td008-sc09-panorama-v4`: initial begin revision `13`,
+  targeted recovery begin revision `14`, accepted completion revision `15`.
+- v4 used one rejected initial plus one accepted recovery; no third attempt.
 - No second board, CLI/API fallback, local generation endpoint, third runtime
   image or reveal generation occurred.
 
@@ -121,6 +179,9 @@ claim is made.
   ship, occupant or human trace;
 - glass-ceramic ribbon, cellular mantle and rigid third continuity remain
   distinct by silhouette, translucency, faceting and texture;
+- the third continuity is a sparse fan of thick fractured refractory mineral
+  vanes with solid cross-sections, broken non-traversable ridges and open
+  voids; it has no cable/web/rope/root/fiber or bridge/walkway reading;
 - recurrent local contact, broad offset, closed opaque mass and layered
   maintenance remain visible without a hub, route or verdict;
 - no text, UI, pseudo-writing, diagram, door, portal, face, answer cue, reward
@@ -154,7 +215,8 @@ claim is made.
   sole observation route and complete accessible meaning.
 - Four truthful alternatives separately cover panorama, familiar contact,
   non-contact and isolated cross-family contact.
-- Grayscale mean/standard deviation is `59.20 / 37.58` for panorama and
+- Grayscale mean/standard deviation is `52.42 / 33.97` for the v4 lossless
+  panorama (`52.47 / 34.00` for its WebP) and
   `47.68 / 30.48` for relation detail.
 - Shape, lamination, faceting, sealed cellular texture, solid offset and full
   text preserve meaning without hue, brightness, motion, audio or side-only
@@ -183,31 +245,31 @@ source path, board item, structural-placeholder marker or rejected image.
 
 | Gate | Result |
 |---|---|
-| Focused TD-008 normal/protected/UI/fixture | `28/28 PASS`; Node `0.357s` |
-| Connected TD-004 through TD-008 selected suite | `82/82 PASS`; Node `0.483s` |
-| Full product suite | `879/879 PASS`; Node `10.520s` |
+| Focused TD-008 normal/protected/UI/fixture | `31/31 PASS`; Node `0.333s` |
+| Connected coverage | included in full `882/882`; no separate selected rerun needed for the isolated asset/import change |
+| Full product suite | `882/882 PASS`; Node `8.448s` |
 | RP-002 through RP-012 mapping validators | `11/11 SELF-TEST PASS` |
-| Production build | `PASS`; `203` modules; Vite `6.21s` |
-| JavaScript | `index-L_Jm6-oG.js`; `1,450,176` bytes; SHA-256 `F6BA2083C81ED8FB4685D73E8FEFEFF92AD7ECF81CFBF53F8DEEAD6108D0AA2E` |
-| CSS | `index-BJjBVihW.css`; `99,112` bytes; SHA-256 `6BEF0D7BDA63696C96BE14473B936DDFA751795A4EE1A3B7593C5FDD9E2C251D` |
-| Built index | `551` bytes; SHA-256 `9364B1BA8C216DE5EEE3A7B2C067DC0EFE45D89D37E0E45D76519A6A7C651C0E` |
-| Runtime media | `17` files / `37,506,807` bytes |
-| New TD-008 runtime media | exactly `2` images / `4,084,934` bytes |
+| Production build | `PASS`; `203` modules; Vite `7.57s` |
+| JavaScript | `index-CUBq7F91.js`; `1,450,367` bytes; SHA-256 `59D8B731F50A560496394336F9B7AC379409AAD12E5ABFC7E85BAA4ABFA214D1` |
+| CSS | `index-C733m8E_.css`; `99,210` bytes; SHA-256 `29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F` |
+| Built index | `551` bytes; SHA-256 `7B89916C627D972204B6153FA59721B7A113A5730A6E88855460EBB3957628BD` |
+| Runtime media | `17` files / `37,410,731` bytes |
+| New TD-008 runtime media | exactly `2` images / `3,988,858` bytes |
 | Accepted predecessor media | all `15` identities exact; zero missing or changed |
 | `PBA-TD008-v1` | `PASS`; JS, CSS, `203 <= 207` modules, two-image and total-media caps pass |
 | Served identity | root, two deep fallbacks and all `19` emitted assets: `22/22` HTTP `200` |
-| Served cleanup | owned preview stopped; port `5192` clear |
+| Served cleanup | owned preview stopped; port `5195` clear |
 | Direct import / placeholder | exactly two imports; zero production placeholders |
 | Fixture/protected/later/source-path leakage | production clear |
 | Patch whitespace | `PASS`; line-ending notices only |
 
 Budget headroom remains:
 
-- JavaScript: `11,645` bytes;
-- CSS: `1,239` bytes;
+- JavaScript: `11,454` bytes;
+- CSS: `1,141` bytes;
 - modules: `4`;
-- new runtime media: `4,303,674` bytes;
-- total runtime media: `4,303,674` bytes.
+- new runtime media: `4,399,750` bytes;
+- total runtime media: `4,399,750` bytes.
 
 ## Immutable boundaries for Image Specialist
 
@@ -353,3 +415,40 @@ workflow before Intelligence reconciliation.
   `Production Pipeline/Skyscraper Test Drives/TD-008/10-POLISH-REVIEW.md`
 - **Required disposition:** `PRESENTATION COMPLETE`, `REVISE` or `HOLD`
 - **Next recipient:** Intelligence Officer / `intelligence_officer`
+
+## `TD008-PRES-002` exact Image Specialist re-QA handoff
+
+- **Starting authority:** dedicated Quartermaster correction contract
+  `GC-TD008-SC09-PAN-v4`, accepted board revision `15`, current stable local
+  correction commit, shell 05, treatment 06, blueprint 07, report 08, this
+  ledger, updated runtime provenance, prior Image review 10 and Intelligence
+  return 11.
+- **Inspect at original resolution:** exact v4 lossless source
+  `E34092F3777A455869BC80A5CEC67437FBF0FC00ACE8471CD15057C4D920EAA6`
+  and runtime master
+  `7B64D4949BF02B1FBDFB2EB3BAFB1BA2C0B7C8CD6EAB0EA6FA87179A927872A9`.
+- **Accept only if:** the third lineage remains unmistakably thick, rigid,
+  faceted and compression-bearing; has solid fractured cross-sections,
+  discontinuous non-traversable ridges and open voids; creates no reasonable
+  cable, wire, root, hair, tentacle, rope, web, net, thread, string, tendon,
+  vine, branch, brush, whisker, conduit, decorative fiber-optic, flexible-
+  strand, deck, bridge, walkway, road, rail, corridor or route reading; and
+  preserves one clustered bounded ribbon contact without merging into the
+  cellular mantle.
+- **Recheck live:** panorama alternative/caption, default crop, centered
+  narrow/effective-200 treatment, grayscale, forced colors, reduced motion,
+  desktop/laptop/narrow/effective-200 containment, local requests, emitted/
+  served identity and console/page errors.
+- **Preserve exactly:** relation-detail source/runtime SHA-256
+  `6FD59B0D8E66BB04C12EE27CB9DED7A4F765A4E44E2C7BB61FCB0A5DF8135013`
+  / `CA09C4BDFEDC6EFC99538A8403AC43F6DD8DB221A6157434E82AE1A9767FD0B8`;
+  reveal SHA-256
+  `345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1`;
+  all mechanics, canon, evidence, schema, save, route, returns, hard stop,
+  copy punctuation and heading CSS.
+- **Generation boundary:** v4 allowance is exhausted. Do not generate,
+  regenerate, edit, replace or add an image. Do not reopen the board.
+- **Required result:** append a bounded `TD008-PRES-002` re-QA disposition to
+  `10-POLISH-REVIEW.md`, update the synchronized handoff only after the
+  concurrent Intelligence-owned files are safe to modify, and return an
+  accepted stable commit to a fresh Intelligence Officer release gate.
