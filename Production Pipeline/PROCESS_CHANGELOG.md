@@ -17,6 +17,30 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-08-01 / TD-008 Intelligence release - TUNE
+
+- **Observed:** original-resolution Intelligence review found the panorama's
+  third lineage reading as flexible web/cable strands even though predecessor
+  review accepted its contact topology. Candidate freezing, role-owned
+  correction, and the final stable independent gate then closed all four
+  returned corrections and released TD-008.
+- **Decision:** `TUNE`. Freeze one stable committed candidate before the
+  Intelligence ladder begins. Presentation review must inspect every generated
+  lineage against the shell's explicit forbidden material readings at original
+  resolution, in addition to topology and live-layout checks.
+- **Expected benefit:** material-language defects return before final release,
+  and every reported validation result maps to one reproducible candidate.
+- **Preserved guardrails:** sequential ownership, independent Intelligence,
+  bounded generation, exact shell, canon, learning separation, privacy,
+  accessibility, save, protected work, and one accepted reveal remain intact.
+- **Validation:** Image recorded original-resolution forbidden-read checks on
+  one stable v4 candidate; Intelligence completed focused `31/31`, full
+  `882/882`, mapping `11/11`, build, served identity, exact production matrix,
+  and one isolated `87.9s` E2E without a candidate change.
+- **Rollback trigger:** candidate freezing blocks an urgent safety correction,
+  or the added material-read check proves redundant across two released visual
+  cycles without improving defect detection.
+
 ## 2026-07-29 / TD-007 Intelligence release - TUNE
 
 - **Observed:** the ten predecessor stages used `6,940,587ms` (`115.68m`).

@@ -18,9 +18,9 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Creative Production board:**
   `9d5428ed-f5bb-41f5-b9cb-c30175ad705a`; item
   `td008-cycle-reveal`; begin revision `11`; complete revision `12`.
-- **Status:** exactly one accepted PNG is archived as a spoiler-safe canonical
-  reference candidate only. It is not a runtime import or emitted asset and
-  remains pending independent Intelligence Officer release acceptance.
+- **Status:** Intelligence issued `PASS - AS BUILT RELEASED`, accepted the
+  exact PNG unchanged as the sole spoiler-safe canonical reference, and closed
+  the named RP-008/SC-09 checklist item. It is not runtime or emitted media.
 
 ## 2026-08-01 - RP-008 SC-09 Offset Reach source and runtime masters
 
@@ -37,8 +37,9 @@ The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-pr
 - **Derivatives:** deterministic Pillow `12.2.0` RGB/Lanczos enlargement to
   exact `3840 x 2160` lossless PNG, then WebP quality `96`, method `6`, exact
   RGB. This makes no native-4K detail claim.
-- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist and
-  Intelligence Officer review remain required before release.
+- **Status:** Quartermaster `CONTENT COMPLETE`; Image Specialist
+  `PRESENTATION COMPLETE`; Intelligence `PASS - AS BUILT RELEASED`. The v4
+  panorama and unchanged relation detail are accepted exactly as built.
 
 ## 2026-07-29 - RP-007 recurrent-contact cycle reveal
 

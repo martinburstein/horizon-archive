@@ -1,5 +1,16 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-008 Intelligence release current control - 2026-08-01
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-008 /
+  SS-RP008-OFFSET-REACH-v1` on `b0d0d1b26e37c9fea49777cd81a9d775f7759228`.
+- **Gate:** focused `31/31`; full `882/882`; mappings `11/11`; build `203` /
+  `7.73s`; PBA; served `22/22`; E2E `87.9s`; production matrix PASS.
+- **Identity:** JS `1,450,367` / `59D8...14D1`; CSS `99,210` / `29D0...045F`;
+  media `17 / 37,410,731`; new SC-09 `2 / 3,988,858`.
+- **Boundary:** OR-30 plus exact returns. No RP-009 route, successor, RP-013,
+  ending, authority, response, or world effect is open.
+
 ## TD-007 Intelligence release current control - 2026-07-29
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-007 /

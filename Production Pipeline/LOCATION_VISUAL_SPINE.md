@@ -1,5 +1,15 @@
 # Horizon Archive Location Visual Spine
 
+## 2026-08-01 TD-008 Intelligence release control
+
+- `PASS - AS BUILT RELEASED / TD-008 / SC-09`. Exactly two direct `3840 x
+  2160` runtime masters are released: the v4 panorama and registered detail.
+- Rigid third-lineage material, separate mantle, exact 3/4/4/2 heading matrix,
+  containment, focus, 3px outline, >=44px targets, forced colors, reduced
+  motion, alternatives, and local-only review pass.
+- Exactly one spoiler-safe reveal is accepted reference-only; it opens no
+  route, identity, unity, cause, authority, or later content.
+
 ## 2026-07-29 TD-007 Intelligence release control
 
 - `PASS - AS BUILT RELEASED / TD-007 / SC-08`. Two directly imported,

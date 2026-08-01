@@ -288,6 +288,28 @@
         "synchronization": "local dedicated Image re-QA commit only; no push; Intelligence remains next and owns final release"
       },
       "nextStage": "Intelligence Officer"
+    },
+    {
+      "sequence": 11,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-01T07:06:00.000Z",
+      "endedAt": "2026-08-01T07:48:00.000Z",
+      "durationMs": 2520000,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/11-AS-BUILT-RECONCILIATION.md",
+      "shell": "SS-RP008-OFFSET-REACH-v1",
+      "candidate": "b0d0d1b26e37c9fea49777cd81a9d775f7759228",
+      "validation": "focused 31/31; full 882/882; mappings 11/11; 203 modules / 7.73s; PBA PASS; served 22/22; isolated E2E 87.9s; production matrix PASS; zero failures",
+      "bundle": "JS 1450367 / 59D8B731F50A560496394336F9B7AC379409AAD12E5ABFC7E85BAA4ABFA214D1; CSS 99210 / 29D0F5D794B66BA8DF40BC45C9A237B608CBA290D5BEAC456BB46DC17757045F; media 17 / 37410731; new 2 / 3988858; predecessors 15/15",
+      "presentation": "heading 3/4/4/2; containment, h1/status, focus/3px, >=44px, exact 15-row review, v4 decode/alt, forced colors and reduced motion PASS",
+      "corrections": "TD008-FUNC-001, TD008-CONT-002, TD008-PRES-001 and TD008-PRES-002 corrected and closed",
+      "reveal": "one reference-only reveal / 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1 accepted",
+      "retrospective": "TUNE retained and validated: stable committed candidate plus original-resolution forbidden-material review",
+      "commit": "PENDING_INTELLIGENCE_RELEASE_COMMIT",
+      "commitConvention": "The dedicated Intelligence commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "push and three-way main verification required",
+      "nextStage": "Commandant guarded verification at next scheduled three-hour wake"
     }
   ]
 }

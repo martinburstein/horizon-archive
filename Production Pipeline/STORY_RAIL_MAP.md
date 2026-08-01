@@ -1,5 +1,17 @@
 # Horizon Archive Story Rail Map
 
+## TD-008 Intelligence release current control - 2026-08-01
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-008 /
+  SS-RP008-OFFSET-REACH-v1`; exact TD-007 BV-30 through sole `TD008-RTA-001`
+  into complete `RP-008 / SC-09 / OR-00-OR-30`.
+- **Graph:** `BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30`, then only exact
+  Braided Verge or City Threshold returns. Invalid state fails closed to BV-30.
+- **Evidence:** six equal observations in 720 orders, independent learning,
+  atomic persistence, replay-free restore, invariant world, two SC-09 roles.
+- **Stop:** OR-30 or either return. No RP-009 route, successor, RP-013,
+  ending, authority, response, or world effect is open.
+
 ## TD-007 Intelligence release current control - 2026-07-29
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-007 /

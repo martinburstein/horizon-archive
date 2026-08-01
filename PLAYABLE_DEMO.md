@@ -13,19 +13,18 @@ includes the zero-Python learning path, the packaged AI-901 lesson sequence,
 Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
-The accepted normal campaign continuation reaches complete `RP-003 / SC-04`,
-`RP-004 / SC-05`, `RP-005 / SC-06`, `RP-006 / SC-07`, and now exact fresh
-entry into complete `RP-007 / SC-08 / BV-00-BV-30`. Braided Verge includes
-five equal physical observations, bounded Python and AI-901 practice with
-independent explanations, deterministic atomic local save/rollback/recovery,
-replay-free restore, and exact write-free returns to Interval Works or City
+The accepted normal campaign continuation reaches complete `RP-003 / SC-04`
+through `RP-008 / SC-09 / OR-00-OR-30`. Offset Reach includes six equal
+physical observations, bounded independent Python and AI-901 practice with
+two explanations, deterministic atomic local save/rollback/recovery,
+replay-free restore, and exact write-free returns to Braided Verge or City
 Threshold. Invalid, private, stale, partial, forged, interrupted, or
 Tour-derived state fails closed without consuming a future valid intent.
 
-The accepted boundary stops at BV-30 or either authorized return. Existing
-continuation is scenery only. No RP-008 route, RP-013, successor, unity,
+The accepted boundary stops at OR-30 or either authorized return. Existing
+continuation is scenery only. No RP-009 route, RP-013, successor, unity,
 cause, purpose, identity, reward, access, authority, external action, live
-service, or physical world response is included. SC-04 through SC-08 neither
+service, or physical world response is included. SC-04 through SC-09 neither
 receive nor respond to the local records.
 
 The learning material is course-authored practice. It is not an official exam

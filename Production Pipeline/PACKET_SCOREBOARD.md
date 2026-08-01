@@ -1,5 +1,18 @@
 # Rail Packet Scoreboard
 
+## TD-008 Intelligence release current control - 2026-08-01
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-008 /
+  SS-RP008-OFFSET-REACH-v1`; exact TD-007 BV-30 through sole `TD008-RTA-001`
+  into complete `RP-008 / SC-09 / OR-00-OR-30`.
+- **Included:** six equal observations; independent PY-016, extraction and two
+  explanations; atomic persistence; replay-free restore; exact returns; two
+  direct SC-09 masters.
+- **Gate:** focused `31/31`, full `882/882`, mappings `11/11`, build `203`,
+  PBA, served `22/22`, production matrix, and isolated `87.9s` E2E pass.
+- **Stop:** OR-30 or either return. No RP-009 route, successor, RP-013,
+  ending, authority, response, or world effect.
+
 ## TD-007 Intelligence release current control - 2026-07-29
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-007 /
