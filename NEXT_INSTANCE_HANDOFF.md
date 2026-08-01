@@ -230,40 +230,94 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated local Recon commit; no push at this
   gate. The commit containing this handoff is the non-recursive authority.
 
+### Tactical Operations Specialist
+
+- Stage: **`Tactical Operations Specialist / tactical_operations_specialist`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Disposition: **`EXPERIENCE READY`**.
+- Compatibility: Recon commit
+  `f9a6860de33ea0edef247a821f8f44df0f1fc103` is the verified sole-parent
+  successor to Mission; its committed and working creative-treatment blobs
+  are byte-identical. **Vastness without convergence** is compatible with the
+  shell without variance or upstream return.
+- Graph/actions: the complete
+  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11` graph freezes
+  every whole-group replacement, exact action, eligibility, disabled/absent/
+  result state, announcement, error, retry, cancel, return, and deterministic
+  focus target.
+- Route/survey: exact nine-step released-predecessor validation precedes fresh
+  one-hit consumption; pointer, touch, Enter, Space, switch, speech, and screen
+  reader converge on one intent. Seven equal observation peers converge for
+  all `5,040` orders by canonical set serialization with no implied pairing,
+  sequence, world response, or cross-credit.
+- Course/review: independent `PY-018` primary/trace/transfer and independent
+  client primary/retrieval/transfer plus two explanations remain strict;
+  mapping and check IDs remain distinct. First-incomplete and first-failed
+  recovery, four separately ordered scopes, the exact 13-key/eight-evidence
+  preview, and private-free sanitation are frozen.
+- Persistence/returns: canonical atomic write/read-back, byte preservation,
+  verified rollback, malformed-state rejection, interruption recovery,
+  contiguous-prefix resume, replay-free restore, exact Occluded Fold and City
+  Threshold returns, and the inert LOOK-only null continuation are complete.
+- Scene/layout/accessibility: exact role/crop/complete-alternative and
+  semantic-region/mask associations are frozen; image-side regions and
+  hotspots never dispatch. Desktop, laptop, narrow, and effective-200
+  layouts preserve invariant DOM/read/focus order, live longest-copy
+  containment, `>=44px` targets, forced-color/reduced-motion/grayscale and
+  silent/still parity.
+- Conditional structural placeholders: at most
+  `SC-11-COUNTERFIELD-PANORAMA-MASTER` and
+  `SC-11-DISTRICT-DETAIL-MASTER`; neither is an asset-selection claim and no
+  image was selected or generated.
+- Fixture: exactly `66` unique allowlisted storage-free, production-absent
+  scenarios; all `66` exact rendered-owner and actual-`activeElement` focus
+  contracts match the Mission shell registry with zero differences.
+- Validation: predecessor parent/scope/blob, complete fixture comparison,
+  seven observations/all `5,040` orders, four layouts, five exact UTF-8
+  longest-copy strings, two-role cap, 13-key record, UTF-8 validity, JSON,
+  whitespace, tracked scope, and no-runtime-change checks PASS; no variance.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/07-EXPERIENCE-BLUEPRINT.md`.
+- Commit/synchronization: one dedicated local Tactical commit; no push at this
+  gate. The commit containing this handoff is the non-recursive authority.
+
 ## Exact next action
 
-Run **Tactical Operations Specialist / `tactical_operations_specialist` only**
-against exact shell `SS-RP010-COUNTERFIELD-v1` and the Recon creative lock
-**vastness without convergence**.
+Run **Combat Engineer / `combat_engineer` only** against exact shell
+`SS-RP010-COUNTERFIELD-v1`, Recon creative lock **vastness without
+convergence**, and the Tactical **`EXPERIENCE READY`** blueprint.
 
-Read the full Tactical profile, shell, all five strategic authorities,
-immediate Recon handoff/treatment, exact released TD-009 normal OF-30 source
-and release, RP-010/SC-11 controls, and the exact shell-frozen UTF-8 and
-66-scenario owner/focus registries. Create
-`Production Pipeline/Skyscraper Test Drives/TD-010/07-EXPERIENCE-BLUEPRINT.md`.
+Read the full Combat profile, shell, all five strategic authorities,
+immediate Recon treatment, Tactical blueprint/handoff, exact released TD-009
+normal OF-30 route/controller/component/storage/fixture/tests, RP-010/SC-11
+controls, and the exact shell-frozen UTF-8 and 66-scenario owner/focus
+registries. Implement the smallest complete functional normal integration for
+`TD010-RTA-001` and `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 /
+SC-11` exactly as frozen.
 
-Freeze every state, owner/message/content/action replacement, action,
-transition, recovery path, status, focus target, component hierarchy,
-responsive layout, registered crop/mask/hotspot assignment, and fixture
-contract for
-`OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`. Preserve exact
-ordered route validation and protected-version rejection; seven modalities
-and one-hit consumption; seven equal observations/all `5,040` orders;
-independent `PY-018` and client-flow chains plus two explanations;
-mapping/check distinction; deterministic first-incomplete recovery;
-four-scope review; exact 13-key/eight-evidence record; sanitation, atomic
-write/read-back/rollback and replay-free restore; exact returns; four layouts;
-frozen UTF-8; all `66` rendered owner/actual-focus contracts; at most the two
-conditional image roles as structural placeholders only; provenance,
-generation and `PBA-TD010-v1` gates; invariant world; and CF-30 hard stop.
+Build the route adapter, controller/state/persistence/recovery contracts,
+Counterfield UI and styling, exact replacements/actions/owners/status/focus,
+seven equal observations/all `5,040` orders, independent learning chains and
+two explanations, four-scope review, exact 13-key/eight-evidence save,
+rollback/restore/returns/hard stop, semantic scene registrations, four
+layouts, accessibility/modes, frozen UTF-8 copy, regression coverage, and the
+closed storage-free production-absent fixture with all `66` exact rendered
+owner/actual-focus contracts. At most create the two conditional structural
+placeholder seams; do not generate, select, or finalize imagery.
 
-Issue `EXPERIENCE READY`, `REVISE`, or `HOLD`; update the ledger and this
-handoff; make one dedicated local Tactical commit; stop before Combat. Do not
-implement runtime code/CSS, finalize production assets, generate/select
-images, inspect browser/profile/save, open hidden lore, touch protected user
-files, or expose RP-011, RP-013, a successor, ending extension, reward,
-access, permission, identity, authority, response, unavailable contents,
-Machine relation, readiness judgment, or world effect.
+Run focused and full tests, mapping/readiness validators, production and
+fixture builds, `PBA-TD010-v1`, bundle/source privacy and later-source scans,
+fixture isolation, all 66 owner/focus comparisons, served root/deep/assets
+checks, patch integrity, and responsive/accessibility evidence required by
+the shell and blueprint. Create
+`Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
+Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`; update the ledger and this
+handoff. At `FUNCTIONALLY COMPLETE`, make one dedicated Combat commit, push
+the Combat gate, verify local/tracking/remote main equality, and stop before
+Quartermaster. Do not open hidden lore, touch protected user files, select or
+generate images, or expose RP-011, RP-013, a successor, ending extension,
+reward, access, permission, identity, authority, response, unavailable
+contents, Machine relation, readiness judgment, or world effect.
 
 ## Recurring automation
 
@@ -274,7 +328,7 @@ Machine relation, readiness judgment, or world effect.
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
   `TD010-RTA-001` remain unreleased and unimplemented; Marine deployment is
-  authorized only in canonical sequential order continuing with Tactical.
+  authorized only in canonical sequential order continuing with Combat.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do

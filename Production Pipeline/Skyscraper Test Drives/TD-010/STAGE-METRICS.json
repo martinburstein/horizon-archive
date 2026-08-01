@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-010",
-    "shellCandidate": "SS-RP010-COUNTERFIELD-v1 / CREATIVE LOCK",
+    "shellCandidate": "SS-RP010-COUNTERFIELD-v1 / EXPERIENCE READY",
     "campaignAddress": "RP-010 / SC-11 / CF-00-CF-30 through sole conditional TD010-RTA-001",
     "provisionalSurfaceCandidate": "reconciled by Mission into the sole conflict-free construction shell for RP-010 / SC-11 / CF-00-CF-30",
     "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
@@ -147,6 +147,30 @@
       "commitConvention": "The dedicated Reconnaissance commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Reconnaissance push gate",
       "nextStage": "Tactical Operations Specialist"
+    },
+    {
+      "sequence": 7,
+      "stage": "Tactical Operations Specialist",
+      "agentId": "tactical_operations_specialist",
+      "startedAt": "2026-08-01T23:04:00.000Z",
+      "endedAt": "2026-08-01T23:21:00.000Z",
+      "durationMs": 1020000,
+      "disposition": "EXPERIENCE READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/07-EXPERIENCE-BLUEPRINT.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "predecessorVerification": "Recon commit f9a6860de33ea0edef247a821f8f44df0f1fc103 verified as HEAD with sole parent 338da62c8af8abcbfe010e7f68b263686f228a4f, dedicated treatment/ledger/handoff scope, and byte-identical committed/working treatment blob ebf9df38fb1663d4edc732f2d99017b9cd90600e",
+      "compatibility": "Recon creative lock vastness without convergence is fully compatible with SS-RP010-COUNTERFIELD-v1; no shell variance or upstream return",
+      "graphAndActions": "complete OF-30/SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30/SC-11 graph; exact whole-group replacements, action eligibility, disabled/absent/result states, ordered route validation, seven-modality one-hit convergence, seven equal observations/all 5,040 orders, independent learning chains, four-scope review, save/rollback/restore, exact returns, and inert LOOK hard stop",
+      "focusAndRecovery": "one atomic polite status; exact deterministic owner, announcement, focus, error, retry, cancel, return, resume, malformed-state, interruption, first-incomplete and first-failed recovery contracts",
+      "layoutsAndAccessibility": "desktop, laptop, narrow, and effective-200 layouts; invariant DOM/read/focus order; >=44px targets; forced colors, reduced motion, grayscale, silent/still and seven-modality parity; five exact UTF-8 longest-copy samples",
+      "sceneAndPlaceholders": "exact role/crop/alternative/semantic-region/mask associations; image-side regions and hotspots are non-dispatching; at most two conditional structural placeholders SC-11-COUNTERFIELD-PANORAMA-MASTER and SC-11-DISTRICT-DETAIL-MASTER; no asset selected or generated",
+      "fixture": "exactly 66 unique allowlisted storage-free production-absent scenarios; all 66 rendered-owner and actual-activeElement focus contracts are byte-for-byte identical to the shell registry",
+      "validation": "Recon commit parent/scope/blob PASS; complete shell fixture comparison 66/66 with zero contract differences; seven observations/5,040 convergence, four layouts, five frozen long strings, two-role cap, exact 13-key record, UTF-8 validity, JSON, whitespace, tracked scope and no-runtime-change checks PASS",
+      "variances": "none; no shell return required",
+      "commit": "PENDING_TACTICAL_COMMIT",
+      "commitConvention": "The dedicated Tactical commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Tactical push gate",
+      "nextStage": "Combat Engineer"
     }
   ]
 }
