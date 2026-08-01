@@ -5,74 +5,48 @@ Last updated: **2026-08-01**
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and the profile
 registry before acting. This file is the sole exact-next-action authority.
 
-## Released state
+## Synchronized released state
 
-- Latest released slice: **`TD-008 / PASS - AS BUILT RELEASED`**.
-- Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
-- TD-009 remains **`REVISE - COMBAT CORRECTED / NOT YET RELEASED`**.
-- TD-009 shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
-- Starting Intelligence REVISE: `ccd320f2239696a8e5c4b95e5243a2f4118ff640`.
-- Starting remote remains `2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551`.
-
-## Corrected candidate evidence
-
-Combat corrected only `TD009-FUNC-003` and `TD009-FIX-002`:
-
-1. normal and fixture OF-30 now use exact owner
-   `SYSTEM // EXPEDITION LEDGER`;
-2. every closed fixture scenario declares its shell-frozen replacement-focus
-   target, including first-incomplete OF-10 controls, all Python/prompt/
-   explanation fields, recovery targets, route heading, and heading-owned
-   states;
-3. boundary surfaces focus the declared heading on mount; and
-4. a real browser selected all **64/64** scenarios and found zero mismatch
-   between rendered owner/declaration or `document.activeElement.id`/declared
-   focus.
-
-Combat gates pass: focused `37/37`, connected `108/108`, full `905/905`,
-mappings `11/11`, readiness `15/15`, automated release validator, production
-build `206` modules, fixture build `50` modules, served production `22/22`,
-served fixture `4/4`, and `PBA-TD009-v1`. The correction is one dedicated
-local commit and is deliberately not pushed.
+- Latest release: **`TD-009 / PASS - AS BUILT RELEASED`**.
+- Shell: `SS-RP009-OCCLUDED-FOLD-v1`.
+- Candidate audited: `9b0da7c27633a34394fa03dd442353f50b1cc7ad`.
+- Slice/address: `RP-009 / SC-10 / OF-00-OF-30`.
+- Route: sole Pilot-owned `TD009-RTA-001` from exact TD-008 OR-30.
+- Graph: `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`.
+- Returns: exact write-free/replay-free Offset Reach or City Threshold.
+- Record: `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
+- Release evidence: focused `37/37`, full `905/905`, mappings `11/11`,
+  readiness `15/15`, 206/50-module builds, `PBA-TD009-v1`, 64/64 rendered
+  contracts, exact served identity, and one `100.799s` E2E pass.
+- Runtime imagery is deferred and Image Specialist/reveal waived for TD-009
+  only under Martin's direct authority; zero new runtime media is released.
+- `TD009-FUNC-001/002/003`, `TD009-CONT-002`, and `TD009-FIX-001/002` are
+  resolved. `TD009-PROC-001`, `TD009-PRES-001`, and `TD009-CONT-001` are
+  bounded deferred limitations.
 
 ## Exact next action
 
-Run **fresh independent Intelligence Officer / `intelligence_officer` only**.
+At the next scheduled three-hour wake, run **Commandant / `commandant` only**.
 
-Read the full Intelligence profile, shell 05 owner/focus and definition-of-done
-sections, Tactical 07 focus table, corrected Combat report 08, reconciliation
-11, the committed correction diff, exact fixture source/tests/manifest,
-`OccludedFoldNormal.js`, `OccludedFold.jsx`, PBA, and current controls. Then:
-
-1. independently compare the corrected owner and every one of the 64 declared
-   focus targets with the rendered DOM and actual `document.activeElement`;
-2. classify `TD009-FUNC-003`, `TD009-FIX-002`, and residual `TD009-FIX-001`;
-3. run the complete non-overlapping Intelligence release gate; and
-4. decide `AS BUILT RELEASED`, `REVISE`, or `HOLD`, synchronize the next exact
-   action, commit, and push only on an accepted release.
-
-Do not rerun Commandant through Combat, Quartermaster, or Image Specialist.
-Do not perform image, board, generation, edit, derivative, integration, reveal,
-canon, route, evidence, persistence, curriculum, reward, access, or successor
-work.
+Guardedly verify the synchronized TD-009 release and define only the next
+selection envelope. Do not preselect RP-010 or deploy a later role. Under
+standing route authority, any next already-mapped adjacent surface-canon
+transition must still pass Colonel derivation, Operations exact adjacency,
+Science viability, and a conflict-free versioned Mission `SHELL READY`
+contract before Marines deploy.
 
 ## Recurring automation
 
-- The authorized Skyscraper heartbeat remains active every three hours in
-  this task.
-- The next wake resumes at fresh Intelligence only and must not repeat the
-  completed Combat correction.
+- The authorized Skyscraper heartbeat remains active every three hours in this
+  task. Its next wake begins with Commandant only.
 
 ## Frozen boundaries
 
-- Martin's TD-009-only image deferral and Image Specialist/reveal waiver remain
-  in force; zero new runtime media is the accepted candidate boundary.
-- No master plan, surface canon, product status, or released boundary advances
-  before fresh Intelligence acceptance.
-- No RP-010 cue or route; no RP-013, successor, ending extension, hidden lore,
-  reward, access, identity, authority, unavailable contents, world response,
-  or post-ending content.
-- Never inspect or mutate Martin's browser/profile/campaign save.
+- OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
+  remains `destination=null`, `routeOpened=false`, `successor=null`.
+- No RP-010 route, successor, RP-013, ending extension, invented canon, reward,
+  access, identity, authority, response, world effect, or post-ending content.
+- Never open hidden lore or inspect/mutate Martin's browser/profile/save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
 - The archived two-team workflow remains inactive.

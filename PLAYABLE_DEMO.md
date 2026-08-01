@@ -14,17 +14,17 @@ Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
 The accepted normal campaign continuation reaches complete `RP-003 / SC-04`
-through `RP-008 / SC-09 / OR-00-OR-30`. Offset Reach includes six equal
+through `RP-009 / SC-10 / OF-00-OF-30`. Occluded Fold includes six equal
 physical observations, bounded independent Python and AI-901 practice with
 two explanations, deterministic atomic local save/rollback/recovery,
-replay-free restore, and exact write-free returns to Braided Verge or City
+replay-free restore, and exact write-free returns to Offset Reach or City
 Threshold. Invalid, private, stale, partial, forged, interrupted, or
 Tour-derived state fails closed without consuming a future valid intent.
 
-The accepted boundary stops at OR-30 or either authorized return. Existing
-continuation is scenery only. No RP-009 route, RP-013, successor, unity,
+The accepted boundary stops at OF-30 or either authorized return. Existing
+continuation is LOOK-only scenery. No RP-010 route, RP-013, successor, unity,
 cause, purpose, identity, reward, access, authority, external action, live
-service, or physical world response is included. SC-04 through SC-09 neither
+service, or physical world response is included. SC-04 through SC-10 neither
 receive nor respond to the local records.
 
 The learning material is course-authored practice. It is not an official exam

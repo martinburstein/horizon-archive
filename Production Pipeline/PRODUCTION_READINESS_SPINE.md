@@ -1,5 +1,18 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-009 Intelligence release current control - 2026-08-01
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-009 /
+  SS-RP009-OCCLUDED-FOLD-v1` on audited candidate `9b0da7c...`.
+- **Position:** exact TD-008 OR-30 -> sole `TD009-RTA-001` -> complete
+  `OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10`.
+- **Gate:** focused `37/37`, full `905/905`, mappings `11/11`, readiness
+  `15/15`, 206/50-module builds, `PBA-TD009-v1`, 64/64 rendered contracts,
+  exact served identity, and one `100.799s` E2E pass.
+- **Boundary:** OF-30, exact Offset Reach/City Threshold returns, or inert
+  LOOK-only null continuation. No RP-010, successor, RP-013, ending extension,
+  authority, response, or world effect.
+
 ## TD-008 Intelligence release current control - 2026-08-01
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-008 /

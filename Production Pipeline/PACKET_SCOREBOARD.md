@@ -1,5 +1,17 @@
 # Rail Packet Scoreboard
 
+## TD-009 Intelligence release current control - 2026-08-01
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-009 /
+  SS-RP009-OCCLUDED-FOLD-v1`.
+- **Released graph:** `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`, followed
+  only by exact Offset Reach or City Threshold returns and inert LOOK-only
+  null continuation.
+- **Evidence:** focused `37/37`, full `905/905`, mappings `11/11`, readiness
+  `15/15`, 206 modules, 64/64 rendered contracts, PBA and one complete E2E.
+- **Stop:** OF-30 or either return. RP-010, successor, RP-013, ending extension,
+  reward, access, authority, response, and world effect remain closed.
+
 ## TD-008 Intelligence release current control - 2026-08-01
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-008 /

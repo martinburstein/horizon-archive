@@ -360,6 +360,29 @@
       "commitConvention": "The dedicated Combat owner/focus correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "one dedicated local correction commit; no push before fresh independent Intelligence release gate",
       "nextStage": "Fresh independent Intelligence Officer only; no Quartermaster/Image/reveal repeat"
+    },
+    {
+      "sequence": 11.3,
+      "stage": "Intelligence Officer Final Release Gate",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-01T21:20:53.612Z",
+      "endedAt": "2026-08-01T21:46:49.326Z",
+      "durationMs": 1555714,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "candidate": "9b0da7c27633a34394fa03dd442353f50b1cc7ad",
+      "startingRemote": "2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551",
+      "imageStage": "Image Specialist and reveal waived by Martin for TD-009 only; no image, board, generation, edit, integration, or reveal calls made",
+      "acceptedCorrections": "TD009-FUNC-001, TD009-FUNC-002, TD009-CONT-002, TD009-FIX-001, TD009-FUNC-003, and TD009-FIX-002 all RESOLVED",
+      "validation": "patch/object integrity PASS; focused 37/37 in 0.534s; connected product 106/106 plus fixture 8/8; full 905/905 in 8.840s; mappings 11/11; readiness 15/15; production 206 modules; fixture 50 modules; PBA release PASS; served production 23/23 and fixture 5/5; exactly one E2E PASS in 100.799s with runtimeErrors false; 64/64 rendered owner/focus contracts; four layouts, frozen copy, modes, logs, local-only inventory, hard stop, cleanup and protected paths PASS",
+      "budget": "PBA-TD009-v1 PASS: JS 1509968 bytes / 4929C07F478C2B1F06D01AE2CF5D00A9FD800F12C6F59AB10A9C462E975011A3; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 media / 37410731 bytes; zero new media; sampled task 39ms",
+      "variances": "TD009-PROC-001, TD009-PRES-001, TD009-CONT-001 DEFERRED LIMITATION; all functional, content, and fixture corrections RESOLVED",
+      "retrospective": "TUNE promoted: rendered fixtures compare shell-frozen owner/focus with actual DOM owner text and document.activeElement",
+      "commit": "PENDING_INTELLIGENCE_RELEASE_COMMIT",
+      "commitConvention": "The dedicated Intelligence release commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "release commit must be pushed; HEAD, origin/main, and remote main must match",
+      "nextStage": "Next scheduled three-hour wake: Commandant only"
     }
   ]
 }

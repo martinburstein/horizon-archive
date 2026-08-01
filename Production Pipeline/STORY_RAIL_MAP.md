@@ -1,5 +1,18 @@
 # Horizon Archive Story Rail Map
 
+## TD-009 Intelligence release current control - 2026-08-01
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-009 /
+  SS-RP009-OCCLUDED-FOLD-v1`; TD-008 OR-30 through sole `TD009-RTA-001`
+  into complete `RP-009 / SC-10 / OF-00-OF-30`.
+- **Graph:** `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`, then only exact
+  Offset Reach or City Threshold returns; invalid state fails closed.
+- **Released evidence:** six equal observations in 720 orders, independent
+  learning, atomic persistence, replay-free restore, invariant world, and
+  code-native zero-new-media SC-10.
+- **Stop:** OF-30, either return, or LOOK-only null continuation. No RP-010,
+  successor, RP-013, ending extension, authority, response, or world effect.
+
 ## TD-008 Intelligence release current control - 2026-08-01
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-008 /

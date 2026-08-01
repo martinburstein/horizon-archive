@@ -17,6 +17,23 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-08-01 / TD-009 Intelligence release - TUNE
+
+- **Observed:** source-only owner/focus assertions allowed a shell-owner
+  mismatch and incorrect replacement focus to reach independent release gates.
+  The returned fixture compared all 64 rendered owners and activeElement targets.
+- **Decision:** `TUNE`. Closed state fixtures must compare shell-frozen owner
+  and focus values with rendered DOM text and actual activeElement.
+- **Expected benefit:** owner and keyboard-recovery defects fail at Combat while
+  preserving independent Intelligence acceptance and storage-free review.
+- **Preserved guardrails:** sequential roles, shell authority, privacy, canon,
+  learning separation, accessibility, atomic save, protected work, and reveal
+  limits remain unchanged.
+- **Validation:** final Intelligence selected all `64/64` states with zero
+  owner/focus mismatch; focused `37/37`, full `905/905`, and live gates passed.
+- **Rollback trigger:** the fixture diverges from production semantics, requires
+  arbitrary/private state, or duplicates rather than detects contract defects.
+
 ## 2026-08-01 / TD-008 Intelligence release - TUNE
 
 - **Observed:** original-resolution Intelligence review found the panorama's
