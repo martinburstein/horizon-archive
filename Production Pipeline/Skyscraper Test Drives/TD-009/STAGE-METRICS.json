@@ -67,6 +67,29 @@
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Operations push gate",
       "nextStage": "Office of Science Administrator"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-08-01T08:38:00.000Z",
+      "endedAt": "2026-08-01T08:42:00.000Z",
+      "durationMs": 240000,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/04-GLOBAL-VIABILITY-ENVELOPE.md",
+      "budgetAuthority": "PBA-TD009-v1",
+      "selectedAddress": "RP-009 / SC-10 / OF-00-OF-30",
+      "route": "sole conditional TD009-RTA-001 after exact predecessor, byte, owner, mode, modality, sanitation and fresh one-hit token proof",
+      "learning": "six equal observations across all 720 orders; strict independent PY-017 primary/trace/transfer and RP009-PROMPT-BOUNDARY-01 primary/retrieval/transfer plus two explanations; no cross-credit",
+      "privacyAndRecovery": "12-key allowlisted record; three ordered separate scopes; private/transient clearing; atomic canonical write/read-back; predecessor byte proof; verified rollback; replay-free restore",
+      "budget": "fresh one-time non-compounding TD-008 rebaseline: JS 1522885 bytes, CSS 104170 bytes, 213 modules, <=2 new images / <=8388608 bytes, total media <=45799339 bytes",
+      "validation": "focused 22/22 in 0.441s; all 720 orders; RP-009 mapping self-test PASS; full 882/882 in 9.167s; production build 203 modules in 7.53s; exact accepted TD-008 JS/CSS/17-media identities; PBA baseline mode PASS",
+      "officialSources": "mandated source-priority skill unavailable; official Microsoft Foundry hub, SDK/endpoints, Agent Service, Content Understanding, AI-901 study guide, and system-message guidance reviewed first; no third-party source",
+      "variances": "none; normal route/UI, browser persistence, closed fixture, final assets, live matrix, served identity and E2E remain downstream obligations",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Science push gate",
+      "nextStage": "Mission Captain"
     }
   ]
 }

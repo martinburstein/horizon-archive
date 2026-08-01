@@ -28,6 +28,8 @@ registry before acting.
 - Colonel certificate: `WNMP-TD009-v1 / WORLD BASELINE`.
 - Operations certificate:
   `CFS-TD009-v1 / FLOOR STACK READY - ROUTE AUTHORIZED`.
+- Science certificate: `VE-TD009-v1 / VIABILITY READY`.
+- Budget authority: `PBA-TD009-v1`.
 - Source authority: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - The whole-product baseline is unchanged.
 - Exactly one provisional surface-safe candidate is derived: a bounded
@@ -45,8 +47,21 @@ registry before acting.
   `OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10`.
 - Hard stop: OF-30 followed only by exact Offset Reach or City Threshold
   returns and one LOOK-only `destination=null`, `routeOpened=false` notation.
-- Science viability, budget authority, shell ID, assets, normal
-  implementation, and Marine work remain deliberately unissued.
+- Science independently validated all 720 observation orders, strict
+  independent PY-017 and prompt-boundary evidence plus both explanations,
+  no-cross-credit, private clearing, the ordered three-record review, atomic
+  save/read-back/rollback, replay-free restore, deterministic recovery/focus,
+  Tour isolation, offline/no-authority/no-exam-guarantee, seven modalities,
+  four layouts, original-resolution asset gates, exact 64-scenario closed
+  fixture, served identity, and the OF-30 hard stop.
+- Fresh Science evidence: focused `22/22`, RP-009 mapping self-test, full
+  `882/882`, current 203-module production build, exact released TD-008
+  JavaScript/CSS/17-media identities, and `PBA-TD009-v1` baseline pass.
+- The fresh non-compounding caps are JavaScript `1,522,885`, CSS `104,170`,
+  `213` modules, at most two new image-only runtime assets totaling at most
+  `8,388,608` bytes, and total runtime media at most `45,799,339` bytes.
+- Shell ID, assets, normal implementation, and Marine work remain
+  deliberately unissued.
 - TD-008 lessons are mandatory: freeze one stable committed candidate before
   Intelligence; inspect generated lineages at original resolution against
   required and forbidden material readings; live-render the exact longest
@@ -56,26 +71,27 @@ registry before acting.
 
 ## Exact next action
 
-Run **Office of Science Administrator /
-`office_of_science_administrator`** only.
+Run **Mission Captain / `mission_captain`** only.
 
-Read the full Science profile, `GDB-TD009-v1`, `WNMP-TD009-v1`,
-`CFS-TD009-v1`, the TD-008 Intelligence reconciliation and exact released
-OR-30 authority, the complete frozen RP-009 curriculum/evaluator authorities,
-the protected Occluded Fold journey, current technical/accessibility/privacy/
-save/offline controls, asset requirements, and fresh current production
-baseline. Independently validate the complete viability envelope for exact
-`RP-009 / SC-10 / OF-00-OF-30` and `TD009-RTA-001`.
+Read the full Mission profile, `GDB-TD009-v1`, `WNMP-TD009-v1`,
+`CFS-TD009-v1`, `VE-TD009-v1`, `PBA-TD009-v1`, the exact released TD-008
+boundary, frozen RP-009 curriculum/evaluator authorities, protected journey,
+current route/controller/UI/test/asset controls, and TD-008 production lessons.
+Reconcile one conflict-free versioned Playable Slice Shell for exact
+`RP-009 / SC-10 / OF-00-OF-30` and sole `TD009-RTA-001`, or issue an honest
+`REVISE`/`HOLD`.
 
-Prove or reject exact predecessor and token sanitation; all 720 observation
-orders; strict independent PY-017 and prompt-boundary learning plus both
-explanations; no cross-credit; privacy clearing; ordered separate retained
-records; atomic save/read-back/rollback; replay-free restore; deterministic
-recovery/focus; Tour isolation; offline/no-authority/no-exam-guarantee;
-four-layout accessibility; asset/provenance/original-resolution constraints;
-one closed storage-free fixture; served identity; and a fresh executable
-non-compounding budget. Issue `VIABILITY READY` with a versioned budget
-authority or an honest `REVISE`/`HOLD`. Do not issue a shell, implement,
+Freeze exact predecessor/token/sanitation order; distinct normal identities;
+the OF-00 through OF-30 graph; six equal observations/all 720 orders; strict
+independent PY-017 and prompt-boundary chains plus both explanations; no-cross-
+credit; privacy clearing; ordered separate RP-007/RP-008/RP-009 records; exact
+12-key atomic persistence/read-back/rollback; replay-free restore; deterministic
+recovery/focus and returns; seven modalities; four layouts and exact longest
+UTF-8 copy; forced colors/reduced motion/grayscale; two conditional SC-10
+runtime image roles with provenance/original-resolution gates; exact 64-state
+storage-free fixture; offline/no-authority/no-exam-guarantee; `PBA-TD009-v1`;
+served identity; stable-candidate freeze; release ladder; and OF-30 hard stop.
+Issue a versioned `SHELL READY` before any Marine deploys. Do not implement,
 generate, inspect browser storage/save, or expose RP-010 or later content.
 
 ## Frozen boundaries
@@ -86,8 +102,8 @@ generate, inspect browser storage/save, or expose RP-010 or later content.
   derive authority from that notation, scenery, retained records, or planning
   order.
 - Six observations remain equal, any-order, idempotent, and world-invariant;
-  PY-016, extraction, and both explanations remain independent; save/restore
-  remains exact, atomic, and replay-free.
+  PY-017, prompt-boundary learning, and both explanations remain independent;
+  save/restore remains exact, atomic, and replay-free.
 - The retained RP-007 summary and complete TD-008 record remain exact and may
   not be replayed, overwritten, merged, universalized, or used as fresh
   learning credit.
