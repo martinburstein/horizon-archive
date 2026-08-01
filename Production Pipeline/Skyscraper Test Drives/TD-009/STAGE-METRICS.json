@@ -206,6 +206,28 @@
       "commitConvention": "The dedicated Quartermaster content-complete commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Quartermaster push gate",
       "nextStage": "Fresh independent Intelligence Officer only; Image Specialist and reveal are waived for TD-009; make no image calls"
+    },
+    {
+      "sequence": 11,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-01T19:42:12.622Z",
+      "endedAt": "2026-08-01T19:54:05.961Z",
+      "durationMs": 713339,
+      "disposition": "REVISE - NOT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "candidate": "7b60ce994a0e11f9ca7ab44f26b89987508c5992",
+      "imageStage": "sequence 10 waived by Martin for TD-009 only; no image or reveal calls made",
+      "contractAudit": "FAIL: pre-save review omits separately named retained RP-008 and candidate RP-009 scopes; all eight OF-20 groups expose Builder/Teacher instead of PILOT // COURSE WORK as active owner; recovery copy reports prior RP-008 instead of prior RP-009 bytes",
+      "validation": "tracked candidate clean; patch integrity PASS; focused 13/13 in 0.381s; connected 98/98 in 0.968s; full 895/895 in 3.952s; mappings 11/11 in 1.157s; production 206 modules in 8.057s; exact PBA bundle identities and 17 predecessor media corroborated; release-only preview/E2E/live gates not run after decisive semantic failure",
+      "budget": "JS 1509180 bytes / 9E862B51C0C773958E624901D9FBFE935174EFED3BDC953E03C622E71C0A77D1; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 media / 37410731 bytes; zero new runtime media",
+      "variances": "TD009-PROC-001, TD009-PRES-001, and TD009-CONT-001 classified DEFERRED LIMITATION; TD009-FUNC-001 and TD009-FUNC-002 classified REQUIRED CORRECTION to Combat; TD009-CONT-002 classified REQUIRED CORRECTION to Quartermaster after Combat",
+      "retrospective": "TUNE recommended but not promoted on failed release: assert frozen active-owner labels, all three named record scopes, and rollback record number in focused rendered tests",
+      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only correction checkpoint; no AS BUILT RELEASED push gate and no HEAD == origin/main claim",
+      "nextStage": "Combat Engineer only for TD009-FUNC-001 and TD009-FUNC-002; Quartermaster and fresh Intelligence remain strictly subsequent"
     }
   ]
 }
