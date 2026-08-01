@@ -11,84 +11,84 @@ registry before acting. This file is the sole exact-next-action authority.
 - Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - Released shell/address: `SS-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 /
   OR-00-OR-30`.
-- TD-009 remains **`REVISE - NOT RELEASED`** until a fresh Intelligence gate.
-- Shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
-- Address: `RP-009 / SC-10 / OF-00-OF-30`.
-- Route: sole `TD009-RTA-001` from exact verified released OR-30.
-- Graph: `OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10`.
+- TD-009 remains **`REVISE - NOT RELEASED`**.
+- TD-009 shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
+- Candidate reviewed by Intelligence:
+  `fb96a559e6d9c1dc921c3b116fd3ff0e3ffd032c`.
 
-## Stable corrected TD-009 candidate
+## Accepted TD-009 product corrections
 
-- Combat correction commit:
-  `d87609bd1376229a17f386117db2d85ef688a02b`.
-- Starting authority for Intelligence: the dedicated Quartermaster return-
-  correction commit containing this synchronized handoff.
-- `TD009-FUNC-001` resolved: pre-save review begins with exact, ordered,
-  separately named `RP-007`, `RP-008`, and `RP-009` record scopes.
-- `TD009-FUNC-002` resolved: all eight OF-20 learning groups retain
-  `PILOT // COURSE WORK` as active owner; Builder/Teacher are subordinate
-  content attribution only.
-- `TD009-CONT-002` resolved: rollback UI and runtime status truthfully name
-  prior RP-009 bytes or verified absence; source-copy and executed verified-
-  rollback tests reject stale RP-008 wording.
-- Preserve six equal any-order observations, independent PY-017 and prompt-
-  boundary evidence, both explanations, exact twelve-key allowlisted record,
-  atomic rollback, replay-free restore, seven modalities, exact returns,
-  invariant world, and OF-30 hard stop.
+- `TD009-FUNC-001` remains resolved: exact ordered RP-007, RP-008, and RP-009
+  review scopes are present.
+- `TD009-FUNC-002` remains resolved: all eight learning groups retain
+  `PILOT // COURSE WORK`; Builder/Teacher are subordinate attribution only.
+- `TD009-CONT-002` remains resolved: rollback UI/runtime truthfully name prior
+  RP-009 bytes or verified absence.
+- Fresh independent validation passed focused `15/15`, connected `94/94`, full
+  `900/900`, mappings `11/11`, production build/PBA, served production
+  `22/22`, served fixture `4/4`, and exactly one complete E2E in `85.068s`.
 
-## Correction evidence
+These accepted product corrections and green automated gates do not release
+TD-009 because the live closed-fixture gate failed.
 
-- focused `15/15`, connected TD-007 through TD-009 `94/94`, full `900/900`;
-- RP-002 through RP-012 mappings `11/11`;
-- production build `206` modules in `7.32s`;
-- JavaScript `1,509,976` bytes /
-  `70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693`;
-- CSS `104,035` bytes /
-  `1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`;
-- exact predecessor media `17 / 37,410,731` bytes; zero TD-009 runtime media;
-- served production `21/21`; patch, scoped leakage, PBA, and owned-process
-  cleanup PASS.
+## Open required correction
 
-This Marine evidence does not replace fresh independent release validation.
+`TD009-FIX-001 / REQUIRED CORRECTION` belongs to Combat Engineer.
+
+The current closed fixture renders only a generic summary shell. Direct live
+evidence found:
+
+- `longest_copy_contained` shows only the frozen heading; the frozen longest
+  label, retained RP-008 row, and truthful PY-017 label are absent;
+- `python_primary_pass` incorrectly shows `SYSTEM // CLOSED FIXTURE` instead
+  of `PILOT // COURSE WORK`;
+- the forced-colors, reduced-motion, and grayscale scenarios only rename the
+  heading and do not reproduce the named presentation mode; and
+- selected scenarios do not render the actual OF controls, errors, focus
+  targets, review rows, or state-specific status transitions.
 
 ## Exact next action
 
-Run **fresh independent Intelligence Officer / `intelligence_officer` only**
-against the dedicated Quartermaster return-correction commit and
-`SS-RP009-OCCLUDED-FOLD-v1`.
+Run **Combat Engineer / `combat_engineer` only** against the dedicated local
+Intelligence `REVISE` commit and `SS-RP009-OCCLUDED-FOLD-v1`.
 
-Read the full Intelligence profile, shell 05, Recon 06, Tactical 07, corrected
-Combat report/source/tests, corrected Quartermaster ledger/source/tests,
-`PBA-TD009-v1`, the prior Intelligence reconciliation, current master
-controls, and this handoff. Independently compare the corrected stable
-candidate with every shell requirement and classify every variance.
+Read the full Combat profile, shell 05, Tactical 07, corrected Combat report,
+current fixture source/tests/manifest, this handoff, and the final section of
+`11-AS-BUILT-RECONCILIATION.md`. Resolve `TD009-FIX-001` only:
 
-Run the complete non-overlapping release ladder: focused/connected/full tests,
-all readiness self-tests, production build and PBA, isolated served identity,
-exactly one complete post-build E2E, and DPR-1 desktop/laptop/narrow/effective-
-200 visual/accessibility review including forced colors, reduced motion,
-grayscale, focus/status/targets, exact UTF-8, request/log containment, QA
-restoration, and owned-process cleanup. Record `PASS - AS BUILT RELEASED`,
-`REVISE`, or `HOLD` honestly; update masters only from accepted evidence;
-record the retrospective; replace this handoff; commit, push at release, and
-verify `HEAD == origin/main == remote refs/heads/main`.
+1. make the local-only, storage-free, production-absent 64-scenario fixture
+   render the exact selected OF product state through the production component
+   and controller or a contract-equivalent deterministic adapter;
+2. map exact owner, heading, status, controls, labels, errors, focus target,
+   and landmark for each selected scenario;
+3. keep every Python/prompt/explanation group owned by
+   `PILOT // COURSE WORK`;
+4. render all four frozen longest-copy samples together and measurably at all
+   four layouts;
+5. make forced colors, reduced motion, and grayscale deterministic live review
+   states rather than heading-only labels; and
+6. add focused fixture coverage that fails on the current defects, rerun the
+   bounded Combat ladder, and issue one dedicated local correction commit.
 
-Do not repeat earlier roles or silently patch Marine work. Image Specialist
-and the reveal remain waived for TD-009 only under Martin's explicit
-direction. Make no board, image generation, edit, derivation, integration, or
-reveal call.
+Do not change accepted product behavior, route, persistence, curriculum,
+canon, or runtime imagery. Make no board, image, generation, edit, derivation,
+integration, or reveal call. Do not run Quartermaster or Intelligence
+concurrently. After Combat returns one stable corrected candidate, run a fresh
+independent Intelligence release gate only; Quartermaster need not repeat
+unless Combat changes player copy/assets or uncovers a content defect.
 
 ## Recurring automation
 
 - The authorized Skyscraper heartbeat remains active every three hours in
   this task.
-- The next wake must resume at fresh independent Intelligence only and must
-  not repeat Commandant through Quartermaster or invoke Image Specialist.
+- The next wake must resume at Combat Engineer for `TD009-FIX-001` only and
+  must not repeat Commandant through Tactical, Quartermaster, or invoke Image
+  Specialist.
 
 ## Frozen boundaries
 
 - No master plan, surface canon, product status, or released boundary advances
-  before Intelligence acceptance.
+  before fresh Intelligence acceptance.
 - No RP-010 cue or route; no RP-013, successor, ending extension, hidden lore,
   reward, access, identity, authority, unavailable contents, world response,
   or post-ending content.

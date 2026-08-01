@@ -270,6 +270,29 @@
       "commitConvention": "The dedicated Quartermaster correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local correction checkpoint; no push before fresh independent Intelligence release gate",
       "nextStage": "Fresh independent Intelligence Officer only; no image or board calls"
+    },
+    {
+      "sequence": 11.1,
+      "stage": "Intelligence Officer Fresh Release Gate",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-01T20:12:07.278Z",
+      "endedAt": "2026-08-01T20:31:09.349Z",
+      "durationMs": 1142071,
+      "disposition": "REVISE - NOT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "candidate": "fb96a559e6d9c1dc921c3b116fd3ff0e3ffd032c",
+      "startingRemote": "2b46d917e9e2bdc7eaadb78bf3dec9cbdf32e551",
+      "imageStage": "sequence 10 and reveal waived by Martin for TD-009 only; no image or board calls made",
+      "acceptedCorrections": "TD009-FUNC-001, TD009-FUNC-002, and TD009-CONT-002 confirmed resolved in product source and focused coverage",
+      "contractAudit": "FAIL: closed fixture renders a generic summary instead of reproducible selected OF product state; longest scenario omits three of four frozen copy samples; Python learning scenario exposes SYSTEM owner; named forced-colors/reduced-motion/grayscale scenarios are inert heading labels",
+      "validation": "patch and object integrity PASS; focused 15/15 in 0.376s; connected 94/94 in 0.808s; full 900/900 in 7.453s; mappings 11/11 in 1.342s; production 206 modules in 8.075s; served production 22/22; served fixture 4/4; exactly one complete post-build E2E PASS in 85.068s; live fixture gate FAIL; owned ports clear",
+      "budget": "PBA-TD009-v1 PASS: JS 1509976 bytes / 70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 media / 37410731 bytes; zero new runtime media",
+      "variances": "TD009-PROC-001, TD009-PRES-001, and TD009-CONT-001 remain DEFERRED LIMITATION; TD009-FUNC-001, TD009-FUNC-002, and TD009-CONT-002 RESOLVED; TD009-FIX-001 REQUIRED CORRECTION to Combat Engineer",
+      "commit": "PENDING_INTELLIGENCE_FIXTURE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence fixture-REVISE commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only correction checkpoint; no AS BUILT RELEASED push gate and no HEAD == origin/main claim",
+      "nextStage": "Combat Engineer only for TD009-FIX-001 fixture implementation; fresh Intelligence strictly subsequent"
     }
   ]
 }
