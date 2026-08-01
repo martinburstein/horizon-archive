@@ -4,6 +4,24 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-08-01 - RP-008 rigid third-lineage cycle reveal
+
+- **Decision:** archive one spoiler-safe reference candidate in which a rigid,
+  faceted third lineage contacts only the laminated glass ribbon while the
+  cellular mantle remains visibly isolated by broad solid host rock.
+- **Asset and complete prompt/provenance:** [RP-008 third-lineage cycle
+  reveal](../Visual%20Direction/Production%20Masters/2026-08-01-rp008-third-lineage-reveal/PROVENANCE.md).
+- **Mode:** built-in `image_gen`; one initial generation was rejected before
+  workspace entry because the third lineage read as flexible brush/cable and
+  made broad multi-strand contact. One permitted precise-object-edit recovery
+  was accepted on original-resolution QA. No third attempt occurred.
+- **Creative Production board:**
+  `9d5428ed-f5bb-41f5-b9cb-c30175ad705a`; item
+  `td008-cycle-reveal`; begin revision `11`; complete revision `12`.
+- **Status:** exactly one accepted PNG is archived as a spoiler-safe canonical
+  reference candidate only. It is not a runtime import or emitted asset and
+  remains pending independent Intelligence Officer release acceptance.
+
 ## 2026-08-01 - RP-008 SC-09 Offset Reach source and runtime masters
 
 - **Decision:** complete exactly `SC-09-PANORAMA-MASTER` and

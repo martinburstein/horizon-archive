@@ -192,6 +192,28 @@
       "commitConvention": "The dedicated Quartermaster CONTENT COMPLETE commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Quartermaster push gate",
       "nextStage": "Image Specialist"
+    },
+    {
+      "sequence": 10,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-08-01T05:24:00.000Z",
+      "endedAt": "2026-08-01T05:47:00.000Z",
+      "durationMs": 1380000,
+      "disposition": "PRESENTATION COMPLETE - THIRD-LINEAGE REVEAL ACCEPTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/10-POLISH-REVIEW.md",
+      "shell": "SS-RP008-OFFSET-REACH-v1",
+      "startingCommit": "e2d3c1760fde85d8cb44e35bd52d390ff3bf4fb5",
+      "presentation": "both Quartermaster runtime masters accepted unchanged after original-resolution topology review and storage-free live fixture presentation review; no runtime, copy, CSS, source, schema or mechanic correction",
+      "liveReview": "exact 1920x1080 plus backend-provided 1280x720 representative state and modality review PASS with zero warning/error logs; Browser viewport overrides for 1366x768, 390x844 and 768x900 were not honored, and security policy blocked mounting the actual component from a data URL, so no false live claims are made and Intelligence must reproduce the complete matrix independently",
+      "reveal": "one accepted reference-only 1672x941 RGB PNG / 2878532 bytes / SHA-256 345900D8BBF181677A0D5892CB1A47B87729A313ED454F6EECA1E0B738D8D9C1; board 9d5428ed-f5bb-41f5-b9cb-c30175ad705a item td008-cycle-reveal begin revision 11 complete revision 12; initial rejected outside workspace, one permitted edit recovery accepted, no third attempt",
+      "validation": "focused 28/28, connected TD-004 through TD-008 plus five fixtures 159/159, full 879/879, mapping validators 11/11, 203-module build, root/two-deep/all-19-assets 22/22 HTTP 200, source/hash, leakage, PBA-TD008-v1, reveal-dist exclusion, logs and owned-process cleanup PASS",
+      "budget": "JS 1450176 <= 1461821; CSS 99112 <= 100351; modules 203 <= 207; new runtime media exactly 2 / 4084934 <= 8388608; total runtime media 17 / 37506807 <= 41810481; reveal reference is absent from dist",
+      "variances": "none; disclosed review limitations are not represented as successful live coverage; native runtime sources remain truthfully documented deterministic enlargements",
+      "commit": "PENDING_IMAGE_SPECIALIST_COMMIT",
+      "commitConvention": "The dedicated Image Specialist commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Image Specialist push gate",
+      "nextStage": "Intelligence Officer"
     }
   ]
 }
