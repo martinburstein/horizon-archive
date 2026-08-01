@@ -64,6 +64,26 @@
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Operations push gate",
       "nextStage": "Office of Science Administrator"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-08-01T00:47:00.000Z",
+      "endedAt": "2026-08-01T00:57:00.000Z",
+      "durationMs": 600000,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/04-GLOBAL-VIABILITY-ENVELOPE.md",
+      "budgetAuthority": "Production Pipeline/Skyscraper Test Drives/TD-008/04A-PRODUCTION-BUDGET-AUTHORITY.json / PBA-TD008-v1",
+      "releasedPredecessor": "TD-007 / SS-RP007-BRAIDED-VERGE-v1 / BV-30 / SC-08 plus exact write-free/replay-free returns",
+      "selectedSlice": "TD-008-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 / OR-00-OR-30",
+      "route": "TD008-RTA-001 independently viable; still conditional and not released or playable",
+      "validation": "official Microsoft AI-901/Foundry/Content Understanding sources current; focused 14/14, connected 78/78, full 865/865, RP-008 mapping self-test, all 720 orders, 198-module build, exact TD-007 production identity, PBA baseline and negative probes PASS",
+      "variances": "none; foundry-azure-source-priority skill unavailable, so mandated official-source-first fallback used and recorded",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Science push gate",
+      "nextStage": "Mission Captain"
     }
   ]
 }
