@@ -3,8 +3,8 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-008",
-    "shellCandidate": "unselected; Colonel provisional narrative candidate only",
-    "campaignAddress": "unselected; Operations must prove exact address from RP-007 / SC-08 / BV-30 plus exact returns",
+    "shellCandidate": "TD-008-RP008-OFFSET-REACH-v1 selected for Science viability; no Mission shell issued",
+    "campaignAddress": "RP-008 / SC-09 / OR-00-OR-30 through conditional TD008-RTA-001 from exact released RP-007 / SC-08 / BV-30",
     "sourceCommit": "0f074cd8f632ae40a2570ba34cc5580f4682e3db",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -45,6 +45,25 @@
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Colonel push gate",
       "nextStage": "Operations Planning Major"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-08-01T00:40:00.000Z",
+      "endedAt": "2026-08-01T00:46:00.000Z",
+      "durationMs": 360000,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/03-CAMPAIGN-FLOOR-STACK.md",
+      "releasedPredecessor": "TD-007 / SS-RP007-BRAIDED-VERGE-v1 / BV-30 / SC-08 plus exact write-free/replay-free returns",
+      "selectedSlice": "TD-008-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 / OR-00-OR-30",
+      "route": "sole fresh Pilot-owned TD008-RTA-001; conditional for Science and Mission, not released or playable",
+      "validation": "TD-007 release/controller, current story rail/scoreboard/spines, RP-008 packet/protected controller, and Colonel candidate reconciled; exact BV-30 -> OR-00 adjacency with no skipped packet; 18/18 Operations contract checks and 31/31 fresh TD-007/RP-008 dependency tests PASS",
+      "variances": "none; destinationless notation, imagery, sound, saved completion, and planning order remain non-routable",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Operations push gate",
+      "nextStage": "Office of Science Administrator"
     }
   ]
 }
