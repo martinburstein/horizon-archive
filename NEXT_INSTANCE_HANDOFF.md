@@ -55,34 +55,87 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit: dedicated local Colonel commit for the current stage; no push at
   this gate.
 
+### Operations Planning Major
+
+- Stage: **`Operations Planning Major / operations_planning_major`**.
+- Certificate: `CFS-TD010-v1`.
+- Disposition: **`FLOOR STACK READY - ROUTE AUTHORIZED`**.
+- Selected address: `RP-010 / SC-11 / CF-00-CF-30`.
+- Sole conditional route: fresh Pilot-owned `TD010-RTA-001` from exact
+  released `OF-30 / SC-10` to blank zero-credit `CF-00`.
+- Graph: `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`.
+- Entry proof: exact released RP-009 canonical raw/object record, byte-stable
+  TD-004 through TD-009 scopes, distinct current Pilot route owner/group,
+  fresh transient one-hit token, validation-before-consumption, and complete
+  sanitation. Invalid, duplicate, stale, forged, private, contaminated,
+  Tour-derived, interrupted, wrong-owner/group/action/modality, or
+  successor-bearing state fails closed to exact OF-30 without write, replay,
+  token expenditure, or SC-11 exposure.
+- Released boundary preserved: OF-30 LOOK remains
+  `destination=null`, `routeOpened=false`, `successor=null`; exact Offset
+  Reach and City Threshold returns remain write-free/replay-free and are not
+  alternate entries.
+- Candidate returns: exact write-free/replay-free Occluded Fold or City
+  Threshold; return to Occluded Fold restores exact OF-30 where the unchanged
+  Offset Reach return remains available.
+- Observations/scopes: seven equal observations in all `5,040` orders; exact
+  ordered RP-007, RP-008, RP-009, and fresh RP-010 scopes remain separately
+  named, read-only, replay-free, and no-cross-credit.
+- Hard stop: `CF-30 / SC-11`, exact returns, or inert LOOK-only
+  field-margin continuation with null destination/route/successor. No RP-011
+  content is exposed.
+- Protected-reference distinction: the existing RP-010 protected journey
+  uses a protected RP-009 reference version and is not the released normal
+  bridge. A distinct normal adapter from exact released RP-009 bytes remains
+  downstream work.
+- Validation: predecessor commit/parent/dedicated scope/blob PASS; Operations
+  contract `15/15`; focused released-normal plus protected-candidate tests
+  `20/20` including all `5,040` orders.
+- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/03-CAMPAIGN-FLOOR-STACK.md`.
+- Variances: none.
+- Commit: dedicated local Operations commit for the current stage; no push at
+  this gate.
+
 ## Exact next action
 
-Run **Operations Planning Major / `operations_planning_major` only**.
+Run **Office of Science Administrator / `office_of_science_administrator`
+only**.
 
-Read the full Operations profile, `GDB-TD010-v1`, `WNMP-TD010-v1`, exact
-released TD-009 route/return/state authorities, and only the exact current
-campaign/dependency controls needed for this boundary.
+Read the full Science profile, `GDB-TD010-v1`, `WNMP-TD010-v1`,
+`CFS-TD010-v1`, exact released TD-009 normal route/record/return/state
+authorities, and the exact current RP-010 learning, evidence, privacy,
+accessibility, save/recovery, offline, performance, fixture, asset, and budget
+controls needed for this boundary.
 
-Evaluate the sole provisional candidate. Prove or reject one exact
-current-source campaign address and one narrow fail-closed transition from
-exact released `OF-30 / SC-10`. Do not treat the destinationless LOOK, either
-released return, the three retained scopes, recurrence, association, sound,
-imagery, persistence, saved completion, planning order, or protected
-`RP-010 / SC-11 / CF-00-CF-30` handles as a released opening.
+Independently validate the complete viability envelope for
+`RP-010 / SC-11 / CF-00-CF-30` and sole conditional route
+`TD010-RTA-001`. Prove exact released RP-009 canonical raw/object and
+TD-004-TD-009 byte identity; preserve the distinction between the released
+normal predecessor and protected reference version; validate one new normal
+bridge, fresh Pilot intent/token, ordered validation before consumption,
+invalid/duplicate/stale/Tour/interruption recovery, all exact state-to-scene
+identities and checkpoints, exact returns, and the CF-30 hard stop.
 
-Define the exact predecessor evidence, one fresh Pilot-owned intent/token,
-sanitation, invalid/interrupted-state recovery, entry, state-to-scene
-identity, checkpoint sequence, both exact write-free/replay-free returns, and
-one deterministic hard stop. Preserve all seven observations as equal and
-any-order; preserve the three predecessor scopes exactly, in order,
-separately named, read-only, and free of replay or cross-credit.
+Validate seven equal observations across all `5,040` orders; strict frozen
+`PY-018` and independent
+`RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` chains plus both explanations;
+no cross-credit; answer-free scored-miss-only recovery; private/transient
+clearing; exact four-scope review; atomic canonical save/read-back/rollback;
+replay-free restore; Tour isolation; offline/no-authority/no-exam-guarantee;
+four-layout accessibility; rendered-owner/actual-focus fixture proof; SC-11
+asset/provenance/original-resolution and bounded-generation obligations; one
+closed storage-free production-absent fixture; served identity; and one fresh
+executable non-compounding budget.
 
 Produce
-`Production Pipeline/Skyscraper Test Drives/TD-010/03-CAMPAIGN-FLOOR-STACK.md`,
-issue `FLOOR STACK READY`, `REVISE`, or `HOLD`, update the stage ledger and
-this handoff, make one dedicated local Operations commit, and stop after
-Operations. If exact released adjacency cannot be proven, issue an honest
-`HOLD`; do not invent a route.
+`Production Pipeline/Skyscraper Test Drives/TD-010/04-GLOBAL-VIABILITY-ENVELOPE.md`
+and a fresh versioned production-budget authority; issue `VIABILITY READY`,
+`REVISE`, or `HOLD`; update the stage ledger and this handoff; make one
+dedicated local Science commit; and stop after Science. Do not issue a shell,
+implement, generate assets, inspect Martin's browser/profile/save, open hidden
+lore, touch protected user files, or expose RP-011, RP-013, a successor,
+ending extension, reward, access, permission, identity, authority, response,
+unavailable contents, Machine relation, readiness judgment, or world effect.
 
 ## Recurring automation
 
@@ -91,9 +144,10 @@ Operations. If exact released adjacency cannot be proven, issue an honest
 
 ## Frozen boundaries
 
-- No TD-010 campaign address, destination, route, token, checkpoint, shell,
-  scene opening, or Marine deployment exists until Operations and subsequent
-  strategic gates pass.
+- `RP-010 / SC-11 / CF-00-CF-30` and `TD010-RTA-001` are planning-only.
+  No released destination, normal route, persisted token, shell, scene
+  opening, implementation, or Marine deployment exists until Science and
+  Mission pass.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do

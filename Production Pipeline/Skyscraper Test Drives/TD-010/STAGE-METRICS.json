@@ -4,8 +4,8 @@
   "run": {
     "testDrive": "TD-010",
     "shellCandidate": "deliberately unselected; Mission shell not authorized",
-    "campaignAddress": "unassigned; Operations must prove or reject exact OF-30 adjacency and route",
-    "provisionalSurfaceCandidate": "one approved cumulative-scope study; protected planning handles RP-010 / Counterfield / SC-11 / CF-00-CF-30 are not an address or route",
+    "campaignAddress": "RP-010 / SC-11 / CF-00-CF-30 through sole conditional TD010-RTA-001",
+    "provisionalSurfaceCandidate": "selected by Operations as the sole current-source cumulative-scope slice; Science viability and Mission shell remain pending",
     "sourceCommit": "b61aea3806e8d14ff2f36d506ffc6135d8c30045",
     "timezone": "America/New_York",
     "executionMode": "scheduled-sequential-nonoverlapping"
@@ -50,6 +50,29 @@
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Colonel push gate",
       "nextStage": "Operations Planning Major"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-08-01T22:07:00.000Z",
+      "endedAt": "2026-08-01T22:17:11.000Z",
+      "durationMs": 611000,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/03-CAMPAIGN-FLOOR-STACK.md",
+      "predecessorVerification": "Colonel commit 8fcef9b2509faccd88ddd8154d45de8368f7b2a5 verified as HEAD with sole parent a3347edd72e631abbaa6a359b3d29ed19cb3eee3, dedicated three-file scope, and byte-identical narrative blob b5a1990848595aec90ae9c42ce0daeeead29cbb3",
+      "releasedPredecessor": "TD-009 / SS-RP009-OCCLUDED-FOLD-v1 / OF-30 / SC-10 plus exact write-free/replay-free Offset Reach and City Threshold returns and inert LOOK-only null continuation",
+      "selectedAddress": "RP-010 / SC-11 / CF-00-CF-30",
+      "route": "sole conditional TD010-RTA-001; distinct Pilot-owned route group and fresh one-hit transient token after exact released RP-009 canonical raw/object, TD-004-TD-009 byte, mode, owner, modality and sanitation proof",
+      "graph": "OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11",
+      "observationsAndScopes": "seven equal observations in all 5,040 orders; exact ordered retained RP-007, RP-008, RP-009 and fresh RP-010 scopes remain separate, read-only, replay-free and no-cross-credit",
+      "hardStop": "CF-30 plus exact Occluded Fold or City Threshold returns and one LOOK-only null-destination field-margin continuation; OF-30 Offset Reach return remains unchanged; no RP-011 exposure",
+      "validation": "15/15 Operations contract checks and 20/20 focused current-source RP-009 released-normal plus RP-010 protected tests PASS",
+      "variances": "none; released LOOK and returns remain unchanged; protected RP-009 reference version is explicitly not a normal bridge and one new normal adapter remains downstream",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Operations push gate",
+      "nextStage": "Office of Science Administrator"
     }
   ]
 }
