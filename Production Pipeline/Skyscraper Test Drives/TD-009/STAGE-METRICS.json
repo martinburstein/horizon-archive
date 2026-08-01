@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-009",
-    "shellCandidate": "unselected - Operations floor stack only; Mission shell not issued",
+    "shellCandidate": "SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY",
     "campaignAddress": "RP-009 / SC-10 / OF-00-OF-30 through sole conditional TD009-RTA-001",
     "sourceCommit": "b0c8c7bea04ba5f17712e090a05f2f651d98581a",
     "timezone": "America/New_York",
@@ -136,6 +136,29 @@
       "commitConvention": "The dedicated Recon commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Recon push gate",
       "nextStage": "Tactical Operations Specialist"
+    },
+    {
+      "sequence": 7,
+      "stage": "Tactical Operations Specialist",
+      "agentId": "tactical_operations_specialist",
+      "startedAt": "2026-08-01T09:01:00.000Z",
+      "endedAt": "2026-08-01T09:11:00.000Z",
+      "durationMs": 600000,
+      "disposition": "EXPERIENCE READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/07-EXPERIENCE-BLUEPRINT.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "graph": "one-owner OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10 with exact write-free/replay-free returns and inert LOOK-only hard stop",
+      "observations": "six equal observations; all 720 orders converge canonically; revisits idempotent; presentation and accessibility remain zero credit",
+      "learning": "independent PY-017 primary/trace/genuinely blank transfer and prompt-boundary primary/retrieval/genuinely blank transfer plus two separately scored explanations; miss-only answer-free blank recovery and no cross-credit",
+      "persistence": "exact ordered 12-key record; retained RP-007, retained RP-008, and RP-009 edge-ledger scopes remain separate/read-only; eight evidence rows; atomic write/read-back, predecessor proof, verified rollback, replay-free restore",
+      "presentation": "exactly two structural SC-10 roles; four layouts; all four exact UTF-8 samples; seven modalities; one owner/status; >=44px targets; forced colors, reduced motion, grayscale, silence, local-only request/log containment",
+      "fixture": "exactly 64 storage-free IDs counted 12+4+6+18+8+8+8; separate harness/product controls; normal controller tests own all 720 permutations",
+      "validation": "Tier-1 shell/treatment trace PASS; fixture list 64/64 unique and complete; RP-009 mapping self-test PASS; focused protected reference 14/14 PASS including all 720 orders; git diff check PASS",
+      "variances": "none; normal implementation, final copy/assets, live layout and assistive evidence, served identity, E2E, and release remain downstream",
+      "commit": "PENDING_TACTICAL_COMMIT",
+      "commitConvention": "The dedicated Tactical commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Tactical push gate",
+      "nextStage": "Combat Engineer"
     }
   ]
 }

@@ -81,6 +81,26 @@ registry before acting.
   exact creative briefs for only `sc10-occluded-fold-panorama` and
   `sc10-occluded-fold-exposed-edge-detail`. No image, implementation, route,
   mechanic, record, evidence, canon, or world-state change was made.
+- Tactical independently verified the shell and creative lock and issued
+  `EXPERIENCE READY - SS-RP009-OCCLUDED-FOLD-v1`. The blueprint freezes one
+  owner/message/content/action group at every checkpoint, the exact ordered
+  route gate and seven-modal one-hit entry, OF-00 through OF-30, all 720 equal
+  observation orders and idempotent revisits, deterministic focus/status,
+  strict independent PY-017 and prompt-boundary chains plus both explanations,
+  and answer-free private-clearing recovery with no cross-credit.
+- Tactical also freezes the exact ordered 12-key record with three separate
+  read-only scopes and eight evidence rows, atomic canonical write/read-back,
+  predecessor-byte proof, verified rollback or hard hold, replay-free restore,
+  exact returns and inert notation, exactly two structural SC-10 role seams,
+  four layouts with all four exact UTF-8 samples, seven modalities, forced
+  colors, reduced motion, grayscale, >=44px targets, local-only request/log
+  containment, and exactly 64 unique storage-free fixture IDs
+  (`12+4+6+18+8+8+8`).
+- Tactical Tier-1 evidence passes: RP-009 mapping self-test, focused protected
+  reference `14/14` including all 720 orders, exact fixture-list completeness,
+  and patch-integrity checks. No runtime source, route, fixture, style, media,
+  browser state, campaign save, evidence, schema, canon, or world state was
+  changed; formal variances are none.
 - The shell is construction authority only. Assets, normal implementation,
   live layout evidence, served identity, and E2E remain unbuilt and unclaimed.
 - TD-008 lessons are mandatory: freeze one stable committed candidate before
@@ -92,31 +112,37 @@ registry before acting.
 
 ## Exact next action
 
-Run **Tactical Operations Specialist / `tactical_operations_specialist`**
+Run **Combat Engineer / `combat_engineer`**
 only.
 
-Read the full Tactical profile, `TD-009/05-PLAYABLE-SLICE-SHELL.md`,
-`TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`, the exact Mission and Recon
-handoffs, and the current source/control sections they cite. Independently
-verify `SS-RP009-OCCLUDED-FOLD-v1` and the Recon thesis **legible edges,
-unreadable whole**, then create one exact
-`TD-009/07-EXPERIENCE-BLUEPRINT.md` or issue `REVISE`/`HOLD`.
+Read the full Combat profile, complete `TD-009/05-PLAYABLE-SLICE-SHELL.md`,
+`TD-009/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`, and
+`TD-009/07-EXPERIENCE-BLUEPRINT.md`, the exact Recon and Tactical handoffs,
+and the current normal TD-008 route/controller/UI/App/storage/scene/fixture/
+CSS controls cited by the blueprint. Independently verify the Tactical
+contract, then implement exact normal `TD009-RTA-001` and
+`OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10` behavior.
 
-Freeze every owner/message/content/action replacement; ordered route
-validation and seven-modal one-hit entry; OF-00 through OF-30; all six equal
-observations, 720 orders, revisits, status and focus; complete independent
-PY-017 and prompt-boundary chains plus both explanations; every blank, miss,
-retry, sanitation, interruption, return, review, atomic save, rollback and
-replay-free restore state; exact 12-key three-scope record presentation; the
-two-role scene/crop/alternative matrix; all four layouts with every exact
-longest UTF-8 sample; forced colors, reduced motion, grayscale, >=44px
-targets, one atomic polite status, local-only request/log containment; and all
-exact 64 storage-free fixture scenarios with product/harness separation.
+Create distinct TD-009 normal route/controller/UI/storage/scene modules,
+focused and related tests, and exactly one production-absent storage-free
+`td009-occluded-fold-v1` fixture with the 64 allowlisted scenarios and separate
+harness/product controls. Preserve the ordered route validation, all seven
+modalities and one-hit semantics, all 720 observation orders/idempotence,
+strict independent learning and explanations, no-cross-credit, the exact
+12-key three-scope atomic record, verified rollback or hard hold, replay-free
+restore, deterministic recovery/focus/status, exact returns and hard stop,
+four layouts, exact UTF-8 samples, accessibility parity, local-only
+containment, protected-journey/fixture production exclusion, and
+`PBA-TD009-v1`.
 
-Use structural placeholders only for the two provisional SC-10 roles. Do not
-implement, generate, alter route/evidence/schema/save/canon/world state,
-inspect browser storage/save, or expose RP-010 or later content. Issue
-`EXPERIENCE READY` before Combat Engineer begins.
+Wire only two truthful structural SC-10 placeholders; do not generate or
+approve final media or change route, evidence, schema, save meaning, canon, or
+world state. Run focused TD-009, connected regression, full suite, mapping and
+readiness validators, production build, PBA candidate, fixture isolation,
+served root/deep/assets, patch integrity, and owned-process cleanup. Create
+`TD-009/08-FUNCTIONAL-BUILD-REPORT.md`, issue `FUNCTIONALLY COMPLETE`,
+`REVISE`, or `HOLD`, commit and push at the Combat gate, and hand only a
+validated functional candidate to Quartermaster.
 
 ## Frozen boundaries
 
