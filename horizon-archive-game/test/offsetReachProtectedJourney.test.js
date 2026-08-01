@@ -281,18 +281,18 @@ test("accessibility metadata preserves responsive, deterministic, non-sensory-eq
   assert.equal(offsetReachPresentation.accessibility.deterministicFocus, true);
 });
 
-test("protected module remains absent from App, main, routes, storage, and production bundle", async () => {
+test("protected identity remains absent after the distinct normal TD008 route enters production", async () => {
   const [app, main] = await Promise.all([
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
-  assert.doesNotMatch(`${app}\n${main}`, /OffsetReachProtectedJourney|RP-008|SC-09|offset_reach_complete/);
+  assert.doesNotMatch(`${app}\n${main}`, /OffsetReachProtectedJourney|rp008\.protected-journey\.v1/);
   const source = await readFile(new URL("../src/OffsetReachProtectedJourney.js", import.meta.url), "utf8");
   assert.doesNotMatch(source, /localStorage|sessionStorage|fetch\(|XMLHttpRequest|https?:\/\//);
   const distFiles = await readdir(new URL("../dist/assets", import.meta.url));
   for (const file of distFiles.filter((name) => /\.(?:js|css)$/.test(name))) {
     const bytes = await readFile(new URL(`../dist/assets/${file}`, import.meta.url), "utf8");
-    assert.doesNotMatch(bytes, /OffsetReachProtectedJourney|offset_reach_complete|OR-00 ARRIVE|RP008-INFORMATION-EXTRACTION-01/);
+    assert.doesNotMatch(bytes, /OffsetReachProtectedJourney|rp008\.protected-journey\.v1|protected_reference_complete/);
   }
 });
 

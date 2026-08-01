@@ -147,6 +147,27 @@
       "commitConvention": "The dedicated Tactical Operations Specialist commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Tactical Operations Specialist push gate",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T01:25:00.000Z",
+      "endedAt": "2026-08-01T01:55:00.000Z",
+      "durationMs": 1800000,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-008/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shell": "SS-RP008-OFFSET-REACH-v1",
+      "stateGraph": "exact BV-30 -> OR-00 -> OR-10 -> OR-20 -> OR-30 with seven-modal one-hit routing, six equal observations, one owner/status, deterministic focus and exact returns",
+      "implementation": "distinct normal TD-008 route/controller/storage/UI/scene resolver; memory-only PY-016; independent AI-901 information extraction; exact 11/8/13/8 record; atomic rollback; replay-free restore; 64-scenario production-absent fixture",
+      "placeholders": "exactly SC-09-PANORAMA-MASTER and SC-09-RELATION-DETAIL-MASTER; structural only, zero new runtime media",
+      "validation": "focused 14/14 plus final amended 1/1, connected 48/48, full 879/879, RP-008 mapping, release validator, 201-module build, served root/deep/assets/fixture, protected and later-route leakage, patch whitespace and PBA-TD008-v1 candidate PASS",
+      "budget": "JS 1450029 <= 1461821; CSS 99302 <= 100351; media 33421873 across 15 predecessor identities; zero new runtime media",
+      "variances": "none; exactly two visual/content placeholders remain for Quartermaster",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "dedicated Combat commit pushed; three-way main verification required before handoff",
+      "nextStage": "Quartermaster"
     }
   ]
 }

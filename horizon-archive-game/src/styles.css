@@ -5,6 +5,98 @@
   font-synthesis: none;
 }
 
+/* TD-008 Offset Reach functional shell. Quartermaster replaces only the two labelled SC-09 placeholders. */
+.offset-verge {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(22rem, .85fr);
+  color: #eef3f1;
+  background: #07100f;
+  overflow: hidden;
+}
+.offset-world {
+  min-width: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  background: #0c1714;
+  border-right: 1px solid #527068;
+}
+.offset-world-placeholder {
+  min-height: 58vh;
+  display: grid;
+  place-items: end start;
+  padding: clamp(1rem, 3vw, 3rem);
+  background:
+    linear-gradient(115deg, transparent 0 28%, rgba(170, 196, 184, .2) 29% 35%, transparent 36% 52%, rgba(94, 132, 119, .25) 53% 61%, transparent 62%),
+    radial-gradient(circle at 74% 38%, #263d37 0 8%, #101d1a 9% 32%, #07100f 70%);
+  color: #d9e5df;
+  font: 700 .72rem/1.4 ui-monospace, monospace;
+  letter-spacing: .08em;
+  overflow-wrap: anywhere;
+}
+.offset-world.is-detail .offset-world-placeholder {
+  background:
+    linear-gradient(85deg, #0a1512 0 22%, #526d63 23% 31%, #15241f 32% 54%, #82988e 55% 61%, #09120f 62%),
+    #0b1512;
+}
+.offset-world figcaption {
+  padding: .7rem 1rem;
+  color: #c6d2cc;
+  background: #0a1211;
+  border-top: 1px solid #3c554e;
+  font-size: .78rem;
+  overflow-wrap: anywhere;
+}
+.offset-panel {
+  min-width: 0;
+  max-height: 100vh;
+  padding: clamp(1rem, 2.4vw, 2rem);
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+.offset-heading h1 { margin: .15rem 0 .65rem; font-size: clamp(1.45rem, 2.5vw, 2.45rem); line-height: 1.08; overflow-wrap: anywhere; }
+.offset-boundary, .offset-errors, .offset-panel [role="status"], .offset-preview-limit, .offset-workspace-truth {
+  padding: .7rem; border: 1px solid #526c64; background: #101d1a; overflow-wrap: anywhere;
+}
+.offset-observations, .offset-review { display: grid; gap: .65rem; padding: 0; list-style: none; }
+.offset-observations li, .offset-review li, .offset-form-grid label, .offset-cases fieldset, .offset-note {
+  padding: .7rem; border: 1px solid #425d55; background: #0d1815;
+}
+.offset-observations button { width: 100%; display: grid; grid-template-columns: 1fr auto; gap: .6rem; text-align: left; }
+.offset-form-grid, .offset-cases { display: grid; gap: .75rem; }
+.offset-form-grid label, .offset-cases label { display: grid; gap: .35rem; }
+.offset-form-grid textarea, .offset-form-grid select, .offset-cases select, .offset-panel > label select {
+  width: 100%; min-height: 44px; color: inherit; background: #07100f; border: 1px solid #6e8a81; overflow-wrap: anywhere;
+}
+.offset-form-grid textarea { resize: vertical; white-space: pre; overflow: auto; }
+.offset-scaffold pre { max-width: 100%; overflow-x: auto; white-space: pre; }
+.offset-actions { display: grid; gap: .55rem; margin-top: 1rem; }
+.offset-actions button, .offset-observations button { min-width: 44px; min-height: 44px; padding: .65rem .8rem; border: 1px solid #86a49a; color: #f4f8f6; background: #172923; overflow-wrap: anywhere; }
+.offset-panel :focus-visible { outline: 3px solid #d7f2e5; outline-offset: 3px; }
+.offset-note dl { display: grid; gap: .5rem; }
+.offset-note div { display: grid; grid-template-columns: minmax(8rem, .4fr) 1fr; gap: .7rem; }
+.offset-note dd { margin: 0; }
+
+@media (max-width: 900px) {
+  .offset-verge { grid-template-columns: 1fr; grid-template-rows: minmax(16rem, 42vh) auto; overflow: visible; }
+  .offset-world { border-right: 0; border-bottom: 1px solid #527068; }
+  .offset-world-placeholder { min-height: 0; }
+  .offset-panel { max-height: none; overflow: visible; }
+  .offset-observations button, .offset-note div { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offset-verge, .offset-verge * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media (forced-colors: active) {
+  .offset-verge, .offset-world, .offset-world-placeholder, .offset-panel, .offset-boundary, .offset-errors,
+  .offset-panel [role="status"], .offset-observations li, .offset-review li, .offset-form-grid label,
+  .offset-cases fieldset, .offset-note, .offset-actions button, .offset-observations button {
+    color: CanvasText; background: Canvas; border-color: CanvasText; forced-color-adjust: auto;
+  }
+  .offset-panel :focus-visible { outline-color: Highlight; }
+}
+
 * { box-sizing: border-box; }
 
 .sr-only {

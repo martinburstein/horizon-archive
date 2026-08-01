@@ -12,6 +12,7 @@ import { ThreeCurrentReach } from "./ThreeCurrentReach.jsx";
 import { ManyfoldReturn } from "./ManyfoldReturn.jsx";
 import { IntervalWorks } from "./IntervalWorks.jsx";
 import { BraidedVerge } from "./BraidedVerge.jsx";
+import { OffsetReach } from "./OffsetReach.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -46,9 +47,14 @@ import {
   createIntervalWorksStorageAdapter,
 } from "./IntervalWorksNormal.js";
 import {
+  BRAIDED_VERGE_SAVE_KEY,
   BRAIDED_VERGE_SHELL_VERSION,
   createBraidedVergeStorageAdapter,
 } from "./BraidedVergeNormal.js";
+import {
+  OFFSET_REACH_SHELL_VERSION,
+  createOffsetReachStorageAdapter,
+} from "./OffsetReachNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -481,6 +487,27 @@ function calibrationMarginReviewSaveOptions(storage) {
     manyfoldBytes,
     threeCurrentBytes,
   });
+  const restoredBraidedVerge = braidedVergeAdapter.read();
+  let braidedBytes = null;
+  try {
+    braidedBytes = storage?.getItem(BRAIDED_VERGE_SAVE_KEY) ?? null;
+  } catch {
+    braidedBytes = null;
+  }
+  const readBraidedBytes = () => {
+    try {
+      return storage?.getItem(BRAIDED_VERGE_SAVE_KEY) ?? null;
+    } catch {
+      return null;
+    }
+  };
+  const offsetReachAdapter = createOffsetReachStorageAdapter(storage, {
+    braidedRecord: restoredBraidedVerge,
+    braidedBytes,
+    intervalBytes,
+    manyfoldBytes,
+    threeCurrentBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -516,6 +543,18 @@ function calibrationMarginReviewSaveOptions(storage) {
       })
     ),
     restoredBraidedVerge: braidedVergeAdapter.read(),
+    readBraidedBytes,
+    offsetReachAdapter,
+    createOffsetReachAdapter: (braidedRecord, currentBraidedBytes) => (
+      createOffsetReachStorageAdapter(storage, {
+        braidedRecord,
+        braidedBytes: currentBraidedBytes,
+        intervalBytes: readIntervalBytes(),
+        manyfoldBytes: readManyfoldBytes(),
+        threeCurrentBytes: readThreeCurrentBytes(),
+      })
+    ),
+    restoredOffsetReach: offsetReachAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2386,6 +2425,10 @@ export function App() {
       MANYFOLD_RETURN_SHELL_VERSION,
       INTERVAL_WORKS_SHELL_VERSION,
       BRAIDED_VERGE_SHELL_VERSION,
+      OFFSET_REACH_SHELL_VERSION,
+      INTERVAL_WORKS_SHELL_VERSION,
+      BRAIDED_VERGE_SHELL_VERSION,
+      OFFSET_REACH_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2459,7 +2502,9 @@ export function App() {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === BRAIDED_VERGE_SHELL_VERSION
+        status: controller.getState().shellVersion === OFFSET_REACH_SHELL_VERSION
+          ? "offset_reach_restored"
+          : controller.getState().shellVersion === BRAIDED_VERGE_SHELL_VERSION
           ? "braided_verge_restored"
           : controller.getState().shellVersion === INTERVAL_WORKS_SHELL_VERSION
           ? "interval_works_restored"
@@ -2506,6 +2551,7 @@ export function App() {
       || result?.state?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
       || result?.state?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
       || result?.state?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
+      || result?.state?.shellVersion === OFFSET_REACH_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3676,6 +3722,7 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === INTERVAL_WORKS_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3702,6 +3749,15 @@ export function App() {
     if (calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION) {
       return (
         <BraidedVerge
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
+    if (calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION) {
+      return (
+        <OffsetReach
           state={calibrationMarginEntryView}
           onAction={dispatchCalibrationMarginEntry}
           onFieldChange={updateCalibrationMarginPythonField}

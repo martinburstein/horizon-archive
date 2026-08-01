@@ -1,4 +1,4 @@
-import {
+﻿import {
   CALIBRATION_MARGIN_ENTRY_ACTION,
   CALIBRATION_MARGIN_PROTECTED_ENTRY_VERSION,
   calibrationMarginEntryAccessibility,
@@ -64,6 +64,16 @@ import {
   createBraidedVergeRouteIntent,
   sanitizeBraidedVergeSave,
 } from "./BraidedVergeNormal.js";
+import {
+  OFFSET_REACH_ROUTE_GROUP,
+  OFFSET_REACH_ROUTE_OWNER,
+  OFFSET_REACH_SHELL_VERSION,
+  createOffsetReachIntent,
+  createOffsetReachNormalController,
+  createOffsetReachRouteIntent,
+  offsetReachActions,
+  sanitizeOffsetReachSave,
+} from "./OffsetReachNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -137,6 +147,25 @@ function intervalStateWithBraidedRoute(state) {
   };
 }
 
+function braidedStateWithOffsetRoute(state) {
+  if (state?.activeGroup !== "bv30_restore") return state;
+  return {
+    ...state,
+    phase: "BV-30 ROUTE CHOICE",
+    activeGroup: OFFSET_REACH_ROUTE_GROUP,
+    owner: OFFSET_REACH_ROUTE_OWNER,
+    headingId: "td008-route-choice-heading",
+    statusMessageId: "td008:bv30_offset_reach_route_choice:ready",
+    statusMessage: "The exact released Braided Verge note remains restored. A fresh independent Pilot choice may follow the expedition-marked adjacent Offset Reach survey; no scenery or prior result dispatches it.",
+    availableActions: [
+      offsetReachActions.route,
+      braidedVergeActions.returnInterval,
+      braidedVergeActions.returnThreshold,
+    ],
+    focusIntent: { group: OFFSET_REACH_ROUTE_GROUP, target: "td008-route-choice-heading" },
+  };
+}
+
 function protectedOptions(verifiedRestoreState, returnedCityThreshold, restoredState) {
   const valid = exactVerifiedRestore(verifiedRestoreState)
     && exactReturnedThreshold(returnedCityThreshold);
@@ -182,13 +211,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let manyfoldReturnController = null;
   let intervalWorksController = null;
   let braidedVergeController = null;
+  let offsetReachController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (braidedVergeController) return braidedVergeController.getState();
+    if (offsetReachController) return offsetReachController.getState();
+    if (braidedVergeController) return braidedStateWithOffsetRoute(braidedVergeController.getState());
     if (intervalWorksController) return intervalStateWithBraidedRoute(intervalWorksController.getState());
     if (manyfoldReturnController) return manyfoldReturnController.getState();
     if (threeCurrentController) return threeCurrentController.getState();
@@ -295,6 +326,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     manyfoldReturnController = null;
     intervalWorksController = null;
     braidedVergeController = null;
+    offsetReachController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -348,6 +380,22 @@ export function createCalibrationMarginNormalEntry(options = {}) {
               restoredRecord: restoredBraided,
               adapter: options.braidedVergeAdapter,
             });
+            const restoredOffset = sanitizeOffsetReachSave(options.restoredOffsetReach);
+            if (restoredOffset) {
+              offsetReachController = createOffsetReachNormalController({
+                predecessorRecord: restoredBraided,
+                predecessorBytes: options.readBraidedBytes?.(),
+                readPredecessorBytes: options.readBraidedBytes,
+                intervalBytes: options.readIntervalBytes?.(),
+                readIntervalBytes: options.readIntervalBytes,
+                manyfoldBytes: options.readManyfoldBytes?.(),
+                readManyfoldBytes: options.readManyfoldBytes,
+                threeCurrentBytes: options.readThreeCurrentBytes?.(),
+                readThreeCurrentBytes: options.readThreeCurrentBytes,
+                restoredRecord: restoredOffset,
+                adapter: options.offsetReachAdapter,
+              });
+            }
           }
         }
       }
@@ -401,8 +449,51 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (offsetReachController) {
+        const result = offsetReachController.dispatch(intent);
+        if (result.status === "returned_to_braided_verge_write_free") {
+          offsetReachController = null;
+          return Object.freeze({
+            ...result,
+            state: clonePublicState(braidedStateWithOffsetRoute(braidedVergeController.getState())),
+          });
+        }
+        return result;
+      }
       if (braidedVergeController) {
-        const result = braidedVergeController.dispatch(intent);
+        const braidedState = braidedVergeController.getState();
+        if (braidedState.activeGroup === "bv30_restore"
+          && intent?.allowlistedActionId === offsetReachActions.route) {
+          const predecessorRecord = braidedVergeController.getRecord();
+          const currentBraidedBytes = options.readBraidedBytes?.() ?? JSON.stringify(predecessorRecord);
+          const candidate = createOffsetReachNormalController({
+            predecessorRecord,
+            predecessorBytes: currentBraidedBytes,
+            readPredecessorBytes: options.readBraidedBytes,
+            intervalBytes: options.readIntervalBytes?.(),
+            readIntervalBytes: options.readIntervalBytes,
+            manyfoldBytes: options.readManyfoldBytes?.(),
+            readManyfoldBytes: options.readManyfoldBytes,
+            threeCurrentBytes: options.readThreeCurrentBytes?.(),
+            readThreeCurrentBytes: options.readThreeCurrentBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredOffsetReach,
+            adapter: options.createOffsetReachAdapter?.(predecessorRecord, currentBraidedBytes)
+              ?? options.offsetReachAdapter,
+          });
+          if (candidate.getState().shellVersion !== OFFSET_REACH_SHELL_VERSION) {
+            return Object.freeze({ status: "rejected", reason: "offset_route_rejected",
+              state: clonePublicState(braidedStateWithOffsetRoute(braidedState)) });
+          }
+          offsetReachController = candidate;
+          return Object.freeze({ status: "offset_reach_arrived_zero_evidence", evidenceGranted: false,
+            state: clonePublicState(offsetReachController.getState()) });
+        }
+        const mappedIntent = intent?.activeGroupId === OFFSET_REACH_ROUTE_GROUP
+          ? createBraidedVergeIntent({ activeGroup: "bv30_restore", owner: "SYSTEM // RESTORED EXPEDITION NOTE" },
+            intent.allowlistedActionId, intent.activationKind, intent.opaqueFreshEventToken)
+          : intent;
+        const result = braidedVergeController.dispatch(mappedIntent);
         if (result.status === "returned_to_interval_works_write_free") {
           braidedVergeController = null;
           return Object.freeze({
@@ -658,6 +749,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (offsetReachController) {
+        return offsetReachController.updateField(name, value);
+      }
       if (braidedVergeController) {
         return braidedVergeController.updateField(name, value);
       }
@@ -711,6 +805,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getBraidedVergeRecord() {
       return braidedVergeController?.getRecord() ?? null;
     },
+    getOffsetReachRecord() {
+      return offsetReachController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -758,6 +855,25 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === OFFSET_REACH_ROUTE_GROUP) {
+    if (action === offsetReachActions.route) {
+      return createOffsetReachRouteIntent(action, activationKind, eventToken);
+    }
+    return createBraidedVergeIntent(
+      { activeGroup: "bv30_restore", owner: "SYSTEM // RESTORED EXPEDITION NOTE" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (shellVersionOrPhaseIsOffsetReach(activeGroup)) {
+    return createOffsetReachIntent(
+      { activeGroup: activeGroup ?? "or00_orientation", owner: offsetReachOwner(activeGroup) },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (activeGroup === BRAIDED_VERGE_ROUTE_GROUP) {
     if (action === braidedVergeActions.route) {
       return createBraidedVergeRouteIntent(action, activationKind, eventToken);
@@ -928,6 +1044,28 @@ function shellVersionOrPhaseIsIntervalWorks(activeGroup) {
 
 function shellVersionOrPhaseIsBraidedVerge(activeGroup) {
   return typeof activeGroup === "string" && activeGroup.startsWith("bv");
+}
+
+function shellVersionOrPhaseIsOffsetReach(activeGroup) {
+  return typeof activeGroup === "string" && activeGroup.startsWith("or");
+}
+
+function offsetReachOwner(activeGroup) {
+  if (activeGroup === "or00_orientation") return "SCENE // OFFSET REACH";
+  if (activeGroup === "or10_observations") return "SCENE // SENSOR RECORD";
+  if (["or20_python_primary", "or20_python_transfer"].includes(activeGroup)) return "BUILDER WORK // SANITIZED REPLICA";
+  if (activeGroup === "or20_python_trace") return "TEACHER / COURSE // CLOSED-NOTE TRACE";
+  if (activeGroup === "or20_ai_primary" || activeGroup === "or20_ai_transfer") return "TEACHER / COURSE // INFORMATION EXTRACTION";
+  if (activeGroup === "or20_ai_retrieval") return "TEACHER / COURSE // CLOSED-NOTE RETRIEVAL";
+  if (["or20_selection_explanation", "or20_inference_explanation"].includes(activeGroup)) return "TEACHER / COURSE // EXPLANATION";
+  if (activeGroup === "or20_repair") return "SYSTEM // PRIVATE-SAFE RECOVERY";
+  if (activeGroup === "or20_review") return "PILOT // EXPEDITION REVIEW";
+  if (activeGroup === "or20_save") return "PILOT // EXPEDITION RECORD";
+  if (activeGroup === "or20_transaction") return "SYSTEM // LOCAL TRANSACTION";
+  if (activeGroup === "or20_save_recovery") return "SYSTEM // VERIFIED ROLLBACK";
+  if (activeGroup === "or20_rollback_unverified") return "SYSTEM // TRANSACTION HOLD";
+  if (activeGroup === "or30_restore") return "SYSTEM // RESTORED EXPEDITION NOTES";
+  return "SCENE // OFFSET REACH";
 }
 
 function braidedVergeOwner(activeGroup) {

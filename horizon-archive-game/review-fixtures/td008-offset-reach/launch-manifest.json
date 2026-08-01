@@ -1,0 +1,17 @@
+{
+  "fixtureId": "td008-offset-reach-v1",
+  "rootMarker": "TD008_OFFSET_REACH_FIXTURE",
+  "host": "127.0.0.1",
+  "port": 4180,
+  "storage": "frozen-in-memory-only",
+  "acceptsArbitraryState": false,
+  "scenarios": [
+    "route_pointer", "route_touch", "route_keyboard_enter", "route_keyboard_space", "route_switch", "route_speech", "route_screen_reader", "route_invalid_predecessor", "route_invalid_intent", "route_duplicate_or_stale", "route_private_contaminated", "route_tour_isolated",
+    "or00_arrive", "or10_inspect", "or20_revise", "or30_restore",
+    "observation_familiar_continuity_trace", "observation_recurring_familiar_contact", "observation_comparable_non_contact", "observation_cross_family_contact", "observation_unavailable_case", "observation_layered_stewardship",
+    "python_primary_blank", "python_primary_miss", "python_primary_pass", "python_trace_blank", "python_trace_pass", "python_transfer_blank", "python_transfer_pass", "ai_primary_blank", "ai_primary_miss", "ai_primary_pass", "ai_retrieval_blank", "ai_retrieval_pass", "ai_transfer_blank", "ai_transfer_pass", "selection_explanation_blank", "selection_explanation_pass", "inference_explanation_blank", "inference_explanation_pass",
+    "resume_contiguous_prefix", "resume_first_gap", "interruption_before_consumption", "interruption_after_or00_pre_save", "private_work_cleared", "json_work_cleared", "feedback_work_cleared", "atomic_polite_status",
+    "review_ineligible", "review_eligible", "save_committed", "save_rollback_verified", "restore_replay_free", "return_braided_verge", "return_city_threshold", "continuation_inert",
+    "layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "mode_forced_colors", "mode_reduced_motion", "mode_grayscale", "longest_copy_contained"
+  ]
+}

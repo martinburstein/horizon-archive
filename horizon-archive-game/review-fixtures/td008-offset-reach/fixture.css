@@ -1,0 +1,13 @@
+:root { color: #edf4f0; background: #07100f; font-family: system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.fixture-shell { min-height: 100vh; display: grid; grid-template-columns: 18rem 1fr; }
+.fixture-harness { padding: 1rem; border-right: 2px solid #8ca59c; background: #111c19; }
+.fixture-harness select, .fixture-product button { width: 100%; min-height: 44px; }
+.fixture-product { display: grid; grid-template-columns: 1.4fr 1fr; min-width: 0; }
+.fixture-world { min-height: 50vh; background: radial-gradient(circle at 65% 40%, #587267, #172622 28%, #07100f 70%); }
+.fixture-panel { padding: clamp(1rem, 3vw, 2rem); min-width: 0; overflow-wrap: anywhere; }
+.fixture-panel [role=status] { padding: .75rem; border: 1px solid #8ca59c; }
+@media (max-width: 800px) { .fixture-shell, .fixture-product { grid-template-columns: 1fr; } .fixture-harness { border-right: 0; border-bottom: 2px solid #8ca59c; } }
+@media (forced-colors: active) { .fixture-harness, .fixture-world, .fixture-panel { background: Canvas; color: CanvasText; border-color: CanvasText; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

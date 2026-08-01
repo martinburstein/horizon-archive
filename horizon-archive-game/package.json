@@ -14,6 +14,7 @@
     "review:td005-manyfold-return": "vite --config review-fixtures/td005-manyfold-return/vite.config.js --host 127.0.0.1 --port 4177",
     "review:td006-interval-works": "vite --config review-fixtures/td006-interval-works/vite.config.js --host 127.0.0.1 --port 4178",
     "review:td007-braided-verge": "vite --config review-fixtures/td007-braided-verge/vite.config.js --host 127.0.0.1 --port 4179",
+    "review:td008-offset-reach": "vite --config review-fixtures/td008-offset-reach/vite.config.js --host 127.0.0.1 --port 4180",
     "test": "node --test"
   },
   "dependencies": {

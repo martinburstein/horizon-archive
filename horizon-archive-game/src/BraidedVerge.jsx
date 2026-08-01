@@ -10,6 +10,7 @@ import braidedVergePanorama from "../../Visual Direction/Production Masters/2026
 import braidedVergeContactDetail from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp";
 
 const headingCopy = {
+  bv30_offset_reach_route_choice: "Offset Reach adjacent survey",
   bv00_orientation: "Braided Verge",
   bv10_observations: "Inspect braided evidence",
   bv20_python_primary: "Write and read the bounded report",
@@ -30,6 +31,7 @@ const headingCopy = {
 };
 
 const introductionCopy = {
+  bv30_offset_reach_route_choice: "The released Braided Verge note remains unchanged. A fresh Pilot-owned adjacent survey choice may enter Offset Reach; scenery and prior results do not dispatch it.",
   bv00_orientation: "Two material continuities cross one immense serviced region without becoming one system. Recurrent local contact supports cautious association only; the closed junction remains unavailable.",
   bv10_observations: "Record five equal physical observations in any order. Shared region is not shared identity; recurrence is not coordination; difference is not error; relative order is not cause; closure is not an access challenge.",
   bv20_python_primary: "Use the supplied sanitized report and exact relative filename. The approved plan writes once with UTF-8, reads once with UTF-8, compares the round trip, and clears its isolated session-only memory workspace.",
@@ -78,6 +80,7 @@ const observationLabels = {
 };
 
 const actionIds = {
+  "PILOT // FOLLOW EXPEDITION-MARKED ADJACENT SURVEY TO OFFSET REACH": "td008-route-offset-reach",
   [braidedVergeActions.inspect]: "bv00-inspect-action",
   [braidedVergeActions.continuities]: "bv-observation-continuities",
   [braidedVergeActions.association]: "bv-observation-association",
