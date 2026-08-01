@@ -16,6 +16,11 @@ test("TD009 production UI exposes the four exact longest UTF-8 samples", () => {
   assert.doesNotMatch(`${component}\n${controller}`, /Ã|Â|â€”|â€“|â€|â€™/);
 });
 
+test("TD009 verified rollback copy names prior RP-009 bytes or verified absence", () => {
+  assert.match(component, /Prior RP-009 bytes or verified absence were restored exactly\. Retry begins without private work\./);
+  assert.doesNotMatch(component, /prior RP-008 bytes or verified absence were restored/i);
+});
+
 test("TD009 retires image placeholders into truthful code-native treatment with no runtime media", () => {
   assert.doesNotMatch(component, /structural placeholder|final media seam|not final art/i);
   assert.equal((component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? []).length, 0);

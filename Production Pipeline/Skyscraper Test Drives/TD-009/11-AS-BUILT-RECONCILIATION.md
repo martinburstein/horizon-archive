@@ -180,6 +180,26 @@ audit, and issue one dedicated local Quartermaster correction commit. Make no
 image or board call. Do not run Intelligence concurrently; a fresh independent
 Intelligence release gate follows the stable Quartermaster candidate.
 
+## Quartermaster return evidence
+
+Quartermaster independently confirmed the returned Combat corrections and
+resolved `TD009-CONT-002` only. Both player-facing rollback surfaces now name
+prior RP-009 bytes or verified absence; the runtime status also confirms
+TD-008 through TD-004 predecessor bytes unchanged. New focused assertions
+exercise the actual write-failure/verified-rollback path and reject stale
+RP-008 wording.
+
+Correction evidence is focused `15/15`, connected `94/94`, full `900/900`,
+mappings `11/11`, build `206` modules, served production `21/21`, patch and
+cleanup PASS, and `PBA-TD009-v1` PASS at JavaScript `1,509,976` bytes, CSS
+`104,035` bytes, and exact predecessor media `17 / 37,410,731` bytes. This is
+Marine correction evidence, not a new Intelligence release decision.
+
+`TD009-FUNC-001`, `TD009-FUNC-002`, and `TD009-CONT-002` are now resolved in
+the stable sequential candidate. The exact next action is a **fresh independent
+Intelligence Officer release gate only**. Image Specialist and the reveal
+remain waived for TD-009, and no image or board call is authorized.
+
 ## Synchronization and protection
 
 This dedicated Intelligence `REVISE` commit is a local correction checkpoint,

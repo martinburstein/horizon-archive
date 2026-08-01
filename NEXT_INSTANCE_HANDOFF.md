@@ -11,87 +11,89 @@ registry before acting. This file is the sole exact-next-action authority.
 - Release commit: `b0c8c7bea04ba5f17712e090a05f2f651d98581a`.
 - Released shell/address: `SS-RP008-OFFSET-REACH-v1 / RP-008 / SC-09 /
   OR-00-OR-30`.
-- TD-009 disposition: **`REVISE - NOT RELEASED`**.
-- Intelligence-audited candidate:
-  `7b60ce994a0e11f9ca7ab44f26b89987508c5992`.
-- Authoritative reconciliation:
-  `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
-
-## TD-009 frozen candidate contract
-
-- Shell: **`SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`**.
+- TD-009 remains **`REVISE - NOT RELEASED`** until a fresh Intelligence gate.
+- Shell: `SS-RP009-OCCLUDED-FOLD-v1 / SHELL READY`.
 - Address: `RP-009 / SC-10 / OF-00-OF-30`.
-- Sole route: `TD009-RTA-001` from exact verified released OR-30.
+- Route: sole `TD009-RTA-001` from exact verified released OR-30.
 - Graph: `OR-30 / SC-09 -> OF-00 -> OF-10 -> OF-20 -> OF-30 / SC-10`.
+
+## Stable corrected TD-009 candidate
+
+- Combat correction commit:
+  `d87609bd1376229a17f386117db2d85ef688a02b`.
+- Starting authority for Intelligence: the dedicated Quartermaster return-
+  correction commit containing this synchronized handoff.
+- `TD009-FUNC-001` resolved: pre-save review begins with exact, ordered,
+  separately named `RP-007`, `RP-008`, and `RP-009` record scopes.
+- `TD009-FUNC-002` resolved: all eight OF-20 learning groups retain
+  `PILOT // COURSE WORK` as active owner; Builder/Teacher are subordinate
+  content attribution only.
+- `TD009-CONT-002` resolved: rollback UI and runtime status truthfully name
+  prior RP-009 bytes or verified absence; source-copy and executed verified-
+  rollback tests reject stale RP-008 wording.
 - Preserve six equal any-order observations, independent PY-017 and prompt-
   boundary evidence, both explanations, exact twelve-key allowlisted record,
   atomic rollback, replay-free restore, seven modalities, exact returns,
   invariant world, and OF-30 hard stop.
-- Martin's TD-009-only panorama, Image Specialist, and reveal waiver remains
-  in force. Make no image board, generation, edit, derivation, integration, or
-  reveal call. The waiver does not generalize to later cycles.
 
-## Intelligence `REVISE` findings
+## Correction evidence
 
-Automated gates and the fresh build pass, but the implementation fails three
-frozen shell-visible requirements:
-
-1. **`TD009-FUNC-001 / REQUIRED CORRECTION / Combat Engineer`** - the pre-save
-   review renders an RP-007 summary plus observation/evidence rows, but omits
-   separately named retained-RP-008 and candidate-RP-009 record scopes.
-2. **`TD009-FUNC-002 / REQUIRED CORRECTION / Combat Engineer`** - all eight
-   OF-20 groups render Builder or Teacher as active owner instead of frozen
-   `PILOT // COURSE WORK`; Builder/Teacher may be subordinate content
-   attribution only.
-3. **`TD009-CONT-002 / REQUIRED CORRECTION / Quartermaster`** - rollback copy
-   says prior RP-008 bytes were restored although the save contract restores
-   prior RP-009 bytes or verified absence.
-
-Independent evidence already completed on the rejected candidate:
-
-- focused `13/13`, connected `98/98`, full `895/895`, mappings `11/11`;
-- production build `206` modules;
-- JS `1,509,180` bytes /
-  `9E862B51C0C773958E624901D9FBFE935174EFED3BDC953E03C622E71C0A77D1`;
+- focused `15/15`, connected TD-007 through TD-009 `94/94`, full `900/900`;
+- RP-002 through RP-012 mappings `11/11`;
+- production build `206` modules in `7.32s`;
+- JavaScript `1,509,976` bytes /
+  `70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693`;
 - CSS `104,035` bytes /
   `1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`;
-- exact `17` predecessor media / `37,410,731` bytes; zero new runtime media.
+- exact predecessor media `17 / 37,410,731` bytes; zero TD-009 runtime media;
+- served production `21/21`; patch, scoped leakage, PBA, and owned-process
+  cleanup PASS.
 
-These passing checks do not override the semantic failures. Browser preview,
-complete E2E, live layout/accessibility matrix, served identity, and release
-synchronization were not claimed after the decisive contract failure.
+This Marine evidence does not replace fresh independent release validation.
 
 ## Exact next action
 
-Run **Quartermaster / `quartermaster` only** against
-`SS-RP009-OCCLUDED-FOLD-v1` after the dedicated Combat correction commit.
+Run **fresh independent Intelligence Officer / `intelligence_officer` only**
+against the dedicated Quartermaster return-correction commit and
+`SS-RP009-OCCLUDED-FOLD-v1`.
 
-Resolve only `TD009-CONT-002`: the rollback message must truthfully name prior
-RP-009 bytes or verified absence, not prior RP-008 bytes. Add exact UTF-8 and
-rollback-path coverage, rerun the bounded content audit, and confirm the
-corrected three ordered record scopes and all eight Pilot-owned course-work
-groups remain intact. Make one dedicated local Quartermaster correction commit
-and synchronize the handoff to fresh independent Intelligence.
+Read the full Intelligence profile, shell 05, Recon 06, Tactical 07, corrected
+Combat report/source/tests, corrected Quartermaster ledger/source/tests,
+`PBA-TD009-v1`, the prior Intelligence reconciliation, current master
+controls, and this handoff. Independently compare the corrected stable
+candidate with every shell requirement and classify every variance.
 
-Do not deploy Intelligence concurrently. Make no image or board call; Martin's
-TD-009-only image deferral and Image Specialist/reveal waiver remain in force.
+Run the complete non-overlapping release ladder: focused/connected/full tests,
+all readiness self-tests, production build and PBA, isolated served identity,
+exactly one complete post-build E2E, and DPR-1 desktop/laptop/narrow/effective-
+200 visual/accessibility review including forced colors, reduced motion,
+grayscale, focus/status/targets, exact UTF-8, request/log containment, QA
+restoration, and owned-process cleanup. Record `PASS - AS BUILT RELEASED`,
+`REVISE`, or `HOLD` honestly; update masters only from accepted evidence;
+record the retrospective; replace this handoff; commit, push at release, and
+verify `HEAD == origin/main == remote refs/heads/main`.
+
+Do not repeat earlier roles or silently patch Marine work. Image Specialist
+and the reveal remain waived for TD-009 only under Martin's explicit
+direction. Make no board, image generation, edit, derivation, integration, or
+reveal call.
 
 ## Recurring automation
 
 - The authorized Skyscraper heartbeat remains active every three hours in
   this task.
-- The next wake continues from the Combat-only correction checkpoint above;
-  it must not repeat Commandant through Tactical, invoke Image Specialist, or
-  restart Intelligence before the two sequential Marine correction passes.
+- The next wake must resume at fresh independent Intelligence only and must
+  not repeat Commandant through Quartermaster or invoke Image Specialist.
 
 ## Frozen boundaries
 
-- No master plan, surface canon, product status, or released boundary advances.
+- No master plan, surface canon, product status, or released boundary advances
+  before Intelligence acceptance.
 - No RP-010 cue or route; no RP-013, successor, ending extension, hidden lore,
   reward, access, identity, authority, unavailable contents, world response,
   or post-ending content.
-- No new audio, font, video, source map, Python/WASM runtime, network payload,
-  or TD-009 image dependency.
+- No new image, audio, font, video, source map, Python/WASM runtime, network
+  payload, or TD-009 media dependency.
 - Never inspect or mutate Martin's browser/profile/campaign save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.

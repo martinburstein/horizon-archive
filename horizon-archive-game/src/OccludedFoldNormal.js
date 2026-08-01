@@ -1057,7 +1057,7 @@ export function createOccludedFoldNormalController(options = {}) {
                 ? `td009:save:${result.reason ?? "failed"}:rolled-back`
                 : "td009:save:rollback-unverified",
               statusMessage: rollbackVerified
-                ? "The candidate did not replace the prior verified record or verified absence. Rollback and predecessor bytes were verified; retry starts without private work."
+                ? "Prior RP-009 bytes or verified absence were restored exactly; TD-008 through TD-004 predecessor bytes were also verified unchanged. Retry starts without private work."
                 : "Rollback or predecessor equality could not be verified. Progression is held and only safe returns remain.",
             }),
           });

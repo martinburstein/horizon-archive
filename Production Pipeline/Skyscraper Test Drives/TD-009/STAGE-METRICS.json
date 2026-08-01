@@ -248,6 +248,28 @@
       "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local correction checkpoint; no push before Quartermaster and fresh Intelligence release gate",
       "nextStage": "Quartermaster only for TD009-CONT-002; no image calls; fresh Intelligence strictly subsequent"
+    },
+    {
+      "sequence": 9.1,
+      "stage": "Quartermaster Return Correction",
+      "agentId": "quartermaster",
+      "startedAt": "2026-08-01T20:05:27.613Z",
+      "endedAt": "2026-08-01T20:12:07.278Z",
+      "durationMs": 399665,
+      "disposition": "CONTENT COMPLETE - RETURN CORRECTED - IMAGERY DEFERRED BY MARTIN",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-009/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP009-OCCLUDED-FOLD-v1",
+      "startingAuthority": "d87609bd1376229a17f386117db2d85ef688a02b / Combat return correction",
+      "correction": "TD009-CONT-002 resolved: UI and runtime verified-rollback copy truthfully name prior RP-009 bytes or verified absence; executed rollback-path and exact source-copy tests reject stale RP-008 wording",
+      "combatRevalidation": "three exact ordered RP-007/RP-008/RP-009 review scopes remain intact; all eight OF-20 learning groups retain PILOT // COURSE WORK with Builder/Teacher subordinate only",
+      "validation": "focused 15/15; connected TD-007 through TD-009 94/94; full 900/900; mappings 11/11; production 206 modules in 7.32s; served production 21/21; patch integrity, scoped leakage, and owned port cleanup PASS",
+      "budget": "PBA-TD009-v1 PASS: JS 1509976 bytes / 70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693; CSS 104035 bytes / 1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB; 206 modules; 17 predecessor media / 37410731 bytes",
+      "imageBoundary": "Martin's TD-009-only image deferral and Image Specialist/reveal waiver preserved; zero board or image calls",
+      "variances": "TD009-CONT-002 resolved; TD009-FUNC-001 and TD009-FUNC-002 independently reconfirmed; deferred image limitations unchanged",
+      "commit": "PENDING_QUARTERMASTER_RETURN_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Quartermaster correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local correction checkpoint; no push before fresh independent Intelligence release gate",
+      "nextStage": "Fresh independent Intelligence Officer only; no image or board calls"
     }
   ]
 }

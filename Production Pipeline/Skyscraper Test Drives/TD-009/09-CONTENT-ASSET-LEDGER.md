@@ -180,6 +180,37 @@ Every player-facing structural placeholder is retired or explicitly
 dispositioned. No image is a TD-009 runtime or release dependency. Image
 Specialist and the cycle reveal remain waived for TD-009 only.
 
+## Returned Quartermaster correction pass
+
+Intelligence returned `TD009-CONT-002` after the Combat correction commit
+`d87609bd1376229a17f386117db2d85ef688a02b`. Quartermaster independently
+confirmed Combat's two corrections remain exact: the review begins with
+separately named `RP-007`, `RP-008`, and `RP-009` scopes in that order, and
+all eight OF-20 learning groups retain `PILOT // COURSE WORK` as active owner
+with Builder/Teacher limited to subordinate content attribution.
+
+The only content correction changes the save-recovery copy to truthfully
+state: `Prior RP-009 bytes or verified absence were restored exactly.` The
+runtime atomic status also names prior RP-009 bytes or verified absence and
+separately confirms TD-008 through TD-004 predecessor bytes unchanged. Exact
+source-copy and executed write-failure/verified-rollback assertions now reject
+any regression to prior RP-008 wording.
+
+Correction validation passed: focused `15/15`; connected TD-007 through
+TD-009 `94/94`; full product `900/900`; mappings `11/11`; production build
+`206` modules in `7.32s`; served production root, deep fallback, and all
+emitted assets `21/21`; patch integrity and owned-port cleanup PASS.
+`PBA-TD009-v1` remains green at JavaScript `1,509,976` bytes / SHA-256
+`70BDD04BBE44E21ED4BC9AC59805991C24F6A6EEB21FA7D2AA37827C1DE17693`,
+CSS `104,035` bytes / SHA-256
+`1C24B2141944CF2429CC3B78162F95A32D44005421B87E84D6156660B7076EFB`,
+and exact predecessor media `17 / 37,410,731` bytes. No board, image,
+browser-profile, campaign-save, or protected-path call occurred.
+
+`TD009-CONT-002` is **resolved**. The disposition remains **CONTENT COMPLETE
+- IMAGERY DEFERRED BY MARTIN**, and the sole next recipient is fresh
+independent Intelligence.
+
 ## Exact Intelligence Officer handoff
 
 - **Stage / agent:** fresh independent Intelligence Officer /

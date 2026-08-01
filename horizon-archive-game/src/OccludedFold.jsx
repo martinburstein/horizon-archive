@@ -42,7 +42,7 @@ const introductionCopy = {
   of20_review: "Retained RP-007, retained RP-008, and candidate RP-009 records remain ordered, separately attributable, read-only, and free of inferred internal topology.",
   of20_save: "The preview contains only the strict twelve-key record, three separate scopes, and eight finalized evidence rows. It is a local expedition record only.",
   of20_transaction: "The System is checking strict sanitation, one canonical write and read-back, rollback safety, and unchanged TD-008 through TD-004 bytes.",
-  of20_save_recovery: "The prior RP-008 bytes or verified absence were restored and checked. Retry begins without private work.",
+  of20_save_recovery: "Prior RP-009 bytes or verified absence were restored exactly. Retry begins without private work.",
   of20_rollback_unverified: "Progression is held because rollback or predecessor equality cannot be proven. No save, route, or success is claimed.",
   of30_restore: "The retained RP-007, retained RP-008, and bounded RP-009 records restored separately without replay. No identity, topology, continuity, transformation, cause, purpose, access, authority, or destination follows.",
 };

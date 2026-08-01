@@ -159,6 +159,18 @@ test("TD009 pre-save review renders three exact ordered record scopes without me
 test("TD009 exact twelve-key save commits atomically, restores without replay, and hard-stops", () => {
   const { controller } = subject(); advance(controller); assert.equal(controller.getState().activeGroup, "of20_review"); dispatch(controller, occludedFoldActions.review); const saved = dispatch(controller, occludedFoldActions.save); assert.equal(saved.status, "save_committed_verified_restore"); assert.deepEqual(Object.keys(saved.record), ["version", "packetId", "mappingId", "checkpoint", "continuation", "cityStateDelta", "externalStateDelta", "successor", "retainedRp007Summary", "retainedRp008Summary", "edgeLedger", "evidence"]); assert.equal(saved.record.evidence.length, 8); assert.equal(saved.record.version, OCCLUDED_FOLD_RECORD_VERSION); assert.equal(sanitizeOccludedFoldSave(saved.record)?.checkpoint, "occluded_fold_complete"); const look = dispatch(controller, occludedFoldActions.notation); assert.equal(look.routeOpened, false); assert.equal(controller.getState().activeGroup, "of30_restore"); assert.equal(controller.getState().successor, null);
 });
+test("TD009 verified rollback names prior RP-009 bytes or verified absence exactly", () => {
+  const { controller } = subject("write-failure");
+  advance(controller);
+  dispatch(controller, occludedFoldActions.review);
+  const result = dispatch(controller, occludedFoldActions.save);
+  assert.equal(result.status, "save_failed_rollback_verified");
+  assert.equal(result.rollbackVerified, true);
+  assert.equal(result.predecessorBytesPreserved, true);
+  assert.equal(result.state.activeGroup, "of20_save_recovery");
+  assert.match(result.state.statusMessage, /^Prior RP-009 bytes or verified absence were restored exactly;/);
+  assert.doesNotMatch(result.state.statusMessage, /prior RP-008 bytes/i);
+});
 test("TD009 Tour and invalid route fail closed before SC-10", () => {
   const tour = subject("normal", { mode: "demo_tour" }).controller; assert.notEqual(tour.getState().shellVersion, OCCLUDED_FOLD_SHELL_VERSION); const invalid = createOccludedFoldNormalController({}); assert.equal(invalid.getState().boardState, "SC-09"); assert.equal(resolveOccludedFoldWorldScene(invalid.getState()).role, "SC-09-PANORAMA-MASTER");
 });
