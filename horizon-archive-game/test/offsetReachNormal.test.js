@@ -178,6 +178,34 @@ test("TD008 information extraction is independent 8/8 and reports only actually 
   assert.deepEqual(evaluateOffsetReachInformationExtraction("primary", answers).misconceptionTags, ["ocr_equals_field_extraction"]);
 });
 
+test("TD008 review shows retained RP-007 first, then six observations and eight independent learning records", () => {
+  const { controller } = subject(); advanceAll(controller);
+  const reviewed = dispatch(controller, offsetReachActions.review);
+  assert.equal(reviewed.state.reviewRows.length, 15);
+  assert.deepEqual(reviewed.state.reviewRows.map((row) => row.id), [
+    "retained_rp007_summary",
+    ...offsetReachObservationIds,
+    "PY-016:primary",
+    "PY-016:trace",
+    "PY-016:transfer",
+    "RP008-INFORMATION-EXTRACTION-01:primary",
+    "RP008-INFORMATION-EXTRACTION-01:retrieval",
+    "RP008-INFORMATION-EXTRACTION-01:transfer",
+    "RP008-INFORMATION-EXTRACTION-01:selection_boundary_explanation",
+    "RP008-INFORMATION-EXTRACTION-01:inference_boundary_explanation",
+  ]);
+  assert.deepEqual(reviewed.state.reviewRows[0], {
+    id: "retained_rp007_summary",
+    owner: "Retained — separately valid",
+    state: "Complete",
+  });
+  assert.equal(new Set(reviewed.state.reviewRows.map((row) => row.id)).size, 15);
+  assert.equal(reviewed.state.reviewRows.slice(1).every((row) => row.state === "Complete"), true);
+  assert.equal(reviewed.state.statusMessage,
+    "Six observations and eight learning records are complete. The separately retained RP-007 summary remains valid. The strict bounded preview is ready for an explicit local-only save.");
+  assert.doesNotMatch(reviewed.state.statusMessage, /Thirteen/);
+});
+
 test("TD008 full flow commits exact 11/8/13/8 record and preserves four predecessor byte strings", () => {
   const item = subject(); advanceAll(item.controller); assert.equal(item.controller.getState().activeGroup, "or20_review");
   dispatch(item.controller, offsetReachActions.review);

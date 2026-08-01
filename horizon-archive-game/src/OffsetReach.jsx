@@ -302,7 +302,7 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
         )}
 
         {state.reviewRows?.length > 0 && (
-          <ul className="offset-review" aria-label="Fourteen independent responsibilities">
+          <ul className="offset-review" aria-label="Retained summary plus fourteen independent responsibilities">
             {state.reviewRows.map((row) => (
               <li key={row.id}><strong>{row.owner}</strong><span>{row.state}</span></li>
             ))}

@@ -24,6 +24,7 @@ test("TD008 UI preserves one status, native labelled forms, focus, and minimum t
   assert.equal((component.match(/role="status"/g) ?? []).length, 1);
   assert.match(component, /aria-live="polite"/);
   assert.match(component, /aria-atomic="true"/);
+  assert.match(component, /aria-label="Retained summary plus fourteen independent responsibilities"/);
   assert.match(component, /<fieldset/);
   assert.match(component, /<legend/);
   assert.match(component, /useLayoutEffect/);

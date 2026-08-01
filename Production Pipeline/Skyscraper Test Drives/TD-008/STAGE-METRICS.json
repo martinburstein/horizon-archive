@@ -167,6 +167,17 @@
       "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
       "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "dedicated Combat commit pushed; three-way main verification required before handoff",
+      "intelligenceCorrection": {
+        "id": "TD008-FUNC-001",
+        "disposition": "CORRECTED - RETURN TO INTELLIGENCE",
+        "scope": "OR-20 review only: prepend exact retained RP-007 summary row, preserve six-observation then eight-learning-record order, expose 15 rows, correct atomic status and accessible list name",
+        "impact": "no route, evidence, schema, save, persistence, canon, scene, asset, reveal, return or hard-stop change",
+        "validation": "affected 12/12; focused TD-008 29/29; full 880/880; RP-002 through RP-012 mapping self-tests 11/11; automated release checks; 203-module build; PBA-TD008-v1 candidate; root/two-deep/all-19-assets served identity 22/22; patch and owned-process cleanup PASS",
+        "bundle": "JS 1450343 / 88CEE7A5047CF0491887D4663B8C1A24771642017D0F6BB89EC0C550F9A0B36C; CSS 99112 / 6BEF0D7BDA63696C96BE14473B936DDFA751795A4EE1A3B7593C5FDD9E2C251D; media unchanged 17 / 37506807",
+        "variances": "none",
+        "commit": "PENDING_TD008_FUNC_001_COMBAT_COMMIT",
+        "synchronization": "local dedicated correction commit only; Intelligence final gate owns push"
+      },
       "nextStage": "Quartermaster"
     },
     {

@@ -211,3 +211,57 @@ response, unavailable contents or world effect.
   `Production Pipeline/Skyscraper Test Drives/TD-008/09-CONTENT-ASSET-LEDGER.md`
 - **Required disposition:** `CONTENT COMPLETE`, `REVISE` or `HOLD`
 - **Next recipient:** Image Specialist / `image_specialist`
+
+## Intelligence-required correction TD008-FUNC-001
+
+Intelligence returned one exact functional review-surface defect to Combat
+Engineer ownership. The initial OR-20 review emitted only the six fresh
+observation rows and eight fresh learning-record rows. It omitted the
+separately required retained RP-007 summary row, used an inaccurate
+`Thirteen independent responsibilities` status, and exposed an ambiguous
+fourteen-responsibility accessible list name.
+
+The bounded correction:
+
+- prepends exact row ID `retained_rp007_summary` with owner/label
+  `Retained — separately valid`;
+- preserves the next fourteen rows in exact order: six canonical observations
+  followed by the eight ordered evidence records, with no merge or credit
+  change;
+- exposes exactly fifteen visible review rows;
+- states that six observations and eight learning records are complete while
+  the separately retained RP-007 summary remains valid;
+- names the list `Retained summary plus fourteen independent responsibilities`;
+  and
+- adds exact count, membership, ordering, owner/label, completion, status and
+  accessible-name regression assertions.
+
+No route, evidence, schema, save, persistence, canon, scene, asset, reveal,
+return or hard-stop meaning changed. Formal variances remain **none**. This
+dedicated local Combat correction returns directly to Intelligence Officer;
+Intelligence owns the final live/E2E/four-layout release gate and push.
+
+Correction validation from exact starting commit
+`10d7aaf98683bfb57bc30047420c2f758c6ad6c3`:
+
+| Gate | Corrected result |
+|---|---|
+| Affected normal + UI | `12/12 PASS` |
+| TD-008 focused normal/protected/UI/fixture | `29/29 PASS`; `0.405s` Node duration |
+| Full product suite | `880/880 PASS`; `9.498s` Node duration |
+| RP-002 through RP-012 mapping self-tests | `11/11 PASS` |
+| Automated release validator | `PASS`; full suite, build, RP-002 self-test, E2E syntax and patch integrity; `21.3s` |
+| Production build | `PASS`; `203` modules; Vite `9.29s` |
+| `PBA-TD008-v1` candidate | `PASS`; no accepted runtime identity missing |
+| Served production | root + two deep fallbacks + all 19 emitted assets exact byte/hash: `22/22 PASS` |
+| Owned cleanup | ports `4180` and `5193` clear; no owned job/process remains |
+
+Corrected bundle identity is JavaScript `index-DPVsjHZ1.js`, `1,450,343`
+bytes, SHA-256
+`88CEE7A5047CF0491887D4663B8C1A24771642017D0F6BB89EC0C550F9A0B36C`.
+CSS remains `index-BJjBVihW.css`, `99,112` bytes, SHA-256
+`6BEF0D7BDA63696C96BE14473B936DDFA751795A4EE1A3B7593C5FDD9E2C251D`.
+Runtime media remains exact `17` files / `37,506,807` bytes, including the
+unchanged two SC-09 assets and all fifteen predecessor identities. The PBA
+caps retain `11,478` JavaScript bytes, `1,239` CSS bytes, four module slots,
+and `4,303,674` total-runtime-media bytes of headroom.

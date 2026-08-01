@@ -994,6 +994,7 @@ export function createOffsetReachNormalController(options = {}) {
         }
         tokens.add(token);
         const reviewRows = [
+          { id: "retained_rp007_summary", owner: "Retained — separately valid", state: "Complete" },
           ...offsetReachObservationIds.map((id) => ({ id, owner: `PILOT // ${id}`, state: "Complete" })),
           ...expectedEvidence().map(([skill, form]) => ({ id: `${skill}:${form}`, owner: `${skill} / ${form}`, state: "Complete" })),
         ];
@@ -1003,7 +1004,7 @@ export function createOffsetReachNormalController(options = {}) {
           state: setGroup("or20_save", {
             reviewRows,
             statusMessageId: "td008:review:ready",
-            statusMessage: "Thirteen independent responsibilities are complete. The strict bounded preview is ready for an explicit local-only save.",
+            statusMessage: "Six observations and eight learning records are complete. The separately retained RP-007 summary remains valid. The strict bounded preview is ready for an explicit local-only save.",
           }),
         });
       }
