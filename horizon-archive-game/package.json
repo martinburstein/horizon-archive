@@ -17,6 +17,8 @@
     "review:td008-offset-reach": "vite --config review-fixtures/td008-offset-reach/vite.config.js --host 127.0.0.1 --port 4180",
     "review:td009-occluded-fold": "vite --config review-fixtures/td009-occluded-fold/vite.config.js --host 127.0.0.1 --port 4181",
     "review:td010-counterfield": "vite --config review-fixtures/td010-counterfield/vite.config.js --host 127.0.0.1 --port 4182",
+    "test:td010-shell-contract": "node --test review-fixtures/td010-counterfield/shellContractBrowser.test.js",
+    "test:td010-served-identity": "node --test review-fixtures/td010-counterfield/servedIdentity.test.js",
     "test": "node --test"
   },
   "dependencies": {

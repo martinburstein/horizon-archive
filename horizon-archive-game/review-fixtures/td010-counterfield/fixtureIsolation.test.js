@@ -24,6 +24,15 @@ test("TD010 browser fixture compares visible owner and actual active element to 
   assert.match(source, /document\.activeElement\?\.id/); assert.match(source, /renderedOwner === declaredOwner && activeElementId === declaredFocus/); assert.match(source, /data-rendered-contract=/);
   for (const name of counterfieldScenarioNames) { const state = createCounterfieldScenario(name).state; assert.ok(state.owner); assert.ok(state.focusIntent.target); }
   const exact = {
+    route_pointer: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_touch: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_keyboard_enter: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_keyboard_space: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_switch: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_speech: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    route_screen_reader: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading"],
+    cf20_exchange_save: ["PILOT // COURSE WORK", "cf20-python-primary-editor"],
+    client_primary_miss: ["SYSTEM // RECOVERY", "cf20-client-primary-first-failed"],
     resume_contiguous_prefix: ["PILOT // COURSE WORK", "cf20-python-transfer-editor"],
     resume_first_gap: ["PILOT // COURSE WORK", "cf20-python-primary-editor"],
     request_response_work_cleared: ["PILOT // COURSE WORK", "cf20-python-trace-first"],

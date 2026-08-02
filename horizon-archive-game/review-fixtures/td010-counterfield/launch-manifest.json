@@ -8,7 +8,7 @@
   "scenarios": [
     "route_pointer", "route_touch", "route_keyboard_enter", "route_keyboard_space", "route_switch", "route_speech", "route_screen_reader",
     "route_invalid_released_predecessor", "route_protected_predecessor_rejected", "route_invalid_intent", "route_duplicate_or_stale", "route_private_contaminated", "route_tour_isolated",
-    "cf00_arrive", "cf10_survey", "cf20_bound_exchange", "cf30_restore",
+    "cf00_arrive", "cf10_survey", "cf20_exchange_save", "cf30_restore",
     "observation_recurrent_adjacency", "observation_incomplete_ordered_change", "observation_cross_scale_correspondence", "observation_ordinary_unmatched_feature", "observation_multi_candidate_relation", "observation_unavailable_margin", "observation_layered_stewardship",
     "python_primary_blank", "python_primary_miss", "python_primary_pass", "python_trace_blank", "python_trace_pass", "python_transfer_blank", "python_transfer_pass",
     "client_primary_blank", "client_primary_miss", "client_primary_pass", "client_retrieval_blank", "client_retrieval_pass", "client_transfer_blank", "client_transfer_pass",

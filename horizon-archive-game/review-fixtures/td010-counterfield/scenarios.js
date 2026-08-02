@@ -54,12 +54,13 @@ function learningGroup(name) {
 }
 function groupFor(name) {
   const learning = learningGroup(name); if (learning) return learning;
+  if (["route_pointer", "route_touch", "route_keyboard_enter", "route_keyboard_space", "route_switch", "route_speech", "route_screen_reader"].includes(name)) return "cf00_orientation";
   if (name === "resume_contiguous_prefix") return "cf20_python_transfer";
   if (name === "resume_first_gap") return "cf20_python_primary";
   if (name === "request_response_work_cleared") return "cf20_python_trace";
   if (name === "cf00_arrive") return "cf00_orientation";
   if (name === "cf10_survey" || name in observations || name.startsWith("mode_")) return "cf10_observations";
-  if (name === "cf20_bound_exchange" || name === "review_ineligible") return "cf20_python_primary";
+  if (name === "cf20_exchange_save" || name === "review_ineligible") return "cf20_python_primary";
   if (name === "save_rollback_verified") return "cf20_save_recovery";
   if (["cf30_restore", "save_committed", "restore_replay_free", "continuation_inert"].includes(name)) return "cf30_restore";
   if (name.includes("work_cleared") || name === "atomic_polite_status") return "cf20_recovery";
@@ -68,7 +69,7 @@ function groupFor(name) {
 function publicState(name) {
   const group = groupFor(name), [owner, headingId, focus, heading, actions] = groupSpecs[group];
   const recorded = name in observations ? [counterfieldObservationIds[observations[name]]] : name === "resume_contiguous_prefix" ? counterfieldObservationIds.slice(0, 3) : name === "resume_first_gap" ? [counterfieldObservationIds[0], counterfieldObservationIds[2]] : group.startsWith("cf20") || group === "cf30_restore" ? [...counterfieldObservationIds] : [];
-  const resumeFocus = focus;
+  const resumeFocus = name === "client_primary_miss" ? "cf20-client-primary-first-failed" : focus;
   return Object.freeze({ shellVersion: COUNTERFIELD_SHELL_VERSION, controllerVersion: COUNTERFIELD_CONTROLLER_VERSION, packetId: "RP-010", mappingId: "RP010-REQUEST-CLIENT-BOUNDARY-01", phase: group === "cf30_restore" ? "CF-30 VERIFY + RETURN" : group === "cf10_observations" ? "CF-10 SURVEY SEPARATE DISTRICTS" : group === "cf00_orientation" ? "CF-00 ARRIVE + ORIENT" : "CF-20 BOUND EXCHANGE + SAVE", boardState: "SC-11", activeGroup: group, owner, headingId, heading, statusRegionId: "counterfield-status", statusMessageId: `td010:fixture:${name}`, statusMessage: group === "cf20_recovery" ? "SYSTEM // RECOVERY: Only the named public dimensions remain incomplete. Private work was discarded; guidance contains no answer and retry starts blank." : name === "continuation_inert" ? "A destinationless field-margin observation was recorded with destination=null, routeOpened=false, successor=null, zero persistence, and zero evidence." : `Selected exact ${name} product state is ready; storage, network, cross-credit, authority, successor, and world response remain absent.`, availableActions: [...actions, counterfieldActions.returnOccludedFold, counterfieldActions.returnThreshold], recordedObservationIds: recorded, sceneObservationId: name in observations ? counterfieldObservationIds[observations[name]] : null, form: formFor(group), failedPublicIds: group === "cf20_recovery" ? ["first_incomplete_responsibility"] : [], reviewRows: ["cf20_review", "cf20_save"].includes(group) ? counterfieldScopeRows.map((row) => ({ ...row })) : [], evidenceCount: ["cf20_review", "cf20_save", "cf30_restore"].includes(group) ? 8 : 0, cityStateDelta: null, externalStateDelta: null, successor: null, routeOpened: false, replayedEvents: [], focusIntent: { group, target: resumeFocus } });
 }
 function boundaryState(name) {

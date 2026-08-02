@@ -393,35 +393,82 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated local Image revision checkpoint; no
   push. Intelligence remains blocked.
 
+### Combat Engineer - correction return
+
+- Stage: **`Combat Engineer / combat_engineer`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Starting authority: exact Image checkpoint
+  `4a9943530d0385ff3284493227c2a47c549ff54e` over Quartermaster
+  content-complete commit `167b23aa0ee685dc85da86419facc2bbca7d44d0`.
+- Disposition: **`FUNCTIONALLY COMPLETE - CORRECTION VERIFIED`**.
+- `TD010-FIX-001`: exact fixture ID `cf20_exchange_save` is restored;
+  `cf20_bound_exchange` is absent and the allowlist remains exactly 66 unique
+  shell-ordered IDs.
+- `TD010-FIX-002`: all seven route modalities now render blank CF-00 with
+  visible `SYSTEM // EXPEDITION LEDGER` and actual focus `cf00-heading`.
+- `TD010-FIX-003`: `client_primary_miss` now renders and focuses the distinct
+  `cf20-client-primary-first-failed` target.
+- Independent authority: a new isolated Chrome regression parses the exact 66
+  rows from shell 05, requires exact manifest and picker IDs, and compares
+  visible `[data-active-owner]` text plus actual
+  `document.activeElement.id` for every row with zero differences. Fixture-
+  declared state is not the expected authority.
+- Validation: focused `10/10` including all `5,040` orders; shell-authoritative
+  live `66/66`; four exact layouts and forced-colors/reduced-motion/grayscale
+  PASS; full `917/917` with zero skips; mappings `11/11`; readiness `15/15`;
+  automated release checks PASS; production/fixture `209/52` modules; served
+  root/deep/chunks/media exact; PBA, privacy/protected/later/fixture, JSON, and
+  patch scans PASS.
+- PBA: JS `1,561,633` / `1,585,466`, CSS `108,581` / `109,236`, `209 / 216`
+  modules, exact `17 / 37,410,731` predecessor media, and zero new media.
+- Assets/generation: both runtime roles remain retired;
+  `selectedImageRoles` remains empty; CSS medium remains truthful; no image or
+  board call, generation attempt, output byte, provenance package, runtime
+  asset, or reveal was created.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`
+  correction addendum.
+- Commit/synchronization: one dedicated local Combat correction commit; no
+  push. The commit containing this handoff is the non-recursive authority.
+  Intelligence remains blocked.
+
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against exact shell
+Run **Image Specialist / `image_specialist` only** against exact shell
 `SS-RP010-COUNTERFIELD-v1`, Quartermaster content-complete commit
-`167b23aa0ee685dc85da86419facc2bbca7d44d0`, and the dedicated Image
-`REVISE` checkpoint.
+`167b23aa0ee685dc85da86419facc2bbca7d44d0`, Image return checkpoint
+`4a9943530d0385ff3284493227c2a47c549ff54e`, and the dedicated local Combat
+correction commit containing the correction addendum and this handoff.
 
-Correct exactly `TD010-FIX-001`, `TD010-FIX-002`, and `TD010-FIX-003` in the
-production-absent, storage-free TD-010 fixture and focused fixture tests.
-Restore exact scenario ID `cf20_exchange_save`; map all seven successful route
-modalities to blank CF-00 with rendered owner `SYSTEM // EXPEDITION LEDGER`
-and actual focus `cf00-heading`; and render/focus
-`cf20-client-primary-first-failed` for `client_primary_miss`.
+Independently recheck `TD010-FIX-001`, `TD010-FIX-002`, and
+`TD010-FIX-003` directly against shell 05 and the corrected live fixture.
+Confirm exact `cf20_exchange_save`, all seven route modalities at blank CF-00
+with `SYSTEM // EXPEDITION LEDGER / cf00-heading`, and
+`client_primary_miss` at
+`SYSTEM // RECOVERY / cf20-client-primary-first-failed` before presentation
+acceptance.
 
-Add one independent regression that parses or otherwise freezes every exact
-shell-05 scenario row and compares all 66 unique manifest IDs, visible
-`[data-active-owner]` text, and actual `document.activeElement.id`, with zero
-differences. Do not accept self-declared fixture state as the shell authority.
+Resume the fresh code-native SC-11 presentation review at desktop, laptop,
+narrow, and effective-200 layouts; forced colors, reduced motion, grayscale,
+longest copy, focus/status/targets, invariant-world and forbidden-reading
+checks; and the required single TD-010 cycle reveal. Both conditional runtime
+image roles remain retired, `selectedImageRoles` is empty, and CSS is the
+truthful rendering medium. Do not silently reinstate a runtime role.
 
-Preserve every accepted product mechanic and content decision, both retired
-runtime image roles, CSS rendering-medium truth, fixture storage/network/
-production isolation, all four layouts and assistive modes, privacy, PBA,
-exact returns, invariant world, and CF-30 hard stop. Make no board or image
-call and create no reveal bytes. Run focused Counterfield/fixture checks, the
-all-66 shell comparison, full suite, mappings, readiness, production and
-fixture builds, PBA, privacy/protected/later scans, served identity, patch
-integrity, and owned-process cleanup. Update report/metrics/handoff, make one
-dedicated local Combat correction commit, no push, then hand back to Image
-Specialist. Stop before Intelligence.
+The generation allowance remains one initial private attempt and at most one
+targeted recovery only after documented pre-workspace rejection. A second
+failure is `HOLD`; no third attempt is permitted. Rejected bytes remain
+outside workspace, canon, runtime, provenance, commits, and user-facing
+reveal. Exactly one accepted spoiler-safe reveal must be archived, committed,
+and shown to Martin before Image can hand a stable candidate to a fresh
+Intelligence Officer.
+
+Preserve every accepted product mechanic and Quartermaster content decision,
+fixture storage/network/production isolation, privacy, PBA, exact returns,
+invariant world, and CF-30 hard stop. Do not inspect Martin's browser/profile/
+save, hidden lore, or protected user paths. Update polish review, metrics, and
+handoff, make one dedicated local Image commit, no push, then stop before a
+fresh independent Intelligence Officer.
 
 ## Recurring automation
 
@@ -432,10 +479,10 @@ Specialist. Stop before Intelligence.
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
   `TD010-RTA-001` remain unreleased; the Combat candidate is functionally
-  implemented and content complete but is returned for exact TD-010 fixture
-  correction before Image Specialist can complete presentation or reveal and
-  before independent Intelligence release. Marine deployment continues
-  strictly with Combat Engineer correction.
+  implemented, content complete, and correction verified, but awaits resumed
+  Image Specialist presentation/reveal completion and independent
+  Intelligence release. Marine deployment continues strictly with Image
+  Specialist.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do

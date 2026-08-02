@@ -239,6 +239,29 @@
       "commitConvention": "The dedicated Image Specialist REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only correction checkpoint; no push and no Intelligence handoff",
       "nextStage": "Combat Engineer only for TD010-FIX-001/002/003; then Image Specialist resumes; Intelligence remains blocked"
+    },
+    {
+      "sequence": 11,
+      "stage": "Combat Engineer correction return",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-02T00:46:00.000Z",
+      "endedAt": "2026-08-02T00:53:00.000Z",
+      "durationMs": 420000,
+      "disposition": "FUNCTIONALLY COMPLETE - CORRECTION VERIFIED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "4a9943530d0385ff3284493227c2a47c549ff54e / Image REVISE checkpoint over 167b23aa0ee685dc85da86419facc2bbca7d44d0 Quartermaster CONTENT COMPLETE",
+      "predecessorVerification": "Image 4a99435 -> Quartermaster 167b23a -> Combat 02bbfc0 -> Tactical cdb9141 -> Recon f9a6860 -> Mission 338da62 sole-parent chain verified; shell blob 85e57757cdf8a1a208a338027e150f0a2edc6d7b exact",
+      "corrections": "TD010-FIX-001 exact cf20_exchange_save restored; TD010-FIX-002 all seven route modalities render SYSTEM // EXPEDITION LEDGER and focus cf00-heading at blank CF-00; TD010-FIX-003 client_primary_miss renders/focuses cf20-client-primary-first-failed",
+      "independentRegression": "browser test parses exact shell-05 66-row table, proves exact unique manifest and rendered-picker IDs, then compares visible data-active-owner text and actual document.activeElement.id for every scenario with zero differences; fixture declarations are not expected authority",
+      "validation": "focused 10/10 including all 5,040 orders; shell-authoritative live 66/66; four live layouts and forced-colors/reduced-motion/grayscale PASS; full 917/917 with zero skips; mappings 11/11; readiness 15/15; automated release PASS in 21.9s; production/fixture 209/52 modules; served root/deep/chunks/media exact; privacy/protected/later/fixture and patch/JSON scans PASS",
+      "budget": "PBA-TD010-v1 PASS: JS 1561633 bytes / 9F89D26347287C38B12C8B2643C00B4AD178D5E58B62ADF1629DEC9007FFBE56; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 predecessor media / 37410731 bytes; zero new media",
+      "assetBoundary": "both conditional roles remain retired; selectedImageRoles empty; CSS medium truthful; no image/board call, generation attempt, accepted/rejected byte, runtime image, provenance package or reveal",
+      "variances": "TD010-FIX-001/002/003 resolved exactly as REQUIRED CORRECTION with no shell, product, content, mechanic, route, evidence, save, privacy, return, invariant-world or hard-stop change",
+      "commit": "PENDING_COMBAT_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; explicit handoff forbids push at this correction gate",
+      "nextStage": "Image Specialist only for fresh presentation review and exactly one accepted TD-010 reveal; Intelligence remains blocked until Image completion"
     }
   ]
 }

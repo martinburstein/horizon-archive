@@ -11,7 +11,7 @@
 | Address | `RP-010 / SC-11 / CF-00-CF-30` |
 | Route | sole `TD010-RTA-001` |
 | Starting authority | Tactical commit `cdb91415392ad750e139c0db04921ab982ef2b0f` |
-| Disposition | **`FUNCTIONALLY COMPLETE`** |
+| Disposition | **`FUNCTIONALLY COMPLETE - CORRECTION VERIFIED`** |
 
 ## Functional result
 
@@ -108,7 +108,7 @@ The budget validator reports `PBA-TD010-v1 / candidate / PASS`. All accepted
 predecessor media remain present and no new image, audio, font, video, source
 map, Python/WASM runtime, or network payload was added.
 
-## Quartermaster handoff
+## Initial Quartermaster handoff - completed
 
 - **Stage / agent:** Quartermaster / `quartermaster`
 - **Starting authority:** this functional build, exact shell, Recon creative
@@ -132,4 +132,109 @@ map, Python/WASM runtime, or network payload was added.
 - **Required disposition:** `CONTENT COMPLETE`, `REVISE`, or `HOLD`
 - **Next recipient:** Image Specialist only after Quartermaster completion
 
-**Disposition: `FUNCTIONALLY COMPLETE`.**
+**Initial disposition: `FUNCTIONALLY COMPLETE`.**
+
+## Combat correction addendum - Image return
+
+Image Specialist returned exact fixture defects `TD010-FIX-001`,
+`TD010-FIX-002`, and `TD010-FIX-003` to their earliest owner. Combat resumed
+only against Image checkpoint commit
+`4a9943530d0385ff3284493227c2a47c549ff54e`, whose sole parent is exact
+Quartermaster content-complete commit
+`167b23aa0ee685dc85da86419facc2bbca7d44d0`. The verified predecessor chain
+continues through Combat `02bbfc0`, Tactical `cdb9141`, Recon `f9a6860`, and
+Mission `338da62`; shell blob
+`85e57757cdf8a1a208a338027e150f0a2edc6d7b` remains byte-identical.
+
+### Exact corrections
+
+- `TD010-FIX-001` resolved: the manifest and scenario module now expose exact
+  `cf20_exchange_save`; `cf20_bound_exchange` is absent. The allowlist remains
+  exactly 66 unique IDs in shell order.
+- `TD010-FIX-002` resolved: `route_pointer`, `route_touch`,
+  `route_keyboard_enter`, `route_keyboard_space`, `route_switch`,
+  `route_speech`, and `route_screen_reader` all render blank CF-00 with visible
+  owner `SYSTEM // EXPEDITION LEDGER` and actual focus `cf00-heading`.
+- `TD010-FIX-003` resolved: `client_primary_miss` renders System recovery with
+  the distinct client failed-control ID
+  `cf20-client-primary-first-failed`; the production renderer now honors the
+  closed state's deterministic recovery focus while unchanged production
+  controller states retain their existing Python target.
+
+One new browser regression parses the exact 66 rows directly from shell 05,
+requires exact manifest and rendered-picker ID equality, and independently
+compares visible `[data-active-owner]` text and actual
+`document.activeElement.id` for every row. Fixture-declared owner/focus state
+is not used as the expected authority. The same isolated Chrome pass checks
+the four exact layouts, one product main/status, horizontal containment,
+`>=44px` controls, forced colors, reduced motion, and grayscale. A separate
+served-identity regression compares the fresh production and fixture root,
+deep fallback, chunk, CSS, and media bytes with the locally built artifacts.
+
+### Correction validation
+
+| Validation | Corrected result |
+|---|---|
+| Focused Counterfield normal + fixture | `10/10 PASS`; all `5,040` orders included |
+| Shell-authoritative live fixture | `66/66 PASS`; exact unique IDs, visible owners, actual focus; zero differences |
+| Layout and assistive-mode live checks | `4/4` layouts plus forced colors, reduced motion, and grayscale PASS; one main/status, containment, targets `>=44px` |
+| Full product suite | `917/917 PASS`; zero failures/skips; `15.089s` Node duration |
+| RP-002 through RP-012 mappings / readiness | `11/11` / `15/15 PASS` |
+| Automated release checks | PASS in `21.9s`; coordinator-only complete E2E intentionally remains downstream |
+| Production / fixture builds | PASS; `209` / `52` modules |
+| Served identity | PASS; production and fixture root/deep `4/4`, all `19` production assets and `2` fixture assets byte-exact |
+| Privacy / protected / later / fixture scans | PASS; zero scoped source or emitted-bundle matches |
+| Patch / JSON integrity | PASS |
+
+### Corrected PBA-TD010-v1 identity
+
+| Measure | Corrected candidate | Cap | Result |
+|---|---:|---:|---|
+| Modules | `209` | `216` | PASS |
+| Aggregate JavaScript | `1,561,633` bytes | `1,585,466` | PASS |
+| JavaScript SHA-256 | `9F89D26347287C38B12C8B2643C00B4AD178D5E58B62ADF1629DEC9007FFBE56` | identity evidence | recorded |
+| Aggregate CSS | `108,581` bytes | `109,236` | PASS |
+| CSS SHA-256 | `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A` | identity evidence | recorded |
+| Runtime media | exact `17 / 37,410,731` bytes | `<=45,799,339` bytes | PASS |
+| New runtime media | `0 / 0` bytes | `<=2 / 8,388,608` bytes | PASS |
+
+Both conditional runtime image roles remain retired,
+`selectedImageRoles` remains empty, the rendering medium remains truthful
+CSS, and all 17 predecessor media hashes are exact. No image or board call was
+made; no generation, recovery, accepted, rejected, provenance, runtime, or
+reveal byte was created. Product mechanics, finalized Quartermaster content,
+storage/network isolation, privacy, returns, invariant world, and the CF-30
+hard stop are unchanged.
+
+### Correction files
+
+- `horizon-archive-game/src/Counterfield.jsx`
+- `horizon-archive-game/review-fixtures/td010-counterfield/scenarios.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/launch-manifest.json`
+- `horizon-archive-game/review-fixtures/td010-counterfield/fixtureIsolation.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/shellContractBrowser.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/servedIdentity.test.js`
+- `horizon-archive-game/package.json`
+- this report, stage metrics, and synchronized handoff
+
+## Correction disposition and exact Image Specialist handoff
+
+**`FUNCTIONALLY COMPLETE - CORRECTION VERIFIED`**
+
+- **Stage / agent:** Image Specialist / `image_specialist` only.
+- **Starting authority:** the dedicated local Combat correction commit
+  containing this addendum, exact shell 05, Quartermaster content-complete
+  commit `167b23aa0ee685dc85da86419facc2bbca7d44d0`, and Image return checkpoint
+  `4a9943530d0385ff3284493227c2a47c549ff54e`.
+- **Resolved return:** independently recheck `TD010-FIX-001/002/003` against
+  shell 05 and the corrected live fixture before presentation acceptance.
+- **Runtime image boundary:** both roles remain retired and
+  `selectedImageRoles` remains empty; do not silently reinstate either role.
+- **Required work:** resume fresh presentation review, preserve the one-
+  initial/one-targeted-recovery boundary, and fulfill exactly one accepted
+  spoiler-safe TD-010 cycle reveal under the workflow.
+- **Stop boundary:** no mechanic, content meaning, evidence, save, route,
+  canon, authority, successor, hidden-lore, protected-path, Martin browser/
+  save, RP-011/RP-013, external action, or world-effect change.
+- **Next recipient on pass:** Intelligence Officer only after Image issues
+  `PRESENTATION COMPLETE`; Combat stops before Image and Intelligence.
