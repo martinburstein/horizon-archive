@@ -384,6 +384,30 @@
       "commitConvention": "The dedicated Intelligence REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only return checkpoint; no push authorized; recurring three-hour heartbeat preserved",
       "nextStage": "Combat Engineer only for TD010-FIX-005; then Image Specialist bounded non-generative revalidation; then fresh Intelligence review"
+    },
+    {
+      "sequence": 17,
+      "stage": "Combat Engineer third correction return",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-02T02:10:00.000Z",
+      "endedAt": "2026-08-02T02:34:00.000Z",
+      "durationMs": 1440000,
+      "disposition": "FUNCTIONALLY COMPLETE - THIRD CORRECTION VERIFIED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "cac7fdefe7e42318aafad76816fc27630518a36d / Intelligence REVISE checkpoint for TD010-FIX-005 over rejected Image candidate d22a9b314e17c0da92cd11cca9c10aba20484b08",
+      "correction": "TD010-FIX-005 resolved: one pure parser extracts all five longest UTF-8 samples from shell 05; fixture build injects and renders that exact object without a hand-copied subset; genuine normal applicable states render the exact heading, label, recovery error, RP-009 retained row and truthful execution label",
+      "renderedRegression": "shell-authoritative Chrome proof compares five byte-exact DOM strings and geometric containment at DPR-1 1920x1080, 1366x768, 390x844 and 768x900 while preserving exact review owner/focus, fixture h1 containment, one main/status, >=44px targets and all 66 owner/actual-focus contracts",
+      "harnessCorrection": "repeated aggregate contention isolated to concurrent TD-010 served-identity and Chrome fixture resources plus lazy browser-triggered compilation; test-only cross-process resource serialization and private prebuilt fixture remove the race; readiness deadline restored to 30s and assertions unchanged; one fresh aggregate passed",
+      "validation": "focused 12/12 including 5040 orders; normal shell/render 2/2 across 22 rows/eight recovery responsibilities/five samples; related 131/131 and broader 203/203; fresh aggregate full 919/919 in 14.711s; mappings 11/11; readiness 15/15; automated release PASS in 23.3s without coordinator E2E; production/fixture 209/52 modules; served identity, privacy, later, fixture, patch and cleanup PASS",
+      "validationHistory": "before root-cause harness correction aggregate runs truthfully recorded only Chrome fixture readiness or owned-profile cleanup contention at 918/919; standalone shell assertions remained green and no product/copy/layout assertion failed",
+      "budget": "PBA-TD010-v1 PASS: JS 1565416 bytes / 7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 predecessor media / 37410731 bytes; zero new media",
+      "assetBoundary": "both conditional roles remain retired; selectedImageRoles empty; CSS medium truthful; accepted 1672x941 / 2375786-byte / 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E reference PNG, provenance and checklist unchanged and absent from dist; no image/generation/edit/variant call",
+      "variances": "TD010-FIX-001/002/003/004 remain RESOLVED; TD010-FIX-005 resolved as REQUIRED CORRECTION with no product, canon, learning, evidence, schema, privacy, save, route, return, accessibility, authority, invariant-world, runtime-media, reveal or hard-stop change",
+      "commit": "PENDING_COMBAT_THIRD_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat third-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no push and no master current-control update authorized",
+      "nextStage": "Image Specialist only for bounded non-generative revalidation; then fresh Intelligence review"
     }
   ]
 }

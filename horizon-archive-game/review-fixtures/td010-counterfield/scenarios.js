@@ -9,12 +9,6 @@ import {
 
 export const TD010_COUNTERFIELD_FIXTURE = "TD010_COUNTERFIELD_FIXTURE";
 export const counterfieldScenarioNames = Object.freeze([...manifest.scenarios]);
-export const FROZEN_LONGEST_COPY = Object.freeze({
-  heading: "REVIEW FOUR SEPARATELY ATTRIBUTABLE EXPEDITION SCOPES WITHOUT MERGING THEIR CLAIMS",
-  label: "CONFIRM THAT A VALID CLIENT FLOW NEITHER PROVES RETURNED OUTPUT TRUE NOR AUTHORIZES ANY LIVE SERVICE, RESOURCE, ROUTE, ACCESS, OR EXTERNAL ACTION",
-  scopeRow: "RP-009 — Retained Occluded Fold ledger remains separately attributable, read-only, provenance-bound, and does not establish identity, topology, continuity, transformation, unity, chronology, cause, purpose, access, or authority.",
-  truthfulPythonLabel: counterfieldTruthfulWorkspaceLabel,
-});
 const layouts = { layout_desktop: "1920x1080", layout_laptop: "1366x768", layout_narrow: "390x844", layout_effective_200: "768x900-effective-200" };
 const observations = Object.fromEntries(counterfieldObservationIds.map((id, index) => [`observation_${id}`, index]));
 const groupSpecs = {
@@ -29,7 +23,7 @@ const groupSpecs = {
   cf20_client_flow_explanation: ["PILOT // COURSE WORK", "cf20-client-flow-explanation-heading", "cf20-client-flow-explanation", "EXPLAIN THE FOUR DISTINCT CLIENT-FLOW RESPONSIBILITIES", [counterfieldActions.clientFlowBoundary]],
   cf20_truth_authority_explanation: ["PILOT // COURSE WORK", "cf20-truth-authority-explanation-heading", "cf20-truth-authority-explanation", "EXPLAIN WHY VALID CLIENT FLOW PROVES NEITHER OUTPUT TRUTH NOR LIVE AUTHORITY", [counterfieldActions.truthAuthorityBoundary]],
   cf20_recovery: ["SYSTEM // RECOVERY", "cf20-recovery-heading", "cf20-python-primary-first-failed", "RETRY THE FIRST INCOMPLETE RESPONSIBILITY WITHOUT AN ANSWER", [counterfieldActions.retry]],
-  cf20_review: ["PILOT // EXPEDITION REVIEW", "cf20-review-heading", "cf20-review-heading", FROZEN_LONGEST_COPY.heading, [counterfieldActions.prepareSave]],
+  cf20_review: ["PILOT // EXPEDITION REVIEW", "cf20-review-heading", "cf20-review-heading", "REVIEW FOUR SEPARATELY ATTRIBUTABLE EXPEDITION SCOPES WITHOUT MERGING THEIR CLAIMS", [counterfieldActions.prepareSave]],
   cf20_save: ["PILOT // EXPEDITION LEDGER", "cf20-save-heading", "cf20-save-heading", "SAVE ONE PRIVATE-FREE BOUNDED COUNTERFIELD SCOPE REGISTER", [counterfieldActions.save, counterfieldActions.cancelSave]],
   cf20_save_recovery: ["SYSTEM // RECOVERY", "cf20-save-retry-heading", "cf20-save-retry-heading", "PRIOR COUNTERFIELD BYTES OR VERIFIED ABSENCE WERE RESTORED EXACTLY", [counterfieldActions.retrySave]],
   cf30_restore: ["SYSTEM // EXPEDITION LEDGER", "cf30-restore-heading", "cf30-restore-heading", "CF-30 — VERIFY FOUR BOUNDED SCOPES AND RETURN WITHOUT REPLAY", [counterfieldActions.look]],
@@ -83,5 +77,5 @@ const boundaryNames = new Set(["route_invalid_released_predecessor", "route_prot
 export function createCounterfieldScenario(name) {
   if (!counterfieldScenarioNames.includes(name)) throw new TypeError("A closed TD-010 scenario is required.");
   const state = boundaryNames.has(name) ? boundaryState(name) : publicState(name);
-  return Object.freeze({ name, surface: boundaryNames.has(name) ? "contract-equivalent-boundary" : "production-counterfield", state, layout: layouts[name] ?? "representative", presentationMode: name === "mode_forced_colors" ? "forced-colors" : name === "mode_reduced_motion" ? "reduced-motion" : name === "mode_grayscale" ? "grayscale" : "standard", frozenLongestCopy: name === "longest_copy_contained" || name in layouts ? { ...FROZEN_LONGEST_COPY } : null, storage: "frozen-in-memory-only", arbitraryStateAccepted: false, scene: { role: "SC-11-COUNTERFIELD-PANORAMA", structuralPlaceholder: false, renderingMedium: "css", runtimeImage: "not-selected", assetRoleDisposition: "retired-no-runtime-image" } });
+  return Object.freeze({ name, surface: boundaryNames.has(name) ? "contract-equivalent-boundary" : "production-counterfield", state, layout: layouts[name] ?? "representative", presentationMode: name === "mode_forced_colors" ? "forced-colors" : name === "mode_reduced_motion" ? "reduced-motion" : name === "mode_grayscale" ? "grayscale" : "standard", rendersShellLongestCopy: name === "longest_copy_contained" || name in layouts, storage: "frozen-in-memory-only", arbitraryStateAccepted: false, scene: { role: "SC-11-COUNTERFIELD-PANORAMA", structuralPlaceholder: false, renderingMedium: "css", runtimeImage: "not-selected", assetRoleDisposition: "retired-no-runtime-image" } });
 }

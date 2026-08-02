@@ -5,6 +5,7 @@ import test from "node:test";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createServer } from "vite";
+import { parseCounterfieldLongestCopy } from "../review-fixtures/td010-counterfield/shellLongestCopyContract.js";
 import rp009 from "../../curriculum/readiness/RP-009/contract.json" with { type: "json" };
 import rp010 from "../../curriculum/readiness/RP-010/contract.json" with { type: "json" };
 import { createCounterfieldRouteState } from "../src/CalibrationMarginNormalEntry.js";
@@ -141,6 +142,7 @@ function assertRegistryState(actual, row, replacements = {}) {
 
 test("TD010 shell 05 governs genuine normal controller and rendered product owner/heading/status/focus", { timeout: 60_000 }, async () => {
   const registry = parseFrozenRegistry();
+  const longestCopy = parseCounterfieldLongestCopy(readFileSync(shellPath, "utf8"));
   const states = [];
   const routeReady = createCounterfieldRouteState(releasedState());
   states.push([registry["route ready"], routeReady]);
@@ -200,9 +202,11 @@ test("TD010 shell 05 governs genuine normal controller and rendered product owne
   const vite = await createServer({ root: fileURLToPath(new URL("..", import.meta.url)), appType: "custom", server: { middlewareMode: true }, logLevel: "silent" });
   try {
     const { Counterfield } = await vite.ssrLoadModule("/src/Counterfield.jsx");
+    const renderedStates = [];
     for (const [row, state, replacements = {}] of states) {
       assertRegistryState(state, row, replacements);
       const markup = renderToStaticMarkup(React.createElement(Counterfield, { state, onAction() {}, onFieldChange() {} }));
+      renderedStates.push(markup);
       assert.ok(markup.includes(`data-active-owner="${state.owner}"`), `${row.name} rendered owner attribute`);
       assert.ok(markup.includes(`>${state.owner}</p>`), `${row.name} rendered owner text`);
       assert.ok(markup.includes(`>${state.heading}</h2>`), `${row.name} rendered heading`);
@@ -210,6 +214,9 @@ test("TD010 shell 05 governs genuine normal controller and rendered product owne
       assert.ok(markup.includes(`id="${state.focusIntent.target}"`), `${row.name} rendered focus target`);
       for (const id of state.failedPublicIds ?? []) assert.ok(markup.includes(`>${id}</li>`), `${row.name} renders actual failed ID ${id}`);
       for (const tag of state.failedMisconceptionTags ?? []) assert.ok(markup.includes(`>${tag}</li>`), `${row.name} renders actual misconception tag ${tag}`);
+    }
+    for (const [key, sample] of Object.entries(longestCopy)) {
+      assert.ok(renderedStates.some((markup) => markup.includes(sample)), `normal production states must render shell-parsed longest-copy sample: ${key}`);
     }
   } finally {
     await vite.close();

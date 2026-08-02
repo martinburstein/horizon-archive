@@ -5,6 +5,7 @@ import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { preview } from "vite";
+import { acquireTd010BrowserResource } from "./browserResourceLock.js";
 
 const gameRoot = fileURLToPath(new URL("../../", import.meta.url));
 const fixtureConfig = fileURLToPath(new URL("./vite.config.js", import.meta.url));
@@ -31,18 +32,23 @@ async function verifyServedTree({ server, localRoot, baseUrl }) {
   return assets.length;
 }
 
-test("TD010 production and fixture root, deep fallback, chunks, and media serve exact fresh-build bytes", { timeout: 30_000 }, async () => {
-  const production = await preview({ root: gameRoot, logLevel: "error", preview: { host: "127.0.0.1", port: 4288, strictPort: true } });
+test("TD010 production and fixture root, deep fallback, chunks, and media serve exact fresh-build bytes", { timeout: 120_000 }, async () => {
+  const releaseBrowserResource = await acquireTd010BrowserResource();
   try {
-    assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4288" }), 19);
-  } finally {
-    await closePreview(production);
-  }
+    const production = await preview({ root: gameRoot, logLevel: "error", preview: { host: "127.0.0.1", port: 4288, strictPort: true } });
+    try {
+      assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4288" }), 19);
+    } finally {
+      await closePreview(production);
+    }
 
-  const fixture = await preview({ configFile: fixtureConfig, logLevel: "error", preview: { host: "127.0.0.1", port: 4289, strictPort: true } });
-  try {
-    assert.equal(await verifyServedTree({ server: fixture, localRoot: join(gameRoot, "review-fixtures", "td010-counterfield", "dist"), baseUrl: "http://127.0.0.1:4289" }), 2);
+    const fixture = await preview({ configFile: fixtureConfig, logLevel: "error", preview: { host: "127.0.0.1", port: 4289, strictPort: true } });
+    try {
+      assert.equal(await verifyServedTree({ server: fixture, localRoot: join(gameRoot, "review-fixtures", "td010-counterfield", "dist"), baseUrl: "http://127.0.0.1:4289" }), 2);
+    } finally {
+      await closePreview(fixture);
+    }
   } finally {
-    await closePreview(fixture);
+    releaseBrowserResource();
   }
 });

@@ -1,22 +1,25 @@
 import assert from "node:assert/strict";
-import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import test from "node:test";
-import { createServer } from "vite";
+import { build, preview } from "vite";
+import { acquireTd010BrowserResource } from "./browserResourceLock.js";
 import manifest from "./launch-manifest.json" with { type: "json" };
+import { parseCounterfieldLongestCopy } from "./shellLongestCopyContract.js";
 
 const shellPath = fileURLToPath(new URL("../../../Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md", import.meta.url));
 const fixtureConfigPath = fileURLToPath(new URL("./vite.config.js", import.meta.url));
+const shellSource = readFileSync(shellPath, "utf8");
+const shellLongestCopy = parseCounterfieldLongestCopy(shellSource);
 
 function parseShellScenarioContract() {
-  const shell = readFileSync(shellPath, "utf8");
   const heading = "## Closed storage-free 66-scenario fixture";
-  const start = shell.indexOf(heading);
+  const start = shellSource.indexOf(heading);
   assert.notEqual(start, -1, "shell 05 fixture registry heading must exist");
-  const rows = [...shell.slice(start).matchAll(/^\|\s*\d+\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|$/gm)]
+  const rows = [...shellSource.slice(start).matchAll(/^\|\s*\d+\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|$/gm)]
     .map(([, id, owner, focus]) => ({ id, owner, focus }));
   assert.equal(rows.length, 66, "shell 05 must independently yield exactly 66 scenario rows");
   assert.equal(new Set(rows.map(({ id }) => id)).size, 66, "shell 05 scenario IDs must be unique");
@@ -101,17 +104,22 @@ async function waitForFixture(session) {
   throw new Error("TD-010 fixture did not render before the browser-contract deadline");
 }
 
-test("TD010 shell 05 independently governs all 66 rendered owner and actual-focus contracts", { timeout: 90_000 }, async () => {
+test("TD010 shell 05 independently governs all 66 rendered owner and actual-focus contracts", { timeout: 120_000 }, async () => {
   const shellRows = parseShellScenarioContract();
   const shellIds = shellRows.map(({ id }) => id);
   assert.deepEqual(manifest.scenarios, shellIds, "manifest IDs and order must equal shell 05, not fixture-declared state");
 
-  const server = await createServer({ configFile: fixtureConfigPath, logLevel: "error" });
-  const profilePath = mkdtempSync(join(tmpdir(), "td010-shell-contract-"));
+  const releaseBrowserResource = await acquireTd010BrowserResource();
+  const workPath = mkdtempSync(join(tmpdir(), "td010-shell-contract-"));
+  const profilePath = join(workPath, "chrome-profile");
+  const fixtureDist = join(workPath, "fixture-dist");
+  mkdirSync(profilePath);
+  let server;
   let chrome;
   let session;
   try {
-    await server.listen();
+    await build({ configFile: fixtureConfigPath, logLevel: "error", build: { outDir: fixtureDist, emptyOutDir: true } });
+    server = await preview({ configFile: fixtureConfigPath, logLevel: "error", build: { outDir: fixtureDist }, preview: { host: "127.0.0.1", port: 4182, strictPort: true } });
     chrome = spawn(findChrome(), [
       "--headless=new", "--disable-gpu", "--disable-background-networking", "--no-first-run",
       "--no-default-browser-check", "--remote-debugging-port=0", `--user-data-dir=${profilePath}`, "about:blank",
@@ -153,21 +161,50 @@ test("TD010 shell 05 independently governs all 66 rendered owner and actual-focu
       await renderScenario(id);
       const layout = await evaluate(session, `(() => {
         const product = document.querySelector('.fixture-product');
+        const frozenContainer = product.querySelector('.fixture-frozen-copy');
+        const frozenBounds = frozenContainer.getBoundingClientRect();
+        const frozen = Object.fromEntries([...frozenContainer.querySelectorAll('[data-frozen-copy]')].map((node) => {
+          const rect = node.getBoundingClientRect();
+          const lineHeight = Number.parseFloat(getComputedStyle(node).lineHeight) || rect.height;
+          return [node.dataset.frozenCopy, {
+            text: node.textContent,
+            contained: rect.left >= frozenBounds.left - 1 && rect.right <= frozenBounds.right + 1
+              && rect.top >= frozenBounds.top - 1 && rect.bottom <= frozenBounds.bottom + 1
+              && node.scrollWidth <= node.clientWidth + 1,
+            lines: Math.max(1, Math.round(rect.height / lineHeight)),
+          }];
+        }));
+        const harness = document.querySelector('.fixture-harness');
+        const harnessHeading = harness.querySelector('h1');
+        const harnessBounds = harness.getBoundingClientRect();
+        const harnessHeadingBounds = harnessHeading.getBoundingClientRect();
         const controls = [...product.querySelectorAll('button, select, textarea')].filter((node) => {
           const rect = node.getBoundingClientRect(); return rect.width > 0 && rect.height > 0;
         }).map((node) => { const rect = node.getBoundingClientRect(); return { id: node.id, width: rect.width, height: rect.height }; });
         return {
+          dpr: devicePixelRatio,
           documentContained: document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1,
           productContained: product.scrollWidth <= product.clientWidth + 1,
+          h1Contained: harnessHeadingBounds.left >= harnessBounds.left - 1 && harnessHeadingBounds.right <= harnessBounds.right + 1,
           mains: product.querySelectorAll('[data-product-landmark]').length,
           statuses: product.querySelectorAll('[role=status]').length,
+          owner: product.querySelector('[data-active-owner]')?.textContent?.trim() ?? '',
+          focus: document.activeElement?.id ?? '',
+          frozen,
           undersized: controls.filter(({ width, height }) => width < 44 || height < 44),
         };
       })()`);
+      assert.equal(layout.dpr, 1, `${id} must run at exact DPR 1`);
       assert.equal(layout.documentContained, true, `${id} document must not escape horizontally`);
       assert.equal(layout.productContained, true, `${id} product must remain horizontally contained`);
+      assert.equal(layout.h1Contained, true, `${id} fixture h1 must remain contained`);
       assert.equal(layout.mains, 1, `${id} must render one product main`);
       assert.equal(layout.statuses, 1, `${id} must render one product status`);
+      assert.equal(layout.owner, "PILOT // EXPEDITION REVIEW", `${id} review owner must remain exact`);
+      assert.equal(layout.focus, "cf20-review-heading", `${id} review focus must remain exact`);
+      assert.deepEqual(Object.fromEntries(Object.entries(layout.frozen).map(([key, value]) => [key, value.text])), shellLongestCopy, `${id} must render all five shell-parsed UTF-8 strings byte-exactly`);
+      assert.deepEqual(Object.fromEntries(Object.entries(layout.frozen).map(([key, value]) => [key, value.contained])), Object.fromEntries(Object.keys(shellLongestCopy).map((key) => [key, true])), `${id} must contain all five shell-parsed UTF-8 strings`);
+      assert.ok(Object.values(layout.frozen).every(({ lines }) => lines >= 1), `${id} must expose measurable wrapped line counts for all five strings`);
       assert.deepEqual(layout.undersized, [], `${id} visible product controls must be at least 44 by 44 CSS pixels`);
     }
     await session.send("Emulation.clearDeviceMetricsOverride");
@@ -183,9 +220,14 @@ test("TD010 shell 05 independently governs all 66 rendered owner and actual-focu
     assert.match(await evaluate(session, "getComputedStyle(document.querySelector('.fixture-product')).filter"), /grayscale\(1\)/);
   } finally {
     session?.close();
-    if (chrome && chrome.exitCode === null) chrome.kill();
-    await server.close();
+    if (chrome && chrome.exitCode === null) {
+      const exited = new Promise((resolve) => chrome.once("exit", resolve));
+      chrome.kill();
+      await Promise.race([exited, new Promise((resolve) => setTimeout(resolve, 2_000))]);
+    }
+    if (server) await new Promise((resolve, reject) => server.httpServer.close((error) => error ? reject(error) : resolve()));
     await new Promise((resolve) => setTimeout(resolve, 100));
-    rmSync(profilePath, { recursive: true, force: true });
+    rmSync(workPath, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
+    releaseBrowserResource();
   }
 });

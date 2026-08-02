@@ -2,7 +2,10 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import manifest from "./launch-manifest.json" with { type: "json" };
-import { FROZEN_LONGEST_COPY, createCounterfieldScenario, counterfieldScenarioNames } from "./scenarios.js";
+import { createCounterfieldScenario, counterfieldScenarioNames } from "./scenarios.js";
+import { parseCounterfieldLongestCopy } from "./shellLongestCopyContract.js";
+
+const shellPath = new URL("../../../Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md", import.meta.url);
 
 test("TD010 fixture constructs exactly 66 closed storage-free scenarios", () => {
   assert.equal(manifest.fixtureId, "td010-counterfield-v1");
@@ -44,7 +47,17 @@ test("TD010 browser fixture compares visible owner and actual active element to 
 });
 
 test("TD010 fixture freezes layouts, presentation modes, and longest-copy evidence", () => {
-  for (const name of ["layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "longest_copy_contained"]) assert.deepEqual(createCounterfieldScenario(name).frozenLongestCopy, FROZEN_LONGEST_COPY);
+  const shellCopy = parseCounterfieldLongestCopy(readFileSync(shellPath, "utf8"));
+  assert.deepEqual(Object.keys(shellCopy), ["heading", "label", "recoveryError", "retainedScopeRow", "truthfulExecutionLabel"]);
+  assert.equal(new Set(Object.values(shellCopy)).size, 5);
+  for (const name of ["layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "longest_copy_contained"]) assert.equal(createCounterfieldScenario(name).rendersShellLongestCopy, true);
+  assert.equal(createCounterfieldScenario("cf20_exchange_save").rendersShellLongestCopy, false);
+  const fixtureSource = readFileSync(new URL("./ReviewCounterfieldFixture.jsx", import.meta.url), "utf8");
+  const configSource = readFileSync(new URL("./vite.config.js", import.meta.url), "utf8");
+  assert.match(configSource, /05-PLAYABLE-SLICE-SHELL\.md/);
+  assert.match(configSource, /parseCounterfieldLongestCopy\(readFileSync\(shellPath, "utf8"\)\)/);
+  assert.match(configSource, /__TD010_SHELL_LONGEST_COPY__/);
+  assert.match(fixtureSource, /Object\.freeze\(__TD010_SHELL_LONGEST_COPY__\)/);
   assert.equal(createCounterfieldScenario("mode_forced_colors").presentationMode, "forced-colors"); assert.equal(createCounterfieldScenario("mode_reduced_motion").presentationMode, "reduced-motion"); assert.equal(createCounterfieldScenario("mode_grayscale").presentationMode, "grayscale");
   const css = readFileSync(new URL("./fixture.css", import.meta.url), "utf8"); assert.match(css, /CanvasText/); assert.match(css, /animation:none!important/); assert.match(css, /grayscale\(1\)/);
 });

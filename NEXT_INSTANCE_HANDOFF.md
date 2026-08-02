@@ -7,78 +7,64 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- Latest release remains **`TD-009 / PASS - AS BUILT RELEASED`**.
-- Shell: `SS-RP009-OCCLUDED-FOLD-v1`.
-- Release commit: `b61aea3806e8d14ff2f36d506ffc6135d8c30045`.
+- Latest release remains **`TD-009 / PASS - AS BUILT RELEASED`** at
+  `b61aea3806e8d14ff2f36d506ffc6135d8c30045` under shell
+  `SS-RP009-OCCLUDED-FOLD-v1`.
 - Released graph: `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`.
 - Hard stop: exact OF-30, either released return, or inert LOOK with
   `destination=null`, `routeOpened=false`, and `successor=null`.
 
-## TD-010 fresh Intelligence return
+## TD-010 Combat third correction
 
-- Shell/candidate: `SS-RP010-COUNTERFIELD-v1` at
-  `d22a9b314e17c0da92cd11cca9c10aba20484b08`, directly over Combat second
-  correction `4593d326908c3025a79d98052334a94effd474cc`.
-- Disposition: **`REVISE - RETURN TO COMBAT ENGINEER / TD010-FIX-005`**.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md`.
-- `TD010-FIX-001/002/003/004` independently remain resolved: focused
-  `12/12`, related `129/129`, cold full `919/919`, genuine normal registry
-  `2/2` across all 22 rows/eight recovery owners, and live fixture `66/66`
-  passed.
-- Mappings `11/11`, readiness `15/15`, production/fixture builds `209/52`,
-  exact served identity, and `PBA-TD010-v1` passed: JS `1,564,452`, CSS
-  `108,581`, exact `17 / 37,410,731` predecessor media, zero new runtime media.
-- The disclosed aggregate Chrome-startup contention did not recur in fresh
-  cold full or isolated live-shell runs. It remains a truthful bounded
-  deferred release-harness limitation, not a waiver.
-- `TD010-FIX-005` is blocking: shell 05 and Tactical 07 freeze five exact
-  longest UTF-8 samples for live rendering at four layouts. The as-built
-  fixture exposes only four, substitutes non-shell label and RP-009 scope-row
-  text, and omits the frozen recovery error. Served reproduction at exact
-  DPR-1 `1920 x 1080`, `1366 x 768`, `390 x 844`, and `768 x 900` confirmed
-  heading/execution-label exact, label/error/scope-row failed.
-- Fixture-only `h1` containment, one status, exact focus, no overflow,
-  local-only requests, forced colors, reduced motion, grayscale, and clean
-  browser logs remain valid; they do not waive exact-copy failure.
-- The complete Intelligence E2E remains unconsumed: exactly zero attempts on
-  this rejected candidate. No master current control advanced and no push or
-  reveal publication occurred.
+- TD-010 remains **unreleased** under shell `SS-RP010-COUNTERFIELD-v1`.
+- Candidate: the current Combat correction commit containing this handoff,
+  directly over Intelligence return
+  `cac7fdefe7e42318aafad76816fc27630518a36d`.
+- Disposition: **`TD010-FIX-005 CORRECTED - AWAITING IMAGE REVALIDATION`**.
+- All five shell-frozen UTF-8 samples now render byte-exactly in genuine normal
+  applicable states and all 66 isolated fixture scenarios: heading, label,
+  recovery error, RP-009 retained-scope row, and truthful execution label.
+- Exact DPR-1 browser proof passed at `1920 x 1080`, `1366 x 768`, `390 x 844`,
+  and `768 x 900`, including exact DOM strings, containment, measurable line
+  counts, owner/focus, fixture `h1`, one main/status, and 44 px targets.
+- Correction validation passed: focused `12/12` including all `5,040` orders;
+  fresh aggregate `919/919`; mappings `11/11`; readiness `15/15`; production
+  and fixture builds `209/52`; release validation passed without Full E2E.
+- `PBA-TD010-v1` remains within budget: JS `1,565,416` bytes, CSS `108,581`
+  bytes, exact `17 / 37,410,731` predecessor media, zero new runtime media.
+- Browser-startup contention was corrected with a shared cross-process browser
+  resource lock and prebuilt static fixture serving; the fresh aggregate passed.
+- No coordinator-owned complete E2E was run; its attempt count remains zero.
+  No push, image call, master current-control change, or reveal publication
+  occurred.
 - Both conditional runtime image roles remain retired,
-  `selectedImageRoles: []`, CSS remains the truthful runtime medium, and no
-  TD-010 runtime media exists.
+  `selectedImageRoles: []`, and CSS remains the truthful runtime medium.
 - The accepted reveal remains byte-frozen, canonical-reference-only, and
   non-runtime: `1672 x 941` 24-bit RGB PNG, `2,375,786` bytes, SHA-256
   `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
-  No further generation, edit, variant, or replacement is allowed.
 
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, rejected candidate
-`d22a9b314e17c0da92cd11cca9c10aba20484b08`, and the dedicated Intelligence
-`REVISE` commit containing this handoff.
+Run **Image Specialist / `image_specialist` only** for bounded,
+non-generative revalidation of the current Combat correction commit containing
+this handoff, against exact shell `SS-RP010-COUNTERFIELD-v1` and Intelligence return
+`cac7fdefe7e42318aafad76816fc27630518a36d`.
 
-1. correct only `TD010-FIX-005` in TD-010 normal/fixture copy surfaces and
-   dedicated tests;
-2. parse and render all five exact shell-frozen longest UTF-8 samples -
-   heading, label, recovery error, RP-009 retained-scope row, and truthful
-   execution label - without a divergent hand-copied subset;
-3. add shell-authoritative rendered regressions proving all five byte-exact
-   strings and containment at exact DPR-1 `1920 x 1080`, `1366 x 768`,
-   `390 x 844`, and `768 x 900`;
-4. preserve `TD010-FIX-001/002/003/004`, all 66 owner/focus rows, fixture-only
-   `h1` containment, focus/status/targets/modes, route, learning, schema,
-   privacy, returns, budget, invariant world, and CF-30 hard stop;
-5. preserve code-native CSS, both retired runtime roles, zero new runtime
-   media, and the exact unchanged reference-only reveal/provenance/checklist;
-   make no image or generation call; and
-6. rerun the complete Combat correction ladder, make one dedicated local
-   Combat correction commit, and hand only to Image Specialist for bounded
-   non-generative revalidation before a fresh Intelligence review.
+1. revalidate the corrected five-sample shell copy and exact four-layout
+   browser evidence without generating, editing, replacing, or varying any
+   image;
+2. confirm both runtime image roles remain retired, zero runtime media was
+   added, the CSS/runtime and PBA identities remain truthful, and the accepted
+   reveal/reference/provenance/checklist remain byte-exact and non-runtime;
+3. preserve all `TD010-FIX-001/002/003/004/005` evidence, all 66 owner/focus
+   rows, route, learning, schema, privacy, returns, budget, invariant world,
+   and the CF-30 hard stop; and
+4. if accepted, make the bounded Image evidence commit and hand only to a
+   fresh Intelligence Officer review. If not accepted, issue an exact `HOLD`
+   or return within Image authority; do not generate a recovery image.
 
-Combat must not run the coordinator-owned complete E2E, update master current
-controls, publish the reveal, push, or proceed directly to Intelligence.
+Image must not run the coordinator-owned complete E2E, update master current
+controls, publish the reveal, push, or release TD-010.
 
 ## Recurring automation
 

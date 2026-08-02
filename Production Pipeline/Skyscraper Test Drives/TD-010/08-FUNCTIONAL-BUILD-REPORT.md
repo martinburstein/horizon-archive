@@ -11,7 +11,7 @@
 | Address | `RP-010 / SC-11 / CF-00-CF-30` |
 | Route | sole `TD010-RTA-001` |
 | Starting authority | Tactical commit `cdb91415392ad750e139c0db04921ab982ef2b0f` |
-| Disposition | **`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`** |
+| Disposition | **`FUNCTIONALLY COMPLETE - THIRD CORRECTION VERIFIED`** |
 
 ## Functional result
 
@@ -355,3 +355,133 @@ variant, provenance, or reveal change occurred.
   save, RP-011/RP-013, external action, or world-effect change.
 - **Next recipient on pass:** fresh Intelligence Officer only after bounded
   Image revalidation; Combat stops before Image and Intelligence.
+
+## Combat third correction addendum - Intelligence return
+
+Fresh Intelligence returned only `TD010-FIX-005` from rejected candidate
+`d22a9b314e17c0da92cd11cca9c10aba20484b08`. Combat resumed from exact
+Intelligence checkpoint `cac7fdefe7e42318aafad76816fc27630518a36d` over
+Image revalidation and Combat second correction
+`4593d326908c3025a79d98052334a94effd474cc`. Shell 05 and Tactical 07 remain
+the unchanged construction and experience authorities.
+
+### Exact five-sample correction
+
+- A pure fixture-contract parser now extracts the exact heading, label,
+  recovery error, RP-009 retained-scope row, and multiline truthful execution
+  label from shell 05 UTF-8 text. The fixture Vite configuration reads the
+  shell once and injects only that parsed five-item object. The browser renders
+  the injected object; no fixture-owned hand-copied subset remains.
+- The genuine normal product renders each sample in its applicable state: the
+  exact review heading, truth/authority label, scored-recovery error, RP-009
+  retained-scope sentence, and PY-018 truthful execution label. The normal
+  shell-registry test parses the same shell authority and proves each exact
+  sample appears in genuine rendered production states.
+- The live shell regression compares all five rendered DOM strings with the
+  shell-parsed object byte-exactly at DPR-1 `1920 x 1080`, `1366 x 768`,
+  `390 x 844`, and `768 x 900`. Every sample is geometrically contained and
+  exposes a measurable wrapped line count. Exact review owner/focus, fixture-
+  only `h1` containment, one main/status, no horizontal escape, and `>=44px`
+  controls are checked in the same four passes. The unchanged forced-colors,
+  reduced-motion, and grayscale checks follow.
+- `TD010-FIX-001/002/003/004` remain resolved. The exact 66 unique scenario
+  IDs and every owner/actual-focus contract are unchanged; genuine normal
+  registry coverage remains all 22 rows and eight recovery responsibilities.
+
+### Deterministic browser-harness orchestration
+
+The first aggregate correction attempts truthfully reproduced the previously
+disclosed browser-startup contention: one `918/919` run missed the 30-second
+fixture-render deadline; a warmed run rendered every assertion but initially
+encountered Windows Chrome-profile cleanup contention; later aggregate runs
+again starved lazy fixture compilation. Standalone shell proof remained green
+throughout and no copy, owner, focus, layout, containment, target, or mode
+assertion failed.
+
+Root-cause inspection found that `servedIdentity.test.js` and
+`shellContractBrowser.test.js` run as concurrent full-suite files while both
+own TD-010 preview resources. The correction is test-only: both acquire one
+bounded cross-process TD-010 browser/preview lock, and the shell regression
+builds a private temporary fixture before launching Chrome instead of asking
+Chrome to trigger lazy compilation under full-suite saturation. Chrome exit
+and owned temporary-profile cleanup are awaited with bounded retries. The
+fixture readiness deadline was restored to 30 seconds; no assertion or
+product behavior was weakened. The one authorized fresh aggregate check after
+this root-cause correction passed.
+
+### Third-correction validation
+
+| Validation | Third-correction result |
+|---|---|
+| Focused TD-010 normal + fixture | `12/12 PASS` in `4.140s`, including all `5,040` observation orders |
+| Genuine normal shell/render | `2/2 PASS`; all 22 frozen registry rows, eight recovery responsibilities, and five shell-parsed samples |
+| Related TD-004 through TD-010 | `131/131 PASS`; an additional broader protected-path exercise passed `203/203` |
+| Shell-authoritative live fixture | `66/66 PASS`; exact IDs, visible owners, actual focus, and all five strings at all four DPR-1 layouts |
+| Full product suite | fresh post-orchestration aggregate `919/919 PASS` in `14.711s`; zero failures/skips |
+| RP-002 through RP-012 mappings / readiness | `11/11` / `15/15 PASS` |
+| Automated release checks | PASS in `23.3s`; coordinator-owned complete E2E not requested and not run |
+| Production / fixture builds | PASS; `209` / `52` modules; production Vite `6.74s` in final aggregate |
+| Served identity | PASS; production and fixture root/deep/chunks/CSS/media byte-exact under serialized ownership |
+| Patch / JSON / privacy / fixture / later / cleanup | PASS; owned browser/preview resources released |
+
+### Third-correction PBA-TD010-v1 identity
+
+| Measure | Corrected candidate | Cap | Result |
+|---|---:|---:|---|
+| Modules | `209` | `216` | PASS |
+| Aggregate JavaScript | `1,565,416` bytes | `1,585,466` | PASS |
+| JavaScript SHA-256 | `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E` | identity evidence | recorded |
+| Aggregate CSS | `108,581` bytes | `109,236` | PASS |
+| CSS SHA-256 | `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A` | identity evidence | recorded |
+| Runtime media | exact `17 / 37,410,731` bytes | `<=45,799,339` bytes | PASS |
+| New runtime media | `0 / 0` bytes | `<=2 / 8,388,608` bytes | PASS |
+
+Both conditional runtime image roles remain retired,
+`selectedImageRoles: []` remains exact, and CSS remains the truthful runtime
+medium. The accepted `1672 x 941`, `2,375,786`-byte reference PNG remains
+unchanged at SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`,
+canonical-reference-only, absent from production, and unpublished. No image,
+board, generation, edit, variant, provenance, checklist, or reveal call or
+change occurred. No product/canon/learning/schema/privacy/save/route/return/
+accessibility/authority/invariant-world/budget/hard-stop boundary changed.
+
+### Third-correction files
+
+- `horizon-archive-game/src/CounterfieldNormal.js`
+- `horizon-archive-game/src/Counterfield.jsx`
+- `horizon-archive-game/test/counterfieldShellRegistry.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/shellLongestCopyContract.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/browserResourceLock.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/scenarios.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/ReviewCounterfieldFixture.jsx`
+- `horizon-archive-game/review-fixtures/td010-counterfield/fixtureIsolation.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/shellContractBrowser.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/servedIdentity.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/vite.config.js`
+- this report and `STAGE-METRICS.json`
+
+## Third-correction disposition and exact Image Specialist handoff
+
+**`FUNCTIONALLY COMPLETE - THIRD CORRECTION VERIFIED`**
+
+- **Stage / agent:** Image Specialist / `image_specialist` only.
+- **Starting authority:** the dedicated local Combat third-correction commit
+  containing this addendum, exact shell 05, Tactical 07, rejected Image
+  candidate `d22a9b314e17c0da92cd11cca9c10aba20484b08`, and Intelligence return
+  checkpoint `cac7fdefe7e42318aafad76816fc27630518a36d`.
+- **Resolved return:** bounded non-generative revalidation of
+  `TD010-FIX-005`, including all five shell-parsed exact UTF-8 strings and
+  containment at the four exact DPR-1 layouts, while confirming
+  `TD010-FIX-001/002/003/004`, 22-row normal proof, and 66-row owner/focus
+  proof remain resolved.
+- **Runtime/reveal boundary:** both runtime roles remain retired; the exact
+  accepted reveal/provenance/checklist remain canonical-reference-only and
+  unchanged; no generation, edit, replacement, variant, or publication.
+- **Stop boundary:** no mechanic, content meaning, evidence, save, route,
+  canon, authority, successor, hidden lore, protected path, Martin browser/
+  save, RP-011/RP-013, external action, world effect, current-control update,
+  push, or coordinator E2E.
+- **Next recipient on pass:** fresh Intelligence Officer only after Image
+  issues bounded `PRESENTATION COMPLETE`; Combat stops before Image and
+  Intelligence.

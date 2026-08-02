@@ -1,5 +1,9 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { COUNTERFIELD_ROUTE_ACTION, COUNTERFIELD_ROUTE_GROUP, counterfieldActions, counterfieldObservationIds } from "./CounterfieldNormal.js";
+import {
+  COUNTERFIELD_ROUTE_ACTION, COUNTERFIELD_ROUTE_GROUP, counterfieldActions,
+  counterfieldObservationIds, counterfieldRecoveryLongestError,
+  counterfieldTruthAuthorityLongestLabel,
+} from "./CounterfieldNormal.js";
 
 const observationLabels = Object.freeze({
   recurrent_adjacency: "Recurrent adjacency", incomplete_ordered_change: "Incomplete ordered change",
@@ -101,7 +105,7 @@ function Form({ form, onFieldChange, onAction, action }) {
   );
   return (
     <fieldset className="counterfield-form"><legend>Bounded explanation</legend>
-      <label htmlFor={form.form === "clientFlowBoundary" ? "cf20-client-flow-explanation" : "cf20-truth-authority-explanation"}>Choose the complete boundary explanation<select id={form.form === "clientFlowBoundary" ? "cf20-client-flow-explanation" : "cf20-truth-authority-explanation"} defaultValue="" onChange={(event) => onFieldChange(form.form, event.target.value)}><option value="" disabled>Select one explanation</option>{form.options.map((value) => <option key={value} value={value}>{displayToken(value)}</option>)}</select></label>
+      <label htmlFor={form.form === "clientFlowBoundary" ? "cf20-client-flow-explanation" : "cf20-truth-authority-explanation"}>{form.form === "truthAuthorityBoundary" ? counterfieldTruthAuthorityLongestLabel : "Choose the complete boundary explanation"}<select id={form.form === "clientFlowBoundary" ? "cf20-client-flow-explanation" : "cf20-truth-authority-explanation"} defaultValue="" onChange={(event) => onFieldChange(form.form, event.target.value)}><option value="" disabled>Select one explanation</option>{form.options.map((value) => <option key={value} value={value}>{displayToken(value)}</option>)}</select></label>
       <Action action={action} onAction={onAction} />
     </fieldset>
   );
@@ -129,13 +133,14 @@ export function Counterfield({ state, onAction, onFieldChange }) {
         {state.form && <Form form={state.form} onFieldChange={onFieldChange} onAction={onAction} action={learningAction} />}
         {group === "cf20_recovery" && <section>
           <p id={recoveryFocusId} tabIndex="-1">First incomplete public dimension: {state.failedPublicIds?.[0] ?? state.failedMisconceptionTags?.[0] ?? "current responsibility"}</p>
+          <p className="counterfield-error" data-counterfield-longest-error>{counterfieldRecoveryLongestError}</p>
           {state.failedPublicIds?.length > 0 && <ul aria-label="Actually failed public check IDs">{state.failedPublicIds.map((id) => <li key={id}>{id}</li>)}</ul>}
           {state.failedMisconceptionTags?.length > 0 && <ul aria-label="Actually scored misconception tags">{state.failedMisconceptionTags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
           <p>Review only these named public boundaries. Guidance contains no answer, private work is clear, and retry opens the same responsibility wholly blank.</p>
           <Action action={counterfieldActions.retry} onAction={onAction} />
         </section>}
-        {group === "cf20_review" && <section><p>All seven observations and eight independently attributable learning records are complete.</p><table><caption>Four separately attributable scopes</caption><tbody>{state.reviewRows.map((row) => <tr key={row.id}><th scope="row">{row.scope}</th><td><strong>{row.owner}</strong><span className="counterfield-scope-description">{row.description}</span></td><td>{row.state}</td></tr>)}</tbody></table><Action action={counterfieldActions.prepareSave} onAction={onAction} /></section>}
-        {group === "cf20_save" && <div ref={saveRef} className="counterfield-save-group" role="group" aria-labelledby="cf20-save-heading"><table><caption>Four separately attributable scopes</caption><tbody>{state.reviewRows.map((row) => <tr key={row.id}><th scope="row">{row.scope}</th><td><strong>{row.owner}</strong><span className="counterfield-scope-description">{row.description}</span></td><td>{row.state}</td></tr>)}</tbody></table><Action action={counterfieldActions.save} onAction={onAction} /><Action action={counterfieldActions.cancelSave} onAction={onAction} /></div>}
+        {group === "cf20_review" && <section><p>All seven observations and eight independently attributable learning records are complete.</p><table><caption>Four separately attributable scopes</caption><tbody>{state.reviewRows.map((row) => <tr key={row.id}><th scope="row">{row.scope}</th><td><strong>{row.owner}</strong><span className="counterfield-scope-description">{row.longestCopy ?? row.description}</span></td><td>{row.state}</td></tr>)}</tbody></table><Action action={counterfieldActions.prepareSave} onAction={onAction} /></section>}
+        {group === "cf20_save" && <div ref={saveRef} className="counterfield-save-group" role="group" aria-labelledby="cf20-save-heading"><table><caption>Four separately attributable scopes</caption><tbody>{state.reviewRows.map((row) => <tr key={row.id}><th scope="row">{row.scope}</th><td><strong>{row.owner}</strong><span className="counterfield-scope-description">{row.longestCopy ?? row.description}</span></td><td>{row.state}</td></tr>)}</tbody></table><Action action={counterfieldActions.save} onAction={onAction} /><Action action={counterfieldActions.cancelSave} onAction={onAction} /></div>}
         {group === "cf20_save_recovery" && <Action action={counterfieldActions.retrySave} onAction={onAction} />}
         {group === "cf30_restore" && <section><h3>Verified bounded scope register</h3><p>Four scopes remain separate and no prior event was replayed.</p><Action action={counterfieldActions.look} onAction={onAction} /></section>}
         {!isRoute && !isTour && group !== "cf20_transaction" && <nav className="counterfield-returns" aria-label="Exact safe returns"><Action action={counterfieldActions.returnOccludedFold} onAction={onAction} /><Action action={counterfieldActions.returnThreshold} onAction={onAction} /></nav>}
