@@ -1,13 +1,37 @@
 # SC-11 — Counterfield
 
+## 2026-08-01 canonical cycle reveal - stewardship without standardization
+
+- **Closed checklist item:** `[x] RP-010 / SC-11 - stewardship without
+  standardization remains legible across physically separated works at
+  landscape scale`.
+- **Canonical reference candidate:**
+  `../../Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`,
+  with complete prompt, generation accounting, original-resolution QA,
+  dimensions, hash, and flexibility limits in neighboring `PROVENANCE.md`.
+- **Locked visual decision:** a low lateral smoky-glass vane field, one
+  leaning refractory casing, and one distant low ribbed work remain broadly
+  separated and use unrelated construction logics while each visibly bears a
+  different distribution of foundation, compatible intervention, and
+  maintained-present repair strata.
+- **Status / limit:** Image Specialist accepted this exact PNG as the sole
+  TD-010 spoiler-safe canonical reference candidate, pending fresh
+  Intelligence release. It is not runtime-integrated, not emitted media, not
+  `SC-11-COUNTERFIELD-PANORAMA-MASTER` or
+  `SC-11-DISTRICT-DETAIL-MASTER`, and supplies no hotspot, route, evidence,
+  chronology, purpose, identity, institution, hierarchy, access, authority,
+  reward, response, successor, RP-011, or world-state change. Exact collar
+  count, fracture pattern, surface subdivisions, rib count, accretion, and
+  distant relief remain flexible incidental detail.
+
 ## Identity
 
 - **Scene ID:** `SC-11`
 - **Rail Packet:** `RP-010 — Counterfield`
 - **Player-facing survey name:** Counterfield (expedition label only)
 - **World / region:** World D / Volcanic Habitation Vault / immense open working field beyond the Occluded Fold
-- **Production status:** Brief — A2 four-phase invariant-world sequence and premium two-master plan locked; no final art
-- **Image:** No image selected or generated. SC-10 supplies continuity evidence only; it is not a composition, palette, prop, texture, district, process, or topology template.
+- **Production status:** Brief plus one canonical reference candidate — A2 four-phase invariant-world sequence and premium two-master plan locked; no final or runtime art
+- **Image:** One spoiler-safe reference candidate is archived above. It does not fill either conditional runtime role. SC-10 supplies continuity evidence only; it is not a composition, palette, prop, texture, district, process, or topology template.
 - **Purpose:** Make simultaneous association, incomplete order, cross-scale correspondence, ordinary mismatch, ambiguity, unavailability, layered stewardship, and mutually unsynchronized operation readable across physically separate districts without composing them into one system, topology, chronology, purpose, route, or answer key.
 
 ## Functional landscape and collective design movement
@@ -156,4 +180,9 @@ Also reject repeated districts staged as one family; a common horizon connector;
 - `PASS` — three nested scales, three stewardship strata, visible local input/transformation/return/maintenance/bypass, independent clocks, and broad physical separation supply functional richness without one human workplace or common purpose claim.
 - `PASS` — source masters, registered crops, masks, effects, reduced-motion equivalents, responsive containment, accessibility, provenance, eight-pass production, and artifact cleanup are specified without generating final art.
 
-Production status remains **Brief**. A2 creates no raster, production asset, Python/AI-901/remediation mapping, scored evidence, learning answer, puzzle mechanic, save schema, code, live route, common topology/purpose/chronology, native category, Machine definition, RP-011 content, or hidden-lore change.
+Production status remains **Brief plus one canonical reference candidate**.
+The later Image Specialist reveal creates no runtime raster, registered
+production master, Python/AI-901/remediation mapping, scored evidence,
+learning answer, puzzle mechanic, save schema, code, live route, common
+topology/purpose/chronology, native category, Machine definition, RP-011
+content, or hidden-lore change.

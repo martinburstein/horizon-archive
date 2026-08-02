@@ -9,12 +9,13 @@
 | Shell | `SS-RP010-COUNTERFIELD-v1 / SHELL READY` |
 | Address | `RP-010 / SC-11 / CF-00-CF-30` |
 | Starting build | Quartermaster commit `167b23aa0ee685dc85da86419facc2bbca7d44d0` |
+| Resumed build | Combat correction commit `f3736129ae4f457205e9988c8b27ccb82036019f` |
 | Quartermaster disposition | `CONTENT COMPLETE` |
 | Date | `2026-08-01` |
-| Disposition | **`REVISE - RETURN TO COMBAT ENGINEER`** |
-| Next recipient | Combat Engineer / `combat_engineer` |
+| Disposition | **`PRESENTATION COMPLETE - STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL ACCEPTED`** |
+| Next recipient | Intelligence Officer / `intelligence_officer` only |
 
-## Exact build reviewed
+## Initial exact build reviewed - preserved correction history
 
 Image Specialist independently verified local `HEAD` as exact Quartermaster
 commit `167b23aa0ee685dc85da86419facc2bbca7d44d0`, with sole parent Combat
@@ -29,7 +30,7 @@ Both conditional SC-11 runtime image roles remain honestly retired.
 `data-asset-role-disposition="retired-no-runtime-image"`, and no raster was
 silently reinstated.
 
-## Independent presentation review
+## Initial presentation review - preserved correction history
 
 The storage-free TD-010 fixture was served locally on `127.0.0.1:4182` and
 captured at exact `1920 x 1080`, `1366 x 768`, `390 x 844`, and `768 x 900`
@@ -45,7 +46,7 @@ contained surface cannot substitute for an incorrect owner/focus/state
 contract. No CSS or production-source correction was made by Image
 Specialist.
 
-## Blocking fixture evidence
+## Initial blocking fixture evidence - preserved correction history
 
 Image Specialist parsed all 66 exact owner/focus rows directly from shell 05
 and compared them with `createCounterfieldScenario(name).state.owner` and
@@ -69,7 +70,7 @@ scenario has a nonempty self-declared owner/focus and checks only a small
 subset of exact pairs. That is not the shell-required all-66 independent
 comparison and cannot support the predecessor's `66/66` claim.
 
-## Formal variances
+## Initial formal variances - preserved correction history
 
 ### `TD010-FIX-001`
 
@@ -120,7 +121,7 @@ comparison and cannot support the predecessor's `66/66` claim.
 - **Proposed classification:** `REQUIRED CORRECTION`.
 - **Work paused at:** Image presentation acceptance before generation.
 
-## Reveal and generation accounting
+## Initial reveal and generation accounting - preserved correction history
 
 - Accepted reveal: none.
 - Workspace reveal bytes: none.
@@ -135,7 +136,7 @@ comparison and cannot support the predecessor's `66/66` claim.
 - No checklist item was closed and no prompt-provenance or visual-canon
   record was updated.
 
-## Validation evidence
+## Initial validation evidence - preserved correction history
 
 | Gate | Result |
 |---|---|
@@ -149,7 +150,7 @@ comparison and cannot support the predecessor's `66/66` claim.
 | Generation boundary | zero completed attempts; zero accepted/rejected output bytes |
 | Protected files and Martin-owned state | untouched |
 
-## Protected boundaries
+## Protected boundaries - unchanged across both passes
 
 No mechanic, evidence, save, route, canon, content meaning, runtime asset,
 owner, focus, fixture state, successor, RP-011/RP-013, authority, reward,
@@ -157,13 +158,13 @@ access, response, external action, or world effect was changed. Hidden lore,
 Martin's browser/profile/save, `Art Of No Mans Sky Book Scan.pdf`, and
 `Simplilearn Training Files/` remained unopened and untouched.
 
-## Files changed
+## Initial checkpoint files changed - preserved correction history
 
 - this review;
 - `Production Pipeline/Skyscraper Test Drives/TD-010/STAGE-METRICS.json`;
 - `NEXT_INSTANCE_HANDOFF.md`.
 
-## Disposition
+## Initial disposition - preserved correction history
 
 **`REVISE - RETURN TO COMBAT ENGINEER`**
 
@@ -173,7 +174,7 @@ shell-frozen route and recovery contracts. The reveal obligation remains
 unfulfilled and generation remains deferred until the corrected candidate
 returns through the exact sequential handoff.
 
-## Exact Combat Engineer correction handoff
+## Initial exact Combat Engineer correction handoff - preserved history
 
 - **Stage / agent:** Combat Engineer / `combat_engineer` only.
 - **Starting authority:** Quartermaster content-complete commit
@@ -203,3 +204,147 @@ returns through the exact sequential handoff.
 - **Next recipient on pass:** Image Specialist / `image_specialist` for a
   fresh presentation review and the required one accepted reveal; stop before
   Intelligence.
+
+## Resumed Image Specialist private-generation log
+
+### Initial attempt - rejected outside the workspace
+
+- **Completed attempt:** `1` initial generation; built-in Image Generation,
+  direct mode because the board tool is unavailable.
+- **Original-resolution inspection:** completed against the generator-owned
+  PNG before any workspace entry.
+- **Decision:** **REJECTED**. The plate repeats near-identical bell-shaped
+  structures with a shared silhouette and component vocabulary. That visual
+  family reads as standardization and therefore fails the reveal's one
+  required proposition: locally maintained stewardship must remain legible
+  *without* a shared design standard across physically separated works.
+- **Additional selection note:** material response, lighting, scale, and the
+  absence of UI/humans are credible, but those strengths cannot override the
+  central semantic failure.
+- **Containment:** the rejected image remains generator-owned and outside the
+  workspace, canon, runtime, provenance package, commit, and accepted reveal.
+- **Recovery authorization:** one targeted recovery is now permitted. It must
+  diversify massing and material construction first, while keeping broad
+  separation, local repair strata, first-person landscape scale, and every
+  spoiler boundary. No third attempt is permitted.
+
+### Targeted recovery - accepted
+
+- **Completed attempt:** `1` targeted-recovery generation; built-in Image
+  Generation, direct mode, no image reference or rejected-pixel input.
+- **Original-resolution inspection:** PASS at exact native `1672 x 941`,
+  24-bit RGB.
+- **Accepted proposition:** a low lateral smoky-glass vane field, one leaning
+  refractory casing, and one distant low ribbed work remain physically
+  separated, use unrelated construction logics and silhouettes, and each
+  carries a different distribution of foundation, compatible intervention,
+  and maintained-present repair strata.
+- **Required-read QA:** PASS. Several separate works, three stewardship
+  strata, broad irregular separation, local maintenance, non-standardization,
+  and an indifferent unchanged world remain legible.
+- **Forbidden-read QA:** PASS. No repeated building family, connector, road,
+  route, threshold, UI, text, pseudo-writing, protagonist, human trace, ship,
+  face, answer cue, identity, institution, hierarchy, chronology, purpose,
+  authority, reward, response, RP-011, successor, or later-content cue is
+  present.
+- **Accepted asset:**
+  `Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`.
+- **Exact evidence:** `2,375,786` bytes; SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+- **Accounting:** exactly `2` completed attempts total (`1` rejected initial,
+  `1` accepted targeted recovery), no third attempt, no edit, no variant, no
+  board, and no CLI/API fallback.
+
+## Resumed correction verification
+
+Image Specialist independently resumed from exact Combat correction commit
+`f3736129ae4f457205e9988c8b27ccb82036019f`. Shell 05 remained the fixture
+authority; the corrected fixture was not trusted by declaration alone.
+
+| Correction | Independent result |
+|---|---|
+| `TD010-FIX-001` | PASS - exact `cf20_exchange_save` restored; shell-parsed and picker IDs are exactly 66 unique rows in shell order |
+| `TD010-FIX-002` | PASS - all seven route modalities render blank CF-00 with visible `SYSTEM // EXPEDITION LEDGER` and actual focus `cf00-heading` |
+| `TD010-FIX-003` | PASS - `client_primary_miss` renders System recovery and actual focus `cf20-client-primary-first-failed` |
+
+The independent headless-browser regression parsed all 66 exact shell rows,
+compared the manifest and rendered picker identity, then compared visible
+`[data-active-owner]` text and actual `document.activeElement.id` for every
+row. Result: `66/66 PASS`, zero differences. The same closed browser matrix
+exercised all four layouts plus forced-colors, reduced-motion, and grayscale
+states.
+
+## Resumed presentation polish and matrix
+
+Direct fixture captures reviewed representative wide `1600 x 900`, laptop
+`1366 x 768`, narrow `900 x 1000`, and effective-`200%` output from an
+`800 x 900` CSS viewport at device scale `2`. The inherited global heading
+scale overwhelmed the fixed desktop harness rail, so Image Specialist added
+one fixture-only `.fixture-harness h1` containment rule. Recaptured wide,
+laptop, narrow, and effective-`200%` surfaces remain legible and preserve the
+rendered contract `PASS` output. No production CSS, owner, focus, state,
+mechanic, content, route, save, or runtime media changed.
+
+Both conditional SC-11 runtime roles remain retired. `selectedImageRoles`
+remains empty, the production component remains truthful CSS medium, and the
+accepted reveal is absent from `dist`. Production runtime media remains exact
+at `17 / 37,410,731` bytes with `0` new runtime media.
+
+## Accepted reveal, canon, and checklist records
+
+- Closed named checklist item: `[x] RP-010 / SC-11 - stewardship without
+  standardization remains legible across physically separated works at
+  landscape scale`.
+- Full accepted prompt, selection rationale, dimensions, hash, QA,
+  flexibility limits, generation accounting, and reference-only boundary are
+  recorded in the asset's neighboring `PROVENANCE.md`.
+- `Concept Art Book/prompt-provenance-log.md`, SC-11 visual canon, and the
+  active demo-increment slice record point to the exact accepted PNG.
+- The image is canonical-reference-only and non-runtime. It does not fill
+  `SC-11-COUNTERFIELD-PANORAMA-MASTER` or
+  `SC-11-DISTRICT-DETAIL-MASTER`; it supplies no crop dispatch, hotspot,
+  evidence, learning truth, route, access, authority, reward, response,
+  successor, RP-011, or world-state change.
+
+## Final validation evidence
+
+| Gate | Final result |
+|---|---|
+| Focused Counterfield normal + fixture | `10/10 PASS`; all `5,040` orders included |
+| Shell-authoritative live fixture | `66/66 PASS`; exact IDs, visible owner, actual focus, zero differences |
+| Four-layout and assistive-mode matrix | PASS; wide, laptop, narrow, effective-`200%`, forced colors, reduced motion, grayscale |
+| Full product suite | `917/917 PASS`; zero failures/skips |
+| RP-002 through RP-012 mapping self-tests | `11/11 PASS`, including RP-010 |
+| Automated release checks | PASS in `21s`; coordinator-only full E2E remains assigned to fresh Intelligence |
+| Production / fixture builds | PASS; `209 / 52` modules |
+| Served identity | PASS; production and fixture roots, deep fallback, chunks, CSS, and media byte-exact |
+| `PBA-TD010-v1` | PASS - JS `1,561,633` / SHA-256 `9F89D26347287C38B12C8B2643C00B4AD178D5E58B62ADF1629DEC9007FFBE56`; CSS `108,581` / SHA-256 `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`; `209` modules; runtime media exact `17 / 37,410,731`; zero new |
+| Accepted reveal native evidence | PASS - `1672 x 941`, RGB PNG, `2,375,786` bytes, SHA-256 `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E` |
+| Patch/JSON/protected state | PASS; protected user files remain unopened and untouched |
+
+## Resumed files changed
+
+- this final review;
+- `Production Pipeline/Skyscraper Test Drives/TD-010/STAGE-METRICS.json`;
+- `NEXT_INSTANCE_HANDOFF.md`;
+- fixture-only `horizon-archive-game/review-fixtures/td010-counterfield/fixture.css`;
+- `Concept Art Book/prompt-provenance-log.md`;
+- `Concept Art Book/scenes/SC-11-counterfield.md`;
+- `Production Pipeline/demo-increments/DI-001-city-threshold.md`;
+- accepted PNG and neighboring `PROVENANCE.md` under
+  `Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/`.
+
+## Final disposition and Intelligence handoff
+
+**`PRESENTATION COMPLETE - STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL
+ACCEPTED`**
+
+Fresh Intelligence Officer / `intelligence_officer` is the sole next role.
+It must independently validate the exact unchanged Combat-corrected candidate,
+fixture-only polish, all 66 shell contracts, complete presentation matrix,
+runtime-role retirement, zero runtime-media delta, exact accepted reference
+PNG and provenance, checklist closure, budget/served identity, full release
+ladder, and coordinator-owned complete E2E. Intelligence alone may issue the
+release, classify every variance, update the master plan from accepted
+as-built evidence, synchronize the canonical handoff, and push if its release
+gate authorizes it. No further generation is permitted.

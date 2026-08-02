@@ -4,6 +4,32 @@ Active visual authority: [Photorealistic Visual Direction](../Visual%20Direction
 
 The complete pixel-era prompt history is preserved at [Pixelated Draft/prompt-provenance-log-pixel-era.md](../Pixelated%20Draft/prompt-provenance-log-pixel-era.md). Those prompts are historical and must not be reused as current production instructions.
 
+## 2026-08-01 - RP-010 stewardship-without-standardization cycle reveal
+
+- **Decision:** archive one spoiler-safe reference candidate in which a low
+  glass-ceramic vane field, a leaning refractory casing, and a distant low
+  ribbed work remain physically separated and visibly unlike while each
+  carries a different distribution of long stewardship strata.
+- **Named checklist item:** `[x] RP-010 / SC-11 - stewardship without
+  standardization remains legible across physically separated works at
+  landscape scale`.
+- **Asset and complete prompt/provenance:** [RP-010 stewardship without
+  standardization reveal](../Visual%20Direction/Production%20Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/PROVENANCE.md).
+- **Native source:** `1672 x 941`, 24-bit RGB PNG, `2,375,786` bytes,
+  SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+- **Mode:** built-in `image_gen`, direct because the Creative Production
+  board tool was unavailable. One initial private generation was rejected at
+  original resolution before workspace entry because repeated bell-shaped
+  works implied standardization. The one permitted targeted recovery was
+  accepted at original resolution. No third attempt, edit, variant,
+  reference image, derivative, or CLI/API fallback occurred.
+- **Status:** Image Specialist
+  `PRESENTATION COMPLETE - STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL
+  ACCEPTED`; exact spoiler-safe canonical reference candidate only, pending
+  fresh Intelligence release. It is not runtime or emitted media and does
+  not fill either retired SC-11 runtime role.
+
 ## 2026-08-01 - RP-008 rigid third-lineage cycle reveal
 
 - **Decision:** archive one spoiler-safe reference candidate in which a rigid,

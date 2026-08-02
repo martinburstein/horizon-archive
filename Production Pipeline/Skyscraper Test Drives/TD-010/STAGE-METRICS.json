@@ -262,6 +262,31 @@
       "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; explicit handoff forbids push at this correction gate",
       "nextStage": "Image Specialist only for fresh presentation review and exactly one accepted TD-010 reveal; Intelligence remains blocked until Image completion"
+    },
+    {
+      "sequence": 12,
+      "stage": "Image Specialist resumed completion",
+      "agentId": "image_specialist",
+      "startedAt": "2026-08-02T00:54:00.000Z",
+      "endedAt": "2026-08-02T01:12:00.000Z",
+      "durationMs": 1080000,
+      "disposition": "PRESENTATION COMPLETE - STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL ACCEPTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "f3736129ae4f457205e9988c8b27ccb82036019f / Combat FUNCTIONALLY COMPLETE - CORRECTION VERIFIED",
+      "predecessorVerification": "exact Combat correction commit f373612 verified as HEAD before Image edits; shell 05 remained authoritative and both conditional runtime roles remained retired",
+      "correctionRevalidation": "TD010-FIX-001/002/003 independently PASS; exact shell-ordered 66 unique IDs; visible owner and actual activeElement 66/66; seven route modalities land at CF-00 / SYSTEM // EXPEDITION LEDGER / cf00-heading; client_primary_miss focuses cf20-client-primary-first-failed",
+      "presentationReview": "wide 1600x900, laptop 1366x768, narrow 900x1000 and effective-200 captures reviewed; one fixture-only h1 containment rule resolves inherited heading overflow; forced colors, reduced motion, grayscale, longest copy, targets, one main/status and deterministic focus remain intact",
+      "generation": "built-in image_gen direct because board unavailable; initial completed draft rejected at original resolution outside workspace because repeated bell-shaped works implied standardization; one targeted-recovery new generation accepted at original resolution; exactly two completed attempts total and no third/edit/variant/reference/CLI/API fallback",
+      "acceptedReveal": "Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png; 1672x941 24-bit RGB PNG; 2375786 bytes; SHA-256 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E; canonical-reference-only/non-runtime",
+      "checklist": "closed [x] RP-010 / SC-11 - stewardship without standardization remains legible across physically separated works at landscape scale; full prompt/provenance and visual-canon/slice references recorded",
+      "validation": "focused 10/10 including all 5,040 orders; shell-authoritative live 66/66; complete layout/mode matrix PASS; full 917/917 with zero skips; mappings 11/11; automated release PASS in 21s; production/fixture 209/52 modules; served root/deep/chunks/media exact; JSON/patch/protected-state gates PASS; coordinator full E2E remains Intelligence-owned",
+      "budget": "PBA-TD010-v1 PASS: JS 1561633 bytes / 9F89D26347287C38B12C8B2643C00B4AD178D5E58B62ADF1629DEC9007FFBE56; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 runtime media / 37410731 bytes; zero new runtime media; reveal absent from dist",
+      "variances": "none; fixture-only heading containment is presentation-safe and changes no runtime source, shell contract, mechanic, content, canon meaning, route, save, focus, owner, evidence, privacy, return, hard stop or world state",
+      "commit": "PENDING_IMAGE_COMPLETION_COMMIT",
+      "commitConvention": "The dedicated Image Specialist completion commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; explicit Image gate forbids push",
+      "nextStage": "Intelligence Officer only for independent release, as-built reconciliation, complete E2E, synchronization and exact next action"
     }
   ]
 }

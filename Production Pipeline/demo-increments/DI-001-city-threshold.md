@@ -1,5 +1,35 @@
 # DI-001 — City Threshold protected staging pass
 
+## 2026-08-01 TD-010 Image Specialist presentation complete
+
+- **Candidate:** `SS-RP010-COUNTERFIELD-v1 / RP-010 / SC-11 /
+  CF-00-CF-30`, returned from exact Combat correction commit
+  `f3736129ae4f457205e9988c8b27ccb82036019f`.
+- **Correction proof:** exact shell-authoritative live owner/actual-focus
+  comparison passes `66/66`; `cf20_exchange_save` is restored; all seven
+  route modalities render CF-00 with `SYSTEM // EXPEDITION LEDGER` and focus
+  `cf00-heading`; `client_primary_miss` focuses
+  `cf20-client-primary-first-failed`.
+- **Presentation proof:** fixture-only heading containment is polished across
+  wide, laptop, narrow, and effective-`200%`; forced colors, reduced motion,
+  grayscale, longest copy, native controls, non-color meaning, and deterministic
+  focus remain intact. Both conditional runtime image roles remain retired
+  and no new media is imported or emitted by the game.
+- **Closed checklist item:** `[x] RP-010 / SC-11 - stewardship without
+  standardization remains legible across physically separated works at
+  landscape scale`.
+- **Reveal:**
+  `../../Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`,
+  `1672 x 941`, `2,375,786` bytes, SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`;
+  accepted by Image Specialist at original resolution as the sole
+  spoiler-safe TD-010 canonical reference candidate.
+- **Limit:** reference-only and non-runtime. It supplies no gameplay fact,
+  route, evidence, chronology, purpose, identity, institution, hierarchy,
+  access, authority, reward, response, successor, RP-011, or world change.
+  Fresh Intelligence must independently validate the exact unchanged
+  candidate before authoritative release.
+
 ## Intelligence Officer current control - TD-007 release / 2026-07-29
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-007 /

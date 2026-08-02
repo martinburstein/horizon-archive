@@ -432,43 +432,87 @@ registry before acting. This file is the sole exact-next-action authority.
   push. The commit containing this handoff is the non-recursive authority.
   Intelligence remains blocked.
 
+### Image Specialist - resumed completion
+
+- Stage: **`Image Specialist / image_specialist`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Starting authority: exact Combat correction commit
+  `f3736129ae4f457205e9988c8b27ccb82036019f`.
+- Disposition: **`PRESENTATION COMPLETE -
+  STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL ACCEPTED`**.
+- Correction revalidation: `TD010-FIX-001/002/003` independently PASS.
+  Shell 05 directly governs the exact 66 unique manifest/picker IDs, visible
+  owner text, and actual `document.activeElement.id`; all `66/66` rows pass.
+  The seven route modalities land at blank CF-00 with
+  `SYSTEM // EXPEDITION LEDGER / cf00-heading`, exact
+  `cf20_exchange_save` is present, and `client_primary_miss` focuses
+  `cf20-client-primary-first-failed`.
+- Presentation matrix: wide `1600 x 900`, laptop `1366 x 768`, narrow
+  `900 x 1000`, and effective-`200%` captures pass after one fixture-only
+  harness-heading containment rule. Forced colors, reduced motion, grayscale,
+  longest copy, native targets, one main/status, deterministic focus, and
+  code-native world/interface separation remain intact.
+- Runtime imagery: both conditional SC-11 roles remain retired;
+  `selectedImageRoles` is empty, CSS remains the truthful rendering medium,
+  and production media remains exact `17 / 37,410,731` bytes with zero new
+  runtime media. The reveal is absent from `dist`.
+- Generation accounting: Creative Production board unavailable, so built-in
+  `image_gen` direct mode was used. One initial private generation was
+  rejected at original resolution outside the workspace because repeated
+  bell-shaped works implied standardization. The one permitted targeted
+  recovery was accepted at original resolution. Exactly two completed
+  attempts total; no third attempt, edit, variant, reference, or CLI/API
+  fallback.
+- Accepted reveal:
+  `Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`,
+  native `1672 x 941` 24-bit RGB PNG, `2,375,786` bytes, SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+  It is canonical-reference-only/non-runtime and fills neither retired role.
+- Checklist: `[x] RP-010 / SC-11 - stewardship without standardization
+  remains legible across physically separated works at landscape scale`.
+  Full prompt/provenance, SC-11 visual canon, and slice references are
+  recorded; no gameplay fact, route, evidence, chronology, purpose, identity,
+  authority, reward, response, successor, RP-011, or world change is granted.
+- Validation: focused `10/10` including all `5,040` orders; shell-authoritative
+  live `66/66`; complete layout/mode matrix PASS; full `917/917`; mappings
+  `11/11`; automated release PASS in `21s`; production/fixture `209/52`
+  modules; served identity exact; `PBA-TD010-v1` PASS at JS `1,561,633`, CSS
+  `108,581`, exact predecessor media, zero new runtime media; JSON, patch and
+  protected-state checks PASS. Coordinator-owned complete E2E remains for
+  fresh Intelligence.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md`.
+- Commit/synchronization: one dedicated local Image completion commit; no
+  push. The commit containing this handoff is the non-recursive authority.
+
 ## Exact next action
 
-Run **Image Specialist / `image_specialist` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, Quartermaster content-complete commit
-`167b23aa0ee685dc85da86419facc2bbca7d44d0`, Image return checkpoint
-`4a9943530d0385ff3284493227c2a47c549ff54e`, and the dedicated local Combat
-correction commit containing the correction addendum and this handoff.
+Run **Intelligence Officer / `intelligence_officer` only** against exact shell
+`SS-RP010-COUNTERFIELD-v1`, Combat correction commit
+`f3736129ae4f457205e9988c8b27ccb82036019f`, and the dedicated local Image
+completion commit containing the final polish review, fixture-only
+presentation rule, accepted reveal/provenance, canon/checklist/slice records,
+metrics, and this handoff.
 
-Independently recheck `TD010-FIX-001`, `TD010-FIX-002`, and
-`TD010-FIX-003` directly against shell 05 and the corrected live fixture.
-Confirm exact `cf20_exchange_save`, all seven route modalities at blank CF-00
-with `SYSTEM // EXPEDITION LEDGER / cf00-heading`, and
-`client_primary_miss` at
-`SYSTEM // RECOVERY / cf20-client-primary-first-failed` before presentation
-acceptance.
+Independently release or reject the exact unchanged as-built candidate.
+Re-parse all 66 owner/focus rows from shell 05 and compare exact manifest and
+picker IDs, visible owner, and actual focus. Confirm `TD010-FIX-001/002/003`,
+the full responsive/assistive presentation matrix, both runtime-role
+retirements, zero new runtime media, exact PBA and served identity, and the
+reference-only accepted PNG at native `1672 x 941`, `2,375,786` bytes,
+SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+Confirm the rejected initial is absent from workspace/canon/runtime/
+provenance/commit/reveal and that exactly one accepted reveal exists with no
+third generation.
 
-Resume the fresh code-native SC-11 presentation review at desktop, laptop,
-narrow, and effective-200 layouts; forced colors, reduced motion, grayscale,
-longest copy, focus/status/targets, invariant-world and forbidden-reading
-checks; and the required single TD-010 cycle reveal. Both conditional runtime
-image roles remain retired, `selectedImageRoles` is empty, and CSS is the
-truthful rendering medium. Do not silently reinstate a runtime role.
-
-The generation allowance remains one initial private attempt and at most one
-targeted recovery only after documented pre-workspace rejection. A second
-failure is `HOLD`; no third attempt is permitted. Rejected bytes remain
-outside workspace, canon, runtime, provenance, commits, and user-facing
-reveal. Exactly one accepted spoiler-safe reveal must be archived, committed,
-and shown to Martin before Image can hand a stable candidate to a fresh
-Intelligence Officer.
-
-Preserve every accepted product mechanic and Quartermaster content decision,
-fixture storage/network/production isolation, privacy, PBA, exact returns,
-invariant world, and CF-30 hard stop. Do not inspect Martin's browser/profile/
-save, hidden lore, or protected user paths. Update polish review, metrics, and
-handoff, make one dedicated local Image commit, no push, then stop before a
-fresh independent Intelligence Officer.
+Run the complete independent release ladder including coordinator-owned full
+E2E, classify every variance, update the master plan only from accepted
+as-built evidence, replace this handoff with one synchronized exact next
+action, create the dedicated Intelligence release commit, and synchronize/
+push only if every release gate passes. No further image generation, content
+change, mechanic change, hidden lore, RP-011/RP-013, successor, reward,
+access, authority, response, external action, or world effect is authorized.
 
 ## Recurring automation
 
@@ -478,11 +522,10 @@ fresh independent Intelligence Officer.
 ## Frozen boundaries
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
-  `TD010-RTA-001` remain unreleased; the Combat candidate is functionally
-  implemented, content complete, and correction verified, but awaits resumed
-  Image Specialist presentation/reveal completion and independent
-  Intelligence release. Marine deployment continues strictly with Image
-  Specialist.
+  `TD010-RTA-001` remain unreleased; the candidate is functionally implemented,
+  content complete, correction verified, and presentation complete with one
+  accepted reference-only reveal, but awaits independent Intelligence
+  release. Marine deployment is complete; Intelligence is the sole next role.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
