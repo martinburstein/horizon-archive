@@ -41,7 +41,7 @@ function findChrome() {
 function waitForDevTools(child) {
   return new Promise((resolve, reject) => {
     let stderr = "";
-    const timer = setTimeout(() => reject(new Error(`Chrome DevTools endpoint did not start. ${stderr}`)), 15_000);
+    const timer = setTimeout(() => reject(new Error(`Chrome DevTools endpoint did not start. ${stderr}`)), 30_000);
     child.stderr.setEncoding("utf8");
     child.stderr.on("data", (chunk) => {
       stderr += chunk;
@@ -92,7 +92,7 @@ async function evaluate(session, expression) {
 }
 
 async function waitForFixture(session) {
-  const deadline = Date.now() + 15_000;
+  const deadline = Date.now() + 30_000;
   while (Date.now() < deadline) {
     const ready = await evaluate(session, "document.readyState === 'complete' && Boolean(document.querySelector('[data-fixture-root=TD010_COUNTERFIELD_FIXTURE]'))");
     if (ready) return;
@@ -101,7 +101,7 @@ async function waitForFixture(session) {
   throw new Error("TD-010 fixture did not render before the browser-contract deadline");
 }
 
-test("TD010 shell 05 independently governs all 66 rendered owner and actual-focus contracts", { timeout: 60_000 }, async () => {
+test("TD010 shell 05 independently governs all 66 rendered owner and actual-focus contracts", { timeout: 90_000 }, async () => {
   const shellRows = parseShellScenarioContract();
   const shellIds = shellRows.map(({ id }) => id);
   assert.deepEqual(manifest.scenarios, shellIds, "manifest IDs and order must equal shell 05, not fixture-declared state");

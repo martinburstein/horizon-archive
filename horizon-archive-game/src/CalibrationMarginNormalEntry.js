@@ -202,7 +202,7 @@ function offsetStateWithOccludedRoute(state) {
   };
 }
 
-function occludedStateWithCounterfieldRoute(state) {
+export function createCounterfieldRouteState(state) {
   if (state?.activeGroup !== "of30_restore") return state;
   return {
     ...state,
@@ -274,7 +274,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
 
   const currentState = () => {
     if (counterfieldController) return counterfieldController.getState();
-    if (occludedFoldController) return occludedStateWithCounterfieldRoute(occludedFoldController.getState());
+    if (occludedFoldController) return createCounterfieldRouteState(occludedFoldController.getState());
     if (offsetReachController) return offsetStateWithOccludedRoute(offsetReachController.getState());
     if (braidedVergeController) return braidedStateWithOffsetRoute(braidedVergeController.getState());
     if (intervalWorksController) return intervalStateWithBraidedRoute(intervalWorksController.getState());
@@ -474,7 +474,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                 const restoredCounterfield = sanitizeCounterfieldSave(options.restoredCounterfield);
                 if (restoredCounterfield) {
                   counterfieldController = createCounterfieldNormalController({
-                    entrySourceState: occludedStateWithCounterfieldRoute(occludedFoldController.getState()),
+                    entrySourceState: createCounterfieldRouteState(occludedFoldController.getState()),
                     releasedPredecessorState: occludedFoldController.getState(),
                     predecessorBytes: options.readOccludedBytes?.(),
                     restoredRecord: restoredCounterfield,
@@ -549,7 +549,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
         if (occludedState.activeGroup === "of30_restore" && intent?.allowlistedActionId === COUNTERFIELD_ROUTE_ACTION) {
           const predecessorBytes = options.readOccludedBytes?.() ?? JSON.stringify(occludedFoldController.getRecord());
           const candidate = createCounterfieldNormalController({
-            entrySourceState: occludedStateWithCounterfieldRoute(occludedState),
+            entrySourceState: createCounterfieldRouteState(occludedState),
             releasedPredecessorState: occludedState,
             predecessorBytes,
             entryIntent: intent,
@@ -557,7 +557,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
             adapter: options.counterfieldAdapter,
           });
           if (candidate.getState().shellVersion !== COUNTERFIELD_SHELL_VERSION) {
-            return Object.freeze({ status: "rejected", reason: "counterfield_route_rejected", state: clonePublicState(occludedStateWithCounterfieldRoute(occludedState)) });
+            return Object.freeze({ status: "rejected", reason: "counterfield_route_rejected", state: clonePublicState(createCounterfieldRouteState(occludedState)) });
           }
           counterfieldController = candidate;
           return Object.freeze({ status: "counterfield_arrived_zero_evidence", evidenceGranted: false, state: clonePublicState(counterfieldController.getState()) });
@@ -567,7 +567,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
           occludedFoldController = null;
           return Object.freeze({ ...result, state: clonePublicState(offsetStateWithOccludedRoute(offsetReachController.getState())) });
         }
-        return result?.state ? Object.freeze({ ...result, state: clonePublicState(occludedStateWithCounterfieldRoute(result.state)) }) : result;
+        return result?.state ? Object.freeze({ ...result, state: clonePublicState(createCounterfieldRouteState(result.state)) }) : result;
       }
       if (offsetReachController) {
         const offsetState = offsetReachController.getState();

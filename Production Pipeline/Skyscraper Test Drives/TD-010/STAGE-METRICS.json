@@ -311,6 +311,30 @@
       "commitConvention": "The dedicated Intelligence REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only return checkpoint; no push authorized",
       "nextStage": "Combat Engineer only for TD010-FIX-003/004, then Image Specialist bounded revalidation, then fresh Intelligence review"
+    },
+    {
+      "sequence": 14,
+      "stage": "Combat Engineer second correction return",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-02T01:25:00.000Z",
+      "endedAt": "2026-08-02T01:40:00.000Z",
+      "durationMs": 900000,
+      "disposition": "FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "8f7b0f924d20fc7e33516ceeeb3e0ee256987abf / Intelligence REVISE checkpoint over rejected Image candidate c80650c84f68f1b21bdb3b85449a1b67852b5185",
+      "predecessorVerification": "exact HEAD 8f7b0f924d20fc7e33516ceeeb3e0ee256987abf verified; tracked worktree clean; only protected untracked PDF/training paths present and untouched",
+      "corrections": "TD010-FIX-003 resolved in genuine normal controller with responsibility-specific recovery targets including exact cf20-client-primary-first-failed, actual failed IDs/tags, answer-free private-cleared atomic recovery and wholly blank retry; TD010-FIX-004 resolved with byte-exact shell UTF-8 owner/heading/status/focus across every applicable normal state",
+      "independentRegression": "new test parses all 22 frozen registry rows from shell 05, drives genuine normal controller transitions including all eight recovery responsibilities, renders production Counterfield, and proves exact controller/rendered owner, heading, atomic status and focus-target identity; fixture declarations are not the authority",
+      "validation": "focused 10/10 including all 5,040 orders; normal shell/render 2/2; live fixture 66/66; four layouts and forced-colors/reduced-motion/grayscale PASS; full 919/919; mappings 11/11; readiness 15/15; automated release PASS in 23.8s; production/fixture 209/52 modules; served identity and privacy/protected/later/fixture/patch/JSON/cleanup gates PASS",
+      "validationNote": "first aggregate release-check attempt encountered only parallel Chrome fixture startup timeout; bounded startup deadline increased 15s to 30s without assertion weakening and complete rerun passed",
+      "budget": "PBA-TD010-v1 PASS: JS 1564452 bytes / 74DC7BB3469D6FECE0BB18B3F3FEFAD4BCB76D0165D84680D35AACE5B32D1DAD; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 predecessor media / 37410731 bytes; zero new media",
+      "assetBoundary": "both conditional roles remain retired; selectedImageRoles empty; CSS medium truthful; exact accepted 1672x941 / 2375786-byte / 92062AC9... reference PNG unchanged and absent from dist; no image/board/generation/edit/variant/reveal change",
+      "variances": "TD010-FIX-001/002 remain RESOLVED; TD010-FIX-003/004 resolved as REQUIRED CORRECTION with no shell, content, route, evidence, schema, privacy, return, runtime-media, accepted-reveal, invariant-world or hard-stop change",
+      "commit": "PENDING_COMBAT_SECOND_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat second-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no push authorized",
+      "nextStage": "Image Specialist only for bounded normal-production and presentation/reveal revalidation; then fresh Intelligence review"
     }
   ]
 }

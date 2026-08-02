@@ -11,7 +11,7 @@
 | Address | `RP-010 / SC-11 / CF-00-CF-30` |
 | Route | sole `TD010-RTA-001` |
 | Starting authority | Tactical commit `cdb91415392ad750e139c0db04921ab982ef2b0f` |
-| Disposition | **`FUNCTIONALLY COMPLETE - CORRECTION VERIFIED`** |
+| Disposition | **`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`** |
 
 ## Functional result
 
@@ -238,3 +238,120 @@ hard stop are unchanged.
   save, RP-011/RP-013, external action, or world-effect change.
 - **Next recipient on pass:** Intelligence Officer only after Image issues
   `PRESENTATION COMPLETE`; Combat stops before Image and Intelligence.
+
+## Combat second correction addendum - Intelligence return
+
+Intelligence returned exact normal-production defects `TD010-FIX-003` and
+`TD010-FIX-004` from candidate
+`c80650c84f68f1b21bdb3b85449a1b67852b5185`. Combat resumed from exact
+Intelligence checkpoint `8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
+The shell, 66-row fixture registry, finalized Quartermaster content,
+fixture-only Image polish, runtime-role retirement, and exact accepted reveal
+bytes remained unchanged.
+
+### Exact production corrections
+
+- `TD010-FIX-003` is resolved in the genuine normal controller. Recovery
+  focus is derived from the failed responsibility. A client-primary scored
+  miss now focuses exact `cf20-client-primary-first-failed`; the other seven
+  responsibilities have distinct failed-control targets. Results and rendered
+  recovery retain the exact actually failed public IDs and actually scored
+  allowlisted misconception tags, contain no answer, clear private/transient
+  work, expose one atomic polite shell status, and reopen the same
+  responsibility wholly blank.
+- `TD010-FIX-004` is resolved across the normal route/controller/product.
+  Every applicable shell-frozen owner, UTF-8 heading, status, and focus field
+  now renders byte-exactly for route ready/rejection, CF-00, CF-10, all eight
+  learning responsibilities, responsibility-specific scored recovery,
+  ineligible review, four-scope review, save confirmation, transaction,
+  verified rollback, rollback HOLD, CF-30 restore, inert LOOK, and Tour
+  rejection.
+- The normal route-state constructor is now an exported production helper so
+  the dedicated regression exercises the same route surface used by the
+  campaign entry controller instead of rebuilding it as a test-only fixture.
+- A new test parses all `22` frozen registry rows directly from shell 05,
+  constructs genuine normal-controller states through real transitions,
+  proves exact controller fields, renders the production `Counterfield`
+  component, and checks rendered owner, heading, atomic status, and focus-
+  target identity. All eight recovery variants additionally prove actual
+  failed IDs/tags, answer-free guidance, private clearing, and blank retry.
+
+`TD010-FIX-001/002` remain resolved: exact `cf20_exchange_save`, all 66
+unique fixture IDs in shell order, and all seven route fixture endpoints at
+blank CF-00 remain unchanged. The fixture continues to render the production
+surface while remaining storage-free and absent from production.
+
+### Second-correction validation
+
+| Validation | Corrected result |
+|---|---|
+| Focused normal + fixture | `10/10 PASS`; all `5,040` observation orders included |
+| Shell-parsed normal controller + rendered product | `2/2 PASS`; all `22` frozen registry rows and eight recovery responsibilities covered |
+| Shell-authoritative live fixture | `66/66 PASS`; exact IDs, visible owner, actual focus; zero differences |
+| Layout and modes | `4/4` exact layouts plus forced colors, reduced motion, and grayscale PASS; one product main/status; containment; targets `>=44px` |
+| Full product suite | `919/919 PASS`; zero failures/skips; `13.524s` recorded standalone run |
+| RP-002 through RP-012 mappings / readiness | `11/11` / `15/15 PASS` |
+| Automated release checks | PASS in `23.8s`; coordinator-only complete E2E intentionally remains downstream |
+| Production / fixture builds | PASS; `209` / `52` modules |
+| Served identity | PASS; production and fixture root/deep/chunks/CSS/media byte-exact |
+| Privacy / protected / later / fixture scans | PASS; zero scoped production-source or emitted-bundle matches |
+| Patch / JSON / cleanup | PASS; owned preview ports clear; tracked patch clean |
+
+The first aggregate release-check attempt encountered only a parallel Chrome
+fixture startup timeout before the fixture rendered. The already-passing live
+contract was unchanged. Its bounded startup deadline was raised from `15s` to
+`30s` to tolerate full-suite contention, and the complete release check then
+passed. No assertion, owner/focus contract, layout requirement, or product
+behavior was weakened.
+
+### Second-correction PBA-TD010-v1 identity
+
+| Measure | Corrected candidate | Cap | Result |
+|---|---:|---:|---|
+| Modules | `209` | `216` | PASS |
+| Aggregate JavaScript | `1,564,452` bytes | `1,585,466` | PASS |
+| JavaScript SHA-256 | `74DC7BB3469D6FECE0BB18B3F3FEFAD4BCB76D0165D84680D35AACE5B32D1DAD` | identity evidence | recorded |
+| Aggregate CSS | `108,581` bytes | `109,236` | PASS |
+| CSS SHA-256 | `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A` | identity evidence | recorded |
+| Runtime media | exact `17 / 37,410,731` bytes | `<=45,799,339` bytes | PASS |
+| New runtime media | `0 / 0` bytes | `<=2 / 8,388,608` bytes | PASS |
+
+Both conditional runtime roles remain retired, `selectedImageRoles` remains
+empty, and the accepted `1672 x 941` reference PNG remains non-runtime at
+exact `2,375,786` bytes and SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+It is absent from the production build. No image, board, generation, edit,
+variant, provenance, or reveal change occurred.
+
+### Second-correction files
+
+- `horizon-archive-game/src/CounterfieldNormal.js`
+- `horizon-archive-game/src/Counterfield.jsx`
+- `horizon-archive-game/src/CalibrationMarginNormalEntry.js`
+- `horizon-archive-game/test/counterfieldShellRegistry.test.js`
+- `horizon-archive-game/review-fixtures/td010-counterfield/shellContractBrowser.test.js`
+- `horizon-archive-game/package.json`
+- this report, stage metrics, and synchronized handoff
+
+## Second-correction disposition and exact Image Specialist handoff
+
+**`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`**
+
+- **Stage / agent:** Image Specialist / `image_specialist` only.
+- **Starting authority:** the dedicated local Combat second-correction commit
+  containing this addendum, exact shell 05, Quartermaster content-complete
+  commit `167b23aa0ee685dc85da86419facc2bbca7d44d0`, existing Image candidate
+  `c80650c84f68f1b21bdb3b85449a1b67852b5185`, and Intelligence return
+  `8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
+- **Resolved return:** independently revalidate `TD010-FIX-003/004` against
+  genuine normal-controller transitions and rendered production output, while
+  confirming `TD010-FIX-001/002` and the fixture-only containment polish stay
+  resolved.
+- **Runtime/reveal boundary:** both runtime roles remain retired; the exact
+  accepted reveal remains canonical-reference-only and unchanged; no further
+  generation, replacement, edit, variant, or reveal byte is permitted.
+- **Stop boundary:** no mechanic, content meaning, evidence, save, route,
+  canon, authority, successor, hidden lore, protected path, Martin browser/
+  save, RP-011/RP-013, external action, or world-effect change.
+- **Next recipient on pass:** fresh Intelligence Officer only after bounded
+  Image revalidation; Combat stops before Image and Intelligence.

@@ -16,30 +16,38 @@ registry before acting. This file is the sole exact-next-action authority.
 - Release record:
   `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
 
-## TD-010 unreleased correction state
+## TD-010 unreleased corrected-candidate state
 
 - Shell: `SS-RP010-COUNTERFIELD-v1`.
 - Address/graph: `RP-010 / SC-11 / CF-00-CF-30` through sole
   `TD010-RTA-001`; `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`.
-- Candidate rejected by Intelligence:
+- Prior candidate rejected by Intelligence:
   `c80650c84f68f1b21bdb3b85449a1b67852b5185`, over Combat correction
   `f3736129ae4f457205e9988c8b27ccb82036019f`.
-- Intelligence disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**.
+- Intelligence return checkpoint:
+  `8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
+- Combat disposition:
+  **`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`** in the dedicated
+  local Combat commit containing this handoff; no push occurred.
 - Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md`.
-- `TD010-FIX-001` and `TD010-FIX-002` remain resolved in the closed fixture.
-- `TD010-FIX-003 / REQUIRED CORRECTION`: the normal production controller,
-  after a genuine client-primary scored miss, returns
-  `cf20-python-primary-first-failed`; shell 05 requires
-  `cf20-client-primary-first-failed`. The fixture special-cases the expected
-  focus and therefore does not prove the normal controller transition.
-- `TD010-FIX-004 / REQUIRED CORRECTION`: several normal learning/recovery
-  headings and statuses differ from the shell-frozen UTF-8 registry. Existing
-  browser proof checks owner/focus only and does not prove exact heading/status
-  fields.
-- Full Intelligence build/served/layout/E2E/release gates were intentionally
-  not run after the earliest blocking production defect. TD-010 is not
-  released, no master plan was advanced, and no push occurred.
+  `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
+- `TD010-FIX-001` and `TD010-FIX-002` remain resolved in the exact closed
+  fixture.
+- `TD010-FIX-003` is corrected in the genuine normal controller: a real
+  client-primary scored miss focuses exact
+  `cf20-client-primary-first-failed`; every recovery target is
+  responsibility-specific; actual failed IDs/tags, answer-free guidance,
+  private clearing, blank retry, and the atomic polite status remain exact.
+- `TD010-FIX-004` is corrected in normal production: all 22 shell-frozen
+  owner, UTF-8 heading, status, and focus rows pass genuine normal-controller
+  and rendered-product comparison. This proof parses shell 05 and does not
+  rely on synthetic fixture declarations.
+- Combat validation passed focused `10/10` including all `5,040` orders,
+  normal shell/render `2/2`, live fixture `66/66`, full `919/919`, mappings
+  `11/11`, readiness `15/15`, production/fixture builds `209/52`, PBA,
+  served identity, four layouts/modes, scans, patch/JSON, and cleanup.
+- TD-010 remains unreleased. No master plan advanced, complete Intelligence
+  E2E was not consumed, and no push occurred.
 - Both conditional SC-11 runtime image roles remain retired;
   `selectedImageRoles: []`, CSS is the truthful runtime medium, and runtime
   media remains the accepted predecessor set with zero TD-010 additions.
@@ -51,33 +59,29 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, rejected candidate
-`c80650c84f68f1b21bdb3b85449a1b67852b5185`, and the dedicated local
-Intelligence `REVISE` checkpoint containing the as-built reconciliation,
-metrics, and this handoff.
+Run **Image Specialist / `image_specialist` only** against exact shell
+`SS-RP010-COUNTERFIELD-v1`, the dedicated local Combat second-correction
+commit containing this handoff, prior Image candidate
+`c80650c84f68f1b21bdb3b85449a1b67852b5185`, and Intelligence return
+`8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
 
-Correct only the normal TD-010 controller/rendered surface and dedicated
-tests:
-
-1. make recovery focus responsibility-specific, including exact client-
-   primary `cf20-client-primary-first-failed`;
-2. preserve actual scored tags/failed IDs, answer-free guidance, private
-   clearing, genuinely blank retry, and one atomic polite status;
-3. render every shell-frozen owner, heading, status, and focus byte-exactly;
-4. add a shell-05-parsed normal-controller and rendered-product regression for
-   every frozen registry field, not only fixture owner/focus;
-5. preserve resolved `TD010-FIX-001/002`, all 66 fixture IDs, storage/production
-   isolation, route, observations, learning independence, four scopes, exact
-   13-key save, privacy, rollback/restore, returns, runtime-role retirement,
-   zero runtime-media delta, reference-only reveal, PBA, invariant world, and
-   CF-30 hard stop; and
-6. run the complete Combat correction ladder and create one dedicated local
-   Combat correction commit without push.
-
-On pass, hand the new committed candidate to **Image Specialist only** for
-bounded correction and presentation/reveal revalidation before a fresh
-Intelligence review. Do not proceed directly to Intelligence from Combat.
+1. independently reproduce the genuine normal client-primary miss and confirm
+   exact `cf20-client-primary-first-failed`, actual failed IDs/tags,
+   answer-free private-cleared recovery, atomic status, and blank retry;
+2. independently run the shell-05-parsed genuine normal-controller and
+   rendered-product registry proof for every frozen owner, UTF-8 heading,
+   status, and focus field;
+3. confirm `TD010-FIX-001/002`, all 66 fixture IDs, fixture-only heading
+   containment, four layouts/modes, finalized content, route, schema,
+   privacy, returns, runtime-role retirement, PBA, invariant world, and CF-30
+   hard stop remain exact;
+4. preserve the accepted reveal byte-for-byte, canonical-reference-only and
+   non-runtime; no further generation, replacement, edit, variant, image call,
+   board call, provenance change, checklist change, or reveal change is
+   permitted; and
+5. issue one bounded local Image revalidation commit without push, then hand
+   the stable candidate to a fresh Intelligence Officer for the complete
+   release review.
 
 ## Recurring automation
 

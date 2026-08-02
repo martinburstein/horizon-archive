@@ -171,15 +171,15 @@ const returnActions = [counterfieldActions.returnOccludedFold, counterfieldActio
 const groups = Object.freeze({
   cf00_orientation: ["SYSTEM // EXPEDITION LEDGER", "cf00-heading", "CF-00 — ARRIVE AND ORIENT WITHOUT ASSIGNING ONE SYSTEM", [counterfieldActions.inspect]],
   cf10_observations: ["PILOT // COUNTERFIELD SURVEY", "cf10-observation-peer-heading", "CF-10 — SURVEY SEVEN EQUAL PHYSICAL EVIDENCE CLASSES", Object.values(counterfieldActions).slice(2, 9)],
-  cf20_python_primary: ["PILOT // COURSE WORK", "cf20-python-primary-editor", "PY-018 — DERIVE ONE BOUNDED EXCHANGE SUMMARY FROM SANITIZED REPLICAS", [counterfieldActions.pythonPrimary]],
-  cf20_python_trace: ["PILOT // COURSE WORK", "cf20-python-trace-first", "TRACE REQUEST-OWNED AND RESPONSE-OWNED FIELDS WITHOUT COLLAPSING THEM", [counterfieldActions.pythonTrace]],
-  cf20_python_transfer: ["PILOT // COURSE WORK", "cf20-python-transfer-editor", "PY-018 TRANSFER — DERIVE A FRESH BOUNDED EXCHANGE SUMMARY", [counterfieldActions.pythonTransfer]],
+  cf20_python_primary: ["PILOT // COURSE WORK", "cf20-python-primary-editor", "PY-018 — PRESERVE REQUEST AND RESPONSE OWNERSHIP", [counterfieldActions.pythonPrimary]],
+  cf20_python_trace: ["PILOT // COURSE WORK", "cf20-python-trace-first", "PY-018 — COMPLETE THE CLOSED-NOTE OWNERSHIP AND PROVENANCE TRACE", [counterfieldActions.pythonTrace]],
+  cf20_python_transfer: ["PILOT // COURSE WORK", "cf20-python-transfer-editor", "PY-018 — COMPLETE A GENUINELY BLANK FRESH TRANSFER", [counterfieldActions.pythonTransfer]],
   cf20_client_primary: ["PILOT // COURSE WORK", "cf20-client-primary-first", "AI901-D2-O3 — IDENTIFY THE FOUR DISTINCT CLIENT-FLOW RESPONSIBILITIES", [counterfieldActions.clientPrimary]],
-  cf20_client_retrieval: ["PILOT // COURSE WORK", "cf20-client-retrieval-first", "AI901-D2-O3 RETRIEVAL — KEEP CLIENT-FLOW RESPONSIBILITIES DISTINCT", [counterfieldActions.clientRetrieval]],
-  cf20_client_transfer: ["PILOT // COURSE WORK", "cf20-client-transfer-first", "AI901-D2-O3 TRANSFER — APPLY THE CLIENT-FLOW BOUNDARY", [counterfieldActions.clientTransfer]],
-  cf20_client_flow_explanation: ["PILOT // COURSE WORK", "cf20-client-flow-explanation", "EXPLAIN THE FOUR DISTINCT CLIENT-FLOW RESPONSIBILITIES", [counterfieldActions.clientFlowBoundary]],
+  cf20_client_retrieval: ["PILOT // COURSE WORK", "cf20-client-retrieval-first", "AI901-D2-O3 — COMPLETE CLOSED-NOTE CLIENT-FLOW RETRIEVAL", [counterfieldActions.clientRetrieval]],
+  cf20_client_transfer: ["PILOT // COURSE WORK", "cf20-client-transfer-first", "AI901-D2-O3 — COMPLETE A GENUINELY BLANK FRESH CLIENT-FLOW TRANSFER", [counterfieldActions.clientTransfer]],
+  cf20_client_flow_explanation: ["PILOT // COURSE WORK", "cf20-client-flow-explanation", "EXPLAIN WHY THE FOUR CLIENT-FLOW RESPONSIBILITIES REMAIN DISTINCT", [counterfieldActions.clientFlowBoundary]],
   cf20_truth_authority_explanation: ["PILOT // COURSE WORK", "cf20-truth-authority-explanation", "EXPLAIN WHY VALID CLIENT FLOW PROVES NEITHER OUTPUT TRUTH NOR LIVE AUTHORITY", [counterfieldActions.truthAuthorityBoundary]],
-  cf20_recovery: ["SYSTEM // RECOVERY", "cf20-python-primary-first-failed", "RETRY THE FIRST INCOMPLETE RESPONSIBILITY WITHOUT AN ANSWER", [counterfieldActions.retry]],
+  cf20_recovery: ["SYSTEM // RECOVERY", "cf20-recovery-heading", "RECOVER THE FIRST INCOMPLETE SCORED RESPONSIBILITY", [counterfieldActions.retry]],
   cf20_review: ["PILOT // EXPEDITION REVIEW", "cf20-review-heading", "REVIEW FOUR SEPARATELY ATTRIBUTABLE EXPEDITION SCOPES WITHOUT MERGING THEIR CLAIMS", [counterfieldActions.prepareSave]],
   cf20_save: ["PILOT // EXPEDITION LEDGER", "cf20-save-heading", "SAVE ONE PRIVATE-FREE BOUNDED COUNTERFIELD SCOPE REGISTER", [counterfieldActions.save, counterfieldActions.cancelSave]],
   cf20_transaction: ["SYSTEM // EXPEDITION LEDGER", "cf20-transaction-heading", "VERIFY THE ATOMIC COUNTERFIELD TRANSACTION", []],
@@ -190,6 +190,15 @@ const groups = Object.freeze({
 const statuses = Object.freeze({
   cf00_orientation: "Seven physical evidence classes are available as equal peers. No observation, learning, route, authority, or world effect has been granted.",
   cf10_observations: "Record each bounded physical fact deliberately. Revisit changes no evidence, rank, order, route, or world state.",
+  cf20_python_primary: "The primary source form is genuinely blank and uses only session-local sanitized replicas.",
+  cf20_python_trace: "The trace begins blank and is scored independently from the cleared primary workspace.",
+  cf20_python_transfer: "Fresh request and response records are present; no primary source, result, feedback, or answer carried forward.",
+  cf20_client_primary: "The neutral primary cases begin blank and perform no live Foundry, model, SDK, endpoint, credential, or network action.",
+  cf20_client_retrieval: "The retrieval cases begin blank and are scored independently from cleared primary answers.",
+  cf20_client_transfer: "The fresh transfer cases begin blank; scene, success, save, and retained scopes provide no answer or remediation signal.",
+  cf20_client_flow_explanation: "The explanation begins blank and is scored separately from all case forms.",
+  cf20_truth_authority_explanation: "The explanation begins blank and authorizes no service, resource, route, access, or external action.",
+  cf20_recovery: "Only the named actually failed public checks or actually scored misconception tags remain incomplete. Private work was cleared; guidance contains no answer and retry begins blank.",
   cf20_review: "RP-007, RP-008, RP-009, and candidate RP-010 remain ordered, separate, read-only, provenance-bound, and non-credit.",
   cf20_save: "Confirm one canonical local write, exact read-back, TD-004 through TD-009 byte equality, and verified rollback protection.",
   cf20_transaction: "The local transaction is being verified. No competing action, evidence, route, authority, or world effect can dispatch.",
@@ -220,6 +229,16 @@ function stateFor(group, observations = [], evidence = [], extra = {}) {
 function buildCandidate(predecessor, observations, evidence) { return { version: COUNTERFIELD_RECORD_VERSION, packetId: "RP-010", mappingId: "RP010-REQUEST-CLIENT-BOUNDARY-01", checkpoint: "counterfield_complete", continuation: "continuation", cityStateDelta: null, externalStateDelta: null, successor: null, retainedRp007Summary: clone(predecessor.retainedRp007Summary), retainedRp008Summary: clone(predecessor.retainedRp008Summary), retainedRp009Ledger: clone(predecessor.edgeLedger), scopeRegister: { observations: [...counterfieldObservationIds], exchange: expectedExchange("primary") }, evidence: clone(evidence) }; }
 const actionObservation = Object.freeze(Object.fromEntries(Object.values(counterfieldActions).slice(2, 9).map((action, i) => [action, counterfieldObservationIds[i]])));
 const learning = ["cf20_python_primary", "cf20_python_trace", "cf20_python_transfer", "cf20_client_primary", "cf20_client_retrieval", "cf20_client_transfer", "cf20_client_flow_explanation", "cf20_truth_authority_explanation"];
+const recoveryFocusTargets = Object.freeze({
+  cf20_python_primary: "cf20-python-primary-first-failed",
+  cf20_python_trace: "cf20-python-trace-first-failed",
+  cf20_python_transfer: "cf20-python-transfer-first-failed",
+  cf20_client_primary: "cf20-client-primary-first-failed",
+  cf20_client_retrieval: "cf20-client-retrieval-first-failed",
+  cf20_client_transfer: "cf20-client-transfer-first-failed",
+  cf20_client_flow_explanation: "cf20-client-flow-explanation-failed",
+  cf20_truth_authority_explanation: "cf20-truth-authority-explanation-failed",
+});
 
 export function createCounterfieldNormalController(options = {}) {
   const routeState = clone(options.entrySourceState), releasedState = clone(options.releasedPredecessorState), routeIntent = options.entryIntent, adapter = options.adapter;
@@ -234,7 +253,23 @@ export function createCounterfieldNormalController(options = {}) {
   const setGroup = (group, extra = {}) => { draft = {}; state = stateFor(group, observations, evidence, extra); return clone(state); };
   const reject = (reason) => freeze({ status: "rejected", reason, tokenConsumed: false, state: clone(state) });
   const safeReturn = (target) => { draft = {}; tokens.clear(); return freeze({ status: target === "RP-009" ? "returned_to_occluded_fold_write_free" : "returned_to_city_threshold_write_free", route: freeze({ target, continuation: "continuation", cityStateDelta: null, externalStateDelta: null, successor: null, authorityGranted: false, externalActionEnabled: false, writePerformed: false, replayedEvents: freeze([]) }), state: clone(state) }); };
-  const fail = (index, failed, tags = []) => { repairIndex = index; attempts[index] = (attempts[index] ?? 0) + 1; return freeze({ status: "remediation_required", answerIncluded: false, failedIds: freeze([...failed]), misconceptionTags: freeze(tags), state: setGroup("cf20_recovery", { failedPublicIds: failed, repairTarget: learning[index], focusIntent: { group: "cf20_recovery", target: "cf20-python-primary-first-failed" }, statusMessage: "SYSTEM // RECOVERY: Only the named public dimensions remain incomplete. Private work was discarded; guidance contains no answer and retry starts blank." }) }); };
+  const fail = (index, failed, tags = []) => {
+    repairIndex = index;
+    attempts[index] = (attempts[index] ?? 0) + 1;
+    const responsibility = learning[index];
+    return freeze({
+      status: "remediation_required",
+      answerIncluded: false,
+      failedIds: freeze([...failed]),
+      misconceptionTags: freeze([...tags]),
+      state: setGroup("cf20_recovery", {
+        failedPublicIds: [...failed],
+        failedMisconceptionTags: [...tags],
+        repairTarget: responsibility,
+        focusIntent: { group: "cf20_recovery", target: recoveryFocusTargets[responsibility] },
+      }),
+    });
+  };
   const finalize = (index, skill, form, correctness, tags = []) => { attempts[index] = (attempts[index] ?? 0) + 1; evidence.push(evidenceRecord(skill, form, correctness, attempts[index], tags)); return freeze({ status: `${form}_finalized`, evidenceGranted: true, state: setGroup(index === 7 ? "cf20_review" : learning[index + 1]) }); };
   return freeze({
     getState: () => clone(state), getRecord: () => clone(record), entryTokenConsumed: () => accepted && Boolean(routeIntent?.opaqueFreshEventToken),
@@ -248,6 +283,20 @@ export function createCounterfieldNormalController(options = {}) {
     },
     dispatch(intent) {
       if (!accepted || options.mode === "demo_tour") return reject("route_closed"); const token = intent?.opaqueFreshEventToken;
+      const reviewIntent = intent?.mode === "normal" && intent?.shellVersion === COUNTERFIELD_SHELL_VERSION
+        && intent?.controllerVersion === COUNTERFIELD_CONTROLLER_VERSION && intent?.packetId === "RP-010"
+        && intent?.activeGroupId === state.activeGroup && intent?.expectedOwner === state.owner
+        && intent?.allowlistedActionId === counterfieldActions.prepareSave
+        && counterfieldModalities.includes(intent?.activationKind)
+        && typeof token === "string" && token.length >= 16;
+      if (reviewIntent && !state.availableActions.includes(counterfieldActions.prepareSave)) {
+        state = {
+          ...state,
+          statusMessageId: "td010:review:ineligible",
+          statusMessage: "The bounded review remains unavailable until every independent current conjunct is finalized; no answer or cross-credit was created.",
+        };
+        return freeze({ status: "review_incomplete_recovered", tokenConsumed: false, state: clone(state) });
+      }
       if (!exactIntent(intent, state) || tokens.has(token)) return reject(tokens.has(token) ? "one_hit_only" : "intent_rejected"); const action = intent.allowlistedActionId;
       if (action === counterfieldActions.returnOccludedFold) { if (!adapter.predecessorsStable()) return reject("predecessor_changed"); tokens.add(token); return safeReturn("RP-009"); }
       if (action === counterfieldActions.returnThreshold) { tokens.add(token); return safeReturn("CITY_THRESHOLD"); }
