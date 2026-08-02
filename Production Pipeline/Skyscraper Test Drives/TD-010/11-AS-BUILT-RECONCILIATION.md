@@ -188,3 +188,159 @@ No preview was started and no port or incidental capture requires cleanup.
 
 **Final disposition: `REVISE - RETURN TO COMBAT ENGINEER / TD-010 /
 SS-RP010-COUNTERFIELD-v1`.**
+
+---
+
+# Fresh Intelligence release return - exact five-sample UTF-8 contract
+
+Date: **2026-08-01**
+
+Role: **Intelligence Officer / independent release authority**
+
+Shell: **`SS-RP010-COUNTERFIELD-v1`**
+
+Candidate audited: **`d22a9b314e17c0da92cd11cca9c10aba20484b08`**
+
+Combat second correction: **`4593d326908c3025a79d98052334a94effd474cc`**
+
+Disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**
+
+## Release decision
+
+TD-010 remains unreleased. The second-corrected candidate resolves the prior
+normal-controller recovery and 22-row frozen-registry defects, and every
+completed independent release gate passed. The separate shell-frozen
+longest-copy contract does not pass, however. Shell 05 and Tactical 07 require
+five exact UTF-8 samples to render live and intact at all four required
+layouts. The as-built fixture exposes only four samples, substitutes different
+label and RP-009 retained-scope text, and omits the exact frozen error.
+
+This is a genuine shell-to-product/fixture implementation defect, not a
+containment preference. The earliest owner is Combat Engineer. Intelligence
+changed no product source, fixture, test, configuration, content, media,
+provenance, checklist, or reveal byte. The complete post-build E2E was not run;
+the candidate is already unreleasable and the one Intelligence E2E remains
+unconsumed.
+
+## Candidate, repository, and reveal integrity
+
+- `HEAD` was exact committed Image revalidation candidate
+  `d22a9b314e17c0da92cd11cca9c10aba20484b08`, whose sole parent is exact
+  Combat second correction
+  `4593d326908c3025a79d98052334a94effd474cc`.
+- Candidate-to-parent `git diff --check`, object integrity, and the tracked
+  starting worktree passed. The only untracked paths were the two protected
+  user surfaces; neither was opened, inspected, staged, or changed.
+- The accepted reveal was viewed at original resolution and independently
+  verified as native `1672 x 941`, 24-bit RGB, `2,375,786` bytes, SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+  Its provenance, named checklist item, stewardship-without-standardization
+  reading, spoiler boundary, canonical-reference-only status, and non-runtime
+  status remain coherent. It is absent from production source and output.
+- Both conditional SC-11 runtime image roles remain retired,
+  `selectedImageRoles: []` remains exact, CSS is the truthful runtime medium,
+  and all `17 / 37,410,731` predecessor media bytes remain exact with zero
+  TD-010 runtime-media additions.
+
+## Independent release evidence completed before the blocker
+
+| Gate | Fresh Intelligence evidence | Result |
+|---|---|---|
+| Focused TD-010 normal/fixture/registry | `12/12` in `3.709s`, including all `5,040` observation orders | PASS |
+| Related TD-004 through TD-010 regression | `129/129` in `5.509s` | PASS |
+| Cold full product suite | `919/919` in `16.902s`; the disclosed aggregate Chrome startup timeout did not recur | PASS |
+| Curriculum/readiness | mappings `11/11`; readiness `15/15` | PASS |
+| Fresh builds | production `209` modules in `7.36s`; fixture `52` modules in `1.15s` | PASS |
+| `PBA-TD010-v1` | JS `1,564,452` / `74DC7BB3...`; CSS `108,581` / `391C3F71...`; exact 17 media; zero new | PASS |
+| Served identity | production and fixture root/deep/chunks/CSS/media byte-exact; owned ports closed | PASS |
+| Genuine normal shell/controller/render | `2/2`; all 22 frozen registry rows and eight recovery responsibilities | PASS |
+| Live shell fixture | `66/66`; exact IDs, visible owners, actual focus; four layout checks and three modes | PASS |
+| Later/fixture/reveal scans | zero scoped RP-011/SC-12/later, fixture-leak, or reveal-runtime matches | PASS |
+
+The genuine normal client-primary miss independently retains exact
+`cf20-client-primary-first-failed`, actual failed IDs/tags, answer-free
+guidance, private/transient clearing, one atomic polite status, and a wholly
+blank retry. `TD010-FIX-003/004` therefore remain resolved rather than merely
+claimed by the fixture.
+
+## Blocking live five-sample reproduction
+
+Shell 05 freezes these five exact samples: heading, label, recovery error,
+RP-009 retained-scope row, and truthful execution label. Tactical 07 repeats
+the same five-sample live-containment contract.
+
+The served storage-free fixture's `longest_copy_contained` scenario rendered
+at exact DPR-1 `1920 x 1080`, `1366 x 768`, `390 x 844`, and `768 x 900`:
+
+| Sample | Shell exact text present live | As-built result |
+|---|---:|---|
+| heading | yes | PASS |
+| label | no | FAIL - different client-flow label substituted |
+| recovery error | no | FAIL - sample omitted |
+| RP-009 retained-scope row | no | FAIL - different shortened scope text substituted |
+| truthful execution label | yes | PASS |
+
+At every viewport the four rendered fixture rows were geometrically
+contained, the fixture-only `h1` was contained, one product status existed,
+focus was exact `cf20-review-heading`, requests were local-only, and browser
+console/page errors were empty. Those presentation successes do not waive the
+three exact-copy failures. Deterministic source comparison independently
+confirms that `FROZEN_LONGEST_COPY` has only four keys and that the shell's
+exact label, error, and RP-009 retained-scope string are absent from TD-010
+runtime/fixture source.
+
+## Variance register
+
+| ID / variance | Final classification | Owner | Evidence and required result |
+|---|---|---|---|
+| `TD010-FIX-001` | `RESOLVED` | Combat Engineer | Exact `cf20_exchange_save` remains in the 66-row closed fixture. |
+| `TD010-FIX-002` | `RESOLVED` | Combat Engineer | Seven route modalities still render blank CF-00 with exact owner/focus. |
+| `TD010-FIX-003` | `RESOLVED` | Combat Engineer | Genuine normal client-primary recovery is responsibility-specific and private-safe. |
+| `TD010-FIX-004` | `RESOLVED` | Combat Engineer | Genuine normal owner/heading/status/focus registry passes all 22 shell rows. |
+| `TD010-FIX-005` | **`REQUIRED CORRECTION`** | **Combat Engineer** | Render all five shell-frozen UTF-8 samples byte-exactly in the applicable product/fixture surfaces and prove live containment at all four exact DPR-1 layouts. No substitute or omitted sample is allowed. |
+| fixture-only `.fixture-harness h1` containment | `ACCEPTED IMPROVEMENT` pending corrected-candidate revalidation | Image Specialist | Live review proves the bounded fixture heading remains contained at all four layouts; production runtime and meaning are unchanged. |
+| code-native CSS / zero runtime image roles | `ACCEPTED IMPROVEMENT` pending corrected-candidate revalidation | Quartermaster / Image Specialist | Conditional roles are honestly retired; alternatives, CSS medium, zero runtime-media delta, and budget remain inside shell authority. |
+| canonical-reference-only accepted reveal | `ACCEPTED IMPROVEMENT` pending release | Image Specialist | Exact byte-frozen PNG is spoiler-safe, provenance-complete, non-runtime, and unchanged. Publication remains withheld. |
+| disclosed aggregate Chrome startup contention | `DEFERRED LIMITATION` | Intelligence Officer / release harness | Historical contention is truthful and bounded. It is not used as a waiver: fresh cold full `919/919` and isolated live shell `66/66` passed without timeout. |
+
+No `MASTERPLAN UPDATE` is accepted while TD-010 is unreleased.
+
+## Exact Combat Engineer acceptance contract
+
+Combat Engineer must correct only the TD-010 normal/fixture copy surfaces and
+dedicated regressions:
+
+1. parse the five exact longest UTF-8 samples from shell 05 rather than
+   maintaining a divergent hand-copied subset;
+2. render the exact heading, label, recovery error, RP-009 retained-scope row,
+   and truthful execution label in their applicable production and closed-
+   fixture states;
+3. add a shell-authoritative regression that fails on this candidate, proves
+   all five byte-exact rendered strings, and checks containment at exact DPR-1
+   `1920 x 1080`, `1366 x 768`, `390 x 844`, and `768 x 900`;
+4. keep `TD010-FIX-001/002/003/004` resolved and preserve the 66-row owner/
+   focus registry, fixture-only `h1` containment, one main/status, `>=44px`
+   targets, forced colors, reduced motion, grayscale, local-only behavior,
+   route, learning, schema, privacy, returns, invariant world, budget, and
+   CF-30 hard stop;
+5. preserve both retired runtime image roles, zero runtime-media additions,
+   and the exact unchanged reference-only reveal/provenance/checklist; no
+   image generation, edit, variant, or replacement is permitted; and
+6. rerun the complete Combat correction ladder, create one dedicated local
+   Combat correction commit, and return to Image Specialist for bounded
+   non-generative revalidation before a fresh Intelligence release review.
+
+## Gates intentionally not run after the blocker
+
+- Complete post-build title-to-credits E2E: **not run; zero attempts on this
+  candidate**.
+- Master current-control promotion, retrospective entry, release commit,
+  reveal publication, and push: **not authorized**.
+
+All owned previews were stopped and ports `4173`, `4182`, `4288`, `4289`,
+`5173`, and `5174` were clear. No incidental QA capture was created or changed.
+Hidden lore, Martin's browser/profile/storage/save, and both protected
+untracked user paths remained unopened and untouched.
+
+**Fresh disposition: `REVISE - RETURN TO COMBAT ENGINEER / TD010-FIX-005 /
+TD-010 / SS-RP010-COUNTERFIELD-v1`.**

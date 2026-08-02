@@ -359,6 +359,31 @@
       "commitConvention": "The dedicated Image bounded-revalidation commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no push authorized",
       "nextStage": "fresh Intelligence Officer only for independent complete release review, E2E, variance classification and release-or-return"
+    },
+    {
+      "sequence": 16,
+      "stage": "Intelligence Officer fresh release return",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-02T02:04:00.000Z",
+      "endedAt": "2026-08-02T02:09:00.000Z",
+      "durationMs": 300000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER / TD010-FIX-005",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "candidateAudited": "d22a9b314e17c0da92cd11cca9c10aba20484b08",
+      "startingAuthority": "d22a9b314e17c0da92cd11cca9c10aba20484b08 / Image bounded second-correction revalidation over Combat 4593d326908c3025a79d98052334a94effd474cc",
+      "candidateIntegrity": "exact HEAD and sole parent verified; diff/patch/object checks PASS; tracked worktree clean at start; protected untracked PDF/training paths excluded and untouched",
+      "independentValidation": "focused 12/12; related 129/129; cold full 919/919; mappings 11/11; readiness 15/15; production/fixture 209/52; PBA PASS at JS 1564452, CSS 108581, exact 17 predecessor media and zero new; served identity PASS; genuine normal registry 2/2 across 22 rows/eight recovery owners; live fixture 66/66; later/fixture/reveal scans PASS",
+      "blockingEvidence": "shell 05 and Tactical 07 freeze five exact longest UTF-8 samples, but the served longest_copy_contained fixture exposes four, substitutes different label and RP-009 retained-scope text, and omits the frozen error; exact DPR-1 1920x1080, 1366x768, 390x844 and 768x900 each reproduced heading/execution-label exact and label/error/scope-row failures",
+      "presentationBoundary": "fixture-only h1 containment, four-view overflow, one status, exact cf20-review-heading focus, local-only requests, forced colors, reduced motion, grayscale and clean page/console logs remain PASS but cannot waive exact-copy failure",
+      "variances": "TD010-FIX-001/002/003/004 RESOLVED; TD010-FIX-005 REQUIRED CORRECTION to Combat; fixture-only h1 containment, code-native CSS with retired runtime roles, and canonical-reference-only reveal remain pending ACCEPTED IMPROVEMENT; historical aggregate Chrome startup contention DEFERRED LIMITATION and did not recur in fresh cold/isolated runs",
+      "revealValidation": "exact 1672x941 24-bit RGB / 2375786-byte / 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E reveal passes original-resolution provenance/checklist/spoiler/non-runtime review; unchanged and unpublished; no generation or edit",
+      "e2e": "not run; exactly zero Intelligence E2E attempts on rejected candidate",
+      "masterplan": "no current-control promotion, retrospective entry, release publication or push because TD-010 remains unreleased",
+      "commit": "PENDING_INTELLIGENCE_SECOND_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only return checkpoint; no push authorized; recurring three-hour heartbeat preserved",
+      "nextStage": "Combat Engineer only for TD010-FIX-005; then Image Specialist bounded non-generative revalidation; then fresh Intelligence review"
     }
   ]
 }
