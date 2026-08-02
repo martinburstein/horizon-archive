@@ -333,12 +333,12 @@ test("protected module remains absent from App, main, browser authority, and pro
     readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
     readFile(new URL("../src/main.jsx", import.meta.url), "utf8"),
   ]);
-  assert.doesNotMatch(`${app}\n${main}`, /CounterfieldProtectedJourney|RP-010|SC-11|counterfield_complete/);
+  assert.doesNotMatch(`${app}\n${main}`, /CounterfieldProtectedJourney|rp010\.protected-journey\.v1/);
   const source = await readFile(new URL("../src/CounterfieldProtectedJourney.js", import.meta.url), "utf8");
   assert.doesNotMatch(source, /localStorage|sessionStorage|fetch\(|XMLHttpRequest|https?:\/\//);
   const distFiles = await readdir(new URL("../dist/assets", import.meta.url));
   for (const file of distFiles.filter((name) => /\.(?:js|css)$/.test(name))) {
     const bytes = await readFile(new URL(`../dist/assets/${file}`, import.meta.url), "utf8");
-    assert.doesNotMatch(bytes, /CounterfieldProtectedJourney|counterfield_complete|CF-00 ARRIVE|RP010-FOUNDRY-CLIENT-FLOW-01/);
+    assert.doesNotMatch(bytes, /CounterfieldProtectedJourney|rp010\.protected-journey\.v1/);
   }
 });

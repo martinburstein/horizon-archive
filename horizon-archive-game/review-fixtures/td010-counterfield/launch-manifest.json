@@ -1,0 +1,20 @@
+{
+  "fixtureId": "td010-counterfield-v1",
+  "rootMarker": "TD010_COUNTERFIELD_FIXTURE",
+  "host": "127.0.0.1",
+  "port": 4182,
+  "storage": "frozen-in-memory-only",
+  "acceptsArbitraryState": false,
+  "scenarios": [
+    "route_pointer", "route_touch", "route_keyboard_enter", "route_keyboard_space", "route_switch", "route_speech", "route_screen_reader",
+    "route_invalid_released_predecessor", "route_protected_predecessor_rejected", "route_invalid_intent", "route_duplicate_or_stale", "route_private_contaminated", "route_tour_isolated",
+    "cf00_arrive", "cf10_survey", "cf20_bound_exchange", "cf30_restore",
+    "observation_recurrent_adjacency", "observation_incomplete_ordered_change", "observation_cross_scale_correspondence", "observation_ordinary_unmatched_feature", "observation_multi_candidate_relation", "observation_unavailable_margin", "observation_layered_stewardship",
+    "python_primary_blank", "python_primary_miss", "python_primary_pass", "python_trace_blank", "python_trace_pass", "python_transfer_blank", "python_transfer_pass",
+    "client_primary_blank", "client_primary_miss", "client_primary_pass", "client_retrieval_blank", "client_retrieval_pass", "client_transfer_blank", "client_transfer_pass",
+    "client_flow_explanation_blank", "client_flow_explanation_pass", "truth_authority_explanation_blank", "truth_authority_explanation_pass",
+    "resume_contiguous_prefix", "resume_first_gap", "interruption_before_consumption", "interruption_after_cf00_pre_save", "private_work_cleared", "request_response_work_cleared", "tour_work_cleared", "atomic_polite_status",
+    "review_ineligible", "review_four_scopes", "save_committed", "save_rollback_verified", "restore_replay_free", "return_occluded_fold", "return_city_threshold", "continuation_inert",
+    "layout_desktop", "layout_laptop", "layout_narrow", "layout_effective_200", "mode_forced_colors", "mode_reduced_motion", "mode_grayscale", "longest_copy_contained"
+  ]
+}

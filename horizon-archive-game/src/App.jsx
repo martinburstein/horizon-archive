@@ -14,6 +14,7 @@ import { IntervalWorks } from "./IntervalWorks.jsx";
 import { BraidedVerge } from "./BraidedVerge.jsx";
 import { OffsetReach } from "./OffsetReach.jsx";
 import { OccludedFold } from "./OccludedFold.jsx";
+import { Counterfield } from "./Counterfield.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -53,13 +54,19 @@ import {
   createBraidedVergeStorageAdapter,
 } from "./BraidedVergeNormal.js";
 import {
+  OFFSET_REACH_SAVE_KEY,
   OFFSET_REACH_SHELL_VERSION,
   createOffsetReachStorageAdapter,
 } from "./OffsetReachNormal.js";
 import {
+  OCCLUDED_FOLD_SAVE_KEY,
   OCCLUDED_FOLD_SHELL_VERSION,
   createOccludedFoldStorageAdapter,
 } from "./OccludedFoldNormal.js";
+import {
+  COUNTERFIELD_SHELL_VERSION,
+  createCounterfieldStorageAdapter,
+} from "./CounterfieldNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -516,12 +523,12 @@ function calibrationMarginReviewSaveOptions(storage) {
   const restoredOffsetReach = offsetReachAdapter.read();
   let offsetBytes = null;
   try {
-    offsetBytes = storage?.getItem("horizon-archive-rp008-offset-reach-save-v1") ?? null;
+    offsetBytes = storage?.getItem(OFFSET_REACH_SAVE_KEY) ?? null;
   } catch {
     offsetBytes = null;
   }
   const readOffsetBytes = () => {
-    try { return storage?.getItem("horizon-archive-rp008-offset-reach-save-v1") ?? null; } catch { return null; }
+    try { return storage?.getItem(OFFSET_REACH_SAVE_KEY) ?? null; } catch { return null; }
   };
   const occludedFoldAdapter = createOccludedFoldStorageAdapter(storage, {
     offsetRecord: restoredOffsetReach,
@@ -530,6 +537,20 @@ function calibrationMarginReviewSaveOptions(storage) {
     intervalBytes,
     manyfoldBytes,
     threeCurrentBytes,
+  });
+  const restoredOccludedFold = occludedFoldAdapter.read();
+  let occludedBytes = null;
+  try { occludedBytes = storage?.getItem(OCCLUDED_FOLD_SAVE_KEY) ?? null; } catch { occludedBytes = null; }
+  const readOccludedBytes = () => {
+    try { return storage?.getItem(OCCLUDED_FOLD_SAVE_KEY) ?? null; } catch { return null; }
+  };
+  const counterfieldAdapter = createCounterfieldStorageAdapter(storage, {
+    [THREE_CURRENT_REACH_SAVE_KEY]: threeCurrentBytes,
+    [MANYFOLD_RETURN_SAVE_KEY]: manyfoldBytes,
+    [INTERVAL_WORKS_SAVE_KEY]: intervalBytes,
+    [BRAIDED_VERGE_SAVE_KEY]: braidedBytes,
+    [OFFSET_REACH_SAVE_KEY]: offsetBytes,
+    [OCCLUDED_FOLD_SAVE_KEY]: occludedBytes,
   });
   let predecessorBytes = null;
   try {
@@ -588,7 +609,10 @@ function calibrationMarginReviewSaveOptions(storage) {
       manyfoldBytes: readManyfoldBytes(),
       threeCurrentBytes: readThreeCurrentBytes(),
     }),
-    restoredOccludedFold: occludedFoldAdapter.read(),
+    restoredOccludedFold,
+    readOccludedBytes,
+    counterfieldAdapter,
+    restoredCounterfield: counterfieldAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2461,10 +2485,7 @@ export function App() {
       BRAIDED_VERGE_SHELL_VERSION,
       OFFSET_REACH_SHELL_VERSION,
       OCCLUDED_FOLD_SHELL_VERSION,
-      INTERVAL_WORKS_SHELL_VERSION,
-      BRAIDED_VERGE_SHELL_VERSION,
-      OFFSET_REACH_SHELL_VERSION,
-      OCCLUDED_FOLD_SHELL_VERSION,
+      COUNTERFIELD_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2538,7 +2559,9 @@ export function App() {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === OCCLUDED_FOLD_SHELL_VERSION
+        status: controller.getState().shellVersion === COUNTERFIELD_SHELL_VERSION
+          ? "counterfield_restored"
+          : controller.getState().shellVersion === OCCLUDED_FOLD_SHELL_VERSION
           ? "occluded_fold_restored"
           : controller.getState().shellVersion === OFFSET_REACH_SHELL_VERSION
           ? "offset_reach_restored"
@@ -2591,6 +2614,7 @@ export function App() {
       || result?.state?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
       || result?.state?.shellVersion === OFFSET_REACH_SHELL_VERSION
       || result?.state?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
+      || result?.state?.shellVersion === COUNTERFIELD_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3763,6 +3787,7 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === BRAIDED_VERGE_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === COUNTERFIELD_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
@@ -3798,6 +3823,17 @@ export function App() {
     if (calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION) {
       return (
         <OffsetReach
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
+    if (calibrationMarginEntryView?.shellVersion === COUNTERFIELD_SHELL_VERSION
+      || calibrationMarginEntryView?.activeGroup === "td010-counterfield-route"
+      || calibrationMarginEntryView?.activeGroup === "td010-tour") {
+      return (
+        <Counterfield
           state={calibrationMarginEntryView}
           onAction={dispatchCalibrationMarginEntry}
           onFieldChange={updateCalibrationMarginPythonField}

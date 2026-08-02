@@ -281,43 +281,77 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated local Tactical commit; no push at this
   gate. The commit containing this handoff is the non-recursive authority.
 
+### Combat Engineer
+
+- Stage: **`Combat Engineer / combat_engineer`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Disposition: **`FUNCTIONALLY COMPLETE`**.
+- Starting authority: Tactical commit
+  `cdb91415392ad750e139c0db04921ab982ef2b0f`; exact shell, Recon creative
+  lock, and Tactical blueprint remained compatible without variance.
+- Normal integration: distinct released route/controller/group/intent/record/
+  save/fixture identities implement sole `TD010-RTA-001` and exact
+  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`. Protected
+  Counterfield reference code remains unimported by normal production.
+- Entry/security: exact canonical released `rp009.occluded-fold-save.v1`
+  raw/object plus independent TD-004-TD-009 byte/sanitizer proof, exact Pilot
+  route state, seven modalities, and fresh one-hit token precede blank CF-00.
+  Protected, malformed, stale, duplicate, private, Tour-derived, wrong-owner/
+  group/action/mode/modality input fails closed at OF-30 without SC-11 reveal.
+- Learning/persistence: seven equal observations converge in all `5,040`
+  orders; PY-018 and client-flow primary/retrieval/transfer plus both
+  explanations remain independent; four ordered scopes, exact 13-key/eight-
+  evidence save, canonical read-back, predecessor equality, verified rollback/
+  HOLD, and replay-free restore are implemented.
+- UI/fixture: one product main/status, exact owners/status/focus, `>=44px`
+  controls, four contained layouts, forced-color/reduced-motion/grayscale
+  support, two truthful structural SC-11 placeholder roles, and closed
+  storage-free fixture. Fresh isolated-browser review passed all `66/66`
+  rendered-owner/actual-activeElement contracts with zero browser errors.
+- Validation: focused `10/10` including all `5,040` orders; full `915/915`;
+  mappings `11/11`; automated release checks PASS; production `209` modules;
+  fixture `52` modules; live layouts `4/4`; `PBA-TD010-v1` PASS at JS
+  `1,555,041`, CSS `108,175`, and unchanged `17 / 37,410,731` predecessor
+  media with zero new media.
+- Assets/boundaries: no image generated, selected, imported, or finalized; no
+  hidden lore, protected user file, Martin browser/profile/save, RP-011/later,
+  successor, access, authority, response, external action, or world effect.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
+- Commit/synchronization: one dedicated Combat commit and Combat push gate;
+  the committed and synchronized Git HEAD is the non-recursive authority.
+
 ## Exact next action
 
-Run **Combat Engineer / `combat_engineer` only** against exact shell
+Run **Quartermaster / `quartermaster` only** against exact shell
 `SS-RP010-COUNTERFIELD-v1`, Recon creative lock **vastness without
-convergence**, and the Tactical **`EXPERIENCE READY`** blueprint.
+convergence**, Tactical **`EXPERIENCE READY`**, and the Combat
+**`FUNCTIONALLY COMPLETE`** normal build.
 
-Read the full Combat profile, shell, all five strategic authorities,
-immediate Recon treatment, Tactical blueprint/handoff, exact released TD-009
-normal OF-30 route/controller/component/storage/fixture/tests, RP-010/SC-11
-controls, and the exact shell-frozen UTF-8 and 66-scenario owner/focus
-registries. Implement the smallest complete functional normal integration for
-`TD010-RTA-001` and `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 /
-SC-11` exactly as frozen.
+Read the full Quartermaster profile, exact shell content/asset/provenance and
+budget controls, Recon treatment, Tactical blueprint, Combat report and
+committed normal build/fixture. Audit and polish only player-facing copy,
+labels, alternatives, the four separately attributable scope descriptions,
+provenance ledger, and the at-most-two conditional SC-11 structural
+placeholder seams. Preserve exact route/controller/state/evaluator/evidence/
+record/save/recovery/owner/focus/return/hard-stop behavior.
 
-Build the route adapter, controller/state/persistence/recovery contracts,
-Counterfield UI and styling, exact replacements/actions/owners/status/focus,
-seven equal observations/all `5,040` orders, independent learning chains and
-two explanations, four-scope review, exact 13-key/eight-evidence save,
-rollback/restore/returns/hard stop, semantic scene registrations, four
-layouts, accessibility/modes, frozen UTF-8 copy, regression coverage, and the
-closed storage-free production-absent fixture with all `66` exact rendered
-owner/actual-focus contracts. At most create the two conditional structural
-placeholder seams; do not generate, select, or finalize imagery.
+Determine independently whether either conditional SC-11 role is materially
+necessary and prepare a complete asset/provenance ledger. Do not generate,
+edit, select, import, or finalize imagery; Image Specialist remains the sole
+later generation owner under the one-initial/one-targeted-recovery boundary.
+Do not add a third image, audio, font, video, source map, runtime, network
+payload, hidden lore, unavailable contents, or later identity.
 
-Run focused and full tests, mapping/readiness validators, production and
-fixture builds, `PBA-TD010-v1`, bundle/source privacy and later-source scans,
-fixture isolation, all 66 owner/focus comparisons, served root/deep/assets
-checks, patch integrity, and responsive/accessibility evidence required by
-the shell and blueprint. Create
-`Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
-Issue `FUNCTIONALLY COMPLETE`, `REVISE`, or `HOLD`; update the ledger and this
-handoff. At `FUNCTIONALLY COMPLETE`, make one dedicated Combat commit, push
-the Combat gate, verify local/tracking/remote main equality, and stop before
-Quartermaster. Do not open hidden lore, touch protected user files, select or
-generate images, or expose RP-011, RP-013, a successor, ending extension,
-reward, access, permission, identity, authority, response, unavailable
-contents, Machine relation, readiness judgment, or world effect.
+Run focused/full regression, mappings/readiness, production and fixture
+builds, `PBA-TD010-v1`, privacy/protected/later-source scans, exact UTF-8
+copy, four layouts, accessibility modes, and all `66` rendered owner/actual-
+focus contracts. Create
+`Production Pipeline/Skyscraper Test Drives/TD-010/09-CONTENT-ASSET-LEDGER.md`,
+issue `CONTENT COMPLETE`, `REVISE`, or `HOLD`, update the ledger and this
+handoff, make one dedicated local Quartermaster commit, and stop before Image
+Specialist. Do not push at the Quartermaster gate unless the workflow or an
+explicit returned correction says otherwise.
 
 ## Recurring automation
 
@@ -327,8 +361,10 @@ contents, Machine relation, readiness judgment, or world effect.
 ## Frozen boundaries
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
-  `TD010-RTA-001` remain unreleased and unimplemented; Marine deployment is
-  authorized only in canonical sequential order continuing with Combat.
+  `TD010-RTA-001` remain unreleased; the Combat candidate is functionally
+  implemented but awaits Quartermaster, Image Specialist, and independent
+  Intelligence release. Marine deployment continues strictly with
+  Quartermaster.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do

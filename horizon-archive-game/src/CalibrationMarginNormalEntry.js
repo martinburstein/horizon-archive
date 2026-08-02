@@ -84,6 +84,17 @@ import {
   occludedFoldActions,
   sanitizeOccludedFoldSave,
 } from "./OccludedFoldNormal.js";
+import {
+  COUNTERFIELD_ROUTE_ACTION,
+  COUNTERFIELD_ROUTE_CONTROLLER_VERSION,
+  COUNTERFIELD_ROUTE_GROUP,
+  COUNTERFIELD_ROUTE_OWNER,
+  COUNTERFIELD_SHELL_VERSION,
+  createCounterfieldIntent,
+  createCounterfieldNormalController,
+  createCounterfieldRouteIntent,
+  sanitizeCounterfieldSave,
+} from "./CounterfieldNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -191,6 +202,23 @@ function offsetStateWithOccludedRoute(state) {
   };
 }
 
+function occludedStateWithCounterfieldRoute(state) {
+  if (state?.activeGroup !== "of30_restore") return state;
+  return {
+    ...state,
+    phase: "OF-30 VERIFY + RETURN",
+    controllerVersion: COUNTERFIELD_ROUTE_CONTROLLER_VERSION,
+    activeGroup: COUNTERFIELD_ROUTE_GROUP,
+    owner: COUNTERFIELD_ROUTE_OWNER,
+    headingId: "td010-route-heading",
+    heading: "SURVEY COUNTERFIELD FROM THE VERIFIED OCCLUDED FOLD BOUNDARY",
+    statusMessageId: "td010:route:ready",
+    statusMessage: "The released Occluded Fold record is restored. A fresh Pilot-owned adjacent survey may be validated; LOOK and both released returns remain unchanged.",
+    availableActions: [COUNTERFIELD_ROUTE_ACTION, occludedFoldActions.notation, occludedFoldActions.returnInterval, occludedFoldActions.returnThreshold],
+    focusIntent: { group: COUNTERFIELD_ROUTE_GROUP, target: "td010-route-heading" },
+  };
+}
+
 function protectedOptions(verifiedRestoreState, returnedCityThreshold, restoredState) {
   const valid = exactVerifiedRestore(verifiedRestoreState)
     && exactReturnedThreshold(returnedCityThreshold);
@@ -238,13 +266,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let braidedVergeController = null;
   let offsetReachController = null;
   let occludedFoldController = null;
+  let counterfieldController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (occludedFoldController) return occludedFoldController.getState();
+    if (counterfieldController) return counterfieldController.getState();
+    if (occludedFoldController) return occludedStateWithCounterfieldRoute(occludedFoldController.getState());
     if (offsetReachController) return offsetStateWithOccludedRoute(offsetReachController.getState());
     if (braidedVergeController) return braidedStateWithOffsetRoute(braidedVergeController.getState());
     if (intervalWorksController) return intervalStateWithBraidedRoute(intervalWorksController.getState());
@@ -354,6 +384,8 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     intervalWorksController = null;
     braidedVergeController = null;
     offsetReachController = null;
+    occludedFoldController = null;
+    counterfieldController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -439,6 +471,16 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                   restoredRecord: restoredOccluded,
                   adapter: options.occludedFoldAdapter,
                 });
+                const restoredCounterfield = sanitizeCounterfieldSave(options.restoredCounterfield);
+                if (restoredCounterfield) {
+                  counterfieldController = createCounterfieldNormalController({
+                    entrySourceState: occludedStateWithCounterfieldRoute(occludedFoldController.getState()),
+                    releasedPredecessorState: occludedFoldController.getState(),
+                    predecessorBytes: options.readOccludedBytes?.(),
+                    restoredRecord: restoredCounterfield,
+                    adapter: options.counterfieldAdapter,
+                  });
+                }
               }
             }
           }
@@ -494,13 +536,38 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (counterfieldController) {
+        const result = counterfieldController.dispatch(intent);
+        if (result.status === "returned_to_occluded_fold_write_free") {
+          counterfieldController = null;
+          return Object.freeze({ ...result, state: clonePublicState(occludedFoldController.getState()) });
+        }
+        return result;
+      }
       if (occludedFoldController) {
+        const occludedState = occludedFoldController.getState();
+        if (occludedState.activeGroup === "of30_restore" && intent?.allowlistedActionId === COUNTERFIELD_ROUTE_ACTION) {
+          const predecessorBytes = options.readOccludedBytes?.() ?? JSON.stringify(occludedFoldController.getRecord());
+          const candidate = createCounterfieldNormalController({
+            entrySourceState: occludedStateWithCounterfieldRoute(occludedState),
+            releasedPredecessorState: occludedState,
+            predecessorBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredCounterfield,
+            adapter: options.counterfieldAdapter,
+          });
+          if (candidate.getState().shellVersion !== COUNTERFIELD_SHELL_VERSION) {
+            return Object.freeze({ status: "rejected", reason: "counterfield_route_rejected", state: clonePublicState(occludedStateWithCounterfieldRoute(occludedState)) });
+          }
+          counterfieldController = candidate;
+          return Object.freeze({ status: "counterfield_arrived_zero_evidence", evidenceGranted: false, state: clonePublicState(counterfieldController.getState()) });
+        }
         const result = occludedFoldController.dispatch(intent);
         if (result.status === "returned_to_offset_reach_write_free") {
           occludedFoldController = null;
           return Object.freeze({ ...result, state: clonePublicState(offsetStateWithOccludedRoute(offsetReachController.getState())) });
         }
-        return result;
+        return result?.state ? Object.freeze({ ...result, state: clonePublicState(occludedStateWithCounterfieldRoute(result.state)) }) : result;
       }
       if (offsetReachController) {
         const offsetState = offsetReachController.getState();
@@ -824,6 +891,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (counterfieldController) return counterfieldController.updateField(name, value);
       if (occludedFoldController) return occludedFoldController.updateField(name, value);
       if (offsetReachController) {
         return offsetReachController.updateField(name, value);
@@ -887,6 +955,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getOccludedFoldRecord() {
       return occludedFoldController?.getRecord() ?? null;
     },
+    getCounterfieldRecord() {
+      return counterfieldController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -934,6 +1005,23 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === COUNTERFIELD_ROUTE_GROUP) {
+    if (action === COUNTERFIELD_ROUTE_ACTION) return createCounterfieldRouteIntent(action, activationKind, eventToken);
+    return createOccludedFoldIntent(
+      { activeGroup: "of30_restore", owner: "SYSTEM // EXPEDITION LEDGER" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (typeof activeGroup === "string" && activeGroup.startsWith("cf")) {
+    return createCounterfieldIntent(
+      { activeGroup, owner: counterfieldOwner(activeGroup) },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (activeGroup === OCCLUDED_FOLD_ROUTE_GROUP) {
     if (action === occludedFoldActions.route) return createOccludedFoldRouteIntent(action, activationKind, eventToken);
     return createOffsetReachIntent(
@@ -1159,6 +1247,16 @@ function occludedFoldOwner(activeGroup) {
   if (activeGroup === "of20_save") return "PILOT // EXPEDITION LEDGER";
   if (["of20_transaction", "of30_restore"].includes(activeGroup)) return "SYSTEM // EXPEDITION LEDGER";
   return "SYSTEM // EXPEDITION LEDGER";
+}
+
+function counterfieldOwner(activeGroup) {
+  if (activeGroup === "cf00_orientation") return "SYSTEM // EXPEDITION LEDGER";
+  if (activeGroup === "cf10_observations") return "PILOT // COUNTERFIELD SURVEY";
+  if (activeGroup === "cf20_recovery" || activeGroup === "cf20_save_recovery" || activeGroup === "cf20_rollback_hold") return "SYSTEM // RECOVERY";
+  if (activeGroup === "cf20_review") return "PILOT // EXPEDITION REVIEW";
+  if (activeGroup === "cf20_save") return "PILOT // EXPEDITION LEDGER";
+  if (activeGroup === "cf20_transaction" || activeGroup === "cf30_restore") return "SYSTEM // EXPEDITION LEDGER";
+  return "PILOT // COURSE WORK";
 }
 
 function offsetReachOwner(activeGroup) {

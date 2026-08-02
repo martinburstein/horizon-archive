@@ -171,6 +171,29 @@
       "commitConvention": "The dedicated Tactical commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Tactical push gate",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-01T23:22:00.000Z",
+      "endedAt": "2026-08-01T23:50:00.000Z",
+      "durationMs": 1680000,
+      "disposition": "FUNCTIONALLY COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "cdb91415392ad750e139c0db04921ab982ef2b0f / Tactical EXPERIENCE READY",
+      "routeAndGraph": "sole TD010-RTA-001 accepts only exact released canonical rp009.occluded-fold-save.v1 raw/object plus independent TD-004-TD-009 byte proof and a fresh one-hit token; OF-30/SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30/SC-11",
+      "learningAndPersistence": "seven equal observations in all 5,040 orders; strict independent PY-018 primary/trace/transfer and RP010-FOUNDRY-CLIENT-FLOW-01 client primary/retrieval/transfer plus two explanations; four ordered scopes; exact 13-key/eight-evidence save; atomic read-back, verified rollback/HOLD and replay-free restore",
+      "uiAndFixture": "one product main/status, exact owners/status/focus, >=44px targets, four contained layouts, forced colors/reduced motion/grayscale, two truthful structural SC-11 placeholder roles, and closed storage-free fixture with 66/66 live rendered owner/actual activeElement contracts",
+      "validation": "focused 10/10 including all 5,040 orders; full 915/915; mappings 11/11; automated release checks PASS; production 209 modules; fixture 52 modules; live owner/focus 66/66; four layouts 4/4; privacy, later-source, fixture-isolation, JSON and patch checks PASS",
+      "budget": "PBA-TD010-v1 candidate PASS: JS 1555041 bytes / 5339FF3199312D7103FB5C4B8C5348D8CFCB57968988DFF5DF0B37C560A75F85; CSS 108175 bytes / 01A63D857D160336F8A675E0CB245A690260BD8166D647AEDDC0A102A94DBC65; 209 modules; 17 predecessor media / 37410731 bytes; zero new media",
+      "assets": "exactly two conditional semantic structural placeholder roles; zero image generation, selection, import or finalization",
+      "variances": "none; protected RP-010 reference remains unimported; no RP-011/later exposure; no browser/profile/save or protected user-file access",
+      "commit": "PENDING_COMBAT_ENGINEER_COMMIT",
+      "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Combat push gate; verify HEAD == origin/main == remote refs/heads/main after the dedicated commit",
+      "nextStage": "Quartermaster"
     }
   ]
 }
