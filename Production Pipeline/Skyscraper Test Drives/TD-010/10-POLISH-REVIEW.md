@@ -10,9 +10,10 @@
 | Address | `RP-010 / SC-11 / CF-00-CF-30` |
 | Starting build | Quartermaster commit `167b23aa0ee685dc85da86419facc2bbca7d44d0` |
 | Resumed build | Combat correction commit `f3736129ae4f457205e9988c8b27ccb82036019f` |
+| Second-correction build | Combat commit `4593d326908c3025a79d98052334a94effd474cc` |
 | Quartermaster disposition | `CONTENT COMPLETE` |
 | Date | `2026-08-01` |
-| Disposition | **`PRESENTATION COMPLETE - STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL ACCEPTED`** |
+| Disposition | **`PRESENTATION COMPLETE - SECOND CORRECTION REVALIDATED`** |
 | Next recipient | Intelligence Officer / `intelligence_officer` only |
 
 ## Initial exact build reviewed - preserved correction history
@@ -348,3 +349,93 @@ ladder, and coordinator-owned complete E2E. Intelligence alone may issue the
 release, classify every variance, update the master plan from accepted
 as-built evidence, synchronize the canonical handoff, and push if its release
 gate authorizes it. No further generation is permitted.
+
+## Bounded second-correction revalidation addendum
+
+Image Specialist resumed a bounded, non-generative review from exact Combat
+second-correction commit
+`4593d326908c3025a79d98052334a94effd474cc`, prior accepted Image candidate
+`c80650c84f68f1b21bdb3b85449a1b67852b5185`, and Intelligence return
+`8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`. Shell 05 remained the sole
+contract authority. No image or board call, generation, edit, variant,
+provenance change, checklist change, or reveal change occurred.
+
+### Genuine normal-controller correction proof
+
+The normal client-primary scored-miss path was reproduced from the released
+predecessor through route, seven observations, and Python primary, trace, and
+transfer. The corrected production controller and renderer now agree on:
+
+- actual focus `cf20-client-primary-first-failed`;
+- failed IDs `P01.client_step`, `P01.deciding_signal`,
+  `P02.client_step`, `P02.deciding_signal`, `P03.client_step`,
+  `P03.deciding_signal`, `P04.client_step`, and `P04.deciding_signal`;
+- sole scored tag `endpoint_and_credential_are_model_input`;
+- answer-free guidance with private and transient work cleared;
+- the exact atomic polite scored-miss status and retry group
+  `cf20_client_primary`; and
+- a wholly blank retry returning `required_field_missing` without consuming
+  a token.
+
+The independent shell-05 parser then drove genuine normal controller
+transitions for every one of the 22 frozen registry rows and rendered the
+production component. Exact owner, UTF-8 heading, atomic status, and focus
+matched for all rows, including all eight responsibility-specific recovery
+surfaces. Result: `2/2 PASS`; the proof does not trust fixture declarations.
+
+### Preserved fixture, product, and presentation boundary
+
+`TD010-FIX-001/002` remain exact: the shell-ordered fixture manifest contains
+66 unique IDs, including `cf20_exchange_save`, and all seven route modalities
+land on blank CF-00 under `SYSTEM // EXPEDITION LEDGER` with actual focus
+`cf00-heading`. The live shell-authoritative comparison remains `66/66 PASS`.
+Focused normal/fixture coverage remains `10/10 PASS`, including all `5,040`
+orders. The four-layout and forced-colors, reduced-motion, and grayscale
+matrix remains intact, as do finalized content, route, exact 13-key schema,
+privacy clearing, replay-free restore, safe returns, invariant world, and the
+CF-30 no-successor hard stop.
+
+Both conditional runtime image roles remain retired,
+`selectedImageRoles: []` remains effective, and CSS remains the truthful
+runtime medium. The accepted reference PNG is byte-frozen and absent from
+source and production output: native `1672 x 941`, 24-bit RGB,
+`2,375,786` bytes, SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+The reveal, neighboring provenance, prompt log, SC-11 canon record, and
+demo-increment checklist are unchanged from the accepted Image candidate.
+
+### Bounded revalidation evidence
+
+| Gate | Bounded result |
+|---|---|
+| Genuine normal shell/controller/render | `2/2 PASS`; exact 22-row owner/UTF-8 heading/status/focus registry and eight recovery responsibilities |
+| Shell-authoritative live fixture | `66/66 PASS`; exact IDs, visible owners, and actual focus |
+| Focused normal + fixture | `10/10 PASS`; all `5,040` orders included |
+| Full product suite | warmed rerun `919/919 PASS`; zero failures/skips |
+| Readiness validators | `15/15 PASS`: RP-002 through RP-012, SIM-01/02/03, and CUM-01 |
+| Production / fixture builds | PASS; `209 / 52` modules |
+| Served identity | PASS |
+| `PBA-TD010-v1` | PASS - JS `1,564,452` / SHA-256 `74DC7BB3469D6FECE0BB18B3F3FEFAD4BCB76D0165D84680D35AACE5B32D1DAD`; CSS `108,581` / SHA-256 `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`; `209` modules; runtime media exact `17 / 37,410,731`; zero new runtime media |
+| Accepted reveal integrity | PASS; exact dimensions, format, byte count, and hash; zero runtime references |
+
+The first aggregate full-suite run and a later invocation of
+`scripts/validate-horizon-release.ps1` each reached `918/919` because the
+same shell-contract browser process did not render before its 30-second
+startup deadline under parallel contention. There was no contract assertion
+failure. The same shell test passed standalone, and the warmed complete suite
+passed `919/919`. Image Specialist made no source or harness change: fresh
+Intelligence must independently adjudicate this aggregate startup limitation
+and own the complete release gate and E2E.
+
+### Bounded final disposition and handoff
+
+**`PRESENTATION COMPLETE - SECOND CORRECTION REVALIDATED`**
+
+Fresh Intelligence Officer / `intelligence_officer` is the sole next role.
+It must review the exact second-corrected candidate plus this dedicated local
+Image revalidation commit, reproduce the normal and fixture contracts,
+adjudicate the aggregate browser-startup limitation, validate the byte-frozen
+non-runtime reveal, run the complete release ladder and coordinator-owned
+E2E, classify every variance, and release or return. No further generation,
+image/board call, edit, provenance/checklist change, or reveal change is
+permitted.

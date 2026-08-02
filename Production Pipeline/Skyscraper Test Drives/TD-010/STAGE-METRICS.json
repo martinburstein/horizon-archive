@@ -335,6 +335,30 @@
       "commitConvention": "The dedicated Combat second-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no push authorized",
       "nextStage": "Image Specialist only for bounded normal-production and presentation/reveal revalidation; then fresh Intelligence review"
+    },
+    {
+      "sequence": 15,
+      "stage": "Image Specialist bounded second-correction revalidation",
+      "agentId": "image_specialist",
+      "startedAt": "2026-08-02T01:42:00.000Z",
+      "endedAt": "2026-08-02T02:03:00.000Z",
+      "durationMs": 1260000,
+      "disposition": "PRESENTATION COMPLETE - SECOND CORRECTION REVALIDATED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "4593d326908c3025a79d98052334a94effd474cc / Combat FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED over Intelligence return 8f7b0f924d20fc7e33516ceeeb3e0ee256987abf and prior accepted Image candidate c80650c84f68f1b21bdb3b85449a1b67852b5185",
+      "predecessorVerification": "exact Combat second-correction HEAD 4593d326908c3025a79d98052334a94effd474cc and parent chain verified; protected untracked paths remained unopened and untouched",
+      "normalRecoveryProof": "genuine client-primary miss focuses exact cf20-client-primary-first-failed with eight actual failed IDs, sole endpoint_and_credential_are_model_input tag, answer-free guidance, private/transient clearing, exact atomic status and retry group; wholly blank retry returns required_field_missing without token consumption",
+      "shellRegistryProof": "shell-05 parser drives genuine normal controller and production render across all 22 frozen rows and eight recovery responsibilities; exact owner, UTF-8 heading, atomic status and focus all PASS; fixture declarations are not authority",
+      "validation": "normal shell/render 2/2; live fixture 66/66; focused 10/10 including all 5,040 orders; warmed full 919/919; readiness 15/15; production/fixture builds 209/52 modules; served identity PASS; FIX-001/002, layouts/modes, content, route, exact schema, privacy, returns, invariant world and hard stop exact",
+      "validationNote": "first aggregate full-suite run and later automated release script each reached 918/919 solely because shellContractBrowser did not render within the 30-second startup deadline under parallel contention; standalone shell proof and warmed full suite pass with no contract assertion failure; fresh Intelligence owns adjudication and complete release/E2E",
+      "budget": "PBA-TD010-v1 PASS: JS 1564452 bytes / 74DC7BB3469D6FECE0BB18B3F3FEFAD4BCB76D0165D84680D35AACE5B32D1DAD; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 runtime media / 37410731 bytes; zero new runtime media",
+      "assetBoundary": "accepted 1672x941 24-bit RGB PNG remains exact at 2375786 bytes / 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E, canonical-reference-only, absent from source/dist and unchanged with provenance/canon/checklist; runtime roles remain retired and selectedImageRoles empty; no image/board/generation/edit/variant/provenance/checklist/reveal change",
+      "variances": "none introduced; aggregate browser-startup contention is carried as an explicit non-product release-gate limitation for fresh Intelligence",
+      "commit": "PENDING_IMAGE_REVALIDATION_COMMIT",
+      "commitConvention": "The dedicated Image bounded-revalidation commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no push authorized",
+      "nextStage": "fresh Intelligence Officer only for independent complete release review, E2E, variance classification and release-or-return"
     }
   ]
 }

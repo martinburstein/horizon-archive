@@ -16,7 +16,7 @@ registry before acting. This file is the sole exact-next-action authority.
 - Release record:
   `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
 
-## TD-010 unreleased corrected-candidate state
+## TD-010 unreleased Image-revalidated candidate state
 
 - Shell: `SS-RP010-COUNTERFIELD-v1`.
 - Address/graph: `RP-010 / SC-11 / CF-00-CF-30` through sole
@@ -26,9 +26,12 @@ registry before acting. This file is the sole exact-next-action authority.
   `f3736129ae4f457205e9988c8b27ccb82036019f`.
 - Intelligence return checkpoint:
   `8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
-- Combat disposition:
-  **`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`** in the dedicated
-  local Combat commit containing this handoff; no push occurred.
+- Combat second-correction commit:
+  `4593d326908c3025a79d98052334a94effd474cc` with disposition
+  **`FUNCTIONALLY COMPLETE - SECOND CORRECTION VERIFIED`**.
+- Image disposition:
+  **`PRESENTATION COMPLETE - SECOND CORRECTION REVALIDATED`** in the dedicated
+  local Image commit containing this handoff; no push occurred.
 - Record:
   `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
 - `TD010-FIX-001` and `TD010-FIX-002` remain resolved in the exact closed
@@ -42,10 +45,22 @@ registry before acting. This file is the sole exact-next-action authority.
   owner, UTF-8 heading, status, and focus rows pass genuine normal-controller
   and rendered-product comparison. This proof parses shell 05 and does not
   rely on synthetic fixture declarations.
-- Combat validation passed focused `10/10` including all `5,040` orders,
-  normal shell/render `2/2`, live fixture `66/66`, full `919/919`, mappings
-  `11/11`, readiness `15/15`, production/fixture builds `209/52`, PBA,
-  served identity, four layouts/modes, scans, patch/JSON, and cleanup.
+- Image independently reproduced the genuine client-primary miss with exact
+  focus, actual failed IDs/tags, answer-free private/transient clearing,
+  atomic status, and blank retry; the shell-parsed genuine controller and
+  renderer proof passed all 22 frozen rows and eight recovery
+  responsibilities (`2/2`).
+- Image revalidation also passed live fixture `66/66`, focused `10/10`
+  including all `5,040` orders, warmed full suite `919/919`, readiness
+  `15/15`, production/fixture builds `209/52`, served identity, PBA, exact
+  schema/privacy/returns/hard stop, and the layout/mode boundary.
+- One explicit release-gate limitation remains for fresh Intelligence: the
+  first aggregate full-suite run and a later automated-release invocation
+  each reached `918/919` only because the same shell-contract browser process
+  did not render before its 30-second startup deadline under parallel
+  contention. The test passes standalone and the warmed full suite passes
+  `919/919`; there was no contract assertion failure and Image changed no
+  product or harness source.
 - TD-010 remains unreleased. No master plan advanced, complete Intelligence
   E2E was not consumed, and no push occurred.
 - Both conditional SC-11 runtime image roles remain retired;
@@ -59,29 +74,25 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Exact next action
 
-Run **Image Specialist / `image_specialist` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, the dedicated local Combat second-correction
-commit containing this handoff, prior Image candidate
-`c80650c84f68f1b21bdb3b85449a1b67852b5185`, and Intelligence return
-`8f7b0f924d20fc7e33516ceeeb3e0ee256987abf`.
+Run **fresh Intelligence Officer / `intelligence_officer` only** against exact
+shell `SS-RP010-COUNTERFIELD-v1`, Combat second-correction commit
+`4593d326908c3025a79d98052334a94effd474cc`, and the dedicated local Image
+bounded-revalidation commit containing this handoff.
 
-1. independently reproduce the genuine normal client-primary miss and confirm
-   exact `cf20-client-primary-first-failed`, actual failed IDs/tags,
-   answer-free private-cleared recovery, atomic status, and blank retry;
-2. independently run the shell-05-parsed genuine normal-controller and
-   rendered-product registry proof for every frozen owner, UTF-8 heading,
-   status, and focus field;
-3. confirm `TD010-FIX-001/002`, all 66 fixture IDs, fixture-only heading
-   containment, four layouts/modes, finalized content, route, schema,
-   privacy, returns, runtime-role retirement, PBA, invariant world, and CF-30
-   hard stop remain exact;
-4. preserve the accepted reveal byte-for-byte, canonical-reference-only and
-   non-runtime; no further generation, replacement, edit, variant, image call,
-   board call, provenance change, checklist change, or reveal change is
-   permitted; and
-5. issue one bounded local Image revalidation commit without push, then hand
-   the stable candidate to a fresh Intelligence Officer for the complete
-   release review.
+1. independently verify the candidate/parent/diff integrity, genuine normal
+   client-primary miss, all 22 shell-frozen normal controller/render rows,
+   all 66 fixture rows, layouts/modes, content, route, schema, privacy,
+   returns, runtime-role retirement, PBA, invariant world, and hard stop;
+2. independently adjudicate the disclosed aggregate browser-startup
+   limitation without treating the standalone and warmed passes as a waiver;
+3. verify the accepted reveal remains exact, byte-frozen,
+   canonical-reference-only and non-runtime, with no provenance/checklist or
+   runtime-media change;
+4. run the complete Intelligence release ladder and coordinator-owned E2E,
+   classify every variance, and either release or issue an exact return; and
+5. only on full acceptance update the master plan from accepted as-built
+   evidence, replace this handoff with one synchronized exact next action,
+   commit, and push if the release gate authorizes it.
 
 ## Recurring automation
 
