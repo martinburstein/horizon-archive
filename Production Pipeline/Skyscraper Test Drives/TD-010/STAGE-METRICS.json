@@ -194,6 +194,28 @@
       "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "Combat push gate; verify HEAD == origin/main == remote refs/heads/main after the dedicated commit",
       "nextStage": "Quartermaster"
+    },
+    {
+      "sequence": 9,
+      "stage": "Quartermaster",
+      "agentId": "quartermaster",
+      "startedAt": "2026-08-01T23:51:00.000Z",
+      "endedAt": "2026-08-02T00:29:00.000Z",
+      "durationMs": 2280000,
+      "disposition": "CONTENT COMPLETE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/09-CONTENT-ASSET-LEDGER.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "predecessorVerification": "Combat commit 02bbfc033992d67cfaf67c5004c005385a60ca03 verified as HEAD == origin/main with sole parent cdb91415392ad750e139c0db04921ab982ef2b0f before Quartermaster edits",
+      "content": "finalized seven bounded observation fact/limit descriptions, blueprint-facing action labels, raw-token display polish, complete SC-11 alternatives, and four separately attributable RP-007 through RP-010 scope descriptions without changing internal action/evaluator/evidence/save behavior",
+      "assetDisposition": "both conditional SC-11 runtime image roles independently found not materially necessary; selectedImageRoles is empty; former seams retired to truthful non-interactive CSS treatment; exact 17-file predecessor media set retained and no asset generated, edited, selected, imported or finalized",
+      "accessibilityAndFixture": "one product main/status, native controls, deterministic focus, exact 66/66 rendered-owner/actual-activeElement contracts, four contained layouts with >=44px visible product controls, forced colors, reduced motion, grayscale and longest-copy containment PASS",
+      "validation": "focused 10/10; full 915/915; mappings 11/11; readiness 15/15; automated release checks PASS; production 209 modules; fixture 52 modules; strict UTF-8, privacy, protected/later-source, fixture-isolation and patch checks PASS",
+      "budget": "PBA-TD010-v1 PASS: JS 1561584 bytes / CAEC68CF197E6CEACFC44EE5EB586564FCC325016774195532B5B8D9F308A696; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 predecessor media / 37410731 bytes; zero new media",
+      "variances": "none; runtime-role retirement is a conditional-role necessity decision within shell authority, not an image/reveal waiver; Image Specialist and exactly one accepted TD-010 reveal remain required",
+      "commit": "PENDING_QUARTERMASTER_COMMIT",
+      "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Quartermaster push gate",
+      "nextStage": "Image Specialist"
     }
   ]
 }

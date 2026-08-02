@@ -7,7 +7,7 @@ import { FROZEN_LONGEST_COPY, createCounterfieldScenario, counterfieldScenarioNa
 test("TD010 fixture constructs exactly 66 closed storage-free scenarios", () => {
   assert.equal(manifest.fixtureId, "td010-counterfield-v1");
   assert.equal(counterfieldScenarioNames.length, 66); assert.equal(new Set(counterfieldScenarioNames).size, 66);
-  for (const name of counterfieldScenarioNames) { const scenario = createCounterfieldScenario(name); assert.equal(scenario.storage, "frozen-in-memory-only"); assert.equal(scenario.arbitraryStateAccepted, false); assert.equal(scenario.scene.structuralPlaceholder, true); assert.doesNotMatch(JSON.stringify(scenario), /"(?:learner_source|request_record|response_record|exchange_summary|credentials|endpoints|payloads|responses|event_token|focus_history)"/i); }
+  for (const name of counterfieldScenarioNames) { const scenario = createCounterfieldScenario(name); assert.equal(scenario.storage, "frozen-in-memory-only"); assert.equal(scenario.arbitraryStateAccepted, false); assert.equal(scenario.scene.structuralPlaceholder, false); assert.equal(scenario.scene.renderingMedium, "css"); assert.equal(scenario.scene.runtimeImage, "not-selected"); assert.equal(scenario.scene.assetRoleDisposition, "retired-no-runtime-image"); assert.doesNotMatch(JSON.stringify(scenario), /"(?:learner_source|request_record|response_record|exchange_summary|credentials|endpoints|payloads|responses|event_token|focus_history)"/i); }
   assert.throws(() => createCounterfieldScenario("unknown"));
 });
 
@@ -40,8 +40,8 @@ test("TD010 fixture freezes layouts, presentation modes, and longest-copy eviden
   const css = readFileSync(new URL("./fixture.css", import.meta.url), "utf8"); assert.match(css, /CanvasText/); assert.match(css, /animation:none!important/); assert.match(css, /grayscale\(1\)/);
 });
 
-test("TD010 production graph has structural placeholders only and no protected or successor source", () => {
+test("TD010 production graph retires image placeholders and contains no protected or successor source", () => {
   const source = ["../../src/CounterfieldNormal.js", "../../src/Counterfield.jsx", "../../src/App.jsx"].map((path) => readFileSync(new URL(path, import.meta.url), "utf8")).join("\n");
-  assert.match(source, /SC-11-COUNTERFIELD-PANORAMA/); assert.match(source, /structural-placeholder/);
+  assert.match(source, /SC-11-COUNTERFIELD-PANORAMA/); assert.match(source, /retired-no-runtime-image/); assert.doesNotMatch(source, /structural-placeholder/);
   assert.doesNotMatch(source, /CounterfieldProtectedJourney|rp010\.protected-journey|RP-011|SC-12|successor:\s*["'][^"']/);
 });

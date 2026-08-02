@@ -321,37 +321,76 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated Combat commit and Combat push gate;
   the committed and synchronized Git HEAD is the non-recursive authority.
 
+### Quartermaster
+
+- Stage: **`Quartermaster / quartermaster`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Disposition: **`CONTENT COMPLETE`**.
+- Starting authority: Combat commit
+  `02bbfc033992d67cfaf67c5004c005385a60ca03` was verified as local and
+  tracking main before the bounded content pass.
+- Content completion: seven equal observation cards now state one bounded
+  fact and nearest limit; player-facing action labels follow the Tactical
+  blueprint while frozen internal action/evaluator values remain unchanged;
+  RP-007, RP-008, RP-009, and RP-010 have separately attributable bounded
+  descriptions without merge, correction, replay, erasure, or cross-credit.
+- Scene disposition: both conditional SC-11 runtime image roles were
+  independently found not materially necessary for truthful content
+  completion. `selectedImageRoles` is empty; former seams are retired to an
+  honest non-interactive CSS treatment with complete accessible alternatives.
+- Assets: all exact `17 / 37,410,731` predecessor media identities remain
+  unchanged; zero image, audio, font, video, source map, runtime, or network
+  payload was generated, edited, selected, imported, derived, or finalized.
+- Accessibility/fixture: live local review passed all `66/66` rendered-owner
+  and actual-`activeElement` focus contracts, all four contained layouts with
+  `>=44px` visible product controls, forced colors, reduced motion, grayscale,
+  and longest-copy containment.
+- Validation: focused `10/10`; full `915/915`; mappings `11/11`; readiness
+  `15/15`; automated release PASS; production `209` modules; fixture `52`
+  modules; strict UTF-8, privacy, protected/later-source, fixture-isolation,
+  and patch checks PASS.
+- Budget: `PBA-TD010-v1` PASS at JS `1,561,584 / 1,585,466`, CSS
+  `108,581 / 109,236`, `209 / 216` modules, unchanged predecessor media, and
+  zero new runtime media.
+- Reveal: this is not a TD-009-style waiver. Image Specialist remains required
+  and exactly one accepted TD-010 cycle reveal must be archived and shown to
+  Martin.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/09-CONTENT-ASSET-LEDGER.md`.
+- Commit/synchronization: one dedicated local Quartermaster commit; no push at
+  this gate. The commit containing this handoff is the non-recursive authority.
+
 ## Exact next action
 
-Run **Quartermaster / `quartermaster` only** against exact shell
+Run **Image Specialist / `image_specialist` only** against exact shell
 `SS-RP010-COUNTERFIELD-v1`, Recon creative lock **vastness without
-convergence**, Tactical **`EXPERIENCE READY`**, and the Combat
-**`FUNCTIONALLY COMPLETE`** normal build.
+convergence**, Tactical **`EXPERIENCE READY`**, Combat **`FUNCTIONALLY
+COMPLETE`**, and Quartermaster **`CONTENT COMPLETE`**.
 
-Read the full Quartermaster profile, exact shell content/asset/provenance and
-budget controls, Recon treatment, Tactical blueprint, Combat report and
-committed normal build/fixture. Audit and polish only player-facing copy,
-labels, alternatives, the four separately attributable scope descriptions,
-provenance ledger, and the at-most-two conditional SC-11 structural
-placeholder seams. Preserve exact route/controller/state/evaluator/evidence/
-record/save/recovery/owner/focus/return/hard-stop behavior.
+Read the full Image Specialist profile, shell 05, Recon 06, Tactical 07,
+Combat 08, Quartermaster ledger 09, current normal source/fixture, SC-11 visual
+and provenance controls, accessibility/responsive requirements, and
+`PBA-TD010-v1`. Independently inspect the code-native SC-11 presentation,
+complete alternatives, seven equal observations, four separately attributable
+scopes, four layouts, forced colors, reduced motion, grayscale, longest-copy
+containment, invariant-world reading, and every forbidden reading.
 
-Determine independently whether either conditional SC-11 role is materially
-necessary and prepare a complete asset/provenance ledger. Do not generate,
-edit, select, import, or finalize imagery; Image Specialist remains the sole
-later generation owner under the one-initial/one-targeted-recovery boundary.
-Do not add a third image, audio, font, video, source map, runtime, network
-payload, hidden lore, unavailable contents, or later identity.
+Quartermaster retired both conditional runtime image roles as not materially
+necessary and selected no media. Do not silently reinstate either role or
+describe CSS context as raster, native-resolution, crop, or paired pixel
+evidence. If Image Specialist finds a documented variance that makes private
+generation necessary, preserve the active one-initial/one-targeted-recovery
+boundary: document a rejected first draft outside the workspace before one
+recovery; a second failure is honest `HOLD`; no third attempt. Rejected drafts
+must never enter workspace, canon, runtime, provenance, commits, or reveal.
 
-Run focused/full regression, mappings/readiness, production and fixture
-builds, `PBA-TD010-v1`, privacy/protected/later-source scans, exact UTF-8
-copy, four layouts, accessibility modes, and all `66` rendered owner/actual-
-focus contracts. Create
-`Production Pipeline/Skyscraper Test Drives/TD-010/09-CONTENT-ASSET-LEDGER.md`,
-issue `CONTENT COMPLETE`, `REVISE`, or `HOLD`, update the ledger and this
-handoff, make one dedicated local Quartermaster commit, and stop before Image
-Specialist. Do not push at the Quartermaster gate unless the workflow or an
-explicit returned correction says otherwise.
+Exactly one accepted TD-010 cycle reveal must be archived and shown to Martin;
+the TD-009 waiver does not carry forward. Preserve exact mechanics, evidence,
+record/save/recovery, owner/focus, route/return, privacy, invariant world, and
+CF-30 hard stop. Run the Image Specialist validation envelope, update the
+ledger/metrics/handoff, create one dedicated local Image commit, and stop
+before a fresh independent Intelligence Officer. Do not push at the Image
+gate unless the workflow or an explicit returned correction says otherwise.
 
 ## Recurring automation
 
