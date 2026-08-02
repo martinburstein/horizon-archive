@@ -216,6 +216,29 @@
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Quartermaster push gate",
       "nextStage": "Image Specialist"
+    },
+    {
+      "sequence": 10,
+      "stage": "Image Specialist",
+      "agentId": "image_specialist",
+      "startedAt": "2026-08-02T00:31:00.000Z",
+      "endedAt": "2026-08-02T00:45:00.000Z",
+      "durationMs": 840000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "167b23aa0ee685dc85da86419facc2bbca7d44d0 / Quartermaster CONTENT COMPLETE",
+      "predecessorVerification": "Quartermaster commit and sole Combat parent verified; committed and working ledger blob 490661606822c76b7332b4a2a65c174237bc0785 and shell blob 85e57757cdf8a1a208a338027e150f0a2edc6d7b remain exact",
+      "presentationReview": "direct storage-free captures at 1920x1080, 1366x768, 390x844 and 768x900 reviewed the code-native CSS scene, complete alternative, one main/status and responsive source order; presentation acceptance stopped before polish because fixture states materially disagree with shell 05",
+      "blockingEvidence": "shell-to-fixture comparison found all seven route success scenarios render PILOT // EXPEDITION REVIEW / cf20-review-heading rather than SYSTEM // EXPEDITION LEDGER / cf00-heading; cf20_exchange_save is replaced by cf20_bound_exchange; client_primary_miss focuses cf20-python-primary-first-failed rather than cf20-client-primary-first-failed",
+      "assetBoundary": "both runtime roles remain retired; selectedImageRoles empty; CSS rendering medium reported truthfully; exact predecessor media unchanged and no raster imported or emitted",
+      "generation": "zero completed image attempts, zero recovery attempts, zero accepted/rejected output bytes; pending built-in call cancelled before result and no file entered generated_images, workspace, canon, runtime, provenance, commit or reveal; allowance preserved for resumed Image after correction",
+      "validation": "predecessor identity PASS; direct four-viewport review performed; exact shell 05 versus all-66 manifest/owner/focus comparison FAIL with eight owner/focus differences and one scenario-ID replacement; existing focused fixture tests pass only self-declared contracts and are insufficient; no post-blocker full/build/PBA promotion",
+      "variances": "TD010-FIX-001 exact fixture ID replacement, TD010-FIX-002 seven route-success endpoint owner/focus failures, and TD010-FIX-003 client-primary recovery-focus failure; all proposed REQUIRED CORRECTION to Combat Engineer",
+      "commit": "PENDING_IMAGE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Image Specialist REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only correction checkpoint; no push and no Intelligence handoff",
+      "nextStage": "Combat Engineer only for TD010-FIX-001/002/003; then Image Specialist resumes; Intelligence remains blocked"
     }
   ]
 }

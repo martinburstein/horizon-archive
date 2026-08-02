@@ -360,37 +360,68 @@ registry before acting. This file is the sole exact-next-action authority.
 - Commit/synchronization: one dedicated local Quartermaster commit; no push at
   this gate. The commit containing this handoff is the non-recursive authority.
 
+### Image Specialist - revision checkpoint
+
+- Stage: **`Image Specialist / image_specialist`**.
+- Shell: `SS-RP010-COUNTERFIELD-v1`.
+- Starting authority: exact Quartermaster commit
+  `167b23aa0ee685dc85da86419facc2bbca7d44d0`.
+- Disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**.
+- Runtime imagery: both conditional SC-11 roles remain retired;
+  `selectedImageRoles` is empty and no runtime image was reinstated, imported,
+  or emitted.
+- Independent fixture audit: direct shell-05-to-fixture comparison found
+  three required corrections. `TD010-FIX-001`: exact shell ID
+  `cf20_exchange_save` is absent and replaced by `cf20_bound_exchange`.
+  `TD010-FIX-002`: all seven successful route-modality scenarios render
+  `PILOT // EXPEDITION REVIEW / cf20-review-heading` instead of shell-frozen
+  `SYSTEM // EXPEDITION LEDGER / cf00-heading`. `TD010-FIX-003`:
+  `client_primary_miss` focuses `cf20-python-primary-first-failed` instead of
+  `cf20-client-primary-first-failed`.
+- Direct evidence: the storage-free fixture was captured at `1920 x 1080`,
+  `1366 x 768`, `390 x 844`, and `768 x 900`; with its picker visibly set to
+  `route_pointer`, it rendered the four-scope review endpoint and its own
+  self-declared `PASS`, reproducing `TD010-FIX-002`.
+- Generation/reveal: zero completed image attempts, zero recovery attempts,
+  zero accepted/rejected output bytes, no reveal, no provenance package, and
+  no checklist closure. A pending built-in call was cancelled before result;
+  no file entered generated images, workspace, canon, runtime, provenance,
+  commit, or user-facing reveal. The allowance remains available only after
+  the corrected candidate returns to Image.
+- Record:
+  `Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md`.
+- Commit/synchronization: one dedicated local Image revision checkpoint; no
+  push. Intelligence remains blocked.
+
 ## Exact next action
 
-Run **Image Specialist / `image_specialist` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, Recon creative lock **vastness without
-convergence**, Tactical **`EXPERIENCE READY`**, Combat **`FUNCTIONALLY
-COMPLETE`**, and Quartermaster **`CONTENT COMPLETE`**.
+Run **Combat Engineer / `combat_engineer` only** against exact shell
+`SS-RP010-COUNTERFIELD-v1`, Quartermaster content-complete commit
+`167b23aa0ee685dc85da86419facc2bbca7d44d0`, and the dedicated Image
+`REVISE` checkpoint.
 
-Read the full Image Specialist profile, shell 05, Recon 06, Tactical 07,
-Combat 08, Quartermaster ledger 09, current normal source/fixture, SC-11 visual
-and provenance controls, accessibility/responsive requirements, and
-`PBA-TD010-v1`. Independently inspect the code-native SC-11 presentation,
-complete alternatives, seven equal observations, four separately attributable
-scopes, four layouts, forced colors, reduced motion, grayscale, longest-copy
-containment, invariant-world reading, and every forbidden reading.
+Correct exactly `TD010-FIX-001`, `TD010-FIX-002`, and `TD010-FIX-003` in the
+production-absent, storage-free TD-010 fixture and focused fixture tests.
+Restore exact scenario ID `cf20_exchange_save`; map all seven successful route
+modalities to blank CF-00 with rendered owner `SYSTEM // EXPEDITION LEDGER`
+and actual focus `cf00-heading`; and render/focus
+`cf20-client-primary-first-failed` for `client_primary_miss`.
 
-Quartermaster retired both conditional runtime image roles as not materially
-necessary and selected no media. Do not silently reinstate either role or
-describe CSS context as raster, native-resolution, crop, or paired pixel
-evidence. If Image Specialist finds a documented variance that makes private
-generation necessary, preserve the active one-initial/one-targeted-recovery
-boundary: document a rejected first draft outside the workspace before one
-recovery; a second failure is honest `HOLD`; no third attempt. Rejected drafts
-must never enter workspace, canon, runtime, provenance, commits, or reveal.
+Add one independent regression that parses or otherwise freezes every exact
+shell-05 scenario row and compares all 66 unique manifest IDs, visible
+`[data-active-owner]` text, and actual `document.activeElement.id`, with zero
+differences. Do not accept self-declared fixture state as the shell authority.
 
-Exactly one accepted TD-010 cycle reveal must be archived and shown to Martin;
-the TD-009 waiver does not carry forward. Preserve exact mechanics, evidence,
-record/save/recovery, owner/focus, route/return, privacy, invariant world, and
-CF-30 hard stop. Run the Image Specialist validation envelope, update the
-ledger/metrics/handoff, create one dedicated local Image commit, and stop
-before a fresh independent Intelligence Officer. Do not push at the Image
-gate unless the workflow or an explicit returned correction says otherwise.
+Preserve every accepted product mechanic and content decision, both retired
+runtime image roles, CSS rendering-medium truth, fixture storage/network/
+production isolation, all four layouts and assistive modes, privacy, PBA,
+exact returns, invariant world, and CF-30 hard stop. Make no board or image
+call and create no reveal bytes. Run focused Counterfield/fixture checks, the
+all-66 shell comparison, full suite, mappings, readiness, production and
+fixture builds, PBA, privacy/protected/later scans, served identity, patch
+integrity, and owned-process cleanup. Update report/metrics/handoff, make one
+dedicated local Combat correction commit, no push, then hand back to Image
+Specialist. Stop before Intelligence.
 
 ## Recurring automation
 
@@ -401,9 +432,10 @@ gate unless the workflow or an explicit returned correction says otherwise.
 
 - `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
   `TD010-RTA-001` remain unreleased; the Combat candidate is functionally
-  implemented but awaits Quartermaster, Image Specialist, and independent
-  Intelligence release. Marine deployment continues strictly with
-  Quartermaster.
+  implemented and content complete but is returned for exact TD-010 fixture
+  correction before Image Specialist can complete presentation or reveal and
+  before independent Intelligence release. Marine deployment continues
+  strictly with Combat Engineer correction.
 - OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
   remains `destination=null`, `routeOpened=false`, `successor=null`.
 - Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
