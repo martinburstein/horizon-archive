@@ -7,537 +7,93 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- Latest release: **`TD-009 / PASS - AS BUILT RELEASED`**.
+- Latest release remains **`TD-009 / PASS - AS BUILT RELEASED`**.
 - Shell: `SS-RP009-OCCLUDED-FOLD-v1`.
-- Release/source commit: `b61aea3806e8d14ff2f36d506ffc6135d8c30045`.
-- Candidate audited: `9b0da7c27633a34394fa03dd442353f50b1cc7ad`.
-- Slice/address: `RP-009 / SC-10 / OF-00-OF-30`.
-- Route: sole Pilot-owned `TD009-RTA-001` from exact TD-008 OR-30.
-- Graph: `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`.
-- Returns: exact write-free/replay-free Offset Reach or City Threshold.
-- Hard stop: `OF-30`, either exact return, or inert LOOK-only continuation
-  with `destination=null`, `routeOpened=false`, `successor=null`.
-- Record: `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
-- Release evidence: focused `37/37`, full `905/905`, mappings `11/11`,
-  readiness `15/15`, 206/50-module builds, `PBA-TD009-v1`, 64/64 rendered
-  owner/focus contracts, exact served identity, and one `100.799s` E2E pass.
-- Runtime imagery was deferred and Image Specialist/reveal waived for TD-009
-  only. The exception does not carry into TD-010.
+- Release commit: `b61aea3806e8d14ff2f36d506ffc6135d8c30045`.
+- Released graph: `OR-30 -> OF-00 -> OF-10 -> OF-20 -> OF-30`.
+- Hard stop: exact OF-30, either released return, or inert LOOK with
+  `destination=null`, `routeOpened=false`, and `successor=null`.
+- Release record:
+  `Production Pipeline/Skyscraper Test Drives/TD-009/11-AS-BUILT-RECONCILIATION.md`.
 
-## TD-010 completed stages
+## TD-010 unreleased correction state
 
-### Commandant
-
-- Commit: `a3347edd72e631abbaa6a359b3d29ed19cb3eee3` (local, not pushed).
-- Brief: `GDB-TD010-v1`.
-- Disposition: **`VISION BASELINE`**.
-- Product decisions changed: none.
-
-### Colonel
-
-- Stage: **`Colonel / colonel`**.
-- Certificate: `WNMP-TD010-v1`.
-- Disposition: **`WORLD BASELINE`**.
-- Baseline reopened: no.
-- Variances: none.
-- Provisional candidate: exactly one approved cumulative-scope study across
-  physically separate operating districts, preserving provenance,
-  counterevidence, ambiguity, unavailability, and unknowns.
-- Protected planning handles: `RP-010 / Counterfield / SC-11 / CF-00-CF-30`.
-  These handles are not a campaign address, destination, route, token, or
-  shell.
-- Required story shape: seven equal observations; exact ordered retained
-  `RP-007`, `RP-008`, and `RP-009` scopes; any later candidate record is a
-  fourth separate bounded scope only after all later gates.
-- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/02-WORLD-NARRATIVE-MASTERPLAN.md`.
-- Predecessor verification: Commandant commit, parent, dedicated file set, and
-  byte-identical brief blob independently passed.
-- Commit: dedicated local Colonel commit for the current stage; no push at
-  this gate.
-
-### Operations Planning Major
-
-- Stage: **`Operations Planning Major / operations_planning_major`**.
-- Certificate: `CFS-TD010-v1`.
-- Disposition: **`FLOOR STACK READY - ROUTE AUTHORIZED`**.
-- Selected address: `RP-010 / SC-11 / CF-00-CF-30`.
-- Sole conditional route: fresh Pilot-owned `TD010-RTA-001` from exact
-  released `OF-30 / SC-10` to blank zero-credit `CF-00`.
-- Graph: `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`.
-- Entry proof: exact released RP-009 canonical raw/object record, byte-stable
-  TD-004 through TD-009 scopes, distinct current Pilot route owner/group,
-  fresh transient one-hit token, validation-before-consumption, and complete
-  sanitation. Invalid, duplicate, stale, forged, private, contaminated,
-  Tour-derived, interrupted, wrong-owner/group/action/modality, or
-  successor-bearing state fails closed to exact OF-30 without write, replay,
-  token expenditure, or SC-11 exposure.
-- Released boundary preserved: OF-30 LOOK remains
-  `destination=null`, `routeOpened=false`, `successor=null`; exact Offset
-  Reach and City Threshold returns remain write-free/replay-free and are not
-  alternate entries.
-- Candidate returns: exact write-free/replay-free Occluded Fold or City
-  Threshold; return to Occluded Fold restores exact OF-30 where the unchanged
-  Offset Reach return remains available.
-- Observations/scopes: seven equal observations in all `5,040` orders; exact
-  ordered RP-007, RP-008, RP-009, and fresh RP-010 scopes remain separately
-  named, read-only, replay-free, and no-cross-credit.
-- Hard stop: `CF-30 / SC-11`, exact returns, or inert LOOK-only
-  field-margin continuation with null destination/route/successor. No RP-011
-  content is exposed.
-- Protected-reference distinction: the existing RP-010 protected journey
-  uses a protected RP-009 reference version and is not the released normal
-  bridge. A distinct normal adapter from exact released RP-009 bytes remains
-  downstream work.
-- Validation: predecessor commit/parent/dedicated scope/blob PASS; Operations
-  contract `15/15`; focused released-normal plus protected-candidate tests
-  `20/20` including all `5,040` orders.
-- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/03-CAMPAIGN-FLOOR-STACK.md`.
-- Variances: none.
-- Commit: dedicated local Operations commit for the current stage; no push at
-  this gate.
-
-### Office of Science Administrator
-
-- Stage: **`Office of Science Administrator / office_of_science_administrator`**.
-- Certificate: `VE-TD010-v1`.
-- Budget: `PBA-TD010-v1`.
-- Disposition: **`VIABILITY READY`**.
-- Released/protected boundary: normal TD-010 must accept only exact canonical
-  released `rp009.occluded-fold-save.v1` raw/object bytes and independently
-  prove TD-004 through TD-009 bytes. Protected
-  `rp009.protected-journey.v1` remains non-routable reference evidence and is
-  an explicit route-rejection case.
-- Normal identities: new distinct route/controller/group/save/fixture
-  identities are required; no protected module, adapter, identity, or object
-  may enter App/main, browser persistence, production bundle, or the fixture.
-- Learning: seven equal observations in all `5,040` orders; strict frozen
-  `PY-018`; independent `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3`; both
-  explanations; mapping/check IDs remain distinct; no cross-credit.
-- Persistence: exact ordered 13-key private-free record; ordered separate
-  RP-007, RP-008, RP-009, and candidate RP-010 scopes; canonical write/read-
-  back; TD-004-TD-009 byte proof; verified rollback; replay-free restore.
-- Accessibility/fixture: seven modalities, `>=44px`, deterministic owner,
-  status and focus; exact four layouts and assistive modes; one exact
-  66-scenario storage-free production-absent fixture that compares declared
-  owner/focus with rendered owner text and actual `document.activeElement.id`.
-- Assets/generation: at most two conditional SC-11 runtime image roles with
-  complete provenance, truthful native/output dimensions, original-resolution
-  QA, responsive/accessible treatment, and the one-initial/one-targeted-
-  recovery generation boundary. TD-009's image/reveal waiver does not carry.
-- Budget: fresh non-compounding TD-009 rebaseline: JS `<=1,585,466`, CSS
-  `<=109,236`, modules `<=216`, at most two new images totaling
-  `<=8,388,608` bytes, total runtime media `<=45,799,339` bytes.
-- Validation: current official Microsoft-only claim review; focused `20/20`
-  including all `5,040` orders; readiness `15/15`; full `905/905`; fresh
-  `206`-module build; exact released TD-009 JS/CSS/17-media identity; PBA
-  baseline PASS.
-- Record: `Production Pipeline/Skyscraper Test Drives/TD-010/04-GLOBAL-VIABILITY-ENVELOPE.md`.
-- Variances: none. Resolved TD-009 owner/focus/content/fixture corrections are
-  mandatory regressions.
-- Commit: dedicated local Science commit for the current stage; no push at
-  this gate.
-
-### Mission Captain
-
-- Stage: **`Mission Captain / mission_captain`**.
 - Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Disposition: **`SHELL READY`**.
-- Address/route: exact `RP-010 / SC-11 / CF-00-CF-30` through sole
-  `TD010-RTA-001`; graph
-  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`.
-- Strategic audit: Commandant `a3347ed`, Colonel `8fcef9b`, Operations
-  `381fb51`, and Science `59fc2c7` form one exact sole-parent chain with
-  dedicated `3/3/3/4`-file scopes and byte-identical working authorities.
-  `GDB-TD010-v1`, `WNMP-TD010-v1`, `CFS-TD010-v1`, `VE-TD010-v1`, and
-  `PBA-TD010-v1` reconcile without contradiction or variance.
-- Released/protected boundary: normal entry accepts only exact canonical
-  released `rp009.occluded-fold-save.v1` raw/object bytes after independent
-  TD-004-TD-009 byte proof. `rp009.protected-journey.v1` is an exact named
-  rejection; no protected module, adapter, object, identity, or fixture may
-  enter normal production.
-- Normal identities: distinct shell/route controller/group/action/token,
-  `rp010.counterfield-controller.v1`,
-  `horizon-archive-rp010-counterfield-save-v1`,
-  `rp010.counterfield-save.v1`, and `td010-counterfield-v1` are frozen.
-- Learning/persistence: seven equal observations in all `5,040` orders;
-  strict independent `PY-018` and
-  `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3` chains plus two explanations;
-  mapping/check IDs remain distinct; no cross-credit; four ordered scopes;
-  exact 13-key/eight-evidence private-free record; atomic canonical write,
-  read-back, TD-004-TD-009 proof, verified rollback, and replay-free restore.
-- Accessibility/fixture: seven modalities, `>=44px`, exact owner/status/focus
-  and UTF-8 contracts, four layouts and assistive modes; all exact `66`
-  fixture IDs have shell-frozen rendered owner and actual-focus contracts.
-- Assets/generation: at most two conditional SC-11 runtime roles with full
-  provenance, truthful native/output dimensions, original-resolution QA,
-  responsive/accessibility treatment, and the one-initial/one-targeted-
-  recovery boundary. No asset was generated or selected.
-- Budget/hard stop: `PBA-TD010-v1` is mandatory. Hard stop is exact CF-30,
-  exact Occluded Fold or City Threshold returns, or inert LOOK-only null
-  field-margin continuation. No RP-011 or later content is exposed.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/05-PLAYABLE-SLICE-SHELL.md`.
-- Commit/synchronization: one dedicated Mission commit and Mission push gate;
-  the committed Git HEAD is the non-recursive commit authority.
-
-### Reconnaissance Sergeant
-
-- Stage: **`Reconnaissance Sergeant / reconnaissance_sergeant`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Disposition: **`CREATIVE LOCK`**.
-- Creative thesis: **vastness without convergence** - the open field tempts
-  one grand reading, while the Pilot earns restrained confidence by preserving
-  seven equal observations and four bounded scopes without synthesis.
-- Emotional movement: chosen adjacent survey -> awe at simultaneous scale ->
-  temptation to unify -> disciplined differentiation -> replica-bound method
-  -> independent client-flow judgment -> four bounded scopes without merger
-  -> unchanged field and safe return.
-- Attention/pacing: active owner and bounded responsibility lead the
-  operational hierarchy while the level long-horizon field remains visually
-  dominant; exact `39-54` clean and `24-35` mastered envelopes are preserved.
-- World/interface: SC-11 is open breadth separated by irregular mineral and
-  atmospheric intervals; the removable expedition overlay is a scope ledger,
-  never a field map, common clock, matching board, native terminal, or world
-  control.
-- Sensory lock: physically distinct glass-ceramic, porous ceramic, pressure
-  skins, far casings, substrate, replica coupling, and stewardship strata;
-  motivated vault thermal light; restrained unsynchronized local ambience and
-  monotonic motion; complete silent/still parity; no world response.
-- Distinctiveness: no TD-007 recurrent-contact hero, TD-008 high-oblique rigid
-  lineage/contact hero, or TD-009 central occluding mass/outer-apron grammar.
-  Counterfield uses level lateral breadth, several separated silhouettes,
-  independent local rhythms, and stewardship without standardization.
-- Conditional assets: at most
-  `SC-11-COUNTERFIELD-PANORAMA-MASTER` and
-  `SC-11-DISTRICT-DETAIL-MASTER`; each remains conditional on material benefit,
-  complete provenance, truthful dimensions, original-resolution required and
-  forbidden readings, spatial/context registration, responsive/accessibility,
-  direct/emitted identity, cleanup, placeholder retirement, PBA, and bounded
-  generation gates. No asset was generated or selected.
-- Invariants: sole `TD010-RTA-001`, released/protected rejection, all normal
-  IDs, OF-30/CF-00-CF-30, seven equal observations/all `5,040` orders,
-  independent learning and two explanations, mapping/check distinction, four
-  scopes, exact 13-key/eight-evidence record, privacy, rollback/restore, exact
-  returns, seven modalities, four layouts, frozen UTF-8, all `66` owner/focus
-  contracts, generation/provenance gates, `PBA-TD010-v1`, invariant world,
-  and CF-30 hard stop are unchanged.
-- Validation: Mission commit `338da62...` equals local, tracking, and remote
-  main; shell committed and working blobs are byte-identical
-  `85e57757cdf8a1a208a338027e150f0a2edc6d7b`; creative contract trace PASS;
-  no variance.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md`.
-- Commit/synchronization: one dedicated local Recon commit; no push at this
-  gate. The commit containing this handoff is the non-recursive authority.
-
-### Tactical Operations Specialist
-
-- Stage: **`Tactical Operations Specialist / tactical_operations_specialist`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Disposition: **`EXPERIENCE READY`**.
-- Compatibility: Recon commit
-  `f9a6860de33ea0edef247a821f8f44df0f1fc103` is the verified sole-parent
-  successor to Mission; its committed and working creative-treatment blobs
-  are byte-identical. **Vastness without convergence** is compatible with the
-  shell without variance or upstream return.
-- Graph/actions: the complete
-  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11` graph freezes
-  every whole-group replacement, exact action, eligibility, disabled/absent/
-  result state, announcement, error, retry, cancel, return, and deterministic
-  focus target.
-- Route/survey: exact nine-step released-predecessor validation precedes fresh
-  one-hit consumption; pointer, touch, Enter, Space, switch, speech, and screen
-  reader converge on one intent. Seven equal observation peers converge for
-  all `5,040` orders by canonical set serialization with no implied pairing,
-  sequence, world response, or cross-credit.
-- Course/review: independent `PY-018` primary/trace/transfer and independent
-  client primary/retrieval/transfer plus two explanations remain strict;
-  mapping and check IDs remain distinct. First-incomplete and first-failed
-  recovery, four separately ordered scopes, the exact 13-key/eight-evidence
-  preview, and private-free sanitation are frozen.
-- Persistence/returns: canonical atomic write/read-back, byte preservation,
-  verified rollback, malformed-state rejection, interruption recovery,
-  contiguous-prefix resume, replay-free restore, exact Occluded Fold and City
-  Threshold returns, and the inert LOOK-only null continuation are complete.
-- Scene/layout/accessibility: exact role/crop/complete-alternative and
-  semantic-region/mask associations are frozen; image-side regions and
-  hotspots never dispatch. Desktop, laptop, narrow, and effective-200
-  layouts preserve invariant DOM/read/focus order, live longest-copy
-  containment, `>=44px` targets, forced-color/reduced-motion/grayscale and
-  silent/still parity.
-- Conditional structural placeholders: at most
-  `SC-11-COUNTERFIELD-PANORAMA-MASTER` and
-  `SC-11-DISTRICT-DETAIL-MASTER`; neither is an asset-selection claim and no
-  image was selected or generated.
-- Fixture: exactly `66` unique allowlisted storage-free, production-absent
-  scenarios; all `66` exact rendered-owner and actual-`activeElement` focus
-  contracts match the Mission shell registry with zero differences.
-- Validation: predecessor parent/scope/blob, complete fixture comparison,
-  seven observations/all `5,040` orders, four layouts, five exact UTF-8
-  longest-copy strings, two-role cap, 13-key record, UTF-8 validity, JSON,
-  whitespace, tracked scope, and no-runtime-change checks PASS; no variance.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/07-EXPERIENCE-BLUEPRINT.md`.
-- Commit/synchronization: one dedicated local Tactical commit; no push at this
-  gate. The commit containing this handoff is the non-recursive authority.
-
-### Combat Engineer
-
-- Stage: **`Combat Engineer / combat_engineer`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Disposition: **`FUNCTIONALLY COMPLETE`**.
-- Starting authority: Tactical commit
-  `cdb91415392ad750e139c0db04921ab982ef2b0f`; exact shell, Recon creative
-  lock, and Tactical blueprint remained compatible without variance.
-- Normal integration: distinct released route/controller/group/intent/record/
-  save/fixture identities implement sole `TD010-RTA-001` and exact
-  `OF-30 / SC-10 -> CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`. Protected
-  Counterfield reference code remains unimported by normal production.
-- Entry/security: exact canonical released `rp009.occluded-fold-save.v1`
-  raw/object plus independent TD-004-TD-009 byte/sanitizer proof, exact Pilot
-  route state, seven modalities, and fresh one-hit token precede blank CF-00.
-  Protected, malformed, stale, duplicate, private, Tour-derived, wrong-owner/
-  group/action/mode/modality input fails closed at OF-30 without SC-11 reveal.
-- Learning/persistence: seven equal observations converge in all `5,040`
-  orders; PY-018 and client-flow primary/retrieval/transfer plus both
-  explanations remain independent; four ordered scopes, exact 13-key/eight-
-  evidence save, canonical read-back, predecessor equality, verified rollback/
-  HOLD, and replay-free restore are implemented.
-- UI/fixture: one product main/status, exact owners/status/focus, `>=44px`
-  controls, four contained layouts, forced-color/reduced-motion/grayscale
-  support, two truthful structural SC-11 placeholder roles, and closed
-  storage-free fixture. Fresh isolated-browser review passed all `66/66`
-  rendered-owner/actual-activeElement contracts with zero browser errors.
-- Validation: focused `10/10` including all `5,040` orders; full `915/915`;
-  mappings `11/11`; automated release checks PASS; production `209` modules;
-  fixture `52` modules; live layouts `4/4`; `PBA-TD010-v1` PASS at JS
-  `1,555,041`, CSS `108,175`, and unchanged `17 / 37,410,731` predecessor
-  media with zero new media.
-- Assets/boundaries: no image generated, selected, imported, or finalized; no
-  hidden lore, protected user file, Martin browser/profile/save, RP-011/later,
-  successor, access, authority, response, external action, or world effect.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`.
-- Commit/synchronization: one dedicated Combat commit and Combat push gate;
-  the committed and synchronized Git HEAD is the non-recursive authority.
-
-### Quartermaster
-
-- Stage: **`Quartermaster / quartermaster`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Disposition: **`CONTENT COMPLETE`**.
-- Starting authority: Combat commit
-  `02bbfc033992d67cfaf67c5004c005385a60ca03` was verified as local and
-  tracking main before the bounded content pass.
-- Content completion: seven equal observation cards now state one bounded
-  fact and nearest limit; player-facing action labels follow the Tactical
-  blueprint while frozen internal action/evaluator values remain unchanged;
-  RP-007, RP-008, RP-009, and RP-010 have separately attributable bounded
-  descriptions without merge, correction, replay, erasure, or cross-credit.
-- Scene disposition: both conditional SC-11 runtime image roles were
-  independently found not materially necessary for truthful content
-  completion. `selectedImageRoles` is empty; former seams are retired to an
-  honest non-interactive CSS treatment with complete accessible alternatives.
-- Assets: all exact `17 / 37,410,731` predecessor media identities remain
-  unchanged; zero image, audio, font, video, source map, runtime, or network
-  payload was generated, edited, selected, imported, derived, or finalized.
-- Accessibility/fixture: live local review passed all `66/66` rendered-owner
-  and actual-`activeElement` focus contracts, all four contained layouts with
-  `>=44px` visible product controls, forced colors, reduced motion, grayscale,
-  and longest-copy containment.
-- Validation: focused `10/10`; full `915/915`; mappings `11/11`; readiness
-  `15/15`; automated release PASS; production `209` modules; fixture `52`
-  modules; strict UTF-8, privacy, protected/later-source, fixture-isolation,
-  and patch checks PASS.
-- Budget: `PBA-TD010-v1` PASS at JS `1,561,584 / 1,585,466`, CSS
-  `108,581 / 109,236`, `209 / 216` modules, unchanged predecessor media, and
-  zero new runtime media.
-- Reveal: this is not a TD-009-style waiver. Image Specialist remains required
-  and exactly one accepted TD-010 cycle reveal must be archived and shown to
-  Martin.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/09-CONTENT-ASSET-LEDGER.md`.
-- Commit/synchronization: one dedicated local Quartermaster commit; no push at
-  this gate. The commit containing this handoff is the non-recursive authority.
-
-### Image Specialist - revision checkpoint
-
-- Stage: **`Image Specialist / image_specialist`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Starting authority: exact Quartermaster commit
-  `167b23aa0ee685dc85da86419facc2bbca7d44d0`.
-- Disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**.
-- Runtime imagery: both conditional SC-11 roles remain retired;
-  `selectedImageRoles` is empty and no runtime image was reinstated, imported,
-  or emitted.
-- Independent fixture audit: direct shell-05-to-fixture comparison found
-  three required corrections. `TD010-FIX-001`: exact shell ID
-  `cf20_exchange_save` is absent and replaced by `cf20_bound_exchange`.
-  `TD010-FIX-002`: all seven successful route-modality scenarios render
-  `PILOT // EXPEDITION REVIEW / cf20-review-heading` instead of shell-frozen
-  `SYSTEM // EXPEDITION LEDGER / cf00-heading`. `TD010-FIX-003`:
-  `client_primary_miss` focuses `cf20-python-primary-first-failed` instead of
-  `cf20-client-primary-first-failed`.
-- Direct evidence: the storage-free fixture was captured at `1920 x 1080`,
-  `1366 x 768`, `390 x 844`, and `768 x 900`; with its picker visibly set to
-  `route_pointer`, it rendered the four-scope review endpoint and its own
-  self-declared `PASS`, reproducing `TD010-FIX-002`.
-- Generation/reveal: zero completed image attempts, zero recovery attempts,
-  zero accepted/rejected output bytes, no reveal, no provenance package, and
-  no checklist closure. A pending built-in call was cancelled before result;
-  no file entered generated images, workspace, canon, runtime, provenance,
-  commit, or user-facing reveal. The allowance remains available only after
-  the corrected candidate returns to Image.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md`.
-- Commit/synchronization: one dedicated local Image revision checkpoint; no
-  push. Intelligence remains blocked.
-
-### Combat Engineer - correction return
-
-- Stage: **`Combat Engineer / combat_engineer`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Starting authority: exact Image checkpoint
-  `4a9943530d0385ff3284493227c2a47c549ff54e` over Quartermaster
-  content-complete commit `167b23aa0ee685dc85da86419facc2bbca7d44d0`.
-- Disposition: **`FUNCTIONALLY COMPLETE - CORRECTION VERIFIED`**.
-- `TD010-FIX-001`: exact fixture ID `cf20_exchange_save` is restored;
-  `cf20_bound_exchange` is absent and the allowlist remains exactly 66 unique
-  shell-ordered IDs.
-- `TD010-FIX-002`: all seven route modalities now render blank CF-00 with
-  visible `SYSTEM // EXPEDITION LEDGER` and actual focus `cf00-heading`.
-- `TD010-FIX-003`: `client_primary_miss` now renders and focuses the distinct
-  `cf20-client-primary-first-failed` target.
-- Independent authority: a new isolated Chrome regression parses the exact 66
-  rows from shell 05, requires exact manifest and picker IDs, and compares
-  visible `[data-active-owner]` text plus actual
-  `document.activeElement.id` for every row with zero differences. Fixture-
-  declared state is not the expected authority.
-- Validation: focused `10/10` including all `5,040` orders; shell-authoritative
-  live `66/66`; four exact layouts and forced-colors/reduced-motion/grayscale
-  PASS; full `917/917` with zero skips; mappings `11/11`; readiness `15/15`;
-  automated release checks PASS; production/fixture `209/52` modules; served
-  root/deep/chunks/media exact; PBA, privacy/protected/later/fixture, JSON, and
-  patch scans PASS.
-- PBA: JS `1,561,633` / `1,585,466`, CSS `108,581` / `109,236`, `209 / 216`
-  modules, exact `17 / 37,410,731` predecessor media, and zero new media.
-- Assets/generation: both runtime roles remain retired;
-  `selectedImageRoles` remains empty; CSS medium remains truthful; no image or
-  board call, generation attempt, output byte, provenance package, runtime
-  asset, or reveal was created.
-- Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/08-FUNCTIONAL-BUILD-REPORT.md`
-  correction addendum.
-- Commit/synchronization: one dedicated local Combat correction commit; no
-  push. The commit containing this handoff is the non-recursive authority.
-  Intelligence remains blocked.
-
-### Image Specialist - resumed completion
-
-- Stage: **`Image Specialist / image_specialist`**.
-- Shell: `SS-RP010-COUNTERFIELD-v1`.
-- Starting authority: exact Combat correction commit
+- Address/graph: `RP-010 / SC-11 / CF-00-CF-30` through sole
+  `TD010-RTA-001`; `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`.
+- Candidate rejected by Intelligence:
+  `c80650c84f68f1b21bdb3b85449a1b67852b5185`, over Combat correction
   `f3736129ae4f457205e9988c8b27ccb82036019f`.
-- Disposition: **`PRESENTATION COMPLETE -
-  STEWARDSHIP-WITHOUT-STANDARDIZATION REVEAL ACCEPTED`**.
-- Correction revalidation: `TD010-FIX-001/002/003` independently PASS.
-  Shell 05 directly governs the exact 66 unique manifest/picker IDs, visible
-  owner text, and actual `document.activeElement.id`; all `66/66` rows pass.
-  The seven route modalities land at blank CF-00 with
-  `SYSTEM // EXPEDITION LEDGER / cf00-heading`, exact
-  `cf20_exchange_save` is present, and `client_primary_miss` focuses
-  `cf20-client-primary-first-failed`.
-- Presentation matrix: wide `1600 x 900`, laptop `1366 x 768`, narrow
-  `900 x 1000`, and effective-`200%` captures pass after one fixture-only
-  harness-heading containment rule. Forced colors, reduced motion, grayscale,
-  longest copy, native targets, one main/status, deterministic focus, and
-  code-native world/interface separation remain intact.
-- Runtime imagery: both conditional SC-11 roles remain retired;
-  `selectedImageRoles` is empty, CSS remains the truthful rendering medium,
-  and production media remains exact `17 / 37,410,731` bytes with zero new
-  runtime media. The reveal is absent from `dist`.
-- Generation accounting: Creative Production board unavailable, so built-in
-  `image_gen` direct mode was used. One initial private generation was
-  rejected at original resolution outside the workspace because repeated
-  bell-shaped works implied standardization. The one permitted targeted
-  recovery was accepted at original resolution. Exactly two completed
-  attempts total; no third attempt, edit, variant, reference, or CLI/API
-  fallback.
-- Accepted reveal:
-  `Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`,
-  native `1672 x 941` 24-bit RGB PNG, `2,375,786` bytes, SHA-256
-  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
-  It is canonical-reference-only/non-runtime and fills neither retired role.
-- Checklist: `[x] RP-010 / SC-11 - stewardship without standardization
-  remains legible across physically separated works at landscape scale`.
-  Full prompt/provenance, SC-11 visual canon, and slice references are
-  recorded; no gameplay fact, route, evidence, chronology, purpose, identity,
-  authority, reward, response, successor, RP-011, or world change is granted.
-- Validation: focused `10/10` including all `5,040` orders; shell-authoritative
-  live `66/66`; complete layout/mode matrix PASS; full `917/917`; mappings
-  `11/11`; automated release PASS in `21s`; production/fixture `209/52`
-  modules; served identity exact; `PBA-TD010-v1` PASS at JS `1,561,633`, CSS
-  `108,581`, exact predecessor media, zero new runtime media; JSON, patch and
-  protected-state checks PASS. Coordinator-owned complete E2E remains for
-  fresh Intelligence.
+- Intelligence disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**.
 - Record:
-  `Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md`.
-- Commit/synchronization: one dedicated local Image completion commit; no
-  push. The commit containing this handoff is the non-recursive authority.
+  `Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md`.
+- `TD010-FIX-001` and `TD010-FIX-002` remain resolved in the closed fixture.
+- `TD010-FIX-003 / REQUIRED CORRECTION`: the normal production controller,
+  after a genuine client-primary scored miss, returns
+  `cf20-python-primary-first-failed`; shell 05 requires
+  `cf20-client-primary-first-failed`. The fixture special-cases the expected
+  focus and therefore does not prove the normal controller transition.
+- `TD010-FIX-004 / REQUIRED CORRECTION`: several normal learning/recovery
+  headings and statuses differ from the shell-frozen UTF-8 registry. Existing
+  browser proof checks owner/focus only and does not prove exact heading/status
+  fields.
+- Full Intelligence build/served/layout/E2E/release gates were intentionally
+  not run after the earliest blocking production defect. TD-010 is not
+  released, no master plan was advanced, and no push occurred.
+- Both conditional SC-11 runtime image roles remain retired;
+  `selectedImageRoles: []`, CSS is the truthful runtime medium, and runtime
+  media remains the accepted predecessor set with zero TD-010 additions.
+- The exact accepted Image candidate remains preserved but unpublished by
+  Intelligence: native `1672 x 941` 24-bit RGB PNG, `2,375,786` bytes,
+  SHA-256
+  `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`,
+  canonical-reference-only and non-runtime. No further generation is allowed.
 
 ## Exact next action
 
-Run **Intelligence Officer / `intelligence_officer` only** against exact shell
-`SS-RP010-COUNTERFIELD-v1`, Combat correction commit
-`f3736129ae4f457205e9988c8b27ccb82036019f`, and the dedicated local Image
-completion commit containing the final polish review, fixture-only
-presentation rule, accepted reveal/provenance, canon/checklist/slice records,
+Run **Combat Engineer / `combat_engineer` only** against exact shell
+`SS-RP010-COUNTERFIELD-v1`, rejected candidate
+`c80650c84f68f1b21bdb3b85449a1b67852b5185`, and the dedicated local
+Intelligence `REVISE` checkpoint containing the as-built reconciliation,
 metrics, and this handoff.
 
-Independently release or reject the exact unchanged as-built candidate.
-Re-parse all 66 owner/focus rows from shell 05 and compare exact manifest and
-picker IDs, visible owner, and actual focus. Confirm `TD010-FIX-001/002/003`,
-the full responsive/assistive presentation matrix, both runtime-role
-retirements, zero new runtime media, exact PBA and served identity, and the
-reference-only accepted PNG at native `1672 x 941`, `2,375,786` bytes,
-SHA-256
-`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
-Confirm the rejected initial is absent from workspace/canon/runtime/
-provenance/commit/reveal and that exactly one accepted reveal exists with no
-third generation.
+Correct only the normal TD-010 controller/rendered surface and dedicated
+tests:
 
-Run the complete independent release ladder including coordinator-owned full
-E2E, classify every variance, update the master plan only from accepted
-as-built evidence, replace this handoff with one synchronized exact next
-action, create the dedicated Intelligence release commit, and synchronize/
-push only if every release gate passes. No further image generation, content
-change, mechanic change, hidden lore, RP-011/RP-013, successor, reward,
-access, authority, response, external action, or world effect is authorized.
+1. make recovery focus responsibility-specific, including exact client-
+   primary `cf20-client-primary-first-failed`;
+2. preserve actual scored tags/failed IDs, answer-free guidance, private
+   clearing, genuinely blank retry, and one atomic polite status;
+3. render every shell-frozen owner, heading, status, and focus byte-exactly;
+4. add a shell-05-parsed normal-controller and rendered-product regression for
+   every frozen registry field, not only fixture owner/focus;
+5. preserve resolved `TD010-FIX-001/002`, all 66 fixture IDs, storage/production
+   isolation, route, observations, learning independence, four scopes, exact
+   13-key save, privacy, rollback/restore, returns, runtime-role retirement,
+   zero runtime-media delta, reference-only reveal, PBA, invariant world, and
+   CF-30 hard stop; and
+6. run the complete Combat correction ladder and create one dedicated local
+   Combat correction commit without push.
+
+On pass, hand the new committed candidate to **Image Specialist only** for
+bounded correction and presentation/reveal revalidation before a fresh
+Intelligence review. Do not proceed directly to Intelligence from Combat.
 
 ## Recurring automation
 
-- The authorized Skyscraper heartbeat remains active every three hours in this
-  task. Continue strictly one sequential role per wake.
+- Martin's authorized Skyscraper heartbeat remains active every three hours in
+  this task.
+- Continue strictly one sequential role per wake.
+- Do not create or schedule another task.
 
 ## Frozen boundaries
 
-- `SS-RP010-COUNTERFIELD-v1` is the construction shell. RP-010 and
-  `TD010-RTA-001` remain unreleased; the candidate is functionally implemented,
-  content complete, correction verified, and presentation complete with one
-  accepted reference-only reveal, but awaits independent Intelligence
-  release. Marine deployment is complete; Intelligence is the sole next role.
-- OF-30 opens only exact Offset Reach or City Threshold returns; outward LOOK
-  remains `destination=null`, `routeOpened=false`, `successor=null`.
-- Preserve the exact ordered retained RP-007, RP-008, and RP-009 scopes. Do
-  not replay, overwrite, erase, merge, correct, reinterpret, universalize, or
-  cross-credit them.
-- Preserve seven equal candidate observations without common identity,
-  topology, chronology, synchronization, unity, cause, purpose, institution,
-  or Machine relation.
-- Preserve invariant world, no reward, no access, no permission, no identity,
-  no authority, no response, no readiness judgment, and no external action.
-- No successor, RP-013, ending extension, post-ending content, invented canon,
-  or hidden-lore inference.
+- TD-010 and `TD010-RTA-001` remain unreleased. Released normal play stops at
+  TD-009 OF-30.
+- Never generate another reveal or alter the exact accepted reference PNG.
+- No product, canon, route, evidence, schema, privacy, save, accessibility,
+  authority, world-response, successor, RP-011, RP-013, ending-extension, or
+  post-ending expansion is authorized.
 - Never open hidden lore or inspect/mutate Martin's browser/profile/save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.

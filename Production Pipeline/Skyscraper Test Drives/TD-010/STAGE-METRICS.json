@@ -287,6 +287,30 @@
       "commitConvention": "The dedicated Image Specialist completion commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; explicit Image gate forbids push",
       "nextStage": "Intelligence Officer only for independent release, as-built reconciliation, complete E2E, synchronization and exact next action"
+    },
+    {
+      "sequence": 13,
+      "stage": "Intelligence Officer release return",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-02T01:13:00.000Z",
+      "endedAt": "2026-08-02T01:23:00.000Z",
+      "durationMs": 600000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "candidateAudited": "c80650c84f68f1b21bdb3b85449a1b67852b5185",
+      "startingAuthority": "c80650c84f68f1b21bdb3b85449a1b67852b5185 / Image PRESENTATION COMPLETE over Combat correction f3736129ae4f457205e9988c8b27ccb82036019f",
+      "candidateIntegrity": "HEAD and sole parent exact; Combat-to-candidate and pre-correction-to-candidate diff checks PASS; tracked worktree clean at start; origin/main remained 02bbfc033992d67cfaf67c5004c005385a60ca03",
+      "blockingReproduction": "actual normal createCounterfieldNormalController path reached client primary after exact released predecessor, valid route, seven observations, and PY primary/trace/transfer; scored client miss returned SYSTEM // RECOVERY with cf20-python-primary-first-failed rather than shell-required cf20-client-primary-first-failed",
+      "shellComparison": "normal controller supplies non-shell headings for PY primary/trace/transfer, client retrieval/transfer, client-flow explanation, and recovery, plus generic learning statuses instead of the shell-frozen registry; Counterfield.jsx renders these state values directly",
+      "variances": "TD010-FIX-001/002 remain RESOLVED; TD010-FIX-003 REQUIRED CORRECTION because fixture special-casing does not repair normal production recovery focus; TD010-FIX-004 REQUIRED CORRECTION for non-byte-exact frozen heading/status fields; fixture-only heading containment, code-native runtime-role retirement, and reference-only reveal remain pending accepted improvements subject to corrected-candidate revalidation",
+      "revealValidation": "exact accepted candidate inspected at original resolution; 1672x941 Format24bppRgb PNG, 2375786 bytes, SHA-256 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E, provenance/checklist/spoiler boundary coherent; preserved canonical-reference-only and non-runtime; release publication withheld; no generation or replacement",
+      "validation": "repository/patch and direct production-controller reproduction completed; fresh focused/related/full/mappings/readiness/build/PBA/served/66-state/layout/mode/log/request/hard-stop and complete E2E gates intentionally not run after earliest blocking release defect; zero Intelligence E2E attempts",
+      "masterplan": "no master current-control promotion because TD-010 is unreleased",
+      "commit": "PENDING_INTELLIGENCE_REVISE_COMMIT",
+      "commitConvention": "The dedicated Intelligence REVISE checkpoint containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only return checkpoint; no push authorized",
+      "nextStage": "Combat Engineer only for TD010-FIX-003/004, then Image Specialist bounded revalidation, then fresh Intelligence review"
     }
   ]
 }
