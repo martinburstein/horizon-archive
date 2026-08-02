@@ -1,5 +1,19 @@
 # Horizon Archive Story Rail Map
 
+## TD-010 Intelligence release current control - 2026-08-01
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-010 /
+  SS-RP010-COUNTERFIELD-v1`; exact TD-009 OF-30 through sole `TD010-RTA-001`
+  into complete `RP-010 / SC-11 / CF-00-CF-30`.
+- **Graph:** `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`, then only exact
+  Occluded Fold or City Threshold returns; invalid state fails closed.
+- **Released evidence:** seven equal modalities in all `5,040` orders;
+  independent PY-018/client-flow learning and two explanations; four retained
+  scopes; exact atomic 13-key/eight-evidence save; replay-free restore.
+- **Stop:** CF-30, either exact return, or inert LOOK with `destination=null`,
+  `routeOpened=false`, and `successor=null`. No RP-011/later route, successor,
+  RP-013, ending extension, authority, response, or world effect.
+
 ## TD-009 Intelligence release current control - 2026-08-01
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-009 /

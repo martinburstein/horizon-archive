@@ -1,5 +1,27 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-010 Intelligence release current control - 2026-08-01
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-010 /
+  SS-RP010-COUNTERFIELD-v1` on audited candidate `c79880d...`.
+- **Position:** exact TD-009 OF-30 -> sole `TD010-RTA-001` -> complete
+  `CF-00 -> CF-10 -> CF-20 -> CF-30 / SC-11`.
+- **Gate:** focused `13/13`; focused+related distinct `203/203`; full
+  `919/919`; mappings `11/11`; readiness `15/15`; 209/52-module builds;
+  `PBA-TD010-v1`; 66/66 rendered contracts; exact served identity; one
+  `74.708s` E2E with credits and no runtime errors.
+- **Identity:** JS `1,565,416` /
+  `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E`;
+  CSS `108,581` /
+  `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`;
+  exact predecessor media `17 / 37,410,731`; zero new runtime media.
+- **Presentation:** CSS remains the truthful runtime medium; both conditional
+  image roles are retired and `selectedImageRoles: []`. The one accepted
+  reveal is exact, unchanged, non-runtime, and canonical-reference-only.
+- **Boundary:** CF-30, exact Occluded Fold/City Threshold returns, or inert
+  LOOK-only null continuation. No RP-011/later route, successor, RP-013,
+  ending extension, authority, response, or world effect.
+
 ## TD-009 Intelligence release current control - 2026-08-01
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-009 /

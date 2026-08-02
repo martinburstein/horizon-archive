@@ -1,5 +1,18 @@
 # Rail Packet Scoreboard
 
+## TD-010 Intelligence release current control - 2026-08-01
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-010 /
+  SS-RP010-COUNTERFIELD-v1` on audited candidate `c79880d...`.
+- **Released graph:** `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`, followed
+  only by exact Occluded Fold or City Threshold returns and inert LOOK-only
+  null continuation.
+- **Evidence:** focused `13/13`; focused+related distinct `203/203`; full
+  `919/919`; mappings `11/11`; readiness `15/15`; 209/52-module builds;
+  66/66 rendered contracts; PBA, exact served identity, and one `74.708s` E2E.
+- **Stop:** CF-30 or either return. RP-011/later, successor, RP-013, ending
+  extension, reward, access, authority, response, and world effect remain closed.
+
 ## TD-009 Intelligence release current control - 2026-08-01
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-009 /

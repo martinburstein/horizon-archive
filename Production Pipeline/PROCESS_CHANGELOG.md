@@ -17,6 +17,33 @@
 - **Validation:** how the next cycle will show whether the decision helped.
 - **Rollback trigger:** evidence that restores or revises the previous process.
 
+## 2026-08-01 / TD-010 Intelligence release - TUNE
+
+- **Observed:** three independent release returns caught exact fixture IDs and
+  route/focus behavior, genuine normal-controller and 22-row registry drift,
+  then five longest UTF-8 copy drift. Aggregate browser contention was traced
+  to competing TD-010 preview resources and lazy fixture compilation rather
+  than a product assertion. The corrected final gate passed focused `13/13` in
+  `7.100s`, full `919/919` in `17.003s`, automated release in `32.1s`, and the
+  sole coordinator E2E in `74.708s`.
+- **Decision:** `TUNE`. Derive frozen copy/owner/focus checks directly from the
+  Mission shell, serialize only competing TD-010 browser-preview resources,
+  and serve a privately prebuilt static fixture. Keep the fresh independent
+  Intelligence ladder and exactly one coordinator-owned E2E attempt.
+- **Expected benefit:** shell drift and browser-resource races fail at their
+  true boundary while release evidence remains deterministic and independent.
+- **Preserved guardrails:** sequential role authority, unchanged shell
+  assertions, canon, learning separation, privacy, accessibility, atomic save,
+  replay-free restore, exact returns, invariant world, protected user work,
+  one-reveal limit, and independent Intelligence release remain exact.
+- **Validation:** the final aggregate, served-identity check, cold full suite,
+  four-layout rendered matrix, automated release, and sole E2E all passed with
+  zero assertion weakening, timeout, runtime error, or residual contention.
+- **Rollback trigger:** shell-derived expectations diverge from the versioned
+  shell, locking masks rather than eliminates a product failure, fixture build
+  state leaks across runs, a resource deadlock/timeout recurs, or independent
+  release can no longer reproduce the frozen behavior.
+
 ## 2026-08-01 / TD-009 Intelligence release - TUNE
 
 - **Observed:** source-only owner/focus assertions allowed a shell-owner

@@ -433,6 +433,30 @@
       "commitConvention": "The dedicated Image bounded third-correction revalidation commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no push, publication, release or master current-control update authorized",
       "nextStage": "fresh Intelligence Officer only for independent complete release review, coordinator E2E, variance classification and release-or-return"
+    },
+    {
+      "sequence": 19,
+      "stage": "Intelligence Officer final release",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-02T02:51:00.000Z",
+      "endedAt": "2026-08-02T03:17:00.000Z",
+      "durationMs": 1560000,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/11-AS-BUILT-RECONCILIATION.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "candidate": "c79880d4460c52fab06b7a884448d0fd9f04427c",
+      "predecessorVerification": "candidate parent 89df0f4f54eb371868ce8b314c9f1ace930d1128 / Combat third correction; grandparent cac7fdefe7e42318aafad76816fc27630518a36d / prior Intelligence return; tracked tree clean at start; protected user paths excluded",
+      "releaseGraph": "OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30 through sole TD010-RTA-001; exact Occluded Fold or City Threshold returns, or inert LOOK with destination=null/routeOpened=false/successor=null; no RP-011 or later exposure",
+      "validation": "focused 13/13 in 7.100s including all 5,040 orders; related 198/198 plus five focused isolation rows = 203 distinct; fresh full 919/919 in 17.003s; mappings 11/11; readiness 15/15; production/fixture builds 209/52 modules; served identity 1/1; automated release PASS in 32.1s; leakage, patch, Git integrity and cleanup PASS",
+      "renderedProof": "all 66 shell-ordered visible-owner/actual-activeElement rows, all 22 genuine normal owner/heading/status/focus rows, all eight recovery responsibilities, and five shell-parsed exact UTF-8 samples passed at DPR-1 1920x1080, 1366x768, 390x844 and 768x900",
+      "e2e": "exactly one coordinator attempt against owned isolated preview; PASS in 74.708s with credits=true and runtimeErrors=false; no rerun; owned QA captures restored and preview stopped",
+      "budget": "PBA-TD010-v1 PASS: JS index-DeARhUPR.js 1565416 bytes / 7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E; CSS index-nVaoN_8S.css 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; exact 17 predecessor media / 37410731 bytes; zero new runtime media",
+      "variances": "TD010-FIX-001/002/003/004/005 RESOLVED REQUIRED CORRECTIONS; fixture h1 containment ACCEPTED IMPROVEMENT; shell-derived copy contract ACCEPTED IMPROVEMENT/VERIFICATION STRENGTHENING; test-only resource lock/static fixture ACCEPTED IMPROVEMENT; CSS/retired conditional roles/selectedImageRoles empty/zero new media ACCEPTED IMPROVEMENT; reference-only reveal ACCEPTED IMPROVEMENT; prior browser contention RESOLVED/RETIRED DEFERRED LIMITATION",
+      "reveal": "exact unchanged canonical-reference-only 1672x941 24-bit RGB / 2375786-byte PNG / 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E; provenance/checklist/canon/prompt/demo byte identity preserved; absent from source/dist; no generation/edit/replacement/variant/import",
+      "commit": "PENDING_INTELLIGENCE_RELEASE_COMMIT",
+      "commitConvention": "The dedicated Intelligence release commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "commit and push release bookkeeping, then require HEAD == origin/main == remote main; automation paused at Martin's clean checkpoint pending explicit resume",
+      "nextStage": "inactive while paused; only after Martin explicitly resumes, Commandant only issues one guarded selection envelope with RP-011/route/destination/address/shell deliberately unselected, then stops at VISION BASELINE or HOLD"
     }
   ]
 }

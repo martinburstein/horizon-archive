@@ -1,3 +1,120 @@
+# TD-010 Intelligence Officer As-Built Reconciliation - Final Release
+
+Date: **2026-08-01**
+Role: **Intelligence Officer / independent release authority**
+Shell: **`SS-RP010-COUNTERFIELD-v1`**
+Candidate audited: **`c79880d4460c52fab06b7a884448d0fd9f04427c`**
+Combat correction beneath candidate: **`89df0f4f54eb371868ce8b314c9f1ace930d1128`**
+Prior Intelligence return: **`cac7fdefe7e42318aafad76816fc27630518a36d`**
+Disposition: **`PASS - AS BUILT RELEASED / TD-010 / SS-RP010-COUNTERFIELD-v1`**
+
+## Release decision
+
+TD-010 is released exactly as built on the audited Image candidate. Independent
+comparison against the Mission shell reproduced every previously returned
+defect as corrected, every frozen runtime and fixture contract, the complete
+production release ladder, and the exact CF-30 stop. No source, test, fixture,
+build configuration, product copy, canon, media, or accepted reveal byte was
+changed during this Intelligence review.
+
+The released graph is `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30` through the
+sole `TD010-RTA-001`. All seven observation modalities converge across all
+`5,040` orders. PY-018 and client-flow learning remain independent, both
+explanations remain required, all four retained scopes remain separate, and
+the exact 13-key/eight-evidence sanitized save commits atomically. CF-30 then
+permits only the exact Occluded Fold or City Threshold return, or inert LOOK
+with `destination=null`, `routeOpened=false`, and `successor=null`. No RP-011,
+later packet, hidden lore, identity, reward, access, authority, world response,
+ending extension, or post-ending content is exposed or implied.
+
+## Independent gate evidence
+
+- Focused normal/fixture/shell command: **13/13 PASS in 7.100s**, covering all
+  `5,040` orders, seven modalities, 22 frozen normal rows, eight responsibility-
+  specific recoveries, five shell-parsed exact UTF-8 samples, all `66/66`
+  rendered-owner/actual-activeElement rows, and DPR-1 `1920x1080`, `1366x768`,
+  `390x844`, and `768x900` containment/accessibility contracts.
+- Related TD-004 through TD-010 normal/protected/UI command: **198/198 PASS in
+  4.486s**; with five focused fixture-isolation rows, the distinct focused and
+  related total is **203/203**.
+- Fresh cold full suite: **919/919 PASS in 17.003s**.
+- Readiness: all recursive validators **15/15 PASS**, including mappings
+  RP-002 through RP-012 **11/11**, SIM-01/02/03, and CUM-01.
+- Fresh production build: **209 modules PASS in 7.34s**. JS
+  `index-DeARhUPR.js`, `1,565,416` bytes, SHA-256
+  `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E`;
+  CSS `index-nVaoN_8S.css`, `108,581` bytes, SHA-256
+  `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`;
+  exact 17 predecessor media / `37,410,731` bytes and hashes; zero new runtime
+  media. `PBA-TD010-v1` passed every cap.
+- Fresh closed fixture build: **52 modules PASS in 1.12s**. Production and
+  fixture root/deep routes, JS, CSS, and every media response were byte-exact
+  to their fresh builds under the served-identity test: **1/1 PASS**.
+- Automated release validator: **PASS in 32.1s**, including its fresh 919/919
+  suite, build, RP-002 mapping, syntax, and patch-integrity checks.
+- Runtime/source leakage scans: zero later/protected exposure, zero fixture
+  marker or fixture transport/storage seam, and zero reveal runtime reference.
+- Exactly one coordinator E2E attempt ran against an owned isolated preview
+  whose HTTP root hash matched fresh `dist/index.html`: **PASS in 74.708s**,
+  `credits:true`, `runtimeErrors:false`. It was not rerun.
+- Git integrity passed: candidate ancestry exact, tracked tree clean before and
+  after owned-E2E capture restoration, `git diff --check` clean, object check
+  clean, all owned previews stopped, and ports `4173`, `4182`, `4288`, `4289`,
+  `5173`, and `5174` clear.
+
+## Variance classification
+
+| Variance | Final classification | Release basis |
+|---|---|---|
+| `TD010-FIX-001` exact `cf20_exchange_save` | **RESOLVED REQUIRED CORRECTION** | Exact save owner/focus and schema behavior pass. |
+| `TD010-FIX-002` seven modalities must land at blank CF-00 | **RESOLVED REQUIRED CORRECTION** | All seven routes and every observation order pass. |
+| `TD010-FIX-003` responsibility-specific normal recovery | **RESOLVED REQUIRED CORRECTION** | All eight responsibilities, including client-primary recovery, pass in genuine normal states. |
+| `TD010-FIX-004` normal 22-row owner/heading/status/focus registry | **RESOLVED REQUIRED CORRECTION** | Every frozen normal row renders and focuses exactly. |
+| `TD010-FIX-005` five longest exact UTF-8 strings | **RESOLVED REQUIRED CORRECTION** | Shell parsing and genuine normal plus live fixture rendering pass at all four layouts. |
+| Fixture-only `.fixture-harness h1` containment | **ACCEPTED IMPROVEMENT** | Bounded to the closed fixture and changes no production meaning. |
+| Shell-derived copy contract | **ACCEPTED IMPROVEMENT / VERIFICATION STRENGTHENING** | Exact parsing removes hand-copy drift without changing frozen copy. |
+| Test-only cross-process resource lock and prebuilt static fixture | **ACCEPTED IMPROVEMENT** | Removes aggregate browser/build contention without weakening assertions or changing product behavior. |
+| CSS runtime, both conditional roles retired, `selectedImageRoles: []`, zero new media | **ACCEPTED IMPROVEMENT** | Within Mission's conditional-role authority; CSS is the truthful medium and PBA/identity pass. |
+| Exact accepted reveal retained as reference-only | **ACCEPTED IMPROVEMENT** | Canonical reference is non-runtime and changes no route, evidence, or product behavior. |
+| Earlier browser contention | **RESOLVED / RETIRED PRIOR DEFERRED LIMITATION** | Serialization/prebuild plus repeated cold full, served-identity, release, and sole E2E evidence remove the current limitation. |
+
+No unaccepted variance, deferred limitation, shell waiver, or master-plan product/
+canon revision remains.
+
+## Reveal, byte identity, and release boundary
+
+The one accepted cycle reveal is release-authorized unchanged at
+`Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`:
+`1672x941`, 24-bit RGB, `2,375,786` bytes, SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+Original-resolution review confirmed the accepted surface-safe composition.
+The PNG, neighboring provenance, checklist/ledger, canon, prompt log, demo
+record, and accepted Image evidence retain their exact candidate blobs. They
+remain absent from source and `dist`; no generation, edit, replacement,
+variant, import, or runtime role was created.
+
+Only coordinator-release current controls, this reconciliation/metrics ledger,
+the work log, the retrospective, and the synchronized handoff are updated.
+Protected user paths, hidden lore, and Martin's browser/profile/storage/save
+were not opened, inspected, changed, staged, or committed.
+
+## Synchronization and next authority
+
+The dedicated Intelligence release commit containing this section is
+authoritative; its hash is intentionally non-recursive in this file. After
+commit and push, local `HEAD`, `origin/main`, and remote `main` must be exact.
+
+Automation is **PAUSED at Martin's requested clean post-TD-010 checkpoint**.
+No role may be dispatched, scheduled, or inferred while paused. When and only
+when Martin explicitly resumes, the exact next action is **Commandant /
+`commandant` only** for one guarded next-cycle selection envelope from released
+CF-30. RP-011, route, destination, packet address, and shell remain deliberately
+unselected; Commandant must stop after one `VISION BASELINE` or `HOLD`.
+
+---
+
+# Preserved prior Intelligence returns
+
 # TD-010 Intelligence Officer As-Built Reconciliation - Release Return
 
 Date: **2026-08-01**

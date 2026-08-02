@@ -14,18 +14,22 @@ Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
 The accepted normal campaign continuation reaches complete `RP-003 / SC-04`
-through `RP-009 / SC-10 / OF-00-OF-30`. Occluded Fold includes six equal
-physical observations, bounded independent Python and AI-901 practice with
-two explanations, deterministic atomic local save/rollback/recovery,
-replay-free restore, and exact write-free returns to Offset Reach or City
-Threshold. Invalid, private, stale, partial, forged, interrupted, or
-Tour-derived state fails closed without consuming a future valid intent.
+through `RP-010 / SC-11 / CF-00-CF-30`. Counterfield includes seven equal
+physical observation modalities in every order, bounded independent PY-018
+and client-flow practice with two explanations, four separate retained scopes,
+deterministic atomic local save/rollback/recovery, replay-free restore, and
+exact write-free returns to Occluded Fold or City Threshold. After the
+Occluded Fold return, its existing Offset Reach return remains available; no
+direct Counterfield-to-Offset-Reach shortcut is added. Invalid, private, stale,
+partial, forged, interrupted, or Tour-derived state fails closed without
+consuming a future valid intent.
 
-The accepted boundary stops at OF-30 or either authorized return. Existing
-continuation is LOOK-only scenery. No RP-010 route, RP-013, successor, unity,
-cause, purpose, identity, reward, access, authority, external action, live
-service, or physical world response is included. SC-04 through SC-10 neither
-receive nor respond to the local records.
+The accepted boundary stops at CF-30 or either authorized return. Existing
+continuation is LOOK-only scenery with no destination, opened route, or
+successor. No RP-011/later route, RP-013, successor, unity, cause, purpose,
+identity, reward, access, authority, external action, live service, or physical
+world response is included. SC-04 through SC-11 neither receive nor respond to
+the local records.
 
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.

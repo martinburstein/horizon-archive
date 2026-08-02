@@ -1,5 +1,29 @@
 # Horizon Archive Game Work Log
 
+## 2026-08-01 - Intelligence Officer: TD-010 as-built release
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-010 /
+  SS-RP010-COUNTERFIELD-v1` on audited candidate
+  `c79880d4460c52fab06b7a884448d0fd9f04427c`.
+- **Independent gate:** focused `13/13`; focused+related distinct `203/203`;
+  full `919/919`; mappings `11/11`; readiness `15/15`; production/fixture
+  builds `209/52`; exact served identity; automated release PASS; one E2E
+  `74.708s`, credits reached, `runtimeErrors:false`.
+- **Released identity:** JS `index-DeARhUPR.js`, `1,565,416` bytes,
+  `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E`;
+  CSS `index-nVaoN_8S.css`, `108,581` bytes,
+  `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`;
+  exact 17 predecessor media / `37,410,731` bytes; zero new runtime media.
+- **Variance:** `TD010-FIX-001` through `TD010-FIX-005` are resolved required
+  corrections. Shell-derived verification, fixture containment, test-only
+  resource serialization/static serving, CSS/zero-role runtime, and the exact
+  reference-only reveal are accepted improvements. Prior browser contention
+  is resolved and retired.
+- **Boundary:** `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30`, then only exact
+  Occluded Fold/City Threshold returns or inert null LOOK. RP-011/later,
+  successor, authority, world response, ending extension, and post-ending
+  content remain closed. Automation is paused pending Martin's explicit resume.
+
 ## 2026-07-27 - Intelligence Officer: TD-005 as-built release
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-005 /
