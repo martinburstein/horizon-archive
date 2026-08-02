@@ -11,9 +11,10 @@
 | Starting build | Quartermaster commit `167b23aa0ee685dc85da86419facc2bbca7d44d0` |
 | Resumed build | Combat correction commit `f3736129ae4f457205e9988c8b27ccb82036019f` |
 | Second-correction build | Combat commit `4593d326908c3025a79d98052334a94effd474cc` |
+| Third-correction build | Combat commit `89df0f4f54eb371868ce8b314c9f1ace930d1128` |
 | Quartermaster disposition | `CONTENT COMPLETE` |
 | Date | `2026-08-01` |
-| Disposition | **`PRESENTATION COMPLETE - SECOND CORRECTION REVALIDATED`** |
+| Disposition | **`PRESENTATION COMPLETE - THIRD CORRECTION REVALIDATED`** |
 | Next recipient | Intelligence Officer / `intelligence_officer` only |
 
 ## Initial exact build reviewed - preserved correction history
@@ -438,4 +439,100 @@ adjudicate the aggregate browser-startup limitation, validate the byte-frozen
 non-runtime reveal, run the complete release ladder and coordinator-owned
 E2E, classify every variance, and release or return. No further generation,
 image/board call, edit, provenance/checklist change, or reveal change is
+permitted.
+
+## Bounded third-correction revalidation addendum
+
+Image Specialist resumed bounded, non-generative revalidation from exact
+Combat third-correction commit
+`89df0f4f54eb371868ce8b314c9f1ace930d1128`, whose sole parent is exact
+Intelligence return `cac7fdefe7e42318aafad76816fc27630518a36d`.
+Shell 05 remained the sole copy and fixture authority. No image or board call,
+generation, edit, replacement, variant, derivative, asset, provenance,
+checklist, canon-record, prompt-log, demo-record, or reveal change occurred.
+
+### `TD010-FIX-005` independent presentation proof
+
+- The pure shell parser independently returned exactly five distinct UTF-8
+  samples in the required order: heading, label, recovery error, RP-009
+  retained-scope row, and truthful execution label.
+- Genuine normal production states rendered each exact sample through the
+  actual `Counterfield` surface. The shell-governed normal regression also
+  retained all 22 frozen owner/heading/status/focus rows and all eight
+  responsibility-specific recovery paths.
+- The live storage-free fixture rendered the shell-injected five-item object
+  byte-exactly at DPR 1 for `1920 x 1080`, `1366 x 768`, `390 x 844`, and
+  `768 x 900`. Every sample was geometrically contained and exposed a
+  measurable wrapped line count.
+- The same four passes retained exact review owner
+  `PILOT // EXPEDITION REVIEW`, actual focus `cf20-review-heading`, fixture
+  `h1` containment, one product main, one atomic status, no horizontal
+  escape, and visible controls at least `44 x 44 CSS px`.
+- All 66 shell-ordered unique scenario IDs again matched visible rendered
+  owner text and actual `document.activeElement.id`. Forced colors, reduced
+  motion, and grayscale remained equivalent. Therefore
+  `TD010-FIX-001/002/003/004/005` are all independently revalidated.
+
+### Runtime, reveal, and invariant boundary
+
+Both conditional runtime image roles remain retired and
+`selectedImageRoles: []` remains exact. The product still reports CSS as the
+truthful rendering medium and `retired-no-runtime-image`; no source or build
+reference to the accepted reveal exists. Fresh production output contains
+the exact 17 predecessor media files totaling `37,410,731` bytes, every
+predecessor hash is unchanged, and no new runtime media exists.
+
+The accepted reveal, neighboring provenance, prompt log, SC-11 canon record,
+demo-increment checklist, and pre-addendum accepted Polish Review content
+remain byte-identical to rejected Image candidate
+`d22a9b314e17c0da92cd11cca9c10aba20484b08`. Original-resolution inspection
+reconfirmed the exact native `1672 x 941`, 24-bit RGB PNG at `2,375,786`
+bytes and SHA-256
+`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
+It remains spoiler-safe, canonical-reference-only, non-runtime, unpublished,
+and supplies no route, evidence, learning truth, access, authority, reward,
+response, successor, RP-011, or world-state change.
+
+Route validation, seven modalities, all `5,040` observation orders,
+independent PY-018/client-flow learning and explanations, no cross-credit,
+the exact 13-key/eight-evidence record, sanitation, rollback/HOLD,
+replay-free restore, exact returns, local-only/privacy behavior, invariant
+world, and the CF-30 `destination=null`, `routeOpened=false`,
+`successor=null` hard stop remain unchanged.
+
+### Bounded validation evidence
+
+| Gate | Third-correction revalidation result |
+|---|---|
+| Focused normal/fixture/live shell | `13/13 PASS`; includes all `5,040` observation orders, all five exact strings, four DPR-1 layouts, and all 66 owner/focus rows |
+| Genuine normal shell/controller/render | `2/2 PASS`; all 22 frozen rows, eight recovery responsibilities, and five shell-parsed samples |
+| Full product suite | fresh `919/919 PASS` in `17.881s`; automated release rerun `919/919` in `15.305s`; zero failures/skips/timeouts |
+| Mappings / readiness | `11/11` / `15/15 PASS` |
+| Production / fixture builds | PASS; `209 / 52` modules |
+| Served identity | PASS; production and fixture root/deep/chunks/CSS/media byte-exact; owned ports clear |
+| `PBA-TD010-v1` | PASS - JS `1,565,416` / SHA-256 `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E`; CSS `108,581` / SHA-256 `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`; `209` modules; exact `17 / 37,410,731` runtime media; zero new |
+| Automated release checks | PASS in `24.4s`; the coordinator-owned complete E2E was not requested or run |
+| Accepted reveal integrity | PASS; exact dimensions, format, bytes, hash, unchanged authority blobs, and zero runtime references |
+| Patch/protected/cleanup | PASS; only authorized Image evidence files are changed; protected user paths remain excluded; ports `4173`, `4182`, `4288`, `4289`, `5173`, and `5174` are clear |
+
+No presentation defect, timeout, new limitation, or formal variance was found.
+The historical browser-startup contention did not recur after Combat's
+test-only resource serialization and prebuilt-fixture correction. Image did
+not run the coordinator-owned complete E2E, alter master current controls,
+publish the reveal, push, or release TD-010.
+
+### Third-correction disposition and exact Intelligence handoff
+
+**`PRESENTATION COMPLETE - THIRD CORRECTION REVALIDATED`**
+
+Fresh Intelligence Officer / `intelligence_officer` is the sole next role.
+It must independently review exact Combat commit `89df0f4f...` plus the
+dedicated Image evidence commit containing this addendum; reproduce
+`TD010-FIX-001/002/003/004/005`, all five exact strings/four layouts, the
+22-row normal and 66-row live contracts, runtime-role retirement, zero media
+delta, byte-frozen reference-only reveal/provenance/checklist, PBA and served
+identity; then run the complete release ladder and coordinator-owned E2E,
+classify every variance, synchronize current controls only from accepted
+as-built evidence, and release or return. No further image generation, edit,
+replacement, variant, asset, provenance/checklist, or reveal change is
 permitted.

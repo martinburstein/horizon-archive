@@ -408,6 +408,31 @@
       "commitConvention": "The dedicated Combat third-correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no push and no master current-control update authorized",
       "nextStage": "Image Specialist only for bounded non-generative revalidation; then fresh Intelligence review"
+    },
+    {
+      "sequence": 18,
+      "stage": "Image Specialist bounded third-correction revalidation",
+      "agentId": "image_specialist",
+      "startedAt": "2026-08-02T02:35:00.000Z",
+      "endedAt": "2026-08-02T02:50:00.000Z",
+      "durationMs": 900000,
+      "disposition": "PRESENTATION COMPLETE - THIRD CORRECTION REVALIDATED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-010/10-POLISH-REVIEW.md",
+      "shellId": "SS-RP010-COUNTERFIELD-v1",
+      "startingAuthority": "89df0f4f54eb371868ce8b314c9f1ace930d1128 / Combat FUNCTIONALLY COMPLETE - THIRD CORRECTION VERIFIED over Intelligence return cac7fdefe7e42318aafad76816fc27630518a36d",
+      "predecessorVerification": "exact HEAD 89df0f4f54eb371868ce8b314c9f1ace930d1128 with sole parent cac7fdefe7e42318aafad76816fc27630518a36d; tracked worktree clean at start; protected untracked PDF/training paths excluded from all inspection and staging",
+      "fiveCopyProof": "pure shell parser returned exact heading, label, recovery error, RP-009 retained-scope row and truthful execution label; genuine normal applicable states rendered every sample; live fixture rendered all five byte-exactly and contained at DPR-1 1920x1080, 1366x768, 390x844 and 768x900 with measurable lines",
+      "contractProof": "all 66 shell-ordered unique IDs matched visible owner text and actual document.activeElement.id; all 22 normal owner/heading/status/focus rows and eight recovery responsibilities passed; exact review owner/focus, fixture h1 containment, one main/status, >=44px targets, forced colors, reduced motion and grayscale passed; TD010-FIX-001/002/003/004/005 revalidated",
+      "validation": "focused normal/fixture/live shell 13/13 including all 5,040 orders; genuine normal shell/render 2/2; fresh full 919/919 in 17.881s and automated-release full 919/919 in 15.305s; mappings 11/11; readiness 15/15; production/fixture builds 209/52 modules; served identity PASS; automated release PASS in 24.4s without coordinator E2E; ports clear",
+      "budget": "PBA-TD010-v1 PASS: JS 1565416 bytes / 7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E; CSS 108581 bytes / 391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A; 209 modules; exact 17 predecessor media / 37410731 bytes and hashes; zero new runtime media",
+      "assetBoundary": "both runtime image roles remain retired; selectedImageRoles empty; CSS medium truthful; accepted 1672x941 24-bit RGB / 2375786-byte / 92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E PNG and provenance/canon/checklist/prompt/demo plus pre-addendum accepted review content byte-identical to d22a9b3, absent from source/dist, canonical-reference-only and unpublished; no generation/edit/replacement/variant/asset change",
+      "invariants": "route, learning, no-cross-credit, exact 13-key/eight-evidence schema, privacy/sanitation, rollback/HOLD, replay-free restore, safe returns, offline/no-authority/invariant-world behavior and CF-30 destination=null/routeOpened=false/successor=null hard stop unchanged",
+      "variances": "none introduced; historical browser contention did not recur after Combat test-only serialization/prebuilt-fixture correction; no timeout or presentation limitation remains",
+      "e2e": "not run; coordinator-owned complete E2E remains fresh Intelligence authority and its attempt count is unchanged",
+      "commit": "PENDING_IMAGE_THIRD_REVALIDATION_COMMIT",
+      "commitConvention": "The dedicated Image bounded third-correction revalidation commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no push, publication, release or master current-control update authorized",
+      "nextStage": "fresh Intelligence Officer only for independent complete release review, coordinator E2E, variance classification and release-or-return"
     }
   ]
 }
