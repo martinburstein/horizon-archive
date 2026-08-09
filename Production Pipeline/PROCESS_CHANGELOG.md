@@ -2,9 +2,32 @@
 
 ## Current control
 
-- The coordinator runs one adaptive retrospective after every completed coordinator release and before the cycle reveal.
+- The coordinator runs one adaptive retrospective after every completed coordinator release.
 - Each cycle records `KEEP`, `TUNE`, or `REDESIGN` with evidence and any future-cycle changes.
-- Process adaptation may improve throughput, clarity, validation placement, model routing, checkpointing, scheduling, and artifact organization without weakening product, canon, learning, privacy, accessibility, release, reveal, or user-work protections.
+- Process adaptation may improve throughput, clarity, validation placement, model routing, checkpointing, scheduling, and artifact organization without weakening product, canon, learning, privacy, accessibility, release, or user-work protections. Image generation and cycle reveals are disabled by Martin's 2026-08-09 instruction.
+
+## 2026-08-09 / Skyscraper production restart - TUNE
+
+- **Observed:** Martin resumed the Skyscraper workflow for sustained manual and
+  three-hour scheduled production but explicitly removed the Image Specialist
+  and all generated-image/reveal work.
+- **Decision:** `TUNE`. Run ten sequential roles. Quartermaster hands directly
+  to Intelligence. No stage generates, edits, replaces, varies, imports, or
+  publishes an image or board. Presentation remains a release gate through
+  Quartermaster content/asset disposition, Combat code/layout ownership, and
+  independent Intelligence responsive/accessibility/containment review.
+- **Expected benefit:** more time and rate limit remain available for playable
+  implementation and release validation without weakening presentation truth.
+- **Preserved guardrails:** sequential ownership, versioned shell, independent
+  Intelligence, canon, learning separation, privacy, accessibility, atomic
+  save, replay-free restore, intended ending, immutable accepted references,
+  and protected user work.
+- **Validation:** each wake must show no Image Specialist invocation or image
+  call, a direct Quartermaster-to-Intelligence handoff, and complete required
+  presentation evidence at release.
+- **Rollback trigger:** Martin explicitly restores the stage, or sustained
+  non-generative presentation proves unable to meet the product quality bar and
+  requires a product-level decision.
 
 ## Entry template
 

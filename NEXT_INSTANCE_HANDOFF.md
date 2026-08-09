@@ -65,16 +65,27 @@ disabled. The manual run owns the worktree until 3:00 PM New York time; the
 three-hour heartbeat resumes from the latest committed handoff at or after that
 boundary. Never overlap a stage or restart a completed stage.
 
+## Commandant checkpoint
+
+- `GDB-TD011-v1 / VISION BASELINE` verifies the stable whole-product promise
+  from synchronized TD-010 without selecting a packet, address, destination,
+  route, transition, or shell.
+- The Image Specialist, image generation/edit/import, boards, variants, and
+  cycle reveal remain disabled; premium presentation and independent release
+  validation remain required.
+- No Commandant reopen trigger, product contradiction, or protected-boundary
+  variance was found.
+
 ## Exact next action - active
 
-Run **Commandant / `commandant`** for one guarded next-cycle selection envelope from released
-CF-30. Candidate packet/address, RP-011, route, destination, and shell are
-deliberately unselected. Commandant must verify a clean synchronized release
-baseline, derive only the bounded selection envelope allowed by current
-authority, issue one `VISION BASELINE` or `HOLD`, commit its own stage locally,
-and hand only that validated result to the Colonel. Downstream roles remain
-strictly sequential and may continue during the authorized manual work window
-only from the immediately preceding committed handoff.
+Run **Colonel / `colonel`** only from `GDB-TD011-v1`. Derive at most one
+already-mapped provisional surface-safe candidate from exact released CF-30 and
+current approved authority. Preserve every unknown, retained scope, return,
+no-authority boundary, and the disabled Image Specialist/no-generation/
+no-reveal rule. Issue `WORLD BASELINE` with one cited candidate and explicitly
+unresolved route, or `HOLD`; commit the stage and hand only that result to
+Operations. Do not issue a route, transition, campaign placement, shell, code,
+board, image, or ending content.
 
 ## Frozen boundaries
 
