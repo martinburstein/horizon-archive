@@ -405,20 +405,36 @@ boundary. Never overlap a stage or restart a completed stage.
   `222`; runtime media stays exactly `17 / 37,410,731` bytes with zero new
   files. Image generation/edit/board/import/reveal remains disabled.
 
+## TD-012 Mission shell
+
+- `SS-RP012-MEASURED-HORIZON-v1 / SHELL READY` reconciles all five strategic
+  contracts without conflict and is the sole TD-012 construction authority.
+- It freezes exact normal UR-30 entry/rejected protected versions; the
+  MH-00-MH-40 graph; state/group/owner/focus and UTF-8 registry; exact
+  eligibility; cumulative Python plus 15 objective IDs and 16 independent
+  fresh gates; demonstrated-gap-only answer-free remediation; blank retry;
+  equal-dignity outcomes; and one ordered 16-key atomic checkpoint.
+- Privacy, checksum/read-back/rollback/predecessor equality, replay-free
+  restore, safe returns, seven modalities, four layouts, and exact closed
+  `td012-measured-horizon-v1` fixture with 58 production-absent owner/focus
+  scenarios are mandatory.
+- Presentation remains premium code-native CSS with `selectedImageRoles: []`,
+  exact accepted media unchanged, and no image/board/reveal work. Hard stop is
+  verified MH-40, review/remediation, or permitted return with null successor
+  and no RP-013, post-ending route, or invented credits/ending presentation.
+
 ## Exact next action - active
 
-Run **Mission Captain / `mission_captain` five-contract TD-012 shell
-reconciliation** only from exact `GDB-TD012-v1`, `WNMP-TD012-v1`,
-`CFS-TD012-v1`, `VE-TD012-v1`, and `PBA-TD012-v1`. Freeze exact normal UR-30
-and rejected protected versions; MH-00-MH-40 state/group/owner/focus;
-eligibility references; cumulative Python plus all 15 objectives and 16
-independent fresh gates; demonstrated-gap-only answer-free remediation;
-blank retry; equal-dignity outcomes; ordered 16-key checkpoint; privacy,
-checksum/read-back/rollback/predecessor equality/restore; returns; seven
-modalities/four layouts; UTF-8 registry and closed production-absent fixture;
-offline/no-authority/no-exam/no-certification; PBA; zero new media; and null-
-successor hard stop. Issue `SS-RP012-MEASURED-HORIZON-v1 / SHELL READY` only
-if conflict-free, otherwise `REVISE`/`HOLD`. Do not implement, import
+Run **Reconnaissance Sergeant / `reconnaissance_sergeant` TD-012 creative
+treatment** only against exact `SS-RP012-MEASURED-HORIZON-v1`. Produce one
+surface-safe code-native thesis and emotional/attention/material/copy
+hierarchy for an expedition-owned review over the unchanged SC-12 horizon,
+with neutral equal-dignity outcomes. Preserve every identity, route, state,
+owner, focus, registry meaning, eligibility rule, 16-gate boundary,
+remediation/blankness, outcome, 16-key save, privacy/recovery, return,
+  modality, layout, 58-scenario fixture, PBA, zero-media rule, unknown,
+invariant world, and null-successor hard stop. Issue
+`CREATIVE TREATMENT READY`, `REVISE`, or `HOLD`. Do not implement, import
 protected code, design credits/intended-ending presentation, expose RP-013/
 successor, or perform image/board/reveal work. Do not inspect Martin's
 browser/profile/save, hidden lore, or protected untracked paths.

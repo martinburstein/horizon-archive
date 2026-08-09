@@ -102,6 +102,24 @@
       "saveContract": "one ordered 16-key private-free rp012_readiness_saved checkpoint with checksum, rollback, predecessor equality and replay-free restore",
       "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled; zero new media",
       "nextStage": "Mission Captain five-contract shell reconciliation"
+    },
+    {
+      "sequence": 7,
+      "stage": "Mission Captain five-contract shell reconciliation",
+      "agentId": "mission_captain",
+      "startedAt": "2026-08-09T14:10:21-04:00",
+      "endedAt": "2026-08-09T14:13:04-04:00",
+      "durationMs": 163000,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/05-PLAYABLE-SLICE-SHELL.md",
+      "shell": "SS-RP012-MEASURED-HORIZON-v1",
+      "reconciled": "GDB-TD012-v1, WNMP-TD012-v1, CFS-TD012-v1, VE-TD012-v1 and PBA-TD012-v1 without conflict",
+      "graph": "UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40",
+      "fixture": "td012-measured-horizon-v1 with exactly 58 closed storage-free production-absent owner/focus scenarios",
+      "saveContract": "rp012.measured-horizon-save.v1 / rp012_readiness_saved / ordered 16-key private-free record",
+      "imageBoundary": "Image Specialist and all generation/edit/board/import/reveal actions disabled; selectedImageRoles empty",
+      "hardStop": "verified MH-40, exact review/remediation or permitted return; null successor, no RP-013/post-ending/credits invention",
+      "nextStage": "Reconnaissance Sergeant creative treatment"
     }
   ]
 }
