@@ -1,0 +1,22 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "testDrive": "TD-012",
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant guarded verification",
+      "agentId": "commandant",
+      "startedAt": "2026-08-09T13:49:26-04:00",
+      "endedAt": "2026-08-09T13:50:09-04:00",
+      "durationMs": 43000,
+      "disposition": "HOLD - RETURN TO INTELLIGENCE CONTROL SYNC",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/01-GAME-DEVELOPMENT-BRIEF.md",
+      "releaseAuthority": "TD-011 release commit 1b8d2bef56e48e81af36f0969e7733bdd97ef69c",
+      "finding": "handoff and Story Rail Map release TD-011 while PLAYABLE_DEMO, Production Readiness Spine, Packet Scoreboard and Curriculum Spine retain superseded TD-010/RP-011 planning current state",
+      "classification": "release-reconciliation and master-control synchronization defect; no product reopen trigger",
+      "scope": "no candidate, packet, route, ending, shell, product source, image, board or reveal selected",
+      "nextStage": "Intelligence Officer bounded master-control sync"
+    }
+  ]
+}

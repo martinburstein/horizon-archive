@@ -317,18 +317,32 @@ boundary. Never overlap a stage or restart a completed stage.
   Image Specialist/reveal is not applicable and all image actions stayed
   disabled. All owned processes and tabs are closed.
 
+## TD-012 Commandant hold
+
+- Stable product promise, audience, intended ending, quality bar, and protected
+  boundaries remain valid; no Commandant reopen trigger exists.
+- Guarded verification found four stale current-control surfaces:
+  `PLAYABLE_DEMO.md`, `PRODUCTION_READINESS_SPINE.md`,
+  `PACKET_SCOREBOARD.md`, and `CURRICULUM_SPINE.md` still describe TD-010 or
+  RP-011 planning while the synchronized release is TD-011/UR-30.
+- `GDB-TD012-HOLD-v1` classifies this as a release-reconciliation/master-
+  control sync defect and returns to Intelligence. No TD-012 candidate,
+  address, route, ending beat, shell, image, board, or reveal was selected.
+
 ## Exact next action - active
 
-Run **Commandant / `commandant` guarded TD-012 whole-product verification**
-only from the exact synchronized TD-011 release. Verify the stable product
-promise, intended-ending protection, current player promise, portfolio-level
-contradictions, and reopen triggers without selecting a packet, scene,
-address, route, transition, ending beat, shell, successor, reward, access,
-identity, authority, or world response. Issue one versioned TD-012 vision
-baseline or an evidence-backed HOLD and hand only to Colonel. Image Specialist
-remains disabled: do not generate, edit, select, board, import, or reveal
-media. Do not inspect Martin's browser/profile/save, hidden lore, or protected
-untracked paths.
+Run **Intelligence Officer / `intelligence_officer` bounded master-control
+synchronization** only from exact TD-011 accepted as-built evidence. Update
+the active current-control portions of `PLAYABLE_DEMO.md`,
+`Production Pipeline/PRODUCTION_READINESS_SPINE.md`,
+`Production Pipeline/PACKET_SCOREBOARD.md`, and
+`Production Pipeline/CURRICULUM_SPINE.md` so they agree with TD-011/UR-30,
+while preserving dated history, RP-012 intended-ending protection, exact hard
+stop, and every learning/privacy/save/no-authority boundary. Run patch/UTF-8
+consistency checks, commit, push, prove `HEAD == origin/main == remote main`,
+and return to fresh Commandant TD-012 guarded verification. Do not select a
+candidate, route, ending beat, shell, image, board, or reveal. Do not inspect
+Martin's browser/profile/save, hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 
