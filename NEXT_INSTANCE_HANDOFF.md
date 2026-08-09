@@ -118,24 +118,41 @@ boundary. Never overlap a stage or restart a completed stage.
   bytes with zero new files. Image generation/edit/board/import/reveal remains
   disabled without weakening the presentation release gate.
 
+## Mission checkpoint
+
+- `SS-RP011-UNBORROWED-REACH-v1 / SHELL READY` reconciles all five strategic
+  contracts without conflict and is the sole TD-011 construction authority.
+- It freezes the normal identities, exact CF-30 route, UR-00-UR-30 graph,
+  state/group/owner/focus contracts, six observations/all `720` orders, both
+  independent learning chains and explanations, fresh-finalization-before-
+  reopening, four scopes/all `24` orders, exact reconciliation, ordered 15-key
+  two-checkpoint save, atomicity/recovery/restore, returns/LOOK, seven
+  modalities, four layouts, and exact UTF-8 public registry.
+- The exact fixture is `td011-unborrowed-reach-v1`: 80 closed storage-free
+  scenarios with shell-frozen rendered owner and actual focus IDs; it is absent
+  from production and accepts no arbitrary, URL, storage, file, network, or
+  protected state.
+- Runtime presentation is code-native CSS with `selectedImageRoles: []`, exact
+  accepted media unchanged, and no Image Specialist/generation/edit/board/
+  import/reveal work. The hard stop remains UR-30/returns/null LOOK before
+  RP-012 or ending content.
+
 ## Exact next action - active
 
-Run **Mission Captain / `mission_captain`** only from `GDB-TD011-v1`,
-`WNMP-TD011-v1`, `CFS-TD011-v1`, `VE-TD011-v1`, and `PBA-TD011-v1`.
-Reconcile them into one conflict-free versioned
-`SS-RP011-UNBORROWED-REACH-v1` shell. Freeze exact route and rejected protected
-versions; state/group/owner/focus identities; six observations and `720`
-orders; both independent learning chains and explanations; actually-failed-
-only blank recovery; fresh-finalization-before-reopening; four scopes and `24`
-orders; separate six-method/twelve-`None` reconciliation; ordered 15-key save;
-both checkpoints; atomicity/rollback/restore; returns/LOOK; seven modalities;
-four layouts; exact UTF-8 public copy; storage-free production-absent fixture;
-offline/no-authority boundaries; zero-new-media code-native presentation; PBA
-and release gates; and UR-30 hard stop. Issue `SHELL READY`, `REVISE`, or
-`HOLD`; commit, push `main` on `SHELL READY`, and verify
-`HEAD == origin/main == remote main`. Do not implement, inspect or mutate
-Martin's browser/profile/save, import protected code, perform any image/reveal
-work, or expose RP-012.
+Run **Reconnaissance Sergeant / `reconnaissance_sergeant`** only against exact
+`SS-RP011-UNBORROWED-REACH-v1`. Produce one surface-safe code-native creative
+treatment for unfamiliar evidence, deliberate independence, hidden-but-
+retained records, sealed sanitized-replica work, individual reopening, and
+separate method-and-limit reconciliation. Freeze a coherent visual/emotional
+thesis, attention rhythm, material/copy hierarchy, presentation motifs, and
+quality bar while preserving every exact identity, state, owner/focus, UTF-8
+string, action, observation/order, learning/evidence boundary, checkpoint,
+save/privacy/recovery rule, return, modality/layout, 80-scenario fixture, PBA,
+zero-media boundary, unknown, invariant world, and hard stop. Issue
+`CREATIVE TREATMENT READY`, `REVISE`, or `HOLD`; commit locally and hand the
+exact shell plus treatment to Tactical Operations Specialist. Do not
+implement, inspect Martin's browser/profile/save, open hidden lore, import
+protected code, perform image/reveal work, or expose RP-012.
 
 ## Frozen boundaries
 

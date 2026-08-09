@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "run": {
     "testDrive": "TD-011",
-    "shellCandidate": "deliberately unselected",
+    "shellCandidate": "SS-RP011-UNBORROWED-REACH-v1",
     "campaignAddress": "RP-011 / SC-12 / UR-00-UR-30",
     "provisionalSurfaceCandidate": "one independent fresh-evidence record across an unfamiliar exposed reach, followed only after finalization by a separate method-and-limit reconciliation with four retained scopes",
     "sourceCommit": "671d6160e556bd302690d5b1f7f56644bfe67356",
@@ -99,6 +99,29 @@
       "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Science push gate",
       "nextStage": "Mission Captain"
+    },
+    {
+      "sequence": 5,
+      "stage": "Mission Captain",
+      "agentId": "mission_captain",
+      "startedAt": "2026-08-09T12:19:43-04:00",
+      "endedAt": "2026-08-09T12:25:27-04:00",
+      "durationMs": 344000,
+      "disposition": "SHELL READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/05-PLAYABLE-SLICE-SHELL.md",
+      "shellVersion": "SS-RP011-UNBORROWED-REACH-v1",
+      "predecessorVerification": "Science commit cd46cb4 verified as the exact starting authority",
+      "strategicReconciliation": "GDB-TD011-v1, WNMP-TD011-v1, CFS-TD011-v1, VE-TD011-v1 and PBA-TD011-v1 reconcile without conflict",
+      "fixedGraph": "CF-30 / SC-11 -> UR-00 -> UR-10 -> UR-20 -> UR-30 / SC-12 under sole TD011-RTA-001",
+      "fixedContracts": "exact normal identities, owners/groups/focus, six observations/720 orders, independent learning/explanations, four scopes/24 orders, exact reconciliation, 15-key two-checkpoint persistence, returns/LOOK, seven modalities, four layouts and exact UTF-8",
+      "fixture": "exact closed storage-free production-absent 80-scenario registry with rendered owner and actual focus proof",
+      "presentation": "code-native CSS with selectedImageRoles []; Image Specialist and all generation/edit/board/import/reveal work disabled; release quality retained",
+      "validation": "Mission conflict, identity, table-count, fixture-number and fixture-ID uniqueness checks PASS; exact 80 rows",
+      "variances": "none",
+      "commit": "PENDING_MISSION_COMMIT",
+      "commitConvention": "The dedicated Mission commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Mission SHELL READY requires push and HEAD/origin/remote equality",
+      "nextStage": "Reconnaissance Sergeant"
     }
   ]
 }
