@@ -15,6 +15,7 @@ import { BraidedVerge } from "./BraidedVerge.jsx";
 import { OffsetReach } from "./OffsetReach.jsx";
 import { OccludedFold } from "./OccludedFold.jsx";
 import { Counterfield } from "./Counterfield.jsx";
+import { UnborrowedReach } from "./UnborrowedReach.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -64,9 +65,14 @@ import {
   createOccludedFoldStorageAdapter,
 } from "./OccludedFoldNormal.js";
 import {
+  COUNTERFIELD_SAVE_KEY,
   COUNTERFIELD_SHELL_VERSION,
   createCounterfieldStorageAdapter,
 } from "./CounterfieldNormal.js";
+import {
+  UNBORROWED_REACH_SHELL_VERSION,
+  createUnborrowedReachStorageAdapter,
+} from "./UnborrowedReachNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -552,6 +558,16 @@ function calibrationMarginReviewSaveOptions(storage) {
     [OFFSET_REACH_SAVE_KEY]: offsetBytes,
     [OCCLUDED_FOLD_SAVE_KEY]: occludedBytes,
   });
+  const restoredCounterfield = counterfieldAdapter.read();
+  let counterfieldBytes = null;
+  try { counterfieldBytes = storage?.getItem(COUNTERFIELD_SAVE_KEY) ?? null; } catch { counterfieldBytes = null; }
+  const readCounterfieldBytes = () => {
+    try { return storage?.getItem(COUNTERFIELD_SAVE_KEY) ?? null; } catch { return null; }
+  };
+  const unborrowedReachAdapter = createUnborrowedReachStorageAdapter(storage, {
+    [COUNTERFIELD_SAVE_KEY]: counterfieldBytes,
+    predecessorsStable: counterfieldAdapter.predecessorsStable,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -612,7 +628,10 @@ function calibrationMarginReviewSaveOptions(storage) {
     restoredOccludedFold,
     readOccludedBytes,
     counterfieldAdapter,
-    restoredCounterfield: counterfieldAdapter.read(),
+    restoredCounterfield,
+    readCounterfieldBytes,
+    unborrowedReachAdapter,
+    restoredUnborrowedReach: unborrowedReachAdapter.read(),
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -2486,6 +2505,7 @@ export function App() {
       OFFSET_REACH_SHELL_VERSION,
       OCCLUDED_FOLD_SHELL_VERSION,
       COUNTERFIELD_SHELL_VERSION,
+      UNBORROWED_REACH_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2555,11 +2575,19 @@ export function App() {
       "SS-RP003-REVIEW-SAVE-v1",
       THREE_CURRENT_REACH_SHELL_VERSION,
       MANYFOLD_RETURN_SHELL_VERSION,
+      INTERVAL_WORKS_SHELL_VERSION,
+      BRAIDED_VERGE_SHELL_VERSION,
+      OFFSET_REACH_SHELL_VERSION,
+      OCCLUDED_FOLD_SHELL_VERSION,
+      COUNTERFIELD_SHELL_VERSION,
+      UNBORROWED_REACH_SHELL_VERSION,
     ].includes(controller?.getState().shellVersion)) {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");
       return {
-        status: controller.getState().shellVersion === COUNTERFIELD_SHELL_VERSION
+        status: controller.getState().shellVersion === UNBORROWED_REACH_SHELL_VERSION
+          ? "unborrowed_reach_restored"
+          : controller.getState().shellVersion === COUNTERFIELD_SHELL_VERSION
           ? "counterfield_restored"
           : controller.getState().shellVersion === OCCLUDED_FOLD_SHELL_VERSION
           ? "occluded_fold_restored"
@@ -2615,6 +2643,7 @@ export function App() {
       || result?.state?.shellVersion === OFFSET_REACH_SHELL_VERSION
       || result?.state?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
       || result?.state?.shellVersion === COUNTERFIELD_SHELL_VERSION
+      || result?.state?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -3788,11 +3817,23 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === OFFSET_REACH_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === COUNTERFIELD_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
     ].includes(calibrationMarginEntryView?.phase)
   )) {
+    if (calibrationMarginEntryView?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
+      || calibrationMarginEntryView?.activeGroup === "td011-unborrowed-reach-route"
+      || calibrationMarginEntryView?.activeGroup === "td011-tour") {
+      return (
+        <UnborrowedReach
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
     if (calibrationMarginEntryView?.shellVersion === MANYFOLD_RETURN_SHELL_VERSION) {
       return (
         <ManyfoldReturn

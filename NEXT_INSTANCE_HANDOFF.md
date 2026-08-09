@@ -173,25 +173,54 @@ boundary. Never overlap a stage or restart a completed stage.
 - All 80 fixture rows are mapped to live rendered-owner/actual-focus proof.
   No image/audio/media work or variance is authorized.
 
+## Combat checkpoint
+
+- `FUNCTIONAL BUILD READY` implements the complete normal
+  `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30` graph under exact shell
+  `SS-RP011-UNBORROWED-REACH-v1`, with no protected journey import.
+- Exact normal route and semantic seven-modality intents fail closed on stale,
+  malformed, unknown-option, private, Tour, protected, or predecessor-changed
+  input. All `720` observation orders and all `24` scope-reopen orders
+  converge with zero cross-credit.
+- PY-019 primary/trace/blank transfer, agent-surface primary/retrieval/transfer,
+  and both explanations remain independently scored. Recovery is answer-free,
+  clears private work, and reopens blank.
+- The ordered checksummed 15-key record accepts only
+  `rp011_fresh_finalized` then `rp011_reconciliation_saved`; canonical
+  read-back, exact Counterfield bytes, chained predecessor proof, verified
+  rollback/HOLD, replay-free restore, write-free returns, null LOOK, and
+  no-successor hard stop are implemented.
+- The responsive React/CSS surface is code-native and invariant with
+  `selectedImageRoles: []`. No media, image, board, generation, edit, import,
+  or reveal action occurred.
+- The exact closed fixture has 80 unique shell-authorized rows. Live browser
+  proof is `80/80` for visible owner and actual active-element focus; four
+  layouts pass one main/status, containment, and `>=44px` targets.
+- Validation: focused `9/9`, protected isolation `15/15`, full product
+  `928/928`, curriculum self-tests `40/40`, production/fixture builds
+  `212/53`, and served identity PASS. `PBA-TD011-v1 / release / PASS` at JS
+  `1,616,670`, CSS `112,614`, exact media `17 / 37,410,731`, zero new media.
+- Functional evidence is frozen in
+  `Production Pipeline/Skyscraper Test Drives/TD-011/08-FUNCTIONAL-BUILD-REPORT.md`.
+
 ## Exact next action - active
 
-Run **Combat Engineer / `combat_engineer`** only against exact
-`SS-RP011-UNBORROWED-REACH-v1`,
-`CT-RP011-UNBORROWED-LAMINAE-v1`, and
-`XB-RP011-UNBORROWED-REACH-v1`. Implement the complete normal route,
-controller, ordered 15-key/two-checkpoint sanitizer and storage adapter,
-orchestrator/App bridge, responsive React surface, deterministic code-native
-CSS world, exact public registry, and closed 80-scenario production-absent
-fixture. Add focused contract/controller/UI/fixture tests covering route
-rejection/seven modalities, all `720` and `24` orders, strict independent
-learning/recovery/privacy, both atomic transactions/rollback/restore, returns/
-LOOK/Tour, owners/focus, four layouts, protected/fixture/later exclusion,
-zero-media identity, and PBA. Reuse accepted normal utilities; never import a
-protected journey or accept arbitrary runtime/fixture input. Issue
-`FUNCTIONAL BUILD READY`, `REVISE`, or `HOLD`; commit and push `main` on ready,
-verify `HEAD == origin/main == remote main`, and hand as-built evidence to
-Quartermaster. Do not inspect Martin's browser/profile/save, open hidden lore,
-create/edit/import media, create a reveal, or expose RP-012.
+Run **Quartermaster / `quartermaster`** only against the exact committed and
+pushed Combat candidate, shell 05, creative treatment 06, experience blueprint
+07, functional report 08, and `PBA-TD011-v1`. Audit and polish only
+non-frozen player-facing microcopy, accessibility text, control organization,
+code-native presentation, and asset truth. Preserve every route, group/owner/
+focus ID, observation, learning/evidence rule, ordered 15-key/two-checkpoint
+save, privacy/rollback/restore behavior, return/LOOK, 80-row fixture contract,
+exact accepted media identity, and UR-30 hard stop. Prove no placeholder, raw
+evaluator label, misleading art claim, unauthorized media, protected reference,
+fixture seam, or later content remains. Rerun focused/full tests, all curriculum
+self-tests, production/fixture builds, live `80/80` owner/focus, four layouts,
+served identity, privacy/protected/later scans, and release PBA. Issue
+`CONTENT COMPLETE`, `REVISE`, or `HOLD`; commit the exact stage and hand directly
+to Intelligence Officer on pass. Image Specialist remains disabled: do not
+generate, edit, select, board, import, or reveal media. Do not inspect Martin's
+browser/profile/save, hidden lore, or the protected untracked paths.
 
 ## Frozen boundaries
 

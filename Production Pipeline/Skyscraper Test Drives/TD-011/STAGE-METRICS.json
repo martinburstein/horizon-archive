@@ -167,6 +167,29 @@
       "commitConvention": "The dedicated Tactical commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Tactical push gate",
       "nextStage": "Combat Engineer"
+    },
+    {
+      "sequence": 8,
+      "stage": "Combat Engineer",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-09T12:32:43-04:00",
+      "endedAt": "2026-08-09T13:04:00-04:00",
+      "durationMs": 1877000,
+      "disposition": "FUNCTIONAL BUILD READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/08-FUNCTIONAL-BUILD-REPORT.md",
+      "predecessorVerification": "Tactical commit 6d81309 verified as exact EXPERIENCE READY starting authority under synchronized Mission shell 1aed098",
+      "implementation": "complete normal CF-30 to UR-00/10/20/30 route, strict controller/evaluators, ordered checksummed 15-key two-checkpoint persistence, orchestrator/App bridge, responsive React/CSS surface and exact closed fixture",
+      "convergence": "all 720 observation orders and all 24 scope-reopen orders converge; independent PY-019, agent-surface forms and explanations remain conjunctive",
+      "fixture": "exact 80 shell-authorized unique scenarios; 80/80 live rendered owner and actual active-element focus PASS; storage/URL/file/network/protected/arbitrary input closed",
+      "accessibility": "four exact layouts PASS with one main/status, no horizontal overflow and >=44px targets; deterministic control focus, forced color and reduced motion",
+      "validation": "focused 9/9 PASS; protected isolation 15/15 PASS; full product 928/928 PASS; curriculum self-tests 40/40 PASS; production/fixture builds 212/53 modules; served identity PASS",
+      "budget": "PBA-TD011-v1 release PASS; JS 1616670, CSS 112614, modules 212; exact 17 / 37410731 accepted media and zero new runtime media",
+      "presentation": "deterministic code-native oblique laminae; selectedImageRoles []; no image generation/edit/board/import/reveal action",
+      "variances": "none",
+      "commit": "PENDING_COMBAT_COMMIT",
+      "commitConvention": "The dedicated Combat commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "Combat FUNCTIONAL BUILD READY requires push and HEAD/origin/remote equality",
+      "nextStage": "Quartermaster"
     }
   ]
 }

@@ -95,6 +95,16 @@ import {
   createCounterfieldRouteIntent,
   sanitizeCounterfieldSave,
 } from "./CounterfieldNormal.js";
+import {
+  UNBORROWED_REACH_ROUTE_ACTION,
+  UNBORROWED_REACH_ROUTE_GROUP,
+  UNBORROWED_REACH_SHELL_VERSION,
+  createUnborrowedReachIntent,
+  createUnborrowedReachNormalController,
+  createUnborrowedReachRouteIntent,
+  createUnborrowedReachRouteState,
+  sanitizeUnborrowedReachSave,
+} from "./UnborrowedReachNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -267,13 +277,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let offsetReachController = null;
   let occludedFoldController = null;
   let counterfieldController = null;
+  let unborrowedReachController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (counterfieldController) return counterfieldController.getState();
+    if (unborrowedReachController) return unborrowedReachController.getState();
+    if (counterfieldController) return createUnborrowedReachRouteState(counterfieldController.getState());
     if (occludedFoldController) return createCounterfieldRouteState(occludedFoldController.getState());
     if (offsetReachController) return offsetStateWithOccludedRoute(offsetReachController.getState());
     if (braidedVergeController) return braidedStateWithOffsetRoute(braidedVergeController.getState());
@@ -386,6 +398,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     offsetReachController = null;
     occludedFoldController = null;
     counterfieldController = null;
+    unborrowedReachController = null;
     reviewRecovery = false;
     extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
       restoredExtractionCheckpoint,
@@ -480,6 +493,16 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                     restoredRecord: restoredCounterfield,
                     adapter: options.counterfieldAdapter,
                   });
+                  const restoredUnborrowedReach = sanitizeUnborrowedReachSave(options.restoredUnborrowedReach);
+                  if (restoredUnborrowedReach) {
+                    unborrowedReachController = createUnborrowedReachNormalController({
+                      entrySourceState: createUnborrowedReachRouteState(counterfieldController.getState()),
+                      releasedPredecessorState: counterfieldController.getState(),
+                      predecessorBytes: options.readCounterfieldBytes?.(),
+                      restoredRecord: restoredUnborrowedReach,
+                      adapter: options.unborrowedReachAdapter,
+                    });
+                  }
                 }
               }
             }
@@ -536,13 +559,38 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (unborrowedReachController) {
+        const result = unborrowedReachController.dispatch(intent);
+        if (result.status === "returned_to_counterfield_write_free") {
+          unborrowedReachController = null;
+          return Object.freeze({ ...result, state: clonePublicState(createUnborrowedReachRouteState(counterfieldController.getState())) });
+        }
+        return result;
+      }
       if (counterfieldController) {
+        const counterfieldState = counterfieldController.getState();
+        if (counterfieldState.activeGroup === "cf30_restore" && intent?.allowlistedActionId === UNBORROWED_REACH_ROUTE_ACTION) {
+          const predecessorBytes = options.readCounterfieldBytes?.() ?? JSON.stringify(counterfieldController.getRecord());
+          const candidate = createUnborrowedReachNormalController({
+            entrySourceState: createUnborrowedReachRouteState(counterfieldState),
+            releasedPredecessorState: counterfieldState,
+            predecessorBytes,
+            entryIntent: intent,
+            restoredRecord: options.restoredUnborrowedReach,
+            adapter: options.unborrowedReachAdapter,
+          });
+          if (candidate.getState().shellVersion !== UNBORROWED_REACH_SHELL_VERSION) {
+            return Object.freeze({ status: "rejected", reason: "unborrowed_reach_route_rejected", state: clonePublicState(createUnborrowedReachRouteState(counterfieldState)) });
+          }
+          unborrowedReachController = candidate;
+          return Object.freeze({ status: "unborrowed_reach_arrived_zero_evidence", evidenceGranted: false, state: clonePublicState(unborrowedReachController.getState()) });
+        }
         const result = counterfieldController.dispatch(intent);
         if (result.status === "returned_to_occluded_fold_write_free") {
           counterfieldController = null;
           return Object.freeze({ ...result, state: clonePublicState(occludedFoldController.getState()) });
         }
-        return result;
+        return result?.state ? Object.freeze({ ...result, state: clonePublicState(createUnborrowedReachRouteState(result.state)) }) : result;
       }
       if (occludedFoldController) {
         const occludedState = occludedFoldController.getState();
@@ -891,6 +939,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (unborrowedReachController) return unborrowedReachController.updateField(name, value);
       if (counterfieldController) return counterfieldController.updateField(name, value);
       if (occludedFoldController) return occludedFoldController.updateField(name, value);
       if (offsetReachController) {
@@ -958,6 +1007,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getCounterfieldRecord() {
       return counterfieldController?.getRecord() ?? null;
     },
+    getUnborrowedReachRecord() {
+      return unborrowedReachController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -1005,6 +1057,23 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === UNBORROWED_REACH_ROUTE_GROUP) {
+    if (action === UNBORROWED_REACH_ROUTE_ACTION) return createUnborrowedReachRouteIntent(action, activationKind, eventToken);
+    return createCounterfieldIntent(
+      { activeGroup: "cf30_restore", owner: "SYSTEM // EXPEDITION LEDGER" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (typeof activeGroup === "string" && activeGroup.startsWith("ur")) {
+    return createUnborrowedReachIntent(
+      { activeGroup, owner: unborrowedReachOwner(activeGroup) },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (activeGroup === COUNTERFIELD_ROUTE_GROUP) {
     if (action === COUNTERFIELD_ROUTE_ACTION) return createCounterfieldRouteIntent(action, activationKind, eventToken);
     return createOccludedFoldIntent(
@@ -1257,6 +1326,18 @@ function counterfieldOwner(activeGroup) {
   if (activeGroup === "cf20_save") return "PILOT // EXPEDITION LEDGER";
   if (activeGroup === "cf20_transaction" || activeGroup === "cf30_restore") return "SYSTEM // EXPEDITION LEDGER";
   return "PILOT // COURSE WORK";
+}
+
+function unborrowedReachOwner(activeGroup) {
+  if (activeGroup === "ur00_isolation") return "SYSTEM // INDEPENDENT RECORD MODE";
+  if (activeGroup === "ur10_fresh_observations") return "SCENE // UNBORROWED REACH";
+  if (["ur20_python_primary", "ur20_python_trace", "ur20_python_transfer"].includes(activeGroup)) return "BUILDER WORK // SANITIZED REPLICAS";
+  if (["ur20_agent_primary", "ur20_agent_retrieval", "ur20_agent_transfer", "ur20_recovery"].includes(activeGroup)) return "TEACHER // BOUNDED PRACTICE";
+  if (["ur20_surface_explanation", "ur20_truth_permission_explanation"].includes(activeGroup)) return "PILOT // BOUNDARY EXPLANATION";
+  if (activeGroup === "ur30_reconciliation") return "PILOT // METHOD RECONCILIATION";
+  if (activeGroup === "ur30_reconciliation_recovery") return "TEACHER // BOUNDED PRACTICE";
+  if (activeGroup === "ur30_restore") return "SYSTEM // RECORD CUSTODY";
+  return "SYSTEM // RECORD CUSTODY";
 }
 
 function offsetReachOwner(activeGroup) {

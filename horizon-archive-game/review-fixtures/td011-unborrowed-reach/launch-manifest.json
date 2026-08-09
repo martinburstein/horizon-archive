@@ -1,0 +1,10 @@
+{
+  "fixtureId": "td011-unborrowed-reach-v1",
+  "contractVersion": "td011.fixture-manifest.v1",
+  "scenarioCount": 80,
+  "storage": "disabled",
+  "externalInput": "disabled",
+  "productionImport": "exact public normal surface only",
+  "host": "127.0.0.1",
+  "port": 4183
+}

@@ -388,6 +388,6 @@ test("protected module remains absent from App, main, routes, browser authority,
   const distFiles = await readdir(new URL("../dist/assets", import.meta.url));
   for (const file of distFiles.filter((name) => /\.(?:js|css)$/.test(name))) {
     const bytes = await readFile(new URL(`../dist/assets/${file}`, import.meta.url), "utf8");
-    assert.doesNotMatch(bytes, /UnborrowedReachProtectedJourney|rp011_fresh_finalized|UR-00 ARRIVE|RP011-SINGLE-AGENT-SURFACES-01/);
+    assert.doesNotMatch(bytes, /UnborrowedReachProtectedJourney|rp011\.protected-journey\.v1|protected_reference_complete/);
   }
 });
