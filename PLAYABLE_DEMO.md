@@ -14,22 +14,24 @@ Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
 The accepted normal campaign continuation reaches complete `RP-003 / SC-04`
-through `RP-010 / SC-11 / CF-00-CF-30`. Counterfield includes seven equal
-physical observation modalities in every order, bounded independent PY-018
-and client-flow practice with two explanations, four separate retained scopes,
-deterministic atomic local save/rollback/recovery, replay-free restore, and
-exact write-free returns to Occluded Fold or City Threshold. After the
-Occluded Fold return, its existing Offset Reach return remains available; no
-direct Counterfield-to-Offset-Reach shortcut is added. Invalid, private, stale,
-partial, forged, interrupted, or Tour-derived state fails closed without
-consuming a future valid intent.
+through `RP-011 / SC-12 / UR-00-UR-30`. Unborrowed Reach opens only from exact
+released Counterfield CF-30 through one fresh Pilot-owned route intent. It
+includes six equal observations in every one of 720 orders; bounded independent
+PY-019 and single-agent-surface practice with two explanations; fresh
+finalization before four separate retained scopes reopen in all 24 orders;
+separate method-and-limit reconciliation; deterministic atomic local
+save/rollback/recovery; replay-free restore; and exact write-free returns to
+Counterfield or City Threshold. Invalid, private, stale, partial, forged,
+interrupted, protected, or Tour-derived state fails closed without consuming a
+future valid intent.
 
-The accepted boundary stops at CF-30 or either authorized return. Existing
-continuation is LOOK-only scenery with no destination, opened route, or
-successor. No RP-011/later route, RP-013, successor, unity, cause, purpose,
-identity, reward, access, authority, external action, live service, or physical
-world response is included. SC-04 through SC-11 neither receive nor respond to
-the local records.
+The accepted boundary stops at UR-30 or either authorized return. LOOK remains
+inert scenery with no destination, opened route, or successor. No RP-012
+route or ending content, RP-013, successor, unity, cause, purpose, identity,
+reward, access, authority, external action, live service, or physical world
+response is included. SC-04 through SC-12 neither receive nor respond to the
+local records. Image generation, editing, boards, imports, and cycle reveals
+are disabled; TD-011's presentation is code-native and adds no runtime media.
 
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.

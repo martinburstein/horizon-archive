@@ -1,5 +1,27 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-011 Intelligence release current control - 2026-08-09
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-011 /
+  SS-RP011-UNBORROWED-REACH-v1` on audited product candidate `8c8d0a4...`.
+- **Position:** exact released TD-010 CF-30 -> sole fresh Pilot-owned
+  `TD011-RTA-001` -> complete `UR-00 -> UR-10 -> UR-20 -> UR-30 / SC-12`.
+- **Gate:** focused `27/27`; full `932/932`; curriculum validators `40/40`;
+  production/fixture `212/53`; served/lock `2/2`; live `80/80`; effective
+  reconciliation targets `18/18`; exact PBA; final HTTP preflight; one
+  `91.8s` complete E2E with credits and no runtime errors.
+- **Identity:** JS `1,622,151` /
+  `F9359D9039B8480DFEF2F09377FB2DF13C67B0DB34545828A1E1DF61186C8C0D`;
+  CSS `113,974` /
+  `CB79913285EACCADEBB3CE36C57B72856E4623C3EF953D66FF9D60340D09BE5E`;
+  exact media `17 / 37,410,731`; zero new runtime media; 36 CSS bytes headroom.
+- **Presentation:** code-native CSS, `selectedImageRoles: []`, native modal
+  confirmations, and all effective targets at least `44x44 CSS px`. Image
+  Specialist and cycle reveal are disabled; no TD-011 image artifact exists.
+- **Boundary:** UR-30, exact Counterfield/City Threshold returns, or inert null
+  LOOK. No RP-012/ending route, successor, RP-013, authority, response, or
+  world effect.
+
 ## TD-010 Intelligence release current control - 2026-08-01
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-010 /

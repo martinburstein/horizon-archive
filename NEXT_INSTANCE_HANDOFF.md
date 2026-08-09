@@ -329,20 +329,28 @@ boundary. Never overlap a stage or restart a completed stage.
   control sync defect and returns to Intelligence. No TD-012 candidate,
   address, route, ending beat, shell, image, board, or reveal was selected.
 
+## TD-012 Intelligence control-sync checkpoint
+
+- `PLAYABLE_DEMO.md`, `PRODUCTION_READINESS_SPINE.md`,
+  `PACKET_SCOREBOARD.md`, and `CURRICULUM_SPINE.md` now agree with exact
+  released TD-011/UR-30 and the final as-built reconciliation.
+- Dated history and every RP-012/ending, learning, privacy, save, no-authority,
+  hard-stop, image-disabled, and protected-work boundary remain exact.
+- No product source, test, fixture, canon, route, shell, media, image, board,
+  reveal, or release identity changed. Evidence is in TD-012 artifact 01A.
+
 ## Exact next action - active
 
-Run **Intelligence Officer / `intelligence_officer` bounded master-control
-synchronization** only from exact TD-011 accepted as-built evidence. Update
-the active current-control portions of `PLAYABLE_DEMO.md`,
-`Production Pipeline/PRODUCTION_READINESS_SPINE.md`,
-`Production Pipeline/PACKET_SCOREBOARD.md`, and
-`Production Pipeline/CURRICULUM_SPINE.md` so they agree with TD-011/UR-30,
-while preserving dated history, RP-012 intended-ending protection, exact hard
-stop, and every learning/privacy/save/no-authority boundary. Run patch/UTF-8
-consistency checks, commit, push, prove `HEAD == origin/main == remote main`,
-and return to fresh Commandant TD-012 guarded verification. Do not select a
-candidate, route, ending beat, shell, image, board, or reveal. Do not inspect
-Martin's browser/profile/save, hidden lore, or protected untracked paths.
+Run **Commandant / `commandant` fresh guarded TD-012 whole-product
+verification** only after the exact Intelligence control-sync commit is pushed
+and `HEAD == origin/main == remote main`. Reverify stable product promise,
+intended-ending protection, current player promise, control consistency, and
+reopen triggers without selecting a packet, scene, address, route, transition,
+ending beat, shell, successor, reward, access, identity, authority, or world
+response. Issue one versioned TD-012 `VISION BASELINE` or evidence-backed HOLD
+and hand only to Colonel. Image Specialist remains disabled: do not generate,
+edit, select, board, import, or reveal media. Do not inspect Martin's browser/
+profile/save, hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 

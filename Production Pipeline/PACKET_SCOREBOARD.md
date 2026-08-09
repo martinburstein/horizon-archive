@@ -1,5 +1,21 @@
 # Rail Packet Scoreboard
 
+## TD-011 Intelligence release current control - 2026-08-09
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-011 /
+  SS-RP011-UNBORROWED-REACH-v1` on audited product candidate `8c8d0a4...`.
+- **Released graph:** `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, followed
+  only by exact Counterfield or City Threshold returns and inert LOOK-only
+  null continuation.
+- **Evidence:** six observations/all `720` orders; independent PY-019 and
+  agent-surface chains/explanations; four scopes/all `24` reopening orders;
+  separate reconciliation; atomic 15-key two-checkpoint save; focused `27/27`;
+  full `932/932`; validators `40/40`; 212/53-module builds; live `80/80`;
+  targets `18/18`; exact PBA/served identity; one `91.8s` E2E.
+- **Stop:** UR-30 or either return. RP-012/ending, successor, RP-013, reward,
+  access, authority, response, and world effect remain closed. Image Specialist
+  and cycle reveal are disabled.
+
 ## TD-010 Intelligence release current control - 2026-08-01
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-010 /
