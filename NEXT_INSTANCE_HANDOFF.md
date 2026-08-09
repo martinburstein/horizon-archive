@@ -456,26 +456,33 @@ boundary. Never overlap a stage or restart a completed stage.
 
 ## Exact next action - active
 
-Run **Combat Engineer / `combat_engineer` TD-012 functional implementation**
-only against exact `SS-RP012-MEASURED-HORIZON-v1`,
-`CT-RP012-HONEST-HORIZON-v1`, and `XB-RP012-MEASURED-HORIZON-v1`. Implement
-the normal route/controller, ordered 16-key sanitizer/storage adapter, App
-bridge, responsive React folio, code-native invariant world, public registry,
-and exact literal 58-scenario production-absent fixture. Add focused tests for
-route/modalities/rejections, eligibility, 16 gates, blank work/retry, actual-
-miss remediation, both common-anatomy outcomes, save/rollback/restore,
-returns/Tour, owner/focus, four layouts, protected/fixture/later exclusion,
-exact media, and PBA. Do not import protected journeys, accept arbitrary
-input, inspect personal state/hidden lore/protected untracked paths, create or
-edit media/reveal, design credits/intended-ending presentation, or expose
-successor/RP-013. Issue `FUNCTIONAL BUILD READY`, `REVISE`, or `HOLD`; commit
-and push on ready and verify remote equality.
+Resume **Combat Engineer / `combat_engineer` TD-012 functional
+implementation** from artifact 08 and the latest checkpoint commit. Do not
+restart construction and do not hand to Quartermaster yet.
+
+First add a direct accepted exact-UR-30 end-to-end controller/orchestrator test
+through both outcomes, save/read-back/verified restore, failure/rollback/hold,
+returns, duplicate/stale rejection, and null hard stop. Then run the isolated
+fixture live for `58/58` visible owner plus actual focus across the four shell
+layouts/presentation modes; run fresh served root/deep byte identity, complete
+E2E, validators/build/PBA/media proof; correct any defect; and replace artifact
+08 with the final Functional Build Report. Only after every proof passes may
+Combat issue `FUNCTIONAL BUILD READY`, commit/push `main`, prove HEAD/origin/
+remote equality, and hand the exact candidate to Quartermaster.
+
+Current checkpoint evidence: full suite `941/941`; normal focused `5/5`;
+fixture focused `4/4` with `58/58` SSR owner/real-focus targets; product/fixture
+builds `215/57` modules; PBA PASS at JS `1,656,004`, CSS `119,553`, exact media
+`17 / 37,410,731`, zero additions. This is **`IMPLEMENTATION IN PROGRESS`**,
+not a functional release gate. Preserve exact shell/treatment/blueprint,
+zero-media/image/reveal boundary, equal-outcome anatomy, and null successor.
 
 ## Frozen boundaries
 
 - TD-011 is released only through UR-30 and the exact returns/null LOOK above.
-- `TD012-RTA-001` is selected only as Operations planning authority from exact
-  released UR-30; it is not implemented, mounted, reachable, or a shell.
+- `TD012-RTA-001` is implemented only in the unpushed Combat candidate from
+  exact released UR-30; it is not released authority and has not passed the
+  final functional gate.
   No successor, RP-013, hidden lore, identity, reward, access, authority,
   world response, ending extension, Operations-defined credits behavior, or
   post-ending content is selected or authorized.

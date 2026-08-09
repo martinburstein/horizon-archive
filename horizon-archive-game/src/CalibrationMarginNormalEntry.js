@@ -105,6 +105,16 @@ import {
   createUnborrowedReachRouteState,
   sanitizeUnborrowedReachSave,
 } from "./UnborrowedReachNormal.js";
+import {
+  MEASURED_HORIZON_ROUTE_ACTION,
+  MEASURED_HORIZON_ROUTE_GROUP,
+  MEASURED_HORIZON_SHELL_VERSION,
+  createMeasuredHorizonIntent,
+  createMeasuredHorizonNormalController,
+  createMeasuredHorizonRouteIntent,
+  createMeasuredHorizonRouteState,
+  sanitizeMeasuredHorizonSave,
+} from "./MeasuredHorizonNormal.js";
 
 const exactProgression = Object.freeze({
   civicComparisonSaved: true,
@@ -278,13 +288,15 @@ export function createCalibrationMarginNormalEntry(options = {}) {
   let occludedFoldController = null;
   let counterfieldController = null;
   let unborrowedReachController = null;
+  let measuredHorizonController = null;
   let reviewRecovery = false;
   let extractionCheckpoint = sanitizeCalibrationMarginExtractionCheckpoint(
     options.restoredExtractionCheckpoint,
   );
 
   const currentState = () => {
-    if (unborrowedReachController) return unborrowedReachController.getState();
+    if (measuredHorizonController) return measuredHorizonController.getState();
+    if (unborrowedReachController) return createMeasuredHorizonRouteState(unborrowedReachController.getState()) ?? unborrowedReachController.getState();
     if (counterfieldController) return createUnborrowedReachRouteState(counterfieldController.getState());
     if (occludedFoldController) return createCounterfieldRouteState(occludedFoldController.getState());
     if (offsetReachController) return offsetStateWithOccludedRoute(offsetReachController.getState());
@@ -502,6 +514,17 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                       restoredRecord: restoredUnborrowedReach,
                       adapter: options.unborrowedReachAdapter,
                     });
+                    const restoredMeasuredHorizon = sanitizeMeasuredHorizonSave(options.restoredMeasuredHorizon);
+                    if (restoredMeasuredHorizon && options.measuredHorizonEligibility) {
+                      measuredHorizonController = createMeasuredHorizonNormalController({
+                        entrySourceState: createMeasuredHorizonRouteState(unborrowedReachController.getState()),
+                        releasedPredecessorState: unborrowedReachController.getState(),
+                        predecessorBytes: options.readUnborrowedReachBytes?.(),
+                        restoredRecord: restoredMeasuredHorizon,
+                        eligibility: options.measuredHorizonEligibility,
+                        adapter: options.measuredHorizonAdapter,
+                      });
+                    }
                   }
                 }
               }
@@ -559,7 +582,35 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     },
     dispatch(intent) {
       const state = currentState();
+      if (measuredHorizonController) {
+        const result = measuredHorizonController.dispatch(intent);
+        if (result.status === "returned_to_unborrowed_reach_write_free") {
+          measuredHorizonController = null;
+          return Object.freeze({ ...result, state: clonePublicState(createMeasuredHorizonRouteState(unborrowedReachController.getState())) });
+        }
+        return result;
+      }
       if (unborrowedReachController) {
+        const unborrowedState = unborrowedReachController.getState();
+        if (unborrowedState.activeGroup === "ur30_restore" && intent?.action === MEASURED_HORIZON_ROUTE_ACTION) {
+          const predecessorBytes = options.readUnborrowedReachBytes?.() ?? JSON.stringify(unborrowedReachController.getRecord());
+          const measuredAdapter = options.createMeasuredHorizonAdapter?.(unborrowedReachController.getRecord(), predecessorBytes)
+            ?? options.measuredHorizonAdapter;
+          const candidate = createMeasuredHorizonNormalController({
+            entrySourceState: createMeasuredHorizonRouteState(unborrowedState),
+            releasedPredecessorState: unborrowedState,
+            predecessorBytes,
+            entryIntent: intent,
+            eligibility: options.measuredHorizonEligibility,
+            restoredRecord: options.restoredMeasuredHorizon,
+            adapter: measuredAdapter,
+          });
+          if (candidate.getState().shellVersion !== MEASURED_HORIZON_SHELL_VERSION) {
+            return Object.freeze({ status: "rejected", reason: "measured_horizon_route_rejected", state: clonePublicState(createMeasuredHorizonRouteState(unborrowedState)) });
+          }
+          measuredHorizonController = candidate;
+          return Object.freeze({ status: "measured_horizon_arrived_zero_evidence", evidenceGranted: false, state: clonePublicState(measuredHorizonController.getState()) });
+        }
         const result = unborrowedReachController.dispatch(intent);
         if (result.status === "returned_to_counterfield_write_free") {
           unborrowedReachController = null;
@@ -939,6 +990,7 @@ export function createCalibrationMarginNormalEntry(options = {}) {
       return entryController.dispatch(intent);
     },
     updateField(name, value) {
+      if (measuredHorizonController) return measuredHorizonController.updateField(name, value);
       if (unborrowedReachController) return unborrowedReachController.updateField(name, value);
       if (counterfieldController) return counterfieldController.updateField(name, value);
       if (occludedFoldController) return occludedFoldController.updateField(name, value);
@@ -1010,6 +1062,9 @@ export function createCalibrationMarginNormalEntry(options = {}) {
     getUnborrowedReachRecord() {
       return unborrowedReachController?.getRecord() ?? null;
     },
+    getMeasuredHorizonRecord() {
+      return measuredHorizonController?.getRecord() ?? null;
+    },
     sanitizeBoundary(
       restoredState = currentState(),
       restoredPythonCheckpoint = pythonController?.getCheckpoint()
@@ -1057,6 +1112,23 @@ export function createCalibrationMarginNormalEntryIntent(
   phase = null,
   activeGroup = null,
 ) {
+  if (activeGroup === MEASURED_HORIZON_ROUTE_GROUP) {
+    if (action === MEASURED_HORIZON_ROUTE_ACTION) return createMeasuredHorizonRouteIntent(action, activationKind, eventToken);
+    return createUnborrowedReachIntent(
+      { activeGroup: "ur30_restore", owner: "SYSTEM // RECORD CUSTODY" },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
+  if (typeof activeGroup === "string" && activeGroup.startsWith("mh")) {
+    return createMeasuredHorizonIntent(
+      { activeGroup, owner: measuredHorizonOwner(activeGroup) },
+      action,
+      activationKind,
+      eventToken,
+    );
+  }
   if (activeGroup === UNBORROWED_REACH_ROUTE_GROUP) {
     if (action === UNBORROWED_REACH_ROUTE_ACTION) return createUnborrowedReachRouteIntent(action, activationKind, eventToken);
     return createCounterfieldIntent(
@@ -1337,6 +1409,16 @@ function unborrowedReachOwner(activeGroup) {
   if (activeGroup === "ur30_reconciliation") return "PILOT // METHOD RECONCILIATION";
   if (activeGroup === "ur30_reconciliation_recovery") return "TEACHER // BOUNDED PRACTICE";
   if (activeGroup === "ur30_restore") return "SYSTEM // RECORD CUSTODY";
+  return "SYSTEM // RECORD CUSTODY";
+}
+
+function measuredHorizonOwner(activeGroup) {
+  if (activeGroup === "mh00_assemble") return "SYSTEM // EXPEDITION EVIDENCE REVIEW";
+  if (activeGroup === "mh00_request_review") return "PILOT // EXPEDITION REVIEW REQUEST";
+  if (activeGroup === "mh10_eligibility") return "SYSTEM // EVIDENCE CUSTODY";
+  if (["mh10_eligibility_recovery", "mh20_ai901_fresh", "mh25_remediation", "mh25_ai901_retry"].includes(activeGroup)) return "TEACHER // BOUNDED PRACTICE";
+  if (["mh20_python_fresh", "mh25_python_retry"].includes(activeGroup)) return "BUILDER WORK // SANITIZED REPLICAS";
+  if (["mh30_local_decision", "mh30_ready", "mh30_not_yet_ready"].includes(activeGroup)) return "SYSTEM // LOCAL READINESS REVIEW";
   return "SYSTEM // RECORD CUSTODY";
 }
 

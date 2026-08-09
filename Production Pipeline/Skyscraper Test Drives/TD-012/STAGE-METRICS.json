@@ -155,6 +155,23 @@
       "imageBoundary": "code-native CSS; selectedImageRoles empty; no new media/audio/image/board/reveal",
       "variance": "none",
       "nextStage": "Combat Engineer functional implementation"
+    },
+    {
+      "sequence": 10,
+      "stage": "Combat Engineer functional implementation checkpoint",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-09T14:21:05-04:00",
+      "endedAt": "2026-08-09T14:47:00-04:00",
+      "durationMs": 1555000,
+      "disposition": "IMPLEMENTATION IN PROGRESS",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/08-FUNCTIONAL-BUILD-REPORT.md",
+      "sourceBaseline": "5edcf4e",
+      "tests": "941/941 full; 5/5 normal focused; 4/4 fixture focused; 58/58 SSR owner/focus targets",
+      "build": "product 215 modules; fixture 57 modules",
+      "pba": "PASS: JS 1656004; CSS 119553; media 17/37410731; zero new media",
+      "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/reveal",
+      "remaining": "accepted route end-to-end; 58/58 live focus; served identity; complete E2E; final functional push",
+      "nextStage": "Combat Engineer resume - do not hand to Quartermaster"
     }
   ]
 }

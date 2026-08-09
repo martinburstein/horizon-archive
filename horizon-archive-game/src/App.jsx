@@ -16,6 +16,7 @@ import { OffsetReach } from "./OffsetReach.jsx";
 import { OccludedFold } from "./OccludedFold.jsx";
 import { Counterfield } from "./Counterfield.jsx";
 import { UnborrowedReach } from "./UnborrowedReach.jsx";
+import { MeasuredHorizon } from "./MeasuredHorizon.jsx";
 import { CivicRecordArrival } from "./CivicRecordArrival.jsx";
 import { CityThresholdStaging } from "./CityThresholdStaging.jsx";
 import {
@@ -71,8 +72,15 @@ import {
 } from "./CounterfieldNormal.js";
 import {
   UNBORROWED_REACH_SHELL_VERSION,
+  UNBORROWED_REACH_SAVE_KEY,
   createUnborrowedReachStorageAdapter,
 } from "./UnborrowedReachNormal.js";
+import {
+  MEASURED_HORIZON_SHELL_VERSION,
+  MEASURED_HORIZON_SAVE_KEY,
+  createMeasuredHorizonStorageAdapter,
+  measuredHorizonObjectiveIds,
+} from "./MeasuredHorizonNormal.js";
 import {
   readVerifiedCityThresholdPredecessor,
   readVerifiedCityThresholdSave,
@@ -445,7 +453,7 @@ function writeCalibrationMarginExtractionCheckpoint(storage, value) {
   }
 }
 
-function calibrationMarginReviewSaveOptions(storage) {
+function calibrationMarginReviewSaveOptions(storage, measuredHorizonEligibility = null) {
   const reviewSaveAdapter = createCalibrationMarginReviewSaveStorageAdapter(storage);
   const threeCurrentReachAdapter = createThreeCurrentReachStorageAdapter(storage);
   const restoredThreeCurrentReach = threeCurrentReachAdapter.read();
@@ -568,6 +576,14 @@ function calibrationMarginReviewSaveOptions(storage) {
     [COUNTERFIELD_SAVE_KEY]: counterfieldBytes,
     predecessorsStable: counterfieldAdapter.predecessorsStable,
   });
+  let unborrowedReachBytes = null;
+  try { unborrowedReachBytes = storage?.getItem(UNBORROWED_REACH_SAVE_KEY) ?? null; } catch { unborrowedReachBytes = null; }
+  const readUnborrowedReachBytes = () => {
+    try { return storage?.getItem(UNBORROWED_REACH_SAVE_KEY) ?? null; } catch { return null; }
+  };
+  const measuredHorizonAdapter = createMeasuredHorizonStorageAdapter(storage, {
+    [UNBORROWED_REACH_SAVE_KEY]: unborrowedReachBytes,
+  });
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -632,6 +648,13 @@ function calibrationMarginReviewSaveOptions(storage) {
     readCounterfieldBytes,
     unborrowedReachAdapter,
     restoredUnborrowedReach: unborrowedReachAdapter.read(),
+    readUnborrowedReachBytes,
+    measuredHorizonAdapter,
+    createMeasuredHorizonAdapter: (_unborrowedRecord, currentUnborrowedBytes) => createMeasuredHorizonStorageAdapter(storage, {
+      [UNBORROWED_REACH_SAVE_KEY]: currentUnborrowedBytes,
+    }),
+    restoredMeasuredHorizon: measuredHorizonAdapter.read(),
+    measuredHorizonEligibility,
     predecessorBytes,
     readPredecessorBytes: () => {
       try {
@@ -640,6 +663,21 @@ function calibrationMarginReviewSaveOptions(storage) {
         return null;
       }
     },
+  };
+}
+
+function measuredHorizonEligibilityFromEvidence(objectiveLedger, capstone, finalConfidence) {
+  if (objectiveLedger?.masteryStatus !== "mastered" || capstone?.masteryStatus !== "mastered"
+    || finalConfidence?.masteryStatus !== "mastered") return null;
+  const objectives = Object.fromEntries(measuredHorizonObjectiveIds.map((id) => [id, {
+    primary: true, retrieval: true, remediationClosed: true, freshTransfer: true,
+  }]));
+  return {
+    objectiveVersion: "2026-04-15",
+    pythonHomesFinalized: true,
+    py020FreshReinforcementAccepted: true,
+    evidenceReferenceIds: ["PY-HOMES-FINAL", "PY-020-FRESH", "CUM-01", "L-06-03"],
+    objectives,
   };
 }
 
@@ -2477,6 +2515,7 @@ export function App() {
       ...authority,
       ...calibrationMarginReviewSaveOptions(
         typeof window === "undefined" ? null : window.localStorage,
+        measuredHorizonEligibilityFromEvidence(objectiveLedgerEvidence, capstoneReadinessEvidence, finalConfidenceEvidence),
       ),
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
@@ -2506,6 +2545,7 @@ export function App() {
       OCCLUDED_FOLD_SHELL_VERSION,
       COUNTERFIELD_SHELL_VERSION,
       UNBORROWED_REACH_SHELL_VERSION,
+      MEASURED_HORIZON_SHELL_VERSION,
     ].includes(entryState.shellVersion)) {
       setCustodyLedgerRouteSave(null);
       setCustodyLedgerRouteView(null);
@@ -2545,6 +2585,7 @@ export function App() {
       ...authority,
       ...calibrationMarginReviewSaveOptions(
         typeof window === "undefined" ? null : window.localStorage,
+        measuredHorizonEligibilityFromEvidence(objectiveLedgerEvidence, capstoneReadinessEvidence, finalConfidenceEvidence),
       ),
       restoredPythonCheckpoint: typeof window === "undefined"
         ? null
@@ -2587,6 +2628,8 @@ export function App() {
       return {
         status: controller.getState().shellVersion === UNBORROWED_REACH_SHELL_VERSION
           ? "unborrowed_reach_restored"
+          : controller.getState().shellVersion === MEASURED_HORIZON_SHELL_VERSION
+          ? "measured_horizon_restored"
           : controller.getState().shellVersion === COUNTERFIELD_SHELL_VERSION
           ? "counterfield_restored"
           : controller.getState().shellVersion === OCCLUDED_FOLD_SHELL_VERSION
@@ -2644,6 +2687,7 @@ export function App() {
       || result?.state?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
       || result?.state?.shellVersion === COUNTERFIELD_SHELL_VERSION
       || result?.state?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
+      || result?.state?.shellVersion === MEASURED_HORIZON_SHELL_VERSION
       || [
       "survey_visible",
       "sealed_boundary_presented_zero_evidence",
@@ -2676,6 +2720,7 @@ export function App() {
         ...authority,
         ...calibrationMarginReviewSaveOptions(
           typeof window === "undefined" ? null : window.localStorage,
+          measuredHorizonEligibilityFromEvidence(objectiveLedgerEvidence, capstoneReadinessEvidence, finalConfidenceEvidence),
         ),
         restoredState: result.state,
         restoredPythonCheckpoint: typeof window === "undefined"
@@ -3818,11 +3863,23 @@ export function App() {
     || calibrationMarginEntryView?.shellVersion === OCCLUDED_FOLD_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === COUNTERFIELD_SHELL_VERSION
     || calibrationMarginEntryView?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
+    || calibrationMarginEntryView?.shellVersion === MEASURED_HORIZON_SHELL_VERSION
     || [
       "CM-00 ARRIVE + IDLE",
       "CM-10 SURVEY",
     ].includes(calibrationMarginEntryView?.phase)
   )) {
+    if (calibrationMarginEntryView?.shellVersion === MEASURED_HORIZON_SHELL_VERSION
+      || calibrationMarginEntryView?.activeGroup === "td012-measured-horizon-route"
+      || calibrationMarginEntryView?.activeGroup === "td012-tour") {
+      return (
+        <MeasuredHorizon
+          state={calibrationMarginEntryView}
+          onAction={dispatchCalibrationMarginEntry}
+          onFieldChange={updateCalibrationMarginPythonField}
+        />
+      );
+    }
     if (calibrationMarginEntryView?.shellVersion === UNBORROWED_REACH_SHELL_VERSION
       || calibrationMarginEntryView?.activeGroup === "td011-unborrowed-reach-route"
       || calibrationMarginEntryView?.activeGroup === "td011-tour") {
