@@ -2,7 +2,7 @@
   "packet_id": "RP-011",
   "mapping_id": "RP011-API-AGENT-BOUNDARY-01",
   "status": "SOLIDIFIED",
-  "source_verified_on": "2026-07-17",
+  "source_verified_on": "2026-08-09",
   "source_urls": [
     "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901",
     "https://learn.microsoft.com/en-us/azure/foundry/",

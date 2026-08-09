@@ -4,7 +4,7 @@
   "run": {
     "testDrive": "TD-011",
     "shellCandidate": "deliberately unselected",
-    "campaignAddress": "deliberately unselected",
+    "campaignAddress": "RP-011 / SC-12 / UR-00-UR-30",
     "provisionalSurfaceCandidate": "one independent fresh-evidence record across an unfamiliar exposed reach, followed only after finalization by a separate method-and-limit reconciliation with four retained scopes",
     "sourceCommit": "671d6160e556bd302690d5b1f7f56644bfe67356",
     "timezone": "America/New_York",
@@ -76,6 +76,29 @@
       "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Operations push gate",
       "nextStage": "Office of Science Administrator"
+    },
+    {
+      "sequence": 4,
+      "stage": "Office of Science Administrator",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-08-09T12:12:20-04:00",
+      "endedAt": "2026-08-09T12:19:42-04:00",
+      "durationMs": 442000,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/04-GLOBAL-VIABILITY-ENVELOPE.md",
+      "budgetAuthority": "Production Pipeline/Skyscraper Test Drives/TD-011/04A-PRODUCTION-BUDGET-AUTHORITY.json",
+      "predecessorVerification": "Operations commit f842d5715815e9c550d8ff61df02388b5bde16bb verified as the exact starting authority",
+      "sourceFreshness": "official Microsoft AI-901 study guide and required Foundry priority set reverified 2026-08-09; no third-party source and no scored volatile implementation detail",
+      "stateAndEvidence": "exact normal RP-010 entry; UR-00-UR-30; six observations/720 orders; independent PY-019 and AI901-D2-O4 chains; fresh finalization before four-scope reopening/24 orders and separate exact reconciliation",
+      "persistence": "exact ordered 15-key private-free schema; only rp011_fresh_finalized then rp011_reconciliation_saved; canonical read-back, predecessor equality, verified rollback, deterministic recovery and replay-free restore",
+      "budget": "PBA-TD011-v1 one-time TD-010 release rebaseline; JS 1643686, CSS 114010, modules 219; exact 17 / 37410731 accepted media and zero new runtime media",
+      "validation": "focused 20/20 PASS; RP-011 self-test PASS; all curriculum validator self-tests 40/40 PASS; full product 919/919 PASS; 209-module build; exact production identity and executable PBA baseline PASS",
+      "presentation": "Image Specialist, generation, edit, board, import and reveal disabled; code-native and accepted-immutable presentation remains a release gate",
+      "variances": "none; no Science-owned conflict or unacceptable risk",
+      "commit": "PENDING_SCIENCE_COMMIT",
+      "commitConvention": "The dedicated Science commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Science push gate",
+      "nextStage": "Mission Captain"
     }
   ]
 }

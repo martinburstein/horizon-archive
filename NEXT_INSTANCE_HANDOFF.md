@@ -99,19 +99,43 @@ boundary. Never overlap a stage or restart a completed stage.
   fresh-finalized and reconciliation-saved checkpoints, exact returns, and a
   hard stop before RP-012/ending. Focused existing evidence passes `20/20`.
 
+## Science checkpoint
+
+- `VE-TD011-v1 / VIABILITY READY` independently verifies the complete route,
+  six observations/all `720` orders, independent strict PY-019 and
+  `AI901-D2-O4` chains, fresh-finalization-before-reopening, all four scopes/
+  `24` orders, separate exact reconciliation, and the UR-30 hard stop.
+- The exact durable record has 15 ordered private-free keys and only two valid
+  atomic checkpoints: `rp011_fresh_finalized` then
+  `rp011_reconciliation_saved`; canonical read-back, required predecessor-byte
+  equality, verified rollback, deterministic recovery, and replay-free restore
+  are mandatory.
+- Official Microsoft sources were reverified August 9. Focused `20/20`, all
+  curriculum self-tests `40/40`, full product `919/919`, fresh 209-module
+  build, exact accepted output identity, and executable budget baseline pass.
+- `PBA-TD011-v1` caps JS at `1,643,686`, CSS at `114,010`, and modules at
+  `219`; runtime media must remain exactly the accepted `17 / 37,410,731`
+  bytes with zero new files. Image generation/edit/board/import/reveal remains
+  disabled without weakening the presentation release gate.
+
 ## Exact next action - active
 
-Run **Office of Science Administrator /
-`office_of_science_administrator`** only from `GDB-TD011-v1`,
-`WNMP-TD011-v1`, and `CFS-TD011-v1`. Independently validate the full route,
-learning/evidence, privacy, atomic save/rollback/restore, recovery,
-responsive/accessibility/focus, fixture isolation, offline/no-authority,
-non-generative presentation, and fresh non-compounding budget envelope.
-Explicitly reject protected RP-010/RP-011 versions as normal bridge authority.
-Use official Microsoft sources first for any freshness-dependent Foundry or
-AI-901 claim. Issue `VIABILITY READY`, `REVISE`, or `HOLD`, with a fresh
-executable budget contract and exact Mission inputs; commit the stage. Do not
-write the shell, code, copy, art, board, image, reveal, or ending content.
+Run **Mission Captain / `mission_captain`** only from `GDB-TD011-v1`,
+`WNMP-TD011-v1`, `CFS-TD011-v1`, `VE-TD011-v1`, and `PBA-TD011-v1`.
+Reconcile them into one conflict-free versioned
+`SS-RP011-UNBORROWED-REACH-v1` shell. Freeze exact route and rejected protected
+versions; state/group/owner/focus identities; six observations and `720`
+orders; both independent learning chains and explanations; actually-failed-
+only blank recovery; fresh-finalization-before-reopening; four scopes and `24`
+orders; separate six-method/twelve-`None` reconciliation; ordered 15-key save;
+both checkpoints; atomicity/rollback/restore; returns/LOOK; seven modalities;
+four layouts; exact UTF-8 public copy; storage-free production-absent fixture;
+offline/no-authority boundaries; zero-new-media code-native presentation; PBA
+and release gates; and UR-30 hard stop. Issue `SHELL READY`, `REVISE`, or
+`HOLD`; commit, push `main` on `SHELL READY`, and verify
+`HEAD == origin/main == remote main`. Do not implement, inspect or mutate
+Martin's browser/profile/save, import protected code, perform any image/reveal
+work, or expose RP-012.
 
 ## Frozen boundaries
 

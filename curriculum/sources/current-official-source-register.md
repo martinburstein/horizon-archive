@@ -1,6 +1,6 @@
 # Current Official Source Register
 
-Verified: 2026-07-17
+Verified: 2026-08-09
 
 This register separates official, time-sensitive Microsoft facts from generated bridge instruction. Recheck it before publishing lessons or beginning the final exam-readiness sprint.
 
@@ -21,6 +21,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
   - Reverified for RP-009 A3 on July 17, 2026: the guide still explicitly requires creating effective system and user prompts for generative AI models. RP-009 uses separate neutral course-authored cases to distinguish persistent system-prompt role/rules/boundaries/output contracts from current user-prompt task and supplied input. The current official system-message guidance was checked for role, scope, boundaries, output contracts, grounding/fallback, and test/iterate context. SC-10 scenery, saved summaries, execution display, and Tour are never prompt cases, answers, weakness signals, or remediation cues. No third-party source or exam item was used, and internal gates do not guarantee an exam result.
   - Reverified for RP-010 A3 on July 17, 2026: the guide still explicitly requires creating a lightweight chat client application by using the Foundry SDK, and says candidates should be familiar with REST APIs, SDKs, and CLIs. The current SDK overview still distinguishes project-client setup, derivation of an OpenAI-compatible client, model/input submission with the Responses API, and returned output processing. RP-010 uses separate neutral course-authored cases and a fully local request/response Python exercise; SC-11 scenery, scale, relation, execution display, save, and Tour are never client-flow cases, answers, weakness signals, or remediation cues. No live service, third-party source, or exam item is used, and internal gates do not guarantee an exam result.
   - Reverified for RP-011 A3 on July 17, 2026: the guide still explicitly requires creating and testing a single-agent solution in the Foundry portal and creating a lightweight client application for an agent. RP-011 distinguishes portal authoring, playground testing, client invocation, and client result/error handling with neutral course-authored cases, paired with a fully local API/SDK/endpoint role synthesis. SC-12 scenery, hidden/reopened records, reconciliation, execution display, save, and Tour are never cases, answers, weakness signals, or remediation cues. No live service, third-party source, or exam item is used, and internal gates do not guarantee an exam result.
+  - Reverified for TD-011 Science on August 9, 2026: the page remains last updated July 13, 2026; the April 15, 2026 objectives still separately name creating and testing a single-agent solution in the Foundry portal and creating a lightweight agent client. The RP-011 offline boundary and four-surface distinction remain current.
 
 ## Priority Foundry sources checked first
 
@@ -40,6 +41,7 @@ This register separates official, time-sensitive Microsoft facts from generated 
 - `OFFICIAL-FOUNDRY-AGENTS`: [Foundry Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
   - Authority for agent concepts and current service behavior.
   - Reverified for RP-011 A3 on July 17, 2026: prompt agents are configured through model, instructions, and tools; portal-first work includes testing in the agents playground before a client calls the agent. The overview also distinguishes prompt-agent configuration and testing from external client invocation, and separately documents tool capability plus identity/security controls. RP-011's rule that capability is not automatic permission is course-authored safety instruction. Volatile portal, API, SDK, identity, and tool details remain excluded from the offline scored forms.
+  - Reverified for TD-011 Science on August 9, 2026: the page remains last updated June 2, 2026 and still separates prompt-agent configuration, playground testing, and application invocation. No volatile package, endpoint, model, identity, or portal label was added to scored RP-011 material.
 - `OFFICIAL-FOUNDRY-PROMPT-AGENT-QUICKSTART`: [Create a prompt agent](https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-prompt-agent)
   - Current portal workflow authority for configuring a model, instructions, tools, and testing a prompt agent. Portal labels and API details are volatile.
 - `OFFICIAL-FOUNDRY-RESPONSIBLE-AI`: [Responsible use of AI overview](https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview)
