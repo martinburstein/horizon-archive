@@ -231,26 +231,45 @@ boundary. Never overlap a stage or restart a completed stage.
   remain disabled. Evidence is frozen in
   `Production Pipeline/Skyscraper Test Drives/TD-011/09-CONTENT-ASSET-LEDGER.md`.
 
+## Intelligence release return
+
+- Candidate `0b3a9a213ba359049f3e0b1828e3eb177f051632` is **not
+  released**. Independent normal+fixture+protected validation passed `25/25`,
+  but the first fresh cold full suite failed `2` served-identity rows and
+  finished `928/930`.
+- Both TD-010 and TD-011 tests observed zero production assets instead of
+  nineteen because they raced over the shared production `dist`. TD-010 uses
+  the accepted cross-process browser/build resource lock; TD-011 does not.
+- Each served-identity test passed `1/1` when run sequentially, isolating the
+  failure to test infrastructure rather than served bytes or gameplay.
+- `TD011-FIX-001` is a `REQUIRED CORRECTION` owned by Combat Engineer. Reuse
+  the existing shared lock around the entire TD-011 served-identity preview
+  sequence, guarantee release in `finally`, and add a direct source
+  regression. Do not change product source, fixture scenarios, content,
+  mechanics, media, shell, or budget.
+- Intelligence intentionally stopped before validators/build/PBA/preview/E2E/
+  live release review. Zero complete Intelligence E2E attempts were consumed,
+  no push occurred, and TD-010 remains the synchronized release.
+- Full evidence and the pending variance classifications are in
+  `Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md`.
+
 ## Exact next action - active
 
-Run **Intelligence Officer / `intelligence_officer`** only against the exact
-committed Quartermaster content-complete candidate, synchronized shell 05,
-Recon 06, Tactical 07, Combat 08, Quartermaster 09, current normal source and
-fixture, and `PBA-TD011-v1`. Independently validate the as-built graph,
-convergence, learning/evidence separation, two atomic checkpoints, sanitation,
-rollback/restore, exact returns/LOOK, hard stop, player-facing content, native
-modal confirmation, public data attributes, all real focus targets, exact
-80-row live owner/focus behavior, four layouts/presentation modes, privacy/
-protected/later-content boundaries, served production/fixture bytes, accepted
-media hashes, and release budget. Classify every as-built correction and the
-94-byte CSS margin; do not inherit Combat or Quartermaster conclusions. Rerun
-the release ladder, update synchronized plans only from accepted evidence,
-write `10-AS-BUILT-RECONCILIATION.md`, and issue `PASS - AS BUILT RELEASED`,
-`CONDITIONAL PASS`, `REVISE`, or `HOLD`. On release, replace this file with one
-exact synchronized next action derived from accepted authority. Image
-Specialist remains disabled and there is no stage 10 image artifact or reveal:
-do not generate, edit, select, board, import, or reveal media. Do not inspect
-Martin's browser/profile/save, hidden lore, or the protected untracked paths.
+Run **Combat Engineer / `combat_engineer` correction only** against the exact
+committed Intelligence return. Correct only `TD011-FIX-001`: make
+`review-fixtures/td011-unborrowed-reach/servedIdentity.test.js` acquire the
+already accepted shared cross-process browser/build resource lock before
+opening either preview and release it in a top-level `finally`. Preserve exact
+ports, root/deep checks, all chunk/media hashes, `19/2` counts, timeouts, and
+preview cleanup. Add one direct source-level regression proving acquisition
+and guaranteed release. Change no production component/controller/CSS,
+fixture scenario, shell/content/mechanics/save/route/media/PBA/hard-stop
+contract. Run the focused served-identity/regression command and then one fresh
+cold full `npm test`; create one dedicated Combat correction commit and hand
+directly to a fresh Intelligence release review. Do not push or run the
+complete E2E at Combat. Image Specialist remains disabled: do not generate,
+edit, select, board, import, or reveal media. Do not inspect Martin's browser/
+profile/save, hidden lore, or the protected untracked paths.
 
 ## Frozen boundaries
 

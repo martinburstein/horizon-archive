@@ -213,6 +213,27 @@
       "commitConvention": "The dedicated Quartermaster commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local stage commit; direct Intelligence handoff; Image Specialist disabled",
       "nextStage": "Intelligence Officer"
+    },
+    {
+      "sequence": 10,
+      "stage": "Intelligence Officer",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-09T13:20:29-04:00",
+      "endedAt": "2026-08-09T13:25:20-04:00",
+      "durationMs": 291000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md",
+      "candidate": "0b3a9a213ba359049f3e0b1828e3eb177f051632",
+      "integrity": "candidate parent exact Combat c96f3df; tracked tree clean; patch and object integrity PASS; remote remains Combat c96f3df",
+      "focused": "independent normal+fixture+protected 25/25 PASS",
+      "fullSuite": "first fresh cold run 928/930; TD-010 and TD-011 served-identity tests both failed 0 != 19 from concurrent shared-dist preview contention",
+      "diagnosis": "TD-010 acquires accepted browser/build resource lock; TD-011 does not; each served-identity test passes 1/1 when run sequentially",
+      "variance": "TD011-FIX-001 REQUIRED CORRECTION owned by Combat Engineer; Quartermaster improvements remain pending release; 94-byte CSS margin remains pending deferred limitation",
+      "e2e": "not run; zero Intelligence complete E2E attempts on rejected candidate",
+      "release": "not authorized; no push or masterplan promotion",
+      "commit": "PENDING_INTELLIGENCE_RETURN_COMMIT",
+      "commitConvention": "The dedicated Intelligence return commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "nextStage": "Combat Engineer correction"
     }
   ]
 }
