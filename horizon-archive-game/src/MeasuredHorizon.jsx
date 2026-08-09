@@ -49,7 +49,7 @@ function ObjectiveForm({ objectiveId, onAction, onFieldChange }) {
           <option value="">Choose one</option>{options.reason.map((value) => <option key={value} value={value}>{label(value)}</option>)}
         </select>
       </label>
-      <Action action={measuredHorizonActions.submitObjective} onAction={onAction} />
+      <div className="measured-horizon-actions"><Action action={measuredHorizonActions.submitObjective} onAction={onAction} /></div>
     </fieldset>
   );
 }
@@ -70,22 +70,32 @@ function SaveConfirmation({ state, onAction }) {
 export function MeasuredHorizon({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const group = state.activeGroup;
+  const renderedHeadingId = group === "mh40_save_confirm"
+    ? "mh40-save-confirm-shell-heading"
+    : group === "mh40_save_recovery"
+      ? "mh40-save-recovery-heading"
+      : state.headingId;
   useLayoutEffect(() => {
     const target = rootRef.current?.querySelector(`#${CSS.escape(state.focusIntent?.target ?? state.headingId)}`)
-      ?? rootRef.current?.querySelector(`#${CSS.escape(state.headingId)}`);
+      ?? rootRef.current?.querySelector(`#${CSS.escape(renderedHeadingId)}`);
     target?.focus({ preventScroll: true });
-  }, [group, state.focusIntent?.target, state.headingId]);
+  }, [group, state.focusIntent?.target, state.headingId, renderedHeadingId]);
   const route = group === MEASURED_HORIZON_ROUTE_GROUP;
   const tour = group === "td012-tour";
   const currentIndex = measuredHorizonGateIds.indexOf(state.currentObjectiveId);
   const failed = state.failedGateIds ?? [];
-  const regularActions = (state.availableActions ?? []).filter((action) => ![measuredHorizonActions.returnUnborrowed, measuredHorizonActions.returnThreshold].includes(action));
+  const inlineAction = ["mh20_python_fresh", "mh25_python_retry"].includes(group)
+    ? measuredHorizonActions.submitPython
+    : ["mh20_ai901_fresh", "mh25_ai901_retry"].includes(group)
+      ? measuredHorizonActions.submitObjective
+      : null;
+  const regularActions = (state.availableActions ?? []).filter((action) => action !== inlineAction && ![measuredHorizonActions.returnUnborrowed, measuredHorizonActions.returnThreshold].includes(action));
   const returns = (state.availableActions ?? []).filter((action) => [measuredHorizonActions.returnUnborrowed, measuredHorizonActions.returnThreshold].includes(action));
   return (
     <main ref={rootRef} className="measured-horizon-shell" data-product-landmark="measured-horizon-product-landmark"
       data-shell-version={state.shellVersion} data-controller-version={state.controllerVersion}
       data-active-group={group} data-owner={state.owner} data-phase={state.phase}
-      data-fixture-contract-version="td012.fixture-manifest.v1" aria-labelledby={state.headingId}>
+      data-fixture-contract-version="td012.fixture-manifest.v1" aria-labelledby={renderedHeadingId}>
       <figure className="measured-horizon-world" role="img" data-rendering-medium="css" data-runtime-image="not-selected"
         aria-label="Unfamiliar mineral laminae continue across an indifferent horizon. A calm expedition datum folio overlays the view without changing, measuring, or interpreting the world.">
         <span className="mh-lamina mh-lamina-a" /><span className="mh-lamina mh-lamina-b" /><span className="mh-lamina mh-lamina-c" />
@@ -95,7 +105,7 @@ export function MeasuredHorizon({ state, onAction, onFieldChange }) {
         <header className="measured-horizon-header">
           <p className="eyebrow" data-active-owner={state.owner}>{state.owner}</p>
           <p className="mh-objective-version">CURRENT OBJECTIVE SET · 2026-04-15</p>
-          <h1 id={state.headingId} tabIndex={-1}>{state.heading}</h1>
+          <h1 id={renderedHeadingId} tabIndex={-1}>{state.heading}</h1>
           <p className="measured-horizon-status" role="status" aria-live="polite">{state.statusMessage}</p>
         </header>
 
@@ -116,7 +126,7 @@ export function MeasuredHorizon({ state, onAction, onFieldChange }) {
           <label htmlFor={group === "mh25_python_retry" ? "mh25-python-source" : "mh20-python-source"}>Private session-only Python source
             <textarea id={group === "mh25_python_retry" ? "mh25-python-source" : "mh20-python-source"} onChange={(event) => onFieldChange("learnerSource", event.target.value)} />
           </label>
-          <Action action={measuredHorizonActions.submitPython} onAction={onAction} />
+          <div className="measured-horizon-actions"><Action action={measuredHorizonActions.submitPython} onAction={onAction} /></div>
         </fieldset>}
 
         {(group === "mh20_ai901_fresh" || group === "mh25_ai901_retry") && <section aria-labelledby="mh-objective-work-heading">

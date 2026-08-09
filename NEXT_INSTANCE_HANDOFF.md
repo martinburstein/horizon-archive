@@ -454,35 +454,62 @@ boundary. Never overlap a stage or restart a completed stage.
   audio, hierarchy, and save behavior are equal. `selectedImageRoles: []`; no
   image/audio/media work or variance.
 
+## TD-012 Combat functional gate
+
+- `FUNCTIONAL BUILD READY` implements the exact released-normal UR-30 entry
+  through MH-00-MH-40, 16 independent fresh gates, demonstrated-gap-only
+  recovery, both common-anatomy outcomes, atomic save/read-back/rollback,
+  replay-free restore, safe returns, and the null-successor hard stop.
+- A direct real-controller/orchestrator regression proves accepted entry,
+  ready and not-yet, verified persistence, failure/rollback/retry, unverified
+  rollback `HOLD`, returns, stale/duplicate rejection, predecessor equality,
+  and null successor.
+- Final proof passes: focused `11/11`, related `16/16`, cold full `943/943`,
+  curriculum `40/40`, production/fixture builds `215/57`, PBA at JS
+  `1,656,606` / CSS `119,599` / media exactly `17 / 37,410,731`, fresh served
+  root/deep/asset identity, and one complete post-setup E2E in `125.8s` with
+  credits reached and zero runtime errors.
+- The isolated fixture proves `58/58` visible owner plus actual focus at each
+  of 1920x1080, 1366x768, 390x844, and effective 200 percent (`232/232`),
+  with zero duplicate IDs/overflow and exact equal-outcome geometry.
+- Five in-scope Combat defects were corrected: exact transient-field
+  allowlists, reachable not-yet route, one unique 44px-minimum submit control,
+  unique save focus IDs, and equal outcome height. No formal shell variance or
+  open functional defect remains; Intelligence retains final classification.
+- The initial E2E launch was a setup-only `ERR_CONNECTION_REFUSED` before page
+  load and executed no assertion. The sole complete run then passed and was
+  not rerun. Generated QA screenshots were restored exactly, all owned test
+  processes/tabs were closed, and no image/media/reveal action occurred.
+
 ## Exact next action - active
 
-Resume **Combat Engineer / `combat_engineer` TD-012 functional
-implementation** from artifact 08 and the latest checkpoint commit. Do not
-restart construction and do not hand to Quartermaster yet.
+Run **Quartermaster / `quartermaster` TD-012 content and asset completion only**
+against the exact synchronized Combat candidate at `main` HEAD. Read the
+versioned shell, treatment, blueprint, final Functional Build Report, current
+controls, source-visible player copy, fixture, package/build/PBA evidence, and
+the Quartermaster profile before acting.
 
-First add a direct accepted exact-UR-30 end-to-end controller/orchestrator test
-through both outcomes, save/read-back/verified restore, failure/rollback/hold,
-returns, duplicate/stale rejection, and null hard stop. Then run the isolated
-fixture live for `58/58` visible owner plus actual focus across the four shell
-layouts/presentation modes; run fresh served root/deep byte identity, complete
-E2E, validators/build/PBA/media proof; correct any defect; and replace artifact
-08 with the final Functional Build Report. Only after every proof passes may
-Combat issue `FUNCTIONAL BUILD READY`, commit/push `main`, prove HEAD/origin/
-remote equality, and hand the exact candidate to Quartermaster.
+Audit and refine only non-frozen player-facing content and the zero-addition
+asset ledger. Retire or explicitly disposition every structural placeholder or
+content/asset gap; preserve the exact 58-state registry meaning, normal route,
+privacy/sanitation, save/rollback/restore, accessibility/focus, common outcome
+anatomy, invariant world, no-authority/no-exam-guarantee language, and null
+hard stop. Do not redesign functional behavior, reopen the shell, add media,
+call image generation, create/edit/import/replace an image or board, publish a
+reveal, or open RP-013/successor/post-ending content.
 
-Current checkpoint evidence: fresh cold full suite `942/942`; normal focused `5/5`;
-fixture focused `5/5` with `58/58` SSR owner/real-focus targets; product/fixture
-builds `215/57` modules; PBA PASS at JS `1,656,007`, CSS `119,553`, exact media
-`17 / 37,410,731`, zero additions. This is **`IMPLEMENTATION IN PROGRESS`**,
-not a functional release gate. Preserve exact shell/treatment/blueprint,
-zero-media/image/reveal boundary, equal-outcome anatomy, and null successor.
+Run proportionate content, fixture, build/PBA/media, and sanitation checks.
+Issue exactly `CONTENT COMPLETE`, `REVISE`, or `HOLD`, update artifact 09 and
+this handoff, make the dedicated Quartermaster checkpoint required by the
+workflow, and hand directly to Intelligence Officer. Quartermaster does not
+release TD-012.
 
 ## Frozen boundaries
 
 - TD-011 is released only through UR-30 and the exact returns/null LOOK above.
-- `TD012-RTA-001` is implemented only in the unpushed Combat candidate from
-  exact released UR-30; it is not released authority and has not passed the
-  final functional gate.
+- `TD012-RTA-001` is implemented in the synchronized Combat functional
+  candidate at `main` HEAD from exact released UR-30. It has passed the Combat
+  functional gate but is not released authority until Intelligence accepts it.
   No successor, RP-013, hidden lore, identity, reward, access, authority,
   world response, ending extension, Operations-defined credits behavior, or
   post-ending content is selected or authorized.

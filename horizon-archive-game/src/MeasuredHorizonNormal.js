@@ -187,7 +187,7 @@ function actionsFor(group, failed = []) {
   if (group === "mh10_eligibility_recovery") return [measuredHorizonActions.openRemediation, ...returns];
   if (group === "mh20_python_fresh" || group === "mh25_python_retry") return [measuredHorizonActions.submitPython, ...returns];
   if (group === "mh20_ai901_fresh" || group === "mh25_ai901_retry") return [measuredHorizonActions.submitObjective, ...returns];
-  if (group === "mh25_remediation") return [measuredHorizonActions.openRemediation, measuredHorizonActions.beginRetry, ...returns];
+  if (group === "mh25_remediation") return [measuredHorizonActions.openRemediation, measuredHorizonActions.beginRetry, measuredHorizonActions.reviewDecision, ...returns];
   if (group === "mh30_local_decision") return [measuredHorizonActions.reviewDecision, ...returns];
   if (["mh30_ready", "mh30_not_yet_ready"].includes(group)) return [measuredHorizonActions.save, ...returns];
   if (group === "mh40_save_confirm") return [measuredHorizonActions.save, measuredHorizonActions.cancelSave];
@@ -296,7 +296,17 @@ export function createMeasuredHorizonNormalController(options = {}) {
   const safeReturn = (target) => { draft = {}; closed = true; return freeze({ status: target === "RP-011" ? "returned_to_unborrowed_reach_write_free" : "returned_to_city_threshold_write_free", route: freeze({ target, continuation: "continuation", cityStateDelta: null, worldStateDelta: null, externalStateDelta: null, successor: null, authorityGranted: false, writePerformed: false, replayedEvents: freeze([]) }), state: clone(state) }); };
   return freeze({
     getState: () => clone(state), getRecord: () => clone(record), entryTokenConsumed: () => routeAccepted,
-    updateField(name, value) { if (closed || typeof name !== "string" || forbiddenKey.test(name)) return false; draft[name] = clone(value); return true; },
+    updateField(name, value) {
+      if (closed || typeof name !== "string") return false;
+      const allowedFields = ["mh20_python_fresh", "mh25_python_retry"].includes(state.activeGroup)
+        ? ["learnerSource"]
+        : ["mh20_ai901_fresh", "mh25_ai901_retry"].includes(state.activeGroup)
+          ? ["decision", "reason"]
+          : [];
+      if (!allowedFields.includes(name)) return false;
+      draft[name] = clone(value);
+      return true;
+    },
     dispatch(input) {
       const action = typeof input === "string" ? input : input?.action;
       if (closed || options.mode === "demo_tour" || state.shellVersion !== MEASURED_HORIZON_SHELL_VERSION) return reject("route_closed");
@@ -336,7 +346,7 @@ export function createMeasuredHorizonNormalController(options = {}) {
         const pythonFailed = state.failedGateIds.includes(rp012.python_mapping.id); index = pythonFailed ? 0 : measuredHorizonObjectiveIds.findIndex((id) => state.failedGateIds.includes(id));
         return freeze({ status: "genuinely_blank_retry_visible", state: clone(set(pythonFailed ? "mh25_python_retry" : "mh25_ai901_retry", { currentObjectiveId: pythonFailed ? null : measuredHorizonObjectiveIds[index], form: freeze(pythonFailed ? { kind: "python", learnerSource: "" } : { kind: "objective", objectiveId: measuredHorizonObjectiveIds[index] }), failedGateIds: state.failedGateIds, focusTarget: pythonFailed ? "mh25-python-source" : `mh25-ai901-${slug(measuredHorizonObjectiveIds[index])}`, privateWorkCleared: false })) });
       }
-      if (group === "mh30_local_decision" && action === measuredHorizonActions.reviewDecision) { const failed = measuredHorizonGateIds.filter((id) => !gates[id]); outcome = activeEligibility && !failed.length ? MEASURED_HORIZON_READY : MEASURED_HORIZON_NOT_YET; return freeze({ status: "local_decision_visible", state: clone(set(outcome === MEASURED_HORIZON_READY ? "mh30_ready" : "mh30_not_yet_ready", { failedGateIds: failed, localReadinessState: outcome })) }); }
+      if (["mh25_remediation", "mh30_local_decision"].includes(group) && action === measuredHorizonActions.reviewDecision) { const failed = measuredHorizonGateIds.filter((id) => !gates[id]); outcome = activeEligibility && !failed.length ? MEASURED_HORIZON_READY : MEASURED_HORIZON_NOT_YET; return freeze({ status: "local_decision_visible", state: clone(set(outcome === MEASURED_HORIZON_READY ? "mh30_ready" : "mh30_not_yet_ready", { failedGateIds: failed, localReadinessState: outcome })) }); }
       if (["mh30_ready", "mh30_not_yet_ready"].includes(group) && action === measuredHorizonActions.save) return freeze({ status: "local_save_confirmation_visible", state: clone(set("mh40_save_confirm", { failedGateIds: state.failedGateIds, localReadinessState: outcome, focusTarget: "mh40-save-readiness" })) });
       if (group === "mh40_save_confirm" && action === measuredHorizonActions.cancelSave) return freeze({ status: "local_save_cancelled_write_free", state: clone(set(outcome === MEASURED_HORIZON_READY ? "mh30_ready" : "mh30_not_yet_ready", { failedGateIds: measuredHorizonGateIds.filter((id) => !gates[id]), localReadinessState: outcome })) });
       if (group === "mh40_save_confirm" && action === measuredHorizonActions.save) {

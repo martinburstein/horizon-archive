@@ -158,20 +158,24 @@
     },
     {
       "sequence": 10,
-      "stage": "Combat Engineer functional implementation checkpoint",
+      "stage": "Combat Engineer functional implementation",
       "agentId": "combat_engineer",
       "startedAt": "2026-08-09T14:21:05-04:00",
-      "endedAt": "2026-08-09T14:47:00-04:00",
-      "durationMs": 1555000,
-      "disposition": "IMPLEMENTATION IN PROGRESS",
+      "endedAt": "2026-08-09T15:24:42-04:00",
+      "durationMs": 3817000,
+      "disposition": "FUNCTIONAL BUILD READY",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/08-FUNCTIONAL-BUILD-REPORT.md",
       "sourceBaseline": "5edcf4e",
-      "tests": "942/942 fresh cold full; 5/5 normal focused; 5/5 fixture focused; 58/58 SSR owner/focus targets",
-      "build": "product 215 modules; fixture 57 modules",
-      "pba": "PASS: JS 1656007; CSS 119553; media 17/37410731; zero new media",
+      "tests": "943/943 fresh cold full; 11/11 final focused; 16/16 related; 40/40 curriculum validators",
+      "fixture": "58/58 live visible-owner plus actual-focus at each of four layouts; 232/232 checks; zero duplicate IDs/overflow; equal outcomes zero height delta",
+      "build": "product 215 modules in 7.90s; fixture 57 modules in 0.770s",
+      "pba": "PASS: JS 1656606; CSS 119599; modules 215; media 17/37410731; zero new media",
+      "servedIdentity": "fresh production and fixture root/deep/JS/CSS bytes exactly match built disk artifacts",
+      "e2e": "one complete post-setup run PASS in 125.8s; credits true; runtimeErrors false; initial setup-only refusal executed no assertions",
+      "corrections": "resolved exact transient field allowlists, reachable not-yet branch, unique 44px submit controls, unique save focus IDs and equal outcome geometry; no open variance",
       "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/reveal",
-      "remaining": "accepted route end-to-end; 58/58 live focus; served identity; complete E2E; final functional push",
-      "nextStage": "Combat Engineer resume - do not hand to Quartermaster"
+      "hardStop": "verified MH-40, exact review/remediation or permitted return; null successor and no RP-013/post-ending authority",
+      "nextStage": "Quartermaster content and asset completion only"
     }
   ]
 }
