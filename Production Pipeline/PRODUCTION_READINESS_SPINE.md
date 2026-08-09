@@ -1,5 +1,31 @@
 # Horizon Archive Production Readiness Spine
 
+## TD-012 Intelligence release current control - 2026-08-09
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-012 /
+  SS-RP012-MEASURED-HORIZON-v1` on audited product candidate `b0a052c...`.
+- **Position:** exact released TD-011 UR-30 -> sole fresh Pilot-owned
+  `TD012-RTA-001` -> complete
+  `MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40 / SC-13`.
+- **Gate:** focused `15/15`; full `947/947`; curriculum validators `40/40`;
+  production/fixture `215/57`; served root/deep/JS/CSS `8/8`; fresh live
+  fixture `58/58` narrow plus `58/58` available desktop; accepted unchanged
+  exact four-layout `232/232`; release PBA; sole cycle E2E `125.8s` preserved.
+- **Identity:** JS `1,660,034` /
+  `87BAE99B9D28DB1BAC8ABA57B4F87968E223BF51917917F8714E2FBBA7373682`;
+  CSS `119,599` /
+  `B77DF710F51462702833098D12E986B80C80B127FBC7905284718DACEAB8C0A5`;
+  exact media `17 / 37,410,731`; zero new runtime media.
+- **Persistence:** exact ordered private-free 16-key record; current ordered
+  evidence-reference equality; bidirectional gate/remediation/outcome
+  coherence; predecessor equality; rollback/`HOLD`; replay-free restore.
+- **Presentation:** code-native CSS, `selectedImageRoles: []`, equal outcome
+  anatomy, native contained modal, one main/status, deterministic focus, and
+  minimum product target `>=44 CSS px`. Image Specialist and reveal disabled.
+- **Boundary / stop:** verified MH-40, exact review/remediation, or authorized
+  return only. `successor=null`; no RP-013 or post-ending work. Recurring
+  production stops because the authorized edge is exhausted.
+
 ## TD-011 Intelligence release current control - 2026-08-09
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-011 /

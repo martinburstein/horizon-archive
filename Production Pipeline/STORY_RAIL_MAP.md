@@ -1,5 +1,27 @@
 # Horizon Archive Story Rail Map
 
+## TD-012 Intelligence release current control - 2026-08-09
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-012 /
+  SS-RP012-MEASURED-HORIZON-v1`; exact released TD-011 UR-30 through sole
+  fresh Pilot-owned `TD012-RTA-001` into complete
+  `RP-012 / SC-13 / MH-00-MH-40`.
+- **Graph:** `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`,
+  then only exact review/remediation or write-free Unborrowed Reach / City
+  Threshold returns; invalid state fails closed.
+- **Released evidence:** current finalized eligibility, one cumulative Python
+  plus fifteen independent current-objective gates, actual-gap-only answer-free
+  recovery, two equal local outcomes, ordered private-free 16-key atomic save,
+  exact current reference order, rollback/`HOLD`, and replay-free restore.
+- **Presentation/release:** code-native zero-new-media surface; fresh narrow and
+  available-desktop `116/116` owner/focus, accepted unchanged exact four-layout
+  `232/232`, focused `15/15`, full `947/947`, validators `40/40`, exact PBA and
+  served identity, and the preserved sole passing `125.8s` cycle E2E. Image
+  Specialist and reveal remain disabled.
+- **Final stop:** verified MH-40, exact review/remediation, or an authorized
+  return. `successor=null`. No RP-013 or post-ending edge exists; recurring
+  production stops and awaits Martin's explicit direction.
+
 ## TD-011 Intelligence release current control - 2026-08-09
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-011 /
@@ -693,7 +715,7 @@ Latest Advance continuity handoff: `2026-07-17 / RP002-P1-011 A5 REVISE — W1 A
 | 9 | `RP-009` | `Occluded Fold — synthesis closure` | `RP-008 offset summary saved -> destinationless outward continuation observed` | `PROMOTED TO WORKING — COORDINATOR PASS` | `READY — QUEUED BEHIND RP-008` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-10 TWO-MASTER/FOUR-PHASE BRIEF` | `PY-017 SOLIDIFIED — PROTECTED 8/8 + TRACE + BLANK 8/8 TRANSFER PASS` | `RP009-PROMPT-BOUNDARY-01 / AI901-D2-O1 SOLIDIFIED — PROTECTED 8/8 + 8/8 + BLANK 8/8 + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED OF-00→OF-30 GRAPH LOCKED` | `PASS — PURE PROTECTED END-TO-END JOURNEY; COORDINATOR VERIFIED` | Independent focused `14/14`, protected chain `97/97`, full `518/518`, validator/forms, build/asset identity, leakage, purity, cleanup, and patch integrity passed. Normal integration, final art, Working evidence, and release remain later ordered work. |
 | 10 | `RP-010` | `Counterfield — capstone opening` | `RP-009 edge ledger saved -> one exposed destinationless continuation observed` | `PROMOTED TO WORKING — COORDINATOR PASS` | `READY — QUEUED BEHIND RP-009` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-11 COMPACT TWO-MASTER BRIEF` | `PY-018 SOLIDIFIED — PROTECTED PRIMARY/TRACE/BLANK TRANSFER PASS` | `RP010-FOUNDRY-CLIENT-FLOW-01 / AI901-D2-O3 SOLIDIFIED — PROTECTED PRIMARY/RETRIEVAL/BLANK TRANSFER + EXPLANATIONS PASS` | `PASS — ONE INTEGRATED CF-00→CF-30 GRAPH LOCKED` | `PASS — PURE PROTECTED JOURNEY; COORDINATOR VERIFIED` | Independent focused `12/12`, protected chain `109/109`, full `539/539`, validator/forms, build/asset identity, leakage, purity, cleanup, and patch integrity passed. Normal integration, final art, Working evidence, and release remain later ordered work. |
 | 11 | `RP-011` | `Unborrowed Reach — capstone continuation` | `RP-010 scope register saved -> LOOK-only field margin exposed` | `PROMOTED TO WORKING — COORDINATOR PASS` | `READY — QUEUED BEHIND RP-010` | `PASS — SURFACE PREMISE/GOAL/END STATE LOCKED` | `PASS — SC-12 COMPACT TWO-MASTER BRIEF` | `PASS — PY-019 + AI901-D2-O4 SOLIDIFIED` | `PASS — UR-00→UR-30 GRAPH LOCKED` | `46–64 MIN CLEAN / 29–41 MASTERED` | `PURE PROTECTED JOURNEY PASS` | Coordinator independently passed focused `15/15`, protected chain `124/124`, full `558/558`, validators/forms, build, E2E, and live responsive gates. Final art, normal integration, Working evidence, readiness verdict, ending, and RP-012 remain closed. |
-| 12 | `RP-012` | `Measured Horizon — expedition resolution` | `RP-011 independent record and reconciliation saved -> destinationless outward bearing remains` | `PROMOTED TO WORKING — COORDINATOR PASS` | `READY — QUEUED BEHIND RP-011` | `PASS — SURFACE-SAFE RESOLUTION CONTRACT` | `PASS — SC-13 INVARIANT WORLD / SUIT OVERLAY` | `PASS — CUMULATIVE PYTHON TRANSFER SOLIDIFIED` | `PASS — ALL-15 CURRENT OBJECTIVE GATE SOLIDIFIED` | `PASS — MH-00→MH-40 GRAPH LOCKED` | `PASS — PURE PROTECTED JOURNEY / 5 OF 5` | Final current packet; independent release gate passed; no successor. |
+| 12 | `RP-012` | `Measured Horizon — expedition resolution` | `RP-011 independent record and reconciliation saved -> exact fresh Pilot review` | `RELEASED — TD-012 PASS` | `FINAL AUTHORIZED NORMAL EDGE COMPLETE` | `PASS — SURFACE-SAFE RESOLUTION CONTRACT` | `PASS — SC-13 INVARIANT WORLD / SUIT OVERLAY` | `PASS — CUMULATIVE PYTHON TRANSFER SOLIDIFIED` | `PASS — ALL-15 CURRENT OBJECTIVE GATE SOLIDIFIED` | `PASS — MH-00→MH-40 NORMAL GRAPH RELEASED` | `PASS — AS BUILT / NULL SUCCESSOR` | Final current packet released; no RP-013 or post-ending successor; await Martin. |
 
 ## Latest Advance handoff — RP-011 A5
 

@@ -1,5 +1,23 @@
 # Rail Packet Scoreboard
 
+## TD-012 Intelligence release current control - 2026-08-09
+
+- **Authoritative release:** `PASS - AS BUILT RELEASED / TD-012 /
+  SS-RP012-MEASURED-HORIZON-v1` on audited product candidate `b0a052c...`.
+- **Released graph:** `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 ->
+  MH-40`, followed only by exact internal review/remediation or write-free
+  Unborrowed Reach / City Threshold returns.
+- **Evidence:** current finalized eligibility; cumulative Python plus fifteen
+  independent objective gates; demonstrated-gap-only blank recovery; equal
+  READY/NOT YET outcomes; ordered 16-key atomic save; focused `15/15`; full
+  `947/947`; validators `40/40`; 215/57-module builds; exact PBA/media/served
+  identity; fresh narrow/available-desktop live `116/116`; accepted unchanged
+  exact four-layout `232/232`; sole cycle E2E `125.8s` preserved.
+- **Stop:** verified MH-40, review/remediation, or either authorized return.
+  `successor=null`; RP-013, post-ending content, reward, access, authority,
+  response, and world effect remain closed. Image Specialist and reveal are
+  disabled; recurring production stops at the exhausted final edge.
+
 ## TD-011 Intelligence release current control - 2026-08-09
 
 - **Authoritative release:** `PASS - AS BUILT RELEASED / TD-011 /

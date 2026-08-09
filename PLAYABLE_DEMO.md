@@ -14,24 +14,25 @@ Capstone Readiness, and Mixed Simulation Block 1. Mixed Simulation Block 2 and
 later story development are intentionally held for after the demo freeze.
 
 The accepted normal campaign continuation reaches complete `RP-003 / SC-04`
-through `RP-011 / SC-12 / UR-00-UR-30`. Unborrowed Reach opens only from exact
-released Counterfield CF-30 through one fresh Pilot-owned route intent. It
-includes six equal observations in every one of 720 orders; bounded independent
-PY-019 and single-agent-surface practice with two explanations; fresh
-finalization before four separate retained scopes reopen in all 24 orders;
-separate method-and-limit reconciliation; deterministic atomic local
-save/rollback/recovery; replay-free restore; and exact write-free returns to
-Counterfield or City Threshold. Invalid, private, stale, partial, forged,
-interrupted, protected, or Tour-derived state fails closed without consuming a
-future valid intent.
+through `RP-012 / SC-13 / MH-00-MH-40`. Measured Horizon opens only from exact
+released Unborrowed Reach UR-30 through one fresh Pilot-owned route intent. It
+requires current finalized evidence plus one genuinely blank cumulative Python
+gate and fifteen independent current-objective gates. Exact demonstrated gaps
+alone open answer-free recovery; complete evidence produces one of two equally
+dignified local outcomes. Its ordered private-free 16-key record uses atomic
+read-back/rollback, predecessor equality, replay-free restore, and exact
+write-free returns to Unborrowed Reach or City Threshold. Forged, missing,
+extra, reordered, stale, private, protected, Tour-derived, or incoherent state
+fails closed without opening a later route.
 
-The accepted boundary stops at UR-30 or either authorized return. LOOK remains
-inert scenery with no destination, opened route, or successor. No RP-012
-route or ending content, RP-013, successor, unity, cause, purpose, identity,
-reward, access, authority, external action, live service, or physical world
-response is included. SC-04 through SC-12 neither receive nor respond to the
-local records. Image generation, editing, boards, imports, and cycle reveals
-are disabled; TD-011's presentation is code-native and adds no runtime media.
+The accepted boundary stops at verified MH-40, exact review/remediation, or an
+authorized return. The local readiness outcome is course-authored practice,
+not a world verdict or a new destination. `successor=null`; there is no RP-013,
+post-ending route/content, credits extension, identity, reward, access,
+permission, authority, external action, live service, or physical world
+response. SC-04 through SC-13 neither receive nor respond to the local records.
+Image generation, editing, boards, imports, and cycle reveals are disabled;
+TD-012's presentation is code-native and adds no runtime media.
 
 The learning material is course-authored practice. It is not an official exam
 result, an exam guarantee, or authorization to create or change live services.

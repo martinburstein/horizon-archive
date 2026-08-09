@@ -7,75 +7,59 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- Latest release remains **`TD-011 / PASS - AS BUILT RELEASED`** under
-  `SS-RP011-UNBORROWED-REACH-v1` on audited candidate `8c8d0a4...`.
-- Released graph is `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, followed
-  only by exact returns or inert LOOK with `destination=null`,
-  `routeOpened=false`, and `successor=null`.
+- **`TD-012 / PASS - AS BUILT RELEASED`** under exact
+  `SS-RP012-MEASURED-HORIZON-v1`.
+- Audited product candidate is
+  `b0a052c12ca4bbb2e07b3899060bb550bc4d0536`, with parent chain
+  `0002d188 -> f80ff79 -> 825416d`.
+- Released graph is
+  `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`,
+  followed only by exact internal review/remediation or write-free
+  Unborrowed Reach / City Threshold returns.
+- Final record is one ordered private-free 16-key checkpoint with exact
+  current ordered eligibility references, bidirectional
+  gate/remediation/outcome coherence, predecessor equality, rollback/`HOLD`,
+  and replay-free restore.
+- `successor=null`; all city/world/external/authority deltas are null.
 
-## TD-012 corrected candidate - not released
+## Final Intelligence release evidence
 
-- Shell is `SS-RP012-MEASURED-HORIZON-v1` for exact
-  `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`, sole
-  `TD012-RTA-001`, 16 independent gates, demonstrated-gap-only recovery, two
-  equal local outcomes, one ordered 16-key checkpoint, exact returns, and
-  null-successor hard stop.
-- Intelligence returned Quartermaster candidate `f80ff79` at `0002d18` for
-  only `TD012-FIX-006/007/008`.
-- Combat correction is **`FUNCTIONAL BUILD READY - INTELLIGENCE RETURN
-  CORRECTED`**. The dedicated correction commit is the synchronized current
-  `HEAD` and is recorded by Git/remote identity outside self-referential
-  artifacts.
+- All eight correction boundaries reproduce: contradictory READY and NOT YET,
+  forged/missing/extra/reordered references, and 15-character token reject;
+  exact-16 accepts. Legitimate READY and NOT YET save/restore both pass.
+- Focused `15/15`; cold full `947/947`; curriculum validators `40/40`.
+- Production/fixture builds `215/57`; release PBA PASS; JS `1,660,034`, CSS
+  `119,599`, media exact `17 / 37,410,731`, zero new.
+- Production and fixture root/deep/JS/CSS served `8/8` HTTP 200 and
+  byte-identical.
+- Fresh isolated live owner/focus/containment evidence passes `58/58` at
+  actual narrow `375x844` and `58/58` at available desktop `1265x720`.
+  Exact Quartermaster four-layout `232/232`, effective-200, forced-color,
+  reduced-motion, and equal-geometry evidence remains accepted because the
+  correction leaves renderer/DOM/focus/CSS/fixture bytes exact.
+- The sole passing complete cycle E2E `125.8s` is preserved and was not rerun.
+- Isolated tabs/previews are closed; viewport reset; ports `4173`, `4184`,
+  `4292`, `4293`, and `5174` are clear.
+- The documentation-only Intelligence release commit and final
+  `HEAD == origin/main == remote main` are recorded by Git outside this
+  self-referential handoff.
 
-## Combat correction evidence
+## Exact next action - safe stop
 
-- Save restore now requires exact bidirectional coherence among the ordered
-  16 Boolean gates, exact false-gate remediation routes, and READY/NOT YET.
-- Persisted `evidenceReferenceIds` must exactly equal the current sanitized
-  eligibility references in shell order at sanitizer, adapter, and controller
-  restore boundaries.
-- Route and in-slice semantic tokens require total length `>=16` under the
-  unchanged `td012-` shape, owner, action, modality, and one-hit rules.
-- Direct negative regressions cover READY+false, NOT YET+all true,
-  forged/missing/extra/reordered references, 15-character rejection, and
-  exact-16 acceptance.
-- Focused normal/fixture: **`15/15 PASS`**.
-- One fresh cold full suite: **`947/947 PASS`**.
-- Production build: `215` modules; fixture build: `57` modules.
-- Candidate PBA/media: PASS, JS `1,660,034`, CSS `119,599`, media exact
-  `17 / 37,410,731`, zero new.
-- Complete E2E was not rerun; the cycle's sole passing `125.8s` evidence is
-  preserved.
-- No rendered content, DOM, focus, CSS, fixture declaration, media, or
-  accepted visual-reference byte changed. Quartermaster re-review is not
-  required.
+**Do not start another role or production cycle.** TD-012 is the final
+authorized packet and the authorized production edge is exhausted. Recurring
+automation is stopped.
 
-## Exact next action - active
+Do not create RP-013, a successor, post-ending route/content, credits
+extension, hidden lore, reward, access, identity, permission, authority,
+external action, world response, image work, media work, board, or cycle
+reveal. Await Martin's explicit new direction.
 
-Start a **new fresh Intelligence Officer / `intelligence_officer` only** on
-the exact synchronized Combat correction candidate.
+## Protected boundaries
 
-Independently reproduce all eight correction boundaries and one valid READY
-and NOT YET save/restore. Reconcile shell 05 through correction addendum 08,
-ledger 09, and Intelligence return 10 against source, tests, commit, parent,
-patch, and remote identity. Resume the stopped cold/full, validator,
-production/fixture build, PBA/media, served/live/accessibility, stable-candidate,
-and release gates proportionately. Do not rerun the complete E2E merely to
-accumulate evidence. Issue only `PASS - AS BUILT RELEASED`, `REVISE`, or
-`HOLD`; update master controls only from accepted as-built evidence.
-
-## Frozen boundaries
-
-- Preserve exact ordered 16-key schema/checksum, predecessor equality,
-  rollback/`HOLD`, replay-free restore, route ownership/modalities, all 58
-  fixture IDs, Quartermaster copy, DOM/focus/CSS/equal geometry, invariant
-  world, returns, and null successor.
-- No RP-013, successor, post-ending route/content, hidden lore, invented
-  credits extension, identity, reward, access, authority, external action,
-  world response, or protected-journey import.
-- Image Specialist and cycle reveal remain disabled. Do not generate, edit,
-  replace, vary, import, or publish an image, board, media asset, or reveal.
-- Never inspect or mutate Martin's browser/profile/save.
+- Image Specialist and cycle reveal remain disabled. Existing accepted visual
+  references and exact `17 / 37,410,731` runtime media stay immutable.
+- Never inspect or mutate Martin's browser/profile/save or hidden lore.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
 - The archived two-team workflow remains inactive.
