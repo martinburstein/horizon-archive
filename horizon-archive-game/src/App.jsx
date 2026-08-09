@@ -2622,6 +2622,7 @@ export function App() {
       OCCLUDED_FOLD_SHELL_VERSION,
       COUNTERFIELD_SHELL_VERSION,
       UNBORROWED_REACH_SHELL_VERSION,
+      MEASURED_HORIZON_SHELL_VERSION,
     ].includes(controller?.getState().shellVersion)) {
       setCalibrationMarginEntryView(controller.getState());
       setMode("rp003-entry");

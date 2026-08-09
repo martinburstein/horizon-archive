@@ -168,7 +168,7 @@
       "sourceBaseline": "5edcf4e",
       "tests": "941/941 full; 5/5 normal focused; 4/4 fixture focused; 58/58 SSR owner/focus targets",
       "build": "product 215 modules; fixture 57 modules",
-      "pba": "PASS: JS 1656004; CSS 119553; media 17/37410731; zero new media",
+      "pba": "PASS: JS 1656007; CSS 119553; media 17/37410731; zero new media",
       "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/reveal",
       "remaining": "accepted route end-to-end; 58/58 live focus; served identity; complete E2E; final functional push",
       "nextStage": "Combat Engineer resume - do not hand to Quartermaster"

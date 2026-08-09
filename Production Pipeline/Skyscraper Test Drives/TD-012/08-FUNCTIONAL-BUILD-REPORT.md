@@ -62,8 +62,8 @@ surface, and the literal storage-free 58-scenario fixture.
   `13.174s`.
 - Product build: `215` modules, success in `6.33s`.
 - Fixture build: `57` modules, success in `0.728s`.
-- `PBA-TD012-v1 / candidate`: PASS. Product JS `1,656,004` bytes / SHA-256
-  `AA8FC7821A4A25D1476E77BB08B70A14F58B1D6AA512B8F5BB3F2B98DEAA343D`;
+- `PBA-TD012-v1 / candidate`: PASS. Product JS `1,656,007` bytes / SHA-256
+  `192F01B7EDBF6B99AE8EB0C2918CF8E6D64E98F65B3C9EA6543A19E33D3B17F7`;
   CSS `119,553` bytes / SHA-256
   `65D3EA8617C818CBC080F2E1120CCEE42A382DBDD771A1B9C5673A88E128C7E3`;
   exact runtime media `17 / 37,410,731`, zero new files. Both bundle caps pass.
