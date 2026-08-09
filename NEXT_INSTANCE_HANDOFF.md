@@ -368,29 +368,53 @@ boundary. Never overlap a stage or restart a completed stage.
   protection, no successor, and the disabled Image Specialist boundary are
   locked.
 
+## TD-012 Operations floor stack
+
+- `CFS-TD012-v1 / FLOOR STACK READY - ROUTE AUTHORIZED` selects exact
+  `RP-012 / SC-13 / MH-00-MH-40` as the sole nearest mapped contiguous slice.
+- Sole `TD012-RTA-001` requires exact canonical released normal UR-30
+  controller/save/state and a fresh Pilot-owned one-hit token. Protected
+  RP-011/RP-012 journey versions, LOOK, retained records, reconciliation,
+  scenery, focus, timing, Tour, historical saves, and credits state are
+  rejected as route authority.
+- The planning graph is
+  `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`, with
+  separate eligibility, fresh forms, demonstrated-gap-only remediation,
+  local decision, and sole atomic readiness checkpoint.
+- Both local outcomes are recoverable and world-invariant. The hard stop is
+  verified MH-40, exact remediation/review, or a permitted return, with null
+  successor and no RP-013, onward route, post-ending content, or
+  Operations-defined credits behavior. Focused existing evidence passes
+  `10/10`.
+
 ## Exact next action - active
 
-Run **Operations Planning Major / `operations_planning_major` independent
-TD-012 adjacency and route proof** only from exact `GDB-TD012-v1`,
-`WNMP-TD012-v1`, synchronized released TD-011/UR-30, the final TD-011
-reconciliation, exact released controller/save/return authorities, and the
-approved protected RP-012 packet/journey/current curriculum contract. Prove
-or reject exact contiguous placement at protected
-`RP-012 / SC-13 / MH-00-MH-40`. If valid, define one sole fresh Pilot-owned,
-validation-before-consumption, one-hit, fail-closed transition from exact
-UR-30 with predecessor preservation, permitted returns, and a hard stop that
-exposes no successor, RP-013, hidden lore, post-ending content, or unapproved
-ending behavior. Issue `FLOOR STACK READY`, `REVISE`, or `HOLD`. Do not design
-learning, scene flow, copy, shell, code, art, credits, or the intended ending.
-Image Specialist remains disabled. Do not inspect Martin's browser/profile/
-save, hidden lore, or protected untracked paths.
+Run **Office of Science Administrator / `office_of_science_administrator`
+independent TD-012 viability** only from exact `GDB-TD012-v1`,
+`WNMP-TD012-v1`, `CFS-TD012-v1`, final TD-011 release/budget evidence,
+released normal Unborrowed Reach save/controller, the full frozen RP-012
+curriculum/readiness package, protected journey/focused tests, and current
+official Microsoft authorities where freshness is required. Validate the
+complete route, cumulative Python, all 15 current AI-901 objective
+authorities, eligibility, fresh forms, demonstrated-gap-only remediation,
+equal-dignity outcomes, privacy allowlist, atomic save/rollback/restore,
+recovery, accessibility/focus, fixture isolation, offline/no-authority/
+no-exam meaning, code-native non-generative presentation, and fresh
+non-compounding budget. Reject protected RP-011/RP-012 versions as normal
+bridge authority. Issue `VIABILITY READY`, `REVISE`, or `HOLD` with exact
+Mission inputs. Do not write the shell, code, copy, art, board, image, reveal,
+credits, or intended ending. Image Specialist remains disabled. Do not
+inspect Martin's browser/profile/save, hidden lore, or protected untracked
+paths.
 
 ## Frozen boundaries
 
 - TD-011 is released only through UR-30 and the exact returns/null LOOK above.
-- No RP-012/later route, destination, packet, shell, successor, RP-013, hidden
-  lore, identity, reward, access, authority, world response, ending extension,
-  or post-ending content is selected or authorized.
+- `TD012-RTA-001` is selected only as Operations planning authority from exact
+  released UR-30; it is not implemented, mounted, reachable, or a shell.
+  No successor, RP-013, hidden lore, identity, reward, access, authority,
+  world response, ending extension, Operations-defined credits behavior, or
+  post-ending content is selected or authorized.
 - Never generate, edit, replace, or alter the exact accepted reference PNG.
 - The Image Specialist and cycle reveal are disabled. Do not call image
   generation, edit or create boards, create variants or replacements, import

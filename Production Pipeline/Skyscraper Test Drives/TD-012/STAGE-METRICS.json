@@ -64,6 +64,24 @@
       "unselected": "campaign address, destination, route, transition, ending beat, credits behavior and shell",
       "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled",
       "nextStage": "Operations Planning Major independent adjacency and route proof"
+    },
+    {
+      "sequence": 5,
+      "stage": "Operations Planning Major adjacency and route proof",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-08-09T13:58:11-04:00",
+      "endedAt": "2026-08-09T14:03:20-04:00",
+      "durationMs": 309000,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/03-CAMPAIGN-FLOOR-STACK.md",
+      "sourceAuthority": "WNMP-TD012-v1 at Colonel commit 43db0d4fcff4fce76d4051855a17a139a1b7836f",
+      "selectedSlice": "RP-012 / SC-13 / MH-00-MH-40",
+      "soleRoute": "TD012-RTA-001 from exact released normal UR-30 with fresh Pilot-owned one-hit validation-before-consumption intent",
+      "protectedDistinction": "rp011.protected-journey.v1 and rp012.protected-journey.v1 rejected as normal bridge authority",
+      "focusedValidation": "10/10 PASS",
+      "hardStop": "verified MH-40, exact remediation/review, or permitted return; successor null and no RP-013/post-ending exposure",
+      "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled; code-native SC-12 continuation only",
+      "nextStage": "Office of Science Administrator independent viability envelope"
     }
   ]
 }
