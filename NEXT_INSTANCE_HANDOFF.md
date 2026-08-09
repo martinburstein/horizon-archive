@@ -155,24 +155,43 @@ boundary. Never overlap a stage or restart a completed stage.
 - `selectedImageRoles: []`; no new audio/media or image/reveal work. No
   variance is requested.
 
+## Tactical checkpoint
+
+- `XB-RP011-UNBORROWED-REACH-v1 / EXPERIENCE READY` maps the complete normal
+  graph from exact CF-30 route through UR-00, six equal observations, every
+  ordered UR-20 responsibility and recovery, fresh transaction, four-scope
+  reopening, single-column reconciliation, final transaction, restore,
+  returns, LOOK, Tour, and hard stop.
+- One stable DOM order supports world-first wide/laptop and one-column narrow/
+  200% zoom. Every group has one exact owner, heading, status, action set,
+  focus lifecycle, public/private boundary, transition, persistence edge, and
+  fixture hook; seven modalities converge through one semantic dispatcher.
+- The noninteractive CSS world uses deterministic oblique laminae while a
+  real equal button group owns observations. Save confirmations use contained
+  native dialogs; recovery is answer-free/blank; reopened records are complete
+  one at a time; reconciliation is never a matrix.
+- All 80 fixture rows are mapped to live rendered-owner/actual-focus proof.
+  No image/audio/media work or variance is authorized.
+
 ## Exact next action - active
 
-Run **Tactical Operations Specialist / `tactical_operations_specialist`** only
-against exact `SS-RP011-UNBORROWED-REACH-v1` and
-`CT-RP011-UNBORROWED-LAMINAE-v1`. Produce one complete Experience Blueprint
-mapping every shell state to responsive geometry, active owner/group, exact
-heading/status/action, focus lifecycle, private/public state, transition,
-return, persistence edge, fixture scenario, and validation hook. Blueprint
-the creative thesis as oblique unaligned laminae, world-first breadth, one
-active responsibility, sealed replica boundary, retained-record custody,
-individual reopening, single-column reconciliation, invariant lighting, no
-new audio, immediate reduced-motion equivalence, and code-native CSS with
-`selectedImageRoles: []`. Preserve every exact route, learning, save/privacy,
-accessibility, PBA, 80-fixture, unknown and hard-stop contract. Issue
-`BLUEPRINT READY`, `REVISE`, or `HOLD`; commit locally and hand the exact
-shell+treatment+blueprint to Combat Engineer. Do not implement, inspect
-Martin's browser/profile/save, open hidden lore, import protected code, create
-or edit media, create a reveal, or expose RP-012.
+Run **Combat Engineer / `combat_engineer`** only against exact
+`SS-RP011-UNBORROWED-REACH-v1`,
+`CT-RP011-UNBORROWED-LAMINAE-v1`, and
+`XB-RP011-UNBORROWED-REACH-v1`. Implement the complete normal route,
+controller, ordered 15-key/two-checkpoint sanitizer and storage adapter,
+orchestrator/App bridge, responsive React surface, deterministic code-native
+CSS world, exact public registry, and closed 80-scenario production-absent
+fixture. Add focused contract/controller/UI/fixture tests covering route
+rejection/seven modalities, all `720` and `24` orders, strict independent
+learning/recovery/privacy, both atomic transactions/rollback/restore, returns/
+LOOK/Tour, owners/focus, four layouts, protected/fixture/later exclusion,
+zero-media identity, and PBA. Reuse accepted normal utilities; never import a
+protected journey or accept arbitrary runtime/fixture input. Issue
+`FUNCTIONAL BUILD READY`, `REVISE`, or `HOLD`; commit and push `main` on ready,
+verify `HEAD == origin/main == remote main`, and hand as-built evidence to
+Quartermaster. Do not inspect Martin's browser/profile/save, open hidden lore,
+create/edit/import media, create a reveal, or expose RP-012.
 
 ## Frozen boundaries
 
