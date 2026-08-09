@@ -47,9 +47,37 @@ test("TD011 all 80 production surfaces render exact owner text and a real declar
       assert.ok(markup.includes(`data-active-owner="${scenario.declaredOwner}"`), `${id} owner attribute`);
       assert.ok(markup.includes(`>${scenario.declaredOwner}</p>`), `${id} visible owner`);
       assert.ok(markup.includes(`id="${scenario.declaredFocus}"`), `${id} real focus target`);
+      assert.ok(markup.includes(`data-shell-version="${scenario.state.shellVersion}"`), `${id} shell identity`);
+      assert.ok(markup.includes(`data-controller-version="${scenario.state.controllerVersion}"`), `${id} controller identity`);
+      assert.ok(markup.includes(`data-active-group="${scenario.state.activeGroup}"`), `${id} group identity`);
       assert.equal((markup.match(/<main\b/g) ?? []).length, 1, `${id} one main`);
       assert.equal((markup.match(/role="status"/g) ?? []).length, 1, `${id} one status`);
     }
+  } finally { await vite.close(); }
+});
+
+test("TD011 Quartermaster surfaces exact observation copy, public recovery details, and modal-only save actions", { timeout: 60_000 }, async () => {
+  const vite = await createServer({ root: fileURLToPath(new URL("..", import.meta.url)), appType: "custom", server: { middlewareMode: true }, logLevel: "silent" });
+  try {
+    const { UnborrowedReach } = await vite.ssrLoadModule("/src/UnborrowedReach.jsx");
+    const observation = createUnborrowedReachScenario("ur10-blank");
+    const observationMarkup = renderToStaticMarkup(React.createElement(UnborrowedReach, { state: observation.state, onAction() {}, onFieldChange() {} }));
+    assert.match(observationMarkup, /One relation persists across a material change\. Its source remains unseen\./);
+    assert.match(observationMarkup, /INSPECT THE PERSISTENT TRANSITION/);
+    assert.doesNotMatch(observationMarkup, /Â|Ã|�/);
+
+    const recovery = createUnborrowedReachScenario("ur20-python-primary-miss");
+    const recoveryState = { ...recovery.state, failedPublicIds: ["api_role_preserved_as_request_response_contract"], failedMisconceptionTags: ["configured_tool_proves_authority"] };
+    const recoveryMarkup = renderToStaticMarkup(React.createElement(UnborrowedReach, { state: recoveryState, onAction() {}, onFieldChange() {} }));
+    assert.match(recoveryMarkup, /api role preserved as request response contract/);
+    assert.match(recoveryMarkup, /configured tool proves authority/);
+
+    const confirmation = createUnborrowedReachScenario("ur20-fresh-confirm");
+    const confirmationMarkup = renderToStaticMarkup(React.createElement(UnborrowedReach, { state: confirmation.state, onAction() {}, onFieldChange() {} }));
+    assert.match(confirmationMarkup, /<dialog/);
+    assert.match(confirmationMarkup, /FINALIZE FRESH BOUNDED RECORD/);
+    assert.match(confirmationMarkup, /CANCEL FRESH RECORD SAVE/);
+    assert.doesNotMatch(confirmationMarkup, /aria-label="Exact safe returns"/);
   } finally { await vite.close(); }
 });
 

@@ -552,6 +552,10 @@ function formFor(group) {
   return null;
 }
 
+export function createUnborrowedReachPublicForm(group) {
+  return clone(formFor(group));
+}
+
 function stateFor(group, observations, evidence, reopenedScopes, extra = {}) {
   const [owner, headingId, heading, coreActions] = groupContracts[group];
   const transaction = group.endsWith("transaction");

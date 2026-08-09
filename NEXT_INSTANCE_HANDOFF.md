@@ -203,24 +203,54 @@ boundary. Never overlap a stage or restart a completed stage.
 - Functional evidence is frozen in
   `Production Pipeline/Skyscraper Test Drives/TD-011/08-FUNCTIONAL-BUILD-REPORT.md`.
 
+## Quartermaster checkpoint
+
+- `CONTENT COMPLETE` retires four public presentation shortcuts without
+  changing route, scoring, evidence, eligibility, persistence, restore,
+  return, LOOK, world, or hard-stop behavior.
+- Six equal observations now render the exact shell Scene lines and action
+  labels. Fresh review exposes eight separate responsibilities; custody states
+  expose hidden/reopened/read-only status and one complete active prior scope;
+  final review keeps five records and reconciliation separate; recovery shows
+  only actual public failed IDs/tags after private clearing.
+- The closed fixture now creates the same deterministic public blank form as
+  production. Every shell-declared textarea, select, checkbox, explanation,
+  and action focus target is a real control rather than a heading surrogate.
+- Save confirmations use native modal dialogs with exact save/cancel actions,
+  initial save focus, Escape-to-cancel, and no exposed outside returns while
+  open. Production exposes only stable public shell/controller/group/owner/
+  phase/fixture identities.
+- Validation: focused `10/10`, full product `930/930`, curriculum self-tests
+  `40/40`, production/fixture builds `212/53`, served identity PASS, live
+  owner/actual-focus `80/80`, modal and responsive samples PASS.
+- `PBA-TD011-v1 / release / PASS`: JS `1,622,151`, CSS `113,916`, modules
+  `212`, exact media `17 / 37,410,731`, zero new media. CSS headroom is only
+  `94` bytes and is an explicit independently enforced limitation.
+- Runtime remains code-native CSS with `selectedImageRoles: []`. Image
+  Specialist and every generation/edit/selection/board/import/reveal action
+  remain disabled. Evidence is frozen in
+  `Production Pipeline/Skyscraper Test Drives/TD-011/09-CONTENT-ASSET-LEDGER.md`.
+
 ## Exact next action - active
 
-Run **Quartermaster / `quartermaster`** only against the exact committed and
-pushed Combat candidate, shell 05, creative treatment 06, experience blueprint
-07, functional report 08, and `PBA-TD011-v1`. Audit and polish only
-non-frozen player-facing microcopy, accessibility text, control organization,
-code-native presentation, and asset truth. Preserve every route, group/owner/
-focus ID, observation, learning/evidence rule, ordered 15-key/two-checkpoint
-save, privacy/rollback/restore behavior, return/LOOK, 80-row fixture contract,
-exact accepted media identity, and UR-30 hard stop. Prove no placeholder, raw
-evaluator label, misleading art claim, unauthorized media, protected reference,
-fixture seam, or later content remains. Rerun focused/full tests, all curriculum
-self-tests, production/fixture builds, live `80/80` owner/focus, four layouts,
-served identity, privacy/protected/later scans, and release PBA. Issue
-`CONTENT COMPLETE`, `REVISE`, or `HOLD`; commit the exact stage and hand directly
-to Intelligence Officer on pass. Image Specialist remains disabled: do not
-generate, edit, select, board, import, or reveal media. Do not inspect Martin's
-browser/profile/save, hidden lore, or the protected untracked paths.
+Run **Intelligence Officer / `intelligence_officer`** only against the exact
+committed Quartermaster content-complete candidate, synchronized shell 05,
+Recon 06, Tactical 07, Combat 08, Quartermaster 09, current normal source and
+fixture, and `PBA-TD011-v1`. Independently validate the as-built graph,
+convergence, learning/evidence separation, two atomic checkpoints, sanitation,
+rollback/restore, exact returns/LOOK, hard stop, player-facing content, native
+modal confirmation, public data attributes, all real focus targets, exact
+80-row live owner/focus behavior, four layouts/presentation modes, privacy/
+protected/later-content boundaries, served production/fixture bytes, accepted
+media hashes, and release budget. Classify every as-built correction and the
+94-byte CSS margin; do not inherit Combat or Quartermaster conclusions. Rerun
+the release ladder, update synchronized plans only from accepted evidence,
+write `10-AS-BUILT-RECONCILIATION.md`, and issue `PASS - AS BUILT RELEASED`,
+`CONDITIONAL PASS`, `REVISE`, or `HOLD`. On release, replace this file with one
+exact synchronized next action derived from accepted authority. Image
+Specialist remains disabled and there is no stage 10 image artifact or reveal:
+do not generate, edit, select, board, import, or reveal media. Do not inspect
+Martin's browser/profile/save, hidden lore, or the protected untracked paths.
 
 ## Frozen boundaries
 

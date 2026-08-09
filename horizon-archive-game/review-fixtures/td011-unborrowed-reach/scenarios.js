@@ -1,6 +1,6 @@
 import {
   UNBORROWED_REACH_CONTROLLER_VERSION, UNBORROWED_REACH_ROUTE_ACTION, UNBORROWED_REACH_ROUTE_GROUP,
-  UNBORROWED_REACH_SHELL_VERSION, unborrowedReachActions,
+  UNBORROWED_REACH_SHELL_VERSION, createUnborrowedReachPublicForm, unborrowedReachActions,
 } from "../../src/UnborrowedReachNormal.js";
 
 const rows = `
@@ -125,6 +125,17 @@ function actionsFor(group) {
   if (group === "td011-tour") return [];
   if (group === "ur00_isolation") return [unborrowedReachActions.isolate, unborrowedReachActions.returnCounterfield];
   if (group === "ur10_fresh_observations") return [...Object.values(unborrowedReachActions).slice(1, 7), ...returns];
+  const learningActions = {
+    ur20_python_primary: unborrowedReachActions.pythonPrimary,
+    ur20_python_trace: unborrowedReachActions.pythonTrace,
+    ur20_python_transfer: unborrowedReachActions.pythonTransfer,
+    ur20_agent_primary: unborrowedReachActions.agentPrimary,
+    ur20_agent_retrieval: unborrowedReachActions.agentRetrieval,
+    ur20_agent_transfer: unborrowedReachActions.agentTransfer,
+    ur20_surface_explanation: unborrowedReachActions.surfaceExplanation,
+    ur20_truth_permission_explanation: unborrowedReachActions.truthExplanation,
+  };
+  if (learningActions[group]) return [learningActions[group], ...returns];
   if (group === "ur20_recovery" || group === "ur30_reconciliation_recovery") return [unborrowedReachActions.retry, ...returns];
   if (group === "ur20_fresh_review") return [unborrowedReachActions.reviewFresh, ...returns];
   if (group === "ur20_fresh_confirm") return [unborrowedReachActions.finalizeFresh, unborrowedReachActions.cancelFresh, ...returns];
@@ -157,7 +168,7 @@ export function createUnborrowedReachScenario(id) {
       heading: id.replaceAll("-", " ").toUpperCase(), statusMessageId: `td011:fixture:${id}`,
       statusMessage: "Closed public review state. No storage, network, arbitrary input, evidence, authority, world response, route, or successor is available.",
       availableActions: Object.freeze(actionsFor(group)), recordedObservationIds: Object.freeze([]), reopenedScopes: Object.freeze([]), evidenceCount: 0,
-      form: null, failedPublicIds: Object.freeze([]), failedMisconceptionTags: Object.freeze([]),
+      form: createUnborrowedReachPublicForm(group), failedPublicIds: Object.freeze([]), failedMisconceptionTags: Object.freeze([]),
       privateWorkCleared: true, transientWorkCleared: true, temporaryWorkspaceCleared: true,
       cityStateDelta: null, worldStateDelta: null, externalStateDelta: null, successor: null,
       authorityGranted: false, externalActionEnabled: false, worldStateChanged: false, routeOpened: false,
