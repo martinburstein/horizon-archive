@@ -51,23 +51,26 @@ registry before acting. This file is the sole exact-next-action authority.
   clusters.
 - Commandant issued `GDB-TE001-v1 / VISION BASELINE` at source commit
   `88785eeb5a55523d3f610969777fbbb3af128c23`.
+- Colonel issued `WN-TE001-v1 / WORLD BASELINE`: one continuous fifteen-
+  location pedestrian route accounting for all forty clusters, with explicit
+  host placement, discovery owner, access, local motive, and exit continuity.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Colonel TE-001 narrative baseline
+## Exact next action - Operations TE-001 feasibility audit
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/01-GAME-DEVELOPMENT-BRIEF.md`
-in full. Author one surface-canon walkthrough for the existing prologue and
-RP-001 through RP-012 that accounts for all forty lesson clusters exactly once.
-For every location, lock entry orientation, accessible footpath, ordered host
-placements, discovery owner, physical fit, reason each host leads to the next,
-and the unchanged exit to released adjacency. Preserve the on-foot route,
-invariant world, no-authority boundary, and suit-owned stable interface.
+Read `Production Pipeline/Terminal Enrichment/TE-001/02-WORLD-AND-NARRATIVE-MASTERPLAN.md`
+in full. Audit `WN-TE001-v1` against the released board graph and location
+canon. Prove exact adjacency, safe pedestrian feasibility, return logic, forty-
+cluster ownership, and the narrowest non-overlapping way to reconcile two-host
+locations with existing single-coupling compact scenes. Classify the inherited
+Glass Meadow Route Marker response, all accepted placement revisions, and the
+legacy `World A/B/C/D` production labels without reintroducing planetary
+travel.
 
-The Machine may not invite, respond, unlock, reward, or direct. Terminal 39 and
-40 remain suit/flight-recorder review surfaces at the existing ending. Issue a
-narrative baseline or `HOLD`; do not create implementation, a Mission shell,
-image work, a new packet, RP-013, a successor, or post-ending content.
+Return `HOLD` rather than inventing a road, flight, Machine guidance, sealed
+access, new objective, packet, RP-013, successor, or post-ending content. Do not
+implement, issue a Mission shell, or create/generate/select/import an image.
 
 ## Protected boundaries
 
