@@ -352,17 +352,38 @@ boundary. Never overlap a stage or restart a completed stage.
 - Image Specialist, image generation/edit/selection/boards/imports, and cycle
   reveal remain disabled without weakening presentation quality.
 
+## TD-012 Colonel world baseline
+
+- `WNMP-TD012-v1 / WORLD BASELINE` derives exactly one provisional
+  surface-safe candidate: an expedition-owned evidence-completeness review
+  using fresh independent cumulative work, exact answer-free recovery for
+  demonstrated gaps, and two equally dignified local learning outcomes.
+- `RP-012 / Measured Horizon / SC-13 / MH-00-MH-40` remain protected planning
+  handles only. They do not open a destination, route, ending beat, credits,
+  or shell, and no historic protected journey or coordinator evidence may
+  substitute for current Operations proof.
+- Five retained records plus separate reconciliation, evidence independence,
+  ownership language, equal-dignity recovery, privacy, invariant world,
+  no-exam/no-authority meaning, all central unknowns, intended-ending
+  protection, no successor, and the disabled Image Specialist boundary are
+  locked.
+
 ## Exact next action - active
 
-Run **Colonel / `colonel` guarded TD-012 derivation** only from exact
-`GDB-TD012-v1`, synchronized released TD-011/UR-30, approved surface canon,
-whole-story rail controls, and intended-ending protection. Derive at most one
-already-mapped provisional surface-safe candidate with explicit evidence and
-unresolved route, or issue `HOLD`. Do not issue a route, transition, campaign
-placement, shell, code, image, board, reveal, reward, access, identity,
-authority, world response, successor, RP-013, or post-ending content. Image
-Specialist remains disabled. Do not inspect Martin's browser/profile/save,
-hidden lore, or protected untracked paths.
+Run **Operations Planning Major / `operations_planning_major` independent
+TD-012 adjacency and route proof** only from exact `GDB-TD012-v1`,
+`WNMP-TD012-v1`, synchronized released TD-011/UR-30, the final TD-011
+reconciliation, exact released controller/save/return authorities, and the
+approved protected RP-012 packet/journey/current curriculum contract. Prove
+or reject exact contiguous placement at protected
+`RP-012 / SC-13 / MH-00-MH-40`. If valid, define one sole fresh Pilot-owned,
+validation-before-consumption, one-hit, fail-closed transition from exact
+UR-30 with predecessor preservation, permitted returns, and a hard stop that
+exposes no successor, RP-013, hidden lore, post-ending content, or unapproved
+ending behavior. Issue `FLOOR STACK READY`, `REVISE`, or `HOLD`. Do not design
+learning, scene flow, copy, shell, code, art, credits, or the intended ending.
+Image Specialist remains disabled. Do not inspect Martin's browser/profile/
+save, hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 

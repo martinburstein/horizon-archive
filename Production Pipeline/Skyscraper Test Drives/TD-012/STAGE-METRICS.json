@@ -48,6 +48,22 @@
       "selection": "candidate, packet, scene, address, route, transition, ending beat and shell deliberately unselected",
       "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled",
       "nextStage": "Colonel guarded TD-012 derivation"
+    },
+    {
+      "sequence": 4,
+      "stage": "Colonel guarded provisional derivation",
+      "agentId": "colonel",
+      "startedAt": "2026-08-09T13:53:16-04:00",
+      "endedAt": "2026-08-09T13:58:10-04:00",
+      "durationMs": 294000,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "sourceAuthority": "GDB-TD012-v1 at Commandant commit aca8ae760e2b3d8f08c33bb46cc4accbc84c79d9",
+      "candidate": "one expedition-owned evidence-completeness review using fresh independent cumulative work, exact answer-free recovery for demonstrated gaps, and two equally dignified local learning outcomes",
+      "protectedHandles": "RP-012 / Measured Horizon / SC-13 / MH-00-MH-40 remain provisional planning evidence only",
+      "unselected": "campaign address, destination, route, transition, ending beat, credits behavior and shell",
+      "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled",
+      "nextStage": "Operations Planning Major independent adjacency and route proof"
     }
   ]
 }
