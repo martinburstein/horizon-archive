@@ -82,6 +82,26 @@
       "hardStop": "verified MH-40, exact remediation/review, or permitted return; successor null and no RP-013/post-ending exposure",
       "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled; code-native SC-12 continuation only",
       "nextStage": "Office of Science Administrator independent viability envelope"
+    },
+    {
+      "sequence": 6,
+      "stage": "Office of Science Administrator viability envelope",
+      "agentId": "office_of_science_administrator",
+      "startedAt": "2026-08-09T14:03:21-04:00",
+      "endedAt": "2026-08-09T14:10:20-04:00",
+      "durationMs": 419000,
+      "disposition": "VIABILITY READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/04-GLOBAL-VIABILITY-ENVELOPE.md",
+      "budgetAuthority": "PBA-TD012-v1",
+      "sourceAuthority": "Microsoft-only priority set reverified 2026-08-09; AI-901 remains effective 2026-04-15 and last updated 2026-07-13",
+      "focusedValidation": "10/10 PASS",
+      "curriculumValidation": "40/40 PASS in 3.476s",
+      "fullValidation": "932/932 PASS; Node 15.621s; wall 16.197s",
+      "buildValidation": "212 modules; Vite 6.38s; wall 7.279s; exact released TD-011 JS/CSS/media identity",
+      "budgetCaps": "JS 1703258; CSS 119672; modules 222; media exactly 17 / 37410731 with zero new",
+      "saveContract": "one ordered 16-key private-free rp012_readiness_saved checkpoint with checksum, rollback, predecessor equality and replay-free restore",
+      "imageBoundary": "Image Specialist, generation/edit/selection/board/import/reveal disabled; zero new media",
+      "nextStage": "Mission Captain five-contract shell reconciliation"
     }
   ]
 }

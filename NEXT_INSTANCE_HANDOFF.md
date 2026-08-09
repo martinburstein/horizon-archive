@@ -387,25 +387,41 @@ boundary. Never overlap a stage or restart a completed stage.
   Operations-defined credits behavior. Focused existing evidence passes
   `10/10`.
 
+## TD-012 Science viability envelope
+
+- `VE-TD012-v1 / VIABILITY READY` independently verifies exact normal UR-30
+  entry, MH-00-MH-40, eligibility, cumulative Python, all 15 current AI-901
+  objectives, 16 independent fresh gates, demonstrated-gap-only answer-free
+  remediation, blank retries, and both equal-dignity local outcomes.
+- `rp012.measured-horizon-save.v1` has one ordered 16-key private-free
+  `rp012_readiness_saved` checkpoint with objective version/IDs, resolved
+  evidence references, gate booleans, remediation routes, local outcome, null
+  deltas/successor, checksum, read-back, predecessor equality, rollback, and
+  replay-free restore.
+- Microsoft-only sources were reverified August 9. Focused `10/10`, all
+  curriculum self-tests `40/40`, full product `932/932`, fresh 212-module
+  build, exact released TD-011 identity, and executable PBA baseline pass.
+- `PBA-TD012-v1` caps JS at `1,703,258`, CSS at `119,672`, and modules at
+  `222`; runtime media stays exactly `17 / 37,410,731` bytes with zero new
+  files. Image generation/edit/board/import/reveal remains disabled.
+
 ## Exact next action - active
 
-Run **Office of Science Administrator / `office_of_science_administrator`
-independent TD-012 viability** only from exact `GDB-TD012-v1`,
-`WNMP-TD012-v1`, `CFS-TD012-v1`, final TD-011 release/budget evidence,
-released normal Unborrowed Reach save/controller, the full frozen RP-012
-curriculum/readiness package, protected journey/focused tests, and current
-official Microsoft authorities where freshness is required. Validate the
-complete route, cumulative Python, all 15 current AI-901 objective
-authorities, eligibility, fresh forms, demonstrated-gap-only remediation,
-equal-dignity outcomes, privacy allowlist, atomic save/rollback/restore,
-recovery, accessibility/focus, fixture isolation, offline/no-authority/
-no-exam meaning, code-native non-generative presentation, and fresh
-non-compounding budget. Reject protected RP-011/RP-012 versions as normal
-bridge authority. Issue `VIABILITY READY`, `REVISE`, or `HOLD` with exact
-Mission inputs. Do not write the shell, code, copy, art, board, image, reveal,
-credits, or intended ending. Image Specialist remains disabled. Do not
-inspect Martin's browser/profile/save, hidden lore, or protected untracked
-paths.
+Run **Mission Captain / `mission_captain` five-contract TD-012 shell
+reconciliation** only from exact `GDB-TD012-v1`, `WNMP-TD012-v1`,
+`CFS-TD012-v1`, `VE-TD012-v1`, and `PBA-TD012-v1`. Freeze exact normal UR-30
+and rejected protected versions; MH-00-MH-40 state/group/owner/focus;
+eligibility references; cumulative Python plus all 15 objectives and 16
+independent fresh gates; demonstrated-gap-only answer-free remediation;
+blank retry; equal-dignity outcomes; ordered 16-key checkpoint; privacy,
+checksum/read-back/rollback/predecessor equality/restore; returns; seven
+modalities/four layouts; UTF-8 registry and closed production-absent fixture;
+offline/no-authority/no-exam/no-certification; PBA; zero new media; and null-
+successor hard stop. Issue `SS-RP012-MEASURED-HORIZON-v1 / SHELL READY` only
+if conflict-free, otherwise `REVISE`/`HOLD`. Do not implement, import
+protected code, design credits/intended-ending presentation, expose RP-013/
+successor, or perform image/board/reveal work. Do not inspect Martin's
+browser/profile/save, hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 
