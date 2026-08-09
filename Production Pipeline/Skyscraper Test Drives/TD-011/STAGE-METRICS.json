@@ -254,6 +254,30 @@
       "commit": "PENDING_COMBAT_CORRECTION_COMMIT",
       "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "nextStage": "Intelligence Officer fresh release review"
+    },
+    {
+      "sequence": 12,
+      "stage": "Intelligence Officer second review",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-09T13:29:43-04:00",
+      "endedAt": "2026-08-09T13:37:21-04:00",
+      "durationMs": 458000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md",
+      "candidate": "a5601b64c3dcc15f51fb357940ee222272d67ffc",
+      "integrity": "tracked candidate clean; patch and object integrity PASS; protected untracked work untouched",
+      "focused": "independent normal+fixture+protected+lock 26/26 PASS; served identity+lock 2/2 PASS",
+      "fullSuite": "first Intelligence-owned corrected-candidate cold npm test 931/931 PASS",
+      "validators": "all curriculum validator self-tests 40/40 PASS",
+      "buildBudget": "production/fixture 212/53 modules; JS 1622151; CSS 113916; exact 17 / 37410731 media; PBA PASS",
+      "previewE2E": "isolated 5174 root/deep HTTP 200 exact index; exactly one complete E2E PASS in 91.8s with credits true and runtimeErrors false; 69 QA captures restored",
+      "liveReview": "80/80 declared owner and actual active-element focus PASS; three reconciliation fixture states expose five of six associated checkbox label targets below 44px, minimum 19px high",
+      "variance": "TD011-FIX-001 CLOSED; TD011-FIX-002 REQUIRED CORRECTION owned by Combat Engineer; selector-specific >=44px target plus direct regression and exact PBA required",
+      "cleanup": "browser tab closed; owned ports 5174 and 4183 clear",
+      "release": "not authorized; no push or master-control promotion",
+      "commit": "PENDING_SECOND_INTELLIGENCE_RETURN_COMMIT",
+      "commitConvention": "The dedicated second Intelligence return commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "nextStage": "Combat Engineer target-geometry correction"
     }
   ]
 }

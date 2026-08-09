@@ -1,3 +1,54 @@
+# TD-011 Intelligence Officer As-Built Reconciliation - Second Release Return
+
+Date: **2026-08-09**
+Role: **Intelligence Officer / independent release authority**
+Shell: **`SS-RP011-UNBORROWED-REACH-v1`**
+Candidate audited: **`a5601b64c3dcc15f51fb357940ee222272d67ffc`**
+Disposition: **`REVISE - RETURN TO COMBAT ENGINEER`**
+
+## Second release decision
+
+`TD011-FIX-001` is independently verified closed. The corrected candidate
+passes repository integrity, focused normal/protected/fixture validation
+`26/26`, the first Intelligence-owned cold full suite `931/931`, all
+curriculum validator self-tests `40/40`, production/fixture builds `212/53`,
+the exact production budget and media identity, exact served bytes, isolated
+HTTP preflight, and exactly one complete non-overlapping title-to-credits E2E
+in `91.8s` with `credits:true` and `runtimeErrors:false`.
+
+The subsequent live 80-state review found a different release blocker.
+Rendered owner and actual active-element focus pass `80/80`, but the six
+native reconciliation checkboxes have associated click targets between
+`19px` and `52.8px` high; five of the six are below the shell's exact
+`>=44x44 CSS px` target contract. The defect reproduces in
+`ur30-all-reopened`, `ur30-reconciliation-blank`, and
+`ur30-reconciliation-retry`. The input itself is `13x13px`; its wrapping
+label is the effective pointer target and lacks a minimum height.
+
+This is `TD011-FIX-002 / REQUIRED CORRECTION`, owned by Combat Engineer as a
+bounded presentation/accessibility correction. Add a selector-specific
+`min-height:44px` target to the reconciliation label without changing form
+semantics, focus, controller, content, evidence, save, route, world, or hard
+stop, and add a direct regression that covers the six label targets. The
+existing PBA leaves only 94 CSS bytes, so the corrected production build must
+still pass the exact cap; no variance or quality reduction is authorized.
+
+The passing E2E is preserved as evidence and was not rerun. Its 69 incidental
+tracked QA captures were restored, and owned ports `5174` and `4183` were
+closed. No release, push, or master-control promotion occurred. Protected
+untracked work remained unopened, uninspected, unstaged, and untouched.
+
+## Second variance register
+
+| ID / variance | Classification | Owner | Required result |
+| --- | --- | --- | --- |
+| `TD011-FIX-001` shared served-identity lock | `CLOSED REQUIRED CORRECTION` | Combat Engineer | Independent `26/26`, cold `931/931`, and served `2/2` pass. |
+| `TD011-FIX-002` reconciliation targets below 44px | **`REQUIRED CORRECTION`** | **Combat Engineer** | All six effective label targets measure at least `44x44 CSS px` in all three affected fixture states; direct regression; exact PBA still passes. |
+| Quartermaster content/control/modal improvements | `ACCEPTED IMPROVEMENT - PENDING FINAL RELEASE` | Quartermaster / Combat | Owner/focus is `80/80`; release awaits `TD011-FIX-002`. |
+| 94-byte CSS headroom | `DEFERRED LIMITATION - PENDING FINAL RELEASE` | Science / Mission enforcement | No cap waiver; corrected build must remain at or below `114,010` CSS bytes. |
+
+## Preserved first release return
+
 # TD-011 Intelligence Officer As-Built Reconciliation — Release Return
 
 Date: **2026-08-09**

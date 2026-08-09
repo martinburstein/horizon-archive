@@ -270,23 +270,40 @@ boundary. Never overlap a stage or restart a completed stage.
   shell, PBA, hard stop, image, board, or reveal changed. Correction evidence
   is in `Production Pipeline/Skyscraper Test Drives/TD-011/08A-FUNCTIONAL-CORRECTION-REPORT.md`.
 
+## Second Intelligence checkpoint
+
+- `TD011-FIX-001` is independently closed: focused `26/26`, cold full
+  `931/931`, served identity plus lock `2/2`, validators `40/40`, builds
+  `212/53`, exact PBA/media identity, and isolated HTTP preflight pass.
+- Exactly one non-overlapping complete E2E passed in `91.8s` with
+  `credits:true` and `runtimeErrors:false`; its 69 incidental QA captures were
+  restored and the owned preview was stopped.
+- Live owner and actual active-element focus pass `80/80`, but the six
+  reconciliation checkboxes expose effective wrapping-label targets between
+  `19px` and `52.8px` high. Five are below the shell's exact `44x44 CSS px`
+  target contract in `ur30-all-reopened`, `ur30-reconciliation-blank`, and
+  `ur30-reconciliation-retry`.
+- `TD011-FIX-002 / REQUIRED CORRECTION` returns to Combat Engineer. No release,
+  push, master-control promotion, image action, board, or reveal occurred.
+  Second-review evidence is preserved at the top of artifact 10.
+
 ## Exact next action - active
 
-Run **Intelligence Officer / `intelligence_officer` fresh release review** only
-against the exact committed Combat correction, synchronized shell 05, Marine
-artifacts 06/07/08/08A/09, prior Intelligence return 10, current normal source
-and closed fixture, and `PBA-TD011-v1`. Independently verify
-`TD011-FIX-001`, then rerun the full release ladder from repository integrity
-through focused/full tests, all curriculum validators, production and fixture
-builds, exact PBA/media/served identity, isolated production preview and HTTP
-preflight, exactly one complete non-overlapping E2E, live `80/80` owner/actual-
-focus plus modal/four-layout/accessibility review, logs, hard stop, cleanup,
-variance classification, retrospective, master-control promotion, commit,
-push, and `HEAD == origin/main == remote main`. Do not reuse the rejected
-candidate's failed full-suite result or Combat's corrected pass as release
-proof. Image Specialist remains disabled and there is no image artifact or
-reveal: do not generate, edit, select, board, import, or reveal media. Do not
-inspect Martin's browser/profile/save, hidden lore, or protected untracked
+Run **Combat Engineer / `combat_engineer` target-geometry correction only**
+against the exact committed second Intelligence return. Correct only
+`TD011-FIX-002`: give every wrapping label in
+`.unborrowed-reconciliation fieldset` an effective minimum `44px` height while
+preserving native checkbox semantics, DOM order, labels, declared focus IDs,
+content, controller, evidence, save, route, world, return, LOOK, and hard stop.
+Add a direct regression for all six effective label targets in the three
+affected fixture states. The CSS change must remain inside the exact
+`114,010`-byte `PBA-TD011-v1` cap; no variance or quality reduction is
+authorized. Run the focused fixture/presentation tests, production build/PBA,
+and one fresh cold full `npm test`; create one dedicated Combat correction
+commit and hand directly to fresh Intelligence. Do not rerun the already-
+passing complete E2E at Combat and do not push. Image Specialist remains
+disabled: do not generate, edit, select, board, import, or reveal media. Do
+not inspect Martin's browser/profile/save, hidden lore, or protected untracked
 paths.
 
 ## Frozen boundaries
