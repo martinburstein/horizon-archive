@@ -7,547 +7,86 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- Latest release is **`TD-011 / PASS - AS BUILT RELEASED`** under shell
-  `SS-RP011-UNBORROWED-REACH-v1`, audited on product candidate
-  `8c8d0a4452d55017c54766d1845e618afa08c7d7`.
-- Released graph: `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30` through sole
-  fresh Pilot-owned `TD011-RTA-001`.
-- Six equal observations converge across all `720` orders; PY-019 and
-  agent-surface learning plus both explanations remain independent; fresh
-  finalization precedes all four retained scopes across all `24` orders; the
-  separate reconciliation and ordered 15-key two-checkpoint save remain
-  atomic, rollback-safe, and replay-free.
-- Hard stop: exact UR-30, exact Counterfield or City Threshold return, or
-  inert LOOK with `destination=null`, `routeOpened=false`, and
-  `successor=null`. No RP-012/ending route or successor is open.
+- Latest release remains **`TD-011 / PASS - AS BUILT RELEASED`** under
+  `SS-RP011-UNBORROWED-REACH-v1` on audited candidate `8c8d0a4...`.
+- Released graph is `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, followed
+  only by exact Counterfield or City Threshold returns or inert LOOK with
+  `destination=null`, `routeOpened=false`, and `successor=null`.
+- TD-011 final evidence remains focused `27/27`, full `932/932`, validators
+  `40/40`, production/fixture `212/53`, live `80/80`, targets `18/18`, exact
+  PBA/media/served identity, and one complete `91.8s` E2E.
 
-## Final independent release evidence
+## TD-012 candidate state - NOT RELEASED
 
-- Focused `27/27`; fresh cold full suite `932/932`; curriculum validators
-  `40/40`; production/fixture builds `212/53`; exact served/lock `2/2`.
-- Live review passes `80/80` owner/actual focus with zero effective-target,
-  containment, or overflow failures. All `18/18` reconciliation label/state
-  targets are at least `259.2x44 CSS px`; four presentation modes and both
-  native modal confirmations pass.
-- Exactly one complete E2E passed in `91.8s` with `credits:true` and
-  `runtimeErrors:false`. Final-candidate root/deep HTTP preflight and exact
-  index bytes pass. QA captures were restored and all owned ports are clear.
-- `PBA-TD011-v1` passes: JS `1,622,151` bytes /
-  `F9359D9039B8480DFEF2F09377FB2DF13C67B0DB34545828A1E1DF61186C8C0D`;
-  CSS `113,974` bytes /
-  `CB79913285EACCADEBB3CE36C57B72856E4623C3EF953D66FF9D60340D09BE5E`;
-  exact media `17 / 37,410,731`; zero new media; CSS headroom `36`.
-- `TD011-FIX-001/002` are closed required corrections. Quartermaster
-  content/control/modal/public-attribute work is accepted. The 36-byte CSS
-  margin is a deferred limitation; no unaccepted variance remains.
-
-## Image and reveal status
-
-TD-011 has no image artifact or cycle reveal because Image Specialist and all
-generation/edit/selection/board/import/reveal actions were disabled. The prior
-TD-010 accepted canonical-reference-only reveal remains unchanged:
-`Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`.
-It is `1672x941`, 24-bit RGB, `2,375,786` bytes, SHA-256
-`92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
-The reveal, provenance, checklist/ledger, canon, prompt log, demo record, and
-accepted Image evidence retain exact candidate byte identity and remain absent
-from source and `dist`. `selectedImageRoles: []`, and CSS remains TD-011's
-truthful runtime medium. No image generation, edit, replacement, variant,
-import, reveal, or runtime use is authorized.
-
-## Automation status - ACTIVE / THREE-HOUR CONTINUATION
-
-Martin explicitly resumed recurring Skyscraper production on 2026-08-09. The
-active workflow has ten sequential roles because the Image Specialist is
-disabled. The manual run owns the worktree until 3:00 PM New York time; the
-three-hour heartbeat resumes from the latest committed handoff at or after that
-boundary. Never overlap a stage or restart a completed stage.
-
-## Commandant checkpoint
-
-- `GDB-TD011-v1 / VISION BASELINE` verifies the stable whole-product promise
-  from synchronized TD-010 without selecting a packet, address, destination,
-  route, transition, or shell.
-- The Image Specialist, image generation/edit/import, boards, variants, and
-  cycle reveal remain disabled; premium presentation and independent release
-  validation remain required.
-- No Commandant reopen trigger, product contradiction, or protected-boundary
-  variance was found.
-
-## Colonel checkpoint
-
-- `WNMP-TD011-v1 / WORLD BASELINE` derives exactly one provisional
-  surface-safe candidate: an independent fresh-evidence record across an
-  unfamiliar exposed reach, followed only after finalization by a separate
-  method-and-limit reconciliation with four retained scopes.
-- `RP-011 / Unborrowed Reach / SC-12 / UR-00-UR-30` are protected planning
-  handles only. Nothing opens them or converts the CF-30 LOOK into a route.
-- Six equal surface responsibilities, ownership language, invariant-world
-  meaning, protected unknowns, RP-012 ending protection, and the disabled
-  Image Specialist/no-image/no-reveal boundary are locked.
-
-## Operations checkpoint
-
-- `CFS-TD011-v1 / FLOOR STACK READY - ROUTE AUTHORIZED` selects exact
-  `RP-011 / SC-12 / UR-00-UR-30` as the nearest mapped contiguous slice.
-- Sole `TD011-RTA-001` requires exact canonical normal RP-010 save/state and a
-  fresh Pilot-owned one-hit token; protected RP-010/RP-011 journeys, LOOK,
-  retained scopes, scenery, focus, timing, and Tour are rejected as routes.
-- The graph is `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, with separate
-  fresh-finalized and reconciliation-saved checkpoints, exact returns, and a
-  hard stop before RP-012/ending. Focused existing evidence passes `20/20`.
-
-## Science checkpoint
-
-- `VE-TD011-v1 / VIABILITY READY` independently verifies the complete route,
-  six observations/all `720` orders, independent strict PY-019 and
-  `AI901-D2-O4` chains, fresh-finalization-before-reopening, all four scopes/
-  `24` orders, separate exact reconciliation, and the UR-30 hard stop.
-- The exact durable record has 15 ordered private-free keys and only two valid
-  atomic checkpoints: `rp011_fresh_finalized` then
-  `rp011_reconciliation_saved`; canonical read-back, required predecessor-byte
-  equality, verified rollback, deterministic recovery, and replay-free restore
-  are mandatory.
-- Official Microsoft sources were reverified August 9. Focused `20/20`, all
-  curriculum self-tests `40/40`, full product `919/919`, fresh 209-module
-  build, exact accepted output identity, and executable budget baseline pass.
-- `PBA-TD011-v1` caps JS at `1,643,686`, CSS at `114,010`, and modules at
-  `219`; runtime media must remain exactly the accepted `17 / 37,410,731`
-  bytes with zero new files. Image generation/edit/board/import/reveal remains
-  disabled without weakening the presentation release gate.
-
-## Mission checkpoint
-
-- `SS-RP011-UNBORROWED-REACH-v1 / SHELL READY` reconciles all five strategic
-  contracts without conflict and is the sole TD-011 construction authority.
-- It freezes the normal identities, exact CF-30 route, UR-00-UR-30 graph,
-  state/group/owner/focus contracts, six observations/all `720` orders, both
-  independent learning chains and explanations, fresh-finalization-before-
-  reopening, four scopes/all `24` orders, exact reconciliation, ordered 15-key
-  two-checkpoint save, atomicity/recovery/restore, returns/LOOK, seven
-  modalities, four layouts, and exact UTF-8 public registry.
-- The exact fixture is `td011-unborrowed-reach-v1`: 80 closed storage-free
-  scenarios with shell-frozen rendered owner and actual focus IDs; it is absent
-  from production and accepts no arbitrary, URL, storage, file, network, or
-  protected state.
-- Runtime presentation is code-native CSS with `selectedImageRoles: []`, exact
-  accepted media unchanged, and no Image Specialist/generation/edit/board/
-  import/reveal work. The hard stop remains UR-30/returns/null LOOK before
-  RP-012 or ending content.
-
-## Reconnaissance checkpoint
-
-- `CT-RP011-UNBORROWED-LAMINAE-v1 / CREATIVE TREATMENT READY` fixes one
-  creative thesis: continuity without alignment in the invariant world;
-  custody through separation in the expedition interface.
-- The emotional sequence is quiet loss of analogy, equal close attention,
-  clean independent work, bounded return of history, and careful confidence
-  without a verdict. World lighting, audio, geometry, and local rhythms never
-  respond to progress.
-- Presentation is premium code-native CSS: oblique laminae, mineral foam,
-  salt-metal seams, ceramic anchors, accreted margins, and repair strata; one
-  active responsibility; sealed replica work; retained-record summaries;
-  individual reopening; single-column reconciliation. It rejects lateral
-  Counterfield districts, pairing/matching diagrams, terminals, locks, and
-  access/ending cues.
-- `selectedImageRoles: []`; no new audio/media or image/reveal work. No
-  variance is requested.
-
-## Tactical checkpoint
-
-- `XB-RP011-UNBORROWED-REACH-v1 / EXPERIENCE READY` maps the complete normal
-  graph from exact CF-30 route through UR-00, six equal observations, every
-  ordered UR-20 responsibility and recovery, fresh transaction, four-scope
-  reopening, single-column reconciliation, final transaction, restore,
-  returns, LOOK, Tour, and hard stop.
-- One stable DOM order supports world-first wide/laptop and one-column narrow/
-  200% zoom. Every group has one exact owner, heading, status, action set,
-  focus lifecycle, public/private boundary, transition, persistence edge, and
-  fixture hook; seven modalities converge through one semantic dispatcher.
-- The noninteractive CSS world uses deterministic oblique laminae while a
-  real equal button group owns observations. Save confirmations use contained
-  native dialogs; recovery is answer-free/blank; reopened records are complete
-  one at a time; reconciliation is never a matrix.
-- All 80 fixture rows are mapped to live rendered-owner/actual-focus proof.
-  No image/audio/media work or variance is authorized.
-
-## Combat checkpoint
-
-- `FUNCTIONAL BUILD READY` implements the complete normal
-  `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30` graph under exact shell
-  `SS-RP011-UNBORROWED-REACH-v1`, with no protected journey import.
-- Exact normal route and semantic seven-modality intents fail closed on stale,
-  malformed, unknown-option, private, Tour, protected, or predecessor-changed
-  input. All `720` observation orders and all `24` scope-reopen orders
-  converge with zero cross-credit.
-- PY-019 primary/trace/blank transfer, agent-surface primary/retrieval/transfer,
-  and both explanations remain independently scored. Recovery is answer-free,
-  clears private work, and reopens blank.
-- The ordered checksummed 15-key record accepts only
-  `rp011_fresh_finalized` then `rp011_reconciliation_saved`; canonical
-  read-back, exact Counterfield bytes, chained predecessor proof, verified
-  rollback/HOLD, replay-free restore, write-free returns, null LOOK, and
-  no-successor hard stop are implemented.
-- The responsive React/CSS surface is code-native and invariant with
-  `selectedImageRoles: []`. No media, image, board, generation, edit, import,
-  or reveal action occurred.
-- The exact closed fixture has 80 unique shell-authorized rows. Live browser
-  proof is `80/80` for visible owner and actual active-element focus; four
-  layouts pass one main/status, containment, and `>=44px` targets.
-- Validation: focused `9/9`, protected isolation `15/15`, full product
-  `928/928`, curriculum self-tests `40/40`, production/fixture builds
-  `212/53`, and served identity PASS. `PBA-TD011-v1 / release / PASS` at JS
-  `1,616,670`, CSS `112,614`, exact media `17 / 37,410,731`, zero new media.
-- Functional evidence is frozen in
-  `Production Pipeline/Skyscraper Test Drives/TD-011/08-FUNCTIONAL-BUILD-REPORT.md`.
-
-## Quartermaster checkpoint
-
-- `CONTENT COMPLETE` retires four public presentation shortcuts without
-  changing route, scoring, evidence, eligibility, persistence, restore,
-  return, LOOK, world, or hard-stop behavior.
-- Six equal observations now render the exact shell Scene lines and action
-  labels. Fresh review exposes eight separate responsibilities; custody states
-  expose hidden/reopened/read-only status and one complete active prior scope;
-  final review keeps five records and reconciliation separate; recovery shows
-  only actual public failed IDs/tags after private clearing.
-- The closed fixture now creates the same deterministic public blank form as
-  production. Every shell-declared textarea, select, checkbox, explanation,
-  and action focus target is a real control rather than a heading surrogate.
-- Save confirmations use native modal dialogs with exact save/cancel actions,
-  initial save focus, Escape-to-cancel, and no exposed outside returns while
-  open. Production exposes only stable public shell/controller/group/owner/
-  phase/fixture identities.
-- Validation: focused `10/10`, full product `930/930`, curriculum self-tests
-  `40/40`, production/fixture builds `212/53`, served identity PASS, live
-  owner/actual-focus `80/80`, modal and responsive samples PASS.
-- `PBA-TD011-v1 / release / PASS`: JS `1,622,151`, CSS `113,916`, modules
-  `212`, exact media `17 / 37,410,731`, zero new media. CSS headroom is only
-  `94` bytes and is an explicit independently enforced limitation.
-- Runtime remains code-native CSS with `selectedImageRoles: []`. Image
-  Specialist and every generation/edit/selection/board/import/reveal action
-  remain disabled. Evidence is frozen in
-  `Production Pipeline/Skyscraper Test Drives/TD-011/09-CONTENT-ASSET-LEDGER.md`.
+- Mission shell is `SS-RP012-MEASURED-HORIZON-v1` for exact
+  `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`, sole
+  `TD012-RTA-001`, 16 independent fresh gates, demonstrated-gap-only blank
+  recovery, two equal local outcomes, one ordered 16-key checkpoint, exact
+  returns, and null-successor hard stop.
+- Combat `FUNCTIONAL BUILD READY` is pushed at
+  `825416da4426cda1e0d195da254083e2c1d893c3`.
+- Quartermaster `CONTENT COMPLETE` candidate is the dedicated local commit
+  `f80ff79b671a683221eb7d860c409beb69a14eb0`, one commit ahead of remote.
+- Intelligence disposition is **`REVISE - RETURN TO COMBAT ENGINEER`**.
+  TD-012 is not released, and no master current control is promoted.
 
 ## Intelligence release return
 
-- Candidate `0b3a9a213ba359049f3e0b1828e3eb177f051632` is **not
-  released**. Independent normal+fixture+protected validation passed `25/25`,
-  but the first fresh cold full suite failed `2` served-identity rows and
-  finished `928/930`.
-- Both TD-010 and TD-011 tests observed zero production assets instead of
-  nineteen because they raced over the shared production `dist`. TD-010 uses
-  the accepted cross-process browser/build resource lock; TD-011 does not.
-- Each served-identity test passed `1/1` when run sequentially, isolating the
-  failure to test infrastructure rather than served bytes or gameplay.
-- `TD011-FIX-001` is a `REQUIRED CORRECTION` owned by Combat Engineer. Reuse
-  the existing shared lock around the entire TD-011 served-identity preview
-  sequence, guarantee release in `finally`, and add a direct source
-  regression. Do not change product source, fixture scenarios, content,
-  mechanics, media, shell, or budget.
-- Intelligence intentionally stopped before validators/build/PBA/preview/E2E/
-  live release review. Zero complete Intelligence E2E attempts were consumed,
-  no push occurred, and TD-010 remains the synchronized release.
-- Full evidence and the pending variance classifications are in
-  `Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md`.
-
-## Combat correction checkpoint
-
-- `TD011-FIX-001` is corrected without product or fixture-scenario change.
-  TD-011 served identity now acquires TD-010's accepted shared cross-process
-  browser/build resource lock before either preview and releases it once from
-  an outer `finally`.
-- Ports `4290/4291`, production/fixture root and deep checks, every asset hash,
-  `19/2` counts, timeouts, and inner preview cleanup remain exact.
-- A direct source regression proves shared import, acquisition before both
-  previews, outer-finally release, and exactly one acquire/release call.
-- Focused served identity + lock regression passes `2/2`. The first corrected-
-  candidate ordinary cold full suite passes `931/931`, including both TD-010
-  and TD-011 served identities with no command-level serialization.
-- No component, controller, CSS, content, fixture scenario, route, save, media,
-  shell, PBA, hard stop, image, board, or reveal changed. Correction evidence
-  is in `Production Pipeline/Skyscraper Test Drives/TD-011/08A-FUNCTIONAL-CORRECTION-REPORT.md`.
-
-## Second Intelligence checkpoint
-
-- `TD011-FIX-001` is independently closed: focused `26/26`, cold full
-  `931/931`, served identity plus lock `2/2`, validators `40/40`, builds
-  `212/53`, exact PBA/media identity, and isolated HTTP preflight pass.
-- Exactly one non-overlapping complete E2E passed in `91.8s` with
-  `credits:true` and `runtimeErrors:false`; its 69 incidental QA captures were
-  restored and the owned preview was stopped.
-- Live owner and actual active-element focus pass `80/80`, but the six
-  reconciliation checkboxes expose effective wrapping-label targets between
-  `19px` and `52.8px` high. Five are below the shell's exact `44x44 CSS px`
-  target contract in `ur30-all-reopened`, `ur30-reconciliation-blank`, and
-  `ur30-reconciliation-retry`.
-- `TD011-FIX-002 / REQUIRED CORRECTION` returns to Combat Engineer. No release,
-  push, master-control promotion, image action, board, or reveal occurred.
-  Second-review evidence is preserved at the top of artifact 10.
-
-## Second Combat correction checkpoint
-
-- `TD011-FIX-002` is corrected with one selector-only rule: every wrapping
-  reconciliation checkbox label has `min-height:44px`; native controls, DOM,
-  copy, focus, controller, route, save, world, and hard stop are unchanged.
-- Direct regression covers six effective labels in each of the three affected
-  fixture states. Live measurement passes `18/18`, minimum `259.2x44 CSS px`,
-  with declared owner/actual focus still PASS.
-- Focused normal/fixture/protected passes `26/26`; the first corrected-candidate
-  cold full suite passes `932/932`.
-- Production build remains `212` modules. JS is unchanged at `1,622,151`
-  bytes; CSS is `113,974 / 114,010` bytes with `36` bytes headroom; exact media
-  remains `17 / 37,410,731`. `PBA-TD011-v1` passes.
-- The passing complete E2E was not rerun at Combat. No image, board, media,
-  fixture scenario, shell, cap, or reveal changed. Evidence is at the top of
-  artifact 08A.
-
-## Final Intelligence release checkpoint
-
-- `TD-011 / SS-RP011-UNBORROWED-REACH-v1` is `PASS - AS BUILT RELEASED` on
-  audited product candidate `8c8d0a4452d55017c54766d1845e618afa08c7d7`.
-- Final independent evidence is `27/27`, `932/932`, validators `40/40`, builds
-  `212/53`, served/lock `2/2`, final HTTP preflight PASS, live `80/80`, target
-  `18/18`, four presentation modes, both modal confirms, exact PBA/media, and
-  the cycle's one passing `91.8s` complete E2E.
-- `TD011-FIX-001/002` are closed. Quartermaster improvements are accepted.
-  CSS headroom `36` is the sole bounded deferred limitation; no unaccepted
-  variance remains.
-- Master rail/work/process controls are promoted only from accepted evidence.
-  Image Specialist/reveal is not applicable and all image actions stayed
-  disabled. All owned processes and tabs are closed.
-
-## TD-012 Commandant hold
-
-- Stable product promise, audience, intended ending, quality bar, and protected
-  boundaries remain valid; no Commandant reopen trigger exists.
-- Guarded verification found four stale current-control surfaces:
-  `PLAYABLE_DEMO.md`, `PRODUCTION_READINESS_SPINE.md`,
-  `PACKET_SCOREBOARD.md`, and `CURRICULUM_SPINE.md` still describe TD-010 or
-  RP-011 planning while the synchronized release is TD-011/UR-30.
-- `GDB-TD012-HOLD-v1` classifies this as a release-reconciliation/master-
-  control sync defect and returns to Intelligence. No TD-012 candidate,
-  address, route, ending beat, shell, image, board, or reveal was selected.
-
-## TD-012 Intelligence control-sync checkpoint
-
-- `PLAYABLE_DEMO.md`, `PRODUCTION_READINESS_SPINE.md`,
-  `PACKET_SCOREBOARD.md`, and `CURRICULUM_SPINE.md` now agree with exact
-  released TD-011/UR-30 and the final as-built reconciliation.
-- Dated history and every RP-012/ending, learning, privacy, save, no-authority,
-  hard-stop, image-disabled, and protected-work boundary remain exact.
-- No product source, test, fixture, canon, route, shell, media, image, board,
-  reveal, or release identity changed. Evidence is in TD-012 artifact 01A.
-
-## TD-012 Commandant vision baseline
-
-- `GDB-TD012-v1 / VISION BASELINE` verifies the stable audience, player
-  promise, educational purpose, premium quality, intended ending, and current
-  released boundary after the control sync. No product reopen trigger exists.
-- RP-012 remains a separately protected cumulative readiness/intended-ending
-  mapping, not a route, readiness verdict, scene, ending beat, or shell.
-- Candidate, packet, scene, address, destination, route, transition, ending
-  content, shell, successor, reward, access, identity, authority, and world
-  response remain deliberately unselected.
-- Image Specialist, image generation/edit/selection/boards/imports, and cycle
-  reveal remain disabled without weakening presentation quality.
-
-## TD-012 Colonel world baseline
-
-- `WNMP-TD012-v1 / WORLD BASELINE` derives exactly one provisional
-  surface-safe candidate: an expedition-owned evidence-completeness review
-  using fresh independent cumulative work, exact answer-free recovery for
-  demonstrated gaps, and two equally dignified local learning outcomes.
-- `RP-012 / Measured Horizon / SC-13 / MH-00-MH-40` remain protected planning
-  handles only. They do not open a destination, route, ending beat, credits,
-  or shell, and no historic protected journey or coordinator evidence may
-  substitute for current Operations proof.
-- Five retained records plus separate reconciliation, evidence independence,
-  ownership language, equal-dignity recovery, privacy, invariant world,
-  no-exam/no-authority meaning, all central unknowns, intended-ending
-  protection, no successor, and the disabled Image Specialist boundary are
-  locked.
-
-## TD-012 Operations floor stack
-
-- `CFS-TD012-v1 / FLOOR STACK READY - ROUTE AUTHORIZED` selects exact
-  `RP-012 / SC-13 / MH-00-MH-40` as the sole nearest mapped contiguous slice.
-- Sole `TD012-RTA-001` requires exact canonical released normal UR-30
-  controller/save/state and a fresh Pilot-owned one-hit token. Protected
-  RP-011/RP-012 journey versions, LOOK, retained records, reconciliation,
-  scenery, focus, timing, Tour, historical saves, and credits state are
-  rejected as route authority.
-- The planning graph is
-  `UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`, with
-  separate eligibility, fresh forms, demonstrated-gap-only remediation,
-  local decision, and sole atomic readiness checkpoint.
-- Both local outcomes are recoverable and world-invariant. The hard stop is
-  verified MH-40, exact remediation/review, or a permitted return, with null
-  successor and no RP-013, onward route, post-ending content, or
-  Operations-defined credits behavior. Focused existing evidence passes
-  `10/10`.
-
-## TD-012 Science viability envelope
-
-- `VE-TD012-v1 / VIABILITY READY` independently verifies exact normal UR-30
-  entry, MH-00-MH-40, eligibility, cumulative Python, all 15 current AI-901
-  objectives, 16 independent fresh gates, demonstrated-gap-only answer-free
-  remediation, blank retries, and both equal-dignity local outcomes.
-- `rp012.measured-horizon-save.v1` has one ordered 16-key private-free
-  `rp012_readiness_saved` checkpoint with objective version/IDs, resolved
-  evidence references, gate booleans, remediation routes, local outcome, null
-  deltas/successor, checksum, read-back, predecessor equality, rollback, and
-  replay-free restore.
-- Microsoft-only sources were reverified August 9. Focused `10/10`, all
-  curriculum self-tests `40/40`, full product `932/932`, fresh 212-module
-  build, exact released TD-011 identity, and executable PBA baseline pass.
-- `PBA-TD012-v1` caps JS at `1,703,258`, CSS at `119,672`, and modules at
-  `222`; runtime media stays exactly `17 / 37,410,731` bytes with zero new
-  files. Image generation/edit/board/import/reveal remains disabled.
-
-## TD-012 Mission shell
-
-- `SS-RP012-MEASURED-HORIZON-v1 / SHELL READY` reconciles all five strategic
-  contracts without conflict and is the sole TD-012 construction authority.
-- It freezes exact normal UR-30 entry/rejected protected versions; the
-  MH-00-MH-40 graph; state/group/owner/focus and UTF-8 registry; exact
-  eligibility; cumulative Python plus 15 objective IDs and 16 independent
-  fresh gates; demonstrated-gap-only answer-free remediation; blank retry;
-  equal-dignity outcomes; and one ordered 16-key atomic checkpoint.
-- Privacy, checksum/read-back/rollback/predecessor equality, replay-free
-  restore, safe returns, seven modalities, four layouts, and exact closed
-  `td012-measured-horizon-v1` fixture with 58 production-absent owner/focus
-  scenarios are mandatory.
-- Presentation remains premium code-native CSS with `selectedImageRoles: []`,
-  exact accepted media unchanged, and no image/board/reveal work. Hard stop is
-  verified MH-40, review/remediation, or permitted return with null successor
-  and no RP-013, post-ending route, or invented credits/ending presentation.
-
-## TD-012 Reconnaissance treatment
-
-- `CT-RP012-HONEST-HORIZON-v1 / CREATIVE TREATMENT READY` fixes one thesis:
-  the world supplies no standard; the expedition holds an honest local datum.
-- Exact SC-12 laminae remain unchanged and indifferent. A code-native field
-  folio uses stable datum rules, separately bound records, one central fresh
-  leaf, exact remediation tabs, and identical outcome anatomy.
-- Emotional rhythm is gravity without ceremony, legible completeness, clean
-  fresh effort, precise recovery without shame, bounded confidence, and quiet
-  self-possession. Neither outcome gets spectacle or world response.
-- `selectedImageRoles: []`; no new audio/media/image/board/reveal work and no
-  variance.
-
-## TD-012 Tactical blueprint
-
-- `XB-RP012-MEASURED-HORIZON-v1 / EXPERIENCE READY` maps every normal state
-  from exact UR-30 route through MH-00, eligibility, fresh Python/objective
-  work, remediation/blank retry, decision, save/rollback/restore, returns,
-  Tour isolation, and null-successor hard stop.
-- One stable DOM order supports world-first wide/laptop and one-column narrow/
-  200% zoom. Each group has one exact owner, heading, status, action set,
-  focus lifecycle, public/private boundary, transition, persistence edge, and
-  fixture hook; seven modalities converge through one semantic dispatcher.
-- Exact 58 literal fixture IDs cover route/modalities/rejections, every one of
-  16 gate misses, fresh forms, remediation/retry, both outcomes, save states,
-  restore/returns, invalid state, and four presentation modes with live owner/
-  actual-focus proof.
-- Both outcomes use one common DOM/layout anatomy; the world, palette, motion,
-  audio, hierarchy, and save behavior are equal. `selectedImageRoles: []`; no
-  image/audio/media work or variance.
-
-## TD-012 Combat functional gate
-
-- `FUNCTIONAL BUILD READY` implements the exact released-normal UR-30 entry
-  through MH-00-MH-40, 16 independent fresh gates, demonstrated-gap-only
-  recovery, both common-anatomy outcomes, atomic save/read-back/rollback,
-  replay-free restore, safe returns, and the null-successor hard stop.
-- A direct real-controller/orchestrator regression proves accepted entry,
-  ready and not-yet, verified persistence, failure/rollback/retry, unverified
-  rollback `HOLD`, returns, stale/duplicate rejection, predecessor equality,
-  and null successor.
-- Final proof passes: focused `11/11`, related `16/16`, cold full `943/943`,
-  curriculum `40/40`, production/fixture builds `215/57`, PBA at JS
-  `1,656,606` / CSS `119,599` / media exactly `17 / 37,410,731`, fresh served
-  root/deep/asset identity, and one complete post-setup E2E in `125.8s` with
-  credits reached and zero runtime errors.
-- The isolated fixture proves `58/58` visible owner plus actual focus at each
-  of 1920x1080, 1366x768, 390x844, and effective 200 percent (`232/232`),
-  with zero duplicate IDs/overflow and exact equal-outcome geometry.
-- Five in-scope Combat defects were corrected: exact transient-field
-  allowlists, reachable not-yet route, one unique 44px-minimum submit control,
-  unique save focus IDs, and equal outcome height. No formal shell variance or
-  open functional defect remains; Intelligence retains final classification.
-- The initial E2E launch was a setup-only `ERR_CONNECTION_REFUSED` before page
-  load and executed no assertion. The sole complete run then passed and was
-  not rerun. Generated QA screenshots were restored exactly, all owned test
-  processes/tabs were closed, and no image/media/reveal action occurred.
-
-## TD-012 Quartermaster content gate
-
-- `CONTENT COMPLETE` replaces the generic multi-phase datum status with one
-  canonical shell-aligned status registry shared by production and all exact
-  58 fixture rows; exact MH-25 and MH-30 registry headings are restored.
-- The field folio now renders accepted RP-007 through RP-010 bounded public
-  custody rows, the separate RP-011 record, and the separate reconciliation;
-  current Python/objective eligibility and fresh-work zero-credit meaning stay
-  distinct. Outcome anatomy names objective version, five-record-plus-
-  reconciliation evidence basis, all 16 gates, remediation state, authority,
-  and null successor without changing scoring or recovery.
-- Focused `13/13`, fresh cold full `945/945`, curriculum `40/40`, and
-  production/fixture builds `215/57` pass. The exact 58-state live matrix
-  passes all four layouts (`232/232`) with owner/actual focus, unique IDs, one
-  main/status, no overflow/clipped reviewed text, and `>=44px` controls.
-- An initial copy-induced `20px` narrow outcome height delta was found and
-  corrected. Ready/not-yet decision and restore anatomy now has exact `0px`
-  width/height delta and identical presentation tokens at all four layouts.
-- `PBA-TD012-v1 / candidate / PASS`: JS `1,660,044`, CSS `119,599`, modules
-  `215`, exact media `17 / 37,410,731`, zero new. Fresh production and fixture
-  root/deep/JS/CSS served bytes equal disk; all owned tabs/processes/ports are
-  closed. CSS headroom is `73` bytes and remains independently enforced.
-- Runtime remains code-native CSS with `selectedImageRoles: []`. No image,
-  board, generation, edit, import, media addition, visual-reference byte
-  change, or reveal occurred. Full evidence and zero-addition asset ledger are
-  in TD-012 artifact 09.
+- Repository/parent/patch/object integrity passed; protected untracked work
+  remained unopened and untouched. Local `origin/main` and remote `main`
+  remain exact Combat `825416d`; no push occurred.
+- Focused TD-012 normal/fixture validation passed `13/13`, but direct probes
+  found three blocking validation defects:
+  - `TD012-FIX-006`: a checksummed restored record accepts READY with a false
+    gate and also accepts NOT YET with all sixteen gates true;
+  - `TD012-FIX-007`: a checksummed restored record accepts forged
+    `evidenceReferenceIds` instead of binding them to current canonical
+    eligibility; and
+  - `TD012-FIX-008`: route acceptance admits the 14-character token
+    `td012-aaaaaaaa` despite the shell's minimum of 16 characters.
+- `TD012-FIX-001` through `005` are closed required corrections pending final
+  release. Quartermaster status/heading/custody/outcome work is accepted
+  improvement pending final release. CSS headroom `73` is a deferred
+  limitation pending final release, never a cap waiver.
+- Cold full, validators, builds, PBA/media, served, and live release gates
+  stopped after the direct blocker. The cycle's sole complete passing `125.8s`
+  E2E is preserved honestly and was not rerun.
+- No preview/browser was opened; ports `4173`, `4184`, `4292`, `4293`, and
+  `5174` are clear. No QA capture, image, media, board, or reveal changed.
+- Full evidence is in TD-012 artifact 10.
 
 ## Exact next action - active
 
-Run a **new fresh Intelligence Officer / `intelligence_officer` independent
-TD-012 as-built reconciliation** against the exact dedicated Quartermaster
-checkpoint at `main` HEAD. Read shell 05 through ledger 09, current controls,
-the exact product/fixture source and candidate build evidence, PBA/media
-authority, and the Intelligence profile before acting. Do not use Combat or
-Quartermaster conclusions as proof.
+Run **Combat Engineer / `combat_engineer` only** against exact local candidate
+`f80ff79` and shell `SS-RP012-MEASURED-HORIZON-v1` to correct only
+`TD012-FIX-006/007/008`.
 
-Independently compare shell to build and classify all five Combat corrections,
-the Quartermaster status/heading/custody/outcome corrections, and the bounded
-73-byte CSS headroom. Reproduce proportionate route/learning/privacy/
-sanitation/save/rollback/restore/hard-stop, content/source/spoiler, fixture,
-accessibility/responsive/equal-outcome, full/build/PBA/media/served, stable-
-candidate, cleanup, and synchronization evidence. Use the cycle's passing E2E
-honestly and do not rerun it merely for more evidence.
+Enforce bidirectional coherence among all 16 gate booleans, exact remediation
+routes, and the two outcome strings; bind restored evidence-reference IDs to
+the exact current sanitized eligibility reference set in shell order; and
+enforce total route-token length `>=16`. Add direct negative regressions for
+both contradictory outcomes, forged/missing/extra/reordered references,
+15-character rejection, and exact 16-character acceptance.
 
-Issue exactly `PASS - AS BUILT RELEASED`, `REVISE`, or `HOLD`; update master
-controls only from accepted as-built evidence; replace this handoff with one
-synchronized exact next action; create the dedicated Intelligence release
-commit, push only on release, and verify remote equality. Do not use Martin's
-browser/profile/save, open hidden lore, touch protected untracked paths,
-perform image/board/media/reveal work, or expose RP-013, successor, invented
-credits/ending extension, world response, or post-ending content.
+Preserve route ownership/modalities, exact ordered 16-key schema/checksum,
+predecessor equality, rollback/`HOLD`, replay-free restore, all 58 fixture IDs,
+copy, DOM/focus/CSS, equal outcomes, media/PBA, invariant world, returns, and
+null successor. Run focused normal/fixture tests, one fresh cold full suite,
+production/fixture builds, and candidate PBA. Do not rerun the complete E2E.
+Create one dedicated Combat correction commit, push only if the Combat gate
+passes under workflow authority, verify synchronization, and return directly
+to a **new fresh Intelligence Officer**. Quartermaster re-review is unnecessary
+unless rendered content, DOM, focus, CSS, or fixture declarations change.
 
 ## Frozen boundaries
 
-- TD-011 is released only through UR-30 and the exact returns/null LOOK above.
-- `TD012-RTA-001` is implemented in the synchronized Combat functional
-  candidate at `main` HEAD from exact released UR-30. It has passed Combat and
-  Quartermaster gates but is not released authority until Intelligence accepts
-  it.
-  No successor, RP-013, hidden lore, identity, reward, access, authority,
-  world response, ending extension, Operations-defined credits behavior, or
-  post-ending content is selected or authorized.
-- Never generate, edit, replace, or alter the exact accepted reference PNG.
-- The Image Specialist and cycle reveal are disabled. Do not call image
-  generation, edit or create boards, create variants or replacements, import
-  new images, or publish a reveal. Quartermaster hands directly to Intelligence.
-- Never open hidden lore or inspect/mutate Martin's browser/profile/save.
+- No RP-013, successor, post-ending route/content, hidden lore, invented
+  credits/ending extension, identity, reward, access, authority, external
+  action, world response, or protected-journey import.
+- Image Specialist and cycle reveal are disabled. Do not generate, edit,
+  replace, vary, import, or publish an image, board, media asset, or reveal.
+  Existing accepted visual-reference bytes remain immutable.
+- Never inspect or mutate Martin's browser/profile/save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
 - The archived two-team workflow remains inactive.

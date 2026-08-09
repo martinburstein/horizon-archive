@@ -199,6 +199,26 @@
       "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/reveal; no accepted visual-reference bytes changed",
       "hardStop": "verified MH-40, exact review/remediation or permitted return; null successor and no RP-013/post-ending authority",
       "nextStage": "fresh Intelligence Officer independent as-built reconciliation"
+    },
+    {
+      "sequence": 12,
+      "stage": "Intelligence Officer independent release return",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-09T15:42:09-04:00",
+      "endedAt": "2026-08-09T15:48:24-04:00",
+      "durationMs": 375000,
+      "disposition": "REVISE - RETURN TO COMBAT ENGINEER",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/10-AS-BUILT-RECONCILIATION.md",
+      "candidate": "f80ff79b671a683221eb7d860c409beb69a14eb0",
+      "combatCheckpoint": "825416da4426cda1e0d195da254083e2c1d893c3",
+      "repository": "HEAD and parent exact; origin/main and remote main remain Combat 825416d; patch/object integrity PASS; protected untracked work untouched",
+      "focusedValidation": "13/13 TD-012 normal and fixture PASS",
+      "blockingReproduction": "sanitizer accepts READY with a false gate, NOT YET with all gates true, and correctly checksummed forged evidence references; route predicate accepts a 14-character token below shell minimum",
+      "variances": "TD012-FIX-001 through 005 closed pending release; Quartermaster content corrections accepted pending release; TD012-FIX-006/007/008 REQUIRED CORRECTION owned by Combat; 73 CSS bytes DEFERRED LIMITATION pending release",
+      "stoppedGates": "cold full, validators, builds, PBA/media, served, live review and release sync intentionally stopped after direct blocking contract proof",
+      "e2e": "cycle's sole complete 125.8s passing E2E preserved and not rerun",
+      "cleanup": "no browser or preview opened; ports 4173/4184/4292/4293/5174 clear; no QA or image/reveal action",
+      "nextStage": "Combat Engineer only for TD012-FIX-006/007/008"
     }
   ]
 }
