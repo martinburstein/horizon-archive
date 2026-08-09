@@ -59,8 +59,8 @@ surface, and the literal storage-free 58-scenario fixture.
   visible owner and a real declared focus target in SSR; production absence
   and closed external-input boundaries pass. A direct source regression keeps
   route, restore, fresh adapter construction, dispatcher, and renderer wired.
-- Fresh full suite after integration: **`941/941`**, zero failures, in
-  `13.174s`.
+- Fresh cold full suite after the final wiring regression: **`942/942`**, zero
+  failures, in `14.934s`.
 - Product build: `215` modules, success in `6.33s`.
 - Fixture build: `57` modules, success in `0.728s`.
 - `PBA-TD012-v1 / candidate`: PASS. Product JS `1,656,007` bytes / SHA-256
