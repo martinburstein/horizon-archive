@@ -253,23 +253,41 @@ boundary. Never overlap a stage or restart a completed stage.
 - Full evidence and the pending variance classifications are in
   `Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md`.
 
+## Combat correction checkpoint
+
+- `TD011-FIX-001` is corrected without product or fixture-scenario change.
+  TD-011 served identity now acquires TD-010's accepted shared cross-process
+  browser/build resource lock before either preview and releases it once from
+  an outer `finally`.
+- Ports `4290/4291`, production/fixture root and deep checks, every asset hash,
+  `19/2` counts, timeouts, and inner preview cleanup remain exact.
+- A direct source regression proves shared import, acquisition before both
+  previews, outer-finally release, and exactly one acquire/release call.
+- Focused served identity + lock regression passes `2/2`. The first corrected-
+  candidate ordinary cold full suite passes `931/931`, including both TD-010
+  and TD-011 served identities with no command-level serialization.
+- No component, controller, CSS, content, fixture scenario, route, save, media,
+  shell, PBA, hard stop, image, board, or reveal changed. Correction evidence
+  is in `Production Pipeline/Skyscraper Test Drives/TD-011/08A-FUNCTIONAL-CORRECTION-REPORT.md`.
+
 ## Exact next action - active
 
-Run **Combat Engineer / `combat_engineer` correction only** against the exact
-committed Intelligence return. Correct only `TD011-FIX-001`: make
-`review-fixtures/td011-unborrowed-reach/servedIdentity.test.js` acquire the
-already accepted shared cross-process browser/build resource lock before
-opening either preview and release it in a top-level `finally`. Preserve exact
-ports, root/deep checks, all chunk/media hashes, `19/2` counts, timeouts, and
-preview cleanup. Add one direct source-level regression proving acquisition
-and guaranteed release. Change no production component/controller/CSS,
-fixture scenario, shell/content/mechanics/save/route/media/PBA/hard-stop
-contract. Run the focused served-identity/regression command and then one fresh
-cold full `npm test`; create one dedicated Combat correction commit and hand
-directly to a fresh Intelligence release review. Do not push or run the
-complete E2E at Combat. Image Specialist remains disabled: do not generate,
-edit, select, board, import, or reveal media. Do not inspect Martin's browser/
-profile/save, hidden lore, or the protected untracked paths.
+Run **Intelligence Officer / `intelligence_officer` fresh release review** only
+against the exact committed Combat correction, synchronized shell 05, Marine
+artifacts 06/07/08/08A/09, prior Intelligence return 10, current normal source
+and closed fixture, and `PBA-TD011-v1`. Independently verify
+`TD011-FIX-001`, then rerun the full release ladder from repository integrity
+through focused/full tests, all curriculum validators, production and fixture
+builds, exact PBA/media/served identity, isolated production preview and HTTP
+preflight, exactly one complete non-overlapping E2E, live `80/80` owner/actual-
+focus plus modal/four-layout/accessibility review, logs, hard stop, cleanup,
+variance classification, retrospective, master-control promotion, commit,
+push, and `HEAD == origin/main == remote main`. Do not reuse the rejected
+candidate's failed full-suite result or Combat's corrected pass as release
+proof. Image Specialist remains disabled and there is no image artifact or
+reveal: do not generate, edit, select, board, import, or reveal media. Do not
+inspect Martin's browser/profile/save, hidden lore, or protected untracked
+paths.
 
 ## Frozen boundaries
 

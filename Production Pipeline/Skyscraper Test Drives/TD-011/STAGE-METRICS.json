@@ -234,6 +234,26 @@
       "commit": "PENDING_INTELLIGENCE_RETURN_COMMIT",
       "commitConvention": "The dedicated Intelligence return commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "nextStage": "Combat Engineer correction"
+    },
+    {
+      "sequence": 11,
+      "stage": "Combat Engineer correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-09T13:25:21-04:00",
+      "endedAt": "2026-08-09T13:27:33-04:00",
+      "durationMs": 132000,
+      "disposition": "CORRECTED - INTELLIGENCE RE-REVIEW READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/08A-FUNCTIONAL-CORRECTION-REPORT.md",
+      "startingAuthority": "Intelligence return commit c92f384",
+      "correction": "TD011-FIX-001; TD-011 served identity now acquires the accepted shared TD-010 browser/build resource lock across both previews and releases from outer finally",
+      "regression": "source-level lock regression proves shared import, acquisition before production/fixture previews, guaranteed outer-finally release and exactly one acquire/release",
+      "focused": "served identity plus lock regression 2/2 PASS",
+      "fullSuite": "first corrected-candidate cold ordinary npm test 931/931 PASS; both TD-010 and TD-011 served identities pass without command-level serialization",
+      "scope": "test infrastructure only; zero production/component/controller/CSS/fixture-scenario/content/route/save/media/PBA/hard-stop change",
+      "cleanup": "ports 4288/4289/4290/4291 clear",
+      "commit": "PENDING_COMBAT_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "nextStage": "Intelligence Officer fresh release review"
     }
   ]
 }

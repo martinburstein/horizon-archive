@@ -5,6 +5,7 @@ import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { preview } from "vite";
+import { acquireTd010BrowserResource } from "../td010-counterfield/browserResourceLock.js";
 
 const gameRoot = fileURLToPath(new URL("../../", import.meta.url));
 const fixtureConfig = fileURLToPath(new URL("./vite.config.js", import.meta.url));
@@ -19,8 +20,13 @@ async function verifyServedTree({ server, localRoot, baseUrl }) {
 }
 
 test("TD011 production and closed fixture serve exact fresh-build bytes", { timeout: 120_000 }, async () => {
-  const production = await preview({ root: gameRoot, logLevel: "error", preview: { host: "127.0.0.1", port: 4290, strictPort: true } });
-  try { assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4290" }), 19); } finally { await closePreview(production); }
-  const fixture = await preview({ configFile: fixtureConfig, logLevel: "error", preview: { host: "127.0.0.1", port: 4291, strictPort: true } });
-  try { assert.equal(await verifyServedTree({ server: fixture, localRoot: join(gameRoot, "review-fixtures", "td011-unborrowed-reach", "dist"), baseUrl: "http://127.0.0.1:4291" }), 2); } finally { await closePreview(fixture); }
+  const releaseBrowserResource = await acquireTd010BrowserResource();
+  try {
+    const production = await preview({ root: gameRoot, logLevel: "error", preview: { host: "127.0.0.1", port: 4290, strictPort: true } });
+    try { assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4290" }), 19); } finally { await closePreview(production); }
+    const fixture = await preview({ configFile: fixtureConfig, logLevel: "error", preview: { host: "127.0.0.1", port: 4291, strictPort: true } });
+    try { assert.equal(await verifyServedTree({ server: fixture, localRoot: join(gameRoot, "review-fixtures", "td011-unborrowed-reach", "dist"), baseUrl: "http://127.0.0.1:4291" }), 2); } finally { await closePreview(fixture); }
+  } finally {
+    releaseBrowserResource();
+  }
 });
