@@ -1,3 +1,69 @@
+# TD-011 Intelligence Officer As-Built Reconciliation - Final Release
+
+Date: **2026-08-09**
+Role: **Intelligence Officer / independent release authority**
+Shell: **`SS-RP011-UNBORROWED-REACH-v1`**
+Audited product candidate: **`8c8d0a4452d55017c54766d1845e618afa08c7d7`**
+Disposition: **`PASS - AS BUILT RELEASED`**
+
+## Final release decision
+
+TD-011 is released. `TD011-FIX-001` and `TD011-FIX-002` are independently
+closed without changing the shell, canon, learning, persistence, route,
+world, media, or hard stop. The exact released graph is
+`CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, entered only through
+`TD011-RTA-001`, followed only by the exact Counterfield or City Threshold
+returns or destinationless LOOK.
+
+## Final independent release evidence
+
+- Repository/patch/object integrity passed on exact product candidate
+  `8c8d0a4`; protected untracked work remained untouched.
+- Focused normal/fixture/protected/lock validation passed `27/27`; the fresh
+  Intelligence-owned full suite passed `932/932`; all curriculum validator
+  self-tests passed `40/40`.
+- Production/fixture builds passed `212/53` modules. Exact served identity and
+  lock regression passed `2/2`. Isolated final-candidate root and deep HTTP
+  preflight returned `200` and exact production `index.html` bytes.
+- `PBA-TD011-v1` passes: JS `1,622,151` bytes / SHA-256
+  `F9359D9039B8480DFEF2F09377FB2DF13C67B0DB34545828A1E1DF61186C8C0D`;
+  CSS `113,974` bytes / SHA-256
+  `CB79913285EACCADEBB3CE36C57B72856E4623C3EF953D66FF9D60340D09BE5E`;
+  exact media `17 / 37,410,731`; zero new runtime media; CSS headroom `36`.
+- The cycle's one complete non-overlapping E2E passed in `91.8s`, reached
+  credits, and reported `runtimeErrors:false`. It was not repeated after the
+  selector-only RP-011 target correction because no E2E-affecting behavior or
+  traversed surface changed; 69 incidental QA captures were restored.
+- Final live closed-fixture review passed all `80/80` declared owner and actual
+  active-element focus contracts, one main/status, effective target geometry,
+  containment, and zero horizontal overflow. All `18/18` reconciliation
+  label/state measurements are at least `259.2x44 CSS px`; the four explicit
+  presentation modes pass. Both save confirmations are native modal dialogs
+  with exact initial focus, two exact actions, and no exposed outside returns.
+- The UR-30 hard stop, returns, null LOOK, no successor, no authority/world
+  response, privacy, sanitation, atomic two-checkpoint save, rollback,
+  replay-free restore, six-observation `720` orders, and four-scope `24`
+  reopening orders remain exact.
+- All owned browser tabs and listeners were closed. Ports `4173`, `4181`,
+  `4182`, `4183`, `4288`, `4289`, `4290`, `4291`, and `5174` are clear.
+
+## Final variance disposition
+
+| ID / variance | Final classification | Evidence |
+| --- | --- | --- |
+| `TD011-FIX-001` shared served-identity lock | `CLOSED REQUIRED CORRECTION` | Cold `932/932`; served/lock `2/2`; no race or orphan. |
+| `TD011-FIX-002` effective reconciliation targets | `CLOSED REQUIRED CORRECTION` | Direct regression plus live `18/18`, minimum `259.2x44`. |
+| Exact content, real-control focus, native modal confirmation, stable public validation attributes | `ACCEPTED IMPROVEMENT` | `27/27`, live `80/80`, modal and privacy checks pass inside shell intent. |
+| CSS headroom `36` bytes | `DEFERRED LIMITATION` | Truthful non-blocking release margin; future work gets no rolling entitlement or cap waiver. |
+
+No unaccepted, unauthorized, or hidden variance remains. Master promotion is
+limited to this accepted as-built graph and evidence. Image Specialist,
+generation, editing, selection, boards, imports, and cycle reveal remained
+disabled; reveal acceptance is **not applicable**, and no image artifact was
+created or shown.
+
+## Preserved second release return
+
 # TD-011 Intelligence Officer As-Built Reconciliation - Second Release Return
 
 Date: **2026-08-09**

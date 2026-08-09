@@ -1,5 +1,28 @@
 # Horizon Archive Story Rail Map
 
+## TD-011 Intelligence release current control - 2026-08-09
+
+- **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-011 /
+  SS-RP011-UNBORROWED-REACH-v1`; exact released TD-010 CF-30 through sole
+  fresh Pilot-owned `TD011-RTA-001` into complete
+  `RP-011 / SC-12 / UR-00-UR-30`.
+- **Graph:** `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, then only exact
+  Counterfield or City Threshold returns; invalid state fails closed.
+- **Released evidence:** six equal observations in all `720` orders;
+  independent strict PY-019 and agent-surface learning plus explanations;
+  fresh finalization before all four retained scopes in all `24` orders;
+  separate exact reconciliation; ordered atomic 15-key two-checkpoint save;
+  verified rollback and replay-free restore.
+- **Presentation/release:** code-native zero-new-media surface; live `80/80`
+  owner/actual focus; all effective controls at least `44x44 CSS px`; native
+  modal confirmations; full `932/932`; validators `40/40`; exact PBA and
+  served identity; one passing complete E2E. Image Specialist and reveal were
+  disabled.
+- **Stop:** UR-30, either exact return, or inert LOOK with
+  `destination=null`, `routeOpened=false`, and `successor=null`. No RP-012
+  route, ending content, RP-013, successor, authority, response, or world
+  effect is open.
+
 ## TD-010 Intelligence release current control - 2026-08-01
 
 - **Authoritative release / position:** `PASS - AS BUILT RELEASED / TD-010 /

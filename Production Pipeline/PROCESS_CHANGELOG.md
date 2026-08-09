@@ -6,6 +6,33 @@
 - Each cycle records `KEEP`, `TUNE`, or `REDESIGN` with evidence and any future-cycle changes.
 - Process adaptation may improve throughput, clarity, validation placement, model routing, checkpointing, scheduling, and artifact organization without weakening product, canon, learning, privacy, accessibility, release, or user-work protections. Image generation and cycle reveals are disabled by Martin's 2026-08-09 instruction.
 
+## 2026-08-09 / TD-011 Intelligence release - TUNE
+
+- **Observed:** the ten-role no-image workflow completed the full RP-011 slice,
+  but independent release required two bounded corrections. The first cold
+  aggregate exposed a new served-identity test that did not join the accepted
+  cross-process build/browser lock. After that correction, live review found
+  that element-only target checks missed five wrapping checkbox labels below
+  the shell's `44px` effective-target minimum. Final release passed `932/932`,
+  validators `40/40`, live `80/80`, corrected targets `18/18`, exact PBA, and
+  one complete E2E.
+- **Decision:** `TUNE`. Every new served-identity test must acquire the shared
+  browser/build resource lock before it first lands. Combat and Quartermaster
+  target audits must measure the effective activation target, including a
+  wrapping label for native checkbox/radio controls, in every affected closed
+  fixture state. Keep the independent live audit and single E2E rule.
+- **Expected benefit:** resource races and native-control geometry defects fail
+  at their owning Marine stage while Intelligence remains an independent backstop.
+- **Preserved guardrails:** sequential ten-role ownership, versioned shell,
+  exact learning/privacy/save/route/world contracts, PBA, independent release,
+  protected user work, disabled Image Specialist, and no cycle reveal.
+- **Validation:** TD-012 must add no unshared preview resource; any native
+  checkbox/radio surface must prove effective `>=44x44 CSS px` labels before
+  Quartermaster handoff; Intelligence still repeats the complete release ladder.
+- **Rollback trigger:** shared locking deadlocks or masks product failures,
+  effective-target measurement misidentifies the true activation surface, or
+  the tune reduces release evidence or accessibility coverage.
+
 ## 2026-08-09 / Skyscraper production restart - TUNE
 
 - **Observed:** Martin resumed the Skyscraper workflow for sustained manual and

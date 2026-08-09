@@ -1,5 +1,33 @@
 # Horizon Archive Game Work Log
 
+## 2026-08-09 - Intelligence Officer: TD-011 as-built release
+
+- **Disposition:** `PASS - AS BUILT RELEASED / TD-011 /
+  SS-RP011-UNBORROWED-REACH-v1` on audited product candidate
+  `8c8d0a4452d55017c54766d1845e618afa08c7d7`.
+- **Independent gate:** focused `27/27`; full `932/932`; curriculum validators
+  `40/40`; production/fixture builds `212/53`; exact served/lock `2/2`;
+  final root/deep HTTP preflight; live `80/80`; modal/four-mode presentation;
+  one preserved passing complete E2E in `91.8s`, credits reached,
+  `runtimeErrors:false`.
+- **Released identity:** JS `1,622,151` bytes,
+  `F9359D9039B8480DFEF2F09377FB2DF13C67B0DB34545828A1E1DF61186C8C0D`;
+  CSS `113,974` bytes,
+  `CB79913285EACCADEBB3CE36C57B72856E4623C3EF953D66FF9D60340D09BE5E`;
+  exact `17 / 37,410,731` predecessor media; zero new runtime media; 36 CSS
+  bytes headroom under `PBA-TD011-v1`.
+- **Resolved corrections:** `TD011-FIX-001` shares the accepted browser/build
+  lock; `TD011-FIX-002` gives all six effective reconciliation checkbox labels
+  at least `44px` height. Direct and live `18/18` target evidence passes.
+  Quartermaster copy/control/modal/public-attribute work is accepted inside
+  shell intent. The remaining 36-byte CSS margin is a bounded future
+  limitation, not an entitlement.
+- **Boundary:** `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, then only exact
+  Counterfield/City Threshold returns or inert null LOOK. RP-012/ending,
+  RP-013, successor, identity, access, reward, authority, external action, and
+  world response remain closed. Image Specialist and cycle reveal remained
+  disabled; no image generation, edit, board, import, or reveal occurred.
+
 ## 2026-08-01 - Intelligence Officer: TD-010 as-built release
 
 - **Disposition:** `PASS - AS BUILT RELEASED / TD-010 /

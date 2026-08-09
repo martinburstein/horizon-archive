@@ -7,55 +7,53 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- Latest release is **`TD-010 / PASS - AS BUILT RELEASED`** under shell
-  `SS-RP010-COUNTERFIELD-v1`, audited on candidate
-  `c79880d4460c52fab06b7a884448d0fd9f04427c`.
-- Released graph: `OF-30 -> CF-00 -> CF-10 -> CF-20 -> CF-30` through sole
-  `TD010-RTA-001`.
-- Seven equal observation modalities converge across all `5,040` orders;
-  PY-018 and client-flow learning remain independent; both explanations and
-  all four retained scopes remain required; the exact sanitized 13-key/eight-
-  evidence save remains atomic and replay-free.
-- Hard stop: exact CF-30, exact Occluded Fold or City Threshold return, or
+- Latest release is **`TD-011 / PASS - AS BUILT RELEASED`** under shell
+  `SS-RP011-UNBORROWED-REACH-v1`, audited on product candidate
+  `8c8d0a4452d55017c54766d1845e618afa08c7d7`.
+- Released graph: `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30` through sole
+  fresh Pilot-owned `TD011-RTA-001`.
+- Six equal observations converge across all `720` orders; PY-019 and
+  agent-surface learning plus both explanations remain independent; fresh
+  finalization precedes all four retained scopes across all `24` orders; the
+  separate reconciliation and ordered 15-key two-checkpoint save remain
+  atomic, rollback-safe, and replay-free.
+- Hard stop: exact UR-30, exact Counterfield or City Threshold return, or
   inert LOOK with `destination=null`, `routeOpened=false`, and
-  `successor=null`. No direct Offset Reach shortcut is added; it remains
-  reachable only through the existing Occluded Fold return.
+  `successor=null`. No RP-012/ending route or successor is open.
 
 ## Final independent release evidence
 
-- Focused `13/13` in `7.100s`; focused+related distinct `203/203`; fresh cold
-  full suite `919/919` in `17.003s`; mappings `11/11`; readiness `15/15`.
-- Production/fixture builds `209/52` modules; all `66/66` rendered owner/
-  actual-focus contracts, 22 genuine normal registry rows, eight recovery
-  responsibilities, and five shell-parsed exact UTF-8 samples pass at DPR-1
-  `1920x1080`, `1366x768`, `390x844`, and `768x900`.
-- Exact served identity and automated release passed. Exactly one coordinator
-  E2E passed in `74.708s` with `credits:true` and `runtimeErrors:false`; it was
-  not rerun. Owned QA captures were restored, the preview was stopped, and all
-  owned ports are clear.
-- `PBA-TD010-v1` passes: JS `1,565,416` bytes /
-  `7830B6991BB05FD7DCFFC9A409B4A5AD965523DF23A88964FBD17CF1DA34882E`;
-  CSS `108,581` bytes /
-  `391C3F719141A3D9FF145719C1FDFD4E1010BC8161EF2B2989CF0D2A8EBB4C0A`;
-  exact predecessor media `17 / 37,410,731`; zero new runtime media.
-- `TD010-FIX-001/002/003/004/005` are resolved required corrections. Fixture
-  h1 containment, shell-derived verification, test-only resource locking/static
-  fixture serving, CSS/retired runtime roles, and the exact reference-only
-  reveal are accepted improvements. Prior browser contention is resolved and
-  retired; no current limitation or unaccepted variance remains.
+- Focused `27/27`; fresh cold full suite `932/932`; curriculum validators
+  `40/40`; production/fixture builds `212/53`; exact served/lock `2/2`.
+- Live review passes `80/80` owner/actual focus with zero effective-target,
+  containment, or overflow failures. All `18/18` reconciliation label/state
+  targets are at least `259.2x44 CSS px`; four presentation modes and both
+  native modal confirmations pass.
+- Exactly one complete E2E passed in `91.8s` with `credits:true` and
+  `runtimeErrors:false`. Final-candidate root/deep HTTP preflight and exact
+  index bytes pass. QA captures were restored and all owned ports are clear.
+- `PBA-TD011-v1` passes: JS `1,622,151` bytes /
+  `F9359D9039B8480DFEF2F09377FB2DF13C67B0DB34545828A1E1DF61186C8C0D`;
+  CSS `113,974` bytes /
+  `CB79913285EACCADEBB3CE36C57B72856E4623C3EF953D66FF9D60340D09BE5E`;
+  exact media `17 / 37,410,731`; zero new media; CSS headroom `36`.
+- `TD011-FIX-001/002` are closed required corrections. Quartermaster
+  content/control/modal/public-attribute work is accepted. The 36-byte CSS
+  margin is a deferred limitation; no unaccepted variance remains.
 
-## Accepted cycle reveal
+## Image and reveal status
 
-The one accepted TD-010 reveal is release-authorized, canonical-reference-only,
-and unchanged:
+TD-011 has no image artifact or cycle reveal because Image Specialist and all
+generation/edit/selection/board/import/reveal actions were disabled. The prior
+TD-010 accepted canonical-reference-only reveal remains unchanged:
 `Visual Direction/Production Masters/2026-08-01-rp010-stewardship-without-standardization-reveal/rp010-stewardship-without-standardization-reveal-v1.png`.
 It is `1672x941`, 24-bit RGB, `2,375,786` bytes, SHA-256
 `92062AC98CC72A1EDDF3075777662152216403BF5327C749F2B79924EF1F8B4E`.
 The reveal, provenance, checklist/ledger, canon, prompt log, demo record, and
 accepted Image evidence retain exact candidate byte identity and remain absent
-from source and `dist`. Both conditional runtime image roles remain retired,
-`selectedImageRoles: []`, and CSS remains the truthful runtime medium. No image
-generation, edit, replacement, variant, import, or runtime use is authorized.
+from source and `dist`. `selectedImageRoles: []`, and CSS remains TD-011's
+truthful runtime medium. No image generation, edit, replacement, variant,
+import, reveal, or runtime use is authorized.
 
 ## Automation status - ACTIVE / THREE-HOUR CONTINUATION
 
@@ -304,27 +302,38 @@ boundary. Never overlap a stage or restart a completed stage.
   fixture scenario, shell, cap, or reveal changed. Evidence is at the top of
   artifact 08A.
 
+## Final Intelligence release checkpoint
+
+- `TD-011 / SS-RP011-UNBORROWED-REACH-v1` is `PASS - AS BUILT RELEASED` on
+  audited product candidate `8c8d0a4452d55017c54766d1845e618afa08c7d7`.
+- Final independent evidence is `27/27`, `932/932`, validators `40/40`, builds
+  `212/53`, served/lock `2/2`, final HTTP preflight PASS, live `80/80`, target
+  `18/18`, four presentation modes, both modal confirms, exact PBA/media, and
+  the cycle's one passing `91.8s` complete E2E.
+- `TD011-FIX-001/002` are closed. Quartermaster improvements are accepted.
+  CSS headroom `36` is the sole bounded deferred limitation; no unaccepted
+  variance remains.
+- Master rail/work/process controls are promoted only from accepted evidence.
+  Image Specialist/reveal is not applicable and all image actions stayed
+  disabled. All owned processes and tabs are closed.
+
 ## Exact next action - active
 
-Run **Intelligence Officer / `intelligence_officer` final release review**
-against the exact committed second Combat correction. Independently verify
-`TD011-FIX-002`, all six effective targets across the three affected states,
-exact `80/80` owner/actual focus, modal/four-layout/accessibility behavior,
-focused/full tests, validators, production and fixture builds, exact
-PBA/media/served identity, isolated production preview/HTTP preflight, logs,
-hard stop, cleanup, variance closure, retrospective, master-control promotion,
-commit, push, and `HEAD == origin/main == remote main`. Preserve the cycle's
-already-passing single complete E2E as evidence and do not rerun it merely for
-more evidence; rerun only if the independent audit finds a new E2E-affecting
-reason. Image Specialist remains disabled and there is no image artifact or
-reveal: do not generate, edit, select, board, import, or reveal media. Do not
-inspect Martin's browser/profile/save, hidden lore, or protected untracked
-paths.
+Run **Commandant / `commandant` guarded TD-012 whole-product verification**
+only from the exact synchronized TD-011 release. Verify the stable product
+promise, intended-ending protection, current player promise, portfolio-level
+contradictions, and reopen triggers without selecting a packet, scene,
+address, route, transition, ending beat, shell, successor, reward, access,
+identity, authority, or world response. Issue one versioned TD-012 vision
+baseline or an evidence-backed HOLD and hand only to Colonel. Image Specialist
+remains disabled: do not generate, edit, select, board, import, or reveal
+media. Do not inspect Martin's browser/profile/save, hidden lore, or protected
+untracked paths.
 
 ## Frozen boundaries
 
-- TD-010 is released only through CF-30 and the exact returns/null LOOK above.
-- No RP-011/later route, destination, packet, shell, successor, RP-013, hidden
+- TD-011 is released only through UR-30 and the exact returns/null LOOK above.
+- No RP-012/later route, destination, packet, shell, successor, RP-013, hidden
   lore, identity, reward, access, authority, world response, ending extension,
   or post-ending content is selected or authorized.
 - Never generate, edit, replace, or alter the exact accepted reference PNG.

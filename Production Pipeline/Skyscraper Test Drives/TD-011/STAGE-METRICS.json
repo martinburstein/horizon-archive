@@ -300,6 +300,32 @@
       "commit": "PENDING_SECOND_COMBAT_CORRECTION_COMMIT",
       "commitConvention": "The dedicated second Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "nextStage": "Intelligence Officer final release review"
+    },
+    {
+      "sequence": 14,
+      "stage": "Intelligence Officer final release",
+      "agentId": "intelligence_officer",
+      "startedAt": "2026-08-09T13:42:10-04:00",
+      "endedAt": "2026-08-09T13:47:43-04:00",
+      "durationMs": 333000,
+      "disposition": "PASS - AS BUILT RELEASED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/10-AS-BUILT-RECONCILIATION.md",
+      "candidate": "8c8d0a4452d55017c54766d1845e618afa08c7d7",
+      "integrity": "candidate parent exact second Intelligence return 54520a0; tracked tree clean; patch and object integrity PASS; protected work untouched",
+      "focused": "independent normal+fixture+protected+lock 27/27 PASS",
+      "fullSuite": "fresh Intelligence-owned npm test 932/932 PASS",
+      "validators": "all curriculum validator self-tests 40/40 PASS",
+      "buildServedBudget": "production/fixture 212/53; served+lock 2/2; JS 1622151 SHA F9359D90; CSS 113974 SHA CB799132; exact media 17 / 37410731; PBA PASS",
+      "preview": "final-candidate isolated root/deep HTTP 200 and exact index bytes; owned 5174 preview stopped",
+      "e2e": "cycle's one complete non-overlapping E2E PASS in 91.8s with credits true and runtimeErrors false; preserved after selector-only RP-011 correction; not rerun without an E2E-affecting reason",
+      "liveReview": "80/80 owner and actual focus; zero effective-target/containment/overflow failures; reconciliation 18/18 minimum 259.2x44; four presentation modes and both native modal confirms PASS",
+      "variances": "TD011-FIX-001 and TD011-FIX-002 closed; Quartermaster improvements accepted; 36-byte CSS headroom deferred limitation; no unaccepted variance",
+      "retrospective": "TUNE shared lock participation at test creation and effective wrapping-label target measurement before Quartermaster handoff",
+      "cleanup": "all browser tabs closed; QA captures restored; ports 4173/4181/4182/4183/4288/4289/4290/4291/5174 clear",
+      "imageBoundary": "Image Specialist disabled; no generation/edit/selection/board/import/reveal; reveal acceptance not applicable",
+      "commit": "PENDING_FINAL_INTELLIGENCE_RELEASE_COMMIT",
+      "commitConvention": "The dedicated final Intelligence release commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "nextStage": "Commandant guarded TD-012 verification"
     }
   ]
 }
