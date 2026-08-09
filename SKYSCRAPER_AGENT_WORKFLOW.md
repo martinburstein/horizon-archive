@@ -38,7 +38,6 @@ RECONNAISSANCE SERGEANT
 TACTICAL OPERATIONS SPECIALIST
 COMBAT ENGINEER
 QUARTERMASTER
-IMAGE SPECIALIST
 INTELLIGENCE OFFICER
           ↓ RELEASED AS BUILT + NEXT HANDOFF
 ```
@@ -91,7 +90,7 @@ The workflow uses five artifact layers:
    - experience blueprint;
    - functional build report;
    - content and asset ledger;
-   - polish review and one reveal candidate.
+   - player-facing presentation evidence within the non-generative asset boundary.
 4. **As-Built Reconciliation Package**
    - shell-to-build comparison, release evidence, variances, accepted lessons, and disposition.
 5. **Current handoff**
@@ -131,7 +130,6 @@ The Marines may request a variance but may never silently alter the shell.
 | `EXPERIENCE READY` | Tactical Operations Specialist | Every state, action, focus target, recovery route, and responsive layout is specified |
 | `FUNCTIONALLY COMPLETE` | Combat Engineer | The complete behavior works and is proportionately tested |
 | `CONTENT COMPLETE` | Quartermaster | Player-facing structural placeholders are retired or explicitly dispositioned |
-| `PRESENTATION COMPLETE` | Image Specialist | The slice is polished across required visual, audio, responsive, and accessible states |
 | `AS BUILT RELEASED` | Intelligence Officer | Independent gates pass, variances are reconciled, and the next handoff is synchronized |
 
 ## Variance protocol
@@ -157,7 +155,7 @@ The discovering role records the variance immediately. The Intelligence Officer 
 - Flow, layout, interaction, focus, or responsive blueprint conflict → Tactical Operations Specialist.
 - Functional defect → Combat Engineer.
 - Content or major asset defect → Quartermaster.
-- Presentation defect → Image Specialist.
+- Presentation defect → Quartermaster for content/asset ownership or Combat Engineer for code/layout behavior, as identified by Intelligence.
 - Release-evidence or reconciliation defect → Intelligence Officer.
 
 Return to the earliest responsible stage. Do not restart the whole sequence without evidence that the baseline itself changed.
@@ -203,26 +201,16 @@ Every stage preserves:
 - invariant-world limits and explicit ownership language; and
 - protected user files named in `NEXT_INSTANCE_HANDOFF.md`.
 
-## Cycle reveal
+## Image Specialist and reveal disabled
 
-The Image Specialist produces exactly one accepted spoiler-safe reveal after
-choosing one accepted visual or lore decision and checking it against existing
-visual canon. The accepted candidate must vary subject, scale, or composition
-from recent reveals, include provenance, and identify one named checklist
-item.
-
-The generation quality-recovery budget is:
-
-1. one initial private generation;
-2. if and only if that output fails documented Image Specialist QA before it
-   enters the workspace, one targeted recovery generation; and
-3. no third attempt.
-
-The rejected draft remains outside the workspace, canon, runtime, provenance
-package, commits, and user-facing reveal. Exactly one accepted image is
-archived, committed, and shown. The Intelligence Officer validates that exact
-accepted candidate or records `REVISE`/`HOLD`; it does not silently generate a
-replacement. Canonical reference status does not claim runtime integration.
+Martin explicitly disabled the Image Specialist and cycle-reveal component on
+2026-08-09. No manual stage or scheduled wake may call image generation,
+generate or edit a board, create a replacement or variant, import a new image,
+or publish a cycle reveal. Existing accepted visual references remain exact and
+immutable. This does not relax presentation quality: Quartermaster owns
+player-facing content and asset disposition, Combat Engineer owns code and
+layout behavior, and Intelligence independently validates the required
+responsive, accessibility, visual-containment, and served-identity evidence.
 
 ## Intelligence Officer close
 
@@ -236,11 +224,11 @@ The Intelligence Officer must:
 6. record a concise process retrospective;
 7. replace `NEXT_INSTANCE_HANDOFF.md` with synchronized state and one exact next action;
 8. commit, push, and verify synchronization; and
-9. publish the accepted reveal only after the release gate passes.
+9. report the release without generating or publishing a cycle reveal.
 
 ## Manual test-drive rule
 
-The first test drive is manual and non-scheduled. It should use one bounded existing-authority slice, exercise all 11 handoffs, and measure:
+The first test drive is manual and non-scheduled. It should use one bounded existing-authority slice, exercise all 10 active handoffs, and measure:
 
 - stage duration;
 - artifact usefulness;
@@ -249,6 +237,6 @@ The first test drive is manual and non-scheduled. It should use one bounded exis
 - number and quality of variances;
 - implementation throughput;
 - release quality; and
-- whether the final reveal communicates tangible progress.
+- whether the final player-facing delta communicates tangible progress without a generated reveal.
 
 After the test, the Intelligence Officer recommends `KEEP`, `TUNE`, or `REDESIGN`. Martin decides whether to authorize recurring automation.

@@ -13,7 +13,7 @@ Treat AI-901 objectives as the master learning goals. Use AI-900 material only a
 
 ## Active skyscraper agent workflow
 
-The active manual production workflow is `SKYSCRAPER_AGENT_WORKFLOW.md`. Its canonical registry is `Skyscraper Agent Profiles/README.md`, with five strategic Colonels and six field Marines. These are setting-inspired military titles; their production functions remain unchanged.
+The active manual production workflow is `SKYSCRAPER_AGENT_WORKFLOW.md`. Its canonical registry is `Skyscraper Agent Profiles/README.md`, with five strategic Colonels and five active field Marines. These are setting-inspired military titles; their production functions remain unchanged except that Martin explicitly disabled the Image Specialist stage on 2026-08-09.
 
 At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`, `SKYSCRAPER_AGENT_WORKFLOW.md`, and the registry. Before each stage, read the selected profile in full, the immediately preceding handoff, and the exact current-control or shell sections cited by that role.
 
@@ -28,8 +28,7 @@ Run strictly sequentially:
 7. Tactical Operations Specialist
 8. Combat Engineer
 9. Quartermaster
-10. Image Specialist
-11. Intelligence Officer
+10. Intelligence Officer
 
 The Mission Captain must issue a versioned `SHELL READY` contract before the Marines deploy. A Marine may request a variance but may not silently change the shell. The Intelligence Officer independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
 
@@ -47,12 +46,14 @@ and Mission issues a conflict-free versioned shell. This never authorizes
 invented canon, a skipped packet, hidden lore, reward, access, identity,
 authority, world response, successor, RP-013, or post-ending content.
 
-Exactly one accepted cycle reveal is archived, committed, and shown to Martin.
-If the first private generation fails Image Specialist QA before entering the
-project, Image may make one targeted recovery generation after documenting the
-rejection. The rejected draft must remain outside the workspace, canon,
-runtime, provenance package, and user-facing reveal. A second failure is an
-honest `HOLD`; no third attempt is permitted.
+The Image Specialist and cycle-reveal component are disabled. No Skyscraper
+stage or scheduled wake may generate, edit, replace, vary, import, or publish
+an image or create a cycle reveal. Existing accepted visual references remain
+immutable unless Martin explicitly changes this instruction. Quartermaster
+still retires or dispositions player-facing structural placeholders and
+content/asset gaps; Combat Engineer still owns code and layout behavior; the
+Intelligence Officer independently validates presentation, responsive, and
+accessibility release evidence before release.
 
 ## Two-team agent profiles
 

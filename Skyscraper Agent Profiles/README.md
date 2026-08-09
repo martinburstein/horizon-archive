@@ -26,8 +26,11 @@ Before each stage, read the selected profile in full, the immediately preceding 
 | Marines | `tactical_operations_specialist` | Tactical Operations Specialist | `tactical-operations-specialist.md` |
 | Marines | `combat_engineer` | Combat Engineer | `combat-engineer.md` |
 | Marines | `quartermaster` | Quartermaster | `quartermaster.md` |
-| Marines | `image_specialist` | Image Specialist | `image-specialist.md` |
 | Marines | `intelligence_officer` | Intelligence Officer | `intelligence-officer.md` |
+
+`image-specialist.md` is retained as historical evidence but is inactive. No
+manual run or scheduled wake may invoke it unless Martin explicitly restores
+the stage.
 
 ## Shared invocation contract
 
@@ -67,7 +70,7 @@ Every stage reports:
 - The Colonels define and validate structure; they do not pre-build Marine implementation.
 - The Marines implement only an approved `SHELL READY` contract.
 - Each role checks its predecessor rather than merely trusting it.
-- The Intelligence Officer performs a fresh independent release review and does not rely on the Combat Engineer's or Image Specialist's conclusions as proof.
+- The Intelligence Officer performs a fresh independent release review and does not rely on the Combat Engineer's or Quartermaster's conclusions as proof.
 - A role may return work only to the earliest owner of the defect.
 - No role silently expands story, learning, authority, route, save, or world-state scope.
 

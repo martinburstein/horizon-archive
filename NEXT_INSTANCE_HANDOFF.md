@@ -1,6 +1,6 @@
 # Horizon Archive - Synchronized Next Instance Handoff
 
-Last updated: **2026-08-01**
+Last updated: **2026-08-09**
 
 Read `AGENTS.md`, this file, `SKYSCRAPER_AGENT_WORKFLOW.md`, and the profile
 registry before acting. This file is the sole exact-next-action authority.
@@ -57,23 +57,24 @@ from source and `dist`. Both conditional runtime image roles remain retired,
 `selectedImageRoles: []`, and CSS remains the truthful runtime medium. No image
 generation, edit, replacement, variant, import, or runtime use is authorized.
 
-## Automation status - PAUSED
+## Automation status - ACTIVE / THREE-HOUR CONTINUATION
 
-Martin requested a clean pause after TD-010 release. Recurring Skyscraper
-production and the prior three-hour heartbeat are **suspended pending Martin's
-explicit resume**. Do not wake, dispatch, schedule, or infer another role or
-cycle while paused. Do not create or schedule another task.
+Martin explicitly resumed recurring Skyscraper production on 2026-08-09. The
+active workflow has ten sequential roles because the Image Specialist is
+disabled. The manual run owns the worktree until 3:00 PM New York time; the
+three-hour heartbeat resumes from the latest committed handoff at or after that
+boundary. Never overlap a stage or restart a completed stage.
 
-## Exact next action - inactive until explicit resume
+## Exact next action - active
 
-When and only when Martin explicitly resumes, run **Commandant /
-`commandant` only** for one guarded next-cycle selection envelope from released
+Run **Commandant / `commandant`** for one guarded next-cycle selection envelope from released
 CF-30. Candidate packet/address, RP-011, route, destination, and shell are
 deliberately unselected. Commandant must verify a clean synchronized release
 baseline, derive only the bounded selection envelope allowed by current
 authority, issue one `VISION BASELINE` or `HOLD`, commit its own stage locally,
-and stop. No Colonel or later role may begin from that action without the
-sequential workflow's next explicit authority.
+and hand only that validated result to the Colonel. Downstream roles remain
+strictly sequential and may continue during the authorized manual work window
+only from the immediately preceding committed handoff.
 
 ## Frozen boundaries
 
@@ -82,6 +83,9 @@ sequential workflow's next explicit authority.
   lore, identity, reward, access, authority, world response, ending extension,
   or post-ending content is selected or authorized.
 - Never generate, edit, replace, or alter the exact accepted reference PNG.
+- The Image Specialist and cycle reveal are disabled. Do not call image
+  generation, edit or create boards, create variants or replacements, import
+  new images, or publish a reveal. Quartermaster hands directly to Intelligence.
 - Never open hidden lore or inspect/mutate Martin's browser/profile/save.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
