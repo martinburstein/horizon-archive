@@ -339,18 +339,30 @@ boundary. Never overlap a stage or restart a completed stage.
 - No product source, test, fixture, canon, route, shell, media, image, board,
   reveal, or release identity changed. Evidence is in TD-012 artifact 01A.
 
+## TD-012 Commandant vision baseline
+
+- `GDB-TD012-v1 / VISION BASELINE` verifies the stable audience, player
+  promise, educational purpose, premium quality, intended ending, and current
+  released boundary after the control sync. No product reopen trigger exists.
+- RP-012 remains a separately protected cumulative readiness/intended-ending
+  mapping, not a route, readiness verdict, scene, ending beat, or shell.
+- Candidate, packet, scene, address, destination, route, transition, ending
+  content, shell, successor, reward, access, identity, authority, and world
+  response remain deliberately unselected.
+- Image Specialist, image generation/edit/selection/boards/imports, and cycle
+  reveal remain disabled without weakening presentation quality.
+
 ## Exact next action - active
 
-Run **Commandant / `commandant` fresh guarded TD-012 whole-product
-verification** only after the exact Intelligence control-sync commit is pushed
-and `HEAD == origin/main == remote main`. Reverify stable product promise,
-intended-ending protection, current player promise, control consistency, and
-reopen triggers without selecting a packet, scene, address, route, transition,
-ending beat, shell, successor, reward, access, identity, authority, or world
-response. Issue one versioned TD-012 `VISION BASELINE` or evidence-backed HOLD
-and hand only to Colonel. Image Specialist remains disabled: do not generate,
-edit, select, board, import, or reveal media. Do not inspect Martin's browser/
-profile/save, hidden lore, or protected untracked paths.
+Run **Colonel / `colonel` guarded TD-012 derivation** only from exact
+`GDB-TD012-v1`, synchronized released TD-011/UR-30, approved surface canon,
+whole-story rail controls, and intended-ending protection. Derive at most one
+already-mapped provisional surface-safe candidate with explicit evidence and
+unresolved route, or issue `HOLD`. Do not issue a route, transition, campaign
+placement, shell, code, image, board, reveal, reward, access, identity,
+authority, world response, successor, RP-013, or post-ending content. Image
+Specialist remains disabled. Do not inspect Martin's browser/profile/save,
+hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 
