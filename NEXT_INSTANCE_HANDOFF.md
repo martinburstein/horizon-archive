@@ -88,19 +88,30 @@ boundary. Never overlap a stage or restart a completed stage.
   meaning, protected unknowns, RP-012 ending protection, and the disabled
   Image Specialist/no-image/no-reveal boundary are locked.
 
+## Operations checkpoint
+
+- `CFS-TD011-v1 / FLOOR STACK READY - ROUTE AUTHORIZED` selects exact
+  `RP-011 / SC-12 / UR-00-UR-30` as the nearest mapped contiguous slice.
+- Sole `TD011-RTA-001` requires exact canonical normal RP-010 save/state and a
+  fresh Pilot-owned one-hit token; protected RP-010/RP-011 journeys, LOOK,
+  retained scopes, scenery, focus, timing, and Tour are rejected as routes.
+- The graph is `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30`, with separate
+  fresh-finalized and reconciliation-saved checkpoints, exact returns, and a
+  hard stop before RP-012/ending. Focused existing evidence passes `20/20`.
+
 ## Exact next action - active
 
-Run **Operations Planning Major / `operations_planning_major`** only from
-`GDB-TD011-v1` and `WNMP-TD011-v1`. Independently prove or reject exact
-contiguous placement at `RP-011 / SC-12 / UR-00-UR-30`. If valid, define one
-sole fresh Pilot-owned transition from exact released CF-30 with validation-
-before-consumption, one-hit token behavior, fail-closed invalid/duplicate/
-stale/private/Tour/interrupted handling, exact predecessor preservation, exact
-permitted returns, and a hard stop before RP-012 or ending content. Preserve
-the disabled Image Specialist/no-generation/no-board/no-import/no-reveal rule.
-Issue `FLOOR STACK READY`, `REVISE`, or `HOLD`, commit the stage, and hand only
-that result to Science. Do not design learning, scene flow, copy, shell, code,
-art, or the ending.
+Run **Office of Science Administrator /
+`office_of_science_administrator`** only from `GDB-TD011-v1`,
+`WNMP-TD011-v1`, and `CFS-TD011-v1`. Independently validate the full route,
+learning/evidence, privacy, atomic save/rollback/restore, recovery,
+responsive/accessibility/focus, fixture isolation, offline/no-authority,
+non-generative presentation, and fresh non-compounding budget envelope.
+Explicitly reject protected RP-010/RP-011 versions as normal bridge authority.
+Use official Microsoft sources first for any freshness-dependent Foundry or
+AI-901 claim. Issue `VIABILITY READY`, `REVISE`, or `HOLD`, with a fresh
+executable budget contract and exact Mission inputs; commit the stage. Do not
+write the shell, code, copy, art, board, image, reveal, or ending content.
 
 ## Frozen boundaries
 

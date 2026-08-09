@@ -53,6 +53,29 @@
       "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "synchronization": "local-only; no Colonel push gate",
       "nextStage": "Operations Planning Major"
+    },
+    {
+      "sequence": 3,
+      "stage": "Operations Planning Major",
+      "agentId": "operations_planning_major",
+      "startedAt": "2026-08-09T12:07:39-04:00",
+      "endedAt": "2026-08-09T12:12:19-04:00",
+      "durationMs": 280000,
+      "disposition": "FLOOR STACK READY - ROUTE AUTHORIZED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/03-CAMPAIGN-FLOOR-STACK.md",
+      "predecessorVerification": "Colonel commit db2684c verified as the exact starting authority",
+      "releasedPredecessor": "exact canonical normal rp010.counterfield-save.v1 raw/object at CF-30 / SC-11 plus unchanged required predecessor bytes; rp010.protected-journey.v1 and UnborrowedReachProtectedJourney explicitly rejected as normal bridges",
+      "selectedAddress": "RP-011 / SC-12 / UR-00-UR-30",
+      "route": "sole TD011-RTA-001; distinct Pilot-owned route group and fresh one-hit transient token after exact released normal RP-010 raw/object, state, mode, owner, modality, sanitation and predecessor-byte proof",
+      "graph": "CF-30 / SC-11 -> UR-00 -> UR-10 -> UR-20 -> UR-30 / SC-12",
+      "checkpoints": "exact separate rp011_fresh_finalized then rp011_reconciliation_saved; canonical write/read-back, predecessor equality, rollback and replay-free restore required",
+      "hardStop": "UR-30 plus exact Counterfield or City Threshold returns and one LOOK-only null-destination outward bearing; no RP-012 or ending exposure",
+      "validation": "Operations contract checks PASS; focused released-normal Counterfield plus protected RP-011 tests 20/20 PASS including all 5,040 and 720 observation orders and 24 reopen orders",
+      "variances": "none; protected reference remains non-routable and all image work remains disabled",
+      "commit": "PENDING_OPERATIONS_COMMIT",
+      "commitConvention": "The dedicated Operations commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Operations push gate",
+      "nextStage": "Office of Science Administrator"
     }
   ]
 }
