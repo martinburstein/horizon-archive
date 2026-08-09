@@ -120,6 +120,23 @@
       "imageBoundary": "Image Specialist and all generation/edit/board/import/reveal actions disabled; selectedImageRoles empty",
       "hardStop": "verified MH-40, exact review/remediation or permitted return; null successor, no RP-013/post-ending/credits invention",
       "nextStage": "Reconnaissance Sergeant creative treatment"
+    },
+    {
+      "sequence": 8,
+      "stage": "Reconnaissance Sergeant creative treatment",
+      "agentId": "reconnaissance_sergeant",
+      "startedAt": "2026-08-09T14:13:05-04:00",
+      "endedAt": "2026-08-09T14:17:20-04:00",
+      "durationMs": 255000,
+      "disposition": "CREATIVE TREATMENT READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/06-PLAYABLE-SLICE-CREATIVE-TREATMENT.md",
+      "treatment": "CT-RP012-HONEST-HORIZON-v1",
+      "thesis": "the world supplies no standard; the expedition holds one honest local datum in a calm field folio",
+      "outcomes": "identical geometry, palette, hierarchy, world, audio, motion and dignity; exact text and remediation routes only",
+      "presentation": "unchanged code-native SC-12 world plus expedition-owned datum folio and central fresh leaf",
+      "imageBoundary": "selectedImageRoles empty; no image/audio/media/board/reveal action",
+      "variance": "none",
+      "nextStage": "Tactical Operations Specialist experience blueprint"
     }
   ]
 }

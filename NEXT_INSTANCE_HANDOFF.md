@@ -423,21 +423,35 @@ boundary. Never overlap a stage or restart a completed stage.
   verified MH-40, review/remediation, or permitted return with null successor
   and no RP-013, post-ending route, or invented credits/ending presentation.
 
+## TD-012 Reconnaissance treatment
+
+- `CT-RP012-HONEST-HORIZON-v1 / CREATIVE TREATMENT READY` fixes one thesis:
+  the world supplies no standard; the expedition holds an honest local datum.
+- Exact SC-12 laminae remain unchanged and indifferent. A code-native field
+  folio uses stable datum rules, separately bound records, one central fresh
+  leaf, exact remediation tabs, and identical outcome anatomy.
+- Emotional rhythm is gravity without ceremony, legible completeness, clean
+  fresh effort, precise recovery without shame, bounded confidence, and quiet
+  self-possession. Neither outcome gets spectacle or world response.
+- `selectedImageRoles: []`; no new audio/media/image/board/reveal work and no
+  variance.
+
 ## Exact next action - active
 
-Run **Reconnaissance Sergeant / `reconnaissance_sergeant` TD-012 creative
-treatment** only against exact `SS-RP012-MEASURED-HORIZON-v1`. Produce one
-surface-safe code-native thesis and emotional/attention/material/copy
-hierarchy for an expedition-owned review over the unchanged SC-12 horizon,
-with neutral equal-dignity outcomes. Preserve every identity, route, state,
-owner, focus, registry meaning, eligibility rule, 16-gate boundary,
-remediation/blankness, outcome, 16-key save, privacy/recovery, return,
-  modality, layout, 58-scenario fixture, PBA, zero-media rule, unknown,
-invariant world, and null-successor hard stop. Issue
-`CREATIVE TREATMENT READY`, `REVISE`, or `HOLD`. Do not implement, import
-protected code, design credits/intended-ending presentation, expose RP-013/
-successor, or perform image/board/reveal work. Do not inspect Martin's
-browser/profile/save, hidden lore, or protected untracked paths.
+Run **Tactical Operations Specialist / `tactical_operations_specialist`
+TD-012 experience blueprint** only against exact
+`SS-RP012-MEASURED-HORIZON-v1` and `CT-RP012-HONEST-HORIZON-v1`. Map every
+shell state to responsive geometry, exact owner/group/heading/status/action,
+focus lifecycle, private/public state, transition, return, persistence edge,
+all 58 fixture scenarios, and validation hooks. Use the unchanged SC-12 world,
+one calm datum-based folio, central fresh leaf, separately navigable evidence,
+identical outcome anatomy, interface-only motion, no new audio, and code-native
+CSS with `selectedImageRoles: []`. Preserve route, 16 gates, 16-key save,
+privacy/accessibility/PBA/fixture/null-successor hard stop. Issue
+`EXPERIENCE READY`, `REVISE`, or `HOLD`. Do not implement, import protected
+code, design credits/intended-ending presentation, expose RP-013/successor, or
+perform image/board/reveal work. Do not inspect Martin's browser/profile/save,
+hidden lore, or protected untracked paths.
 
 ## Frozen boundaries
 
