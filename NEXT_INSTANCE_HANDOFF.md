@@ -436,22 +436,40 @@ boundary. Never overlap a stage or restart a completed stage.
 - `selectedImageRoles: []`; no new audio/media/image/board/reveal work and no
   variance.
 
+## TD-012 Tactical blueprint
+
+- `XB-RP012-MEASURED-HORIZON-v1 / EXPERIENCE READY` maps every normal state
+  from exact UR-30 route through MH-00, eligibility, fresh Python/objective
+  work, remediation/blank retry, decision, save/rollback/restore, returns,
+  Tour isolation, and null-successor hard stop.
+- One stable DOM order supports world-first wide/laptop and one-column narrow/
+  200% zoom. Each group has one exact owner, heading, status, action set,
+  focus lifecycle, public/private boundary, transition, persistence edge, and
+  fixture hook; seven modalities converge through one semantic dispatcher.
+- Exact 58 literal fixture IDs cover route/modalities/rejections, every one of
+  16 gate misses, fresh forms, remediation/retry, both outcomes, save states,
+  restore/returns, invalid state, and four presentation modes with live owner/
+  actual-focus proof.
+- Both outcomes use one common DOM/layout anatomy; the world, palette, motion,
+  audio, hierarchy, and save behavior are equal. `selectedImageRoles: []`; no
+  image/audio/media work or variance.
+
 ## Exact next action - active
 
-Run **Tactical Operations Specialist / `tactical_operations_specialist`
-TD-012 experience blueprint** only against exact
-`SS-RP012-MEASURED-HORIZON-v1` and `CT-RP012-HONEST-HORIZON-v1`. Map every
-shell state to responsive geometry, exact owner/group/heading/status/action,
-focus lifecycle, private/public state, transition, return, persistence edge,
-all 58 fixture scenarios, and validation hooks. Use the unchanged SC-12 world,
-one calm datum-based folio, central fresh leaf, separately navigable evidence,
-identical outcome anatomy, interface-only motion, no new audio, and code-native
-CSS with `selectedImageRoles: []`. Preserve route, 16 gates, 16-key save,
-privacy/accessibility/PBA/fixture/null-successor hard stop. Issue
-`EXPERIENCE READY`, `REVISE`, or `HOLD`. Do not implement, import protected
-code, design credits/intended-ending presentation, expose RP-013/successor, or
-perform image/board/reveal work. Do not inspect Martin's browser/profile/save,
-hidden lore, or protected untracked paths.
+Run **Combat Engineer / `combat_engineer` TD-012 functional implementation**
+only against exact `SS-RP012-MEASURED-HORIZON-v1`,
+`CT-RP012-HONEST-HORIZON-v1`, and `XB-RP012-MEASURED-HORIZON-v1`. Implement
+the normal route/controller, ordered 16-key sanitizer/storage adapter, App
+bridge, responsive React folio, code-native invariant world, public registry,
+and exact literal 58-scenario production-absent fixture. Add focused tests for
+route/modalities/rejections, eligibility, 16 gates, blank work/retry, actual-
+miss remediation, both common-anatomy outcomes, save/rollback/restore,
+returns/Tour, owner/focus, four layouts, protected/fixture/later exclusion,
+exact media, and PBA. Do not import protected journeys, accept arbitrary
+input, inspect personal state/hidden lore/protected untracked paths, create or
+edit media/reveal, design credits/intended-ending presentation, or expose
+successor/RP-013. Issue `FUNCTIONAL BUILD READY`, `REVISE`, or `HOLD`; commit
+and push on ready and verify remote equality.
 
 ## Frozen boundaries
 
