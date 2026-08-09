@@ -5,14 +5,36 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createServer } from "vite";
 import { fileURLToPath } from "node:url";
+import { counterfieldScopeRows } from "../src/CounterfieldNormal.js";
 import manifest from "../review-fixtures/td012-measured-horizon/launch-manifest.json" with { type: "json" };
 import { createMeasuredHorizonScenario, measuredHorizonScenarioNames } from "../review-fixtures/td012-measured-horizon/scenarios.js";
+import { measuredHorizonStatusByGroup } from "../src/MeasuredHorizonNormal.js";
 
 test("TD012 fixture contains exactly 58 literal closed public scenarios", () => {
   assert.equal(manifest.scenarioCount, 58); assert.equal(measuredHorizonScenarioNames.length, 58); assert.equal(new Set(measuredHorizonScenarioNames).size, 58);
   assert.equal(measuredHorizonScenarioNames.filter((id) => id.startsWith("gate-miss-")).length, 16);
   for (const id of measuredHorizonScenarioNames) { const scenario = createMeasuredHorizonScenario(id); assert.equal(scenario.storage, "frozen-in-memory-only"); assert.equal(scenario.arbitraryStateAccepted, false); assert.equal(scenario.state.successor, null); assert.equal(scenario.state.worldStateDelta, null); assert.equal(scenario.state.authorityGranted, false); }
   assert.throws(() => createMeasuredHorizonScenario("unknown"));
+});
+
+test("TD012 fixture renders the shell registry copy instead of generic placeholder status", () => {
+  for (const id of measuredHorizonScenarioNames) {
+    const { state } = createMeasuredHorizonScenario(id);
+    assert.equal(state.statusMessage, measuredHorizonStatusByGroup[state.activeGroup], id);
+    assert.ok(state.statusMessage, `${id} canonical status`);
+  }
+  assert.equal(createMeasuredHorizonScenario("remediation-open").state.heading, "REMEDIATE ONLY DEMONSTRATED GAPS");
+  assert.equal(createMeasuredHorizonScenario("decision-review").state.heading, "REVIEW THE LOCAL PRACTICE DECISION");
+});
+
+test("TD012 player-facing folio names five retained records, separate reconciliation, and common outcome basis", () => {
+  const source = readFileSync(new URL("../src/MeasuredHorizon.jsx", import.meta.url), "utf8");
+  assert.deepEqual(counterfieldScopeRows.map((row) => row.scope), ["RP-007", "RP-008", "RP-009", "RP-010"]);
+  for (const scope of ["RP-011", "Separate reconciliation"]) assert.match(source, new RegExp(scope));
+  assert.match(source, /counterfieldScopeRows\.map/);
+  assert.match(source, /Five retained expedition records remain complete, read-only, and separate from their reconciliation/);
+  assert.match(source, /5 records \+ reconciliation \+ 16 fresh gates/);
+  assert.match(source, /Exact remediation routes/);
 });
 
 test("TD012 fixture is storage-free and production never imports its harness", () => {

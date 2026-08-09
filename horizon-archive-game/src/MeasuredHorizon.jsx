@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { counterfieldScopeRows } from "./CounterfieldNormal.js";
 import { getObjectiveLedgerOptions, objectiveLedgerTransfer } from "./objectiveLedgerExercise.js";
 import {
   MEASURED_HORIZON_ROUTE_ACTION,
@@ -10,6 +11,11 @@ import {
 const label = (value) => String(value ?? "").replaceAll("_", " ").replaceAll("-", " ");
 const slug = (value) => String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const outcomeGroups = new Set(["mh30_ready", "mh30_not_yet_ready", "mh40_restore_ready", "mh40_restore_not_yet"]);
+const measuredHorizonCustodyRows = Object.freeze([
+  ...counterfieldScopeRows.map((row) => Object.freeze({ scope: row.scope, title: row.owner, description: row.longestCopy ?? row.description, state: row.state })),
+  Object.freeze({ scope: "RP-011", title: "Fresh Unborrowed Reach bounded integration record", description: "Six equal observations and eight independent learning responsibilities remain provenance-bound; identity, chronology, cause, purpose, readiness, authority, and successor remain unassigned.", state: "Read-only // separately attributable" }),
+  Object.freeze({ scope: "Separate reconciliation", title: "Method-and-limit reconciliation", description: "Defensible methods remain separate from conclusions; all twelve unsupported limits remain unknown / null.", state: "Complete // not merged" }),
+]);
 
 function Action({ action, onAction }) {
   const ids = {
@@ -111,7 +117,9 @@ export function MeasuredHorizon({ state, onAction, onFieldChange }) {
 
         {!route && !tour && <section className="measured-horizon-provenance" aria-labelledby="mh-provenance-heading">
           <h2 id="mh-provenance-heading">Separately attributable evidence folio</h2>
-          <ul><li>Prior Python homes · read-only</li><li>PY-020 reinforcement · read-only</li><li>CUM-01 and L-06-03 · read-only</li><li>15 current objective records · individually retained</li><li>Unborrowed Reach reconciliation · separate and unchanged</li></ul>
+          <p>Five retained expedition records remain complete, read-only, and separate from their reconciliation.</p>
+          <ul>{measuredHorizonCustodyRows.map((row) => <li key={row.scope}><strong>{row.scope} · {row.title}</strong><span>{row.description}</span><small>{row.state}</small></li>)}</ul>
+          <p>Current eligibility is separately based on all prior SOLIDIFIED Python homes, accepted PY-020 fresh reinforcement, CUM-01, L-06-03, and fifteen individually retained current-objective evidence chains. None supplies fresh-work credit.</p>
         </section>}
 
         {(group === "mh10_eligibility" || group === "mh10_eligibility_recovery") && <section className="measured-horizon-gates" aria-labelledby="mh-gates-heading">
@@ -142,7 +150,7 @@ export function MeasuredHorizon({ state, onAction, onFieldChange }) {
 
         {outcomeGroups.has(group) && <section className="measured-horizon-outcome" data-outcome-anatomy="common-v1">
           <p className="mh-datum-label">EXPEDITION LOCAL DATUM</p><h2>{state.localReadinessState}</h2>
-          <dl><div><dt>Current gates</dt><dd>{measuredHorizonGateIds.length - failed.length}/16</dd></div><div><dt>Open routes</dt><dd>{failed.length}</dd></div><div><dt>Authority</dt><dd>None</dd></div><div><dt>Successor</dt><dd>None</dd></div></dl>
+          <dl><div><dt>Objective version</dt><dd>2026-04-15</dd></div><div><dt>Evidence basis</dt><dd>5 records + reconciliation + 16 fresh gates</dd></div><div><dt>Current gates</dt><dd>{measuredHorizonGateIds.length - failed.length}/16</dd></div><div><dt>Exact remediation routes</dt><dd>{failed.length ? `${failed.length} OPEN` : "NONE"}</dd></div><div><dt>Authority</dt><dd>None</dd></div><div><dt>Successor</dt><dd>None</dd></div></dl>
           <p>This is recoverable course evidence, not a Microsoft exam result, certification, guarantee, access decision, permission, or world response.</p>
         </section>}
 

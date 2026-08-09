@@ -7,6 +7,7 @@ import {
   MEASURED_HORIZON_SHELL_VERSION,
   measuredHorizonActions,
   measuredHorizonGateIds,
+  measuredHorizonStatusByGroup,
 } from "../../src/MeasuredHorizonNormal.js";
 
 const slug = (id) => id.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -56,7 +57,7 @@ export const measuredHorizonScenarioNames = Object.freeze(rows.map(([id]) => id)
 
 function headingFor(group, focus) {
   if (group === MEASURED_HORIZON_ROUTE_GROUP) return [focus, "MEASURED HORIZON REVIEW"];
-  const names = { "td012-tour": "MEASURED HORIZON TOUR ISOLATED", mh00_assemble: "ASSEMBLE EXPEDITION EVIDENCE", mh10_eligibility: "VERIFY CURRENT EVIDENCE COVERAGE", mh20_python_fresh: "COMPLETE FRESH CUMULATIVE PYTHON WORK", mh20_ai901_fresh: "COMPLETE FRESH CURRENT-OBJECTIVE WORK", mh25_remediation: "REPAIR ONLY DEMONSTRATED GAPS", mh25_ai901_retry: "BEGIN GENUINELY BLANK OBJECTIVE RETRY", mh30_local_decision: "REVIEW THE LOCAL EVIDENCE DATUM", mh30_ready: MEASURED_HORIZON_READY, mh30_not_yet_ready: MEASURED_HORIZON_NOT_YET, mh40_save_confirm: "SAVE THE LOCAL READINESS RECORD", mh40_save_transaction: "SAVING LOCAL READINESS RECORD", mh40_save_recovery: "LOCAL READINESS SAVE RECOVERY", mh40_rollback_hold: "SAVE INTEGRITY HOLD", mh40_restore_ready: "MEASURED HORIZON RECORD RESTORED", mh40_restore_not_yet: "MEASURED HORIZON RECORD RESTORED" };
+  const names = { "td012-tour": "MEASURED HORIZON TOUR ISOLATED", mh00_assemble: "ASSEMBLE EXPEDITION EVIDENCE", mh10_eligibility: "VERIFY CURRENT EVIDENCE COVERAGE", mh20_python_fresh: "COMPLETE FRESH CUMULATIVE PYTHON WORK", mh20_ai901_fresh: "COMPLETE FRESH CURRENT-OBJECTIVE WORK", mh25_remediation: "REMEDIATE ONLY DEMONSTRATED GAPS", mh25_ai901_retry: "BEGIN GENUINELY BLANK OBJECTIVE RETRY", mh30_local_decision: "REVIEW THE LOCAL PRACTICE DECISION", mh30_ready: MEASURED_HORIZON_READY, mh30_not_yet_ready: MEASURED_HORIZON_NOT_YET, mh40_save_confirm: "SAVE THE LOCAL READINESS RECORD", mh40_save_transaction: "SAVING LOCAL READINESS RECORD", mh40_save_recovery: "LOCAL READINESS SAVE RECOVERY", mh40_rollback_hold: "SAVE INTEGRITY HOLD", mh40_restore_ready: "MEASURED HORIZON RECORD RESTORED", mh40_restore_not_yet: "MEASURED HORIZON RECORD RESTORED" };
   const canonical = { td012: "td012-tour-heading", mh00: "mh00-heading", mh10: "mh10-eligibility-heading", mh20_python: "mh20-python-heading", mh20_ai901: "mh20-ai901-heading", mh25_remediation: "mh25-remediation-heading", mh25_ai901: "mh25-ai901-retry-heading", mh30_local: "mh30-decision-heading", mh30_ready: "mh30-ready-heading", mh30_not: "mh30-not-yet-ready-heading", mh40_save_confirm: "mh40-save-readiness", mh40_save_transaction: "mh40-transaction-heading", mh40_save_recovery: "mh40-retry-save", mh40_rollback: "mh40-rollback-hold-heading", mh40_restore: "mh40-saved-review-heading" };
   const prefix = Object.keys(canonical).find((key) => group.startsWith(key));
   return [canonical[prefix] ?? focus, names[group] ?? group.toUpperCase()];
@@ -76,7 +77,7 @@ export function createMeasuredHorizonScenario(id) {
     layout: id === "presentation-narrow" ? "390x844" : id === "presentation-text-zoom" ? "768x900-effective-200" : "1366x768",
     presentationMode: id === "presentation-forced-colors" ? "forced-colors" : id === "presentation-reduced-motion" ? "reduced-motion" : "standard",
     state: Object.freeze({ shellVersion: MEASURED_HORIZON_SHELL_VERSION, controllerVersion: MEASURED_HORIZON_CONTROLLER_VERSION, packetId: "RP-012", phase: contract.group.slice(0, 4).toUpperCase(), boardState: "SC-13", activeGroup: contract.group, owner: contract.owner, headingId, heading,
-      statusMessageId: `td012:fixture:${id}`, statusMessage: "Closed public review state. No storage, network, arbitrary input, authority, world response, route, or successor is available.",
+      statusMessageId: `td012:fixture:${id}`, statusMessage: measuredHorizonStatusByGroup[contract.group],
       availableActions: Object.freeze(actionsFor(contract.group)), currentObjectiveId: measuredHorizonGateIds[1], failedGateIds: contract.failed,
       perGatePassBoolean: Object.freeze(Object.fromEntries(measuredHorizonGateIds.map((gate) => [gate, !contract.failed.includes(gate)]))), localReadinessState: outcome,
       privateWorkCleared: true, cityStateDelta: null, worldStateDelta: null, externalStateDelta: null, authorityDelta: null, successor: null, authorityGranted: false, externalActionEnabled: false, worldStateChanged: false, routeOpened: false, replayedEvents: Object.freeze([]), focusIntent: Object.freeze({ group: contract.group, target: contract.focus }) }),

@@ -50,6 +50,29 @@ export const measuredHorizonActions = Object.freeze({
   returnThreshold: "RETURN TO CITY THRESHOLD",
 });
 
+export const measuredHorizonStatusByGroup = Object.freeze({
+  [MEASURED_HORIZON_ROUTE_GROUP]: "Only a fresh Pilot request from the exact restored Unborrowed Reach record may assemble an expedition review.",
+  "td012-tour": "Tour creates no evidence, work, decision, save, route, authority, world change, or successor.",
+  mh00_assemble: "Five records and their separate reconciliation remain complete, read-only, and separately attributable. The horizon supplies no verdict.",
+  mh00_request_review: "Five records and their separate reconciliation remain complete, read-only, and separately attributable. The horizon supplies no verdict.",
+  mh10_eligibility: "Eligibility comes only from current finalized learning evidence. Scene, confidence, timing, Tour, and saves provide no credit.",
+  mh10_eligibility_recovery: "Earned evidence remains valid. Only exact demonstrated gaps route to answer-free practice.",
+  mh20_python_fresh: "The workspace is blank, closed-note, local, and independent of prior answers.",
+  mh20_ai901_fresh: "All fifteen current objectives are checked independently with no live service or exam item.",
+  mh25_remediation: "Guidance names the missing boundary without an answer. The next attempt begins genuinely blank.",
+  mh25_python_retry: "Guidance names the missing boundary without an answer. The next attempt begins genuinely blank.",
+  mh25_ai901_retry: "Guidance names the missing boundary without an answer. The next attempt begins genuinely blank.",
+  mh30_local_decision: "This expedition-owned decision is not an exam prediction, certification, permission, identity, access grant, or external authority.",
+  mh30_ready: "Exact current evidence and independent fresh work are complete. The world remains unchanged.",
+  mh30_not_yet_ready: "Earned evidence remains valid. Exact recoverable routes remain available without shame or erased progress.",
+  mh40_save_confirm: "Only the private-free allowlisted audit basis will be written.",
+  mh40_save_transaction: "Only the private-free allowlisted audit basis will be written.",
+  mh40_save_recovery: "Only the private-free allowlisted audit basis will be written.",
+  mh40_rollback_hold: "Rollback or predecessor equality could not be verified. Progression is held; safe returns remain available.",
+  mh40_restore_ready: "The local decision and exact recovery routes were restored without replay. No successor opened.",
+  mh40_restore_not_yet: "The local decision and exact recovery routes were restored without replay. No successor opened.",
+});
+
 const recordKeys = Object.freeze([
   "version", "packetId", "checkpoint", "objectiveVersion", "objectiveIds",
   "evidenceReferenceIds", "perGatePassBoolean", "remediationRouteIds",
@@ -172,8 +195,8 @@ const headings = Object.freeze({
   mh00_assemble: ["mh00-heading", "ASSEMBLE EXPEDITION EVIDENCE"], mh00_request_review: ["mh00-request-heading", "REQUEST CURRENT EVIDENCE REVIEW"],
   mh10_eligibility: ["mh10-eligibility-heading", "VERIFY CURRENT EVIDENCE COVERAGE"], mh10_eligibility_recovery: ["mh10-recovery-heading", "REPAIR ONLY THE UNMET EVIDENCE GATE"],
   mh20_python_fresh: ["mh20-python-heading", "COMPLETE FRESH CUMULATIVE PYTHON WORK"], mh20_ai901_fresh: ["mh20-ai901-heading", "COMPLETE FRESH CURRENT-OBJECTIVE WORK"],
-  mh25_remediation: ["mh25-remediation-heading", "REPAIR ONLY DEMONSTRATED GAPS"], mh25_python_retry: ["mh25-python-retry-heading", "BEGIN GENUINELY BLANK PYTHON RETRY"],
-  mh25_ai901_retry: ["mh25-ai901-retry-heading", "BEGIN GENUINELY BLANK OBJECTIVE RETRY"], mh30_local_decision: ["mh30-decision-heading", "REVIEW THE LOCAL EVIDENCE DATUM"],
+  mh25_remediation: ["mh25-remediation-heading", "REMEDIATE ONLY DEMONSTRATED GAPS"], mh25_python_retry: ["mh25-python-retry-heading", "BEGIN GENUINELY BLANK PYTHON RETRY"],
+  mh25_ai901_retry: ["mh25-ai901-retry-heading", "BEGIN GENUINELY BLANK OBJECTIVE RETRY"], mh30_local_decision: ["mh30-decision-heading", "REVIEW THE LOCAL PRACTICE DECISION"],
   mh30_ready: ["mh30-ready-heading", MEASURED_HORIZON_READY], mh30_not_yet_ready: ["mh30-not-yet-ready-heading", MEASURED_HORIZON_NOT_YET],
   mh40_save_confirm: ["mh40-save-readiness", "SAVE THE LOCAL READINESS RECORD"], mh40_save_transaction: ["mh40-transaction-heading", "SAVING LOCAL READINESS RECORD"],
   mh40_save_recovery: ["mh40-retry-save", "LOCAL READINESS SAVE RECOVERY"], mh40_rollback_hold: ["mh40-rollback-hold-heading", "SAVE INTEGRITY HOLD"],
@@ -204,7 +227,7 @@ function stateFor(group, extra = {}) {
   return freeze({ shellVersion: MEASURED_HORIZON_SHELL_VERSION, blueprintVersion: MEASURED_HORIZON_BLUEPRINT_VERSION,
     controllerVersion: MEASURED_HORIZON_CONTROLLER_VERSION, packetId: "RP-012", phase: group.startsWith("mh00") ? "MH-00 ASSEMBLE" : group.startsWith("mh10") ? "MH-10 VERIFY ELIGIBILITY" : group.startsWith("mh20") ? "MH-20 FRESH WORK" : group.startsWith("mh25") ? "MH-25 REMEDIATION" : group.startsWith("mh30") ? "MH-30 LOCAL DECISION" : "MH-40 SAVE + RESTORE",
     boardState: "SC-13", activeGroup: group, owner: owners[group], headingId, heading,
-    statusMessageId: `td012:${group}`, statusMessage: extra.statusMessage ?? "The expedition is measuring one local evidence datum. The horizon supplies no verdict.",
+    statusMessageId: `td012:${group}`, statusMessage: extra.statusMessage ?? measuredHorizonStatusByGroup[group],
     availableActions: freeze(actionsFor(group, failed)), objectiveVersion: MEASURED_HORIZON_OBJECTIVE_VERSION,
     currentObjectiveId: extra.currentObjectiveId ?? null, failedGateIds: freeze([...failed]), remediationRouteIds: freeze(failed.map(remediationId)),
     perGatePassBoolean: freeze({ ...(extra.perGatePassBoolean ?? Object.fromEntries(measuredHorizonGateIds.map((id) => [id, false]))) }),
@@ -287,7 +310,7 @@ export function createMeasuredHorizonNormalController(options = {}) {
   const spentTokens = new Set(routeAccepted ? [options.entryIntent.opaqueFreshEventToken] : []);
   let activeEligibility = eligibility; let record = restored; let outcome = restored?.localReadinessState ?? null;
   let state = options.mode === "demo_tour"
-    ? freeze({ shellVersion: MEASURED_HORIZON_SHELL_VERSION, controllerVersion: MEASURED_HORIZON_CONTROLLER_VERSION, packetId: "RP-012", phase: "UR-30 TOUR", boardState: "SC-12", activeGroup: "td012-tour", owner: "SYSTEM // DEMO TOUR", headingId: "td012-tour-heading", heading: "MEASURED HORIZON TOUR ISOLATED", statusMessageId: "td012:tour", statusMessage: "Tour creates no evidence, work, decision, save, route, authority, world change, or successor.", availableActions: freeze([]), focusIntent: freeze({ group: "td012-tour", target: "td012-tour-heading" }), successor: null })
+    ? freeze({ shellVersion: MEASURED_HORIZON_SHELL_VERSION, controllerVersion: MEASURED_HORIZON_CONTROLLER_VERSION, packetId: "RP-012", phase: "UR-30 TOUR", boardState: "SC-12", activeGroup: "td012-tour", owner: "SYSTEM // DEMO TOUR", headingId: "td012-tour-heading", heading: "MEASURED HORIZON TOUR ISOLATED", statusMessageId: "td012:tour", statusMessage: measuredHorizonStatusByGroup["td012-tour"], availableActions: freeze([]), focusIntent: freeze({ group: "td012-tour", target: "td012-tour-heading" }), successor: null })
     : restored && eligibility ? stateFor(restored.localReadinessState === MEASURED_HORIZON_READY ? "mh40_restore_ready" : "mh40_restore_not_yet", { perGatePassBoolean: restored.perGatePassBoolean, failedGateIds: measuredHorizonGateIds.filter((id) => !restored.perGatePassBoolean[id]), localReadinessState: restored.localReadinessState })
     : routeAccepted ? stateFor("mh00_assemble")
     : freeze({ ...(route ?? released ?? {}), statusMessageId: "td012:route:rejected", statusMessage: "Measured Horizon was not entered. Exact Unborrowed Reach remains unchanged and no future valid token was spent.", focusIntent: freeze({ group: MEASURED_HORIZON_ROUTE_GROUP, target: "td012-route-heading" }) });

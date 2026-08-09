@@ -481,35 +481,65 @@ boundary. Never overlap a stage or restart a completed stage.
   not rerun. Generated QA screenshots were restored exactly, all owned test
   processes/tabs were closed, and no image/media/reveal action occurred.
 
+## TD-012 Quartermaster content gate
+
+- `CONTENT COMPLETE` replaces the generic multi-phase datum status with one
+  canonical shell-aligned status registry shared by production and all exact
+  58 fixture rows; exact MH-25 and MH-30 registry headings are restored.
+- The field folio now renders accepted RP-007 through RP-010 bounded public
+  custody rows, the separate RP-011 record, and the separate reconciliation;
+  current Python/objective eligibility and fresh-work zero-credit meaning stay
+  distinct. Outcome anatomy names objective version, five-record-plus-
+  reconciliation evidence basis, all 16 gates, remediation state, authority,
+  and null successor without changing scoring or recovery.
+- Focused `13/13`, fresh cold full `945/945`, curriculum `40/40`, and
+  production/fixture builds `215/57` pass. The exact 58-state live matrix
+  passes all four layouts (`232/232`) with owner/actual focus, unique IDs, one
+  main/status, no overflow/clipped reviewed text, and `>=44px` controls.
+- An initial copy-induced `20px` narrow outcome height delta was found and
+  corrected. Ready/not-yet decision and restore anatomy now has exact `0px`
+  width/height delta and identical presentation tokens at all four layouts.
+- `PBA-TD012-v1 / candidate / PASS`: JS `1,660,044`, CSS `119,599`, modules
+  `215`, exact media `17 / 37,410,731`, zero new. Fresh production and fixture
+  root/deep/JS/CSS served bytes equal disk; all owned tabs/processes/ports are
+  closed. CSS headroom is `73` bytes and remains independently enforced.
+- Runtime remains code-native CSS with `selectedImageRoles: []`. No image,
+  board, generation, edit, import, media addition, visual-reference byte
+  change, or reveal occurred. Full evidence and zero-addition asset ledger are
+  in TD-012 artifact 09.
+
 ## Exact next action - active
 
-Run **Quartermaster / `quartermaster` TD-012 content and asset completion only**
-against the exact synchronized Combat candidate at `main` HEAD. Read the
-versioned shell, treatment, blueprint, final Functional Build Report, current
-controls, source-visible player copy, fixture, package/build/PBA evidence, and
-the Quartermaster profile before acting.
+Run a **new fresh Intelligence Officer / `intelligence_officer` independent
+TD-012 as-built reconciliation** against the exact dedicated Quartermaster
+checkpoint at `main` HEAD. Read shell 05 through ledger 09, current controls,
+the exact product/fixture source and candidate build evidence, PBA/media
+authority, and the Intelligence profile before acting. Do not use Combat or
+Quartermaster conclusions as proof.
 
-Audit and refine only non-frozen player-facing content and the zero-addition
-asset ledger. Retire or explicitly disposition every structural placeholder or
-content/asset gap; preserve the exact 58-state registry meaning, normal route,
-privacy/sanitation, save/rollback/restore, accessibility/focus, common outcome
-anatomy, invariant world, no-authority/no-exam-guarantee language, and null
-hard stop. Do not redesign functional behavior, reopen the shell, add media,
-call image generation, create/edit/import/replace an image or board, publish a
-reveal, or open RP-013/successor/post-ending content.
+Independently compare shell to build and classify all five Combat corrections,
+the Quartermaster status/heading/custody/outcome corrections, and the bounded
+73-byte CSS headroom. Reproduce proportionate route/learning/privacy/
+sanitation/save/rollback/restore/hard-stop, content/source/spoiler, fixture,
+accessibility/responsive/equal-outcome, full/build/PBA/media/served, stable-
+candidate, cleanup, and synchronization evidence. Use the cycle's passing E2E
+honestly and do not rerun it merely for more evidence.
 
-Run proportionate content, fixture, build/PBA/media, and sanitation checks.
-Issue exactly `CONTENT COMPLETE`, `REVISE`, or `HOLD`, update artifact 09 and
-this handoff, make the dedicated Quartermaster checkpoint required by the
-workflow, and hand directly to Intelligence Officer. Quartermaster does not
-release TD-012.
+Issue exactly `PASS - AS BUILT RELEASED`, `REVISE`, or `HOLD`; update master
+controls only from accepted as-built evidence; replace this handoff with one
+synchronized exact next action; create the dedicated Intelligence release
+commit, push only on release, and verify remote equality. Do not use Martin's
+browser/profile/save, open hidden lore, touch protected untracked paths,
+perform image/board/media/reveal work, or expose RP-013, successor, invented
+credits/ending extension, world response, or post-ending content.
 
 ## Frozen boundaries
 
 - TD-011 is released only through UR-30 and the exact returns/null LOOK above.
 - `TD012-RTA-001` is implemented in the synchronized Combat functional
-  candidate at `main` HEAD from exact released UR-30. It has passed the Combat
-  functional gate but is not released authority until Intelligence accepts it.
+  candidate at `main` HEAD from exact released UR-30. It has passed Combat and
+  Quartermaster gates but is not released authority until Intelligence accepts
+  it.
   No successor, RP-013, hidden lore, identity, reward, access, authority,
   world response, ending extension, Operations-defined credits behavior, or
   post-ending content is selected or authorized.
