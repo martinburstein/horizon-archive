@@ -44,16 +44,30 @@ registry before acting. This file is the sole exact-next-action authority.
   `HEAD == origin/main == remote main` are recorded by Git outside this
   self-referential handoff.
 
-## Exact next action - safe stop
+## Authorized product-enrichment work
 
-**Do not start another role or production cycle.** TD-012 is the final
-authorized packet and the authorized production edge is exhausted. Recurring
-automation is stopped.
+- Martin's 2026-08-09 direction reopens the completed journey only for a
+  location-by-location continuity audit of the existing forty Terminal lesson
+  clusters.
+- Commandant issued `GDB-TE001-v1 / VISION BASELINE` at source commit
+  `88785eeb5a55523d3f610969777fbbb3af128c23`.
+- The work changes no lesson ownership, released packet, story order, ending,
+  successor, world state, or Machine authority. It adds no image work.
 
-Do not create RP-013, a successor, post-ending route/content, credits
-extension, hidden lore, reward, access, identity, permission, authority,
-external action, world response, image work, media work, board, or cycle
-reveal. Await Martin's explicit new direction.
+## Exact next action - Colonel TE-001 narrative baseline
+
+Read `Production Pipeline/Terminal Enrichment/TE-001/01-GAME-DEVELOPMENT-BRIEF.md`
+in full. Author one surface-canon walkthrough for the existing prologue and
+RP-001 through RP-012 that accounts for all forty lesson clusters exactly once.
+For every location, lock entry orientation, accessible footpath, ordered host
+placements, discovery owner, physical fit, reason each host leads to the next,
+and the unchanged exit to released adjacency. Preserve the on-foot route,
+invariant world, no-authority boundary, and suit-owned stable interface.
+
+The Machine may not invite, respond, unlock, reward, or direct. Terminal 39 and
+40 remain suit/flight-recorder review surfaces at the existing ending. Issue a
+narrative baseline or `HOLD`; do not create implementation, a Mission shell,
+image work, a new packet, RP-013, a successor, or post-ending content.
 
 ## Protected boundaries
 
