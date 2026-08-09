@@ -137,22 +137,42 @@ boundary. Never overlap a stage or restart a completed stage.
   import/reveal work. The hard stop remains UR-30/returns/null LOOK before
   RP-012 or ending content.
 
+## Reconnaissance checkpoint
+
+- `CT-RP011-UNBORROWED-LAMINAE-v1 / CREATIVE TREATMENT READY` fixes one
+  creative thesis: continuity without alignment in the invariant world;
+  custody through separation in the expedition interface.
+- The emotional sequence is quiet loss of analogy, equal close attention,
+  clean independent work, bounded return of history, and careful confidence
+  without a verdict. World lighting, audio, geometry, and local rhythms never
+  respond to progress.
+- Presentation is premium code-native CSS: oblique laminae, mineral foam,
+  salt-metal seams, ceramic anchors, accreted margins, and repair strata; one
+  active responsibility; sealed replica work; retained-record summaries;
+  individual reopening; single-column reconciliation. It rejects lateral
+  Counterfield districts, pairing/matching diagrams, terminals, locks, and
+  access/ending cues.
+- `selectedImageRoles: []`; no new audio/media or image/reveal work. No
+  variance is requested.
+
 ## Exact next action - active
 
-Run **Reconnaissance Sergeant / `reconnaissance_sergeant`** only against exact
-`SS-RP011-UNBORROWED-REACH-v1`. Produce one surface-safe code-native creative
-treatment for unfamiliar evidence, deliberate independence, hidden-but-
-retained records, sealed sanitized-replica work, individual reopening, and
-separate method-and-limit reconciliation. Freeze a coherent visual/emotional
-thesis, attention rhythm, material/copy hierarchy, presentation motifs, and
-quality bar while preserving every exact identity, state, owner/focus, UTF-8
-string, action, observation/order, learning/evidence boundary, checkpoint,
-save/privacy/recovery rule, return, modality/layout, 80-scenario fixture, PBA,
-zero-media boundary, unknown, invariant world, and hard stop. Issue
-`CREATIVE TREATMENT READY`, `REVISE`, or `HOLD`; commit locally and hand the
-exact shell plus treatment to Tactical Operations Specialist. Do not
-implement, inspect Martin's browser/profile/save, open hidden lore, import
-protected code, perform image/reveal work, or expose RP-012.
+Run **Tactical Operations Specialist / `tactical_operations_specialist`** only
+against exact `SS-RP011-UNBORROWED-REACH-v1` and
+`CT-RP011-UNBORROWED-LAMINAE-v1`. Produce one complete Experience Blueprint
+mapping every shell state to responsive geometry, active owner/group, exact
+heading/status/action, focus lifecycle, private/public state, transition,
+return, persistence edge, fixture scenario, and validation hook. Blueprint
+the creative thesis as oblique unaligned laminae, world-first breadth, one
+active responsibility, sealed replica boundary, retained-record custody,
+individual reopening, single-column reconciliation, invariant lighting, no
+new audio, immediate reduced-motion equivalence, and code-native CSS with
+`selectedImageRoles: []`. Preserve every exact route, learning, save/privacy,
+accessibility, PBA, 80-fixture, unknown and hard-stop contract. Issue
+`BLUEPRINT READY`, `REVISE`, or `HOLD`; commit locally and hand the exact
+shell+treatment+blueprint to Combat Engineer. Do not implement, inspect
+Martin's browser/profile/save, open hidden lore, import protected code, create
+or edit media, create a reveal, or expose RP-012.
 
 ## Frozen boundaries
 
