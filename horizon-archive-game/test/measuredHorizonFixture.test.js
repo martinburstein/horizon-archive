@@ -31,3 +31,13 @@ test("TD012 all 58 product surfaces render exact visible owner and a real declar
 test("TD012 browser harness compares visible owner and actual active element", () => {
   const source=readFileSync(new URL("../review-fixtures/td012-measured-horizon/ReviewMeasuredHorizonFixture.jsx",import.meta.url),"utf8"); assert.match(source,/document\.activeElement\?\.id/); assert.match(source,/renderedOwner===scenario\.declaredOwner&&activeElementId===scenario\.declaredFocus/); assert.match(source,/data-rendered-contract=/);
 });
+
+test("TD012 App and normal orchestrator keep route, restore, fresh adapter, and renderer reachable", () => {
+  const app=readFileSync(new URL("../src/App.jsx",import.meta.url),"utf8"),entry=readFileSync(new URL("../src/CalibrationMarginNormalEntry.js",import.meta.url),"utf8");
+  assert.match(app,/UNBORROWED_REACH_SHELL_VERSION,\s*MEASURED_HORIZON_SHELL_VERSION,\s*\]\s*\.includes\(controller\?\.getState\(\)\.shellVersion\)/);
+  assert.match(app,/createMeasuredHorizonAdapter:[\s\S]*createMeasuredHorizonStorageAdapter/);
+  assert.match(app,/<MeasuredHorizon[\s\S]*state=\{calibrationMarginEntryView\}/);
+  assert.match(entry,/createMeasuredHorizonRouteState\(unborrowedReachController\.getState\(\)\)/);
+  assert.match(entry,/options\.createMeasuredHorizonAdapter\?\./);
+  assert.match(entry,/measuredHorizonController\.dispatch\(intent\)/);
+});

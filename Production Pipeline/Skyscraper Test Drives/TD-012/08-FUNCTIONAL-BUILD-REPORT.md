@@ -55,9 +55,10 @@ surface, and the literal storage-free 58-scenario fixture.
 - TD-012 normal focused tests: `5/5` for identities/gates/modalities, strict
   eligibility, Python plus 15 independent objective gates, route rejection/
   Tour isolation, ordered record sanitation, and predecessor-stable adapter.
-- TD-012 fixture focused tests: `4/4`; all `58/58` surfaces render the exact
+- TD-012 fixture focused tests: `5/5`; all `58/58` surfaces render the exact
   visible owner and a real declared focus target in SSR; production absence
-  and closed external-input boundaries pass.
+  and closed external-input boundaries pass. A direct source regression keeps
+  route, restore, fresh adapter construction, dispatcher, and renderer wired.
 - Fresh full suite after integration: **`941/941`**, zero failures, in
   `13.174s`.
 - Product build: `215` modules, success in `6.33s`.

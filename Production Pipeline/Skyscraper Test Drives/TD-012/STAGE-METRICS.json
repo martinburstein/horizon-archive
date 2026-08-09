@@ -166,7 +166,7 @@
       "disposition": "IMPLEMENTATION IN PROGRESS",
       "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/08-FUNCTIONAL-BUILD-REPORT.md",
       "sourceBaseline": "5edcf4e",
-      "tests": "941/941 full; 5/5 normal focused; 4/4 fixture focused; 58/58 SSR owner/focus targets",
+      "tests": "941/941 full; 5/5 normal focused; 5/5 fixture focused; 58/58 SSR owner/focus targets",
       "build": "product 215 modules; fixture 57 modules",
       "pba": "PASS: JS 1656007; CSS 119553; media 17/37410731; zero new media",
       "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/reveal",
