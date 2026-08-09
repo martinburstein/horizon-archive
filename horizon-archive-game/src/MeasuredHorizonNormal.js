@@ -108,6 +108,10 @@ function canonicalRaw(raw, sanitizer) {
   try { const safe = sanitizer(JSON.parse(raw)); return safe && JSON.stringify(safe) === raw ? safe : null; } catch { return null; }
 }
 
+function exactFreshEventToken(value) {
+  return typeof value === "string" && value.length >= 16 && /^td012-[a-z0-9-]+$/.test(value);
+}
+
 export function sanitizeMeasuredHorizonEligibility(value) {
   if (!value || typeof value !== "object" || containsForbidden(value)) return null;
   if (value.objectiveVersion !== MEASURED_HORIZON_OBJECTIVE_VERSION
@@ -241,42 +245,47 @@ function exactRouteIntent(intent) {
   return intent?.kind === MEASURED_HORIZON_ROUTE_INTENT_KIND && intent?.controllerVersion === MEASURED_HORIZON_ROUTE_CONTROLLER_VERSION
     && intent?.mode === "campaign" && intent?.packetId === "RP-012" && intent?.group === MEASURED_HORIZON_ROUTE_GROUP
     && intent?.owner === "PILOT // EXPEDITION NAVIGATION" && intent?.action === MEASURED_HORIZON_ROUTE_ACTION
-    && measuredHorizonModalities.includes(intent?.activationKind) && typeof intent?.opaqueFreshEventToken === "string"
-    && /^td012-[a-z0-9-]{8,}$/.test(intent.opaqueFreshEventToken);
+    && measuredHorizonModalities.includes(intent?.activationKind)
+    && exactFreshEventToken(intent?.opaqueFreshEventToken);
 }
 
-export function sanitizeMeasuredHorizonSave(value) {
+export function sanitizeMeasuredHorizonSave(value, eligibilityValue) {
+  const eligibility = sanitizeMeasuredHorizonEligibility(eligibilityValue);
+  if (!eligibility) return null;
   if (!value || typeof value !== "object" || containsForbidden(value) || Object.keys(value).join("|") !== recordKeys.join("|")) return null;
   if (value.version !== MEASURED_HORIZON_RECORD_VERSION || value.packetId !== "RP-012" || value.checkpoint !== MEASURED_HORIZON_CHECKPOINT
     || value.objectiveVersion !== MEASURED_HORIZON_OBJECTIVE_VERSION || stable(value.objectiveIds) !== stable(measuredHorizonObjectiveIds)
-    || !Array.isArray(value.evidenceReferenceIds) || !value.evidenceReferenceIds.length || new Set(value.evidenceReferenceIds).size !== value.evidenceReferenceIds.length
+    || stable(value.evidenceReferenceIds) !== stable(eligibility.evidenceReferenceIds)
     || ![MEASURED_HORIZON_READY, MEASURED_HORIZON_NOT_YET].includes(value.localReadinessState)
     || value.continuation !== "continuation" || value.cityStateDelta !== null || value.worldStateDelta !== null
     || value.externalStateDelta !== null || value.authorityDelta !== null || value.successor !== null) return null;
   if (Object.keys(value.perGatePassBoolean ?? {}).join("|") !== measuredHorizonGateIds.join("|")
     || measuredHorizonGateIds.some((id) => typeof value.perGatePassBoolean[id] !== "boolean")) return null;
   const expectedRoutes = measuredHorizonGateIds.filter((id) => !value.perGatePassBoolean[id]).map(remediationId);
-  if (stable(value.remediationRouteIds) !== stable(expectedRoutes)) return null;
+  const expectedOutcome = expectedRoutes.length ? MEASURED_HORIZON_NOT_YET : MEASURED_HORIZON_READY;
+  if (stable(value.remediationRouteIds) !== stable(expectedRoutes) || value.localReadinessState !== expectedOutcome) return null;
   const canonical = Object.fromEntries(recordKeys.slice(0, -1).map((key) => [key, clone(value[key])]));
   if (value.auditChecksum !== hash(stable(canonical))) return null;
   return freeze({ ...canonical, auditChecksum: value.auditChecksum });
 }
 
-export function createMeasuredHorizonStorageAdapter(storage, proofBytes = {}) {
+export function createMeasuredHorizonStorageAdapter(storage, proofBytes = {}, eligibilityValue = null) {
   const expectedPredecessor = proofBytes[UNBORROWED_REACH_SAVE_KEY];
+  const eligibility = sanitizeMeasuredHorizonEligibility(eligibilityValue);
+  const sanitizeCurrentRecord = (value) => sanitizeMeasuredHorizonSave(value, eligibility);
   const readRaw = (key) => { try { return storage?.getItem(key) ?? null; } catch { return null; } };
   const predecessorsStable = () => readRaw(UNBORROWED_REACH_SAVE_KEY) === expectedPredecessor
     && Boolean(canonicalRaw(expectedPredecessor, sanitizeUnborrowedReachSave));
   return freeze({
     predecessorsStable,
-    read() { const raw = readRaw(MEASURED_HORIZON_SAVE_KEY); return raw == null ? null : canonicalRaw(raw, sanitizeMeasuredHorizonSave); },
+    read() { const raw = readRaw(MEASURED_HORIZON_SAVE_KEY); return raw == null ? null : canonicalRaw(raw, sanitizeCurrentRecord); },
     commit(candidate) {
-      const safe = sanitizeMeasuredHorizonSave(candidate); const before = readRaw(MEASURED_HORIZON_SAVE_KEY);
+      const safe = sanitizeCurrentRecord(candidate); const before = readRaw(MEASURED_HORIZON_SAVE_KEY);
       if (!safe || !predecessorsStable()) return freeze({ status: "failed", rollbackVerified: true, predecessorBytesPreserved: predecessorsStable() });
       const raw = JSON.stringify(safe);
       try {
         storage.setItem(MEASURED_HORIZON_SAVE_KEY, raw);
-        if (readRaw(MEASURED_HORIZON_SAVE_KEY) !== raw || !canonicalRaw(raw, sanitizeMeasuredHorizonSave) || !predecessorsStable()) throw new Error("read_back_rejected");
+        if (readRaw(MEASURED_HORIZON_SAVE_KEY) !== raw || !canonicalRaw(raw, sanitizeCurrentRecord) || !predecessorsStable()) throw new Error("read_back_rejected");
         return freeze({ status: "committed", value: safe, rollbackVerified: true, predecessorBytesPreserved: true });
       } catch {
         try { if (before == null) storage.removeItem(MEASURED_HORIZON_SAVE_KEY); else storage.setItem(MEASURED_HORIZON_SAVE_KEY, before); } catch { return freeze({ status: "hold", rollbackVerified: false, predecessorBytesPreserved: predecessorsStable() }); }
@@ -294,13 +303,14 @@ function buildRecord(eligibility, gates, outcome) {
     remediationRouteIds: measuredHorizonGateIds.filter((id) => gates[id] !== true).map(remediationId), localReadinessState: outcome,
     continuation: "continuation", cityStateDelta: null, worldStateDelta: null, externalStateDelta: null, authorityDelta: null, successor: null,
   };
-  return sanitizeMeasuredHorizonSave({ ...canonical, auditChecksum: hash(stable(canonical)) });
+  return sanitizeMeasuredHorizonSave({ ...canonical, auditChecksum: hash(stable(canonical)) }, eligibility);
 }
 
 export function createMeasuredHorizonNormalController(options = {}) {
   const released = clone(options.releasedPredecessorState); const route = clone(options.entrySourceState);
   const predecessor = canonicalRaw(options.predecessorBytes, sanitizeUnborrowedReachSave);
-  const restored = sanitizeMeasuredHorizonSave(options.restoredRecord); const eligibility = sanitizeMeasuredHorizonEligibility(options.eligibility);
+  const eligibility = sanitizeMeasuredHorizonEligibility(options.eligibility);
+  const restored = sanitizeMeasuredHorizonSave(options.restoredRecord, eligibility);
   const allowed = new Set(["mode", "releasedPredecessorState", "entrySourceState", "predecessorBytes", "entryIntent", "restoredRecord", "eligibility", "adapter"]);
   const contaminated = Object.keys(options).some((key) => !allowed.has(key));
   const routeAccepted = !contaminated && predecessor?.version === UNBORROWED_REACH_RECORD_VERSION && predecessor?.checkpoint === "rp011_reconciliation_saved"
@@ -337,7 +347,7 @@ export function createMeasuredHorizonNormalController(options = {}) {
         const exact = input?.kind === "td012.measured-horizon-intent.v1" && input?.controllerVersion === MEASURED_HORIZON_CONTROLLER_VERSION
           && input?.shellVersion === MEASURED_HORIZON_SHELL_VERSION && input?.mode === "campaign" && input?.packetId === "RP-012"
           && input?.group === state.activeGroup && input?.owner === state.owner && measuredHorizonModalities.includes(input?.activationKind)
-          && typeof input?.opaqueFreshEventToken === "string" && /^td012-[a-z0-9-]{8,}$/.test(input.opaqueFreshEventToken)
+          && exactFreshEventToken(input?.opaqueFreshEventToken)
           && !spentTokens.has(input.opaqueFreshEventToken);
         if (!exact) return reject("invalid_or_stale_intent");
         spentTokens.add(input.opaqueFreshEventToken);
@@ -375,7 +385,7 @@ export function createMeasuredHorizonNormalController(options = {}) {
       if (group === "mh40_save_confirm" && action === measuredHorizonActions.save) {
         state = stateFor("mh40_save_transaction", { perGatePassBoolean: gates, failedGateIds: measuredHorizonGateIds.filter((id) => !gates[id]), localReadinessState: outcome });
         const candidate = buildRecord(activeEligibility, gates, outcome); const result = options.adapter?.commit?.(candidate);
-        if (result?.status === "committed") { record = sanitizeMeasuredHorizonSave(result.value); return freeze({ status: "local_readiness_saved_verified_restore", record: clone(record), state: clone(set(outcome === MEASURED_HORIZON_READY ? "mh40_restore_ready" : "mh40_restore_not_yet", { failedGateIds: record.remediationRouteIds.map((id) => id.slice(10)), localReadinessState: outcome })) }); }
+        if (result?.status === "committed") { record = sanitizeMeasuredHorizonSave(result.value, activeEligibility); return freeze({ status: "local_readiness_saved_verified_restore", record: clone(record), state: clone(set(outcome === MEASURED_HORIZON_READY ? "mh40_restore_ready" : "mh40_restore_not_yet", { failedGateIds: record.remediationRouteIds.map((id) => id.slice(10)), localReadinessState: outcome })) }); }
         if (result?.status === "hold" || result?.rollbackVerified !== true || result?.predecessorBytesPreserved !== true) return freeze({ status: "rollback_integrity_hold", state: clone(set("mh40_rollback_hold", { failedGateIds: measuredHorizonGateIds.filter((id) => !gates[id]), localReadinessState: outcome })) });
         return freeze({ status: "local_save_failed_rollback_verified", state: clone(set("mh40_save_recovery", { failedGateIds: measuredHorizonGateIds.filter((id) => !gates[id]), localReadinessState: outcome })) });
       }

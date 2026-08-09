@@ -219,6 +219,28 @@
       "e2e": "cycle's sole complete 125.8s passing E2E preserved and not rerun",
       "cleanup": "no browser or preview opened; ports 4173/4184/4292/4293/5174 clear; no QA or image/reveal action",
       "nextStage": "Combat Engineer only for TD012-FIX-006/007/008"
+    },
+    {
+      "sequence": 13,
+      "stage": "Combat Engineer Intelligence return correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-09T15:48:25-04:00",
+      "endedAt": "2026-08-09T15:57:37-04:00",
+      "durationMs": 552000,
+      "disposition": "FUNCTIONAL BUILD READY - INTELLIGENCE RETURN CORRECTED",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-012/08-FUNCTIONAL-BUILD-REPORT.md#intelligence-return-correction-addendum---2026-08-09",
+      "startingAuthority": "exact Intelligence return 0002d18840e357e2fb51fee523ed401921c68529 over Quartermaster f80ff79b671a683221eb7d860c409beb69a14eb0 and pushed Combat 825416da4426cda1e0d195da254083e2c1d893c3",
+      "corrections": "TD012-FIX-006 bidirectional gate/remediation/outcome coherence; TD012-FIX-007 exact current sanitized eligibility-reference equality in shell order across sanitizer/adapter/controller restore; TD012-FIX-008 total token length >=16",
+      "directRegressions": "READY plus false gate rejects; NOT YET plus all true rejects; forged/missing/extra/reordered references reject; 15-character token rejects; exact 16-character token accepts",
+      "focusedValidation": "15/15 TD-012 normal and fixture PASS",
+      "fullValidation": "947/947 PASS; Node 15.087s",
+      "build": "product 215 modules in 6.78s; fixture 57 modules in 0.746s",
+      "pba": "PASS: JS 1660034; CSS 119599; modules 215; media 17/37410731; zero new media",
+      "preserved": "ordered 16-key checksum, predecessor equality, rollback/HOLD, replay-free restore, ownership/modalities, 58 fixture IDs, content/DOM/focus/CSS/equal geometry, world, returns and null successor",
+      "e2e": "not rerun; sole complete 125.8s passing cycle evidence preserved",
+      "quartermasterReview": "not required because rendered content, DOM, focus, CSS and fixture declarations are unchanged",
+      "imageBoundary": "selectedImageRoles empty; no generation/edit/board/import/media/reveal; accepted reference bytes unchanged",
+      "nextStage": "new fresh Intelligence Officer direct independent release reconciliation"
     }
   ]
 }

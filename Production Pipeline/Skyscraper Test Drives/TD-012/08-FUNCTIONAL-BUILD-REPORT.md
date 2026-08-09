@@ -171,3 +171,56 @@ retire or disposition any non-frozen content gap, preserve every frozen
 functional and protected boundary above, and issue `CONTENT COMPLETE`,
 `REVISE`, or `HOLD`. Quartermaster hands directly to Intelligence Officer; no
 Image Specialist or reveal stage exists.
+
+## Intelligence return correction addendum - 2026-08-09
+
+### Return authority and bounded objective
+
+Combat resumed from exact Intelligence return `0002d18840e357e2fb51fee523ed401921c68529`
+over Quartermaster `f80ff79b671a683221eb7d860c409beb69a14eb0` and pushed
+Combat `825416da4426cda1e0d195da254083e2c1d893c3`. The only authorized work was
+`TD012-FIX-006/007/008`; no earlier correction, content, presentation, fixture,
+media, route ownership, or hard-stop contract was reopened.
+
+### Corrections completed
+
+| ID | Exact correction | Direct regression |
+| --- | --- | --- |
+| `TD012-FIX-006` | The save sanitizer now derives the exact expected remediation routes from the ordered 16 gate Booleans and requires the matching outcome in both directions: all true/empty routes is READY; any false/exact nonempty demonstrated routes is NOT YET. | Checksummed READY with one false gate and checksummed NOT YET with all true both reject before restore. |
+| `TD012-FIX-007` | Save sanitation, adapter read/write, App adapter creation, and controller restore now bind `evidenceReferenceIds` to the exact current sanitized eligibility references in their current shell order. | Forged, missing, extra, and reordered checksummed reference sets reject at sanitizer, adapter, and controller restore boundaries and never mount MH-40. |
+| `TD012-FIX-008` | Route and in-slice semantic intents share one private-free token predicate requiring the `td012-` shape and total length `>=16`. | A 15-character token rejects without consumption; an exact 16-character token accepts under the unchanged owner/action/modality/predecessor checks. |
+
+The exact ordered 16-key schema/checksum, predecessor equality, atomic
+read-back, byte-stable rollback/`HOLD`, replay-free restore, route ownership,
+seven modalities, all 58 fixture IDs, Quartermaster copy, DOM/focus/CSS/equal
+geometry, invariant world, safe returns, null deltas, and `successor=null`
+remain unchanged. No rendered content, DOM, focus, CSS, or fixture declaration
+changed, so Quartermaster re-review is not required.
+
+### Correction validation
+
+| Gate | Correction evidence |
+| --- | --- |
+| Focused normal + fixture | **`15/15 PASS`**, including every new negative boundary and both legitimate saved outcomes |
+| Fresh cold full suite | **`947/947 PASS`**, zero failures; Node `15.087s` |
+| Production build | PASS, `215` modules, Vite `6.78s` |
+| Fixture build | PASS, `57` modules, Vite `0.746s` |
+| Candidate PBA/media | PASS: JS `1,660,034 / 1,703,258`; CSS `119,599 / 119,672`; modules `215 / 222`; media exact `17 / 37,410,731`; zero new |
+| Production identity | JS `index-ft7O09pn.js`, SHA-256 `87BAE99B9D28DB1BAC8ABA57B4F87968E223BF51917917F8714E2FBBA7373682`; CSS remains exact `B77DF710F51462702833098D12E986B80C80B127FBC7905284718DACEAB8C0A5` |
+| Fixture identity | JS `index-BFH8AmMW.js`, SHA-256 `F073AE7E7EF80E52F2F3BAFA379BB15BC0542AB458C016019E57C6D25A449E15`; exact production CSS identity |
+| Complete E2E | Not rerun; the cycle's sole complete passing `125.8s` evidence remains preserved |
+
+No browser, preview, QA capture, image, board, import, media, reveal, hidden
+lore, Martin profile/save, accepted visual-reference byte, protected PDF, or
+protected training path was opened or changed.
+
+### Correction disposition and direct handoff
+
+**`FUNCTIONAL BUILD READY - INTELLIGENCE RETURN CORRECTED`**
+
+Create one dedicated Combat correction commit, push at the passing Combat
+gate, verify `HEAD == origin/main == remote main`, and return directly to a
+**new fresh Intelligence Officer / `intelligence_officer`**. Intelligence must
+independently reproduce the eight negative boundaries and legitimate restore,
+then resume its stopped release ladder. No Quartermaster or Image Specialist
+stage intervenes.

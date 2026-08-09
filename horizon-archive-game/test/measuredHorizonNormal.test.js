@@ -166,7 +166,7 @@ function makeMeasuredSubject(storageOverrides = {}) {
   const released = exactReleasedUnborrowedRecordAndState(); const predecessorBytes = JSON.stringify(released.record);
   const memory = new Map([[UNBORROWED_REACH_SAVE_KEY, predecessorBytes]]);
   const storage = { getItem: (key) => memory.get(key) ?? null, setItem: (key, value) => memory.set(key, value), removeItem: (key) => memory.delete(key), ...storageOverrides };
-  const adapter = createMeasuredHorizonStorageAdapter(storage, { [UNBORROWED_REACH_SAVE_KEY]: predecessorBytes });
+  const adapter = createMeasuredHorizonStorageAdapter(storage, { [UNBORROWED_REACH_SAVE_KEY]: predecessorBytes }, eligibility());
   const route = createMeasuredHorizonRouteState(released.state);
   const controller = createMeasuredHorizonNormalController({ releasedPredecessorState: released.state, entrySourceState: route, predecessorBytes, entryIntent: createCalibrationMarginNormalEntryIntent(MEASURED_HORIZON_ROUTE_ACTION, "screen_reader", `td012-e2e-route-${String(++measuredToken).padStart(6, "0")}`, null, MEASURED_HORIZON_ROUTE_GROUP), eligibility: eligibility(), adapter });
   assert.equal(controller.entryTokenConsumed(), true);
@@ -203,8 +203,8 @@ function hash(value) {
   for (const byte of new TextEncoder().encode(value)) { result ^= byte; result = Math.imul(result, 0x01000193) >>> 0; }
   return `fnv1a32-${result.toString(16).padStart(8, "0")}`;
 }
-function record(gates = Object.fromEntries(measuredHorizonGateIds.map((id) => [id, true]))) {
-  const canonical = {
+function record(gates = Object.fromEntries(measuredHorizonGateIds.map((id) => [id, true])), overrides = {}) {
+  const canonical = { ...{
     version: MEASURED_HORIZON_RECORD_VERSION,
     packetId: "RP-012",
     checkpoint: MEASURED_HORIZON_CHECKPOINT,
@@ -220,7 +220,7 @@ function record(gates = Object.fromEntries(measuredHorizonGateIds.map((id) => [i
     externalStateDelta: null,
     authorityDelta: null,
     successor: null,
-  };
+  }, ...overrides };
   return { ...canonical, auditChecksum: hash(stable(canonical)) };
 }
 
@@ -278,24 +278,84 @@ test("TD012 route projection is exact and rejected/Tour controllers remain inert
   assert.equal(tour.dispatch(MEASURED_HORIZON_ROUTE_ACTION).reason, "route_closed");
 });
 
+test("TD012 route tokens reject 15 characters and accept exactly 16", () => {
+  const released = exactReleasedUnborrowedRecordAndState();
+  const predecessorBytes = JSON.stringify(released.record);
+  const route = createMeasuredHorizonRouteState(released.state);
+  const makeController = (token) => createMeasuredHorizonNormalController({
+    releasedPredecessorState: released.state,
+    entrySourceState: route,
+    predecessorBytes,
+    entryIntent: createMeasuredHorizonRouteIntent(MEASURED_HORIZON_ROUTE_ACTION, "pointer", token),
+    adapter: { predecessorsStable: () => true },
+    eligibility: eligibility(),
+  });
+  assert.equal("td012-aaaaaaaaa".length, 15);
+  assert.equal(makeController("td012-aaaaaaaaa").entryTokenConsumed(), false);
+  assert.equal("td012-aaaaaaaaaa".length, 16);
+  assert.equal(makeController("td012-aaaaaaaaaa").entryTokenConsumed(), true);
+});
+
 test("TD012 record sanitizer and atomic adapter enforce 16 ordered keys and predecessor equality", () => {
-  const safe = sanitizeMeasuredHorizonSave(record());
+  const currentEligibility = eligibility();
+  const safe = sanitizeMeasuredHorizonSave(record(), currentEligibility);
   assert.ok(safe);
   assert.equal(Object.keys(safe).length, 16);
   assert.equal(safe.localReadinessState, MEASURED_HORIZON_READY);
-  assert.equal(sanitizeMeasuredHorizonSave({ ...safe, privateNotes: "PRIVATE" }), null);
+  assert.equal(sanitizeMeasuredHorizonSave({ ...safe, privateNotes: "PRIVATE" }, currentEligibility), null);
   const failed = Object.fromEntries(measuredHorizonGateIds.map((id, index) => [id, index !== 4]));
-  const notYet = sanitizeMeasuredHorizonSave(record(failed));
+  const notYet = sanitizeMeasuredHorizonSave(record(failed), currentEligibility);
   assert.ok(notYet);
   assert.deepEqual(notYet.remediationRouteIds, [`REMEDIATE-${measuredHorizonGateIds[4]}`]);
 
   const predecessorBytes = JSON.stringify({ version: "not-a-canonical-predecessor" });
   const memory = new Map([[UNBORROWED_REACH_SAVE_KEY, predecessorBytes]]);
   const storage = { getItem: (key) => memory.get(key) ?? null, setItem: (key, value) => memory.set(key, value), removeItem: (key) => memory.delete(key) };
-  const adapter = createMeasuredHorizonStorageAdapter(storage, { [UNBORROWED_REACH_SAVE_KEY]: predecessorBytes });
+  const adapter = createMeasuredHorizonStorageAdapter(storage, { [UNBORROWED_REACH_SAVE_KEY]: predecessorBytes }, currentEligibility);
   assert.equal(adapter.predecessorsStable(), false);
   assert.equal(adapter.commit(safe).status, "failed");
   assert.equal(memory.has(MEASURED_HORIZON_SAVE_KEY), false);
+});
+
+test("TD012 save restore rejects contradictory outcomes and noncanonical evidence references", () => {
+  const currentEligibility = eligibility();
+  const allTrue = Object.fromEntries(measuredHorizonGateIds.map((id) => [id, true]));
+  const oneFalse = Object.fromEntries(measuredHorizonGateIds.map((id, index) => [id, index !== 5]));
+  const canonicalReferences = currentEligibility.evidenceReferenceIds;
+  const invalidRecords = [
+    record(oneFalse, { localReadinessState: MEASURED_HORIZON_READY }),
+    record(allTrue, { localReadinessState: MEASURED_HORIZON_NOT_YET }),
+    record(allTrue, { evidenceReferenceIds: ["FORGED-EVIDENCE-REF"] }),
+    record(allTrue, { evidenceReferenceIds: canonicalReferences.slice(0, -1) }),
+    record(allTrue, { evidenceReferenceIds: [...canonicalReferences, "EXTRA-EVIDENCE-REF"] }),
+    record(allTrue, { evidenceReferenceIds: [...canonicalReferences].reverse() }),
+  ];
+  for (const candidate of invalidRecords) {
+    assert.equal(sanitizeMeasuredHorizonSave(candidate, currentEligibility), null);
+  }
+
+  const released = exactReleasedUnborrowedRecordAndState();
+  const predecessorBytes = JSON.stringify(released.record);
+  for (const candidate of invalidRecords) {
+    const memory = new Map([
+      [UNBORROWED_REACH_SAVE_KEY, predecessorBytes],
+      [MEASURED_HORIZON_SAVE_KEY, JSON.stringify(candidate)],
+    ]);
+    const storage = { getItem: (key) => memory.get(key) ?? null, setItem: (key, value) => memory.set(key, value), removeItem: (key) => memory.delete(key) };
+    const adapter = createMeasuredHorizonStorageAdapter(storage, { [UNBORROWED_REACH_SAVE_KEY]: predecessorBytes }, currentEligibility);
+    assert.equal(adapter.read(), null);
+    const restored = createMeasuredHorizonNormalController({
+      releasedPredecessorState: released.state,
+      entrySourceState: createMeasuredHorizonRouteState(released.state),
+      predecessorBytes,
+      restoredRecord: candidate,
+      eligibility: currentEligibility,
+      adapter,
+    });
+    assert.equal(restored.getState().activeGroup, MEASURED_HORIZON_ROUTE_GROUP);
+    assert.notEqual(restored.getState().activeGroup, "mh40_restore_ready");
+    assert.notEqual(restored.getState().activeGroup, "mh40_restore_not_yet");
+  }
 });
 
 test("TD012 exact released UR-30 controller/orchestrator traversal proves both outcomes, persistence recovery, returns, rejection, and null hard stop", () => {

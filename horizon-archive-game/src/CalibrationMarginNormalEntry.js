@@ -514,7 +514,10 @@ export function createCalibrationMarginNormalEntry(options = {}) {
                       restoredRecord: restoredUnborrowedReach,
                       adapter: options.unborrowedReachAdapter,
                     });
-                    const restoredMeasuredHorizon = sanitizeMeasuredHorizonSave(options.restoredMeasuredHorizon);
+                    const restoredMeasuredHorizon = sanitizeMeasuredHorizonSave(
+                      options.restoredMeasuredHorizon,
+                      options.measuredHorizonEligibility,
+                    );
                     if (restoredMeasuredHorizon && options.measuredHorizonEligibility) {
                       measuredHorizonController = createMeasuredHorizonNormalController({
                         entrySourceState: createMeasuredHorizonRouteState(unborrowedReachController.getState()),

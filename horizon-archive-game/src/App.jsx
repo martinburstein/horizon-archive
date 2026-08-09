@@ -583,7 +583,7 @@ function calibrationMarginReviewSaveOptions(storage, measuredHorizonEligibility 
   };
   const measuredHorizonAdapter = createMeasuredHorizonStorageAdapter(storage, {
     [UNBORROWED_REACH_SAVE_KEY]: unborrowedReachBytes,
-  });
+  }, measuredHorizonEligibility);
   let predecessorBytes = null;
   try {
     predecessorBytes = storage?.getItem(CALIBRATION_MARGIN_REVIEW_SAVE_KEY) ?? null;
@@ -652,7 +652,7 @@ function calibrationMarginReviewSaveOptions(storage, measuredHorizonEligibility 
     measuredHorizonAdapter,
     createMeasuredHorizonAdapter: (_unborrowedRecord, currentUnborrowedBytes) => createMeasuredHorizonStorageAdapter(storage, {
       [UNBORROWED_REACH_SAVE_KEY]: currentUnborrowedBytes,
-    }),
+    }, measuredHorizonEligibility),
     restoredMeasuredHorizon: measuredHorizonAdapter.read(),
     measuredHorizonEligibility,
     predecessorBytes,
