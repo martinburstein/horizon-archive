@@ -287,23 +287,38 @@ boundary. Never overlap a stage or restart a completed stage.
   push, master-control promotion, image action, board, or reveal occurred.
   Second-review evidence is preserved at the top of artifact 10.
 
+## Second Combat correction checkpoint
+
+- `TD011-FIX-002` is corrected with one selector-only rule: every wrapping
+  reconciliation checkbox label has `min-height:44px`; native controls, DOM,
+  copy, focus, controller, route, save, world, and hard stop are unchanged.
+- Direct regression covers six effective labels in each of the three affected
+  fixture states. Live measurement passes `18/18`, minimum `259.2x44 CSS px`,
+  with declared owner/actual focus still PASS.
+- Focused normal/fixture/protected passes `26/26`; the first corrected-candidate
+  cold full suite passes `932/932`.
+- Production build remains `212` modules. JS is unchanged at `1,622,151`
+  bytes; CSS is `113,974 / 114,010` bytes with `36` bytes headroom; exact media
+  remains `17 / 37,410,731`. `PBA-TD011-v1` passes.
+- The passing complete E2E was not rerun at Combat. No image, board, media,
+  fixture scenario, shell, cap, or reveal changed. Evidence is at the top of
+  artifact 08A.
+
 ## Exact next action - active
 
-Run **Combat Engineer / `combat_engineer` target-geometry correction only**
-against the exact committed second Intelligence return. Correct only
-`TD011-FIX-002`: give every wrapping label in
-`.unborrowed-reconciliation fieldset` an effective minimum `44px` height while
-preserving native checkbox semantics, DOM order, labels, declared focus IDs,
-content, controller, evidence, save, route, world, return, LOOK, and hard stop.
-Add a direct regression for all six effective label targets in the three
-affected fixture states. The CSS change must remain inside the exact
-`114,010`-byte `PBA-TD011-v1` cap; no variance or quality reduction is
-authorized. Run the focused fixture/presentation tests, production build/PBA,
-and one fresh cold full `npm test`; create one dedicated Combat correction
-commit and hand directly to fresh Intelligence. Do not rerun the already-
-passing complete E2E at Combat and do not push. Image Specialist remains
-disabled: do not generate, edit, select, board, import, or reveal media. Do
-not inspect Martin's browser/profile/save, hidden lore, or protected untracked
+Run **Intelligence Officer / `intelligence_officer` final release review**
+against the exact committed second Combat correction. Independently verify
+`TD011-FIX-002`, all six effective targets across the three affected states,
+exact `80/80` owner/actual focus, modal/four-layout/accessibility behavior,
+focused/full tests, validators, production and fixture builds, exact
+PBA/media/served identity, isolated production preview/HTTP preflight, logs,
+hard stop, cleanup, variance closure, retrospective, master-control promotion,
+commit, push, and `HEAD == origin/main == remote main`. Preserve the cycle's
+already-passing single complete E2E as evidence and do not rerun it merely for
+more evidence; rerun only if the independent audit finds a new E2E-affecting
+reason. Image Specialist remains disabled and there is no image artifact or
+reveal: do not generate, edit, select, board, import, or reveal media. Do not
+inspect Martin's browser/profile/save, hidden lore, or protected untracked
 paths.
 
 ## Frozen boundaries

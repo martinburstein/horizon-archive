@@ -86,3 +86,17 @@ test("TD011 browser harness compares visible owner and actual active element", (
   assert.match(source, /document\.activeElement\?\.id/); assert.match(source, /renderedOwner === declaredOwner && activeElementId === declaredFocus/); assert.match(source, /data-rendered-contract=/);
   const css = readFileSync(new URL("../review-fixtures/td011-unborrowed-reach/fixture.css", import.meta.url), "utf8"); assert.match(css, /CanvasText/); assert.match(css, /animation:none!important/);
 });
+
+test("TD011 reconciliation exposes six effective 44px checkbox targets in every affected fixture state", { timeout: 60_000 }, async () => {
+  const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+  assert.match(css, /\.unborrowed-reconciliation fieldset label\{min-height:44px\}/);
+  const vite = await createServer({ root: fileURLToPath(new URL("..", import.meta.url)), appType: "custom", server: { middlewareMode: true }, logLevel: "silent" });
+  try {
+    const { UnborrowedReach } = await vite.ssrLoadModule("/src/UnborrowedReach.jsx");
+    for (const id of ["ur30-all-reopened", "ur30-reconciliation-blank", "ur30-reconciliation-retry"]) {
+      const scenario = createUnborrowedReachScenario(id);
+      const markup = renderToStaticMarkup(React.createElement(UnborrowedReach, { state: scenario.state, onAction() {}, onFieldChange() {} }));
+      assert.equal((markup.match(/<label><input id="ur30-method-[^"]+" type="checkbox"/g) ?? []).length, 6, `${id} effective checkbox labels`);
+    }
+  } finally { await vite.close(); }
+});

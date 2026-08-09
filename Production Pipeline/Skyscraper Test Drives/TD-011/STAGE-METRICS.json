@@ -278,6 +278,28 @@
       "commit": "PENDING_SECOND_INTELLIGENCE_RETURN_COMMIT",
       "commitConvention": "The dedicated second Intelligence return commit containing this ledger entry is authoritative; this field remains non-recursive.",
       "nextStage": "Combat Engineer target-geometry correction"
+    },
+    {
+      "sequence": 13,
+      "stage": "Combat Engineer target-geometry correction",
+      "agentId": "combat_engineer",
+      "startedAt": "2026-08-09T13:37:22-04:00",
+      "endedAt": "2026-08-09T13:42:09-04:00",
+      "durationMs": 287000,
+      "disposition": "CORRECTED - INTELLIGENCE RE-REVIEW READY",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/08A-FUNCTIONAL-CORRECTION-REPORT.md",
+      "startingAuthority": "second Intelligence return commit 54520a0",
+      "correction": "TD011-FIX-002; selector-only 44px minimum on wrapping reconciliation checkbox labels",
+      "regression": "exact CSS selector plus six effective labels in each of ur30-all-reopened, ur30-reconciliation-blank and ur30-reconciliation-retry",
+      "liveGeometry": "18/18 label/state combinations PASS; minimum 259.2x44 CSS px; declared owner/focus remains PASS",
+      "focused": "normal+fixture+protected 26/26 PASS",
+      "fullSuite": "first corrected-candidate cold ordinary npm test 932/932 PASS",
+      "budget": "212 modules; JS 1622151 SHA F9359D90; CSS 113974 SHA CB799132; exact media 17 / 37410731; CSS headroom 36; PBA PASS",
+      "scope": "one CSS selector plus direct regression; zero component/controller/fixture-scenario/content/learning/save/route/world/media/image/shell/cap change",
+      "cleanup": "browser tab closed; owned port 4183 clear; passing complete E2E not rerun at Combat",
+      "commit": "PENDING_SECOND_COMBAT_CORRECTION_COMMIT",
+      "commitConvention": "The dedicated second Combat correction commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "nextStage": "Intelligence Officer final release review"
     }
   ]
 }
