@@ -1,0 +1,58 @@
+{
+  "schema": "horizon-archive.skyscraper-stage-metrics",
+  "schemaVersion": 1,
+  "run": {
+    "testDrive": "TD-011",
+    "shellCandidate": "deliberately unselected",
+    "campaignAddress": "deliberately unselected",
+    "provisionalSurfaceCandidate": "one independent fresh-evidence record across an unfamiliar exposed reach, followed only after finalization by a separate method-and-limit reconciliation with four retained scopes",
+    "sourceCommit": "671d6160e556bd302690d5b1f7f56644bfe67356",
+    "timezone": "America/New_York",
+    "executionMode": "manual-until-1500-then-scheduled-sequential-nonoverlapping",
+    "activeRoleCount": 10,
+    "imageSpecialist": "disabled",
+    "imageGeneration": "disabled",
+    "cycleReveal": "disabled"
+  },
+  "stages": [
+    {
+      "sequence": 1,
+      "stage": "Commandant",
+      "agentId": "commandant",
+      "startedAt": "2026-08-09T12:00:59-04:00",
+      "endedAt": "2026-08-09T12:04:41-04:00",
+      "durationMs": 222000,
+      "disposition": "VISION BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/01-GAME-DEVELOPMENT-BRIEF.md",
+      "releasedPredecessor": "TD-010 / SS-RP010-COUNTERFIELD-v1 / CF-30 plus exact Occluded Fold and City Threshold returns and inert LOOK-only null continuation",
+      "candidateSelection": "deliberately unselected; Colonel owns one provisional surface-safe candidate or HOLD",
+      "validation": "HEAD == origin/main == remote main at source control commit; TD-010 handoff/reconciliation/current controls reconciled; product-level contract checks PASS",
+      "processChange": "ten-role workflow; Image Specialist and all generation/edit/import/reveal work disabled without relaxing presentation release evidence",
+      "variances": "none requiring product-baseline revision",
+      "commit": "1f97d1f2bf3b9556c78dc08b66e106756109ff8d",
+      "synchronization": "local stage commit; no Commandant push gate",
+      "nextStage": "Colonel"
+    },
+    {
+      "sequence": 2,
+      "stage": "Colonel",
+      "agentId": "colonel",
+      "startedAt": "2026-08-09T12:04:41-04:00",
+      "endedAt": "2026-08-09T12:07:28-04:00",
+      "durationMs": 167000,
+      "disposition": "WORLD BASELINE",
+      "artifact": "Production Pipeline/Skyscraper Test Drives/TD-011/02-WORLD-NARRATIVE-MASTERPLAN.md",
+      "baselineVersion": "WNMP-TD011-v1",
+      "predecessorVerification": "Commandant commit 1f97d1f2bf3b9556c78dc08b66e106756109ff8d verified as the exact starting authority",
+      "releasedBoundary": "TD-010 / SS-RP010-COUNTERFIELD-v1 / CF-30 plus exact write-free/replay-free returns and inert LOOK-only null continuation",
+      "candidateDerivation": "exactly one approved surface-safe independent fresh-record then separate method-and-limit reconciliation; protected handles RP-011 / Unborrowed Reach / SC-12 / UR-00-UR-30 remain provisional and non-routable",
+      "canonLocks": "six equal observations; four prior scopes hidden but retained until independent fresh finalization; separate reconciliation; invariant world; no shared identity/origin/chronology/topology/function/meaning/readiness/ending",
+      "validation": "Colonel authority, continuity, ownership, unknown, intended-ending, no-successor, non-generative, and protected-boundary checks PASS",
+      "variances": "none; no baseline reopen trigger",
+      "commit": "PENDING_COLONEL_COMMIT",
+      "commitConvention": "The dedicated Colonel commit containing this ledger entry is authoritative; this field remains non-recursive.",
+      "synchronization": "local-only; no Colonel push gate",
+      "nextStage": "Operations Planning Major"
+    }
+  ]
+}

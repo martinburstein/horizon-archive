@@ -76,16 +76,31 @@ boundary. Never overlap a stage or restart a completed stage.
 - No Commandant reopen trigger, product contradiction, or protected-boundary
   variance was found.
 
+## Colonel checkpoint
+
+- `WNMP-TD011-v1 / WORLD BASELINE` derives exactly one provisional
+  surface-safe candidate: an independent fresh-evidence record across an
+  unfamiliar exposed reach, followed only after finalization by a separate
+  method-and-limit reconciliation with four retained scopes.
+- `RP-011 / Unborrowed Reach / SC-12 / UR-00-UR-30` are protected planning
+  handles only. Nothing opens them or converts the CF-30 LOOK into a route.
+- Six equal surface responsibilities, ownership language, invariant-world
+  meaning, protected unknowns, RP-012 ending protection, and the disabled
+  Image Specialist/no-image/no-reveal boundary are locked.
+
 ## Exact next action - active
 
-Run **Colonel / `colonel`** only from `GDB-TD011-v1`. Derive at most one
-already-mapped provisional surface-safe candidate from exact released CF-30 and
-current approved authority. Preserve every unknown, retained scope, return,
-no-authority boundary, and the disabled Image Specialist/no-generation/
-no-reveal rule. Issue `WORLD BASELINE` with one cited candidate and explicitly
-unresolved route, or `HOLD`; commit the stage and hand only that result to
-Operations. Do not issue a route, transition, campaign placement, shell, code,
-board, image, or ending content.
+Run **Operations Planning Major / `operations_planning_major`** only from
+`GDB-TD011-v1` and `WNMP-TD011-v1`. Independently prove or reject exact
+contiguous placement at `RP-011 / SC-12 / UR-00-UR-30`. If valid, define one
+sole fresh Pilot-owned transition from exact released CF-30 with validation-
+before-consumption, one-hit token behavior, fail-closed invalid/duplicate/
+stale/private/Tour/interrupted handling, exact predecessor preservation, exact
+permitted returns, and a hard stop before RP-012 or ending content. Preserve
+the disabled Image Specialist/no-generation/no-board/no-import/no-reveal rule.
+Issue `FLOOR STACK READY`, `REVISE`, or `HOLD`, commit the stage, and hand only
+that result to Science. Do not design learning, scene flow, copy, shell, code,
+art, or the ending.
 
 ## Frozen boundaries
 
