@@ -26,6 +26,7 @@
       "edge_inventory": "exhaustive across all six layouts, pre/post phases, four edges: image border/padding expected 0 with source owner; label border/padding expected 1 with geometry owner",
       "write_order": "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
       "failure_capture": "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
+      "failure_transport": "after awaited owned-browser close, synchronously rewrite browserClosed from that lifecycle; then capture full sorted failurePaths and failuresByLayout as compact UTF-8 base64 before cleanup and emit the stored scalar only after cleanup",
       "release_evidence": false,
       "verifier_input": false,
       "failed_e2e_authorizes_retry": false
@@ -821,7 +822,7 @@
       ],
       "output_port_ownership": "one browser process, one freshly created external OS-temp GUID root, machine-owned first-run-live-diagnostic.json on every completed aggregate evaluation, and first-run-live-summary.json only after all live gates pass",
       "cleanup": "close owned browser; on success retain exact external root through live-summary-verify; on failure retain only long enough to capture every diagnostic failure path/value; then remove only the exact owned root after repeated containment proof",
-      "failure_capture": "if E2E fails after diagnostic emission, read only <exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json; it is localization only and authorizes no retry",
+      "failure_capture": "if E2E fails after diagnostic emission, read only <exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json; capture its complete diagnostic-transport scalar before owned-root cleanup, emit the stored scalar only after cleanup, and authorize no retry",
       "environment": {
         "HORIZON_ARCHIVE_URL": "http://127.0.0.1:4173/",
         "HORIZON_ARCHIVE_QA_DIR": "<fresh-resolved-GUID-child-inside-OS-temp-outside-repository>",
@@ -831,6 +832,29 @@
         "HORIZON_ARCHIVE_PBA_GLOBAL": "true",
         "HORIZON_ARCHIVE_MEDIA_IDENTITY": "true"
       }
+    },
+    "diagnostic-transport": {
+      "id": "diagnostic-transport",
+      "workdir": ".",
+      "command": [
+        "node",
+        "playtest/first-run-diagnostic-transport.mjs"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "failed complete-e2e with exact literal first-run-live-diagnostic.json retained"
+      ],
+      "output_port_ownership": "read-only exact diagnostic; non-release and forbidden verifier input; one compact base64 scalar captured before cleanup",
+      "cleanup": "retain the scalar in memory, delete only the exact contained owned root, then emit the stored scalar without truncation",
+      "environment": {
+        "HORIZON_ARCHIVE_QA_DIR": "<exact-fresh-resolved-GUID-child-inside-OS-temp-outside-repository>",
+        "HORIZON_ARCHIVE_LIVE_DIAGNOSTIC": "<exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json"
+      },
+      "release_evidence": false,
+      "verifier_input": false,
+      "failed_e2e_authorizes_retry": false
     },
     "pba-media": {
       "id": "pba-media",

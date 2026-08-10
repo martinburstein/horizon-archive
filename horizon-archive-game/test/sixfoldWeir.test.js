@@ -2,6 +2,10 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  buildFailureDetailTransport,
+  formatFailureDetailScalar,
+} from "../../playtest/first-run-diagnostic-transport.mjs";
+import {
   deriveSixfoldWeirState,
   DROWNED_ARCHIVE_HOTSPOTS,
   FRPX03_COPY,
@@ -15,6 +19,7 @@ import {
 const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 const e2e = readFileSync(new URL("../../playtest/e2e-playthrough.mjs", import.meta.url), "utf8");
+const diagnosticTransportSource = readFileSync(new URL("../../playtest/first-run-diagnostic-transport.mjs", import.meta.url), "utf8");
 const releaseManifest = JSON.parse(readFileSync(new URL("../../Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json", import.meta.url), "utf8"));
 const pass = () => Object.fromEntries(responsibleAIDimensions.map((dimension) => [dimension, true]));
 const sequence = [...responsibleAIPrimaryScenarios, ...responsibleAITransferScenarios].map(({ id }) => id);
@@ -136,12 +141,12 @@ test("non-color states focus and forced-color treatment reuse the accepted hotsp
   assert.match(styles, /forced-colors: active[\s\S]*?sixfold-weir-state[^}]*focus-visible \{ outline: 3px solid Highlight/);
 });
 
-test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machine live verifier", () => {
+test("FRRC-002-v1 freezes all fourteen gates, one E2E, external QA, and a machine live verifier", () => {
   assert.equal(releaseManifest.manifest_id, "FRRC-002-v1");
   assert.equal(releaseManifest.work_order, "FRWO-003-v1");
   assert.equal(releaseManifest.shell, "FRSH-003-v1");
-  assert.equal(Object.keys(releaseManifest.entries).length, 13);
-  for (const id of ["focused", "related", "full", "validators", "production-build", "fixture-build", "production-preview", "fixture-preview", "served-identity", "complete-e2e", "live-summary-verify", "pba-media", "cleanup-identity"]) {
+  assert.equal(Object.keys(releaseManifest.entries).length, 14);
+  for (const id of ["focused", "related", "full", "validators", "production-build", "fixture-build", "production-preview", "fixture-preview", "served-identity", "complete-e2e", "diagnostic-transport", "live-summary-verify", "pba-media", "cleanup-identity"]) {
     const entry = releaseManifest.entries[id];
     assert.equal(entry.id, id);
     assert.ok(entry.workdir && (entry.command?.length || entry.invocations?.length) && entry.timeout_ms > 0);
@@ -162,12 +167,18 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
     edge_inventory: "exhaustive across all six layouts, pre/post phases, four edges: image border/padding expected 0 with source owner; label border/padding expected 1 with geometry owner",
     write_order: "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
     failure_capture: "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
+    failure_transport: "after awaited owned-browser close, synchronously rewrite browserClosed from that lifecycle; then capture full sorted failurePaths and failuresByLayout as compact UTF-8 base64 before cleanup and emit the stored scalar only after cleanup",
     release_evidence: false,
     verifier_input: false,
     failed_e2e_authorizes_retry: false,
   });
   assert.match(releaseManifest.entries["complete-e2e"].output_port_ownership, /first-run-live-diagnostic\.json[\s\S]*first-run-live-summary\.json only after all live gates pass/);
   assert.match(releaseManifest.entries["complete-e2e"].failure_capture, /read only[\s\S]*first-run-live-diagnostic\.json[\s\S]*no retry/);
+  assert.deepEqual(releaseManifest.entries["diagnostic-transport"].command, ["node", "playtest/first-run-diagnostic-transport.mjs"]);
+  assert.equal(releaseManifest.entries["diagnostic-transport"].release_evidence, false);
+  assert.equal(releaseManifest.entries["diagnostic-transport"].verifier_input, false);
+  assert.equal(releaseManifest.entries["diagnostic-transport"].failed_e2e_authorizes_retry, false);
+  assert.match(releaseManifest.entries["diagnostic-transport"].cleanup, /retain the scalar in memory[\s\S]*delete only[\s\S]*then emit[\s\S]*without truncation/);
   assert.match(releaseManifest.entries["live-summary-verify"].failed_e2e_behavior, /do not run[\s\S]*diagnostic[\s\S]*not release evidence/);
   assert.match(e2e, /schema: "horizon\.first-run\.live-diagnostic\.v1"[\s\S]*operativeShell: "FRSH-003-v1-VR-07"[\s\S]*diagnosticContract: "FRSH-003-v1-VR-12"[\s\S]*acceptedEvidencePredecessor/);
   assert.match(e2e, /requiredCheckPaths[\s\S]*emittedCheckPaths[\s\S]*checkInventoryExact[\s\S]*failureCount[\s\S]*failurePaths[\s\S]*failuresByLayout/);
@@ -182,6 +193,38 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
   const layoutThrow = e2e.indexOf('if (!layoutPass) throw new Error');
   const summaryWrite = e2e.indexOf('writeFileSync(qaPath("first-run-live-summary.json")');
   assert.ok(diagnosticWrite > 0 && diagnosticWrite < focusThrow && diagnosticWrite < layoutThrow && layoutThrow < summaryWrite);
+  const browserClose = e2e.indexOf("await browser.close()");
+  const browserClosedState = e2e.indexOf("browserClosed = true", browserClose);
+  const lifecycleDiagnosticWrite = e2e.lastIndexOf('writeFileSync(qaPath("first-run-live-diagnostic.json")');
+  assert.ok(browserClose > summaryWrite && browserClose < browserClosedState && browserClosedState < lifecycleDiagnosticWrite);
+  assert.doesNotMatch(e2e, /console\.error\(JSON\.stringify\(diagnosticTransport\)\)/);
+  assert.match(diagnosticTransportSource, /Object\.keys\(value\)\.sort\(ordinalCompare\)/);
+  assert.match(diagnosticTransportSource, /failurePaths\.sort\(ordinalCompare\)[\s\S]*Buffer\.from\(canonicalJson, "utf8"\)[\s\S]*toString\("base64"\)/);
+  const transport = buildFailureDetailTransport({
+    failureCount: 2,
+    failurePaths: ["layouts.narrow.z", "layouts.desktop.a"],
+    failuresByLayout: {
+      narrow: [{ path: "layouts.narrow.z", owner: "geometry", expected: 0, actual: 1 }],
+      desktop: [{ path: "layouts.desktop.a", owner: "source", expected: 0, actual: 1 }],
+    },
+    browserClosed: true,
+  }, { forbiddenRoot: "C:\\owned\\qa" });
+  assert.deepEqual(JSON.parse(Buffer.from(transport.failureDetailBase64, "base64").toString("utf8")), {
+    failurePaths: ["layouts.desktop.a", "layouts.narrow.z"],
+    failuresByLayout: {
+      desktop: [{ actual: 1, expected: 0, owner: "source", path: "layouts.desktop.a" }],
+      narrow: [{ actual: 1, expected: 0, owner: "geometry", path: "layouts.narrow.z" }],
+    },
+    browserClosed: true,
+  });
+  assert.equal(transport.failureDetailBytes, Buffer.byteLength(transport.canonicalJson, "utf8"));
+  assert.doesNotMatch(formatFailureDetailScalar(transport), /layouts\.|[\r\n]/);
+  assert.throws(() => buildFailureDetailTransport({
+    failureCount: 1,
+    failurePaths: ["C:\\unsafe\\detail"],
+    failuresByLayout: { desktop: [] },
+    browserClosed: true,
+  }, { forbiddenRoot: "C:\\owned\\qa" }), /unsafe path/);
   assert.match(releaseManifest.entries["live-summary-verify"].command.join(" "), /first-run\.live-summary\.v1[\s\S]*FRSH-003-v1-VR-04[\s\S]*productPredecessor[\s\S]*semanticBottomAnchored[\s\S]*Tab -> Shift\+Tab[\s\S]*sixfoldActivationMs/);
   assert.equal(releaseManifest.entries.validators.invocations.length, 40);
   assert.deepEqual(releaseManifest.entries.validators.invocations.map((entry) => entry.command[1]), [...releaseManifest.entries.validators.invocations.map((entry) => entry.command[1])].sort());

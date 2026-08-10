@@ -2,6 +2,7 @@ import { chromium } from "../ai900_practice_assessment_logger/node_modules/playw
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { withBrowserClosed } from "./first-run-diagnostic-transport.mjs";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
@@ -90,6 +91,9 @@ const referenceCapstoneTransfer = JSON.parse(readFileSync(resolve(repositoryRoot
 const referenceMixedSimulation = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/readiness/SIM-01/reference_answers.json"), "utf8"));
 const laterRailFixtures = await buildSanctionedLaterRailFixtures();
 const browser = await chromium.launch({ headless: true });
+let liveDiagnosticForTransport = null;
+let runError = null;
+let browserClosed = false;
 
 try {
   const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
@@ -1545,22 +1549,9 @@ print("Operator:", learner)`);
     layoutPass,
     runtimeErrors: runtimeErrors.length > 0,
   });
+  liveDiagnosticForTransport = liveDiagnostic;
   writeFileSync(qaPath("first-run-live-diagnostic.json"), `${JSON.stringify(liveDiagnostic, null, 2)}\n`, "utf8");
-  const diagnosticTransport = {
-    schema: liveDiagnostic.schema,
-    productCandidate: liveDiagnostic.productCandidate,
-    probeCandidate: liveDiagnostic.probeCandidate,
-    validationControlCandidate: liveDiagnostic.validationControlCandidate,
-    acceptedEvidencePredecessor: liveDiagnostic.acceptedEvidencePredecessor,
-    diagnosticContract: liveDiagnostic.diagnosticContract,
-    checkInventoryExact: liveDiagnostic.checkInventoryExact,
-    failureCount: liveDiagnostic.failureCount,
-    failurePaths: liveDiagnostic.failurePaths,
-    focusPass: liveDiagnostic.focusPass,
-    layoutPass: liveDiagnostic.layoutPass,
-  };
-  console.error(JSON.stringify(diagnosticTransport));
-  const diagnosticFailure = () => `diagnostic failureCount=${liveDiagnostic.failureCount} failurePaths=${JSON.stringify(liveDiagnostic.failurePaths)}`;
+  const diagnosticFailure = () => `diagnostic failureCount=${liveDiagnostic.failureCount}`;
   if (canonicalJourneyElapsedSeconds >= 180) {
     throw new Error(`Canonical clean-start through MH-40 exceeded 180 seconds: ${canonicalJourneyElapsedSeconds.toFixed(3)}s; ${diagnosticFailure()}`);
   }
@@ -1852,9 +1843,21 @@ print("Operator:", learner)`);
     maxMainThreadTaskMs,
     sixfoldActivationMs,
   }));
+} catch (error) {
+  runError = error;
 } finally {
-  await browser.close();
+  try {
+    await browser.close();
+    browserClosed = true;
+  } catch (error) {
+    runError ||= error;
+  }
+  if (liveDiagnosticForTransport) {
+    liveDiagnosticForTransport = withBrowserClosed(liveDiagnosticForTransport, browserClosed);
+    writeFileSync(qaPath("first-run-live-diagnostic.json"), `${JSON.stringify(liveDiagnosticForTransport, null, 2)}\n`, "utf8");
+  }
 }
+if (runError) throw runError;
 
 function buildSixfoldLiveDiagnostic({ layouts, focusPass, layoutPass, runtimeErrors }) {
   const layoutDefinitions = [
