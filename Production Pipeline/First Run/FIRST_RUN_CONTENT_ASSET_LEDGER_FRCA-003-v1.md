@@ -141,3 +141,39 @@ Mission Captain is the exact next owner to adjudicate trailing-separator
 canonicalization. Image Specialist remains blocked. No product, content, copy,
 test, probe, manifest, media, presentation, learning, save, route, ending,
 maturity, protected, or user byte changed; no image/media operation occurred.
+
+## VR-10 separator-normalized replay return
+
+Mission reissued `FIRST RUN SHELL READY / FRSH-003-v1-VR-10`. Quartermaster
+passed the repeated synchronized identity preflight at
+`fb9d217b9db7470d799c1c7292ebc3934d7c1db0`, created exactly one fresh root
+with the native command, and passed pre/post separator-normalized direct-parent,
+temp-descendant, and bidirectional repository-exclusion checks. Served
+production and fixture identities passed `2/2`.
+
+The sole exact-identity E2E ran once for `58.8s` using product
+`a91763e28d488f31f8cf7d40ece0b2682246ba9b` and probe
+`ca89a679195c11d441a76e6c02983a6436f2ccb2`. It passed all six layouts, the
+complete later rail, both equal MH-40 outcomes, null deltas, `successor=null`,
+and zero runtime errors. Maximum Sixfold activation and sampled main-thread
+task were `0.20000004768371582ms`. Exactly one summary was generated and the
+independent verifier ran exactly once and passed the exact repository identity,
+schema, geometry, focus, journey, performance, PBA, and media gates.
+
+Owned preview PIDs `50292` / `45096` were stopped and ports `4173` / `4184`
+are clear. Before deletion, Quartermaster constructed the exact frozen target,
+resolved it, and encoded the required normalized equality/direct-parent/temp/
+repository checks plus exact literal removal in one PowerShell command. The
+execution layer rejected that command before it ran because it contained the
+authorized recursive `Remove-Item`. The owned root therefore remains at:
+
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-3d574750-951c-4029-b6b6-531f7d012015`
+
+VR-10 makes any cleanup failure `HOLD` without alternate deletion or in-place
+repair. Quartermaster therefore preserves **`PRODUCTION CONTENT HOLD /
+FRCA-003-v1 / VR-10`** despite the otherwise fully passing replay. No rerun
+occurred. Mission Captain is the exact next owner to adjudicate policy-compatible
+deletion of this already-proven exact root. Image remains blocked. No tracked
+product/content/test/copy/probe/manifest/media/presentation/learning/save/route/
+ending/maturity or protected/user byte changed; no image/media operation or
+reveal occurred.
