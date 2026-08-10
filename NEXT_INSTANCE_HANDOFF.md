@@ -79,29 +79,46 @@ exact-next-action authority.
   now the pre-existing low-growth continuation becoming easier to read, not an
   object rising in response. Mechanics and geometry did not change. There is
   no shell or media variance.
+- Image Specialist independently reviewed the package, title/opening, Meadow,
+  Drowned, Witness, and direct City Threshold presentation and issued
+  **`RUNTIME PRESENTATION COMPLETE / FRPR-001-v1`** as a substantiated
+  no-change pass. No product code, configuration, test, copy, sound, import,
+  or media byte changed after candidate
+  `d37103b46f257cb61ef99f76413611ee31d0fab2`.
+- Fresh Image evidence is focused `25/25`, cold full `953/953`, validators
+  `40/40`, both builds, exact PBA/media/served identity, and one clean-start
+  production E2E in `68.863s` through both MH-40 outcomes with zero runtime
+  errors. Desktop/laptop/narrow/effective-`200%`, keyboard/focus, containment,
+  forced colors, and reduced motion pass. Automated evidence is not a human AT
+  certification.
+- No image or media asset was generated, edited, replaced, varied, imported,
+  moved, removed, or published; no reveal was created. Isolated browser
+  screenshots are QA-only outside the repository. Tool policy blocked
+  recursive deletion of that temp capture directory; all owned preview ports
+  are clear and the candidate/Git tree are unaffected.
 
-## Exact next action - Image Specialist runtime presentation
+## Exact next action - fresh Intelligence Officer release review
 
-Read `First Run Agent Profiles/image-specialist.md`,
+Read `First Run Agent Profiles/intelligence-officer.md`,
 `Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-001-v1.md`,
+`Production Pipeline/First Run/FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-001-v1.md`,
 and
-`Production Pipeline/First Run/FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-001-v1.md`
-in full. Then read the exact candidate, visual charter, applicable scene
-sheets, accepted runtime assets and provenance, responsive/accessibility
-contracts, and the exact shell sections cited by the profile.
+`Production Pipeline/First Run/FIRST_RUN_RUNTIME_PRESENTATION_REVIEW_FRPR-001-v1.md`
+in full. Begin from a fresh release posture; do not inherit a predecessor's
+conclusion as proof.
 
-Verify exact content-complete product/test candidate
-`d37103b46f257cb61ef99f76413611ee31d0fab2` and verify that the current control
-HEAD changes only the versioned Quartermaster ledger and synchronized handoff
-after that candidate. Inspect the existing package, opening, Glass Meadow,
-Drowned Archive, Witness Corridor, and direct City Threshold experience for
-code/configuration-level runtime presentation only. Permitted concerns are
-composition, lighting treatment, color, sound, motion, hierarchy, responsive
-containment, focus, forced colors, and reduced motion using existing accepted
-media. A substantiated no-change pass is valid.
+Verify immutable product/test candidate
+`d37103b46f257cb61ef99f76413611ee31d0fab2`, the committed Image Specialist
+control edge, exact ancestry, and `HEAD == origin/main`. Independently rerun or
+corroborate proportionate integrity, focused and cold full regression,
+curriculum/readiness validators, production and TD-012 fixture builds,
+PBA/media/served identity, the single non-overlapping clean-start production
+journey through both MH-40 outcomes, representative desktop/laptop/narrow/
+effective-`200%`, keyboard/focus, forced-color, reduced-motion, containment,
+runtime-error, cleanup, protected-path, and Git gates.
 
 Preserve the approved final-purpose copy meaning, exact mechanics, evidence,
 focus/state/save/routes/world behavior, AI-901 ownership and answer boundaries,
@@ -112,14 +129,14 @@ answer, or prior-human trace. Do not generate, edit, replace, vary, import,
 move, or publish an image or other media asset; do not change media bytes or
 create a reveal.
 
-Run focused and full regression proportionate to any change, production and
-applicable fixture builds, PBA/media/served identity, responsive/effective-
-`200%`, forced-color, reduced-motion, keyboard/focus, cleanup, and protected-
-path proof. Write the versioned runtime presentation report and issue
-`RUNTIME PRESENTATION COMPLETE`, `REVISE`, or `HOLD`. If complete, commit/push
-only permitted Image Specialist code/configuration, tests, report, and handoff
-work, prove `HEAD == origin/main`, and hand the exact candidate to a fresh
-Intelligence Officer. Do not perform Intelligence validation or release.
+Classify every variance before accepting it. Do not repair candidate defects
+inside Intelligence; return them to the earliest owner. If accepted, write the
+versioned First Run As-Built Reconciliation Package, advance the release map
+and scoreboard only from accepted evidence, record `KEEP`, `TUNE`, or
+`REDESIGN` in the First Run process changelog, replace this handoff with one
+synchronized exact next action, issue `FIRST RUN PASS RELEASED`, commit/push,
+and prove `HEAD == origin/main`. Issue `REVISE` or `HOLD` honestly when a gate
+cannot be satisfied.
 
 ## Protected boundaries
 
