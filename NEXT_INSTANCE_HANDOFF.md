@@ -63,20 +63,24 @@ registry before acting. This file is the sole exact-next-action authority.
 - Mission issued `SHELL READY / SS-TE001-GAME-ON-PAPER-v1` for one root
   `HORIZON_ARCHIVE_GAME_ON_PAPER.md`, with exact four-act/fifteen-chapter/forty-
   Terminal structure and a documentation-only validation ladder.
+- Recon issued `CREATIVE LOCK / CT-TE001-SCRIPT-v1`: “The city has been waiting
+  for no one,” with a Pilot arc from hungry projection to earned restraint and
+  a final inversion in which the measure belongs to the learner.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Recon TE-001 creative treatment
+## Exact next action - Tactical TE-001 experience blueprint
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/05-PLAYABLE-SLICE-SHELL.md`
-in full. Issue one Creative Treatment that makes the exact single rail feel
-inevitable rather than restrictive. Define narrative voice, recurring motifs,
-act temperature, fifteen chapter hooks, midgame anti-repetition strategy,
-Pilot interior arc, proposed-copy limits, and the final emotional thesis.
+Read `Production Pipeline/Terminal Enrichment/TE-001/06-CREATIVE-TREATMENT.md`
+in full. Convert `CT-TE001-SCRIPT-v1` into an exact reading-experience blueprint
+for the root script. Lock heading hierarchy, chapter beat order, Terminal
+section anatomy, transition placement, proposed-copy styling in plain text,
+failure-loop condensation, Drowned internal movements, final-outcome symmetry,
+director-audit placement, and structural validation targets.
 
-Preserve every structural, canon, learning, privacy, accessibility, offline,
-image-disabled, and no-successor boundary. Do not author the root script,
-modify runtime/curriculum/art/media/user state, or perform image work.
+Preserve the recommended final sentence and every shell boundary. Do not write
+the root script, alter runtime/curriculum/art/media/user state, or perform image
+work.
 
 ## Protected boundaries
 
