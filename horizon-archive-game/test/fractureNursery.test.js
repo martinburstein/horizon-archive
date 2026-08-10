@@ -98,6 +98,7 @@ test("Nursery state focus and narrow controls retain non-color meaning and minim
   assert.match(styles, /fracture-nursery[^}]*complete[^}]*border-style: double/);
   assert.match(styles, /fracture-nursery"\]:focus-visible \{ outline: 2px solid/);
   assert.match(styles, /forced-colors: active[\s\S]*?fracture-nursery"\]:focus-visible \{ outline: 3px solid Highlight/);
+  assert.match(styles, /data-scene="meadow"\][\s\S]*?dialogue-actions \.continue-action \{[\s\S]*?min-height: 44px/);
   assert.match(styles, /data-canonical-layout="narrow"[\s\S]*?data-scene="meadow"[\s\S]*?:is\(\.verb, \.dialogue-actions \.continue-action\)[\s\S]*?min-height: 44px/);
   assert.doesNotMatch(styles, /data-meadow-departure-choice="true"\][^}]*> \.verb-grid[\s\S]*?display: none/);
 });

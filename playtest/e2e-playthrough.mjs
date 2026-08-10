@@ -2276,7 +2276,7 @@ async function assertResponsiveMeadow(page, viewportLabel, petalState, routeStat
     const commandRect = command.getBoundingClientRect();
     const petalRect = petal.getBoundingClientRect();
     const routeRect = route.getBoundingClientRect();
-    const requiredControls = Array.from(document.querySelectorAll(".verb, .inventory button"))
+    const requiredControls = Array.from(document.querySelectorAll(".verb, .dialogue-actions .continue-action, .inventory button"))
       .map((control) => control.getBoundingClientRect())
       .filter((rect) => rect.width > 0 && rect.height > 0);
     return {
