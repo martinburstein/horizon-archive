@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / CORRECTED FORMAL PRE-LIVE
-SERVED IDENTITY ONLY / FRSH-003-v1-VR-42`**
+Current disposition: **`FIRST RUN SHELL READY / ONE COMPLETE DIAGNOSTIC-
+CONTROL VERIFICATION / FRSH-003-v1-VR-43`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,58 +11,65 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-42`
+Immediate control: `FRSH-003-v1-VR-43`
 
-Immediate return / predecessor authority: Combat VR-41 identity-wrapper parse
-failure before identity requests / `FRSH-003-v1-VR-41`
+Immediate return / predecessor authority: Combat VR-42 corrected formal
+pre-live served-identity PASS / `FRSH-003-v1-VR-42`
 
-Mission VR-42 predecessor source:
-`0a3a154f1152370e9c658f9fdff27ce4e8e4f8bb`
+Mission VR-43 predecessor source:
+`a6376d040798ecd11fc4d279f3d55e914012dadf`
 
-Exact immutable content candidate:
+Exact immutable product candidate:
 `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
 Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 
+Exact diagnostic candidate:
+`2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
+
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-VR-41 passed both launches, root readiness checks, owned cleanup, and port
-clear. Its identity block failed at parse time before any formal identity
-request because generic `SequenceEqual[byte]` syntax was unsupported. Parser
-text escaped the scalar contract. Mission classifies **`UNAUTHORIZED
-DIVERGENCE / PARSER DIAGNOSTIC SCALAR OUTPUT / OPEN / VR-41`**. No product or
-served-identity result is inferred.
+Mission accepts the cumulative immutable ladder: VR-22 tests/validators;
+VR-30 production build; VR-35 fixture build and corrected PBA; VR-42 formal
+production/fixture served identity. The product candidate is unchanged. Seven
+OPEN divergences remain process/control-only and unwaived.
 
 Fresh-child capacity remains unavailable, so root expressly authorized this
 Mission context reuse. The disclosed limitation is not candidate evidence and
 waives no boundary.
 
-Combat may run one corrected formal production-and-fixture served-identity
-checkpoint. Reuse the accepted hidden PassThru launches, bounded root
-readiness, and owned cleanup. Create one disposable `System.Net.WebClient` and
-call `DownloadData(url)` exactly eight times: root, deep, JS, CSS for production
-then fixture. Read disk bytes with `File.ReadAllBytes`; hash served/disk bytes
-with disposable `SHA256.Create().ComputeHash`; convert internally to hex and
-compare exact strings. Emit no URL, response, hash, bytes, asset name, path, or
-diagnostic. Do not use generic methods, `SequenceEqual`, or `HttpClient`.
-
-Emit exactly one ordered scalar line:
+Combat may run exactly one complete diagnostic-control verification. Create
+one new direct-child OS-temp root named
+`horizon-archive-frrc002-<lowercase-D-GUID>`, prove exact containment,
+repository exclusion, nonexistence, and distinction from the disclosed
+predecessor root. Launch production and fixture exactly once with owned PIDs,
+prove root readiness, then run exactly once with timeout `180000ms`:
 
 ```text
-prePortClearCount=<0..2> productionStartExit=<0|1> productionPid=<int> fixtureStartExit=<0|1> fixturePid=<int> productionReadinessAttempts=<int> productionReadinessStatus=<int> fixtureReadinessAttempts=<int> fixtureReadinessStatus=<int> productionHttp200Count=<0..4> productionRootDeepHashMatchCount=<0..2> productionAssetHashMatchCount=<0..2> fixtureHttp200Count=<0..4> fixtureRootDeepHashMatchCount=<0..2> fixtureAssetHashMatchCount=<0..2> safetyRecoveryCount=<0..2> cleanupAttemptCount=<0..2> productionPidStopped=<0|1> fixturePidStopped=<0|1> portClearCount=<0..2> nativeExit=<0|1>
+node playtest/e2e-playthrough.mjs
 ```
 
-Exact pass requires ports `2`; starts `0/0`; two positive PIDs; readiness
-`200/200`; production `4/2/2`; fixture `4/2/2`; safety recovery `0`; cleanup
-`2`; stopped `1/1`; ports clear `2`; native exit `0`. On exact pass return
-**`CORRECTED FORMAL PRE-LIVE SERVED IDENTITY PASS / STOP / RETURN TO FRESH
-MISSION`**. Otherwise return **`HOLD / CORRECTED FORMAL PRE-LIVE SERVED
-IDENTITY FAILURE / NO RERUN / RETURN TO FRESH MISSION`**. Stop after the scalar.
+Use product `a91763e28d488f31f8cf7d40ece0b2682246ba9b`, diagnostic/probe
+`2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`, and the exact fresh root. Require
+E2E exit `0`, exactly one diagnostic with `checkInventoryExact=true` and
+`failureCount=0`, exactly one summary, all six layouts, full rail, both equal
+MH-40 outcomes, null outcome, runtime/offline/performance gates, and only then
+exactly one manifest verifier PASS. On diagnostic failure do not run verifier.
 
-No retry, repair, browser, E2E, complete journey, summary, verifier, dynamic
-live gates, build, test, validator, PBA, scan, synchronization, discovery,
-enumeration, filename/path output, or repository write is authorized.
+Unconditionally stop both preview PIDs, require browser closed and both ports
+clear, then re-prove exact-root containment/distinctness and delete only the
+fresh root. Emit exactly one scalar line:
+
+```text
+rootContainmentPass=<0|1> rootDistinctPass=<0|1> rootCreated=<0|1> prePortClearCount=<0..2> productionPid=<int> fixturePid=<int> readinessStatusCount=<0..2> e2eRunCount=<0|1> e2eExit=<int> e2eDurationMs=<int> diagnosticCount=<0|1> checkInventoryExact=<0|1> failureCount=<int> summaryCount=<0|1> sixLayoutsPass=<0|1> fullRailPass=<0|1> bothMh40Pass=<0|1> nullOutcomePass=<0|1> runtimeOfflinePass=<0|1> performancePass=<0|1> verifierRunCount=<0|1> verifierExit=<int> verifierPass=<0|1> cleanupAttemptCount=<0..2> productionPidStopped=<0|1> fixturePidStopped=<0|1> browserClosed=<0|1> portClearCount=<0..2> rootDeleted=<0|1> nativeExit=<0|1>
+```
+
+On exact PASS return **`ONE COMPLETE DIAGNOSTIC-CONTROL VERIFICATION PASS /
+STOP / RETURN TO FRESH MISSION`**. Otherwise return **`HOLD / ONE COMPLETE
+DIAGNOSTIC-CONTROL VERIFICATION FAILURE / DIAGNOSTIC ONLY / NO RERUN / RETURN
+TO FRESH MISSION`**. Stop after cleanup; no retry, diagnosis, repair, second
+E2E/verifier, product change, or post-cleanup command.
 
 All seven OPEN divergences remain separate and OPEN:
 
@@ -82,12 +89,8 @@ All seven OPEN divergences remain separate and OPEN:
 
 None is waived, merged, closed, cured, or used as candidate evidence.
 
-All frozen candidate, threshold, player, learning, accessibility, privacy,
-save, route, world, equal MH-40, null-delta, `successor=null`, ending,
-immutable-media `17 / 37,410,731`, diagnostic non-evidence/non-verifier, and
-one-E2E meanings remain exact. No release-map or scoreboard cell advances.
-
 No Quartermaster, Image Specialist, Intelligence, release, schedule,
 automation, or `FIRST RUN COMPLETE` action is authorized.
 
-VR-42 and this synchronized handoff are the only administrative writes.
+VR-43 and this synchronized handoff are the only administrative repository
+writes.
