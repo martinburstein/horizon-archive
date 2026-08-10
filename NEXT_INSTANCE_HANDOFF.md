@@ -2,49 +2,43 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FOUR-STAGE FRESH CONTAINED
-CORRECTED DIAGNOSTIC-CONTROL VERIFICATION / FRSH-003-v1-VR-50`**
+Current disposition: **`HOLD / STAGE-1 POST-CREATE ROOT-PROOF FAILURE / ROOT
+DELETED / NO E2E / NO RERUN / FRCE-003-v1-VR-50`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Immediate control: `FRSH-003-v1-VR-50`
+Immediate evidence: `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-50.md`
 
-Mission source: `57e8b48e2a84de83f9c1330ac43d054b5c82c1d7`
+Starting shell revision: `fb7dbee986f96a290274510a3a109f490ff65dff`
 
 Geometry correction / diagnostic transport / report lineage remains:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
 `6c64eb354b7dbb467df5725e2cae4eb67092ddc7` /
 `0ac9023037873004f7bd5d75c16f80953d770a4d`.
 
-The VR-49 wrapper was rejected by the tool-safety layer before execution.
-Mission classifies **`EXECUTION-CONTROL REJECTION / TOOL SAFETY / NON-EXECUTED
-/ NON-EVIDENCE / NO E2E / VR-49`**. No root, port, process, preview, browser,
-E2E, diagnostic, summary, verifier, or cleanup action occurred. This is not a
-candidate finding or a tenth OPEN classification. The VR-48 atomic root PASS
-and the one-E2E budget remain intact.
+Stage 1 created exactly one fresh directory successfully and observed it as a
+directory, but a post-create proof predicate failed before root retention or
+token/digest transport. The authorized in-call failure cleanup resolved the
+same empty candidate, attempted deletion once, and deleted it.
 
-Fresh-child capacity remains unavailable; Mission context reuse is disclosed
-and non-evidence.
+Exact scalar:
 
-Combat may execute only four separate bounded calls: (1) create/prove one
-fresh root and emit its base64 identity token plus digest; (2) decode/re-prove
-the token, launch/readiness-check the two owned previews, and emit numeric PIDs;
-(3) decode/re-prove the root and ownership, then invoke exactly one complete
-E2E with the mutually exclusive diagnostic failure-transport or success
-summary/verifier branch; and (4) unconditionally stop only the transported
-owned PIDs, clear both ports, re-prove and delete only the transported root.
+```text
+stage=1 rootControlPass=0 preExists=0 createAttemptCount=1 createExit=0 postExists=1 rootRetained=0 failureRootCleanupAttempt=1 failureRootDeleted=1 rootTokenB64= rootTokenSha256= nativeExit=1
+```
 
-No call may combine stages. A rejection or failure exhausts the shell, forbids
-reformulation/rerun, and activates only the independently authorized cleanup
-stage when a root or process may exist. Success requires diagnostic
-`checkInventoryExact=true`, `failureCount=0`, `browserClosed=true`, summary 1,
-verifier 1 PASS, and exact cleanup. Failure requires full canonical base64
-transport before cleanup when an E2E diagnostic exists, no verifier, and no
-rerun.
+No token or PID exists. Stages 2 and 3 did not run; E2E invocation count is
+zero. No alternate Stage 4 target could lawfully be inferred after the Stage 1
+failure cleanup had already deleted the root. No retry or diagnosis ran.
 
-The cumulative accepted gates, frozen identities/invariants, and all nine OPEN
-classifications remain exact. No product/media/protected action, build, test,
-validator, PBA, served-identity rerun, downstream stage, or release action is
-authorized.
+Fresh Mission must adjudicate `REQUIRED CORRECTION / EXECUTION CONTROL /
+STAGE-1 POST-CREATE ROOT PROOF / OPEN / VR-50` and issue a bounded authority or
+HOLD. Mission must not run E2E during adjudication or infer a candidate,
+product, browser, diagnostic, or verifier finding.
+
+The cumulative accepted gates, VR-48 atomic PASS, nine prior OPEN
+classifications, and every frozen identity and meaning remain exact.
+Diagnostic evidence remains non-release, forbidden verifier input, and
+no-retry. No downstream stage or release action is authorized.
