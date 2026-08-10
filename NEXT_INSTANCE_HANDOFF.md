@@ -27,6 +27,8 @@ exact-next-action authority.
 - Operations issued **`WORK ORDER READY / FRWO-001-v1`** from source
   `7e1e13b5e57ec96bf09b8a9ace652ddf4e7241a7`, plus
   `FRRM-001-v1` and `FRSB-001-v1`.
+- Science issued **`POLISH VIABILITY READY / FRVE-001-v1`** from source
+  `5ed294cb61b04baa0d06d68a1d12ef817de3164b`.
 - The selected address is `FR-00` through initial `FR-05`: truthful package
   identity, final-purpose existing prologue, canon-safe Drowned/Witness copy,
   and direct existing City Threshold handoff. These surfaces form one obsolete
@@ -34,35 +36,40 @@ exact-next-action authority.
 - No physical-host expansion is authorized. Fracture Nursery remains the next
   earliest mapped missing host; Drowned hosts 05-15 and hosts 17-38 remain
   explicitly incomplete. Learning coverage is not host parity.
-- No Viability Envelope or First Run Shell exists yet. No production
-  implementation is authorized.
+- The opening save remains version `1`; no new save field or migration is
+  authorized. Direct Witness-to-City entry must durably clear the pending
+  early-scene marker, and the obsolete credits surface is not an RP-001
+  predecessor.
+- No First Run Shell exists yet. No production implementation is authorized.
 - Martin authorized continued sequential First Run work in this chat. Continue
   only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
 
-## Exact next action - Science viability envelope
+## Exact next action - Mission First Run shell
 
-Read `First Run Agent Profiles/office-of-science-administrator.md`,
+Read `First Run Agent Profiles/mission-captain.md`,
 `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`,
 `Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_RELEASE_MAP.md`,
-`Production Pipeline/First Run/FIRST_RUN_SCOREBOARD.md`, and
-`Production Pipeline/First Run/FIRST_RUN_WORK_ORDER_FRWO-001-v1.md` in full.
+`Production Pipeline/First Run/FIRST_RUN_SCOREBOARD.md`,
+`Production Pipeline/First Run/FIRST_RUN_WORK_ORDER_FRWO-001-v1.md`, and
+`Production Pipeline/First Run/FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-001-v1.md`
+in full.
 
-Independently inspect the exact opening save/activation path, early scene and
-City Threshold transition graph, Demo Tour isolation, Windows launcher/package
-entry, focused and E2E tests, current TD-012 budgets, and affected
-accessibility/presentation states. Answer every Work Order Science question,
-including safe removal of the obsolete credits junction, save/marker migration,
-launcher compatibility, complete Drowned/Witness response-string closure, and
-zero learning/evidence/save/later-route regression.
+Independently inspect the exact source paths cited by `FRVE-001-v1`. Reconcile
+all planning authorities into exactly one versioned First Run Shell for
+`FRWO-001-v1`. Freeze the opening-save-v1/no-new-field decision, durable
+cleared-pending City frontier, direct credits-free route, canonical Windows
+entry plus truthful legacy wrapper, complete Drowned/Witness response closure,
+unchanged learning/privacy/Demo Tour/later-route/MH-40 behavior, affected-state
+focus/accessibility, fixed PBA/media limits, one clean-start-to-MH-40 E2E, exact
+permitted files, validation, cleanup, rollback, and variance routing.
 
-Issue exactly one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
-envelope for `FRWO-001-v1`, commit the Science stage, and leave one exact
-Mission handoff. Do not write final copy, implement production changes, create
-a Mission shell, change media, promote a missing host, or alter the Work Order
-boundary silently.
+Issue `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`, commit the Mission stage,
+push at the shell gate, and prove `HEAD == origin/main`. Do not implement,
+write final copy, deploy Reconnaissance, change media, promote a missing host,
+or alter the Work Order boundary silently.
 
 ## Protected boundaries
 
