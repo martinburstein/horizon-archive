@@ -69,22 +69,26 @@ registry before acting. This file is the sole exact-next-action authority.
 - Tactical issued `EXPERIENCE READY / XB-TE001-SCRIPT-v1`: exact root-document
   hierarchy, chapter and Terminal anatomy, forty-entry learning-pressure map,
   Drowned internal movements, failure condensation, and equal ending structure.
+- Combat completed the documentation build in
+  `HORIZON_ARCHIVE_GAME_ON_PAPER.md`: exactly four acts, fifteen chapters, and
+  forty ordered Terminal scenes, with equal assessment outcomes and the shared
+  RP-012 ending. Structural, registry, dialogue-ownership, placeholder, UTF-8,
+  and whitespace checks pass under `08-FUNCTIONAL-BUILD-REPORT.md`.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Combat TE-001 root script
+## Exact next action - Quartermaster TE-001 director read
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/07-EXPERIENCE-BLUEPRINT.md`
-in full. Author the complete root `HORIZON_ARCHIVE_GAME_ON_PAPER.md` from the
-exact shell, creative treatment, and blueprint. It must read as a finished
-cinematic novella/script rather than a copied planning packet. Implement all
-structural counts, the forty-entry registry, distinct chapter drama, local
-learning pressure without answers, equal outcomes, the shared ending, and the
-director audit.
+Read `HORIZON_ARCHIVE_GAME_ON_PAPER.md`,
+`Production Pipeline/Terminal Enrichment/TE-001/05-PLAYABLE-SLICE-SHELL.md`,
+and `Production Pipeline/Terminal Enrichment/TE-001/08-FUNCTIONAL-BUILD-REPORT.md`
+in full. Perform a complete director read for cadence, clarity, physical and
+emotional continuity, scene distinction, assessment dignity, and the earned
+closing chill. Correct only accepted documentation defects inside the shell.
 
-Run the exact documentation checks and record results. Do not change runtime,
-curriculum, art, media, user state, or protected files; do not perform image
-work.
+Record the completeness decision in `09-CONTENT-COMPLETENESS-REPORT.md`. Do not
+change runtime, curriculum, assessment ownership, art, media, user state, or
+protected files; do not perform image work.
 
 ## Protected boundaries
 
