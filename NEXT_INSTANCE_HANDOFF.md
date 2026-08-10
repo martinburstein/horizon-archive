@@ -292,34 +292,51 @@ exact-next-action authority.
   blocked until a fully passing Combat report and synchronized handoff exist.
 - Reissued shell artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-02.md`.
+- Combat froze bounded VR-02 repair candidate
+  `7e85154abd8dbf116c4bb84ca66afd859903d750`. It changes only `App.jsx`,
+  `sixfoldWeir.test.js`, the existing E2E, and `FRRC-002-v1`; physical
+  constants, seven placeholders, CSS/modules/media, learning/save/route/ending,
+  and both predecessor lineages remain unchanged.
+- Exact pre-live gates passed: focused `68/68`, related `74/74`, cold full
+  `972/972`, validators `40/40`, builds `217/57`, JavaScript `1,666,665`, CSS
+  `119,247`, media `17 / 37,410,731`, and both served identities.
+- The one authorized VR-02 E2E ran once for `72.2s`, completed the full journey,
+  and failed closed at the final layout aggregate. No rerun occurred and no
+  machine summary/verifier acceptance exists.
+- The repaired retained semantic target is exact `62.796875 x 44`, bottom
+  anchored; image/content identity, actual source mapping, anchor containment,
+  `>0.95` retention, zero overlap/overflow, label containment/scroll,
+  forced-color `3px solid Highlight`, reduced motion, and identity pass.
+- Four VR-02 assumptions contradict live layout: unquantized arithmetic does
+  not equal browser-quantized CSS geometry; inline `2px` label positioning
+  measures `3px` from the button's outer border; existing verb order is
+  `LOOK AT -> USE -> TALK TO`; and one `Shift+Tab` from Host 05 does not focus
+  inventory return. The following `Tab` does restore genuine Host 05
+  `:focus-visible`.
+- Exact PIDs were stopped, ports are clear, and the external GUID root was
+  removed. Combat disposition is **`HOLD / VR-02 LIVE CONTRACT VARIANCE /
+  FRCE-003-v1`**. Quartermaster remains blocked.
 
-## Exact next action - Combat Engineer only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, `FRSH-003-v1-VR-02`, original `FRSH-003-v1`, prior Mission hold,
-`FRVE-003-v1-VR-01`, `FRPX-003-v1-VR-01`, and complete `FRCE-003-v1`.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, `FRSH-003-v1-VR-02`, `FRVE-003-v1-VR-01`,
+`FRPX-003-v1-VR-01`, and the complete updated `FRCE-003-v1`.
 
-Starting from exact corrected harness candidate
-`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`, implement only:
+Adjudicate the four exact live contradictions: browser-quantized percentage
+registration, inner positioning versus outer-border label inset, the existing
+`LOOK AT -> USE -> TALK TO` verb order, and the actual reverse-tab predecessor.
+Preserve repaired candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`,
+predecessors `a9776e3` / `bf58e52`, all seven placeholders, the successful
+retained `44px` repair, actual `.scene-art` mapping, genuine Host 05
+focus-visible proof, and every quality threshold.
 
-- Host-05-only inline bottom-anchored semantic `min 44px` activation and
-  exact inset label/state mechanism in the existing `isSixfoldWeir` branch;
-- focused physical-versus-semantic/label proof;
-- `.scene-art` content-box source mapping and all separate six-layout fields;
-- genuine forced-color keyboard `Shift+Tab -> Tab` focus-visible proof; and
-- required `FRRC-002-v1` summary/verifier field updates.
-
-Preserve physical `45/75/20/25`, all seven placeholders, corrected assertion
-lineage, CSS/modules/media, every state/focus/announcement/recovery/meaning,
-learning/evidence/privacy/save/route/later-rail/ending contract, all thirty
-acceptance checks, PBA, performance, rollback, and protected boundaries.
-
-Commit and freeze one repaired candidate before the release ladder. Run every
-pre-live gate. Only if they pass, run exactly one new complete E2E under one
-fresh external GUID root; require the same run to emit the machine summary and
-the verifier to pass. On any failure, stop and return `HOLD` with no rerun. On
-complete PASS, issue one versioned functional report and exact Quartermaster
-handoff, commit/push only authorized scope, and prove synchronization.
+Obtain Science/Tactical reconciliation that measures the actual browser-
+resolved physical box and real tab sequence without rounding, reordered
+player behavior, programmatic focus, threshold weakening, or alternate media.
+Issue a versioned implementable shell decision or continue HOLD. Do not
+authorize another complete E2E or Quartermaster until the contradiction is
+closed.
 
 Do not write final copy, change a placeholder/CSS/module/media/learning/save/
 route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA

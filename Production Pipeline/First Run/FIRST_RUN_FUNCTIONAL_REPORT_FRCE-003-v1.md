@@ -4,7 +4,7 @@ Date: **2026-08-10**
 
 Role: **Combat Engineer**
 
-Disposition: **HOLD / LIVE LAYOUT CONTRACT VARIANCE**
+Disposition: **HOLD / VR-02 LIVE CONTRACT VARIANCE**
 
 ## Candidate identity
 
@@ -19,6 +19,8 @@ Disposition: **HOLD / LIVE LAYOUT CONTRACT VARIANCE**
   `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`
 - Verification-only control source:
   `a39e6bf45ebabe536425719be8a9370a1183270b`
+- VR-02 repaired product/test/probe/manifest candidate:
+  `7e85154abd8dbf116c4bb84ca66afd859903d750`
 - Canonical command manifest:
   `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
 
@@ -148,14 +150,79 @@ removed after repeated containment checks.
   geometry. Mission must adjudicate this shell variance and route the
   contradicted viability claim back to Science before any repair.
 
+## VR-02 repair and sole live run
+
+Mission reissued `FIRST RUN SHELL READY / FRSH-003-v1-VR-02`. Combat froze
+exact repaired candidate `7e85154abd8dbf116c4bb84ca66afd859903d750` as
+one bounded commit touching only `App.jsx`, `sixfoldWeir.test.js`, the existing
+E2E, and the `FRRC-002-v1` summary verifier. The candidate:
+
+- preserves physical `45/75/20/25` constants and all seven placeholders;
+- adds only Host-05 inline bottom-anchored `min 44px` activation and label
+  containment values;
+- begins source mapping at the actual `.scene-art` content box;
+- separates frame, containing, image, nominal physical, semantic, label,
+  Host 04, return ridge, and inventory-return evidence; and
+- enters forced colors/reduced motion before genuine keyboard
+  `Shift+Tab -> Tab`, with no programmatic focus in that probe.
+
+Exact pre-live evidence on this candidate passed:
+
+| Gate | Result |
+|---|---|
+| Focused | **68/68 PASS** |
+| Related | **74/74 PASS** |
+| Cold full | **972/972 PASS**, `21.182s` |
+| Validators | **40/40 PASS** |
+| Production / fixture | **217 / 57 modules PASS** |
+| Narrow/global PBA | **PASS**: JS `1,666,665`; CSS `119,247`; modules `217` |
+| Media | **PASS**: `17 / 37,410,731` |
+| Served identity | **2/2 PASS** |
+
+The one authorized VR-02 E2E ran once for `72.2s`. It completed the full
+journey and reached the final live aggregate, where it failed closed. No rerun
+occurred. The accepted observations are:
+
+- `.scene-world-content` and `.scene-art` boxes are equal at all layouts;
+  image border/padding are zero, the nominal source anchor is contained,
+  retention remains above `0.95`, and overlap/overflow remain zero;
+- retained semantic activation is exact `62.796875 x 44`, bottom anchored,
+  target-size passes, and label text has no scroll overflow;
+- Host 05 regains genuine keyboard `:focus-visible` and computes exact
+  `3px solid` system `Highlight`; reduced-motion and identity stability pass;
+- browser CSS percentage registration is quantized. At desktop the nominal
+  arithmetic rectangle is `x 888.5671875 / w 285.73125`, while the actual DOM
+  rectangle is `x 888.5625 / w 285.71875`. Comparing those as byte-identical
+  makes `semanticExact` and the desktop/laptop bottom check false even though
+  the semantic and physical CSS declarations coincide there;
+- inline `2px` label offsets are positioned inside the button's `1px` border,
+  so the measured outer-border inset is `3px`, not the frozen `2px`. At
+  retained size Host 05 is `x 144.296875 / y 134.625 / w 62.796875 / h 44`,
+  while the label is `x 147.296875 / y 137.625 / w 56.796875 / h 38`;
+- live enabled verb order is `LOOK AT`, `USE`, `TALK TO`, not the VR-02
+  expected `LOOK AT`, `TALK TO`, `USE`; and
+- one genuine `Shift+Tab` from recovered Host 05 did not focus inventory
+  `Return: Glass Meadow`. The following `Tab` did restore Host 05 and prove
+  its exact focus-visible treatment, but the mandated predecessor assertion
+  is false.
+
+Because the aggregate stopped before summary writing, no
+`first-run-live-summary.json` exists and the independent verifier could not
+run. Owned preview PIDs `13356` / `13884` were stopped, ports `4173` / `4184`
+are clear, and external root
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-10b39789-1f29-42ac-8fcc-f5981ec7627f`
+was removed after exact containment checks.
+
 ## Variance classification and rollback
 
-- **Shell variance:** retained live geometry cannot simultaneously satisfy the
-  frozen `25%` height and `>=44px` activation contract as currently framed.
-- **Harness variance:** the stale post-primary assertion is corrected. The
-  source-mapping and focus-visible probes now require owner clarification.
-- **Live product variance:** retained target height and label containment fail
-  the exact current shell.
+- **Shell/blueprint variance:** VR-02 assumes unquantized percentage arithmetic,
+  an outer-border `2px` result from inner positioning, a verb order the
+  product does not use, and a reverse-tab predecessor the live DOM does not
+  produce.
+- **Accepted repaired facts:** retained activation reaches exact `44px`, label
+  containment/scroll pass, actual rendered-image source proof passes, and Host
+  05 genuine keyboard focus-visible/forced-color/reduced-motion proof passes.
+- **Test status:** no threshold was weakened and no second E2E was attempted.
 - **Release classification:** `HOLD`; this cycle cannot advance to
   Quartermaster or maturity acceptance.
 - **Protected boundaries:** no protected PDF, training folder, repository QA
@@ -163,16 +230,19 @@ removed after repeated containment checks.
   inspected or mutated. No image/media operation or reveal occurred.
 - **Rollback:** `a9776e337f1820776864a5690332c364d0fb2556` is the bounded product/test/
   manifest commit; `bf58e528bc6ce4088f81f2c782ce2895259ab9fd` is the isolated harness
-  correction. Neither requires a migration or save repair.
+  correction; `7e85154abd8dbf116c4bb84ca66afd859903d750` is the bounded VR-02 repair.
+  None requires a migration or save repair.
 
 ## Exact next action
 
-Mission Captain must adjudicate the exact retained-layout contradiction before
-another Combat run. Preserve product candidate
-`a9776e337f1820776864a5690332c364d0fb2556`, corrected harness candidate
-`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`, all seven placeholders, and every
-threshold. Route the `25%` versus live `43.90625px` / required `44px` conflict
-to Science, and obtain Tactical clarification for rendered-image source
-mapping plus keyboard focus-visible measurement. Issue a versioned shell
-variance decision or continue HOLD. Do not authorize a new E2E until those
-controls yield one implementable, non-weakened acceptance contract.
+Mission Captain must adjudicate the four exact VR-02 live contradictions before
+another Combat run: browser-quantized physical registration, inner-positioned
+label versus outer-border inset, existing `LOOK AT -> USE -> TALK TO` order,
+and the actual reverse-tab predecessor. Preserve repaired candidate
+`7e85154abd8dbf116c4bb84ca66afd859903d750`, predecessors `a9776e3` /
+`bf58e52`, all seven placeholders, the successful `44px` repair, and every
+quality threshold. Obtain Science/Tactical reconciliation that measures an
+actual browser-resolved physical box and the real tab sequence without
+rounding, reordered player behavior, programmatic focus, or weakened
+containment. Issue a versioned shell decision or continue HOLD. Do not
+authorize another E2E or Quartermaster until one implementable contract exists.
