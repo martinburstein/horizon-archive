@@ -2,31 +2,35 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`OPERATIONS PLANNING HOLD / FRWO-004-v1 WITHDRAWN /
-NO LAWFUL HOST 06 EXPRESSION`**
+Current disposition: **`PRODUCT HOLD / MEDIA OR PRODUCT-PROMISE AUTHORITY
+REQUIRED / EARLIEST GAP UNRESOLVED`**
 
-Exact next owner: **fresh Commandant**
+Decision authority: `FRPB-001-v1-CPH-01`
 
-Immediate control: `FRWO-004-v1-OPH-01 / HOLD`
+Exact next owner: **Martin**
 
-Operations source inspected:
-`b64413c34cb10aafbb28853c52bb3415cc5b9dc0`
+Immediate control: **terminal HOLD; no First Run role is authorized**
 
-Current control source: **the dedicated Operations commit containing this
-handoff; verify from exact local `HEAD` before acting**
+Commandant source inspected:
+`b80e03f9b8a72233f832af05caf7d36672a06f58`
 
-Product baseline: `FRPB-001-v1 / FIRST RUN VISION BASELINE REAFFIRMED BY
-FRPB-001-v1-GR-03`
+Current control source: **the dedicated Commandant commit containing this
+handoff; verify from exact local `HEAD` before any resumed action**
+
+Product baseline: `FRPB-001-v1 / FIRST RUN VISION BASELINE`, last reaffirmed by
+`FRPB-001-v1-GR-03`
 
 Continuity authority: `FRCL-004-v1 / CONTINUITY LOCK`
+
+Operations return: `FRWO-004-v1-OPH-01 / HOLD / FRWO-004-v1 WITHDRAWN`
+
+Science return: `FRVE-004-v1 / HOLD / SOURCE GEOMETRY NOT PROVED`
 
 Released authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
 Closed Work Order: `FRWO-004-v1 / Stranded Lens Cradle`
-
-Science return: `FRVE-004-v1 / HOLD / SOURCE GEOMETRY NOT PROVED`
 
 Current planning controls: `FRRM-004-v2` / `FRSB-004-v2`
 
@@ -41,45 +45,60 @@ diagnostic=2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc
 evidence=ca89a679195c11d441a76e6c02983a6436f2ccb2
 ```
 
-Operations accepts Science's fail-closed finding. The fixed game-on-paper
-sequence after exact Host 05 follows lens-like fragments to a weathered lens
-inside a tilted conformal cradle above the present waterline, with drainage
-and stress-control contacts, before unchanged `L02-03` begins. That specific
-physical relation is the canonical Host 06; the ambiguity concerns only
-whether it is stranded by a former phase or correctly placed.
+## Product decision
 
-The exact accepted `1672 x 941` Drowned master remains `2,727,857` bytes /
-SHA-256
-`AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED`.
-Every required cover crop retains `99.946865%` of the source. Provenance and
-the exact pixels provide no second local dry lens relation. The only
-unambiguous above-water glass lens is the provenance-named distant suspended
-Tidal Lens, which is scenic-only and inaccessible. The dry foreground contains
-released couplings and cradle-like rings but no weathered glass lens in the
-required relationship; submerged fragments remain in live water.
+The complete-game promise cannot honestly classify the current generic
+post-Host-05 `L02-03` entry as an explicit Host 06 compression. The baseline
+promises forty physically distinct local discoveries. A compression may be a
+smaller truthful runtime expression; it cannot make a physically absent named
+encounter count as a discovery.
 
-No alternate narrow Host 06 expression is explicitly authorized. Host 04,
-Host 05, the return ridge, empty or water-filled rings, submerged fragments,
-the distant Tidal Lens, synthetic geometry, interface overlays, and hidden or
-off-image claims are forbidden substitutes. Exact Host 06 mapping, center,
-semantic target, label box, and source-retention band remain `null`.
+Canonical Host 06 remains exact: lens-like fragments leave Host 05 and reach a
+weathered lens inside a tilted conformal cradle above the present waterline,
+with drainage and stress-control contacts, before unchanged `L02-03` begins.
+`FRVE-004-v1` proves that the accepted Drowned source contains no lawful local
+dry lens-and-cradle geometry. The existing generic lesson entry is already the
+released compact expression and supplies no new player-visible physical host.
 
-The existing generic post-Host-05 `L02-03` action is already the compact
-released expression. Renaming or repositioning it without a distinct physical
-host is not a new player-visible vertical-quality outcome and cannot be called
-Host 06 evidence. `FRWO-004-v1` is therefore withdrawn and closed without
-Mission or production. No revised Work Order or fresh Science questions exist.
+Existing authority permits neither reopening/altering media nor choosing a
+different canon direction. Accepted media is immutable; image generation,
+editing, replacement, variation, import, and cycle reveals remain disabled.
+Standing route authority does not authorize invented geometry, an alternate
+object or location, a scenic landmark relabeled as a host, an interface
+overlay, or a changed Host 06 meaning.
 
-Earliest continuity remains `FR-03 / Host 06`. The HOLD is not permission to
-skip to Host 07, Witness, the City contradiction, or another later address.
-Witness remains physically unadvanced; the City sentence remains a separate
-later contradiction.
+The cycle therefore terminates in HOLD at the earliest unresolved continuity
+gap: `FR-03 / Host 06`. Host 07, Witness, the City contradiction, and every
+later address remain blocked from selection absent a documented exception,
+none of which exists.
 
-Current `FR-03` remains address-level `FR0`, exactly `1 accepted shared
-compression / 1 exact / 10 missing`. The forty-host inventory remains `6 exact
-/ 1 accepted shared compression / 32 missing / 1 unadvanced Witness
-expression`. No maturity cell, inventory count, candidate identity, or release
-proof advances.
+## Exact Martin decision required
+
+Choose one controlling boundary to change:
+
+1. **Media authority:** explicitly authorize a bounded new or altered Drowned
+   media source capable of truthfully expressing the existing canonical Host
+   06 lens-in-cradle relation; or
+2. **Product-promise/canon scope:** explicitly authorize a different product
+   and continuity direction that removes or changes the requirement for
+   canonical Host 06 to exist as a physically distinct discovery and states
+   whether the current generic `L02-03` entry is intentionally sufficient.
+
+If neither is authorized, this HOLD remains terminal. Existing authority and
+silence do not select an option.
+
+After an explicit Martin decision, the exact next role is one **fresh
+Commandant** performing a guarded baseline reopen against that decision. Do not
+send the current state directly to Colonel, Operations, Science, Mission, or
+production. A media-authority decision is not itself an asset approval or Work
+Order; a product-promise decision is not itself a continuity lock.
+
+## Preserved state
+
+`FR-03` remains address-level `FR0`, exactly `1 accepted shared compression /
+1 exact / 10 missing`. The forty-host inventory remains `6 exact / 1 accepted
+shared compression / 32 missing / 1 unadvanced Witness expression`. No maturity
+cell, inventory count, candidate identity, or release proof advances.
 
 The basin, lens, cradle, water, Crown, route, Machine, and Builders do not
 react, invite, judge, reward, recognize, authorize, answer, move, heal, aim,
@@ -87,33 +106,17 @@ drain, illuminate, or open. Learning, privacy, save/restore, route, world,
 ending, READY/NOT YET READY dignity, null deltas, and `successor=null` remain
 exact.
 
-All thirteen inherited process classifications remain separate and OPEN:
+All thirteen inherited process classifications remain separate and **OPEN**:
 VR-17, VR-23, VR-24, VR-25, VR-28, VR-39, VR-41, VR-46, VR-47, VR-50,
 VR-53 Stage 4, VR-60 Call 9, and VR-61. None is waived, merged, closed, cured,
 or candidate/continuity/maturity evidence.
 
 VR-65 remains **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING /
-OPAQUE EXTERNAL QA RESIDUAL`**. Its contents and meaning remain unknown.
-Operations did not enumerate, inspect, infer, retry, clean, or delete either
-disclosed external residual.
+OPAQUE EXTERNAL QA RESIDUAL`**. Its contents and meaning remain unknown. No
+protected/user/browser/media/residual path may be opened, enumerated,
+inspected, inferred, retried, cleaned, changed, moved, or deleted.
 
-The fresh Commandant must read `AGENTS.md`, this handoff,
-`FIRST_RUN_AGENT_WORKFLOW.md`, the First Run registry and Commandant profile,
-`FRWO-004-v1-OPH-01`, complete `FRVE-004-v1`, `FRWO-004-v1`,
-`FRCL-004-v1`, `FRPB-001-v1`, `FRPB-001-v1-GR-03`, exact `FRAB-003-v1`,
-current `FRRM-004-v2` / `FRSB-004-v2`, the exact Host 05-06 game-on-paper
-adjacency, and immutable Drowned provenance/media boundary.
-
-Answer one product question: can the complete-game promise remain internally
-honest with an explicit same-address compression that leaves canonical Host 06
-physically absent and preserves the generic `L02-03` entry, or does the promised
-forty-discovery journey require Martin to authorize new/altered Drowned media?
-
-If compression remains product-honest, Commandant may reaffirm or version the
-baseline and hand one fresh Colonel an exact continuity-classification
-question. If not, Commandant must issue a product HOLD with one explicit Martin
-decision request concerning media authority or product-promise scope. It may
-not select a Work Order, revive `FRWO-004-v1`, skip to Host 07 or later, change
-canon/learning/save/route/world/ending, alter media, inspect protected/user/
-residual roots, close an OPEN classification, start production, create a
-reveal/schedule, or call `FIRST RUN COMPLETE`.
+Until Martin decides, do not invoke another First Run role, select or revive a
+Work Order, change the product baseline or canon, alter media, skip to a later
+address, close an OPEN classification, inspect a residual, advance maturity,
+start production, create a reveal or schedule, or call `FIRST RUN COMPLETE`.
