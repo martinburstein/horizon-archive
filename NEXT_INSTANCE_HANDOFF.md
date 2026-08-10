@@ -2,21 +2,23 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / MISSION PROCESS-BOUNDARY FAILURE / NO BUILD /
-RETURN TO FRESH MISSION / FRSH-003-v1-VR-25`**
+Current disposition: **`FIRST RUN SHELL READY / ONE CORRECTED PRODUCTION BUILD
+ONLY / FRSH-003-v1-VR-26`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
+
+Immediate authority: `FRSH-003-v1-VR-26`
 
 Immediate return: `FRSH-003-v1-VR-25`
 
-Prior authority: `FRSH-003-v1-VR-24`
+Prior corrected authority: `FRSH-003-v1-VR-24`
 
-Mission VR-25 inspected source:
-`644cebc04c4711694a3d67350403010b544d0c69`
+Mission VR-26 inspected source:
+`32f416277d4e8675114eab99e04d2668ad230df1`
 
 VR-22 Combat start source:
 `c81722376ac4686474648bca71ad5e648e35b644`
@@ -35,36 +37,17 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Fresh Combat's VR-24 pre-build attempt ran `git status --short`, emitted
-untracked pathnames, and stopped before any synchronization, quiet-clean,
-six-path identity, manifest, or product command. Build invocations were exact
-`0`; it changed no file and wrote no report, handoff, commit, or push.
+Mission VR-26 independently proved `HEAD == origin/main == 32f4162...`, quiet
+tracked/index exit `0`, and these six literal blobs, in handoff order:
 
-That is separately **`UNAUTHORIZED DIVERGENCE / UNTRACKED PATHNAME ENUMERATION
-/ OPEN / VR-24 COMBAT ATTEMPT`**. The earlier **`UNAUTHORIZED DIVERGENCE /
-PROTECTED PATH ENUMERATION / OPEN / VR-17`** and **`UNAUTHORIZED DIVERGENCE /
-BROAD REPOSITORY FILENAME ENUMERATION / OPEN / VR-23`** remain separately
-OPEN. None is waived, merged, closed, or used as candidate evidence.
+- `fc91a863be99b11c44405071324e3502b959e621`;
+- `0b72f1463c729a8e22337af0115c3316652c2565`;
+- `5910af4e4f6754acbc5193ff021f374fe90a96f2`;
+- `802ceffb1a07c3b166dc2f7f06ab38138dc37596`;
+- `1bc2f9d93c59a396ddee7ed83cde1600f76b62e7`; and
+- `2c23c0a59f62af0463fa54bb1c8465aa9f6bb2da`.
 
-VR-25 independently proved `HEAD == origin/main == 644cebc...`, tracked/index
-quiet exit `0`, and all six exact literal blobs. It then ran path-scoped
-`git diff --check`; Git emitted an LF-to-CRLF warning naming the already
-authorized literal handoff path. That was not discovery or unknown-path
-enumeration, but it violated the absolute filename-output and quiet-check-only
-boundary. It is separately **`UNAUTHORIZED DIVERGENCE / LITERAL CONTROL
-PATHNAME OUTPUT / OPEN / VR-25 MISSION`**.
-
-VR-25 therefore authorizes **no build**. The corrected build authority remains
-unconsumed. The next fresh Mission may independently issue HOLD or one new
-versioned corrected production-build-only authority.
-
-That fresh Mission must read only literal named controls and must not run any
-command capable of filename output. Do not run `git status`, `git diff
---check`, repository listing, filename search, glob, protected-path probe, or
-untracked-path check. Synchronization proof is limited to `git rev-parse HEAD`
-and `git rev-parse origin/main`; clean tracked/index proof is limited to
-`git diff --quiet` and `git diff --cached --quiet` exit codes. Exact static
-identity proof is limited to these six literal paths:
+The six exact literal paths are:
 
 - `Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`;
 - `playtest/e2e-playthrough.mjs`;
@@ -73,19 +56,58 @@ identity proof is limited to these six literal paths:
 - `horizon-archive-game/src/drownedArchive.js`; and
 - `horizon-archive-game/package.json`.
 
-The quiet checks do not prove untracked absence. Make no such claim and do not
-inspect untracked content.
+The package maps `npm run build` to exact `vite build` with Vite `6.4.2`.
+Manifest `production-build` remains exact: workdir `horizon-archive-game`,
+command `npm run build`, timeout `60000`, expected native exit `0`, owner
+`combat_engineer`, output ownership `horizon-archive-game/dist`.
 
-The unchanged VR-24 wrapper is preserved verbatim in VR-25 as a candidate,
-not authority: one `npm run build`, native stderr promotion disabled when
-supported, combined capture, immediate `$LASTEXITCODE`, preference restoration
-in `finally`, ANSI normalization, exact exit `0`, exactly one `217 modules
-transformed` marker, and exactly one Vite `built in` marker.
+Fresh Combat may run only:
 
-Do not run any build, test, validator, fixture, PBA/media/offline/dependency/
-source-map/product-drift/performance, preview, served request, port/PID,
-containment, root, browser, E2E, diagnostic, summary, verifier, cleanup, live,
-product, media, or downstream-role action during the Mission adjudication.
+1. scalar `git rev-parse HEAD` and `git rev-parse origin/main`, requiring
+   equality;
+2. fully suppressed `git diff --quiet` and `git diff --cached --quiet`,
+   requiring exit `0`; and
+3. error-suppressed `git rev-parse HEAD:<literal>` for the six paths above,
+   emitting only scalar hashes and requiring the exact identities above.
+
+The quiet checks neither inspect nor prove untracked absence. Make no such
+claim and inspect no untracked content.
+
+After those three proof groups, invoke exactly one `npm run build` using the
+unchanged VR-24 wrapper reproduced in VR-26, from workdir
+`horizon-archive-game`, timeout `60000ms`. Then stop immediately whether the
+wrapper returns or throws and return the captured result to a fresh Mission
+Captain.
+
+No other pre-build or post-build command is authorized. Before and after the
+wrapper, do not run `git status`, `git diff --check`, or any command capable of
+filename output; do not list, search, glob, probe protected paths, check
+untracked paths, parse files, summarize, verify, clean up, synchronize, write a
+report/handoff, stage, commit, or push.
+
+The build is the first and only product command. Do not rerun VR-22 tests or
+validators. Do not run fixture, PBA/media/offline/dependency/source-map/
+product-drift/performance, preview, served request, port/PID, containment,
+root, browser, E2E, diagnostic, summary, verifier, cleanup, live, product,
+media, protected-state, user-state, reveal, maturity, or downstream-role work.
+
+On exact native exit `0`, exactly one normalized `217 modules transformed`
+marker, and exactly one normalized Vite `built in` marker, return **`PRODUCTION
+BUILD EXECUTION-CONTROL PASS / STOP / RETURN TO FRESH MISSION`**. On any
+failure, return **`HOLD / PRODUCTION BUILD EXECUTION-CONTROL FAILURE / NO
+RERUN / RETURN TO FRESH MISSION`**. In both cases run no post-build command.
+
+The separately OPEN divergences remain:
+
+- **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN / VR-17`**;
+- **`UNAUTHORIZED DIVERGENCE / BROAD REPOSITORY FILENAME ENUMERATION / OPEN /
+  VR-23`**;
+- **`UNAUTHORIZED DIVERGENCE / UNTRACKED PATHNAME ENUMERATION / OPEN / VR-24
+  COMBAT ATTEMPT`**; and
+- **`UNAUTHORIZED DIVERGENCE / LITERAL CONTROL PATHNAME OUTPUT / OPEN / VR-25
+  MISSION`**.
+
+None is waived, merged, closed, or used as candidate evidence.
 
 All frozen candidate, threshold, player, learning, accessibility, privacy,
 save, route, world, equal MH-40, null-delta, `successor=null`, ending,
