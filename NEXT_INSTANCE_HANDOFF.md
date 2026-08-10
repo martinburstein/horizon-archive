@@ -82,27 +82,51 @@ exact-next-action authority.
 - Current release map/scoreboard are `FRRM-002-v2` / `FRSB-002-v2`. No next
   Work Order is selected.
 
-## Exact next action - FRESH Commandant guarded revalidation
+## Commandant guarded revalidation
 
-Use a fresh Commandant context. Read `First Run Agent Profiles/commandant.md`
-in full, then read this handoff, `FRPB-001-v1`, `FRPB-001-v1-GR-01`,
-`FRAB-001-v1`, exact `FRAB-002-v1`, `FRCL-002-v1`, `FRRM-002-v2`,
-`FRSB-002-v2`, the complete protected game-on-paper, current runtime/package,
-and TD-012 release controls.
+- Commandant issued **`FIRST RUN VISION BASELINE REAFFIRMED /
+  FRPB-001-v1-GR-02`** after the second bounded First Run release.
+- No `FRPB-001-v1` reopen trigger exists. Audience, product category,
+  platform/offline assumption, educational promise, media authority, visual
+  ceiling, and shared ending remain unchanged.
+- Host 03 is reconciled only at `FR-02`: continuity `FR2`, physical-host
+  expression `FR2 - 3 exact`, learning `FR2`, behavior/save/recovery `FR1`,
+  final-purpose content `FR2`, presentation `FR3`, and bounded release proof
+  `FR4`.
+- Candidate-to-current product/package diff is empty; protected game-on-paper
+  SHA-256 remains exact; the official AI-901 authority remains the April 15,
+  2026 measured-skill set.
+- The City contradiction, Drowned and later host gaps, unadvanced Witness cell,
+  Measured Horizon literary close, immutable media, equal MH-40 outcomes, null
+  deltas, and `successor=null` remain explicit.
+- Revalidation artifact is `Production Pipeline/First Run/
+  FIRST_RUN_PRODUCT_BASELINE_REVALIDATION_FRPB-001-v1-GR-02.md`.
+- This is not `FIRST RUN COMPLETE`; no Work Order is selected.
 
-Independently perform one guarded baseline revalidation after the second
-bounded First Run release. Decide whether any documented `FRPB-001-v1` reopen
-trigger exists. Reconcile the exact accepted Host 03 maturity without
-generalizing it to later hosts; preserve the separate unresolved City wording
-contradiction, later host gaps, literary close, immutable-media authority, and
-shared ending.
+## Exact next action - FRESH Colonel continuity audit
 
-Issue exactly one versioned `FIRST RUN VISION BASELINE REAFFIRMED`, `REVISE`,
-or `HOLD` disposition. If reaffirmed, leave one exact fresh Colonel continuity
-handoff. Do not select or preauthorize a Work Order, repair the City sentence,
-expand Drowned or another host, change the map/scoreboard beyond Commandant
-authority, begin Colonel in the same invocation, start production, create a
-schedule, perform image/media work, or call `FIRST RUN COMPLETE`.
+Use a fresh Colonel context. Read `First Run Agent Profiles/colonel.md` in
+full, then read this handoff, `FRPB-001-v1`, guarded revalidations
+`FRPB-001-v1-GR-01` and `FRPB-001-v1-GR-02`, `FRAB-001-v1`, exact
+`FRAB-002-v1`, `FRCL-002-v1`, `FRRM-002-v2`, `FRSB-002-v2`, the complete
+protected game-on-paper, current surface lore, current runtime/package, and
+TD-012 release controls.
+
+Perform one fresh post-`FRAB-002-v1` continuity audit. Decide whether the
+accepted Host 03 relationship and complete Meadow turn close the prior
+`FR-02` missing-expression classification without promoting any other host.
+Independently verify that the separate City `successor packet` / `staging
+boundary` sentence remains an active contradiction while direct City behavior
+remains exact; preserve Drowned hosts 05-15, the unadvanced Witness cell, hosts
+17-38, the Measured Horizon literary close, immutable media, equal MH-40
+outcomes, null deltas, and `successor=null`.
+
+Issue exactly one versioned `CONTINUITY LOCK`, `REVISE`, or `HOLD` artifact. If
+locked, leave one exact fresh Operations continuity handoff. Do not select or
+preauthorize a Work Order, repair the City sentence, expand Drowned or another
+host, change product code/media, alter learning/route/save/world/ending
+behavior, begin Operations in the same invocation, start production or a
+schedule, create a reveal, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
