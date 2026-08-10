@@ -47,8 +47,18 @@ exact-next-action authority.
   only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
+- Combat implemented the bounded launcher/opening/direct-City candidate and
+  issued **`REVISE / FRCE-001-v1`**. Focused `54/54`, related `148/148`, cold
+  full `953/953`, validators `40/40`, production/fixture builds, PBA, served
+  identity, and affected live City states pass.
+- The bounded product/test candidate is committed as
+  `f47855c5d676da8938e4a654becab1a02345f3ad`.
+- `FRCE-VAR-001` remains blocking: the single canonical E2E proves clean start
+  through direct/reloaded City but still stops before the exact RP-001
+  predecessor, RP-002 through RP-012 later rail, and MH-40. Closed review
+  fixtures cannot be substituted for that production journey.
 
-## Exact next action - Combat Engineer functional build
+## Exact next action - Combat Engineer E2E completion
 
 Read `First Run Agent Profiles/combat-engineer.md`,
 `Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`,
@@ -58,25 +68,26 @@ and
 in full, plus the exact source/tests and planning authorities they cite as
 required by the profile.
 
-Implement the bounded Unbroken Opening Rail only in the shell's permitted
-files: canonical launcher/guide and truthful compatibility wrapper; stable
-final-purpose opening structure with explicit Quartermaster copy slots;
-canon-safe Drowned/Witness states; one atomic direct completed-prefix and
-Witness-to-City projection; complete removal of the credits node/action; and
-deterministic City entry/overlay focus, announcements, modal inertness, cancel,
-resume, and recovery. Preserve the existing Meadow, one compressed Drowned
-host, learning/evidence/privacy/Tour/save schema, City predecessor/later route,
-MH-40/equal outcomes, accepted media, PBA, and `successor=null`.
+Preserve the implemented bounded candidate exactly. Extend the one existing
+non-overlapping `playtest/e2e-playthrough.mjs` canonical context beyond its
+current direct/reloaded City stop: complete and restore City, enter the exact
+verified RP-001 predecessor, traverse the released RP-002 through RP-012 rail,
+and reach MH-40. Prove READY and NOT YET READY as equal local-evidence outcomes
+using only proportionate sanctioned fixtures where `FRSH-001-v1` permits them;
+assert `successor=null`, null city/world/external/authority deltas, no obsolete
+opening response/route/credits state, and zero runtime error. Do not create a
+production fixture seam, weaken tests, run an overlapping second whole-game
+journey, or claim closed review fixtures as the canonical path.
 
-Run the shell's complete validation ladder, including one non-overlapping
-canonical-launcher-equivalent clean start through MH-40, live affected states,
-exact media/budget/served identity, cleanup, and protected-path proof. Issue
-`PRODUCTION FUNCTIONAL`, `REVISE`, or `HOLD`; write one dedicated Combat report,
-commit only Combat's permitted build/test/report/handoff files, push `main`,
-prove `HEAD == origin/main`, and replace this handoff with one exact
-Quartermaster action. Do not write final Quartermaster prose, add/claim hosts,
-alter canon/learning/state schema, touch/generate/edit/import media, create a
-reveal, inspect user state/hidden lore, or deploy Quartermaster.
+Rerun the affected E2E under `180s`, production and TD-012 fixture builds,
+PBA/media/served identity, cleanup, protected-path proof, and any tests touched
+by the E2E repair. Update `FIRST_RUN_FUNCTIONAL_REPORT_FRCE-001-v1.md` with
+exact evidence. Only after the complete journey passes may Combat issue
+`PRODUCTION FUNCTIONAL`, commit/push the permitted repair, prove
+`HEAD == origin/main`, and replace this handoff with one exact Quartermaster
+action. Do not write Quartermaster prose, add/claim hosts, alter canon/learning/
+save schema/later controller meaning, touch/generate/edit/import media, create
+a reveal, inspect user state/hidden lore, or deploy Quartermaster.
 
 ## Protected boundaries
 
