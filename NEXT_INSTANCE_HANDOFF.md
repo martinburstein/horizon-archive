@@ -2,40 +2,44 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / CORRECTED DIAGNOSTIC-CONTROL PRE-ROOT FAILURE
-/ NO E2E / NO RERUN / FRCE-003-v1-VR-47`**
+Current disposition: **`FIRST RUN SHELL READY / ATOMIC FRESH-ROOT CONTROL
+LOCALIZATION ONLY / FRSH-003-v1-VR-48`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
-Immediate evidence: `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-47.md`
+Immediate control: `FRSH-003-v1-VR-48`
 
-Starting shell revision: `9c7701a7ff3990aa35d6460de1545e8bf572151a`
+Mission source: `3329132b7b989db0ba2fe6d76dcfdf4f30acddca`
 
-Geometry correction / diagnostic transport / report lineage:
+Geometry correction / transport / report lineage remains:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
 `6c64eb354b7dbb467df5725e2cae4eb67092ddc7` /
 `0ac9023037873004f7bd5d75c16f80953d770a4d`.
 
-The monolithic wrapper was rejected by the command safety layer before
-execution. A smaller containment/create stage then failed to return its
-required root scalar. No root identity was retained, no preview or browser was
-launched, and E2E/extractor/verifier invocation counts are all zero. Both exact
-ports were clear in the no-process cleanup branch. No retry or diagnosis ran.
+The VR-47 monolith was tool-policy rejected before execution and is non-
+evidence. The smaller pre-root stage emitted no required root scalar. No root
+identity, preview, browser, E2E, extractor, or verifier was consumed. Mission
+classifies **`REQUIRED CORRECTION / EXECUTION CONTROL / PRE-ROOT SCALAR
+TRANSPORT / OPEN / VR-47`** with no candidate finding.
 
-This is `REQUIRED CORRECTION / EXECUTION CONTROL / PRE-ROOT SCALAR TRANSPORT /
-OPEN / VR-47`, not a product, correction-candidate, preview, browser,
-diagnostic, or verifier finding.
+Fresh-child capacity remains unavailable; Mission context reuse is disclosed
+and non-evidence.
 
-Fresh Mission must independently adjudicate the pre-root control failure and
-issue a new bounded authority or HOLD. The corrected E2E was not invoked, but
-Combat may not reuse or infer authority from VR-47. Mission must not run E2E in
-its adjudication pass.
+Combat may run only one atomic same-call root lifecycle. Normalize OS temp and
+repository; generate one direct-child GUID name; prove name/direct parent/
+strict temp containment/bidirectional repository exclusion/predecessor
+distinction/nonexistence; create exactly once with `New-Item -ItemType
+Directory -Path ... -ErrorAction Stop`; same-call resolve and re-prove the exact
+identity; delete only the empty owned root; emit the exact VR-48 scalar.
 
-The prior eight OPEN divergences remain separately OPEN; the new VR-47 control
-classification does not merge or waive them. Diagnostic evidence remains
-non-release, forbidden verifier input, and no-retry. Every frozen product,
-validation, evidence, player, learning, privacy, save, accessibility, route,
-world, MH-40, null-delta, `successor=null`, ending, media, and one-E2E meaning
-remains exact. No downstream stage or release action is authorized.
+No live, port, preview, browser, E2E, extractor, verifier, build, test, product,
+media, protected, repository-write, or retry action is authorized.
+
+Exact pass returns **`ATOMIC FRESH-ROOT CONTROL PASS / ROOT DELETED / NO LIVE
+ACTION / STOP / RETURN TO FRESH MISSION`**. Otherwise fail-closed HOLD.
+
+The prior eight OPEN divergences plus the separate VR-47 required correction
+remain OPEN. Diagnostic evidence remains non-release, forbidden verifier input,
+and no-retry. Every frozen identity and meaning remains exact.
