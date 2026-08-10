@@ -2217,31 +2217,31 @@ async function captureSixfoldSemantic(page, sequenceNode, epochNode) {
   return { fields, gameState: await captureSixfoldGameState(page) };
 }
 
-async function captureSixfoldGeometry(page) {
-  return page.evaluate(() => {
+async function captureSixfoldGeometry(page, geometryEpoch) {
+  return page.evaluate((epoch) => {
     const q = 1 / 64;
     const Q = (value) => Math.floor(value / q) * q;
     const finite = (value) => typeof value === 'number' && Number.isFinite(value);
     const lattice = (value) => finite(value) && Number.isInteger(value / q);
-    const rawRect = (element) => {
-      const rect = element?.getBoundingClientRect();
-      return rect ? { x: rect.x, y: rect.y, width: rect.width, height: rect.height } : null;
+    const rawRect = (element, name) => {
+      if (!(element instanceof Element)) throw new Error(`Sixfold geometry evidence source missing: ${name}`);
+      if (!element.isConnected || element.ownerDocument !== document) {
+        throw new Error(`Sixfold geometry evidence source disconnected: ${name}`);
+      }
+      const rect = element.getBoundingClientRect();
+      if (![rect.x, rect.y, rect.width, rect.height].every(finite) || rect.width <= 0 || rect.height <= 0) {
+        throw new Error(`Sixfold geometry evidence source empty: ${name}`);
+      }
+      return { x: rect.x, y: rect.y, width: rect.width, height: rect.height };
     };
-    const frameElement = document.querySelector('.scene-frame');
-    const containingElement = document.querySelector('.scene-world-content');
-    const imageElement = document.querySelector('.scene-art');
-    const hostElement = document.querySelector('[data-hotspot-id="sixfold-weir"]');
-    const labelElement = hostElement?.querySelector('span');
-    const host04Element = document.querySelector('button.hotspot[data-primary-hotspot="true"]');
-    const returnElement = document.querySelector('[data-hotspot-id="meadow-return-ridge"]');
-    const frame = rawRect(frameElement);
-    const containing = rawRect(containingElement);
-    const sceneArt = rawRect(imageElement);
-    const semantic = rawRect(hostElement);
-    const label = rawRect(labelElement);
-    const host04 = rawRect(host04Element);
-    const returnRidge = rawRect(returnElement);
-    if ([frame, containing, sceneArt, semantic, label, host04, returnRidge].some((rect) => !rect)) throw new Error('Sixfold geometry node missing');
+    const { frameElement, containingElement, imageElement, hostElement, labelElement, host04Element, returnElement } = epoch ?? {};
+    const frame = rawRect(frameElement, 'frame');
+    const containing = rawRect(containingElement, 'containing');
+    const sceneArt = rawRect(imageElement, 'sceneArt');
+    const semantic = rawRect(hostElement, 'semantic');
+    const label = rawRect(labelElement, 'label');
+    const host04 = rawRect(host04Element, 'host04');
+    const returnRidge = rawRect(returnElement, 'returnRidge');
     const imageStyle = getComputedStyle(imageElement);
     const labelStyle = getComputedStyle(labelElement);
     const parsePosition = (token, axis) => {
@@ -2363,7 +2363,7 @@ async function captureSixfoldGeometry(page) {
       allLattice,
       directGatesPass: allLattice && Object.values(directGateResults).every(Boolean),
     };
-  });
+  }, geometryEpoch);
 }
 
 function compareSixfoldGeometry(pre, post) {
@@ -2423,16 +2423,27 @@ async function measureSixfoldLayout(page, sequenceIndex, sequenceNode, sequenceG
     for (const name of ['click', 'input', 'change', 'submit']) document.addEventListener(name, handler, true);
     window.__sixfoldAudit = { audit, originals, handler };
   });
+  await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  const geometryEpoch = await host.evaluateHandle((hostElement) => ({
+    frameElement: document.querySelector('.scene-frame'),
+    containingElement: document.querySelector('.scene-world-content'),
+    imageElement: document.querySelector('.scene-art'),
+    hostElement,
+    labelElement: hostElement.querySelector('span'),
+    host04Element: document.querySelector('button.hotspot[data-primary-hotspot="true"]'),
+    returnElement: document.querySelector('[data-hotspot-id="meadow-return-ridge"]'),
+  }));
   const preSemantic = await captureSixfoldSemantic(page, sequenceNode, epochNode);
-  const preGeometry = await captureSixfoldGeometry(page);
+  const preGeometry = await captureSixfoldGeometry(page, geometryEpoch);
   if (!preSemantic.fields.active || preSemantic.fields.ariaLabel !== 'use Sixfold Weir, in progress') throw new Error(`Host 05 preFocus contract failed at ${id}: ${JSON.stringify(preSemantic)}`);
   await page.keyboard.press('Tab');
   const intermediate = await lookAt.evaluate((element) => ({
     identity: element.textContent.trim(), active: document.activeElement === element, focusVisible: element.matches(':focus-visible'),
   }));
   await page.keyboard.press('Shift+Tab');
+  await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   const postSemantic = await captureSixfoldSemantic(page, sequenceNode, epochNode);
-  const postGeometry = await captureSixfoldGeometry(page);
+  const postGeometry = await captureSixfoldGeometry(page, geometryEpoch);
   const focusStyle = await host.evaluate((element) => {
     const style = getComputedStyle(element);
     const labelStyle = getComputedStyle(element.querySelector('span'));
