@@ -6,6 +6,44 @@
 - Each cycle records `KEEP`, `TUNE`, or `REDESIGN` with evidence and any future-cycle changes.
 - Process adaptation may improve throughput, clarity, validation placement, model routing, checkpointing, scheduling, and artifact organization without weakening product, canon, learning, privacy, accessibility, release, or user-work protections. Image generation and cycle reveals are disabled by Martin's 2026-08-09 instruction.
 
+## 2026-08-10 / FRWO-003 Intelligence release - TUNE
+
+- **Observed:** the exact candidate passed fresh Intelligence focused `68/68`,
+  related `74/74`, cold full `972/972`, validators `40/40`, production `217`
+  modules, fixture `57` modules, PBA, and served identity `2/2`. The sole
+  corrected complete E2E remained singular and passed with exact diagnostic
+  inventory, failure `0`, browser closed, one summary, and one verifier PASS.
+  Product, content, and presentation were already complete; repeated returns
+  after the initial HOLD were confined to failure transport, tool-compatible
+  orchestration, token hashing, and success-artifact cleanup. Thirteen process
+  classifications remain OPEN and excluded from candidate evidence. One
+  undeclared opaque external QA residual prevents exact root removal after the
+  two expected artifacts were identity-proved and deleted.
+- **Decision:** `TUNE`. Keep immutable identities, independent deterministic
+  corroboration, failure-side diagnostics, one E2E, one summary/verifier,
+  no-rerun behavior, exact PID/port cleanup, and nonrecursive fail-closed root
+  handling. Future shells should freeze tool-compatible root/preview/E2E/
+  cleanup primitives before live execution, declare the exact success-artifact
+  allowlist and decoded-byte digest domain initially, and carry an undeclared
+  residual as one explicit scalar limitation instead of repeated control
+  reissues.
+- **Expected benefit:** the same release confidence with fewer execution-
+  control turns, less retained-root exposure, and earlier ownership of cleanup
+  failures without weakening the sole live gate.
+- **Preserved guardrails:** sequential role authority, fresh Intelligence,
+  exact product/canon/learning/privacy/save/route/world/accessibility/media
+  boundaries, no protected-path access, no residual inference, disabled image
+  generation/reveals, no Host 06/RP-013/successor/post-ending content, and no
+  `FIRST RUN COMPLETE` claim.
+- **Validation:** the next live Work Order should reach its single E2E through
+  already-proven staged primitives, emit exactly one success or complete
+  failure record, remove only declared artifacts and the exact root when safe,
+  and require no Mission reissue for shell/tool syntax.
+- **Rollback trigger:** preflight primitives hide a real product defect,
+  artifact allowlisting omits evidence, cleanup broadens into enumeration or
+  recursive deletion, the one-run rule weakens, or independent release can no
+  longer reproduce the deterministic candidate gates.
+
 ## 2026-08-10 / FRWO-003 Intelligence release hold - TUNE
 
 - **Observed:** immutable-candidate preflight, focused `68/68`, related

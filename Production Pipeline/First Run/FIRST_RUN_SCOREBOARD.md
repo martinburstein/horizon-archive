@@ -2,7 +2,7 @@
 
 Scoreboard ID: `FRSB-003-v1`
 
-Current release authority: `FRAB-002-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v1` / `FRCL-003-v1`
 
@@ -10,18 +10,18 @@ Release map: `FRRM-003-v1`
 
 Operations source: `9dc10d2e807b7950c8a59bfbffa05343b77bb7f1`
 
-Released product/test candidate: `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`
+Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
-Image product/test candidate reviewed: `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`
+Image product candidate reviewed: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
 Date: **2026-08-10**
 
-Current released Work Order: `FRWO-002-v1 / The Third Coupling`.
+Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: `FRWO-003-v1 / Sixfold Weir`.
+Selected bounded Work Order: **none pending guarded baseline revalidation**.
 
-No maturity cell advances from planning. The Office of Science Administrator
-is the exact next stage.
+The exact bounded Host 05 evidence is released below. One fresh Commandant
+guarded revalidation is the exact next stage; no later Work Order is selected.
 
 ## Reading the matrix
 
@@ -47,7 +47,7 @@ complete.
 | `FR-00` Package | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Truthful complete-game launcher/guide independently released; Demo Tour remains separate |
 | `FR-01` Opening | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Final-purpose save/name/prologue/resume and Chapter I reveal independently released |
 | `FR-02` Glass Meadow | `FR2` | `FR2` — 3 exact | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-002-v1` independently releases the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, responsive/accessibility presentation, unchanged route/save/world, and exact `44px` departure |
-| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 11 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Crown/outflow/local-evidence meaning released; host collapse remains. `FRWO-003-v1` selects Host 05 only; no cell advances from selection |
+| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 1 exact / 10 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-003-v1` independently releases exact Host 05 / Sixfold Weir, its sole unchanged `L02-02` entry, recovery, content, and presentation; the remaining Drowned host collapse stays visible |
 | `FR-04` Witness Corridor | `FR2` | `FR0` — unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
 | `FR-05` City Threshold | `FR0` | `FR0` — 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -84,17 +84,17 @@ complete.
   expression, and final-purpose content at `FR-02`, with affected presentation
   retained at `FR3` and bounded release proof retained at `FR4` under the new
   release package. No other address or physical-host cell advances.
-- The host inventory is now `5 exact / 1 accepted shared compression / 33
+- `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
+  without promoting the address-level cell above `FR0`; ten Drowned hosts
+  remain missing and the accepted shared compression remains visible.
+- The host inventory is now `6 exact / 1 accepted shared compression / 32
   missing / 1 unadvanced Witness expression`.
 
 ## Next lawful advancement
 
-Science must test `FRWO-003-v1` against the accepted Drowned plate and
-provenance, exact Host 04-to-05 order, current `L02-02` state/evidence/privacy/
-save behavior, all input and responsive modes, performance/offline budgets,
-the later Drowned invariant radius, and MH-40. A viable future accepted result
-could record Host 05 as one exact distinct relationship while leaving the
-address physical-host cell at `FR0` with one accepted compression and ten
-missing hosts. Only Intelligence may record that as-built change or release
-proof. Science must issue `HOLD` if the distinct relationship cannot be proven
-without new/altered media or another forbidden change.
+`FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
+the address physical-host cell at `FR0` with one accepted compression and ten
+missing hosts. The exact next action is a fresh Commandant guarded baseline
+revalidation. Only a later authorized planning sequence may select a bounded
+next Work Order; no Host 06-15 implementation, City correction, completion
+sweep, or maturity inference is preauthorized.

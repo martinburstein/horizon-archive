@@ -1,172 +1,269 @@
-# First Run As-Built Reconciliation - FRAB-003-v1
+# Horizon Archive First Run As-Built Reconciliation
 
-Disposition: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
+Package ID: `FRAB-003-v1`
 
-Recorded: `2026-08-10 11:01:51 -04:00`
+Disposition: **FIRST RUN PASS RELEASED**
 
-## Exact control
+Date: **2026-08-10**
 
-- Intelligence starting HEAD: `0c5985c113a44376786e67abe5e030a3d63c55d6`
-- Exact immutable content candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
-- Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
-- Accepted predecessor evidence control: `ca89a679195c11d441a76e6c02983a6436f2ccb2`
-- Predecessor acceptance: `FIRST_RUN_AS_BUILT_RECONCILIATION_FRAB-002-v1.md`
-- Governing shell: `FIRST_RUN_SHELL_FRSH-003-v1.md` through
-  `FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-11.md`
-- Bounded Work Order: `FIRST_RUN_WORK_ORDER_FRWO-003-v1.md`
+Role: Intelligence Officer / `intelligence_officer`
 
-This is a release HOLD, not a product correction and not a rejection of the
-exact immutable content candidate. Intelligence did not repair, amend, or
-rerun the candidate. The sole authorized fresh external-root E2E failed closed
-at the final Sixfold Weir layout aggregate before it emitted the required
-machine summary. Therefore the independent verifier had no accepted input and
-was not run. FRWO-003 cannot receive fresh Intelligence acceptance from this
-run.
+Bounded Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-## Identity and patch integrity
+Governing shell: `FRSH-003-v1` through `FRSH-003-v1-VR-66`
 
-- `3e3da60` is an ancestor of `7e85154`, which is an ancestor of validation
-  control `4cd7fbf`, evidence control `ca89a679`, content candidate `a91763e`,
-  and Intelligence starting HEAD `0c5985c` in that order.
-- `git diff a91763e..0c5985c -- horizon-archive-game playtest curriculum`
-  was empty.
-- The evidence-manifest blob at `ca89a679` and at the starting HEAD was exactly
-  `786663223f75cb3a88503c50373e79f3c5c5cf26`.
-- Validation control changed only
-  `horizon-archive-game/test/sixfoldWeir.test.js`; evidence control changed
-  only the FRRC-002 manifest and `playtest/e2e-playthrough.mjs`; the content
-  candidate changed only `src/data/drownedArchive.js`,
-  `test/sixfoldWeir.test.js`, and `playtest/e2e-playthrough.mjs`.
-- `package.json` and `package-lock.json` were unchanged from the accepted
-  baseline to the candidate. The runtime-source network-request scan was
-  empty. The forbidden later-host/authority/successor token scan over the
-  candidate addition was empty. `git diff --check` passed.
-- Exact Drowned Archive master: SHA-256
-  `AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED`,
-  `2,727,857` bytes. Exact game-on-paper control: SHA-256
+Starting synchronized control:
+`a0fb577dcc128b084a661b39346977b01dd86db2`
+
+Released First Run predecessor: `FRAB-002-v1 / FIRST RUN PASS RELEASED`
+
+## Release statement
+
+Fresh independent review accepts the exact immutable Sixfold Weir candidate
+for `FR-03 / Chapter II - Drowned Archive / Host 05`.
+
+After exact sanitized Host 04 mastery, one distinct, dry, source-authored
+six-branch relationship becomes the sole in-world entry to the unchanged
+`L02-02` responsible-AI work. `LOOK AT` reports physical fact, `TALK TO`
+returns complete silence, and `USE` opens or reconstructs only the existing
+expedition-owned Terminal. Miss, remediation, close, Escape, reload, Meadow
+return, mastery, read-only completion, and the next existing Drowned boundary
+preserve evidence privacy, save meaning, route, world, and ending.
+
+The basin, water, branches, Crown, Machine, and Builders do not react, invite,
+judge, reward, recognize, authorize, or answer. The six visible relations are
+not a native lesson diagram or answer key.
+
+This is **`FIRST RUN PASS RELEASED / FRAB-003-v1`**. It is not `FIRST RUN
+COMPLETE`. Hosts 06-15, the Witness physical-host cell, the City wording
+contradiction, hosts 17-38, and the Measured Horizon literary close remain
+incomplete.
+
+## Exact candidate and ancestry control
+
+```text
+geometry=8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97
+transport=6c64eb354b7dbb467df5725e2cae4eb67092ddc7
+product=a91763e28d488f31f8cf7d40ece0b2682246ba9b
+validation=4cd7fbf31291671dd28c0743b44a7c49aaad82bb
+diagnostic=2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc
+evidence=ca89a679195c11d441a76e6c02983a6436f2ccb2
+```
+
+- All six frozen candidates are valid commit objects and ancestors of the
+  synchronized starting control.
+- The released baseline `3e3da60`, repaired runtime `7e85154`, validation
+  `4cd7fbf`, evidence `ca89a679`, and content `a91763e` preserve their exact
+  ordered ancestry. Combat source `835b2fc` is the direct parent of starting
+  control `a0fb577`.
+- Product candidate `a91763e` changes exactly
+  `horizon-archive-game/src/drownedArchive.js`, the existing Sixfold focused
+  test, and the single E2E harness. The prior HOLD record's `src/data/...`
+  spelling was a documentation path error; this reconciliation corrects the
+  record without changing the candidate.
+- Geometry correction `8aa1dcaf` changes only the single E2E harness and the
+  existing Sixfold focused test. Diagnostic transport `6c64eb35` changes only
+  those two controls, `FRRC-002-v1`, and its one read-only extractor.
+- Validation `4cd7fbf` changes only the Sixfold focused test. Evidence
+  `ca89a679` changes only `FRRC-002-v1` and the E2E harness.
+- Runtime source, `package.json`, and `package-lock.json` are byte-identical
+  from content candidate `a91763e` through the reviewed starting control.
+  Runtime source also remains unchanged from the accepted Quartermaster and
+  Image review candidates.
+- The game-on-paper Git blob is unchanged from the product candidate and its
+  canonical blob SHA-256 remains
   `F343E1DDA0647AD82DF9E5A85D26E0A7A3025166A0BA663E4CF7019FD066D142`.
-
-## Independent gate record
-
-| Gate | Fresh Intelligence result | Reconciliation |
-| --- | --- | --- |
-| Manifest-focused tests | `68/68` PASS; Node duration `182.87ms` | Accepted deterministic corroboration |
-| Related tests | `74/74` PASS; `2254.7838ms` | Accepted deterministic corroboration |
-| Cold full suite | `972/972` PASS; `12617.1715ms` | Accepted deterministic corroboration |
-| Repository validators | Exact sorted inventory `40/40` PASS | Accepted deterministic corroboration |
-| Production build | PASS; `217` modules; Vite `6.47s`; wall `7.5s` | Accepted deterministic corroboration |
-| TD-012 fixture build | PASS; `57` modules; Vite `742ms`; wall `1.8s` | Accepted deterministic corroboration |
-| PBA | JS `1,667,393`; CSS `119,247`; media `17 / 37,410,731`; no maps | Under narrow/global caps |
-| Served identity | Production and fixture root/deep/JS/CSS byte equality `2/2` | Accepted deterministic corroboration |
-| Sole fresh external-root E2E | **FAIL** after `57.5s` at `playtest/e2e-playthrough.mjs:1550`: `Sixfold Weir layout contract incomplete` | Required correction remains open; no rerun authorized |
-| Machine summary | Not emitted (`first-run-live-summary.json` absent) | Required evidence unavailable |
-| Independent verifier | Not run because the required summary did not exist | Required evidence unavailable |
-
-The failed assertion reported the complete six-layout aggregate. The captured
-command output was truncated before an exact failing subfield could be
-reliably isolated. This record therefore does not infer which product,
-fixture, orchestration, or evidence-contract component owns the failure.
-Earlier deterministic and served-identity passes remain true, but they cannot
-substitute for the shell-required successful live aggregate, machine summary,
-and verifier.
+- The Drowned master remains exactly `2,727,857` bytes / SHA-256
+  `AFA0008E3F1E0CDACB2B9E58F14E9F676729EAB9E8725A58C87D73AC489C08ED`.
+- `git diff --check` passed. Tracked worktree and index were clean before
+  release-control edits.
 
 ## Requirement reconciliation
 
-- Seven final copy meanings, LOOK/silent TALK/Pilot-Suit detection, pure state
-  derivation, unchanged mechanics, `L02-02`, the evaluator/evidence/privacy
-  boundary, exact `45/75/20/25` lattice, and immutable Drowned source identity
-  passed source and deterministic checks.
-- Semantic/action identity, q-geometry, focus graph, forced-colors behavior,
-  reduced-motion behavior, full-rail traversal, both MH-40 outcomes, null
-  deltas, `successor=null`, offline behavior, runtime error freedom, and
-  activation performance were exercised by the sole live command, but the
-  command did not complete and emitted no accepted summary. Intelligence does
-  not promote those claims to fresh release evidence.
-- The final six-layout aggregate is **`REQUIRED CORRECTION - OPEN`**. Its exact
-  ownership is unresolved because the no-rerun contract and absent failure-side
-  machine diagnostic prevent responsible localization from this run.
-- Host 05 local maturity only was in scope. No Host 06-15, Witness/later-host,
-  City-contradiction, Measured Horizon literary-close, RP-013, successor, or
-  post-ending maturity is inferred.
+| Requirement | Independently accepted as-built result | Classification |
+| --- | --- | --- |
+| Physical relationship | Exact `45/75/20/25` Sixfold Weir covers the source-authored dry two-lip, six-branch relation, separate from Host 04, return ridge, and Tidal Lens | `PASS` |
+| Pre-mastery boundary | Host 05 has no DOM node, focus stop, name, announcement, action, or credit before exact sanitized Host 04 mastery | `PASS` |
+| State and persistence | Pure fail-closed derivation uses existing workload and responsible-AI evidence; no save field, schema, migration, private work, or replay state was added | `PASS` |
+| Action ownership | LOOK is Scene fact, TALK is complete silence, and sole USE owns the unchanged `L02-02`; completed USE is read-only | `PASS` |
+| Learning and privacy | Existing evaluator, thresholds, progressive answer-free remediation, fresh retry, transfer, explanation, confidence, sanitizer, and allowlisted evidence remain exact | `PASS` |
+| Recovery and route | Close, Escape, reload, Meadow return/redeparture, next Drowned boundary, later rail, and hard stop remain deterministic and unchanged | `PASS` |
+| Copy and canon | Seven final-purpose Scene/Pilot/Suit/System/Teacher meanings pass; Machine and Builders own no line | `PASS` |
+| Focus and input | Native keyboard, pointer, touch/switch-like activation, one-hit dispatch, modal inertness, announcements, and exact restoration pass | `PASS` |
+| Responsive/access presentation | Six exact layouts, source retention, target size, label containment, zero overlap, no horizontal overflow, genuine focus, forced colors, and reduced motion pass | `PASS` |
+| Later rail and ending | Both equal MH-40 outcomes, null world/city/external/authority deltas, `successor=null`, and zero runtime errors pass | `PASS` |
+| Media/offline/performance | Exact immutable media, no source maps or runtime request, local/offline behavior, activation/task caps, and narrow/global PBA pass | `PASS` |
+| Initial FRAB-003 aggregate failure | Failure-side transport localized the defect to post-epoch geometry evidence sourcing; exact harness-only correction is accepted by focused control and the sole corrected complete E2E | `REQUIRED CORRECTION - CLOSED AS BUILT` |
 
-## Complete variance classification
+## Independent release ladder
 
-| Variance | Classification at this gate |
-| --- | --- |
-| `FRVE-003-v1-VR-01` | Accepted planning clarification; superseded by the later browser-resolved envelope and governing shell reissues |
-| `FRVE-003-v1-VR-02` | Accepted planning clarification; frozen into the governing shell chain |
-| `FRSH-003-v1-VR-01` | Historical HOLD resolved by the VR-02 shell reissue |
-| `FRSH-003-v1-VR-02` | Accepted, then superseded by later exact shell reissues |
-| `FRSH-003-v1-VR-03` | Historical HOLD resolved by the VR-04 shell reissue |
-| `FRSH-003-v1-VR-04` | Accepted, then superseded by later exact shell reissues |
-| `FRSH-003-v1-VR-05` | Accepted truthful-static alignment; inherited by later reissues |
-| `FRSH-003-v1-VR-06` | Historical HOLD resolved by the VR-07 shell reissue |
-| `FRSH-003-v1-VR-07` | Accepted stable-identity/document-drift contract; inherited |
-| `FRSH-003-v1-VR-08` | Accepted candidate-identity replay contract; superseded operationally by VR-09 through VR-11 |
-| `FRSH-003-v1-VR-09` | Accepted native-root clarification; superseded operationally by VR-10 and VR-11 |
-| `FRSH-003-v1-VR-10` | Accepted normalized-containment clarification; superseded operationally by VR-11 |
-| `FRSH-003-v1-VR-11` | **Deferred limitation / release-process only / non-gating** for the disclosed predecessor external root; unchanged by this run |
-| `FRPX-003-v1-VR-01` | Accepted live-evidence clarification; superseded by the more exact VR-02/VR-03 blueprint |
-| `FRPX-003-v1-VR-02` | Accepted used-values/focus clarification; inherited by VR-03 and the shell |
-| `FRPX-003-v1-VR-03` | Accepted immutable identity/drift clarification; current blueprint control |
-| Fresh Intelligence six-layout aggregate failure | **Required correction / open / release-gating**; exact owning component unresolved; Mission adjudication required |
-| Automated accessibility evidence without human AT certification | **Deferred limitation / non-gating for this bounded automated gate**; no certification claimed |
-| Vite large-chunk warning | **Deferred limitation / non-gating**; measured JS/CSS/media remain within the accepted PBA |
-| Host 06-15, Witness/later hosts, City contradiction, MH literary close | **Deferred outside FRWO-003 / no spillover** |
+Fresh Intelligence reran or directly corroborated every proportionate
+candidate-bearing gate. The corrected complete E2E was not rerun because its
+one-run budget is consumed.
 
-The disclosed predecessor root is exactly
-`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-3d574750-951c-4029-b6b6-531f7d012015`.
-Intelligence did not inspect, enumerate, reuse, mutate, move, or delete it.
+- Focused manifest suite: **`68/68 PASS`**; Node `255.9718ms`.
+- Related manifest suite: **`74/74 PASS`**; Node `11977.4848ms`.
+- Cold full product suite: **`972/972 PASS`**; Node `18352.6403ms`.
+- Exact sorted validator manifest: **`40/40 PASS`**, every invocation exact
+  `--self-test`.
+- Production build: **PASS**, `217` modules, Vite `6.87s`.
+- TD-012 fixture build: **PASS**, `57` modules, Vite `659ms`.
+- PBA: JavaScript `1,667,393`; CSS `119,247`; media exact
+  `17 / 37,410,731`; source maps `0`. Both FRWO-003 and global caps pass.
+- Fresh production and fixture preview readiness: `2/2` HTTP `200`.
+  Production and fixture root/deep/JS/CSS served bytes equal disk: **`2/2
+  PASS`**.
+- The sole corrected complete E2E is the immutable VR-60 result:
 
-## Maturity and release control
+```text
+e2eAttemptCount=1
+e2eExit=0
+checkInventoryExact=1
+failureCount=0
+browserClosed=1
+transportAttemptCount=0
+summaryCount=1
+verifierAttemptCount=1
+verifierPassCount=1
+outcome=SUCCESS
+```
 
-No release-map or scoreboard cell advances. Their current FRRM-003-v1 and
-FRSB-003-v1 controls remain unchanged. Host 05 remains recorded at the prior
-honest local maturity: playable `FR2`; physical maturity `FR0 - 1 compressed /
-11 missing`; learning `FR2`; behavior `FR1`; content `FR2`; presentation
-`FR3`. Any predecessor bounded-FR4 statement remains historical evidence, not
-a fresh FRWO-003 release.
+That run proves the six ordered layouts, Host 04-to-05 journey, one real
+`L02-02` miss/recovery/mastery path, safe exit/reload/return, exact later rail,
+both MH-40 outcomes, null deltas, offline/runtime-request/media/PBA gates,
+performance, zero runtime errors, exactly one summary, and exactly one passing
+verifier. It was substantive release evidence; the earlier diagnostic failure
+payload was not verifier input.
 
-This record does not call `FIRST RUN COMPLETE`. Hosts 06-15, Witness and later
-hosts, the City contradiction, and the shared Measured Horizon literary close
-remain incomplete.
+Automated browser/accessibility evidence is not human assistive-technology
+certification.
 
-## Cleanup and protected boundaries
+## Content and presentation acceptance
 
-- Fresh Intelligence root:
-  `C:\Users\marti\AppData\Local\Temp\horizon-archive-intelligence-c046e0d8-6bd7-4acb-83d8-0fb542611ba4`.
-  It was created as one external GUID root, used for the sole attempt, and
-  deleted after exact containment validation. It is absent.
-- Owned previews PID `38704` and `20208` were stopped. Ports `4173` and `4184`
-  are clear. Four owned `ha-intel-*-6075085a-efe8-4bd8-b6b6-9adc84c43bbf`
-  preview logs were deleted.
-- One PowerShell `Remove-Item -Recurse` cleanup command was policy-blocked
-  before execution. The same exact validated root was subsequently deleted
-  with `System.IO.Directory.Delete`; this is a disclosed policy-blocked
-  release-process variance with no product effect.
-- Protected repository QA, PDF, training, browser/profile/save, hidden-lore,
-  and media content were not inspected or modified. No image, audio, media,
-  import, generation, edit, or reveal operation occurred.
+- `FRCA-003-v1` remains **`PRODUCTION CONTENT COMPLETE`** for exactly seven
+  owner-correct final-purpose meanings. No eighth slot, answer, hidden lore,
+  new lesson, new host, reward, access, identity, or response exists.
+- `FRPR-003-v1` remains **`RUNTIME PRESENTATION COMPLETE`** as a substantiated
+  no-change pass. The accepted composition, hierarchy, focus, forced-color,
+  reduced-motion, silence, and responsive containment require no additional
+  CSS against the remaining cap.
+- Accepted runtime media remains exact `17 / 37,410,731`. No image, audio, or
+  other media was generated, edited, replaced, varied, imported, moved,
+  removed, published, or revealed.
+
+## Complete OPEN process-classification register
+
+All thirteen inherited process classifications remain separate and **OPEN**.
+They are not waived, merged, closed, cured, or admitted as candidate evidence.
+They do not describe an unresolved candidate defect, and no one of them
+recurs in this fresh Intelligence review.
+
+| Source | Classification retained | Release reconciliation |
+| --- | --- | --- |
+| VR-17 | `UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN` | Process-only; excluded from evidence |
+| VR-23 | `UNAUTHORIZED DIVERGENCE / BROAD REPOSITORY FILENAME ENUMERATION / OPEN` | Process-only; excluded from evidence |
+| VR-24 | `UNAUTHORIZED DIVERGENCE / UNTRACKED PATHNAME ENUMERATION / OPEN` | Process-only; excluded from evidence |
+| VR-25 | `UNAUTHORIZED DIVERGENCE / LITERAL CONTROL PATHNAME OUTPUT / OPEN` | Process-only; excluded from evidence |
+| VR-28 | `UNAUTHORIZED DIVERGENCE / LITERAL CONTROL PATHNAME OUTPUT / OPEN` | Process-only; excluded from evidence |
+| VR-39 | `UNAUTHORIZED DIVERGENCE / EXACT-PORT OWNERSHIP RECOVERY / OPEN` | Process-only; excluded from evidence |
+| VR-41 | `UNAUTHORIZED DIVERGENCE / PARSER DIAGNOSTIC SCALAR OUTPUT / OPEN` | Process-only; excluded from evidence |
+| VR-46 | `UNAUTHORIZED DIVERGENCE / VALIDATION COMMAND SELECTION / OPEN` | Standalone `9/9` excluded; exact `68/68` independently passes |
+| VR-47 | `REQUIRED CORRECTION / EXECUTION CONTROL / PRE-ROOT SCALAR TRANSPORT / OPEN` | Later staged control supplied lawful evidence; record remains OPEN |
+| VR-50 | `REQUIRED CORRECTION / EXECUTION CONTROL / STAGE-1 POST-CREATE ROOT PROOF / OPEN` | Later root/token controls passed; record remains OPEN |
+| VR-53 Stage 4 | `REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP PARSER / OPEN` | Exact later cleanup controls passed their bounded predicates; record remains OPEN |
+| VR-60 Call 9 | `REQUIRED CORRECTION / EVIDENCE CLEANUP CONTRACT / SUCCESS-ARTIFACT-AWARE ROOT DELETION / OPEN` | Expected artifacts later identity-proved and deleted; record remains OPEN |
+| VR-61 | `REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP TOKEN DIGEST IMPLEMENTATION / OPEN` | Correct decoded-byte domain later proved; record remains OPEN |
+
+The prior FRAB-003 HOLD is superseded by the exact corrected evidence chain,
+not erased. Tool-policy rejections that never executed remain non-evidence and
+do not create additional OPEN items.
+
+## Deferred opaque external QA residual
+
+VR-65 identity-proved and deleted the two expected success artifacts and
+proved both absent. Exact nonrecursive root deletion then failed because one
+undeclared opaque entry remains. No enumeration, inspection, recursive
+cleanup, alternate target, or retry occurred.
+
+```text
+rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTg1YmRjYmQzLThlZjctNGU3OC1iZGNiLWVjODgxNDFhMDczZQ==
+rootTokenSha256=1c6a6df084f9917a37b27c1035f00929b9457b460aad323d1c4b65882dbd0654
+rootDeleted=0
+```
+
+Intelligence accepts Mission's exact classification:
+
+**`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE EXTERNAL
+QA RESIDUAL / VR-65`**.
+
+The root was previously proven a direct GUID child of OS temp, outside the
+repository and distinct from the predecessor root. The expected diagnostic
+and summary are absent; the owned browser and preview PIDs are absent; ports
+are clear. This release neither infers the opaque entry nor claims cleanup or
+root absence. The residual remains disclosed and inaccessible without new
+authority.
+
+## Maturity reconciliation
+
+- `FR-03` continuity remains `FR2`.
+- `FR-03` physical-host expression remains address-level `FR0`, but its honest
+  detail advances from `1 accepted compression / 11 missing` to **`1 accepted
+  compression / 1 exact / 10 missing`**. Host 05 is the one new exact physical
+  relationship. No Host 06-15 parity is inferred.
+- `FR-03` learning remains `FR2`; behavior/save/recovery remains `FR1`;
+  final-purpose content remains `FR2`; presentation remains `FR3`.
+- `FR-03` release proof remains `FR4` and now names `FRAB-003-v1` for this
+  exact bounded Host 05 package in addition to prior bounded release history.
+- The forty-host inventory advances from `5 exact / 1 accepted shared
+  compression / 33 missing / 1 unadvanced Witness expression` to **`6 exact /
+  1 accepted shared compression / 32 missing / 1 unadvanced Witness
+  expression`**.
+- No other maturity cell advances. `FIRST RUN COMPLETE` is not called.
 
 ## Adaptive retrospective
 
 Decision: **`TUNE`**.
 
-- **KEEP:** immutable candidate/control identities, ancestry/diff preflight,
-  deterministic ladder, served identity, one fresh external-GUID root, and the
-  no-rerun release rule.
-- **TUNE:** before a future sole E2E may be authorized, its evidence contract
-  should persist a minimal failure-side machine diagnostic identifying the
-  failing layout/subfield before throwing. This is a future planning decision,
-  not authorization to change or rerun FRWO-003 here.
-- **REDESIGN:** not warranted from one stopped aggregate. The exact owner must
-  first be adjudicated from a bounded Mission review.
+- **KEEP:** immutable candidate identities, exact ancestry/delta checks,
+  focused/related/full/validator/build/PBA/served gates, failure-side machine
+  diagnostics, one complete non-overlapping E2E, one summary/verifier, strict
+  no-rerun behavior, and independent release.
+- **TUNE:** future Mission shells should freeze tool-compatible root, preview,
+  E2E, and cleanup primitives before spending the one live budget; declare the
+  exact success-artifact allowlist and decoded-byte token digest domain in the
+  initial cleanup contract; and treat any undeclared residual as a scalar
+  nonrecursive cleanup outcome without repeated orchestration reissues.
+- **REDESIGN:** not warranted. The product and corrected release evidence pass;
+  the repeated friction was confined to execution-control construction.
 
-## Exact next action
+## Cleanup and protected boundaries
 
-A **fresh Mission Captain** must read this reconciliation and the complete
-FRWO-003 shell/variance/production chain, adjudicate the failed live aggregate,
-and issue one versioned shell `HOLD` or `READY` routing to the earliest
-responsible owner. Mission may not infer a product defect from the truncated
-aggregate, authorize another E2E before defining the exact evidence contract,
-repair the candidate, advance maturity, or start a downstream role.
+- Fresh Intelligence created no QA root and did not access the disclosed
+  opaque residual or the disclosed predecessor residual.
+- Fresh production/fixture preview PIDs `16084` and `57228` were stopped and
+  proved absent. Ports `4173` and `4184` are clear.
+- The protected repository QA quarantine, PDF, training directory,
+  browser/profile/save, hidden lore, and every other protected or user path
+  were not listed, inspected, read, changed, staged, moved, or deleted.
+- No image/media operation, reveal, schedule, or automation action occurred.
+
+## Release disposition and exact next action
+
+**`FIRST RUN PASS RELEASED / FRAB-003-v1`**
+
+The exact next action is one **fresh Commandant** guarded revalidation of
+`FRPB-001-v1` against `FRAB-003-v1`, the synchronized release map and
+scoreboard, the exact released candidate identities, current runtime, protected
+complete-game script, and TD-012. Commandant may reaffirm the baseline or
+issue `REVISE`/`HOLD` only on a documented reopen trigger, then leave one exact
+Colonel handoff.
+
+Commandant may not select a Work Order, silently close any of the thirteen
+OPEN process classifications, inspect or clean the opaque residual, expand
+Host 06-15, repair the City contradiction, start production, generate a
+reveal, schedule automation, or call `FIRST RUN COMPLETE`.
+
+The dedicated Intelligence release commit and final
+`HEAD == origin/main == remote main` proof are recorded in the synchronized
+handoff and release message because this document cannot contain the hash of
+the commit that first contains itself.

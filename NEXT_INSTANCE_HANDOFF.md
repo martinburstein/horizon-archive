@@ -2,52 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL DOCUMENTED / SUBSTANTIVE PASS /
-DEFERRED NON-GATING EXTERNAL QA RESIDUAL DISCLOSED / THIRTEEN OPEN / ROUTE
-FRESH INTELLIGENCE / FRCE-003-v1-VR-66`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-003-v1 / SIXFOLD
+WEIR EXACT / DEFERRED NON-GATING OPAQUE EXTERNAL QA RESIDUAL / THIRTEEN OPEN /
+ROUTE FRESH COMMANDANT`**
 
-Release and maturity remain HOLD pending independent Intelligence review.
+Exact next owner: **fresh Commandant**
 
-Exact next owner: **fresh Intelligence Officer**
+Immediate control: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Immediate control: `FRCE-003-v1-VR-66`
+Released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Mission authority: `FRSH-003-v1-VR-66`
+Released Intelligence source: **the dedicated release commit containing this
+handoff; verify from synchronized `HEAD` before acting**
 
-Combat source: `835b2fc220790f29f575b4e24dc0c0cf71031d9d`
-
-The accepted candidate is substantively production-functional. Cumulative
-deterministic, build, corrected PBA, served-identity, root/launcher, diagnostic
-transport, and live-DOM correction gates remain accepted without rerun. The
-sole corrected complete E2E passed with exact diagnostic inventory, failure 0,
-browser closed, exactly one summary, and exactly one passing verifier. Both
-owned PIDs are absent and ports 4173/4184 are clear.
-
-Prior Quartermaster and Image Specialist runtime-presentation PASS evidence
-remains accepted. Product, content, presentation, and frozen meanings are
-unchanged.
-
-VR-65 identity-proved and deleted the literal diagnostic and summary artifacts
-and proved both absent. Its exact nonrecursive root deletion failed because an
-undeclared opaque entry remains. No enumeration, inspection, recursive cleanup,
-alternate target, or retry occurred. The retained root remains explicitly
-disclosed with `rootDeleted=0`:
-
-```text
-rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTg1YmRjYmQzLThlZjctNGU3OC1iZGNiLWVjODgxNDFhMDczZQ==
-rootTokenSha256=1c6a6df084f9917a37b27c1035f00929b9457b460aad323d1c4b65882dbd0654
-rootDeleted=0
-```
-
-This is **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE
-EXTERNAL QA RESIDUAL / VR-65`**, not a candidate-quality or E2E failure and not
-a cleanup-absence claim.
-
-All thirteen inherited OPEN process classifications remain separate and OPEN:
-VR-17, VR-23, VR-24, VR-25, VR-28, VR-39, VR-41, VR-46, VR-47, VR-50,
-VR-53 Stage 4, VR-60 Call 9, and VR-61. None is waived or candidate evidence.
-
-Frozen candidate identities remain:
+Released candidate identities:
 
 ```text
 geometry=8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97
@@ -58,9 +26,60 @@ diagnostic=2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc
 evidence=ca89a679195c11d441a76e6c02983a6436f2ccb2
 ```
 
-Fresh Intelligence must independently audit the exact candidate, accepted
-evidence, every variance, and the deferred residual; decide maturity/release
-disposition; and replace this handoff with one synchronized exact next action.
-Intelligence may accept or hold. No rerun, residual access/cleanup, product,
-media, protected-path, release, schedule, automation, reveal, or downstream
-action is pre-authorized.
+Fresh Intelligence independently accepted exact ancestry and bounded deltas;
+focused `68/68`, related `74/74`, cold full `972/972`, validators `40/40`,
+production `217` modules, fixture `57` modules, PBA JavaScript `1,667,393`, CSS
+`119,247`, media `17 / 37,410,731`, maps `0`, and served identity `2/2`.
+
+The sole corrected complete E2E was not rerun. Its immutable accepted result is
+exactly one invocation, exit `0`, diagnostic inventory exact, failure `0`,
+browser closed, no failure transport, exactly one summary, and exactly one
+passing verifier. It proves all six layouts, the full later rail, both equal
+MH-40 outcomes, null deltas, `successor=null`, offline/runtime/media/PBA/
+performance gates, and zero runtime errors.
+
+`FRCA-003-v1` remains `PRODUCTION CONTENT COMPLETE`. `FRPR-003-v1` remains
+`RUNTIME PRESENTATION COMPLETE` as a no-change pass. Product, content,
+presentation, media, learning, save, route, world, and ending meanings are
+unchanged after the accepted candidates.
+
+`FR-03` remains address-level physical maturity `FR0`, now honestly detailed
+as `1 accepted shared compression / 1 exact / 10 missing`. Host 05 is exact.
+No Host 06-15 parity is inferred. The forty-host inventory is now `6 exact / 1
+accepted shared compression / 32 missing / 1 unadvanced Witness expression`.
+No other maturity cell advances and `FIRST RUN COMPLETE` is not called.
+
+All thirteen inherited process classifications remain separate and OPEN:
+VR-17, VR-23, VR-24, VR-25, VR-28, VR-39, VR-41, VR-46, VR-47, VR-50,
+VR-53 Stage 4, VR-60 Call 9, and VR-61. None is waived, merged, closed, cured,
+or candidate evidence.
+
+VR-65 identity-proved and deleted the exact diagnostic and summary artifacts
+and proved both absent. Exact nonrecursive root deletion failed because an
+undeclared opaque entry remains. No enumeration, inspection, recursive
+cleanup, alternate target, or retry occurred:
+
+```text
+rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTg1YmRjYmQzLThlZjctNGU3OC1iZGNiLWVjODgxNDFhMDczZQ==
+rootTokenSha256=1c6a6df084f9917a37b27c1035f00929b9457b460aad323d1c4b65882dbd0654
+rootDeleted=0
+```
+
+This remains **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING /
+OPAQUE EXTERNAL QA RESIDUAL / VR-65`**. It is not a cleanup-absence claim.
+Fresh Intelligence did not access it. Its inspection or cleanup is not
+authorized.
+
+The fresh Commandant must read `AGENTS.md`, this handoff,
+`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, the Commandant profile,
+`FRAB-003-v1`, `FRPB-001-v1`, the synchronized release map and scoreboard,
+current runtime, protected complete-game script, and TD-012 only as the profile
+requires. Perform one guarded baseline revalidation. Reaffirm the baseline or
+issue `REVISE`/`HOLD` only on a documented reopen trigger, then replace this
+handoff with one exact Colonel action.
+
+Commandant may not select a Work Order, inspect or clean either disclosed
+external residual, close an OPEN classification, expand Drowned, repair the
+City contradiction, change product/media/protected/user state, begin
+production, create a reveal, schedule automation, or call `FIRST RUN
+COMPLETE`.
