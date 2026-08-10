@@ -1,10 +1,10 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-001-v1`
+Map ID: `FRRM-002-v1`
 
 Current release authority: `FRAB-001-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v1` / `FRCL-001-v1`
+Baseline / continuity lock: `FRPB-001-v1` / `FRCL-002-v1`
 
 Released product/test candidate: `d37103b46f257cb61ef99f76413611ee31d0fab2`
 
@@ -13,6 +13,8 @@ Image control edge reviewed: `91d98bff27727ccedf2ed74da1392508205e1838`
 Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
 Date: **2026-08-10**
+
+Current selected Work Order: `FRWO-002-v1 / The Third Coupling`
 
 ## Purpose
 
@@ -32,10 +34,10 @@ or declare the full address range complete.
 | --- | --- | --- | --- | --- |
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
-| `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-02 exact; Fracture Nursery and the full chapter turn are missing |
+| `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-02 exact; Fracture Nursery and the full chapter turn are missing; `FRWO-002-v1` is selected but unbuilt |
 | `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy released; one shared host still compresses twelve clusters and hosts 05-15 remain missing |
 | `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
-| `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff into the already-operating city released; two enriched hosts remain missing |
+| `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
 | `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
 | `FR-07` | Chapter VI — Calibration Margin | Active bypass reaches `FR-08` | Hosts 21-22; `PY010`, `D2O7` | Compact chapter/learning released; both enriched hosts missing |
 | `FR-08` | Chapter VII — Three-Current Reach | Serviced carrier reaches `FR-09` | Hosts 23-24; `PY011`, `D1O4` | Compact chapter/learning released; both enriched hosts missing |
@@ -64,11 +66,35 @@ or declare the full address range complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-02` | Distinct Fracture Nursery and complete Glass Meadow turn | Earliest remaining missing physical host after released `FRWO-001-v1` |
+| 1 | `FR-02` | `FRWO-002-v1`: distinct Fracture Nursery discovery and the complete Glass Meadow turn, reusing exact `L01-03` without changing its optional route contract | Earliest unresolved continuity and physical-host address after released `FRWO-001-v1` |
 | 2 | `FR-03` | Drowned pedestrian sequence, hosts 05-15 | Earliest remaining host cluster; requires its own pacing/route pass and may HOLD if immutable media cannot support it |
-| 3 | `FR-05` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
-| 4 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
-| 5 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+| 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
+| 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction is later than `FR-02` through `FR-04`; direct route behavior itself is exact |
+| 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
+| 6 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
+| 7 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+
+## Selected second Work Order boundary decision
+
+`FRWO-002-v1` owns only the third Glass Meadow coupling and the location turn
+that makes its relationship to First Signal and Route Marker legible. The
+runtime already contains the exact `L01-03` calibration evaluator, strict
+mastery evidence, privacy sanitizer, save projection, safe exit, reload
+reconstruction, and route-open contract. The missing product expression is
+physical and narrative: the optional exercise launches from a generic
+departure action rather than from a distinct Fracture Nursery host, and the
+chapter has no complete three-bodies/one-expedition-interface turn.
+
+This is integration-sized because it rehouses one existing learning surface in
+one location, adds one discoverable non-overlapping host relationship over the
+same immutable Meadow plate, and proves approach, optional practice, departure,
+return, resume, responsive access, and unchanged-world meaning together. It
+does not create a lesson, require calibration for departure, change the route,
+or open Drowned expansion. The existing plate visibly contains a separate
+low-left repair-stock grouping that may be feasible for a registered hotspot;
+Science must independently prove that this is an honest wide/narrow host
+expression rather than an invented reinterpretation. If it cannot, the pass
+must `HOLD` under the immutable-media boundary.
 
 ## Released First Work Order boundary decision
 

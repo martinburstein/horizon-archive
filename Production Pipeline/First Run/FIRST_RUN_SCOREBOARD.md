@@ -1,18 +1,21 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-001-v1`
+Scoreboard ID: `FRSB-002-v1`
 
 Current release authority: `FRAB-001-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v1` / `FRCL-001-v1`
+Baseline / lock: `FRPB-001-v1` / `FRCL-002-v1`
 
-Release map: `FRRM-001-v1`
+Release map: `FRRM-002-v1`
 
 Released product/test candidate: `d37103b46f257cb61ef99f76413611ee31d0fab2`
 
 Image control edge reviewed: `91d98bff27727ccedf2ed74da1392508205e1838`
 
 Date: **2026-08-10**
+
+Current selected Work Order: `FRWO-002-v1 / The Third Coupling` — planning
+only; no maturity cell advances until accepted as-built evidence exists.
 
 ## Reading the matrix
 
@@ -40,7 +43,7 @@ complete.
 | `FR-02` Glass Meadow | `FR0` | `FR0` — 2 exact / 1 missing | `FR2` | `FR1` | `FR1` | `FR3` | `FR4` | No-response Meadow correction released; Fracture Nursery/full turn remains incomplete |
 | `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 11 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Crown/outflow/local-evidence meaning released; host collapse remains |
 | `FR-04` Witness Corridor | `FR2` | `FR0` — unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
-| `FR-05` City Threshold | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Direct credits-free entry into the already-operating city independently released |
+| `FR-05` City Threshold | `FR0` | `FR0` — 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
 | `FR-07` Calibration Margin | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
 | `FR-08` Three-Current Reach | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -67,10 +70,19 @@ complete.
 - `FRWO-001-v1` targets continuity/content/presentation only from `FR-00`
   through initial `FR-05`; `FRAB-001-v1` releases that exact scope and changes
   no physical-host cell.
+- `FRCL-002-v1` supersedes the prior continuity classification for current
+  planning. It identifies `FR-02` as missing expression and downgrades the
+  current `FR-05` continuity/content cells because one contradictory sentence
+  is visibly present. This does not invalidate the exact direct City route or
+  erase the historical bounded `FR4` evidence for `FRWO-001-v1`.
+- `FRWO-002-v1` targets evidence sufficient for `FR2` continuity, physical-host
+  expression, and final-purpose content at `FR-02`, plus `FR3` presentation for
+  affected states. Selection is not advancement; every current `FR-02` cell
+  remains unchanged here.
 
 ## Next lawful advancement
 
-A fresh Commandant must revalidate the baseline against `FRAB-001-v1` and the
-current runtime before the next sequential cycle. Fracture Nursery at `FR-02`
-is the earliest mapped product gap, but no next Work Order is preselected or
-authorized by this scoreboard.
+Science must evaluate `FRWO-002-v1` against the immutable Meadow plate, exact
+optional `L01-03` route contract, save/privacy behavior, responsive access, and
+release budgets. Operations has selected the earliest mapped gap but has not
+authorized implementation or advanced maturity.

@@ -110,27 +110,57 @@ exact-next-action authority.
 - The lock artifact is `Production Pipeline/First Run/
   FIRST_RUN_CONTINUITY_LOCK_FRCL-002-v1.md`.
 
-## Exact next action - Operations Work Order selection
+## Fresh Operations result
 
-Read `First Run Agent Profiles/operations-planning-major.md` in full; then read
-`FRPB-001-v1`, guarded revalidation `FRPB-001-v1-GR-01`, `FRAB-001-v1`,
-`FRCL-002-v1`, and the current release map and scoreboard. Revalidate the
-earliest-first queue against actual runtime evidence and issue one versioned
-`WORK ORDER READY`, `REVISE`, or `HOLD` disposition.
+- Operations issued **`WORK ORDER READY / FRWO-002-v1`** from exact source
+  `57151b898db637a462c2db0e63ef5d33f58f5d86`.
+- The bounded pass is **The Third Coupling** at `FR-02` only: register a
+  distinct Fracture Nursery relationship over the immutable accepted Meadow
+  plate, rehouse the existing optional `L01-03` calibration behind its in-world
+  `USE` interaction, and complete the three-bodies/one-expedition-interface
+  chapter turn before the unchanged Drowned departure.
+- The current optional learning contract is fixed. `L01-03`, its strict
+  `8/8 + 8/8 + 4/4` mastery, evidence allowlist, privacy clearing, save state,
+  safe exit, reload, and immediate post-Route-Marker departure remain exact.
+- No new mandatory scored work, route, save field, lesson, asset, world
+  response, or later address is authorized. The City `successor packet`
+  contradiction remains a separate later finding.
+- The accepted `1672 x 941` Meadow plate visibly contains a plausible separate
+  low-left repair-stock grouping, but its provenance deliberately names only
+  the field-linked Terminal and Route Marker. Science must prove an honest,
+  non-overlapping, wide/narrow third-host use or issue `HOLD`; no media
+  operation is permitted.
+- Current focused calibration, Meadow geometry, Route Marker, transition, and
+  return evidence passes `24/24`. This is baseline evidence, not a maturity
+  advance.
+- The current controls are `FRRM-002-v1` and `FRSB-002-v1`. No scoreboard cell
+  advances. `FR-05` continuity/content now truthfully record the active
+  contradiction while preserving its exact direct-route behavior and bounded
+  prior `FR4` history.
+- The Work Order artifact is `Production Pipeline/First Run/
+  FIRST_RUN_WORK_ORDER_FRWO-002-v1.md`.
 
-Treat `FR-02` as the earliest unresolved continuity address and the City
-`successor packet` sentence as a separate later active contradiction unless a
-documented dependency, critical safety/accessibility defect, or prevention of
-duplicate destructive work justifies another order. Select exactly one bounded
-vertical-quality Work Order; define its player-visible outcome, entry/exit and
-recovery boundary, permitted systems/files, validation ladder, immutable-media
-feasibility, and safe deferrals. Update the release map and scoreboard only
-within Operations authority.
+## Exact next action - Science viability
 
-Do not implement, write final copy, promote a physical-host cell, alter canon,
-learning, route, save, world, or ending behavior, change media, create the
-Science viability envelope or Mission shell, begin Science, or infer/restart
-automation inside the Operations invocation.
+Read `First Run Agent Profiles/office-of-science-administrator.md` in full;
+then read `FRWO-002-v1`, `FRPB-001-v1`, guarded revalidation
+`FRPB-001-v1-GR-01`, `FRAB-001-v1`, `FRCL-002-v1`, `FRRM-002-v1`, and
+`FRSB-002-v1`. Inspect the exact Meadow/game-on-paper/route/curriculum/
+readiness/visual authorities, runtime `App.jsx`, `pixelMeadow.js`,
+`calibrationExercise.js`, `sceneTransition.js`, current focused tests, accepted
+asset provenance, and `PBA-TD012-v1`.
+
+Independently answer all eight Work Order questions. At minimum, prove or reject
+the immutable plate's ability to carry one distinct non-overlapping Fracture
+Nursery host across wide/narrow crops; define the exact optional-route,
+save/privacy, focus/recovery, accessibility, PBA, regression, and canonical
+release-command-manifest envelope. Issue one versioned
+`POLISH VIABILITY READY`, `REVISE`, or `HOLD` disposition and leave one exact
+Mission handoff only if ready.
+
+Do not write final copy, implement production, promote maturity, change canon,
+learning, route, save, world, ending, or media, create a Mission shell, begin
+Mission, or inspect protected state inside the Science invocation.
 
 ## Protected boundaries
 
