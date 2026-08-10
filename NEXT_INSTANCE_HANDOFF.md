@@ -180,30 +180,44 @@ exact-next-action authority.
   one-run boundary.
 - Combat therefore issued **`HOLD / REVISE LIVE HARNESS / FRCE-003-v1`**.
   Quartermaster is not authorized to begin.
+- Verification-only return proved exact corrected harness integrity and again
+  passed focused `67/67`, related `74/74`, cold full `971/971`, validators
+  `40/40`, builds `217/57`, PBA/media, and both served identities.
+- The one authorized return E2E ran once for `72s`, passed the former
+  assertion stop, completed the later rail and both equal MH-40 outcomes, and
+  reached the runtime/focus/`<=2ms` gates. It then failed closed at the live
+  layout aggregate.
+- All layouts retained `>0.95` source band, zero Host 04/return overlap, no
+  horizontal overflow, and reduced-motion parity. Narrow/effective/retained
+  source-center probes failed; forced-color focus probes failed all six; and
+  retained `320x180` / `320x240` measured `62.796875 x 43.90625` with escaped
+  labels, below the exact `44px` minimum by `0.09375px`.
+- No machine summary was emitted and no verifier ran. Exact PIDs were stopped,
+  ports are clear, and the external GUID QA root was removed. No rerun or
+  threshold weakening occurred.
+- `FRCE-003-v1` now classifies **`HOLD / LIVE LAYOUT CONTRACT VARIANCE`**.
+  Quartermaster remains blocked.
 - Functional report is `Production Pipeline/First Run/
   FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1.md`.
 
-## Exact next action - Combat Engineer only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, `FRSH-003-v1`, `FRDT-003-v1`, `FRPX-003-v1`, and `FRCE-003-v1`.
-Verify exact corrected candidate
-`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`; do not rebuild or expand Host 05
-unless a newly observed variance requires a shell-lawful repair.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, `FRVE-003-v1`, `FRSH-003-v1`, `FRPX-003-v1`, and the complete
+`FRCE-003-v1` live-variance evidence. Adjudicate before another Combat run.
 
-Run `FRRC-002-v1` from a fresh GUID OS-temp QA root proved outside the
-repository: focused, related, cold full, exact forty validators, both builds
-and strict previews, served identity, narrow/global PBA, exact immutable
-media/offline/privacy, one complete E2E, machine-owned six-layout live summary
-and verifier, complete later rail, both equal MH-40 outcomes, `<=2ms` Host 05
-activation, exact cleanup, and unchanged candidate identity.
+Preserve product candidate `a9776e337f1820776864a5690332c364d0fb2556`,
+corrected harness candidate `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`,
+all seven placeholders, and every threshold. Route the exact `25%` height
+versus live `43.90625px` / required `44px` contradiction back to Science.
+Obtain Tactical clarification for source mapping against the rendered image
+content box and for a keyboard-induced `:focus-visible` forced-color probe.
 
-If every gate passes, supersede `FRCE-003-v1` with an evidence-complete
-`PRODUCTION FUNCTIONAL / BUILD CANDIDATE READY` report and hand the exact
-accepted candidate to Quartermaster. If any gate varies, stop on the first
-variance and issue a new evidence-honest `REVISE` or `HOLD` without advancing.
-Commit only authorized Combat verification/report scope, push `main`, and
-prove `HEAD == origin/main`.
+Issue a versioned shell variance decision that produces one implementable,
+non-weakened acceptance contract, or continue HOLD. Do not authorize another
+complete E2E, change product/meaning/media, advance Quartermaster, or relax a
+geometry, label, focus, forced-color, summary, verifier, or performance gate
+until the contradiction is resolved.
 
 Do not write final prose, inspect the repository QA quarantine, change media,
 alter learning/save/route/world/ending, repair the City contradiction, expand

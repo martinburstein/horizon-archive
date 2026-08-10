@@ -4,7 +4,7 @@ Date: **2026-08-10**
 
 Role: **Combat Engineer**
 
-Disposition: **HOLD / REVISE LIVE HARNESS**
+Disposition: **HOLD / LIVE LAYOUT CONTRACT VARIANCE**
 
 ## Candidate identity
 
@@ -17,6 +17,8 @@ Disposition: **HOLD / REVISE LIVE HARNESS**
   `a9776e337f1820776864a5690332c364d0fb2556`
 - Post-stop harness correction, not live re-exercised:
   `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`
+- Verification-only control source:
+  `a39e6bf45ebabe536425719be8a9370a1183270b`
 - Canonical command manifest:
   `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
 
@@ -64,6 +66,11 @@ report.
 | Owned preview cleanup | **PASS**: exact PIDs stopped; ports `4173` and `4184` clear |
 | External QA cleanup | **PASS**: owned GUID root removed after exact containment checks |
 
+Verification-only return evidence remains exact focused `67/67`, related
+`74/74`, cold full `971/971` (`23.114s`), validators `40/40`, production and
+fixture builds `217/57`, JavaScript `1,666,377`, CSS `119,247`, accepted media
+`17 / 37,410,731`, and both served identities byte-equal to disk.
+
 ## Live gate stop
 
 The one authorized complete E2E ran once against
@@ -86,11 +93,69 @@ one and only one complete E2E. Consequently:
 - the machine live-summary verifier could not lawfully run; and
 - production readiness remains unproved.
 
+## Verification-only live return
+
+A new authorized return verified exact corrected harness candidate
+`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`. Patch integrity proved that the
+only delta from product candidate `a9776e337f1820776864a5690332c364d0fb2556`
+is the two intended Host 05 post-primary/post-mastery live assertions. No
+product, meaning-slot, shell, or test-threshold change occurred.
+
+The one complete E2E ran once for `72s`. It passed the former assertion stop,
+completed the clean-start journey through the complete later rail and both
+equal MH-40 outcomes, reached the zero-runtime-error, focus, and `<=2ms`
+activation checks, then failed closed at the six-layout aggregate. The exact
+live measurements were:
+
+| Layout | Host 05 size | Source retention | Center | Label | Forced color | Reduced motion |
+|---|---:|---:|---|---|---|---|
+| `desktop` | `285.71875 x 200.640625` | `0.9938006568862109` | pass | pass | fail | pass |
+| `laptop` | `265.703125 x 186.5625` | `0.9934461383565948` | pass | pass | fail | pass |
+| `narrow` | `76.796875 x 53.75` | `0.9803488345477811` | fail | pass | fail | pass |
+| `effective-200` | `149.203125 x 104.65625` | `0.9891190780432326` | fail | pass | fail | pass |
+| `retained-320x180` | `62.796875 x 43.90625` | `0.9762053196054321` | fail | fail | fail | pass |
+| `retained-320x240` | `62.796875 x 43.90625` | `0.9762053196054321` | fail | fail | fail | pass |
+
+All six layouts retained exact zero Host 04 and return-ridge overlap, no
+horizontal overflow, and source retention above `0.95`. The two retained
+layouts miss the frozen minimum activation height by `0.09375px`; their
+persistent placeholder labels also escape the measured button bounds. No
+`first-run-live-summary.json` was emitted and the independent machine verifier
+therefore could not run.
+
+The run used fresh owned root
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-624f64ad-f344-4a2c-aa89-e3d9f2398b5c`,
+proved inside OS temp and outside the repository. Exact preview PIDs `3528`
+and `23764` were stopped, ports `4173` and `4184` are clear, and the root was
+removed after repeated containment checks.
+
+## Earliest-owner diagnosis
+
+- The source-center probe maps against `.scene-frame.getBoundingClientRect()`,
+  which includes the fixed scene border, while the visual source is rendered
+  by `.scene-art`. The viewport-dependent Y drift is therefore a Combat/
+  Tactical measurement-contract defect; the probe must use the rendered image
+  content box and its actual object-fit/object-position mapping without
+  weakening the frozen source coordinate.
+- The forced-color probe calls programmatic `focus()` after a pointer-driven
+  journey, then expects a `:focus-visible` rule. It does not first prove
+  keyboard focus-visible modality. Tactical must freeze an honest keyboard
+  probe; Combat may then implement it without lowering the required outline.
+- The `43.90625px` retained height and escaped label are live product facts.
+  FRVE-003 and FRSH-003 simultaneously freeze exact `25%` height and `>=44px`
+  activation geometry, but the bordered/scaled retained scene yields less
+  than `44px`. Combat may not silently enlarge the target or relax exact
+  geometry. Mission must adjudicate this shell variance and route the
+  contradicted viability claim back to Science before any repair.
+
 ## Variance classification and rollback
 
-- **Shell variance:** none found in implementation or focused evidence.
-- **Harness variance:** one stale post-primary assertion, corrected after the
-  authorized E2E stop.
+- **Shell variance:** retained live geometry cannot simultaneously satisfy the
+  frozen `25%` height and `>=44px` activation contract as currently framed.
+- **Harness variance:** the stale post-primary assertion is corrected. The
+  source-mapping and focus-visible probes now require owner clarification.
+- **Live product variance:** retained target height and label containment fail
+  the exact current shell.
 - **Release classification:** `HOLD`; this cycle cannot advance to
   Quartermaster or maturity acceptance.
 - **Protected boundaries:** no protected PDF, training folder, repository QA
@@ -102,11 +167,12 @@ one and only one complete E2E. Consequently:
 
 ## Exact next action
 
-Combat Engineer must verify exact corrected candidate
-`bf58e528bc6ce4088f81f2c782ce2895259ab9fd` in a fresh authorized run. Use
-`FRRC-002-v1`, a new GUID OS-temp QA root proved outside the repository, and
-one complete E2E. Require the machine six-layout summary and verifier, the
-full later rail, both equal MH-40 outcomes, runtime-error and performance
-gates, exact cleanup, and unchanged candidate identity. If and only if every
-gate passes, supersede this HOLD with `PRODUCTION FUNCTIONAL / BUILD CANDIDATE
-READY` and hand the exact accepted candidate to Quartermaster.
+Mission Captain must adjudicate the exact retained-layout contradiction before
+another Combat run. Preserve product candidate
+`a9776e337f1820776864a5690332c364d0fb2556`, corrected harness candidate
+`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`, all seven placeholders, and every
+threshold. Route the `25%` versus live `43.90625px` / required `44px` conflict
+to Science, and obtain Tactical clarification for rendered-image source
+mapping plus keyboard focus-visible measurement. Issue a versioned shell
+variance decision or continue HOLD. Do not authorize a new E2E until those
+controls yield one implementable, non-weakened acceptance contract.
