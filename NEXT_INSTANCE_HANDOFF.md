@@ -2,42 +2,65 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / DOCS-ONLY COMBAT FUNCTIONAL
-CLOSE / ROUTE FRESH INTELLIGENCE / FRSH-003-v1-VR-66`**
+Current disposition: **`PRODUCTION FUNCTIONAL DOCUMENTED / SUBSTANTIVE PASS /
+DEFERRED NON-GATING EXTERNAL QA RESIDUAL DISCLOSED / THIRTEEN OPEN / ROUTE
+FRESH INTELLIGENCE / FRCE-003-v1-VR-66`**
 
-Stage and release remain HOLD pending the docs-only Combat close and independent
-Intelligence review.
+Release and maturity remain HOLD pending independent Intelligence review.
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Intelligence Officer**
 
-Immediate control: `FRSH-003-v1-VR-66`
+Immediate control: `FRCE-003-v1-VR-66`
 
-Mission source: `bc590af1bdd4cac4b2ffa6bd5385362597f9094e`
+Mission authority: `FRSH-003-v1-VR-66`
 
-VR-65 passed token/SHA/root identity, identity-proved and deleted the two
-literal owned success artifacts, proved both absent, and re-proved the root.
-Its one nonrecursive root deletion failed because an undeclared residual entry
-remains. Combat correctly performed no enumeration, inspection, alternate
-deletion, recursive removal, or retry.
+Combat source: `835b2fc220790f29f575b4e24dc0c0cf71031d9d`
 
-Mission classifies the exact retained root as **`DEFERRED LIMITATION / RELEASE-
-PROCESS ONLY / NON-GATING / OPAQUE EXTERNAL QA RESIDUAL / VR-65`**. It remains
-disclosed and is not claimed deleted. The root is a proven direct OS-temp child
-outside the repository; expected evidence files are absent; browser/PIDs/ports
-are closed/absent/clear; content, product, and presentation are unchanged.
+The accepted candidate is substantively production-functional. Cumulative
+deterministic, build, corrected PBA, served-identity, root/launcher, diagnostic
+transport, and live-DOM correction gates remain accepted without rerun. The
+sole corrected complete E2E passed with exact diagnostic inventory, failure 0,
+browser closed, exactly one summary, and exactly one passing verifier. Both
+owned PIDs are absent and ports 4173/4184 are clear.
 
-VR-60's one corrected E2E and verifier PASS remains substantively accepted.
-Prior Quartermaster and Image Specialist PASS evidence remains accepted.
+Prior Quartermaster and Image Specialist runtime-presentation PASS evidence
+remains accepted. Product, content, presentation, and frozen meanings are
+unchanged.
 
-Fresh-child capacity remains unavailable; Mission context reuse is disclosed
-and non-evidence.
+VR-65 identity-proved and deleted the literal diagnostic and summary artifacts
+and proved both absent. Its exact nonrecursive root deletion failed because an
+undeclared opaque entry remains. No enumeration, inspection, recursive cleanup,
+alternate target, or retry occurred. The retained root remains explicitly
+disclosed with `rootDeleted=0`:
 
-Combat may perform docs-only close: issue one synchronized functional report
-recording the substantive PASS, deferred non-gating residual, all thirteen OPEN
-process classifications, and unchanged candidate/invariants; replace NEXT to
-route exactly one fresh Intelligence Officer; commit/push only those docs.
+```text
+rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTg1YmRjYmQzLThlZjctNGU3OC1iZGNiLWVjODgxNDFhMDczZQ==
+rootTokenSha256=1c6a6df084f9917a37b27c1035f00929b9457b460aad323d1c4b65882dbd0654
+rootDeleted=0
+```
 
-No residual inspection/cleanup bypass, rerun, preview, browser, E2E, verifier,
-build, test, product/media/protected action, or release declaration is
-authorized. Intelligence must independently adjudicate the exact candidate,
-all variances, the deferred residual, and release/maturity state.
+This is **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE
+EXTERNAL QA RESIDUAL / VR-65`**, not a candidate-quality or E2E failure and not
+a cleanup-absence claim.
+
+All thirteen inherited OPEN process classifications remain separate and OPEN:
+VR-17, VR-23, VR-24, VR-25, VR-28, VR-39, VR-41, VR-46, VR-47, VR-50,
+VR-53 Stage 4, VR-60 Call 9, and VR-61. None is waived or candidate evidence.
+
+Frozen candidate identities remain:
+
+```text
+geometry=8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97
+transport=6c64eb354b7dbb467df5725e2cae4eb67092ddc7
+product=a91763e28d488f31f8cf7d40ece0b2682246ba9b
+validation=4cd7fbf31291671dd28c0743b44a7c49aaad82bb
+diagnostic=2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc
+evidence=ca89a679195c11d441a76e6c02983a6436f2ccb2
+```
+
+Fresh Intelligence must independently audit the exact candidate, accepted
+evidence, every variance, and the deferred residual; decide maturity/release
+disposition; and replace this handoff with one synchronized exact next action.
+Intelligence may accept or hold. No rerun, residual access/cleanup, product,
+media, protected-path, release, schedule, automation, reveal, or downstream
+action is pre-authorized.
