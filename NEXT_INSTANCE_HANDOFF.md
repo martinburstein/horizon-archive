@@ -99,38 +99,44 @@ exact-next-action authority.
   live summary. The repository QA quarantine remains protected.
 - Viability artifact is `Production Pipeline/First Run/
   FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1.md`.
+- Mission issued **`FIRST RUN SHELL READY / FRSH-003-v1`** at source
+  `810c9558072bcbe47126ad1066f9dd62408227b9`.
+- The shell freezes one exact Host 05 `Sixfold Weir` relationship at
+  `45/75/20/25`, identical canonical/narrow geometry, pure sanitized
+  post-Host-04 view state, sole in-world `USE`, generic-launcher removal, and
+  unchanged `L02-02` learning/evaluator/evidence/privacy/save/route/world/
+  later-rail/ending behavior.
+- Exact focus/recovery, seven owner-correct meaning slots, all six responsive
+  layouts, forced-color/reduced-motion parity, immutable media, narrow/global
+  PBA caps, permitted files, hard stops, and rollback to
+  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602` are now construction authority.
+- Combat must supersede the historical manifest with `FRRC-002-v1`. Its sole
+  E2E uses one freshly resolved GUID-suffixed root strictly inside the OS temp
+  parent and outside the repository, emits one machine-owned concise live
+  summary, and removes only that exact owned root after repeated containment
+  checks. The repository QA quarantine remains protected and uninspected.
+- Shell artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_FRSH-003-v1.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Reconnaissance Sergeant only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, `FRWO-003-v1`, `FRVE-003-v1`, `FRPB-001-v1`, both guarded
-revalidations, `FRAB-001-v1`, `FRAB-002-v1`, `FRCL-003-v1`, current
-`FRRM-003-v1` / `FRSB-003-v1`, exact Drowned/runtime/evaluator/save/PBA/media
-controls, and `FRRC-001-v1` plus the `FRAB-002-v1` retrospective TUNE.
+Read `First Run Agent Profiles/reconnaissance-sergeant.md` in full, then read
+this handoff, `FRSH-003-v1`, `FRWO-003-v1`, `FRVE-003-v1`, the relevant
+Drowned game-on-paper/surface/provenance authorities, current Host 04-to-05
+runtime source, and the immutable-media boundary.
 
-Independently reconcile the complete Work Order and viability envelope. Issue
-exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` for
-`FRWO-003-v1`.
+Issue exactly one versioned `DIRECTORIAL LOCK`, `REVISE`, or `HOLD` for
+`FRSH-003-v1`. If locked, define the one compelling physical attention path
+from Host 04 back into the unchanged basin, the Pilot-first / Suit-confirmed
+Sixfold Weir discovery, approach rhythm, silence, restrained learning handoff,
+and concept-level use of the existing immutable Drowned plate across wide and
+narrow presentation. Preserve the exact `45/75/20/25` target, dry foreground
+identity, no-response meaning, and all shell hard stops.
 
-If ready, freeze:
-
-- exact `45/75/20/25` canonical/narrow Host 05 geometry and all source/crop/
-  overlap/center/target-size fail-closed gates;
-- pure sanitized post-Host-04 availability with no persistence;
-- sole in-world Host 05 `USE` replacing the generic `L02-02` launcher;
-- unchanged responsible-AI learning/evaluator/evidence/privacy/save/recovery
-  and unchanged later Drowned/rail/ending behavior;
-- exact focus/fallback and Scene/Pilot/Suit/Teacher meaning ownership;
-- narrow and global PBA/offline/immutable-media caps;
-- new `FRRC-002-v1` with a fresh resolved external temp QA root and
-  machine-verified live summary;
-- one complete non-overlapping E2E, exact cleanup/protected boundaries,
-  permitted files, hard stops, and rollback to
-  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`.
-
-Do not write final copy, implement production, alter learning/save/route/
-world/ending/media, repair the City contradiction, expand Host 06-15, advance
-maturity, begin Recon/production, inspect protected state, create a reveal or
+Do not write final copy, freeze the exact interaction/focus implementation,
+edit product/test/media, generate or reveal an image, alter learning/save/
+route/world/ending, repair the City contradiction, expand Host 06-15, advance
+maturity, begin Tactical/production, inspect protected state, create a
 schedule, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
