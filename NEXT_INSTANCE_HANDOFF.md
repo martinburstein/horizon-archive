@@ -2,26 +2,46 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FAILURE EVIDENCE TRANSPORT READY / JSON PASS / NODE PASS / FOCUSED 68/68 / FRCE-003-v1-VR-44`**
+Current disposition: **`FIRST RUN SHELL READY / ONE FAILURE-TRANSPORT
+DIAGNOSTIC VERIFICATION / FRSH-003-v1-VR-45`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **Combat Engineer**
 
-Immediate return: `FRCE-003-v1-VR-44`
+Immediate control: `FRSH-003-v1-VR-45`
 
-Diagnostic-transport candidate: `6c64eb354b7dbb467df5725e2cae4eb67092ddc7`
+Mission source: `0ac9023037873004f7bd5d75c16f80953d770a4d`
 
-Product / validation / diagnostic / evidence identities remain respectively:
+Diagnostic-transport candidate:
+`6c64eb354b7dbb467df5725e2cae4eb67092ddc7`
+
+Immutable product / validation / diagnostic / evidence identities remain:
 `a91763e28d488f31f8cf7d40ece0b2682246ba9b` /
 `4cd7fbf31291671dd28c0743b44a7c49aaad82bb` /
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc` /
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`.
 
-Combat changed exactly the authorized E2E harness, one new diagnostic extractor, FRRC-002 manifest, and existing Sixfold static control. Failure detail is now complete, ordinally sorted, compact UTF-8 JSON encoded as standard base64, unsafe-path rejected, and paired with owned-lifecycle `browserClosed`. The manifest keeps it non-release, forbidden verifier input, and no-retry.
+VR-44 changed only the authorized diagnostic controls and passed FRRC JSON,
+Node syntax, exact focused `68/68`, and candidate integrity. Product/content
+remain unchanged; the cumulative VR-22, VR-30/35, and VR-42 ladder remains
+accepted.
 
-Validation is exact: FRRC JSON PASS; both changed Node files pass `node --check`; exact focused command PASS `68/68` (`198.1395ms`); candidate diff integrity PASS. No E2E, preview, browser, build, broader test, validator, verifier, product, media, protected, or user-state command ran.
+Fresh-child capacity remains unavailable; Mission context reuse is disclosed
+and non-evidence.
 
-Fresh Mission must independently verify the exact four-file candidate, lifecycle/capture/cleanup ordering, full base64 round-trip and unsafe-path boundaries, manifest entry/order and diagnostic non-evidence rules, JSON/Node checks, and focused `68/68`. Mission may issue a newly versioned bounded verification authority or HOLD. It must not infer live success from this static construction.
+Combat may create one fresh contained GUID OS-temp root, launch production and
+fixture once, and run exactly one complete E2E. On failure, require inventory
+exact, positive failure count, owned-lifecycle browser closure, no summary or
+verifier, and invoke the manifest diagnostic transport once before cleanup.
+Retain its full canonical base64 failure paths/layouts, clean exact owned
+processes/ports/root, then emit one scalar. On success require failure `0`, one
+summary, complete live gates, and one verifier PASS; do not run failure
+transport.
 
-All seven OPEN divergences and every frozen product/player meaning remain exact. No Quartermaster, Image Specialist, Intelligence, release, maturity, schedule, automation, reveal, or `FIRST RUN COMPLETE` action is authorized.
+Exact scalar schema and success/failure modes are in VR-45. No retry, repair,
+second E2E/extractor/verifier, product change, or post-cleanup command is
+authorized.
+
+All seven OPEN divergences and every frozen meaning remain exact. No downstream
+stage or release action is authorized.
