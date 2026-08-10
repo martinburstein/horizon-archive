@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE SCALAR PRODUCTION BUILD
-PROOF ONLY / FRSH-003-v1-VR-30`**
+Current disposition: **`FIRST RUN SHELL READY / REMAINING PRE-LIVE FIXTURE
+AND SCALAR PBA ONLY / FRSH-003-v1-VR-31`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,13 +11,13 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-30`
+Immediate control: `FRSH-003-v1-VR-31`
 
-Immediate return / predecessor authority: Combat VR-29 proof return /
-`FRSH-003-v1-VR-29`
+Immediate return / predecessor authority: Combat VR-30 proof return /
+`FRSH-003-v1-VR-30`
 
-Mission VR-30 inspected source:
-`fcca45fb3a15bf83d4d7328bb8b5a7ed4d16dc88`
+Mission VR-31 inspected source:
+`d8796afe0df017b1c06a01eb795f5b5192007b2c`
 
 VR-22 Combat start source:
 `c81722376ac4686474648bca71ad5e648e35b644`
@@ -36,67 +36,55 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-VR-30 independently adjudicated the exact VR-29 return: the sole native
-production build exited `0`; the literal module substring count was `1`; the
-duration/line completion expression returned count `0`, consistent with an
-unstable duration/stream-capture boundary; and the wrapper exited `1`.
-The six-object transport also emitted malformed `HEAD[1..6]` forms instead of
-six distinct blob scalars. Combat did not rerun and performed no post-build
-command or repository write.
-
-The consumed VR-29 authority remains **`HOLD / PRODUCTION BUILD EXECUTION-
-CONTROL FAILURE / NO RERUN`**, not a product/build defect. Exact raw captured
-output is not durably available as a trusted artifact, so output-only reparse
-is not authorized. VR-30 authorizes exactly one corrected proof-only build.
+VR-31 accepts without rerun the immutable checkpoint: VR-22 focused `68/68`,
+related `74/74`, cold full `972/972`, validators `40/40`; VR-30 six exact
+frozen blob scalars; and VR-30 production build
+`moduleCount=1 builtSubstringCount=1 nativeExit=0`, recorded in `8.8s`.
 
 Fresh Combat may run only scalar `git rev-parse HEAD` and `git rev-parse
 origin/main`, require equality, then fully suppressed tracked and index quiet
 checks requiring exit `0`. No untracked-cleanliness claim is permitted.
 
-Combat must next resolve six frozen literal `HEAD:<path>` expressions through
-six independent `git rev-parse` invocations. No array or indexed-string
-transport is permitted. Emit only these six separately named scalars in order
-and require exact equality:
+Combat must not rerun any accepted blob, focused, related, full, validator, or
+production-build gate. It may invoke exactly one manifest-owned
+`npm run build:td012-fixture` from `horizon-archive-game`, with execution-tool
+timeout `60000ms`, through the complete safe native wrapper in VR-31. The
+wrapper suppresses the stream and emits only:
 
 ```text
-frrcBlob=fc91a863be99b11c44405071324e3502b959e621
-e2eBlob=0b72f1463c729a8e22337af0115c3316652c2565
-staticTestBlob=5910af4e4f6754acbc5193ff021f374fe90a96f2
-appBlob=802ceffb1a07c3b166dc2f7f06ab38138dc37596
-drownedArchiveBlob=1bc2f9d93c59a396ddee7ed83cde1600f76b62e7
-packageBlob=2c23c0a59f62af0463fa54bb1c8465aa9f6bb2da
+fixtureModuleCount=<n> fixtureBuiltSubstringCount=<n> nativeExit=<n>
 ```
 
-The exact literal path mapping is frozen in VR-30. Do not emit paths or
-filenames. Any missing, extra, reordered, duplicate, non-scalar, native-
-failure, or mismatch result is **`HOLD / BLOB PROOF EXECUTION-CONTROL FAILURE
-/ NO BUILD / RETURN TO FRESH MISSION`**.
+Exact pass is `fixtureModuleCount=1 fixtureBuiltSubstringCount=1 nativeExit=0`.
+Any other result is fail-closed, no rerun, no PBA, and immediate return to a
+fresh Mission Captain.
 
-Only after all six blob scalars pass may Combat invoke exactly one `npm run
-build` from `horizon-archive-game`, with execution-tool timeout `60000ms`,
-using the exact VR-30 wrapper. It captures and suppresses the build stream;
-after ANSI strip it counts the exact literal substrings `217 modules
-transformed.` and `built in`. It uses no duration, unit, line-anchor, or line-
-shape completion expression.
-
-The wrapper emits only:
+Only after exact fixture success may Combat invoke the complete VR-31 scalar
+PBA/media/source-map wrapper once from repository root, timeout `60000ms`.
+It scalarizes the exact manifest traversal and threshold logic, emits no
+filename, and requires exactly:
 
 ```text
-moduleCount=<n> builtSubstringCount=<n> nativeExit=<n>
+jsBytes=1666665 cssBytes=119247 mediaCount=17 mediaBytes=37410731 sourceMapCount=0 scanExit=0
 ```
 
-It requires exact `moduleCount=1`, `builtSubstringCount=1`, and
-`nativeExit=0`. Missing, duplicate, nonzero, null, capture, timeout, or wrapper
-failure is fail-closed. No captured build stream, duration, path, or filename
-may be emitted.
+Stop immediately after that wrapper whether it passes or fails. Run no post-
+scan command and perform no repository write. On exact success return
+**`REMAINING PRE-LIVE FIXTURE AND SCALAR PBA PASS / STOP / RETURN TO FRESH
+MISSION`**. Otherwise return **`HOLD / REMAINING PRE-LIVE EXECUTION-CONTROL OR
+EVIDENCE FAILURE / NO RERUN / RETURN TO FRESH MISSION`**.
 
-Stop immediately after the sole build whether it passes or fails. Run no
-post-build command and perform no repository write. Return the scalar outputs
-and exact disposition to a fresh Mission Captain. No other build, test,
-validator, fixture, PBA/media/offline/dependency/source-map/product-drift/
-performance, preview, served request, port/PID, containment, root, browser,
-E2E, diagnostic, live-review, cleanup, product, media, protected-state,
-user-state, reveal, maturity, or downstream-role action is authorized.
+Package/dependency, product-source, exact test/control, and offline-source
+identity are carried only by the already accepted six frozen blobs. No broad
+dependency, lockfile, import, URL/network, repository, source, pathname, or
+filename scan is authorized. Source-map proof is confined to the scalar PBA
+wrapper. Dynamic Host 05 `<=2ms`, sampled task `<=100ms`, runtime request, and
+offline runtime gates remain reserved for the later sole E2E/live checkpoint.
+
+No preview, served identity, port/PID, containment, root, browser, E2E,
+diagnostic, live-summary verification, cleanup, live-review, product, media,
+protected-state, user-state, reveal, or maturity action is authorized. Return
+to fresh Mission before any of them.
 
 All OPEN divergences remain separate and OPEN:
 
@@ -117,10 +105,8 @@ save, route, world, equal MH-40, null-delta, `successor=null`, ending,
 immutable-media `17 / 37,410,731`, diagnostic non-evidence/non-verifier, and
 one-E2E meanings remain exact.
 
-No build, test, live, product, media, protected-state, user-state, reveal, or
-maturity action occurred during Mission VR-30. No Quartermaster, Image
-Specialist, Intelligence, release, schedule, automation, or `FIRST RUN
-COMPLETE` action is authorized.
+No Quartermaster, Image Specialist, Intelligence, release, schedule,
+automation, or `FIRST RUN COMPLETE` action is authorized.
 
 The dedicated Mission shell/handoff commit and final `HEAD == origin/main`
 proof are reported from Git after commit because this handoff cannot contain
