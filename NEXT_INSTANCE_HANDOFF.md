@@ -445,24 +445,39 @@ exact-next-action authority.
   rerun. Quartermaster remains blocked.
 - Variance artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-05.md`.
+- Combat committed exact one-file VR-05 validation-control candidate
+  `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`. Runtime product `7e85154` and
+  probe `d9487d82` remained byte-exact; no decorative legacy token exists.
+- The full deterministic ladder passed: focused `68/68`, related `74/74`, cold
+  full `972/972`, validators `40/40`, builds `217/57`, JavaScript `1,666,665`,
+  CSS `119,247`, media `17 / 37,410,731`, and both served identities.
+- The one authorized VR-05 E2E ran once for `74s` and failed closed only at
+  the six-layout aggregate. `desktop`, `narrow`, `effective-200`, and
+  `retained-320x240` passed; `laptop` and `retained-320x180` failed only
+  `identityStable`.
+- Both failing records retain exact identity/state, geometry/lattice/source,
+  retention, overlap/overflow, label, target, order, forced-color focus,
+  reduced motion, and no-action proof. The probe did not emit post-key boxes
+  or scroll offsets, so the aggregate cannot distinguish viewport scroll from
+  true geometry drift. No summary or verifier acceptance exists.
+- Exact PIDs/root were cleaned and ports are clear. Combat disposition is
+  **`HOLD / VR-05 LIVE IDENTITY-STABILITY VARIANCE / FRCE-003-v1`**;
+  Quartermaster remains blocked.
 
-## Exact next action - Combat Engineer only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, complete `FRSH-003-v1-VR-05`, operative
-`FRSH-003-v1-VR-04`, complete latest `FRCE-003-v1`, the exact frozen
-assertion at `horizon-archive-game/test/sixfoldWeir.test.js:146`, and current
-manifest/E2E controls.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, complete latest `FRCE-003-v1`, `FRSH-003-v1-VR-05`, operative
+`FRSH-003-v1-VR-04`, and the exact VR-05 live failure evidence.
 
-Change only that one assertion's two stale literals to exact
-`FRSH-003-v1-VR-04` / `Tab -> Shift+Tab`; do not add decorative legacy tokens
-or change the operative manifest/E2E. Commit the one-file delta as a separate
-validation-control candidate while preserving exact product `7e85154` and
-probe `d9487d82`. Run every deterministic gate from the beginning. Only after
-all deterministic gates pass, invoke exactly one fresh complete E2E under one
-new external GUID root, require exactly one machine summary, and run the
-unchanged verifier once. Any failure is `HOLD` with no rerun. Quartermaster
-remains blocked until a fully passing synchronized Combat report exists.
+Adjudicate the two-layout `identityStable` failure. Preserve all three exact
+candidates and every passing threshold. Route to Tactical to define an
+evidence-honest identity/geometry coordinate contract if needed: the current
+runner compares pre/post viewport boxes but emits neither post boxes nor
+scroll offsets, while all identity/state/no-action and other layout evidence
+passes. Issue a versioned shell decision or continue HOLD. Do not authorize a
+rerun, product change, threshold weakening, or Quartermaster until the live
+identity-stability contract is implementable and independently verifiable.
 
 ## Protected boundaries
 

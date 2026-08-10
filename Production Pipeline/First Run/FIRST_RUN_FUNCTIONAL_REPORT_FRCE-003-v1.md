@@ -4,7 +4,7 @@ Date: **2026-08-10**
 
 Role: **Combat Engineer**
 
-Disposition: **HOLD / VR-04 DETERMINISTIC CONTROL INCOMPATIBILITY**
+Disposition: **HOLD / VR-05 LIVE IDENTITY-STABILITY VARIANCE**
 
 ## Candidate identity
 
@@ -23,6 +23,8 @@ Disposition: **HOLD / VR-04 DETERMINISTIC CONTROL INCOMPATIBILITY**
   `7e85154abd8dbf116c4bb84ca66afd859903d750`
 - VR-04 probe-only candidate:
   `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`
+- VR-05 validation-control candidate:
+  `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 - Canonical command manifest:
   `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
 
@@ -263,13 +265,63 @@ summary emission, and the independent verifier were **not run** in VR-04.
 No external QA root or preview process was created; ports `4173` and `4184`
 remain clear. No protected/user/media state was inspected or mutated.
 
+## VR-05 validation control and sole live run
+
+Combat started from synchronized control source
+`5972de914fc74c6af69af9ff002e2de0d166fa4e`, proved exact frozen runtime and
+probe blobs, and committed the one authorized static assertion update as
+validation-control candidate
+`4cd7fbf31291671dd28c0743b44a7c49aaad82bb`. Its only delta is
+`horizon-archive-game/test/sixfoldWeir.test.js:146`, replacing exact stale
+`FRSH-003-v1-VR-02` / `Shift+Tab -> Tab` expectations with operative
+`FRSH-003-v1-VR-04` / `Tab -> Shift+Tab`. No decorative compatibility token
+or other change exists.
+
+Exact deterministic evidence passed:
+
+| Gate | VR-05 result |
+|---|---|
+| Focused | **68/68 PASS** |
+| Related | **74/74 PASS** |
+| Cold full | **972/972 PASS**, `21.991s` |
+| Validators | **40/40 PASS** |
+| Production / fixture builds | **217 / 57 modules PASS** |
+| PBA | **PASS**: JS `1,666,665`; CSS `119,247`; modules `217` |
+| Media | **PASS**: `17 / 37,410,731`; no source map |
+| Served identity | **2/2 PASS**, root/deep/JS/CSS byte-equal to disk |
+
+The one authorized complete E2E ran once for `74s` under external root
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-75abe881-9a28-4dbb-af5e-c840a1ba6a64`.
+It completed the journey and all preceding runtime, focus, and performance
+gates, then failed closed at the final six-layout aggregate. No rerun occurred.
+
+Four layouts passed completely: `desktop`, `narrow`, `effective-200`, and
+`retained-320x240`. `laptop` and `retained-320x180` failed only
+`identityStable`. For both failing layouts, the emitted failure record still
+shows exact stable Host 05 identity/state before and after, strict lattice and
+semantic geometry, bottom anchoring, source mapping and anchor containment,
+retention above `0.95`, zero overlap/overflow, exact label model, target size,
+actual enabled order, genuine `Tab -> Shift+Tab`, exact focus-visible
+`3px solid Highlight`, reduced motion, and `noGameAction=true`. The probe does
+not emit its post-key box values, so this run cannot distinguish a viewport
+scroll-coordinate change from a true box change; Combat does not infer product
+instability from the aggregate alone.
+
+Because the aggregate throws before summary writing, no
+`first-run-live-summary.json` was emitted and the independent verifier was not
+run. Owned preview PIDs `18612` / `54564` were stopped, ports `4173` / `4184`
+are clear, and the exact external root was removed after containment proof.
+Protected PDF/training/repository-QA/user/media state remained untouched.
+
 ## Exact next action
 
-Mission Captain must adjudicate the VR-04 permitted-file contradiction. Keep
-product/test candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`
-frozen unless a versioned shell explicitly authorizes the smallest truthful
-static-test expectation update; keep probe candidate
-`d9487d8205174a7b5f688cbfccbcd5f7875ac1ad` as the failed deterministic
-candidate. Do not accept a decorative legacy marker as functional evidence,
-do not weaken any geometry/focus/verifier threshold, and do not authorize an
-E2E or Quartermaster until one internally consistent pre-live contract exists.
+Mission Captain must adjudicate the VR-05 live identity-stability variance and
+route the probe contract to Tactical if clarification is required. Preserve
+runtime product `7e85154abd8dbf116c4bb84ca66afd859903d750`, probe
+`d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`, validation control
+`4cd7fbf31291671dd28c0743b44a7c49aaad82bb`, every threshold, and all passing
+live facts. Determine whether identity stability must compare layout-relative
+geometry/scroll state or whether the runner must emit exact pre/post boxes and
+scroll offsets before another Combat return. Do not authorize a rerun,
+Quartermaster, threshold weakening, or product change without one versioned,
+evidence-honest contract.
