@@ -60,22 +60,23 @@ registry before acting. This file is the sole exact-next-action authority.
 - Science issued `VE-TE001-SCRIPT-v1 / VIABILITY READY`: the script may express
   learning pressure and remediation but no answers, cross-credit, private
   learner state, exam guarantee, service authority, or world response.
+- Mission issued `SHELL READY / SS-TE001-GAME-ON-PAPER-v1` for one root
+  `HORIZON_ARCHIVE_GAME_ON_PAPER.md`, with exact four-act/fifteen-chapter/forty-
+  Terminal structure and a documentation-only validation ladder.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Mission TE-001 script shell
+## Exact next action - Recon TE-001 creative treatment
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/04-VIABILITY-ENVELOPE.md`
-in full. Issue one versioned documentation-only `SHELL READY` contract for
-`HORIZON_ARCHIVE_GAME_ON_PAPER.md`. Freeze the exact four-act, fifteen-chapter,
-forty-cluster rail; no-answer learning pressure; privacy and save language;
-accessible document structure; current official-source posture; 200 KB hard
-budget; equal final outcomes; unchanged world; no image work; and
-`successor=null`.
+Read `Production Pipeline/Terminal Enrichment/TE-001/05-PLAYABLE-SLICE-SHELL.md`
+in full. Issue one Creative Treatment that makes the exact single rail feel
+inevitable rather than restrictive. Define narrative voice, recurring motifs,
+act temperature, fifteen chapter hooks, midgame anti-repetition strategy,
+Pilot interior arc, proposed-copy limits, and the final emotional thesis.
 
-Define exact required sections, permitted source files, validation commands,
-Marine ownership, and return conditions. Do not author the script in the
-Mission stage or modify runtime, curriculum, art, media, or user state.
+Preserve every structural, canon, learning, privacy, accessibility, offline,
+image-disabled, and no-successor boundary. Do not author the root script,
+modify runtime/curriculum/art/media/user state, or perform image work.
 
 ## Protected boundaries
 
