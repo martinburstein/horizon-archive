@@ -2,23 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / SCALAR-RANGE SIX-PATH STATIC-FOCUSED FAILURE
-/ NO RERUN / RETURN TO FRESH MISSION / FRCE-003-v1-VR-20`**
+Current disposition: **`FIRST RUN SHELL READY / ONE ROBUST-TOTALS SIX-PATH
+STATIC-FOCUSED VERIFICATION / FRSH-003-v1-VR-21`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
-Immediate authority / return: `FRSH-003-v1-VR-20` /
+Immediate authority / return: `FRSH-003-v1-VR-21` /
 `FRCE-003-v1-VR-20`
 
 Mission source:
-`28fd26d1afb93e8de409fa6d3309e06ef5405001`
-
-Combat verification source:
-`46bb4320f5d6e2a4f21841f51ba3fc3f25a9341e`
+`b9a1cab9a2aee0db742b809c5d81fe0715cdec47`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -34,64 +31,90 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Mission Captain profile in full, VR-07 and VR-12 through VR-20,
-FRCE-003-v1-VR-12 through VR-20, current FRAB-003, and this handoff.
+Read the Combat Engineer profile in full, VR-07 and VR-12 through VR-21,
+FRCE-003-v1-VR-12 through VR-20, current FRAB-003, this handoff, and the exact
+committed FRRC/E2E/static controls.
 
-Fresh Combat consumed the sole VR-20 repository-root PowerShell invocation
-exactly once from synchronized source, with the execution-tool timeout set to
-`30s`. The corrected scalar
-`2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc..HEAD` was passed to Git as one
-revision argument, and `$LASTEXITCODE` was captured immediately as `0`,
-meaning no candidate-to-current drift across the six literal allowlisted
-paths. No Git usage or command failure occurred.
+Mission adjudicates the VR-20 focused-output mismatch as **`REQUIRED
+CORRECTION / EXECUTION CONTROL / OPEN`**. The focused Node process truthfully
+emitted exactly `68 tests / 68 pass / 0 fail` using Unicode information-symbol
+markers (`ℹ`), while the wrapper accepted only number-sign markers (`#`).
+This is not evidence of a candidate, product, manifest, test, E2E, validation,
+evidence, threshold, learning, save, route, world, media, or ending defect.
 
-All ancestry, parentage, six tracked-path, twelve frozen blob, six current
-blob, initial worktree/staged drift, candidate/worktree integrity, FRRC JSON
-schema/ID/thirteen-entry order/key-ID identity, forty sorted validator-
-structure, `validator_count=40`, `e2e_invocations=1`, focused-command
-allowlist, and one `node --check` predicates passed.
+VR-20 is consumed. Its partial checks and truthful process totals are not a
+complete pass and may not be reused, promoted, or rerun under VR-20. The
+separate **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**
+classification remains open and is neither waived nor repeated by this
+reissue.
 
-The exact focused command ran once and its process reported:
+Fresh Combat may consume exactly one repository-root PowerShell invocation
+from the synchronized commit containing `FRSH-003-v1-VR-21`, with the
+execution-tool timeout set to `30s`. The invocation is exact and may not be
+split, corrected, substituted, continued after failure, partially rerun, or
+repeated.
+
+The sole parser correction is exact and line anchored:
 
 ```text
-ℹ tests 68
-ℹ pass 68
-ℹ fail 0
+(?m)^(?:#|\u2139) tests 68\s*$
+(?m)^(?:#|\u2139) pass 68\s*$
+(?m)^(?:#|\u2139) fail 0\s*$
 ```
 
-The exact VR-20 shell assertion required `# tests 68`, `# pass 68`, and
-`# fail 0` lines. It therefore threw `focused exact totals` and the sole
-invocation exited `1` after `4.7s`. Final allowlisted worktree/staged drift
-and final diff-integrity commands did not run. VR-20 is consumed. Its partial
-passes, including the truthful focused process totals, are not a complete
-VR-20 pass and may not be rerun or promoted under VR-20.
+The focused process must still exit `0`; totals remain exactly `68 / 68 /
+0`. No arbitrary prefix, alternate total, missing line, or nonzero process
+exit is accepted.
 
-Mission must classify and adjudicate this as **`REQUIRED CORRECTION /
-EXECUTION CONTROL / OPEN`** without inferring a candidate, product, manifest,
-test, E2E, validation, evidence, threshold, learning, save, route, world,
-media, or ending defect. The separate **`UNAUTHORIZED DIVERGENCE / PROTECTED
-PATH ENUMERATION / OPEN`** classification remains open and is neither waived
-nor repeated by VR-20.
+The same sole invocation must include, after the successful focused assertion,
+all three final checks: final allowlisted worktree drift, final allowlisted
+staged drift, and final allowlisted diff integrity. They may not be inferred
+from VR-20 or moved to another invocation.
+
+Preserve exact scalar revision-range construction and immediate tri-state exit
+classification: `0` means no drift, `1` means the named drift/integrity
+finding, and values greater than `1` mean command failure and must never be
+called drift.
+
+The complete tracked-path allowlist remains exactly these six literals, with no
+discovery or enumeration:
+
+```text
+Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json
+playtest/e2e-playthrough.mjs
+horizon-archive-game/test/sixfoldWeir.test.js
+horizon-archive-game/src/App.jsx
+horizon-archive-game/src/drownedArchive.js
+horizon-archive-game/package.json
+```
+
+All five frozen identities, twelve frozen blobs, six current blobs, ancestry
+and parentage, candidate/worktree integrity, exact FRRC schema/ID/thirteen-entry
+order/key-ID identity, forty sorted validator structures,
+`policy.validator_count=40`, `policy.e2e_invocations=1`, focused-command
+allowlist, and one `node --check` remain exact.
 
 No related/full test, validator, build, PBA/media/offline/performance scan,
 preview, browser, root, E2E, diagnostic, summary, verifier, served identity,
-or cleanup ran. No protected, untracked, media, predecessor-root, repository-
-wide, or user-state enumeration occurred. No implementation, product, test,
-manifest, E2E, content, CSS, module, fixture, dependency, package, curriculum,
-evaluator, save, story, route, map, scoreboard, maturity, media, or other
-control changed.
+cleanup, protected/untracked/media/predecessor-root/repository-wide/user-state
+enumeration, implementation, product, test, manifest, E2E, content, CSS,
+module, fixture, dependency, package, curriculum, evaluator, save, story,
+route, map, scoreboard, maturity, media, or other control change is authorized.
 
-Fresh Mission must adjudicate only the focused-output marker mismatch and
-issue one versioned `HOLD` or newly bounded authority. It may not reuse or
-rerun VR-20, infer a product defect, begin Quartermaster, Image Specialist, or
-Intelligence, advance maturity, create a reveal or schedule, or call `FIRST
-RUN COMPLETE`.
+Any failure is immediate **`HOLD / NO RERUN`**. On complete PASS, Combat must
+issue **`ROBUST-TOTALS SIX-PATH STATIC-FOCUSED PASS / RETURN TO FRESH MISSION
+/ FRCE-003-v1-VR-21`**. On failure, issue **`HOLD / ROBUST-TOTALS SIX-PATH
+STATIC-FOCUSED FAILURE / NO RERUN / RETURN TO FRESH MISSION /
+FRCE-003-v1-VR-21`**. Only that versioned Combat return and this handoff may
+then change; commit, push, prove `HEAD == origin/main`, and route a fresh
+Mission Captain.
 
-All frozen player, learning, accessibility, privacy, save, route, world,
-equal MH-40, null-delta, `successor=null`, ending, threshold, immutable-media
+All frozen player, learning, accessibility, privacy, save, route, world, equal
+MH-40, null-delta, `successor=null`, ending, threshold, immutable-media
 `17 / 37,410,731`, and diagnostic non-evidence/non-verifier meanings remain
-exact.
+exact. No Quartermaster, Image Specialist, Intelligence, reveal, maturity,
+release, schedule, automation, or `FIRST RUN COMPLETE` action is authorized.
 
-The dedicated Combat commit and final `HEAD == origin/main` proof are
+The dedicated Mission commit and final `HEAD == origin/main` proof are
 reported from Git after commit because this handoff cannot contain the hash
 that first contains itself.
