@@ -335,38 +335,54 @@ exact-next-action authority.
   behavior or using programmatic focus.
 - Variance routing artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-03.md`.
+- Science resolved both coordinate questions as **`POLISH VIABILITY READY /
+  FRVE-003-v1-VR-02`** at source
+  `75e73e03bda7a7c8cfe168f1664714cbf49dc7ce`.
+- Exact authored `45/75/20/25` and exact browser used-value DOMRects are now
+  separate evidence. Current Chromium resolves positive percentage layout on
+  a `1/64 CSS px` lattice. Expected DOM components use the exact lattice
+  operator and strict equality; unquantized arithmetic is diagnostic only.
+  This is not an epsilon, rounding permission, or threshold tolerance.
+- Source mapping begins from the browser-resolved physical rectangle. Actual
+  semantic DOMRect `>=44`, source-anchor containment, retention `>=0.95`, exact
+  zero overlap, and overflow remain direct full-precision fail-closed gates.
+- Label `2px` names its offset from the button's inner padding/content edge.
+  Across the exact `1px` button border, its outer border is exactly `3px` from
+  the button outer border. Label border-box size is `button width/height -
+  6px`; retained is exact `56.796875 x 38`. Its own `1px` border and `1px`
+  padding leave exact retained text content `52.796875 x 34`.
+- Candidate `7e85154`, all thresholds, and current PBA
+  `1,666,665 / 119,247 / 217` remain frozen; narrow headroom is exact
+  `8,999 / 34 / 0`. Science authorizes no implementation or execution.
+- Science clarification artifact is `Production Pipeline/First Run/
+  FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1-VR-02.md`.
 
-## Exact next action - Office of Science Administrator only
+## Exact next action - Tactical Operations Specialist only
 
-Read `First Run Agent Profiles/office-of-science-administrator.md` in full,
-then read this handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-01`,
-`FRSH-003-v1-VR-02`, `FRPX-003-v1-VR-01`, and the complete updated
-`FRCE-003-v1`.
+Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
+then read this handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
+`FRVE-003-v1-VR-01`, `FRSH-003-v1-VR-02`, `FRPX-003-v1-VR-01`, and the
+complete updated `FRCE-003-v1`.
 
-Issue exactly one `FRVE-003-v1-VR-02` `POLISH VIABILITY READY` or `HOLD` that
-freezes an exact browser-resolved acceptance model. Preserve authored physical
-`45/75/20/25`, measure actual DOM/source boxes at full precision, preserve the
-bottom-anchored `>=44 x 44` semantic activation and contained
-`56.796875 x 38` label, and distinguish inner `2px` label positioning from its
-expected `3px` outer-border distance across the exact `1px` border.
+Issue exactly one documentation-only `FRPX-003-v1-VR-02` `PLAYER EXPERIENCE
+READY` or `HOLD`. Adopt Science's exact authored-versus-browser-used-value
+model, label box convention, actual `.scene-art` source mapping, and all
+unchanged geometry/quality thresholds.
 
-Define how exact declarations and browser-quantized DOM facts are evaluated
-without comparing the DOMRect to independently unquantized arithmetic, adding
-a tolerance, rounding a failure away, or weakening any source, retention,
-overlap, size, containment, overflow, focus, PBA, or media gate. Documentation
-only; authorize no implementation or execution.
-
-If Science returns `READY`, hand exactly to Tactical for
-`FRPX-003-v1-VR-02`: Tactical must preserve actual `LOOK AT -> USE -> TALK
-TO`, identify the real reverse-tab predecessor and genuine keyboard path back
-to Host 05, and preserve exact focus-visible proof without product reorder or
-programmatic focus. Mission must readjudicate both returns before Combat may
+Freeze the actual enabled order as Host 05, `LOOK AT`, `USE`, `TALK TO`, then
+the remaining lawful controls. Identify the actual element reached by genuine
+`Shift+Tab` from recovered Host 05 and the exact genuine keyboard sequence
+that returns to Host 05. Preserve forced colors/reduced motion before
+traversal, exact active element, `:focus-visible`, `3px solid Highlight`, and
+identity/state. Do not reorder product behavior, invent a predecessor, use
+pointer/programmatic target focus as evidence, or alter geometry. Update this
+handoff to Mission only if ready; Mission must readjudicate before Combat may
 edit or another E2E may run.
 
 Do not write final copy, change a placeholder/CSS/module/media/learning/save/
 route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
-quarantine or user state, begin Quartermaster, repair City, expand Host 06-15,
-create a schedule/reveal, or call `FIRST RUN COMPLETE`.
+quarantine or user state, begin Mission/Quartermaster, repair City, expand Host
+06-15, create a schedule/reveal, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
