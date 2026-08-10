@@ -166,6 +166,7 @@ import {
   CUSTODY_LEDGER_RETURN_CITY_THRESHOLD,
 } from "./CustodyLedgerRAIVerifiedRestore.js";
 import { DemoTourConfirmation, DemoTourScreen } from "./DemoTour.jsx";
+import { FIRST_RUN_CITY_MODE, projectFirstRunCityFrontier } from "./firstRunOpeningTransition.js";
 import {
   clearDemoTour,
   createDemoTourState,
@@ -700,21 +701,21 @@ function finalConfidenceEntryA11y(gate, checkName) {
   };
 }
 
-const temporaryPrologueBeats = [
+const firstRunPrologueBeats = [
   {
-    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 1 OF 3",
+    label: "FLIGHT RECORD // PATTERN // 1 OF 3",
     heading: "A repeating pattern",
-    body: "Placeholder sequence: my recorder isolates a repeating pattern beyond every route I have mapped. Nothing in it names a sender.",
+    body: "My recorder isolates a repeating pattern beyond every route I have mapped. Nothing in it identifies a sender.",
   },
   {
-    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 2 OF 3",
+    label: "FLIGHT RECORD // APPROACH // 2 OF 3",
     heading: "A reversible approach",
-    body: "Placeholder sequence: my instruments hold one reversible approach. They cannot tell me what shaped it or why it remains open.",
+    body: "My instruments hold one reversible approach. I can still turn back; they cannot tell me what shaped it or why it remains open.",
   },
   {
-    label: "TEMPORARY PROLOGUE // STORY PASS PENDING // 3 OF 3",
+    label: "FLIGHT RECORD // HORIZON // 3 OF 3",
     heading: "A ruler-straight horizon",
-    body: "Placeholder sequence: my instruments find no road or landing marker. Glass states repeat across a ruler-straight horizon without forming rows.",
+    body: "My instruments find no road or landing marker. Glass states repeat across a ruler-straight horizon without forming rows.",
   },
 ];
 
@@ -758,7 +759,7 @@ const scenes = [
     answer: 'pilot_name = "MARTIN"',
     validate: (value) => validateAnswer("ruins", value),
     hint: "Use a variable name, an equals sign, then quoted text.",
-    success: "Terminal fins align; route geometry appears. The Tidal Lens remains unchanged.",
+    success: "Local work is complete. The Crown and basin remain unchanged; the dry outflow was already present.",
   },
   {
     id: "automaton",
@@ -785,7 +786,7 @@ const scenes = [
     answer: "archive_open = True",
     validate: (value) => validateAnswer("automaton", value),
     hint: "Python Booleans begin with capital letters and do not use quotation marks.",
-    success: "Its lens opens. A voice older than the corridor says: ‘Continuity confirmed. Witness incomplete.’",
+    success: "Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.",
   },
 ];
 
@@ -1042,7 +1043,6 @@ export function App() {
   const [custodyLedgerPrimaryView, setCustodyLedgerPrimaryView] = useState(null);
   const [calibrationMarginEntryView, setCalibrationMarginEntryView] = useState(null);
   const [calibrationReturnToRp002, setCalibrationReturnToRp002] = useState(false);
-  const cityThresholdStagingEnabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("staging") === "rp001";
   const verifiedCityThresholdPredecessor = typeof window === "undefined"
     ? null
     : readVerifiedCityThresholdPredecessor(window.localStorage);
@@ -1233,13 +1233,13 @@ export function App() {
   }, [demoTourConfirmation]);
 
   useEffect(() => {
-    if (["character-name", "prologue", "chapter-reveal", "playing", "ending"].includes(mode)) {
+    if (["character-name", "prologue", "chapter-reveal", "playing"].includes(mode)) {
       if (suppressNextCampaignSaveRef.current) {
         suppressNextCampaignSaveRef.current = false;
         return;
       }
       localStorage.setItem(SAVE_KEY, JSON.stringify({
-        opening: createOpeningProgress(mode === "ending" ? "playing" : mode, characterName, prologueBeat),
+        opening: createOpeningProgress(mode, characterName, prologueBeat),
         sceneIndex,
         completed,
         pendingSceneId: mode === "playing" && pendingAdvance ? scene.id : null,
@@ -1489,7 +1489,7 @@ export function App() {
     event.stopPropagation();
   }
 
-  function advanceTemporaryPrologue(event) {
+  function advancePrologue(event) {
     const accepted = acceptOpeningActivation(event);
     const next = advanceOpeningProgress({ step: "prologue", characterName, prologueBeat }, accepted);
     if (!accepted) return;
@@ -1630,7 +1630,18 @@ export function App() {
       setMode("rp002-arrival");
       return;
     }
-    setMode(saved.finished ? "ending" : saved.opening.step);
+    if (saved.finished) {
+      const projected = projectFirstRunCityFrontier(saved);
+      if (!projected) return beginNewGame();
+      try {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(projected));
+      } catch {
+        return beginNewGame();
+      }
+      setMode(FIRST_RUN_CITY_MODE);
+      return;
+    }
+    setMode(saved.opening.step);
   }
 
   function routeActivationKind(event) {
@@ -2806,11 +2817,11 @@ export function App() {
     if (scene.id === "automaton") {
       if (hotspotId === "fallen-automaton") {
         if (verb === "LOOK AT") {
-          setDialogue("The fallen automaton is separate from the Terminal. Its lens tracks the three evidence channels without moving its head.");
+          setDialogue("The fallen assembly is inert and separate from the grounded Evidence Terminal.");
         } else if (verb === "TALK TO") {
-          setDialogue("A damaged speaker returns one measured pulse. The automaton is listening, but the evidence channel is elsewhere.");
+          setDialogue("No response follows. The separate grounded Evidence Terminal remains available.");
         } else {
-          setDialogue("Its locked joints reject the command. The grounded Evidence Terminal is the active interface.");
+          setDialogue("No coupling or motion follows. The grounded Evidence Terminal is the usable interface.");
         }
         return;
       }
@@ -2887,7 +2898,7 @@ export function App() {
       return;
     }
     if (verb === "TALK TO" && scene.id !== "automaton") {
-      setDialogue(scene.id === "meadow" ? "First signal. Mine, not yours." : "Nothing here has a mouth. Something still seems to hear you.");
+      setDialogue(scene.id === "meadow" ? "First signal. Mine, not yours." : "No reply follows. Water continues through the unchanged basin.");
       return;
     }
     if (scene.id === "meadow") {
@@ -3670,8 +3681,21 @@ export function App() {
     setEvidenceSession(null);
     setCalibrationSession(null);
     if (completed.length === scenes.length) {
+      const projected = projectFirstRunCityFrontier(loadSave());
+      if (!projected) {
+        setPendingAdvance(true);
+        setDialogue("The expedition record could not confirm the completed early route. Continue remains available after recovery.", "system");
+        return;
+      }
+      try {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(projected));
+      } catch {
+        setPendingAdvance(true);
+        setDialogue("The expedition record could not persist the City frontier. Continue remains available after recovery.", "system");
+        return;
+      }
       setSceneAnnouncement("");
-      setMode("ending");
+      setMode(FIRST_RUN_CITY_MODE);
       return;
     }
     const nextSceneIndex = getForwardSceneIndex(scene.id, completed.length);
@@ -3770,17 +3794,17 @@ export function App() {
   }
 
   if (mode === "prologue") {
-    const beat = temporaryPrologueBeats[prologueBeat];
+    const beat = firstRunPrologueBeats[prologueBeat];
     return (
       <CanonicalGameFrame enabled>
-      <main className="game-shell opening-screen prologue-screen" data-playtest-marker={`TEMPORARY_PROLOGUE_${prologueBeat + 1}`}>
+      <main className="game-shell opening-screen prologue-screen" data-playtest-marker={`PROLOGUE_BEAT_${prologueBeat + 1}`} data-copy-slot={`OPN-B${prologueBeat}`}>
         <section className="opening-card prologue-card" aria-labelledby="prologue-heading">
           <p className="eyebrow filler-label">{beat.label}</p>
           <h1 ref={openingHeadingRef} id="prologue-heading" tabIndex="-1">{beat.heading}</h1>
           <p>{beat.body}</p>
           <p className="prologue-recorder">FLIGHT RECORDER // {characterName}</p>
-          <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={advanceTemporaryPrologue}>
-            {prologueBeat === PROLOGUE_BEAT_COUNT - 1 ? "Reach Chapter I" : "Continue temporary prologue"}
+          <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={advancePrologue}>
+            {prologueBeat === PROLOGUE_BEAT_COUNT - 1 ? "Reach Chapter I" : "Continue flight record"}
           </button>
         </section>
       </main>
@@ -3794,7 +3818,7 @@ export function App() {
       <main className="game-shell chapter-reveal-screen" data-playtest-marker="CHAPTER_ONE_REVEAL">
         <img className="title-art chapter-reveal-art" src={glassMeadowImage} alt="" aria-hidden="true" />
         <div className="title-shade" aria-hidden="true" />
-        <section className="chapter-reveal-copy" aria-labelledby="chapter-reveal-heading">
+        <section className="chapter-reveal-copy" aria-labelledby="chapter-reveal-heading" data-copy-slot="MEADOW-CH1-REVEAL">
           <p className="eyebrow">Chapter I</p>
           <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
           <p className="prologue-recorder">PILOT // FLIGHT RECORDER — {characterName}</p>
@@ -3967,40 +3991,15 @@ export function App() {
     );
   }
 
-  if (mode === "city-threshold-staging") {
+  if (mode === FIRST_RUN_CITY_MODE) {
     return (
       <CityThresholdStaging
-        onReturnToCredits={() => setMode("ending")}
         onFollowCivicRoute={calibrationMarginEntryView ? undefined : followRecordedCivicRoute}
         onEnterAdjacentSurvey={calibrationMarginEntryView ? enterCalibrationMargin : undefined}
         adjacentSurveyAction={calibrationMarginEntryView
           ? CALIBRATION_MARGIN_ENTRY_ACTION
           : undefined}
       />
-    );
-  }
-
-  if (mode === "ending") {
-    return (
-      <main className="game-shell credits-screen" data-playtest-marker="CREDITS_REACHED">
-        <img className="credits-art" src={cityThresholdOverviewImage} alt="An immense Builder geothermal exchange landscape descending through a mineral chasm" />
-        <section className="credits-copy">
-          <p className="eyebrow">Archive access: partial</p>
-          <h1>THE CITY BENEATH</h1>
-          <p>You came looking for an abandoned system.</p>
-          <p>Something below has recorded your arrival as a continuation.</p>
-          <div className="credit-rule" />
-          <p className="credit-line">The Horizon Archive</p>
-          <p className="credit-line muted">Prologue complete</p>
-          {verifiedCityThresholdPredecessor && (
-            <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Continue at City Threshold</button>
-          )}
-          {cityThresholdStagingEnabled && !verifiedCityThresholdPredecessor && (
-            <button className="secondary-action" onClick={() => setMode("city-threshold-staging")}>Open RP-001 staging route</button>
-          )}
-          <button className="primary-action" onClick={() => setMode("title")}>Return to title</button>
-        </section>
-      </main>
     );
   }
 

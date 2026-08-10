@@ -170,7 +170,7 @@ test("RP-001 world and command panel reflow within the fluid responsive frame", 
 
 test("normalized route hotspots and lower controls remain bounded on representative layouts", () => {
   assert.match(cityComponent, /return <CityHotspot rect=\{cityThresholdHotspots\[board\]\.forward\} label="ENTER CIVIC DISTRICT"/);
-  assert.match(cityComponent, /<button onClick=\{onReturnToCredits\}>RETURN TO PROLOGUE CREDITS<\/button>/);
+  assert.doesNotMatch(cityComponent, /onReturnToCredits|RETURN TO PROLOGUE CREDITS/);
 
   for (const [hostWidth, hostHeight] of [[1600, 900], [1920, 1080], [360, 800]]) {
     const parent = getCanonicalGameFrame(hostWidth, hostHeight);
@@ -194,7 +194,10 @@ test("the accepted staging banner is absent from the shared renderer without rep
   assert.doesNotMatch(cityComponent, /A5 ROUGH PLATE|CITY CYCLES INVARIANT|city-staging-label/);
   assert.doesNotMatch(cityCss, /city-staging-label/);
   assert.match(cityComponent, /SC-02-50 \/\/ continuation unchanged \/\/ city_state_delta=None|visibleStatus/);
-  assert.match(cityComponent, /RETURN TO PROLOGUE CREDITS/);
+  assert.match(cityComponent, /<h1 ref=\{cityHeadingRef\} tabIndex="-1">City Threshold<\/h1>/);
+  assert.match(cityComponent, /className="city-world"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);
+  assert.match(cityComponent, /className="city-command-panel"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);
+  assert.match(cityComponent, /onKeyDown=\{handleOverlayKeyDown\}/);
   assert.deepEqual(cityThresholdBoards, ["SC-02-00", "SC-02-10", "SC-02-20", "SC-02-30", "SC-02-40", "SC-02-50"]);
 });
 

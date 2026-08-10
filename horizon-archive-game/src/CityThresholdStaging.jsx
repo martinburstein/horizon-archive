@@ -230,7 +230,6 @@ function Cum01Checkpoint({ save, updateSave }) {
 }
 
 export function CityThresholdStaging({
-  onReturnToCredits,
   onFollowCivicRoute,
   onEnterAdjacentSurvey,
   adjacentSurveyAction,
@@ -241,8 +240,33 @@ export function CityThresholdStaging({
   const [anchorSelected, setAnchorSelected] = useState(false);
   const [overlayOpen, setOverlayOpen] = useState(() => loadStagingSave().checkpoint !== "threshold_entry" && loadStagingSave().checkpoint !== "anchor_complete");
   const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance movement are already mid-cycle. No occupant is visible.");
+  const cityHeadingRef = useRef(null);
+  const cityWorldRef = useRef(null);
+  const overlayRef = useRef(null);
+  const overlayTriggerRef = useRef(null);
+  const restoreAccessFocusRef = useRef(false);
   const routeActionRef = useRef(null);
   const adjacentSurveyActionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (!overlayOpen && board === "SC-02-00") cityHeadingRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!overlayOpen) return;
+    const target = overlayRef.current?.querySelector("h2, select:not([disabled]), textarea:not([disabled]), button:not([disabled])");
+    if (target instanceof HTMLElement) {
+      if (target.matches("h2") && !target.hasAttribute("tabindex")) target.tabIndex = -1;
+      target.focus({ preventScroll: true });
+    }
+  }, [overlayOpen, save.checkpoint]);
+
+  useLayoutEffect(() => {
+    if (overlayOpen || !restoreAccessFocusRef.current) return;
+    restoreAccessFocusRef.current = false;
+    const target = cityWorldRef.current?.querySelector("button:not([disabled])") ?? cityHeadingRef.current;
+    target?.focus({ preventScroll: true });
+  }, [overlayOpen, board]);
 
   useLayoutEffect(() => {
     if (board === "SC-02-50" && save.checkpoint === "anchor_complete") {
@@ -269,10 +293,34 @@ export function CityThresholdStaging({
   const visibleStatus = useMemo(() => `${board} // continuation unchanged // city_state_delta=None`, [board]);
 
   function cancelOverlay() {
+    restoreAccessFocusRef.current = true;
     setOverlayOpen(false);
     setBoard("SC-02-20");
     setAnchorSelected(false);
     setMessage("Working source and unsubmitted choices cleared. The city remains unchanged.");
+  }
+
+  function handleOverlayKeyDown(event) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      cancelOverlay();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = [...(overlayRef.current?.querySelectorAll(
+      'button:not([disabled]), select:not([disabled]), textarea:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    ) ?? [])].filter((element) => element instanceof HTMLElement && !element.hidden);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const activeIsControl = focusable.includes(document.activeElement);
+    if (event.shiftKey && (!activeIsControl || document.activeElement === first)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && (!activeIsControl || document.activeElement === last)) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   function renderHotspots() {
@@ -292,8 +340,9 @@ export function CityThresholdStaging({
       <CityHotspot rect={cityThresholdHotspots[board].anchorNext} label="ESTABLISH SURVEY POINT" disabled={!observations.environmental || !observations.identity} onClick={() => { setBoard("SC-02-30"); setMessage("SYSTEM // EXPEDITION STATE: Select the bounded survey coordinate."); }} />
       <CityHotspot rect={cityThresholdHotspots[board].detailReturn} label="RETURN TO THRESHOLD" onClick={() => { setBoard("SC-02-00"); setMessage("The unchanged threshold overview is restored."); }} />
     </>;
-    if (board === "SC-02-30") return <CityHotspot rect={cityThresholdHotspots[board].anchor} label={anchorSelected ? "RECORD LOCAL ANCHOR" : "SELECT SURVEY COORDINATE"} state={anchorSelected} onClick={() => {
+    if (board === "SC-02-30") return <CityHotspot rect={cityThresholdHotspots[board].anchor} label={anchorSelected ? "RECORD LOCAL ANCHOR" : "SELECT SURVEY COORDINATE"} state={anchorSelected} onClick={(event) => {
       if (!anchorSelected) { setAnchorSelected(true); setMessage("Bounded expedition coordinate selected. No city state changed."); return; }
+      overlayTriggerRef.current = event.currentTarget;
       const next = sanitizeCityThresholdSave({ ...save, checkpoint: "python_pending" });
       updateSave(next);
       setOverlayOpen(true);
@@ -304,8 +353,13 @@ export function CityThresholdStaging({
   return (
     <CanonicalGameFrame enabled>
       <main className="game-shell city-threshold-screen" data-scene="city-threshold" data-board={board} data-city-layer={boardLayer} data-staging-only="RP-001">
-        <p className="sr-only" role="status" aria-live="polite">{message}</p>
-        <section className="city-world" aria-label="City Threshold Survey Anchor staged scene">
+        <header className="city-entry-header" data-copy-slot="CITY-ENTRY-HEAD">
+          <p className="eyebrow">Chapter IV // local survey</p>
+          <h1 ref={cityHeadingRef} tabIndex="-1">City Threshold</h1>
+          <p data-copy-slot="CITY-ENTRY-STATUS">Heat, bridge lights, vapor, and maintenance cycles are already operating.</p>
+        </header>
+        <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">{message}</p>
+        <section ref={cityWorldRef} className="city-world" aria-label="City Threshold Survey Anchor staged scene" inert={overlayOpen ? true : undefined}>
           <img className="city-world-plate city-world-plate-native" src={cityPlate.native} alt="An immense empty underground civic landscape already operating above geothermal chasms" />
           <img className="city-world-plate city-world-plate-narrow" src={cityPlate.narrow} alt="" aria-hidden="true" />
           <div className="city-cycle-layer" aria-hidden="true"><i /><i /><i /></div>
@@ -346,11 +400,10 @@ export function CityThresholdStaging({
                 {adjacentSurveyAction}
               </button>
             </>}
-            <button onClick={onReturnToCredits}>RETURN TO PROLOGUE CREDITS</button>
           </div>
         </section>
         {overlayOpen && (
-          <section className="city-overlay" role="dialog" aria-modal="true" aria-label="Expedition local record overlay">
+          <section ref={overlayRef} className="city-overlay" role="dialog" aria-modal="true" aria-label="Expedition local record overlay" onKeyDown={handleOverlayKeyDown}>
             {showPython ? <AnchorProbe save={save} updateSave={updateSave} /> : canCommit ? (
               <section className="city-learning-panel" aria-labelledby="confirm-local-record-heading">
                 <p className="eyebrow">SYSTEM // EXPEDITION STATE</p>

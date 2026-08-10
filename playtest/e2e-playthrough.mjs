@@ -1,5 +1,5 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
@@ -12,7 +12,9 @@ const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
 const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const qaPath = (path) => resolve(repositoryRoot, "playtest", path.replace(/^playtest[\\/]/, ""));
+const qaRoot = process.env.HORIZON_ARCHIVE_QA_DIR || resolve(repositoryRoot, "playtest");
+mkdirSync(qaRoot, { recursive: true });
+const qaPath = (path) => resolve(qaRoot, path.replace(/^playtest[\\/]/, ""));
 const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_primary.py"), "utf8");
 const referenceStructuredTransfer = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_transfer.py"), "utf8");
 const referenceControlPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-02/reference_primary.py"), "utf8");
@@ -69,7 +71,7 @@ try {
   );
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
-  if (await page.locator('[data-playtest-marker="CREDITS_REACHED"]').count()) throw new Error("Forged save reached credits");
+  if (await page.locator('main[data-scene="city-threshold"]').count()) throw new Error("Forged save reached City Threshold");
   await page.locator('main[data-scene="meadow"]').waitFor();
 
   await page.goto(url);
@@ -1261,15 +1263,33 @@ print("Operator:", learner)`);
     throw new Error("Evidence packet did not persist twelve passing booleans");
   }
   if ("workingOutput" in evidencePacketMastery || "notes" in evidencePacketMastery || "source" in evidencePacketMastery) throw new Error("Working evidence persisted in mastery record");
-  await page.getByText("Continuity confirmed. Witness incomplete.", { exact: false }).waitFor();
+  await page.getByText("Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.", { exact: true }).waitFor();
 
+  const cityBytesBeforeArrival = await page.evaluate(() => localStorage.getItem("horizon-archive-rp001-staging-v1"));
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
-  if (await page.locator('[data-playtest-marker="CREDITS_REACHED"]').count()) throw new Error("Pending final reveal skipped to credits");
+  if (await page.locator('main[data-scene="city-threshold"]').count()) throw new Error("Pending Witness acknowledgement skipped to City Threshold");
   await page.locator('main[data-scene="automaton"]').waitFor();
-  await page.getByText("Continuity confirmed. Witness incomplete.", { exact: false }).waitFor();
+  await page.getByText("Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.", { exact: true }).waitFor();
   await page.getByRole("button", { name: "Descend to the city", exact: true }).click();
-  await page.locator('[data-playtest-marker="CREDITS_REACHED"]').waitFor();
+  await page.locator('main[data-scene="city-threshold"]').waitFor();
+  await page.locator('h1:focus').getByText("City Threshold", { exact: true }).waitFor();
+  const directCityState = await page.evaluate(({ key }) => ({
+    campaign: JSON.parse(localStorage.getItem(key)),
+    city: localStorage.getItem("horizon-archive-rp001-staging-v1"),
+  }), { key: saveKey });
+  if (directCityState.campaign?.opening?.version !== 1
+    || directCityState.campaign?.opening?.step !== "playing"
+    || directCityState.campaign?.pendingSceneId !== null
+    || JSON.stringify(directCityState.campaign?.completed) !== JSON.stringify(["meadow", "ruins", "automaton"])) {
+    throw new Error(`Direct City frontier was not atomic: ${JSON.stringify(directCityState.campaign)}`);
+  }
+  if (directCityState.city !== cityBytesBeforeArrival) throw new Error("Direct City arrival changed the separate City save");
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.locator('main[data-scene="city-threshold"]').waitFor();
+  if (await page.getByText(/credits|prologue complete|recorded your arrival/i).count()) throw new Error("Obsolete credits or response copy survived direct City reload");
+  await verifyFirstRunCityStates(page);
   if (runtimeErrors.length) throw new Error(`Runtime errors detected: ${runtimeErrors.join(" | ")}`);
 
   console.log(JSON.stringify({
@@ -1490,7 +1510,7 @@ print("Operator:", learner)`);
     persistence: true,
     runtimeErrors: false,
     questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS", "HA-AI901-PORTAL-ORIENTATION", "HA-AI901-PROMPT-LAYERS", "HA-AI901-CLIENT-BOUNDARIES", "HA-AI901-SDK-ROUTE-CHOOSER", "HA-AI901-SINGLE-AGENT", "HA-AI901-TEXT-SPEECH-PATTERNS", "HA-AI901-VISUAL-PATTERNS", "HA-AI901-OBJECTIVE-LEDGER", "HA-AI901-REMEDIATION-PLANNER", "HA-AI901-CAPSTONE-READINESS", "HA-AI901-SIM-01"],
-    credits: true,
+    directCityFrontier: true,
   }));
 } finally {
   await browser.close();
@@ -1499,6 +1519,74 @@ print("Operator:", learner)`);
 async function captureMeadow(page, path) {
   await page.locator(".scene-art.glass-meadow-art").waitFor();
   await page.locator(".scene-frame").screenshot({ path: qaPath(path) });
+}
+
+async function verifyFirstRunCityStates(page) {
+  const layouts = [
+    [1920, 1080, "desktop"],
+    [1366, 768, "laptop"],
+    [390, 844, "narrow"],
+    [768, 900, "effective-200"],
+  ];
+  for (const [width, height, label] of layouts) {
+    await page.setViewportSize({ width, height });
+    if (label === "effective-200") await page.evaluate(() => { document.documentElement.style.fontSize = "200%"; });
+    const metrics = await page.locator('main[data-scene="city-threshold"]').evaluate((main) => {
+      const controls = [...main.querySelectorAll("button:not([disabled]), select:not([disabled])")]
+        .map((control) => control.getBoundingClientRect())
+        .filter((rect) => rect.width > 0 && rect.height > 0);
+      return {
+        scrollWidth: document.documentElement.scrollWidth,
+        viewportWidth: document.documentElement.clientWidth,
+        headingVisible: Boolean(main.querySelector("h1")?.getBoundingClientRect().height),
+        targetsAtLeast44: controls.every((rect) => rect.width >= 44 && rect.height >= 44),
+      };
+    });
+    if (!metrics.headingVisible || metrics.scrollWidth > metrics.viewportWidth + 1 || !metrics.targetsAtLeast44) {
+      throw new Error(`City ${label} containment/target failure: ${JSON.stringify(metrics)}`);
+    }
+    if (label === "effective-200") await page.evaluate(() => { document.documentElement.style.fontSize = ""; });
+  }
+
+  await page.emulateMedia({ reducedMotion: "reduce", forcedColors: "active" });
+  await page.getByRole("button", { name: "OBSERVE OPERATING CYCLES", exact: true }).focus();
+  const focusStyle = await page.getByRole("button", { name: "OBSERVE OPERATING CYCLES", exact: true }).evaluate((element) => getComputedStyle(element).outlineStyle);
+  if (focusStyle === "none") throw new Error("City forced-color focus is not visible");
+  await page.emulateMedia({ reducedMotion: "no-preference", forcedColors: "none" });
+  await page.setViewportSize({ width: 1600, height: 900 });
+
+  await page.getByRole("button", { name: "OBSERVE OPERATING CYCLES", exact: true }).click();
+  await page.getByRole("button", { name: "TRACE MAINTENANCE", exact: true }).click();
+  await page.getByRole("button", { name: "INSPECT STOP SEAM", exact: true }).click();
+  await page.getByRole("button", { name: "INSPECT MAP DIVISION", exact: true }).click();
+  await page.getByRole("button", { name: "COMPARE BOUNDARIES", exact: true }).click();
+  await page.getByRole("button", { name: "OBSERVE ENVIRONMENTAL ACCESS", exact: true }).click();
+  await page.getByRole("button", { name: "OBSERVE CLOSED RECORD APERTURE", exact: true }).click();
+  await page.getByRole("button", { name: "ESTABLISH SURVEY POINT", exact: true }).click();
+  await page.getByRole("button", { name: "SELECT SURVEY COORDINATE", exact: true }).click();
+  await page.getByRole("button", { name: "RECORD LOCAL ANCHOR", exact: true }).click();
+
+  const overlay = page.getByRole("dialog", { name: "Expedition local record overlay", exact: true });
+  await overlay.waitFor();
+  await page.locator("#anchor-probe-heading:focus").waitFor();
+  if (!await page.locator(".city-world").evaluate((element) => element.inert)
+    || !await page.locator(".city-command-panel").evaluate((element) => element.inert)) {
+    throw new Error("City background remained interactive behind local-record overlay");
+  }
+  await page.keyboard.press("Shift+Tab");
+  if (!await overlay.evaluate((element) => element.contains(document.activeElement))) throw new Error("Shift+Tab escaped City overlay");
+  await page.keyboard.press("Escape");
+  await overlay.waitFor({ state: "detached" });
+  if (!await page.getByRole("button", { name: "OBSERVE ENVIRONMENTAL ACCESS", exact: true }).evaluate((element) => element === document.activeElement)) {
+    throw new Error("City overlay cancel did not restore the first required access action");
+  }
+
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await overlay.waitFor();
+  await page.locator("#anchor-probe-heading:focus").waitFor();
+  await page.getByRole("button", { name: "Cancel and return to access detail", exact: true }).click();
+  await overlay.waitFor({ state: "detached" });
 }
 
 async function verifyMeadowHotspots(page, viewportLabel) {
@@ -1603,7 +1691,7 @@ async function completeOpening(page) {
   await page.getByLabel("Flight-recorder display name", { exact: true }).fill("Playtest Pilot");
   await page.getByRole("button", { name: "Confirm name", exact: true }).click();
   for (let beat = 0; beat < 2; beat += 1) {
-    await page.getByRole("button", { name: "Continue temporary prologue", exact: true }).click();
+    await page.getByRole("button", { name: "Continue flight record", exact: true }).click();
     await page.waitForTimeout(450);
   }
   await page.getByRole("button", { name: "Reach Chapter I", exact: true }).click();
@@ -1792,7 +1880,7 @@ async function assertVerbSelectionAndDispatch(page, width, height, expectedLayou
   await talk.press("Enter");
   await assertOnePressed("TALK TO");
   await page.getByRole("button", { name: "talk to grounded Workload Sort Terminal", exact: true }).click();
-  await page.getByText("Nothing here has a mouth. Something still seems to hear you.", { exact: true }).waitFor();
+  await page.getByText("No reply follows. Water continues through the unchanged basin.", { exact: true }).waitFor();
 
   const use = page.getByRole("button", { name: "USE", exact: true });
   await use.focus();
@@ -1906,20 +1994,20 @@ async function verifyWitnessInteractions(page, viewportLabel) {
 
   await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
   await page.getByRole("button", { name: "look at fallen automaton", exact: true }).click();
-  await page.getByText("The fallen automaton is separate from the Terminal.", { exact: false }).waitFor();
+  await page.getByText("The fallen assembly is inert and separate from the grounded Evidence Terminal.", { exact: true }).waitFor();
   if (await exercise.count()) throw new Error(`Automaton LOOK launched Evidence Packet at ${viewportLabel}`);
 
   await page.getByRole("button", { name: "TALK TO", exact: true }).click();
   const talkAutomaton = page.getByRole("button", { name: "talk to fallen automaton", exact: true });
   await talkAutomaton.focus();
   await talkAutomaton.press("Enter");
-  await page.getByText("A damaged speaker returns one measured pulse.", { exact: false }).waitFor();
+  await page.getByText("No response follows. The separate grounded Evidence Terminal remains available.", { exact: true }).waitFor();
   if (await exercise.count()) throw new Error(`Automaton TALK launched Evidence Packet at ${viewportLabel}`);
 
   await page.getByRole("button", { name: "USE", exact: true }).click();
   const useAutomaton = page.getByRole("button", { name: "use fallen automaton", exact: true });
   await useAutomaton.click();
-  await page.getByText("Its locked joints reject the command.", { exact: false }).waitFor();
+  await page.getByText("No coupling or motion follows. The grounded Evidence Terminal is the usable interface.", { exact: true }).waitFor();
   await useAutomaton.focus();
   await useAutomaton.press("Enter");
   if (await exercise.count()) throw new Error(`Automaton USE launched Evidence Packet at ${viewportLabel}`);

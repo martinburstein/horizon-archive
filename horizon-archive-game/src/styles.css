@@ -162,7 +162,7 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
   background: #090811;
 }
 
-.title-art, .credits-art, .scene-art {
+.title-art, .scene-art {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -172,13 +172,13 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
 .scene-art { object-position: center top; }
 .adventure-screen[data-scene="ruins"] .scene-art { object-position: center 20%; }
 .adventure-screen[data-scene="automaton"] .scene-art { object-position: center 15%; }
-.title-screen, .credits-screen { display: grid; place-items: center; }
+.title-screen { display: grid; place-items: center; }
 .title-screen, .opening-screen, .prologue-screen { background: #070811; }
-.title-art, .credits-art, .title-shade { position: absolute; inset: 0; }
-.title-art, .credits-art { height: 135%; object-position: center top; filter: brightness(0.62) saturate(0.82); }
+.title-art, .title-shade { position: absolute; inset: 0; }
+.title-art { height: 135%; object-position: center top; filter: brightness(0.62) saturate(0.82); }
 .title-shade { background: rgba(5, 5, 13, 0.42); }
 
-.title-copy, .credits-copy {
+.title-copy {
   position: relative;
   z-index: 1;
   width: min(760px, calc(100vw - 40px));
@@ -1445,10 +1445,6 @@ h1 {
 .feedback.visible { color: #c7b4d9; }
 .hint { margin: 4px 0 0; color: #ada3b3; font-size: 0.84rem; font-style: italic; }
 
-.credits-copy p { color: #d6ccbb; font-size: 1.05rem; line-height: 1.5; }
-.credit-rule { width: 90px; height: 1px; margin: 26px auto; background: #887c69; }
-.credit-line { margin: 5px 0; text-transform: uppercase; letter-spacing: 0.16em; }
-.credit-line.muted { margin-bottom: 28px; color: #88818b; font-size: 0.75rem; }
 
 @media (max-width: 760px) {
   .adventure-screen { grid-template-rows: 55vh minmax(360px, 45vh); overflow: auto; }
@@ -2060,6 +2056,15 @@ h1 {
   font-family: "Courier New", monospace;
 }
 
+.city-entry-header {
+  padding: 8px 12px;
+  border-bottom: 2px solid #9a6c3d;
+}
+.city-entry-header h1,
+.city-entry-header p { margin: 0; }
+.city-entry-header h1 { font-size: clamp(1.4rem, 3vw, 2.4rem); }
+.city-entry-header h1:focus-visible { outline: 3px solid #e4b36c; outline-offset: 2px; }
+
 .city-world {
   position: relative;
   width: 100%;
@@ -2335,6 +2340,8 @@ h1 {
 .canonical-game-frame[data-canonical-layout="narrow"] .city-learning-panel select { min-height: 24px; font-size: 7px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-check-list { columns: 2; font-size: 6px; }
 .canonical-game-frame[data-canonical-layout="narrow"] .city-overlay-cancel { margin: auto 8px 5px; min-height: 22px; font-size: 7px; }
+.city-threshold-screen :is(button, select) { min-width: 44px; min-height: 44px; }
+.city-threshold-screen :focus { outline: 3px solid Highlight; outline-offset: 3px; }
 
 /* Fluid photographic presentation: legacy logical coordinates survive only as normalized hotspots. */
 .canonical-game-frame .scene-frame,
