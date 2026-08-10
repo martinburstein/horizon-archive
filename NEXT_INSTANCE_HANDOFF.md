@@ -267,33 +267,64 @@ exact-next-action authority.
   Tactical authorizes no repair and no E2E.
 - Clarification artifact is `Production Pipeline/First Run/
   FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-01.md`.
+- Mission reconciled both returns and issued **`FIRST RUN SHELL READY /
+  FRSH-003-v1-VR-02`** at source
+  `7af1e09553ec23591aa492a4b441d7ea8e5e0a7e`.
+- Physical Host 05 remains exact `45/75/20/25`. The sole authorized product
+  repair is the existing `isSixfoldWeir` branch's inline bottom-anchored
+  semantic activation `top=min(75%, calc(100% - 44px))` /
+  `height=max(25%,44px)` plus exact `2px` inset label/state containment.
+  Shared CSS, physical geometry, image/content boxes, modules, media, copy,
+  and all other product surfaces remain patch-forbidden.
+- Live source proof begins only at `.scene-art` and reports frame, containing,
+  image, physical, semantic, label, Host 04, and return boxes separately.
+  Forced-color proof uses genuine keyboard `Shift+Tab -> Tab` from inventory
+  `Return: Glass Meadow` to Host 05 after forced colors/reduced motion are
+  active and requires exact `3px solid` system `Highlight`.
+- Combat may start from exact `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`,
+  preserve product predecessor `a9776e337f1820776864a5690332c364d0fb2556`
+  and all seven placeholders, apply only the authorized product/test/probe/
+  manifest delta, then freeze one committed repaired candidate.
+- After every pre-live manifest gate passes, Combat is authorized exactly one
+  new complete `FRRC-002-v1` E2E under one fresh external GUID root. The same
+  run must emit `first-run-live-summary.json`; the machine verifier must pass.
+  Any failure stops without rerun and returns to Mission. Quartermaster remains
+  blocked until a fully passing Combat report and synchronized handoff exist.
+- Reissued shell artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-02.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Combat Engineer only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, `FRSH-003-v1-VR-01`, `FRVE-003-v1-VR-01`,
-`FRPX-003-v1-VR-01`, original `FRVE-003-v1` / `FRSH-003-v1` /
-`FRPX-003-v1`, and complete `FRCE-003-v1`. Reconcile the two planning returns
-against exact candidates `a9776e3` / `bf58e52` and issue exactly one new
-versioned shell `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`.
+Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
+handoff, `FRSH-003-v1-VR-02`, original `FRSH-003-v1`, prior Mission hold,
+`FRVE-003-v1-VR-01`, `FRPX-003-v1-VR-01`, and complete `FRCE-003-v1`.
 
-If ready, freeze Science's sole Host-05-only inline semantic activation/label
-mechanism, Tactical's separate `.scene-art` source transform and exact six-row
-probe, genuine keyboard forced-color focus with exact `3px solid` system
-Highlight outline, the reconciled thirty acceptance checks, and unchanged
-state/focus/announcement/recovery/meaning/PBA/media/rollback boundaries.
+Starting from exact corrected harness candidate
+`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`, implement only:
 
-Only a new explicit Mission `READY` may authorize Combat's bounded inline
-repair, focused test/probe/manifest updates, validation ladder, and exactly one
-fresh complete E2E. Preserve the corrected harness lineage and external-root/
-machine-summary/cleanup contract. If any requirement remains ambiguous or
-incompatible, continue `HOLD`; do not delegate the choice downstream.
+- Host-05-only inline bottom-anchored semantic `min 44px` activation and
+  exact inset label/state mechanism in the existing `isSixfoldWeir` branch;
+- focused physical-versus-semantic/label proof;
+- `.scene-art` content-box source mapping and all separate six-layout fields;
+- genuine forced-color keyboard `Shift+Tab -> Tab` focus-visible proof; and
+- required `FRRC-002-v1` summary/verifier field updates.
 
-Do not edit product/test/harness/manifest/media/copy, run E2E, round or relax a
-threshold, inspect the repository QA quarantine or user state, begin Combat or
-Quartermaster before a signed `READY`, alter learning/save/route/world/ending,
-repair City, expand Host 06-15, advance maturity, create a schedule/reveal, or
-call `FIRST RUN COMPLETE`.
+Preserve physical `45/75/20/25`, all seven placeholders, corrected assertion
+lineage, CSS/modules/media, every state/focus/announcement/recovery/meaning,
+learning/evidence/privacy/save/route/later-rail/ending contract, all thirty
+acceptance checks, PBA, performance, rollback, and protected boundaries.
+
+Commit and freeze one repaired candidate before the release ladder. Run every
+pre-live gate. Only if they pass, run exactly one new complete E2E under one
+fresh external GUID root; require the same run to emit the machine summary and
+the verifier to pass. On any failure, stop and return `HOLD` with no rerun. On
+complete PASS, issue one versioned functional report and exact Quartermaster
+handoff, commit/push only authorized scope, and prove synchronization.
+
+Do not write final copy, change a placeholder/CSS/module/media/learning/save/
+route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
+quarantine or user state, begin Quartermaster, repair City, expand Host 06-15,
+create a schedule/reveal, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
