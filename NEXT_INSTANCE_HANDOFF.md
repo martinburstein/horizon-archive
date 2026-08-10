@@ -57,22 +57,25 @@ registry before acting. This file is the sole exact-next-action authority.
 - Operations issued `FS-TE001-SCRIPT-v1 / FLOOR STACK READY`: one documentation-
   only complete-game script slice, structured as four dramatic acts and fifteen
   chapters over the exact single rail.
+- Science issued `VE-TE001-SCRIPT-v1 / VIABILITY READY`: the script may express
+  learning pressure and remediation but no answers, cross-credit, private
+  learner state, exam guarantee, service authority, or world response.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Science TE-001 script viability
+## Exact next action - Mission TE-001 script shell
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/03-CAMPAIGN-FLOOR-STACK.md`
-in full. Independently validate `FS-TE001-SCRIPT-v1` as a documentation-only
-complete-game script slice. Prove that the single-rail success/remediation
-model, forty-cluster learning order, 36-55-hour envelope, privacy,
-save/recovery, accessibility, offline posture, no-authority language, emotional
-escalation, and equal-dignity final outcomes can coexist without changing
-released curriculum or world state.
+Read `Production Pipeline/Terminal Enrichment/TE-001/04-VIABILITY-ENVELOPE.md`
+in full. Issue one versioned documentation-only `SHELL READY` contract for
+`HORIZON_ARCHIVE_GAME_ON_PAPER.md`. Freeze the exact four-act, fifteen-chapter,
+forty-cluster rail; no-answer learning pressure; privacy and save language;
+accessible document structure; current official-source posture; 200 KB hard
+budget; equal final outcomes; unchanged world; no image work; and
+`successor=null`.
 
-Return `HOLD` for any contradiction. Do not author the script, implement
-runtime behavior, create a Mission shell, or create/generate/select/import an
-image.
+Define exact required sections, permitted source files, validation commands,
+Marine ownership, and return conditions. Do not author the script in the
+Mission stage or modify runtime, curriculum, art, media, or user state.
 
 ## Protected boundaries
 
