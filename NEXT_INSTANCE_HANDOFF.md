@@ -421,21 +421,48 @@ exact-next-action authority.
   summary, or verifier ran. Combat disposition is **`HOLD / VR-04
   DETERMINISTIC CONTROL INCOMPATIBILITY / FRCE-003-v1`**; Quartermaster remains
   blocked.
+- Mission adjudicated the single frozen-test mismatch as **`FIRST RUN SHELL
+  READY / FRSH-003-v1-VR-05`** at source
+  `9ef42b45daf2fd1cef276e292ee29da5168b289c`.
+- Operative manifest/E2E identity remains exact `FRSH-003-v1-VR-04` with
+  genuine key path `Tab -> Shift+Tab`. VR-05 authorizes only the one static
+  expectation at `horizon-archive-game/test/sixfoldWeir.test.js:146` to replace
+  superseded `FRSH-003-v1-VR-02` / `Shift+Tab -> Tab` literals with exact
+  `FRSH-003-v1-VR-04` / `Tab -> Shift+Tab`.
+- Runtime product candidate
+  `7e85154abd8dbf116c4bb84ca66afd859903d750` and browser-probe candidate
+  `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad` remain frozen. Combat must commit
+  the one-file/two-literal test delta as a separate validation-control
+  candidate; no product, E2E, manifest, threshold, meaning, media, learning,
+  save, route, world, later-rail, or ending change is authorized.
+- Combat must rerun the full deterministic ladder from integrity/static through
+  focused `68/68`, related `74/74`, cold full `972/972`, validators `40/40`,
+  builds `217/57`, served identity, and PBA/media/offline/performance. Any
+  failure is `HOLD` before live execution.
+- Only after all deterministic gates pass is exactly one fresh complete E2E
+  authorized under one new external GUID root. It must emit one machine summary
+  and the unchanged verifier must pass once. Any live failure is `HOLD` with no
+  rerun. Quartermaster remains blocked.
+- Variance artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-05.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Combat Engineer only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, complete `FRCE-003-v1`, `FRSH-003-v1-VR-04`, and the frozen static
-assertion at `horizon-archive-game/test/sixfoldWeir.test.js:146`.
+Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
+handoff, complete `FRSH-003-v1-VR-05`, operative
+`FRSH-003-v1-VR-04`, complete latest `FRCE-003-v1`, the exact frozen
+assertion at `horizon-archive-game/test/sixfoldWeir.test.js:146`, and current
+manifest/E2E controls.
 
-Adjudicate the internally inconsistent permitted-file contract: VR-04 requires
-the corrected `FRSH-003-v1-VR-04` / `Tab -> Shift+Tab` verifier but freezes a
-test that requires the superseded `FRSH-003-v1-VR-02` / `Shift+Tab -> Tab`
-literals. Preserve product behavior, all geometry/focus/verifier thresholds,
-seven placeholders, media, learning/save/route/ending, and exact candidates.
-Issue a versioned shell authorizing one smallest truthful resolution or
-continue HOLD. Do not treat decorative legacy tokens as proof, authorize an
-E2E, or begin Quartermaster while the mandatory focused gate is unsatisfiable.
+Change only that one assertion's two stale literals to exact
+`FRSH-003-v1-VR-04` / `Tab -> Shift+Tab`; do not add decorative legacy tokens
+or change the operative manifest/E2E. Commit the one-file delta as a separate
+validation-control candidate while preserving exact product `7e85154` and
+probe `d9487d82`. Run every deterministic gate from the beginning. Only after
+all deterministic gates pass, invoke exactly one fresh complete E2E under one
+new external GUID root, require exactly one machine summary, and run the
+unchanged verifier once. Any failure is `HOLD` with no rerun. Quartermaster
+remains blocked until a fully passing synchronized Combat report exists.
 
 ## Protected boundaries
 
