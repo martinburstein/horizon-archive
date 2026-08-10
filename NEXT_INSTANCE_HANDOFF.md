@@ -2,45 +2,39 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / IN-MEMORY TOKEN DIGEST-DOMAIN
-CORRECTION PROOF ONLY / FRSH-003-v1-VR-62`**
+Current disposition: **`FIRST RUN SHELL READY / OUTPUT-SUPPRESSED IN-MEMORY
+DIGEST-DOMAIN PROOF ONLY / FRSH-003-v1-VR-63`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-62`
+Immediate control: `FRSH-003-v1-VR-63`
 
-Mission source: `b21fa15be4e3fa12f1daedc498ebfd48ec6c3b79`
+Mission source: `a8a0a7e3ff28b0479a5b907cc9b83559c306328e`
 
-VR-61 stopped before root or artifact access because its cleanup wrapper
-reported a digest mismatch. No file/root deletion or inspection occurred.
+VR-62 remained filesystem-free and localized its failure to proof-helper
+success-stream contamination: token/byte/UTF-8/SHA compute/dispose predicates
+passed, but the positive digest value was non-scalar and its 64-hex shape
+failed; negative controls were unreached.
 
-Mission's literal in-memory audit proves the supplied digest is correct for
-the Stage-1 contract: it matches the standard-base64 decoded bytes, their
-strict UTF-8 round-trip bytes, and the unchanged normalized-path UTF-8 bytes.
-It does not match the ASCII bytes of the base64 token text or lower/upper-cased
-path UTF-8 variants.
-
-Mission records **`REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP TOKEN
-DIGEST IMPLEMENTATION / OPEN / VR-61`** as a thirteenth separate OPEN
-classification. This is not token corruption, root ambiguity, or a substantive
-E2E/candidate finding.
+Mission classifies this as localization evidence under the existing
+**`REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP TOKEN DIGEST
+IMPLEMENTATION / OPEN / VR-61`** item. It creates no fourteenth OPEN
+classification and says nothing new about the coherent token/digest pair.
 
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-Combat may run one in-memory correction proof only using the literal token and
-digest. Decode base64 to `[byte[]]`, strict-UTF-8 round-trip, pure
-`GetFullPath` normalization without filesystem access, and disposable SHA-256
-over the decoded bytes. Separately prove the base64-ASCII and case-folded
-domains do not match. Emit only the VR-62 scalar.
+Combat may run one corrected in-memory proof only. Compute each SHA domain
+inline without a helper; explicitly suppress every intermediate assignment,
+setter/ref result, SHA object, hash byte array, hex transform, and dispose
+result. Emit only one final ordered scalar line. Repeat the decoded-byte
+positive control and base64-ASCII/lowercase/uppercase negative controls.
 
-No filesystem/root/artifact existence or identity access, deletion,
-enumeration, preview, browser, E2E, verifier, root creation, alternate token,
-or retry is authorized. Cleanup remains deferred until fresh Mission accepts
-an exact digest-domain proof.
+No filesystem/root/artifact access, deletion, cleanup continuation, preview,
+browser, E2E, verifier, alternate token, or retry is authorized.
 
-The substantive VR-60 E2E PASS, consumed one-E2E budget, frozen candidates/
-gates/invariants, twelve prior OPEN classifications, and new VR-61 digest
-classification remain exact. No downstream action is authorized.
+VR-60 substantive PASS, the consumed E2E budget, frozen candidates/gates/
+invariants, and all thirteen OPEN classifications remain exact. No downstream
+action is authorized.
