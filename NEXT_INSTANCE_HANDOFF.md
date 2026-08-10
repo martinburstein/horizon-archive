@@ -2,20 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE ROBUST-TOTALS SIX-PATH
-STATIC-FOCUSED VERIFICATION / FRSH-003-v1-VR-21`**
+Current disposition: **`ROBUST-TOTALS SIX-PATH STATIC-FOCUSED PASS / RETURN
+TO FRESH MISSION / FRCE-003-v1-VR-21`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Immediate authority / return: `FRSH-003-v1-VR-21` /
-`FRCE-003-v1-VR-20`
+Immediate return / authority: `FRCE-003-v1-VR-21` /
+`FRSH-003-v1-VR-21`
 
-Mission source:
-`b9a1cab9a2aee0db742b809c5d81fe0715cdec47`
+Combat start source:
+`65ad8aa116ccc8ddf4ced5d7d3d5a07e8fec7938`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -31,90 +31,70 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Combat Engineer profile in full, VR-07 and VR-12 through VR-21,
-FRCE-003-v1-VR-12 through VR-20, current FRAB-003, this handoff, and the exact
+Read the Mission Captain profile in full, VR-07 and VR-12 through VR-21,
+FRCE-003-v1-VR-12 through VR-21, current FRAB-003, this handoff, and the exact
 committed FRRC/E2E/static controls.
 
-Mission adjudicates the VR-20 focused-output mismatch as **`REQUIRED
-CORRECTION / EXECUTION CONTROL / OPEN`**. The focused Node process truthfully
-emitted exactly `68 tests / 68 pass / 0 fail` using Unicode information-symbol
-markers (`ℹ`), while the wrapper accepted only number-sign markers (`#`).
-This is not evidence of a candidate, product, manifest, test, E2E, validation,
-evidence, threshold, learning, save, route, world, media, or ending defect.
+Fresh Combat consumed exactly one repository-root PowerShell invocation under
+VR-21 with the execution-tool timeout set to `30s`. The invocation completed
+with exit `0` after `4.1s`. It proved all five frozen identities, exact
+ancestry and parentage, all twelve frozen blobs, all six current blobs, the
+six literal tracked paths, initial allowlisted worktree/staged absence,
+candidate and worktree integrity, and scalar candidate-to-current equality.
 
-VR-20 is consumed. Its partial checks and truthful process totals are not a
-complete pass and may not be reused, promoted, or rerun under VR-20. The
-separate **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**
-classification remains open and is neither waived nor repeated by this
-reissue.
+The exact scalar range
+`2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc..HEAD` was supplied as one
+revision argument. Its immediately captured exit was `0`, meaning no drift.
+Tri-state semantics remained exact: `1` means the named drift/integrity
+finding and values greater than `1` mean command failure. No command failed
+and none was misclassified as drift.
 
-Fresh Combat may consume exactly one repository-root PowerShell invocation
-from the synchronized commit containing `FRSH-003-v1-VR-21`, with the
-execution-tool timeout set to `30s`. The invocation is exact and may not be
-split, corrected, substituted, continued after failure, partially rerun, or
-repeated.
+The committed FRRC parsed with exact schema
+`horizon.first-run.release-command-manifest.v1`, manifest ID `FRRC-002-v1`,
+thirteen-entry property order and entry key/ID identity, forty exact sorted
+validator structures, `policy.validator_count=40`, and
+`policy.e2e_invocations=1`. No validator executed. The exact focused-command
+allowlist passed. `node --check playtest/e2e-playthrough.mjs` ran exactly once
+and passed.
 
-The sole parser correction is exact and line anchored:
+The exact focused command ran exactly once and exited `0`. Its truthful output
+was exactly `68 tests / 68 pass / 0 fail`, with Node duration `182.2957ms`.
+The line-anchored `(?:#|\u2139)` parser accepted the emitted Unicode
+information-symbol totals without accepting any alternate count, arbitrary
+prefix, missing line, or nonzero exit.
 
-```text
-(?m)^(?:#|\u2139) tests 68\s*$
-(?m)^(?:#|\u2139) pass 68\s*$
-(?m)^(?:#|\u2139) fail 0\s*$
-```
+After that successful assertion, the same invocation completed all three
+required final checks: final allowlisted worktree drift, final allowlisted
+staged drift, and final allowlisted diff integrity. All returned exit `0`.
 
-The focused process must still exit `0`; totals remain exactly `68 / 68 /
-0`. No arbitrary prefix, alternate total, missing line, or nonzero process
-exit is accepted.
+Combat ran no related/full test, validator, build, PBA/media/offline/
+performance scan, preview, browser, root, E2E, diagnostic, summary, verifier,
+served identity, or cleanup. It performed no protected, untracked, media,
+predecessor-root, repository-wide, or user-state enumeration and made no
+implementation or control change. Only `FRCE-003-v1-VR-21` and this handoff
+changed after the attempt.
 
-The same sole invocation must include, after the successful focused assertion,
-all three final checks: final allowlisted worktree drift, final allowlisted
-staged drift, and final allowlisted diff integrity. They may not be inferred
-from VR-20 or moved to another invocation.
+The separate **`REQUIRED CORRECTION / EXECUTION CONTROL / OPEN`** history and
+**`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**
+classification remain for fresh Mission adjudication. VR-21 itself is
+consumed and may not be rerun. Its complete result is bounded static/focused
+evidence only and is not production-functional acceptance, release evidence,
+or a maturity advance.
 
-Preserve exact scalar revision-range construction and immediate tri-state exit
-classification: `0` means no drift, `1` means the named drift/integrity
-finding, and values greater than `1` mean command failure and must never be
-called drift.
+All frozen product, candidate, threshold, player, learning, accessibility,
+privacy, save, route, world, equal MH-40, null-delta, `successor=null`, ending,
+immutable-media `17 / 37,410,731`, diagnostic non-evidence/non-verifier, and
+one-E2E meanings remain exact. No Quartermaster, Image Specialist,
+Intelligence, reveal, maturity, release, schedule, automation, or `FIRST RUN
+COMPLETE` action is authorized from this handoff.
 
-The complete tracked-path allowlist remains exactly these six literals, with no
-discovery or enumeration:
+Exact next action: a **fresh Mission Captain** independently adjudicates the
+complete `FRCE-003-v1-VR-21` return against `FRSH-003-v1-VR-21` and issues one
+new versioned `HOLD` or `READY` decision. Mission must not rerun VR-21, infer
+a product defect, reuse VR-20 partial evidence, begin a downstream role,
+inspect protected/predecessor/media/user state, advance maturity, or call
+`FIRST RUN COMPLETE`.
 
-```text
-Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json
-playtest/e2e-playthrough.mjs
-horizon-archive-game/test/sixfoldWeir.test.js
-horizon-archive-game/src/App.jsx
-horizon-archive-game/src/drownedArchive.js
-horizon-archive-game/package.json
-```
-
-All five frozen identities, twelve frozen blobs, six current blobs, ancestry
-and parentage, candidate/worktree integrity, exact FRRC schema/ID/thirteen-entry
-order/key-ID identity, forty sorted validator structures,
-`policy.validator_count=40`, `policy.e2e_invocations=1`, focused-command
-allowlist, and one `node --check` remain exact.
-
-No related/full test, validator, build, PBA/media/offline/performance scan,
-preview, browser, root, E2E, diagnostic, summary, verifier, served identity,
-cleanup, protected/untracked/media/predecessor-root/repository-wide/user-state
-enumeration, implementation, product, test, manifest, E2E, content, CSS,
-module, fixture, dependency, package, curriculum, evaluator, save, story,
-route, map, scoreboard, maturity, media, or other control change is authorized.
-
-Any failure is immediate **`HOLD / NO RERUN`**. On complete PASS, Combat must
-issue **`ROBUST-TOTALS SIX-PATH STATIC-FOCUSED PASS / RETURN TO FRESH MISSION
-/ FRCE-003-v1-VR-21`**. On failure, issue **`HOLD / ROBUST-TOTALS SIX-PATH
-STATIC-FOCUSED FAILURE / NO RERUN / RETURN TO FRESH MISSION /
-FRCE-003-v1-VR-21`**. Only that versioned Combat return and this handoff may
-then change; commit, push, prove `HEAD == origin/main`, and route a fresh
-Mission Captain.
-
-All frozen player, learning, accessibility, privacy, save, route, world, equal
-MH-40, null-delta, `successor=null`, ending, threshold, immutable-media
-`17 / 37,410,731`, and diagnostic non-evidence/non-verifier meanings remain
-exact. No Quartermaster, Image Specialist, Intelligence, reveal, maturity,
-release, schedule, automation, or `FIRST RUN COMPLETE` action is authorized.
-
-The dedicated Mission commit and final `HEAD == origin/main` proof are
-reported from Git after commit because this handoff cannot contain the hash
-that first contains itself.
+The dedicated Combat report/handoff commit and final `HEAD == origin/main`
+proof are reported from Git after commit because this handoff cannot contain
+the hash that first contains itself.
