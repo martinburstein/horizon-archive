@@ -40,7 +40,7 @@ test("missing npm fails clearly and nonzero without waiting for input", { skip: 
 });
 
 test("canonical and compatibility guides state truthful local product boundaries", () => {
-  assert.match(guide, /complete local journey/i);
+  assert.match(guide, /complete local Horizon Archive journey/i);
   assert.match(guide, /Measured Horizon ending/i);
   assert.match(guide, /Demo Tour is a separate no-credit preview/i);
   assert.match(guide, /not an official exam\s+result, an exam guarantee, or authority/i);

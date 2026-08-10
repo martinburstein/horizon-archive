@@ -5,10 +5,11 @@ builds locally, starts at `http://127.0.0.1:4173`, and opens in your default
 browser. Keep the launcher window open while playing; press `Ctrl+C` there to
 stop.
 
-The complete local journey runs from expedition setup through the shared
-Measured Horizon ending. Progress and bounded learning evidence are stored in
-one local browser save. Submitted code, answer prose, credentials, prompts,
-payloads, responses, focus, and input modality are not retained as progress.
+This is the complete local Horizon Archive journey, from expedition setup to
+the shared Measured Horizon ending. Progress and bounded learning evidence are
+stored in one local browser save. Submitted code, answer prose, credentials,
+prompts, payloads, responses, focus, and input modality are not retained as
+progress.
 
 ## Controls
 

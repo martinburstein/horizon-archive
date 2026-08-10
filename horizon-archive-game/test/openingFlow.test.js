@@ -119,9 +119,14 @@ test("App wires the complete resumable opening and exact selected meadow art", (
   assert.doesNotMatch(styles, /\.opening-objective\s*\{/);
   assert.equal((source.match(/setDialogue\(OPENING_TERMINAL_OBJECTIVE, "system"\)/g) ?? []).length, 2);
   assert.match(source, /saved\.sceneIndex === 0 && saved\.exerciseEvidence\?\.completed !== true && saved\.opening\.step === "playing"[\s\S]*?OPENING_TERMINAL_OBJECTIVE/);
-  assert.match(source, /My instruments find no road or landing marker/);
-  assert.match(source, /I'm down\. Glass tubes rise from flush patterns in the floor\. Their states repeat, but not in rows\./);
-  assert.equal((source.match(/I'm down\./g) ?? []).length, 1);
+  assert.match(source, /No road\. No landing marker\. Glass states repeat beneath a ruler-straight horizon without forming rows\./);
+  assert.match(source, /I'm down in a low-growth band\. Glass rises from flush collars across a ruler-straight field\. Its states repeat, but not in rows\./);
+  assert.equal((source.match(/I'm down in a low-growth band\./g) ?? []).length, 1);
+  assert.match(source, /route-marker Terminal was visible in the crop from the start/);
+  assert.doesNotMatch(source, /route-marker Terminal has risen|narrow path illuminates/);
+  assert.match(source, /Crown remains distant and unchanged/);
+  assert.match(source, /fallen assembly's joints and residue remain inert/);
+  assert.match(source, /No response follows; the fallen assembly and corridor remain unchanged/);
   assert.match(source, /opening: createOpeningProgress\(/);
   assert.match(source, /if \(saved\.finished\) \{[\s\S]*?projectFirstRunCityFrontier\(saved\)[\s\S]*?setMode\(FIRST_RUN_CITY_MODE\)/);
   assert.match(source, /className="scene-art glass-meadow-art"[\s\S]*src=\{glassMeadowImage\}/);

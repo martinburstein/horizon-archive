@@ -705,17 +705,17 @@ const firstRunPrologueBeats = [
   {
     label: "FLIGHT RECORD // PATTERN // 1 OF 3",
     heading: "A repeating pattern",
-    body: "My recorder isolates a repeating pattern beyond every route I have mapped. Nothing in it identifies a sender.",
+    body: "My recorder isolates the same pattern beyond every route I have mapped. It names no source.",
   },
   {
     label: "FLIGHT RECORD // APPROACH // 2 OF 3",
     heading: "A reversible approach",
-    body: "My instruments hold one reversible approach. I can still turn back; they cannot tell me what shaped it or why it remains open.",
+    body: "My instruments hold one reversible approach. I can still turn back. Nothing in the pattern assigns me a purpose.",
   },
   {
     label: "FLIGHT RECORD // HORIZON // 3 OF 3",
     heading: "A ruler-straight horizon",
-    body: "My instruments find no road or landing marker. Glass states repeat across a ruler-straight horizon without forming rows.",
+    body: "No road. No landing marker. Glass states repeat beneath a ruler-straight horizon without forming rows.",
   },
 ];
 
@@ -737,7 +737,7 @@ const scenes = [
     validate: (value) => validateAnswer("meadow", value),
     hint: "Python displays text with print(). Put the text inside quotation marks.",
     success: "Output verified. The membrane keeps its prior cycle; reception remains unknown.",
-    routeSuccess: "The route marker accepts both forms. A narrow path illuminates toward the next survey site.",
+    routeSuccess: "Route Marker mastery recorded. Restrained rightward geometry makes the pre-existing low-growth continuation easier to read.",
   },
   {
     id: "ruins",
@@ -754,7 +754,7 @@ const scenes = [
       label: "Glass Meadow return ridge",
       hotspot: DROWNED_ARCHIVE_RETURN_HOTSPOT,
     }],
-    prompt: "A grounded Terminal stands by the causeway. The Tidal Lens remains silent.",
+    prompt: "A grounded Terminal stands where the dry phase ridge meets the water. The Crown remains distant and unchanged.",
     question: "Create a variable named pilot_name containing the text MARTIN.",
     answer: 'pilot_name = "MARTIN"',
     validate: (value) => validateAnswer("ruins", value),
@@ -775,18 +775,18 @@ const scenes = [
     },
     secondaryHotspots: [{
       id: "fallen-automaton",
-      label: "fallen automaton",
+      label: "fallen assembly",
       hotspot: {
         left: "49%", top: "18%", width: "39%", height: "81%",
         narrow: { left: "47%", top: "18%", width: "53%", height: "61%" },
       },
     }],
-    prompt: "The grounded Terminal presents a blank inspection surface and three quiet evidence channels.",
+    prompt: "The grounded Terminal is rooted in the left-side service laminates, separate from the fallen assembly. Three evidence channels are available.",
     question: "Set archive_open to the Boolean value true in Python.",
     answer: "archive_open = True",
     validate: (value) => validateAnswer("automaton", value),
     hint: "Python Booleans begin with capital letters and do not use quotation marks.",
-    success: "Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.",
+    success: "Local evidence is complete. No response follows; the fallen assembly and corridor remain unchanged.",
   },
 ];
 
@@ -2817,11 +2817,11 @@ export function App() {
     if (scene.id === "automaton") {
       if (hotspotId === "fallen-automaton") {
         if (verb === "LOOK AT") {
-          setDialogue("The fallen assembly is inert and separate from the grounded Evidence Terminal.");
+          setDialogue("The fallen assembly's joints and residue remain inert. It is physically separate from the grounded Evidence Terminal.");
         } else if (verb === "TALK TO") {
-          setDialogue("No response follows. The separate grounded Evidence Terminal remains available.");
+          setDialogue("No response follows. The separate Evidence Terminal remains available.");
         } else {
-          setDialogue("No coupling or motion follows. The grounded Evidence Terminal is the usable interface.");
+          setDialogue("No coupling or motion follows. The usable surface is the separate grounded Evidence Terminal.");
         }
         return;
       }
@@ -2830,7 +2830,7 @@ export function App() {
         return;
       }
       if (verb === "TALK TO") {
-        setDialogue("The Evidence Terminal has no voice. Its three channel lights wait for inspection.");
+        setDialogue("The Evidence Terminal has no voice. Its three evidence channels remain available for local inspection.");
         return;
       }
       setDialogue("Evidence workspace linked. Inspect the registered packet, repair the JSON, and validate all twelve boundaries.");
@@ -2862,8 +2862,8 @@ export function App() {
     if (scene.id === "meadow" && hotspotId === "route-marker") {
       if (verb === "LOOK AT") {
         setDialogue(exerciseEvidence?.completed
-          ? "A separate route-marker Terminal has risen from the meadow. Its two-form survey is ready."
-          : "A low marker remains dark. First Signal must be acknowledged at the field-linked Terminal.");
+          ? "The separate route-marker Terminal was visible in the crop from the start. Its two-form survey is now available."
+          : "A low three-fin contact is visible but unreadable. First Signal must be acknowledged at the field-linked Terminal.");
         return;
       }
       if (verb === "TALK TO") {
@@ -3822,7 +3822,7 @@ export function App() {
           <p className="eyebrow">Chapter I</p>
           <h1 ref={openingHeadingRef} id="chapter-reveal-heading" tabIndex="-1">Glass Meadow</h1>
           <p className="prologue-recorder">PILOT // FLIGHT RECORDER — {characterName}</p>
-          <p>I'm down. Glass tubes rise from flush patterns in the floor. Their states repeat, but not in rows.</p>
+          <p>I'm down in a low-growth band. Glass rises from flush collars across a ruler-straight field. Its states repeat, but not in rows.</p>
           <button className="primary-action" type="button" onKeyDown={preventRepeatedOpeningKey} onClick={enterChapterOne}>Enter the meadow</button>
         </section>
       </main>

@@ -1383,14 +1383,14 @@ print("Operator:", learner)`);
     throw new Error("Evidence packet did not persist twelve passing booleans");
   }
   if ("workingOutput" in evidencePacketMastery || "notes" in evidencePacketMastery || "source" in evidencePacketMastery) throw new Error("Working evidence persisted in mastery record");
-  await page.getByText("Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.", { exact: true }).waitFor();
+  await page.getByText("Local evidence is complete. No response follows; the fallen assembly and corridor remain unchanged.", { exact: true }).waitFor();
 
   const cityBytesBeforeArrival = await page.evaluate(() => localStorage.getItem("horizon-archive-rp001-staging-v1"));
   await page.reload();
   await page.getByRole("button", { name: "Resume signal" }).click();
   if (await page.locator('main[data-scene="city-threshold"]').count()) throw new Error("Pending Witness acknowledgement skipped to City Threshold");
   await page.locator('main[data-scene="automaton"]').waitFor();
-  await page.getByText("Local evidence is complete. The fallen assembly and corridor remain silent and unchanged.", { exact: true }).waitFor();
+  await page.getByText("Local evidence is complete. No response follows; the fallen assembly and corridor remain unchanged.", { exact: true }).waitFor();
   await page.getByRole("button", { name: "Descend to the city", exact: true }).click();
   await page.locator('main[data-scene="city-threshold"]').waitFor();
   await page.locator('h1:focus').getByText("City Threshold", { exact: true }).waitFor();
@@ -2432,7 +2432,7 @@ async function assertVerbSelectionAndDispatch(page, width, height, expectedLayou
   await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
   await assertOnePressed("LOOK AT");
   await page.getByRole("button", { name: "look at grounded Workload Sort Terminal", exact: true }).click();
-  await page.getByText("A grounded Terminal stands by the causeway. The Tidal Lens remains silent.", { exact: true }).waitFor();
+  await page.getByText("A grounded Terminal stands where the dry phase ridge meets the water. The Crown remains distant and unchanged.", { exact: true }).waitFor();
 
   const talk = page.getByRole("button", { name: "TALK TO", exact: true });
   await talk.focus();
@@ -2536,7 +2536,7 @@ async function assertRuinsTerminalAlignment(page, viewportLabel) {
 async function captureWitnessScene(page, path) {
   await page.getByRole("button", { name: "USE", exact: true }).click();
   const terminal = page.getByRole("button", { name: "use grounded Evidence Terminal", exact: true });
-  const automaton = page.getByRole("button", { name: "use fallen automaton", exact: true });
+  const automaton = page.getByRole("button", { name: "use fallen assembly", exact: true });
   await page.keyboard.press("Tab");
   await terminal.focus();
   if (!await terminal.evaluate((element) => element.matches(":focus-visible"))) throw new Error("Evidence Terminal lacks visible keyboard focus");
@@ -2552,21 +2552,21 @@ async function verifyWitnessInteractions(page, viewportLabel) {
   const exercise = page.locator('[data-terminal-exercise="EX-L0507-EVIDENCE-PACKET"]');
 
   await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
-  await page.getByRole("button", { name: "look at fallen automaton", exact: true }).click();
-  await page.getByText("The fallen assembly is inert and separate from the grounded Evidence Terminal.", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "look at fallen assembly", exact: true }).click();
+  await page.getByText("The fallen assembly's joints and residue remain inert. It is physically separate from the grounded Evidence Terminal.", { exact: true }).waitFor();
   if (await exercise.count()) throw new Error(`Automaton LOOK launched Evidence Packet at ${viewportLabel}`);
 
   await page.getByRole("button", { name: "TALK TO", exact: true }).click();
-  const talkAutomaton = page.getByRole("button", { name: "talk to fallen automaton", exact: true });
+  const talkAutomaton = page.getByRole("button", { name: "talk to fallen assembly", exact: true });
   await talkAutomaton.focus();
   await talkAutomaton.press("Enter");
-  await page.getByText("No response follows. The separate grounded Evidence Terminal remains available.", { exact: true }).waitFor();
+  await page.getByText("No response follows. The separate Evidence Terminal remains available.", { exact: true }).waitFor();
   if (await exercise.count()) throw new Error(`Automaton TALK launched Evidence Packet at ${viewportLabel}`);
 
   await page.getByRole("button", { name: "USE", exact: true }).click();
-  const useAutomaton = page.getByRole("button", { name: "use fallen automaton", exact: true });
+  const useAutomaton = page.getByRole("button", { name: "use fallen assembly", exact: true });
   await useAutomaton.click();
-  await page.getByText("No coupling or motion follows. The grounded Evidence Terminal is the usable interface.", { exact: true }).waitFor();
+  await page.getByText("No coupling or motion follows. The usable surface is the separate grounded Evidence Terminal.", { exact: true }).waitFor();
   await useAutomaton.focus();
   await useAutomaton.press("Enter");
   if (await exercise.count()) throw new Error(`Automaton USE launched Evidence Packet at ${viewportLabel}`);

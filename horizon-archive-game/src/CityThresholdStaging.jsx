@@ -239,7 +239,7 @@ export function CityThresholdStaging({
   const [observations, setObservations] = useState({});
   const [anchorSelected, setAnchorSelected] = useState(false);
   const [overlayOpen, setOverlayOpen] = useState(() => loadStagingSave().checkpoint !== "threshold_entry" && loadStagingSave().checkpoint !== "anchor_complete");
-  const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance movement are already mid-cycle. No occupant is visible.");
+  const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance cycles were already operating when the expedition arrived. No occupant is visible.");
   const cityHeadingRef = useRef(null);
   const cityWorldRef = useRef(null);
   const overlayRef = useRef(null);
@@ -359,7 +359,7 @@ export function CityThresholdStaging({
         <header className="city-entry-header" data-copy-slot="CITY-ENTRY-HEAD">
           <p className="eyebrow">Chapter IV // local survey</p>
           <h1 ref={cityHeadingRef} tabIndex="-1">City Threshold</h1>
-          <p data-copy-slot="CITY-ENTRY-STATUS">Heat, bridge lights, vapor, and maintenance cycles are already operating.</p>
+          <p data-copy-slot="CITY-ENTRY-STATUS">Heat, bridge lights, vapor, and maintenance cycles were already operating when the expedition arrived.</p>
         </header>
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">{message}</p>
         <section ref={cityWorldRef} className="city-world" aria-label="City Threshold Survey Anchor staged scene" inert={overlayOpen ? true : undefined}>
