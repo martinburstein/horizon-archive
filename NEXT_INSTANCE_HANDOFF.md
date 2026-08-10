@@ -356,32 +356,57 @@ exact-next-action authority.
   `8,999 / 34 / 0`. Science authorizes no implementation or execution.
 - Science clarification artifact is `Production Pipeline/First Run/
   FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1-VR-02.md`.
+- Tactical resolved the remaining live graph contradictions as **`PLAYER
+  EXPERIENCE READY / FRPX-003-v1-VR-02`** at source
+  `2a6aef632fed7c9e833b3acbaad36b2c43cb58c2` without changing or executing
+  product, tests, E2E, manifest, copy, or media.
+- Actual source and DOM freeze `LOOK AT -> USE -> TALK TO`. In the valid
+  recovered post-Host-04 `in_progress` hold, enabled sequential focus order is
+  exactly Host 05, `LOOK AT`, `USE`, `TALK TO`, then inventory `Return: Glass
+  Meadow`.
+- Host 05 is the first enabled in-document stop and has no enabled
+  in-document predecessor; reverse traversal crosses the document focus
+  boundary. Genuine focus-visible acceptance uses the real successor edge:
+  keyboard `Tab` moves from recovered Host 05 to `LOOK AT`, then keyboard
+  `Shift+Tab` returns to Host 05. The final target must be active,
+  `:focus-visible`, and exact `3px solid` resolved system `Highlight`, with
+  forced colors/reduced motion active first and no pointer or programmatic
+  target focus evidence.
+- The thirty checks now use Science's strict current-Chromium `q=1/64 CSS px`
+  used-value operator, distinct exact authored `45/75/20/25`, and the exact
+  label model: `2px` from the button inner edge, `3px` from its outer edge
+  across the `1px` button border, label box `S - 6px`, and text box `S -
+  10px`. All six mapping/retention/center/overlap/containment thresholds remain
+  fail-closed and unweakened.
+- Repaired candidate `7e85154`, predecessor lineages, seven placeholders,
+  PBA/media/performance, focus/announcement/recovery, learning/save/route/
+  world/later rail/ending, rollback, external-root cleanup, summary/verifier,
+  and single-E2E boundary remain frozen. Tactical authorizes no repair or run.
+- Tactical clarification artifact is `Production Pipeline/First Run/
+  FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-02.md`.
 
-## Exact next action - Tactical Operations Specialist only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
-then read this handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
-`FRVE-003-v1-VR-01`, `FRSH-003-v1-VR-02`, `FRPX-003-v1-VR-01`, and the
-complete updated `FRCE-003-v1`.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
+`FRPX-003-v1-VR-02`, and the complete updated `FRCE-003-v1`.
 
-Issue exactly one documentation-only `FRPX-003-v1-VR-02` `PLAYER EXPERIENCE
-READY` or `HOLD`. Adopt Science's exact authored-versus-browser-used-value
-model, label box convention, actual `.scene-art` source mapping, and all
-unchanged geometry/quality thresholds.
+Issue exactly one versioned Mission shell redecision: `FIRST RUN SHELL READY`
+or `HOLD`. Reconcile Science's exact used-value/label contract and Tactical's
+actual semantic/focus graph without weakening a threshold or changing product
+behavior.
 
-Freeze the actual enabled order as Host 05, `LOOK AT`, `USE`, `TALK TO`, then
-the remaining lawful controls. Identify the actual element reached by genuine
-`Shift+Tab` from recovered Host 05 and the exact genuine keyboard sequence
-that returns to Host 05. Preserve forced colors/reduced motion before
-traversal, exact active element, `:focus-visible`, `3px solid Highlight`, and
-identity/state. Do not reorder product behavior, invent a predecessor, use
-pointer/programmatic target focus as evidence, or alter geometry. Update this
-handoff to Mission only if ready; Mission must readjudicate before Combat may
-edit or another E2E may run.
+If `READY`, issue an exact Combat-only repair shell for the existing
+probe/summary/verifier expectations. Freeze repaired candidate `7e85154`, all
+seven placeholders, authored `45/75/20/25`, the strict `q=1/64` used-value
+model, inner-`2px`/outer-`3px` label model, action order `LOOK AT -> USE ->
+TALK TO`, and genuine `Tab -> Shift+Tab` focus path via real successor `LOOK
+AT`. State whether and only after which complete pre-live gates Combat receives
+one fresh single-E2E authority. Tactical itself authorizes no repair or run.
 
 Do not write final copy, change a placeholder/CSS/module/media/learning/save/
 route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
-quarantine or user state, begin Mission/Quartermaster, repair City, expand Host
+quarantine or user state, begin Combat/Quartermaster, repair City, expand Host
 06-15, create a schedule/reveal, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
