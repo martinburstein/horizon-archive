@@ -316,27 +316,52 @@ exact-next-action authority.
 - Exact PIDs were stopped, ports are clear, and the external GUID root was
   removed. Combat disposition is **`HOLD / VR-02 LIVE CONTRACT VARIANCE /
   FRCE-003-v1`**. Quartermaster remains blocked.
+- Mission adjudicated the four contradictions as **`HOLD / RETURN TO SCIENCE
+  THEN TACTICAL / FRSH-003-v1-VR-03`** at source
+  `17d0d268b707cb27d560ba2f4085b8313c42862b`.
+- Repaired candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`,
+  predecessors `a9776e3` / `bf58e52`, all seven placeholders, the successful
+  bottom-anchored `44px` repair, actual `.scene-art` mapping, contained label,
+  genuine focus-visible proof, and every player-facing threshold remain
+  frozen. No product change or further E2E is authorized.
+- Science owns the browser-resolved coordinate contract: exact authored
+  `45/75/20/25` must be distinguished from quantized DOMRect facts without
+  tolerance, while inner `2px` label positioning is distinguished from the
+  expected `3px` outer-border distance across the exact `1px` border.
+- After Science `READY`, Tactical owns the released semantic/action and focus
+  graph: preserve actual `LOOK AT -> USE -> TALK TO`, identify the real
+  reverse-tab predecessor and genuine key sequence back to Host 05, and retain
+  exact `3px solid Highlight` focus-visible proof without reordering product
+  behavior or using programmatic focus.
+- Variance routing artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-03.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Office of Science Administrator only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, `FRSH-003-v1-VR-02`, `FRVE-003-v1-VR-01`,
-`FRPX-003-v1-VR-01`, and the complete updated `FRCE-003-v1`.
+Read `First Run Agent Profiles/office-of-science-administrator.md` in full,
+then read this handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-01`,
+`FRSH-003-v1-VR-02`, `FRPX-003-v1-VR-01`, and the complete updated
+`FRCE-003-v1`.
 
-Adjudicate the four exact live contradictions: browser-quantized percentage
-registration, inner positioning versus outer-border label inset, the existing
-`LOOK AT -> USE -> TALK TO` verb order, and the actual reverse-tab predecessor.
-Preserve repaired candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`,
-predecessors `a9776e3` / `bf58e52`, all seven placeholders, the successful
-retained `44px` repair, actual `.scene-art` mapping, genuine Host 05
-focus-visible proof, and every quality threshold.
+Issue exactly one `FRVE-003-v1-VR-02` `POLISH VIABILITY READY` or `HOLD` that
+freezes an exact browser-resolved acceptance model. Preserve authored physical
+`45/75/20/25`, measure actual DOM/source boxes at full precision, preserve the
+bottom-anchored `>=44 x 44` semantic activation and contained
+`56.796875 x 38` label, and distinguish inner `2px` label positioning from its
+expected `3px` outer-border distance across the exact `1px` border.
 
-Obtain Science/Tactical reconciliation that measures the actual browser-
-resolved physical box and real tab sequence without rounding, reordered
-player behavior, programmatic focus, threshold weakening, or alternate media.
-Issue a versioned implementable shell decision or continue HOLD. Do not
-authorize another complete E2E or Quartermaster until the contradiction is
-closed.
+Define how exact declarations and browser-quantized DOM facts are evaluated
+without comparing the DOMRect to independently unquantized arithmetic, adding
+a tolerance, rounding a failure away, or weakening any source, retention,
+overlap, size, containment, overflow, focus, PBA, or media gate. Documentation
+only; authorize no implementation or execution.
+
+If Science returns `READY`, hand exactly to Tactical for
+`FRPX-003-v1-VR-02`: Tactical must preserve actual `LOOK AT -> USE -> TALK
+TO`, identify the real reverse-tab predecessor and genuine keyboard path back
+to Host 05, and preserve exact focus-visible proof without product reorder or
+programmatic focus. Mission must readjudicate both returns before Combat may
+edit or another E2E may run.
 
 Do not write final copy, change a placeholder/CSS/module/media/learning/save/
 route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
