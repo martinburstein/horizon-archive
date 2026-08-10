@@ -2,51 +2,45 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / EXACT SUCCESS-ARTIFACT-AWARE
-TOKEN-BOUND ROOT CLEANUP ONLY / FRSH-003-v1-VR-61`**
+Current disposition: **`FIRST RUN SHELL READY / IN-MEMORY TOKEN DIGEST-DOMAIN
+CORRECTION PROOF ONLY / FRSH-003-v1-VR-62`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-61`
+Immediate control: `FRSH-003-v1-VR-62`
 
-Mission source: `684e133a3d27a43201489f829095ad1ee26f94e1`
+Mission source: `b21fa15be4e3fa12f1daedc498ebfd48ec6c3b79`
 
-VR-60's sole corrected E2E is substantively accepted: exit 0, diagnostic
-inventory exact, failure 0, browser closed, summary 1, verifier attempt/PASS
-1, both PIDs absent, and ports 4173/4184 clear. No retry or failure transport
-ran.
+VR-61 stopped before root or artifact access because its cleanup wrapper
+reported a digest mismatch. No file/root deletion or inspection occurred.
 
-The root remains only because successful E2E is specified to create exactly
-two owned artifacts: `first-run-live-diagnostic.json` and
-`first-run-live-summary.json`. Call 9 correctly made no deletion attempt under
-its empty-root-only contract. Mission records **`REQUIRED CORRECTION / EVIDENCE
-CLEANUP CONTRACT / SUCCESS-ARTIFACT-AWARE ROOT DELETION / OPEN / VR-60 CALL
-9`** as a twelfth separate OPEN classification, not a product/E2E failure.
+Mission's literal in-memory audit proves the supplied digest is correct for
+the Stage-1 contract: it matches the standard-base64 decoded bytes, their
+strict UTF-8 round-trip bytes, and the unchanged normalized-path UTF-8 bytes.
+It does not match the ASCII bytes of the base64 token text or lower/upper-cased
+path UTF-8 variants.
 
-Exact retained authority:
-
-```text
-rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTg1YmRjYmQzLThlZjctNGU3OC1iZGNiLWVjODgxNDFhMDczZQ==
-rootTokenSha256=1c6a6df084f9917a37b27c1035f00929b9457b460aad323d1c4b65882dbd0654
-```
+Mission records **`REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP TOKEN
+DIGEST IMPLEMENTATION / OPEN / VR-61`** as a thirteenth separate OPEN
+classification. This is not token corruption, root ambiguity, or a substantive
+E2E/candidate finding.
 
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-Combat may run one cleanup-only call. Re-prove the token/SHA/root identity.
-Construct only the two literal child paths above; require literal existence,
-ordinary-file identity, and the accepted diagnostic/summary JSON identities;
-delete those exact files; require each absent; then attempt one nonrecursive
-`Directory.Delete(...,$false)` on the exact root and require absence.
+Combat may run one in-memory correction proof only using the literal token and
+digest. Decode base64 to `[byte[]]`, strict-UTF-8 round-trip, pure
+`GetFullPath` normalization without filesystem access, and disposable SHA-256
+over the decoded bytes. Separately prove the base64-ASCII and case-folded
+domains do not match. Emit only the VR-62 scalar.
 
-No directory enumeration, log assumption, alternate file/path, recursive
-deletion, preview, browser, E2E, verifier, root creation, retry, or product/
-media/protected action is authorized. Any undeclared residual artifact makes
-the nonrecursive deletion fail closed.
+No filesystem/root/artifact existence or identity access, deletion,
+enumeration, preview, browser, E2E, verifier, root creation, alternate token,
+or retry is authorized. Cleanup remains deferred until fresh Mission accepts
+an exact digest-domain proof.
 
-The corrected E2E budget is consumed. Cumulative accepted gates, frozen
-candidates/invariants, the eleven prior OPEN classifications, and the new
-VR-60 cleanup-contract classification remain exact. Return VR-61 scalar to
-fresh Mission; no downstream action is authorized.
+The substantive VR-60 E2E PASS, consumed one-E2E budget, frozen candidates/
+gates/invariants, twelve prior OPEN classifications, and new VR-61 digest
+classification remain exact. No downstream action is authorized.
