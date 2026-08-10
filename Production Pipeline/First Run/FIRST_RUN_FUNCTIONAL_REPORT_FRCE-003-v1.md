@@ -4,7 +4,7 @@ Date: **2026-08-10**
 
 Role: **Combat Engineer**
 
-Disposition: **HOLD / VR-05 LIVE IDENTITY-STABILITY VARIANCE**
+Disposition: **PRODUCTION FUNCTIONAL / BUILD CANDIDATE READY**
 
 ## Candidate identity
 
@@ -25,6 +25,8 @@ Disposition: **HOLD / VR-05 LIVE IDENTITY-STABILITY VARIANCE**
   `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`
 - VR-05 validation-control candidate:
   `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
+- VR-07 evidence-control candidate:
+  `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 - Canonical command manifest:
   `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
 
@@ -313,15 +315,74 @@ run. Owned preview PIDs `18612` / `54564` were stopped, ports `4173` / `4184`
 are clear, and the exact external root was removed after containment proof.
 Protected PDF/training/repository-QA/user/media state remained untouched.
 
-## Exact next action
+## VR-07 production-functional return
 
-Mission Captain must adjudicate the VR-05 live identity-stability variance and
-route the probe contract to Tactical if clarification is required. Preserve
-runtime product `7e85154abd8dbf116c4bb84ca66afd859903d750`, probe
-`d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`, validation control
-`4cd7fbf31291671dd28c0743b44a7c49aaad82bb`, every threshold, and all passing
-live facts. Determine whether identity stability must compare layout-relative
-geometry/scroll state or whether the runner must emit exact pre/post boxes and
-scroll offsets before another Combat return. Do not authorize a rerun,
-Quartermaster, threshold weakening, or product change without one versioned,
-evidence-honest contract.
+Combat started from synchronized source
+`705d5a5d5e0b4562c7bd9212bcf92ef17986fe6a`, preserved runtime product
+`7e85154abd8dbf116c4bb84ca66afd859903d750` and validation control
+`4cd7fbf31291671dd28c0743b44a7c49aaad82bb` byte-exact, and changed only the
+two authorized evidence-control files. New committed probe candidate
+`ca89a679195c11d441a76e6c02983a6436f2ccb2` independently proves exact same-
+node semantic/game/no-write identity and exact pre/post viewport, scroll, raw,
+document, and image-relative geometry for all nine required rectangles.
+
+Every measured component and signed delta is on the strict `q=1/64` lattice.
+Within each fixed viewport, raw translation must exactly equal negative scroll
+delta and all document/size residuals must be zero. Every direct registration,
+source, target, label, containment, overlap, overflow, focus, forced-color,
+and reduced-motion gate runs independently before and after traversal. No
+cross-viewport rectangle equality is used.
+
+| Gate | VR-07 result |
+|---|---|
+| Focused / related / cold full | **68/68 / 74/74 / 972/972 PASS** |
+| Validators | **40/40 PASS** |
+| Production / fixture builds | **217 / 57 modules PASS** |
+| PBA | **PASS**: JS `1,666,665`; CSS `119,247`; modules `217` |
+| Media/offline | **PASS**: `17 / 37,410,731`; no map; same-origin requests |
+| Served identity | **2/2 PASS**, root/deep/JS/CSS byte-equal to disk |
+
+The sole authorized complete E2E ran once for `74.8s`, completed clean start,
+the exact later rail, both equal MH-40 outcomes, null deltas, and
+`successor=null`, with zero runtime errors. Maximum sampled task and Host 05
+activation were each `0.20000004768371582ms`, below `100ms` / `2ms`.
+
+All six ordered epochs passed semantic identity, geometry stability, direct
+gates, focus, and aggregate acceptance:
+
+| Epoch | Host 05 | Retention | Scroll delta | Residual |
+|---|---:|---:|---:|---:|
+| desktop | `285.71875 x 200.640625` | `0.994143409485994` | `0,0` | `0` |
+| laptop | `265.703125 x 186.5625` | `0.9938753148562339` | `0,237` | `0` |
+| narrow | `76.796875 x 53.75` | `0.9792862217743568` | `0,0` | `0` |
+| effective-200 | `149.203125 x 104.65625` | `0.990375428260086` | `0,0` | `0` |
+| retained-320x180 | `62.796875 x 44` | `0.9751427261115884` | `0,125` | `0` |
+| retained-320x240 | `62.796875 x 44` | `0.9751427261115884` | `0,0` | `0` |
+
+The two VR-05 failures were therefore viewport-scroll translations, not
+semantic or document-layout drift. The E2E emitted exactly one machine
+summary; the independent verifier ran exactly once and accepted all identities,
+six epochs, strict coordinates, journey, performance, PBA/media, and pass
+state.
+
+Owned PIDs `13260` / `39672` were stopped, ports `4173` / `4184` are clear,
+and external root
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-e096b8c5-3d46-4a9e-81c0-8f64e480a0d1`
+was removed after containment proof. Protected PDF/training/repository-QA/
+browser/profile/save/media state remained untouched.
+
+## Disposition, placeholder ledger, and exact next action
+
+Combat issues **`PRODUCTION FUNCTIONAL / BUILD CANDIDATE READY`** for runtime
+product `7e85154abd8dbf116c4bb84ca66afd859903d750`, validation control
+`4cd7fbf31291671dd28c0743b44a7c49aaad82bb`, and passing evidence candidate
+`ca89a679195c11d441a76e6c02983a6436f2ccb2`. No bounded functional defect or
+variance remains.
+
+Exact next owner is Quartermaster. Replace only the seven explicit nonfinal
+slots—`FRPX03_UNSEEN_INTERFACE`, `FRPX03_AVAILABLE`, `FRPX03_IN_PROGRESS`,
+`FRPX03_MISSED`, `FRPX03_MASTERED`, `FRPX03_RETURNED`, and
+`FRPX03_NEXT_BOUNDARY`—with final-purpose content under every frozen shell,
+treatment, blueprint, behavior, geometry, learning/save/route/ending, media,
+PBA, and accessibility contract. Add no eighth slot, alter no evidence control,
+begin no Host 06 work, perform no image/media operation, and claim no release.

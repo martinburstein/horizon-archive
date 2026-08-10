@@ -546,25 +546,42 @@ exact-next-action authority.
   independent verifier must pass once. Any failure is `HOLD` without rerun.
 - Quartermaster and maturity remain blocked. Reissue artifact is `Production
   Pipeline/First Run/FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-07.md`.
+- Combat committed exact two-file evidence-control candidate
+  `ca89a679195c11d441a76e6c02983a6436f2ccb2`; runtime product `7e85154` and
+  validation control `4cd7fbf` remain byte-exact.
+- Full deterministic evidence passed: focused `68/68`, related `74/74`, cold
+  full `972/972`, validators `40/40`, builds `217/57`, JavaScript `1,666,665`,
+  CSS `119,247`, media `17 / 37,410,731`, and both served identities.
+- The sole VR-07 E2E passed in `74.8s`, emitted exactly one machine summary,
+  and the independent verifier passed exactly once. All six epochs pass same-
+  node semantic/no-write identity, strict document-coordinate zero residual,
+  pre/post direct geometry/source/label/target gates, genuine focus, and
+  reduced motion.
+- The former laptop and retained-320x180 failures are exactly explained by
+  scroll deltas `0,237` and `0,125`; every required raw delta is inverse and
+  every document/size residual is exact zero.
+- Complete journey, both equal MH-40 outcomes, null deltas, `successor=null`,
+  zero runtime errors, same-origin requests, and Host 05 activation
+  `0.20000004768371582ms <= 2ms` pass. Exact PIDs/root were cleaned and ports
+  are clear.
+- Combat superseded `FRCE-003-v1` as **`PRODUCTION FUNCTIONAL / BUILD
+  CANDIDATE READY`**. Quartermaster is now the exact next owner; no release or
+  maturity claim has yet been made.
 
-## Exact next action - Combat Engineer only
+## Exact next action - Quartermaster only
 
-Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, complete `FRSH-003-v1-VR-07`, `FRPX-003-v1-VR-03`,
-`FRSH-003-v1-VR-06`, operative `FRSH-003-v1-VR-04`, complete latest
-`FRCE-003-v1`, and the exact current E2E/manifest controls.
+Read `First Run Agent Profiles/quartermaster.md` in full, then read this
+handoff, complete superseding `FRCE-003-v1`, operative `FRSH-003-v1-VR-07`,
+`FRDT-003-v1`, and `FRPX-003-v1` plus its VR-03 clarification.
 
-Change only `playtest/e2e-playthrough.mjs` and
-`Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
-to implement the exact same-node semantic and document-coordinate scroll/
-residual evidence contract. Freeze one committed evidence-control candidate,
-preserving product `7e85154`, probe predecessor `d9487d82`, and validation
-control `4cd7fbf`. Run the full deterministic ladder from the beginning. Only
-after every gate passes, invoke exactly one fresh GUID-root complete E2E,
-require one machine summary and one independent verifier pass, and clean only
-owned resources. Any failure is `HOLD` without rerun. Do not change product,
-test, placeholder, threshold, media, learning, save, route, world, ending, or
-maturity, or begin Quartermaster.
+Work only from runtime product `7e85154abd8dbf116c4bb84ca66afd859903d750`,
+validation control `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`, and passing evidence-control
+candidate `ca89a679195c11d441a76e6c02983a6436f2ccb2`. Replace exactly the seven
+declared `FRPX03_*` placeholders with final-purpose owner-correct content while
+preserving every functional, geometry, focus, learning, save, route, ending,
+media, PBA, and privacy boundary. Add no eighth slot or new meaning; perform no
+image/media operation; do not begin Host 06, release, maturity acceptance, or
+`FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
