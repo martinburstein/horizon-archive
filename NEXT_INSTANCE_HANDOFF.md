@@ -140,30 +140,57 @@ exact-next-action authority.
   served-identity, and single-E2E proof.
 - Treatment artifact is `Production Pipeline/First Run/
   FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-003-v1.md`.
+- Tactical issued **`PLAYER EXPERIENCE READY / FRPX-003-v1`** at source
+  `af555fb26048aec8f0841c1b099062a6d94911cc` with no requested variance.
+- The blueprint freezes no Host 05 DOM or teaser before exact sanitized Host 04
+  mastery; pure `available`, `in_progress`, `remediation_required`, and
+  `complete` view states; and deterministic fail-closed recovery for forged,
+  malformed, or noncontiguous evidence.
+- Actual semantic order is Host 04, conditional Host 05, return ridge, verbs,
+  owner-labeled status, and the unchanged next continuation. The generic
+  responsible-AI launcher is removed; `LOOK AT`, `TALK TO`, and the sole
+  `USE Sixfold Weir` are native one-hit actions, and completed `USE` is
+  read-only with no modal or write.
+- Detection occurs exactly once after Host 04 Terminal unmount, focuses Host 05,
+  and uses the existing visible polite region for Pilot-first / Suit-confirmed
+  meaning. Close, Escape, miss, primary acknowledgement, transfer,
+  explanation, mastery, reload, Meadow round trip, completed revisit, and
+  malformed recovery now have exact focus and announcement owners.
+- Exact `45/75/20/25` geometry is frozen across all six layouts with live
+  `>=0.95` source retention, dry center, exact zero overlap, `>=44 x 44`,
+  contained label/state, forced-color/non-color/reduced-motion parity, seven
+  Quartermaster meaning slots, and a thirty-point Combat acceptance matrix.
+- Fresh adjacent source baseline remains `43/43`; actual Host 05 DOM, live
+  mapping, computed styles, served identity, manifest, and single-E2E evidence
+  remain Combat-owned.
+- Blueprint artifact is `Production Pipeline/First Run/
+  FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1.md`.
 
-## Exact next action - Tactical Operations Specialist only
+## Exact next action - Combat Engineer only
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md` in full, then
-read this handoff, `FRSH-003-v1`, and `FRDT-003-v1`. Independently inspect the
-exact current Drowned runtime, immutable master/provenance, Host 04 and
-Meadow-return targets, `App.jsx`, `sceneTransition.js`, responsive/focus/modal
-styles, Workload Sort and responsible-AI sanitizers/sessions, save projection,
-and relevant tests.
+Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
+handoff, `FRSH-003-v1`, `FRDT-003-v1`, and `FRPX-003-v1`. Implement exactly one
+bounded `FRWO-003-v1` candidate in the shell-permitted files and systems.
 
-Issue exactly one versioned `PLAYER EXPERIENCE READY`, `REVISE`, or `HOLD` for
-`FRSH-003-v1`. If ready, freeze the complete Host 04-to-05 state and replacement
-graph: pre-mastery DOM absence; pure available/in-progress/remediation/
-complete/return states; Host 04 then Host 05 semantic order; sole `LOOK AT` /
-`TALK TO` / `USE`; generic-launcher removal; one polite detection; all focus,
-announcement, modal, recovery, completed-read-only, and malformed-evidence
-rules; unchanged next continuation; exact `45/75/20/25` source mapping at all
-six layouts; non-color, forced-color, and reduced-motion parity; owner-bounded
-copy slots; and a Combat-ready acceptance matrix.
+Register exact `sixfold-weir` geometry and pure sanitized view state; preserve
+Host 04 then Host 05 order; route sole `LOOK AT` / `TALK TO` / `USE`; remove
+the generic launcher; make completed `USE` read-only; implement the complete
+detection/focus/modal/reload/return/malformed/accessibility contract; preserve
+the seven Quartermaster meaning slots; and create direct focused/related tests
+plus the exact checked-in `FRRC-002-v1` manifest.
 
-Do not write final prose, implement product/test code, inspect the repository QA
-quarantine, change media, alter learning/save/route/world/ending, repair the
-City contradiction, expand Host 06-15, advance maturity, begin Combat, create
-a schedule, or call `FIRST RUN COMPLETE`.
+Run the manifest-defined ladder: focused, related, cold full, exact forty
+validators, both builds and strict previews, served identity, narrow/global
+PBA, exact immutable media/offline/privacy, one external-GUID-root complete
+E2E, machine-owned six-layout live summary and verifier, exact cleanup, and
+candidate identity. Issue `BUILD CANDIDATE READY`, `REVISE`, or `HOLD`, update
+this handoff, commit only authorized Combat scope, push `main`, and prove
+`HEAD == origin/main`.
+
+Do not write final prose, inspect the repository QA quarantine, change media,
+alter learning/save/route/world/ending, repair the City contradiction, expand
+Host 06-15, advance maturity, begin Quartermaster, create a schedule, or call
+`FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
