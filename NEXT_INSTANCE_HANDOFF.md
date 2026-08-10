@@ -165,27 +165,45 @@ exact-next-action authority.
   remain Combat-owned.
 - Blueprint artifact is `Production Pipeline/First Run/
   FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1.md`.
+- Combat implemented bounded Host 05 and froze candidate
+  `a9776e337f1820776864a5690332c364d0fb2556`. Focused `67/67`, related
+  `74/74`, cold full `971/971`, all forty validators, both builds, narrow and
+  global PBA, accepted media identity, and both served identities passed.
+- The one authorized complete E2E stopped at `45.1s` after Host 05 primary
+  acknowledgement because the harness still awaited an inherited Teacher
+  speaker label instead of the shell-owned `FRPX03_IN_PROGRESS` placeholder.
+  No machine live summary was emitted, so six-layout, later-rail, both MH-40
+  outcomes, runtime aggregate, and performance acceptance remain unproved.
+- Combat corrected that assertion and the analogous mastery assertion in
+  exact candidate `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`; `node --check` and the
+  focused `67/67` suite pass. The complete E2E was not rerun under the shell's
+  one-run boundary.
+- Combat therefore issued **`HOLD / REVISE LIVE HARNESS / FRCE-003-v1`**.
+  Quartermaster is not authorized to begin.
+- Functional report is `Production Pipeline/First Run/
+  FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1.md`.
 
 ## Exact next action - Combat Engineer only
 
 Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, `FRSH-003-v1`, `FRDT-003-v1`, and `FRPX-003-v1`. Implement exactly one
-bounded `FRWO-003-v1` candidate in the shell-permitted files and systems.
+handoff, `FRSH-003-v1`, `FRDT-003-v1`, `FRPX-003-v1`, and `FRCE-003-v1`.
+Verify exact corrected candidate
+`bf58e528bc6ce4088f81f2c782ce2895259ab9fd`; do not rebuild or expand Host 05
+unless a newly observed variance requires a shell-lawful repair.
 
-Register exact `sixfold-weir` geometry and pure sanitized view state; preserve
-Host 04 then Host 05 order; route sole `LOOK AT` / `TALK TO` / `USE`; remove
-the generic launcher; make completed `USE` read-only; implement the complete
-detection/focus/modal/reload/return/malformed/accessibility contract; preserve
-the seven Quartermaster meaning slots; and create direct focused/related tests
-plus the exact checked-in `FRRC-002-v1` manifest.
+Run `FRRC-002-v1` from a fresh GUID OS-temp QA root proved outside the
+repository: focused, related, cold full, exact forty validators, both builds
+and strict previews, served identity, narrow/global PBA, exact immutable
+media/offline/privacy, one complete E2E, machine-owned six-layout live summary
+and verifier, complete later rail, both equal MH-40 outcomes, `<=2ms` Host 05
+activation, exact cleanup, and unchanged candidate identity.
 
-Run the manifest-defined ladder: focused, related, cold full, exact forty
-validators, both builds and strict previews, served identity, narrow/global
-PBA, exact immutable media/offline/privacy, one external-GUID-root complete
-E2E, machine-owned six-layout live summary and verifier, exact cleanup, and
-candidate identity. Issue `BUILD CANDIDATE READY`, `REVISE`, or `HOLD`, update
-this handoff, commit only authorized Combat scope, push `main`, and prove
-`HEAD == origin/main`.
+If every gate passes, supersede `FRCE-003-v1` with an evidence-complete
+`PRODUCTION FUNCTIONAL / BUILD CANDIDATE READY` report and hand the exact
+accepted candidate to Quartermaster. If any gate varies, stop on the first
+variance and issue a new evidence-honest `REVISE` or `HOLD` without advancing.
+Commit only authorized Combat verification/report scope, push `main`, and
+prove `HEAD == origin/main`.
 
 Do not write final prose, inspect the repository QA quarantine, change media,
 alter learning/save/route/world/ending, repair the City contradiction, expand
