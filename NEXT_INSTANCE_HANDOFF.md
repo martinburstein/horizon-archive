@@ -37,7 +37,7 @@ exact-next-action authority.
   Meadow master remain recorded in `FRAB-002-v1`.
 - This is not `FIRST RUN COMPLETE`; no whole-game completion sweep has passed.
 
-## Commandant and Colonel planning state
+## Commandant, Colonel, and Operations planning state
 
 - Commandant issued **`FIRST RUN VISION BASELINE REAFFIRMED /
   FRPB-001-v1-GR-02`**. No baseline reopen trigger exists.
@@ -65,42 +65,63 @@ exact-next-action authority.
 - Hosts 17-38 and the Measured Horizon literary close remain incomplete. MH-40,
   equal outcomes, null deltas, no world response, and `successor=null` remain
   exact.
-- Current release map/scoreboard remain `FRRM-002-v2` / `FRSB-002-v2`. No next
-  Work Order is selected or authorized.
+- Operations issued **`WORK ORDER READY / FRWO-003-v1 / Sixfold Weir`** at
+  source `9dc10d2e807b7950c8a59bfbffa05343b77bb7f1`.
+- The selected boundary is `FR-03 / Host 05` only: one distinct six-branch
+  relationship, the Host 04-to-05 physical handoff, and the sole existing
+  `L02-02` entry/recovery/resume/presentation. No maturity cell advances from
+  planning.
+- Accepted Drowned provenance makes one immutable-media pass plausible but not
+  proven. Science must establish a truthful distinct reachable region at every
+  crop or issue `HOLD`; no new or altered media is an alternative.
+- Hosts 06-15 and the full Crown turn remain grouped deferrals. No automatic
+  repeated one-host template is authorized; Operations must reassess
+  convergence from accepted as-built evidence.
+- Current release map/scoreboard are `FRRM-003-v1` / `FRSB-003-v1`.
 - Continuity artifact is `Production Pipeline/First Run/
   FIRST_RUN_CONTINUITY_LOCK_FRCL-003-v1.md`.
+- Work Order artifact is `Production Pipeline/First Run/
+  FIRST_RUN_WORK_ORDER_FRWO-003-v1.md`.
 
-## Exact next action - Operations Planning Major only
+## Exact next action - Office of Science Administrator only
 
-Use a fresh Operations Planning Major context. Read
-`First Run Agent Profiles/operations-planning-major.md` in full, then read this
-handoff, `FRPB-001-v1`, `FRPB-001-v1-GR-01`, `FRPB-001-v1-GR-02`,
-`FRAB-001-v1`, `FRAB-002-v1`, `FRCL-003-v1`, current `FRRM-002-v2` /
-`FRSB-002-v2`, the complete protected game-on-paper, current surface/runtime
-evidence for the candidate address and invariant radius, and exact TD-012 hard-
-stop controls.
+Use a fresh Office of Science Administrator context. Read
+`First Run Agent Profiles/office-of-science-administrator.md` in full, then
+read this handoff, `FRWO-003-v1`, `FRPB-001-v1`, both guarded revalidations,
+`FRAB-001-v1`, `FRAB-002-v1`, `FRCL-003-v1`, current `FRRM-003-v1` /
+`FRSB-003-v1`, the complete protected game-on-paper, Drowned surface/visual/
+provenance authorities, exact current Host 04-to-`L02-02` runtime and tests,
+responsible-AI evaluator/sanitizer/save controls, Drowned return/later sequence,
+exact PBA/media authority, and TD-012 hard-stop controls.
 
-Answer exactly one question:
+Independently answer all ten Work Order viability questions, including:
 
-> What is the earliest justified integration-sized vertical-quality address
-> after exact `FR-02`, given that `FR-03` has one accepted shared Host 04
-> compression but missing hosts 05-15, `FR-04` has an unadvanced Witness
-> physical-host cell, and `FR-05` has a later active copy contradiction over an
-> otherwise exact direct route; and can one truthful bounded pass at the
-> selected address remain inside immutable-media, fixed-route, fixed-learning,
-> fixed-save/world, and fixed-ending authority?
+- whether the accepted plate and provenance support one distinct dry-reachable
+  six-branch Host 05 without repurposing Host 04, the return ridge, submerged
+  inaccessible machinery, or the distant Tidal Lens;
+- exact wide/narrow geometry, crop/source retention, non-overlap, containment,
+  target size, and accessible-state constraints;
+- pure post-Host-04 state derivation, sole `L02-02` entry, evidence/privacy/
+  save/recovery invariance, focus/fallback ownership, and owner-correct meaning
+  slots;
+- exact JS/CSS/module/task/offline/media budgets and focused/related/full/
+  validator/build/served/live/E2E proof;
+- the command-manifest `TUNE` for a fresh external QA root and machine-readable
+  live summary; and
+- exact rollback to released product candidate
+  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`.
 
-Revalidate earliest-first order against actual evidence. Select exactly one
-bounded vertical-quality Work Order and update the release map/scoreboard only
-within Operations authority, or issue `REVISE` / `HOLD` if no truthful bounded
-pass is viable. State the player-facing outcome, dependency rationale,
-integration-sized boundary, retained deferrals, and immutable-media fit.
+Issue exactly one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
+artifact. If viable, define one complete fail-closed envelope and exact Mission
+handoff without changing the Work Order. If one distinct honest Host 05 cannot
+be proven inside immutable media and fixed learning/save/route/world/ending
+authority, issue `HOLD`; do not substitute a later address or technical trick.
 
-Do not prebuild implementation, write final copy, choose a technical solution,
-promote a physical-host cell, change canon/learning/route/save/world/ending
-behavior, repair the City sentence outside a selected lawful scope, create a
-viability envelope or shell, perform image/media work, begin Science or
-production, create a reveal or schedule, or call `FIRST RUN COMPLETE`.
+Do not write final copy, implement production, create the Mission shell,
+advance maturity, repair the City contradiction, expand Host 06-15, change
+canon/learning/route/save/world/ending behavior, perform image/media work,
+begin Mission/production, create a reveal/schedule, or call
+`FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 

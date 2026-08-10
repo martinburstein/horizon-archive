@@ -1,12 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-002-v2`
+Scoreboard ID: `FRSB-003-v1`
 
 Current release authority: `FRAB-002-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v1` / `FRCL-002-v1`
+Baseline / lock: `FRPB-001-v1` / `FRCL-003-v1`
 
-Release map: `FRRM-002-v2`
+Release map: `FRRM-003-v1`
+
+Operations source: `9dc10d2e807b7950c8a59bfbffa05343b77bb7f1`
 
 Released product/test candidate: `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`
 
@@ -16,8 +18,10 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-002-v1 / The Third Coupling`.
 
-No next Work Order is selected. Commandant guarded baseline revalidation is
-the exact next stage.
+Selected bounded Work Order: `FRWO-003-v1 / Sixfold Weir`.
+
+No maturity cell advances from planning. The Office of Science Administrator
+is the exact next stage.
 
 ## Reading the matrix
 
@@ -43,7 +47,7 @@ complete.
 | `FR-00` Package | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Truthful complete-game launcher/guide independently released; Demo Tour remains separate |
 | `FR-01` Opening | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Final-purpose save/name/prologue/resume and Chapter I reveal independently released |
 | `FR-02` Glass Meadow | `FR2` | `FR2` — 3 exact | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-002-v1` independently releases the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, responsive/accessibility presentation, unchanged route/save/world, and exact `44px` departure |
-| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 11 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Crown/outflow/local-evidence meaning released; host collapse remains |
+| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 11 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Crown/outflow/local-evidence meaning released; host collapse remains. `FRWO-003-v1` selects Host 05 only; no cell advances from selection |
 | `FR-04` Witness Corridor | `FR2` | `FR0` — unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
 | `FR-05` City Threshold | `FR0` | `FR0` — 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -85,7 +89,12 @@ complete.
 
 ## Next lawful advancement
 
-A fresh Commandant must perform one guarded revalidation of `FRPB-001-v1`
-against `FRAB-002-v1`, the exact released candidate, current runtime, updated
-map/scoreboard, protected complete-game script, and TD-012. No next Work Order
-is selected or authorized here.
+Science must test `FRWO-003-v1` against the accepted Drowned plate and
+provenance, exact Host 04-to-05 order, current `L02-02` state/evidence/privacy/
+save behavior, all input and responsive modes, performance/offline budgets,
+the later Drowned invariant radius, and MH-40. A viable future accepted result
+could record Host 05 as one exact distinct relationship while leaving the
+address physical-host cell at `FR0` with one accepted compression and ten
+missing hosts. Only Intelligence may record that as-built change or release
+proof. Science must issue `HOLD` if the distinct relationship cannot be proven
+without new/altered media or another forbidden change.
