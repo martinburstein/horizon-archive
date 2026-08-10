@@ -1,32 +1,54 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildMeadowDeparturePresentation, buildSceneArrivalAnnouncement } from "../src/sceneTransition.js";
+import {
+  buildMeadowDeparturePresentation,
+  buildMeadowReturnPresentation,
+  buildSceneArrivalAnnouncement,
+  FRPX02_COPY,
+} from "../src/sceneTransition.js";
 
 const appSource = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const styleSource = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
 test("completed Meadow presents Nursery-owned optional state and a destination-aware departure", () => {
   assert.deepEqual(buildMeadowDeparturePresentation("The Drowned Archive"), {
-    summary: "ROUTE OPEN // Scored calibration is available at the Fracture Nursery coupling; departure remains open.",
+    summary: FRPX02_COPY.AVAILABLE,
     departureLabel: "Depart: Drowned Archive",
     departureAriaLabel: "Depart for Chapter II, The Drowned Archive",
   });
   assert.deepEqual(buildMeadowDeparturePresentation("The Drowned Archive", {
     calibrationState: "complete",
   }), {
-    summary: "ROUTE OPEN // Calibration evidence is finalized. The fractured stock and field remain unchanged; departure remains open.",
+    summary: FRPX02_COPY.COMPLETE,
     departureLabel: "Depart: Drowned Archive",
     departureAriaLabel: "Depart for Chapter II, The Drowned Archive",
   });
-  assert.match(buildMeadowDeparturePresentation("The Drowned Archive", { calibrationState: "in_progress" }).summary, /human working copy is unfinished/);
+  assert.equal(buildMeadowDeparturePresentation("The Drowned Archive", { calibrationState: "in_progress" }).summary, FRPX02_COPY.IN_PROGRESS);
 });
 
 test("optional calibration handoff distinguishes optional launch from strict mastery", () => {
   const presentation = buildMeadowDeparturePresentation("The Drowned Archive");
-  assert.match(presentation.summary, /Scored calibration is available at the Fracture Nursery coupling/);
-  assert.match(presentation.summary, /departure remains open/);
+  assert.match(presentation.summary, /Optional scored calibration is available at the Fracture Nursery coupling/);
+  assert.match(presentation.summary, /Departure is already open/);
   assert.doesNotMatch(presentation.summary, /not easy or unscored/);
+});
+
+test("the twelve Quartermaster slots are final, owner-bounded, and return-truthful", () => {
+  assert.deepEqual(Object.keys(FRPX02_COPY), [
+    "MEADOW_ALT", "NURSERY_NAME", "NURSERY_STATE", "DETECTION", "CHAPTER_TURN", "LOOK",
+    "TALK", "AVAILABLE", "IN_PROGRESS", "COMPLETE", "RETURN", "DEPARTURE",
+  ]);
+  assert.equal(FRPX02_COPY.NURSERY_NAME, "Fracture Nursery coupling");
+  assert.deepEqual(FRPX02_COPY.NURSERY_STATE, {
+    available: "available", in_progress: "in progress", complete: "complete",
+  });
+  assert.match(FRPX02_COPY.DETECTION, /classified[\s\S]*No material change detected/);
+  assert.match(FRPX02_COPY.CHAPTER_TURN, /Three unlike bodies[\s\S]*expedition interface[\s\S]*came with us/);
+  assert.match(FRPX02_COPY.COMPLETE, /^SYSTEM \/\/[\s\S]*SCENE \/\//);
+  assert.match(buildMeadowReturnPresentation("available"), /^SCENE \/\/[\s\S]*SUIT \/\//);
+  assert.match(buildMeadowReturnPresentation("in_progress"), /working copy is unfinished and can resume here/);
+  assert.match(buildMeadowReturnPresentation("complete"), /every crack remains[\s\S]*evidence remains finalized/);
 });
 
 test("arrival announcement is chapter and destination aware without adding story detail", () => {

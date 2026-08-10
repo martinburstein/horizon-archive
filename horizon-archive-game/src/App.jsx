@@ -180,9 +180,11 @@ import { deriveFractureNurseryState, deriveMeadowRouteMarkerState, MEADOW_PIXEL_
 import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
+  buildMeadowReturnPresentation,
   buildSceneArrivalAnnouncement,
   canReturnToCompletedMeadow,
   DROWNED_ARCHIVE_RETURN_HOTSPOT,
+  FRPX02_COPY,
   getForwardSceneIndex,
 } from "./sceneTransition.js";
 import { getResumeState, validateAnswer } from "./gameLogic.js";
@@ -912,6 +914,7 @@ function getHotspotStyle(hotspot) {
 }
 
 function getDialogueSpeaker(owner) {
+  if (owner === "scene") return "SCENE // OBSERVATION";
   if (owner === "system") return "SYSTEM // EXPEDITION STATE";
   if (owner === "teacher") return "901 TEACHER // SOURCE-GROUNDED COURSE";
   return "PILOT // FLIGHT RECORDER";
@@ -1135,7 +1138,7 @@ export function App() {
     primary: true,
   }, ...(scene.secondaryHotspots ?? []), ...(scene.id === "meadow" && fractureNurseryState !== "hidden" ? [{
     id: "fracture-nursery",
-    label: "Fracture Nursery coupling",
+    label: FRPX02_COPY.NURSERY_NAME,
     hotspot: MEADOW_PIXEL_HOTSPOTS.fractureNursery,
   }] : [])];
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
@@ -1144,7 +1147,8 @@ export function App() {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
     const isFractureNursery = scene.id === "meadow" && hotspot.id === "fracture-nursery";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
-    const nurseryLabel = isFractureNursery ? ` // ${fractureNurseryState.replace("_", " ").toUpperCase()}` : "";
+    const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
+    const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
     return (
       <button
         key={hotspot.id}
@@ -1157,7 +1161,7 @@ export function App() {
         style={getHotspotStyle(hotspot.hotspot)}
         onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
         disabled={terminalOpen || (pendingAdvance && !isFractureNursery)}
-        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${fractureNurseryState.replace("_", " ")}` : ""}`}
+        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${nurseryStateLabel}` : ""}`}
       >
         <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}</span>
       </button>
@@ -1528,10 +1532,7 @@ export function App() {
     const saved = loadSave();
     if (!saved) return beginNewGame();
     const resumedScene = scenes[saved.sceneIndex];
-    const resumedMeadowDeparture = buildMeadowDeparturePresentation(
-      scenes[saved.sceneIndex + 1]?.location,
-      { calibrationState: deriveFractureNurseryState(saved.routeMarkerMastery, saved.calibrationMastery) },
-    );
+    const resumedNurseryState = deriveFractureNurseryState(saved.routeMarkerMastery, saved.calibrationMastery);
     setCharacterName(saved.opening.characterName);
     setCharacterNameDraft(saved.opening.characterName);
     setCharacterNameError("");
@@ -1539,7 +1540,7 @@ export function App() {
     setSceneIndex(saved.sceneIndex);
     setCompleted(saved.completed);
     setDialogue(saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered"
-      ? resumedMeadowDeparture.summary
+      ? buildMeadowReturnPresentation(resumedNurseryState)
       : saved.pendingSceneId
         ? resumedScene.success
         : saved.sceneIndex === 0 && saved.exerciseEvidence?.completed !== true && saved.opening.step === "playing"
@@ -2823,7 +2824,6 @@ export function App() {
       sanitizeRouteMarkerMastery(routeMarkerMastery),
       sanitizeCalibrationMastery(calibrationMastery),
     );
-    const returnPresentation = buildMeadowDeparturePresentation(scenes[1].location, { calibrationState: returnState });
     if (returnState === "in_progress") fractureNurseryFocusPendingRef.current = true;
     else resumeContinueFocusPendingRef.current = true;
     setPendingAdvance(returnPatch.pendingAdvance);
@@ -2834,7 +2834,7 @@ export function App() {
     setCalibrationSession(returnPatch.calibrationSession);
     setSceneIndex(returnPatch.sceneIndex);
     setVerb(returnPatch.verb);
-    setDialogue(returnPresentation.summary, "system");
+    setDialogue(buildMeadowReturnPresentation(returnState), "system");
     setSceneAnnouncement(buildSceneArrivalAnnouncement(meadowScene));
   }
 
@@ -2842,15 +2842,15 @@ export function App() {
     if (scene.id === "meadow" && hotspotId === "fracture-nursery") {
       if (fractureNurseryState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") {
-        setDialogue("Rejected cloudy forms, imperfect sleeves, fused edges, and low collars remain beside the feed and return channels.", "system");
+        setDialogue(FRPX02_COPY.LOOK, "scene");
         return;
       }
       if (verb === "TALK TO") {
-        setDialogue("The repair stock is completely silent. Nothing in the material changes.", "pilot");
+        setDialogue(FRPX02_COPY.TALK, "pilot");
         return;
       }
       if (fractureNurseryState === "complete") {
-        setDialogue("Calibration evidence is finalized. The cracks and field remain unchanged; departure remains open.", "system");
+        setDialogue(FRPX02_COPY.COMPLETE, "system");
         return;
       }
       openCalibration();
@@ -3096,7 +3096,7 @@ export function App() {
     const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
     setCompleted(nextCompleted);
     fractureNurseryFocusPendingRef.current = true;
-    setDialogue("SUIT // One compatible local coupling is now classified. PILOT // Three unlike bodies; one expedition interface.", "system");
+    setDialogue(`SUIT // ${FRPX02_COPY.DETECTION} PILOT // ${FRPX02_COPY.CHAPTER_TURN}`, "system");
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
     setRouteSession(null);
@@ -4059,7 +4059,7 @@ export function App() {
             <img
               className="scene-art glass-meadow-art"
               src={glassMeadowImage}
-              alt="An immense, perfectly flat field of cultivated transparent glass with low repair stock beneath a bright sky, viewed in first person"
+              alt={FRPX02_COPY.MEADOW_ALT}
             />
             {hotspotButtons}
           </>

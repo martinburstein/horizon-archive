@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { deriveFractureNurseryState, MEADOW_PIXEL_HOTSPOTS } from "../src/pixelMeadow.js";
+import { FRPX02_COPY } from "../src/sceneTransition.js";
 import { calibrationExercise, sanitizeCalibrationMastery } from "../src/calibrationExercise.js";
 import { routeMarkerExercise, sanitizeRouteMarkerMastery } from "../src/routeMarkerExercise.js";
 
@@ -57,7 +58,8 @@ test("pre-Marker Nursery is absent and completed Meadow exposes only its target 
   assert.match(app, /disabled=\{terminalOpen \|\| \(pendingAdvance && !isFractureNursery\)\}/);
   assert.match(app, /disabled=\{pendingAdvance && !\(scene\.id === "meadow" && fractureNurseryState !== "hidden"\)\}/);
   assert.match(app, /data-fracture-nursery-state=\{isFractureNursery \? fractureNurseryState : undefined\}/);
-  assert.match(app, /aria-label=\{`\$\{verb\.toLowerCase\(\)\} \$\{hotspot\.label\}[\s\S]*?fractureNurseryState\.replace/);
+  assert.match(app, /const nurseryStateLabel = isFractureNursery \? FRPX02_COPY\.NURSERY_STATE\[fractureNurseryState\]/);
+  assert.match(app, /aria-label=\{`\$\{verb\.toLowerCase\(\)\} \$\{hotspot\.label\}[\s\S]*?nurseryStateLabel/);
 });
 
 test("LOOK TALK and sole USE preserve bounded action semantics", () => {
@@ -65,9 +67,9 @@ test("LOOK TALK and sole USE preserve bounded action semantics", () => {
     app.indexOf('if (scene.id === "meadow" && hotspotId === "fracture-nursery")'),
     app.indexOf('if (scene.id === "automaton")'),
   );
-  assert.match(handler, /verb === "LOOK AT"[\s\S]*?Rejected cloudy forms[\s\S]*?return;/);
-  assert.match(handler, /verb === "TALK TO"[\s\S]*?completely silent[\s\S]*?return;/);
-  assert.match(handler, /fractureNurseryState === "complete"[\s\S]*?evidence is finalized[\s\S]*?return;/);
+  assert.match(handler, /verb === "LOOK AT"[\s\S]*?FRPX02_COPY\.LOOK[\s\S]*?"scene"[\s\S]*?return;/);
+  assert.match(handler, /verb === "TALK TO"[\s\S]*?FRPX02_COPY\.TALK[\s\S]*?"pilot"[\s\S]*?return;/);
+  assert.match(handler, /fractureNurseryState === "complete"[\s\S]*?FRPX02_COPY\.COMPLETE[\s\S]*?"system"[\s\S]*?return;/);
   assert.match(handler, /openCalibration\(\);\s*return;/);
   assert.match(app, /function openCalibration\(\) \{\s*if \(scene\.id !== "meadow" \|\| !\["available", "in_progress"\]\.includes\(fractureNurseryState\)\) return;/);
   assert.doesNotMatch(app, /Optional calibration|Resume optional calibration|calibration-launch/);
@@ -77,7 +79,7 @@ test("detection mastery return and reload use deterministic nonpersisted focus",
   assert.match(app, /const fractureNurseryRef = useRef\(null\)/);
   assert.match(app, /const fractureNurseryFocusPendingRef = useRef\(false\)/);
   assert.match(app, /fractureNurseryFocusPendingRef\.current = false;\s*fractureNurseryRef\.current\?\.focus/);
-  assert.match(app, /function acknowledgeRouteMastery[\s\S]*?fractureNurseryFocusPendingRef\.current = true;[\s\S]*?One compatible local coupling is now classified/);
+  assert.match(app, /function acknowledgeRouteMastery[\s\S]*?fractureNurseryFocusPendingRef\.current = true;[\s\S]*?FRPX02_COPY\.DETECTION[\s\S]*?FRPX02_COPY\.CHAPTER_TURN/);
   assert.match(app, /function acknowledgeCalibrationMastery[\s\S]*?fractureNurseryFocusPendingRef\.current = true;/);
   assert.match(app, /deriveFractureNurseryState\(saved\.routeMarkerMastery, saved\.calibrationMastery\) === "in_progress"/);
   assert.match(app, /if \(returnState === "in_progress"\) fractureNurseryFocusPendingRef\.current = true;\s*else resumeContinueFocusPendingRef\.current = true;/);
@@ -102,8 +104,9 @@ test("Nursery state focus and narrow controls retain non-color meaning and minim
 
 test("accepted Meadow plate stays immutable and alt reports visible repair stock without interactivity", () => {
   assert.match(app, /glass-meadow-integrated-terminal-master-v1\.png/);
-  assert.match(app, /alt="An immense, perfectly flat field of cultivated transparent glass with low repair stock beneath a bright sky, viewed in first person"/);
-  assert.doesNotMatch(app, /alt="[^"]*(interactive|awake|responsive|Fracture Nursery)/i);
+  assert.match(app, /alt=\{FRPX02_COPY\.MEADOW_ALT\}/);
+  assert.match(FRPX02_COPY.MEADOW_ALT, /perfectly flat field[\s\S]*rejected cloudy forms[\s\S]*fused repair stock[\s\S]*first person/);
+  assert.doesNotMatch(FRPX02_COPY.MEADOW_ALT, /interactive|awake|responsive|Fracture Nursery/i);
 });
 
 test("FRRC-001-v1 freezes one complete reproducible release ladder", () => {

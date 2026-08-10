@@ -300,10 +300,10 @@ print("Operator:", learner)`);
 
   await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
   await sampleActivation(page.getByRole("button", { name: "look at Fracture Nursery coupling, available", exact: true }), "Nursery LOOK", mainThreadSamples);
-  await page.getByText("Rejected cloudy forms", { exact: false }).waitFor();
+  await page.getByText("Clouded test-fractures", { exact: false }).waitFor();
   await page.getByRole("button", { name: "TALK TO", exact: true }).click();
   await sampleActivation(page.getByRole("button", { name: "talk to Fracture Nursery coupling, available", exact: true }), "Nursery TALK", mainThreadSamples);
-  await page.getByText("completely silent", { exact: false }).waitFor();
+  await page.getByText("Complete silence", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
   const preReturnEvidence = await page.evaluate(({ key }) => {

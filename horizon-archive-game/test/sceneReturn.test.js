@@ -151,7 +151,7 @@ test("return preserves evidence, restores the earned hold, and announces and foc
   assert.match(returnBlock[1], /resumeContinueFocusPendingRef\.current = true/);
   assert.match(returnBlock[1], /setPendingAdvance\(returnPatch\.pendingAdvance\)/);
   assert.match(returnBlock[1], /setSceneIndex\(returnPatch\.sceneIndex\)/);
-  assert.match(returnBlock[1], /setDialogue\(returnPresentation\.summary, "system"\)/);
+  assert.match(returnBlock[1], /setDialogue\(buildMeadowReturnPresentation\(returnState\), "system"\)/);
   assert.match(returnBlock[1], /setSceneAnnouncement\(buildSceneArrivalAnnouncement\(meadowScene\)\)/);
   assert.doesNotMatch(returnBlock[1], /set(?:ExerciseEvidence|WorkloadEvidence|EvidencePacketMastery|RouteMarkerMastery|CalibrationMastery|ResponsibleAIEvidence|ModelChoiceEvidence|StructuredPacketEvidence|ControlFlowEvidence|ClientBridgeEvidence|TextAnalysisEvidence|SpeechEvidence|VisualEvidence|ExtractionEvidence|PortalEvidence|PromptEvidence|ClientBoundaryEvidence|SingleAgentEvidence|TextSpeechPatternEvidence|VisualPatternEvidence|ObjectiveLedgerEvidence|RemediationPlannerEvidence|CapstoneReadinessEvidence|MixedSimulationEvidence)\(/);
   assert.match(appSource, /const nextSceneIndex = getForwardSceneIndex\(scene\.id, completed\.length\)/);
@@ -160,7 +160,7 @@ test("return preserves evidence, restores the earned hold, and announces and foc
 
 test("resuming the returned completed Meadow announces Chapter I while retaining departure focus", () => {
   assert.match(appSource, /saved\.pendingSceneId === "meadow" && saved\.routeMarkerMastery\?\.masteryStatus === "mastered"\) \{[\s\S]*?resumeContinueFocusPendingRef\.current = true;[\s\S]*?setSceneAnnouncement\(buildSceneArrivalAnnouncement\(resumedScene\)\)/);
-  assert.match(appSource, /setDialogue\(saved\.pendingSceneId === "meadow"[\s\S]*?resumedMeadowDeparture\.summary/);
+  assert.match(appSource, /setDialogue\(saved\.pendingSceneId === "meadow"[\s\S]*?buildMeadowReturnPresentation\(resumedNurseryState\)/);
   assert.match(appSource, /setRouteMarkerMastery\(saved\.routeMarkerMastery\)/);
   assert.match(appSource, /setCalibrationMastery\(saved\.calibrationMastery\)/);
 });
