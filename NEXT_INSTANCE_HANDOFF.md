@@ -241,40 +241,59 @@ exact-next-action authority.
   `:focus-visible` evidence before Mission readjudicates.
 - Science variance artifact is `Production Pipeline/First Run/
   FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1-VR-01.md`.
+- Tactical issued **`PLAYER EXPERIENCE READY / FRPX-003-v1-VR-01`** at source
+  `969e5db71da378d1aa36377c2e8b41b5cdbec2c9` without changing product, test,
+  harness, manifest, media, copy, or thresholds.
+- Physical Host 05 registration remains exact `45/75/20/25` relative to the
+  equal `.scene-world-content` / `.scene-art` content box. Source mapping now
+  derives only from `.scene-art.getBoundingClientRect()`, natural dimensions,
+  and computed `object-fit: cover` / `object-position`; `.scene-frame` is
+  recorded separately and never supplies a source transform.
+- All six expected frame/content, physical registration, semantic activation,
+  label, actual cover sample/center, nominal-anchor containment, retention,
+  Host 04/return overlap, minimum-size, and overflow results are exact. The
+  retained semantic activation is `62.796875 x 44`, bottom-aligned after an
+  exact `0.09375px` upward expansion; physical registration remains
+  `62.796875 x 43.90625` and is never rounded.
+- Forced-color acceptance now enters forced colors and reduced motion before
+  focus, sends no pointer event, and uses genuine keyboard
+  `Shift+Tab -> Tab` from the deterministic cyclic `Return: Glass Meadow`
+  predecessor to Host 05. Host 05 must be active, match `:focus-visible`, and
+  compute an exact `3px solid` browser-resolved system `Highlight` outline at
+  every layout, with identity/state/order unchanged.
+- Focus, announcement, recovery, seven meaning slots, PBA/media, candidates
+  `a9776e3` / `bf58e52`, thirty acceptance checks, machine summary/verifier,
+  rollback, and single-E2E boundaries are reconciled without weakening.
+  Tactical authorizes no repair and no E2E.
+- Clarification artifact is `Production Pipeline/First Run/
+  FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-01.md`.
 
-## Exact next action - Tactical Operations Specialist only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
-then read this handoff, `FRSH-003-v1-VR-01`,
-`FRVE-003-v1-VR-01`, `FRVE-003-v1`, `FRSH-003-v1`, `FRPX-003-v1`, and
-complete `FRCE-003-v1` without changing product or test state.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, `FRSH-003-v1-VR-01`, `FRVE-003-v1-VR-01`,
+`FRPX-003-v1-VR-01`, original `FRVE-003-v1` / `FRSH-003-v1` /
+`FRPX-003-v1`, and complete `FRCE-003-v1`. Reconcile the two planning returns
+against exact candidates `a9776e3` / `bf58e52` and issue exactly one new
+versioned shell `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`.
 
-Issue exactly one versioned `FRPX-003-v1-VR-01` clarification or `HOLD`.
-Freeze source-transform measurement from actual rendered
-`.scene-art.getBoundingClientRect()` plus computed `object-fit` and
-`object-position`, never `.scene-frame`. Separately record the frame border
-box, hotspot containing block, image element, exact `45/75/20/25` physical
-registration, semantic activation, label/state, Host 04, and return rectangles.
-Preserve the normalized and nominal source anchors while reporting the actual
-cover-transformed source sample, `>=0.95` retention, contained center, exact
-zero overlap, `>=44 x 44`, contained label, and no horizontal overflow.
+If ready, freeze Science's sole Host-05-only inline semantic activation/label
+mechanism, Tactical's separate `.scene-art` source transform and exact six-row
+probe, genuine keyboard forced-color focus with exact `3px solid` system
+Highlight outline, the reconciled thirty acceptance checks, and unchanged
+state/focus/announcement/recovery/meaning/PBA/media/rollback boundaries.
 
-Freeze forced-color verification that enters forced-colors before focus
-checking, clears pointer modality, and reaches Host 05 through actual keyboard
-Tab/Shift+Tab from the preceding lawful focus owner. Require Host 05 as
-`document.activeElement`, a true `:focus-visible` match, active forced colors,
-and a visible nontransparent system outline at least `2px`. Programmatic
-`.focus()` is not acceptance evidence. Preserve reduced motion, accessible
-identity/state, semantic order, the exact Science mechanism, candidates
-`a9776e3` / `bf58e52`, manifest/live-summary contracts, PBA/media, and the
-single-E2E boundary. Update this handoff to Mission only if clarification is
-ready; Mission must readjudicate before Combat.
+Only a new explicit Mission `READY` may authorize Combat's bounded inline
+repair, focused test/probe/manifest updates, validation ladder, and exactly one
+fresh complete E2E. Preserve the corrected harness lineage and external-root/
+machine-summary/cleanup contract. If any requirement remains ambiguous or
+incompatible, continue `HOLD`; do not delegate the choice downstream.
 
 Do not edit product/test/harness/manifest/media/copy, run E2E, round or relax a
-threshold, inspect the repository QA quarantine or user state, begin Mission,
-authorize Combat/Quartermaster, alter learning/save/route/world/ending, repair
-City, expand Host 06-15, advance maturity, create a schedule/reveal, or call
-`FIRST RUN COMPLETE`.
+threshold, inspect the repository QA quarantine or user state, begin Combat or
+Quartermaster before a signed `READY`, alter learning/save/route/world/ending,
+repair City, expand Host 06-15, advance maturity, create a schedule/reveal, or
+call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
