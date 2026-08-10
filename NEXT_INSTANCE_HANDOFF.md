@@ -3,7 +3,7 @@
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
 Current disposition: **`FIRST RUN SHELL READY / SYNCHRONIZATION LOCALIZATION
-ONLY / FRSH-003-v1-VR-32`**
+ONLY / FRSH-003-v1-VR-33`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,13 +11,13 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-32`
+Immediate control: `FRSH-003-v1-VR-33`
 
-Immediate return / predecessor authority: Combat VR-31 synchronization-control
-failure return / `FRSH-003-v1-VR-31`
+Immediate return / predecessor authority: Combat VR-32 synchronization-
+localization execution-control failure / `FRSH-003-v1-VR-32`
 
-Mission VR-32 inspected and synchronized source:
-`0ee84049fdb448d6c20a480f759c195d7a0b9dbe`
+Mission VR-33 inspected and synchronized source:
+`caae8eb918ecbc6c82d43bcaac6d656fc326f4e7`
 
 VR-22 Combat start source:
 `c81722376ac4686474648bca71ad5e648e35b644`
@@ -36,33 +36,46 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-VR-32 independently adjudicates the VR-31 Combat return: the initial combined
-scalar/quiet synchronization group exited `1` in `0.3s` with no individual
-detail. No hash, fixture, or PBA command ran, no post-failure command ran, and
-no repository write occurred. The failure is fail-closed and requires bounded
-localization before the still-pending fixture or PBA may be reauthorized.
+VR-33 independently adjudicates the VR-32 Combat return. The return proved
+`headEqOrigin=true`, then reported `trackedQuietExit=null` because the native
+quiet command and `$LASTEXITCODE` capture crossed separate shell tool calls.
+That null is not evidence of the native command's exit. It proves neither
+tracked drift nor tracked cleanliness. No cached quiet or frozen-blob result
+from VR-32 is accepted.
 
-Fresh Combat may run only the VR-32 sequence. Every native command must run in
-its own execution-tool call with complete native output and diagnostics
-captured and suppressed. Emit only, in order:
+Fresh Combat may run only the VR-33 sequence. Every native command must be the
+sole native command in its own execution-tool call. Its complete native output
+and diagnostics must be captured and suppressed, and its scalar value and
+`$LASTEXITCODE` must be captured and emitted from that same call. Never invoke
+a native command in one shell and read its exit in another.
+
+Emit only, in order:
 
 ```text
-headEqOrigin=<true|false>
+headMatch=<true|false> head=<40-lowercase-hex|null> headExit=<integer|null>
+originMainMatch=<true|false> originMain=<40-lowercase-hex|null> originMainExit=<integer|null>
 trackedQuietExit=<integer|null>
 indexQuietExit=<integer|null>
-frrcBlobMatch=<true|false> frrcBlob=<40-lowercase-hex|null>
-e2eBlobMatch=<true|false> e2eBlob=<40-lowercase-hex|null>
-staticTestBlobMatch=<true|false> staticTestBlob=<40-lowercase-hex|null>
-appBlobMatch=<true|false> appBlob=<40-lowercase-hex|null>
-drownedArchiveBlobMatch=<true|false> drownedArchiveBlob=<40-lowercase-hex|null>
-packageBlobMatch=<true|false> packageBlob=<40-lowercase-hex|null>
+frrcBlobMatch=<true|false> frrcBlob=<40-lowercase-hex|null> frrcBlobExit=<integer|null>
+e2eBlobMatch=<true|false> e2eBlob=<40-lowercase-hex|null> e2eBlobExit=<integer|null>
+staticTestBlobMatch=<true|false> staticTestBlob=<40-lowercase-hex|null> staticTestBlobExit=<integer|null>
+appBlobMatch=<true|false> appBlob=<40-lowercase-hex|null> appBlobExit=<integer|null>
+drownedArchiveBlobMatch=<true|false> drownedArchiveBlob=<40-lowercase-hex|null> drownedArchiveBlobExit=<integer|null>
+packageBlobMatch=<true|false> packageBlob=<40-lowercase-hex|null> packageBlobExit=<integer|null>
 ```
 
-Exact pass requires `headEqOrigin=true`, both quiet exits `0`, all six
-`blobMatch` values `true`, and the six hashes equal their exact expected values
-in VR-32. Stop at the first non-exact scalar. Do not emit a literal operand,
-pathname, filename, diagnostic, command, timing, captured stream, or any other
-field. Do not inspect or claim untracked cleanliness.
+Exact pass requires both revision matches `true`, both revision hashes equal
+`caae8eb918ecbc6c82d43bcaac6d656fc326f4e7`, every native exit `0`, both quiet
+exits `0`, all six blob matches `true`, and the six hashes equal their exact
+VR-33 values. Stop at the first non-exact scalar. Do not emit a literal
+operand, pathname, filename, diagnostic, command, timing, captured stream, or
+any other field. Do not inspect or claim untracked cleanliness.
+
+For tracked quiet, the command and capture must occur in the same call, e.g.
+`git diff --quiet *> $null; $e=$LASTEXITCODE; "trackedQuietExit=$e"`. Use the
+same atomic form for cached quiet. Each revision/blob `git rev-parse` must
+capture its hash and native exit in the same call and emit only its authorized
+named scalar line.
 
 Stop immediately after the sixth exact blob line. Run no fixture, PBA, build,
 test, validator, preview, served identity, port/PID, containment, root,
@@ -73,7 +86,7 @@ Mission.
 VR-22 focused `68/68`, related `74/74`, cold full `972/972`, validators
 `40/40`; VR-30 six exact frozen blob scalars; and VR-30 production build
 `moduleCount=1 builtSubstringCount=1 nativeExit=0` recorded in `8.8s` remain
-accepted without rerun. The six VR-32 checks localize current identity only;
+accepted without rerun. The six VR-33 checks localize current identity only;
 they do not replace or reopen the inherited checkpoint.
 
 The fixture and scalar PBA remain pending. Dynamic Host 05 `<=2ms`, sampled
@@ -83,7 +96,7 @@ the later sole E2E/live checkpoint.
 No status, diff-check, listing, discovery, search, glob, broad scan,
 protected-path probe, untracked-path check, filename-capable output, content
 parse, summary, verifier, cleanup, or synchronization command beyond the exact
-VR-32 sequence is authorized.
+VR-33 sequence is authorized.
 
 All OPEN divergences remain separate and OPEN:
 
