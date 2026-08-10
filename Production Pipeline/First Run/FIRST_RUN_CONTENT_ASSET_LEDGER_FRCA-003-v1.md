@@ -17,13 +17,13 @@ Last updated: **2026-08-10**
 | Evidence-control candidate | `ca89a679195c11d441a76e6c02983a6436f2ccb2` |
 | Content product/test candidate | `a91763e28d488f31f8cf7d40ece0b2682246ba9b` |
 | Command manifest | `FRRC-002-v1` |
-| Disposition | **`PRODUCTION CONTENT HOLD / FRCA-003-v1`** |
+| Disposition | **`PRODUCTION CONTENT COMPLETE / BUILD CANDIDATE READY / FRCA-003-v1`** |
 
 Exactly seven declared `FRPX03_COPY` slots are final-purpose in the content
 candidate. Content, deterministic regression, builds, budgets, accepted media,
-served identity, and the complete browser journey all passed. Release evidence
-cannot advance because the sole complete E2E summary records a mistyped product
-identity that is not a Git commit. No rerun was attempted.
+served identity, and the exact-identity complete browser journey all passed.
+The superseded identity and cleanup HOLD history remains recorded below; VR-11
+classifies the disclosed external cleanup as a non-gating deferred limitation.
 
 ## Seven-slot content and ownership ledger
 
@@ -177,3 +177,45 @@ deletion of this already-proven exact root. Image remains blocked. No tracked
 product/content/test/copy/probe/manifest/media/presentation/learning/save/route/
 ending/maturity or protected/user byte changed; no image/media operation or
 reveal occurred.
+
+## VR-11 final content disposition and Image handoff
+
+Mission issued `FIRST RUN SHELL READY / FRSH-003-v1-VR-11` and classified the
+sole remaining external-root cleanup as **`DEFERRED LIMITATION /
+RELEASE-PROCESS ONLY / NON-GATING FOR PRODUCTION CONTENT`**. Quartermaster
+verified synchronized source `9da02157df30e99a06df29238ac0a5bd13fd58cc`,
+exact candidate/control ancestry and frozen blobs, no tracked drift, stopped
+owned PIDs, and clear ports without replay, preview, browser, verifier, or
+cleanup attempt.
+
+The accepted immutable content candidate is
+`a91763e28d488f31f8cf7d40ece0b2682246ba9b`; validation control remains
+`4cd7fbf31291671dd28c0743b44a7c49aaad82bb`; accepted evidence control remains
+`ca89a679195c11d441a76e6c02983a6436f2ccb2`. Accepted evidence is exact:
+focused `68/68`, related `74/74`, cold full `972/972`, validators `40/40`,
+builds `217/57`, JavaScript `1,667,393`, CSS `119,247`, media
+`17 / 37,410,731`, served identity `2/2`, sole exact-identity E2E `58.8s`, six
+passing layouts, complete later rail, both equal MH-40 outcomes, null deltas,
+`successor=null`, zero runtime errors, maximum Sixfold activation and sampled
+task `0.20000004768371582ms`, exactly one summary, and exactly one passing
+independent verifier.
+
+The exact external root remains truthfully disclosed and was neither inspected
+nor deleted in VR-11:
+
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-3d574750-951c-4029-b6b6-531f7d012015`
+
+It is outside the repository, candidate, runtime, media inventory, and Git;
+owned processes are stopped and ports are clear. It remains release-process
+cleanup only and is non-gating for this content stage. No deletion, replay,
+re-emission, product change, or media operation occurred.
+
+Quartermaster issues **`PRODUCTION CONTENT COMPLETE / BUILD CANDIDATE READY /
+FRCA-003-v1`**. Exact next owner is Image Specialist, limited to code/config
+runtime presentation using unchanged accepted media: composition, lighting
+treatment, color, existing sound, motion, hierarchy, responsive containment,
+focus, forced color, and reduced motion. A substantiated no-change pass is
+valid. Preserve all seven final meanings, mechanics, geometry, state, learning,
+privacy, save, route, later rail, MH-40, `successor=null`, exact candidates,
+manifest, evidence, budgets, and media. Image generation, edit, replacement,
+variation, import, movement, deletion, publication, and reveal remain disabled.
