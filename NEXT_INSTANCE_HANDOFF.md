@@ -463,21 +463,46 @@ exact-next-action authority.
 - Exact PIDs/root were cleaned and ports are clear. Combat disposition is
   **`HOLD / VR-05 LIVE IDENTITY-STABILITY VARIANCE / FRCE-003-v1`**;
   Quartermaster remains blocked.
+- Mission adjudicated the composite failure as **`HOLD / RETURN TO TACTICAL /
+  FRSH-003-v1-VR-06`** at source
+  `f98263d3b910f1326f6f09a92580ff8f46b9e8dd`.
+- The current `identityStable` predicate combines exact semantic identity with
+  byte-equal raw viewport Host/label rectangles before and after genuine
+  keyboard traversal. The two failing records prove stable accessible/data/
+  state/focus/no-action identity and pass every substantive geometry/focus
+  threshold, but omit post rectangles and pre/post scroll offsets.
+- Mission therefore cannot classify the two failures as product drift or
+  accept them as scroll-only translation. Tactical owns one exact definition
+  of immutable semantic identity, coordinate-space stability, required
+  pre/post evidence, scroll treatment, and independent verifier failure.
+- Runtime product `7e85154`, probe `d9487d82`, validation control `4cd7fbf`,
+  all thresholds, all seven placeholders, and every passing live fact remain
+  frozen. No product/harness/test/manifest change or deterministic/live rerun
+  is authorized.
+- Quartermaster and maturity remain blocked. Variance artifact is
+  `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-06.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Tactical Operations Specialist only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, complete latest `FRCE-003-v1`, `FRSH-003-v1-VR-05`, operative
-`FRSH-003-v1-VR-04`, and the exact VR-05 live failure evidence.
+Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
+then read this handoff, complete `FRSH-003-v1-VR-06`, complete latest
+`FRCE-003-v1`, `FRSH-003-v1-VR-05`, operative `FRSH-003-v1-VR-04`, prior
+`FRPX-003-v1-VR-02`, and the exact current `measureSixfoldLayout` composite
+predicate.
 
-Adjudicate the two-layout `identityStable` failure. Preserve all three exact
-candidates and every passing threshold. Route to Tactical to define an
-evidence-honest identity/geometry coordinate contract if needed: the current
-runner compares pre/post viewport boxes but emits neither post boxes nor
-scroll offsets, while all identity/state/no-action and other layout evidence
-passes. Issue a versioned shell decision or continue HOLD. Do not authorize a
-rerun, product change, threshold weakening, or Quartermaster until the live
-identity-stability contract is implementable and independently verifiable.
+Answer exactly what immutable semantic identity means and which exact
+coordinate space proves no layout drift across sequential viewport changes and
+the genuine `Tab -> LOOK AT -> Shift+Tab -> Host 05` traversal. Separate
+semantic identity from geometry; define same-node/accessible/data/state/focus/
+no-action fields, required pre/post boxes and scroll offsets, exact coordinate
+normalization, allowed scroll-only translation versus forbidden residual
+drift, and machine-summary/verifier fail conditions. Preserve strict geometry,
+source, label, target, focus, motion, order, no-action, candidate, media,
+learning/save/route/world/ending, and no-epsilon thresholds. Issue one
+versioned Tactical clarification or continue `HOLD`, then return to Mission.
+Do not edit or execute product/probe/test/harness/manifest, authorize Combat or
+an E2E, begin Quartermaster, or advance maturity.
 
 ## Protected boundaries
 
