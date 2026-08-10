@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-004-v1`
+Scoreboard ID: `FRSB-004-v2`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v1` / `FRCL-004-v1`
 
-Release map: `FRRM-004-v1`
+Release map: `FRRM-004-v2`
 
-Operations source: `537e231a149cd16fcd7b2ec4be5903d7e1dcc387`
+Operations source inspected: `b64413c34cb10aafbb28853c52bb3415cc5b9dc0`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,11 +18,12 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-004-v1 / Stranded Lens Cradle`**.
+Selected bounded Work Order: **none**.
 
-The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
-selects Host 06 for Science viability only; selection does not advance any
-maturity cell or host inventory.
+The exact bounded Host 05 evidence remains released below. `FRWO-004-v1` is
+withdrawn and closed without production by `FRWO-004-v1-OPH-01` after
+`FRVE-004-v1` proved that no lawful Host 06 source geometry exists. No maturity
+cell or host inventory advances.
 
 ## Reading the matrix
 
@@ -91,21 +92,25 @@ complete.
 - The host inventory is now `6 exact / 1 accepted shared compression / 32
   missing / 1 unadvanced Witness expression`.
 
-## Next lawful advancement
+## Current planning hold
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten
 missing hosts. `FRCL-004-v1` confirms Host 06 / Stranded Lens Cradle as the
-first missing fixed encounter. `FRWO-004-v1` now selects exactly that one
-relationship and the sole unchanged `L02-03` entry for a fail-closed Science
-viability audit.
+first missing fixed encounter. `FRVE-004-v1` proves that the immutable Drowned
+source contains no lawful local dry lens-and-cradle geometry, and
+`FRWO-004-v1-OPH-01` therefore closes `FRWO-004-v1` without production.
 
-Target evidence, if later accepted as built, is `1 accepted shared compression
-/ 2 exact / 9 missing` while the address physical-host cell remains `FR0`.
-This is a target, not a scoreboard advance. The current matrix and inventory
-remain unchanged until Intelligence independently accepts an exact candidate.
+The withdrawn target `1 accepted shared compression / 2 exact / 9 missing` is
+not candidate or maturity evidence. Current `FR-03` remains exactly `1
+accepted shared compression / 1 exact / 10 missing`, and the forty-host
+inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
+unadvanced Witness expression`.
 
-The Office of Science Administrator is the exact next owner. No Host 06
-implementation, Host 07-15 work, Witness promotion, City correction, maturity
-inference, media operation, OPEN-classification closure, residual inspection,
-completion sweep, or `FIRST RUN COMPLETE` is preauthorized.
+One fresh Commandant is the exact next owner to adjudicate whether a truthful
+explicit no-Host06 compression can still satisfy the complete-game promise or
+whether Martin must decide a media-authority or product-promise boundary
+change. No revised Work Order, Science, Mission, Host 06 implementation, Host
+07-15 work, Witness promotion, City correction, maturity inference, media
+operation, OPEN-classification closure, residual inspection, completion sweep,
+or `FIRST RUN COMPLETE` is preauthorized.
