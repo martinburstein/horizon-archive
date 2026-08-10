@@ -64,43 +64,62 @@ exact-next-action authority.
   `successor=null`, and null city/world/external/authority deltas. The later
   records come only from byte-checked sanctioned normal authorities; no
   production fixture seam or closed review substitution exists.
+- Quartermaster resolved every declared package, opening, Meadow, Drowned,
+  Witness, and City content slot and issued **`PRODUCTION CONTENT COMPLETE /
+  FRCA-001-v1`** in
+  `Production Pipeline/First Run/FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-001-v1.md`.
+- The exact content-complete product/test candidate is
+  `d37103b46f257cb61ef99f76413611ee31d0fab2`. Focused contracts are `23/23`,
+  cold full regression is `953/953`, curriculum/readiness validators are
+  `40/40`, both builds and PBA pass, emitted media remains exactly `17` files /
+  `37,410,731` bytes with zero new or changed media, and the final clean-start
+  production E2E passes in `63.375s` journey / `64.077s` process with zero
+  runtime errors.
+- Quartermaster corrected one canon contradiction in Meadow copy: the route is
+  now the pre-existing low-growth continuation becoming easier to read, not an
+  object rising in response. Mechanics and geometry did not change. There is
+  no shell or media variance.
 
-## Exact next action - Quartermaster content completion
+## Exact next action - Image Specialist runtime presentation
 
-Read `First Run Agent Profiles/quartermaster.md`,
+Read `First Run Agent Profiles/image-specialist.md`,
 `Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-001-v1.md`,
-and
-`Production Pipeline/First Run/FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-001-v1.md`
-in full, plus
+`Production Pipeline/First Run/FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-001-v1.md`,
-the exact candidate, surface canon, game-on-paper, curriculum source contracts,
-copy rules, visual charter, scene sheets, accepted runtime assets, provenance
-records, and constraints cited by the profile.
+and
+`Production Pipeline/First Run/FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-001-v1.md`
+in full. Then read the exact candidate, visual charter, applicable scene
+sheets, accepted runtime assets and provenance, responsive/accessibility
+contracts, and the exact shell sections cited by the profile.
 
-Verify exact functional candidate
-`5fbb7a0118aa64072eb7426a47ec788481eafe6d` and the report's placeholder
-ledger. Resolve each declared package, opening, Meadow, Drowned, Witness, and
-City copy/learning-presentation/content slot with approved final-purpose
-material or an explicit honest limitation. Preserve the shell and directorial
-meaning, exact mechanics/evidence/focus/state/save/routes/world behavior,
-surface canon, AI-901 ownership and answer boundaries, privacy, Demo Tour,
-opening save v1, immutable accepted media, and shared MH-40 ending. Do not add
-a host, route, response, reward, access, authority, identity, world change,
-successor, hidden-lore answer, or prior-human trace.
+Verify exact content-complete product/test candidate
+`d37103b46f257cb61ef99f76413611ee31d0fab2` and verify that the current control
+HEAD changes only the versioned Quartermaster ledger and synchronized handoff
+after that candidate. Inspect the existing package, opening, Glass Meadow,
+Drowned Archive, Witness Corridor, and direct City Threshold experience for
+code/configuration-level runtime presentation only. Permitted concerns are
+composition, lighting treatment, color, sound, motion, hierarchy, responsive
+containment, focus, forced colors, and reduced motion using existing accepted
+media. A substantiated no-change pass is valid.
 
-Run source/spoiler/answer/text-fit/accessibility/provenance/identity checks,
-focused regressions, production and applicable fixture builds, PBA/media/served
-identity, representative responsive/effective-`200%` review, cleanup, and
-protected-path proof. Write one versioned First Run Content and Asset Ledger
-with exact shell/build identity, placeholder dispositions, copy/source map,
-content and provenance inventory, accessibility/performance evidence,
-limitations/variances, files, and `PRODUCTION CONTENT COMPLETE`, `REVISE`, or
-`HOLD`. If complete, commit/push only permitted Quartermaster work, prove
-`HEAD == origin/main`, and hand the exact immutable content-complete candidate
-to Image Specialist for code/configuration-only runtime presentation. Do not
-perform Image Specialist polish, generate/edit/replace/vary/import/publish
-images, create a reveal, inspect user state/hidden lore, or deploy downstream.
+Preserve the approved final-purpose copy meaning, exact mechanics, evidence,
+focus/state/save/routes/world behavior, AI-901 ownership and answer boundaries,
+privacy, Demo Tour, opening save v1, direct credits-free City routing,
+immutable media, and shared MH-40 ending. Do not add a host, route, response,
+reward, access, authority, identity, world change, successor, hidden-lore
+answer, or prior-human trace. Do not generate, edit, replace, vary, import,
+move, or publish an image or other media asset; do not change media bytes or
+create a reveal.
+
+Run focused and full regression proportionate to any change, production and
+applicable fixture builds, PBA/media/served identity, responsive/effective-
+`200%`, forced-color, reduced-motion, keyboard/focus, cleanup, and protected-
+path proof. Write the versioned runtime presentation report and issue
+`RUNTIME PRESENTATION COMPLETE`, `REVISE`, or `HOLD`. If complete, commit/push
+only permitted Image Specialist code/configuration, tests, report, and handoff
+work, prove `HEAD == origin/main`, and hand the exact candidate to a fresh
+Intelligence Officer. Do not perform Intelligence validation or release.
 
 ## Protected boundaries
 
