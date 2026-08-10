@@ -54,23 +54,25 @@ registry before acting. This file is the sole exact-next-action authority.
 - Colonel issued `WN-TE001-v1 / WORLD BASELINE`: one continuous fifteen-
   location pedestrian route accounting for all forty clusters, with explicit
   host placement, discovery owner, access, local motive, and exit continuity.
+- Operations issued `FS-TE001-SCRIPT-v1 / FLOOR STACK READY`: one documentation-
+  only complete-game script slice, structured as four dramatic acts and fifteen
+  chapters over the exact single rail.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Operations TE-001 feasibility audit
+## Exact next action - Science TE-001 script viability
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/02-WORLD-AND-NARRATIVE-MASTERPLAN.md`
-in full. Audit `WN-TE001-v1` against the released board graph and location
-canon. Prove exact adjacency, safe pedestrian feasibility, return logic, forty-
-cluster ownership, and the narrowest non-overlapping way to reconcile two-host
-locations with existing single-coupling compact scenes. Classify the inherited
-Glass Meadow Route Marker response, all accepted placement revisions, and the
-legacy `World A/B/C/D` production labels without reintroducing planetary
-travel.
+Read `Production Pipeline/Terminal Enrichment/TE-001/03-CAMPAIGN-FLOOR-STACK.md`
+in full. Independently validate `FS-TE001-SCRIPT-v1` as a documentation-only
+complete-game script slice. Prove that the single-rail success/remediation
+model, forty-cluster learning order, 36-55-hour envelope, privacy,
+save/recovery, accessibility, offline posture, no-authority language, emotional
+escalation, and equal-dignity final outcomes can coexist without changing
+released curriculum or world state.
 
-Return `HOLD` rather than inventing a road, flight, Machine guidance, sealed
-access, new objective, packet, RP-013, successor, or post-ending content. Do not
-implement, issue a Mission shell, or create/generate/select/import an image.
+Return `HOLD` for any contradiction. Do not author the script, implement
+runtime behavior, create a Mission shell, or create/generate/select/import an
+image.
 
 ## Protected boundaries
 
