@@ -6,6 +6,37 @@
 - Each cycle records `KEEP`, `TUNE`, or `REDESIGN` with evidence and any future-cycle changes.
 - Process adaptation may improve throughput, clarity, validation placement, model routing, checkpointing, scheduling, and artifact organization without weakening product, canon, learning, privacy, accessibility, release, or user-work protections. Image generation and cycle reveals are disabled by Martin's 2026-08-09 instruction.
 
+## 2026-08-10 / FRWO-003 Intelligence release hold - TUNE
+
+- **Observed:** immutable-candidate preflight, focused `68/68`, related
+  `74/74`, cold full `972/972`, validators `40/40`, both builds, PBA, and exact
+  served identity passed. The sole authorized fresh external-root E2E failed
+  after `57.5s` at its final Sixfold Weir layout aggregate. The command threw
+  before emitting its machine summary, and truncated command output did not
+  reliably identify the failing layout subfield. The no-rerun rule correctly
+  preserved the failure, but left exact product-versus-evidence ownership
+  unresolved.
+- **Decision:** `TUNE`. Keep immutable identity, the deterministic ladder,
+  served-identity checks, one fresh external-GUID root, and the no-rerun release
+  rule. Before a future sole E2E is authorized, its evidence contract should
+  persist a minimal failure-side machine diagnostic identifying the failing
+  layout/subfield before throwing. Mission must adjudicate that contract; this
+  entry does not authorize a repair or rerun.
+- **Expected benefit:** a future stopped release attempt remains singular and
+  fail-closed while providing enough bounded evidence to route the earliest
+  responsible owner without speculation.
+- **Preserved guardrails:** exact candidate/control identity, sequential role
+  ownership, shell invariants, independent Intelligence, canon, learning,
+  privacy, accessibility, save/route/world controls, exact media, PBA,
+  protected user work, disabled reveals, and no Host 06/RP-013/successor or
+  post-ending content.
+- **Validation:** a Mission-issued shell reissue must define the failure-side
+  diagnostic and exact rerun authority before any new live attempt; no maturity
+  advances without one complete E2E summary and its independent verifier.
+- **Rollback trigger:** failure-side persistence mutates product/save state,
+  weakens an assertion, permits multiple attempts, exposes protected data, or
+  obscures rather than localizes the first failing contract.
+
 ## 2026-08-09 / TD-011 Intelligence release - TUNE
 
 - **Observed:** the ten-role no-image workflow completed the full RP-011 slice,
