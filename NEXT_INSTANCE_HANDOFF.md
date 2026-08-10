@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / REMAINING PRE-LIVE FIXTURE
-AND SCALAR PBA ONLY / FRSH-003-v1-VR-31`**
+Current disposition: **`FIRST RUN SHELL READY / SYNCHRONIZATION LOCALIZATION
+ONLY / FRSH-003-v1-VR-32`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,13 +11,13 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-31`
+Immediate control: `FRSH-003-v1-VR-32`
 
-Immediate return / predecessor authority: Combat VR-30 proof return /
-`FRSH-003-v1-VR-30`
+Immediate return / predecessor authority: Combat VR-31 synchronization-control
+failure return / `FRSH-003-v1-VR-31`
 
-Mission VR-31 inspected source:
-`d8796afe0df017b1c06a01eb795f5b5192007b2c`
+Mission VR-32 inspected and synchronized source:
+`0ee84049fdb448d6c20a480f759c195d7a0b9dbe`
 
 VR-22 Combat start source:
 `c81722376ac4686474648bca71ad5e648e35b644`
@@ -36,55 +36,54 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-VR-31 accepts without rerun the immutable checkpoint: VR-22 focused `68/68`,
-related `74/74`, cold full `972/972`, validators `40/40`; VR-30 six exact
-frozen blob scalars; and VR-30 production build
-`moduleCount=1 builtSubstringCount=1 nativeExit=0`, recorded in `8.8s`.
+VR-32 independently adjudicates the VR-31 Combat return: the initial combined
+scalar/quiet synchronization group exited `1` in `0.3s` with no individual
+detail. No hash, fixture, or PBA command ran, no post-failure command ran, and
+no repository write occurred. The failure is fail-closed and requires bounded
+localization before the still-pending fixture or PBA may be reauthorized.
 
-Fresh Combat may run only scalar `git rev-parse HEAD` and `git rev-parse
-origin/main`, require equality, then fully suppressed tracked and index quiet
-checks requiring exit `0`. No untracked-cleanliness claim is permitted.
-
-Combat must not rerun any accepted blob, focused, related, full, validator, or
-production-build gate. It may invoke exactly one manifest-owned
-`npm run build:td012-fixture` from `horizon-archive-game`, with execution-tool
-timeout `60000ms`, through the complete safe native wrapper in VR-31. The
-wrapper suppresses the stream and emits only:
+Fresh Combat may run only the VR-32 sequence. Every native command must run in
+its own execution-tool call with complete native output and diagnostics
+captured and suppressed. Emit only, in order:
 
 ```text
-fixtureModuleCount=<n> fixtureBuiltSubstringCount=<n> nativeExit=<n>
+headEqOrigin=<true|false>
+trackedQuietExit=<integer|null>
+indexQuietExit=<integer|null>
+frrcBlobMatch=<true|false> frrcBlob=<40-lowercase-hex|null>
+e2eBlobMatch=<true|false> e2eBlob=<40-lowercase-hex|null>
+staticTestBlobMatch=<true|false> staticTestBlob=<40-lowercase-hex|null>
+appBlobMatch=<true|false> appBlob=<40-lowercase-hex|null>
+drownedArchiveBlobMatch=<true|false> drownedArchiveBlob=<40-lowercase-hex|null>
+packageBlobMatch=<true|false> packageBlob=<40-lowercase-hex|null>
 ```
 
-Exact pass is `fixtureModuleCount=1 fixtureBuiltSubstringCount=1 nativeExit=0`.
-Any other result is fail-closed, no rerun, no PBA, and immediate return to a
-fresh Mission Captain.
+Exact pass requires `headEqOrigin=true`, both quiet exits `0`, all six
+`blobMatch` values `true`, and the six hashes equal their exact expected values
+in VR-32. Stop at the first non-exact scalar. Do not emit a literal operand,
+pathname, filename, diagnostic, command, timing, captured stream, or any other
+field. Do not inspect or claim untracked cleanliness.
 
-Only after exact fixture success may Combat invoke the complete VR-31 scalar
-PBA/media/source-map wrapper once from repository root, timeout `60000ms`.
-It scalarizes the exact manifest traversal and threshold logic, emits no
-filename, and requires exactly:
+Stop immediately after the sixth exact blob line. Run no fixture, PBA, build,
+test, validator, preview, served identity, port/PID, containment, root,
+browser, E2E, diagnostic, live-summary verification, cleanup, or live review.
+Perform no repository write and run no post-check command. Return to fresh
+Mission.
 
-```text
-jsBytes=1666665 cssBytes=119247 mediaCount=17 mediaBytes=37410731 sourceMapCount=0 scanExit=0
-```
+VR-22 focused `68/68`, related `74/74`, cold full `972/972`, validators
+`40/40`; VR-30 six exact frozen blob scalars; and VR-30 production build
+`moduleCount=1 builtSubstringCount=1 nativeExit=0` recorded in `8.8s` remain
+accepted without rerun. The six VR-32 checks localize current identity only;
+they do not replace or reopen the inherited checkpoint.
 
-Stop immediately after that wrapper whether it passes or fails. Run no post-
-scan command and perform no repository write. On exact success return
-**`REMAINING PRE-LIVE FIXTURE AND SCALAR PBA PASS / STOP / RETURN TO FRESH
-MISSION`**. Otherwise return **`HOLD / REMAINING PRE-LIVE EXECUTION-CONTROL OR
-EVIDENCE FAILURE / NO RERUN / RETURN TO FRESH MISSION`**.
+The fixture and scalar PBA remain pending. Dynamic Host 05 `<=2ms`, sampled
+task `<=100ms`, runtime request, and offline runtime gates remain reserved for
+the later sole E2E/live checkpoint.
 
-Package/dependency, product-source, exact test/control, and offline-source
-identity are carried only by the already accepted six frozen blobs. No broad
-dependency, lockfile, import, URL/network, repository, source, pathname, or
-filename scan is authorized. Source-map proof is confined to the scalar PBA
-wrapper. Dynamic Host 05 `<=2ms`, sampled task `<=100ms`, runtime request, and
-offline runtime gates remain reserved for the later sole E2E/live checkpoint.
-
-No preview, served identity, port/PID, containment, root, browser, E2E,
-diagnostic, live-summary verification, cleanup, live-review, product, media,
-protected-state, user-state, reveal, or maturity action is authorized. Return
-to fresh Mission before any of them.
+No status, diff-check, listing, discovery, search, glob, broad scan,
+protected-path probe, untracked-path check, filename-capable output, content
+parse, summary, verifier, cleanup, or synchronization command beyond the exact
+VR-32 sequence is authorized.
 
 All OPEN divergences remain separate and OPEN:
 
