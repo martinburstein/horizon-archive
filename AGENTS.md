@@ -11,11 +11,18 @@ Before using third-party sources or general web results, check these official Mi
 
 Treat AI-901 objectives as the master learning goals. Use AI-900 material only as supporting background when it overlaps.
 
-## Active skyscraper agent workflow
+## Active First Run agent workflow
 
-The active manual production workflow is `SKYSCRAPER_AGENT_WORKFLOW.md`. Its canonical registry is `Skyscraper Agent Profiles/README.md`, with five strategic Colonels and five active field Marines. These are setting-inspired military titles; their production functions remain unchanged except that Martin explicitly disabled the Image Specialist stage on 2026-08-09.
+The active manual production workflow is `FIRST_RUN_AGENT_WORKFLOW.md`. Its
+canonical registry is `First Run Agent Profiles/README.md`. First Run preserves
+the Skyscraper roles' underlying disciplines while retargeting the complete
+sequence toward turning the released working rail into a fully fledged game
+from clean start through the shared Measured Horizon ending.
 
-At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`, `SKYSCRAPER_AGENT_WORKFLOW.md`, and the registry. Before each stage, read the selected profile in full, the immediately preceding handoff, and the exact current-control or shell sections cited by that role.
+At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`,
+`FIRST_RUN_AGENT_WORKFLOW.md`, and the registry. Before each stage, read the
+selected profile in full, the immediately preceding handoff, and the exact
+current-control, Work Order, or shell sections cited by that role.
 
 Run strictly sequentially:
 
@@ -28,36 +35,48 @@ Run strictly sequentially:
 7. Tactical Operations Specialist
 8. Combat Engineer
 9. Quartermaster
-10. Intelligence Officer
+10. Image Specialist - runtime presentation only
+11. Intelligence Officer
 
-The Mission Captain must issue a versioned `SHELL READY` contract before the Marines deploy. A Marine may request a variance but may not silently change the shell. The Intelligence Officer independently releases, classifies every variance, updates the master plan only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md` with one synchronized exact next action.
+The five planning roles must issue a versioned `FIRST RUN SHELL READY` contract
+before production begins. A downstream role may request a variance but may not
+silently change the shell. Intelligence independently validates the exact
+candidate, classifies every variance, advances the First Run maturity record
+only from accepted as-built evidence, and replaces `NEXT_INSTANCE_HANDOFF.md`
+with one synchronized exact next action.
 
-Martin explicitly approved recurring Skyscraper production after the manual
-test drives. The current automation status, cadence, and exact next action live
-only in `NEXT_INSTANCE_HANDOFF.md`; do not infer them from an older workflow
-edge or archived prompt.
+First Run works earliest-first from the new player's clean-start path. A later
+or global surface may move first only for a documented dependency, critical
+safety/accessibility defect, or prevention of destructive duplicate work. Each
+cycle owns one bounded vertical-quality Work Order; “polish everything” is not
+an executable scope.
 
-Martin also grants standing route authority for the sequential roles to open
-the next already-mapped adjacent surface-canon transition without a separate
-decision when the Colonel derives it from current approved authority,
-Operations proves exact released adjacency and a narrow fail-closed
-transition, Science independently confirms the complete viability envelope,
-and Mission issues a conflict-free versioned shell. This never authorizes
-invented canon, a skipped packet, hidden lore, reward, access, identity,
-authority, world response, successor, RP-013, or post-ending content.
+The canonical route, lesson ownership, surface lore, and shared RP-012 ending
+are closed. First Run may improve implementation fidelity, onboarding, flow,
+feedback, copy, content, accessibility, audiovisual presentation, persistence,
+performance, and release quality. It may not add a branch, packet, lesson,
+hidden-lore answer, reward, access, identity, authority, world response,
+successor, RP-013, or post-ending content.
 
-The Image Specialist and cycle-reveal component are disabled. No Skyscraper
-stage or scheduled wake may generate, edit, replace, vary, import, or publish
-an image or create a cycle reveal. Existing accepted visual references remain
-immutable unless Martin explicitly changes this instruction. Quartermaster
-still retires or dispositions player-facing structural placeholders and
-content/asset gaps; Combat Engineer still owns code and layout behavior; the
-Intelligence Officer independently validates presentation, responsive, and
-accessibility release evidence before release.
+The Image Specialist is active only for code/configuration-level runtime
+presentation using existing accepted media: composition, lighting treatment,
+color, sound, motion, hierarchy, responsive containment, focus, forced color,
+and reduced motion. Image generation, image editing/replacement/variation/
+import, and cycle reveals remain disabled unless Martin explicitly changes
+that boundary.
+
+Automation is disabled by default. Do not create, restart, or infer a First Run
+schedule from an archived prompt or prior program. Only Martin's explicit
+authorization plus the exact current `NEXT_INSTANCE_HANDOFF.md` may enable it.
+
+The retired Skyscraper program is preserved at
+`Production Pipeline/Archive/2026-08-09-skyscraper-agent-program/`. Do not run,
+resume, schedule, or infer work from that archive unless Martin explicitly
+reactivates it.
 
 ## Two-team agent profiles
 
-**Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates that archived workflow. The current `NEXT_INSTANCE_HANDOFF.md` belongs to the skyscraper workflow.
+**Archived 2026-07-25.** The Team 1 / Team 2 production system is retired after completing the 12-packet story rail. Its immutable snapshot is tagged `two-team-infrastructure-archive-2026-07-25` and indexed at `Production Pipeline/Archive/2026-07-25-two-team-agent-infrastructure/README.md`. Do not run, resume, schedule, or infer work from the archived exact-next-action edge unless Martin explicitly reactivates that archived workflow. The current `NEXT_INSTANCE_HANDOFF.md` belongs to the First Run workflow.
 
 The instructions below are retained only as historical reactivation guidance.
 
