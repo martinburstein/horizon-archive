@@ -2,19 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`ROBUST-TOTALS SIX-PATH STATIC-FOCUSED PASS / RETURN
-TO FRESH MISSION / FRCE-003-v1-VR-21`**
+Current disposition: **`FIRST RUN SHELL READY / ONE COMPLETE DIAGNOSTIC-
+CONTROL VERIFICATION / FRSH-003-v1-VR-22`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
 Immediate return / authority: `FRCE-003-v1-VR-21` /
-`FRSH-003-v1-VR-21`
+`FRSH-003-v1-VR-22`
 
-Combat start source:
+VR-21 Combat start source:
 `65ad8aa116ccc8ddf4ced5d7d3d5a07e8fec7938`
 
 Exact diagnostic field-source candidate:
@@ -31,7 +31,7 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Mission Captain profile in full, VR-07 and VR-12 through VR-21,
+Read the Combat Engineer profile in full, VR-07 and VR-12 through VR-22,
 FRCE-003-v1-VR-12 through VR-21, current FRAB-003, this handoff, and the exact
 committed FRRC/E2E/static controls.
 
@@ -74,12 +74,14 @@ predecessor-root, repository-wide, or user-state enumeration and made no
 implementation or control change. Only `FRCE-003-v1-VR-21` and this handoff
 changed after the attempt.
 
-The separate **`REQUIRED CORRECTION / EXECUTION CONTROL / OPEN`** history and
-**`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**
-classification remain for fresh Mission adjudication. VR-21 itself is
-consumed and may not be rerun. Its complete result is bounded static/focused
-evidence only and is not production-functional acceptance, release evidence,
-or a maturity advance.
+Fresh Mission independently corroborated the exact VR-21 identities, blobs,
+ancestry, report-commit parentage, scalar-range equality, manifest structure,
+and static control meanings without executing any ladder command. The
+**`REQUIRED CORRECTION / EXECUTION CONTROL`** variance is **CLOSED** by the
+complete VR-21 pass. The separate **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH
+ENUMERATION / OPEN`** classification from VR-17 remains separately open and
+is not waived or used as evidence. VR-21 itself is consumed and may not be
+rerun.
 
 All frozen product, candidate, threshold, player, learning, accessibility,
 privacy, save, route, world, equal MH-40, null-delta, `successor=null`, ending,
@@ -88,12 +90,27 @@ one-E2E meanings remain exact. No Quartermaster, Image Specialist,
 Intelligence, reveal, maturity, release, schedule, automation, or `FIRST RUN
 COMPLETE` action is authorized from this handoff.
 
-Exact next action: a **fresh Mission Captain** independently adjudicates the
-complete `FRCE-003-v1-VR-21` return against `FRSH-003-v1-VR-21` and issues one
-new versioned `HOLD` or `READY` decision. Mission must not rerun VR-21, infer
-a product defect, reuse VR-20 partial evidence, begin a downstream role,
-inspect protected/predecessor/media/user state, advance maturity, or call
-`FIRST RUN COMPLETE`.
+Exact next action: a **fresh Combat Engineer** runs the complete deterministic
+ladder exactly once from the beginning under `FRSH-003-v1-VR-22`, with no
+product/control changes. Only after every deterministic gate passes may
+Combat create one fresh containment-proved GUID-named direct child of the
+resolved OS temp root and invoke exact `FRRC-002-v1.entries.complete-e2e`
+once within `180s`.
+
+On successful E2E, require the same run's exactly one diagnostic with
+`checkInventoryExact=true` and `failureCount=0`, exactly one machine summary,
+and exactly one passing independent verifier invocation using only that
+summary. On E2E failure, abort, timeout, or missing valid summary, read only
+the exact owned diagnostic for every failure path/expected/actual/owner and
+exact owner routing; run no verifier, rerun, repair, or replacement command.
+If localization is absent or ambiguous, return to fresh Mission.
+
+After either branch, clean only exact owned processes, ports, logs, and the
+same containment-proved GUID root. On complete PASS, issue
+`DIAGNOSTIC-CONTROL VERIFICATION PASS / RETURN TO FRESH INTELLIGENCE /
+FRCE-003-v1-VR-22`; otherwise issue exact `HOLD / NO RERUN` routing. Commit
+only the versioned Combat return and this handoff, push, and prove
+`HEAD == origin/main`.
 
 The dedicated Combat report/handoff commit and final `HEAD == origin/main`
 proof are reported from Git after commit because this handoff cannot contain
