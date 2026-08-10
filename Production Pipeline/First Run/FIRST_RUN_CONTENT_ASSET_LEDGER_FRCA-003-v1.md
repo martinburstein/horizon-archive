@@ -93,3 +93,26 @@ candidate `a91763e28d488f31f8cf7d40ece0b2682246ba9b`, or retain HOLD. No content
 product, test, probe, media, presentation, learning, state, save, route, or
 ending change is authorized by this request. Image Specialist remains blocked.
 
+## VR-08 exact-identity replay return
+
+Mission reissued `FIRST RUN SHELL READY / FRSH-003-v1-VR-08` and authorized one
+zero-change identity replay. Quartermaster proved synchronized source
+`6862a1713178fc439244f74fff7f0d36a0aa99bd`, exact ordered ancestry, the actual
+content commit's existence, the mistyped identity's absence, all four frozen
+blobs, exactly seven slots, accepted `17 / 37,410,731` media, no tracked drift,
+and clear ports. The deterministic identity preflight passed.
+
+The fresh-root/preview command then supplied unsupported PowerShell parameter
+`New-Item -LiteralPath`. Root creation failed. Because the command did not set
+terminating-error behavior before that call, it subsequently started owned
+preview PIDs `49016` and `58240`; Quartermaster immediately stopped both and
+proved ports `4173` / `4184` clear. Proposed root
+`C:\Users\marti\AppData\Local\Temp\horizon-archive-frrc002-c4f48d0d-6aaa-47ce-8a35-d5ca7804e069`
+never existed. No E2E, machine summary, verifier, served-identity request, or
+browser process ran.
+
+VR-08 makes any root/preview/ownership failure immediate `HOLD` without retry.
+Quartermaster therefore performed no replay and preserves **`PRODUCTION
+CONTENT HOLD / FRCA-003-v1`**. No tracked product, copy, test, manifest, probe,
+media, presentation, learning, save, route, ending, or maturity byte changed.
+Mission Captain is the exact next owner for adjudication; Image remains blocked.
