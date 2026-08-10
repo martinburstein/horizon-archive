@@ -2,39 +2,38 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / EXACT PID-16040 CLEANUP
-VERIFICATION ONLY / FRSH-003-v1-VR-58`**
+Current disposition: **`FIRST RUN SHELL READY / SPLIT FIXTURE LAUNCH-READINESS
+CONTROL ONLY / FRSH-003-v1-VR-59`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-58`
+Immediate control: `FRSH-003-v1-VR-59`
 
-Mission source: `7f76d6a45e07874d074c42f1bc7c847fabfcbfd2`
+Mission source: `1172d1b90e3ba884cc6d98e4b64c7d9753d7b1f6`
 
-VR-57 production launch/readiness passed: exact transported PID `16040`, root
-HTTP 200 on readiness attempt 1. Call D attempted one stop and proved port 4173
-clear, but its exact PID-absence predicate was 0. No fixture or E2E ran.
+VR-58 is accepted as **`EXACT PID-16040 CLEANUP VERIFIED / PID ABSENT / PORT
+4173 CLEAR / NO LIVE`**. PID `16040` was already absent, no stop was needed,
+and the exact port was clear. The VR-57 post-stop absence anomaly is resolved
+execution-control evidence and adds no twelfth OPEN classification.
 
-Mission classifies **`REQUIRED VERIFICATION / EXECUTION CONTROL / POST-STOP PID
-ABSENCE / VR-57 CALL D`**. This is not candidate/product evidence and does not
-yet add a twelfth OPEN classification; exact cleanup verification decides only
-whether PID recovery is complete or remains unresolved.
-
+The split hidden production launch/readiness command shape is now proven.
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-Combat may execute one cleanup-verification call bound only to PID `16040` and
-loopback port 4173. Inspect that exact PID once. If absent, record absence. If
-present, require exact Node process identity; only then stop it once, wait a
-bounded interval, and verify PID absence. Finally query only port 4173 and
-require clear.
+Combat may run the analogous fixture-only split control on 4184: (A) exact
+preclear; (B) direct fixture Node/Vite `Start-Process -WindowStyle Hidden
+-PassThru` only and numeric PID emission; (C) transported-PID liveness plus
+bounded suppressed fixture-root IWR readiness only; (D) mandatory exact
+transported-PID stop plus port-4184 clear proof. If final PID absence is not
+proven, stop and return to Mission for a separately adjudicated cleanup
+verification; no same-shell retry is authorized.
 
-No other process/listener/path inspection, ownership discovery, alternate PID,
-second stop, retry, fixture, root/filesystem, browser, E2E, diagnostic,
-summary, verifier, build, test, product/media/protected, or downstream action
-is authorized.
+No production, root/filesystem, listener recovery, deep/assets, byte identity,
+formal served identity, browser, E2E, diagnostic, summary, verifier, build,
+test, PBA, product/media/protected action, or retry is authorized.
 
-The E2E budget remains unspent. Frozen candidates, cumulative gates/invariants,
-and all eleven OPEN classifications remain exact pending the VR-58 result.
+The single E2E budget remains unspent. Frozen candidates, cumulative accepted
+gates/invariants, and all eleven OPEN classifications remain exact. Return the
+VR-59 scalars to fresh Mission; no downstream action is authorized.
