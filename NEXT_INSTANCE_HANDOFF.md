@@ -384,29 +384,58 @@ exact-next-action authority.
   and single-E2E boundary remain frozen. Tactical authorizes no repair or run.
 - Tactical clarification artifact is `Production Pipeline/First Run/
   FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-02.md`.
+- Mission reconciled both returns and issued **`FIRST RUN SHELL READY /
+  FRSH-003-v1-VR-04`** at source
+  `a9e0670115d8925840d7f57438f720031b9e3298`.
+- Product/test candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`
+  is frozen; no product or product-test change is needed or authorized.
+  Combat may correct only the existing E2E harness and `FRRC-002-v1`
+  summary/verifier expectations, then freeze that two-file delta as a separate
+  probe candidate.
+- Browser-resolved physical/semantic equality uses exact current-Chromium
+  `q=1/64 CSS px`, `Q(v)=floor(v/q)*q`, and strict component equality with no
+  epsilon. Authored physical registration remains separately exact
+  `45/75/20/25`; source mapping begins from resolved `P` and actual
+  `.scene-art`.
+- Label positioning is exact `2px` from the inner edge and exact `3px` from
+  the outer edge across the `1px` button border. Actual enabled order is Host
+  05, `LOOK AT`, `USE`, `TALK TO`, inventory return. Genuine forced-color
+  proof is Host 05 `Tab` -> `LOOK AT`, then `Shift+Tab` -> Host 05, with exact
+  `3px solid Highlight` and no pointer/programmatic target focus.
+- Combat must pass deterministic integrity/static, focused `68/68`, related
+  `74/74`, cold full `972/972`, validators `40/40`, builds `217/57`,
+  PBA/media, performance/offline, and served-identity gates before exactly one
+  newly authorized external-GUID-root E2E. The same run must emit one machine
+  summary and its verifier must pass once. Any failure is `HOLD` with no rerun.
+- Reissued shell artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-04.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Combat Engineer only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, `FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
-`FRPX-003-v1-VR-02`, and the complete updated `FRCE-003-v1`.
+Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
+handoff, `FRSH-003-v1-VR-04`, governing `FRSH-003-v1`,
+`FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
+`FRPX-003-v1-VR-02`, complete `FRCE-003-v1`, and exact current
+`playtest/e2e-playthrough.mjs` / `FRRC-002-v1` controls.
 
-Issue exactly one versioned Mission shell redecision: `FIRST RUN SHELL READY`
-or `HOLD`. Reconcile Science's exact used-value/label contract and Tactical's
-actual semantic/focus graph without weakening a threshold or changing product
-behavior.
+Preserve exact product/test candidate
+`7e85154abd8dbf116c4bb84ca66afd859903d750`. Change only the existing E2E
+harness and `FRRC-002-v1` summary/verifier expectations for strict `q=1/64`
+floor used values, resolved-`P` source mapping, inner-`2px`/outer-`3px` label
+geometry, enabled Host 05 -> `LOOK AT` -> `USE` -> `TALK TO` -> inventory
+return order, and genuine Host 05 `Tab` -> `LOOK AT` -> `Shift+Tab` -> Host 05
+focus-visible proof. Freeze the exact two-file delta as a separate committed
+probe candidate; product/test/CSS/module/media blobs may not change.
 
-If `READY`, issue an exact Combat-only repair shell for the existing
-probe/summary/verifier expectations. Freeze repaired candidate `7e85154`, all
-seven placeholders, authored `45/75/20/25`, the strict `q=1/64` used-value
-model, inner-`2px`/outer-`3px` label model, action order `LOOK AT -> USE ->
-TALK TO`, and genuine `Tab -> Shift+Tab` focus path via real successor `LOOK
-AT`. State whether and only after which complete pre-live gates Combat receives
-one fresh single-E2E authority. Tactical itself authorizes no repair or run.
+Run the exact deterministic pre-live ladder. Only after every gate passes,
+invoke exactly one fresh `FRRC-002-v1` complete E2E under one newly resolved
+external GUID root. Require exactly one machine summary and one passing
+verifier. On any failure, stop, clean up exact owned resources, issue `HOLD`,
+and return to Mission without rerun.
 
 Do not write final copy, change a placeholder/CSS/module/media/learning/save/
 route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
-quarantine or user state, begin Combat/Quartermaster, repair City, expand Host
+quarantine or user state, begin Quartermaster, repair City, expand Host
 06-15, create a schedule/reveal, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
