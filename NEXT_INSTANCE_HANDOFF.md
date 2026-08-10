@@ -2,47 +2,37 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE FRESH CONTAINED CORRECTED
-DIAGNOSTIC-CONTROL VERIFICATION / FRSH-003-v1-VR-49`**
+Current disposition: **`HOLD / TOOL-POLICY EXECUTION-CONTROL REJECTION /
+NON-EXECUTED / NO E2E / FRCE-003-v1-VR-49`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Immediate control: `FRSH-003-v1-VR-49`
+Immediate evidence: `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-49.md`
 
-Mission source: `f8219e44cfb798bc7243289f584ef85d6ea7157a`
+Starting shell revision: `e22b491ef6ab8e4edf84c4756053f9f782161195`
 
 Geometry correction / diagnostic transport / report lineage remains:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
 `6c64eb354b7dbb467df5725e2cae4eb67092ddc7` /
 `0ac9023037873004f7bd5d75c16f80953d770a4d`.
 
-VR-48 is accepted as **`ATOMIC FRESH-ROOT CONTROL PASS / ROOT DELETED / NO
-LIVE ACTION`**. Its exact temp/repository/name/parent/descendant/exclusion/
-predecessor/nonexistence predicates passed; creation occurred once; the
-post-create resolved identity matched; empty-root cleanup passed; and
-`nativeExit=0`. No live budget was consumed.
+The submitted VR-49 fail-closed wrapper was rejected by the command safety
+layer before PowerShell execution. No root was generated or created; no port,
+process, preview, browser, E2E, diagnostic, extractor, summary, verifier, or
+cleanup action occurred. All live invocation counts are zero.
 
-Fresh-child capacity remains unavailable; Mission context reuse is disclosed
-and non-evidence.
+VR-49 expressly classifies a pre-E2E tool rejection as execution-control
+evidence only, without spending the E2E invocation, while exhausting the shell
+and forbidding same-context reformulation. Combat ran no alternate or retry.
 
-Combat may perform exactly one fresh contained corrected diagnostic-control
-verification. Create a new GUID root once using the proven VR-48 atomic
-protocol, retain the exact post-resolve identity, then launch the owned
-production and fixture previews once and execute exactly one complete E2E for
-geometry candidate `8aa1dcaf...` with transport lineage `6c64eb...`.
+Fresh Mission must adjudicate this non-executed control rejection and issue a
+new bounded tool-compatible authority or HOLD. Mission must not infer a root,
+candidate, product, browser, diagnostic, or verifier finding and must not run
+E2E during adjudication.
 
-Success requires diagnostic `checkInventoryExact=true`, `failureCount=0`,
-`browserClosed=true`, exactly one complete summary, and exactly one verifier
-PASS. Failure requires the full safe canonical base64 transport before exact
-cleanup, no verifier, and no rerun. Cleanup must stop both owned previews,
-clear both ports, and delete only the revalidated owned root.
-
-No repair, retry, second E2E, product/media/protected change, build, test,
-validator, PBA, or served-identity rerun is authorized. Diagnostic evidence is
-non-release and forbidden verifier input. The cumulative accepted gates,
-frozen identities/invariants, and all nine OPEN classifications remain exact.
-
-Return only the exact VR-49 scalar/evidence disposition to Mission. No
-downstream stage or release action is authorized.
+The cumulative gates, VR-48 atomic root PASS, all nine OPEN classifications,
+and every frozen identity and meaning remain exact. Diagnostic evidence remains
+non-release, forbidden verifier input, and no-retry. No downstream stage or
+release action is authorized.
