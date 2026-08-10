@@ -15,13 +15,13 @@ export const FRPX03_COPY = Object.freeze({
     remediation_required: "remediation required",
     complete: "complete",
   }),
-  FRPX03_UNSEEN_INTERFACE: "[FRPX03_UNSEEN_INTERFACE]",
-  FRPX03_AVAILABLE: "[FRPX03_AVAILABLE]",
-  FRPX03_IN_PROGRESS: "[FRPX03_IN_PROGRESS]",
-  FRPX03_MISSED: "[FRPX03_MISSED]",
-  FRPX03_MASTERED: "[FRPX03_MASTERED]",
-  FRPX03_RETURNED: "[FRPX03_RETURNED]",
-  FRPX03_NEXT_BOUNDARY: "[FRPX03_NEXT_BOUNDARY]",
+  FRPX03_UNSEEN_INTERFACE: "Six unequal channels divide one inflow across two dry mineral lips; their local coupling lies within reach.",
+  FRPX03_AVAILABLE: "PILOT // Six branches. One repeated relation. I'll call it the Sixfold Weir. SUIT // Separate compatible local surface confirmed; expedition work is available.",
+  FRPX03_IN_PROGRESS: "SYSTEM // Expedition work remains unfinished and can resume from a clean boundary. SCENE // Water and branches remain unchanged.",
+  FRPX03_MISSED: "901 TEACHER // One checked responsible-AI dimension remains unresolved. Answer-free guidance is available inside the Terminal.",
+  FRPX03_MASTERED: "SYSTEM // Existing evidence is finalized. SCENE // The branches, basin, Crown, and route remain unchanged.",
+  FRPX03_RETURNED: "SCENE // The same six branches still cross the two dry lips. SUIT // Sanitized evidence restores only the lawful expedition boundary.",
+  FRPX03_NEXT_BOUNDARY: "PILOT // I'll follow the material trail already ahead. SYSTEM // The current continuation is available.",
 });
 
 const orderedEvidenceIds = Object.freeze([
