@@ -140,27 +140,62 @@ exact-next-action authority.
 - The Work Order artifact is `Production Pipeline/First Run/
   FIRST_RUN_WORK_ORDER_FRWO-002-v1.md`.
 
-## Exact next action - Science viability
+## Fresh Science result
 
-Read `First Run Agent Profiles/office-of-science-administrator.md` in full;
-then read `FRWO-002-v1`, `FRPB-001-v1`, guarded revalidation
+- Science issued **`POLISH VIABILITY READY / FRVE-002-v1`** from exact source
+  `80b83044d185645a485c79c396561a1c8541f53a`.
+- Original Meadow provenance explicitly authored rejected cloudy growths,
+  salvage, repairs, cutting collars, annealing, and routing. The integrated
+  master preserves that source geometry while separately registering the
+  central Terminal and right Route Marker.
+- The fixed Fracture Nursery relationship is exact normalized geometry
+  `left 0% / top 52% / width 24% / height 48%`, identical at narrow. It covers
+  the existing low-left repair-stock grouping, ends one percentage point before
+  First Signal begins, has zero pairwise overlap with both existing targets,
+  survives centered `16/9` cover, and remains above `44 x 44` at all required
+  layouts plus `320 x 240`.
+- Nursery availability is pure nonpersisted view state derived only from
+  sanitized Route Marker and existing `calibrationMastery`. No save field,
+  route gate, evidence class, lesson, or world state is added.
+- Exactly one campaign calibration entry is permitted: in-world `USE Fracture
+  Nursery coupling`. The generic departure-row launcher must be removed;
+  departure stays immediately available in every calibration state.
+- Existing `L01-03`, its strict `8/8 + 8/8 + 4/4`, remediation, evidence
+  allowlist, privacy clearing, reload reconstruction, safe exit, and Demo Tour
+  isolation remain exact. Completed `USE` may not reopen fresh scored work or
+  downgrade mastery.
+- The current accepted headroom is JS `41,875` bytes, CSS `10` bytes, modules
+  `6`. Every cap is fail-closed; no waiver or media escape is permitted.
+- Mission must authorize one canonical checked-in release-command manifest at
+  `Production Pipeline/First Run/
+  FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-001-v1.json`, including nonempty
+  focused/related commands, exactly `40` validator `--self-test` invocations,
+  exact fixture config/preview, served identity, one E2E, PBA/media, cleanup,
+  and candidate identity.
+- Fresh current focused baseline is `24/24`. This is viability evidence only;
+  no scoreboard cell advances.
+- The envelope is `Production Pipeline/First Run/
+  FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-002-v1.md`.
+
+## Exact next action - Mission shell
+
+Read `First Run Agent Profiles/mission-captain.md` in full; then read
+`FRWO-002-v1`, `FRVE-002-v1`, `FRPB-001-v1`, guarded revalidation
 `FRPB-001-v1-GR-01`, `FRAB-001-v1`, `FRCL-002-v1`, `FRRM-002-v1`, and
-`FRSB-002-v1`. Inspect the exact Meadow/game-on-paper/route/curriculum/
-readiness/visual authorities, runtime `App.jsx`, `pixelMeadow.js`,
-`calibrationExercise.js`, `sceneTransition.js`, current focused tests, accepted
-asset provenance, and `PBA-TD012-v1`.
+`FRSB-002-v1`. Independently verify the fixed `0/52/24/48` target against the
+immutable master/provenance and reconcile every Work Order requirement with the
+Science envelope.
 
-Independently answer all eight Work Order questions. At minimum, prove or reject
-the immutable plate's ability to carry one distinct non-overlapping Fracture
-Nursery host across wide/narrow crops; define the exact optional-route,
-save/privacy, focus/recovery, accessibility, PBA, regression, and canonical
-release-command-manifest envelope. Issue one versioned
-`POLISH VIABILITY READY`, `REVISE`, or `HOLD` disposition and leave one exact
-Mission handoff only if ready.
+Issue exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` for
+`FRWO-002-v1`. If ready, lock the sole in-world `USE` entry, pure view-state
+derivation, route/save/privacy/focus/accessibility/PBA contracts, exact
+permitted files, `FRRC-001-v1` manifest requirement, one complete
+non-overlapping E2E, hard stops, and rollback boundary before leaving one exact
+Recon handoff.
 
-Do not write final copy, implement production, promote maturity, change canon,
-learning, route, save, world, ending, or media, create a Mission shell, begin
-Mission, or inspect protected state inside the Science invocation.
+Do not write final prose, implement production, alter learning, route, save,
+world, ending, or media, advance maturity, begin Recon, inspect protected state,
+or perform an image/media/reveal operation inside Mission.
 
 ## Protected boundaries
 
