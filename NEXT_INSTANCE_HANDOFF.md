@@ -2,18 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIAGNOSTIC FIELD-SOURCE CORRECTION COMPLETE / RETURN
-TO FRESH MISSION / FRCE-003-v1-VR-14`**
+Current disposition: **`FIRST RUN SHELL READY / ONE FIELD-SOURCE-CORRECTED
+DIAGNOSTIC-CONTROL VERIFICATION / FRSH-003-v1-VR-15`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
-Correction shell: `FRSH-003-v1-VR-14`
-
-Combat return: `FRCE-003-v1-VR-14`
+Verification shell: `FRSH-003-v1-VR-15`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -29,55 +27,41 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Mission Captain profile in full, complete
-`FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-14.md`, complete
-`FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-14.md`, operative VR-07,
-diagnostic VR-12, verification VR-13, current `FRAB-003-v1`, and exact
-committed manifest/E2E/static test at candidate `2cccbfe`.
+Read the Combat Engineer profile in full, complete VR-07, VR-12, VR-13,
+VR-14, and VR-15, FRCE-003-v1-VR-12 through VR-14, current FRAB-003, this
+handoff, and the exact committed FRRC/E2E/static controls.
 
-Combat corrected exactly one evidence-control defect in exactly three files.
-The E2E now stores unrounded image border/padding from `imageStyle` under
-`geometry.image.*`, stores unrounded label border/padding from `labelStyle`
-under distinct `geometry.label.*`, continues to use the label fields for label
-text and exactness gates, and uses the image fields for the zero-image-edge
-gate. The diagnostic retains exhaustive image expected-zero paths and adds
-exhaustive label expected-one paths through the same deterministic required,
-emitted, uniqueness, sorting, failure-list, and per-layout grouping machinery.
-The manifest and existing static test freeze that exact separation.
+Run the exact full deterministic ladder once from its beginning against the
+five frozen identities. Any deterministic failure is `HOLD / NO E2E / NO
+RERUN`; perform no repair and clean only exact owned resources.
 
-The candidate changes only:
+Only after every deterministic gate passes, create one previously nonexistent
+GUID-named direct child of resolved OS temp, prove exact containment and
+repository exclusion, and invoke the exact complete E2E once within `180s`.
 
-- `playtest/e2e-playthrough.mjs`;
-- `Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`;
-  and
-- `horizon-archive-game/test/sixfoldWeir.test.js` inside its existing FRRC-002
-  test, with no new test and unchanged `68/68` count.
+If E2E fails, read only its owned `first-run-live-diagnostic.json`, record
+every failure path/expected/actual/owner, route the exact earliest responsible
+owner (or fresh Mission for mixed/ambiguous ownership), run no verifier, and
+do not rerun.
 
-Combat proof passed: exact ancestry/three-file/blob/frozen-boundary/tracked-
-drift inspection, `git diff --check`, FRRC JSON/13-entry/40-sorted-validator/
-one-E2E policy inspection, `node --check`, and one exact focused invocation at
-`68/68` in `200.4442ms` within `30s`. No gate failed or reran.
+If E2E succeeds, require the same-run diagnostic
+`checkInventoryExact=true` and `failureCount=0`, exactly one machine live
+summary, and exactly one passing independent verifier using only that summary.
+Any mismatch is `HOLD / NO RERUN`.
 
-Mission must independently adjudicate only candidate `2cccbfe` and may issue
-one bounded `HOLD` or `READY` routing. Do not inherit Combat's conclusion as
-independent proof. Do not run or authorize E2E from this handoff, execute the
-diagnostic, repair product, run related/full tests, validators, builds,
-PBA/media, preview, served identity, browser, external-root, summary, verifier,
-or cleanup operations unless a new exact shell lawfully authorizes them.
+Preserve all product, candidate, validation, evidence, threshold, predicate,
+learning, privacy, save, route, world, identity, ending, media, protected/user,
+external-root, cleanup, one-E2E, diagnostic non-evidence/non-verifier, and
+maturity boundaries. Make no implementation/control change. Write only one
+versioned Combat return and this handoff after the attempt, commit, push, and
+prove `HEAD == origin/main`.
 
-The sole prior E2E, exact `312,564`-byte summary with SHA-256
-`04919AC83D83F0F9759ABBFDF6119990E9A7961DB0F21A097DEA49D59B8E0533`,
-and one passing independent verifier remain truthful but are not a correction
-waiver, diagnostic input, release evidence, or maturity evidence.
+On complete PASS, route fresh Intelligence with the exact candidate, one
+summary, and one verifier proof without a second E2E. On failure, follow the
+exact owner routing above. Do not begin Quartermaster/Image work, inspect
+protected or predecessor state, create a reveal/schedule/automation, advance
+maturity, or call `FIRST RUN COMPLETE`.
 
-Preserve every product, threshold, layout predicate, summary/verifier meaning,
-learning, evidence, privacy, save, route, world, identity, shared-ending,
-media, protected/user/root/reveal, and maturity boundary. Do not begin
-Quartermaster, Image Specialist, or Intelligence; inspect protected repository
-QA/PDF/training/browser/profile/save/hidden-lore/media/user/predecessor-root
-state; expand Host 06-15 or City; create a media operation, reveal, schedule,
-or automation; advance maturity; or call `FIRST RUN COMPLETE`.
-
-The dedicated Combat report/handoff commit and final `HEAD == origin/main`
-proof are reported from Git after commit because this handoff cannot contain
-the hash that first contains itself.
+The dedicated Mission commit and final `HEAD == origin/main` proof are
+reported from Git after commit because this handoff cannot contain the hash
+that first contains itself.
