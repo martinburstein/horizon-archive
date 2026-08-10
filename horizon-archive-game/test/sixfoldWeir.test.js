@@ -14,6 +14,7 @@ import {
 
 const app = readFileSync(new URL("../src/App.jsx", import.meta.url), "utf8");
 const styles = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
+const e2e = readFileSync(new URL("../../playtest/e2e-playthrough.mjs", import.meta.url), "utf8");
 const releaseManifest = JSON.parse(readFileSync(new URL("../../Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json", import.meta.url), "utf8"));
 const pass = () => Object.fromEntries(responsibleAIDimensions.map((dimension) => [dimension, true]));
 const sequence = [...responsibleAIPrimaryScenarios, ...responsibleAITransferScenarios].map(({ id }) => id);
@@ -152,6 +153,27 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
   assert.match(releaseManifest.policy.qa_root, /OS temp.*outside repository/);
   assert.deepEqual(releaseManifest.entries["complete-e2e"].command, ["node", "playtest/e2e-playthrough.mjs"]);
   assert.match(releaseManifest.entries["complete-e2e"].environment.HORIZON_ARCHIVE_QA_DIR, /GUID.*OS-temp.*outside-repository/);
+  assert.deepEqual(releaseManifest.policy.live_diagnostic, {
+    schema: "horizon.first-run.live-diagnostic.v1",
+    path: "<exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json",
+    producer: "playtest/e2e-playthrough.mjs",
+    ownership: "machine-owned failure-side localization from the sole E2E's in-memory raw records",
+    write_order: "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
+    failure_capture: "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
+    release_evidence: false,
+    verifier_input: false,
+    failed_e2e_authorizes_retry: false,
+  });
+  assert.match(releaseManifest.entries["complete-e2e"].output_port_ownership, /first-run-live-diagnostic\.json[\s\S]*first-run-live-summary\.json only after all live gates pass/);
+  assert.match(releaseManifest.entries["complete-e2e"].failure_capture, /read only[\s\S]*first-run-live-diagnostic\.json[\s\S]*no retry/);
+  assert.match(releaseManifest.entries["live-summary-verify"].failed_e2e_behavior, /do not run[\s\S]*diagnostic[\s\S]*not release evidence/);
+  assert.match(e2e, /schema: "horizon\.first-run\.live-diagnostic\.v1"[\s\S]*operativeShell: "FRSH-003-v1-VR-07"[\s\S]*diagnosticContract: "FRSH-003-v1-VR-12"[\s\S]*acceptedEvidencePredecessor/);
+  assert.match(e2e, /requiredCheckPaths[\s\S]*emittedCheckPaths[\s\S]*checkInventoryExact[\s\S]*failureCount[\s\S]*failurePaths[\s\S]*failuresByLayout/);
+  const diagnosticWrite = e2e.indexOf('writeFileSync(qaPath("first-run-live-diagnostic.json")');
+  const focusThrow = e2e.indexOf('if (!focusPass) throw new Error');
+  const layoutThrow = e2e.indexOf('if (!layoutPass) throw new Error');
+  const summaryWrite = e2e.indexOf('writeFileSync(qaPath("first-run-live-summary.json")');
+  assert.ok(diagnosticWrite > 0 && diagnosticWrite < focusThrow && diagnosticWrite < layoutThrow && layoutThrow < summaryWrite);
   assert.match(releaseManifest.entries["live-summary-verify"].command.join(" "), /first-run\.live-summary\.v1[\s\S]*FRSH-003-v1-VR-04[\s\S]*productPredecessor[\s\S]*semanticBottomAnchored[\s\S]*Tab -> Shift\+Tab[\s\S]*sixfoldActivationMs/);
   assert.equal(releaseManifest.entries.validators.invocations.length, 40);
   assert.deepEqual(releaseManifest.entries.validators.invocations.map((entry) => entry.command[1]), [...releaseManifest.entries.validators.invocations.map((entry) => entry.command[1])].sort());

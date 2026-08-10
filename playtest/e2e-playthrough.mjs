@@ -46,6 +46,7 @@ const productCandidate = process.env.HORIZON_ARCHIVE_PRODUCT_CANDIDATE || "unfro
 const probeCandidate = process.env.HORIZON_ARCHIVE_PROBE_CANDIDATE || "unfrozen-probe-candidate";
 const browserProbePredecessor = "d9487d8205174a7b5f688cbfccbcd5f7875ac1ad";
 const validationControlCandidate = "4cd7fbf31291671dd28c0743b44a7c49aaad82bb";
+const acceptedEvidencePredecessor = "ca89a679195c11d441a76e6c02983a6436f2ccb2";
 const browserProofPredecessor = "FRSH-003-v1-VR-04";
 const productPredecessor = "a9776e337f1820776864a5690332c364d0fb2556";
 const harnessPredecessor = "bf58e528bc6ce4088f81f2c782ce2895259ab9fd";
@@ -1534,20 +1535,42 @@ print("Operator:", learner)`);
   await completeCityThreshold(page);
   await verifyCanonicalLaterRail(page);
   const canonicalJourneyElapsedSeconds = (Date.now() - canonicalJourneyStartedAt) / 1000;
-  if (canonicalJourneyElapsedSeconds >= 180) {
-    throw new Error(`Canonical clean-start through MH-40 exceeded 180 seconds: ${canonicalJourneyElapsedSeconds.toFixed(3)}s`);
-  }
-  if (runtimeErrors.length) throw new Error(`Runtime errors detected: ${runtimeErrors.join(" | ")}`);
   const maxMainThreadTaskMs = Math.max(...mainThreadSamples.map(({ durationMs }) => durationMs));
-  if (!Number.isFinite(maxMainThreadTaskMs) || maxMainThreadTaskMs > 100) {
-    throw new Error(`Fracture Nursery sampled main-thread activation exceeded 100ms: ${JSON.stringify(mainThreadSamples)}`);
-  }
   const sixfoldActivationMs = Math.max(...mainThreadSamples.filter(({ label }) => label.includes("Sixfold Weir")).map(({ durationMs }) => durationMs));
-  if (!Number.isFinite(sixfoldActivationMs) || sixfoldActivationMs > 2) throw new Error(`Sixfold Weir activation exceeded 2ms: ${sixfoldActivationMs}`);
   const focusPass = Object.values(sixfoldFocus).every(Boolean);
-  if (!focusPass) throw new Error(`Sixfold Weir focus contract incomplete: ${JSON.stringify(sixfoldFocus)}`);
   const layoutPass = sixfoldLayouts.length === 6 && sixfoldLayouts.every(({ pass }) => pass);
-  if (!layoutPass) throw new Error(`Sixfold Weir layout contract incomplete: ${JSON.stringify(sixfoldLayouts)}`);
+  const liveDiagnostic = buildSixfoldLiveDiagnostic({
+    layouts: sixfoldLayouts,
+    focusPass,
+    layoutPass,
+    runtimeErrors: runtimeErrors.length > 0,
+  });
+  writeFileSync(qaPath("first-run-live-diagnostic.json"), `${JSON.stringify(liveDiagnostic, null, 2)}\n`, "utf8");
+  const diagnosticTransport = {
+    schema: liveDiagnostic.schema,
+    productCandidate: liveDiagnostic.productCandidate,
+    probeCandidate: liveDiagnostic.probeCandidate,
+    validationControlCandidate: liveDiagnostic.validationControlCandidate,
+    acceptedEvidencePredecessor: liveDiagnostic.acceptedEvidencePredecessor,
+    diagnosticContract: liveDiagnostic.diagnosticContract,
+    checkInventoryExact: liveDiagnostic.checkInventoryExact,
+    failureCount: liveDiagnostic.failureCount,
+    failurePaths: liveDiagnostic.failurePaths,
+    focusPass: liveDiagnostic.focusPass,
+    layoutPass: liveDiagnostic.layoutPass,
+  };
+  console.error(JSON.stringify(diagnosticTransport));
+  const diagnosticFailure = () => `diagnostic failureCount=${liveDiagnostic.failureCount} failurePaths=${JSON.stringify(liveDiagnostic.failurePaths)}`;
+  if (canonicalJourneyElapsedSeconds >= 180) {
+    throw new Error(`Canonical clean-start through MH-40 exceeded 180 seconds: ${canonicalJourneyElapsedSeconds.toFixed(3)}s; ${diagnosticFailure()}`);
+  }
+  if (runtimeErrors.length) throw new Error(`Runtime errors detected: ${runtimeErrors.join(" | ")}; ${diagnosticFailure()}`);
+  if (!Number.isFinite(maxMainThreadTaskMs) || maxMainThreadTaskMs > 100) {
+    throw new Error(`Fracture Nursery sampled main-thread activation exceeded 100ms; ${diagnosticFailure()}`);
+  }
+  if (!Number.isFinite(sixfoldActivationMs) || sixfoldActivationMs > 2) throw new Error(`Sixfold Weir activation exceeded 2ms: ${sixfoldActivationMs}; ${diagnosticFailure()}`);
+  if (!focusPass) throw new Error(`Sixfold Weir focus contract incomplete; ${diagnosticFailure()}`);
+  if (!layoutPass) throw new Error(`Sixfold Weir layout contract incomplete; ${diagnosticFailure()}`);
   const runtimeRequestPass = await page.evaluate(() => performance.getEntriesByType("resource").every(({ name }) => new URL(name, location.href).origin === location.origin));
   const liveSummary = {
     schema: "horizon.first-run.live-summary.v1",
@@ -1831,6 +1854,281 @@ print("Operator:", learner)`);
   }));
 } finally {
   await browser.close();
+}
+
+function buildSixfoldLiveDiagnostic({ layouts, focusPass, layoutPass, runtimeErrors }) {
+  const layoutDefinitions = [
+    { id: "desktop", width: 1920, height: 1080 },
+    { id: "laptop", width: 1366, height: 768 },
+    { id: "narrow", width: 390, height: 844 },
+    { id: "effective-200", width: 768, height: 900 },
+    { id: "retained-320x180", width: 320, height: 180 },
+    { id: "retained-320x240", width: 320, height: 240 },
+  ];
+  const rectangleNames = ["frame", "containing", "sceneArt", "physical", "semantic", "label", "labelText", "host04", "returnRidge"];
+  const components = ["x", "y", "width", "height"];
+  const directGateNames = [
+    "authoredPhysical", "boxesEqual", "zeroImageEdges", "imageContract", "semanticExact",
+    "semanticBottomAnchored", "physicalCenterInsideActivation", "targetSize", "outerLabelInset",
+    "innerLabelInset", "labelBorderExact", "labelPaddingExact", "labelTextExact", "labelContained",
+    "labelScrollContained", "anchorContained", "retention", "host04NoOverlap", "returnNoOverlap",
+    "noHorizontalOverflow",
+  ];
+  const expectedFields = {
+    tagName: "BUTTON",
+    role: "button",
+    testId: "sixfold-weir",
+    ariaLabel: "use Sixfold Weir, in progress",
+    state: "in_progress",
+    disabled: false,
+    worldOrder: ["primary", "sixfold-weir", "meadow-return-ridge"],
+    enabledOrder: ["sixfold-weir", "LOOK AT", "USE", "TALK TO", "Return to Chapter I, Glass Meadow"],
+  };
+  const q = 1 / 64;
+  const Q = (value) => Math.floor(value / q) * q;
+  const same = (left, right) => JSON.stringify(left) === JSON.stringify(right);
+  const finiteLattice = (value) => typeof value === "number" && Number.isFinite(value) && Number.isInteger(value / q);
+  const zeroMotion = (values) => Array.isArray(values) && values.every((value) => (
+    typeof value === "string" && value.split(",").every((part) => Number.parseFloat(part) === 0)
+  ));
+  const missing = Object.freeze({ missing: true });
+  const captured = (value) => value === undefined ? missing : value;
+  const checkSpecs = [];
+  const addExact = (path, expected, owner, actual) => checkSpecs.push({
+    path, expected, owner, actual, evaluate: (value) => same(value, expected),
+  });
+  const addPredicate = (path, expected, owner, actual, evaluate) => checkSpecs.push({ path, expected, owner, actual, evaluate });
+  const ids = layoutDefinitions.map(({ id }) => id);
+  const emittedIds = layouts.map(({ id }) => id);
+  const baselineGameState = layouts[0]?.semantic?.gameState?.pre;
+
+  for (const [index, definition] of layoutDefinitions.entries()) {
+    const layout = layouts[index];
+    const prefix = `layouts.${definition.id}`;
+    const requested = { width: definition.width, height: definition.height };
+    addExact(`${prefix}.envelope.layoutSet`, ids, "aggregate", emittedIds);
+    addExact(`${prefix}.envelope.layoutCount`, 6, "aggregate", layouts.length);
+    addExact(`${prefix}.envelope.id`, definition.id, "aggregate", layout?.id);
+    addExact(`${prefix}.envelope.sequenceIndex`, index, "aggregate", layout?.sequenceIndex);
+    addExact(`${prefix}.envelope.requestedViewport`, requested, "geometry", layout?.requestedViewport);
+    addExact(`${prefix}.envelope.preViewport`, requested, "geometry", layout?.preViewport);
+    addExact(`${prefix}.envelope.postViewport`, requested, "geometry", layout?.postViewport);
+    addExact(`${prefix}.envelope.lattice.q`, q, "geometry", layout?.lattice?.q);
+    addExact(`${prefix}.envelope.lattice.operator`, "floor", "geometry", layout?.lattice?.operator);
+    addExact(`${prefix}.envelope.lattice.strict`, true, "geometry", layout?.lattice?.strict);
+    addExact(`${prefix}.envelope.lattice.epsilon`, false, "geometry", layout?.lattice?.epsilon);
+
+    for (const phase of ["pre", "post"]) {
+      const fields = layout?.semantic?.fields?.[phase];
+      addExact(`${prefix}.semantic.fields.${phase}.sameNodeFromSequenceStart`, true, "semantic", fields?.sameNodeFromSequenceStart);
+      addExact(`${prefix}.semantic.fields.${phase}.sameNodeFromEpochStart`, true, "semantic", fields?.sameNodeFromEpochStart);
+      addExact(`${prefix}.semantic.fields.${phase}.isConnected`, true, "semantic", fields?.isConnected);
+      addExact(`${prefix}.semantic.fields.${phase}.isHtmlButton`, true, "semantic", fields?.isHtmlButton);
+      for (const [field, expected] of Object.entries(expectedFields)) {
+        addExact(`${prefix}.semantic.fields.${phase}.${field}`, expected, "semantic", fields?.[field]);
+      }
+      addExact(`${prefix}.semantic.fields.${phase}.active`, true, "focus", fields?.active);
+      addExact(`${prefix}.semantic.fields.${phase}.focusVisible`, true, "focus", fields?.focusVisible);
+
+      const gameState = layout?.semantic?.gameState?.[phase];
+      for (const key of ["save", "localStorage", "sessionStorage", "location", "scene", "selectedVerb", "hostState", "dialogue", "absence", "enabledOrder", "evidence", "routeWorld"]) {
+        addExact(`${prefix}.semantic.gameState.${phase}.${key}`, baselineGameState?.[key], "semantic", gameState?.[key]);
+      }
+      addExact(`${prefix}.semantic.gameState.${phase}.sceneExact`, "ruins", "semantic", gameState?.scene);
+      addExact(`${prefix}.semantic.gameState.${phase}.selectedVerbExact`, "USE", "semantic", gameState?.selectedVerb);
+      addExact(`${prefix}.semantic.gameState.${phase}.hostStateExact`, "in_progress", "semantic", gameState?.hostState);
+      for (const absence of ["terminal", "dialog", "confirmation", "responsibleAI"]) {
+        addExact(`${prefix}.semantic.gameState.${phase}.absence.${absence}`, true, "semantic", gameState?.absence?.[absence]);
+      }
+    }
+    addExact(`${prefix}.semantic.sameNodeFromSequenceStart.pre`, true, "semantic", layout?.semantic?.sameNodeFromSequenceStart?.pre);
+    addExact(`${prefix}.semantic.sameNodeFromSequenceStart.post`, true, "semantic", layout?.semantic?.sameNodeFromSequenceStart?.post);
+    addExact(`${prefix}.semantic.sameNodeFromEpochStart.post`, true, "semantic", layout?.semantic?.sameNodeFromEpochStart?.post);
+    addExact(`${prefix}.semantic.isConnected.pre`, true, "semantic", layout?.semantic?.isConnected?.pre);
+    addExact(`${prefix}.semantic.isConnected.post`, true, "semantic", layout?.semantic?.isConnected?.post);
+    addExact(`${prefix}.semantic.audit.writes`, [], "semantic", layout?.semantic?.audit?.writes);
+    addExact(`${prefix}.semantic.audit.events`, [], "semantic", layout?.semantic?.audit?.events);
+    addExact(`${prefix}.semantic.noGameAction`, true, "semantic", layout?.semantic?.noGameAction);
+    addExact(`${prefix}.semantic.noWrite`, true, "semantic", layout?.semantic?.noWrite);
+    addExact(`${prefix}.semantic.semanticIdentityStable`, true, "semantic", layout?.semantic?.semanticIdentityStable);
+
+    const focus = layout?.focus;
+    addExact(`${prefix}.focus.keyPath`, "Tab -> Shift+Tab", "focus", focus?.keyPath);
+    addExact(`${prefix}.focus.reverseDomPredecessor`, null, "focus", focus?.reverseDomPredecessor);
+    addExact(`${prefix}.focus.forwardSuccessor`, "LOOK AT", "focus", focus?.forwardSuccessor);
+    addExact(`${prefix}.focus.preActive`, true, "focus", focus?.preActive);
+    addExact(`${prefix}.focus.intermediate.identity`, "LOOK AT", "focus", focus?.intermediate?.identity);
+    addExact(`${prefix}.focus.intermediate.active`, true, "focus", focus?.intermediate?.active);
+    addExact(`${prefix}.focus.intermediate.focusVisible`, true, "focus", focus?.intermediate?.focusVisible);
+    addExact(`${prefix}.focus.postActive`, true, "focus", focus?.postActive);
+    addExact(`${prefix}.focus.pointerFocus`, false, "focus", focus?.pointerFocus);
+    addExact(`${prefix}.focus.programmaticFocus`, false, "focus", focus?.programmaticFocus);
+    addExact(`${prefix}.focus.mediaState.forcedColors`, true, "focus", focus?.mediaState?.forcedColors);
+    addExact(`${prefix}.focus.mediaState.reducedMotion`, true, "focus", focus?.mediaState?.reducedMotion);
+    addExact(`${prefix}.focus.outlineWidth`, "3px", "focus", focus?.outlineWidth);
+    addExact(`${prefix}.focus.outlineStyle`, "solid", "focus", focus?.outlineStyle);
+    addExact(`${prefix}.focus.outlineColor`, focus?.systemHighlight, "focus", focus?.outlineColor);
+    addPredicate(`${prefix}.focus.hostMotion`, "all animation/transition duration and delay components parse to zero", "focus", focus?.hostMotion, zeroMotion);
+    addPredicate(`${prefix}.focus.labelMotion`, "all animation/transition duration and delay components parse to zero", "focus", focus?.labelMotion, zeroMotion);
+    addExact(`${prefix}.focus.focusPass`, true, "focus", focus?.focusPass);
+
+    for (const phase of ["pre", "post"]) {
+      const geometry = layout?.geometry?.[phase];
+      const sceneArt = geometry?.rectangles?.sceneArt?.viewport;
+      const expectedPhysical = sceneArt && {
+        x: sceneArt.x + Q(sceneArt.width * 0.45), y: sceneArt.y + Q(sceneArt.height * 0.75),
+        width: Q(sceneArt.width * 0.20), height: Q(sceneArt.height * 0.25),
+      };
+      const expectedSemantic = sceneArt && {
+        x: sceneArt.x + Q(sceneArt.width * 0.45), y: sceneArt.y + Q(Math.min(sceneArt.height * 0.75, sceneArt.height - 44)),
+        width: Q(sceneArt.width * 0.20), height: Q(Math.max(sceneArt.height * 0.25, 44)),
+      };
+      addExact(`${prefix}.geometry.${phase}.viewport`, requested, "geometry", geometry?.viewport);
+      for (const axis of ["x", "y"]) {
+        addPredicate(`${prefix}.geometry.${phase}.scroll.${axis}`, "finite exact q=1/64 lattice value", "geometry", geometry?.scroll?.[axis], finiteLattice);
+      }
+      addExact(`${prefix}.geometry.${phase}.allLattice`, true, "geometry", geometry?.allLattice);
+      for (const gate of directGateNames) addExact(`${prefix}.geometry.${phase}.directGates.${gate}`, true, gate === "anchorContained" || gate === "retention" ? "source" : "geometry", geometry?.directGateResults?.[gate]);
+      addExact(`${prefix}.geometry.${phase}.directGatesPass`, true, "aggregate", geometry?.directGatesPass);
+
+      for (const rectangleName of rectangleNames) {
+        const rectangle = geometry?.rectangles?.[rectangleName];
+        for (const space of ["viewport", "document", "imageRelative"]) {
+          for (const component of components) {
+            addPredicate(`${prefix}.geometry.${phase}.rectangles.${rectangleName}.${space}.${component}`, "finite exact q=1/64 lattice value", "geometry", rectangle?.[space]?.[component], finiteLattice);
+          }
+        }
+        for (const component of components) {
+          const documentExpected = component === "x" ? rectangle?.viewport?.x + geometry?.scroll?.x
+            : component === "y" ? rectangle?.viewport?.y + geometry?.scroll?.y : rectangle?.viewport?.[component];
+          const imageExpected = component === "x" ? rectangle?.viewport?.x - sceneArt?.x
+            : component === "y" ? rectangle?.viewport?.y - sceneArt?.y : rectangle?.viewport?.[component];
+          addExact(`${prefix}.geometry.${phase}.rectangles.${rectangleName}.documentMapping.${component}`, documentExpected, "geometry", rectangle?.document?.[component]);
+          addExact(`${prefix}.geometry.${phase}.rectangles.${rectangleName}.imageRelativeMapping.${component}`, imageExpected, "geometry", rectangle?.imageRelative?.[component]);
+        }
+      }
+      for (const component of components) {
+        addExact(`${prefix}.geometry.${phase}.browserUsed.physical.${component}`, expectedPhysical?.[component], "geometry", geometry?.rectangles?.physical?.viewport?.[component]);
+        addExact(`${prefix}.geometry.${phase}.browserUsed.semantic.${component}`, expectedSemantic?.[component], "geometry", geometry?.rectangles?.semantic?.viewport?.[component]);
+        addExact(`${prefix}.geometry.${phase}.expectedSemantic.${component}`, expectedSemantic?.[component], "geometry", geometry?.expectedSemantic?.[component]);
+      }
+      const expectedLabel = expectedSemantic && {
+        x: expectedSemantic.x + 3, y: expectedSemantic.y + 3,
+        width: expectedSemantic.width - 6, height: expectedSemantic.height - 6,
+      };
+      const expectedLabelText = expectedSemantic && {
+        x: expectedSemantic.x + 5, y: expectedSemantic.y + 5,
+        width: expectedSemantic.width - 10, height: expectedSemantic.height - 10,
+      };
+      for (const component of components) {
+        addExact(`${prefix}.geometry.${phase}.browserUsed.label.${component}`, expectedLabel?.[component], "geometry", geometry?.rectangles?.label?.viewport?.[component]);
+        addExact(`${prefix}.geometry.${phase}.browserUsed.labelText.${component}`, expectedLabelText?.[component], "geometry", geometry?.rectangles?.labelText?.viewport?.[component]);
+      }
+      for (const [name, expected] of Object.entries({ left: 0.45, top: 0.75, width: 0.20, height: 0.25, centerX: 0.55, centerY: 0.875 })) {
+        addExact(`${prefix}.geometry.${phase}.physicalNormalized.${name}`, expected, "geometry", geometry?.physicalNormalized?.[name]);
+      }
+      addPredicate(`${prefix}.geometry.${phase}.semanticTarget.width`, ">=44", "geometry", geometry?.rectangles?.semantic?.viewport?.width, (value) => typeof value === "number" && value >= 44);
+      addPredicate(`${prefix}.geometry.${phase}.semanticTarget.height`, ">=44", "geometry", geometry?.rectangles?.semantic?.viewport?.height, (value) => typeof value === "number" && value >= 44);
+      addExact(`${prefix}.geometry.${phase}.image.natural`, { width: 1672, height: 941 }, "source", geometry?.image?.natural);
+      addExact(`${prefix}.geometry.${phase}.image.objectFit`, "cover", "source", geometry?.image?.objectFit);
+      for (const axis of ["x", "y"]) {
+        addPredicate(`${prefix}.geometry.${phase}.image.objectPosition.${axis}`, "finite normalized object-position value", "source", geometry?.image?.objectPosition?.[axis], (value) => typeof value === "number" && Number.isFinite(value));
+      }
+      for (const edge of ["left", "top", "right", "bottom"]) {
+        addExact(`${prefix}.geometry.${phase}.image.border.${edge}`, 0, "source", geometry?.image?.border?.[edge]);
+        addExact(`${prefix}.geometry.${phase}.image.padding.${edge}`, 0, "source", geometry?.image?.padding?.[edge]);
+      }
+      for (const bound of ["left", "top", "right", "bottom"]) {
+        addPredicate(`${prefix}.geometry.${phase}.source.bounds.${bound}`, "finite source-space value", "source", geometry?.source?.bounds?.[bound], (value) => typeof value === "number" && Number.isFinite(value));
+        addPredicate(`${prefix}.geometry.${phase}.source.nominalBounds.${bound}`, "finite source-space value", "source", geometry?.source?.nominalBounds?.[bound], (value) => typeof value === "number" && Number.isFinite(value));
+      }
+      for (const axis of ["x", "y"]) {
+        addPredicate(`${prefix}.geometry.${phase}.source.actualCenter.${axis}`, "finite source-space value", "source", geometry?.source?.actualCenter?.[axis], (value) => typeof value === "number" && Number.isFinite(value));
+        addPredicate(`${prefix}.geometry.${phase}.source.nominalAnchor.${axis}`, "finite source-space value", "source", geometry?.source?.nominalAnchor?.[axis], (value) => typeof value === "number" && Number.isFinite(value));
+      }
+      addExact(`${prefix}.geometry.${phase}.source.anchorContained`, true, "source", geometry?.source?.anchorContained);
+      addPredicate(`${prefix}.geometry.${phase}.source.retention`, ">=0.95 finite", "source", geometry?.source?.retention, (value) => typeof value === "number" && Number.isFinite(value) && value >= 0.95);
+    }
+
+    const drift = layout?.geometry;
+    for (const axis of ["x", "y"]) {
+      const expectedDelta = drift?.post?.scroll?.[axis] - drift?.pre?.scroll?.[axis];
+      addExact(`${prefix}.geometry.deltaScroll.${axis}.value`, expectedDelta, "geometry", drift?.deltaScroll?.[axis]);
+      addPredicate(`${prefix}.geometry.deltaScroll.${axis}.lattice`, "finite exact q=1/64 lattice value", "geometry", drift?.deltaScroll?.[axis], finiteLattice);
+    }
+    for (const rectangleName of rectangleNames) {
+      const rectangle = drift?.rectangles?.[rectangleName];
+      const pre = drift?.pre?.rectangles?.[rectangleName];
+      const post = drift?.post?.rectangles?.[rectangleName];
+      for (const component of components) {
+        const expectedDelta = post?.viewport?.[component] - pre?.viewport?.[component];
+        const expectedResidual = component === "x" ? expectedDelta + drift?.deltaScroll?.x
+          : component === "y" ? expectedDelta + drift?.deltaScroll?.y : expectedDelta;
+        addExact(`${prefix}.geometry.drift.${rectangleName}.viewportDelta.${component}.value`, expectedDelta, "geometry", rectangle?.viewportDelta?.[component]);
+        addPredicate(`${prefix}.geometry.drift.${rectangleName}.viewportDelta.${component}.lattice`, "finite exact q=1/64 lattice value", "geometry", rectangle?.viewportDelta?.[component], finiteLattice);
+        addExact(`${prefix}.geometry.drift.${rectangleName}.residual.${component}.value`, expectedResidual, "geometry", rectangle?.residual?.[component]);
+        addPredicate(`${prefix}.geometry.drift.${rectangleName}.residual.${component}.lattice`, "finite exact q=1/64 lattice value", "geometry", rectangle?.residual?.[component], finiteLattice);
+        addExact(`${prefix}.geometry.drift.${rectangleName}.residual.${component}.zero`, 0, "geometry", rectangle?.residual?.[component]);
+      }
+      addExact(`${prefix}.geometry.drift.${rectangleName}.documentEqual`, true, "geometry", rectangle?.documentEqual);
+      addExact(`${prefix}.geometry.drift.${rectangleName}.rawDeltaIsInverseScroll`, true, "geometry", rectangle?.rawDeltaIsInverseScroll);
+      addExact(`${prefix}.geometry.drift.${rectangleName}.residualZero`, true, "geometry", rectangle?.residualZero);
+      addExact(`${prefix}.geometry.drift.${rectangleName}.allLattice`, true, "geometry", rectangle?.allLattice);
+    }
+    for (const [name, expected] of Object.entries({ viewportStable: true, viewportExact: true, allResidualsZero: true, allLattice: true, geometryStable: true, directGatesPass: true })) {
+      addExact(`${prefix}.geometry.aggregate.${name}`, expected, name === "directGatesPass" || name === "geometryStable" ? "aggregate" : "geometry", drift?.[name]);
+    }
+    addExact(`${prefix}.aggregate.semanticIdentityStable`, true, "aggregate", layout?.semantic?.semanticIdentityStable);
+    addExact(`${prefix}.aggregate.focusPass`, true, "aggregate", layout?.focus?.focusPass);
+    addExact(`${prefix}.aggregate.geometryStable`, true, "aggregate", layout?.geometry?.geometryStable);
+    addExact(`${prefix}.aggregate.directGatesPass`, true, "aggregate", layout?.geometry?.directGatesPass);
+    addExact(`${prefix}.aggregate.layout.pass`, true, "aggregate", layout?.pass);
+  }
+
+  const layoutOrder = new Map(ids.map((id, index) => [id, index]));
+  const pathOrder = (left, right) => {
+    const leftId = left.split(".")[1];
+    const rightId = right.split(".")[1];
+    return (layoutOrder.get(leftId) - layoutOrder.get(rightId)) || left.localeCompare(right);
+  };
+  const requiredCheckPaths = checkSpecs.map(({ path }) => path).sort(pathOrder);
+  const checks = checkSpecs.map(({ path, expected, owner, actual, evaluate }) => {
+    const value = captured(actual);
+    return { path, expected: captured(expected), actual: value, pass: evaluate(value), owner };
+  }).sort((left, right) => pathOrder(left.path, right.path));
+  const emittedCheckPaths = checks.map(({ path }) => path);
+  const checkInventoryExact = same(requiredCheckPaths, emittedCheckPaths)
+    && new Set(requiredCheckPaths).size === requiredCheckPaths.length
+    && new Set(emittedCheckPaths).size === emittedCheckPaths.length;
+  const falseChecks = checks.filter(({ pass }) => !pass);
+  const failurePaths = falseChecks.map(({ path }) => path).sort(pathOrder);
+  const failuresByLayout = Object.fromEntries(ids.map((id) => [id, falseChecks
+    .filter(({ path }) => path.startsWith(`layouts.${id}.`))
+    .map(({ path, expected, actual, owner }) => ({ path, expected, actual, owner }))]));
+  return {
+    schema: "horizon.first-run.live-diagnostic.v1",
+    producer: "playtest/e2e-playthrough.mjs",
+    workOrder: "FRWO-003-v1",
+    operativeShell: "FRSH-003-v1-VR-07",
+    diagnosticContract: "FRSH-003-v1-VR-12",
+    manifest: "FRRC-002-v1",
+    productCandidate,
+    probeCandidate,
+    validationControlCandidate,
+    acceptedEvidencePredecessor,
+    externalQaRoot: qaRoot,
+    runtimeErrors,
+    layouts,
+    checks,
+    requiredCheckPaths,
+    emittedCheckPaths,
+    checkInventoryExact,
+    failureCount: failurePaths.length,
+    failurePaths,
+    failuresByLayout,
+    focusPass,
+    layoutPass,
+  };
 }
 
 async function sampleActivation(locator, label, samples) {

@@ -16,7 +16,18 @@
       "Simplilearn Training Files/",
       "Production Pipeline/First Run/QA/"
     ],
-    "live_summary": "first-run-live-summary.json produced only by sole E2E"
+    "live_summary": "first-run-live-summary.json produced only after every sole-E2E live gate passes",
+    "live_diagnostic": {
+      "schema": "horizon.first-run.live-diagnostic.v1",
+      "path": "<exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json",
+      "producer": "playtest/e2e-playthrough.mjs",
+      "ownership": "machine-owned failure-side localization from the sole E2E's in-memory raw records",
+      "write_order": "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
+      "failure_capture": "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
+      "release_evidence": false,
+      "verifier_input": false,
+      "failed_e2e_authorizes_retry": false
+    }
   },
   "entries": {
     "focused": {
@@ -806,8 +817,9 @@
         "production-preview",
         "served-identity"
       ],
-      "output_port_ownership": "one browser process and one freshly created external OS-temp GUID root",
-      "cleanup": "close owned browser; retain exact external root through live-summary-verify, then remove only after repeated containment proof",
+      "output_port_ownership": "one browser process, one freshly created external OS-temp GUID root, machine-owned first-run-live-diagnostic.json on every completed aggregate evaluation, and first-run-live-summary.json only after all live gates pass",
+      "cleanup": "close owned browser; on success retain exact external root through live-summary-verify; on failure retain only long enough to capture every diagnostic failure path/value; then remove only the exact owned root after repeated containment proof",
+      "failure_capture": "if E2E fails after diagnostic emission, read only <exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json; it is localization only and authorizes no retry",
       "environment": {
         "HORIZON_ARCHIVE_URL": "http://127.0.0.1:4173/",
         "HORIZON_ARCHIVE_QA_DIR": "<fresh-resolved-GUID-child-inside-OS-temp-outside-repository>",
@@ -870,7 +882,8 @@
         "complete-e2e"
       ],
       "output_port_ownership": "read-only exact E2E summary",
-      "cleanup": "none"
+      "cleanup": "none",
+      "failed_e2e_behavior": "do not run; first-run-live-diagnostic.json is forbidden verifier input and is not release evidence"
     }
   }
 }
