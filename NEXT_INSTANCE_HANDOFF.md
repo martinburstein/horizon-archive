@@ -219,30 +219,59 @@ exact-next-action authority.
   after pointer modality is not acceptance evidence.
 - Variance artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-01.md`.
+- Science resolved the geometry contradiction as **`POLISH VIABILITY READY /
+  FRVE-003-v1-VR-01`** at source
+  `fc2bad11fb67e555b34116293cbf8a64b900a2b9`.
+- The accepted live `62.796875 x 43.90625` rectangle is exact `20% x 25%`
+  of the retained `313.984375 x 175.625` hotspot/image box; the bordered
+  frame is `313.984375 x 176.625`. The former `64 x 45` claim incorrectly
+  used the nominal `320 x 180` viewport as the percentage containing block.
+- Science freezes one Host-05-only inline presentation override: preserve the
+  exact `45/75/20/25` physical registration, bottom-anchor semantic activation
+  with `top=min(75%,100%-44px)` / `height=max(25%,44px)`, and inset the visible
+  label/state `2px` with `1px` padding, zero letter-spacing, and hidden
+  overflow. At retained layouts the activation is exact
+  `62.796875 x 44`, expanding only `0.09375px` upward; registration center,
+  crop, retention, exact zero overlap, immutable media, and all nonpresentation
+  contracts remain unchanged.
+- Current accepted PBA is JavaScript `1,666,377`, CSS `119,247`, modules
+  `217`; exact narrow headroom is `9,287 / 34 / 0`. The mechanism is inline
+  code only and authorizes no CSS/module/media change. Tactical must clarify
+  actual `.scene-art` source mapping and true keyboard-induced forced-color
+  `:focus-visible` evidence before Mission readjudicates.
+- Science variance artifact is `Production Pipeline/First Run/
+  FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1-VR-01.md`.
 
-## Exact next action - Office of Science Administrator only
+## Exact next action - Tactical Operations Specialist only
 
-Read `First Run Agent Profiles/office-of-science-administrator.md` in full,
-then read this handoff, `FRSH-003-v1-VR-01`, `FRVE-003-v1`, `FRSH-003-v1`,
-`FRPX-003-v1`, complete `FRCE-003-v1`, and the exact current coordinate/style
-controls without changing them.
+Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
+then read this handoff, `FRSH-003-v1-VR-01`,
+`FRVE-003-v1-VR-01`, `FRVE-003-v1`, `FRSH-003-v1`, `FRPX-003-v1`, and
+complete `FRCE-003-v1` without changing product or test state.
 
-Issue exactly one versioned `FRVE-003-v1-VR-01` **`POLISH VIABILITY READY`**
-or **`HOLD`**. The sole goal is to preserve exact `45/75/20/25` physical
-registration against the rendered immutable Drowned image while making the
-actual Host 05 semantic activation at least `44 x 44` at both retained
-layouts, with visible identity/state contained and every crop, center,
-retention, overlap, PBA, accessibility, and media gate unchanged.
+Issue exactly one versioned `FRPX-003-v1-VR-01` clarification or `HOLD`.
+Freeze source-transform measurement from actual rendered
+`.scene-art.getBoundingClientRect()` plus computed `object-fit` and
+`object-position`, never `.scene-frame`. Separately record the frame border
+box, hotspot containing block, image element, exact `45/75/20/25` physical
+registration, semantic activation, label/state, Host 04, and return rectangles.
+Preserve the normalized and nominal source anchors while reporting the actual
+cover-transformed source sample, `>=0.95` retention, contained center, exact
+zero overlap, `>=44 x 44`, contained label, and no horizontal overflow.
 
-Define exact bordered frame, hotspot containing block, rendered image content
-box, target, and label/state coordinate spaces at all six layouts. Explain the
-theoretical `64 x 45` versus live `62.796875 x 43.90625` result. Freeze the
-narrowest implementable code/configuration mechanism and exact measurements,
-or continue HOLD if the requirements cannot coexist. Tactical follows only
-after Science `READY`; Mission must readjudicate before Combat.
+Freeze forced-color verification that enters forced-colors before focus
+checking, clears pointer modality, and reaches Host 05 through actual keyboard
+Tab/Shift+Tab from the preceding lawful focus owner. Require Host 05 as
+`document.activeElement`, a true `:focus-visible` match, active forced colors,
+and a visible nontransparent system outline at least `2px`. Programmatic
+`.focus()` is not acceptance evidence. Preserve reduced motion, accessible
+identity/state, semantic order, the exact Science mechanism, candidates
+`a9776e3` / `bf58e52`, manifest/live-summary contracts, PBA/media, and the
+single-E2E boundary. Update this handoff to Mission only if clarification is
+ready; Mission must readjudicate before Combat.
 
 Do not edit product/test/harness/manifest/media/copy, run E2E, round or relax a
-threshold, inspect the repository QA quarantine or user state, begin Tactical,
+threshold, inspect the repository QA quarantine or user state, begin Mission,
 authorize Combat/Quartermaster, alter learning/save/route/world/ending, repair
 City, expand Host 06-15, advance maturity, create a schedule/reveal, or call
 `FIRST RUN COMPLETE`.
