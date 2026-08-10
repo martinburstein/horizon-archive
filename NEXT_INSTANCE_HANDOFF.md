@@ -2,50 +2,40 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE CORRECTED DIAGNOSTIC-
-CONTROL VERIFICATION / FRSH-003-v1-VR-47`**
+Current disposition: **`HOLD / CORRECTED DIAGNOSTIC-CONTROL PRE-ROOT FAILURE
+/ NO E2E / NO RERUN / FRCE-003-v1-VR-47`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Immediate control: `FRSH-003-v1-VR-47`
+Immediate evidence: `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-47.md`
 
-Mission source: `6f2651f86e994d040c3edb5edcdaa5083dca7114`
+Starting shell revision: `9c7701a7ff3990aa35d6460de1545e8bf572151a`
 
 Geometry correction / diagnostic transport / report lineage:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
 `6c64eb354b7dbb467df5725e2cae4eb67092ddc7` /
 `0ac9023037873004f7bd5d75c16f80953d770a4d`.
 
-Immutable product / validation / diagnostic / evidence identities remain:
-`a91763e28d488f31f8cf7d40ece0b2682246ba9b` /
-`4cd7fbf31291671dd28c0743b44a7c49aaad82bb` /
-`2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc` /
-`ca89a679195c11d441a76e6c02983a6436f2ccb2`.
+The monolithic wrapper was rejected by the command safety layer before
+execution. A smaller containment/create stage then failed to return its
+required root scalar. No root identity was retained, no preview or browser was
+launched, and E2E/extractor/verifier invocation counts are all zero. Both exact
+ports were clear in the no-process cleanup branch. No retry or diagnosis ran.
 
-Mission independently accepts the exact two-file live-DOM epoch correction and
-its Node syntax, exact focused `68/68`, and allowlist/integrity proof. Product,
-content, runtime, media, gates, and candidates are unchanged.
+This is `REQUIRED CORRECTION / EXECUTION CONTROL / PRE-ROOT SCALAR TRANSPORT /
+OPEN / VR-47`, not a product, correction-candidate, preview, browser,
+diagnostic, or verifier finding.
 
-The earlier standalone static `9/9` is classified **`UNAUTHORIZED DIVERGENCE /
-VALIDATION COMMAND SELECTION / OPEN / VR-46 COMBAT`** and is not evidence. It
-is the eighth OPEN divergence; the lawful aggregate proof remains sufficient.
+Fresh Mission must independently adjudicate the pre-root control failure and
+issue a new bounded authority or HOLD. The corrected E2E was not invoked, but
+Combat may not reuse or infer authority from VR-47. Mission must not run E2E in
+its adjudication pass.
 
-Fresh-child capacity remains unavailable; Mission context reuse is disclosed
-and non-evidence.
-
-Combat may run exactly one fresh contained complete E2E using the corrected
-harness and transport lineage. Success requires diagnostic inventory exact,
-failure `0`, browser closed, one complete summary, and one verifier PASS.
-Failure requires complete canonical base64 transport before cleanup, no
-summary/verifier, and no rerun. Both modes require exact owned PID/port/root
-cleanup. Use the exact VR-45 scalar schema and VR-47 identities.
-
-No retry, repair, second E2E/extractor/verifier, product/media/protected action,
-build, test, broader validation, served-identity rerun, or post-cleanup command
-is authorized.
-
-All eight OPEN divergences and every frozen meaning remain exact. Diagnostic
-evidence remains non-release, forbidden verifier input, and no-retry. No
-downstream stage or release action is authorized.
+The prior eight OPEN divergences remain separately OPEN; the new VR-47 control
+classification does not merge or waive them. Diagnostic evidence remains
+non-release, forbidden verifier input, and no-retry. Every frozen product,
+validation, evidence, player, learning, privacy, save, accessibility, route,
+world, MH-40, null-delta, `successor=null`, ending, media, and one-E2E meaning
+remains exact. No downstream stage or release action is authorized.
