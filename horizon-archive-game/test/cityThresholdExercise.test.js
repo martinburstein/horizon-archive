@@ -194,6 +194,7 @@ test("the accepted staging banner is absent from the shared renderer without rep
   assert.doesNotMatch(cityComponent, /A5 ROUGH PLATE|CITY CYCLES INVARIANT|city-staging-label/);
   assert.doesNotMatch(cityCss, /city-staging-label/);
   assert.match(cityComponent, /SC-02-50 \/\/ continuation unchanged \/\/ city_state_delta=None|visibleStatus/);
+  assert.match(cityComponent, /label="ENTER CIVIC DISTRICT"[\s\S]*setBoard\("SC-02-50"\)/);
   assert.match(cityComponent, /<h1 ref=\{cityHeadingRef\} tabIndex="-1">City Threshold<\/h1>/);
   assert.match(cityComponent, /className="city-world"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);
   assert.match(cityComponent, /className="city-command-panel"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);

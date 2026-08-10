@@ -1,12 +1,41 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
 import referenceResponsibleAI from "../curriculum/lessons/L-02-02/reference_primary_answers.json" with { type: "json" };
 import referenceResponsibleAITransfer from "../curriculum/lessons/L-02-02/reference_transfer_answers.json" with { type: "json" };
 import referenceModelChoicePrimary from "../curriculum/lessons/L-02-03/reference_primary_answers.json" with { type: "json" };
 import referenceModelChoiceTransfer from "../curriculum/lessons/L-02-03/reference_transfer_answers.json" with { type: "json" };
+import referenceFinalConfidence from "../curriculum/readiness/SIM-03/reference_answers.json" with { type: "json" };
+import referenceFinalConfidenceEntry from "../curriculum/readiness/SIM-03/reference_entry_evidence.json" with { type: "json" };
+import {
+  CITY_THRESHOLD_SAVE_KEY,
+  anchorPacketReference,
+  cum01Forms,
+} from "../horizon-archive-game/src/cityThresholdExercise.js";
+import {
+  CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
+  sanitizeCustodyLedgerNormalRouteSave,
+  writeCustodyLedgerNormalComparisonCheckpoint,
+} from "../horizon-archive-game/src/CustodyLedgerNormalRoute.js";
+import {
+  beginCustodyLedgerSaveEligibility,
+  commitCustodyLedgerBoundedComparison,
+  createCustodyLedgerPersistenceAdapter,
+  deriveCustodyLedgerSaveEligibility,
+  prepareCustodyLedgerSave,
+} from "../horizon-archive-game/src/custodyLedgerExercise.js";
+import { CALIBRATION_MARGIN_REVIEW_SAVE_KEY } from "../horizon-archive-game/src/CalibrationMarginReviewSave.js";
+import { THREE_CURRENT_REACH_SAVE_KEY } from "../horizon-archive-game/src/ThreeCurrentReachNormal.js";
+import { MANYFOLD_RETURN_SAVE_KEY } from "../horizon-archive-game/src/ManyfoldReturnNormal.js";
+import { INTERVAL_WORKS_SAVE_KEY } from "../horizon-archive-game/src/IntervalWorksNormal.js";
+import { BRAIDED_VERGE_SAVE_KEY } from "../horizon-archive-game/src/BraidedVergeNormal.js";
+import { OFFSET_REACH_SAVE_KEY } from "../horizon-archive-game/src/OffsetReachNormal.js";
+import { OCCLUDED_FOLD_SAVE_KEY } from "../horizon-archive-game/src/OccludedFoldNormal.js";
+import { COUNTERFIELD_SAVE_KEY } from "../horizon-archive-game/src/CounterfieldNormal.js";
+import { UNBORROWED_REACH_SAVE_KEY } from "../horizon-archive-game/src/UnborrowedReachNormal.js";
+import { MEASURED_HORIZON_SAVE_KEY } from "../horizon-archive-game/src/MeasuredHorizonNormal.js";
 
 const url = process.env.HORIZON_ARCHIVE_URL || "http://127.0.0.1:5174/";
 const saveKey = "horizon-archive-prologue-v1";
@@ -51,10 +80,12 @@ const referenceRemediationPlannerTransfer = JSON.parse(readFileSync(resolve(repo
 const referenceCapstonePrimary = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-06-03/reference_primary_answers.json"), "utf8"));
 const referenceCapstoneTransfer = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-06-03/reference_transfer_answers.json"), "utf8"));
 const referenceMixedSimulation = JSON.parse(readFileSync(resolve(repositoryRoot, "curriculum/readiness/SIM-01/reference_answers.json"), "utf8"));
+const laterRailFixtures = await buildSanctionedLaterRailFixtures();
 const browser = await chromium.launch({ headless: true });
 
 try {
   const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
+  const canonicalJourneyStartedAt = Date.now();
   const runtimeErrors = [];
   page.on("pageerror", (error) => runtimeErrors.push(`page: ${error.message}`));
   page.on("console", (message) => {
@@ -1194,7 +1225,96 @@ print("Operator:", learner)`);
   for(const id of Object.keys(referenceRemediationPlannerTransfer)){const a=referenceRemediationPlannerTransfer[id];await page.getByLabel("Remediation planner decision",{exact:true}).selectOption(a.decision);await page.getByLabel("Remediation planner reason",{exact:true}).selectOption(a.reason);await page.getByRole("button",{name:"Check remediation route",exact:true}).click();await page.getByRole("status").getByText("2/2 · ROUTE PASS · both dimensions confirmed.",{exact:true}).waitFor();await page.getByRole("button",{name:id==="T06"?"Begin closed-note remediation plan":"Next maintenance drill",exact:true}).click();}await assertRemediationPlannerContinuity(page,"closed-note");for(const d of["gap_priority","source_route","practice_reassessment","stop_safeguards"])await page.getByLabel(`Closed-note remediation planner ${d}`,{exact:true}).fill("wrong");await page.getByRole("button",{name:"Check remediation-plan explanation",exact:true}).click();await page.getByRole("status").getByText("0/4 · EXPLANATION NOT YET COMPLETE.",{exact:true}).waitFor();for(const d of["gap_priority","source_route","practice_reassessment","stop_safeguards"]){const f=page.getByLabel(`Closed-note remediation planner ${d}`,{exact:true});if(await f.getAttribute("aria-invalid")!=="true"||await f.getAttribute("aria-describedby")!==`remediation-planner-explanation-${d}-feedback`)throw new Error(`Remediation Planner closed-note ${d} remediation missing`);}await page.screenshot({path:qaPath("remediation-planner-closed-note-qa.png"),fullPage:true});assertDistinctCaptures(["remediation-planner-primary-qa.png","remediation-planner-transfer-remediation-qa.png","remediation-planner-closed-note-qa.png"]);
   const remediationPlannerExplanation={gap_priority:"name the failed dimension and prioritize repeated measured gaps by current scope",source_route:"map each weak objective to its prerequisite lesson and current official source",practice_reassessment:"retrieve then complete guided practice then pass fresh transfer before ready",stop_safeguards:"stop and escalate unclear scope repeated failure or live authority and reject confidence and exam guarantees"};for(const[d,v]of Object.entries(remediationPlannerExplanation))await page.getByLabel(`Closed-note remediation planner ${d}`,{exact:true}).fill(v);await page.getByRole("button",{name:"Exit Remediation Planner",exact:true}).click();await page.getByRole("button",{name:"Resume Remediation Planner",exact:true}).click();if(await page.getByLabel("Closed-note remediation planner practice_reassessment",{exact:true}).inputValue()!==remediationPlannerExplanation.practice_reassessment)throw new Error("Remediation Planner explanation reset after close/reopen");const remediationPlannerExplanationDraft=await page.evaluate(({key})=>localStorage.getItem(key),{key:saveKey});if(remediationPlannerExplanationDraft.includes("retrieve then complete guided")||remediationPlannerExplanationDraft.includes("reject confidence and exam guarantees"))throw new Error("Remediation Planner explanation persisted");await page.getByRole("button",{name:"Check remediation-plan explanation",exact:true}).click();await page.getByRole("status").getByText("4/4 · PASS",{exact:true}).waitFor();await page.getByRole("checkbox",{name:/produced this remediation-plan explanation/i}).check();await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge strict mastery",exact:true}).click();const remediationPlannerContinue=page.getByRole("button",{name:"Start Capstone Readiness",exact:true});await remediationPlannerContinue.waitFor();if(!await remediationPlannerContinue.evaluate(el=>el===document.activeElement))throw new Error("Remediation Planner mastery did not focus Capstone Readiness");const remediationPlannerMastery=await page.evaluate(({key})=>JSON.parse(localStorage.getItem(key)).remediationPlannerEvidence,{key:saveKey});if(remediationPlannerMastery?.masteryStatus!=="mastered"||remediationPlannerMastery?.attemptCount!==16||Object.keys(remediationPlannerMastery.routes||{}).length!==12)throw new Error(`Remediation Planner mastery incomplete ${JSON.stringify(remediationPlannerMastery)}`);if(["examItemText","personalStudyNote","credential","endpoint","payload","serviceResponse","externalActionRequest","response","choices","freeText"].some(k=>k in remediationPlannerMastery))throw new Error("Remediation Planner private data persisted");await page.reload();await page.getByRole("button",{name:"Resume signal"}).click();const restoredRemediationPlannerContinue=page.getByRole("button",{name:"Start Capstone Readiness",exact:true});await restoredRemediationPlannerContinue.waitFor();if(!await restoredRemediationPlannerContinue.evaluate(el=>el===document.activeElement))throw new Error("Remediation Planner reload did not focus Capstone Readiness");await restoredRemediationPlannerContinue.click();
   await page.locator('[data-terminal-exercise="EX-L0603-OFFLINE-CAPSTONE"]').waitFor();await page.getByText("PASS · 15/15 objective rows ready",{exact:false}).waitFor();for(const id of Object.keys(referenceCapstonePrimary)){const a=referenceCapstonePrimary[id];await page.getByLabel("Capstone readiness decision",{exact:true}).selectOption(a.decision);await page.getByLabel("Capstone readiness reason",{exact:true}).selectOption(a.reason);await page.getByRole("button",{name:"Check capstone trace",exact:true}).click();await page.getByRole("status").getByText("2/2 · TRACE PASS · both dimensions confirmed.",{exact:true}).waitFor();await page.getByRole("button",{name:id==="P06"?"View primary result":"Next capstone boundary",exact:true}).click();}await page.getByRole("radio",{name:"medium",exact:true}).check();await page.getByRole("button",{name:"Acknowledge primary capstone",exact:true}).click();await page.reload();await page.getByRole("button",{name:"Resume signal"}).click();await page.getByRole("button",{name:"Start Capstone Transfer",exact:true}).click();for(const id of Object.keys(referenceCapstoneTransfer)){const a=referenceCapstoneTransfer[id];await page.getByLabel("Capstone readiness decision",{exact:true}).selectOption(a.decision);await page.getByLabel("Capstone readiness reason",{exact:true}).selectOption(a.reason);await page.getByRole("button",{name:"Check capstone trace",exact:true}).click();await page.getByRole("button",{name:id==="T06"?"Begin closed-note defense":"Next capstone boundary",exact:true}).click();}const capstoneExplanation={client_flow:"separate endpoint identity deployment request result and errors",workload_direction:"analyze existing text recognize audio to text and synthesize text to audio",schema_provenance:"define schema preserve unsupported values as null and retain available evidence and provenance",prerequisite_readiness_safety:"require all 15 objectives ready closed fresh remediation routes and both forms before only recommending the next practice checkpoint with no exam guarantee or live authority"};for(const[d,v]of Object.entries(capstoneExplanation))await page.getByLabel(`Closed-note capstone ${d}`,{exact:true}).fill(v);const capstoneDraft=await page.evaluate(({key})=>localStorage.getItem(key),{key:saveKey});if(capstoneDraft.includes("separate endpoint identity")||capstoneDraft.includes("no exam guarantee or live authority"))throw new Error("Capstone prose persisted");await page.getByRole("button",{name:"Check capstone defense",exact:true}).click();await page.getByRole("checkbox",{name:/produced this capstone explanation/i}).check();await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge next-practice readiness",exact:true}).click();const capstoneContinue=page.getByRole("button",{name:"Continue to mixed simulation",exact:true});await capstoneContinue.waitFor();if(!await capstoneContinue.evaluate(el=>el===document.activeElement))throw new Error("Capstone completion did not focus simulation launch");await page.reload();await page.getByRole("button",{name:"Resume signal"}).click();const restoredCapstoneContinue=page.getByRole("button",{name:"Continue to mixed simulation",exact:true});await restoredCapstoneContinue.waitFor();if(!await restoredCapstoneContinue.evaluate(el=>el===document.activeElement))throw new Error("Capstone reload did not focus simulation launch");await restoredCapstoneContinue.click();
-  await page.locator('[data-terminal-exercise="EX-SIM01-MIXED"]').waitFor();await page.getByText("Untimed mode active · fully equivalent for block completion.",{exact:true}).waitFor();const timerToggle=page.getByRole("checkbox",{name:"Enable optional 25-minute diagnostic timer",exact:true});await timerToggle.check();await page.getByRole("timer").getByText("Diagnostic elapsed:",{exact:false}).waitFor();await timerToggle.uncheck();await page.getByText("Untimed mode active · fully equivalent for block completion.",{exact:true}).waitFor();for(const id of Object.keys(referenceMixedSimulation)){const a=referenceMixedSimulation[id];await page.getByLabel("Mixed simulation decision",{exact:true}).selectOption(a.decision);await page.getByLabel("Mixed simulation reason",{exact:true}).selectOption(a.reason);await page.getByRole("button",{name:"Check simulation item",exact:true}).click();await page.getByRole("status").getByText("2/2 · ITEM PASS · both dimensions confirmed.",{exact:true}).waitFor();await page.getByRole("button",{name:id==="Q12"?"View block result":"Next mixed item",exact:true}).click();}await page.getByText("MIXED SIMULATION BLOCK COMPLETE",{exact:true}).waitFor();await page.getByRole("radio",{name:"high",exact:true}).check();await page.getByRole("button",{name:"Acknowledge mixed simulation block",exact:true}).click();const simulationContinue=page.getByRole("button",{name:"Continue to the next survey site",exact:true});await simulationContinue.waitFor();if(!await simulationContinue.evaluate(el=>el===document.activeElement))throw new Error("Mixed block completion did not focus scene progression");const simulationMastery=await page.evaluate(({key})=>JSON.parse(localStorage.getItem(key)).mixedSimulationEvidence,{key:saveKey});if(simulationMastery?.masteryStatus!=="mastered"||Object.keys(simulationMastery.dimensionCorrectness||{}).length!==12)throw new Error(`SIM-01 internal progression key incomplete ${JSON.stringify(simulationMastery)}`);await page.reload();await page.getByRole("button",{name:"Resume signal"}).click();const restoredSimulationContinue=page.getByRole("button",{name:"Continue to the next survey site",exact:true});await restoredSimulationContinue.waitFor();if(!await restoredSimulationContinue.evaluate(el=>el===document.activeElement))throw new Error("Mixed block reload did not focus scene progression");await restoredSimulationContinue.click();
+  await page.locator('[data-terminal-exercise="EX-SIM01-MIXED"]').waitFor();
+  await page
+    .getByText("Untimed mode active · fully equivalent for block completion.", {
+      exact: true,
+    })
+    .waitFor();
+  const timerToggle = page.getByRole("checkbox", {
+    name: "Enable optional 25-minute diagnostic timer",
+    exact: true,
+  });
+  await timerToggle.check();
+  await page
+    .getByRole("timer")
+    .getByText("Diagnostic elapsed:", { exact: false })
+    .waitFor();
+  await timerToggle.uncheck();
+  await page
+    .getByText("Untimed mode active · fully equivalent for block completion.", {
+      exact: true,
+    })
+    .waitFor();
+  for (const id of Object.keys(referenceMixedSimulation)) {
+    const a = referenceMixedSimulation[id];
+    await page
+      .getByLabel("Mixed simulation decision", { exact: true })
+      .selectOption(a.decision);
+    await page
+      .getByLabel("Mixed simulation reason", { exact: true })
+      .selectOption(a.reason);
+    await page
+      .getByRole("button", { name: "Check simulation item", exact: true })
+      .click();
+    await page
+      .getByRole("status")
+      .getByText("2/2 · ITEM PASS · both dimensions confirmed.", {
+        exact: true,
+      })
+      .waitFor();
+    await page
+      .getByRole("button", {
+        name: id === "Q12" ? "View block result" : "Next mixed item",
+        exact: true,
+      })
+      .click();
+  }
+  await page
+    .getByText("MIXED SIMULATION BLOCK COMPLETE", { exact: true })
+    .waitFor();
+  await page.getByRole("radio", { name: "high", exact: true }).check();
+  await page
+    .getByRole("button", {
+      name: "Acknowledge mixed simulation block",
+      exact: true,
+    })
+    .click();
+  const simulationContinue = page.getByRole("button", {
+    name: "Continue to the next survey site",
+    exact: true,
+  });
+  await simulationContinue.waitFor();
+  if (
+    !(await simulationContinue.evaluate((el) => el === document.activeElement))
+  )
+    throw new Error("Mixed block completion did not focus scene progression");
+  const simulationMastery = await page.evaluate(
+    ({ key }) => JSON.parse(localStorage.getItem(key)).mixedSimulationEvidence,
+    { key: saveKey },
+  );
+  if (
+    simulationMastery?.masteryStatus !== "mastered" ||
+    Object.keys(simulationMastery.dimensionCorrectness || {}).length !== 12
+  )
+    throw new Error(
+      `SIM-01 internal progression key incomplete ${JSON.stringify(simulationMastery)}`,
+    );
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  const restoredSimulationContinue = page.getByRole("button", {
+    name: "Continue to the next survey site",
+    exact: true,
+  });
+  await restoredSimulationContinue.waitFor();
+  if (
+    !(await restoredSimulationContinue.evaluate(
+      (el) => el === document.activeElement,
+    ))
+  )
+    throw new Error("Mixed block reload did not focus scene progression");
+  await completeFinalConfidence(page);
+  await restoredSimulationContinue.click();
   await page.locator('main[data-scene="automaton"]').waitFor();
   if (await page.locator('[data-terminal-exercise="EX-L0201-WORKLOAD-SORT"]').count()) throw new Error("Workload session survived a scene transition");
 
@@ -1290,6 +1410,12 @@ print("Operator:", learner)`);
   await page.locator('main[data-scene="city-threshold"]').waitFor();
   if (await page.getByText(/credits|prologue complete|recorded your arrival/i).count()) throw new Error("Obsolete credits or response copy survived direct City reload");
   await verifyFirstRunCityStates(page);
+  await completeCityThreshold(page);
+  await verifyCanonicalLaterRail(page);
+  const canonicalJourneyElapsedSeconds = (Date.now() - canonicalJourneyStartedAt) / 1000;
+  if (canonicalJourneyElapsedSeconds >= 180) {
+    throw new Error(`Canonical clean-start through MH-40 exceeded 180 seconds: ${canonicalJourneyElapsedSeconds.toFixed(3)}s`);
+  }
   if (runtimeErrors.length) throw new Error(`Runtime errors detected: ${runtimeErrors.join(" | ")}`);
 
   console.log(JSON.stringify({
@@ -1511,9 +1637,223 @@ print("Operator:", learner)`);
     runtimeErrors: false,
     questions: ["HA-PY-001", "HA-PY-002", "HA-PY-003", "HA-AI901-001", "HA-AI901-RAI-MASTERY", "HA-AI901-MODEL-MASTERY", "HA-PY-STRUCTURED-PACKETS", "HA-PY-CONTROL-FLOW", "HA-PY-CLIENT-BRIDGE", "HA-AI901-TEXT-ANALYSIS", "HA-AI901-SPEECH-WORKLOADS", "HA-AI901-VISUAL-WORKLOADS", "HA-AI901-EXTRACTION-WORKLOADS", "HA-AI901-PORTAL-ORIENTATION", "HA-AI901-PROMPT-LAYERS", "HA-AI901-CLIENT-BOUNDARIES", "HA-AI901-SDK-ROUTE-CHOOSER", "HA-AI901-SINGLE-AGENT", "HA-AI901-TEXT-SPEECH-PATTERNS", "HA-AI901-VISUAL-PATTERNS", "HA-AI901-OBJECTIVE-LEDGER", "HA-AI901-REMEDIATION-PLANNER", "HA-AI901-CAPSTONE-READINESS", "HA-AI901-SIM-01"],
     directCityFrontier: true,
+    exactRp001Predecessor: true,
+    exactRp002ThroughRp012Chain: true,
+    measuredHorizonReadyRestore: true,
+    measuredHorizonNotYetRestore: true,
+    measuredHorizonOutcomeEquality: true,
+    measuredHorizonHardStop: true,
+    canonicalJourneyElapsedSeconds,
   }));
 } finally {
   await browser.close();
+}
+
+async function loadSanctionedFixtureModule(relativePath, exportedNames, { beforeTests = true } = {}) {
+  const file = resolve(repositoryRoot, "horizon-archive-game", relativePath);
+  const sourceUrl = pathToFileURL(file);
+  let source = readFileSync(file, "utf8");
+  if (beforeTests) {
+    const firstTest = source.indexOf("\ntest(");
+    if (firstTest < 0) throw new Error(`Normal fixture source has no test boundary: ${relativePath}`);
+    source = source.slice(0, firstTest);
+  }
+  source = source
+    .replace(/from\s+(["'])(\.\.?\/[^"']+)\1/g, (_match, quote, specifier) => (
+      `from ${quote}${new URL(specifier, sourceUrl).href}${quote}`
+    ))
+    .replaceAll("import.meta.url", JSON.stringify(sourceUrl.href));
+  source += `\nexport { ${exportedNames.join(", ")} };`;
+  return import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}`);
+}
+
+function exactFixtureBytes(actual, expected, label) {
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    throw new Error(`${label} did not preserve the exact normal-controller predecessor bytes`);
+  }
+}
+
+async function buildSanctionedLaterRailFixtures() {
+  const protectedTest = await loadSanctionedFixtureModule(
+    "test/custodyLedgerProtectedJourney.test.js",
+    ["fixture"],
+  );
+  const protectedJourney = await loadSanctionedFixtureModule(
+    "src/CustodyLedgerProtectedJourney.js",
+    ["runRouteAndNearSurvey", "runFarSurvey", "runLearning"],
+    { beforeTests: false },
+  );
+  const rp002Normal = await loadSanctionedFixtureModule(
+    "test/custodyLedgerNormalRoute.test.js",
+    ["completeFarSave", "predecessor"],
+  );
+  const rp002Input = protectedTest.fixture();
+  const near = protectedJourney.runRouteAndNearSurvey(rp002Input);
+  const observationState = protectedJourney.runFarSurvey(near.observationState, rp002Input);
+  const learning = protectedJourney.runLearning(rp002Input);
+  const dependencies = {
+    predecessorValue: rp002Input.learningPredecessor,
+    prerequisiteEvidence: rp002Input.prerequisiteEvidence,
+    observationState,
+  };
+  const comparisonAdapter = createCustodyLedgerPersistenceAdapter();
+  const review = deriveCustodyLedgerSaveEligibility(
+    beginCustodyLedgerSaveEligibility(learning.state, dependencies),
+    comparisonAdapter,
+  );
+  const comparison = commitCustodyLedgerBoundedComparison(
+    prepareCustodyLedgerSave(review),
+    comparisonAdapter,
+    rp002Input.saveAction,
+  );
+  if (comparison.phase !== "comparison_complete") throw new Error("Sanctioned RP-002 comparison fixture did not complete");
+  const routeBase = sanitizeCustodyLedgerNormalRouteSave({
+    ...rp002Normal.completeFarSave("first-run-canonical-rp002"),
+    checkpoint: "sc03_python_primary_blank",
+  }, rp002Normal.predecessor);
+  if (!routeBase) throw new Error("Sanctioned RP-002 route fixture did not sanitize");
+  const rp002Memory = new Map();
+  const rp002Storage = {
+    getItem: (key) => rp002Memory.get(key) ?? null,
+    setItem: (key, value) => rp002Memory.set(key, value),
+    removeItem: (key) => rp002Memory.delete(key),
+  };
+  const rp002 = writeCustodyLedgerNormalComparisonCheckpoint(
+    rp002Storage,
+    routeBase,
+    {
+      ...comparison,
+      owner: comparison.ownerMessage?.owner,
+      savedText: comparison.ownerMessage?.text,
+    },
+    rp002Normal.predecessor,
+  );
+  if (!rp002 || rp002Memory.get(CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY) !== JSON.stringify(rp002)) {
+    throw new Error("Sanctioned RP-002 verified-restore fixture did not commit atomically");
+  }
+
+  const { exactReviewSaveRecord } = await import(pathToFileURL(resolve(
+    repositoryRoot,
+    "horizon-archive-game/test/calibrationMarginReviewSaveFixtures.js",
+  )).href);
+  const { exactThreeCurrentReachSaveRecord } = await import(pathToFileURL(resolve(
+    repositoryRoot,
+    "horizon-archive-game/test/threeCurrentReachSaveFixture.js",
+  )).href);
+  const rp003 = exactReviewSaveRecord();
+  const rp004 = exactThreeCurrentReachSaveRecord();
+
+  const rp005Module = await loadSanctionedFixtureModule("test/manyfoldReturnNormal.test.js", [
+    "createManyfoldReturnNormalController", "options", "completeAndSave", "td004Record",
+  ]);
+  exactFixtureBytes(rp004, rp005Module.td004Record(), "RP-004→RP-005");
+  const rp005 = rp005Module.completeAndSave(
+    rp005Module.createManyfoldReturnNormalController(rp005Module.options()),
+  ).record;
+
+  const rp006Module = await loadSanctionedFixtureModule("test/intervalWorksNormal.test.js", [
+    "createIntervalWorksNormalController", "options", "completeAndSave", "manyfoldRecord",
+  ]);
+  exactFixtureBytes(rp005, rp006Module.manyfoldRecord(), "RP-005→RP-006");
+  const rp006 = rp006Module.completeAndSave(
+    rp006Module.createIntervalWorksNormalController(rp006Module.options()),
+  ).record;
+
+  const rp007Module = await loadSanctionedFixtureModule("test/braidedVergeNormal.test.js", [
+    "subject", "advanceAll", "dispatch", "braidedVergeActions", "intervalRecord",
+  ]);
+  exactFixtureBytes(rp006, rp007Module.intervalRecord(), "RP-006→RP-007");
+  const rp007Subject = rp007Module.subject();
+  rp007Module.advanceAll(rp007Subject.controller);
+  rp007Module.dispatch(rp007Subject.controller, rp007Module.braidedVergeActions.review);
+  const rp007 = rp007Module.dispatch(rp007Subject.controller, rp007Module.braidedVergeActions.save).record;
+
+  const rp008Module = await loadSanctionedFixtureModule("test/offsetReachNormal.test.js", [
+    "subject", "advanceAll", "dispatch", "offsetReachActions", "braidedRecord",
+  ]);
+  exactFixtureBytes(rp007, rp008Module.braidedRecord(), "RP-007→RP-008");
+  const rp008Subject = rp008Module.subject();
+  rp008Module.advanceAll(rp008Subject.controller);
+  rp008Module.dispatch(rp008Subject.controller, rp008Module.offsetReachActions.review);
+  const rp008 = rp008Module.dispatch(rp008Subject.controller, rp008Module.offsetReachActions.save).record;
+
+  const rp009Module = await loadSanctionedFixtureModule("test/occludedFoldNormal.test.js", [
+    "subject", "advance", "dispatch", "occludedFoldActions", "offsetRecord",
+  ]);
+  exactFixtureBytes(rp008, rp009Module.offsetRecord(), "RP-008→RP-009");
+  const rp009Subject = rp009Module.subject();
+  rp009Module.advance(rp009Subject.controller);
+  rp009Module.dispatch(rp009Subject.controller, rp009Module.occludedFoldActions.review);
+  const rp009 = rp009Module.dispatch(rp009Subject.controller, rp009Module.occludedFoldActions.save).record;
+
+  const rp010Module = await loadSanctionedFixtureModule("test/counterfieldNormal.test.js", [
+    "subject", "advance", "dispatch", "counterfieldActions", "predecessor",
+  ]);
+  exactFixtureBytes(rp009, rp010Module.predecessor(), "RP-009→RP-010");
+  const rp010Subject = rp010Module.subject();
+  rp010Module.advance(rp010Subject.controller);
+  rp010Module.dispatch(rp010Subject.controller, rp010Module.counterfieldActions.prepareSave);
+  const rp010 = rp010Module.dispatch(rp010Subject.controller, rp010Module.counterfieldActions.save).record;
+
+  const rp011Module = await loadSanctionedFixtureModule("test/unborrowedReachNormal.test.js", [
+    "subject", "advanceToFreshReview", "dispatch", "update", "unborrowedReachActions",
+    "unborrowedReachReconciliationMethodIds", "unborrowedReachLimitIds", "predecessor",
+  ]);
+  exactFixtureBytes(rp010, rp011Module.predecessor(), "RP-010→RP-011");
+  const rp011Subject = rp011Module.subject();
+  rp011Module.advanceToFreshReview(rp011Subject.controller);
+  rp011Module.dispatch(rp011Subject.controller, rp011Module.unborrowedReachActions.reviewFresh);
+  rp011Module.dispatch(rp011Subject.controller, rp011Module.unborrowedReachActions.finalizeFresh);
+  for (const action of [
+    rp011Module.unborrowedReachActions.reopenRp007,
+    rp011Module.unborrowedReachActions.reopenRp008,
+    rp011Module.unborrowedReachActions.reopenRp009,
+    rp011Module.unborrowedReachActions.reopenRp010,
+  ]) rp011Module.dispatch(rp011Subject.controller, action);
+  rp011Module.update(rp011Subject.controller, {
+    methods: [...rp011Module.unborrowedReachReconciliationMethodIds],
+    limits: Object.fromEntries(rp011Module.unborrowedReachLimitIds.map((id) => [id, null])),
+  });
+  rp011Module.dispatch(rp011Subject.controller, rp011Module.unborrowedReachActions.checkReconciliation);
+  rp011Module.dispatch(rp011Subject.controller, rp011Module.unborrowedReachActions.reviewReconciliation);
+  const rp011 = rp011Module.dispatch(
+    rp011Subject.controller,
+    rp011Module.unborrowedReachActions.saveReconciliation,
+  ).record;
+
+  const rp012Module = await loadSanctionedFixtureModule("test/measuredHorizonNormal.test.js", [
+    "makeMeasuredSubject", "advanceMeasuredToOutcome", "dispatchMeasured", "measuredHorizonActions",
+    "measuredHorizonGateIds", "exactReleasedUnborrowedRecordAndState",
+  ]);
+  exactFixtureBytes(rp011, rp012Module.exactReleasedUnborrowedRecordAndState().record, "RP-011→RP-012");
+  const buildMeasured = (missedGateId) => {
+    const subject = rp012Module.makeMeasuredSubject();
+    rp012Module.advanceMeasuredToOutcome(subject, missedGateId);
+    rp012Module.dispatchMeasured(subject.controller, rp012Module.measuredHorizonActions.save);
+    return rp012Module.dispatchMeasured(subject.controller, rp012Module.measuredHorizonActions.save).record;
+  };
+  const rp012Ready = buildMeasured(null);
+  const rp012NotYet = buildMeasured(rp012Module.measuredHorizonGateIds[4]);
+
+  return Object.freeze({
+    expectedCityPredecessor: rp002Input.learningPredecessor,
+    records: Object.freeze({
+      [CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY]: rp002,
+      [CALIBRATION_MARGIN_REVIEW_SAVE_KEY]: rp003,
+      [THREE_CURRENT_REACH_SAVE_KEY]: rp004,
+      [MANYFOLD_RETURN_SAVE_KEY]: rp005,
+      [INTERVAL_WORKS_SAVE_KEY]: rp006,
+      [BRAIDED_VERGE_SAVE_KEY]: rp007,
+      [OFFSET_REACH_SAVE_KEY]: rp008,
+      [OCCLUDED_FOLD_SAVE_KEY]: rp009,
+      [COUNTERFIELD_SAVE_KEY]: rp010,
+      [UNBORROWED_REACH_SAVE_KEY]: rp011,
+      [MEASURED_HORIZON_SAVE_KEY]: rp012Ready,
+    }),
+    rp002,
+    rp012Ready,
+    rp012NotYet,
+  });
 }
 
 async function captureMeadow(page, path) {
@@ -1587,6 +1927,225 @@ async function verifyFirstRunCityStates(page) {
   await page.locator("#anchor-probe-heading:focus").waitFor();
   await page.getByRole("button", { name: "Cancel and return to access detail", exact: true }).click();
   await overlay.waitFor({ state: "detached" });
+}
+
+async function completeFinalConfidence(page) {
+  await page.getByRole("button", { name: "Open Final Confidence Gate", exact: true }).click();
+  const terminal = page.locator('[data-terminal-exercise="EX-SIM03-FINAL-CONFIDENCE"]');
+  await terminal.waitFor();
+  await terminal.getByLabel("Final confidence L-06-03 readiness", { exact: true })
+    .selectOption(referenceFinalConfidenceEntry.l0603_readiness_state);
+  for (const [label, value] of [
+    ["CUM-01 transfer score", referenceFinalConfidenceEntry.cum01_transfer_score],
+    ["SIM-01 score", referenceFinalConfidenceEntry.sim01_score],
+    ["SIM-02 score", referenceFinalConfidenceEntry.sim02_score],
+    ["Prior simulation separation hours", referenceFinalConfidenceEntry.sim01_sim02_separation_hours],
+    ["Open critical misconceptions", referenceFinalConfidenceEntry.open_critical_misconceptions],
+  ]) await terminal.getByLabel(`Final confidence ${label}`, { exact: true }).fill(String(value));
+  await terminal.getByLabel("Final confidence official sources reverified on", { exact: true })
+    .fill(referenceFinalConfidenceEntry.official_sources_reverified_on);
+  await terminal.getByLabel("Final confidence attempted on", { exact: true })
+    .fill(referenceFinalConfidenceEntry.attempted_on);
+  await terminal.getByRole("checkbox", { name: /Every high-confidence miss was explained and retested/i }).check();
+  await terminal.getByRole("button", { name: "Check entry evidence", exact: true }).click();
+  await terminal.getByLabel("Final confidence decision", { exact: true }).waitFor();
+
+  for (const [id, answer] of Object.entries(referenceFinalConfidence)) {
+    await terminal.getByLabel("Final confidence decision", { exact: true }).selectOption(answer.decision);
+    await terminal.getByLabel("Final confidence reason", { exact: true }).selectOption(answer.reason);
+    await terminal.getByRole("button", { name: "Check final confidence item", exact: true }).click();
+    await terminal.getByRole("status").getByText("ITEM PASS", { exact: false }).waitFor();
+    await terminal.getByRole("button", {
+      name: id === "Q12" ? "View final confidence result" : "Next final confidence item",
+      exact: true,
+    }).click();
+  }
+  await terminal.getByRole("heading", { name: "24 / 24 dimensions", exact: true }).waitFor();
+  await terminal.getByRole("radio", { name: "high", exact: true }).check();
+  await terminal.getByRole("button", { name: "Acknowledge final confidence evidence", exact: true }).click();
+  await terminal.waitFor({ state: "detached" });
+  const evidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).finalConfidenceEvidence, { key: saveKey });
+  if (evidence?.masteryStatus !== "mastered"
+    || evidence?.attemptCount !== 12
+    || Object.keys(evidence?.dimensionCorrectness ?? {}).length !== 12
+    || "response" in evidence
+    || "privateNote" in evidence) {
+    throw new Error(`Final Confidence did not persist strict private-free mastery: ${JSON.stringify(evidence)}`);
+  }
+}
+
+async function completeCityThreshold(page) {
+  for (const action of [
+    "OBSERVE ENVIRONMENTAL ACCESS",
+    "OBSERVE CLOSED RECORD APERTURE",
+    "ESTABLISH SURVEY POINT",
+    "SELECT SURVEY COORDINATE",
+    "RECORD LOCAL ANCHOR",
+  ]) await page.getByRole("button", { name: action, exact: true }).click();
+
+  await page.getByLabel("Anchor packet Python source", { exact: true }).fill(anchorPacketReference);
+  await page.getByRole("button", { name: "Run 10 checks", exact: true }).click();
+  const structureForm = page.locator(".city-explanation-form");
+  await structureForm.getByRole("button", { name: "Check structure explanation", exact: true }).waitFor();
+  await structureForm.locator("select").nth(0).selectOption("ordered_observation_collection");
+  await structureForm.locator("select").nth(1).selectOption("named_nested_state");
+  await structureForm.locator("select").nth(2).selectOption("string_interchange_requires_parsing_and_serialization");
+  await structureForm.getByRole("button", { name: "Check structure explanation", exact: true }).click();
+
+  for (const form of ["primary", "transfer"]) {
+    for (const item of cum01Forms[form]) {
+      const cumForm = page.locator("form.city-learning-panel");
+      await cumForm.locator("select").nth(0).selectOption(item.decision);
+      await cumForm.locator("select").nth(1).selectOption(item.reason);
+      await cumForm.getByRole("button", { name: /Record item|Submit blank .* form/ }).click();
+    }
+  }
+  const safetyForm = page.locator(".city-explanation-form");
+  await safetyForm.locator("select").nth(0).selectOption("valid_output_is_not_authority_to_act");
+  await safetyForm.locator("select").nth(1).selectOption("internal_readiness_is_not_an_exam_guarantee");
+  await safetyForm.locator("select").nth(2).selectOption("external_action_needs_separate_scope_authority_and_privacy_review");
+  await page.getByRole("button", { name: "Check safety explanation", exact: true }).click();
+  await page.getByRole("button", { name: "Confirm local record", exact: true }).click();
+
+  const completed = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), CITY_THRESHOLD_SAVE_KEY);
+  if (completed?.checkpoint !== "anchor_complete"
+    || completed?.cityThresholdAnchorRecorded !== true
+    || completed?.civicDistrictRouteAvailable !== true) {
+    throw new Error(`City completion did not persist the verified RP-001 predecessor: ${JSON.stringify(completed)}`);
+  }
+  await page.locator('.city-world').getByRole("button", { name: "ENTER CIVIC DISTRICT", exact: true }).click();
+  await page.locator('.city-command-panel').getByRole("button", { name: "FOLLOW RECORDED CIVIC ROUTE", exact: true }).waitFor();
+}
+
+async function installLaterRailRecords(page, measuredHorizonRecord) {
+  const entries = Object.entries({
+    ...laterRailFixtures.records,
+    [MEASURED_HORIZON_SAVE_KEY]: measuredHorizonRecord,
+    [CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY]: laterRailFixtures.rp002,
+  }).map(([key, record]) => [key, JSON.stringify(record)]);
+  await page.evaluate((records) => {
+    for (const [key, bytes] of records) localStorage.setItem(key, bytes);
+  }, entries);
+  const roundTrip = await page.evaluate((records) => Object.fromEntries(
+    records.map(([key]) => [key, localStorage.getItem(key)]),
+  ), entries);
+  for (const [key, bytes] of entries) {
+    if (roundTrip[key] !== bytes) throw new Error(`Later-rail fixture did not round-trip exactly: ${key}`);
+  }
+}
+
+async function measuredHorizonSnapshot(page, expectedGroup, expectedLocalState) {
+  const shell = page.locator(`main.measured-horizon-shell[data-active-group="${expectedGroup}"]`);
+  await shell.waitFor();
+  await page.locator("#mh40-saved-review-heading:focus").waitFor();
+  await shell.getByRole("heading", { name: "MEASURED HORIZON RECORD RESTORED", exact: true }).waitFor();
+  await shell.getByRole("heading", { name: expectedLocalState, exact: true }).waitFor();
+  await shell.getByText("This is recoverable course evidence, not a Microsoft exam result", { exact: false }).waitFor();
+  return shell.evaluate((element) => {
+    const outcome = element.querySelector('[data-outcome-anatomy="common-v1"]');
+    const terms = [...outcome.querySelectorAll("dt")].map((item) => item.textContent.trim());
+    const values = [...outcome.querySelectorAll("dd")].map((item) => item.textContent.trim());
+    return {
+      shellVersion: element.dataset.shellVersion,
+      controllerVersion: element.dataset.controllerVersion,
+      owner: element.dataset.owner,
+      phase: element.dataset.phase,
+      outcomeAnatomy: outcome.dataset.outcomeAnatomy,
+      terms,
+      authority: values[terms.indexOf("Authority")],
+      successor: values[terms.indexOf("Successor")],
+      boundary: element.querySelector(".measured-horizon-boundary")?.textContent.trim(),
+      commonDisclaimer: outcome.querySelector("p:last-child")?.textContent.trim(),
+      returns: [...element.querySelectorAll(".measured-horizon-returns button")].map((item) => item.textContent.trim()),
+    };
+  });
+}
+
+async function enterMeasuredHorizonRestore(page) {
+  await page.locator('.city-command-panel').getByRole("button", { name: "FOLLOW RECORDED CIVIC ROUTE", exact: true }).click();
+  await page.locator('main[data-scene="civic-record-district"] #custody-ledger-verified-restore-heading').waitFor();
+  await page.waitForFunction(() => document.activeElement?.textContent?.trim() === "RETURN TO CITY THRESHOLD");
+  await page.getByText("Civic comparison restored. Working notes are cleared; closed records remain closed.", { exact: true }).first().waitFor();
+  await page.getByRole("button", { name: "RETURN TO CITY THRESHOLD", exact: true }).click();
+  await page.waitForTimeout(250);
+  const measuredRestore = page.locator('main.measured-horizon-shell[data-phase="MH-40 SAVE + RESTORE"]');
+  if (!await measuredRestore.count()) {
+    const state = await page.locator("main").first().evaluate((main) => ({
+      className: main.className,
+      scene: main.dataset.scene ?? null,
+      shellVersion: main.dataset.shellVersion ?? null,
+      activeGroup: main.dataset.activeGroup ?? null,
+      phase: main.dataset.phase ?? null,
+      headings: [...main.querySelectorAll("h1,h2")].map((item) => item.textContent.trim()),
+    }));
+    throw new Error(`Later-rail restore stopped before MH-40: ${JSON.stringify(state)}`);
+  }
+  await measuredRestore.waitFor();
+}
+
+async function verifyCanonicalLaterRail(page) {
+  const actualCity = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), CITY_THRESHOLD_SAVE_KEY);
+  exactFixtureBytes(actualCity, laterRailFixtures.expectedCityPredecessor, "RP-001→RP-002");
+  await installLaterRailRecords(page, laterRailFixtures.rp012Ready);
+  await enterMeasuredHorizonRestore(page);
+  const ready = await measuredHorizonSnapshot(
+    page,
+    "mh40_restore_ready",
+    "READY FOR CURRENT PRACTICE STANDARD",
+  );
+  const readyRecord = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), MEASURED_HORIZON_SAVE_KEY);
+  exactFixtureBytes(readyRecord, laterRailFixtures.rp012Ready, "RP-012 READY restore");
+
+  await installLaterRailRecords(page, laterRailFixtures.rp012NotYet);
+  await page.evaluate((key) => localStorage.removeItem(key), CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY);
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  await page.locator('main[data-scene="city-threshold"]').waitFor();
+  await page.locator('.city-command-panel').getByRole("button", { name: "FOLLOW RECORDED CIVIC ROUTE", exact: true }).waitFor();
+  await page.evaluate(({ key, record }) => localStorage.setItem(key, JSON.stringify(record)), {
+    key: CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY,
+    record: laterRailFixtures.rp002,
+  });
+  await enterMeasuredHorizonRestore(page);
+  const notYet = await measuredHorizonSnapshot(
+    page,
+    "mh40_restore_not_yet",
+    "NOT YET READY - REMEDIATION ROUTES SAVED",
+  );
+  const notYetRecord = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), MEASURED_HORIZON_SAVE_KEY);
+  exactFixtureBytes(notYetRecord, laterRailFixtures.rp012NotYet, "RP-012 NOT YET restore");
+
+  for (const key of [
+    "shellVersion", "controllerVersion", "owner", "phase", "outcomeAnatomy",
+    "terms", "authority", "successor", "boundary", "commonDisclaimer", "returns",
+  ]) exactFixtureBytes(ready[key], notYet[key], `Measured Horizon common outcome ${key}`);
+  if (ready.authority !== "None" || ready.successor !== "None") {
+    throw new Error(`Measured Horizon opened authority or a successor: ${JSON.stringify(ready)}`);
+  }
+
+  const stored = await page.evaluate((keys) => Object.fromEntries(keys.map((key) => [key, localStorage.getItem(key)])),
+    Object.keys(laterRailFixtures.records));
+  for (const [key, record] of Object.entries(laterRailFixtures.records)) {
+    if (key === CUSTODY_LEDGER_NORMAL_ROUTE_SAVE_KEY || key === MEASURED_HORIZON_SAVE_KEY) continue;
+    if (stored[key] !== JSON.stringify(record)) throw new Error(`Accepted later-rail predecessor changed: ${key}`);
+    if (record.successor !== null
+      || record.cityStateDelta !== null
+      || (Object.hasOwn(record, "worldStateDelta") && record.worldStateDelta !== null)
+      || (Object.hasOwn(record, "externalStateDelta") && record.externalStateDelta !== null)
+      || (Object.hasOwn(record, "authorityDelta") && record.authorityDelta !== null)) {
+      throw new Error(`Later-rail record violated the null-delta hard stop: ${key}`);
+    }
+  }
+  if (notYetRecord.successor !== null
+    || notYetRecord.cityStateDelta !== null
+    || notYetRecord.worldStateDelta !== null
+    || notYetRecord.externalStateDelta !== null
+    || notYetRecord.authorityDelta !== null) {
+    throw new Error("Measured Horizon NOT YET record violated the null-delta hard stop");
+  }
+  if (await page.getByText(/prologue credits|credits recorded|post-ending|RP-013/i).count()) {
+    throw new Error("Obsolete opening or post-ending state appeared during the canonical later rail");
+  }
 }
 
 async function verifyMeadowHotspots(page, viewportLabel) {

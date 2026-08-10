@@ -347,7 +347,10 @@ export function CityThresholdStaging({
       updateSave(next);
       setOverlayOpen(true);
     }} />;
-    return <CityHotspot rect={cityThresholdHotspots[board].forward} label="ENTER CIVIC DISTRICT" onClick={() => setMessage("The reversible route is recorded. The successor packet remains behind the staging boundary.")} />;
+    return <CityHotspot rect={cityThresholdHotspots[board].forward} label="ENTER CIVIC DISTRICT" onClick={() => {
+      setBoard("SC-02-50");
+      setMessage("The reversible route is recorded. The successor packet remains behind the staging boundary.");
+    }} />;
   }
 
   return (
