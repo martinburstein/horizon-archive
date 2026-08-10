@@ -74,21 +74,30 @@ registry before acting. This file is the sole exact-next-action authority.
   forty ordered Terminal scenes, with equal assessment outcomes and the shared
   RP-012 ending. Structural, registry, dialogue-ownership, placeholder, UTF-8,
   and whitespace checks pass under `08-FUNCTIONAL-BUILD-REPORT.md`.
+- Quartermaster issued `CONTENT COMPLETE` in
+  `09-CONTENT-COMPLETENESS-REPORT.md` after a complete director read. No root
+  correction was required: continuity, scene distinction, emotional
+  escalation, source safety, accessibility, outcome dignity, and the earned
+  final restraint pass. The Image Specialist remains disabled and was skipped.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Quartermaster TE-001 director read
+## Exact next action - Intelligence TE-001 independent release audit
 
 Read `HORIZON_ARCHIVE_GAME_ON_PAPER.md`,
 `Production Pipeline/Terminal Enrichment/TE-001/05-PLAYABLE-SLICE-SHELL.md`,
-and `Production Pipeline/Terminal Enrichment/TE-001/08-FUNCTIONAL-BUILD-REPORT.md`
-in full. Perform a complete director read for cadence, clarity, physical and
-emotional continuity, scene distinction, assessment dignity, and the earned
-closing chill. Correct only accepted documentation defects inside the shell.
+`Production Pipeline/Terminal Enrichment/TE-001/08-FUNCTIONAL-BUILD-REPORT.md`,
+and `Production Pipeline/Terminal Enrichment/TE-001/09-CONTENT-COMPLETENESS-REPORT.md`
+in full. Independently validate the exact shell, structure, registry, rail,
+learning and privacy boundaries, copy ownership, accessibility, outcome
+equality, final sentence, hard stop, no-image state, and implementation-distance
+disclosure. Do not treat either Marine report as release proof.
 
-Record the completeness decision in `09-CONTENT-COMPLETENESS-REPORT.md`. Do not
-change runtime, curriculum, assessment ownership, art, media, user state, or
-protected files; do not perform image work.
+Record accepted as-built evidence and every variance classification in
+`10-AS-BUILT-RECONCILIATION.md`, replace this handoff with one synchronized
+released state and exact next action, commit, push, and prove
+`HEAD == origin/main`. Do not change runtime, curriculum, assessment ownership,
+art, media, user state, or protected files; do not perform image work.
 
 ## Protected boundaries
 
