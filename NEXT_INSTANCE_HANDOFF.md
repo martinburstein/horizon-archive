@@ -66,20 +66,24 @@ registry before acting. This file is the sole exact-next-action authority.
 - Recon issued `CREATIVE LOCK / CT-TE001-SCRIPT-v1`: “The city has been waiting
   for no one,” with a Pilot arc from hungry projection to earned restraint and
   a final inversion in which the measure belongs to the learner.
+- Tactical issued `EXPERIENCE READY / XB-TE001-SCRIPT-v1`: exact root-document
+  hierarchy, chapter and Terminal anatomy, forty-entry learning-pressure map,
+  Drowned internal movements, failure condensation, and equal ending structure.
 - The work changes no lesson ownership, released packet, story order, ending,
   successor, world state, or Machine authority. It adds no image work.
 
-## Exact next action - Tactical TE-001 experience blueprint
+## Exact next action - Combat TE-001 root script
 
-Read `Production Pipeline/Terminal Enrichment/TE-001/06-CREATIVE-TREATMENT.md`
-in full. Convert `CT-TE001-SCRIPT-v1` into an exact reading-experience blueprint
-for the root script. Lock heading hierarchy, chapter beat order, Terminal
-section anatomy, transition placement, proposed-copy styling in plain text,
-failure-loop condensation, Drowned internal movements, final-outcome symmetry,
-director-audit placement, and structural validation targets.
+Read `Production Pipeline/Terminal Enrichment/TE-001/07-EXPERIENCE-BLUEPRINT.md`
+in full. Author the complete root `HORIZON_ARCHIVE_GAME_ON_PAPER.md` from the
+exact shell, creative treatment, and blueprint. It must read as a finished
+cinematic novella/script rather than a copied planning packet. Implement all
+structural counts, the forty-entry registry, distinct chapter drama, local
+learning pressure without answers, equal outcomes, the shared ending, and the
+director audit.
 
-Preserve the recommended final sentence and every shell boundary. Do not write
-the root script, alter runtime/curriculum/art/media/user state, or perform image
+Run the exact documentation checks and record results. Do not change runtime,
+curriculum, art, media, user state, or protected files; do not perform image
 work.
 
 ## Protected boundaries
