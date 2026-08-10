@@ -29,6 +29,8 @@ exact-next-action authority.
   `FRRM-001-v1` and `FRSB-001-v1`.
 - Science issued **`POLISH VIABILITY READY / FRVE-001-v1`** from source
   `5ed294cb61b04baa0d06d68a1d12ef817de3164b`.
+- Mission issued **`FIRST RUN SHELL READY / FRSH-001-v1`** from source
+  `e5d7891a72bb8d27a62d469007f4d7e8958b4fca`.
 - The selected address is `FR-00` through initial `FR-05`: truthful package
   identity, final-purpose existing prologue, canon-safe Drowned/Witness copy,
   and direct existing City Threshold handoff. These surfaces form one obsolete
@@ -40,36 +42,41 @@ exact-next-action authority.
   authorized. Direct Witness-to-City entry must durably clear the pending
   early-scene marker, and the obsolete credits surface is not an RP-001
   predecessor.
-- No First Run Shell exists yet. No production implementation is authorized.
+- `FRSH-001-v1` is the sole production contract. It freezes opening save v1,
+  the durable cleared-pending City frontier, direct credits-free routing,
+  canonical Windows entry plus truthful legacy wrapper, complete Drowned/
+  Witness non-response closure, exact PBA/media, and one clean-start-to-MH-40
+  E2E. No production implementation exists yet.
 - Martin authorized continued sequential First Run work in this chat. Continue
   only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
 
-## Exact next action - Mission First Run shell
+## Exact next action - Reconnaissance Sergeant directorial lock
 
-Read `First Run Agent Profiles/mission-captain.md`,
+Read `First Run Agent Profiles/reconnaissance-sergeant.md`,
 `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`,
 `Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_RELEASE_MAP.md`,
 `Production Pipeline/First Run/FIRST_RUN_SCOREBOARD.md`,
 `Production Pipeline/First Run/FIRST_RUN_WORK_ORDER_FRWO-001-v1.md`, and
-`Production Pipeline/First Run/FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-001-v1.md`
-in full.
+`Production Pipeline/First Run/FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-001-v1.md`,
+and `Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md` in full.
 
-Independently inspect the exact source paths cited by `FRVE-001-v1`. Reconcile
-all planning authorities into exactly one versioned First Run Shell for
-`FRWO-001-v1`. Freeze the opening-save-v1/no-new-field decision, durable
-cleared-pending City frontier, direct credits-free route, canonical Windows
-entry plus truthful legacy wrapper, complete Drowned/Witness response closure,
-unchanged learning/privacy/Demo Tour/later-route/MH-40 behavior, affected-state
-focus/accessibility, fixed PBA/media limits, one clean-start-to-MH-40 E2E, exact
-permitted files, validation, cleanup, rollback, and variance routing.
+Independently inspect the current package entry/guide, title/opening, Glass
+Meadow, Drowned Archive, Witness Corridor, direct City Threshold source states,
+existing accepted media usage, and adjacent Chapter IV tone. Translate
+`FRSH-001-v1` into exactly one First Run Directorial Treatment: one-sentence
+felt improvement, player fantasy, emotional/attention progression, pacing,
+world/interface/lesson relationship, concept-level composition/light/color/
+sound/motion/silence using existing immutable media, adjacent-scene contrast,
+fixed invariants, flexible staging, risks, and exact Tactical handoff.
 
-Issue `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`, commit the Mission stage,
-push at the shell gate, and prove `HEAD == origin/main`. Do not implement,
-write final copy, deploy Reconnaissance, change media, promote a missing host,
-or alter the Work Order boundary silently.
+Issue `DIRECTORIAL LOCK`, `REVISE`, or `HOLD`, validate and commit only the
+Recon stage, and replace this handoff with one exact Tactical action. Do not
+write final copy, define exact interaction/layout, implement code, inspect
+hidden lore or protected state, change/generate/edit/import media, create a
+reveal, promote a missing host, or deploy Tactical.
 
 ## Protected boundaries
 
