@@ -409,34 +409,33 @@ exact-next-action authority.
   summary and its verifier must pass once. Any failure is `HOLD` with no rerun.
 - Reissued shell artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-04.md`.
+- Combat committed exact VR-04 two-file probe candidate
+  `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`; frozen product/test candidate
+  `7e85154abd8dbf116c4bb84ca66afd859903d750` and its `App.jsx` /
+  `test/sixfoldWeir.test.js` blobs remained unchanged.
+- The first pre-live gate stopped at `67/68`. Frozen
+  `test/sixfoldWeir.test.js:146` still requires the superseded verifier
+  literals `FRSH-003-v1-VR-02` and `Shift+Tab -> Tab`, while VR-04 requires
+  `FRSH-003-v1-VR-04` and `Tab -> Shift+Tab` and forbids changing that test.
+- No later deterministic gate, preview, external QA root, complete E2E,
+  summary, or verifier ran. Combat disposition is **`HOLD / VR-04
+  DETERMINISTIC CONTROL INCOMPATIBILITY / FRCE-003-v1`**; Quartermaster remains
+  blocked.
 
-## Exact next action - Combat Engineer only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
-handoff, `FRSH-003-v1-VR-04`, governing `FRSH-003-v1`,
-`FRSH-003-v1-VR-03`, `FRVE-003-v1-VR-02`,
-`FRPX-003-v1-VR-02`, complete `FRCE-003-v1`, and exact current
-`playtest/e2e-playthrough.mjs` / `FRRC-002-v1` controls.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, complete `FRCE-003-v1`, `FRSH-003-v1-VR-04`, and the frozen static
+assertion at `horizon-archive-game/test/sixfoldWeir.test.js:146`.
 
-Preserve exact product/test candidate
-`7e85154abd8dbf116c4bb84ca66afd859903d750`. Change only the existing E2E
-harness and `FRRC-002-v1` summary/verifier expectations for strict `q=1/64`
-floor used values, resolved-`P` source mapping, inner-`2px`/outer-`3px` label
-geometry, enabled Host 05 -> `LOOK AT` -> `USE` -> `TALK TO` -> inventory
-return order, and genuine Host 05 `Tab` -> `LOOK AT` -> `Shift+Tab` -> Host 05
-focus-visible proof. Freeze the exact two-file delta as a separate committed
-probe candidate; product/test/CSS/module/media blobs may not change.
-
-Run the exact deterministic pre-live ladder. Only after every gate passes,
-invoke exactly one fresh `FRRC-002-v1` complete E2E under one newly resolved
-external GUID root. Require exactly one machine summary and one passing
-verifier. On any failure, stop, clean up exact owned resources, issue `HOLD`,
-and return to Mission without rerun.
-
-Do not write final copy, change a placeholder/CSS/module/media/learning/save/
-route/world/later-rail/ending/maturity/map/scoreboard, inspect the repository QA
-quarantine or user state, begin Quartermaster, repair City, expand Host
-06-15, create a schedule/reveal, or call `FIRST RUN COMPLETE`.
+Adjudicate the internally inconsistent permitted-file contract: VR-04 requires
+the corrected `FRSH-003-v1-VR-04` / `Tab -> Shift+Tab` verifier but freezes a
+test that requires the superseded `FRSH-003-v1-VR-02` / `Shift+Tab -> Tab`
+literals. Preserve product behavior, all geometry/focus/verifier thresholds,
+seven placeholders, media, learning/save/route/ending, and exact candidates.
+Issue a versioned shell authorizing one smallest truthful resolution or
+continue HOLD. Do not treat decorative legacy tokens as proof, authorize an
+E2E, or begin Quartermaster while the mandatory focused gate is unsatisfiable.
 
 ## Protected boundaries
 

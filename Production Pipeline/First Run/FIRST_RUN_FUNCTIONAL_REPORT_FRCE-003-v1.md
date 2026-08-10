@@ -4,7 +4,7 @@ Date: **2026-08-10**
 
 Role: **Combat Engineer**
 
-Disposition: **HOLD / VR-02 LIVE CONTRACT VARIANCE**
+Disposition: **HOLD / VR-04 DETERMINISTIC CONTROL INCOMPATIBILITY**
 
 ## Candidate identity
 
@@ -21,6 +21,8 @@ Disposition: **HOLD / VR-02 LIVE CONTRACT VARIANCE**
   `a39e6bf45ebabe536425719be8a9370a1183270b`
 - VR-02 repaired product/test/probe/manifest candidate:
   `7e85154abd8dbf116c4bb84ca66afd859903d750`
+- VR-04 probe-only candidate:
+  `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`
 - Canonical command manifest:
   `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
 
@@ -233,16 +235,41 @@ was removed after exact containment checks.
   correction; `7e85154abd8dbf116c4bb84ca66afd859903d750` is the bounded VR-02 repair.
   None requires a migration or save repair.
 
+## VR-04 deterministic stop
+
+Combat started from synchronized control source
+`b52bfa6a33d4a685b490c9c991f5191cc17bf490`, proved exact ancestry and
+unchanged `App.jsx` / `test/sixfoldWeir.test.js` blobs against frozen product/
+test candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`, and committed exactly the two
+authorized probe files as `d9487d8205174a7b5f688cbfccbcd5f7875ac1ad`.
+That probe implements strict `q=1/64` floor used-value equality with no
+epsilon, resolved-`P` `.scene-art` source mapping, inner-`2px` / outer-`3px`
+label evidence, actual Host 05 -> `LOOK AT` -> `USE` -> `TALK TO` -> return
+order, and genuine `Tab -> Shift+Tab` focus-visible proof.
+
+The first deterministic pre-live gate then failed **67/68**. The sole failure
+is the frozen static manifest assertion at
+`horizon-archive-game/test/sixfoldWeir.test.js:146`, which still requires the
+superseded literal sequence `FRSH-003-v1-VR-02 ... Shift+Tab -> Tab` inside the
+live-summary verifier command. VR-04 simultaneously requires the verifier to
+declare `FRSH-003-v1-VR-04` and the corrected `Tab -> Shift+Tab` path, while
+forbidding any product-test change. Thus the current permitted-file contract
+cannot satisfy its own mandatory `68/68` gate without either changing the
+frozen test or adding a non-operative legacy token solely to appease it.
+
+Per the exact no-rerun rule, Combat stopped immediately. Related/full tests,
+validators, builds, PBA/media, previews, served identity, the complete E2E,
+summary emission, and the independent verifier were **not run** in VR-04.
+No external QA root or preview process was created; ports `4173` and `4184`
+remain clear. No protected/user/media state was inspected or mutated.
+
 ## Exact next action
 
-Mission Captain must adjudicate the four exact VR-02 live contradictions before
-another Combat run: browser-quantized physical registration, inner-positioned
-label versus outer-border inset, existing `LOOK AT -> USE -> TALK TO` order,
-and the actual reverse-tab predecessor. Preserve repaired candidate
-`7e85154abd8dbf116c4bb84ca66afd859903d750`, predecessors `a9776e3` /
-`bf58e52`, all seven placeholders, the successful `44px` repair, and every
-quality threshold. Obtain Science/Tactical reconciliation that measures an
-actual browser-resolved physical box and the real tab sequence without
-rounding, reordered player behavior, programmatic focus, or weakened
-containment. Issue a versioned shell decision or continue HOLD. Do not
-authorize another E2E or Quartermaster until one implementable contract exists.
+Mission Captain must adjudicate the VR-04 permitted-file contradiction. Keep
+product/test candidate `7e85154abd8dbf116c4bb84ca66afd859903d750`
+frozen unless a versioned shell explicitly authorizes the smallest truthful
+static-test expectation update; keep probe candidate
+`d9487d8205174a7b5f688cbfccbcd5f7875ac1ad` as the failed deterministic
+candidate. Do not accept a decorative legacy marker as functional evidence,
+do not weaken any geometry/focus/verifier threshold, and do not authorize an
+E2E or Quartermaster until one internally consistent pre-live contract exists.
