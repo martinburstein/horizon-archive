@@ -1,8 +1,11 @@
 # Horizon Archive First Run Production Control
 
-Status: **PROGRAM INITIALIZED / BASELINE NOT YET ISSUED**  
-Program authority: `FIRST_RUN_AGENT_WORKFLOW.md`  
-Registry: `First Run Agent Profiles/README.md`  
+Status: **PROGRAM INITIALIZED / BASELINE NOT YET ISSUED**
+
+Program authority: `FIRST_RUN_AGENT_WORKFLOW.md`
+
+Registry: `First Run Agent Profiles/README.md`
+
 Initialized: **2026-08-09**
 
 ## Purpose

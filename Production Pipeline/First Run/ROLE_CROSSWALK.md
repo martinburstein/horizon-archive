@@ -1,8 +1,10 @@
 # First Run Role Crosswalk
 
 Source program: Skyscraper snapshot at
-`Production Pipeline/Archive/2026-08-09-skyscraper-agent-program/`  
-Successor program: `FIRST_RUN_AGENT_WORKFLOW.md`  
+`Production Pipeline/Archive/2026-08-09-skyscraper-agent-program/`
+
+Successor program: `FIRST_RUN_AGENT_WORKFLOW.md`
+
 Date: **2026-08-09**
 
 ## Design rule
