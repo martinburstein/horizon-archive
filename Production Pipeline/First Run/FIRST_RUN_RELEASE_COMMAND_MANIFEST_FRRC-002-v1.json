@@ -1,0 +1,875 @@
+{
+  "schema": "horizon.first-run.release-command-manifest.v1",
+  "manifest_id": "FRRC-002-v1",
+  "work_order": "FRWO-003-v1",
+  "shell": "FRSH-003-v1",
+  "source_commit": "e5010a6bd3e54027850b3b77dc2bc7216474e838",
+  "policy": {
+    "validator_count": 40,
+    "validator_order": "sorted repository-relative path",
+    "e2e_invocations": 1,
+    "production_preview": "127.0.0.1:4173",
+    "fixture_preview": "127.0.0.1:4184",
+    "qa_root": "fresh GUID child strictly inside resolved OS temp and outside repository",
+    "protected_paths": [
+      "Art Of No Mans Sky Book Scan.pdf",
+      "Simplilearn Training Files/",
+      "Production Pipeline/First Run/QA/"
+    ],
+    "live_summary": "first-run-live-summary.json produced only by sole E2E"
+  },
+  "entries": {
+    "focused": {
+      "id": "focused",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "node",
+        "--test",
+        "test/sixfoldWeir.test.js",
+        "test/workloadSortExercise.test.js",
+        "test/workloadResumeIntegration.test.js",
+        "test/responsibleAIExercise.test.js",
+        "test/sceneReturn.test.js",
+        "test/sceneTransition.test.js",
+        "test/terminalFocus.test.js",
+        "test/photorealisticWorldPlates.test.js",
+        "test/fractureNursery.test.js",
+        "test/meadowRouteMarker.test.js",
+        "test/signalCouplerProduction.test.js"
+      ],
+      "timeout_ms": 30000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [],
+      "output_port_ownership": "none",
+      "cleanup": "none"
+    },
+    "related": {
+      "id": "related",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "node",
+        "--test",
+        "test/openingFlow.test.js",
+        "test/gameLogic.test.js",
+        "test/firstRunOpeningTransition.test.js",
+        "test/pixelMeadow.test.js",
+        "test/demoTour.test.js",
+        "test/evidencePacketExercise.test.js",
+        "test/cityThresholdExercise.test.js",
+        "test/canonicalFrame.test.js",
+        "test/measuredHorizonFixture.test.js",
+        "test/measuredHorizonNormal.test.js",
+        "test/measuredHorizonProtectedJourney.test.js"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [],
+      "output_port_ownership": "none",
+      "cleanup": "none"
+    },
+    "full": {
+      "id": "full",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "node",
+        "--test"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [],
+      "output_port_ownership": "none",
+      "cleanup": "none"
+    },
+    "validators": {
+      "id": "validators",
+      "workdir": ".",
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "exactly 40 sorted curriculum/**/validate*.py paths"
+      ],
+      "output_port_ownership": "none",
+      "cleanup": "none",
+      "invocations": [
+        {
+          "id": "validator-01",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-01-02/validate_route_marker.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-02",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-01-03/validate_calibration.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-03",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-01-03/validate_safe_return_guide.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-04",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-02-01/validate_saved_evidence_resume.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-05",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-02-02/validate_responsible_ai.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-06",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-02-03/validate_model_choices.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-07",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-03-01/validate_structures.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-08",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-03-02/validate_control_flow.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-09",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-03-03/validate_client_bridge.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-10",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-04-01/validate_text_analysis.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-11",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-04-02/validate_speech_workloads.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-12",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-04-03/validate_visual_workloads.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-13",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-04-04/validate_extraction_workloads.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-14",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-01/validate_portal_orientation.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-15",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-02/validate_prompt_layers.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-16",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-03/validate_client_boundaries.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-17",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-03/validate_sdk_route_chooser.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-18",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-03/validate_sdk_route_trace.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-19",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-04/validate_single_agent.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-20",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-05/validate_text_speech_patterns.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-21",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-06/validate_visual_patterns.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-22",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-05-07/validate_extraction.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-23",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-06-01/validate_objective_ledger.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-24",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-06-02/validate_remediation_planner.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-25",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/lessons/L-06-03/validate_capstone_readiness.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-26",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/CUM-01/validate_cumulative.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-27",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-002/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-28",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-003/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-29",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-004/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-30",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-005/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-31",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-006/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-32",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-007/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-33",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-008/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-34",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-009/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-35",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-010/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-36",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-011/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-37",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/RP-012/validate_mapping.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-38",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/SIM-01/validate_simulation.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-39",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/SIM-02/validate_simulation.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        },
+        {
+          "id": "validator-40",
+          "workdir": ".",
+          "command": [
+            "python",
+            "curriculum/readiness/SIM-03/validate_simulation.py",
+            "--self-test"
+          ],
+          "timeout_ms": 60000,
+          "expected_exit": 0,
+          "owner": "combat_engineer",
+          "prerequisites": [],
+          "output_port_ownership": "none",
+          "cleanup": "none"
+        }
+      ]
+    },
+    "production-build": {
+      "id": "production-build",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [],
+      "output_port_ownership": "horizon-archive-game/dist",
+      "cleanup": "replaced only by the same build"
+    },
+    "fixture-build": {
+      "id": "fixture-build",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "npm",
+        "run",
+        "build:td012-fixture"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [],
+      "output_port_ownership": "horizon-archive-game/review-fixtures/td012-measured-horizon/dist",
+      "cleanup": "removed only after identity evidence if cleanup is authorized"
+    },
+    "production-preview": {
+      "id": "production-preview",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "preview",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4173",
+        "--strictPort"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "production-build"
+      ],
+      "output_port_ownership": "recorded PID and 127.0.0.1:4173 only",
+      "cleanup": "stop recorded PID only"
+    },
+    "fixture-preview": {
+      "id": "fixture-preview",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "preview",
+        "--config",
+        "review-fixtures/td012-measured-horizon/vite.config.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4184",
+        "--strictPort"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "fixture-build"
+      ],
+      "output_port_ownership": "recorded PID and 127.0.0.1:4184 only",
+      "cleanup": "stop recorded PID only"
+    },
+    "served-identity": {
+      "id": "served-identity",
+      "workdir": "horizon-archive-game",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Add-Type -AssemblyName System.Net.Http;$ErrorActionPreference='Stop';$client=[System.Net.Http.HttpClient]::new();try{$pairs=@(@{u='http://127.0.0.1:4173';d='dist'},@{u='http://127.0.0.1:4184';d='review-fixtures/td012-measured-horizon/dist'});foreach($p in $pairs){$root=$client.GetByteArrayAsync($p.u+'/').Result;$deep=$client.GetByteArrayAsync($p.u+'/deep/fallback').Result;$disk=[IO.File]::ReadAllBytes((Resolve-Path ($p.d+'/index.html')));if(-not [Linq.Enumerable]::SequenceEqual([byte[]]$root,[byte[]]$deep)-or -not [Linq.Enumerable]::SequenceEqual([byte[]]$root,[byte[]]$disk)){throw 'index identity mismatch'};foreach($f in Get-ChildItem ($p.d+'/assets') -File|Where-Object {$_.Extension -in '.js','.css'}){$served=$client.GetByteArrayAsync($p.u+'/assets/'+$f.Name).Result;$bytes=[IO.File]::ReadAllBytes($f.FullName);if(-not [Linq.Enumerable]::SequenceEqual([byte[]]$served,[byte[]]$bytes)){throw ('asset mismatch '+$f.Name)}}}}finally{$client.Dispose()}"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "production-preview",
+        "fixture-preview"
+      ],
+      "output_port_ownership": "read-only HTTP 127.0.0.1:4173 and :4184",
+      "cleanup": "none"
+    },
+    "complete-e2e": {
+      "id": "complete-e2e",
+      "workdir": ".",
+      "command": [
+        "node",
+        "playtest/e2e-playthrough.mjs"
+      ],
+      "timeout_ms": 180000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "production-preview",
+        "served-identity"
+      ],
+      "output_port_ownership": "one browser process and one freshly created external OS-temp GUID root",
+      "cleanup": "close owned browser; retain exact external root through live-summary-verify, then remove only after repeated containment proof",
+      "environment": {
+        "HORIZON_ARCHIVE_URL": "http://127.0.0.1:4173/",
+        "HORIZON_ARCHIVE_QA_DIR": "<fresh-resolved-GUID-child-inside-OS-temp-outside-repository>",
+        "HORIZON_ARCHIVE_CANDIDATE": "<frozen-product-test-candidate>",
+        "HORIZON_ARCHIVE_PBA_NARROW": "true",
+        "HORIZON_ARCHIVE_PBA_GLOBAL": "true",
+        "HORIZON_ARCHIVE_MEDIA_IDENTITY": "true"
+      }
+    },
+    "pba-media": {
+      "id": "pba-media",
+      "workdir": ".",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop';$assets=Get-ChildItem 'horizon-archive-game/dist/assets' -File;$js=($assets|Where-Object Extension -eq '.js'|Measure-Object Length -Sum).Sum;$css=($assets|Where-Object Extension -eq '.css'|Measure-Object Length -Sum).Sum;if($js -gt 1675664 -or $css -gt 119281){throw \"FRWO-003 cap: $js/$css\"};if($js -gt 1703258 -or $css -gt 119672){throw \"global cap: $js/$css\"};$media=$assets|Where-Object {$_.Extension -notin '.js','.css','.map'};if($media.Count -ne 17 -or ($media|Measure-Object Length -Sum).Sum -ne 37410731){throw 'media inventory drift'};if(Get-ChildItem 'horizon-archive-game/dist' -Recurse -File|Where-Object {$_.Extension -eq '.map'}){throw 'source map emitted'}"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "production-build"
+      ],
+      "output_port_ownership": "read-only dist and accepted media inventory",
+      "cleanup": "none"
+    },
+    "cleanup-identity": {
+      "id": "cleanup-identity",
+      "workdir": ".",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='Stop';$owned=@(4173,4184);foreach($port in $owned){if(Get-NetTCPConnection -State Listen -LocalPort $port -ErrorAction SilentlyContinue){throw \"owned port remains: $port\"}};git diff --check;if(Test-Path -LiteralPath 'Art Of No Mans Sky Book Scan.pdf'){git status --short -- 'Art Of No Mans Sky Book Scan.pdf'};git status --short -- 'Simplilearn Training Files/';git rev-parse HEAD;git rev-parse origin/main"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "live-summary-verify",
+        "pba-media"
+      ],
+      "output_port_ownership": "owned PIDs/ports and exact contained QA/fixture outputs only",
+      "cleanup": "stop recorded PIDs; repeat resolved OS-temp containment proof; remove only exact owned GUID root; never enumerate or touch repository QA quarantine/protected paths"
+    },
+    "live-summary-verify": {
+      "id": "live-summary-verify",
+      "workdir": ".",
+      "command": [
+        "node",
+        "--eval",
+        "const fs=require('node:fs');const p=process.env.HORIZON_ARCHIVE_LIVE_SUMMARY;const s=JSON.parse(fs.readFileSync(p,'utf8'));const ids=['desktop','laptop','narrow','effective-200','retained-320x180','retained-320x240'];const finite=v=>typeof v==='number'&&Number.isFinite(v);if(s.schema!=='horizon.first-run.live-summary.v1'||s.producer!=='playtest/e2e-playthrough.mjs'||s.workOrder!=='FRWO-003-v1'||s.shell!=='FRSH-003-v1'||s.candidate!==process.env.HORIZON_ARCHIVE_CANDIDATE||s.runtimeErrors!==false||s.pass!==true)throw Error('summary identity');if(JSON.stringify(s.layouts.map(x=>x.id))!==JSON.stringify(ids))throw Error('layout ids');for(const x of s.layouts){for(const v of [x.viewport.width,x.viewport.height,x.scene.width,x.scene.height,x.host05.x,x.host05.y,x.host05.width,x.host05.height,x.sourceBounds.left,x.sourceBounds.top,x.sourceBounds.right,x.sourceBounds.bottom,x.sourceBandRetention,x.host04OverlapArea,x.returnOverlapArea])if(!finite(v))throw Error('nonfinite');for(const v of [x.centerContained,x.targetSize,x.labelContained,x.forcedColors,x.reducedMotion,x.pass])if(v!==true)throw Error('layout false');if(x.horizontalOverflow!==false||x.host04OverlapArea!==0||x.returnOverlapArea!==0)throw Error('overlap/overflow')}for(const v of [...Object.values(s.focus),...Object.values(s.inputs),s.pba.narrow,s.pba.global,s.pba.mediaIdentity,s.pba.runtimeRequests])if(v!==true)throw Error('required false');if(!finite(s.pba.sixfoldActivationMs)||s.pba.sixfoldActivationMs>2)throw Error('activation');console.log(JSON.stringify({schema:s.schema,candidate:s.candidate,layouts:s.layouts.length,pass:true}))"
+      ],
+      "timeout_ms": 60000,
+      "expected_exit": 0,
+      "owner": "combat_engineer",
+      "prerequisites": [
+        "complete-e2e"
+      ],
+      "output_port_ownership": "read-only exact E2E summary",
+      "cleanup": "none"
+    }
+  }
+}

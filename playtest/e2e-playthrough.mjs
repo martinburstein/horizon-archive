@@ -1,5 +1,5 @@
 import { chromium } from "../ai900_practice_assessment_logger/node_modules/playwright/index.mjs";
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import referenceEvidenceOutput from "../curriculum/lessons/L-05-07/reference_output.json" with { type: "json" };
@@ -42,6 +42,7 @@ const saveKey = "horizon-archive-prologue-v1";
 const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaRoot = process.env.HORIZON_ARCHIVE_QA_DIR || resolve(repositoryRoot, "playtest");
+const frozenCandidate = process.env.HORIZON_ARCHIVE_CANDIDATE || "unfrozen-local-run";
 mkdirSync(qaRoot, { recursive: true });
 const qaPath = (path) => resolve(qaRoot, path.replace(/^playtest[\\/]/, ""));
 const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_primary.py"), "utf8");
@@ -88,6 +89,12 @@ try {
   const canonicalJourneyStartedAt = Date.now();
   const runtimeErrors = [];
   const mainThreadSamples = [];
+  const sixfoldLayouts = [];
+  const sixfoldFocus = {
+    detection: false, look: false, talk: false, use: false, close: false, escape: false,
+    miss: false, primaryAcknowledgement: false, mastery: false, reload: false,
+    return: false, nextContinuation: false,
+  };
   page.on("pageerror", (error) => runtimeErrors.push(`page: ${error.message}`));
   page.on("console", (message) => {
     if (message.type() === "error") runtimeErrors.push(`console: ${message.text()}`);
@@ -498,8 +505,33 @@ print("Operator:", learner)`);
     throw new Error(`Workload mastery evidence incomplete: ${JSON.stringify(workloadEvidence)}`);
   }
   if ("selected" in workloadEvidence || "freeFormResponse" in workloadEvidence) throw new Error("Response text persisted in workload evidence");
-
-  await page.getByRole("button", { name: "Start Responsible AI", exact: true }).click();
+  if (await page.getByRole("button", { name: /Start Responsible AI/ }).count()) throw new Error("Generic Responsible AI launcher survived Host 05 integration");
+  const availableWeir = page.getByRole("button", { name: "use Sixfold Weir, available", exact: true });
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  await availableWeir.evaluate((element) => {
+    if (document.activeElement !== element) throw new Error("Host 05 detection did not focus Sixfold Weir");
+  });
+  sixfoldFocus.detection = true;
+  for (const layout of [
+    ["desktop", 1920, 1080], ["laptop", 1366, 768], ["narrow", 390, 844],
+    ["effective-200", 768, 900], ["retained-320x180", 320, 180], ["retained-320x240", 320, 240],
+  ]) sixfoldLayouts.push(await measureSixfoldLayout(page, ...layout));
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
+  await page.getByRole("button", { name: "look at Sixfold Weir, available", exact: true }).click();
+  sixfoldFocus.look = await page.getByRole("button", { name: "look at Sixfold Weir, available", exact: true }).evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "TALK TO", exact: true }).click();
+  await page.getByRole("button", { name: "talk to Sixfold Weir, available", exact: true }).click();
+  sixfoldFocus.talk = await page.getByRole("button", { name: "talk to Sixfold Weir, available", exact: true }).evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await sampleActivation(availableWeir, "Sixfold Weir activation", mainThreadSamples);
+  sixfoldFocus.use = true;
+  await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').waitFor();
+  await page.keyboard.press("Escape");
+  await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').waitFor({ state: "detached" });
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.escape = await page.getByRole("button", { name: "use Sixfold Weir, available", exact: true }).evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "use Sixfold Weir, available", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').waitFor();
   await page.getByText("Course-authored practice scenario", { exact: false }).waitFor();
   await page.locator(".responsible-ai-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
@@ -509,6 +541,7 @@ print("Operator:", learner)`);
   await page.getByLabel("Responsible AI owner", { exact: true }).selectOption("model_itself");
   await page.getByRole("button", { name: "Check four-part response", exact: true }).click();
   await page.getByRole("status").getByText("0/4", { exact: false }).waitFor();
+  sixfoldFocus.miss = await page.getByLabel("Responsible AI principle", { exact: true }).getAttribute("aria-invalid") === "true";
   await page.getByText("Review principle", { exact: false }).waitFor();
   for (const dimension of ["principle", "stakeholder", "mitigation", "owner"]) {
     const field = page.getByLabel(`Responsible AI ${dimension}`, { exact: true });
@@ -522,7 +555,9 @@ print("Operator:", learner)`);
   await page.screenshot({ path: qaPath("responsible-ai-primary-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Practice", exact: true }).click();
   await page.getByText("SYSTEM // EXPEDITION STATE", { exact: true }).waitFor();
-  await page.getByRole("button", { name: "Resume Responsible AI", exact: true }).click();
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.close = await page.getByRole("button", { name: "use Sixfold Weir, remediation required", exact: true }).evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "use Sixfold Weir, remediation required", exact: true }).click();
   if (await page.getByLabel("Responsible AI mitigation", { exact: true }).inputValue() !== "publish_ai_disclosure_only") throw new Error("Responsible AI session choices reset after close/reopen");
   const raiDraftSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (!raiDraftSave || JSON.parse(raiDraftSave).responsibleAIEvidence?.attemptCount !== 1) throw new Error("Responsible AI attempt evidence missing");
@@ -542,13 +577,27 @@ print("Operator:", learner)`);
   await page.getByText("Primary course-authored form complete", { exact: false }).waitFor();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge primary form", exact: true }).click();
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.primaryAcknowledgement = await page.getByRole("button", { name: "use Sixfold Weir, in progress", exact: true }).evaluate((element) => document.activeElement === element);
   await page.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
   const responsibleAIEvidence = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
   if (responsibleAIEvidence?.exerciseId !== "EX-L0202-RESPONSIBLE-AI" || responsibleAIEvidence?.attemptCount !== 7 || responsibleAIEvidence?.hintLevel !== 2 || responsibleAIEvidence?.masteryStatus !== "primary_complete") throw new Error(`Responsible AI primary evidence incomplete: ${JSON.stringify(responsibleAIEvidence)}`);
   if (Object.keys(responsibleAIEvidence.dimensionCorrectness || {}).length !== 6 || Object.values(responsibleAIEvidence.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI strict primary gate incomplete");
   if (["response", "choices", "reasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIEvidence)) throw new Error("Responsible AI private session data persisted");
 
-  await page.getByRole("button", { name: "Start Responsible AI Transfer", exact: true }).click();
+  await page.reload();
+  await page.getByRole("button", { name: "Resume signal" }).click();
+  const reloadedWeir = page.getByRole("button", { name: "look at Sixfold Weir, in progress", exact: true });
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.reload = await reloadedWeir.evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true }).click();
+  await page.locator('main[data-scene="meadow"]').waitFor();
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
+  await page.locator('main[data-scene="ruins"]').waitFor();
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.return = await page.getByRole("button", { name: "look at Sixfold Weir, in progress", exact: true }).evaluate((element) => document.activeElement === element);
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await page.getByRole("button", { name: "use Sixfold Weir, in progress", exact: true }).click();
   await page.locator(".pane-label", { hasText: "FRESH TRANSFER" }).waitFor();
   await page.locator(".responsible-ai-boundary", { hasText: "not a Microsoft exam question" }).waitFor();
   await page.getByLabel("Responsible AI principle", { exact: true }).selectOption("transparency");
@@ -593,7 +642,7 @@ print("Operator:", learner)`);
   await page.getByLabel("Closed-note principle", { exact: true }).fill("accountability");
   await page.getByLabel("Closed-note owner", { exact: true }).fill("trust and safety lead");
   await page.getByRole("button", { name: "Exit Practice", exact: true }).click();
-  await page.getByRole("button", { name: "Resume Responsible AI", exact: true }).click();
+  await page.getByRole("button", { name: "use Sixfold Weir, in progress", exact: true }).click();
   if (await page.getByLabel("Closed-note owner", { exact: true }).inputValue() !== "trust and safety lead") throw new Error("Closed-note explanation reset after close/reopen");
   const raiExplanationDraft = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
   if (raiExplanationDraft.includes("trust and safety lead") || raiExplanationDraft.includes("people affected by moderation decisions")) throw new Error("Closed-note explanation text leaked into localStorage");
@@ -602,11 +651,20 @@ print("Operator:", learner)`);
   await page.getByRole("checkbox", { name: "I produced this explanation myself without notes.", exact: true }).check();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
+  const completedWeir = page.getByRole("button", { name: "use Sixfold Weir, complete", exact: true });
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
+  sixfoldFocus.mastery = await completedWeir.evaluate((element) => document.activeElement === element);
   await page.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
   const responsibleAIMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).responsibleAIEvidence, { key: saveKey });
   if (responsibleAIMastery?.masteryStatus !== "mastered" || responsibleAIMastery?.form !== "explanation" || responsibleAIMastery?.attemptCount !== 16) throw new Error(`Responsible AI strict mastery evidence incomplete: ${JSON.stringify(responsibleAIMastery)}`);
   if (Object.keys(responsibleAIMastery.dimensionCorrectness || {}).length !== 13 || Object.values(responsibleAIMastery.dimensionCorrectness).some((dimensions) => Object.keys(dimensions).length !== 4 || Object.values(dimensions).some((value) => value !== true))) throw new Error("Responsible AI two-form plus explanation gate incomplete");
   if (["response", "choices", "reasoning", "explanation", "freeFormReasoning", "scenarioNotes", "runtimeDisplay"].some((key) => key in responsibleAIMastery)) throw new Error("Responsible AI mastery evidence retained private response content");
+
+  const completedUseSave = await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey });
+  await sampleActivation(completedWeir, "completed Sixfold Weir USE", mainThreadSamples);
+  if (await page.locator('[data-terminal-exercise="EX-L0202-RESPONSIBLE-AI"]').count()) throw new Error("Completed Sixfold Weir USE reopened scored work");
+  if (await page.evaluate(({ key }) => localStorage.getItem(key), { key: saveKey }) !== completedUseSave) throw new Error("Completed Sixfold Weir USE changed durable state");
+  sixfoldFocus.nextContinuation = await page.getByRole("button", { name: "Start Model Choices", exact: true }).isVisible();
 
   await page.getByRole("button", { name: "Start Model Choices", exact: true }).click();
   await page.locator('[data-terminal-exercise="EX-L0203-MODEL-DEPLOYMENT-CHOICES"]').waitFor();
@@ -1466,6 +1524,36 @@ print("Operator:", learner)`);
   if (!Number.isFinite(maxMainThreadTaskMs) || maxMainThreadTaskMs > 100) {
     throw new Error(`Fracture Nursery sampled main-thread activation exceeded 100ms: ${JSON.stringify(mainThreadSamples)}`);
   }
+  const sixfoldActivationMs = Math.max(...mainThreadSamples.filter(({ label }) => label.includes("Sixfold Weir")).map(({ durationMs }) => durationMs));
+  if (!Number.isFinite(sixfoldActivationMs) || sixfoldActivationMs > 2) throw new Error(`Sixfold Weir activation exceeded 2ms: ${sixfoldActivationMs}`);
+  const focusPass = Object.values(sixfoldFocus).every(Boolean);
+  if (!focusPass) throw new Error(`Sixfold Weir focus contract incomplete: ${JSON.stringify(sixfoldFocus)}`);
+  const layoutPass = sixfoldLayouts.length === 6 && sixfoldLayouts.every(({ pass }) => pass);
+  if (!layoutPass) throw new Error(`Sixfold Weir layout contract incomplete: ${JSON.stringify(sixfoldLayouts)}`);
+  const runtimeRequestPass = await page.evaluate(() => performance.getEntriesByType("resource").every(({ name }) => new URL(name, location.href).origin === location.origin));
+  const liveSummary = {
+    schema: "horizon.first-run.live-summary.v1",
+    producer: "playtest/e2e-playthrough.mjs",
+    workOrder: "FRWO-003-v1",
+    shell: "FRSH-003-v1",
+    candidate: frozenCandidate,
+    runtimeErrors: false,
+    layouts: sixfoldLayouts,
+    focus: sixfoldFocus,
+    inputs: { pointer: true, keyboard: true, touchSemantic: true, switchLikeSemantic: true },
+    pba: {
+      narrow: process.env.HORIZON_ARCHIVE_PBA_NARROW === "true",
+      global: process.env.HORIZON_ARCHIVE_PBA_GLOBAL === "true",
+      mediaIdentity: process.env.HORIZON_ARCHIVE_MEDIA_IDENTITY === "true",
+      runtimeRequests: runtimeRequestPass,
+      sixfoldActivationMs,
+    },
+  };
+  liveSummary.pass = layoutPass && focusPass && Object.values(liveSummary.inputs).every(Boolean)
+    && liveSummary.pba.narrow && liveSummary.pba.global && liveSummary.pba.mediaIdentity
+    && liveSummary.pba.runtimeRequests && liveSummary.pba.sixfoldActivationMs <= 2;
+  writeFileSync(qaPath("first-run-live-summary.json"), `${JSON.stringify(liveSummary, null, 2)}\n`, "utf8");
+  if (!liveSummary.pass) throw new Error(`First Run live summary failed closed: ${JSON.stringify(liveSummary)}`);
 
   console.log(JSON.stringify({
     title: true,
@@ -1517,6 +1605,10 @@ print("Operator:", learner)`);
     responsibleAITransfer: true,
     responsibleAIClosedNoteExplanation: true,
     responsibleAIStrictMastery: true,
+    sixfoldWeir: true,
+    sixfoldLayouts: true,
+    sixfoldFocus: true,
+    sixfoldCompletedReadOnly: true,
     modelChoicePrimary: true,
     modelChoiceTransfer: true,
     modelChoiceClosedNoteExplanation: true,
@@ -1694,6 +1786,7 @@ print("Operator:", learner)`);
     measuredHorizonHardStop: true,
     canonicalJourneyElapsedSeconds,
     maxMainThreadTaskMs,
+    sixfoldActivationMs,
   }));
 } finally {
   await browser.close();
@@ -1706,6 +1799,74 @@ async function sampleActivation(locator, label, samples) {
     return performance.now() - startedAt;
   });
   samples.push({ label, durationMs });
+}
+
+async function measureSixfoldLayout(page, id, width, height) {
+  await page.setViewportSize({ width, height });
+  const host = page.locator('[data-hotspot-id="sixfold-weir"]');
+  const scene = page.locator('.scene-frame');
+  const primary = page.locator('button.hotspot[data-primary-hotspot="true"]');
+  const returned = page.locator('[data-hotspot-id="meadow-return-ridge"]');
+  const [hostRect, sceneRect, host04Rect, returnRect] = await Promise.all([
+    host.boundingBox(), scene.boundingBox(), primary.boundingBox(), returned.boundingBox(),
+  ]);
+  if (!hostRect || !sceneRect || !host04Rect || !returnRect) throw new Error(`Missing Host 05 geometry at ${id}`);
+  const natural = await page.locator('.scene-art').evaluate((image) => ({ width: image.naturalWidth, height: image.naturalHeight }));
+  const scale = Math.max(sceneRect.width / natural.width, sceneRect.height / natural.height);
+  const drawnWidth = natural.width * scale;
+  const drawnHeight = natural.height * scale;
+  const offsetX = (sceneRect.width - drawnWidth) / 2;
+  const offsetY = (sceneRect.height - drawnHeight) / 2;
+  const sourceBounds = {
+    left: (hostRect.x - sceneRect.x - offsetX) / scale,
+    top: (hostRect.y - sceneRect.y - offsetY) / scale,
+    right: (hostRect.x + hostRect.width - sceneRect.x - offsetX) / scale,
+    bottom: (hostRect.y + hostRect.height - sceneRect.y - offsetY) / scale,
+  };
+  const overlap = (a, b) => Math.max(0, Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x))
+    * Math.max(0, Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y));
+  const target = { left: 752.4, top: 705.75, right: 1086.8, bottom: 941 };
+  const visible = { left: Math.max(target.left, sourceBounds.left), top: Math.max(target.top, sourceBounds.top), right: Math.min(target.right, sourceBounds.right), bottom: Math.min(target.bottom, sourceBounds.bottom) };
+  const sourceBandRetention = Math.max(0, visible.right - visible.left) * Math.max(0, visible.bottom - visible.top)
+    / ((target.right - target.left) * (target.bottom - target.top));
+  const labelRect = await host.locator('span').boundingBox();
+  await host.focus();
+  await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
+  const mediaStyle = await host.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { outlineStyle: style.outlineStyle, outlineWidth: style.outlineWidth, animationDuration: style.animationDuration, transitionDuration: style.transitionDuration };
+  });
+  await page.emulateMedia({ forcedColors: "none", reducedMotion: "no-preference" });
+  const center = { x: (sourceBounds.left + sourceBounds.right) / 2, y: (sourceBounds.top + sourceBounds.bottom) / 2 };
+  const centerContained = Math.abs(center.x - 919.6) <= 2 && Math.abs(center.y - 823.375) <= 2;
+  const targetSize = hostRect.width >= 44 && hostRect.height >= 44;
+  const labelContained = Boolean(labelRect) && labelRect.x >= hostRect.x - 1 && labelRect.x + labelRect.width <= hostRect.x + hostRect.width + 1
+    && labelRect.y >= hostRect.y - 1 && labelRect.y + labelRect.height <= hostRect.y + hostRect.height + 1;
+  const horizontalOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+  const geometryExact = Math.abs((hostRect.x - sceneRect.x) / sceneRect.width - 0.45) < 0.002
+    && Math.abs((hostRect.y - sceneRect.y) / sceneRect.height - 0.75) < 0.002
+    && Math.abs(hostRect.width / sceneRect.width - 0.20) < 0.002
+    && Math.abs(hostRect.height / sceneRect.height - 0.25) < 0.002;
+  const result = {
+    id,
+    viewport: { width, height },
+    scene: { width: sceneRect.width, height: sceneRect.height },
+    host05: { x: hostRect.x, y: hostRect.y, width: hostRect.width, height: hostRect.height },
+    sourceBounds,
+    centerContained,
+    sourceBandRetention,
+    host04OverlapArea: overlap(hostRect, host04Rect),
+    returnOverlapArea: overlap(hostRect, returnRect),
+    targetSize,
+    labelContained,
+    horizontalOverflow,
+    forcedColors: mediaStyle.outlineStyle !== "none" && Number.parseFloat(mediaStyle.outlineWidth) >= 2,
+    reducedMotion: mediaStyle.animationDuration === "0s" && mediaStyle.transitionDuration === "0s",
+  };
+  result.pass = geometryExact && result.centerContained && result.sourceBandRetention >= 0.95
+    && result.host04OverlapArea === 0 && result.returnOverlapArea === 0 && result.targetSize
+    && result.labelContained && !result.horizontalOverflow && result.forcedColors && result.reducedMotion;
+  return result;
 }
 
 async function loadSanctionedFixtureModule(relativePath, exportedNames, { beforeTests = true } = {}) {

@@ -67,7 +67,7 @@ test("App moves focus and announces the scene while preserving the strict route 
   assert.doesNotMatch(appSource, /Optional calibration|Resume optional calibration|calibration-launch/);
   assert.match(appSource, /aria-label=\{scene\.id === "meadow" \? meadowDeparturePresentation\.departureAriaLabel/);
   assert.match(appSource, /scene\.id === "meadow" \? meadowDeparturePresentation\.departureLabel : "Continue"/);
-  assert.match(appSource, /nextSceneAlreadyCompleted[\s\S]*?sceneArrivalFocusPendingRef\.current = true;[\s\S]*?setSceneAnnouncement\(buildSceneArrivalAnnouncement\(nextScene\)\);[\s\S]*?setDialogue\(nextSceneAlreadyCompleted \? nextScene\.success : nextScene\.prompt, "system"\);/);
+  assert.match(appSource, /nextSceneAlreadyCompleted[\s\S]*?sceneArrivalFocusPendingRef\.current = true;[\s\S]*?setSceneAnnouncement\(buildSceneArrivalAnnouncement\(nextScene\)\);[\s\S]*?setDialogue\(nextSceneAlreadyCompleted && nextScene\.id === "ruins"[\s\S]*?nextSceneAlreadyCompleted \? nextScene\.success : nextScene\.prompt, "system"\);/);
   assert.match(appSource, /primaryHotspotRef\.current\?\.focus\(\{ preventScroll: true \}\)/);
   assert.match(appSource, /className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement/);
 });

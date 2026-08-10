@@ -178,6 +178,12 @@ import {
 } from "./demoTour.js";
 import { deriveFractureNurseryState, deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import {
+  buildSixfoldWeirReturnPresentation,
+  deriveSixfoldWeirState,
+  DROWNED_ARCHIVE_HOTSPOTS,
+  FRPX03_COPY,
+} from "./drownedArchive.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1070,8 +1076,10 @@ export function App() {
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
   const fractureNurseryRef = useRef(null);
+  const sixfoldWeirRef = useRef(null);
   const meadowEntryFocusPendingRef = useRef(false);
   const fractureNurseryFocusPendingRef = useRef(false);
+  const sixfoldWeirFocusPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1120,6 +1128,10 @@ export function App() {
     sanitizeRouteMarkerMastery(routeMarkerMastery),
     sanitizeCalibrationMastery(calibrationMastery),
   );
+  const sixfoldWeirState = deriveSixfoldWeirState(
+    sanitizeWorkloadEvidence(workloadEvidence),
+    sanitizeResponsibleAIEvidence(responsibleAIEvidence),
+  );
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1131,39 +1143,50 @@ export function App() {
     && scene.id === "ruins"
     && mixedSimulationEvidence?.masteryStatus === "mastered"
     && finalConfidenceEvidence?.masteryStatus !== "mastered";
-  const sceneHotspots = [{
+  const primarySceneHotspot = {
     id: scene.primaryHotspotId ?? "primary",
     label: scene.hotspotLabel,
     hotspot: scene.hotspot,
     primary: true,
-  }, ...(scene.secondaryHotspots ?? []), ...(scene.id === "meadow" && fractureNurseryState !== "hidden" ? [{
+  };
+  const meadowHotspots = [...(scene.secondaryHotspots ?? []), ...(scene.id === "meadow" && fractureNurseryState !== "hidden" ? [{
     id: "fracture-nursery",
     label: FRPX02_COPY.NURSERY_NAME,
     hotspot: MEADOW_PIXEL_HOTSPOTS.fractureNursery,
   }] : [])];
+  const ruinsHotspots = [...(scene.id === "ruins" && sixfoldWeirState !== "hidden" ? [{
+    id: "sixfold-weir",
+    label: FRPX03_COPY.NAME,
+    hotspot: DROWNED_ARCHIVE_HOTSPOTS.sixfoldWeir,
+  }] : []), ...(scene.secondaryHotspots ?? [])];
+  const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
   const hotspotButtons = sceneHotspots.map((hotspot) => {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
     const isFractureNursery = scene.id === "meadow" && hotspot.id === "fracture-nursery";
+    const isSixfoldWeir = scene.id === "ruins" && hotspot.id === "sixfold-weir";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
+    const sixfoldStateLabel = isSixfoldWeir ? FRPX03_COPY.STATE[sixfoldWeirState] : "";
+    const sixfoldLabel = isSixfoldWeir ? ` // ${sixfoldStateLabel.toUpperCase()}` : "";
     return (
       <button
         key={hotspot.id}
-        ref={hotspot.primary ? primaryHotspotRef : isFractureNursery ? fractureNurseryRef : undefined}
+        ref={hotspot.primary ? primaryHotspotRef : isFractureNursery ? fractureNurseryRef : isSixfoldWeir ? sixfoldWeirRef : undefined}
         className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
         data-hotspot-id={hotspot.id}
         data-primary-hotspot={hotspot.primary ? "true" : undefined}
         data-route-marker-state={isMeadowRouteMarker ? meadowRouteMarkerState : undefined}
         data-fracture-nursery-state={isFractureNursery ? fractureNurseryState : undefined}
+        data-sixfold-weir-state={isSixfoldWeir ? sixfoldWeirState : undefined}
         style={getHotspotStyle(hotspot.hotspot)}
         onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
-        disabled={terminalOpen || (pendingAdvance && !isFractureNursery)}
-        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${nurseryStateLabel}` : ""}`}
+        disabled={terminalOpen || (pendingAdvance && !isFractureNursery && !isSixfoldWeir)}
+        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${nurseryStateLabel}` : isSixfoldWeir ? `, ${sixfoldStateLabel}` : ""}`}
       >
-        <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}</span>
+        <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}{sixfoldLabel}</span>
       </button>
     );
   });
@@ -1316,6 +1339,12 @@ export function App() {
     fractureNurseryFocusPendingRef.current = false;
     fractureNurseryRef.current?.focus({ preventScroll: true });
   }, [mode, scene.id, terminalOpen, fractureNurseryState]);
+
+  useLayoutEffect(() => {
+    if (!sixfoldWeirFocusPendingRef.current || mode !== "playing" || scene.id !== "ruins" || terminalOpen || sixfoldWeirState === "hidden") return;
+    sixfoldWeirFocusPendingRef.current = false;
+    sixfoldWeirRef.current?.focus({ preventScroll: true });
+  }, [mode, scene.id, terminalOpen, sixfoldWeirState]);
 
   useLayoutEffect(() => {
     if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
@@ -1554,7 +1583,12 @@ export function App() {
       }
       setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
     } else if (saved.pendingSceneId) {
-      resumeContinueFocusPendingRef.current = true;
+      const resumedSixfoldState = deriveSixfoldWeirState(saved.workloadEvidence, saved.responsibleAIEvidence);
+      if (saved.pendingSceneId === "ruins" && ["available", "in_progress", "remediation_required"].includes(resumedSixfoldState)) {
+        sixfoldWeirFocusPendingRef.current = true;
+      } else {
+        resumeContinueFocusPendingRef.current = true;
+      }
       setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
     } else if (!saved.pendingSceneId && !saved.finished && saved.opening.step === "playing") {
       sceneArrivalFocusPendingRef.current = true;
@@ -2832,6 +2866,7 @@ export function App() {
     setWorkloadSession(returnPatch.workloadSession);
     setEvidenceSession(returnPatch.evidenceSession);
     setCalibrationSession(returnPatch.calibrationSession);
+    setResponsibleAISession(null);
     setSceneIndex(returnPatch.sceneIndex);
     setVerb(returnPatch.verb);
     setDialogue(buildMeadowReturnPresentation(returnState), "system");
@@ -2839,6 +2874,23 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "ruins" && hotspotId === "sixfold-weir") {
+      if (sixfoldWeirState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") {
+        setDialogue(FRPX03_COPY.FRPX03_UNSEEN_INTERFACE, "scene");
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue("Complete silence.", "pilot");
+        return;
+      }
+      if (sixfoldWeirState === "complete") {
+        setDialogue(FRPX03_COPY.FRPX03_MASTERED, "system");
+        return;
+      }
+      openResponsibleAI();
+      return;
+    }
     if (scene.id === "meadow" && hotspotId === "fracture-nursery") {
       if (fractureNurseryState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") {
@@ -3242,7 +3294,8 @@ export function App() {
     setWorkloadEvidence((previous) => updateWorkloadEvidence(previous, { masteryStatus: "mastered" }));
     const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
     setCompleted(nextCompleted);
-    setDialogue(scene.success);
+    sixfoldWeirFocusPendingRef.current = true;
+    setDialogue(FRPX03_COPY.FRPX03_AVAILABLE, "system");
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setWorkloadSession(null);
@@ -3250,6 +3303,7 @@ export function App() {
   }
 
   function openResponsibleAI() {
+    if (scene.id !== "ruins" || !["available", "in_progress", "remediation_required"].includes(sixfoldWeirState)) return;
     setTerminalOpen(true);
     setRuinsTerminalKind("responsible-ai");
     if (!responsibleAISession) {
@@ -3262,7 +3316,7 @@ export function App() {
   function exitResponsibleAI() {
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Responsible AI practice closed safely. Continue or resume from the same session when ready.", "system");
+    setDialogue(sixfoldWeirState === "remediation_required" ? FRPX03_COPY.FRPX03_MISSED : FRPX03_COPY.FRPX03_IN_PROGRESS, "system");
   }
 
   function checkResponsibleAI(event) {
@@ -3307,9 +3361,10 @@ export function App() {
     if (!responsibleAISession?.complete || !responsibleAIEvidence?.confidence) return;
     setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true }));
     setResponsibleAISession(null);
+    sixfoldWeirFocusPendingRef.current = true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Primary responsible AI practice complete. The fresh transfer form is ready when you are; this remains course-authored practice, not a Microsoft exam question.", "teacher");
+    setDialogue(FRPX03_COPY.FRPX03_IN_PROGRESS, "system");
   }
 
   function checkResponsibleAIExplanation(event) {
@@ -3328,9 +3383,10 @@ export function App() {
     if (!responsibleAISession?.explanationResult?.passed || !responsibleAISession.ownershipConfirmed || !responsibleAIEvidence?.confidence) return;
     setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
     setResponsibleAISession(null);
+    sixfoldWeirFocusPendingRef.current = true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
-    setDialogue("Responsible AI readiness confirmed: both course-authored forms and the closed-note explanation are complete. These were not Microsoft exam questions.", "teacher");
+    setDialogue(`${FRPX03_COPY.FRPX03_MASTERED} ${FRPX03_COPY.FRPX03_NEXT_BOUNDARY}`, "system");
   }
 
   function openModelChoiceExercise() {
@@ -3725,6 +3781,7 @@ export function App() {
     setWorkloadSession(null);
     setEvidenceSession(null);
     setCalibrationSession(null);
+    setResponsibleAISession(null);
     if (completed.length === scenes.length) {
       const projected = projectFirstRunCityFrontier(loadSave());
       if (!projected) {
@@ -3747,7 +3804,11 @@ export function App() {
     const nextScene = scenes[nextSceneIndex];
     const nextSceneAlreadyCompleted = completed.includes(nextScene.id);
     if (nextSceneAlreadyCompleted) {
-      resumeContinueFocusPendingRef.current = true;
+      const nextSixfoldState = nextScene.id === "ruins"
+        ? deriveSixfoldWeirState(sanitizeWorkloadEvidence(workloadEvidence), sanitizeResponsibleAIEvidence(responsibleAIEvidence))
+        : "hidden";
+      if (["available", "in_progress", "remediation_required"].includes(nextSixfoldState)) sixfoldWeirFocusPendingRef.current = true;
+      else resumeContinueFocusPendingRef.current = true;
       setPendingAdvance(true);
     } else {
       sceneArrivalFocusPendingRef.current = true;
@@ -3755,7 +3816,9 @@ export function App() {
     setSceneAnnouncement(buildSceneArrivalAnnouncement(nextScene));
     setSceneIndex(nextSceneIndex);
     setVerb("LOOK AT");
-    setDialogue(nextSceneAlreadyCompleted ? nextScene.success : nextScene.prompt, "system");
+    setDialogue(nextSceneAlreadyCompleted && nextScene.id === "ruins"
+      ? buildSixfoldWeirReturnPresentation(deriveSixfoldWeirState(sanitizeWorkloadEvidence(workloadEvidence), sanitizeResponsibleAIEvidence(responsibleAIEvidence)))
+      : nextSceneAlreadyCompleted ? nextScene.success : nextScene.prompt, "system");
   }
 
   if (demoTour) {
@@ -5830,7 +5893,7 @@ export function App() {
       <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
           {ADVENTURE_VERBS.map((item) => (
-            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && !(scene.id === "meadow" && fractureNurseryState !== "hidden")}>{item}</button>
+            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && !((scene.id === "meadow" && fractureNurseryState !== "hidden") || (scene.id === "ruins" && sixfoldWeirState !== "hidden"))}>{item}</button>
           ))}
         </nav>
 
@@ -5859,9 +5922,6 @@ export function App() {
               <div className="dialogue-footer">
                 <span className="speaker" data-dialogue-owner={dialogueOwner}>{getDialogueSpeaker(dialogueOwner)}</span>
                 <div className="dialogue-actions">
-                  {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
-                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
-                  )}
                   {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
                   )}

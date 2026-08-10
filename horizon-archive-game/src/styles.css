@@ -486,7 +486,7 @@ h1 {
   outline-offset: 2px;
   box-shadow: 0 0 0 5px rgba(8, 9, 16, 0.86);
 }
-.hotspot:is([data-hotspot-id="route-marker"], [data-hotspot-id="fracture-nursery"]) span {
+.hotspot:is([data-hotspot-id="route-marker"], [data-hotspot-id="fracture-nursery"], [data-hotspot-id="sixfold-weir"]) span {
   left: 3px;
   right: 3px;
   bottom: 4px;
@@ -506,6 +506,9 @@ h1 {
 .hotspot[data-hotspot-id="route-marker"][data-route-marker-state="completed"] span { border-style: double; }
 .hotspot[data-hotspot-id="fracture-nursery"][data-fracture-nursery-state="in_progress"] span { border-style: dashed; }
 .hotspot[data-hotspot-id="fracture-nursery"][data-fracture-nursery-state="complete"] span { border-style: double; }
+[data-sixfold-weir-state="in_progress"] span { border-style: dashed; }
+[data-sixfold-weir-state="remediation_required"] span { border-style: dotted; }
+[data-sixfold-weir-state="complete"] span { border-style: double; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
@@ -518,7 +521,7 @@ h1 {
     box-shadow: none;
     forced-color-adjust: auto;
   }
-  .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 3px solid Highlight; }
+  .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible, [data-sixfold-weir-state]:focus-visible { outline: 3px solid Highlight; }
 }
 
 /* TD-007 Braided Verge functional presentation. Final SC-08 art is Quartermaster-owned. */
