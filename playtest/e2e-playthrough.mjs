@@ -44,6 +44,9 @@ const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaRoot = process.env.HORIZON_ARCHIVE_QA_DIR || resolve(repositoryRoot, "playtest");
 const productCandidate = process.env.HORIZON_ARCHIVE_PRODUCT_CANDIDATE || "unfrozen-product-candidate";
 const probeCandidate = process.env.HORIZON_ARCHIVE_PROBE_CANDIDATE || "unfrozen-probe-candidate";
+const browserProbePredecessor = "d9487d8205174a7b5f688cbfccbcd5f7875ac1ad";
+const validationControlCandidate = "4cd7fbf31291671dd28c0743b44a7c49aaad82bb";
+const browserProofPredecessor = "FRSH-003-v1-VR-04";
 const productPredecessor = "a9776e337f1820776864a5690332c364d0fb2556";
 const harnessPredecessor = "bf58e528bc6ce4088f81f2c782ce2895259ab9fd";
 mkdirSync(qaRoot, { recursive: true });
@@ -589,10 +592,21 @@ print("Operator:", learner)`);
   const reloadedWeir = page.getByRole("button", { name: "look at Sixfold Weir, in progress", exact: true });
   await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
   sixfoldFocus.reload = await reloadedWeir.evaluate((element) => document.activeElement === element);
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Enter");
+  await page.keyboard.press("Shift+Tab");
+  await page.keyboard.press("Shift+Tab");
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir"
+    && document.activeElement?.getAttribute("aria-label") === "use Sixfold Weir, in progress");
+  const sixfoldSequenceNode = await page.locator('[data-hotspot-id="sixfold-weir"]').elementHandle();
+  if (!sixfoldSequenceNode) throw new Error("Host 05 sequence-start node missing");
+  const sixfoldSequenceGameState = await captureSixfoldGameState(page);
+  let sequenceIndex = 0;
   for (const layout of [
     ["desktop", 1920, 1080], ["laptop", 1366, 768], ["narrow", 390, 844],
     ["effective-200", 768, 900], ["retained-320x180", 320, 180], ["retained-320x240", 320, 240],
-  ]) sixfoldLayouts.push(await measureSixfoldLayout(page, ...layout));
+  ]) sixfoldLayouts.push(await measureSixfoldLayout(page, sequenceIndex++, sixfoldSequenceNode, sixfoldSequenceGameState, ...layout));
   await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true }).click();
   await page.locator('main[data-scene="meadow"]').waitFor();
@@ -1539,10 +1553,13 @@ print("Operator:", learner)`);
     schema: "horizon.first-run.live-summary.v1",
     producer: "playtest/e2e-playthrough.mjs",
     workOrder: "FRWO-003-v1",
-    shell: "FRSH-003-v1-VR-04",
+    shell: "FRSH-003-v1-VR-07",
+    browserProofPredecessor,
     manifest: "FRRC-002-v1",
     productPredecessor,
     harnessPredecessor,
+    browserProbePredecessor,
+    validationControlCandidate,
     productCandidate,
     probeCandidate,
     candidate: probeCandidate,
@@ -1555,6 +1572,13 @@ print("Operator:", learner)`);
       epsilon: false,
     },
     runtimeErrors: false,
+    journey: {
+      complete: true,
+      bothMh40Outcomes: true,
+      equalDignity: true,
+      nullDeltas: true,
+      successor: null,
+    },
     layouts: sixfoldLayouts,
     focus: sixfoldFocus,
     inputs: { pointer: true, keyboard: true, touchSemantic: true, switchLikeSemantic: true },
@@ -1818,284 +1842,357 @@ async function sampleActivation(locator, label, samples) {
   samples.push({ label, durationMs });
 }
 
-async function measureSixfoldLayout(page, id, width, height) {
-  await page.setViewportSize({ width, height });
-  const host = page.locator('[data-hotspot-id="sixfold-weir"]');
-  const frame = page.locator('.scene-frame');
-  const containingBlock = page.locator('.scene-world-content');
-  const image = page.locator('.scene-art');
-  const primary = page.locator('button.hotspot[data-primary-hotspot="true"]');
-  const returned = page.locator('[data-hotspot-id="meadow-return-ridge"]');
-  const inventoryReturn = page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true });
-  const lookAt = page.getByRole("button", { name: "LOOK AT", exact: true });
-  await page.waitForFunction(() => document.querySelector('.scene-art')?.complete && document.querySelector('.scene-art')?.naturalWidth > 0);
-  const [hostRect, frameRect, containingRect, imageRect, host04Rect, returnRect, inventoryReturnRect, labelRect] = await Promise.all([
-    host.boundingBox(), frame.boundingBox(), containingBlock.boundingBox(), image.boundingBox(), primary.boundingBox(), returned.boundingBox(), inventoryReturn.boundingBox(), host.locator('span').boundingBox(),
-  ]);
-  if (!hostRect || !frameRect || !containingRect || !imageRect || !host04Rect || !returnRect || !inventoryReturnRect || !labelRect) throw new Error(`Missing Host 05 geometry at ${id}`);
-  const imageState = await image.evaluate((element) => {
-    const style = getComputedStyle(element);
+async function captureSixfoldGameState(page) {
+  return page.evaluate((key) => {
+    const storageProjection = (storage) => Object.fromEntries(Array.from({ length: storage.length }, (_unused, index) => storage.key(index))
+      .filter(Boolean).sort().map((name) => [name, storage.getItem(name)]));
+    const main = document.querySelector('main[data-scene]');
+    const host = document.querySelector('[data-hotspot-id="sixfold-weir"]');
+    const enabledOrder = [host, ...document.querySelectorAll('.verb-grid .verb'), document.querySelector('[aria-label="Return to Chapter I, Glass Meadow"]')]
+      .filter((element) => element && !element.disabled)
+      .map((element) => element.dataset?.hotspotId || element.getAttribute('aria-label') || element.textContent.trim());
+    const save = localStorage.getItem(key);
+    const parsedSave = save ? JSON.parse(save) : null;
     return {
-      natural: { width: element.naturalWidth, height: element.naturalHeight },
-      objectFit: style.objectFit,
-      objectPosition: style.objectPosition,
-      border: [style.borderLeftWidth, style.borderTopWidth, style.borderRightWidth, style.borderBottomWidth],
-      padding: [style.paddingLeft, style.paddingTop, style.paddingRight, style.paddingBottom],
-    };
-  });
-  if (imageState.natural.width !== 1672 || imageState.natural.height !== 941 || imageState.objectFit !== "cover") throw new Error(`Unexpected Host 05 image contract at ${id}: ${JSON.stringify(imageState)}`);
-  const positionTokens = imageState.objectPosition.trim().split(/\s+/);
-  const parsePosition = (token, axis) => {
-    if (/^-?(?:\d+\.?\d*|\.\d+)%$/.test(token)) return Number.parseFloat(token) / 100;
-    const keywords = axis === "x" ? { left: 0, center: 0.5, right: 1 } : { top: 0, center: 0.5, bottom: 1 };
-    if (token in keywords) return keywords[token];
-    throw new Error(`Unsupported ${axis} object-position at ${id}: ${token}`);
-  };
-  if (positionTokens.length !== 2) throw new Error(`Unsupported object-position at ${id}: ${imageState.objectPosition}`);
-  const objectPosition = { x: parsePosition(positionTokens[0], "x"), y: parsePosition(positionTokens[1], "y") };
-  const scale = Math.max(imageRect.width / imageState.natural.width, imageRect.height / imageState.natural.height);
-  const drawnWidth = imageState.natural.width * scale;
-  const drawnHeight = imageState.natural.height * scale;
-  const offsetX = (imageRect.width - drawnWidth) * objectPosition.x;
-  const offsetY = (imageRect.height - drawnHeight) * objectPosition.y;
-  const latticeQ = 1 / 64;
-  const quantizeFloor = (value) => Math.floor(value / latticeQ) * latticeQ;
-  const unquantizedPhysical = {
-    x: imageRect.x + imageRect.width * 0.45,
-    y: imageRect.y + imageRect.height * 0.75,
-    width: imageRect.width * 0.20,
-    height: imageRect.height * 0.25,
-  };
-  const physicalRect = {
-    x: imageRect.x + quantizeFloor(imageRect.width * 0.45),
-    y: imageRect.y + quantizeFloor(imageRect.height * 0.75),
-    width: quantizeFloor(imageRect.width * 0.20),
-    height: quantizeFloor(imageRect.height * 0.25),
-  };
-  const sourceBounds = {
-    left: (physicalRect.x - imageRect.x - offsetX) / scale,
-    top: (physicalRect.y - imageRect.y - offsetY) / scale,
-    right: (physicalRect.x + physicalRect.width - imageRect.x - offsetX) / scale,
-    bottom: (physicalRect.y + physicalRect.height - imageRect.y - offsetY) / scale,
-  };
-  const overlap = (a, b) => Math.max(0, Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x))
-    * Math.max(0, Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y));
-  const nominalSourceBounds = { left: 752.4, top: 705.75, right: 1086.8, bottom: 941 };
-  const nominalSourceAnchor = { x: 919.6, y: 823.375 };
-  const visible = { left: Math.max(nominalSourceBounds.left, sourceBounds.left), top: Math.max(nominalSourceBounds.top, sourceBounds.top), right: Math.min(nominalSourceBounds.right, sourceBounds.right), bottom: Math.min(nominalSourceBounds.bottom, sourceBounds.bottom) };
-  const sourceBandRetention = Math.max(0, visible.right - visible.left) * Math.max(0, visible.bottom - visible.top)
-    / ((nominalSourceBounds.right - nominalSourceBounds.left) * (nominalSourceBounds.bottom - nominalSourceBounds.top));
-  const actualSourceCenter = { x: (sourceBounds.left + sourceBounds.right) / 2, y: (sourceBounds.top + sourceBounds.bottom) / 2 };
-  const anchorContained = nominalSourceAnchor.x >= sourceBounds.left && nominalSourceAnchor.x <= sourceBounds.right
-    && nominalSourceAnchor.y >= sourceBounds.top && nominalSourceAnchor.y <= sourceBounds.bottom;
-  const boxesEqual = ["x", "y", "width", "height"].every((key) => containingRect[key] === imageRect[key]);
-  const zeroImageEdges = [...imageState.border, ...imageState.padding].every((value) => Number.parseFloat(value) === 0);
-  const expectedSemantic = {
-    x: imageRect.x + quantizeFloor(imageRect.width * 0.45),
-    y: imageRect.y + quantizeFloor(Math.min(imageRect.height * 0.75, imageRect.height - 44)),
-    width: quantizeFloor(imageRect.width * 0.20),
-    height: quantizeFloor(Math.max(imageRect.height * 0.25, 44)),
-  };
-  const semanticExact = ["x", "y", "width", "height"].every((key) => hostRect[key] === expectedSemantic[key]);
-  const semanticBottomAnchored = hostRect.y + hostRect.height === physicalRect.y + physicalRect.height;
-  const physicalCenterInsideActivation = physicalRect.x + physicalRect.width / 2 >= hostRect.x
-    && physicalRect.x + physicalRect.width / 2 <= hostRect.x + hostRect.width
-    && physicalRect.y + physicalRect.height / 2 >= hostRect.y
-    && physicalRect.y + physicalRect.height / 2 <= hostRect.y + hostRect.height;
-  const labelState = await host.locator('span').evaluate((element) => {
-    const style = getComputedStyle(element);
-    return {
-      border: {
-        left: Number.parseFloat(style.borderLeftWidth),
-        top: Number.parseFloat(style.borderTopWidth),
-        right: Number.parseFloat(style.borderRightWidth),
-        bottom: Number.parseFloat(style.borderBottomWidth),
+      save,
+      localStorage: storageProjection(localStorage),
+      sessionStorage: storageProjection(sessionStorage),
+      location: { href: location.href, pathname: location.pathname, hash: location.hash },
+      scene: main?.dataset.scene,
+      selectedVerb: document.querySelector('.verb-grid .verb[aria-pressed="true"]')?.textContent.trim(),
+      hostState: host?.dataset.sixfoldWeirState,
+      dialogue: {
+        text: document.querySelector('.dialogue-box')?.textContent,
+        owner: document.querySelector('.dialogue-box .speaker')?.dataset.dialogueOwner,
       },
-      padding: {
-        left: Number.parseFloat(style.paddingLeft),
-        top: Number.parseFloat(style.paddingTop),
-        right: Number.parseFloat(style.paddingRight),
-        bottom: Number.parseFloat(style.paddingBottom),
+      absence: {
+        terminal: main?.dataset.terminalOpen !== 'true',
+        dialog: !document.querySelector('[role="dialog"]'),
+        confirmation: !document.querySelector('[data-demo-tour-confirmation]'),
+        responsibleAI: !document.querySelector('.responsible-ai-workspace'),
       },
-      scrollWidth: element.scrollWidth,
-      scrollHeight: element.scrollHeight,
-      clientWidth: element.clientWidth,
-      clientHeight: element.clientHeight,
+      enabledOrder,
+      evidence: {
+        workload: parsedSave?.workloadEvidence ?? null,
+        responsibleAI: parsedSave?.responsibleAIEvidence ?? null,
+      },
+      routeWorld: {
+        scene: main?.dataset.scene,
+        routeMarkerState: main?.dataset.routeMarkerState ?? null,
+        completed: parsedSave?.completed ?? null,
+        pendingAdvance: parsedSave?.pendingAdvance ?? null,
+      },
     };
-  });
-  const labelTextRect = {
-    x: labelRect.x + labelState.border.left + labelState.padding.left,
-    y: labelRect.y + labelState.border.top + labelState.padding.top,
-    width: labelRect.width - labelState.border.left - labelState.border.right - labelState.padding.left - labelState.padding.right,
-    height: labelRect.height - labelState.border.top - labelState.border.bottom - labelState.padding.top - labelState.padding.bottom,
-  };
-  const outerLabelInset = labelRect.x - hostRect.x === 3 && labelRect.y - hostRect.y === 3
-    && hostRect.x + hostRect.width - labelRect.x - labelRect.width === 3
-    && hostRect.y + hostRect.height - labelRect.y - labelRect.height === 3;
-  const innerLabelInset = labelRect.x - (hostRect.x + 1) === 2 && labelRect.y - (hostRect.y + 1) === 2
-    && hostRect.x + hostRect.width - 1 - labelRect.x - labelRect.width === 2
-    && hostRect.y + hostRect.height - 1 - labelRect.y - labelRect.height === 2;
-  const labelBorderExact = Object.values(labelState.border).every((value) => value === 1);
-  const labelPaddingExact = Object.values(labelState.padding).every((value) => value === 1);
-  const labelTextExact = labelTextRect.x === hostRect.x + 5 && labelTextRect.y === hostRect.y + 5
-    && labelTextRect.width === hostRect.width - 10 && labelTextRect.height === hostRect.height - 10;
-  const labelRawFinite = [...Object.values(labelState.border), ...Object.values(labelState.padding), ...Object.values(labelTextRect)]
-    .every((value) => Number.isFinite(value));
-  const labelScrollContained = labelState.scrollWidth <= labelState.clientWidth && labelState.scrollHeight <= labelState.clientHeight;
-  const identityBefore = await host.evaluate((element) => ({
-    ariaLabel: element.getAttribute("aria-label"),
-    hotspotId: element.dataset.hotspotId,
-    state: element.dataset.sixfoldWeirState,
-    active: document.activeElement === element,
-  }));
-  if (!identityBefore.active || identityBefore.state !== "in_progress") throw new Error(`Host 05 forced-color precondition failed at ${id}: ${JSON.stringify(identityBefore)}`);
-  await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
-  const mediaState = await page.evaluate(() => ({
-    forcedColors: matchMedia("(forced-colors: active)").matches,
-    reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
-  }));
-  const focusOrder = await page.evaluate(() => {
-    const identity = (element) => element?.dataset?.hotspotId || element?.getAttribute("aria-label") || element?.textContent?.trim();
+  }, saveKey);
+}
+
+async function captureSixfoldSemantic(page, sequenceNode, epochNode) {
+  const fields = await page.evaluate(({ sequenceNode: start, epochNode: epoch }) => {
+    const element = document.querySelector('[data-hotspot-id="sixfold-weir"]');
+    const identity = (target) => target?.dataset?.hotspotId || target?.getAttribute('aria-label') || target?.textContent?.trim();
     const host04 = document.querySelector('button.hotspot[data-primary-hotspot="true"]');
-    const host05 = document.querySelector('[data-hotspot-id="sixfold-weir"]');
     const ridge = document.querySelector('[data-hotspot-id="meadow-return-ridge"]');
     const verbs = Array.from(document.querySelectorAll('.verb-grid .verb'));
     const returnedAction = document.querySelector('[aria-label="Return to Chapter I, Glass Meadow"]');
     return {
-      dom: [host04, host05, ridge].map(identity),
-      enabled: [host05, ...verbs, returnedAction].filter((element) => element && !element.disabled).map(identity),
+      sameNodeFromSequenceStart: element === start,
+      sameNodeFromEpochStart: element === epoch,
+      isConnected: Boolean(element?.isConnected),
+      isHtmlButton: element instanceof HTMLButtonElement,
+      tagName: element?.tagName,
+      role: element instanceof HTMLButtonElement ? 'button' : null,
+      testId: element?.dataset.hotspotId,
+      ariaLabel: element?.getAttribute('aria-label'),
+      state: element?.dataset.sixfoldWeirState,
+      disabled: element?.disabled,
+      active: document.activeElement === element,
+      focusVisible: Boolean(element?.matches(':focus-visible')),
+      worldOrder: [host04, element, ridge].map(identity),
+      enabledOrder: [element, ...verbs, returnedAction].filter((target) => target && !target.disabled).map(identity),
+    };
+  }, { sequenceNode, epochNode });
+  return { fields, gameState: await captureSixfoldGameState(page) };
+}
+
+async function captureSixfoldGeometry(page) {
+  return page.evaluate(() => {
+    const q = 1 / 64;
+    const Q = (value) => Math.floor(value / q) * q;
+    const finite = (value) => typeof value === 'number' && Number.isFinite(value);
+    const lattice = (value) => finite(value) && Number.isInteger(value / q);
+    const rawRect = (element) => {
+      const rect = element?.getBoundingClientRect();
+      return rect ? { x: rect.x, y: rect.y, width: rect.width, height: rect.height } : null;
+    };
+    const frameElement = document.querySelector('.scene-frame');
+    const containingElement = document.querySelector('.scene-world-content');
+    const imageElement = document.querySelector('.scene-art');
+    const hostElement = document.querySelector('[data-hotspot-id="sixfold-weir"]');
+    const labelElement = hostElement?.querySelector('span');
+    const host04Element = document.querySelector('button.hotspot[data-primary-hotspot="true"]');
+    const returnElement = document.querySelector('[data-hotspot-id="meadow-return-ridge"]');
+    const frame = rawRect(frameElement);
+    const containing = rawRect(containingElement);
+    const sceneArt = rawRect(imageElement);
+    const semantic = rawRect(hostElement);
+    const label = rawRect(labelElement);
+    const host04 = rawRect(host04Element);
+    const returnRidge = rawRect(returnElement);
+    if ([frame, containing, sceneArt, semantic, label, host04, returnRidge].some((rect) => !rect)) throw new Error('Sixfold geometry node missing');
+    const imageStyle = getComputedStyle(imageElement);
+    const labelStyle = getComputedStyle(labelElement);
+    const parsePosition = (token, axis) => {
+      if (/^-?(?:\d+\.?\d*|\.\d+)%$/.test(token)) return Number.parseFloat(token) / 100;
+      const keywords = axis === 'x' ? { left: 0, center: 0.5, right: 1 } : { top: 0, center: 0.5, bottom: 1 };
+      return keywords[token];
+    };
+    const tokens = imageStyle.objectPosition.trim().split(/\s+/);
+    const objectPosition = { x: parsePosition(tokens[0], 'x'), y: parsePosition(tokens[1], 'y') };
+    const physical = {
+      x: sceneArt.x + Q(sceneArt.width * 0.45),
+      y: sceneArt.y + Q(sceneArt.height * 0.75),
+      width: Q(sceneArt.width * 0.20),
+      height: Q(sceneArt.height * 0.25),
+    };
+    const expectedSemantic = {
+      x: sceneArt.x + Q(sceneArt.width * 0.45),
+      y: sceneArt.y + Q(Math.min(sceneArt.height * 0.75, sceneArt.height - 44)),
+      width: Q(sceneArt.width * 0.20),
+      height: Q(Math.max(sceneArt.height * 0.25, 44)),
+    };
+    const border = {
+      left: Number.parseFloat(labelStyle.borderLeftWidth), top: Number.parseFloat(labelStyle.borderTopWidth),
+      right: Number.parseFloat(labelStyle.borderRightWidth), bottom: Number.parseFloat(labelStyle.borderBottomWidth),
+    };
+    const padding = {
+      left: Number.parseFloat(labelStyle.paddingLeft), top: Number.parseFloat(labelStyle.paddingTop),
+      right: Number.parseFloat(labelStyle.paddingRight), bottom: Number.parseFloat(labelStyle.paddingBottom),
+    };
+    const labelText = {
+      x: label.x + border.left + padding.left,
+      y: label.y + border.top + padding.top,
+      width: label.width - border.left - border.right - padding.left - padding.right,
+      height: label.height - border.top - border.bottom - padding.top - padding.bottom,
+    };
+    const viewportRects = { frame, containing, sceneArt, physical, semantic, label, labelText, host04, returnRidge };
+    const scroll = { x: scrollX, y: scrollY };
+    const documentRects = Object.fromEntries(Object.entries(viewportRects).map(([name, rect]) => [name, {
+      x: rect.x + scroll.x, y: rect.y + scroll.y, width: rect.width, height: rect.height,
+    }]));
+    const imageRelativeRects = Object.fromEntries(Object.entries(viewportRects).map(([name, rect]) => [name, {
+      x: rect.x - sceneArt.x, y: rect.y - sceneArt.y, width: rect.width, height: rect.height,
+    }]));
+    const scale = Math.max(sceneArt.width / imageElement.naturalWidth, sceneArt.height / imageElement.naturalHeight);
+    const offsetX = (sceneArt.width - imageElement.naturalWidth * scale) * objectPosition.x;
+    const offsetY = (sceneArt.height - imageElement.naturalHeight * scale) * objectPosition.y;
+    const sourceBounds = {
+      left: (physical.x - sceneArt.x - offsetX) / scale,
+      top: (physical.y - sceneArt.y - offsetY) / scale,
+      right: (physical.x + physical.width - sceneArt.x - offsetX) / scale,
+      bottom: (physical.y + physical.height - sceneArt.y - offsetY) / scale,
+    };
+    const nominalSourceBounds = { left: 752.4, top: 705.75, right: 1086.8, bottom: 941 };
+    const nominalSourceAnchor = { x: 919.6, y: 823.375 };
+    const visible = {
+      left: Math.max(nominalSourceBounds.left, sourceBounds.left), top: Math.max(nominalSourceBounds.top, sourceBounds.top),
+      right: Math.min(nominalSourceBounds.right, sourceBounds.right), bottom: Math.min(nominalSourceBounds.bottom, sourceBounds.bottom),
+    };
+    const sourceBandRetention = Math.max(0, visible.right - visible.left) * Math.max(0, visible.bottom - visible.top)
+      / ((nominalSourceBounds.right - nominalSourceBounds.left) * (nominalSourceBounds.bottom - nominalSourceBounds.top));
+    const actualSourceCenter = { x: (sourceBounds.left + sourceBounds.right) / 2, y: (sourceBounds.top + sourceBounds.bottom) / 2 };
+    const anchorContained = nominalSourceAnchor.x >= sourceBounds.left && nominalSourceAnchor.x <= sourceBounds.right
+      && nominalSourceAnchor.y >= sourceBounds.top && nominalSourceAnchor.y <= sourceBounds.bottom;
+    const sameRect = (left, right) => ['x', 'y', 'width', 'height'].every((key) => left[key] === right[key]);
+    const overlap = (left, right) => Math.max(0, Math.min(left.x + left.width, right.x + right.width) - Math.max(left.x, right.x))
+      * Math.max(0, Math.min(left.y + left.height, right.y + right.height) - Math.max(left.y, right.y));
+    const semanticBottomAnchored = semantic.y + semantic.height === physical.y + physical.height;
+    const directGateResults = {
+      authoredPhysical: true,
+      boxesEqual: sameRect(containing, sceneArt),
+      zeroImageEdges: [imageStyle.borderLeftWidth, imageStyle.borderTopWidth, imageStyle.borderRightWidth, imageStyle.borderBottomWidth,
+        imageStyle.paddingLeft, imageStyle.paddingTop, imageStyle.paddingRight, imageStyle.paddingBottom].every((value) => Number.parseFloat(value) === 0),
+      imageContract: imageElement.naturalWidth === 1672 && imageElement.naturalHeight === 941 && imageStyle.objectFit === 'cover' && tokens.length === 2,
+      semanticExact: sameRect(semantic, expectedSemantic),
+      semanticBottomAnchored,
+      physicalCenterInsideActivation: physical.x + physical.width / 2 >= semantic.x && physical.x + physical.width / 2 <= semantic.x + semantic.width
+        && physical.y + physical.height / 2 >= semantic.y && physical.y + physical.height / 2 <= semantic.y + semantic.height,
+      targetSize: semantic.width >= 44 && semantic.height >= 44,
+      outerLabelInset: label.x - semantic.x === 3 && label.y - semantic.y === 3
+        && semantic.x + semantic.width - label.x - label.width === 3 && semantic.y + semantic.height - label.y - label.height === 3,
+      innerLabelInset: label.x - (semantic.x + 1) === 2 && label.y - (semantic.y + 1) === 2
+        && semantic.x + semantic.width - 1 - label.x - label.width === 2 && semantic.y + semantic.height - 1 - label.y - label.height === 2,
+      labelBorderExact: Object.values(border).every((value) => value === 1),
+      labelPaddingExact: Object.values(padding).every((value) => value === 1),
+      labelTextExact: labelText.x === semantic.x + 5 && labelText.y === semantic.y + 5
+        && labelText.width === semantic.width - 10 && labelText.height === semantic.height - 10,
+      labelContained: label.x > semantic.x && label.x + label.width < semantic.x + semantic.width
+        && label.y > semantic.y && label.y + label.height < semantic.y + semantic.height,
+      labelScrollContained: labelElement.scrollWidth <= labelElement.clientWidth && labelElement.scrollHeight <= labelElement.clientHeight,
+      anchorContained,
+      retention: sourceBandRetention >= 0.95,
+      host04NoOverlap: overlap(semantic, host04) === 0,
+      returnNoOverlap: overlap(semantic, returnRidge) === 0,
+      noHorizontalOverflow: document.documentElement.scrollWidth <= document.documentElement.clientWidth,
+    };
+    const latticeValues = [scroll.x, scroll.y, innerWidth, innerHeight,
+      ...Object.values(viewportRects).flatMap(Object.values),
+      ...Object.values(documentRects).flatMap(Object.values),
+      ...Object.values(imageRelativeRects).flatMap(Object.values)];
+    const allLattice = latticeValues.every(lattice);
+    return {
+      viewport: { width: innerWidth, height: innerHeight }, scroll,
+      rectangles: Object.fromEntries(Object.keys(viewportRects).map((name) => [name, {
+        viewport: viewportRects[name], document: documentRects[name], imageRelative: imageRelativeRects[name],
+      }])),
+      image: { natural: { width: imageElement.naturalWidth, height: imageElement.naturalHeight }, objectFit: imageStyle.objectFit, objectPosition, border, padding },
+      source: { bounds: sourceBounds, nominalBounds: nominalSourceBounds, nominalAnchor: nominalSourceAnchor, actualCenter: actualSourceCenter, retention: sourceBandRetention, anchorContained },
+      expectedSemantic,
+      physicalNormalized: { left: 0.45, top: 0.75, width: 0.20, height: 0.25, centerX: 0.55, centerY: 0.875 },
+      directGateResults,
+      allLattice,
+      directGatesPass: allLattice && Object.values(directGateResults).every(Boolean),
     };
   });
-  const actionStateBefore = await page.evaluate((key) => ({
-    save: localStorage.getItem(key),
-    dialogue: document.querySelector('.dialogue-box')?.textContent,
-    url: location.href,
-  }), saveKey);
-  await page.keyboard.press("Tab");
-  const intermediate = await lookAt.evaluate((element) => ({
-    active: document.activeElement === element,
-    focusVisible: element.matches(":focus-visible"),
-    identity: element.textContent.trim(),
+}
+
+function compareSixfoldGeometry(pre, post) {
+  const q = 1 / 64;
+  const lattice = (value) => typeof value === 'number' && Number.isFinite(value) && Number.isInteger(value / q);
+  const deltaScroll = { x: post.scroll.x - pre.scroll.x, y: post.scroll.y - pre.scroll.y };
+  const rectangles = Object.fromEntries(Object.keys(pre.rectangles).map((name) => {
+    const before = pre.rectangles[name].viewport;
+    const after = post.rectangles[name].viewport;
+    const viewportDelta = {
+      x: after.x - before.x, y: after.y - before.y,
+      width: after.width - before.width, height: after.height - before.height,
+    };
+    const residual = {
+      x: viewportDelta.x + deltaScroll.x, y: viewportDelta.y + deltaScroll.y,
+      width: viewportDelta.width, height: viewportDelta.height,
+    };
+    const documentEqual = ['x', 'y', 'width', 'height'].every((key) => pre.rectangles[name].document[key] === post.rectangles[name].document[key]);
+    const rawDeltaIsInverseScroll = viewportDelta.x === -deltaScroll.x && viewportDelta.y === -deltaScroll.y;
+    const residualZero = Object.values(residual).every((value) => value === 0);
+    const allLattice = [...Object.values(viewportDelta), ...Object.values(residual)].every(lattice);
+    return [name, { viewportDelta, residual, documentEqual, rawDeltaIsInverseScroll, residualZero, allLattice }];
   }));
-  await page.keyboard.press("Shift+Tab");
-  const forcedColorEvidence = await host.evaluate((element) => {
+  const allResidualsZero = Object.values(rectangles).every(({ residualZero, documentEqual, rawDeltaIsInverseScroll, allLattice }) => residualZero && documentEqual && rawDeltaIsInverseScroll && allLattice);
+  const viewportStable = pre.viewport.width === post.viewport.width && pre.viewport.height === post.viewport.height;
+  return {
+    deltaScroll,
+    rectangles,
+    allResidualsZero,
+    viewportStable,
+    allLattice: [deltaScroll.x, deltaScroll.y].every(lattice) && pre.allLattice && post.allLattice,
+    geometryStable: allResidualsZero && viewportStable && pre.directGatesPass && post.directGatesPass,
+  };
+}
+
+async function measureSixfoldLayout(page, sequenceIndex, sequenceNode, sequenceGameState, id, width, height) {
+  await page.setViewportSize({ width, height });
+  await page.waitForFunction(() => document.querySelector('.scene-art')?.complete && document.querySelector('.scene-art')?.naturalWidth > 0);
+  const host = page.locator('[data-hotspot-id="sixfold-weir"]');
+  const lookAt = page.getByRole('button', { name: 'LOOK AT', exact: true });
+  const epochNode = await host.elementHandle();
+  if (!epochNode) throw new Error(`Host 05 epoch node missing at ${id}`);
+  await page.emulateMedia({ forcedColors: 'active', reducedMotion: 'reduce' });
+  const mediaState = await page.evaluate(() => ({
+    forcedColors: matchMedia('(forced-colors: active)').matches,
+    reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
+  }));
+  await page.evaluate(() => {
+    if (window.__sixfoldAudit) throw new Error('Sixfold audit already active');
+    const audit = { writes: [], events: [] };
+    const originals = Object.fromEntries(['setItem', 'removeItem', 'clear'].map((name) => [name, Storage.prototype[name]]));
+    for (const [name, original] of Object.entries(originals)) Storage.prototype[name] = function auditedStorage(...args) {
+      audit.writes.push({ name, args: args.map(String) });
+      return original.apply(this, args);
+    };
+    const handler = (event) => audit.events.push(event.type);
+    for (const name of ['click', 'input', 'change', 'submit']) document.addEventListener(name, handler, true);
+    window.__sixfoldAudit = { audit, originals, handler };
+  });
+  const preSemantic = await captureSixfoldSemantic(page, sequenceNode, epochNode);
+  const preGeometry = await captureSixfoldGeometry(page);
+  if (!preSemantic.fields.active || preSemantic.fields.ariaLabel !== 'use Sixfold Weir, in progress') throw new Error(`Host 05 preFocus contract failed at ${id}: ${JSON.stringify(preSemantic)}`);
+  await page.keyboard.press('Tab');
+  const intermediate = await lookAt.evaluate((element) => ({
+    identity: element.textContent.trim(), active: document.activeElement === element, focusVisible: element.matches(':focus-visible'),
+  }));
+  await page.keyboard.press('Shift+Tab');
+  const postSemantic = await captureSixfoldSemantic(page, sequenceNode, epochNode);
+  const postGeometry = await captureSixfoldGeometry(page);
+  const focusStyle = await host.evaluate((element) => {
     const style = getComputedStyle(element);
-    const label = element.querySelector("span");
-    const labelStyle = getComputedStyle(label);
-    const probe = document.createElement("span");
-    probe.style.position = "fixed";
-    probe.style.outline = "3px solid Highlight";
-    document.body.append(probe);
-    const systemHighlight = getComputedStyle(probe).outlineColor;
-    probe.remove();
+    const labelStyle = getComputedStyle(element.querySelector('span'));
+    const probe = document.createElement('span');
+    probe.style.position = 'fixed'; probe.style.outline = '3px solid Highlight'; document.body.append(probe);
+    const systemHighlight = getComputedStyle(probe).outlineColor; probe.remove();
     return {
-      active: document.activeElement === element,
-      focusVisible: element.matches(":focus-visible"),
-      outlineWidth: style.outlineWidth,
-      outlineStyle: style.outlineStyle,
-      outlineColor: style.outlineColor,
-      systemHighlight,
+      outlineWidth: style.outlineWidth, outlineStyle: style.outlineStyle, outlineColor: style.outlineColor, systemHighlight,
       hostMotion: [style.animationDuration, style.animationDelay, style.transitionDuration, style.transitionDelay],
       labelMotion: [labelStyle.animationDuration, labelStyle.animationDelay, labelStyle.transitionDuration, labelStyle.transitionDelay],
     };
   });
-  const actionStateAfter = await page.evaluate((key) => ({
-    save: localStorage.getItem(key),
-    dialogue: document.querySelector('.dialogue-box')?.textContent,
-    url: location.href,
-  }), saveKey);
-  const identityAfter = await host.evaluate((element) => ({
-    ariaLabel: element.getAttribute("aria-label"),
-    hotspotId: element.dataset.hotspotId,
-    state: element.dataset.sixfoldWeirState,
-    active: document.activeElement === element,
-  }));
-  const postHostRect = await host.boundingBox();
-  const postLabelRect = await host.locator('span').boundingBox();
-  await page.emulateMedia({ forcedColors: "none", reducedMotion: "no-preference" });
-  const motionZero = (values) => values.every((value) => value.split(",").every((part) => Number.parseFloat(part) === 0));
-  const noGameAction = JSON.stringify(actionStateBefore) === JSON.stringify(actionStateAfter);
-  const forcedColors = mediaState.forcedColors && mediaState.reducedMotion
-    && intermediate.active && intermediate.focusVisible && intermediate.identity === "LOOK AT"
-    && forcedColorEvidence.active && forcedColorEvidence.focusVisible
-    && forcedColorEvidence.outlineWidth === "3px" && forcedColorEvidence.outlineStyle === "solid"
-    && forcedColorEvidence.outlineColor === forcedColorEvidence.systemHighlight
-    && forcedColorEvidence.outlineColor !== "rgba(0, 0, 0, 0)" && forcedColorEvidence.outlineColor !== "transparent";
-  const reducedMotion = motionZero(forcedColorEvidence.hostMotion) && motionZero(forcedColorEvidence.labelMotion);
-  const identityStable = JSON.stringify({ ...identityBefore, active: true }) === JSON.stringify(identityAfter)
-    && JSON.stringify(hostRect) === JSON.stringify(postHostRect) && JSON.stringify(labelRect) === JSON.stringify(postLabelRect);
-  const targetSize = hostRect.width >= 44 && hostRect.height >= 44;
-  const labelContained = labelRect.x > hostRect.x && labelRect.x + labelRect.width < hostRect.x + hostRect.width
-    && labelRect.y > hostRect.y && labelRect.y + labelRect.height < hostRect.y + hostRect.height;
-  const horizontalOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
-  const physicalNormalized = { left: 0.45, top: 0.75, width: 0.20, height: 0.25, centerX: 0.55, centerY: 0.875 };
-  const result = {
-    id,
-    viewport: { width, height },
-    scene: frameRect,
-    containingBlock: containingRect,
-    image: { ...imageRect, ...imageState, objectPosition },
-    physical: physicalRect,
-    unquantizedPhysical,
-    expectedSemantic,
-    lattice: { q: latticeQ, operator: "floor", strict: true, epsilon: false },
-    host05: { x: hostRect.x, y: hostRect.y, width: hostRect.width, height: hostRect.height },
-    label: { ...labelRect, border: labelState.border, padding: labelState.padding, text: labelTextRect },
-    host04: host04Rect,
-    returnRidge: returnRect,
-    inventoryReturn: inventoryReturnRect,
-    physicalNormalized,
-    nominalSourceBounds,
-    nominalSourceAnchor,
-    sourceBounds,
-    actualSourceCenter,
-    centerContained: anchorContained,
-    anchorContained,
-    sourceBandRetention,
-    host04OverlapArea: overlap(hostRect, host04Rect),
-    returnOverlapArea: overlap(hostRect, returnRect),
-    targetSize,
-    labelContained,
-    labelInset: innerLabelInset && outerLabelInset,
-    innerLabelInset,
-    outerLabelInset,
-    labelBorderExact,
-    labelPaddingExact,
-    labelTextExact,
-    labelRawFinite,
-    labelScrollContained,
-    boxesEqual,
-    zeroImageEdges,
-    semanticExact,
-    semanticBottomAnchored,
-    physicalCenterInsideActivation,
-    horizontalOverflow,
-    focusOrder,
-    forcedColorEvidence: {
-      keyPath: "Tab -> Shift+Tab",
-      reverseDomPredecessor: null,
-      forwardSuccessor: "LOOK AT",
-      intermediate,
-      final: { identity: identityAfter.hotspotId, active: identityAfter.active, focusVisible: forcedColorEvidence.focusVisible },
-      mediaState,
-      noGameAction,
-      ...forcedColorEvidence,
-      identityBefore,
-      identityAfter,
-    },
-    forcedColors,
-    reducedMotion,
-    identityStable,
+  const audit = await page.evaluate(() => {
+    const current = window.__sixfoldAudit;
+    if (!current) throw new Error('Sixfold audit missing');
+    for (const [name, original] of Object.entries(current.originals)) Storage.prototype[name] = original;
+    for (const eventName of ['click', 'input', 'change', 'submit']) document.removeEventListener(eventName, current.handler, true);
+    delete window.__sixfoldAudit;
+    return current.audit;
+  });
+  await page.emulateMedia({ forcedColors: 'none', reducedMotion: 'no-preference' });
+  const expectedFields = {
+    tagName: 'BUTTON', role: 'button', testId: 'sixfold-weir', ariaLabel: 'use Sixfold Weir, in progress', state: 'in_progress', disabled: false,
+    worldOrder: ['primary', 'sixfold-weir', 'meadow-return-ridge'],
+    enabledOrder: ['sixfold-weir', 'LOOK AT', 'USE', 'TALK TO', 'Return to Chapter I, Glass Meadow'],
   };
-  result.pass = result.boxesEqual && result.zeroImageEdges && result.semanticExact && result.semanticBottomAnchored
-    && result.physicalCenterInsideActivation && result.anchorContained && result.sourceBandRetention >= 0.95
-    && result.host04OverlapArea === 0 && result.returnOverlapArea === 0 && result.targetSize
-    && result.labelContained && result.labelInset && result.labelBorderExact && result.labelPaddingExact
-    && result.labelTextExact && result.labelRawFinite && result.labelScrollContained && !result.horizontalOverflow
-    && result.forcedColors && result.reducedMotion && result.identityStable
-    && result.forcedColorEvidence.noGameAction
-    && JSON.stringify(result.focusOrder.dom) === JSON.stringify(["primary", "sixfold-weir", "meadow-return-ridge"])
-    && JSON.stringify(result.focusOrder.enabled) === JSON.stringify(["sixfold-weir", "LOOK AT", "USE", "TALK TO", "Return to Chapter I, Glass Meadow"]);
+  const fieldsMatch = (fields) => Object.entries(expectedFields).every(([key, value]) => JSON.stringify(fields[key]) === JSON.stringify(value));
+  const noGameAction = JSON.stringify(preSemantic.gameState) === JSON.stringify(postSemantic.gameState)
+    && JSON.stringify(preSemantic.gameState) === JSON.stringify(sequenceGameState);
+  const noWrite = audit.writes.length === 0 && audit.events.length === 0;
+  const semanticIdentityStable = preSemantic.fields.sameNodeFromSequenceStart && postSemantic.fields.sameNodeFromSequenceStart
+    && postSemantic.fields.sameNodeFromEpochStart && preSemantic.fields.isConnected && postSemantic.fields.isConnected
+    && preSemantic.fields.isHtmlButton && postSemantic.fields.isHtmlButton && fieldsMatch(preSemantic.fields) && fieldsMatch(postSemantic.fields)
+    && noGameAction && noWrite;
+  const motionZero = (values) => values.every((value) => value.split(',').every((part) => Number.parseFloat(part) === 0));
+  const focusPass = mediaState.forcedColors && mediaState.reducedMotion && preSemantic.fields.active
+    && intermediate.identity === 'LOOK AT' && intermediate.active && intermediate.focusVisible
+    && postSemantic.fields.active && postSemantic.fields.focusVisible
+    && focusStyle.outlineWidth === '3px' && focusStyle.outlineStyle === 'solid'
+    && focusStyle.outlineColor === focusStyle.systemHighlight
+    && motionZero(focusStyle.hostMotion) && motionZero(focusStyle.labelMotion);
+  const drift = compareSixfoldGeometry(preGeometry, postGeometry);
+  const requestedViewport = { width, height };
+  const viewportExact = JSON.stringify(preGeometry.viewport) === JSON.stringify(requestedViewport)
+    && JSON.stringify(postGeometry.viewport) === JSON.stringify(requestedViewport);
+  const result = {
+    id, sequenceIndex, requestedViewport, preViewport: preGeometry.viewport, postViewport: postGeometry.viewport,
+    lattice: { q: 1 / 64, operator: 'floor', strict: true, epsilon: false },
+    semantic: {
+      sameNodeFromSequenceStart: { pre: preSemantic.fields.sameNodeFromSequenceStart, post: postSemantic.fields.sameNodeFromSequenceStart },
+      sameNodeFromEpochStart: { post: postSemantic.fields.sameNodeFromEpochStart },
+      isConnected: { pre: preSemantic.fields.isConnected, post: postSemantic.fields.isConnected },
+      fields: { pre: preSemantic.fields, post: postSemantic.fields },
+      gameState: { pre: preSemantic.gameState, post: postSemantic.gameState },
+      audit, noGameAction, noWrite, semanticIdentityStable,
+    },
+    focus: {
+      keyPath: 'Tab -> Shift+Tab', reverseDomPredecessor: null, forwardSuccessor: 'LOOK AT',
+      preActive: preSemantic.fields.active, intermediate, postActive: postSemantic.fields.active,
+      pointerFocus: false, programmaticFocus: false, mediaState, ...focusStyle, focusPass,
+    },
+    geometry: {
+      pre: preGeometry, post: postGeometry, deltaScroll: drift.deltaScroll, rectangles: drift.rectangles,
+      allResidualsZero: drift.allResidualsZero, allLattice: drift.allLattice,
+      viewportStable: drift.viewportStable, viewportExact,
+      directGatesPass: preGeometry.directGatesPass && postGeometry.directGatesPass,
+      geometryStable: drift.geometryStable && viewportExact,
+    },
+  };
+  result.pass = result.semantic.semanticIdentityStable && result.focus.focusPass
+    && result.geometry.geometryStable && result.geometry.directGatesPass;
   return result;
 }
 
