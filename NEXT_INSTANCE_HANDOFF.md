@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / PRE-LIVE SERVED-IDENTITY STAGE
-LOCALIZATION ONLY / FRSH-003-v1-VR-37`**
+Current disposition: **`FIRST RUN SHELL READY / PRODUCTION LAUNCHER-VECTOR
+LOCALIZATION ONLY / FRSH-003-v1-VR-38`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,13 +11,13 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-37`
+Immediate control: `FRSH-003-v1-VR-38`
 
-Immediate return / predecessor authority: Combat VR-36 pre-live preview and
-served-identity failure / `FRSH-003-v1-VR-36`
+Immediate return / predecessor authority: Combat VR-37 stage-1 production
+launcher failure before PID / `FRSH-003-v1-VR-37`
 
-Mission VR-37 predecessor source:
-`97b243f33952e85a94342174ddf26e4cb5010f36`
+Mission VR-38 predecessor source:
+`70367f5ad0cb26ed566df045b75424bdfeba0aaa`
 
 Exact immutable content candidate:
 `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
@@ -27,53 +27,49 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Mission accepts VR-36's exact fail-closed scalar: production root/deep `0`,
-production assets `0`, fixture root/deep `0`, fixture assets `0`, cleanup `0`,
-ports clear `2`, native exit `1`. No stage detail, pathname, preview stream,
-browser, or E2E output was emitted, and both assigned ports were clear at
-return. The failure cannot yet be attributed to preview launch, readiness,
-HTTP status, disk/served matching, or wrapper control.
+Mission accepts VR-37 localization at stage `1`: production launcher failure
+before PID. No fixture, readiness, deep route, asset request, browser, or E2E
+ran; no owned PID existed; both assigned ports were clear. This diagnostic is
+not served-identity evidence and does not authorize a full rerun.
 
-Mission attempted to spawn a fresh child context, but the agent thread limit
-rejected it before any child ran. Root expressly authorized this Mission
-context reuse. This disclosed coordination limitation is not candidate
+Fresh-child capacity remained unavailable, so root expressly authorized this
+Mission context reuse. The disclosed coordination limitation is not candidate
 evidence and waives no boundary.
 
-Combat may execute only the VR-37 localization wrapper against the existing
-manifest-owned production and TD-012 fixture preview/identity implementation
-from `FRSH-003-v1-VR-07` on ports `4173` and `4184`. A fresh context remains
-preferred; disclose reuse if thread limits require it.
+`FRRC-002-v1` owns this exact production vector: workdir
+`horizon-archive-game`; executable `node`; arguments
+`node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4173
+--strictPort`; ownership limited to its recorded PID and loopback port `4173`.
 
-Run once, fail forward to unconditional owned-PID cleanup at the first failed
-stage, and emit exactly one ordered scalar line:
+Combat may run only one production launcher-vector diagnostic. Resolve `node`
+once with `Get-Command -Name 'node' -CommandType Application -ErrorAction
+Stop`; accept only command name `node` or `node.exe`; require the internally
+resolved source to exist as a leaf; never emit its path. Require the literal
+workdir to exist, then pass the resolved Node source internally to one
+headless, redirected `System.Diagnostics.ProcessStartInfo` launch using the
+exact manifest arguments. Poll only production root readiness. Do not request
+deep route or any asset. Unconditionally stop only the owned PID and check only
+port `4173` after cleanup.
+
+Emit exactly one ordered scalar line:
 
 ```text
-productionStartExit=<int> productionPid=<int> fixtureStartExit=<int> fixturePid=<int> productionReadinessAttempts=<int> productionReadinessStatus=<int> fixtureReadinessAttempts=<int> fixtureReadinessStatus=<int> productionHttp200Count=<int> fixtureHttp200Count=<int> productionAssetMatchCount=<int> fixtureAssetMatchCount=<int> cleanupAttemptCount=<int> productionPidStopped=<0|1> fixturePidStopped=<0|1> portClearCount=<int> localizedStage=<0..7> nativeExit=<0|1>
+nodeCommandFound=<0|1> nodeCommandNameAccepted=<0|1> nodeSourceExists=<0|1> workdirExists=<0|1> productionStartExit=<0|1> productionPid=<int> productionReadinessAttempts=<int> productionReadinessStatus=<int> cleanupAttemptCount=<0|1> productionPidStopped=<0|1> portClearCount=<0|1> localizedStage=<0..5> nativeExit=<0|1>
 ```
 
-Stages are exact: production start/PID; fixture start/PID; production
-readiness attempts/final status; fixture readiness attempts/final status;
-production then fixture root/deep HTTP-200 counts; production then fixture
-JS/CSS disk/served byte-match counts; unconditional owned-PID stop attempts and
-two-port clear check. Initialize unreached numeric fields to `-1`, absent PIDs
-to `0`, and unreached statuses to `-1`. Suppress streams, requests, responses,
-hashes, bytes, pathnames, filenames, asset references, and diagnostics.
+Initialize unreached numerics to `-1`, absent PID to `0`, and unreached status
+to `-1`. Stage meanings are: `1` command lookup/name/source, `2` workdir, `3`
+start/PID, `4` readiness, `5` cleanup/port, `0` complete diagnostic pass. A
+complete pass requires Node scalars `1/1/1`, workdir `1`, start `0`, positive
+PID, positive readiness attempts/status `200`, cleanup attempt/stopped `1/1`,
+port clear `1`, and native exit `0`. Otherwise report the first failed stage,
+native exit `1`, and truthful cleanup.
 
-Use `localizedStage=0` only if both launch exits are `0`, both PIDs are
-positive, both readiness statuses are `200`, HTTP counts are `2/2`, asset
-matches are `2/2`, every owned PID received one stop attempt and is stopped,
-ports clear are `2`, and native exit is `0`. Otherwise emit the first failed
-stage number and native exit `1`, while still reporting truthful cleanup.
-
-Stop after that scalar and return **`PRE-LIVE SERVED-IDENTITY STAGE LOCALIZED /
-STOP / RETURN TO FRESH MISSION`**. Even `localizedStage=0` is diagnostic only;
-it does not pass or rerun VR-36. Mission alone may authorize a later formal
-served-identity checkpoint.
-
-No retry, second preview start, alternate port/route, full served rerun,
-browser, E2E, summary, verifier, live review, build, fixture build, test,
-validator, PBA, scan, synchronization, discovery, enumeration, repair, or
-repository write is authorized.
+Stop after the scalar and return **`PRODUCTION LAUNCHER VECTOR LOCALIZED /
+STOP / RETURN TO FRESH MISSION`**. Even stage `0` is diagnostic only. No
+fixture, second start, `npm.cmd`, npm, npx, alternate vector/port/route, full
+served rerun, repair, browser, E2E, build, test, validator, PBA, scan,
+synchronization, discovery, enumeration, or repository write is authorized.
 
 All five OPEN divergences remain separate and OPEN:
 
@@ -97,4 +93,4 @@ one-E2E meanings remain exact. No release-map or scoreboard cell advances.
 No Quartermaster, Image Specialist, Intelligence, release, schedule,
 automation, or `FIRST RUN COMPLETE` action is authorized.
 
-VR-37 and this synchronized handoff are the only administrative writes.
+VR-38 and this synchronized handoff are the only administrative writes.
