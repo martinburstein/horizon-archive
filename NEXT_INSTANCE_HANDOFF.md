@@ -56,7 +56,7 @@ exact-next-action authority.
   read-only completed USE; deterministic focus/recovery; full modal inertness;
   live geometry and one complete E2E requirements.
 
-## Fresh Quartermaster result
+## FRWO-002 production chain
 
 - Quartermaster issued **`PRODUCTION CONTENT COMPLETE / FRCA-002-v1`**.
 - Exact content-complete product/test candidate is
@@ -94,27 +94,69 @@ exact-next-action authority.
 - The content/asset ledger is `Production Pipeline/First Run/
   FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-002-v1.md`.
 
-## Exact next action - Image Specialist (runtime presentation only)
+## Fresh Image Specialist result
 
-Read `First Run Agent Profiles/image-specialist.md` in full; then read
-`FRSH-002-v1`, `FRDT-002-v1`, `FRPX-002-v1`, `FRCE-002-v1`,
-`FRCA-002-v1`, this handoff, and inspect exact content-complete candidate
-`7bed6025d41481e0004868e812abb6d7753a41a0`.
+- Image Specialist issued **`RUNTIME PRESENTATION COMPLETE / FRPR-002-v1`**.
+- Exact immutable Image product/test candidate is
+  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`, descending from exact
+  content-complete candidate `7bed6025d41481e0004868e812abb6d7753a41a0`.
+- Fresh live review found one shell-owned presentation defect: the Meadow
+  departure remained `24px` high in canonical/effective-`200%` presentation.
+  The existing rule is now `44px`; emitted CSS remains exact `118,981` bytes.
+- The focused contract locks that rule, and the complete E2E responsive check
+  now includes the visible departure in the required-control set.
+- Final live geometry passes desktop `1920x1080`, laptop `1366x768`, narrow
+  `390x844`, effective-`200%` `768x900`, retained `320x180`, and retained
+  `320x240`. Nursery mapping, label containment, source-band overlap, center,
+  zero overlap, horizontal reflow, focus order, and all required `44px`
+  controls pass.
+- Forced colors retain a genuine keyboard `:focus-visible` `3px solid`
+  system-highlight outline and explicit state text. Reduced motion reports no
+  target animation or transition and changes no order or meaning.
+- Final evidence is focused `57/57`, related `70/70`, cold full `963/963`,
+  validators `40/40`, production `216` modules, fixture `57` modules,
+  JavaScript `1,663,664`, CSS `118,981`, and exact media
+  `17 / 37,410,731`.
+- Production and fixture served identity pass. One accepted isolated complete
+  journey passes in `68.236s` (`67.513s` journey), including all six Nursery
+  layouts, unchanged later rail, both equal MH-40 outcomes, zero runtime
+  errors, and maximum sampled task `0.40000009536743164ms`.
+- Accepted Meadow master remains exact `2,688,247` bytes / SHA-256
+  `6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2`.
+  No image/media generation, edit, replacement, variation, import, movement,
+  removal, publication, or reveal occurred; no media byte/request changed.
+- Owned preview PIDs are stopped and ports `4173` and `4184` are clear. Policy
+  blocked removal of one exact isolated Image QA root outside the repository;
+  it retains `69` files / `13,825,811` bytes. The pre-existing untracked
+  repository QA directory was not inspected, changed, staged, or deleted.
+- The runtime presentation review is `Production Pipeline/First Run/
+  FIRST_RUN_RUNTIME_PRESENTATION_REVIEW_FRPR-002-v1.md`.
 
-Review the bounded Fracture Nursery states only for shell-authorized
-code/configuration-level runtime presentation using immutable accepted media:
-composition, color/lighting treatment, existing sound, motion, typography,
-hierarchy, spacing, focus visibility, responsive containment, forced color,
-and reduced motion. A no-change pass is valid.
+## Exact next action - FRESH Intelligence Officer
 
-Preserve every finalized copy meaning/owner, mechanics, state, exact geometry,
-action/focus/recovery, learning/evidence, privacy, save/reload, route, canon,
-accepted media, performance/manifest/E2E controls, one-path later rail, and
-shared `successor=null` MH-40 ending. Run the profile-required manifest gates,
-issue the versioned runtime presentation review with `RUNTIME PRESENTATION
-COMPLETE`, `REVISE`, or `HOLD`, update this handoff, and commit only authorized
-Image scope. Do not generate, edit, replace, vary, import, move, remove, or
-publish media; do not create a reveal, alter maturity, or begin Intelligence.
+Use a fresh Intelligence context. Read `First Run Agent Profiles/
+intelligence-officer.md` in full, then read this handoff, `FRSH-002-v1`,
+`FRDT-002-v1`, `FRPX-002-v1`, `FRCE-002-v1`, `FRCA-002-v1`, and
+`FRPR-002-v1`. Independently inspect exact immutable candidate
+`3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602` and verify the current control HEAD
+changes only this synchronized handoff after that candidate.
+
+Execute or independently reproduce every exact `FRRC-001-v1` gate, including
+integrity/patch scope, focused/related/full, exact forty validators, production
+and exact fixture builds, PBA/media, exact previews and served identity, one
+and only one isolated complete E2E, live desktop/laptop/narrow/effective-
+`200%`/retained-320 presentation, keyboard/focus/forced-color/reduced-motion,
+cleanup, ports, protected boundaries, candidate identity, and Git sync.
+Specifically corroborate the resolved `44px` Meadow departure without
+weakening the unchanged route or content contracts.
+
+Reconcile every as-built variance, update the First Run release map,
+scoreboard, and process changelog only from accepted evidence, issue
+`FIRST RUN PASS RELEASED`, `REVISE`, or `HOLD`, replace this handoff with one
+exact next action, commit only Intelligence-authorized scope, push `main`, and
+prove `HEAD == origin/main`. Do not repair the candidate, perform any image or
+media operation, create a reveal, expand the bounded host scope, or begin a
+new cycle.
 
 ## Protected boundaries
 
