@@ -176,7 +176,7 @@ import {
   moveDemoTour,
   saveDemoTour,
 } from "./demoTour.js";
-import { deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
+import { deriveFractureNurseryState, deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
@@ -1066,7 +1066,9 @@ export function App() {
   const openingHeadingRef = useRef(null);
   const openingActivationAtRef = useRef(Number.NEGATIVE_INFINITY);
   const primaryHotspotRef = useRef(null);
+  const fractureNurseryRef = useRef(null);
   const meadowEntryFocusPendingRef = useRef(false);
+  const fractureNurseryFocusPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1111,15 +1113,17 @@ export function App() {
     : firstTerminalOrientation.steps[terminalOrientationStep];
   const verbPressedState = getVerbPressedState(verb);
   const meadowRouteMarkerState = deriveMeadowRouteMarkerState(exerciseEvidence, routeMarkerMastery);
+  const fractureNurseryState = deriveFractureNurseryState(
+    sanitizeRouteMarkerMastery(routeMarkerMastery),
+    sanitizeCalibrationMastery(calibrationMastery),
+  );
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
-    calibrationStarted: Boolean(calibrationSession),
-    calibrationMastered: calibrationMastery?.masteryStatus === "mastered",
+    calibrationState: fractureNurseryState,
   });
   const showMeadowDepartureChoice = pendingAdvance
     && scene.id === "meadow"
-    && routeMarkerMastery?.masteryStatus === "mastered"
-    && calibrationMastery?.masteryStatus !== "mastered";
+    && fractureNurseryState !== "hidden";
   const showFinalConfidenceAction = pendingAdvance
     && scene.id === "ruins"
     && mixedSimulationEvidence?.masteryStatus === "mastered"
@@ -1129,26 +1133,33 @@ export function App() {
     label: scene.hotspotLabel,
     hotspot: scene.hotspot,
     primary: true,
-  }, ...(scene.secondaryHotspots ?? [])];
+  }, ...(scene.secondaryHotspots ?? []), ...(scene.id === "meadow" && fractureNurseryState !== "hidden" ? [{
+    id: "fracture-nursery",
+    label: "Fracture Nursery coupling",
+    hotspot: MEADOW_PIXEL_HOTSPOTS.fractureNursery,
+  }] : [])];
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
   const hotspotButtons = sceneHotspots.map((hotspot) => {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
+    const isFractureNursery = scene.id === "meadow" && hotspot.id === "fracture-nursery";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
+    const nurseryLabel = isFractureNursery ? ` // ${fractureNurseryState.replace("_", " ").toUpperCase()}` : "";
     return (
       <button
         key={hotspot.id}
-        ref={hotspot.primary ? primaryHotspotRef : undefined}
+        ref={hotspot.primary ? primaryHotspotRef : isFractureNursery ? fractureNurseryRef : undefined}
         className={hotspot.primary ? "hotspot hotspot-primary" : "hotspot hotspot-secondary"}
         data-hotspot-id={hotspot.id}
         data-primary-hotspot={hotspot.primary ? "true" : undefined}
         data-route-marker-state={isMeadowRouteMarker ? meadowRouteMarkerState : undefined}
+        data-fracture-nursery-state={isFractureNursery ? fractureNurseryState : undefined}
         style={getHotspotStyle(hotspot.hotspot)}
         onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
-        disabled={pendingAdvance || terminalOpen}
-        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : ""}`}
+        disabled={terminalOpen || (pendingAdvance && !isFractureNursery)}
+        aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${fractureNurseryState.replace("_", " ")}` : ""}`}
       >
-        <span>{verb} {hotspot.label}{routeMarkerLabel}</span>
+        <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}</span>
       </button>
     );
   });
@@ -1295,6 +1306,12 @@ export function App() {
     resumeContinueFocusPendingRef.current = false;
     continueButtonRef.current?.focus({ preventScroll: true });
   }, [mode, scene.id, pendingAdvance]);
+
+  useLayoutEffect(() => {
+    if (!fractureNurseryFocusPendingRef.current || mode !== "playing" || scene.id !== "meadow" || terminalOpen || fractureNurseryState === "hidden") return;
+    fractureNurseryFocusPendingRef.current = false;
+    fractureNurseryRef.current?.focus({ preventScroll: true });
+  }, [mode, scene.id, terminalOpen, fractureNurseryState]);
 
   useLayoutEffect(() => {
     if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
@@ -1511,9 +1528,10 @@ export function App() {
     const saved = loadSave();
     if (!saved) return beginNewGame();
     const resumedScene = scenes[saved.sceneIndex];
-    const resumedMeadowDeparture = buildMeadowDeparturePresentation(scenes[saved.sceneIndex + 1]?.location, {
-      calibrationMastered: saved.calibrationMastery?.masteryStatus === "mastered",
-    });
+    const resumedMeadowDeparture = buildMeadowDeparturePresentation(
+      scenes[saved.sceneIndex + 1]?.location,
+      { calibrationState: deriveFractureNurseryState(saved.routeMarkerMastery, saved.calibrationMastery) },
+    );
     setCharacterName(saved.opening.characterName);
     setCharacterNameDraft(saved.opening.characterName);
     setCharacterNameError("");
@@ -1528,7 +1546,11 @@ export function App() {
           ? OPENING_TERMINAL_OBJECTIVE
         : "The flight recorder restores your last confirmed position.", "system");
     if (saved.pendingSceneId === "meadow" && saved.routeMarkerMastery?.masteryStatus === "mastered") {
-      resumeContinueFocusPendingRef.current = true;
+      if (deriveFractureNurseryState(saved.routeMarkerMastery, saved.calibrationMastery) === "in_progress") {
+        fractureNurseryFocusPendingRef.current = true;
+      } else {
+        resumeContinueFocusPendingRef.current = true;
+      }
       setSceneAnnouncement(buildSceneArrivalAnnouncement(resumedScene));
     } else if (saved.pendingSceneId) {
       resumeContinueFocusPendingRef.current = true;
@@ -2797,10 +2819,13 @@ export function App() {
     const returnPatch = buildCompletedMeadowReturnPatch(completed, routeMarkerMastery);
     if (!returnPatch) return;
     const meadowScene = scenes[0];
-    const returnPresentation = buildMeadowDeparturePresentation(scenes[1].location, {
-      calibrationMastered: calibrationMastery?.masteryStatus === "mastered",
-    });
-    resumeContinueFocusPendingRef.current = true;
+    const returnState = deriveFractureNurseryState(
+      sanitizeRouteMarkerMastery(routeMarkerMastery),
+      sanitizeCalibrationMastery(calibrationMastery),
+    );
+    const returnPresentation = buildMeadowDeparturePresentation(scenes[1].location, { calibrationState: returnState });
+    if (returnState === "in_progress") fractureNurseryFocusPendingRef.current = true;
+    else resumeContinueFocusPendingRef.current = true;
     setPendingAdvance(returnPatch.pendingAdvance);
     setTerminalOpen(returnPatch.terminalOpen);
     setQuestionOpen(returnPatch.questionOpen);
@@ -2814,6 +2839,23 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "meadow" && hotspotId === "fracture-nursery") {
+      if (fractureNurseryState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") {
+        setDialogue("Rejected cloudy forms, imperfect sleeves, fused edges, and low collars remain beside the feed and return channels.", "system");
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue("The repair stock is completely silent. Nothing in the material changes.", "pilot");
+        return;
+      }
+      if (fractureNurseryState === "complete") {
+        setDialogue("Calibration evidence is finalized. The cracks and field remain unchanged; departure remains open.", "system");
+        return;
+      }
+      openCalibration();
+      return;
+    }
     if (scene.id === "automaton") {
       if (hotspotId === "fallen-automaton") {
         if (verb === "LOOK AT") {
@@ -3053,7 +3095,8 @@ export function App() {
     setRouteMarkerMastery((previous) => updateRouteMarkerMastery(previous, { masteryStatus: "mastered" }));
     const nextCompleted = completed.includes(scene.id) ? completed : [...completed, scene.id];
     setCompleted(nextCompleted);
-    setDialogue(meadowDeparturePresentation.summary, "system");
+    fractureNurseryFocusPendingRef.current = true;
+    setDialogue("SUIT // One compatible local coupling is now classified. PILOT // Three unlike bodies; one expedition interface.", "system");
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
     setRouteSession(null);
@@ -3061,6 +3104,7 @@ export function App() {
   }
 
   function openCalibration() {
+    if (scene.id !== "meadow" || !["available", "in_progress"].includes(fractureNurseryState)) return;
     setTerminalOpen(true);
     setMeadowTerminalKind("calibration");
     if (!calibrationSession) {
@@ -3147,7 +3191,8 @@ export function App() {
     setCalibrationSession(null);
     setTerminalOpen(false);
     setMeadowTerminalKind(null);
-    setDialogue(buildMeadowDeparturePresentation(meadowDestination, { calibrationMastered: true }).summary, "system");
+    fractureNurseryFocusPendingRef.current = true;
+    setDialogue(buildMeadowDeparturePresentation(meadowDestination, { calibrationState: "complete" }).summary, "system");
   }
 
   function checkWorkloadCard(event) {
@@ -4007,13 +4052,14 @@ export function App() {
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
     <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
-      <section className="scene-frame" aria-label={`${scene.location} scene`} inert={demoTourConfirmation ? true : undefined}>
+      <section className="scene-frame" aria-label={`${scene.location} scene`}>
+        <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         {scene.id === "meadow" ? (
           <>
             <img
               className="scene-art glass-meadow-art"
               src={glassMeadowImage}
-              alt="An immense, perfectly flat field of cultivated transparent glass beneath a bright sky, viewed in first person"
+              alt="An immense, perfectly flat field of cultivated transparent glass with low repair stock beneath a bright sky, viewed in first person"
             />
             {hotspotButtons}
           </>
@@ -4035,6 +4081,8 @@ export function App() {
           <strong>{scene.location}</strong>
           <span>{completed.length}/{scenes.length} interfaces</span>
         </div>
+        </div>
+        <div className="scene-terminal-layer" inert={demoTourConfirmation ? true : undefined}>
         {terminalOpen && scene.id === "meadow" && meadowTerminalKind === "first" && (
           <TerminalShell
             exerciseId={terminalExercise.exerciseId}
@@ -5776,12 +5824,13 @@ export function App() {
             </form>
           </TerminalShell>
         )}
+        </div>
       </section>
 
       <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
           {ADVENTURE_VERBS.map((item) => (
-            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance}>{item}</button>
+            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && !(scene.id === "meadow" && fractureNurseryState !== "hidden")}>{item}</button>
           ))}
         </nav>
 
@@ -5810,9 +5859,6 @@ export function App() {
               <div className="dialogue-footer">
                 <span className="speaker" data-dialogue-owner={dialogueOwner}>{getDialogueSpeaker(dialogueOwner)}</span>
                 <div className="dialogue-actions">
-                  {showMeadowDepartureChoice && (
-                    <button className="continue-action calibration-launch" data-terminal-focus-fallback aria-label={meadowDeparturePresentation.calibrationAriaLabel} aria-describedby="meadow-choice-summary" onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openCalibration(); }}>{meadowDeparturePresentation.calibrationLabel}</button>
-                  )}
                   {pendingAdvance && scene.id === "ruins" && workloadEvidence?.masteryStatus === "mastered" && responsibleAIEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openResponsibleAI(); }}>{responsibleAISession ? "Resume Responsible AI" : responsibleAIEvidence?.form === "transfer" || responsibleAIEvidence?.form === "explanation" ? "Start Responsible AI Transfer" : "Start Responsible AI"}</button>
                   )}
@@ -5855,7 +5901,7 @@ export function App() {
                   {pendingAdvance&&scene.id==="ruins"&&capstoneReadinessEvidence?.masteryStatus==="mastered"&&mixedSimulationEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={!mixedSimulationSession&&!mixedSimulationEvidence?.attemptCount?"Continue to mixed simulation":undefined} onClick={e=>{terminalTriggerRef.current=e.currentTarget;openMixedSimulation();}}>{mixedSimulationSession?mixedSimulationSession.complete?"Resume Mixed Simulation · completed":`Resume Mixed Simulation · item ${mixedSimulationSession.index+1}/12`:mixedSimulationEvidence?.attemptCount?deriveMixedSimulationResume(mixedSimulationEvidence).complete?"Resume Mixed Simulation · completed":`Resume Mixed Simulation · item ${deriveMixedSimulationResume(mixedSimulationEvidence).index+1}/12`:"Continue"}</button>}
                   {showFinalConfidenceAction&&<button className="continue-action optional-practice-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openFinalConfidence();}}>{finalConfidenceEvidence?.entryEvidence?evaluateFinalConfidenceEntryGate(finalConfidenceEvidence.entryEvidence).ready?`Resume Final Confidence · item ${deriveFinalConfidenceResume(finalConfidenceEvidence).index+1}/12`:"Review Final Confidence Gate":"Open Final Confidence Gate"}</button>}
                   {pendingAdvance && (scene.id !== "ruins" || mixedSimulationEvidence?.masteryStatus === "mastered") && (
-                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={scene.id === "meadow" ? meadowDeparturePresentation.departureAriaLabel : scene.id==="ruins"&&mixedSimulationEvidence?.masteryStatus==="mastered"?"Continue to the next survey site":undefined} aria-describedby={scene.id === "meadow" && calibrationMastery?.masteryStatus !== "mastered" ? "meadow-choice-summary" : undefined} onClick={continueJourney}>
+                    <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback aria-label={scene.id === "meadow" ? meadowDeparturePresentation.departureAriaLabel : scene.id==="ruins"&&mixedSimulationEvidence?.masteryStatus==="mastered"?"Continue to the next survey site":undefined} aria-describedby={scene.id === "meadow" ? "meadow-choice-summary" : undefined} onClick={continueJourney}>
                       {completed.length === scenes.length ? "Descend to the city" : scene.id === "meadow" ? meadowDeparturePresentation.departureLabel : "Continue"}
                     </button>
                   )}

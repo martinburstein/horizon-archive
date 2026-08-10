@@ -13,6 +13,10 @@ test("integrated Meadow retains the exact interaction geometry", () => {
   assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.routeMarker, {
     left: "77.0313%", top: "53.3333%", width: "21.5625%", height: "46.3889%",
   });
+  assert.deepEqual(MEADOW_PIXEL_HOTSPOTS.fractureNursery, {
+    left: "0%", top: "52%", width: "24%", height: "48%",
+    narrow: { left: "0%", top: "52%", width: "24%", height: "48%" },
+  });
 });
 
 test("route marker labels still derive only from exact completion evidence", () => {

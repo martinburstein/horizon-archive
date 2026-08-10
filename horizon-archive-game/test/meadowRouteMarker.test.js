@@ -29,6 +29,6 @@ test("App-derived state consumes the existing allowlisted save evidence", () => 
 test("persistent route label remains inset inside its unchanged hotspot", () => {
   const route = MEADOW_PIXEL_HOTSPOTS.routeMarker;
   assert.ok(Number.parseFloat(route.left) + Number.parseFloat(route.width) < 100);
-  assert.match(appSource, /<span>\{verb\} \{hotspot\.label\}\{routeMarkerLabel\}<\/span>/);
-  assert.match(styleSource, /\.hotspot\[data-hotspot-id="route-marker"\] span \{[\s\S]*?left: 3px;[\s\S]*?right: 3px;[\s\S]*?transform: none;[\s\S]*?width: auto;[\s\S]*?max-width: none;[\s\S]*?white-space: normal;[\s\S]*?opacity: 1;/);
+  assert.match(appSource, /<span>\{verb\} \{hotspot\.label\}\{routeMarkerLabel\}\{nurseryLabel\}<\/span>/);
+  assert.match(styleSource, /\.hotspot:is\(\[data-hotspot-id="route-marker"\], \[data-hotspot-id="fracture-nursery"\]\) span \{[\s\S]*?left: 3px;[\s\S]*?right: 3px;[\s\S]*?transform: none;[\s\S]*?width: auto;[\s\S]*?max-width: none;[\s\S]*?white-space: normal;[\s\S]*?opacity: 1;/);
 });

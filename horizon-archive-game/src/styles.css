@@ -384,6 +384,8 @@ h1 {
 
 .adventure-screen { display: grid; grid-template-rows: minmax(0, 74vh) minmax(220px, 26vh); }
 .scene-frame { position: relative; min-height: 0; overflow: hidden; border-bottom: 5px solid #292630; container-type: size; }
+.scene-world-content { position: absolute; inset: 0; }
+.scene-terminal-layer { display: contents; }
 .glass-meadow-art { object-position: center center; }
 .adventure-screen[data-scene="meadow"] .terminal-workbench {
   inset: auto 18px 18px auto;
@@ -484,7 +486,7 @@ h1 {
   outline-offset: 2px;
   box-shadow: 0 0 0 5px rgba(8, 9, 16, 0.86);
 }
-.hotspot[data-hotspot-id="route-marker"] span {
+.hotspot:is([data-hotspot-id="route-marker"], [data-hotspot-id="fracture-nursery"]) span {
   left: 3px;
   right: 3px;
   bottom: 4px;
@@ -502,6 +504,9 @@ h1 {
 }
 .hotspot[data-hotspot-id="route-marker"][data-route-marker-state="locked"] span { border-style: dashed; }
 .hotspot[data-hotspot-id="route-marker"][data-route-marker-state="completed"] span { border-style: double; }
+.hotspot[data-hotspot-id="fracture-nursery"][data-fracture-nursery-state="in_progress"] span { border-style: dashed; }
+.hotspot[data-hotspot-id="fracture-nursery"][data-fracture-nursery-state="complete"] span { border-style: double; }
+.hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
   .canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible span {
@@ -513,6 +518,7 @@ h1 {
     box-shadow: none;
     forced-color-adjust: auto;
   }
+  .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 3px solid Highlight; }
 }
 
 /* TD-007 Braided Verge functional presentation. Final SC-08 art is Quartermaster-owned. */
@@ -1955,42 +1961,6 @@ h1 {
   min-height: 24px;
 }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-copy[data-final-confidence-action="true"] .speaker { display: none; }
-.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] {
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr);
-  gap: 0;
-  padding: 0;
-}
-.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .verb-grid,
-.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .inventory { display: none; }
-.canonical-game-frame[data-canonical-layout="narrow"] .command-panel[data-meadow-departure-choice="true"] > .dialogue-box {
-  grid-column: 1;
-  grid-row: 1;
-  min-height: 0;
-  padding: 2px 5px;
-}
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) 24px;
-  gap: 2px;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-}
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice #meadow-choice-summary {
-  max-height: none;
-  margin: 0;
-  overflow: hidden;
-  font-size: 8px;
-  line-height: 8px;
-}
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .dialogue-footer { min-width: 0; min-height: 0; }
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .speaker { display: none; }
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .dialogue-actions {
-  width: 100%;
-  height: 24px;
-  padding: 0;
-}
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-actions .continue-action {
   flex: 1;
   min-width: 0;
@@ -2002,8 +1972,10 @@ h1 {
   letter-spacing: 0;
   white-space: nowrap;
 }
-.canonical-game-frame[data-canonical-layout="narrow"] .meadow-departure-choice .continue-action:focus-visible {
-  outline-offset: -3px;
+.canonical-game-frame[data-canonical-layout="narrow"] .adventure-screen[data-scene="meadow"] :is(.verb, .dialogue-actions .continue-action) {
+  height: auto;
+  min-height: 44px;
+  white-space: normal;
 }
 .canonical-game-frame[data-canonical-layout="narrow"] .dialogue-footer .speaker { max-width: 48px; font-size: 5px; line-height: 1; letter-spacing: 0; }
 .canonical-game-frame[data-canonical-layout="narrow"] .scene-status { inset: 3px 3px auto; padding: 2px 3px; font-size: 6px; }

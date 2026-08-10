@@ -87,6 +87,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
   const canonicalJourneyStartedAt = Date.now();
   const runtimeErrors = [];
+  const mainThreadSamples = [];
   page.on("pageerror", (error) => runtimeErrors.push(`page: ${error.message}`));
   page.on("console", (message) => {
     if (message.type() === "error") runtimeErrors.push(`console: ${message.text()}`);
@@ -110,6 +111,7 @@ try {
   await page.reload();
   await page.getByRole("button", { name: "New expedition" }).click();
   await completeOpening(page);
+  if (await page.locator('[data-hotspot-id="fracture-nursery"]').count()) throw new Error("Fracture Nursery rendered before Route Marker mastery");
 
   await assertResponsiveMeadow(page, "desktop", "locked", "locked");
   await captureMeadow(page, "playtest/glass-meadow-pixel-desktop-qa.png");
@@ -270,9 +272,23 @@ print("Operator:", learner)`);
   await page.getByRole("heading", { name: "Primary 8/8 · Transfer 8/8 · Retrieval 4/4", exact: true }).waitFor();
   await page.getByRole("radio", { name: "Medium", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge route mastery", exact: true }).click();
-  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).waitFor();
-  await page.waitForFunction(() => document.activeElement?.getAttribute("aria-label") === "Start optional calibration practice");
-  await assertResponsiveMeadow(page, "route complete", "completed", "completed");
+  const nurseryAvailable = page.getByRole("button", { name: "use Fracture Nursery coupling, available", exact: true });
+  await nurseryAvailable.waitFor();
+  await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "fracture-nursery");
+  if (await page.getByText(/Optional calibration|Resume optional calibration/i).count()) throw new Error("Generic calibration launcher survived Nursery registration");
+  for (const [width, height, label] of [
+    [1920, 1080, "Nursery 1920x1080"],
+    [1366, 768, "Nursery 1366x768"],
+    [390, 844, "Nursery 390x844"],
+    [768, 900, "Nursery effective-200 768x900"],
+    [320, 180, "Nursery retained 320x180"],
+    [320, 240, "Nursery retained 320x240"],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await assertResponsiveMeadow(page, label, "completed", "completed");
+    await assertFractureNurseryGeometry(page, label);
+  }
+  await page.setViewportSize({ width: 1600, height: 900 });
   await captureMeadow(page, "playtest/glass-meadow-pixel-completed-qa.png");
   const routeMastery = await page.evaluate(({ key }) => JSON.parse(localStorage.getItem(key)).routeMarkerMastery, { key: saveKey });
   if (routeMastery?.exerciseId !== "EX-L0102-ROUTE-MARKER" || routeMastery?.attemptCount !== 6 || routeMastery?.hintLevel !== 2 || routeMastery?.confidence !== "medium" || routeMastery?.masteryStatus !== "mastered") {
@@ -282,7 +298,30 @@ print("Operator:", learner)`);
   if (Object.values(routeMastery.checkResults?.retrieval || {}).some((value) => !value)) throw new Error("Retrieval gate incomplete");
   if (["source", "prediction", "output", "notes", "answers"].some((key) => key in routeMastery)) throw new Error("Route working state persisted in mastery evidence");
 
-  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).click();
+  await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
+  await sampleActivation(page.getByRole("button", { name: "look at Fracture Nursery coupling, available", exact: true }), "Nursery LOOK", mainThreadSamples);
+  await page.getByText("Rejected cloudy forms", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "TALK TO", exact: true }).click();
+  await sampleActivation(page.getByRole("button", { name: "talk to Fracture Nursery coupling, available", exact: true }), "Nursery TALK", mainThreadSamples);
+  await page.getByText("completely silent", { exact: false }).waitFor();
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
+  await page.locator('main[data-scene="ruins"]').waitFor();
+  const preReturnEvidence = await page.evaluate(({ key }) => {
+    const save = JSON.parse(localStorage.getItem(key));
+    return JSON.stringify({ routeMarkerMastery: save.routeMarkerMastery, calibrationMastery: save.calibrationMastery ?? null });
+  }, { key: saveKey });
+  await page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true }).click();
+  await page.locator('main[data-scene="meadow"]').waitFor();
+  const postReturnEvidence = await page.evaluate(({ key }) => {
+    const save = JSON.parse(localStorage.getItem(key));
+    return JSON.stringify({ routeMarkerMastery: save.routeMarkerMastery, calibrationMastery: save.calibrationMastery ?? null });
+  }, { key: saveKey });
+  if (postReturnEvidence !== preReturnEvidence) throw new Error("Drowned-to-Meadow return mutated route or calibration evidence");
+  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).evaluate((element) => {
+    if (document.activeElement !== element) throw new Error("Unstarted Nursery return did not focus departure");
+  });
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await sampleActivation(page.getByRole("button", { name: "use Fracture Nursery coupling, available", exact: true }), "Nursery USE", mainThreadSamples);
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).waitFor();
@@ -291,7 +330,7 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertResponsiveMeadow(page, "calibration exit", "completed", "completed");
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).waitFor();
-  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
+  await page.getByRole("button", { name: "use Fracture Nursery coupling, available", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
@@ -310,7 +349,7 @@ print("Operator:", learner)`);
   await page.screenshot({ path: qaPath("calibration-terminal-narrow-qa.png"), fullPage: true });
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
   await assertResponsiveMeadow(page, "calibration failed exit", "completed", "completed");
-  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
+  await page.getByRole("button", { name: "use Fracture Nursery coupling, in progress", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   const calibrationSourceTab = page.getByRole("button", { name: "source", exact: true });
   await calibrationSourceTab.focus();
@@ -318,7 +357,7 @@ print("Operator:", learner)`);
   if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Exit Calibration discarded in-progress source");
   await page.keyboard.press("Escape");
   await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').waitFor({ state: "detached" });
-  await page.getByRole("button", { name: "Resume optional calibration practice", exact: true }).click();
+  await page.getByRole("button", { name: "use Fracture Nursery coupling, in progress", exact: true }).click();
   await page.getByText(calibrationKeyboardHelp, { exact: true }).waitFor();
   if (!(await page.locator("#calibration-source").inputValue()).includes("CALIBRATION_SESSION_ONLY")) throw new Error("Escape discarded in-progress source");
   await page.getByRole("button", { name: "Exit Calibration", exact: true }).click();
@@ -331,10 +370,11 @@ print("Operator:", learner)`);
   await page.getByRole("button", { name: "Resume signal" }).click();
   await page.locator('main[data-scene="meadow"]').waitFor();
   await assertResponsiveMeadow(page, "calibration reload", "completed", "completed");
-  await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).evaluate((element) => {
-    if (document.activeElement !== element) throw new Error("Completed Meadow resume did not focus the earned departure action");
+  await page.getByRole("button", { name: "look at Fracture Nursery coupling, in progress", exact: true }).evaluate((element) => {
+    if (document.activeElement !== element) throw new Error("Unfinished Nursery reload did not focus the coupling");
   });
-  await page.getByRole("button", { name: "Start optional calibration practice", exact: true }).click();
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await page.getByRole("button", { name: "use Fracture Nursery coupling, in progress", exact: true }).click();
   await page.getByText("NameError", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Record pre-edit diagnosis", exact: true }).click();
   await page.getByLabel("Calibration error type", { exact: true }).selectOption("NameError");
@@ -370,6 +410,11 @@ print("Operator:", learner)`);
   const calibrationRetrievalKeys = Object.keys(calibrationMastery.checkResults?.retrieval || {});
   if (calibrationRetrievalKeys.length !== 4 || calibrationRetrievalKeys.some((key) => /tab|escape|focus|modal|inert/i.test(key))) throw new Error("Keyboard orientation leaked into graded retrieval");
   await assertResponsiveMeadow(page, "calibration mastered", "completed", "completed");
+  const completedNursery = page.getByRole("button", { name: "use Fracture Nursery coupling, complete", exact: true });
+  await page.getByRole("button", { name: "USE", exact: true }).click();
+  await sampleActivation(completedNursery, "completed Nursery USE", mainThreadSamples);
+  if (await page.locator('[data-terminal-exercise="EX-L0103-CALIBRATION-DEBUG"]').count()) throw new Error("Completed Nursery USE reopened scored calibration");
+  await page.getByText("Calibration evidence is finalized", { exact: false }).waitFor();
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
   await page.locator('main[data-scene="ruins"]').waitFor();
 
@@ -1417,6 +1462,10 @@ print("Operator:", learner)`);
     throw new Error(`Canonical clean-start through MH-40 exceeded 180 seconds: ${canonicalJourneyElapsedSeconds.toFixed(3)}s`);
   }
   if (runtimeErrors.length) throw new Error(`Runtime errors detected: ${runtimeErrors.join(" | ")}`);
+  const maxMainThreadTaskMs = Math.max(...mainThreadSamples.map(({ durationMs }) => durationMs));
+  if (!Number.isFinite(maxMainThreadTaskMs) || maxMainThreadTaskMs > 100) {
+    throw new Error(`Fracture Nursery sampled main-thread activation exceeded 100ms: ${JSON.stringify(mainThreadSamples)}`);
+  }
 
   console.log(JSON.stringify({
     title: true,
@@ -1644,9 +1693,19 @@ print("Operator:", learner)`);
     measuredHorizonOutcomeEquality: true,
     measuredHorizonHardStop: true,
     canonicalJourneyElapsedSeconds,
+    maxMainThreadTaskMs,
   }));
 } finally {
   await browser.close();
+}
+
+async function sampleActivation(locator, label, samples) {
+  const durationMs = await locator.evaluate((element) => {
+    const startedAt = performance.now();
+    element.click();
+    return performance.now() - startedAt;
+  });
+  samples.push({ label, durationMs });
 }
 
 async function loadSanctionedFixtureModule(relativePath, exportedNames, { beforeTests = true } = {}) {
@@ -2173,6 +2232,7 @@ async function assertTerminalKeyboardContract(page, dialog, trigger, viewportLab
   if (await dialog.getAttribute("role") !== "dialog" || await dialog.getAttribute("aria-modal") !== "true") throw new Error(`Terminal dialog semantics missing at ${viewportLabel}`);
   await page.waitForFunction(() => ["first-terminal-orientation-heading", "terminal-title"].includes(document.activeElement?.id));
   if (!await page.locator(".command-panel").evaluate((element) => element.inert)) throw new Error(`Terminal background is not inert at ${viewportLabel}`);
+  if (!await page.locator(".scene-world-content").evaluate((element) => element.inert)) throw new Error(`Terminal world background is not inert at ${viewportLabel}`);
   if (!await trigger.isDisabled()) throw new Error(`Terminal trigger remained interactive behind dialog at ${viewportLabel}`);
   await page.keyboard.press("Shift+Tab");
   if (!await dialog.evaluate((element) => element.contains(document.activeElement))) throw new Error(`Shift+Tab escaped Terminal at ${viewportLabel}`);
@@ -2242,6 +2302,57 @@ async function assertResponsiveMeadow(page, viewportLabel, petalState, routeStat
   if (metrics.imageRendering !== "auto") throw new Error(`Meadow richness sampling disabled at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!metrics.separated || !metrics.contained || Math.min(metrics.petalWidth, metrics.petalHeight, metrics.routeWidth, metrics.routeHeight) < 44) throw new Error(`Meadow targets invalid at ${viewportLabel}: ${JSON.stringify(metrics)}`);
   if (!/perfectly flat field/i.test(metrics.alt) || !/first person/i.test(metrics.alt)) throw new Error(`Meadow alt text incomplete: ${metrics.alt}`);
+}
+
+async function assertFractureNurseryGeometry(page, viewportLabel) {
+  const metrics = await page.evaluate(() => {
+    const image = document.querySelector(".scene-art.glass-meadow-art");
+    const nursery = document.querySelector('[data-hotspot-id="fracture-nursery"]');
+    const primary = document.querySelector('[data-hotspot-id="primary"]');
+    const route = document.querySelector('[data-hotspot-id="route-marker"]');
+    if (!image || !nursery || !primary || !route) return null;
+    const imageRect = image.getBoundingClientRect();
+    const nurseryRect = nursery.getBoundingClientRect();
+    const primaryRect = primary.getBoundingClientRect();
+    const routeRect = route.getBoundingClientRect();
+    const overlapArea = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left))
+      * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+    const sourceRatio = image.naturalWidth / image.naturalHeight;
+    const boxRatio = imageRect.width / imageRect.height;
+    const visibleSourceHeight = sourceRatio > boxRatio ? image.naturalHeight : image.naturalWidth / boxRatio;
+    const sourceCropTop = (image.naturalHeight - visibleSourceHeight) / 2;
+    const authoredTop = image.naturalHeight * 0.52;
+    const authoredBottom = image.naturalHeight;
+    const visibleTop = Math.max(authoredTop, sourceCropTop);
+    const visibleBottom = Math.min(authoredBottom, sourceCropTop + visibleSourceHeight);
+    return {
+      width: nurseryRect.width,
+      height: nurseryRect.height,
+      expectedWidth: imageRect.width * 0.24,
+      expectedHeight: imageRect.height * 0.48,
+      leftDelta: Math.abs(nurseryRect.left - imageRect.left),
+      topDelta: Math.abs(nurseryRect.top - (imageRect.top + imageRect.height * 0.52)),
+      centerContained: nurseryRect.left + nurseryRect.width / 2 >= imageRect.left
+        && nurseryRect.left + nurseryRect.width / 2 <= imageRect.right
+        && nurseryRect.top + nurseryRect.height / 2 >= imageRect.top
+        && nurseryRect.top + nurseryRect.height / 2 <= imageRect.bottom,
+      sourceBandOverlap: Math.max(0, visibleBottom - visibleTop) / (authoredBottom - authoredTop),
+      primaryOverlap: overlapArea(nurseryRect, primaryRect),
+      routeOverlap: overlapArea(nurseryRect, routeRect),
+      state: nursery.dataset.fractureNurseryState,
+      label: nursery.getAttribute("aria-label"),
+    };
+  });
+  if (!metrics) throw new Error(`Fracture Nursery is absent at ${viewportLabel}`);
+  if (Math.abs(metrics.width - metrics.expectedWidth) > 1
+    || Math.abs(metrics.height - metrics.expectedHeight) > 1
+    || metrics.leftDelta > 1 || metrics.topDelta > 1
+    || metrics.width < 44 || metrics.height < 44
+    || !metrics.centerContained || metrics.sourceBandOverlap < 0.85
+    || metrics.primaryOverlap > 0 || metrics.routeOverlap > 0
+    || metrics.state !== "available" || !/Fracture Nursery coupling, available/i.test(metrics.label)) {
+    throw new Error(`Fracture Nursery live mapping failed at ${viewportLabel}: ${JSON.stringify(metrics)}`);
+  }
 }
 
 async function completeOpening(page) {
