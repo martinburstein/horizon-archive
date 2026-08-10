@@ -515,23 +515,56 @@ exact-next-action authority.
   authorizes no repair or run.
 - Tactical clarification artifact is `Production Pipeline/First Run/
   FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-03.md`.
+- Mission reconciled Tactical's clarification as **`FIRST RUN SHELL READY /
+  FRSH-003-v1-VR-07`** at source
+  `6e768a203d01dd28f382660b1754e823fd12513f`.
+- Semantic identity and geometry are now independent. The same connected Host
+  05 node, exact semantic/name/state/order/focus/game-state facts, and
+  `noGameAction=true` / `noWrite=true` must persist through all six sequential
+  epochs and every genuine `Tab -> LOOK AT -> Shift+Tab -> same Host 05`.
+- Within each fixed viewport, pre/post raw rectangles and scroll offsets are
+  normalized to document coordinates. Raw position delta must equal exact
+  negative scroll delta; every signed `q=1/64` document residual and size
+  delta must be strict zero. Raw/document rectangles are not compared across
+  different viewport sizes.
+- Each epoch independently passes every unchanged direct strict-Q geometry,
+  source, target, label, overlap/overflow, focus, forced-color, reduced-motion,
+  action-order, and no-action gate before and after traversal.
+- Runtime product `7e85154`, probe predecessor `d9487d82`, validation control
+  `4cd7fbf`, all seven placeholders, thresholds, PBA/media/performance,
+  cleanup, learning/save/route/world/later rail/ending, and rollback remain
+  frozen.
+- Combat may correct only `playtest/e2e-playthrough.mjs` and
+  `FRRC-002-v1` probe/summary/verifier evidence, then freeze one two-file
+  evidence-control candidate. Product and `sixfoldWeir.test.js` changes are
+  forbidden.
+- Combat must pass the full deterministic ladder: integrity/static, focused
+  `68/68`, related `74/74`, cold full `972/972`, validators `40/40`, builds
+  `217/57`, served identity, and exact PBA/media/offline/performance.
+- Only after every deterministic gate passes is exactly one fresh complete
+  external-GUID-root E2E authorized. It must emit one machine summary and the
+  independent verifier must pass once. Any failure is `HOLD` without rerun.
+- Quartermaster and maturity remain blocked. Reissue artifact is `Production
+  Pipeline/First Run/FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-07.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Combat Engineer only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, complete `FRSH-003-v1-VR-06`,
-`FRPX-003-v1-VR-03`, complete latest `FRCE-003-v1`, and the exact current
-`measureSixfoldLayout` composite predicate.
+Read `First Run Agent Profiles/combat-engineer.md` in full, then read this
+handoff, complete `FRSH-003-v1-VR-07`, `FRPX-003-v1-VR-03`,
+`FRSH-003-v1-VR-06`, operative `FRSH-003-v1-VR-04`, complete latest
+`FRCE-003-v1`, and the exact current E2E/manifest controls.
 
-Issue exactly one versioned Mission shell redecision: `FIRST RUN SHELL READY`
-or `HOLD`. Reconcile the same-node semantic contract and exact
-document-coordinate scroll/residual contract without selecting a product
-repair or weakening any direct gate. If `READY`, freeze exact permitted
-probe/summary/verifier/static-control files and deterministic gates, and state
-whether a single fresh complete E2E is authorized only after every pre-live
-gate passes. Do not begin Combat/Quartermaster, execute a run, change a
-placeholder/product/threshold/media/learning/save/route/world/ending, or
-advance maturity.
+Change only `playtest/e2e-playthrough.mjs` and
+`Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-002-v1.json`
+to implement the exact same-node semantic and document-coordinate scroll/
+residual evidence contract. Freeze one committed evidence-control candidate,
+preserving product `7e85154`, probe predecessor `d9487d82`, and validation
+control `4cd7fbf`. Run the full deterministic ladder from the beginning. Only
+after every gate passes, invoke exactly one fresh GUID-root complete E2E,
+require one machine summary and one independent verifier pass, and clean only
+owned resources. Any failure is `HOLD` without rerun. Do not change product,
+test, placeholder, threshold, media, learning, save, route, world, ending, or
+maturity, or begin Quartermaster.
 
 ## Protected boundaries
 
