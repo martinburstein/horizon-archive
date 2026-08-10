@@ -2,16 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE FIELD-SOURCE-CORRECTED
-DIAGNOSTIC-CONTROL VERIFICATION / FRSH-003-v1-VR-15`**
+Current disposition: **`HOLD / DETERMINISTIC PREFLIGHT EXECUTION-CONTROL
+FAILURE / NO E2E / NO RERUN / FRCE-003-v1-VR-15`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Verification shell: `FRSH-003-v1-VR-15`
+Expended verification shell: `FRSH-003-v1-VR-15`
+
+Exact Combat return: `FRCE-003-v1-VR-15`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -27,41 +29,38 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Combat Engineer profile in full, complete VR-07, VR-12, VR-13,
-VR-14, and VR-15, FRCE-003-v1-VR-12 through VR-14, current FRAB-003, this
+Read the Mission Captain profile in full, FRSH-003-v1-VR-07 and VR-12
+through VR-15, FRCE-003-v1-VR-12 through VR-15, current FRAB-003, this
 handoff, and the exact committed FRRC/E2E/static controls.
 
-Run the exact full deterministic ladder once from its beginning against the
-five frozen identities. Any deterministic failure is `HOLD / NO E2E / NO
-RERUN`; perform no repair and clean only exact owned resources.
+Combat began the VR-15 deterministic ladder once. The combined gate-1
+integrity/static invocation stopped after `1.7s` at its final malformed
+forbidden-boundary assertion. The correct candidate match collection was
+empty; the assertion incorrectly required it to contain an authorized
+`/test/` path excluded by its own pattern. All checks before that assertion
+executed without failure, but gate 1 as a whole did not pass. Per VR-15,
+Combat performed no repair and no rerun.
 
-Only after every deterministic gate passes, create one previously nonexistent
-GUID-named direct child of resolved OS temp, prove exact containment and
-repository exclusion, and invoke the exact complete E2E once within `180s`.
+No focused, related, full, validator, build, PBA/media/offline/performance,
+preview, served-request, external-root, browser, E2E, diagnostic, summary, or
+verifier operation followed. No preview PID, browser, owned log, or external
+QA root existed. Ports `4173` and `4184` were proved clear. Protected,
+predecessor, user, hidden-lore, and media boundaries remained untouched.
 
-If E2E fails, read only its owned `first-run-live-diagnostic.json`, record
-every failure path/expected/actual/owner, route the exact earliest responsible
-owner (or fresh Mission for mixed/ambiguous ownership), run no verifier, and
-do not rerun.
+Mission must independently adjudicate this execution-control stop. It may
+issue one newly versioned `HOLD` or one bounded single-verification reissue
+to a fresh Combat Engineer. It may not treat the partial gate-1 checks as a
+complete pass, authorize reuse or rerun under VR-15, infer a candidate/product
+defect, repair product/control code, begin Quartermaster/Image/Intelligence,
+advance maturity, inspect protected or predecessor state, create a reveal or
+schedule, or call `FIRST RUN COMPLETE`.
 
-If E2E succeeds, require the same-run diagnostic
-`checkInventoryExact=true` and `failureCount=0`, exactly one machine live
-summary, and exactly one passing independent verifier using only that summary.
-Any mismatch is `HOLD / NO RERUN`.
+Preserve every product, probe, diagnostic predecessor, validation, accepted
+evidence, threshold, predicate, learning, evidence/privacy, save, route,
+world, identity, authority, reward/access, equal MH-40 outcome, null-delta,
+`successor=null`, ending, media `17 / 37,410,731`, external-root, cleanup,
+diagnostic non-evidence/non-verifier, and one-E2E boundary.
 
-Preserve all product, candidate, validation, evidence, threshold, predicate,
-learning, privacy, save, route, world, identity, ending, media, protected/user,
-external-root, cleanup, one-E2E, diagnostic non-evidence/non-verifier, and
-maturity boundaries. Make no implementation/control change. Write only one
-versioned Combat return and this handoff after the attempt, commit, push, and
-prove `HEAD == origin/main`.
-
-On complete PASS, route fresh Intelligence with the exact candidate, one
-summary, and one verifier proof without a second E2E. On failure, follow the
-exact owner routing above. Do not begin Quartermaster/Image work, inspect
-protected or predecessor state, create a reveal/schedule/automation, advance
-maturity, or call `FIRST RUN COMPLETE`.
-
-The dedicated Mission commit and final `HEAD == origin/main` proof are
+The dedicated Combat commit and final `HEAD == origin/main` proof are
 reported from Git after commit because this handoff cannot contain the hash
 that first contains itself.
