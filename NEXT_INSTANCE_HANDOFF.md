@@ -177,25 +177,57 @@ exact-next-action authority.
 - The envelope is `Production Pipeline/First Run/
   FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-002-v1.md`.
 
-## Exact next action - Mission shell
+## Fresh Mission result
 
-Read `First Run Agent Profiles/mission-captain.md` in full; then read
-`FRWO-002-v1`, `FRVE-002-v1`, `FRPB-001-v1`, guarded revalidation
-`FRPB-001-v1-GR-01`, `FRAB-001-v1`, `FRCL-002-v1`, `FRRM-002-v1`, and
-`FRSB-002-v1`. Independently verify the fixed `0/52/24/48` target against the
-immutable master/provenance and reconcile every Work Order requirement with the
-Science envelope.
+- Mission issued **`FIRST RUN SHELL READY / FRSH-002-v1`** from exact source
+  `04e1cd039b554058005ba7cbba368a0214e29974`.
+- Independent immutable-master proof is exact `1672 x 941`, `2,688,247` bytes,
+  24-bit RGB PNG, SHA-256
+  `6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2`.
+  Source provenance explicitly authors the low repair-stock material and the
+  integrated provenance preserves it while separately adding only the central
+  Terminal and right Route Marker.
+- Fracture Nursery geometry is frozen at `left 0% / top 52% / width 24% /
+  height 48%`, identical at narrow. Its right edge is `x 401.28`; First Signal
+  begins at `x 418`, leaving `16.72` source pixels. Pairwise overlap with both
+  existing targets is zero. Tactical must still prove actual live mapping,
+  `>=0.85` source-band overlap, center containment, and `>=44 x 44`.
+- The sole campaign calibration entry is in-world `USE Fracture Nursery
+  coupling`. Availability is sanitized pure nonpersisted view state; no save
+  field/schema/version, evidence class, route gate, lesson, or world state is
+  added. The generic departure-row launcher is removed and departure remains
+  immediately available in every calibration state.
+- Exact `L01-03`, `8/8 + 8/8 + 4/4`, privacy clearing, reload reconstruction,
+  Demo Tour isolation, route/world/ending invariance, focus fallbacks, forced
+  color, reduced motion, immutable media, and exact PBA caps are frozen.
+- Combat must instantiate the checked-in canonical command manifest
+  `FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-001-v1.json`. It owns nonempty
+  focused/related commands, exactly `40` validator `--self-test` invocations,
+  exact production/fixture previews and served identity, one complete
+  non-overlapping E2E, PBA/media, cleanup, and candidate identity.
+- The shell is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_FRSH-002-v1.md`. No product, test, learning, story, save,
+  media, map, scoreboard, or maturity file changed in Mission.
 
-Issue exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` for
-`FRWO-002-v1`. If ready, lock the sole in-world `USE` entry, pure view-state
-derivation, route/save/privacy/focus/accessibility/PBA contracts, exact
-permitted files, `FRRC-001-v1` manifest requirement, one complete
-non-overlapping E2E, hard stops, and rollback boundary before leaving one exact
-Recon handoff.
+## Exact next action - Reconnaissance Sergeant
 
-Do not write final prose, implement production, alter learning, route, save,
-world, ending, or media, advance maturity, begin Recon, inspect protected state,
-or perform an image/media/reveal operation inside Mission.
+Read `First Run Agent Profiles/reconnaissance-sergeant.md` in full; then read
+`FRSH-002-v1`, `FRWO-002-v1`, `FRVE-002-v1`, and this handoff. Inspect the
+current Glass Meadow wide/narrow runtime presentation and the accepted master/
+provenance read-only without changing them.
+
+Issue exactly one versioned Directorial Treatment for `FRSH-002-v1`. Define
+one compelling felt discovery, the attention path from Route Marker to the
+low-left repair stock, approach/pacing/silence, the three-bodies/one-expedition-
+interface turn, and concept-level use of the immutable existing plate. Preserve
+the shell's exact geometry, sole `USE`, optional route, state/save/privacy/
+learning/accessibility/PBA/media contracts, hard stops, and rollback. Leave one
+exact Tactical handoff.
+
+Do not write final prose, freeze exact interaction/focus implementation,
+implement code, edit/generate/import/publish media, create a reveal, alter
+learning/route/save/world/ending, advance maturity, or begin Tactical inside
+Recon.
 
 ## Protected boundaries
 
