@@ -28,6 +28,8 @@ exact-next-action authority.
 - Mission issued **`FIRST RUN SHELL READY / FRSH-001-v1`** and pushed exact
   source `0b90108d159bb889b1a5e3b9d81f4f0e7adf56c6`.
 - Recon issued **`DIRECTORIAL LOCK / FRDT-001-v1`** from that exact shell.
+- Tactical issued **`PLAYER EXPERIENCE READY / FRPX-001-v1`** from exact
+  source `35b43f5a30f588efa99783eea961158d0a026a19`.
 - The selected address remains `FR-00` through initial `FR-05`: truthful
   package identity, final-purpose existing prologue, canon-safe Drowned/Witness
   copy, and direct existing City Threshold handoff.
@@ -46,30 +48,35 @@ exact-next-action authority.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
 
-## Exact next action - Tactical Operations Specialist blueprint
+## Exact next action - Combat Engineer functional build
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md`,
-`Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`, and
-`Production Pipeline/First Run/FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-001-v1.md`
-in full, plus the planning authorities they cite as required by the profile.
+Read `First Run Agent Profiles/combat-engineer.md`,
+`Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`,
+`Production Pipeline/First Run/FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-001-v1.md`,
+and
+`Production Pipeline/First Run/FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-001-v1.md`
+in full, plus the exact source/tests and planning authorities they cite as
+required by the profile.
 
-Independently inspect the current package/guide, title/setup/prologue, Glass
-Meadow, Drowned Archive, Witness Corridor, direct City Threshold state graph,
-focus/announcement/resume behavior, responsive order/crops, and adjacent
-Chapter IV states. Translate `FRDT-001-v1` into exactly one versioned First Run
-Player Experience Blueprint with the exact target graph, action and
-unavailable-state map, focus/announcement plan, modal inertness, copy-slot
-ledger, responsive order/crops, resume/recovery behavior, and Combat-ready
-acceptance matrix.
+Implement the bounded Unbroken Opening Rail only in the shell's permitted
+files: canonical launcher/guide and truthful compatibility wrapper; stable
+final-purpose opening structure with explicit Quartermaster copy slots;
+canon-safe Drowned/Witness states; one atomic direct completed-prefix and
+Witness-to-City projection; complete removal of the credits node/action; and
+deterministic City entry/overlay focus, announcements, modal inertness, cancel,
+resume, and recovery. Preserve the existing Meadow, one compressed Drowned
+host, learning/evidence/privacy/Tour/save schema, City predecessor/later route,
+MH-40/equal outcomes, accepted media, PBA, and `successor=null`.
 
-Preserve one-hit opening progression, Drowned work-and-reorientation rhythm
-without new hosts, inert fallen Witness versus active Terminal semantics,
-direct persisted credits-free City landing, and neutral already-operating City
-contrast. Issue `PLAYER EXPERIENCE READY`, `REVISE`, or `HOLD`; validate and
-commit only Tactical; then replace this handoff with one exact Combat action.
-Do not write final prose, implement code, change/generate/edit/import media,
-create a reveal, expand host parity, alter learning/state/canon, or deploy
-Combat.
+Run the shell's complete validation ladder, including one non-overlapping
+canonical-launcher-equivalent clean start through MH-40, live affected states,
+exact media/budget/served identity, cleanup, and protected-path proof. Issue
+`PRODUCTION FUNCTIONAL`, `REVISE`, or `HOLD`; write one dedicated Combat report,
+commit only Combat's permitted build/test/report/handoff files, push `main`,
+prove `HEAD == origin/main`, and replace this handoff with one exact
+Quartermaster action. Do not write final Quartermaster prose, add/claim hosts,
+alter canon/learning/state schema, touch/generate/edit/import media, create a
+reveal, inspect user state/hidden lore, or deploy Quartermaster.
 
 ## Protected boundaries
 
