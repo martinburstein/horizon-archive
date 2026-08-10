@@ -47,47 +47,60 @@ exact-next-action authority.
   only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
-- Combat implemented the bounded launcher/opening/direct-City candidate and
-  issued **`REVISE / FRCE-001-v1`**. Focused `54/54`, related `148/148`, cold
-  full `953/953`, validators `40/40`, production/fixture builds, PBA, served
-  identity, and affected live City states pass.
+- Combat implemented the bounded launcher/opening/direct-City candidate,
+  repaired the completed City staging transition, and issued
+  **`PRODUCTION FUNCTIONAL / FRCE-001-v1`**. Touched `19/19`, prior focused
+  `54/54`, prior related `148/148`, cold full `953/953`, validators `40/40`,
+  production/TD-012 fixture builds, PBA/media, served identity, affected live
+  states, and cleanup pass.
 - The bounded product/test candidate is committed as
   `f47855c5d676da8938e4a654becab1a02345f3ad`.
-- `FRCE-VAR-001` remains blocking: the single canonical E2E proves clean start
-  through direct/reloaded City but still stops before the exact RP-001
-  predecessor, RP-002 through RP-012 later rail, and MH-40. Closed review
-  fixtures cannot be substituted for that production journey.
+- The canonical E2E completion repair is committed as
+  `5fbb7a0118aa64072eb7426a47ec788481eafe6d`.
+- `FRCE-VAR-001` is resolved. One non-overlapping clean-start production
+  context completes real Final Confidence and City, proves the exact RP-001
+  predecessor, accepts the released RP-002 through RP-012 chain, and restores
+  both equal MH-40 outcomes in `68.388s` with zero runtime errors,
+  `successor=null`, and null city/world/external/authority deltas. The later
+  records come only from byte-checked sanctioned normal authorities; no
+  production fixture seam or closed review substitution exists.
 
-## Exact next action - Combat Engineer E2E completion
+## Exact next action - Quartermaster content completion
 
-Read `First Run Agent Profiles/combat-engineer.md`,
+Read `First Run Agent Profiles/quartermaster.md`,
 `Production Pipeline/First Run/FIRST_RUN_SHELL_FRSH-001-v1.md`,
 `Production Pipeline/First Run/FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-001-v1.md`,
 and
 `Production Pipeline/First Run/FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-001-v1.md`
-in full, plus the exact source/tests and planning authorities they cite as
-required by the profile.
+in full, plus
+`Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-001-v1.md`,
+the exact candidate, surface canon, game-on-paper, curriculum source contracts,
+copy rules, visual charter, scene sheets, accepted runtime assets, provenance
+records, and constraints cited by the profile.
 
-Preserve the implemented bounded candidate exactly. Extend the one existing
-non-overlapping `playtest/e2e-playthrough.mjs` canonical context beyond its
-current direct/reloaded City stop: complete and restore City, enter the exact
-verified RP-001 predecessor, traverse the released RP-002 through RP-012 rail,
-and reach MH-40. Prove READY and NOT YET READY as equal local-evidence outcomes
-using only proportionate sanctioned fixtures where `FRSH-001-v1` permits them;
-assert `successor=null`, null city/world/external/authority deltas, no obsolete
-opening response/route/credits state, and zero runtime error. Do not create a
-production fixture seam, weaken tests, run an overlapping second whole-game
-journey, or claim closed review fixtures as the canonical path.
+Verify exact functional candidate
+`5fbb7a0118aa64072eb7426a47ec788481eafe6d` and the report's placeholder
+ledger. Resolve each declared package, opening, Meadow, Drowned, Witness, and
+City copy/learning-presentation/content slot with approved final-purpose
+material or an explicit honest limitation. Preserve the shell and directorial
+meaning, exact mechanics/evidence/focus/state/save/routes/world behavior,
+surface canon, AI-901 ownership and answer boundaries, privacy, Demo Tour,
+opening save v1, immutable accepted media, and shared MH-40 ending. Do not add
+a host, route, response, reward, access, authority, identity, world change,
+successor, hidden-lore answer, or prior-human trace.
 
-Rerun the affected E2E under `180s`, production and TD-012 fixture builds,
-PBA/media/served identity, cleanup, protected-path proof, and any tests touched
-by the E2E repair. Update `FIRST_RUN_FUNCTIONAL_REPORT_FRCE-001-v1.md` with
-exact evidence. Only after the complete journey passes may Combat issue
-`PRODUCTION FUNCTIONAL`, commit/push the permitted repair, prove
-`HEAD == origin/main`, and replace this handoff with one exact Quartermaster
-action. Do not write Quartermaster prose, add/claim hosts, alter canon/learning/
-save schema/later controller meaning, touch/generate/edit/import media, create
-a reveal, inspect user state/hidden lore, or deploy Quartermaster.
+Run source/spoiler/answer/text-fit/accessibility/provenance/identity checks,
+focused regressions, production and applicable fixture builds, PBA/media/served
+identity, representative responsive/effective-`200%` review, cleanup, and
+protected-path proof. Write one versioned First Run Content and Asset Ledger
+with exact shell/build identity, placeholder dispositions, copy/source map,
+content and provenance inventory, accessibility/performance evidence,
+limitations/variances, files, and `PRODUCTION CONTENT COMPLETE`, `REVISE`, or
+`HOLD`. If complete, commit/push only permitted Quartermaster work, prove
+`HEAD == origin/main`, and hand the exact immutable content-complete candidate
+to Image Specialist for code/configuration-only runtime presentation. Do not
+perform Image Specialist polish, generate/edit/replace/vary/import/publish
+images, create a reveal, inspect user state/hidden lore, or deploy downstream.
 
 ## Protected boundaries
 
