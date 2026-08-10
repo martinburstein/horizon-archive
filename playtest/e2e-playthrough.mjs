@@ -42,7 +42,8 @@ const saveKey = "horizon-archive-prologue-v1";
 const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab moves back. Escape closes without discarding this session.";
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaRoot = process.env.HORIZON_ARCHIVE_QA_DIR || resolve(repositoryRoot, "playtest");
-const frozenCandidate = process.env.HORIZON_ARCHIVE_CANDIDATE || "unfrozen-local-run";
+const productCandidate = process.env.HORIZON_ARCHIVE_PRODUCT_CANDIDATE || "unfrozen-product-candidate";
+const probeCandidate = process.env.HORIZON_ARCHIVE_PROBE_CANDIDATE || "unfrozen-probe-candidate";
 const productPredecessor = "a9776e337f1820776864a5690332c364d0fb2556";
 const harnessPredecessor = "bf58e528bc6ce4088f81f2c782ce2895259ab9fd";
 mkdirSync(qaRoot, { recursive: true });
@@ -1538,10 +1539,21 @@ print("Operator:", learner)`);
     schema: "horizon.first-run.live-summary.v1",
     producer: "playtest/e2e-playthrough.mjs",
     workOrder: "FRWO-003-v1",
-    shell: "FRSH-003-v1-VR-02",
+    shell: "FRSH-003-v1-VR-04",
+    manifest: "FRRC-002-v1",
     productPredecessor,
     harnessPredecessor,
-    candidate: frozenCandidate,
+    productCandidate,
+    probeCandidate,
+    candidate: probeCandidate,
+    externalQaRoot: qaRoot,
+    runner: {
+      browser: "chromium",
+      version: browser.version(),
+      latticeQ: 1 / 64,
+      operator: "floor",
+      epsilon: false,
+    },
     runtimeErrors: false,
     layouts: sixfoldLayouts,
     focus: sixfoldFocus,
@@ -1815,6 +1827,7 @@ async function measureSixfoldLayout(page, id, width, height) {
   const primary = page.locator('button.hotspot[data-primary-hotspot="true"]');
   const returned = page.locator('[data-hotspot-id="meadow-return-ridge"]');
   const inventoryReturn = page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true });
+  const lookAt = page.getByRole("button", { name: "LOOK AT", exact: true });
   await page.waitForFunction(() => document.querySelector('.scene-art')?.complete && document.querySelector('.scene-art')?.naturalWidth > 0);
   const [hostRect, frameRect, containingRect, imageRect, host04Rect, returnRect, inventoryReturnRect, labelRect] = await Promise.all([
     host.boundingBox(), frame.boundingBox(), containingBlock.boundingBox(), image.boundingBox(), primary.boundingBox(), returned.boundingBox(), inventoryReturn.boundingBox(), host.locator('span').boundingBox(),
@@ -1845,11 +1858,19 @@ async function measureSixfoldLayout(page, id, width, height) {
   const drawnHeight = imageState.natural.height * scale;
   const offsetX = (imageRect.width - drawnWidth) * objectPosition.x;
   const offsetY = (imageRect.height - drawnHeight) * objectPosition.y;
-  const physicalRect = {
+  const latticeQ = 1 / 64;
+  const quantizeFloor = (value) => Math.floor(value / latticeQ) * latticeQ;
+  const unquantizedPhysical = {
     x: imageRect.x + imageRect.width * 0.45,
     y: imageRect.y + imageRect.height * 0.75,
     width: imageRect.width * 0.20,
     height: imageRect.height * 0.25,
+  };
+  const physicalRect = {
+    x: imageRect.x + quantizeFloor(imageRect.width * 0.45),
+    y: imageRect.y + quantizeFloor(imageRect.height * 0.75),
+    width: quantizeFloor(imageRect.width * 0.20),
+    height: quantizeFloor(imageRect.height * 0.25),
   };
   const sourceBounds = {
     left: (physicalRect.x - imageRect.x - offsetX) / scale,
@@ -1870,10 +1891,10 @@ async function measureSixfoldLayout(page, id, width, height) {
   const boxesEqual = ["x", "y", "width", "height"].every((key) => containingRect[key] === imageRect[key]);
   const zeroImageEdges = [...imageState.border, ...imageState.padding].every((value) => Number.parseFloat(value) === 0);
   const expectedSemantic = {
-    x: physicalRect.x,
-    y: Math.min(physicalRect.y, imageRect.y + imageRect.height - 44),
-    width: physicalRect.width,
-    height: Math.max(physicalRect.height, 44),
+    x: imageRect.x + quantizeFloor(imageRect.width * 0.45),
+    y: imageRect.y + quantizeFloor(Math.min(imageRect.height * 0.75, imageRect.height - 44)),
+    width: quantizeFloor(imageRect.width * 0.20),
+    height: quantizeFloor(Math.max(imageRect.height * 0.25, 44)),
   };
   const semanticExact = ["x", "y", "width", "height"].every((key) => hostRect[key] === expectedSemantic[key]);
   const semanticBottomAnchored = hostRect.y + hostRect.height === physicalRect.y + physicalRect.height;
@@ -1881,10 +1902,46 @@ async function measureSixfoldLayout(page, id, width, height) {
     && physicalRect.x + physicalRect.width / 2 <= hostRect.x + hostRect.width
     && physicalRect.y + physicalRect.height / 2 >= hostRect.y
     && physicalRect.y + physicalRect.height / 2 <= hostRect.y + hostRect.height;
-  const labelInset = labelRect.x - hostRect.x === 2 && labelRect.y - hostRect.y === 2
-    && hostRect.x + hostRect.width - labelRect.x - labelRect.width === 2
-    && hostRect.y + hostRect.height - labelRect.y - labelRect.height === 2;
-  const labelScrollContained = await host.locator('span').evaluate((element) => element.scrollWidth <= element.clientWidth && element.scrollHeight <= element.clientHeight);
+  const labelState = await host.locator('span').evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      border: {
+        left: Number.parseFloat(style.borderLeftWidth),
+        top: Number.parseFloat(style.borderTopWidth),
+        right: Number.parseFloat(style.borderRightWidth),
+        bottom: Number.parseFloat(style.borderBottomWidth),
+      },
+      padding: {
+        left: Number.parseFloat(style.paddingLeft),
+        top: Number.parseFloat(style.paddingTop),
+        right: Number.parseFloat(style.paddingRight),
+        bottom: Number.parseFloat(style.paddingBottom),
+      },
+      scrollWidth: element.scrollWidth,
+      scrollHeight: element.scrollHeight,
+      clientWidth: element.clientWidth,
+      clientHeight: element.clientHeight,
+    };
+  });
+  const labelTextRect = {
+    x: labelRect.x + labelState.border.left + labelState.padding.left,
+    y: labelRect.y + labelState.border.top + labelState.padding.top,
+    width: labelRect.width - labelState.border.left - labelState.border.right - labelState.padding.left - labelState.padding.right,
+    height: labelRect.height - labelState.border.top - labelState.border.bottom - labelState.padding.top - labelState.padding.bottom,
+  };
+  const outerLabelInset = labelRect.x - hostRect.x === 3 && labelRect.y - hostRect.y === 3
+    && hostRect.x + hostRect.width - labelRect.x - labelRect.width === 3
+    && hostRect.y + hostRect.height - labelRect.y - labelRect.height === 3;
+  const innerLabelInset = labelRect.x - (hostRect.x + 1) === 2 && labelRect.y - (hostRect.y + 1) === 2
+    && hostRect.x + hostRect.width - 1 - labelRect.x - labelRect.width === 2
+    && hostRect.y + hostRect.height - 1 - labelRect.y - labelRect.height === 2;
+  const labelBorderExact = Object.values(labelState.border).every((value) => value === 1);
+  const labelPaddingExact = Object.values(labelState.padding).every((value) => value === 1);
+  const labelTextExact = labelTextRect.x === hostRect.x + 5 && labelTextRect.y === hostRect.y + 5
+    && labelTextRect.width === hostRect.width - 10 && labelTextRect.height === hostRect.height - 10;
+  const labelRawFinite = [...Object.values(labelState.border), ...Object.values(labelState.padding), ...Object.values(labelTextRect)]
+    .every((value) => Number.isFinite(value));
+  const labelScrollContained = labelState.scrollWidth <= labelState.clientWidth && labelState.scrollHeight <= labelState.clientHeight;
   const identityBefore = await host.evaluate((element) => ({
     ariaLabel: element.getAttribute("aria-label"),
     hotspotId: element.dataset.hotspotId,
@@ -1893,7 +1950,10 @@ async function measureSixfoldLayout(page, id, width, height) {
   }));
   if (!identityBefore.active || identityBefore.state !== "in_progress") throw new Error(`Host 05 forced-color precondition failed at ${id}: ${JSON.stringify(identityBefore)}`);
   await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
-  const mediaQueryActive = await page.evaluate(() => matchMedia("(forced-colors: active)").matches);
+  const mediaState = await page.evaluate(() => ({
+    forcedColors: matchMedia("(forced-colors: active)").matches,
+    reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
+  }));
   const focusOrder = await page.evaluate(() => {
     const identity = (element) => element?.dataset?.hotspotId || element?.getAttribute("aria-label") || element?.textContent?.trim();
     const host04 = document.querySelector('button.hotspot[data-primary-hotspot="true"]');
@@ -1906,13 +1966,18 @@ async function measureSixfoldLayout(page, id, width, height) {
       enabled: [host05, ...verbs, returnedAction].filter((element) => element && !element.disabled).map(identity),
     };
   });
-  await page.keyboard.press("Shift+Tab");
-  const predecessor = await inventoryReturn.evaluate((element) => ({
+  const actionStateBefore = await page.evaluate((key) => ({
+    save: localStorage.getItem(key),
+    dialogue: document.querySelector('.dialogue-box')?.textContent,
+    url: location.href,
+  }), saveKey);
+  await page.keyboard.press("Tab");
+  const intermediate = await lookAt.evaluate((element) => ({
     active: document.activeElement === element,
     focusVisible: element.matches(":focus-visible"),
-    identity: element.getAttribute("aria-label"),
+    identity: element.textContent.trim(),
   }));
-  await page.keyboard.press("Tab");
+  await page.keyboard.press("Shift+Tab");
   const forcedColorEvidence = await host.evaluate((element) => {
     const style = getComputedStyle(element);
     const label = element.querySelector("span");
@@ -1934,6 +1999,11 @@ async function measureSixfoldLayout(page, id, width, height) {
       labelMotion: [labelStyle.animationDuration, labelStyle.animationDelay, labelStyle.transitionDuration, labelStyle.transitionDelay],
     };
   });
+  const actionStateAfter = await page.evaluate((key) => ({
+    save: localStorage.getItem(key),
+    dialogue: document.querySelector('.dialogue-box')?.textContent,
+    url: location.href,
+  }), saveKey);
   const identityAfter = await host.evaluate((element) => ({
     ariaLabel: element.getAttribute("aria-label"),
     hotspotId: element.dataset.hotspotId,
@@ -1944,8 +2014,9 @@ async function measureSixfoldLayout(page, id, width, height) {
   const postLabelRect = await host.locator('span').boundingBox();
   await page.emulateMedia({ forcedColors: "none", reducedMotion: "no-preference" });
   const motionZero = (values) => values.every((value) => value.split(",").every((part) => Number.parseFloat(part) === 0));
-  const forcedColors = mediaQueryActive && predecessor.active && predecessor.focusVisible
-    && predecessor.identity === "Return to Chapter I, Glass Meadow"
+  const noGameAction = JSON.stringify(actionStateBefore) === JSON.stringify(actionStateAfter);
+  const forcedColors = mediaState.forcedColors && mediaState.reducedMotion
+    && intermediate.active && intermediate.focusVisible && intermediate.identity === "LOOK AT"
     && forcedColorEvidence.active && forcedColorEvidence.focusVisible
     && forcedColorEvidence.outlineWidth === "3px" && forcedColorEvidence.outlineStyle === "solid"
     && forcedColorEvidence.outlineColor === forcedColorEvidence.systemHighlight
@@ -1965,8 +2036,11 @@ async function measureSixfoldLayout(page, id, width, height) {
     containingBlock: containingRect,
     image: { ...imageRect, ...imageState, objectPosition },
     physical: physicalRect,
+    unquantizedPhysical,
+    expectedSemantic,
+    lattice: { q: latticeQ, operator: "floor", strict: true, epsilon: false },
     host05: { x: hostRect.x, y: hostRect.y, width: hostRect.width, height: hostRect.height },
-    label: labelRect,
+    label: { ...labelRect, border: labelState.border, padding: labelState.padding, text: labelTextRect },
     host04: host04Rect,
     returnRidge: returnRect,
     inventoryReturn: inventoryReturnRect,
@@ -1982,7 +2056,13 @@ async function measureSixfoldLayout(page, id, width, height) {
     returnOverlapArea: overlap(hostRect, returnRect),
     targetSize,
     labelContained,
-    labelInset,
+    labelInset: innerLabelInset && outerLabelInset,
+    innerLabelInset,
+    outerLabelInset,
+    labelBorderExact,
+    labelPaddingExact,
+    labelTextExact,
+    labelRawFinite,
     labelScrollContained,
     boxesEqual,
     zeroImageEdges,
@@ -1991,7 +2071,18 @@ async function measureSixfoldLayout(page, id, width, height) {
     physicalCenterInsideActivation,
     horizontalOverflow,
     focusOrder,
-    forcedColorEvidence: { keySequence: "Shift+Tab -> Tab", predecessor, mediaQueryActive, ...forcedColorEvidence, identityBefore, identityAfter },
+    forcedColorEvidence: {
+      keyPath: "Tab -> Shift+Tab",
+      reverseDomPredecessor: null,
+      forwardSuccessor: "LOOK AT",
+      intermediate,
+      final: { identity: identityAfter.hotspotId, active: identityAfter.active, focusVisible: forcedColorEvidence.focusVisible },
+      mediaState,
+      noGameAction,
+      ...forcedColorEvidence,
+      identityBefore,
+      identityAfter,
+    },
     forcedColors,
     reducedMotion,
     identityStable,
@@ -1999,10 +2090,12 @@ async function measureSixfoldLayout(page, id, width, height) {
   result.pass = result.boxesEqual && result.zeroImageEdges && result.semanticExact && result.semanticBottomAnchored
     && result.physicalCenterInsideActivation && result.anchorContained && result.sourceBandRetention >= 0.95
     && result.host04OverlapArea === 0 && result.returnOverlapArea === 0 && result.targetSize
-    && result.labelContained && result.labelInset && result.labelScrollContained && !result.horizontalOverflow
+    && result.labelContained && result.labelInset && result.labelBorderExact && result.labelPaddingExact
+    && result.labelTextExact && result.labelRawFinite && result.labelScrollContained && !result.horizontalOverflow
     && result.forcedColors && result.reducedMotion && result.identityStable
+    && result.forcedColorEvidence.noGameAction
     && JSON.stringify(result.focusOrder.dom) === JSON.stringify(["primary", "sixfold-weir", "meadow-return-ridge"])
-    && JSON.stringify(result.focusOrder.enabled) === JSON.stringify(["sixfold-weir", "LOOK AT", "TALK TO", "USE", "Return to Chapter I, Glass Meadow"]);
+    && JSON.stringify(result.focusOrder.enabled) === JSON.stringify(["sixfold-weir", "LOOK AT", "USE", "TALK TO", "Return to Chapter I, Glass Meadow"]);
   return result;
 }
 
