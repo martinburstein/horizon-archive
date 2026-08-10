@@ -2,26 +2,39 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION CONTENT HOLD / FRCA-003-v1 / VR-09`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-003-v1-VR-10`**
 
-Exact next owner: **Mission Captain**
+Exact next owner: **Quartermaster**
 
-Exact next action: adjudicate the VR-09 pre-create trailing-separator
-canonicalization failure recorded in
-`Production Pipeline/First Run/FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-003-v1.md`.
+Mission adjudicated VR-09 as a pre-create canonical-string mismatch and issued
+`FIRST RUN SHELL READY / FRSH-003-v1-VR-10`. Resolved OS temp retained a
+trailing separator while the candidate parent did not. No root, environment,
+preview, served request, browser, E2E, summary, verifier, cleanup target, or
+tracked change existed; ports remain clear.
 
-Quartermaster's repeated exact identity preflight passed at synchronized source
-`913cbfe376dd028c67f0373b9e8c4126bf5fcf15`. Before creation, direct-parent
-equality failed because resolved OS temp retained a trailing separator and
-`[IO.Path]::GetDirectoryName(candidate)` did not. The exact error was `parent`.
-No root was created; no environment, preview, served request, browser, E2E,
-summary, verifier, or cleanup target existed. No retry occurred. Ports
-`4173` / `4184` are clear and tracked files remained clean.
+Exact next action: read `First Run Agent Profiles/quartermaster.md` in full,
+then read this handoff, complete
+`Production Pipeline/First Run/FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-10.md`,
+complete `FRSH-003-v1-VR-09`, and complete current `FRCA-003-v1`.
 
-The immutable content candidate remains
-`a91763e28d488f31f8cf7d40ece0b2682246ba9b`; evidence candidate remains
-`ca89a679195c11d441a76e6c02983a6436f2ccb2`. Mission may adjudicate an exact
-separator-normalized parent comparison or retain HOLD. Product/content/test/
-copy/probe/manifest/media/presentation/learning/save/route/ending/maturity and
-protected/user state remain frozen. No image/media operation or reveal
-occurred. Image Specialist and Intelligence remain blocked.
+Change no tracked file. Repeat exact identity preflight from synchronized
+VR-10. Normalize both resolved OS-temp parent and candidate parent with
+`[IO.Path]::GetFullPath(...).TrimEnd(directory separators)` before exact
+`OrdinalIgnoreCase` direct-parent equality. Preserve separate descendant and
+bidirectional outside-repository checks. Only after every check passes create
+one root with the VR-09 native `New-Item -ItemType Directory -Path ...
+-ErrorAction Stop`, then resolve and repeat the identical normalization and
+containment checks before any environment, write, preview, or request.
+
+Only after root validation may Quartermaster inject exact content candidate
+`a91763e28d488f31f8cf7d40ece0b2682246ba9b`, evidence candidate
+`ca89a679195c11d441a76e6c02983a6436f2ccb2`, and the normalized root; start
+owned previews; prove served identity; and invoke exactly one complete
+FRRC-002 E2E, one generated summary, and one verifier. Reapply identical
+normalization and containment before deleting only the exact owned root.
+
+Any failure is `HOLD` with no rerun. Product/content/test/copy/probe/manifest/
+media/presentation/learning/save/route/ending/maturity remain frozen. Image
+Specialist and Intelligence remain blocked until synchronized Quartermaster
+PASS. Do not touch prior roots or protected paths, perform media work, create
+a reveal/schedule, or call `FIRST RUN COMPLETE`.
