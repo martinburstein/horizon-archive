@@ -116,3 +116,28 @@ Quartermaster therefore performed no replay and preserves **`PRODUCTION
 CONTENT HOLD / FRCA-003-v1`**. No tracked product, copy, test, manifest, probe,
 media, presentation, learning, save, route, ending, or maturity byte changed.
 Mission Captain is the exact next owner for adjudication; Image remains blocked.
+
+## VR-09 native-root replay return
+
+Mission reissued `FIRST RUN SHELL READY / FRSH-003-v1-VR-09` with corrected
+`New-Item -Path` creation and fail-fast orchestration. Quartermaster repeated
+and passed the exact synchronized Git/object/blob/ancestry/slot/media/port
+preflight at `913cbfe376dd028c67f0373b9e8c4126bf5fcf15`.
+
+Before creation, the direct-parent containment check compared the canonical
+candidate parent from `[IO.Path]::GetDirectoryName` with the resolved OS-temp
+parent. The resolved temp value retained a trailing directory separator while
+the candidate parent did not, so the ordinal-ignore-case string equality
+failed with exact error `parent`. This was a canonical-form comparison defect,
+not a containment escape. It occurred before `New-Item`.
+
+No QA root was created. No environment assignment, preview, served request,
+browser, E2E, summary, verifier, or cleanup target existed. Ports `4173` and
+`4184` remain clear and tracked files remained clean throughout. VR-09 makes
+any path-check failure immediate HOLD without retry, so Quartermaster stopped.
+
+Disposition remains **`PRODUCTION CONTENT HOLD / FRCA-003-v1 / VR-09`**.
+Mission Captain is the exact next owner to adjudicate trailing-separator
+canonicalization. Image Specialist remains blocked. No product, content, copy,
+test, probe, manifest, media, presentation, learning, save, route, ending,
+maturity, protected, or user byte changed; no image/media operation occurred.
