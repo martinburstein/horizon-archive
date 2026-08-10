@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / PRODUCTION OWNERSHIP AND
-READINESS LOCALIZATION ONLY / FRSH-003-v1-VR-40`**
+Current disposition: **`FIRST RUN SHELL READY / FORMAL PRE-LIVE SERVED
+IDENTITY ONLY / FRSH-003-v1-VR-41`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
@@ -11,13 +11,13 @@ Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
 Exact next owner: **Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-40`
+Immediate control: `FRSH-003-v1-VR-41`
 
-Immediate return / predecessor authority: Combat VR-39 exact-port ownership
-recovery / `FRSH-003-v1-VR-39`
+Immediate return / predecessor authority: Combat VR-40 production ownership
+and readiness localization PASS / `FRSH-003-v1-VR-40`
 
-Mission VR-40 predecessor source:
-`ebe71ff3418dd1f959571133d7a4b96d927ac771`
+Mission VR-41 predecessor source:
+`9ec8dfaf2da63d86a28679b349ba2be03d9987a5`
 
 Exact immutable content candidate:
 `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
@@ -27,46 +27,41 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-VR-39 started the exact production preview once and created the exact listener
-PID `29264`, but the PassThru scalar was missing, so no readiness request ran.
-Combat queried that exact listener, stopped it for safety, and proved port
-`4173` clear. Mission classifies **`UNAUTHORIZED DIVERGENCE / EXACT-PORT
-LISTENER OWNERSHIP RECOVERY / OPEN / VR-39`**. The recovery is non-evidence and
-does not pass served identity.
+VR-40 diagnostic stage `0` PASS is accepted: exact PassThru ownership, root
+HTTP `200`, owned cleanup, and port clear. Hidden no-redirection launch emitted
+nothing and avoided swallowing the wrapper scalar. Mission accepts
+**`ACCEPTED VARIANCE / HIDDEN NO-REDIRECTION PASSTHRU TRANSPORT / NO OUTPUT /
+NO PRODUCT CHANGE / VR-40`**.
 
 Fresh-child capacity remains unavailable, so root expressly authorized this
-Mission context reuse. The disclosed coordination limitation is not candidate
-evidence and waives no boundary.
+Mission context reuse. The disclosed limitation is not candidate evidence and
+waives no boundary.
 
-Combat may run only one production ownership/readiness localization. First
-prove exact port `127.0.0.1:4173` clear. Record UTC launch ticks, then launch
-the same exact direct Node/bundled-Vite vector once. Prefer the PassThru PID.
-Only if it is absent may Combat poll the exact listener tuple, require exactly
-one PID, require that process start time be at or after launch time, and compare
-its executable internally with the resolved Node source. Bind it as owned only
-when all three fallback checks pass; emit no path.
+Combat may run one formal production-and-fixture served-identity checkpoint.
+Require ports `4173/4184` clear; use hidden no-redirection PassThru-owned direct
+Node/Vite launches exactly once each; obtain root readiness with the bounded
+suppressed IWR transport; then request only root, `/deep/fallback`, the one JS,
+and the one CSS per build. Require four HTTP `200` results, two root/deep-to-
+disk-index SHA-256 matches, and two served-to-disk asset SHA-256 matches for
+each build. Hashes, bodies, asset names, paths, and diagnostics stay internal.
+Unconditionally stop both owned PIDs and prove both ports clear.
 
-Only after lawful ownership, run the bounded suppressed VR-39
-`Invoke-WebRequest` root-readiness loop. Unconditionally stop only the bound
-owned PID and check exact port clear. Emit exactly one scalar line:
+Emit exactly one ordered scalar line:
 
 ```text
-prePortClearCount=<0|1> launchUtcTicks=<int> passThruPid=<int> listenerProbeAttempts=<int> listenerPidCount=<int> listenerStartAfterLaunch=<0|1> listenerExecutableNode=<0|1> ownershipMode=<0|1|2> productionPid=<int> productionReadinessAttempts=<int> productionReadinessStatus=<int> productionReady=<0|1> cleanupAttemptCount=<0|1> productionPidStopped=<0|1> portClearCount=<0|1> localizedStage=<0..5> nativeExit=<0|1>
+prePortClearCount=<0..2> productionStartExit=<0|1> productionPid=<int> fixtureStartExit=<0|1> fixturePid=<int> productionReadinessAttempts=<int> productionReadinessStatus=<int> fixtureReadinessAttempts=<int> fixtureReadinessStatus=<int> productionHttp200Count=<0..4> productionRootDeepHashMatchCount=<0..2> productionAssetHashMatchCount=<0..2> fixtureHttp200Count=<0..4> fixtureRootDeepHashMatchCount=<0..2> fixtureAssetHashMatchCount=<0..2> safetyRecoveryCount=<0..2> cleanupAttemptCount=<0..2> productionPidStopped=<0|1> fixturePidStopped=<0|1> portClearCount=<0..2> nativeExit=<0|1>
 ```
 
-Mode `1` is PassThru ownership; mode `2` is strict fallback ownership; mode `0`
-is no lawful ownership. Stage `1` is dirty pre-port, `2` launch failure, `3`
-ownership failure, `4` readiness failure, `5` cleanup failure, and `0`
-diagnostic pass. Mode `2` requires listener count/start/executable scalars
-`1/1/1`. Native pass also requires one positive PID, readiness status `200`,
-ready `1`, owned cleanup `1/1`, and final port clear `1`.
+Exact pass is `2`; `0/0`; two positive PIDs; readiness status `200/200`;
+production `4/2/2`; fixture `4/2/2`; safety recovery `0`; cleanup `2`; stopped
+`1/1`; ports clear `2`; native exit `0`. On exact pass return **`FORMAL PRE-
+LIVE SERVED IDENTITY PASS / STOP / RETURN TO FRESH MISSION`**. Otherwise
+return **`HOLD / FORMAL PRE-LIVE SERVED IDENTITY FAILURE / NO RERUN / RETURN
+TO FRESH MISSION`**. Stop after the scalar.
 
-Stop after the scalar and return **`PRODUCTION OWNERSHIP AND READINESS
-LOCALIZED / STOP / RETURN TO FRESH MISSION`**. Even stage `0` is diagnostic
-only. No second launch, nonexact listener query, unowned stop, fixture, deep
-route, asset, formal served rerun, browser, E2E, build, test, validator, PBA,
-scan, synchronization, discovery, enumeration, repair, or repository write is
-authorized.
+No retry, repair, browser, E2E, complete journey, summary, verifier, dynamic
+live gates, build, test, validator, PBA, scan, synchronization, discovery,
+enumeration, filename/path output, or repository write is authorized.
 
 All six OPEN divergences remain separate and OPEN:
 
@@ -92,4 +87,4 @@ one-E2E meanings remain exact. No release-map or scoreboard cell advances.
 No Quartermaster, Image Specialist, Intelligence, release, schedule,
 automation, or `FIRST RUN COMPLETE` action is authorized.
 
-VR-40 and this synchronized handoff are the only administrative writes.
+VR-41 and this synchronized handoff are the only administrative writes.
