@@ -80,26 +80,57 @@ exact-next-action authority.
 - The revalidation artifact is
   `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE_REVALIDATION_FRPB-001-v1-GR-01.md`.
 
-## Exact next action - fresh Colonel continuity lock
+## Fresh Colonel result
 
-Read `First Run Agent Profiles/colonel.md` in full; then read the guarded
-Commandant revalidation, `FRPB-001-v1`, `FRAB-001-v1`, the current release map
-and scoreboard, the complete game-on-paper, surface lore, current runtime
-story/copy/scene authorities, and released TD-012/TE-001 evidence. Perform a
-fresh post-release continuity reconciliation and issue one versioned
-`CONTINUITY LOCK`, `REVISE`, or `HOLD` disposition.
+- Colonel issued **`CONTINUITY LOCK / FRCL-002-v1`** from exact control source
+  `66faba17ea9e7b9b4a1f70875468c745f261a0fd`.
+- `FR-02` remains the earliest unresolved continuity address: Fracture Nursery
+  and the complete Glass Meadow turn remain missing while the low-growth
+  continuation remains pre-existing and nonresponsive.
+- Drowned route-creation and Witness listening/speech contradictions are closed
+  by `FRAB-001-v1`. Those copy corrections add no host and promote no physical-
+  host cell.
+- Current City Threshold visibly says `The successor packet remains behind the
+  staging boundary.` The phrase is an active canon/final-purpose-content
+  contradiction: it exposes production architecture, conflicts with the
+  immediately available released route, and has no lawful voice as written.
+  Scene may own the already-lit bridge, Suit/System the expedition route state,
+  and Pilot the deliberate route action; Machine/Builders own no line.
+- The direct City transition itself remains exact, credits-free, and
+  nonresponsive. It enters the already-operating Civic Record route without
+  welcome, unlock, reward, identity acceptance, world response, or new access.
+- Bounded `FR4` remains release proof for `FRWO-001-v1`, not whole-address or
+  physical-host parity. The distinct-host inventory remains four exact, one
+  accepted shared Drowned compression, thirty-four missing, and one unadvanced
+  Witness expression.
+- Measured Horizon remains behaviorally exact through MH-40 with equal READY /
+  NOT YET READY dignity, null city/world/external/authority deltas, and
+  `successor=null`. Its final literary close and exact canonical last sentence
+  remain absent from runtime.
+- The lock artifact is `Production Pipeline/First Run/
+  FIRST_RUN_CONTINUITY_LOCK_FRCL-002-v1.md`.
 
-At minimum, determine whether `FR-02` remains the earliest unresolved
-continuity gap; classify the exact City Threshold `successor packet` phrase and
-its lawful voice ownership; prove that bounded `FR4` did not promote any
-physical-host parity; confirm direct City entry remains credits-free and
-nonresponsive; and confirm Measured Horizon remains behaviorally exact with
-equal outcomes, null deltas, and `successor=null` while its mapped literary
-close remains incomplete.
+## Exact next action - Operations Work Order selection
 
-Do not select or preauthorize a Work Order, implement a correction, change
-media, inspect protected state, begin Operations, or infer/restart automation
-inside the Colonel invocation.
+Read `First Run Agent Profiles/operations-planning-major.md` in full; then read
+`FRPB-001-v1`, guarded revalidation `FRPB-001-v1-GR-01`, `FRAB-001-v1`,
+`FRCL-002-v1`, and the current release map and scoreboard. Revalidate the
+earliest-first queue against actual runtime evidence and issue one versioned
+`WORK ORDER READY`, `REVISE`, or `HOLD` disposition.
+
+Treat `FR-02` as the earliest unresolved continuity address and the City
+`successor packet` sentence as a separate later active contradiction unless a
+documented dependency, critical safety/accessibility defect, or prevention of
+duplicate destructive work justifies another order. Select exactly one bounded
+vertical-quality Work Order; define its player-visible outcome, entry/exit and
+recovery boundary, permitted systems/files, validation ladder, immutable-media
+feasibility, and safe deferrals. Update the release map and scoreboard only
+within Operations authority.
+
+Do not implement, write final copy, promote a physical-host cell, alter canon,
+learning, route, save, world, or ending behavior, change media, create the
+Science viability envelope or Mission shell, begin Science, or infer/restart
+automation inside the Operations invocation.
 
 ## Protected boundaries
 
