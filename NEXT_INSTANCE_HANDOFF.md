@@ -21,53 +21,48 @@ exact-next-action authority.
 ## Active First Run state
 
 - Commandant issued **`FIRST RUN VISION BASELINE / FRPB-001-v1`** at source
-  `ce296c64a79c6ce4e483948c9f2e59b9d036c21d` in
-  `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`.
+  `ce296c64a79c6ce4e483948c9f2e59b9d036c21d`.
 - Colonel issued **`CONTINUITY LOCK / FRCL-001-v1`** from source
-  `d15858a3ae09ba484ce149bb8f03a8adb660f43e` in
-  `Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md`.
-- The lock classifies all 15 chapters and 40 Terminal hosts. Chapter totals are
-  `0 exact / 12 accepted compression / 1 missing expression / 2 contradiction
-  / 0 unknown`. Terminal totals are `4 / 1 / 34 / 1 / 0` in the same order.
-- The earliest continuity distance includes visible temporary-prologue
-  scaffolding. Additional pre-City contradictions include the stale mid-rail
-  `Prologue complete` credits interruption, its world-response line, Drowned
-  route-creation copy, and Witness listening/spoken-response copy.
-- Current lesson implementation does not establish forty-host parity.
-  Terminals 05-15 and 17-38 retain their exact learning ownership but lack
-  distinct enriched physical-host expression.
-- No Release Map, Scoreboard, Work Order, Viability Envelope, or First Run Shell
-  exists yet. No production implementation is authorized.
+  `d15858a3ae09ba484ce149bb8f03a8adb660f43e`.
+- Operations issued **`WORK ORDER READY / FRWO-001-v1`** from source
+  `7e1e13b5e57ec96bf09b8a9ace652ddf4e7241a7`, plus
+  `FRRM-001-v1` and `FRSB-001-v1`.
+- The selected address is `FR-00` through initial `FR-05`: truthful package
+  identity, final-purpose existing prologue, canon-safe Drowned/Witness copy,
+  and direct existing City Threshold handoff. These surfaces form one obsolete
+  three-scene-demo seam and one player-visible outcome.
+- No physical-host expansion is authorized. Fracture Nursery remains the next
+  earliest mapped missing host; Drowned hosts 05-15 and hosts 17-38 remain
+  explicitly incomplete. Learning coverage is not host parity.
+- No Viability Envelope or First Run Shell exists yet. No production
+  implementation is authorized.
 - Martin authorized continued sequential First Run work in this chat. Continue
   only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
 
-## Exact next action - Operations Release Map, Scoreboard, and Work Order
+## Exact next action - Science viability envelope
 
-Read `First Run Agent Profiles/operations-planning-major.md`,
-`Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`, and
-`Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md` in
-full. Inspect the exact current controls and runtime evidence required by that
-profile.
+Read `First Run Agent Profiles/office-of-science-administrator.md`,
+`Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`,
+`Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md`,
+`Production Pipeline/First Run/FIRST_RUN_RELEASE_MAP.md`,
+`Production Pipeline/First Run/FIRST_RUN_SCOREBOARD.md`, and
+`Production Pipeline/First Run/FIRST_RUN_WORK_ORDER_FRWO-001-v1.md` in full.
 
-Create the first versioned First Run Release Map and Scoreboard from actual
-evidence, maintaining separate maturity for chapter continuity, physical-host
-expression, learning, behavior, content, presentation, and release proof. Rank
-the earliest material player-facing gaps under `FRPB-001-v1`, then select one
-bounded integration-sized vertical-quality Work Order.
+Independently inspect the exact opening save/activation path, early scene and
+City Threshold transition graph, Demo Tour isolation, Windows launcher/package
+entry, focused and E2E tests, current TD-012 budgets, and affected
+accessibility/presentation states. Answer every Work Order Science question,
+including safe removal of the obsolete credits junction, save/marker migration,
+launcher compatibility, complete Drowned/Witness response-string closure, and
+zero learning/evidence/save/later-route regression.
 
-Explicitly evaluate whether temporary prologue finalization, stale product/demo
-naming, the mid-rail prologue credits interruption, and the Drowned/Witness
-contradiction copy belong to one coherent player-visible outcome or must be
-separated. Do not silently create an unbounded “polish everything” pass. Record
-why the selected boundary is earliest and why every excluded earlier
-contradiction is safely deferred.
-
-Issue `WORK ORDER READY`, `REVISE`, or `HOLD`, commit the Operations stage, and
-leave one exact Science handoff. Do not implement, write final copy, create a
-viability envelope or shell, change media, or promote a missing host to parity
-in the Operations invocation.
+Issue exactly one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
+envelope for `FRWO-001-v1`, commit the Science stage, and leave one exact
+Mission handoff. Do not write final copy, implement production changes, create
+a Mission shell, change media, promote a missing host, or alter the Work Order
+boundary silently.
 
 ## Protected boundaries
 
