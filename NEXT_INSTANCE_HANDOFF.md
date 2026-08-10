@@ -2,38 +2,40 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / SPLIT FIXTURE LAUNCH-READINESS
-CONTROL ONLY / FRSH-003-v1-VR-59`**
+Current disposition: **`FIRST RUN SHELL READY / FULLY STAGED ONE-E2E
+DIAGNOSTIC-CONTROL VERIFICATION / FRSH-003-v1-VR-60`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-59`
+Immediate control: `FRSH-003-v1-VR-60`
 
-Mission source: `1172d1b90e3ba884cc6d98e4b64c7d9753d7b1f6`
+Mission source: `261390a19b6f1d2a304be8b12a4f5ec4caeceb0c`
 
-VR-58 is accepted as **`EXACT PID-16040 CLEANUP VERIFIED / PID ABSENT / PORT
-4173 CLEAR / NO LIVE`**. PID `16040` was already absent, no stop was needed,
-and the exact port was clear. The VR-57 post-stop absence anomaly is resolved
-execution-control evidence and adds no twelfth OPEN classification.
+VR-59 fixture preclear, hidden direct launch/PID, separate root readiness, and
+exact-PID cleanup/absence/port-clear controls all passed. Production and
+fixture split control shapes are now independently proven. Fresh-root token,
+disposable SHA, and token-bound root deletion controls also remain proven.
 
-The split hidden production launch/readiness command shape is now proven.
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-Combat may run the analogous fixture-only split control on 4184: (A) exact
-preclear; (B) direct fixture Node/Vite `Start-Process -WindowStyle Hidden
--PassThru` only and numeric PID emission; (C) transported-PID liveness plus
-bounded suppressed fixture-root IWR readiness only; (D) mandatory exact
-transported-PID stop plus port-4184 clear proof. If final PID absence is not
-proven, stop and return to Mission for a separately adjudicated cleanup
-verification; no same-shell retry is authorized.
+Combat may execute only the ten separate bounded VR-60 calls: port preclear;
+root create/token; production launch only; production readiness only; fixture
+launch only; fixture readiness only; exactly one E2E evidence branch; fixture
+PID cleanup; production PID cleanup; root cleanup. Launch, readiness, process
+cleanup, and root cleanup patterns may never be combined.
 
-No production, root/filesystem, listener recovery, deep/assets, byte identity,
-formal served identity, browser, E2E, diagnostic, summary, verifier, build,
-test, PBA, product/media/protected action, or retry is authorized.
+Exactly one E2E invocation remains. Success requires diagnostic
+`checkInventoryExact=true`, `failureCount=0`, `browserClosed=true`, summary 1,
+verifier 1 PASS, both PIDs absent/ports clear, and root deleted. Failure
+requires full canonical base64 transport before cleanup, no verifier, and no
+rerun. Any pre-E2E failure/rejection exhausts this shell without spending E2E
+and activates only the applicable independent cleanup calls.
 
-The single E2E budget remains unspent. Frozen candidates, cumulative accepted
-gates/invariants, and all eleven OPEN classifications remain exact. Return the
-VR-59 scalars to fresh Mission; no downstream action is authorized.
+No product/media/protected change, build, test, PBA, formal served-identity
+rerun, second E2E, or retry is authorized. Frozen candidates, cumulative
+accepted gates/invariants, and all eleven OPEN classifications remain exact.
+Return all VR-60 scalars/evidence to fresh Mission; no downstream action is
+authorized.
