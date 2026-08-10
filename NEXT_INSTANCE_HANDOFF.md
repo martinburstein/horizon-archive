@@ -482,27 +482,56 @@ exact-next-action authority.
 - Quartermaster and maturity remain blocked. Variance artifact is
   `Production Pipeline/First Run/
   FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-06.md`.
+- Tactical resolved the composite ambiguity as **`PLAYER EXPERIENCE READY /
+  FRPX-003-v1-VR-03`** at source
+  `e8f09ab526b35adba658189bb4934315e0db230c` without changing or executing
+  product, probe, test, E2E, manifest, summary, verifier, fixture, or media.
+- Immutable semantic identity now requires the same connected Host 05 DOM node
+  from desktop through retained-320x240, exact button/test-id/accessible-name/
+  `in_progress`/enabled-order identity, exact genuine `Tab -> LOOK AT ->
+  Shift+Tab -> same Host 05` focus facts, and byte-equal sanctioned storage,
+  URL, scene, verb, dialogue, modal/session, evidence, route, and world state
+  with `noGameAction=true` and `noWrite=true`.
+- Geometric stability is independent. Within each fixed viewport epoch,
+  pre/post `.scene-frame`, content, `.scene-art`, physical, semantic, label/
+  text, Host 04, and return rectangles plus exact scrollX/Y are normalized to
+  document coordinates. Raw viewport translation is allowed only when it is
+  exactly the inverse of measured scroll; every signed `q=1/64` residual and
+  width/height delta must be strict zero with no epsilon or re-quantization.
+- Raw boxes are not compared across different viewport sizes. Each of the six
+  sequential epochs must independently pass the unchanged direct strict-Q
+  physical/semantic size, image-relative registration, source/center/
+  retention, target, label, containment, overlap, overflow, forced-color,
+  reduced-motion, and action-order gates before and after traversal.
+- A future summary/verifier must emit and independently reject on missing or
+  false same-node/semantic/game-state facts; missing/nonfinite/off-lattice
+  pre/post viewport/scroll/raw/document/image-relative geometry; nonzero
+  residual; direct-gate/focus variance; candidate or release-gate drift; or an
+  incomplete aggregate. VR-05 remains stopped evidence, neither acceptance nor
+  product-defect proof.
+- Runtime product `7e85154`, probe `d9487d82`, validation control `4cd7fbf`,
+  all thresholds/placeholders/PBA/media/performance/cleanup, learning/save/
+  route/world/later rail/ending, and rollback remain frozen. Tactical
+  authorizes no repair or run.
+- Tactical clarification artifact is `Production Pipeline/First Run/
+  FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-003-v1-VR-03.md`.
 
-## Exact next action - Tactical Operations Specialist only
+## Exact next action - Mission Captain only
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md` in full,
-then read this handoff, complete `FRSH-003-v1-VR-06`, complete latest
-`FRCE-003-v1`, `FRSH-003-v1-VR-05`, operative `FRSH-003-v1-VR-04`, prior
-`FRPX-003-v1-VR-02`, and the exact current `measureSixfoldLayout` composite
-predicate.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, complete `FRSH-003-v1-VR-06`,
+`FRPX-003-v1-VR-03`, complete latest `FRCE-003-v1`, and the exact current
+`measureSixfoldLayout` composite predicate.
 
-Answer exactly what immutable semantic identity means and which exact
-coordinate space proves no layout drift across sequential viewport changes and
-the genuine `Tab -> LOOK AT -> Shift+Tab -> Host 05` traversal. Separate
-semantic identity from geometry; define same-node/accessible/data/state/focus/
-no-action fields, required pre/post boxes and scroll offsets, exact coordinate
-normalization, allowed scroll-only translation versus forbidden residual
-drift, and machine-summary/verifier fail conditions. Preserve strict geometry,
-source, label, target, focus, motion, order, no-action, candidate, media,
-learning/save/route/world/ending, and no-epsilon thresholds. Issue one
-versioned Tactical clarification or continue `HOLD`, then return to Mission.
-Do not edit or execute product/probe/test/harness/manifest, authorize Combat or
-an E2E, begin Quartermaster, or advance maturity.
+Issue exactly one versioned Mission shell redecision: `FIRST RUN SHELL READY`
+or `HOLD`. Reconcile the same-node semantic contract and exact
+document-coordinate scroll/residual contract without selecting a product
+repair or weakening any direct gate. If `READY`, freeze exact permitted
+probe/summary/verifier/static-control files and deterministic gates, and state
+whether a single fresh complete E2E is authorized only after every pre-live
+gate passes. Do not begin Combat/Quartermaster, execute a run, change a
+placeholder/product/threshold/media/learning/save/route/world/ending, or
+advance maturity.
 
 ## Protected boundaries
 
