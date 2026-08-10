@@ -2,19 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ONE MINIMAL-TRACKED-ALLOWLIST
-STATIC-FOCUSED VERIFICATION / FRSH-003-v1-VR-19`**
+Current disposition: **`HOLD / MINIMAL-TRACKED-ALLOWLIST STATIC-FOCUSED
+FAILURE / NO RERUN / RETURN TO FRESH MISSION / FRCE-003-v1-VR-19`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Combat Engineer**
+Exact next owner: **fresh Mission Captain**
 
-Immediate authority: `FRSH-003-v1-VR-19`
+Immediate authority / return: `FRSH-003-v1-VR-19` /
+`FRCE-003-v1-VR-19`
 
-Consumed authority / immediate return: `FRSH-003-v1-VR-18` /
-`FRCE-003-v1-VR-18`
+Exact Combat start source:
+`f0ea9312e44dd6459eec369bd4c73e12d4cf164a`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -30,45 +31,44 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Mission Captain profile in full, VR-07 and VR-12 through VR-18,
-FRCE-003-v1-VR-12 through VR-18, current FRAB-003, and this handoff.
+Read the Mission Captain profile in full, VR-07 and VR-12 through VR-19,
+FRCE-003-v1-VR-12 through VR-19, current FRAB-003, and this handoff.
 
-Mission independently proved with one literal
-`git ls-files --error-unmatch` check per path that the FRRC manifest, E2E,
-existing static test, `App.jsx`, `src/drownedArchive.js`, and `package.json`
-are each tracked exactly once. `package.json` entered the minimal allowlist
-only after that proof. `horizon-archive-game/package-lock.json` is not known
-to Git and is excluded; no search, substitution, or alternate package path is
-authorized.
+Combat began the exact VR-19 repository-root PowerShell invocation once from
+synchronized source with the execution-tool timeout set to `30s`. It passed
+start synchronization, required ancestry and parentage, all six literal
+tracked-path checks, all frozen/current blob checks, and initial tracked/
+staged drift absence. The candidate-to-current control-drift command then
+printed Git usage and the shell threw `candidate current control drift`.
+The invocation exited `1` after `5.5s`.
 
-Mission classifies the VR-18 mismatch as **`REQUIRED CORRECTION / EXECUTION
-CONTROL / OPEN`** and separately preserves the earlier **`UNAUTHORIZED
-DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`** classification. The latter
-is not waived, merged, repeated, or treated as proof. VR-18 is consumed and
-its partial checks remain stopped evidence.
+VR-19 is consumed. None of its partial passing checks may be promoted, reused
+as current proof, or rerun under VR-19. Combat made no correction,
+substitution, investigation, waiver, continuation, or second invocation.
+Everything after the terminal command was not run: product/dependency drift,
+candidate/worktree diff integrity, independent candidate-boundary
+predicates, FRRC JSON/order/key/validator/e2e-policy structure, `node
+--check`, focused tests, and final integrity. No validator or focused/
+related/full/E2E/diagnostic/summary/verifier command ran.
 
-Fresh Combat may run exactly one repository-root PowerShell invocation from
-the synchronized commit containing VR-19, with the execution tool enforcing
-`30s`. It must use the exact body in `FRSH-003-v1-VR-19`: six literal tracked-
-path checks; exact ancestry/parent/blob/current/integrity/drift and independent
-candidate-boundary predicates; actual FRRC schema/ID/thirteen-entry order/key
-identity, forty exact validator structures without execution, and one-E2E
-policy; one `node --check`; and the exact manifest focused command requiring
-`68/68`. Any failure is HOLD with no repair, continuation, path discovery,
-substitution, partial rerun, or second invocation.
+Classify the stop as **`REQUIRED CORRECTION / EXECUTION CONTROL / OPEN`**.
+It establishes no candidate, product, manifest, test, E2E, validation,
+evidence, threshold, learning, save, route, world, media, or ending defect.
+The prior **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**
+classification remains separate and open; VR-19 introduced no new protected,
+untracked, media, repository-wide, predecessor-root, or user-state
+enumeration and does not waive or reuse the prior divergence.
 
-No related/full test, validator execution, build, PBA/media/offline/
-performance scan, preview, served request, port/PID operation, browser,
-external root, containment/cleanup, diagnostic, E2E, summary, verifier,
-served identity, broad path/root search, or protected/untracked/media/user-
-state enumeration is authorized. No implementation, control, product,
-package, lockfile, media, map, scoreboard, or maturity change is authorized.
+Fresh Mission must independently adjudicate only the exact fail-closed
+command-shape defect and may issue one versioned `HOLD` or newly bounded
+authority. Do not repair or rerun VR-19, infer a product defect, promote its
+partial checks, begin Quartermaster/Image/Intelligence, advance a release-map
+or scoreboard cell, create a reveal or schedule, or call
+`FIRST RUN COMPLETE`.
 
-After the attempt Combat may write only `FRCE-003-v1-VR-19` and this handoff,
-commit, push, prove `HEAD == origin/main`, and return to a fresh Mission
-Captain. Do not begin a downstream role, advance maturity, create a reveal or
-schedule, or call `FIRST RUN COMPLETE`.
-
-The dedicated Combat commit and final `HEAD == origin/main` proof are reported
-from Git after commit because this handoff cannot contain the hash that first
-contains itself.
+No implementation, product, test, manifest, E2E, content, CSS, module,
+fixture, dependency, package, curriculum, evaluator, save, story, route, map,
+scoreboard, maturity, media, or other control changed. The dedicated Combat
+commit and final `HEAD == origin/main` proof are reported from Git after
+commit because this handoff cannot contain the hash that first contains
+itself.
