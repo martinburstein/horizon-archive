@@ -2037,6 +2037,8 @@ function buildSixfoldLiveDiagnostic({ layouts, focusPass, layoutPass, runtimeErr
       for (const edge of ["left", "top", "right", "bottom"]) {
         addExact(`${prefix}.geometry.${phase}.image.border.${edge}`, 0, "source", geometry?.image?.border?.[edge]);
         addExact(`${prefix}.geometry.${phase}.image.padding.${edge}`, 0, "source", geometry?.image?.padding?.[edge]);
+        addExact(`${prefix}.geometry.${phase}.label.border.${edge}`, 1, "geometry", geometry?.label?.border?.[edge]);
+        addExact(`${prefix}.geometry.${phase}.label.padding.${edge}`, 1, "geometry", geometry?.label?.padding?.[edge]);
       }
       for (const bound of ["left", "top", "right", "bottom"]) {
         addPredicate(`${prefix}.geometry.${phase}.source.bounds.${bound}`, "finite source-space value", "source", geometry?.source?.bounds?.[bound], (value) => typeof value === "number" && Number.isFinite(value));
@@ -2258,19 +2260,27 @@ async function captureSixfoldGeometry(page) {
       width: Q(sceneArt.width * 0.20),
       height: Q(Math.max(sceneArt.height * 0.25, 44)),
     };
-    const border = {
+    const imageBorder = {
+      left: Number.parseFloat(imageStyle.borderLeftWidth), top: Number.parseFloat(imageStyle.borderTopWidth),
+      right: Number.parseFloat(imageStyle.borderRightWidth), bottom: Number.parseFloat(imageStyle.borderBottomWidth),
+    };
+    const imagePadding = {
+      left: Number.parseFloat(imageStyle.paddingLeft), top: Number.parseFloat(imageStyle.paddingTop),
+      right: Number.parseFloat(imageStyle.paddingRight), bottom: Number.parseFloat(imageStyle.paddingBottom),
+    };
+    const labelBorder = {
       left: Number.parseFloat(labelStyle.borderLeftWidth), top: Number.parseFloat(labelStyle.borderTopWidth),
       right: Number.parseFloat(labelStyle.borderRightWidth), bottom: Number.parseFloat(labelStyle.borderBottomWidth),
     };
-    const padding = {
+    const labelPadding = {
       left: Number.parseFloat(labelStyle.paddingLeft), top: Number.parseFloat(labelStyle.paddingTop),
       right: Number.parseFloat(labelStyle.paddingRight), bottom: Number.parseFloat(labelStyle.paddingBottom),
     };
     const labelText = {
-      x: label.x + border.left + padding.left,
-      y: label.y + border.top + padding.top,
-      width: label.width - border.left - border.right - padding.left - padding.right,
-      height: label.height - border.top - border.bottom - padding.top - padding.bottom,
+      x: label.x + labelBorder.left + labelPadding.left,
+      y: label.y + labelBorder.top + labelPadding.top,
+      width: label.width - labelBorder.left - labelBorder.right - labelPadding.left - labelPadding.right,
+      height: label.height - labelBorder.top - labelBorder.bottom - labelPadding.top - labelPadding.bottom,
     };
     const viewportRects = { frame, containing, sceneArt, physical, semantic, label, labelText, host04, returnRidge };
     const scroll = { x: scrollX, y: scrollY };
@@ -2307,8 +2317,7 @@ async function captureSixfoldGeometry(page) {
     const directGateResults = {
       authoredPhysical: true,
       boxesEqual: sameRect(containing, sceneArt),
-      zeroImageEdges: [imageStyle.borderLeftWidth, imageStyle.borderTopWidth, imageStyle.borderRightWidth, imageStyle.borderBottomWidth,
-        imageStyle.paddingLeft, imageStyle.paddingTop, imageStyle.paddingRight, imageStyle.paddingBottom].every((value) => Number.parseFloat(value) === 0),
+      zeroImageEdges: [...Object.values(imageBorder), ...Object.values(imagePadding)].every((value) => value === 0),
       imageContract: imageElement.naturalWidth === 1672 && imageElement.naturalHeight === 941 && imageStyle.objectFit === 'cover' && tokens.length === 2,
       semanticExact: sameRect(semantic, expectedSemantic),
       semanticBottomAnchored,
@@ -2319,8 +2328,8 @@ async function captureSixfoldGeometry(page) {
         && semantic.x + semantic.width - label.x - label.width === 3 && semantic.y + semantic.height - label.y - label.height === 3,
       innerLabelInset: label.x - (semantic.x + 1) === 2 && label.y - (semantic.y + 1) === 2
         && semantic.x + semantic.width - 1 - label.x - label.width === 2 && semantic.y + semantic.height - 1 - label.y - label.height === 2,
-      labelBorderExact: Object.values(border).every((value) => value === 1),
-      labelPaddingExact: Object.values(padding).every((value) => value === 1),
+      labelBorderExact: Object.values(labelBorder).every((value) => value === 1),
+      labelPaddingExact: Object.values(labelPadding).every((value) => value === 1),
       labelTextExact: labelText.x === semantic.x + 5 && labelText.y === semantic.y + 5
         && labelText.width === semantic.width - 10 && labelText.height === semantic.height - 10,
       labelContained: label.x > semantic.x && label.x + label.width < semantic.x + semantic.width
@@ -2342,7 +2351,8 @@ async function captureSixfoldGeometry(page) {
       rectangles: Object.fromEntries(Object.keys(viewportRects).map((name) => [name, {
         viewport: viewportRects[name], document: documentRects[name], imageRelative: imageRelativeRects[name],
       }])),
-      image: { natural: { width: imageElement.naturalWidth, height: imageElement.naturalHeight }, objectFit: imageStyle.objectFit, objectPosition, border, padding },
+      image: { natural: { width: imageElement.naturalWidth, height: imageElement.naturalHeight }, objectFit: imageStyle.objectFit, objectPosition, border: imageBorder, padding: imagePadding },
+      label: { border: labelBorder, padding: labelPadding },
       source: { bounds: sourceBounds, nominalBounds: nominalSourceBounds, nominalAnchor: nominalSourceAnchor, actualCenter: actualSourceCenter, retention: sourceBandRetention, anchorContained },
       expectedSemantic,
       physicalNormalized: { left: 0.45, top: 0.75, width: 0.20, height: 0.25, centerX: 0.55, centerY: 0.875 },

@@ -22,6 +22,8 @@
       "path": "<exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json",
       "producer": "playtest/e2e-playthrough.mjs",
       "ownership": "machine-owned failure-side localization from the sole E2E's in-memory raw records",
+      "field_source_schema": "geometry.image.border/padding are unrounded Number.parseFloat values from imageStyle only; geometry.label.border/padding are unrounded Number.parseFloat values from labelStyle only",
+      "edge_inventory": "exhaustive across all six layouts, pre/post phases, four edges: image border/padding expected 0 with source owner; label border/padding expected 1 with geometry owner",
       "write_order": "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
       "failure_capture": "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
       "release_evidence": false,

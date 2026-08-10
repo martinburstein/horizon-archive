@@ -158,6 +158,8 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
     path: "<exact HORIZON_ARCHIVE_QA_DIR>/first-run-live-diagnostic.json",
     producer: "playtest/e2e-playthrough.mjs",
     ownership: "machine-owned failure-side localization from the sole E2E's in-memory raw records",
+    field_source_schema: "geometry.image.border/padding are unrounded Number.parseFloat values from imageStyle only; geometry.label.border/padding are unrounded Number.parseFloat values from labelStyle only",
+    edge_inventory: "exhaustive across all six layouts, pre/post phases, four edges: image border/padding expected 0 with source owner; label border/padding expected 1 with geometry owner",
     write_order: "synchronous after all six raw layouts, runtime-error aggregate, focus aggregate, and performance values exist; before any focus/layout/live-summary aggregate throw",
     failure_capture: "retain exact diagnostic long enough for the execution owner to record every failure path/value, then remove only with the owned external root after repeated containment proof",
     release_evidence: false,
@@ -169,6 +171,12 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
   assert.match(releaseManifest.entries["live-summary-verify"].failed_e2e_behavior, /do not run[\s\S]*diagnostic[\s\S]*not release evidence/);
   assert.match(e2e, /schema: "horizon\.first-run\.live-diagnostic\.v1"[\s\S]*operativeShell: "FRSH-003-v1-VR-07"[\s\S]*diagnosticContract: "FRSH-003-v1-VR-12"[\s\S]*acceptedEvidencePredecessor/);
   assert.match(e2e, /requiredCheckPaths[\s\S]*emittedCheckPaths[\s\S]*checkInventoryExact[\s\S]*failureCount[\s\S]*failurePaths[\s\S]*failuresByLayout/);
+  assert.match(e2e, /const imageBorder = \{[\s\S]*?imageStyle\.borderLeftWidth[\s\S]*?imageStyle\.borderBottomWidth[\s\S]*?const imagePadding = \{[\s\S]*?imageStyle\.paddingLeft[\s\S]*?imageStyle\.paddingBottom/);
+  assert.match(e2e, /const labelBorder = \{[\s\S]*?labelStyle\.borderLeftWidth[\s\S]*?labelStyle\.borderBottomWidth[\s\S]*?const labelPadding = \{[\s\S]*?labelStyle\.paddingLeft[\s\S]*?labelStyle\.paddingBottom/);
+  assert.match(e2e, /const labelText = \{[\s\S]*?labelBorder\.left \+ labelPadding\.left[\s\S]*?labelBorder\.top \+ labelPadding\.top[\s\S]*?labelBorder\.right - labelPadding\.left - labelPadding\.right[\s\S]*?labelBorder\.bottom - labelPadding\.top - labelPadding\.bottom/);
+  assert.match(e2e, /zeroImageEdges: \[\.\.\.Object\.values\(imageBorder\), \.\.\.Object\.values\(imagePadding\)\][\s\S]*?labelBorderExact: Object\.values\(labelBorder\)[\s\S]*?labelPaddingExact: Object\.values\(labelPadding\)/);
+  assert.match(e2e, /image: \{[^\n]*border: imageBorder, padding: imagePadding \},\s*label: \{ border: labelBorder, padding: labelPadding \}/);
+  assert.match(e2e, /image\.border\.\$\{edge\}`, 0, "source", geometry\?\.image\?\.border\?\.\[edge\][\s\S]*?image\.padding\.\$\{edge\}`, 0, "source", geometry\?\.image\?\.padding\?\.\[edge\][\s\S]*?label\.border\.\$\{edge\}`, 1, "geometry", geometry\?\.label\?\.border\?\.\[edge\][\s\S]*?label\.padding\.\$\{edge\}`, 1, "geometry", geometry\?\.label\?\.padding\?\.\[edge\]/);
   const diagnosticWrite = e2e.indexOf('writeFileSync(qaPath("first-run-live-diagnostic.json")');
   const focusThrow = e2e.indexOf('if (!focusPass) throw new Error');
   const layoutThrow = e2e.indexOf('if (!layoutPass) throw new Error');
