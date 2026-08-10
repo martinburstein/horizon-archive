@@ -22,3 +22,20 @@ accepted candidate or silently broaden a Work Order.
   cold full, `40/40` validators, both builds, PBA/media/served identity, and one
   `69.974 s` clean-start journey through both MH-40 outcomes with zero runtime
   errors.
+
+### 2026-08-10 — `FRAB-002-v1` — TUNE
+
+- **KEEP:** the canonical release manifest; immutable-candidate ancestry and
+  patch checks; explicit focused/related gates; exact sorted validators;
+  production/fixture byte identity; one complete non-overlapping E2E; targeted
+  live layout/focus/color/motion corroboration; honest physical-host maturity;
+  and exact-PID/port cleanup.
+- **TUNE:** future manifests must allocate a fresh contained QA root outside
+  any pre-existing repository quarantine and should emit a concise
+  machine-readable live-review summary. Current higher authority quarantined
+  the manifest's historical repository QA root, so Intelligence reproduced the
+  exact gate in a fresh external temp root without touching the quarantine.
+- **REDESIGN:** not warranted. The immutable candidate passed `57/57` focused,
+  `70/70` related, `963/963` cold full, `40/40` validators, both builds,
+  PBA/media/served identity, one `67.779 s` complete journey through both MH-40
+  outcomes with zero runtime errors, and a separate affected-state live check.

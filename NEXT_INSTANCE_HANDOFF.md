@@ -13,161 +13,109 @@ exact-next-action authority.
   city/world/external/authority deltas.
 - `TE-001 / PASS - AS BUILT RELEASED` remains the canonical complete-game
   treatment in `HORIZON_ARCHIVE_GAME_ON_PAPER.md`.
-- The protected game-on-paper SHA-256 remains
+- Protected game-on-paper SHA-256 remains
   `f343e1dda0647ad82df9e5a85d26e0a7a3025166a0ba663e4cf7019fd066d142`.
 - READY and NOT YET READY remain equal suit-owned local-evidence outcomes on
   the same one-path rail. No successor or post-ending content exists.
 
 ## Released First Run state
 
-- Intelligence issued `FIRST RUN PASS RELEASED / FRAB-001-v1` for bounded
-  `FRWO-001-v1 / Unbroken Opening Rail`.
-- Exact accepted product/test candidate is
-  `d37103b46f257cb61ef99f76413611ee31d0fab2`; exact independently reviewed
-  Image control edge is `91d98bff27727ccedf2ed74da1392508205e1838`.
-- Independent evidence remains focused `25/25`, cold full `953/953`,
-  validators `40/40`, production and TD-012 fixture builds, exact PBA/media/
-  served identity, and one clean-start journey through both MH-40 outcomes
-  with zero runtime errors.
-- Accepted media remains immutable at `17` files / `37,410,731` bytes.
-- This is not `FIRST RUN COMPLETE`; no physical-host cell was promoted.
-- The release packet remains `FIRST_RUN_AS_BUILT_RECONCILIATION_FRAB-001-v1`.
-
-## FRWO-002 planning chain
-
-- Commandant reaffirmed `FRPB-001-v1` in `FRPB-001-v1-GR-01`; no baseline
-  reopen trigger exists.
-- Colonel issued `CONTINUITY LOCK / FRCL-002-v1`: Fracture Nursery and the
-  complete Glass Meadow turn are the earliest unresolved address. The City
-  `successor packet` wording remains a separate later contradiction.
-- Operations issued `WORK ORDER READY / FRWO-002-v1 / The Third Coupling` at
-  `FR-02` only: rehouse existing optional `L01-03` behind a distinct in-world
-  Fracture Nursery USE before unchanged Drowned departure.
-- Science issued `POLISH VIABILITY READY / FRVE-002-v1`: exact Nursery
-  geometry is `left 0% / top 52% / width 24% / height 48%`, identical at
-  narrow, with pure nonpersisted view state and immutable accepted media.
-- Mission issued `FIRST RUN SHELL READY / FRSH-002-v1` and froze learning,
-  privacy, save, route, focus, accessibility, performance, media, manifest,
-  hard-stop, and rollback contracts.
-- Recon issued `DIRECTORIAL LOCK / FRDT-002-v1`: better method makes existing
-  low-left repair stock legible; the world does not change.
-- Tactical issued `PLAYER EXPERIENCE READY / FRPX-002-v1`: no pre-Marker DOM
-  affordance; exact available/in-progress/complete states; sole Nursery USE;
-  read-only completed USE; deterministic focus/recovery; full modal inertness;
-  live geometry and one complete E2E requirements.
-
-## FRWO-002 production chain
-
-- Quartermaster issued **`PRODUCTION CONTENT COMPLETE / FRCA-002-v1`**.
-- Exact content-complete product/test candidate is
-  `7bed6025d41481e0004868e812abb6d7753a41a0`, descending from functional
-  predecessor `53b195eb533cc18abe69d8a520d9d6f8ce2b39aa`.
-- Exactly the twelve declared `FRPX02_*` slots are final. The stable name is
-  `Fracture Nursery coupling`; state text is exact `available`, `in progress`,
-  or `complete`; broad alt names truthful visible repair stock without
-  assigning the semantic host name to the raster.
-- Scene owns physical LOOK facts, Pilot owns silence and the chapter
-  conclusion, and Suit/System owns classification, evidence, work state, and
-  route summaries. Detection explicitly reports no material change. Return
-  copy identifies the same stock/coupling and only offers resume when true.
-- Optional scored calibration and unchanged departure are explicit. No copy
-  implies healing, invitation, approval, reward, route-earned progress,
-  Machine/Builder speech, native Python, hidden lore, or answer content.
-- All mechanics, state derivation, exact `0/52/24/48` geometry, action/focus,
-  `L01-03`, evidence, privacy, save/reload, route, later rail, Demo Tour,
-  world, both MH-40 outcomes, and `successor=null` remain unchanged.
-- Final evidence is focused `57/57`, related `70/70`, cold full `963/963`,
-  validators `40/40`, production `216` modules, fixture `57` modules,
-  JavaScript `1,663,664`, CSS `118,981`, and exact media
+- Intelligence issued **`FIRST RUN PASS RELEASED / FRAB-002-v1`** for
+  `FRWO-002-v1 / The Third Coupling`.
+- Exact released product/test candidate is
+  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`, descending from content-complete
+  candidate `7bed6025d41481e0004868e812abb6d7753a41a0` and released
+  `FRAB-001-v1` product/test predecessor
+  `d37103b46f257cb61ef99f76413611ee31d0fab2`.
+- Candidate-to-pre-Intelligence control
+  `b7bcb154551602d08c2c42fa9ddcc002913f3206` changes only this synchronized
+  handoff. The dedicated Intelligence release commit is the commit containing
+  `FRAB-002-v1`; its exact hash and final remote equality are reported from Git
+  after the commit because this file cannot contain its own introducing hash.
+- Independent evidence is focused `57/57`, related `70/70`, cold full
+  `963/963`, exact validators `40/40`, production/fixture builds `216/57`,
+  JavaScript `1,663,664`, CSS `118,981`, and media exact
   `17 / 37,410,731`.
-- Production and fixture served identity pass. One accepted isolated complete
-  journey passes in `68.197s`, including all six required layouts, unchanged
-  later rail, both equal MH-40 outcomes, and zero runtime errors. Maximum
-  Nursery activation sample is `0.10000014305114746ms`.
-- The accepted Meadow master remains exact `2,688,247` bytes / SHA-256
-  `6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2`.
-  No media operation or manifest-command change occurred.
-- Policy blocked cleanup of three isolated Quartermaster temp capture roots;
-  they are outside the repository/candidate. The pre-existing untracked QA
-  directory was untouched and unstaged. All owned processes and ports are
-  clear.
-- The content/asset ledger is `Production Pipeline/First Run/
-  FIRST_RUN_CONTENT_ASSET_LEDGER_FRCA-002-v1.md`.
-
-## Fresh Image Specialist result
-
-- Image Specialist issued **`RUNTIME PRESENTATION COMPLETE / FRPR-002-v1`**.
-- Exact immutable Image product/test candidate is
-  `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`, descending from exact
-  content-complete candidate `7bed6025d41481e0004868e812abb6d7753a41a0`.
-- Fresh live review found one shell-owned presentation defect: the Meadow
-  departure remained `24px` high in canonical/effective-`200%` presentation.
-  The existing rule is now `44px`; emitted CSS remains exact `118,981` bytes.
-- The focused contract locks that rule, and the complete E2E responsive check
-  now includes the visible departure in the required-control set.
-- Final live geometry passes desktop `1920x1080`, laptop `1366x768`, narrow
-  `390x844`, effective-`200%` `768x900`, retained `320x180`, and retained
-  `320x240`. Nursery mapping, label containment, source-band overlap, center,
-  zero overlap, horizontal reflow, focus order, and all required `44px`
-  controls pass.
-- Forced colors retain a genuine keyboard `:focus-visible` `3px solid`
-  system-highlight outline and explicit state text. Reduced motion reports no
-  target animation or transition and changes no order or meaning.
-- Final evidence is focused `57/57`, related `70/70`, cold full `963/963`,
-  validators `40/40`, production `216` modules, fixture `57` modules,
-  JavaScript `1,663,664`, CSS `118,981`, and exact media
-  `17 / 37,410,731`.
-- Production and fixture served identity pass. One accepted isolated complete
-  journey passes in `68.236s` (`67.513s` journey), including all six Nursery
-  layouts, unchanged later rail, both equal MH-40 outcomes, zero runtime
-  errors, and maximum sampled task `0.40000009536743164ms`.
+- Production and exact TD-012 fixture root/deep/JS/CSS are byte-identical to
+  disk. Production JS SHA-256 is
+  `29DD867C23B41DE0E601826BE920695221A8955ED6B5D12BAE89529AF7A8F26E`;
+  CSS SHA-256 is
+  `32C692E27B9A5053915735B078FA9DAAEDA5D2B0286EF237EA1A036BD0C95FF3`.
+- One and only one isolated complete production journey passes in `67.779s`
+  (`68.519s` process): pre-Marker absence; initial optional skip to Drowned;
+  byte-stable write-free Meadow return; real calibration miss; safe exit,
+  Escape, reload, and private-free recovery; mastery; completed read-only USE;
+  redeparture; exact later rail; both equal MH-40 outcomes; null hard stop; zero
+  runtime errors; maximum sampled task `0.20000004768371582ms`.
+- Exact live `1920x1080`, `1366x768`, `390x844`, effective-`200%` `768x900`,
+  retained `320x180`, and retained `320x240` Nursery mapping pass. A separate
+  targeted live check proves exact keyboard order, genuine forced-color
+  `3px solid` focus, reduced-motion `none/0s`, contained label, zero horizontal
+  overflow, and exact Meadow departure height `44px`.
 - Accepted Meadow master remains exact `2,688,247` bytes / SHA-256
   `6B27AC8233A5C29583450064DA3D51C504E16A513759D52E5651B9C60EC031D2`.
-  No image/media generation, edit, replacement, variation, import, movement,
-  removal, publication, or reveal occurred; no media byte/request changed.
-- Owned preview PIDs are stopped and ports `4173` and `4184` are clear. Policy
-  blocked removal of one exact isolated Image QA root outside the repository;
-  it retains `69` files / `13,825,811` bytes. The pre-existing untracked
-  repository QA directory was not inspected, changed, staged, or deleted.
-- The runtime presentation review is `Production Pipeline/First Run/
-  FIRST_RUN_RUNTIME_PRESENTATION_REVIEW_FRPR-002-v1.md`.
+- Owned Intelligence QA evidence was isolated outside the repository and
+  removed by exact containment; owned preview PIDs are stopped and ports
+  `4173` / `4184` are clear.
+- Release package is `Production Pipeline/First Run/
+  FIRST_RUN_AS_BUILT_RECONCILIATION_FRAB-002-v1.md`.
 
-## Exact next action - FRESH Intelligence Officer
+## Accepted maturity and remaining distance
 
-Use a fresh Intelligence context. Read `First Run Agent Profiles/
-intelligence-officer.md` in full, then read this handoff, `FRSH-002-v1`,
-`FRDT-002-v1`, `FRPX-002-v1`, `FRCE-002-v1`, `FRCA-002-v1`, and
-`FRPR-002-v1`. Independently inspect exact immutable candidate
-`3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602` and verify the current control HEAD
-changes only this synchronized handoff after that candidate.
+- `FR-02` is now continuity `FR2`, physical-host expression
+  **`FR2 - 3 exact`**, learning `FR2`, behavior/save/recovery `FR1`,
+  final-purpose content `FR2`, presentation `FR3`, and bounded First Run
+  release proof `FR4`.
+- Host 03 is accepted as one exact distinct physical relationship over
+  provenance-authored repair stock. This changes no media byte and promotes no
+  other physical host.
+- Forty-host inventory is now `5 exact / 1 accepted shared compression / 33
+  missing / 1 unadvanced Witness expression`.
+- Address-level continuity is `3 EXACT / 13 ACCEPTED COMPRESSION / 0 MISSING
+  EXPRESSION / 1 CONTRADICTION / 0 UNKNOWN`.
+- The separate `FR-05` City Threshold sentence containing `successor packet`
+  and `staging boundary` remains an active unresolved contradiction. Its direct
+  route behavior remains exact.
+- Drowned hosts 05-15, the Witness physical-host cell, hosts 17-38, and the
+  Measured Horizon literary close remain incomplete.
+- This is not `FIRST RUN COMPLETE`; no whole-game completion sweep has passed.
+- Current release map/scoreboard are `FRRM-002-v2` / `FRSB-002-v2`. No next
+  Work Order is selected.
 
-Execute or independently reproduce every exact `FRRC-001-v1` gate, including
-integrity/patch scope, focused/related/full, exact forty validators, production
-and exact fixture builds, PBA/media, exact previews and served identity, one
-and only one isolated complete E2E, live desktop/laptop/narrow/effective-
-`200%`/retained-320 presentation, keyboard/focus/forced-color/reduced-motion,
-cleanup, ports, protected boundaries, candidate identity, and Git sync.
-Specifically corroborate the resolved `44px` Meadow departure without
-weakening the unchanged route or content contracts.
+## Exact next action - FRESH Commandant guarded revalidation
 
-Reconcile every as-built variance, update the First Run release map,
-scoreboard, and process changelog only from accepted evidence, issue
-`FIRST RUN PASS RELEASED`, `REVISE`, or `HOLD`, replace this handoff with one
-exact next action, commit only Intelligence-authorized scope, push `main`, and
-prove `HEAD == origin/main`. Do not repair the candidate, perform any image or
-media operation, create a reveal, expand the bounded host scope, or begin a
-new cycle.
+Use a fresh Commandant context. Read `First Run Agent Profiles/commandant.md`
+in full, then read this handoff, `FRPB-001-v1`, `FRPB-001-v1-GR-01`,
+`FRAB-001-v1`, exact `FRAB-002-v1`, `FRCL-002-v1`, `FRRM-002-v2`,
+`FRSB-002-v2`, the complete protected game-on-paper, current runtime/package,
+and TD-012 release controls.
+
+Independently perform one guarded baseline revalidation after the second
+bounded First Run release. Decide whether any documented `FRPB-001-v1` reopen
+trigger exists. Reconcile the exact accepted Host 03 maturity without
+generalizing it to later hosts; preserve the separate unresolved City wording
+contradiction, later host gaps, literary close, immutable-media authority, and
+shared ending.
+
+Issue exactly one versioned `FIRST RUN VISION BASELINE REAFFIRMED`, `REVISE`,
+or `HOLD` disposition. If reaffirmed, leave one exact fresh Colonel continuity
+handoff. Do not select or preauthorize a Work Order, repair the City sentence,
+expand Drowned or another host, change the map/scoreboard beyond Commandant
+authority, begin Colonel in the same invocation, start production, create a
+schedule, perform image/media work, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
-- Preserve the one-path route, learning ownership, surface canon, shared
-  RP-012 ending, and `successor=null`.
+- Preserve the one-path route, current learning ownership, surface canon,
+  shared RP-012 ending, equal outcomes, null deltas, and `successor=null`.
 - No RP-013, new lesson/packet, branch, hidden-lore inference, Machine/Builder
-  dialogue, reward, access, identity, authority, world response, or prior-human
-  trace.
+  dialogue, reward, access, identity, authority, world response, prior-human
+  trace, or post-ending content.
 - Never inspect or mutate Martin's browser/profile/save or hidden lore.
 - Never inspect, alter, stage, move, delete, or commit
-  `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
+  `Art Of No Mans Sky Book Scan.pdf`, `Simplilearn Training Files/`, or the
+  pre-existing untracked `Production Pipeline/First Run/QA/` quarantine.
 - Do not generate, edit, replace, vary, import, move, remove, or publish an
   image or other media asset; do not create a reveal.
 - The archived Skyscraper and two-team workflows remain inactive.
+- Automation remains disabled. Do not infer a schedule.
