@@ -2,40 +2,54 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / STAGE-2 TOOL REJECTION / STAGE-4 PARSER
-FAILURE / RETAINED ROOT TOKEN / NO E2E / FRCE-003-v1-VR-53`**
+Current disposition: **`FIRST RUN SHELL READY / EXACT TOKEN-BOUND RETAINED-ROOT
+CLEANUP ONLY / FRSH-003-v1-VR-54`**
 
 Stage and release remain HOLD.
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
-Immediate evidence: `Production Pipeline/First Run/FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1-VR-53.md`
+Immediate control: `FRSH-003-v1-VR-54`
 
-Starting shell revision: `d78d064f3f994b8f0a3cd5ab2f48c05ce70a446e`
+Mission source: `8d70921d7d3c6553a29540ea4e83f1db16cf6685`
 
-Stage 1 passed fully and retained one root. Exact cleanup authority:
+Exact retained-root authority:
 
 ```text
 rootTokenB64=QzpcVXNlcnNcbWFydGlcQXBwRGF0YVxMb2NhbFxUZW1wXGhvcml6b24tYXJjaGl2ZS1mcnJjMDAyLTRkMjliOWQ2LTYzMzItNGM3Yy04ODdhLTcwMWI3ZDFmOGEzNQ==
 rootTokenSha256=f9f20ff1dc54ca62993715bbc94d514f0f89570929b438bdf7b006c4a5ab703d
+prodPid=0
+fixturePid=0
 ```
 
-Stage 2 was rejected by tool safety before execution. No port query, preview,
-or PID exists. Stage 3 did not run; E2E invocation count remains zero.
+VR-53 Stage 1 passed and retained exactly this root. Stage 2 was rejected by
+tool safety before execution and is **`EXECUTION-CONTROL REJECTION / TOOL
+SAFETY / NON-EXECUTED / NO LIVE / VR-53 STAGE 2`**. Stage 4 then failed at
+PowerShell parse time before token verification or cleanup because both compact
+`foreach` statements omitted the required space before `in`.
 
-The mandatory Stage 4 call used PIDs `0/0` but failed at PowerShell parse time
-before token verification or cleanup because compact `foreach` syntax omitted
-the required space before `in`. No Stage 4 scalar was emitted and no deletion
-executed. Combat did not retry or infer a path.
+Mission records **`REQUIRED CORRECTION / EXECUTION CONTROL / CLEANUP PARSER /
+RETAINED ROOT / OPEN / VR-53 STAGE 4`** as an eleventh separate OPEN
+classification. Neither event is a candidate/product finding. E2E invocation
+count remains zero.
 
-Fresh Mission must first adjudicate and issue an exact token-bound cleanup-only
-authority. It must not enumerate or discover paths, run E2E, launch previews,
-or infer root absence. Only after cleanup is proven may Mission consider a new
-live authority.
+Fresh-child capacity remains unavailable; Mission context reuse is disclosed
+and non-evidence.
 
-Geometry correction / diagnostic transport lineage remains
-`8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
-`6c64eb354b7dbb467df5725e2cae4eb67092ddc7`. The cumulative accepted gates,
-ten prior OPEN classifications, and every frozen identity and meaning remain
-exact. Diagnostic evidence remains non-release, forbidden verifier input, and
-no-retry. No downstream stage or release action is authorized.
+Combat may execute exactly one cleanup-only call. Decode the literal token as
+strict UTF-8, recompute/compare its digest with the proven disposable SHA
+vector, normalize and prove its exact direct OS-temp-child identity, repository
+exclusion, predecessor distinction, and existence. The PID loop must be
+`foreach ($processId in @(...))` and will inspect no process because both
+inputs are 0. The port loop must be `foreach ($portNumber in @(...))` and may
+only prove exact ports 4173/4184 clear. Prove the exact root is empty, delete it
+once with `[System.IO.Directory]::Delete($resolvedRoot,$false)`, and prove
+absence.
+
+No root creation, other-path inspection, process/listener recovery, preview,
+browser, E2E, diagnostic, transport, summary, verifier, product/media/
+protected action, or retry is authorized. Return only the VR-54 scalar.
+
+Cumulative gates, frozen candidates/invariants, the ten prior OPEN
+classifications, and the new VR-53 cleanup classification remain exact. No
+downstream stage or release action is authorized.
