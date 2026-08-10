@@ -82,46 +82,56 @@ exact-next-action authority.
   FIRST_RUN_CONTINUITY_LOCK_FRCL-003-v1.md`.
 - Work Order artifact is `Production Pipeline/First Run/
   FIRST_RUN_WORK_ORDER_FRWO-003-v1.md`.
+- Science issued **`POLISH VIABILITY READY / FRVE-003-v1`** at source
+  `efff81ed2641fcfa673cbbbdd8ced12be52a5838`.
+- Exact Host 05 target is `left 45% / top 75% / width 20% / height 25%`,
+  identical at canonical and narrow. It is provenance-honest, centered on the
+  dry foreground six-branch relationship, disjoint from Host 04 and the return
+  ridge, vertically disjoint from the Tidal Lens, at least `64 x 45`, and
+  retains at least `0.997874601487779` of its source band across all required
+  layouts.
+- Host 05 availability is pure view state derived only from sanitized existing
+  Workload Sort and responsible-AI evidence. No new persistence exists.
+- Sole campaign `USE` must replace the generic post-Host-04 launcher without
+  changing `L02-02`, evidence/privacy/save/recovery, or later Drowned order.
+- Mission must supersede the historical manifest with `FRRC-002-v1`, using one
+  freshly resolved external OS-temp QA root and one machine-verified concise
+  live summary. The repository QA quarantine remains protected.
+- Viability artifact is `Production Pipeline/First Run/
+  FIRST_RUN_POLISH_VIABILITY_ENVELOPE_FRVE-003-v1.md`.
 
-## Exact next action - Office of Science Administrator only
+## Exact next action - Mission Captain only
 
-Use a fresh Office of Science Administrator context. Read
-`First Run Agent Profiles/office-of-science-administrator.md` in full, then
-read this handoff, `FRWO-003-v1`, `FRPB-001-v1`, both guarded revalidations,
-`FRAB-001-v1`, `FRAB-002-v1`, `FRCL-003-v1`, current `FRRM-003-v1` /
-`FRSB-003-v1`, the complete protected game-on-paper, Drowned surface/visual/
-provenance authorities, exact current Host 04-to-`L02-02` runtime and tests,
-responsible-AI evaluator/sanitizer/save controls, Drowned return/later sequence,
-exact PBA/media authority, and TD-012 hard-stop controls.
+Read `First Run Agent Profiles/mission-captain.md` in full, then read this
+handoff, `FRWO-003-v1`, `FRVE-003-v1`, `FRPB-001-v1`, both guarded
+revalidations, `FRAB-001-v1`, `FRAB-002-v1`, `FRCL-003-v1`, current
+`FRRM-003-v1` / `FRSB-003-v1`, exact Drowned/runtime/evaluator/save/PBA/media
+controls, and `FRRC-001-v1` plus the `FRAB-002-v1` retrospective TUNE.
 
-Independently answer all ten Work Order viability questions, including:
+Independently reconcile the complete Work Order and viability envelope. Issue
+exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` for
+`FRWO-003-v1`.
 
-- whether the accepted plate and provenance support one distinct dry-reachable
-  six-branch Host 05 without repurposing Host 04, the return ridge, submerged
-  inaccessible machinery, or the distant Tidal Lens;
-- exact wide/narrow geometry, crop/source retention, non-overlap, containment,
-  target size, and accessible-state constraints;
-- pure post-Host-04 state derivation, sole `L02-02` entry, evidence/privacy/
-  save/recovery invariance, focus/fallback ownership, and owner-correct meaning
-  slots;
-- exact JS/CSS/module/task/offline/media budgets and focused/related/full/
-  validator/build/served/live/E2E proof;
-- the command-manifest `TUNE` for a fresh external QA root and machine-readable
-  live summary; and
-- exact rollback to released product candidate
+If ready, freeze:
+
+- exact `45/75/20/25` canonical/narrow Host 05 geometry and all source/crop/
+  overlap/center/target-size fail-closed gates;
+- pure sanitized post-Host-04 availability with no persistence;
+- sole in-world Host 05 `USE` replacing the generic `L02-02` launcher;
+- unchanged responsible-AI learning/evaluator/evidence/privacy/save/recovery
+  and unchanged later Drowned/rail/ending behavior;
+- exact focus/fallback and Scene/Pilot/Suit/Teacher meaning ownership;
+- narrow and global PBA/offline/immutable-media caps;
+- new `FRRC-002-v1` with a fresh resolved external temp QA root and
+  machine-verified live summary;
+- one complete non-overlapping E2E, exact cleanup/protected boundaries,
+  permitted files, hard stops, and rollback to
   `3e3da60dc2ffa097a3499a5e2f5fa6ce2273f602`.
 
-Issue exactly one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
-artifact. If viable, define one complete fail-closed envelope and exact Mission
-handoff without changing the Work Order. If one distinct honest Host 05 cannot
-be proven inside immutable media and fixed learning/save/route/world/ending
-authority, issue `HOLD`; do not substitute a later address or technical trick.
-
-Do not write final copy, implement production, create the Mission shell,
-advance maturity, repair the City contradiction, expand Host 06-15, change
-canon/learning/route/save/world/ending behavior, perform image/media work,
-begin Mission/production, create a reveal/schedule, or call
-`FIRST RUN COMPLETE`.
+Do not write final copy, implement production, alter learning/save/route/
+world/ending/media, repair the City contradiction, expand Host 06-15, advance
+maturity, begin Recon/production, inspect protected state, create a reveal or
+schedule, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
