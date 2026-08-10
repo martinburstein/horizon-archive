@@ -237,26 +237,75 @@ exact-next-action authority.
   `Production Pipeline/First Run/
   FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-002-v1.md`.
 
-## Exact next action - Tactical Operations Specialist
+## Fresh Tactical result
 
-Read `First Run Agent Profiles/tactical-operations-specialist.md` in full;
-then read `FRSH-002-v1`, `FRDT-002-v1`, and this handoff. Independently inspect
-the exact current wide/narrow Meadow, immutable master/provenance,
-`pixelMeadow.js`, `App.jsx`, responsive styles, focus/modal contracts,
-calibration/route/return state, and focused tests.
+- Tactical issued **`PLAYER EXPERIENCE READY / FRPX-002-v1`** from exact
+  source `38154612d35178f236874031b48d0d1d2625bed2` with no variance.
+- The semantic/source order is First Signal, Route Marker, conditional
+  Fracture Nursery, then adventure controls. Before exact Route Marker mastery
+  the Nursery has no DOM node, label, focus stop, pointer target, notice, or
+  action.
+- Exact mastered Route Marker plus sanitized calibration evidence derives only
+  `available`, `in_progress`, or `complete`. Detection, dialogue, focus,
+  modality, and working session remain pure nonpersisted view state.
+- The completed Meadow hold enables only the Nursery among world targets plus
+  `LOOK AT`, `TALK TO`, `USE`, and the unchanged Drowned departure. The generic
+  optional/resume launcher is removed. Sole eligible campaign entry is
+  Nursery `USE`.
+- Completed `USE` is frozen as a no-modal bounded read-only report. It cannot
+  open fresh scored work, create a session/attempt/hint, expose an answer,
+  request confidence, change evidence, downgrade mastery, or write route/save/
+  world state.
+- Detection and mastery each focus the Nursery once after Terminal unmount and
+  announce once through the existing visible polite region. Reload/return do
+  not replay detection; unfinished focuses Nursery, while unstarted/mastered
+  focuses departure.
+- Terminal title focus, Tab containment, Escape/close, complete background
+  inertness, trigger/fallback restoration, native one-hit activation, Tour
+  isolation, and malformed recovery are exact.
+- Live centered-cover mapping preserves `0.9994465` of the frozen source band,
+  contains its center, has zero positive overlap, and remains at least
+  `44 x 44` across all required layouts and retained fixtures.
+- The thirty-point Combat matrix preserves exact learning, privacy, save,
+  route, accessibility, PBA, immutable media, `FRRC-001-v1`, exactly forty
+  validator self-tests, one complete E2E, hard-stop, and rollback contracts.
+- Fresh current focused baseline passes `47/47` in `0.226 s`; it is baseline
+  evidence only and advances no maturity cell.
+- The blueprint is `Production Pipeline/First Run/
+  FIRST_RUN_PLAYER_EXPERIENCE_BLUEPRINT_FRPX-002-v1.md`.
 
-Issue exactly one versioned First Run Player Experience Blueprint. Freeze the
-target/source-order graph, pre-detection absence, post-Marker state/action map,
-sole `LOOK AT` / `TALK TO` / `USE`, duplicate-launcher removal, focus/
-announcement/recovery behavior, Terminal inertness, copy-slot ledger, wide/
-narrow/effective-`200%` containment, completed-use behavior, optional
-departure/return/reload paths, and Combat-ready acceptance matrix. Preserve
-every shell learning/privacy/save/route/accessibility/PBA/media/manifest/E2E/
-hard-stop/rollback contract and leave one exact Combat handoff.
+## Exact next action - Combat Engineer
 
-Do not write final prose, implement code, edit/generate/import/publish media,
-create a reveal, alter learning/route/save/world/ending, advance maturity, or
-begin Combat inside Tactical.
+Read `First Run Agent Profiles/combat-engineer.md` in full; then read
+`FRSH-002-v1`, `FRDT-002-v1`, `FRPX-002-v1`, and this handoff. Independently
+inspect the exact current Meadow registry/state/save/resume/action/calibration/
+render paths, responsive/focus/modal styles, focused tests, playthrough, PBA,
+media authority, fixture, validator set, and release controls.
+
+Implement exactly one bounded `FRWO-002-v1` candidate inside the shell's
+permitted product/test paths. Register the exact `fracture-nursery` target and
+pure sanitized view state; render no affordance before exact Route Marker
+mastery; enable the sole Nursery and three verbs in the completed Meadow hold;
+route its `LOOK AT` / `TALK TO` / `USE`; remove the generic calibration
+launcher; make completed `USE` read-only; and wire the frozen focus,
+announcement, recovery, responsive, non-color, and modal-inertness rules.
+Preserve the existing optional lesson, route, save, Tour, later rail, and
+Quartermaster copy slots.
+
+Create the exact checked-in
+`Production Pipeline/First Run/FIRST_RUN_RELEASE_COMMAND_MANIFEST_FRRC-001-v1.json`
+and direct tests. Run and record the manifest-defined Combat ladder: nonempty
+focused/related, cold full, exactly forty validator `--self-test` calls,
+production and exact TD-012 fixture builds/previews, served identity, live
+required layouts, PBA/media/offline/privacy, exactly one isolated complete E2E,
+cleanup, and candidate identity. Stop at stable existing Drowned entry.
+
+Do not write final Quartermaster prose, edit/generate/import/publish media,
+create a reveal, alter learning/canon/route/save/world/ending, change maturity,
+touch protected/user/hidden state, or begin Quartermaster inside Combat.
+Classify every variance; issue `BUILD CANDIDATE READY`, `REVISE`, or `HOLD`;
+update this handoff; commit only authorized Combat scope; push `main`; and
+prove `HEAD == origin/main`.
 
 ## Protected boundaries
 
