@@ -2,18 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / MANIFEST-ORDER-CORRECTED STATIC-FOCUSED
-FAILURE / NO RERUN / FRCE-003-v1-VR-17`**
+Current disposition: **`FIRST RUN SHELL READY / ONE TRACKED-PATH-CORRECTED
+STATIC-FOCUSED VERIFICATION / FRSH-003-v1-VR-18`**
 
 Stage gate remains: **`HOLD / PRODUCTION FUNCTIONAL NOT ISSUED`**
 
 Release state remains: **`HOLD / RELEASE GATE FAILURE / FRAB-003-v1`**
 
-Exact next owner: **fresh Mission Captain**
+Exact next owner: **fresh Combat Engineer**
 
-Consumed authority: `FRSH-003-v1-VR-17`
+Exact authority: `FRSH-003-v1-VR-18`
 
-Immediate Combat return: `FRCE-003-v1-VR-17`
+Consumed predecessor authority: `FRSH-003-v1-VR-17`
+
+Immediate return adjudicated: `FRCE-003-v1-VR-17`
 
 Exact diagnostic field-source candidate:
 `2cccbfe104e0dc88b17343fe7a2950afe0c2a9cc`
@@ -29,70 +31,52 @@ Validation control: `4cd7fbf31291671dd28c0743b44a7c49aaad82bb`
 Accepted evidence predecessor:
 `ca89a679195c11d441a76e6c02983a6436f2ccb2`
 
-Read the Mission Captain profile in full, FRSH-003-v1-VR-17,
-FRCE-003-v1-VR-17, current FRAB-003, this handoff, and only the exact current
-controls needed to adjudicate the stopped execution-control attempt.
+Read the Combat Engineer profile in full, VR-07 and VR-12 through VR-18,
+FRCE-003-v1-VR-12 through VR-17, current FRAB-003, this handoff, and only the
+exact committed FRRC/E2E/static controls named by VR-18.
 
-Combat began the sole VR-17 repository-root PowerShell invocation once from
-`HEAD == origin/main == edb45ac2490a63e16f317d17abf3f12995913c4d`.
-Start synchronization, frozen ancestry, exact diagnostic candidate parent,
-all three candidate blobs, all three diagnostic-predecessor blobs, and the
-immutable product `App.jsx` blob passed.
+Mission classified the VR-17 non-existent product path as **`REQUIRED
+CORRECTION / EXECUTION CONTROL / OPEN`**. The exact real tracked path is
+workspace-relative `horizon-archive-game/src/drownedArchive.js`, app-relative
+`src/drownedArchive.js`, present at the immutable candidate and current source
+with blob `1bc2f9d93c59a396ddee7ed83cde1600f76b62e7`.
 
-The invocation then stopped when Combat supplied a non-existent product path:
+Mission separately classified the disclosed repository-wide filename results
+as **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION / OPEN`**. No
+content/media bytes were read and no returned path was mutated, but VR-17
+protected-boundary noninteraction is not claimed.
 
-```text
-git rev-parse a91763e28d488f31f8cf7d40ece0b2682246ba9b:horizon-archive-game/src/data/drownedArchive.js
-fatal: path 'horizon-archive-game/src/data/drownedArchive.js' does not exist in 'a91763e28d488f31f8cf7d40ece0b2682246ba9b'
-```
+VR-17 is consumed. Run exactly one repository-root PowerShell invocation from
+VR-18 with the execution tool timeout set to `30s`. The command uses exact
+tracked allowlists only; separately proves every exact path and blob; keeps
+the zero-forbidden candidate predicate independent from the exact-three-
+authorized candidate predicate; never prints unexpected candidate names; and
+does not enumerate protected or untracked paths.
 
-The existing production file is
-`horizon-archive-game/src/drownedArchive.js`. Combat identified that correct
-path only after the consumed invocation and did not use it in a replacement
-lookup or rerun.
+The only runtime/static executions authorized are actual committed JSON/order/
+structure parsing, `node --check playtest/e2e-playthrough.mjs` once, and the
+exact allowlisted manifest focused command once. Require exact `68 tests / 68
+pass / 0 fail`. Do not execute any validator.
 
-This is a Combat-owned execution-control defect. It establishes no candidate,
-manifest, static-test, E2E, product, validation, evidence, threshold,
-predicate, or protected-boundary defect. VR-17 is consumed and none of its
-partial passes may be promoted, reused as current proof, or rerun under that
-authority.
+Any failure is immediate `HOLD / NO RERUN`. Do not discover a replacement
+path, repair or waive anything, continue after failure, or start a second
+invocation. Return one versioned `FRCE-003-v1-VR-18` and this handoff only;
+commit, push, prove `HEAD == origin/main`, and route a fresh Mission Captain.
 
-The invocation stopped before remaining frozen/current blob proof,
-tracked/staged drift proof, candidate/current and product/dependency diff
-proof, candidate/worktree `git diff --check`, both independent candidate-path
-predicates, FRRC parsing, forty validator-structure assertions,
-`e2e_invocations=1`, `node --check`, the focused command, exact `68/68`, or
-final diff integrity. No validator or test executed. Exact focused totals are
-unavailable.
+No related/full test, validator, build, PBA/media/offline/performance scan,
+preview, served request, port/PID operation, browser, root, containment/
+cleanup, diagnostic, E2E, summary, verifier, product/control mutation,
+protected/media/user inspection or enumeration, downstream role, reveal,
+schedule, maturity advance, release, or `FIRST RUN COMPLETE` action is
+authorized.
 
-Mission must adjudicate only this fail-closed invocation-path defect and issue
-one versioned `HOLD` or new bounded authority. Do not correct or rerun the
-command under VR-17, infer a candidate/product defect, promote partial checks,
-or restore any later ladder implicitly.
+Preserve every frozen product, candidate, predecessor, validation,
+accepted-evidence, threshold, predicate, learning, evidence/privacy, save,
+route, world, identity, authority, reward/access, equal MH-40 outcome,
+null-delta, `successor=null`, ending, immutable media `17 / 37,410,731`,
+external-root, cleanup, diagnostic non-evidence/non-verifier, and one-E2E
+boundary.
 
-Combat ran no related/full test, validator, build, PBA/media/offline/
-performance scan, preview, served request, port/PID operation, browser,
-external root, containment/cleanup, diagnostic, E2E, summary, verifier, or
-served-identity command. It made no product/test/manifest/E2E/control repair
-or mutation and read no protected-file content, predecessor root, media byte,
-or user state. A post-attempt repository-wide filename search used to locate
-the correct Drowned Archive production path also returned filenames beneath
-the protected First Run QA directory and media-bearing repository paths. No
-returned file was opened or mutated. Fresh Mission must classify this
-disclosed **`UNAUTHORIZED DIVERGENCE / PROTECTED PATH ENUMERATION`** together
-with the open execution-control defect; protected-boundary noninteraction is
-not claimed.
-
-Preserve every product, candidate, predecessor, validation, accepted-evidence,
-threshold, predicate, learning, evidence/privacy, save, route, world,
-identity, authority, reward/access, equal MH-40 outcome, null-delta,
-`successor=null`, ending, immutable media `17 / 37,410,731`, external-root,
-cleanup, diagnostic non-evidence/non-verifier, and one-E2E boundary.
-
-Do not begin Quartermaster, Image Specialist, or Intelligence; create a
-reveal/schedule; advance maturity; release the pass; or call
-`FIRST RUN COMPLETE`.
-
-The dedicated Combat commit and final `HEAD == origin/main` proof are reported
+The dedicated Mission commit and final `HEAD == origin/main` proof are reported
 from Git after commit because this handoff cannot contain the hash that first
 contains itself.
