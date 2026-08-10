@@ -43,6 +43,8 @@ const calibrationKeyboardHelp = "Tab moves through this workspace. Shift+Tab mov
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const qaRoot = process.env.HORIZON_ARCHIVE_QA_DIR || resolve(repositoryRoot, "playtest");
 const frozenCandidate = process.env.HORIZON_ARCHIVE_CANDIDATE || "unfrozen-local-run";
+const productPredecessor = "a9776e337f1820776864a5690332c364d0fb2556";
+const harnessPredecessor = "bf58e528bc6ce4088f81f2c782ce2895259ab9fd";
 mkdirSync(qaRoot, { recursive: true });
 const qaPath = (path) => resolve(qaRoot, path.replace(/^playtest[\\/]/, ""));
 const referenceStructuredPrimary = readFileSync(resolve(repositoryRoot, "curriculum/lessons/L-03-01/reference_primary.py"), "utf8");
@@ -512,10 +514,6 @@ print("Operator:", learner)`);
     if (document.activeElement !== element) throw new Error("Host 05 detection did not focus Sixfold Weir");
   });
   sixfoldFocus.detection = true;
-  for (const layout of [
-    ["desktop", 1920, 1080], ["laptop", 1366, 768], ["narrow", 390, 844],
-    ["effective-200", 768, 900], ["retained-320x180", 320, 180], ["retained-320x240", 320, 240],
-  ]) sixfoldLayouts.push(await measureSixfoldLayout(page, ...layout));
   await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "LOOK AT", exact: true }).click();
   await page.getByRole("button", { name: "look at Sixfold Weir, available", exact: true }).click();
@@ -590,6 +588,11 @@ print("Operator:", learner)`);
   const reloadedWeir = page.getByRole("button", { name: "look at Sixfold Weir, in progress", exact: true });
   await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "sixfold-weir");
   sixfoldFocus.reload = await reloadedWeir.evaluate((element) => document.activeElement === element);
+  for (const layout of [
+    ["desktop", 1920, 1080], ["laptop", 1366, 768], ["narrow", 390, 844],
+    ["effective-200", 768, 900], ["retained-320x180", 320, 180], ["retained-320x240", 320, 240],
+  ]) sixfoldLayouts.push(await measureSixfoldLayout(page, ...layout));
+  await page.setViewportSize({ width: 1600, height: 900 });
   await page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true }).click();
   await page.locator('main[data-scene="meadow"]').waitFor();
   await page.getByRole("button", { name: "Depart for Chapter II, The Drowned Archive", exact: true }).click();
@@ -1535,7 +1538,9 @@ print("Operator:", learner)`);
     schema: "horizon.first-run.live-summary.v1",
     producer: "playtest/e2e-playthrough.mjs",
     workOrder: "FRWO-003-v1",
-    shell: "FRSH-003-v1",
+    shell: "FRSH-003-v1-VR-02",
+    productPredecessor,
+    harnessPredecessor,
     candidate: frozenCandidate,
     runtimeErrors: false,
     layouts: sixfoldLayouts,
@@ -1804,68 +1809,200 @@ async function sampleActivation(locator, label, samples) {
 async function measureSixfoldLayout(page, id, width, height) {
   await page.setViewportSize({ width, height });
   const host = page.locator('[data-hotspot-id="sixfold-weir"]');
-  const scene = page.locator('.scene-frame');
+  const frame = page.locator('.scene-frame');
+  const containingBlock = page.locator('.scene-world-content');
+  const image = page.locator('.scene-art');
   const primary = page.locator('button.hotspot[data-primary-hotspot="true"]');
   const returned = page.locator('[data-hotspot-id="meadow-return-ridge"]');
-  const [hostRect, sceneRect, host04Rect, returnRect] = await Promise.all([
-    host.boundingBox(), scene.boundingBox(), primary.boundingBox(), returned.boundingBox(),
+  const inventoryReturn = page.getByRole("button", { name: "Return to Chapter I, Glass Meadow", exact: true });
+  await page.waitForFunction(() => document.querySelector('.scene-art')?.complete && document.querySelector('.scene-art')?.naturalWidth > 0);
+  const [hostRect, frameRect, containingRect, imageRect, host04Rect, returnRect, inventoryReturnRect, labelRect] = await Promise.all([
+    host.boundingBox(), frame.boundingBox(), containingBlock.boundingBox(), image.boundingBox(), primary.boundingBox(), returned.boundingBox(), inventoryReturn.boundingBox(), host.locator('span').boundingBox(),
   ]);
-  if (!hostRect || !sceneRect || !host04Rect || !returnRect) throw new Error(`Missing Host 05 geometry at ${id}`);
-  const natural = await page.locator('.scene-art').evaluate((image) => ({ width: image.naturalWidth, height: image.naturalHeight }));
-  const scale = Math.max(sceneRect.width / natural.width, sceneRect.height / natural.height);
-  const drawnWidth = natural.width * scale;
-  const drawnHeight = natural.height * scale;
-  const offsetX = (sceneRect.width - drawnWidth) / 2;
-  const offsetY = (sceneRect.height - drawnHeight) / 2;
+  if (!hostRect || !frameRect || !containingRect || !imageRect || !host04Rect || !returnRect || !inventoryReturnRect || !labelRect) throw new Error(`Missing Host 05 geometry at ${id}`);
+  const imageState = await image.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      natural: { width: element.naturalWidth, height: element.naturalHeight },
+      objectFit: style.objectFit,
+      objectPosition: style.objectPosition,
+      border: [style.borderLeftWidth, style.borderTopWidth, style.borderRightWidth, style.borderBottomWidth],
+      padding: [style.paddingLeft, style.paddingTop, style.paddingRight, style.paddingBottom],
+    };
+  });
+  if (imageState.natural.width !== 1672 || imageState.natural.height !== 941 || imageState.objectFit !== "cover") throw new Error(`Unexpected Host 05 image contract at ${id}: ${JSON.stringify(imageState)}`);
+  const positionTokens = imageState.objectPosition.trim().split(/\s+/);
+  const parsePosition = (token, axis) => {
+    if (/^-?(?:\d+\.?\d*|\.\d+)%$/.test(token)) return Number.parseFloat(token) / 100;
+    const keywords = axis === "x" ? { left: 0, center: 0.5, right: 1 } : { top: 0, center: 0.5, bottom: 1 };
+    if (token in keywords) return keywords[token];
+    throw new Error(`Unsupported ${axis} object-position at ${id}: ${token}`);
+  };
+  if (positionTokens.length !== 2) throw new Error(`Unsupported object-position at ${id}: ${imageState.objectPosition}`);
+  const objectPosition = { x: parsePosition(positionTokens[0], "x"), y: parsePosition(positionTokens[1], "y") };
+  const scale = Math.max(imageRect.width / imageState.natural.width, imageRect.height / imageState.natural.height);
+  const drawnWidth = imageState.natural.width * scale;
+  const drawnHeight = imageState.natural.height * scale;
+  const offsetX = (imageRect.width - drawnWidth) * objectPosition.x;
+  const offsetY = (imageRect.height - drawnHeight) * objectPosition.y;
+  const physicalRect = {
+    x: imageRect.x + imageRect.width * 0.45,
+    y: imageRect.y + imageRect.height * 0.75,
+    width: imageRect.width * 0.20,
+    height: imageRect.height * 0.25,
+  };
   const sourceBounds = {
-    left: (hostRect.x - sceneRect.x - offsetX) / scale,
-    top: (hostRect.y - sceneRect.y - offsetY) / scale,
-    right: (hostRect.x + hostRect.width - sceneRect.x - offsetX) / scale,
-    bottom: (hostRect.y + hostRect.height - sceneRect.y - offsetY) / scale,
+    left: (physicalRect.x - imageRect.x - offsetX) / scale,
+    top: (physicalRect.y - imageRect.y - offsetY) / scale,
+    right: (physicalRect.x + physicalRect.width - imageRect.x - offsetX) / scale,
+    bottom: (physicalRect.y + physicalRect.height - imageRect.y - offsetY) / scale,
   };
   const overlap = (a, b) => Math.max(0, Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x))
     * Math.max(0, Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y));
-  const target = { left: 752.4, top: 705.75, right: 1086.8, bottom: 941 };
-  const visible = { left: Math.max(target.left, sourceBounds.left), top: Math.max(target.top, sourceBounds.top), right: Math.min(target.right, sourceBounds.right), bottom: Math.min(target.bottom, sourceBounds.bottom) };
+  const nominalSourceBounds = { left: 752.4, top: 705.75, right: 1086.8, bottom: 941 };
+  const nominalSourceAnchor = { x: 919.6, y: 823.375 };
+  const visible = { left: Math.max(nominalSourceBounds.left, sourceBounds.left), top: Math.max(nominalSourceBounds.top, sourceBounds.top), right: Math.min(nominalSourceBounds.right, sourceBounds.right), bottom: Math.min(nominalSourceBounds.bottom, sourceBounds.bottom) };
   const sourceBandRetention = Math.max(0, visible.right - visible.left) * Math.max(0, visible.bottom - visible.top)
-    / ((target.right - target.left) * (target.bottom - target.top));
-  const labelRect = await host.locator('span').boundingBox();
-  await host.focus();
+    / ((nominalSourceBounds.right - nominalSourceBounds.left) * (nominalSourceBounds.bottom - nominalSourceBounds.top));
+  const actualSourceCenter = { x: (sourceBounds.left + sourceBounds.right) / 2, y: (sourceBounds.top + sourceBounds.bottom) / 2 };
+  const anchorContained = nominalSourceAnchor.x >= sourceBounds.left && nominalSourceAnchor.x <= sourceBounds.right
+    && nominalSourceAnchor.y >= sourceBounds.top && nominalSourceAnchor.y <= sourceBounds.bottom;
+  const boxesEqual = ["x", "y", "width", "height"].every((key) => containingRect[key] === imageRect[key]);
+  const zeroImageEdges = [...imageState.border, ...imageState.padding].every((value) => Number.parseFloat(value) === 0);
+  const expectedSemantic = {
+    x: physicalRect.x,
+    y: Math.min(physicalRect.y, imageRect.y + imageRect.height - 44),
+    width: physicalRect.width,
+    height: Math.max(physicalRect.height, 44),
+  };
+  const semanticExact = ["x", "y", "width", "height"].every((key) => hostRect[key] === expectedSemantic[key]);
+  const semanticBottomAnchored = hostRect.y + hostRect.height === physicalRect.y + physicalRect.height;
+  const physicalCenterInsideActivation = physicalRect.x + physicalRect.width / 2 >= hostRect.x
+    && physicalRect.x + physicalRect.width / 2 <= hostRect.x + hostRect.width
+    && physicalRect.y + physicalRect.height / 2 >= hostRect.y
+    && physicalRect.y + physicalRect.height / 2 <= hostRect.y + hostRect.height;
+  const labelInset = labelRect.x - hostRect.x === 2 && labelRect.y - hostRect.y === 2
+    && hostRect.x + hostRect.width - labelRect.x - labelRect.width === 2
+    && hostRect.y + hostRect.height - labelRect.y - labelRect.height === 2;
+  const labelScrollContained = await host.locator('span').evaluate((element) => element.scrollWidth <= element.clientWidth && element.scrollHeight <= element.clientHeight);
+  const identityBefore = await host.evaluate((element) => ({
+    ariaLabel: element.getAttribute("aria-label"),
+    hotspotId: element.dataset.hotspotId,
+    state: element.dataset.sixfoldWeirState,
+    active: document.activeElement === element,
+  }));
+  if (!identityBefore.active || identityBefore.state !== "in_progress") throw new Error(`Host 05 forced-color precondition failed at ${id}: ${JSON.stringify(identityBefore)}`);
   await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
-  const mediaStyle = await host.evaluate((element) => {
-    const style = getComputedStyle(element);
-    return { outlineStyle: style.outlineStyle, outlineWidth: style.outlineWidth, animationDuration: style.animationDuration, transitionDuration: style.transitionDuration };
+  const mediaQueryActive = await page.evaluate(() => matchMedia("(forced-colors: active)").matches);
+  const focusOrder = await page.evaluate(() => {
+    const identity = (element) => element?.dataset?.hotspotId || element?.getAttribute("aria-label") || element?.textContent?.trim();
+    const host04 = document.querySelector('button.hotspot[data-primary-hotspot="true"]');
+    const host05 = document.querySelector('[data-hotspot-id="sixfold-weir"]');
+    const ridge = document.querySelector('[data-hotspot-id="meadow-return-ridge"]');
+    const verbs = Array.from(document.querySelectorAll('.verb-grid .verb'));
+    const returnedAction = document.querySelector('[aria-label="Return to Chapter I, Glass Meadow"]');
+    return {
+      dom: [host04, host05, ridge].map(identity),
+      enabled: [host05, ...verbs, returnedAction].filter((element) => element && !element.disabled).map(identity),
+    };
   });
+  await page.keyboard.press("Shift+Tab");
+  const predecessor = await inventoryReturn.evaluate((element) => ({
+    active: document.activeElement === element,
+    focusVisible: element.matches(":focus-visible"),
+    identity: element.getAttribute("aria-label"),
+  }));
+  await page.keyboard.press("Tab");
+  const forcedColorEvidence = await host.evaluate((element) => {
+    const style = getComputedStyle(element);
+    const label = element.querySelector("span");
+    const labelStyle = getComputedStyle(label);
+    const probe = document.createElement("span");
+    probe.style.position = "fixed";
+    probe.style.outline = "3px solid Highlight";
+    document.body.append(probe);
+    const systemHighlight = getComputedStyle(probe).outlineColor;
+    probe.remove();
+    return {
+      active: document.activeElement === element,
+      focusVisible: element.matches(":focus-visible"),
+      outlineWidth: style.outlineWidth,
+      outlineStyle: style.outlineStyle,
+      outlineColor: style.outlineColor,
+      systemHighlight,
+      hostMotion: [style.animationDuration, style.animationDelay, style.transitionDuration, style.transitionDelay],
+      labelMotion: [labelStyle.animationDuration, labelStyle.animationDelay, labelStyle.transitionDuration, labelStyle.transitionDelay],
+    };
+  });
+  const identityAfter = await host.evaluate((element) => ({
+    ariaLabel: element.getAttribute("aria-label"),
+    hotspotId: element.dataset.hotspotId,
+    state: element.dataset.sixfoldWeirState,
+    active: document.activeElement === element,
+  }));
+  const postHostRect = await host.boundingBox();
+  const postLabelRect = await host.locator('span').boundingBox();
   await page.emulateMedia({ forcedColors: "none", reducedMotion: "no-preference" });
-  const center = { x: (sourceBounds.left + sourceBounds.right) / 2, y: (sourceBounds.top + sourceBounds.bottom) / 2 };
-  const centerContained = Math.abs(center.x - 919.6) <= 2 && Math.abs(center.y - 823.375) <= 2;
+  const motionZero = (values) => values.every((value) => value.split(",").every((part) => Number.parseFloat(part) === 0));
+  const forcedColors = mediaQueryActive && predecessor.active && predecessor.focusVisible
+    && predecessor.identity === "Return to Chapter I, Glass Meadow"
+    && forcedColorEvidence.active && forcedColorEvidence.focusVisible
+    && forcedColorEvidence.outlineWidth === "3px" && forcedColorEvidence.outlineStyle === "solid"
+    && forcedColorEvidence.outlineColor === forcedColorEvidence.systemHighlight
+    && forcedColorEvidence.outlineColor !== "rgba(0, 0, 0, 0)" && forcedColorEvidence.outlineColor !== "transparent";
+  const reducedMotion = motionZero(forcedColorEvidence.hostMotion) && motionZero(forcedColorEvidence.labelMotion);
+  const identityStable = JSON.stringify({ ...identityBefore, active: true }) === JSON.stringify(identityAfter)
+    && JSON.stringify(hostRect) === JSON.stringify(postHostRect) && JSON.stringify(labelRect) === JSON.stringify(postLabelRect);
   const targetSize = hostRect.width >= 44 && hostRect.height >= 44;
-  const labelContained = Boolean(labelRect) && labelRect.x >= hostRect.x - 1 && labelRect.x + labelRect.width <= hostRect.x + hostRect.width + 1
-    && labelRect.y >= hostRect.y - 1 && labelRect.y + labelRect.height <= hostRect.y + hostRect.height + 1;
+  const labelContained = labelRect.x > hostRect.x && labelRect.x + labelRect.width < hostRect.x + hostRect.width
+    && labelRect.y > hostRect.y && labelRect.y + labelRect.height < hostRect.y + hostRect.height;
   const horizontalOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
-  const geometryExact = Math.abs((hostRect.x - sceneRect.x) / sceneRect.width - 0.45) < 0.002
-    && Math.abs((hostRect.y - sceneRect.y) / sceneRect.height - 0.75) < 0.002
-    && Math.abs(hostRect.width / sceneRect.width - 0.20) < 0.002
-    && Math.abs(hostRect.height / sceneRect.height - 0.25) < 0.002;
+  const physicalNormalized = { left: 0.45, top: 0.75, width: 0.20, height: 0.25, centerX: 0.55, centerY: 0.875 };
   const result = {
     id,
     viewport: { width, height },
-    scene: { width: sceneRect.width, height: sceneRect.height },
+    scene: frameRect,
+    containingBlock: containingRect,
+    image: { ...imageRect, ...imageState, objectPosition },
+    physical: physicalRect,
     host05: { x: hostRect.x, y: hostRect.y, width: hostRect.width, height: hostRect.height },
+    label: labelRect,
+    host04: host04Rect,
+    returnRidge: returnRect,
+    inventoryReturn: inventoryReturnRect,
+    physicalNormalized,
+    nominalSourceBounds,
+    nominalSourceAnchor,
     sourceBounds,
-    centerContained,
+    actualSourceCenter,
+    centerContained: anchorContained,
+    anchorContained,
     sourceBandRetention,
     host04OverlapArea: overlap(hostRect, host04Rect),
     returnOverlapArea: overlap(hostRect, returnRect),
     targetSize,
     labelContained,
+    labelInset,
+    labelScrollContained,
+    boxesEqual,
+    zeroImageEdges,
+    semanticExact,
+    semanticBottomAnchored,
+    physicalCenterInsideActivation,
     horizontalOverflow,
-    forcedColors: mediaStyle.outlineStyle !== "none" && Number.parseFloat(mediaStyle.outlineWidth) >= 2,
-    reducedMotion: mediaStyle.animationDuration === "0s" && mediaStyle.transitionDuration === "0s",
+    focusOrder,
+    forcedColorEvidence: { keySequence: "Shift+Tab -> Tab", predecessor, mediaQueryActive, ...forcedColorEvidence, identityBefore, identityAfter },
+    forcedColors,
+    reducedMotion,
+    identityStable,
   };
-  result.pass = geometryExact && result.centerContained && result.sourceBandRetention >= 0.95
+  result.pass = result.boxesEqual && result.zeroImageEdges && result.semanticExact && result.semanticBottomAnchored
+    && result.physicalCenterInsideActivation && result.anchorContained && result.sourceBandRetention >= 0.95
     && result.host04OverlapArea === 0 && result.returnOverlapArea === 0 && result.targetSize
-    && result.labelContained && !result.horizontalOverflow && result.forcedColors && result.reducedMotion;
+    && result.labelContained && result.labelInset && result.labelScrollContained && !result.horizontalOverflow
+    && result.forcedColors && result.reducedMotion && result.identityStable
+    && JSON.stringify(result.focusOrder.dom) === JSON.stringify(["primary", "sixfold-weir", "meadow-return-ridge"])
+    && JSON.stringify(result.focusOrder.enabled) === JSON.stringify(["sixfold-weir", "LOOK AT", "TALK TO", "USE", "Return to Chapter I, Glass Meadow"]);
   return result;
 }
 

@@ -1171,6 +1171,24 @@ export function App() {
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
     const sixfoldStateLabel = isSixfoldWeir ? FRPX03_COPY.STATE[sixfoldWeirState] : "";
     const sixfoldLabel = isSixfoldWeir ? ` // ${sixfoldStateLabel.toUpperCase()}` : "";
+    const hotspotStyle = getHotspotStyle(hotspot.hotspot);
+    const sixfoldActivationStyle = isSixfoldWeir ? {
+      ...hotspotStyle,
+      top: "min(75%, calc(100% - 44px))",
+      height: "max(25%, 44px)",
+    } : hotspotStyle;
+    const sixfoldLabelStyle = isSixfoldWeir ? {
+      left: "2px",
+      right: "2px",
+      top: "2px",
+      bottom: "2px",
+      width: "auto",
+      height: "auto",
+      transform: "none",
+      padding: "1px",
+      letterSpacing: 0,
+      overflow: "hidden",
+    } : undefined;
     return (
       <button
         key={hotspot.id}
@@ -1181,12 +1199,14 @@ export function App() {
         data-route-marker-state={isMeadowRouteMarker ? meadowRouteMarkerState : undefined}
         data-fracture-nursery-state={isFractureNursery ? fractureNurseryState : undefined}
         data-sixfold-weir-state={isSixfoldWeir ? sixfoldWeirState : undefined}
-        style={getHotspotStyle(hotspot.hotspot)}
+        style={sixfoldActivationStyle}
         onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
         disabled={terminalOpen || (pendingAdvance && !isFractureNursery && !isSixfoldWeir)}
         aria-label={`${verb.toLowerCase()} ${hotspot.label}${isMeadowRouteMarker ? `, ${meadowRouteMarkerState}` : isFractureNursery ? `, ${nurseryStateLabel}` : isSixfoldWeir ? `, ${sixfoldStateLabel}` : ""}`}
       >
-        <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}{sixfoldLabel}</span>
+        {isSixfoldWeir
+          ? <span style={sixfoldLabelStyle}>{verb} {hotspot.label}{sixfoldLabel}</span>
+          : <span>{verb} {hotspot.label}{routeMarkerLabel}{nurseryLabel}{sixfoldLabel}</span>}
       </button>
     );
   });
