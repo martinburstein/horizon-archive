@@ -143,7 +143,7 @@ test("FRRC-002-v1 freezes all thirteen gates, one E2E, external QA, and a machin
   assert.match(releaseManifest.policy.qa_root, /OS temp.*outside repository/);
   assert.deepEqual(releaseManifest.entries["complete-e2e"].command, ["node", "playtest/e2e-playthrough.mjs"]);
   assert.match(releaseManifest.entries["complete-e2e"].environment.HORIZON_ARCHIVE_QA_DIR, /GUID.*OS-temp.*outside-repository/);
-  assert.match(releaseManifest.entries["live-summary-verify"].command.join(" "), /first-run\.live-summary\.v1[\s\S]*FRSH-003-v1-VR-02[\s\S]*productPredecessor[\s\S]*semanticBottomAnchored[\s\S]*Shift\+Tab -> Tab[\s\S]*sixfoldActivationMs/);
+  assert.match(releaseManifest.entries["live-summary-verify"].command.join(" "), /first-run\.live-summary\.v1[\s\S]*FRSH-003-v1-VR-04[\s\S]*productPredecessor[\s\S]*semanticBottomAnchored[\s\S]*Tab -> Shift\+Tab[\s\S]*sixfoldActivationMs/);
   assert.equal(releaseManifest.entries.validators.invocations.length, 40);
   assert.deepEqual(releaseManifest.entries.validators.invocations.map((entry) => entry.command[1]), [...releaseManifest.entries.validators.invocations.map((entry) => entry.command[1])].sort());
 });
