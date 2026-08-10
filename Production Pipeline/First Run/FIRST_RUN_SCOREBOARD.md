@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-003-v1`
+Scoreboard ID: `FRSB-004-v1`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v1` / `FRCL-003-v1`
+Baseline / lock: `FRPB-001-v1` / `FRCL-004-v1`
 
-Release map: `FRRM-003-v1`
+Release map: `FRRM-004-v1`
 
-Operations source: `9dc10d2e807b7950c8a59bfbffa05343b77bb7f1`
+Operations source: `537e231a149cd16fcd7b2ec4be5903d7e1dcc387`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,10 +18,11 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **none pending guarded baseline revalidation**.
+Selected bounded Work Order: **`FRWO-004-v1 / Stranded Lens Cradle`**.
 
-The exact bounded Host 05 evidence is released below. One fresh Commandant
-guarded revalidation is the exact next stage; no later Work Order is selected.
+The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
+selects Host 06 for Science viability only; selection does not advance any
+maturity cell or host inventory.
 
 ## Reading the matrix
 
@@ -94,7 +95,17 @@ complete.
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten
-missing hosts. The exact next action is a fresh Commandant guarded baseline
-revalidation. Only a later authorized planning sequence may select a bounded
-next Work Order; no Host 06-15 implementation, City correction, completion
-sweep, or maturity inference is preauthorized.
+missing hosts. `FRCL-004-v1` confirms Host 06 / Stranded Lens Cradle as the
+first missing fixed encounter. `FRWO-004-v1` now selects exactly that one
+relationship and the sole unchanged `L02-03` entry for a fail-closed Science
+viability audit.
+
+Target evidence, if later accepted as built, is `1 accepted shared compression
+/ 2 exact / 9 missing` while the address physical-host cell remains `FR0`.
+This is a target, not a scoreboard advance. The current matrix and inventory
+remain unchanged until Intelligence independently accepts an exact candidate.
+
+The Office of Science Administrator is the exact next owner. No Host 06
+implementation, Host 07-15 work, Witness promotion, City correction, maturity
+inference, media operation, OPEN-classification closure, residual inspection,
+completion sweep, or `FIRST RUN COMPLETE` is preauthorized.

@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-003-v1`
+Map ID: `FRRM-004-v1`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v1` / `FRCL-003-v1`
+Baseline / continuity lock: `FRPB-001-v1` / `FRCL-004-v1`
 
-Operations source: `9dc10d2e807b7950c8a59bfbffa05343b77bb7f1`
+Operations source: `537e231a149cd16fcd7b2ec4be5903d7e1dcc387`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,10 +22,11 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **none pending guarded baseline revalidation**.
+Selected bounded Work Order: **`FRWO-004-v1 / Stranded Lens Cradle`**.
 
-The exact next stage is one fresh Commandant guarded revalidation. Release is
-not authority to select or begin another Work Order.
+The exact next stage is the Office of Science Administrator. This selection is
+planning authority only; it does not prove geometry, advance maturity, or
+authorize Mission or production.
 
 ## Purpose
 
@@ -79,12 +80,43 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03` | Hosts 06-15 and the remaining pedestrian/Crown sequence | Earliest remaining physical-host distance after accepted Host 05. No automatic one-host repetition is authorized; Commandant and later Operations must reassess truthful clustering from released as-built evidence |
-| 2 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
-| 3 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
-| 4 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
-| 5 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
-| 6 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+| 1 | `FR-03 / Host 06` | Stranded Lens Cradle and sole unchanged `L02-03` entry | First missing fixed encounter and next current learning action after exact Host 05. Selected by `FRWO-004-v1`; Science must prove immutable-plate viability or issue `HOLD` |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Deferred as one same-address distance. Host 06 selection does not establish a repeatable host pattern or remaining plate capacity |
+| 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
+| 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
+| 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
+| 6 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
+| 7 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+
+## Selected fourth Work Order boundary decision
+
+`FRWO-004-v1` selects only `FR-03 / Host 06 - Stranded Lens Cradle`, not the
+whole Drowned Archive. Exact Host 05 mastery already gates the existing generic
+`L02-03` model-choice action. The fixed encounter order instead follows the
+Sixfold Weir's lens-like material trail to one weathered lens relationship
+above the waterline before the unchanged learning work begins.
+
+The accepted Drowned provenance explicitly authors suspended ceramic ribs and
+glass phase lenses at several heights and one distant suspended Tidal Lens.
+This creates a truthful bounded Science viability question, not an Operations
+geometry finding. Science must prove one source-authored dry-reachable
+lens/cradle relationship, distinct from Hosts 04/05, the return ridge, live
+flow, and scenic-only landmarks across every required crop. If it cannot, the
+required disposition is `HOLD`; no media or synthetic-geometry fallback exists.
+
+The pass is integration-sized because it must preserve exact Host 05 close,
+make one physical adjacency legible, establish a distinct accessible semantic
+relationship, move the sole existing `L02-03` entry from the generic dialogue
+footer to deliberate `USE`, and prove miss/remediation/transfer/explanation,
+exit, reload, return, resume, responsive containment, unchanged basin/route,
+later rail, and shared ending together. No lesson, save field, world delta,
+route edge, or media byte changes.
+
+Hosts 07-15, the remaining three Drowned movements, Crown turn, Witness
+physical-host cell, City contradiction, Hosts 17-38, and Measured Horizon
+literary close remain deferred. Host 05 provides adjacency, not a geometry or
+implementation template, and Host 06 selection proves no remaining plate
+capacity.
 
 ## Released third Work Order boundary decision
 
@@ -170,6 +202,8 @@ accepted media; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-No next pass is selected. The fresh Commandant must first perform the exact
-guarded baseline revalidation in `NEXT_INSTANCE_HANDOFF.md`; this map does not
-preauthorize Operations, Mission, or production.
+`FRWO-004-v1` is the one selected planning pass. The Office of Science
+Administrator must now issue exactly one bounded viability disposition. This
+map does not preauthorize Mission, production, maturity advancement, media
+work, cleanup of any disclosed residual, closure of any OPEN classification,
+or `FIRST RUN COMPLETE`.
