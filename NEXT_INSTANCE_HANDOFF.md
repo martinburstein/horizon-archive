@@ -7,102 +7,56 @@ registry before acting. This file is the sole exact-next-action authority.
 
 ## Synchronized released state
 
-- **`TD-012 / PASS - AS BUILT RELEASED`** under exact
-  `SS-RP012-MEASURED-HORIZON-v1`.
-- Audited product candidate is
-  `b0a052c12ca4bbb2e07b3899060bb550bc4d0536`, with parent chain
-  `0002d188 -> f80ff79 -> 825416d`.
-- Released graph is
-  `CF-30 -> UR-00 -> UR-10 -> UR-20 -> UR-30 -> MH-00 -> MH-10 -> MH-20 -> MH-25 -> MH-30 -> MH-40`,
-  followed only by exact internal review/remediation or write-free
-  Unborrowed Reach / City Threshold returns.
-- Final record is one ordered private-free 16-key checkpoint with exact
-  current ordered eligibility references, bidirectional
-  gate/remediation/outcome coherence, predecessor equality, rollback/`HOLD`,
-  and replay-free restore.
-- `successor=null`; all city/world/external/authority deltas are null.
+- **`TD-012 / PASS - AS BUILT RELEASED`** remains the exact runtime ending under
+  `SS-RP012-MEASURED-HORIZON-v1` with `successor=null` and null
+  city/world/external/authority deltas.
+- **`TE-001 / PASS - AS BUILT RELEASED`** under
+  `SS-TE001-GAME-ON-PAPER-v1` adds the canonical complete-game documentation
+  artifact `HORIZON_ARCHIVE_GAME_ON_PAPER.md`.
+- The manuscript is one continuous on-foot city rail: four acts, fifteen
+  chapters, and forty ordered Terminal lesson clusters. Success permits the
+  same-rail advance after exact local gates; a miss enters answer-free
+  remediation and fresh retry without story loss or lesser canon.
+- READY and NOT YET READY remain local suit-owned evidence results with equal
+  dignity and the same unchanged Measured Horizon ending.
+- Root artifact SHA-256 is
+  `f343e1dda0647ad82df9e5a85d26e0a7a3025166a0ba663e4cf7019fd066d142`.
 
-## Final Intelligence release evidence
+## TE-001 release evidence
 
-- All eight correction boundaries reproduce: contradictory READY and NOT YET,
-  forged/missing/extra/reordered references, and 15-character token reject;
-  exact-16 accepts. Legitimate READY and NOT YET save/restore both pass.
-- Focused `15/15`; cold full `947/947`; curriculum validators `40/40`.
-- Production/fixture builds `215/57`; release PBA PASS; JS `1,660,034`, CSS
-  `119,599`, media exact `17 / 37,410,731`, zero new.
-- Production and fixture root/deep/JS/CSS served `8/8` HTTP 200 and
-  byte-identical.
-- Fresh isolated live owner/focus/containment evidence passes `58/58` at
-  actual narrow `375x844` and `58/58` at available desktop `1265x720`.
-  Exact Quartermaster four-layout `232/232`, effective-200, forced-color,
-  reduced-motion, and equal-geometry evidence remains accepted because the
-  correction leaves renderer/DOM/focus/CSS/fixture bytes exact.
-- The sole passing complete cycle E2E `125.8s` is preserved and was not rerun.
-- Isolated tabs/previews are closed; viewport reset; ports `4173`, `4184`,
-  `4292`, `4293`, and `5174` are clear.
-- The documentation-only Intelligence release commit and final
-  `HEAD == origin/main == remote main` are recorded by Git outside this
-  self-referential handoff.
+- Mission shell: `SS-TE001-GAME-ON-PAPER-v1`.
+- Combat root build: `547df68256267f1dd726748cdddd2380057872f9`.
+- Quartermaster: `CONTENT COMPLETE` at `e6be8b8`.
+- Intelligence: `PASS - AS BUILT RELEASED` in
+  `Production Pipeline/Terminal Enrichment/TE-001/10-AS-BUILT-RECONCILIATION.md`.
+- Independent structure: `1 H1 / 4 acts / 15 chapters / 40 Terminals`.
+- Exact registry: `40 expected / 40 actual / 0 mismatches`.
+- Outcomes: READY `85` words / NOT YET READY `87` words / one shared ending.
+- Boundaries: zero images, zero placeholders, no answer or private-state
+  exposure, no Machine/Builder dialogue, no world response, no successor.
+- The root manuscript is 62,219 bytes, strict UTF-8, and passes whitespace and
+  contextual forbidden-leak review.
+- Final release commit and `HEAD == origin/main` are recorded by Git outside
+  this self-referential handoff.
 
-## Authorized product-enrichment work
+## Accepted limitations
 
-- Martin's 2026-08-09 direction reopens the completed journey only for a
-  location-by-location continuity audit of the existing forty Terminal lesson
-  clusters.
-- Commandant issued `GDB-TE001-v1 / VISION BASELINE` at source commit
-  `88785eeb5a55523d3f610969777fbbb3af128c23`.
-- Colonel issued `WN-TE001-v1 / WORLD BASELINE`: one continuous fifteen-
-  location pedestrian route accounting for all forty clusters, with explicit
-  host placement, discovery owner, access, local motive, and exit continuity.
-- Operations issued `FS-TE001-SCRIPT-v1 / FLOOR STACK READY`: one documentation-
-  only complete-game script slice, structured as four dramatic acts and fifteen
-  chapters over the exact single rail.
-- Science issued `VE-TE001-SCRIPT-v1 / VIABILITY READY`: the script may express
-  learning pressure and remediation but no answers, cross-credit, private
-  learner state, exam guarantee, service authority, or world response.
-- Mission issued `SHELL READY / SS-TE001-GAME-ON-PAPER-v1` for one root
-  `HORIZON_ARCHIVE_GAME_ON_PAPER.md`, with exact four-act/fifteen-chapter/forty-
-  Terminal structure and a documentation-only validation ladder.
-- Recon issued `CREATIVE LOCK / CT-TE001-SCRIPT-v1`: “The city has been waiting
-  for no one,” with a Pilot arc from hungry projection to earned restraint and
-  a final inversion in which the measure belongs to the learner.
-- Tactical issued `EXPERIENCE READY / XB-TE001-SCRIPT-v1`: exact root-document
-  hierarchy, chapter and Terminal anatomy, forty-entry learning-pressure map,
-  Drowned internal movements, failure condensation, and equal ending structure.
-- Combat completed the documentation build in
-  `HORIZON_ARCHIVE_GAME_ON_PAPER.md`: exactly four acts, fifteen chapters, and
-  forty ordered Terminal scenes, with equal assessment outcomes and the shared
-  RP-012 ending. Structural, registry, dialogue-ownership, placeholder, UTF-8,
-  and whitespace checks pass under `08-FUNCTIONAL-BUILD-REPORT.md`.
-- Quartermaster issued `CONTENT COMPLETE` in
-  `09-CONTENT-COMPLETENESS-REPORT.md` after a complete director read. No root
-  correction was required: continuity, scene distinction, emotional
-  escalation, source safety, accessibility, outcome dignity, and the earned
-  final restraint pass. The Image Specialist remains disabled and was skipped.
-- The work changes no lesson ownership, released packet, story order, ending,
-  successor, world state, or Machine authority. It adds no image work.
+- Some enriched physical hosts exceed current compact runtime depiction. That
+  future implementation distance is disclosed and is not runtime parity.
+- Proposed Pilot/Suit lines are game-on-paper copy and require later copy review
+  before any runtime adoption.
 
-## Exact next action - Intelligence TE-001 independent release audit
+## Exact next action - safe stop
 
-Read `HORIZON_ARCHIVE_GAME_ON_PAPER.md`,
-`Production Pipeline/Terminal Enrichment/TE-001/05-PLAYABLE-SLICE-SHELL.md`,
-`Production Pipeline/Terminal Enrichment/TE-001/08-FUNCTIONAL-BUILD-REPORT.md`,
-and `Production Pipeline/Terminal Enrichment/TE-001/09-CONTENT-COMPLETENESS-REPORT.md`
-in full. Independently validate the exact shell, structure, registry, rail,
-learning and privacy boundaries, copy ownership, accessibility, outcome
-equality, final sentence, hard stop, no-image state, and implementation-distance
-disclosure. Do not treat either Marine report as release proof.
-
-Record accepted as-built evidence and every variance classification in
-`10-AS-BUILT-RECONCILIATION.md`, replace this handoff with one synchronized
-released state and exact next action, commit, push, and prove
-`HEAD == origin/main`. Do not change runtime, curriculum, assessment ownership,
-art, media, user state, or protected files; do not perform image work.
+Preserve the released TE-001 manuscript and await Martin's explicit direction.
+Do not start image work, implement enriched hosts, adopt proposed copy, create
+another packet, restart a Skyscraper cycle, or create/update an automation from
+this edge.
 
 ## Protected boundaries
 
-- Image Specialist and cycle reveal remain disabled. Existing accepted visual
-  references and exact `17 / 37,410,731` runtime media stay immutable.
+- Image Specialist and cycle reveal remain disabled. Existing accepted media
+  remains unchanged.
 - Never inspect or mutate Martin's browser/profile/save or hidden lore.
 - Never inspect, alter, stage, move, delete, or commit
   `Art Of No Mans Sky Book Scan.pdf` or `Simplilearn Training Files/`.
