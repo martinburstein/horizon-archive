@@ -1,6 +1,6 @@
 # Horizon Archive - Synchronized Next Instance Handoff
 
-Last updated: **2026-08-09**
+Last updated: **2026-08-10**
 
 Read `AGENTS.md`, this file, `FIRST_RUN_AGENT_WORKFLOW.md`, and
 `First Run Agent Profiles/README.md` before acting. This file is the sole
@@ -23,41 +23,51 @@ exact-next-action authority.
 - Commandant issued **`FIRST RUN VISION BASELINE / FRPB-001-v1`** at source
   `ce296c64a79c6ce4e483948c9f2e59b9d036c21d` in
   `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`.
-- The locked product finish line is the existing complete game fully expressed
-  from clean start through Measured Horizon—not new story scope.
-- Current released strengths include the full TD-012 route, hardened learning/
-  save/recovery contracts, and extensive release evidence.
-- Observable completion distance includes stale demo packaging, contradictory
-  scope copy, visible temporary-prologue language, and explicit game-on-paper
-  versus compact-runtime host distance.
-- No Continuity Lock, Release Map, Scoreboard, Work Order, Viability Envelope,
-  or First Run Shell exists yet. No production implementation is authorized.
-- The First Run heartbeat in this chat is active every three hours at minute
-  `30`, beginning with the next 1:30 AM Eastern wake. It must continue only from
-  this committed edge.
+- Colonel issued **`CONTINUITY LOCK / FRCL-001-v1`** from source
+  `d15858a3ae09ba484ce149bb8f03a8adb660f43e` in
+  `Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md`.
+- The lock classifies all 15 chapters and 40 Terminal hosts. Chapter totals are
+  `0 exact / 12 accepted compression / 1 missing expression / 2 contradiction
+  / 0 unknown`. Terminal totals are `4 / 1 / 34 / 1 / 0` in the same order.
+- The earliest continuity distance includes visible temporary-prologue
+  scaffolding. Additional pre-City contradictions include the stale mid-rail
+  `Prologue complete` credits interruption, its world-response line, Drowned
+  route-creation copy, and Witness listening/spoken-response copy.
+- Current lesson implementation does not establish forty-host parity.
+  Terminals 05-15 and 17-38 retain their exact learning ownership but lack
+  distinct enriched physical-host expression.
+- No Release Map, Scoreboard, Work Order, Viability Envelope, or First Run Shell
+  exists yet. No production implementation is authorized.
+- Martin authorized continued sequential First Run work in this chat. Continue
+  only from this committed edge and do not overlap roles.
 - Image generation/edit/replacement/variation/import and cycle reveals remain
   disabled. Existing accepted media remains immutable.
 
-## Exact next action - First Run Colonel continuity lock
+## Exact next action - Operations Release Map, Scoreboard, and Work Order
 
-Read `First Run Agent Profiles/colonel.md` and
-`Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md` in full. Then
-inspect `HORIZON_ARCHIVE_GAME_ON_PAPER.md`, `HORIZON_ARCHIVE_SURFACE_LORE.md`,
-current runtime story/scene/copy surfaces, location/visual authorities, and the
-released TD-012/TE-001 evidence required by the profile.
+Read `First Run Agent Profiles/operations-planning-major.md`,
+`Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE.md`, and
+`Production Pipeline/First Run/FIRST_RUN_CONTINUITY_LOCK_FRCL-001-v1.md` in
+full. Inspect the exact current controls and runtime evidence required by that
+profile.
 
-Create a versioned First Run Continuity Lock under
-`Production Pipeline/First Run/`. Classify the runtime expression of the
-complete first-run journey against all fifteen game-on-paper chapters and forty
-Terminal hosts as exact, accepted compression, missing expression,
-contradiction, or unknown. Lock entry knowledge, required observations,
-emotional turns, physical transitions, voice ownership, protected unknowns,
-and the shared ending. Explicitly resolve the temporary prologue, stale demo
-scope language, compact/enriched host distance, and proposed Pilot/Suit copy.
+Create the first versioned First Run Release Map and Scoreboard from actual
+evidence, maintaining separate maturity for chapter continuity, physical-host
+expression, learning, behavior, content, presentation, and release proof. Rank
+the earliest material player-facing gaps under `FRPB-001-v1`, then select one
+bounded integration-sized vertical-quality Work Order.
 
-Issue `CONTINUITY LOCK`, `REVISE`, or `HOLD`, commit the Colonel stage, and
-leave an exact Operations handoff. Do not create the Release Map, Scoreboard,
-Work Order, or implementation in the Colonel invocation.
+Explicitly evaluate whether temporary prologue finalization, stale product/demo
+naming, the mid-rail prologue credits interruption, and the Drowned/Witness
+contradiction copy belong to one coherent player-visible outcome or must be
+separated. Do not silently create an unbounded “polish everything” pass. Record
+why the selected boundary is earliest and why every excluded earlier
+contradiction is safely deferred.
+
+Issue `WORK ORDER READY`, `REVISE`, or `HOLD`, commit the Operations stage, and
+leave one exact Science handoff. Do not implement, write final copy, create a
+viability envelope or shell, change media, or promote a missing host to parity
+in the Operations invocation.
 
 ## Protected boundaries
 
